@@ -1,0 +1,65 @@
+# INVENTÁRIO CURRICULAR — Etapa 1 (conforme Escrita.txt / Seção 4)
+
+Estrutura: Disciplina → Módulo → Unidade → Tópico → Subtópico → ID → Objetivo → Conteúdo → Exemplos → Exercícios → Fontes → Estado
+
+Fonte: Escrita.txt, seções 6 (conteúdo programático obrigatório) e 4 (inventário).
+Data de verificação: 2026-10-19
+Revisão/sincronização com o código: 2026-10-20 (leitura de `assets/data/*.js`, `assets/js/*.js` e `index.html`)
+Atualização flashcards: 2026-10-20 — `assets/js/flashcards.js` criado (UI de flashcards + repetição espaçada SM-2 simplificado documentado no cabeçalho do arquivo; 110 cartões existentes conectados, nenhum inventado; filtros por módulo/nível; modos todos/vencidos/errados; contagens dominados/pendentes/vencidos/em revisão; exportação/importação de backup JSON; progresso em `localStorage['apostila-ia-progresso']` namespace `flashcards`, sem sobrescrever as visitas do `navigation.js`; smoke test em Node/vm com 59 asserts — não testado em navegador real)
+Atualização questões: 2026-10-20 — `assets/data/questions.js` (banco de **82 questões autorais**: M1=32, M2=26, M3=24; níveis 26/37/19 = 31,7% básica / 45,1% intermediária / 23,2% avançada; formatos 49 múltipla escolha + 33 Certo/Errado; estilos de cobrança CESPE 33 / FCC 22 / VUNESP 15 / FGV 12, **nenhuma atribuída a banca real** — `origem` sempre `autoral`; os 12 campos da Seção 10.1 em todas — alternativas quando aplicável, trecho determinante nos itens C/E) + `assets/js/quiz-engine.js` (motor da Seção 10.2: escopo por módulo/cumulativo, filtros por nível/estilo/formato, ordem aleatória sem repetição na sessão, temporizador opcional, navegação e marcação para revisão, gabarito comentado, nota × taxa de acerto × não respondidas, desempenho por assunto, pontos fracos, recomendações com erros históricos, histórico de até 50 tentativas em `localStorage['apostila-ia-progresso']` namespace `questoes`, sem tocar nos namespaces de currículo/flashcards; seção própria no `index.html`; smoke test em Node/vm com **92 asserts** — não testado em navegador real). Piso 320: **faltam 238** porque M4–M8 não têm currículo implementado (nada inventado para cobrir a lacuna).
+Autor: Renato Barucco / Projeto FCN
+
+---
+
+## MÓDULO 1 — MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO (dados parciais no curriculum.js)
+- 1.1 Ecossistema Microsoft 365 (8 sub-tópicos: M365 vs LTSC/perpetuo; Licenciamento; Web/desktop/mobile; Armazenamento; Integração; Auto-save/sincronização; Contas; Permissões/privacidade) — IMPLEMENTADO em `curriculum['modulo-1']` (renderiza na página)
+- 1.2 Microsoft Word — PARCIAL COMPLEMENTADO (14 tópicos em `curriculum['modulo-1']`; 3 exemplos resolvidos + 2 exercícios autorais em const separada `curriculumWord12Supplement`, que nenhum script lê — o complemento não renderiza; flashcards do M1: 10/50; 17 questões autorais de 1.2 em `questions.js`; sem simulador)
+- 1.3 Microsoft Excel — PARCIAL (**sem entrada de currículo** em `curriculum.js` — só comentário; simulador com escopo declarado e **busca real** em `assets/js/simulators.js`: 23 funções (SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES, SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE, PROCV, PROCH, PROCX, CORRESP, ÍNDICE, HOJE) + aliases EN; parser próprio sem `eval`; modelo de planilha em memória com refs A1/absolutas/mistas e recálculo; separador `;` (pt-BR) ou `,` com regra declarada; rejeita entradas inválidas com mensagem útil; erros #N/A/#REF!/#VAL!/#DIV/0!/#NUM!; verificado com `node --check` + smoke test Node/vm com 111 asserts, **não testado em navegador real**; 3 exemplos resolvidos no `index.html`; referência Microsoft Learn ainda a ser verificada; flashcards do M1: 10/50; 3 questões autorais de 1.3 em `questions.js`, construídas sobre o escopo documentado do simulador)
+- 1.4 Microsoft PowerPoint — PARCIAL (conteúdo base real: Slide Mestre, layouts, animações vs transições, modos apresentação, notas, exportação PDF, acessibilidade; 3 exemplos resolvidos + 2 exercícios em const `curriculumPowerPoint14` — **nenhum script a lê, não renderiza**; 2 questões autorais em `questions.js`; sem simulador; sem flashcards; referência oficial ainda não verificada)
+- 1.5 OneDrive e colaboração — PARCIAL (conteúdo base real: sincronização, coautoria, histórico versões, compartilhamento/permissões, backup; const `curriculumOneDrive15` — **nenhum script a lê, não renderiza**; 2 questões autorais em `questions.js`; referência LGPD art. 46 citada com rastreabilidade `referencias/referencias-verificadas.md`; sem simulador; sem flashcards)
+Estado: 1.1 completo (texto); 1.2 parcial (complemento de exemplos não renderiza); 1.3 PARCIAL (simulador com escopo declarado e busca real em `simulators.js` + 3 exemplos no HTML; sem entrada de currículo); 1.4 e 1.5 com dados existentes mas não renderizados; M2 parcial; M3 parcial; M4 apenas com referência LGPD verificada; M5-M8 pendentes; flashcards 110/400 (m1=10, m2=50, m3=50); questões 82/320 (autorais: M1=32, M2=26, M3=24; M4–M8 sem currículo e, por isso, sem questões); gráficos 0/5; simuladores: Excel parcial + redes (ping/traceroute simulados, CIDR real); PowerPoint e OneDrive sem simulador; referências oficiais: LGPD verificada (2026-10-20); Microsoft Learn ainda não verificada.
+
+## MÓDULO 2 — REDES DE COMPUTADORES (5 unidades planejadas; currículo parcial)
+- 2.1 Fundamentos de Redes — PARCIAL/IMPLEMENTADO (`curriculum_m2.js`: única unidade presente; 4 tópicos — conceitos fundamentais (nós, enlaces, clientes/servidores); unicast/broadcast/multicast/anycast; largura de banda, latência, jitter e perda; meios de transmissão — 7 subtópicos com `objetivoAprendizagem`, `conteudo`, 3 exemplos e exercícios; renderiza na página)
+- 2.2 Modelos OSI e TCP/IP — PENDENTE no currículo (sem entrada em `curriculum_m2.js`; há 10 flashcards que cobrem o tema)
+- 2.3 Protocolos (IPv4/6, TCP/UDP, HTTP/S, DNS, DHCP, FTP/FTPS/SFTP, SSH, ICMP, ARP, SMTP/POP3/IMAP, TLS, NAT/PAT, Proxy/VPN) — PENDENTE no currículo (10 flashcards existem)
+- 2.4 Endereçamento e sub-redes — PENDENTE no currículo (10 flashcards existem; calculadora CIDR exigida — existe em `simulator_network.js`)
+- 2.5 Diagnóstico de redes — PENDENTE no currículo (10 flashcards existem; `simulator_network.js` implementa ping/traceroute **simulados** e cálculo CIDR real — não executa comandos no SO)
+- Flashcards M2: 50/50 (`flashcards_m2.js`, 10 por tema u1–u5)
+Estado: PARCIAL — só a unidade 2.1 tem conteúdo de currículo; simulador de redes documentado; 50 flashcards; questões 26/40 (autorais, todas da unidade 2.1 — 2.2–2.5 sem currículo e sem questões).
+
+## MÓDULO 3 — COMUNICAÇÃO E COLABORAÇÃO — PARCIAL (unidades 3.1 e 3.2)
+- 3.1 Correio Eletrônico — PARCIAL (`curriculum_m3.js`; tópicos: "SMTP, POP3 e IMAP" com subtópicos SMTP / POP3 vs IMAP / Cabeçalhos, destinatários, anexos, CC e BCC; "Spam, phishing e falsificação de remetente" — cada subtópico com objetivo, conteúdo, 3 exemplos e exercícios)
+- 3.2 Calendários e Reuniões — PARCIAL (`curriculum_m3.js`; tópicos: "Calendários, convites e permissões"; "Microsoft Teams, Google Meet e Zoom" (comparação + controle de participantes, lobby e gravação); "Políticas de gravação, consentimento e proteção de informações")
+- Sem entrada de currículo (requisitos do Escrita.txt): webmail versus clientes locais; reuniões síncronas e colaboração assíncrona como tópico próprio; etiqueta digital, acessibilidade e comunicação profissional; estudos de caso de reuniões inseguras.
+- Flashcards M3: 50/50 (`flashcards_m3.js`, m3-u1 e m3-u2)
+Estado: PARCIAL — renderiza na página (incluído no `index.html`); questões 24/40 (autorais: 17 em 3.1, 7 em 3.2).
+
+## MÓDULO 4 — SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL — PARCIAL (somente referência verificada)
+- 4.1 Fundamentos de segurança — PARCIAL (referência oficial LGPD verificada: Lei 13.709/2018 art. 1º, 2º, 3º, 4º, 5º, 17, 18, 46 confirmados via planalto.gov.br; arquivo `referencias/referencias-verificadas.md` criado; nenhum artigo inventado; **conteúdo de currículo e simuladores ausentes**)
+- 4.2 Malwares e ferramentas defensivas — PENDENTE
+- 4.3 Ameaças e ataques (simulador defensivo de triagem de phishing obrigatório) — PENDENTE
+- 4.4 Legislação (LGPD 13.709/2018, Marco Civil 12.965/2014, LAI 12.527/2011, Governo Digital 14.129/2021) — PENDENTE (não inventar artigos; citar dispositivo real)
+Estado: apenas a referência LGPD verificada; conteúdo de currículo 0%.
+
+## MÓDULO 5 — INTELIGÊNCIA ARTIFICIAL — PENDENTE
+- 5.1 Fundamentos — PENDENTE
+- 5.2 ML (métricas numéricas, matriz confusão) — PENDENTE
+- 5.3 IA generativa / LLMs — PENDENTE
+- 5.4 Engenharia de prompts (laboratório interativo obrigatório) — PENDENTE
+Estado: 0%.
+
+## MÓDULO 6 — ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO — PENDENTE
+Estado: 0%.
+
+## MÓDULO 7 — FUNDAMENTOS E ENGENHARIA DE DADOS — PENDENTE
+Estado: 0%.
+
+## MÓDULO 8 — VISUALIZAÇÃO, ANÁLISE E STORYTELLING — PENDENTE
+- 8.1-8.5: 5 tipos de gráfico obrigatórios (histograma, linha, barras, dispersão, box plot) — PENDENTE (implementação própria ou Chart.js / ECharts com fallback)
+Estado: 0%.
+
+---
+TOTAL SUBTÓPICOS IMPLEMENTADOS COM CONTEÚDO DE CURRÍCULO: M1 — 8 sub-tópicos (1.1) + 14 tópicos (1.2) no objeto `curriculum`; M2 — 4 tópicos / 7 subtópicos (unidade 2.1); M3 — 5 tópicos / 8 subtópicos (3.1 e 3.2). M1.4/M1.5 e complemento de 1.2 existem em consts não lidas; 1.3 e M4–M8 sem entrada de currículo.
+FLOOR MÍNIMO EXIGIDO PELO PROMPT: 8 módulos completos, 400 flashcards, 320 questões, 5 gráficos, todos simuladores, inventário verificável.
+ESTADO REAL APÓS SINCRONIZAÇÃO (2026-10-20): M1 parcial (conteúdo texto 1.1–1.2; 1.3 com simulador de escopo declarado e busca real — 23 funções, PROCV/PROCH/PROCX executam busca de verdade, verificado com smoke test Node/vm 111 asserts, não testado em navegador — e 3 exemplos no HTML; 1.4–1.5 com dados não renderizados); M2 parcial (2.1 + simulador de redes + 50 flashcards); M3 parcial (3.1–3.2 + 50 flashcards); M4 só com referência LGPD verificada; M5–M8 ausentes. Flashcards: 110/400 (m1=10, m2=50, m3=50) **com repetição espaçada conectada** (`assets/js/flashcards.js`, SM-2 simplificado documentado no cabeçalho do arquivo; verificado com smoke test em Node/vm, 59 asserts; não testado em navegador real). Questões: **82/320** (M1=32, M2=26, M3=24; autorais em `assets/data/questions.js`, motor em `assets/js/quiz-engine.js` com seção própria no `index.html`; verificado com `node --check` em 13 arquivos + smoke test em Node/vm com 92 asserts; **não testado em navegador real**; M4–M8 sem currículo e, por isso, sem questões — faltam 238 para o piso). Gráficos: 0/5. Referências oficiais: apenas LGPD verificada com URL+data (2026-10-20). Nenhuma funcionalidade inventada; nenhuma referência fabricada; nenhum resultado de simulador inventado; nenhuma questão atribuída a banca real. Projeto NÃO concluído.
