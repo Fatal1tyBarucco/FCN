@@ -1,0 +1,20 @@
+# Sistema/OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups e arquivos de editor
+*~
+*.swp
+*.swo
+*.bak
+
+# Dependências locais (não usadas hoje, mas evitam commit acidental)
+node_modules/
+__pycache__/
+*.pyc
+
+# Artefatos de build/gerados
+*.log
+.cache/
+dist/

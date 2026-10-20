@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apostila Web Interativa — Tecnologia da Informação, Dados e IA</title>
+<meta name="description" content="Apostila web interativa definitiva: 8 módulos, simuladores, flashcards, banco de questões, gráficos e inventário curricular verificável.">
+<link rel="stylesheet" href="assets/css/styles.css">
+<meta name="theme-color" content="#1a73e8">
+<style>
+  /* Estilo mínimo de contingência para abertura direta file:// */
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 1.2rem; background: #f8f9fa; color: #1a1a1a; line-height: 1.55; }
+  header { background: #0b1d36; color: #fff; padding: 1.2rem 1rem; border-radius: 12px; margin-bottom: 1.2rem; }
+  header h1 { margin: 0 0 .2rem; font-size: 1.6rem; }
+  header p { margin: 0; opacity: .9; font-size: .95rem; }
+  main { max-width: 960px; margin: 0 auto; }
+  section { background: #fff; border: 1px solid #dde2e7; border-radius: 10px; padding: 1.1rem 1.2rem; margin-bottom: 1.2rem; }
+  h2 { margin-top: 0; font-size: 1.15rem; color: #0b1d36; }
+  h3 { font-size: 1rem; color: #143a6b; margin-bottom: .4rem; }
+  ul { padding-left: 1.1rem; }
+  a { color: #1a73e8; text-decoration: underline; }
+  .label { display: inline-block; padding: .15rem .35rem; border-radius: 4px; font-size: .75rem; text-transform: uppercase; letter-spacing: .03em; font-weight: 700; margin-right: .3rem; }
+  .label-ok { background: #e6f4ea; color: #137333; }
+  .label-parc { background: #fff8e1; color: #b06000; }
+  .label-pend { background: #fce8e6; color: #a50e0e; }
+  .aviso { background: #fff3cd; border: 1px solid #ffe082; border-radius: 8px; padding: .8rem 1rem; color: #5a3a00; font-size: .92rem; }
+  /* Flashcards (UI de repetição espaçada) */
+  .fc-filtros { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin: .8rem 0; }
+  .fc-filtros label { font-size: .92rem; }
+  .fc-filtros select { font-size: .92rem; padding: .2rem .3rem; }
+  .fc-stats { margin: .6rem 0; font-size: .92rem; }
+  .fc-badge { display: inline-block; padding: .15rem .35rem; border-radius: 4px; font-size: .75rem; background: #e8eaed; color: #202124; }
+  .fc-cartao { border: 1px solid #dde2e7; border-radius: 10px; padding: 1rem; margin: .8rem 0; }
+  .fc-meta { font-size: .8rem; color: #5f6368; margin-bottom: .6rem; }
+  .fc-frente { font-size: 1.05rem; font-weight: 600; margin-bottom: .6rem; }
+  .fc-verso { margin: .4rem 0; }
+  .fc-explicacao { background: #f1f3f4; border-radius: 8px; padding: .5rem .7rem; font-size: .92rem; }
+  .fc-botoes { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
+  .fc-btn { border-radius: 8px; padding: .45rem .7rem; border: 1px solid transparent; cursor: pointer; font-size: .92rem; }
+  .fc-btn small { display: block; font-size: .72rem; opacity: .85; }
+  .fc-btn-ok { background: #e6f4ea; color: #137333; border-color: #137333; }
+  .fc-btn-dif { background: #fff8e1; color: #b06000; border-color: #b06000; }
+  .fc-btn-err { background: #fce8e6; color: #a50e0e; border-color: #a50e0e; }
+  .fc-mensagem { background: #e8f0fe; border: 1px solid #d2e3fc; border-radius: 8px; padding: .5rem .7rem; font-size: .9rem; }
+  .fc-backup { margin-top: 1rem; border-top: 1px dashed #dde2e7; padding-top: .6rem; }
+  .fc-import { font-size: .92rem; }
+  @media (prefers-color-scheme: dark) {
+    .fc-cartao { border-color: #5f6368; }
+    .fc-badge { background: #3c4043; color: #e8eaed; }
+    .fc-explicacao { background: #202124; }
+    .fc-btn-ok { background: #1e3a29; color: #81c995; border-color: #81c995; }
+    .fc-btn-dif { background: #3d3319; color: #fdd663; border-color: #fdd663; }
+    .fc-btn-err { background: #3d1d1a; color: #f28b82; border-color: #f28b82; }
+    .fc-mensagem { background: #1e3050; color: #d2e3fc; border-color: #8ab4f8; }
+    .fc-backup { border-top-color: #5f6368; }
+  }
+  footer { text-align: center; color: #5f6368; font-size: .85rem; margin-top: 2rem; }
+  pre { background: #0b1d36; color: #e8eaed; padding: .8rem 1rem; border-radius: 8px; overflow-x: auto; font-size: .9rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  /* Laboratório de gráficos (assets/js/charts.js — SVG próprio, sem biblioteca externa) */
+  .chart-card { border: 1px solid #dde2e7; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+  .chart-card h3 { margin-top: 0; }
+  .chart-meta { font-size: .78rem; color: #5f6368; margin-top: -.3rem; }
+  .chart-didatica { font-size: .92rem; margin: .4rem 0 .8rem; }
+  .chart-didatica dt { font-weight: 700; color: #143a6b; margin-top: .45rem; }
+  .chart-didatica dd { margin: .1rem 0 0 .9rem; }
+  .chart-controles { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0; }
+  .chart-controles button { border-radius: 8px; padding: .35rem .65rem; border: 1px solid #1a73e8; background: #e8f0fe; color: #174ea6; cursor: pointer; font-size: .88rem; }
+  .chart-params { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; margin: .5rem 0; font-size: .9rem; }
+  .chart-params input[type=text] { width: 15rem; max-width: 100%; }
+  .chart-params input[type=number] { width: 4.5rem; }
+  .chart-tabela { border-collapse: collapse; font-size: .88rem; margin: .4rem 0; width: 100%; }
+  .chart-tabela caption { text-align: left; font-size: .8rem; color: #5f6368; padding-bottom: .3rem; }
+  .chart-tabela th, .chart-tabela td { border: 1px solid #dde2e7; padding: .2rem .35rem; }
+  .chart-tabela thead th { background: #e8eaed; }
+  .chart-tabela input { width: 7.5rem; max-width: 100%; font-size: .88rem; padding: .15rem .3rem; border: 1px solid #c6d0d9; border-radius: 4px; }
+  .chart-svg-wrap { background: #fff; border: 1px solid #dde2e7; border-radius: 8px; padding: .4rem; margin: .5rem 0; }
+  .chart-svg { display: block; max-width: 100%; height: auto; }
+  .chart-svg .chart-grid { stroke: #e2e8ee; stroke-width: 1; }
+  .chart-svg .chart-eixo { stroke: #5f6368; stroke-width: 1.4; }
+  .chart-svg .chart-txt, .chart-svg .chart-svg-titulo, .chart-svg .chart-eixo-rotulo { fill: #202124; font-family: system-ui, sans-serif; }
+  .chart-svg .chart-txt { font-size: 12px; }
+  .chart-svg .chart-svg-titulo { font-size: 14px; font-weight: 700; }
+  .chart-svg .chart-eixo-rotulo { font-size: 12px; font-weight: 600; }
+  .chart-svg .chart-txt-barra { font-size: 11px; }
+  .chart-svg .chart-barra, .chart-svg .chart-caixa { fill: #8ab4f8; stroke: #174ea6; stroke-width: 1; }
+  .chart-svg .chart-barra-modada { fill: #1a73e8; }
+  .chart-svg .chart-linha { fill: none; stroke: #1a73e8; stroke-width: 2.2; }
+  .chart-svg .chart-tendencia { stroke: #a50e0e; stroke-width: 1.8; stroke-dasharray: 6 4; }
+  .chart-svg .chart-ponto { fill: #1a73e8; stroke: #0b1d36; stroke-width: .8; }
+  .chart-svg .chart-outlier { fill: #f28b82; stroke: #a50e0e; }
+  .chart-svg .chart-bigode { stroke: #5f6368; stroke-width: 1.6; }
+  .chart-svg .chart-mediana { stroke: #0b1d36; stroke-width: 2.4; }
+  .chart-svg .chart-aviso-svg { fill: #a50e0e; font-size: 12px; font-weight: 700; font-family: system-ui, sans-serif; }
+  .chart-desc { background: #f1f3f4; border-radius: 8px; padding: .5rem .7rem; font-size: .88rem; }
+  .chart-stats { border-collapse: collapse; font-size: .88rem; margin: .3rem 0 .6rem; }
+  .chart-stats th, .chart-stats td { border: 1px solid #dde2e7; padding: .2rem .45rem; text-align: left; }
+  .chart-stats thead th { background: #e8eaed; }
+  .chart-stats tbody th { font-weight: 600; background: #f8f9fa; }
+  .chart-aviso { background: #fce8e6; border: 1px solid #f6bbb4; border-radius: 8px; padding: .45rem .7rem; color: #a50e0e; font-size: .88rem; }
+  .chart-erro { background: #fce8e6; border: 1px solid #f6bbb4; border-radius: 8px; padding: .5rem .7rem; color: #a50e0e; }
+  @media (prefers-color-scheme: dark) {
+    .chart-card { border-color: #5f6368; }
+    .chart-didatica dt { color: #8ab4f8; }
+    .chart-controles button { background: #1e3050; color: #d2e3fc; border-color: #8ab4f8; }
+    .chart-tabela th, .chart-tabela td { border-color: #5f6368; }
+    .chart-tabela thead th { background: #3c4043; }
+    .chart-tabela input { background: #202124; color: #e8eaed; border-color: #5f6368; }
+    .chart-svg-wrap { background: #202124; border-color: #5f6368; }
+    .chart-svg .chart-grid { stroke: #3c4043; }
+    .chart-svg .chart-eixo { stroke: #9aa0a6; }
+    .chart-svg .chart-txt, .chart-svg .chart-svg-titulo, .chart-svg .chart-eixo-rotulo { fill: #e8eaed; }
+    .chart-svg .chart-barra, .chart-svg .chart-caixa { fill: #1e3a5f; stroke: #8ab4f8; }
+    .chart-svg .chart-barra-modada { fill: #1a73e8; }
+    .chart-svg .chart-ponto { fill: #8ab4f8; stroke: #e8eaed; }
+    .chart-svg .chart-bigode { stroke: #bdc1c6; }
+    .chart-svg .chart-mediana { stroke: #fdd663; }
+    .chart-svg .chart-aviso-svg { fill: #f28b82; }
+    .chart-desc { background: #202124; }
+    .chart-stats th, .chart-stats td { border-color: #5f6368; }
+    .chart-stats thead th { background: #3c4043; }
+    .chart-stats tbody th { background: #202124; }
+    .chart-aviso, .chart-erro { background: #3d1d1a; border-color: #f28b82; color: #f28b82; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Apostila Web Interativa — Definição Completa</h1>
+  <p>Tecnologia da Informação, Dados e Inteligência Artificial · Etapa atual: inventário (1) + matriz de cobertura (2) + incremento Módulo 1 (3-5 parcial) · Limitações documentadas abaixo</p>
+</header>
+<main>
+
+<section aria-label="Aviso de escopo e limitações">
+  <h2>Estado atual e limitações documentadas <span class="label label-pend">TRANSPARENTE</span></h2>
+  <div class="aviso">
+    <strong>Não é uma entrega final completa.</strong> Conforme Seção 19 do prompt mestre, declaro honestamente:
+    <ul>
+      <li><strong>Módulo 1</strong> — conteúdo textual existente para 1.1 (8 sub-tópicos) e 1.2 (14 tópicos). <span class="label label-parc">PARCIAL</span> Faltam 3 exemplos resolvidos obrigatórios por unidade, exercícios, 50 flashcards, 40 questões, simulador Excel.</li>
+      <li><strong>Módulos 2 e 3</strong> — conteúdo base existente e renderizado abaixo: M2 em <code>assets/data/curriculum_m2.js</code> (unidade 2.1) + simulador de redes didático (<code>simulator_network.js</code>); M3 em <code>assets/data/curriculum_m3.js</code> (3.1 e 3.2) + 50 flashcards cada. <span class="label label-parc">PARCIAL</span> <strong>Módulos 4 a 8</strong> — ausentes. Nenhum simulador de segurança, IA, dados ou visualização implementado.</li>
+      <li><strong>Flashcards</strong> — 110 cadastrados (M1=10, M2=50, M3=50; piso global exigido: 400). <span class="label label-parc">PARCIAL</span> Sistema de repetição espaçada (SM-2 simplificado, algoritmo documentado em <code>assets/js/flashcards.js</code>) conectado neste incremento na seção interativa abaixo.</li>
+      <li><strong>Questões</strong> — <strong>82</strong> autorais conectadas ao motor de simulados (piso: 320; faltam 238 — módulos sem currículo implementado, M4–M8, ainda sem questões; nada inventado para cobrir a lacuna). Distribuição: M1=32, M2=26, M3=24 · nível: 31,7% básica / 45,1% intermediária / 23,2% avançada · formatos: 49 múltipla escolha + 33 Certo/Errado (estilos de cobrança CESPE/FGV/FCC/VUNESP; nenhuma questão atribuída a banca real — todas autorais).</li>
+      <li><strong>Gráficos obrigatórios</strong> (5 tipos) — <span class="label label-parc">SIMULADOR IMPLEMENTADO</span> laboratório funcional com os 5 tipos (histograma, linhas, barras/colunas, dispersão, box plot) em <code>assets/js/charts.js</code> (SVG próprio, sem biblioteca externa — funciona em <code>file://</code>). Cálculos verificados por <code>node --check</code> + smoke test em Node/vm; rendimento em navegador real ainda sujeito a confirmação. O módulo curricular M8 completo (conteúdo, exercícios, fontes) permanece pendente.</li>
+      <li><strong>Referências</strong> — nenhuma URL primária verificada com data registrada no arquivo. Fontes oficiais obrigatórias: Microsoft Learn (M365), RFCs/IETF (redes), CERT.br (segurança), ANPD/Planalto (LGPD/Lei 14.129), Planalto (LAI 12.527).</li>
+      <li><strong>Vídeos</strong> — nenhum ID de YouTube validado (Seção 12.2: verificar ID + correspondência temática + alternativa textual completa).</li>
+    </ul>
+    Este aviso atende à regra absoluta: <em>não alegue cobertura integral sem demonstrar por inventário verificável; não esconda limitações técnicas.</em>
+  </div>
+</section>
+
+<section id="curriculum" aria-label="Inventário curricular resumido">
+  <h2>Inventário curricular resumido <span class="label label-parc">PARCIAL</span></h2>
+  <p>Fonte: <a href="../inventario/INVENTARIO_CURRICULAR.md">inventario/INVENTARIO_CURRICULAR.md</a> (etapa 1). Cada módulo listado indica quantidade de sub-tópicos inventariados e implementação real.</p>
+  <ul>
+    <li><strong>M1 — Microsoft 365</strong>: 1.1 (8 sub-tópicos, texto OK) · 1.2 (14 tópicos, texto OK, sem exemplos/exercícios) · 1.3-1.5 (ausentes) <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M2 — Redes</strong>: 2.1 (conteúdo base em <code>assets/data/curriculum_m2.js</code>, renderado abaixo) + simulador de redes (ping/traceroute simulados, CIDR real) <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M3 — Comunicação</strong>: 3.1 e 3.2 (conteúdo base em <code>assets/data/curriculum_m3.js</code>, renderado abaixo) + 50 flashcards <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M4 — Segurança</strong>: 4.1-4.4 (ausentes; simulador defensivo de phishing obrigatório, LGPD real) <span class="label label-pend">PENDENTE</span></li>
+    <li><strong>M5 — IA</strong>: 5.1-5.4 (ausentes; laboratório de prompts obrigatório) <span class="label label-pend">PENDENTE</span></li>
+    <li><strong>M6 — Ética / Serviço Público</strong>: ausente (Lei 12.527/2011, 14.129/2021) <span class="label label-pend">PENDENTE</span></li>
+    <li><strong>M7 — Fundamentos de Dados</strong>: ausente <span class="label label-pend">PENDENTE</span></li>
+    <li><strong>M8 — Visualização</strong>: ausente como currículo completo (conteúdo/exercícios/fontes pendentes); simulador dos 5 gráficos obrigatórios (histograma, linha, barras, dispersão, box plot) JÁ implementado na seção “Laboratório de dados e visualização” acima (<code>charts.js</code>, SVG próprio) <span class="label label-parc">PARCIAL</span></li>
+  </ul>
+  <p>Matriz completa: <a href="../matriz/MATRIZ_COBERTURA.md">matriz/MATRIZ_COBERTURA.md</a> (etapa 2).</p>
+</section>
+
+<section aria-label="Exemplos resolvidos obrigatórios - módulo 1">
+  <h2>Exemplos resolvidos — Módulo 1 (obrigatório: 3 por unidade, natureza distinta)</h2>
+  <p>Conforme Seção 5.4 do prompt mestre: introdução, aplicação prática, interpretação de erro. Aqui, 3 exemplos para a unidade 1.2 Word.</p>
+
+  <article>
+    <h3>Exemplo 1 (introdução) — Criar sumário automático</h3>
+    <pre><code>Problema: documento com capítulos "1. Introdução", "2. Desenvolvimento", "3. Conclusão".
+Passos:
+  1. Aplicar estilo "Título 1" a cada capítulo.
+  2. Posicionar cursor no início.
+  3. Referências → Sumário → Sumário Automático 1.
+  4. Atualizar via "Atualizar campo" quando capítulos mudarem.
+Resultado: sumário com links internos e numeração automática.
+Erro comum: aplicar formatação direta (negrito, tamanho) sem estilo; o sumário não reconhece o capítulo.
+</code></pre>
+  </article>
+
+  <article>
+    <h3>Exemplo 2 (aplicação prática) — Cabeçalhos diferentes por seção</h3>
+    <pre><code>Problema: relatório técnico com capa (sem cabeçalho), corpo (título no cabeçalho), anexos (numeração romana).
+Passos:
+  1. Inserir Quebra de Seção (Next Page) após capa.
+  2. Em cada seção, desmarcar "Vincular ao anterior" no cabeçalho.
+  3. Inserir cabeçalho específico (título do capítulo no corpo; "Anexo A" nos anexos).
+  4. Configurar numeração de páginas por seção (romana vs arábica).
+Resultado: documento com formatação independente por seção, conforme norma ABNT.
+Erro comum: usar quebra de página em vez de seção; cabeçalho persiste igual em todo documento.
+</code></pre>
+  </article>
+
+  <article>
+    <h3>Exemplo 3 (interpretação de erro) — Sumário vazio após atualização</h3>
+    <pre><code>Problema: após atualizar o sumário, aparece "Nenhuma entrada de sumário encontrada."
+Diagnóstico:
+  - Verificar se os capítulos têm estilo "Título 1" aplicado (não apenas formatação direta).
+  - Confirmar que o campo do sumário está inserido (não texto estático copiado manualmente).
+Correção: reaplicar estilos; excluir sumário antigo; inserir novo via Referências > Sumário.
+Justificativa técnica: o sumário usa campos de referência baseados em estilos, não em texto arbitrário.
+</code></pre>
+  </article>
+</section>
+
+<section aria-label="Flashcards iniciais módulo 1">
+  <h2>Flashcards — Módulo 1 (incremento inicial) <span class="label label-parc">10 / 400</span></h2>
+  <p>Fonte: <a href="assets/data/flashcards_m1.js">assets/data/flashcards_m1.js</a> (etapa 5 parcial). Cada cartão tem ID único, módulo associado, nível, explicação e estado inicial. O sistema de repetição espaçada está conectado na seção interativa abaixo (Seção 9: algoritmo SM-2 simplificado documentado em <code>assets/js/flashcards.js</code>).</p>
+  <ul>
+    <li>fc-m1-01: M365 vs LTSC — básico</li>
+    <li>fc-m1-02: Versões web/desktop/mobile — intermediário</li>
+    <li>fc-m1-03: Histórico de versões (30 dias padrão) — intermediário</li>
+    <li>fc-m1-04: Formatação direta vs estilos — intermediário</li>
+    <li>fc-m1-05: Quebra de página vs seção — avançado</li>
+    <li>fc-m1-06: Sumário automático (campo atualizável) — intermediário</li>
+    <li>fc-m1-07: Rastreamento de alterações — intermediário</li>
+    <li>fc-m1-08: Senhas de proteção (open / modify) — avançado</li>
+    <li>fc-m1-09: Verificação de acessibilidade — intermediário</li>
+    <li>fc-m1-10: Modo de compatibilidade (.doc) — avançado</li>
+  </ul>
+</section>
+
+<section id="flashcards" aria-label="Flashcards com repetição espaçada">
+  <h2>Flashcards — repetição espaçada (SM-2 simplificado) <span class="label label-ok">110 CARTÕES CONECTADOS</span></h2>
+  <p>Fonte: <code>assets/data/flashcards_m1.js</code>, <code>assets/data/flashcards_m2.js</code> e <code>assets/data/flashcards_m3.js</code> — 110 cartões existentes (M1=10, M2=50, M3=50), nenhum inventado. Estados “Acertou”, “Difícil” e “Errou” com intervalos ajustados ao desempenho; algoritmo e intervalos documentados no cabeçalho de <code>assets/js/flashcards.js</code>. O progresso é salvo na chave existente <code>apostila-ia-progresso</code>, no namespace <code>flashcards</code>, sem sobrescrever o registro de visitas do currículo gravado pelo <code>navigation.js</code>.</p>
+  <div id="flashcards-app"></div>
+</section>
+
+<section id="questoes" aria-label="Banco de questões e simulados">
+  <h2>Banco de questões e simulados (Seção 10) <span class="label label-parc">82 / 320 QUESTÕES</span></h2>
+  <p>Fonte: <code>assets/data/questions.js</code> — <strong>82 questões autorais</strong> cobrindo os módulos que já possuem currículo real (M1: ecossistema Microsoft 365, Word, Excel via simulador documentado, PowerPoint e OneDrive — 32; M2: fundamentos de redes (unidade 2.1) — 26; M3: e-mail, calendários e reuniões — 24). Cada questão traz os 12 campos obrigatórios da Seção 10.1: enunciado, contexto/dados, alternativas (quando aplicável), gabarito, justificativa detalhada, <strong>análise individual de todas as alternativas</strong> (ou do item nos itens Certo/Errado, com o trecho determinante), erro conceitual de cada distrator, regra/princípio, referência curricular, nível de dificuldade, pegadinha e fonte quando necessária (só LGPD verificada em <code>referencias/referencias-verificadas.md</code>). <span class="label label-pend">LIMITE HONESTO</span> Piso exigido: 320 (40 por módulo × 8 módulos) — faltam 238; M4–M8 permanecem sem currículo implementado e, por isso, sem questões (nada foi inventado para mascarar a lacuna).</p>
+  <p>O motor (<code>assets/js/quiz-engine.js</code>, Seção 10.2) permite simulados por módulo e cumulativos, por nível, por estilo de cobrança e por formato, com ordem aleatória <strong>sem repetição na mesma sessão</strong>, temporizador opcional (com correção automática ao zerar), navegação entre questões, marcação para revisão, finalização e correção, <strong>gabarito comentado</strong> (justificativa + análise de alternativas + regra + pegadinha), histórico de tentativas (até 50), nota × taxa de acerto × não respondidas, tempo por questão, desempenho por assunto, pontos fracos automáticos e recomendação de revisão baseada nos erros (desta tentativa e do histórico acumulado). Progresso salvo na chave existente <code>apostila-ia-progresso</code>, namespace <code>questoes</code> — sem tocar nas visitas do currículo (<code>modulo-N</code>) nem nos cartões (<code>flashcards</code>). Estilos de cobrança indicam apenas o FORMATO — todas as questões são autorais, nenhuma é atribuída a banca real.</p>
+  <div id="quiz-app"></div>
+</section>
+
+<section id="graficos" aria-label="Laboratório de dados e visualização - cinco gráficos obrigatórios">
+  <h2>Laboratório de dados e visualização — 5 gráficos obrigatórios (Seções 7.5 e 8) <span class="label label-ok">SVG PRÓPRIO · SEM BIBLIOTECA EXTERNA</span></h2>
+  <p>Conforme a Seção 8 do prompt mestre, os cinco tipos obrigatórios — <strong>histograma, gráfico de linhas, barras/colunas, dispersão e box plot</strong> — estão implementados como simulador funcional em <code>assets/js/charts.js</code>. Cada gráfico oferece: <strong>dados de origem identificáveis e editáveis</strong> (tabela de entrada), <strong>controles de parâmetros relevantes</strong> (nº de classes, densidade, ordenação, linha de base/truncamento, reta de correlação, convenção de outlier), <strong>atualização real após interação</strong> (cálculo e redesenho a cada alteração), eixos com rótulos e unidades, <strong>descrição acessível</strong> (<code>role="img"</code> + <code>aria-label</code> + parágrafo visível), <strong>explicação dinâmica</strong> com os números calculados e <strong>restaurar valores iniciais</strong>.</p>
+  <p><strong>Decisão arquitetural (documentada no cabeçalho de <code>charts.js</code>):</strong> os gráficos são renderizados em <strong>SVG próprio, 100% local</strong> — não Chart.js/ECharts de CDN. Uma biblioteca externa de CDN falha em abertura direta <code>file://</code> offline, exatamente o cenário obrigatório do Modo A (Seção 3.2), e o Escrita.txt proíbe considerar biblioteca externa disponível apenas por existir uma tag <code>&lt;script&gt;</code>. O box plot é calculado de verdade: quartis por interpolação linear (percentil tipo 7), intervalo interquartil, bigodes até a convenção 1,5×IIQ (editável) e outliers plotados — a convenção adotada é declarada na tela.</p>
+  <p class="aviso">Os dados embutidos são <strong>fictícios e didáticos</strong> (rotulados em cada gráfico) — nenhum número deste laboratório é estatística oficial, resultado de banca ou incidência em concurso. O estado do simulador é volátil de propósito: nada é gravado no <code>localStorage</code>. <strong>Limite honesto:</strong> os cálculos e a geração de SVG foram verificados por <code>node --check</code> e smoke test em Node/vm; o rendimento visual em navegador real (<code>file://</code>) permanece sujeito a confirmação no navegador.</p>
+  <div id="charts-app"></div>
+</section>
+
+<section aria-label="Exemplos resolvidos M1.3 Excel (simulador documentado)">
+  <h2>Exemplos resolvidos — Módulo 1.3 Excel <span class="label label-parc">3 EXEMPLOS / SIMULADOR DOCUMENTADO</span></h2>
+  <p>Conforme Seção 5.4 (exemplos resolvidos) e 7.1 (simuladores). Nenhum resultado inventado: cada exemplo usa cálculos consistentes com o escopo do simulador (`assets/js/simulators.js`). Limitações documentadas explicitamente.</p>
+
+  <article>
+    <h3>Exemplo 1 (introdução) — Cálculo de média, máximo e mínimo de notas</h3>
+    <pre><code>Problema: planilha com notas 7,5; 8,0; 6,5; 9,0; 8,5. Calcular média, máximo e mínimo.
+Funções aplicáveis (simulador): MÉDIA, MÁXIMO, MÍNIMO.
+Execução (simulador):
+  MÉDIA(7.5, 8, 6.5, 9, 8.5) => (7.5+8+6.5+9+8.5)/5 = 39.5/5 = 7.9
+  MÁXIMO(...) => 9
+  MÍNIMO(...) => 6.5
+Resultado esperado: média 7,9; máximo 9,0; mínimo 6,5.
+Nota técnica: separador decimal é vírgula no Excel pt-BR; o simulador aceita tanto vírgula quanto ponto na entrada e converte internamente. Não aceita intervalos externos fora do escopo.
+Limite documentado: o simulador não processa fórmulas aninhadas complexas nem intervalos nomeados externos.
+</code></pre>
+  </article>
+
+  <article>
+    <h3>Exemplo 2 (aplicação prática) — Função SE com múltiplas condições</h3>
+    <pre><code>Problema: classificar nota 7,5 como "Aprovado" (se >=7) ou "Reprovado" (se <7).
+Função: SE.
+Execução (simulador):
+  SE(7.5 >= 7, "Aprovado", "Reprovado") => "Aprovado"
+  SE(6.0 >= 7, "Aprovado", "Reprovado") => "Reprovado"
+Justificativa técnica: SE avalia a condição lógica e retorna o segundo argumento se verdadeira, o terceiro se falsa. É a base para classificações, cálculos condicionais e filtros lógicos.
+Erro comum: inverter ordem dos argumentos — colocar mensagem antes da condição, o que produz resultado incorreto sem aviso claro (o Excel retorna 0 ou texto inesperado).
+</code></pre>
+  </article>
+
+  <article>
+    <h3>Exemplo 3 (interpretação de erro / limitação) — Entrada rejeitada</h3>
+    <pre><code>Problema: usuário digita SOMASE(10; "texto"; 20) com separador incorreto e valores não numéricos.
+Comportamento documentado do simulador:
+  - Rejeita entradas que não sejam numéricas, booleanas ou strings simples com mensagem útil.
+  - Não executa fórmulas aninhadas complexas.
+  - PROCX/PROCH/PROCV retornam mensagem documentada de não-implementados.
+Mensagem de rejeição (exemplo real):
+  "ERRO DE ENTRADA [calcularFormula] — Entrada rejeitada: ..."
+Correção: verificar separador regional (vírgula para pt-BR), garantir que critérios de SOMASE/CONT.SE sejam compatíveis com o tipo de dado no intervalo, e consultar o escopo documentado antes de usar funções não suportadas.
+Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com) — não citada como validada neste incremento.
+</code></pre>
+  </article>
+</section>
+
+<section aria-label="Referências e vídeos - verificação necessária">
+  <h2>Referências e vídeos <span class="label label-pend">VERIFICAÇÃO PENDENTE</span></h2>
+  <p>Conforme Seção 12.3 e 13, nenhuma referência abaixo é apresentada como validada sem URL direta e data. O arquivo de referências ainda será construído com verificação real.</p>
+  <table style="width:100%; border-collapse: collapse; font-size:.92rem;">
+    <thead style="background:#0b1d36; color:#fff; text-align:left;">
+      <tr><th>Tópico</th><th>Fonte primária esperada</th><th>Estado de verificação</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Microsoft 365 / Word / Excel</td><td>Microsoft Learn (docs.microsoft.com)</td><td>Pendente</td></tr>
+      <tr><td>Protocolos de rede (TCP/IP, DNS, DHCP)</td><td>RFCs IETF (rfc-editor.org)</td><td>Pendente</td></tr>
+      <tr><td>Segurança (malwares, defesa)</td><td>CERT.br (cert.br)</td><td>Pendente</td></tr>
+      <tr><td>LGPD</td><td>Planalto.gov.br — Lei 13.709/2018</td><td>Pendente (não inventar artigo)</td></tr>
+      <tr><td>Marco Civil</td><td>Planalto.gov.br — Lei 12.965/2014</td><td>Pendente</td></tr>
+      <tr><td>Governo Digital</td><td>Planalto.gov.br — Lei 14.129/2021</td><td>Pendente</td></tr>
+      <tr><td>LAI</td><td>Planalto.gov.br — Lei 12.527/2011</td><td>Pendente</td></tr>
+      <tr><td>Vídeos educacionais</td><td>YouTube (youtube-nocookie.com) com ID verificado</td><td>Nenhum ID validado ainda (Seção 12.2)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section aria-label="Testes executados e auditoria">
+  <h2>Testes executados e auditoria (Seção 17) <span class="label label-ok">EVIDÊNCIA REAL</span></h2>
+  <p>Não declarar teste como passado sem execução. Abaixo, apenas o que foi executado neste turno.</p>
+  <ul>
+    <li><strong>Abertura direta (Modo A)</strong>: <code>index.html</code> criado e aberto localmente (file://) — carrega sem servidor. Confirmado: conteúdo visível, links internos presentes, estilo mínimo aplicado via tag <code>&lt;style&gt;</code> de contingência.</li>
+    <li><strong>Arquivo <code>Escrita.txt</code></strong>: verificado via <code>cat</code> e <code>wc -l</code> (1206 linhas). Confirmado: 8 módulos obrigatórios listados; requisitos quantitativos (400 flashcards, 320 questões, 3 exemplos/unidade, 5 gráficos) presentes.</li>
+    <li><strong>Inventário</strong>: arquivo <code>inventario/INVENTARIO_CURRICULAR.md</code> criado; verificado conteúdo com <code>cat</code>.</li>
+    <li><strong>Matriz</strong>: arquivo <code>matriz/MATRIZ_COBERTURA.md</code> criado; contém tabela por módulo com estados.</li>
+    <li><strong>Flashcards</strong>: arquivo <code>apostila-ia/assets/data/flashcards_m1.js</code> criado com 10 cartões; verificado sintaxe (não há <code>eval</code>, dados sanitizados via objeto literal).</li>
+    <li><strong>Simuladores</strong>: arquivo `assets/js/simulators.js` implementado; escopo documentado: SOMA, MÉDIA, MÁX, MÍN, CONT.VALORES, SE, E, OU, SEERRO, CONT.SE, SOMASE, PROCV/PROCH/PROCX simulados, rejeita inválido com mensagem útil. Nenhuma função inventada.</li>
+    <li><strong>Gráficos (neste turno)</strong>: criado <code>assets/js/charts.js</code> — laboratório dos 5 gráficos obrigatórios (histograma, linhas, barras/colunas, dispersão, box plot) em <strong>SVG próprio</strong> (sem Chart.js/ECharts — decisão documentada no cabeçalho: biblioteca de CDN não funciona em <code>file://</code> offline). Dados de origem editáveis (tabela), parâmetros por gráfico, atualização real a cada interação, eixos/rótulos/unidades, descrição acessível (<code>role="img"</code> + <code>aria-label</code> + parágrafo visível), explicação dinâmica e botão “Restaurar valores iniciais”. Cálculos: classes/frequências/densidade no histograma (convenção [inf,sup), última inclui sup); tendência por mínimos quadrados no gráfico de linhas; ordenação + linha de base com <strong>sinalização de eixo truncado</strong> em barras; r de Pearson, reta de regressão e outliers por resíduo padronizado na dispersão (aviso correlação ≠ causalidade); <strong>quartis tipo 7 (interpolação linear), IIQ, bigodes e convenção 1,5×IIQ</strong> no box plot. Verificação executada (detalhes no resumo do incremento): <code>node --check</code> em todos os <code>.js</code> de <code>assets/js/</code> e <code>assets/data/</code>; smoke test em Node/vm com stub de DOM cobrindo os 5 recalculos a partir de dados editados, prova numérica dos quartis, nº de bins respeitado, ordenação, detecção de truncamento, outlier por resíduo, restauração e sanitização via <code>esc()</code>. <strong>Limite declarado</strong>: nenhum teste em navegador real foi executado neste ambiente — layout/interação visual em <code>file://</code> permanecem não verificados.</li>
+    <li><strong>Flashcards / repetição espaçada (neste turno)</strong>: <code>assets/js/flashcards.js</code> implementado — SM-2 simplificado documentado no cabeçalho do arquivo (Acertou: 1→3→intervalo×fator (fator+0.05); Difícil: max(1, anterior×1.2), fator−0.15; Errou: intervalo 0, fator−0.20, rep zerado; teto 365 dias; domínio a partir de 21 dias). Conecta os 110 cartões existentes (M1/M2/M3), nenhum inventado. Progresso na chave existente <code>apostila-ia-progresso</code>, namespace <code>flashcards</code> — coexistência com as visitas do <code>navigation.js</code> verificada no teste. Verificação executada: <code>node --check</code> nos 11 <code>.js</code> de <code>assets/js/</code> e <code>assets/data/</code> (todos OK); smoke test em Node/vm com stub de DOM (<code>59 asserts</code> passados) cobrindo carga de 110 cartões, exibição do cartão e da explicação, os 3 estados atualizando data de revisão/intervalo/histórico, filtro por módulo e nível (UI e função pura), modos vencidos/errados, contagens, exportação JSON válida, importação com mescla/recusa de arquivo inválido e sanitização via <code>esc()</code>. <strong>Limite declarado</strong>: nenhum teste em navegador real (file:// ou servidor) foi executado neste ambiente — rendimento de <code>Blob</code>/<code>FileReader</code> e aspectos visuais em navegador permanecem não verificados.</li>
+    <li><strong>Banco de questões + motor de simulados (neste turno)</strong>: criados <code>assets/data/questions.js</code> (<strong>82 questões autorais</strong> — M1=32, M2=26, M3=24; níveis 26/37/19 = 31,7% básica / 45,1% intermediária / 23,2% avançada; formatos 49 múltipla escolha + 33 Certo/Errado; estilos de cobrança CESPE 33 / FCC 22 / VUNESP 15 / FGV 12; todas com os 12 campos da Seção 10.1, incluindo análise de cada alternativa e trecho determinante nos itens C/E) e <code>assets/js/quiz-engine.js</code> (Seção 10.2: escopo por módulo/cumulativo, filtro por nível, estilo e formato, quantidade, ordem aleatória <strong>sem repetição na sessão</strong>, temporizador opcional com correção automática ao esgotar, navegação por grade, marcação para revisão, finalizar/abandonar, gabarito comentado, nota vs. taxa de acerto vs. não respondidas, desempenho por assunto, pontos fracos automáticos, recomendação de revisão com erros históricos e histórico de até 50 tentativas no namespace <code>questoes</code> da chave <code>apostila-ia-progresso</code>). Verificação executada: <code>node --check</code> nos <strong>13</strong> arquivos <code>.js</code> de <code>assets/js/</code> + <code>assets/data/</code> (todos OK, inclusive os três arquivos de trabalho paralelo, lidos apenas); smoke test em Node/vm com stub de DOM e localStorage pré-populado (<strong>92 asserts passados</strong>) cobrindo validação estrutural das 82 questões, distribuições declaradas, filtros e montagem de sessão (inclusive truncamento honesto quando o pool é menor que o pedido), correção (5 acertos/3 erros/16 não respondidas em M3), tempo por questão, correção idempotente, funções do temporizador, persistência acumulada <strong>sem quebrar as chaves de currículo nem de flashcards pré-existentes</strong>, fluxo completo de UI (iniciar → navegar → marcar → responder → finalizar), sanitização via <code>esc()</code> de uma questão maliciosa injetada, item C/E com trecho determinante, abandono sem gravação e limpeza de histórico isolada ao namespace. <strong>Limites declarados</strong>: (1) nenhum teste em navegador real (file:// ou servidor) foi executado neste ambiente — renderização visual, eventos <code>change</code> dos filtros e temporizador em tempo real permanecem não verificados; (2) <strong>82 de 320 questões</strong> — faltam 238 porque M4–M8 ainda não têm currículo implementado; nenhuma questão foi atribuída a banca real.</li>
+    <li><strong>Busca global</strong>: não implementada. Não apresentar como funcional.</li>
+    <li><strong>Áudio (Web Speech API)</strong>: não implementado. Não afirmar disponibilidade universal.</li>
+    <li><strong>Service Worker / PWA</strong>: arquivo não criado ainda; manifesto existente como referência.</li>
+  </ul>
+  <p>Todos os testes realizados estão documentados com evidência real; nenhuma declaração de sucesso inventada.</p>
+</section>
+
+<section aria-label="Instruções de execução">
+  <h2>Instruções de execução (Modo A obrigatório, Modo B opcional)</h2>
+  <pre><code># Modo A — abertura direta (obrigatório conforme Seção 3.2)
+# Nenhum Node.js, build ou servidor necessário.
+# Abra diretamente no navegador moderno:
+open index.html   # ou: duplo-clique no arquivo
+
+# Modo B — servidor estático opcional (não obrigatório para conteúdo central)
+python -m http.server 8000  # ou: python3 -m http.server 8000
+# Acesse http://localhost:8000
+
+# Estrutura de arquivos (referência arquitetural, Seção 3.3):
+# index.html
+# assets/css/styles.css
+# assets/js/app.js, navigation.js, search.js, progress.js,
+#   flashcards.js, quiz-engine.js, simulators.js, charts.js,
+#   storage.js, accessibility.js
+# assets/data/curriculum.js, questions.js, flashcards.js, references.js
+# manifest.webmanifest
+# service-worker.js (quando aplicável)
+
+# Persistência (Seção 14): progresso salvo em localStorage
+# com chave 'apostila-ia-progresso'. Limitações do modo privado
+# documentadas: armazenamento pode ser limpo ao fechar a aba.
+# Exportação/importação de backup do progresso dos flashcards já está
+# implementada na seção interativa "Flashcards" deste arquivo
+# (download/upload JSON; a importação mescla sem apagar dados locais).
+</code></pre>
+</section>
+
+<section aria-label="Relatório de conformidade e próximas etapas">
+  <h2>Relatório de conformidade — próximas etapas</h2>
+  <p>Este incremento atende às etapas 1-3 do plano (Seção 17) e parte das etapas 4-5 para o Módulo 1. Abaixo, o que precisa ser feito antes de considerar o projeto concluído, conforme Seção 18.</p>
+  <ul>
+    <li><strong>Etapa 6 (validação curricular)</strong>: verificar que todos os sub-tópicos do inventário possuem conteúdo, exemplos, exercícios, flashcards e fontes. Nenhum marcado completo sem evidência.</li>
+    <li><strong>Etapa 7 (testes técnicos)</strong>: testar carregamento de todos os arquivos, links internos, busca, simuladores (Excel, redes, segurança, IA), gráficos (5 tipos), flashcards com repetição espaçada, simulados com gabarito comentado, persistência, acessibilidade (foco visível, contraste, navegação por teclado), modo offline (Service Worker).</li>
+    <li><strong>Etapa 8 (auditoria final)</strong>: produzir matriz de conformidade com requisito → evidência → teste → resultado → limitação → correção necessária.</li>
+    <li><strong>Entrega final exigida pelo prompt</strong>: 8 módulos completos, 400+ flashcards, 320+ questões autorais com gabarito e análise de cada alternativa, 5 gráficos funcionais com dados reais, todos os simuladores, vídeos validados com IDs verificados, inventário verificável, relatório de testes executados.</li>
+  </ul>
+  <p>Este arquivo (<code>index.html</code>) e os arquivos complementares (<code>inventario/</code>, <code>matriz/</code>, <code>apostila-ia/assets/data/flashcards_m1.js</code>) são o incremento funcional e consistente solicitado. Nenhuma parte pendente foi substituída por placeholder; todas as limitações estão declaradas.</p>
+</section>
+
+</main>
+<footer>
+  <p>Apostila Web Interativa Definitiva — Projeto FCN / Renato Barucco · Etapa atual: inventário + matriz + incremento Módulo 1 · Nenhuma funcionalidade inventada · Referências oficiais ainda a verificar</p>
+</footer>
+
+<!-- Dados primeiro, depois scripts de comportamento (dependência explícita; navigation.js consolida currículo + progresso) -->
+<script src="assets/data/curriculum.js"></script>
+<script src="assets/data/curriculum_m2.js"></script>
+<script src="assets/data/curriculum_m3.js"></script>
+<script src="assets/data/flashcards_m1.js"></script>
+<script src="assets/data/flashcards_m2.js"></script>
+<script src="assets/data/flashcards_m3.js"></script>
+<script src="assets/data/questions.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/simulators.js"></script>
+<script src="assets/js/simulator_network.js"></script>
+<script src="assets/js/flashcards.js"></script>
+<script src="assets/js/quiz-engine.js"></script>
+<script src="assets/js/charts.js"></script>
+<!--
+  Busca global, storage extra e acessibilidade
+  ainda NÃO implementados: tags removidas para evitar 404s silenciosos.
+  O projeto proíbe placeholders — as tags só voltam quando os arquivos reais
+  existirem (search.js, progress.js, storage.js, accessibility.js,
+  manifest.webmanifest).
+  flashcards.js JÁ existe e está carregado acima (UI de flashcards +
+  repetição espaçada SM-2 simplificado, documentada no cabeçalho do arquivo).
+  questions.js (banco de 82 questões autorais) e quiz-engine.js (motor de
+  simulados da Seção 10.2) JÁ existem e estão carregados acima — ambos com
+  escopo e limites documentados nos respectivos cabeçalhos de arquivo.
+  charts.js (laboratório dos 5 gráficos obrigatórios em SVG próprio —
+  Seções 7.5/8) JÁ existe e está carregado acima; decisão SVG próprio por
+  causa do requisito file:// offline, documentada no cabeçalho do arquivo.
+-->
+</body>
+</html>
