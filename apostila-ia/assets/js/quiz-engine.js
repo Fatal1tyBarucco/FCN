@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Escopos dinâmicos (P1.1) ----------
    * 'mN' = módulo N isolado (min = max = N); 'cum-N' = módulos 1..N
-   * (min = 1, max = N — ambos derivados do número do módulo). Um módulo
-   * ausente no meio (hoje o M6) não gera escopo algum e não lança exceção:
+   * (min = 1, max = N — ambos derivados do número do módulo);
+   * nenhum módulo de 1 a 8 está ausente desde o P1-C (2026-10-21);
    * o filtro usa apenas min/max, então questões de módulos maiores passam a
    * aparecer conforme forem escritas, sem depender do módulo ausente.
    * Fonte da descoberta: window.apostilaDados.curriculum, consolidado pelo
