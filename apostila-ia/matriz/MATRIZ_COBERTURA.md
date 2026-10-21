@@ -3,7 +3,7 @@
 Formato: Subtópico | Conteúdo didático | 3+ exemplos | Flashcards (≥50/módulo) | Questões (≥40/módulo) | Gráfico/Simulador | Referência verificada | Estado
 
 Revisão/sincronização com o código: 2026-10-20 (leitura de `assets/data/*.js`, `assets/js/*.js` e `index.html`). O código é a fonte de verdade.
-Revisão P0 (disco × carregado): 2026-10-20 — correção de textos falsos: gráficos **5/5 carregados**; M4, M5, M7 e M8 **com currículo em disco, fora do `index.html`**; flashcards **164 no disco / 110 conectados ao app** (faltam 236 no disco e 290 para o app); links do `index.html` para este arquivo e para o inventário corrigidos para o Pages.
+Revisão P0 (disco × carregado): 2026-10-20 — **retrato daquele momento, SUPERSEDIDO pela Revisão P1-A abaixo**: correção dos textos falsos então vigentes: gráficos **5/5 carregados**; M4, M5, M7 e M8 **com currículo apenas em disco** (sem tag no `index.html`); dos **164 cartões em disco**, só os **110 de M1–M3** estavam conectados ao app (faltavam, então, 236 no disco e 290 para o app); links do `index.html` para este arquivo e para o inventário corrigidos para o Pages.
 Revisão P1-A (wiring dinâmico): 2026-10-21 — `navigation.js` descobre módulos por convenção (N=1..8); `curriculum_m4/m5/m7/m8.js` e `flashcards_m4.js` **carregados no `index.html`**: currículo de M1–M5 e M7–M8 **renderiza** (216 nós na árvore) e flashcards **164 / 164 conectados**; escopos do simulado construídos dinamicamente (m1..m5, m7, m8 + cum-2..cum-5, cum-7, cum-8); M6 sem arquivo → sem chave/escopo, sem exceção. Verificado com `node --check` (19 `.js` OK) + smoke test Node/vm (59 asserts); não testado em navegador real.
 
 ---

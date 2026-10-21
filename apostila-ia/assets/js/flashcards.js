@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * DECISÃO — duplicação deliberada da descoberta no fallback (~15 linhas):
    * o bloco `montarFontesDiretas()` repete a mesma convenção de detecção do
    * navigation.js em vez de compartilhar um helper. Um helper exigiria um 6º
-   * arquivo <script> novo (o index.html mantém 18 tags: 13 originais + 5 de
+   * arquivo <script> novo (o index.html mantém 19 tags: 14 originais + 5 de
    * dados) ou expor uma global utilitária a partir do navigation.js — o que
    * acoplaria dois scripts de comportamento à ordem de carga. A duplicação é
    * pequena, simétrica e documentada nos dois lados; o caminho primário
