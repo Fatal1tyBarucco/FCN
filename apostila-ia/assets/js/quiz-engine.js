@@ -3,7 +3,9 @@
  * ============================================================================
  * RECURSOS IMPLEMENTADOS (Seção 10.2)
  * ============================================================================
- * - Simulados por módulo (M1, M2, M3) e cumulativos (M1+M2, M1+M2+M3).
+ * - Simulados por módulo isolado e cumulativos (escopos `mN` e `cum-N`
+ *   construídos dinamicamente a partir dos módulos presentes no currículo
+ *   carregado — ver a construção de ESCOPOS; hoje M1–M5, M7 e M8).
  * - Simulados por nível (básico / intermediário / avançado) e por estilo de
  *   cobrança (cespe / fgv / fcc / vunesp) e por formato (C/E × múltipla).
  * - Simulados aleatórios SEM REPETIÇÃO na mesma sessão: embaralhamento
@@ -73,14 +75,91 @@ document.addEventListener('DOMContentLoaded', () => {
     vunesp: 'VUNESP (conhecimento objetivo e aplicação)'
   };
   const ROTULO_FORMATO = { mc: 'Múltipla escolha', ce: 'Certo ou Errado' };
-  /* Escopos: módulo isolado ou cumulativo. 'cum-N' = módulos 1..N. */
-  const ESCOPOS = {
-    'm1': { rotulo: 'Módulo 1 — Microsoft 365', min: 1, max: 1 },
-    'm2': { rotulo: 'Módulo 2 — Redes', min: 2, max: 2 },
-    'm3': { rotulo: 'Módulo 3 — Comunicação', min: 3, max: 3 },
-    'cum-2': { rotulo: 'Cumulativo — M1 + M2', min: 1, max: 2 },
-    'cum-3': { rotulo: 'Cumulativo — M1 + M2 + M3', min: 1, max: 3 }
+
+  /* ---------- Escopos dinâmicos (P1.1) ----------
+   * 'mN' = módulo N isolado (min = max = N); 'cum-N' = módulos 1..N
+   * (min = 1, max = N — ambos derivados do número do módulo). Um módulo
+   * ausente no meio (hoje o M6) não gera escopo algum e não lança exceção:
+   * o filtro usa apenas min/max, então questões de módulos maiores passam a
+   * aparecer conforme forem escritas, sem depender do módulo ausente.
+   * Fonte da descoberta: window.apostilaDados.curriculum, consolidado pelo
+   * navigation.js — cujo listener de DOMContentLoaded foi registrado antes
+   * deste script (ordem das tags no index.html), portanto executa primeiro.
+   * Rótulos: mapa explícito igual aos títulos do inventário do index.html
+   * (M1 Microsoft 365 … M8 Visualização); módulo novo sem mapa cai para o
+   * `titulo` do próprio dado, ou 'Módulo N' — nunca inventa nome (o titulo
+   * dos dados é MAIÚSCULO; usá-lo é apenas contingência de fallback).
+   * Ordem do dropdown preservada em relação ao histórico: primeiro todos os
+   * `mN` crescentes, depois todos os `cum-N` crescentes — a sequência antiga
+   * (m1, m2, m3, cum-2, cum-3) permanece nessa ordem relativa, e os rótulos
+   * de m1..m3, cum-2 e cum-3 são idênticos aos anteriores.
+   * Fallback: se o consolidador não existir (falha do navigation.js),
+   * mantém exatamente os 5 escopos históricos. 'cum-3' (default da UI e
+   * fallback de filtrar()/montarSessao()) é garantido em QUALQUER caminho. */
+  const TOTAL_MODULOS_OFICIAIS = 8; // Escrita.txt, Seção 6 — 8 módulos obrigatórios
+  const ROTULO_MODULO = {
+    1: 'Microsoft 365',
+    2: 'Redes',
+    3: 'Comunicação',
+    4: 'Segurança',
+    5: 'IA',
+    6: 'Ética / Serviço Público',
+    7: 'Fundamentos de Dados',
+    8: 'Visualização'
   };
+
+  function modulosCarregados() {
+    const fonte = (typeof window !== 'undefined' && window.apostilaDados &&
+      window.apostilaDados.curriculum) ? window.apostilaDados.curriculum : null;
+    if (!fonte) return null; // sem consolidador → caminho histórico
+    const numeros = [];
+    Object.keys(fonte).forEach((chave) => {
+      const m = /^modulo-(\d+)$/.exec(chave);
+      if (m) numeros.push(parseInt(m[1], 10));
+    });
+    return numeros.sort((a, b) => a - b);
+  }
+
+  function rotuloModulo(n, apostilaDados) {
+    if (ROTULO_MODULO[n]) return 'Módulo ' + n + ' — ' + ROTULO_MODULO[n];
+    const mod = apostilaDados && apostilaDados.curriculum ? apostilaDados.curriculum['modulo-' + n] : null;
+    const titulo = mod && typeof mod.titulo === 'string' ? mod.titulo : null;
+    return 'Módulo ' + n + (titulo ? ' — ' + titulo : '');
+  }
+
+  function montarEscopos(modulos, apostilaDados) {
+    const escopos = {};
+    modulos.forEach((n) => {
+      escopos['m' + n] = { rotulo: rotuloModulo(n, apostilaDados), min: n, max: n };
+    });
+    modulos.forEach((n) => {
+      if (n < 2) return; // cum-1 seria duplicata de m1
+      const presentes = modulos.filter((m) => m <= n);
+      escopos['cum-' + n] = {
+        rotulo: 'Cumulativo — ' + presentes.map((m) => 'M' + m).join(' + '),
+        min: 1,
+        max: n
+      };
+    });
+    if (!escopos['cum-3']) escopos['cum-3'] = { rotulo: 'Cumulativo — M1 + M2 + M3', min: 1, max: 3 };
+    return escopos;
+  }
+
+  function escoposHistoricos() {
+    return {
+      'm1': { rotulo: 'Módulo 1 — Microsoft 365', min: 1, max: 1 },
+      'm2': { rotulo: 'Módulo 2 — Redes', min: 2, max: 2 },
+      'm3': { rotulo: 'Módulo 3 — Comunicação', min: 3, max: 3 },
+      'cum-2': { rotulo: 'Cumulativo — M1 + M2', min: 1, max: 2 },
+      'cum-3': { rotulo: 'Cumulativo — M1 + M2 + M3', min: 1, max: 3 }
+    };
+  }
+
+  const modulosDescobertos = modulosCarregados();
+  const ESCOPOS = (modulosDescobertos && modulosDescobertos.length)
+    ? montarEscopos(modulosDescobertos,
+        (typeof window !== 'undefined' && window.apostilaDados) ? window.apostilaDados : null)
+    : escoposHistoricos();
   const QUANTIDADES = [10, 20, 0]; // 0 = todas as questões do filtro
   const TEMPOS = [0, 10, 20, 40, 60]; // minutos; 0 = sem limite
 
@@ -569,9 +648,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const nivelRotulos = { '': 'Todos os níveis', basico: 'Básico', intermediario: 'Intermediário', avancado: 'Avançado' };
     const formatoRotulos = { '': 'Ambos os formatos', mc: 'Múltipla escolha', ce: 'Certo ou Errado' };
 
-    let html = '<p>Banco carregado: <strong>' + cont.total + '</strong> questões autorais de M1, M2 e M3 ' +
-      '(M1=' + (cont.porModulo[1] || 0) + ', M2=' + (cont.porModulo[2] || 0) + ', M3=' + (cont.porModulo[3] || 0) + '). ' +
-      'Piso do Escrita.txt: 320 — este é um núcleo inicial honesto; módulos sem currículo implementado (M4–M8) ainda não têm questões. ' +
+    /* Cabeçalho calculado a partir dos módulos REALMENTE presentes (P1.1):
+     * módulos com currículo carregado mas sem questões e módulos sem
+     * currículo algum são derivados dos dados, não fixados — o texto não
+     * vira mentira quando novas questões forem escritas. */
+    const carregados = modulosCarregados() || [1, 2, 3];
+    const porModuloTxt = carregados.map((n) => 'M' + n + '=' + (cont.porModulo[n] || 0)).join(', ');
+    const semQuestoes = [];
+    carregados.forEach((n) => { if (!cont.porModulo[n]) semQuestoes.push('M' + n + ' (currículo carregado)'); });
+    for (let n = 1; n <= TOTAL_MODULOS_OFICIAIS; n++) {
+      if (carregados.indexOf(n) === -1) semQuestoes.push('M' + n + ' (sem currículo)');
+    }
+    const pisoQuestoes = 320;
+    const faltamQuestoes = Math.max(0, pisoQuestoes - cont.total);
+
+    let html = '<p>Banco carregado: <strong>' + cont.total + '</strong> questões autorais (' + porModuloTxt + '). ' +
+      'Piso do Escrita.txt: ' + pisoQuestoes + ' — faltam ' + faltamQuestoes + '. ' +
+      (semQuestoes.length
+        ? 'Módulos ainda sem questões autorais: ' + semQuestoes.join(', ') + '. '
+        : 'Todos os módulos oficiais têm questões autorais. ') +
       'Nenhuma questão é atribuída a banca real: o campo de estilo indica apenas o FORMATO DE COBRANÇA.</p>';
 
     html += '<div class="qz-filtros">' +

@@ -1,8 +1,9 @@
 /* flashcards.js — UI de flashcards com repetição espaçada (Seção 9 do Escrita.txt).
  *
  * CONECTA OS CARTÕES JÁ EXISTENTES: assets/data/flashcards_m1.js (10),
- * flashcards_m2.js (50) e flashcards_m3.js (50) — 110 cartões no total.
- * NENHUM cartão novo foi inventado; este arquivo apenas consome os dados.
+ * flashcards_m2.js (50), flashcards_m3.js (50) e flashcards_m4.js (54) —
+ * 164 cartões no total. NENHUM cartão novo foi inventado; este arquivo
+ * apenas consome os dados (P1.1: as fontes são descobertas, não fixadas).
  *
  * ============================================================================
  * ALGORITMO DE REPETIÇÃO ESPAÇADA — SM-2 SIMPLIFICADO (documentado)
@@ -150,23 +151,54 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Fonte dos cartões (window.apostilaDados; fallback direto) ----------
    * navigation.js consolida os dados em window.apostilaDados.flashcards no seu
    * DOMContentLoaded (registrado antes deste script — logo, executado antes).
+   * P1.1 — a lista de fontes é MONTADA POR DESCOBERTA (chaves do consolidador,
+   * ordenadas pelo número do módulo), não por lista fixa: adicionar um módulo
+   * futuro (arquivo + tag <script>) passa a valer aqui sem editar este arquivo.
    * O fallback com typeof garante funcionamento mesmo se navigation.js falhar
-   * no futuro: os const globais dos arquivos data/*.js continuam visíveis. */
+   * no futuro: os const globais dos arquivos data/*.js continuam visíveis.
+   *
+   * DECISÃO — duplicação deliberada da descoberta no fallback (~15 linhas):
+   * o bloco `montarFontesDiretas()` repete a mesma convenção de detecção do
+   * navigation.js em vez de compartilhar um helper. Um helper exigiria um 6º
+   * arquivo <script> novo (o index.html mantém 19 tags: 14 originais + 5 de
+   * dados) ou expor uma global utilitária a partir do navigation.js — o que
+   * acoplaria dois scripts de comportamento à ordem de carga. A duplicação é
+   * pequena, simétrica e documentada nos dois lados; o caminho primário
+   * (apostilaDados) não duplica nada. */
+  const MAX_MODULOS_DESCOBERTA = 8; // 8 módulos obrigatórios (Escrita.txt, Seção 6)
+
+  /* Caminho primário: chaves do consolidador em ordem numérica de módulo,
+   * restritas ao intervalo de descoberta (1..MAX_MODULOS_DESCOBERTA). */
+  function montarFontesUnificado(unificado) {
+    return Object.keys(unificado)
+      .map((chave) => ({ chave: chave, n: /^modulo-(\d+)$/.exec(chave) ? parseInt(chave.slice(7), 10) : 0 }))
+      .filter((f) => f.n >= 1 && f.n <= MAX_MODULOS_DESCOBERTA)
+      .sort((a, b) => a.n - b.n)
+      .map((f) => ({ chave: f.chave, arr: unificado[f.chave] }));
+  }
+
+  /* Caminho de contingência: mesma convenção do navigation.js, sem consolidador. */
+  function montarFontesDiretas() {
+    const diretas = [
+      { chave: 'modulo-1', arr: typeof flashcardsM1 !== 'undefined' ? flashcardsM1 : null },
+      { chave: 'modulo-2', arr: typeof flashcardsM2 !== 'undefined' ? flashcardsM2 : null },
+      { chave: 'modulo-3', arr: typeof flashcardsM3 !== 'undefined' ? flashcardsM3 : null },
+      { chave: 'modulo-4', arr: typeof flashcardsM4 !== 'undefined' ? flashcardsM4 : null },
+      { chave: 'modulo-5', arr: typeof flashcardsM5 !== 'undefined' ? flashcardsM5 : null },
+      { chave: 'modulo-6', arr: typeof flashcardsM6 !== 'undefined' ? flashcardsM6 : null },
+      { chave: 'modulo-7', arr: typeof flashcardsM7 !== 'undefined' ? flashcardsM7 : null },
+      { chave: 'modulo-8', arr: typeof flashcardsM8 !== 'undefined' ? flashcardsM8 : null }
+    ];
+    return diretas.filter((f) => Array.isArray(f.arr));
+  }
+
   function obterCartoes() {
     const unificado = window.apostilaDados && window.apostilaDados.flashcards;
     let fontes;
     if (unificado && typeof unificado === 'object') {
-      fontes = [
-        { chave: 'modulo-1', arr: unificado['modulo-1'] },
-        { chave: 'modulo-2', arr: unificado['modulo-2'] },
-        { chave: 'modulo-3', arr: unificado['modulo-3'] }
-      ];
+      fontes = montarFontesUnificado(unificado);
     } else {
-      fontes = [
-        { chave: 'modulo-1', arr: typeof flashcardsM1 !== 'undefined' ? flashcardsM1 : null },
-        { chave: 'modulo-2', arr: typeof flashcardsM2 !== 'undefined' ? flashcardsM2 : null },
-        { chave: 'modulo-3', arr: typeof flashcardsM3 !== 'undefined' ? flashcardsM3 : null }
-      ];
+      fontes = montarFontesDiretas();
     }
     const lista = [];
     const vistos = {};
@@ -516,7 +548,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const fila = montarFila(filtrados, registros, filtros.modo, agora);
 
       let html = '<p>Cartões carregados dos dados existentes: <strong>' + cartoes.length + '</strong> ' +
-        '(M1, M2 e M3 — nenhum cartão novo). Algoritmo: SM-2 simplificado ' +
+        '(módulos com cartões: ' + (modulos.length ? modulos.map((m) => 'M' + m).join(', ') : 'nenhum') +
+        ' — nenhum cartão novo). Algoritmo: SM-2 simplificado ' +
         '(intervalos documentados em <code>assets/js/flashcards.js</code>). ' +
         'As contagens abaixo referem-se ao filtro atual.</p>';
 

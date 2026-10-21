@@ -19,10 +19,20 @@
  *    no escopo global de script — NÃO são propriedades de window. Por isso
  *    window.curriculumData ficava sempre indefinido e o fallback vazio era
  *    usado. Este script consolida tudo em:
- *      window.apostilaDados = { curriculum: { "modulo-1":…, "modulo-2":…, "modulo-3":… },
- *                               flashcards: { "modulo-1":…, "modulo-2":…, "modulo-3":… } }
+ *      window.apostilaDados = { curriculum: { "modulo-1":…, "modulo-2":…, … },
+ *                               flashcards: { "modulo-1":…, "modulo-2":…, … } }
  *      window.curriculumData  → alias retro-compatível de apostilaDados.curriculum
  *    Guardas `typeof` evitam erro se algum arquivo de dados não for carregado.
+ *
+ *    P1.1 — descoberta por convenção (substitui a antiga lista fixa m1..m3):
+ *    para N de 1..8, se existir a global `curriculum` (M1) ou `curriculumM{N}`
+ *    (M2..M8) — idem `flashcardsM{N}` —, o módulo entra na consolidação.
+ *    Módulo sem arquivo (hoje o M6) é pulado em silêncio: ausência não é erro
+ *    e não lança exceção. Adicionar um módulo futuro passa a exigir apenas o
+ *    arquivo de dado + a tag <script> no index.html — nenhum outro script
+ *    precisa mudar (idempotente e escalável). As globais são `const` no
+ *    escopo global léxico (não propriedades de window) e `eval` é proibido
+ *    pelo projeto, por isso a detecção é uma cadeia explícita de `typeof`.
  *
  * 4) A árvore é APENDADA no #curriculum (conteúdo estático existente preservado),
  *    em vez de substituí-lo como o comportamento anterior fazia.
@@ -34,29 +44,53 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* ---------- Registro unificado de dados (fonte: assets/data/*.js) ---------- */
-  const registro = [
-    {
-      chave: 'modulo-1',
-      dados: typeof curriculum !== 'undefined' ? curriculum['modulo-1'] : null,
-      flashcards: typeof flashcardsM1 !== 'undefined' ? flashcardsM1 : []
-    },
-    {
-      chave: 'modulo-2',
-      dados: typeof curriculumM2 !== 'undefined' ? curriculumM2['modulo-2'] : null,
-      flashcards: typeof flashcardsM2 !== 'undefined' ? flashcardsM2 : []
-    },
-    {
-      chave: 'modulo-3',
-      dados: typeof curriculumM3 !== 'undefined' ? curriculumM3['modulo-3'] : null,
-      flashcards: typeof flashcardsM3 !== 'undefined' ? flashcardsM3 : []
+  /* ---------- Descoberta de módulos por convenção (P1.1) ----------
+   * Fonte: `curriculum` (M1) ou `curriculumM{N}` (M2..M8); flashcards:
+   * `flashcardsM{N}`. Cada arquivo declara exatamente uma chave "modulo-N"
+   * (verificado para curriculum.js e curriculum_m2..m8.js). A cadeia de
+   * `typeof` é explícita porque as fontes são `const` do escopo global léxico
+   * dos scripts (inacessíveis por window['curriculumM4']) e eval é proibido. */
+  function fonteCurriculum(n) {
+    switch (n) {
+      case 1: return typeof curriculum !== 'undefined' && curriculum ? curriculum['modulo-1'] : null;
+      case 2: return typeof curriculumM2 !== 'undefined' && curriculumM2 ? curriculumM2['modulo-2'] : null;
+      case 3: return typeof curriculumM3 !== 'undefined' && curriculumM3 ? curriculumM3['modulo-3'] : null;
+      case 4: return typeof curriculumM4 !== 'undefined' && curriculumM4 ? curriculumM4['modulo-4'] : null;
+      case 5: return typeof curriculumM5 !== 'undefined' && curriculumM5 ? curriculumM5['modulo-5'] : null;
+      case 6: return typeof curriculumM6 !== 'undefined' && curriculumM6 ? curriculumM6['modulo-6'] : null;
+      case 7: return typeof curriculumM7 !== 'undefined' && curriculumM7 ? curriculumM7['modulo-7'] : null;
+      case 8: return typeof curriculumM8 !== 'undefined' && curriculumM8 ? curriculumM8['modulo-8'] : null;
+      default: return null;
     }
-  ];
+  }
+
+  function fonteFlashcards(n) {
+    switch (n) {
+      case 1: return typeof flashcardsM1 !== 'undefined' && Array.isArray(flashcardsM1) ? flashcardsM1 : null;
+      case 2: return typeof flashcardsM2 !== 'undefined' && Array.isArray(flashcardsM2) ? flashcardsM2 : null;
+      case 3: return typeof flashcardsM3 !== 'undefined' && Array.isArray(flashcardsM3) ? flashcardsM3 : null;
+      case 4: return typeof flashcardsM4 !== 'undefined' && Array.isArray(flashcardsM4) ? flashcardsM4 : null;
+      case 5: return typeof flashcardsM5 !== 'undefined' && Array.isArray(flashcardsM5) ? flashcardsM5 : null;
+      case 6: return typeof flashcardsM6 !== 'undefined' && Array.isArray(flashcardsM6) ? flashcardsM6 : null;
+      case 7: return typeof flashcardsM7 !== 'undefined' && Array.isArray(flashcardsM7) ? flashcardsM7 : null;
+      case 8: return typeof flashcardsM8 !== 'undefined' && Array.isArray(flashcardsM8) ? flashcardsM8 : null;
+      default: return null;
+    }
+  }
+
+  const MAX_MODULOS_DESCOBERTA = 8; // 8 módulos obrigatórios (Escrita.txt, Seção 6)
+  const registro = [];
+  for (let n = 1; n <= MAX_MODULOS_DESCOBERTA; n++) {
+    const dados = fonteCurriculum(n);
+    const cartoes = fonteFlashcards(n);
+    if (!dados && !cartoes) continue; // ex.: M6 — sem arquivo, pulado em silêncio
+    registro.push({ chave: 'modulo-' + n, dados: dados, flashcards: cartoes || [] });
+  }
 
   const apostilaDados = { curriculum: {}, flashcards: {} };
   registro.forEach((item) => {
     if (item.dados) apostilaDados.curriculum[item.chave] = item.dados;
-    apostilaDados.flashcards[item.chave] = item.flashcards;
+    if (item.flashcards.length) apostilaDados.flashcards[item.chave] = item.flashcards;
   });
   window.apostilaDados = apostilaDados;
   window.curriculumData = apostilaDados.curriculum; // alias retro-compatível
@@ -83,8 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Deriva a chave "modulo-N" a partir do ID do tópico.
-   * IDs existentes: "modulo-1-unidade-1-topico-1-..." (M1) e "m2-u1-t1-s1"/
-   * "m3-u1-t1-s1" (M2/M3). Fallback honesto quando não reconhecido. */
+   * IDs existentes: "modulo-1-unidade-1-topico-1-..." (M1) e "m2-u1-t1-s1",
+   * "m4-u1-t1-s1", "m8-u1-t1-s1" (M2 em diante — o mesmo padrão dos dados de
+   * M4/M5/M7/M8). Fallback honesto quando não reconhecido. */
   function moduloDoId(id) {
     const h = /^modulo-(\d+)-/.exec(id);
     if (h) return 'modulo-' + h[1];
