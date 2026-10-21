@@ -27,8 +27,9 @@
  *    P1.1 — descoberta por convenção (substitui a antiga lista fixa m1..m3):
  *    para N de 1..8, se existir a global `curriculum` (M1) ou `curriculumM{N}`
  *    (M2..M8) — idem `flashcardsM{N}` —, o módulo entra na consolidação.
- *    Módulo sem arquivo (hoje o M6) é pulado em silêncio: ausência não é erro
- *    e não lança exceção. Adicionar um módulo futuro passa a exigir apenas o
+ *    Módulo sem arquivo é pulado em silêncio: ausência não é erro e não lança
+ *    exceção (desde o P1-C, 2026-10-21, nenhum módulo de 1 a 8 está nessa
+ *    situação — M6 inclusive). Adicionar um módulo futuro passa a exigir apenas o
  *    arquivo de dado + a tag <script> no index.html — nenhum outro script
  *    precisa mudar (idempotente e escalável). As globais são `const` no
  *    escopo global léxico (não propriedades de window) e `eval` é proibido
@@ -83,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   for (let n = 1; n <= MAX_MODULOS_DESCOBERTA; n++) {
     const dados = fonteCurriculum(n);
     const cartoes = fonteFlashcards(n);
-    if (!dados && !cartoes) continue; // ex.: M6 — sem arquivo, pulado em silêncio
+    if (!dados && !cartoes) continue; // módulo ausente: pulado em silêncio (1..8 têm arquivo desde o P1-C)
     registro.push({ chave: 'modulo-' + n, dados: dados, flashcards: cartoes || [] });
   }
 

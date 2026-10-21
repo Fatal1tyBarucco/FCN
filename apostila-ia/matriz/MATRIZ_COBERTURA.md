@@ -65,7 +65,7 @@ Estado: **currículo completo carregado e renderizado** (`assets/data/curriculum
 | M7 — Fundamentos de Dados | `curriculum_m7.js` | 3 unidades, 9 tópicos, 23 subtópicos (com exemplos/exercícios) | **SIM** (renderiza desde o P1-A) | próprio: inexistente |
 | M8 — Visualização | `curriculum_m8.js` | 8.1–8.5 — 5 unidades, 23 tópicos, 28 subtópicos (com exemplos/exercícios) | **SIM** (renderiza desde o P1-A) | **gráficos 5/5 carregados** (`charts.js`) |
 
-Observação: 5.3 e 5.4 **existem desde o P1-C** (antes ausentes). Flashcards: **M4=54, M5=50, M6=50, M7=50 e M8=50 conectados** (M5–M8 no P1-C); M1=50, M2=50, M3=50. **Nenhum de M4, M5, M6, M7 e M8 tem questões** — nada inventado para mascarar a lacuna.
+Observação: 5.3 e 5.4 **existem desde o P1-C** (antes ausentes). Flashcards: **M4=54, M5=50, M6=50, M7=50 e M8=50 conectados** (M5–M8 no P1-C); M1=50, M2=50, M3=50. **Nenhum de M4, M5, M6, M7 e M8 tem questões** — nada inventado para mascarar a lacuna. Cobertura por unidade (M5): **50 cartões cobrindo 5.1–5.2; 5.3–5.4 sem cartões (registrado por decisão, sem inventar)**.
 
 ---
 

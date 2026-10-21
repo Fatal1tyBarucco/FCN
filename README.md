@@ -2,7 +2,7 @@
 
 Apostila web interativa em **pt-BR**, voltada a concursos públicos brasileiros, cobrindo 8 módulos obrigatórios: Microsoft 365, Redes, Comunicação, Segurança, IA, Ética, Dados e Visualização.
 
-É uma **SPA estática** construída em HTML/CSS/JS “vanilla”: sem framework, sem build, sem `package.json`. O conteúdo curriculares é definido em objetos JS literais.
+É uma **SPA estática** construída em HTML/CSS/JS “vanilla”: sem framework, sem build, sem `package.json`. O conteúdo curricular é definido em objetos JS literais.
 
 > Fonte de requisitos: `Escrita.txt` na raiz deste repositório. Ele é a referência autoritativa do que a apostila deve conter.
 
@@ -41,7 +41,7 @@ apostila-ia/                # o app (raiz do site publicado)
   index.html                # entrada da aplicação
   assets/css/styles.css
   assets/js/                # app, navigation, simulators, flashcards, quiz, charts...
-  assets/data/              # currículo (M1–M5, M7–M8; M6 ausente), flashcards, questões
+  assets/data/              # currículo (M1–M8), flashcards (404), questões (82/320)
 inventario/                 # inventário curricular
 matriz/                     # matriz de cobertura
 referencias/                # referências verificadas (ex.: LGPD)

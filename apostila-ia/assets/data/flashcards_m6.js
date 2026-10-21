@@ -25,11 +25,11 @@
  * AUTORIA: todas as questões e exemplos são AUTORAIS deste projeto.
  * Nenhum cartão reproduz item de banca real nem é atribuído a qualquer banca.
  *
- * PENDÊNCIA DE INTEGRAÇÃO (fora do escopo deste arquivo): o Módulo 6 ainda
- * precisa da tag <script src="assets/data/flashcards_m6.js"></script> no
- * index.html. O navigation.js (linha 74) e o flashcards.js (linha 188) já
- * reconhecem a global flashcardsM6 via typeof; com a tag carregada, os
- * cartões aparecem na UI sem alteração de lógica.
+ * INTEGRAÇÃO: a tag <script src="assets/data/flashcards_m6.js"></script> está
+ * no index.html (linha 417) desde o P1-C (2026-10-21). O navigation.js e o
+ * flashcards.js reconhecem a global flashcardsM6 via typeof, de modo que os 50
+ * cartões aparecem na UI sem alteração de lógica. Este cabeçalho antes
+ * registrava a tag como pendência — informação superada pelo P1-C.
  */
 
 const flashcardsM6 = [
