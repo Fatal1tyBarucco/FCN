@@ -5,7 +5,7 @@
  * ============================================================================
  * - Simulados por módulo isolado e cumulativos (escopos `mN` e `cum-N`
  *   construídos dinamicamente a partir dos módulos presentes no currículo
- *   carregado — ver a construção de ESCOPOS; hoje M1–M5, M7 e M8).
+ *   carregado — ver a construção de ESCOPOS; hoje M1–M8).
  * - Simulados por nível (básico / intermediário / avançado) e por estilo de
  *   cobrança (cespe / fgv / fcc / vunesp) e por formato (C/E × múltipla).
  * - Simulados aleatórios SEM REPETIÇÃO na mesma sessão: embaralhamento
