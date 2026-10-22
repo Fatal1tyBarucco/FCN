@@ -153,7 +153,7 @@ const curriculum = {
                 "id": "modulo-1-unidade-2-topico-4-sub-1",
                 "titulo": "Listas bullet e numeradas",
                 "objetivoAprendizagem": "Aluno criará e gerenciará listas bullet e numeradas.",
-                "conteudo": "Listas do tipo bullet (pontos, círculos, setas) para itens onde a ordem não é crítica. Listas numeradas (numbered) usam números ou letras sequenciais automáticas, ideais quando a sequência importa (passos, argumentos). O Word oferece variações de símbolos para bullet e formatos personalizados para numeração (írmãos romanos, letras, algarismos). Listas podem estar dentro de tabelas, dentro de células ou flutuantes ao lado de imagens.",
+                "conteudo": "Listas do tipo bullet (pontos, círculos, setas) para itens onde a ordem não é crítica. Listas numeradas (numbered) usam números ou letras sequenciais automáticas, ideais quando a sequência importa (passos, argumentos). O Word oferece variações de símbolos para bullet e formatos personalizados para numeração (numerais romanos, letras, algarismos). Listas podem estar dentro de tabelas, dentro de células ou flutuantes ao lado de imagens.",
                 "exemplos": [],
                 "exercicios": []
               }
