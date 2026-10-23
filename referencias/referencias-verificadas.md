@@ -111,6 +111,20 @@
 - Data de verificação: 2026-10-23
 - Escopo: página institucional do CERT.br (CSIRT nacional de último recurso, mantido pelo NIC.br). Usado como referência de aprofundamento; nenhum estudo de caso real inventado.
 
+- Nenhuma URL inventada; nenhuma citação de artigo inexistente.
+
+---
+
+# Bloco 5 — ANPD (regulador da LGPD)
+
+## Verificação de 2026-10-23 (web_search, URL confirmada)
+
+- URL oficial verificada: https://www.gov.br/anpd/pt-br
+- Organização: ANPD (Gov.br)
+- Tópico: M4 — Segurança da informação (LGPD)
+- Data de verificação: 2026-10-23
+- Escopo: página institucional da ANPD (antiga Autoridade Nacional de Proteção de Dados, hoje Agência Nacional de Proteção de Dados). Usada como referência de aprofundamento; conteúdo didático essencial permanece no site. Regulamentos específicos da ANPD não foram verificados individualmente.
+
 ## Limitações documentadas
-- ANPD (regulador da LGPD), demais incisos do art. 37 e art. 5º da CF e dispositivos citados apenas por remissão no Módulo 6 permanecem pendentes de verificação individual.
+- Demais incisos do art. 37 e do art. 5º da CF e dispositivos citados apenas por remissão no Módulo 6 permanecem pendentes de verificação individual.
 - Nenhuma URL inventada; nenhuma citação de artigo inexistente.

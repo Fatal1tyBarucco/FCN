@@ -107,13 +107,13 @@ const references = [
     dispositivos: null
   },
   {
-    id: "ref-pendente-anpd",
-    titulo: "Autoridade Nacional de Proteção de Dados (ANPD) — regulador da LGPD",
-    organizacao: "ANPD",
-    url: null,
+    id: "ref-anpd",
+    titulo: "Agência Nacional de Proteção de Dados (ANPD) — regulador da LGPD",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.gov.br/anpd/pt-br",
     topico: "M4 — Segurança da informação (LGPD)",
-    dataVerificacao: null,
-    status: "pendente",
+    dataVerificacao: "2026-10-23",
+    status: "verificado",
     dispositivos: null
   },
   {
