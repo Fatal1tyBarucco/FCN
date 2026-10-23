@@ -83,3 +83,34 @@
 - Data de verificação: 2026-10-23.
 - Escopo: a verificação restringe-se aos dispositivos acima; os demais artigos da Lei nº 12.965/2014 não integram esta verificação e não devem ser citados literalmente sem nova conferência. No Módulo 6, o Marco Civil continua a ser citado apenas por remissão (art. 24, V, e art. 25 — dispositivos fora desta lista).
 - Rastreabilidade: fonte primária planalto.gov.br (acesso direto ao texto oficial); nenhuma URL inventada; nenhuma citação de artigo inexistente; nenhuma interpretação jurídica definitiva.
+
+---
+
+# Bloco 4 — Módulo 1 e Módulo 2 e Módulo 4 — Microsoft Learn, RFCs/IETF, CERT.br
+
+## Verificação de 2026-10-23 (web_search, URLs confirmadas)
+
+## Microsoft Learn (Módulo 1)
+- URL oficial verificada: https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide
+- Organização: Microsoft (Microsoft Learn)
+- Tópico: M1 — Microsoft 365 e aplicações de escritório
+- Data de verificação: 2026-10-23
+- Escopo: portal de documentação oficial do Microsoft 365 (admin, apps, dispositivos, migração). Usado como referência de aprofundamento; conteúdo didático essencial permanece no site.
+
+## RFCs / IETF (Módulo 2)
+- RFC 791 — Internet Protocol (IPv4): https://www.rfc-editor.org/info/rfc791/ — verificado em 2026-10-23.
+- RFC 793 — Transmission Control Protocol (TCP): https://www.rfc-editor.org/info/rfc793/ — verificado em 2026-10-23.
+- Organização: IETF (RFC Editor)
+- Tópico: M2 — Redes de computadores (IPv4, TCP)
+- Escopo: especificações originais de IPv4 e TCP (setembro de 1981). Usadas como referência técnica; não substituem o conteúdo didático do site. Demais RFCs (DNS, DHCP, HTTP, TLS etc.) permanecem pendentes de verificação individual.
+
+## CERT.br (Módulo 4)
+- URL oficial verificada: https://cert.br/
+- Organização: CERT.br (NIC.br)
+- Tópico: M4 — Segurança da informação (malwares, defesa, gestão de incidentes)
+- Data de verificação: 2026-10-23
+- Escopo: página institucional do CERT.br (CSIRT nacional de último recurso, mantido pelo NIC.br). Usado como referência de aprofundamento; nenhum estudo de caso real inventado.
+
+## Limitações documentadas
+- ANPD (regulador da LGPD), demais incisos do art. 37 e art. 5º da CF e dispositivos citados apenas por remissão no Módulo 6 permanecem pendentes de verificação individual.
+- Nenhuma URL inventada; nenhuma citação de artigo inexistente.
