@@ -15,7 +15,19 @@
  * alternativa C mal formada de q-m4-74, campo `enunciado` ausente de
  * q-m4-36 e 17 ocorrências de "when" (inglês) em texto pt-BR — trocadas por
  * "quando"/"quando necessário". Nenhuma alteração de gabarito ou conteúdo
- * técnico das questões. */
+ * técnico das questões. Revisão de pós-PR #5 (P1-D): q-m4-32 foi reescrita —
+ * a alternativa correta afirmava uma lista inventada de "princípios" do
+ * Marco Civil ("liberdade, suscetibilidade, pluralidade, portabilidade e
+ * segurança"); a questão foi corrigida para listar princípios reais do
+ * art. 3º (neutralidade de rede, proteção da privacidade e proteção de
+ * dados pessoais), com distratores verificáveis (fundamentos do art. 2º
+ * apresentados como princípios; censura prévia; compartilhamento livre de
+ * dados de conexão). Fonte: Lei nº 12.965/2014, arts. 2º e 3º, texto
+ * oficial verificado em planalto.gov.br em 2026-10-22. As questões q-m4-40
+ * e q-m4-42 não repetem a lista inventada e mantêm citações corretas —
+ * preservadas; a q-m4-44 foi corrigida em 2026-10-23 (imprecisão léxica
+ * sobre princípios/fundamentos do Marco Civil e typo), com gabarito e
+ * alternativas intactos. */
 
 const moduleQuestions4 = [
 
@@ -789,27 +801,27 @@ const moduleQuestions4 = [
 
   { id: "q-m4-32", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "seguranca-legisu4-t4-sub-2", assunto: "4.4 — Marco Civil da Internet",
-    contexto: "A Lei nº 12.965/2014 (Marco Civil da Internet) estabelece princípios para o uso da internet no Brasil.",
-    enunciado: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece que:",
+    contexto: "A Lei nº 12.965/2014 (Marco Civil da Internet) distingue, em seu texto, os fundamentos da disciplina (art. 2º) dos princípios do uso da internet no Brasil (art. 3º).",
+    enunciado: "A Lei nº 12.965/2014 (Marco Civil da Internet) estabelece, em seu art. 3º, os princípios da disciplina de uso da internet no Brasil. Dentre esses princípios estão:",
     alternativas: [
-      { letra: "A", texto: "O estado deve ter acesso irrestrito aos dados dos usuários." },
-      { letra: "B", texto: "A internet deve funcionar com base em princípios de liberdade, suscetibilidade, pluralidade, portabilidade e segurança." },
-      { letra: "C", texto: "O provedor deve entregar dados sem ordem judicial." },
-      { letra: "D", texto: "A internet é um espaço de abutre." },
-      { letra: "E", texto: "O acesso à internet é um direito negado." }
+      { letra: "A", texto: "O reconhecimento da escala mundial da rede, a pluralidade e a diversidade e a abertura e a colaboração." },
+      { letra: "B", texto: "A preservação e a garantia da neutralidade de rede, a proteção da privacidade e a proteção de dados pessoais." },
+      { letra: "C", texto: "A livre iniciativa, a livre concorrência, a defesa do consumidor e a finalidade social da rede." },
+      { letra: "D", texto: "A regulamentação prévia dos conteúdos difundidos na internet e a vedação do anonimato em qualquer hipótese." },
+      { letra: "E", texto: "A liberdade absoluta do provedor para compartilhar dados de conexão dos usuários com terceiros sem autorização legal." }
     ],
     gabarito: "B",
-    justificativa: "Marco Civil da Internet: princípios de liberdade, suscetibilidade, pluralidade, portabilidade e segurança da internet. Estado com acesso irrestrito (alternativa A incorreta); provedor entregue dados sem ordem judicial (alternativa C incorreta); internet como abutre (alternativa D incorreta); acesso como direito negado (alternativa E incorreta).",
+    justificativa: "O art. 3º do Marco Civil da Internet (Lei nº 12.965/2014) lista os princípios da disciplina, dentre eles a proteção da privacidade (II), a proteção de dados pessoais (III) e a preservação e a garantia da neutralidade de rede (IV) — o que confirma a alternativa B. As alternativas A e C transcrevem, na verdade, fundamentos do art. 2º (reconhecimento da escala mundial da rede, pluralidade e diversidade, abertura e colaboração; livre iniciativa, livre concorrência, defesa do consumidor e finalidade social da rede), e não princípios do art. 3º. A alternativa D é falsa: o Marco Civil não admite censura ou regulamentação prévia de conteúdos (art. 8º veda filtragem, bloqueio e censura de recursos da rede, salvo por decisão judicial). A alternativa E é falsa: o acesso a dados de conexão de usuários pelo provedor exige hipótese legal ou ordem judicial (art. 7º), não liberdade absoluta de compartilhamento.",
     analise: {
-      A: "INCORRETA. Estado não tem acesso irrestrito — ordens judiciais, judicial, são necessários.",
-      B: "CORRETA. Marco Civil estabelece princípios de liberdade, pluralidade, portabilidade e segurança.",
-      C: "INCORRETA. Dados só são cedidos mediante procedimento judicial ou lei.",
-      D: "INCORRETA. A internet não é um espaço de abutre — é um ambiente regulado de direitos.",
-      E: "INCORRETA. O acesso à internet é um direito reconhecido pela Constituição e pela lei."
+      A: "INCORRETA. Escala mundial da rede, pluralidade e diversidade, e abertura e colaboração são FUNDAMENTOS da disciplina (art. 2º, I, III e IV), não princípios do art. 3º.",
+      B: "CORRETA. Neutralidade de rede (art. 3º, IV), proteção da privacidade (art. 3º, II) e proteção de dados pessoais (art. 3º, III) são princípios expressos do art. 3º.",
+      C: "INCORRETA. Livre iniciativa, livre concorrência, defesa do consumidor e finalidade social da rede são FUNDAMENTOS (art. 2º, V e VI), não princípios do art. 3º.",
+      D: "INCORRETA. O Marco Civil veda filtragem, bloqueio e censura de conteúdos da rede salvo por decisão judicial (art. 8º); o anonimato do autor, acompanhado de responsabilização perante terceiros, é admitido (art. 15) — não é princípio a regulamentação prévia nem a vedação absoluta do anonimato.",
+      E: "INCORRETA. O acesso a dados de conexão pelos provedores exige hipótese legal ou ordem judicial (art. 7º) — não há liberdade absoluta de compartilhamento sem autorização legal."
     },
-    regra: "Marco Civil = 'regra do jogo' da internet no Brasil — liberdade + segurança.",
-    pegadinha: "Marco Civil não é 'libertinato' — é um conjunto de princípios que equilibra liberdade e segurança.",
-    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet), arts. 2º, 5º."
+    regra: "Marco Civil: art. 2º = FUNDAMENTOS; art. 3º = PRINCÍPIOS. Neutralidade de rede, proteção da privacidade e proteção de dados pessoais são PRINCÍPIOS (art. 3º, II, III e IV).",
+    pegadinha: "Fundamentos (art. 2º) e princípios (art. 3º) são listas distintas — não misture as duas. Pluralidade e diversidade e livre iniciativa são fundamentos; neutralidade, privacidade e dados pessoais são princípios.",
+    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet), arts. 2º e 3º — texto oficial verificado em planalto.gov.br (https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm) em 2026-10-22"
   },
 
   { id: "q-m4-33", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -1099,7 +1111,7 @@ const moduleQuestions4 = [
       { letra: "E", texto: "A LGPD é irrelevante." }
     ],
     gabarito: "B",
-    justificativa: "A LGPD é a lei que protege dados pessoais com base nos direitos dos titulares; o Marco Civil (12.965/2014) regula a internet no Brasil, com princípios de liberdade, pluralidade e segurança. Ambas tratam de dados (alternativa A incorreta); a LGPD é fundamenta nos direitos da pessoa, o Marco Civil na regulação da internet; a LGPD não é irrelevante (alternativa E incorreta); o Marco Civil não é obsoleto (alternativa D incorreta).",
+    justificativa: "A LGPD é a lei que protege dados pessoais com base nos direitos dos titulares; o Marco Civil (12.965/2014) regula a internet no Brasil, com princípios como a garantia da liberdade de expressão, a proteção da privacidade e a neutralidade de rede (art. 3º) e fundamentos como a pluralidade e a diversidade (art. 2º). Ambas tratam de dados (alternativa A incorreta); a LGPD é fundamentada nos direitos da pessoa, o Marco Civil na regulação da internet; a LGPD não é irrelevante (alternativa E incorreta); o Marco Civil não é obsoleto (alternativa D incorreta).",
     analise: {
       A: "INCORRETA. Ambas tratam de dados pessoais, mas com abrangências diferentes.",
       B: "CORRETA. LGPD protege dados pessoais; Marco Civil regula a internet e seus princípios.",
@@ -1109,7 +1121,7 @@ const moduleQuestions4 = [
     },
     regra: "LGPD = 'dados protegidos'. Marco Civil = 'internet regulada'. Complementares.",
     pegadinha: "LGPD não é 'direito de acesso' — é 'direito de controle'. Marco Civil não é 'obsoleto' — é a lei da internet.",
-    fonte: "Lei nº 13.709/2018; Lei nº 12.965/2014."
+    fonte: "Lei nº 13.709/2018; Lei nº 12.965/2014, arts. 2º e 3º — verificado em planalto.gov.br em 2026-10-22."
   },
 
   { id: "q-m4-45", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -1751,7 +1763,7 @@ const moduleQuestions4 = [
     gabarito: "B",
     justificativa: "Para comunicação autêntica, segura e integida, o uso combinado de criptografia, assinatura digital e certificados digitais é o mais eficaz — garantindo confidencialidade, integridade, autenticidade e não repúdio. Uso de firewalls apenas (alternativa A incorreta); desativar firewalls (alternativa C incorreta); senha única (alternativa D incorreta); backup automático (alternativa E incorreta).",
     analise: {
-      A: "INCORRETA. Firewalls alone cannot guarantee authenticity and end-to-end protection.",
+      A: "INCORRETA. Firewalls, isoladamente, não garantem autenticidade nem proteção de ponta a ponta.",
       B: "CORRETA. Criptografia + assinatura + certificados digitais garantem autenticidade, integridade e confidencialidade.",
       C: "INCORRETA. Desativar firewalls aumenta a exposição, não a segurança.",
       D: "INCORRETA. Senha única não garante autenticidade ou segurança de comunicação.",

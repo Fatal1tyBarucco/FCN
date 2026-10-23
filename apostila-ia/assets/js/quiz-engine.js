@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------- Fonte do banco (assets/data/questions.js) ----------
-   * questions.js define const questoesBanco (escopo global léxico) e também
+   * questions.js define var questoesBanco (escopo global léxico) e também
    * window.questoesBanco. A propriedade de window é a fonte primária porque
    * navigation.js substitui window.apostilaDados por inteiro no seu
    * DOMContentLoaded — o fallback via apostilaDados.questoes é secundário. */

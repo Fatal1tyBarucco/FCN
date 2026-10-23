@@ -532,11 +532,6 @@
     return html;
   }
 
-  function renderStatus(texto) {
-    var s = document.getElementById('bus-status');
-    if (s) s.textContent = texto;
-  }
-
   function renderResultado(entrada, termos) {
     var excerpt = truncar(entrada.original || entrada.titulo || '', 220);
     var highlight = destacar(esc(excerpt), termos);
@@ -604,6 +599,19 @@
     var q = estado.ultimaQuery || '';
     var termos = q ? tokenizar(q) : [];
 
+    // Calcula resultados e o texto de status ANTES de montar o HTML, para que
+    // a linha "N resultados para X" seja embutida no mesmo innerHTML (antes,
+    // renderStatus era chamado antes do innerHTML ser (re)montado e o texto era
+    // apagado pelo container recém-construído).
+    var statusTexto = esc(estado.indice.length) + ' entradas indexadas · Digite para buscar.';
+    var resultados = null;
+    if (q && termos.length) {
+      resultados = buscar(q, estado.filtros);
+      if (resultados.length > 0) {
+        statusTexto = esc(resultados.length) + ' resultado(s) para "' + esc(q) + '"';
+      }
+    }
+
     var html = '';
     // Header
     html += '<div class="bus-header"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.29C15.41 12.59 16 11.16 16 9.5 16 6.42 13.59 4 10.5 4S5 6.42 5 9.5 7.41 12.59 8 14.29l.29.28v.79l5 4.99L15.5 14zm-6-6h1.5v5H8.5v-5zm6.5 6.5l-5.5-5.5-1 1 5.5 5.5 1-1z"/></svg><h3>Busca global</h3></div>';
@@ -624,18 +632,16 @@
     html += '</div>';
 
     // Status
-    html += '<div class="bus-status" id="bus-status">' + esc(estado.indice.length) + ' entradas indexadas · Digite para buscar.</div>';
+    html += '<div class="bus-status" id="bus-status">' + statusTexto + '</div>';
 
     // Results
-    if (q && termos.length) {
-      var resultados = buscar(q, estado.filtros);
+    if (resultados !== null) {
       if (resultados.length === 0) {
         html += renderVazio(q);
       } else {
         resultados.forEach(function (r) {
           html += renderResultado(r, termos);
         });
-        renderStatus(esc(resultados.length) + ' resultado(s) para "' + esc(q) + '"');
       }
     } else if (q && !termos.length) {
       html += '<div class="bus-vazio">Digite pelo menos 2 caracteres para buscar.</div>';

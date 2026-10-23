@@ -413,7 +413,8 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 # (a partir do P1-D, 2026-10-22: os 5 simuladores têm UI — #excel-app,
 #  #redes-app, #seguranca-app, #prompts-app, #dados-app — e o banco de
 #  questões completo funde questions.js + questions_m4/m5/m6/m7/m8.js com
-#  deduplicação por id; M6/M7 estavam em correção paralela na data da medição)
+#  deduplicação por id; M6 e M7 estão INTEGRADOS e renderizando desde o
+#  P1-C/P1-D, e o banco fundido totaliza 365 questões autorais)
 # (a partir do P1-C: os 8 módulos renderizam — 309 nós —, os 404 flashcards
 #  estão conectados e a árvore inclui o M6; integração do M6 feita só com a
 #  tag &lt;script&gt;, sem alterar navigation.js)
@@ -485,8 +486,11 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
    * alteração neles. Proteções (arquivo pode falhar a carregar sem derrubar a
    * página): cada banco de módulo é adicionado só se `typeof` for array;
    * deduplicação por `id` — ids repetidos são pulados com aviso
-   * no console. Sem eval, sem fetch. (M6/M7 podem estar em revisão
-   * paralela: se falharem a carregar, o banco segue com os demais módulos.) */
+   * no console. Sem eval, sem fetch. (M6 e M7 estão INTEGRADOS desde o
+   * P1-C/P1-D; a fusão segue defensiva caso algum arquivo falhe ao carregar.)
+   * NOTA: navigation.js recria window.apostilaDados por inteiro depois; a
+   * atribuição `window.apostilaDados.questoes` abaixo é descartada por ele, mas
+   * é inofensiva e protege o caso de navigation.js não carregar — não é bug. */
   (function () {
     'use strict';
     var fundidos = [];
@@ -575,9 +579,10 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
   script inline com guardas (a página não quebra se um núcleo falhar).
   manifest.webmanifest e service-worker.js JÁ existem (PWA condicional: SW
   registrado apenas em http/https; file:// funciona sem ele).
-  questions_m6.js e questions_m7.js estão no disco e nas tags de dados, mas
-  estavam EM CORREÇÃO PARALELA nesta medição (2026-10-22) — se falharem a
-  carregar, a fusão defensiva conecta o banco com os demais módulos.
+  questions_m6.js e questions_m7.js estão no disco e nas tags de dados, com
+  M6 e M7 INTEGRADOS e renderizando (P1-C/P1-D) — o banco fundido por id
+  totaliza 365 questões autorais; a fusão defensiva no script inline acima
+  cobre apenas a hipótese de um arquivo falhar ao carregar.
 -->
 <script>
   /* Registro condicional de Service Worker — Seção 3.1 do Escrita.txt.

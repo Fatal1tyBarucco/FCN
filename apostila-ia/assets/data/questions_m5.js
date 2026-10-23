@@ -122,10 +122,10 @@ const moduleQuestions5 = [
     justificativa: "Overfitting ocorre quando o modelo aprende o ruído dos dados de treino, performando bem nos dados de treino mas mal em dados novos/teste. O modelo performa mal nos treino e teste (alternativa B incorreta); não aprende nada (alternativa C incorreta); só prever valores futuros (alternativa D incorreta); não possui parâmetros (alternativa E incorreta).",
     analise: {
       A: "CORRETA. Overfitting: bom nos dados de treino, má generalização.",
-      B: "INCORRETA. Bad performance in both is underfitting, not overfitting.",
-      C: "INCORRETA. Overfitting is learning too much noise, not 'not learning'.",
-      D: "INCORRETA. Prediction of future values is a specific task, not definition of overfitting.",
-      E: "INCORRETA. Overfitting manifests when model has parameters (high complexity)."
+      B: "INCORRETA. Desempenho ruim tanto nos dados de treino quanto nos de teste caracteriza underfitting, não overfitting.",
+      C: "INCORRETA. Overfitting é aprender o ruído dos dados em excesso, não 'não aprender nada'.",
+      D: "INCORRETA. Prever valores futuros é uma tarefa específica, não a definição de overfitting.",
+      E: "INCORRETA. Overfitting se manifesta justamente quando o modelo possui parâmetros (alta complexidade)."
     },
     regra: "Overfitting = 'decorar o treino'. Bom nos treino, má generalização.",
     pegadinha: "Overfitting não é 'não aprender' — é 'aprender demais o ruído'.",

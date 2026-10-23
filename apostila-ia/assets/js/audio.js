@@ -70,6 +70,7 @@
     carregandoVozes: false,
     velocidade: 1,              // 0.5 .. 2.0 (alguns navegadores permitem mais)
     textoAtual: '',
+    textoDigitado: '',          // valor da textarea preservado entre re-renderizações
     partes: [],                 // utterances divididas do texto
     indiceAtual: 0,
     totalPartes: 0,
@@ -162,7 +163,7 @@
   /* Avança para a próxima parte; encerra quando acabar. */
   function falarParte() {
     if (!temApi()) { finalizarFala(); return; }
-    if (ESTADO.falando === false && ESTADO.pausado === false) return; // parado/cancelado
+    if (ESTADO.falando === false && ESTADO.pausado === false) return; // parado/cancelado: iniciarFala e retomarFala definem falando/pausado ANTES de chamar
     if (ESTADO.indiceAtual >= ESTADO.partes.length) { finalizarFala(); return; }
 
     var parte = ESTADO.partes[ESTADO.indiceAtual];
@@ -214,6 +215,17 @@
 
   function setStatusoMensagem(txt) {
     ESTADO.mensagem = txt || '';
+    atualizarStatus();
+  }
+
+  /* Atualiza apenas o nó #aud-status no DOM, sem re-renderizar o painel
+   * inteiro (re-render destruiria e reconstruiria a textarea, perdendo o
+   * texto digitado e o foco). Usado durante a fala, em que o texto de status
+   * ("Lendo X de Y") muda a cada parte. */
+  function atualizarStatus() {
+    if (!ESTADO.container || !ESTADO.container.querySelector) return;
+    var s = ESTADO.container.querySelector('#aud-status');
+    if (s) s.textContent = ESTADO.mensagem || '';
   }
 
   function obterTextoDaTela() {
@@ -251,6 +263,7 @@
     ESTADO.indiceAtual = 0;
     ESTADO.pausado = false;
     try { window.speechSynthesis.cancel(); } catch (e) {}
+    ESTADO.falando = true; /* flag ANTES de falarParte — senão o guard aborta o 1º play */
     falarParte();
     return true;
   }
@@ -341,7 +354,7 @@
       html += '</div>';
     }
 
-    html += '<textarea id="aud-texto" placeholder="Digite ou cole aqui o texto a ser lido em voz alta (acentos e pontuação preservados)."></textarea>';
+    html += '<textarea id="aud-texto" placeholder="Digite ou cole aqui o texto a ser lido em voz alta (acentos e pontuação preservados).">' + esc(ESTADO.textoDigitado || '') + '</textarea>';
     html += '<div class="aud-acoes">';
     html += '<button type="button" id="aud-ler-tela" class="sec">Ler conteúdo da tela</button>';
     var playDisabled = (!api || !!ESTADO.falando);
@@ -373,6 +386,7 @@
       var t = (texto && typeof texto.value === 'string') ? texto.value : '';
       iniciarFala(t);
     };
+    if (texto) texto.oninput = function () { ESTADO.textoDigitado = texto.value || ''; };
     if (btnPause) btnPause.onclick = function () { pausarFala(); };
     if (btnResume) btnResume.onclick = function () { retomarFala(); };
     if (btnStop) btnStop.onclick = function () { interromperFala(); };
@@ -380,6 +394,9 @@
     if (vel) {
       vel.oninput = function () {
         ESTADO.velocidade = Number(vel.value) || 1;
+        // Preserva o texto digitado antes do re-render (defesa extra, além do
+        // oninput da textarea): trocar a velocidade NÃO pode apagar o conteúdo.
+        if (texto && typeof texto.value === 'string') ESTADO.textoDigitado = texto.value;
         renderizar();
       };
     }
@@ -433,7 +450,7 @@
     // preenche a textarea com o texto capturado
     if (typeof document !== 'undefined' && ESTADO.container) {
       var ta = ESTADO.container.querySelector('#aud-texto');
-      if (ta) ta.value = t;
+      if (ta) { ta.value = t; ESTADO.textoDigitado = t; }
     }
     iniciarFala(t);
   }
