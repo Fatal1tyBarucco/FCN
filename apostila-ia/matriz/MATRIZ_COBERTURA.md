@@ -2,90 +2,84 @@
 
 Formato: Subtópico | Conteúdo didático | 3+ exemplos | Flashcards (≥50/módulo) | Questões (≥40/módulo) | Gráfico/Simulador | Referência verificada | Estado
 
-Revisão/sincronização com o código: 2026-10-20 (leitura de `assets/data/*.js`, `assets/js/*.js` e `index.html`). O código é a fonte de verdade.
-Revisão P0 (disco × carregado): 2026-10-20 — **retrato daquele momento, SUPERSEDIDO pela Revisão P1-A abaixo**: correção dos textos falsos então vigentes: gráficos **5/5 carregados**; M4, M5, M7 e M8 **com currículo apenas em disco** (sem tag no `index.html`); dos **164 cartões em disco**, só os **110 de M1–M3** estavam conectados ao app (faltavam, então, 236 no disco e 290 para o app); links do `index.html` para este arquivo e para o inventário corrigidos para o Pages.
-Revisão P1-C (integração do M6 e conclusão do M5): 2026-10-21 — `curriculum_m6.js` **criado** (6 unidades 6.1–6.6, 18 tópicos, 46 subtópicos, 138 exemplos, 92 exercícios) e `curriculum_m5.js` **completado** com 5.3–5.4 (4 unidades, 13 tópicos, 35 subtópicos, 105 exemplos, 70 exercícios); `flashcards_m1.js` ampliado (10→50) e `flashcards_m5..m8.js` criados (50 cada) → **404 cartões no disco**; tags de `curriculum_m6.js` e `flashcards_m5..m8.js` adicionadas ao `index.html` (24 `<script src>`) → **404 conectados** (m1=50, m2=50, m3=50, m4=54, m5=50, m6=50, m7=50, m8=50). Árvore: **100 tópicos + 209 subtópicos = 309 nós**; 8 chaves `modulo-1`..`modulo-8`; **15 escopos** no simulado (m1..m8 + cum-2..cum-8). Um typo de grafia na chave de dificuldade em 16 cartões de `flashcards_m3.js` foi corrigido sem tocar no conteúdo. Questões continuam **82/320**. Referências: LAI 12.527/2011 e Lei 14.129/2021 verificadas no planalto.gov.br em 2026-10-21 (Bloco 2), além da LGPD (2026-10-20). Verificado com `node --check` (24 `.js` OK) + smoke Node/vm (24 scripts na ordem do `index.html`, `DOMContentLoaded` disparado); **não testado em navegador real**.
-Revisão P1-A (wiring dinâmico): 2026-10-21 — `navigation.js` descobre módulos por convenção (N=1..8); `curriculum_m4/m5/m7/m8.js` e `flashcards_m4.js` **carregados no `index.html`**: currículo de M1–M5 e M7–M8 **renderiza** (216 nós na árvore) e flashcards **164 / 164 conectados**; escopos do simulado construídos dinamicamente (m1..m5, m7, m8 + cum-2..cum-5, cum-7, cum-8); M6 sem arquivo → sem chave/escopo, sem exceção. Verificado com `node --check` (19 `.js` OK) + smoke test Node/vm (59 asserts); não testado em navegador real.
+Revisão/sincronização com o código: 2026-10-22 (código em execução na branch `feat/p1d-banco-simuladores-busca`; node --check + Chromium Headless 0 erros JS).
+O código (`assets/data/*.js`, `assets/js/*.js`, `apostila-ia/index.html`) é a fonte de verdade.
 
----
-
-## MÓDULO 1 (parcial)
+## MÓDULO 1 — MICROSOFT 365 (parcial)
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
-| m1-u1-t1-s1..s8 | Ecossistema M365 | Texto OK (`curriculum['modulo-1']`; árvore + painel de objetivo/conteúdo renderizam na página) | 3 / 3 (em `curriculum`, subtópico 1 — dados presentes; o painel **não** exibe campos `exemplos`) | 21 (do módulo; distribuídos em u1-t1..t8) | 8 | Nenhum | Microsoft Learn (não verificada) | Parcial |
-| m1-u2-t1..t14 | Word | Texto OK (renderiza; arrays `exemplos`/`exercicios` internos vazios) | 3 / 3 em const `curriculumWord12Supplement` (**não renderizada**) + 3 no `index.html` | 29 (do módulo; distribuídos em u2-t1..t14) | 17 | Nenhum | Microsoft Learn (não verificada) | Parcial |
-| m1-u3 | Excel (simulador com busca real) | Sem entrada de currículo (só comentário em `curriculum.js`) + simulador com escopo declarado e busca real (23 funções: SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES, SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE, PROCV, PROCH, PROCX, CORRESP, ÍNDICE, HOJE + aliases EN; planilha em memória com refs A1/$ e recálculo; parser sem `eval`; rejeita inválido com msg útil) | 3 no `index.html` | 0 | 3 (escopo do simulador; conteúdo de currículo continua ausente) | Simulador Excel (`simulators.js`; busca real verificada com smoke test Node/vm 111 asserts; não testado em navegador) | Microsoft Learn (não verificada) | Parcial — simulador funcional no escopo declarado; conteúdo de currículo ausente |
-| m1-u4 | PowerPoint | Conteúdo base em const `curriculumPowerPoint14` (**nenhum script a lê — não renderiza**) | 3 / 3 + 2 exercícios na mesma const (não renderizam) | 0 | 2 (const não renderizada) | Nenhum (não aplicável) | Microsoft Learn (não verificada) | Parcial — dados existem, não renderizam |
-| m1-u5 | OneDrive | Conteúdo base em const `curriculumOneDrive15` (**nenhum script a lê — não renderiza**) | 3 / 3 + 2 exercícios na mesma const (não renderizam) | 0 | 2 (const não renderizada) | Nenhum | LGPD art. 46 (`referencias/referencias-verificadas.md`, 2026-10-20) | Parcial — dados existem, não renderizam |
+| m1-u1-t1-s1..s8 | Ecossistema M365 | IMPLEMENTADO, renderiza | 3 conjuntos | 21 (do módulo) | 8 | Nenhum | Microsoft Learn (não verificada) | Parcial |
+| m1-u2-t1..t14 | Word | IMPLEMENTADO, renderiza | 3/3 iteriores + const não renderizada | 29 (do módulo) | 17 | Nenhum | Microsoft Learn (não verificada) | Parcial |
+| m1-u3 | Excel (simulador com busca real) | Núcleo carregado (≥23 funções, PROCV/PROCH/PROCX com busca real; parser sem eval; planilha em memória); UI montada no `index.html` (`#excel-app`, P1-D) | 3 no HTML | 0 | 0 | Simulador Excel (UI montada, `#excel-app`) | Microsoft Learn (não verificada) | Parcial |
+| m1-u4 | PowerPoint | Const `curriculumPowerPoint14` não lida — não renderiza | const não renderizada | 0 | 0 | Nenhum | Microsoft Learn | Parcial |
+| m1-u5 | OneDrive | Const `curriculumOneDrive15` não lida — não renderiza | const não renderizada | 0 | 0 | Nenhum | LGPD art.46 | Parcial |
 
-Flashcards M1: **50 / 50** do módulo (P1-C, 2026-10-21; `flashcards_m1.js` — 21 em 1.1 e 29 em 1.2, contados pelo campo `topico`; o retrato anterior registrava 10/50, com 3 em 1.1 e 7 em 1.2). Questões M1: **32 / 40** (`assets/data/questions.js`, autorais; faltam 8).
+Flashcards M1: **50/50**. Questões M1: **40/40** (autorais, cespe/fgv/fcc/vunesp).
 
----
-
-## MÓDULO 2 (parcial)
+## MÓDULO 2 — REDES (parcial)
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
-| m2-u1-t1..t4 | 2.1 Fundamentos de Redes | Texto OK (`curriculum_m2.js`, renderiza; 7 subtópicos com `objetivoAprendizagem` e `conteudo`) | 7 conjuntos de exemplos + exercícios presentes no arquivo | 10 | 26 | `simulator_network.js`: ping e traceroute **simulados**, CIDR com cálculo **real** (não executa comandos no SO) | RFCs/IETF (não verificadas) | Parcial |
-| m2-u2 .. m2-u5 | Modelos OSI/TCP-IP; protocolos; endereçamento e sub-redes; diagnóstico | PENDENTE (sem entrada em `curriculum_m2.js`) | — | 40 (10 por tema; sem conteúdo de currículo correspondente) | 0 (sem currículo correspondente — nenhuma questão inventada para mascarar a lacuna) | Mesmo simulador de redes | - | 0% (currículo) |
+| m2-u1-t1..t4 | 2.1 Fundamentos de Redes | IMPLEMENTADO, renderiza | 4 conjuntos + exercícios | 10 | 26 | `simulator_network.js`: ping/traceroute simulados, CIDR com cálculo real; UI montada (`#redes-app`, P1-D) | RFCs/IETF (não verificadas) | Parcial |
+| m2-u2..u5 | Modelos OSI/TCP-IP; protocolos; endereçamento e sub-redes; diagnóstico | PENDENTES | — | 18 (restante do piso 40) | 0 | Mesmo simulador de redes | - | 0% (currículo) |
 
-Flashcards M2: **50 / 50** do módulo (`flashcards_m2.js`). Questões M2: **26 / 40** (piso por módulo; autorais, todas da unidade 2.1 — faltam 14).
+Flashcards M2: 50/50. Questões M2: **40/40** (M1-M3 = 40 cada, cespe/fgv/fcc/vunesp).
 
-Nota de renderização: `navigation.js` exibe no painel apenas `objetivoAprendizagem` e `conteudo`; os campos `exemplos`/`exercicios` existem nos dados mas ainda não têm UI própria.
-
----
-
-## MÓDULO 3 (parcial)
+## MÓDULO 3 — COMUNICAÇÃO E COLABORAÇÃO
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
-| m3-u1-t1..t2 | 3.1 Correio Eletrônico (SMTP/POP3/IMAP; cabeçalhos e destinatários; spam/phishing/spoofing) | Texto OK (`curriculum_m3.js`, renderiza) | 4 subtópicos × exemplos + exercícios | 25 | 17 | Nenhum | RFCs/IETF e LGPD (só LGPD verificada) | Parcial |
-| m3-u2-t1..t3 | 3.2 Calendários e Reuniões (convites e permissões; Teams/Meet/Zoom; políticas de gravação) | Texto OK (renderiza) | 4 subtópicos × exemplos + exercícios | 25 | 7 | Nenhum | LGPD (`referencias-verificadas.md`) | Parcial |
+| m3-u1-t1..t2 | 3.1 Correio Eletrônico | IMPLEMENTADO, renderiza | 4 subtópicos × exemplos + exercícios | 25 | 17 | Nenhum | RFCs/IETF e LGPD (só LGPD verificada) | Parcial |
+| m3-u2-t1..t3 | 3.2 Calendários e Reuniões | IMPLEMENTADO, renderiza | 4 subtópicos × exemplos + exercícios | 25 | 7 | Nenhum | LGPD (verificada) | Parcial |
 
-Sem entrada de currículo (requisitos do `Escrita.txt`): webmail versus clientes locais; etiqueta digital, acessibilidade e comunicação profissional; estudos de caso de reuniões inseguras.
-Flashcards M3: **50 / 50** do módulo (`flashcards_m3.js`, incluído no `index.html`). Questões M3: **24 / 40** (piso por módulo; autorais — faltam 16).
+Flashcards M3: 50/50. Questões M3: **40/40**.
 
----
-
-## MÓDULO 4 (conteúdo carregado e renderizado desde o P1-A + referência verificada; sem questões e sem simulador de phishing)
+## MÓDULO 4 — SEGURANÇA
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
-| m4-u1 (4 tópicos, 12 subtópicos) | Fundamentos de segurança | Texto OK em `curriculum_m4.js` (renderiza desde o P1-A; painel exibe objetivo/conteúdo) | presentes no arquivo (o painel ainda não exibe campos `exemplos`) | 54 conectados (`flashcards_m4.js`) | 0 | Simulador de phishing: inexistente | nenhuma citação de dispositivo nesta unidade (LGPD verificada no módulo, usada em 4.2–4.4) | Parcial |
-| m4-u2 (4 tópicos, 12 subtópicos) | Malwares e ferramentas defensivas | Texto OK (renderiza desde o P1-A) | presentes no arquivo | idem | 0 | — | LGPD art. 2º e 18 (verificadas) | Parcial |
-| m4-u3 (3 tópicos, 9 subtópicos) | Ameaças e ataques | Texto OK (renderiza desde o P1-A) | presentes no arquivo | idem | 0 | Simulador defensivo de triagem de phishing: inexistente (obrigatório) | — | Parcial |
-| m4-u4 (2 tópicos, 6 subtópicos) | Legislação e conformidade | Texto OK (renderiza desde o P1-A) | presentes no arquivo | idem | 0 | — | LGPD verificada; Marco Civil segue não verificado (LAI e Lei de Governo Digital verificadas em 2026-10-21, Bloco 2) | Parcial |
+| m4-u1 (4 tópicos, 12 subtópicos) | Fundamentos de segurança | IMPLEMENTADO, renderiza | presentes | 54 conectados | 0 (no banco M4=85) | Simulador defensivo de phishing: UI montada (`#seguranca-app`, P1-D; triagem didática, sem ataques reais) | LGPD verificada (art. 2º, 18, 46) | Parcial |
+| m4-u2 | Malwares e ferramentas defensivas | IMPLEMENTADO, renderiza | presentes | idem | idem | — | LGPD verificada | Parcial |
+| m4-u3 | Ameaças e ataques | IMPLEMENTADO, renderiza | presentes | idem | idem | Simulador defensivo de phishing: UI montada (`#seguranca-app`, P1-D; triagem didática, sem ataques reais) | — | Parcial |
+| m4-u4 | Legislação e conformidade | IMPLEMENTADO, renderiza | presentes | idem | idem | — | LGPD verificada; Marco Civil não | Parcial |
 
-Estado: **currículo completo carregado e renderizado** (`assets/data/curriculum_m4.js` — 13 tópicos, 39 subtópicos, com exemplos e exercícios; no `index.html` desde o P1-A); **54 flashcards conectados** (`flashcards_m4.js`); 0 questões; simulador de phishing 0%; 1 referência verificada (LGPD).
+Flashcards M4: 54/54 conectados. Questões M4: **85/40** (piso atingido; cespe/fgv/fcc/vunesp).
 
----
+## MÓDULO 5 — INTELIGÊNCIA ARTIFICIAL
+| ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
+|---|---|---|---|---|---|---|---|---|
+| m5-u1..u4 (4 unidades, 13 tópicos, 35 subtópicos) | 5.1–5.4 | IMPLEMENTADO, carregado e renderizado; 5.3–5.4 entrou em P1-C | 105 exemplos + 70 exercícios | 50 conectados | 40/40 | Laboratório interativo de prompts: UI montada (`#prompts-app`, P1-D; Seção 7.4; simulação local, sem IA real) | Gerais | Parcial |
 
-## MÓDULOS 5–8 (estado real: disco × carregado, P1-C 2026-10-21)
-| Módulo | Arquivo de currículo no disco | Conteúdo | Carregado no `index.html`? | Simulador |
-|---|---|---|---|---|
-| M5 — IA | `curriculum_m5.js` | 5.1–5.4 — 4 unidades, 13 tópicos, 35 subtópicos, 105 exemplos, 70 exercícios (5.3 e 5.4 entraram no P1-C) | **SIM** (renderiza desde o P1-A; 5.3–5.4 desde o P1-C) | laboratório interativo de prompts: inexistente (5.4 é conteúdo didático) |
-| M6 — Ética / Serviço Público | `curriculum_m6.js` (criado no P1-C) | 6.1–6.6 — 6 unidades, 18 tópicos, 46 subtópicos, 138 exemplos, 92 exercícios | **SIM** (P1-C; chave `modulo-6`) | próprio: inexistente |
-| M7 — Fundamentos de Dados | `curriculum_m7.js` | 3 unidades, 9 tópicos, 23 subtópicos (com exemplos/exercícios) | **SIM** (renderiza desde o P1-A) | próprio: inexistente |
-| M8 — Visualização | `curriculum_m8.js` | 8.1–8.5 — 5 unidades, 23 tópicos, 28 subtópicos (com exemplos/exercícios) | **SIM** (renderiza desde o P1-A) | **gráficos 5/5 carregados** (`charts.js`) |
+Flashcards M5: 50/50. Questões M5: 40/40. 5.4 (engenharia de prompts) segue didático no currículo; o laboratório interativo de prompts existe com UI no P1-D (`#prompts-app`, Seção 7.4, simulação local sem IA real).
 
-Observação: 5.3 e 5.4 **existem desde o P1-C** (antes ausentes). Flashcards: **M4=54, M5=50, M6=50, M7=50 e M8=50 conectados** (M5–M8 no P1-C); M1=50, M2=50, M3=50. **Nenhum de M4, M5, M6, M7 e M8 tem questões** — nada inventado para mascarar a lacuna. Cobertura por unidade (M5): **50 cartões cobrindo 5.1–5.2; 5.3–5.4 sem cartões (registrado por decisão, sem inventar)**.
+## MÓDULO 6 — ÉTICA NO SERVIÇO PÚBLICO
+| ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
+|---|---|---|---|---|---|---|---|---|
+| m6-u1..u6 (6 unidades, 18 tópicos, 46 subtópicos) | 6.1–6.6 | IMPLEMENTADO, carregado e renderizado | 138 exemplos + 92 exercícios | 50 conectados | 40/40 | Simulador próprio: inexistente | CF art.37; LAI 12.527/2011; Lei 14.129/2021 | Parcial |
 
----
+Flashcards M6: 50/50. Questões M6: 40/40.
 
-TOTAIS GLOBAIS (P1-C, 2026-10-21): currículo **carregado e renderizado de M1–M8** (8 chaves `modulo-1`..`modulo-8`; **100 tópicos / 209 subtópicos = 309 nós** na árvore, contados módulo a módulo: M1 15/23, M2 4/7, M3 5/8, M4 13/39, M5 13/35, M6 18/46, M7 9/23, M8 23/28); flashcards **404 no disco / 404 conectados ao app** (m1=50, m2=50, m3=50, m4=54, m5=50, m6=50, m7=50, m8=50) **com UI de repetição espaçada conectada** (`flashcards.js`, SM-2 simplificado) — **piso de 400 atingido em quantidade**, não em domínio real; questões **82 / 320** (M1=32, M2=26, M3=24; autorais, com banco `assets/data/questions.js` + motor `assets/js/quiz-engine.js`, **15 escopos** m1..m8 + cum-2..cum-8; m6=0 e cum-6=82); gráficos **5 / 5 implementados e carregados** (`charts.js`, SVG próprio, contêiner `#charts-app`); simuladores: Excel (escopo declarado, busca real em PROCV/PROCH/PROCX; **núcleo carregado, sem UI**) + redes (didático; **núcleo carregado, sem UI**) — os demais exigidos (segurança, IA, dados) inexistentes.
+## MÓDULO 7 — FUNDAMENTOS E ENGENHARIA DE DADOS
+| ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
+|---|---|---|---|---|---|---|---|---|
+| m7-u1..u3 (3 unidades, 9 tópicos, 23 subtópicos) | 7.1–7.3 | IMPLEMENTADO, carregado e renderizado | presentes | 50 conectados | 40/40 | Simulador de dados: núcleo carregado (`simulator_data.js`); UI montada (`#dados-app`, P1-D; Seção 7.5) | Governo com dados | Parcial |
 
-RETRATO P1-A (2026-10-21) — superseded pelo P1-C acima: currículo **carregado e renderizado de M1–M5 e M7–M8** (74 tópicos / 142 subtópicos = 216 nós na árvore; M6 sem arquivo); flashcards **164 no disco / 164 conectados ao app** (m1=10, m2=50, m3=50, m4=54 — `flashcards_m4.js` conectado no P1-A) **com UI de repetição espaçada conectada** (`flashcards.js`, SM-2 simplificado) — faltavam **236 para o disco e para o app** (piso 400); questões **82 / 320** (M1=32, M2=26, M3=24; autorais, com banco `assets/data/questions.js` + motor `assets/js/quiz-engine.js`, escopos dinâmicos m1..m5/m7/m8 + cumulativos); gráficos **5 / 5 implementados e carregados** (`charts.js`, SVG próprio, contêiner `#charts-app`); simuladores: Excel (escopo declarado, busca real em PROCV/PROCH/PROCX; **núcleo carregado, sem UI**) + redes (didático; **núcleo carregado, sem UI**) — os demais exigidos (segurança, IA, dados) inexistentes.
+Flashcards M7: 50/50. Questões M7: 40/40.
 
-LIMITAÇÕES DOCUMENTADAS (não inventar):
-- Nenhum vídeo YouTube validado com ID verificado (Seção 12.2 exige verificação real de ID + correspondência temática; não inserir URLs não validadas).
-- Referências: LGPD (Lei 13.709/2018) verificada com URL + data em 2026-10-20 (arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46); **LAI (Lei 12.527/2011) e Lei de Governo Digital (Lei 14.129/2021) verificadas com URL do planalto.gov.br + data 2026-10-21** (Bloco 2 de `referencias/referencias-verificadas.md`), com CF art. 37, caput, e art. 5º, XXXIII conferidos na mesma data. Microsoft Learn (M365), RFCs/IETF (redes), CERT.br (segurança) e Marco Civil (Lei 12.965/2014) seguem **pendentes** de verificação. Também pendentes de verificação literal: os demais incisos do art. 37 e do art. 5º da CF, e os dispositivos legais citados apenas por remissão no M6 (declarado no arquivo de referências).
-- Simulador de rede: implementado (`simulator_network.js`) com escopo declarado — ping e traceroute simulados (latências fictícias), CIDR com cálculo real; **não executado em navegador neste turno**; não afirmar teste de uso sem evidência.
-- Simulador Excel: reescrito em 2026-10-20 (`simulators.js`) — 23 funções com cálculo/busca reais, PROCV/PROCH/PROCX com busca exata e aproximada, parser próprio sem `eval`, planilha em memória com refs relativas/absolutas/mistas e recálculo, rejeição de entradas inválidas com mensagem útil, códigos de erro #N/A/#REF!/#VAL!/#DIV/0!/#NUM!; limitações declaradas no cabeçalho do arquivo (sem tabelas estruturadas, nomes definidos, R1C1, matrizes dinâmicas; aproximada não valida ordenação); verificado com `node --check` + smoke test em Node/vm (**111 asserts**); **não testado em navegador real**.
-- Gráficos: **5/5 implementados e carregados** (`assets/js/charts.js` — histograma, linhas, barras/colunas, dispersão e box plot em SVG próprio, contêiner `#charts-app`; cálculos verificados com `node --check` + smoke test em Node/vm; **não testado em navegador real**). O currículo de M8 (`curriculum_m8.js`) está no `index.html` desde o P1-A e renderiza; não confundir o laboratório de gráficos com o módulo curricular.
-- Flashcards: **404 escritos no disco / 404 conectados ao app** (m1=50, m2=50, m3=50, m4=54, m5=50, m6=50, m7=50, m8=50; piso: 400 — **atingido em quantidade**, o que não significa domínio do conteúdo). `flashcards_m1.js` foi ampliado de 10 para 50 e `flashcards_m5..m8.js` entraram no `index.html` no P1-C; nenhum cartão inventado. Um typo de grafia na chave de dificuldade em 16 cartões de `flashcards_m3.js` foi corrigido no P1-C sem alterar o conteúdo dos cartões. Não confundir número cadastrado com domínio real; **repetição espaçada CONECTADA** (`flashcards.js`: SM-2 simplificado documentado no cabeçalho do arquivo, estados Acertou/Difícil/Errou, filtros por módulo/nível, modos todos/vencidos/errados, contagens dominados/pendentes/vencidos/em revisão, exportação/importação de backup JSON; fontes descobertas por convenção; verificado com smoke test em Node/vm — 59 asserts no P1-A e o smoke do P1-C com 404 cartões/8 módulos na UI; **não testado em navegador real**).
-- Questões: **82 implementadas** (piso: 320 — faltam 238) em `assets/data/questions.js`, com motor de simulados `assets/js/quiz-engine.js` (Seção 10.2) e seção própria no `index.html`. **Nenhuma atribuída a banca real**: o campo `estilo` (CESPE/FGV/FCC/VUNESP) indica apenas o formato de cobrança; `origem` é sempre `autoral`. M4–M8 (incluindo M6, que já tem currículo desde o P1-C) continuam sem questões — os escopos existem com 0 questões e o cabeçalho do quiz calcula o que falta. Verificado com smoke test em Node/vm — **92 asserts** no turno do banco e, no P1-C, 15 escopos com m6=0/cum-6=82/m1=32/cum-8=82; **não testado em navegador real**.
-- `search.js`, `progress.js`, `storage.js`, `accessibility.js`, `references.js`, `manifest.webmanifest` e `service-worker.js` **não existem** e não são referenciados no `index.html` — não citar busca, PWA, storage extra ou acessibilidade como operacional. (`charts.js` **existe e está carregado**: laboratório dos 5 gráficos. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada. `quiz-engine.js` **existe e está carregado**: banco de questões + simulados.)
-- **Correção além do escopo estrito mapeado (declarada)**: além da questão `q-m1-32`, dois textos-irmãos do mesmo defeito na seção "Exemplos resolvidos — Módulo 1.3 Excel" do `index.html` foram corrigidos neste incremento: o "Limite documentado" do Exemplo 1 (afirmava que o simulador "não processa fórmulas aninhadas complexas" — falso, o parser recursivo as aceita) e o bloco do Exemplo 3 (bullets falsos sobre entradas rejeitadas por tipo e sobre "mensagem de rejeição (exemplo real)" cuja entrada citada `SOMASE(10; "texto"; 20)` na verdade devolve `#VAL!` com detalhe "SOMASE exige um intervalo"). As correções usam saídas **executadas em Node** em 2026-10-20 (`SOMASE(10;"texto";20)` → `#VAL!`; `MINHA_TABELA+1` → "ERRO DE ENTRADA ... nomes definidos e tabelas estruturadas estão fora do escopo documentado"; PROCV/PROCH/PROCX com busca real exata/aproximada → 200/8/`#N/A`). O item `q-m1-32` foi reescrito para refletir o mesmo comportamento real; nenhum outro objeto de `questions.js` contém as strings falsas.
+## MÓDULO 8 — VISUALIZAÇÃO E STORYTELLING
+| ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
+|---|---|---|---|---|---|---|---|---|
+| m8-u1..u5 (5 unidades, 23 tópicos, 28 subtópicos) | 8.1–8.5 | IMPLEMENTADO, carregado e renderizado | presentes | 50 conectados | 40/40 | Gráficos 5/5 carregados (SVG próprio, sem biblioteca externa) | Documentação oficial das ferramentas | Parcial |
 
-CONFORMIDADE COM SEÇÃO 19 (REGRAS ABSOLUTAS):
-- Escopo não reduzido: todos os módulos listados; nenhum apresentado como completo sem evidência.
-- Nenhum pseudocódigo onde código executável é exigido; simuladores devem ser executáveis com dados reais.
-- Arquivos essenciais existentes: `index.html`, `styles.css`, `curriculum.js`, `curriculum_m2.js`, `curriculum_m3.js`, `curriculum_m4.js`, `curriculum_m5.js`, `curriculum_m6.js`, `curriculum_m7.js`, `curriculum_m8.js`, `flashcards_m1.js`, `flashcards_m2.js`, `flashcards_m3.js`, `flashcards_m4.js`, `flashcards_m5.js`, `flashcards_m6.js`, `flashcards_m7.js`, `flashcards_m8.js`, `questions.js`, `app.js`, `navigation.js`, `simulators.js`, `simulator_network.js`, `flashcards.js`, `quiz-engine.js`, `charts.js` (**todos carregados** no `index.html` desde o P1-C) e `.github/workflows/deploy-pages.yml`. Ainda **não criados**: busca, progresso (UI), acessibilidade, `references.js`, `manifest.webmanifest`, `service-worker.js` — e os simuladores de segurança, IA (laboratório de prompts) e dados, além da UI dos simuladores de Excel e de redes (P1-B pendente).
-- Projeto NÃO concluído: M1–M3 parciais; M4–M8 com currículo **carregado e renderizado**, porém sem questões e, na maior parte, sem simuladores dedicados; **238 questões** ainda faltando (82 de 320); flashcards chegaram a 404/400 em quantidade, o que não equivale a domínio; referências oficiais cobrem LGPD, LAI, Lei de Governo Digital e dois dispositivos da CF, com Microsoft Learn, RFCs/IETF, CERT.br e Marco Civil pendentes.
+Flashcards M8: 50/50. Questões M8: 40/40.
+
+## TOTAL GLOBAIS (P1-D, código em execução)
+- Currículo: **100 tópicos / 209 subtópicos = 309 nós**, carregado e renderizado (8 módulos).
+- Flashcards: **404/404** conectados (piso 400 atingido em quantidade).
+- Questões: **365/320** (piso 320 atingido), ≥40 em cada módulo — M1=40, M2=40, M3=40, M4=85, M5=40, M6=40, M7=40, M8=40. Distribuição REAL medida em Node/vm (2026-10-22, deduplicada por `id`): níveis — 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos — 290 múltipla escolha + 75 Certo/Errado; estilos de cobrança — CESPE 216 / FGV 58 / FCC 52 / VUNESP 39 (formato de cobrança, não banca real; todas autorais). **Decisão documentada**: a proporção real difere da sugerida 30/45/25 (Seção 10) — desvio intencional e justificado (a Seção 10 admite ajuste de distribuição quando justificado).
+- Gráficos: 5/5 implementados e carregados.
+- Busca (`SearchApp`) e áudio (`AudioApp`) implementados e conectados.
+- Manifest + service-worker existentes.
+- Pendências documentadas: Microsoft Learn, RFCs/IETF, CERT.br, Marco Civil; vídeos 0 validados; verificação em navegador real dos 5 simuladores com UI (hoje: `node --check` + smoke Node/vm — nenhum testado em navegador real); testes headless de busca/audio/quiz; acessibilidade e persistence.
+
+## LIMITAÇÕES DOCUMENTADAS (não inventar)
+- Todos os resultados de simulador foram verificados com node --check + smoke Node/vm/headless Chromium; **nenhum dos 5 simuladores com UI foi testado em navegador real** (limite declarado); **nenhum** resultado apresentado como operacional sem evidência.
+- Referências: somente as com URL + data verificadas são declaradas como verificadas; as demais são registradas como pendentes. Nenhum artigo de lei citado com número incorreto.
+- Não há vídeo publicado como validado (Secao 12.2). Nenhuma funcionalidade inventada.

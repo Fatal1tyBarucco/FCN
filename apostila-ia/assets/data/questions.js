@@ -51,7 +51,14 @@
  * por esc() no quiz-engine.js.
  */
 
-const questoesBanco = [
+/* P1-D (2026-10-22): `var` no lugar de `const` — o script inline de fusão do
+ * index.html reatribui window.questoesBanco com o banco COMPLETO (questões
+ * deste arquivo + moduleQuestions4..8 dos arquivos questions_m4/m5/m6/m7/
+ * m8.js). Como `var` global, a property de window e o binding lexical são a
+ * MESMA variável: search.js (lê `questoesBanco` lexical) e quiz-engine.js
+ * (lê window.questoesBanco) passam a enxergar o banco fundido sem qualquer
+ * alteração nesses dois arquivos. Deduplicação por id acontece na fusão. */
+var questoesBanco = [
   /* ===================== MÓDULO 1 — Microsoft 365 (32 questões) ===================== */
 
   {
@@ -2174,6 +2181,967 @@ const questoesBanco = [
   }
 
 
+,
+/* ===================== Continuação MÓDULO 1 — Microsoft 365 (q-m1-33..q-m1-40) ===================== */
+
+  {
+    id: "q-m1-33",
+    modulo: 1,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-2-topico-13-sub-1",
+    assunto: "M1.3 Excel — referências absolutas/mistas ao copiar fórmula",
+    contexto: "Planilha do simulador Excel (assets/js/simulators.js) com uma taxa unitária fixa na célula B1 e valores brutos na coluna A. Em C2 foi digitada a fórmula =A2*$B$1 e ela é copiada para a célula imediatamente abaixo, C3. Fonte: escopo documentado do simulador (refs A1, $A$1 absoluta, $A1/B$2 mistas e a regra de ajustarFormulaAoCopiar).",
+    enunciado: "De acordo com a regra do simulador para ajuste de fórmulas ao copiar, qual será o conteúdo da célula C3 após a cópia de C2?",
+    alternativas: [
+      { letra: "A", texto: "=A2*$B$2 — ambos os índices de linha avançam uma posição." },
+      { letra: "B", texto: "=A3*$B$1 — a parte relativa (A2) avança e a absoluta ($B$1) permanece inalterada." },
+      { letra: "C", texto: "=A2*$B$1 — a fórmula não se altera ao ser copiada para outra linha." },
+      { letra: "D", texto: "=$A3*$B$1 — a referência A2 passa a ser absoluta na coluna ao descer uma linha." }
+    ],
+    gabarito: "B",
+    justificativa: "O simulador documenta que ajustarFormulaAoCopiar ajusta apenas as partes relativas, preservando a trava $; referências mistas ajustam somente o eixo relativo. Em =A2*$B$1, A2 é totalmente relativa (muda de linha: A2→A3) e $B$1 é totalmente absoluta (permanece $B$1). Logo, copiando de C2 para C3 (mesma coluna, uma linha abaixo), o resultado é =A3*$B$1.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: tratar a referência absoluta $B$1 como se fosse relativa. A trava $ em $B$1 impede qualquer alteração de linha ou coluna ao copiar; apenas A2 (relativa) deve mudar.",
+      B: "CORRETA. É a única que aplica corretamente a regra: a parte relativa (A2→A3) avança uma linha e a absoluta ($B$1) permanece idêntica, conforme a semântica documentada do ajuste ao copiar.",
+      C: "INCORRETA. Erro conceitual: achar que a fórmula é imutável ao copiar. A referência A2 é relativa e, ao descer uma linha, passa a A3; só as referências com $ em ambos os eixos seriam preservadas integralmente.",
+      D: "INCORRETA. Erro conceitual: converter indevidamente A2 em $A2/$A3. A referência original A2 não possui trava; copiá-la não adiciona uma trava nova — a trava só se preserva quando já existia."
+    },
+    regra: "Referências ao copiar: relativa (A2) muda em ambos os eixos conforme o deslocamento; absoluta ($A$1) nunca muda; mista ($A2 ou A$2) muda apenas o eixo sem $. O simulador implementa isso em ajustarFormulaAoCopiar (trava $ preservada; mistas ajustam só o eixo relativo).",
+    pegadinha: "A pegadinha é a mistura de dois eixos numa só fórmula: quem copia 'no olho' tende a deslocar também a célula travada ($B$1) ou a esquecer de deslocar a relativa (A2)."
+  },
+  {
+    id: "q-m1-34",
+    modulo: 1,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "modulo-1-unidade-2-topico-13-sub-1",
+    assunto: "M1.3 Excel — PROCX e o argumento opcional se_não_encontrado",
+    contexto: "Afirmação sobre o comportamento documentado da função de pesquisa PROCX no simulador Excel (assets/js/simulators.js — cabeçalho 'FUNÇÕES SUPORTADAS' e exemplo de sintaxe PROCX(20; A1:A3; B1:B3; \"n/a\"; 0)).",
+    enunciado: "No simulador documentado, o PROCX realiza correspondência exata por padrão e, quando o valor procurado não é encontrado e o argumento opcional \"se_não_encontrado\" foi informado, a função devolve esse valor personalizado em vez do código de erro #N/A.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'correspondência exata por padrão e, quando o valor procurado não é encontrado e o argumento opcional \"se_não_encontrado\" foi informado, a função devolve esse valor personalizado em vez do código de erro #N/A': o cabeçalho lista PROCX como 'busca moderna real, exato por padrão, com argumento \"se_não_encontrado\"', e o exemplo PROCX(20; A1:A3; B1:B3; \"n/a\"; 0) mostra esse quarto argumento recebendo o texto \"n/a\" a ser retornado na ausência de correspondência.",
+    justificativa: "Ambas as cláusulas correspondem ao escopo documentado. (1) Por padrão, o PROCX usa correspondência exata (modo 0), diferentemente da busca aproximada padrão do PROCV/PROCH. (2) O quarto argumento 'se_não_encontrado' é opcional e, quando informado, é devolvido no lugar do #N/A que a função retornaria ao não encontrar o valor — exatamente como no exemplo do cabeçalho, em que \"n/a\" substitui o #N/A. O item descreve fielmente o comportamento.",
+    analise: {
+      item: "Item VERDADEIRO. O PROCX é de correspondência exata por padrão e aceita um argumento opcional 'se_não_encontrado' que, quando informado, é retornado no lugar do #N/A, conforme o cabeçalho e o exemplo de sintaxe do simulador.",
+      leituraIncorreta: "Leitura que induz ao erro: (1) confundir PROCX com PROCV, achando que o padrão é busca aproximada; (2) crer que o PROCX sempre lança #N/A sem alternativa, ignorando o argumento opcional 'se_não_encontrado' que permite um retorno customizado; (3) tratar o #N/A como obrigatório mesmo quando o usuário forneceu um valor de fallback."
+    },
+    regra: "PROCX(procurar; intervalo_busca; intervalo_retorno; [se_não_encontrado]; [modo]): correspondência exata por padrão; na ausência de correspondência, devolve #N/A ou o valor do argumento opcional 'se_não_encontrado', quando informado.",
+    pegadinha: "A armadilha é projetar o comportamento do PROCV (aproximado por padrão, sem retorno customizado simples) sobre o PROCX, que é exato por padrão e possui o argumento específico 'se_não_encontrado'."
+  },
+  {
+    id: "q-m1-35",
+    modulo: 1,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-2-topico-13-sub-1",
+    assunto: "M1.3 Excel — separador regional de argumentos e decimais",
+    contexto: "Afirmação sobre a regra de desambiguação do separador regional no simulador Excel (assets/js/simulators.js — cabeçalho 'SEPARADOR REGIONAL').",
+    enunciado: "No simulador documentado, a fórmula SOMA(1,5; 2,5) resulta em 4, porque a presença do ponto e vírgula ativa o modo regional pt-BR, em que o ponto e vírgula separa argumentos e a vírgula funciona como separador decimal; já SOMA(1,5), sem o ponto e vírgula, resulta em 6, por ser interpretada como dois argumentos no modo internacional.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'SOMA(1,5; 2,5) resulta em 4 ... o ponto e vírgula separa argumentos e a vírgula funciona como separador decimal; já SOMA(1,5), sem o ponto e vírgula, resulta em 6': o cabeçalho declara exatamente esses dois exemplos — SOMA(1,5; 2,5) = 4 (modo pt-BR) e a consequência SOMA(1,5) sem ';' = 1+5 = 6 (dois argumentos, modo internacional).",
+    justificativa: "A regra documentada é: se a fórmula contém ';' fora de textos entre aspas, o modo é pt-BR (';' separa argumentos; ',' ou '.' são decimais) — daí SOMA(1,5; 2,5) = 1,5 + 2,5 = 4. Caso contrário, o modo é internacional (',' separa argumentos; apenas '.' é decimal) — daí SOMA(1,5) é lida como dois argumentos 1 e 5, resultando em 6. O item reproduz fielmente os dois exemplos declarados no cabeçalho.",
+    analise: {
+      item: "Item VERDADEIRO. As duas fórmulas e seus resultados (4 e 6) correspondem exatamente aos exemplos do cabeçalho 'SEPARADOR REGIONAL', que usa a presença de ';' para escolher entre modo pt-BR e modo internacional.",
+      leituraIncorreta: "Leitura que induz ao erro: (1) assumir que ',' é sempre decimal, ignorando que, sem ';', o simulador entra em modo internacional e a trata como separador de argumentos; (2) calcular SOMA(1,5) como se fosse 1,5 (um único valor), quando a ausência de ';' a torna dois argumentos (1 e 5 = 6)."
+    },
+    regra: "Desambiguação pelo ';': com ';' (fora de textos) → modo pt-BR (';' separa argumentos, ',' ou '.' é decimal); sem ';' → modo internacional (',' separa argumentos, '.' é decimal). Consequência declarada: SOMA(1,5) sem ';' = 6.",
+    pegadinha: "A armadilha é a aparente identidade textual entre '1,5' (decimal em pt-BR) e '1,5' (dois argumentos em modo internacional): o que decide é a presença ou não do ponto e vírgula."
+  },
+  {
+    id: "q-m1-36",
+    modulo: 1,
+    formato: "mc",
+    estilo: "vunesp",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "modulo-1-unidade-4",
+    assunto: "M1.4 PowerPoint — diferença entre animação e transição",
+    contexto: "Secretário municipal prepara uma apresentação de prestação de contas em PowerPoint e precisa aplicar efeitos visuais. Ele confunde 'animação' com 'transição'. Fonte: conteúdo da unidade 1.4 (curriculumPowerPoint14).",
+    enunciado: "Sobre animações e transições no PowerPoint, conforme a unidade 1.4, assinale a alternativa que apresenta a diferença correta entre os dois conceitos.",
+    alternativas: [
+      { letra: "A", texto: "Animações são efeitos aplicados entre slides, e transições são efeitos aplicados a objetos individuais dentro de um slide." },
+      { letra: "B", texto: "Animações aplicam efeitos a objetos individuais de um slide (entrada, ênfase, saída), enquanto transições são efeitos entre slides (fade, push, wipe)." },
+      { letra: "C", texto: "Animações e transições são conceitos idênticos; a única diferença é o nome usado em versões diferentes do programa." },
+      { letra: "D", texto: "Transições só podem ser aplicadas ao primeiro slide da apresentação, e animações só ao último slide." }
+    ],
+    gabarito: "B",
+    justificativa: "A unidade 1.4 define: animações aplicam efeitos a objetos individuais (entrada, ênfase, saída), com ordem, duração e gatilhos configuráveis; transições são efeitos entre slides (fade, push, wipe). O próprio exemplo de 'erro' do currículo corrige a confusão: 'animações = efeitos dentro de um slide (objetos); transições = efeitos entre slides'. A alternativa B reproduz exatamente essa distinção.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: inverte os conceitos. Animações atuam dentro do slide (objetos), não entre slides; transições atuam entre slides, não em objetos individuais.",
+      B: "CORRETA. É a única que respeita a definição da unidade 1.4: animação = objeto dentro do slide (entrada/ênfase/saída); transição = efeito entre slides (fade/push/wipe).",
+      C: "INCORRETA. Erro conceitual: trata como sinônimos o que a unidade 1.4 distingue explicitamente (dentro do slide × entre slides). A confusão é justamente o 'erro' documentado no exemplo do currículo.",
+      D: "INCORRETA. Erro conceitual: invenção de restrição inexistente. O currículo não limita transições ao primeiro slide nem animações ao último; ambos os efeitos são aplicáveis a qualquer slide/objeto."
+    },
+    regra: "Animação = efeito em objeto individual dentro de um slide (entrada, ênfase, saída). Transição = efeito entre slides (fade, push, wipe). São conceitos distintos.",
+    pegadinha: "A alternativa A é a inversão direta da definição; quem decorou os termos sem fixar 'dentro × entre' tende a escolhê-la."
+  },
+  {
+    id: "q-m1-37",
+    modulo: 1,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-4",
+    assunto: "M1.4 PowerPoint — escopo de ação do Slide Mestre",
+    contexto: "Afirmação sobre o comportamento do Slide Mestre (Slide Master) na unidade 1.4 (curriculumPowerPoint14).",
+    enunciado: "No PowerPoint, ao alterar o Slide Mestre (layout pai), a modificação é aplicada apenas ao slide atualmente selecionado, pois cada slide guarda uma cópia independente dos elementos de layout definidos pelo mestre.",
+    alternativas: null,
+    gabarito: "errado",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'a modificação é aplicada apenas ao slide atualmente selecionado, pois cada slide guarda uma cópia independente dos elementos de layout': a unidade 1.4 afirma o oposto — 'alterar o mestre propaga para todos os slides vinculados', e o exercício de C/E do próprio currículo responde 'Errado. O Slide Mestre afeta todos os slides vinculados ao mestre e seus layouts filhos'.",
+    justificativa: "O Slide Mestre define tipografia, cores, logotipos e layouts filhos; ao alterá-lo, a mudança se propaga para todos os slides vinculados e seus layouts filhos — não fica restrita ao slide selecionado. A premissa de 'cópia independente por slide' contradiz o mecanismo de vinculação ao mestre descrito na unidade 1.4.",
+    analise: {
+      item: "Item FALSO. O Slide Mestre tem ação coletiva: a alteração propaga para todos os slides vinculados e layouts filhos, e não se limita ao slide atual nem parte de cópias independentes por slide.",
+      leituraIncorreta: "Leitura que induz ao erro: imaginar que cada slide 'congelou' uma cópia dos elementos do mestre no momento da criação, de modo que editá-lo só afetaria o slide aberto. Na verdade, os slides permanecem vinculados ao mestre, e a edição do mestre os atualiza em conjunto."
+    },
+    regra: "Slide Mestre (Slide Master): define tipografia, cores, logotipos e layouts filhos; alterá-lo propaga para todos os slides vinculados (e seus layouts filhos).",
+    pegadinha: "A armadilha é a intuição de 'cópia local fixa': quem acredita que o slide guarda uma cópia independente dos elementos do mestre conclui, equivocadamente, que a edição do mestre afeta só o slide aberto."
+  },
+  {
+    id: "q-m1-38",
+    modulo: 1,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-5",
+    assunto: "M1.5 OneDrive — sincronização não é backup imutável",
+    contexto: "Afirmação sobre a natureza do OneDrive como serviço de armazenamento em nuvem (unidade 1.5, curriculumOneDrive15).",
+    enunciado: "Como o OneDrive é um serviço de sincronização bidirecional e não de backup imutável, alterações maliciosas — como as provocadas por ransomware em arquivos locais — podem se propagar para a nuvem, razão pela qual ele não substitui um backup corporativo completo e separado.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'OneDrive é um serviço de sincronização bidirecional e não de backup imutável ... alterações maliciosas ... podem se propagar para a nuvem ... não substitui um backup corporativo completo e separado': a unidade 1.5 afirma literalmente que 'OneDrive NÃO substitui backup corporativo completo; é sincronização, não backup imutável (ransomware pode propagar alterações maliciosas para nuvem)'.",
+    justificativa: "A unidade 1.5 é explícita: a sincronização é bidirecional (alterações locais propagam para a nuvem e vice-versa) e o OneDrive não é backup imutável — ransomware pode propagar alterações maliciosas para a nuvem. Por isso ele não substitui backup corporativo completo; a recomendação é manter backup separado (3-2-1: 3 cópias, 2 mídias, 1 offsite). O item reproduz fielmente esse raciocínio.",
+    analise: {
+      item: "Item VERDADEIRO. As três teses (sincronização bidirecional; não é backup imutável; propagação de alterações maliciosas para a nuvem; não substitui backup completo) estão todas na unidade 1.5.",
+      leituraIncorreta: "Leitura que induz ao erro: confundir 'ter uma cópia na nuvem' com 'ter backup'. Como a cópia é sincronizada (não imutável), um arquivo criptografado localmente por ransomware é replicado para a nuvem, destruindo a suposta proteção. A cópia em nuvem só protege se houver um backup independente e não sincronizado."
+    },
+    regra: "OneDrive = sincronização bidirecional, não backup imutável. Alterações (inclusive maliciosas) propagam para a nuvem; não substitui backup corporativo completo (recomendação 3-2-1: 3 cópias, 2 mídias, 1 offsite).",
+    pegadinha: "A armadilha é equiparar 'armazenamento em nuvem' a 'backup': a sincronização replica o estado atual (inclusive o danificado), enquanto o backup exige uma cópia independente e imutável."
+  },
+  {
+    id: "q-m1-39",
+    modulo: 1,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "modulo-1-unidade-5",
+    assunto: "M1.5 OneDrive — histórico de versões e restauração",
+    contexto: "Um servidor editou por engano um documento armazenado no OneDrive e precisa recuperar o conteúdo de dias atrás. Fonte: unidade 1.5 (curriculumOneDrive15) — histórico de versões.",
+    enunciado: "Sobre o histórico de versões de um arquivo no OneDrive, conforme a unidade 1.5, assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "Ao restaurar uma versão anterior, o OneDrive exclui automaticamente a versão atual do arquivo, que passa a não existir mais." },
+      { letra: "B", texto: "O OneDrive armazena versões anteriores (30 dias padrão no M365, até 500 versões) e, ao restaurar uma versão anterior, preserva a versão atual, criando uma cópia restaurada." },
+      { letra: "C", texto: "O histórico de versões é ilimitado e retém versões por tempo indeterminado, sem qualquer teto de quantidade de versões." },
+      { letra: "D", texto: "As versões anteriores só podem ser restauradas por um administrador do locatário e nunca geram uma cópia no arquivo." }
+    ],
+    gabarito: "B",
+    justificativa: "A unidade 1.5 define: cada arquivo armazena versões anteriores (30 dias padrão no M365; até 500 versões) e a restauração não exclui a versão atual — cria uma cópia restaurada. A alternativa B reproduz exatamente esses três pontos (teto de 500 versões, janela padrão de 30 dias e preservação da versão atual).",
+    analise: {
+      A: "INCORRETA. Erro conceitual: afirma que a restauração exclui a versão atual. A unidade 1.5 diz o oposto — a restauração NÃO exclui a versão atual, mas cria uma cópia restaurada.",
+      B: "CORRETA. É a única que respeita a definição: 30 dias padrão no M365, teto de até 500 versões e preservação da versão atual (a restauração cria uma cópia, sem apagar a atual).",
+      C: "INCORRETA. Erro conceitual: inventa ilimitação. A unidade 1.5 fixa teto de até 500 versões e janela padrão de 30 dias — não é ilimitado nem por tempo indeterminado.",
+      D: "INCORRETA. Erro conceitual: invenção de restrição de permissão e negação da cópia. O currículo não condiciona a restauração a administrador e afirma que a restauração gera cópia — a alternativa nega exatamente o que o texto diz."
+    },
+    regra: "Histórico de versões no OneDrive: versões anteriores retidas por 30 dias padrão no M365, até 500 versões; a restauração preserva a versão atual e cria uma cópia restaurada.",
+    pegadinha: "A pegadinha é a alternativa A, que inverte a regra central ('restauração não exclui a versão atual'); quem associa 'restaurar' a 'sobrescrever/apagar' tende a marcá-la."
+  },
+  {
+    id: "q-m1-40",
+    modulo: 1,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "modulo-1-unidade-4",
+    assunto: "M1.4 PowerPoint — PDF vs Empacotar Apresentação para CD",
+    contexto: "Uma autarquia preparará uma apresentação em PowerPoint que será exibida em um projetor em sala sem internet e em um computador que não possui o PowerPoint instalado. O responsável precisa escolher como disponibilizar o arquivo para esse ambiente offline. Fonte: unidade 1.4 (curriculumPowerPoint14) — exportação e empacotamento.",
+    enunciado: "À luz da unidade 1.4, sobre como garantir que a apresentação funcione corretamente nesse ambiente offline (sem internet e sem o PowerPoint instalado), assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "Basta exportar a apresentação para PDF, pois o PDF já vincula as fontes e inclui toda a mídia, transformando o arquivo em apresentação executável e dispensando qualquer outro procedimento." },
+      { letra: "B", texto: "Para apresentação offline em máquina sem o PowerPoint, deve-se usar 'Empacotar Apresentação para CD' (Package Presentation), que inclui fontes vinculadas e mídia; a exportação para PDF preserva o layout, mas não converte o arquivo em apresentação executável." },
+      { letra: "C", texto: "O modo de apresentação (Slide Show) roda mesmo sem o PowerPoint instalado, desde que haja conexão com a internet para carregar os slides." },
+      { letra: "D", texto: "A exportação para PDF e o 'Empacotar Apresentação para CD' têm exatamente a mesma função e podem ser usados de forma totalmente intercambiável em qualquer situação." }
+    ],
+    gabarito: "B",
+    justificativa: "A unidade 1.4 trata dois recursos distintos: 'Exportação para PDF preserva layout' e, 'para apresentação offline, usar \"Empacotar Apresentação para CD\" (Package Presentation) incluindo fontes vinculadas e mídia'. O Empacotar é o caminho para levar a apresentação (com fontes e mídia) a um ambiente offline; o PDF, por sua vez, preserva o layout mas é um documento para leitura/impressão, não uma apresentação executável no PowerPoint. A alternativa B respeita essa distinção.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: atribui ao PDF o que o currículo reserva ao Empacotar (vincular fontes e incluir mídia) e o transforma em 'apresentação executável'. O PDF preserva layout, mas não é a ferramenta de empacotamento offline descrita.",
+      B: "CORRETA. É a única que aplica corretamente a unidade 1.4: para offline sem PowerPoint usa-se 'Empacotar Apresentação para CD' (fontes vinculadas + mídia); o PDF preserva o layout mas não converte o arquivo em apresentação executável.",
+      C: "INCORRETA. Erro conceitual: invenção dupla. O modo de apresentação (Slide Show) exige o PowerPoint instalado e não depende de internet; a alternativa afirma o oposto (roda sem o programa e precisa de internet).",
+      D: "INCORRETA. Erro conceitual: equiparação indevida. O currículo descreve funções distintas (PDF preserva layout; Empacotar leva fontes e mídia para offline); não são intercambiáveis em qualquer situação."
+    },
+    regra: "Exportação para PDF preserva o layout (documento para leitura/impressão). Para apresentação offline, usar 'Empacotar Apresentação para CD' (Package Presentation), que inclui fontes vinculadas e mídia.",
+    pegadinha: "A armadilha é a alternativa A, que transfere ao PDF a responsabilidade de vincular fontes e incluir mídia — papel que a unidade 1.4 atribui ao Empacotar para CD — e a D, que apaga a distinção entre os dois recursos."
+  },
+  /* ===================== FIM do bloco q-m1-33..q-m1-40 (Módulo 1) ===================== */
+{
+    id: "q-m2-27",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u1-t1-s1",
+    assunto: "M2.1 Fundamentos — comutação de circuitos vs. pacotes",
+    contexto: "Uma concessionária de serviços públicos precisa transmitir dados de medidores entre filiais com latência variável típica da Internet.",
+    enunciado: "Sobre a escolha entre comutação de circuitos e de pacotes para esse tráfego de dados na Internet, assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "A comutação de pacotes estabelece um caminho dedicado antes da comunicação, garantindo latência fixa." },
+      { letra: "B", texto: "A comutação de pacotes divide os dados em pacotes roteados independentemente, compartilhando a largura de banda e oferecendo tolerância a falhas." },
+      { letra: "C", texto: "A Internet utiliza comutação de circuitos, pois assim cada pacote segue sempre o mesmo caminho." },
+      { letra: "D", texto: "A principal vantagem da comutação de pacotes é a banda garantida e o setup mais lento que a de circuitos." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define que, na comutação de pacotes, os dados são divididos em pacotes que caminham independentemente pela rede; suas vantagens são eficiência (compartilhamento de largura de banda) e tolerância a falhas, e suas desvantagens são latência variável (jitter), perda de pacotes e necessidade de reordenação. Afirma ainda que a Internet usa comutação de pacotes. A alternativa B reproduz essa definição.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: descreve comutação de CIRCUITOS (caminho dedicado, latência previsível), não de pacotes. Atribui a pacotes a garantia que é própria dos circuitos.",
+      B: "CORRETA. É a única que apresenta a definição correta de comutação de pacotes (roteamento independente, compartilhamento de banda, tolerância a falhas), conforme o currículo.",
+      C: "INCORRETA. Erro conceitual duplo: a Internet usa comutação de PACOTES, e nela cada pacote é roteado independentemente (pode seguir caminhos diferentes) — o oposto do afirmado.",
+      D: "INCORRETA. Erro conceitual: troca as vantagens/desvantagens. Banda garantida e setup lento são características da comutação de CIRCUITOS; a vantagem dos pacotes é o aproveitamento de banda."
+    },
+    regra: "Comutação de pacotes: dados em pacotes independentes, banda compartilhada, tolerância a falhas; latência variável e possível perda/reordenação. A Internet usa pacotes; a telefonia tradicional, circuitos.",
+    pegadinha: "Inverter vantagens e desvantagens entre os dois tipos de comutação: 'banda garantida' e 'setup lento' pertencem aos circuitos, não aos pacotes."
+  },
+  {
+    id: "q-m2-28",
+    modulo: 2,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "m2-u1-t1-s1",
+    assunto: "M2.1 Fundamentos — métricas de desempenho",
+    contexto: "Um enlace de 1 Gbps apresenta, em teste, throughput de 720 Mbps; o ping é estável, mas aplicações de voz apresentam áudio interrompido.",
+    enunciado: "Considerando largura de banda, throughput, latência e jitter, assinale a alternativa que interpreta corretamente o cenário.",
+    alternativas: [
+      { letra: "A", texto: "Largura de banda e throughput são sinônimos; os 280 Mbps restantes são consumidos exclusivamente por colisões." },
+      { letra: "B", texto: "Throughput (720 Mbps) é a taxa real alcançada, inferior à largura de banda teórica (1 Gbps); o áudio interrompido é típico de jitter alto, não de latência estável." },
+      { letra: "C", texto: "Throughput nunca é inferior à largura de banda; se mede 720 Mbps, a largura de banda real é 720 Mbps." },
+      { letra: "D", texto: "Jitter é a latência média do enlace; como o ping está estável, o jitter é necessariamente alto." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define: largura de banda = capacidade máxima teórica (1 Gbps); throughput = taxa real alcançada, SEMPRE menor que a largura de banda, devido a overhead de protocolo, colisões, congestionamento e qualidade do sinal. Jitter = variação na latência entre pacotes consecutivos, crítico para VoIP (áudio interrompido). Latência e jitter são métricas distintas: ping estável não implica jitter alto nem baixo. A alternativa B é a única coerente.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: afirma que largura de banda e throughput são sinônimos (o currículo corrige isso) e reduz a diferença a 'colisões apenas', ignorando overhead, congestionamento e qualidade do sinal.",
+      B: "CORRETA. Throughput é a taxa real (sempre < largura de banda) e o áudio interrompido em VoIP é sintoma de jitter alto; a latência estável (ping) é métrica distinta do jitter, conforme o currículo.",
+      C: "INCORRETA. Erro conceitual: inverte a regra — o currículo afirma que 'throughput nunca excede largura de banda', ou seja, é sempre menor ou igual, não que seriam iguais.",
+      D: "INCORRETA. Erro conceitual: define jitter como 'latência média' (é a VARIAÇÃO da latência) e deduz jitter alto de ping estável — dois erros, pois latência e jitter são independentes."
+    },
+    regra: "Largura de banda (teórica) ≥ throughput (real). Jitter = variação da latência entre pacotes; é distinto da latência média e crítico para VoIP/streaming.",
+    pegadinha: "Confundir latência (ping) com jitter (variação da latência): ping estável não diz nada sobre o jitter, que é o que causa o áudio interrompido."
+  },
+  {
+    id: "q-m2-29",
+    modulo: 2,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m2-u1-t1-s2",
+    assunto: "M2.1 Fundamentos — comunicação unicast/broadcast/multicast/anycast",
+    contexto: "Um administrador observa, em um switch, o tráfego de uma requisição ARP e de um DHCP discovery na rede local.",
+    enunciado: "As comunicações ARP e DHCP discovery são exemplos de broadcast, que é limitado ao domínio de broadcast (sub-rede local) e não é encaminhado por roteadores.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho 'ARP e DHCP discovery são exemplos de broadcast' e 'broadcast é limitado ao domínio de broadcast (sub-rede local) e não é encaminhado por roteadores' coincide com o currículo, que cita exatamente ARP e DHCP discovery como broadcast e afirma que roteadores não encaminham broadcasts.",
+    justificativa: "O currículo lista broadcast como comunicação um-para-todos na mesma rede/domínio de broadcast, com exemplos em ARP e DHCP discovery, e registra que 'Broadcast é limitado por roteadores (não atravessa sub-redes)'. O item reproduz fielmente esses dois pontos.",
+    analise: {
+      item: "Item VERDADEIRO. ARP e DHCP discovery são os exemplos canônicos de broadcast do currículo, e a contenção por roteadores (domínio de broadcast = sub-rede) está correta.",
+      leituraIncorreta: "Leitura que induz ao erro: achar que broadcast 'chega a toda a Internet' (o próprio exemplo 'erro' do currículo corrige: roteadores não encaminham 255.255.255.255 para evitar tempestades de broadcast)."
+    },
+    regra: "Broadcast = um-para-todos no domínio de broadcast; limitado pela sub-rede, não atravessa roteadores. ARP e DHCP discovery são exemplos didáticos.",
+    pegadinha: "Itens simples por design: o risco é a superstição de que 'broadcast se espalha por toda a rede/Internet'; ele é contido na sub-rede pelos roteadores."
+  },
+  {
+    id: "q-m2-30",
+    modulo: 2,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u1-t1-s2",
+    assunto: "M2.1 Fundamentos — tipos de comunicação",
+    contexto: "Uma secretaria realiza videoaula ao vivo para 200 servidores simultaneamente e, em paralelo, um usuário acessa um site.",
+    enunciado: "Sobre os tipos de comunicação empregados nesses dois casos, assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "Ambos são unicast; a videoaula exigiria 200 fluxos separados para ser eficiente." },
+      { letra: "B", texto: "O acesso ao site é unicast (um-para-um); a videoaula é mais eficiente em multicast (um-para-muitos, grupo inscrito), evitando 200 fluxos duplicados." },
+      { letra: "C", texto: "A videoaula é broadcast, pois atinge muitos receptores, e atravessa roteadores até todos os setores." },
+      { letra: "D", texto: "O acesso ao site é anycast e a videoaula é broadcast, que exige inscrição em grupo via IGMP." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define unicast como comunicação um-para-um (ex.: acessar um site) e multicast como um-para-muitos, para um grupo específico que se inscreveu (ex.: streaming de vídeo IPTV), exigindo inscrição do receptor (IGMP join). No exemplo de aplicação, streaming para muitos funcionários é mais eficiente em multicast do que em unicast (que exigiria N fluxos separados). A alternativa B aplica corretamente essas definições.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: a videoaula para muitos é o caso típico de multicast; afirmar que 'unicast é mais eficiente' contradiz o exemplo do currículo (unicast exigiria 200 fluxos, consumindo muito mais banda).",
+      B: "CORRETA. Site = unicast (um-para-um); videoaula = multicast (um-para-muitos, com inscrição em grupo), mais eficiente que N fluxos unicast, conforme o currículo.",
+      C: "INCORRETA. Erro conceitual: multicast não é broadcast, e broadcast (não multicast) é que é limitado pelos roteadores; além disso, multicast exige grupo inscrito, não 'todos os setores'.",
+      D: "INCORRETA. Erro conceitual: acesso a um site é unicast, não anycast; e quem exige inscrição via IGMP é o multicast, não o broadcast — troca de conceitos."
+    },
+    regra: "Unicast (1:1, ex.: site) × multicast (1:many, grupo inscrito, IGMP, ex.: streaming) × broadcast (1:all da sub-rede, limitado por roteadores) × anycast (1:mais-próximo).",
+    pegadinha: "Confundir multicast com broadcast: multicast exige grupo inscrito (IGMP) e é contido de forma diferente; broadcast atinge todos da sub-rede e não atravessa roteadores."
+  },
+  {
+    id: "q-m2-31",
+    modulo: 2,
+    formato: "mc",
+    estilo: "vunesp",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "m2-u1-t1-s4",
+    assunto: "M2.1 Fundamentos — meios de transmissão (UTP/fibra)",
+    contexto: "Uma fábrica com máquinas de alta potência precisa de rede cabeada entre dois prédios distantes 300 m, com risco de interferência eletromagnética.",
+    enunciado: "Com base nas características dos meios do currículo, assinale a alternativa que recomenda o meio adequado e justifica corretamente.",
+    alternativas: [
+      { letra: "A", texto: "UTP Cat6, pois suporta 10 Gbps até 100 m e é imune a interferência eletromagnética." },
+      { letra: "B", texto: "Fibra óptica, pois tem alta largura de banda, é imune a interferência eletromagnética e percorre 300 m sem repetidor; UTP limita-se a 100 m." },
+      { letra: "C", texto: "UTP Cat5e, pois é o meio mais barato e atende a distâncias acima de 500 m sem perda de 1 Gbps." },
+      { letra: "D", texto: "Coaxial, pois é o meio moderno recomendado para ligações entre prédios e imune a raios." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define: UTP limita-se a 100 m (Cat6 suporta 10 Gbps até 55 m; Cat6a até 100 m) e é suscetível a interferência; a fibra óptica tem alta largura de banda, é imune a interferência eletromagnética e percorre longas distâncias (o exemplo do currículo usa fibra monomodo para 500 m sem repetidor). Para 300 m com EMI, a fibra é a recomendação correta.",
+    analise: {
+      A: "INCORRETA. Erro conceitual duplo: UTP tem limite de 100 m (não cobre 300 m) e NÃO é imune a interferência — é suscetível; a imunidade é da fibra.",
+      B: "CORRETA. Fibra: alta largura de banda, imune a EMI e alcance bem acima de 300 m sem repetidor; UTP fica limitado a 100 m — justificativa fiel ao currículo.",
+      C: "INCORRETA. Erro conceitual: Cat5e (1 Gbps) e UTP têm limite de 100 m; não atende a 500 m nem a ambientes com EMI sem blindagem — invenção de alcance.",
+      D: "INCORRETA. Erro conceitual: coaxial é citado como meio de redes antigas/TV a cabo, não como recomendação moderna entre prédios; a imunidade a interferência pertence à fibra."
+    },
+    regra: "UTP: até 100 m, suscetível a EMI (Cat6: 10 Gbps/55 m; Cat6a: 10 Gbps/100 m). Fibra óptica: alta banda, imune a EMI, longa distância sem repetidor.",
+    pegadinha: "Atribuir a UTP a imunidade a interferência eletromagnética (é da fibra) e esquecer o teto de 100 m do par trançado."
+  },
+  {
+    id: "q-m2-32",
+    modulo: 2,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u1-t1-s4",
+    assunto: "M2.1 Fundamentos — meios de transmissão (categorias UTP)",
+    contexto: "Um técnico especifica cabeamento estruturado e afirma que um cabo UTP Cat6 garantirá 10 Gbps em toda a extensão padrão de 100 m.",
+    enunciado: "De acordo com o currículo, o UTP Cat6 suporta 10 Gbps até 100 metros.",
+    alternativas: null,
+    gabarito: "errado",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'Cat6 suporta 10 Gbps até 100 metros': o currículo afirma que 'Cat6 suporta 10 Gbps até 55m; Cat6a suporta 10 Gbps até 100m'.",
+    justificativa: "O exercício registrado no currículo marca esse item como Errado e corrige: Cat6 suporta 10 Gbps até 55 m; para 10 Gbps até 100 m é necessário Cat6a. A extensão de 100 m a 10 Gbps não é garantida pelo Cat6.",
+    analise: {
+      item: "Item FALSO. O Cat6 atinge 10 Gbps apenas até 55 m; a distância de 100 m a 10 Gbps exige Cat6a — o item confunde as duas categorias.",
+      leituraIncorreta: "Leitura que induz ao erro: associar 'Cat6 = 10 Gbps' ao alcance máximo de 100 m do par trançado (esse 100 m vale para 1 Gbps; a 10 Gbps o Cat6 cai para 55 m)."
+    },
+    regra: "UTP: Cat5e (1 Gbps), Cat6 (10 Gbps até 55 m), Cat6a (10 Gbps até 100 m). O alcance de 100 m só se mantém a 10 Gbps com Cat6a.",
+    pegadinha: "Confundir Cat6 com Cat6a: a letra 'a' (augmented) é justamente o que estende 10 Gbps aos 100 m completos."
+  },
+  {
+    id: "q-m2-33",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u1-t1-s1",
+    assunto: "M2.1 Fundamentos — topologias físicas",
+    contexto: "Uma rede predial tem todos os computadores conectados a um switch central; a falha de um cabo afeta apenas o computador daquele cabo.",
+    enunciado: "Sobre a topologia descrita, assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "É topologia em anel: a falha de um nó quebra o círculo e derruba toda a rede.",
+      letra2: null },
+      { letra: "B", texto: "É topologia em estrela: a falha de um nó afeta apenas esse nó; a falha do dispositivo central (switch) derruba toda a rede." },
+      { letra: "C", texto: "É topologia em barra (bus): a falha do switch é irrelevante e só a falha do cabo central derruba a rede." },
+      { letra: "D", texto: "É topologia em malha: há um único dispositivo central e alta redundância por definição." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define topologia em estrela como 'todos conectados a um switch/hub central — falha em um nó não afeta os demais; falha no switch derruba tudo'. O cenário (todos ao switch central; falha de cabo afeta só aquele nó) é exatamente a estrela. A falha do dispositivo central é o ponto único de falha que derruba a rede.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: anel conecta nós em círculo com um token; não há dispositivo central e a falha de nó pode quebrar o anel — não corresponde ao cenário (switch central).",
+      B: "CORRETA. Estrela: nós ao switch central, falha de nó isolada, falha do switch derruba tudo — definição literal do currículo.",
+      C: "INCORRETA. Erro conceitual: em barra (bus) o cabo backbone é o ponto único de falha e não há switch central; o item troca os papéis do cabo e do dispositivo central.",
+      D: "INCORRETA. Erro conceitual: malha conecta cada nó a todos os outros (redundância por múltiplos caminhos), sem dispositivo central único — a descrição mistura malha com estrela."
+    },
+    regra: "Estrela: todos os nós a um switch/hub central; falha de nó = isolada; falha do central = rede toda caída. Malha = redundância por múltiplos caminhos.",
+    pegadinha: "A pegadinha é localizar o ponto único de falha: na estrela é o dispositivo central (não o nó), ao contrário do bus, onde é o cabo backbone."
+  },
+  {
+    id: "q-m2-34",
+    modulo: 2,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m2-u1-t1-s3",
+    assunto: "M2.1 Fundamentos — métricas de desempenho",
+    contexto: "Um enlace de 1 Gbps é testado e apresenta throughput de 850 Mbps.",
+    enunciado: "Throughput é a taxa real de transferência alcançada em um enlace e, por isso, nunca excede a largura de banda teórica do canal.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho 'throughput ... nunca excede a largura de banda teórica' é VERDADEIRO: o currículo define 'Throughput: taxa real de transferência alcançada (sempre menor que a largura de banda)' e afirma explicitamente que 'Throughput nunca excede largura de banda'.",
+    justificativa: "O currículo diferencia largura de banda (capacidade máxima teórica, ex.: 1 Gbps) de throughput (taxa real alcançada, sempre menor), atribuindo a diferença a overhead de protocolo (cabeçalhos TCP/IP), colisões, congestionamento e qualidade do sinal. O item está de acordo com a regra 'throughput nunca excede largura de banda'.",
+    analise: {
+      item: "Item VERDADEIRO. Throughput é a taxa real e é sempre menor ou igual à largura de banda teórica — o currículo registra isso duas vezes (definição e correção do exemplo 'erro').",
+      leituraIncorreta: "Leitura que induz ao erro: tratar largura de banda e throughput como sinônimos (o exemplo 'erro' do currículo corrige justamente essa equiparação)."
+    },
+    regra: "Largura de banda = capacidade teórica máxima; throughput = taxa real medida, sempre ≤ largura de banda (diferença por overhead, colisões, congestionamento, sinal).",
+    pegadinha: "Itens C/E básicos misturam definições próximas; a disciplina é não confundir 'capacidade teórica' (banda) com 'taxa real' (throughput)."
+  },
+  {
+    id: "q-m2-35",
+    modulo: 2,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u1-t1-s2",
+    assunto: "M2.1 Fundamentos — tipos de comunicação",
+    contexto: "Um engenheiro documenta os tipos de tráfego usados por servidores DNS raiz, por uma CDN e por um serviço de streaming de vídeo.",
+    enunciado: "O anycast direciona o tráfego para o receptor mais próximo de um grupo (sendo usado em servidores DNS raiz e CDNs), enquanto o multicast exige que os receptores se inscrevam em um grupo.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho é VERDADEIRO: o currículo define anycast como 'um-para-o-mais-próximo (ex: DNS root servers, CDN)' e multicast como 'um-para-muitos (grupo específico que se inscreveu)', com o receptor enviando IGMP join.",
+    justificativa: "O currículo lista anycast com exemplos em servidores DNS raiz e CDN (um-para-o-mais-próximo) e multicast como um-para-muitos para um grupo inscrito, exigindo inscrição do receptor (IGMP join). O item associa corretamente cada tipo ao seu mecanismo e exemplos.",
+    analise: {
+      item: "Item VERDADEIRO. AnyCast = mais-próximo (DNS raiz/CDN); multicast = grupo inscrito (IGMP) — ambas as afirmações coincidem com o currículo.",
+      leituraIncorreta: "Leitura que induz ao erro: confundir anycast com multicast (anycast não exige inscrição em grupo; entrega ao nó mais próximo) ou achar que multicast atinge 'todos' (é grupo específico)."
+    },
+    regra: "Anycast = 1:mais-próximo (DNS raiz, CDN); multicast = 1:grupo-inscrito (IGMP); broadcast = 1:todos da sub-rede; unicast = 1:1.",
+    pegadinha: "A pegadinha é trocar os mecanismos: anycast não exige inscrição (IGMP); quem exige grupo inscrito é o multicast."
+  },
+  {
+    id: "q-m2-36",
+    modulo: 2,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m2-u1-t1-s1",
+    assunto: "M2.1 Fundamentos — comutação de circuitos vs. pacotes",
+    contexto: "Um usuário faz uma ligação telefônica tradicional (PSTN) e, em outro aparelho, uma chamada VoIP pela Internet.",
+    enunciado: "A telefonia tradicional (PSTN) utiliza comutação de circuitos, estabelecendo um caminho dedicado durante a chamada, enquanto a Internet utiliza comutação de pacotes.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho é VERDADEIRO: o currículo afirma que a comutação de circuitos 'estabelece um caminho dedicado ... antes da comunicação (ex: telefonia tradicional)' e que 'A Internet usa comutação de pacotes; redes telefônicas tradicionais usam comutação de circuitos'.",
+    justificativa: "O currículo associa a telefonia tradicional (PSTN) à comutação de circuitos (caminho dedicado, banda fixa) e a VoIP/Internet à comutação de pacotes (voz em pacotes que competem por banda, latência variável). O item reproduz exatamente essa classificação.",
+    analise: {
+      item: "Item VERDADEIRO. PSTN = comutação de circuitos (caminho dedicado); Internet = comutação de pacotes — correspondência literal com o currículo.",
+      leituraIncorreta: "Leitura que induz ao erro: achar que a Internet estabelece caminho dedicado (isso é comutação de circuitos) ou que a PSTN divide dados em pacotes (isso é comutação de pacotes)."
+    },
+    regra: "Comutação de circuitos = caminho dedicado (PSTN/telefonia tradicional); comutação de pacotes = dados em pacotes independentes (Internet/VoIP).",
+    pegadinha: "Itens simples que testam se o examinando associa cada tecnologia ao tipo de comutação correto, sem inverter PSTN (circuitos) e Internet (pacotes)."
+  },
+  {
+    id: "q-m2-37",
+    modulo: 2,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m2-u1-t1-s1",
+    assunto: "M2.1 Fundamentos — topologias físicas",
+    contexto: "Uma rede legada usa um único cabo coaxial ao qual todas as estações se conectam.",
+    enunciado: "Na topologia em barra (bus), a falha do cabo principal (backbone) derruba toda a rede, pois ele é o ponto único de falha.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho é VERDADEIRO: o currículo descreve a barra como 'todos conectam ao mesmo cabo coaxial — simples mas colisões frequentes e falha no cabo derruba tudo' e o exercício registra 'Certo. O cabo backbone é ponto único de falha na topologia bus'.",
+    justificativa: "O currículo define a topologia em barra (bus) com um cabo compartilhado e aponta que a falha nesse cabo derruba toda a rede, sendo o cabo backbone o ponto único de falha — exatamente o que o item afirma.",
+    analise: {
+      item: "Item VERDADEIRO. O cabo backbone é o ponto único de falha da topologia bus; sua ruptura derruba a rede — afirmação literal do currículo e do exercício correspondente.",
+      leituraIncorreta: "Leitura que induz ao erro: confundir o ponto único de falha da barra (o cabo) com o da estrela (o dispositivo central) — são topologias distintas."
+    },
+    regra: "Barra (bus): cabo compartilhado; falha no cabo backbone = rede toda caída (ponto único de falha); colisões frequentes.",
+    pegadinha: "A pegadinha é localizar o ponto único de falha: na barra é o cabo; na estrela é o switch/hub central."
+  },
+  {
+    id: "q-m2-38",
+    modulo: 2,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "m2-u1-t1-s1",
+    assunto: "M2.1 Fundamentos — cálculo CIDR (/26)",
+    contexto: "Um administrador recebe o bloco 192.168.10.0/26 para uma nova sub-rede de servidores.",
+    enunciado: "Sobre os endereços dessa sub-rede, assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "Endereço de rede: 192.168.10.0; broadcast: 192.168.10.63; hosts válidos: 192.168.10.1 a 192.168.10.62 (62 hosts); máscara decimal: 255.255.255.192." },
+      { letra: "B", texto: "Endereço de rede: 192.168.10.0; broadcast: 192.168.10.127; hosts válidos: 192.168.10.1 a 192.168.10.126 (126 hosts); máscara: 255.255.255.128." },
+      { letra: "C", texto: "Endereço de rede: 192.168.10.0; broadcast: 192.168.10.255; hosts válidos: 192.168.10.1 a 192.168.10.254 (254 hosts); máscara: 255.255.255.0." },
+      { letra: "D", texto: "Endereço de rede: 192.168.10.0; broadcast: 192.168.10.62; hosts válidos: 192.168.10.1 a 192.168.10.61 (61 hosts); máscara: 255.255.255.192." }
+    ],
+    gabarito: "A",
+    justificativa: "Cálculo do bloco 192.168.10.0/26: prefixo 26 → bits de host = 32 − 26 = 6 → total de endereços = 2^6 = 64 → hosts válidos = 64 − 2 = 62. O bloco tem tamanho 64 no último octeto, começando em .0: endereço de rede = 192.168.10.0; broadcast = 192.168.10.63 (último do bloco); primeiro host = 192.168.10.1; último host = 192.168.10.62. A máscara decimal de /26 é 255.255.255.192 (11111111.11111111.11111111.11000000). A alternativa A reproduz todos esses valores.",
+    analise: {
+      A: "CORRETA. /26 → 64 endereços, 62 hosts válidos; rede .0, broadcast .63, hosts .1–.62, máscara 255.255.255.192 — cálculo binário correto.",
+      B: "INCORRETA. Erro conceitual: descreve /25 (máscara .128, 128 endereços, 126 hosts, broadcast .127), não /26 — trocou o prefixo em um bit.",
+      C: "INCORRETA. Erro conceitual: descreve /24 (máscara .0, 256 endereços, 254 hosts, broadcast .255) — prefixo três bits menor que o pedido.",
+      D: "INCORRETA. Erro conceitual: número correto de hosts (62) mas broadcast trocado — .62 é o ÚLTIMO HOST, e o broadcast é .63; além disso limita os hosts a .61."
+    },
+    regra: "CIDR: hosts válidos = 2^(32−prefixo) − 2. /26 → 64 endereços / 62 hosts; bloco de 64 no último octeto; máscara 255.255.255.192; broadcast = último endereço do bloco.",
+    pegadinha: "Confundir broadcast com o último host: o broadcast é .63 (último do bloco), enquanto .62 é o último host utilizável — a alternativa D explora essa troca."
+  },
+  {
+    id: "q-m2-39",
+    modulo: 2,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u1-t1-s1",
+    assunto: "M2.1 Fundamentos — cálculo CIDR (/27)",
+    contexto: "Um administrador segmenta o bloco 10.0.0.0 em sub-redes e destina uma delas como 10.0.0.0/27.",
+    enunciado: "A sub-rede 10.0.0.0/27 possui 32 endereços no total, dos quais 30 são hosts válidos, e seu endereço de broadcast é 10.0.0.31.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho é VERDADEIRO: para /27, bits de host = 32 − 27 = 5 → total = 2^5 = 32 endereços → hosts válidos = 32 − 2 = 30; o bloco de tamanho 32 começa em .0, logo broadcast = 10.0.0.31.",
+    justificativa: "Cálculo de 10.0.0.0/27: prefixo 27 → 5 bits de host → 32 endereços totais → 30 hosts válidos (descontando rede e broadcast). O bloco tem 32 endereços no último octeto (0 a 31): rede = 10.0.0.0, primeiro host = 10.0.0.1, último host = 10.0.0.30, broadcast = 10.0.0.31. As três afirmações do item estão corretas.",
+    analise: {
+      item: "Item VERDADEIRO. /27 → 32 endereços, 30 hosts válidos, broadcast 10.0.0.31 — cálculo binário coerente (hosts = 2^5 − 2 = 30; broadcast é o último do bloco de 32).",
+      leituraIncorreta: "Leitura que induz ao erro: contar o broadcast (ou a rede) como host válido, ou confundir o tamanho do bloco (/27 = 32, não 16 nem 64)."
+    },
+    regra: "CIDR: total = 2^(32−prefixo); hosts válidos = total − 2. /27 → 32 endereços / 30 hosts; bloco de 32 no último octeto; broadcast = último endereço do bloco (10.0.0.31).",
+    pegadinha: "A pegadinha é contar rede e broadcast como hosts utilizáveis — a regra subtrai 2, restando 30 hosts válidos."
+  },
+  {
+    id: "q-m2-40",
+    modulo: 2,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "m2-u1-t1-s1",
+    assunto: "M2.1 Fundamentos — cálculo CIDR (/28)",
+    contexto: "Uma VLAN recebeu o bloco 172.16.5.16/28 para segmentar um segmento de servidores.",
+    enunciado: "Sobre os endereços dessa sub-rede, assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "Rede: 172.16.5.16; broadcast: 172.16.5.31; hosts válidos: 172.16.5.17 a 172.16.5.30 (14 hosts); máscara decimal: 255.255.255.240." },
+      { letra: "B", texto: "Rede: 172.16.5.16; broadcast: 172.16.5.30; hosts válidos: 172.16.5.17 a 172.16.5.29 (13 hosts); máscara: 255.255.255.240." },
+      { letra: "C", texto: "Rede: 172.16.5.16; broadcast: 172.16.5.47; hosts válidos: 172.16.5.17 a 172.16.5.46 (30 hosts); máscara: 255.255.255.224." },
+      { letra: "D", texto: "Rede: 172.16.5.0; broadcast: 172.16.5.15; hosts válidos: 172.16.5.1 a 172.16.5.14 (14 hosts); máscara: 255.255.255.240." }
+    ],
+    gabarito: "A",
+    justificativa: "Cálculo do bloco 172.16.5.16/28: prefixo 28 → bits de host = 32 − 28 = 4 → total = 2^4 = 16 endereços → hosts válidos = 16 − 2 = 14. O bloco tem tamanho 16 no último octeto; começando em .16, vai até .31: rede = 172.16.5.16; broadcast = 172.16.5.31; primeiro host = 172.16.5.17; último host = 172.16.5.30. A máscara decimal de /28 é 255.255.255.240 (11111111.11111111.11111111.11110000). A alternativa A reproduz todos os valores.",
+    analise: {
+      A: "CORRETA. /28 → 16 endereços, 14 hosts válidos; rede .16, broadcast .31, hosts .17–.30, máscara 255.255.255.240 — cálculo binário correto.",
+      B: "INCORRETA. Erro conceitual: coloca o broadcast em .30 (que é o ÚLTIMO HOST) e reduz os hosts a 13 — troca broadcast por último host.",
+      C: "INCORRETA. Erro conceitual: descreve /27 (máscara .224, bloco de 32, 30 hosts, broadcast .47) em vez de /28 — prefixo errado.",
+      D: "INCORRETA. Erro conceitual: usa o bloco /28 ANTERIOR (172.16.5.0/28, rede .0, broadcast .15); a VLAN recebeu o bloco que começa em .16, não em .0."
+    },
+    regra: "CIDR: hosts válidos = 2^(32−prefixo) − 2. /28 → 16 endereços / 14 hosts; bloco de 16 no último octeto; máscara 255.255.255.240; rede .16 → broadcast .31.",
+    pegadinha: "Dupla armadilha: (1) trocar broadcast (.31) pelo último host (.30); (2) confundir o bloco pedido (.16/28) com o bloco anterior (.0/28)."
+  },
+{
+    id: "q-m3-25",
+    modulo: 3,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u1-t1-s1",
+    assunto: "M3.1 E-mail — papel do SMTP no percurso da mensagem",
+    contexto: "Administrador de correio precisa explicar à equipe por que um e-mail enviado por um colaborador leva alguns segundos para aparecer na caixa de entrada de um destinatário de outra organização.",
+    enunciado: "Sobre o percurso de uma mensagem de e-mail enviada por um colaborador do órgão a um destinatário externo, assinale a alternativa que descreve corretamente o papel do SMTP.",
+    alternativas: [
+      { letra: "A", texto: "O SMTP recebe a mensagem na caixa de entrada do destinatário e a armazena até que ele a consulte." },
+      { letra: "B", texto: "O SMTP transporta a mensagem do cliente para o servidor de e-mail do remetente, que a encaminha ao servidor do destinatário; o recebimento na caixa é feito por POP3 ou IMAP." },
+      { letra: "C", texto: "O SMTP conecta diretamente o cliente do remetente ao cliente do destinatário, sem passar por servidores de e-mail intermediários." },
+      { letra: "D", texto: "O SMTP é o protocolo de recebimento e, por isso, baixa a mensagem para o dispositivo do destinatário." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define o SMTP como 'protocolo padrão para envio de e-mails': 'O SMTP envia o e-mail do cliente para o servidor de e-mail do remetente, que então encaminha para o servidor do destinatário.' O recebimento/armazenamento na caixa de entrada é função do POP3/IMAP — o próprio exemplo 'erro' do currículo corrige: 'SMTP é usado para ENVIAR e-mails. POP3 e IMAP são usados para RECEBER e-mails.' A alternativa B reproduz exatamente esse fluxo.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: atribui ao SMTP a função de receber e armazenar na caixa de entrada — papel do POP3/IMAP. O SMTP encaminha; não conserta a mensagem na caixa do destinatário.",
+      B: "CORRETA. É a única que descreve o fluxo do currículo: cliente → servidor do remetente → servidor do destinatário, sendo o recebimento feito por POP3/IMAP.",
+      C: "INCORRETA. Erro conceitual: o SMTP opera com servidores intermediários (do remetente e do destinatário); não há conexão direta cliente-a-cliente.",
+      D: "INCORRETA. Erro conceitual: inverte a função — SMTP é de ENVIO, não de recebimento/baixar mensagens, conforme o exemplo 'erro' documentado no currículo."
+    },
+    regra: "SMTP = envio/transferência entre agentes de correio (cliente→servidor remetente→servidor destinatário). Recebimento/armazenamento na caixa = POP3/IMAP.",
+    pegadinha: "A pegadinha é trocar a função: quem associa 'SMTP' a 'caixa de entrada/baixar e-mail' inverte envio e recebimento — conceito corrigido no próprio exemplo 'erro' do currículo."
+  },
+  {
+    id: "q-m3-26",
+    modulo: 3,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "m3-u1-t1-s1",
+    assunto: "M3.1 E-mail — criptografia e portas do SMTP",
+    contexto: "Auditor de segurança revisando a configuração de criptografia e de portas do servidor de correio do órgão.",
+    enunciado: "O SMTP não criptografa as mensagens por padrão, mas a segurança é adicionada via STARTTLS ou SMTPS; nesse contexto, a porta 587 corresponde à submissão com STARTTLS, a 465 ao SMTPS com SSL/TLS implícito, e a porta 25 é destinada ao relay entre servidores de e-mail.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'não criptografa por padrão, mas a segurança é adicionada via STARTTLS ou SMTPS' e a associação '587 → submissão com STARTTLS; 465 → SMTPS com SSL/TLS implícito; 25 → relay entre servidores': todas coincidem com o conteúdo e com o exemplo de aplicação do currículo.",
+    justificativa: "O conteúdo do SMTP afirma: 'SMTP ... não criptografa por padrão — a segurança é adicionada via STARTTLS ou SMTPS' e lista '25 (sem criptografia), 587 (submissão com STARTTLS), 465 (SMTPS com SSL/TLS implícito)'. O exemplo de aplicação complementa: 'A porta 25 é usada para relay entre servidores de e-mail'. O item reúne esses fatos sem distorção.",
+    analise: {
+      item: "Item VERDADEIRO. 'Sem criptografia por padrão' + 'STARTTLS/SMTPS' + o mapeamento 587/465/25 reproduzem fielmente o conteúdo e o exemplo de aplicação do currículo.",
+      leituraIncorreta: "Leitura que induz ao erro: confundir a porta 25 com 'submissão segura' — ela é a de relay (sem criptografia) e deve ser bloqueada para clientes externos; a submissão segura é 587/465."
+    },
+    regra: "Portas SMTP: 25 (relay, sem TLS, bloquear de externos), 587 (submissão + STARTTLS), 465 (SMTPS, SSL/TLS implícito). Criptografia é adicionada, não inerente.",
+    pegadinha: "Item composto: basta uma das três associações de porta estivesse trocada que seria Errado — a armadilha é a tentação de 'confiar' na porta 25 como segura."
+  },
+  {
+    id: "q-m3-27",
+    modulo: 3,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m3-u1-t1-s2",
+    assunto: "M3.1 E-mail — POP3 e IMAP (sincronização multi-dispositivo)",
+    contexto: "Servidor público acessa o mesmo e-mail pelo computador da repartição e pelo celular, em momentos distintos, e quer que as marcações (lida/não lida) apareçam em ambos os dispositivos.",
+    enunciado: "Qual protocolo é o mais adequado para esse cenário e qual a razão correta?",
+    alternativas: [
+      { letra: "A", texto: "POP3, porque sincroniza o estado das mensagens no servidor para todos os dispositivos." },
+      { letra: "B", texto: "IMAP, porque mantém as mensagens sincronizadas no servidor e no cliente, permitindo acesso multi-dispositivo." },
+      { letra: "C", texto: "POP3, porque mantém cópia permanente no servidor e nunca apaga as mensagens baixadas." },
+      { letra: "D", texto: "SMTP, porque é o protocolo de recebimento que sincroniza as caixas entre os dispositivos." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define: 'IMAP: mantém e-mails sincronizados no servidor e no cliente. Ideal para multi-dispositivo (celular, tablet, computador)'. O exemplo de aplicação reforça: 'IMAP. Com POP3, os e-mails baixados para um dispositivo são apagados do servidor e não estarão disponíveis no outro dispositivo.' A alternativa B reproduz a definição de IMAP.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: POP3 não sincroniza o estado entre dispositivos — ele baixa e, por padrão, apaga do servidor; a sincronização é propriedade do IMAP.",
+      B: "CORRETA. Sincronização servidor-cliente e acesso multi-dispositivo são a definição de IMAP no currículo.",
+      C: "INCORRETA. Erro conceitual: inverte o comportamento do POP3 — por padrão ele APAGA do servidor após o download; 'cópia permanente' não é o padrão.",
+      D: "INCORRETA. Erro conceitual: SMTP é protocolo de ENVIO, não de recebimento/sincronização — confusão de função já corrigida no exemplo 'erro' do currículo."
+    },
+    regra: "IMAP (143/993): estado no servidor, sincronização multi-dispositivo. POP3 (110/995): download local, apaga por padrão — 1 dispositivo/offline.",
+    pegadinha: "A alternativa C veste o POP3 com um comportamento confortável ('cópia permanente') que não é o padrão; a A atribui a POP3 a sincronização que pertence ao IMAP."
+  },
+  {
+    id: "q-m3-28",
+    modulo: 3,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u1-t1-s2",
+    assunto: "M3.1 E-mail — POP3 (apagamento por padrão) vs. IMAP",
+    contexto: "Configuração padrão de um cliente de e-mail usando POP3 em um único computador da repartição.",
+    enunciado: "Por padrão, o POP3 baixa as mensagens do servidor para o dispositivo local e as apaga do servidor, tornando o conteúdo indisponível em outros dispositivos; o IMAP, ao contrário, mantém as mensagens no servidor.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'POP3 baixa ... e as apaga do servidor, tornando o conteúdo indisponível em outros dispositivos' e 'IMAP ... mantém as mensagens no servidor': coincidem com o conteúdo 'POP3: baixa e-mails ... e, por padrão, apaga do servidor' e 'IMAP: mantém e-mails sincronizados no servidor'.",
+    justificativa: "O currículo afirma: 'POP3 (Post Office Protocol versão 3): baixa e-mails do servidor para o dispositivo local e, por padrão, apaga do servidor' e 'IMAP ... mantém e-mails sincronizados no servidor e no cliente'. O item combina as duas definições corretamente.",
+    analise: {
+      item: "Item VERDADEIRO. O apagamento por padrão do POP3 e a manutenção no servidor pelo IMAP são as definições literais do currículo.",
+      leituraIncorreta: "Leitura que induz ao erro: supor que POP3 'deixa cópia no servidor por padrão' — o currículo marca isso como exceção (há opção de manter cópia), não como comportamento padrão."
+    },
+    regra: "POP3: download + apagamento por padrão (1 dispositivo). IMAP: cópia mantida no servidor (multi-dispositivo). A 'opção de manter cópia' do POP3 é exceção, não padrão.",
+    pegadinha: "A pegadinha é a memória de que 'dá para configurar o POP3 para manter cópia' e concluir que o padrão é manter — o padrão é apagar."
+  },
+  {
+    id: "q-m3-29",
+    modulo: 3,
+    formato: "mc",
+    estilo: "vunesp",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m3-u1-t1-s3",
+    assunto: "M3.1 E-mail — campos To, Cc, Bcc",
+    contexto: "Secretaria envia um comunicado para 500 cidadãos e precisa preservar a privacidade dos endereços, sem expor os destinatários uns aos outros.",
+    enunciado: "Qual campo do e-mail deve ser utilizado para esse envio em massa?",
+    alternativas: [
+      { letra: "A", texto: "To — destinatários principais, que se veem mutuamente." },
+      { letra: "B", texto: "Cc — destinatários secundários, mas cujos endereços continuam visíveis entre todos." },
+      { letra: "C", texto: "Bcc — destinatários ocultos, sem exposição mútua dos endereços." },
+      { letra: "D", texto: "From — define o endereço do remetente do comunicado." }
+    ],
+    gabarito: "C",
+    justificativa: "O currículo define: 'Bcc (Blind Carbon Copy): destinatários ocultos; ninguém mais vê quem está em Bcc. Bcc é útil para proteger a privacidade dos destinatários em e-mails para listas grandes.' O exemplo de aplicação é exatamente esse cenário de 500 clientes. A alternativa C reproduz a definição.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: To é o destinatário principal e visível — exporia todos os endereços, o oposto do objetivo de privacidade.",
+      B: "INCORRETA. Erro conceitual: Cc mostra os destinatários uns aos outros ('Carbon Copy — destinatários secundários que veem os demais destinatários'); não protege privacidade.",
+      C: "CORRETA. Bcc oculta os destinatários e é indicado para listas grandes, conforme o currículo.",
+      D: "INCORRETA. Erro conceitual: From define o remetente, não tem relação com a visibilidade/ocultação dos destinatários."
+    },
+    regra: "To (principal, visível) × Cc (secundário, visível entre todos) × Bcc (oculto, protege privacidade em listas).",
+    pegadinha: "A pegadinha é confundir Cc com Bcc: ambos são 'cópias', mas só o Bcc oculta os endereços — a pegadinha do próprio exemplo 'erro' do currículo ('Cc e Bcc têm a mesma funcionalidade' = Errado)."
+  },
+  {
+    id: "q-m3-30",
+    modulo: 3,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m3-u1-t1-s3",
+    assunto: "M3.1 E-mail — visibilidade entre Cc e Bcc",
+    contexto: "Dois e-mails são comparados: um com destinatários no campo Cc e outro com destinatários no campo Bcc.",
+    enunciado: "Em um e-mail com destinatários no campo Cc, todos os destinatários (To e Cc) veem os endereços uns dos outros; em um e-mail com destinatários no campo Bcc, os demais destinatários não veem quem está em Bcc.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'Cc ... todos os destinatários veem os endereços uns dos outros' e 'Bcc ... os demais destinatários não veem quem está em Bcc': coincidem com 'Cc (Carbon Copy — destinatários secundários que veem os demais destinatários)' e 'Bcc (Blind Carbon Copy — destinatários ocultos; os demais não veem)'.",
+    justificativa: "O currículo descreve Cc como 'destinatários secundários que veem os demais destinatários' e Bcc como 'destinatários ocultos; os demais não veem'. As duas metades do item reproduzem essas definições.",
+    analise: {
+      item: "Item VERDADEIRO. A visibilidade mútua do Cc e a ocultação do Bcc são as definições literais do currículo.",
+      leituraIncorreta: "Leitura que induz ao erro: tratar Cc e Bcc como equivalentes — o exemplo 'erro' do currículo corrige exatamente isso ('Cc e Bcc têm a mesma funcionalidade' = Errado)."
+    },
+    regra: "Cc = visível para todos os destinatários; Bcc = oculto para os demais. Funções distintas.",
+    pegadinha: "A armadilha é a suposição de equivalência entre Cc e Bcc; a diferença está na visibilidade dos endereços."
+  },
+  {
+    id: "q-m3-31",
+    modulo: 3,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u1-t2-s1",
+    assunto: "M3.1 E-mail — spam, phishing e spear phishing",
+    contexto: "Usuário recebe um e-mail que se passa pelo banco pedindo a senha da conta e, em outro momento, uma propaganda de loja que não solicitou.",
+    enunciado: "Sobre spam e phishing, assinale a alternativa correta, conforme o currículo.",
+    alternativas: [
+      { letra: "A", texto: "Todo spam é phishing, pois ambos têm a intenção de roubar credenciais do destinatário." },
+      { letra: "B", texto: "Phishing é a fraude que se passa por entidade confiável para roubar dados; spam é e-mail não solicitado, e nem todo spam é phishing." },
+      { letra: "C", texto: "Spam e phishing são sinônimos técnicos e descrevem o mesmo tipo de e-mail." },
+      { letra: "D", texto: "Spear phishing é spam genérico enviado em massa, sem direcionamento a pessoa ou organização específica." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define: 'Spam: e-mails não solicitados, geralmente comerciais ou maliciosos' e 'Phishing: e-mails fraudulentos que se passam por entidades confiáveis (bancos, empresas) para roubar credenciais ou dados'. O exemplo 'erro' corrige: 'Todo phishing pode ser spam, mas nem todo spam é phishing.' E 'Spear phishing: phishing direcionado a uma pessoa ou organização específica.' A alternativa B reproduz essas definições.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: inverte a relação — o currículo diz 'nem todo spam é phishing'; spam é não solicitado, sem necessariamente intenção de roubo.",
+      B: "CORRETA. Define phishing (fraude que se passa por entidade confiável) e spam (não solicitado) e a relação 'nem todo spam é phishing', conforme o currículo.",
+      C: "INCORRETA. Erro conceitual: não são sinônimos — têm propósitos distintos (spam = não solicitado; phishing = fraude para roubo de dados).",
+      D: "INCORRETA. Erro conceitual: inverte a definição de spear phishing, que é justamente o direcionado (a pessoa/organização específica), não o genérico em massa."
+    },
+    regra: "Spam (não solicitado) ⊃ phishing (fraude para roubo); spear phishing = phishing direcionado. 'Todo phishing pode ser spam, mas nem todo spam é phishing.'",
+    pegadinha: "A pegadinha é a generalização 'todo spam é phishing' (A) e a inversão de spear phishing (D) — ambos opostos ao que o currículo afirma."
+  },
+  {
+    id: "q-m3-32",
+    modulo: 3,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "m3-u1-t2-s1",
+    assunto: "M3.1 E-mail — SPF, DKIM e DMARC contra spoofing",
+    contexto: "Equipe de segurança configurando a autenticação de e-mail do domínio do órgão para combater a falsificação de remetente (spoofing).",
+    enunciado: "Sobre SPF, DKIM e DMARC, assinale a alternativa que descreve corretamente as funções de cada um, conforme o currículo.",
+    alternativas: [
+      { letra: "A", texto: "SPF assina digitalmente a mensagem com criptografia simétrica; DKIM lista os servidores autorizados a enviar; DMARC criptografa o corpo do e-mail." },
+      { letra: "B", texto: "SPF define quais servidores podem enviar e-mails para o domínio; DKIM assina digitalmente a mensagem para garantir autenticidade; DMARC define a política para falhas de SPF/DKIM (rejeitar, quarentenar, aceitar)." },
+      { letra: "C", texto: "Basta o DMARC estar ativo; SPF e DKIM são desnecessários porque o DMARC já autentica o servidor remetente." },
+      { letra: "D", texto: "DKIM usa criptografia simétrica e compartilha a chave privada com o destinatário para que ele verifique a mensagem." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define: 'SPF (Sender Policy Framework): define quais servidores podem enviar e-mails para o domínio. DKIM (DomainKeys Identified Mail): assina digitalmente o e-mail para garantir autenticidade. DMARC (Domain-based Message Authentication, Reporting & Conformance) — previne spoofing ... define política para falhas de SPF/DKIM (rejeitar, quarentenar, aceitar).' O exercício do currículo confirma que 'DKIM usa criptografia assimétrica para assinar e-mails' (Certo). A alternativa B reproduz as três funções.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: troca as funções — listar servidores é SPF (não DKIM), assinar é DKIM (não SPF), e DMARC define política de falhas, não 'criptografa o corpo'.",
+      B: "CORRETA. É a única que associa cada protocolo à sua função conforme o currículo (SPF = servidores autorizados; DKIM = assinatura de autenticidade; DMARC = política para falhas).",
+      C: "INCORRETA. Erro conceitual: invenção — o currículo apresenta SPF, DKIM e DMARC como técnicas complementares; não afirma que o DMARC torna os outros desnecessários.",
+      D: "INCORRETA. Erro conceitual duplo: DKIM usa criptografia ASSIMÉTRICA (exercício do currículo), e nunca compartilha a chave privada — a verificação usa a chave pública publicada no domínio."
+    },
+    regra: "SPF = lista de servidores autorizados a enviar pelo domínio; DKIM = assinatura digital (criptografia assimétrica) de autenticidade; DMARC = política de tratamento das falhas de SPF/DKIM (rejeitar/quarentenar/aceitar).",
+    pegadinha: "A pegadinha é a troca de funções (A) e o erro sobre DKIM como 'simétrica com chave privada compartilhada' (D) — a assinatura é assimétrica e a chave privada nunca sai do domínio."
+  },
+  {
+    id: "q-m3-33",
+    modulo: 3,
+    formato: "mc",
+    estilo: "vunesp",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u2-t1-s1",
+    assunto: "M3.2 Calendários — níveis de permissão",
+    contexto: "Coordenador compartilha a agenda de uma sala de reuniões e precisa que um assistente possa alterar os eventos agendados sem assumir a propriedade do calendário.",
+    enunciado: "Qual nível de permissão deve ser concedido ao assistente, conforme os tipos de permissão do currículo?",
+    alternativas: [
+      { letra: "A", texto: "Proprietário — concede controle total, incluindo a exclusão do calendário." },
+      { letra: "B", texto: "Editor — permite modificar os eventos do calendário." },
+      { letra: "C", texto: "Comentar — permite apenas comentar, sem modificar eventos." },
+      { letra: "D", texto: "Somente visualização — permite apenas ver os eventos, sem modificá-los." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo lista os tipos de permissão: 'proprietário (controle total), editor (pode modificar), comentar, somente visualização'. O cenário pede 'modificar eventos sem assumir a propriedade' — exatamente a definição de editor. O exercício do currículo é literal: 'Qual permissão permite modificar um evento?' com resposta B (Editor).",
+    analise: {
+      A: "INCORRETA. Erro conceitual: proprietário é controle TOTAL (inclui exclusão) — vai além do necessário e transfere a propriedade, que o cenário quer preservar.",
+      B: "CORRETA. Editor é a permissão que 'pode modificar' eventos, conforme o currículo — atende ao cenário sem conceder propriedade.",
+      C: "INCORRETA. Erro conceitual: 'comentar' permite apenas comentar, não modificar eventos — não atende ao requisito de alteração.",
+      D: "INCORRETA. Erro conceitual: 'somente visualização' é leitura pura; o assistente não poderia alterar nada."
+    },
+    regra: "Permissões de calendário: proprietário (controle total) > editor (modifica) > comentar > somente visualização (leitura).",
+    pegadinha: "A pegadinha é dar poder demais (Proprietário) ou de menos (Comentar/Visualização): o termo-chave do cenário é 'modificar sem assumir a propriedade' = Editor."
+  },
+  {
+    id: "q-m3-34",
+    modulo: 3,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m3-u2-t1-s1",
+    assunto: "M3.2 Calendários — convites e fuso horário",
+    contexto: "Organizador monta um convite de reunião com participantes localizados em três fusos horários diferentes.",
+    enunciado: "Um convite de reunião pode conter participantes obrigatórios e opcionais, e os calendários com suporte a fuso horário convertem automaticamente o horário do evento para o fuso de cada participante.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'participantes obrigatórios e opcionais' e 'convertem automaticamente o horário do evento para o fuso de cada participante': coincidem com 'participantes (obrigatórios, opcionais)' e com o exemplo de aplicação 'o sistema converte automaticamente para o fuso de cada participante'.",
+    justificativa: "O currículo lista entre os elementos do convite 'participantes (obrigatórios, opcionais)' e o exercício confirma '(C/E) Convites de reunião podem ter participantes obrigatórios e opcionais' → Certo. O exemplo de aplicação sobre fusos afirma: 'Usar calendários que suportam fuso horário ... O sistema converte automaticamente para o fuso de cada participante.' O item combina os dois pontos.",
+    analise: {
+      item: "Item VERDADEIRO. Participantes obrigatórios/opcionais e a conversão automática de fuso são afirmações diretas do currículo.",
+      leituraIncorreta: "Leitura que induz ao erro: achar que cada participante precisa anotar manualmente o horário alheio — o currículo diz que a conversão é automática quando o calendário suporta fuso."
+    },
+    regra: "Convite = título, data/hora (com fuso), local/link, participantes obrigatórios e opcionais, pauta, anexos. Calendários com fuso convertem automaticamente por participante.",
+    pegadinha: "Item simples por design; o risco é duvidar da conversão automática de fuso, que é justamente a solução do exemplo de aplicação do currículo."
+  },
+  {
+    id: "q-m3-35",
+    modulo: 3,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u2-t2-s1",
+    assunto: "M3.2 Reuniões — Teams, Meet e Zoom (escolha por contexto)",
+    contexto: "Órgão público que já adota o Microsoft 365 precisa escolher uma plataforma de reuniões integradas à suíte já contratada.",
+    enunciado: "Qual plataforma é a mais adequada para esse órgão e qual a razão correta, conforme o currículo?",
+    alternativas: [
+      { letra: "A", texto: "Google Meet, porque é a única plataforma que funciona diretamente no navegador." },
+      { letra: "B", texto: "Microsoft Teams, pela integração nativa com o Microsoft 365 (Outlook, SharePoint, OneNote etc.)." },
+      { letra: "C", texto: "Zoom, porque é a única das três que oferece gravação da reunião." },
+      { letra: "D", texto: "Google Meet, porque se destaca por webinars avançados e salas simultâneas (breakout rooms)." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo afirma: 'Microsoft Teams: integrado ao Microsoft 365, ideal para organizações que já usam M365' e o exemplo de aplicação responde: 'Microsoft Teams — integração nativa com Outlook, SharePoint, OneNote e outros serviços M365.' A alternativa B reproduz essa razão. As demais atribuem a outras plataformas características que o currículo reserva ao Zoom (webinars/breakout) ou que são comuns a todas (gravação, navegador).",
+    analise: {
+      A: "INCORRETA. Erro conceitual: funcionar no navegador sem instalação é a característica do Meet, mas não é exclusivo (a escolha aqui é por integração com M365) — e a justificativa 'única' é falsa.",
+      B: "CORRETA. Teams é a plataforma integrada ao Microsoft 365, conforme o currículo — atende exatamente ao cenário de órgão que já usa M365.",
+      C: "INCORRETA. Erro conceitual: gravação é recurso COMUM às três ('Todos oferecem: compartilhamento de tela, gravação, chat, levantar mão, reações'); não é diferencial do Zoom.",
+      D: "INCORRETA. Erro conceitual: webinars avançados e breakout rooms são destaque do ZOOM, não do Meet — troca de plataforma."
+    },
+    regra: "Teams = integração M365 / colaboração contínua; Meet = simplicidade, navegador (Google Workspace); Zoom = webinars, breakout rooms, grandes eventos. Gravação/compartilhamento/chat são comuns às três.",
+    pegadinha: "A pegadinha é confundir diferenciais: 'webinars/breakout' é Zoom (não Meet), e 'gravação' é comum a todas — o critério do cenário é a integração com M365."
+  },
+  {
+    id: "q-m3-36",
+    modulo: 3,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "m3-u2-t2-s1",
+    assunto: "M3.2 Reuniões — diferenciais de Teams, Meet e Zoom",
+    contexto: "Comparação de recursos para decidir qual plataforma adotar em três cenários distintos (colaboração contínua, simplicidade e grandes eventos).",
+    enunciado: "O Google Meet é a plataforma que se destaca por recursos avançados de webinars e salas simultâneas (breakout rooms), enquanto o Zoom se diferencia por funcionar no navegador sem exigir instalação de software.",
+    alternativas: null,
+    gabarito: "errado",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'Google Meet ... se destaca por ... webinars e salas simultâneas (breakout rooms)' e 'Zoom ... funciona no navegador sem exigir instalação': o currículo reserva breakout rooms/webinars ao ZOOM e o 'não requer instalação (navegador)' ao MEET — as atribuições estão trocadas.",
+    justificativa: "O currículo define: 'Zoom: ... recursos avançados de webinars, salas simultâneas (breakout rooms)' e 'Google Meet: ... não requer instalação (navegador)'. O item inverte as duas características, atribuindo os diferenciais de forma cruzada.",
+    analise: {
+      item: "Item FALSO. As duas atribuições estão invertidas: breakout rooms/webinars são do Zoom; funcionamento no navegador sem instalação é do Meet.",
+      leituraIncorreta: "Leitura que induz ao erro: memorizar 'Meet = simples/no navegador' e 'Zoom = recursos avançados' mas trocá-las ao responder; o exemplo 'erro' do currículo já corrige 'Google Meet requer instalação de software' = Errado."
+    },
+    regra: "Diferenciais: Meet = simplicidade/navegador (sem instalação); Zoom = webinars e breakout rooms; Teams = integração M365. Não inverter as atribuições.",
+    pegadinha: "Item de duas metades trocadas: cada característica pertence à plataforma oposta — estilo CESPE que pune a meia-verdade por troca de sujeito."
+  },
+  {
+    id: "q-m3-37",
+    modulo: 3,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u2-t2-s2",
+    assunto: "M3.2 Reuniões — lobby e controle de participantes",
+    contexto: "Reunião sensível com participantes externos; o anfitrião quer controlar quem entra e impedir a ação de intrusos.",
+    enunciado: "Sobre o controle de participantes em reuniões online, assinale a alternativa correta, conforme o currículo.",
+    alternativas: [
+      { letra: "A", texto: "Qualquer participante pode remover outro participante e aprovar a entrada pela sala de espera (lobby)." },
+      { letra: "B", texto: "O lobby é a sala de espera em que os participantes aguardam a aprovação do anfitrião, e somente o anfitrião pode remover participantes." },
+      { letra: "C", texto: "O anfitrião não pode bloquear o vídeo ou o microfone dos participantes durante a reunião." },
+      { letra: "D", texto: "A entrada de participantes não pode ser impedida após o início da reunião." }
+    ],
+    gabarito: "B",
+    justificativa: "O currículo define: 'Lobby (sala de espera): participantes aguardam aprovação do anfitrião antes de entrar' e 'Remover participante: anfitrião pode expulsar participantes'. O exercício do currículo confirma: 'Quem pode remover um participante de uma reunião?' → B (O anfitrião). A alternativa B reproduz essas definições.",
+    analise: {
+      A: "INCORRETA. Erro conceitual: remover participantes e aprovar pelo lobby são poderes do ANFITRIÃO, não de qualquer participante.",
+      B: "CORRETA. Lobby = sala de espera com aprovação do anfitrião; remover participantes é função do anfitrião — conforme o currículo.",
+      C: "INCORRETA. Erro conceitual: o currículo afirma que 'Bloquear vídeo/microfone: anfitrião pode desativar dispositivos de participantes' — o item nega um recurso existente.",
+      D: "INCORRETA. Erro conceitual: o exemplo de aplicação orienta 'desativar a entrada de participantes após o início' — é possível impedir a entrada, o oposto do afirmado."
+    },
+    regra: "Controle do anfitrião: lobby (aprovação prévia), remover participantes, bloquear vídeo/microfone, controlar quem compartilha, senha, impedir entrada após início.",
+    pegadinha: "A pegadinha é atribuir ao 'qualquer participante' (A) poderes exclusivos do anfitrião; C e D negam recursos que o currículo lista explicitamente."
+  },
+  {
+    id: "q-m3-38",
+    modulo: 3,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "m3-u2-t2-s2",
+    assunto: "M3.2 Reuniões — gravação, proteção e consentimento",
+    contexto: "Política interna de reuniões online do órgão, que grava sessões com participação de servidores e cidadãos.",
+    enunciado: "O anfitrião pode gravar a reunião (vídeo, áudio e chat) e combinar medidas de proteção — senha da reunião, lobby e bloqueio do vídeo/microfone dos participantes —, mas a gravação de comunicações com dados pessoais pode exigir o consentimento dos participantes, conforme a legislação aplicável.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'O anfitrião pode gravar a reunião (vídeo, áudio e chat)' e 'pode combinar medidas de proteção — senha, lobby, bloqueio de vídeo/microfone' e 'a gravação ... com dados pessoais pode exigir o consentimento': todos coincidem com o conteúdo e com o exemplo 'erro' do currículo.",
+    justificativa: "O currículo afirma: 'Gravação: anfitrião pode gravar a reunião (vídeo, áudio, chat)' e lista medidas de proteção (senha, lobby, restringir compartilhamento, bloquear vídeo/microfone). O exemplo 'erro' corrige a ideia de que 'a gravação não requer consentimento': 'Depende da legislação. No Brasil, a LGPD e o Marco Civil podem exigir consentimento para gravação de comunicações. Sempre informar os participantes e obter consentimento quando aplicável.' A menção à legislação é genérica, como permite o currículo.",
+    analise: {
+      item: "Item VERDADEIRO. Gravação pelo anfitrião + medidas de proteção + a ressalva de que a gravação com dados pessoais pode exigir consentimento são afirmações do currículo.",
+      leituraIncorreta: "Leitura que induz ao erro: crer que 'o anfitrião pode gravar' implica 'gravar sem jamais informar' — o exemplo 'erro' do currículo corrige que a LGPD/Marco Civil podem exigir consentimento."
+    },
+    regra: "Anfitrião grava (vídeo/áudio/chat) e aplica proteções (senha, lobby, bloqueio); gravação com dados pessoais pode exigir consentimento (LGPD/Marco Civil) — informar sempre os participantes.",
+    pegadinha: "A armadilha é o absolutismo 'o anfitrião decide tudo sobre a gravação': a competência técnica de gravar não elimina a obrigação de consentimento quando há dados pessoais."
+  },
+  {
+    id: "q-m3-39",
+    modulo: 3,
+    formato: "mc",
+    estilo: "vunesp",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u2-t3-s1",
+    assunto: "M3.2 Reuniões — elementos de uma política de gravação",
+    contexto: "Órgão está redigindo uma política de gravação de reuniões online e precisa separar o que é essencial do que é acessório.",
+    enunciado: "Dentre os elementos abaixo, assinale aquele que NÃO é essencial em uma política de gravação, conforme o currículo.",
+    alternativas: [
+      { letra: "A", texto: "Prazo de retenção das gravações." },
+      { letra: "B", texto: "Proteção das gravações sensíveis por criptografia." },
+      { letra: "C", texto: "Número máximo de participantes por reunião." },
+      { letra: "D", texto: "Consentimento/informação dos participantes sobre a gravação." }
+    ],
+    gabarito: "C",
+    justificativa: "O currículo lista os elementos de uma política de gravação: 'quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter' e, no exemplo, 'quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem tem acesso, regras de compartilhamento, proteção (criptografia), e procedimento para exclusão', além do consentimento. O exercício do currículo é literal: 'Qual elemento NÃO é essencial em uma política de gravação?' → C (Número máximo de participantes).",
+    analise: {
+      A: "INCORRETA (para o enunciado). Erro conceitual: prazo de retenção ('quanto tempo manter') É essencial — está na lista do currículo.",
+      B: "INCORRETA (para o enunciado). Erro conceitual: proteção por criptografia ('criptografar gravações sensíveis') É essencial — consta na política.",
+      C: "CORRETA. Número máximo de participantes não integra a política de gravação — é o elemento NÃO essencial, conforme o exercício do currículo.",
+      D: "INCORRETA (para o enunciado). Erro conceitual: consentimento/informação dos participantes É essencial quando há dados pessoais — o currículo o exige."
+    },
+    regra: "Política de gravação: quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem acessa, compartilhamento, criptografia, exclusão e consentimento. Limite de participantes não é elemento da política.",
+    pegadinha: "A pegadinha é a inversão do comando ('NÃO é essencial'): três alternativas são itens reais da política; só o número máximo de participantes é alheio a ela."
+  },
+  {
+    id: "q-m3-40",
+    modulo: 3,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "m3-u2-t3-s1",
+    assunto: "M3.2 Reuniões — gravação com dados pessoais e proteção",
+    contexto: "Reunião gravada pelo órgão contém dados pessoais dos participantes (nomes, falas, eventual identificação de cargos).",
+    enunciado: "Quando uma gravação de reunião contém dados pessoais dos participantes, a política deve prever consentimento ou informação dos participantes, definição de finalidade, prazo de retenção e segurança no armazenamento, assegurando aos titulares o direito de acesso e exclusão.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a lista 'consentimento/informação, finalidade, prazo de retenção, segurança no armazenamento, direito de acesso e exclusão': coincide com o exemplo de aplicação do currículo sobre gravação com dados pessoais.",
+    justificativa: "O exemplo de aplicação do currículo responde, para 'reunião gravada contém dados pessoais': 'Consentimento dos participantes para gravação, definição de finalidade, prazo de retenção, segurança no armazenamento (criptografia), e direito de acesso e exclusão pelos titulares.' O item reproduz esses elementos. A menção à proteção de dados é genérica, sem número de artigo.",
+    analise: {
+      item: "Item VERDADEIRO. Consentimento/informação, finalidade, retenção, segurança (criptografia) e direitos de acesso/exclusão são exatamente os elementos do exemplo de aplicação.",
+      leituraIncorreta: "Leitura que induz ao erro: tratar a gravação como mero arquivo interno sem dados pessoais — contendo dados pessoais, ela cai nas práticas de proteção e nos direitos do titular descritas no currículo."
+    },
+    regra: "Gravação com dados pessoais exige: consentimento/informação, finalidade, prazo de retenção, segurança (criptografia) e respeito aos direitos de acesso e exclusão dos titulares.",
+    pegadinha: "Item simples por design; o risco é esquecer que uma gravação de reunião é tratamento de dados pessoais e, como tal, carrega finalidade, retenção e direitos do titular."
+  },
 ];
 
 /* ----------------------------------------------------------------------------

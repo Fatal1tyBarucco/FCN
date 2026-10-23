@@ -253,5 +253,8 @@ document.addEventListener('DOMContentLoaded', () => {
     registrarVisita(topicoId);
   });
 
+  /* API pública mínima para integração (ex.: busca global): exibe o conteúdo de um tópico/subtópico. */
+  window.apostilaMostrarConteudo = mostrarConteudo;
+
   console.log('Navegação inicializada — módulos carregados:', chaves);
 });

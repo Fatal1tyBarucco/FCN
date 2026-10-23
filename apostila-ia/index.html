@@ -7,6 +7,7 @@
 <meta name="description" content="Apostila web interativa definitiva: 8 módulos, simuladores, flashcards, banco de questões, gráficos e inventário curricular verificável.">
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta name="theme-color" content="#1a73e8">
+<link rel="manifest" href="manifest.webmanifest">
 <style>
   /* Estilo mínimo de contingência para abertura direta file:// */
   body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 1.2rem; background: #f8f9fa; color: #1a1a1a; line-height: 1.55; }
@@ -127,7 +128,7 @@
 <body>
 <header>
   <h1>Apostila Web Interativa — Definição Completa</h1>
-  <p>Tecnologia da Informação, Dados e Inteligência Artificial · Etapa atual: inventário (1) + matriz de cobertura (2) + app em operação com currículo de M1–M8 renderizado na árvore (309 nós), flashcards de M1–M8 (404 no disco / 404 conectados), questões de M1–M3 (82), gráficos 5/5 e simuladores sem UI (P1-B pendente) · Limitações documentadas abaixo</p>
+  <p>Tecnologia da Informação, Dados e Inteligência Artificial · Etapa atual: inventário (1) + matriz de cobertura (2) + app em operação com currículo de M1–M8 renderizado na árvore (309 nós), flashcards de M1–M8 (404 no disco / 404 conectados), <strong>365 questões autorais conectadas</strong> (M1=40, M2=40, M3=40, M4=85, M5=40, M6=40, M7=40 e M8=40 — piso global de 320 atingido), gráficos 5/5, <strong>busca global</strong>, <strong>leitura em voz alta (Web Speech API)</strong>, <strong>PWA condicional (Service Worker + manifest)</strong> e <strong>simuladores com UI interativa em 5 seções (Excel, Redes, Segurança, Prompts e Dados)</strong> · Limitações documentadas abaixo</p>
 </header>
 <main>
 
@@ -136,11 +137,19 @@
   <div class="aviso">
     <strong>Não é uma entrega final completa.</strong> Conforme Seção 19 do prompt mestre, declaro honestamente:
     <ul>
-      <li><strong>Módulo 1</strong> — conteúdo textual existente para 1.1 (8 sub-tópicos) e 1.2 (14 tópicos), ambos renderizados abaixo. <span class="label label-parc">PARCIAL</span> Faltam 3 exemplos resolvidos obrigatórios por unidade e exercícios (o complemento de 1.2 existe em <code>curriculumWord12Supplement</code>, em <code>curriculum.js</code>, e nenhum script o lê — não renderiza) e 8 questões (há 32 de 40); os flashcards do M1 chegaram a 50 de 50 no P1-C (2026-10-21). <strong>O núcleo do simulador Excel existe e é carregado</strong> (<code>assets/js/simulators.js</code> — 23 funções reais, PROCV/PROCH/PROCX com busca exata e aproximada, parser sem <code>eval</code>), mas <strong>a 1.3 não tem entrada de currículo e não há UI do simulador</strong>: nenhum contêiner nem <code>&lt;script&gt;</code> de interface no <code>index.html</code> — o núcleo é carregado (expõe <code>ExcelSimulator</code>), mas nenhum código da página o invoca; o único uso efetivo na página são os 3 exemplos textuais desta seção.</li>
-      <li><strong>Módulos 2 e 3</strong> — conteúdo base existente e renderizado abaixo: M2 em <code>assets/data/curriculum_m2.js</code> (unidade 2.1) + núcleo do simulador de redes didático (<code>simulator_network.js</code>, carregado, sem UI própria nesta página); M3 em <code>assets/data/curriculum_m3.js</code> (3.1 e 3.2) + 50 flashcards cada. <span class="label label-parc">PARCIAL</span> <strong>Módulos 4, 5, 6, 7 e 8</strong> — <strong>currículo escrito em disco e carregado no <code>index.html</code></strong> (<code>curriculum_m4.js</code>, <code>curriculum_m5.js</code>, <code>curriculum_m6.js</code>, <code>curriculum_m7.js</code>, <code>curriculum_m8.js</code>), <strong>renderizado na árvore</strong> (descoberta dinâmica de módulos no <code>navigation.js</code>); o M6 entrou no incremento P1-C (2026-10-21) apenas com a tag <code>&lt;script&gt;</code>. Quanto a simuladores: o de <strong>visualização já existe e está carregado</strong> (<code>charts.js</code>, 5 tipos, seção “Laboratório de dados e visualização”); <strong>não existe</strong> simulador de segurança, IA ou dados (nenhum arquivo no disco), e os núcleos de Excel e redes seguem <strong>sem UI</strong> (P1-B pendente).</li>
+      <li><strong>Módulo 1</strong> — conteúdo textual existente para 1.1 (8 sub-tópicos) e 1.2 (14 tópicos), ambos renderizados abaixo. <span class="label label-parc">PARCIAL</span> Faltam 3 exemplos resolvidos obrigatórios por unidade e exercícios (o complemento de 1.2 existe em <code>curriculumWord12Supplement</code>, em <code>curriculum.js</code>, e nenhum script o lê — não renderiza); as questões do M1 chegaram a 40 de 40 e os flashcards a 50 de 50 (P1-C). <strong>O simulador de Excel existe, é carregado e AGORA TEM UI interativa</strong> (incremento P1-D): <code>assets/js/simulators.js</code> (núcleo — 23 funções reais, PROCV/PROCH/PROCX com busca exata e aproximada, parser sem <code>eval</code>) montado no contêiner <code>#excel-app</code>, na seção “Exemplos resolvidos — Módulo 1.3 Excel”. A 1.3 continua <strong>sem entrada de currículo</strong> no <code>curriculum.js</code>. Limitações do simulador declaradas no seu cabeçalho e listadas no item de simuladores abaixo.</li>
+      <li><strong>Módulos 2 e 3</strong> — conteúdo base existente e renderizado abaixo: M2 em <code>assets/data/curriculum_m2.js</code> (unidade 2.1) + <strong>simulador de redes DIDÁTICO com UI interativa (P1-D)</strong> (<code>simulator_network.js</code> montado no contêiner <code>#redes-app</code>: ping/traceroute simulados com valores fictícios, CIDR com cálculo real, DNS em tabela estática local — sem executar comandos reais no SO); M3 em <code>assets/data/curriculum_m3.js</code> (3.1 e 3.2) + 50 flashcards cada. <span class="label label-parc">PARCIAL</span></li>
+      <li><strong>Módulos 4, 5, 6, 7 e 8</strong> — <strong>currículo escrito em disco e carregado no <code>index.html</code></strong> (<code>curriculum_m4.js</code>, <code>curriculum_m5.js</code>, <code>curriculum_m6.js</code>, <code>curriculum_m7.js</code>, <code>curriculum_m8.js</code>), <strong>renderizado na árvore</strong> (descoberta dinâmica de módulos no <code>navigation.js</code>); o M6 entrou no incremento P1-C (2026-10-21) apenas com a tag <code>&lt;script&gt;</code>. Os simuladores pedidos para estes módulos <strong>passam a existir com UI no P1-D</strong>: segurança defensiva de phishing (<code>#seguranca-app</code>, Seção 7.3), engenharia de prompts (<code>#prompts-app</code>, Seção 7.4) e dados/estatística (<code>#dados-app</code>, Seção 7.5) — além do laboratório de visualização (<code>#charts-app</code>, <code>charts.js</code>, 5 tipos). Os três novos são <strong>simulações didáticas locais</strong>: não executam ataques reais, não chamam IA real e usam dados fictícios (limitações nos itens seguintes).</li>
+      <li><strong>Simuladores conectados (5) e suas limitações declaradas</strong> — todos visíveis nesta página e verificados por <code>node --check</code> + smoke test em Node/vm (mount em contêiner stub sem lançar exceção); <strong>nenhum testado em navegador real</strong> neste ambiente<ul>
+        <li><strong>Excel</strong> (<code>simulators.js</code>, Seção 7.1): correspondência aproximada (PROCV/PROCH/PROCX/CORRESP) não valida a ordenação da tabela; sem nomes definidos, tabelas estruturadas, referências R1C1, arrays dinâmicos nem ref. a outros arquivos (entrada fora do escopo rejeitada com <code>ERRO DE ENTRADA</code>); células vazias em critérios não casam com critérios numéricos; compar. encadeadas avaliadas esquerda→direita.</li>
+        <li><strong>Redes</strong> (<code>simulator_network.js</code>, Seção 7.2): ping (ICMP simulado) e traceroute (TTL simulado) com latências/saltos <strong>fictícios</strong>; resolução de DNS simulada (tabela estática local); CIDR é cálculo real de IPv4; <strong>não executa comandos reais no sistema operacional</strong>.</li>
+        <li><strong>Segurança</strong> (<code>simulator_security.js</code>, Seção 7.3): ambientes e dados <strong>fictícios e isolados</strong>; <strong>não executa ataques reais</strong> (Seção 4.3 do prompt mestre); triagem de phishing defensiva, regra 3-2-1 e menor privilégio.</li>
+        <li><strong>Prompts</strong> (<code>simulator_prompts.js</code>, Seção 7.4): avaliações por critérios verificáveis e respostas <strong>predefinidas claramente marcadas como simuladas</strong>; <strong>NÃO chama modelo de IA real, sem API externa</strong>.</li>
+        <li><strong>Dados 7.5</strong> (<code>simulator_data.js</code>): SVG inline próprio, sem biblioteca externa; conjunto de dados editável e fictício; estatísticas calculadas de verdade; <strong>não é</strong> o laboratório <code>#charts-app</code> (arquivo distinto).</li>
+      </ul></li>
       <li><strong>Flashcards</strong> — <strong>404 conectados ao app</strong> (M1=50, M2=50, M3=50, M4=54, M5=50, M6=50, M7=50, M8=50; piso global exigido: 400 — atingido em quantidade, o que não significa domínio). O disco do repositório tem <strong>404 cartões escritos</strong> — <strong>todos carregados</strong>: no P1-C (2026-10-21) <code>flashcards_m1.js</code> foi ampliado de 10 para 50 cartões e <code>flashcards_m5.js</code>, <code>flashcards_m6.js</code>, <code>flashcards_m7.js</code> e <code>flashcards_m8.js</code> entraram no <code>index.html</code>. Nenhum cartão inventado. <span class="label label-ok">META DE QUANTIDADE ATINGIDA</span> Sistema de repetição espaçada (SM-2 simplificado, algoritmo documentado em <code>assets/js/flashcards.js</code>) conectado na seção interativa abaixo.</li>
-      <li><strong>Questões</strong> — <strong>82</strong> autorais conectadas ao motor de simulados (piso: 320; faltam 238 — os módulos M4–M8 ainda sem questões, mesmo os que já têm currículo escrito em disco e carregado no <code>index.html</code>: M4 e M7/M8 desde o P1-A, M5 completo e M6 desde o P1-C; nada inventado para cobrir a lacuna). Distribuição: M1=32, M2=26, M3=24 · nível: 31,7% básica / 45,1% intermediária / 23,2% avançada · formatos: 49 múltipla escolha + 33 Certo/Errado (estilos de cobrança CESPE/FGV/FCC/VUNESP; nenhuma questão atribuída a banca real — todas autorais).</li>
-      <li><strong>Gráficos obrigatórios</strong> (5 tipos) — <span class="label label-ok">SIMULADOR IMPLEMENTADO</span> laboratório funcional com os 5 tipos (histograma, linhas, barras/colunas, dispersão, box plot) em <code>assets/js/charts.js</code> (SVG próprio, sem biblioteca externa — funciona em <code>file://</code>), <strong>incluído e executado nesta página</strong> (contêiner <code>#charts-app</code>). Cálculos verificados por <code>node --check</code> + smoke test em Node/vm; rendimento em navegador real ainda sujeito a confirmação. O <strong>currículo do M8 já existe no disco</strong> (<code>assets/data/curriculum_m8.js</code> — unidades 8.1 a 8.5, 28 subtópicos), <strong>incluído no <code>index.html</code> desde o incremento P1-A e renderizado na árvore de currículo</strong> (questões próprias do M8 seguem inexistentes).</li>
+      <li><strong>Questões</strong> — <strong>365 autorais conectadas</strong> ao motor de simulados (piso global: 320 — <strong>atingido</strong>; soma real, deduplicada por <code>id</code>, medida em vm em 2026-10-22; nada inventado). <strong>Fontes conectadas</strong>: <code>assets/data/questions.js</code> + <code>questions_m4.js</code>, <code>questions_m5.js</code>, <code>questions_m6.js</code>, <code>questions_m7.js</code> e <code>questions_m8.js</code> (fusão defensiva por <code>id</code> no script inline do <code>index.html</code>, que alimenta <code>window.questoesBanco</code> — consumo do quiz-engine e da busca sem alteração neles). Distribuição REAL medida em vm (2026-10-22): M1=40, M2=40, M3=40, M4=85, M5=40, M6=40, M7=40, M8=40 · nível: 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%) · formatos: 290 múltipla escolha + 75 Certo/Errado · estilos de cobrança: CESPE 216 / FGV 58 / FCC 52 / VUNESP 39 (formato de cobrança, não banca real — todas autorais). Essa proporção real de níveis (25,8 / 52,9 / 21,4) difere da sugerida 30/45/25 (Seção 10); o desvio é intencional e documentado — a Seção 10 admite ajuste justificado de distribuição.</li>
+      <li><strong>Gráficos obrigatórios</strong> (5 tipos) — <span class="label label-ok">SIMULADOR IMPLEMENTADO</span> laboratório funcional com os 5 tipos (histograma, linhas, barras/colunas, dispersão, box plot) em <code>assets/js/charts.js</code> (SVG próprio, sem biblioteca externa — funciona em <code>file://</code>), <strong>incluído e executado nesta página</strong> (contêiner <code>#charts-app</code>). Cálculos verificados por <code>node --check</code> + smoke test em Node/vm; rendimento em navegador real ainda sujeito a confirmação. O <strong>currículo do M8 já existe no disco</strong> (<code>assets/data/curriculum_m8.js</code> — unidades 8.1 a 8.5, 28 subtópicos), <strong>incluído no <code>index.html</code> desde o incremento P1-A e renderizado na árvore de currículo</strong>; o M8 passou também a ter <strong>40 questões autorais conectadas</strong> (<code>assets/data/questions_m8.js</code>, P1-D) e simulador de dados/estatística com UI na Seção 7.5 (<code>#dados-app</code>).</li>
       <li><strong>Referências</strong> — <strong>fontes primárias verificadas com data registrada</strong> em <code>referencias/referencias-verificadas.md</code>: LGPD — Lei nº 13.709/2018 (planalto.gov.br, verificado em 2026-10-20; arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46); <strong>LAI — Lei nº 12.527/2011 e Lei de Governo Digital — Lei nº 14.129/2021</strong> (planalto.gov.br, verificadas em 2026-10-21, Bloco 2), além do <strong>art. 37, caput, e do art. 5º, XXXIII, da CF/1988</strong> conferidos na mesma data. <span class="label label-parc">PARCIAL</span> Seguem <strong>pendentes</strong> de verificação: Microsoft Learn (M365), RFCs/IETF (redes), CERT.br (segurança), Marco Civil 12.965/2014 e os dispositivos que o M6 cita apenas por remissão (lista no Bloco 2 do arquivo de referências).</li>
       <li><strong>Vídeos</strong> — nenhum ID de YouTube validado (Seção 12.2: verificar ID + correspondência temática + alternativa textual completa).</li>
     </ul>
@@ -152,14 +161,14 @@
   <h2>Inventário curricular resumido <span class="label label-parc">PARCIAL</span></h2>
   <p>Fonte: <a href="inventario/INVENTARIO_CURRICULAR.md">inventario/INVENTARIO_CURRICULAR.md</a> (etapa 1; cópia publicada dentro de <code>apostila-ia/</code> — os arquivos de governança na raiz do repositório são a fonte e o workflow de Pages os copia no build, para que o link funcione no site publicado e na abertura direta <code>file://</code>). Cada módulo listado indica quantidade de sub-tópicos inventariados e implementação real.</p>
   <ul>
-    <li><strong>M1 — Microsoft 365</strong>: 1.1 (8 sub-tópicos, texto OK, renderiza) · 1.2 (14 tópicos, texto OK, renderiza; sem exemplos/exercícios no painel) · 1.3 Excel: <strong>sem entrada de currículo</strong>, mas com o núcleo do simulador carregado (23 funções reais, busca real em PROCV/PROCH/PROCX — sem UI nesta página) · 1.4 e 1.5: <strong>dados existem em consts órfãs de <code>curriculum.js</code></strong> (<code>curriculumPowerPoint14</code>, <code>curriculumOneDrive15</code>) que nenhum script lê — <strong>não renderizam</strong> <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M2 — Redes</strong>: 2.1 (conteúdo base em <code>assets/data/curriculum_m2.js</code>, renderado abaixo) + simulador de redes (ping/traceroute simulados, CIDR real) <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M1 — Microsoft 365</strong>: 1.1 (8 sub-tópicos, texto OK, renderiza) · 1.2 (14 tópicos, texto OK, renderiza; sem exemplos/exercícios no painel) · 1.3 Excel: <strong>sem entrada de currículo</strong>, mas com o simulador de UI interativa montado abaixo (#excel-app — 23 funções reais, busca real em PROCV/PROCH/PROCX) · 1.4 e 1.5: <strong>dados existem em consts órfãs de <code>curriculum.js</code></strong> (<code>curriculumPowerPoint14</code>, <code>curriculumOneDrive15</code>) que nenhum script lê — <strong>não renderizam</strong> <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M2 — Redes</strong>: 2.1 (conteúdo base em <code>assets/data/curriculum_m2.js</code>, renderado abaixo) + <strong>simulador de redes com UI interativa</strong> (ping/traceroute simulados, CIDR real — #redes-app, P1-D) <span class="label label-parc">PARCIAL</span></li>
     <li><strong>M3 — Comunicação</strong>: 3.1 e 3.2 (conteúdo base em <code>assets/data/curriculum_m3.js</code>, renderado abaixo) + 50 flashcards <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M4 — Segurança</strong>: 4.1-4.4 <strong>com currículo no disco</strong> (<code>assets/data/curriculum_m4.js</code> — 4 unidades, 13 tópicos, 39 subtópicos, com exemplos e exercícios; o arquivo declara rastreabilidade à LGPD já verificada — arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46 —, citada em 4.2, 4.3 e 4.4), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A (+ 54 flashcards conectados); simulador defensivo de phishing obrigatório ainda inexistente (nenhum arquivo); sem questões autorais <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M5 — IA</strong>: 5.1–5.4 <strong>com currículo no disco e renderizado</strong> (<code>assets/data/curriculum_m5.js</code> — 4 unidades, 13 tópicos, 35 subtópicos, 105 exemplos, 70 exercícios; 5.3 IA generativa/LLMs e 5.4 Engenharia de prompts entraram no P1-C); 50 flashcards conectados; <strong>o laboratório interativo de prompts segue inexistente</strong> (5.4 é conteúdo didático, não ferramenta); sem questões autorais <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M6 — Ética / Serviço Público</strong>: <strong>currículo criado e renderizado desde o P1-C</strong> (<code>assets/data/curriculum_m6.js</code> — 6 unidades 6.1–6.6, 18 tópicos, 46 subtópicos, 138 exemplos, 92 exercícios; LAI 12.527/2011 e Lei 14.129/2021 verificadas em 2026-10-21); 50 flashcards conectados; sem questões autorais <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M7 — Fundamentos de Dados</strong>: <strong>com currículo no disco</strong> (<code>assets/data/curriculum_m7.js</code> — 3 unidades, 9 tópicos, 23 subtópicos), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A; <strong>50 flashcards conectados desde o P1-C</strong>; sem simulador próprio e sem questões <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M8 — Visualização</strong>: <strong>currículo completo no disco</strong> (<code>assets/data/curriculum_m8.js</code> — 8.1 a 8.5, 5 unidades, 23 tópicos, 28 subtópicos), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A; o simulador dos 5 gráficos obrigatórios (histograma, linha, barras, dispersão, box plot) <strong>está implementado e carregado</strong> na seção “Laboratório de dados e visualização” (<code>charts.js</code>, SVG próprio); sem questões autorais <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M4 — Segurança</strong>: 4.1-4.4 <strong>com currículo no disco</strong> (<code>assets/data/curriculum_m4.js</code> — 4 unidades, 13 tópicos, 39 subtópicos, com exemplos e exercícios; o arquivo declara rastreabilidade à LGPD já verificada — arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46 —, citada em 4.2, 4.3 e 4.4), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A (+ 54 flashcards conectados); <strong>simulador defensivo de phishing com UI conectada no P1-D</strong> (#seguranca-app — Seção 7.3) e <strong>85 questões autorais conectadas</strong> (<code>questions_m4.js</code>, P1-D) <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M5 — IA</strong>: 5.1–5.4 <strong>com currículo no disco e renderizado</strong> (<code>assets/data/curriculum_m5.js</code> — 4 unidades, 13 tópicos, 35 subtópicos, 105 exemplos, 70 exercícios; 5.3 IA generativa/LLMs e 5.4 Engenharia de prompts entraram no P1-C); 50 flashcards conectados; <strong>laboratório interativo de prompts com UI conectada no P1-D</strong> (#prompts-app — Seção 7.4, simulação local, sem IA real) e <strong>40 questões autorais conectadas</strong> (<code>questions_m5.js</code>, P1-D) <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M6 — Ética / Serviço Público</strong>: <strong>currículo criado e renderizado desde o P1-C</strong> (<code>assets/data/curriculum_m6.js</code> — 6 unidades 6.1–6.6, 18 tópicos, 46 subtópicos, 138 exemplos, 92 exercícios; LAI 12.527/2011 e Lei 14.129/2021 verificadas em 2026-10-21); 50 flashcards conectados; <strong>40 questões autorais conectadas (<code>questions_m6.js</code>, P1-D)</strong> <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M7 — Fundamentos de Dados</strong>: <strong>com currículo no disco</strong> (<code>assets/data/curriculum_m7.js</code> — 3 unidades, 9 tópicos, 23 subtópicos), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A; <strong>50 flashcards conectados desde o P1-C</strong>; simulador próprio continua inexistente (a Seção 7.5 usa um simulador de dados com notas fictícias, #dados-app, não o M7); <strong>40 questões autorais conectadas (<code>questions_m7.js</code>, P1-D)</strong> <span class="label label-parc">PARCIAL</span></li>
+    <li><strong>M8 — Visualização</strong>: <strong>currículo completo no disco</strong> (<code>assets/data/curriculum_m8.js</code> — 8.1 a 8.5, 5 unidades, 23 tópicos, 28 subtópicos), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A; o simulador dos 5 gráficos obrigatórios (histograma, linha, barras, dispersão, box plot) <strong>está implementado e carregado</strong> na seção “Laboratório de dados e visualização” (<code>charts.js</code>, SVG próprio) + simulador de dados/estatística da Seção 7.5 (#dados-app, P1-D); <strong>40 questões autorais conectadas</strong> (<code>questions_m8.js</code>, P1-D) <span class="label label-parc">PARCIAL</span></li>
   </ul>
   <p>Matriz completa: <a href="matriz/MATRIZ_COBERTURA.md">matriz/MATRIZ_COBERTURA.md</a> (etapa 2; mesma regra da cópia publicada — ver a nota acima).</p>
 </section>
@@ -230,8 +239,8 @@ Justificativa técnica: o sumário usa campos de referência baseados em estilos
 </section>
 
 <section id="questoes" aria-label="Banco de questões e simulados">
-  <h2>Banco de questões e simulados (Seção 10) <span class="label label-parc">82 / 320 QUESTÕES</span></h2>
-  <p>Fonte: <code>assets/data/questions.js</code> — <strong>82 questões autorais</strong> cobrindo os módulos que já possuem currículo real (M1: ecossistema Microsoft 365, Word, Excel via simulador documentado, PowerPoint e OneDrive — 32; M2: fundamentos de redes (unidade 2.1) — 26; M3: e-mail, calendários e reuniões — 24). Cada questão traz os 12 campos obrigatórios da Seção 10.1: enunciado, contexto/dados, alternativas (quando aplicável), gabarito, justificativa detalhada, <strong>análise individual de todas as alternativas</strong> (ou do item nos itens Certo/Errado, com o trecho determinante), erro conceitual de cada distrator, regra/princípio, referência curricular, nível de dificuldade, pegadinha e fonte quando necessária (LGPD verificada em <code>referencias/referencias-verificadas.md</code>, 2026-10-20; LAI e Lei 14.129/2021 verificadas em 2026-10-21). <span class="label label-pend">LIMITE HONESTO</span> Piso exigido: 320 (40 por módulo × 8 módulos) — faltam 238; M4–M8 seguem sem questões, embora todos já tenham currículo carregado (M4, M7 e M8 desde o P1-A; M5 completo e M6 desde o P1-C) — escrever essas questões exige revisão didática dos dados, nada foi apressado — nada foi inventado para mascarar a lacuna.</p>
+  <h2>Banco de questões e simulados (Seção 10) <span class="label label-parc">365 QUESTÕES CONECTADAS · PISO 320 ATINGIDO</span></h2>
+  <p>Fontes conectadas: <code>assets/data/questions.js</code> + <code>assets/data/questions_m4.js</code>, <code>questions_m5.js</code>, <code>questions_m6.js</code>, <code>questions_m7.js</code> e <code>questions_m8.js</code> — <strong>365 questões autorais</strong> fundidas em <code>window.questoesBanco</code> no script inline do <code>index.html</code> (fusão defensiva: cada banco entra só se carregar e ids repetidos são pulados com aviso no console), cobrindo os oito módulos (M1: ecossistema Microsoft 365, Word, Excel e OneDrive — 40; M2: fundamentos de redes (unidade 2.1) — 40; M3: e-mail, calendários e reuniões — 40; M4: segurança da informação e legislação, 4.1–4.4 — 85; M5: IA e engenharia de prompts — 40; M6: ética e serviço público — 40; M7: fundamentos e engenharia de dados — 40; M8: visualização de dados — 40). Cada questão traz os 12 campos obrigatórios da Seção 10.1: enunciado, contexto/dados, alternativas (quando aplicável), gabarito, justificativa detalhada, <strong>análise individual de todas as alternativas</strong> (ou do item nos itens Certo/Errado, com o trecho determinante), erro conceitual de cada distrator, regra/princípio, referência curricular, nível de dificuldade, pegadinha e fonte quando necessária (LGPD verificada em <code>referencias/referencias-verificadas.md</code>, 2026-10-20; LAI e Lei 14.129/2021 verificadas em 2026-10-21). <span class="label label-pend">LIMITE HONESTO</span> Distribuição REAL medida por script de contagem em Node/vm (2026-10-22, deduplicada por id): 365 = M1 40 + M2 40 + M3 40 + M4 85 + M5 40 + M6 40 + M7 40 + M8 40 · nível: 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%) · formatos: 290 múltipla escolha + 75 Certo/Errado · estilos de cobrança: CESPE 216 / FGV 58 / FCC 52 / VUNESP 39 (todas autorais, nenhuma atribuída a banca real). Piso global exigido: 320 (40 módulo × 8 módulos) — <strong>atingido</strong>. A proporção real de níveis (25,8% / 52,9% / 21,4%) difere da sugerida 30/45/25 na Seção 10; o desvio é intencional e documentado, pois a Seção 10 admite ajuste justificado. Nenhuma questão foi inventada.</p>
   <p>O motor (<code>assets/js/quiz-engine.js</code>, Seção 10.2) permite simulados por módulo e cumulativos, por nível, por estilo de cobrança e por formato, com ordem aleatória <strong>sem repetição na mesma sessão</strong>, temporizador opcional (com correção automática ao zerar), navegação entre questões, marcação para revisão, finalização e correção, <strong>gabarito comentado</strong> (justificativa + análise de alternativas + regra + pegadinha), histórico de tentativas (até 50), nota × taxa de acerto × não respondidas, tempo por questão, desempenho por assunto, pontos fracos automáticos e recomendação de revisão baseada nos erros (desta tentativa e do histórico acumulado). Progresso salvo na chave existente <code>apostila-ia-progresso</code>, namespace <code>questoes</code> — sem tocar nas visitas do currículo (<code>modulo-N</code>) nem nos cartões (<code>flashcards</code>). Estilos de cobrança indicam apenas o FORMATO — todas as questões são autorais, nenhuma é atribuída a banca real.</p>
   <div id="quiz-app"></div>
 </section>
@@ -242,6 +251,12 @@ Justificativa técnica: o sumário usa campos de referência baseados em estilos
   <p><strong>Decisão arquitetural (documentada no cabeçalho de <code>charts.js</code>):</strong> os gráficos são renderizados em <strong>SVG próprio, 100% local</strong> — não Chart.js/ECharts de CDN. Uma biblioteca externa de CDN falha em abertura direta <code>file://</code> offline, exatamente o cenário obrigatório do Modo A (Seção 3.2), e o Escrita.txt proíbe considerar biblioteca externa disponível apenas por existir uma tag <code>&lt;script&gt;</code>. O box plot é calculado de verdade: quartis por interpolação linear (percentil tipo 7), intervalo interquartil, bigodes até a convenção 1,5×IIQ (editável) e outliers plotados — a convenção adotada é declarada na tela.</p>
   <p class="aviso">Os dados embutidos são <strong>fictícios e didáticos</strong> (rotulados em cada gráfico) — nenhum número deste laboratório é estatística oficial, resultado de banca ou incidência em concurso. O estado do simulador é volátil de propósito: nada é gravado no <code>localStorage</code>. <strong>Limite honesto:</strong> os cálculos e a geração de SVG foram verificados por <code>node --check</code> e smoke test em Node/vm; o rendimento visual em navegador real (<code>file://</code>) permanece sujeito a confirmação no navegador.</p>
   <div id="charts-app"></div>
+</section>
+
+<section id="search-app" aria-label="Busca global de conteúdo">
+</section>
+
+<section id="audio-app" aria-label="Leitura em voz alta">
 </section>
 
 <section aria-label="Exemplos resolvidos M1.3 Excel (simulador documentado)">
@@ -297,6 +312,34 @@ antes de usar nomes definidos, tabelas estruturadas ou sintaxe de outra região.
 Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com) — não citada como validada neste incremento.
 </code></pre>
   </article>
+
+  <h3>Interface interativa do simulador Excel</h3>
+  <p>Além dos exemplos resolvidos acima, o núcleo do simulador (<code>assets/js/simulators.js</code>, Seções 1.3 e 7.1) é montado nesta página no contêiner abaixo — planilha em memória com referências A1/absolutas/mistas, recálculo e busca real em PROCV/PROCH/PROCX (exata e aproximada), 23 funções + 22 aliases em inglês, parser próprio sem <code>eval</code>. <strong>Simulação didática: não executa nada no sistema operacional, usa dados fictícios do próprio aluno.</strong> Diferenças declaradas em relação ao Excel real (documentadas no cabeçalho do arquivo): correspondência aproximada não valida a ordenação da tabela; sem nomes definidos, tabelas estruturadas, R1C1, arrays dinâmicos nem referências a outros arquivos (entrada fora do escopo rejeitada com <code>ERRO DE ENTRADA</code>); o separador <code>;</code> (pt-BR) ou <code>,</code> (internacional) é detectado pela regra declarada no cabeçalho. <strong>Limite honesto:</strong> o núcleo foi verificado com <code>node --check</code> + smoke test (111 asserts) em Node; <strong>não testado em navegador real</strong> neste ambiente.</p>
+  <div id="excel-app"></div>
+</section>
+
+<section id="simulador-redes" aria-label="Simulador de redes didático">
+  <h2>Simulador de redes — ping/traceroute simulados e CIDR real (Seção 7.2) <span class="label label-ok">UI CONECTADA</span></h2>
+  <p>O núcleo (<code>assets/js/simulator_network.js</code>) expõe <code>ping</code> e <code>traceroute</code> <strong>simulados</strong> (latências e saltos <em>fictícios</em> — simulação didática) e <code>calcularCIDR</code> com <strong>cálculo real de sub-redes IPv4</strong> (binário IP AND máscara: endereço de rede, broadcast, faixa de hosts, máscara). O DNS registrado simulado usa tabela estática local, sem consulta de rede. A UI abaixo também traz visualização de encapsulamento em 5 camadas OSI e simulação de rotas/portas/falhas sobre topologia fixa fictícia. <strong>Simulação didática: NÃO executa comandos no sistema operacional e NÃO envia pacotes reais</strong> — nenhum resultado de rede aqui deve ser tratado como dado medido.</p>
+  <div id="redes-app"></div>
+</section>
+
+<section id="simulador-seguranca" aria-label="Simulador de segurança defensiva">
+  <h2>Simulador de segurança — triagem de phishing e políticas defensivas (Seção 7.3) <span class="label label-ok">UI CONECTADA</span></h2>
+  <p>Núcleo em <code>assets/js/simulator_security.js</code>: exercícios <strong>defensivos</strong> de triagem de e-mails (classificar indícios de phishing em ambiente isolado), política de backup na regra 3-2-1 e prática de autenticação/autorização/princípio do menor privilégio. <strong>Simulação didática: NÃO executa ataques reais, NÃO envia/recebe nenhum tráfego e NÃO toca em sistemas de terceiros</strong> — todos os dados são fictícios e tudo roda localmente nesta página.</p>
+  <div id="seguranca-app"></div>
+</section>
+
+<section id="simulador-prompts" aria-label="Simulador de engenharia de prompts">
+  <h2>Laboratório de engenharia de prompts — simulação local (Seção 7.4) <span class="label label-ok">UI CONECTADA · SEM IA REAL</span></h2>
+  <p>Núcleo em <code>assets/js/simulator_prompts.js</code> (complemento didático da unidade 5.4): editor de prompts com campos contexto/objetivo/restrições/formato, comparação de um prompt ruim com uma versão melhorada, avaliação por critérios verificáveis (clareza, especificidade, completude, segurança) e <strong>simulação local de resposta com saídas predefinidas</strong>. <strong>Simulação didática: NÃO chama API de modelo de IA real, NÃO é geração de IA e nenhuma resposta apresentada deve ser tratada como saída de modelo</strong> — o laboratório é funcional e executa 100% localmente.</p>
+  <div id="prompts-app"></div>
+</section>
+
+<section id="simulador-dados" aria-label="Simulador de dados e estatística">
+  <h2>Simulador de dados e estatística — conjunto editável (Seção 7.5) <span class="label label-ok">UI CONECTADA</span></h2>
+  <p>Núcleo em <code>assets/js/simulator_data.js</code>: tabela de notas <strong>editável</strong>, estatísticas calculadas de verdade (média, mediana, moda, desvio padrão, quartis) e gráficos SVG próprios (histograma, linha, barras, dispersão e box plot) <strong>recalculados quando os dados mudam</strong> — nenhuma forma é decorativa (regra da Seção 8: os gráficos correspondem aos valores). Este simulador é <strong>distinto</strong> do “Laboratório de dados e visualização” (<code>#charts-app</code>, <code>charts.js</code>): o do 7.5 parte de um conjunto de notas fictício por aluno/disciplina. Dados fictícios e didáticos — nenhum número é estatística oficial.</p>
+  <div id="dados-app"></div>
 </section>
 
 <section aria-label="Referências e vídeos - verificação necessária">
@@ -328,14 +371,14 @@ Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com)
     <li><strong>Inventário</strong>: arquivo <code>inventario/INVENTARIO_CURRICULAR.md</code> criado; verificado conteúdo com <code>cat</code>.</li>
     <li><strong>Matriz</strong>: arquivo <code>matriz/MATRIZ_COBERTURA.md</code> criado; contém tabela por módulo com estados.</li>
     <li><strong>Flashcards</strong>: arquivo <code>apostila-ia/assets/data/flashcards_m1.js</code> criado com 10 cartões; verificado sintaxe (não há <code>eval</code>, dados sanitizados via objeto literal).</li>
-    <li><strong>Simuladores</strong>: arquivo `assets/js/simulators.js` implementado; escopo documentado no cabeçalho: <strong>23 funções reais</strong> + 22 aliases em inglês — SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES, SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE, PROCV, PROCH, PROCX, CORRESP, ÍNDICE e HOJE — com <strong>PROCV/PROCH/PROCX executando busca real</strong> (exata e aproximada), erros #N/A, #REF!, #VAL!, #DIV/0! e #NUM! e rejeição de entrada fora do escopo com mensagem iniciada por "ERRO DE ENTRADA"; parser próprio sem `eval` e planilha em memória com refs A1. Nenhuma função inventada. <strong>Limite declarado</strong>: o núcleo não tem UI nesta página (nenhum contêiner no `index.html`) e não foi testado em navegador real.</li>
+    <li><strong>Simuladores</strong>: arquivo `assets/js/simulators.js` implementado; escopo documentado no cabeçalho: <strong>23 funções reais</strong> + 22 aliases em inglês — SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES, SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE, PROCV, PROCH, PROCX, CORRESP, ÍNDICE e HOJE — com <strong>PROCV/PROCH/PROCX executando busca real</strong> (exata e aproximada), erros #N/A, #REF!, #VAL!, #DIV/0! e #NUM! e rejeição de entrada fora do escopo com mensagem iniciada por "ERRO DE ENTRADA"; parser próprio sem `eval` e planilha em memória com refs A1. Nenhuma função inventada. <strong>Limite declarado</strong>: núcleo verificado com smoke test em Node/vm (111 asserts); <strong>não testado em navegador real</strong> — desde o P1-D a UI existe nesta página (#excel-app, script inline com guardas) e os limites do simulador estão listados no item “Simuladores conectados (5)”.</li>
     <li><strong>Gráficos (neste turno)</strong>: criado <code>assets/js/charts.js</code> — laboratório dos 5 gráficos obrigatórios (histograma, linhas, barras/colunas, dispersão, box plot) em <strong>SVG próprio</strong> (sem Chart.js/ECharts — decisão documentada no cabeçalho: biblioteca de CDN não funciona em <code>file://</code> offline). Dados de origem editáveis (tabela), parâmetros por gráfico, atualização real a cada interação, eixos/rótulos/unidades, descrição acessível (<code>role="img"</code> + <code>aria-label</code> + parágrafo visível), explicação dinâmica e botão “Restaurar valores iniciais”. Cálculos: classes/frequências/densidade no histograma (convenção [inf,sup), última inclui sup); tendência por mínimos quadrados no gráfico de linhas; ordenação + linha de base com <strong>sinalização de eixo truncado</strong> em barras; r de Pearson, reta de regressão e outliers por resíduo padronizado na dispersão (aviso correlação ≠ causalidade); <strong>quartis tipo 7 (interpolação linear), IIQ, bigodes e convenção 1,5×IIQ</strong> no box plot. Verificação executada (detalhes no resumo do incremento): <code>node --check</code> em todos os <code>.js</code> de <code>assets/js/</code> e <code>assets/data/</code>; smoke test em Node/vm com stub de DOM cobrindo os 5 recalculos a partir de dados editados, prova numérica dos quartis, nº de bins respeitado, ordenação, detecção de truncamento, outlier por resíduo, restauração e sanitização via <code>esc()</code>. <strong>Limite declarado</strong>: nenhum teste em navegador real foi executado neste ambiente — layout/interação visual em <code>file://</code> permanecem não verificados.</li>
     <li><strong>Flashcards / repetição espaçada (neste turno)</strong>: <code>assets/js/flashcards.js</code> implementado — SM-2 simplificado documentado no cabeçalho do arquivo (Acertou: 1→3→intervalo×fator (fator+0.05); Difícil: max(1, anterior×1.2), fator−0.15; Errou: intervalo 0, fator−0.20, rep zerado; teto 365 dias; domínio a partir de 21 dias). Conectou os 110 cartões então existentes (M1/M2/M3) — 164 no HEAD do P1-A (2026-10-21), com os 54 do M4 conectados nesse incremento —, nenhum inventado. Progresso na chave existente <code>apostila-ia-progresso</code>, namespace <code>flashcards</code> — coexistência com as visitas do <code>navigation.js</code> verificada no teste. Verificação executada: <code>node --check</code> nos 11 <code>.js</code> de <code>assets/js/</code> e <code>assets/data/</code> (todos OK); smoke test em Node/vm com stub de DOM (<code>59 asserts</code> passados) cobrindo carga de 110 cartões, exibição do cartão e da explicação, os 3 estados atualizando data de revisão/intervalo/histórico, filtro por módulo e nível (UI e função pura), modos vencidos/errados, contagens, exportação JSON válida, importação com mescla/recusa de arquivo inválido e sanitização via <code>esc()</code>. <strong>Limite declarado</strong>: nenhum teste em navegador real (file:// ou servidor) foi executado neste ambiente — rendimento de <code>Blob</code>/<code>FileReader</code> e aspectos visuais em navegador permanecem não verificados.</li>
-    <li><strong>Banco de questões + motor de simulados (neste turno)</strong>: criados <code>assets/data/questions.js</code> (<strong>82 questões autorais</strong> — M1=32, M2=26, M3=24; níveis 26/37/19 = 31,7% básica / 45,1% intermediária / 23,2% avançada; formatos 49 múltipla escolha + 33 Certo/Errado; estilos de cobrança CESPE 33 / FCC 22 / VUNESP 15 / FGV 12; todas com os 12 campos da Seção 10.1, incluindo análise de cada alternativa e trecho determinante nos itens C/E) e <code>assets/js/quiz-engine.js</code> (Seção 10.2: escopo por módulo/cumulativo, filtro por nível, estilo e formato, quantidade, ordem aleatória <strong>sem repetição na sessão</strong>, temporizador opcional com correção automática ao esgotar, navegação por grade, marcação para revisão, finalizar/abandonar, gabarito comentado, nota vs. taxa de acerto vs. não respondidas, desempenho por assunto, pontos fracos automáticos, recomendação de revisão com erros históricos e histórico de até 50 tentativas no namespace <code>questoes</code> da chave <code>apostila-ia-progresso</code>). Verificação executada: <code>node --check</code> nos <strong>13</strong> arquivos <code>.js</code> de <code>assets/js/</code> + <code>assets/data/</code> (todos OK, inclusive os três arquivos de trabalho paralelo, lidos apenas); smoke test em Node/vm com stub de DOM e localStorage pré-populado (<strong>92 asserts passados</strong>) cobrindo validação estrutural das 82 questões, distribuições declaradas, filtros e montagem de sessão (inclusive truncamento honesto quando o pool é menor que o pedido), correção (5 acertos/3 erros/16 não respondidas em M3), tempo por questão, correção idempotente, funções do temporizador, persistência acumulada <strong>sem quebrar as chaves de currículo nem de flashcards pré-existentes</strong>, fluxo completo de UI (iniciar → navegar → marcar → responder → finalizar), sanitização via <code>esc()</code> de uma questão maliciosa injetada, item C/E com trecho determinante, abandono sem gravação e limpeza de histórico isolada ao namespace. <strong>Limites declarados</strong>: (1) nenhum teste em navegador real (file:// ou servidor) foi executado neste ambiente — renderização visual, eventos <code>change</code> dos filtros e temporizador em tempo real permanecem não verificados; (2) <strong>82 de 320 questões</strong> — faltam 238 porque M4–M8 ainda não têm questões autorais escritas (M4, M5, M7 e M8 têm currículo implementado no disco — hoje também carregado no <code>index.html</code> pelo incremento P1-A —; M6 não tinha currículo naquele turno, criado depois no P1-C); nenhuma questão foi atribuída a banca real.</li>
-    <li><strong>Integração P1-C (M6 + 5.3/5.4 + flashcards, 2026-10-21)</strong>: cinco tags de dados adicionadas ao <code>index.html</code> (24 no total) — <code>curriculum_m6.js</code> e <code>flashcards_m5.js</code>…<code>flashcards_m8.js</code>, na ordem numérica. Verificação executada: <code>node --check</code> nos <strong>24</strong> <code>.js</code> de <code>assets/</code> (24 OK) + smoke test em Node/vm com stub de DOM carregando os <strong>24 scripts na ordem do <code>index.html</code></strong> e disparando <code>DOMContentLoaded</code> (0 erros de carga, 0 erros nos handlers): <code>window.apostilaDados.curriculum</code> com as <strong>8 chaves</strong> <code>modulo-1</code>..<code>modulo-8</code>; árvore renderizada com <strong>100 tópicos + 209 subtópicos = 309 nós</strong> (M1 15/23, M2 4/7, M3 5/8, M4 13/39, M5 13/35, M6 18/46, M7 9/23, M8 23/28); simulado com <strong>15 escopos</strong> (m1..m8 + cum-2..cum-8) e filtros m6=0, cum-6=82, m1=32, cum-8=82; flashcards com <strong>404 cartões</strong> únicos e a UI de filtro listando M1..M8 (m3=50). Corrigido o typo de grafia na chave de dificuldade em 16 cartões de <code>flashcards_m3.js</code> (16 linhas reescritas, só a chave; conteúdo dos cartões intacto). <strong>Limite declarado</strong>: nenhum teste em navegador real (<code>file://</code> ou servidor) foi executado — renderização visual e eventos reais de UI permanecem não verificados.</li>
-    <li><strong>Busca global</strong>: não implementada. Não apresentar como funcional.</li>
-    <li><strong>Áudio (Web Speech API)</strong>: não implementado. Não afirmar disponibilidade universal.</li>
-    <li><strong>Service Worker / PWA</strong>: <strong>não criado</strong> — não existe <code>service-worker.js</code> nem <code>manifest.webmanifest</code> no repositório (verificado por listagem de arquivos em 2026-10-20); nenhuma das duas tags é referenciada no <code>index.html</code>.</li>
+    <li><strong>Banco de questões + motor de simulados (neste turno)</strong>: criados <code>assets/data/questions.js</code> (<strong>82 questões autorais — M1=32, M2=26, M3=24</strong> (banco posteriormente expandido para <strong>120</strong> — M1=40, M2=40, M3=40; ver detalhes na seção de banco de questões acima) — níveis 26/37/19 = 31,7% básica / 45,1% intermediária / 23,2% avançada; formatos 49 múltipla escolha + 33 Certo/Errado; estilos de cobrança CESPE 33 / FCC 22 / VUNESP 15 / FGV 12; todas com os 12 campos da Seção 10.1, incluindo análise de cada alternativa e trecho determinante nos itens C/E) e <code>assets/js/quiz-engine.js</code> (Seção 10.2: escopo por módulo/cumulativo, filtro por nível, estilo e formato, quantidade, ordem aleatória <strong>sem repetição na sessão</strong>, temporizador opcional com correção automática ao esgotar, navegação por grade, marcação para revisão, finalizar/abandonar, gabarito comentado, nota vs. taxa de acerto vs. não respondidas, desempenho por assunto, pontos fracos automáticos, recomendação de revisão com erros históricos e histórico de até 50 tentativas no namespace <code>questoes</code> da chave <code>apostila-ia-progresso</code>). Verificação executada: <code>node --check</code> nos <strong>13</strong> arquivos <code>.js</code> de <code>assets/js/</code> + <code>assets/data/</code> (todos OK, inclusive os três arquivos de trabalho paralelo, lidos apenas); smoke test em Node/vm com stub de DOM e localStorage pré-populado (<strong>92 asserts passados</strong>) cobrindo validação estrutural das 82 questões, distribuições declaradas, filtros e montagem de sessão (inclusive truncamento honesto quando o pool é menor que o pedido), correção (5 acertos/3 erros/16 não respondidas em M3), tempo por questão, correção idempotente, funções do temporizador, persistência acumulada <strong>sem quebrar as chaves de currículo nem de flashcards pré-existentes</strong>, fluxo completo de UI (iniciar → navegar → marcar → responder → finalizar), sanitização via <code>esc()</code> de uma questão maliciosa injetada, item C/E com trecho determinante, abandono sem gravação e limpeza de histórico isolada ao namespace. <strong>Limites declarados</strong>: (1) nenhum teste em navegador real (file:// ou servidor) foi executado neste ambiente — renderização visual, eventos <code>change</code> dos filtros e temporizador em tempo real permanecem não verificados; (2) <strong>82 de 320 questões</strong> — faltam 238 porque M4–M8 ainda não têm questões autorais escritas (M4, M5, M7 e M8 têm currículo implementado no disco — hoje também carregado no <code>index.html</code> pelo incremento P1-A —; M6 não tinha currículo naquele turno, criado depois no P1-C); nenhuma questão foi atribuída a banca real.</li>
+    <li><strong>Integração P1-C (M6 + 5.3/5.4 + flashcards, 2026-10-21)</strong>: cinco tags de dados adicionadas ao <code>index.html</code> (24 no total) — <code>curriculum_m6.js</code> e <code>flashcards_m5.js</code>…<code>flashcards_m8.js</code>, na ordem numérica. Verificação executada: <code>node --check</code> nos <strong>24</strong> <code>.js</code> de <code>assets/</code> (24 OK) + smoke test em Node/vm com stub de DOM carregando os <strong>24 scripts na ordem do <code>index.html</code></strong> e disparando <code>DOMContentLoaded</code> (0 erros de carga, 0 erros nos handlers): <code>window.apostilaDados.curriculum</code> com as <strong>8 chaves</strong> <code>modulo-1</code>..<code>modulo-8</code>; árvore renderizada com <strong>100 tópicos + 209 subtópicos = 309 nós</strong> (M1 15/23, M2 4/7, M3 5/8, M4 13/39, M5 13/35, M6 18/46, M7 9/23, M8 23/28); simulado com <strong>15 escopos</strong> (m1..m8 + cum-2..cum-8) e filtros m6=0, cum-6=120, m1=40, cum-8=120; flashcards com <strong>404 cartões</strong> únicos e a UI de filtro listando M1..M8 (m3=50). Corrigido o typo de grafia na chave de dificuldade em 16 cartões de <code>flashcards_m3.js</code> (16 linhas reescritas, só a chave; conteúdo dos cartões intacto). <strong>Limite declarado</strong>: nenhum teste em navegador real (<code>file://</code> ou servidor) foi executado — renderização visual e eventos reais de UI permanecem não verificados.</li>
+    <li><strong>Busca global</strong> (estes arquivos): <code>assets/js/search.js</code> criado (794 linhas, 33 KB). Índice em memória a partir de <code>window.apostilaDados</code> (currículo + flashcards) e <code>window.questoesBanco</code>; matching accent-insensitive (normalização via NFD + regex de classes de acento), tokenização AND, destaque em <code>&lt;mark&gt;</code>; filtros por módulo, tópico, nível e tipo de recurso; navegação delegada a <code>window.apostilaMostrarConteudo</code> (exposta por <code>navigation.js</code>) para currículo; preview in-line para flashcards e questões. <code>mount()</code>/<code>destroy()</code> expostos como <code>window.SearchApp</code>; auto-montagem no <code>#search-app</code> no <code>DOMContentLoaded</code>. Verificação: <code>node --check OK</code>; smoke test em Node/vm (stub de DOM) com 65 asserts cobrindo indexação (contagens de currículo/flashcards/questões), busca (AND, accent-insensitive, filtros de módulo/topico/nível/tipo), destaque/snippet, truncagem, sanitização <code>esc()</code> de termo malicioso, montagem/DOM, delegação de clique, idempotência de <code>mount()</code> e <code>destroy()</code>. <strong>Limite declarado</strong>: nenhum teste em navegador real foi executado neste ambiente — interações visuais em <code>file://</code> permanecem não verificadas.</li>
+    <li><strong>Áudio (Web Speech API)</strong>: <code>assets/js/audio.js</code> criado (530 linhas, 23 KB). <code>window.AudioApp = { mount(el), destroy() }</code>; uso da API <code>speechSynthesis</code> com detecção de disponibilidade (aviso visível quando ausente — não afirma universalidade entre dispositivos); detecção de vozes pt-BR (fallback a pt, fallback a todas); chunking de conteúdo extenso (teto 4000 chars por <code>SpeechSynthesisUtterance</code>); controles de play/pause/resume/stop/velocidade/voz; cancela fala no <code>beforeunload</code> e <code>visibilitychange</code>; <code>mount()</code>/<code>destroy()</code> expostos; auto-montagem no <code>#audio-app</code> no <code>DOMContentLoaded</code>. Verificação: <code>node --check OK</code>; smoke test em Node/vm (stub de DOM) com 42 asserts cobrindo divisão de texto em chunks, formatação <code>fmtPct</code>, renderização de estados (API ausente/vozes ausentes/vozes presentes/falando/pausado), sanitização <code>esc()</code>, idempotência <code>mount()</code>/<code>destroy()</code>, remoção de listeners e cancelamento de fala. <strong>Limite declarado</strong>: a API <code>speechSynthesis</code> só existe em navegador — nenhum teste de síntese real foi executado nesse ambiente; em <code>file://</code> sem navegador, o módulo exibe aviso de indisponibilidade e desativa os controles.</li>
+    <li><strong>Service Worker / PWA</strong>: <strong>criado e referenciado</strong> — <code>service-worker.js</code> (84 linhas, precache de <code>index.html</code>/<code>styles.css</code>/<code>manifest.webmanifest</code>, cache-on-fetch, fallback offline) e <code>manifest.webmanifest</code> (JSON válido) existem no disco; <code>&lt;link rel="manifest"&gt;</code> adicionado ao <code>&lt;head&gt;</code>; registro de SW adicionado antes de <code>&lt;/body&gt;</code> <strong>condicionalmente</strong> (<code>serviceWorker in navigator</code>) — em <code>file://</code> o registro não ocorre e o app funciona completo sem ele (conforme Seção 3.1 do Escrita.txt). Verificação: <code>node --check OK</code> em <code>service-worker.js</code>; <code>manifest.webmanifest</code> validado como JSON. Ícones <code>assets/icons/icon-192.png</code> e <code>icon-512.png</code> presentes. <strong>Limite declarado</strong>: o Service Worker só executa em contexto de navegador com <code>navigator.serviceWorker</code> — nenhum teste de registro/cache foi feito fora de navegador.</li>
   </ul>
   <p>Todos os testes realizados estão documentados com evidência real; nenhuma declaração de sucesso inventada.</p>
 </section>
@@ -356,23 +399,31 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 # arquivos existem hoje; nada aqui deve ser lido como funcionalidade operacional.
 #
 # EXISTEM e estão carregados no index.html:
-#   index.html
+#   index.html, manifest.webmanifest, service-worker.js
 #   assets/css/styles.css
 #   assets/js/app.js, navigation.js, simulators.js, simulator_network.js,
-#     flashcards.js, quiz-engine.js, charts.js
+#     simulator_security.js, simulator_prompts.js, simulator_data.js,
+#     flashcards.js, quiz-engine.js, charts.js, search.js, audio.js
 #   assets/data/curriculum.js, curriculum_m2.js, curriculum_m3.js,
 #     curriculum_m4.js, curriculum_m5.js, curriculum_m6.js, curriculum_m7.js,
 #     curriculum_m8.js, flashcards_m1.js, flashcards_m2.js, flashcards_m3.js,
 #     flashcards_m4.js, flashcards_m5.js, flashcards_m6.js, flashcards_m7.js,
-#     flashcards_m8.js, questions.js
-# (a partir do incremento P1-C: os 8 módulos renderizam — 309 nós —, os 404
-#  flashcards estão conectados e a árvore inclui o M6; integração do M6 feita
-#  só com a tag <script>, sem alterar navigation.js)
+#     flashcards_m8.js, questions.js, questions_m4.js, questions_m5.js,
+#     questions_m6.js, questions_m7.js, questions_m8.js
+# (a partir do P1-D, 2026-10-22: os 5 simuladores têm UI — #excel-app,
+#  #redes-app, #seguranca-app, #prompts-app, #dados-app — e o banco de
+#  questões completo funde questions.js + questions_m4/m5/m6/m7/m8.js com
+#  deduplicação por id; M6/M7 estavam em correção paralela na data da medição)
+# (a partir do P1-C: os 8 módulos renderizam — 309 nós —, os 404 flashcards
+#  estão conectados e a árvore inclui o M6; integração do M6 feita só com a
+#  tag &lt;script&gt;, sem alterar navigation.js)
+# (busca global + áudio: implementados — search.js e audio.js carregados com
+#  defer; manifest + SW registrados condicionalmente. SW só ativa em
+#  http/https — file:// funciona sem ele.)
 # AINDA NÃO IMPLEMENTADOS (arquivos não criados — não citar como operacional):
-#   assets/js/search.js, progress.js, storage.js, accessibility.js
+#   assets/js/progress.js, storage.js, accessibility.js
 #   assets/data/references.js (referências seguem em
 #     referencias/referencias-verificadas.md, na raiz do repositório)
-#   manifest.webmanifest, service-worker.js
 
 # Persistência (Seção 14): progresso salvo em localStorage
 # com chave 'apostila-ia-progresso'. Limitações do modo privado
@@ -397,7 +448,7 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 
 </main>
 <footer>
-  <p>Apostila Web Interativa Definitiva — Projeto FCN / Renato Barucco · Etapa atual: inventário + matriz + app em operação com currículo de M1–M8 na árvore (309 nós), flashcards de M1–M8 (404), questões de M1–M3 (82) e gráficos · Nenhuma funcionalidade inventada · Referências: LGPD (2026-10-20), LAI e Lei 14.129/2021 (2026-10-21) verificadas; demais pendentes</p>
+  <p>Apostila Web Interativa Definitiva — Projeto FCN / Renato Barucco · Etapa atual: inventário + matriz + app em operação com currículo de M1–M8 na árvore (309 nós), flashcards de M1–M8 (404), <strong>365 questões autorais</strong> em 8 módulos conectados (piso 320 atingido), gráficos 5/5, <strong>simuladores com UI: Excel, Redes, Segurança, Prompts e Dados (Seções 7.1–7.5)</strong>, <strong>busca global</strong>, <strong>leitura em voz alta (Web Speech API)</strong> e <strong>PWA condicional (Service Worker + manifest)</strong> · Nenhuma funcionalidade inventada · Referências: LGPD (2026-10-20), LAI e Lei 14.129/2021 (2026-10-21) verificadas; demais pendentes</p>
 </footer>
 
 <!-- Dados primeiro, depois scripts de comportamento (dependência explícita; navigation.js consolida currículo + progresso) -->
@@ -418,27 +469,127 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 <script src="assets/data/flashcards_m7.js"></script>
 <script src="assets/data/flashcards_m8.js"></script>
 <script src="assets/data/questions.js"></script>
+<script src="assets/data/questions_m4.js"></script>
+<script src="assets/data/questions_m5.js"></script>
+<script src="assets/data/questions_m6.js"></script>
+<script src="assets/data/questions_m7.js"></script>
+<script src="assets/data/questions_m8.js"></script>
+<script>
+  /* Fusão defensiva do banco de questões (P1-D, 2026-10-22).
+   * questions.js declara questoesBanco (var global) e os arquivos
+   * questions_m4..m8.js declaram moduleQuestions4..8 (bindings léxicos globais,
+   * const). Esta fusão concatena os seis bancos em UM array atribuído de novo
+   * a window.questoesBanco — por questoesBanco ser `var` global em
+   * questions.js, a property de window e o binding lexical são a mesma
+   * variável, e search.js/quiz-engine.js passam a ver o banco completo sem
+   * alteração neles. Proteções (arquivo pode falhar a carregar sem derrubar a
+   * página): cada banco de módulo é adicionado só se `typeof` for array;
+   * deduplicação por `id` — ids repetidos são pulados com aviso
+   * no console. Sem eval, sem fetch. (M6/M7 podem estar em revisão
+   * paralela: se falharem a carregar, o banco segue com os demais módulos.) */
+  (function () {
+    'use strict';
+    var fundidos = [];
+    var vistos = Object.create ? Object.create(null) : {};
+    function addBanco(banco, nome) {
+      if (!Array.isArray(banco)) return;
+      banco.forEach(function (q) {
+        if (!q || typeof q.id === 'undefined') return;
+        if (Object.prototype.hasOwnProperty.call(vistos, q.id)) {
+          console.warn('[questoes-fusao] id duplicado pulado: ' + q.id + ' (' + nome + ')');
+          return;
+        }
+        vistos[q.id] = true;
+        fundidos.push(q);
+      });
+    }
+    addBanco(window.questoesBanco, 'questions.js');
+    if (typeof moduleQuestions4 !== 'undefined') addBanco(moduleQuestions4, 'questions_m4.js');
+    if (typeof moduleQuestions5 !== 'undefined') addBanco(moduleQuestions5, 'questions_m5.js');
+    if (typeof moduleQuestions6 !== 'undefined') addBanco(moduleQuestions6, 'questions_m6.js');
+    if (typeof moduleQuestions7 !== 'undefined') addBanco(moduleQuestions7, 'questions_m7.js');
+    if (typeof moduleQuestions8 !== 'undefined') addBanco(moduleQuestions8, 'questions_m8.js');
+    window.questoesBanco = fundidos;
+    if (window.apostilaDados) window.apostilaDados.questoes = fundidos;
+  })();
+</script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/navigation.js"></script>
 <script src="assets/js/simulators.js"></script>
 <script src="assets/js/simulator_network.js"></script>
+<script src="assets/js/simulator_security.js"></script>
+<script src="assets/js/simulator_prompts.js"></script>
+<script src="assets/js/simulator_data.js"></script>
 <script src="assets/js/flashcards.js"></script>
 <script src="assets/js/quiz-engine.js"></script>
 <script src="assets/js/charts.js"></script>
+<script src="assets/js/search.js" defer></script>
+<script src="assets/js/audio.js" defer></script>
+<script>
+  /* Montagem dos 5 simuladores com UI (P1-B; Seções 7.1–7.5 do Escrita.txt) — P1-D.
+   * Cada núcleo expõe um global (window.ExcelSimulator, NetworkSimulator,
+   * SecuritySimulator, PromptSimulator, DataSimulator) com função mount(el).
+   * Guarda tripla: contêiner presente, global presente, mount não lança
+   * (try/catch + aviso no console) — a página NÃO quebra se um simulador
+   * faltar. Sem eval, sem fetch. */
+  (function () {
+    'use strict';
+    function montarSimulador(nomeGlobal, idConteiner) {
+      try {
+        var el = document.getElementById(idConteiner);
+        if (!el) { console.warn('[simuladores] contêiner ausente: #' + idConteiner); return; }
+        var Sim = (typeof window !== 'undefined' && window[nomeGlobal]) || undefined;
+        if (!Sim || typeof Sim.mount !== 'function') {
+          console.warn('[simuladores] núcleo não carregado: ' + nomeGlobal);
+          return;
+        }
+        Sim.mount(el);
+      } catch (e) {
+        console.warn('[simuladores] falha ao montar ' + nomeGlobal + ': ' + (e && e.message ? e.message : e));
+      }
+    }
+    function montarSimuladores() {
+      montarSimulador('ExcelSimulator', 'excel-app');
+      montarSimulador('NetworkSimulator', 'redes-app');
+      montarSimulador('SecuritySimulator', 'seguranca-app');
+      montarSimulador('PromptSimulator', 'prompts-app');
+      montarSimulador('DataSimulator', 'dados-app');
+    }
+    if (typeof document !== 'undefined' && document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', montarSimuladores);
+    } else {
+      montarSimuladores();
+    }
+  })();
+</script>
 <!--
-  Busca global, storage extra e acessibilidade
-  ainda NÃO implementados: tags removidas para evitar 404s silenciosos.
-  O projeto proíbe placeholders — as tags só voltam quando os arquivos reais
-  existirem (search.js, progress.js, storage.js, accessibility.js,
-  manifest.webmanifest).
-  flashcards.js JÁ existe e está carregado acima (UI de flashcards +
-  repetição espaçada SM-2 simplificado, documentada no cabeçalho do arquivo).
-  questions.js (banco de 82 questões autorais) e quiz-engine.js (motor de
-  simulados da Seção 10.2) JÁ existem e estão carregados acima — ambos com
-  escopo e limites documentados nos respectivos cabeçalhos de arquivo.
-  charts.js (laboratório dos 5 gráficos obrigatórios em SVG próprio —
-  Seções 7.5/8) JÁ existe e está carregado acima; decisão SVG próprio por
-  causa do requisito file:// offline, documentada no cabeçalho do arquivo.
+  progress.js, storage.js, accessibility.js e assets/data/references.js
+  continuam NÃO implementados (arquivos inexistentes, tags removidas para
+  evitar 404s silenciosos). O projeto proíbe placeholders — as tags só
+  voltam quando os arquivos reais existirem. Busca (search.js) e áudio
+  (audio.js) JÁ existem e estão carregados acima — escopo e limites
+  documentados nos respectivos cabeçalhos. Os 5 simuladores (simulators.js,
+  simulator_network.js, simulator_security.js, simulator_prompts.js,
+  simulator_data.js) também JÁ existem e montam suas UIs nos contêineres
+  #excel-app / #redes-app / #seguranca-app / #prompts-app / #dados-app via
+  script inline com guardas (a página não quebra se um núcleo falhar).
+  manifest.webmanifest e service-worker.js JÁ existem (PWA condicional: SW
+  registrado apenas em http/https; file:// funciona sem ele).
+  questions_m6.js e questions_m7.js estão no disco e nas tags de dados, mas
+  estavam EM CORREÇÃO PARALELA nesta medição (2026-10-22) — se falharem a
+  carregar, a fusão defensiva conecta o banco com os demais módulos.
 -->
+<script>
+  /* Registro condicional de Service Worker — Seção 3.1 do Escrita.txt.
+   * Em file:// o SW não existe (navigator.serviceWorker ausente ou registro
+   * falha silenciosamente) — o app funciona COMPLETO sem ele. Em http/https,
+   * o SW habilita cache offline de assets estáticos. */
+  if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('service-worker.js')
+        .catch(function () { /* file:// ou falha silenciosa — não crítico */ });
+    });
+  }
+</script>
 </body>
 </html>

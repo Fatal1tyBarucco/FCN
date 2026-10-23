@@ -41,7 +41,7 @@ apostila-ia/                # o app (raiz do site publicado)
   index.html                # entrada da aplicação
   assets/css/styles.css
   assets/js/                # app, navigation, simulators, flashcards, quiz, charts...
-  assets/data/              # currículo (M1–M8), flashcards (404), questões (82/320)
+  assets/data/              # currículo (M1–M8), flashcards (404), questões (365/320)
 inventario/                 # inventário curricular
 matriz/                     # matriz de cobertura
 referencias/                # referências verificadas (ex.: LGPD)
