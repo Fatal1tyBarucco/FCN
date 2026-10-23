@@ -1354,6 +1354,273 @@
    * 9. API pública (compatível com a superfície anterior: calcular,
    *    calcularFormula, rejeitaEntradaInvalida, funcoesSuportadas)
    * ------------------------------------------------------------------ */
+
+  /* ==================================================================
+   * 9b. UI do simulador Excel (Seção 7.1) — montagem via mount(el).
+   * ---------------------------------------------------------------
+   * UI declarativa que consome a API REAL de ExcelSimulator (nada de
+   * eval): grade editável com recálculo ao vivo, console de fórmulas,
+   * comparação entre funções, exercícios verificáveis e códigos de
+   * erro reais. Montagem é feita por mountExcel(containerEl), chamada
+   * pela tarefa de wiredome; idempotente e Node-testável (não toca no
+   * DOM fora do container recebido).
+   * ================================================================ */
+  var excelCols = ["A", "B", "C", "D", "E"];
+  var excelDefault = [
+    ["Nome", "Nota 1", "Nota 2", "Nota 3", "Média"],
+    ["Ana", "7,5", "8", "6,5", "=MÉDIA(B2:D2)"],
+    ["Bruno", "6", "7,5", "8", "=MÉDIA(B3:D3)"],
+    ["Carla", "9", "8,5", "7", "=MÉDIA(B4:D4)"],
+    ["Diego", "5,5", "6", "7,5", "=MÉDIA(B5:D5)"],
+    ["Eva", "8", "9", "10", "=MÉDIA(B6:D6)"],
+    ["Fábio", "4", "5,5", "6", "=MÉDIA(B7:D7)"],
+    ["", "", "", ""]
+  ];
+  var excelExercicios = [
+    { id: "ex1", titulo: "1. Média de Ana", formula: "=MÉDIA(B2:D2)", explicacao: "Média aritmética simples das três notas da linha 2; observe o alinhamento entre a média exibida na grade e o resultado desta fórmula." },
+    { id: "ex2", titulo: "2. Classificação com SE", formula: "=SE(7,5>=7;\"APROVADO\";\"REPROVADO\")", explicacao: "7,5 >= 7 é verdadeiro, logo SE devolve APROVADO. Use aspas duplas dentro da fórmula e ; como separador pt-BR." },
+    { id: "ex3", titulo: "3. Código de erro real", formula: "=1/0", explicacao: "Divisão por zero produz #DIV/0!, um dos cinco códigos de erro do Excel ( #N/A #REF! #VAL! #DIV/0! #NUM! )." }
+  ];
+  var excelCss = '<style>' +
+    '.sim-excel{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}.sim-excel h3{margin:8px 0 2px}.sim-excel h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}' +
+    '.sim-excel-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}.sim-excel-tabela{border-collapse:collapse;width:100%;margin:8px 0}' +
+    '.sim-excel-tabela th,.sim-excel-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}' +
+    '.sim-excel-tabela th{background:#2a2f3a;color:#cdd4de}.sim-excel-rownum{background:#22262e;color:#8b94a5;width:28px}' +
+    ".sim-excel-cel{width:90px;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:3px;padding:2px 4px}" +
+    '.sim-excel-res{margin-left:6px;color:#ffd57c;font-weight:600;min-width:48px;display:inline-block}.sim-excel-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
+    '.sim-excel-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 10px;font-size:.8rem;cursor:pointer;margin-right:6px}.sim-excel-btn:hover{background:#4a5466}' +
+    ".sim-excel-console{width:100%;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:4px;padding:6px;resize:vertical}" +
+    '.sim-excel-resgrande{margin:8px 0 0;color:#ffd57c;font-family:"Courier New",monospace;font-size:.95rem;min-height:1.4em}' +
+    '.sim-excel-comparacao{width:100%;border-collapse:collapse;font-size:.85rem}.sim-excel-comparacao th,.sim-excel-comparacao td{border:1px solid #3a4252;padding:4px 8px;text-align:left}' +
+    '.sim-excel-comparacao th{background:#2a2f3a;color:#cdd4de}.sim-excel-exercicio{border-left:3px solid #4a5265;padding:6px 10px;margin:8px 0;background:#1b1e24}' +
+    ".sim-excel-exercicio input{width:100%;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 6px;margin-bottom:6px}" +
+    '.sim-excel-fb{display:inline-block;font-size:.85rem}.sim-excel-ok{color:#5ee0a0}.sim-excel-err{color:#ff7b7b}.sim-excel-aviso{color:#8b94a5;font-size:.8rem;margin-top:4px}' +
+    '</style>';
+  var excelMontados = (typeof WeakSet !== "undefined") ? new WeakSet() : { has: function () { return false; }, add: function () { return true; }, "delete": function () { return true; } };
+
+  // Escapamento HTML local (convenção do projeto: esc). Nenhuma dependência externa.
+  function esc(texto) {
+    return String(texto == null ? "" : texto)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  // Formatação de exibição para resultados do ExcelSimulator (números com vírgula, booleans, erros).
+  function excelFmt(v) {
+    if (v instanceof ErroExcel) return v.codigo + (v.detalhe ? " — " + v.detalhe : "");
+    if (typeof v === "boolean") return v ? "VERDADEIRO" : "FALSO";
+    if (typeof v === "number") {
+      if (!isFinite(v)) return "#NUM!";
+      var s = String(parseFloat(v.toPrecision(12)));
+      if (s.indexOf(".") !== -1) {
+        var partes = s.split(".");
+        var dec = partes[1].slice(0, 4).replace(/0+$/, "");
+        return partes[0] + (dec ? "," + dec : "");
+      }
+      return s;
+    }
+    if (v === null || v === undefined) return "";
+    return String(v);
+  }
+
+  function excelBuildUI(plan, entradas) {
+    return '<div class="sim-excel">' +
+      '<h3>Simulador Excel (Seção 7.1)</h3>' +
+      '<p class="sim-excel-sub">Excel 365 (pt-BR) — cálculo REAL via ExcelSimulator (sem eval). Edite valores ou fórmulas e veja o recálculo ao vivo. Códigos de erro reais: #N/A, #REF!, #VAL!, #DIV/0!, #NUM!.</p>' +
+      excelBuildGrid(entradas) +
+      excelBuildConsole() +
+      excelBuildComparacao(plan) +
+      excelBuildExercicios() +
+      excelBuildLimites() +
+      "</div>";
+  }
+
+  function excelBuildGrid(entradas) {
+    var h = '<div class="sim-excel-bloco"><h4>Tabela de dados — recálculo automático</h4><table class="sim-excel-tabela"><thead><tr><th>#</th>';
+    excelCols.forEach(function (c) { h += "<th>" + esc(c) + "</th>"; });
+    h += "</tr></thead><tbody>";
+    for (var i = 0; i < excelDefault.length; i++) {
+      h += "<tr><td class='sim-excel-rownum'>" + (i + 1) + "</td>";
+      for (var j = 0; j < excelCols.length; j++) {
+        var ref = excelCols[j] + (i + 1);
+        var raw = (entradas[i] && entradas[i][j] != null) ? entradas[i][j] : "";
+        h += "<td><input type='text' class='sim-excel-cel' data-cell='" + esc(ref) + "' value='" + esc(raw) + "' aria-label='célula " + esc(ref) + "' /><span id='excel-res-" + esc(ref) + "' class='sim-excel-res'></span></td>";
+      }
+      h += "</tr>";
+    }
+    h += "</tbody></table>";
+    h += "<p class='sim-excel-aviso'>Fórmulas iniciam com <code>=</code>. Células vazias não casam com critérios numéricos em CONT.SE/SOMASE — diferença declarada do Excel.</p>";
+    h += "</div>";
+    return h;
+  }
+
+  function excelBuildConsole() {
+    var h = '<div class="sim-excel-bloco"><h4>Console de fórmulas (executa contra a tabela acima)</h4>';
+    h += "<p>Digite uma fórmula (com ou sem <code>=</code> inicial) e pressione Calcular — veja o resultado ou o código de erro real.</p>";
+    h += "<textarea id='excel-console-fm' class='sim-excel-console' rows='2'>=MÉDIA(B2:B7)</textarea>";
+    h += "<button type='button' class='sim-excel-btn' data-act='excel-console-calcular'>Calcular</button>";
+    h += "<button type='button' class='sim-excel-btn' data-act='excel-console-limpar'>Limpar</button>";
+    h += "<p class='sim-excel-resgrande' id='excel-console-res'>—</p>";
+    h += "</div>";
+    return h;
+  }
+
+  var excelComparacao = [
+    ["SOMA", "=SOMA(B2:B7)", "excel-cmp-SOMA"],
+    ["MÉDIA", "=MÉDIA(B2:B7)", "excel-cmp-MEDIA"],
+    ["MÁXIMO", "=MÁXIMO(B2:B7)", "excel-cmp-MAX"],
+    ["MÍNIMO", "=MÍNIMO(B2:B7)", "excel-cmp-MIN"],
+    ["CONT.VALORES", "=CONT.VALORES(B2:B7)", "excel-cmp-COUNT"]
+  ];
+
+  function excelBuildComparacao(plan) {
+    var h = '<div class="sim-excel-bloco"><h4>Comparação entre funções — coluna Nota 1 (B2:B7)</h4><table class="sim-excel-comparacao"><thead><tr><th>Função</th><th>Fórmula</th><th>Resultado</th></tr></thead><tbody>';
+    for (var i = 0; i < excelComparacao.length; i++) {
+      var f = excelComparacao[i];
+      var r = ExcelSimulator.calcularFormula(f[1], plan);
+      h += "<tr><td>" + esc(f[0]) + "</td><td><code>" + esc(f[1]) + "</code></td><td class='sim-excel-res' id='" + f[2] + "'>" + esc(excelFmt(r)) + "</td></tr>";
+    }
+    h += "</tbody></table></div>";
+    return h;
+  }
+
+  function excelBuildExercicios() {
+    var h = '<div class="sim-excel-bloco"><h4>Exercícios</h4>';
+    for (var i = 0; i < excelExercicios.length; i++) {
+      var x = excelExercicios[i];
+      h += "<div class='sim-excel-exercicio'><strong>" + esc(x.titulo) + "</strong><p>" + esc(x.pergunta) + "</p>";
+      h += "<input id='excel-ex-" + esc(x.id) + "' class='sim-excel-ex-input' type='text' placeholder='digite a fórmula' value='" + esc(x.formula) + "' />";
+      h += "<button type='button' class='sim-excel-btn' data-act='excel-ex-verificar' data-ex='" + esc(x.id) + "'>Verificar</button>";
+      h += "<span id='excel-fb-" + esc(x.id) + "'></span>";
+      h += "</div>";
+    }
+    h += "</div>";
+    return h;
+  }
+
+  function excelBuildLimites() {
+    var n = (ExcelSimulator.escopo && ExcelSimulator.escopo.funcoes) ? ExcelSimulator.escopo.funcoes.length : 0;
+    return '<div class="sim-excel-bloco"><h4>Escopo declarado</h4>' +
+      '<p>Este painel consome <code>ExcelSimulator</code>: ' + esc(ExcelSimulator.versaoDeclarada) +
+      '. ' + n + ' funções suportadas; veja o contrato completo no cabeçalho de <code>assets/js/simulators.js</code>.</p></div>';
+  }
+
+  function mountExcel(containerEl) {
+    if (!containerEl || typeof containerEl !== "object") return undefined;
+    if (excelMontados.has(containerEl)) return undefined;
+    var plan = ExcelSimulator.criarPlanilha();
+    var entradas = [];
+    for (var i = 0; i < excelDefault.length; i++) {
+      entradas.push(excelDefault[i].slice());
+      for (var j = 0; j < excelDefault[i].length; j++) {
+        plan.definir(excelCols[j] + (i + 1), excelDefault[i][j]);
+      }
+    }
+    try {
+      excelMontados.add(containerEl);
+      containerEl.innerHTML = excelCss + excelBuildUI(plan, entradas);
+      containerEl.addEventListener("input", onExcelInput);
+      containerEl.addEventListener("click", onExcelClick);
+      var destruido = false;
+
+      function renderValores() {
+        var vals = plan.listar();
+        excelCols.forEach(function (c) {
+          for (var r = 1; r <= excelDefault.length; r++) {
+            var span = containerEl.querySelector("#excel-res-" + (c + r));
+            if (span) span.textContent = excelFmt(vals[c + r]);
+          }
+        });
+        excelComparacao.forEach(function (f) {
+          var sp = containerEl.querySelector("#" + f[2]);
+          if (sp) sp.textContent = excelFmt(ExcelSimulator.calcularFormula(f[1], plan));
+        });
+      }
+
+      function onExcelInput(e) {
+        var alvo = e.target;
+        if (!alvo || !alvo.getAttribute) return;
+        var ref = alvo.getAttribute("data-cell");
+        if (!ref) return;
+        var col = ref.charAt(0);
+        var row = parseInt(ref.slice(1), 10);
+        var j = excelCols.indexOf(col);
+        var i = row - 1;
+        if (i < 0 || i >= entradas.length || j < 0) return;
+        entradas[i][j] = alvo.value;
+        var span = containerEl.querySelector("#excel-res-" + ref);
+        try {
+          plan.definir(ref, alvo.value);
+          renderValores();
+        } catch (err) {
+          if (span) span.textContent = "ERRO: " + ((err && err.message) || err);
+        }
+      }
+
+      function onExcelClick(e) {
+        var alvo = e.target;
+        if (!alvo || !alvo.getAttribute) return;
+        var act = alvo.getAttribute("data-act");
+        if (!act) return;
+        if (act === "excel-console-calcular") {
+          var fm = containerEl.querySelector("#excel-console-fm");
+          var out = containerEl.querySelector("#excel-console-res");
+          if (!fm || !out) return;
+          var txt = (fm.value || "").trim();
+          if (!txt) { out.textContent = "—"; return; }
+          if (txt.charAt(0) !== "=") txt = "=" + txt;
+          out.textContent = excelFmt(ExcelSimulator.calcularFormula(txt, plan));
+        } else if (act === "excel-console-limpar") {
+          var fm2 = containerEl.querySelector("#excel-console-fm");
+          var out2 = containerEl.querySelector("#excel-console-res");
+          if (fm2) fm2.value = "";
+          if (out2) out2.textContent = "—";
+        } else if (act === "excel-ex-verificar") {
+          verificarExercicio(alvo.getAttribute("data-ex"));
+        }
+      }
+
+      function verificarExercicio(id) {
+        var inp = containerEl.querySelector("#excel-ex-" + id);
+        var fb = containerEl.querySelector("#excel-fb-" + id);
+        if (!inp || !fb) return;
+        var txt = (inp.value || "").trim();
+        if (!txt) { fb.innerHTML = '<span class="sim-excel-fb sim-excel-err">Digite uma fórmula.</span>'; return; }
+        if (txt.charAt(0) !== "=") txt = "=" + txt;
+        var res = ExcelSimulator.calcularFormula(txt, plan);
+        var meta = null;
+        for (var k = 0; k < excelExercicios.length; k++) if (excelExercicios[k].id === id) { meta = excelExercicios[k]; break; }
+        if (!meta) return;
+        var esperado = ExcelSimulator.calcularFormula(meta.formula, plan);
+        var ok = conferirExercicio(id, res, esperado);
+        var classe = ok ? "sim-excel-ok" : "sim-excel-err";
+        var label = ok ? "Correto" : "Incorreto";
+        fb.innerHTML = '<span class="sim-excel-fb ' + classe + '">' + esc(label) + " — resultado: " + esc(excelFmt(res)) + "; esperado: " + esc(excelFmt(esperado)) + ". " + esc(meta.explicacao) + "</span>";
+      }
+
+      function conferirExercicio(id, res, esperado) {
+        if (id === "ex1") return typeof res === "number" && typeof esperado === "number" && Math.abs(res - esperado) < 0.01;
+        if (id === "ex2") return typeof res === "string" && typeof res === typeof esperado && res === esperado;
+        if (id === "ex3") return ExcelSimulator.isErro(res) && ExcelSimulator.isErro(esperado) && res.codigo === esperado.codigo;
+        return false;
+      }
+
+      renderValores();
+      return {
+        destroy: function () {
+          if (destruido) return;
+          destruido = true;
+          try { excelMontados["delete"](containerEl); } catch (e) {}
+          try { containerEl.innerHTML = ""; } catch (e) {}
+        }
+      };
+    } catch (e) {
+      try { excelMontados["delete"](containerEl); } catch (e2) {}
+      if (typeof console !== "undefined" && console.error) console.error("ExcelSimulator.mount: falha —", (e && e.message) || e);
+      return undefined;
+    }
+  }
+
   const ExcelSimulator = {
     versaoDeclarada: "Excel 365 (pt-BR) didático — 23 funções reais + aliases em inglês; separador ';' (pt-BR) ou ',' com regra declarada; sem eval; busca real em PROCV/PROCH/PROCX",
     escopo: {
@@ -1423,7 +1690,8 @@
       }
     },
     criarPlanilha: criarPlanilha,
-    ajustarFormulaAoCopiar: ajustarFormulaAoCopiar
+    ajustarFormulaAoCopiar: ajustarFormulaAoCopiar,
+    mount: mountExcel
   };
 
   /* Compatibilidade: no navegador expõe global; em Node permite smoke test. */
