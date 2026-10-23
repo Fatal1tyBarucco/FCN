@@ -11,8 +11,8 @@ O código (`assets/data/*.js`, `assets/js/*.js`, `apostila-ia/index.html`) é a 
 | m1-u1-t1-s1..s8 | Ecossistema M365 | IMPLEMENTADO, renderiza | 3 conjuntos | 21 (do módulo) | 8 | Nenhum | Microsoft Learn (não verificada) | Parcial |
 | m1-u2-t1..t14 | Word | IMPLEMENTADO, renderiza | 3/3 iteriores + const não renderizada | 29 (do módulo) | 17 | Nenhum | Microsoft Learn (não verificada) | Parcial |
 | m1-u3 | Excel (simulador com busca real) | Núcleo carregado (≥23 funções, PROCV/PROCH/PROCX com busca real; parser sem eval; planilha em memória); UI montada no `index.html` (`#excel-app`, P1-D) | 3 no HTML | 0 | 0 | Simulador Excel (UI montada, `#excel-app`) | Microsoft Learn (não verificada) | Parcial |
-| m1-u4 | PowerPoint | Const `curriculumPowerPoint14` não lida — não renderiza | const não renderizada | 0 | 0 | Nenhum | Microsoft Learn | Parcial |
-| m1-u5 | OneDrive | Const `curriculumOneDrive15` não lida — não renderiza | const não renderizada | 0 | 0 | Nenhum | LGPD art.46 | Parcial |
+| m1-u4 | PowerPoint | MIGRADOS e renderizam (1 subtópico cada, 3 exemplos + 2 exercícios); consts antigas comentadas como migradas | 3 exemplos + 2 exercícios | 0 | 0 | Nenhum | Microsoft Learn | Parcial |
+| m1-u5 | OneDrive | MIGRADOS e renderizam (1 subtópico cada, 3 exemplos + 2 exercícios); consts antigas comentadas como migradas | 3 exemplos + 2 exercícios | 0 | 0 | Nenhum | LGPD art.46 | Parcial |
 
 Flashcards M1: **50/50**. Questões M1: **40/40** (autorais, cespe/fgv/fcc/vunesp).
 
@@ -20,7 +20,7 @@ Flashcards M1: **50/50**. Questões M1: **40/40** (autorais, cespe/fgv/fcc/vunes
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
 | m2-u1-t1..t4 | 2.1 Fundamentos de Redes | IMPLEMENTADO, renderiza | 4 conjuntos + exercícios | 10 | 26 | `simulator_network.js`: ping/traceroute simulados, CIDR com cálculo real; UI montada (`#redes-app`, P1-D) | RFCs/IETF (não verificadas) | Parcial |
-| m2-u2..u5 | Modelos OSI/TCP-IP; protocolos; endereçamento e sub-redes; diagnóstico | PENDENTES | — | 18 (restante do piso 40) | 0 | Mesmo simulador de redes | - | 0% (currículo) |
+| m2-u2..u5 | Modelos OSI/TCP-IP; protocolos; endereçamento e sub-redes; diagnóstico | IMPLEMENTADOS e renderizam (5 unidades, 19 tópicos, 52 subtópicos) | — | 18 (restante do piso 40) | 0 | Mesmo simulador de redes | - | currículo completo |
 
 Flashcards M2: 50/50. Questões M2: **40/40** (M1-M3 = 40 cada, cespe/fgv/fcc/vunesp).
 
@@ -71,12 +71,13 @@ Flashcards M7: 50/50. Questões M7: 40/40.
 Flashcards M8: 50/50. Questões M8: 40/40.
 
 ## TOTAL GLOBAIS (P1-D, código em execução)
-- Currículo: **100 tópicos / 209 subtópicos = 309 nós**, carregado e renderizado (8 módulos).
+- Currículo: **123 tópicos / 268 subtópicos = 391 nós**, carregado e renderizado (8 módulos).
 - Flashcards: **404/404** conectados (piso 400 atingido em quantidade).
 - Questões: **365/320** (piso 320 atingido), ≥40 em cada módulo — M1=40, M2=40, M3=40, M4=85, M5=40, M6=40, M7=40, M8=40. Distribuição REAL medida em Node/vm (2026-10-22, deduplicada por `id`): níveis — 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos — 290 múltipla escolha + 75 Certo/Errado; estilos de cobrança — CESPE 216 / FGV 58 / FCC 52 / VUNESP 39 (formato de cobrança, não banca real; todas autorais). **Decisão documentada**: a proporção real difere da sugerida 30/45/25 (Seção 10) — desvio intencional e justificado (a Seção 10 admite ajuste de distribuição quando justificado).
 - Gráficos: 5/5 implementados e carregados.
 - Busca (`SearchApp`) e áudio (`AudioApp`) implementados e conectados.
 - Manifest + service-worker existentes.
+- Persistência (`storage.js`) e referências (`references.js`) implementados e carregados no `index.html` (P1-E).
 - Pendências documentadas: Microsoft Learn, RFCs/IETF, CERT.br; vídeos 0 validados; verificação em navegador real dos 5 simuladores com UI (hoje: `node --check` + smoke Node/vm — nenhum testado em navegador real); testes headless de busca/audio/quiz; acessibilidade e persistence.
 
 ## LIMITAÇÕES DOCUMENTADAS (não inventar)

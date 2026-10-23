@@ -403,13 +403,15 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 #   assets/css/styles.css
 #   assets/js/app.js, navigation.js, simulators.js, simulator_network.js,
 #     simulator_security.js, simulator_prompts.js, simulator_data.js,
-#     flashcards.js, quiz-engine.js, charts.js, search.js, audio.js
+#     flashcards.js, quiz-engine.js, charts.js, search.js, audio.js,
+#     storage.js (novo neste incremento)
 #   assets/data/curriculum.js, curriculum_m2.js, curriculum_m3.js,
 #     curriculum_m4.js, curriculum_m5.js, curriculum_m6.js, curriculum_m7.js,
 #     curriculum_m8.js, flashcards_m1.js, flashcards_m2.js, flashcards_m3.js,
 #     flashcards_m4.js, flashcards_m5.js, flashcards_m6.js, flashcards_m7.js,
 #     flashcards_m8.js, questions.js, questions_m4.js, questions_m5.js,
-#     questions_m6.js, questions_m7.js, questions_m8.js
+#     questions_m6.js, questions_m7.js, questions_m8.js,
+#     references.js (novo neste incremento)
 # (a partir do P1-D, 2026-10-22: os 5 simuladores têm UI — #excel-app,
 #  #redes-app, #seguranca-app, #prompts-app, #dados-app — e o banco de
 #  questões completo funde questions.js + questions_m4/m5/m6/m7/m8.js com
@@ -422,8 +424,12 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 #  defer; manifest + SW registrados condicionalmente. SW só ativa em
 #  http/https — file:// funciona sem ele.)
 # AINDA NÃO IMPLEMENTADOS (arquivos não criados — não citar como operacional):
-#   assets/js/progress.js, storage.js, accessibility.js
-#   assets/data/references.js (referências seguem em
+#   assets/js/progress.js, accessibility.js (ainda não existem)
+#   assets/js/storage.js (criado neste incremento — infraestrutura de
+#     persistência; não consumido pelos módulos existentes, que escrevem
+#     diretamente em localStorage)
+#   assets/data/references.js (criado neste incremento — referências
+#     verificadas e pendentes; fonte primária em
 #     referencias/referencias-verificadas.md, na raiz do repositório)
 
 # Persistência (Seção 14): progresso salvo em localStorage
@@ -475,6 +481,7 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 <script src="assets/data/questions_m6.js"></script>
 <script src="assets/data/questions_m7.js"></script>
 <script src="assets/data/questions_m8.js"></script>
+<script src="assets/data/references.js"></script>
 <script>
   /* Fusão defensiva do banco de questões (P1-D, 2026-10-22).
    * questions.js declara questoesBanco (var global) e os arquivos
@@ -517,6 +524,7 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
     if (window.apostilaDados) window.apostilaDados.questoes = fundidos;
   })();
 </script>
+<script src="assets/js/storage.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/navigation.js"></script>
 <script src="assets/js/simulators.js"></script>
@@ -567,12 +575,14 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
   })();
 </script>
 <!--
-  progress.js, storage.js, accessibility.js e assets/data/references.js
-  continuam NÃO implementados (arquivos inexistentes, tags removidas para
-  evitar 404s silenciosos). O projeto proíbe placeholders — as tags só
-  voltam quando os arquivos reais existirem. Busca (search.js) e áudio
-  (audio.js) JÁ existem e estão carregados acima — escopo e limites
-  documentados nos respectivos cabeçalhos. Os 5 simuladores (simulators.js,
+  progress.js e accessibility.js continuam NÃO implementados (arquivos
+  inexistentes, tags removidas para evitar 404s silenciosos). O projeto
+  proíbe placeholders — as tags só voltam quando os arquivos reais existirem.
+  storage.js e assets/data/references.js FORAM criados neste incremento e
+  estão carregados acima (storage.js antes de app.js; references.js entre os
+  data scripts, após questions_m8.js). Busca (search.js) e áudio (audio.js)
+  JÁ existem e estão carregados acima — escopo e limites documentados nos
+  respectivos cabeçalhos. Os 5 simuladores (simulators.js,
   simulator_network.js, simulator_security.js, simulator_prompts.js,
   simulator_data.js) também JÁ existem e montam suas UIs nos contêineres
   #excel-app / #redes-app / #seguranca-app / #prompts-app / #dados-app via
