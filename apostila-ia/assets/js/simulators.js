@@ -1278,6 +1278,14 @@
         if (typeof valor === "string" && valor.charAt(0) === "=") {
           return planilha.definirFormula(ref, valor);
         }
+        /* Auto-conversão de texto numérico -> número (semântica do Excel: ao
+         * digitar "7.5" ou "7,5" em uma célula, o Excel armazena o número,
+         * não o texto). converterNumero aceita vírgula ou ponto decimal; se
+         * não converter (NaN), mantém como texto (ex.: "Ana"). */
+        if (typeof valor === "string") {
+          const num = converterNumero(valor);
+          if (!Number.isNaN(num)) valor = num;
+        }
         versao++;
         celulas.set(chave, { literal: valor, ast: null, memo: undefined, memoVersao: -1 });
         return planilha;
