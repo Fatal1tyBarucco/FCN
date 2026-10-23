@@ -71,7 +71,7 @@ Flashcards M7: 50/50. Questões M7: 40/40.
 Flashcards M8: 50/50. Questões M8: 40/40.
 
 ## TOTAL GLOBAIS (P1-D, código em execução)
-- Currículo: **123 tópicos / 268 subtópicos = 391 nós**, carregado e renderizado (8 módulos).
+- Currículo: **132 tópicos / 295 subtópicos = 427 nós**, carregado e renderizado (8 módulos).
 - Flashcards: **404/404** conectados (piso 400 atingido em quantidade).
 - Questões: **365/320** (piso 320 atingido), ≥40 em cada módulo — M1=40, M2=40, M3=40, M4=85, M5=40, M6=40, M7=40, M8=40. Distribuição REAL medida em Node/vm (2026-10-22, deduplicada por `id`): níveis — 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos — 290 múltipla escolha + 75 Certo/Errado; estilos de cobrança — CESPE 216 / FGV 58 / FCC 52 / VUNESP 39 (formato de cobrança, não banca real; todas autorais). **Decisão documentada**: a proporção real difere da sugerida 30/45/25 (Seção 10) — desvio intencional e justificado (a Seção 10 admite ajuste de distribuição quando justificado).
 - Gráficos: 5/5 implementados e carregados.

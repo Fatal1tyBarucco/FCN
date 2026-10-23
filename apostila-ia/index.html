@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta name="theme-color" content="#1a73e8">
 <link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon-192.png" type="image/png">
 <style>
   /* Estilo mínimo de contingência para abertura direta file:// */
   body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 1.2rem; background: #f8f9fa; color: #1a1a1a; line-height: 1.55; }
@@ -259,6 +260,12 @@ Justificativa técnica: o sumário usa campos de referência baseados em estilos
 <section id="audio-app" aria-label="Leitura em voz alta">
 </section>
 
+<section id="progress-app" aria-label="Painel consolidado de progresso">
+</section>
+
+<section id="accessibility-app" aria-label="Acessibilidade" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">
+</section>
+
 <section aria-label="Exemplos resolvidos M1.3 Excel (simulador documentado)">
   <h2>Exemplos resolvidos — Módulo 1.3 Excel <span class="label label-parc">3 EXEMPLOS / SIMULADOR DOCUMENTADO</span></h2>
   <p>Conforme Seção 5.4 (exemplos resolvidos) e 7.1 (simuladores). Nenhum resultado inventado: cada exemplo usa cálculos consistentes com o escopo do simulador (`assets/js/simulators.js`). Limitações documentadas explicitamente.</p>
@@ -423,14 +430,13 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 # (busca global + áudio: implementados — search.js e audio.js carregados com
 #  defer; manifest + SW registrados condicionalmente. SW só ativa em
 #  http/https — file:// funciona sem ele.)
-# AINDA NÃO IMPLEMENTADOS (arquivos não criados — não citar como operacional):
-#   assets/js/progress.js, accessibility.js (ainda não existem)
-#   assets/js/storage.js (criado neste incremento — infraestrutura de
-#     persistência; não consumido pelos módulos existentes, que escrevem
-#     diretamente em localStorage)
-#   assets/data/references.js (criado neste incremento — referências
-#     verificadas e pendentes; fonte primária em
-#     referencias/referencias-verificadas.md, na raiz do repositório)
+# IMPLEMENTADOS NESTE INCREMENTO (P1-F):
+#   assets/js/progress.js, accessibility.js (AGORA EXISTEM e estão
+#     carregados acima; contêineres #progress-app e #accessibility-app)
+#   assets/js/storage.js (infraestrutura de persistência; não consumido
+#     pelos módulos existentes, que escrevem diretamente em localStorage)
+#   assets/data/references.js (referências verificadas e pendentes; fonte
+#     primária em referencias/referencias-verificadas.md, na raiz do repositório)
 
 # Persistência (Seção 14): progresso salvo em localStorage
 # com chave 'apostila-ia-progresso'. Limitações do modo privado
@@ -524,6 +530,7 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
     if (window.apostilaDados) window.apostilaDados.questoes = fundidos;
   })();
 </script>
+<script src="assets/js/accessibility.js"></script>
 <script src="assets/js/storage.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/navigation.js"></script>
@@ -535,6 +542,7 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 <script src="assets/js/flashcards.js"></script>
 <script src="assets/js/quiz-engine.js"></script>
 <script src="assets/js/charts.js"></script>
+<script src="assets/js/progress.js"></script>
 <script src="assets/js/search.js" defer></script>
 <script src="assets/js/audio.js" defer></script>
 <script>
@@ -575,24 +583,16 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
   })();
 </script>
 <!--
-  progress.js e accessibility.js continuam NÃO implementados (arquivos
-  inexistentes, tags removidas para evitar 404s silenciosos). O projeto
-  proíbe placeholders — as tags só voltam quando os arquivos reais existirem.
-  storage.js e assets/data/references.js FORAM criados neste incremento e
-  estão carregados acima (storage.js antes de app.js; references.js entre os
-  data scripts, após questions_m8.js). Busca (search.js) e áudio (audio.js)
-  JÁ existem e estão carregados acima — escopo e limites documentados nos
-  respectivos cabeçalhos. Os 5 simuladores (simulators.js,
-  simulator_network.js, simulator_security.js, simulator_prompts.js,
-  simulator_data.js) também JÁ existem e montam suas UIs nos contêineres
-  #excel-app / #redes-app / #seguranca-app / #prompts-app / #dados-app via
-  script inline com guardas (a página não quebra se um núcleo falhar).
-  manifest.webmanifest e service-worker.js JÁ existem (PWA condicional: SW
-  registrado apenas em http/https; file:// funciona sem ele).
-  questions_m6.js e questions_m7.js estão no disco e nas tags de dados, com
-  M6 e M7 INTEGRADOS e renderizando (P1-C/P1-D) — o banco fundido por id
-  totaliza 365 questões autorais; a fusão defensiva no script inline acima
-  cobre apenas a hipótese de um arquivo falhar ao carregar.
+  progress.js e accessibility.js AGORA EXISTEM e estão carregados acima
+  (accessibility.js antes de storage.js/app.js; progress.js junto aos demais
+  JS, após charts.js). Contêineres: #progress-app e #accessibility-app
+  (este último invisível). storage.js e assets/data/references.js já
+  existiam. Busca (search.js) e áudio (audio.js) JÁ existem e estão
+  carregados acima. Os 5 simuladores montam suas UIs nos contêineres
+  #excel-app / #redes-app / #seguranca-app / #prompts-app / #dados-app.
+  manifest.webmanifest e service-worker.js JÁ existem (PWA condicional).
+  questions_m6.js e questions_m7.js INTEGRADOS — banco fundido totaliza
+  365 questões autorais.
 -->
 <script>
   /* Registro condicional de Service Worker — Seção 3.1 do Escrita.txt.

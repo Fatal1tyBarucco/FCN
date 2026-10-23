@@ -85,10 +85,19 @@
     var prefixo;
     if (mascara.indexOf('/') === 0) {
       prefixo = parseInt(mascara.substring(1), 10);
+      if (!Number.isInteger(prefixo) || prefixo < 0 || prefixo > 32) {
+        return 'ERRO: prefixo deve ser um inteiro entre 0 e 32 (ex.: /24).';
+      }
     } else if (mascara.indexOf('.') !== -1) {
       var octetos = mascara.split('.').map(Number);
+      if (octetos.length !== 4 || octetos.some(function (o) { return !Number.isInteger(o) || o < 0 || o > 255; })) {
+        return 'ERRO: máscara decimal inválida — cada octeto deve ser um inteiro entre 0 e 255. Use 255.255.255.0.';
+      }
       var binario = octetos.map(function (o) { return o.toString(2).padStart(8, '0'); }).join('');
       prefixo = binario.split('').filter(function (b) { return b === '1'; }).length;
+      if (binario !== '1'.repeat(prefixo) + '0'.repeat(32 - prefixo)) {
+        return 'ERRO: máscara decimal inválida — os octetos devem formar um bloco contíguo de 1 seguidos de 0 (255.255.255.0).';
+      }
     } else {
       return 'ERRO: máscara deve ser notação CIDR (/24) ou decimal (255.255.255.0).';
     }
