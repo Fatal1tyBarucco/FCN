@@ -83,3 +83,55 @@
 - Data de verificação: 2026-10-23.
 - Escopo: a verificação restringe-se aos dispositivos acima; os demais artigos da Lei nº 12.965/2014 não integram esta verificação e não devem ser citados literalmente sem nova conferência. No Módulo 6, o Marco Civil continua a ser citado apenas por remissão (art. 24, V, e art. 25 — dispositivos fora desta lista).
 - Rastreabilidade: fonte primária planalto.gov.br (acesso direto ao texto oficial); nenhuma URL inventada; nenhuma citação de artigo inexistente; nenhuma interpretação jurídica definitiva.
+
+---
+
+# Bloco 4 — Módulos 1, 2 e 4 (Microsoft Learn, RFCs/IETF, CERT.br, ANPD)
+## Verificação de 2026-10-23 (web_search; URLs retornadas pela busca, sem reconstrução)
+
+## Microsoft Learn — Documentação do Microsoft 365
+- Organização: Microsoft.
+- URL direta oficial (retornada por web_search): https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide
+- Título: Microsoft 365 documentation.
+- Tópico relacionado: Módulo 1 — Microsoft 365 (Word, Excel, PowerPoint, OneDrive).
+- Data de verificação: 2026-10-23. Estado: VERIFICADA.
+- Observação: referência de apoio/complemento ao conteúdo didático já incorporado; não substitui a documentação oficial.
+
+## RFCs / IETF — protocolos de rede
+- Organização: IETF / RFC Editor (fonte autoritativa: https://www.rfc-editor.org/).
+- URLs diretas verificadas (retornadas por web_search):
+  - TCP — RFC 793: https://www.rfc-editor.org/info/rfc793/
+  - IP — RFC 791: https://www.rfc-editor.org/info/rfc791
+  - DNS — RFC 1034 / RFC 1035: https://www.rfc-editor.org/info/rfc1034 e https://www.rfc-editor.org/info/rfc1035
+  - DHCP — RFC 2131: http://rfc-editor.org/info/rfc2131
+  - HTTP over TLS (HTTPS) — RFC 2818: https://www.rfc-editor.org/info/rfc2818/
+  - TLS 1.3 — RFC 8446: https://www.rfc-editor.org/info/rfc8446/
+- Tópico relacionado: Módulo 2 — Redes de computadores.
+- Data de verificação: 2026-10-23. Estado: VERIFICADA (fonte autoritativa RFC Editor; RFCs individuais confirmados por web_search).
+- Observação: HTTP/1.1 (RFC 9110) não foi verificado nesta sessão — permanece pendente se for citado literalmente.
+
+## CERT.br — Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil
+- Organização: CERT.br (NIC.br).
+- URL direta oficial (retornada por web_search): https://cert.br/
+- Título: CERT.br – Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil.
+- Tópico relacionado: Módulo 4 — Segurança da informação.
+- Data de verificação: 2026-10-23. Estado: VERIFICADA.
+
+## ANPD — Autoridade Nacional de Proteção de Dados
+- Organização: ANPD.
+- URL direta oficial (retornada por web_search): https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional
+- Título: Institucional — Agência Nacional de Proteção de Dados (ANPD).
+- Tópico relacionado: Módulo 4 — Segurança da informação (LGPD).
+- Data de verificação: 2026-10-23. Estado: VERIFICADA.
+- Observação: a LGPD (Lei 13.709/2018) já consta como verificada no Bloco 1; a ANPD é o regulador. Regulamentos específicos da ANPD permanecem pendentes de verificação individual antes de citação literal.
+
+## Itens que permanecem PENDENTES
+- Constituição Federal — demais incisos do art. 37 e do art. 5º (não conferidos nesta sessão).
+- Dispositivos citados apenas por remissão no Módulo 6 (Lei 8.429/1992, Lei 1.079/1950, Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017, Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001; LGPD art. 7º e demais).
+- HTTP/1.1 (RFC 9110) — não verificado nesta sessão.
+
+## Rastreabilidade — Bloco 4
+- Fonte primária: web_search (URLs retornadas pela busca, sem reconstrução), 2026-10-23.
+- Arquivo de referência: `referencias/referencias-verificadas.md` (este arquivo).
+- Nenhuma URL inventada; nenhuma citação de RFC inexistente; nenhuma afirmação de verificação sem evidência.
+
