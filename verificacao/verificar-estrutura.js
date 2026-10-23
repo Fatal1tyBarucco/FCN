@@ -23,11 +23,18 @@
  * 2) Aplica o validarQuestao REAL do quiz-engine.js (carregado em contexto vm
  *    com stubs mínimos de DOM, listeners de DOMContentLoaded disparados;
  *    window.QuizApp exposto) e espera 0 reprovadas.
- * 3) Contagem de flashcards (flashcards_m1..m8) → total 404.
- * 4) Cada tag <script src> do index.html resolve para arquivo existente em disco.
+ * 3) Contagem de flashcards (flashcards_m1..m8) → total 404 + mapa exato por
+ *    módulo {1:50, 2:50, 3:50, 4:54, 5:50, 6:50, 7:50, 8:50}.
+ * 4) Cada tag <script src> do index.html resolve para arquivo existente em
+ *    disco, e a contagem total de tags é EXATAMENTE 34 (22 de dados + 12 de JS).
  * 5) manifest.webmanifest é JSON válido e a description menciona "365".
  * 6) Imprime níveis / formatos / estilos (contagens reais) para conferência.
- * 7) Confere que a questão q-m4-32 mantém id/formato e passa no validarQuestao.
+ * 7) q-m4-32: id/formato/gabarito + CONTEÚDO — alternativa B cita os princípios
+ *    reais do art. 3º (neutralidade, privacidade, dados pessoais; sem
+ *    "suscetibilidade"/"portabilidade") e justificativa/analise.D não citam
+ *    mais os arts. 8º/15 como fonte da vedação de filtragem/anonimato (a citação
+ *    correta é art. 9º, §3º, e art. 19 — re-verificação do PR #5, 2026-10-23).
+ * 8) q-m4-44: gabarito === "B" e justificativa cita "art. 3º" e "art. 2º".
  *
  * Sai com exit code 1 se qualquer verificação falhar.
  * ----------------------------------------------------------------------------
@@ -150,14 +157,35 @@ const exprFusao = `(function () {
     if (!ok) reprovadas.push((q && q.id ? q.id : '(sem id)') + ' [' + fonteDe[q.id] + ']');
   });
 
-  /* q-m4-32: conferência dedicada de id/formato/gabarito. */
-  var q32 = fundidos.filter(function (q) { return q && q.id === 'q-m4-32'; })[0] || null;
-  var q32info = q32 ? {
-    id: q32.id, modulo: q32.modulo, formato: q32.formato, estilo: q32.estilo,
-    gabarito: q32.gabarito, passa: (function () {
-      try { return !!(window.QuizApp && window.QuizApp.validarQuestao(q32)); } catch (e) { return false; }
-    })()
-  } : null;
+  /* q-m4-32 + q-m4-44: conferência de id/formato/gabarito e — a partir da
+   * re-verificação do PR #5 (2026-10-23) — de CONTEÚDO: a alternativa B de
+   * q-m4-32 precisa citar os princípios reais do art. 3º (sem a lista
+   * inventada anterior) e a justificativa/análise.D não podem mais citar os
+   * arts. 8º/15 como fonte da vedação de filtragem/anonimato. */
+  function pegar(id) {
+    return fundidos.filter(function (q) { return q && q.id === id; })[0] || null;
+  }
+  function infoQuestao(q) {
+    if (!q) return null;
+    var altB = null;
+    if (Array.isArray(q.alternativas)) {
+      for (var i = 0; i < q.alternativas.length; i++) {
+        if (q.alternativas[i] && q.alternativas[i].letra === 'B') altB = q.alternativas[i].texto || '';
+      }
+    }
+    return {
+      id: q.id, modulo: q.modulo, formato: q.formato, estilo: q.estilo,
+      gabarito: q.gabarito,
+      altB: altB,
+      justificativa: typeof q.justificativa === 'string' ? q.justificativa : '',
+      analiseD: (q.analise && typeof q.analise.D === 'string') ? q.analise.D : '',
+      passa: (function () {
+        try { return !!(window.QuizApp && window.QuizApp.validarQuestao(q)); } catch (e) { return false; }
+      })()
+    };
+  }
+  var q32info = infoQuestao(pegar('q-m4-32'));
+  var q44info = infoQuestao(pegar('q-m4-44'));
 
   return {
     total: fundidos.length,
@@ -167,7 +195,8 @@ const exprFusao = `(function () {
     niveis: niveis,
     formatos: formatos,
     estilos: estilos,
-    q32: q32info
+    q32: q32info,
+    q44: q44info
   };
 })()`;
 
@@ -193,8 +222,9 @@ if (r) {
     r.reprovadas.length ? ('reprovadas: ' + r.reprovadas.join(', ')) : 'todas passaram');
 }
 
-/* -------------------------------------------- conferência dedicada de q-m4-32 */
-secao('4. QUESTÃO q-m4-32 (id/formato preservados + valida)');
+/* --------------------------------------- conferência dedicada de q-m4-32/44 */
+secao('4. q-m4-32 (CONTEÚDO legal do Marco Civil) + q-m4-44 (gabarito)');
+const norm = (s) => String(s == null ? '' : s).toLowerCase();
 if (r && r.q32) {
   const q = r.q32;
   check('q-m4-32 presente', true);
@@ -203,8 +233,41 @@ if (r && r.q32) {
   check('formato === "mc"', q.formato === 'mc', 'real=' + q.formato);
   check('gabarito === "B"', q.gabarito === 'B', 'real=' + q.gabarito);
   check('passa no validarQuestao', q.passa === true);
+
+  // Conteúdo da alternativa B: princípios reais do art. 3º.
+  const altB = norm(q.altB);
+  check('q-m4-32 alt.B cita "neutralidade", "privacidade" e "dados pessoais"',
+    altB.includes('neutralidade') && altB.includes('privacidade') && altB.includes('dados pessoais'),
+    'altB=' + JSON.stringify(q.altB));
+  check('q-m4-32 alt.B NÃO contém "suscetibilidade" nem "portabilidade"',
+    !altB.includes('suscetibilidade') && !altB.includes('portabilidade'));
+
+  // Justificativa/análise.D: sem os artigos falsos como fonte (8º = filtragem,
+  // 15 = anonimato) e com os artigos corretos (9º §3º / 19).
+  const just = norm(q.justificativa);
+  const anaD = norm(q.analiseD);
+  check('q-m4-32 justificativa NÃO inclui "art. 8º veda filtragem"',
+    !just.includes('art. 8º veda'), 'justificativa=' + JSON.stringify(q.justificativa.slice(0, 160) + '…'));
+  check('q-m4-32 justificativa NÃO cita "art. 15"', !just.includes('art. 15'));
+  check('q-m4-32 justificativa cita "art. 9º, §3º" e "(art. 19)"',
+    just.includes('art. 9º, §3º') && just.includes('(art. 19)'));
+  check('q-m4-32 analise.D NÃO cita "(art. 8º)" nem "(art. 15)" como fonte',
+    !anaD.includes('(art. 8º)') && !anaD.includes('(art. 15)'));
+  check('q-m4-32 analise.D cita "art. 9º, §3º" e "art. 19"',
+    anaD.includes('art. 9º, §3º') && anaD.includes('art. 19'));
 } else {
   check('q-m4-32 presente', false, 'não encontrada no banco fundido');
+}
+
+if (r && r.q44) {
+  const q44 = r.q44;
+  check('q-m4-44 presente', true);
+  check('q-m4-44 gabarito === "B"', q44.gabarito === 'B', 'real=' + q44.gabarito);
+  const just44 = norm(q44.justificativa);
+  check('q-m4-44 justificativa cita "art. 3º" e "art. 2º"',
+    just44.includes('art. 3º') && just44.includes('art. 2º'));
+} else {
+  check('q-m4-44 presente', false, 'não encontrada no banco fundido');
 }
 
 /* ------------------------------------------------------------ flashcards 404 */
@@ -229,6 +292,10 @@ for (let m = 1; m <= 8; m++) {
 check('flashcards total === 404', flashTotal === 404, 'real=' + flashTotal + ', esperado=404');
 check('nenhum módulo de flashcards ausente', flashFaltantes.length === 0,
   flashFaltantes.length ? ('ausentes: ' + flashFaltantes.join(', ')) : 'm1..m8 presentes');
+const FLASH_ESPERADO = { 1: 50, 2: 50, 3: 50, 4: 54, 5: 50, 6: 50, 7: 50, 8: 50 };
+const mapOk = Object.keys(FLASH_ESPERADO).every((m) => flashPorModulo[m] === FLASH_ESPERADO[m]);
+check('mapa de flashcards por módulo === {1:50,2:50,3:50,4:54,5:50,6:50,7:50,8:50}', mapOk,
+  'real=' + JSON.stringify(flashPorModulo) + ', esperado=' + JSON.stringify(FLASH_ESPERADO));
 console.log('       detalhe por módulo: ' + JSON.stringify(flashPorModulo));
 
 /* ------------------------------------------- tags <script src> existem em disco */
@@ -244,7 +311,8 @@ const scriptSrcs = [];
 const reSrc = /<script[^>]*\ssrc\s*=\s*["']([^"']+)["'][^>]*>/gi;
 let mm;
 while ((mm = reSrc.exec(idxHtml)) !== null) scriptSrcs.push(mm[1]);
-check('encontradas tags <script src> (' + scriptSrcs.length + ')', scriptSrcs.length > 0);
+check('tags <script src> do index.html === 34', scriptSrcs.length === 34,
+  'real=' + scriptSrcs.length + ', esperado=34');
 let externas = 0, locais = 0, ausentes = [];
 for (const src of scriptSrcs) {
   if (/^(https?:)?\/\//i.test(src) || /^(data|blob):/i.test(src)) { externas++; continue; }

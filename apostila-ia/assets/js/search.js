@@ -609,6 +609,11 @@
       resultados = buscar(q, estado.filtros);
       if (resultados.length > 0) {
         statusTexto = esc(resultados.length) + ' resultado(s) para "' + esc(q) + '"';
+      } else {
+        // Sem resultados: o status também precisa refletir a busca — antes
+        // continuava "N entradas indexadas · Digite para buscar." enquanto o
+        // corpo já dizia "Nenhum resultado".
+        statusTexto = '0 resultado(s) para "' + esc(q) + '"';
       }
     }
 

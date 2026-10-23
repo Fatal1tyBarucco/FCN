@@ -18,7 +18,7 @@ Revisão P1-D (2026-10-22): reposicionamento do estado para a branch `feat/p1d-b
 - Simuladores: **5/5 com UI montada no `index.html`** (P1-D, 2026-10-22) nos contêineres `#excel-app`, `#redes-app`, `#seguranca-app`, `#prompts-app` e `#dados-app` — Excel (`simulators.js`, 23 funções, busca real PROCV/PROCH/PROCX), Redes (`simulator_network.js`, ping/traceroute simulados e CIDR com cálculo real), Segurança (`simulator_security.js`, triagem defensiva de phishing), Prompts (`simulator_prompts.js`, engenharia de prompts) e Dados (`simulator_data.js`, dados/estatística). Montagem inline com guardas triplas (contêiner presente, global presente, `mount()` não lança) — não quebra se faltar contêiner/global. Todos são **simulações didáticas locais** (sem comandos reais no SO, sem ataques reais, sem IA real); verificação: `node --check` + smoke test em Node/vm; **nenhum testado em navegador real**.
 - Busca (`window.SearchApp`) e áudio (`window.AudioApp`) implementados, carregados e conectados no HTML.
 - Manifest + service-worker (PWA) existentes e referenciados.
-- Referências: LGPD (13.709/2018), LAI (12.527/2011), Lei de Governo Digital (14.129/2021) verificadas com URL+data; pendentes: Microsoft Learn, RFCs/IETF, CERT.br, Marco Civil. Vídeos: 0 validados.
+- Referências: LGPD (13.709/2018), LAI (12.527/2011), Lei de Governo Digital (14.129/2021) verificadas com URL+data; Marco Civil (12.965/2014) verificada em 2026-10-23 — https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm (arts. 2º, 3º, 7º, 9º § 3º, 15 e 19); pendentes: Microsoft Learn, RFCs/IETF, CERT.br. Vídeos: 0 validados.
 
 ## MÓDULO 1 (parcial)
 - 1.1 Ecossistema M365 — IMPLEMENTADO, renderiza.
@@ -49,11 +49,11 @@ Revisão P1-D (2026-10-22): reposicionamento do estado para a branch `feat/p1d-b
 - Gráficos 5/5 carregados e funcionais (SVG próprio). 40 questões autorais conectadas (questions_m8.js, P1-D).
 
 ## TOTAL SUBTÓPICOS COM CONTEÚDO — CARREGADO E RENDERIZADO (P1-D)
-Todos os 8 módulos. **100 tópicos + 209 subtópicos = 309 nós**. Flashcards **404/404** conectados. Questões **365/320** (piso de quantidade atingido em todos os módulos). Gráficos 5/5. Referências mais pendentes: Microsoft Learn, RFCs/IETF, CERT.br, Marco Civil. Vídeos: nenhum validado.
+Todos os 8 módulos. **100 tópicos + 209 subtópicos = 309 nós**. Flashcards **404/404** conectados. Questões **365/320** (piso de quantidade atingido em todos os módulos). Gráficos 5/5. Referências: Marco Civil (12.965/2014) verificada em 2026-10-23 (URL+dispositivos em `referencias/referencias-verificadas.md`); mais pendentes: Microsoft Learn, RFCs/IETF, CERT.br. Vídeos: nenhum validado.
 
 ## O QUE FALTA PARA OS CRITERIOS DE ACEITE (Secao 18)
 1. UI dos simuladores: **montada para os 5** (`#excel-app`, `#redes-app`, `#seguranca-app`, `#prompts-app`, `#dados-app`; P1-D, 2026-10-22) — resta verificar em navegador real (hoje: `node --check` + smoke Node/vm; nenhum testado em navegador real).
 2. Verificação headless de busca, áudio e quiz (motor de simulados).
-3. Referências restantes (Microsoft Learn, RFCs/IETF, CERT.br, Marco Civil) e vídeos validados.
+3. Referências restantes (Microsoft Learn, RFCs/IETF, CERT.br — a Marco Civil foi verificada em 2026-10-23) e vídeos validados.
 4. Testes finais de acessibilidade e persistence com evidências.
 5. Relatório final de conformidade.

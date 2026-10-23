@@ -191,7 +191,15 @@
       falarParte();
     };
     utterance.onerror = function (e) {
-      setStatusoMensagem('Erro na síntese: ' + esc((e && e.error) ? e.error : 'desconhecido'));
+      var erro = (e && e.error) ? e.error : 'desconhecido';
+      // Erro TARDIO de cancelamento: interromperFala()/destroy() chamaram
+      // speechSynthesis.cancel() e o navegador dispara onerror("canceled" |
+      // "interrupted") DEPOIS — quando ele chega, a fala já foi encerrada
+      // (falando === false) e a mensagem "Interrompido." já foi exibida.
+      // Nesse caso, apenas retorne: não sobrescrever o status com
+      // "Erro na síntese: canceled" nem finalizar de novo.
+      if ((erro === 'canceled' || erro === 'interrupted') && ESTADO.falando === false) return;
+      setStatusoMensagem('Erro na síntese: ' + esc(erro));
       finalizarFala();
     };
 
@@ -210,7 +218,7 @@
     ESTADO.pausado = false;
     ESTADO.indiceAtual = 0;
     // partes/texto atual mantidos para possível nova reprodução
-    renderizar(); // atualiza botões/estado
+    atualizarControles(); // só os 4 botões — sem re-render (preserva textarea/foco)
   }
 
   function setStatusoMensagem(txt) {
@@ -226,6 +234,26 @@
     if (!ESTADO.container || !ESTADO.container.querySelector) return;
     var s = ESTADO.container.querySelector('#aud-status');
     if (s) s.textContent = ESTADO.mensagem || '';
+  }
+
+  /* Atualiza APENAS o atributo .disabled dos 4 botões de controle (#aud-play,
+   * #aud-pause, #aud-resume, #aud-stop), com a MESMA lógica do renderizar()
+   * (temApi / falando / pausado), SEM re-renderizar o innerHTML do painel.
+   * Motivo do defeito corrigido: iniciarFala() não re-renderizava, então os
+   * botões ficavam com o estado antigo (play habilitado, pause/stop
+   * desabilitados) durante toda a fala. Re-render aqui destruiria a textarea
+   * e perderia textoDigitado/foco — por isso só tocamos os botões. */
+  function atualizarControles() {
+    if (!ESTADO.container || !ESTADO.container.querySelector) return;
+    var api = temApi();
+    var play = ESTADO.container.querySelector('#aud-play');
+    var pause = ESTADO.container.querySelector('#aud-pause');
+    var resume = ESTADO.container.querySelector('#aud-resume');
+    var stop = ESTADO.container.querySelector('#aud-stop');
+    if (play) play.disabled = (!api || !!ESTADO.falando);
+    if (pause) pause.disabled = (!api || !ESTADO.falando);
+    if (resume) resume.disabled = (!api || !ESTADO.pausado);
+    if (stop) stop.disabled = (!api || (!ESTADO.falando && !ESTADO.pausado));
   }
 
   function obterTextoDaTela() {
@@ -265,6 +293,7 @@
     try { window.speechSynthesis.cancel(); } catch (e) {}
     ESTADO.falando = true; /* flag ANTES de falarParte — senão o guard aborta o 1º play */
     falarParte();
+    atualizarControles(); // re-render não ocorre aqui: só os botões mudam
     return true;
   }
 
@@ -419,7 +448,7 @@
     ESTADO.pausado = true;
     ESTADO.falando = false;
     setStatusoMensagem('Pausado.');
-    renderizar();
+    atualizarControles(); // sem re-render: preserva textoDigitado/foco
   }
 
   function retomarFala() {
@@ -428,7 +457,7 @@
     ESTADO.pausado = false;
     ESTADO.falando = true;
     setStatusoMensagem('Retomando ' + (ESTADO.indiceAtual + 1) + ' de ' + ESTADO.totalPartes);
-    renderizar();
+    atualizarControles(); // sem re-render: preserva textoDigitado/foco
   }
 
   function interromperFala() {
@@ -437,7 +466,7 @@
     ESTADO.pausado = false;
     ESTADO.indiceAtual = 0;
     setStatusoMensagem('Interrompido.');
-    renderizar();
+    atualizarControles(); // sem re-render: preserva textoDigitado/foco
   }
 
   function lerConteudoDaTela() {

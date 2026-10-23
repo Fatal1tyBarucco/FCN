@@ -38,7 +38,7 @@ Flashcards M3: 50/50. Questões M3: **40/40**.
 | m4-u1 (4 tópicos, 12 subtópicos) | Fundamentos de segurança | IMPLEMENTADO, renderiza | presentes | 54 conectados | 0 (no banco M4=85) | Simulador defensivo de phishing: UI montada (`#seguranca-app`, P1-D; triagem didática, sem ataques reais) | LGPD verificada (art. 2º, 18, 46) | Parcial |
 | m4-u2 | Malwares e ferramentas defensivas | IMPLEMENTADO, renderiza | presentes | idem | idem | — | LGPD verificada | Parcial |
 | m4-u3 | Ameaças e ataques | IMPLEMENTADO, renderiza | presentes | idem | idem | Simulador defensivo de phishing: UI montada (`#seguranca-app`, P1-D; triagem didática, sem ataques reais) | — | Parcial |
-| m4-u4 | Legislação e conformidade | IMPLEMENTADO, renderiza | presentes | idem | idem | — | LGPD verificada; Marco Civil não | Parcial |
+| m4-u4 | Legislação e conformidade | IMPLEMENTADO, renderiza | presentes | idem | idem | — | LGPD verificada; Marco Civil verificada (2026-10-23) | Parcial |
 
 Flashcards M4: 54/54 conectados. Questões M4: **85/40** (piso atingido; cespe/fgv/fcc/vunesp).
 
@@ -77,7 +77,7 @@ Flashcards M8: 50/50. Questões M8: 40/40.
 - Gráficos: 5/5 implementados e carregados.
 - Busca (`SearchApp`) e áudio (`AudioApp`) implementados e conectados.
 - Manifest + service-worker existentes.
-- Pendências documentadas: Microsoft Learn, RFCs/IETF, CERT.br, Marco Civil; vídeos 0 validados; verificação em navegador real dos 5 simuladores com UI (hoje: `node --check` + smoke Node/vm — nenhum testado em navegador real); testes headless de busca/audio/quiz; acessibilidade e persistence.
+- Pendências documentadas: Microsoft Learn, RFCs/IETF, CERT.br; vídeos 0 validados; verificação em navegador real dos 5 simuladores com UI (hoje: `node --check` + smoke Node/vm — nenhum testado em navegador real); testes headless de busca/audio/quiz; acessibilidade e persistence.
 
 ## LIMITAÇÕES DOCUMENTADAS (não inventar)
 - Todos os resultados de simulador foram verificados com node --check + smoke Node/vm/headless Chromium; **nenhum dos 5 simuladores com UI foi testado em navegador real** (limite declarado); **nenhum** resultado apresentado como operacional sem evidência.

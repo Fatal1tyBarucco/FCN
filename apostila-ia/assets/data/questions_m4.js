@@ -27,7 +27,11 @@
  * e q-m4-42 não repetem a lista inventada e mantêm citações corretas —
  * preservadas; a q-m4-44 foi corrigida em 2026-10-23 (imprecisão léxica
  * sobre princípios/fundamentos do Marco Civil e typo), com gabarito e
- * alternativas intactos. */
+ * alternativas intactos. Re-verificação do PR #5 (2026-10-23): a análise de
+ * q-m4-70 foi traduzida para pt-BR e as citações dos arts. 8º e 15 da q-m4-32
+ * (usados como fonte de vedação de filtragem e de anonimato) foram corrigidas
+ * para o texto oficial — art. 9º, §3º, e art. 19 —, com fonte re-verificada
+ * no planalto.gov.br em 2026-10-23. */
 
 const moduleQuestions4 = [
 
@@ -811,17 +815,17 @@ const moduleQuestions4 = [
       { letra: "E", texto: "A liberdade absoluta do provedor para compartilhar dados de conexão dos usuários com terceiros sem autorização legal." }
     ],
     gabarito: "B",
-    justificativa: "O art. 3º do Marco Civil da Internet (Lei nº 12.965/2014) lista os princípios da disciplina, dentre eles a proteção da privacidade (II), a proteção de dados pessoais (III) e a preservação e a garantia da neutralidade de rede (IV) — o que confirma a alternativa B. As alternativas A e C transcrevem, na verdade, fundamentos do art. 2º (reconhecimento da escala mundial da rede, pluralidade e diversidade, abertura e colaboração; livre iniciativa, livre concorrência, defesa do consumidor e finalidade social da rede), e não princípios do art. 3º. A alternativa D é falsa: o Marco Civil não admite censura ou regulamentação prévia de conteúdos (art. 8º veda filtragem, bloqueio e censura de recursos da rede, salvo por decisão judicial). A alternativa E é falsa: o acesso a dados de conexão de usuários pelo provedor exige hipótese legal ou ordem judicial (art. 7º), não liberdade absoluta de compartilhamento.",
+    justificativa: "O art. 3º do Marco Civil da Internet (Lei nº 12.965/2014) lista os princípios da disciplina, dentre eles a proteção da privacidade (II), a proteção de dados pessoais (III) e a preservação e a garantia da neutralidade de rede (IV) — o que confirma a alternativa B. As alternativas A e C transcrevem, na verdade, fundamentos do art. 2º (reconhecimento da escala mundial da rede, pluralidade e diversidade, abertura e colaboração; livre iniciativa, livre concorrência, defesa do consumidor e finalidade social da rede), e não princípios do art. 3º. A alternativa D é falsa: o Marco Civil não prevê regulamentação prévia de conteúdos; o art. 9º, §3º, veda bloquear, monitorar, filtrar ou analisar o conteúdo dos pacotes de dados, ressalvadas as hipóteses do §1º, e a responsabilização por conteúdo gerado por terceiros depende de ordem judicial específica (art. 19). A alternativa E é falsa: o acesso a dados de conexão de usuários pelo provedor exige hipótese legal ou ordem judicial (art. 7º), não liberdade absoluta de compartilhamento.",
     analise: {
       A: "INCORRETA. Escala mundial da rede, pluralidade e diversidade, e abertura e colaboração são FUNDAMENTOS da disciplina (art. 2º, I, III e IV), não princípios do art. 3º.",
       B: "CORRETA. Neutralidade de rede (art. 3º, IV), proteção da privacidade (art. 3º, II) e proteção de dados pessoais (art. 3º, III) são princípios expressos do art. 3º.",
       C: "INCORRETA. Livre iniciativa, livre concorrência, defesa do consumidor e finalidade social da rede são FUNDAMENTOS (art. 2º, V e VI), não princípios do art. 3º.",
-      D: "INCORRETA. O Marco Civil veda filtragem, bloqueio e censura de conteúdos da rede salvo por decisão judicial (art. 8º); o anonimato do autor, acompanhado de responsabilização perante terceiros, é admitido (art. 15) — não é princípio a regulamentação prévia nem a vedação absoluta do anonimato.",
+      D: "INCORRETA. Não há princípio de regulamentação prévia de conteúdos; a vedação de bloquear/filtrar pacotes está no art. 9º, §3º (com as ressalvas do §1º), e a remoção de conteúdo por ordem judicial é tratada no art. 19. A menção ao anonimato não corresponde a princípio do art. 3º; o art. 15 trata da guarda de registros de acesso a aplicações, não de anonimato.",
       E: "INCORRETA. O acesso a dados de conexão pelos provedores exige hipótese legal ou ordem judicial (art. 7º) — não há liberdade absoluta de compartilhamento sem autorização legal."
     },
     regra: "Marco Civil: art. 2º = FUNDAMENTOS; art. 3º = PRINCÍPIOS. Neutralidade de rede, proteção da privacidade e proteção de dados pessoais são PRINCÍPIOS (art. 3º, II, III e IV).",
     pegadinha: "Fundamentos (art. 2º) e princípios (art. 3º) são listas distintas — não misture as duas. Pluralidade e diversidade e livre iniciativa são fundamentos; neutralidade, privacidade e dados pessoais são princípios.",
-    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet), arts. 2º e 3º — texto oficial verificado em planalto.gov.br (https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm) em 2026-10-22"
+    fonte: "Lei nº 12.965/2014, arts. 2º, 3º, 7º, 9º, §3º, e 19 — texto oficial verificado em planalto.gov.br (https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm) em 2026-10-23."
   },
 
   { id: "q-m4-33", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -1761,7 +1765,7 @@ const moduleQuestions4 = [
       { letra: "E", texto: "Uso de backup automático." }
     ],
     gabarito: "B",
-    justificativa: "Para comunicação autêntica, segura e integida, o uso combinado de criptografia, assinatura digital e certificados digitais é o mais eficaz — garantindo confidencialidade, integridade, autenticidade e não repúdio. Uso de firewalls apenas (alternativa A incorreta); desativar firewalls (alternativa C incorreta); senha única (alternativa D incorreta); backup automático (alternativa E incorreta).",
+    justificativa: "Para comunicação autêntica, segura e íntegra, o uso combinado de criptografia, assinatura digital e certificados digitais é o mais eficaz — garantindo confidencialidade, integridade, autenticidade e não repúdio. Uso de firewalls apenas (alternativa A incorreta); desativar firewalls (alternativa C incorreta); senha única (alternativa D incorreta); backup automático (alternativa E incorreta).",
     analise: {
       A: "INCORRETA. Firewalls, isoladamente, não garantem autenticidade nem proteção de ponta a ponta.",
       B: "CORRETA. Criptografia + assinatura + certificados digitais garantem autenticidade, integridade e confidencialidade.",
