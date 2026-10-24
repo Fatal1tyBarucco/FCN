@@ -1,7 +1,7 @@
 /* styles.css - Estilos responsivos para a Apostila Web Interativa */
 
 :root {
-  --primary-color: #1a73e8;
+  --primary-color: #174ea6;
   --secondary-color: #34a853;
   --background-color: #f8f9fa;
   --text-color: #202124;
@@ -76,12 +76,28 @@ footer {
   margin-top: 2rem;
 }
 
+/* Touch targets mínimos (WCAG 2.5.5) */
+.fc-btn,
+.chart-controles button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Responsivo <480px */
+@media (max-width: 480px) {
+  header { padding: 0.75rem 1rem; }
+  main { padding: 1rem; }
+  section { padding: 1rem; }
+  .chart-params input[type=text] { width: 100%; }
+  .chart-params input[type=number] { width: 100%; }
+}
+
 /* Tema escuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #202124;
     --text-color: #e8eaeb;
-    --primary-color: #3c4043;
+    --primary-color: #8ab4f8;
   }
   
   body {
@@ -93,4 +109,5 @@ footer {
     background: #2c3034;
     color: var(--text-color);
   }
+  footer { color: #bdc1c6; }
 }

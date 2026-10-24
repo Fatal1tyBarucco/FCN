@@ -38,7 +38,7 @@
   .fc-verso { margin: .4rem 0; }
   .fc-explicacao { background: #f1f3f4; border-radius: 8px; padding: .5rem .7rem; font-size: .92rem; }
   .fc-botoes { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
-  .fc-btn { border-radius: 8px; padding: .45rem .7rem; border: 1px solid transparent; cursor: pointer; font-size: .92rem; }
+  .fc-btn { border-radius: 8px; padding: .45rem .7rem; border: 1px solid transparent; cursor: pointer; font-size: .92rem; min-height: 44px; min-width: 44px; }
   .fc-btn small { display: block; font-size: .72rem; opacity: .85; }
   .fc-btn-ok { background: #e6f4ea; color: #137333; border-color: #137333; }
   .fc-btn-dif { background: #fff8e1; color: #b06000; border-color: #b06000; }
@@ -55,6 +55,8 @@
     .fc-btn-err { background: #3d1d1a; color: #f28b82; border-color: #f28b82; }
     .fc-mensagem { background: #1e3050; color: #d2e3fc; border-color: #8ab4f8; }
     .fc-backup { border-top-color: #5f6368; }
+    .fc-meta, .chart-meta, .chart-tabela caption { color: #bdc1c6; }
+    footer { color: #bdc1c6; }
   }
   footer { text-align: center; color: #5f6368; font-size: .85rem; margin-top: 2rem; }
   pre { background: #0b1d36; color: #e8eaed; padding: .8rem 1rem; border-radius: 8px; overflow-x: auto; font-size: .9rem; }
@@ -67,7 +69,7 @@
   .chart-didatica dt { font-weight: 700; color: #143a6b; margin-top: .45rem; }
   .chart-didatica dd { margin: .1rem 0 0 .9rem; }
   .chart-controles { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0; }
-  .chart-controles button { border-radius: 8px; padding: .35rem .65rem; border: 1px solid #1a73e8; background: #e8f0fe; color: #174ea6; cursor: pointer; font-size: .88rem; }
+  .chart-controles button { border-radius: 8px; padding: .35rem .65rem; border: 1px solid #1a73e8; background: #e8f0fe; color: #174ea6; cursor: pointer; font-size: .88rem; min-height: 44px; min-width: 44px; }
   .chart-params { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; margin: .5rem 0; font-size: .9rem; }
   .chart-params input[type=text] { width: 15rem; max-width: 100%; }
   .chart-params input[type=number] { width: 4.5rem; }
@@ -123,6 +125,13 @@
     .chart-stats thead th { background: #3c4043; }
     .chart-stats tbody th { background: #202124; }
     .chart-aviso, .chart-erro { background: #3d1d1a; border-color: #f28b82; color: #f28b82; }
+  }
+  @media (max-width: 480px) {
+    body { padding: .8rem; }
+    header { padding: .9rem .8rem; }
+    section { padding: .8rem .9rem; }
+    .chart-params input[type=text] { width: 100%; }
+    .chart-params input[type=number] { width: 100%; }
   }
 </style>
 </head>

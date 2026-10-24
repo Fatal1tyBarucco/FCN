@@ -1,16 +1,18 @@
 /* references.js — REFERÊNCIAS VERIFICADAS (Seção 12.3 do Escrita.txt).
  *
  * Fonte de verdade para as URLs/datas: referencias/referencias-verificadas.md
- * (raiz do repositório; cópia publicada em apostila-ia/inventario? não — ver
- *  apostila-ia/inventario e apostila-ia/matriz para os .md de governança).
+ * (raiz do repositório).
  *
  * Cada item: { id, titulo, organizacao, url, topico, dataVerificacao, status,
  * dispositivos }. status ∈ { "verificado", "pendente" }. Itens "pendente"
  * têm url = null e dataVerificacao = null — NENHUMA URL inventada.
  *
  * Apenas referências com URL primária + data registrada no arquivo acima
- * entram como "verificado". Pendentes permanecem explicitamente pendentes
- * até verificação real (não citar como validadas).
+ * e conferidas por acesso direto ao texto oficial (planalto.gov.br) entram
+ * como "verificado". Itens verificados apenas via web_search (URLs retornadas
+ * pela busca, sem acesso direto) permanecem "pendente" até conferência
+ * direta — por isso Microsoft Learn, RFCs/IETF, CERT.br e ANPD (orgão e
+ * regulamentos) NÃO são marcados como validados aqui.
  *
  * SEM eval. SEM fetch. Funciona em file:// (dados literais).
  */
@@ -66,6 +68,9 @@ const references = [
     status: "verificado",
     dispositivos: ["art. 2º", "art. 3º", "art. 7º", "art. 9º, § 3º", "art. 15", "art. 19"]
   },
+
+  /* ---------- PENDENTES (url = null, dataVerificacao = null) ---------- */
+
   {
     id: "ref-microsoft-learn-m365",
     titulo: "Microsoft 365 documentation — Microsoft Learn",
@@ -97,21 +102,31 @@ const references = [
     dispositivos: null
   },
   {
+    id: "ref-pendente-rfc-9110-http11",
+    titulo: "HTTP/1.1 — RFC 9110 (não verificado nesta sessão)",
+    organizacao: "IETF / RFC Editor",
+    url: null,
+    topico: "M2 — Redes de computadores",
+    dataVerificacao: null,
+    status: "pendente",
+    dispositivos: null
+  },
+  {
+    id: "ref-pendente-anpd",
+    titulo: "Autoridade Nacional de Proteção de Dados (ANPD) — regulador da LGPD (órgão e regulamentos)",
+    organizacao: "ANPD",
+    url: null,
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: null,
+    status: "pendente",
+    dispositivos: null
+  },
+  {
     id: "ref-cert-br",
     titulo: "CERT.br — Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil",
     organizacao: "CERT.br (NIC.br)",
     url: "https://cert.br/",
     topico: "M4 — Segurança da informação (malwares, defesa)",
-    dataVerificacao: "2026-10-23",
-    status: "verificado",
-    dispositivos: null
-  },
-  {
-    id: "ref-anpd",
-    titulo: "Agência Nacional de Proteção de Dados (ANPD) — regulador da LGPD",
-    organizacao: "ANPD (Gov.br)",
-    url: "https://www.gov.br/anpd/pt-br",
-    topico: "M4 — Segurança da informação (LGPD)",
     dataVerificacao: "2026-10-23",
     status: "verificado",
     dispositivos: null
