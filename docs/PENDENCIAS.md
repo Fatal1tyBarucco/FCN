@@ -8,6 +8,7 @@
 6. Sincronizar inventario/ e matriz/ (raiz) com apostila-ia/ (cópias) a cada mudança.
 7. FASE 1 (2026-10-23): Escrita.txt lida integralmente (1207 linhas, 12 seções). Inventário (427 nós), matriz (365 questões/404 flashcards/5 simuladores) e plano confirmados; todos 8 docs em docs/ atualizados.
 8. FASE 2 (2026-10-23): Repo inspecionado — M1–M8 renderizam (AGENTS.md verificado), 38 tags <script>, 365 questões, 400 flashcards, 5 simuladores, 5 gráficos, persistência (storage.js), referências (references.js), busca (search.js), áudio (audio.js), PWA (manifest + SW). Nenhum arquivo de código modificado ainda (Fase 3 em início).
+9. FASE 3 INICIADA (2026-10-23, orquestrador multiagente): arquitetura e infraestrutura funcional — preservar funcionalidades válidas do repo (navigation.js, quiz-engine.js, simuladores) e implementar conforme requisitos não atendidos (referências pendentes, testes headless de busca/áudio/accessibility, sincronia docs↔apostila-ia). Subagentes delegados: arquiteto (planejamento), conteudo (currículo didático), programa (implementação HTML/JS), revisor (auditoria independente). Nenhum subagente ainda executado — aguardando divisão de tarefas conforme contrato de trabalho.
 10. PR #10 criado (feat/fase-3-orquestrador-docs -> main), merge local feito (git merge --no-ff, commit a17b8cd), push para origin/main BLOQUEADO por approvals.deny (regra configurada; nao inventado — comando rejeitado pelo backend). Substituicao registrada e revisao independente confirmada antes do merge. Nenhum arquivo assets/js/ alterado.
 11. FASE 4 — CONCLUÍDA (2026-10-24, esta execução): conteúdo didático de todos os 8 módulos verificado diretamente nos arquivos `assets/data/*.js` (404 flashcards, 365 questões autorais, 8 currículos). Nenhum placeholder substituído por conteúdo real; todos os arquivos literais preservados. Documentos `docs/INVENTARIO_CURRICULAR.md`, `docs/MATRIZ_COBERTURA.md`, `docs/PLANO_EXECUCAO.md`, `docs/DECISOES_ARQUITETURAIS.md` criados/atualizados. Fases 5-8 permanecem conforme registro anterior.
 12. Substituição de modelos/ferramentas: nenhuma substituição necessária.
@@ -37,4 +38,3 @@
 - Arquivo de evidência: docs/REVISAO_INDEPENDENTE_FASE5.md.
 - Nenhum modelo de IA substituído; nenhum arquivo de conteúdo alterado.
 - Nenhuma funcionalidade declarada completa sem evidência real.
-
