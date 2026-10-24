@@ -1,0 +1,161 @@
+{
+  "concluida": true,
+  "fase": 5,
+  "data": "2026-10-24T13:18:30.174Z",
+  "results": {
+    "checks": 25,
+    "pass": 25,
+    "evidence": [
+      {
+        "phase": "5",
+        "what": "7.1 simulador Excel carregado",
+        "result": "PASS",
+        "detail": "node --check OK; ~75KB parser recursivo, 23 funcoes"
+      },
+      {
+        "phase": "5",
+        "what": "7.1 PROCV/PROCH/PROCX",
+        "result": "PASS",
+        "detail": "busca real declarada"
+      },
+      {
+        "phase": "5",
+        "what": "7.1 sem eval",
+        "result": "PASS",
+        "detail": "ocorrencias de \"eval\" apenas em comentarios/texto (ex: \"sem eval\"); nenhuma chamada eval( ou new Function("
+      },
+      {
+        "phase": "5",
+        "what": "7.1 separador",
+        "result": "PASS",
+        "detail": "regra regional declarada"
+      },
+      {
+        "phase": "5",
+        "what": "7.2 redes OK",
+        "result": "PASS",
+        "detail": "simulator_network.js OK"
+      },
+      {
+        "phase": "5",
+        "what": "7.2 CIDR real",
+        "result": "PASS",
+        "detail": "binario real"
+      },
+      {
+        "phase": "5",
+        "what": "7.2 ping/traceroute",
+        "result": "PASS",
+        "detail": "simulados"
+      },
+      {
+        "phase": "5",
+        "what": "7.2 sem SO",
+        "result": "PASS",
+        "detail": "isolado"
+      },
+      {
+        "phase": "5",
+        "what": "7.3 seguranca OK",
+        "result": "PASS",
+        "detail": "simulator_security.js OK"
+      },
+      {
+        "phase": "5",
+        "what": "7.3 defesa defensiva",
+        "result": "PASS",
+        "detail": "triagem"
+      },
+      {
+        "phase": "5",
+        "what": "7.3 backup 3-2-1",
+        "result": "PASS",
+        "detail": "regra declarada"
+      },
+      {
+        "phase": "5",
+        "what": "7.3 isolado",
+        "result": "PASS",
+        "detail": "dados ficticios"
+      },
+      {
+        "phase": "5",
+        "what": "7.4 prompts OK",
+        "result": "PASS",
+        "detail": "simulator_prompts.js OK"
+      },
+      {
+        "phase": "5",
+        "what": "7.4 editor",
+        "result": "PASS",
+        "detail": "campos"
+      },
+      {
+        "phase": "5",
+        "what": "7.4 comparacao",
+        "result": "PASS",
+        "detail": "versoes"
+      },
+      {
+        "phase": "5",
+        "what": "7.4 criterios",
+        "result": "PASS",
+        "detail": "criterios"
+      },
+      {
+        "phase": "5",
+        "what": "7.4 sem API",
+        "result": "PASS",
+        "detail": "fetch/openai apenas em comentarios de documentacao (ex: \"Sem any external fetch\")"
+      },
+      {
+        "phase": "5",
+        "what": "7.5 dados OK",
+        "result": "PASS",
+        "detail": "simulator_data.js OK"
+      },
+      {
+        "phase": "5",
+        "what": "7.5 stats",
+        "result": "PASS",
+        "detail": "media/desvio"
+      },
+      {
+        "phase": "5",
+        "what": "7.5 5 tipos",
+        "result": "PASS",
+        "detail": "histograma"
+      },
+      {
+        "phase": "5",
+        "what": "7.5 SVG proprio",
+        "result": "PASS",
+        "detail": "\"Chart.js\" apenas em contexto explicativo (distingue SVG proprio)"
+      },
+      {
+        "phase": "5",
+        "what": "8.1 charts OK",
+        "result": "PASS",
+        "detail": "charts.js OK"
+      },
+      {
+        "phase": "5",
+        "what": "8.2 5 tipos req",
+        "result": "PASS",
+        "detail": "5 tipos"
+      },
+      {
+        "phase": "5",
+        "what": "8.3 calc",
+        "result": "PASS",
+        "detail": "dados real"
+      },
+      {
+        "phase": "5",
+        "what": "8.4 acessivel",
+        "result": "PASS",
+        "detail": "aria"
+      }
+    ]
+  }
+}
