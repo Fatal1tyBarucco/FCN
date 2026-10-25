@@ -320,11 +320,11 @@ const moduleQuestions8 = [
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites': o IIQ é Q3 − Q1, e os limites de Tukey para identificar outliers são Q1 − 1,5×IIQ e Q3 + 1,5×IIQ.",
     justificativa: "O currículo define os limites de Tukey em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; cada bigode vai até o valor observado mais extremo que permanece dentro do limite correspondente, enquanto valores fora são plotados isoladamente. O enunciado reproduz essas regras.",
     analise: {
-      item: "Item VERDADEIRO. IIQ = Q3 − Q1; bigodes pelos limites de 1,5×IIQ; valores fora são outliers.",
+      item: "Item VERDADEIRO. IIQ = Q3 − Q1; os limites de 1,5×IIQ identificam outliers; cada bigode alcança o valor observado mais extremo dentro do limite correspondente.",
       leituraIncorreta: "Leitura que induz ao erro: 'bigode vai até o valor máximo/ mínimo absoluto' — isso só ocorre em convenções alternativas; a convenção de Tukey usa o intervalo de 1,5×IIQ."
     },
-    regra: "Tukey: bigodes em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; outliers são pontos fora desses limites; IIQ = Q3 − Q1 mede a dispersão central.",
-    pegadinha: "A pegadinha é confundir 'bigode até o extremo' com 'bigode até o limite de 1,5×IIQ' — a convenção de Tukey define o feno do limite, não o valor absoluto."
+    regra: "Tukey: limites para outliers em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; cada bigode vai até o valor observado mais extremo dentro do limite correspondente; IIQ = Q3 − Q1 mede a dispersão central.",
+    pegadinha: "A pegadinha é confundir o limite teórico de 1,5×IIQ com a extremidade efetiva do bigode: o bigode termina no valor observado mais extremo que ainda está dentro do limite."
   },
   {
     id: "q-m8-13",
