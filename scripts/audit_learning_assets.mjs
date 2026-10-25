@@ -94,4 +94,4 @@ const reportLines = [
   "- Não avalia conteúdo, gabaritos, fontes, interface, acessibilidade ou execução via file://.", ""
 ];
 writeFileSync(resolve(root, "docs/RELATORIO_RASTREABILIDADE_ATIVOS.md"), reportLines.join("\n"), "utf8");
-console.log(JSON.stringify({ topics: topics.size, flashcards: cards.length, questions: questions.length, unmapped: unknown.length, summary }, null, 2));
+console.log(JSON.stringify({ topics: topics.size, flashcards: cards.length, questions: questions.length, unmapped: unknown.length, unmappedSample: unknown.slice(0, 30).map(asset => ({ id: asset.id, ref: asset.ref, key: asset.key, path: asset.path })), summary }, null, 2));
