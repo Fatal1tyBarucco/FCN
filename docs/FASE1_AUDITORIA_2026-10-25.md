@@ -61,3 +61,37 @@ A matriz de aceite de `Escrita.txt` exige, no mínimo: 8 módulos; conteúdo efe
 ## Limites desta evidência
 
 Esta etapa usou leitura de arquivos remotos por meio da integração GitHub. Não houve clone local, execução de JavaScript, teste de interface, validação de navegador, execução de workflow, revisão humana independente de todo o conteúdo ou chamada de subagentes. Nenhuma dessas atividades é declarada concluída.
+
+
+## Continuação da execução — Fase 2 (2026-10-25)
+
+### Inspeção estática ampliada
+
+Foram consultados os oito arquivos de currículo em `apostila-ia/assets/data/`:
+
+| Módulo | Arquivo | Linhas | IDs de subtópico reconhecidos pelo padrão do arquivo |
+|---|---|---:|---:|
+| M1 | `curriculum.js` | 824 | 37 |
+| M2 | `curriculum_m2.js` | 1.977 | 52 |
+| M3 | `curriculum_m3.js` | 811 | 35 |
+| M4 | `curriculum_m4.js` | 717 | 39 |
+| M5 | `curriculum_m5.js` | 653 | 35 |
+| M6 | `curriculum_m6.js` | 878 | 46 |
+| M7 | `curriculum_m7.js` | 892 | 23 |
+| M8 | `curriculum_m8.js` | 1.165 | 28 |
+| **Total** | 8 arquivos | **7.917** | **295** |
+
+Os IDs do M1 seguem o padrão `modulo-1-unidade-N-topico-N-sub-N`; os módulos M2–M8 usam `mN-uN-tN-sN`. A contagem usa padrões específicos de IDs nos arquivos, não executa o JavaScript e não avalia a qualidade semântica dos textos.
+
+### Matriz curricular rastreável
+
+O arquivo `docs/MATRIZ_COBERTURA.csv` foi substituído por uma matriz com uma linha para cada um dos 295 IDs de subtópico encontrados nos oito arquivos. Cada linha registra ID, módulo, arquivo de origem, título capturado e indicadores estáticos para presença de objetivo, conteúdo, array de exemplos, array de exercícios e indício de fonte.
+
+**Limitação importante:** os campos `*_presente` são indicadores de presença textual aproximados, não contagens nem avaliação de qualidade. A coluna `status_auditoria` permanece `não revisado qualitativamente`; a matriz não afirma que os 295 subtópicos estão completos. O indicador de fontes detecta apenas um padrão simples de array/URL e não comprova validade da referência.
+
+### Estado atualizado
+
+- Fase 1: inventário inicial e lacunas documentais registrados.
+- Fase 2: inspeção estática dos oito arquivos curriculares concluída para extração dos IDs; matriz rastreável inicial gerada.
+- Ainda pendente na Fase 2: recálculo dos exemplos, exercícios, flashcards e questões; verificação de IDs duplicados e referências cruzadas; comparação campo a campo com os critérios do prompt mestre; execução de testes locais e de navegador.
+- Não houve alteração do código funcional, execução de JavaScript, testes de interface ou delegação a subagentes nesta continuação.
