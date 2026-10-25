@@ -141,7 +141,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A razão real é calculada sobre o total, não sobre o valor de cada unidade." }
     ],
     gabarito: "B",
-    justificativa: "A razão real é 450/190 ≈ 2,37 (quase 2,4). No gráfico com eixo de 100, as alturas são 350 e 90 — a razão visual vira 350/90 ≈ 3,89, inflada. O valor numérico é preservado (a dos dados não muda), mas a leitura visual é distorcida. A alternativa B reproduz corretamente essa distinção entre valor numérico invariante e razão visual distorcida.",
+    justificativa: "A razão real é 450/190 ≈ 2,37 (quase 2,4). No gráfico com eixo de 100, as alturas são 350 e 90 — a razão visual vira 350/90 ≈ 3,89, inflada. O valor numérico dos dados não muda, mas a leitura visual é distorcida. A alternativa B reproduz corretamente essa distinção entre valor numérico invariante e razão visual distorcida.",
     analise: {
       A: "INCORRETA. Não aborda a distorção visual: o truncamento não altera o valor numérico, mas altera a percepção da razão.",
       B: "CORRETA. Diferencia valor numérico (inevariante) de leitura visual (distorcida), o que o currículo exige.",
@@ -225,7 +225,7 @@ const moduleQuestions8 = [
       C: "INCORRETA. Erro conceitual: dimensões enxutas com chave única resolvem a temporalidade, não causam erro.",
       D: "INCORRETA. Erro conceitual: declarar granularidade é a solução, não a causa do erro."
     },
-    regra: "Modelo estrela: fato transacional no centro, dimensões ao redor; medir por contagem de linhas só é válido se a chave do fato for única (caio); use contagem distinta quando houver possíveis duplicatas.",
+    regra: "Modelo estrela: fato transacional no centro, dimensões ao redor; contar linhas só representa eventos quando a granularidade está definida e cada linha corresponde a um evento na granularidade esperada. Se houver duplicatas indevidas, investigue a causa e use contagem distinta apenas quando a identidade do evento estiver definida corretamente.",
     pegadinha: "A pegadinha é a alternativa A: parece correta, mas a duplicidade de chave não está na base, e o exame quer a condição que GERA o erro (B)."
   },
   {
@@ -266,9 +266,9 @@ const moduleQuestions8 = [
     topico: "modulo-8-unidade-5-topico-2",
     assunto: "M8.5.2 Métricas de processo e resultado",
     contexto: "Painel de atendimento exibe métricas de resultado e métricas de processo.",
-    enunciado: "Qual das afirmações abaixo está de acordo com o currículo sobre métricas de um painel?",
+    enunciado: "Métricas de resultado consolidam o que já aconteceu, enquanto métricas de processo podem sinalizar desvios e permitir intervenção antes de o resultado final se consolidar."
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'métricas de resultado consolidam o passado e métricas de processo permitem corrigir antes que o resultado piora': o currículo afirma que o resultado consolida o passado, e a métrica de processo (fila, prazo de resposta) permite agir ANTES do resultado consolidar.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a distinção entre métricas de resultado, que registram resultados já ocorridos, e métricas de processo, que podem sinalizar desvios antes da consolidação do resultado final.",
     justificativa: "O currículo distingue métricas de resultado (lagging: o que já aconteceu — receita realizada, atendimentos concluídos) de métricas de processo (leading: o que antecede o resultado — prazo de resposta, fila de entrada). A afirmação combina as duas ideias de forma correta.",
     analise: {
       item: "Item VERDADEIRO. Métrica de processo é necessária justamente porque o resultado consolida o passado e reage tarde.",
@@ -297,12 +297,12 @@ const moduleQuestions8 = [
     gabarito: "B",
     justificativa: "O currículo registra que o Looker Studio é uma ferramenta de painéis em navegador, com editor gratuito para uso básico e conectores a fontes de dados; elimina instalação e custo inicial de autoria. A alternativa B reproduz isso nos termos do cenário. A alternativa A é um erro de uso: o Tableau Public publica em área pública, incompatível com bom senso de dados. A C erra: o Desktop é licenciado (pago) e para autoria. A D é exagerada: o uso básico do Looker Studio é gratuito.",
     analise: {
-      A: "INCORRETA. Erro conceitual: publicação pública de dados da escola não é condizente com bom senso; o Looker Studio é o perfil do cenário.",
+      A: "INCORRETA. Erro conceitual: publicação pública de dados da escola não é condizente com bom senso; o Looker Studio é mais adequado ao cenário descrito.",
       B: "CORRETA. Reproduz as três características fundamentais: navegador, conectores e gratuidade básica.",
       C: "INCORRETA. Erro conceitual: o Tableau Desktop é licenciado pago para autoria; não é o caminho gratuito do peso.",
       D: "INCORRETA. Erro conceitual: exagera; a edição básica do Looker Studio é gratuita."
     },
-    regra: "Escolha por custo de autoria vs. publicação: Tableau Public gratuito com publicação pública; Looker Studio gratuito para autoria básica; Desktop licenciado; pré-público sensible não vai para área aberta.",
+    regra: "Escolha por custo de autoria vs. publicação: Tableau Public gratuito com publicação pública; Looker Studio gratuito para autoria básica; Desktop licenciado; dados sensíveis ou confidenciais não devem ser publicados em área aberta.",
     pegadinha: "A alternativa A é a pegadinha: gratuidade simples não legifera o uso público de dados escolares; o exame cobra o uso mais adequado, não o mais barato."
   },
   {
