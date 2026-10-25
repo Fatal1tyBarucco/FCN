@@ -99,3 +99,12 @@ documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta audito
 - A matriz agregada por módulo não substitui rastreabilidade por tópico/subtópico. Não se deve declarar a cobertura curricular integral até a matriz detalhada ser gerada e validada contra os dados de origem.
 - Alterações da execução serão feitas em branch dedicada e propostas por pull request; não alterar `main` diretamente.
 - Não se declara delegação multiagente executada apenas porque existem perfis ou configuração. Se a execução dos subagentes não for confirmada por evidências, o trabalho será reportado como realizado pelo orquestrador sem subagentes.
+
+
+## Decisão DA-2026-10-25-01 — Auditoria curricular estrutural
+
+**Decisão:** manter a aplicação estática atual e acrescentar um script Node.js sem dependências para gerar a matriz curricular, sem avaliar os arquivos de dados como código executável.
+
+**Motivação:** preservar a execução direta de apostila-ia/index.html e permitir uma auditoria reproduzível dos IDs e campos curriculares sem introduzir framework ou etapa de build.
+
+**Trade-off:** a extração por padrões textuais detecta estrutura, não valida semântica, conteúdo pedagógico, gabaritos, fontes ou comportamento no navegador. O script scripts/audit_curriculum_matrix.mjs foi versionado, mas sua execução local ainda precisa ser comprovada antes de tratá-lo como verificado.
