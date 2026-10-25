@@ -324,3 +324,33 @@ Foi feita nova inspeção dos objetos curriculares individuais, extraindo os obj
 **Exceção M1:** o arquivo tem 37 IDs de subtópicos, mas 38 objetos de cada tipo. O subtópico `modulo-1-unidade-2-topico-14-sub-1` aparenta conter seis exemplos e quatro exercícios, em vez de três e dois. A extração estática identifica a concentração, mas ainda é necessário inspecionar manualmente esse objeto para determinar se há material adicional válido, duplicação ou erro estrutural. Portanto, a contagem bruta é 888 exemplos e 592 exercícios, mas o excesso concentrado em M1 impede declarar alinhamento perfeito entre objetos e subtópicos.
 
 **Limites:** presença de campos não prova que as respostas estão corretas, que os exemplos são pedagogicamente distintos, que os exercícios cobrem os objetivos ou que o nível avançado está realmente desenvolvido. Esses pontos continuam exigindo revisão qualitativa. O método é uma inspeção estática dos arquivos remotos, não um teste de runtime.
+
+
+## Plano de remediação da cobertura temática dos flashcards — 2026-10-25
+
+A revisão da distribuição deve ser guiada pelo conteúdo real de cada cartão, e não por uma redistribuição mecânica de IDs. O requisito aplicável em `Escrita.txt` é manter rastreabilidade curricular e flashcards como instrumentos de recuperação ativa; a existência de 50 cartões não demonstra, por si só, que o módulo inteiro esteja revisado.
+
+### Cobertura observada e prioridade
+
+| Módulo | Cartões | Tópicos curriculares | Tópicos referenciados | Tópicos sem referência de cartão | Ação |
+|---|---:|---:|---:|---:|---|
+| M1 | 50 | 23 | 15 | 8 | Redistribuir ou complementar após comparar frente/verso com o currículo; preservar cartões sobre Microsoft 365 que estejam corretamente vinculados |
+| M2 | 50 | 19 | 5 | 14 | Prioridade alta: mapear cartões existentes para tópicos compatíveis; criar cartões para tópicos sem cobertura quando não houver cartão apropriado |
+| M3 | 50 | 14 | 4 | 10 | Prioridade alta: reduzir concentração em SMTP/POP3/IMAP e revisar comunicação, reuniões, acessibilidade e riscos |
+| M4 | 54 | 13 | 13 | 0 | Manter cobertura referencial; ainda avaliar profundidade e duplicação semântica |
+| M5 | 50 | 13 | 5 | 8 | Prioridade alta: revisar expansão curricular posterior às unidades 5.1 e 5.2 e decidir complementação para IA generativa e engenharia de prompts |
+| M6 | 50 | 18 | 18 | 0 | Manter cobertura referencial; revisar qualidade e precisão normativa |
+| M7 | 50 | 9 | 9 | 0 | Manter cobertura referencial; revisar qualidade e duplicação semântica |
+| M8 | 50 | 23 | 23 | 0 | Manter cobertura referencial; revisar qualidade e duplicação semântica |
+
+### Procedimento seguro para corrigir a cobertura
+
+1. Para cada cartão, comparar pergunta, resposta e explicação com o conteúdo do tópico curricular de destino.
+2. Alterar `topico` apenas quando a correspondência semântica for direta e demonstrável; não usar a redistribuição para apenas melhorar a métrica.
+3. Para tópicos sem cartão correspondente, criar cartões novos com IDs únicos e estáveis, resposta explicativa e nível de dificuldade coerente. O mínimo de 50 por módulo é um piso, não um teto.
+4. Cobrir definição, mecanismo, comparação, aplicação ou diagnóstico de erro ao longo do conjunto; evitar dez cartões que apenas reformulem a mesma definição.
+5. Validar unicidade global dos IDs, existência das referências e distribuição por tópico após cada mudança.
+6. Revisar manualmente uma amostra de frente/verso/explicação e registrar os casos que dependam de verificação normativa ou técnica.
+7. Não marcar cobertura pedagógica como concluída com base apenas em referências válidas ou contagens.
+
+**Estado:** plano e prioridades registrados; os cartões não foram remapeados automaticamente nesta etapa, porque a validação de referências não prova que um cartão corresponda semanticamente a outro tópico. A alteração de conteúdo exige revisão individual para não degradar a precisão didática.
