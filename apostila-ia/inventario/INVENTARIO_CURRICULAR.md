@@ -90,14 +90,15 @@ Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplic
 - LAI (Lei 12.527/2011) e Lei de Governo Digital (Lei 14.129/2021): planalto.gov.br, 2026-10-21.
 - CF art. 37 caput e art. 5º XXXIII: conferidos, 2026-10-21.
 - Marco Civil (Lei 12.965/2014): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm, verificada 2026-10-23 (arts. 2º, 3º, 7º, 9º §3º, 15, 19; destaque art. 9º §3º).
-- Verificação web P1-G (2026-10-23): Microsoft Learn, RFCs/IETF (RFC 791, 1035, 8446, 2993) e CERT.br indexados com URL+data — **pendentes de confirmação manual direta** (limitação registrada).
+- Verificação direta por HTTP (webfetch) em 2026-10-24: Microsoft Learn (https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide), RFCs/IETF (RFC 791, 793, 1034, 1035, 2131, 7230, 7231, 8446) e CERT.br (https://cert.br/) confirmados como acessíveis com título/organização correspondentes — **verificados** (data de verificação 2026-10-24). Registrados em `referencias/referencias-verificadas.md` (Bloco 4) e `apostila-ia/assets/data/references.js`.
+- Verificações adicionais de 2026-10-24 (Bloco 6 de `referencias/referencias-verificadas.md`): RFC 9110 (https://www.rfc-editor.org/info/rfc9110) — acessível; ANPD (https://www.gov.br/anpd/pt-br) + Resolução CD/ANPD nº 2/2022 e nº 4/2023 — acessíveis; CF art. 37 (texto integral conferido, incisos II, III, XXI, § 1º, § 3º II, § 4º, § 6º) e art. 5º (incisos X, XII, XIV, XXXIII, LXXIX) — conferidos; dispositivos remissivos do M6 — Lei 8.429/1992, Lei 1.079/1950, Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017, Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001 e LGPD art. 7º — todos acessíveis no planalto.gov.br (Lei 10.741 localizada via busca oficial em https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm). Total de referências verificadas passa de 15 para 32 (19 → 32 itens no `references.js`); pendentes restantes: demais resoluções da ANPD, demais RFCs (FTP, SMTP, ICMP, ARP, NAT, VPN etc.), demais incisos do art. 37 e do art. 5º não listados acima.
 
 ### 4.5 Limitações remanescentes (declaradas, não ocultas)
 
 - Vídeos educacionais: **0 validados** (intencional; IDs não inventados).
 - Testes em navegador real: **não realizados** (apenas `node --check` + smoke Node/vm).
 - Simuladores: simulações didáticas locais (sem comandos reais no SO, sem ataques reais, sem IA real).
-- Referências pendentes: Microsoft Learn, RFCs/IETF, CERT.br (confirmação manual direta), demais incisos art. 37/art. 5º CF, dispositivos citados por remissão no M6.
+- Referências pendentes (após Bloco 6, 2026-10-24): demais resoluções da ANPD (além da nº 2/2022 e nº 4/2023); demais RFCs não verificadas individualmente (FTP, SMTP, ICMP, ARP, NAT, VPN etc.); demais incisos/parágrafos do art. 37 e do art. 5º da CF não listados no Bloco 6. Microsoft Learn, RFCs/IETF (RFC 791, 793, 1034, 1035, 2131, 7230, 7231, 8446, 9110), CERT.br, ANPD (órgão + 2 resoluções), CF art. 37/5º (incisos listados) e dispositivos remissivos do M6 (Lei 8.429/1992, Lei 1.079/1950, Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017, Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001, LGPD art. 7º) verificados em 2026-10-24.
 - M1 parcial: sub-const `curriculumWord12Supplement` não renderiza; 1.4/1.5 com 1 subtópico cada.
 - IDs não uniformes entre M1 (formato longo) e M2–M8 (subtópicos em formato compacto) — ambos estáveis e únicos.
 

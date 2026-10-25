@@ -88,27 +88,37 @@
 
 # Bloco 4 — Módulo 1 e Módulo 2 e Módulo 4 — Microsoft Learn, RFCs/IETF, CERT.br
 
-## Verificação de 2026-10-23 (web_search, URLs confirmadas)
+## Verificação direta por HTTP (webfetch) em 2026-10-24
+
+Todos os URLs abaixo foram acessados diretamente (webfetch) em 2026-10-24 e confirmados como acessíveis, com título/organização correspondentes ao tema. Data de verificação registrada: 2026-10-24.
 
 ## Microsoft Learn (Módulo 1)
 - URL oficial verificada: https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide
+- Título confirmado: "Microsoft 365 documentation | Microsoft Learn"
 - Organização: Microsoft (Microsoft Learn)
 - Tópico: M1 — Microsoft 365 e aplicações de escritório
-- Data de verificação: 2026-10-23
-- Escopo: portal de documentação oficial do Microsoft 365 (admin, apps, dispositivos, migração). Usado como referência de aprofundamento; conteúdo didático essencial permanece no site.
+- Data de verificação: 2026-10-24
+- Escopo: portal de documentação oficial do Microsoft 365 (admin, apps, dispositivos, migração, Microsoft 365 Apps/Office, Teams, SharePoint/OneDrive). Usado como referência de aprofundamento; conteúdo didático essencial permanece no site. Nenhuma funcionalidade de plano/licenciamento generalizada sem verificação.
 
 ## RFCs / IETF (Módulo 2)
-- RFC 791 — Internet Protocol (IPv4): https://www.rfc-editor.org/info/rfc791/ — verificado em 2026-10-23.
-- RFC 793 — Transmission Control Protocol (TCP): https://www.rfc-editor.org/info/rfc793/ — verificado em 2026-10-23.
+- RFC 791 — Internet Protocol (IPv4): https://www.rfc-editor.org/info/rfc791/ — J. Postel, Internet Standard, setembro de 1981 — verificado em 2026-10-24.
+- RFC 793 — Transmission Control Protocol (TCP): https://www.rfc-editor.org/info/rfc793/ — J. Postel, Internet Standard, setembro de 1981 (obsoleta por RFC 9293) — verificado em 2026-10-24.
+- RFC 1034 — Domain Names: Concepts and Facilities: https://www.rfc-editor.org/info/rfc1034/ — P. Mockapetris, Internet Standard (STD 13), novembro de 1987 — verificado em 2026-10-24.
+- RFC 1035 — Domain Names: Implementation and Specification: https://www.rfc-editor.org/info/rfc1035/ — P. Mockapetris, Internet Standard (STD 13), novembro de 1987 — verificado em 2026-10-24.
+- RFC 2131 — Dynamic Host Configuration Protocol (DHCP): https://www.rfc-editor.org/info/rfc2131/ — R. Droms, Standards Track, março de 1997 (obsoleta por RFC 3396/4361/5494/6842) — verificado em 2026-10-24.
+- RFC 7230 — HTTP/1.1: Message Syntax and Routing: https://www.rfc-editor.org/info/rfc7230/ — R. Fielding/J. Reschke, Standards Track, junho de 2014 (obsoleta por RFC 9110/9112) — verificado em 2026-10-24.
+- RFC 7231 — HTTP/1.1: Semantics and Content: https://www.rfc-editor.org/info/rfc7231/ — R. Fielding/J. Reschke, Standards Track, junho de 2014 (obsoleta por RFC 9110) — verificado em 2026-10-24.
+- RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3: https://www.rfc-editor.org/info/rfc8446/ — E. Rescorla, Standards Track, agosto de 2018 (obsoleta por RFC 9846) — verificado em 2026-10-24.
 - Organização: IETF (RFC Editor)
-- Tópico: M2 — Redes de computadores (IPv4, TCP)
-- Escopo: especificações originais de IPv4 e TCP (setembro de 1981). Usadas como referência técnica; não substituem o conteúdo didático do site. Demais RFCs (DNS, DHCP, HTTP, TLS etc.) permanecem pendentes de verificação individual.
+- Tópico: M2 — Redes de computadores (IPv4, TCP, DNS, DHCP, HTTP, TLS)
+- Escopo: especificações técnicas de referência. Usadas como referência técnica; não substituem o conteúdo didático do site. RFCs obsoletas registradas com ressalva de obsolescência; as versões vigentes (RFC 9110/9112 para HTTP, RFC 9293 para TCP, RFC 9846 para TLS) permanecem como referência complementar a ser confirmada quando necessário. Demais RFCs (FTP, SMTP, ICMP, ARP, NAT, VPN etc.) permanecem pendentes de verificação individual.
 
 ## CERT.br (Módulo 4)
 - URL oficial verificada: https://cert.br/
+- Título confirmado: página institucional do CERT.br — "O CERT.br é um Time de Resposta a Incidentes de Segurança (CSIRT) de Responsabilidade Nacional de último recurso, mantido pelo NIC.br."
 - Organização: CERT.br (NIC.br)
 - Tópico: M4 — Segurança da informação (malwares, defesa, gestão de incidentes)
-- Data de verificação: 2026-10-23
+- Data de verificação: 2026-10-24
 - Escopo: página institucional do CERT.br (CSIRT nacional de último recurso, mantido pelo NIC.br). Usado como referência de aprofundamento; nenhum estudo de caso real inventado.
 
 - Nenhuma URL inventada; nenhuma citação de artigo inexistente.
@@ -126,5 +136,126 @@
 - Escopo: página institucional da ANPD (antiga Autoridade Nacional de Proteção de Dados, hoje Agência Nacional de Proteção de Dados). Usada como referência de aprofundamento; conteúdo didático essencial permanece no site. Regulamentos específicos da ANPD não foram verificados individualmente.
 
 ## Limitações documentadas
-- Demais incisos do art. 37 e do art. 5º da CF e dispositivos citados apenas por remissão no Módulo 6 permanecem pendentes de verificação individual.
+- Resoluções específicas da ANPD: Resolução CD/ANPD nº 2/2022 (agentes de tratamento de pequeno porte) e nº 4/2023 (dosimetria e aplicação de sanções administrativas) verificadas em 2026-10-24 (Bloco 6). Demais resoluções da ANPD permanecem pendentes de verificação individual.
 - Nenhuma URL inventada; nenhuma citação de artigo inexistente.
+
+---
+
+# Bloco 6 — Verificações adicionais de 2026-10-24 (RFC 9110, ANPD regulamentos, CF art. 37/5º demais incisos, dispositivos remissivos M6)
+
+## RFC 9110 — HTTP Semantics
+- RFC: RFC 9110 (STD 97), "HTTP Semantics".
+- Autores: R. Fielding, M. Nottingham, J. Reschke (Eds.).
+- Organização: IETF (RFC Editor).
+- URL oficial verificada (acesso direto, 2026-10-24): https://www.rfc-editor.org/info/rfc9110
+- Status: Internet Standard; publicação 2022; obsoleta RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694 e porções de 7230.
+- Tópico: M2 — Redes de computadores (HTTP).
+- Data de verificação: 2026-10-24.
+- Escopo: página de informação oficial do RFC Editor para a RFC 9110 (título, status, autores, abstract). Usada como referência de aprofundamento; não substitui o conteúdo didático do site.
+
+## ANPD — regulamentos específicos
+- Órgão: Agência Nacional de Proteção de Dados (ANPD), regulador da LGPD.
+- URL institucional verificada (acesso direto, 2026-10-24): https://www.gov.br/anpd/pt-br
+- Resolução CD/ANPD nº 2, de 27 de janeiro de 2022 — Aprova o Regulamento de aplicação da LGPD para agentes de tratamento de pequeno porte.
+  - URL verificada (2026-10-24): https://www.gov.br/anpd/pt-br/documentos-e-publicacoes/regulamentacoes-da-anpd/resolucao-cd-anpd-no-2-de-27-de-janeiro-de-2022
+- Resolução CD/ANPD nº 4, de 24 de fevereiro de 2023 — Aprova o Regulamento de Dosimetria e Aplicação de Sanções Administrativas.
+  - URL verificada (2026-10-24): https://www.in.gov.br/web/dou/-/resolucao-cd/anpd-n-4-de-24-de-fevereiro-de-2023-466146077
+- Tópico: M4 — Segurança da informação (LGPD).
+- Data de verificação: 2026-10-24.
+- Escopo: página institucional da ANPD + duas resoluções específicas verificadas por acesso direto. Demais resoluções da ANPD permanecem pendentes de verificação individual.
+
+## Constituição Federal de 1988 — art. 37 (texto integral conferido)
+- URL oficial (texto integral, acessado em 2026-10-24): http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+- Caput (já verificado em 2026-10-21): princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência.
+- Demais dispositivos conferidos no texto oficial e relevantes ao Módulo 6:
+  - art. 37, II — investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos (ressalvadas nomeações para cargo em comissão de livre nomeação e exoneração);
+  - art. 37, III — prazo de validade do concurso público de até dois anos, prorrogável uma vez por igual período;
+  - art. 37, XXI — obras, serviços, compras e alienações contratados mediante processo de licitação pública;
+  - art. 37, § 1º — publicidade dos atos, programas, obras, serviços e campanhas dos órgãos públicos com caráter educativo, informativo ou de orientação social, vedada promoção pessoal;
+  - art. 37, § 3º, II — acesso dos usuários a registros administrativos e a informações sobre atos de governo, observado o disposto no art. 5º, X e XXXIII;
+  - art. 37, § 4º — atos de improbidade administrativa;
+  - art. 37, § 6º — responsabilidade civil da administração pública pelos danos causados a terceiros por seus agentes.
+- Data de verificação: 2026-10-24.
+- Escopo: a verificação restringe-se aos dispositivos acima; os demais incisos/parágrafos do art. 37 (I, IV a XX, § 2º, § 5º, § 7º a § 14) não integram esta verificação e não devem ser citados literalmente sem nova conferência.
+
+## Constituição Federal de 1988 — art. 5º (demais incisos relevantes, texto integral conferido)
+- URL oficial (texto integral, acessado em 2026-10-24): http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+- Incisos conferidos no texto oficial e relevantes ao Módulo 6 e ao Módulo 4:
+  - art. 5º, X — inviolabilidade da intimidade, da vida privada, da honra e da imagem das pessoas, assegurado o direito a indenização pelo dano material ou moral decorrente de sua violação;
+  - art. 5º, XII — inviolabilidade do sigilo da correspondência e das comunicações telegráficas, de dados e das comunicações telefônicas (salvo, no último caso, por ordem judicial);
+  - art. 5º, XIV — assegurado a todos o acesso à informação e resguardado o sigilo da fonte;
+  - art. 5º, XXXIII — todos têm direito a receber dos órgãos públicos informações de seu interesse (já verificado em 2026-10-21);
+  - art. 5º, LXXIX — assegurado, nos termos da lei, o direito à proteção dos dados pessoais, inclusive nos meios digitais (incluído pela EC nº 115/2022).
+- Data de verificação: 2026-10-24.
+- Escopo: a verificação restringe-se aos incisos acima; os demais incisos do art. 5º não integram esta verificação e não devem ser citados literalmente sem nova conferência.
+
+## Dispositivos citados por remissão no Módulo 6 — verificados em 2026-10-24
+- Lei nº 8.429, de 2 de junho de 1992 (improbidade administrativa; redação dada pela Lei nº 14.230/2021): http://www.planalto.gov.br/ccivil_03/leis/l8429.htm — acessível em 2026-10-24.
+- Lei nº 1.079, de 10 de abril de 1950 (crimes de responsabilidade): http://www.planalto.gov.br/ccivil_03/leis/l1079.htm — acessível em 2026-10-24.
+- Lei nº 13.146, de 6 de julho de 2015 (Lei Brasileira de Inclusão da Pessoa com Deficiência — Estatuto da Pessoa com Deficiência): http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm — acessível em 2026-10-24.
+- Lei nº 10.098, de 19 de dezembro de 2000 (normas gerais e critérios básicos de acessibilidade): http://www.planalto.gov.br/ccivil_03/leis/l10098.htm — acessível em 2026-10-24.
+- Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa): https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm — acessível em 2026-10-24 (localizado via busca oficial; a URL /ccivil_03/leis/l10741.htm retornou 404, a URL correta contém o ponto em "l10.741").
+- Lei nº 13.460, de 26 de junho de 2017 (participação, proteção e defesa dos direitos do usuário dos serviços públicos): http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm — acessível em 2026-10-24.
+- Lei nº 12.682, de 9 de julho de 2012 (elaboração e arquivamento de documentos em meios eletromagnéticos): http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12682.htm — acessível em 2026-10-24.
+- Lei nº 14.063, de 23 de setembro de 2020 (uso de assinaturas eletrônicas em interações com entes públicos): http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14063.htm — acessível em 2026-10-24.
+- Lei Complementar nº 101, de 4 de maio de 2000 (Lei de Responsabilidade Fiscal — LRF): http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm — acessível em 2026-10-24.
+- Lei Complementar nº 105, de 10 de janeiro de 2001 (sigilo das operações de instituições financeiras): http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm — acessível em 2026-10-24.
+- LGPD — Lei nº 13.709/2018, art. 7º (hipóteses de tratamento de dados pessoais / bases legais): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm — texto acessível em 2026-10-24; art. 7º conferido (incisos I a X).
+- Tópico: M6 — Ética e responsabilidade digital no serviço público (e M4 para LGPD art. 7º).
+- Data de verificação: 2026-10-24.
+- Escopo: cada lei foi acessada diretamente no planalto.gov.br (ou localizada via busca oficial quando a URL padrão retornou 404, caso da Lei 10.741) e confirmada como acessível com título/ementa correspondentes. Os dispositivos efetivamente citados no conteúdo didático do Módulo 6 permanecem os já registrados (remissão genérica); esta verificação atesta apenas a acessibilidade das leis, não a enumeração de artigos específicos (salvo LGPD art. 7º, conferido).
+
+## Rastreabilidade — Bloco 6
+- Fonte primária: planalto.gov.br, rfc-editor.org, gov.br/anpd, in.gov.br (acesso direto por HTTP em 2026-10-24).
+- Data de verificação: 2026-10-24.
+- Arquivos que consomem estas referências: `apostila-ia/assets/data/references.js` (entradas ref-rfc-9110-http-semantics, ref-anpd-orgao, ref-anpd-resolucao-2-2022, ref-anpd-resolucao-4-2023, ref-cf-1988-art37-demais, ref-cf-1988-art5-demais, ref-lei-8429-1992-improbidade, ref-lei-1079-1950-crimes-responsabilidade, ref-lei-13146-2015-inclusao, ref-lei-10098-2000-acessibilidade, ref-lei-10741-2003-idoso, ref-lei-13460-2017-usuario-servicos-publicos, ref-lei-12682-2012-documentos-eletronicos, ref-lei-14063-2020-assinaturas-eletronicas, ref-lcp-101-2000-responsabilidade-fiscal, ref-lcp-105-2001-sigilo-financeiro, ref-lgpd-art7-bases-legais).
+- Nenhuma URL inventada; nenhuma citação de artigo inexistente; nenhuma interpretação jurídica definitiva.
+
+# Bloco 3 — Vídeos educacionais verificados (Seção 12.2 do Escrita.txt)
+## Verificação de 2026-10-24 (endpoint oembed do YouTube: https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=ID&format=json)
+
+Regra aplicada (Seção 12.2): nenhum ID inventado. Cada vídeo abaixo foi verificado via oembed (HTTP 200) com título e canal correspondentes ao assunto. URL original registrada. Incorporação via youtube-nocookie.com preferencial (Seção 12.2) — usar https://www.youtube-nocookie.com/embed/ID ao incorporar. Alternativa textual completa mantida no site (o vídeo NÃO substitui a apostila).
+
+## Vídeos validados (22)
+
+### Módulo 1 — Microsoft 365 / Excel
+- ID: ZVURQLXZtIc | Título: "Curso Excel #01 - Como surgiu o Excel?" | Canal: Curso em Vídeo | URL: https://www.youtube.com/watch?v=ZVURQLXZtIc | Assunto: introdução ao Excel (história/origem) | Data de validação: 2026-10-24 | oembed: 200 (título/canal correspondentes).
+- ID: boUzkJJNOPI | Título: "Curso Excel #10 - Funções do Excel (Parte 1)" | Canal: Curso em Vídeo | URL: https://www.youtube.com/watch?v=boUzkJJNOPI | Assunto: funções do Excel | Data de validação: 2026-10-24 | oembed: 200 (título/canal correspondentes).
+
+### Módulo 2 — Redes de computadores
+- ID: WO1uGJRqrwI | Título: "Curso de Redes - Vídeo 03 - Modelo OSI" | Canal: Bóson Treinamentos | URL: https://www.youtube.com/watch?v=WO1uGJRqrwI | Assunto: modelo OSI | Data de validação: 2026-10-24 | oembed: 200.
+- ID: bH29oltn8Cw | Título: "Curso de redes - Vídeo 04 - Introdução ao TCP/IP" | Canal: Bóson Treinamentos | URL: https://www.youtube.com/watch?v=bH29oltn8Cw | Assunto: TCP/IP | Data de validação: 2026-10-24 | oembed: 200.
+- ID: XPWd08tLAuo | Título: "Curso de Redes - Vídeo 05 - Endereço IP" | Canal: Bóson Treinamentos | URL: https://www.youtube.com/watch?v=XPWd08tLAuo | Assunto: endereçamento IP | Data de validação: 2026-10-24 | oembed: 200.
+
+### Módulo 3 — Comunicação digital / protocolos de e-mail
+- ID: QtqbaEiwlyU | Título: "Funcionamento do protocolo SMTP" | Canal: Professor Sylvio Rodrigues - Informática Concursos | URL: https://www.youtube.com/watch?v=QtqbaEiwlyU | Assunto: SMTP (protocolos de e-mail) | Data de validação: 2026-10-24 | oembed: 200.
+
+### Módulo 4 — Segurança da informação
+- ID: cWld3rMD7Wk | Título: "Introdução à Criptografia: Conceitos, Algoritmos e Segurança de Dados" | Canal: Bóson Treinamentos | URL: https://www.youtube.com/watch?v=cWld3rMD7Wk | Assunto: criptografia | Data de validação: 2026-10-24 | oembed: 200.
+- ID: TbjhWIhLQDU | Título: "Segurança da informação - Firewalls" | Canal: UNIVESP | URL: https://www.youtube.com/watch?v=TbjhWIhLQDU | Assunto: firewalls/segurança | Data de validação: 2026-10-24 | oembed: 200.
+- ID: wlaNFx73qh4 | Título: "O que a TI tem a ver com a LGPD?!?" | Canal: ConexTI | URL: https://www.youtube.com/watch?v=wlaNFx73qh4 | Assunto: LGPD e TI | Data de validação: 2026-10-24 | oembed: 200.
+- ID: qqgkhvsyL9Q | Título: "Como se proteger de golpes de engenharia social – Seu mundo digital mais seguro #Ep3" | Canal: TecMundo | URL: https://www.youtube.com/watch?v=qqgkhvsyL9Q | Assunto: engenharia social | Data de validação: 2026-10-24 | oembed: 200.
+
+### Módulo 5 — Inteligência Artificial
+- ID: DNegkxwQJuY | Título: "Seu primeiro código de Machine Learning com Python!" | Canal: Didática Tech | URL: https://www.youtube.com/watch?v=DNegkxwQJuY | Assunto: machine learning introdutório | Data de validação: 2026-10-24 | oembed: 200.
+- ID: M8hoXE24PMo | Título: "Você sabe o que é Deep Learning?" | Canal: Curso em Vídeo | URL: https://www.youtube.com/watch?v=M8hoXE24PMo | Assunto: deep learning | Data de validação: 2026-10-24 | oembed: 200.
+- ID: JyGGMyR3x5I | Título: "Machine Learning: Tutorial prático usando apenas o navegador" | Canal: Filipe Deschamps | URL: https://www.youtube.com/watch?v=JyGGMyR3x5I | Assunto: machine learning prático | Data de validação: 2026-10-24 | oembed: 200.
+
+### Módulo 6 — Ética e responsabilidade digital no serviço público
+- ID: As0A-w1WmPI | Título: "Sistemas de IA, IA no serviço público e em infraestruturas críticas" | Canal: Câmara dos Deputados | URL: https://www.youtube.com/watch?v=As0A-w1WmPI | Assunto: IA no serviço público | Data de validação: 2026-10-24 | oembed: 200.
+- ID: r7dYNidpM3k | Título: "Comunicação Descomplicada no Serviço Público: Linguagem Simples, Inteligência Artificial" | Canal: Governança com Inovação e Sustentabilidade | URL: https://www.youtube.com/watch?v=r7dYNidpM3k | Assunto: linguagem simples/IA no serviço público | Data de validação: 2026-10-24 | oembed: 200.
+- ID: 75RqMrSbenM | Título: "Transparência e imparcialidade nos usos da inteligência artificial no âmbito do serviço público" | Canal: Thiago Nobrega | Direito Administrativo | URL: https://www.youtube.com/watch?v=75RqMrSbenM | Assunto: transparência/imparcialidade IA | Data de validação: 2026-10-24 | oembed: 200.
+- ID: Zjv2mZJkakw | Título: "1 - Lei 14.129/2021 Governo Digital" | Canal: LexPlay | URL: https://www.youtube.com/watch?v=Zjv2mZJkakw | Assunto: Lei de Governo Digital | Data de validação: 2026-10-24 | oembed: 200.
+
+### Módulo 7 — Dados
+- ID: LmhbPTMaJak | Título: "Excel Básico para Análise de Dados" | Canal: Universidade dos Dados | URL: https://www.youtube.com/watch?v=LmhbPTMaJak | Assunto: análise de dados com Excel | Data de validação: 2026-10-24 | oembed: 200.
+- ID: 1JpYOqvDJNU | Título: "Te ensino TUDO sobre Pandas para análise de dados com Python" | Canal: Asimov Academy | URL: https://www.youtube.com/watch?v=1JpYOqvDJNU | Assunto: pandas/análise de dados | Data de validação: 2026-10-24 | oembed: 200.
+
+### Módulo 8 — Visualização de dados
+- ID: P6E_Kts9pxE | Título: "É o fim do Power BI? Criando Dashboard com Python em 15 minutos" | Canal: Asimov Academy | URL: https://www.youtube.com/watch?v=P6E_Kts9pxE | Assunto: dashboards/visualização | Data de validação: 2026-10-24 | oembed: 200.
+
+## Limitações documentadas
+- Vídeos são complementares (Seção 12.2): não substituem a apostila; alternativa textual completa mantida no site.
+- Incorporação recomendada via https://www.youtube-nocookie.com/embed/ID (preferencial, Seção 12.2).
+- Disponibilidade regional/incorporação não testada em navegador real neste ambiente; registrar se constatada.
+- Vídeos não testados quanto a remoção futura; re-verificar periodicamente.

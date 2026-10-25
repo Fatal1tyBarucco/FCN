@@ -7,12 +7,18 @@
  * dispositivos }. status ∈ { "verificado", "pendente" }. Itens "pendente"
  * têm url = null e dataVerificacao = null — NENHUMA URL inventada.
  *
- * Apenas referências com URL primária + data registrada no arquivo acima
- * e conferidas por acesso direto ao texto oficial (planalto.gov.br) entram
- * como "verificado". Itens verificados apenas via web_search (URLs retornadas
- * pela busca, sem acesso direto) permanecem "pendente" até conferência
- * direta — por isso Microsoft Learn, RFCs/IETF, CERT.br e ANPD (orgão e
- * regulamentos) NÃO são marcados como validados aqui.
+ * Itens conferidos por acesso direto (HTTP/webfetch) em 2026-10-24 entram como
+ * "verificado": Microsoft Learn (portal Microsoft 365), RFCs/IETF (RFC 791,
+ * 793, 1034, 1035, 2131, 7230, 7231, 8446, 9110) e CERT.br. As RFCs 7230/7231
+ * são obsoletas por RFC 9110/9112 (registradas com ressalva de obsolescência
+ * no arquivo de referências). Bloco 6 (2026-10-24): ANPD (órgão + Resoluções
+ * CD/ANPD nº 2/2022 e nº 4/2023), CF art. 37 (caput + incisos II/III/XXI/
+ * §1º/§3ºII/§4º/§6º) e art. 5º (incisos X/XII/XIV/XXXIII/LXXIX), e os
+ * dispositivos remissivos do Módulo 6 (Lei 8.429/1992, Lei 1.079/1950,
+ * Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017,
+ * Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001 e LGPD art. 7º)
+ * verificados por acesso direto ao planalto.gov.br. Nenhuma entrada "pendente"
+ * remanesce neste arquivo.
  *
  * SEM eval. SEM fetch. Funciona em file:// (dados literais).
  */
@@ -69,7 +75,289 @@ const references = [
     dispositivos: ["art. 2º", "art. 3º", "art. 7º", "art. 9º, § 3º", "art. 15", "art. 19"]
   },
 
-  /* ---------- PENDENTES (url = null, dataVerificacao = null) ---------- */
+  /* ---------- VÍDEOS VERIFICADOS (Seção 12.2) ---------- */
+  {
+    id: "video-m1-excel-origem",
+    titulo: "Curso Excel #01 - Como surgiu o Excel?",
+    organizacao: "Curso em Vídeo (YouTube)",
+    url: "https://www.youtube.com/watch?v=ZVURQLXZtIc",
+    topico: "M1 — Microsoft 365 (Excel)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "ZVURQLXZtIc",
+    canal: "Curso em Vídeo",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/ZVURQLXZtIc"
+  },
+  {
+    id: "video-m1-excel-funcoes",
+    titulo: "Curso Excel #10 - Funções do Excel (Parte 1)",
+    organizacao: "Curso em Vídeo (YouTube)",
+    url: "https://www.youtube.com/watch?v=boUzkJJNOPI",
+    topico: "M1 — Microsoft 365 (Excel)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "boUzkJJNOPI",
+    canal: "Curso em Vídeo",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/boUzkJJNOPI"
+  },
+  {
+    id: "video-m2-redes-osi",
+    titulo: "Curso de Redes - Vídeo 03 - Modelo OSI",
+    organizacao: "Bóson Treinamentos (YouTube)",
+    url: "https://www.youtube.com/watch?v=WO1uGJRqrwI",
+    topico: "M2 — Redes de computadores (modelo OSI)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "WO1uGJRqrwI",
+    canal: "Bóson Treinamentos",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/WO1uGJRqrwI"
+  },
+  {
+    id: "video-m2-redes-tcpip",
+    titulo: "Curso de redes - Vídeo 04 - Introdução ao TCP/IP",
+    organizacao: "Bóson Treinamentos (YouTube)",
+    url: "https://www.youtube.com/watch?v=bH29oltn8Cw",
+    topico: "M2 — Redes de computadores (TCP/IP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "bH29oltn8Cw",
+    canal: "Bóson Treinamentos",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/bH29oltn8Cw"
+  },
+  {
+    id: "video-m2-redes-ip",
+    titulo: "Curso de Redes - Vídeo 05 - Endereço IP",
+    organizacao: "Bóson Treinamentos (YouTube)",
+    url: "https://www.youtube.com/watch?v=XPWd08tLAuo",
+    topico: "M2 — Redes de computadores (endereçamento IP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "XPWd08tLAuo",
+    canal: "Bóson Treinamentos",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/XPWd08tLAuo"
+  },
+  {
+    id: "video-m3-email-smtp",
+    titulo: "Funcionamento do protocolo SMTP",
+    organizacao: "Professor Sylvio Rodrigues - Informática Concursos (YouTube)",
+    url: "https://www.youtube.com/watch?v=QtqbaEiwlyU",
+    topico: "M3 — Comunicação digital (protocolos de e-mail)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "QtqbaEiwlyU",
+    canal: "Professor Sylvio Rodrigues - Informática Concursos",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/QtqbaEiwlyU"
+  },
+  {
+    id: "video-m4-criptografia",
+    titulo: "Introdução à Criptografia: Conceitos, Algoritmos e Segurança de Dados",
+    organizacao: "Bóson Treinamentos (YouTube)",
+    url: "https://www.youtube.com/watch?v=cWld3rMD7Wk",
+    topico: "M4 — Segurança da informação (criptografia)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "cWld3rMD7Wk",
+    canal: "Bóson Treinamentos",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/cWld3rMD7Wk"
+  },
+  {
+    id: "video-m4-firewalls",
+    titulo: "Segurança da informação - Firewalls",
+    organizacao: "UNIVESP (YouTube)",
+    url: "https://www.youtube.com/watch?v=TbjhWIhLQDU",
+    topico: "M4 — Segurança da informação (firewalls)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "TbjhWIhLQDU",
+    canal: "UNIVESP",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/TbjhWIhLQDU"
+  },
+  {
+    id: "video-m4-lgpd-ti",
+    titulo: "O que a TI tem a ver com a LGPD?!?",
+    organizacao: "ConexTI (YouTube)",
+    url: "https://www.youtube.com/watch?v=wlaNFx73qh4",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "wlaNFx73qh4",
+    canal: "ConexTI",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/wlaNFx73qh4"
+  },
+  {
+    id: "video-m4-engenharia-social",
+    titulo: "Como se proteger de golpes de engenharia social – Seu mundo digital mais seguro #Ep3",
+    organizacao: "TecMundo (YouTube)",
+    url: "https://www.youtube.com/watch?v=qqgkhvsyL9Q",
+    topico: "M4 — Segurança da informação (engenharia social)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "qqgkhvsyL9Q",
+    canal: "TecMundo",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/qqgkhvsyL9Q"
+  },
+  {
+    id: "video-m5-ml-primeiro-codigo",
+    titulo: "Seu primeiro código de Machine Learning com Python!",
+    organizacao: "Didática Tech (YouTube)",
+    url: "https://www.youtube.com/watch?v=DNegkxwQJuY",
+    topico: "M5 — Inteligência Artificial (machine learning)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "DNegkxwQJuY",
+    canal: "Didática Tech",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/DNegkxwQJuY"
+  },
+  {
+    id: "video-m5-deep-learning",
+    titulo: "Você sabe o que é Deep Learning?",
+    organizacao: "Curso em Vídeo (YouTube)",
+    url: "https://www.youtube.com/watch?v=M8hoXE24PMo",
+    topico: "M5 — Inteligência Artificial (deep learning)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "M8hoXE24PMo",
+    canal: "Curso em Vídeo",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/M8hoXE24PMo"
+  },
+  {
+    id: "video-m5-ml-pratico",
+    titulo: "Machine Learning: Tutorial prático usando apenas o navegador",
+    organizacao: "Filipe Deschamps (YouTube)",
+    url: "https://www.youtube.com/watch?v=JyGGMyR3x5I",
+    topico: "M5 — Inteligência Artificial (machine learning prático)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "JyGGMyR3x5I",
+    canal: "Filipe Deschamps",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/JyGGMyR3x5I"
+  },
+  {
+    id: "video-m6-ia-servico-publico",
+    titulo: "Sistemas de IA, IA no serviço público e em infraestruturas críticas",
+    organizacao: "Câmara dos Deputados (YouTube)",
+    url: "https://www.youtube.com/watch?v=As0A-w1WmPI",
+    topico: "M6 — Ética e responsabilidade digital (IA no serviço público)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "As0A-w1WmPI",
+    canal: "Câmara dos Deputados",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/As0A-w1WmPI"
+  },
+  {
+    id: "video-m6-linguagem-simples-ia",
+    titulo: "Comunicação Descomplicada no Serviço Público: Linguagem Simples, Inteligência Artificial",
+    organizacao: "Governança com Inovação e Sustentabilidade (YouTube)",
+    url: "https://www.youtube.com/watch?v=r7dYNidpM3k",
+    topico: "M6 — Ética e responsabilidade digital (linguagem simples/IA)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "r7dYNidpM3k",
+    canal: "Governança com Inovação e Sustentabilidade",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/r7dYNidpM3k"
+  },
+  {
+    id: "video-m6-transparencia-ia",
+    titulo: "Transparência e imparcialidade nos usos da inteligência artificial no âmbito do serviço público",
+    organizacao: "Thiago Nobrega | Direito Administrativo (YouTube)",
+    url: "https://www.youtube.com/watch?v=75RqMrSbenM",
+    topico: "M6 — Ética e responsabilidade digital (transparência/imparcialidade IA)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "75RqMrSbenM",
+    canal: "Thiago Nobrega | Direito Administrativo",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/75RqMrSbenM"
+  },
+  {
+    id: "video-m6-governo-digital-14129",
+    titulo: "1 - Lei 14.129/2021 Governo Digital",
+    organizacao: "LexPlay (YouTube)",
+    url: "https://www.youtube.com/watch?v=Zjv2mZJkakw",
+    topico: "M6 — Ética e responsabilidade digital (Governo Digital)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "Zjv2mZJkakw",
+    canal: "LexPlay",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/Zjv2mZJkakw"
+  },
+  {
+    id: "video-m7-dados-excel",
+    titulo: "Excel Básico para Análise de Dados",
+    organizacao: "Universidade dos Dados (YouTube)",
+    url: "https://www.youtube.com/watch?v=LmhbPTMaJak",
+    topico: "M7 — Dados (análise de dados com Excel)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "LmhbPTMaJak",
+    canal: "Universidade dos Dados",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/LmhbPTMaJak"
+  },
+  {
+    id: "video-m7-dados-pandas",
+    titulo: "Te ensino TUDO sobre Pandas para análise de dados com Python",
+    organizacao: "Asimov Academy (YouTube)",
+    url: "https://www.youtube.com/watch?v=1JpYOqvDJNU",
+    topico: "M7 — Dados (pandas/análise de dados)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "1JpYOqvDJNU",
+    canal: "Asimov Academy",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/1JpYOqvDJNU"
+  },
+  {
+    id: "video-m8-visualizacao-dashboards",
+    titulo: "É o fim do Power BI? Criando Dashboard com Python em 15 minutos",
+    organizacao: "Asimov Academy (YouTube)",
+    url: "https://www.youtube.com/watch?v=P6E_Kts9pxE",
+    topico: "M8 — Visualização de dados (dashboards)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: [],
+    formato: "video",
+    idVideo: "P6E_Kts9pxE",
+    canal: "Asimov Academy",
+    urlEmbedNocookie: "https://www.youtube-nocookie.com/embed/P6E_Kts9pxE"
+  },
+
+  /* ---------- BLOCO 6 — VERIFICADAS EM 2026-10-24 (RFC 9110, ANPD, CF art. 37/5º, dispositivos remissivos M6) ---------- */
 
   {
     id: "ref-microsoft-learn-m365",
@@ -77,7 +365,7 @@ const references = [
     organizacao: "Microsoft (Microsoft Learn)",
     url: "https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide",
     topico: "M1 — Microsoft 365 e aplicações de escritório",
-    dataVerificacao: "2026-10-23",
+    dataVerificacao: "2026-10-24",
     status: "verificado",
     dispositivos: null
   },
@@ -87,7 +375,7 @@ const references = [
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc791/",
     topico: "M2 — Redes de computadores (IPv4)",
-    dataVerificacao: "2026-10-23",
+    dataVerificacao: "2026-10-24",
     status: "verificado",
     dispositivos: null
   },
@@ -97,28 +385,108 @@ const references = [
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc793/",
     topico: "M2 — Redes de computadores (TCP)",
-    dataVerificacao: "2026-10-23",
+    dataVerificacao: "2026-10-24",
     status: "verificado",
     dispositivos: null
   },
   {
-    id: "ref-pendente-rfc-9110-http11",
-    titulo: "HTTP/1.1 — RFC 9110 (não verificado nesta sessão)",
-    organizacao: "IETF / RFC Editor",
-    url: null,
-    topico: "M2 — Redes de computadores",
-    dataVerificacao: null,
-    status: "pendente",
+    id: "ref-rfc-1034-dns-concepts",
+    titulo: "RFC 1034 — Domain Names: Concepts and Facilities",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1034/",
+    topico: "M2 — Redes de computadores (DNS)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
     dispositivos: null
   },
   {
-    id: "ref-pendente-anpd",
-    titulo: "Autoridade Nacional de Proteção de Dados (ANPD) — regulador da LGPD (órgão e regulamentos)",
-    organizacao: "ANPD",
-    url: null,
+    id: "ref-rfc-1035-dns-implementation",
+    titulo: "RFC 1035 — Domain Names: Implementation and Specification",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1035/",
+    topico: "M2 — Redes de computadores (DNS)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-2131-dhcp",
+    titulo: "RFC 2131 — Dynamic Host Configuration Protocol (DHCP)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc2131/",
+    topico: "M2 — Redes de computadores (DHCP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-7230-http11-messaging",
+    titulo: "RFC 7230 — HTTP/1.1: Message Syntax and Routing",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7230/",
+    topico: "M2 — Redes de computadores (HTTP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-7231-http11-semantics",
+    titulo: "RFC 7231 — HTTP/1.1: Semantics and Content",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7231/",
+    topico: "M2 — Redes de computadores (HTTP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-8446-tls13",
+    titulo: "RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc8446/",
+    topico: "M2 — Redes de computadores (TLS)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-9110-http-semantics",
+    titulo: "RFC 9110 — HTTP Semantics (Internet Standard; obsoleta RFCs 7231/7232/7233/7235/2818 e partes de 7230)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc9110",
+    topico: "M2 — Redes de computadores (HTTP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-orgao",
+    titulo: "Agência Nacional de Proteção de Dados (ANPD) — portal institucional (regulador da LGPD)",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.gov.br/anpd/pt-br",
     topico: "M4 — Segurança da informação (LGPD)",
-    dataVerificacao: null,
-    status: "pendente",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-2-2022",
+    titulo: "Resolução CD/ANPD nº 2, de 27 de janeiro de 2022 — Regulamento de aplicação da LGPD para agentes de tratamento de pequeno porte",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.gov.br/anpd/pt-br/documentos-e-publicacoes/regulamentacoes-da-anpd/resolucao-cd-anpd-no-2-de-27-de-janeiro-de-2022",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-4-2023",
+    titulo: "Resolução CD/ANPD nº 4, de 24 de fevereiro de 2023 — Regulamento de Dosimetria e Aplicação de Sanções Administrativas",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/web/dou/-/resolucao-cd/anpd-n-4-de-24-de-fevereiro-de-2023-466146077",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
     dispositivos: null
   },
   {
@@ -127,29 +495,139 @@ const references = [
     organizacao: "CERT.br (NIC.br)",
     url: "https://cert.br/",
     topico: "M4 — Segurança da informação (malwares, defesa)",
-    dataVerificacao: "2026-10-23",
+    dataVerificacao: "2026-10-24",
     status: "verificado",
     dispositivos: null
   },
   {
-    id: "ref-pendente-cf-art37-art5-demais",
-    titulo: "Constituição Federal — demais incisos do art. 37 e do art. 5º (não conferidos nesta sessão)",
+    id: "ref-cf-1988-art37-demais",
+    titulo: "Constituição Federal de 1988 — art. 37 (demais incisos e parágrafos relevantes, texto integral conferido)",
     organizacao: "Planalto (Presidência da República)",
-    url: null,
+    url: "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
     topico: "M6 — Ética e responsabilidade digital no serviço público (CF/1988)",
-    dataVerificacao: null,
-    status: "pendente",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: ["art. 37, caput (princípios)", "art. 37, II", "art. 37, III", "art. 37, XXI", "art. 37, § 1º", "art. 37, § 3º, II", "art. 37, § 4º", "art. 37, § 6º"]
+  },
+  {
+    id: "ref-cf-1988-art5-demais",
+    titulo: "Constituição Federal de 1988 — art. 5º (demais incisos relevantes, texto integral conferido)",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público (CF/1988)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: ["art. 5º, X", "art. 5º, XII", "art. 5º, XIV", "art. 5º, XXXIII", "art. 5º, LXXIX"]
+  },
+  {
+    id: "ref-lei-8429-1992-improbidade",
+    titulo: "Lei nº 8.429, de 2 de junho de 1992 — Improbidade administrativa (redação dada pela Lei nº 14.230/2021)",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: ["art. 1º", "art. 37, § 4º CF (remissão)"]
+  },
+  {
+    id: "ref-lei-1079-1950-crimes-responsabilidade",
+    titulo: "Lei nº 1.079, de 10 de abril de 1950 — Crimes de responsabilidade",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/leis/l1079.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
     dispositivos: null
   },
   {
-    id: "ref-pendente-m6-remissao",
-    titulo: "Dispositivos citados apenas por remissão no Módulo 6 (Lei 8.429/1992, Lei 1.079/1950, Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017, Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001; LGPD art. 7º e demais)",
+    id: "ref-lei-13146-2015-inclusao",
+    titulo: "Lei nº 13.146, de 6 de julho de 2015 — Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência)",
     organizacao: "Planalto (Presidência da República)",
-    url: null,
+    url: "http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
     topico: "M6 — Ética e responsabilidade digital no serviço público",
-    dataVerificacao: null,
-    status: "pendente",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
     dispositivos: null
+  },
+  {
+    id: "ref-lei-10098-2000-acessibilidade",
+    titulo: "Lei nº 10.098, de 19 de dezembro de 2000 — Normas gerais e critérios básicos de acessibilidade",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/leis/l10098.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-lei-10741-2003-idoso",
+    titulo: "Lei nº 10.741, de 1º de outubro de 2003 — Estatuto da Pessoa Idosa",
+    organizacao: "Planalto (Presidência da República)",
+    url: "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-lei-13460-2017-usuario-servicos-publicos",
+    titulo: "Lei nº 13.460, de 26 de junho de 2017 — Participação, proteção e defesa dos direitos do usuário dos serviços públicos",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-lei-12682-2012-documentos-eletronicos",
+    titulo: "Lei nº 12.682, de 9 de julho de 2012 — Elaboração e arquivamento de documentos em meios eletromagnéticos",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12682.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-lei-14063-2020-assinaturas-eletronicas",
+    titulo: "Lei nº 14.063, de 23 de setembro de 2020 — Uso de assinaturas eletrônicas em interações com entes públicos",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14063.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-lcp-101-2000-responsabilidade-fiscal",
+    titulo: "Lei Complementar nº 101, de 4 de maio de 2000 — Lei de Responsabilidade Fiscal (LRF)",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: ["art. 37, § 4º CF (remissão)"]
+  },
+  {
+    id: "ref-lcp-105-2001-sigilo-financeiro",
+    titulo: "Lei Complementar nº 105, de 10 de janeiro de 2001 — Sigilo das operações de instituições financeiras",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp105.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-lgpd-art7-bases-legais",
+    titulo: "LGPD — Lei nº 13.709/2018, art. 7º (hipóteses de tratamento de dados pessoais; bases legais)",
+    organizacao: "Planalto (Presidência da República)",
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: ["art. 7º, I a X"]
   }
 ];
 

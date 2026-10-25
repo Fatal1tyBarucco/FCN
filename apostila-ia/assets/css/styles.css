@@ -98,16 +98,161 @@ footer {
     --background-color: #202124;
     --text-color: #e8eaeb;
     --primary-color: #8ab4f8;
+    --secondary-color: #81c995;
   }
-  
+
   body {
     background-color: var(--background-color);
     color: var(--text-color);
   }
-  
+
   main section {
     background: #2c3034;
     color: var(--text-color);
   }
   footer { color: #bdc1c6; }
+  /* Contraste AA: links mais claros sobre fundo escuro */
+  a { color: #8ab4f8; }
+  .label-ok { background: #1e3a29; color: #81c995; }
+  .label-parc { background: #3d3319; color: #fdd663; }
+  .label-pend { background: #3d1d1a; color: #f28b82; }
+  .aviso { background: #3d3319; color: #fdd663; border-color: #fdd663; }
+}
+
+/* Foco visível global (complementa accessibility.js) */
+:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 2px;
+}
+@media (prefers-color-scheme: dark) {
+  :focus-visible { outline-color: #8ab4f8; }
+}
+
+/* Touch targets mínimos (WCAG 2.5.5) — já existente, reforçado */
+button, a, input, select, textarea {
+  min-height: 44px;
+}
+button { display: inline-flex; align-items: center; justify-content: center; }
+
+/* Árvore curricular acessível */
+.curriculum-tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+.curriculum-tree .tree-group {
+  list-style: none;
+  margin: 0.15rem 0 0.15rem 1.1rem;
+  padding: 0;
+  border-left: 1px dashed #c6d0d9;
+}
+.curriculum-tree .tree-node {
+  margin: 0.15rem 0;
+  padding: 0.15rem 0.3rem;
+  border-radius: 4px;
+}
+.curriculum-tree .tree-node:focus,
+.curriculum-tree .tree-node:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 2px;
+  background: #e8f0fe;
+}
+@media (prefers-color-scheme: dark) {
+  .curriculum-tree .tree-group { border-left-color: #5f6368; }
+  .curriculum-tree .tree-node:focus,
+  .curriculum-tree .tree-node:focus-visible { background: #1e3050; }
+}
+.tree-toggle {
+  background: transparent;
+  border: 1px solid #c6d0d9;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 0.1rem 0.35rem;
+  margin-right: 0.35rem;
+  min-height: 28px;
+  min-width: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.tree-toggle-placeholder { opacity: 0.4; border: none; }
+.tree-label { font-weight: 500; }
+.tree-modulo-label { font-weight: 700; color: #0b1d36; }
+.tree-unidade-label { font-weight: 600; color: #143a6b; }
+@media (prefers-color-scheme: dark) {
+  .tree-modulo-label { color: #e8eaed; }
+  .tree-unidade-label { color: #8ab4f8; }
+}
+
+/* Responsividade: breakpoints 360, 768, 1024, 1440 */
+@media (max-width: 360px) {
+  body { padding: 0.5rem; font-size: 0.92rem; }
+  main { padding: 0.5rem; max-width: 100%; }
+  section { padding: 0.75rem; margin-bottom: 0.75rem; }
+  header { padding: 0.75rem 0.5rem; }
+  header h1 { font-size: 1.2rem; }
+  .curriculum-tree { font-size: 0.85rem; }
+  .curriculum-tree .tree-group { margin-left: 0.6rem; }
+  .chart-params input[type=text],
+  .chart-params input[type=number] { width: 100%; }
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  pre { font-size: 0.8rem; overflow-x: auto; }
+}
+@media (min-width: 361px) and (max-width: 768px) {
+  main { padding: 1rem; max-width: 100%; }
+  section { padding: 1rem; }
+  header { padding: 0.9rem 1rem; }
+  .chart-params input[type=text] { width: 100%; }
+  .chart-params input[type=number] { width: 100%; }
+  table { display: block; overflow-x: auto; max-width: 100%; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main { max-width: 900px; }
+  section { padding: 1.2rem; }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  main { max-width: 1000px; }
+}
+@media (min-width: 1441px) {
+  main { max-width: 1100px; }
+  body { font-size: 1.05rem; }
+}
+
+/* Evitar overflow horizontal global */
+html, body { overflow-x: hidden; }
+img, svg, table, pre { max-width: 100%; }
+
+/* Garantia: outline não é removido globalmente em nenhum elemento. */
+/* Vídeos complementares (Seção 12.2 do Escrita.txt) — embeds responsivos */
+.videos-complementares {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #c6d0d9;
+}
+.videos-complementares h5 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.video-item {
+  margin-bottom: 1rem;
+}
+.video-embed-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+  display: block;
+  max-width: 100%;
+}
+iframe { max-width: 100%; }
+@media (prefers-color-scheme: dark) {
+  .videos-complementares { border-top-color: #5f6368; }
 }
