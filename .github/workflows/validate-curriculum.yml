@@ -50,6 +50,15 @@ jobs:
       - name: Validate repository structure
         run: node verificacao/verificar-estrutura.js
 
+      - name: Install Playwright test dependency
+        run: npm install --no-save playwright
+
+      - name: Install Chromium for browser smoke test
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser smoke test in file URL mode
+        run: node verificacao/test-browser-smoke.cjs
+
       - name: Upload generated audit reports
         if: always()
         uses: actions/upload-artifact@v4
