@@ -10,7 +10,7 @@
 - Simuladores locais (sem ataques reais, sem IA real, sem comandos no SO).
 - Questões autorais (não atribuídas a bancas reais); estilos de cobrança como formato.
 - Flashcards SM-2 simplificado (documentado).
-- Vídeos: nenhum publicado como validado (decisão intencional).
+- Referências e vídeos: 72 itens estruturados, incluindo 20 vídeos com IDs verificados via oEmbed em 2026-10-24; disponibilidade regional e execução dos embeds em navegador real ainda precisam de teste.
 - PWA condicional: manifest + SW; SW não registra em file://.
 - Referências verificadas: LGPD, LAI, Lei 14.129/2021, Marco Civil, CF art. 37/art. 5º.
 
@@ -26,7 +26,7 @@ Auditoria read-only realizada em 2026-10-24 contra a Seção 3 do `Escrita.txt`
 |---|---|---|---|
 | 1 | HTML5 semântico | `index.html` usa `<!DOCTYPE html>`, `<header>`, `<main>`, `<section aria-label>`, `<article>` (exemplos), `<footer>` | OK |
 | 2 | CSS3 responsivo | `assets/css/styles.css` + media queries `max-width: 480px` em CSS inline do index; variáveis `:root` | OK |
-| 3 | JS nativo, organizado em módulos quando possível | 38 tags `<script src>` locais; módulos por arquivo (`navigation.js`, `simulators.js`, …); IIFEs em storage/flashcards/... | OK (sem ES modules, por causa de file://) |
+| 3 | JS nativo, organizado em módulos quando possível | 39 tags `<script src>` locais; módulos por arquivo (`navigation.js`, `simulators.js`, …); IIFEs em storage/flashcards/... | OK (sem ES modules, por causa de file://) |
 | 4 | IndexedDB para grandes volumes "quando necessário" | **Não implementado**. Dados curriculares/questões/flashcards são objetos JS literais carregados por `<script>`; progresso em localStorage. Decisão justificada: volume atual (~tamanho KB) cabe em localStorage/memória; IndexedDB adicionaria complexidade sem ganho. Ver trade-off T5. | PARCIAL (decisão documentada) |
 | 5 | localStorage para preferências/dados pequenos | Chave `apostila-ia-progresso`; `storage.js` + `navigation.js` + `progress.js` consomem | OK |
 | 6 | Service Worker + manifest PWA opcionais, evolução offline | `manifest.webmanifest` válido; `service-worker.js` (precache não fatal + cache-on-fetch); registro condicional em index.html (somente `http/https`) | OK (condicional) |
@@ -51,7 +51,7 @@ Auditoria read-only realizada em 2026-10-24 contra a Seção 3 do `Escrita.txt`
 ### 2. Trade-offs e decisões
 
 - **T1 — Sem build / sem ES modules.** Trade-off: simplicidade de entrega em file:// e zero toolchain vs. ausência de tree-shaking, linting automático e modularização real. Escolhido: scripts clássicos com IIFEs. Mitigação: `node --check` no CI (workflow Pages) + smoke tests em Node/vm.
-- **T2 — Dados por módulo (`flashcards_m1..m8.js`) em vez de um único `flashcards.js`.** A Seção 3.3 sugere `assets/data/flashcards.js` singular. Escolhido: um arquivo por módulo para escalabilidade e diff menor, descobertos dinamicamente. Trade-off: mais tags `<script>` (38) e ordem de carregamento manual. Mitigação: convenção de nomenclatura + descoberta por `typeof`.
+- **T2 — Dados por módulo (`flashcards_m1..m8.js`) em vez de um único `flashcards.js`.** A Seção 3.3 sugere `assets/data/flashcards.js` singular. Escolhido: um arquivo por módulo para escalabilidade e diff menor, descobertos dinamicamente. Trade-off: mais tags `<script>` (39) e ordem de carregamento manual. Mitigação: convenção de nomenclatura + descoberta por `typeof`.
 - **T3 — Descoberta por `switch` explícito de `typeof` em vez de `window['curriculumM' + n]`.** Motivo: `const` no escopo global léxico não viram propriedades de `window`, e `eval` é proibido. Trade-off: código verboso e limite fixo de 8 módulos. Mitigação: constante `MAX_MODULOS_DESCOBERTA`; adicionar módulo exige editar o switch (documentado). Alternativa rejeitada: `eval` (proibido).
 - **T4 — Migração de versão de storage é nominal.** `storage.js` incrementa `_v` mas não transforma dados antigos. Trade-off: simplicidade vs. robustez de migração. Mitigação: namespaces isolados por módulo; dados corrompidos são descartados (fallback `{ _v }`). Recomendação: implementar migração real se o esquema evoluir.
 - **T5 — IndexedDB não implementado.** Decisão: localStorage + objetos literais em memória bastam para o volume atual (conteúdo em KB, progresso pequeno). Trade-off: limite de ~5MB do localStorage e ausência de histórico massivo de aprendizagem. Recomendação: adotar IndexedDB quando houver (a) histórico de questões > milhares, (b) cache offline de conteúdo grande, ou (c) necessidade de busca full-text persistente.
@@ -108,3 +108,11 @@ documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta audito
 **Motivação:** preservar a execução direta de apostila-ia/index.html e permitir uma auditoria reproduzível dos IDs e campos curriculares sem introduzir framework ou etapa de build.
 
 **Trade-off:** a extração por padrões textuais detecta estrutura, não valida semântica, conteúdo pedagógico, gabaritos, fontes ou comportamento no navegador. O script scripts/audit_curriculum_matrix.mjs foi versionado, mas sua execução local ainda precisa ser comprovada antes de tratá-lo como verificado.
+
+
+## Atualização de evidências — 2026-10-25 (PR #17)
+
+- A validação automatizada do PR foi executada no GitHub Actions: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246156393. Resultado: sintaxe JS aprovada, scripts de auditoria executados e `verificacao/verificar-estrutura.js` com 0 falhas.
+- Inventário de flashcards corrigido: 460 total (M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50, M8=50). A auditoria de rastreabilidade é por tópico-pai e identificou 108 questões com referência somente à unidade, sem tópico específico; elas permanecem sem atribuição artificial.
+- `storage.js` oferece uma API de persistência e `progress.js` a consome com fallback. `navigation.js`, `flashcards.js` e `quiz-engine.js` ainda mantêm gravações próprias em `localStorage`; a existência de `storage.js` não significa que todos os consumidores estejam centralizados nele.
+- O workflow e as auditorias não substituem teste de navegador real, avaliação WCAG com tecnologia assistiva ou revisão semântica de conteúdo.
