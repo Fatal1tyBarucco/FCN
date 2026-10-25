@@ -99,7 +99,7 @@ Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada
 
 - [x] Validar referências `topico` de todos os flashcards M1–M8 contra os IDs curriculares normalizados. Resultado estático: 404/404 referências válidas.
 - [ ] Remediar a cobertura temática dos flashcards conforme o plano em `docs/FASE1_AUDITORIA_2026-10-25.md`: M1 15/23, M2 5/19, M3 4/14, M5 5/13; referências válidas não provam cobertura pedagógica. Não remapear cartões sem verificar a correspondência semântica.
-- [ ] Investigar distribuição e cobertura de M5 (5 referências distintas) e validar por coordenadas antes de classificar qualquer referência como inválida.
+- [x] Ampliar M5 de 50 para 66 flashcards com 16 cartões novos sobre IA generativa/LLMs e engenharia de prompts. Validação estática: 66 IDs únicos, 13 tópicos curriculares referenciados e zero referências inválidas; revisar tecnicamente as respostas e avaliar duplicação semântica.
 - [x] Revisar e revisar 28 cartões M2 e corrigir 27 referências temáticas com base na correspondência entre frente e título curricular. Os IDs e os textos dos cartões foram preservados; exatidão técnica integral, duplicações e cobertura completa seguem pendentes. Ver `docs/FASE1_AUDITORIA_2026-10-25.md`.
 - [ ] Auditar duplicação semântica e originalidade dos flashcards; a ausência de IDs repetidos não exclui cartões com conteúdo duplicado.
 - [x] Corrigir referências temáticas evidentemente incorretas em M3: `fc-m3-08` a `fc-m3-15` passaram de `m3-u1-t1` para `m3-u1-t2` após revisão de frente/verso. Isso não resolve a cobertura de M3; ainda faltam cartões para tópicos de netiqueta, acessibilidade, comunicação institucional e controles de videoconferência. Ver `docs/FASE1_AUDITORIA_2026-10-25.md`.
