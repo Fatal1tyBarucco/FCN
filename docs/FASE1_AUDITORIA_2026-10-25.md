@@ -425,3 +425,7 @@ Limitações atuais: a revisão qualitativa dos módulos M4–M8 e do banco de q
 
 
 - M8 — questão `q-m8-12`: corrigido o enunciado sobre box plot de Tukey. A versão anterior dizia que os bigodes terminavam nos limites calculados por (Q1 - 1{,}5 	imes IIQ) e (Q3 + 1{,}5 	imes IIQ); tecnicamente, esses são limites para identificar valores atípicos. Os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites. O trecho determinante e a justificativa foram alinhados a essa distinção.
+
+
+- M8 — questão `q-m8-09`: alinhada a alternativa B à lista completa de elementos da recomendação de storytelling do currículo: ação, responsável, prazo, custo previsto e consequência de não agir. A justificativa, a análise da alternativa e a regra também foram sincronizadas; a versão anterior dizia “quatro elementos” e não explicitava o custo previsto na alternativa correta.
+- M8 — questão `q-m8-12`: segunda passada de consistência após a correção inicial. A análise do item, a regra e a pegadinha também foram ajustadas para não voltar a afirmar que os bigodes terminam nos limites teóricos de 1,5×IIQ.
