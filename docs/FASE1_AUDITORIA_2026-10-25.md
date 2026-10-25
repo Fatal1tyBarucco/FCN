@@ -422,3 +422,6 @@ Limitações atuais: a revisão qualitativa dos módulos M4–M8 e do banco de q
 
 
 - M8 — questão `q-m8-04`: substituído um distrator ambíguo sobre o início do eixo x (que pode legitimamente ficar abaixo do menor valor observado para acomodar o limite inferior da primeira classe) por um distrator inequívoco sobre separar as barras. Justificativa e análise do distrator foram alinhadas ao princípio de contiguidade das classes do histograma.
+
+
+- M8 — questão `q-m8-12`: corrigido o enunciado sobre box plot de Tukey. A versão anterior dizia que os bigodes terminavam nos limites calculados por (Q1 - 1{,}5 	imes IIQ) e (Q3 + 1{,}5 	imes IIQ); tecnicamente, esses são limites para identificar valores atípicos. Os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites. O trecho determinante e a justificativa foram alinhados a essa distinção.
