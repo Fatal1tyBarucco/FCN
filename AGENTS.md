@@ -79,7 +79,7 @@ python3 -m http.server 8080     # Modo B — servidor estático opcional
 - Resultados: carregamento sem exceções JS (módulos 1–8; 404 FC; 365 Q; 5 gráficos); 12/12 contêineres não vazios; `buscar('CIDR')`=10 (índice 1196); 5 SVGs de gráficos; localStorage roundtrip OK; simuladores montados (Excel smoke 111 asserts).
 - ATENDIDO: áudio (controles + aviso + 3 correções, smoke 41/41, CDP OK) — síntese depende do dispositivo (limitação documentada, não defeito).
 - PARCIAL: responsividade em dispositivo físico; WCAG com leitor de tela não testado (atributos/contraste/teclado implementados).
-- VÍDEOS: 20 validados (IDs verificados via oembed, 2026-10-24; embed nos módulos opcional). PENDENTE (intencional): referências restantes (RFC 9110, ANPD órgão/regulamentos, demais incisos CF art. 37/5º, dispositivos remissivos M6).
+- VÍDEOS: 20 validados (IDs verificados via oembed, 2026-10-24; embed nos módulos concluído). REFERÊNCIAS: 52/52 verificadas (0 pendentes em references.js). Pendentes remanescentes (não cadastrados): demais resoluções ANPD, demais RFCs não verificadas individualmente, demais incisos/parágrafos CF art. 37/5º.
 - Docs atualizados: `docs/AUDITORIA_FINAL.md` (matriz 19 critérios), `docs/RELATORIO_TESTES.md` (T9–T14), `docs/PENDENCIAS.md` (1–17), `docs/PLANO_EXECUCAO.md`, `docs/INVENTARIO_CURRICULAR.md`, `docs/DECISOES_ARQUITETURAIS.md`.
 - Veredito: APROVADO COM RESSALVAS. Não declarar integralmente concluído.
 
