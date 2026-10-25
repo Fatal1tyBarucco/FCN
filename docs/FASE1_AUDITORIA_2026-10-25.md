@@ -191,3 +191,10 @@ Os valores de `topico` seguem convenções compactas (`mN-uN-tN`), enquanto os I
 ### Limite desta etapa
 
 Esta etapa não avalia originalidade, duplicação semântica, precisão factual, qualidade das respostas, nível cognitivo nem aderência individual ao `Escrita.txt`. Nenhum código funcional foi alterado; as descobertas foram registradas para orientar a próxima auditoria.
+
+
+## Ajuste metodológico — normalização das referências `topico` (2026-10-25)
+
+A comparação inicial por igualdade literal entre `topico` dos flashcards e `id` curricular não é um teste válido para este repositório: os arquivos usam convenções equivalentes distintas. Exemplos observados diretamente nos currículos: `modulo-2-unidade-1-topico-1` e `m2-u1-t1-s1`; nos flashcards, `m2-u1-t1`. Da mesma forma, alguns bancos de questões referenciam a unidade (`modulo-4-unidade-1`), enquanto outros referenciam tópicos ou subtópicos. Portanto, a contagem inicial de zero correspondências exatas não deve ser interpretada como 404 referências quebradas; ela apenas demonstra que a igualdade textual não é adequada.
+
+A validação correta precisa normalizar módulo/unidade/tópico/subtópico, aceitar referências válidas ao nível da unidade ou tópico quando o formato do banco permitir, e verificar a existência da coordenada no currículo correspondente. A distribuição temática reportada anteriormente permanece útil como contagem das strings declaradas, mas qualquer conclusão de lacuna deve aguardar essa normalização. Nenhum ID foi alterado, para evitar reescrever referências válidas sem uma prova de incompatibilidade.
