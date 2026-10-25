@@ -89,3 +89,13 @@ navegação dono único, descoberta dinâmica via typeof, persistência na chave
 sanitização, sem eval, acessibilidade básica). As lacunas (IndexedDB, a11y parcial,
 PWA não validada em navegador, migração nominal de storage) são decisões/trade-offs
 documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta auditoria.
+
+
+## Atualização — 2026-10-25: política de evidência da nova execução
+
+- Fonte de requisitos: `Escrita.txt` na raiz; o arquivo foi localizado e sua revisão remota está registrada em `docs/FASE1_AUDITORIA_2026-10-25.md`.
+- Não inferir estado atual a partir de descrições antigas em `AGENTS.md`, comentários de código ou relatórios sem reexecutar as verificações correspondentes.
+- Distinguir quatro estados: **declarado em documentação**, **inspecionado estaticamente**, **testado com evidência reproduzível** e **aprovado independentemente**.
+- A matriz agregada por módulo não substitui rastreabilidade por tópico/subtópico. Não se deve declarar a cobertura curricular integral até a matriz detalhada ser gerada e validada contra os dados de origem.
+- Alterações da execução serão feitas em branch dedicada e propostas por pull request; não alterar `main` diretamente.
+- Não se declara delegação multiagente executada apenas porque existem perfis ou configuração. Se a execução dos subagentes não for confirmada por evidências, o trabalho será reportado como realizado pelo orquestrador sem subagentes.
