@@ -387,99 +387,43 @@ Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com)
   </table>
 </section>
 
-<section aria-label="Testes executados e auditoria">
-  <h2>Testes executados e auditoria (Seção 17) <span class="label label-ok">EVIDÊNCIA REAL</span></h2>
-  <p>Não declarar teste como passado sem execução. Abaixo, apenas o que foi executado neste turno.</p>
+<section aria-label="Estado do material e limitações">
+  <h2>Estado do material e limites conhecidos</h2>
+  <p>Este resumo apresenta contagens estruturais do projeto. Quantidade de itens não equivale, por si só, à aprovação pedagógica de todo o conteúdo.</p>
   <ul>
-    <li><strong>Abertura direta (Modo A)</strong>: <code>index.html</code> criado e aberto localmente (file://) — carrega sem servidor. Confirmado: conteúdo visível, links internos presentes, estilo mínimo aplicado via tag <code>&lt;style&gt;</code> de contingência.</li>
-    <li><strong>Arquivo <code>Escrita.txt</code></strong>: verificado via <code>cat</code> e <code>wc -l</code> (1206 linhas). Confirmado: 8 módulos obrigatórios listados; requisitos quantitativos (400 flashcards, 320 questões, 3 exemplos/unidade, 5 gráficos) presentes.</li>
-    <li><strong>Inventário</strong>: arquivo <code>inventario/INVENTARIO_CURRICULAR.md</code> criado; verificado conteúdo com <code>cat</code>.</li>
-    <li><strong>Matriz</strong>: arquivo <code>matriz/MATRIZ_COBERTURA.md</code> criado; contém tabela por módulo com estados.</li>
-    <li><strong>Flashcards</strong>: arquivo <code>apostila-ia/assets/data/flashcards_m1.js</code> criado com 10 cartões; verificado sintaxe (não há <code>eval</code>, dados sanitizados via objeto literal).</li>
-    <li><strong>Simuladores</strong>: arquivo `assets/js/simulators.js` implementado; escopo documentado no cabeçalho: <strong>23 funções reais</strong> + 22 aliases em inglês — SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES, SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE, PROCV, PROCH, PROCX, CORRESP, ÍNDICE e HOJE — com <strong>PROCV/PROCH/PROCX executando busca real</strong> (exata e aproximada), erros #N/A, #REF!, #VAL!, #DIV/0! e #NUM! e rejeição de entrada fora do escopo com mensagem iniciada por "ERRO DE ENTRADA"; parser próprio sem `eval` e planilha em memória com refs A1. Nenhuma função inventada. <strong>Limite declarado</strong>: núcleo verificado com smoke test em Node/vm (111 asserts); <strong>não testado em navegador real</strong> — desde o P1-D a UI existe nesta página (#excel-app, script inline com guardas) e os limites do simulador estão listados no item “Simuladores conectados (6)”.</li>
-    <li><strong>Gráficos (neste turno)</strong>: criado <code>assets/js/charts.js</code> — laboratório dos 5 gráficos obrigatórios (histograma, linhas, barras/colunas, dispersão, box plot) em <strong>SVG próprio</strong> (sem Chart.js/ECharts — decisão documentada no cabeçalho: biblioteca de CDN não funciona em <code>file://</code> offline). Dados de origem editáveis (tabela), parâmetros por gráfico, atualização real a cada interação, eixos/rótulos/unidades, descrição acessível (<code>role="img"</code> + <code>aria-label</code> + parágrafo visível), explicação dinâmica e botão “Restaurar valores iniciais”. Cálculos: classes/frequências/densidade no histograma (convenção [inf,sup), última inclui sup); tendência por mínimos quadrados no gráfico de linhas; ordenação + linha de base com <strong>sinalização de eixo truncado</strong> em barras; r de Pearson, reta de regressão e outliers por resíduo padronizado na dispersão (aviso correlação ≠ causalidade); <strong>quartis tipo 7 (interpolação linear), IIQ, bigodes e convenção 1,5×IIQ</strong> no box plot. Verificação executada (detalhes no resumo do incremento): <code>node --check</code> em todos os <code>.js</code> de <code>assets/js/</code> e <code>assets/data/</code>; smoke test em Node/vm com stub de DOM cobrindo os 5 recalculos a partir de dados editados, prova numérica dos quartis, nº de bins respeitado, ordenação, detecção de truncamento, outlier por resíduo, restauração e sanitização via <code>esc()</code>. <strong>Limite declarado</strong>: nenhum teste em navegador real foi executado neste ambiente — layout/interação visual em <code>file://</code> permanecem não verificados.</li>
-    <li><strong>Flashcards / repetição espaçada (neste turno)</strong>: <code>assets/js/flashcards.js</code> implementado — SM-2 simplificado documentado no cabeçalho do arquivo (Acertou: 1→3→intervalo×fator (fator+0.05); Difícil: max(1, anterior×1.2), fator−0.15; Errou: intervalo 0, fator−0.20, rep zerado; teto 365 dias; domínio a partir de 21 dias). Conectou os 110 cartões então existentes (M1/M2/M3) — 164 no HEAD do P1-A (2026-10-21), com os 54 do M4 conectados nesse incremento —, nenhum inventado. Progresso na chave existente <code>apostila-ia-progresso</code>, namespace <code>flashcards</code> — coexistência com as visitas do <code>navigation.js</code> verificada no teste. Verificação executada: <code>node --check</code> nos 11 <code>.js</code> de <code>assets/js/</code> e <code>assets/data/</code> (todos OK); smoke test em Node/vm com stub de DOM (<code>59 asserts</code> passados) cobrindo carga de 110 cartões, exibição do cartão e da explicação, os 3 estados atualizando data de revisão/intervalo/histórico, filtro por módulo e nível (UI e função pura), modos vencidos/errados, contagens, exportação JSON válida, importação com mescla/recusa de arquivo inválido e sanitização via <code>esc()</code>. <strong>Limite declarado</strong>: nenhum teste em navegador real (file:// ou servidor) foi executado neste ambiente — rendimento de <code>Blob</code>/<code>FileReader</code> e aspectos visuais em navegador permanecem não verificados.</li>
-    <li><strong>Banco de questões + motor de simulados (neste turno)</strong>: criados <code>assets/data/questions.js</code> (<strong>82 questões autorais — M1=32, M2=26, M3=24</strong> (banco posteriormente expandido para <strong>120</strong> — M1=40, M2=40, M3=40; ver detalhes na seção de banco de questões acima) — níveis 26/37/19 = 31,7% básica / 45,1% intermediária / 23,2% avançada; formatos 49 múltipla escolha + 33 Certo/Errado; estilos de cobrança CESPE 33 / FCC 22 / VUNESP 15 / FGV 12; todas com os 12 campos da Seção 10.1, incluindo análise de cada alternativa e trecho determinante nos itens C/E) e <code>assets/js/quiz-engine.js</code> (Seção 10.2: escopo por módulo/cumulativo, filtro por nível, estilo e formato, quantidade, ordem aleatória <strong>sem repetição na sessão</strong>, temporizador opcional com correção automática ao esgotar, navegação por grade, marcação para revisão, finalizar/abandonar, gabarito comentado, nota vs. taxa de acerto vs. não respondidas, desempenho por assunto, pontos fracos automáticos, recomendação de revisão com erros históricos e histórico de até 50 tentativas no namespace <code>questoes</code> da chave <code>apostila-ia-progresso</code>). Verificação executada: <code>node --check</code> nos <strong>13</strong> arquivos <code>.js</code> de <code>assets/js/</code> + <code>assets/data/</code> (todos OK, inclusive os três arquivos de trabalho paralelo, lidos apenas); smoke test em Node/vm com stub de DOM e localStorage pré-populado (<strong>92 asserts passados</strong>) cobrindo validação estrutural das 82 questões, distribuições declaradas, filtros e montagem de sessão (inclusive truncamento honesto quando o pool é menor que o pedido), correção (5 acertos/3 erros/16 não respondidas em M3), tempo por questão, correção idempotente, funções do temporizador, persistência acumulada <strong>sem quebrar as chaves de currículo nem de flashcards pré-existentes</strong>, fluxo completo de UI (iniciar → navegar → marcar → responder → finalizar), sanitização via <code>esc()</code> de uma questão maliciosa injetada, item C/E com trecho determinante, abandono sem gravação e limpeza de histórico isolada ao namespace. <strong>Limites declarados</strong>: (1) nenhum teste em navegador real (file:// ou servidor) foi executado neste ambiente — renderização visual, eventos <code>change</code> dos filtros e temporizador em tempo real permanecem não verificados; (2) <strong>82 de 320 questões</strong> — faltam 238 porque M4–M8 ainda não têm questões autorais escritas (M4, M5, M7 e M8 têm currículo implementado no disco — hoje também carregado no <code>index.html</code> pelo incremento P1-A —; M6 não tinha currículo naquele turno, criado depois no P1-C); nenhuma questão foi atribuída a banca real.</li>
-    <li><strong>Integração P1-C (M6 + 5.3/5.4 + flashcards, 2026-10-21)</strong>: cinco tags de dados adicionadas ao <code>index.html</code> (24 no total) — <code>curriculum_m6.js</code> e <code>flashcards_m5.js</code>…<code>flashcards_m8.js</code>, na ordem numérica. Verificação executada: <code>node --check</code> nos <strong>24</strong> <code>.js</code> de <code>assets/</code> (24 OK) + smoke test em Node/vm com stub de DOM carregando os <strong>24 scripts na ordem do <code>index.html</code></strong> e disparando <code>DOMContentLoaded</code> (0 erros de carga, 0 erros nos handlers): <code>window.apostilaDados.curriculum</code> com as <strong>8 chaves</strong> <code>modulo-1</code>..<code>modulo-8</code>; árvore renderizada com <strong>132 tópicos + 295 subtópicos = 427 nós</strong> (M1 23/37, M2 19/52, M3 14/35, M4 13/39, M5 13/35, M6 18/46, M7 9/23, M8 23/28); simulado com <strong>15 escopos</strong> (m1..m8 + cum-2..cum-8) e filtros; flashcards com <strong>404 cartões</strong> únicos e a UI de filtro listando M1..M8.</li>
-    <li><strong>Busca global</strong> (estes arquivos): <code>assets/js/search.js</code> criado (794 linhas, 33 KB). Índice em memória a partir de <code>window.apostilaDados</code> (currículo + flashcards) e <code>window.questoesBanco</code>; matching accent-insensitive (normalização via NFD + regex de classes de acento), tokenização AND, destaque em <code>&lt;mark&gt;</code>; filtros por módulo, tópico, nível e tipo de recurso; navegação delegada a <code>window.apostilaMostrarConteudo</code> (exposta por <code>navigation.js</code>) para currículo; preview in-line para flashcards e questões. <code>mount()</code>/<code>destroy()</code> expostos como <code>window.SearchApp</code>; auto-montagem no <code>#search-app</code> no <code>DOMContentLoaded</code>. Verificação: <code>node --check OK</code>; smoke test em Node/vm (stub de DOM) com 65 asserts cobrindo indexação (contagens de currículo/flashcards/questões), busca (AND, accent-insensitive, filtros de módulo/topico/nível/tipo), destaque/snippet, truncagem, sanitização <code>esc()</code> de termo malicioso, montagem/DOM, delegação de clique, idempotência de <code>mount()</code> e <code>destroy()</code>. <strong>Limite declarado</strong>: nenhum teste em navegador real foi executado neste ambiente — interações visuais em <code>file://</code> permanecem não verificadas.</li>
-    <li><strong>Áudio (Web Speech API)</strong>: <code>assets/js/audio.js</code> criado (530 linhas, 23 KB). <code>window.AudioApp = { mount(el), destroy() }</code>; uso da API <code>speechSynthesis</code> com detecção de disponibilidade (aviso visível quando ausente — não afirma universalidade entre dispositivos); detecção de vozes pt-BR (fallback a pt, fallback a todas); chunking de conteúdo extenso (teto 4000 chars por <code>SpeechSynthesisUtterance</code>); controles de play/pause/resume/stop/velocidade/voz; cancela fala no <code>beforeunload</code> e <code>visibilitychange</code>; <code>mount()</code>/<code>destroy()</code> expostos; auto-montagem no <code>#audio-app</code> no <code>DOMContentLoaded</code>. Verificação: <code>node --check OK</code>; smoke test em Node/vm (stub de DOM) com 42 asserts cobrindo divisão de texto em chunks, formatação <code>fmtPct</code>, renderização de estados (API ausente/vozes ausentes/vozes presentes/falando/pausado), sanitização <code>esc()</code>, idempotência <code>mount()</code>/<code>destroy()</code>, remoção de listeners e cancelamento de fala. <strong>Limite declarado</strong>: a API <code>speechSynthesis</code> só existe em navegador — nenhum teste de síntese real foi executado nesse ambiente; em <code>file://</code> sem navegador, o módulo exibe aviso de indisponibilidade e desativa os controles.</li>
-    <li><strong>Service Worker / PWA</strong>: <strong>criado e referenciado</strong> — <code>service-worker.js</code> (84 linhas, precache de <code>index.html</code>/<code>styles.css</code>/<code>manifest.webmanifest</code>, cache-on-fetch, fallback offline) e <code>manifest.webmanifest</code> (JSON válido) existem no disco; <code>&lt;link rel="manifest"&gt;</code> adicionado ao <code>&lt;head&gt;</code>; registro de SW adicionado antes de <code>&lt;/body&gt;</code> <strong>condicionalmente</strong> (<code>serviceWorker in navigator</code>) — em <code>file://</code> o registro não ocorre e o app funciona completo sem ele (conforme Seção 3.1 do Escrita.txt). Verificação: <code>node --check OK</code> em <code>service-worker.js</code>; <code>manifest.webmanifest</code> validado como JSON. Ícones <code>assets/icons/icon-192.png</code> e <code>icon-512.png</code> presentes. <strong>Limite declarado</strong>: o Service Worker só executa em contexto de navegador com <code>navigator.serviceWorker</code> — nenhum teste de registro/cache foi feito fora de navegador.</li>
+    <li><strong>Currículo:</strong> 8 módulos, 37 unidades, 132 tópicos e 295 subtópicos (427 nós curriculares).</li>
+    <li><strong>Flashcards:</strong> 460 no total: M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50.</li>
+    <li><strong>Questões autorais:</strong> 365, distribuídas entre os oito módulos. Parte das questões aponta apenas para uma unidade, sem identificar um tópico específico; esse vínculo não é apresentado como cobertura granular comprovada.</li>
+    <li><strong>Laboratórios:</strong> cinco tipos de gráfico em SVG próprio e seis simuladores didáticos: Excel, redes, segurança, engenharia de prompts, dados e ética.</li>
+    <li><strong>Referências:</strong> há referências técnicas cadastradas e IDs de vídeo verificados; a disponibilidade dos vídeos e de recursos do navegador depende da conexão e do ambiente.</li>
   </ul>
-  <p>Todos os testes realizados estão documentados com evidência real; nenhuma declaração de sucesso inventada.</p>
+  <p><strong>Validação técnica:</strong> o workflow de validação do PR passou em sintaxe JavaScript e verificações estruturais em 25/10/2026. Isso não substitui a revisão semântica independente nem comprova todos os comportamentos em navegador real, leitor de tela ou abertura direta via <code>file://</code>.</p>
+  <p>Limites relevantes: o progresso é local ao navegador, não há sincronização entre dispositivos, a síntese de voz depende da Web Speech API e o Service Worker/PWA requer contexto HTTP/HTTPS.</p>
 </section>
 
 <section aria-label="Instruções de execução">
-  <h2>Instruções de execução (Modo A obrigatório, Modo B opcional)</h2>
-  <pre><code># Modo A — abertura direta (obrigatório conforme Seção 3.2)
-# Nenhum Node.js, build ou servidor necessário.
-# Abra diretamente no navegador moderno:
-open index.html   # ou: duplo-clique no arquivo
-
-# Modo B — servidor estático opcional (não obrigatório para conteúdo central)
-python -m http.server 8000  # ou: python3 -m http.server 8000
-# Acesse http://localhost:8000
-
-# Estrutura de arquivos (Seção 3.3 do prompt mestre) — ATENÇÃO:
-# o bloco abaixo é PLANO ARQUITETURAL, não o estado atual. NEM todos os
-# arquivos existem hoje; nada aqui deve ser lido como funcionalidade operacional.
-#
-# EXISTEM e estão carregados no index.html:
-#   index.html, manifest.webmanifest, service-worker.js
-#   assets/css/styles.css
-#   assets/js/app.js, navigation.js, simulators.js, simulator_network.js,
-#     simulator_security.js, simulator_prompts.js, simulator_data.js,
-#     flashcards.js, quiz-engine.js, charts.js, search.js, audio.js,
-#     storage.js (novo neste incremento)
-#   assets/data/curriculum.js, curriculum_m2.js, curriculum_m3.js,
-#     curriculum_m4.js, curriculum_m5.js, curriculum_m6.js, curriculum_m7.js,
-#     curriculum_m8.js, flashcards_m1.js, flashcards_m2.js, flashcards_m3.js,
-#     flashcards_m4.js, flashcards_m5.js, flashcards_m6.js, flashcards_m7.js,
-#     flashcards_m8.js, questions.js, questions_m4.js, questions_m5.js,
-#     questions_m6.js, questions_m7.js, questions_m8.js,
-#     references.js (novo neste incremento)
-# (a partir do P1-D, 2026-10-22: os 6 simuladores têm UI — #excel-app,
-#  #redes-app, #seguranca-app, #prompts-app, #dados-app — e o banco de
-#  questões completo funde questions.js + questions_m4/m5/m6/m7/m8.js com
-#  deduplicação por id; M6 e M7 estão INTEGRADOS e renderizando desde o
-#  P1-C/P1-D, e o banco fundido totaliza 365 questões autorais)
-# (a partir do P1-C: os 8 módulos renderizam — 427 nós (132 tópicos + 295 subtópicos) —, os 404 flashcards
-#  estão conectados e a árvore inclui o M6; integração do M6 feita só com a
-#  tag &lt;script&gt;, sem alterar navigation.js)
-# (busca global + áudio: implementados — search.js e audio.js carregados com
-#  defer; manifest + SW registrados condicionalmente. SW só ativa em
-#  http/https — file:// funciona sem ele.)
-# IMPLEMENTADOS NESTE INCREMENTO (P1-F):
-#   assets/js/progress.js, accessibility.js (AGORA EXISTEM e estão
-#     carregados acima; contêineres #progress-app e #accessibility-app)
-#   assets/js/storage.js (infraestrutura de persistência; não consumido
-#     pelos módulos existentes, que escrevem diretamente em localStorage)
-#   assets/data/references.js (referências verificadas e pendentes; fonte
-#     primária em referencias/referencias-verificadas.md, na raiz do repositório)
-
-# Persistência (Seção 14): progresso salvo em localStorage
-# com chave 'apostila-ia-progresso'. Limitações do modo privado
-# documentadas: armazenamento pode ser limpo ao fechar a aba.
-# Exportação/importação de backup do progresso dos flashcards já está
-# implementada na seção interativa "Flashcards" deste arquivo
-# (download/upload JSON; a importação mescla sem apagar dados locais).
-</code></pre>
+  <h2>Como abrir a apostila</h2>
+  <ol>
+    <li><strong>Modo principal:</strong> abra <code>apostila-ia/index.html</code> diretamente em um navegador moderno. Não é necessário instalar Node.js, executar build ou iniciar servidor para abrir a página.</li>
+    <li><strong>Modo alternativo:</strong> a partir da pasta <code>apostila-ia/</code>, execute <code>python3 -m http.server 8080</code> e acesse <code>http://localhost:8080</code>.</li>
+  </ol>
+  <p>Alguns recursos opcionais, como Service Worker e instalação PWA, dependem de HTTP/HTTPS. O funcionamento visual e interativo deve ser validado no navegador e dispositivo de destino; o sucesso de verificações estáticas não garante compatibilidade universal.</p>
 </section>
 
-<section aria-label="Relatório de conformidade e próximas etapas">
-  <h2>Relatório de conformidade — próximas etapas</h2>
-  <p>Este incremento atende às etapas 1-3 do plano (Seção 17) e parte das etapas 4-5 para o Módulo 1. Abaixo, o que precisa ser feito antes de considerar o projeto concluído, conforme Seção 18.</p>
+<section aria-label="Escopo e critérios de qualidade">
+  <h2>Escopo e critérios de qualidade</h2>
+  <p>O projeto reúne conteúdo didático, exemplos, exercícios, questões autorais, flashcards, simuladores e ferramentas de revisão em um ambiente local. A cobertura é acompanhada por inventário e matrizes de auditoria versionados no repositório.</p>
   <ul>
-    <li><strong>Etapa 6 (validação curricular)</strong>: verificar que todos os sub-tópicos do inventário possuem conteúdo, exemplos, exercícios, flashcards e fontes. Nenhum marcado completo sem evidência.</li>
-    <li><strong>Etapa 7 (testes técnicos)</strong>: testar carregamento de todos os arquivos, links internos, busca, simuladores (Excel, redes, segurança, IA), gráficos (5 tipos), flashcards com repetição espaçada, simulados com gabarito comentado, persistência, acessibilidade (foco visível, contraste, navegação por teclado), modo offline (Service Worker).</li>
-    <li><strong>Etapa 8 (auditoria final)</strong>: produzir matriz de conformidade com requisito → evidência → teste → resultado → limitação → correção necessária.</li>
-    <li><strong>Entrega final exigida pelo prompt</strong>: 8 módulos completos, 400+ flashcards, 320+ questões autorais com gabarito e análise de cada alternativa, 5 gráficos funcionais com dados reais, todos os simuladores, vídeos validados com IDs verificados, inventário verificável, relatório de testes executados.</li>
+    <li>Um tópico só deve ser considerado dominado após compreensão, aplicação e resolução de exercícios — não apenas por existir na árvore de navegação.</li>
+    <li>Questões e flashcards devem manter IDs estáveis e referências curriculares rastreáveis. Associações apenas no nível da unidade precisam de revisão antes de afirmar cobertura por tópico.</li>
+    <li>Correção técnica, gabaritos, fontes, acessibilidade e funcionamento real são critérios separados. A aprovação de um teste estrutural não substitui esses controles.</li>
+    <li>As limitações e evidências de validação são registradas nos documentos de governança do repositório, incluindo o relatório de testes e as pendências.</li>
   </ul>
-  <p>Este arquivo (<code>index.html</code>) e os arquivos complementares (<code>inventario/</code>, <code>matriz/</code>, <code>apostila-ia/assets/data/flashcards_m1.js</code>) são o incremento funcional e consistente solicitado. Nenhuma parte pendente foi substituída por placeholder; todas as limitações estão declaradas.</p>
 </section>
 
 </main>
 <footer>
-  <p>Apostila Web Interativa Definitiva — Projeto FCN / Renato Barucco · Etapa atual: inventário + matriz + app em operação com currículo de M1–M8 na árvore (427 nós — 132 tópicos + 295 subtópicos), flashcards de M1–M8 (404), <strong>365 questões autorais</strong> em 8 módulos conectados (piso 320 atingido), gráficos 5/5, <strong>simuladores com UI: Excel, Redes, Segurança, Prompts e Dados (Seções 7.1–7.5)</strong>, <strong>busca global</strong>, <strong>leitura em voz alta (Web Speech API)</strong> e <strong>PWA condicional (Service Worker + manifest)</strong> · Nenhuma funcionalidade inventada · Referências: LGPD (2026-10-20), LAI e Lei 14.129/2021 (2026-10-21), Marco Civil (2026-10-23), Microsoft Learn, RFC 791/793 e CERT.br verificadas</p>
+  <p>Apostila Web Interativa — Projeto FCN · 8 módulos, 427 nós curriculares, 460 flashcards, 365 questões autorais, 5 gráficos e 6 simuladores didáticos · Busca global, leitura em voz alta (dependente da Web Speech API) e PWA condicional · Referências cadastradas; IDs de vídeo verificados, com disponibilidade de embeds dependente do navegador e da rede.</p>
 </footer>
 
 <!-- Dados primeiro, depois scripts de comportamento (dependência explícita; navigation.js consolida currículo + progresso) -->
