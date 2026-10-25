@@ -181,7 +181,7 @@ Foi feita inspeção estática dos oito bancos de flashcards e dos seis arquivos
 | M2 | 50 | 5 | Há 10 cartões para cada uma de cinco referências, uma por unidade (`m2-u1-t1` até `m2-u5-t1`). Cobertura de tópicos dentro das unidades não demonstrada. |
 | M3 | 50 | 4 | 25 cartões apontam para `m3-u1-t1`; os outros 25 se distribuem por três referências. Forte concentração temática. |
 | M4 | 54 | 13 | Distribuição relativamente regular, com 4 cartões em 11 referências e 6 em duas referências. |
-| M5 | 50 | 5 | Referências concentradas nas unidades 1 e 2; não há referências distintas além das cinco observadas. |
+| M5 | 66 | 13 | Após a expansão para 66 cartões, há referências aos 13 tópicos curriculares; a cobertura semântica e a qualidade técnica ainda exigem revisão. |
 | M6 | 50 | 18 | Cobertura temática mais distribuída; frequências de 1 a 7 por referência. |
 | M7 | 50 | 9 | Nove referências distintas, com concentração em `m7-u2-t3` (10 cartões). |
 | M8 | 50 | 23 | Maior dispersão; frequências de 1 a 5 por referência. |
@@ -360,3 +360,6 @@ A revisão da distribuição deve ser guiada pelo conteúdo real de cada cartão
 **Execução parcial — M2:** revisão individual das frentes identificou 28 cartões revisados, dos quais 27 tiveram a referência alterada em relação ao conteúdo específico. As referências foram redistribuídas entre os tópicos de comunicação, TCP/IP, protocolos, endereçamento IPv6/CIDR/VLSM e diagnóstico de rede, preservando os IDs e o conteúdo dos cartões. Commit `9e009923a58581458d4e98baed82849e4ff2b3ef`. A revisão é baseada na correspondência evidente entre pergunta e título curricular; não comprova exatidão técnica integral nem cobertura pedagógica completa. Permanecem tópicos sem cartão específico, além de auditoria de duplicações.
 
 **Execução parcial — M3:** revisão individual identificou oito cartões (`fc-m3-08` a `fc-m3-15`) sobre spoofing, spear phishing, spam, phishing e autenticação SPF/DKIM/DMARC associados indevidamente ao tópico `m3-u1-t1` (SMTP, POP3 e IMAP). As referências desses oito cartões foram corrigidas para `m3-u1-t2` (Spam, phishing e falsificação de remetente), commit `4328b0fa643da27b6a6ada4881aeba9b3eb8dfa3`. O ajuste melhora a rastreabilidade local, mas não fecha a cobertura do M3: unidades sobre netiqueta, acessibilidade, comunicação institucional e controles de videoconferência ainda precisam de cartões semanticamente adequados. Também permanece pendente verificar possíveis duplicações de conteúdo.
+
+
+**Execução parcial — M5:** adicionados `fc-m5-51` a `fc-m5-66`, com dois cartões para cada um dos oito tópicos antes sem referência nas unidades 5.3 e 5.4. O arquivo agora contém 66 cartões; verificação estática confirmou IDs únicos e referências válidas aos 13 tópicos. Isso fecha a lacuna de referência por tópico, mas não a auditoria qualitativa de correção, profundidade, originalidade ou aderência completa ao currículo.
