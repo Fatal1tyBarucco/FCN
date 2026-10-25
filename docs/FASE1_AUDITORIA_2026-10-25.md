@@ -429,3 +429,7 @@ Limitações atuais: a revisão qualitativa dos módulos M4–M8 e do banco de q
 
 - M8 — questão `q-m8-09`: alinhada a alternativa B à lista completa de elementos da recomendação de storytelling do currículo: ação, responsável, prazo, custo previsto e consequência de não agir. A justificativa, a análise da alternativa e a regra também foram sincronizadas; a versão anterior dizia “quatro elementos” e não explicitava o custo previsto na alternativa correta.
 - M8 — questão `q-m8-12`: segunda passada de consistência após a correção inicial. A análise do item, a regra e a pegadinha também foram ajustadas para não voltar a afirmar que os bigodes terminam nos limites teóricos de 1,5×IIQ.
+
+- M8 — questão `q-m8-10`: o item estava no formato certo/errado, mas o enunciado pedia para escolher “qual afirmação”, sem apresentar alternativas. Convertido em uma afirmação declarativa que expressa a distinção entre métricas de resultado e de processo; o trecho determinante foi sincronizado.
+- M8 — questão `q-m8-08`: removida a expressão editorial acidental “(caio)” e refinada a regra de contagem no modelo estrela. Contar linhas só representa eventos quando a granularidade está definida e cada linha corresponde à unidade esperada; contagem distinta não substitui a definição correta da identidade do evento.
+- M8 — revisão textual: corrigidas formulações residuais em `q-m8-05` e `q-m8-11` sem alterar gabaritos ou IDs.
