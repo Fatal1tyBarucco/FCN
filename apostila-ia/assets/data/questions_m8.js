@@ -209,24 +209,24 @@ const moduleQuestions8 = [
     nivel: "basico",
     topico: "modulo-8-unidade-4-topico-3",
     assunto: "M8.4.3 Modelagem analítica",
-    contexto: "Relatório de pagamentos exibe 1.500 'atendimentos' (linhas) sobre uma base com 1.200 protocolos distintos.",
-    enunciado: "No modelo estrela, o erro de contar 'linhas do fato' até para contar eventos reais ocorre quando:",
+    contexto: "Relatório de pagamentos exibe 1.500 linhas de fatos associadas a 1.200 protocolos distintos; algumas etapas do processo geram mais de uma linha por protocolo.",
+    enunciado: "No modelo estrela, por que contar linhas da tabela de fatos como se cada linha fosse um protocolo pode superestimar a quantidade de protocolos?",
     alternativas: [
       { letra: "A", texto: "a tabela de fato armazena medidas numéricas e chaves simples." },
-      { letra: "B", texto: "a tabela de fato duplica linhas por causa de chave identidade não única." },
+      { letra: "B", texto: "a granularidade permite várias linhas por protocolo, mas o relatório interpreta cada linha como um protocolo distinto." },
       { letra: "C", texto: "as dimensões são enxutas e possuem chave única." },
       { letra: "D", texto: "a granularidade do fato está declarada." }
     ],
     gabarito: "B",
-    justificativa: "A armadilha clássica do currículo: contar linhas do fato inflada pela duplicidade de chave. Quando a chave não é única, uma linha do fato repete um evento, e a contagem por linhas exagerará. A alternativa B reproduz esse cenário. As demais estão incorretas: A não causa duplicidade; C (dimensões enxutas com chave única) é o ideal; D (granularidade declarada) evita o erro.",
+    justificativa: "A contagem de linhas mede registros na granularidade da tabela de fatos, não necessariamente protocolos distintos. Se um protocolo pode gerar várias linhas de fato, contar cada linha como um protocolo superestima o total de protocolos. A alternativa B descreve essa incompatibilidade entre granularidade e métrica. As demais não explicam o problema apresentado.",
     analise: {
       A: "INCORRETA. Erro conceitual: medida + chave simples é modelo saudável; a duplicação é o defeito.",
-      B: "CORRETA. Reproduz exatamente a armadilha de contagem inflada por duplicidade de chave.",
+      B: "CORRETA. Distingue a granularidade das linhas de fatos da entidade que o relatório pretende contar.",
       C: "INCORRETA. Erro conceitual: dimensões enxutas com chave única resolvem a temporalidade, não causam erro.",
       D: "INCORRETA. Erro conceitual: declarar granularidade é a solução, não a causa do erro."
     },
-    regra: "Modelo estrela: fato transacional no centro, dimensões ao redor; contar linhas só representa eventos quando a granularidade está definida e cada linha corresponde a um evento na granularidade esperada. Se houver duplicatas indevidas, investigue a causa e use contagem distinta apenas quando a identidade do evento estiver definida corretamente.",
-    pegadinha: "A pegadinha é a alternativa A: parece correta, mas a duplicidade de chave não está na base, e o exame quer a condição que GERA o erro (B)."
+    regra: "Modelo estrela: fato transacional no centro, dimensões ao redor. A contagem de linhas representa a unidade de negócio desejada somente quando a granularidade da fato coincide com essa unidade; para contar protocolos com várias linhas por protocolo, conte protocolos distintos pela chave correta.",
+    pegadinha: "A pegadinha é confundir quantidade de linhas com quantidade de entidades de negócio. Uma linha de fato pode representar item, evento, etapa ou parcela, e não necessariamente um protocolo único."
   },
   {
     id: "q-m8-09",
