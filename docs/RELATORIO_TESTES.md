@@ -187,3 +187,17 @@ Esta inspeção foi estática e remota via GitHub; não é um teste de execuçã
 | **Total** | **295** | **888** | **592** |
 
 **Método:** inspeção estática dos oito arquivos, removendo comentários e contando objetos de primeiro nível nos arrays `exemplos` e `exercicios`. Não executa JavaScript e não valida a completude didática dos itens. Resultado difere do inventário histórico (885 exemplos, 590 exercícios): +3 e +2, respectivamente. A causa da divergência ainda não foi determinada.
+
+
+## Evidências adicionais da auditoria remota — 2026-10-25
+
+| Verificação | Método/evidência | Resultado | Classificação |
+|---|---|---|---|
+| IDs de subtópicos curriculares | Leitura dos oito arquivos e extração textual por padrão de ID | 295 IDs identificados; distribuição por módulo registrada na matriz | Estrutural; não é teste de execução |
+| Exemplos e exercícios | Contagem textual dos objetos nas seções exemplos e exercicios dos segmentos curriculares | 888 exemplos e 592 exercícios detectados | Estrutural; não avalia qualidade |
+| Flashcards | Contagem de propriedades id nos oito arquivos flashcards_m*.js | 460 IDs e 460 únicos | Estrutural; não avalia duplicação semântica |
+| Questões | Contagem de propriedades id nos seis arquivos de banco consultados | 365 IDs e 365 únicos | Estrutural; não valida gabaritos |
+| Script de auditoria | Arquivo scripts/audit_curriculum_matrix.mjs adicionado à branch | Ainda não executado localmente nesta execução | Pendente |
+| GitHub Actions | Consulta de execuções para a branch da PR #17 | Nenhuma execução retornada | CI não comprovado |
+
+Não houve execução local do JavaScript do projeto nem teste de navegador nesta etapa. Resultados históricos descritos em seções anteriores deste relatório não devem ser confundidos com reexecuções de 2026-10-25.
