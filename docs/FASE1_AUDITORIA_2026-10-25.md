@@ -419,3 +419,6 @@ Limitações atuais: a revisão qualitativa dos módulos M4–M8 e do banco de q
 - M6: correção jurídica em `fc-m6-23` e `fc-m6-24`. A definição legal de agentes de tratamento na LGPD inclui controlador e operador; o encarregado é definido separadamente. Também foi removida a generalização de que o Estado é automaticamente controlador e operador em toda operação, pois o papel depende do tratamento concreto.
 - Inventário do banco de questões confirmado por arquivos: `questions.js` contém 120 itens; `questions_m4.js` contém 85; `questions_m5.js` a `questions_m8.js` contêm 40 cada, totalizando 365 itens identificados. Isso é contagem estrutural, não validação completa de gabaritos.
 - CI no HEAD `8602b43bd60e3f8bc3e221635716afaeb50b9542`: o conector retornou listas vazias tanto para status quanto para execuções de workflow; não é possível classificar como aprovado.
+
+
+- M8 — questão `q-m8-04`: substituído um distrator ambíguo sobre o início do eixo x (que pode legitimamente ficar abaixo do menor valor observado para acomodar o limite inferior da primeira classe) por um distrator inequívoco sobre separar as barras. Justificativa e análise do distrator foram alinhadas ao princípio de contiguidade das classes do histograma.
