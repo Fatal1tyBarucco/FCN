@@ -4,14 +4,14 @@
 **Repositório:** `Fatal1tyBarucco/FCN`  
 **Branch:** `feat/fase-1-orquestracao-20261025`  
 **Script:** `scripts/audit_learning_assets.mjs`  
-**Execução reproduzível:** [GitHub Actions — validação e auditorias](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246314488)
+**Execução reproduzível:** [GitHub Actions — validação e auditorias](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246710464)
 
 ## Resultado estrutural
 
 - Tópicos curriculares reconhecidos: **132**.
 - Flashcards reconhecidos: **460**.
 - Questões reconhecidas: **365**.
-- Ativos com referência apenas à unidade curricular: **108 questões**.
+- Ativos com referência apenas à unidade curricular: **96 questões**.
 - Referências sem associação curricular reconhecível: **0**.
 - A execução foi concluída com sucesso no GitHub Actions; os arquivos CSV gerados foram preservados no artefato `curriculum-audit-reports` dessa execução.
 
@@ -19,7 +19,7 @@
 
 | Módulo | Tópicos | Flashcards associados diretamente | Questões associadas diretamente | Tópicos sem questão associada diretamente |
 |---|---:|---:|---:|---:|
-| M1 — Microsoft 365 | 23 | 66 | 28 | 10 |
+| M1 — Microsoft 365 | 23 | 66 | 40 | 10 |
 | M2 — Redes | 19 | 56 | 40 | 15 |
 | M3 — Comunicação e colaboração | 14 | 68 | 40 | 9 |
 | M4 — Segurança e governança | 13 | 54 | 9 | 10 |
@@ -34,9 +34,6 @@ A coluna “questões associadas diretamente” conta apenas questões que apont
 
 | Unidade curricular | Quantidade | IDs |
 |---|---:|---|
-| M1 — Unidade 3 | 3 | q-m1-30 a q-m1-32 |
-| M1 — Unidade 4 | 5 | q-m1-26, q-m1-27, q-m1-36, q-m1-37, q-m1-40 |
-| M1 — Unidade 5 | 4 | q-m1-28, q-m1-29, q-m1-38, q-m1-39 |
 | M4 — Unidade 1 | 7 | q-m4-04 a q-m4-10 |
 | M4 — Unidade 2 | 7 | q-m4-14 a q-m4-20 |
 | M4 — Unidade 3 | 7 | q-m4-24 a q-m4-30 |
@@ -44,12 +41,12 @@ A coluna “questões associadas diretamente” conta apenas questões que apont
 | M5 — Unidade 1 | 8 | q-m5-03 a q-m5-10 |
 | M5 — Unidade 2 | 10 | q-m5-14 a q-m5-20 e q-m5-38 a q-m5-40 |
 | M5 — Unidade 4 | 2 | q-m5-30 e q-m5-33 |
-| **Total** | **108** | — |
+| **Total** | **96** | — |
 
 ## Interpretação e ações pendentes
 
-1. Os 108 registros apontam para IDs de unidade válidos, portanto não são referências inexistentes; porém, a granularidade é insuficiente para provar cobertura de um tópico específico.
-2. Revisar e, quando a evidência do conteúdo permitir, associar cada questão ao tópico mais específico. Não alterar gabaritos nem conteúdo técnico apenas para satisfazer o mapeamento.
+1. Restam 96 questões com referência apenas à unidade. As 12 questões M1 anteriormente nesse estado foram associadas a subtópicos após revisão de seus enunciados e assuntos; a execução posterior confirmou a redução de 108 para 96.
+2. Revisar e, quando a evidência do conteúdo permitir, associar as 96 questões restantes ao tópico mais específico. Não alterar gabaritos nem conteúdo técnico apenas para satisfazer o mapeamento.
 3. Revisar os tópicos marcados sem questão direta; a ausência de associação é um sinal para revisão, não prova automática de que não haja cobertura indireta.
 4. A matriz CSV detalhada é gerada por `node scripts/audit_learning_assets.mjs` e está no artefato `curriculum-audit-reports`. O script pode regenerá-la na raiz do repositório.
 5. Esta auditoria é estrutural. Não certifica qualidade pedagógica, correção de gabaritos, atualidade de fontes, comportamento em navegador, acessibilidade ou compatibilidade integral com `file://`.
