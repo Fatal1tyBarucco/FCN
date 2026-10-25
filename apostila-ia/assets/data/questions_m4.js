@@ -113,7 +113,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-04", modulo: 4, formato: "ce", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — Controles de segurança",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controles de segurança",
     contexto: "Um governo adota controles preventivos, detectivos e corretivos para proteger os ativos digitais.",
     enunciado: "Afirmação: 'Um controle corretivo é aquele que impede a ocorrência de uma ameaça antes que ela se materialize.'",
     corrigir: true,
@@ -129,7 +129,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-05", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — Autenticação MFA",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Autenticação MFA",
     contexto: "Uma organização adota Multi-Fator Authentication (MFA) para proteger o acesso aos sistemas.",
     enunciado: "Sobre a Autenticação em Múltiplos Fatores (MFA), é correto afirmar que:",
     alternativas: [
@@ -154,7 +154,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-06", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "modulo-4-unidade-1", assunto: "4.1 — Criptografia simétrica vs assimétrica",
+    nivel: "basico", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Criptografia simétrica vs assimétrica",
     contexto: "Dois sistemas precisam se comunicar com segurança. Um deles usa criptografia simétrica e outro, assimétrica.",
     enunciado: "Qual a principal diferença entre criptografia simétrica e assimétrica?",
     alternativas: [
@@ -179,7 +179,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-07", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — Backup e estratégia 3-2-1",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Backup e estratégia 3-2-1",
     contexto: "Uma empresa adota a estratégia de backup 3-2-1 para proteção de dados.",
     enunciado: "Na estratégia de backup 3-2-1, o número 1 indica que:",
     alternativas: [
@@ -204,7 +204,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-08", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — RPO e RTO",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — RPO e RTO",
     contexto: "Uma empresa define objetivos de recuperação para seus sistemas críticos.",
     enunciado: "Sobre RPO (Recovery Point Objective) e RTO (Recovery Time Objective), é correto afirmar que:",
     alternativas: [
@@ -227,7 +227,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-09", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-1", assunto: "4.1 — Controle de acesso e princípio do menor privilégio",
+    nivel: "avancado", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controle de acesso e princípio do menor privilégio",
     contexto: "Uma organização adota o princípio do menor privilégio para gestão de acessos.",
     enunciado: "O princípio do menor privilégio (least privilege) significa que:",
     alternativas: [
@@ -252,7 +252,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-10", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — Risco e ameaça",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Risco e ameaça",
     contexto: "Um gestor de TI define os conceitos de risco e ameaça para o planejamento de segurança.",
     enunciado: "A relação correta entre risco e ameaça é que:",
     alternativas: [
@@ -352,7 +352,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-14", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Botnets",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Botnets",
     contexto: "Um atacante controla uma rede de dispositivos infectados sem o conhecimento dos donos.",
     enunciado: "O termo 'botnet' refere-se a:",
     alternativas: [
@@ -377,7 +377,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-15", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Rootkits",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Rootkits",
     contexto: "Um ataque de rootkit consegue esconder sua presença no sistema operacional.",
     enunciado: "O termo 'rootkit' refere-se a:",
     alternativas: [
@@ -402,7 +402,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-16", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Firewalls",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-2", assunto: "4.2 — Firewalls",
     contexto: "Uma organização usa um firewall para filtrar tráfego de rede.",
     enunciado: "O que um Firewall (bastão de watt) faz?",
     alternativas: [
@@ -427,7 +427,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-17", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — IDS e IPS",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — IDS e IPS",
     contexto: "Uma empresa adota sistemas de detecção e prevenção de intrusão.",
     enunciado: "A diferença fundamental entre IDS (Intrusion Detection System) e IPS (Intrusion Prevention System) é que:",
     alternativas: [
@@ -452,7 +452,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-18", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-2", assunto: "4.2 — Defesa em Profundidade",
+    nivel: "avancado", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Defesa em Profundidade",
     contexto: "Uma organização implementa várias camadas de controle de segurança para proteger seus ativos.",
     enunciado: "O conceito de 'defesa em profundidade' (defense in depth) significa que:",
     alternativas: [
@@ -477,7 +477,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-19", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Monitoramento e registros",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Monitoramento e registros",
     contexto: "Um departamento de TI implementa um sistema de monitoramento de logs.",
     enunciado: "A importância do monitoramento e dos logs (registros) na segurança da informação é:",
     alternativas: [
@@ -502,7 +502,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-20", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Controle de acesso",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.2 — Controle de acesso",
     contexto: "Uma agência pública adota políticas de controle de acesso aos sistemas e dados.",
     enunciado: "A política de controle de acesso baseada no menor privilégio garante que:",
     alternativas: [
@@ -602,7 +602,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-24", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Força Bruta e Password Spraying",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Força Bruta e Password Spraying",
     contexto: "Um atacante tenta adivinhar senhas de contas de usuários.",
     enunciado: "A 'força bruta' em criptografia é uma técnica de:",
     alternativas: [
@@ -627,7 +627,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-25", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Ataque de “Man-in-the-Middle” (MitM)",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataque de “Man-in-the-Middle” (MitM)",
     contexto: "Dois sistemas se comunicam, e um atacante intercepta e maliciosamente modifica as mensagens.",
     enunciado: "O ataque de 'Man-in-the-Middle' (MitM) consiste em:",
     alternativas: [
@@ -652,7 +652,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-26", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-3", assunto: "4.3 — Ataque de negação de serviço (DoS/DDoS)",
+    nivel: "avancado", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataque de negação de serviço (DoS/DDoS)",
     contexto: "Uma organização é alvo de um ataque de negação de serviço.",
     enunciado: "Sobre o ataque de negação de serviço (DoS) e DDoS, é correto afirmar que:",
     alternativas: [
@@ -677,7 +677,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-27", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Vazamento de dados",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Vazamento de dados",
     contexto: "Ágencia pública expõe dados de cidadãos por falha de configuração.",
     enunciado: "O 'vazamento de dados' (data breach) ocorre quando:",
     alternativas: [
@@ -702,7 +702,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-28", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Ataque de intermediário (Man-in-the-Middle) — telefonia",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataque de intermediário (Man-in-the-Middle) — telefonia",
     contexto: "Em uma comunicação entre dois sistemas, um atacante consegue interceptar e modificar as mensagens:",
     enunciado: "Em um ataque MitM no contexto de comunicação de dados, o atacante:",
     alternativas: [
@@ -727,7 +727,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-29", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Indicadores de Comprometimento (IoCs)",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Indicadores de Comprometimento (IoCs)",
     contexto: "Um analista de segurança identifica indicadores de que um sistema foi comprometido.",
     enunciado: "Indicadores de Comprometimento (Indicators of Compromise, IoC) são:",
     alternativas: [
@@ -752,7 +752,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-30", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Ataque de “Man-in-the-Middle” — Redes",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataque de “Man-in-the-Middle” — Redes",
     contexto: "No contexto de redes, um ataque MitM ocorre quando um atacante intercepta a comunicação entre dois hosts:",
     enunciado: "O ataque MitM no contexto de redes",
     alternativas: [
@@ -779,7 +779,7 @@ const moduleQuestions4 = [
   /* ===================== 4.4 Legislação (10 questões) ===================== */
 
   { id: "q-m4-31", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Lei 13.709/2018",
+    nivel: "basico", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Lei 13.709/2018",
     contexto: "A LGPD (Lei nº 13.709/2018) regulamenta o tratamento de dados pessoais no Brasil.",
     enunciado: "A LGPD (Lei nº 13.709/2018) tem como princípio fundamental:",
     alternativas: [
@@ -804,7 +804,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-32", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Marco Civil da Internet",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil da Internet",
     contexto: "A Lei nº 12.965/2014 (Marco Civil da Internet) distingue, em seu texto, os fundamentos da disciplina (art. 2º) dos princípios do uso da internet no Brasil (art. 3º).",
     enunciado: "A Lei nº 12.965/2014 (Marco Civil da Internet) estabelece, em seu art. 3º, os princípios da disciplina de uso da internet no Brasil. Dentre esses princípios estão:",
     alternativas: [
@@ -829,7 +829,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-33", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Base Legal",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Base Legal",
     contexto: "Uma empresa deseja tratar dados de clientes para enviar ofertas.",
     enunciado: "Para tratar dados pessoais com base na LGPD, é necessário que:",
     alternativas: [
@@ -854,7 +854,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-34", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — ANPD e LGPD",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — ANPD e LGPD",
     contexto: "O ANPD (Autoridade Nacional de Proteção de Dados) é a autoridade responsável pelo monitoramento da LGPD.",
     enunciado: "A respeito do ANPD e da LGPD, é correto afirmar que:",
     alternativas: [
@@ -879,7 +879,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-35", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Direitos dos Titulares",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — Direitos dos Titulares",
     contexto: "Sob a LGPD, o titular dos dados tem direitos específicos sobre seus dados.",
     enunciado: "Entre os direitos dos titulares de dados pessoais previstos na LGPD estão:",
     alternativas: [
@@ -904,7 +904,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-36", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD e Órgãos Competentes",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD e Órgãos Competentes",
     contexto: "A Lei nº 13.709/2018 (LGPD) estabelece o monitoramento do tratamento de dados pessoais no Brasil, inclusive no âmbito da administração pública.",
     enunciado: "No âmbito da LGPD, os dados pessoais tratados pela administração pública federal são monitorados pelo:",
     alternativas: [
@@ -929,7 +929,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-37", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Incisos do Art. 5º",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Incisos do Art. 5º",
     contexto: "A CF/88 (art. 5º, caput) e a LGPD reforçam a proteção de dados pessoais.",
     enunciado: "A relação correta entre a CF/88 e a LGPD em relação aos dados pessoais é:",
     alternativas: [
@@ -954,7 +954,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-38", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Responsabilidade",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Responsabilidade",
     contexto: "A LGPD define responsabilidades dos responsáveis pelo tratamento de dados.",
     enunciado: "A respeito da responsabilidade no contexto da LGPD, é correto afirmar que:",
     alternativas: [
@@ -979,7 +979,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-39", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Dados Pessoais",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Dados Pessoais",
     contexto: "A LGPD define quais informações são consideradas dados pessoais.",
     enunciado: "Segundo a LGPD, dados pessoais são:",
     alternativas: [
@@ -1004,7 +1004,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-40", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Marco Civil e LGPD",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil e LGPD",
     contexto: "Múltiplas leis federais regulam a proteção de dados e a internet no Brasil.",
     enunciado: "A relação entre Marco Civil da Internet e a LGPD no contexto da proteção de dados é:",
     alternativas: [
@@ -1029,7 +1029,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-41", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Lei de Acesso à Informação",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Lei de Acesso à Informação",
     contexto: "A Lei nº 12.527/2011 (Lei de Acesso à Informação Pública) garante o acesso à informação pública.",
     enunciado: "A Lei nº 12.527/2011 (Lei de Acesso à Informação Pública) estabelece, entre outros, que:",
     alternativas: [
@@ -1054,7 +1054,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-42", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Marco Civil e Proteção de Dados",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil e Proteção de Dados",
     contexto: "O Marco Civil da Internet (Lei 12.965/2014) estabelece que o acesso a dados de usuários exige:",
     enunciado: "No âmbito do Marco Civil da Internet, a exposição de dados pessoais por provedores exige:",
     alternativas: [
@@ -1079,7 +1079,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-43", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Proteção de Dados",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — Proteção de Dados",
     contexto: "A proteção de dados pessoais no Brasil é uma responsabilidade compartilhada entre governantes e cidadãos.",
     enunciado: "A responsabilidade pela proteção de dados pessoais no Brasil é:",
     alternativas: [
@@ -1104,7 +1104,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-44", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Comparação LGPD e Marco Civil",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Comparação LGPD e Marco Civil",
     contexto: "É possível observar diferenças conceituais entre LGPD e Marco Civil.",
     enunciado: "A principal diferença conceitual entre LGPD e Marco Civil da Internet está em:",
     alternativas: [
@@ -1129,7 +1129,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-45", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Confidencialidade",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Confidencialidade",
     contexto: "A confidencialidade é um princípio fundamental de segurança da informação.",
     enunciado: "A confidencialidade estrita é:",
     alternativas: [
@@ -1154,7 +1154,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-46", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Integridade",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Integridade",
     contexto: "A integridade é um dos pilares da segurança da informação.",
     enunciado: "A integridade de dados significa que:",
     alternativas: [
@@ -1179,7 +1179,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-47", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Disponibilidade",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Disponibilidade",
     contexto: "A disponibilidade é a garantia de acesso quando necessário.",
     enunciado: "A disponibilidade de sistemas e dados significa que:",
     alternativas: [
@@ -1204,7 +1204,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-48", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Autenticação",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Autenticação",
     contexto: "A autenticação é o processo de verificação da identidade de um usuário ou sistema.",
     enunciado: "A autenticação é:",
     alternativas: [
@@ -1229,7 +1229,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-49", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Autorização",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Autorização",
     contexto: "A autorização é o processo de conceder ou recusar acesso a recursos.",
     enunciado: "A autorização é:",
     alternativas: [
@@ -1254,7 +1254,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-50", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Auditoria",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Auditoria",
     contexto: "A auditoria é o processo de monitoramento e registro de ações em sistemas.",
     enunciado: "A auditoria em segurança da informação é:",
     alternativas: [
@@ -1279,7 +1279,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-51", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Backup",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — Backup",
     contexto: "O backup é uma cópia de segurança de dados e sistemas.",
     enunciado: "O backup é:",
     alternativas: [
@@ -1304,7 +1304,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-52", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Recuperação de Desastres",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — Recuperação de Desastres",
     contexto: "A recuperação de desastres é o plano de resposta a incidentes que afetam sistemas críticos.",
     enunciado: "A recuperação de desastres é:",
     alternativas: [
@@ -1329,7 +1329,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-53", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — RTO e RPO",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — RTO e RPO",
     contexto: "RTO e RPO são métricas críticas para o planejamento de continuidade.",
     enunciado: "A relação correta entre RTO e RPO é:",
     alternativas: [
@@ -1354,7 +1354,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-54", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Estratégia 3-2-1",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — Estratégia 3-2-1",
     contexto: "A estratégia 3-2-1 é amplamente recomendada para backup e recuperação.",
     enunciado: "A estratégia de backups 3-2-1 indica:",
     alternativas: [
@@ -1379,7 +1379,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-55", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Criptografia Simétrica",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Criptografia Simétrica",
     contexto: "Criptografia simétrica é o método de criptografia mais antigo e eficiente.",
     enunciado: "A criptografia simétrica é caracterizada por:",
     alternativas: [
@@ -1404,7 +1404,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-56", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Criptografia Assimétrica",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Criptografia Assimétrica",
     contexto: "Criptografia assimétrica usa um par de chaves público/privada.",
     enunciado: "A criptografia assimétrica é caracterizada por:",
     alternativas: [
@@ -1429,7 +1429,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-57", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Código Hash",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Código Hash",
     contexto: "Código hash é uma função que mapeia dados de qualquer tamanho para um valor fixo.",
     enunciado: "Um código hash (resumo de mensagem) é:",
     alternativas: [
@@ -1454,7 +1454,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-58", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Assinatura Digital",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Assinatura Digital",
     contexto: "A assinatura digital é um mecanismo de segurança que garante autenticidade e integridade.",
     enunciado: "A assinatura digital é um método que:",
     alternativas: [
@@ -1479,7 +1479,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-59", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Certificados Digitais",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Certificados Digitais",
     contexto: "Certificados digitais são usados para verificar a identidade de usuários e sistemas.",
     enunciado: "Certificado digital é:",
     alternativas: [
@@ -1504,7 +1504,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-60", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Phishing Avançado",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-1", assunto: "4.4 — Phishing Avançado",
     contexto: "Phishing avançado usa técnicas sofisticadas para enganar usuários.",
     enunciado: "O 'spear phishing' (phishing direcionado) é caracterizado por:",
     alternativas: [
@@ -1529,7 +1529,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-61", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Malware Analisado",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.4 — Malware Analisado",
     contexto: "Os malwares são classificados por comportamento e disseminação.",
     enunciado: "A classificação dos malwares (vírus, worms, trojans, ransomware) é baseada em:",
     alternativas: [
@@ -1554,7 +1554,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-62", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Antivírus e EDR",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.4 — Antivírus e EDR",
     contexto: "Antivírus e EDR são defensas endpoint.",
     enunciado: "A principal diferença entre Antivírus (AV) e EDR (Endpoint Detection and Response) é:",
     alternativas: [
@@ -1579,7 +1579,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-63", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Segmentação de Rede",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — Segmentação de Rede",
     contexto: "A segmentação de rede divide a rede em sub-redes menores para isolar ameaças.",
     enunciado: "A segmentação de rede é uma prática de segurança que:",
     alternativas: [
@@ -1604,7 +1604,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-64", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Hardening",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — Hardening",
     contexto: "Hardening é o processo de reforçar a segurança de sistemas e redes.",
     enunciado: "Hardening (afeitamento/agentar a segurança) de sistemas é:",
     alternativas: [
@@ -1629,7 +1629,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-65", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Gestão de Vulnerabilidades",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — Gestão de Vulnerabilidades",
     contexto: "A gestão de vulnerabilidades é um processo contínuo de identificação, avaliação e correção.",
     enunciado: "A gestão de vulnerabilidades envolve:",
     alternativas: [
@@ -1654,7 +1654,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-66", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — WAF",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-2", assunto: "4.4 — WAF",
     contexto: "WAF (Web Application Firewall) protege aplicações web contra ataques específicos.",
     enunciado: "Um WAF (Web Application Firewall) é:",
     alternativas: [
@@ -1679,7 +1679,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-67", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — IDS vs IPS — Detalhe",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.4 — IDS vs IPS — Detalhe",
     contexto: "IDS e IPS são complementares, mas com diferenças fundamentais.",
     enunciado: "Sobre a diferença entre IDS e IPS, é correto afirmar que:",
     alternativas: [
@@ -1704,7 +1704,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-68", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — VPN",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — VPN",
     contexto: "VPN (Virtual Private Network) cria uma conexão segura entre duas redes.",
     enunciado: "Uma VPN (Virtual Private Network) é:",
     alternativas: [
@@ -1729,7 +1729,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-69", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — NTP",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.4 — NTP",
     contexto: "O NTP (Network Time Protocol) é essencial para sincronizar relógios em redes.",
     enunciado: "O NTP (Network Time Protocol) é:",
     alternativas: [
@@ -1754,7 +1754,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-70", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Dispositivos de Segurança",
+    nivel: "avancado", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Dispositivos de Segurança",
     contexto: "Diversos dispositivos de segurança são utilizados em redes.",
     enunciado: "O mecanismo mais eficaz para garantir que a comunicação entre dois sistemas seja autêntica e protegida é:",
     alternativas: [
@@ -1779,7 +1779,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-71", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Compensatórios",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Controles Compensatórios",
     contexto: "Os controles compensatórios são alternativas seguras quando o controle principal não é viável.",
     enunciado: "Os controles compensatórios em segurança da informação são:",
     alternativas: [
@@ -1804,7 +1804,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-72", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Privilege Escalation",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Privilege Escalation",
     contexto: "Privilege Escalation é o ato de obter privilégios mais altos do que deveria ter um usuário.",
     enunciado: "O 'privilege escalation' (escalada de privilégios) é:",
     alternativas: [
@@ -1829,7 +1829,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-73", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Brute Force",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.4 — Brute Force",
     contexto: "Ataques de força bruta são uma técnica comum de quebra de senhas.",
     enunciado: "Sobre o ataque de força bruta, é correto afirmar que:",
     alternativas: [
@@ -1854,7 +1854,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-74", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Password Spraying",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.4 — Password Spraying",
     contexto: "Ataques de password spraying são uma variante da força bruta.",
     enunciado: "O ataque de 'password spraying' é caracterizado por:",
     alternativas: [
@@ -1879,7 +1879,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-75", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Credential Stuffing",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.4 — Credential Stuffing",
     contexto: "Credential stuffing é um ataque que usa credenciais violadas de outros serviços.",
     enunciado: "O 'credential stuffing' é um ataque que:",
     alternativas: [
@@ -1904,7 +1904,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-76", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Ataque SSRF",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Ataque SSRF",
     contexto: "O SSRF (Server-Side Request Forgery) explora a capacidade de um servidor de fazer requisições.",
     enunciado: "O ataque SSRF (Server-Side Request Forgery) é caracterizado por:",
     alternativas: [
@@ -1929,7 +1929,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-77", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Mitigação de Ameaças",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Mitigação de Ameaças",
     contexto: "A mitigação de ameaças é um processo contínuo de controle de riscos.",
     enunciado: "A mitigação de ameaças envolve:",
     alternativas: [
@@ -1954,7 +1954,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-78", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Gestão de Incidentes",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Gestão de Incidentes",
     contexto: "A gestão de incidentes é a disciplina de responder a incidentes de segurança.",
     enunciado: "A gestão de incidentes envolve:",
     alternativas: [
@@ -1979,7 +1979,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-79", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Plano de Continuidade",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — Plano de Continuidade",
     contexto: "O plano de continuidade é definido para manter ou recuperar serviços críticos.",
     enunciado: "O plano de continuidade de negócios é:",
     alternativas: [
@@ -2004,7 +2004,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-80", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Resposta a Incidentes",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Resposta a Incidentes",
     contexto: "Resposta a incidentes envolve múltiplos estágios e papéis.",
     enunciado: "Os estágios típicos de resposta a incidentes incluem:",
     alternativas: [
@@ -2029,7 +2029,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-81", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Preventivos",
+    nivel: "avancado", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Controles Preventivos",
     contexto: "Os controles preventivos agem antes de um evento ocorrer.",
     enunciado: "Controles preventivos são:",
     alternativas: [
@@ -2054,7 +2054,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-82", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Detectivos",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.4 — Controles Detectivos",
     contexto: "Os controles detectivos identificam a ocorrência de eventos.",
     enunciado: "Controles detectivos são:",
     alternativas: [
@@ -2079,7 +2079,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-83", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Corretivos",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Controles Corretivos",
     contexto: "Os controles corretivos agem após um evento.",
     enunciado: "Controles corretivos são:",
     alternativas: [
@@ -2104,7 +2104,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-84", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Compensatórios",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Controles Compensatórios",
     contexto: "Controles compensatórios são alternativas quando o controle principal não é aplicável.",
     enunciado: "Controles compensatórios são:",
     alternativas: [
@@ -2129,7 +2129,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-85", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Vulnerabilidade",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — Vulnerabilidade",
     contexto: "Uma vulnerabilidade é uma fraqueza que pode ser explorada por uma ameaça.",
     enunciado: "Uma vulnerabilidade em segurança da informação é:",
     alternativas: [
