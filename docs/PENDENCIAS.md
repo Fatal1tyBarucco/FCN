@@ -108,3 +108,15 @@ Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada
 - [x] Corrigir referências temáticas evidentemente incorretas em M3: `fc-m3-08` a `fc-m3-15` passaram de `m3-u1-t1` para `m3-u1-t2` após revisão de frente/verso. Isso não resolve a cobertura de M3; ainda faltam cartões para tópicos de netiqueta, acessibilidade, comunicação institucional e controles de videoconferência. Ver `docs/FASE1_AUDITORIA_2026-10-25.md`.
 - [x] Comparar globalmente os 365 IDs de questões e validar cada referência `topico` contra a hierarquia curricular aceita. Resultado estático: 365 IDs globalmente únicos e 0 referências inválidas; ver relatório de auditoria.
 - [ ] Revisar qualitativamente a qualidade didática dos 888 exemplos e 592 exercícios. A validação estrutural encontrou campos mínimos em todos os objetos extraídos, mas identificou uma concentração de material adicional em M1 no subtópico `modulo-1-unidade-2-topico-14-sub-1`; revisar manualmente antes de concluir.
+
+
+## Atualização do orquestrador — 2026-10-25 (PR #17)
+
+- [x] Expandir docs/MATRIZ_COBERTURA.csv para rastrear estruturalmente os 295 subtópicos detectados nos oito currículos; contagens textuais atuais: 888 exemplos e 592 exercícios.
+- [x] Registrar contagens remotas de flashcards (460 IDs únicos) e questões (365 IDs únicos) com distinção explícita entre validação estrutural e qualitativa.
+- [x] Adicionar scripts/audit_curriculum_matrix.mjs para geração local da matriz sem dependências externas.
+- [ ] Executar o script em um clone do repositório e comparar a saída com a matriz versionada; a execução ainda não foi realizada nesta sessão.
+- [ ] Acrescentar à matriz a rastreabilidade explícita de flashcards, questões, fontes e testes por subtópico, distinguindo associação direta de cobertura inferida por tópico/unidade.
+- [ ] Revisar qualitativamente conteúdo, exemplos, exercícios, gabaritos e distratores; contagens estruturais não equivalem a aprovação editorial.
+- [ ] Executar e registrar testes locais/headless, checagens de integridade e testes de navegador; a consulta de Actions desta branch retornou zero execuções e não comprova CI verde.
+- [ ] Não iniciar alterações concorrentes em arquivos de aplicação enquanto a análise do PR #17 estiver sendo consolidada; integrar mudanças em commits rastreáveis na mesma branch.
