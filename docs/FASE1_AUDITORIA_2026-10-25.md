@@ -272,7 +272,7 @@ A comparação estática foi estendida a todos os bancos de flashcards e de ques
 
 | Módulo | Cartões | IDs únicos no módulo | Tópicos curriculares | Tópicos referenciados pelos cartões | Referências inválidas |
 |---|---:|---:|---:|---:|---:|
-| M1 | 50 | 50 | 23 | 15 | 0 |
+| M1 | 66 | 66 | 23 | 23 | 0 |
 | M2 | 50 | 50 | 19 | 5 | 0 |
 | M3 | 50 | 50 | 14 | 4 | 0 |
 | M4 | 54 | 54 | 13 | 13 | 0 |
@@ -280,9 +280,9 @@ A comparação estática foi estendida a todos os bancos de flashcards e de ques
 | M6 | 50 | 50 | 18 | 18 | 0 |
 | M7 | 50 | 50 | 9 | 9 | 0 |
 | M8 | 50 | 50 | 23 | 23 | 0 |
-| **Total** | **404** | **404** | **132** | — | **0** |
+| **Total** | **420** | **420** | **132** | — | **0** |
 
-Os 404 cartões têm IDs únicos globalmente segundo a inspeção anterior, e todos os vínculos `topico` conferidos apontam para coordenadas curriculares existentes. Isso valida a integridade dos vínculos declarados, não a qualidade ou a cobertura suficiente dos cartões. M2 (5/19 tópicos), M3 (4/14), M5 (5/13) e M1 (15/23) apresentam cobertura temática mais restrita; deve-se avaliar a necessidade de criar ou redistribuir cartões. M4, M6, M7 e M8 têm pelo menos uma referência para cada tópico curricular detectado.
+Os 404 cartões têm IDs únicos globalmente segundo a inspeção anterior, e todos os vínculos `topico` conferidos apontam para coordenadas curriculares existentes. Isso valida a integridade dos vínculos declarados, não a qualidade ou a cobertura suficiente dos cartões. M2 (16/19 tópicos), M3 (5/14) e M5 (13/13 após expansão) têm estados distintos de cobertura. M1 foi expandido para 66 cartões e passou a referenciar os 23 tópicos de nível superior detectados; a cobertura referencial não comprova, por si só, profundidade ou qualidade pedagógica. M4, M6, M7 e M8 têm pelo menos uma referência para cada tópico curricular detectado.
 
 ### Questões
 
@@ -363,3 +363,5 @@ A revisão da distribuição deve ser guiada pelo conteúdo real de cada cartão
 
 
 **Execução parcial — M5:** adicionados `fc-m5-51` a `fc-m5-66`, com dois cartões para cada um dos oito tópicos antes sem referência nas unidades 5.3 e 5.4. O arquivo agora contém 66 cartões; verificação estática confirmou IDs únicos e referências válidas aos 13 tópicos. Isso fecha a lacuna de referência por tópico, mas não a auditoria qualitativa de correção, profundidade, originalidade ou aderência completa ao currículo.
+
+**Execução parcial — M1 (continuação, 2026-10-25):** adicionados 16 cartões (`fc-m1-51` a `fc-m1-66`) para os oito tópicos antes sem cartões: seis tópicos de Excel, um de PowerPoint e um de OneDrive. O arquivo passou de 50 para 66 cartões. Validação estrutural estática do incremento: IDs sequenciais novos e referências nos tópicos esperados; revisão técnica aprofundada, duplicação semântica e testes de execução ainda precisam ser concluídos. Commit: `647cdd6632046f0d2d623f015478354b34625439`.
