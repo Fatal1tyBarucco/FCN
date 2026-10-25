@@ -390,3 +390,19 @@ Esta rodada comparou frentes, versos e referências declaradas nos cartões mais
 - Nenhuma alteração de conteúdo foi aplicada nesta triagem, para evitar corrigir afirmações sem comparar o texto integral do tópico curricular de destino.
 - A cobertura referencial continua sendo uma métrica estrutural, não uma conclusão de qualidade pedagógica.
 - Próxima ação: comparar cada cartão sinalizado com o texto curricular correspondente e, só então, corrigir respostas ou referências; depois ampliar a amostra para M4–M8 e questões.
+
+
+## Revisão qualitativa complementar — 2026-10-25
+
+Correções pontuais de conteúdo aplicadas diretamente aos cartões após revisão semântica:
+
+- M1: cartões sobre licenciamento Microsoft 365/Office LTSC, OneDrive/SharePoint, quota de armazenamento, histórico de versões e recuperação foram qualificados para não apresentar recursos ou prazos como universais; cartões redundantes foram diferenciados por cenário de uso.
+- M2: descrições de falhas em topologias estrela e barramento agora explicitam condições e dependência da implementação.
+- M3: SPF, DKIM e DMARC são descritos como mecanismos que reduzem tipos específicos de falsificação, sem prometer eliminação de phishing.
+- M4: assinatura digital descrita como evidência criptográfica condicionada à validação e gestão de chaves, sem garantia absoluta de autoria ou não repúdio.
+- M5: separação entre treino, validação e teste reformulada para explicar o risco de contaminação do conjunto de teste.
+- M8: explicação sobre eixo truncado diferencia a codificação por comprimento em barras de usos cautelosos em outros tipos de gráfico.
+
+Validação estrutural após essas alterações: M1 66 cartões/66 IDs únicos; M2 56/56; M3 68/68; M4 54/54; M5 66/66; M6 50/50; M7 50/50; M8 50/50. Total: 460 cartões e 460 IDs únicos, contando IDs no escopo individual de cada arquivo. Essa verificação não equivale a validação semântica completa, execução de JavaScript ou testes de navegador.
+
+Limitações atuais: a revisão qualitativa dos módulos M4–M8 e do banco de questões permanece parcial. Não há evidência confirmada de CI verde para o HEAD consultado; não declarar os testes de execução aprovados.
