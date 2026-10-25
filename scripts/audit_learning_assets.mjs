@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Auditoria estrutural de associação entre tópicos curriculares, flashcards e questões.
- * Executar na raiz do repositório: node scripts/audit_learning_assets.mjs
+ * Auditoria estrutural de associação entre tópicos/unidades curriculares,
+ * flashcards e questões. Executar na raiz: node scripts/audit_learning_assets.mjs
  * Não avalia qualidade semântica nem executa os arquivos de dados.
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -18,6 +18,12 @@ function topicKey(id) {
   match = id.match(/^(m\d+-u\d+-t\d+)(?:-s\d+)?$/);
   return match ? match[1] : null;
 }
+function unitKey(id) {
+  const match = id.match(/^modulo-(\d+)-unidade-(\d+)$/);
+  if (match) return "m" + match[1] + "-u" + match[2];
+  const shorthand = id.match(/^(m\d+-u\d+)(?:-t\d+(?:-s\d+)?)?$/);
+  return shorthand ? shorthand[1] : null;
+}
 function csvCell(value) {
   return '"' + String(value == null ? "" : value).replaceAll('"', '""') + '"';
 }
@@ -27,14 +33,21 @@ function read(path) {
 
 const topics = new Map();
 const idToKey = new Map();
+const unitIdToKey = new Map();
 for (const entry of curricula) {
   const source = read(entry[1]);
   const pattern = /"id"\s*:\s*"([^"]+)"\s*,\s*"titulo"\s*:\s*"([^"]+)"/g;
   for (const match of source.matchAll(pattern)) {
-    const id = match[1], title = match[2], key = topicKey(id);
+    const id = match[1], title = match[2];
+    const unit = unitKey(id);
+    if (unit && /^modulo-\d+-unidade-\d+$/.test(id)) {
+      unitIdToKey.set(id, unit);
+      continue;
+    }
+    const key = topicKey(id);
     if (!key) continue;
     idToKey.set(id, key);
-    if (!topics.has(key)) topics.set(key, { key, module: "M" + key.match(/^m(\d+)/)[1], title, ids: [] });
+    if (!topics.has(key)) topics.set(key, { key, unit: unitKey(key), module: "M" + key.match(/^m(\d+)/)[1], title, ids: [] });
     topics.get(key).ids.push(id);
     if (!id.includes("-sub-") && !/-s\d+$/.test(id)) topics.get(key).title = title;
   }
@@ -46,7 +59,10 @@ function parseAssets(files, kind) {
     const pattern = /id\s*:\s*"([^"]+)"[\s\S]{0,1000}?topico\s*:\s*"([^"]+)"/g;
     for (const match of source.matchAll(pattern)) {
       const ref = match[2];
-      records.push({ id: match[1], ref, key: idToKey.get(ref) || topicKey(ref), kind, path });
+      records.push({
+        id: match[1], ref, key: idToKey.get(ref) || topicKey(ref),
+        unit: unitIdToKey.get(ref) || unitKey(ref), kind, path
+      });
     }
   }
   return records;
@@ -54,7 +70,9 @@ function parseAssets(files, kind) {
 const cards = parseAssets(cardFiles, "flashcard");
 const questions = parseAssets(questionFiles, "questao");
 const allAssets = cards.concat(questions);
-const unknown = allAssets.filter(asset => !asset.key || !topics.has(asset.key));
+const knownKeys = new Set(topics.keys());
+const unitLevel = allAssets.filter(asset => (!asset.key || !knownKeys.has(asset.key)) && asset.unit && Array.from(unitIdToKey.values()).includes(asset.unit));
+const unknown = allAssets.filter(asset => (!asset.key || !knownKeys.has(asset.key)) && !unitLevel.includes(asset));
 const rows = [["id_topico", "modulo", "titulo_topico", "ids_curriculares_associados", "quantidade_flashcards", "ids_flashcards", "quantidade_questoes", "ids_questoes", "status_rastreabilidade"]];
 const orderedTopics = Array.from(topics.values()).sort((a, b) => a.key.localeCompare(b.key, undefined, { numeric: true }));
 for (const topic of orderedTopics) {
@@ -76,22 +94,43 @@ const summary = moduleNames.map(module => {
     noQuestions: moduleTopics.filter(topic => !questions.some(asset => asset.key === topic.key)).length
   };
 });
+const unitSummary = Array.from(new Set(unitLevel.map(asset => asset.unit))).sort().map(unit => ({
+  unit,
+  flashcards: unitLevel.filter(asset => asset.unit === unit && asset.kind === "flashcard").length,
+  questions: unitLevel.filter(asset => asset.unit === unit && asset.kind === "questao").length,
+  ids: unitLevel.filter(asset => asset.unit === unit).map(asset => asset.id).join(";")
+}));
 const reportLines = [
   "# Auditoria de rastreabilidade dos ativos de aprendizagem", "",
   "Gerado por scripts/audit_learning_assets.mjs. Contagens estruturais; não certificam qualidade semântica.", "",
   "- Tópicos curriculares reconhecidos: **" + topics.size + "**.",
   "- Flashcards reconhecidos pelo padrão: **" + cards.length + "**.",
   "- Questões reconhecidas pelo padrão: **" + questions.length + "**.",
-  "- Referências não mapeadas: **" + unknown.length + "**.", "",
-  "| Módulo | Tópicos | Flashcards | Questões | Tópicos sem flashcard | Tópicos sem questão |",
+  "- Ativos referenciados diretamente a uma unidade, sem tópico específico: **" + unitLevel.length + "**.",
+  "- Referências sem associação curricular reconhecível: **" + unknown.length + "**.", "",
+  "| Módulo | Tópicos | Flashcards associados diretamente | Questões associadas diretamente | Tópicos sem flashcard | Tópicos sem questão |",
   "|---|---:|---:|---:|---:|---:|",
   ...summary.map(item => "|" + item.module + "|" + item.topics + "|" + item.cards + "|" + item.questions + "|" + item.noCards + "|" + item.noQuestions + "|"),
-  "", "## Referências não mapeadas", "",
+  "", "## Ativos associados somente à unidade", "",
+  "| Unidade | Flashcards | Questões | IDs dos ativos |",
+  "|---|---:|---:|---|",
+  ...unitSummary.map(item => "|" + item.unit + "|" + item.flashcards + "|" + item.questions + "|" + item.ids + "|"),
+  "", "## Referências sem associação curricular reconhecível", "",
   ...(unknown.length ? unknown.map(asset => "- " + asset.id + " (" + asset.kind + "; " + asset.path + ") -> " + asset.ref) : ["Nenhuma detectada pelo padrão estrutural."]),
   "", "## Limitações", "",
-  "- A associação ocorre no nível do tópico-pai e não prova cobertura individual de cada subtópico.",
+  "- A associação direta é feita no nível do tópico-pai; não prova cobertura individual de cada subtópico.",
+  "- Ativos associados somente à unidade permanecem sem atribuição artificial a um tópico.",
   "- A extração textual pode precisar de ajustes se o esquema dos arquivos mudar.",
   "- Não avalia conteúdo, gabaritos, fontes, interface, acessibilidade ou execução via file://.", ""
 ];
 writeFileSync(resolve(root, "docs/RELATORIO_RASTREABILIDADE_ATIVOS.md"), reportLines.join("\n"), "utf8");
-console.log(JSON.stringify({ topics: topics.size, flashcards: cards.length, questions: questions.length, unmapped: unknown.length, unmappedSample: unknown.slice(0, 30).map(asset => ({ id: asset.id, ref: asset.ref, key: asset.key, path: asset.path })), summary }, null, 2));
+console.log(JSON.stringify({
+  topics: topics.size,
+  flashcards: cards.length,
+  questions: questions.length,
+  unitLevel: unitLevel.length,
+  unmapped: unknown.length,
+  unmappedSample: unknown.slice(0, 30).map(asset => ({ id: asset.id, ref: asset.ref, key: asset.key, unit: asset.unit, path: asset.path })),
+  summary,
+  unitSummary
+}, null, 2));
