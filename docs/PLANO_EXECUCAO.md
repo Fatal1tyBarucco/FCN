@@ -92,3 +92,12 @@ Foi criada a branch `feat/fase-1-orquestracao-20261025` a partir de `main` para 
 A inspeção remota consultou `Escrita.txt`, `README.md`, `AGENTS.md`, o inventário, a matriz agregada e arquivos curriculares/de questões. O relatório `docs/FASE1_AUDITORIA_2026-10-25.md` distingue contagens herdadas de documentos de contagens recalculadas. Nenhum teste de execução foi realizado nesta etapa.
 
 **Status corrigido:** Fase 1 = inventário inicial e lacunas documentais identificados; matriz integral por subtópico e recálculo reproduzível de métricas continuam pendentes. A existência de conteúdo ou de controles de interface não equivale a critério de aceite aprovado. Consulte o relatório de auditoria para as evidências e limitações.
+
+
+## Atualização de execução — 2026-10-25 (PR #17)
+
+- **Fase 1 — parcialmente concluída:** inventário inicial e lacunas registrados em docs/FASE1_AUDITORIA_2026-10-25.md. A matriz detalhada foi gerada com 295 linhas de subtópicos; a qualidade pedagógica ainda não foi aprovada.
+- **Fase 2 — parcialmente concluída:** oito arquivos curriculares foram consultados remotamente. Auditoria estrutural detectou 295 subtópicos, 888 exemplos e 592 exercícios; foram identificados 460 flashcards e 365 questões com IDs únicos no conjunto consultado.
+- **Rastreabilidade reproduzível:** adicionado scripts/audit_curriculum_matrix.mjs. O script ainda não foi executado localmente; não declarar sua execução ou os testes do produto como aprovados.
+- **CI:** a consulta da API de Actions para a branch de trabalho retornou zero execuções. Isso não é evidência de CI verde.
+- **Próxima ação:** executar o script em clone/ambiente com o repositório, conferir a matriz gerada e só então iniciar a revisão qualitativa sistemática de conteúdo e funcionalidades.
