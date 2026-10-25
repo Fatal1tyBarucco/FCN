@@ -123,3 +123,18 @@ A busca textual encontrou 298 arrays chamados `exemplos` e 298 arrays chamados `
 ### Critérios do prompt mestre relevantes para a próxima etapa
 
 O `Escrita.txt` exige rastreabilidade de disciplina até objetivo, conteúdo, exemplo, exercício e critério de domínio; IDs estáveis; painel de cobertura para assuntos incompletos/sem exercícios; três exemplos resolvidos de naturezas distintas por subtópico conforme aplicável; simulador de planilha com cálculos reais para funções explicitamente suportadas; simuladores defensivos com dados fictícios; e pelo menos 50 flashcards autorais por módulo (mínimo global de 400). Os 404 flashcards atendem ao piso numérico, mas não constituem prova de distinção ou cobertura completa. A inspeção desta etapa não verificou todos os critérios didáticos e funcionais.
+
+
+## Continuação — integridade estrutural dos bancos (2026-10-25)
+
+### Questões: campos estruturais
+
+A contagem textual por arquivo encontrou a mesma quantidade de campos `enunciado`, `gabarito` e `justificativa` para todos os 365 registros: banco compartilhado (120), M4 (85), M5 (40), M6 (40), M7 (40) e M8 (40). Isso é um indicador estrutural positivo, mas não equivale a validar o valor de cada gabarito ou a correção da justificativa. A contagem de campos de alternativas varia por arquivo; como o banco declara mais de um formato de questão, isso precisa ser validado por formato antes de classificar qualquer caso como defeito.
+
+### Carregamento de scripts
+
+A inspeção de `apostila-ia/index.html` encontrou referências explícitas aos oito arquivos de currículo, oito arquivos de flashcards, seis bancos de questões (o compartilhado e M4–M8), referências e módulos JavaScript da interface. A presença de uma tag `<script>` não prova que o arquivo carregue corretamente, que a ordem de inicialização esteja correta em runtime ou que os recursos funcionem via `file://`.
+
+### CI
+
+Na consulta do status combinado e das execuções de workflow para o commit desta atualização, não foram retornados status nem execuções associados. Portanto, CI permanece **sem evidência de execução**, e não deve ser marcado como aprovado.
