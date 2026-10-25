@@ -232,3 +232,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Execução real de Playwright + Chromium headless abrindo o arquivo local via `file://` (não servidor HTTP).
 - Resultado: **PASS**; 8 módulos curriculares expostos e 8 nós de módulo renderizados; 460 flashcards conectados; 365 questões conectadas; 5 SVGs de gráficos; UI de flashcards, quiz e busca não vazias; seis contêineres de simuladores presentes e com conteúdo renderizado; round-trip de `localStorage` concluído; **0 exceções JavaScript não capturadas**.
 - O teste usa Chromium headless em runner Linux. Não substitui validação em dispositivos físicos, outros navegadores, tecnologia assistiva, navegação completa de todos os controles ou avaliação WCAG independente.
+
+
+## Revalidação após correção de rastreabilidade M1 — 2026-10-25
+
+- Commit com os 12 campos `topico` de q-m1-26..q-m1-32 e q-m1-36..q-m1-40 ajustados a subtópicos curriculares: `4e4db1100839b47148676dd3f93a142d11229665`.
+- Execução de validação incluindo Playwright/Chromium: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246710464 — **success**.
+- Auditoria estrutural pós-correção: 132 tópicos; 460 flashcards; 365 questões; 96 referências apenas em nível de unidade; 0 referências sem associação curricular reconhecível.
+- Smoke test `file://`: 8 módulos renderizados, 460 flashcards, 365 questões, 5 SVGs, 6 simuladores com UI, `localStorage` round-trip e 0 exceções JavaScript.
