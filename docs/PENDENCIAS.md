@@ -97,9 +97,9 @@ Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada
 
 ## Pendências identificadas na auditoria temática (2026-10-25)
 
-- [ ] Validar referências `topico` dos flashcards M1 e M4–M8 contra os IDs curriculares normalizados; M2 e M3 já foram conferidos por coordenadas e não apresentaram referências inválidas.
+- [x] Validar referências `topico` de todos os flashcards M1–M8 contra os IDs curriculares normalizados. Resultado estático: 404/404 referências válidas.
 - [ ] Investigar cobertura temática de flashcards: M2 representa 5/19 tópicos (10 cartões em cada primeiro tópico de unidade); M3 representa 4/14 tópicos (25 cartões no primeiro tópico da unidade 1 e 25 distribuídos por três tópicos da unidade 2). A referência é válida, mas a cobertura de cartões é estreita; avaliar complementação/redistribuição conforme o prompt mestre.
 - [ ] Investigar distribuição e cobertura de M5 (5 referências distintas) e validar por coordenadas antes de classificar qualquer referência como inválida.
 - [ ] Auditar duplicação semântica e originalidade dos flashcards; a ausência de IDs repetidos não exclui cartões com conteúdo duplicado.
-- [ ] Comparar globalmente os 365 IDs de questões, além da verificação de duplicatas por arquivo, e validar cada referência `topico` contra a hierarquia curricular aceita.
-- [ ] Validar campos e qualidade didática dos 888 exemplos e 592 exercícios, além da contagem estrutural.
+- [x] Comparar globalmente os 365 IDs de questões e validar cada referência `topico` contra a hierarquia curricular aceita. Resultado estático: 365 IDs globalmente únicos e 0 referências inválidas; ver relatório de auditoria.
+- [ ] Revisar qualitativamente a qualidade didática dos 888 exemplos e 592 exercícios. A validação estrutural encontrou campos mínimos em todos os objetos extraídos, mas identificou uma concentração de material adicional em M1 no subtópico `modulo-1-unidade-2-topico-14-sub-1`; revisar manualmente antes de concluir.
