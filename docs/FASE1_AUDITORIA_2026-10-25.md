@@ -223,3 +223,26 @@ A estrutura sugere três exemplos (`introducao`, `aplicacao`, `erro`) e dois exe
 - Validar enunciado e resposta/correção não vazios em cada exemplo e exercício.
 - Confirmar três exemplos e dois exercícios por subtópico real, não apenas totais por arquivo.
 - Avaliar se os exemplos são realmente distintos e se o nível avançado/interpretação de erro está presente em conteúdo, não apenas no rótulo `tipo`.
+
+
+## Normalização validada de referências de flashcards — M2 e M3 (2026-10-25)
+
+Foi executada uma comparação estática das referências compactas dos flashcards contra as coordenadas de unidade/tópico extraídas dos currículos M2 e M3. A comparação normalizou os formatos `modulo-N-unidade-N-topico-N` e `mN-uN-tN`; não exigiu igualdade textual literal.
+
+| Módulo | Tópicos curriculares | Cartões analisados | Referências válidas | Tópicos distintos cobertos por referência | Tópicos não representados pelas referências dos cartões |
+|---|---:|---:|---:|---:|---:|
+| M2 — Redes | 19 | 50 | 50/50 | 5/19 | 14 |
+| M3 — Comunicação e colaboração | 14 | 50 | 50/50 | 4/14 | 10 |
+
+Distribuição observada:
+- **M2:** 10 cartões em cada uma das referências `m2-u1-t1` a `m2-u5-t1`; todas correspondem ao primeiro tópico de cada unidade. Não foram encontradas referências inválidas entre os 50 cartões analisados.
+- **M3:** 25 cartões em `m3-u1-t1`; os outros 25 distribuem-se por `m3-u2-t1` (6), `m3-u2-t2` (11) e `m3-u2-t3` (8). Não foram encontradas referências inválidas entre os 50 cartões analisados.
+
+**Interpretação:** a validação elimina a hipótese de referências inválidas nesses dois bancos, mas evidencia cobertura temática limitada quando comparada com todos os tópicos do currículo. Os tópicos sem referência de flashcard não são necessariamente ausência de conteúdo didático: são uma lacuna específica de distribuição de cartões, a confirmar contra o critério editorial do `Escrita.txt`. A verificação não foi estendida nesta rodada aos módulos M1 e M4–M8, nem aos bancos de questões.
+
+### Próximos passos
+
+1. Aplicar a mesma normalização a M1 e M4–M8 e a todos os 365 registros de questões, aceitando referências válidas em nível de unidade, tópico ou subtópico conforme o esquema.
+2. Conferir globalmente a unicidade dos IDs das 365 questões.
+3. Decidir, com base no requisito de cobertura do prompt mestre, se os flashcards precisam ser redistribuídos ou complementados para representar tópicos atualmente sem referência.
+4. Não considerar esta auditoria estática como teste de execução da aplicação.
