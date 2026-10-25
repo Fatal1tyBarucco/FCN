@@ -198,3 +198,28 @@ Esta etapa não avalia originalidade, duplicação semântica, precisão factual
 A comparação inicial por igualdade literal entre `topico` dos flashcards e `id` curricular não é um teste válido para este repositório: os arquivos usam convenções equivalentes distintas. Exemplos observados diretamente nos currículos: `modulo-2-unidade-1-topico-1` e `m2-u1-t1-s1`; nos flashcards, `m2-u1-t1`. Da mesma forma, alguns bancos de questões referenciam a unidade (`modulo-4-unidade-1`), enquanto outros referenciam tópicos ou subtópicos. Portanto, a contagem inicial de zero correspondências exatas não deve ser interpretada como 404 referências quebradas; ela apenas demonstra que a igualdade textual não é adequada.
 
 A validação correta precisa normalizar módulo/unidade/tópico/subtópico, aceitar referências válidas ao nível da unidade ou tópico quando o formato do banco permitir, e verificar a existência da coordenada no currículo correspondente. A distribuição temática reportada anteriormente permanece útil como contagem das strings declaradas, mas qualquer conclusão de lacuna deve aguardar essa normalização. Nenhum ID foi alterado, para evitar reescrever referências válidas sem uma prova de incompatibilidade.
+
+
+## Continuação — estrutura de exemplos e exercícios (2026-10-25)
+
+A contagem estática dos campos `tipo` nos arquivos curriculares encontrou cinco categorias recorrentes: `introducao`, `aplicacao`, `erro`, `certos_erro` e `multipla`. Nos módulos M2–M8, cada categoria aparece tantas vezes quanto o número de subtópicos identificado no arquivo. Em M1, foram encontrados 38 registros de cada categoria para 37 subtópicos, uma diferença de um registro por categoria que exige reconciliação estrutural antes de considerar a distribuição perfeitamente alinhada.
+
+| Módulo | Subtópicos identificados | Registros `introducao` | `aplicacao` | `erro` | `certos_erro` | `multipla` |
+|---|---:|---:|---:|---:|---:|---:|
+| M1 | 37 | 38 | 38 | 38 | 38 | 38 |
+| M2 | 52 | 52 | 52 | 52 | 52 | 52 |
+| M3 | 35 | 35 | 35 | 35 | 35 | 35 |
+| M4 | 39 | 39 | 39 | 39 | 39 | 39 |
+| M5 | 35 | 35 | 35 | 35 | 35 | 35 |
+| M6 | 46 | 46 | 46 | 46 | 46 | 46 |
+| M7 | 23 | 23 | 23 | 23 | 23 | 23 |
+| M8 | 28 | 28 | 28 | 28 | 28 | 28 |
+
+A estrutura sugere três exemplos (`introducao`, `aplicacao`, `erro`) e dois exercícios (`certos_erro`, `multipla`) por subtópico, em linha com o padrão descrito nos comentários dos arquivos. Entretanto, a contagem por tipo não substitui a leitura individual de cada objeto. Em particular, o exemplo do tipo `erro` pode usar `correcao` em vez de `resposta`; um validador deve aceitar o campo semanticamente adequado e exigir que exista uma solução/correção não vazia, em vez de verificar apenas uma chave fixa.
+
+### Validações ainda necessárias
+
+- Conferir o registro adicional em M1 e identificar a qual nó curricular pertence.
+- Validar enunciado e resposta/correção não vazios em cada exemplo e exercício.
+- Confirmar três exemplos e dois exercícios por subtópico real, não apenas totais por arquivo.
+- Avaliar se os exemplos são realmente distintos e se o nível avançado/interpretação de erro está presente em conteúdo, não apenas no rótulo `tipo`.
