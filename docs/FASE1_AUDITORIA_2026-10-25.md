@@ -262,3 +262,42 @@ O arquivo `apostila-ia/assets/data/questions.js` foi inspecionado por padrão es
 Resultado: os 120 registros extraídos têm IDs únicos no banco compartilhado, e todas as referências `topico` verificadas apontam para coordenadas existentes nos currículos M1–M3. A verificação aceita referências em nível de unidade, tópico ou subtópico quando a coordenada corresponde a um nó real. Não foi feita nesta rodada a validação de conteúdo, gabaritos, justificativas, duplicação semântica ou distribuição adequada das questões entre todos os tópicos. Os bancos M4–M8 continuam pendentes de validação por coordenadas e unicidade global.
 
 **Método e limite:** análise estática dos arquivos remotos; o código da aplicação não foi executado. O padrão de extração procura IDs e referências declaradas, mas não é substituto para parsing/execução completa do JavaScript.
+
+
+## Normalização concluída das referências de flashcards e questões — M1 a M8 (2026-10-25)
+
+A comparação estática foi estendida a todos os bancos de flashcards e de questões. As referências compactas e descritivas foram convertidas em coordenadas módulo/unidade/tópico/subtópico; referências em nível de unidade foram aceitas quando correspondem a um nó curricular existente.
+
+### Flashcards
+
+| Módulo | Cartões | IDs únicos no módulo | Tópicos curriculares | Tópicos referenciados pelos cartões | Referências inválidas |
+|---|---:|---:|---:|---:|---:|
+| M1 | 50 | 50 | 23 | 15 | 0 |
+| M2 | 50 | 50 | 19 | 5 | 0 |
+| M3 | 50 | 50 | 14 | 4 | 0 |
+| M4 | 54 | 54 | 13 | 13 | 0 |
+| M5 | 50 | 50 | 13 | 5 | 0 |
+| M6 | 50 | 50 | 18 | 18 | 0 |
+| M7 | 50 | 50 | 9 | 9 | 0 |
+| M8 | 50 | 50 | 23 | 23 | 0 |
+| **Total** | **404** | **404** | **132** | — | **0** |
+
+Os 404 cartões têm IDs únicos globalmente segundo a inspeção anterior, e todos os vínculos `topico` conferidos apontam para coordenadas curriculares existentes. Isso valida a integridade dos vínculos declarados, não a qualidade ou a cobertura suficiente dos cartões. M2 (5/19 tópicos), M3 (4/14), M5 (5/13) e M1 (15/23) apresentam cobertura temática mais restrita; deve-se avaliar a necessidade de criar ou redistribuir cartões. M4, M6, M7 e M8 têm pelo menos uma referência para cada tópico curricular detectado.
+
+### Questões
+
+| Banco | Questões | IDs únicos no arquivo | Referências inválidas |
+|---|---:|---:|---:|
+| Compartilhado M1–M3 | 120 | 120 | 0 |
+| M4 | 85 | 85 | 0 |
+| M5 | 40 | 40 | 0 |
+| M6 | 40 | 40 | 0 |
+| M7 | 40 | 40 | 0 |
+| M8 | 40 | 40 | 0 |
+| **Total** | **365** | **365 globalmente** | **0** |
+
+Os 365 IDs de questões foram comparados globalmente, sem duplicatas textuais. As 365 referências `topico` extraídas foram verificadas por coordenadas contra o currículo do módulo correspondente; nenhuma referência inválida foi encontrada.
+
+### Método e limites
+
+A inspeção foi realizada remotamente sobre os arquivos versionados e não executou os módulos JavaScript. A extração usa padrões textuais de objetos e campos; portanto, os resultados são uma validação estática de IDs e coordenadas, não uma prova de gabaritos corretos, ausência de duplicação semântica, dificuldade apropriada, originalidade, qualidade didática ou funcionamento em runtime. A auditoria qualitativa dos 888 exemplos e 592 exercícios permanece pendente, assim como a execução atual da aplicação e a confirmação de CI.
