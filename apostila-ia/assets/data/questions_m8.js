@@ -110,15 +110,15 @@ const moduleQuestions8 = [
       { letra: "A", texto: "As barras devem ser encostadas, pois a folga entre elas indicaria categorias discretas e sem ordem." },
       { letra: "B", texto: "O eixo y apresenta a frequência relativa, e a altura é sempre a medida correta da classe." },
       { letra: "C", texto: "Classes de larguras diferentes exigem que a frequência esteja na altura da barra." },
-      { letra: "D", texto: "O histograma deve começar o eixo x fora do menor valor observado." }
+      { letra: "D", texto: "As barras devem ser separadas por espaços, como em um gráfico de categorias independentes." }
     ],
     gabarito: "A",
-    justificativa: "O currículo define que as barras de um histograma são encostadas, sem folga, porque a continuidade visual sinaliza que os intervalos se tocam. A alternativa A reproduz exatamente essa regra. A alternativa B está incorreta porque, com larguras diferentes, a altura não é a medida correta — a área (densidade) sim. A C está invertida: com larguras diferentes a frequência está na área. A D está incorreta: o eixo x inicia-se no mínimo dos dados (ou no limite inferior da primeira classe), não fora.",
+    justificativa: "O currículo define que as barras de um histograma são encostadas, sem folga, porque a continuidade visual sinaliza que os intervalos se tocam. A alternativa A reproduz exatamente essa regra. A alternativa B está incorreta porque, com larguras diferentes, a altura não é a medida correta — a área (densidade) sim. A C está invertida: com larguras diferentes a frequência está na área. A D está incorreta: espaços entre barras de um histograma sugerem classes desconectadas, embora os intervalos quantitativos sejam contíguos.",
     analise: {
       A: "CORRETA. Reproduz a regra de encosto, base da continuidade entre classes.",
       B: "INCORRETA. Erro conceitual: a altura é a frequência apenas para larguras iguais; com larguras diferentes, é a área que representa a frequência.",
       C: "INCORRETA. Inverte o princípio: com larguras diferentes, o correto é a densidade na altura, não a frequência.",
-      D: "INCORRETA. Erro conceitual: o eixo x começa no menor limite de classe, não fora dos dados; isso inventa um limite que não existe."
+      D: "INCORRETA. Erro conceitual: confunde histograma com gráfico de barras categóricas; as classes de uma variável quantitativa são representadas por barras contíguas."
     },
     regra: "Histograma: eixo x = classes contínuas (contagem), eixo y = frequência/área, barras encostadas, largura igual quando possível, declaração do número e da largura das classes.",
     pegadinha: "A alternativa D captura o erro de 'esticar' o eixo x para destacar um valor, transformando um histograma em gráfico enganoso."
