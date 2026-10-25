@@ -138,3 +138,26 @@ A inspeção de `apostila-ia/index.html` encontrou referências explícitas aos 
 ### CI
 
 Na consulta do status combinado e das execuções de workflow para o commit desta atualização, não foram retornados status nem execuções associados. Portanto, CI permanece **sem evidência de execução**, e não deve ser marcado como aprovado.
+
+
+## Continuação — recálculo de exemplos e exercícios (2026-10-25)
+
+Foi feita uma contagem estática dos objetos de primeiro nível dentro dos arrays `exemplos` e `exercicios` nos oito arquivos curriculares, removendo comentários JavaScript antes da contagem para não incluir blocos legados comentados. O procedimento reconhece os arrays de objetos, mas não executa o código nem valida se cada item é didaticamente completo.
+
+| Módulo | Subtópicos ativos identificados | Exemplos em arrays ativos | Exercícios em arrays ativos |
+|---|---:|---:|---:|
+| M1 | 37 | 114 | 76 |
+| M2 | 52 | 156 | 104 |
+| M3 | 35 | 105 | 70 |
+| M4 | 39 | 117 | 78 |
+| M5 | 35 | 105 | 70 |
+| M6 | 46 | 138 | 92 |
+| M7 | 23 | 69 | 46 |
+| M8 | 28 | 84 | 56 |
+| **Total** | **295** | **888** | **592** |
+
+### Divergência em relação ao inventário histórico
+
+O inventário anterior declarava 885 exemplos e 590 exercícios. A contagem estática atual aponta 888 e 592, respectivamente: diferença de **+3 exemplos** e **+2 exercícios**. Os valores históricos não devem ser usados como totais exatos sem atualização. A diferença pode decorrer de contagem anterior, conteúdo adicionado ou critérios diferentes; esta inspeção não determina a causa.
+
+A contagem representa itens estruturados nos arrays curriculares ativos. Não comprova que cada exemplo seja resolvido em três naturezas distintas, nem que cada exercício tenha dificuldade, resposta e explicação adequadas conforme o prompt mestre. A próxima auditoria deve conferir os campos de cada item e a vinculação por subtópico.
