@@ -156,3 +156,17 @@ Tipo de verificação: inspeção remota de arquivos no GitHub; não é execuç�
 | JavaScript / interface / file:// | NÃO EXECUTADO | Nenhuma execução local nesta etapa | Não declarar aprovação técnica |
 
 Nenhum teste de navegador, funcionalidade, persistência, acessibilidade ou build foi executado em 2026-10-25 nesta etapa. Resultados históricos preservados acima não foram reexecutados e não são apresentados como testes novos.
+
+
+## Continuação — Fase 2: inspeção estática curricular (2026-10-25)
+
+| Verificação | Resultado | Evidência | Limite |
+|---|---|---|---|
+| Oito arquivos curriculares encontrados e lidos remotamente | PASS | Arquivos `curriculum.js` e `curriculum_m2.js` a `curriculum_m8.js` | Não executados |
+| IDs de subtópicos extraídos por padrão específico de cada família | PASS — 295 IDs | 37 + 52 + 35 + 39 + 35 + 46 + 23 + 28 | Contagem sintática, não valida conteúdo nem unicidade global entre todos os dados |
+| Matriz por subtópico gerada | PASS — 295 linhas de dados | `docs/MATRIZ_COBERTURA.csv` | Indicadores de presença aproximados; status qualitativo continua pendente |
+| Qualidade didática dos 295 subtópicos | NÃO EXECUTADO | — | Requer revisão semântica por critério |
+| Contagens de exemplos/exercícios/questões/flashcards | NÃO EXECUTADO | — | Requer extração e validação separadas |
+| Execução da aplicação em `file://` ou navegador | NÃO EXECUTADO | — | Nenhuma evidência de runtime nesta etapa |
+
+Esta inspeção foi estática e remota via GitHub; não é um teste de execução. Não foi usado subagente nesta etapa.
