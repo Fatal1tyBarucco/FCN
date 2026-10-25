@@ -151,3 +151,10 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [ ] Testar interações completas de cada simulador, fluxo de simulado, filtros, backup/importação, redimensionamento e teclado em Chromium/Firefox/Safari ou dispositivos reais.
 - [ ] Executar auditoria WCAG 2.1 AA com ferramenta e leitor de tela; smoke test headless não é certificação de acessibilidade.
 - [ ] Testar registro/cache/offline do Service Worker em contexto HTTP/HTTPS; o teste `file://` não cobre PWA.
+
+
+## Correção de rastreabilidade M1 — 2026-10-25
+
+- [x] Associar 12 questões M1 ao subtópico correspondente após conferir seus assuntos e enunciados: q-m1-26, q-m1-27, q-m1-28, q-m1-29, q-m1-30, q-m1-31, q-m1-32 e q-m1-36 a q-m1-40.
+- [x] Reexecutar a auditoria no GitHub Actions: [execução aprovada](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246710464). Total atual: 96 questões com referência apenas à unidade, 0 referências curriculares não mapeadas; 460 flashcards e 365 questões preservados.
+- [ ] Revisar as 96 questões ainda associadas apenas à unidade (principalmente M4/M5) antes de vinculá-las a tópicos. Não atribuir automaticamente com base apenas no número da unidade.
