@@ -246,14 +246,14 @@ const moduleQuestions8 = [
       { letra: "D", texto: "todos os indicadores calculados, em quantidade ilimitada." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que a RECOMENDAÇÃO deve conter a ação proposta, com responsável, prazo, custo e o que acontece se não for feita. A alternativa B reproduz exatamente esses quatro elementos. A alternativa A omite os elementos obrigatórios; a C inverte a ordem da narrativa (seguir a ordem dos dados não é a ordem da decisão); a D é anti-restrição e viola a regra de 'uma mensagem por gráfico'.",
+    justificativa: "O currículo define que a RECOMENDAÇÃO deve conter a ação proposta, com responsável, prazo, custo e o que acontece se não for feita. A alternativa B reúne os cinco componentes: ação proposta, responsável, prazo, custo previsto e consequência de não agir. A alternativa A omite os elementos obrigatórios; a C inverte a ordem da narrativa (seguir a ordem dos dados não é a ordem da decisão); a D é anti-restrição e viola a regra de 'uma mensagem por gráfico'.",
     analise: {
       A: "INCORRETA. Erro conceitual: recomendação sem responsável, prazo e custo de não agir é constatação, não decide.",
-      B: "CORRETA. Reproduz os quatro movimentos obrigatórios do recomendado no currículo.",
+      B: "CORRETA. Inclui ação proposta, responsável, prazo, custo previsto e consequência de não executar a ação.",
       C: "INCORRETA. Erro conceitual: a ordem da investigação não é a ordem da narrativa de decisão; concluir primeiro e justificar depois é a regra.",
       D: "INCORRETA. Erro conceitual: todos os indicadores em quantidade ilimitada satura o painel e paralisa a decisão (visão completa é anti-padrão de gestão)."
     },
-    regra: "Storytelling de decisão: contexto → conflito → descoberta → recomendação, com recomendações que contenham ação, responsável, prazo e custo de não agir.",
+    regra: "Storytelling de decisão: contexto → conflito → descoberta → recomendação, com recomendações que indiquem ação, responsável, prazo, custo previsto e consequência de não agir.",
     pegadinha: "A alternativa C pega quem associa 'fiel ao processo de coleta' à 'narrativa de comunicação', mas o currículo exige a ordem da decisão, não a do processo."
   },
   {
