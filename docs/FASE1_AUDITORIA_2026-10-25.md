@@ -104,3 +104,22 @@ Foram consultados os oito arquivos curriculares: M1 `curriculum.js` (824 linhas,
 `docs/MATRIZ_COBERTURA.csv` foi atualizado para conter uma linha por cada um dos 295 IDs de subtópico identificados. A matriz registra ID, módulo, arquivo de origem, título capturado e indicadores textuais aproximados de objetivo, conteúdo, exemplos, exercícios e indícios de fontes. A coluna de auditoria permanece explicitamente como `nao revisado qualitativamente`.
 
 Limitação: a extração é estática, não executa o JavaScript e não prova suficiência didática, validade de fontes ou funcionamento. Os indicadores de presença são heurísticos. Ainda não foram recalculados exemplos, exercícios, flashcards ou questões; não houve testes de navegador nem revisão por subagentes nesta etapa. A Fase 2 continua em andamento.
+
+
+## Continuação — inventário de questões e flashcards (2026-10-25)
+
+### Questões
+
+A inspeção dos bancos atuais encontrou 365 registros de questão, distribuídos assim: `questions.js` (120; M1–M3), `questions_m4.js` (85), `questions_m5.js` (40), `questions_m6.js` (40), `questions_m7.js` (40) e `questions_m8.js` (40). Os IDs observados são únicos dentro de cada arquivo. Isso confirma a soma documental de 365 registros, mas não comprova a qualidade dos enunciados, validade dos gabaritos, dificuldade, ausência de duplicatas semânticas ou cobertura integral do currículo. Os módulos M4–M8 usam arquivos separados; não foram encontrados arquivos `questions_m2.js` ou `questions_m3.js` nos caminhos consultados, pois essas questões estão no banco compartilhado `questions.js`.
+
+### Flashcards
+
+Os oito arquivos `flashcards_m1.js` a `flashcards_m8.js` contêm 404 registros: 50 em M1, 50 em M2, 50 em M3, 54 em M4 e 50 em cada um de M5–M8. Os IDs observados são únicos dentro de cada arquivo. A soma confirma a meta numérica declarada de pelo menos 400 flashcards. A distinção semântica, a qualidade das respostas e a cobertura por subtópico ainda precisam de revisão.
+
+### Exemplos e exercícios: ressalva de contagem
+
+A busca textual encontrou 298 arrays chamados `exemplos` e 298 arrays chamados `exercicios` nos oito arquivos de currículo. **Esses números não são quantidades de exemplos ou exercícios**: cada array pode conter vários itens, e a contagem inclui estruturas que ainda precisam ser validadas. A contagem real de itens exige analisar os objetos completos, validar a estrutura de dados e conferir os critérios do `Escrita.txt`. Portanto, os números históricos de 885 exemplos e 590 exercícios continuam não verificados.
+
+### Critérios do prompt mestre relevantes para a próxima etapa
+
+O `Escrita.txt` exige rastreabilidade de disciplina até objetivo, conteúdo, exemplo, exercício e critério de domínio; IDs estáveis; painel de cobertura para assuntos incompletos/sem exercícios; três exemplos resolvidos de naturezas distintas por subtópico conforme aplicável; simulador de planilha com cálculos reais para funções explicitamente suportadas; simuladores defensivos com dados fictícios; e pelo menos 50 flashcards autorais por módulo (mínimo global de 400). Os 404 flashcards atendem ao piso numérico, mas não constituem prova de distinção ou cobertura completa. A inspeção desta etapa não verificou todos os critérios didáticos e funcionais.
