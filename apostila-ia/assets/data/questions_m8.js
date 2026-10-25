@@ -266,7 +266,7 @@ const moduleQuestions8 = [
     topico: "modulo-8-unidade-5-topico-2",
     assunto: "M8.5.2 Métricas de processo e resultado",
     contexto: "Painel de atendimento exibe métricas de resultado e métricas de processo.",
-    enunciado: "Métricas de resultado consolidam o que já aconteceu, enquanto métricas de processo podem sinalizar desvios e permitir intervenção antes de o resultado final se consolidar."
+    enunciado: "Métricas de resultado consolidam o que já aconteceu, enquanto métricas de processo podem sinalizar desvios e permitir intervenção antes de o resultado final se consolidar.",
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é a distinção entre métricas de resultado, que registram resultados já ocorridos, e métricas de processo, que podem sinalizar desvios antes da consolidação do resultado final.",
     justificativa: "O currículo distingue métricas de resultado (lagging: o que já aconteceu — receita realizada, atendimentos concluídos) de métricas de processo (leading: o que antecede o resultado — prazo de resposta, fila de entrada). A afirmação combina as duas ideias de forma correta.",
