@@ -1,0 +1,51 @@
+name: Validate curriculum and learning assets
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - "feat/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-\${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Static validation and coverage audits
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find apostila-ia/assets -type f -name '*.js' -print | sort)
+          test "\${#files[@]}" -gt 0
+          for file in "\${files[@]}"; do
+            echo "Checking \${file}"
+            node --check "\${file}"
+          done
+          echo "JavaScript syntax passed for \${#files[@]} files."
+
+      - name: Generate structural curriculum matrix
+        run: node scripts/audit_curriculum_matrix.mjs
+
+      - name: Generate learning asset traceability report
+        run: node scripts/audit_learning_assets.mjs
+
+      - name: Validate repository structure
+        run: node verificacao/verificar-estrutura.js
