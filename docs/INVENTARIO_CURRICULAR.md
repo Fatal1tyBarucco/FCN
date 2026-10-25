@@ -112,3 +112,10 @@ Relatório de contagens verificáveis por node: `inventario/RELATORIO_CONTAGENS_
 As contagens acima são as declaradas no inventário anterior, com data de referência 2026-10-23. Na inspeção remota da Fase 1 de 2026-10-25, elas foram consultadas, mas **não foram recalculadas a partir de todos os arquivos de dados**. Não as tratar como resultados novos desta execução.
 
 A matriz em `docs/MATRIZ_COBERTURA.csv` contém somente agregados por módulo; ainda não representa a rastreabilidade individual dos 427 nós. A auditoria atual e as lacunas identificadas estão em `docs/FASE1_AUDITORIA_2026-10-25.md`. A geração da matriz detalhada e a reprodução automatizada das contagens são tarefas explícitas da Fase 2.
+
+
+## Revalidação estrutural remota — 2026-10-25 (execução atual)
+
+A matriz docs/MATRIZ_COBERTURA.csv foi expandida para uma linha por subtópico detectado nos oito arquivos curriculares. O processamento remoto identificou 295 IDs de subtópicos, distribuídos em M1=37, M2=52, M3=35, M4=39, M5=35, M6=46, M7=23 e M8=28. A contagem textual detectou 888 exemplos e 592 exercícios. A inspeção dos arquivos de flashcards encontrou 460 IDs, todos únicos dentro do conjunto; a inspeção dos arquivos de questões encontrou 365 IDs, todos únicos dentro do conjunto.
+
+Esses números descrevem uma auditoria estrutural dos arquivos remotos. Não comprovam originalidade, correção técnica, qualidade didática, análise completa dos distratores, validade atual de fontes nem funcionamento de interface. O script reprodutível scripts/audit_curriculum_matrix.mjs foi adicionado ao repositório, mas **ainda não foi executado localmente nesta execução**; sua execução e comparação do resultado permanecem pendentes.
