@@ -26,14 +26,14 @@ Fonte de requisitos: `Escrita.txt` (raiz; SHA consultado: `a7da4ad0c8905e2f7ece4
 | Módulo | Disciplina | Unidades | Tópicos | Subtópicos | Flashcards declarados | Questões declaradas | Estado editorial atual |
 |---|---|---:|---:|---:|---:|---:|---|
 | M1 | Microsoft 365 e aplicações de escritório | 5 | 23 | 37 | 66 | 40 | Parcial segundo o inventário existente |
-| M2 | Redes de computadores | 5 | 19 | 52 | 50 | 40 | Declarado completo; requer auditoria por requisito |
+| M2 | Redes de computadores | 5 | 19 | 52 | 56 | 40 | Declarado completo; requer auditoria por requisito |
 | M3 | Comunicação e colaboração | 5 | 14 | 35 | 68 | 40 | Declarado completo; requer auditoria por requisito |
 | M4 | Segurança da informação e governança digital | 4 | 13 | 39 | 54 | 85 | Declarado completo; distribuição de questões difere dos demais módulos |
 | M5 | Inteligência artificial | 4 | 13 | 35 | 66 | 40 | Declarado completo; requer auditoria por requisito |
 | M6 | Ética e responsabilidade digital no serviço público | 6 | 18 | 46 | 50 | 40 | Declarado completo; requer auditoria normativa |
 | M7 | Fundamentos e engenharia de dados | 3 | 9 | 23 | 50 | 40 | Declarado completo; requer auditoria por requisito |
 | M8 | Visualização, análise e storytelling com dados | 5 | 23 | 28 | 50 | 40 | Declarado completo; requer auditoria por requisito |
-| **Total** | — | **37** | **132** | **295** | **436** | **365** | **Números herdados dos documentos; ainda precisam de recálculo reproduzível nesta execução** |
+| **Total** | — | **37** | **132** | **295** | **442** | **365** | **Números herdados dos documentos; ainda precisam de recálculo reproduzível nesta execução** |
 
 As contagens acima são transcritas dos documentos versionados no repositório, não foram recalculadas nesta inspeção. Portanto, são **valores declarados pelo projeto**, não novos resultados de teste.
 
@@ -178,7 +178,7 @@ Foi feita inspeção estática dos oito bancos de flashcards e dos seis arquivos
 | Módulo | Cartões | Referências `topico` distintas | Observação |
 |---|---:|---:|---|
 | M1 | 66 | 23 | Após a expansão, todos os 23 tópicos de nível superior têm referência; 21 cartões ainda se concentram em `m1-u1-t1`. |
-| M2 | 50 | 5 | Há 10 cartões para cada uma de cinco referências, uma por unidade (`m2-u1-t1` até `m2-u5-t1`). Cobertura de tópicos dentro das unidades não demonstrada. |
+| M2 | 56 | 19 | Após a revisão e seis cartões novos, todos os 19 tópicos detectados têm referência; profundidade, exatidão e duplicação semântica ainda precisam de auditoria. |
 | M3 | 68 | 14 | Após a expansão, todos os 14 tópicos de nível superior detectados têm referência; permanece pendente auditar profundidade e sobreposição semântica. |
 | M4 | 54 | 13 | Distribuição relativamente regular, com 4 cartões em 11 referências e 6 em duas referências. |
 | M5 | 66 | 13 | Após a expansão para 66 cartões, há referências aos 13 tópicos curriculares; a cobertura semântica e a qualidade técnica ainda exigem revisão. |
@@ -368,3 +368,6 @@ A revisão da distribuição deve ser guiada pelo conteúdo real de cada cartão
 
 
 **Execução parcial — M3 (continuação, 2026-10-25):** adicionados 18 cartões (`fc-m3-51` a `fc-m3-68`) para nove tópicos antes sem referência: netiqueta, acessibilidade, comunicação institucional, controles de reunião, riscos de compartilhamento, políticas de gravação, intrusão em reuniões, exposição por e-mail/calendário e phishing institucional. O banco passou de 50 para 68 cartões. A cobertura referencial foi ampliada, mas ainda requer validação técnica detalhada, revisão de sobreposição com cartões existentes e teste do carregamento em runtime. Commit: `ff504449868a325ec86c4c69d82a40c230b83dc6`.
+
+
+**Execução parcial — M2 (continuação, 2026-10-25):** adicionados seis cartões (`fc-m2-51` a `fc-m2-56`) para os três tópicos antes sem referência: métricas de desempenho de rede, meios de transmissão e comunicação cliente-servidor. O banco passou de 50 para 56 cartões e agora referencia os 19 tópicos curriculares detectados. A validação permanece estrutural; revisar tecnicamente cálculos, terminologia e possíveis sobreposições antes de considerar a auditoria qualitativa concluída. Commit: `7579f064b25502720fe5e81b6539a134d076f079`.
