@@ -273,7 +273,7 @@ A comparação estática foi estendida a todos os bancos de flashcards e de ques
 | Módulo | Cartões | IDs únicos no módulo | Tópicos curriculares | Tópicos referenciados pelos cartões | Referências inválidas |
 |---|---:|---:|---:|---:|---:|
 | M1 | 66 | 66 | 23 | 23 | 0 |
-| M2 | 50 | 50 | 19 | 16 | 0 |
+| M2 | 56 | 56 | 19 | 19 | 0 |
 | M3 | 68 | 68 | 14 | 14 | 0 |
 | M4 | 54 | 54 | 13 | 13 | 0 |
 | M5 | 66 | 66 | 13 | 13 | 0 |
@@ -282,7 +282,7 @@ A comparação estática foi estendida a todos os bancos de flashcards e de ques
 | M8 | 50 | 50 | 23 | 23 | 0 |
 | **Total** | **460** | **460** | **132** | — | **0** |
 
-Os 404 cartões têm IDs únicos globalmente segundo a inspeção anterior, e todos os vínculos `topico` conferidos apontam para coordenadas curriculares existentes. Isso valida a integridade dos vínculos declarados, não a qualidade ou a cobertura suficiente dos cartões. M2 (16/19 tópicos) ainda tem lacunas; M3 foi expandido para referenciar 14/14 tópicos detectados; M1 e M5 têm cobertura referencial de 23/23 e 13/13, respectivamente. M1 foi expandido para 66 cartões e passou a referenciar os 23 tópicos de nível superior detectados; a cobertura referencial não comprova, por si só, profundidade ou qualidade pedagógica. M4, M6, M7 e M8 têm pelo menos uma referência para cada tópico curricular detectado.
+Os 460 cartões têm IDs únicos globalmente segundo a inspeção estática atual, e todos os vínculos `topico` conferidos apontam para coordenadas curriculares existentes. Isso valida a integridade dos vínculos declarados, não a qualidade ou a cobertura suficiente dos cartões. M2 (19/19 tópicos) agora tem referência para todos os tópicos detectados; M3 foi expandido para referenciar 14/14 tópicos detectados; M1 e M5 têm cobertura referencial de 23/23 e 13/13, respectivamente. M1 foi expandido para 66 cartões e passou a referenciar os 23 tópicos de nível superior detectados; a cobertura referencial não comprova, por si só, profundidade ou qualidade pedagógica. M4, M6, M7 e M8 têm pelo menos uma referência para cada tópico curricular detectado.
 
 ### Questões
 
@@ -335,7 +335,7 @@ A revisão da distribuição deve ser guiada pelo conteúdo real de cada cartão
 | Módulo | Cartões | Tópicos curriculares | Tópicos referenciados | Tópicos sem referência de cartão | Ação |
 |---|---:|---:|---:|---:|---|
 | M1 | 66 | 23 | 23 | 0 | Auditar profundidade, exatidão e duplicação semântica; não confundir referência com domínio pedagógico |
-| M2 | 50 | 19 | 5 | 14 | Prioridade alta: mapear cartões existentes para tópicos compatíveis; criar cartões para tópicos sem cobertura quando não houver cartão apropriado |
+| M2 | 56 | 19 | 19 | 0 | Auditar profundidade, precisão técnica, duplicações e aderência semântica dos cartões |
 | M3 | 68 | 14 | 14 | 0 | Auditar profundidade, exatidão e duplicação semântica após expansão de netiqueta, acessibilidade e segurança colaborativa |
 | M4 | 54 | 13 | 13 | 0 | Manter cobertura referencial; ainda avaliar profundidade e duplicação semântica |
 | M5 | 66 | 13 | 13 | 0 | Auditar profundidade, exatidão e duplicação semântica após expansão de IA generativa e engenharia de prompts |
@@ -371,3 +371,22 @@ A revisão da distribuição deve ser guiada pelo conteúdo real de cada cartão
 
 
 **Execução parcial — M2 (continuação, 2026-10-25):** adicionados seis cartões (`fc-m2-51` a `fc-m2-56`) para os três tópicos antes sem referência: métricas de desempenho de rede, meios de transmissão e comunicação cliente-servidor. O banco passou de 50 para 56 cartões e agora referencia os 19 tópicos curriculares detectados. A validação permanece estrutural; revisar tecnicamente cálculos, terminologia e possíveis sobreposições antes de considerar a auditoria qualitativa concluída. Commit: `7579f064b25502720fe5e81b6539a134d076f079`.
+
+
+## Primeira revisão qualitativa dos cartões — M1 a M3 (2026-10-25)
+
+Esta rodada comparou frentes, versos e referências declaradas nos cartões mais recentes, além de amostras dos cartões iniciais. É uma triagem editorial, não uma validação completa de todos os cartões.
+
+### Achados que exigem atenção
+
+- **M1 — possível duplicação semântica:** `fc-m1-01` e `fc-m1-11` perguntam, com formulações próximas, a diferença entre Microsoft 365, Office LTSC e licença perpétua. `fc-m1-03` e `fc-m1-23` também se sobrepõem no histórico de versões e retenção. Recomenda-se diversificar a recuperação ativa (cenário de escolha, exceções e limites) em vez de manter duas perguntas essencialmente equivalentes.
+- **M1 — afirmações dependentes de plano/versão:** os cartões `fc-m1-03`, `fc-m1-12`, `fc-m1-16` e `fc-m1-28` apresentam prazos ou capacidades como valores padrão/garantidos (por exemplo, 30 dias e 5 TB) que podem variar por serviço, licença, configuração e política administrativa. A redação deve distinguir regra geral de configuração específica e remeter para o conteúdo curricular documentado quando este trouxer a condição exata.
+- **M1 — referência temática histórica:** vários cartões iniciais de Word e Microsoft 365 estão associados a `m1-u1-t1`, enquanto outros usam referências específicas de Word. Embora a coordenada exista, a validade semântica precisa ser confirmada cartão a cartão; a contagem 23/23 não garante que todos os vínculos estejam corretos.
+- **M2 — simplificações de rede:** `fc-m2-06` e `fc-m2-07` descrevem consequências de falhas em topologias em estrela/barra em termos absolutos. A resposta depende da arquitetura física/lógica e dos componentes; explicitar a condição evita transformar uma tendência didática em regra universal.
+- **M3 — precisão de autenticação de e-mail:** `fc-m3-10` diz que SPF/DKIM/DMARC “previnem” falsificação; a formulação é excessivamente absoluta. Os mecanismos reduzem determinados tipos de spoofing e dependem de configuração/alinhamento, mas não eliminam phishing, domínios semelhantes ou contas comprometidas. O cartão `fc-m3-62` oferece uma formulação mais cuidadosa sobre bases legais para gravação; a política concreta ainda deve ser avaliada conforme finalidade e contexto.
+
+### Resultado e próximo passo
+
+- Nenhuma alteração de conteúdo foi aplicada nesta triagem, para evitar corrigir afirmações sem comparar o texto integral do tópico curricular de destino.
+- A cobertura referencial continua sendo uma métrica estrutural, não uma conclusão de qualidade pedagógica.
+- Próxima ação: comparar cada cartão sinalizado com o texto curricular correspondente e, só então, corrigir respostas ou referências; depois ampliar a amostra para M4–M8 e questões.
