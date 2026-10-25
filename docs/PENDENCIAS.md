@@ -120,3 +120,12 @@ Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada
 - [ ] Revisar qualitativamente conteúdo, exemplos, exercícios, gabaritos e distratores; contagens estruturais não equivalem a aprovação editorial.
 - [ ] Executar e registrar testes locais/headless, checagens de integridade e testes de navegador; a consulta de Actions desta branch retornou zero execuções e não comprova CI verde.
 - [ ] Não iniciar alterações concorrentes em arquivos de aplicação enquanto a análise do PR #17 estiver sendo consolidada; integrar mudanças em commits rastreáveis na mesma branch.
+
+
+## Atualização de rastreabilidade — 2026-10-25 (continuação do PR #17)
+
+- [x] Adicionar `scripts/audit_learning_assets.mjs`, ferramenta sem dependências externas para associar IDs de flashcards e questões às chaves dos tópicos curriculares e gerar `docs/MATRIZ_RASTREABILIDADE_ATIVOS.csv` e `docs/RELATORIO_RASTREABILIDADE_ATIVOS.md`.
+- [ ] Executar `node scripts/audit_learning_assets.mjs` em clone do repositório; confirmar que a extração reconhece os registros esperados e revisar referências não mapeadas antes de usar os resultados como evidência.
+- [ ] Conferir se o parser de ativos trata todos os formatos de objeto dos oito arquivos de flashcards e seis arquivos de questões; regex estrutural não substitui validação do esquema.
+- [ ] A matriz de ativos será por tópico-pai. Não interpretar associação ao tópico como cobertura garantida de cada subtópico.
+- [ ] Não afirmar que a matriz de ativos foi gerada ou que o script passou até executar o script e registrar a saída real.
