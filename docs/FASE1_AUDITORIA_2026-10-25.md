@@ -301,3 +301,26 @@ Os 365 IDs de questões foram comparados globalmente, sem duplicatas textuais. A
 ### Método e limites
 
 A inspeção foi realizada remotamente sobre os arquivos versionados e não executou os módulos JavaScript. A extração usa padrões textuais de objetos e campos; portanto, os resultados são uma validação estática de IDs e coordenadas, não uma prova de gabaritos corretos, ausência de duplicação semântica, dificuldade apropriada, originalidade, qualidade didática ou funcionamento em runtime. A auditoria qualitativa dos 888 exemplos e 592 exercícios permanece pendente, assim como a execução atual da aplicação e a confirmação de CI.
+
+
+## Validação estrutural individual de exemplos e exercícios — 2026-10-25
+
+Foi feita nova inspeção dos objetos curriculares individuais, extraindo os objetos dentro de cada array `exemplos` e `exercicios`, em vez de confiar somente nos totais agregados. Para cada objeto extraído, foi verificada a presença de `tipo`, `enunciado` e de um campo de solução (`resposta` ou `correcao`, entre os campos aceitos). A validação foi estática, sobre os arquivos da branch, sem executar a aplicação.
+
+| Módulo | Subtópicos | Exemplos introdutórios | Aplicação | Erro/correção | Exercícios C/E | Múltipla escolha | Objetos sem campos mínimos |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| M1 | 37 | 38 | 38 | 38 | 38 | 38 | 0 |
+| M2 | 52 | 52 | 52 | 52 | 52 | 52 | 0 |
+| M3 | 35 | 35 | 35 | 35 | 35 | 35 | 0 |
+| M4 | 39 | 39 | 39 | 39 | 39 | 39 | 0 |
+| M5 | 35 | 35 | 35 | 35 | 35 | 35 | 0 |
+| M6 | 46 | 46 | 46 | 46 | 46 | 46 | 0 |
+| M7 | 23 | 23 | 23 | 23 | 23 | 23 | 0 |
+| M8 | 28 | 28 | 28 | 28 | 28 | 28 | 0 |
+| **Total** | **295** | **334** | **334** | **334** | **334** | **334** | **0** |
+
+**Resultado confirmado:** os objetos extraídos têm os campos mínimos esperados; o verificador aceita `correcao` nos exemplos de erro, em vez de exigir `resposta`. M2–M8 apresentam exatamente três exemplos e dois exercícios por subtópico identificado.
+
+**Exceção M1:** o arquivo tem 37 IDs de subtópicos, mas 38 objetos de cada tipo. O subtópico `modulo-1-unidade-2-topico-14-sub-1` aparenta conter seis exemplos e quatro exercícios, em vez de três e dois. A extração estática identifica a concentração, mas ainda é necessário inspecionar manualmente esse objeto para determinar se há material adicional válido, duplicação ou erro estrutural. Portanto, a contagem bruta é 888 exemplos e 592 exercícios, mas o excesso concentrado em M1 impede declarar alinhamento perfeito entre objetos e subtópicos.
+
+**Limites:** presença de campos não prova que as respostas estão corretas, que os exemplos são pedagogicamente distintos, que os exercícios cobrem os objetivos ou que o nível avançado está realmente desenvolvido. Esses pontos continuam exigindo revisão qualitativa. O método é uma inspeção estática dos arquivos remotos, não um teste de runtime.
