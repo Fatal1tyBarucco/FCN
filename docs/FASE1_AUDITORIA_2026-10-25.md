@@ -406,3 +406,11 @@ Correções pontuais de conteúdo aplicadas diretamente aos cartões após revis
 Validação estrutural após essas alterações: M1 66 cartões/66 IDs únicos; M2 56/56; M3 68/68; M4 54/54; M5 66/66; M6 50/50; M7 50/50; M8 50/50. Total: 460 cartões e 460 IDs únicos, contando IDs no escopo individual de cada arquivo. Essa verificação não equivale a validação semântica completa, execução de JavaScript ou testes de navegador.
 
 Limitações atuais: a revisão qualitativa dos módulos M4–M8 e do banco de questões permanece parcial. Não há evidência confirmada de CI verde para o HEAD consultado; não declarar os testes de execução aprovados.
+
+
+### Segunda rodada de revisão semântica
+
+- M1: removida a afirmação de que o histórico de versões tem prazo padrão universal; disponibilidade depende do serviço, da configuração e das políticas aplicáveis. Os cartões sobre quota, funções de OneDrive/SharePoint, recuperação e decisão de licenciamento foram conferidos no estado remoto e usam formulações condicionais.
+- M5: o cartão `fc-m5-09` foi reorientado para o risco de divisão aleatória inadequada em séries temporais, registros dependentes e grupos relacionados. Isso reduz a redundância com os cartões sobre a função da validação e a reutilização do conjunto de teste.
+- M4/M6/M7/M8: foi iniciada inspeção qualitativa adicional; os exemplos lidos mostram áreas que exigem revisão de precisão e escopo, mas não foi concluída auditoria semântica integral desses módulos.
+- As alterações desta rodada preservam os IDs públicos dos cartões.
