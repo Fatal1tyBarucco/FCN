@@ -95,3 +95,12 @@ O arquivo `docs/MATRIZ_COBERTURA.csv` foi substituído por uma matriz com uma li
 - Fase 2: inspeção estática dos oito arquivos curriculares concluída para extração dos IDs; matriz rastreável inicial gerada.
 - Ainda pendente na Fase 2: recálculo dos exemplos, exercícios, flashcards e questões; verificação de IDs duplicados e referências cruzadas; comparação campo a campo com os critérios do prompt mestre; execução de testes locais e de navegador.
 - Não houve alteração do código funcional, execução de JavaScript, testes de interface ou delegação a subagentes nesta continuação.
+
+
+## Continuação da execução — Fase 2 (2026-10-25)
+
+Foram consultados os oito arquivos curriculares: M1 `curriculum.js` (824 linhas, 37 IDs), M2 `curriculum_m2.js` (1.977 linhas, 52 IDs), M3 `curriculum_m3.js` (811 linhas, 35 IDs), M4 `curriculum_m4.js` (717 linhas, 39 IDs), M5 `curriculum_m5.js` (653 linhas, 35 IDs), M6 `curriculum_m6.js` (878 linhas, 46 IDs), M7 `curriculum_m7.js` (892 linhas, 23 IDs) e M8 `curriculum_m8.js` (1.165 linhas, 28 IDs). Total: 7.917 linhas e 295 IDs reconhecidos por padrões de nomenclatura.
+
+`docs/MATRIZ_COBERTURA.csv` foi atualizado para conter uma linha por cada um dos 295 IDs de subtópico identificados. A matriz registra ID, módulo, arquivo de origem, título capturado e indicadores textuais aproximados de objetivo, conteúdo, exemplos, exercícios e indícios de fontes. A coluna de auditoria permanece explicitamente como `nao revisado qualitativamente`.
+
+Limitação: a extração é estática, não executa o JavaScript e não prova suficiência didática, validade de fontes ou funcionamento. Os indicadores de presença são heurísticos. Ainda não foram recalculados exemplos, exercícios, flashcards ou questões; não houve testes de navegador nem revisão por subagentes nesta etapa. A Fase 2 continua em andamento.
