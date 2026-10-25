@@ -315,7 +315,7 @@ const moduleQuestions8 = [
     topico: "modulo-8-unidade-2-topico-5",
     assunto: "M8.2.5 Box plot e quartis",
     contexto: "Conjunto 2, 4, 6, 8, 10, 12, 50. Professor pede osquartis, o IIQ e a presença de outliers pela convenção de Tukey.",
-    enunciado: "No box plot de Tukey, o intervalo interquartílico (IIQ) é Q3 − Q1, e os bigodes vão de Q1 − 1,5 × IIQ até Q3 + 1,5 × IIQ, valorizando o aquele que está dentro dos limites.",
+    enunciado: "No box plot de Tukey, o intervalo interquartílico (IIQ) é Q3 − Q1; os limites para identificar outliers são Q1 − 1,5 × IIQ e Q3 + 1,5 × IIQ, e os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites.",
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'IIQ = Q3 − Q1 e os bigodes vão de Q1 − 1,5×IIQ até Q3 + 1,5×IIQ': o currículo define exatamente o IIQ como Q3 − Q1 e a convenção de Tukey com múltiplo 1,5.",
     justificativa: "O currículo define: bigode de Tukey limita em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; bigode vai até o maior/menor valor dentro dos limites; outliers são plotados isoladamente. O enunciado reproduz essas regras.",
