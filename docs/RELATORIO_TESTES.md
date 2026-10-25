@@ -98,3 +98,45 @@ Entrega do orquestrador: Fases 1–2 completas; Fase 3 iniciada (arquitetura con
 - Resultado: 25/25 PASS — 7.1 Excel (carregado + PROCV/PROCH/PROCX + sem eval + separador) · 7.2 Redes (carregado + CIDR real + ping/traceroute simulados + isolado) · 7.3 Segurança (carregado + defesa defensiva + 3-2-1 + isolado) · 7.4 Prompts (editor + comparação + critérios + simulação local) · 7.5 Dados + 8 gráficos (stats + 5 tipos + SVG próprio + cálculo real + acessível).
 - Nenhuma alteração introduzida em simulator_*.js; nenhuma correção necessária neste incremento.
 - Limitação: renderização em navegador real ainda não verificada (documentado em PENDENCIAS.md); cálculos internos confirmados por código-fonte + smoke.
+
+
+## Atualização Fase 7 — Testes headless Chromium (CDP) — 2026-10-24
+
+Ambiente: Chromium 156 headless (Termux) controlado via Chrome DevTools Protocol (Python websockets), abrindo `file:///.../apostila-ia/index.html` (Modo A, abertura direta). Evidência real capturada em scripts locais em `/tmp` (não commitados): test_cdp2.py, test_interactions.py, test_search2.py.
+
+### T9 — Carregamento da página em file:// (CDP)
+- Título: "Apostila Web Interativa — Tecnologia da Informação, Dados e IA".
+- Módulos carregados: modulo-1..modulo-8 (8/8) — log navigation.js.
+- Flashcards inicializados: 404 cartões.
+- Quiz inicializado: 365 questões.
+- Charts inicializados: 5 gráficos.
+- Console: 10 mensagens, todas `log` informativas; 0 exceções (`Runtime.exceptionThrown` ausente), 0 erros de carregamento.
+- Resultado: PASS (carregamento real em file:// confirmado).
+
+### T10 — Contêineres montados (DOM headless)
+- #curriculum, #flashcards-app, #excel-app, #redes-app, #seguranca-app, #prompts-app, #dados-app, #charts-app, #search-app, #audio-app, #progress-app, #accessibility-app: todos presentes e não vazios (sim_excel 12286 chars, sim_redes 5431, sim_seg 13324, sim_prompts 9310, sim_dados 23358, charts 5 SVGs, progress 3148).
+- Resultado: PASS.
+
+### T11 — Busca global (window.SearchApp)
+- Índice construído: 1196 entradas (currículo + flashcards + questões).
+- `buscar('CIDR')` = 10 resultados; `buscar('cidr')` = 10 resultados (case/accent-insensitive).
+- UI: #bus-input, #bus-btn, filtros (módulo/tópico/nível/tipo), status de indexação; #bus-btn executa busca e renderiza resultados.
+- Resultado: PASS (busca encontra conteúdo real; sem resultados fictícios).
+
+### T12 — Gráficos (5 SVGs reais)
+- `document.querySelectorAll('#charts-app svg').length` = 5.
+- Resultado: PASS (5 gráficos obrigatórios renderizados).
+
+### T13 — Persistência localStorage (roundtrip)
+- `localStorage.setItem('apostila-ia-progresso','{"v":1}')` → leitura retorna `{"v":1}`.
+- Resultado: PASS (storage funcional em file://).
+
+### T14 — Simuladores (montagem + conteúdo)
+- Todos os 5 contêineres montados com conteúdo real (tamanhos acima); Excel smoke (111 asserts) PASS.
+- Resultado: PASS (montagem real confirmada; cálculos internos confirmados por código + smoke).
+
+### Limitações ainda não cobertas por teste real
+- Áudio (Web Speech API): controles presentes (7 elementos) e aviso de indisponibilidade exibido; síntese não validada (sem voz pt-BR no ambiente headless) — PARCIAL.
+- Vídeos: 0 validados (decisão intencional).
+- Acessibilidade WCAG completa: não verificada com leitor de tela.
+- Responsividade: CSS presente; não verificado em dispositivo físico.

@@ -12,9 +12,9 @@ Responsável: orquestrador (verificação direta no repo real, sem delegação d
 | 3 — Arquitetura | Estrutura do `apostila-ia/` | CONCLUÍDO | `index.html` + `assets/js/*.js` + `assets/data/*.js` já presentes | Confirmado por `ls` + leitura parcial |
 | 4 — Implementação didática | Conteúdo completo de todos os módulos | **CONCLUÍDO (Fase 4 desta execução)** | 404 flashcards, 365 questões, conteúdo real verificado | Nenhum placeholder detectado na amostra M1 |
 | 5 — Implementação funcional | Simuladores, busca, flashcards, quiz, gráficos, persistência | PARCIALMENTE CONCLUÍDO | Simuladores montados no `index.html`; gráficos (`charts.js`), flashcards (`flashcards.js`), quiz (`quiz-engine.js`) existem e carregados; busca (`search.js`), áudio (`audio.js`) carregados com `defer` | Fase 5 ainda requer verificação funcional completa |
-| 6 — Validação curricular | Verificar cobertura e qualidade por unidade | PENDENTE (parte de Fase 6) | A verificação de 3 exemplos por unidade ainda não foi executada automaticamente | Requer auditoria por agente independente (revisor) |
+| 6 — Validação curricular | Verificar cobertura e qualidade por unidade | CONCLUÍDO (Fase 6) | 295/295 subtópicos com objetivo+conteúdo+≥3 exemplos; 365 questões com gabarito+justificativa+análise; 404 flashcards; 5 gráficos reais. Relatório: docs/REVISAO_INDEPENDENTE_FASE6.md | Defeitos D1 (corrigido Fase 7) e D2 (decisão editorial) |
 | 7 — Testes técnicos | Carregamento, links, cálculos, gráficos, persistência, acessibilidade, modo direto `file://` | PARCIAL | `node --check` passou para todos os `.js`; smoke test `verify_nodes.js` passou; testes de simulador Excel (111 asserts) passaram; testes de perguntas (deduplicação, campos obrigatórios) passaram | Faltam testes de interface visual completa e de abertura direta (`file://`) em navegador real no dispositivo do usuário |
-| 8 — Auditoria final | Matriz de conformidade com todos os critérios de aceite (Seção 18) | PENDENTE | Nenhum arquivo de auditoria final concluído ainda; `audit_results.json` e `final_audit_report.md` existem mas não confirmam todos os 19 critérios | Requer execução da Fase 6-8 com agente independente (`revisor`) |
+| 8 — Auditoria final | Matriz de conformidade com todos os critérios de aceite (Seção 18) | CONCLUÍDO (Fase 8) | docs/AUDITORIA_FINAL.md — matriz dos 19 critérios com evidência/teste/resultado/limitação/correção | Veredito: APROVADO COM RESSALVAS; D4 (navegador real) pendente |
 
 ## Estado atual resumido (sem substituição por placeholders)
 
@@ -57,3 +57,29 @@ grficos validados por código; M5.4 não usa API externa; nenhum vídeo validado
 Passa para Etapa 6 — Validação curricular (revisão independente, perfil revisor);
 Etapa 7 — Correções (nenhuma necessária desta fase; se Fase 6 identificar, corrigir);
 Etapa 8 — Auditoria final (matriz de conformidade com critérios 1-19).
+
+
+=== ATUALIZAÇÃO FASE 7 — TESTES HEADLESS (2026-10-24) ===
+Etapa 7 — Testes técnicos: PARCIAL (avançado). Adicionados testes reais em Chromium headless (CDP) em file://:
+- T9 carregamento: PASS (0 exceções; 8 módulos; 404 FC; 365 Q; 5 gráficos).
+- T10 contêineres: PASS (12/12 não vazios).
+- T11 busca: PASS (1196 entradas; buscar('CIDR')=10).
+- T12 gráficos: PASS (5 SVGs).
+- T13 localStorage roundtrip: PASS.
+- T14 simuladores: PASS (montagem + Excel smoke).
+PARCIAL remanescente: áudio (Web Speech), vídeos (0 — intencional), WCAG completa, responsividade física.
+Etapa 8 — Auditoria final: ver docs/AUDITORIA_FINAL.md (APROVADO COM RESSALVAS).
+
+
+=== PRÓXIMO PASSO CIRÚRGICO — PENDENTES (2026-10-24) ===
+Objetivo: fechar os critérios 11 (áudio), 12 (vídeos), 14 (responsividade) e referências (D5) sem reduzir escopo.
+
+Contratos por subagente (áreas separadas, sem conflito de arquivo):
+- @conteudo (referências): verificar Microsoft Learn (M1), RFCs/IETF (M2: DNS/DHCP/HTTP/TLS), CERT.br (M4); atualizar referencias/referencias-verificadas.md + references.js com URL+data; não inventar. Arquivos: referencias/, apostila-ia/assets/data/references.js.
+- @general (áudio): validar Web Speech API em navegador com voz (Chromium headless com --enable-speech-dispatcher se disponível, ou documentar limitação); garantir controles play/pause/resume/stop/velocidade/voz; tratar indisponibilidade. Arquivo: apostila-ia/assets/js/audio.js.
+- @general (vídeos): validar IDs reais (youtube-nocookie.com) ou manter 0 publicados; registrar URL+canal+título+data. Arquivo: references.js + index.html (seção de vídeos).
+- @general (WCAG): auditoria de contraste, foco visível, navegação por teclado, rótulos, hierarquia semântica; adicionar role="tree"/aria-expanded na árvore curricular; skip-link já presente. Arquivos: assets/css/styles.css, assets/js/navigation.js, index.html.
+- @general (responsividade): testar em viewports 360/768/1024/1440; ajustar media queries. Arquivo: assets/css/styles.css.
+- @revisor (independente): auditar cada entrega acima; não aprovar próprio autor.
+
+Ordem: referências → áudio → WCAG → responsividade → vídeos (último, por dependência de rede). Cada etapa com evidência real antes de marcar PASS.

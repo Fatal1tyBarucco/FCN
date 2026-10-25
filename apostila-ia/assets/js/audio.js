@@ -114,7 +114,18 @@
     ESTADO.vozes = ptBr.length ? ptBr : pt;
     ESTADO.vozesProntas = true;
     if (ESTADO.vozes.length > 0) {
-      ESTADO.vozSelecionada = ESTADO.vozes[0];
+      // preserva a voz escolhida pelo usuário quando ela ainda existe na lista
+      // (evita reset silencioso disparado por onvoiceschanged); cai para a
+      // primeira apenas quando a seleção anterior não está mais disponível.
+      var aindaDisponivel = false;
+      for (var j = 0; j < ESTADO.vozes.length; j++) {
+        if (ESTADO.vozes[j] === ESTADO.vozSelecionada) { aindaDisponivel = true; break; }
+      }
+      if (!aindaDisponivel) {
+        ESTADO.vozSelecionada = ESTADO.vozes[0];
+      }
+    } else {
+      ESTADO.vozSelecionada = null;
     }
   }
 
@@ -453,9 +464,21 @@
 
   function retomarFala() {
     if (!temApi()) return;
-    try { window.speechSynthesis.resume(); } catch (e) {}
     ESTADO.pausado = false;
     ESTADO.falando = true;
+    try { window.speechSynthesis.resume(); } catch (e) {}
+    // Nem todo navegador sustenta pause()/resume() na mesma utterance (limitação
+    // conhecida do Chrome). Se a síntese não estiver de fato falando após o
+    // resume, re-dispara a parte atual em vez de deixar o botão "Retomar" sem
+    // efeito. Re-disparo só ocorre quando speaking/pending são falsos — evita
+    // duplicar a fala quando o resume nativo funcionou.
+    var syn = window.speechSynthesis;
+    var estaFalando = false;
+    try { estaFalando = !!(syn.speaking || syn.pending); } catch (e) { estaFalando = false; }
+    if (!estaFalando && ESTADO.partes.length > 0 && ESTADO.indiceAtual < ESTADO.partes.length) {
+      try { syn.cancel(); } catch (e) {}
+      falarParte();
+    }
     setStatusoMensagem('Retomando ' + (ESTADO.indiceAtual + 1) + ' de ' + ESTADO.totalPartes);
     atualizarControles(); // sem re-render: preserva textoDigitado/foco
   }
@@ -520,6 +543,7 @@
         try { window.speechSynthesis.pause(); } catch (e) {}
         ESTADO.pausado = true;
         ESTADO.falando = false;
+        atualizarControles();
       }
     };
     if (typeof window !== 'undefined' && window.addEventListener) {
