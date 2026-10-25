@@ -49,3 +49,14 @@ jobs:
 
       - name: Validate repository structure
         run: node verificacao/verificar-estrutura.js
+
+      - name: Upload generated audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: curriculum-audit-reports
+          path: |
+            docs/MATRIZ_COBERTURA.csv
+            docs/MATRIZ_RASTREABILIDADE_ATIVOS.csv
+            docs/RELATORIO_RASTREABILIDADE_ATIVOS.md
+          if-no-files-found: warn
