@@ -317,8 +317,8 @@ const moduleQuestions8 = [
     contexto: "Conjunto 2, 4, 6, 8, 10, 12, 50. Professor pede osquartis, o IIQ e a presença de outliers pela convenção de Tukey.",
     enunciado: "No box plot de Tukey, o intervalo interquartílico (IIQ) é Q3 − Q1; os limites para identificar outliers são Q1 − 1,5 × IIQ e Q3 + 1,5 × IIQ, e os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites.",
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'IIQ = Q3 − Q1 e os bigodes vão de Q1 − 1,5×IIQ até Q3 + 1,5×IIQ': o currículo define exatamente o IIQ como Q3 − Q1 e a convenção de Tukey com múltiplo 1,5.",
-    justificativa: "O currículo define: bigode de Tukey limita em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; bigode vai até o maior/menor valor dentro dos limites; outliers são plotados isoladamente. O enunciado reproduz essas regras.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites': o IIQ é Q3 − Q1, e os limites de Tukey para identificar outliers são Q1 − 1,5×IIQ e Q3 + 1,5×IIQ.",
+    justificativa: "O currículo define os limites de Tukey em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; cada bigode vai até o valor observado mais extremo que permanece dentro do limite correspondente, enquanto valores fora são plotados isoladamente. O enunciado reproduz essas regras.",
     analise: {
       item: "Item VERDADEIRO. IIQ = Q3 − Q1; bigodes pelos limites de 1,5×IIQ; valores fora são outliers.",
       leituraIncorreta: "Leitura que induz ao erro: 'bigode vai até o valor máximo/ mínimo absoluto' — isso só ocorre em convenções alternativas; a convenção de Tukey usa o intervalo de 1,5×IIQ."
