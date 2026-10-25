@@ -143,3 +143,11 @@ Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada
 - [ ] Testar em navegador real: interações, teclado/leitor de tela, persistência e modo `file://`; a execução automatizada atual não comprova esses requisitos.
 
 Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246104780. O PR permanece draft e não deve ser mergeado enquanto as pendências qualitativas e de navegador não forem avaliadas.
+
+
+## Atualização de teste de navegador — 2026-10-25
+
+- [x] Executar smoke test com Playwright/Chromium headless no modo `file://`: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246584032. Confirmados 8 módulos renderizados, 460 flashcards, 365 questões, 5 SVGs, seis simuladores com UI, persistência localStorage e zero exceções JavaScript.
+- [ ] Testar interações completas de cada simulador, fluxo de simulado, filtros, backup/importação, redimensionamento e teclado em Chromium/Firefox/Safari ou dispositivos reais.
+- [ ] Executar auditoria WCAG 2.1 AA com ferramenta e leitor de tela; smoke test headless não é certificação de acessibilidade.
+- [ ] Testar registro/cache/offline do Service Worker em contexto HTTP/HTTPS; o teste `file://` não cobre PWA.
