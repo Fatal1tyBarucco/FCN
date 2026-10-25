@@ -93,3 +93,12 @@ Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada
 16. **QA independente**: repetir testes de lógica, questões, flashcards, busca, gráficos, simuladores, persistência, acessibilidade e abertura direta; separar resultados de CLI/headless dos que exigem navegador real.
 17. **Referências/vídeos**: a existência de referências cadastradas não comprova validade atual; registrar URL, assunto, fonte, data de verificação e resultado verificável.
 18. **Subagentes**: a inspeção desta execução foi feita via integração GitHub sem subagentes Hermes. Não declarar agentes delegados ou revisões independentes até haver evidência de execução e artefato produzido.
+
+
+## Pendências identificadas na auditoria temática (2026-10-25)
+
+- [ ] Validar referências `topico` dos 404 flashcards contra os IDs reais de unidade/tópico dos oito currículos; as referências compactas não foram comprovadas por igualdade de ID.
+- [ ] Investigar concentração de flashcards em M2 (5 referências distintas), M3 (4) e M5 (5), comparando a distribuição com todos os tópicos previstos e sem presumir que o número de cartões por módulo garanta cobertura.
+- [ ] Auditar duplicação semântica e originalidade dos flashcards; a ausência de IDs repetidos não exclui cartões com conteúdo duplicado.
+- [ ] Comparar globalmente os 365 IDs de questões, além da verificação de duplicatas por arquivo, e validar cada referência `topico` contra a hierarquia curricular aceita.
+- [ ] Validar campos e qualidade didática dos 888 exemplos e 592 exercícios, além da contagem estrutural.
