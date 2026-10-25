@@ -273,10 +273,10 @@ A comparação estática foi estendida a todos os bancos de flashcards e de ques
 | Módulo | Cartões | IDs únicos no módulo | Tópicos curriculares | Tópicos referenciados pelos cartões | Referências inválidas |
 |---|---:|---:|---:|---:|---:|
 | M1 | 66 | 66 | 23 | 23 | 0 |
-| M2 | 50 | 50 | 19 | 5 | 0 |
-| M3 | 50 | 50 | 14 | 4 | 0 |
+| M2 | 50 | 50 | 19 | 16 | 0 |
+| M3 | 50 | 50 | 14 | 5 | 0 |
 | M4 | 54 | 54 | 13 | 13 | 0 |
-| M5 | 50 | 50 | 13 | 5 | 0 |
+| M5 | 66 | 66 | 13 | 13 | 0 |
 | M6 | 50 | 50 | 18 | 18 | 0 |
 | M7 | 50 | 50 | 9 | 9 | 0 |
 | M8 | 50 | 50 | 23 | 23 | 0 |
