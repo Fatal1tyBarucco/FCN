@@ -25,15 +25,15 @@ Fonte de requisitos: `Escrita.txt` (raiz; SHA consultado: `a7da4ad0c8905e2f7ece4
 
 | Módulo | Disciplina | Unidades | Tópicos | Subtópicos | Flashcards declarados | Questões declaradas | Estado editorial atual |
 |---|---|---:|---:|---:|---:|---:|---|
-| M1 | Microsoft 365 e aplicações de escritório | 5 | 23 | 37 | 50 | 40 | Parcial segundo o inventário existente |
+| M1 | Microsoft 365 e aplicações de escritório | 5 | 23 | 37 | 66 | 40 | Parcial segundo o inventário existente |
 | M2 | Redes de computadores | 5 | 19 | 52 | 50 | 40 | Declarado completo; requer auditoria por requisito |
-| M3 | Comunicação e colaboração | 5 | 14 | 35 | 50 | 40 | Declarado completo; requer auditoria por requisito |
+| M3 | Comunicação e colaboração | 5 | 14 | 35 | 68 | 40 | Declarado completo; requer auditoria por requisito |
 | M4 | Segurança da informação e governança digital | 4 | 13 | 39 | 54 | 85 | Declarado completo; distribuição de questões difere dos demais módulos |
-| M5 | Inteligência artificial | 4 | 13 | 35 | 50 | 40 | Declarado completo; requer auditoria por requisito |
+| M5 | Inteligência artificial | 4 | 13 | 35 | 66 | 40 | Declarado completo; requer auditoria por requisito |
 | M6 | Ética e responsabilidade digital no serviço público | 6 | 18 | 46 | 50 | 40 | Declarado completo; requer auditoria normativa |
 | M7 | Fundamentos e engenharia de dados | 3 | 9 | 23 | 50 | 40 | Declarado completo; requer auditoria por requisito |
 | M8 | Visualização, análise e storytelling com dados | 5 | 23 | 28 | 50 | 40 | Declarado completo; requer auditoria por requisito |
-| **Total** | — | **37** | **132** | **295** | **404** | **365** | **Números herdados dos documentos; ainda precisam de recálculo reproduzível nesta execução** |
+| **Total** | — | **37** | **132** | **295** | **436** | **365** | **Números herdados dos documentos; ainda precisam de recálculo reproduzível nesta execução** |
 
 As contagens acima são transcritas dos documentos versionados no repositório, não foram recalculadas nesta inspeção. Portanto, são **valores declarados pelo projeto**, não novos resultados de teste.
 
@@ -177,9 +177,9 @@ Foi feita inspeção estática dos oito bancos de flashcards e dos seis arquivos
 
 | Módulo | Cartões | Referências `topico` distintas | Observação |
 |---|---:|---:|---|
-| M1 | 50 | 15 | Distribuição concentrada: 21 cartões apontam para `m1-u1-t1`; as demais referências têm de 1 a 3 cartões cada. |
+| M1 | 66 | 23 | Após a expansão, todos os 23 tópicos de nível superior têm referência; 21 cartões ainda se concentram em `m1-u1-t1`. |
 | M2 | 50 | 5 | Há 10 cartões para cada uma de cinco referências, uma por unidade (`m2-u1-t1` até `m2-u5-t1`). Cobertura de tópicos dentro das unidades não demonstrada. |
-| M3 | 50 | 4 | 25 cartões apontam para `m3-u1-t1`; os outros 25 se distribuem por três referências. Forte concentração temática. |
+| M3 | 68 | 14 | Após a expansão, todos os 14 tópicos de nível superior detectados têm referência; permanece pendente auditar profundidade e sobreposição semântica. |
 | M4 | 54 | 13 | Distribuição relativamente regular, com 4 cartões em 11 referências e 6 em duas referências. |
 | M5 | 66 | 13 | Após a expansão para 66 cartões, há referências aos 13 tópicos curriculares; a cobertura semântica e a qualidade técnica ainda exigem revisão. |
 | M6 | 50 | 18 | Cobertura temática mais distribuída; frequências de 1 a 7 por referência. |
@@ -334,11 +334,11 @@ A revisão da distribuição deve ser guiada pelo conteúdo real de cada cartão
 
 | Módulo | Cartões | Tópicos curriculares | Tópicos referenciados | Tópicos sem referência de cartão | Ação |
 |---|---:|---:|---:|---:|---|
-| M1 | 50 | 23 | 15 | 8 | Redistribuir ou complementar após comparar frente/verso com o currículo; preservar cartões sobre Microsoft 365 que estejam corretamente vinculados |
+| M1 | 66 | 23 | 23 | 0 | Auditar profundidade, exatidão e duplicação semântica; não confundir referência com domínio pedagógico |
 | M2 | 50 | 19 | 5 | 14 | Prioridade alta: mapear cartões existentes para tópicos compatíveis; criar cartões para tópicos sem cobertura quando não houver cartão apropriado |
-| M3 | 50 | 14 | 4 | 10 | Prioridade alta: reduzir concentração em SMTP/POP3/IMAP e revisar comunicação, reuniões, acessibilidade e riscos |
+| M3 | 68 | 14 | 14 | 0 | Auditar profundidade, exatidão e duplicação semântica após expansão de netiqueta, acessibilidade e segurança colaborativa |
 | M4 | 54 | 13 | 13 | 0 | Manter cobertura referencial; ainda avaliar profundidade e duplicação semântica |
-| M5 | 50 | 13 | 5 | 8 | Prioridade alta: revisar expansão curricular posterior às unidades 5.1 e 5.2 e decidir complementação para IA generativa e engenharia de prompts |
+| M5 | 66 | 13 | 13 | 0 | Auditar profundidade, exatidão e duplicação semântica após expansão de IA generativa e engenharia de prompts |
 | M6 | 50 | 18 | 18 | 0 | Manter cobertura referencial; revisar qualidade e precisão normativa |
 | M7 | 50 | 9 | 9 | 0 | Manter cobertura referencial; revisar qualidade e duplicação semântica |
 | M8 | 50 | 23 | 23 | 0 | Manter cobertura referencial; revisar qualidade e duplicação semântica |
