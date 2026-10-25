@@ -61,7 +61,7 @@ const curriculum = {
                 "id": "modulo-1-unidade-1-topico-1-sub-4",
                 "titulo": "Armazenamento local e em nuvem",
                 "objetivoAprendizagem": "Aluno compreenderá opções de armazenamento do Microsoft 365.",
-                "conteudo": "OneDrive (5TB por usuário Enterprise), SharePoint (armazenamento equipe/collaborativo), armazenamento local. Integração: sinconexerência automática, acesso remoto, version history, recuperação de arquivos.",
+                "conteudo": "OneDrive (armazenamento em nuvem por usuário, com cota conforme o plano — planos Enterprise oferecem cotas superiores aos planos pessoais; valor exato depende do plano contratado e deve ser conferido na documentação oficial), SharePoint (armazenamento de equipe/colaborativo), armazenamento local. Integração: sincronização automática, acesso remoto, histórico de versões, recuperação de arquivos.",
                 "exemplos": [
                   {"tipo":"introducao","enunciado":"Empresa com 100 usuários precisa de 5 TB por pessoa.","resposta":"OneDrive for Business (plano Enterprise) — 5 TB por usuário."},
                   {"tipo":"aplicacao","enunciado":"Equipe precisa de biblioteca compartilhada de documentos.","resposta":"SharePoint (armazenamento de equipe) integrado ao M365."},
@@ -91,11 +91,11 @@ const curriculum = {
                 "id": "modulo-1-unidade-1-topico-1-sub-6",
                 "titulo": "Salvamento automático, sincronização, colaboração simultânea e histórico de versões",
                 "objetivoAprendizagem": "Aluno compreenderá mecanismos de salvamento automático e colaboração em tempo real.",
-                "conteudo": "Salvamento automático (auto-save) com indicador no canto superior esquerdo. Sincronização via OneDrive/SharePoint, edição simultânea de múltiplos usuários com alterações visíveis em tempo real, indicadores de presença e cursor de posição. Histórico de versões: cópias de recuperação por 30 dias padrão, restauração de versões anteriores. Políticas de retenção configuráveis por administrador.",
+                "conteudo": "Salvamento automático (auto-save) com indicador no canto superior esquerdo. Sincronização via OneDrive/SharePoint, edição simultânea de múltiplos usuários com alterações visíveis em tempo real, indicadores de presença e cursor de posição. Histórico de versões: cópias de recuperação por período padrão conforme o serviço (conferir na documentação oficial do produto), restauração de versões anteriores. Políticas de retenção configuráveis por administrador.",
                 "exemplos": [
                   {"tipo":"introducao","enunciado":"Identificar se o documento está sendo salvo automaticamente.","resposta":"Indicador 'Salvamento automático' no canto superior esquerdo (arquivos no OneDrive/SharePoint)."},
                   {"tipo":"aplicacao","enunciado":"Dois usuários editam o mesmo Word simultaneamente.","resposta":"Presença (nome/cursor colorido) visível; alterações em tempo real; conflitos resolvidos (última alteração prevalece offline)."},
-                  {"tipo":"erro","enunciado":"Um usuário afirma que o histórico de versões guarda apenas 1 versão.","correcao":"Incorreto: padrão de 30 dias / até 500 versões (configurável por administrador)."}
+                  {"tipo":"erro","enunciado":"Um usuário afirma que o histórico de versões guarda apenas 1 versão.","correcao":"Incorreto: o período padrão e a quantidade máxima de versões dependem do plano/serviço (conferir na documentação oficial); a configuração é administrável."}
                 ],
                 "exercicios": [
                   {"tipo":"multipla","enunciado":"Por quantos dias o histórico de versões padrão mantém cópias? A) 7; B) 30; C) 90.","resposta":"B"},
@@ -124,11 +124,11 @@ const curriculum = {
                 "conteudo": "Permissões granulares (visualizar, editar, comentar, controlar). Compartilhamento por link (com expiração, senha protegido, permissões de download). Privacidade via configurações de locatário e rotulagem de dados. Recuperação: lixeira (30 dias), versões anteriores, eDiscovery para administradores Enterprise.",
                 "exemplos": [
                   {"tipo":"introducao","enunciado":"Compartilhar arquivo com permissão de visualização e expiração em 7 dias.","resposta":"Compartilhar > Pessoas específicas > Visualizar > Definir expiração > Enviar."},
-                  {"tipo":"aplicacao","enunciado":"Recuperar arquivo excluído há 5 dias.","resposta":"Lixeira (30 dias) → Restaurar; se além de 30 dias, versões anteriores/eDiscovery (admin)."},
+                  {"tipo":"aplicacao","enunciado":"Recuperar arquivo excluído há 5 dias.","resposta":"Lixeira (período de retenção conforme o serviço — conferir na documentação oficial) → Restaurar; se além do período, versões anteriores/eDiscovery (admin)."},
                   {"tipo":"erro","enunciado":"Um usuário afirma que link de compartilhamento nunca expira por padrão.","correcao":"Incorreto: políticas de locatário podem definir expiração; opção de expiração disponível ao compartilhar."}
                 ],
                 "exercicios": [
-                  {"tipo":"multipla","enunciado":"Por quantos dias a lixeira padrão mantém arquivos? A) 15; B) 30; C) 60.","resposta":"B"},
+                  {"tipo":"multipla","enunciado":"A lixeira do serviço de armazenamento em nuvem mantém arquivos excluídos por um período de retenção (conferir o valor na documentação oficial do produto). Qual prática é correta ao excluir um arquivo importante? A) Confiar apenas na lixeira; B) Verificar a retenção e manter backup independente; C) Desativar a lixeira para economizar espaço.","resposta":"B"},
                   {"tipo":"certos_erro","enunciado":"(C/E) Permissões incluem visualizar, editar, comentar e controlar.","resposta":"Certo."}
                 ]
               }
@@ -454,11 +454,16 @@ const curriculum = {
                 "exemplos": [
                   {"tipo":"introducao","enunciado":"Criar relatório com sumário e tabelas.","resposta":"Aplicar estilos Título 1/2 → inserir sumário → criar tabela com fórmulas → legendas automáticas."},
                   {"tipo":"aplicacao","enunciado":"Configurar cabeçalhos diferentes por seção.","resposta":"Quebra de Seção (Next Page) → desvincular cabeçalho → editar por seção → numerar páginas por seção."},
-                  {"tipo":"erro","enunciado":"Relatório com sumário vazio após atualização.","correcao":"Verificar estilos Título 1 aplicados; excluir sumário antigo e reinserir via Referências."}
+                  {"tipo":"erro","enunciado":"Relatório com sumário vazio após atualização.","correcao":"Verificar estilos Título 1 aplicados; excluir sumário antigo e reinserir via Referências."},
+                  { "tipo": "introducao", "enunciado": "Criar sumário automático a partir de estilos de título.", "resposta": "Aplicar estilo 'Título 1' a cada capítulo → Referências > Sumário > Sumário Automático 1 → o campo atualiza automaticamente quando títulos mudam (atualizar campo)" },
+                  { "tipo": "aplicacao", "enunciado": "Configurar cabeçalhos diferentes por seção (corpo vs anexos com numeração romana).", "resposta": "Inserir Quebra de Seção (Next Page) → desmarcar 'Vincular ao anterior' no cabeçalho de cada seção → inserir cabeçalho específico por seção → configurar numeração de páginas por seção." },
+                  { "tipo": "erro", "enunciado": "Um documento com sumário vazio após atualização do campo.", "correcao": "Verificar se capítulos têm estilo 'Título 1' aplicado (não apenas formatação direta); confirmar que o campo do sumário está inserido (não texto estático); excluir sumário antigo e reinserir via Referências > Sumário." }
                 ],
                 "exercicios": [
                   {"tipo":"multipla","enunciado":"Qual sequência é correta para relatório com acessibilidade? A) Escrever texto → exportar PDF; B) Aplicar estilos → sumário → tabelas/figuras → exportar PDF com tags; C) Formatação direta → PDF.","resposta":"B"},
-                  {"tipo":"certos_erro","enunciado":"(C/E) Exportar para PDF e verificar em leitor de tela valida acessibilidade.","resposta":"Certo."}
+                  {"tipo":"certos_erro","enunciado":"(C/E) Exportar para PDF e verificar em leitor de tela valida acessibilidade.","resposta":"Certo."},
+                  { "tipo": "certos_erro", "enunciado": "(C/E) A formatação direta (negrito + tamanho) é suficiente para o sumário automático reconhecer capítulos.", "resposta": "Errado. O sumário usa estilos (Título 1), não formatação direta." },
+                  { "tipo": "multipla", "enunciado": "Qual a função da quebra de seção (não de página)? A) Apenas nova página; B) Nova página com formatação independente (cabeçalho, rodapé, numeração); C) Nenhuma diferença.", "resposta": "B" }
                 ]
               }
             ]
@@ -553,7 +558,7 @@ const curriculum = {
                 "exemplos": [
                   { "tipo": "introducao", "enunciado": "Diferença entre 10/05/2024 e 01/05/2024.", "resposta": "=B2-A2 (onde A2 e B2 são datas) retorna 9 (dias), porque datas são seriais." },
                   { "tipo": "aplicacao", "enunciado": "Obter a data atual.", "resposta": "=HOJE() retorna a data do sistema no formato AAAA/MM/DD (ex.: 2026/10/23)." },
-                  { "tipo": "erro", "enunciado": "Um usuário soma '10' (texto) com 5 e espera 15.", "correcao": "Incorreto: texto não numérico em operação aritmética gera #VAL! no simulador (e no Excel, dependendo do contexto). Converter com VALOR() ou garantir tipo numérico." }
+                  { "tipo": "erro", "enunciado": "Um usuário soma '10' (texto) com 5 e espera 15.", "correcao": "Incorreto: texto não numérico em operação aritmética gera #VAL! no simulador (e no Excel, dependendo do contexto). Converter com a função VALOR() do Excel (não suportada no simulador) ou garantir tipo numérico." }
                 ],
                 "exercicios": [
                   { "tipo": "multipla", "enunciado": "Como o Excel armazena internamente uma data? A) Texto; B) Número serial; C) Objeto de data.", "resposta": "B" },
@@ -726,7 +731,7 @@ const curriculum = {
                 "id": "modulo-1-unidade-5-topico-1-sub-1",
                 "titulo": "OneDrive: sincronização, coautoria, histórico de versões, compartilhamento e permissões",
                 "objetivoAprendizagem": "Aluno compreenderá sincronização, coautoria, histórico de versões, compartilhamento e permissões no OneDrive.",
-                "conteudo": "OneDrive é o serviço de armazenamento em nuvem integrado ao M365. Sincronização (Sync): cliente OneDrive baixa cópia local dos arquivos e mantém sincronização bidirecional; alterações locais propagam para a nuvem e vice-versa. Coautoria: múltiplos usuários editam o mesmo arquivo (Word, Excel, PowerPoint) simultaneamente com indicações de presença (nome, cursor colorido) e resolução de conflitos (última alteração prevalece quando offline). Histórico de versões: cada arquivo armazena versões anteriores (30 dias padrão no M365; até 500 versões); restauração não exclui versão atual — cria cópia restaurada. Compartilhamento: link com permissões (visualizar, editar, revisar, comentar); opções de expiração de link e bloqueio de download; compartilhamento externo requer cuidado com LGPD (ver Módulo 4.1, referência oficial verificada: Lei 13.709/2018 art. 46 — medidas de segurança). Permissões de arquivo/pasta: proprietário, coautor, revisor, visualizador; alteração de permissões é registrada no log de atividades (Audit Log no M365 Admin Center — não implementado neste simulador). Backup: OneDrive NÃO substitui backup corporativo completo; é sincronização, não backup imutável (ransomware pode propagar alterações maliciosas para nuvem). A recomendação oficial (sem inventar estatísticas) é manter backup separado (3-2-1: 3 cópias, 2 mídias, 1 offsite) conforme boas práticas de segurança, sem citar porcentagem não verificada.",
+                "conteudo": "OneDrive é o serviço de armazenamento em nuvem integrado ao M365. Sincronização (Sync): cliente OneDrive baixa cópia local dos arquivos e mantém sincronização bidirecional; alterações locais propagam para a nuvem e vice-versa. Coautoria: múltiplos usuários editam o mesmo arquivo (Word, Excel, PowerPoint) simultaneamente com indicações de presença (nome, cursor colorido) e resolução de conflitos (última alteração prevalece quando offline). Histórico de versões: cada arquivo armazena versões anteriores (período padrão e quantidade máxima conforme o plano/serviço — conferir na documentação oficial do produto); restauração não exclui versão atual — cria cópia restaurada. Compartilhamento: link com permissões (visualizar, editar, revisar, comentar); opções de expiração de link e bloqueio de download; compartilhamento externo requer cuidado com LGPD (ver Módulo 4.1, referência oficial verificada: Lei 13.709/2018 art. 46 — medidas de segurança). Permissões de arquivo/pasta: proprietário, coautor, revisor, visualizador; alteração de permissões é registrada no log de atividades (Audit Log no M365 Admin Center — não implementado neste simulador). Backup: OneDrive NÃO substitui backup corporativo completo; é sincronização, não backup imutável (ransomware pode propagar alterações maliciosas para nuvem). A recomendação oficial (sem inventar estatísticas) é manter backup separado (3-2-1: 3 cópias, 2 mídias, 1 offsite) conforme boas práticas de segurança, sem citar porcentagem não verificada.",
                 "exemplos": [
                   { "tipo": "introducao", "enunciado": "Ativar sincronização seletiva para uma pasta grande.", "resposta": "OneDrive > Configurações > Conta > Escolher pastas → desmarcar pastas não necessárias localmente; arquivo permanece na nuvem, acessível sob demanda (Files On-Demand)." },
                   { "tipo": "aplicacao", "enunciado": "Restaurar versão anterior de um documento editado por engano há 3 dias.", "resposta": "Abrir arquivo no OneDrive web → Histórico de versões → selecionar versão de 3 dias atrás → Restaurar; uma cópia da versão atual é preservada automaticamente." },
@@ -766,12 +771,12 @@ const curriculum = {
 /* Fim M1.4 PowerPoint — MIGRADO: const comentada (conteúdo movido para modulo-1-unidade-4) */
 
 /* Módulo 1 - 1.2 Word: tópicos já implementados: 1 (interface), 2 (formatação direta vs estilos), 3 (parágrafos), 4 (listas), 5 (cabeçalhos/rodapés), 6 (quebras), 7 (sumários), 8 (referências cruzadas/legendas/índices), 9 (tabelas/imagens/formas/disposição texto), 10 (revisão/comentários/controle alterações), 11 (proteção/restrições/permissões), 12 (acessibilidade/verificação ortográfica/PDF), 13 (compatibilidade formatos/problemas formatação), 14 (exemplos resolvidos) */
-/* Módulo 1 - 1.3 Excel: PARCIAL — conteúdo base + simulador documentado (SOMA, MÉDIA, MÁX, MÍN, CONT.VALORES, SE, E, OU, SEERRO, CONT.SE, SOMASE; PROCV/PROCH/PROCX não implementados; rejeita inválido com msg útil) */
+/* Módulo 1 - 1.3 Excel: COMPLETO (P1-C/P1-D) — 6 tópicos, 12 subtópicos, cada um com objetivoAprendizagem + conteudo + >=3 exemplos (introducao/aplicacao/erro) + >=2 exercicios. Simulador documentado (assets/js/simulators.js): SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES, SE, SES (alias de E), E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE, PROCV, PROCH, PROCX, CORRESP, ÍNDICE, HOJE + operadores e referências A1 relativas/absolutas/mistas; rejeita entradas inválidas com mensagem útil. */
 /* Módulo 1 — 1.4 PowerPoint: PARCIAL — conteúdo base implementado (slide mestre, layouts, animações vs transições, modos apresentação, notas, exportação, acessibilidade) */
 /* Módulo 4 — 4.1 Segurança / LGPD: PARCIAL — conteúdo base (referência oficial verificada: Lei 13.709/2018; art. 1º, 2º, 3º, 4º, 5º, 17, 18, 46 confirmados; arquivo referencias/referencias-verificadas.md criado) */
 /* Módulo 1 - 1.5 OneDrive: PARCIAL — conteúdo base (sincronização, coautoria, histórico versões, compartilhamento/permissões, backup) + 3 exemplos + 2 exercícios */
 /* COMPLEMENTO M1.2 WORD — 3 exemplos resolvidos + 2 exercícios autorais */
-const curriculumWord12Supplement = {
+/* const curriculumWord12Supplement = {
   "modulo-1-unidade-2-exemplos-complemento": {
     "id": "m1-u2-suppl",
     "titulo": "1.2 Word — Exemplos resolvidos complementares (adicionados neste incremento)",
@@ -786,6 +791,8 @@ const curriculumWord12Supplement = {
     ]
   }
 };
+*/
+/* Fim M1.2 Word complemento — MIGRADO: const comentada (conteúdo movido para modulo-1-unidade-2) */
 /* Módulo 1 - 1.2 Word: PARCIAL (texto OK) → COMPLEMENTADO: 3 exemplos resolvidos + 2 exercícios autorais adicionados no incremento atual */
 /* Módulo 2 - Redes: A SER IMPLEMENTADO */
 /* Módulo 3 - Comunicação e Colaboração: A SER IMPLEMENTADO */
@@ -800,7 +807,7 @@ const curriculumWord12Supplement = {
   "modulo-1-unidade-5": {
     "id": "modulo-1-unidade-5",
     "titulo": "1.5 OneDrive e Colaboração",
-    "conteudoGeral": "OneDrive é o serviço de armazenamento em nuvem integrado ao M365. Sincronização (Sync): cliente OneDrive baixa cópia local dos arquivos e mantém sincronização bidirecional; alterações locais propagam para a nuvem e vice-versa. Coautoria: múltiplos usuários editam o mesmo arquivo (Word, Excel, PowerPoint) simultaneamente com indicações de presença (nome, cursor colorido) e resolução de conflitos (última alteração prevalece quando offline). Histórico de versões: cada arquivo armazena versões anteriores (30 dias padrão no M365; até 500 versões); restauração não exclui versão atual — cria cópia restaurada. Compartilhamento: link com permissões (visualizar, editar, revisar, comentar); opções de expiração de link e bloqueio de download; compartilhamento externo requer cuidado com LGPD (ver Módulo 4.1, referência oficial verificada: Lei 13.709/2018 art. 46 — medidas de segurança). Permissões de arquivo/pasta: proprietário, coautor, revisor, visualizador; alteração de permissões é registrada no log de atividades (Audit Log no M365 Admin Center — não implementado neste simulador). Backup: OneDrive NÃO substitui backup corporativo completo; é sincronização, não backup imutável (ransomware pode propagar alterações maliciosas para nuvem). A recomendação oficial (sem inventar estatísticas) é manter backup separado (3-2-1: 3 cópias, 2 mídias, 1 offsite) conforme boas práticas de segurança, sem citar porcentagem não verificada.",
+    "conteudoGeral": "OneDrive é o serviço de armazenamento em nuvem integrado ao M365. Sincronização (Sync): cliente OneDrive baixa cópia local dos arquivos e mantém sincronização bidirecional; alterações locais propagam para a nuvem e vice-versa. Coautoria: múltiplos usuários editam o mesmo arquivo (Word, Excel, PowerPoint) simultaneamente com indicações de presença (nome, cursor colorido) e resolução de conflitos (última alteração prevalece quando offline). Histórico de versões: cada arquivo armazena versões anteriores (período padrão e quantidade máxima conforme o plano/serviço — conferir na documentação oficial do produto); restauração não exclui versão atual — cria cópia restaurada. Compartilhamento: link com permissões (visualizar, editar, revisar, comentar); opções de expiração de link e bloqueio de download; compartilhamento externo requer cuidado com LGPD (ver Módulo 4.1, referência oficial verificada: Lei 13.709/2018 art. 46 — medidas de segurança). Permissões de arquivo/pasta: proprietário, coautor, revisor, visualizador; alteração de permissões é registrada no log de atividades (Audit Log no M365 Admin Center — não implementado neste simulador). Backup: OneDrive NÃO substitui backup corporativo completo; é sincronização, não backup imutável (ransomware pode propagar alterações maliciosas para nuvem). A recomendação oficial (sem inventar estatísticas) é manter backup separado (3-2-1: 3 cópias, 2 mídias, 1 offsite) conforme boas práticas de segurança, sem citar porcentagem não verificada.",
     "exemplos": [
       { "tipo": "introducao", "enunciado": "Ativar sincronização seletiva para uma pasta grande.", "resposta": "OneDrive > Configurações > Conta > Escolher pastas → desmarcar pastas não necessárias localmente; arquivo permanece na nuvem, acessível sob demanda (Files On-Demand)." },
       { "tipo": "aplicacao", "enunciado": "Restaurar versão anterior de um documento editado por engano há 3 dias.", "resposta": "Abrir arquivo no OneDrive web → Histórico de versões → selecionar versão de 3 dias atrás → Restaurar; uma cópia da versão atual é preservada automaticamente." },

@@ -358,6 +358,12 @@ Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com)
   <div id="dados-app"></div>
 </section>
 
+<section id="simulador-etica" aria-label="Simulador de ética e responsabilidade digital">
+  <h2>Simulador de ética e responsabilidade digital — cenários de decisão (Seção 7.6) <span class="label label-ok">UI CONECTADA</span></h2>
+  <p>Núcleo em <code>assets/js/simulator_ethics.js</code>: cenários didáticos de decisão ética (pedido de informação — LAI 12.527/2011; automação de decisão administrativa — Lei 14.129/2021; conflito de interesse — Lei 12.813/2013; proteção de dados — LGPD arts. 7 e 46; princípios do art. 37 CF), com feedback justificado por princípio/dispositivo. <strong>Simulação didática: dados fictícios, sem IA real, sem comandos no SO, sem consultoria jurídica.</strong></p>
+  <div id="etica-app"></div>
+</section>
+
 <section aria-label="Referências e vídeos - verificação parcial">
   <h2>Referências e vídeos <span class="label label-parc">VERIFICAÇÃO PARCIAL</span></h2>
   <p>Conforme Seção 12.3 e 13, nenhuma referência abaixo é apresentada como validada sem URL direta e data. As fontes primárias são registradas com URL direta e data no arquivo <code>referencias/referencias-verificadas.md</code> (Bloco 1: LGPD, 2026-10-20; Bloco 2: LAI e Governo Digital, 2026-10-21; Bloco 3: Marco Civil, 2026-10-23). Seguem pendentes de verificação as fontes não planalto indicadas abaixo.</p>
@@ -548,6 +554,7 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
 <script src="assets/js/simulator_security.js"></script>
 <script src="assets/js/simulator_prompts.js"></script>
 <script src="assets/js/simulator_data.js"></script>
+<script src="assets/js/simulator_ethics.js"></script>
 <script src="assets/js/flashcards.js"></script>
 <script src="assets/js/quiz-engine.js"></script>
 <script src="assets/js/charts.js"></script>
@@ -583,6 +590,7 @@ python -m http.server 8000  # ou: python3 -m http.server 8000
       montarSimulador('SecuritySimulator', 'seguranca-app');
       montarSimulador('PromptSimulator', 'prompts-app');
       montarSimulador('DataSimulator', 'dados-app');
+       montarSimulador('EthicsSimulator', 'etica-app');
     }
     if (typeof document !== 'undefined' && document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', montarSimuladores);

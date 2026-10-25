@@ -628,7 +628,213 @@ const references = [
     dataVerificacao: "2026-10-24",
     status: "verificado",
     dispositivos: ["art. 7º, I a X"]
+  },
+  /* ---------- I4 — VERIFICADAS EM 2026-10-24 ---------- */
+
+  /* RFCs / IETF (Módulo 2) */
+  {
+    id: "ref-rfc-959-ftp",
+    titulo: "RFC 959 — File Transfer Protocol (FTP) (STD 9)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc959/",
+    topico: "M2 — Redes de computadores (FTP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-5321-smtp",
+    titulo: "RFC 5321 — Simple Mail Transfer Protocol (SMTP)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc5321/",
+    topico: "M2 — Redes de computadores (SMTP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-792-icmp",
+    titulo: "RFC 792 — Internet Control Message Protocol (ICMP) (STD 5)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc792/",
+    topico: "M2 — Redes de computadores (ICMP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-826-arp",
+    titulo: "RFC 826 — An Ethernet Address Resolution Protocol (ARP) (STD 37)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc826/",
+    topico: "M2 — Redes de computadores (ARP)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-3022-nat",
+    titulo: "RFC 3022 — Traditional IP Network Address Translator (Traditional NAT)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc3022/",
+    topico: "M2 — Redes de computadores (NAT)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-2663-nat-terminology",
+    titulo: "RFC 2663 — IP Network Address Translator (NAT) Terminology and Considerations",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc2663/",
+    topico: "M2 — Redes de computadores (NAT)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-4301-ipsec",
+    titulo: "RFC 4301 — Security Architecture for the Internet Protocol (IPsec/VPN)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4301/",
+    topico: "M2 — Redes de computadores (VPN/IPsec)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+
+  /* ANPD — resoluções adicionais */
+  {
+    id: "ref-anpd-resolucao-1-2021",
+    titulo: "Resolução CD/ANPD nº 1, de 28 de outubro de 2021 — Regulamento do Processo de Fiscalização e do Processo Administrativo Sancionador",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no1-2021",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-5-2023",
+    titulo: "Resolução CD/ANPD nº 5, de 13 de março de 2023 — Agenda de Avaliação de Resultado Regulatório 2023-2026",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-5-de-13-de-marco-de-2023-469722336",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-10-2023",
+    titulo: "Resolução CD/ANPD nº 10, de 5 de dezembro de 2023 — Mapa de Temas Prioritários 2024-2025",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-10-de-5-de-dezembro-de-2023-530258528",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-11-2023",
+    titulo: "Resolução CD/ANPD nº 11, de 27 de dezembro de 2023 — Alteração da Agenda Regulatória 2023-2024",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-11-de-27-de-dezembro-de-2023-534947737",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-15-2024",
+    titulo: "Resolução CD/ANPD nº 15, de 24 de abril de 2024 — Regulamento de Comunicação de Incidente de Segurança",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-15-de-24-de-abril-de-2024-556243024",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-18-2024",
+    titulo: "Resolução CD/ANPD nº 18, de 16 de julho de 2024 — Regulamento sobre a atuação do encarregado (DPO)",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-18-de-16-de-julho-de-2024-572632074",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-19-2024",
+    titulo: "Resolução CD/ANPD nº 19, de 23 de agosto de 2024 — Regulamento de Transferência Internacional de Dados e cláusulas-padrão contratuais",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-19-de-23-de-agosto-de-2024",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-23-2024",
+    titulo: "Resolução CD/ANPD nº 23, de 9 de dezembro de 2024 — Agenda Regulatória 2025-2026",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-no-23-de-9-de-dezembro-de-2024",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-30-2025",
+    titulo: "Resolução CD/ANPD nº 30, de 23 de dezembro de 2025 — Mapa de Temas Prioritários 2026-2027",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/web/dou/-/resolucao-cd/anpd-n-30-de-23-de-dezembro-de-2025-677947163",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-31-2025",
+    titulo: "Resolução CD/ANPD nº 31, de 22 de dezembro de 2025 — Alteração da Agenda Regulatória 2025-2026",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/web/dou/-/resolucao-cd/anpd-n-31-de-22-de-dezembro-de-2025-677950080",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-anpd-resolucao-32-2026",
+    titulo: "Resolução CD/ANPD nº 32, de 26 de janeiro de 2026 — Reconhecimento da União Europeia como organismo internacional com grau de proteção de dados pessoais adequado",
+    organizacao: "ANPD (Gov.br)",
+    url: "https://www.in.gov.br/web/dou/-/resolucao-n-32-de-26-de-janeiro-de-2026-683334547",
+    topico: "M4 — Segurança da informação (LGPD)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: null
+  },
+
+  /* CF/1988 — incisos/parágrafos adicionais confirmados no texto integral */
+  {
+    id: "ref-cf-1988-art37-adicionais-i4",
+    titulo: "Constituição Federal de 1988 — art. 37 (incisos e parágrafos adicionais confirmados no texto integral)",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público (CF/1988)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: ["art. 37, I", "art. 37, IV", "art. 37, V", "art. 37, VI", "art. 37, VII", "art. 37, VIII", "art. 37, IX", "art. 37, X", "art. 37, XI", "art. 37, XII", "art. 37, XIII", "art. 37, XIV", "art. 37, XV", "art. 37, XVI", "art. 37, XVII", "art. 37, XVIII", "art. 37, XIX", "art. 37, XX", "art. 37, XXII", "art. 37, § 2º", "art. 37, § 3º, I", "art. 37, § 3º, III", "art. 37, § 5º", "art. 37, § 7º", "art. 37, § 8º", "art. 37, § 9º", "art. 37, § 10", "art. 37, § 11", "art. 37, § 12", "art. 37, § 13", "art. 37, § 14", "art. 37, § 15", "art. 37, § 16"]
+  },
+  {
+    id: "ref-cf-1988-art5-adicionais-i4",
+    titulo: "Constituição Federal de 1988 — art. 5º (incisos e parágrafos adicionais confirmados no texto integral)",
+    organizacao: "Planalto (Presidência da República)",
+    url: "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público (CF/1988)",
+    dataVerificacao: "2026-10-24",
+    status: "verificado",
+    dispositivos: ["art. 5º, I", "art. 5º, II", "art. 5º, III", "art. 5º, IV", "art. 5º, V", "art. 5º, VI", "art. 5º, VII", "art. 5º, VIII", "art. 5º, IX", "art. 5º, XI", "art. 5º, XIII", "art. 5º, XV", "art. 5º, XVI", "art. 5º, XVII", "art. 5º, XVIII", "art. 5º, XIX", "art. 5º, XX", "art. 5º, XXI", "art. 5º, XXII", "art. 5º, XXIII", "art. 5º, XXIV", "art. 5º, XXV", "art. 5º, XXVI", "art. 5º, XXVII", "art. 5º, XXVIII", "art. 5º, XXIX", "art. 5º, XXX", "art. 5º, XXXI", "art. 5º, XXXII", "art. 5º, XXXIV", "art. 5º, XXXV", "art. 5º, XXXVI", "art. 5º, XXXVII", "art. 5º, XXXVIII", "art. 5º, XXXIX", "art. 5º, XL", "art. 5º, LXXVIII", "art. 5º, § 1º", "art. 5º, § 2º", "art. 5º, § 3º", "art. 5º, § 4º"]
   }
 ];
-
 if (typeof window !== 'undefined') window.references = references;

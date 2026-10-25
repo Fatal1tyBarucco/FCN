@@ -1,6 +1,6 @@
 # PENDÊNCIAS — Apostila Web Interativa FCN
 
-1. Referências (atualizado 2026-10-24, Bloco 6): 32 total, 32 verificadas (LGPD, LAI, Lei 14.129, Marco Civil, Microsoft Learn, RFC 791/793/1034/1035/2131/7230/7231/8446/9110, CERT.br, ANPD órgão + Resoluções CD/ANPD nº 2/2022 e nº 4/2023, CF art. 37 caput + incisos II/III/XXI/§1º/§3ºII/§4º/§6º, CF art. 5º incisos X/XII/XIV/XXXIII/LXXIX, Lei 8.429/1992, Lei 1.079/1950, Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017, Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001, LGPD art. 7º). Pendentes restantes: demais resoluções da ANPD, demais RFCs (FTP, SMTP, ICMP, ARP, NAT, VPN etc.), demais incisos/parágrafos do art. 37 e do art. 5º da CF não listados.
+1. Referências (reconciliado I6, 2026-10-24): **72 itens em `references.js`** = 20 vídeos (verificados via oembed, 2026-10-24) + 52 referências técnicas (LGPD, LAI, Lei 14.129/2021, Marco Civil, Microsoft Learn, RFCs 791/792/793/826/959/1034/1035/2131/2663/3022/4301/5321/7230/7231/8446/9110, CERT.br, ANPD órgão + 13 resoluções CD/ANPD, CF art. 37 + art. 5º incisos, Leis 8.429/1992, 1.079/1950, 13.146/2015, 10.098/2000, 10.741/2003, 13.460/2017, 12.682/2012, 14.063/2020, LC 101/2000, LC 105/2001, LGPD art. 7º). **72/72 verificados, 0 pendentes em references.js.** Pendentes remanescentes (NÃO cadastrados — limitação C, não defeito): demais resoluções da ANPD, demais RFCs não listadas, demais incisos/parágrafos CF art. 37/5º não enumerados, verificação artigo a artigo das leis adicionais citadas por remissão em M6.
 2. Vídeos: 20 validados via oembed (2026-10-24) em referencias/referencias-verificadas.md e references.js (IDs verificados; incorporação via youtube-nocookie.com recomendada). Pendente: incorporação real nos módulos (embed nos currículos) e verificação de disponibilidade regional/incorporação em navegador real; vídeos não substituem a apostila (Seção 12.2).
 3. Service Worker: arquivo válido (node --check OK) e registro condicional; registro em navegador real não confirmado (sem exceções JS em headless).
 4. Accessibility container vazio em headless (verificar em navegador real; propósito screen reader).
@@ -67,3 +67,18 @@
 - Responsividade: breakpoints 360/768/1024/1440; overflow-x hidden; tabelas roláveis.
 - node --check navigation.js + todos assets/js OK. CSS balanceado (77/77).
 - Limitação: leitor de tela e dispositivo físico não testados.
+
+=== 19. I6 — RECONCILIAÇÃO DOCUMENTAL FINAL (2026-10-24) ===
+Contagens reconciliadas (fonte de verdade: código + Node/vm):
+- Módulos: 8; nós: 427 (132 tópicos + 295 subtópicos).
+- Flashcards: 404 (m1=50, m2=50, m3=50, m4=54, m5=50, m6=50, m7=50, m8=50).
+- Questões: 365 únicas (M1=40, M2=40, M3=40, M4=85, M5=40, M6=40, M7=40, M8=40); níveis básica 94 (25,8%), intermediária 193 (52,9%), avançada 78 (21,4%); formatos 290 MC + 75 CE; estilos CESPE 216, FGV 58, FCC 52, VUNESP 39.
+- Referências: 72 (20 vídeos + 52 técnicas); 72/72 verificadas, 0 pendentes em references.js.
+- Gráficos: 5/5. Simuladores: 6 (Excel, Redes, Segurança, Prompts, Dados, Ética) — EthicsSimulator (I3) criado, carregado e montado em #etica-app.
+Classificação de pendências (plano do arquiteto, seções 1 e 9):
+- A (concluído com evidência): estrutura curricular 8 módulos/427 nós; 404 flashcards; 365 questões; 5 gráficos; 6 simuladores (código + montagem); busca (índice 1196, buscar('CIDR')=10); áudio (controles + aviso, smoke 41/41); persistência (localStorage roundtrip); carregamento file:// sem exceções JS; 20 vídeos validados via oembed; 72/72 referências verificadas.
+- B (concluído com ressalva documentada): qualidade pedagógica profunda (amostragem M2/M4/M6/M8); D2 referência por unidade/tópico em 137 casos (decisão editorial); embed de vídeos e disponibilidade regional não testados.
+- C (limitação de ambiente, não concluído): teste em dispositivo físico (responsividade, interatividade de simuladores/gráficos); síntese de áudio (Web Speech API, depende de voz pt-BR do dispositivo); WCAG com leitor de tela; manifest CORS/SW em navegador real; verificação artigo a artigo das leis adicionais citadas por remissão em M6; prazos de retenção OneDrive/SharePoint por plano.
+- D (pendente intencional, não inventar): demais resoluções ANPD, demais RFCs não listadas, demais incisos/parágrafos CF art. 37/5º não enumerados, vídeos adicionais além dos 20 validados (nenhum inventado).
+Duplicatas/inconsistências removidas: referências atualizadas de 32 → 72; simuladores de 5 → 6; revisão pedagógica (I5, 7 correções) registrada em docs/REVISAO_PEDAGOGICA.md.
+Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada concluída sem evidência real.

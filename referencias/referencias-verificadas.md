@@ -259,3 +259,49 @@ Regra aplicada (Seção 12.2): nenhum ID inventado. Cada vídeo abaixo foi verif
 - Incorporação recomendada via https://www.youtube-nocookie.com/embed/ID (preferencial, Seção 12.2).
 - Disponibilidade regional/incorporação não testada em navegador real neste ambiente; registrar se constatada.
 - Vídeos não testados quanto a remoção futura; re-verificar periodicamente.
+
+---
+
+# Bloco 7 — I4 (2026-10-24): RFCs FTP/SMTP/ICMP/ARP/NAT/VPN; ANPD resoluções adicionais; CF art. 37/5º adicionais
+
+## Verificação direta por HTTP (webfetch) em 2026-10-24
+
+Data de verificação registrada: 2026-10-24.
+
+## RFCs / IETF (Módulo 2) — verificadas por acesso direto ao rfc-editor.org
+- RFC 959 — File Transfer Protocol (FTP) (STD 9): https://www.rfc-editor.org/info/rfc959/ — J. Postel/J. Reynolds, Internet Standard, outubro de 1985 — verificado em 2026-10-24.
+- RFC 5321 — Simple Mail Transfer Protocol (SMTP): https://www.rfc-editor.org/info/rfc5321/ — J. Klensin, Draft Standard, outubro de 2008 (obsoleta RFC 2821) — verificado em 2026-10-24.
+- RFC 792 — Internet Control Message Protocol (ICMP) (STD 5): https://www.rfc-editor.org/info/rfc792/ — J. Postel, Internet Standard, setembro de 1981 — verificado em 2026-10-24.
+- RFC 826 — An Ethernet Address Resolution Protocol (ARP) (STD 37): https://www.rfc-editor.org/info/rfc826/ — D. Plummer, Internet Standard, novembro de 1982 — verificado em 2026-10-24.
+- RFC 3022 — Traditional IP Network Address Translator (Traditional NAT): https://www.rfc-editor.org/info/rfc3022/ — P. Srisuresh/K. Egevang, Informational, janeiro de 2001 — verificado em 2026-10-24.
+- RFC 2663 — IP Network Address Translator (NAT) Terminology and Considerations: https://www.rfc-editor.org/info/rfc2663/ — P. Srisuresh/M. Holdrege, Informational, agosto de 1999 — verificado em 2026-10-24.
+- RFC 4301 — Security Architecture for the Internet Protocol (IPsec/VPN): https://www.rfc-editor.org/info/rfc4301/ — S. Kent/K. Seo, Proposed Standard, dezembro de 2005 (obsoleta RFC 2401) — verificado em 2026-10-24.
+
+## ANPD — resoluções adicionais (além de nº 2/2022 e nº 4/2023)
+Fonte da listagem: página oficial de Regulamentações da ANPD, verificada em 2026-10-24:
+https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd
+Resoluções confirmadas acessíveis (URLs conforme publicação oficial):
+- Resolução CD/ANPD nº 1, de 28 de outubro de 2021 — Regulamento do Processo de Fiscalização e do Processo Administrativo Sancionador: https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no1-2021 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 5, de 13 de março de 2023 — Agenda de Avaliação de Resultado Regulatório 2023-2026: https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-5-de-13-de-marco-de-2023-469722336 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 10, de 5 de dezembro de 2023 — Mapa de Temas Prioritários 2024-2025: https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-10-de-5-de-dezembro-de-2023-530258528 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 11, de 27 de dezembro de 2023 — Alteração da Agenda Regulatória 2023-2024: https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-11-de-27-de-dezembro-de-2023-534947737 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 15, de 24 de abril de 2024 — Regulamento de Comunicação de Incidente de Segurança: https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-15-de-24-de-abril-de-2024-556243024 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 18, de 16 de julho de 2024 — Regulamento sobre a atuação do encarregado (DPO): https://www.in.gov.br/en/web/dou/-/resolucao-cd/anpd-n-18-de-16-de-julho-de-2024-572632074 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 19, de 23 de agosto de 2024 — Regulamento de Transferência Internacional de Dados e cláusulas-padrão contratuais: https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-19-de-23-de-agosto-de-2024 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 23, de 9 de dezembro de 2024 — Agenda Regulatória 2025-2026: https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-no-23-de-9-de-dezembro-de-2024 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 30, de 23 de dezembro de 2025 — Mapa de Temas Prioritários 2026-2027: https://www.in.gov.br/web/dou/-/resolucao-cd/anpd-n-30-de-23-de-dezembro-de-2025-677947163 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 31, de 22 de dezembro de 2025 — Alteração da Agenda Regulatória 2025-2026: https://www.in.gov.br/web/dou/-/resolucao-cd/anpd-n-31-de-22-de-dezembro-de-2025-677950080 — verificado em 2026-10-24.
+- Resolução CD/ANPD nº 32, de 26 de janeiro de 2026 — Reconhecimento da União Europeia como organismo internacional com grau de proteção de dados pessoais adequado: https://www.in.gov.br/web/dou/-/resolucao-n-32-de-26-de-janeiro-de-2026-683334547 — verificado em 2026-10-24.
+Observação: as portarias e o enunciado listados na mesma página oficial permanecem fora do escopo desta rodada (não registrados como referências individuais).
+
+## Constituição Federal de 1988 — art. 37 e art. 5º (incisos/parágrafos adicionais confirmados)
+Fonte: texto integral acessado em 2026-10-24: http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm
+Incisos/parágrafos adicionais do art. 37 confirmados: I, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, XXII, § 2º, § 3º (I e III), § 5º, § 7º, § 8º, § 9º, § 10, § 11, § 12, § 13, § 14, § 15, § 16.
+Incisos/parágrafos adicionais do art. 5º confirmados: I, II, III, IV, V, VI, VII, VIII, IX, XI, XIII, XV, XVI, XVII, XVIII, XIX, XX, XXI, XXII, XXIII, XXIV, XXV, XXVI, XXVII, XXVIII, XXIX, XXX, XXXI, XXXII, XXXIV, XXXV, XXXVI, XXXVII, XXXVIII, XXXIX, XL, LXXVIII, § 1º, § 2º, § 3º, § 4º.
+Os incisos/parágrafos não listados (art. 37: I? já listado; demais não conferidos individualmente — II, III, XXI, § 1º, § 3º II, § 4º, § 6º já registrados no Bloco 6) e (art. 5º: X, XII, XIV, XXXIII, LXXIX já registrados no Bloco 6) permanecem como anteriormente registrados; os demais incisos do art. 5º (XII? já; XL a LXXVII etc.) não foram enumerados individualmente e permanecem pendentes de citação literal caso necessário.
+
+## Rastreabilidade — Bloco 7
+- Fonte primária: rfc-editor.org, gov.br/anpd, planalto.gov.br (acesso direto por HTTP em 2026-10-24).
+- Data de verificação: 2026-10-24.
+- Arquivo de referência: `apostila-ia/assets/data/references.js` (20 novas entradas; total 72).
+- Nenhuma URL inventada; nenhuma citação de dispositivo inexistente.

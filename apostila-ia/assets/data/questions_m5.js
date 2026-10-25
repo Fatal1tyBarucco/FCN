@@ -8,7 +8,7 @@ const moduleQuestions5 = [
   /* ===================== 5.1 Fundamentos de IA (10 questões) ===================== */
 
   { id: "q-m5-01", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-fundamentos-u1-t1-sub-1", assunto: "5.1 — O que é IA?",
+    nivel: "basico", topico: "m5-u1-t1-s1", assunto: "5.1 — O que é IA?",
     contexto: "Inteligência Artificial é um conceito central na tecnologia atual.",
     enunciado: "Inteligência Artificial (IA) pode ser melhor definida como:",
     alternativas: [
@@ -33,7 +33,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-02", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-fundamentos-u1-t1-sub-2", assunto: "5.1 — Sistemas baseados em regras",
+    nivel: "basico", topico: "m5-u1-t1-s2", assunto: "5.1 — Sistemas baseados em regras",
     contexto: "Sistemas baseados em regras usam conhecimento explícito estruturado.",
     enunciado: "Sobre sistemas baseados em regras, é correto afirmar que:",
     alternativas: [
@@ -58,7 +58,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-03", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-fundamentos-u1-t1-sub-3", assunto: "5.1 — Aprendizado de Máquina",
+    nivel: "basico", topico: "modulo-5-unidade-1", assunto: "5.1 — Aprendizado de Máquina",
     contexto: "O aprendizado de máquina é uma subárea da IA.",
     enunciado: "O aprendizado de máquina (Machine Learning) é:",
     alternativas: [
@@ -83,7 +83,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-04", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-fundamentos-u1-t1-sub-4", assunto: "5.1 — Treinamento, validação e teste",
+    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Treinamento, validação e teste",
     contexto: "Divisão de dados em conjuntos para modelagem é essencial no aprendizado de máquina.",
     enunciado: "A separação de dados em conjuntos de treinamento, validação e teste é importante porque:",
     alternativas: [
@@ -108,7 +108,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-05", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-fundamentos-u1-t1-sub-5", assunto: "5.1 — Overfitting e underfitting",
+    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Overfitting e underfitting",
     contexto: "Generalização é um dos desafios centrais do aprendizado de máquina.",
     enunciado: "No contexto de aprendizado de máquina, overfitting significa:",
     alternativas: [
@@ -133,7 +133,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-06", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-fundamentos-u1-t1-sub-6", assunto: "5.1 — Viés e variância",
+    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Viés e variância",
     contexto: "Viés e variância são propriedades fundamentais dos modelos de ML.",
     enunciado: "Sobre viés (bias) e variância (variance) em modelos de aprendizado de máquina, é correto afirmar que:",
     alternativas: [
@@ -158,7 +158,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-07", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-fundamentos-u1-t1-sub-7", assunto: "5.1 — Explicabilidade (XAI)",
+    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Explicabilidade (XAI)",
     contexto: "Explicabilidade é essencial em aplicações críticas de IA.",
     enunciado: "Sobre a explicabilidade (XAI — eXplainable Artificial Intelligence), é correto afirmar que:",
     alternativas: [
@@ -183,7 +183,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-08", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-fundamentos-u1-t1-sub-8", assunto: "5.1 — Dados, ativos, parâmetros e inferência",
+    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Dados, ativos, parâmetros e inferência",
     contexto: "Modelos de IA consomem dados e geram inferências.",
     enunciado: "No contexto de modelos de IA, o termo 'inferência' refere-se a:",
     alternativas: [
@@ -208,7 +208,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-09", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-fundamentos-u1-t1-sub-9", assunto: "5.1 — Avaliação de Performance e Qualidade",
+    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Avaliação de Performance e Qualidade",
     contexto: "Avaliação é essencial para garantir que o modelo atenda aos objetivos.",
     enunciado: "A avaliação de desempenho e qualidade em aprendizado de máquina é importante porque:",
     alternativas: [
@@ -233,7 +233,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-10", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-fundamentos-u1-t1-sub-10", assunto: "5.1 — Regra geral de completude",
+    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Regra geral de completude",
     contexto: "IA abrange sistemas que realizam tarefas de inteligência humana.",
     enunciado: "Para considerar um sistema de IA como 'completo' do ponto de vista técnico, ele deve:",
     alternativas: [
@@ -260,7 +260,7 @@ const moduleQuestions5 = [
   /* ===================== 5.2 Aprendizado de Máquina (10 questões) ===================== */
 
   { id: "q-m5-11", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-ml-u2-t1-sub-1", assunto: "5.2 — Paradigmas de Aprendizado",
+    nivel: "basico", topico: "m5-u2-t1-s1", assunto: "5.2 — Paradigmas de Aprendizado",
     contexto: "Existem diferentes paradigmas de aprendizado de máquina.",
     enunciado: "A classificação dos paradigmas de aprendizado de máquina em supervisionado, não supervisionado e por reforço baseia-se em:",
     alternativas: [
@@ -285,7 +285,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-12", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-ml-u2-t1-sub-2", assunto: "5.2 — Classificação e Regressão",
+    nivel: "basico", topico: "m5-u2-t1-s2", assunto: "5.2 — Classificação e Regressão",
     contexto: "Classificação e regressão são tarefas fundamentais de aprendizado supervisionado.",
     enunciado: "A diferença entre classificação e regressão é:",
     alternativas: [
@@ -310,7 +310,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-13", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-3", assunto: "5.2 — Agrupamento e Redução de Dimensionalidade",
+    nivel: "intermediario", topico: "m5-u2-t1-s3", assunto: "5.2 — Agrupamento e Redução de Dimensionalidade",
     contexto: "Técnicas não supervisionadas incluim agrupamento e redução de dimensionalidade.",
     enunciado: "Sobre agrupamento (clustering) e redução de dimensionalidade, é correto afirmar que:",
     alternativas: [
@@ -335,7 +335,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-14", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-4", assunto: "5.2 — Rotulagem, Atributos e Variáveis-Alvo",
+    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Rotulagem, Atributos e Variáveis-Alvo",
     contexto: "A preparação de dados é uma etapa crítica no aprendizado supervisionado.",
     enunciado: "Rotulagem, atributos e variáveis-alvo são:",
     alternativas: [
@@ -360,7 +360,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-15", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-5", assunto: "5.2 — Vazamento de dados (Data Leakage)",
+    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Vazamento de dados (Data Leakage)",
     contexto: "O vazamento de dados é um erro comum que invalida a avaliação do modelo.",
     enunciado: "O vazamento de dados (data leakage) ocorre quando:",
     alternativas: [
@@ -385,7 +385,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-16", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-6", assunto: "5.2 — Métricas de Classificação",
+    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Métricas de Classificação",
     contexto: "Métricas de classificação são essenciais para avaliar modelos.",
     enunciado: "Métricas de classificação como precisão, recall, especificidade e F1 são importantes porque:",
     alternativas: [
@@ -410,7 +410,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-17", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-7", assunto: "5.2 — Desbalanceamento de Classes",
+    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Desbalanceamento de Classes",
     contexto: "Classes desbalanceadas afetam o desempenho dos modelos.",
     enunciado: "O desbalanceamento de classes ocorre quando:",
     alternativas: [
@@ -435,7 +435,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-18", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-8", assunto: "5.2 — Métricas de Regressão",
+    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Métricas de Regressão",
     contexto: "Métricas de regressão são usadas para avaliar modelos que preveem valores contínuos.",
     enunciado: "Métricas de regressão apropriadas ao escopo são importantes porque:",
     alternativas: [
@@ -460,7 +460,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-19", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-9", assunto: "5.2 — Engenharia de Atributos",
+    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Engenharia de Atributos",
     contexto: "A engenharia de atributos (feature engineering) é essencial no pré-processamento.",
     enunciado: "A engenharia de atributos (feature engineering) envolve:",
     alternativas: [
@@ -485,7 +485,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-20", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-10", assunto: "5.2 — Avaliação de Desempenho",
+    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Avaliação de Desempenho",
     contexto: "A avaliação de desempenho é um passo crítico no ciclo de vida do modelo.",
     enunciado: "A avaliação de desempenho e qualidade em aprendizado de máquina é importante porque:",
     alternativas: [
@@ -512,7 +512,7 @@ const moduleQuestions5 = [
   /* ===================== 5.3 IA Generativa/LLMs (10 questões) ===================== */
 
   { id: "q-m5-21", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-generativa-u3-t1-sub-1", assunto: "5.3 — O que é IA generativa",
+    nivel: "basico", topico: "m5-u3-t1-s1", assunto: "5.3 — O que é IA generativa",
     contexto: "Uma secretaria ganha um assistente que redige e-mails a partir de tópicos.",
     enunciado: "Sobre o que é IA generativa, é correto afirmar que:",
     alternativas: [
@@ -537,7 +537,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-22", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-generativa-u3-t1-sub-2", assunto: "5.3 — Alucinação de modelos generativos",
+    nivel: "intermediario", topico: "m5-u3-t1-s2", assunto: "5.3 — Alucinação de modelos generativos",
     contexto: "Um atendente recebe resposta do assistente com numeração de prazo inexistente.",
     enunciado: "A 'alucinação' de um modelo generativo ocorre quando:",
     alternativas: [
@@ -562,7 +562,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-23", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-generativa-u3-t1-sub-3", assunto: "5.3 — Mecanismo de atenção e Transformers",
+    nivel: "avancado", topico: "m5-u3-t1-s3", assunto: "5.3 — Mecanismo de atenção e Transformers",
     contexto: "Modelos generativos modernos usam arquitetura Transformer.",
     enunciado: "No mecanismo de atenção (Transformer), a saída de um token é calculada como:",
     alternativas: [
@@ -587,7 +587,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-24", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-generativa-u3-t2-sub-1", assunto: "5.3 — Redução de alucinação em produção",
+    nivel: "avancado", topico: "m5-u3-t2-s1", assunto: "5.3 — Redução de alucinação em produção",
     contexto: "Um assistente responde perguntas sobre normas sem acesso a fontes atualizadas.",
     enunciado: "Para reduzir alucinações em consultas factuais, a estratégia mais adequada é:",
     alternativas: [
@@ -612,7 +612,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-25", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-generativa-u3-t2-sub-2", assunto: "5.3 — IA clássica vs. generativa",
+    nivel: "avancado", topico: "m5-u3-t2-s2", assunto: "5.3 — IA clássica vs. generativa",
     contexto: "Órgão público tria chamados de atendimento.",
     enunciado: "Sobre a diferença prática entre IA baseada em regras e IA generativa em atendimento, é correto afirmar que:",
     alternativas: [
@@ -637,7 +637,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-26", modulo: 5, formato: "ce", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-generativa-u3-t2-sub-3", assunto: "5.3 — Alinhamento e vieses",
+    nivel: "avancado", topico: "m5-u3-t2-s3", assunto: "5.3 — Alinhamento e vieses",
     contexto: "Assistência virtual usa RLHF para reduzir respostas ofensivas.",
     enunciado: "Afirmação: 'Modelos generativos alinhados por reforço de preferência (RLHF) são isentos de vieses.'",
     corrigir: true,
@@ -653,7 +653,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-27", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-generativa-u3-t3-sub-1", assunto: "5.3 — Temperatura e amostragem de token",
+    nivel: "avancado", topico: "m5-u3-t3-s1", assunto: "5.3 — Temperatura e amostragem de token",
     contexto: "Equipe de atendimento testa temperatura no assistente.",
     enunciado: "Relacione: (I) Aumentar a temperatura geralmente torna a saída mais variável e criativa, mas mais imprevisível. (II) Baixa temperatura reduz a aleatoriedade, favorecendo tokens mais prováveis. Considerando as afirmações acima, é correto afirmar que:",
     alternativas: [
@@ -680,7 +680,7 @@ const moduleQuestions5 = [
   /* ===================== 5.4 Engenharia de Prompts (10 questões) ===================== */
 
   { id: "q-m5-28", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-prompts-u4-t1-sub-1", assunto: "5.4 — Componentes de um prompt",
+    nivel: "basico", topico: "m5-u4-t1-s1", assunto: "5.4 — Componentes de um prompt",
     contexto: "Prompt curto: 'Resuma esse contrato'.",
     enunciado: "Para que um prompt produza uma resposta consistente, é essencial incluir:",
     alternativas: [
@@ -705,7 +705,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-29", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-prompts-u4-t1-sub-2", assunto: "5.4 — Zero-shot e few-shot",
+    nivel: "basico", topico: "m5-u4-t1-s2", assunto: "5.4 — Zero-shot e few-shot",
     contexto: "Classificar despesas em 12 categorias.",
     enunciado: "A diferença entre zero-shot e few-shot é:",
     alternativas: [
@@ -730,7 +730,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-30", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-prompts-u4-t1-sub-3", assunto: "5.4 — Delimitação e injeção",
+    nivel: "basico", topico: "modulo-5-unidade-4", assunto: "5.4 — Delimitação e injeção",
     contexto: "Prompt com 'ignore tudo anterior'.",
     enunciado: "A delimitação explícita de entrada e saída serve para:",
     alternativas: [
@@ -755,7 +755,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-31", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-prompts-u4-t2-sub-1", assunto: "5.4 — Avaliação de prompts",
+    nivel: "intermediario", topico: "m5-u4-t2-s1", assunto: "5.4 — Avaliação de prompts",
     contexto: "Dois prompts testados com impressão.",
     enunciado: "A avaliação de prompts de forma confiável exige:",
     alternativas: [
@@ -780,7 +780,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-32", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-prompts-u4-t2-sub-2", assunto: "5.4 — Prompt como artefato de governança",
+    nivel: "avancado", topico: "m5-u4-t2-s2", assunto: "5.4 — Prompt como artefato de governança",
     contexto: "Assistência de atendimento com prompt produz ação.",
     enunciado: "O prompt funciona como artefato de governança quando:",
     alternativas: [
@@ -805,7 +805,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-33", modulo: 5, formato: "ce", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-prompts-u4-t2-sub-3", assunto: "5.4 — Segurança e dados sensíveis",
+    nivel: "avancado", topico: "modulo-5-unidade-4", assunto: "5.4 — Segurança e dados sensíveis",
     contexto: "Prompt tenta extrair dados sensíveis.",
     enunciado: "Afirmação: 'Inserir segredos no prompt é seguro, porque o modelo não os repetirá.'",
     corrigir: true,
@@ -821,7 +821,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-34", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-prompts-u4-t3-sub-1", assunto: "5.4 — Implantação responsável",
+    nivel: "avancado", topico: "m5-u4-t3-s1", assunto: "5.4 — Implantação responsável",
     contexto: "Equipe imputa prompt para atendimento.",
     enunciado: "Uma conduta correta ao implantar um prompt em produção é:",
     alternativas: [
@@ -846,7 +846,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-35", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-ml-u2-t1-sub-1", assunto: "5.2 — Generalização",
+    nivel: "basico", topico: "m5-u2-t1-s1", assunto: "5.2 — Generalização",
     contexto: "Um modelo treina com dados de um setor e é aplicado a outro.",
     enunciado: "A generalização se refere a:",
     alternativas: [
@@ -871,7 +871,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-36", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-ml-u2-t1-sub-2", assunto: "5.2 — Sinal e ruído",
+    nivel: "basico", topico: "m5-u2-t1-s2", assunto: "5.2 — Sinal e ruído",
     contexto: "Modelo de regressão tem erro alto em treino e validação.",
     enunciado: "Underfitting significa:",
     alternativas: [
@@ -896,7 +896,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-37", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "ia-ml-u2-t1-sub-3", assunto: "5.2 — Seleção de modelo e validação cruzada",
+    nivel: "basico", topico: "m5-u2-t1-s3", assunto: "5.2 — Seleção de modelo e validação cruzada",
     contexto: "Poucos dados, validação cruzada é uma alternativa ao split único.",
     enunciado: "Validação cruzada (cross-validation) divide os dados em múltiplas partições para:",
     alternativas: [
@@ -921,7 +921,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-38", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "ia-ml-u2-t1-sub-7", assunto: "5.2 — Curva de aprendizado",
+    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Curva de aprendizado",
     contexto: "Curva de aprendizado de erro vs. tamanho da amostra.",
     enunciado: "Curva de aprendizado mostra o erro de treinamento e validação em função do tamanho da amostra. Se o erro de treino diminui com o aumento da amostra e o erro de validação estabiliza, indica:",
     alternativas: [
@@ -946,7 +946,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-39", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-ml-u2-t1-sub-6", assunto: "5.2 — Matriz de confusão e métricas",
+    nivel: "avancado", topico: "modulo-5-unidade-2", assunto: "5.2 — Matriz de confusão e métricas",
     contexto: "Triagem de risco com matriz de confusão.",
     enunciado: "Na matriz de confusão, a precisão (precision) é:",
     alternativas: [
@@ -971,7 +971,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-40", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "ia-ml-u2-t1-sub-8", assunto: "5.2 — RMSE e penalização de erros grandes",
+    nivel: "avancado", topico: "modulo-5-unidade-2", assunto: "5.2 — RMSE e penalização de erros grandes",
     contexto: "MAE 1,9 e RMSE 6,4 em previsão de demanda.",
     enunciado: "A distância entre RMSE e MAE típica de 6,4 indica:",
     alternativas: [

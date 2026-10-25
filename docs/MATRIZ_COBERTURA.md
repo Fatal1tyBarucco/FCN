@@ -19,6 +19,7 @@ M8-Visualizacao,curriculum_m8.js,~23,~28,flashcards_m8.js,50,questions_m8.js,40,
 
 Nota: `questions.js` contém as 120 questões autorais dos módulos M1-M3 combinados (verificado por leitura direta do arquivo e extração de `id` via regex). A contagem individual por módulo M1/M2/M3 dentro de `questions.js` não está separada no arquivo; o total de 120 é verificado pelo arquivo como um todo.
 
+Contagens reconciliadas (I6, 2026-10-24): nós 427 (132 tópicos + 295 subtópicos); flashcards 404 (50/50/50/54/50/50/50/50); questões 365 (M1 40, M2 40, M3 40, M4 85, M5 40, M6 40, M7 40, M8 40); referências 72 (20 vídeos + 52 técnicas, 72/72 verificadas); gráficos 5/5; simuladores 6 (Excel, Redes, Segurança, Prompts, Dados, Ética). Níveis questões: básica 94 (25,8%), intermediária 193 (52,9%), avançada 78 (21,4%); formatos 290 MC + 75 CE; estilos CESPE 216, FGV 58, FCC 52, VUNESP 39.
 ## Dependências e restrições
 
 - Nenhum arquivo de conteúdo essencial está faltando.

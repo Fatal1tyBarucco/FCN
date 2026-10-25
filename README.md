@@ -1,5 +1,7 @@
 # FCN — Apostila Web Interativa de TI, Dados e IA
 
+[![Live%20Demo](https://img.shields.io/badge/Live%20Demo-181717?style=for-the-badge&logo=githubpages&logoColor=white)](https://fatal1tybarucco.github.io/FCN/)
+
 Apostila web interativa em **pt-BR**, voltada a concursos públicos brasileiros, cobrindo 8 módulos obrigatórios: Microsoft 365, Redes, Comunicação, Segurança, IA, Ética, Dados e Visualização.
 
 É uma **SPA estática** construída em HTML/CSS/JS “vanilla”: sem framework, sem build, sem `package.json`. O conteúdo curricular é definido em objetos JS literais.
@@ -8,9 +10,7 @@ Apostila web interativa em **pt-BR**, voltada a concursos públicos brasileiros,
 
 ## Site publicado (GitHub Pages)
 
-`https://fatal1tybarucco.github.io/FCN/`
-
-O site é publicado automaticamente por um workflow do GitHub Actions (`.github/workflows/deploy-pages.yml`) a cada push na branch `main`. A raiz do site publicado é a pasta `apostila-ia/`, ou seja, o endereço acima serve o conteúdo de `apostila-ia/index.html`.
+O link acima leva a `https://fatal1tybarucco.github.io/FCN/`, publicado automaticamente por um workflow do GitHub Actions (`.github/workflows/deploy-pages.yml`) a cada push na branch `main`. A raiz do site publicado é a pasta `apostila-ia/`, ou seja, o endereço acima serve o conteúdo de `apostila-ia/index.html`.
 
 ## Como executar localmente
 
@@ -41,7 +41,7 @@ apostila-ia/                # o app (raiz do site publicado)
   index.html                # entrada da aplicação
   assets/css/styles.css
   assets/js/                # app, navigation, simulators, flashcards, quiz, charts...
-  assets/data/              # currículo (M1–M8), flashcards (404), questões (365/320)
+  assets/data/              # currículo (M1–M8, 427 nós), flashcards (404), questões (365/320), referências (72)
 inventario/                 # inventário curricular
 matriz/                     # matriz de cobertura
 referencias/                # referências verificadas (ex.: LGPD)
