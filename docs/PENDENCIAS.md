@@ -82,3 +82,14 @@ Classificação de pendências (plano do arquiteto, seções 1 e 9):
 - D (pendente intencional, não inventar): demais resoluções ANPD, demais RFCs não listadas, demais incisos/parágrafos CF art. 37/5º não enumerados, vídeos adicionais além dos 20 validados (nenhum inventado).
 Duplicatas/inconsistências removidas: referências atualizadas de 32 → 72; simuladores de 5 → 6; revisão pedagógica (I5, 7 correções) registrada em docs/REVISAO_PEDAGOGICA.md.
 Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada concluída sem evidência real.
+
+
+## Novas pendências confirmadas pela auditoria remota — 2026-10-25
+
+12. **Matriz detalhada**: `docs/MATRIZ_COBERTURA.csv` tem apenas oito linhas de módulo e uma linha TOTAL. Criar matriz rastreável por unidade/tópico/subtópico com IDs estáveis, objetivos, conteúdo, exemplos, exercícios, flashcards, questões, fontes, testes e status. Não declarar cobertura completa antes de conferir os dados reais.
+13. **Reprodução de métricas**: recalcule as contagens de nós curriculares, exemplos, exercícios, flashcards e questões a partir dos arquivos atuais, registrando o comando/script, a data e os resultados.
+14. **Reconciliação de status**: `docs/PLANO_EXECUCAO.md`, `docs/RELATORIO_TESTES.md`, `docs/INVENTARIO_CURRICULAR.md` e `docs/PENDENCIAS.md` contêm estados históricos e afirmações que precisam ser harmonizados com evidência atual. Preservar histórico, mas marcar claramente o que foi reexecutado.
+15. **Auditoria de qualidade**: avaliar a profundidade real por unidade e não apenas contagens; verificar pelo menos três exemplos resolvidos por unidade conforme o prompt mestre.
+16. **QA independente**: repetir testes de lógica, questões, flashcards, busca, gráficos, simuladores, persistência, acessibilidade e abertura direta; separar resultados de CLI/headless dos que exigem navegador real.
+17. **Referências/vídeos**: a existência de referências cadastradas não comprova validade atual; registrar URL, assunto, fonte, data de verificação e resultado verificável.
+18. **Subagentes**: a inspeção desta execução foi feita via integração GitHub sem subagentes Hermes. Não declarar agentes delegados ou revisões independentes até haver evidência de execução e artefato produzido.
