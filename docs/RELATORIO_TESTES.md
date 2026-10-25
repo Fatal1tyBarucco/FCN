@@ -170,3 +170,20 @@ Nenhum teste de navegador, funcionalidade, persistência, acessibilidade ou buil
 | Execução da aplicação em `file://` ou navegador | NÃO EXECUTADO | — | Nenhuma evidência de runtime nesta etapa |
 
 Esta inspeção foi estática e remota via GitHub; não é um teste de execução. Não foi usado subagente nesta etapa.
+
+
+## Recálculo estático de exemplos e exercícios — 2026-10-25
+
+| Módulo | Subtópicos | Exemplos estruturados | Exercícios estruturados |
+|---|---:|---:|---:|
+| M1 | 37 | 114 | 76 |
+| M2 | 52 | 156 | 104 |
+| M3 | 35 | 105 | 70 |
+| M4 | 39 | 117 | 78 |
+| M5 | 35 | 105 | 70 |
+| M6 | 46 | 138 | 92 |
+| M7 | 23 | 69 | 46 |
+| M8 | 28 | 84 | 56 |
+| **Total** | **295** | **888** | **592** |
+
+**Método:** inspeção estática dos oito arquivos, removendo comentários e contando objetos de primeiro nível nos arrays `exemplos` e `exercicios`. Não executa JavaScript e não valida a completude didática dos itens. Resultado difere do inventário histórico (885 exemplos, 590 exercícios): +3 e +2, respectivamente. A causa da divergência ainda não foi determinada.
