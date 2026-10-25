@@ -101,3 +101,10 @@ A inspeção remota consultou `Escrita.txt`, `README.md`, `AGENTS.md`, o invent�
 - **Rastreabilidade reproduzível:** adicionado scripts/audit_curriculum_matrix.mjs. O script ainda não foi executado localmente; não declarar sua execução ou os testes do produto como aprovados.
 - **CI:** a consulta da API de Actions para a branch de trabalho retornou zero execuções. Isso não é evidência de CI verde.
 - **Próxima ação:** executar o script em clone/ambiente com o repositório, conferir a matriz gerada e só então iniciar a revisão qualitativa sistemática de conteúdo e funcionalidades.
+
+
+## Atualização de execução — 2026-10-25 (rastreabilidade de ativos)
+
+Foi adicionado `scripts/audit_learning_assets.mjs` para gerar uma matriz por tópico-pai com IDs de flashcards e questões, além de um relatório de referências não mapeadas. O commit do script está na branch do PR #17. O script **ainda não foi executado**: os arquivos CSV/relatório que ele gera não devem ser considerados validados até que a execução local seja realizada e sua saída inspecionada.
+
+A associação por tópico-pai é uma ferramenta de triagem e não prova cobertura didática individual de cada subtópico. Revisão semântica, execução dos testes do produto, navegador, modo `file://` e CI permanecem pendentes. Não realizar merge enquanto esses critérios não tiverem evidências suficientes e o PR continuar em revisão.
