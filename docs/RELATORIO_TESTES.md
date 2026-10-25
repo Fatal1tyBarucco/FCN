@@ -201,3 +201,26 @@ Esta inspeção foi estática e remota via GitHub; não é um teste de execuçã
 | GitHub Actions | Consulta de execuções para a branch da PR #17 | Nenhuma execução retornada | CI não comprovado |
 
 Não houve execução local do JavaScript do projeto nem teste de navegador nesta etapa. Resultados históricos descritos em seções anteriores deste relatório não devem ser confundidos com reexecuções de 2026-10-25.
+
+
+## Validação automatizada do PR #17 — 2026-10-25
+
+- Workflow: `.github/workflows/validate-curriculum.yml`.
+- Execução GitHub Actions: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246104780
+- Commit testado: `c111aea5f7d195ae362f29e5440390994d4dcea4`.
+- Resultado do job de validação estática: **success**.
+- `node --check`: todos os arquivos JavaScript em `apostila-ia/assets` passaram.
+- `scripts/audit_curriculum_matrix.mjs`: executado com código de saída 0.
+- `scripts/audit_learning_assets.mjs`: executado com código de saída 0; 132 tópicos, 460 flashcards, 365 questões, 108 ativos associados somente à unidade e 0 referências sem associação curricular reconhecível.
+- `verificacao/verificar-estrutura.js`: todas as verificações estruturais passaram (0 falhas), após alinhar as expectativas ao inventário atual (460 flashcards, distribuição 66/56/68/54/66/50/50/50 e 39 tags `script src`).
+- O workflow preserva os relatórios gerados como artefato `curriculum-audit-reports`.
+
+### Defeitos corrigidos a partir da evidência de CI
+
+1. `flashcards_m1.js`: aspas internas não escapadas no critério de exemplo `CONT.SE` causavam erro de sintaxe.
+2. `flashcards_m5.js`: faltava vírgula entre os registros `fc-m5-50` e `fc-m5-51`.
+3. `verificacao/verificar-estrutura.js`: contagens esperadas de flashcards e scripts estavam desatualizadas.
+
+### Limites da validação
+
+Esta execução comprova sintaxe e verificações estruturais automatizadas, não uma revisão semântica completa nem a operação em navegador real. Permanecem pendentes testes interativos de navegador/teclado/leitor de tela, abertura via `file://` em navegador real e auditoria qualitativa dos tópicos sem associação direta de questões. Os 108 ativos associados somente à unidade não foram atribuídos artificialmente a tópicos específicos.
