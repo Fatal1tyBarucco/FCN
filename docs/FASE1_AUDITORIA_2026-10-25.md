@@ -355,4 +355,8 @@ A revisão da distribuição deve ser guiada pelo conteúdo real de cada cartão
 
 **Estado:** plano e prioridades registrados; os cartões não foram remapeados automaticamente nesta etapa, porque a validação de referências não prova que um cartão corresponda semanticamente a outro tópico. A alteração de conteúdo exige revisão individual para não degradar a precisão didática.
 
+
+
+**Execução parcial — M2:** revisão individual das frentes identificou 28 cartões com referências temáticas genéricas ou desalinhadas em relação ao conteúdo específico. As referências foram redistribuídas entre os tópicos de comunicação, TCP/IP, protocolos, endereçamento IPv6/CIDR/VLSM e diagnóstico de rede, preservando os IDs e o conteúdo dos cartões. Commit `9e009923a58581458d4e98baed82849e4ff2b3ef`. A revisão é baseada na correspondência evidente entre pergunta e título curricular; não comprova exatidão técnica integral nem cobertura pedagógica completa. Permanecem tópicos sem cartão específico, além de auditoria de duplicações.
+
 **Execução parcial — M3:** revisão individual identificou oito cartões (`fc-m3-08` a `fc-m3-15`) sobre spoofing, spear phishing, spam, phishing e autenticação SPF/DKIM/DMARC associados indevidamente ao tópico `m3-u1-t1` (SMTP, POP3 e IMAP). As referências desses oito cartões foram corrigidas para `m3-u1-t2` (Spam, phishing e falsificação de remetente), commit `4328b0fa643da27b6a6ada4881aeba9b3eb8dfa3`. O ajuste melhora a rastreabilidade local, mas não fecha a cobertura do M3: unidades sobre netiqueta, acessibilidade, comunicação institucional e controles de videoconferência ainda precisam de cartões semanticamente adequados. Também permanece pendente verificar possíveis duplicações de conteúdo.
