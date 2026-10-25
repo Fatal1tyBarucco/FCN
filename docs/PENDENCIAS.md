@@ -129,3 +129,17 @@ Limitações C/D listadas explicitamente acima; nenhuma funcionalidade declarada
 - [ ] Conferir se o parser de ativos trata todos os formatos de objeto dos oito arquivos de flashcards e seis arquivos de questões; regex estrutural não substitui validação do esquema.
 - [ ] A matriz de ativos será por tópico-pai. Não interpretar associação ao tópico como cobertura garantida de cada subtópico.
 - [ ] Não afirmar que a matriz de ativos foi gerada ou que o script passou até executar o script e registrar a saída real.
+
+
+## Atualização após CI real — 2026-10-25 (PR #17)
+
+- [x] Criar workflow de validação para pull requests e branches `feat/**`: `.github/workflows/validate-curriculum.yml`.
+- [x] Corrigir erro de sintaxe em `flashcards_m1.js` (aspas internas em exemplo de `CONT.SE`) e registro sem vírgula em `flashcards_m5.js`; a execução posterior de `node --check` passou para todos os JS de `apostila-ia/assets`.
+- [x] Atualizar expectativas obsoletas de `verificacao/verificar-estrutura.js` para 460 flashcards e 39 tags de script; as verificações estruturais passaram com 0 falhas.
+- [x] Executar os dois scripts de auditoria no GitHub Actions. Resultado: 132 tópicos reconhecidos, 460 flashcards, 365 questões, 108 ativos associados a unidade sem tópico específico e 0 referências sem associação curricular reconhecível.
+- [x] Configurar upload dos relatórios gerados como artefato do workflow.
+- [ ] Investigar os tópicos que aparecem sem questão associada diretamente na matriz; a associação por unidade não deve ser distribuída artificialmente entre tópicos.
+- [ ] Fazer revisão semântica de conteúdo, exemplos, exercícios, gabaritos e fontes; CI verde não equivale a aprovação pedagógica.
+- [ ] Testar em navegador real: interações, teclado/leitor de tela, persistência e modo `file://`; a execução automatizada atual não comprova esses requisitos.
+
+Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246104780. O PR permanece draft e não deve ser mergeado enquanto as pendências qualitativas e de navegador não forem avaliadas.
