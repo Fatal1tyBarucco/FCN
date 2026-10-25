@@ -33,7 +33,7 @@ Fonte de requisitos: `Escrita.txt` (raiz; SHA consultado: `a7da4ad0c8905e2f7ece4
 | M6 | Ética e responsabilidade digital no serviço público | 6 | 18 | 46 | 50 | 40 | Declarado completo; requer auditoria normativa |
 | M7 | Fundamentos e engenharia de dados | 3 | 9 | 23 | 50 | 40 | Declarado completo; requer auditoria por requisito |
 | M8 | Visualização, análise e storytelling com dados | 5 | 23 | 28 | 50 | 40 | Declarado completo; requer auditoria por requisito |
-| **Total** | — | **37** | **132** | **295** | **442** | **365** | **Números herdados dos documentos; ainda precisam de recálculo reproduzível nesta execução** |
+| **Total** | — | **37** | **132** | **295** | **460** | **365** | **Números herdados dos documentos; ainda precisam de recálculo reproduzível nesta execução** |
 
 As contagens acima são transcritas dos documentos versionados no repositório, não foram recalculadas nesta inspeção. Portanto, são **valores declarados pelo projeto**, não novos resultados de teste.
 
@@ -280,7 +280,7 @@ A comparação estática foi estendida a todos os bancos de flashcards e de ques
 | M6 | 50 | 50 | 18 | 18 | 0 |
 | M7 | 50 | 50 | 9 | 9 | 0 |
 | M8 | 50 | 50 | 23 | 23 | 0 |
-| **Total** | **436** | **436** | **132** | — | **0** |
+| **Total** | **460** | **460** | **132** | — | **0** |
 
 Os 404 cartões têm IDs únicos globalmente segundo a inspeção anterior, e todos os vínculos `topico` conferidos apontam para coordenadas curriculares existentes. Isso valida a integridade dos vínculos declarados, não a qualidade ou a cobertura suficiente dos cartões. M2 (16/19 tópicos) ainda tem lacunas; M3 foi expandido para referenciar 14/14 tópicos detectados; M1 e M5 têm cobertura referencial de 23/23 e 13/13, respectivamente. M1 foi expandido para 66 cartões e passou a referenciar os 23 tópicos de nível superior detectados; a cobertura referencial não comprova, por si só, profundidade ou qualidade pedagógica. M4, M6, M7 e M8 têm pelo menos uma referência para cada tópico curricular detectado.
 
