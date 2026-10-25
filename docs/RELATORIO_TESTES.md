@@ -224,3 +224,11 @@ Não houve execução local do JavaScript do projeto nem teste de navegador nest
 ### Limites da validação
 
 Esta execução comprova sintaxe e verificações estruturais automatizadas, não uma revisão semântica completa nem a operação em navegador real. Permanecem pendentes testes interativos de navegador/teclado/leitor de tela, abertura via `file://` em navegador real e auditoria qualitativa dos tópicos sem associação direta de questões. Os 108 ativos associados somente à unidade não foram atribuídos artificialmente a tópicos específicos.
+
+
+## Smoke test de navegador Chromium — 2026-10-25
+
+- Workflow: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246584032
+- Execução real de Playwright + Chromium headless abrindo o arquivo local via `file://` (não servidor HTTP).
+- Resultado: **PASS**; 8 módulos curriculares expostos e 8 nós de módulo renderizados; 460 flashcards conectados; 365 questões conectadas; 5 SVGs de gráficos; UI de flashcards, quiz e busca não vazias; seis contêineres de simuladores presentes e com conteúdo renderizado; round-trip de `localStorage` concluído; **0 exceções JavaScript não capturadas**.
+- O teste usa Chromium headless em runner Linux. Não substitui validação em dispositivos físicos, outros navegadores, tecnologia assistiva, navegação completa de todos os controles ou avaliação WCAG independente.
