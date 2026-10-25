@@ -83,3 +83,12 @@ Contratos por subagente (áreas separadas, sem conflito de arquivo):
 - @revisor (independente): auditar cada entrega acima; não aprovar próprio autor.
 
 Ordem: referências → áudio → WCAG → responsividade → vídeos (último, por dependência de rede). Cada etapa com evidência real antes de marcar PASS.
+
+
+## Atualização do orquestrador — 2026-10-25 (auditoria remota da Fase 1)
+
+Foi criada a branch `feat/fase-1-orquestracao-20261025` a partir de `main` para separar esta atualização do branch de produção. Evidência: criação da branch retornada pela API do GitHub.
+
+A inspeção remota consultou `Escrita.txt`, `README.md`, `AGENTS.md`, o inventário, a matriz agregada e arquivos curriculares/de questões. O relatório `docs/FASE1_AUDITORIA_2026-10-25.md` distingue contagens herdadas de documentos de contagens recalculadas. Nenhum teste de execução foi realizado nesta etapa.
+
+**Status corrigido:** Fase 1 = inventário inicial e lacunas documentais identificados; matriz integral por subtópico e recálculo reproduzível de métricas continuam pendentes. A existência de conteúdo ou de controles de interface não equivale a critério de aceite aprovado. Consulte o relatório de auditoria para as evidências e limitações.
