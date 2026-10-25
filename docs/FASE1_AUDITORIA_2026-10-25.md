@@ -246,3 +246,19 @@ Distribuição observada:
 2. Conferir globalmente a unicidade dos IDs das 365 questões.
 3. Decidir, com base no requisito de cobertura do prompt mestre, se os flashcards precisam ser redistribuídos ou complementados para representar tópicos atualmente sem referência.
 4. Não considerar esta auditoria estática como teste de execução da aplicação.
+
+
+## Normalização de referências do banco compartilhado de questões — M1 a M3 (2026-10-25)
+
+O arquivo `apostila-ia/assets/data/questions.js` foi inspecionado por padrão estrutural e as referências foram normalizadas para coordenadas de módulo/unidade/tópico/subtópico, comparando-as com os três currículos correspondentes.
+
+| Módulo | Questões | IDs únicos no banco | Referências distintas | Referências inválidas encontradas |
+|---|---:|---:|---:|---:|
+| M1 | 40 | 40 | 22 | 0 |
+| M2 | 40 | 40 | 7 | 0 |
+| M3 | 40 | 40 | 8 | 0 |
+| **Total** | **120** | **120** | — | **0** |
+
+Resultado: os 120 registros extraídos têm IDs únicos no banco compartilhado, e todas as referências `topico` verificadas apontam para coordenadas existentes nos currículos M1–M3. A verificação aceita referências em nível de unidade, tópico ou subtópico quando a coordenada corresponde a um nó real. Não foi feita nesta rodada a validação de conteúdo, gabaritos, justificativas, duplicação semântica ou distribuição adequada das questões entre todos os tópicos. Os bancos M4–M8 continuam pendentes de validação por coordenadas e unicidade global.
+
+**Método e limite:** análise estática dos arquivos remotos; o código da aplicação não foi executado. O padrão de extração procura IDs e referências declaradas, mas não é substituto para parsing/execução completa do JavaScript.
