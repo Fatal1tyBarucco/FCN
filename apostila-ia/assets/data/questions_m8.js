@@ -241,7 +241,7 @@ const moduleQuestions8 = [
     enunciado: "Para estruturar uma narrativa de decisão, a recomendação final de storytelling com dados deve indicar:",
     alternativas: [
       { letra: "A", texto: "apenas a ação proposta, sem responsável, prazo ou custo de não agir." },
-      { letra: "B", texto: "ação, responsável, prazo e o que acontece se a ação não for feita." },
+      { letra: "B", texto: "ação proposta, responsável, prazo, custo previsto e consequência de não executar a ação." },
       { letra: "C", texto: "a ordem em que os dados foram coletados, para preservar o contexto original." },
       { letra: "D", texto: "todos os indicadores calculados, em quantidade ilimitada." }
     ],
