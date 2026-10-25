@@ -105,3 +105,10 @@ Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplic
 ---
 
 Relatório de contagens verificáveis por node: `inventario/RELATORIO_CONTAGENS_NODE.md`.
+
+
+## Revalidação de proveniência — 2026-10-25
+
+As contagens acima são as declaradas no inventário anterior, com data de referência 2026-10-23. Na inspeção remota da Fase 1 de 2026-10-25, elas foram consultadas, mas **não foram recalculadas a partir de todos os arquivos de dados**. Não as tratar como resultados novos desta execução.
+
+A matriz em `docs/MATRIZ_COBERTURA.csv` contém somente agregados por módulo; ainda não representa a rastreabilidade individual dos 427 nós. A auditoria atual e as lacunas identificadas estão em `docs/FASE1_AUDITORIA_2026-10-25.md`. A geração da matriz detalhada e a reprodução automatizada das contagens são tarefas explícitas da Fase 2.
