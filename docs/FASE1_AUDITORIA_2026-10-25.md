@@ -161,3 +161,33 @@ Foi feita uma contagem estática dos objetos de primeiro nível dentro dos array
 O inventário anterior declarava 885 exemplos e 590 exercícios. A contagem estática atual aponta 888 e 592, respectivamente: diferença de **+3 exemplos** e **+2 exercícios**. Os valores históricos não devem ser usados como totais exatos sem atualização. A diferença pode decorrer de contagem anterior, conteúdo adicionado ou critérios diferentes; esta inspeção não determina a causa.
 
 A contagem representa itens estruturados nos arrays curriculares ativos. Não comprova que cada exemplo seja resolvido em três naturezas distintas, nem que cada exercício tenha dificuldade, resposta e explicação adequadas conforme o prompt mestre. A próxima auditoria deve conferir os campos de cada item e a vinculação por subtópico.
+
+
+## Continuação — integridade de IDs e distribuição temática de flashcards (2026-10-25)
+
+### Integridade de IDs
+
+Foi feita inspeção estática dos oito bancos de flashcards e dos seis arquivos de questões.
+
+- Flashcards: **404 IDs, 404 únicos globalmente**, sem duplicatas identificadas entre arquivos.
+- Questões: **365 IDs**, sem duplicatas identificadas dentro de cada arquivo. Os prefixos dos bancos são separados por módulo; a comparação global de todos os 365 IDs será mantida como verificação explícita adicional na próxima rodada.
+- Todos os registros inspecionados nesses bancos tinham campo `topico`; isso não comprova que a referência aponte para um nó curricular existente.
+
+### Distribuição de flashcards por referência temática
+
+| Módulo | Cartões | Referências `topico` distintas | Observação |
+|---|---:|---:|---|
+| M1 | 50 | 15 | Distribuição concentrada: 21 cartões apontam para `m1-u1-t1`; as demais referências têm de 1 a 3 cartões cada. |
+| M2 | 50 | 5 | Há 10 cartões para cada uma de cinco referências, uma por unidade (`m2-u1-t1` até `m2-u5-t1`). Cobertura de tópicos dentro das unidades não demonstrada. |
+| M3 | 50 | 4 | 25 cartões apontam para `m3-u1-t1`; os outros 25 se distribuem por três referências. Forte concentração temática. |
+| M4 | 54 | 13 | Distribuição relativamente regular, com 4 cartões em 11 referências e 6 em duas referências. |
+| M5 | 50 | 5 | Referências concentradas nas unidades 1 e 2; não há referências distintas além das cinco observadas. |
+| M6 | 50 | 18 | Cobertura temática mais distribuída; frequências de 1 a 7 por referência. |
+| M7 | 50 | 9 | Nove referências distintas, com concentração em `m7-u2-t3` (10 cartões). |
+| M8 | 50 | 23 | Maior dispersão; frequências de 1 a 5 por referência. |
+
+Os valores de `topico` seguem convenções compactas (`mN-uN-tN`), enquanto os IDs dos subtópicos curriculares podem usar formatos mais longos. Portanto, a contagem de referências distintas mede distribuição declarada, não validação semântica dos vínculos. M2, M3 e M5 são prioridades para conferir se as referências compactas cobrem os tópicos previstos ou se representam cobertura parcial.
+
+### Limite desta etapa
+
+Esta etapa não avalia originalidade, duplicação semântica, precisão factual, qualidade das respostas, nível cognitivo nem aderência individual ao `Escrita.txt`. Nenhum código funcional foi alterado; as descobertas foram registradas para orientar a próxima auditoria.
