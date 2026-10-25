@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: validate-\${{ github.ref }}
+  group: validate-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -34,12 +34,12 @@ jobs:
         run: |
           set -euo pipefail
           mapfile -t files < <(find apostila-ia/assets -type f -name '*.js' -print | sort)
-          test "\${#files[@]}" -gt 0
-          for file in "\${files[@]}"; do
-            echo "Checking \${file}"
-            node --check "\${file}"
+          test "${#files[@]}" -gt 0
+          for file in "${files[@]}"; do
+            echo "Checking ${file}"
+            node --check "${file}"
           done
-          echo "JavaScript syntax passed for \${#files[@]} files."
+          echo "JavaScript syntax passed for ${#files[@]} files."
 
       - name: Generate structural curriculum matrix
         run: node scripts/audit_curriculum_matrix.mjs
