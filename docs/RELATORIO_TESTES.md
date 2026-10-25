@@ -140,3 +140,19 @@ Ambiente: Chromium 156 headless (Termux) controlado via Chrome DevTools Protocol
 - Vídeos: 0 validados (decisão intencional).
 - Acessibilidade WCAG completa: não verificada com leitor de tela.
 - Responsividade: CSS presente; não verificado em dispositivo físico.
+
+
+## Atualização da Fase 1 — 2026-10-25
+
+Tipo de verificação: inspeção remota de arquivos no GitHub; não é execução de testes.
+
+| Verificação | Resultado | Evidência | Limite |
+|---|---|---|---|
+| Prompt mestre localizado | PASS — arquivo encontrado | `Escrita.txt`, SHA `a7da4ad0c8905e2f7ece405dfe4a3b95518cbb76` | Leitura remota; não execução do projeto |
+| Estrutura geral identificada | PASS — documentação encontrada | `README.md` e `AGENTS.md` | Declarações documentais não provam runtime |
+| Inventário existente encontrado | PASS — documento encontrado | `docs/INVENTARIO_CURRICULAR.md` | Contagens não recalculadas nesta fase |
+| Matriz de cobertura localizada | PASS com ressalva | `docs/MATRIZ_COBERTURA.csv` | Só contém agregados por módulo, não rastreabilidade por subtópico |
+| Consistência entre documentos | RESSALVA | Diferenças de datas e status em plano, inventário, relatório e pendências | Requer reconciliação na Fase 2 |
+| JavaScript / interface / file:// | NÃO EXECUTADO | Nenhuma execução local nesta etapa | Não declarar aprovação técnica |
+
+Nenhum teste de navegador, funcionalidade, persistência, acessibilidade ou build foi executado em 2026-10-25 nesta etapa. Resultados históricos preservados acima não foram reexecutados e não são apresentados como testes novos.
