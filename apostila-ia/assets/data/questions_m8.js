@@ -76,7 +76,7 @@ const moduleQuestions8 = [
     topico: "modulo-8-unidade-1-topico-3",
     assunto: "M8.1.3 Integridade gráfica",
     contexto: "Painel de gestão reúne valores de atendimentos de duas unidades: A = 70 e B = 80. O gráfico de barras começa o eixo em 60 para 'enfatizar a diferença'.",
-    enunciado: "Assinale a afirmação que correta o gráfico acima, sem alterar a informação nos dados.",
+    enunciado: "Assinale a alternativa que corrige o gráfico acima sem alterar os dados.",
     alternativas: [
       { letra: "A", texto: "Deixar o eixo iniciando em 0, de modo que a razão visual volte a ser 80/70 = 1,14." },
       { letra: "B", texto: "Manter o eixo em 60, pois o leitor precisa ver a diferença."
@@ -341,7 +341,7 @@ const moduleQuestions8 = [
       { letra: "A", texto: "Paleta categórica com cores distintas e de força igual para cada faixa de valor." },
       { letra: "B", texto: "Paleta sequencial, com variação de luminosidade de uma cor para outra, de claro para escuro." },
       { letra: "C", texto: "Paleta arco-íris, pois aproveita todas as cores disponíveis e é mais legível." },
-      { letra: "D", texto: "Poucas cores claras, sem escala, para 'não cansativar' a leitura." }
+      { letra: "D", texto: "Usar poucas cores claras, sem escala, para reduzir o esforço de leitura." }
     ],
     gabarito: "B",
     justificativa: "O currículo classifica a variável como sequencial (magnitude contínua, ordenada) e indica paleta sequencial: variação de luminosidade de uma cor, de menor a maior, respeitando a ordem perceptiva. A alternativa B reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (D) não comunicam magnitude.",
@@ -351,7 +351,7 @@ const moduleQuestions8 = [
       C: "INCORRETA. Erro conceitual: paleta decorativa não codifica ordem; dificulta a leitura de 'mais/ou menos'.",
       D: "INCORRETA. Erro conceitual: sem escala, o leitor não decora a intensidade; a regra de ouro é escala para magnitude."
     },
-    regra: "Categorias nominais → paleta categórica (poucas cores); magnitudes ordenas → paleta sequencial (luminosidade); metade vs total → divergente (neutro na referência).",
+    regra: "Categorias nominais → paleta categórica (poucas cores); magnitudes ordenadas → paleta sequencial (luminosidade); valores acima e abaixo de uma referência → paleta divergente (neutro na referência).",
     pegadinha: "A pegadinha é 'paleta arco-íris é mais atrativa' — no currículo, a atratividade decorativa é ruído quando a tarefa é ler magnitude."
   },
   {
