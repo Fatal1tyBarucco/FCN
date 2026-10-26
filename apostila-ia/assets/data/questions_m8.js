@@ -679,7 +679,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Projeção de 1.200 atendimentos, só se confirmar no trimestre seguinte." }
     ],
     gabarito: "C",
-    justificativa: "O currículo exige comunicar incerteza: rótulo de estimativa, faixa de erro/intervalo, cenários e premissas declaradas. A alternativa C faz isso: faixa (1.050–1.300), premissas ('tendência dos 12 meses') e estímulo. A, B e D omitem a incerteza ou apresentam a estimativa como fato, comprometendo a integridade da comunicação.",
+    justificativa: "O currículo exige comunicar incerteza: rótulo de estimativa, faixa de erro/intervalo, cenários e premissas declaradas. A alternativa C faz isso: faixa (1.050–1.300) e premissa declarada ('tendência dos 12 meses'). A, B e D omitem a incerteza ou apresentam a estimativa como fato, comprometendo a integridade da comunicação.",
     analise: {
       A: "INCORRETA. Erro conceitual: apresentar estimativa ponto a ponto como fato distorce a incerteza.",
       B: "INCORRETA. Erro conceitual: 'sem premissas' não existe — qualquer estimativa tem premissas; omitir as torna não acessíveis.",
