@@ -1529,128 +1529,128 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-61", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.4 — Malware Analisado",
-    contexto: "Os malwares são classificados por comportamento e disseminação.",
-    enunciado: "A classificação dos malwares (vírus, worms, trojans, ransomware) é baseada em:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Categorias e comportamento de malware",
+    contexto: "Uma estação apresenta arquivos com extensões alteradas, notas de resgate e impossibilidade de abrir documentos; em outro equipamento, um programa se disfarça de utilitário legítimo para coletar credenciais.",
+    enunciado: "Qual classificação relaciona corretamente os comportamentos descritos?",
     alternativas: [
-      { letra: "A", texto: "Comportamento e meio de disseminação." },
-      { letra: "B", texto: "Tamanho do arquivo." },
-      { letra: "C", texto: "Cor do arquivo." },
-      { letra: "D", texto: "Data de criação." },
-      { letra: "E", texto: "Nenhum dos anteriores." }
+      { letra: "A", texto: "O primeiro caso é compatível com ransomware; o segundo pode ser um trojan, conforme sua forma de se disfarçar e suas funções." },
+      { letra: "B", texto: "Ambos são necessariamente worms, pois qualquer malware se propaga automaticamente pela rede." },
+      { letra: "C", texto: "O primeiro caso é spyware exclusivamente, pois criptografar arquivos é uma forma de monitoramento." },
+      { letra: "D", texto: "Nenhum caso pode ser malware sem replicação automática." },
+      { letra: "E", texto: "A classificação depende principalmente do tamanho e da extensão dos arquivos." }
     ],
     gabarito: "A",
-    justificativa: "Malwares são classificados por comportamento (ex: criptografia, espionagem, propagação) e meio de disseminação (ex: anexo, rede, macro). Tamanho do arquivo (alternativa B incorreta); cor (alternativa C incorreta); data de criação (alternativa D incorreta); nenhum dos anteriores (alternativa E incorreta).",
+    justificativa: "Ransomware é associado à extorsão, frequentemente por criptografia ou bloqueio de acesso a dados. Trojan descreve malware que se apresenta como algo legítimo ou útil para induzir sua execução; pode carregar funções adicionais. As categorias podem se sobrepor, e a classificação deve considerar comportamento observado e evidências, não apenas um sintoma isolado.",
     analise: {
-      A: "CORRETA. Malwares são classificados por comportamento e meio de disseminação.",
-      B: "INCORRETA. Tamanho do arquivo não é critério de classificação de malwares.",
-      C: "INCORRETA. Cor do arquivo não é critério.",
-      D: "INCORRETA. Data de criação não é critério.",
-      E: "INCORRETA. O critério é comportamento + disseminação."
+      A: "CORRETA. Os sintomas são compatíveis com ransomware no primeiro cenário e com um trojan no segundo, sem afirmar que a classificação seja exclusiva.",
+      B: "INCORRETA. Worms se caracterizam pela capacidade de propagação, mas nem todo malware se replica automaticamente.",
+      C: "INCORRETA. Criptografia de arquivos para extorsão é compatível com ransomware, não define spyware.",
+      D: "INCORRETA. Muitos malwares dependem de execução ou engano do usuário e não se replicam automaticamente.",
+      E: "INCORRETA. Tamanho e extensão não determinam a categoria de malware."
     },
-    regra: "Classificar malware = 'como se espalha' + 'o que faz'. Comportamento + disseminação.",
-    pegadinha: "Malware não é 'trojan de barco' — é 'vírus de computador' — mas a classificação é por comportamento.",
-    fonte: "Virus Bulletin — Classification of Malware."
+    regra: "Classifique malware pelo comportamento e pelas evidências: ransomware extorque/bloqueia dados; trojan disfarça sua natureza; worm se propaga automaticamente.",
+    pegadinha: "As categorias de malware podem se sobrepor; não conclua a família apenas pelo nome do arquivo ou por um único indicador.",
+    fonte: "CISA, Understanding and Responding to a Ransomware Attack: https://www.cisa.gov/stopransomware/ransomware-guide; NIST SP 800-83 Rev. 1 — Guide to Malware Incident Prevention and Handling for Desktops and Laptops: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
   { id: "q-m4-62", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.4 — Antivírus e EDR",
-    contexto: "Antivírus e EDR são defensas endpoint.",
-    enunciado: "A principal diferença entre Antivírus (AV) e EDR (Endpoint Detection and Response) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Antivírus, EDR e resposta a incidentes",
+    contexto: "Uma organização usa proteção antimalware nos endpoints e avalia adicionar uma plataforma para investigar comportamentos suspeitos e coordenar ações de contenção.",
+    enunciado: "Qual descrição diferencia de forma mais precisa antivírus tradicional e EDR?",
     alternativas: [
-      { letra: "A", texto: "Software AV só detecta, PDR detecta e responde ativamente." },
-      { letra: "B", texto: "AV e EDR são a mesma coisa." },
-      { letra: "C", texto: "AV é para servidores; EDR é para clientes." },
-      { letra: "D", texto: "EDR é mais antigo que AV." },
-      { letra: "E", texto: "AV é offline; EDR é online." }
+      { letra: "A", texto: "Antivírus tradicional pode detectar ameaças por assinaturas e outras técnicas; EDR acrescenta telemetria, investigação e capacidades de resposta, conforme o produto e a configuração." },
+      { letra: "B", texto: "Antivírus só funciona offline e EDR só funciona online." },
+      { letra: "C", texto: "EDR impede todos os incidentes e torna desnecessário o monitoramento." },
+      { letra: "D", texto: "Antivírus é exclusivo de estações pessoais e EDR é exclusivo de servidores." },
+      { letra: "E", texto: "EDR é apenas outro nome para firewall de rede." }
     ],
     gabarito: "A",
-    justificativa: "Antivírus clássico é uma defesa signature-based (assinatura), limitada a detecção; EDR é um sistema moderno que detecta, responde ativamente e permite investigação/remediação de ameaças em tempo real. AV e EDR não são a mesma coisa (alternativa B incorreta); ambos podem ser em servidores e cliente (alternativa C incorreta); EDR é mais recente que AV (alternativa D incorreta); AV pode ser online ou offline (alternativa E incorreta).",
+    justificativa: "Produtos antimalware modernos podem combinar assinaturas, heurísticas e análise comportamental. EDR normalmente amplia a visibilidade dos endpoints com telemetria, investigação e resposta, mas as capacidades variam por produto, licença e configuração. EDR não substitui controles de rede, gestão de vulnerabilidades, cópias de segurança ou resposta organizacional a incidentes.",
     analise: {
-      A: "CORRETA. AV é principalmente detecção (geralmente assinatura); EDR detecta e responde ativamente.",
-      B: "INCORRETA. AV e EDR são ferramentas diferentes com arquiteturas distintas.",
-      C: "INCORRETA. Ambos podem estar em servidores e clientes (endpoint).",
-      D: "INCORRETA. EDR é uma geração mais recente que o AV tradicional.",
-      E: "INCORRETA. AV pode funcionar offline ou online."
+      A: "CORRETA. A alternativa descreve diferenças típicas sem reduzir o antivírus a assinaturas nem prometer capacidades idênticas em todos os produtos.",
+      B: "INCORRETA. Tanto produtos antimalware quanto EDR podem ter componentes e modos de operação diferentes; a distinção não é simplesmente offline/online.",
+      C: "INCORRETA. EDR pode apoiar detecção e resposta, mas não elimina todos os incidentes nem dispensa monitoramento.",
+      D: "INCORRETA. Ambos podem proteger diferentes tipos de endpoints, conforme a solução.",
+      E: "INCORRETA. Firewall e EDR têm funções distintas, embora possam integrar sinais e respostas."
     },
-    regra: "AV = 'detectar + avisar'. EDR = 'detectar + responder + investigar'. EDR é mais completo.",
-    pegadinha: "AV não é 'fim do ataque' — é 'detecção de ameaça'. EDR é o próximo nível de defesa.",
-    fonte: "CrowdStrike — EDR vs Antivirus, 2022."
+    regra: "EDR costuma acrescentar telemetria, investigação e resposta no endpoint; a proteção efetiva depende das capacidades e da configuração.",
+    pegadinha: "Não trate EDR como garantia de prevenção total nem como substituto de todas as demais camadas de segurança.",
+    fonte: "NIST SP 800-83 Rev. 1 — Guide to Malware Incident Prevention and Handling for Desktops and Laptops: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
   { id: "q-m4-63", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — Segmentação de Rede",
-    contexto: "A segmentação de rede divide a rede em sub-redes menores para isolar ameaças.",
-    enunciado: "A segmentação de rede é uma prática de segurança que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Segmentação de rede e movimento lateral",
+    contexto: "Uma rede corporativa mantém estações de usuários, servidores administrativos e sistemas críticos no mesmo segmento, com comunicação ampla entre dispositivos.",
+    enunciado: "Qual alteração reduz melhor o risco de que o comprometimento de uma estação alcance sistemas críticos?",
     alternativas: [
-      { letra: "A", texto: "Juntar todas as redes em uma única sub-rede." },
-      { letra: "B", texto: "Criptografar toda a rede." },
-      { letra: "C", texto: "Separar a rede em sub-redes menores para isolar zonas e controlar o tráfego entre elas." },
-      { letra: "D", texto: "Eliminar o tráfego de rede." },
-      { letra: "E", texto: "Criar uma rede sem segmentos." }
+      { letra: "A", texto: "Conectar todas as redes a um único segmento para facilitar o diagnóstico." },
+      { letra: "B", texto: "Separar zonas por função e risco, aplicar regras explícitas de comunicação entre elas e monitorar os fluxos autorizados." },
+      { letra: "C", texto: "Criptografar somente os nomes dos dispositivos e manter todo o tráfego permitido." },
+      { letra: "D", texto: "Eliminar qualquer comunicação de rede, inclusive a necessária aos serviços." },
+      { letra: "E", texto: "Criar sub-redes sem controles de tráfego, presumindo que a separação lógica bloqueie todos os ataques." }
     ],
-    gabarito: "C",
-    justificativa: "Segmentação de rede divide a infraestrutura em sub-redes/manejo, permitindo isolar zonas críticas e controlar o tráfego entre elas. Juntar redes (alternativa A incorreta); criptografar toda a rede (alternativa B incorreta); eliminar tráfego (alternativa D incorreta); criar rede sem segmentos (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "A segmentação divide a rede em zonas e limita a comunicação entre elas por meio de controles apropriados. Isso pode reduzir a superfície de ataque e dificultar o movimento lateral, mas a mera criação de sub-redes não garante isolamento se as regras permitirem tráfego amplo ou se os controles forem mal configurados.",
     analise: {
-      A: "INCORRETA. Junção de redes é o oposto de segmentação.",
-      B: "INCORRETA. Criptografia é uma defesa complementar, não a segmentação.",
-      C: "CORRETA. Segmentação divide a rede em sub-redes, isolando zonas e controlando o tráfego.",
-      D: "INCORRETA. Eliminar tráfego não é segmentação — é paralisação.",
-      E: "INCORRETA. 'Rede sem segmentos' é exatamente o que se evita com segmentação."
+      A: "INCORRETA. Um segmento amplo pode facilitar a propagação e o movimento lateral após o comprometimento.",
+      B: "CORRETA. Zonas definidas por função e risco, regras explícitas e monitoramento limitam comunicações desnecessárias.",
+      C: "INCORRETA. Criptografar nomes não controla os fluxos entre sistemas.",
+      D: "INCORRETA. O objetivo é controlar a comunicação necessária, não interromper indiscriminadamente todos os serviços.",
+      E: "INCORRETA. Sub-redes sem regras de controle não garantem isolamento efetivo."
     },
-    regra: "Segmentação = 'partes separadas'. Isolamento de zonas críticas e controle de tráfego.",
-    pegadinha: "Segmentação não é 'reduzir a rede' — é 'organizar a rede em zonas seguras'.",
-    fonte: "NIST SP 800-125 (Segmented Networks)."
+    regra: "Segmentação eficaz combina zonas bem definidas, controles de tráfego e monitoramento; sub-redes isoladas apenas no desenho não bastam.",
+    pegadinha: "A segmentação reduz risco, mas sua eficácia depende das regras e da aplicação real dos controles.",
+    fonte: "NIST SP 800-207 — Zero Trust Architecture: https://csrc.nist.gov/pubs/sp/800/207/final; NIST SP 800-53 Rev. 5, SC-7 — Boundary Protection: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
   { id: "q-m4-64", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — Hardening",
-    contexto: "Hardening é o processo de reforçar a segurança de sistemas e redes.",
-    enunciado: "Hardening (afeitamento/agentar a segurança) de sistemas é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Hardening e redução da superfície de ataque",
+    contexto: "Um servidor recém-instalado mantém serviços padrão desnecessários, contas antigas, permissões amplas e atualizações pendentes.",
+    enunciado: "Qual conjunto de medidas representa uma abordagem adequada de hardening?",
     alternativas: [
-      { letra: "A", texto: "O processo de reforçar a segurança de sistemas e redes, desabilitando serviços desnecessários, aplicando patchs e configurações seguras." },
-      { letra: "B", texto: "O processo de instalar mais softwares." },
-      { letra: "C", texto: "O processo de desativar o firewall." },
-      { letra: "D", texto: "O processo de excluir conforme normas." },
-      { letra: "E", texto: "O processo de aumentar o tráfego de rede." }
+      { letra: "A", texto: "Desabilitar serviços e contas desnecessários, aplicar atualizações testadas, restringir privilégios e adotar uma configuração segura documentada." },
+      { letra: "B", texto: "Instalar ferramentas adicionais sem avaliar suas necessidades ou permissões." },
+      { letra: "C", texto: "Desativar o firewall para evitar conflitos e manter as configurações padrão." },
+      { letra: "D", texto: "Aplicar patches aleatórios em produção sem avaliação ou plano de reversão." },
+      { letra: "E", texto: "Compartilhar a conta administrativa para facilitar a operação e evitar atrasos." }
     ],
     gabarito: "A",
-    justificativa: "Hardening é o processo de reforçar a segurança de sistemas, desabilitando serviços desnecessários, aplicando patchs e configurações seguras para reduzir a superfície de ataque. Instalar mais softwares (alternativa B incorreta); desativar firewall (alternativa C incorreta); excluir conforme normas (alternativa D incorreta); aumentar tráfego (alternativa E incorreta).",
+    justificativa: "Hardening busca reduzir a superfície de ataque por meio de configuração segura, remoção ou desativação do que não é necessário, aplicação controlada de atualizações, restrição de privilégios e revisão de contas e serviços. As medidas precisam ser testadas e mantidas ao longo do ciclo de vida do sistema para não introduzir indisponibilidade ou regressões.",
     analise: {
-      A: "CORRETA. Hardening é o processo de reforçar a segurança, desabilitar serviços desnecessários e aplicar configurações seguras.",
-      B: "INCORRETA. Instalar mais softwares amplia a superfície de ataque, não segurança.",
-      C: "INCORRETA. Hardening não é desativar firewall.",
-      D: "INCORRETA. Exclusão de dados não é hardening.",
-      E: "INCORRETA. Aumentar tráfego não é hardening."
+      A: "CORRETA. A alternativa reúne redução de superfície, atualização controlada, privilégio mínimo e configuração documentada.",
+      B: "INCORRETA. Instalar ferramentas sem necessidade pode ampliar a superfície de ataque.",
+      C: "INCORRETA. Desativar controles e manter padrões inseguros contraria o hardening.",
+      D: "INCORRETA. Atualizações devem ser priorizadas, testadas e implantadas com controles adequados, não aleatoriamente.",
+      E: "INCORRETA. Contas administrativas compartilhadas enfraquecem a rastreabilidade e ampliam o impacto de comprometimento."
     },
-    regra: "Hardening = 'tirar a faca dos sistema'. Desabilitar o que não é necessário.",
-    pegadinha: "Hardening não é 'adormecer o sistema' — é 'fortalecer a postura de segurança'.",
-    fonte: "CIS Controls — Critical Security Controls, v8."
+    regra: "Hardening = reduzir a superfície de ataque com configuração segura, serviços mínimos, atualizações controladas e privilégios adequados.",
+    pegadinha: "Hardening não é instalar mais ferramentas nem alterar produção sem teste; é reduzir exposições com mudanças controladas.",
+    fonte: "CIS Critical Security Controls v8.1: https://www.cisecurity.org/controls/v8; NIST SP 800-123 — Guide to General Server Security: https://csrc.nist.gov/pubs/sp/800/123/final."
   },
 
   { id: "q-m4-65", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — Gestão de Vulnerabilidades",
-    contexto: "A gestão de vulnerabilidades é um processo contínuo de identificação, avaliação e correção.",
-    enunciado: "A gestão de vulnerabilidades envolve:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Priorização de vulnerabilidades",
+    contexto: "Um scanner identifica dezenas de vulnerabilidades. Algumas têm pontuação técnica alta, mas não estão expostas; outra, de pontuação menor, afeta um serviço crítico exposto à internet e já tem exploração conhecida.",
+    enunciado: "Qual estratégia de gestão de vulnerabilidades é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Ignorar vulnerabilidades." },
-      { letra: "B", texto: "Criptografar vulnerabilidades." },
-      { letra: "C", texto: "Identificar, avaliar e corrigir vulnerabilidades de sistemas e aplicações." },
-      { letra: "D", texto: "Excluir todos os sistemas." },
-      { letra: "E", texto: "Aplicar patches aleatórios." }
+      { letra: "A", texto: "Corrigir sempre apenas pela pontuação técnica, sem considerar exposição ou criticidade do ativo." },
+      { letra: "B", texto: "Ignorar as vulnerabilidades de menor pontuação até que um incidente ocorra." },
+      { letra: "C", texto: "Priorizar considerando severidade, exploração conhecida, exposição, criticidade do ativo e impacto; remediar ou mitigar, verificar a correção e documentar exceções." },
+      { letra: "D", texto: "Aplicar todos os patches em qualquer ordem, diretamente em produção e sem teste." },
+      { letra: "E", texto: "Considerar a execução do scanner prova de que todas as vulnerabilidades foram encontradas." }
     ],
     gabarito: "C",
-    justificativa: "Gestão de vulnerabilidades é o processo contínuo de identificar, avaliar, priorizar e corrigir (patchs, configurações) as fraquezas de sistemas e aplicações. Ignorar (alternativa A incorreta); criptografar (alternativa B incorreta); excluir sistemas (alternativa D incorreta); patches aleatórios (alternativa E incorreta).",
+    justificativa: "A priorização deve combinar gravidade técnica com contexto operacional: exploração ativa ou conhecida, exposição, importância do ativo, impacto potencial e controles existentes. A correção deve ser verificada; quando não for possível corrigir imediatamente, a organização precisa definir mitigação, prazo, responsável e aceite formal do risco conforme sua governança. Scanners têm limites e não provam ausência de vulnerabilidades.",
     analise: {
-      A: "INCORRETA. Ignorar vulnerabilidades aumenta o risco.",
-      B: "INCORRETA. Criptografia não corrige vulnerabilidades — pode protegê-las.",
-      C: "CORRETA. Gestão de vulnerabilidades identifica, avalia e corrige fraquezas de sistemas.",
-      D: "INCORRETA. Eliminar todos os sistemas não é gestão de vulnerabilidades.",
-      E: "INCORRETA. Patches aleatórios são ineficazes — a gestão é sistemática e prioritária."
+      A: "INCORRETA. Uma pontuação isolada não representa todo o risco do ambiente.",
+      B: "INCORRETA. Vulnerabilidades de menor pontuação podem ser críticas no contexto de exposição e impacto.",
+      C: "CORRETA. A alternativa combina risco contextual, remediação/mitigação, verificação e governança das exceções.",
+      D: "INCORRETA. Mudanças precisam de planejamento e teste proporcionais ao risco para evitar falhas operacionais.",
+      E: "INCORRETA. Scanners podem produzir falsos positivos e negativos e não cobrem necessariamente todos os ativos e falhas."
     },
-    regra: "Gestão de vulnerabilidades = 'escavar'. Encontrar, classificar e remover pontos fracos.",
-    pegadinha: "Não confunda: gestão de vulnerabilidades não é 'esse bug é corrigido' — é 'um processo contínuo'.",
-    fonte: "NIST SP 800-40 (Guide to Enterprise Patch Management)."
+    regra: "Priorize vulnerabilidades pelo risco contextual e verifique a remediação; registre mitigação e exceções quando a correção imediata não for viável.",
+    pegadinha: "Pontuação técnica e resultado de scanner são insumos, não uma avaliação completa nem prova de segurança.",
+    fonte: "NIST SP 800-40 Rev. 4 — Guide to Enterprise Patch Management Planning: https://csrc.nist.gov/pubs/sp/800/40/r4/final; CISA, Known Exploited Vulnerabilities Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog."
   },
 
   { id: "q-m4-66", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
