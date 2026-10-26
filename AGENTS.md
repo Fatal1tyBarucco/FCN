@@ -969,6 +969,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m4-80: prontidão depende de papéis claros, exercícios, comunicação e atualização baseada em lições aprendidas.
 - Revisão focal; nenhum ajuste de conteúdo foi necessário nessa faixa. A seguir, conferir q-m4-81..q-m4-85, executar verificações de integridade global e inspecionar o CI do HEAD atual.
 
+## Fechamento da revisão focal M4 q-m4-81..q-m4-85 e fonte q-m4-04 (2026-10-26)
+
+- q-m4-81..q-m4-85: conferidas coerência entre enunciado, alternativas, gabarito, justificativas e limites conceituais de controles preventivos/detectivos/corretivos, triagem de alertas, recuperação, controle compensatório e distinção ameaça/vulnerabilidade/risco.
+- q-m4-04: corrigida referência bibliográfica. A referência anterior atribuía incorretamente as categorias “preventivo” e “corretivo” às famílias CP e CA do NIST SP 800-53. A fonte agora é o CISA Cyber Resilience Review (CRR) Supplemental Resource Guide, que descreve explicitamente controles preventivos, detectivos, corretivos e compensatórios.
+- Commit de conteúdo: `cdde6523216277e6b85d29528d61a2ef3d7ab188`.
+- Verificação estrutural programática preliminar confirmou 85 IDs únicos q-m4-01..q-m4-85 e 84 questões de múltipla escolha + uma questão certo/errado. A validação detalhada de análise/gabarito deve ser feita com parser compatível com os dois formatos; uma primeira regex genérica não foi conclusiva para objetos de análise multilinha e não deve ser tratada como falha do conteúdo.
+- CI precisa ser conferido no HEAD final; não considerar runs de HEADs anteriores como certificação deste commit.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
