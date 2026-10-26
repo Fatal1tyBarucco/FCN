@@ -208,7 +208,7 @@ const moduleQuestions5 = [
   },
 
 { id: "q-m5-09", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m5-u1-t3-s1", assunto: "5.1 — Avaliação de desempenho e qualidade",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Métricas de avaliação",
     contexto: "Um modelo apresenta boa métrica média em um conjunto de teste, mas a equipe ainda precisa decidir se ele está pronto para apoiar um serviço público.",
     enunciado: "Qual procedimento oferece a avaliação mais responsável?",
     alternativas: [
