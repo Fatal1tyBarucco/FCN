@@ -726,6 +726,17 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Fechada a string sem alterar o conteúdo da referência. Commit: `1055f2902ecacdb8c40d3002bfbd21300dd2224f`.
 - Feita varredura textual adicional nos seis arquivos de questões: nenhuma linha de propriedade string sem fechamento de aspas e nenhuma propriedade A–E consecutiva sem vírgula foi detectada. Isso é uma verificação estática auxiliar, não substitui `node --check` do CI.
 
+## Auditoria semântica incremental — lote M7 q-m7-16 a q-m7-40 (2026-10-26)
+
+- q-m7-16 a q-m7-20: revisão focal de unicidade, tempestividade, acurácia/completude/validade, reconciliação entre fontes e trade-offs de deduplicação. Mantidas as distinções entre presença, conformidade, correspondência com a realidade e perda de histórico.
+- q-m7-21 a q-m7-25: revisados ETL/ELT, pseudonimização versus anonimização, efeitos de duplicidade, códigos numéricos nominais e ciclo de vida/retenção. As respostas mantêm os limites de finalidade e a necessidade de não confundir formato com significado.
+- q-m7-26: corrigida a regra didática que afirmava que apenas a ausência completamente aleatória (MCAR) admite imputação relativamente segura. A versão atual distingue MCAR/MAR/MNAR e esclarece que a adequação da imputação depende das hipóteses e do método; quando a ausência depende do próprio valor não observado, imputação simples não elimina o viés.
+- q-m7-27 a q-m7-30: revisão focal de erro de tipo/ordenação lexicográfica, z-score, primeira forma normal e papéis de governança de dados.
+- q-m7-31 a q-m7-35: revisados falsos positivos/negativos de deduplicação, papéis LGPD, escolha ETL/ELT por sensibilidade, contagem de ausências incluindo zeros substitutos e taxa de duplicidade. Os cálculos (9,2% de ausência em 23/250; 6% de linhas excedentes em 60/1.000) conferem.
+- q-m7-36 a q-m7-40: revisados limites do min-max fora da amostra de ajuste, distinção entre normalização estatística e de banco de dados, média ponderada de grupos, risco de reidentificação por quasi-identificadores e revisão de acesso/minimização.
+- Commit de correção q-m7-26: `61edfbd23d77fb4173b50d76be94a3197f381afd`.
+- Revisão semântica focal do M7 concluída nas 40 questões identificadas no arquivo atual; isso não substitui validação automatizada, auditoria de cobertura curricular ou conferência final das referências do currículo.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
