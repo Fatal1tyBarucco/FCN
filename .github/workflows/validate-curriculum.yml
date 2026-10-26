@@ -62,6 +62,9 @@ jobs:
       - name: Browser smoke test in file URL mode
         run: node verificacao/test-browser-smoke.cjs
 
+      - name: Browser interaction regression tests in file URL mode
+        run: node verificacao/test-browser-interactions.cjs
+
       - name: Upload generated audit reports
         if: always()
         uses: actions/upload-artifact@v4
