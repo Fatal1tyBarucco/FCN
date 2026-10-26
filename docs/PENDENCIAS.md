@@ -259,9 +259,11 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 
 ## Fase 2 — inspeção remota (2026-10-25)
 
-- [ ] Consultar o resultado final do workflow `validate-curriculum` para o HEAD mais recente do PR #17; a execução consultada ainda estava em fila.
+- [x] Consultar o workflow `validate-curriculum` para o HEAD `ba914e349d9f97809968c986a366702389742e29`: execução 40253838180 concluída com `success`. O workflow agregado do PR ainda estava em execução na última consulta; verificar novamente antes de considerar todos os checks concluídos.
 - [ ] Reconciliar a contagem de flashcards/questões e a matriz CSV com o mesmo SHA do branch.
 - [ ] Revisar os scripts de auditoria para falsos negativos e limites de análise textual.
 - [ ] Fazer revisão semântica estratificada de questões e fontes, priorizando gabaritos concentrados em A/B e módulos com distribuição extrema.
 - [ ] Auditar os seis simuladores por entradas inválidas, limites e consistência dos resultados; UI montada não basta.
 - [ ] Testar teclado/leitor de tela, responsividade física, síntese de voz e embeds em ambiente apropriado.
+
+- [ ] **P1 — integração de persistência:** `storage.js` está carregado, mas seu próprio cabeçalho declara que navegação, flashcards e questões continuam gravando em namespaces separados no `localStorage`. Definir contrato único ou documentar/validar interoperabilidade, migração, backup e recuperação antes de declarar a persistência integrada.
