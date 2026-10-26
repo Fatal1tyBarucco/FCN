@@ -576,7 +576,7 @@
     return '<div class="sim-dados">'
       + '<h3>Simulador de Dados e Visualização (Seção 7.5)</h3>'
       + '<p class="sim-dados-sub">Edite o conjunto de dados à direita — todos os gráficos e estatísticas recalculam em tempo real. Implementação própria em SVG (sem Chart.js).</p>'
-      + '<nav class="sim-dados-nav" aria-label="Seções do simulador">'
+      + '<nav class="sim-dados-nav" aria-label="Navegação das seções do simulador de dados">'
       + '<button type="button" class="sim-dados-nav-btn" data-act="nav" data-target="table">1. Dados editáveis</button>'
       + '<button type="button" class="sim-dados-nav-btn" data-act="nav" data-target="stats">2. Estatísticas</button>'
       + '<button type="button" class="sim-dados-nav-btn" data-act="nav" data-target="charts">3. Gráficos</button>'
