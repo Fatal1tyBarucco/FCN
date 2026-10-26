@@ -1050,6 +1050,82 @@ const moduleQuestions6 = [
     },
     regra: "Ao conciliar transparência e proteção de dados, identifique a base legal de eventual restrição e viabilize acesso à parte não protegida; a ocultação precisa ser efetiva.",
     pegadinha: "Evite os dois extremos: divulgar indiscriminadamente dados protegidos ou negar todo o documento só porque contém algum dado pessoal.",
-    fonte: "Lei nº 12.527/2011 (LAI), arts. 7º, § 2º, e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Ministério da Gestão e da Inovação em Serviços Públicos, Boas práticas em anonimização de dados, publicado em 19/05/2026: https://www.gov.br/gestao/pt-br/acesso-a-informacao/privacidade-e-protecao-de-dados/lgpd-no-mgi-1/anonimizacao/boas-praticas-em-anonimizacao-de-dados."
+    fonte: "Lei nº 12.527/2011 (LAI), arts. 7º, § 2º, e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Ministério da Gestão e da Inovação em Serviços Públicos, Boas práticas em anonimização de dados, publicado em 19/05/2026: https://www.gov.br/gestao/pt-br/acesso-a-informacao/privacidade-e-protecao-de-dados/lgpd-no-mgi-1/anonimizacao/boas-praticas-em-anonimizacao-de-dados.",
+  {
+    id: "q-m6-45", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "intermediario",
+    topico: "m6-u1-t3", assunto: "6.1 — Síntese aplicada dos princípios administrativos",
+    contexto: "Uma equipe de governo digital propõe automatizar a concessão de um benefício. O sistema reduz o tempo médio de resposta, mas não documenta critérios, não permite contestação e não prevê revisão de decisões potencialmente equivocadas.",
+    enunciado: "Qual encaminhamento melhor concilia eficiência administrativa com os demais princípios aplicáveis ao serviço público?",
+    alternativas: [
+      { letra: "A", texto: "Implantar imediatamente, pois a melhoria da velocidade torna dispensáveis os demais controles." },
+      { letra: "B", texto: "Suspender toda automação pública, porque decisões administrativas nunca podem ser apoiadas por sistemas digitais." },
+      { letra: "C", texto: "Definir critérios e responsabilidades, documentar decisões, testar riscos e vieses, prever revisão humana proporcional ao risco e oferecer canal de contestação." },
+      { letra: "D", texto: "Manter o sistema sem documentação, desde que a taxa média de atendimento seja superior à do processo manual." },
+      { letra: "E", texto: "Delegar a responsabilidade integral ao fornecedor do software e dispensar monitoramento após a implantação." }
+    ],
+    gabarito: "C",
+    justificativa: "A eficiência é relevante, mas não afasta legalidade, impessoalidade, publicidade na medida cabível, motivação, controle e responsabilização. Um serviço automatizado precisa ter critérios definidos, avaliação de riscos, registro suficiente, mecanismos de correção e revisão compatíveis com o impacto das decisões.",
+    analise: {
+      A: "INCORRETA. Ganho de velocidade não elimina os demais deveres administrativos nem justifica decisões sem controle.",
+      B: "INCORRETA. A automação pode apoiar serviços públicos, desde que haja governança, controles e respeito aos direitos aplicáveis.",
+      C: "CORRETA. A alternativa combina critérios transparentes, responsabilização, avaliação de risco e mecanismos de revisão e contestação.",
+      D: "INCORRETA. Um indicador médio não demonstra, sozinho, legalidade, equidade, qualidade ou correção de decisões individuais.",
+      E: "INCORRETA. A contratação de fornecedor não elimina a responsabilidade do órgão pela governança e supervisão do serviço."
+    },
+    regra: "A eficiência deve ser conciliada com legalidade, impessoalidade, transparência cabível, motivação, controle e responsabilização.",
+    pegadinha: "Não confundir melhoria de desempenho médio com prova suficiente de que cada decisão é correta, justa e contestável.",
+    fonte: "Constituição Federal, art. 37, caput, texto oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm."
+  },
+  {
+    id: "q-m6-46", modulo: 6, formato: "mc", estilo: "vunesp", origem: "autoral", nivel: "intermediario",
+    topico: "m6-u4-t3", assunto: "6.4 — Síntese aplicada de comunicação e conduta digital",
+    contexto: "Um perfil institucional publica informação incorreta sobre um serviço. A equipe identifica o erro, mas alguns responsáveis defendem apagar silenciosamente a publicação e não registrar a correção para evitar críticas.",
+    enunciado: "Qual procedimento é mais adequado para uma comunicação pública responsável?",
+    alternativas: [
+      { letra: "A", texto: "Apagar a publicação sem explicação e impedir que usuários solicitem esclarecimentos." },
+      { letra: "B", texto: "Corrigir a informação com clareza, registrar a retificação conforme o procedimento do órgão, orientar o público afetado e preservar evidências necessárias à prestação de contas." },
+      { letra: "C", texto: "Manter a informação incorreta para não demonstrar falha institucional." },
+      { letra: "D", texto: "Transferir a responsabilidade aos usuários que compartilharam a publicação." },
+      { letra: "E", texto: "Responder apenas por mensagens privadas, sem corrigir o conteúdo público que continua circulando." }
+    ],
+    gabarito: "B",
+    justificativa: "A comunicação institucional deve ser confiável, responsável e orientada ao interesse público. Corrigir publicamente uma informação errada reduz a propagação do erro e permite que quem recebeu a mensagem identifique a versão válida. O registro da correção deve seguir as regras de governança e preservação aplicáveis.",
+    analise: {
+      A: "INCORRETA. A exclusão silenciosa pode deixar o público sem contexto e não corrige cópias já compartilhadas.",
+      B: "CORRETA. A retificação clara, o registro e a orientação ao público favorecem transparência e responsabilização.",
+      C: "INCORRETA. Preservar uma informação sabidamente errada agrava o risco de desinformação.",
+      D: "INCORRETA. O órgão deve corrigir a informação que publicou e não deslocar a responsabilidade para o público.",
+      E: "INCORRETA. Mensagens privadas não corrigem a publicação pública que continua acessível ou compartilhada."
+    },
+    regra: "Erros em comunicação institucional devem ser corrigidos de forma clara, rastreável e proporcional ao alcance e ao impacto da informação.",
+    pegadinha: "Apagar o post não garante que o erro deixou de circular; a correção precisa alcançar o público que recebeu a informação.",
+    fonte: "Secretaria de Comunicação Social da Presidência da República, Guia de boas práticas para atuação de redes sociais do Governo Federal: https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf."
+  },
+  {
+    id: "q-m6-47", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "intermediario",
+    topico: "m6-u5-t3", assunto: "6.5 — Síntese aplicada de acessibilidade e inclusão",
+    contexto: "Após reformular um serviço digital, a equipe observa que mais usuários concluem o formulário. Ainda não testou navegação por teclado, leitor de tela nem a compreensão das mensagens de erro por pessoas com diferentes necessidades.",
+    enunciado: "Qual conclusão e próxima ação são tecnicamente mais adequadas?",
+    alternativas: [
+      { letra: "A", texto: "O aumento da conclusão comprova conformidade integral com os requisitos de acessibilidade." },
+      { letra: "B", texto: "Basta verificar contraste de cores, pois os demais aspectos são preferências individuais." },
+      { letra: "C", texto: "A equipe deve avaliar apenas usuários sem deficiência para manter os resultados comparáveis." },
+      { letra: "D", texto: "O indicador é útil, mas insuficiente sozinho; é necessário testar critérios aplicáveis, navegação por teclado, tecnologia assistiva, compreensão e tarefas com usuários diversos." },
+      { letra: "E", texto: "A acessibilidade pode ser adiada se o serviço apresentar bom desempenho em dispositivos móveis." }
+    ],
+    gabarito: "D",
+    justificativa: "Uma métrica agregada de conclusão ajuda a avaliar o serviço, mas não demonstra sozinha a conformidade com requisitos de acessibilidade nem revela todas as barreiras. A avaliação deve combinar critérios técnicos aplicáveis, testes de teclado e tecnologias assistivas, conteúdo compreensível e participação de usuários com necessidades diversas.",
+    analise: {
+      A: "INCORRETA. Melhoria de uma métrica não prova atendimento a todos os critérios de acessibilidade.",
+      B: "INCORRETA. Contraste é apenas uma dimensão; também importam teclado, estrutura, nomes acessíveis, mensagens e outras barreiras.",
+      C: "INCORRETA. Excluir pessoas com deficiência impede observar barreiras relevantes para a população usuária.",
+      D: "CORRETA. Combina métricas de resultado com verificações técnicas e avaliação com usuários diversos.",
+      E: "INCORRETA. Desempenho responsivo não substitui acessibilidade e não justifica postergar a remoção de barreiras."
+    },
+    regra: "A acessibilidade deve ser avaliada por critérios técnicos aplicáveis, testes de interação e evidências de uso por pessoas com diferentes necessidades.",
+    pegadinha: "Uma taxa de conclusão melhor pode coexistir com barreiras específicas que afetam grupos de usuários.",
+    fonte: "W3C, Web Content Accessibility Guidelines (WCAG) 2.2: https://www.w3.org/TR/WCAG22/; Governo Digital, Modelo de Acessibilidade em Governo Eletrônico (eMAG): https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/modelo-de-acessibilidade."
+  }
+
   }
   ];
