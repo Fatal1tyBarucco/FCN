@@ -62,7 +62,7 @@ function parseQuestions(path) {
     if (/\bAutoridade Nacional de Proteção de Dados\b/.test(allText) && !/denominação anterior|denominação histórica|historicamente/i.test(allText)) {
       flags.push("possível denominação histórica da ANPD");
     }
-    if (/\bTODO\b|\bTBD\b|lorem ipsum|texto de preenchimento|preencher aqui|substituir aqui/i.test(allText)) {
+    if (/\b(?:TODO|TBD)\b/.test(allText) || /lorem ipsum|texto de preenchimento|preencher aqui|substituir aqui/i.test(allText)) {
       flags.push("possível placeholder ou texto de desenvolvimento");
     }
     return {
@@ -86,9 +86,13 @@ for (const question of questions) {
   else seenContextStem.set(key, question.id);
 }
 const byModule = {}, answerDistribution = {}, formatDistribution = {};
+const multipleChoiceAnswerDistribution = { A: 0, B: 0, C: 0, D: 0, E: 0 };
 for (const question of questions) {
   byModule[question.module] = (byModule[question.module] || 0) + 1;
   answerDistribution[question.answer] = (answerDistribution[question.answer] || 0) + 1;
+  if (question.alternatives.length && Object.hasOwn(multipleChoiceAnswerDistribution, question.answer)) {
+    multipleChoiceAnswerDistribution[question.answer] += 1;
+  }
   formatDistribution[question.format] = (formatDistribution[question.format] || 0) + 1;
 }
 const flagged = questions.filter(question => question.flags.length);
@@ -113,7 +117,9 @@ const report = [
   "- Questões com pelo menos um alerta heurístico: **" + flagged.length + "**.",
   "- Pares com contexto + enunciado idênticos: **" + duplicateContextStems.length + "**.",
   "- Distribuição por módulo: " + Object.entries(byModule).sort(([a], [b]) => Number(a) - Number(b)).map(([module, count]) => "M" + module + "=" + count).join(", ") + ".",
-  "- Distribuição de gabaritos: " + Object.entries(answerDistribution).map(([answer, count]) => answer + "=" + count).join(", ") + ".",
+  "- Distribuição de gabaritos (incluindo C/E): " + Object.entries(answerDistribution).map(([answer, count]) => answer + "=" + count).join(", ") + ".",
+  "- Distribuição de gabaritos MC (A-E): " + Object.entries(multipleChoiceAnswerDistribution).map(([answer, count]) => answer + "=" + count).join(", ") + ".",
+  ...(multipleChoiceAnswerDistribution.D === 0 ? ["- Revisão manual recomendada: nenhuma questão de múltipla escolha tem gabarito D; confirmar a distribuição das posições sem alterar respostas corretas por conveniência."] : []),
   "- Distribuição de formato: " + Object.entries(formatDistribution).map(([format, count]) => format + "=" + count).join(", ") + ".", "",
   "## Alertas", "",
   ...(flagged.length ? flagged.slice(0, 250).map(question => "- " + question.id + " (" + question.path + "): " + question.flags.join("; ")) : ["Nenhum alerta heurístico detectado."]), "",
@@ -130,6 +136,6 @@ console.log(JSON.stringify({
   duplicateIds: [...idCounts.values()].filter(count => count > 1).length,
   flaggedQuestions: flagged.length,
   duplicateContextStems: duplicateContextStems.length,
-  byModule, answerDistribution, formatDistribution,
+  byModule, answerDistribution, multipleChoiceAnswerDistribution, formatDistribution,
   outputs: ["docs/MATRIZ_QUALIDADE_QUESTOES.csv", "docs/RELATORIO_QUALIDADE_QUESTOES.md"]
 }, null, 2));
