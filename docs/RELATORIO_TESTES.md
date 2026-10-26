@@ -508,3 +508,10 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - O teste Playwright agora exige uma lista vazia de violações axe-core, incluindo níveis moderados, além de bloquear explicitamente níveis críticos/graves.
 - As verificações incompletas de contraste, frames e correspondência entre rótulo e conteúdo não foram reportadas como violações. A auditoria automatizada não substitui validação manual, leitor de tela nem teste em dispositivos físicos.
 
+## Atualização de fontes das questões — 2026-10-26 (aguardando CI)
+
+- Adicionadas fontes oficiais às questões `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36`, antes identificadas como as quatro lacunas no campo fonte.
+- Atualizados `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md` com Cisco, Zoom Support e Google Meet Help.
+- Contagem anterior: 395/399 com fonte detectada. A expectativa após esta mudança é 399/399, pendente de reexecução da auditoria automatizada.
+- A consulta às páginas oficiais sustenta os pontos técnicos referenciados; não houve validação HTTP automatizada individual de todas as URLs. Revisão semântica completa e manual segue pendente.
+- Novo CI ainda precisa validar sintaxe, auditorias, smoke test `file://` e testes interativos no HEAD atualizado.
