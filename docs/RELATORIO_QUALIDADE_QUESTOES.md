@@ -189,3 +189,13 @@ Lote revisado no texto versionado de `apostila-ia/assets/data/questions_m6.js`, 
 
 **Resultado do lote:** refinados um distrator potencialmente ambíguo e o conteúdo mínimo dos controles de fonte e vigência. Gabaritos mantidos. A fonte indicada continua sendo o tópico curricular interno; esta revisão não afirma validação independente de fontes externas nem substitui políticas institucionais específicas.
 
+## Revisão semântica dirigida — lote M5 q31–q35 — 2026-10-26
+
+- **`q-m5-31` — avaliação de prompts:** gabarito A coerente. A justificativa foi refinada: conjunto versionado e métrica pré-definida favorecem comparação consistente, mas não garantem sozinhos uma comparação justa ou reprodutível; também é necessário registrar condições e configurações.
+- **`q-m5-32` — prompt como artefato de governança:** gabarito A coerente. Corrigida a formulação sobre alterações não registradas, sem mudar o conceito.
+- **`q-m5-33` — segredos no prompt:** gabarito “errado” coerente. A presença de segredos no contexto não deve ser tratada como segura com base na ausência de vazamento observado; controles de acesso e validação de saídas continuam necessários.
+- **`q-m5-34` — implantação responsável:** gabarito A coerente. Reforçado que testes iniciais não substituem registro de versão, monitoramento e reavaliação.
+- **`q-m5-35` — generalização:** definição e gabarito A coerentes; aplicar o modelo a outro setor também exige verificar se a distribuição dos dados e o desempenho permanecem adequados.
+
+**Resultado do lote:** uma precisão conceitual sobre os limites da avaliação e dois ajustes editoriais. Nenhum gabarito foi alterado. As referências bibliográficas declaradas nas questões não foram auditadas individualmente nesta rodada.
+
