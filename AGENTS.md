@@ -689,6 +689,17 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `6d998a2c2c56a831447c4aebca0bd1bde799c506`.
 - Revisão focal; validar automaticamente no HEAD atual.
 
+## Auditoria semântica incremental — lote M6 q-m6-31 a q-m6-35 (2026-10-26)
+
+- q-m6-31: mantida a orientação de que redes sociais institucionais são canal complementar, não substituto do sítio oficial obrigatório pela LAI; credenciais compartilhadas e publicação por conta pessoal foram tratadas como falhas de governança/rastreabilidade, sem atribuir esses requisitos a artigo legal que não os prevê.
+- q-m6-32: conflito de interesses em contratação pública revisado à luz da Lei nº 12.813/2013; parentesco gera necessidade de avaliação preventiva conforme o ato, benefício possível e competência, sem presumir infração consumada nem exoneração automática.
+- q-m6-33: mantida a responsabilização por divulgação indevida de dados obtidos em razão do cargo, independentemente de a publicação ocorrer em conta pessoal ou mencionar o órgão.
+- q-m6-34: mantida a distinção entre acessibilidade e inclusão digital; PDF e formato aberto não garantem acessibilidade sem estrutura e recursos compatíveis.
+- q-m6-35: mantida a interpretação de que digitalização não extingue automaticamente atendimento presencial; a Lei nº 14.129/2021 prevê a permanência dessa possibilidade conforme serviço, relevância e público-alvo.
+- Adicionadas URLs oficiais do Planalto para LAI, LGPD e Lei nº 14.129/2021 nas fontes correspondentes.
+- Commit de conteúdo: `d6f4f963ba4976c5c785dba456e0fae0a8bc3a4b`.
+- Revisão focal; confirmar CI no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
