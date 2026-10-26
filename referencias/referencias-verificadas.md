@@ -351,3 +351,10 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - A página editorial da PLOS confirma título, autoria, data de publicação e DOI. O artigo discute limitações de interpretar classificadores em bases desbalanceadas apenas por métricas/curvas agregadas e explica a utilidade de precisão-revocação nesse contexto.
 - Aplicação no projeto: q-m5-20 usa o exemplo de 1% de positivos para demonstrar que prever sempre a classe negativa gera 99% de acurácia, mas recall zero para a classe positiva. O cenário é didático e autoral; não é dado empírico extraído do artigo.
 - Verificação: página editorial da PLOS consultada em 2026-10-26.
+## Fontes oficiais adicionadas — redes e plataformas de reunião (2026-10-26)
+
+- Cisco, *Catalyst 6500 16-Port 10 Gigabit Ethernet Copper Module*: https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html. A página informa 10GBASE-T até 55 m em Cat6 UTP e até 100 m em Cat6 blindado/Cat6A/Cat7. Aplicação: q-m2-26 e q-m2-32.
+- Zoom Support, *Comparação entre licenças para reuniões e webinars*: https://support.zoom.com/hc/pb/article?id=zm_kb&sysparm_article=KB0062412. A capacidade depende da licença; aplicação: q-m3-19.
+- Zoom Support, *Managing webinar breakout rooms*: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838. A documentação descreve requisitos de licença e aplicativo desktop/móvel para salas paralelas em webinars. Aplicação: q-m3-19 e q-m3-36.
+- Google Meet Help, *Saiba quais requisitos você precisa para usar o Google Meet*: https://support.google.com/meet/answer/7317473?hl=pt-BR. A página lista navegadores compatíveis para reuniões do Meet. Aplicação: q-m3-36.
+- As páginas oficiais foram localizadas e seu conteúdo relevante foi consultado em 2026-10-26. A presença da referência não substitui revisão semântica completa do item nem confirma que cada formulação de questão seja universal para todos os planos e contextos.
