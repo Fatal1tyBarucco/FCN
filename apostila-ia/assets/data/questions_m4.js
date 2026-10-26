@@ -1654,128 +1654,128 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-66", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-2", assunto: "4.4 — WAF",
-    contexto: "WAF (Web Application Firewall) protege aplicações web contra ataques específicos.",
-    enunciado: "Um WAF (Web Application Firewall) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-2", assunto: "4.2 — WAF e proteção de aplicações web",
+    contexto: "Uma aplicação web recebe tentativas de SQL injection e cross-site scripting. A equipe pretende adicionar um controle de segurança sem substituir a correção do código.",
+    enunciado: "Qual afirmação sobre um Web Application Firewall (WAF) é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Um firewall de borda de rede." },
-      { letra: "B", texto: "Um firewall de dados." },
-      { letra: "C", texto: "Um firewall que protege aplicações web contra ataques comuns (SQLi, XSS, etc.)." },
-      { letra: "D", texto: "Um firewall de backup." },
-      { letra: "E", texto: "Um firewall para e-mail." }
+      { letra: "A", texto: "Um WAF pode inspecionar requisições HTTP e bloquear padrões de ataque conforme suas regras, mas não substitui desenvolvimento seguro e correção de vulnerabilidades." },
+      { letra: "B", texto: "Um WAF garante que a aplicação não tenha vulnerabilidades e elimina a necessidade de testes." },
+      { letra: "C", texto: "Um WAF é destinado exclusivamente a filtrar mensagens de e-mail." },
+      { letra: "D", texto: "Um WAF deve bloquear toda requisição legítima para evitar falsos negativos." },
+      { letra: "E", texto: "Um WAF criptografa automaticamente o banco de dados e as cópias de segurança." }
     ],
-    gabarito: "C",
-    justificativa: "WAF é um firewall projetado para proteger aplicações web contra ataques específicos, como SQL injection (SQLi), cross-site scripting (XSS), etc. Firewall de borda (alternativa A incorreta); firewall de dados (alternativa B incorreta); firewall de backup (alternativa D incorreta); firewall para e-mail (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Um WAF atua sobre o tráfego HTTP/HTTPS e pode detectar ou bloquear padrões associados a ataques contra aplicações web. A eficácia depende das regras, do modo de implantação, do contexto e da manutenção; podem ocorrer falsos positivos e falsos negativos. Ele é uma camada complementar, não substitui correção no código, configuração segura ou testes.",
     analise: {
-      A: "INCORRETA. Firewall de borda é um dispositivo de rede, não específico para aplicações web.",
-      B: "INCORRETA. WAF não é firewall de dados — é para aplicações web.",
-      C: "CORRETA. WAF protege aplicações web contra ataques comuns como SQLi e XSS.",
-      D: "INCORRETA. WAF não é firewall de backup.",
-      E: "INCORRETA. WAF não é firewall para e-mail."
+      A: "CORRETA. A alternativa delimita a função típica do WAF e reconhece que ele complementa outras práticas de segurança.",
+      B: "INCORRETA. Um WAF não garante ausência de vulnerabilidades nem substitui testes ou correções.",
+      C: "INCORRETA. Filtragem de e-mail não é a função típica de um WAF.",
+      D: "INCORRETA. Bloquear indiscriminadamente o tráfego legítimo pode interromper o serviço e não é uma estratégia adequada.",
+      E: "INCORRETA. Um WAF não criptografa automaticamente bancos de dados nem backups."
     },
-    regra: "WAF = 'escudo para aplicação web'. Protege contra SQLi, XSS, CSRF e outros ataques.",
-    pegadinha: "WAF não é 'bloquear tudo' — é 'allowlist' de segurança para aplicações web.",
-    fonte: "OWASP — Web Application Firewall (WAF)."
+    regra: "WAF inspeciona e controla tráfego de aplicações web segundo regras; deve complementar, não substituir, correção e testes de segurança.",
+    pegadinha: "Ter WAF não prova que a aplicação está livre de SQL injection, XSS ou outras vulnerabilidades.",
+    fonte: "OWASP, Web Application Firewall: https://owasp.org/www-community/Web_Application_Firewall."
   },
 
   { id: "q-m4-67", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.4 — IDS vs IPS — Detalhe",
-    contexto: "IDS e IPS são complementares, mas com diferenças fundamentais.",
-    enunciado: "Sobre a diferença entre IDS e IPS, é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — IDS/IPS e controles de detecção",
+    contexto: "Uma equipe quer monitorar tráfego suspeito e, em outro ponto da rede, bloquear automaticamente fluxos que correspondam a regras de prevenção.",
+    enunciado: "Qual distinção entre IDS e IPS é a mais precisa?",
     alternativas: [
-      { letra: "A", texto: "O IDS adiciona alertas sobre a atividade suspeita; o IPS impede ou bloqueia o tráfego malintencionoso." },
-      { letra: "B", texto: "O IDS e o IPS são a mesma tecnologia." },
-      { letra: "C", texto: "O IDS impede o tráfego; o IPS apenas monitora." },
-      { letra: "D", texto: "O IDS não monitora." },
-      { letra: "E", texto: "O IPS não gera alertas." }
+      { letra: "A", texto: "IDS é usado para detectar e alertar; IPS pode ser implantado em linha para bloquear tráfego, mas as capacidades e os efeitos dependem da arquitetura e das regras." },
+      { letra: "B", texto: "Todo IDS bloqueia automaticamente o tráfego e todo IPS apenas registra alertas." },
+      { letra: "C", texto: "IDS e IPS são sinônimos e sempre operam de forma idêntica." },
+      { letra: "D", texto: "IPS não pode gerar alertas nem produzir registros." },
+      { letra: "E", texto: "IDS não observa eventos ou tráfego de rede." }
     ],
     gabarito: "A",
-    justificativa: "IDS é monitoramento passivo que gera alertas sobre atividade suspeita; IPS é ativo, impedindo ou bloqueando o tráfego malintencionoso. IDS e IPS não são a mesma tecnologia (alternativa B incorreta); IDS não impede (alternativa C incorreta); IDS monitora sim (alternativa D incorreta); IPS também gera alertas (alternativa E incorreta).",
+    justificativa: "Um IDS é orientado à detecção e ao alerta, enquanto um IPS pode atuar em linha para impedir tráfego que corresponda a regras de prevenção. Implementações podem compartilhar tecnologia e recursos, e alguns produtos integram ambas as funções. A configuração deve equilibrar eficácia, falsos positivos e risco de interromper tráfego legítimo.",
     analise: {
-      A: "CORRETA. IDS = monitoramento e alertas; IPS = bloqueio ativo do tráfego malintencionoso.",
-      B: "INCORRETA. IDS e IPS têm funcionalidades diferentes — um monitora, o outro age.",
-      C: "INCORRETA. IDS não impede — é o IPS que impede o tráfego.",
-      D: "INCORRETA. IDS monitora continuamente o tráfego para gerar alertas.",
-      E: "INCORRETA. IPS, além de bloquear, também gera alertas de segurança."
+      A: "CORRETA. A alternativa descreve a distinção funcional típica e reconhece a dependência da implantação e configuração.",
+      B: "INCORRETA. A descrição inverte os papéis típicos de IDS e IPS.",
+      C: "INCORRETA. As funções são distintas, ainda que possam estar integradas no mesmo produto.",
+      D: "INCORRETA. Um IPS pode registrar eventos e gerar alertas.",
+      E: "INCORRETA. Monitorar eventos ou tráfego para detectar atividade suspeita é função típica de IDS."
     },
-    regra: "IDS = 'olhar e avisar'. IPS = 'olhar, avisar e impedir'. IDS é monitoramento; IPS é bloqueio.",
-    pegadinha: "Não confunda: IDS é 'monitoramento e alerta'; IPS é 'bloqueio e prevenção'.",
-    fonte: "SANS Institute — Intrusion Detection Systems."
+    regra: "IDS detecta e alerta; IPS pode bloquear tráfego em linha. A distinção funcional não significa que todo produto tenha apenas uma capacidade.",
+    pegadinha: "Bloqueio automático pode gerar falso positivo e indisponibilidade; regras e modo de implantação precisam ser testados.",
+    fonte: "NIST SP 800-94 — Guide to Intrusion Detection and Prevention Systems (IDPS): https://csrc.nist.gov/pubs/sp/800/94/final."
   },
 
   { id: "q-m4-68", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — VPN",
-    contexto: "VPN (Virtual Private Network) cria uma conexão segura entre duas redes.",
-    enunciado: "Uma VPN (Virtual Private Network) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — VPN, tunelamento e limites de confiança",
+    contexto: "Uma funcionária acessa a rede corporativa por uma VPN a partir de uma rede Wi-Fi pública.",
+    enunciado: "Qual conclusão sobre a proteção oferecida pela VPN é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Um dispositivo de roteamento." },
-      { letra: "B", texto: "Um protocolo de e-mail." },
-      { letra: "C", texto: "Um método de criar uma rede privada segura sobre uma rede pública (internet)." },
-      { letra: "D", texto: "Um sistema de backup." },
-      { letra: "E", texto: "Um serviço de armazenamento." }
+      { letra: "A", texto: "A VPN pode proteger o tráfego entre o dispositivo e o ponto de terminação do túnel, conforme a configuração, mas não torna automaticamente confiável o dispositivo nem todo destino acessado." },
+      { letra: "B", texto: "A VPN impede qualquer malware, phishing ou roubo de credenciais no dispositivo." },
+      { letra: "C", texto: "Toda VPN garante anonimato absoluto para qualquer atividade online." },
+      { letra: "D", texto: "A VPN torna desnecessários autenticação, atualização e controles de acesso." },
+      { letra: "E", texto: "A VPN sempre protege o tráfego de ponta a ponta até cada aplicação, independentemente da arquitetura." }
     ],
-    gabarito: "C",
-    justificativa: "VPN é um método que cria uma rede privada segura sobre uma rede pública (internet), criptografando o tráfego e garantindo privacidade e integridade. Dispositivo de roteamento (alternativa A incorreta); protocolo de e-mail (alternativa B incorreta); sistema de backup (alternativa D incorreta); serviço de armazenamento (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Uma VPN cria um túnel lógico entre pontos definidos e pode proteger o tráfego nesse percurso por meio de mecanismos criptográficos e autenticação. A proteção termina conforme a arquitetura do túnel e não elimina riscos no endpoint, phishing, malware, configuração incorreta ou observação do tráfego após a terminação. A VPN não garante anonimato absoluto.",
     analise: {
-      A: "INCORRETA. VPN não é um roteador — é um serviço de tunnel seguro.",
-      B: "INCORRETA. VPN não é protocolo de e-mail.",
-      C: "CORRETA. VPN cria uma conexão privada segura sobre a internet pública.",
-      D: "INCORRETA. VPN não é sistema de backup.",
-      E: "INCORRETA. VPN não é serviço de armazenamento."
+      A: "CORRETA. A alternativa delimita o trecho protegido e não atribui à VPN propriedades que dependem de outros controles.",
+      B: "INCORRETA. VPN não impede automaticamente malware, phishing ou comprometimento de credenciais.",
+      C: "INCORRETA. A VPN não garante anonimato absoluto; o provedor, o destino e outros identificadores podem continuar observáveis.",
+      D: "INCORRETA. Autenticação, atualização, controle de acesso e proteção do endpoint continuam necessários.",
+      E: "INCORRETA. A proteção depende dos pontos de terminação e da arquitetura, não necessariamente de ponta a ponta."
     },
-    regra: "VPN = 'canal privado via internet'. Criptografia e tunelamento para acesso seguro.",
-    pegadinha: "VPN não é 'acesso à internet' — é 'privacidade e segurança na internet'.",
-    fonte: "NIST SP 800-77 (VPN)."
+    regra: "VPN protege um túnel entre pontos definidos; não substitui segurança do endpoint, autenticação nem controles no destino.",
+    pegadinha: "“Usar VPN” não significa anonimato absoluto nem proteção integral de toda a atividade digital.",
+    fonte: "NIST SP 800-77 Rev. 1 — Guide to IPsec VPNs: https://csrc.nist.gov/pubs/sp/800/77/r1/final."
   },
 
   { id: "q-m4-69", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.4 — NTP",
-    contexto: "O NTP (Network Time Protocol) é essencial para sincronizar relógios em redes.",
-    enunciado: "O NTP (Network Time Protocol) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Sincronização de tempo e integridade dos logs",
+    contexto: "Após um incidente, os horários registrados por servidores, firewall e ferramenta de identidade divergem vários minutos, dificultando a reconstrução da sequência dos eventos.",
+    enunciado: "Qual medida ajuda a melhorar a correlação temporal dos registros?",
     alternativas: [
-      { letra: "A", texto: "Um protocolo para roteamento de pacotes." },
-      { letra: "B", texto: "Um protocolo de segurança de dados." },
-      { letra: "C", texto: "Um protocolo para sincronizar o relógio de sistemas em uma rede." },
-      { letra: "D", texto: "Um protocolo de e-mail." },
-      { letra: "E", texto: "Um protocolo de backup." }
+      { letra: "A", texto: "Sincronizar os relógios com fontes de tempo confiáveis, monitorar desvios e registrar os horários de forma consistente, protegendo também os próprios logs." },
+      { letra: "B", texto: "Desativar o relógio de todos os servidores para evitar diferenças." },
+      { letra: "C", texto: "Ordenar os eventos apenas pelo nome do arquivo de log." },
+      { letra: "D", texto: "Permitir que cada usuário ajuste o relógio de seu dispositivo sem registro." },
+      { letra: "E", texto: "Presumir que o NTP, por si só, prova a autenticidade de todos os eventos registrados." }
     ],
-    gabarito: "C",
-    justificativa: "NTP é um protocolo de rede para sincronizar o relógio de sistemas em uma rede — essencial para logs, certificados, auditoria e processos que dependem de tempo. Roteamento de pacotes (alternativa A incorreta); protocolo de segurança de dados (alternativa B incorreta); protocolo de e-mail (alternativa D incorreta); protocolo de backup (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Sincronizar relógios com fontes confiáveis e monitorar desvios ajuda a correlacionar eventos de sistemas diferentes. NTP é um protocolo de sincronização de tempo, mas a segurança depende da configuração e da fonte utilizada; sincronização temporal não comprova, por si só, autenticidade ou integridade dos logs.",
     analise: {
-      A: "INCORRETA. NTP não roteia pacotes — é o protocolo de sincronização de tempo.",
-      B: "INCORRETA. NTP não é um protocolo de segurança de dados.",
-      C: "CORRETA. NTP é um protocolo para sincronizar o relógio de sistemas em rede.",
-      D: "INCORRETA. NTP não é protocolo de e-mail.",
-      E: "INCORRETA. NTP não é protocolo de backup."
+      A: "CORRETA. A sincronização monitorada melhora a correlação temporal e deve ser combinada com proteção dos registros.",
+      B: "INCORRETA. Sem horário confiável, a investigação e a correlação de eventos ficam prejudicadas.",
+      C: "INCORRETA. O nome do arquivo não determina a ordem real dos eventos.",
+      D: "INCORRETA. Ajustes livres e não registrados podem introduzir erros ou facilitar adulteração.",
+      E: "INCORRETA. NTP ajuda a sincronizar relógios, mas não garante autenticidade nem integridade dos eventos registrados."
     },
-    regra: "NTP = 'mesmo relógio para todos'. Sincronização de tempo é essencial para auditoria e segurança.",
-    pegadinha: "NTP não é 'roteamento' — é 'sincronização de relógios'.",
-    fonte: "RFC 5905 (Network Time Protocol)."
+    regra: "Sincronize relógios com fontes confiáveis e monitore desvios; trate sincronização temporal e integridade/autenticidade dos logs como controles distintos.",
+    pegadinha: "Horários coerentes ajudam a investigar, mas não provam que um registro é genuíno ou não foi adulterado.",
+    fonte: "RFC 5905 — Network Time Protocol Version 4: https://www.rfc-editor.org/rfc/rfc5905; NIST SP 800-92 — Guide to Computer Security Log Management: https://csrc.nist.gov/pubs/sp/800/92/final."
   },
 
   { id: "q-m4-70", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Dispositivos de Segurança",
-    contexto: "Diversos dispositivos de segurança são utilizados em redes.",
-    enunciado: "O mecanismo mais eficaz para garantir que a comunicação entre dois sistemas seja autêntica e protegida é:",
+    nivel: "avancado", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Comunicação segura e seleção de controles",
+    contexto: "Um sistema de folha de pagamento troca dados sensíveis com outro sistema por uma rede não confiável. A equipe precisa proteger a confidencialidade, detectar alterações e autenticar o servidor remoto.",
+    enunciado: "Qual desenho de segurança atende melhor aos objetivos, sem presumir que um único mecanismo resolva todos os riscos?",
     alternativas: [
-      { letra: "A", texto: "Uso de firewalls apenas." },
-      { letra: "B", texto: "Uso de criptografia, assinatura digital e certificados digitais." },
-      { letra: "C", texto: "Desativação de todos os firewalls." },
-      { letra: "D", texto: "Uso de senha única." },
-      { letra: "E", texto: "Uso de backup automático." }
+      { letra: "A", texto: "Usar apenas firewall de rede, sem proteger o canal nem autenticar o servidor." },
+      { letra: "B", texto: "Usar um protocolo seguro configurado corretamente, validar o certificado e o nome do servidor, empregar criptografia autenticada quando aplicável e gerir adequadamente as chaves." },
+      { letra: "C", texto: "Desativar o firewall e compartilhar uma senha fixa em texto claro." },
+      { letra: "D", texto: "Confiar em qualquer certificado, mesmo inválido, pois a criptografia sempre garante identidade." },
+      { letra: "E", texto: "Fazer backup automático dos dados e dispensar autenticação do canal." }
     ],
     gabarito: "B",
-    justificativa: "Para comunicação autêntica, segura e íntegra, o uso combinado de criptografia, assinatura digital e certificados digitais é o mais eficaz — garantindo confidencialidade, integridade, autenticidade e não repúdio. Uso de firewalls apenas (alternativa A incorreta); desativar firewalls (alternativa C incorreta); senha única (alternativa D incorreta); backup automático (alternativa E incorreta).",
+    justificativa: "A proteção de uma comunicação sensível requer controles compatíveis com os objetivos: um protocolo seguro, validação correta da identidade do servidor, criptografia adequada, gestão de chaves e configuração robusta. Um firewall e um backup podem ser controles complementares, mas não substituem autenticação e proteção do canal. A segurança depende da implementação e da manutenção, não apenas da presença nominal de um mecanismo.",
     analise: {
-      A: "INCORRETA. Firewalls, isoladamente, não garantem autenticidade nem proteção de ponta a ponta.",
-      B: "CORRETA. Criptografia + assinatura + certificados digitais garantem autenticidade, integridade e confidencialidade.",
-      C: "INCORRETA. Desativar firewalls aumenta a exposição, não a segurança.",
-      D: "INCORRETA. Senha única não garante autenticidade ou segurança de comunicação.",
-      E: "INCORRETA. Backup automático não garante segurança de comunicação."
+      A: "INCORRETA. Um firewall isolado não autentica o servidor nem garante confidencialidade e integridade do canal.",
+      B: "CORRETA. A alternativa reúne autenticação do endpoint, proteção criptográfica e gestão de chaves sem prometer segurança absoluta.",
+      C: "INCORRETA. Desativar controles e transmitir senha em texto claro aumenta o risco de comprometimento.",
+      D: "INCORRETA. Aceitar certificados inválidos enfraquece a autenticação e pode permitir ataques de intermediário.",
+      E: "INCORRETA. Backup não protege a comunicação em trânsito nem substitui a autenticação do canal."
     },
-    regra: "Proteção completa: 'criptografia + assinatura + certificado'. Combinação de camadas de segurança.",
-    pegadinha: "Nenhum dispositivo isolado garante segurança — é a combinação de criptografia, assinatura e certificado.",
-    fonte: "NIST SP 800-53 (SC-8, SC-12, SC-20, SC-23)."
+    regra: "Comunicação segura exige protocolo bem configurado, validação da identidade, proteção criptográfica adequada e gestão segura de chaves.",
+    pegadinha: "Criptografia sem validação correta do certificado pode proteger um canal com o endpoint errado.",
+    fonte: "NIST SP 800-52 Rev. 2 — Guidelines for the Selection, Configuration, and Use of TLS Implementations: https://csrc.nist.gov/pubs/sp/800/52/r2/final."
   },
 
   { id: "q-m4-71", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
