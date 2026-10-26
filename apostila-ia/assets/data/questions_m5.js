@@ -385,103 +385,103 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-16", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Métricas de Classificação",
-    contexto: "Métricas de classificação são essenciais para avaliar modelos.",
-    enunciado: "Métricas de classificação como precisão, recall, especificidade e F1 são importantes porque:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Métricas de classificação",
+    contexto: "Um órgão avalia um classificador que identifica solicitações que exigem atendimento prioritário. Falsos negativos e falsos positivos têm custos diferentes.",
+    enunciado: "Qual abordagem de avaliação é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Não são úteis para avaliação." },
-      { letra: "B", texto: "Substituem o conjunto de teste." },
-      { letra: "C", texto: "Permitem avaliar a qualidade do modelo, considerando diferentes aspectos de desempenho." },
-      { letra: "D", texto: "Eliminam a necessidade de validação." },
-      { letra: "E", texto: "Garantem que o modelo nunca erra." }
+      { letra: "A", texto: "Usar somente acurácia, pois ela resume todos os tipos de erro independentemente da distribuição das classes." },
+      { letra: "B", texto: "Escolher métricas alinhadas ao objetivo e aos custos dos erros, examinando a matriz de confusão e medidas como precisão, recall e especificidade." },
+      { letra: "C", texto: "Usar F1 como garantia de que o modelo será justo e correto em produção." },
+      { letra: "D", texto: "Substituir os dados de teste pelas métricas calculadas no conjunto de treino." },
+      { letra: "E", texto: "Escolher a métrica com o valor numérico mais alto, sem considerar sua definição." }
     ],
-    gabarito: "C",
-    justificativa: "Métricas de classificação permitem avaliar a qualidade do modelo considerando diferentes aspectos: precisão (quando prevê positivo, quantos estão corretos), recall (quantos positivos foram identificados), especificidade (quantos negativos foram corretamente identificados) e F1 (balanceamento entre precisão e recall). Métricas não são úteis (alternativa A incorreta); substituem teste (alternativa B incorreta); eliminam validação (alternativa D incorreta); garantem erro (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "A matriz de confusão permite identificar verdadeiros e falsos positivos e negativos. Precisão (precision) é a proporção de previsões positivas que são corretas; recall/sensibilidade é a proporção de positivos reais identificados; especificidade é a proporção de negativos reais corretamente identificados. A escolha depende da tarefa, da distribuição dos dados e do custo de cada erro; nenhuma métrica isolada garante qualidade em produção.",
     analise: {
-      A: "INCORRETA. Métricas são essenciais para avaliar desempenho de classificação.",
-      B: "INCORRETA. Métricas não substituem o conjunto de teste — usam os resultados do teste.",
-      C: "CORRETA. Métricas de classificação avaliam a qualidade do modelo em várias dimensões.",
-      D: "INCORRETA. Métricas não eliminam a necessidade de validação.",
-      E: "INCORRETA. Métricas não garantem que o modelo nunca errar."
+      A: "INCORRETA. Acurácia pode mascarar falhas na classe minoritária e não expressa todos os custos de erro.",
+      B: "CORRETA. A avaliação combina medidas interpretáveis com o contexto e as consequências dos erros.",
+      C: "INCORRETA. F1 resume precisão e recall por uma média harmônica, mas não garante justiça nem desempenho futuro.",
+      D: "INCORRETA. Dados de treino servem ao ajuste; avaliação final exige dados não usados para treinar ou escolher o modelo.",
+      E: "INCORRETA. Métricas diferentes têm definições e escalas distintas; maior valor não significa automaticamente melhor modelo."
     },
-    regra: "Métricas de classificação = 'múltiplas lentes'. Precisão, recall, F1, acurácia e especificidade.",
-    pegadinha: "Precisão não é 'erro' — é 'quando prevê positivo, quantos estão corretos'.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
+    regra: "Escolha métricas conforme objetivo, classes e custo dos erros; interprete matriz de confusão, precisão, recall e especificidade no contexto.",
+    pegadinha: "Precisão (precision) não é sinônimo de acurácia; F1 não inclui diretamente verdadeiros negativos e não garante desempenho em produção.",
+    fonte: "scikit-learn, Model evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html."
   },
 
   { id: "q-m5-17", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Desbalanceamento de Classes",
-    contexto: "Classes desbalanceadas afetam o desempenho dos modelos.",
-    enunciado: "O desbalanceamento de classes ocorre quando:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Desbalanceamento de classes",
+    contexto: "Em uma base de triagem, 98% dos registros pertencem à classe comum e 2% à classe que exige análise especializada.",
+    enunciado: "Qual estratégia trata o desbalanceamento sem produzir uma avaliação artificialmente otimista?",
     alternativas: [
-      { letra: "A", texto: "Todos os rótulos têm a mesma frequência." },
-      { letra: "B", texto: "O modelo não aprende." },
-      { letra: "C", texto: "Um ou mais rótulos predominam em relação aos outros no conjunto de dados." },
-      { letra: "D", texto: "Os dados estão faltando." },
-      { letra: "E", texto: "Os dados são categóricos." }
+      { letra: "A", texto: "Avaliar somente a acurácia, pois a classe majoritária representa a maior parte dos registros." },
+      { letra: "B", texto: "Aplicar oversampling antes de separar treino e teste, para garantir que todos os conjuntos tenham exemplos sintéticos semelhantes." },
+      { letra: "C", texto: "Usar divisão de dados adequada, métricas por classe e, se necessário, técnicas de reamostragem ou ponderação aplicadas apenas ao treino, avaliando em dados representativos não usados no ajuste." },
+      { letra: "D", texto: "Eliminar a classe minoritária para tornar o treinamento mais rápido." },
+      { letra: "E", texto: "Duplicar a classe minoritária em todo o conjunto e reportar a acurácia resultante como desempenho esperado em produção." }
     ],
     gabarito: "C",
-    justificativa: "Desbalanceamento ocorre quando a distribuição de classes é desigual: um ou mais rótulos são mais frequentes que outros. Todos os rótulos têm mesma frequência (alternativa A incorreta); modelo não aprende (alternativa B incorreta); dados faltando (alternativa D incorreta); dados categóricos (alternativa E incorreta).",
+    justificativa: "Desbalanceamento é uma distribuição desigual entre classes e pode fazer a acurácia parecer alta mesmo quando o modelo falha na classe minoritária. A avaliação deve considerar métricas por classe, como precisão, recall, F1 e, conforme a tarefa, curvas precision-recall. Reamostragem e ponderação podem ajudar, mas devem ser ajustadas sem contaminar validação ou teste; o conjunto de avaliação deve representar o cenário de uso.",
     analise: {
-      A: "INCORRETA. Quando todos os rótulos têm mesma frequência, não há desbalanceamento.",
-      B: "INCORRETA. Desbalanceamento não significa que o modelo não aprende.",
-      C: "CORRETA. Desbalanceamento ocorre quando uma classe predomina em relação às outras.",
-      D: "INCORRETA. Dados faltando é um problema diferente — 'valores ausentes'.",
-      E: "INCORRETA. Dados categóricos não implica desbalanceamento."
+      A: "INCORRETA. Acurácia isolada pode ocultar a baixa detecção da classe minoritária.",
+      B: "INCORRETA. Reamostrar antes da divisão pode vazar informação e produzir estimativas otimistas.",
+      C: "CORRETA. A estratégia separa treinamento e avaliação e mede o desempenho relevante para ambas as classes.",
+      D: "INCORRETA. Eliminar a classe de interesse impede avaliar ou aprender a detectá-la.",
+      E: "INCORRETA. Alterar artificialmente a distribuição de teste distorce a estimativa de desempenho no cenário real."
     },
-    regra: "Desbalanceamento = 'classes desiguais'. Uma classe domina as outras.",
-    pegadinha: "Desbalanceamento não é 'dados faltando' — é 'distribuição desigual de classes'.",
-    fonte: "Chawla, N. V. et al. — SMOTE: Synthetic Minority Over-sampling Technique, 2002."
+    regra: "No desbalanceamento, use métricas por classe e mantenha reamostragem dentro do treino; avalie em dados representativos e isolados.",
+    pegadinha: "Oversampling ou SMOTE antes da divisão pode causar vazamento; não altere a distribuição do teste para inflar métricas.",
+    fonte: "Chawla et al., SMOTE: Synthetic Minority Over-sampling Technique (2002): https://doi.org/10.1613/jair.953; scikit-learn, Imbalanced datasets: https://scikit-learn.org/stable/modules/cross_validation.html."
   },
 
   { id: "q-m5-18", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Métricas de Regressão",
-    contexto: "Métricas de regressão são usadas para avaliar modelos que preveem valores contínuos.",
-    enunciado: "Métricas de regressão apropriadas ao escopo são importantes porque:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Métricas de regressão",
+    contexto: "Um modelo prevê o tempo de atendimento em minutos. A equipe compara MAE e RMSE antes de selecionar uma versão para avaliação final.",
+    enunciado: "Qual afirmação sobre MAE e RMSE é correta?",
     alternativas: [
-      { letra: "A", texto: "Não são úteis para regressão." },
-      { letra: "B", texto: "Substituem o conjunto de teste." },
-      { letra: "C", texto: "Permitem avaliar o quão bem o modelo prevê valores contínuos." },
-      { letra: "D", texto: "Eliminam a necessidade de validação." },
-      { letra: "E", texto: "Garantem erro zero." }
+      { letra: "A", texto: "MAE e RMSE são sempre iguais, independentemente dos erros observados." },
+      { letra: "B", texto: "RMSE calcula a média simples dos erros com sinal e, por isso, erros positivos e negativos se cancelam." },
+      { letra: "C", texto: "MAE calcula a média dos valores absolutos dos erros; RMSE calcula a raiz da média dos erros ao quadrado e penaliza relativamente mais erros grandes." },
+      { letra: "D", texto: "Um RMSE menor prova que o modelo é imparcial e generaliza para qualquer população." },
+      { letra: "E", texto: "As métricas de regressão dispensam comparação com uma linha de base e inspeção dos resíduos." }
     ],
     gabarito: "C",
-    justificativa: "Métricas de regressão — como MAE, MSE, RMSE — permitem avaliar o quão bem o modelo prevê valores contínuos, comparando previsões com valores reais. Métricas não são úteis (alternativa A incorreta); substituem conjunto de teste (alternativa B incorreta); eliminam validação (alternativa D incorreta); garantem erro zero (alternativa E incorreta).",
+    justificativa: "MAE é a média dos valores absolutos das diferenças entre previsões e valores observados. RMSE é a raiz quadrada da média dos erros ao quadrado; o quadrado dá maior peso relativo a erros de grande magnitude. Ambas são expressas na unidade da variável-alvo quando calculadas nessa escala, mas resumem aspectos distintos e devem ser interpretadas com a distribuição dos erros, uma linha de base e o contexto do problema.",
     analise: {
-      A: "INCORRETA. Métricas são essenciais para avaliar modelos de regressão.",
-      B: "INCORRETA. Métricas não substituem o conjunto de teste.",
-      C: "CORRETA. Métricas de regressão avaliam o quão bem o modelo prevê valores contínuos.",
-      D: "INCORRETA. Métricas não eliminam a necessidade de validação.",
-      E: "INCORRETA. Métricas não garantem erro zero."
+      A: "INCORRETA. MAE e RMSE podem diferir, especialmente quando há erros de magnitudes muito distintas.",
+      B: "INCORRETA. RMSE não usa a média simples dos erros com sinal; ele eleva os erros ao quadrado antes da média.",
+      C: "CORRETA. A alternativa apresenta as definições e a maior sensibilidade do RMSE a erros grandes.",
+      D: "INCORRETA. Uma métrica menor, isoladamente, não demonstra ausência de viés nem generalização universal.",
+      E: "INCORRETA. Linhas de base, validação e análise de resíduos ajudam a contextualizar o desempenho."
     },
-    regra: "Métricas de regressão = 'erro numérico'. MAE, MSE, RMSE — medem distância entre previsão e realidade.",
-    pegadinha: "RMSE não é a média simples dos erros: é a raiz quadrada da média dos erros ao quadrado.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    regra: "MAE = média dos erros absolutos; RMSE = raiz da média dos erros ao quadrado, mais sensível a erros grandes.",
+    pegadinha: "RMSE não é a média simples dos erros; uma melhora agregada não revela, sozinha, viés, subgrupos problemáticos ou generalização.",
+    fonte: "scikit-learn, Regression metrics: https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics."
   },
 
   { id: "q-m5-19", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Engenharia de Atributos",
-    contexto: "A engenharia de atributos (feature engineering) é essencial no pré-processamento.",
-    enunciado: "A engenharia de atributos (feature engineering) envolve:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Engenharia de atributos e vazamento de dados",
+    contexto: "Uma equipe prepara dados para prever a concessão de um benefício. Um atributo foi calculado a partir de uma decisão registrada somente depois da concessão.",
+    enunciado: "Qual procedimento é mais adequado ao desenvolver atributos para esse modelo?",
     alternativas: [
-      { letra: "A", texto: "A criação de novos atributos a partir de dados ou transformação de atributos existentes para melhorar o desempenho do modelo." },
-      { letra: "B", texto: "A exclusão de todos os atributos." },
-      { letra: "C", texto: "A criptografia de atributos." },
-      { letra: "D", texto: "A verificação de atributos." },
-      { letra: "E", texto: "A remoção de outliers." }
+      { letra: "A", texto: "Manter o atributo posterior, pois qualquer variável correlacionada aumenta legitimamente a precisão." },
+      { letra: "B", texto: "Criar ou transformar atributos disponíveis no momento da previsão, ajustar transformações usando somente dados de treino e verificar vazamento de informação." },
+      { letra: "C", texto: "Criptografar todos os atributos, pois isso garante que o modelo não aprenderá padrões espúrios." },
+      { letra: "D", texto: "Remover obrigatoriamente todo atributo categórico antes do treinamento." },
+      { letra: "E", texto: "Calcular normalização com toda a base, incluindo teste, para garantir que as escalas sejam idênticas." }
     ],
-    gabarito: "A",
-    justificativa: "A engenharia de atributos envolve a criação de novos atributos a partir de dados ou transformação de atributos existentes para melhorar o desempenho do modelo — como normalizar, codificar, criar interações, etc. Excluir todos os atributos (alternativa B incorreta); criptografia (alternativa C incorreta); verificação (alternativa D incorreta); remoção de outliers (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Engenharia de atributos inclui criar, selecionar ou transformar variáveis para representar melhor o problema. Os atributos devem estar disponíveis no instante real da previsão e não podem incorporar direta ou indiretamente informações posteriores ao resultado. Transformações que aprendem parâmetros, como imputação, normalização e seleção, devem ser ajustadas no treino e aplicadas aos demais conjuntos sem recalcular seus parâmetros a partir do teste.",
     analise: {
-      A: "CORRETA. Engenharia de atributos envolve criação/transformação de atributos para melhorar desempenho.",
-      B: "INCORRETA. Excluir todos os atributos anularia o processo.",
-      C: "INCORRETA. Criptografia não é engenharia de atributos.",
-      D: "INCORRETA. Verificação não é engenharia de atributos.",
-      E: "INCORRETA. Remoção de outliers é parte do pré-processamento, mas não a definição da engenharia de atributos."
+      A: "INCORRETA. Atributos posteriores ao resultado geram vazamento e estimativas irreais de desempenho.",
+      B: "CORRETA. A alternativa considera disponibilidade temporal dos dados e separação correta entre treino e avaliação.",
+      C: "INCORRETA. Criptografia protege confidencialidade em certos contextos, mas não corrige vazamento ou seleção inadequada de atributos.",
+      D: "INCORRETA. Atributos categóricos podem ser codificados de forma apropriada ao modelo.",
+      E: "INCORRETA. Ajustar transformações com o teste permite que informação do teste influencie o processo de treinamento."
     },
-    regra: "Engenharia de atributos = 'criar atributos melhores'. Transformar/criar features que ajudem o modelo.",
-    pegadinha: "Engenharia de atributos não é 'remover atributos' — é 'melhorar os atributos'.",
-    fonte: "Kuhn, M. & Johnson, K. — Feature Engineering and Selection, 2019."
+    regra: "Use atributos disponíveis no momento da previsão e ajuste transformações no treino; evite vazamento de alvo ou do conjunto de teste.",
+    pegadinha: "Uma variável que melhora muito a métrica pode ser inválida se só existir depois do evento previsto.",
+    fonte: "scikit-learn, Common pitfalls and recommended practices: https://scikit-learn.org/stable/common_pitfalls.html."
   },
 
   { id: "q-m5-20", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
