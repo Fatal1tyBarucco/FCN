@@ -420,3 +420,12 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Foram corrigidos quatro campos `topico` que apontavam para IDs legados inexistentes no currículo M6: q-m6-41 → `m6-u4-t2-s1`; q-m6-42 → `m6-u4-t1-s2`; q-m6-43 → `m6-u5-t1-s2`; q-m6-44 → `m6-u6-t3-s1`.
 - Pré-validação da alteração: cada valor antigo ocorreu exatamente uma vez no arquivo e foi substituído; o script da alteração interromperia a gravação caso a contagem não fosse 1.
 - **Ainda não testado após a alteração:** execução CI no novo HEAD, auditoria integral de referências, revisão semântica independente das quatro questões e validação global de gabaritos. Não inferir aprovação a partir da pré-validação textual.
+
+
+## Revalidação da correção de rastreabilidade M6 — 2026-10-26
+
+- HEAD submetido à validação: `c9d3780a2a9b6a28906d4ea0c906fd93fb16a7e3`.
+- GitHub Actions: [execução 40265636717](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40265636717) — workflow `Validate curriculum and learning assets`, conclusão `success`.
+- Job `Static validation and coverage audits`: sucesso. Etapas concluídas: verificação sintática JavaScript; geração da matriz curricular; relatório de rastreabilidade dos ativos; validação da estrutura do repositório; heurísticas de qualidade das questões; instalação do Playwright/Chromium; smoke test em modo `file://`; regressões interativas em modo `file://`; upload dos relatórios de auditoria.
+- Resultado comprovado: todos os passos configurados nesse workflow concluíram com sucesso após a correção de q-m6-41 a q-m6-44.
+- **Limite:** o workflow não substitui revisão semântica independente dessas questões, auditoria WCAG/manual nem confirmação do workflow Code Quality no mesmo HEAD. Não declarar o PR pronto ou fazer merge com base apenas neste check.
