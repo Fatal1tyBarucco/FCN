@@ -24,7 +24,7 @@ const moduleQuestions5 = [
       A: "INCORRETA. IA não substitui humanos em todas as tarefas — tem limitações e escopo definido.",
       B: "CORRETA. IA é um sistema que realiza tarefas que exigem inteligência humana.",
       C: "INCORRETA. Cálculos são tarefas computacionais, não a definição de IA.",
-      D: "INCORRETA. Redes neurais precisam de dados para aprender — ausência de dados impede o aprendizado.",
+      D: "INCORRETA. Redes neurais precisam de dados para serem treinadas; isso não define toda a IA, nem torna válida a afirmação de que uma rede aprende sem dados.",
       E: "INCORRETA. Hardware para jogos é uma aplicação de TI, não definição de IA."
     },
     regra: "IA = 'sistema que faz o que exige inteligência humana, com dados'.",
@@ -44,7 +44,7 @@ const moduleQuestions5 = [
       { letra: "E", texto: "São incapazes de tomar decisões." }
     ],
     gabarito: "B",
-    justificativa: "Sistemas baseados em regras usam regras if-then para representar conhecimento e tomar decisões baseadas em lógica do domínio. Aprendem com dados (alternativa A incorreta); não têm regras (alternativa C incorreta); usam ML (alternativa D incorreta); só pegam decisões (alternativa E incorreta).",
+    justificativa: "Sistemas baseados em regras usam regras if-then para representar conhecimento e tomar decisões baseadas em lógica do domínio. Aprendem com dados (alternativa A incorreta); não têm regras (alternativa C incorreta); usam ML (alternativa D incorreta); afirmar que são incapazes de decidir (alternativa E incorreta).",
     analise: {
       A: "INCORRETA. Sistemas baseados em regras usam conhecimento humano codificado, não aprendizado de dados.",
       B: "CORRETA. Sistemas baseados em regras usam regras if-then para tomar decisões.",
@@ -52,7 +52,7 @@ const moduleQuestions5 = [
       D: "INCORRETA. Sistemas baseados em regras podem usar regras simbólicas, não apenas redes neurais.",
       E: "INCORRETA. Sistemas baseados em regras são capazes de tomar decisões baseadas em regras."
     },
-    regra: "Sistemas baseados em regras = 'if-then'. Conhecimento vivo codificado em regras.",
+    regra: "Sistemas baseados em regras = regras if-then que explicitam conhecimento do domínio.",
     pegadinha: "A armadilha é a alternativa A: sistemas baseados em regras decidem por lógica do domínio, com conhecimento humano já codificado em regras if-then — 'aprender com dados' sem programação é característica de aprendizado de máquina, não deles.",
     fonte: "Russell, S. & Norvig, P. — Artificial Intelligence: A Modern Approach, 2020."
   },
@@ -123,11 +123,11 @@ const moduleQuestions5 = [
     analise: {
       A: "INCORRETA. Desempenho ruim tanto nos dados de treino quanto nos de teste caracteriza underfitting, não overfitting.",
       B: "INCORRETA. Overfitting é aprender o ruído dos dados em excesso, não 'não aprender nada'.",
-      C: "CORRETA. Overfitting: bom nos dados de treino, má generalização.",
+      C: "CORRETA. Overfitting costuma se manifestar como bom desempenho no treino e desempenho pior em dados não vistos.",
       D: "INCORRETA. Prever valores futuros é uma tarefa específica, não a definição de overfitting.",
       E: "INCORRETA. Overfitting se manifesta justamente quando o modelo possui parâmetros (alta complexidade)."
     },
-    regra: "Overfitting = 'decorar o treino'. Bom nos treino, má generalização.",
+    regra: "Overfitting = ajuste excessivo aos dados de treino, com generalização prejudicada.",
     pegadinha: "Overfitting não é 'não aprender' — é 'aprender demais o ruído'.",
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
   },
