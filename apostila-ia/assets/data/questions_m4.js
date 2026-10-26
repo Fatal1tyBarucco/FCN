@@ -1010,27 +1010,27 @@ const moduleQuestions4 = [
 
   { id: "q-m4-41", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "avancado", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Lei de Acesso à Informação",
-    contexto: "A Lei nº 12.527/2011 (Lei de Acesso à Informação) garante o acesso à informação pública.",
-    enunciado: "A Lei nº 12.527/2011 (Lei de Acesso à Informação Pública) estabelece, entre outros, que:",
+    contexto: "Um cidadão solicita a um órgão público um relatório administrativo que contém dados sobre a execução de uma política pública e alguns dados pessoais de terceiros.",
+    enunciado: "À luz da Lei nº 12.527/2011 (Lei de Acesso à Informação — LAI), qual encaminhamento melhor observa a regra de publicidade e as restrições legais?",
     alternativas: [
-      { letra: "A", texto: "O acesso à informação pública é negado em todas as hipóteses." },
-      { letra: "B", texto: "Assegura acesso a informações públicas, observadas as hipóteses legais de restrição e sigilo." },
-      { letra: "C", texto: "A lei não garante acesso à informação." },
-      { letra: "D", texto: "A lei é proibitiva." },
-      { letra: "E", texto: "A lei não possui dispositivos sobre acesso." }
+      { letra: "A", texto: "Negar integralmente o pedido sempre que o documento contiver qualquer dado pessoal, sem avaliar a possibilidade de acesso parcial." },
+      { letra: "B", texto: "Conceder acesso ao relatório, avaliando as restrições aplicáveis e, quando cabível, fornecer a parte não protegida com ocultação das informações cujo acesso seja legalmente restrito." },
+      { letra: "C", texto: "Divulgar necessariamente o documento integral, pois a publicidade impede qualquer restrição relacionada a informações pessoais." },
+      { letra: "D", texto: "Classificar automaticamente todo relatório administrativo como ultrassecreto, por conter informação produzida pelo Poder Público." },
+      { letra: "E", texto: "Exigir que o solicitante demonstre interesse jurídico individual em qualquer pedido de informação pública." }
     ],
     gabarito: "B",
-    justificativa: "A LAI estabelece a publicidade como preceito geral e o sigilo como exceção, além de garantir acesso a informações públicas nos termos da lei. Existem hipóteses legais de restrição de acesso e regras de proteção de informações pessoais; portanto, não se trata de acesso irrestrito a todo registro. As alternativas A, C, D e E negam incorretamente a finalidade e as garantias da lei.",
+    justificativa: "A LAI adota a publicidade como regra e o sigilo como exceção, mas prevê restrições legais e proteção de informações pessoais. A presença de dados protegidos não autoriza automaticamente negar todo o documento: deve-se avaliar se é possível conceder acesso à parte não restrita, mediante ocultação ou tratamento adequado da parcela protegida. A solução concreta depende da natureza da informação e das regras legais aplicáveis.",
     analise: {
-      A: "INCORRETA. A Lei 12.527/2011 garante o acesso à informação pública, não o nega.",
-      B: "CORRETA. A publicidade é a regra, mas a lei preserva hipóteses legais de sigilo e a proteção de informações pessoais.",
-      C: "INCORRETA. A lei é uma das principais garantias de transparência no Brasil.",
-      D: "INCORRETA. A lei não é proibitiva — é estimuladora do acesso à informação.",
-      E: "INCORRETA. A lei possui diversos dispositivos que disciplinam o acesso à informação."
+      A: "INCORRETA. A presença de dados pessoais não implica, por si só, negar integralmente todo o documento; deve ser avaliada a possibilidade de acesso parcial.",
+      B: "CORRETA. A alternativa equilibra publicidade, restrições legais e acesso à parte não protegida quando isso for possível.",
+      C: "INCORRETA. A publicidade como regra não elimina as restrições legais nem a proteção de informações pessoais.",
+      D: "INCORRETA. A classificação de informação como sigilosa depende dos requisitos e procedimentos previstos em lei; não decorre automaticamente de ser documento administrativo.",
+      E: "INCORRETA. O acesso à informação pública não exige, como regra geral, demonstração de interesse jurídico individual."
     },
-    regra: "LAI (Lei nº 12.527/2011): publicidade como regra e sigilo como exceção, respeitadas as restrições legais.",
-    pegadinha: "A LAI garante acesso à informação pública, mas não torna todo dado irrestritamente público.",
-    fonte: "Lei nº 12.527/2011 (LAI), arts. 3º, I, 6º, III, e 7º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
+    regra: "LAI: publicidade é a regra e sigilo é exceção; avalie restrições específicas e a possibilidade de acesso parcial à parte não protegida.",
+    pegadinha: "Não confunda publicidade como regra com divulgação irrestrita, nem presuma que a presença de dado pessoal exige negar todo o documento.",
+    fonte: "Lei nº 12.527/2011 (LAI), arts. 3º, 7º, § 2º, 10, § 3º, 22 e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m4-42", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
