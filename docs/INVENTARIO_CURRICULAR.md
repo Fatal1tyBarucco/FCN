@@ -192,3 +192,8 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 
 Os arquivos de dados atuais foram recontados por identificadores únicos `q-mN-NN` em todos os bancos de questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40 e M8=40, totalizando **399 questões**. Os arquivos de flashcards contêm **460 itens** distribuídos em M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50. Essa contagem verifica IDs/itens presentes, não qualidade semântica, ausência de duplicidade conceitual ou rastreabilidade correta de cada item. O relatório de rastreabilidade precisa ser reexecutado no mesmo HEAD para validar as associações dos 396 itens de questão.
 
+## Registro de continuidade — 2026-10-26
+
+A Fase 1 foi retomada mediante leitura do prompt mestre completo disponível no repositório e das instruções de `AGENTS.md`. Este documento e a matriz existente foram reutilizados como artefatos-base; não foram recriados do zero. O inventário estrutural documenta 8 módulos e 427 nós curriculares (132 tópicos + 295 subtópicos). A auditoria estrutural é distinta da validação semântica: cada subtópico ainda precisa ser verificado quanto à profundidade didática, exemplos não redundantes, exercícios, flashcards, questões e fontes pertinentes.
+
+**Regra de contagem:** os documentos desta branch registram snapshots em commits diferentes (incluindo 396/399 questões em momentos distintos). Não consolidar números de snapshots como se fossem uma única execução. Antes de atualizar métricas, executar os scripts de auditoria no HEAD exato e registrar SHA, comando, saída e data.
