@@ -524,3 +524,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Em `navigation.js` e `styles.css`, os ícones de expansão/recolhimento são triângulos CSS, sem texto visível dentro dos botões, e os botões têm cores explícitas para os modos claro e escuro.
 - No run 40418226793, sintaxe JavaScript passou em 39 arquivos; smoke test `file://` e regressões interativas passaram; `pageErrors: []`. axe-core: 0 violações confirmadas; `label-content-name-mismatch` deixou de aparecer. `color-contrast` caiu de 266 para 89 nós, concentrados em textos SVG de gráficos; `frame-tested` permanece em 20 iframes externos. O fundo explícito foi acrescentado via CSS e por um retângulo no SVG, mas axe-core ainda classifica esses nós como incompletos, não como violações.
 - Permanecem pendentes avaliação manual dos textos SVG, frames externos, leitor de tela, WCAG manual e testes físicos. A revisão semântica completa das questões também continua pendente.
+
+
+## Revisão semântica focal de `q-m3-19` — 2026-10-26
+
+- A documentação oficial Zoom distingue capacidade do webinar e elegibilidade para salas paralelas. A capacidade para 500 participantes não garante, por si só, o recurso de salas paralelas.
+- A questão foi ajustada para perguntar quais condições precisam ser verificadas. A alternativa C especifica uma capacidade contratada para 500 participantes e uma licença elegível (`Zoom Webinars Plus Unlimited`, `Zoom Webinars Plus Pay Per Attendee` ou `Zoom Events Unlimited`), além dos requisitos de webinar agendado, recurso habilitado e aplicativo desktop/móvel suportado descritos pela documentação.
+- As análises de A, B e D foram ajustadas para não tratar diferenciais gerais de plataforma como prova suficiente. A revisão focal foi feita; a revisão semântica completa do banco permanece pendente.
+- HEAD de código no momento da alteração: `2fef7e7e6729a6828e841e577e91338b380a3b7d`. CI desse HEAD ainda precisa ser confirmado.

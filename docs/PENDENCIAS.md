@@ -489,5 +489,7 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] Atualizados o catálogo `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md`.
 - [x] Auditoria no run [40416873641](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40416873641) concluída com sucesso; conferência dos seis arquivos confirma `fonte` preenchido em 399/399 questões. Isso verifica presença estrutural, não correção factual de cada item.
 - [x] Reescrita de `q-m3-36` para evitar a alegação ampla de que o Zoom se distingue por funcionar sem instalação; o item agora testa que salas temáticas do Google Meet dependem de edições elegíveis do Workspace e mantém a ressalva de licença/aplicativo para salas paralelas em webinars Zoom. O run [40418226793](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40418226793) passou no SHA `667c8a08449d1f334b015f2b07943cd3748e3ab0`.
-- [ ] Revisar semanticamente `q-m3-19`, sobretudo a condição de licença/plano para 500 participantes e recursos premium; a revisão completa das 399 questões continua pendente.
+- [x] Revisão semântica focal de `q-m3-19`: enunciado e distratores foram alinhados para testar a distinção entre capacidade licenciada para 500 participantes e licença específica para salas paralelas em webinars Zoom. A alternativa C lista as modalidades elegíveis indicadas pela documentação oficial consultada. Essa revisão focal não substitui a auditoria semântica integral das 399 questões.
 - [ ] Não afirmar validação HTTP automática de todas as URLs. Revisão semântica completa das 399 questões continua pendente.
+
+- [ ] Validar em CI o commit `2fef7e7e6729a6828e841e577e91338b380a3b7d`, que alterou `q-m3-19`; não inferir sucesso a partir do run anterior.
