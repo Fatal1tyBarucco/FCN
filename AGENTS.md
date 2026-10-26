@@ -1046,6 +1046,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `3ab2b227ca09c902d7ff4fd76f24155861cc2969`.
 - Revisão focal; validar sintaxe, esquema, referências e CI no HEAD final.
 
+## Fechamento da auditoria focal M5 q-m5-41..q-m5-42 e inventário do banco (2026-10-26)
+
+- q-m5-41..q-m5-42: revisadas as sínteses aplicadas sobre respostas institucionais sem fundamento e governança de prompts com documentos versionados; mantidas após revisão focal.
+- Verificação estrutural de `questions_m5.js`: 42 identificadores `q-m5-01..q-m5-42`, todos únicos e sem lacunas; distribuição atual de níveis: 9 básicos, 20 intermediários e 13 avançados.
+- Corrigido comentário de cabeçalho que ainda informava 40 questões e distribuição antiga 12/18/10; o banco contém 42 questões e a distribuição atual 9/20/13.
+- Commits de conteúdo: `c130a700c5856f517e340c5a706301a558f09ebf` (q-m5-31..q-m5-35), `3ab2b227ca09c902d7ff4fd76f24155861cc2969` (q-m5-38..q-m5-40) e `be851d182d4c8ff8b8c7361601ddcba858c6e455` (contagem e níveis).
+- Revisão semântica focal do M5 concluída em lotes documentados; isso não equivale a validação integral de todas as fontes ou a aprovação dos workflows. Confirmar sintaxe, esquema, rastreabilidade curricular e CI no HEAD mais recente.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
