@@ -85,3 +85,8 @@ O relatório heurístico por módulo indica forte concentração de respostas em
 ## Consistência de análise e gabarito
 
 A auditoria heurística comparou os rótulos CORRETA/INCORRETA com os gabaritos quando esse padrão existe e não encontrou incompatibilidades. Isso não substitui revisão factual de cada resposta, distrator e fonte. Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
+
+
+## Pendências de precisão de fontes legais no M6
+
+A correção de q-m6-02/q-m6-06 foi validada em https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250565014. A revisão manual ainda precisa corrigir a fonte ou o enquadramento de q-m6-03, q-m6-29, q-m6-31, q-m6-32 e q-m6-38. A auditoria estrutural e heurística não detecta automaticamente citações legais semanticamente desalinhadas.

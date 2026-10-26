@@ -230,3 +230,15 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Ler os enunciados, contextos, gabaritos e justificativas dos 40 itens do M7 numa primeira triagem. Não foi identificado erro factual óbvio nesta passagem.
 - [ ] Revisar individualmente as cinco alternativas, as análises de distratores e as fontes de cada item do M7. A triagem inicial não é aprovação semântica completa.
 - [x] Auditoria estrutural de rótulos CORRETA/INCORRETA contra gabaritos: 0 incompatibilidades detectadas. Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
+
+
+## Revisão manual de citações legais do M6 — 2026-10-26
+
+- [x] Corrigir as citações de q-m6-02 e q-m6-06 para princípios de impessoalidade/transparência e linguagem clara, removendo a referência inadequada ao art. 29, § 1º, III, da Lei nº 14.129/2021.
+- [ ] q-m6-03: complementar a fonte de finalidade do tratamento com LGPD, art. 6º, I–III; art. 1º isolado não sustenta o princípio da finalidade.
+- [ ] q-m6-29: revisar a referência à Lei nº 14.129/2021, art. 43, I e IV; esse artigo trata de ferramentas de comunicação/notificação eletrônica, não de toda trilha de auditoria de sistemas.
+- [ ] q-m6-31: revisar a referência ao art. 43, IV, da Lei nº 14.129/2021; para a obrigação de manter sítio oficial, priorizar LAI, art. 8º, § 2º, e transparência de serviços, Lei nº 14.129/2021, art. 3º, IV.
+- [ ] q-m6-32: especificar no enunciado o Poder Executivo federal e citar Lei nº 12.813/2013, arts. 3º, I, 4º e 5º, V. A fonte atual (CF/88 e Lei nº 14.129/2021, art. 3º, IV e VI) não é suficiente para o cenário de conflito de interesses.
+- [ ] q-m6-38: substituir a referência genérica ao art. 43, IV, da Lei nº 14.129/2021 por base de gestão de riscos/auditoria (arts. 48 e 49) e segurança de dados (LGPD, art. 46), mantendo as referências da LAI pertinentes.
+- [ ] Incluir a Lei nº 12.813/2013 no catálogo de referências verificadas após aplicar a correção de q-m6-32.
+- [x] Revalidar após as correções de q-m6-02 e q-m6-06: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250565014 — success.

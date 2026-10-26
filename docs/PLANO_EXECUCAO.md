@@ -142,3 +142,8 @@ A auditoria por módulo detectou distribuição de gabaritos inadequada para um 
 ### Triagem semântica inicial do M7 — 2026-10-26
 
 A primeira leitura dos 40 enunciados, contextos, gabaritos e justificativas do M7 não encontrou erro factual óbvio. A revisão integral de alternativas, análises de distratores e fontes continua pendente; não considerar o módulo aprovado. A auditoria automática de rótulos CORRETA/INCORRETA versus gabarito passou sem incompatibilidades. Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
+
+
+### Revisão legal do M6 — pendências específicas — 2026-10-26
+
+A checagem das fontes oficiais levou à correção das citações de q-m6-02 e q-m6-06. Permanecem cinco alinhamentos a corrigir: q-m6-03 (LGPD, art. 6º), q-m6-29 (art. 43 versus trilha de auditoria), q-m6-31 (art. 43 versus obrigação de sítio oficial), q-m6-32 (Lei nº 12.813/2013 e escopo federal) e q-m6-38 (art. 43 versus gestão de risco/auditoria). Não considerar o M6 aprovado até concluir esses pontos.

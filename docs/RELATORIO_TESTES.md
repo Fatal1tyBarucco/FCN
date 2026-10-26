@@ -318,3 +318,10 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507 — **success**.
 - O script comparou rótulos CORRETA/INCORRETA com a letra indicada em gabarito nos itens que usam esse padrão; 0 incompatibilidades detectadas.
 - A distribuição global e por módulo continua sinalizando concentração de gabaritos, que permanece pendente de revisão editorial manual.
+
+
+## Revisão de citações legais M6 — 2026-10-26
+
+- Execução técnica aprovada após as correções de q-m6-02 e q-m6-06: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250565014.
+- A leitura manual do texto oficial da Lei nº 14.129/2021 identificou referências a art. 43 que precisam de escopo mais preciso em q-m6-29, q-m6-31 e q-m6-38; q-m6-03 precisa citar o princípio da finalidade da LGPD; q-m6-32 precisa ser enquadrada na Lei nº 12.813/2013.
+- Esses cinco pontos permanecem pendentes de correção e revalidação. O resultado verde de CI não certifica adequação semântica das citações.
