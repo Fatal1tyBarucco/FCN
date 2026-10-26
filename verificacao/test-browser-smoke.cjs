@@ -64,7 +64,7 @@ const { chromium } = require("playwright");
     assert.equal(state.modules, 8, "eight curriculum modules must be exposed");
     assert.equal(state.curriculumModuleNodes, 8, "eight curriculum module nodes must render");
     assert.equal(state.flashcards, 460, "all 460 flashcards must be connected to the app");
-    assert.equal(state.questions, 365, "all 365 questions must be connected to the quiz engine");
+    assert.equal(state.questions, 389, "all 389 questions must be connected to the quiz engine");
     assert.ok(state.chartSvgs >= 5, "the five chart SVGs must render");
     assert.ok(state.flashcardUiChars > 0, "flashcard UI must render");
     assert.ok(state.quizUiChars > 0, "quiz UI must render");
