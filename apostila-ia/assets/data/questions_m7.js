@@ -620,13 +620,13 @@ const moduleQuestions7 = [
       { letra: "E", texto: "Extrair e carregar, sem etapa de transformação." }
     ],
     gabarito: "A",
-    justificativa: "O currículo define ETL como extrair → transformar → carregar: os dados são tratados FORA do destino e só entram prontos; a diferença que muda o gabarito é a posição da transformação em relação à carga. ELT inverte a ordem (carrega bruto e transforma dentro do destino), e não existe fluxo sem transformação: em ELT ela apenas ocorre depois da carga.",
+    justificativa: "O currículo define ETL como extrair → transformar → carregar: os dados são tratados FORA do destino e só entram prontos; a diferença que muda o gabarito é a posição da transformação em relação à carga. ELT inverte a ordem (carrega os dados antes de transformar, normalmente no destino). Existem arquiteturas EL em que a transformação é externa ou não faz parte daquele pipeline, mas elas não correspondem ao ETL descrito no enunciado.",
     analise: {
       A: "CORRETA. Transformação antes da carga caracteriza ETL.",
       B: "INCORRETA. ELT carrega bruto e transforma no destino — o oposto do descrito.",
       C: "INCORRETA. Não existe fluxo que transforme antes de extrair.",
       D: "INCORRETA. Carregar antes de extrair é impossível.",
-      E: "INCORRETA. Ambos os fluxos incluem transformação; o que muda é o momento."
+      E: "INCORRETA. A alternativa não descreve o fluxo do enunciado: a transformação ocorre antes da carga. Embora existam arquiteturas EL, isso não corresponde ao ETL apresentado."
     },
     regra: "ETL: extrair → transformar → carregar. ELT: extrair → carregar → transformar.",
     pegadinha: "A pegadinha é acreditar que ELT não transforma — ele transforma depois, dentro do destino.",
