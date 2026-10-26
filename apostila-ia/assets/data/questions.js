@@ -3141,7 +3141,752 @@ var questoesBanco = [
     },
     regra: "Gravação com dados pessoais exige: consentimento/informação, finalidade, prazo de retenção, segurança (criptografia) e respeito aos direitos de acesso e exclusão dos titulares.",
     pegadinha: "Item simples por design; o risco é esquecer que uma gravação de reunião é tratamento de dados pessoais e, como tal, carrega finalidade, retenção e direitos do titular."
+  },,
+  {
+    id: "q-m1-41",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-2-topico-5",
+    assunto: "M1.2 Word — cabeçalhos e rodapés",
+    contexto: "Um relatório deve exibir cabeçalho e número de página, exceto na capa; as páginas seguintes devem manter esses elementos.",
+    enunciado: "Qual recurso atende diretamente ao requisito?",
+    alternativas: [
+      { letra: "A", texto: "Ativar Primeira Página Diferente nas configurações de cabeçalho e rodapé." },
+      { letra: "B", texto: "Aplicar negrito ao título da capa." },
+      { letra: "C", texto: "Inserir uma tabela vazia na capa." },
+      { letra: "D", texto: "Converter o documento em texto simples." },
+      { letra: "E", texto: "Desativar o cabeçalho em todo o documento." }
+    ],
+    gabarito: "A",
+    justificativa: "A opção Primeira Página Diferente permite ocultar ou personalizar cabeçalho e rodapé da capa sem removê-los das páginas seguintes. Uma quebra de seção é útil quando partes do documento precisam de layouts ou numerações diferentes.",
+    analise: {
+      A: "CORRETA. Permite configurar a primeira página separadamente, preservando os elementos nas seguintes.",
+      B: "INCORRETA. Negrito muda a aparência do texto, não a exibição do cabeçalho.",
+      C: "INCORRETA. Tabelas não controlam cabeçalhos e rodapés.",
+      D: "INCORRETA. Texto simples remove formatação e não atende à paginação.",
+      E: "INCORRETA. Isso remove o elemento também das páginas que precisam exibi-lo."
+    },
+    regra: "Cabeçalhos e rodapés são controlados por opções de layout e, quando necessário, por seções.",
+    pegadinha: "Não confundir Primeira Página Diferente com remover o cabeçalho do documento inteiro.",
+    fonte: "Currículo M1, unidade 2, tópico 5 — cabeçalhos, rodapés, notas e numeração."
   },
+  {
+    id: "q-m1-42",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-3-topico-1",
+    assunto: "M1.3 Excel — células, intervalos e tabelas",
+    contexto: "Uma lista de solicitações recebe novas linhas semanalmente. A coluna calculada deve acompanhar os novos registros e os dados precisam de cabeçalhos e filtros.",
+    enunciado: "Qual recurso é mais adequado para estruturar a lista?",
+    alternativas: [
+      { letra: "A", texto: "Formatar o intervalo como Tabela do Excel, com cabeçalhos." },
+      { letra: "B", texto: "Mesclar todas as células da primeira linha." },
+      { letra: "C", texto: "Colocar cada registro em uma planilha diferente." },
+      { letra: "D", texto: "Converter os dados em imagens." },
+      { letra: "E", texto: "Alinhar valores com espaços." }
+    ],
+    gabarito: "A",
+    justificativa: "Tabelas do Excel estruturam dados, fornecem filtros e podem expandir-se com novas linhas; colunas calculadas e referências estruturadas facilitam a manutenção.",
+    analise: {
+      A: "CORRETA. Tabelas estruturam listas, expandem-se com novos registros e facilitam filtros e fórmulas.",
+      B: "INCORRETA. Células mescladas prejudicam a estrutura tabular.",
+      C: "INCORRETA. Isso dificulta análise, filtragem e consolidação.",
+      D: "INCORRETA. Imagens não preservam dados editáveis e estruturados.",
+      E: "INCORRETA. Espaços não substituem células, colunas ou referências."
+    },
+    regra: "Células formam intervalos; Tabelas acrescentam estrutura e recursos a listas de dados.",
+    pegadinha: "Aplicar cores não é o mesmo que converter um intervalo em Tabela.",
+    fonte: "Currículo M1, unidade 3, tópico 1 — pasta de trabalho, planilhas, células, intervalos e tabelas."
+  },
+  {
+    id: "q-m1-43",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-3-topico-5",
+    assunto: "M1.3 Excel — filtros, validação e formatação condicional",
+    contexto: "Uma planilha deve exibir apenas inscrições pendentes, restringir Status a uma lista aprovada e destacar prazos vencidos.",
+    enunciado: "Qual combinação de recursos atende aos requisitos?",
+    alternativas: [
+      { letra: "A", texto: "Filtro, Validação de Dados e Formatação Condicional." },
+      { letra: "B", texto: "Mesclar células, congelar painéis e usar negrito." },
+      { letra: "C", texto: "Classificar, inserir comentário e mudar orientação da página." },
+      { letra: "D", texto: "Proteger a pasta e ocultar todas as linhas." },
+      { letra: "E", texto: "Usar apenas um gráfico de pizza." }
+    ],
+    gabarito: "A",
+    justificativa: "Os três recursos atendem funções diferentes: filtro para exibição, validação para entradas permitidas e formatação condicional para destaque automático.",
+    analise: {
+      A: "CORRETA. Filtro limita linhas exibidas; validação restringe entradas; formatação condicional destaca valores por regra.",
+      B: "INCORRETA. Esses recursos não implementam os três requisitos.",
+      C: "INCORRETA. Classificação ordena dados, mas os outros recursos não validam entradas nem destacam vencimentos.",
+      D: "INCORRETA. Ocultar tudo impede a análise e não valida os dados.",
+      E: "INCORRETA. Um gráfico não substitui filtros, validação e regras de formatação."
+    },
+    regra: "Filtro seleciona o que fica visível; classificação muda a ordem; validação controla entradas.",
+    pegadinha: "Não confundir classificação com filtragem.",
+    fonte: "Currículo M1, unidade 3, tópico 5 — classificação, filtros, validação, formatação condicional e visualização."
+  },
+  {
+    id: "q-m2-41",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u2-t1-s1",
+    assunto: "M2.2 Modelo OSI — funções das camadas",
+    contexto: "A equipe precisa distinguir endereçamento lógico, entrega fim a fim e transmissão física.",
+    enunciado: "Qual associação está correta?",
+    alternativas: [
+      { letra: "A", texto: "Rede: endereçamento lógico/roteamento; Transporte: comunicação fim a fim; Física: transmissão de bits." },
+      { letra: "B", texto: "Física: endereços IP; Rede: conectores; Transporte: nomes DNS." },
+      { letra: "C", texto: "Aplicação: encaminhamento de quadros; Enlace: aplicações do usuário." },
+      { letra: "D", texto: "Sessão: sinais ópticos; Apresentação: rotas IP." },
+      { letra: "E", texto: "Enlace: endereços IP públicos; Transporte: resolução de nomes." }
+    ],
+    gabarito: "A",
+    justificativa: "No OSI, Rede trata de endereçamento lógico e encaminhamento; Transporte oferece comunicação entre processos; Física transmite bits pelo meio.",
+    analise: {
+      A: "CORRETA. Essas funções correspondem às camadas Rede, Transporte e Física.",
+      B: "INCORRETA. Troca funções de Rede, Física e Aplicação.",
+      C: "INCORRETA. Quadros são tratados em Enlace; aplicações ficam na camada Aplicação.",
+      D: "INCORRETA. Sinais são da camada Física; rotas são da camada Rede.",
+      E: "INCORRETA. IP pertence à camada Rede e DNS à Aplicação."
+    },
+    regra: "As sete camadas são Física, Enlace, Rede, Transporte, Sessão, Apresentação e Aplicação.",
+    pegadinha: "Não confundir endereço IP (Rede) com endereço MAC/quadros (Enlace).",
+    fonte: "Currículo M2, unidade 2, tópico 1 — modelo OSI; padrões de rede."
+  },
+  {
+    id: "q-m2-42",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u2-t2-s1",
+    assunto: "M2.2 Modelo TCP/IP — quatro camadas",
+    contexto: "Uma equipe documenta uma arquitetura de rede usando o modelo TCP/IP de quatro camadas.",
+    enunciado: "Qual lista corresponde à nomenclatura usual?",
+    alternativas: [
+      { letra: "A", texto: "Acesso à rede, Internet, Transporte e Aplicação." },
+      { letra: "B", texto: "Física, Enlace, Sessão e Apresentação." },
+      { letra: "C", texto: "Internet, Sessão, Apresentação e Física." },
+      { letra: "D", texto: "Aplicação, Banco de Dados, Segurança e Hardware." },
+      { letra: "E", texto: "Transporte, Roteamento, Criptografia e Interface Gráfica." }
+    ],
+    gabarito: "A",
+    justificativa: "A representação didática usual do TCP/IP agrupa protocolos em Acesso à Rede, Internet, Transporte e Aplicação.",
+    analise: {
+      A: "CORRETA. Essa é a representação usual de quatro camadas do TCP/IP.",
+      B: "INCORRETA. Mistura camadas OSI e omite camadas TCP/IP.",
+      C: "INCORRETA. Sessão e Apresentação não são camadas independentes no modelo TCP/IP de quatro camadas.",
+      D: "INCORRETA. Não são as quatro camadas do TCP/IP.",
+      E: "INCORRETA. São funções ou componentes, não a lista de camadas."
+    },
+    regra: "Modelos diferentes agrupam funções de modo diferente; não há correspondência um-para-um perfeita entre todas as camadas OSI e TCP/IP.",
+    pegadinha: "Não misturar nomes de camadas OSI com a lista de quatro camadas TCP/IP.",
+    fonte: "Currículo M2, unidade 2, tópico 2 — modelo TCP/IP e protocolos associados."
+  },
+  {
+    id: "q-m2-43",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u2-t3-s1",
+    assunto: "M2.2 Comunicação cliente-servidor — HTTPS sobre TCP",
+    contexto: "Considere HTTPS sobre TCP, sem HTTP/3/QUIC. O navegador acessará um domínio que não está no cache DNS.",
+    enunciado: "Qual sequência didática descreve melhor o fluxo antes de receber o conteúdo HTTP?",
+    alternativas: [
+      { letra: "A", texto: "Resolver o nome via DNS, estabelecer TCP, negociar TLS e enviar a requisição HTTP." },
+      { letra: "B", texto: "Enviar HTTP antes de resolver o nome e estabelecer transporte." },
+      { letra: "C", texto: "Executar DHCP para cada pacote e usar FTP para abrir a página." },
+      { letra: "D", texto: "Negociar TLS sem identificar/endereço do servidor e dispensar transporte." },
+      { letra: "E", texto: "Usar ARP para resolver o nome público na Internet inteira." }
+    ],
+    gabarito: "A",
+    justificativa: "No cenário especificado, DNS resolve o nome, TCP estabelece transporte, TLS protege a conexão e HTTP troca requisições e respostas. HTTP/3 usa QUIC, por isso foi excluído do enunciado.",
+    analise: {
+      A: "CORRETA. É o fluxo usual de HTTPS sobre TCP no cenário delimitado.",
+      B: "INCORRETA. A requisição precisa de destino e conexão apropriados.",
+      C: "INCORRETA. DHCP configura a rede; FTP não é o protocolo de acesso à página.",
+      D: "INCORRETA. O cenário requer transporte e identificação do destino.",
+      E: "INCORRETA. ARP resolve endereços de enlace IPv4 no domínio local, não nomes DNS."
+    },
+    regra: "DNS resolve nomes; TCP estabelece transporte; TLS protege a sessão; HTTP define requisições e respostas.",
+    pegadinha: "A sequência depende da versão: HTTP/3 usa QUIC, não TCP.",
+    fonte: "Currículo M2, unidade 2, tópico 3; RFCs HTTP/TLS cadastradas em references.js."
+  },
+  {
+    id: "q-m2-44",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u3-t1-s1",
+    assunto: "M2.3 IPv4, IPv6, TCP e UDP",
+    contexto: "Um aplicativo precisa distinguir protocolos de endereçamento de rede dos protocolos de transporte.",
+    enunciado: "Qual afirmação está correta?",
+    alternativas: [
+      { letra: "A", texto: "IPv4/IPv6 tratam de endereçamento e encaminhamento; TCP/UDP são protocolos de transporte com características distintas." },
+      { letra: "B", texto: "IPv6 é transporte confiável e TCP é um endereço IP." },
+      { letra: "C", texto: "UDP garante entrega ordenada; TCP não mantém estado de conexão." },
+      { letra: "D", texto: "IPv4 e IPv6 são protocolos de aplicação para consultar DNS." },
+      { letra: "E", texto: "TCP e UDP definem máscaras e endereços de broadcast." }
+    ],
+    gabarito: "A",
+    justificativa: "IPv4/IPv6 endereçam e encaminham pacotes; TCP fornece transporte orientado à conexão com mecanismos de confiabilidade; UDP transporta datagramas sem garantir entrega ou ordenação.",
+    analise: {
+      A: "CORRETA. Separa corretamente os protocolos de Internet dos protocolos de transporte.",
+      B: "INCORRETA. IPv6 não é transporte e TCP não é endereço IP.",
+      C: "INCORRETA. TCP fornece confiabilidade/ordenação; UDP não garante isso por padrão.",
+      D: "INCORRETA. DNS é protocolo de aplicação; IP opera em nível de rede.",
+      E: "INCORRETA. Esses são conceitos de endereçamento, não funções de transporte."
+    },
+    regra: "IP cuida do endereçamento/encaminhamento; TCP e UDP transportam dados de aplicações.",
+    pegadinha: "Não afirmar que UDP é sempre melhor ou mais rápido; a escolha depende da aplicação.",
+    fonte: "Currículo M2, unidade 3, tópico 1; RFC 791 e RFC 793."
+  },
+  {
+    id: "q-m2-45",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u3-t2-s1",
+    assunto: "M2.3 HTTP, HTTPS, DNS e DHCP",
+    contexto: "Um notebook recebe configuração de rede automaticamente. Ao abrir um site por nome de domínio, o navegador precisa encontrar o servidor.",
+    enunciado: "Qual associação de funções está correta?",
+    alternativas: [
+      { letra: "A", texto: "DHCP configura parâmetros de rede; DNS resolve nomes; HTTPS protege a comunicação web por TLS." },
+      { letra: "B", texto: "DNS atribui o IP local; DHCP traduz nomes; HTTPS substitui o roteamento." },
+      { letra: "C", texto: "HTTPS atribui IP; DHCP criptografa páginas; DNS transfere arquivos." },
+      { letra: "D", texto: "DHCP resolve nomes públicos; DNS negocia certificados; HTTPS distribui IPs." },
+      { letra: "E", texto: "DNS e DHCP são protocolos de transporte que substituem TCP e UDP." }
+    ],
+    gabarito: "A",
+    justificativa: "DHCP distribui parâmetros como endereço IP e gateway; DNS resolve nomes; HTTPS é HTTP protegido por TLS.",
+    analise: {
+      A: "CORRETA. Cada protocolo está associado à função adequada.",
+      B: "INCORRETA. Troca as funções dos protocolos.",
+      C: "INCORRETA. Nenhum desses protocolos tem as funções descritas.",
+      D: "INCORRETA. As funções estão trocadas.",
+      E: "INCORRETA. DNS e DHCP são protocolos de aplicação."
+    },
+    regra: "Obter IP por DHCP é diferente de resolver o nome do servidor por DNS.",
+    pegadinha: "Não confundir configuração de rede com resolução de nomes.",
+    fonte: "Currículo M2, unidade 3, tópico 2; referências DNS/DHCP."
+  },
+  {
+    id: "q-m2-46",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u3-t3-s1",
+    assunto: "M2.3 FTP, FTPS, SFTP, SSH e ICMP",
+    contexto: "Uma equipe precisa transferir arquivos entre servidores por um canal seguro e já utiliza SSH.",
+    enunciado: "Qual protocolo usa a infraestrutura SSH para transferir arquivos?",
+    alternativas: [
+      { letra: "A", texto: "SFTP." },
+      { letra: "B", texto: "FTP sem criptografia." },
+      { letra: "C", texto: "ICMP Echo." },
+      { letra: "D", texto: "DHCP." },
+      { letra: "E", texto: "SMTP." }
+    ],
+    gabarito: "A",
+    justificativa: "SFTP é um protocolo de transferência de arquivos sobre SSH. FTPS protege FTP com TLS; são tecnologias diferentes.",
+    analise: {
+      A: "CORRETA. SFTP opera sobre SSH.",
+      B: "INCORRETA. FTP simples não protege conteúdo e credenciais por padrão.",
+      C: "INCORRETA. ICMP Echo é usado em diagnóstico de conectividade.",
+      D: "INCORRETA. DHCP distribui parâmetros de configuração.",
+      E: "INCORRETA. SMTP transporta mensagens de e-mail."
+    },
+    regra: "SFTP usa SSH; FTPS usa TLS para proteger FTP.",
+    pegadinha: "SFTP não é apenas outro nome para FTPS.",
+    fonte: "Currículo M2, unidade 3, tópico 3; referências SSH/FTP."
+  },
+  {
+    id: "q-m2-47",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u3-t4-s3",
+    assunto: "M2.3 NAT/PAT, proxy e VPN",
+    contexto: "Funcionários precisam acessar a rede interna remotamente por um túnel protegido e autenticado.",
+    enunciado: "Qual tecnologia atende diretamente ao requisito?",
+    alternativas: [
+      { letra: "A", texto: "VPN configurada com autenticação e criptografia adequadas." },
+      { letra: "B", texto: "NAT, que por si só criptografa todo o tráfego." },
+      { letra: "C", texto: "Proxy DNS, que substitui autenticação." },
+      { letra: "D", texto: "PAT, que garante confidencialidade de ponta a ponta." },
+      { letra: "E", texto: "ICMP, que cria um túnel de aplicação autenticado." }
+    ],
+    gabarito: "A",
+    justificativa: "VPN é a tecnologia indicada para conectividade remota protegida, com autenticação, criptografia e controles adequados.",
+    analise: {
+      A: "CORRETA. Uma VPN pode criar conectividade remota protegida quando configurada corretamente.",
+      B: "INCORRETA. NAT traduz endereços e não é mecanismo de criptografia.",
+      C: "INCORRETA. Proxy DNS não substitui autenticação e controle de acesso.",
+      D: "INCORRETA. PAT traduz portas e endereços, sem garantir confidencialidade.",
+      E: "INCORRETA. ICMP não é protocolo de túnel autenticado."
+    },
+    regra: "NAT/PAT traduzem endereços/portas; proxy intermedeia solicitações; VPN cria conectividade lógica protegida.",
+    pegadinha: "NAT não é sinônimo de firewall nem garante segurança por si só.",
+    fonte: "Currículo M2, unidade 3, tópico 4; referências de redes."
+  },
+  {
+    id: "q-m2-48",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u4-t1-s1",
+    assunto: "M2.4 Estrutura IPv4 — endereços privados",
+    contexto: "Um computador usa o endereço 192.168.10.25/24.",
+    enunciado: "Qual afirmação é correta?",
+    alternativas: [
+      { letra: "A", texto: "Está no espaço IPv4 privado e não é, por si só, um endereço público roteável na Internet." },
+      { letra: "B", texto: "É um endereço loopback." },
+      { letra: "C", texto: "É necessariamente multicast." },
+      { letra: "D", texto: "Todo endereço iniciado por 192 é privado." },
+      { letra: "E", texto: "Um endereço privado nunca pode acessar a Internet." }
+    ],
+    gabarito: "A",
+    justificativa: "192.168.10.25 pertence ao bloco privado 192.168.0.0/16; o acesso externo depende da arquitetura de borda.",
+    analise: {
+      A: "CORRETA. 192.168.0.0/16 é um bloco privado.",
+      B: "INCORRETA. Loopback IPv4 usa 127.0.0.0/8.",
+      C: "INCORRETA. Multicast IPv4 usa 224.0.0.0/4.",
+      D: "INCORRETA. A classificação depende do bloco completo, não apenas do primeiro número.",
+      E: "INCORRETA. Redes privadas podem acessar por gateways/NAT ou outras arquiteturas."
+    },
+    regra: "Blocos privados IPv4: 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16.",
+    pegadinha: "Não classificar o endereço apenas pelo primeiro octeto.",
+    fonte: "Currículo M2, unidade 4, tópico 1; RFC 1918."
+  },
+  {
+    id: "q-m2-49",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u4-t3-s1",
+    assunto: "M2.4 VLSM e sumarização de rotas",
+    contexto: "Uma organização tem departamentos com diferentes necessidades de hosts e quer reduzir a quantidade de rotas anunciadas.",
+    enunciado: "Qual alternativa diferencia VLSM de sumarização?",
+    alternativas: [
+      { letra: "A", texto: "VLSM usa prefixos de tamanhos diferentes conforme a necessidade; sumarização agrega redes contíguas quando os limites permitem." },
+      { letra: "B", texto: "VLSM criptografa pacotes; sumarização converte IPv4 em IPv6." },
+      { letra: "C", texto: "VLSM exige máscaras idênticas; sumarização cria um endereço por host." },
+      { letra: "D", texto: "VLSM é transporte; sumarização é DNS." },
+      { letra: "E", texto: "Ambos são nomes diferentes para DHCP." }
+    ],
+    gabarito: "A",
+    justificativa: "VLSM permite dimensionar sub-redes com prefixos variados; sumarização representa redes contíguas por um prefixo agregado quando o alinhamento permite.",
+    analise: {
+      A: "CORRETA. Distingue dimensionamento de sub-redes e agregação de rotas.",
+      B: "INCORRETA. Não são funções de criptografia nem conversão de versões IP.",
+      C: "INCORRETA. VLSM permite prefixos variáveis.",
+      D: "INCORRETA. São conceitos de endereçamento e roteamento.",
+      E: "INCORRETA. DHCP configura interfaces, não substitui VLSM ou sumarização."
+    },
+    regra: "VLSM melhora a alocação; sumarização reduz a quantidade de rotas.",
+    pegadinha: "Não se pode sumarizar arbitrariamente redes não contíguas ou desalinhadas.",
+    fonte: "Currículo M2, unidade 4, tópico 3 — VLSM e sumarização."
+  },
+  {
+    id: "q-m2-50",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u4-t4-s1",
+    assunto: "M2.4 IPv6 — abreviação",
+    contexto: "Um analista precisa abreviar 2001:0db8:0000:0000:0000:ff00:0042:8329.",
+    enunciado: "Qual representação é válida e preserva o endereço?",
+    alternativas: [
+      { letra: "A", texto: "2001:db8::ff00:42:8329" },
+      { letra: "B", texto: "2001:db8:::ff00:42:8329" },
+      { letra: "C", texto: "2001:db8::ff00::42:8329" },
+      { letra: "D", texto: "2001:db8:ff00:42:8329" },
+      { letra: "E", texto: "2001:0db8:0000:0000:0000:ff00:0042:8329:0000" }
+    ],
+    gabarito: "A",
+    justificativa: "Zeros à esquerda podem ser removidos e uma sequência contínua de hextetos zero pode ser substituída por ::, usada no máximo uma vez.",
+    analise: {
+      A: "CORRETA. Remove zeros à esquerda e comprime uma sequência de hextetos zero com ::.",
+      B: "INCORRETA. Três dois-pontos consecutivos não são a forma válida de compressão.",
+      C: "INCORRETA. :: aparece duas vezes e torna ambíguo o número de hextetos omitidos.",
+      D: "INCORRETA. Omitir hextetos sem :: altera o endereço.",
+      E: "INCORRETA. Adiciona um hexteto e excede a estrutura de oito hextetos."
+    },
+    regra: "IPv6 usa oito hextetos; :: comprime uma sequência de hextetos zero.",
+    pegadinha: "Não usar :: duas vezes no mesmo endereço.",
+    fonte: "Currículo M2, unidade 4, tópico 4; RFC 4291 e RFC 5952."
+  },
+  {
+    id: "q-m2-51",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u5-t1-s1",
+    assunto: "M2.5 ping e traceroute",
+    contexto: "Um usuário relata lentidão e suspeita de falha em algum salto entre origem e destino.",
+    enunciado: "Qual alternativa diferencia ping de traceroute/tracert?",
+    alternativas: [
+      { letra: "A", texto: "Ping testa alcance e tempos de resposta; traceroute/tracert tenta revelar os saltos do caminho." },
+      { letra: "B", texto: "Ping lista todas as rotas da Internet; traceroute altera DNS." },
+      { letra: "C", texto: "Ping configura IP; traceroute distribui endereços DHCP." },
+      { letra: "D", texto: "Ping criptografa tráfego; traceroute instala certificados TLS." },
+      { letra: "E", texto: "Ambos sempre funcionam mesmo quando mensagens de controle são filtradas." }
+    ],
+    gabarito: "A",
+    justificativa: "Ping ajuda a avaliar alcance e tempo de resposta; traceroute/tracert infere saltos do caminho. Filtragem pode limitar a saída.",
+    analise: {
+      A: "CORRETA. Resume as funções diagnósticas principais.",
+      B: "INCORRETA. Nenhum comando faz essas ações.",
+      C: "INCORRETA. Configuração IP e DHCP são funções distintas.",
+      D: "INCORRETA. Esses comandos não executam essas funções.",
+      E: "INCORRETA. Filtros e ausência de respostas podem limitar resultados."
+    },
+    regra: "Usar ferramentas de diagnóstico conforme o sintoma e interpretar respostas com cautela.",
+    pegadinha: "A ausência de resposta de um salto não prova que o roteador esteja fora de serviço.",
+    fonte: "Currículo M2, unidade 5, tópico 1 — ping e traceroute/tracert."
+  },
+  {
+    id: "q-m2-52",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u5-t2-s1",
+    assunto: "M2.5 ipconfig e comandos de configuração",
+    contexto: "Em Windows, o técnico precisa conferir endereço IP, máscara, gateway e DNS recebidos pela interface.",
+    enunciado: "Qual comando exibe diretamente esses parâmetros em detalhe?",
+    alternativas: [
+      { letra: "A", texto: "ipconfig /all." },
+      { letra: "B", texto: "nslookup." },
+      { letra: "C", texto: "tracert." },
+      { letra: "D", texto: "ping -t." },
+      { letra: "E", texto: "net use." }
+    ],
+    gabarito: "A",
+    justificativa: "ipconfig /all exibe a configuração detalhada das interfaces, incluindo endereço, máscara, gateway e servidores DNS quando configurados.",
+    analise: {
+      A: "CORRETA. Mostra informações detalhadas da configuração IP no Windows.",
+      B: "INCORRETA. Consulta registros/resolução DNS.",
+      C: "INCORRETA. Investiga o caminho até um destino.",
+      D: "INCORRETA. Testa alcance e tempos de resposta de forma contínua.",
+      E: "INCORRETA. Gerencia conexões com recursos compartilhados."
+    },
+    regra: "Escolher a ferramenta conforme o sintoma: configuração, DNS, alcance ou rota.",
+    pegadinha: "Não usar nslookup para verificar máscara ou gateway local.",
+    fonte: "Currículo M2, unidade 5, tópico 2 — comandos de configuração e estado."
+  },
+  {
+    id: "q-m2-53",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u5-t3-s1",
+    assunto: "M2.5 nslookup e dig",
+    contexto: "O acesso por IP funciona, mas é necessário confirmar se api.exemplo.gov.br resolve para o endereço esperado.",
+    enunciado: "Qual ferramenta consulta registros DNS desse nome?",
+    alternativas: [
+      { letra: "A", texto: "nslookup ou dig." },
+      { letra: "B", texto: "ipconfig /release." },
+      { letra: "C", texto: "traceroute sem destino." },
+      { letra: "D", texto: "chmod." },
+      { letra: "E", texto: "tasklist." }
+    ],
+    gabarito: "A",
+    justificativa: "nslookup e dig permitem consultar DNS e inspecionar respostas; o resultado ajuda a distinguir problemas de nome, cache, resolvedor ou registro.",
+    analise: {
+      A: "CORRETA. Ambas consultam servidores DNS e mostram respostas de resolução.",
+      B: "INCORRETA. Libera a configuração DHCP no Windows.",
+      C: "INCORRETA. Não consulta registros DNS diretamente.",
+      D: "INCORRETA. Altera permissões em sistemas Unix-like.",
+      E: "INCORRETA. Lista processos no Windows."
+    },
+    regra: "Usar nslookup/dig para testar resolução e consultar registros DNS.",
+    pegadinha: "Falha de resolução não prova que o servidor esteja indisponível pelo IP.",
+    fonte: "Currículo M2, unidade 5, tópico 3 — nslookup e dig."
+  },
+  {
+    id: "q-m2-54",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u5-t4-s1",
+    assunto: "M2.5 Diagnóstico por camadas",
+    contexto: "O usuário acessa um servidor pelo endereço IP, mas falha ao usar o nome DNS. Outros serviços de rede continuam funcionando.",
+    enunciado: "Qual hipótese deve ser investigada primeiro?",
+    alternativas: [
+      { letra: "A", texto: "Resolução DNS, comparando a consulta do nome com o endereço esperado." },
+      { letra: "B", texto: "Falha total do cabo físico." },
+      { letra: "C", texto: "Ausência total de conectividade IP." },
+      { letra: "D", texto: "Falha obrigatória de DHCP em todos os dispositivos." },
+      { letra: "E", texto: "Necessidade de substituir TCP por FTP." }
+    ],
+    gabarito: "A",
+    justificativa: "O acesso por IP demonstra conectividade; a falha específica por nome direciona a investigação para DNS, cache e configuração do resolvedor, sem excluir outras causas.",
+    analise: {
+      A: "CORRETA. A diferença entre acesso por IP e por nome aponta inicialmente para DNS.",
+      B: "INCORRETA. O acesso por IP indica alguma conectividade funcional.",
+      C: "INCORRETA. O servidor é acessível por IP.",
+      D: "INCORRETA. O sintoma não prova falha de DHCP na rede.",
+      E: "INCORRETA. FTP não corrige resolução de nomes."
+    },
+    regra: "Diagnosticar por camadas e comparar sintomas antes de concluir a causa.",
+    pegadinha: "O primeiro sintoma orienta a hipótese, mas não é prova definitiva.",
+    fonte: "Currículo M2, unidade 5, tópico 4 — diagnóstico por camadas e cenários simulados."
+  },
+  {
+    id: "q-m3-41",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u3-t1-s1",
+    assunto: "M3.3 Netiqueta profissional",
+    contexto: "Uma equipe distribuída usa e-mail e chat para coordenar tarefas com prazos curtos.",
+    enunciado: "Qual comportamento demonstra netiqueta profissional?",
+    alternativas: [
+      { letra: "A", texto: "Usar assunto claro, linguagem respeitosa, contexto suficiente e canal adequado; evitar responder a todos sem necessidade." },
+      { letra: "B", texto: "Escrever todas as mensagens em maiúsculas para indicar urgência." },
+      { letra: "C", texto: "Encaminhar todas as conversas para todos os contatos." },
+      { letra: "D", texto: "Usar ironia e abreviações ambíguas." },
+      { letra: "E", texto: "Enviar decisões por canal pessoal e não registrar o resultado." }
+    ],
+    gabarito: "A",
+    justificativa: "Netiqueta inclui respeito, clareza, concisão, contexto, pertinência e escolha apropriada do canal.",
+    analise: {
+      A: "CORRETA. Favorece clareza, respeito e pertinência.",
+      B: "INCORRETA. Maiúsculas podem ser interpretadas como grito e não substituem prioridade explícita.",
+      C: "INCORRETA. Cópias indiscriminadas aumentam ruído e exposição.",
+      D: "INCORRETA. Isso pode reduzir a compreensão e gerar conflito.",
+      E: "INCORRETA. Compromete rastreabilidade e continuidade."
+    },
+    regra: "Comunicação digital profissional deve ser respeitosa, inclusiva, pertinente e rastreável.",
+    pegadinha: "Netiqueta não é apenas polidez; também envolve privacidade e escolha do canal.",
+    fonte: "Currículo M3, unidade 3, tópico 1 — etiqueta digital em ambientes profissionais."
+  },
+  {
+    id: "q-m3-42",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u3-t2-s1",
+    assunto: "M3.3 Acessibilidade na comunicação",
+    contexto: "Uma equipe publica vídeo de treinamento e documentos com gráficos para pessoas com diferentes necessidades sensoriais.",
+    enunciado: "Qual conjunto melhora a acessibilidade?",
+    alternativas: [
+      { letra: "A", texto: "Legendas/transcrição, texto alternativo significativo e informação que não dependa apenas da cor." },
+      { letra: "B", texto: "Fonte pequena, baixo contraste e instruções baseadas apenas em cor." },
+      { letra: "C", texto: "Converter todo texto em imagem." },
+      { letra: "D", texto: "Remover títulos e estrutura semântica." },
+      { letra: "E", texto: "Repetir o mesmo texto alternativo em todas as imagens." }
+    ],
+    gabarito: "A",
+    justificativa: "Legendas/transcrições apoiam quem não ouve o áudio; texto alternativo comunica o propósito da imagem; contraste e pistas além da cor ajudam diferentes usuários.",
+    analise: {
+      A: "CORRETA. Oferece alternativas ao áudio e às imagens e evita depender só de cor.",
+      B: "INCORRETA. Cria barreiras visuais e cognitivas.",
+      C: "INCORRETA. Reduz seleção, redimensionamento e acesso semântico.",
+      D: "INCORRETA. Dificulta orientação e navegação assistiva.",
+      E: "INCORRETA. Texto alternativo deve transmitir a função ou informação relevante."
+    },
+    regra: "Acessibilidade exige conteúdo perceptível, navegável, semanticamente estruturado e com alternativas apropriadas.",
+    pegadinha: "Texto alternativo deve ser significativo, não repetitivo ou decorativo sem necessidade.",
+    fonte: "W3C — WCAG 2.2, https://www.w3.org/TR/WCAG22/."
+  },
+  {
+    id: "q-m3-43",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u3-t3-s1",
+    assunto: "M3.3 Comunicação institucional",
+    contexto: "Um órgão solicita providência formal a outra unidade, precisa registrar a decisão e acompanhar o prazo.",
+    enunciado: "Qual abordagem é mais adequada?",
+    alternativas: [
+      { letra: "A", texto: "Usar canal oficial aprovado, assunto descritivo, linguagem objetiva, responsável e prazo, preservando o registro." },
+      { letra: "B", texto: "Enviar por conta pessoal e apagar a conversa após a resposta." },
+      { letra: "C", texto: "Usar assunto genérico e omitir o prazo." },
+      { letra: "D", texto: "Enviar dados pessoais desnecessários a todos os destinatários." },
+      { letra: "E", texto: "Substituir sempre o registro formal por conversa verbal." }
+    ],
+    gabarito: "A",
+    justificativa: "A comunicação institucional deve ser clara, rastreável e realizada em canal aprovado; responsável, prazo e contexto apoiam prestação de contas.",
+    analise: {
+      A: "CORRETA. Favorece clareza, rastreabilidade e acompanhamento.",
+      B: "INCORRETA. Compromete governança e continuidade.",
+      C: "INCORRETA. Dificulta triagem e acompanhamento.",
+      D: "INCORRETA. Viola minimização e amplia exposição.",
+      E: "INCORRETA. A conversa pode complementar, mas não substitui registros exigidos."
+    },
+    regra: "Combinar finalidade, canal, clareza, rastreabilidade e proteção de dados.",
+    pegadinha: "Rastreabilidade não significa copiar todos os envolvidos nem compartilhar dados em excesso.",
+    fonte: "Currículo M3, unidade 3, tópico 3 — comunicação profissional e institucional."
+  },
+  {
+    id: "q-m3-44",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u4-t2-s1",
+    assunto: "M3.4 Compartilhamento de tela seguro",
+    contexto: "Durante uma reunião externa, a área de trabalho contém notificações e janelas com informações pessoais. O servidor precisa mostrar uma planilha específica.",
+    enunciado: "Qual prática reduz melhor a exposição acidental?",
+    alternativas: [
+      { letra: "A", texto: "Compartilhar somente a janela necessária, silenciar notificações e revisar o conteúdo antes de transmitir." },
+      { letra: "B", texto: "Compartilhar a tela inteira e deixar notificações ativas." },
+      { letra: "C", texto: "Abrir documentos sigilosos para encontrá-los rapidamente durante a reunião." },
+      { letra: "D", texto: "Permitir controle remoto a todos sem necessidade." },
+      { letra: "E", texto: "Publicar a senha da reunião no chat aberto." }
+    ],
+    gabarito: "A",
+    justificativa: "Compartilhar apenas a janela necessária, revisar o conteúdo e limitar notificações reduz a exposição de dados fora do escopo da reunião.",
+    analise: {
+      A: "CORRETA. Limita a superfície exposta e reduz vazamentos acidentais.",
+      B: "INCORRETA. Pode revelar dados sem relação com a reunião.",
+      C: "INCORRETA. Aumenta o risco de exibição acidental.",
+      D: "INCORRETA. Concede privilégios excessivos.",
+      E: "INCORRETA. Facilita acesso não autorizado."
+    },
+    regra: "Compartilhamento seguro aplica minimização, revisão e controle de permissões.",
+    pegadinha: "Notificações e janelas de fundo também podem revelar informações.",
+    fonte: "Currículo M3, unidade 4, tópico 2 — compartilhamento de tela: riscos e controle."
+  },
+  {
+    id: "q-m3-45",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u5-t1-s1",
+    assunto: "M3.5 Zoombombing e intrusão em reuniões",
+    contexto: "Uma reunião institucional recebe participante desconhecido que interrompe a sessão e tenta compartilhar conteúdo ofensivo.",
+    enunciado: "Qual resposta combina melhor contenção e prevenção?",
+    alternativas: [
+      { letra: "A", texto: "Remover o intruso, restringir compartilhamento/entrada, ativar lobby ou senha e reportar o incidente." },
+      { letra: "B", texto: "Publicar o link da reunião nas redes sociais." },
+      { letra: "C", texto: "Conceder privilégio de anfitrião ao participante." },
+      { letra: "D", texto: "Desativar autenticação e deixar a reunião aberta." },
+      { letra: "E", texto: "Ignorar o incidente e manter permissões abertas." }
+    ],
+    gabarito: "A",
+    justificativa: "A contenção exige remover o intruso, restringir recursos abusáveis, rever controles de entrada e registrar o evento conforme o procedimento institucional.",
+    analise: {
+      A: "CORRETA. Contém o evento e reduz recorrência.",
+      B: "INCORRETA. Amplia a exposição e pode atrair novos intrusos.",
+      C: "INCORRETA. Aumenta o risco e o alcance do intruso.",
+      D: "INCORRETA. Facilita novas entradas não autorizadas.",
+      E: "INCORRETA. Deixa o vetor de risco ativo."
+    },
+    regra: "Resposta a intrusões combina contenção, controle de participantes e reporte.",
+    pegadinha: "Remover o intruso pode ser insuficiente se o link continuar público e as permissões permanecerem abertas.",
+    fonte: "Currículo M3, unidade 5, tópico 1 — zoombombing e intrusão em reuniões."
+  },
+  {
+    id: "q-m3-46",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u5-t2-s2",
+    assunto: "M3.5 Exposição em calendários e convites",
+    contexto: "Um convite enviado a muitos participantes externos contém no título o nome de um paciente e no corpo detalhes confidenciais desnecessários.",
+    enunciado: "Qual ajuste aplica melhor minimização e proteção de dados?",
+    alternativas: [
+      { letra: "A", texto: "Usar título neutro, remover detalhes pessoais desnecessários e restringir os detalhes aos participantes autorizados." },
+      { letra: "B", texto: "Manter todos os detalhes porque os convidados receberam o convite." },
+      { letra: "C", texto: "Tornar o calendário público." },
+      { letra: "D", texto: "Adicionar os endereços de todos os convidados no corpo do evento." },
+      { letra: "E", texto: "Copiar o conteúdo completo para canal público." }
+    ],
+    gabarito: "A",
+    justificativa: "Convites podem expor dados em títulos, descrições, participantes e permissões; deve-se limitar o conteúdo ao necessário e controlar a visibilidade.",
+    analise: {
+      A: "CORRETA. Reduz a quantidade de dados expostos e limita acesso.",
+      B: "INCORRETA. Receber convite não justifica expor dados desnecessários.",
+      C: "INCORRETA. Amplia a exposição.",
+      D: "INCORRETA. Expõe identificadores sem necessidade.",
+      E: "INCORRETA. Divulga informação confidencial a público inadequado."
+    },
+    regra: "Aplicar minimização e controle de acesso também a metadados de calendários.",
+    pegadinha: "O título do evento pode expor informação pessoal mesmo que o corpo esteja restrito.",
+    fonte: "Currículo M3, unidade 5, tópico 2; LGPD, art. 6º, III."
+  },
+  {
+    id: "q-m3-47",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u5-t3-s1",
+    assunto: "M3.5 Phishing direcionado e spoofing",
+    contexto: "Uma mensagem usa nome de exibição semelhante ao do gestor, exige credenciais com urgência e contém link para domínio parecido com o institucional.",
+    enunciado: "Qual resposta é mais segura?",
+    alternativas: [
+      { letra: "A", texto: "Não clicar nem fornecer credenciais; verificar por canal independente e reportar a mensagem." },
+      { letra: "B", texto: "Responder com a senha para confirmar a identidade." },
+      { letra: "C", texto: "Confiar no nome exibido, pois ele não pode ser falsificado." },
+      { letra: "D", texto: "Encaminhar a mensagem a todos com o link ativo." },
+      { letra: "E", texto: "Desativar filtros antiphishing." }
+    ],
+    gabarito: "A",
+    justificativa: "A aparência do remetente pode ser falsificada; verificar por canal independente, evitar o link e reportar reduz o risco. SPF/DKIM/DMARC ajudam na autenticação, mas não eliminam toda engenharia social.",
+    analise: {
+      A: "CORRETA. Evita interação com o vetor suspeito e confirma o pedido fora do canal comprometido.",
+      B: "INCORRETA. Senhas não devem ser compartilhadas por e-mail.",
+      C: "INCORRETA. O nome de exibição pode ser falsificado.",
+      D: "INCORRETA. Pode ampliar a campanha maliciosa.",
+      E: "INCORRETA. Reduz a proteção."
+    },
+    regra: "Em suspeita de phishing, interromper interação, verificar independentemente e reportar.",
+    pegadinha: "SPF, DKIM e DMARC não garantem que toda mensagem seja legítima ou segura.",
+    fonte: "Currículo M3, unidade 5, tópico 3 — phishing direcionado e autenticação de e-mail."
+  }
+
 ];
 
 /* ----------------------------------------------------------------------------
