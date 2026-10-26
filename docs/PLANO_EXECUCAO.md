@@ -147,3 +147,30 @@ A primeira leitura dos 40 enunciados, contextos, gabaritos e justificativas do M
 ### Revisão legal do M6 — pendências específicas — 2026-10-26
 
 A checagem das fontes oficiais levou à correção das citações de q-m6-02 e q-m6-06. Permanecem cinco alinhamentos a corrigir: q-m6-03 (LGPD, art. 6º), q-m6-29 (art. 43 versus trilha de auditoria), q-m6-31 (art. 43 versus obrigação de sítio oficial), q-m6-32 (Lei nº 12.813/2013 e escopo federal) e q-m6-38 (art. 43 versus gestão de risco/auditoria). Não considerar o M6 aprovado até concluir esses pontos.
+
+
+---
+
+## Atualização de orquestração — 2026-10-25 (Fase 1)
+
+**PR de trabalho:** [#17 — docs: auditar estado remoto e iniciar orquestração da Fase 1](https://github.com/Fatal1tyBarucco/FCN/pull/17), branch `feat/fase-1-orquestracao-20261025`, base `main`, aberto e em draft no momento da inspeção. O PR já contém auditorias estruturais e correções pontuais; não criar outro PR concorrente nem sobrescrever seu trabalho.
+
+### Resultado da Fase 1
+- Prompt mestre `Escrita.txt` lido integralmente a partir do branch `main`.
+- Inventário curricular: 8 módulos, com 37 unidades, 132 tópicos e 295 subtópicos conforme os documentos e auditorias existentes.
+- Matriz: `docs/MATRIZ_COBERTURA.csv` contém linhas por subtópico e distingue presença estrutural de revisão qualitativa.
+- Critérios quantitativos do prompt: mínimo de 400 flashcards, 320 questões, 3 exemplos resolvidos por unidade quando aplicável, 5 tipos de gráfico e funcionamento real dos simuladores.
+- Estado de entrada do PR: auditorias estruturais reportadas como aprovadas; revisão semântica completa, balanceamento editorial de gabaritos, acessibilidade com leitor de tela e validação de embeds ainda são pendências.
+
+### Plano de execução atualizado
+1. **Fase 1 — inventário e matriz:** concluída como baseline estrutural; qualidade semântica ainda não aprovada.
+2. **Fase 2 — inspeção do repositório:** concluída para a inspeção documental e o diff do PR; manter o PR existente como trilha de integração.
+3. **Fase 3 — arquitetura e infraestrutura:** auditar as diferenças entre os arquivos versionados e as alegações documentadas antes de alterar aplicação.
+4. **Fase 4 — conteúdo:** revisar por lote, com contratos explícitos, sem considerar contagem como prova de completude.
+5. **Fase 5 — simuladores:** testar entradas válidas, inválidas, limites e resultados calculados, além da mera montagem de UI.
+6. **Fase 6 — revisão independente:** revisar conteúdo, gabaritos, fontes, acessibilidade e persistência por amostragem estratificada e, depois, por cobertura integral dos critérios críticos.
+7. **Fase 7 — correções:** corrigir apenas defeitos reproduzidos, preservar alterações válidas e repetir testes afetados.
+8. **Fase 8 — aceite:** comparar cada critério de `Escrita.txt` com evidência identificável; não declarar conclusão com pendências obrigatórias abertas.
+
+### Delegação e ferramentas
+Não foi confirmada neste ambiente uma ferramenta de delegação multiagente especializada. O plugin de delegação referido nos registros anteriores consta como indisponível; portanto, tarefas não serão atribuídas ficticiamente a modelos. A execução continuará por lotes isolados, com revisão posterior separada da etapa de autoria e com esta limitação registrada.
