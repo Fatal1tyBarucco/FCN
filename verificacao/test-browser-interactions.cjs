@@ -35,6 +35,28 @@ const { chromium } = require("playwright");
       { timeout: 15000 }
     );
 
+    // Accessibility: keyboard skip link must become visible and move focus to curriculum.
+    await page.keyboard.press("Tab");
+    const skipState = await page.locator(".a11y-skip-link").evaluate(el => ({
+      focused: document.activeElement === el,
+      left: getComputedStyle(el).left,
+      width: el.getBoundingClientRect().width
+    }));
+    assert.ok(skipState.focused, "first Tab should focus the skip link");
+    assert.equal(skipState.left, "0px", "focused skip link should move into the viewport");
+    assert.ok(skipState.width > 0, "focused skip link should have visible dimensions");
+    await page.keyboard.press("Enter");
+    await page.waitForFunction(() => document.activeElement && document.activeElement.id === "curriculum", null, { timeout: 5000 });
+
+    // Accessibility: curriculum tree supports ArrowLeft/ArrowRight expansion by keyboard.
+    const firstTreeItem = page.locator("#curriculum .curriculum-tree .tree-node[role='treeitem']").first();
+    await firstTreeItem.focus();
+    assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "true", "first curriculum node should start expanded");
+    await page.keyboard.press("ArrowLeft");
+    assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "false", "ArrowLeft should collapse the focused curriculum node");
+    await page.keyboard.press("ArrowRight");
+    assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "true", "ArrowRight should expand the focused curriculum node");
+
     // Excel: evaluate a formula against the simulator's real formula engine.
     await page.locator("#excel-console-fm").fill("=SOMA(1;2)");
     await page.locator("#excel-app [data-act='excel-console-calcular']").click();
