@@ -983,14 +983,14 @@ id: "q-m1-09",
       { letra: "D", texto: "Em P2P só existe o papel de cliente, porque não há servidores dedicados na camada física." }
     ],
     gabarito: "B",
-    justificativa: "O exemplo 'erro' do currículo corrige exatamente a afirmação da alternativa A: 'Parcialmente incorreto. Em P2P cada nó pode ser cliente E servidor simultaneamente (ex: BitTorrent), mas isso não elimina os papéis — apenas os torna dinâmicos'. O cenário (baixar e servir ao mesmo tempo) é a materialização desse conceito.",
+    justificativa: "Em P2P, cada par pode consumir e fornecer recursos em momentos diferentes ou simultaneamente. Isso não impede que uma implementação use serviços auxiliares de coordenação ou indexação; o aspecto distintivo é a participação dos pares no compartilhamento de recursos.",
     analise: {
       A: "INCORRETA. Erro conceitual: eliminar a distinção em vez de torná-la dinâmica — é literalmente a correção documentada no exemplo 'erro' do currículo.",
       B: "CORRETA. Dualidade e dinamismo de papéis, conforme a correção do currículo.",
       C: "INCORRETA. Erro conceitual: negar a solicitação; se todos só servissem, ninguém baixaria — contraria o próprio cenário.",
       D: "INCORRETA. Erro conceitual: nega a oferta de recursos; e a inexistência de servidor dedicado não apaga o papel funcional de servidor."
     },
-    regra: "Arquitetura P2P: sem servidor central dedicado, mas com papéis funcionais simétricos — cada nó oferta e demanda recursos conforme a comunicação.",
+    regra: "Arquitetura P2P: os pares podem ofertar e consumir recursos; a distribuição não depende necessariamente de um servidor central dedicado, embora algumas implementações usem servidores de coordenação ou indexação.",
     pegadinha: "A FGV adora a alternativa 'conceito radicalmente correto-errada' (A): ela parece profundamente técnica ('os papéis desaparecem'), mas contradiz a correção explícita do material."
   },
   {
@@ -2582,16 +2582,16 @@ id: "q-m1-40",
     topico: "m2-u1-t3-s1",
     assunto: "M2.1 Fundamentos — métricas de desempenho",
     contexto: "Um enlace de 1 Gbps é testado e apresenta throughput de 850 Mbps.",
-    enunciado: "Throughput é a taxa real de transferência alcançada em um enlace e, por isso, nunca excede a largura de banda teórica do canal.",
+    enunciado: "Throughput é a taxa útil efetivamente observada em um enlace e, sob definições e unidades de medida compatíveis, não excede a capacidade nominal do canal.",
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho 'throughput ... nunca excede a largura de banda teórica' é VERDADEIRO: o currículo define 'Throughput: taxa real de transferência alcançada (sempre menor que a largura de banda)' e afirma explicitamente que 'Throughput nunca excede largura de banda'.",
-    justificativa: "O currículo diferencia largura de banda (capacidade máxima teórica, ex.: 1 Gbps) de throughput (taxa real alcançada, sempre menor), atribuindo a diferença a overhead de protocolo (cabeçalhos TCP/IP), colisões, congestionamento e qualidade do sinal. O item está de acordo com a regra 'throughput nunca excede largura de banda'.",
+    justificativa: "A largura de banda descreve a capacidade nominal do enlace; throughput é a taxa útil efetivamente medida. Em condições reais, overhead, congestionamento e erros costumam deixar o throughput abaixo da capacidade nominal, e a comparação exige definições e unidades compatíveis.",
     analise: {
       item: "Item VERDADEIRO. Throughput é a taxa real e é sempre menor ou igual à largura de banda teórica — o currículo registra isso duas vezes (definição e correção do exemplo 'erro').",
       leituraIncorreta: "Leitura que induz ao erro: tratar largura de banda e throughput como sinônimos (o exemplo 'erro' do currículo corrige justamente essa equiparação)."
     },
-    regra: "Largura de banda = capacidade teórica máxima; throughput = taxa real medida, sempre ≤ largura de banda (diferença por overhead, colisões, congestionamento, sinal).",
+    regra: "Largura de banda = capacidade nominal do enlace; throughput = taxa útil medida, normalmente inferior por overhead e condições de rede. Compare-os usando definições e unidades compatíveis.",
     pegadinha: "Itens C/E básicos misturam definições próximas; a disciplina é não confundir 'capacidade teórica' (banda) com 'taxa real' (throughput)."
   },
   {
@@ -2613,7 +2613,7 @@ id: "q-m1-40",
       item: "Item VERDADEIRO. AnyCast = mais-próximo (DNS raiz/CDN); multicast = grupo inscrito (IGMP) — ambas as afirmações coincidem com o currículo.",
       leituraIncorreta: "Leitura que induz ao erro: confundir anycast com multicast (anycast não exige inscrição em grupo; entrega ao nó mais próximo) ou achar que multicast atinge 'todos' (é grupo específico)."
     },
-    regra: "Anycast = 1:mais-próximo (DNS raiz, CDN); multicast = 1:grupo-inscrito (IGMP); broadcast = 1:todos da sub-rede; unicast = 1:1.",
+    regra: "Anycast encaminha para uma instância selecionada pela política de roteamento, muitas vezes a mais próxima em termos topológicos (ex.: serviços DNS/CDN); multicast envia a um grupo; broadcast alcança o domínio local; unicast é 1:1.",
     pegadinha: "A pegadinha é trocar os mecanismos: anycast não exige inscrição (IGMP); quem exige grupo inscrito é o multicast."
   },
   {
