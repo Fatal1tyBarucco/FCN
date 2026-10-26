@@ -1320,3 +1320,11 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Verificação textual read-only dos seis arquivos: 324/324 questões MC apresentam o gabarito como chave de análise com marcador de correção reconhecível; 75/75 questões C/E têm gabarito `certo` ou `errado`.
 - Isso confirma coerência estrutural entre os campos, não correção factual nem qualidade pedagógica. Revisão semântica humana continua pendente para os 399 itens.
 
+## Acessibilidade automatizada — resultado final atual — 2026-10-26
+
+- Run [40413529441](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40413529441), SHA de código `7db9ef553e453ad246913c90fe1a78332beba7fd`: **success**.
+- axe-core: 58 passes, 3 incomplete, **0 violações**; o teste exige agora zero violações, não apenas ausência de impacto crítico/grave.
+- A violação moderada `landmark-unique` foi corrigida ao tornar únicos os nomes acessíveis dos landmarks de navegação dos simuladores de Segurança, Prompts e Dados.
+- Permanecem 3 verificações incompletas (contraste, frames e label-content-name-mismatch) e validação manual de teclado/leitor de tela/WCAG; não declarar a acessibilidade integralmente certificada.
+- Revisão das questões: 395/399 com fonte detectada; lacunas externas ainda abertas: `q-m2-26`, `q-m2-32`, `q-m3-19`, `q-m3-36`. Conferir as URLs adicionadas e suas afirmações, não apenas a presença do campo.
+
