@@ -741,9 +741,9 @@ const moduleQuestions5 = [
       { letra: "E", texto: "Diminuir o tamanho do prompt." }
     ],
     gabarito: "A",
-    justificativa: "Delimitadores ajudam a distinguir instruções confiáveis de conteúdo fornecido como dado, mas não impedem sozinhos que o modelo siga instruções maliciosas inseridas no conteúdo. São uma camada de mitigação, combinada com controles de acesso, validação de saída e testes adversariais."
+    justificativa: "Delimitadores ajudam a distinguir instruções confiáveis de conteúdo fornecido como dado, mas não impedem sozinhos que o modelo siga instruções maliciosas inseridas no conteúdo. São uma camada de mitigação, combinada com controles de acesso, validação de saída e testes adversariais.",
     analise: {
-      A: "CORRETA. Delimitação explícita pode reduzir a confusão entre instruções e dados, mitigando parte do risco; não é uma defesa suficiente por si só."
+      A: "CORRETA. Delimitação explícita pode reduzir a confusão entre instruções e dados, mitigando parte do risco; não é uma defesa suficiente por si só.",
       B: "INCORRETA. Delimitação não aumenta o custo.",
       C: "INCORRETA. Delimitação não elimina a necessidade de verificação humana.",
       D: "INCORRETA. Delimitação torna o modelo mais previsível, não indeterminístico.",
@@ -756,7 +756,7 @@ const moduleQuestions5 = [
 
   { id: "q-m5-31", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "m5-u4-t2-s1", assunto: "5.4 — Avaliação de prompts",
-    contexto: "Uma equipe compara duas configurações de temperatura em um assistente de atendimento."
+    contexto: "Uma equipe compara duas configurações de temperatura em um assistente de atendimento.",
     enunciado: "A avaliação de prompts de forma confiável exige:",
     alternativas: [
       { letra: "A", texto: "Conjunto de teste versionado e métrica definida antes da execução." },
