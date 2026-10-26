@@ -1154,128 +1154,128 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-46", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Integridade",
-    contexto: "A integridade é um dos pilares da segurança da informação.",
-    enunciado: "A integridade de dados significa que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.1 — Integridade e verificação de alterações",
+    contexto: "Um órgão precisa detectar se um arquivo de configuração foi modificado sem autorização entre duas implantações.",
+    enunciado: "Qual medida fornece evidência técnica útil para verificar se o conteúdo do arquivo mudou?",
     alternativas: [
-      { letra: "A", texto: "Os dados estão disponíveis a qualquer usuário." },
-      { letra: "B", texto: "Os dados não foram alterados de forma não autorizada." },
-      { letra: "C", texto: "Os dados são acessíveis a todos com chave." },
-      { letra: "D", texto: "Os dados nunca são armazenados." },
-      { letra: "E", texto: "Os dados são apenas para leitura." }
+      { letra: "A", texto: "Calcular e comparar um hash criptográfico confiável do arquivo antes e depois, protegendo a referência esperada." },
+      { letra: "B", texto: "Verificar apenas se o nome e a extensão do arquivo continuam iguais." },
+      { letra: "C", texto: "Confiar que a data de modificação não pode ser alterada." },
+      { letra: "D", texto: "Permitir escrita a todos os usuários e confiar no histórico verbal da equipe." },
+      { letra: "E", texto: "Criptografar o nome do arquivo sem verificar o conteúdo." }
     ],
-    gabarito: "B",
-    justificativa: "Integridade garante que os dados não foram alterados de forma não autorizada — preservando a exatidão e a confiabilidade da informação. Disponibilidade (alternativa A incorreta); acesso a todos (alternativa C incorreta); armazenamento (alternativa D incorreta); apenas leitura (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Um hash criptográfico pode ajudar a detectar alterações no conteúdo quando o valor esperado é confiável e protegido contra substituição. A comparação não identifica necessariamente quem alterou o arquivo nem prova que a versão original era legítima; por isso, deve ser combinada com controle de acesso, gestão de mudanças e registros apropriados.",
     analise: {
-      A: "INCORRETA. Disponibilidade é outro dos pilares, não a definição de integridade.",
-      B: "CORRETA. Integridade = preservação da exatidão dos dados, sem alteração não autorizada.",
-      C: "INCORRETA. Acesso a todos não é integridade — é confidencialidade invertida.",
-      D: "INCORRETA. Armazenamento não é o foco da integridade.",
-      E: "INCORRETA. Somente leitura não garante integridade — alteração não autorizada seria o problema."
+      A: "CORRETA. Comparar hashes confiáveis ajuda a detectar mudanças no conteúdo; a proteção da referência esperada é essencial.",
+      B: "INCORRETA. Nome e extensão podem permanecer iguais mesmo quando o conteúdo é alterado.",
+      C: "INCORRETA. Metadados de data podem ser modificados e não constituem prova suficiente de integridade.",
+      D: "INCORRETA. Permissões excessivas aumentam o risco e relatos verbais não fornecem evidência técnica confiável.",
+      E: "INCORRETA. Proteger o nome não permite verificar se o conteúdo do arquivo mudou."
     },
-    regra: "Integridade = 'dados corretos e intactos'. Preservação da exatidão.",
-    pegadinha: "Integridade não é 'sempre correto' — é 'sem alteração não autorizada'.",
-    fonte: "ISO/IEC 27000:2018."
+    regra: "Hash criptográfico confiável ajuda a detectar alteração de conteúdo, mas não prova autoria nem legitimidade da versão original.",
+    pegadinha: "A detecção de mudança depende de uma referência confiável; se um invasor puder substituir o arquivo e o hash esperado, a comparação perde valor.",
+    fonte: "NIST, FIPS PUB 180-4 — Secure Hash Standard: https://csrc.nist.gov/pubs/fips/180-4/upd1/final."
   },
 
   { id: "q-m4-47", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Disponibilidade",
-    contexto: "A disponibilidade é a garantia de acesso quando necessário.",
-    enunciado: "A disponibilidade de sistemas e dados significa que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.1 — Disponibilidade, RTO e RPO",
+    contexto: "Um sistema de atendimento deve voltar a operar rapidamente após uma interrupção, e a organização precisa definir quanto tempo e quantos dados pode perder.",
+    enunciado: "Qual associação entre objetivos de recuperação está correta?",
     alternativas: [
-      { letra: "A", texto: "Os dados estão sempre online." },
-      { letra: "B", texto: "Os sistemas e dados estão acessíveis quando o uso for necessário." },
-      { letra: "C", texto: "Os dados nunca são acessados." },
-      { letra: "D", texto: "Os sistemas são sempre desativados." },
-      { letra: "E", texto: "Os dados são exclusivamente para leitura." }
+      { letra: "A", texto: "RTO é o tempo-alvo para recuperação do serviço; RPO é o ponto no tempo até o qual os dados precisam ser recuperados, refletindo a perda de dados tolerável." },
+      { letra: "B", texto: "RTO mede a quantidade de dados pessoais coletados e RPO mede o número de usuários autorizados." },
+      { letra: "C", texto: "RTO e RPO significam que a organização nunca terá interrupção ou perda de dados." },
+      { letra: "D", texto: "RPO define o tempo de resposta da equipe de suporte, enquanto RTO define a senha de recuperação." },
+      { letra: "E", texto: "RTO e RPO são sinônimos de criptografia em repouso." }
     ],
-    gabarito: "B",
-    justificativa: "Disponibilidade significa que sistemas e dados estão operacionais e acessíveis quando o usuário precisa acessá-los. Sempre online (alternativa A incorreta); nunca acessados (alternativa C incorreta); sempre desativados (alternativa D incorreta); exclusivamente para leitura (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "O Recovery Time Objective (RTO) estabelece o tempo-alvo para restabelecer um serviço após uma interrupção. O Recovery Point Objective (RPO) estabelece o ponto temporal de recuperação dos dados e, na prática, orienta a perda máxima de dados que a organização pode tolerar. Ambos são objetivos de planejamento, não garantias de ausência de incidentes.",
     analise: {
-      A: "INCORRETA. 'Sempre online' não é a definição — é acessível 'quando necessário'.",
-      B: "CORRETA. Disponibilidade = sistemas e dados acessíveis quando o uso for necessário.",
-      C: "INCORRETA. Dados acessíveis quando needed, não 'nunca acessados'.",
-      D: "INCORRETA. Sistemas sempre desativados é o oposto de disponibilidade.",
-      E: "INCORRETA. Disponibilidade não se refere à leitura exclusiva."
+      A: "CORRETA. RTO trata do tempo de recuperação; RPO trata do ponto de recuperação dos dados e da perda tolerável.",
+      B: "INCORRETA. Essas descrições não correspondem aos objetivos de recuperação.",
+      C: "INCORRETA. RTO e RPO são metas de continuidade, não promessas de interrupção ou perda zero.",
+      D: "INCORRETA. Nenhuma dessas definições corresponde aos termos RTO e RPO.",
+      E: "INCORRETA. RTO e RPO são objetivos de recuperação, não técnicas criptográficas."
     },
-    regra: "Disponibilidade = 'quando você precisar'. Garantir que o sistema responda quando necessário.",
-    pegadinha: "Disponibilidade não é 'sempre ativo' — é 'disponível quando needed'.",
-    fonte: "NIST SP 800-53 (AVA-1)."
+    regra: "RTO = tempo-alvo para restaurar o serviço; RPO = ponto temporal de recuperação dos dados e perda de dados tolerável.",
+    pegadinha: "Metas de recuperação orientam a arquitetura e os testes, mas não garantem por si sós que a meta será cumprida.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-48", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Autenticação",
-    contexto: "A autenticação é o processo de verificação da identidade de um usuário ou sistema.",
-    enunciado: "A autenticação é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Autenticação multifator",
+    contexto: "Uma aplicação exige senha e um código enviado ao mesmo endereço de e-mail usado para recuperar a conta.",
+    enunciado: "Qual avaliação técnica é mais adequada sobre a proteção oferecida por esse mecanismo?",
     alternativas: [
-      { letra: "A", texto: "O processo de autorizar o acesso a recursos." },
-      { letra: "B", texto: "O processo de criptografar dados." },
-      { letra: "C", texto: "O processo de verificar a identidade de um usuário ou sistema." },
-      { letra: "D", texto: "O processo de excluir dados." },
-      { letra: "E", texto: "O processo de criar dados." }
+      { letra: "A", texto: "A exigência de dois códigos sempre configura dois fatores independentes, qualquer que seja o mecanismo." },
+      { letra: "B", texto: "A aplicação deve avaliar se os elementos usados pertencem a categorias distintas e se a recuperação da conta não contorna o segundo fator." },
+      { letra: "C", texto: "Duas senhas memorizadas são necessariamente dois fatores diferentes." },
+      { letra: "D", texto: "Autenticação multifator elimina a necessidade de proteger sessões e dispositivos." },
+      { letra: "E", texto: "Um código de uso único torna impossível qualquer ataque à conta." }
     ],
-    gabarito: "C",
-    justificativa: "Autenticação é o processo de verificar a identidade de um usuário ou sistema — saber 'quem é'. Autorização é um processo posterior (alternativa A incorreta); criptografia é proteção (alternativa B incorreta); exclusão (alternativa D incorreta); criação (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "A autenticação multifator combina fatores de categorias distintas, como conhecimento, posse e inerência. Dois elementos do mesmo tipo não constituem necessariamente MFA. A arquitetura também deve considerar recuperação de conta, proteção de sessão e resistência a phishing; nenhum fator isolado elimina todos os riscos.",
     analise: {
-      A: "INCORRETA. Autorização é o processo de conceder acesso — é posterior à autenticação.",
-      B: "INCORRETA. Criptografia é uma técnica de proteção, não autenticação.",
-      C: "CORRETA. Autenticação = verificar a identidade de um usuário ou sistema.",
-      D: "INCORRETA. Exclusão é uma operação de gestão, não autenticação.",
-      E: "INCORRETA. Criação de dados não é autenticação."
+      A: "INCORRETA. Contar elementos não basta; importa se são fatores independentes de categorias distintas.",
+      B: "CORRETA. A avaliação considera categorias de fatores e caminhos alternativos de recuperação que possam contornar o controle.",
+      C: "INCORRETA. Duas senhas são, em geral, fatores da mesma categoria: conhecimento.",
+      D: "INCORRETA. Sessões, dispositivos e recuperação continuam precisando de controles de segurança.",
+      E: "INCORRETA. Códigos de uso único reduzem certos riscos, mas não tornam ataques impossíveis."
     },
-    regra: "Autenticação = 'quem é?'. Verificar identidade antes de conceder acesso.",
-    pegadinha: "Autenticação não é 'quem pode acessar' — é 'quem é' (anterior à autorização).",
-    fonte: "NIST SP 800-63B."
+    regra: "MFA exige fatores de categorias distintas e deve incluir análise dos fluxos de recuperação, sessão e resistência a phishing.",
+    pegadinha: "Dois passos de verificação não significam automaticamente dois fatores independentes.",
+    fonte: "NIST SP 800-63B — Digital Identity Guidelines: Authentication and Lifecycle Management: https://pages.nist.gov/800-63-4/sp800-63b.html."
   },
 
   { id: "q-m4-49", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Autorização",
-    contexto: "A autorização é o processo de conceder ou recusar acesso a recursos.",
-    enunciado: "A autorização é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controle de acesso baseado em papéis",
+    contexto: "Uma equipe de atendimento precisa consultar dados de solicitações, mas não deve alterar regras de negócio nem exportar toda a base.",
+    enunciado: "Qual configuração aplica melhor o princípio do menor privilégio?",
     alternativas: [
-      { letra: "A", texto: "Processo de verificar a identidade de um usuário." },
-      { letra: "B", texto: "Processo de conceder ou recusar o acesso a recursos baseado em permissões." },
-      { letra: "C", texto: "Processo de criptografia de dados." },
-      { letra: "D", texto: "Processo de exclusão de dados." },
-      { letra: "E", texto: "Processo de geração de senhas." }
+      { letra: "A", texto: "Conceder perfil de administrador a toda a equipe para evitar solicitações de acesso." },
+      { letra: "B", texto: "Compartilhar uma única conta com todas as permissões e registrar apenas o horário de uso." },
+      { letra: "C", texto: "Conceder somente permissões necessárias às tarefas, separar funções incompatíveis e revisar os acessos periodicamente." },
+      { letra: "D", texto: "Manter permissões antigas após a mudança de função para evitar indisponibilidade." },
+      { letra: "E", texto: "Usar a mesma permissão para leitura, alteração, exportação e administração em todos os perfis." }
     ],
-    gabarito: "B",
-    justificativa: "Autorização é o processo de conceder ou recusar acesso a recursos, baseado em permissões, roles e políticas de segurança. Verificar identidade (alternativa A incorreta); criptografar (alternativa C incorreta); excluir (alternativa D incorreta); gerar senhas (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "O menor privilégio limita cada identidade às permissões necessárias para suas tarefas. A separação de funções reduz concentrações incompatíveis de poder, e revisões periódicas ajudam a remover acessos obsoletos. O desenho deve preservar a atribuição individual e acompanhar mudanças de função.",
     analise: {
-      A: "INCORRETA. Verificar identidade é autenticação, não autorização.",
-      B: "CORRETA. Autorização = conceder ou recusar acesso baseado em permissões.",
-      C: "INCORRETA. Criptografia é proteção de dados, não autorização.",
-      D: "INCORRETA. Exclusão é gestão de dados, não autorização.",
-      E: "INCORRETA. Geração de senhas é gestão de credenciais, não autorização."
+      A: "INCORRETA. Permissões administrativas amplas excedem o necessário para atendimento e ampliam o impacto de erros ou comprometimentos.",
+      B: "INCORRETA. Contas compartilhadas enfraquecem a atribuição individual e mantêm permissões excessivas.",
+      C: "CORRETA. A alternativa combina menor privilégio, separação de funções e revisão periódica de acesso.",
+      D: "INCORRETA. Acesso deve ser atualizado quando a função muda, conforme a necessidade atual.",
+      E: "INCORRETA. Permissões distintas devem refletir tarefas e responsabilidades diferentes."
     },
-    regra: "Autorização = 'quem pode usar o que'. Conceder/recusar acesso com base em regras.",
-    pegadinha: "Autorização não é 'ver quem está' — é 'conceder ou recusar acesso'.",
-    fonte: "NIST SP 800-53 (AC-3)."
+    regra: "Menor privilégio: conceder apenas o acesso necessário, manter identidades individuais e revisar permissões diante de mudanças de função.",
+    pegadinha: "Facilidade operacional não justifica privilégios administrativos para todos nem contas compartilhadas.",
+    fonte: "NIST SP 800-53 Rev. 5, AC-6 — Least Privilege: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
   { id: "q-m4-50", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Auditoria",
-    contexto: "A auditoria é o processo de monitoramento e registro de ações em sistemas.",
-    enunciado: "A auditoria em segurança da informação é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Registros de auditoria e proteção contra adulteração",
+    contexto: "Após um incidente, a equipe descobre que a conta comprometida tinha permissão para apagar os registros que documentariam suas próprias ações.",
+    enunciado: "Qual medida melhora a confiabilidade dos registros de auditoria?",
     alternativas: [
-      { letra: "A", texto: "O processo de excluir Logs." },
-      { letra: "B", texto: "O processo de criptografar acesso." },
-      { letra: "C", texto: "O processo de monitorar e registrar ações para auditoria e análise." },
-      { letra: "D", texto: "O processo de impedir acesso." },
-      { letra: "E", texto: "O processo de evitar relatórios." }
+      { letra: "A", texto: "Permitir que todos os usuários alterem e apaguem livremente os registros." },
+      { letra: "B", texto: "Desativar a sincronização de horário para evitar divergências entre sistemas." },
+      { letra: "C", texto: "Restringir e separar a administração dos logs, proteger sua integridade, sincronizar relógios e monitorar falhas de registro." },
+      { letra: "D", texto: "Guardar somente capturas de tela, sem registrar eventos relevantes." },
+      { letra: "E", texto: "Apagar os logs após cada incidente para reduzir o volume de armazenamento." }
     ],
     gabarito: "C",
-    justificativa: "Auditoria é o processo de monitorar, registrar e analisar ações de sistemas e usuários — essencial para detecção, investigação e conformidade. Excluir Logs (alternativa A incorreta); criptografar acesso (alternativa B incorreta); impedir acesso (alternativa D incorreta); evitar relatórios (alternativa E incorreta).",
+    justificativa: "Registros de auditoria são mais úteis quando os eventos relevantes são definidos, os relógios são sincronizados, o acesso aos registros é restrito e a alteração ou exclusão não autorizada é detectável ou impedida. A separação de funções reduz a possibilidade de uma conta comprometida apagar suas próprias evidências. A retenção deve seguir requisitos legais, operacionais e de privacidade.",
     analise: {
-      A: "INCORRETA. Auditoria requer Logs; excluí-los compromete a auditoria.",
-      B: "INCORRETA. Criptografia não é auditoria.",
-      C: "CORRETA. Auditoria = monitorar e registrar ações, para análise e conformidade.",
-      D: "INCORRETA. Auditoria não impede acesso — é monitoramento pós-fato.",
-      E: "INCORRETA. Auditoria gera relatórios para análise."
+      A: "INCORRETA. Permissões amplas permitem adulteração e destruição de evidências.",
+      B: "INCORRETA. Sem sincronização de horário, correlacionar eventos entre sistemas fica mais difícil.",
+      C: "CORRETA. A alternativa reúne controles importantes para integridade, rastreabilidade e investigação.",
+      D: "INCORRETA. Capturas de tela não substituem registros estruturados de eventos necessários à investigação.",
+      E: "INCORRETA. A eliminação indiscriminada pode destruir evidências e contrariar políticas de retenção."
     },
-    regra: "Auditoria = 'olhar o que aconteceu'. Monitoramento, registro e análise de ações.",
-    pegadinha: "Auditoria não é 'impedir' — é 'registrar e analisar depois'.",
-    fonte: "NIST SP 800-53 (AU-2)."
+    regra: "Logs confiáveis exigem eventos relevantes, horário consistente, acesso restrito, proteção contra adulteração e retenção definida.",
+    pegadinha: "Registrar eventos não basta se a conta investigada puder apagar ou modificar os próprios registros sem detecção.",
+    fonte: "NIST SP 800-53 Rev. 5, família AU — Audit and Accountability: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
   { id: "q-m4-51", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
