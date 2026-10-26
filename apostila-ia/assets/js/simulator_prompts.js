@@ -158,7 +158,7 @@
   var promptCss = '<style>'
     + '.sim-prompts{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-prompts h3{margin:8px 0 2px}.sim-prompts h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-prompts-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-prompts-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
     + '.sim-prompts-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
     + '.sim-prompts-field{margin-bottom:10px}'
     + '.sim-prompts-label{display:block;font-size:.78rem;color:#8b94a5;margin-bottom:2px}'
@@ -172,8 +172,8 @@
     + '.sim-prompts-comparacao div{background:#161a21;border:1px solid #333947;border-radius:6px;padding:8px}'
     + '.sim-prompts-sim{background:#1b1e24;border-left:3px solid #4a94d4;margin:8px 0;padding:8px;font-size:.82rem;color:#b9c0d4}'
     + '.sim-prompts-nota{font-size:1.1rem;font-weight:600}'
-    + '.sim-prompts-link{color:#4a94d4;cursor:pointer;text-decoration:underline}'
-    + '.sim-prompts-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
+    + '.sim-prompts-link{color:#174ea6;cursor:pointer;text-decoration:underline}'
+    + '.sim-prompts-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-prompts-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
     + '.sim-prompts-nav-btn:hover{background:#3a4252}'
     + '.sim-prompts-ponteiro{cursor:col-resize}'
     + '</style>';
@@ -208,9 +208,9 @@
       html += '<div style="margin-bottom:16px">';
       html += '<strong>' + esc(ex.titulo) + '</strong>';
       html += '<div class="sim-prompts-comparacao">';
-      html += '<div><h5 style="margin:4px 0;color:#ff7b7b">Prompt ruim (ambíguo)</h5><pre class="sim-prompts-input">' + esc(ex.promptRuim) + '</pre>';
+      html += '<div><h5 style="margin:4px 0;color:#ff7b7b">Prompt ruim (ambíguo)</h5><pre class="sim-prompts-input" tabindex="0">' + esc(ex.promptRuim) + '</pre>';
       html += '<div style="margin-top:6px"><strong>Pontuação:</strong> ' + esc(promptScoreTotal(avaliarPrompt(ex.promptRuim))) + '%</div></div>';
-      html += '<div><h5 style="margin:4px 0;color:#5ee0a0">Prompt bom (engenharia aplicada)</h5><pre class="sim-prompts-input">' + esc(ex.promptBom) + '</pre>';
+      html += '<div><h5 style="margin:4px 0;color:#5ee0a0">Prompt bom (engenharia aplicada)</h5><pre class="sim-prompts-input" tabindex="0">' + esc(ex.promptBom) + '</pre>';
       html += '<div style="margin-top:6px"><strong>Pontuação:</strong> ' + esc(promptScoreTotal(avaliarPrompt(ex.promptBom))) + '%</div></div>';
       html += '</div>';
       html += '<button type="button" class="sim-prompts-btn" data-act="prom-mostrar-indicadores" data-ex="' + esc(ex.id) + '" style="margin:6px 0">Mostrar indicadores</button>';
@@ -224,11 +224,11 @@
   function promptBuildAmbi() {
     var html = '<div class="sim-prompts-bloco"><h4>Demonstração de ambiguidade</h4>';
     html += '<p class="sim-prompts-sub">Um prompt ambíguo pode ser interpretado de várias formas. Veja como restringir a interpretação:</p>';
-    html += '<div class="sim-prompts-sim"><strong>Prompt ambíguo:</strong><pre class="sim-prompts-input">Me dê informações sobre segurança.</pre>'
+    html += '<div class="sim-prompts-sim"><strong>Prompt ambíguo:</strong><pre class="sim-prompts-input" tabindex="0">Me dê informações sobre segurança.</pre>'
       + '<p><strong>Possível interpretação 1:</strong> segurança física (portas, cercas, vigilância).</p>'
       + '<p><strong>Possível interpretação 2:</strong> segurança da informação (firewalls, criptografia, MFA).</p>'
       + '<p><strong>Possível interpretação 3:</strong> segurança de software (vulnerabilidades, patches).</p></div>';
-    html += '<div class="sim-prompts-sim"><strong>Prompt restringido:</strong><pre class="sim-prompts-input">Explique três mecanismos de autenticação multifator (MFA) usados em segurança da informação, com exemplo de cada um, em até 3 frases por mecanismo.</pre>'
+    html += '<div class="sim-prompts-sim"><strong>Prompt restringido:</strong><pre class="sim-prompts-input" tabindex="0">Explique três mecanismos de autenticação multifator (MFA) usados em segurança da informação, com exemplo de cada um, em até 3 frases por mecanismo.</pre>'
       + '<p>Agora o escopo está claro: MFA, segurança da informação, 3 exemplos, formato de saída definido.</p></div>';
     html += '</div>';
     return html;
@@ -245,10 +245,12 @@
     return '<div class="sim-prompts">'
       + '<h3>Simulador de Engenharia de Prompts (Seção 7.4)</h3>'
       + '<p class="sim-prompts-sub">Edite, avalie e compare prompts. <strong>Simulação local — sem API externa.</strong> Nenhuma saída é apresentada como geração real de modelo de IA.</p>'
-      + '<p class="sim-prompts-sub">Navegação: <span class="sim-prompts-link" data-act="nav" data-target="editor">1. Editor de prompts</span>'
-      + ' | <span class="sim-prompts-link" data-act="nav" data-target="comparacao">2. Comparação entre prompts</span>'
-      + ' | <span class="sim-prompts-link" data-act="nav" data-target="ambiguidade">3. Ambiguidade</span>'
-      + ' | <span class="sim-prompts-link" data-act="nav" data-target="limites">4. Escopo declarado</span></p>'
+      + '<nav class="sim-prompts-nav" aria-label="Seções do simulador">'
+      + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="editor">1. Editor de prompts</button>'
+      + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="comparacao">2. Comparação entre prompts</button>'
+      + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="ambiguidade">3. Ambiguidade</button>'
+      + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="limites">4. Escopo declarado</button>'
+      + '</nav>'
       + '<div id="prom-pane-editor" class="prom-pane">' + promptBuildEditor() + '</div>'
       + '<div id="prom-pane-comparacao" class="prom-pane" style="display:none">' + promptBuildComparacao() + '</div>'
       + '<div id="prom-pane-ambiguidade" class="prom-pane" style="display:none">' + promptBuildAmbi() + '</div>'
