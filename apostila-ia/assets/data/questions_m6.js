@@ -91,7 +91,7 @@ const moduleQuestions6 = [
     },
     regra: "Moralidade digital: a finalidade declarada da coleta deve ser a finalidade real do uso; desvio de finalidade é violação autônoma.",
     pegadinha: "Questões que apresentam como 'vedado' exatamente o que a norma exige são armadilha de leitura; confira a direção do verbo.",
-    fonte: "CF/88, art. 37, caput; Lei nº 12.527/2011, art. 31, caput; Lei nº 13.709/2018, art. 1º (verificados em 2026-10-20/21)."
+    fonte: "CF/88, art. 37, caput; Lei nº 12.527/2011, art. 31, caput; Lei nº 13.709/2018, arts. 5º, I, e 6º, I a III (finalidade, adequação e necessidade; verificados em fontes oficiais em 2026-10-26)."
   },
 
   { id: "q-m6-04", modulo: 6, formato: "mc", estilo: "vunesp", origem: "autoral",
@@ -701,7 +701,7 @@ const moduleQuestions6 = [
     },
     regra: "Trilha útil = usuário individual + data/hora + ação + objeto + resultado + versão da regra; sem isso, a apuração é narrativa.",
     pegadinha: "Log sem identidade individual parece 'proteção de dados', mas destrói accountability — proteção de dados não se faz apagando autoria de acesso.",
-    fonte: "Lei nº 12.527/2011, art. 6º, III, e art. 34; Lei nº 14.129/2021, art. 43, I e IV (verificados em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011, arts. 6º, III, e 34; Lei nº 13.709/2018, arts. 6º, X, 37 e 46; Lei nº 14.129/2021, art. 49 (verificados em fontes oficiais em 2026-10-26)."
   },
 
   { id: "q-m6-30", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -745,12 +745,12 @@ const moduleQuestions6 = [
     },
     regra: "Canal institucional: titularidade do órgão, conta individual com segundo fator, política editorial, registro de publicação e rotina de correção; rede social é complementar.",
     pegadinha: "A alternativa C parece 'colaborativa' e é justamente o exemplo de falha de controle do currículo.",
-    fonte: "Lei nº 12.527/2011, art. 8º, caput e § 2º; Lei nº 14.129/2021, art. 43, IV (verificados em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011, art. 8º, caput e § 2º; Lei nº 14.129/2021, art. 3º, IV (transparência na execução dos serviços públicos e divulgação de informações de interesse público; verificados em fontes oficiais em 2026-10-26)."
   },
 
   { id: "q-m6-32", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "m6-u4-t2-s1", assunto: "6.4 — Conflito de interesse: tipologia e tratamento",
-    contexto: "Servidor responsável por homologar contratações tem irmão sócio de empresa que participará da licitação. Ele não interfere no resultado e declara a situação ao chefe.",
+    contexto: "Servidor do Poder Executivo federal responsável por homologar contratações tem irmão sócio de empresa que participará da licitação. Ele não interfere no resultado e declara a situação ao chefe.",
     enunciado: "O caso configura, e o tratamento adequado é",
     alternativas: [
       { letra: "A", texto: "conflito de interesse aparente, que exige declaração formal e, conforme o risco, afastamento do ato específico, com substituição por servidor sem conflito." },
@@ -770,7 +770,7 @@ const moduleQuestions6 = [
     },
     regra: "Conflito real, potencial e aparente; tratamento = declaração formal, registro, afastamento ou recusa do ato e, se houver indício, remessa ao controle.",
     pegadinha: "A alternativa B usa o argumento 'não houve influência' para apagar o conflito aparente — que existe justamente sem influência efetiva.",
-    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, art. 3º, IV e VI (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.813/2013, arts. 3º, I, 4º e 5º, V, aplicável ao Poder Executivo federal; CF/88, art. 37, caput (verificados em fonte oficial em 2026-10-26)."
   },
 
   { id: "q-m6-33", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -908,7 +908,7 @@ const moduleQuestions6 = [
     },
     regra: "Incidente: conter, preservar evidência, avaliar extensão, comunicar, analisar o controle que falhou, corrigir e registrar.",
     pegadinha: "A ordem das providências é objeto de prova: preservar a prova vem antes de mexer no ambiente.",
-    fonte: "Lei nº 12.527/2011, arts. 32, IV, e 34; Lei nº 13.709/2018, art. 46; Lei nº 14.129/2021, arts. 43, IV, e 48 (verificados em 2026-10-20/21)."
+    fonte: "Lei nº 12.527/2011, arts. 6º, III, 32, IV, e 34; Lei nº 13.709/2018, arts. 37, 46, 48 e 49 (verificados em fontes oficiais em 2026-10-26)."
   },
 
   { id: "q-m6-39", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
