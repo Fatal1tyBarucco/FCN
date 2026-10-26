@@ -73,6 +73,11 @@ const axeCore = require("axe-core");
       [],
       "WCAG 2.1 A/AA scan must not report critical or serious violations"
     );
+    assert.deepEqual(
+      accessibilityAudit.violations,
+      [],
+      "axe-core must not report any WCAG or best-practice violations"
+    );
 
     // Accessibility: keyboard skip link must become visible and move focus to curriculum.
     await page.keyboard.press("Tab");
