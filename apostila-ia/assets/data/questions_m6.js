@@ -750,27 +750,27 @@ const moduleQuestions6 = [
 
   { id: "q-m6-32", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "m6-u4-t2-s1", assunto: "6.4 — Conflito de interesse: tipologia e tratamento",
-    contexto: "Servidor do Poder Executivo federal responsável por homologar contratações tem irmão sócio de empresa que participará da licitação. Ele não interfere no resultado e declara a situação ao chefe.",
+    contexto: "Antes da homologação de uma licitação no Poder Executivo federal, o servidor responsável identifica que o irmão é sócio de uma das empresas concorrentes. Ainda não praticou ato que favoreça a empresa e comunica formalmente o vínculo à unidade de integridade.",
     enunciado: "O caso configura, e o tratamento adequado é",
     alternativas: [
-      { letra: "A", texto: "conflito de interesse aparente, que exige declaração formal e, conforme o risco, afastamento do ato específico, com substituição por servidor sem conflito." },
+      { letra: "A", texto: "risco potencial de conflito que deve ser formalmente avaliado; enquanto isso, cabe registrar o vínculo e adotar salvaguardas proporcionais, como afastamento do ato específico se necessário." },
       { letra: "B", texto: "situação irrelevante, pois não houve influência efetiva sobre o resultado." },
       { letra: "C", texto: "conflito real, que se resolve com comunicação verbal ao colega de equipe." },
       { letra: "D", texto: "impedimento definitivo para o exercício do cargo, com exoneração automática." },
       { letra: "E", texto: "questão estritamente privada, cujo registro é vedado para proteger a vida privada do servidor." }
     ],
     gabarito: "A",
-    justificativa: "Conflito de interesse é a situação em que o interesse pessoal pode influenciar, ou pode razoavelmente parecer influenciar, o exercício da atribuição. Há três elementos: interesse pessoal (vínculo familiar e participação societária), atribuição que pode ser influenciada (homologação de contratações) e capacidade real ou aparente de influência. O tratamento começa pela declaração formal e registro, evolui para afastamento ou recusa do ato específico com segregação de funções e, havendo indício de uso indevido, remessa ao controle. A alternativa B ignora o conflito aparente; C trata como real e propõe tratamento informal; D inventa sanção; E impede o controle, que é justamente o que a transparência exige.",
+    justificativa: "A Lei nº 12.813/2013 define conflito de interesses pelo confronto entre interesses públicos e privados que possa comprometer o interesse coletivo ou influenciar impropriamente a função (art. 3º, I), impõe dever preventivo (art. 4º) e inclui ato em benefício de pessoa jurídica da qual participe parente até o terceiro grau, quando a empresa possa ser beneficiada ou influir em sua gestão (art. 5º, V). O parentesco, isoladamente, não prova infração consumada: é necessário avaliar o ato, a atribuição do servidor e o risco de benefício. Antes da homologação, a resposta prudente é declarar e registrar formalmente o vínculo, consultar a unidade de integridade e adotar salvaguardas proporcionais, inclusive afastamento do ato específico quando indicado. A alternativa B ignora o risco preventivo; C propõe comunicação informal; D inventa exoneração automática; E impede o controle.",
     analise: {
-      A: "CORRETA. Classifica como aparente e aplica o protocolo: declaração formal, registro e afastamento conforme o risco.",
-      B: "INCORRETA. Erro conceitual: a aparência de influência já é hipótese de conflito e exige tratamento.",
-      C: "INCORRETA. Erro conceitual duplo: comunicação verbal não é registro, e o conflito aparente não se converte em real pela ausência de efeito.",
+      A: "CORRETA. Trata a situação como risco potencial, exige registro e avaliação formal e prevê salvaguardas proporcionais sem presumir infração consumada.",
+      B: "INCORRETA. A ausência de influência efetiva até o momento não elimina o dever preventivo de avaliar e administrar o risco antes da decisão.",
+      C: "INCORRETA. Comunicação apenas verbal não oferece registro formal adequado e não resolve o risco de imparcialidade.",
       D: "INCORRETA. Erro conceitual: o tratamento é do ato específico, não do vínculo funcional.",
       E: "INCORRETA. Erro conceitual: o vínculo que afeta a imparcialidade é matéria de interesse público, não questão privada opaca."
     },
-    regra: "Conflito real, potencial e aparente; tratamento = declaração formal, registro, afastamento ou recusa do ato e, se houver indício, remessa ao controle.",
-    pegadinha: "A alternativa B usa o argumento 'não houve influência' para apagar o conflito aparente — que existe justamente sem influência efetiva.",
-    fonte: "Lei nº 12.813/2013, arts. 3º, I, 4º e 5º, V, aplicável ao Poder Executivo federal; CF/88, art. 37, caput (verificados em fonte oficial em 2026-10-26)."
+    regra: "Prevenção de conflito: declarar e registrar o vínculo, avaliar a possibilidade de benefício ou influência e aplicar salvaguardas proporcionais; não presumir infração apenas pelo parentesco.",
+    pegadinha: "Não confundir ausência de favorecimento consumado com ausência de risco preventivo; também não presumir infração automática só pelo parentesco.",
+    fonte: "Lei nº 12.813/2013, arts. 3º, I, 4º e 5º, V (texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12813.htm); Manual de Tratamento de Conflito de Interesses, seção 4.5 (CGU/Fundação Cultural Palmares: https://www.gov.br/palmares/pt-br/midias/arquivos-menu-acesso-a-informacao/manual-tratamento-de-conflito-de-interesse-2022.pdf). O manual esclarece que o inciso V exige avaliar a prática de ato e o risco de beneficiar a pessoa jurídica, não apenas a existência de parentesco."
   },
 
   { id: "q-m6-33", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
