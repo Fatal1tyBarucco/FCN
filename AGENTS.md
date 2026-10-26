@@ -798,6 +798,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Fontes referenciadas incluem NIST SP 800-34, CISA #StopRansomware, NIST FIPS 197/180-4/186-5, NIST SP 800-38D/800-63B/800-53, RFC 5280, ITU-T X.509, MITRE ATT&CK e CISA.
 - Revisão focal; validação automatizada e estado do CI devem ser conferidos no HEAD final.
 
+## Revisão focal de q-m4-61..q-m4-70 (2026-10-26)
+
+- q-m4-61..q-m4-65: revisadas classificação contextual de malware, diferença entre antimalware e EDR, segmentação de rede, hardening e priorização de vulnerabilidades. Sem alteração de conteúdo neste lote.
+- q-m4-66..q-m4-70: revisados WAF, IDS/IPS, VPN, sincronização temporal de logs e desenho de comunicação segura. Sem alteração de conteúdo neste lote.
+- As questões distinguem controles complementares e evitam garantias absolutas: WAF/EDR/VPN não substituem as demais camadas; sub-redes sem regras não garantem isolamento; sincronização NTP não prova integridade dos logs; criptografia sem validação de identidade pode proteger conexão com endpoint errado.
+- Fontes referenciadas incluem NIST SP 800-83, SP 800-207, SP 800-53, SP 800-123, SP 800-40, SP 800-94, SP 800-77, SP 800-92, SP 800-52, CISA, CIS Controls e RFC 5905.
+- Revisão focal; validação automatizada e CI devem ser confirmados no HEAD mais recente.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
