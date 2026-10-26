@@ -638,132 +638,125 @@ const moduleQuestions4 = [
     fonte: "NIST SP 800-52 Rev. 2 — Guidelines for the Selection, Configuration, and Use of TLS Implementations: https://csrc.nist.gov/pubs/sp/800/52/r2/final; OWASP, Transport Layer Security Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html."
   },
 
-  { id: "q-m4-26", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataque de negação de serviço (DoS/DDoS)",
-    contexto: "Uma organização é alvo de um ataque de negação de serviço.",
-    enunciado: "Sobre o ataque de negação de serviço (DoS) e DDoS, é correto afirmar que:",
+  { id: "q-m4-26", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "avancado", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — DoS/DDoS e mitigação",
+    contexto: "Um portal público fica indisponível durante um pico de requisições distribuídas provenientes de muitos dispositivos. A equipe precisa manter serviços essenciais acessíveis.",
+    enunciado: "Qual resposta técnica inicial é mais adequada para um possível ataque de negação de serviço distribuído (DDoS)?",
     alternativas: [
-      { letra: "A", texto: "O objetivo é melhorar a disponibilidade do serviço." },
-      { letra: "B", texto: "O objetivo é travar ou inutilizar um sistema, impedindo o acesso legítimo." },
-      { letra: "C", texto: "O ataque não gera impacto mensurável." },
-      { letra: "D", texto: "O ataque é injusto e deve ser ignorado." },
-      { letra: "E", texto: "O ataque não pode ser detectado." }
+      { letra: "A", texto: "Desligar permanentemente todos os serviços e descartar os registros de tráfego." },
+      { letra: "B", texto: "Validar a anomalia com telemetria, acionar o provedor e os controles de mitigação disponíveis, priorizar serviços essenciais e preservar evidências." },
+      { letra: "C", texto: "Aumentar indiscriminadamente todos os limites de conexão, sem observar a capacidade da infraestrutura." },
+      { letra: "D", texto: "Presumir que o tráfego é legítimo porque vem de muitos endereços IP diferentes." },
+      { letra: "E", texto: "Desativar monitoramento e alertas para reduzir a carga do sistema." }
     ],
     gabarito: "B",
-    justificativa: "DoS/DDoS buscam travar ou inutilizar um serviço, impedindo o acesso legítimo a ele. O objetivo é derrubar a disponibilidade, não melhorar (alternativa A incorreta); o impacto é claramente mensurável (queda de tráfego, indisponibilidade, perda de receita — alternativa C incorreta); o ataque é ilegal e deve ser reportado e mitigado — ignorar é negligência (alternativa D incorreta); o ataque é detectável por anomalias no tráfego (alternativa E incorreta).",
+    justificativa: "DoS busca degradar ou interromper a disponibilidade; DDoS envolve origens distribuídas. A resposta depende do vetor e da arquitetura e pode incluir validação por telemetria, coordenação com provedores, filtragem ou mitigação especializada, priorização de serviços e preservação de evidências. Não há uma medida única que resolva todos os ataques.",
     analise: {
-      A: "INCORRETA. O objetivo é reduzir a disponibilidade, não melhorar.",
-      B: "CORRETA. DoS/DDoS travar um sistema ou rede, impedindo o acesso legítimo.",
-      C: "INCORRETA. O impacto para o alvo é drástico — indisponibilidade e perdas financeiras.",
-      D: "INCORRETA. O ataque deve ser reportado e mitigado, não ignorado.",
-      E: "INCORRETA. O ataque é detectável por análise de tráfego anômalo."
+      A: "INCORRETA. Desligamento indiscriminado e descarte de registros podem ampliar o impacto e prejudicar a investigação.",
+      B: "CORRETA. A resposta combina análise, mitigação coordenada, priorização de serviços e preservação de evidências.",
+      C: "INCORRETA. Aumentar limites sem análise pode sobrecarregar ainda mais a infraestrutura.",
+      D: "INCORRETA. A distribuição de origens é compatível com DDoS e não prova legitimidade.",
+      E: "INCORRETA. Desativar monitoramento reduz a visibilidade durante o incidente."
     },
-    regra: "DoS/DDoS = 'tirar a internet do ar'. Infinitar tráfego injustamente para travar o serviço.",
-    pegadinha: "Não confundir: DoS é um ataque; 'DoS' em inglês também é 'serviço de negócios' — mas no contexto é ataque.",
-    fonte: "Cisco — Understanding Denial of Service Attacks, 2020."
+    regra: "DDoS visa degradar disponibilidade com tráfego ou solicitações distribuídas; a mitigação deve ser orientada por telemetria, vetor e capacidade.",
+    pegadinha: "Muitas origens não significam necessariamente tráfego legítimo; investigue o padrão e coordene a mitigação.",
+    fonte: "CISA, Understanding and Responding to Distributed Denial-of-Service Attacks: https://www.cisa.gov/news-events/news/understanding-and-responding-distributed-denial-service-attacks."
   },
 
-  { id: "q-m4-27", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Vazamento de dados",
-    contexto: "Ágencia pública expõe dados de cidadãos por falha de configuração.",
-    enunciado: "O 'vazamento de dados' (data breach) ocorre quando:",
+  { id: "q-m4-27", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Incidente de exposição de dados",
+    contexto: "Uma agência pública descobre que um repositório foi configurado como público e pode ter exposto dados pessoais a pessoas não autorizadas.",
+    enunciado: "Qual é a resposta inicial mais adequada após identificar a possível exposição?",
     alternativas: [
-      { letra: "A", texto: "Os dados são acessados ou divulgados de forma não autorizada." },
-      { letra: "B", texto: "Os dados são criptografados com segurança." },
-      { letra: "C", texto: "Os dados são armazenados emBackups." },
-      { letra: "D", texto: "Os dados são consolidados em relatórios." },
-      { letra: "E", texto: "Os dados são validados numericamente." }
+      { letra: "A", texto: "Restringir o acesso indevido, preservar registros e evidências, avaliar o escopo e o impacto e acionar os responsáveis para cumprir os procedimentos de resposta e as obrigações aplicáveis." },
+      { letra: "B", texto: "Apagar imediatamente todos os dados e logs sem preservar evidências." },
+      { letra: "C", texto: "Aguardar uma reclamação pública antes de investigar." },
+      { letra: "D", texto: "Divulgar a lista de pessoas afetadas e seus dados para demonstrar transparência." },
+      { letra: "E", texto: "Presumir que não houve incidente porque a exposição resultou de configuração, e não de invasão." }
     ],
     gabarito: "A",
-    justificativa: "Vazamento de dados é o acesso, divulgação ou exposição não autorizada de informações sensíveis. Criptografia é uma proteção (alternativa B incorreta); backups são cópias de segurança (alternativa C incorreta); consolidação em relatórios não é vazamento (alternativa D incorreta); validação numérica não é vazamento (alternativa E incorreta).",
+    justificativa: "Uma exposição não autorizada pode constituir incidente mesmo quando decorre de erro de configuração, sem invasão comprovada. A resposta deve restringir o acesso indevido, preservar evidências, avaliar dados e pessoas potencialmente afetados, documentar decisões e acionar responsáveis jurídicos, de privacidade e de segurança para determinar notificações e outras obrigações conforme o caso.",
     analise: {
-      A: "CORRETA. Data breach ocorre quando dados são acessados ou divulgados sem autorização.",
-      B: "INCORRETA. Criptografia protege contra vazamento, não é um vazamento em si.",
-      C: "INCORRETA. Backup é uma cópia de segurança, não um vazamento.",
-      D: "INCORRETA. Consolidação em relatórios não é vazamento de dados.",
-      E: "INCORRETA. Validação numérica não envolve vazamento."
+      A: "CORRETA. A alternativa combina contenção, preservação, avaliação e escalonamento para decidir as medidas aplicáveis.",
+      B: "INCORRETA. A exclusão indiscriminada pode destruir evidências e não substitui contenção segura.",
+      C: "INCORRETA. A organização deve investigar prontamente, sem depender de reclamação pública.",
+      D: "INCORRETA. Divulgar dados das pessoas afetadas pode agravar a exposição.",
+      E: "INCORRETA. Uma configuração incorreta pode expor dados sem exploração ativa e ainda assim exigir resposta."
     },
-    regra: "Data breach = 'dados fora do controle'. Exposição não autorizada de informações sensíveis.",
-    pegadinha: "Vazamento de dados não é 'erro de edição' — é 'acesso não autorizado'.",
-    fonte: "ANPD — Relatório de Incidentes de Vazamento, 2022."
+    regra: "Em possível exposição de dados, contenha, preserve evidências, avalie escopo/impacto e acione responsáveis para definir obrigações e comunicações.",
+    pegadinha: "A ausência de invasão comprovada não significa ausência de incidente ou de risco para titulares.",
+    fonte: "ANPD, Comunicação de incidente de segurança: https://www.gov.br/anpd/pt-br/assuntos/incidente-de-seguranca."
   },
 
-  { id: "q-m4-28", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataque de intermediário (Man-in-the-Middle) — telefonia",
-    contexto: "Em uma comunicação entre dois sistemas, um atacante consegue interceptar e modificar as mensagens:",
-    enunciado: "Em um ataque MitM no contexto de comunicação de dados, o atacante:",
+  { id: "q-m4-28", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataques de repetição (replay)",
+    contexto: "Um serviço aceita uma mensagem de autorização capturada anteriormente, embora ela tenha sido enviada em uma sessão legítima no passado.",
+    enunciado: "Qual propriedade ou mecanismo ajuda a reduzir o risco de um ataque de repetição (replay)?",
     alternativas: [
-      { letra: "A", texto: "Permite que os dois sistemas se comuniquem diretamente." },
-      { letra: "B", texto: "Estabelece uma ponte entre eles, intercetando e modificar mensagens." },
-      { letra: "C", texto: "Aumenta a velocidade da comunicação." },
-      { letra: "D", texto: "Bloqueia todas as mensagens permanentemente." },
-      { letra: "E", texto: "Substitui a criptografia pela autenticação." }
+      { letra: "A", texto: "Usar nonces, números de sequência, timestamps ou identificadores de sessão validados para rejeitar mensagens repetidas ou fora de contexto." },
+      { letra: "B", texto: "Reutilizar indefinidamente a mesma mensagem de autorização, pois ela foi válida uma vez." },
+      { letra: "C", texto: "Desativar autenticação para evitar que mensagens sejam rejeitadas." },
+      { letra: "D", texto: "Confiar apenas no endereço IP de origem, sem verificar a sessão ou a mensagem." },
+      { letra: "E", texto: "Aumentar o tamanho dos arquivos transmitidos." }
     ],
-    gabarito: "B",
-    justificativa: "MitM no contexto de comunicação de dados é entender a ponte entre duas partes, permitindo interceptar e potencialmente modificar as mensagens. Permite comunicação direta? Não (alternativa A incorreta); aumentar velocidade? Não (alternativa C incorreta); bloquear permanentemente todas as mensagens não é MitM (alternativa D incorreta); substituir criptografia pela autenticação não é MitM (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Um ataque de repetição reapresenta mensagens ou transações válidas capturadas anteriormente. Protocolos podem usar nonces, números de sequência, timestamps, expiração e vinculação à sessão para detectar duplicação ou contexto inválido. Esses mecanismos precisam ser validados corretamente e não substituem a proteção geral do protocolo.",
     analise: {
-      A: "INCORRETA. MitM interrompe a comunicação direta entre as partes.",
-      B: "CORRETA. MitM age como 'meio' intermediário, interceptando e modificando mensagens.",
-      C: "INCORRETA. MitM não melhora a velocidade da comunicação.",
-      D: "INCORRETA. Bloqueio permanente de todas as mensagens é um ataque de negação de serviço, não MitM.",
-      E: "INCORRETA. MitM não substitui criptografia pela autenticação — ele sabotagem o processo."
+      A: "CORRETA. Valores únicos e controles temporais ou de sequência permitem detectar mensagens repetidas ou fora de contexto.",
+      B: "INCORRETA. Uma mensagem válida no passado não deve ser automaticamente aceita de novo.",
+      C: "INCORRETA. Desativar autenticação enfraquece a proteção contra abuso.",
+      D: "INCORRETA. Endereços IP podem ser compartilhados, alterados ou falsificados e não provam validade da transação.",
+      E: "INCORRETA. O tamanho do arquivo não previne replay."
     },
-    regra: "MitM = 'meio entre dois'. A comunicação é vista e manipulada por um terceiro.",
-    pegadinha: "MitM não é 'seção' — é 'intercepção ativa' da comunicação entre dois lados.",
-    fonte: "Cyber threats — MITM attacks and prevention, 2022."
+    regra: "Replay é a reutilização de mensagem/transação capturada; use mecanismos de frescor e vinculação ao contexto previstos pelo protocolo.",
+    pegadinha: "Uma mensagem autenticada pode ser reproduzida se o protocolo não verificar frescor, sequência ou unicidade.",
+    fonte: "NIST SP 800-63B — Digital Identity Guidelines: https://pages.nist.gov/800-63-4/sp800-63b.html; RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3: https://www.rfc-editor.org/rfc/rfc8446."
   },
 
-  { id: "q-m4-29", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Indicadores de Comprometimento (IoCs)",
-    contexto: "Um analista de segurança identifica indicadores de que um sistema foi comprometido.",
-    enunciado: "Indicadores de Comprometimento (Indicators of Compromise, IoC) são:",
+  { id: "q-m4-29", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Indicadores de comprometimento (IoCs)",
+    contexto: "Um analista encontra um hash de arquivo suspeito, conexões com um domínio associado a malware e uma sequência incomum de processos em um endpoint.",
+    enunciado: "Como os indicadores de comprometimento (IoCs) devem ser usados na investigação?",
     alternativas: [
-      { letra: "A", texto: "Métricas de desempenho de rede." },
-      { letra: "B", texto: "Ferramentas de proteção anti-malware." },
-      { letra: "C", texto: "Padrões ou evidências técnicas que sugerem um sistema foi comprometido." },
-      { letra: "D", texto: "Protocolos de autenticação." },
-      { letra: "E", texto: "Relatórios de audiência." }
+      { letra: "A", texto: "Como evidências que orientam a investigação e a correlação, avaliadas no contexto e atualizadas conforme novas informações." },
+      { letra: "B", texto: "Como prova isolada e definitiva de que todo sistema que contém o indicador está comprometido." },
+      { letra: "C", texto: "Como ferramentas que removem automaticamente qualquer malware." },
+      { letra: "D", texto: "Como substitutos de registros, análise e confirmação do incidente." },
+      { letra: "E", texto: "Como métricas exclusivamente de desempenho de rede." }
     ],
-    gabarito: "C",
-    justificativa: "IoC são evidências técnicas (endereços IP, hash de arquivos, padrões de rede, comportamento incomum) que sugerem que um sistema foi comprometido. Métricas de desempenho (alternativa A incorreta); ferramentas de proteção são defesas, não indicadores (alternativa B incorreta); protocolos de autenticação são estruturas, não indicadores (alternativa D incorreta); relatórios de audiência são processos administrativos (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "IoCs são artefatos ou padrões observáveis que podem indicar comprometimento, como hashes, domínios, endereços, artefatos de host ou padrões de comportamento. Um indicador pode ser compartilhado por atividade legítima, ficar desatualizado ou ter baixa especificidade; deve ser correlacionado com outras evidências e com o contexto antes de concluir que ocorreu comprometimento.",
     analise: {
-      A: "INCORRETA. Desempenho de rede é métrica, não indicador de comprometimento.",
-      B: "INCORRETA. Antivírus é uma defesa, não um indicador de comprometimento.",
-      C: "CORRETA. IoC são padrões técnicos que indicam comprometimento de um sistema.",
-      D: "INCORRETA. Autenticação é um processo de segurança, não indicador de comprometimento.",
-      E: "INCORRETA. Relatório de audiência é processo administrativo."
+      A: "CORRETA. IoCs ajudam a orientar busca e correlação, mas precisam de contexto e validação.",
+      B: "INCORRETA. Um indicador isolado não é necessariamente prova conclusiva e pode gerar falsos positivos.",
+      C: "INCORRETA. IoCs são evidências ou padrões; não são, por si, ferramentas de remediação.",
+      D: "INCORRETA. A investigação exige registros, análise e confirmação conforme a evidência disponível.",
+      E: "INCORRETA. IoCs não se limitam a métricas de desempenho."
     },
-    regra: "IoC = 'pistas da invasão'. Evidências técnicas de que o sistema foi comprometido.",
-    pegadinha: "IoC não é 'indicador de desempenho' — é 'indicador de invasão'.",
-    fonte: "MITRE ATT&CK — Detection and Response, 2022."
+    regra: "IoCs são pistas técnicas para orientar detecção e investigação; correlacione indicadores com contexto e outras evidências.",
+    pegadinha: "Um IoC não prova sozinho o comprometimento nem garante que um sistema sem aquele indicador esteja limpo.",
+    fonte: "CISA, Cybersecurity Incident & Vulnerability Response Playbooks: https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks."
   },
 
-  { id: "q-m4-30", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataque de “Man-in-the-Middle” — Redes",
-    contexto: "No contexto de redes, um ataque MitM ocorre quando um atacante intercepta a comunicação entre dois hosts:",
-    enunciado: "O ataque MitM no contexto de redes",
+  { id: "q-m4-30", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Ataques à cadeia de suprimentos",
+    contexto: "Uma organização instala uma atualização legítima de um fornecedor, mas depois descobre que o mecanismo de distribuição ou o processo de desenvolvimento foi comprometido.",
+    enunciado: "Qual cenário caracteriza um ataque à cadeia de suprimentos de software?",
     alternativas: [
-      { letra: "A", texto: "Permite a comunicação direta e segura entre dois hosts." },
-      { letra: "B", texto: "O atacante intercepta e maliciosamente modifica as mensagens entre os dois hosts." },
-      { letra: "C", texto: "Criptografa a comunicação entre dois hosts." },
-      { letra: "D", texto: "Elimina a necessidade de criptografia." },
-      { letra: "E", texto: "Betters a segurança da comunicação." }
+      { letra: "A", texto: "Comprometer um fornecedor, dependência, processo de construção ou canal de distribuição para atingir organizações que confiam no componente ou atualização." },
+      { letra: "B", texto: "Executar exclusivamente um ataque de força bruta contra uma única conta de usuário." },
+      { letra: "C", texto: "Aplicar uma atualização oficial verificada e autorizada conforme o processo de gestão de mudanças." },
+      { letra: "D", texto: "Realizar uma cópia de segurança testada antes de uma implantação." },
+      { letra: "E", texto: "Monitorar logs para identificar mudanças não autorizadas." }
     ],
-    gabarito: "B",
-    justificativa: "MitM no contexto de redes é quando o atacante intercepta e modifica passivamente as mensagens entre dois hosts. Permitir comunicação direta e segura (alternativa A incorreta); criptografar (alternativa C incorreta); eliminar necessidade de criptografia (alternativa D incorreta); melhorar segurança (alternativa E incorreta) não são definições de MitM.",
+    gabarito: "A",
+    justificativa: "Ataques à cadeia de suprimentos comprometem um fornecedor, dependência, ferramenta, ambiente de build ou canal de distribuição para alcançar organizações que confiam nesses componentes. A defesa pode incluir inventário de dependências, revisão de fornecedores, proteção do pipeline, verificação de assinaturas e proveniência, segregação de funções e monitoramento; nenhuma medida isolada elimina todo o risco.",
     analise: {
-      A: "INCORRETA. MitM não permite comunicação direta e segura — ele intercepta a comunicação.",
-      B: "CORRETA. MitM é a intercepção maliciosa e modificação de mensagens entre dois hosts.",
-      C: "INCORRETA. Criptografia é uma defesa, não um ataque MitM.",
-      D: "INCORRETA. MitM não elimina a necessidade de criptografia — ele a contorna.",
-      E: "INCORRETA. MitM não betters a segurança — ele a compromete."
+      A: "CORRETA. A alternativa descreve o comprometimento de um elo confiável para afetar consumidores do software ou serviço.",
+      B: "INCORRETA. Força bruta contra uma conta não caracteriza, por si, ataque à cadeia de suprimentos.",
+      C: "INCORRETA. Uma atualização autorizada e verificada faz parte da gestão legítima de mudanças.",
+      D: "INCORRETA. Backup testado é uma prática de recuperação, não um ataque à cadeia de suprimentos.",
+      E: "INCORRETA. Monitoramento de logs é um controle defensivo."
     },
-    regra: "MitM = 'troca de papéis'. A comunicação entre dois hosts é enganada e controlada por um atacante.",
-    pegadinha: "No MitM, o atacante não está 'do outro lado' — está 'no meio' entre eles.",
-    fonte: "MITRE ATT&CK — T1557 (Man-in-the-Middle), 2022."
+    regra: "Ataque à cadeia de suprimentos compromete fornecedor, dependência, pipeline ou distribuição para alcançar consumidores que confiam no componente.",
+    pegadinha: "Um pacote assinado ou vindo de fornecedor conhecido não é garantia absoluta se o processo confiável que o produziu foi comprometido.",
+    fonte: "CISA, Defending Against Software Supply Chain Attacks: https://www.cisa.gov/resources-tools/resources/defending-against-software-supply-chain-attacks."
   },
-
-  /* ===================== 4.4 Legislação (10 questões) ===================== */
 
   { id: "q-m4-31", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — princípios do tratamento",
