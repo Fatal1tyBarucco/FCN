@@ -1,9 +1,9 @@
 # INVENTÁRIO CURRICULAR — FCN (Apostila Web Interativa)
 
 Fonte de requisitos: `Escrita.txt` (prompt mestre), seções 1–4 e 6.
-Fonte de verdade do estado atual: código em `apostila-ia/assets/data/*.js` (contado via Node/vm em 2026-10-23).
-Data de verificação: 2026-10-23.
-Estado real: **8 módulos carregados, 132 tópicos + 295 subtópicos = 427 nós**, 885 exemplos, 590 exercícios, 404 flashcards, 365 questões autorais, 6 simuladores com UI montada, 5 gráficos SVG.
+Fonte de verdade do estado atual: código em `apostila-ia/assets/data/*.js`; contagens curriculares recontadas em 2026-10-26.
+Data de verificação do inventário: 2026-10-26.
+Estado real recontado em 2026-10-26: **8 módulos carregados, 132 tópicos + 295 subtópicos = 427 nós**, 885 exemplos e 590 exercícios na matriz estrutural; **460 flashcards e 396 questões autorais** nos arquivos de dados. Testes automatizados de UI e limitações estão documentados em `docs/RELATORIO_TESTES.md`.
 
 ---
 
@@ -54,24 +54,24 @@ Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplic
 
 | Módulo | Título | Unidades | Tópicos | Subtópicos | Nós (t+s) | Exemplos | Exercícios | Flashcards | Questões | Estado |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| M1 | Microsoft 365 e Aplicações de Escritório | 5 | 23 | 37 | 60 | 111 | 74 | 50 | 40 | Parcial |
-| M2 | Redes de Computadores | 5 | 19 | 52 | 71 | 156 | 104 | 50 | 40 | Completo |
-| M3 | Comunicação e Colaboração | 5 | 14 | 35 | 49 | 105 | 70 | 50 | 40 | Completo |
+| M1 | Microsoft 365 e Aplicações de Escritório | 5 | 23 | 37 | 60 | 111 | 74 | 66 | 44 | Parcial |
+| M2 | Redes de Computadores | 5 | 19 | 52 | 71 | 156 | 104 | 56 | 54 | Completo |
+| M3 | Comunicação e Colaboração | 5 | 14 | 35 | 49 | 105 | 70 | 68 | 47 | Completo |
 | M4 | Segurança da Informação e Governança Digital | 4 | 13 | 39 | 52 | 117 | 78 | 54 | 85 | Completo |
-| M5 | Inteligência Artificial | 4 | 13 | 35 | 48 | 105 | 70 | 50 | 40 | Completo |
-| M6 | Ética e Responsabilidade Digital no Serviço Público | 6 | 18 | 46 | 64 | 138 | 92 | 50 | 40 | Completo |
+| M5 | Inteligência Artificial | 4 | 13 | 35 | 48 | 105 | 70 | 66 | 42 | Completo |
+| M6 | Ética e Responsabilidade Digital no Serviço Público | 6 | 18 | 46 | 64 | 138 | 92 | 50 | 44 | Completo |
 | M7 | Fundamentos e Engenharia de Dados | 3 | 9 | 23 | 32 | 69 | 46 | 50 | 40 | Completo |
 | M8 | Visualização, Análise e Storytelling com Dados | 5 | 23 | 28 | 51 | 84 | 56 | 50 | 40 | Completo |
-| **Total** | — | **37** | **132** | **295** | **427** | **885** | **590** | **404** | **365** | — |
+| **Total** | — | **37** | **132** | **295** | **427** | **885** | **590** | **460** | **396** | — |
 
 ### 4.2 Escopo por módulo (conforme Escrita.txt Seção 6)
 
-- **M1 — Microsoft 365 e Aplicações de Escritório (parcial)**: 1.1 Ecossistema M365 (8 subtópicos), 1.2 Word (14 tópicos), 1.3 Excel (6 tópicos, 12 subtópicos + simulador com busca real PROCV/PROCH/PROCX), 1.4 PowerPoint (1 subtópico, 3 exemplos + 2 exercícios), 1.5 OneDrive (1 subtópico, 3 exemplos + 2 exercícios). Subtópico 1.2 complemento (`curriculumWord12Supplement`) não renderiza (const declarada, nunca lida). Flashcards 50. Questões 40.
-- **M2 — Redes (completo)**: 2.1 Fundamentos (4 tópicos), 2.2 Modelos OSI/TCP-IP, 2.3 Protocolos, 2.4 Endereçamento/sub-redes, 2.5 Diagnóstico (5 unidades, 19 tópicos, 52 subtópicos). Simulador de redes (ping/traceroute simulados, CIDR com cálculo real). Flashcards 50. Questões 40.
-- **M3 — Comunicação e Colaboração (completo)**: 3.1–3.5 (5 unidades, 14 tópicos, 35 subtópicos). Flashcards 50. Questões 40.
+- **M1 — Microsoft 365 e Aplicações de Escritório (parcial)**: 1.1 Ecossistema M365 (8 subtópicos), 1.2 Word (14 tópicos), 1.3 Excel (6 tópicos, 12 subtópicos + simulador com busca real PROCV/PROCH/PROCX), 1.4 PowerPoint (1 subtópico, 3 exemplos + 2 exercícios), 1.5 OneDrive (1 subtópico, 3 exemplos + 2 exercícios). Subtópico 1.2 complemento (`curriculumWord12Supplement`) não renderiza (const declarada, nunca lida). Flashcards 66. Questões 44.
+- **M2 — Redes (completo)**: 2.1 Fundamentos (4 tópicos), 2.2 Modelos OSI/TCP-IP, 2.3 Protocolos, 2.4 Endereçamento/sub-redes, 2.5 Diagnóstico (5 unidades, 19 tópicos, 52 subtópicos). Simulador de redes (ping/traceroute simulados, CIDR com cálculo real). Flashcards 56. Questões 54.
+- **M3 — Comunicação e Colaboração (completo)**: 3.1–3.5 (5 unidades, 14 tópicos, 35 subtópicos). Flashcards 68. Questões 47.
 - **M4 — Segurança (completo)**: 4.1 Fundamentos, 4.2 Malwares/ferramentas defensivas, 4.3 Ameaças/ataques, 4.4 Legislação/conformidade (4 unidades, 13 tópicos, 39 subtópicos). Simulador defensivo de phishing (triagem didática local). Flashcards 54. Questões 85.
-- **M5 — IA (completo)**: 5.1 Fundamentos, 5.2 ML, 5.3 IA generativa/LLMs, 5.4 Engenharia de prompts (4 unidades, 13 tópicos, 35 subtópicos). Laboratório de prompts (simulação local, sem IA real). Flashcards 50. Questões 40.
-- **M6 — Ética (completo, integrado no P1-C)**: 6.1–6.6 (6 unidades, 18 tópicos, 46 subtópicos). Flashcards 50. Questões 40 (conectadas no P1-D).
+- **M5 — IA (completo)**: 5.1 Fundamentos, 5.2 ML, 5.3 IA generativa/LLMs, 5.4 Engenharia de prompts (4 unidades, 13 tópicos, 35 subtópicos). Laboratório de prompts (simulação local, sem IA real). Flashcards 66. Questões 42.
+- **M6 — Ética (completo, integrado no P1-C)**: 6.1–6.6 (6 unidades, 18 tópicos, 46 subtópicos). Flashcards 50. Questões 44 (conectadas no P1-D).
 - **M7 — Dados (completo)**: 7.1–7.3 (3 unidades, 9 tópicos, 23 subtópicos). Flashcards 50. Questões 40. (Simulador de dados compartilhado do P1-D.)
 - **M8 — Visualização (completo)**: 8.1 Fundamentos visuais, 8.2 Gráficos estatísticos, 8.3 Estatística aplicada, 8.4 Ferramentas, 8.5 Storytelling (5 unidades, 23 tópicos, 28 subtópicos). 5 gráficos SVG. Flashcards 50. Questões 40.
 
@@ -79,8 +79,8 @@ Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplic
 
 - Simuladores com UI montada (5/5): Excel (`#excel-app`), Redes (`#redes-app`), Segurança (`#seguranca-app`), Prompts (`#prompts-app`), Dados (`#dados-app`) — montagem inline com guardas triplas.
 - Gráficos (5/5): histograma, linha, barras, dispersão, boxplot (SVG próprio, `#charts-app`).
-- Flashcards: 404/404 conectados, repetição espaçada SM-2 simplificado.
-- Questões: 365/320 (piso atingido), 15 escopos de simulado (m1..m8 + cum-2..cum-8). Distribuição real medida: níveis 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos 290 múltipla escolha + 75 Certo/Errado; estilos CESPE 216 / FGV 58 / FCC 52 / VUNESP 39. Desvio da sugestão 30/45/25 documentado e justificado (Seção 10 admite ajuste).
+- Flashcards: 460/460 IDs presentes nos arquivos de dados, repetição espaçada SM-2 simplificado.
+- Questões: 396/320 (piso quantitativo atingido), 15 escopos de simulado (m1..m8 + cum-2..cum-8). Distribuição real medida: níveis 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos 290 múltipla escolha + 75 Certo/Errado; estilos CESPE 216 / FGV 58 / FCC 52 / VUNESP 39. Desvio da sugestão 30/45/25 documentado e justificado (Seção 10 admite ajuste).
 - Busca (`window.SearchApp`) e áudio (`window.AudioApp`) implementados e conectados.
 - Persistência (`storage.js`) e referências (`references.js`) implementados e carregados.
 
@@ -129,9 +129,9 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 
 - 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos e 427 nós curriculares.
 - 888 exemplos e 592 exercícios detectados estruturalmente nos arquivos curriculares; a contagem não equivale à revisão pedagógica.
-- 460 flashcards e 365 questões autorais.
+- 460 flashcards e 396 questões autorais.
 - 6 simuladores com UI e 5 gráficos SVG.
-- Auditoria de rastreabilidade: 365/365 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas.
+- Auditoria de rastreabilidade histórica: 365/365 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas.
 - Evidência de validação técnica: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902.
 - Estado pedagógico: revisão semântica independente e revisão integral de gabaritos/fontes ainda pendentes.
 
@@ -150,7 +150,7 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - q-m1-33 a q-m1-35 foram alinhadas a subtópicos de Excel, deixando de apontar para um tópico de formatos do Word.
 - q-m2-34 foi alinhada a métricas de desempenho; q-m2-38 a q-m2-40 foram alinhadas ao tópico de cálculo CIDR.
 - q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40 foram alinhadas aos tópicos de lobby, controle de participantes e gravações de reuniões.
-- A auditoria permanece estrutural: 365 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
+- Snapshot histórico da auditoria estrutural: 365 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas; reexecutar a rastreabilidade para as 396 questões atuais. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
 - Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802.
 
 
@@ -171,7 +171,7 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 
 **Fonte normativa lida:** `Escrita.txt` no branch `main`, blob SHA `a7da4ad0c8905e2f7ece405dfe4a3b95518cbb76`. O prompt define oito módulos curriculares e critérios de aceite técnicos, pedagógicos e quantitativos. A árvore estrutural e as contagens abaixo são evidências de inventário, não aprovação semântica de todo o material.
 
-**Baseline confirmado pelos artefatos do PR #17:** 8 módulos; 37 unidades; 132 tópicos; 295 subtópicos (427 nós); 885 exemplos detectados; 590 exercícios detectados; 460 flashcards e 389 questões segundo a auditoria estrutural mais recente descrita no PR. Esses números diferem dos registros históricos de 404 flashcards/365 questões; prevalece a contagem do commit validado no PR após execução do workflow, e a divergência histórica não deve ser tratada como erro atual sem comparar o mesmo SHA e os mesmos arquivos.
+**Baseline recontado em 2026-10-26:** 8 módulos; 37 unidades; 132 tópicos; 295 subtópicos (427 nós); 885 exemplos e 590 exercícios na matriz; 460 flashcards e 396 questões autorais nos arquivos atuais. Os snapshots antigos de 404 flashcards/365 questões e 389 questões são históricos, não a contagem atual. A contagem estrutural não substitui revisão semântica nem reexecução da rastreabilidade.
 
 **Módulos obrigatórios:**
 1. Microsoft 365 e aplicações de escritório (Word, Excel, PowerPoint, OneDrive).
@@ -186,3 +186,9 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 **Regra de aceite curricular:** presença de objetivo/conteúdo/exemplos/exercícios na matriz não comprova profundidade, correção ou suficiência didática. A validação semântica e a revisão independente continuam sendo critérios separados.
 
 **Identificadores:** há formatos longos e compactos legados documentados na seção 4. Não renumerar IDs existentes em lote; qualquer normalização exige auditoria de referências cruzadas em questões, flashcards, progresso e navegação.
+
+
+## Reconciliação de contagens — 2026-10-26
+
+Os arquivos de dados atuais foram recontados por identificadores únicos `q-mN-NN` em todos os bancos de questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40 e M8=40, totalizando **396 questões**. Os arquivos de flashcards contêm **460 itens** distribuídos em M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50. Essa contagem verifica IDs/itens presentes, não qualidade semântica, ausência de duplicidade conceitual ou rastreabilidade correta de cada item. O relatório de rastreabilidade precisa ser reexecutado no mesmo HEAD para validar as associações dos 396 itens de questão.
+
