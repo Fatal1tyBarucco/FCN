@@ -675,6 +675,20 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m6-30: responsabilidade do órgão e de terceiro vinculado não presumida como exclusiva de uma parte; fatos, dano e nexo causal ainda exigem apuração.
 - Commits de correção M6 registrados: `9974767bf60e2a150088b2663c7963739076a787`, `2c035b1a4cd9a02e3c66d9a491bc379c1a97ab4f`, `fc47b23d58fdd92fbc878fd15d8d50294e63d67b`. Validar referências e CI no HEAD atual.
 
+## Revisão adicional do M6 — questões 31 a 40 (2026-10-26)
+
+- q-m6-31: redes sociais tratadas como canal complementar; site oficial continua necessário para transparência ativa, e práticas de autenticação/rastreabilidade foram qualificadas como governança.
+- q-m6-32: conflito de interesses avaliado preventivamente no contexto da Lei nº 12.813/2013, sem presumir infração consumada ou exoneração automática.
+- q-m6-33: proteção de dados pessoais não depende do canal de publicação; conta pessoal não afasta dever de reserva nem possível uso indevido.
+- q-m6-34: acessibilidade digital conectada à LAI e à Lei nº 14.129/2021, com práticas verificáveis e distinção em relação à inclusão digital.
+- q-m6-35: preservação do atendimento presencial diferenciada do incentivo ao autosserviço na Lei de Governo Digital.
+- q-m6-36: níveis N0–N5 identificados como classificação didática do módulo, não como nomenclatura legal universal.
+- q-m6-37: supervisão humana por reclamação reconhecida como amostra enviesada; taxa global de reversão não prova qualidade em subgrupos.
+- q-m6-38: caso de credencial legítima diferencia falha de desenho, contenção e preservação de logs; responsabilidade concreta exige apuração.
+- q-m6-39: uso de IA como apoio não transfere a responsabilidade editorial; envio de dados pessoais e publicação exigem validação institucional e jurídica.
+- q-m6-40: transparência ativa e passiva tratadas como cumulativas; divulgação de licitações/contratos e atualização do sítio não são substituídas pelo atendimento a pedidos.
+- Revisão focal sem patches de conteúdo nesta passada. Conferir fontes e CI no HEAD atual.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
