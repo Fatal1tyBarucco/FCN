@@ -319,3 +319,20 @@ Os incisos/parágrafos não listados (art. 37: I? já listado; demais não confe
 ## Fonte de acessibilidade verificada em 2026-10-26
 
 - **W3C — Web Content Accessibility Guidelines (WCAG) 2.2:** https://www.w3.org/TR/WCAG22/. Referência primária consultada diretamente para princípios de alternativas textuais, conteúdo audiovisual acessível, estrutura semântica e uso de cor. A inclusão da fonte não equivale a uma auditoria WCAG do site; essa auditoria permanece pendente.
+
+
+## Revisão focal de referências do Módulo 6 — 2026-10-26
+
+### Lei nº 12.813/2013 — conflito de interesses
+- Texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12813.htm
+- Dispositivos usados na questão q-m6-32: arts. 3º, I (conceito de conflito de interesses), 4º (dever de prevenir ou impedir conflito) e 5º, V (ato em benefício de pessoa jurídica da qual participe agente público ou parente até terceiro grau, nas condições legais).
+- Escopo importante: esta lei trata de cargos/empregos no Poder Executivo federal; o contexto de q-m6-32 foi delimitado expressamente a esse âmbito.
+- Verificação: acesso ao texto oficial em 2026-10-26.
+
+### LGPD — Lei nº 13.709/2018
+- Texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
+- Dispositivos revisados para o lote: art. 6º, I a III (finalidade, adequação e necessidade); art. 6º, X (responsabilização e prestação de contas); art. 37 (registro das operações de tratamento, quando aplicável); arts. 46 e 49 (segurança e requisitos dos sistemas); art. 48 (comunicação de incidente de segurança relevante).
+- Verificação: acesso ao texto oficial em 2026-10-26.
+
+### Limites da revisão
+A correção das referências melhora o vínculo entre questão e dispositivo, mas não substitui parecer jurídico nem demonstra, por si só, que todas as alternativas estejam factualmente corretas. Em q-m6-29 e q-m6-38, requisitos operacionais de trilha de auditoria e preservação de evidências são apresentados como práticas de governança/segurança; não devem ser descritos como transcrição literal de um único artigo legal.
