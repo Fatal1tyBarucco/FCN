@@ -470,8 +470,8 @@ const moduleQuestions8 = [
     contexto: "Série temporal de atendimentos mensais: 120, 132, 115, 140 (janeiro a abril), já ordenada cronologicamente.",
     enunciado: "Assinale a afirmação correta sobre a leitura desse gráfico de linhas.",
     alternativas: [
-      { letra: "A", texto: "A variação de janeiro para fevereiro é (132 − 120) ÷ 132 ≈ +10,0%." },
-      { letra: "B", texto: "A variação percentual de fevereiro para março é (132 − 115) ÷ 132 ≈ −12,9%." },
+      { letra: "A", texto: "A variação de janeiro para fevereiro é (132 − 120) ÷ 132 ≈ +9,1%." },
+      { letra: "B", texto: "A variação percentual de fevereiro para março é (132 − 115) ÷ 132 ≈ +12,9%." },
       { letra: "C", texto: "A variação percentual de março para abril é (140 − 115) ÷ 115 ≈ +21,7%." },
       { letra: "D", texto: "A variação de janeiro para abril é (140 − 120) ÷ 140 ≈ +14,3%." }
     ],
@@ -479,7 +479,7 @@ const moduleQuestions8 = [
     justificativa: "Variação percentual = (valor atual − anterior) ÷ anterior. Janeiro→fevereiro: (132−120)/120 = +10,0% (A: denominador errado — 132, não 120); Fevereiro→março: (115−132)/132 ≈ −12,9% (B: inverte numerador e denominador); Março→abril: (140−115)/115 ≈ +21,7% (C, correta); Janeiro→abril: (140−120)/120 ≈ +16,7% (D: usa 140 em vez de 120). A única afirmação fiel é C.",
     analise: {
       A: "INCORRETA. A alternativa usa 132 como denominador; a variação correta usa o valor anterior: (132 − 120) ÷ 120 = +10,0%.",
-      B: "INCORRETA. A alternativa calcula (132 − 115) ÷ 132, que é positivo; a variação fev→mar é (115 − 132) ÷ 132 ≈ −12,9%.",
+      B: "INCORRETA. A alternativa inverte o sentido da variação e por isso mostra aumento; de fevereiro para março, a variação é (115 − 132) ÷ 132 ≈ −12,9%.",
       C: "CORRETA. (140 − 115) ÷ 115 = 25 ÷ 115 ≈ +21,74%; é o único cálculo fiel ao método anterior/denominador.",
       D: "INCORRETA. Janeiro → abril usa denominador 120: (140 − 120) ÷ 120 ≈ +16,67%, não 14,3%."
     },
