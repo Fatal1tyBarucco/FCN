@@ -416,7 +416,7 @@
   var dataCss = '<style>'
     + '.sim-dados{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-dados h3{margin:8px 0 2px}.sim-dados h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-dados-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-dados-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
     + '.sim-dados-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
     + '.sim-dados-tabela{border-collapse:collapse;width:100%;margin:8px 0}'
     + '.sim-dados-tabela th,.sim-dados-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}'
@@ -441,8 +441,8 @@
     + '.chart-svg .chart-barra{fill:#4a94d4}'
     + '.chart-svg .chart-barra-modada{fill:#5ee0a0}'
     + '.chart-svg .chart-eixo-rotulo{font-size:10px;fill:#8b94a5}'
-    + '.sim-dados-link{color:#4a94d4;cursor:pointer;text-decoration:underline}'
-    + '.sim-dados-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
+    + '.sim-dados-link{color:#174ea6;cursor:pointer;text-decoration:underline}'
+    + '.sim-dados-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-dados-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
     + '.sim-dados-nav-btn:hover{background:#3a4252}'
     + '.sim-dados-explicacao{background:#161a21;border-left:3px solid #4a94d4;padding:10px;margin:8px 0;font-size:.82rem;color:#b9c0d4;border-radius:4px}'
     + '</style>';
@@ -457,7 +457,7 @@
     h += '</tr></thead><tbody>';
     for (var i = 0; i < dados.length; i++) {
       h += '<tr data-linha="' + i + '">';
-      h += '<td><input type="text" class="sim-dados-cel sim-dados-cel-ro" data-field="nome" data-linha="' + i + '" value="' + esc(dados[i].nome) + '" readonly/></td>';
+      h += '<td><input type="text" class="sim-dados-cel sim-dados-cel-ro" data-field="nome" data-linha="' + i + '" value="' + esc(dados[i].nome) + '" readonly aria-label="Nome da linha ' + (i + 1) + ': ' + esc(dados[i].nome) + ' (somente leitura)"/></td>';
       for (var j = 1; j < COLUNAS.length; j++) {
         var field = ['nome', 'n1', 'n2', 'n3', 'media'][j];
         var readOnly = (field === 'media');
