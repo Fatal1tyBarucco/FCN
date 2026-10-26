@@ -176,20 +176,20 @@ const moduleQuestions6 = [
     alternativas: [
       { letra: "A", texto: "A LGPD não se aplica ao poder público, pois disciplina apenas relações de consumo." },
       { letra: "B", texto: "O consentimento do titular é a única hipótese que legitima o tratamento de dados pelo poder público." },
-      { letra: "C", texto: "O poder público é agente de tratamento: decide sobre o tratamento dos dados que coleta e responde pelas medidas de segurança adotadas." },
+      { letra: "C", texto: "O órgão público é agente de tratamento e, quando atua como controlador, decide sobre as finalidades e os elementos essenciais do tratamento; deve cumprir os deveres de segurança aplicáveis ao seu papel." },
       { letra: "D", texto: "Dado pessoal sensível pode ser tratado livremente pelo poder público, pois a finalidade é pública." },
       { letra: "E", texto: "A LGPD afasta a incidência da LAI sobre os conjuntos de dados comuns aos dois regimes." }
     ],
     gabarito: "C",
-    justificativa: "O art. 1º da LGPD abrange o tratamento de dados pessoais por pessoas jurídicas de direito público ou privado, e o art. 5º define controlador como quem toma as decisões referentes ao tratamento. A alternativa A nega indevidamente a incidência da lei sobre o poder público; B erra ao tratar o consentimento como única hipótese, pois a LGPD prevê outras bases e regras aplicáveis; C está correta quanto ao papel do poder público como agente de tratamento e aos deveres de segurança, sem dispensar a análise do papel concreto; D ignora o regime específico dos dados sensíveis; E cria oposição inexistente, pois LAI e LGPD devem ser observadas conforme suas respectivas incidências.",
+    justificativa: "O art. 1º da LGPD abrange o tratamento de dados pessoais por pessoas jurídicas de direito público ou privado, e o art. 5º distingue controlador — quem toma as decisões referentes ao tratamento — de operador — quem realiza o tratamento em nome do controlador. O papel concreto depende das atividades efetivamente exercidas. A alternativa A nega indevidamente a incidência da lei sobre o poder público; B erra ao tratar o consentimento como única hipótese, pois a LGPD prevê outras bases e regras aplicáveis; C está correta quanto ao papel do poder público como agente de tratamento e aos deveres de segurança, sem dispensar a análise do papel concreto; D ignora o regime específico dos dados sensíveis; E cria oposição inexistente, pois LAI e LGPD devem ser observadas conforme suas respectivas incidências.",
     analise: {
       A: "INCORRETA. Erro conceitual de exclusão indevida: o art. 1º nomeia expressamente a pessoa jurídica de direito público.",
       B: "INCORRETA. Erro conceitual de concentração: o consentimento é uma entre outras hipóteses de tratamento previstas na lei.",
-      C: "CORRETA. Decorre do art. 1º (aplicação ao direito público) e do art. 5º, V e VI (controlador e operador), com o dever de segurança do art. 46.",
+      C: "CORRETA. A LGPD alcança o poder público; quando o órgão atua como controlador, deve cumprir os deveres pertinentes ao tratamento e à segurança, conforme seu papel concreto (arts. 5º, 23 e 46).",
       D: "INCORRETA. Erro conceitual: dado pessoal sensível (art. 5º, II) exige disciplina própria e mais restritiva; 'finalidade pública' não é salvo-conduto.",
       E: "INCORRETA. Erro conceitual de oposição: LAI e LGPD devem ser harmonizadas conforme a natureza da informação e as regras aplicáveis; uma não afasta automaticamente a outra."
     },
-    regra: "LGPD alcança o poder público (art. 1º); o órgão é agente de tratamento e responde por segurança (art. 46) e pelos direitos do titular (arts. 17 e 18).",
+    regra: "LGPD alcança o poder público (art. 1º); o papel de controlador ou operador depende das atividades exercidas, com deveres aplicáveis de segurança e respeito aos direitos do titular.",
     pegadinha: "Cuidado com 'consentimento é a única base': no setor público, outras hipóteses legais coexistem — e a LAI soma-se à LGPD, não é afastada por ela.",
     fonte: "Lei nº 13.709/2018 (LGPD), arts. 1º, 5º, 17, 18 e 46, texto oficial compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Lei nº 14.129/2021, art. 1º, parágrafo único: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
