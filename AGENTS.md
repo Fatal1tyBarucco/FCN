@@ -380,6 +380,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - O run CI `40335797083` falhou no `node --check` de `apostila-ia/assets/data/questions_m6.js`, linha 588: a declaração `q-m6-25` perdeu a chave de abertura do objeto. Correção mínima aplicada, commit `b45f786cd09406db106afcda01a243acc78f70d2`. A execução completa precisa ser repetida no novo HEAD; não considerar o CI aprovado até verificar o resultado.
 - A falha foi de sintaxe, não de conteúdo jurídico da questão. Depois da correção, validar novamente todos os arquivos JavaScript e revisar quaisquer erros em cascata reportados pelo CI.
 
+## Auditoria semântica incremental — lote M5 q-m5-16 a q-m5-19 (2026-10-26)
+
+- q-m5-16: aprofundada avaliação de classificação com matriz de confusão, precisão, recall, especificidade, custos de erros e limites do F1; corrigida redação gramatical anterior.
+- q-m5-17: contextualizado desbalanceamento de classes; incluídos métricas por classe e prevenção de vazamento ao aplicar reamostragem apenas no treino, com avaliação em dados representativos.
+- q-m5-18: revisadas definições de MAE e RMSE, unidade de medida e sensibilidade relativa do RMSE a erros grandes; mantidas ressalvas sobre generalização e viés.
+- q-m5-19: ampliada engenharia de atributos para incluir disponibilidade temporal, vazamento de alvo e ajuste de transformações apenas com treino.
+- Fontes adicionadas/atualizadas: documentação scikit-learn para avaliação e armadilhas comuns; documentação imbalanced-learn para vazamento com reamostragem; artigo original SMOTE (DOI 10.1613/jair.953).
+- Commits de conteúdo: `00be52d650ff0f09e187e5967aa8aad8bdf075e0` e correção da fonte `ea58f36929147d4348ce23e86e1afdaf69ded589`.
+- O workflow de validação ainda deve ser conferido no HEAD mais recente; o último erro conhecido de sintaxe no arquivo M6 foi corrigido em `b45f786cd09406db106afcda01a243acc78f70d2`, mas os resultados dessa execução não substituem a validação do HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
