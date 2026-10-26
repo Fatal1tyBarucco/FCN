@@ -746,7 +746,7 @@ const moduleQuestions8 = [
     },
     regra: "Ordenação para ranquear: decrescente (ou crescente); a escala afeta a leitura percebida; a ordem alfabética só quando consulta alfabética é o uso.",
     pegadinha: "A pegadinha é 'os valores não mudaram, então a leitura não mudou' — o padrão visual muda, e isso muda a conclusão.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-3 (M8.2.3 Ordenação e legalidade de barras).",
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-3 (M8.2.3 Ordenação e legibilidade de barras).",
   },
   {
     id: "q-m8-28",
@@ -757,7 +757,7 @@ const moduleQuestions8 = [
     nivel: "intermediario",
     topico: "modulo-8-unidade-1-topico-2",
     assunto: "M8.1.2 Hierarquia visual e destaque",
-    contexto: "Painel de gestão destaca uma séries de interesse, mas as cores usadas são homogêneas.",
+    contexto: "Painel de gestão destaca uma série de interesse, mas as cores usadas são homogêneas.",
     enunciado: "Assinale a afirmação correta sobre hierarquia visual em painel.",
     alternativas: [
       { letra: "A", texto: "Hierarquia é garantida quando muitas cores fortes disputam atenção, tornando o painel vibrante." },
@@ -786,7 +786,7 @@ const moduleQuestions8 = [
     nivel: "intermediario",
     topico: "modulo-8-unidade-3-topico-5",
     assunto: "M8.3.5 Correlação e causalidade",
-    contexto: "Estudo observacional registra associação forte entre consumo de sorvete e afogamentos em uma cidade.",
+    contexto: "Estudo observacional registra correlação r = 0,8 entre consumo de sorvete e afogamentos em uma cidade.",
     enunciado: "Sobre essa associação, assinale a alternativa que reconhece corretamente a limitação do estudo.",
     alternativas: [
       { letra: "A", texto: "Correlação de 0,8 demonstra que o consumo de sorvete causa afogamentos." },
@@ -815,8 +815,8 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-4-topico-1",
     assunto: "M8.4.1 DAX e contexto de filtro",
-    contexto: "Medida 'Ticket médio' definida como Soma(Faturamento) ÷ Soma(Quantidade). Relatório com filtro por loja e mês.",
-    enunciado: "Sobre a medida 'Ticket médio' acima, assinale a opção correta no contexto de Power BI/DAX.",
+    contexto: "Medida 'Preço médio por unidade' definida como Soma(Faturamento) ÷ Soma(Quantidade). Relatório com filtro por loja e mês.",
+    enunciado: "Sobre a medida 'Preço médio por unidade' acima, assinale a opção correta no contexto de Power BI/DAX.",
     alternativas: [
       { letra: "A", texto: "A divisão é feita linha a linha: Faturamento ÷ Quantidade em cada linha, o que é equivalente à média." },
       { letra: "B", texto: "A medida calcula Soma(Faturamento) ÷ Soma(Quantidade) no contexto de cada visual e filtros ativos, o que é o correto." },
@@ -824,15 +824,15 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A agregação do DAX não respeita o contexto de filtro, e a medida fica fixa." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que medida é cálculo avaliado no contexto de cada visual (dinâmica), e o contexto de filtro do relatório alimenta as medidas. A alternativa B reproduz isso: Soma(Faturamento) ÷ Soma(Quantidade) é calculada no contexto de filtros ativos (loja, mês), e a agregação é feita corretamente somando antes de dividir. A A erra: média linha a linha ≠ média agregada. A C erra: a média dos tickets não é equivalente à agregação condizente. A D erra: o DAX respeita o contexto de filtro.",
+    justificativa: "O currículo define que medida é cálculo avaliado no contexto de cada visual (dinâmica), e o contexto de filtro do relatório alimenta as medidas. A alternativa B reproduz isso: Soma(Faturamento) ÷ Soma(Quantidade) é calculada no contexto de filtros ativos (loja, mês), e a agregação é feita corretamente somando antes de dividir. A A erra: média linha a linha ≠ média agregada. A C erra: a média dos preços unitários não é equivalente à razão entre totais quando as quantidades variam. A D erra: o DAX respeita o contexto de filtro.",
     analise: {
       A: "INCORRETA. Erro conceitual: média de linhas (Faturamento ÷ Quantidade em cada linha) difere de Soma(Faturamento) ÷ Soma(Quantidade) quando as quantidades variam.",
       B: "CORRETA. Reproduz o contexto de filtro e a agregação correta do DAX (somar antes de dividir).",
-      C: "INCORRETA. Erro conceitual: a média dos tickets (média de médias) é distinta da agregação da soma, e o filtro influencia o cálculo.",
+      C: "INCORRETA. Erro conceitual: a média simples dos preços unitários é distinta da razão entre totais quando as quantidades variam; o filtro influencia o cálculo.",
       D: "INCORRETA. Erro conceitual: o DAX respeita o contexto de filtro; a medida não é fixa."
     },
     regra: "Medida DAX é avaliada no contexto do visual e dos filtros; agregação correta = somar antes de dividir quando essa é a definição da métrica; média de médias pode distorcer o resultado.",
-    pegadinha: "A alternativa A é a pegadinha: parece 'média de todos os registros', mas a definição correta usa Soma/Soma no contexto de filtro.",
+    pegadinha: "A alternativa A é a pegadinha: parece 'média de todos os registros', mas a definição correta usa Soma/Soma no contexto de filtro para calcular o preço médio ponderado pela quantidade.",
     fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 DAX e contexto de filtro).",
   },
   {
