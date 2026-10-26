@@ -531,12 +531,12 @@ const moduleQuestions6 = [
     alternativas: null,
     gabarito: "errado",
     trechoDeterminante: "O trecho que torna o item FALSO é «porque o critério está cadastrado no sistema»: a automação não cria competência nem substitui a norma que define o critério; cadastrar parâmetro não legaliza decisão sem previsão normativa e sem observância da competência do colegiado.",
-    justificativa: "A automação de atos administrativos não cria competência, não substitui a motivação e não afasta contraditório e publicidade. O caso reúne dois vícios autônomos: o critério de indeferimento não existe na norma do benefício e a decisão foi retirada de quem a lei atribuiu competência. Uniformidade de aplicação é condição necessária da impessoalidade, mas não supre ausência de base normativa. O art. 48 da Lei nº 14.129/2021 reforça que os controles devem ser proporcionais ao risco — e decisão que nega direito exige controle reforçado.",
+    justificativa: "A automação de atos administrativos não cria competência, não substitui a motivação e não afasta contraditório e publicidade. O caso reúne dois vícios autônomos: o critério de indeferimento não existe na norma do benefício e a decisão foi retirada de quem a lei atribuiu competência. Uniformidade de aplicação é condição necessária da impessoalidade, mas não supre ausência de base normativa. O art. 48 da Lei nº 14.129/2021 exige gestão de riscos e controles internos proporcionais aos riscos, observada a proteção das liberdades civis e dos direitos fundamentais. Isso reforça a necessidade de avaliar os riscos da automação, mas não cria autorização autônoma para o critério de indeferimento.",
     analise: {
       item: "Item FALSO. Falta base normativa do critério e houve deslocamento de competência; a uniformidade de aplicação não sana nenhum dos dois vícios.",
       leituraIncorreta: "Leitura que induz ao erro: aceitar 'está no sistema, logo é regra'. Parâmetro cadastrado é implementação técnica; sua validade depende da norma que o autoriza e da competência de quem decide."
     },
-    regra: "Requisitos de conformidade da decisão automatizada: norma de competência, critério escrito e versionado, motivação, registro e canal de revisão.",
+    regra: "Na automação administrativa, verifique a norma de competência, a base normativa do critério, a motivação e os mecanismos de registro e revisão exigidos pelo regime aplicável.",
     pegadinha: "Itens que oferecem 'uniformidade' ou 'alta acurácia' como justificativa tentam trocar legalidade por consistência estatística.",
     fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 14.129/2021, arts. 5º, 6º e 48, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
