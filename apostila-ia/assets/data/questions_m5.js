@@ -506,7 +506,7 @@ const moduleQuestions5 = [
     },
     regra: "Em classes desbalanceadas, acurácia pode ocultar desempenho ruim na classe minoritária. Examine métricas por classe e o custo dos falsos positivos e falsos negativos.",
     pegadinha: "Uma taxa de acerto alta não prova utilidade: o modelo pode acertar quase sempre a classe majoritária e falhar justamente no evento que importa.",
-    fonte: "Saito, T. & Rehmsmeier, M. — The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets, 2015."
+    fonte: "Saito, T. & Rehmsmeier, M. — The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets, PLOS ONE, 2015: https://doi.org/10.1371/journal.pone.0118432."
   },
 
   /* ===================== 5.3 IA Generativa/LLMs (11 questões) ===================== */
