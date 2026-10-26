@@ -2918,7 +2918,7 @@ id: "q-m1-09",
       C: "INCORRETA. Erro conceitual: não são sinônimos — têm propósitos distintos (spam = não solicitado; phishing = fraude para roubo de dados).",
       D: "INCORRETA. Erro conceitual: inverte a definição de spear phishing, que é justamente o direcionado (a pessoa/organização específica), não o genérico em massa."
     },
-    regra: "Spam (não solicitado) ⊃ phishing (fraude para roubo); spear phishing = phishing direcionado. 'Todo phishing pode ser spam, mas nem todo spam é phishing.'",
+    regra: "Spam = mensagem não solicitada; phishing = fraude para induzir ação ou obter dados; as categorias podem se sobrepor, mas não são sinônimas. Spear phishing = phishing direcionado.",
     pegadinha: "A pegadinha é a generalização 'todo spam é phishing' (A) e a inversão de spear phishing (D) — ambos opostos ao que o currículo afirma."
   },
   {
@@ -2934,19 +2934,19 @@ id: "q-m1-09",
     enunciado: "Sobre SPF, DKIM e DMARC, assinale a alternativa que descreve corretamente as funções de cada um, conforme o currículo.",
     alternativas: [
       { letra: "A", texto: "SPF assina digitalmente a mensagem com criptografia simétrica; DKIM lista os servidores autorizados a enviar; DMARC criptografa o corpo do e-mail." },
-      { letra: "B", texto: "SPF define quais servidores podem enviar e-mails para o domínio; DKIM assina digitalmente a mensagem para garantir autenticidade; DMARC define a política para falhas de SPF/DKIM (rejeitar, quarentenar, aceitar)." },
+      { letra: "B", texto: "SPF define quais servidores podem enviar pelo domínio; DKIM assina a mensagem para permitir verificar a assinatura e a integridade associada ao domínio; DMARC define a política para falhas de SPF/DKIM (rejeitar, quarentenar ou monitorar)." },
       { letra: "C", texto: "Basta o DMARC estar ativo; SPF e DKIM são desnecessários porque o DMARC já autentica o servidor remetente." },
       { letra: "D", texto: "DKIM usa criptografia simétrica e compartilha a chave privada com o destinatário para que ele verifique a mensagem." }
     ],
     gabarito: "B",
-    justificativa: "SPF identifica servidores autorizados para o domínio; DKIM permite verificar a assinatura da mensagem; DMARC define políticas e relatórios baseados nos resultados e no alinhamento de SPF/DKIM. Esses mecanismos ajudam a reduzir spoofing de domínio, mas não garantem impedir todas as formas de falsificação. A alternativa B associa corretamente as funções centrais.",
+    justificativa: "SPF identifica servidores autorizados para o domínio; DKIM permite verificar uma assinatura associada ao domínio e detectar alterações na mensagem; DMARC define políticas e relatórios baseados nos resultados e no alinhamento de SPF/DKIM. Esses mecanismos ajudam a reduzir spoofing de domínio, mas não garantem impedir todas as formas de falsificação. A alternativa B associa corretamente as funções centrais.",
     analise: {
       A: "INCORRETA. Erro conceitual: troca as funções — listar servidores é SPF (não DKIM), assinar é DKIM (não SPF), e DMARC define política de falhas, não 'criptografa o corpo'.",
       B: "CORRETA. É a única que associa cada protocolo à sua função conforme o currículo (SPF = servidores autorizados; DKIM = assinatura de autenticidade; DMARC = política para falhas).",
       C: "INCORRETA. Erro conceitual: invenção — o currículo apresenta SPF, DKIM e DMARC como técnicas complementares; não afirma que o DMARC torna os outros desnecessários.",
       D: "INCORRETA. Erro conceitual duplo: DKIM usa criptografia ASSIMÉTRICA (exercício do currículo), e nunca compartilha a chave privada — a verificação usa a chave pública publicada no domínio."
     },
-    regra: "SPF = lista de servidores autorizados a enviar pelo domínio; DKIM = assinatura digital (criptografia assimétrica) de autenticidade; DMARC = política de tratamento das falhas de SPF/DKIM (rejeitar/quarentenar/aceitar).",
+    regra: "SPF = política de servidores autorizados; DKIM = assinatura verificável associada ao domínio e à integridade da mensagem; DMARC = política/relatórios para resultados e alinhamento de SPF/DKIM.",
     pegadinha: "A pegadinha é a troca de funções (A) e o erro sobre DKIM como 'simétrica com chave privada compartilhada' (D) — a assinatura é assimétrica e a chave privada nunca sai do domínio."
   },
   {
