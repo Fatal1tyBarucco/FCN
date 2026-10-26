@@ -634,7 +634,7 @@ const moduleQuestions6 = [
     },
     regra: "25 / 15 / 5 anos (ultrassecreto, secreto, reservado), contados da produção; esgotado o prazo, acesso público automático (§ 4º).",
     pegadinha: "A troca 15 ↔ 10 e 25 ↔ 30 é a variação mais usada para testar memorização; associe sempre 'quanto mais grave, mais longo'.",
-    fonte: "Lei nº 12.527/2011, art. 24, I a III, § 4º e § 5º (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 24, I a III, §§ 4º e 5º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-27", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -651,7 +651,7 @@ const moduleQuestions6 = [
     },
     regra: "Classificação (art. 28): assunto, fundamento legal, prazo ou evento e autoridade classificadora; competência por grau (art. 27) e critério menos restritivo (art. 24, § 5º).",
     pegadinha: "Itens que justificam a validade pelo cargo ocupado, sem enfrentar os elementos da decisão, são falsos.",
-    fonte: "Lei nº 12.527/2011, arts. 23, 24, § 5º, 27 e 28 (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), arts. 23, 24, § 5º, 27 e 28, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-28", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -676,7 +676,7 @@ const moduleQuestions6 = [
     },
     regra: "Art. 31, § 3º: dispensa de consentimento com finalidade qualificada e, na pesquisa, vedação de identificação.",
     pegadinha: "Hipóteses de dispensa são típicas e finalísticas: 'qualquer jornalista' e 'qualquer órgão' não se enquadram.",
-    fonte: "Lei nº 12.527/2011, art. 31, § 3º, I a V (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 31, § 3º, I a V, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-29", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -701,7 +701,7 @@ const moduleQuestions6 = [
     },
     regra: "Desenhar a trilha conforme finalidade, risco e requisitos aplicáveis; registrar apenas eventos e atributos necessários e proteger acesso, integridade e retenção.",
     pegadinha: "Não confundir uma prática técnica recomendável com um mínimo legal universal; proteção de dados não significa apagar sempre a autoria nem registrar indiscriminadamente todos os dados.",
-    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, III e X, 37 e 46; Lei nº 12.527/2011 (LAI), art. 6º, III; NIST SP 800-92, Guide to Computer Security Log Management (2006)."
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, III e X, 37 e 46: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Lei nº 12.527/2011 (LAI), art. 6º, III: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; NIST SP 800-92 — Guide to Computer Security Log Management: https://csrc.nist.gov/pubs/sp/800/92/final."
   },
 
   { id: "q-m6-30", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
