@@ -2362,7 +2362,6 @@ id: "q-m1-09",
     pegadinha: "Não transforme um valor padrão observado em uma configuração específica em regra universal para todas as contas e locatários."
   },
   {
-  {
     id: "q-m1-40",
     modulo: 1,
     formato: "mc",
