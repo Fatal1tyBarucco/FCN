@@ -755,6 +755,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo representativos: `108a36198f4d6984971113a612de932c50b7d9c4`, `ead755c961f00433eae465ecd1f5277e06f801c0`, `38e19502ac1785148a795791aaab94abdc831506`, `8b7f170455d2721dc90ee7538ed3aed4ad8a1e46`, `5fe4c8964815dd1cdee1383b5b9c27ea1f7012da`, `fd12f18d118ab774679e03a49242474f2e245460`, `7f064c90f6c45c0a349338da5e865f102fead855`, `1d6f747020ec91d8973aad489e94a3d6bb014a9e`, `e52e43f416103f331824513ad695879f975ba0ce`.
 - Revisão semântica focal das 40 questões M8 identificadas concluída. Isso não equivale a certificação de completude de todo o material ou aprovação dos workflows; verificar CI no HEAD atual.
 
+## Auditoria semântica incremental — lote M4 q-m4-21 a q-m4-25 (2026-10-26)
+
+- q-m4-21: mantida após revisão focal; phishing é definido pelo engano e pela indução a revelar dados, abrir conteúdo ou executar ações, sem depender de erros ortográficos.
+- q-m4-22: mantida a distinção de pharming como redirecionamento técnico; removida a fonte de CISA sobre DDoS, sem relação direta com o conceito, e mantido o NIST SP 800-81 Rev. 2 sobre segurança de DNS.
+- q-m4-23: mantida após revisão focal; reforçada a confirmação por canal independente e a proibição de compartilhar códigos de uso único.
+- q-m4-24: mantida após revisão focal; diferencia ataques online e offline e associa mitigação a cada cenário, sem prometer bloqueio absoluto.
+- q-m4-25: mantida após revisão focal; validação do certificado, cadeia de confiança e nome do servidor são descritos como medidas contra intermediário fraudulento, sem alegar que criptografia isolada resolve o problema.
+- Commit da correção de fonte: `09b32446177feed60bc4b0237226ecd661c84597`.
+- Fontes citadas: CISA (phishing), NIST SP 800-81 Rev. 2 (DNS), NIST SP 800-63B (autenticação) e NIST SP 800-52 Rev. 2 (TLS). Revisão focal, não substitui auditoria integral de todo o M4.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
