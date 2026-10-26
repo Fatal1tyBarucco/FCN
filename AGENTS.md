@@ -666,6 +666,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Inserida apenas a vírgula ausente, preservando enunciado, gabarito e explicações. Commit: `d19d322079e5172825169ef7be9c1104155af9d3`.
 - A nova execução de sintaxe, auditoria estrutural e testes de navegador precisa concluir no HEAD resultante.
 
+## Auditoria semântica incremental — lote M6 q-m6-21 a q-m6-25 (2026-10-26)
+
+- q-m6-21: conferido no texto oficial que a Lei nº 14.129/2021, art. 6º, disciplina atos processuais em processos administrativos eletrônicos, com meio eletrônico como regra e exceções expressas (solicitação do usuário, inviabilidade, indisponibilidade ou risco relevante à celeridade), exigindo digitalização posterior do documento-base na hipótese excepcional. Adicionada fonte oficial.
+- q-m6-22: mantida a afirmação de que automação não cria competência nem base normativa; o art. 48 da Lei nº 14.129/2021 trata de gestão de riscos e controles internos proporcionais ao risco. Adicionadas fontes oficiais da CF/88 e da Lei de Governo Digital.
+- q-m6-23: revisada a exigência de resposta completa na LAI: indicar o órgão detentor ou remeter o pedido quando não possuir a informação, e informar possibilidade/prazos/autoridade de recurso. Adicionada fonte oficial da LAI.
+- q-m6-24: mantida a necessidade de harmonizar transparência ativa, proteção de dados e regra específica do programa, sem presumir divulgação nominativa automática nem consentimento universal.
+- q-m6-25: mantida a anonimização antes da disponibilização de dados protegidos para pesquisa/avaliação, com preservação de utilidade e descrição da base; adicionadas URLs oficiais para LAI, Lei de Governo Digital e LGPD.
+- Commit de conteúdo: `ae503aff4b94379664c0460aa7d2b6dac32c695b`.
+- Revisão focal; executar e confirmar validação automatizada no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
