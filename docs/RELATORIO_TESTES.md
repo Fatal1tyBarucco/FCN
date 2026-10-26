@@ -498,3 +498,13 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Auditoria de questões: 399 lidas, 0 IDs duplicados, 0 alertas heurísticos, 0 pares com contexto/enunciado idênticos; 395 com campo de fonte detectado e 4 sem fonte.
 - O sucesso automatizado não substitui verificação de URLs, revisão semântica, leitor de tela, WCAG manual ou testes físicos. As quatro lacunas de fonte e a distribuição de gabaritos de M1 estão registradas em `docs/PENDENCIAS.md`.
 
+## Revalidação axe-core com zero violações — 2026-10-26
+
+- Workflow: [40413529441](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40413529441).
+- SHA testado: `7db9ef553e453ad246913c90fe1a78332beba7fd`.
+- Resultado: **success** em todas as etapas.
+- Sintaxe JavaScript, matriz, rastreabilidade, estrutura, heurísticas de questões, smoke test Chromium em `file://` e testes interativos passaram.
+- axe-core: 58 passes, 3 incomplete, **0 violações**. A única violação moderada anterior (`landmark-unique`, navegação do simulador de Segurança/Prompts/Dados) foi eliminada com nomes acessíveis únicos.
+- O teste Playwright agora exige uma lista vazia de violações axe-core, incluindo níveis moderados, além de bloquear explicitamente níveis críticos/graves.
+- As verificações incompletas de contraste, frames e correspondência entre rótulo e conteúdo não foram reportadas como violações. A auditoria automatizada não substitui validação manual, leitor de tela nem teste em dispositivos físicos.
+
