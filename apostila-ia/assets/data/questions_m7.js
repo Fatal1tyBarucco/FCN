@@ -779,7 +779,7 @@ const moduleQuestions7 = [
       B: "INCORRETA. O segundo z-score é 2,0 — 10 ÷ 5 = 2, e não 1,4.",
       C: "INCORRETA. Subtraiu sem dividir pelo desvio padrão e concluiu, indevidamente, que não há comparação.",
       D: "INCORRETA. Confundiu nota normalizada por 100 com z-score.",
-      E: "CORRETA no cálculo e ERRADA na conclusão: valor absoluto maior não significa melhor desempenho relativo."
+      E: "INCORRETA no conjunto: o cálculo está correto, mas a conclusão está errada; valor absoluto maior não significa melhor desempenho relativo."
     },
     regra: "z = (x − média) ÷ desvio padrão: mede quantos desvios-padrão o valor está acima (ou abaixo) da média.",
     pegadinha: "A alternativa com os dois valores certos e conclusão invertida existe de propósito: em prova, o cálculo sozinho não garante o ponto.",
