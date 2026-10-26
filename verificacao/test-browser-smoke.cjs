@@ -56,6 +56,39 @@ const { chromium } = require("playwright");
           } catch (_) {
             return false;
           }
+        })(),
+        accessibilityInventory: (() => {
+          const named = element => {
+            const ariaLabel = element.getAttribute("aria-label");
+            const labelledBy = element.getAttribute("aria-labelledby");
+            const title = element.getAttribute("title");
+            const text = (element.innerText || element.value || element.alt || "").trim();
+            const labels = element.labels ? Array.from(element.labels).some(label => label.innerText.trim()) : false;
+            return Boolean((ariaLabel && ariaLabel.trim()) || (labelledBy && document.getElementById(labelledBy)) ||
+              (title && title.trim()) || text || labels);
+          };
+          const controls = Array.from(document.querySelectorAll("button, input, select, textarea, [role='button']"));
+          const unnamedControls = controls.filter(element => {
+            if (element.type === "hidden" || element.getAttribute("aria-hidden") === "true") return false;
+            return !named(element);
+          }).map(element => ({
+            tag: element.tagName.toLowerCase(),
+            type: element.getAttribute("type") || "",
+            id: element.id || "",
+            text: (element.innerText || element.value || "").trim().slice(0, 70)
+          }));
+          const imagesWithoutAlt = Array.from(document.images)
+            .filter(image => !image.hasAttribute("alt"))
+            .map(image => image.src.split("/").pop());
+          return {
+            controls: controls.length,
+            unnamedControlCount: unnamedControls.length,
+            unnamedControls: unnamedControls.slice(0, 30),
+            imagesWithoutAltCount: imagesWithoutAlt.length,
+            imagesWithoutAlt: imagesWithoutAlt.slice(0, 20),
+            skipLinkPresent: Boolean(document.querySelector(".a11y-skip-link")),
+            mainLandmarkCount: document.querySelectorAll("main, [role='main']").length
+          };
         })()
       };
     });
