@@ -594,12 +594,12 @@ const moduleQuestions8 = [
     gabarito: "A",
     justificativa: "A cauda à direita puxa a média acima da mediana: 13,14 > 8. A alternativa A reproduz exatamente esse princípio. B erra (não há cauda à esquerda; o 2 é um dos centrais). C erra (não é simétrica). D erra: a mediana é robusta e não é alterada por extrema distância — ela permanece 8.",
     analise: {
-      A: "CORRETA. Reproduz a relação moda < mediana < média em distribuição assimétrica à direita.",
+      A: "CORRETA. Em uma distribuição com cauda à direita, o valor extremo pode elevar a média acima da mediana; neste conjunto, 13,14 > 8.",
       B: "INCORRETA. Erro conceitual: não há cauda à esquerda; o 2 está no centro dos centrais e não puxa para a esquerda.",
       C: "INCORRETA. Erro conceitual: a presença do 50 isolado na cauda quebra a simetria.",
       D: "INCORRETA. Erro conceitual: a mediana é robusta; o valor de 50 não altera — a mediana é 8."
     },
-    regra: "Assimetria à direita: média > mediana > moda; média é sensível a extremos e mediana é robusta; em assimetria à esquerda a ordem inverte.",
+    regra: "Assimetria à direita: a média tende a ficar acima da mediana porque é sensível a valores extremos; a mediana é mais robusta. A relação com a moda depende da forma da distribuição e pode não se aplicar quando não há moda única.",
     pegadinha: "A pegadinha é aceitar 'média abaixo de mediana' por questão de equação — o teste é o 50 na cauda da direita.",
     fonte: "Currículo M8 — modulo-8-unidade-3-topico-4 (M8.3.4 Assimetria e média vs mediana).",
   },
@@ -670,7 +670,7 @@ const moduleQuestions8 = [
     nivel: "intermediario",
     topico: "modulo-8-unidade-5-topico-3",
     assunto: "M8.5.3 Incerteza e integridade gráfica",
-    contexto: "Projeção de demanda: 1.200 atendimentos no próximo trimestre, com premissas baseadas em tendência dos 12 meses.",
+    contexto: "Modelo de projeção baseado na tendência dos 12 meses estima 1.200 atendimentos no próximo trimestre e calcula intervalo de projeção de 1.050 a 1.300 atendimentos.",
     enunciado: "Assinale a comunicação de projeção que NÃO compromete a integridade gráfica.",
     alternativas: [
       { letra: "A", texto: "Projeção de 1.200 atendimentos, exatamente, com base na tendência dos 12 meses." },
