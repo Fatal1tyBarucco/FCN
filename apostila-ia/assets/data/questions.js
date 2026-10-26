@@ -2119,11 +2119,11 @@ id: "q-m1-09",
     alternativas: [
       { letra: "A", texto: "Basta usar uma licença Microsoft 365 com canais de equipe, pois canais garantem capacidade de webinar e salas paralelas em qualquer evento." },
       { letra: "B", texto: "Basta confirmar que o Google Meet permite reuniões de 500 participantes; esse limite, por si só, garante salas paralelas no formato webinar." },
-      { letra: "C", texto: "Zoom Webinars, com capacidade licenciada para 500 participantes e licença elegível para salas paralelas de webinar (por exemplo, Zoom Webinars Plus Unlimited, Zoom Webinars Plus Pay Per Attendee ou Zoom Events Unlimited, conforme a modalidade contratada)." },
+      { letra: "C", texto: "Confirmar capacidade licenciada para 500 participantes e elegibilidade da licença para salas paralelas de webinar." },
       { letra: "D", texto: "Qualquer licença paga do Zoom garante 500 participantes e salas paralelas de webinar, sem checar o tipo de licença ou o cliente utilizado." }
     ],
     gabarito: "C",
-    justificativa: "O Zoom é adequado quando a licença contratada cobre a capacidade de 500 participantes e os requisitos do evento. A documentação oficial distingue a capacidade do webinar da elegibilidade para salas paralelas: este último recurso exige uma licença compatível, webinar agendado, recurso habilitado e aplicativo desktop ou móvel suportado. A capacidade e os recursos disponíveis devem ser confirmados no plano contratado.",
+    justificativa: "O Zoom é adequado quando a licença contratada cobre a capacidade de 500 participantes e os requisitos do evento. A documentação oficial distingue a capacidade do webinar da elegibilidade para salas paralelas: esse recurso exige Zoom Webinars Plus Unlimited, Zoom Webinars Plus Pay Per Attendee ou Zoom Events Unlimited, conforme a modalidade, além de webinar agendado, recurso habilitado e aplicativo desktop ou móvel suportado. A capacidade e os recursos disponíveis devem ser confirmados no plano contratado.",
     analise: {
       A: "INCORRETA. Canais de colaboração não determinam a capacidade licenciada de um evento nem garantem os requisitos específicos de salas paralelas em webinar.",
       B: "INCORRETA. O limite de participantes de uma reunião Meet não demonstra que a solução oferece salas paralelas dentro de um webinar Zoom; são produtos e condições distintos.",
