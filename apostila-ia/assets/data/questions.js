@@ -1367,18 +1367,18 @@ id: "q-m1-09",
     alternativas: [
       { letra: "A", texto: "Unicast, pois cada funcionário receberia fluxo próprio com menor latência individual." },
       { letra: "B", texto: "Broadcast, pois todos os funcionários devem receber o conteúdo." },
-      { letra: "C", texto: "Multicast, pois um fluxo único é replicado apenas nos pontos de ramificação — em vez dos 50 fluxos exigidos pelo unicast." },
+      { letra: "C", texto: "Multicast, se a rede e a aplicação suportarem esse recurso, pois um fluxo pode ser replicado nos pontos de ramificação em vez de enviar 50 fluxos unicast independentes." },
       { letra: "D", texto: "Anycast, pois o servidor mais próximo atenderia cada funcionário." }
     ],
     gabarito: "C",
-    justificativa: "O exemplo de aplicação do currículo: 'Multicast — o servidor envia um fluxo único que é replicado pela rede apenas nos pontos de ramificação. Unicast exigiria 50 fluxos separados, consumindo 50x a largura de banda'. O exemplo introdutório de multicast é justamente streaming (IPTV).",
+    justificativa: "O exemplo de aplicação do currículo compara um fluxo multicast, replicado nos pontos de ramificação, com fluxos unicast independentes. Essa economia depende de suporte a multicast na aplicação e na infraestrutura de rede; streaming IPTV é um exemplo de uso possível.",
     analise: {
-      A: "INCORRETA. Erro conceitual: eficiência de banda ignorada — 50 fluxos independentes, consumo multiplicado (o currículo quantifica 50×).",
+      A: "INCORRETA. Para o mesmo conteúdo, unicast exige fluxos independentes para cada destinatário e pode consumir mais banda que multicast suportado pela infraestrutura.",
       B: "INCORRETA. Erro conceitual: broadcast atinge todos do domínio (inclusive quem não quer), é limitado por roteador e não é o modelo de 'grupo que se inscreveu'.",
       C: "CORRETA. Reproduz o raciocínio de eficiência documentado no exemplo do currículo.",
       D: "INCORRETA. Erro conceitual: anycast distribui réplicas de serviço para nós distintos mais próximos — não resolve entrega simultânea do mesmo fluxo a um grupo na LAN."
     },
-    regra: "Eficiência de entrega: unicast escala linearmente em banda (N receptores = N fluxos); multicast replica só onde há ramificação de grupo.",
+    regra: "Eficiência de entrega: unicast usa fluxos independentes por destinatário; multicast pode reduzir tráfego replicando o fluxo nos pontos necessários, quando há suporte de rede e aplicação.",
     pegadinha: "A alternativa B parece resolver ('todos precisam receber'), mas broadcast é indiscriminado e limitado ao domínio — a pegadinha é confundir 'todo mundo quer' com 'todo mundo do domínio recebe'."
   },
   {
