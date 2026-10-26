@@ -356,3 +356,12 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [ ] Reconciliar contagens e descrições históricas de inventário/matriz para que contagens antigas não sejam confundidas com o estado atual (132 tópicos, 460 flashcards, 396 questões no HEAD testado).
 
 A aprovação do workflow automatizado não encerra pendências qualitativas nem altera o estado draft do PR.
+
+
+## Atualização — 2026-10-26 — correção q-m6-41 a q-m6-44
+
+- [x] Corrigir em lote as quatro referências curriculares legadas em `questions_m6.js` (q-m6-41 → `m6-u4-t2-s1`; q-m6-42 → `m6-u4-t1-s2`; q-m6-43 → `m6-u5-t1-s2`; q-m6-44 → `m6-u6-t3-s1`). Commit: `7c9b0dd7871048d94294b5c7530f90e52de97f4d`.
+- [ ] Aguardar e inspecionar os checks acionados pelo novo commit do PR #17.
+- [ ] Reexecutar auditoria de rastreabilidade e validação estrutural no HEAD atualizado.
+- [ ] Revisar independentemente enunciados, gabaritos, distratores, justificativas e fontes das quatro questões alteradas.
+- [ ] Continuar as pendências qualitativas já registradas; a correção de IDs não equivale a aprovação pedagógica.
