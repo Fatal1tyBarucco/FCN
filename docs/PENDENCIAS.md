@@ -301,6 +301,9 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Adicionar questões autorais aos tópicos de síntese de IA generativa e engenharia de prompts do M5.
 - [x] Adicionar questões autorais aos tópicos de síntese de ética/governança, redes sociais institucionais, acessibilidade e método de resolução do M6.
 - [x] Atualizar a matriz de validação estrutural, o manifesto PWA e o inventário do README para 396 questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40, M8=40; 321 MC e 75 itens certo/errado.
-- [ ] Confirmar CI completo no HEAD final, incluindo teste estrutural, auditoria de ativos, heurísticas e smoke test via `file://`.
+- [x] Confirmar CI completo no HEAD `09d657130a66ea2cfd7390909656ce5a7557e762`: estrutura, ativos, heurísticas e smoke test via `file://` aprovados.
 - [ ] Fazer revisão semântica independente das sete questões novas e validar suas fontes e gabaritos; validação estrutural não comprova correção pedagógica.
 - [ ] Revisar a concentração de gabaritos, ainda alta em M1, M4, M5, M6, M7 e M8.
+
+- [x] Corrigir as análises por alternativa das quatro questões M6 novas para que os distratores sejam explicados conforme o enunciado específico.
+- [ ] Fazer revisão semântica independente das sete questões novas e validar suas fontes e gabaritos; a aprovação estrutural não comprova correção pedagógica.
