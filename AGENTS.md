@@ -1305,3 +1305,13 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - O relatório e a lista de pendências foram atualizados após o run. Esses commits são documentais; registrar separadamente que o workflow validou o SHA de código indicado, sem afirmar que executou sobre os SHAs documentais posteriores.
 - Manter PR #17 aberto e Draft; sem merge até concluir revisão semântica, fontes, acessibilidade manual e compatibilidade.
 
+## Auditoria de fontes e validação mais recente — 2026-10-26
+
+- Run [40412457818](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40412457818), SHA `5232348fa553a58317c6b4b28ab9dfafc088beb9`, concluiu com `success`: sintaxe de 39 arquivos, matriz, rastreabilidade, estrutura, heurísticas, Chromium `file://` e regressões interativas/axe-core.
+- Smoke test: 8 módulos, 460 flashcards, 399 questões, sem erros JavaScript de página. axe-core: 58 passes, 3 incomplete, 1 violação não bloqueante, 0 bloqueantes.
+- Questões: 399; IDs duplicados 0; alertas heurísticos 0; contextos/justificativas 399/399; campos de fonte detectados 395/399. As quatro lacunas são `q-m2-26`, `q-m2-32`, `q-m3-19`, `q-m3-36`.
+- Foram adicionadas 38 referências oficiais ao catálogo. O campo `fonte` não comprova por si só que a URL está acessível ou sustenta exatamente a afirmação; conferir links e pertinência manualmente.
+- Pendências focais: validar fonte técnica para alcance Cat6/Cat6a em 10 Gbps; validar fontes oficiais do Zoom para webinars/breakout rooms/navegador; revisão semântica de todos os itens; distribuição M1 A=4, B=15, C=5, D=2, E=0 em 26 MC; leitor de tela e WCAG manual.
+- A distribuição de gabaritos é apenas um sinal de revisão. Nunca alterar gabaritos corretos apenas para equilibrar letras.
+- Preservar PR #17 aberto e Draft, sem merge.
+
