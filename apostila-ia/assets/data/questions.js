@@ -110,7 +110,7 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: considerar que 'toda suíte Office moderna acompanha Teams', ou que 'atualização contínua' é padrão de qualquer produto Microsoft. A distinção correta é modelo de licenciamento (assinatura × perpétuo), não marca do produto."
     },
     regra: "LTSC = Long Term Servicing Channel: canal de suporte longo com atualizações de segurança, sem atualizações de funcionalidades e sem serviços em nuvem associados.",
-    pegadinha: "Item duplo: mesmo que o examinando aceite parcialmente o trecho ('inclui Teams'), o item só é Certo se TODA a afirmação for verdadeira — estilo CESPE/CEBRASPE penaliza a meia-verdade."
+    pegadinha: "Item duplo: mesmo que o examinando aceite parcialmente o trecho ('inclui Teams'), o item só é Certo se TODA a afirmação for verdadeira — estilo CESPE/CEBRASPE penaliza a meia-verdade.",
     fonte: "Microsoft Learn — Descrição de serviços dos aplicativos do Office (diferenças entre Office LTSC e aplicativos Microsoft 365): https://learn.microsoft.com/pt-br/office365/servicedescriptions/office-applications-service-description/office-applications-service-description",
   },
   {
@@ -191,7 +191,7 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: finalidade trocada. Exportar para PDF preserva layout para distribuição (topico-12), não cria vínculo dinâmico de dados entre aplicativos."
     },
     regra: "Integração entre aplicativos Microsoft: OLE (objeto vinculado/embutido) para vínculo dinâmico, Microsoft Graph/APIs REST para automação entre serviços, Power Automate para fluxos.",
-    pegadinha: "A palavra 'automática' no enunciado exclui qualquer alternativa baseada em reentrada manual; a pegadinha é confundir 'colar especial (pegar manter vínculo)' com exportação estática."
+    pegadinha: "A palavra 'automática' no enunciado exclui qualquer alternativa baseada em reentrada manual; a pegadinha é confundir 'colar especial (pegar manter vínculo)' com exportação estática.",
     fonte: "Microsoft Support — Campos de atualização no Word: https://support.microsoft.com/pt-br/word/update-fields",
   },
   {
@@ -214,7 +214,7 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: confundir 'histórico de versões' com 'backup'. O histórico é funcionalidade de recuperação dentro do próprio serviço — a questão do backup separado aparece no tópico 1.5 (OneDrive), e lá o currículo afirma que sincronização não substitui backup."
     },
     regra: "Retenção × backup: histórico de versões é retenção limitada e configurável dentro do serviço; backup é cópia independente (recomendação 3-2-1 citada no currículo do OneDrive).",
-    pegadinha: "A pegadinha é o prazo universal: não confunda uma configuração observada em determinado ambiente com regra fixa para todo serviço, tipo de conta e locatário."
+    pegadinha: "A pegadinha é o prazo universal: não confunda uma configuração observada em determinado ambiente com regra fixa para todo serviço, tipo de conta e locatário.",
     fonte: "Microsoft Support — Histórico de versões no OneDrive e no SharePoint: https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive",
   },
   {
@@ -243,7 +243,7 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: premissa falsa. O currículo atribui 'políticas de segurança avançadas' às contas organizacionais no M365 — a negação de suporte em contas nuvem não existe no conteúdo base."
     },
     regra: "Classificação de identidades no M365: conta pessoal/familiar (consumo) × conta organizacional (diretório e administração central); recursos avançados como eDiscovery e gestão de dispositivos dependem do plano/licenças.",
-    pegadinha: "A alternativa C é a pegadinha contemporânea: MFA resolve autenticação, não governança — em provas de precisão conceitual (FCC) separar 'quem entra' de 'como a organização gerencia' é o ponto cobrado."
+    pegadinha: "A alternativa C é a pegadinha contemporânea: MFA resolve autenticação, não governança — em provas de precisão conceitual (FCC) separar 'quem entra' de 'como a organização gerencia' é o ponto cobrado.",
     fonte: "Microsoft 365 — Comparação de planos e licenciamento: https://www.microsoft.com/pt-BR/microsoft-365/business/microsoft-365-plans-and-pricing",
   },
   {
@@ -266,7 +266,7 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: reconhecer que alguns links oferecem esses controles e generalizar que todos os links e contas sempre os oferecem."
     },
     regra: "Verifique retenção e compartilhamento conforme o tipo de conta, o serviço e as políticas do locatário; não confunda lixeira com histórico de versões.",
-    pegadinha: "Palavras absolutas como 'qualquer', 'exatamente' e 'sempre' tornam falsa uma afirmação que ignora as configurações aplicáveis."
+    pegadinha: "Palavras absolutas como 'qualquer', 'exatamente' e 'sempre' tornam falsa uma afirmação que ignora as configurações aplicáveis.",
     fonte: "Microsoft Support — Como o OneDrive protege dados na nuvem, incluindo histórico de versões e links protegidos/expiráveis: https://support.microsoft.com/pt-br/onedrive/how-onedrive-safeguards-your-data-in-the-cloud",
   },
   {
@@ -295,7 +295,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: confundir compatibilidade com distribuição segura. O .doc é legado/binário e editável; serve a compatibilidade antiga, não à leitura-only."
     },
     regra: "Escolha de formato por objetivo: edição colaborativa → .docx; distribuição leitura-only → .pdf; compatibilidade antiga → .doc; texto puro → .txt; interoperabilidade intermediária → .rtf.",
-    pegadinha: "A pegadinha é a 'meia solução': .txt e .doc atendem um critério do enunciado, mas violam o outro — a FGV cobra interpretar todas as condições, não a primeira que se lê."
+    pegadinha: "A pegadinha é a 'meia solução': .txt e .doc atendem um critério do enunciado, mas violam o outro — a FGV cobra interpretar todas as condições, não a primeira que se lê.",
     fonte: "Microsoft Support — Formatos de arquivo para salvar documentos no Word: https://support.microsoft.com/pt-br/word/file-formats-for-saving-documents",
   },
   {
@@ -318,7 +318,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: memorizar que 'm de macro' aparece em alguma extensão e inferir que todo .dxm existe. A regra mnemotécnica correta é: DOC = documento, DOT = modelo; o sufixo M = macros habilitadas."
     },
     regra: "Matriz de extensões: DOCX (documento padrão) / DOCM (documento com macros) / DOTX (modelo) / DOTM (modelo com macros) / DOC (legado binário).",
-    pegadinha: "Itens com duas cláusulas exigem avaliar AMBAS. Mesmo que o examinando acerte uma metade, o item é Errado — e o CESPE cobra exatamente essa disciplina de leitura."
+    pegadinha: "Itens com duas cláusulas exigem avaliar AMBAS. Mesmo que o examinando acerte uma metade, o item é Errado — e o CESPE cobra exatamente essa disciplina de leitura.",
     fonte: "Microsoft Support — Formatos de arquivo para salvar documentos no Word (.dotx, .dotm, .docm): https://support.microsoft.com/pt-br/word/file-formats-for-saving-documents",
   },
   {
@@ -347,7 +347,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: inverter causa e efeito. O sumário referencia os títulos; alterar só o sumário não modifica o corpo do documento."
     },
     regra: "Formatação direta × estilo: direta altera a seleção atual; estilo é definição nomeada propagante (mudou o estilo, mudou todo o texto com aquele estilo).",
-    pegadinha: "A alternativa D é a pegadinha de quem conhece o sumário, mas não entende o vínculo estilo → texto → sumário (nesta ordem)."
+    pegadinha: "A alternativa D é a pegadinha de quem conhece o sumário, mas não entende o vínculo estilo → texto → sumário (nesta ordem).",
     fonte: "Microsoft Support — Adicionar um título a um documento do Word e usar estilos: https://support.microsoft.com/pt-br/word/add-a-heading-in-a-word-document",
   },
   {
@@ -370,7 +370,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: supor que o sumário 'olha' a aparência (negrito grande = título). O sumário é um campo baseado em estilos — aparência não é estrutura."
     },
     regra: "Sumário automático = campo indexado por estilos de título. Regra prática: estrutura (estilos) → sumário; formatação direta → apenas aparência.",
-    pegadinha: "Item quase-verdade: formatação direta de fato 'faz o texto parecer título'. A pegadinha é confundir efeito visual com marcação estrutural — o erro mais comum documentado no exemplo 'erro' do próprio currículo."
+    pegadinha: "Item quase-verdade: formatação direta de fato 'faz o texto parecer título'. A pegadinha é confundir efeito visual com marcação estrutural — o erro mais comum documentado no exemplo 'erro' do próprio currículo.",
     fonte: "Microsoft Support — Inserir um sumário automático no Word: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents",
   },
   {
@@ -399,7 +399,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: confundir salto de linha com tabulador; tabulação é avanço para parada definida (Tab simples, centrado, decimal, direita)."
     },
     regra: "Enter = quebra de parágrafo (novo parágrafo, com formatação parágrafo própria); Shift+Enter = quebra de linha (mesmo parágrafo).",
-    pegadinha: "A alternativa A pega quem associa qualquer 'quebra' à página; o nome técnico ('quebra de linha') está no currículo — leia o termo, não a intuição."
+    pegadinha: "A alternativa A pega quem associa qualquer 'quebra' à página; o nome técnico ('quebra de linha') está no currículo — leia o termo, não a intuição.",
     fonte: "Microsoft Support — Atalhos de teclado no Word: https://support.microsoft.com/pt-br/accessibility/word/keyboard-shortcuts-in-word",
   },
   {
@@ -428,7 +428,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: resposta 'quase certa'. Alinha à direita o fim do texto; em valores com mesma precisão decimal o efeito visual é próximo, mas a parada que ancora a vírgula é a decimal — e é ela que o currículo associa ao alinhamento por casa decimal."
     },
     regra: "Paradas de tabulação do Word: simples (esquerda), centrado, decimal (alinha pela vírgula) e direita (alinha o fim do texto).",
-    pegadinha: "A proximidade visual entre 'decimal' e 'direita' é o filtro natural da FCC: quem não leu a definição dos quatro tipos escolhe a opção que 'parece' alinhar."
+    pegadinha: "A proximidade visual entre 'decimal' e 'direita' é o filtro natural da FCC: quem não leu a definição dos quatro tipos escolhe a opção que 'parece' alinhar.",
     fonte: "Microsoft Support — Inserir ou adicionar paradas de tabulação no Word: https://support.microsoft.com/pt-br/word/insert-or-add-tab-stops",
   },
   {
@@ -451,7 +451,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: a frase soa 'técnica e plausível' e quem lê depressa valida o vocabulário em vez da relação. A inversão é o único defeito do item — a parte sobre a existência dos dois tipos de lista está correta."
     },
     regra: "Escolha de lista por semântica: ordem importa → numeração/letras sequenciais; ordem irrelevante → marcadores (bullet).",
-    pegadinha: "Inversão de predicados — pegadinha padrão de item C/E: tudo parece certo porque todos os termos existem; só a relação entre eles está trocada."
+    pegadinha: "Inversão de predicados — pegadinha padrão de item C/E: tudo parece certo porque todos os termos existem; só a relação entre eles está trocada.",
     fonte: "Microsoft Support — Criar listas numeradas ou com marcadores no Word: https://support.microsoft.com/pt-br/word/training/create-a-bulleted-or-numbered-list",
   },
   {
@@ -480,7 +480,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: formatação visual no lugar de estrutura; numeração contínua não satisfaz capa/romano e o número digitado manualmente não recalcula."
     },
     regra: "Quebra de página = mesma formatação, nova página; quebra de seção = fronteira de formatação (numeração, margens, orientação, cabeçalhos/rodapés) — e o vínculo 'Vincular ao anterior' deve ser desmarcado por seção.",
-    pegadinha: "A alternativa C é a 'meia verdade' favorita da FGV: o desvincular é necessário, mas não suficiente sem a quebra de seção — cobram a combinação completa de passos."
+    pegadinha: "A alternativa C é a 'meia verdade' favorita da FGV: o desvincular é necessário, mas não suficiente sem a quebra de seção — cobram a combinação completa de passos.",
     fonte: "Microsoft Support — Personalizar numeração de página por seção no Word: https://support.microsoft.com/pt-br/word/customize-page-numbers-and-their-formats-in-different-word-document-sections",
   },
   {
@@ -503,7 +503,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: supor que só a quebra de página muda colunas, ou que toda quebra de seção força nova página. Só o modo Next Page força a página nova — o Contínuo, não."
     },
     regra: "Tipos de quebra de seção: Next Page (nova página + formatação nova) × Continuous (mesma página + formatação nova); colunas múltiplas mudam por seção, não por quebra de página.",
-    pegadinha: "A pegadinha é a palavra 'Contínuo' sugerir 'nada muda'. Na verdade, é justamente a quebra que muda formatação SEM mudar de página — o examinando deve separar localização (página) de formatação (seção)."
+    pegadinha: "A pegadinha é a palavra 'Contínuo' sugerir 'nada muda'. Na verdade, é justamente a quebra que muda formatação SEM mudar de página — o examinando deve separar localização (página) de formatação (seção).",
     fonte: "Microsoft Support — Usar quebras de seção para alterar o layout ou a formatação: https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document",
   },
   {
@@ -532,7 +532,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: confundir recursos do grupo 'Referências'. Lista de figuras/legendas é gerada por legendas automáticas (topico-8), não é a fonte do sumário."
     },
     regra: "Sumário = campo indexado por estilos de título; atualização manual via 'Atualizar campo' após mudanças estruturais.",
-    pegadinha: "A alternativa C repete o erro mais comum dos alunos — a VUNESP a coloca em posição de plausibilidade justamente porque 'negrito grande' parece título."
+    pegadinha: "A alternativa C repete o erro mais comum dos alunos — a VUNESP a coloca em posição de plausibilidade justamente porque 'negrito grande' parece título.",
     fonte: "Microsoft Support — Inserir um sumário automático no Word: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents",
   },
   {
@@ -555,7 +555,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: pensar que o sumário se atualiza sozinho como a numeração de páginas. A atualização é automática em alguns eventos, mas o comando manual é o procedimento documentado para refletir mudanças estruturais."
     },
     regra: "Campo do Word: objeto com instrução de atualização; sumário é campo baseado em estilos de título.",
-    pegadinha: "A palavra 'sempre' do currículo ('sempre que estilos ou estrutura mudarem') não significa atualização instantânea automática — quem transforma 'sempre' em 'sozinho' marca Errado."
+    pegadinha: "A palavra 'sempre' do currículo ('sempre que estilos ou estrutura mudarem') não significa atualização instantânea automática — quem transforma 'sempre' em 'sozinho' marca Errado.",
     fonte: "Microsoft Support — Atualizar campos e sumários no Word: https://support.microsoft.com/pt-br/word/update-fields",
   },
   {
@@ -584,7 +584,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: mesmo grupo de interface ('Referências'), função diferente — gerenciar fontes e bibliografia, não figuras."
     },
     regra: "Referência cruzada = campo interno que pode ser atualizado; legenda = numeração do objeto; índice remissivo = mapa de marcas de entrada.",
-    pegadinha: "Três recursos ficam no mesmo grupo de guiia 'Referências' — a pegadinha é escolher pela proximidade de menu em vez da função descrita."
+    pegadinha: "Três recursos ficam no mesmo grupo de guiia 'Referências' — a pegadinha é escolher pela proximidade de menu em vez da função descrita.",
     fonte: "Microsoft Support — Criar uma referência cruzada atualizável no Word: https://support.microsoft.com/pt-br/word/create-a-cross-reference",
   },
   {
@@ -613,7 +613,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: modos de exibição não alteram propriedades internas da tabela."
     },
     regra: "Propriedades de tabela do Word: cabeçalho repetido por página, classificação/filtros, autoajuste, sombreamento — funções da própria tabela, não da página.",
-    pegadinha: "A alternativa A soa técnica ('SUM/AVERAGE' aparece no currículo) mas é irrelevante ao objetivo — a pegadinha é confundir cálculo com organização."
+    pegadinha: "A alternativa A soa técnica ('SUM/AVERAGE' aparece no currículo) mas é irrelevante ao objetivo — a pegadinha é confundir cálculo com organização.",
     fonte: "Microsoft Support — Tornar documentos do Word acessíveis: https://support.microsoft.com/pt-br/accessibility/word/make-your-word-documents-accessible-to-everyone-with-accessibility-assistant",
   },
   {
@@ -636,7 +636,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: tratar 'Comparar e Mesclar' e 'Combinar' como sinônimos. A diferença está na quantidade de versões envolvidas (duas × múltiplas), e é esse o critério do currículo."
     },
     regra: "Revisão colaborativa: rastreamento de alterações (marcação) → comentários → comparação (duas versões) → combinação (múltiplas versões).",
-    pegadinha: "Prova de atenção nominal: dois comandos de nome parecido com domínios distintos — quem lê 'e' como 'ou' aceita o item sem perceber a especificação."
+    pegadinha: "Prova de atenção nominal: dois comandos de nome parecido com domínios distintos — quem lê 'e' como 'ou' aceita o item sem perceber a especificação.",
     fonte: "Microsoft Support — Comparar e mesclar versões de um documento do Word: https://support.microsoft.com/pt-br/word/compare-and-merge-two-versions-of-a-document",
   },
   {
@@ -665,7 +665,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: leva o controle para fora do arquivo. O currículo trata do link de permissão (visualizar/editar/comentar com expiração), mas o cenário exige controle INTERNO por seção dentro do documento — e sem edição livre não há como revisar."
     },
     regra: "Camadas de proteção do Word: restrição de edição (granular, por área/papel) × senha de abertura (acesso) × senha de modificação (escrita) × marca d'água (sinalização).",
-    pegadinha: "A alternativa D é plausível porque 'visualizar apenas' parece atender à leitura — mas o cenário exige edição restrita a áreas, o que só a restrição interna resolve."
+    pegadinha: "A alternativa D é plausível porque 'visualizar apenas' parece atender à leitura — mas o cenário exige edição restrita a áreas, o que só a restrição interna resolve.",
     fonte: "Microsoft Support — Tornar um documento somente leitura e restringir edição no Word: https://support.microsoft.com/pt-br/word/make-a-document-read-only-in-word",
   },
   {
@@ -694,7 +694,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: premissa falsa — o próprio currículo descreve preservação de acessibilidade na exportação para PDF."
     },
     regra: "Acessibilidade documental: texto alternativo + hierarquia de títulos (estilos) + contraste + navegação por teclado; a exportação deve preservar essas estruturas.",
-    pegadinha: "A alternativa B atrai quem associa 'PDF = imagem fixa'; o ponto cobrado é que acessibilidade depende de estrutura preservada, não de fidelidade visual."
+    pegadinha: "A alternativa B atrai quem associa 'PDF = imagem fixa'; o ponto cobrado é que acessibilidade depende de estrutura preservada, não de fidelidade visual.",
     fonte: "Microsoft Support — Tornar documentos do Word acessíveis e usar o verificador de acessibilidade: https://support.microsoft.com/pt-br/accessibility/word/make-your-word-documents-accessible-to-everyone-with-accessibility-assistant",
   },
   {
@@ -717,7 +717,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: supor que o modo 'congela tudo' ou que impede salvar. Ele limita funcionalidades novas, não bloqueia o documento — salvar em .docx sai do modo."
     },
     regra: "Compatibilidade de formatos: .doc (binário legado) → modo de compatibilidade e restrições de alguns recursos; .docx (Open XML) → suporte a recursos modernos; .pdf → distribuição.",
-    pegadinha: "A pegadinha é presumir que o modo de compatibilidade desativa todas as funções de uma data específica em diante; a restrição depende da compatibilidade entre o recurso e o formato legado."
+    pegadinha: "A pegadinha é presumir que o modo de compatibilidade desativa todas as funções de uma data específica em diante; a restrição depende da compatibilidade entre o recurso e o formato legado.",
     fonte: "Microsoft Support — Formatos de arquivo para salvar documentos no Word: https://support.microsoft.com/pt-br/word/file-formats-for-saving-documents",
   },
   {
@@ -746,7 +746,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: nega o Slide Mestre, que é justamente o mecanismo de alteração global de identidade visual (tipografia, cores, logotipos) descrito no conteúdo base."
     },
     regra: "Slide Mestre = propagação de identidade visual; animação = objeto no slide; transição = fronteira entre slides.",
-    pegadinha: "A alternativa A é o 'espelho' clássico: quem decorou os dois termos sem associar o alvo (objeto × slide) escolhe a inversão."
+    pegadinha: "A alternativa A é o 'espelho' clássico: quem decorou os dois termos sem associar o alvo (objeto × slide) escolhe a inversão.",
     fonte: "Microsoft Support — Design, transições e animações no PowerPoint: https://support.microsoft.com/pt-br/powerpoint/training/design-in-powerpoint",
   },
   {
@@ -769,7 +769,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: associar 'mestre' ao slide aberto ('o slide que estou editando'). Mestre é a hierarquia pai — daí a propagação."
     },
     regra: "Hierarquia do PowerPoint: Slide Mestre (pai) → layouts filhos → slides; mudanças descem na hierarquia para todos os vinculados.",
-    pegadinha: "O item inverte escopo global/local — a mesma pegadinha da quebra de seção no Word, agora com a árvore de layouts."
+    pegadinha: "O item inverte escopo global/local — a mesma pegadinha da quebra de seção no Word, agora com a árvore de layouts.",
     fonte: "Microsoft Support — Personalizar o Slide Mestre no PowerPoint: https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master",
   },
   {
@@ -798,7 +798,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: descreve propagação (comportamento da sincronização) e a chama de backup — o oposto da imutabilidade exigida de um backup."
     },
     regra: "Sincronização = espelhamento bidirecional (propaga alterações); backup = cópia independente para recuperação, idealmente versionada/imutável e testada (recomendação 3-2-1 citada no conteúdo).",
-    pegadinha: "A alternativa D troca os rótulos dos dois conceitos — quem lê 'propaga alterações' e para aí marca D sem notar que a palavra usada foi 'backup'."
+    pegadinha: "A alternativa D troca os rótulos dos dois conceitos — quem lê 'propaga alterações' e para aí marca D sem notar que a palavra usada foi 'backup'.",
     fonte: "Microsoft Support — Salvar, fazer backup e recuperar arquivos do Office; recursos de OneDrive e histórico de versões: https://support.microsoft.com/pt-br/office/collab-files/save-back-up-and-recover-a-file-in-microsoft-office",
   },
   {
@@ -821,7 +821,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: o raciocínio de que 'está na nuvem, então está salvo'. A nuvem sincronizada é alvo da mesma ameaça que afeta a estação — é o modo como o ransomware se espalha."
     },
     regra: "Propriedades de backup: cópia independente, imutável e testável (3-2-1). Sincronização cumpre disponibilidade, não essas três propriedades.",
-    pegadinha: "Item com conclusão de política ('dispensa backup'): mesmo que parte da frase pareça protetora, a negação de cópias separadas é suficiente para tornar o item falso."
+    pegadinha: "Item com conclusão de política ('dispensa backup'): mesmo que parte da frase pareça protetora, a negação de cópias separadas é suficiente para tornar o item falso.",
     fonte: "Microsoft Support — Detecção de ransomware e recuperação de arquivos usando OneDrive: https://support.microsoft.com/pt-br/onedrive/how-to-detect-ransomware-and-recover-files-using-onedrive",
   },
   {
@@ -850,7 +850,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: 39,5 é a SOMA — a média exige dividir pela contagem; retornar a soma é o erro típico de esquecer a divisão."
     },
     regra: "Média aritmética simples = soma dos valores ÷ quantidade de valores. No simulador: MÉDIA aceita vírgula ou ponto e ignora valores não numéricos.",
-    pegadinha: "As alternativas B, C e D são resultados reais de OUTRAS funções do mesmo escopo (início da lista, MÁXIMO, SOMA) — a pegadinha é identificar a função pedida antes de calcular."
+    pegadinha: "As alternativas B, C e D são resultados reais de OUTRAS funções do mesmo escopo (início da lista, MÁXIMO, SOMA) — a pegadinha é identificar a função pedida antes de calcular.",
     fonte: "Microsoft Support — Função MÉDIA no Excel: https://support.microsoft.com/pt-PT/Excel/average-function",
   },
   {
@@ -879,7 +879,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: a SE existe justamente para avaliar condições lógicas; o simulador aceita comparações numéricas na primeira posição dos argumentos."
     },
     regra: "SE(condição; valor_se_verdadeiro; valor_se_falso): retorna o 2º argumento quando a condição é verdadeira e o 3º quando é falsa. Ordem dos argumentos é obrigatória (erro comum documentado: inverter a ordem).",
-    pegadinha: "A alternativa C imita quem decora 'o último valor digitado'. A regra é posicional e CONDICIONAL — releia sempre qual argumento corresponde ao ramo falso."
+    pegadinha: "A alternativa C imita quem decora 'o último valor digitado'. A regra é posicional e CONDICIONAL — releia sempre qual argumento corresponde ao ramo falso.",
     fonte: "Microsoft Support — Função SE no Excel: https://support.microsoft.com/pt-br/excel/functions/if-function",
   },
   {
@@ -2244,7 +2244,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: converter indevidamente A2 em $A2/$A3. A referência original A2 não possui trava; copiá-la não adiciona uma trava nova — a trava só se preserva quando já existia."
     },
     regra: "Referências ao copiar: relativa (A2) muda em ambos os eixos conforme o deslocamento; absoluta ($A$1) nunca muda; mista ($A2 ou A$2) muda apenas o eixo sem $. O simulador implementa isso em ajustarFormulaAoCopiar (trava $ preservada; mistas ajustam só o eixo relativo).",
-    pegadinha: "A pegadinha é a mistura de dois eixos numa só fórmula: quem copia 'no olho' tende a deslocar também a célula travada ($B$1) ou a esquecer de deslocar a relativa (A2)."
+    pegadinha: "A pegadinha é a mistura de dois eixos numa só fórmula: quem copia 'no olho' tende a deslocar também a célula travada ($B$1) ou a esquecer de deslocar a relativa (A2).",
     fonte: "Microsoft Support — Visão geral de fórmulas e referências relativas, absolutas e mistas no Excel: https://support.microsoft.com/pt-br/excel/get-started/overview-of-formulas-in-excel",
   },
   {
@@ -2267,7 +2267,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: (1) confundir PROCX com PROCV, achando que o padrão é busca aproximada; (2) crer que o PROCX sempre lança #N/A sem alternativa, ignorando o argumento opcional 'se_não_encontrado' que permite um retorno customizado; (3) tratar o #N/A como obrigatório mesmo quando o usuário forneceu um valor de fallback."
     },
     regra: "PROCX(procurar; intervalo_busca; intervalo_retorno; [se_não_encontrado]; [modo]): correspondência exata por padrão; na ausência de correspondência, devolve #N/A ou o valor do argumento opcional 'se_não_encontrado', quando informado.",
-    pegadinha: "A armadilha é projetar o comportamento do PROCV (aproximado por padrão, sem retorno customizado simples) sobre o PROCX, que é exato por padrão e possui o argumento específico 'se_não_encontrado'."
+    pegadinha: "A armadilha é projetar o comportamento do PROCV (aproximado por padrão, sem retorno customizado simples) sobre o PROCX, que é exato por padrão e possui o argumento específico 'se_não_encontrado'.",
     fonte: "Microsoft Support — Função PROCX, correspondência e argumento se_não_encontrada: https://support.microsoft.com/pt-br/excel/functions/xlookup-function",
   },
   {
@@ -2290,7 +2290,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: (1) assumir que ',' é sempre decimal, ignorando que, sem ';', o simulador entra em modo internacional e a trata como separador de argumentos; (2) calcular SOMA(1,5) como se fosse 1,5 (um único valor), quando a ausência de ';' a torna dois argumentos (1 e 5 = 6)."
     },
     regra: "Desambiguação pelo ';': com ';' (fora de textos) → modo pt-BR (';' separa argumentos, ',' ou '.' é decimal); sem ';' → modo internacional (',' separa argumentos, '.' é decimal). Consequência declarada: SOMA(1,5) sem ';' = 6.",
-    pegadinha: "A armadilha é a aparente identidade textual entre '1,5' (decimal em pt-BR) e '1,5' (dois argumentos em modo internacional): o que decide é a presença ou não do ponto e vírgula."
+    pegadinha: "A armadilha é a aparente identidade textual entre '1,5' (decimal em pt-BR) e '1,5' (dois argumentos em modo internacional): o que decide é a presença ou não do ponto e vírgula.",
     fonte: "Microsoft Support — Separadores de argumentos e fórmulas no Excel: https://support.microsoft.com/pt-br/excel/how-to-avoid-broken-formulas-in-excel",
   },
   {
@@ -2319,7 +2319,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: invenção de restrição inexistente. O currículo não limita transições ao primeiro slide nem animações ao último; ambos os efeitos são aplicáveis a qualquer slide/objeto."
     },
     regra: "Animação = efeito em objeto individual dentro de um slide (entrada, ênfase, saída). Transição = efeito entre slides (fade, push, wipe). São conceitos distintos.",
-    pegadinha: "A alternativa A é a inversão direta da definição; quem decorou os termos sem fixar 'dentro × entre' tende a escolhê-la."
+    pegadinha: "A alternativa A é a inversão direta da definição; quem decorou os termos sem fixar 'dentro × entre' tende a escolhê-la.",
     fonte: "Microsoft Support — Animações e transições no PowerPoint: https://support.microsoft.com/pt-br/powerpoint/training/video-animations-and-transitions-for-powerpoint-web",
   },
   {
@@ -2342,7 +2342,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: imaginar que cada slide 'congelou' uma cópia dos elementos do mestre no momento da criação, de modo que editá-lo só afetaria o slide aberto. Na verdade, os slides permanecem vinculados ao mestre, e a edição do mestre os atualiza em conjunto."
     },
     regra: "Slide Mestre (Slide Master): define tipografia, cores, logotipos e layouts filhos; alterá-lo propaga para todos os slides vinculados (e seus layouts filhos).",
-    pegadinha: "A armadilha é a intuição de 'cópia local fixa': quem acredita que o slide guarda uma cópia independente dos elementos do mestre conclui, equivocadamente, que a edição do mestre afeta só o slide aberto."
+    pegadinha: "A armadilha é a intuição de 'cópia local fixa': quem acredita que o slide guarda uma cópia independente dos elementos do mestre conclui, equivocadamente, que a edição do mestre afeta só o slide aberto.",
     fonte: "Microsoft Support — Personalizar o Slide Mestre no PowerPoint: https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master",
   },
   {
@@ -2365,7 +2365,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: confundir 'ter uma cópia na nuvem' com 'ter backup'. Como a cópia é sincronizada (não imutável), um arquivo criptografado localmente por ransomware é replicado para a nuvem, destruindo a suposta proteção. A cópia em nuvem só protege se houver um backup independente e não sincronizado."
     },
     regra: "OneDrive = sincronização bidirecional, não backup imutável. Alterações (inclusive maliciosas) propagam para a nuvem; não substitui backup corporativo completo (recomendação 3-2-1: 3 cópias, 2 mídias, 1 offsite).",
-    pegadinha: "A armadilha é equiparar 'armazenamento em nuvem' a 'backup': a sincronização replica o estado atual (inclusive o danificado), enquanto o backup exige uma cópia independente e imutável."
+    pegadinha: "A armadilha é equiparar 'armazenamento em nuvem' a 'backup': a sincronização replica o estado atual (inclusive o danificado), enquanto o backup exige uma cópia independente e imutável.",
     fonte: "Microsoft Support — Como detectar ransomware e recuperar arquivos usando OneDrive: https://support.microsoft.com/pt-br/onedrive/how-to-detect-ransomware-and-recover-files-using-onedrive",
   },
   {
@@ -2394,7 +2394,7 @@ id: "q-m1-09",
       D: "INCORRETA. Histórico de versões e backup independente têm propriedades e objetivos distintos; sincronização/histórico não substituem uma estratégia de backup."
     },
     regra: "Documente a retenção conforme serviço, tipo de conta e política do locatário; teste restauração e mantenha backup independente conforme o risco.",
-    pegadinha: "Não transforme um valor padrão observado em uma configuração específica em regra universal para todas as contas e locatários."
+    pegadinha: "Não transforme um valor padrão observado em uma configuração específica em regra universal para todas as contas e locatários.",
     fonte: "Microsoft Support — Histórico de versões e restauração de arquivos no OneDrive: https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive",
   },
   {
