@@ -185,7 +185,7 @@
     + '.sim-seguranca-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
     + '.sim-seguranca-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
     '.sim-seguranca-bloco .sim-seguranca-sub{color:#cbd5e1}' +
-    + '.sim-sgmt-msg{border:1px solid #3a4252;border-radius:6px;padding:10px;margin:8px 0;background:#161a21}'
+    '.sim-sgmt-msg{border:1px solid #3a4252;border-radius:6px;padding:10px;margin:8px 0;background:#161a21}'
     + '.sim-sgmt-msg-header{display:flex;justify-content:space-between;align-items:center}'
     + '.sim-sgmt-emit{font-size:.78rem;color:#8b94a5}'
     + '.sim-sgmt-assunto{font-weight:600;color:#e3e9ff;margin:4px 0;font-size:.88rem}'
