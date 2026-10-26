@@ -678,6 +678,17 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 
 - Segunda verificação do mesmo objeto `analise` em q-m8: após inserir a vírgula entre A e B, o CI encontrou outra vírgula ausente entre B e C (linha 483 no snapshot de CI). Corrigida também essa separação. Commit: `cb416f7b52e2cdc3b220fe6d67d91cec9173478a`. Como foram erros consecutivos no mesmo objeto, aguardar `node --check` de todos os arquivos antes de prosseguir com novas alterações de conteúdo.
 
+## Auditoria semântica incremental — lote M6 q-m6-26 a q-m6-30 (2026-10-26)
+
+- q-m6-26: conferidos os prazos máximos de classificação da LAI: ultrassecreto 25 anos, secreto 15 anos e reservado 5 anos, contados da produção; acesso público automático ao fim do prazo ou evento legal.
+- q-m6-27: mantidos os requisitos formais da decisão de classificação (assunto, fundamento legal, prazo/evento e autoridade) e a competência escalonada por grau; cargo de direção não autoriza qualquer grau.
+- q-m6-28: conferidas as hipóteses do art. 31, § 3º, da LAI para dispensa de consentimento, incluindo pesquisa de evidente interesse público/geral prevista em lei com vedação de identificação.
+- q-m6-29: mantida a distinção entre boas práticas técnicas de logging e um inexistente esquema legal universal de campos; coleta deve seguir finalidade/necessidade e os logs devem ter controles de acesso, integridade e retenção.
+- q-m6-30: mantida a rejeição da tese de responsabilidade exclusivamente do terceiro, com ressalva de que dano, nexo e atribuição concreta dependem da apuração; adicionada fundamentação de segurança da LGPD.
+- Adicionadas URLs oficiais do Planalto para LAI e LGPD e referência oficial NIST SP 800-92 nas questões correspondentes.
+- Commit de conteúdo: `6d998a2c2c56a831447c4aebca0bd1bde799c506`.
+- Revisão focal; validar automaticamente no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
