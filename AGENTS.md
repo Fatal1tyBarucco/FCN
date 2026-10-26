@@ -650,6 +650,25 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m6-20: conteúdo mínimo de transparência ativa relacionado ao art. 8º, § 1º, sem divulgar prontuários ou dados pessoais identificáveis indiscriminadamente.
 - Commits de conteúdo: `fc47b23d58fdd92fbc878fd15d8d50294e63d67b` e commits de correção M6 anteriores `9974767bf60e2a150088b2663c7963739076a787`, `2c035b1a4cd9a02e3c66d9a491bc379c1a97ab4f`. Verificar CI e fontes legais no HEAD atual.
 
+## Revisão adicional do M6 — questões 11 a 30 (2026-10-26)
+
+- q-m6-11: corrigida justificativa que atribuía à alternativa C uma restrição de alcance; escopo da LAI descrito conforme arts. 1º e 3º.
+- q-m6-12: pedido de acesso sem exigência de motivação alinhado ao art. 10, §§ 1º e 3º, da LAI.
+- q-m6-13: alcance sobre entidades privadas delimitado ao art. 2º da LAI.
+- q-m6-14: prazo de resposta tratado conforme art. 11: acesso imediato quando disponível, até 20 dias e prorrogação de 10 dias com justificativa expressa.
+- q-m6-15: corrigida justificativa que atribuía à alternativa C a definição de banco de dados; agora distingue documento, banco de dados, informação sigilosa e primariedade.
+- q-m6-16 a q-m6-18: conferidas complementaridade entre transparência ativa/passiva, requisitos de sítios oficiais e diretriz de uso de tecnologia da informação.
+- q-m6-19 e q-m6-20: regime de informação pessoal e conteúdo mínimo de transparência ativa alinhados à LAI.
+- q-m6-21: regra e exceções da prática de atos processuais eletrônicos descritas conforme art. 6º da Lei nº 14.129/2021.
+- q-m6-22: automação não tratada como fonte de competência ou fundamento normativo.
+- q-m6-23: resposta de acesso deve cumprir prazo e conteúdo legal, inclusive encaminhamento/indicação do detentor e orientação sobre recurso.
+- q-m6-24 e q-m6-25: transparência ativa conciliada com proteção de dados pessoais; anonimização, finalidade pública, necessidade e proporcionalidade consideradas para disponibilização.
+- q-m6-26 e q-m6-27: graus/prazos de classificação e elementos formais da decisão tratados conforme arts. 24, 27 e 28 da LAI.
+- q-m6-28: dispensa de consentimento restrita às hipóteses legais do art. 31, § 3º, da LAI.
+- q-m6-29: trilha de auditoria definida por finalidade, risco e necessidade, sem inventar lista legal universal de campos nem registrar segredos reutilizáveis.
+- q-m6-30: responsabilidade do órgão e de terceiro vinculado não presumida como exclusiva de uma parte; fatos, dano e nexo causal ainda exigem apuração.
+- Commits de correção M6 registrados: `9974767bf60e2a150088b2663c7963739076a787`, `2c035b1a4cd9a02e3c66d9a491bc379c1a97ab4f`, `fc47b23d58fdd92fbc878fd15d8d50294e63d67b`. Validar referências e CI no HEAD atual.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
