@@ -850,7 +850,7 @@ const moduleQuestions4 = [
     },
     regra: "LGPD — 'trate seus dados como se fossem seus' — base legal obrigatória.",
     pegadinha: "Não confunda: base legal não é 'qualquer base' — é uma das base legais previstas por lei.",
-    fonte: "Lei nº 13.709/2018, art. 5º."
+    fonte: "Lei nº 13.709/2018, arts. 7º e 10 (bases legais e legítimo interesse); art. 5º para definições."
   },
 
   { id: "q-m4-34", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
