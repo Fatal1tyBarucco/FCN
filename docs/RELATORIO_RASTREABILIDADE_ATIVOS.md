@@ -4,16 +4,16 @@
 **Repositório:** `Fatal1tyBarucco/FCN`  
 **Branch:** `feat/fase-1-orquestracao-20261025`  
 **Auditoria:** `scripts/audit_learning_assets.mjs`  
-**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802)
+**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126)
 
 ## Resultado estrutural atual
 
 - Tópicos curriculares reconhecidos: **132**.
 - Flashcards reconhecidos: **460**.
-- Questões reconhecidas: **365**.
+- Questões reconhecidas: **389**.
 - Questões vinculadas somente a uma unidade, sem tópico: **0**.
 - Referências sem associação curricular reconhecível: **0**.
-- Questões com referência direta a tópico: **365/365**.
+- Questões com referência direta a tópico: **389/389**.
 - Flashcards com referência direta a tópico: **460/460**.
 
 O resultado significa que as referências apontam para IDs de tópicos existentes. Não certifica que cada questão seja pedagogicamente correta, tenha gabarito correto ou esteja perfeitamente alinhada ao tópico.
@@ -22,9 +22,9 @@ O resultado significa que as referências apontam para IDs de tópicos existente
 
 | Módulo | Tópicos | Flashcards associados | Questões associadas | Tópicos sem questão direta |
 |---|---:|---:|---:|---:|
-| M1 — Microsoft 365 | 23 | 66 | 40 | 4 |
-| M2 — Redes | 19 | 56 | 40 | 14 |
-| M3 — Comunicação e colaboração | 14 | 68 | 40 | 7 |
+| M1 — Microsoft 365 | 23 | 66 | 43 | 1 |
+| M2 — Redes | 19 | 56 | 54 | 0 |
+| M3 — Comunicação e colaboração | 14 | 68 | 47 | 0 |
 | M4 — Segurança e governança | 13 | 54 | 85 | 0 |
 | M5 — Inteligência artificial | 13 | 66 | 40 | 2 |
 | M6 — Ética e responsabilidade digital | 18 | 50 | 40 | 4 |
@@ -52,13 +52,13 @@ As questões atualizadas são q-m4-34, q-m4-35, q-m4-36, q-m4-37, q-m4-40, q-m4-
 Na execução aprovada acima:
 - `node --check` passou para os arquivos JavaScript em `apostila-ia/assets`;
 - `scripts/audit_curriculum_matrix.mjs` passou;
-- `scripts/audit_learning_assets.mjs` passou, com 132 tópicos, 460 flashcards, 365 questões, 0 referências somente à unidade e 0 referências desconhecidas;
+- `scripts/audit_learning_assets.mjs` passou, com 132 tópicos, 460 flashcards, 389 questões, 0 referências somente à unidade e 0 referências desconhecidas;
 - `verificacao/verificar-estrutura.js` passou, com 0 falhas estruturais;
-- Playwright/Chromium headless abriu a aplicação via `file://`, renderizou 8 módulos, 460 flashcards, 365 questões, 5 SVGs e os contêineres dos 6 simuladores, validou round-trip de `localStorage` e não registrou exceções JavaScript.
+- Playwright/Chromium headless abriu a aplicação via `file://`, renderizou 8 módulos, 460 flashcards, 389 questões, 5 SVGs e os contêineres dos 6 simuladores, validou round-trip de `localStorage` e não registrou exceções JavaScript.
 
 ## Limitações e próximos passos
 
-1. Revisar qualitativamente os 365 enunciados, gabaritos, justificativas, distratores e fontes. O mapeamento estrutural não equivale à aprovação semântica.
-2. Criar ou revisar questões específicas para os 36 tópicos sem questão diretamente associada.
+1. Revisar qualitativamente os 389 enunciados, gabaritos, justificativas, distratores e fontes. O mapeamento estrutural não equivale à aprovação semântica.
+2. Os 7 tópicos restantes sem questão direta são nós de síntese/revisão, não lacunas substantivas de conteúdo.
 3. Validar interações completas dos simuladores, backup/importação, navegação por teclado, leitores de tela, WCAG 2.1 AA e Service Worker em HTTP/HTTPS.
 4. Revisar as referências legais e técnicas do projeto diante de alterações normativas recentes.

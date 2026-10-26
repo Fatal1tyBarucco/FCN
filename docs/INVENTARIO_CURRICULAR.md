@@ -152,3 +152,14 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40 foram alinhadas aos tópicos de lobby, controle de participantes e gravações de reuniões.
 - A auditoria permanece estrutural: 365 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
 - Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802.
+
+
+## Snapshot após expansão do banco de questões — 2026-10-26
+
+- Currículo: 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos e 427 nós.
+- Flashcards: 460. Questões autorais: **389** (M1=43, M2=54, M3=47, M4=85, M5–M8=40 cada).
+- Referências no catálogo da aplicação: 74, incluindo a Lei nº 15.352/2026 e a WCAG 2.2 do W3C verificadas em fonte primária.
+- Rastreabilidade estrutural: 389/389 questões e 460/460 flashcards referenciam tópicos existentes; 0 referências somente à unidade e 0 referências desconhecidas.
+- Sete nós de síntese/revisão não têm questão exclusiva; não restam tópicos substantivos sem questão direta.
+- Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126.
+- Pendente: revisão semântica integral e auditoria independente de acessibilidade/interações.

@@ -272,3 +272,14 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - `node --check`, `scripts/audit_curriculum_matrix.mjs`, `scripts/audit_learning_assets.mjs`, `verificacao/verificar-estrutura.js` e Playwright/Chromium via `file://` passaram.
 - Questões e flashcards continuam com IDs estáveis; 365 questões, 460 flashcards, 0 referências somente à unidade e 0 referências desconhecidas.
 - A auditoria por tópico identifica 31 tópicos sem questão direta; 7 são nós de síntese/revisão e 24 são lacunas substantivas (M1=3, M2=14, M3=7).
+
+
+## Revalidação do banco ampliado — 2026-10-26
+
+- Commit testado: `89d91df40f93f99c72fd5f98bf2ea1dccc1de99b`.
+- Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126 — **success**.
+- `node --check` passou; auditorias curricular e de ativos passaram; verificador estrutural passou sem falhas.
+- Banco de questões: **389** no total, distribuição M1=43, M2=54, M3=47, M4=85, M5=40, M6=40, M7=40, M8=40. A validação de questões reprovou **0** itens.
+- Flashcards: 460, IDs únicos; rastreabilidade: 0 questões unit-only e 0 referências desconhecidas.
+- Playwright/Chromium headless via `file://`: PASS; 8 módulos, 460 flashcards, 389 questões, 5 SVGs, interfaces dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
+- A auditoria de tópicos encontrou sete nós de síntese/revisão sem questão direta; nenhum tópico substantivo ficou sem questão direta. A revisão semântica independente continua pendente.

@@ -56,7 +56,7 @@ A auditoria automatizada executada no GitHub Actions reconheceu 132 tópicos, 46
 | q-m2-40 | M2, unidade 4, tópico 2, subtema 1 — CIDR e cálculo de rede/broadcast | A questão avalia cálculo de sub-rede IPv4 /28. |
 | q-m3-20 | M3, unidade 4, tópico 1, subtema 1 — lobby e sala de espera | O enunciado define a função do lobby. |
 | q-m3-21 | M3, unidade 4, tópico 3, subtema 1 — política de gravação | O enunciado pede elementos de uma política de gravação. |
-| q-m3-22 | M3, unidade 4, tópico 3, subtema 3 — proteção de gravações | O enunciado aborda medidas de segurança para dados pessoais em gravações. |
+| q-m3-22 | M3, unidade 2, tópico 3, subtema 1 — segurança e gravação de reuniões | O enunciado aborda medidas de segurança técnicas e administrativas para dados pessoais. |
 | q-m3-37 | M3, unidade 4, tópico 1, subtema 2 — remoção e moderação de participantes | O enunciado aborda controle de participantes em reuniões. |
 | q-m3-38 | M3, unidade 4, tópico 3, subtema 3 — proteção de gravações | O enunciado combina gravação e medidas de proteção. |
 | q-m3-39 | M3, unidade 4, tópico 3, subtema 1 — política de gravação | O enunciado avalia componentes de uma política de gravação. |
@@ -65,3 +65,18 @@ A auditoria automatizada executada no GitHub Actions reconheceu 132 tópicos, 46
 ## Lacunas diretas após as correções
 
 A auditoria atual identifica **31 tópicos sem questão direta**: M1=4, M2=14, M3=7, M5=2 e M6=4. Desses, sete são nós de síntese ou revisão (M1: unidade 2/tópico 14; M5: unidade 3/tópico 4 e unidade 4/tópico 4; M6: unidade 1/tópico 3, unidade 4/tópico 3, unidade 5/tópico 3 e unidade 6/tópico 3). Não é obrigatório que cada nó de síntese tenha uma questão exclusiva. Permanecem **24 lacunas substantivas**: M1=3, M2=14 e M3=7. A próxima etapa deverá criar ou realocar questões com base no conteúdo dos tópicos, sem preencher lacunas com associações artificiais.
+
+
+## Questões novas para cobrir tópicos substantivos — lote 2026-10-26
+
+| IDs | Cobertura direta adicionada |
+|---|---|
+| q-m1-41 a q-m1-43 | Word: cabeçalhos/rodapés; Excel: Tabelas, filtros, validação e formatação condicional. |
+| q-m2-41 a q-m2-54 | OSI/TCP-IP, fluxo cliente-servidor HTTPS, IP/TCP/UDP, HTTP/HTTPS/DNS/DHCP, SFTP/SSH, VPN/NAT/PAT, IPv4 privado, VLSM, abreviação IPv6, ping/traceroute, comandos de configuração, nslookup/dig e diagnóstico por camadas. |
+| q-m3-41 a q-m3-47 | Netiqueta, acessibilidade, comunicação institucional, compartilhamento seguro de tela, intrusão em reuniões, exposição em calendários e phishing direcionado. |
+
+Essas 24 questões foram adicionadas ao banco autoral com IDs estáveis, cinco alternativas, gabarito, justificativa e análise individual de todos os distratores. A execução aprovada de 2026-10-26 confirmou 389 questões no banco, 0 referências somente à unidade e 0 referências curriculares desconhecidas.
+
+## Resultado da cobertura direta após o lote
+
+O relatório estrutural identifica apenas sete nós de síntese/revisão sem questão direta: M1 unidade 2/tópico 14; M5 unidade 3/tópico 4 e unidade 4/tópico 4; M6 unidade 1/tópico 3, unidade 4/tópico 3, unidade 5/tópico 3 e unidade 6/tópico 3. **Não restam tópicos substantivos sem questão direta**, segundo a associação de IDs. A revisão semântica integral dos 389 itens permanece pendente.

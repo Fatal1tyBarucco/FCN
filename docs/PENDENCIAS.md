@@ -185,3 +185,14 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Corrigir 14 associações em `questions.js`: três questões de Excel (q-m1-33 a q-m1-35), quatro de métricas/CIDR em Redes (q-m2-34 e q-m2-38 a q-m2-40) e sete sobre lobby/gravação em reuniões (q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40).
 - [x] Validação de sintaxe, auditoria de ativos, verificador estrutural e smoke test no commit `b306d9a295035d24317f83f604882ecb73054e57`: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802 — **success**.
 - [ ] Criar questões diretas para 24 tópicos substantivos ainda sem associação direta: M1=3, M2=14, M3=7. Os 7 tópicos restantes sem questão direta são nós de síntese/revisão, que não exigem necessariamente questão exclusiva.
+
+
+## Cobertura direta de tópicos — lote de 24 questões — 2026-10-26
+
+- [x] Adicionar 24 questões autorais com gabarito e análise de distratores para tópicos que estavam sem questão direta: q-m1-41..q-m1-43, q-m2-41..q-m2-54 e q-m3-41..q-m3-47.
+- [x] Atualizar o smoke test, o verificador estrutural, o manifesto PWA e o estado da interface para 389 questões e 460 flashcards.
+- [x] Corrigir a associação de q-m3-22 para o tópico de segurança e gravação de reuniões, mantendo a cobertura direta dos tópicos de gravação no M3.
+- [x] Validação no GitHub Actions: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126 — **success**. Auditoria: 132 tópicos, 460 flashcards, 389 questões, 0 unit-only, 0 referências desconhecidas. Smoke test via `file://`: PASS.
+- [x] Incluir WCAG 2.2 do W3C como referência verificada no catálogo; o catálogo agora contém 74 referências.
+- [ ] Revisar semanticamente todos os 389 enunciados, gabaritos, justificativas, distratores e fontes. A validação estrutural não comprova correção pedagógica integral.
+- [ ] Testar todas as interações dos simuladores, backup/importação, teclado, leitor de tela, WCAG 2.1 AA e Service Worker em HTTP/HTTPS.
