@@ -623,7 +623,7 @@
 
     // Search row
     html += '<div class="bus-search-row">';
-    html += '<input type="text" id="bus-input" placeholder="Digite termos para buscar..." value="' + esc(q) + '" autocomplete="off">';
+    html += '<input type="text" id="bus-input" aria-label="Buscar conteúdo na apostila" placeholder="Digite termos para buscar..." value="' + esc(q) + '" autocomplete="off">';
     html += '<button type="button" id="bus-btn">Buscar</button>';
     html += '</div>';
 
