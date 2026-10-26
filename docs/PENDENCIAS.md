@@ -414,3 +414,10 @@ A aprovação do workflow automatizado não encerra pendências qualitativas nem
 - [ ] Confirmar separadamente Code Quality no HEAD atual; o resultado curricular verde não comprova esse workflow.
 - [x] Fazer revisão semântica focal de q-m6-41 a q-m6-44: coerência interna conferida; a fonte/justificativa de q-m6-44 foi alinhada aos arts. 7º, § 2º, e 31 da LAI, removendo referência não registrada no inventário verificado. Isso não equivale a auditoria jurídica independente de todas as fontes.
 - [ ] Continuar as pendências globais de revisão editorial, fontes oficiais, acessibilidade WCAG/leitor de tela e testes em dispositivos reais. O PR #17 permanece draft até os critérios qualitativos serem atendidos.
+
+
+## Revisão focal de questões M6 adicionadas — 2026-10-26
+
+- Revisão de consistência de q-m6-45, q-m6-46 e q-m6-47: cenários, enunciados, alternativas, gabaritos e análises estão internamente coerentes; q-m6-45 usa a referência constitucional já presente no catálogo.
+- **Pendência de rastreabilidade de fontes:** a fonte Secom citada em q-m6-46 não foi encontrada em `referencias/referencias-verificadas.md` nem em `apostila-ia/assets/data/references.js`; verificar a URL e cadastrar somente após confirmação documental. A WCAG 2.2 citada em q-m6-47 consta no documento de referências verificadas, mas não foi encontrada no catálogo `references.js`; sincronizar o catálogo sem declarar auditoria WCAG concluída.
+- Esta é uma revisão focal de consistência, não uma validação independente da fonte Secom nem uma certificação legal/técnica. Não alterar gabaritos corretos apenas para balancear a distribuição.
