@@ -468,6 +468,20 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo relevantes: `be1df77c12875b243887a885161d90a0f320970c` e `22b1ddc73eb32f5134fa300f3380b299f594e00d`.
 - As revisões acima são focais e baseadas nos dados do projeto e conhecimento técnico; requisitos de produto e licenciamento devem ser conferidos na documentação vigente do fornecedor antes de implantação. A validação automatizada precisa ser confirmada no HEAD resultante deste registro.
 
+## Auditoria semântica incremental — lote M4 q-m4-21 a q-m4-30 (2026-10-26)
+
+- q-m4-21: phishing descrito como engenharia social sem depender de erros ortográficos ou identidade visual.
+- q-m4-22: pharming diferenciado de phishing, com ênfase no redirecionamento técnico; incluída referência específica ao guia de implantação segura de DNS do NIST.
+- q-m4-23: cenário de pedido de código OTP; reforçada a confirmação por canal independente e a proibição de compartilhar o segredo.
+- q-m4-24: diferenciados ataques online e offline contra senhas; mitigação offline ligada a armazenamento apropriado com sal e custo; atualizada referência NIST SP 800-63B para a série 800-63-4.
+- q-m4-25: validação de certificado, cadeia de confiança e nome do servidor para reduzir risco de MitM; referência NIST SP 800-52 Rev. 2.
+- q-m4-26: resposta a DDoS baseada em telemetria, mitigação coordenada, priorização e preservação de evidências, sem solução universal.
+- q-m4-27: exposição por configuração tratada como possível incidente; contenção, preservação, avaliação e acionamento dos responsáveis, sem presumir notificação automática em todos os casos.
+- q-m4-28: mitigação de replay por mecanismos de frescor, sequência e vinculação ao contexto; não depender apenas de IP.
+- q-m4-29: IoCs tratados como indicadores contextuais sujeitos a correlação, não como prova conclusiva isolada.
+- q-m4-30: cadeia de suprimentos definida por comprometimento de fornecedor, dependência, pipeline ou distribuição; assinatura e reputação não são garantia absoluta.
+- Commit de conteúdo: `3cb53759c15432eac125fab4c323eac49eff996c`. As referências devem ser confirmadas pelos validadores de links/catálogo e o conjunto deve passar novamente pelos testes automatizados.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
