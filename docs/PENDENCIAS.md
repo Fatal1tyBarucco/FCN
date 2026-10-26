@@ -469,3 +469,8 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [ ] **Acessibilidade fora do automatizado:** leitor de tela, teclado/foco manual, auditoria WCAG manual e compatibilidade em dispositivos físicos permanecem pendentes.
 - O run 40412457818 concluiu com sucesso para o SHA `5232348fa553a58317c6b4b28ab9dfafc088beb9`. Os commits documentais posteriores não alteram o código da aplicação; consultar o HEAD e os checks mais recentes antes de declarar o PR validado.
 
+## Conferência cruzada adicional dos gabaritos — 2026-10-26
+
+- [x] Verificação textual independente: 324/324 questões MC têm a letra do gabarito presente na análise correspondente e um marcador textual de correção reconhecível; 75/75 questões C/E têm gabarito `certo` ou `errado`.
+- [ ] Essa verificação não valida a verdade factual da resposta nem a qualidade dos distratores. Manter revisão semântica independente de todos os 399 itens.
+
