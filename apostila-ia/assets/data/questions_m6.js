@@ -1127,6 +1127,4 @@ const moduleQuestions6 = [
     pegadinha: "Uma taxa de conclusão melhor pode coexistir com barreiras específicas que afetam grupos de usuários.",
     fonte: "W3C, Web Content Accessibility Guidelines (WCAG) 2.2: https://www.w3.org/TR/WCAG22/; Governo Digital, Modelo de Acessibilidade em Governo Eletrônico (eMAG): https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/modelo-de-acessibilidade."
   }
-
-  }
   ];
