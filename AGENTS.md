@@ -373,6 +373,13 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Removida a chave duplicada no commit `3ffa29dd72e86e991a0624187fc3b52b9c91935b`. A correção precisa ser confirmada por nova execução de `node --check` e pelo workflow completo no HEAD resultante.
 - Lição operacional: ao substituir um objeto inteiro, incluir/remover o delimitador de abertura de forma consistente; não iniciar a substituição no identificador se o bloco novo também inclui a chave e a chave original permanecerá no arquivo.
 
+## Auditoria M4 q-m4-21..q-m4-30 e correção CI (2026-10-26)
+
+- q-m4-21..q-m4-25: revisão focal de phishing, pharming, engenharia social, força bruta e MitM. As definições e respostas estão coerentes com os cenários; fontes apontam para CISA, ICANN, NIST e OWASP. Não foram necessárias alterações neste lote.
+- q-m4-26..q-m4-30: revisão focal de DDoS, exposição de dados, replay, IoCs e cadeia de suprimentos. As alternativas corretas e ressalvas de contexto são coerentes; fontes apontam para CISA, NIST e RFC 8446. Não foram necessárias alterações neste lote.
+- O run CI `40335797083` falhou no `node --check` de `apostila-ia/assets/data/questions_m6.js`, linha 588: a declaração `q-m6-25` perdeu a chave de abertura do objeto. Correção mínima aplicada, commit `b45f786cd09406db106afcda01a243acc78f70d2`. A execução completa precisa ser repetida no novo HEAD; não considerar o CI aprovado até verificar o resultado.
+- A falha foi de sintaxe, não de conteúdo jurídico da questão. Depois da correção, validar novamente todos os arquivos JavaScript e revisar quaisquer erros em cascata reportados pelo CI.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
