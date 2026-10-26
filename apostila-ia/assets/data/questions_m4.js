@@ -954,53 +954,53 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-38", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Responsabilidade",
-    contexto: "A LGPD define responsabilidades dos responsáveis pelo tratamento de dados.",
-    enunciado: "A respeito da responsabilidade no contexto da LGPD, é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — responsabilidades de controlador e operador",
+    contexto: "Uma organização define as finalidades do tratamento de dados pessoais e contrata uma empresa para executar parte das operações seguindo suas instruções.",
+    enunciado: "À luz da LGPD, qual afirmação distingue corretamente controlador e operador?",
     alternativas: [
-      { letra: "A", texto: "Apenas os usuários são responsáveis pelo tratamento de dados." },
-      { letra: "B", texto: "O responsável (controlador ou operador) tem deveres claros de segurança, tratamento e transparência." },
-      { letra: "C", texto: "A LGPD não define responsabilidade." },
-      { letra: "D", texto: "A responsabilidade é apenas dos fornecedores de infraestrutura." },
-      { letra: "E", texto: "A LGPD ignora a responsabilidade legal." }
+      { letra: "A", texto: "O controlador toma as decisões referentes ao tratamento; o operador realiza o tratamento em nome do controlador, observadas as instruções e as obrigações legais aplicáveis." },
+      { letra: "B", texto: "O operador é sempre o titular dos dados e decide livremente as finalidades." },
+      { letra: "C", texto: "A contratação de um operador transfere automaticamente ao fornecedor todas as responsabilidades legais do controlador." },
+      { letra: "D", texto: "A LGPD atribui deveres apenas ao controlador e nunca ao operador." },
+      { letra: "E", texto: "Controlador e operador são sinônimos definidos pela lei." }
     ],
-    gabarito: "B",
-    justificativa: "A LGPD define responsabilidades claras para controladores e operadores de dados, incluindo deveres de segurança, transparência, descarte controlado, etc. Usuários são tutelados, não responsáveis (alternativa A incorreta); a lei define responsabilidade (alternativa C incorreta); não é apenas provedores (alternativa D incorreta); a LGPD não ignora responsabilidade — define-a (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "A LGPD distingue controlador — a quem competem as decisões referentes ao tratamento — de operador — quem realiza o tratamento em nome do controlador. Ambos podem ter deveres e responder nas hipóteses legais aplicáveis; a contratação não elimina automaticamente as obrigações do controlador nem torna os papéis equivalentes.",
     analise: {
-      A: "INCORRETA. A LGPD define responsabilidades para controladores e operadores, não para usuários (que são titulares).",
-      B: "CORRETA. O responsável tem deveres claros de tratamento seguro, transparência e respeito aos direitos.",
-      C: "INCORRETA. A LGPD define responsabilidades para os órgãos envolvidos no tratamento de dados.",
-      D: "INCORRETA. A LGPD não limita a responsabilidade aos fornecedores de infraestrutura.",
-      E: "INCORRETA. A LGPD define responsabilidade legal expíria."
+      A: "CORRETA. A alternativa expressa a distinção do art. 5º e reconhece que as obrigações concretas dependem da lei e do papel desempenhado.",
+      B: "INCORRETA. Titular é a pessoa natural a quem os dados se referem; operador não é sinônimo de titular nem decide livremente as finalidades.",
+      C: "INCORRETA. Contratar um operador não transfere automaticamente todas as responsabilidades legais do controlador.",
+      D: "INCORRETA. A LGPD prevê obrigações e hipóteses de responsabilização para operadores, além dos controladores.",
+      E: "INCORRETA. São papéis distintos, com definições próprias na LGPD."
     },
-    regra: "LGPD: 'quem trata, responde'. Controlador ou operador com deveres de segurança e transparência.",
-    pegadinha: "Não confunda: a responsabilidade não é 'dos usuários' — é 'dos controladores e operadores'.",
-    fonte: "Lei nº 13.709/2018, arts. 5º, 7º, 8º, 11º."
+    regra: "Controlador decide as finalidades e os elementos essenciais do tratamento; operador trata dados em nome do controlador, dentro das atribuições e instruções aplicáveis.",
+    pegadinha: "A terceirização não elimina automaticamente a responsabilidade do controlador; a responsabilização de cada agente depende do papel e das hipóteses legais.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 5º, VI e VII, 37, 39 e 42, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-39", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Dados Pessoais",
-    contexto: "A LGPD define quais informações são consideradas dados pessoais.",
-    enunciado: "Segundo a LGPD, dados pessoais são:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — conceito de dado pessoal",
+    contexto: "Uma equipe avalia se identificadores indiretos e informações de localização estão sujeitos à LGPD.",
+    enunciado: "De acordo com a definição da LGPD, qual informação se enquadra como dado pessoal?",
     alternativas: [
-      { letra: "A", texto: "Qualquer informação que possa identificar ou relacionar a uma pessoa natural." },
-      { letra: "B", texto: "Apenas nomes de pessoas." },
-      { letra: "C", texto: "Apenas dados financeiros." },
-      { letra: "D", texto: "Apenas endereços." },
-      { letra: "E", texto: "Apenas e-mails." }
+      { letra: "A", texto: "Informação relacionada a pessoa natural identificada ou identificável." },
+      { letra: "B", texto: "Somente o nome completo de uma pessoa." },
+      { letra: "C", texto: "Apenas informação financeira armazenada por bancos." },
+      { letra: "D", texto: "Somente endereço residencial, nunca localização ou identificadores indiretos." },
+      { letra: "E", texto: "Qualquer dado de pessoa jurídica, mesmo sem relação com pessoa natural identificada ou identificável." }
     ],
     gabarito: "A",
-    justificativa: "A LGPD define dados pessoais como qualquer informação ligada a uma pessoa natural que possa identificar ou ser utilizada para identificar essa pessoa — como nome, CPF, e-mail, localização, comportamentos, etc. Apenas nomes (alternativa B incorreta); apenas dados financeiros (alternativa C incorreta); apenas endereços (alternativa D incorreta); apenas e-mails (alternativa E incorreta).",
+    justificativa: "O art. 5º, I, da LGPD define dado pessoal como informação relacionada a pessoa natural identificada ou identificável. A classificação depende do contexto e da possibilidade de associação a uma pessoa natural; não se limita a nome, endereço, e-mail ou dados financeiros. Dados de pessoa jurídica, por si sós, não são dados pessoais pela definição da LGPD, embora possam conter informações pessoais de indivíduos.",
     analise: {
-      A: "CORRETA. Dados pessoais são informações que identificam ou podem identificar uma pessoa natural.",
-      B: "INCORRECTA. Apenas nome é reducionista — dados pessoais incluem mais campos.",
-      C: "INCORRETA. Dados financeiros são alguns dados pessoais, mas não a definição exclusiva.",
-      D: "INCORRETA. Apenas endereços é redução insuficiente da definição.",
-      E: "INCORRETA. Apenas e-mail é uma parte dos dados pessoais, não a definição completa."
+      A: "CORRETA. É a definição legal do art. 5º, I, da LGPD.",
+      B: "INCORRETA. Nome completo é apenas um exemplo; outros identificadores e informações relacionáveis também podem ser dados pessoais.",
+      C: "INCORRETA. A definição não se restringe a dados financeiros nem a um setor específico.",
+      D: "INCORRETA. Localização e identificadores indiretos podem ser dados pessoais conforme o contexto e a possibilidade de identificação.",
+      E: "INCORRETA. A definição legal refere-se a pessoa natural identificada ou identificável, embora registros empresariais possam conter dados pessoais de indivíduos."
     },
-    regra: "LGPD: 'qualquer dado que identifique ou mais adiante possa identificar' — papel de quem define o escopo.",
-    pegadinha: "Dados pessoais não são 'apenas informações de contato' — podem ser comportamentos, hábitos, localizações.",
-    fonte: "Lei nº 13.709/2018, art. 5º, IX."
+    regra: "Dado pessoal, para a LGPD, é informação relacionada a pessoa natural identificada ou identificável.",
+    pegadinha: "Não confundir dado pessoal com apenas dado diretamente identificador; informações indiretas podem permitir identificação quando combinadas com outros dados.",
+    fonte: "Lei nº 13.709/2018 (LGPD), art. 5º, I, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-40", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
