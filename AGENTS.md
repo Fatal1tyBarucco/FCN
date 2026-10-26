@@ -390,6 +390,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo: `00be52d650ff0f09e187e5967aa8aad8bdf075e0` e correção da fonte `ea58f36929147d4348ce23e86e1afdaf69ded589`.
 - O workflow de validação ainda deve ser conferido no HEAD mais recente; o último erro conhecido de sintaxe no arquivo M6 foi corrigido em `b45f786cd09406db106afcda01a243acc78f70d2`, mas os resultados dessa execução não substituem a validação do HEAD atual.
 
+## Auditoria semântica incremental — lote M5 q-m5-11 a q-m5-15 (2026-10-26)
+
+- q-m5-11: reformulada com três tarefas práticas para distinguir aprendizado supervisionado, não supervisionado e por reforço pelo sinal de aprendizagem.
+- q-m5-12: classificação e regressão contextualizadas por tipo de alvo; adicionada ressalva sobre discretização da variável numérica.
+- q-m5-13: aprofundada a diferença entre clustering e redução de dimensionalidade; esclarecido que nem toda redução é necessariamente não supervisionada.
+- q-m5-14: rotulagem, atributos e variável-alvo diferenciados com atenção à qualidade dos rótulos e ao vazamento quando o alvo aparece nas entradas.
+- q-m5-15: expandida definição de vazamento para incluir estatísticas calculadas antes da separação treino/teste e atributos disponíveis apenas após o resultado.
+- Fontes: Murphy (2012), ISLR (2ª ed., 2021), Jain (2010; DOI 10.1016/j.patrec.2009.09.011) e documentação scikit-learn sobre armadilhas comuns.
+- Commit de conteúdo: `e0e64d51e4fb04a4401ac71abda74d1de6d4f595`. Validar sintaxe e auditorias automatizadas no HEAD atual antes de considerar o lote concluído.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
