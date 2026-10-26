@@ -649,7 +649,7 @@ const moduleQuestions5 = [
     },
     regra: "Alinhamento reduz vieses, não os elimina.",
     pegadinha: "Alinhamento não significa ausência total de vieses.",
-    fonte: "OpenAI — Training language models to follow instructions, 2022."
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-27", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -691,9 +691,9 @@ const moduleQuestions5 = [
       { letra: "E", texto: "A temperatura máxima sempre." }
     ],
     gabarito: "A",
-    justificativa: "Contexto, restrições e formato tornam a saída consistente e auditável. Apenas perguntar (B), exigir código-fonte (C), fornecer senha (D) e temperatura máxima (E) não melhoram a consistência.",
+    justificativa: "Um prompt útil especifica a tarefa e, conforme o caso, contexto, restrições e formato de saída. Esses elementos reduzem ambiguidades, mas não garantem respostas idênticas ou corretas. Exigir código-fonte do modelo, incluir senhas ou fixar sempre a temperatura máxima não é requisito geral para consistência.",
     analise: {
-      A: "CORRETA. Contexto, restrições e formato melhoram consistência e auditoria.",
+      A: "CORRETA. Contexto, tarefa, restrições e formato de saída podem reduzir ambiguidades e facilitar a avaliação.",
       B: "INCORRETA. Apenas perguntar gera saídas variáveis.",
       C: "INCORRETA. Código-fonte não é parte do prompt.",
       D: "INCORRETA. Senha não é parte do prompt e representa risco.",
@@ -743,10 +743,10 @@ const moduleQuestions5 = [
     gabarito: "A",
     justificativa: "Delimitadores ajudam a distinguir instruções confiáveis de conteúdo fornecido como dado, mas não impedem sozinhos que o modelo siga instruções maliciosas inseridas no conteúdo. São uma camada de mitigação, combinada com controles de acesso, validação de saída e testes adversariais.",
     analise: {
-      A: "CORRETA. Delimitação explícita pode reduzir a confusão entre instruções e dados, mitigando parte do risco; não é uma defesa suficiente por si só.",
+      A: "CORRETA. Delimitação explícita pode ajudar a separar instruções confiáveis de conteúdo tratado como dado, mas não impede sozinha toda injeção de prompt.",
       B: "INCORRETA. Delimitação não aumenta o custo.",
       C: "INCORRETA. Delimitação não elimina a necessidade de verificação humana.",
-      D: "INCORRETA. Delimitação torna o modelo mais previsível, não indeterminístico.",
+      D: "INCORRETA. Delimitadores não são um parâmetro de amostragem e não tornam, por si sós, a geração determinística ou indeterminística.",
       E: "INCORRETA. Delimitação não reduz o tamanho necessário."
     },
     regra: "Delimitação = separar instrução e dado.",
