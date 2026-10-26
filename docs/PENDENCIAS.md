@@ -293,3 +293,14 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Adicionar campo `fonte` às 40 questões M8 com referência explícita ao identificador do tópico curricular e ao assunto correspondente.
 - [ ] Confirmar via CI no novo HEAD que a sintaxe, rastreabilidade e auditoria de ativos continuam aprovadas.
 - [ ] Revisar separadamente se as questões M8 necessitam de fontes externas normativas/técnicas para afirmações específicas; a referência ao currículo é proveniência interna, não evidência externa independente.
+
+
+## Cobertura de tópicos de síntese — 2026-10-26
+
+- [x] Adicionar questão autoral ao tópico de relatório técnico integrado do M1.
+- [x] Adicionar questões autorais aos tópicos de síntese de IA generativa e engenharia de prompts do M5.
+- [x] Adicionar questões autorais aos tópicos de síntese de ética/governança, redes sociais institucionais, acessibilidade e método de resolução do M6.
+- [x] Atualizar a matriz de validação estrutural, o manifesto PWA e o inventário do README para 396 questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40, M8=40; 321 MC e 75 itens certo/errado.
+- [ ] Confirmar CI completo no HEAD final, incluindo teste estrutural, auditoria de ativos, heurísticas e smoke test via `file://`.
+- [ ] Fazer revisão semântica independente das sete questões novas e validar suas fontes e gabaritos; validação estrutural não comprova correção pedagógica.
+- [ ] Revisar a concentração de gabaritos, ainda alta em M1, M4, M5, M6, M7 e M8.
