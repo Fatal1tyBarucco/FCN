@@ -873,17 +873,17 @@ const moduleQuestions6 = [
       { letra: "E", texto: "o desenho é adequado se a amostra de reclamações for ampliada para 10% dos casos." }
     ],
     gabarito: "A",
-    justificativa: "Revisão por reclamação não é controle de qualidade: é detecção do caso relatado, e depende de o cidadão saber que foi prejudicado, ter acesso e capacidade de reclamar — o que enviesa a detecção. O desenho correto combina amostragem aleatória e estratificada, gatilhos objetivos (erro histórico, reclamação, subgrupo com desempenho pior) e revisão integral nos casos de maior impacto. O indicador global de reversão esconde concentração de erro em subgrupos. A alternativa D cria vedação que a lei não estabelece; B e C confundem existência de revisão com desenho adequado; E apenas aumenta o volume do canal enviesado.",
+    justificativa: "Revisão por reclamação não é controle de qualidade suficiente: é detecção do caso relatado e depende de o cidadão saber que foi prejudicado, ter acesso e capacidade de reclamar, o que pode enviesar a detecção. O desenho de supervisão deve ser definido conforme risco e contexto; pode combinar amostragem aleatória e estratificada, gatilhos objetivos (erro histórico, reclamação, subgrupo com desempenho pior) e revisão reforçada nos casos de maior impacto. O indicador global de reversão pode esconder concentração de erro em subgrupos. A alternativa D cria vedação geral que a legislação não estabelece; B e C confundem existência de revisão com desenho adequado; E apenas aumenta o volume do canal enviesado.",
     analise: {
       A: "CORRETA. Reconhece o viés do canal de reclamação, propõe complementação por amostragem estratificada e gatilhos e critica o indicador global.",
       B: "INCORRETA. Erro conceitual: existir revisão não significa que ela detecte erro; taxa global baixa pode conviver com erro concentrado.",
       C: "INCORRETA. Erro conceitual: protocolo formal não corrige o viés de quem reclama.",
-      D: "INCORRETA. Erro conceitual: a lei não veda automação; exige conformidade, motivação, registro e canal de revisão.",
+      D: "INCORRETA. Erro conceitual: não há vedação geral à automação; devem ser observados o regime jurídico aplicável e, quando incidir o art. 20 da LGPD, o direito de solicitar revisão de decisões tomadas unicamente com base em tratamento automatizado.",
       E: "INCORRETA. Erro conceitual: ampliar a amostra de reclamações mantém o mesmo vício de seleção."
     },
     regra: "Supervisão = alçada + gatilho + amostragem estratificada + registro + indicadores por subgrupo; reclamação é complemento, não controle.",
     pegadinha: "'Existe revisão humana' é resposta de aparência: o que se avalia é o desenho, não a existência.",
-    fonte: "Lei nº 14.129/2021, art. 48, II; Currículo do Módulo 6, unidade 6.6 (desenho da supervisão humana)."
+    fonte: "Lei nº 14.129/2021, art. 48, II, sobre gestão de riscos e controles proporcionais: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm; Lei nº 13.709/2018 (LGPD), art. 20, sobre solicitação de revisão de decisões tomadas unicamente com base em tratamento automatizado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Currículo do Módulo 6, unidade 6.6 (taxonomia didática de supervisão humana).
   },
 
   {
