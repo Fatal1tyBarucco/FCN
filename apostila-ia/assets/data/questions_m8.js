@@ -46,19 +46,19 @@ const moduleQuestions8 = [
     enunciado: "Qual fator explica a distorção visual que faz a barra de B parecer o dobro da barra de A?",
     alternativas: [
       { letra: "A", texto: "O eixo de valores iniciando em 60 é sempre aceitável, independentemente da forma do gráfico." },
-      { letra: "B", texto: "A razão numérica entre 80 e 70 é exatamente 2, pois a base do eixo foi deslocada." }
+      { letra: "B", texto: "A razão numérica entre 80 e 70 é exatamente 2, pois a base do eixo foi deslocada." },
       { letra: "C", texto: "Eixos truncados tornam qualquer gráfico mais preciso quando o leitor é informado." },
       { letra: "D", texto: "A distorção só acontece em gráficos 3D, não em barras bidimensionais." },
-      { letra: "E", texto: "Em gráficos de barras, o comprimento visual deve ser proporcional ao valor e, em geral, a linha de base deve começar em zero." },
+      { letra: "E", texto: "Em gráficos de barras, o comprimento visual deve ser proporcional ao valor e, em geral, a linha de base deve começar em zero." }
     ],
     gabarito: "E",
     justificativa: "Com base 60, as alturas aparentes são 10 e 20, sugerindo uma razão visual de 2. Porém, os valores são 70 e 80, cuja razão é aproximadamente 1,14. Em gráficos de barras, a comparação é feita pelo comprimento; iniciar o eixo em zero preserva a proporcionalidade visual. Em outros tipos de gráfico, eixos truncados podem ser usados com cautela, mas não devem distorcer a magnitude das barras.",
     analise: {
       A: "INCORRETA. A aceitabilidade depende do tipo de visualização; em barras, a base truncada distorce a comparação de comprimento.",
-      B: "INCORRETA. A razão numérica é 80/70 ≈ 1,14; o deslocamento altera a percepção, não os dados."
+      B: "INCORRETA. A razão numérica é 80/70 ≈ 1,14; o deslocamento altera a percepção, não os dados.",
       C: "INCORRETA. Avisar o leitor não elimina a distorção visual criada pela escala.",
       D: "INCORRETA. Barras 2D também podem distorcer a magnitude quando o eixo é truncado.",
-      E: "CORRETA. A linha de base zero preserva a proporcionalidade entre valor e comprimento da barra.",
+      E: "CORRETA. A linha de base zero preserva a proporcionalidade entre valor e comprimento da barra."
     },
     regra: "Em gráficos de barras, use linha de base zero para preservar a proporcionalidade do comprimento com o valor.",
     pegadinha: "O truncamento altera a percepção visual, não a razão numérica entre os valores.",
@@ -124,19 +124,19 @@ const moduleQuestions8 = [
     enunciado: "Qual avaliação distingue corretamente a razão numérica da percepção visual no gráfico?",
     alternativas: [
       { letra: "A", texto: "A razão numérica A/D é 450/190 ≈ 2,37, e o gráfico truncado não altera esse cálculo." },
-      { letra: "B", texto: "O truncamento altera os dados originais, fazendo o valor de A passar a 350." }
+      { letra: "B", texto: "O truncamento altera os dados originais, fazendo o valor de A passar a 350." },
       { letra: "C", texto: "Com base 100, a razão visual é 2,37, igual à razão numérica." },
       { letra: "D", texto: "A razão real deve ser calculada sobre o total, nunca entre os valores das unidades." },
-      { letra: "E", texto: "Com base 100, a razão visual das alturas é 350/90 ≈ 3,89, maior que a razão numérica." },
+      { letra: "E", texto: "Com base 100, a razão visual das alturas é 350/90 ≈ 3,89, maior que a razão numérica." }
     ],
     gabarito: "E",
     justificativa: "A razão numérica é 450/190 ≈ 2,37. Com eixo iniciado em 100, as alturas aparentes são 350 e 90, e a razão visual passa a 350/90 ≈ 3,89. Os dados não mudam; a escala truncada é que exagera a diferença visual. Em gráfico de barras, a linha de base zero é a opção apropriada para preservar proporcionalidade.",
     analise: {
       A: "INCORRETA. O cálculo numérico está correto, mas não responde à distorção visual solicitada.",
-      B: "INCORRETA. O truncamento altera a representação visual, não os valores originais."
+      B: "INCORRETA. O truncamento altera a representação visual, não os valores originais.",
       C: "INCORRETA. 350/90 não é 2,37; o truncamento altera a razão visual.",
       D: "INCORRETA. A razão entre duas unidades pode ser calculada diretamente quando essa é a pergunta.",
-      E: "CORRETA. A razão das alturas truncadas é aproximadamente 3,89, maior que 2,37.",
+      E: "CORRETA. A razão das alturas truncadas é aproximadamente 3,89, maior que 2,37."
     },
     regra: "Diferencie valor dos dados e medida visual: o eixo truncado não muda os dados, mas pode exagerar a razão percebida.",
     pegadinha: "Não confunda a altura aparente da barra com o valor original nem com a razão numérica.",
@@ -148,20 +148,20 @@ const moduleQuestions8 = [
     contexto: "Conjunto 2, 4, 4, 4, 5, 5, 7, 9. A professora pede a média, a mediana e a moda para decidir qual descreve o caso típico.",
     enunciado: "Para o conjunto 2, 4, 4, 4, 5, 5, 7, 9, a média, a mediana e a moda são, respectivamente:",
     alternativas: [
-      { letra: "A", texto: "4,0; 4,5 e 5." }
+      { letra: "A", texto: "4,0; 4,5 e 5." },
       { letra: "B", texto: "5,0; 5 e 4." },
       { letra: "C", texto: "4,5; 5 e 5." },
       { letra: "D", texto: "5,0; 4 e 4,5." },
-      { letra: "E", texto: "5,0; 4,5 e 4." },
+      { letra: "E", texto: "5,0; 4,5 e 4." }
     ],
     gabarito: "E",
     justificativa: "Média = soma ÷ n = 40 ÷ 8 = 5,0. Mediana: como n é par, calcula-se a média dos dois valores centrais (4 e 5), resultando em 4,5. Moda: o valor mais frequente é 4, que aparece três vezes.",
     analise: {
-      A: "INCORRETA. A média não é 4,0 e a moda não é 5."
+      A: "INCORRETA. A média não é 4,0 e a moda não é 5.",
       B: "INCORRETA. A mediana é a média de 4 e 5, não 5.",
       C: "INCORRETA. A média e a moda estão incorretas.",
       D: "INCORRETA. Mediana e moda foram trocadas.",
-      E: "CORRETA. Média 5,0; mediana 4,5; moda 4.",
+      E: "CORRETA. Média 5,0; mediana 4,5; moda 4."
     },
     regra: "Média = soma dos valores ÷ quantidade; mediana = valor central (média dos dois centrais se n par); moda = valor de maior frequência.",
     pegadinha: "Com quantidade par de observações, a mediana não é simplesmente o valor da posição central superior.",
@@ -500,17 +500,17 @@ const moduleQuestions8 = [
     enunciado: "Assinale a frase que NÃO deve aparecer em um relatório analítico baseado apenas nessa correlação.",
     alternativas: [
       { letra: "A", texto: "Houve associação positiva entre horas de estudo e pontuação." },
-      { letra: "B", texto: "É preciso considerar variáveis confundentes antes de afirmar efeito." }
+      { letra: "B", texto: "É preciso considerar variáveis confundentes antes de afirmar efeito." },
       { letra: "C", texto: "A associação é positiva e forte, mas não demonstra causalidade." },
-      { letra: "D", texto: "Cada hora extra de estudo causa, em média, 80 pontos a mais." },
+      { letra: "D", texto: "Cada hora extra de estudo causa, em média, 80 pontos a mais." }
     ],
     gabarito: "D",
     justificativa: "O currículo enfatiza que correlação nunca sustenta causalidade. 'Cada hora extra causa +80 pontos' inverte associação em causa e inventa unidade de efeito — r não informa essas duas coisas. As alternativas A, C e D são todas frases corretas para o currículo: associação, não causalidade; 'forte' quando r próximo de 1; e controle de confundentes.",
     analise: {
       A: "INCORRETA. Não é incorreta: afirma associação positiva, exatamente o que r sustenta.",
-      B: "INCORRETA. Não é incorreta: é o que o currículo exige antes de concluir causalidade."
+      B: "INCORRETA. Não é incorreta: é o que o currículo exige antes de concluir causalidade.",
       C: "INCORRETA. Não é incorreta: repete o princípio de que correlação não é causalidade.",
-      D: "CORRETA. Esta é a frase que NÃO deve aparecer: troca associação por causa e adiciona unidade de efeito.",
+      D: "CORRETA. Esta é a frase que NÃO deve aparecer: troca associação por causa e adiciona unidade de efeito."
     },
     regra: "r mede força da associação linear; 'causa' exige delineamento experimental ou controle de confundentes; jamais escrever 'X causa Y' com base só em r.",
     pegadinha: "A pegadinha é a frase 'sua' — quem lê 'causa' e salta, esquece que r = 0,8 só suporta associação.",

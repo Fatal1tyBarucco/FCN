@@ -925,7 +925,7 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Distribuição antes: A=122, B=125, C=60, D=10, E=7 (324 questões MC; A/B=76,2%; D/E=5,2%).
 - Distribuição após: A=84, B=103, C=72, D=37, E=28 (324 questões MC; A/B=57,7%; D/E=20,1%).
 - O balanceamento é um controle editorial, não um objetivo de uniformidade perfeita. A distribuição por módulo ainda deve ser monitorada e qualquer mudança posterior deve preservar gabarito, alternativa e análise como um conjunto.
-- A validação automatizada de sintaxe, consistência e testes de navegador deve ser executada no novo HEAD antes de declarar concluído.
+- A primeira execução de CI após o reposicionamento detectou separadores ausentes porque as alternativas e as entradas de análise levavam a vírgula junto com o texto trocado. Os 60 blocos foram normalizados para manter vírgulas em todas as opções/chaves intermediárias e removê-las apenas das últimas entradas. A validação automatizada de sintaxe, consistência e testes de navegador deve confirmar o novo HEAD.
 
 ## Pitfalls conhecidos
 

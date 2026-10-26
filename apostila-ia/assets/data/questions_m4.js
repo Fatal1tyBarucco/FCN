@@ -209,19 +209,19 @@ const moduleQuestions4 = [
     enunciado: "Qual alternativa distingue corretamente RPO (Recovery Point Objective) de RTO (Recovery Time Objective)?",
     alternativas: [
       { letra: "A", texto: "RPO é o tempo-alvo para recuperar o serviço; RTO é o ponto de recuperação dos dados." },
-      { letra: "B", texto: "RTO e RPO garantem que nunca haverá perda de dados ou indisponibilidade." }
+      { letra: "B", texto: "RTO e RPO garantem que nunca haverá perda de dados ou indisponibilidade." },
       { letra: "C", texto: "RPO e RTO são sinônimos e podem ser usados sem distinção." },
       { letra: "D", texto: "RPO mede o número de usuários simultâneos; RTO mede a capacidade de armazenamento." },
-      { letra: "E", texto: "RPO define o ponto temporal de recuperação e a perda de dados tolerável; RTO define o tempo-alvo para restabelecer o serviço." },
+      { letra: "E", texto: "RPO define o ponto temporal de recuperação e a perda de dados tolerável; RTO define o tempo-alvo para restabelecer o serviço." }
     ],
     gabarito: "E",
     justificativa: "RPO (Recovery Point Objective) estabelece o ponto temporal até o qual os dados devem ser recuperados e orienta a perda de dados tolerável. RTO (Recovery Time Objective) estabelece o tempo-alvo para restabelecer o serviço. São objetivos distintos, derivados das necessidades de negócio e validados por meio de testes de recuperação.",
     analise: {
       A: "INCORRETA. Inverte os conceitos: RPO trata do ponto de recuperação dos dados; RTO, do tempo de recuperação do serviço.",
-      B: "INCORRETA. São metas de planejamento, não garantias de perda zero ou disponibilidade contínua."
+      B: "INCORRETA. São metas de planejamento, não garantias de perda zero ou disponibilidade contínua.",
       C: "INCORRETA. RPO e RTO representam objetivos diferentes.",
       D: "INCORRETA. Essas descrições não correspondem aos conceitos de recuperação.",
-      E: "CORRETA. A alternativa distingue a perda de dados tolerável do tempo-alvo para restabelecimento.",
+      E: "CORRETA. A alternativa distingue a perda de dados tolerável do tempo-alvo para restabelecimento."
     },
     regra: "RPO = ponto de recuperação/perda de dados tolerável; RTO = tempo-alvo para restabelecer o serviço.",
     pegadinha: "Metas de RPO e RTO precisam ser tecnicamente viáveis e testadas; defini-las não garante que serão cumpridas.",
@@ -259,19 +259,19 @@ const moduleQuestions4 = [
     enunciado: "Qual alternativa diferencia corretamente ameaça, vulnerabilidade e risco?",
     alternativas: [
       { letra: "A", texto: "A ameaça é a falha técnica; a vulnerabilidade é o impacto financeiro." },
-      { letra: "B", texto: "Uma ameaça só existe depois que o dano está confirmado." }
+      { letra: "B", texto: "Uma ameaça só existe depois que o dano está confirmado." },
       { letra: "C", texto: "Risco é sinônimo de ameaça e independe da criticidade do ativo." },
       { letra: "D", texto: "A presença de uma vulnerabilidade prova que ela já foi explorada." },
-      { letra: "E", texto: "A vulnerabilidade é uma fraqueza; a ameaça é um agente ou evento potencialmente danoso; o risco considera a possibilidade e as consequências no contexto." },
+      { letra: "E", texto: "A vulnerabilidade é uma fraqueza; a ameaça é um agente ou evento potencialmente danoso; o risco considera a possibilidade e as consequências no contexto." }
     ],
     gabarito: "E",
     justificativa: "Vulnerabilidade é uma fraqueza que pode ser explorada; ameaça é uma circunstância, evento ou agente com potencial de causar dano; risco é avaliado considerando probabilidade e consequências no contexto. Uma vulnerabilidade não comprova, por si só, que houve exploração, e a priorização depende da exposição, da criticidade e do impacto potencial.",
     analise: {
       A: "INCORRETA. A falha técnica é a vulnerabilidade; impacto e probabilidade integram a avaliação de risco.",
-      B: "INCORRETA. A ameaça pode existir antes de qualquer dano confirmado."
+      B: "INCORRETA. A ameaça pode existir antes de qualquer dano confirmado.",
       C: "INCORRETA. Ameaça e risco são conceitos relacionados, mas não sinônimos; criticidade e contexto importam.",
       D: "INCORRETA. Uma vulnerabilidade pode existir sem ter sido explorada.",
-      E: "CORRETA. A alternativa diferencia os três conceitos e considera o contexto da avaliação.",
+      E: "CORRETA. A alternativa diferencia os três conceitos e considera o contexto da avaliação."
     },
     regra: "Vulnerabilidade = fraqueza; ameaça = agente/evento potencialmente danoso; risco = avaliação contextual de possibilidade e consequências.",
     pegadinha: "Encontrar uma vulnerabilidade não prova exploração; diferencie a fraqueza, a ameaça e o risco associado.",
@@ -427,19 +427,19 @@ const moduleQuestions4 = [
     enunciado: "Qual política de firewall segue melhor o princípio de reduzir a exposição?",
     alternativas: [
       { letra: "A", texto: "Permitir todo o tráfego e bloquear apenas conexões que já tenham causado incidente." },
-      { letra: "B", texto: "Permitir tráfego de qualquer origem para todas as portas de administração." }
+      { letra: "B", texto: "Permitir tráfego de qualquer origem para todas as portas de administração." },
       { letra: "C", texto: "Bloquear todo o tráfego sem verificar se isso impede o funcionamento legítimo do serviço." },
       { letra: "D", texto: "Criar uma regra ampla de entrada e confiar apenas no antivírus instalado no servidor." },
-      { letra: "E", texto: "Permitir somente os fluxos necessários, documentar as exceções e negar por padrão o tráfego não autorizado, validando as dependências do serviço." },
+      { letra: "E", texto: "Permitir somente os fluxos necessários, documentar as exceções e negar por padrão o tráfego não autorizado, validando as dependências do serviço." }
     ],
     gabarito: "E",
     justificativa: "Uma política restritiva permite os fluxos necessários e nega por padrão os demais, com exceções explícitas e justificadas. A implementação deve considerar dependências legítimas, monitorar efeitos e revisar as regras; uma regra excessivamente ampla aumenta a superfície de ataque, enquanto bloquear tudo sem análise pode causar indisponibilidade.",
     analise: {
       A: "INCORRETA. Permitir tudo transfere a defesa para a reação após o incidente e amplia a exposição.",
-      B: "INCORRETA. Expor portas administrativas a qualquer origem aumenta significativamente o risco."
+      B: "INCORRETA. Expor portas administrativas a qualquer origem aumenta significativamente o risco.",
       C: "INCORRETA. A restrição precisa preservar os fluxos legítimos necessários ao serviço.",
       D: "INCORRETA. Antivírus não substitui a restrição de tráfego de rede.",
-      E: "CORRETA. A política limita a comunicação ao necessário e mantém exceções controladas.",
+      E: "CORRETA. A política limita a comunicação ao necessário e mantém exceções controladas."
     },
     regra: "Negação por padrão: permitir apenas fluxos necessários, com exceções justificadas, testadas e revisadas.",
     pegadinha: "Regra restritiva não significa bloquear sem análise; é preciso equilibrar exposição e continuidade do serviço.",
@@ -499,19 +499,19 @@ const moduleQuestions4 = [
     enunciado: "Qual ação aplica melhor o princípio do menor privilégio?",
     alternativas: [
       { letra: "A", texto: "Manter as permissões antigas para evitar solicitações de acesso no futuro." },
-      { letra: "B", texto: "Negar permanentemente qualquer acesso, independentemente das responsabilidades da servidora." }
+      { letra: "B", texto: "Negar permanentemente qualquer acesso, independentemente das responsabilidades da servidora." },
       { letra: "C", texto: "Conceder acesso administrativo a todos os integrantes da equipe." },
       { letra: "D", texto: "Compartilhar uma conta com permissões amplas para facilitar a substituição entre funcionários." },
-      { letra: "E", texto: "Revisar o perfil conforme as tarefas atuais, remover permissões desnecessárias e manter processo formal para conceder exceções justificadas." },
+      { letra: "E", texto: "Revisar o perfil conforme as tarefas atuais, remover permissões desnecessárias e manter processo formal para conceder exceções justificadas." }
     ],
     gabarito: "E",
     justificativa: "O menor privilégio exige que as permissões correspondam às tarefas e responsabilidades atuais. Mudanças de função devem acionar revisão de acesso, remoção de permissões desnecessárias e registro das exceções aprovadas. Contas individuais e revisões periódicas melhoram a rastreabilidade e reduzem o impacto de credenciais comprometidas.",
     analise: {
       A: "INCORRETA. Permissões obsoletas mantêm acesso além da necessidade atual.",
-      B: "INCORRETA. Menor privilégio limita o acesso ao necessário; não significa negar todo acesso."
+      B: "INCORRETA. Menor privilégio limita o acesso ao necessário; não significa negar todo acesso.",
       C: "INCORRETA. Acesso administrativo generalizado viola o menor privilégio.",
       D: "INCORRETA. Contas compartilhadas enfraquecem a atribuição individual e ampliam o acesso.",
-      E: "CORRETA. A alternativa ajusta as permissões à função e prevê tratamento controlado de exceções.",
+      E: "CORRETA. A alternativa ajusta as permissões à função e prevê tratamento controlado de exceções."
     },
     regra: "Revise permissões quando funções mudam, remova acessos obsoletos e conceda exceções por processo formal.",
     pegadinha: "Menor privilégio não é acesso zero; é conceder o acesso necessário e nenhum privilégio desnecessário.",
@@ -571,19 +571,19 @@ const moduleQuestions4 = [
     enunciado: "Qual resposta aplica melhor uma defesa contra engenharia social?",
     alternativas: [
       { letra: "A", texto: "Fornecer o código porque o solicitante conhece o cargo e o nome do servidor." },
-      { letra: "B", texto: "Publicar o código em um canal interno para que outras pessoas confirmem se é válido." }
+      { letra: "B", texto: "Publicar o código em um canal interno para que outras pessoas confirmem se é válido." },
       { letra: "C", texto: "Enviar o código, mas solicitar que o suporte prometa não reutilizá-lo." },
       { letra: "D", texto: "Confiar na solicitação sempre que houver urgência e linguagem profissional." },
-      { letra: "E", texto: "Interromper a interação e confirmar a solicitação por um canal institucional independente já conhecido, sem compartilhar o código." },
+      { letra: "E", texto: "Interromper a interação e confirmar a solicitação por um canal institucional independente já conhecido, sem compartilhar o código." }
     ],
     gabarito: "E",
     justificativa: "Engenharia social explora confiança, autoridade, urgência, familiaridade ou medo para induzir ações. Dados reais sobre a vítima não autenticam o solicitante. Códigos de uso único e outros segredos de autenticação não devem ser compartilhados; solicitações sensíveis devem ser confirmadas por um canal independente e reportadas conforme o procedimento institucional.",
     analise: {
       A: "INCORRETA. Conhecer dados do servidor não prova a identidade do solicitante.",
-      B: "INCORRETA. Publicar o código expõe a credencial e amplia o risco."
+      B: "INCORRETA. Publicar o código expõe a credencial e amplia o risco.",
       C: "INCORRETA. Um código de autenticação é segredo temporário e não deve ser compartilhado.",
       D: "INCORRETA. Urgência e linguagem profissional podem ser usadas para manipular a vítima.",
-      E: "CORRETA. A confirmação independente evita depender do mesmo canal potencialmente fraudulento.",
+      E: "CORRETA. A confirmação independente evita depender do mesmo canal potencialmente fraudulento."
     },
     regra: "Confirme pedidos sensíveis por canal independente e nunca compartilhe códigos de autenticação.",
     pegadinha: "Conhecimento de dados pessoais ou linguagem profissional não comprova identidade nem legitimidade.",
@@ -619,19 +619,19 @@ const moduleQuestions4 = [
     enunciado: "Qual medida ajuda a impedir que o cliente aceite um intermediário fraudulento?",
     alternativas: [
       { letra: "A", texto: "Ignorar avisos de certificado para manter o acesso disponível." },
-      { letra: "B", texto: "Presumir que o uso de criptografia torna impossível um ataque de intermediário, mesmo com validação desativada." }
+      { letra: "B", texto: "Presumir que o uso de criptografia torna impossível um ataque de intermediário, mesmo com validação desativada." },
       { letra: "C", texto: "Usar apenas um firewall local e dispensar a autenticação do servidor." },
       { letra: "D", texto: "Confiar em qualquer rede Wi-Fi que exija senha." },
-      { letra: "E", texto: "Validar corretamente o certificado, a cadeia de confiança e o nome do servidor, usando um protocolo seguro configurado de forma adequada." },
+      { letra: "E", texto: "Validar corretamente o certificado, a cadeia de confiança e o nome do servidor, usando um protocolo seguro configurado de forma adequada." }
     ],
     gabarito: "E",
     justificativa: "Um ataque Man-in-the-Middle (MitM) pode permitir que um intermediário observe ou altere a comunicação. Um protocolo criptográfico corretamente configurado e a validação do certificado e do nome do servidor ajudam a autenticar o endpoint e proteger o canal. Ignorar avisos ou desativar validação pode permitir que a conexão criptografada seja estabelecida com o endpoint errado.",
     analise: {
       A: "INCORRETA. Ignorar avisos pode eliminar uma defesa importante contra certificados inválidos.",
-      B: "INCORRETA. Criptografia sem validação correta de identidade pode proteger um canal com o endpoint errado."
+      B: "INCORRETA. Criptografia sem validação correta de identidade pode proteger um canal com o endpoint errado.",
       C: "INCORRETA. Firewall local não substitui a autenticação do servidor no canal.",
       D: "INCORRETA. Uma rede Wi-Fi protegida por senha não é necessariamente confiável.",
-      E: "CORRETA. A validação de identidade é essencial para evitar confiar em um intermediário fraudulento.",
+      E: "CORRETA. A validação de identidade é essencial para evitar confiar em um intermediário fraudulento."
     },
     regra: "Criptografia de canal deve ser acompanhada de validação correta da identidade do servidor.",
     pegadinha: "Criptografia sem validação do endpoint não garante que a conexão foi estabelecida com o servidor pretendido.",
@@ -643,19 +643,19 @@ const moduleQuestions4 = [
     enunciado: "Qual resposta técnica inicial é mais adequada para um possível ataque de negação de serviço distribuído (DDoS)?",
     alternativas: [
       { letra: "A", texto: "Desligar permanentemente todos os serviços e descartar os registros de tráfego." },
-      { letra: "B", texto: "Desativar monitoramento e alertas para reduzir a carga do sistema." }
+      { letra: "B", texto: "Desativar monitoramento e alertas para reduzir a carga do sistema." },
       { letra: "C", texto: "Aumentar indiscriminadamente todos os limites de conexão, sem observar a capacidade da infraestrutura." },
       { letra: "D", texto: "Presumir que o tráfego é legítimo porque vem de muitos endereços IP diferentes." },
-      { letra: "E", texto: "Validar a anomalia com telemetria, acionar o provedor e os controles de mitigação disponíveis, priorizar serviços essenciais e preservar evidências." },
+      { letra: "E", texto: "Validar a anomalia com telemetria, acionar o provedor e os controles de mitigação disponíveis, priorizar serviços essenciais e preservar evidências." }
     ],
     gabarito: "E",
     justificativa: "DoS busca degradar ou interromper a disponibilidade; DDoS envolve origens distribuídas. A resposta depende do vetor e da arquitetura e pode incluir validação por telemetria, coordenação com provedores, filtragem ou mitigação especializada, priorização de serviços e preservação de evidências. Não há uma medida única que resolva todos os ataques.",
     analise: {
       A: "INCORRETA. Desligamento indiscriminado e descarte de registros podem ampliar o impacto e prejudicar a investigação.",
-      B: "INCORRETA. Desativar monitoramento reduz a visibilidade durante o incidente."
+      B: "INCORRETA. Desativar monitoramento reduz a visibilidade durante o incidente.",
       C: "INCORRETA. Aumentar limites sem análise pode sobrecarregar ainda mais a infraestrutura.",
       D: "INCORRETA. A distribuição de origens é compatível com DDoS e não prova legitimidade.",
-      E: "CORRETA. A resposta combina análise, mitigação coordenada, priorização de serviços e preservação de evidências.",
+      E: "CORRETA. A resposta combina análise, mitigação coordenada, priorização de serviços e preservação de evidências."
     },
     regra: "DDoS visa degradar disponibilidade com tráfego ou solicitações distribuídas; a mitigação deve ser orientada por telemetria, vetor e capacidade.",
     pegadinha: "Muitas origens não significam necessariamente tráfego legítimo; investigue o padrão e coordene a mitigação.",
@@ -764,19 +764,19 @@ const moduleQuestions4 = [
     enunciado: "À luz da LGPD, qual prática está alinhada aos princípios que regem o tratamento de dados pessoais?",
     alternativas: [
       { letra: "A", texto: "Coletar todos os dados que possam ser úteis no futuro, mesmo sem finalidade definida." },
-      { letra: "B", texto: "Conservar os dados indefinidamente, pois a LGPD proíbe a eliminação de registros." }
+      { letra: "B", texto: "Conservar os dados indefinidamente, pois a LGPD proíbe a eliminação de registros." },
       { letra: "C", texto: "Tratar qualquer dado pessoal apenas com consentimento, independentemente da hipótese legal aplicável." },
       { letra: "D", texto: "Publicar os dados pessoais para demonstrar transparência, mesmo quando não houver base legal para divulgação." },
-      { letra: "E", texto: "Definir finalidades legítimas e específicas, limitar a coleta ao necessário e informar o titular de modo adequado." },
+      { letra: "E", texto: "Definir finalidades legítimas e específicas, limitar a coleta ao necessário e informar o titular de modo adequado." }
     ],
     gabarito: "E",
     justificativa: "A LGPD estabelece princípios como finalidade, adequação, necessidade e transparência (art. 6º). A organização deve definir propósitos legítimos e específicos, limitar os dados ao mínimo pertinente e fornecer informações claras sobre o tratamento. Consentimento é uma das bases legais, não a única; a existência de dados pessoais não autoriza divulgação pública indiscriminada nem conservação sem limite.",
     analise: {
       A: "INCORRETA. A coleta deve observar finalidade, adequação e necessidade; utilidade futura genérica não justifica acumular dados sem limite.",
-      B: "INCORRETA. A conservação deve respeitar a finalidade e as hipóteses legais; a LGPD prevê eliminação quando cabível, ressalvadas as exceções legais."
+      B: "INCORRETA. A conservação deve respeitar a finalidade e as hipóteses legais; a LGPD prevê eliminação quando cabível, ressalvadas as exceções legais.",
       C: "INCORRETA. A LGPD prevê diferentes bases legais, cuja aplicabilidade depende do contexto; consentimento não é obrigatório em todo tratamento.",
       D: "INCORRETA. Transparência no tratamento não significa divulgação pública irrestrita de dados pessoais.",
-      E: "CORRETA. A alternativa aplica finalidade específica, minimização e transparência, em conformidade com os princípios do art. 6º.",
+      E: "CORRETA. A alternativa aplica finalidade específica, minimização e transparência, em conformidade com os princípios do art. 6º."
     },
     regra: "Princípios da LGPD incluem finalidade, adequação, necessidade, transparência, segurança, prevenção, não discriminação e responsabilização, entre outros do art. 6º.",
     pegadinha: "Base legal não é sinônimo de consentimento; transparência não significa tornar dados pessoais públicos.",
@@ -814,19 +814,19 @@ const moduleQuestions4 = [
     enunciado: "Antes de iniciar esse tratamento, qual análise é mais adequada à LGPD?",
     alternativas: [
       { letra: "A", texto: "Considerar que a existência de cadastro torna qualquer uso posterior dos dados automaticamente permitido." },
-      { letra: "B", texto: "Dispensar medidas de segurança quando os dados forem utilizados apenas para publicidade." }
+      { letra: "B", texto: "Dispensar medidas de segurança quando os dados forem utilizados apenas para publicidade." },
       { letra: "C", texto: "Compartilhar os dados com qualquer parceiro comercial, pois o marketing é uma finalidade econômica." },
       { letra: "D", texto: "Exigir consentimento em todos os casos, sem analisar as demais bases legais previstas na LGPD." },
-      { letra: "E", texto: "Identificar uma base legal aplicável à finalidade, avaliar necessidade e compatibilidade do uso, cumprir deveres de transparência e respeitar os direitos dos titulares." },
+      { letra: "E", texto: "Identificar uma base legal aplicável à finalidade, avaliar necessidade e compatibilidade do uso, cumprir deveres de transparência e respeitar os direitos dos titulares." }
     ],
     gabarito: "E",
     justificativa: "O uso de dados para marketing não é automaticamente autorizado pela existência de cadastro. O controlador deve identificar uma base legal válida para a finalidade concreta, observar os princípios do art. 6º, informar o titular de forma adequada e implementar medidas de segurança. Se invocar legítimo interesse, deve avaliar finalidade, necessidade, expectativas e direitos e liberdades do titular, documentando a análise; essa hipótese não se aplica a dados pessoais sensíveis nos termos do art. 11.",
     analise: {
       A: "INCORRETA. A coleta inicial não autoriza qualquer reutilização; a finalidade e a base legal do novo tratamento precisam ser avaliadas.",
-      B: "INCORRETA. As obrigações de segurança não desaparecem porque o uso é publicitário."
+      B: "INCORRETA. As obrigações de segurança não desaparecem porque o uso é publicitário.",
       C: "INCORRETA. O compartilhamento exige análise de finalidade, base legal, transparência e salvaguardas aplicáveis.",
       D: "INCORRETA. Consentimento é uma das bases legais; a base apropriada depende do caso e deve ser demonstrável.",
-      E: "CORRETA. A alternativa reúne base legal, finalidade, necessidade, transparência e respeito aos direitos, sem presumir autorização automática.",
+      E: "CORRETA. A alternativa reúne base legal, finalidade, necessidade, transparência e respeito aos direitos, sem presumir autorização automática."
     },
     regra: "Para cada finalidade de tratamento, identifique e documente a base legal e observe finalidade, necessidade, transparência, segurança e direitos do titular.",
     pegadinha: "Legítimo interesse não é autorização genérica para marketing; exige avaliação concreta e não serve como base do art. 11 para dados pessoais sensíveis.",
@@ -914,19 +914,19 @@ const moduleQuestions4 = [
     enunciado: "Qual alternativa identifica corretamente a proteção constitucional de dados pessoais e sua relação com a LGPD?",
     alternativas: [
       { letra: "A", texto: "A CF/88 não menciona dados pessoais." },
-      { letra: "B", texto: "A CF/88 e a LGPD são incompatíveis." }
+      { letra: "B", texto: "A CF/88 e a LGPD são incompatíveis." },
       { letra: "C", texto: "A LGPD substitui a CF/88." },
       { letra: "D", texto: "A CF/88 é inexistente." },
-      { letra: "E", texto: "A Constituição protege a intimidade e a vida privada no art. 5º, X, e reconhece o direito fundamental à proteção de dados pessoais no art. 5º, LXXIX; a LGPD disciplina o tratamento desses dados." },
+      { letra: "E", texto: "A Constituição protege a intimidade e a vida privada no art. 5º, X, e reconhece o direito fundamental à proteção de dados pessoais no art. 5º, LXXIX; a LGPD disciplina o tratamento desses dados." }
     ],
     gabarito: "E",
     justificativa: "O art. 5º, X, da Constituição protege a intimidade e a vida privada. O art. 5º, LXXIX, incluído pela Emenda Constitucional nº 115/2022, assegura o direito à proteção dos dados pessoais, inclusive nos meios digitais. A LGPD disciplina o tratamento de dados pessoais. Portanto, a Constituição e a LGPD são complementares, mas os dispositivos constitucionais precisam ser identificados corretamente.",
     analise: {
       A: "INCORRETA. A Constituição menciona expressamente a proteção de dados pessoais no art. 5º, LXXIX, incluído pela EC nº 115/2022.",
-      B: "INCORRETA. A Constituição e a LGPD são complementares na proteção de direitos fundamentais e na disciplina do tratamento de dados pessoais."
+      B: "INCORRETA. A Constituição e a LGPD são complementares na proteção de direitos fundamentais e na disciplina do tratamento de dados pessoais.",
       C: "INCORRETA. A LGPD não substitui a Constituição; as normas têm funções complementares.",
       D: "INCORRETA. A Constituição Federal de 1988 está vigente.",
-      E: "CORRETA. O art. 5º, X, protege a intimidade e a vida privada; o inciso LXXIX assegura o direito à proteção de dados pessoais.",
+      E: "CORRETA. O art. 5º, X, protege a intimidade e a vida privada; o inciso LXXIX assegura o direito à proteção de dados pessoais."
     },
     regra: "CF/88, art. 5º, X: intimidade e vida privada; art. 5º, LXXIX: direito fundamental à proteção de dados pessoais; LGPD: disciplina o tratamento.",
     pegadinha: "Não atribuir a proteção expressa de dados pessoais ao caput do art. 5º; o inciso LXXIX foi incluído pela EC nº 115/2022.",

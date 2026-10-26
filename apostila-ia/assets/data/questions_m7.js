@@ -540,20 +540,20 @@ const moduleQuestions7 = [
     contexto: "O painel que apoia a decisão sobre a fila de atendimento é atualizado uma vez por dia, mas a decisão precisa ser tomada a cada hora.",
     enunciado: "O problema descrito é de:",
     alternativas: [
-      { letra: "A", texto: "Completude: faltam campos no painel." }
+      { letra: "A", texto: "Completude: faltam campos no painel." },
       { letra: "B", texto: "Acurácia: os valores do painel não correspondem à realidade." },
       { letra: "C", texto: "Unicidade: há atendimentos repetidos no painel." },
       { letra: "D", texto: "Validade: a data de atualização está em formato inválido." },
-      { letra: "E", texto: "Tempestividade: latência incompatível com o momento da decisão, ainda que o dado seja acurado e completo." },
+      { letra: "E", texto: "Tempestividade: latência incompatível com o momento da decisão, ainda que o dado seja acurado e completo." }
     ],
     gabarito: "E",
     justificativa: "O currículo define tempestividade como disponibilidade no momento necessário, com latência aceitável, medida pelo intervalo entre o fato e sua disponibilidade, e registra a consequência: 'dado antigo pode ser acurado e completo e ainda assim inútil para decidir'. O enunciado não menciona erro de valor, repetição, formato ou ausência de campo.",
     analise: {
-      A: "INCORRETA. Não há campo faltante citado."
+      A: "INCORRETA. Não há campo faltante citado.",
       B: "INCORRETA. Nada indica que os valores estejam errados — eles podem estar corretos e atrasados.",
       C: "INCORRETA. Duplicidade não é o tema do enunciado.",
       D: "INCORRETA. Formato de data não é mencionado.",
-      E: "CORRETA. Defasagem diante de decisão horária é violação de tempestividade.",
+      E: "CORRETA. Defasagem diante de decisão horária é violação de tempestividade."
     },
     regra: "Tempestividade = dado disponível no momento necessário, com latência aceitável para a decisão.",
     pegadinha: "Tempestividade não é 'velocidade de processamento': é adequação ao momento do uso.",
@@ -585,20 +585,20 @@ const moduleQuestions7 = [
     contexto: "Após a carga, o total por unidade não fecha com a soma do detalhe. As duas fontes divergem sobre o mesmo fato e os nomes de unidade aparecem abreviados de formas diferentes.",
     enunciado: "O estágio em que a falha deve ser investigada e o que verificar são:",
     alternativas: [
-      { letra: "A", texto: "Descarte — o prazo de retenção venceu e removeu linhas." }
+      { letra: "A", texto: "Descarte — o prazo de retenção venceu e removeu linhas." },
       { letra: "B", texto: "Coleta — a origem sempre explica a divergência, sem necessidade de conferência posterior." },
       { letra: "C", texto: "Consumo — o painel deve corrigir o total manualmente para fechar." },
       { letra: "D", texto: "Armazenamento — a causa é sempre ausência de backup." },
-      { letra: "E", texto: "Integração — chaves não padronizadas, granularidade divergente e regra de prevalência entre fontes." },
+      { letra: "E", texto: "Integração — chaves não padronizadas, granularidade divergente e regra de prevalência entre fontes." }
     ],
     gabarito: "E",
     justificativa: "O currículo responde a esse caso no estágio de integração (reconciliação): verificar chaves (unidade com nome abreviado divergente), granularidade (detalhe diário versus total mensal) e regra de prevalência entre fontes; a verificação é de consistência — a soma dos filhos deve igualar o total. Ajustar o painel manualmente mascara o erro e destrói a reprodutibilidade, e backup ou retenção não produzem divergência entre fonte e detalhe.",
     analise: {
-      A: "INCORRETA. Descarte afeta disponibilidade futura, não a aritmética entre total e detalhe."
+      A: "INCORRETA. Descarte afeta disponibilidade futura, não a aritmética entre total e detalhe.",
       B: "INCORRETA. A origem pode estar correta; o enunciado aponta conflito entre fontes, tratado na integração.",
       C: "INCORRETA. Corrigir no consumo mascara o erro e impede auditoria — o currículo condena ajuste manual como validação.",
       D: "INCORRETA. Falha de backup se manifesta como perda, não como total que não fecha com o detalhe.",
-      E: "CORRETA. Divergência entre fontes com chaves e granularidades distintas é falha de integração/reconciliação.",
+      E: "CORRETA. Divergência entre fontes com chaves e granularidades distintas é falha de integração/reconciliação."
     },
     regra: "Integração reconcilia fontes: padronizar chaves, alinhar granularidade e definir qual fonte prevalece. Soma dos filhos deve igualar o total.",
     pegadinha: "'O painel está errado, então conserta no painel' é a armadilha: o consumo mostra o efeito, não a causa.",

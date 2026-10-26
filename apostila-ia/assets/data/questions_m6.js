@@ -841,20 +841,20 @@ const moduleQuestions6 = [
     contexto: "A classificação de níveis de automação é ferramenta de governança: quanto maior o nível, maior o conjunto de salvaguardas exigidas.",
     enunciado: "No nível em que o sistema decide e produz efeito imediato, com revisão posterior por amostra ou por gatilho de risco, tem-se",
     alternativas: [
-      { letra: "A", texto: "automação plena, sem qualquer revisão." }
+      { letra: "A", texto: "automação plena, sem qualquer revisão." },
       { letra: "B", texto: "decisão manual pura, com apoio documental." },
       { letra: "C", texto: "apoio à decisão, com decisão final do servidor antes do efeito." },
       { letra: "D", texto: "decisão automatizada com revisão prévia como condição de eficácia." },
-      { letra: "E", texto: "decisão automatizada com revisão posterior ou amostral." },
+      { letra: "E", texto: "decisão automatizada com revisão posterior ou amostral." }
     ],
     gabarito: "E",
     justificativa: "A classificação didática adotada no módulo distingue: decisão manual pura (N0); apoio à decisão, em que o sistema calcula e o servidor decide (N1); decisão automatizada com revisão prévia, em que o efeito depende da revisão (N2); decisão automatizada com revisão posterior ou amostral, com efeito imediato e revisão por amostra ou gatilho (N3); decisão automatizada com autorização prévia em alçada (N4); e automação plena (N5). O enunciado descreve o N3, cuja exigência adicional é amostragem dimensionada e gatilhos de risco.",
     analise: {
-      A: "INCORRETA. Erro conceitual: automação plena dispensa revisão — o enunciado prevê revisão posterior."
+      A: "INCORRETA. Erro conceitual: automação plena dispensa revisão — o enunciado prevê revisão posterior.",
       B: "INCORRETA. Erro conceitual: no manual puro não há decisão do sistema.",
       C: "INCORRETA. Erro conceitual: no apoio à decisão o efeito só ocorre depois da decisão humana.",
       D: "INCORRETA. Erro conceitual: na revisão prévia o ato não produz efeito antes da revisão.",
-      E: "CORRETA. Corresponde ao nível em que o efeito é imediato e a revisão é posterior, por amostra ou gatilho.",
+      E: "CORRETA. Corresponde ao nível em que o efeito é imediato e a revisão é posterior, por amostra ou gatilho."
     },
     regra: "N0 manual; N1 apoio; N2 revisão prévia; N3 revisão posterior/amostral; N4 alçada; N5 automação plena — salvaguardas crescem com o nível.",
     pegadinha: "A diferença entre N2 e N3 é o momento da revisão (antes ou depois do efeito), não a existência dela.",
@@ -1033,20 +1033,20 @@ const moduleQuestions6 = [
     contexto: "Um cidadão solicita cópia de processo de contratação pública. O documento contém objeto, valores e decisões administrativas, mas também CPF, endereço residencial e dados de contato pessoal de pessoas físicas. A equipe considera negar acesso ao processo inteiro por conter dados pessoais.",
     enunciado: "À luz da LAI e das orientações de transparência e proteção de dados, qual encaminhamento é mais adequado?",
     alternativas: [
-      { letra: "A", texto: "Cobrir visualmente os dados no PDF, sem verificar se o texto ocultado continua selecionável ou recuperável no arquivo." }
+      { letra: "A", texto: "Cobrir visualmente os dados no PDF, sem verificar se o texto ocultado continua selecionável ou recuperável no arquivo." },
       { letra: "B", texto: "Negar integralmente o acesso sempre que um documento público contiver qualquer dado pessoal." },
       { letra: "C", texto: "Divulgar todos os dados sem análise, pois a publicidade administrativa elimina qualquer proteção de dados pessoais." },
       { letra: "D", texto: "Substituir o documento por um resumo elaborado pela equipe, mesmo quando seja possível fornecer cópia parcial." },
-      { letra: "E", texto: "Avaliar quais trechos estão sujeitos a restrição legal, ocultar de modo seguro os dados pessoais cuja divulgação não seja autorizada e fornecer o restante do documento, com a justificativa cabível." },
+      { letra: "E", texto: "Avaliar quais trechos estão sujeitos a restrição legal, ocultar de modo seguro os dados pessoais cuja divulgação não seja autorizada e fornecer o restante do documento, com a justificativa cabível." }
     ],
     gabarito: "E",
     justificativa: "A análise deve distinguir a informação de interesse público dos trechos cuja divulgação esteja legalmente restrita. A LAI estabelece a publicidade como regra e prevê, no art. 7º, § 2º, o acesso à parte não sigilosa por certidão, extrato ou cópia com ocultação da parte sob sigilo. O art. 31 estabelece proteção específica para informações pessoais. A ocultação deve ser efetiva, e não apenas uma tarja visual que deixe o dado recuperável. A decisão depende do conteúdo e da base legal aplicável; a presença de dado pessoal não justifica automaticamente negar o documento inteiro.",
     analise: {
-      A: "INCORRETA. Uma tarja meramente visual pode deixar o dado recuperável; a versão pública deve ser sanitizada de forma efetiva, preservando o original restrito."
+      A: "INCORRETA. Uma tarja meramente visual pode deixar o dado recuperável; a versão pública deve ser sanitizada de forma efetiva, preservando o original restrito.",
       B: "INCORRETA. A existência de dados pessoais não torna automaticamente todo o documento inacessível; deve-se avaliar o acesso à parte não restrita.",
       C: "INCORRETA. A publicidade como regra não elimina as restrições e salvaguardas previstas em lei para informações pessoais.",
       D: "INCORRETA. Um resumo não substitui automaticamente o acesso à parte não sigilosa quando a cópia parcial é viável.",
-      E: "CORRETA. Preserva o acesso à informação pública e restringe apenas os trechos cuja divulgação não seja autorizada, com tratamento seguro e justificativa adequada.",
+      E: "CORRETA. Preserva o acesso à informação pública e restringe apenas os trechos cuja divulgação não seja autorizada, com tratamento seguro e justificativa adequada."
     },
     regra: "Ao conciliar transparência e proteção de dados, identifique a base legal de eventual restrição e viabilize acesso à parte não protegida; a ocultação precisa ser efetiva.",
     pegadinha: "Evite os dois extremos: divulgar indiscriminadamente dados protegidos ou negar todo o documento só porque contém algum dado pessoal.",

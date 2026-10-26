@@ -13,19 +13,19 @@ const moduleQuestions5 = [
     enunciado: "Qual definição de inteligência artificial é mais adequada para analisar esses sistemas?",
     alternativas: [
       { letra: "A", texto: "Qualquer programa de computador, independentemente da tarefa ou do método utilizado." },
-      { letra: "B", texto: "Um programa que sempre aprende sozinho e nunca utiliza regras explícitas." }
+      { letra: "B", texto: "Um programa que sempre aprende sozinho e nunca utiliza regras explícitas." },
       { letra: "C", texto: "Somente robôs físicos que imitam movimentos humanos." },
       { letra: "D", texto: "Um sistema que necessariamente possui consciência e emoções humanas." },
-      { letra: "E", texto: "Um campo que desenvolve sistemas capazes de executar tarefas associadas a capacidades como percepção, previsão, geração, raciocínio ou tomada de decisão, conforme o método e o contexto." },
+      { letra: "E", texto: "Um campo que desenvolve sistemas capazes de executar tarefas associadas a capacidades como percepção, previsão, geração, raciocínio ou tomada de decisão, conforme o método e o contexto." }
     ],
     gabarito: "E",
     justificativa: "IA é um campo amplo que abrange diferentes métodos para construir sistemas que realizam tarefas como percepção, previsão, geração de conteúdo, raciocínio ou apoio à decisão. Nem todo sistema de IA é um robô, tem consciência ou aprende autonomamente durante o uso. Sistemas baseados em regras e modelos treinados a partir de dados podem ambos integrar soluções de IA, dependendo de sua concepção e finalidade.",
     analise: {
       A: "INCORRETA. Nem todo programa é classificado como IA; a classificação depende do problema, das capacidades e do método do sistema.",
-      B: "INCORRETA. Há sistemas de IA baseados em regras explícitas e sistemas que aprendem com dados."
+      B: "INCORRETA. Há sistemas de IA baseados em regras explícitas e sistemas que aprendem com dados.",
       C: "INCORRETA. IA também existe em software sem corpo físico.",
       D: "INCORRETA. Sistemas de IA não precisam ter consciência ou emoções humanas.",
-      E: "CORRETA. A definição cobre diferentes tarefas e abordagens sem atribuir capacidades humanas universais.",
+      E: "CORRETA. A definição cobre diferentes tarefas e abordagens sem atribuir capacidades humanas universais."
     },
     regra: "IA é um campo de métodos e sistemas para tarefas como percepção, previsão, geração e decisão; não implica robô, consciência ou aprendizado autônomo.",
     pegadinha: "Não confunda IA com robótica, consciência ou aprendizado de máquina: são conceitos relacionados, mas não equivalentes.",
@@ -63,19 +63,19 @@ const moduleQuestions5 = [
     enunciado: "Qual descrição de aprendizado de máquina é mais adequada?",
     alternativas: [
       { letra: "A", texto: "Uma técnica que exige que cada decisão futura seja programada manualmente como uma regra individual." },
-      { letra: "B", texto: "Uma garantia de que qualquer modelo melhora sempre que recebe mais dados, mesmo que sejam inadequados." }
+      { letra: "B", texto: "Uma garantia de que qualquer modelo melhora sempre que recebe mais dados, mesmo que sejam inadequados." },
       { letra: "C", texto: "Um sinônimo de armazenamento de arquivos em banco de dados." },
       { letra: "D", texto: "Uma abordagem que utiliza exclusivamente dados rotulados e não pode aprender estrutura sem rótulos." },
-      { letra: "E", texto: "Um conjunto de métodos que ajustam modelos a partir de dados ou experiência para identificar padrões e produzir previsões ou decisões, conforme o objetivo e o paradigma." },
+      { letra: "E", texto: "Um conjunto de métodos que ajustam modelos a partir de dados ou experiência para identificar padrões e produzir previsões ou decisões, conforme o objetivo e o paradigma." }
     ],
     gabarito: "E",
     justificativa: "Aprendizado de máquina reúne métodos que ajustam modelos a partir de dados ou experiência para executar tarefas como previsão, classificação, agrupamento ou decisão. Existem paradigmas supervisionados, não supervisionados e por reforço, entre outros. A qualidade depende da adequação dos dados, da formulação, do procedimento de treinamento e da avaliação; mais dados não garantem melhoria se forem inadequados ou enviesados.",
     analise: {
       A: "INCORRETA. Aprender padrões a partir de dados pode reduzir a necessidade de programar cada regra individual, embora a lógica explícita também seja útil em outros sistemas.",
-      B: "INCORRETA. Dados irrelevantes, enviesados ou de baixa qualidade podem não melhorar e até prejudicar o modelo."
+      B: "INCORRETA. Dados irrelevantes, enviesados ou de baixa qualidade podem não melhorar e até prejudicar o modelo.",
       C: "INCORRETA. Armazenamento é distinto do treinamento de modelos.",
       D: "INCORRETA. Aprendizado não supervisionado não exige rótulos fornecidos para cada exemplo.",
-      E: "CORRETA. A alternativa define o ajuste de modelos a partir de dados/experiência e admite diferentes tarefas e paradigmas.",
+      E: "CORRETA. A alternativa define o ajuste de modelos a partir de dados/experiência e admite diferentes tarefas e paradigmas."
     },
     regra: "Aprendizado de máquina ajusta modelos a partir de dados ou experiência; desempenho depende de dados, método, objetivo e avaliação.",
     pegadinha: "Mais dados não garantem automaticamente melhor desempenho, e aprendizado de máquina não se limita a exemplos rotulados.",
@@ -88,19 +88,19 @@ const moduleQuestions5 = [
     enunciado: "Qual procedimento reduz melhor o risco de superestimar a capacidade de generalização do modelo?",
     alternativas: [
       { letra: "A", texto: "Usar o conjunto de teste a cada ajuste de hiperparâmetros e informar o melhor resultado observado como desempenho final." },
-      { letra: "B", texto: "Ajustar o modelo no conjunto de teste e depois tratá-lo como dado independente." }
+      { letra: "B", texto: "Ajustar o modelo no conjunto de teste e depois tratá-lo como dado independente." },
       { letra: "C", texto: "Duplicar registros entre treino e teste para garantir que os dois conjuntos tenham a mesma distribuição de exemplos." },
       { letra: "D", texto: "Escolher o modelo somente pelo desempenho no treino, pois dados não vistos não são relevantes." },
-      { letra: "E", texto: "Treinar com o conjunto de treino, usar validação para selecionar modelos/hiperparâmetros e reservar o teste para uma avaliação final após as decisões de modelagem." },
+      { letra: "E", texto: "Treinar com o conjunto de treino, usar validação para selecionar modelos/hiperparâmetros e reservar o teste para uma avaliação final após as decisões de modelagem." }
     ],
     gabarito: "E",
     justificativa: "O conjunto de treino ajusta os parâmetros do modelo; a validação apoia a seleção de modelos e hiperparâmetros; o teste deve permanecer separado das decisões de modelagem para fornecer uma estimativa final menos enviesada do desempenho em dados não vistos. Consultar repetidamente o teste e escolher com base nesses resultados transforma-o, na prática, em parte do processo de ajuste e pode produzir estimativas otimistas. Também é necessário prevenir vazamento de dados e respeitar dependências temporais ou por grupo na divisão.",
     analise: {
       A: "INCORRETA. A seleção repetida com base no teste adapta o processo a esse conjunto e compromete sua independência.",
-      B: "INCORRETA. Depois de usado para ajustar decisões, o conjunto deixa de funcionar como avaliação independente."
+      B: "INCORRETA. Depois de usado para ajustar decisões, o conjunto deixa de funcionar como avaliação independente.",
       C: "INCORRETA. Registros duplicados entre conjuntos podem causar vazamento e inflar artificialmente o desempenho.",
       D: "INCORRETA. O desempenho no treino não estima, por si só, a generalização para dados novos.",
-      E: "CORRETA. A separação preserva o teste para a avaliação final e reduz o risco de estimativa otimista.",
+      E: "CORRETA. A separação preserva o teste para a avaliação final e reduz o risco de estimativa otimista."
     },
     regra: "Treino ajusta parâmetros; validação orienta escolhas; teste fica reservado à avaliação final. Evite vazamento entre conjuntos.",
     pegadinha: "Um teste consultado repetidamente para escolher modelos deixa de ser uma avaliação final independente.",
@@ -163,19 +163,19 @@ const moduleQuestions5 = [
     enunciado: "Sobre explicabilidade em inteligência artificial (XAI), é correto afirmar que:",
     alternativas: [
       { letra: "A", texto: "Uma explicação local de uma previsão garante que o modelo inteiro seja transparente." },
-      { letra: "B", texto: "XAI consiste em ocultar os dados de entrada para proteger o modelo." }
+      { letra: "B", texto: "XAI consiste em ocultar os dados de entrada para proteger o modelo." },
       { letra: "C", texto: "XAI é uma técnica exclusiva de redes neurais profundas." },
       { letra: "D", texto: "Uma explicação gerada pelo modelo prova que a decisão é justa e correta." },
-      { letra: "E", texto: "Técnicas de XAI podem oferecer explicações úteis sobre previsões ou comportamento do modelo, mas não garantem explicação completa nem causalidade." },
+      { letra: "E", texto: "Técnicas de XAI podem oferecer explicações úteis sobre previsões ou comportamento do modelo, mas não garantem explicação completa nem causalidade." }
     ],
     gabarito: "E",
     justificativa: "XAI reúne métodos para tornar certos aspectos das previsões ou do comportamento de modelos mais compreensíveis. O alcance depende da técnica, do modelo e do contexto: uma explicação local não descreve necessariamente todo o modelo, e uma explicação não prova causalidade, justiça ou correção factual.",
     analise: {
       A: "INCORRETA. Uma explicação local se refere a uma previsão ou região específica e não garante transparência global.",
-      B: "INCORRETA. Ocultar dados de entrada não define XAI."
+      B: "INCORRETA. Ocultar dados de entrada não define XAI.",
       C: "INCORRETA. Há técnicas de explicabilidade aplicáveis a diferentes famílias de modelos, não apenas redes profundas.",
       D: "INCORRETA. Explicabilidade não prova, por si só, justiça, validade ou correção da decisão.",
-      E: "CORRETA. A explicação pode apoiar análise e auditoria, mas possui escopo e limitações que devem ser avaliados.",
+      E: "CORRETA. A explicação pode apoiar análise e auditoria, mas possui escopo e limitações que devem ser avaliados."
     },
     regra: "XAI = métodos para compreender aspectos das previsões ou do comportamento de um modelo, com limitações explícitas.",
     pegadinha: "Uma explicação plausível não é prova de causalidade, justiça ou correção; confira o escopo da técnica usada.",
