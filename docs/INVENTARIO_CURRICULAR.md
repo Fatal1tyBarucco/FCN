@@ -3,7 +3,7 @@
 Fonte de requisitos: `Escrita.txt` (prompt mestre), seções 1–4 e 6.
 Fonte de verdade do estado atual: código em `apostila-ia/assets/data/*.js`; contagens curriculares recontadas em 2026-10-26.
 Data de verificação do inventário: 2026-10-26.
-Estado real recontado em 2026-10-26: **8 módulos carregados, 132 tópicos + 295 subtópicos = 427 nós**, 885 exemplos e 590 exercícios na matriz estrutural; **460 flashcards e 399 questões autorais** nos arquivos de dados. Testes automatizados de UI e limitações estão documentados em `docs/RELATORIO_TESTES.md`.
+Estado estrutural representado pela matriz atual: **8 módulos carregados, 132 tópicos + 295 subtópicos = 427 nós**, 888 exemplos e 592 exercícios detectados pelo gerador estrutural; **460 flashcards e 399 questões autorais** nos arquivos de dados. As contagens de exemplos/exercícios refletem a lógica textual do script e não uma avaliação semântica. Testes automatizados de UI e limitações estão documentados em `docs/RELATORIO_TESTES.md`.
 
 ---
 
@@ -54,15 +54,15 @@ Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplic
 
 | Módulo | Título | Unidades | Tópicos | Subtópicos | Nós (t+s) | Exemplos | Exercícios | Flashcards | Questões | Estado |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| M1 | Microsoft 365 e Aplicações de Escritório | 5 | 23 | 37 | 60 | 111 | 74 | 66 | 44 | Parcial |
+| M1 | Microsoft 365 e Aplicações de Escritório | 5 | 23 | 37 | 60 | 114 | 76 | 66 | 44 | Parcial |
 | M2 | Redes de Computadores | 5 | 19 | 52 | 71 | 156 | 104 | 56 | 54 | Completo |
 | M3 | Comunicação e Colaboração | 5 | 14 | 35 | 49 | 105 | 70 | 68 | 47 | Completo |
 | M4 | Segurança da Informação e Governança Digital | 4 | 13 | 39 | 52 | 117 | 78 | 54 | 85 | Completo |
 | M5 | Inteligência Artificial | 4 | 13 | 35 | 48 | 105 | 70 | 66 | 42 | Completo |
-| M6 | Ética e Responsabilidade Digital no Serviço Público | 6 | 18 | 46 | 64 | 138 | 92 | 50 | 44 | Completo |
+| M6 | Ética e Responsabilidade Digital no Serviço Público | 6 | 18 | 46 | 64 | 138 | 92 | 50 | 47 | Completo |
 | M7 | Fundamentos e Engenharia de Dados | 3 | 9 | 23 | 32 | 69 | 46 | 50 | 40 | Completo |
 | M8 | Visualização, Análise e Storytelling com Dados | 5 | 23 | 28 | 51 | 84 | 56 | 50 | 40 | Completo |
-| **Total** | — | **37** | **132** | **295** | **427** | **885** | **590** | **460** | **399** | — |
+| **Total** | — | **37** | **132** | **295** | **427** | **888** | **592** | **460** | **399** | — |
 
 ### 4.2 Escopo por módulo (conforme Escrita.txt Seção 6)
 
@@ -171,7 +171,7 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 
 **Fonte normativa lida:** `Escrita.txt` no branch `main`, blob SHA `a7da4ad0c8905e2f7ece405dfe4a3b95518cbb76`. O prompt define oito módulos curriculares e critérios de aceite técnicos, pedagógicos e quantitativos. A árvore estrutural e as contagens abaixo são evidências de inventário, não aprovação semântica de todo o material.
 
-**Baseline recontado em 2026-10-26:** 8 módulos; 37 unidades; 132 tópicos; 295 subtópicos (427 nós); 885 exemplos e 590 exercícios na matriz; 460 flashcards e 396 questões autorais nos arquivos atuais. Os snapshots antigos de 404 flashcards/365 questões e 389/396 questões são históricos, não a contagem atual. A contagem estrutural não substitui revisão semântica nem reexecução da rastreabilidade.
+**Nota de reconciliação:** este bloco preservava um snapshot documental inconsistente (885 exemplos, 590 exercícios e 396 questões). A matriz presente na branch contém 295 linhas e soma 888 exemplos/592 exercícios segundo os contadores textuais do gerador; os arquivos de questões listados na seção 4.1 totalizam 399 (M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40). Os snapshots de 404 flashcards/365 questões e 389/396 questões são históricos. A contagem estrutural não substitui revisão semântica nem reexecução dos testes no HEAD atual.
 
 **Módulos obrigatórios:**
 1. Microsoft 365 e aplicações de escritório (Word, Excel, PowerPoint, OneDrive).
