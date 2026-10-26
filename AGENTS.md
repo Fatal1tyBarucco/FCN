@@ -1086,6 +1086,15 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - A distribuição de gabaritos MC do artefato é A=83, B=104, C=72, D=37, E=28 (324 questões). O relatório `docs/RELATORIO_QUALIDADE_QUESTOES.md` foi sincronizado com esses números, o HEAD validado e o run do CI no commit `53911a014c9ebc8b167b5950243cfd948d1bdf60`.
 - **Importante:** a sincronização do relatório e este registro documental criam um HEAD posterior ao validado. A nova execução CI desse HEAD posterior é obrigatória; não transferir o status verde de `995f26cf` para commits subsequentes.
 
+## Reconferência CI após correções M4/M6 e relatório — HEAD `97a41e85` (2026-10-26)
+
+- `Validate curriculum and learning assets` run `40407776730` = **success** no HEAD `97a41e85a99c8ca08cb142bdaefb33c59b6a7abb`. Passaram sintaxe JavaScript, matriz curricular, rastreabilidade, estrutura, auditoria heurística, instalação do Chromium, smoke test `file://` e regressões de interação Playwright.
+- `PR #17` run `40407768290` = **success**; `Code Quality: PR #17` run `40407769213` = **success** no mesmo HEAD.
+- O artefato `curriculum-audit-reports` (ID `12692325504`) confirma 399 questões, 460 flashcards, 132 tópicos, zero IDs de questão duplicados, zero pares de contexto/enunciado idênticos, zero alertas heurísticos, zero referências curriculares desconhecidas e zero tópicos-pai sem questão ou flashcard.
+- A análise inline de q-m4-81..q-m4-85 foi reconhecida pelo parser corrigido; q-m6-44 cobre o tópico-pai M6 6.6. A matriz não detecta lacunas de cobertura por subtópico individual, portanto a conclusão se limita à associação no nível de tópico-pai.
+- O relatório versionado `docs/RELATORIO_QUALIDADE_QUESTOES.md` foi atualizado no commit `53911a014c9ebc8b167b5950243cfd948d1bdf60` com a distribuição atual A=83, B=104, C=72, D=37, E=28.
+- Este registro cria um novo commit documental. **A validação verde acima refere-se ao HEAD `97a41e85`; o workflow do HEAD resultante deve concluir antes de declarar a validação atualizada.**
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
