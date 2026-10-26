@@ -458,3 +458,10 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Revalidação posterior consultada em 2026-10-26 no HEAD `041a7825ee3e2ec7b5e0155d4617ed996c6a44df`: os seis check-runs desse commit concluíram com `success`, incluindo `Static validation and coverage audits`, CodeQL, análise de Actions e duas análises JavaScript/TypeScript. Evidências: [auditoria estática](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266024704) e [análises de código](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266022684).
 - O workflow de auditoria inclui sintaxe, matriz curricular, rastreabilidade estrutural, heurísticas de qualidade, smoke test e regressões interativas via Playwright/Chromium em `file://`. Isso não equivale a revisão semântica integral, auditoria WCAG independente, leitor de tela ou testes em dispositivo físico.
 - Esta evidência corresponde ao HEAD indicado; qualquer novo commit exige conferir novamente os checks do novo HEAD.
+
+## Registro de retomada da orquestração — 2026-10-26
+
+- O PR #17 registra sucesso do workflow [40262096277](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40262096277) para o SHA `81472b91ea33a421db66f4fa502e28d0e09d0c65`, com smoke Playwright/Chromium em `file://`, 8 módulos, 460 flashcards, 396 questões, 5 gráficos SVG, 6 simuladores com UI e `pageErrors: []`.
+- Outros snapshots na branch registram 399 questões e 460 flashcards. Como os SHA são diferentes, não tratar as contagens como uma única execução nem assumir que o workflow histórico valida o HEAD atual.
+- Os testes reportados cobrem regressões interativas específicas (SOMA, CIDR, phishing, avaliação de prompt, histograma e SVG), mas não demonstram correção semântica integral, WCAG, leitor de tela ou teste físico multiplataforma.
+- **Esta retomada foi documental; nenhum teste foi executado por esta atualização.** A próxima execução deve registrar comando, SHA, exit code, artefatos e falhas, sem extrapolar o alcance dos testes.
