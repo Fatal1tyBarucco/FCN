@@ -1618,7 +1618,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: a porta 143 é do IMAP sem criptografia — protocolo de recebimento."
     },
     regra: "Portas do ecossistema de e-mail: SMTP 25 (relay/sem TLS), 587 (submissão + STARTTLS), 465 (SMTPS); POP3 110/995; IMAP 143/993.",
-    pegadinha: "A pegadinha é misturar as portas de ENVIO (SMTP) com as de RECEBIMENTO (POP3/IMAP) — todas as distratoras são portas reais de e-mail, só que de outro protocolo."
+    pegadinha: "A pegadinha é misturar as portas de ENVIO (SMTP) com as de RECEBIMENTO (POP3/IMAP) — todas as distratoras são portas reais de e-mail, só que de outro protocolo.",
+    fonte: "IETF RFC 5321 — Simple Mail Transfer Protocol; RFC 8314 — TLS para envio e acesso de e-mail: https://www.rfc-editor.org/rfc/rfc5321.html ; https://www.rfc-editor.org/rfc/rfc8314.html",
   },
   {
     id: "q-m3-02",
@@ -1640,7 +1641,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: lembrar que SMTP usa TCP e concluir que 'opera na camada de transporte'. Usar um serviço de outra camada não determina a camada do próprio protocolo — o currículo marca o exercício ('SMTP opera na camada de transporte') como Errado."
     },
     regra: "Posicionamento por função: SMTP é protocolo de transferência de mensagens entre agentes (camada de aplicação); o transporte confiável é fornecido pelo TCP.",
-    pegadinha: "Item clássico de 'camada × protocolo subjacente' — o exercício do próprio currículo já documenta esse erro como o mais comum."
+    pegadinha: "Item clássico de 'camada × protocolo subjacente' — o exercício do próprio currículo já documenta esse erro como o mais comum.",
+    fonte: "IETF RFC 5321 — especificação SMTP e modelo cliente/servidor: https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-03",
@@ -1668,7 +1670,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: DATA vem DEPOIS dos destinatários — é a etapa do corpo da mensagem."
     },
     regra: "Sequência SMTP: HELO/EHLO → MAIL FROM → RCPT TO → DATA → (encaminhamento/entrega) → QUIT.",
-    pegadinha: "A ordem dos comandos é o conteúdo cobrado; a alternativa D só funciona depois que todos os RCPT TO foram declarados — em vários destinatários, RCPT TO se repete antes do DATA."
+    pegadinha: "A ordem dos comandos é o conteúdo cobrado; a alternativa D só funciona depois que todos os RCPT TO foram declarados — em vários destinatários, RCPT TO se repete antes do DATA.",
+    fonte: "IETF RFC 5321 — comandos SMTP, incluindo MAIL FROM, RCPT TO e DATA: https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-04",
@@ -1690,7 +1693,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: associar 'porta padrão do SMTP' a 'porta recomendada'. Padrão ≠ recomendado — a porta padrão é justamente a que deve ser fechada para o exterior."
     },
     regra: "Higiene de porta SMTP: 25 só para relay servidor-a-servidor (bloquear de clientes externos); submissão de clientes via 587/465 com TLS.",
-    pegadinha: "Item com recomendação INVERTIDA: o vocabulário ('deve ser mantida', 'recomendada') soa normativo; quem decora apenas as portas e não a política de bloqueio marca Certo."
+    pegadinha: "Item com recomendação INVERTIDA: o vocabulário ('deve ser mantida', 'recomendada') soa normativo; quem decora apenas as portas e não a política de bloqueio marca Certo.",
+    fonte: "IETF RFC 8314 — recomendações TLS e portas para submissão/acesso de e-mail: https://www.rfc-editor.org/rfc/rfc8314.html",
   },
   {
     id: "q-m3-05",
@@ -1718,7 +1722,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: invenção de comportamento ('apaga após o segundo download') — o currículo descreve o apagamento por padrão no download."
     },
     regra: "POP3 (110/995): download local; conforme a configuração, pode apagar a cópia do servidor — adequado a cenários de um dispositivo/offline. IMAP (143/993): estado no servidor e sincronização — multi-dispositivo.",
-    pegadinha: "A alternativa D inventa uma exceção confortável ('só apaga no segundo download') — quando a exceção não está no material, ela é pegadinha, não conhecimento."
+    pegadinha: "A alternativa D inventa uma exceção confortável ('só apaga no segundo download') — quando a exceção não está no material, ela é pegadinha, não conhecimento.",
+    fonte: "IETF RFC 9051 — IMAP4rev2; RFC 1939 — Post Office Protocol v3: https://www.rfc-editor.org/rfc/rfc9051.html ; https://www.rfc-editor.org/rfc/rfc1939.html",
   },
   {
     id: "q-m3-06",
@@ -1746,7 +1751,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: 995 é a versão segura do POP3 — protocolo trocado."
     },
     regra: "Mapa de portas: POP3 110 / 995(TLS); IMAP 143 / 993(TLS). Lembrete: porta '99x' = versão com SSL/TLS do protocolo correspondente.",
-    pegadinha: "Duas dimensões por alternativa (protocolo × criptografia): errar uma já invalida — pare cada caractere antes de marcar."
+    pegadinha: "Duas dimensões por alternativa (protocolo × criptografia): errar uma já invalida — pare cada caractere antes de marcar.",
+    fonte: "IETF RFC 8314 — porta padrão 993 para IMAP com TLS implícito: https://www.rfc-editor.org/rfc/rfc8314.html",
   },
   {
     id: "q-m3-07",
@@ -1797,7 +1803,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: premissa falsa — POP3 foi desjustamente para trabalho offline (baixa local das mensagens)."
     },
     regra: "Escolha por perfil de uso: 1 dispositivo + offline → POP3; múltiplos dispositivos + sincronização → IMAP.",
-    pegadinha: "A alternativa B é a 'moderna e plausível' (todo mundo usa IMAP), mas a FGV cobra a indicação EXATA do material para o caso — leia o perfil do usuário, não a tendência."
+    pegadinha: "A alternativa B é a 'moderna e plausível' (todo mundo usa IMAP), mas a FGV cobra a indicação EXATA do material para o caso — leia o perfil do usuário, não a tendência.",
+    fonte: "IETF RFC 9051 — IMAP4rev2; RFC 1939 — POP3: https://www.rfc-editor.org/rfc/rfc9051.html ; https://www.rfc-editor.org/rfc/rfc1939.html",
   },
   {
     id: "q-m3-09",
@@ -1825,7 +1832,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: From identifica o remetente, não destinatários."
     },
     regra: "Campos de destinatário: To (principal, visível) / Cc (cópia, visível) / Bcc (cópia oculta).",
-    pegadinha: "Cc e Bcc têm o mesmo comportamento de entrega; a diferença é VISIBILIDADE — a pegadinha é confundir 'cópia' com 'ocultação'."
+    pegadinha: "Cc e Bcc têm o mesmo comportamento de entrega; a diferença é VISIBILIDADE — a pegadinha é confundir 'cópia' com 'ocultação'.",
+    fonte: "IETF RFC 5322 — formato de mensagens de Internet e campos de cabeçalho: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-10",
@@ -1847,7 +1855,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: supor que o Bcc oculta também os destinatários do To — o remetente escolhe; oculto é o que está em Bcc para os demais."
     },
     regra: "Visibilidade de destinatários: To e Cc são explícitos em todas as caixas; Bcc aparece apenas na caixa de cada oculto (e no remetente).",
-    pegadinha: "A expressão 'ocultos uns dos outros' refere-se aos Bcc entre si e para os demais; a leitura apressada pode transformar em 'todos ocultos' — o item fala o que o currículo fala."
+    pegadinha: "A expressão 'ocultos uns dos outros' refere-se aos Bcc entre si e para os demais; a leitura apressada pode transformar em 'todos ocultos' — o item fala o que o currículo fala.",
+    fonte: "IETF RFC 5322 — campos To, Cc e Bcc na estrutura da mensagem: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-11",
@@ -1875,7 +1884,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: Reply-To define o endereço de resposta (que pode ser diferente do remetente) — não oculta destinatários."
     },
     regra: "Privacidade em discurso em massa: destinatários em Bcc + (boas práticas) reply controlado; To/Cc expõem a lista.",
-    pegadinha: "A alternativa D usa um cabeçalho real e mal compreendido (Reply-To) — ele muda PARA ONDE vão as respostas, não quem vê a lista de destinatários."
+    pegadinha: "A alternativa D usa um cabeçalho real e mal compreendido (Reply-To) — ele muda PARA ONDE vão as respostas, não quem vê a lista de destinatários.",
+    fonte: "IETF RFC 5322 — cabeçalhos de mensagem e destinatários: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-12",
@@ -1903,7 +1913,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: spoofing é falsificação do remetente (técnica), não a classificação do conteúdo — e propaganda comercial não é necessariamente falsificada."
     },
     regra: "Classificação por conteúdo e intenção: spam = não solicitado (comercial/malicioso); phishing = fraude para roubo de dados; spoofing = falsificação do endereço 'From'.",
-    pegadinha: "A FGV cobra a diferença de INTENÇÃO entre categorias aparentemente parecidas; 'spam malicioso' existe no currículo, mas phishing é definido pela fraude, não pelo volume."
+    pegadinha: "A FGV cobra a diferença de INTENÇÃO entre categorias aparentemente parecidas; 'spam malicioso' existe no currículo, mas phishing é definido pela fraude, não pelo volume.",
+    fonte: "CISA — orientação oficial para reconhecer e reportar phishing: https://www.cisa.gov/be-cyber-smart/report-incident",
   },
   {
     id: "q-m3-13",
@@ -1931,7 +1942,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: TLS protege o canal (transporte), não autentica o remetente nem define política de falha."
     },
     regra: "Tríade de autenticação de e-mail: SPF (quem pode enviar) + DKIM (assinatura) → DMARC (política e reporte em falha).",
-    pegadinha: "Os três protocolos são descritos no mesmo parágrafo do currículo — a cobrança FCC é a de composição: verificação (SPF/DKIM) × decisão (DMARC)."
+    pegadinha: "Os três protocolos são descritos no mesmo parágrafo do currículo — a cobrança FCC é a de composição: verificação (SPF/DKIM) × decisão (DMARC).",
+    fonte: "IETF RFC 9989 — especificação atual de DMARC (publicada em maio de 2026, substitui RFC 7489 e RFC 9091): https://www.rfc-editor.org/rfc/rfc9989.html",
   },
   {
     id: "q-m3-14",
@@ -1953,7 +1965,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: pensar que SPF/DKIM 'impedem' o envio falsificado no ato — eles permitem DETECTAR/verificar; a aplicação da política (bloquear/quarentenar) é do DMARC. A expressão do currículo ('previnem spoofing verificando') é a base do item."
     },
     regra: "SPF autoriza servidores, DKIM fornece assinatura verificável e DMARC define política e relatórios com base nos resultados e no alinhamento configurado; esses controles ajudam a reduzir spoofing de domínio, sem bloquear todas as falsificações.",
-    pegadinha: "Não trate autenticação de domínio como garantia absoluta: SPF/DKIM/DMARC ajudam a reduzir spoofing, mas não eliminam todos os ataques de engenharia social ou falsificação de nome de exibição."
+    pegadinha: "Não trate autenticação de domínio como garantia absoluta: SPF/DKIM/DMARC ajudam a reduzir spoofing, mas não eliminam todos os ataques de engenharia social ou falsificação de nome de exibição.",
+    fonte: "IETF RFC 7208 — SPF; RFC 6376 — DKIM; RFC 9989 — DMARC e alinhamento de domínio: https://www.rfc-editor.org/rfc/rfc7208.html ; https://www.rfc-editor.org/rfc/rfc6376.html ; https://www.rfc-editor.org/rfc/rfc9989.html",
   },
   {
     id: "q-m3-15",
@@ -1981,7 +1994,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: marketing não solicita credenciais por link fingindo autoridade; citação interna é engenharia social, não comercialização."
     },
     regra: "Distinção entre categorias: spam é mensagem não solicitada; phishing é fraude para induzir ação ou obter dados; spear phishing é phishing direcionado/personalizado. Não é uma escala universal de gravidade; spoofing é uma técnica que pode acompanhar diferentes ataques.",
-    pegadinha: "A VUNESP cobra o critério de DIRECIONAMENTO: mesma fraude, público genérico = phishing; público específico com detalhes reais = spear phishing."
+    pegadinha: "A VUNESP cobra o critério de DIRECIONAMENTO: mesma fraude, público genérico = phishing; público específico com detalhes reais = spear phishing.",
+    fonte: "CISA — reconhecer e reportar phishing, incluindo mensagens com links/solicitações suspeitas: https://www.cisa.gov/be-cyber-smart/report-incident",
   },
   {
     id: "q-m3-16",
@@ -2009,7 +2023,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: visualização é somente leitura."
     },
     regra: "Permissões de calendário por menor privilégio: proprietário > editor > comentar > somente visualização — escolha a menor que satisfaz a necessidade.",
-    pegadinha: "A alternativa A é o 'excesso de privilégio' — em provas de serviço público, o menor privilégio funcional é a resposta esperada quando o cenário descarta o controle total."
+    pegadinha: "A alternativa A é o 'excesso de privilégio' — em provas de serviço público, o menor privilégio funcional é a resposta esperada quando o cenário descarta o controle total.",
+    fonte: "Microsoft Support — compartilhamento de calendários e níveis de permissão no Microsoft 365: https://support.microsoft.com/pt-br/outlook/calendar-sharing-in-microsoft-365 ; https://support.microsoft.com/pt-br/outlook/sharing-your-calendar",
   },
   {
     id: "q-m3-17",
@@ -2031,7 +2046,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: supor que recorrência e lembrete sejam exclusivos de uma plataforma. O currículo trata das capacidades genéricas de calendários digitais (Google Calendar, Outlook Calendar)."
     },
     regra: "Estrutura de convite: identificação (título), temporalidade (data/hora/fuso, recorrência), participantes (papéis), contexto (descrição, anexos), alerta (lembretes).",
-    pegadinha: "Item composto de três afirmações — valide cada uma; a pegadinha é achar que uma das partes ('opcionais') é invenção, quando consta explicitamente entre os campos do convite."
+    pegadinha: "Item composto de três afirmações — valide cada uma; a pegadinha é achar que uma das partes ('opcionais') é invenção, quando consta explicitamente entre os campos do convite.",
+    fonte: "Microsoft Support — agendar reuniões, recorrência, fusos horários e lembretes no Outlook: https://support.microsoft.com/pt-br/outlook/create-modify-or-delete-a-meeting-request-or-appointment-in-outlook-on-the-web",
   },
   {
     id: "q-m3-18",
@@ -2059,7 +2075,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: invenção — Slack não é descrito no currículo como integrado ao Google Workspace."
     },
     regra: "Integração é o critério de escolha no currículo: Teams × M365; Meet × Google Workspace; Zoom × webinars/eventos externos.",
-    pegadinha: "As alternativas A e C descrevem QUALIDADES REAIS das plataformas (Teams integrada ao M365; Zoom com webinars) — mas fora do contexto do cenário. A pegadinha é escolher 'a melhor plataforma' em vez da integrada ao ecossistema pedido."
+    pegadinha: "As alternativas A e C descrevem QUALIDADES REAIS das plataformas (Teams integrada ao M365; Zoom com webinars) — mas fora do contexto do cenário. A pegadinha é escolher 'a melhor plataforma' em vez da integrada ao ecossistema pedido.",
+    fonte: "Google Meet Help — controles do anfitrião no Google Meet/Workspace: https://support.google.com/meet/answer/16229038?co=GENIE.Platform%3DDesktop&hl=pt-br",
   },
   {
     id: "q-m3-19",
@@ -2109,7 +2126,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: supor que qualquer participante possa remover outros — o currículo atribui a remoção ao anfitrião; e confundir lobby com chat (ambos aparecem na mesma lista de recursos)."
     },
     regra: "Controle de reunião online: lobby (filtro de entrada), senha, remoção, bloqueio de mídia/compartilhamento — todos com o anfitrião como agente.",
-    pegadinha: "Item de duas cláusulas: quem acerta só o lobby e não sabe quem remove marca Errado — o CESPE exige domínio completo do trecho."
+    pegadinha: "Item de duas cláusulas: quem acerta só o lobby e não sabe quem remove marca Errado — o CESPE exige domínio completo do trecho.",
+    fonte: "Google Meet Help — controles do anfitrião, adicionar/remover participantes e moderação: https://support.google.com/meet/answer/16229038?co=GENIE.Platform%3DDesktop&hl=pt-br",
   },
   {
     id: "q-m3-21",
@@ -2189,7 +2207,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: começa pelo destinatário sem saudação nem remetente — inviabiliza o roteamento da mensagem."
     },
     regra: "Sessão SMTP: HELO/EHLO (identificação) → MAIL FROM (origem) → RCPT TO (destino; repetível) → DATA (conteúdo) → QUIT; depois, encaminhamento servidor-a-servidor.",
-    pegadinha: "A FCC adora sequências permutadas: todos os comandos do item são REAIS — só a ordem muda. Decore a LÓGICA (quem envia, para quem, o quê), não a lista."
+    pegadinha: "A FCC adora sequências permutadas: todos os comandos do item são REAIS — só a ordem muda. Decore a LÓGICA (quem envia, para quem, o quê), não a lista.",
+    fonte: "IETF RFC 5321 — fluxo SMTP, comandos de transação e transferência da mensagem: https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-24",
@@ -2803,7 +2822,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: inverte a função — SMTP é de ENVIO, não de recebimento/baixar mensagens, conforme o exemplo 'erro' documentado no currículo."
     },
     regra: "SMTP = envio/transferência entre agentes de correio (cliente→servidor remetente→servidor destinatário). Recebimento/armazenamento na caixa = POP3/IMAP.",
-    pegadinha: "A pegadinha é trocar a função: quem associa 'SMTP' a 'caixa de entrada/baixar e-mail' inverte envio e recebimento — conceito corrigido no próprio exemplo 'erro' do currículo."
+    pegadinha: "A pegadinha é trocar a função: quem associa 'SMTP' a 'caixa de entrada/baixar e-mail' inverte envio e recebimento — conceito corrigido no próprio exemplo 'erro' do currículo.",
+    fonte: "IETF RFC 5321 — transporte de e-mail por SMTP entre clientes/servidores e relays: https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-26",
@@ -2825,7 +2845,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: confundir a porta 25 com 'submissão segura' — ela é a de relay (sem criptografia) e deve ser bloqueada para clientes externos; a submissão segura é 587/465."
     },
     regra: "Portas SMTP: 25 (relay, sem TLS, bloquear de externos), 587 (submissão + STARTTLS), 465 (SMTPS, SSL/TLS implícito). Criptografia é adicionada, não inerente.",
-    pegadinha: "Item composto: basta uma das três associações de porta estivesse trocada que seria Errado — a armadilha é a tentação de 'confiar' na porta 25 como segura."
+    pegadinha: "Item composto: basta uma das três associações de porta estivesse trocada que seria Errado — a armadilha é a tentação de 'confiar' na porta 25 como segura.",
+    fonte: "IETF RFC 8314 — TLS implícito para submissão/acesso e portas 465/993/995; RFC 5321 — SMTP: https://www.rfc-editor.org/rfc/rfc8314.html ; https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-27",
@@ -2853,7 +2874,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: SMTP é protocolo de ENVIO, não de recebimento/sincronização — confusão de função já corrigida no exemplo 'erro' do currículo."
     },
     regra: "IMAP (143/993): estado no servidor, sincronização multi-dispositivo. POP3 (110/995): recuperação/download; a cópia no servidor pode ser mantida ou removida conforme a configuração do cliente.",
-    pegadinha: "A alternativa C veste o POP3 com um comportamento confortável ('cópia permanente') que não é o padrão; a A atribui a POP3 a sincronização que pertence ao IMAP."
+    pegadinha: "A alternativa C veste o POP3 com um comportamento confortável ('cópia permanente') que não é o padrão; a A atribui a POP3 a sincronização que pertence ao IMAP.",
+    fonte: "IETF RFC 9051 — IMAP4rev2; RFC 1939 — POP3: https://www.rfc-editor.org/rfc/rfc9051.html ; https://www.rfc-editor.org/rfc/rfc1939.html",
   },
   {
     id: "q-m3-28",
@@ -2875,7 +2897,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: confundir a capacidade de configurar o cliente para manter uma cópia com uma regra universal do protocolo. O comportamento efetivo deve ser conferido na configuração do cliente."
     },
     regra: "POP3: recuperação/download; manter ou remover a cópia no servidor depende do cliente. IMAP: estado da caixa e pastas sincronizados no servidor, adequado a vários dispositivos.",
-    pegadinha: "A pegadinha é transformar uma configuração comum em regra do protocolo: POP3 não oferece a mesma sincronização de estado do IMAP, mas não se deve afirmar que toda implementação apaga a cópia do servidor."
+    pegadinha: "A pegadinha é transformar uma configuração comum em regra do protocolo: POP3 não oferece a mesma sincronização de estado do IMAP, mas não se deve afirmar que toda implementação apaga a cópia do servidor.",
+    fonte: "IETF RFC 9051 — IMAP4rev2 e estado de caixa no servidor; RFC 1939 — POP3: https://www.rfc-editor.org/rfc/rfc9051.html ; https://www.rfc-editor.org/rfc/rfc1939.html",
   },
   {
     id: "q-m3-29",
@@ -2903,7 +2926,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: From define o remetente, não tem relação com a visibilidade/ocultação dos destinatários."
     },
     regra: "To (principal, visível) × Cc (secundário, visível entre todos) × Bcc (oculto, protege privacidade em listas).",
-    pegadinha: "A pegadinha é confundir Cc com Bcc: ambos são 'cópias', mas só o Bcc oculta os endereços — a pegadinha do próprio exemplo 'erro' do currículo ('Cc e Bcc têm a mesma funcionalidade' = Errado)."
+    pegadinha: "A pegadinha é confundir Cc com Bcc: ambos são 'cópias', mas só o Bcc oculta os endereços — a pegadinha do próprio exemplo 'erro' do currículo ('Cc e Bcc têm a mesma funcionalidade' = Errado).",
+    fonte: "IETF RFC 5322 — campos de destinatários em mensagens de Internet: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-30",
@@ -2925,7 +2949,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: tratar Cc e Bcc como equivalentes — o exemplo 'erro' do currículo corrige exatamente isso ('Cc e Bcc têm a mesma funcionalidade' = Errado)."
     },
     regra: "Cc = visível para todos os destinatários; Bcc = oculto para os demais. Funções distintas.",
-    pegadinha: "A armadilha é a suposição de equivalência entre Cc e Bcc; a diferença está na visibilidade dos endereços."
+    pegadinha: "A armadilha é a suposição de equivalência entre Cc e Bcc; a diferença está na visibilidade dos endereços.",
+    fonte: "IETF RFC 5322 — cabeçalhos To, Cc e Bcc: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-31",
@@ -2953,7 +2978,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: inverte a definição de spear phishing, que é justamente o direcionado (a pessoa/organização específica), não o genérico em massa."
     },
     regra: "Spam = mensagem não solicitada; phishing = fraude para induzir ação ou obter dados; as categorias podem se sobrepor, mas não são sinônimas. Spear phishing = phishing direcionado.",
-    pegadinha: "A pegadinha é a generalização 'todo spam é phishing' (A) e a inversão de spear phishing (D) — ambos opostos ao que o currículo afirma."
+    pegadinha: "A pegadinha é a generalização 'todo spam é phishing' (A) e a inversão de spear phishing (D) — ambos opostos ao que o currículo afirma.",
+    fonte: "CISA — reconhecer e reportar phishing e mensagens suspeitas: https://www.cisa.gov/be-cyber-smart/report-incident",
   },
   {
     id: "q-m3-32",
@@ -2981,7 +3007,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual duplo: DKIM usa criptografia ASSIMÉTRICA (exercício do currículo), e nunca compartilha a chave privada — a verificação usa a chave pública publicada no domínio."
     },
     regra: "SPF = política de servidores autorizados; DKIM = assinatura verificável associada ao domínio e à integridade da mensagem; DMARC = política/relatórios para resultados e alinhamento de SPF/DKIM.",
-    pegadinha: "A pegadinha é a troca de funções (A) e o erro sobre DKIM como 'simétrica com chave privada compartilhada' (D) — a assinatura é assimétrica e a chave privada nunca sai do domínio."
+    pegadinha: "A pegadinha é a troca de funções (A) e o erro sobre DKIM como 'simétrica com chave privada compartilhada' (D) — a assinatura é assimétrica e a chave privada nunca sai do domínio.",
+    fonte: "IETF RFC 7208 — SPF; RFC 6376 — DKIM; RFC 9989 — DMARC (especificação atual): https://www.rfc-editor.org/rfc/rfc7208.html ; https://www.rfc-editor.org/rfc/rfc6376.html ; https://www.rfc-editor.org/rfc/rfc9989.html",
   },
   {
     id: "q-m3-33",
@@ -3009,7 +3036,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: 'somente visualização' é leitura pura; o assistente não poderia alterar nada."
     },
     regra: "Permissões de calendário: proprietário (controle total) > editor (modifica) > comentar > somente visualização (leitura).",
-    pegadinha: "A pegadinha é dar poder demais (Proprietário) ou de menos (Comentar/Visualização): o termo-chave do cenário é 'modificar sem assumir a propriedade' = Editor."
+    pegadinha: "A pegadinha é dar poder demais (Proprietário) ou de menos (Comentar/Visualização): o termo-chave do cenário é 'modificar sem assumir a propriedade' = Editor.",
+    fonte: "Microsoft Support — níveis de permissão e compartilhamento de calendários do Microsoft 365: https://support.microsoft.com/pt-br/outlook/calendar-sharing-in-microsoft-365",
   },
   {
     id: "q-m3-34",
@@ -3031,7 +3059,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: achar que cada participante precisa anotar manualmente o horário alheio — o currículo diz que a conversão é automática quando o calendário suporta fuso."
     },
     regra: "Convite = título, data/hora (com fuso), local/link, participantes obrigatórios e opcionais, pauta, anexos. Calendários com fuso convertem automaticamente por participante.",
-    pegadinha: "Item simples por design; o risco é duvidar da conversão automática de fuso, que é justamente a solução do exemplo de aplicação do currículo."
+    pegadinha: "Item simples por design; o risco é duvidar da conversão automática de fuso, que é justamente a solução do exemplo de aplicação do currículo.",
+    fonte: "Microsoft Support — fusos horários, recorrência e lembretes em solicitações de reunião no Outlook: https://support.microsoft.com/pt-br/outlook/create-modify-or-delete-a-meeting-request-or-appointment-in-outlook-on-the-web ; https://support.microsoft.com/pt-br/outlook/getstarted/manage-time-zone-settings-in-outlook",
   },
   {
     id: "q-m3-35",
@@ -3059,7 +3088,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: webinars avançados e breakout rooms são destaque do ZOOM, não do Meet — troca de plataforma."
     },
     regra: "Teams = integração M365 / colaboração contínua; Meet = simplicidade, navegador (Google Workspace); Zoom = webinars, breakout rooms, grandes eventos. Gravação/compartilhamento/chat são comuns às três.",
-    pegadinha: "A pegadinha é confundir diferenciais: 'webinars/breakout' é Zoom (não Meet), e 'gravação' é comum a todas — o critério do cenário é a integração com M365."
+    pegadinha: "A pegadinha é confundir diferenciais: 'webinars/breakout' é Zoom (não Meet), e 'gravação' é comum a todas — o critério do cenário é a integração com M365.",
+    fonte: "Microsoft Support — calendário do Teams integrado ao Microsoft 365 e compartilhamento de calendário: https://support.microsoft.com/pt-br/teams/meetings/get-started-with-the-microsoft-teams-calendar",
   },
   {
     id: "q-m3-36",
@@ -3109,7 +3139,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: o exemplo de aplicação orienta 'desativar a entrada de participantes após o início' — é possível impedir a entrada, o oposto do afirmado."
     },
     regra: "Controle do anfitrião: lobby (aprovação prévia), remover participantes, bloquear vídeo/microfone, controlar quem compartilha, senha, impedir entrada após início.",
-    pegadinha: "A pegadinha é atribuir ao 'qualquer participante' (A) poderes exclusivos do anfitrião; C e D negam recursos que o currículo lista explicitamente."
+    pegadinha: "A pegadinha é atribuir ao 'qualquer participante' (A) poderes exclusivos do anfitrião; C e D negam recursos que o currículo lista explicitamente.",
+    fonte: "Google Meet Help — controles do anfitrião, gestão de participantes e moderação: https://support.google.com/meet/answer/16229038?co=GENIE.Platform%3DDesktop&hl=pt-br",
   },
   {
     id: "q-m3-38",
@@ -3160,7 +3191,8 @@ id: "q-m1-09",
       D: "INCORRETA (para o enunciado). Transparência aos participantes e base legal adequada são elementos de governança; o consentimento é exigido quando essa for a hipótese legal aplicável."
     },
     regra: "Política de gravação: base legal adequada e transparência, quando/quem grava, armazenamento, prazo de retenção, acesso, compartilhamento, proteção e exclusão. Limite de participantes não é elemento da política.",
-    pegadinha: "A pegadinha é a inversão do comando ('NÃO é essencial'): três alternativas são itens reais da política; só o número máximo de participantes é alheio a ela."
+    pegadinha: "A pegadinha é a inversão do comando ('NÃO é essencial'): três alternativas são itens reais da política; só o número máximo de participantes é alheio a ela.",
+    fonte: "Microsoft Support — gravações de reuniões no Teams e Google Meet — consentimento/permissões de gravação: https://support.microsoft.com/pt-br/teams/meetings/play-share-and-download-meeting-recordings-in-microsoft-teams ; https://support.google.com/meet/answer/9308681?co=GENIE.Platform%3DDesktop&hl=pt-br. A fonte do requisito jurídico aplicável à política de gravação ainda precisa de validação específica.",
   },
   {
     id: "q-m3-40",
