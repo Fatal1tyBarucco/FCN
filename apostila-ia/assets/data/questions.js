@@ -761,19 +761,19 @@ id: "q-m1-09",
     enunciado: "Sobre a diferença entre sincronização e backup no OneDrive, qual afirmação é correta?",
     alternativas: [
       { letra: "A", texto: "Sincronização e backup são a mesma funcionalidade, mudando apenas o nome do serviço." },
-      { letra: "B", texto: "Sincronização é propagação bidirecional entre local e nuvem (inclusive de alterações maliciosas); backup é cópia independente e imutável." },
+      { letra: "B", texto: "Sincronização propaga alterações entre local e nuvem (inclusive alterações maliciosas); backup é uma cópia independente para recuperação, idealmente versionada e protegida contra alteração/exclusão." },
       { letra: "C", texto: "Sincronização é apenas download de arquivos para a nuvem, sem retorno de alterações." },
       { letra: "D", texto: "Backup propaga automaticamente todas as alterações locais para todos os dispositivos do usuário." }
     ],
     gabarito: "B",
-    justificativa: "O conteúdo do OneDrive (curriculumOneDrive15) define: 'Sincronização (Sync): cliente baixa cópia local e mantém sincronização bidirecional; alterações locais propagam para a nuvem e vice-versa' e alerta: 'OneDrive NÃO substitui backup corporativo completo; é sincronização, não backup imutável (ransomware pode propagar alterações maliciosas para a nuvem)'. O exercício registrado no conteúdo é este, com resposta B equivalente.",
+    justificativa: "O conteúdo do OneDrive (curriculumOneDrive15) define sincronização como manutenção de cópias locais e na nuvem, com alterações propagadas nos dois sentidos, e alerta que isso não substitui backup corporativo. Uma cópia de backup deve ser independente e recuperável; imutabilidade/versionamento são proteções recomendadas, não uma propriedade obrigatória de toda solução de backup. Ransomware pode afetar arquivos sincronizados, por isso são necessárias cópias separadas e testadas.",
     analise: {
       A: "INCORRETA. Erro conceitual: sinonímia. O conteúdo base separa explicitamente os dois conceitos (exercício 'sincronização × backup').",
-      B: "CORRETA. Reproduz as duas definições: propagação bidirecional × cópia independente/imutável.",
+      B: "CORRETA. Distingue propagação de alterações de uma cópia independente para recuperação; versionamento e imutabilidade acrescentam proteção contra alterações maliciosas.",
       C: "INCORRETA. Erro conceitual: descreve upload unidirecional; a sincronização é bidirecional (alterações da nuvem também voltam ao local).",
       D: "INCORRETA. Erro conceitual: descreve propagação (comportamento da sincronização) e a chama de backup — o oposto da imutabilidade exigida de um backup."
     },
-    regra: "Sincronização = espelhamento bidirecional (propaga alterações); backup = cópia independente para recuperação (recomendação 3-2-1 citada no conteúdo).",
+    regra: "Sincronização = espelhamento bidirecional (propaga alterações); backup = cópia independente para recuperação, idealmente versionada/imutável e testada (recomendação 3-2-1 citada no conteúdo).",
     pegadinha: "A alternativa D troca os rótulos dos dois conceitos — quem lê 'propaga alterações' e para aí marca D sem notar que a palavra usada foi 'backup'."
   },
   {
