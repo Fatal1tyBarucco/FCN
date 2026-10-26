@@ -949,7 +949,7 @@ id: "q-m1-09",
     nivel: "intermediario",
     topico: "m2-u1-t1-s1",
     assunto: "M2.1 Fundamentos — conceitos e componentes",
-    contexto: "Empresa com 20 estações de trabalho, 1 servidor de arquivos e 1 impressora de rede; as estações acessam arquivos e enviam trabalhos de impressão.",
+    contexto: "Empresa com 20 estações de trabalho, 1 servidor de arquivos, 1 servidor de impressão e 1 impressora de rede; as estações acessam arquivos e enviam trabalhos de impressão.",
     enunciado: "Qual a classificação correta dos dispositivos do cenário?",
     alternativas: [
       { letra: "A", texto: "Servidores: servidor de arquivos e servidor de impressão (gerencia a impressora); clientes: as 20 estações quando acessam arquivos ou enviam impressões; nós: todos os dispositivos; enlaces: cabos ou Wi-Fi." },
