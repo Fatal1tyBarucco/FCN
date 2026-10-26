@@ -3157,17 +3157,17 @@ var questoesBanco = [
     contexto: "Um relatório deve exibir cabeçalho e número de página, exceto na capa; as páginas seguintes devem manter esses elementos.",
     enunciado: "Qual recurso atende diretamente ao requisito?",
     alternativas: [
-      { letra: "A", texto: "Ativar Primeira Página Diferente nas configurações de cabeçalho e rodapé." },
-      { letra: "B", texto: "Aplicar negrito ao título da capa." },
+      { letra: "A", texto: "Aplicar negrito ao título da capa." },
+      { letra: "B", texto: "Ativar Primeira Página Diferente nas configurações de cabeçalho e rodapé." },
       { letra: "C", texto: "Inserir uma tabela vazia na capa." },
       { letra: "D", texto: "Converter o documento em texto simples." },
       { letra: "E", texto: "Desativar o cabeçalho em todo o documento." }
     ],
-    gabarito: "A",
+    gabarito: "B",
     justificativa: "A opção Primeira Página Diferente permite ocultar ou personalizar cabeçalho e rodapé da capa sem removê-los das páginas seguintes. Uma quebra de seção é útil quando partes do documento precisam de layouts ou numerações diferentes.",
     analise: {
-      A: "CORRETA. Permite configurar a primeira página separadamente, preservando os elementos nas seguintes.",
-      B: "INCORRETA. Negrito muda a aparência do texto, não a exibição do cabeçalho.",
+      A: "INCORRETA. Negrito muda a aparência do texto, não a exibição do cabeçalho.",
+      B: "CORRETA. Permite configurar a primeira página separadamente, preservando os elementos nas seguintes.",
       C: "INCORRETA. Tabelas não controlam cabeçalhos e rodapés.",
       D: "INCORRETA. Texto simples remove formatação e não atende à paginação.",
       E: "INCORRETA. Isso remove o elemento também das páginas que precisam exibi-lo."
@@ -3188,18 +3188,18 @@ var questoesBanco = [
     contexto: "Uma lista de solicitações recebe novas linhas semanalmente. A coluna calculada deve acompanhar os novos registros e os dados precisam de cabeçalhos e filtros.",
     enunciado: "Qual recurso é mais adequado para estruturar a lista?",
     alternativas: [
-      { letra: "A", texto: "Formatar o intervalo como Tabela do Excel, com cabeçalhos." },
+      { letra: "A", texto: "Colocar cada registro em uma planilha diferente." },
       { letra: "B", texto: "Mesclar todas as células da primeira linha." },
-      { letra: "C", texto: "Colocar cada registro em uma planilha diferente." },
+      { letra: "C", texto: "Formatar o intervalo como Tabela do Excel, com cabeçalhos." },
       { letra: "D", texto: "Converter os dados em imagens." },
       { letra: "E", texto: "Alinhar valores com espaços." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Tabelas do Excel estruturam dados, fornecem filtros e podem expandir-se com novas linhas; colunas calculadas e referências estruturadas facilitam a manutenção.",
     analise: {
-      A: "CORRETA. Tabelas estruturam listas, expandem-se com novos registros e facilitam filtros e fórmulas.",
+      A: "INCORRETA. Isso dificulta análise, filtragem e consolidação.",
       B: "INCORRETA. Células mescladas prejudicam a estrutura tabular.",
-      C: "INCORRETA. Isso dificulta análise, filtragem e consolidação.",
+      C: "CORRETA. Tabelas estruturam listas, expandem-se com novos registros e facilitam filtros e fórmulas.",
       D: "INCORRETA. Imagens não preservam dados editáveis e estruturados.",
       E: "INCORRETA. Espaços não substituem células, colunas ou referências."
     },
@@ -3219,19 +3219,19 @@ var questoesBanco = [
     contexto: "Uma planilha deve exibir apenas inscrições pendentes, restringir Status a uma lista aprovada e destacar prazos vencidos.",
     enunciado: "Qual combinação de recursos atende aos requisitos?",
     alternativas: [
-      { letra: "A", texto: "Filtro, Validação de Dados e Formatação Condicional." },
+      { letra: "A", texto: "Proteger a pasta e ocultar todas as linhas." },
       { letra: "B", texto: "Mesclar células, congelar painéis e usar negrito." },
       { letra: "C", texto: "Classificar, inserir comentário e mudar orientação da página." },
-      { letra: "D", texto: "Proteger a pasta e ocultar todas as linhas." },
+      { letra: "D", texto: "Filtro, Validação de Dados e Formatação Condicional." },
       { letra: "E", texto: "Usar apenas um gráfico de pizza." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Os três recursos atendem funções diferentes: filtro para exibição, validação para entradas permitidas e formatação condicional para destaque automático.",
     analise: {
-      A: "CORRETA. Filtro limita linhas exibidas; validação restringe entradas; formatação condicional destaca valores por regra.",
+      A: "INCORRETA. Ocultar tudo impede a análise e não valida os dados.",
       B: "INCORRETA. Esses recursos não implementam os três requisitos.",
       C: "INCORRETA. Classificação ordena dados, mas os outros recursos não validam entradas nem destacam vencimentos.",
-      D: "INCORRETA. Ocultar tudo impede a análise e não valida os dados.",
+      D: "CORRETA. Filtro limita linhas exibidas; validação restringe entradas; formatação condicional destaca valores por regra.",
       E: "INCORRETA. Um gráfico não substitui filtros, validação e regras de formatação."
     },
     regra: "Filtro seleciona o que fica visível; classificação muda a ordem; validação controla entradas.",
@@ -3250,20 +3250,20 @@ var questoesBanco = [
     contexto: "A equipe precisa distinguir endereçamento lógico, entrega fim a fim e transmissão física.",
     enunciado: "Qual associação está correta?",
     alternativas: [
-      { letra: "A", texto: "Rede: endereçamento lógico/roteamento; Transporte: comunicação fim a fim; Física: transmissão de bits." },
+      { letra: "A", texto: "Enlace: endereços IP públicos; Transporte: resolução de nomes." },
       { letra: "B", texto: "Física: endereços IP; Rede: conectores; Transporte: nomes DNS." },
       { letra: "C", texto: "Aplicação: encaminhamento de quadros; Enlace: aplicações do usuário." },
       { letra: "D", texto: "Sessão: sinais ópticos; Apresentação: rotas IP." },
-      { letra: "E", texto: "Enlace: endereços IP públicos; Transporte: resolução de nomes." }
+      { letra: "E", texto: "Rede: endereçamento lógico/roteamento; Transporte: comunicação fim a fim; Física: transmissão de bits." }
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "No OSI, Rede trata de endereçamento lógico e encaminhamento; Transporte oferece comunicação entre processos; Física transmite bits pelo meio.",
     analise: {
-      A: "CORRETA. Essas funções correspondem às camadas Rede, Transporte e Física.",
+      A: "INCORRETA. IP pertence à camada Rede e DNS à Aplicação.",
       B: "INCORRETA. Troca funções de Rede, Física e Aplicação.",
       C: "INCORRETA. Quadros são tratados em Enlace; aplicações ficam na camada Aplicação.",
       D: "INCORRETA. Sinais são da camada Física; rotas são da camada Rede.",
-      E: "INCORRETA. IP pertence à camada Rede e DNS à Aplicação."
+      E: "CORRETA. Essas funções correspondem às camadas Rede, Transporte e Física."
     },
     regra: "As sete camadas são Física, Enlace, Rede, Transporte, Sessão, Apresentação e Aplicação.",
     pegadinha: "Não confundir endereço IP (Rede) com endereço MAC/quadros (Enlace).",
@@ -3312,17 +3312,17 @@ var questoesBanco = [
     contexto: "Considere HTTPS sobre TCP, sem HTTP/3/QUIC. O navegador acessará um domínio que não está no cache DNS.",
     enunciado: "Qual sequência didática descreve melhor o fluxo antes de receber o conteúdo HTTP?",
     alternativas: [
-      { letra: "A", texto: "Resolver o nome via DNS, estabelecer TCP, negociar TLS e enviar a requisição HTTP." },
-      { letra: "B", texto: "Enviar HTTP antes de resolver o nome e estabelecer transporte." },
+      { letra: "A", texto: "Enviar HTTP antes de resolver o nome e estabelecer transporte." },
+      { letra: "B", texto: "Resolver o nome via DNS, estabelecer TCP, negociar TLS e enviar a requisição HTTP." },
       { letra: "C", texto: "Executar DHCP para cada pacote e usar FTP para abrir a página." },
       { letra: "D", texto: "Negociar TLS sem identificar/endereço do servidor e dispensar transporte." },
       { letra: "E", texto: "Usar ARP para resolver o nome público na Internet inteira." }
     ],
-    gabarito: "A",
+    gabarito: "B",
     justificativa: "No cenário especificado, DNS resolve o nome, TCP estabelece transporte, TLS protege a conexão e HTTP troca requisições e respostas. HTTP/3 usa QUIC, por isso foi excluído do enunciado.",
     analise: {
-      A: "CORRETA. É o fluxo usual de HTTPS sobre TCP no cenário delimitado.",
-      B: "INCORRETA. A requisição precisa de destino e conexão apropriados.",
+      A: "INCORRETA. A requisição precisa de destino e conexão apropriados.",
+      B: "CORRETA. É o fluxo usual de HTTPS sobre TCP no cenário delimitado.",
       C: "INCORRETA. DHCP configura a rede; FTP não é o protocolo de acesso à página.",
       D: "INCORRETA. O cenário requer transporte e identificação do destino.",
       E: "INCORRETA. ARP resolve endereços de enlace IPv4 no domínio local, não nomes DNS."
@@ -3343,18 +3343,18 @@ var questoesBanco = [
     contexto: "Um aplicativo precisa distinguir protocolos de endereçamento de rede dos protocolos de transporte.",
     enunciado: "Qual afirmação está correta?",
     alternativas: [
-      { letra: "A", texto: "IPv4/IPv6 tratam de endereçamento e encaminhamento; TCP/UDP são protocolos de transporte com características distintas." },
+      { letra: "A", texto: "UDP garante entrega ordenada; TCP não mantém estado de conexão." },
       { letra: "B", texto: "IPv6 é transporte confiável e TCP é um endereço IP." },
-      { letra: "C", texto: "UDP garante entrega ordenada; TCP não mantém estado de conexão." },
+      { letra: "C", texto: "IPv4/IPv6 tratam de endereçamento e encaminhamento; TCP/UDP são protocolos de transporte com características distintas." },
       { letra: "D", texto: "IPv4 e IPv6 são protocolos de aplicação para consultar DNS." },
       { letra: "E", texto: "TCP e UDP definem máscaras e endereços de broadcast." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "IPv4/IPv6 endereçam e encaminham pacotes; TCP fornece transporte orientado à conexão com mecanismos de confiabilidade; UDP transporta datagramas sem garantir entrega ou ordenação.",
     analise: {
-      A: "CORRETA. Separa corretamente os protocolos de Internet dos protocolos de transporte.",
+      A: "INCORRETA. TCP fornece confiabilidade/ordenação; UDP não garante isso por padrão.",
       B: "INCORRETA. IPv6 não é transporte e TCP não é endereço IP.",
-      C: "INCORRETA. TCP fornece confiabilidade/ordenação; UDP não garante isso por padrão.",
+      C: "CORRETA. Separa corretamente os protocolos de Internet dos protocolos de transporte.",
       D: "INCORRETA. DNS é protocolo de aplicação; IP opera em nível de rede.",
       E: "INCORRETA. Esses são conceitos de endereçamento, não funções de transporte."
     },
@@ -3374,19 +3374,19 @@ var questoesBanco = [
     contexto: "Um notebook recebe configuração de rede automaticamente. Ao abrir um site por nome de domínio, o navegador precisa encontrar o servidor.",
     enunciado: "Qual associação de funções está correta?",
     alternativas: [
-      { letra: "A", texto: "DHCP configura parâmetros de rede; DNS resolve nomes; HTTPS protege a comunicação web por TLS." },
+      { letra: "A", texto: "DHCP resolve nomes públicos; DNS negocia certificados; HTTPS distribui IPs." },
       { letra: "B", texto: "DNS atribui o IP local; DHCP traduz nomes; HTTPS substitui o roteamento." },
       { letra: "C", texto: "HTTPS atribui IP; DHCP criptografa páginas; DNS transfere arquivos." },
-      { letra: "D", texto: "DHCP resolve nomes públicos; DNS negocia certificados; HTTPS distribui IPs." },
+      { letra: "D", texto: "DHCP configura parâmetros de rede; DNS resolve nomes; HTTPS protege a comunicação web por TLS." },
       { letra: "E", texto: "DNS e DHCP são protocolos de transporte que substituem TCP e UDP." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "DHCP distribui parâmetros como endereço IP e gateway; DNS resolve nomes; HTTPS é HTTP protegido por TLS.",
     analise: {
-      A: "CORRETA. Cada protocolo está associado à função adequada.",
+      A: "INCORRETA. As funções estão trocadas.",
       B: "INCORRETA. Troca as funções dos protocolos.",
       C: "INCORRETA. Nenhum desses protocolos tem as funções descritas.",
-      D: "INCORRETA. As funções estão trocadas.",
+      D: "CORRETA. Cada protocolo está associado à função adequada.",
       E: "INCORRETA. DNS e DHCP são protocolos de aplicação."
     },
     regra: "Obter IP por DHCP é diferente de resolver o nome do servidor por DNS.",
@@ -3405,20 +3405,20 @@ var questoesBanco = [
     contexto: "Uma equipe precisa transferir arquivos entre servidores por um canal seguro e já utiliza SSH.",
     enunciado: "Qual protocolo usa a infraestrutura SSH para transferir arquivos?",
     alternativas: [
-      { letra: "A", texto: "SFTP." },
+      { letra: "A", texto: "SMTP." },
       { letra: "B", texto: "FTP sem criptografia." },
       { letra: "C", texto: "ICMP Echo." },
       { letra: "D", texto: "DHCP." },
-      { letra: "E", texto: "SMTP." }
+      { letra: "E", texto: "SFTP." }
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "SFTP é um protocolo de transferência de arquivos sobre SSH. FTPS protege FTP com TLS; são tecnologias diferentes.",
     analise: {
-      A: "CORRETA. SFTP opera sobre SSH.",
+      A: "INCORRETA. SMTP transporta mensagens de e-mail.",
       B: "INCORRETA. FTP simples não protege conteúdo e credenciais por padrão.",
       C: "INCORRETA. ICMP Echo é usado em diagnóstico de conectividade.",
       D: "INCORRETA. DHCP distribui parâmetros de configuração.",
-      E: "INCORRETA. SMTP transporta mensagens de e-mail."
+      E: "CORRETA. SFTP opera sobre SSH."
     },
     regra: "SFTP usa SSH; FTPS usa TLS para proteger FTP.",
     pegadinha: "SFTP não é apenas outro nome para FTPS.",
@@ -3467,17 +3467,17 @@ var questoesBanco = [
     contexto: "Um computador usa o endereço 192.168.10.25/24.",
     enunciado: "Qual afirmação é correta?",
     alternativas: [
-      { letra: "A", texto: "Está no espaço IPv4 privado e não é, por si só, um endereço público roteável na Internet." },
-      { letra: "B", texto: "É um endereço loopback." },
+      { letra: "A", texto: "É um endereço loopback." },
+      { letra: "B", texto: "Está no espaço IPv4 privado e não é, por si só, um endereço público roteável na Internet." },
       { letra: "C", texto: "É necessariamente multicast." },
       { letra: "D", texto: "Todo endereço iniciado por 192 é privado." },
       { letra: "E", texto: "Um endereço privado nunca pode acessar a Internet." }
     ],
-    gabarito: "A",
+    gabarito: "B",
     justificativa: "192.168.10.25 pertence ao bloco privado 192.168.0.0/16; o acesso externo depende da arquitetura de borda.",
     analise: {
-      A: "CORRETA. 192.168.0.0/16 é um bloco privado.",
-      B: "INCORRETA. Loopback IPv4 usa 127.0.0.0/8.",
+      A: "INCORRETA. Loopback IPv4 usa 127.0.0.0/8.",
+      B: "CORRETA. 192.168.0.0/16 é um bloco privado.",
       C: "INCORRETA. Multicast IPv4 usa 224.0.0.0/4.",
       D: "INCORRETA. A classificação depende do bloco completo, não apenas do primeiro número.",
       E: "INCORRETA. Redes privadas podem acessar por gateways/NAT ou outras arquiteturas."
@@ -3498,18 +3498,18 @@ var questoesBanco = [
     contexto: "Uma organização tem departamentos com diferentes necessidades de hosts e quer reduzir a quantidade de rotas anunciadas.",
     enunciado: "Qual alternativa diferencia VLSM de sumarização?",
     alternativas: [
-      { letra: "A", texto: "VLSM usa prefixos de tamanhos diferentes conforme a necessidade; sumarização agrega redes contíguas quando os limites permitem." },
+      { letra: "A", texto: "VLSM exige máscaras idênticas; sumarização cria um endereço por host." },
       { letra: "B", texto: "VLSM criptografa pacotes; sumarização converte IPv4 em IPv6." },
-      { letra: "C", texto: "VLSM exige máscaras idênticas; sumarização cria um endereço por host." },
+      { letra: "C", texto: "VLSM usa prefixos de tamanhos diferentes conforme a necessidade; sumarização agrega redes contíguas quando os limites permitem." },
       { letra: "D", texto: "VLSM é transporte; sumarização é DNS." },
       { letra: "E", texto: "Ambos são nomes diferentes para DHCP." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "VLSM permite dimensionar sub-redes com prefixos variados; sumarização representa redes contíguas por um prefixo agregado quando o alinhamento permite.",
     analise: {
-      A: "CORRETA. Distingue dimensionamento de sub-redes e agregação de rotas.",
+      A: "INCORRETA. VLSM permite prefixos variáveis.",
       B: "INCORRETA. Não são funções de criptografia nem conversão de versões IP.",
-      C: "INCORRETA. VLSM permite prefixos variáveis.",
+      C: "CORRETA. Distingue dimensionamento de sub-redes e agregação de rotas.",
       D: "INCORRETA. São conceitos de endereçamento e roteamento.",
       E: "INCORRETA. DHCP configura interfaces, não substitui VLSM ou sumarização."
     },
@@ -3529,19 +3529,19 @@ var questoesBanco = [
     contexto: "Um analista precisa abreviar 2001:0db8:0000:0000:0000:ff00:0042:8329.",
     enunciado: "Qual representação é válida e preserva o endereço?",
     alternativas: [
-      { letra: "A", texto: "2001:db8::ff00:42:8329" },
+      { letra: "A", texto: "2001:db8:ff00:42:8329" },
       { letra: "B", texto: "2001:db8:::ff00:42:8329" },
       { letra: "C", texto: "2001:db8::ff00::42:8329" },
-      { letra: "D", texto: "2001:db8:ff00:42:8329" },
+      { letra: "D", texto: "2001:db8::ff00:42:8329" },
       { letra: "E", texto: "2001:0db8:0000:0000:0000:ff00:0042:8329:0000" }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Zeros à esquerda podem ser removidos e uma sequência contínua de hextetos zero pode ser substituída por ::, usada no máximo uma vez.",
     analise: {
-      A: "CORRETA. Remove zeros à esquerda e comprime uma sequência de hextetos zero com ::.",
+      A: "INCORRETA. Omitir hextetos sem :: altera o endereço.",
       B: "INCORRETA. Três dois-pontos consecutivos não são a forma válida de compressão.",
       C: "INCORRETA. :: aparece duas vezes e torna ambíguo o número de hextetos omitidos.",
-      D: "INCORRETA. Omitir hextetos sem :: altera o endereço.",
+      D: "CORRETA. Remove zeros à esquerda e comprime uma sequência de hextetos zero com ::.",
       E: "INCORRETA. Adiciona um hexteto e excede a estrutura de oito hextetos."
     },
     regra: "IPv6 usa oito hextetos; :: comprime uma sequência de hextetos zero.",
@@ -3560,20 +3560,20 @@ var questoesBanco = [
     contexto: "Um usuário relata lentidão e suspeita de falha em algum salto entre origem e destino.",
     enunciado: "Qual alternativa diferencia ping de traceroute/tracert?",
     alternativas: [
-      { letra: "A", texto: "Ping testa alcance e tempos de resposta; traceroute/tracert tenta revelar os saltos do caminho." },
+      { letra: "A", texto: "Ambos sempre funcionam mesmo quando mensagens de controle são filtradas." },
       { letra: "B", texto: "Ping lista todas as rotas da Internet; traceroute altera DNS." },
       { letra: "C", texto: "Ping configura IP; traceroute distribui endereços DHCP." },
       { letra: "D", texto: "Ping criptografa tráfego; traceroute instala certificados TLS." },
-      { letra: "E", texto: "Ambos sempre funcionam mesmo quando mensagens de controle são filtradas." }
+      { letra: "E", texto: "Ping testa alcance e tempos de resposta; traceroute/tracert tenta revelar os saltos do caminho." }
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "Ping ajuda a avaliar alcance e tempo de resposta; traceroute/tracert infere saltos do caminho. Filtragem pode limitar a saída.",
     analise: {
-      A: "CORRETA. Resume as funções diagnósticas principais.",
+      A: "INCORRETA. Filtros e ausência de respostas podem limitar resultados.",
       B: "INCORRETA. Nenhum comando faz essas ações.",
       C: "INCORRETA. Configuração IP e DHCP são funções distintas.",
       D: "INCORRETA. Esses comandos não executam essas funções.",
-      E: "INCORRETA. Filtros e ausência de respostas podem limitar resultados."
+      E: "CORRETA. Resume as funções diagnósticas principais."
     },
     regra: "Usar ferramentas de diagnóstico conforme o sintoma e interpretar respostas com cautela.",
     pegadinha: "A ausência de resposta de um salto não prova que o roteador esteja fora de serviço.",
@@ -3622,17 +3622,17 @@ var questoesBanco = [
     contexto: "O acesso por IP funciona, mas é necessário confirmar se api.exemplo.gov.br resolve para o endereço esperado.",
     enunciado: "Qual ferramenta consulta registros DNS desse nome?",
     alternativas: [
-      { letra: "A", texto: "nslookup ou dig." },
-      { letra: "B", texto: "ipconfig /release." },
+      { letra: "A", texto: "ipconfig /release." },
+      { letra: "B", texto: "nslookup ou dig." },
       { letra: "C", texto: "traceroute sem destino." },
       { letra: "D", texto: "chmod." },
       { letra: "E", texto: "tasklist." }
     ],
-    gabarito: "A",
+    gabarito: "B",
     justificativa: "nslookup e dig permitem consultar DNS e inspecionar respostas; o resultado ajuda a distinguir problemas de nome, cache, resolvedor ou registro.",
     analise: {
-      A: "CORRETA. Ambas consultam servidores DNS e mostram respostas de resolução.",
-      B: "INCORRETA. Libera a configuração DHCP no Windows.",
+      A: "INCORRETA. Libera a configuração DHCP no Windows.",
+      B: "CORRETA. Ambas consultam servidores DNS e mostram respostas de resolução.",
       C: "INCORRETA. Não consulta registros DNS diretamente.",
       D: "INCORRETA. Altera permissões em sistemas Unix-like.",
       E: "INCORRETA. Lista processos no Windows."
@@ -3653,18 +3653,18 @@ var questoesBanco = [
     contexto: "O usuário acessa um servidor pelo endereço IP, mas falha ao usar o nome DNS. Outros serviços de rede continuam funcionando.",
     enunciado: "Qual hipótese deve ser investigada primeiro?",
     alternativas: [
-      { letra: "A", texto: "Resolução DNS, comparando a consulta do nome com o endereço esperado." },
+      { letra: "A", texto: "Ausência total de conectividade IP." },
       { letra: "B", texto: "Falha total do cabo físico." },
-      { letra: "C", texto: "Ausência total de conectividade IP." },
+      { letra: "C", texto: "Resolução DNS, comparando a consulta do nome com o endereço esperado." },
       { letra: "D", texto: "Falha obrigatória de DHCP em todos os dispositivos." },
       { letra: "E", texto: "Necessidade de substituir TCP por FTP." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O acesso por IP demonstra conectividade; a falha específica por nome direciona a investigação para DNS, cache e configuração do resolvedor, sem excluir outras causas.",
     analise: {
-      A: "CORRETA. A diferença entre acesso por IP e por nome aponta inicialmente para DNS.",
+      A: "INCORRETA. O servidor é acessível por IP.",
       B: "INCORRETA. O acesso por IP indica alguma conectividade funcional.",
-      C: "INCORRETA. O servidor é acessível por IP.",
+      C: "CORRETA. A diferença entre acesso por IP e por nome aponta inicialmente para DNS.",
       D: "INCORRETA. O sintoma não prova falha de DHCP na rede.",
       E: "INCORRETA. FTP não corrige resolução de nomes."
     },
@@ -3684,19 +3684,19 @@ var questoesBanco = [
     contexto: "Uma equipe distribuída usa e-mail e chat para coordenar tarefas com prazos curtos.",
     enunciado: "Qual comportamento demonstra netiqueta profissional?",
     alternativas: [
-      { letra: "A", texto: "Usar assunto claro, linguagem respeitosa, contexto suficiente e canal adequado; evitar responder a todos sem necessidade." },
+      { letra: "A", texto: "Usar ironia e abreviações ambíguas." },
       { letra: "B", texto: "Escrever todas as mensagens em maiúsculas para indicar urgência." },
       { letra: "C", texto: "Encaminhar todas as conversas para todos os contatos." },
-      { letra: "D", texto: "Usar ironia e abreviações ambíguas." },
+      { letra: "D", texto: "Usar assunto claro, linguagem respeitosa, contexto suficiente e canal adequado; evitar responder a todos sem necessidade." },
       { letra: "E", texto: "Enviar decisões por canal pessoal e não registrar o resultado." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Netiqueta inclui respeito, clareza, concisão, contexto, pertinência e escolha apropriada do canal.",
     analise: {
-      A: "CORRETA. Favorece clareza, respeito e pertinência.",
+      A: "INCORRETA. Isso pode reduzir a compreensão e gerar conflito.",
       B: "INCORRETA. Maiúsculas podem ser interpretadas como grito e não substituem prioridade explícita.",
       C: "INCORRETA. Cópias indiscriminadas aumentam ruído e exposição.",
-      D: "INCORRETA. Isso pode reduzir a compreensão e gerar conflito.",
+      D: "CORRETA. Favorece clareza, respeito e pertinência.",
       E: "INCORRETA. Compromete rastreabilidade e continuidade."
     },
     regra: "Comunicação digital profissional deve ser respeitosa, inclusiva, pertinente e rastreável.",
@@ -3715,20 +3715,20 @@ var questoesBanco = [
     contexto: "Uma equipe publica vídeo de treinamento e documentos com gráficos para pessoas com diferentes necessidades sensoriais.",
     enunciado: "Qual conjunto melhora a acessibilidade?",
     alternativas: [
-      { letra: "A", texto: "Legendas/transcrição, texto alternativo significativo e informação que não dependa apenas da cor." },
+      { letra: "A", texto: "Repetir o mesmo texto alternativo em todas as imagens." },
       { letra: "B", texto: "Fonte pequena, baixo contraste e instruções baseadas apenas em cor." },
       { letra: "C", texto: "Converter todo texto em imagem." },
       { letra: "D", texto: "Remover títulos e estrutura semântica." },
-      { letra: "E", texto: "Repetir o mesmo texto alternativo em todas as imagens." }
+      { letra: "E", texto: "Legendas/transcrição, texto alternativo significativo e informação que não dependa apenas da cor." }
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "Legendas/transcrições apoiam quem não ouve o áudio; texto alternativo comunica o propósito da imagem; contraste e pistas além da cor ajudam diferentes usuários.",
     analise: {
-      A: "CORRETA. Oferece alternativas ao áudio e às imagens e evita depender só de cor.",
+      A: "INCORRETA. Texto alternativo deve transmitir a função ou informação relevante.",
       B: "INCORRETA. Cria barreiras visuais e cognitivas.",
       C: "INCORRETA. Reduz seleção, redimensionamento e acesso semântico.",
       D: "INCORRETA. Dificulta orientação e navegação assistiva.",
-      E: "INCORRETA. Texto alternativo deve transmitir a função ou informação relevante."
+      E: "CORRETA. Oferece alternativas ao áudio e às imagens e evita depender só de cor."
     },
     regra: "Acessibilidade exige conteúdo perceptível, navegável, semanticamente estruturado e com alternativas apropriadas.",
     pegadinha: "Texto alternativo deve ser significativo, não repetitivo ou decorativo sem necessidade.",
@@ -3777,17 +3777,17 @@ var questoesBanco = [
     contexto: "Durante uma reunião externa, a área de trabalho contém notificações e janelas com informações pessoais. O servidor precisa mostrar uma planilha específica.",
     enunciado: "Qual prática reduz melhor a exposição acidental?",
     alternativas: [
-      { letra: "A", texto: "Compartilhar somente a janela necessária, silenciar notificações e revisar o conteúdo antes de transmitir." },
-      { letra: "B", texto: "Compartilhar a tela inteira e deixar notificações ativas." },
+      { letra: "A", texto: "Compartilhar a tela inteira e deixar notificações ativas." },
+      { letra: "B", texto: "Compartilhar somente a janela necessária, silenciar notificações e revisar o conteúdo antes de transmitir." },
       { letra: "C", texto: "Abrir documentos sigilosos para encontrá-los rapidamente durante a reunião." },
       { letra: "D", texto: "Permitir controle remoto a todos sem necessidade." },
       { letra: "E", texto: "Publicar a senha da reunião no chat aberto." }
     ],
-    gabarito: "A",
+    gabarito: "B",
     justificativa: "Compartilhar apenas a janela necessária, revisar o conteúdo e limitar notificações reduz a exposição de dados fora do escopo da reunião.",
     analise: {
-      A: "CORRETA. Limita a superfície exposta e reduz vazamentos acidentais.",
-      B: "INCORRETA. Pode revelar dados sem relação com a reunião.",
+      A: "INCORRETA. Pode revelar dados sem relação com a reunião.",
+      B: "CORRETA. Limita a superfície exposta e reduz vazamentos acidentais.",
       C: "INCORRETA. Aumenta o risco de exibição acidental.",
       D: "INCORRETA. Concede privilégios excessivos.",
       E: "INCORRETA. Facilita acesso não autorizado."
@@ -3808,18 +3808,18 @@ var questoesBanco = [
     contexto: "Uma reunião institucional recebe participante desconhecido que interrompe a sessão e tenta compartilhar conteúdo ofensivo.",
     enunciado: "Qual resposta combina melhor contenção e prevenção?",
     alternativas: [
-      { letra: "A", texto: "Remover o intruso, restringir compartilhamento/entrada, ativar lobby ou senha e reportar o incidente." },
+      { letra: "A", texto: "Conceder privilégio de anfitrião ao participante." },
       { letra: "B", texto: "Publicar o link da reunião nas redes sociais." },
-      { letra: "C", texto: "Conceder privilégio de anfitrião ao participante." },
+      { letra: "C", texto: "Remover o intruso, restringir compartilhamento/entrada, ativar lobby ou senha e reportar o incidente." },
       { letra: "D", texto: "Desativar autenticação e deixar a reunião aberta." },
       { letra: "E", texto: "Ignorar o incidente e manter permissões abertas." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "A contenção exige remover o intruso, restringir recursos abusáveis, rever controles de entrada e registrar o evento conforme o procedimento institucional.",
     analise: {
-      A: "CORRETA. Contém o evento e reduz recorrência.",
+      A: "INCORRETA. Aumenta o risco e o alcance do intruso.",
       B: "INCORRETA. Amplia a exposição e pode atrair novos intrusos.",
-      C: "INCORRETA. Aumenta o risco e o alcance do intruso.",
+      C: "CORRETA. Contém o evento e reduz recorrência.",
       D: "INCORRETA. Facilita novas entradas não autorizadas.",
       E: "INCORRETA. Deixa o vetor de risco ativo."
     },
@@ -3839,19 +3839,19 @@ var questoesBanco = [
     contexto: "Um convite enviado a muitos participantes externos contém no título o nome de um paciente e no corpo detalhes confidenciais desnecessários.",
     enunciado: "Qual ajuste aplica melhor minimização e proteção de dados?",
     alternativas: [
-      { letra: "A", texto: "Usar título neutro, remover detalhes pessoais desnecessários e restringir os detalhes aos participantes autorizados." },
+      { letra: "A", texto: "Adicionar os endereços de todos os convidados no corpo do evento." },
       { letra: "B", texto: "Manter todos os detalhes porque os convidados receberam o convite." },
       { letra: "C", texto: "Tornar o calendário público." },
-      { letra: "D", texto: "Adicionar os endereços de todos os convidados no corpo do evento." },
+      { letra: "D", texto: "Usar título neutro, remover detalhes pessoais desnecessários e restringir os detalhes aos participantes autorizados." },
       { letra: "E", texto: "Copiar o conteúdo completo para canal público." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Convites podem expor dados em títulos, descrições, participantes e permissões; deve-se limitar o conteúdo ao necessário e controlar a visibilidade.",
     analise: {
-      A: "CORRETA. Reduz a quantidade de dados expostos e limita acesso.",
+      A: "INCORRETA. Expõe identificadores sem necessidade.",
       B: "INCORRETA. Receber convite não justifica expor dados desnecessários.",
       C: "INCORRETA. Amplia a exposição.",
-      D: "INCORRETA. Expõe identificadores sem necessidade.",
+      D: "CORRETA. Reduz a quantidade de dados expostos e limita acesso.",
       E: "INCORRETA. Divulga informação confidencial a público inadequado."
     },
     regra: "Aplicar minimização e controle de acesso também a metadados de calendários.",
@@ -3870,20 +3870,20 @@ var questoesBanco = [
     contexto: "Uma mensagem usa nome de exibição semelhante ao do gestor, exige credenciais com urgência e contém link para domínio parecido com o institucional.",
     enunciado: "Qual resposta é mais segura?",
     alternativas: [
-      { letra: "A", texto: "Não clicar nem fornecer credenciais; verificar por canal independente e reportar a mensagem." },
+      { letra: "A", texto: "Desativar filtros antiphishing." },
       { letra: "B", texto: "Responder com a senha para confirmar a identidade." },
       { letra: "C", texto: "Confiar no nome exibido, pois ele não pode ser falsificado." },
       { letra: "D", texto: "Encaminhar a mensagem a todos com o link ativo." },
-      { letra: "E", texto: "Desativar filtros antiphishing." }
+      { letra: "E", texto: "Não clicar nem fornecer credenciais; verificar por canal independente e reportar a mensagem." }
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "A aparência do remetente pode ser falsificada; verificar por canal independente, evitar o link e reportar reduz o risco. SPF/DKIM/DMARC ajudam na autenticação, mas não eliminam toda engenharia social.",
     analise: {
-      A: "CORRETA. Evita interação com o vetor suspeito e confirma o pedido fora do canal comprometido.",
+      A: "INCORRETA. Reduz a proteção.",
       B: "INCORRETA. Senhas não devem ser compartilhadas por e-mail.",
       C: "INCORRETA. O nome de exibição pode ser falsificado.",
       D: "INCORRETA. Pode ampliar a campanha maliciosa.",
-      E: "INCORRETA. Reduz a proteção."
+      E: "CORRETA. Evita interação com o vetor suspeito e confirma o pedido fora do canal comprometido."
     },
     regra: "Em suspeita de phishing, interromper interação, verificar independentemente e reportar.",
     pegadinha: "SPF, DKIM e DMARC não garantem que toda mensagem seja legítima ou segura.",
