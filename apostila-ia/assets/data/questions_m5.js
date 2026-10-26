@@ -993,7 +993,7 @@ const moduleQuestions5 = [
     regra: "RMSE ≥ MAE; grande diferença indica erros extremos.",
     pegadinha: "RMSE não é 'erro' — é 'raiz da média dos quadrados'.",
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
-  }
+  },
 
   {
     id: "q-m5-41", modulo: 5, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "avancado",
