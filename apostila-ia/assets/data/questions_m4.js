@@ -880,32 +880,32 @@ const moduleQuestions4 = [
     },
     regra: "Direitos do titular incluem acesso, correção, anonimização, bloqueio, eliminação nas hipóteses legais, portabilidade regulamentada e revogação do consentimento quando aplicável.",
     pegadinha: "Não confundir direitos previstos na LGPD com um direito absoluto de apagar todo dado ou registro.",
-    fonte: "Lei nº 13.709/2018, art. 18, especialmente incisos II a VI e IX."
+    fonte: "Lei nº 13.709/2018 (LGPD), art. 18, texto oficial compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-36", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD e Órgãos Competentes",
-    contexto: "A LGPD atribui à ANPD competências para zelar pela proteção de dados pessoais e fiscalizar o cumprimento da lei, inclusive em operações realizadas pelo Poder Público.",
-    enunciado: "Qual entidade possui competência legal para zelar pela proteção de dados pessoais e fiscalizar o cumprimento da LGPD, inclusive no setor público?",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — ANPD — fiscalização e sanções administrativas",
+    contexto: "Após apurar uma infração à LGPD, uma organização questiona se a ANPD pode adotar medidas administrativas ou se a proteção de dados é matéria exclusivamente judicial.",
+    enunciado: "Qual afirmação descreve melhor a competência da ANPD quanto à fiscalização e às sanções previstas na LGPD?",
     alternativas: [
-      { letra: "A", texto: "Ministério Público." },
-      { letra: "B", texto: "Agência Nacional de Proteção de Dados (ANPD)." },
-      { letra: "C", texto: "Polícia Federal." },
-      { letra: "D", texto: "Justiça Federal." },
-      { letra: "E", texto: "Superintendência de Tecnologia da Informação." }
+      { letra: "A", texto: "A ANPD pode fiscalizar o cumprimento da LGPD e aplicar as sanções administrativas previstas em lei, observados o procedimento aplicável e os limites legais." },
+      { letra: "B", texto: "A ANPD só pode publicar recomendações e nunca pode fiscalizar ou sancionar agentes de tratamento." },
+      { letra: "C", texto: "A ANPD pode impor qualquer penalidade, mesmo que não esteja prevista na legislação." },
+      { letra: "D", texto: "A competência da ANPD elimina todas as competências do Poder Judiciário e de outras autoridades legalmente competentes." },
+      { letra: "E", texto: "A ANPD só pode fiscalizar empresas privadas, nunca operações realizadas pelo Poder Público." }
     ],
-    gabarito: "B",
-    justificativa: "A Agência Nacional de Proteção de Dados (ANPD) tem competência legal para zelar pela proteção de dados, fiscalizar tratamentos em desconformidade e solicitar informações a entidades públicas. A base institucional está nos arts. 55-A e 55-J da LGPD, com redação dada pela Lei nº 15.352/2026. Ministério Público, Polícia Federal e Justiça Federal têm atribuições distintas; uma superintendência de TI não substitui a autoridade nacional de proteção de dados.",
+    gabarito: "A",
+    justificativa: "A LGPD atribui à ANPD competências de fiscalização e de aplicação das sanções administrativas legalmente previstas. O exercício dessas competências deve respeitar a lei, o procedimento aplicável e as garantias pertinentes; a atuação administrativa não elimina as atribuições judiciais ou de outras autoridades nos respectivos âmbitos. A ANPD também possui competências relativas a tratamentos realizados pelo Poder Público.",
     analise: {
-      A: "INCORRETA. Ministério Público pode agir em âmbito criminal, mas não é o órgão de monitoramento da LGPD.",
-      B: "CORRETA. A ANPD possui competências legais de fiscalização, inclusive em relação a tratamentos realizados pelo Poder Público.",
-      C: "INCORRETA. Polícia Federal não é o órgão regulador da LGPD.",
-      D: "INCORRETA. Justiça Federal atua em casos de infração, não no monitoramento sistemático.",
-      E: "INCORRETA. Superintendências de TI são órgãos administrativos, não reguladores."
+      A: "CORRETA. A fiscalização e a aplicação das sanções previstas na LGPD integram as competências legais da ANPD, sujeitas aos limites e procedimentos aplicáveis.",
+      B: "INCORRETA. A lei prevê competências fiscalizatórias e sancionatórias para a ANPD.",
+      C: "INCORRETA. A autoridade deve atuar dentro das sanções e dos limites estabelecidos em lei.",
+      D: "INCORRETA. A competência administrativa da ANPD não elimina as atribuições do Judiciário ou de outras autoridades.",
+      E: "INCORRETA. A LGPD também prevê competências da ANPD relacionadas ao tratamento de dados pelo Poder Público."
     },
-    regra: "A ANPD zela pela proteção de dados e fiscaliza o cumprimento da LGPD; também possui competências específicas relativas ao tratamento realizado pelo Poder Público.",
-    pegadinha: "Não confundir a fiscalização administrativa da LGPD pela ANPD com competências judiciais, criminais ou de controle interno.",
-    fonte: "Lei nº 13.709/2018, arts. 55-A e 55-J, texto oficial com redação dada pela Lei nº 15.352/2026: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm; LGPD compilada: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
+    regra: "A ANPD fiscaliza o cumprimento da LGPD e aplica as sanções administrativas previstas em lei, respeitando os limites e procedimentos aplicáveis.",
+    pegadinha: "Competência administrativa não significa poder ilimitado nem exclusividade sobre todas as consequências judiciais ou criminais.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 52, 55-J e 55-K, com alterações aplicáveis: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Lei nº 15.352/2026: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm."
   },
 
   { id: "q-m4-37", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
