@@ -1294,3 +1294,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits recentes: correção de contraste nos simuladores; sincronização de `docs/MATRIZ_COBERTURA.csv`; registros de auditoria em `docs/PENDENCIAS.md` e `docs/RELATORIO_TESTES.md`. O HEAD deve ser consultado antes de associar qualquer execução de CI à branch.
 - Preservar PR #17 como Draft; não fazer merge. Executar as tarefas em lotes coerentes e evitar commits redundantes que reiniciem os mesmos testes.
 
+## Revalidação aprovada e foco da próxima etapa — 2026-10-26
+
+- Workflow [40410948115](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40410948115) concluiu com `success` para o SHA de código `4a4ab1f2016bc4afaf0b8afea6dc4dcbe9e4f814`. Sintaxe, matriz, rastreabilidade, validação estrutural, heurísticas, smoke test Chromium em `file://` e regressões interativas com axe-core passaram.
+- A falha intermediária mostrou que uma cor clara global era ilegível em fundo branco. A correção final usa `#4b5563` sobre fundos claros e `#cbd5e1` dentro dos painéis escuros dos seis simuladores; o run final passou.
+- A revisão focal corrigiu a contradição de gabarito/justificativa em `q-m1-01`: a alternativa D agora condiciona o atendimento à confirmação do plano elegível e dos limites de armazenamento no contrato/documentação.
+- Métricas estruturais atuais: 8 módulos, 132 tópicos, 295 subtópicos, 888 exemplos e 592 exercícios; 460 flashcards e 399 questões reconhecidos no artefato de auditoria. São contagens estruturais, não certificação semântica.
+- A auditoria identificou 112 questões sem fonte no campo examinado (M1=36, M2=40, M3=36). A distribuição de gabaritos MC no M1 é A=4, B=15, C=5, D=2, E=0 em 26 itens. Próxima tarefa: revisão em lotes, começando por fontes primárias e análise de gabaritos do M1; não inventar citações nem alterar gabaritos corretos para balancear letras.
+- Estado de acessibilidade: regressão automatizada aprovada no SHA acima. Leitor de tela, auditoria manual WCAG e testes em dispositivos físicos continuam pendentes.
+- O relatório e a lista de pendências foram atualizados após o run. Esses commits são documentais; registrar separadamente que o workflow validou o SHA de código indicado, sem afirmar que executou sobre os SHAs documentais posteriores.
+- Manter PR #17 aberto e Draft; sem merge até concluir revisão semântica, fontes, acessibilidade manual e compatibilidade.
+
