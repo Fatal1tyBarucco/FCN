@@ -1026,6 +1026,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo: `2b8ab1f702535487573e44931b2204bac1c1c50e`; as questões q-m5-21 e q-m5-25 foram reescritas no commit `3319f3dfed4db198b09a78e5251d90b51b83d391`.
 - Revisão focal; validar sintaxe, esquema e CI no HEAD final.
 
+## Auditoria semântica incremental — M5 q-m5-31 a q-m5-35 (2026-10-26)
+
+- q-m5-31: reescrita para comparar prompts com critérios prévios, casos representativos, condições controladas, versões registradas e métricas compatíveis com o risco.
+- q-m5-32: reescrita sobre governança de prompts, incluindo versão, responsável, finalidade, histórico de mudanças, testes, critérios de aceite e monitoramento.
+- q-m5-33: reescrita para tratar segredos e injeção de prompt em ambiente com documentos externos/ferramentas; credenciais devem ser geridas fora do prompt e protegidas por privilégio mínimo.
+- q-m5-34: corrigida expressão “imputa prompt” e ampliada a sequência de implantação para incluir testes adversariais, revisão, aprovação, implantação controlada, monitoramento e reversão.
+- q-m5-35: reescrita para tratar generalização diante de mudança de distribuição entre contextos, sem afirmar que um teste original garante desempenho universal.
+- Commit de conteúdo: `c130a700c5856f517e340c5a706301a558f09ebf`.
+- Fontes atualizadas incluem NIST AI 600-1, NIST AI RMF, scikit-learn e OWASP LLM Prompt Injection Prevention Cheat Sheet. Revisão focal; validar sintaxe, esquema e CI no HEAD final.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
