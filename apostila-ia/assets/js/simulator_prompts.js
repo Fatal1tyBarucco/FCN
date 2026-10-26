@@ -185,13 +185,13 @@
     var html = '<div class="sim-prompts-bloco"><h4>Editor de prompts</h4>';
     html += '<p class="sim-prompts-sub">Preencha os campos abaixo. A avaliação usa critérios heurísticos fixos (não é IA real).</p>';
     html += '<div class="sim-prompts-field"><label class="sim-prompts-label">Contexto (quem sou eu? quem é o público?)</label>';
-    html += '<textarea id="prom-ctx" class="sim-prompts-input" placeholder="Ex.: Sou estudante de concurso público. O público é candidatos a TI.">' + esc('') + '</textarea></div>';
+    html += '<textarea id="prom-ctx" aria-label="Contexto do prompt" class="sim-prompts-input" placeholder="Ex.: Sou estudante de concurso público. O público é candidatos a TI.">' + esc('') + '</textarea></div>';
     html += '<div class="sim-prompts-field"><label class="sim-prompts-label">Objetivo (o que quero que aconteça?)</label>';
-    html += '<textarea id="prom-obj" class="sim-prompts-input" placeholder="Ex.: Explique sub-redes IPv4 em 3 parágrafos.">' + esc('') + '</textarea></div>';
+    html += '<textarea id="prom-obj" aria-label="Objetivo do prompt" class="sim-prompts-input" placeholder="Ex.: Explique sub-redes IPv4 em 3 parágrafos.">' + esc('') + '</textarea></div>';
     html += '<div class="sim-prompts-field"><label class="sim-prompts-label">Restrições (limite de palavras, tom, formato de saída?)</label>';
-    html += '<textarea id="prom-res" class="sim-prompts-input" placeholder="Ex.: Máximo 150 palavras, tom didático, saída em JSON.">' + esc('') + '</textarea></div>';
+    html += '<textarea id="prom-res" aria-label="Restrições do prompt" class="sim-prompts-input" placeholder="Ex.: Máximo 150 palavras, tom didático, saída em JSON.">' + esc('') + '</textarea></div>';
     html += '<div class="sim-prompts-field"><label class="sim-prompts-label">Formato de saída (como a resposta deve ser estruturada?)</label>';
-    html += '<textarea id="prom-fmt" class="sim-prompts-input" placeholder="Ex.: Parágrafos curtos com exemplo numérico.">' + esc('') + '</textarea></div>';
+    html += '<textarea id="prom-fmt" aria-label="Formato de saída do prompt" class="sim-prompts-input" placeholder="Ex.: Parágrafos curtos com exemplo numérico.">' + esc('') + '</textarea></div>';
     html += '<button type="button" class="sim-prompts-btn" data-act="prom-avaliar">Avaliar prompt</button>';
     html += '<button type="button" class="sim-prompts-btn" data-act="prom-simular">Simular saída (local)</button>';
     html += '<button type="button" class="sim-prompts-btn" data-act="prom-reset">Nova avaliação</button>';
