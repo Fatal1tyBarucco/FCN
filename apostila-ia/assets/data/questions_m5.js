@@ -1003,7 +1003,7 @@ const moduleQuestions5 = [
     alternativas: [
       { letra: "A", texto: "Acrescentar 'não invente' ao prompt e considerar o risco resolvido." },
       { letra: "B", texto: "Aumentar o tamanho das respostas para incluir mais contexto." },
-      { letra: "C", texto: "Apagar registros de conversa para evitar reutilização de respostas erradas." },
+      { letra: "C", texto: "Apagar registros indiscriminadamente, sem corrigir a base documental nem avaliar novas respostas, e declarar o problema resolvido." },
       { letra: "D", texto: "Ancorar respostas em atos vigentes recuperados, exigir evidência citável, encaminhar lacunas a uma pessoa e medir fidelidade." },
       { letra: "E", texto: "Completar prazos ausentes com base na prática de outros órgãos." }
     ],
@@ -1012,7 +1012,7 @@ const moduleQuestions5 = [
     analise: {
       A: "INCORRETA. Instrução isolada não garante fidelidade nem verifica a resposta.",
       B: "INCORRETA. Mais texto pode ampliar o erro sem fornecer evidência.",
-      C: "INCORRETA. Apagar registros reduz a capacidade de auditar e corrigir.",
+      C: "INCORRETA. A retenção deve seguir política de privacidade e guarda aplicável; apagar registros, por si só, não corrige a fonte nem demonstra redução das respostas sem fundamento.",
       D: "CORRETA. Combina fonte autoritativa, tratamento seguro de lacunas, supervisão e medição.",
       E: "INCORRETA. A prática de outro órgão não fundamenta o prazo legal aplicável."
     },
@@ -1027,21 +1027,21 @@ const moduleQuestions5 = [
     enunciado: "Qual revisão torna o procedimento mais controlável para uso institucional?",
     alternativas: [
       { letra: "A", texto: "Retirar restrições e pedir respostas criativas para cobrir lacunas." },
-      { letra: "B", texto: "Definir documento e versão vigentes, tarefa e formato, exigir trecho de suporte, estabelecer conduta para lacunas e dados sensíveis e avaliar resultados." },
+      { letra: "B", texto: "Identificar versões e vigência dos documentos, respeitar a hierarquia normativa aplicável, exigir evidência recuperada e verificável, encaminhar lacunas ou conflitos não resolvidos, minimizar dados e avaliar resultados." },
       { letra: "C", texto: "Adicionar apenas uma persona de especialista." },
       { letra: "D", texto: "Incluir todos os dados pessoais disponíveis para maximizar o contexto." },
       { letra: "E", texto: "Pedir citações legais mesmo quando a norma correspondente não for recuperada." }
     ],
     gabarito: "B",
-    justificativa: "O prompt institucional deve delimitar fonte e vigência, tarefa, restrições e formato; também precisa definir comportamento quando a base não responde, minimizar dados e permitir avaliação.",
+    justificativa: "O procedimento deve identificar documentos e versões vigentes, respeitar a hierarquia normativa definida pela instituição e registrar a data de referência. A resposta precisa apresentar evidência recuperada e verificável; diante de lacunas ou conflitos não resolvidos, deve se abster ou encaminhar o caso. Minimização de dados e testes periódicos completam o controle.",
     analise: {
       A: "INCORRETA. Criatividade irrestrita aumenta o risco de respostas sem fundamento.",
-      B: "CORRETA. Explicita os componentes do pedido e os controles de fidelidade, privacidade e avaliação.",
+      B: "CORRETA. Combina controle de versão e vigência, evidência verificável, tratamento de conflitos e lacunas, minimização de dados e avaliação periódica.",
       C: "INCORRETA. Persona não resolve fonte versionada, lacunas, formato e validação.",
       D: "INCORRETA. Contraria a minimização de dados e pode expor informação desnecessária.",
       E: "INCORRETA. Solicitar citações sem evidência pode produzir referências inventadas."
     },
-    regra: "Prompt é parte do controle; fonte versionada, validação, minimização de dados e avaliação continuam necessárias.",
+    regra: "Prompt é parte do controle; fonte versionada, hierarquia documental, evidência recuperada, tratamento de lacunas, minimização de dados e avaliação continuam necessários.",
     pegadinha: "Dizer 'se não souber, diga que não sabe' é insuficiente sem fonte, evidência e encaminhamento.",
     fonte: "Currículo M5 — modulo-5-unidade-4-topico-4 (casos aplicados de engenharia de prompts)."
   },
