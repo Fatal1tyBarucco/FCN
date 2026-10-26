@@ -755,119 +755,119 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-31", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m5-u4-t2-s1", assunto: "5.4 — Avaliação de prompts",
-    contexto: "Uma equipe compara duas configurações de temperatura em um assistente de atendimento.",
-    enunciado: "A avaliação de prompts de forma confiável exige:",
+    nivel: "intermediario", topico: "m5-u4-t2-s1", assunto: "5.4 — Avaliação comparativa de prompts",
+    contexto: "Uma equipe compara duas versões de um prompt para classificar solicitações de atendimento e precisa decidir qual delas reduz erros sem piorar a segurança.",
+    enunciado: "Qual procedimento oferece evidência mais confiável para comparar as duas versões?",
     alternativas: [
-      { letra: "A", texto: "Conjunto de teste versionado e métrica definida antes da execução." },
-      { letra: "B", texto: "Medir apenas pela impressão do resultado." },
-      { letra: "C", texto: "Executar cada prompt em modelo diferente." },
-      { letra: "D", texto: "Omitir métrica." },
-      { letra: "E", texto: "Comparar apenas um caso." }
+      { letra: "A", texto: "Definir previamente critérios e casos de teste representativos, manter condições comparáveis, registrar versões e parâmetros e avaliar erros relevantes em várias execuções quando houver variabilidade." },
+      { letra: "B", texto: "Escolher a versão que produziu a resposta mais convincente em um único exemplo." },
+      { letra: "C", texto: "Alterar os critérios de sucesso depois de observar os resultados de cada versão." },
+      { letra: "D", texto: "Comparar as versões com conjuntos de dados e modelos diferentes, sem registrar essas diferenças." },
+      { letra: "E", texto: "Medir apenas o tamanho médio das respostas, independentemente da tarefa." }
     ],
     gabarito: "A",
-    justificativa: "Um conjunto de teste versionado e uma métrica definida antes da execução favorecem comparações mais consistentes e reproduzíveis. Também é necessário manter condições comparáveis, registrar configurações e considerar a variabilidade dos resultados.",
+    justificativa: "Uma avaliação comparativa útil exige critérios definidos antes do teste, exemplos representativos, condições de execução comparáveis e registro de versões, parâmetros e resultados. Para sistemas com saídas variáveis, múltiplas execuções podem ajudar a estimar a variabilidade. As métricas devem refletir a tarefa e seus riscos, incluindo erros críticos e não apenas uma impressão geral.",
     analise: {
-      A: "CORRETA. Conjunto versionado e métrica pré-definida reduzem mudanças oportunistas no critério de avaliação; a reprodutibilidade também depende de registrar as condições do teste.",
-      B: "INCORRETA. Impressão não é evidência.",
-      C: "INCORRETA. Modelo diferente descontextualiza a comparação.",
-      D: "INCORRETA. Métrica é essencial para comparação.",
-      E: "INCORRETA. Um caso não é conjunto de teste."
+      A: "CORRETA. O procedimento reduz comparações oportunistas e permite rastrear quais configurações produziram os resultados.",
+      B: "INCORRETA. Um único exemplo pode ser atípico e não estima desempenho geral.",
+      C: "INCORRETA. Alterar critérios após observar resultados introduz viés de avaliação.",
+      D: "INCORRETA. Mudanças não controladas impedem atribuir diferenças ao prompt com confiança.",
+      E: "INCORRETA. Tamanho da resposta, isoladamente, não mede correção, utilidade nem segurança."
     },
-    regra: "Avaliação por conjunto + métrica + versão.",
-    pegadinha: "Impressão não é evidência.",
-    fonte: "OpenAI — Evaluating AI Systems, 2024."
+    regra: "Compare prompts com critérios prévios, casos representativos, condições controladas, versões registradas e métricas adequadas ao risco.",
+    pegadinha: "Uma resposta convincente ou uma métrica única não demonstra que o prompt melhorou em todas as dimensões relevantes.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-32", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "avancado", topico: "m5-u4-t2-s2", assunto: "5.4 — Prompt como artefato de governança",
-    contexto: "Assistência de atendimento com prompt produz ação.",
-    enunciado: "O prompt funciona como artefato de governança quando:",
+    contexto: "Um assistente institucional produz respostas para servidores. A equipe precisa reconstruir qual instrução estava ativa quando uma resposta incorreta foi emitida e decidir se uma atualização pode ser implantada.",
+    enunciado: "Qual prática transforma o prompt em um artefato governável e auditável?",
     alternativas: [
-      { letra: "A", texto: "Está versionado, auditado e vinculado a critérios de aceite." },
-      { letra: "B", texto: "É inserido em chat sem registro." },
-      { letra: "C", texto: "Não possui restrições." },
-      { letra: "D", texto: "É compartilhado sem controle de acesso." },
-      { letra: "E", texto: "É alterado sem registo." }
+      { letra: "A", texto: "Versionar o prompt, identificar responsável e finalidade, registrar mudanças e parâmetros relevantes, manter testes e critérios de aceite e monitorar resultados após a implantação." },
+      { letra: "B", texto: "Manter o prompt apenas em uma conversa individual, sem cópia controlada ou histórico de alterações." },
+      { letra: "C", texto: "Permitir que qualquer pessoa altere a instrução em produção sem revisão para acelerar melhorias." },
+      { letra: "D", texto: "Considerar a aprovação inicial suficiente, independentemente de mudanças no modelo, nos dados ou no contexto de uso." },
+      { letra: "E", texto: "Registrar apenas o texto final da resposta, sem identificar a versão do prompt ou a configuração usada." }
     ],
     gabarito: "A",
-    justificativa: "Governança exige versionamento, auditoria e critérios de aceite — além de revisão por dono e medição contínua.",
+    justificativa: "Governança de prompts requer rastreabilidade do artefato e de seu uso: versão, finalidade, responsável, mudanças, parâmetros relevantes, critérios de avaliação, aprovação e monitoramento. O controle deve ser proporcional ao risco e integrado ao processo de mudança; um prompt versionado não garante, sozinho, qualidade ou segurança.",
     analise: {
-      A: "CORRETA. Versionamento + auditoria + critérios = artefato de governança.",
-      B: "INCORRETA. Registro é essencial para auditoria.",
-      C: "INCORRETA. Restrições são necessárias para segurança.",
-      D: "INCORRETA. Controle de acesso é exigido.",
-      E: "INCORRETA. Alterações sem registro comprometem a governança."
+      A: "CORRETA. A alternativa permite rastrear mudanças, testar antes de implantar e observar efeitos em produção.",
+      B: "INCORRETA. Sem histórico controlado, fica difícil reproduzir ou investigar o comportamento.",
+      C: "INCORRETA. Mudanças sem revisão e teste podem introduzir regressões e riscos.",
+      D: "INCORRETA. Alterações no modelo ou no contexto podem invalidar avaliações anteriores.",
+      E: "INCORRETA. Sem versão e configuração, o registro é insuficiente para atribuir o resultado à configuração usada."
     },
-    regra: "Prompt governável = versionado + avaliação + revisão.",
-    pegadinha: "Prompt não é só 'texto bonito'.",
-    fonte: "Microsoft — Responsible AI, 2024."
+    regra: "Governança de prompts combina versionamento, responsabilidade, histórico de mudanças, testes, critérios de aceite e monitoramento.",
+    pegadinha: "Versionar é necessário para rastreabilidade, mas não substitui avaliação nem revisão de mudanças.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-33", modulo: 5, formato: "ce", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-5-unidade-4-topico-3", assunto: "5.4 — Segurança e dados sensíveis",
-    contexto: "Prompt tenta extrair dados sensíveis.",
-    enunciado: "Afirmação: 'Inserir segredos no prompt é seguro, porque o modelo não os repetirá.'",
+    nivel: "avancado", topico: "modulo-5-unidade-4-topico-3", assunto: "5.4 — Segredos e injeção de prompt",
+    contexto: "Um assistente recebe documentos externos e pode usar ferramentas para consultar sistemas institucionais.",
+    enunciado: "Afirmação: 'É seguro inserir credenciais, chaves de API ou outros segredos diretamente no prompt, pois o modelo não os repetirá nem poderá revelá-los por meio de ferramentas.'",
     corrigir: true,
     gabarito: "errado",
-    trechoDeterminante: "A afirmação é falsa: o modelo pode expor ou derivar conteúdo do contexto por meio de injeção ou execução; segredos não devem estar no prompt.",
-    justificativa: "Segredos devem viver fora do prompt e ser protegidos por controle de acesso e verificação de saída.",
+    trechoDeterminante: "A afirmação é falsa: conteúdo fornecido ao modelo pode ser exposto por saídas, registros, integrações ou ataques de injeção; segredos devem ser geridos fora do prompt e protegidos por controles de acesso.",
+    justificativa: "Prompts e conteúdos de contexto não são um cofre de segredos. Dados sensíveis podem aparecer em saídas, logs ou integrações, e conteúdo não confiável pode tentar induzir o modelo a revelar informação ou usar ferramentas de forma indevida. Credenciais devem ser armazenadas em mecanismos próprios de gestão de segredos, concedidas com privilégio mínimo e nunca expostas desnecessariamente ao modelo.",
     analise: {
-      item: "INCORRETA. Segredos no prompt aumentam risco de exposição."
+      item: "INCORRETA. Não se deve confiar que o modelo sempre ocultará segredos; a prevenção exige gestão externa de credenciais, controle de acesso, validação e limites nas ferramentas."
     },
-    regra: "Segredos fora do prompt; controle por camadas.",
-    pegadinha: "'O modelo não repetiu' não é garantia.",
-    fonte: "MITRE — Prompt Injection, 2024."
+    regra: "Mantenha credenciais fora do prompt; use gestão de segredos, privilégio mínimo e controles sobre ferramentas e saídas.",
+    pegadinha: "A ausência de vazamento em um teste não garante que o segredo permanecerá protegido em outros contextos.",
+    fonte: "OWASP, LLM Prompt Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html; NIST AI 600-1: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-34", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "m5-u4-t3-s1", assunto: "5.4 — Implantação responsável",
-    contexto: "Equipe imputa prompt para atendimento.",
-    enunciado: "Uma conduta correta ao implantar um prompt em produção é:",
+    nivel: "avancado", topico: "m5-u4-t3-s1", assunto: "5.4 — Implantação responsável de prompts",
+    contexto: "Uma equipe altera um prompt que apoia o atendimento ao cidadão e pretende disponibilizar a nova versão aos usuários.",
+    enunciado: "Qual sequência representa uma implantação responsável?",
     alternativas: [
-      { letra: "A", texto: "Testar com casos adversariais e registrar parâmetros e versão." },
-      { letra: "B", texto: "Implantar sem teste." },
-      { letra: "C", texto: "Alterar o prompt a cada chamada." },
-      { letra: "D", texto: "Não registrar a versão." },
-      { letra: "E", texto: "Usar o prompt apenas em produção." }
+      { letra: "A", texto: "Testar casos representativos e adversariais, revisar resultados e riscos, registrar a versão e os parâmetros, aprovar a mudança, implantar de forma controlada e monitorar com possibilidade de reversão." },
+      { letra: "B", texto: "Publicar imediatamente a alteração e avaliar os erros somente se houver reclamações." },
+      { letra: "C", texto: "Alterar o prompt a cada chamada sem registrar as mudanças, para adaptar a resposta ao usuário." },
+      { letra: "D", texto: "Executar um único teste favorável e considerar dispensados testes futuros, mesmo após mudança de modelo." },
+      { letra: "E", texto: "Usar apenas em produção, porque testes offline não refletem qualquer comportamento real." }
     ],
     gabarito: "A",
-    justificativa: "Teste adversário, registro de versão e parâmetros são padrões de governança para prompts em produção.",
+    justificativa: "Uma mudança responsável deve passar por avaliação proporcional ao risco, incluindo casos comuns, limites e tentativas adversariais; registrar a configuração; obter revisão apropriada; e ser implantada com monitoramento e estratégia de reversão. A avaliação precisa ser repetida quando mudanças relevantes ocorrerem no prompt, modelo, ferramentas, dados ou contexto de uso.",
     analise: {
-      A: "CORRETA. Teste adversário + registro = implantação responsável.",
-      B: "INCORRETA. Implantação sem teste é arriscada.",
-      C: "INCORRETA. Alterar a cada chamada inviabiliza auditoria.",
-      D: "INCORRETA. Registro é essencial.",
-      E: "INCORRETA. Produtividade sem teste e registro é insegura."
+      A: "CORRETA. A sequência integra teste, revisão, rastreabilidade, implantação controlada e monitoramento.",
+      B: "INCORRETA. Esperar reclamações ignora falhas que podem não ser percebidas ou reportadas.",
+      C: "INCORRETA. Mudanças não registradas prejudicam rastreabilidade, comparação e investigação.",
+      D: "INCORRETA. Um teste isolado não cobre todos os riscos, e mudanças relevantes podem alterar o comportamento.",
+      E: "INCORRETA. Testes controlados são essenciais, ainda que devam ser complementados por monitoramento de produção."
     },
-    regra: "Implantação responsável = teste + registro + monitoramento.",
-    pegadinha: "Testar uma vez não basta: é necessário registrar a versão, monitorar e reavaliar quando o contexto mudar.",
-    fonte: "NIST — AI Risk Management Framework, 2023."
+    regra: "Implantação responsável: testar, revisar, versionar, aprovar, implantar de forma controlada, monitorar e permitir reversão.",
+    pegadinha: "Um teste favorável não substitui cobertura de casos adversariais nem avaliação após mudanças relevantes.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-35", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u2-t1-s1", assunto: "5.2 — Generalização",
-    contexto: "Um modelo treina com dados de um setor e é aplicado a outro.",
-    enunciado: "A generalização se refere a:",
+    nivel: "intermediario", topico: "m5-u2-t1-s1", assunto: "5.2 — Generalização e mudança de distribuição",
+    contexto: "Um modelo treinado com solicitações de uma secretaria urbana apresenta bons resultados no teste original, mas comete mais erros quando aplicado a uma secretaria rural cujas solicitações e vocabulário são diferentes.",
+    enunciado: "Qual interpretação é mais adequada para esse resultado?",
     alternativas: [
-      { letra: "A", texto: "A capacidade do modelo performar bem em dados nunca vistos." },
-      { letra: "B", texto: "A capacidade de memorizar os dados de treino." },
-      { letra: "C", texto: "A necessidade de mais dados rotulados." },
-      { letra: "D", texto: "A velocidade de treinamento." },
-      { letra: "E", texto: "A escolha do algoritmo." }
+      { letra: "A", texto: "O modelo generaliza perfeitamente, pois teve bom desempenho no teste original." },
+      { letra: "B", texto: "O modelo pode não generalizar para a nova população devido à mudança de distribuição; é necessário avaliar dados representativos do novo contexto." },
+      { letra: "C", texto: "A queda de desempenho prova que o algoritmo não pode aprender nenhum padrão útil." },
+      { letra: "D", texto: "A única solução possível é aumentar o número de parâmetros, sem analisar os dados." },
+      { letra: "E", texto: "O resultado não importa, porque o teste original já provou a qualidade em qualquer população." }
     ],
-    gabarito: "A",
-    justificativa: "Generalização é a capacidade de ir bem em dados nunca vistos — o objetivo real do aprendizado.",
+    gabarito: "B",
+    justificativa: "Generalização refere-se ao desempenho em dados não usados no ajuste, mas esse desempenho depende de quão bem os dados de avaliação representam o contexto de uso. Uma mudança na distribuição, no vocabulário ou na relação entre atributos e resultados pode reduzir a qualidade. É necessário medir o desempenho no novo contexto, investigar erros e considerar adaptação ou novo treinamento conforme a evidência.",
     analise: {
-      A: "CORRETA. Generalização = bom desempenho em dados nunca vistos.",
-      B: "INCORRETA. Memorizar treino é overfitting, não generalização.",
-      C: "INCORRETA. Mais dados rotulados não define generalização.",
-      D: "INCORRETA. Velocidade de treinamento não é generalização.",
-      E: "INCORRETA. Escolha de algoritmo é estratégia, não definição de generalização."
+      A: "INCORRETA. Bom desempenho no teste original não garante desempenho em uma população com distribuição diferente.",
+      B: "CORRETA. A queda sugere possível mudança de distribuição e justifica avaliação representativa do contexto de destino.",
+      C: "INCORRETA. O resultado mostra limite de transferência para esse contexto, não ausência de qualquer padrão útil.",
+      D: "INCORRETA. Aumentar parâmetros sem diagnóstico não resolve necessariamente a mudança de distribuição.",
+      E: "INCORRETA. Um teste representa apenas as condições e a população cobertas por seu desenho."
     },
-    regra: "Generalização = 'desempenho em dados nunca vistos'.",
-    pegadinha: "Generalização não é 'decorar o treino' — é 'funcionar em novos casos'.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    regra: "Generalização precisa ser avaliada para a população e o contexto de uso; mudança de distribuição pode reduzir desempenho.",
+    pegadinha: "Desempenho em um teste não garante qualidade em toda população ou em contextos futuros.",
+    fonte: "scikit-learn, Cross-validation: evaluating estimator performance: https://scikit-learn.org/stable/modules/cross_validation.html; NIST AI RMF 1.0: https://doi.org/10.6028/NIST.AI.100-1."
   },
 
   { id: "q-m5-36", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
