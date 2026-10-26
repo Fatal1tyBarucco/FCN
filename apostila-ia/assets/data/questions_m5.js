@@ -541,24 +541,24 @@ const moduleQuestions5 = [
     contexto: "Um atendente recebe resposta do assistente com numeração de prazo inexistente.",
     enunciado: "A 'alucinação' de um modelo generativo ocorre quando:",
     alternativas: [
-      { letra: "A", texto: "Gera texto coerente, mas factualmente incorreto, sem reconhecimento de incerteza." },
+      { letra: "A", texto: "Gera conteúdo plausível, mas factualmente incorreto, contraditório ou sem suporte verificável." },
       { letra: "B", texto: "Repete fielmente o prompt enviado." },
       { letra: "C", texto: "Requer mais memória que o necessário." },
       { letra: "D", texto: "Demora a responder." },
       { letra: "E", texto: "Produz apenas imagens." }
     ],
     gabarito: "A",
-    justificativa: "Alucinação é a produção de afirmação factualmente falsa, linguisticamente coerente. Não é repetição de prompt, gargalo de memória, latência ou produção apenas de imagem.",
+    justificativa: "Alucinação (também chamada confabulação em algumas referências) ocorre quando o sistema gera conteúdo incorreto, falso, contraditório ou sem fundamento, que pode parecer convincente. Não exige que o texto seja sempre fluente nem que o modelo deixe explicitamente de reconhecer a incerteza.",
     analise: {
-      A: "CORRETA. Alucinação = plausibilidade sem fundamento factual.",
+      A: "CORRETA. A saída pode parecer plausível, mas conter afirmações incorretas ou sem suporte verificável.",
       B: "INCORRETA. Repetição de prompt é 'echo', não alucinação.",
       C: "INCORRETA. Memória excessiva não é alucinação.",
       D: "INCORRETA. Latência é tempo de resposta, não alucinação.",
-      E: "INCORRETA. Geração de imagem é um modalidade, não alucinação."
+      E: "INCORRETA. Geração de imagem é uma modalidade de saída, não a definição de alucinação."
     },
     regra: "Alucinação = plausibilidade sem fundamento factual.",
     pegadinha: "Não confunda alucinação com erro de digitação do sistema.",
-    fonte: "Wikipedia — Hallucination (artificial intelligence), 2024."
+    fonte: "NIST — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1), 2024. https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-23", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -598,17 +598,17 @@ const moduleQuestions5 = [
       { letra: "E", texto: "Encerrar a conversa." }
     ],
     gabarito: "B",
-    justificativa: "Recuperação aumentada (RAG) ancora a geração a fontes verificáveis e exibir fontes permite auditoria, reduzindo alucinações. Aumentar temperatura (A) aumenta variabilidade; ignorar contexto (C) aumenta alucinação; modelo sem limites (D) é arriscado; encerrar (E) não resolve o problema.",
+    justificativa: "A geração aumentada por recuperação (RAG) fornece contexto recuperado para fundamentar a resposta e pode melhorar atualidade e factualidade; ainda assim, a relevância e a vigência das fontes recuperadas, a correspondência entre evidência e afirmação e a saída gerada precisam ser verificadas. Aumentar a temperatura não é uma mitigação confiável; ignorar o contexto remove a fundamentação; encerrar a conversa não corrige o processo.",
     analise: {
       A: "INCORRETA. Aumentar temperatura aumenta a variabilidade e o risco de alucinação.",
-      B: "CORRETA. Recuperação + fontes ancora a geração e permite auditoria.",
-      C: "INCORRETA. Ignorar contexto aumenta alucinação por conhecimento parâmetro.",
+      B: "CORRETA. Contexto recuperado e fontes verificáveis ajudam a fundamentar a resposta e permitem auditoria, sem garantir ausência de erros.",
+      C: "INCORRETA. Ignorar o contexto recuperado remove uma fonte de evidência e deixa a resposta depender mais do conhecimento aprendido pelo modelo, que pode estar incompleto ou desatualizado.",
       D: "INCORRETA. Modelo sem limites não é solução segura.",
       E: "INCORRETA. Encerrar não resolve o problema de alucinação."
     },
     regra: "Recuperação + fontes ancora a geração.",
-    pegadinha: "Temperatura mais alta não reduz alucinação.",
-    fonte: "Google Cloud — Prompt design best practices, 2024."
+    pegadinha: "RAG reduz certos riscos, mas não garante resposta correta: verifique a fonte, a vigência e a sustentação de cada afirmação."
+    fonte: "Google Cloud — Grounding in Gemini and grounding overview. https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/chat/chat-prompts."
   },
 
   { id: "q-m5-25", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
