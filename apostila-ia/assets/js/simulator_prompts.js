@@ -158,8 +158,9 @@
   var promptCss = '<style>'
     + '.sim-prompts{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-prompts h3{margin:8px 0 2px}.sim-prompts h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-prompts-sub{color:#cbd5e1;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-prompts-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
+    + '.sim-prompts-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-prompts-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0} +
+    '.sim-prompts-bloco .sim-prompts-sub{color:#cbd5e1}''
     + '.sim-prompts-field{margin-bottom:10px}'
     + '.sim-prompts-label{display:block;font-size:.78rem;color:#8b94a5;margin-bottom:2px}'
     + '.sim-prompts-input{width:100%;font-family:"Courier New",monospace;font-size:.82rem;background:#111318;color:#e3e9ff;border:1px solid #3a4252;border-radius:4px;padding:6px;resize:vertical}'
