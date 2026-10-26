@@ -676,6 +676,8 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `ae503aff4b94379664c0460aa7d2b6dac32c695b`.
 - Revisão focal; executar e confirmar validação automatizada no HEAD atual.
 
+- Segunda verificação do mesmo objeto `analise` em q-m8: após inserir a vírgula entre A e B, o CI encontrou outra vírgula ausente entre B e C (linha 483 no snapshot de CI). Corrigida também essa separação. Commit: `cb416f7b52e2cdc3b220fe6d67d91cec9173478a`. Como foram erros consecutivos no mesmo objeto, aguardar `node --check` de todos os arquivos antes de prosseguir com novas alterações de conteúdo.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
