@@ -76,15 +76,15 @@ var questoesBanco = [
       { letra: "A", texto: "Office LTSC por licenciamento por volume — compra única, com atualizações apenas de segurança." },
       { letra: "B", texto: "Office LTSC com pacote de nuvem opcional — mesmo escopo do Microsoft 365." },
       { letra: "C", texto: "Versão perpétua Home & Student — compra única com Word, Excel e PowerPoint." },
-      { letra: "D", texto: "Microsoft 365 por assinatura — inclui Office, OneDrive, Teams e atualizações contínuas." }
+      { letra: "D", texto: "Microsoft 365 por assinatura, com plano elegível confirmado para incluir Office, Teams, OneDrive com cota de 5 TB e atualizações contínuas." }
     ],
     gabarito: "D",
-    justificativa: "O Microsoft 365 por assinatura é a única categoria entre as opções que pode reunir Office, Teams e atualizações contínuas; a contratação deve confirmar a elegibilidade do plano, a cota de 5 TB e as condições aplicáveis ao locatário, pois nem toda assinatura garante automaticamente esse limite. O Office LTSC é versão perpétua com apps selecionados, sem Teams/OneDrive em nuvem e com apenas atualizações de segurança; a versão perpétua é compra única com apps limitados (Word, Excel, PowerPoint). Por isso as alternativas A e C não satisfazem a demanda, e D descreve um produto não existente no currículo.",
+    justificativa: "O Microsoft 365 por assinatura é a única categoria entre as opções que pode reunir Office, Teams e atualizações contínuas; a contratação deve confirmar a elegibilidade do plano, a cota de 5 TB e as condições aplicáveis ao locatário, pois nem toda assinatura garante automaticamente esse limite. O Office LTSC é versão perpétua com apps selecionados, sem Teams/OneDrive em nuvem e com apenas atualizações de segurança; a versão perpétua é compra única com apps limitados (Word, Excel, PowerPoint). Por isso as alternativas A e C não satisfazem a demanda. A alternativa D é a correta somente com a confirmação contratual do plano elegível e das condições de armazenamento descritas no contexto.",
     analise: {
       A: "INCORRETA. Erro conceitual: confundir 'atualização' com 'atualização de segurança'. O LTSC recebe apenas patches de segurança e não inclui Teams nem OneDrive em nuvem, logo não atende a nenhum dos três requisitos.",
       B: "INCORRETA. Erro conceitual: invenção de produto. O currículo não descreve 'LTSC com pacote de nuvem'; LTSC e M365 são modelos distintos (perpétuo × assinatura), não versões empilháveis.",
       C: "INCORRETA. Erro conceitual: a versão perpétua é compra única com apps limitados e sem armazenamento em nuvem integrado nem Teams — erro idêntico ao documentado no exemplo 'erro' do próprio currículo.",
-      D: "CORRETA. A assinatura é a opção compatível com Office, Teams e atualizações contínuas; a cota de 5 TB deve constar da licença elegível confirmada na documentação do fornecedor."
+      D: "CORRETA. A assinatura com plano elegível confirmado é a única opção compatível com os requisitos descritos; a cota de 5 TB, o direito ao Teams e as condições de atualização devem constar da documentação da licença contratada."
     },
     regra: "Modelo de licenciamento: assinatura (recorrente, serviços na nuvem + atualizações de funcionalidades) × perpétuo (compra única, apenas atualizações de segurança, sem serviços em nuvem).",
     pegadinha: "A palavra 'atualizações' aparece nas duas alternativas — a pegadinha é não distinguir tipo de atualização (segurança × funcionalidade) e esquecer que Teams/OneDrive em nuvem só aparecem na assinatura.",
