@@ -889,6 +889,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Resultado: M4=85, M5=42, M6=47, M7=40, M8=40; zero divergências entre gabarito e análise nas questões de múltipla escolha verificadas. Itens C/E foram excluídos dessa comparação de letras e permanecem sujeitos aos seus próprios validadores.
 - A verificação textual não comprova, isoladamente, correção pedagógica, jurídica ou de fonte; ela complementa a revisão semântica focal e os testes do projeto.
 
+## Correções de sintaxe em M1 e auditoria cruzada final (2026-10-26)
+
+- A validação CI no commit `a44972ab2228f9f5f44d57fbb7040a14919a6b34` falhou em `Check JavaScript syntax`: após a fonte de q-m1-01 faltava uma vírgula; q-m1-03 e q-m1-04 tinham o mesmo defeito. Correções: `62035e461dd5477a5c2a88b659802b74769fdd60` e `873a3538cf8fbdf90abd677671356c8bee68330e`.
+- A execução seguinte encontrou um objeto de abertura duplicado imediatamente antes de q-m1-40 (`Unexpected token '{'`). Removido o objeto extra em `bbe370a370af312d096d209fc785b22aac2ec64f`.
+- Varredura de separadores nas seis fontes de questões (M1–M8) não encontrou outros candidatos a vírgula ausente entre propriedades. A varredura cruzada de gabarito/análise contou 399 IDs únicos (M1–M3=145, M4=85, M5=42, M6=47, M7=40, M8=40) e não encontrou divergências nas questões MC.
+- No HEAD `bbe370a370af312d096d209fc785b22aac2ec64f`, a execução `40375099671` concluiu com sucesso: sintaxe JavaScript, matriz curricular, relatório de rastreabilidade, validação estrutural, heurísticas de qualidade, smoke test em `file://` e regressões de interação Playwright. Outra execução duplicada ainda estava em andamento quando este registro foi escrito; o PR continua Draft e não foi merged.
+- Este registro altera o HEAD; a validação deve ser repetida no novo commit documental antes de afirmar que todos os checks estão verdes.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
