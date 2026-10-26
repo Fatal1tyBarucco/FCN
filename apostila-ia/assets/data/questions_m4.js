@@ -1005,7 +1005,7 @@ const moduleQuestions4 = [
     },
     regra: "Marco Civil: princípios, garantias, direitos e deveres para o uso da internet. LGPD: regras para o tratamento de dados pessoais. As normas são complementares.",
     pegadinha: "Não reduzir o Marco Civil a uma lei sobre dados públicos: ele disciplina o uso da internet e contém garantias relacionadas à privacidade.",
-    fonte: "Lei nº 12.965/2014; Lei nº 13.709/2018."
+    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet), texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm; Lei nº 13.709/2018 (LGPD), texto compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-41", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
