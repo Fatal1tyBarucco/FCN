@@ -790,6 +790,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo: `52463d300c299fa4dab0d577b3a134215879e5f4` (q-m4-41) e `e214cefe4c2be6b3f4e501eedc0dc69eeb1731f3` (q-m4-48).
 - A revisão é focal; a validação automatizada precisa ser confirmada no HEAD atual.
 
+## Revisão focal de q-m4-51..q-m4-60 (2026-10-26)
+
+- q-m4-51..q-m4-55: revisadas as distinções entre teste de restauração, continuidade e recuperação de desastres, planejamento baseado em RTO/RPO, regra 3-2-1 e criptografia simétrica/gestão de chaves. Sem alteração de conteúdo neste lote.
+- q-m4-56..q-m4-60: revisados os conceitos de criptografia assimétrica, hash e armazenamento de senhas, assinatura digital, certificados X.509 e spear phishing. Sem alteração de conteúdo neste lote.
+- As questões mantêm ressalvas contra garantias absolutas: backup executado não prova restauração, metas RTO/RPO não garantem cumprimento, hash não prova autoria, assinatura não determina por si só todas as conclusões jurídicas e certificado não garante segurança global do site.
+- Fontes referenciadas incluem NIST SP 800-34, CISA #StopRansomware, NIST FIPS 197/180-4/186-5, NIST SP 800-38D/800-63B/800-53, RFC 5280, ITU-T X.509, MITRE ATT&CK e CISA.
+- Revisão focal; validação automatizada e estado do CI devem ser conferidos no HEAD final.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
