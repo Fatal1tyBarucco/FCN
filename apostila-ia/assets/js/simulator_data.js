@@ -700,6 +700,10 @@
       containerEl.innerHTML = dataCss + dataBuildUI(dados, state);
       /* delegate events */
       containerEl.addEventListener('input', function (e) { dataOnInput(e, containerEl, dados, state); });
+      containerEl.addEventListener('change', function (e) {
+        dataOnChangeCol(e, containerEl, dados, state);
+        dataOnChangeBins(e, containerEl, dados, state);
+      });
       containerEl.addEventListener('click', function (e) { dataOnClick(e, containerEl, dados, state); });
       /* store state on container for external access */
       containerEl.__dataSimState = { dados: dados, state: state };

@@ -73,14 +73,17 @@ const { chromium } = require("playwright");
     const promptFeedback = (await page.locator("#prom-resultado").innerText()).trim();
     assert.ok(promptFeedback.length > 0, "prompt evaluation must return feedback");
 
-    // Data simulator: changing histogram class count must update the SVG output.
+    // Data simulator: open its chart pane, then change histogram class count.
+    await page.locator("#dados-app [data-act='nav'][data-target='charts']").click();
+    const binsInput = page.locator("#dados-bins");
+    await binsInput.waitFor({ state: "visible", timeout: 5000 });
     const histogramBefore = await page.locator("#dados-histograma svg").first().evaluate(el => el.outerHTML);
-    await page.locator("#dados-bins").fill("7");
-    await page.locator("#dados-bins").dispatchEvent("input");
+    await binsInput.fill("7");
+    await binsInput.dispatchEvent("change");
     await page.waitForFunction(() => {
       const input = document.querySelector("#dados-bins");
       const svg = document.querySelector("#dados-histograma svg");
-      return input && input.value === "7" && svg;
+      return input && input.value === "7" && svg && svg.querySelectorAll("rect").length > 0;
     }, null, { timeout: 5000 });
     const histogramAfter = await page.locator("#dados-histograma svg").first().evaluate(el => el.outerHTML);
     assert.notEqual(histogramAfter, histogramBefore, "changing histogram bins must recalculate SVG");
