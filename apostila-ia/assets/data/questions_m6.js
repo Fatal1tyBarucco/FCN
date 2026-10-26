@@ -31,7 +31,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "A legalidade impede que o Poder Executivo edite atos normativos de regulamentação." }
     ],
     gabarito: "C",
-    justificativa: "A legalidade administrativa é a submissão da atuação pública à norma: a Administração só age quando há previsão ou autorização normativa e deve observar a competência e o procedimento. A alternativa A inverte a lógica aplicável ao particular (autonomia da vontade), que não vale para o Poder Público; C confunde legalidade com conveniência; D reduz a legalidade à disponibilidade orçamentária; E transforma a legalidade em vedação ao poder regulamentar, que é justamente instrumento de execução da lei.",
+    justificativa: "A legalidade administrativa submete a atuação pública à Constituição e às normas aplicáveis, inclusive quanto à competência e ao procedimento. A alternativa A transpõe indevidamente para a Administração a lógica geral de liberdade dos particulares; B erra porque eficiência não autoriza descumprir a lei; C está correta; D confunde legalidade com disponibilidade orçamentária, que não basta para autorizar o ato; E erra porque o poder regulamentar pode ser exercido nos limites legais.",
     analise: {
       A: "INCORRETA. Erro conceitual de inversão de regimes: no direito privado, o que não é proibido é permitido; na Administração, só é permitido o que a norma autoriza.",
       B: "INCORRETA. Erro conceitual de confusão entre princípios: eficiência não é autorização para descumprir a lei — não há eficiência legítima contra a legalidade.",
@@ -56,7 +56,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "definidos pelo fornecedor do sistema, que responde tecnicamente pela ordem de atendimento." }
     ],
     gabarito: "C",
-    justificativa: "Impessoalidade significa tratamento desvinculado do arbítrio do servidor, com critérios previamente definidos e igualmente aplicáveis a casos iguais. No ambiente digital, isso se traduz em critério escrito, comunicável e auditável. A alternativa A reintroduz o arbítrio individual; C troca impessoalidade por opacidade, violando também a publicidade; D confunde impessoalidade com resultado uniforme — o princípio exige o mesmo critério, não o mesmo resultado, e a lei pode determinar diferenciação legítima (por exemplo, acessibilidade e proteção de dados pessoais); E desloca para o fornecedor uma competência que é do órgão.",
+    justificativa: "Impessoalidade exige que a Administração aplique critérios objetivos, previamente definidos e compatíveis com a lei, sem favorecimento pessoal. A alternativa A permite arbítrio individual; B propõe sigilo injustificado dos critérios; C está correta ao exigir critérios comunicáveis e auditáveis; D confunde impessoalidade com resultado idêntico e ignora diferenciações legalmente exigidas; E transfere indevidamente ao fornecedor uma decisão que compete ao órgão.",
     analise: {
       A: "INCORRETA. Erro conceitual: decisão caso a caso por preferência do operador é exatamente o arbítrio que a impessoalidade veda.",
       B: "INCORRETA. Erro conceitual duplo: sigilo do critério impede demonstrar igualdade de tratamento (impessoalidade) e contraria a publicidade do modo de decidir.",
@@ -106,7 +106,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "a publicidade autoriza a divulgação de informação sigilosa quando houver interesse jornalístico." }
     ],
     gabarito: "C",
-    justificativa: "A LAI adota expressamente a publicidade como preceito geral e o sigilo como exceção (art. 3º, I), e a Constituição ressalva apenas o sigilo imprescindível à segurança da sociedade e do Estado. A alternativa A ignora o regime da informação pessoal (art. 31 da LAI) e a LGPD; C transforma dever em faculdade; D reduz o dever a um meio arcaico, incompatível com a divulgação em sítios oficiais; E cria hipótese de levantamento de sigilo que a lei não prevê.",
+    justificativa: "A LAI estabelece a publicidade como preceito geral e o sigilo como exceção (art. 3º, I), enquanto a Constituição ressalva hipóteses de sigilo imprescindível à segurança da sociedade e do Estado. A alternativa A ignora a proteção de informações pessoais (art. 31 da LAI) e a legislação aplicável; B trata o dever de publicidade como faculdade; C está correta ao exigir divulgação do que é público e sigilo fundamentado em hipótese legal; D reduz a publicidade a um único meio de divulgação; E presume uma exceção ao sigilo que não decorre automaticamente de interesse jornalístico.",
     analise: {
       A: "INCORRETA. Erro conceitual: publicidade não alcança informação pessoal identificável, que tem regime próprio de proteção.",
       B: "INCORRETA. Erro conceitual: publicidade é dever, não faculdade sujeita a conveniência.",
@@ -131,7 +131,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "eficiência dispensa indicadores de desempenho, pois o resultado é evidente." }
     ],
     gabarito: "C",
-    justificativa: "Eficiência é qualidade do serviço com uso racional de recursos, e não autoriza renúncia a direitos nem eliminação de controles: a própria Lei de Governo Digital condiciona a eliminação de formalidades ao custo econômico ou social superior ao risco envolvido (art. 3º, XI). A alternativa A reduz eficiência a custo; C elimina controle sem juízo de risco; D contraria a permanência do atendimento presencial (art. 3º, XVI, e art. 14); E ignora que o art. 22 exige painel com solicitações em andamento e concluídas, tempo médio e grau de satisfação.",
+    justificativa: "Eficiência exige resultados adequados com uso racional de recursos, sem autorizar renúncia a direitos ou supressão indiscriminada de controles. A Lei de Governo Digital condiciona a eliminação de formalidades à avaliação de que seu custo econômico ou social supera o risco envolvido (art. 3º, XI). A alternativa A reduz eficiência ao custo unitário; B trata a demora como autorização automática para retirar controles; C está correta; D ignora que a digitalização não torna incompatível a manutenção de atendimento presencial (art. 3º, XVI, e art. 14); E desconsidera a importância de indicadores de desempenho, inclusive os previstos no art. 22.",
     analise: {
       A: "INCORRETA. Erro conceitual de reducionismo: custo é uma dimensão; qualidade, prazo e satisfação também integram a eficiência (art. 22).",
       B: "INCORRETA. Erro conceitual: a supressão de formalidades exige juízo de custo social versus risco (art. 3º, XI), não mera impaciência de entrega.",
