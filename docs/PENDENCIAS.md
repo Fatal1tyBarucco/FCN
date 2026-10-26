@@ -474,3 +474,11 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] Verificação textual independente: 324/324 questões MC têm a letra do gabarito presente na análise correspondente e um marcador textual de correção reconhecível; 75/75 questões C/E têm gabarito `certo` ou `errado`.
 - [ ] Essa verificação não valida a verdade factual da resposta nem a qualidade dos distratores. Manter revisão semântica independente de todos os 399 itens.
 
+## Revalidação de landmarks e critério axe-core reforçado — 2026-10-26
+
+- [x] O run [40413529441](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40413529441), SHA `7db9ef553e453ad246913c90fe1a78332beba7fd`, passou com **zero violações axe-core** e zero erros JavaScript de página.
+- [x] O teste agora falha diante de qualquer violação axe-core, não apenas violações críticas/graves.
+- [x] A violação moderada `landmark-unique` foi removida tornando únicos os nomes acessíveis dos landmarks de navegação dos simuladores de Segurança, Prompts e Dados.
+- O axe-core reportou 58 passes, 3 verificações incompletas e 0 violações. As verificações incompletas foram contraste, frame-tested e label-content-name-mismatch; elas não são violações confirmadas, mas exigem avaliação complementar/manual quando aplicável.
+- [ ] Continuam pendentes leitor de tela, navegação manual completa por teclado, auditoria WCAG manual e testes em dispositivos físicos.
+
