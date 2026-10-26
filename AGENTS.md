@@ -714,6 +714,20 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m7-30: papéis de dono do dado e steward diferenciados no processo de governança.
 - Revisão focal sem patches de conteúdo nesta passada. Verificar a matriz curricular e CI no HEAD atual.
 
+## Revisão focal do M7 — questões 31 a 40 (2026-10-26)
+
+- q-m7-31: falso negativo em deduplicação diferenciado de falso positivo, com ressalva sobre chaves confiáveis e normalização.
+- q-m7-32: papéis de controlador e operador conforme LGPD, sem afastar o dever de segurança de ambos.
+- q-m7-33: ETL selecionado quando dados precisam ser tratados antes de chegar a ambiente analítico compartilhado, sem generalizar que um paradigma é sempre superior.
+- q-m7-34: taxa de ausência recalculada incluindo nulos explícitos, marcador textual e zero substituto: 23/250 = 9,2%; completude 90,8%.
+- q-m7-35: taxa de duplicidade calculada como (1.000 − 940)/1.000 = 6%, com inflação de contagem de linhas.
+- q-m7-36: min-max calculado para valores fora da faixa (110→1,25; 40→−0,50), sem truncamento implícito.
+- q-m7-37: normalização estatística diferenciada de normalização de banco de dados.
+- q-m7-38: média global ponderada pelo tamanho dos grupos recalculada em 6,5, em vez de média simples 6,0.
+- q-m7-39: remoção de nome/CPF não tratada como anonimização suficiente; quasi-identificadores combinados exigem avaliação de reidentificação.
+- q-m7-40: revisão de acesso temporário e minimização de dados ligada à finalidade e à revisão/expiração de permissões.
+- Revisão focal sem patches de conteúdo nesta passada. Validar fontes, matriz e CI no HEAD atual.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
