@@ -855,27 +855,27 @@ const moduleQuestions4 = [
 
   { id: "q-m4-34", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — ANPD e LGPD",
-    contexto: "O ANPD (Autoridade Nacional de Proteção de Dados) é a autoridade responsável pelo monitoramento da LGPD.",
-    enunciado: "A respeito do ANPD e da LGPD, é correto afirmar que:",
+    contexto: "A Agência Nacional de Proteção de Dados (ANPD) é a autarquia federal competente para zelar pela proteção de dados pessoais e fiscalizar o cumprimento da LGPD.",
+    enunciado: "A respeito da Agência Nacional de Proteção de Dados (ANPD) e da LGPD, é correto afirmar que:",
     alternativas: [
-      { letra: "A", texto: "O ANPD é uma entidade privada que fiscaliza os tratamentos de dados." },
-      { letra: "B", texto: "O ANPD é o órgão público federal responsável pela proteção de dados pessoais no Brasil." },
-      { letra: "C", texto: "O ANPD não tem hierarquia para fiscalizar tratamentos de dados." },
-      { letra: "D", texto: "O ANPD é um órgão sem competências para LGPD." },
-      { letra: "E", texto: "O ANPD é um órgão que não exerce fiscalização de dados." }
+      { letra: "A", texto: "O ANPD é uma entidade privada que fiscaliza os tratamentos de dados."A ANPD é uma entidade privada que fiscaliza os tratamentos de dados." },
+      { letra: "B", texto: "O ANPD é o órgão público federal responsável pela proteção de dados pessoais no Brasil."A ANPD é uma autarquia de natureza especial que zela pela proteção de dados e fiscaliza o cumprimento da LGPD." },
+      { letra: "C", texto: "O ANPD não tem hierarquia para fiscalizar tratamentos de dados."A ANPD não tem competência para fiscalizar tratamentos de dados." },
+      { letra: "D", texto: "O ANPD é um órgão sem competências para LGPD."A ANPD é uma entidade sem competências previstas na LGPD." },
+      { letra: "E", texto: "O ANPD é um órgão que não exerce fiscalização de dados."A ANPD não exerce fiscalização de dados pessoais." }
     ],
     gabarito: "B",
-    justificativa: "O ANPD é um órgão público federal criado para fiscalizar a aplicação da LGPD, proteger dados pessoais e atender aos direitos dos titulares. Entidade privada (alternativa A incorreta); não tem hierarquia para fiscalizar (alternativa C incorreta); sem competências (alternativa D incorreta); não exerce fiscalização (alternativa E incorreta).",
+    justificativa: "A Lei nº 15.352/2026 alterou a denominação e a natureza institucional da ANPD: atualmente, a Agência Nacional de Proteção de Dados é uma autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública. Suas competências incluem zelar pela proteção de dados e fiscalizar o cumprimento da LGPD. Entidade privada (alternativa A incorreta); ausência de competência fiscalizatória (alternativas C e E incorretas); ausência de competências legais (alternativa D incorreta).",
     analise: {
-      A: "INCORRETA. O ANPD é um órgão público federal, não uma entidade privada.",
-      B: "CORRETA. ANPD é o órgão público federal responsável pela proteção de dados pessoais.",
-      C: "INCORRETA. O ANPD tem competências para fiscalizar o tratamento de dados.",
-      D: "INCORRETA. O ANPD possui competências regulatórias, sancionadoras e prestadora de serviços.",
-      E: "INCORRETA. O ANPD exerce fiscalização e regulamentação da LGPD."
+      A: "INCORRETA. O ANPD é um órgão público federal, não uma entidade privada."INCORRETA. A ANPD é uma autarquia federal de natureza especial, não uma entidade privada.",
+      B: "CORRETA. ANPD é o órgão público federal responsável pela proteção de dados pessoais."CORRETA. A ANPD possui competências legais para zelar pela proteção de dados e fiscalizar o cumprimento da LGPD.",
+      C: "INCORRETA. O ANPD tem competências para fiscalizar o tratamento de dados."INCORRETA. A fiscalização é uma das competências expressamente previstas na LGPD.",
+      D: "INCORRETA. O ANPD possui competências regulatórias, sancionadoras e prestadora de serviços."INCORRETA. A LGPD define competências regulatórias e fiscalizatórias para a ANPD.",
+      E: "INCORRETA. O ANPD exerce fiscalização e regulamentação da LGPD."INCORRETA. A ANPD exerce fiscalização nos termos da LGPD."
     },
-    regra: "ANPD = 'reguladora da LGPD'. Órgão público federal para proteção de dados.",
-    pegadinha: "ANPD não é 'autoridade privada' — é 'órgão público federal' para proteção de dados.",
-    fonte: "Lei nº 13.709/2018, art. 15 e seguintes (ANPD)."
+    regra: "ANPD = Agência Nacional de Proteção de Dados; autarquia de natureza especial com competências de regulação e fiscalização.",
+    pegadinha: "Não usar a denominação histórica Autoridade Nacional como nome institucional atual após a Lei nº 15.352/2026.",
+    fonte: "Lei nº 13.709/2018, arts. 55-A e 55-J, com redação dada pela Lei nº 15.352/2026."
   },
 
   { id: "q-m4-35", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -884,73 +884,73 @@ const moduleQuestions4 = [
     enunciado: "Entre os direitos dos titulares de dados pessoais previstos na LGPD estão:",
     alternativas: [
       { letra: "A", texto: "O direito de não ser lembrado de nenhum dado." },
-      { letra: "B", texto: "O direito de acesso, correção, atualização, exclusão e portabilidade dos dados." },
+      { letra: "B", texto: "O direito de acesso, correção, atualização, exclusão e portabilidade dos dados."O direito de acesso, correção de dados desatualizados, eliminação de dados nas hipóteses legais e portabilidade nos termos da regulamentação." },
       { letra: "C", texto: "O direito de fornecer dados falsos." },
       { letra: "D", texto: "O direito de excluir todos os registros do passado." },
       { letra: "E", texto: "O direito de não informar dados pessoais a qualquer autoridade." }
     ],
     gabarito: "B",
-    justificativa: "A LGPD reconhece ao titular direitos de acesso, correção, atualização, exclusão, portabilidade e revogação do consentimento. Esquecer dados (alternativa A incorreta); fornecer dados falsos (alternativa C incorreta); excluir todos os registros sem restrição (alternativa D incorreta); não informar dados a qualquer autoridade (alternativa E incorreta).",
+    justificativa: "O art. 18 da LGPD prevê, entre outros, confirmação do tratamento, acesso, correção de dados incompletos, inexatos ou desatualizados, anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade, portabilidade nos termos da regulamentação e revogação do consentimento quando aplicável. Esses direitos têm condições legais e não significam eliminação irrestrita de todo registro. As alternativas A, C, D e E descrevem direitos inexistentes ou absolutos.",
     analise: {
-      A: "INCORRETA. Esquecer é uma das figuras do direito, mas não o único — o direito de acesso é fundamental.",
-      B: "CORRETA. LGPD prevê acesso, correção, atualização, exclusão e portabilidade como direitos fundamentais.",
-      C: "INCORRETA. Fornecer dados falsos não é um direito previsto na LGPD.",
-      D: "INCORRETA. Exclusão não é absoluta — há limitações legais e de interesse público.",
-      E: "INCORRETA. Existem obrigações legais de informação a autoridades."
+      A: "INCORRETA. Esquecer é uma das figuras do direito, mas não o único — o direito de acesso é fundamental."INCORRETA. A LGPD não cria um direito geral e irrestrito de não ser lembrado de qualquer dado.",
+      B: "CORRETA. LGPD prevê acesso, correção, atualização, exclusão e portabilidade como direitos fundamentais."CORRETA. A LGPD prevê esses direitos, mas a eliminação e a portabilidade obedecem aos requisitos e limites legais aplicáveis.",
+      C: "INCORRETA. Fornecer dados falsos não é um direito previsto na LGPD."INCORRETA. Fornecer dados falsos não é um direito previsto no art. 18 da LGPD.",
+      D: "INCORRETA. Exclusão não é absoluta — há limitações legais e de interesse público."INCORRETA. A eliminação não é absoluta; depende das hipóteses legais e pode haver deveres de conservação.",
+      E: "INCORRETA. Existem obrigações legais de informação a autoridades."INCORRETA. A LGPD não estabelece uma proibição absoluta de fornecer dados a autoridades competentes."
     },
-    regra: "Direitos do titular: acesso, correção, atualização, exclusão, portabilidade, revogação.",
-    pegadinha: "Não confunda: 'direito de esquecer' é um direito, mas não é o único — o acesso ele é igualmente fundamental.",
-    fonte: "Lei nº 13.709/2018, art. 18."
+    regra: "Direitos do titular incluem acesso, correção, anonimização, bloqueio, eliminação nas hipóteses legais, portabilidade regulamentada e revogação do consentimento quando aplicável.",
+    pegadinha: "Não confundir direitos previstos na LGPD com um direito absoluto de apagar todo dado ou registro.",
+    fonte: "Lei nº 13.709/2018, art. 18, especialmente incisos II a VI e IX."
   },
 
   { id: "q-m4-36", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD e Órgãos Competentes",
-    contexto: "A Lei nº 13.709/2018 (LGPD) estabelece o monitoramento do tratamento de dados pessoais no Brasil, inclusive no âmbito da administração pública.",
-    enunciado: "No âmbito da LGPD, os dados pessoais tratados pela administração pública federal são monitorados pelo:",
+    contexto: "A LGPD atribui à ANPD competências para zelar pela proteção de dados pessoais e fiscalizar o cumprimento da lei, inclusive em operações realizadas pelo Poder Público.",
+    enunciado: "Qual entidade possui competência legal para zelar pela proteção de dados pessoais e fiscalizar o cumprimento da LGPD, inclusive no setor público?",
     alternativas: [
       { letra: "A", texto: "Ministério Público." },
-      { letra: "B", texto: "ANPD." },
+      { letra: "B", texto: "ANPD."Agência Nacional de Proteção de Dados (ANPD)." },
       { letra: "C", texto: "Polícia Federal." },
       { letra: "D", texto: "Justiça Federal." },
       { letra: "E", texto: "Superintendência de Tecnologia da Informação." }
     ],
     gabarito: "B",
-    justificativa: "ANPD é o órgão responsável pelo monitoramento da aplicação da LGPD, incluindo o tratamento de dados pelas administrações públicas. Ministério Público (alternativa A incorreta); Polícia Federal (alternativa C incorreta); Justiça Federal (alternativa D incorreta); Superintendência de TI (alternativa E incorreta).",
+    justificativa: "A Agência Nacional de Proteção de Dados (ANPD) tem competência legal para zelar pela proteção de dados, fiscalizar tratamentos em desconformidade e solicitar informações a entidades públicas. A base institucional está nos arts. 55-A e 55-J da LGPD, com redação dada pela Lei nº 15.352/2026. Ministério Público, Polícia Federal e Justiça Federal têm atribuições distintas; uma superintendência de TI não substitui a autoridade nacional de proteção de dados.",
     analise: {
       A: "INCORRETA. Ministério Público pode agir em âmbito criminal, mas não é o órgão de monitoramento da LGPD.",
-      B: "CORRETA. ANPD é o órgão responsável pelo monitoramento da aplicação da LGPD.",
+      B: "CORRETA. ANPD é o órgão responsável pelo monitoramento da aplicação da LGPD."CORRETA. A ANPD possui competências legais de fiscalização, inclusive em relação a tratamentos realizados pelo Poder Público.",
       C: "INCORRETA. Polícia Federal não é o órgão regulador da LGPD.",
       D: "INCORRETA. Justiça Federal atua em casos de infração, não no monitoramento sistemático.",
       E: "INCORRETA. Superintendências de TI são órgãos administrativos, não reguladores."
     },
-    regra: "ANPD = 'guardião da LGPD'. Monitora o tratamento de dados pessoais no Brasil.",
-    pegadinha: "ANPD não é 'órgão punidor' — é 'órgão regulador que atua com princípio correitor e assistencial'.",
-    fonte: "Lei nº 13.709/2018, art. 15."
+    regra: "A ANPD zela pela proteção de dados e fiscaliza o cumprimento da LGPD; também possui competências específicas relativas ao tratamento realizado pelo Poder Público.",
+    pegadinha: "Não confundir a fiscalização administrativa da LGPD pela ANPD com competências judiciais, criminais ou de controle interno.",
+    fonte: "Lei nº 13.709/2018, art. 55-A e art. 55-J, IV, XI e XVI, com redação vigente em 25/10/2026."
   },
 
   { id: "q-m4-37", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Incisos do Art. 5º",
-    contexto: "A CF/88 (art. 5º, caput) e a LGPD reforçam a proteção de dados pessoais.",
+    contexto: "A Constituição protege a intimidade e a vida privada; após a Emenda Constitucional nº 115/2022, o art. 5º, LXXIX, reconhece expressamente o direito fundamental à proteção dos dados pessoais.",
     enunciado: "A relação correta entre a CF/88 e a LGPD em relação aos dados pessoais é:",
     alternativas: [
       { letra: "A", texto: "A CF/88 não menciona dados pessoais." },
-      { letra: "B", texto: "A CF/88, art. 5º, caput, e a LGPD garantem a inviolabilidade da vida privada e a proteção de dados." },
+      { letra: "B", texto: "A CF/88, art. 5º, caput, e a LGPD garantem a inviolabilidade da vida privada e a proteção de dados."A Constituição protege a intimidade e a vida privada no art. 5º, X, e reconhece o direito fundamental à proteção de dados pessoais no art. 5º, LXXIX; a LGPD disciplina o tratamento desses dados." },
       { letra: "C", texto: "A LGPD substitui a CF/88." },
       { letra: "D", texto: "A CF/88 é inexistente." },
       { letra: "E", texto: "A CF/88 e a LGPD são incompatíveis." }
     ],
     gabarito: "B",
-    justificativa: "A CF/88, art. 5º, caput, assegura a inviolabilidade da vida privácia e a proteção de dados. A CF/88 não é ignorada (alternativa A incorreta); a LGPD complementa e regulamenta a proteção dos dados — não substitui a CF/88 (alternativa C incorreta); CF/88 existe e é a norma máxima (alternativa D incorreta); CF/88 e LGPD são compatíveis e complementares (alternativa E incorreta).",
+    justificativa: "O art. 5º, X, da Constituição protege a intimidade e a vida privada. O art. 5º, LXXIX, incluído pela Emenda Constitucional nº 115/2022, assegura o direito à proteção dos dados pessoais, inclusive nos meios digitais. A LGPD disciplina o tratamento de dados pessoais. Portanto, a Constituição e a LGPD são complementares, mas os dispositivos constitucionais precisam ser identificados corretamente.",
     analise: {
-      A: "INCORRETA. A CF/88, art. 5º, caput, assegura a inviolabilidade da vida privácia e a proteção de dados.",
-      B: "CORRETA. CF/88 e LGPD são bases legais complementares para proteção de dados pessoais.",
-      C: "INCORRETA. A LGPD complementa a CF/88, não a substitui.",
-      D: "INCORRETA. A CF/88 é a constituição, que existe e é a norma máxima do ordenamento jurídico brasileiro.",
-      E: "INCORRETA. A CF/88 e a LGPD são teorias complementares e compatíveis."
+      A: "INCORRETA. A CF/88, art. 5º, caput, assegura a inviolabilidade da vida privácia e a proteção de dados."INCORRETA. A Constituição menciona expressamente a proteção de dados pessoais no art. 5º, LXXIX, incluído pela EC nº 115/2022.",
+      B: "CORRETA. CF/88 e LGPD são bases legais complementares para proteção de dados pessoais."CORRETA. O art. 5º, X, protege a intimidade e a vida privada; o inciso LXXIX assegura o direito à proteção de dados pessoais.",
+      C: "INCORRETA. A LGPD complementa a CF/88, não a substitui."INCORRETA. A LGPD não substitui a Constituição; as normas têm funções complementares.",
+      D: "INCORRETA. A CF/88 é a constituição, que existe e é a norma máxima do ordenamento jurídico brasileiro."INCORRETA. A Constituição Federal de 1988 está vigente.",
+      E: "INCORRETA. A CF/88 e a LGPD são teorias complementares e compatíveis."INCORRETA. A Constituição e a LGPD são complementares na proteção de direitos fundamentais e na disciplina do tratamento de dados pessoais."
     },
-    regra: "CF/88: privacidade = 'tope'. LGPD: regulamentação dos direitos dos titulares.",
-    pegadinha: "A CF/88 não é 'inexistente' — é a constituição que protege a vida privácia e dados pessoais.",
-    fonte: "CF/88, art. 5º, caput; Lei nº 13.709/2018, art. 1º."
+    regra: "CF/88, art. 5º, X: intimidade e vida privada; art. 5º, LXXIX: direito fundamental à proteção de dados pessoais; LGPD: disciplina o tratamento.",
+    pegadinha: "Não atribuir a proteção expressa de dados pessoais ao caput do art. 5º; o inciso LXXIX foi incluído pela EC nº 115/2022.",
+    fonte: "Constituição Federal, art. 5º, X e LXXIX; Emenda Constitucional nº 115/2022; Lei nº 13.709/2018, art. 1º."
   },
 
   { id: "q-m4-38", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -1015,16 +1015,16 @@ const moduleQuestions4 = [
       { letra: "E", texto: "A LGPD é irrelevante para o Marco Civil." }
     ],
     gabarito: "B",
-    justificativa: "Marco Civil (12.965/2014) e LGPD (13.709/2018) são normas complementares: o primeiro regula a internet e dados de caráter público, o segundo a proteção de dados pessoais. A LGPD não substitui o Marco Civil (alternativa A incorreta); o Marco Civil não dispensa a LGPD (alternativa C incorreta); o Marco Civil tem relação com dados (alternativa D incorreta); a LGPD é relevante para o Marco Civil (alternativa E incorreta).",
+    justificativa: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, incluindo garantias relacionadas à privacidade. A LGPD (Lei nº 13.709/2018) disciplina o tratamento de dados pessoais. As normas são complementares; nenhuma substitui ou dispensa a outra.",
     analise: {
       A: "INCORRETA. A LGPD complementa o Marco Civil e a Lei 12.965/2014; não substitui.",
-      B: "CORRETA. São normas complementares, conectadas por princípios de proteção de dados e internet.",
+      B: "CORRETA. São normas complementares, conectadas por princípios de proteção de dados e internet."CORRETA. O Marco Civil disciplina o uso da internet; a LGPD disciplina o tratamento de dados pessoais. As normas têm campos complementares.",
       C: "INCORRETA. O Marco Civil não dispensa a LGPD — ambas têm âmbitos complementares.",
       D: "INCORRETA. O Marco Civil trata de dados pessoais no contexto da internet.",
       E: "INCORRETA. A LGPD é relevante para a proteção de dados no âmbito do Marco Civil."
     },
-    regra: "Marco Civil + LGPD: complementares. Internet regular e dados pessoais protegidos.",
-    pegadinha: "Marco Civil não é 'obsoleto' — é a lei da internet; LGPD é a lei dos dados pessoais. Juntas, regulam o ambiente digital.",
+    regra: "Marco Civil: princípios, garantias, direitos e deveres para o uso da internet. LGPD: regras para o tratamento de dados pessoais. As normas são complementares.",
+    pegadinha: "Não reduzir o Marco Civil a uma lei sobre dados públicos: ele disciplina o uso da internet e contém garantias relacionadas à privacidade.",
     fonte: "Lei nº 12.965/2014; Lei nº 13.709/2018."
   },
 
@@ -1034,23 +1034,23 @@ const moduleQuestions4 = [
     enunciado: "A Lei nº 12.527/2011 (Lei de Acesso à Informação Pública) estabelece, entre outros, que:",
     alternativas: [
       { letra: "A", texto: "O acesso à informação pública é negado em todas as hipóteses." },
-      { letra: "B", texto: "Os atos, documentos e dados das administrações públicas são acessíveis aos cidadãos." },
+      { letra: "B", texto: "Os atos, documentos e dados das administrações públicas são acessíveis aos cidadãos."Assegura acesso a informações públicas, observadas as hipóteses legais de restrição e sigilo." },
       { letra: "C", texto: "A lei não garante acesso à informação." },
       { letra: "D", texto: "A lei é proibitiva." },
       { letra: "E", texto: "A lei não possui dispositivos sobre acesso." }
     ],
     gabarito: "B",
-    justificativa: "A Lei 12.527/2011 garante o acesso à informação pública, estabelecendo normas de transparência, escala de prioridade de atendimento e prazos. O acesso é negado (alternativa A incorreta); a lei garante acesso (alternativa C incorreta); não é proibitiva (alternativa D incorreta); possui dispositivos sobre acesso (alternativa E incorreta).",
+    justificativa: "A LAI estabelece a publicidade como preceito geral e o sigilo como exceção, além de garantir acesso a informações públicas nos termos da lei. Existem hipóteses legais de restrição de acesso e regras de proteção de informações pessoais; portanto, não se trata de acesso irrestrito a todo registro. As alternativas A, C, D e E negam incorretamente a finalidade e as garantias da lei.",
     analise: {
       A: "INCORRETA. A Lei 12.527/2011 garante o acesso à informação pública, não o nega.",
-      B: "CORRETA. A lei estende o acesso aos atos, documentos e dados das administrações públicas.",
+      B: "CORRETA. A lei estende o acesso aos atos, documentos e dados das administrações públicas."CORRETA. A publicidade é a regra, mas a lei preserva hipóteses legais de sigilo e a proteção de informações pessoais.",
       C: "INCORRETA. A lei é uma das principais garantias de transparência no Brasil.",
       D: "INCORRETA. A lei não é proibitiva — é estimuladora do acesso à informação.",
       E: "INCORRETA. A lei possuí diversos dispositivos sobre acesso à informação."
     },
-    regra: "LAI (12.527/2011): 'informação aberta'. Acesso à administração pública ao cidadão.",
-    pegadinha: "LAI não é 'lei de sigilo' — é 'lei de acesso à informação'.",
-    fonte: "Lei nº 12.527/2011."
+    regra: "LAI (Lei nº 12.527/2011): publicidade como regra e sigilo como exceção, respeitadas as restrições legais.",
+    pegadinha: "A LAI garante acesso à informação pública, mas não torna todo dado irrestritamente público.",
+    fonte: "Lei nº 12.527/2011, arts. 3º, I, 6º, III, e 7º."
   },
 
   { id: "q-m4-42", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -1080,27 +1080,27 @@ const moduleQuestions4 = [
 
   { id: "q-m4-43", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "avancado", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — Proteção de Dados",
-    contexto: "A proteção de dados pessoais no Brasil é uma responsabilidade compartilhada entre governantes e cidadãos.",
+    contexto: "A LGPD estabelece deveres para os agentes de tratamento e competências para a autoridade nacional; o titular dos dados possui direitos próprios.",
     enunciado: "A responsabilidade pela proteção de dados pessoais no Brasil é:",
     alternativas: [
       { letra: "A", texto: "Apenas dos cidadãos." },
-      { letra: "B", texto: "Compartilhada entre controladores, operadores, titulares e o Estado." },
+      { letra: "B", texto: "Compartilhada entre controladores, operadores, titulares e o Estado."Os deveres e as responsabilidades são distribuídos conforme as funções legais dos agentes de tratamento e as competências das autoridades, sem transformar o titular automaticamente em responsável pelo tratamento." },
       { letra: "C", texto: "Apenas do Estado." },
       { letra: "D", texto: "Apenas dos controladores." },
       { letra: "E", texto: "Apenas dos operadores." }
     ],
     gabarito: "B",
-    justificativa: "A proteção de dados pessoais envolve responsabilidades múltiplas: controladores e operadores tratam os dados, titulares têm direitos, e o Estado regula via órgãos como o ANPD. Apenas cidadãos (alternativa A incorreta); apenas Estado (alternativa C incorreta); apenas controladores (alternativa D incorreta); apenas operadores (alternativa E incorreta).",
+    justificativa: "A LGPD define controlador e operador como agentes de tratamento com funções e deveres distintos, prevê hipóteses de responsabilidade civil e atribui competências à ANPD. O titular é a pessoa a quem os dados se referem e possui direitos; não deve ser apresentado, apenas por ser titular, como responsável pelo tratamento. Por isso, a resposta correta descreve deveres e responsabilidades conforme as funções legais, não uma responsabilidade indiferenciada de todos os envolvidos.",
     analise: {
-      A: "INCORRETA. A proteção dos dados é uma responsabilidade compartilhada (controladores, operadores, Estado).",
-      B: "CORRETA. Controladores tratam; operadores executam; titulares têm direitos; Estado regula.",
-      C: "INCORRETA. Estado não é o único responsável — há múltiplos atores envolvidos.",
-      D: "INCORRETA. Controladores são uma parte, não a única responsável.",
-      E: "INCORRETA. Operadores são uma parte, não a única responsável."
+      A: "INCORRETA. A proteção dos dados é uma responsabilidade compartilhada (controladores, operadores, Estado)."INCORRETA. A proteção de dados não é responsabilidade exclusiva dos cidadãos titulares.",
+      B: "CORRETA. Controladores tratam; operadores executam; titulares têm direitos; Estado regula."CORRETA. Controladores e operadores têm deveres definidos em lei; as autoridades exercem competências próprias; o titular possui direitos.",
+      C: "INCORRETA. Estado não é o único responsável — há múltiplos atores envolvidos."INCORRETA. O Estado e as autoridades têm competências importantes, mas os deveres legais dos agentes de tratamento também são relevantes.",
+      D: "INCORRETA. Controladores são uma parte, não a única responsável."INCORRETA. A responsabilidade não recai exclusivamente sobre controladores em todos os casos; a LGPD também define o papel do operador.",
+      E: "INCORRETA. Operadores são uma parte, não a única responsável."INCORRETA. A responsabilidade não recai exclusivamente sobre operadores; a LGPD define funções e deveres distintos."
     },
-    regra: "Proteção de dados = 'feça de vários' — controladores, operadores, titulares e Estado juntos.",
-    pegadinha: "Não é 'somente o Estado' — é uma rede de responsabilidades com múltiplos atores.",
-    fonte: "Lei nº 13.709/2018; Lei nº 12.965/2014."
+    regra: "Controlador, operador e autoridade têm funções e deveres distintos; o titular é a pessoa a quem os dados se referem e possui direitos.",
+    pegadinha: "Não confundir titularidade de dados com responsabilidade jurídica pelo tratamento.",
+    fonte: "Lei nº 13.709/2018, art. 5º, V a VII, art. 42 e art. 55-J."
   },
 
   { id: "q-m4-44", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
