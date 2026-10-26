@@ -125,7 +125,7 @@ const moduleQuestions4 = [
     },
     regra: "Controles: preventivos (antes), detectivos (durante), corretivos (depois), compensatórios (alternativos).",
     pegadinha: "Múltiplos controles na mesma frase podem confundir a ordem de atuação (antes/depois).",
-    fonte: "NIST SP 800-53 (Security and Privacy Controls), controle CP (Preventive) e CA (Corrective)."
+    fonte: "CISA, Cyber Resilience Review (CRR) Supplemental Resource Guide — control types: preventive, detective, corrective and compensating: https://www.cisa.gov/sites/default/files/c3vp/crr_resources_guides/CRR_Resource_Guide-CM.pdf."
   },
 
   { id: "q-m4-05", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
