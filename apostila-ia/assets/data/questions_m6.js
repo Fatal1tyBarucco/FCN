@@ -979,23 +979,28 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-42", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "modulo-6-unidade-4-topico-3", assunto: "Governança de redes sociais institucionais", contexto: "Cinco servidores acessam o perfil institucional usando a mesma senha. Não há autoria confiável nem fluxo formal de aprovação.", enunciado: "Qual conjunto de medidas corrige melhor a falha de governança?",
+    topico: "modulo-6-unidade-4-topico-3", assunto: "Governança de redes sociais institucionais",
+    contexto: "Cinco servidores publicam e moderam o perfil oficial de um órgão usando a mesma senha. A instituição não consegue atribuir com confiança cada ação, não revisa periodicamente as permissões e não definiu fluxo de aprovação nem procedimento para retirar acessos quando alguém muda de função.",
+    enunciado: "Qual conjunto de controles enfrenta melhor os riscos de acesso indevido, falta de rastreabilidade e publicação não autorizada?",
     alternativas: [
-      { letra: "A", texto: "Manter senha compartilhada e pedir planilha mensal assinada." },
-      { letra: "B", texto: "Desativar registros para reduzir coleta de dados." },
-      { letra: "C", texto: "Adotar acessos individualizados, privilégio mínimo, autenticação forte, registro de autoria e aprovação formal." },
-      { letra: "D", texto: "Permitir publicação livre e revisar apenas após reclamações." },
-      { letra: "E", texto: "Criar uma segunda senha comum para quem aprova conteúdo." }
+      { letra: "A", texto: "Manter a senha compartilhada e exigir uma planilha assinada no fim de cada mês." },
+      { letra: "B", texto: "Desativar registros de atividade para reduzir a quantidade de dados armazenados." },
+      { letra: "C", texto: "Usar identidades e permissões individualizadas sempre que a plataforma permitir, aplicar privilégio mínimo e autenticação forte, revisar e revogar acessos, registrar ações e definir fluxo de aprovação." },
+      { letra: "D", texto: "Permitir publicação livre e investigar apenas quando houver reclamação pública." },
+      { letra: "E", texto: "Criar uma segunda senha compartilhada para quem aprova conteúdo, sem alterar os demais acessos." }
     ],
-    gabarito: "C", justificativa: "Identidades individuais e privilégio mínimo permitem atribuir ações; autenticação forte reduz acesso indevido; registros e aprovação formal fortalecem auditoria e controle editorial.",
+    gabarito: "C",
+    justificativa: "O Guia do Framework de Privacidade e Segurança da Informação (PPSI 2.0), no Controle 6, recomenda gerir concessão, revisão e revogação de acessos, aplicar privilégio mínimo e autenticação forte para funções críticas. A recomendação do CISC gov.br esclarece que o controle deve abranger também redes sociais oficiais. Registros de atividade e aprovação editorial complementam esses controles, desde que sejam proporcionais, protegidos e compatíveis com as capacidades da plataforma. Se ela não oferecer identidades separadas para todos os operadores, o órgão deve documentar uma alternativa controlada, sem presumir que uma planilha posterior resolva a falta de atribuição.",
     analise: {
-      A: "INCORRETA. Uma planilha assinada posteriormente não garante identidade digital nem atribuição confiável de cada ação.",
-      B: "INCORRETA. A trilha de auditoria deve ser proporcional e protegida, não simplesmente desativada.",
-      C: "CORRETA. Contas individuais, privilégio mínimo, autenticação forte, registros e aprovação formal cobrem identidade, acesso, rastreabilidade e controle editorial.",
-      D: "INCORRETA. Revisão apenas após reclamações é reativa e não previne publicações indevidas.",
-      E: "INCORRETA. Uma segunda senha compartilhada mantém o problema de atribuição individual e controle de acesso."
+      A: "INCORRETA. A assinatura posterior de uma planilha não substitui controles de acesso e não garante que a ação possa ser atribuída de forma confiável a uma pessoa.",
+      B: "INCORRETA. Registros não devem ser eliminados indiscriminadamente; a organização precisa definir registros proporcionais à finalidade, ao risco e às regras aplicáveis.",
+      C: "CORRETA. A alternativa combina identificação, acesso mínimo, autenticação, revisão e revogação, rastreabilidade e aprovação de conteúdo.",
+      D: "INCORRETA. Uma resposta apenas reativa não previne publicação indevida nem controla quem pode operar a conta.",
+      E: "INCORRETA. Uma segunda credencial compartilhada mantém a dificuldade de atribuição individual e não corrige a gestão do ciclo de vida dos acessos."
     },
-    regra: "Canal institucional exige identidade individual, acesso mínimo, trilha de auditoria e responsabilidades editoriais.", pegadinha: "Assinar planilha depois da publicação não equivale a autenticação individual.", fonte: "Currículo M6 — modulo-6-unidade-4-topico-3 (governança de redes sociais e conduta)."
+    regra: "A gestão segura de perfis institucionais deve controlar concessão, revisão e revogação de acessos, aplicar privilégio mínimo e autenticação adequada e estabelecer responsabilidades de publicação.",
+    pegadinha: "Não presumir que todas as plataformas oferecem os mesmos recursos de contas e auditoria; quando houver limitações, a instituição precisa documentar controles compensatórios.",
+    fonte: "Secretaria de Governo Digital, Guia do Framework de Privacidade e Segurança da Informação (PPSI 2.0), Controle 6 — Gestão de acesso: https://www.gov.br/governodigital/pt-br/privacidade-e-seguranca/ppsi-2.0/arquivos/guiafwppsi2-0-v1-2-30012026.pdf/%40%40download/file; CISC gov.br, #002 — Gestão do controle de acessos e reforço da conscientização, com aplicação expressa às redes sociais oficiais: https://www.gov.br/cisc/pt-br/recomendacoes/002-gestao-do-controle-de-acessos-e-reforco-da-conscientizacao; Secom, Guia de boas práticas para atuação de redes sociais do Governo Federal: https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf."
   },
   {
     id: "q-m6-43", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
