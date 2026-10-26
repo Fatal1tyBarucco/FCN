@@ -137,3 +137,11 @@ documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta audito
 
 - **D-ORQ-008 — Correção rastreável em lote:** as quatro referências inválidas q-m6-41–q-m6-44 foram corrigidas no arquivo de questões, sem reescrever o conteúdo didático das questões. A alteração foi limitada a `topico` e rótulos `assunto`; cada padrão antigo foi exigido como ocorrência única antes da gravação. Commit: `7c9b0dd7871048d94294b5c7530f90e52de97f4d`.
 - **D-ORQ-009 — Validação posterior obrigatória:** a pré-validação textual não substitui CI, auditoria de rastreabilidade nem revisão semântica independente. Esses resultados só serão registrados após evidência no novo HEAD.
+
+## Decisões de continuidade — 2026-10-26
+
+- **D-ORQ-01 — Branch do PR:** todas as alterações desta continuidade devem ser commitadas em `feat/fase-1-orquestracao-20261025`, vinculada ao PR #17; não alterar `main` diretamente.
+- **D-ORQ-02 — Reuso antes de reconstrução:** inventário, matriz, scripts de auditoria e testes existentes são a base. Só alterar o que uma discrepância demonstrada ou uma lacuna identificada exigir.
+- **D-ORQ-03 — Evidência ligada ao SHA:** contagens e resultados de testes só podem ser associados ao commit em que foram obtidos. Documentos contêm snapshots históricos com contagens divergentes; isso deve ser reconciliado por execução reproduzível, não por escolha arbitrária de um número.
+- **D-ORQ-04 — Revisão independente:** o autor de uma questão/componente não deve ser o único aprovador. A validação semântica de gabaritos, distratores, fontes e requisitos pedagógicos permanece separada dos testes estruturais.
+- **D-ORQ-05 — Critério de conclusão:** interface existente, quantidade mínima de ativos ou CI verde não equivalem, isoladamente, a conclusão integral. Limitações de WCAG manual e dispositivos físicos devem permanecer explícitas até teste real.
