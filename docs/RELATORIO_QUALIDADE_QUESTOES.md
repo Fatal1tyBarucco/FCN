@@ -72,3 +72,13 @@ A auditoria heurística não avalia se cada artigo citado sustenta a afirmação
 - Enunciado, contexto, justificativa conceitual, regra, pegadinha e fonte foram preservados.
 - O piloto é intencionalmente limitado a uma questão. Expandir a permutação somente após CI confirmar a integridade estrutural e após revisar referências a letras dentro de justificativas.
 - Distribuição esperada do M7 após o piloto: A=32, E=1 nas 33 questões de múltipla escolha contabilizadas no relatório anterior. Reexecutar a auditoria para confirmar.
+
+
+## Balanceamento editorial controlado — segundo lote M7 — 2026-10-26
+
+- Questões reposicionadas neste lote: `q-m7-04` (A→E), `q-m7-05` (A→D) e `q-m7-07` (A→C).
+- Em cada questão, a alternativa correta e sua análise foram movidas juntas; o texto da resposta, o enunciado, o contexto, a justificativa, a regra, a pegadinha e a fonte foram preservados.
+- As alternativas foram reordenadas no array pela letra A–E para manter a ordem de apresentação.
+- A inspeção dos três blocos não encontrou referências explícitas a letras nas justificativas. Isso não substitui revisão pedagógica do conteúdo.
+- Somando o piloto anterior (`q-m7-01`, A→E), a distribuição esperada para as 33 questões MC de M7 passa a A=29, B=0, C=1, D=1, E=2. A distribuição efetiva e a integridade estrutural dependem da execução de CI após este commit.
+- O balanceamento segue sendo parcial: não foram alterados gabaritos conceituais, apenas posições de alternativas.
