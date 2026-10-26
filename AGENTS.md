@@ -1103,6 +1103,13 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Limite: estes testes verificam comportamento automatizável de teclado; não equivalem a teste com leitor de tela, avaliação manual de contraste em todos os estados, uso em dispositivos físicos ou certificação WCAG.
 - O CI verde mais recente antes desta alteração foi no HEAD `a3e61cc52dd9fe07cf37dea6bd4f83a068af4207` (runs `40408028057`, `40408029434`, `40408029293`). Este commit documental e a alteração do teste geram novo HEAD; aguardar a nova execução de sintaxe, auditorias, smoke e regressões antes de declarar aprovação atualizada.
 
+## Correção de acessibilidade encontrada pela regressão de teclado — 2026-10-26
+
+- A nova regressão falhou no HEAD `ff663e7e6225a8482af1be857f319a88bb241f7b`: `ArrowLeft` não recolhia o primeiro nó da árvore curricular. A causa era real, não um falso positivo: somente tópicos tinham a classe `has-children`; módulos e unidades exibiam `aria-expanded="true"`, mas não podiam ser recolhidos por teclado.
+- `navigation.js` foi corrigido para tornar módulos e unidades expansíveis, adicionar botões de alternância com nomes acessíveis, sincronizar `aria-expanded` e alternar os grupos diretos de cada nível. A navegação ArrowLeft/ArrowRight agora pode operar nos três níveis expansíveis.
+- Commit da correção: `1e70eb727ba4d889b4bd5b7480a4093d23878df2`.
+- A regressão de teclado foi mantida para prevenir recorrência. O workflow precisa ser repetido no novo HEAD; não declarar a correção validada até smoke e regressões concluírem.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
