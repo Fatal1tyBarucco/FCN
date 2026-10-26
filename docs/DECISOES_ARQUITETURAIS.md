@@ -127,3 +127,7 @@ documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta audito
 - **D-ORQ-003 — Resolver divergências por SHA:** os documentos históricos citam 404/365, enquanto o PR #17 declara 460/389 após novas alterações. Ao relatar contagens, indicar a origem e o commit/execução; não misturar números de estados distintos.
 - **D-ORQ-004 — Delegação honesta:** nenhum agente externo será alegado como executado sem ferramenta disponível e resultado verificável. A ferramenta de delegação mencionada anteriormente não está disponível neste contexto; revisão independente será feita em etapa separada, registrando autor, escopo e evidências.
 - **D-ORQ-005 — Compatibilidade file://:** a abertura direta continua sendo requisito principal. Service Worker e certas capacidades PWA têm restrições do navegador em `file://`; documentar como limitação em vez de prometer suporte universal.
+
+
+- **D-ORQ-006 — Persistência em namespaces:** não consolidar nem migrar chaves `localStorage` sem contrato de compatibilidade e testes de leitura/escrita para os consumidores existentes. O cabeçalho de `storage.js` informa que a camada não é usada como fonte única por navegação, flashcards e quiz; registrar como lacuna arquitetural, não como falha comprovada de perda de dados.
+- **D-ORQ-007 — Ordem de correção:** primeiro validar CI e estabelecer testes de regressão; depois corrigir uma área por vez. Mudanças de conteúdo, simuladores e persistência devem permanecer em commits pequenos e rastreáveis no branch do PR #17.
