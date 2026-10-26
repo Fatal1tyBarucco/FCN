@@ -265,6 +265,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `736725652a9601d3dea32af3369a3501c78aa9a6`.
 - Fontes citadas incluem OWASP WAF, NIST SP 800-94, SP 800-77 Rev. 1, RFC 5905, NIST SP 800-92 e SP 800-52 Rev. 2. Este passe não substitui a auditoria integral do módulo nem CI do HEAD atual.
 
+## Auditoria semântica incremental — lote M4 q-m4-71 a q-m4-75 (2026-10-26)
+
+- q-m4-71: controle compensatório agora exige avaliação de risco residual, mitigação proporcional, responsável, prazo e reavaliação; removida a promessa de que a alternativa mantém automaticamente o mesmo nível de segurança.
+- q-m4-72: corrigida a definição de escalada horizontal; agora diferencia obter privilégios superiores de acessar recursos de outra identidade no mesmo nível.
+- q-m4-73: substituída a definição elementar de força bruta por cenário de defesa com limitação proporcional, MFA, monitoramento e risco de bloqueio abusivo.
+- q-m4-74: corrigida a explicação de password spraying e incluída detecção por correlação entre múltiplas contas.
+- q-m4-75: corrigida a expressão “senha vlada” e substituída a definição rasa de credential stuffing por medidas de prevenção e resposta a credenciais reutilizadas/comprometidas.
+- Commit de conteúdo: `f01b5e9d3e04e5d7b2c3e2381953a93340c56371`.
+- Fontes técnicas citadas incluem NIST SP 800-53 Rev. 5, MITRE ATT&CK, OWASP Authentication/Credential Stuffing Cheat Sheets e orientação Microsoft Entra. Revisão focal; validação automatizada ainda deve ser confirmada no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
