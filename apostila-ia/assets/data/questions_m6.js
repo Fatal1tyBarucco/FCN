@@ -66,7 +66,7 @@ const moduleQuestions6 = [
     },
     regra: "Impessoalidade = mesmo critério para casos iguais, com critério escrito, comunicável e auditável; não é indiferença nem resultado uniforme.",
     pegadinha: "'Tratar todos exatamente igual' parece elogio e é erro: o que se exige é igualdade de critério, não de resultado.",
-    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, art. 29, § 1º, III (verificado em 2026-10-21)."
+    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, art. 3º, IV e VII (transparência na execução dos serviços e linguagem clara; verificado em 2026-10-21)."
   },
 
   { id: "q-m6-03", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -156,7 +156,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "nenhum princípio, pois a escolha do critério é ato discricionário insuscetível de controle." }
     ],
     gabarito: "A",
-    justificativa: "Critério oculto produz violação dupla: não permite demonstrar que casos iguais recebem tratamento igual (impessoalidade) e não torna público o modo de decidir (publicidade). O critério de decisão é parte da informação pública sobre a atividade do órgão, e a transparência ativa exige descrição suficiente da estrutura e da semântica dos dados. As alternativas B, C e D isolam um único princípio e erram por redução; a E confunde discricionariedade com arbitrariedade.",
+    justificativa: "Critério oculto produz violação dupla: não permite demonstrar que casos iguais recebem tratamento igual (impessoalidade) e não torna público o modo de decidir (publicidade). A LAI assegura acesso a informações sobre atividades, política, organização e serviços dos órgãos (art. 7º, V), e a Lei nº 14.129/2021 exige transparência na execução dos serviços e linguagem clara (art. 3º, IV e VII). As alternativas B, C e D isolam um único princípio e erram por redução; E confunde discricionariedade com arbitrariedade.",
     analise: {
       A: "CORRETA. Identifica a dupla violação: impessoalidade (não demonstrável) e publicidade (modo de decidir não publicizado).",
       B: "INCORRETA. Erro conceitual de redução: o problema não é de desempenho, e sim de critério não sindicável.",
@@ -166,7 +166,7 @@ const moduleQuestions6 = [
     },
     regra: "Critério oculto = violação simultânea de impessoalidade e publicidade; o critério de decisão é informação pública.",
     pegadinha: "A alternativa E explora a confusão entre discricionariedade e arbitrariedade — a mais clássica das provas de administrativo.",
-    fonte: "CF/88, art. 37, caput; Lei nº 12.527/2011, art. 3º, V, e art. 7º, V; Lei nº 14.129/2021, art. 29, § 1º, III (verificados em 2026-10-21)."
+    fonte: "CF/88, art. 37, caput; Lei nº 12.527/2011, arts. 3º, V, e 7º, V; Lei nº 14.129/2021, art. 3º, IV e VII (verificados em 2026-10-21)."
   },
 
   { id: "q-m6-07", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
