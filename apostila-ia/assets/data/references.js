@@ -1285,7 +1285,7 @@ const references = [
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
-  },,
+  },
   {
     "id": "ref-cisco-10gbase-t-cat6-cat6a",
     "titulo": "Cisco Catalyst 6500 16-Port 10 Gigabit Ethernet Copper Module",
