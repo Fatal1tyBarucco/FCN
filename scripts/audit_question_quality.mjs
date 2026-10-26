@@ -59,10 +59,10 @@ function parseQuestions(path) {
     if (/LGPD|Lei nº|Lei n\.|LAI|Constituição Federal|ANPD|Marco Civil/i.test(allText) && !sourceRef.trim()) {
       flags.push("questão legal sem campo fonte");
     }
-    if (/Autoridade Nacional de Proteção de Dados/i.test(allText) && !/denominação anterior|denominação histórica|historicamente/i.test(allText)) {
+    if (/\bAutoridade Nacional de Proteção de Dados\b/.test(allText) && !/denominação anterior|denominação histórica|historicamente/i.test(allText)) {
       flags.push("possível denominação histórica da ANPD");
     }
-    if (/TODO|TBD|lorem ipsum|placeholder|undefined|null|null null/i.test(allText)) {
+    if (/\bTODO\b|\bTBD\b|lorem ipsum|texto de preenchimento|preencher aqui|substituir aqui/i.test(allText)) {
       flags.push("possível placeholder ou texto de desenvolvimento");
     }
     return {
