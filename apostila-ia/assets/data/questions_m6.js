@@ -735,13 +735,13 @@ const moduleQuestions6 = [
       { letra: "E", texto: "a publicação em rede social dispensa registro de autoria e de aprovação, por se tratar de canal informal." }
     ],
     gabarito: "A",
-    justificativa: "O art. 8º, § 2º, da LAI torna obrigatória a divulgação em sítios oficiais; a rede social é canal adicional, não substitutivo. A alternativa C contraria a governança do canal (titularidade do órgão, conta institucional, autenticação multifator e autoria individual — necessária ao não repúdio e à auditoria); D desloca para a pessoa uma atribuição do cargo e produz prova de autoria deficiente; E nega o dever de registro, que sustenta a responsabilização (art. 34 da LAI) e o dever de auditoria (art. 43, IV, da Lei nº 14.129/2021).",
+    justificativa: "O art. 8º, § 2º, da LAI torna obrigatória a divulgação em sítios oficiais; a rede social é canal adicional, não substitutivo. A alternativa C contraria a governança do canal (titularidade do órgão, conta institucional, autenticação multifator e autoria individual, necessárias à rastreabilidade e à responsabilização); D desloca para a pessoa uma atribuição do cargo e dificulta comprovar a autoria institucional; E erra ao tratar a informalidade da plataforma como justificativa para dispensar controles internos. O registro de autoria e aprovação é apresentado aqui como prática de governança e controle, não como obrigação específica dos arts. 34 da LAI ou 43, IV, da Lei nº 14.129/2021, dispositivos que não fundamentam essa afirmação neste contexto.",
     analise: {
       A: "CORRETA. Rede social é complementar ao sítio oficial, que permanece obrigatório.",
       B: "INCORRETA. Erro conceitual: substituição contraria o art. 8º, § 2º.",
       C: "INCORRETA. Erro conceitual: credencial compartilhada impede autoria e responsabilização, ainda que haja acordo interno.",
       D: "INCORRETA. Erro conceitual: ato oficial exige canal institucional; hierarquia não converte conta pessoal em canal do órgão.",
-      E: "INCORRETA. Erro conceitual: o canal é oficial quanto ao conteúdo, e o registro de autoria e aprovação é exigível."
+      E: "INCORRETA. Erro conceitual: o caráter informal da plataforma não elimina a necessidade de controles internos, rastreabilidade e responsabilização; o registro de autoria e aprovação é boa prática de governança."
     },
     regra: "Canal institucional: titularidade do órgão, conta individual com segundo fator, política editorial, registro de publicação e rotina de correção; rede social é complementar.",
     pegadinha: "A alternativa C parece 'colaborativa' e é justamente o exemplo de falha de controle do currículo.",
