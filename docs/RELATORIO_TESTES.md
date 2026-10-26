@@ -360,3 +360,19 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - **PENDENTE — workflow agregado do PR.** Execução [40253837089](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40253837089) ainda estava `in_progress` na consulta. Não declarar todos os checks do PR concluídos.
 - **Limite de evidência:** o sucesso da validação comprova apenas as etapas executadas pelo workflow (sintaxe JavaScript, auditorias estruturais e verificações configuradas). Não comprova revisão semântica integral, operação em navegador real, leitor de tela ou comportamento em todos os navegadores.
 - **Achado de arquitetura que requer avaliação:** `apostila-ia/assets/js/storage.js` está incluído no HTML, mas seu cabeçalho declara que os módulos existentes de navegação, flashcards e questões continuam gravando diretamente em chaves próprias de `localStorage`. Portanto, a camada unificada não é atualmente a fonte única de persistência; testar recuperação, backup e consistência entre namespaces antes de declarar persistência plenamente integrada.
+
+
+## Revisão focal de referências legais — 2026-10-26
+
+**Alterações realizadas no banco de questões M6** (não confundir revisão de referências com revisão semântica integral):
+
+- `q-m6-03`: substituída a referência isolada ao art. 1º da LGPD por LGPD, art. 6º, I–III, para fundamentar finalidade, adequação e necessidade.
+- `q-m6-29`: removida a referência inadequada ao art. 43 da Lei nº 14.129/2021 para uma afirmação geral sobre trilha de auditoria; referências atualizadas para LAI e LGPD.
+- `q-m6-31`: removida a referência inadequada ao art. 43 da Lei nº 14.129/2021; mantida LAI, art. 8º, § 2º, e adicionada Lei nº 14.129/2021, art. 3º, IV.
+- `q-m6-32`: cenário delimitado ao Poder Executivo federal; incluída Lei nº 12.813/2013, arts. 3º, I, 4º e 5º, V.
+- `q-m6-38`: removida a referência inadequada ao art. 43 da Lei nº 14.129/2021; atualizadas referências para LAI e LGPD.
+- Catálogo atualizado em `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md`; contagem documental ajustada para 73 itens (20 vídeos + 53 referências técnicas).
+
+**Fontes oficiais consultadas:** [LGPD — Lei nº 13.709/2018](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm), [Lei nº 12.813/2013](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12813.htm), [Lei nº 14.129/2021](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm).
+
+**Status de testes:** as alterações foram enviadas ao branch e aguardam a execução final de CI no HEAD resultante. Não houve execução local nesta operação. A revisão não valida todas as questões nem substitui conferência semântica artigo por artigo.
