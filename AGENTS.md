@@ -558,6 +558,15 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 
 - Follow-up do verificador q-m4-44: a primeira correção manteve uma asserção sensível a maiúsculas, mas `norm()` normaliza o texto para minúsculas; por isso, a checagem ainda falhou embora a justificativa estivesse correta. A asserção agora procura `lgpd`, `marco civil` e `complementares` em minúsculas. Commit: `0595cce79e7cbc1e4b975d7aa964706ec77318e4`. A execução CI do HEAD atual deve confirmar a correção.
 
+## Revisão inicial do M5 — q-m5-01 a q-m5-05 (2026-10-26)
+
+- q-m5-01: definição ampla de IA sem atribuir consciência ou aprendizagem autônoma a todo sistema.
+- q-m5-02: sistemas baseados em regras descritos com condições explícitas, manutenção e testes de conflito.
+- q-m5-03: aprendizado de máquina descrito como ajuste de modelos a partir de dados/experiência, sem garantia de melhoria automática com mais dados.
+- q-m5-04: reescrita para distinguir treino, validação e teste e tratar o risco de vazamento/contaminação da avaliação final.
+- q-m5-05: reescrita para contextualizar overfitting como sinal de generalização prejudicada, incluindo ressalva para mudança de distribuição e avaliação inadequada.
+- Commit de conteúdo: `caa6230ec504e1ffc239095fb4a780892e7ebf75`. Validar links de fontes e CI no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
