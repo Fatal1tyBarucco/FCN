@@ -99,7 +99,7 @@ const { chromium } = require("playwright");
     assert.ok(ethicsFeedback.length > 0, "ethics decision must return feedback");
 
     // Charts: edit a numeric source cell and verify the rendered histogram changes.
-    const chartCell = page.locator("#charts-app input[data-celula='histograma:0:1']");
+    const chartCell = page.locator("#charts-app input[data-celula='histograma:0:0']");
     await chartCell.waitFor({ state: "visible", timeout: 5000 });
     const chartBefore = await page.locator("#saida-histograma svg").evaluate(el => el.outerHTML);
     await chartCell.fill("10");
