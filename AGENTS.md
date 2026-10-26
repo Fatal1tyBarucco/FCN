@@ -124,6 +124,18 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Permanecem pendentes: auditoria semântica das questões não cobertas pelos lotes acima; verificação individual de referências remanescentes; reconciliação dos inventários/matrizes/relatórios com a saída mais recente dos validadores; avaliação manual de teclado, leitor de tela, responsividade e dispositivos físicos; e conclusão dos critérios para tirar o PR de Draft. Testes automatizados/headless não equivalem a certificação WCAG nem à conclusão integral da Fase 1.
 
 
+## Auditoria semântica incremental — lote M5 q-m5-16 a q-m5-20 (2026-10-26)
+
+- Revisão focal do lote M5 q-m5-16..q-m5-20, com escopo explícito de métricas de classificação/regressão, desbalanceamento, engenharia de atributos e avaliação de desempenho; não equivale à auditoria integral do M5.
+- q-m5-16: corrigido erro ortográfico em “Substituem”; preservada a distinção entre precisão (precision), recall, especificidade e F1.
+- q-m5-18: corrigido “Substituem” e refinada a pegadinha do RMSE: raiz quadrada da média dos erros ao quadrado, não média simples dos erros.
+- q-m5-19: corrigido o anglicismo/erro “ecc.” para “etc.” nos exemplos de engenharia de atributos.
+- q-m5-20: substituída questão redundante com q-m5-09 por cenário de classificação com 1% de positivos. O classificador que prevê sempre negativo obtém 99% de acurácia, recall zero para a classe positiva e especificidade de 100% se houver negativos reais. A explicação ressalva a convenção de cálculo quando não há predições positivas e destaca a necessidade de selecionar métricas conforme objetivo e custo dos erros.
+- Fonte primária para o tema de classes desbalanceadas adicionada a `references.js` e `referencias/referencias-verificadas.md`: Saito e Rehmsmeier (2015), PLOS ONE, DOI 10.1371/journal.pone.0118432; metadados confirmados na página editorial da PLOS em 2026-10-26. O cenário numérico de q-m5-20 é autoral, não dado extraído do artigo.
+- Commits do lote: `9be6af8f94e27dbf5d272451ea004ab9a2179d91` (questões), `8210a91d430c2f5e5228273592de155363ea4944` (catálogo de referências), `50d318333d65294c7166d29c4b54baddf8f975e3` (registro de fontes), `6a137e984aded68576f2da5c07cb77a4853a8bf6` (correção ortográfica remanescente).
+- Validação pendente para o novo HEAD: executar/consultar workflow de sintaxe, auditoria estrutural, smoke e regressões; a última aprovação anterior, no HEAD `8b9683dfb589212225d31361cd69512db828dc8d`, não certifica estes commits posteriores.
+- Próximo lote proposto: revisão semântica q-m5-11..q-m5-15, sem assumir cobertura dos demais itens do módulo.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
