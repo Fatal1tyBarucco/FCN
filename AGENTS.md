@@ -1006,6 +1006,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `7df24e2db62e15b99cc6c46c9dab85be719cc0a7`.
 - O cabeçalho foi sincronizado com a contagem real; CI do novo HEAD deve ser reconfirmado após esta atualização documental.
 
+## Auditoria semântica incremental — M5 q-m5-21 a q-m5-25 (2026-10-26)
+
+- q-m5-21: reescrita para diferenciar geração de recuperação de documentos sem presumir originalidade absoluta, verdade factual ou ausência de vieses; fonte atualizada para NIST AI 600-1.
+- q-m5-22: definição de alucinação mantida, com distinção de latência e repetição literal do prompt.
+- q-m5-23: mantida a descrição introdutória de atenção como pesos query/key aplicados aos values; uma explicação matemática mais formal pode acrescentar softmax e escala por dimensão das keys, mas não é necessária para a questão atual.
+- q-m5-24: mantida a recomendação de contexto recuperado e fontes verificáveis, com ressalva de que RAG não garante exatidão.
+- q-m5-25: reescrita para comparar um componente baseado em regras explícitas com geração contextual, evitando a dicotomia simplista “regras determinísticas versus geração sempre probabilística”.
+- Commit de conteúdo: `3319f3dfed4db198b09a78e5251d90b51b83d391`.
+- Revisão focal; validar sintaxe, esquema, fontes e CI no HEAD final.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
