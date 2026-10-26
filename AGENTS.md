@@ -842,6 +842,15 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo: `e8bac912e4dad4e83c6a88c5bce1d3af17c300a0`, `1d6c9609e774716ac37b05aa659d3a9e2bfda4d7` e `7b67f7a085bcf77b3072d2a1d4b5dc37e590622d`.
 - Fontes legais citadas incluem Constituição Federal, LAI, LGPD compilada e Lei nº 14.129/2021. Revisão focal, pendente de validação automatizada no HEAD atualizado.
 
+## Revisão focal de q-m6-26..q-m6-40 (2026-10-26)
+
+- q-m6-26..q-m6-30: revisados prazos de classificação da LAI, requisitos formais da decisão de classificação, hipóteses de dispensa de consentimento para informação pessoal, desenho de trilha de auditoria e responsabilidade em incidente envolvendo terceiro.
+- q-m6-31..q-m6-35: revisados governança de redes sociais institucionais, conflito de interesses, divulgação em conta pessoal e acessibilidade/inclusão digital.
+- q-m6-36..q-m6-40: revisados níveis didáticos de automação, supervisão humana, incidente com credenciais legítimas, uso de IA na comunicação oficial e transparência ativa incompleta.
+- Sem alteração de conteúdo nesses lotes. As questões distinguem a taxonomia didática dos níveis de automação de requisitos legais expressos e condicionam a responsabilidade a fatos e hipóteses legais, sem presumir automaticamente dano, culpa ou nexo causal.
+- Fontes referenciadas incluem LAI, LGPD compilada, Lei nº 12.813/2013, Lei nº 14.129/2021, manuais da CGU, NIST SP 800-61 e diretrizes de acessibilidade.
+- A revisão é focal; validação automatizada do HEAD atual ainda deve ser confirmada.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
