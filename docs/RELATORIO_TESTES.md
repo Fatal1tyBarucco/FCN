@@ -1,8 +1,17 @@
+## Validação mais recente — 2026-10-26 04:12 UTC
+
+- Banco esperado no HEAD validado: 399 questões e 460 flashcards.
+- Testes de interação aprovados: Excel `SOMA(1;2)=3`, cálculo CIDR, feedback do classificador de phishing, avaliação de prompt, recálculo do histograma e atualização do SVG no laboratório de gráficos.
+- A execução de CI confirmou sucesso dos checks configurados; não equivale a auditoria semântica integral, validação WCAG independente, testes manuais com leitor de tela ou verificação em dispositivos físicos.
+- Após atualização documental posterior, o HEAD do PR passou a `c999baf3975f54b005576dc3455227e6b4098fcf`; checks desse novo HEAD ainda estavam em execução na última consulta. Revalidar antes de afirmar que o HEAD documental mais recente está verde.
+
+---
+
 # RELATÓRIO DE TESTES — Apostila Web Interativa FCN
 
 ## Nota de atualização — 2026-10-26 04:08 UTC
 
-O relatório abaixo contém snapshots históricos e resultados de execuções anteriores. Após a inclusão das questões `q-m6-45` a `q-m6-47`, o banco esperado é de **399 questões**. O workflow do commit `9e79ea02d7c0695b8d0029e36bd7c76ecd2a72e8` está pendente; não atribuir os resultados antigos a esse commit até a conclusão dos checks.
+O relatório abaixo contém snapshots históricos e resultados de execuções anteriores. Após a inclusão das questões `q-m6-45` a `q-m6-47`, o banco esperado é de **399 questões**. A execução [40267735657](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40267735657) no HEAD `7a6ac2425f00ccdbebc8be2d206796037358e75d` concluiu com sucesso: sintaxe, matriz curricular, rastreabilidade, verificação estrutural, heurísticas, smoke test Chromium/Playwright em `file://`, regressões interativas e upload de relatórios. CodeQL e análises JavaScript/TypeScript/Actions também passaram nesse HEAD. As contagens abaixo são snapshots históricos, não os números atuais.
 
 ---
 
