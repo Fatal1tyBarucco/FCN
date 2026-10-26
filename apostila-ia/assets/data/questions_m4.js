@@ -1779,128 +1779,128 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-71", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Controles Compensatórios",
-    contexto: "Os controles compensatórios são alternativas seguras quando o controle principal não é viável.",
-    enunciado: "Os controles compensatórios em segurança da informação são:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controles compensatórios e risco residual",
+    contexto: "Um sistema legado não pode receber imediatamente uma atualização crítica porque ela interromperia um processo essencial ainda sem alternativa. A organização precisa reduzir a exposição enquanto prepara a mudança.",
+    enunciado: "Qual abordagem caracteriza melhor o uso responsável de controles compensatórios?",
     alternativas: [
-      { letra: "A", texto: "Alternativas que compensam a falha de um controle principal, mantendo o nível de segurança." },
-      { letra: "B", texto: "Controles que aumentam o risco de forma artificial." },
-      { letra: "C", texto: "Controles que eliminam a necessidade de segurança." },
-      { letra: "D", texto: "Controles que excluem a verificação." },
-      { letra: "E", texto: "Controles que afetam apenas o desempenho." }
+      { letra: "A", texto: "Documentar a limitação, avaliar o risco, aplicar controles alternativos proporcionais, definir responsável e prazo e reavaliar até que a correção principal seja possível." },
+      { letra: "B", texto: "Declarar que o risco foi eliminado assim que qualquer controle alternativo for instalado." },
+      { letra: "C", texto: "Ignorar a vulnerabilidade indefinidamente porque a atualização é inconveniente." },
+      { letra: "D", texto: "Remover todos os registros de auditoria para evitar alertas durante a mitigação." },
+      { letra: "E", texto: "Considerar o controle compensatório equivalente ao principal sem testar sua eficácia." }
     ],
     gabarito: "A",
-    justificativa: "Controles compensatórios são alternativas que mantêm o nível de segurança quando o controle primário não pode ser implementado (quer seja por restrições técnicas, financeiras ou operacionais). Aumentam o risco (alternativa B incorreta); eliminam necessidade de segurança (alternativa C incorreta); excluem verificação (alternativa D incorreta); afetam apenas desempenho (alternativa E incorreta).",
+    justificativa: "Um controle compensatório pode reduzir o risco quando o controle preferencial não é viável, mas não deve ser presumido equivalente nem suficiente sem avaliação. A organização precisa documentar a limitação, avaliar o risco residual, implementar medidas alternativas, atribuir responsabilidades e prazos e revisar a decisão conforme o contexto muda.",
     analise: {
-      A: "CORRETA. Controles compensatórios são alternativas que compensam a falha de controle principal.",
-      B: "INCORRETA. Controles compensatórios reduzem o risco, não aumentam artificialmente.",
-      C: "INCORRETA. Controles compensatórios não eliminam a necessidade de segurança.",
-      D: "INCORRETA. Controles compensatórios não excluem a verificação — são uma alternativa segura.",
-      E: "INCORRETA. Controles compensatórios afetam a segurança, não apenas desempenho."
+      A: "CORRETA. A alternativa combina mitigação temporária, avaliação de risco residual, responsabilidade, prazo e revisão.",
+      B: "INCORRETA. Um controle alternativo pode reduzir o risco, mas não prova sua eliminação.",
+      C: "INCORRETA. A dificuldade de atualização não justifica ignorar indefinidamente o risco.",
+      D: "INCORRETA. Remover registros enfraquece detecção, investigação e prestação de contas.",
+      E: "INCORRETA. A eficácia e as limitações do controle compensatório precisam ser avaliadas."
     },
-    regra: "Controle compensatório = 'retroalimentação segura'. Alternativa que mantém a segurança quando o ideal é inviável.",
-    pegadinha: "Controle compensatório não significa 'deixar passar' — é 'controle alternativo seguro'.",
-    fonte: "NIST SP 800-53 (CP-10: Contingency Planning)."
+    regra: "Controle compensatório reduz risco quando o controle preferencial não é viável; registre o risco residual, a justificativa, a responsabilidade, o prazo e a revisão.",
+    pegadinha: "Compensar não significa eliminar o risco nem autoriza uma exceção permanente sem reavaliação.",
+    fonte: "NIST SP 800-53 Rev. 5 — Security and Privacy Controls for Information Systems and Organizations: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
   { id: "q-m4-72", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Privilege Escalation",
-    contexto: "Privilege Escalation é o ato de obter privilégios mais altos do que deveria ter um usuário.",
-    enunciado: "O 'privilege escalation' (escalada de privilégios) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Escalada vertical e horizontal de privilégios",
+    contexto: "Em um sistema, um usuário comum explora uma falha para executar ações administrativas. Em outro caso, um usuário acessa registros pertencentes a outro usuário com o mesmo nível de permissão.",
+    enunciado: "Qual classificação distingue corretamente os dois casos?",
     alternativas: [
-      { letra: "A", texto: "O processo pelo qual um usuário ou processo cancerce privilégios mais altos do que os concedidos." },
-      { letra: "B", texto: "O processo de conceder privilégios." },
-      { letra: "C", texto: "O processo de excluir privilégios." },
-      { letra: "D", texto: "O processo de criptografar privilégios." },
-      { letra: "E", texto: "O processo de verificar privilégios." }
+      { letra: "A", texto: "O primeiro é escalada vertical; o segundo pode caracterizar escalada horizontal ou acesso indevido entre contas do mesmo nível." },
+      { letra: "B", texto: "Ambos são necessariamente escalada vertical, pois qualquer acesso indevido aumenta o nível de privilégio." },
+      { letra: "C", texto: "O primeiro é apenas autenticação; o segundo é criptografia." },
+      { letra: "D", texto: "Nenhum caso envolve autorização, porque o usuário já estava autenticado." },
+      { letra: "E", texto: "Escalada de privilégios só ocorre quando alguém recebe formalmente uma nova função." }
     ],
     gabarito: "A",
-    justificativa: "Privilege escalation é o ato de obter privilégios mais altos do que os concedidos — seja por modo horizontal (mesma conta) ou vertical (mayor privilégios no próprio usuário). O processo de conceder privilégios (alternativa B incorreta); excluir privilégios (alternativa C incorreta); criptografar privilégios (alternativa D incorreta); verificar privilégios (alternativa E incorreta).",
+    justificativa: "Escalada vertical ocorre quando um usuário ou processo obtém permissões de nível superior às que deveria possuir. Escalada horizontal ocorre quando alguém acessa recursos de outra conta ou identidade no mesmo nível de privilégio. A classificação depende do recurso e das permissões obtidas; autenticação bem-sucedida não significa que todo acesso esteja autorizado.",
     analise: {
-      A: "CORRETA. Privilege escalation é obter privilégios mais altos do que os concedidos.",
-      B: "INCORRETA. Conceder privilégios é 'provisão', não 'escalada'.",
-      C: "INCORRETA. Excluir privilégios é 'diminuição', não 'escalada'.",
-      D: "INCORRETA. Criptografar privilégios não é escalada.",
-      E: "INCORRETA. Verificar privilégios é 'monitoring', não escalada."
+      A: "CORRETA. O primeiro cenário eleva o nível de permissão; o segundo envolve acesso a recursos de outra identidade no mesmo nível.",
+      B: "INCORRETA. Acesso indevido não implica sempre elevação vertical; pode ocorrer horizontalmente.",
+      C: "INCORRETA. Os cenários descrevem abuso de permissões, não criptografia ou simples autenticação.",
+      D: "INCORRETA. A autorização continua relevante depois da autenticação, em cada recurso e ação.",
+      E: "INCORRETA. A escalada pode resultar de falhas técnicas ou de configuração, não apenas de uma alteração formal de função."
     },
-    regra: "Privilege Escalation = 'dar mais do que deve'. Atingir privilégios acima do necessário.",
-    pegadinha: "Escalada não é 'dar privilégios' — é 'gastar privilégios' (obter além do concedido).",
-    fonte: "MITRE ATT&CK — T1068 (Privilege Escalation)."
+    regra: "Escalada vertical = obter privilégios superiores; horizontal = acessar recursos de outra identidade em nível semelhante.",
+    pegadinha: "Estar autenticado não autoriza acesso a todos os objetos; autorização deve ser verificada por recurso e ação.",
+    fonte: "MITRE ATT&CK, T1068 — Exploitation for Privilege Escalation: https://attack.mitre.org/techniques/T1068/; OWASP, Authorization Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html."
   },
 
   { id: "q-m4-73", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.4 — Brute Force",
-    contexto: "Ataques de força bruta são uma técnica comum de quebra de senhas.",
-    enunciado: "Sobre o ataque de força bruta, é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Tentativas de senha e controles contra força bruta",
+    contexto: "Um portal registra muitas tentativas de autenticação contra uma conta. A equipe quer reduzir a probabilidade de adivinhação automatizada sem criar bloqueios que permitam negar serviço a usuários legítimos.",
+    enunciado: "Qual conjunto de controles é mais adequado para mitigar ataques de força bruta?",
     alternativas: [
-      { letra: "A", texto: "É uma técnica que garante a segurança da senha." },
-      { letra: "B", texto: "É uma técnica que criptografa a senha." },
-      { letra: "C", texto: "É uma técnica que testa sistematicamente todas as combinações possíveis de senhas até achar a correta." },
-      { letra: "D", texto: "É uma técnica que exclui a senha." },
-      { letra: "E", texto: "É uma técnica que não pode ser bloqueada." }
+      { letra: "A", texto: "Combinar limitação de tentativas e detecção de padrões, autenticação multifator e respostas de bloqueio proporcionais, monitoradas e resistentes a abuso." },
+      { letra: "B", texto: "Permitir tentativas ilimitadas, pois senhas longas tornam os controles desnecessários." },
+      { letra: "C", texto: "Bloquear permanentemente uma conta após uma única tentativa falha em qualquer circunstância." },
+      { letra: "D", texto: "Registrar a senha em texto claro para identificar rapidamente o atacante." },
+      { letra: "E", texto: "Desativar alertas para evitar que a equipe receba muitos eventos." }
     ],
-    gabarito: "C",
-    justificativa: "Força bruta testa sistematicamente todas as combinações de caracteres até encontrar a senha correta. Garante segurança — não (alternativa A incorreta); criptografa a senha — não (alternativa B incorreta); exclui a senha — não (alternativa D incorreta); pode ser bloqueada com políticas (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "A mitigação pode combinar limitação adaptativa de tentativas, monitoramento, MFA, detecção de padrões e políticas de resposta que considerem o risco de bloqueio abusivo. Nenhum controle isolado elimina todos os ataques; a estratégia deve equilibrar segurança, disponibilidade, acessibilidade e experiência legítima do usuário.",
     analise: {
-      A: "INCORRETA. Força bruta enfraquece a segurança — não garante nada.",
-      B: "INCORRETA. Força bruta não criptografa a senha — tenta adivinhar.",
-      C: "CORRETA. Força bruta testa todas as combinações até achar a senha correta.",
-      D: "INCORRETA. Força bruta não exclui a senha — tenta adivinhar.",
-      E: "INCORRETA. Força bruta pode ser bloqueada com limitação de tentativas."
+      A: "CORRETA. A combinação de controles reduz tentativas automatizadas e permite resposta proporcional, com monitoramento.",
+      B: "INCORRETA. Senhas fortes ajudam, mas não tornam desnecessários controles de autenticação e monitoramento.",
+      C: "INCORRETA. Bloqueio rígido após uma falha pode permitir abuso para negar acesso a usuários legítimos.",
+      D: "INCORRETA. Senhas não devem ser armazenadas em texto claro; isso criaria um risco grave adicional.",
+      E: "INCORRETA. Desativar alertas reduz a capacidade de identificar ataques."
     },
-    regra: "Força bruta = 'tentar tudo'. Método sistemático de quebra de senhas.",
-    pegadinha: "Força bruta não é 'cifra' — é 'adivinhar todos os casos possíveis'.",
-    fonte: "NIST SP 800-63B."
+    regra: "Mitigue força bruta com controles em camadas: limitação proporcional, MFA, detecção, monitoramento e armazenamento seguro de credenciais.",
+    pegadinha: "Um bloqueio muito rígido pode ser abusado para negar serviço; controles precisam considerar ataques e usuários legítimos.",
+    fonte: "NIST SP 800-63B — Digital Identity Guidelines: Authentication and Lifecycle Management: https://pages.nist.gov/800-63-4/sp800-63b.html; OWASP Authentication Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html."
   },
 
   { id: "q-m4-74", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.4 — Password Spraying",
-    contexto: "Ataques de password spraying são uma variante da força bruta.",
-    enunciado: "O ataque de 'password spraying' é caracterizado por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Password spraying e defesa de identidade",
+    contexto: "Uma organização detecta tentativas de autenticação em muitas contas diferentes, com poucas falhas por conta e horários semelhantes.",
+    enunciado: "Qual interpretação e resposta são mais adequadas?",
     alternativas: [
-      { letra: "A", texto: "Usar uma senha comum em várias contas, evitando bloqueios por tentativas múltiplas." },
-      { letra: "B", texto: "Criptografar senhas." },
-      { letra: "C", texto: "Excluir contas." },
-      { letra: "D", texto: "Gerar senhas aleatórias." },
-      { letra: "E", texto: "Proteger contas." }
+      { letra: "A", texto: "O padrão é compatível com password spraying; a equipe deve correlacionar tentativas entre contas, investigar origem e aplicar controles proporcionais, MFA e monitoramento." },
+      { letra: "B", texto: "Não pode ser ataque porque cada conta apresenta poucas tentativas falhas." },
+      { letra: "C", texto: "É necessariamente credential stuffing, pois todos os ataques distribuídos usam credenciais vazadas." },
+      { letra: "D", texto: "A melhor resposta é desativar os registros para reduzir o volume de alertas." },
+      { letra: "E", texto: "Basta aumentar o tamanho mínimo da senha, sem investigar o padrão observado." }
     ],
     gabarito: "A",
-    justificativa: "Password spraying é um ataque que tenta uma senha comum em várias contas, evitando os mecanismos de bloqueio por múltiplas falhas de autenticação em uma única conta. Criptografar (alternativa B incorreta); excluir contas (alternativa C incorreta); gerar aleatoriamente (alternativa D incorreta); proteger (alternativa E incorreta).",
+    justificativa: "Password spraying costuma testar uma ou poucas senhas comuns em várias contas, tentando evitar limiares de bloqueio por conta. A detecção pode exigir correlação entre identidades, origens, horários e resultados. A resposta deve combinar investigação, controles de autenticação e monitoramento, sem presumir que todo padrão distribuído seja o mesmo tipo de ataque.",
     analise: {
-      A: "CORRETA. Password spraying usa uma senha comum em múltiplas contas para evitar bloqueios.",
-      B: "INCORRETA. Password spraying não criptografa senhas.",
-      C: "INCORRETA. Password spraying não exclui contas — tenta autenticação falsa.",
-      D: "INCORRETA. Password spraying não gera senhas aleatoriamente — usa senhas comuns.",
-      E: "INCORRETA. Password spraying não protege contas — esconde dentro delas."
+      A: "CORRETA. A distribuição entre muitas contas é compatível com password spraying e justifica correlação e investigação.",
+      B: "INCORRETA. A baixa quantidade de falhas por conta pode ser justamente uma característica da técnica.",
+      C: "INCORRETA. Credential stuffing usa pares de credenciais previamente comprometidas; password spraying tenta senhas comuns em várias contas.",
+      D: "INCORRETA. Desativar registros elimina evidências necessárias para detecção e resposta.",
+      E: "INCORRETA. Políticas de senha podem ajudar, mas não substituem análise do padrão e controles de autenticação."
     },
-    regra: "Password Spraying = 'senha comum em todas as contas'. Evita bloqueio ao testar poucas falhas por conta.",
-    pegadinha: "Password spraying é 'a senha do dia' — um esquema comum, distribuído em muitas contas.",
-    fonte: "Microsoft Security — Password Spraying Attack, 2021."
+    regra: "Password spraying distribui tentativas de poucas senhas entre várias contas; correlacione eventos por identidade, origem, horário e resultado.",
+    pegadinha: "Poucas falhas por conta não excluem um ataque quando há muitas contas envolvidas.",
+    fonte: "Microsoft Security, password spray attacks: https://learn.microsoft.com/en-us/entra/architecture/security-operations-password-spray."
   },
 
   { id: "q-m4-75", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.4 — Credential Stuffing",
-    contexto: "Credential stuffing é um ataque que usa credenciais violadas de outros serviços.",
-    enunciado: "O 'credential stuffing' é um ataque que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Credential stuffing e reutilização de senhas",
+    contexto: "Um serviço observa logins bem-sucedidos em contas de usuários que utilizam senhas reutilizadas após vazamentos em outros serviços.",
+    enunciado: "Qual controle reduz mais diretamente o risco de credential stuffing?",
     alternativas: [
-      { letra: "A", texto: "Usa credenciais (e-mail/senha) violadas de outros serviços para tentar login em conta." },
-      { letra: "B", texto: "Criptografa credenciais." },
-      { letra: "C", texto: "Exclui contas." },
-      { letra: "D", texto: "Gera senhas aleatórias." },
-      { letra: "E", texto: "Protege contas." }
+      { letra: "A", texto: "Incentivar senhas únicas por serviço, oferecer MFA resistente a phishing quando viável, detectar padrões de login e orientar a troca de credenciais comprometidas." },
+      { letra: "B", texto: "Permitir que usuários reutilizem a mesma senha em todos os serviços para facilitar a memorização." },
+      { letra: "C", texto: "Usar apenas um bloqueio por conta após a primeira falha, sem monitorar autenticações bem-sucedidas." },
+      { letra: "D", texto: "Armazenar senhas em texto claro para compará-las com listas de vazamentos." },
+      { letra: "E", texto: "Presumir que um login bem-sucedido é legítimo mesmo quando o padrão de acesso é anômalo." }
     ],
     gabarito: "A",
-    justificativa: "Credential stuffing é a tentativa de usar credenciais (e-mail/senha) violadas em outros serviços para obter acesso a contas. Criptografar (alternativa B incorreta); excluir contas (alternativa C incorreta); gerar aleatoriamente (alternativa D incorreta); proteger (alternativa E incorreta).",
+    justificativa: "Credential stuffing utiliza pares de usuário e senha expostos em um serviço para tentar acessar outros. Senhas únicas reduzem o efeito da reutilização, MFA acrescenta uma barreira, e a detecção de padrões de autenticação ajuda a identificar tentativas e acessos suspeitos. O serviço deve armazenar senhas com mecanismos apropriados e responder a credenciais comprometidas sem expor segredos.",
     analise: {
-      A: "CORRETA. Credential stuffing usa credenciais violadas de outros serviços para tentar login.",
-      B: "INCORRETA. Credential stuffing não criptografa credenciais.",
-      C: "INCORRETA. Credential stuffing não exclui contas — tenta acessá-las.",
-      D: "INCORRETA. Credential stuffing não gera senhas aleatoriamente.",
-      E: "INCORRETA. Credential stuffing não protege contas — esconde dentro delas."
+      A: "CORRETA. A alternativa combina prevenção da reutilização, fator adicional, detecção e resposta a credenciais comprometidas.",
+      B: "INCORRETA. Reutilizar senhas permite que um vazamento em um serviço afete outros.",
+      C: "INCORRETA. Um bloqueio isolado pode ser abusado e não identifica necessariamente tentativas distribuídas ou acessos bem-sucedidos suspeitos.",
+      D: "INCORRETA. Senhas não devem ser armazenadas em texto claro.",
+      E: "INCORRETA. Sucesso de autenticação não prova legitimidade quando há sinais de comprometimento ou anomalia."
     },
-    regra: "Credential stuffing = 'repetir o esquema'. Usar credenciais vazadas em outros sites para acessar contas.",
-    pegadinha: "Credential stuffing é 'mesma senha' — uma senha vlada, muitas contas.",
-    fonte: "Akamai — Credential Stuffing Attacks, 2022."
+    regra: "Credential stuffing explora reutilização de credenciais vazadas; use senhas únicas, MFA, detecção e resposta segura a credenciais comprometidas.",
+    pegadinha: "Uma autenticação bem-sucedida pode ser resultado de credenciais roubadas; avalie o contexto do acesso.",
+    fonte: "OWASP, Credential Stuffing Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html; NIST SP 800-63B: https://pages.nist.gov/800-63-4/sp800-63b.html."
   },
 
   { id: "q-m4-76", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
