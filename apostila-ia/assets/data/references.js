@@ -857,6 +857,16 @@ const references = [
     dispositivos: ["art. 5º, I", "art. 5º, II", "art. 5º, III", "art. 5º, IV", "art. 5º, V", "art. 5º, VI", "art. 5º, VII", "art. 5º, VIII", "art. 5º, IX", "art. 5º, XI", "art. 5º, XIII", "art. 5º, XV", "art. 5º, XVI", "art. 5º, XVII", "art. 5º, XVIII", "art. 5º, XIX", "art. 5º, XX", "art. 5º, XXI", "art. 5º, XXII", "art. 5º, XXIII", "art. 5º, XXIV", "art. 5º, XXV", "art. 5º, XXVI", "art. 5º, XXVII", "art. 5º, XXVIII", "art. 5º, XXIX", "art. 5º, XXX", "art. 5º, XXXI", "art. 5º, XXXII", "art. 5º, XXXIV", "art. 5º, XXXV", "art. 5º, XXXVI", "art. 5º, XXXVII", "art. 5º, XXXVIII", "art. 5º, XXXIX", "art. 5º, XL", "art. 5º, LXXVIII", "art. 5º, § 1º", "art. 5º, § 2º", "art. 5º, § 3º", "art. 5º, § 4º"]
   },
   {
+    id: "ref-secom-guia-redes-sociais-governo-federal",
+    titulo: "Guia de Boas Práticas para atuação de redes sociais do Governo Federal",
+    organizacao: "Secretaria de Comunicação Social da Presidência da República (Secom)",
+    url: "https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf",
+    topico: "M6 — Comunicação e conduta digital (redes sociais institucionais)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
     id: "ref-w3c-wcag-22",
     titulo: "Web Content Accessibility Guidelines (WCAG) 2.2",
     organizacao: "W3C",
