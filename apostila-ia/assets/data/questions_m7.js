@@ -28,20 +28,20 @@ const moduleQuestions7 = [
     contexto: "Um painel hospitalar exibe apenas o número 238, sem unidade, sem identificação de paciente e sem data de medição.",
     enunciado: "No modelo DIKW, esse número isolado, antes de qualquer interpretação, corresponde a:",
     alternativas: [
-      { letra: "A", texto: "Dado." },
+      { letra: "A", texto: "Metadado." },
       { letra: "B", texto: "Informação." },
       { letra: "C", texto: "Conhecimento." },
       { letra: "D", texto: "Sabedoria." },
-      { letra: "E", texto: "Metadado." }
+      { letra: "E", texto: "Dado." }
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "O currículo define dado como registro bruto, anterior a contexto e interpretação: '238' sem unidade, sem paciente e sem data é exatamente isso. Informação é o dado já contextualizado ('238 mmHg, sistólica do paciente X, medida às 9h'); conhecimento é informação combinada com experiência e julgamento; sabedoria é o discernimento que orienta a decisão; metadado é dado que descreve outro dado, o que não é o caso do número em si.",
     analise: {
-      A: "CORRETA. Número sem unidade, sem titular e sem data permanece registro bruto — o nível 'dado' do DIKW.",
+      A: "INCORRETA. Metadado descreve outro dado (tipo, unidade, dono, origem); o número 238 é o conteúdo, não a descrição.",
       B: "INCORRETA. Informação exige contexto e interpretação atribuídos (unidade, paciente, momento), que o painel não fornece.",
       C: "INCORRETA. Conhecimento pressupõe informação combinada com experiência e julgamento, apta a orientar ação.",
       D: "INCORRETA. Sabedoria é o discernimento sobre o que fazer diante de consequências e valores, nível posterior ao conhecimento.",
-      E: "INCORRETA. Metadado descreve outro dado (tipo, unidade, dono, origem); o número 238 é o conteúdo, não a descrição."
+      E: "CORRETA. Número sem unidade, sem titular e sem data permanece registro bruto — o nível 'dado' do DIKW."
     },
     regra: "DIKW: dado (registro bruto) → informação (dado contextualizado) → conhecimento (informação + experiência/julgamento) → sabedoria (discernimento para decidir).",
     pegadinha: "O formato numérico engana: '238' só vira informação quando alguém atribui unidade, contexto e interpretação.",
