@@ -967,7 +967,7 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m7-28: z-scores recalculados: 1,5 e 2,0; desempenho relativo distinguido da nota absoluta.
 - q-m7-29: lista de telefones em uma célula reconhecida como violação de atomicidade da 1FN.
 - q-m7-30: papéis de dono do dado e steward diferenciados no processo de governança.
-- Revisão focal sem patches de conteúdo nesta passada. Verificar a matriz curricular e CI no HEAD atual.
+- Snapshot inicial desta revisão. Correções posteriores em q-m7-20, q-m7-21 e q-m7-22 estão registradas nas seções de revisão adicional do M7; prevalece o registro mais recente. Verificar a matriz curricular e CI no HEAD atual.
 
 ## Revisão focal do M7 — questões 31 a 40 (2026-10-26)
 
@@ -981,7 +981,7 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m7-38: média global ponderada pelo tamanho dos grupos recalculada em 6,5, em vez de média simples 6,0.
 - q-m7-39: remoção de nome/CPF não tratada como anonimização suficiente; quasi-identificadores combinados exigem avaliação de reidentificação.
 - q-m7-40: revisão de acesso temporário e minimização de dados ligada à finalidade e à revisão/expiração de permissões.
-- Revisão focal sem patches de conteúdo nesta passada. Validar fontes, matriz e CI no HEAD atual.
+- Snapshot inicial desta revisão. A correção posterior de q-m7-22 e o refinamento de completude histórica/ETL estão registrados nas seções de revisão adicional do M7; prevalece o registro mais recente. Validar fontes, matriz e CI no HEAD atual.
 
 ## Revisão focal do M8 — questões 1 a 40 (2026-10-26)
 
@@ -1001,7 +1001,7 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m8-34: corrigido o contexto contraditório sobre convenção de Tukey; diferença de bigodes agora decorre de configurações padrão não harmonizadas. Corrigido também “interpolacão”.
 - q-m8-35: média ponderada calculada em 38/6 ≈ 6,33.
 - q-m8-36 a q-m8-40: outliers não removidos sem investigação, critérios de causalidade, granularidade/contagem distinta, agregação DAX e estudo de caso integrador revisados.
-- Commits de conteúdo M8: `a4653cafda5ed1b70537f9511fbabafcdcd8c0c5` e `a4451aea28dca2e0dbedb26a7a548fac3c44df65`. Revisão focal concluída; aguardar validadores no HEAD atual.
+- Commits de conteúdo M8 no snapshot inicial: `a4653cafda5ed1b70537f9511fbabafcdcd8c0c5` e `a4451aea28dca2e0dbedb26a7a548fac3c44df65`. A correção posterior de q-m8-29 está registrada na seção de revisão mais recente do M8; prevalece o registro mais recente. Aguardar validadores no HEAD atual.
 
 ## Auditoria cruzada de gabaritos e análises (2026-10-26)
 
