@@ -513,27 +513,27 @@ const moduleQuestions5 = [
 
   { id: "q-m5-21", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m5-u3-t1-s1", assunto: "5.3 — O que é IA generativa",
-    contexto: "Uma secretaria ganha um assistente que redige e-mails a partir de tópicos.",
-    enunciado: "Sobre o que é IA generativa, é correto afirmar que:",
+    contexto: "Uma secretaria avalia um assistente que redige rascunhos de e-mails a partir de instruções e exemplos fornecidos pelo servidor.",
+    enunciado: "Qual descrição caracteriza melhor a IA generativa e a diferencia de um sistema que apenas recupera documentos existentes?",
     alternativas: [
-      { letra: "A", texto: "Reúne dados de forma segmentada." },
-      { letra: "B", texto: "Gera conteúdo novo (texto, imagem, áudio) a partir de padrões aprendidos." },
-      { letra: "C", texto: "Armazena arquivos." },
-      { letra: "D", texto: "Aumenta a velocidade de rede." },
-      { letra: "E", texto: "Permite acesso físico a servidores." }
+      { letra: "A", texto: "A IA generativa apenas localiza e copia documentos existentes, sem produzir novas sequências de conteúdo." },
+      { letra: "B", texto: "A IA generativa produz conteúdo como texto, imagem ou áudio a partir de padrões aprendidos; a saída deve ser avaliada porque pode conter erros ou conteúdo sem suporte." },
+      { letra: "C", texto: "Qualquer sistema que armazene dados ou execute uma consulta a um banco de dados é necessariamente IA generativa." },
+      { letra: "D", texto: "A IA generativa garante que todo conteúdo produzido seja original, verdadeiro e livre de vieses." },
+      { letra: "E", texto: "A IA generativa é definida por aumentar a velocidade da rede ou conceder acesso físico a servidores." }
     ],
     gabarito: "B",
-    justificativa: "IA generativa aprende distribuições de dados e gera conteúdo novo, diferente de sistemas que apenas reúnem, armazenam ou acessam. A alternativa A descreve um sistema de reunião de dados; a C, armazenamento; a D, rede; e a E, acesso físico — nenhuma é a definição de IA generativa.",
+    justificativa: "IA generativa é uma classe de sistemas de IA que gera conteúdo novo, como texto, imagem, áudio ou outros formatos, a partir de padrões aprendidos durante o treinamento e de entradas fornecidas. Isso difere de uma ferramenta que apenas recupera um documento existente, embora sistemas reais possam combinar geração, busca e recuperação. A novidade aparente não garante originalidade absoluta, correção factual, ausência de vieses ou adequação ao uso.",
     analise: {
-      A: "INCORRETA. Reunir dados é um sistema de integração, não de geração.",
-      B: "CORRETA. IA generativa produz conteúdo novo a partir de padrões aprendidos.",
-      C: "INCORRETA. Armazenar arquivos é um sistema de armazenamento, não geração.",
-      D: "INCORRETA. Aumentar velocidade de rede não é IA generativa.",
-      E: "INCORRETA. Acesso físico a servidores não é geração de conteúdo."
+      A: "INCORRETA. Recuperação de documentos pode ser combinada com geração, mas não define por si só a capacidade generativa.",
+      B: "CORRETA. A alternativa define a produção de conteúdo e registra que a saída precisa de avaliação.",
+      C: "INCORRETA. Armazenamento e consulta a dados não tornam automaticamente um sistema generativo.",
+      D: "INCORRETA. Sistemas generativos podem produzir erros, reproduzir vieses ou gerar conteúdo semelhante a materiais existentes.",
+      E: "INCORRETA. Velocidade de rede e acesso físico não definem IA generativa."
     },
-    regra: "Generativa = gera; discriminativa = classifica.",
-    pegadinha: "Não confunda com 'busca' — a saída é produzida, não recuperada.",
-    fonte: "OpenAI — GPT-4 Technical Report, 2023."
+    regra: "IA generativa produz conteúdo a partir de padrões aprendidos; sistemas reais podem combinar geração e recuperação, e a saída precisa ser avaliada.",
+    pegadinha: "Conteúdo novo não significa necessariamente conteúdo verdadeiro, inédito em sentido jurídico ou livre de vieses.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-22", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -612,28 +612,28 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-25", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "m5-u3-t2-s2", assunto: "5.3 — IA clássica vs. generativa",
-    contexto: "Órgão público tria chamados de atendimento.",
-    enunciado: "Sobre a diferença prática entre IA baseada em regras e IA generativa em atendimento, é correto afirmar que:",
+    nivel: "avancado", topico: "m5-u3-t2-s2", assunto: "5.3 — IA baseada em regras e IA generativa",
+    contexto: "Um órgão público tria chamados. Um componente aplica regras explícitas para encaminhar solicitações por categoria; outro redige um resumo do chamado para apoiar o atendente.",
+    enunciado: "Qual comparação entre os componentes é mais precisa?",
     alternativas: [
-      { letra: "A", texto: "A IA generativa sempre substitui regras e nunca comete erros." },
-      { letra: "B", texto: "A IA generativa é probabilística, com saídas variáveis, e precisa de verificação." },
-      { letra: "C", texto: "IA baseada em regras gera respostas novas a cada execução." },
-      { letra: "D", texto: "IA generativa não precisa de supervisão humana." },
-      { letra: "E", texto: "IA baseada em regras é sempre mais flexível." }
+      { letra: "A", texto: "O componente generativo sempre substitui as regras, não comete erros e pode decidir sozinho qualquer encaminhamento." },
+      { letra: "B", texto: "O componente de regras aplica condições explicitamente programadas; o generativo produz texto com base no modelo e no contexto, podendo variar e exigir validação conforme o risco." },
+      { letra: "C", texto: "O componente baseado em regras aprende necessariamente novos critérios a partir de cada chamado, sem alteração de configuração." },
+      { letra: "D", texto: "A geração de texto garante que o resumo seja factual e que nenhuma informação importante seja omitida." },
+      { letra: "E", texto: "Apenas sistemas generativos podem ser supervisionados, auditados ou testados." }
     ],
     gabarito: "B",
-    justificativa: "IA generativa é probabilística e variável; IA baseada em regras é determinística. Ambas exigem supervisão conforme o risco.",
+    justificativa: "Um sistema baseado em regras executa condições explicitamente definidas e tende a ser previsível para a mesma entrada e configuração. Um sistema generativo produz conteúdo com base no modelo e no contexto; sua saída pode variar conforme parâmetros e implementação e pode conter erros ou omissões. As duas abordagens podem ser testadas e auditadas, e o grau de supervisão deve considerar o risco da decisão ou do conteúdo.",
     analise: {
-      A: "INCORRETA. IA generativa não é infalível — precisa de verificação.",
-      B: "CORRETA. IA generativa é probabilística, variável e exige verificação.",
-      C: "INCORRETA. IA baseada em regras é determinística e reprodutível.",
-      D: "INCORRETA. IA generativa também precisa de supervisão humana.",
-      E: "INCORRETA. IA baseada em regras não é sempre mais flexível."
+      A: "INCORRETA. IA generativa não substitui sempre regras nem deve ser presumida infalível ou autônoma para qualquer decisão.",
+      B: "CORRETA. A alternativa distingue regras explícitas de geração contextual e inclui a necessidade de validação proporcional ao risco.",
+      C: "INCORRETA. Regras não aprendem necessariamente de cada chamado; a mudança depende de implementação ou atualização explícita.",
+      D: "INCORRETA. Um resumo gerado pode conter erros factuais ou omitir informações relevantes.",
+      E: "INCORRETA. Sistemas baseados em regras também podem ser testados, monitorados e auditados."
     },
-    regra: "Generativa probabilística; regras determinísticas.",
-    pegadinha: "Selecionar sempre a 'melhor' não é uma política.",
-    fonte: "AWS — Generative AI vs. traditional AI, 2024."
+    regra: "Regras explícitas executam condições configuradas; IA generativa produz conteúdo contextual e requer validação proporcional ao risco.",
+    pegadinha: "Não equipare previsibilidade de regras a correção garantida nem fluência de texto gerado a fidelidade factual.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1; OECD, AI Principles: https://oecd.ai/en/ai-principles."
   },
 
   { id: "q-m5-26", modulo: 5, formato: "ce", estilo: "cespe", origem: "autoral",
