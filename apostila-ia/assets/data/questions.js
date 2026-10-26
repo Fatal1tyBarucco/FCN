@@ -227,19 +227,19 @@ var questoesBanco = [
     enunciado: "Que tipo de conta do Microsoft 365 é adequado ao requisito descrito?",
     alternativas: [
       { letra: "A", texto: "Conta pessoal (Personal/Family), pois oferece licença familiar e recursos focados no uso doméstico." },
-      { letra: "B", texto: "Conta organizacional (Business/Enterprise), por oferecer gestão centralizada, domínios personalizados, eDiscovery, gerenciamento de dispositivos e recursos de compliance." },
+      { letra: "B", texto: "Conta organizacional (Business/Enterprise) com plano elegível que inclua as capacidades exigidas: gestão centralizada, domínio personalizado, eDiscovery, gerenciamento de dispositivos e compliance." },
       { letra: "C", texto: "Conta Microsoft pessoal com autenticação em dois fatores, pois o MFA substitui a gestão por domínio." },
       { letra: "D", texto: "Conta local do sistema operacional, pois contas em nuvem não suportam políticas de segurança." }
     ],
     gabarito: "B",
-    justificativa: "O currículo diferencia contas pessoais (limite de usuários, recursos domésticos) de contas organizacionais (Business/Enterprise): gestão centralizada, domínios personalizados, políticas de segurança avançadas, eDiscovery, gerenciamento de dispositivos e recursos de compliance. Todos os requisitos do órgão estão na descrição das contas organizacionais.",
+    justificativa: "O currículo diferencia contas pessoais, voltadas ao uso doméstico, de contas organizacionais, que permitem administração centralizada e recursos de gestão. O requisito só é atendido por um plano organizacional que inclua explicitamente eDiscovery, gerenciamento de dispositivos e os recursos de compliance necessários; a disponibilidade exata varia conforme o plano e as licenças atribuídas.",
     analise: {
       A: "INCORRETA. Erro conceitual: escopo doméstico. Contas pessoais/familiares não têm gestão centralizada nem eDiscovery — características do tópico 'contas organizacionais'.",
-      B: "CORRETA. Reproduz integralmente o conjunto de capacidades organizacionais descrito no currículo.",
+      B: "CORRETA. O cenário exige uma conta organizacional e um plano elegível que confirme todas as capacidades; a categoria da conta, sozinha, não garante cada recurso.",
       C: "INCORRETA. Erro conceitual: confundir fator de autenticação com modelo de gestão. MFA é controle de acesso; não cria domínio personalizado, eDiscovery nem conformidade.",
       D: "INCORRETA. Erro conceitual: premissa falsa. O currículo atribui 'políticas de segurança avançadas' às contas organizacionais no M365 — a negação de suporte em contas nuvem não existe no conteúdo base."
     },
-    regra: "Classificação de identidades no M365: conta pessoal/familiar (consumo) × conta organizacional (diretório, domínio, compliance e administração central).",
+    regra: "Classificação de identidades no M365: conta pessoal/familiar (consumo) × conta organizacional (diretório e administração central); recursos avançados como eDiscovery e gestão de dispositivos dependem do plano/licenças.",
     pegadinha: "A alternativa C é a pegadinha contemporânea: MFA resolve autenticação, não governança — em provas de precisão conceitual (FCC) separar 'quem entra' de 'como a organização gerencia' é o ponto cobrado."
   },
   {
