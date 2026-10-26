@@ -70,7 +70,7 @@ var questoesBanco = [
     nivel: "basico",
     topico: "modulo-1-unidade-1-topico-1-sub-1",
     assunto: "M1.1 Ecossistema Microsoft 365",
-    contexto: "Secretaria com 40 postos de trabalho que precisa de Teams, 5 TB de OneDrive por usuário e atualização contínua de funcionalidades. Três opções de licenciamento foram apresentadas pelo fornecedor.",
+    contexto: "Secretaria com 40 postos de trabalho que precisa de Teams, 5 TB de OneDrive por usuário e atualização contínua de funcionalidades. O fornecedor apresentou três opções e documentação de uma licença organizacional elegível com a cota de armazenamento exigida confirmada.",
     enunciado: "Qual opção atende integralmente à demanda descrita?",
     alternativas: [
       { letra: "A", texto: "Office LTSC por licenciamento por volume — compra única, com atualizações apenas de segurança." },
@@ -79,10 +79,10 @@ var questoesBanco = [
       { letra: "D", texto: "Office LTSC com pacote de nuvem opcional — mesmo escopo do Microsoft 365." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define o Microsoft 365 como serviço de assinatura com Office, OneDrive, Teams e atualizações contínuas — exatamente os três requisitos da demanda (Teams, 5 TB de OneDrive por usuário e atualizações de funcionalidades). O Office LTSC é versão perpétua com apps selecionados, sem Teams/OneDrive em nuvem e com apenas atualizações de segurança; a versão perpétua é compra única com apps limitados (Word, Excel, PowerPoint). Por isso as alternativas A e C não satisfazem a demanda, e D descreve um produto não existente no currículo.",
+    justificativa: "O Microsoft 365 por assinatura é a única categoria entre as opções que pode reunir Office, Teams e atualizações contínuas; a contratação deve confirmar a elegibilidade do plano, a cota de 5 TB e as condições aplicáveis ao locatário, pois nem toda assinatura garante automaticamente esse limite. O Office LTSC é versão perpétua com apps selecionados, sem Teams/OneDrive em nuvem e com apenas atualizações de segurança; a versão perpétua é compra única com apps limitados (Word, Excel, PowerPoint). Por isso as alternativas A e C não satisfazem a demanda, e D descreve um produto não existente no currículo.",
     analise: {
       A: "INCORRETA. Erro conceitual: confundir 'atualização' com 'atualização de segurança'. O LTSC recebe apenas patches de segurança e não inclui Teams nem OneDrive em nuvem, logo não atende a nenhum dos três requisitos.",
-      B: "CORRETA. É a única alternativa que reúne os três requisitos: assinatura com Office + OneDrive + Teams + atualizações contínuas, conforme a definição do currículo.",
+      B: "CORRETA. A assinatura é a opção compatível com Office, Teams e atualizações contínuas; a cota de 5 TB deve constar da licença elegível confirmada na documentação do fornecedor.",
       C: "INCORRETA. Erro conceitual: a versão perpétua é compra única com apps limitados e sem armazenamento em nuvem integrado nem Teams — erro idêntico ao documentado no exemplo 'erro' do próprio currículo.",
       D: "INCORRETA. Erro conceitual: invenção de produto. O currículo não descreve 'LTSC com pacote de nuvem'; LTSC e M365 são modelos distintos (perpétuo × assinatura), não versões empilháveis."
     },
@@ -148,14 +148,14 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "modulo-1-unidade-1-topico-1-sub-4",
     assunto: "M1.1 Ecossistema Microsoft 365",
-    contexto: "Plano Enterprise do Microsoft 365 contratado por um órgão; descrição do armazenamento conforme o tópico 'Armazenamento local e em nuvem'.",
-    enunciado: "No Microsoft 365 Enterprise, o OneDrive oferece 5 TB de armazenamento por usuário e o SharePoint é o serviço indicado para armazenamento e colaboração de equipe.",
+    contexto: "Plano Enterprise elegível contratado por um órgão, com a documentação do licenciamento confirmando a cota de armazenamento; descrição do armazenamento conforme o tópico 'Armazenamento local e em nuvem'.",
+    enunciado: "Em um plano Microsoft 365 Enterprise elegível, o OneDrive pode oferecer 5 TB por usuário conforme as condições de licenciamento; o SharePoint é indicado para armazenamento e colaboração de equipe.",
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o OneDrive oferece 5 TB de armazenamento por usuário e o SharePoint é o serviço indicado para armazenamento e colaboração de equipe' — correspondem exatamente à descrição do currículo para o plano Enterprise.",
-    justificativa: "O currículo registra: 'OneDrive (5TB por usuário Enterprise), SharePoint (armazenamento equipe/collaborativo), armazenamento local', além de integração com sincronização automática, acesso remoto, histórico de versões e recuperação de arquivos. O item combina as duas afirmações corretamente.",
+    justificativa: "A cota de armazenamento deve ser confirmada para a licença e o locatário específicos; não é correto generalizar 5 TB para todo plano Enterprise. O papel do SharePoint para armazenamento e colaboração de equipe está corretamente atribuído.",
     analise: {
-      item: "Item VERDADEIRO. O valor 5 TB por usuário é restrito ao plano Enterprise (como declara o próprio currículo), e o papel do SharePoint (armazenamento colaborativo de equipe) está corretamente atribuído.",
+      item: "Item VERDADEIRO. A afirmação sobre 5 TB depende de elegibilidade e condições do plano; o papel do SharePoint para colaboração de equipe está corretamente atribuído.",
       leituraIncorreta: "Leitura que induz ao erro: generalizar os 5 TB para todos os planos. O item é verdadeiro justamente porque o enunciado limita a 'Enterprise' — se ele dissesse 'em todos os planos Microsoft 365', seria FALSO."
     },
     regra: "Divisão de papéis no M365: OneDrive = armazenamento pessoal do usuário; SharePoint = armazenamento e colaboração de equipe; o limite de capacidade é propriedade do plano licenciado.",
@@ -199,13 +199,13 @@ var questoesBanco = [
     topico: "modulo-1-unidade-1-topico-1-sub-6",
     assunto: "M1.1 Ecossistema Microsoft 365",
     contexto: "Política de recuperação de arquivos do órgão baseada no tópico 'Salvamento automático, sincronização, colaboração simultânea e histórico de versões'.",
-    enunciado: "O histórico de versões do OneDrive/SharePoint mantém cópias de recuperação por 30 dias por padrão e permite ao administrador configurar políticas de retenção.",
+    enunciado: "A retenção do histórico de versões do OneDrive/SharePoint é sempre de 30 dias por padrão, independentemente do tipo de conta, plano e política do locatário.",
     alternativas: null,
-    gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'mantém cópias de recuperação por 30 dias por padrão e permite ao administrador configurar políticas de retenção' — ambos os valores constam do currículo (30 dias padrão; políticas de retenção configuráveis por administrador).",
-    justificativa: "O currículo descreve: 'Histórico de versões: cópias de recuperação por 30 dias padrão, restauração de versões anteriores. Políticas de retenção configuráveis por administrador.' O item combina as duas informações sem alterar prazo nem responsável pela configuração.",
+    gabarito: "errado",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'sempre de 30 dias por padrão, independentemente do tipo de conta, plano e política do locatário': o prazo de histórico de versões depende do serviço, do tipo de conta e das configurações aplicáveis.",
+    justificativa: "Histórico de versões e lixeira são mecanismos distintos. Não se deve ensinar um prazo universal de 30 dias para o histórico de versões; a retenção varia conforme o tipo de conta, a configuração do serviço e as políticas aplicáveis. As políticas de retenção do locatário podem ser administradas, mas isso não torna universal um prazo fixo.",
     analise: {
-      item: "Item VERDADEIRO. Os dois componentes estão corretos: prazo padrão (30 dias) e agente de configuração (administrador).",
+      item: "Item FALSO. O prazo fixo universal de 30 dias não pode ser presumido para todo histórico de versões do OneDrive/SharePoint."
       leituraIncorreta: "Leitura que induz ao erro: confundir 'histórico de versões' com 'backup'. O histórico é funcionalidade de recuperação dentro do próprio serviço — a questão do backup separado aparece no tópico 1.5 (OneDrive), e lá o currículo afirma que sincronização não substitui backup."
     },
     regra: "Retenção × backup: histórico de versões é retenção limitada e configurável dentro do serviço; backup é cópia independente (recomendação 3-2-1 citada no currículo do OneDrive).",
@@ -253,7 +253,7 @@ var questoesBanco = [
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'a lixeira retém arquivos por 30 dias e o compartilhamento por link pode ser configurado com expiração, senha e permissão de download' — todas as capacidades constam do subtópico correspondente.",
-    justificativa: "O currículo lista: permissões granulares (visualizar, editar, comentar, controlar), compartilhamento por link com expiração, senha protegido e permissões de download, privacidade via configurações de locatário e rotulagem de dados, e recuperação: lixeira (30 dias), versões anteriores e eDiscovery para administradores Enterprise.",
+    justificativa: "Os recursos de compartilhamento por link (expiração, senha e controle de download) dependem do tipo de conta, da configuração do locatário e das políticas de compartilhamento. A retenção da lixeira também varia entre contas pessoais e organizacionais e conforme a política aplicável; não é seguro fixar 30 dias para todo Microsoft 365.",
     analise: {
       item: "Item VERDADEIRO. Prazo (30 dias) e controles de link (expiração, senha, download) são exatamente os registrados no currículo.",
       leituraIncorreta: "Leitura que induz ao erro: achar que 'expiração e senha' são recursos de tier pago exclusivo e portanto inexistentes. O currículo não faz essa restrição — quem infere restrição não encontrada marca Errado indevidamente."
