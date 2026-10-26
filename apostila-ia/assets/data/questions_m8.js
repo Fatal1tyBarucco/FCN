@@ -360,7 +360,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Para torná-lo acessível, é preciso remover a escala de cores." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que acessibilidade exige mais que contraste: redundância além da cor (rótulo, forma, padrão ou posição), pois uma grande parte da população tem dificuldade de matizes, e vermelho/verde é a combinação mais problemática. A alternativa B reproduz exatamente isso. A alternativa A ignora a dependência exclusiva da cor; a C é a armadilha da corção ('verde/vermelho é universal'), e a D erra: remover a escala não torna o gráfico acessível.",
+    justificativa: "O currículo define que acessibilidade exige mais que contraste: redundância além da cor (rótulo, forma, padrão ou posição), pois uma grande parte da população tem dificuldade de matizes, e vermelho/verde é a combinação mais problemática. A alternativa B reproduz exatamente isso. A alternativa A ignora a dependência exclusiva da cor; a C é a armadilha da ideia de que verde/vermelho é universalmente distinguível, e a D erra: remover a escala não torna o gráfico acessível.",
     analise: {
       A: "INCORRETA. Erro conceitual: contraste é necessário, não suficiente; o currículo exige redundância além da cor.",
       B: "CORRETA. Reproduz a regra de ouro de acessibilidade em visualização: cor acompanhada de outra codificação.",
@@ -368,7 +368,7 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: remover a escala não resolve a dependência da cor; a leitura de magnitude também é prejudicada."
     },
     regra: "Acessibilidade: redundância (cor + rótulo/forma/padrão), testes em escala de cinza, texto alternativo, dados subjacentes e fonte legível.",
-    pegadinha: "A pegadinha é concluir 'cor bem contrastada' de cara; acessibilidade é sinônimo de redundância, não de contraste isolado.",
+    pegadinha: "A pegadinha é concluir 'cor bem contrastada' de cara; acessibilidade não se reduz ao contraste: combine cor com rótulos, formas ou padrões.",
     fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Acessibilidade e redundância visual).",
   },
   {
@@ -389,7 +389,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A escala logarítmica só funciona para dados positivos, sem influenciar a distância." }
     ],
     gabarito: "C",
-    justificativa: "O currículo afirma que em escala logarítmica, distâncias iguais representam razões iguais: cada passo multiplica. O passo visual entre 10 e 100 é igual ao entre 100 e 1.000 porque ambos são multiplicação por 10. A alternativa C reproduz isso. A B está invertida: em logaritmo, passo igual significa fator multiplicativo, não acréscimo absoluto. A C e a D são invenções.",
+    justificativa: "O currículo afirma que em escala logarítmica, distâncias iguais representam razões iguais: cada passo multiplica. O passo visual entre 10 e 100 é igual ao entre 100 e 1.000 porque ambos são multiplicação por 10. A alternativa C reproduz isso. A B está invertida: em logaritmo, passo igual significa fator multiplicativo, não acréscimo absoluto. A D está incorreta porque a escala logarítmica altera as distâncias visuais de acordo com razões multiplicativas; ela não deixa a distância sem influência.",
     analise: {
       A: "INCORRETA. Inverte o princípio: em escala logarítmica, passo igual significa fator multiplicativo, não acréscimo absoluto.",
       B: "INCORRETA. Erro conceitual: a escala logarítmica não inverte a ordem; os valores aumentam em sequência.",
@@ -397,7 +397,7 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: a distância no gráfico logarítmico é determinada pela razão, não por um 'nenhum influência' vago."
     },
     regra: "Escala linear: passo = diferença absoluta. Escala logarítmica: passo = razão (multiplicação). Em log, subida visual igual = mesmo fator, não mesmo acréscimo.",
-    pegadinha: "A pegadinha é aceitar 'passo igual = valor novo' — no log, 'ae iguais' significa 'multiplicaram pelo mesmo fator'.",
+    pegadinha: "A pegadinha é aceitar 'passo igual = valor novo' — na escala logarítmica, distâncias visuais iguais correspondem ao mesmo fator multiplicativo.",
     fonte: "Currículo M8 — modulo-8-unidade-1-topico-3 (M8.1.3 Escalas lineares e logarítmicas).",
   },
   {
@@ -447,14 +447,14 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A densidade é usada apenas para representar a frequência relativa, nunca absoluta." }
     ],
     gabarito: "B",
-    justificativa: "O currículo afirma que, em histograma com classes de larguras diferentes, a frequência está na ÁREA (altura = densidade = frequência ÷ largura), e a comparação entre dois histogramas só é legítima com a mesma largura de classe. A alternativa B reproduz exatamente isso. A A está invertida: altura é densidade quando há larguras diferentes. A C é exagerada (a regra é mesma largura; o número de classes pode variar) e contradiz o currículo. A D está incorreta: densidade é usada tanto para frequência absoluta (Σ altura × largura = n) quanto relativa.",
+    justificativa: "Quando as classes têm larguras diferentes, a área de cada retângulo representa a frequência e a altura representa a densidade (frequência ÷ largura). Isso permite representar corretamente as frequências com larguras distintas; para comparar distribuições, mantenha critérios e escalas compatíveis e interprete as áreas, não apenas as alturas. A alternativa B expressa a relação correta. A A ignora a largura; a C confunde quantidade de classes com validade da representação; a D erra ao restringir densidade à frequência relativa.",
     analise: {
       A: "INCORRETA. Erro conceitual: com larguras diferentes, a altura não representa a frequência; a área (densidade) sim.",
       B: "CORRETA. Reproduz a regra de densidade e área para comparação com larguras distintas.",
       C: "INCORRETA. Exagero: comparar histogramas exige largura igual, não necessariamente o mesmo número de classes; o currículo não exige igualdade de quantidade de classes.",
       D: "INCORRETA. Erro conceitual: densidade absoluta é usada quando se mantém n como soma das áreas; não é restrita à frequência relativa."
     },
-    regra: "Histograma de densidade: altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou = 1 (relativa); comparação legítima exige mesma largura de classe.",
+    regra: "Histograma de densidade: altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou = 1 (relativa); a comparação requer critérios e escalas compatíveis; com larguras diferentes, interprete a área e a densidade, não apenas a altura.",
     pegadinha: "A alternativa A tenta o alerta 'altura sempre é a medida' — o currículo só exige densidade quando há larguras diferentes.",
     fonte: "Currículo M8 — modulo-8-unidade-2-topico-1 (M8.2.1 Histograma: densidade e intervalos).",
   },
