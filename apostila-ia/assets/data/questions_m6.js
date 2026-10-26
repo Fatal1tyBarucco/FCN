@@ -402,7 +402,7 @@ const moduleQuestions6 = [
     },
     regra: "Transparência ativa (art. 8º) e passiva (arts. 10 e 11) são cumulativas, não alternativas.",
     pegadinha: "Palavras absolutas — 'excludentes', 'dispensa', 'somente' — costumam indicar item falso em prova de transparência.",
-    fonte: "Lei nº 12.527/2011, arts. 8º, 10 e 11 (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), arts. 8º, 10 e 11, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-17", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -427,7 +427,7 @@ const moduleQuestions6 = [
     },
     regra: "Sítio oficial (art. 8º, § 3º): pesquisa fácil, formatos abertos, acesso automatizado, formatos declarados, autenticidade, atualização, contato e acessibilidade.",
     pegadinha: "'PDF é o formato oficial' é senso comum e está errado: a lei pede formato aberto e não proprietário.",
-    fonte: "Lei nº 12.527/2011, art. 8º, § 1º, IV, e § 3º, I a VIII (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 8º, § 1º, IV, e § 3º, I a VIII, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-18", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -444,7 +444,7 @@ const moduleQuestions6 = [
     },
     regra: "Diretrizes do art. 3º: publicidade/sigilo como exceção; divulgação de interesse público; uso de TI; cultura de transparência; controle social.",
     pegadinha: "Itens que opõem 'diretriz' a 'obrigação' tentam transformar norma de execução em conselho — e são falsos.",
-    fonte: "Lei nº 12.527/2011, art. 3º, III, e art. 8º, § 2º (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 3º, III, e art. 8º, § 2º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-19", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -469,7 +469,7 @@ const moduleQuestions6 = [
     },
     regra: "Informação pessoal (art. 31): restrição por 100 anos, independentemente de classificação; divulgação a terceiros só com previsão legal ou consentimento expresso.",
     pegadinha: "A alternativa E transforma a proteção da privacidade em escudo contra accountability — vedação expressa do § 4º.",
-    fonte: "Lei nº 12.527/2011, art. 31, caput, § 1º, I e II, § 2º e § 4º (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 31, caput, § 1º, I e II, § 2º e § 4º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-20", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -494,7 +494,7 @@ const moduleQuestions6 = [
     },
     regra: "Divulgação de ofício (art. 8º, § 1º): competências, repasses, despesas, licitações e contratos, programas com metas e indicadores, perguntas frequentes.",
     pegadinha: "Alternativas que 'publicam tudo de todo mundo' em nome da transparência são a armadilha central do módulo: publicidade não é exposição de dado pessoal.",
-    fonte: "Lei nº 12.527/2011, art. 8º, § 1º, I a VI, e § 3º, VI; art. 31 (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 8º, § 1º, I a VI, § 3º, VI, e art. 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   /* ---- 6.1 Legalidade e automação de atos (2) ---- */
