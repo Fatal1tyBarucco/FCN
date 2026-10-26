@@ -87,11 +87,18 @@ for (const question of questions) {
 }
 const byModule = {}, answerDistribution = {}, formatDistribution = {};
 const multipleChoiceAnswerDistribution = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+const moduleMultipleChoiceAnswerDistribution = {};
 for (const question of questions) {
   byModule[question.module] = (byModule[question.module] || 0) + 1;
   answerDistribution[question.answer] = (answerDistribution[question.answer] || 0) + 1;
   if (question.alternatives.length && Object.hasOwn(multipleChoiceAnswerDistribution, question.answer)) {
     multipleChoiceAnswerDistribution[question.answer] += 1;
+  if (question.alternatives.length) {
+    moduleMultipleChoiceAnswerDistribution[question.module] ||= { A: 0, B: 0, C: 0, D: 0, E: 0 };
+    if (Object.hasOwn(moduleMultipleChoiceAnswerDistribution[question.module], question.answer)) {
+      moduleMultipleChoiceAnswerDistribution[question.module][question.answer] += 1;
+    }
+  }
   }
   formatDistribution[question.format] = (formatDistribution[question.format] || 0) + 1;
 }
@@ -125,6 +132,11 @@ const report = [
   "- Distribuição de gabaritos MC (A-E): " + Object.entries(multipleChoiceAnswerDistribution).map(([answer, count]) => answer + "=" + count).join(", ") + ".",
   ...(answerPositionABShare >= 0.8 ? ["- Atenção editorial: A/B representam " + (answerPositionABShare * 100).toFixed(1) + "% das questões MC; revisar manualmente a posição das alternativas, sem alterar gabaritos corretos."] : []),
   ...(multipleChoiceAnswerDistribution.D === 0 ? ["- Revisão manual recomendada: nenhuma questão de múltipla escolha tem gabarito D; confirmar a distribuição das posições sem alterar respostas corretas por conveniência."] : []),
+  "", "## Distribuição de gabaritos MC por módulo", "",
+  "| Módulo | A | B | C | D | E | Total MC |",
+  "|---|---:|---:|---:|---:|---:|---:|",
+  ...Object.entries(moduleMultipleChoiceAnswerDistribution).sort(([a], [b]) => Number(a) - Number(b)).map(([module, dist]) => "| M" + module + "|" + dist.A + "|" + dist.B + "|" + dist.C + "|" + dist.D + "|" + dist.E + "|" + Object.values(dist).reduce((sum, count) => sum + count, 0) + "|"),
+  ...Object.entries(moduleMultipleChoiceAnswerDistribution).filter(([, dist]) => dist.D === 0 || dist.E === 0 || (dist.A + dist.B) / Math.max(1, Object.values(dist).reduce((sum, count) => sum + count, 0)) >= 0.8).map(([module, dist]) => "- Revisão manual de posições recomendada em M" + module + ": A=" + dist.A + ", B=" + dist.B + ", C=" + dist.C + ", D=" + dist.D + ", E=" + dist.E + "."),
   "- Distribuição de formato: " + Object.entries(formatDistribution).map(([format, count]) => format + "=" + count).join(", ") + ".", "",
   "## Alertas", "",
   ...(flagged.length ? flagged.slice(0, 250).map(question => "- " + question.id + " (" + question.path + "): " + question.flags.join("; ")) : ["Nenhum alerta heurístico detectado."]), "",
@@ -141,6 +153,6 @@ console.log(JSON.stringify({
   duplicateIds: [...idCounts.values()].filter(count => count > 1).length,
   flaggedQuestions: flagged.length,
   duplicateContextStems: duplicateContextStems.length,
-  byModule, answerDistribution, multipleChoiceAnswerDistribution, formatDistribution,
+  byModule, answerDistribution, multipleChoiceAnswerDistribution, moduleMultipleChoiceAnswerDistribution, formatDistribution,
   outputs: ["docs/MATRIZ_QUALIDADE_QUESTOES.csv", "docs/RELATORIO_QUALIDADE_QUESTOES.md"]
 }, null, 2));
