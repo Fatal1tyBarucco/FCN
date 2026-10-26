@@ -32,7 +32,7 @@ function parseQuestions(path) {
     const id = field(segment, "id");
     const alternatives = [...segment.matchAll(/letra:\s*"([A-E])"\s*,\s*texto:\s*"((?:\\.|[^"\\])*)"/g)]
       .map(item => ({ letter: item[1], text: decode(item[2]) }));
-    const analysisEntries = [...segment.matchAll(/^\s{6}([A-E]):\s*("(?:\\.|[^"\\])*")/gm)]
+    const analysisEntries = [...segment.matchAll(/(?:^|[,{])\s*([A-E]):\s*("(?:\\.|[^"\\])*")/gm)]
       .map(item => ({ letter: item[1], text: decode(item[2]) }));
     const analysisKeys = analysisEntries.map(item => item.letter);
     const answer = field(segment, "gabarito");
