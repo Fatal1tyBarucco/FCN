@@ -1185,27 +1185,27 @@ const moduleQuestions4 = [
 
   { id: "q-m4-48", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Autenticação multifator",
-    contexto: "Uma aplicação exige senha e um código enviado ao mesmo endereço de e-mail usado para recuperar a conta.",
-    enunciado: "Qual avaliação técnica é mais adequada sobre a proteção oferecida por esse mecanismo?",
+    contexto: "Uma aplicação exige senha e envia um código para a caixa de e-mail da própria conta. A equipe afirma que essa combinação torna a autenticação resistente a phishing e impede a recuperação indevida da conta.",
+    enunciado: "Qual avaliação técnica é mais adequada para revisar essa afirmação?",
     alternativas: [
-      { letra: "A", texto: "A exigência de dois códigos sempre configura dois fatores independentes, qualquer que seja o mecanismo." },
-      { letra: "B", texto: "A aplicação deve avaliar se os elementos usados pertencem a categorias distintas e se a recuperação da conta não contorna o segundo fator." },
-      { letra: "C", texto: "Duas senhas memorizadas são necessariamente dois fatores diferentes." },
-      { letra: "D", texto: "Autenticação multifator elimina a necessidade de proteger sessões e dispositivos." },
-      { letra: "E", texto: "Um código de uso único torna impossível qualquer ataque à conta." }
+      { letra: "A", texto: "A combinação é sempre resistente a phishing porque a senha e o código são solicitados em etapas diferentes." },
+      { letra: "B", texto: "É necessário avaliar a independência dos fatores e os fluxos de recuperação; para autenticação digital alinhada ao NIST, e-mail não é aceito como autenticador fora de banda." },
+      { letra: "C", texto: "Dois códigos enviados para a mesma caixa de e-mail constituem necessariamente dois fatores independentes." },
+      { letra: "D", texto: "Se houver MFA, não é necessário proteger sessões, dispositivos ou os mecanismos de recuperação." },
+      { letra: "E", texto: "Qualquer código de uso único impede todos os ataques de phishing e de tomada de conta." }
     ],
     gabarito: "B",
-    justificativa: "A autenticação multifator combina fatores de categorias distintas, como conhecimento, posse e inerência. Dois elementos do mesmo tipo não constituem necessariamente MFA. A arquitetura também deve considerar recuperação de conta, proteção de sessão e resistência a phishing; nenhum fator isolado elimina todos os riscos.",
+    justificativa: "MFA exige fatores de categorias distintas, mas a quantidade de etapas, por si só, não demonstra independência nem resistência a phishing. A recuperação da conta pode enfraquecer o controle se permitir contornar o autenticador. Nas diretrizes NIST SP 800-63B, o e-mail não é aceito como autenticador fora de banda; deve-se selecionar um autenticador apropriado ao nível de garantia e proteger também sessões e recuperação.",
     analise: {
-      A: "INCORRETA. Contar elementos não basta; importa se são fatores independentes de categorias distintas.",
-      B: "CORRETA. A avaliação considera categorias de fatores e caminhos alternativos de recuperação que possam contornar o controle.",
-      C: "INCORRETA. Duas senhas são, em geral, fatores da mesma categoria: conhecimento.",
-      D: "INCORRETA. Sessões, dispositivos e recuperação continuam precisando de controles de segurança.",
-      E: "INCORRETA. Códigos de uso único reduzem certos riscos, mas não tornam ataques impossíveis."
+      A: "INCORRETA. Separar etapas não garante fatores independentes nem resistência a phishing.",
+      B: "CORRETA. A alternativa considera independência, recuperação e a restrição específica das diretrizes NIST para autenticação fora de banda por e-mail.",
+      C: "INCORRETA. Dois códigos enviados à mesma caixa não constituem automaticamente fatores independentes.",
+      D: "INCORRETA. MFA não substitui a proteção de sessões, dispositivos e mecanismos de recuperação.",
+      E: "INCORRETA. Códigos de uso único não eliminam todos os riscos, inclusive phishing em tempo real e abuso de recuperação."
     },
-    regra: "MFA exige fatores de categorias distintas e deve incluir análise dos fluxos de recuperação, sessão e resistência a phishing.",
-    pegadinha: "Dois passos de verificação não significam automaticamente dois fatores independentes.",
-    fonte: "NIST SP 800-63B — Digital Identity Guidelines: Authentication and Lifecycle Management: https://pages.nist.gov/800-63-4/sp800-63b.html."
+    regra: "MFA requer fatores de categorias distintas; avalie resistência a phishing e recuperação. Segundo o NIST SP 800-63B, e-mail não é autenticador fora de banda aceito.",
+    pegadinha: "Dois passos não significam dois fatores independentes; um segundo passo por e-mail não deve ser tratado como garantia de MFA resistente a phishing.",
+    fonte: "NIST SP 800-63B — Digital Identity Guidelines: Authentication and Lifecycle Management, versão vigente: https://pages.nist.gov/800-63-4/sp800-63b.html."
   },
 
   { id: "q-m4-49", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
