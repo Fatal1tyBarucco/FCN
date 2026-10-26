@@ -182,3 +182,10 @@ Lote revisado no texto versionado de `apostila-ia/assets/data/questions_m6.js`, 
 
 **Resultado do lote:** uma correção conceitual na questão 38 e uma precisão interpretativa na questão 40; os gabaritos foram mantidos porque as alternativas corretas continuam adequadas após a revisão. Revisão focal do conteúdo e das justificativas, não auditoria independente de todas as fontes acadêmicas.
 
+## Revisão semântica dirigida — lote M5 q41–q42 — 2026-10-26
+
+- **`q-m5-41` — respostas institucionais sem fundamento:** gabarito D coerente. Ajustado o distrator sobre apagar registros para deixar claro que a falha é tratar a exclusão indiscriminada como solução, sem corrigir a base ou avaliar o sistema. A retenção de registros continua sujeita às políticas de privacidade, guarda e auditoria aplicáveis; apagar dados não substitui a correção da causa.
+- **`q-m5-42` — engenharia de prompts institucional:** gabarito B coerente. A alternativa correta agora explicita versão e vigência dos documentos, hierarquia normativa aplicável, evidência recuperada e verificável, tratamento de lacunas ou conflitos, minimização de dados e avaliação periódica. Isso evita sugerir que um prompt sozinho resolva conflitos entre atos.
+
+**Resultado do lote:** refinados um distrator potencialmente ambíguo e o conteúdo mínimo dos controles de fonte e vigência. Gabaritos mantidos. A fonte indicada continua sendo o tópico curricular interno; esta revisão não afirma validação independente de fontes externas nem substitui políticas institucionais específicas.
+
