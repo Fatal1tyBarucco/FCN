@@ -1040,7 +1040,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "Cobrir visualmente os dados no PDF, sem verificar se o texto ocultado continua selecionável ou recuperável no arquivo." }
     ],
     gabarito: "A",
-    justificativa: "A análise deve distinguir a informação de interesse público dos trechos cuja divulgação esteja legalmente restrita. A LAI estabelece a publicidade como regra, mas protege informações pessoais nos termos do art. 31. A orientação pública da CGU para compatibilizar LAI e LGPD recomenda restringir a parte protegida e permitir acesso à parte não sigilosa, por exemplo mediante cópia com ocultação dos trechos pertinentes. A ocultação deve ser efetiva, e não apenas uma tarja visual que deixe o dado recuperável. A decisão depende do conteúdo e da base legal aplicável; a presença de dado pessoal não justifica automaticamente negar o documento inteiro.",
+    justificativa: "A análise deve distinguir a informação de interesse público dos trechos cuja divulgação esteja legalmente restrita. A LAI estabelece a publicidade como regra e prevê, no art. 7º, § 2º, o acesso à parte não sigilosa por certidão, extrato ou cópia com ocultação da parte sob sigilo. O art. 31 estabelece proteção específica para informações pessoais. A ocultação deve ser efetiva, e não apenas uma tarja visual que deixe o dado recuperável. A decisão depende do conteúdo e da base legal aplicável; a presença de dado pessoal não justifica automaticamente negar o documento inteiro.",
     analise: {
       A: "CORRETA. Preserva o acesso à informação pública e restringe apenas os trechos cuja divulgação não seja autorizada, com tratamento seguro e justificativa adequada.",
       B: "INCORRETA. A existência de dados pessoais não torna automaticamente todo o documento inacessível; deve-se avaliar o acesso à parte não restrita.",
@@ -1050,6 +1050,6 @@ const moduleQuestions6 = [
     },
     regra: "Ao conciliar transparência e proteção de dados, identifique a base legal de eventual restrição e viabilize acesso à parte não protegida; a ocultação precisa ser efetiva.",
     pegadinha: "Evite os dois extremos: divulgar indiscriminadamente dados protegidos ou negar todo o documento só porque contém algum dado pessoal.",
-    fonte: "Lei nº 12.527/2011 (LAI), especialmente arts. 7º, § 2º, e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; CGU, Enunciado nº 12/2023 sobre acesso à parte não sigilosa mediante certidão, extrato ou cópia com ocultação dos trechos protegidos; Ministério da Gestão e da Inovação em Serviços Públicos, Boas práticas em anonimização de dados, publicado em 19/05/2026: https://www.gov.br/gestao/pt-br/acesso-a-informacao/privacidade-e-protecao-de-dados/lgpd-no-mgi-1/anonimizacao/boas-praticas-em-anonimizacao-de-dados."
+    fonte: "Lei nº 12.527/2011 (LAI), arts. 7º, § 2º, e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Ministério da Gestão e da Inovação em Serviços Públicos, Boas práticas em anonimização de dados, publicado em 19/05/2026: https://www.gov.br/gestao/pt-br/acesso-a-informacao/privacidade-e-protecao-de-dados/lgpd-no-mgi-1/anonimizacao/boas-praticas-em-anonimizacao-de-dados."
   }
   ];
