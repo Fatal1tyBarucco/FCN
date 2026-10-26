@@ -342,3 +342,17 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Recalcular a distribuição estática: A=102, B=131, C=72, D=8, E=8 em 321 questões MC; A/B=72,6%. M5: A=16, B=14, C=9, D=1, E=0 em 40 questões MC.
 - [ ] Confirmar auditoria curricular, smoke test, Code Quality e workflow do PR no HEAD após este lote.
 - [ ] Prosseguir apenas com lotes pequenos e conferência semântica; não interpretar distribuição de gabaritos como métrica única de qualidade.
+
+
+## Atualização de estado — 2026-10-26 — commit 8fdf771
+
+- [x] Confirmar resultado final da execução [40261787364](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40261787364): job de validação concluído com `success`.
+- [x] Executar smoke test Chromium/Playwright em `file://`: PASS, 8 módulos, 460 flashcards, 396 questões, 5 SVGs, 6 simuladores, persistência local e zero exceções JavaScript.
+- [x] Executar regressões interativas em `file://`: PASS para cálculo Excel, CIDR, feedback de phishing, avaliação de prompt, recálculo de histograma no simulador de dados, feedback de ética e atualização real do SVG do laboratório de gráficos.
+- [x] Arquivar relatórios gerados no artefato CI [curriculum-audit-reports](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40261787364/artifacts/12625340191).
+- [ ] Confirmar separadamente o workflow Code Quality no HEAD atual; não inferir esse resultado do workflow curricular.
+- [ ] Continuar revisão semântica independente de conteúdo, fontes, gabaritos e distratores; priorizar a concentração de letras de gabarito já documentada.
+- [ ] Executar validação manual por teclado e leitor de tela, avaliação WCAG independente e testes em dispositivos/navegadores adicionais.
+- [ ] Reconciliar contagens e descrições históricas de inventário/matriz para que contagens antigas não sejam confundidas com o estado atual (132 tópicos, 460 flashcards, 396 questões no HEAD testado).
+
+A aprovação do workflow automatizado não encerra pendências qualitativas nem altera o estado draft do PR.
