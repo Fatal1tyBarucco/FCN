@@ -401,7 +401,7 @@ id: "q-m1-09",
     nivel: "intermediario",
     topico: "modulo-1-unidade-2-topico-3-sub-1",
     assunto: "M1.2 Word — parágrafos, listas e paginação",
-    contexto: "Coluna de valores monetários com vírgula decimal (1,00; 2,50; 10,75) deve alinhar as vírgulas verticalmente, formando coluna.",
+    contexto: "Coluna de medições com vírgula decimal e precisões diferentes (1,0; 2,50; 10,750) deve alinhar as vírgulas verticalmente, formando coluna.",
     enunciado: "Qual tipo de tabulação atende ao alinhamento descrito?",
     alternativas: [
       { letra: "A", texto: "Tabulador simples, que avança o cursor até a próxima parada de tabulação." },
