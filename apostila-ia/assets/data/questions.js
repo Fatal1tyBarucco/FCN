@@ -209,7 +209,7 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: confundir 'histórico de versões' com 'backup'. O histórico é funcionalidade de recuperação dentro do próprio serviço — a questão do backup separado aparece no tópico 1.5 (OneDrive), e lá o currículo afirma que sincronização não substitui backup."
     },
     regra: "Retenção × backup: histórico de versões é retenção limitada e configurável dentro do serviço; backup é cópia independente (recomendação 3-2-1 citada no currículo do OneDrive).",
-    pegadinha: "Número + agente: itens C/E falsos costumam trocar o número (30 dias → 90 dias) ou o responsável ('usuário final' em vez de 'administrador'). Aqui ambos estão corretos."
+    pegadinha: "A pegadinha é o prazo universal: não confunda uma configuração observada em determinado ambiente com regra fixa para todo serviço, tipo de conta e locatário."
   },
   {
     id: "q-m1-07",
