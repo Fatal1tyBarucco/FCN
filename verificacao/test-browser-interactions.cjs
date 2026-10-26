@@ -10,6 +10,7 @@ const assert = require("node:assert/strict");
 const path = require("node:path");
 const { pathToFileURL } = require("node:url");
 const { chromium } = require("playwright");
+const axeCore = require("axe-core");
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
@@ -33,6 +34,41 @@ const { chromium } = require("playwright");
       document.querySelector("#charts-app input[data-celula]"),
       null,
       { timeout: 15000 }
+    );
+
+    // Automated WCAG 2.1 A/AA scan on the rendered application.
+    await page.addScriptTag({ content: axeCore.source });
+    const accessibilityAudit = await page.evaluate(async () => {
+      const results = await window.axe.run(document, {
+        runOnly: {
+          type: "tag",
+          values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "best-practice"]
+        }
+      });
+      return {
+        passes: results.passes.length,
+        incomplete: results.incomplete.length,
+        violations: results.violations.map(violation => ({
+          id: violation.id,
+          impact: violation.impact,
+          description: violation.description,
+          nodes: violation.nodes.map(node => ({
+            target: node.target,
+            summary: node.failureSummary
+          }))
+        }))
+      };
+    });
+    const blockingAccessibilityViolations = accessibilityAudit.violations.filter(
+      violation => violation.impact === "critical" || violation.impact === "serious"
+    );
+    if (blockingAccessibilityViolations.length) {
+      console.error(JSON.stringify({ blockingAccessibilityViolations }, null, 2));
+    }
+    assert.deepEqual(
+      blockingAccessibilityViolations,
+      [],
+      "WCAG 2.1 A/AA scan must not report critical or serious violations"
     );
 
     // Accessibility: keyboard skip link must become visible and move focus to curriculum.
@@ -144,6 +180,12 @@ const { chromium } = require("playwright");
         dataHistogramRecalculation: true,
         ethicsFeedback: true,
         chartsHistogramRecalculation: true
+      },
+      accessibility: {
+        passes: accessibilityAudit.passes,
+        incomplete: accessibilityAudit.incomplete,
+        totalViolations: accessibilityAudit.violations.length,
+        blockingViolations: blockingAccessibilityViolations.length
       },
       pageErrors
     }, null, 2));
