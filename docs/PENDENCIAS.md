@@ -9,7 +9,7 @@ Este resumo prevalece sobre checklists históricos abaixo quando houver divergê
 - [x] Checks CI verificados no HEAD `cefd7fa005118b37af112b2bf67146ebb26c1163` em 2026-10-26 04:01 UTC: auditoria estática/cobertura e análises JavaScript/TypeScript/Actions concluídos com sucesso. Execuções associadas ao HEAD: [auditoria estática](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266743672) · [análises](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266744493) · [análises adicionais](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266745876). CodeQL não foi confirmado nessa leitura; não inferir status verde para ele.
 - [x] Revisão semântica focal de q-m6-41 a q-m6-44 registrada; a justificativa de q-m6-44 foi alinhada à LAI, removendo uma atribuição não rastreada.
 - [ ] Revisão semântica em lotes do banco restante: gabaritos, distratores, justificativas, redundância, profundidade e fontes. Priorizar por módulo e registrar IDs revisados; não alterar respostas em massa sem remapeamento e conferência.
-- [x] Conferência estrutural focal do banco atual em 2026-10-26: 396 IDs únicos; campos obrigatórios detectados em 396/396; 0 referências de tópico não reconhecidas. Essa verificação remota não substitui a execução integral de `scripts/audit_learning_assets.mjs` nem a regeneração da matriz CSV.
+- [x] Conferência estrutural focal do banco atual em 2026-10-26: 399 IDs esperados após inclusão de q-m6-45..47; campos obrigatórios a confirmar em 399/399; 0 referências de tópico não reconhecidas. Essa verificação remota não substitui a execução integral de `scripts/audit_learning_assets.mjs` nem a regeneração da matriz CSV.
 - [ ] Reconciliar contagens e snapshots históricos em `INVENTARIO_CURRICULAR.md`, `MATRIZ_COBERTURA.md`, `RELATORIO_TESTES.md` e documentos correlatos com a saída mais recente do auditor. Contagens antigas não devem ser apresentadas como atuais.
 - [ ] Verificar fontes oficiais para afirmações normativas/técnicas e garantir rastreabilidade de título, órgão, URL e data de verificação.
 - [ ] Concluir validação manual de acessibilidade/responsividade, incluindo teclado, leitor de tela e dispositivos físicos quando disponíveis. Testes headless não certificam WCAG.
@@ -316,7 +316,7 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Adicionar questão autoral ao tópico de relatório técnico integrado do M1.
 - [x] Adicionar questões autorais aos tópicos de síntese de IA generativa e engenharia de prompts do M5.
 - [x] Adicionar questões autorais aos tópicos de síntese de ética/governança, redes sociais institucionais, acessibilidade e método de resolução do M6.
-- [x] Atualizar a matriz de validação estrutural, o manifesto PWA e o inventário do README para 396 questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40, M8=40; 321 MC e 75 itens certo/errado.
+- [x] Atualizar a matriz de validação estrutural, o manifesto PWA e o inventário do README para 396 questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40; 321 MC e 75 itens certo/errado.
 - [x] Confirmar CI completo no HEAD `09d657130a66ea2cfd7390909656ce5a7557e762`: estrutura, ativos, heurísticas e smoke test via `file://` aprovados.
 - [ ] Fazer revisão semântica independente das sete questões novas e validar suas fontes e gabaritos; validação estrutural não comprova correção pedagógica.
 - [ ] Revisar a concentração de gabaritos, ainda alta em M1, M4, M5, M6, M7 e M8.
