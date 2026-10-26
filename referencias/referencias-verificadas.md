@@ -336,3 +336,10 @@ Os incisos/parágrafos não listados (art. 37: I? já listado; demais não confe
 
 ### Limites da revisão
 A correção das referências melhora o vínculo entre questão e dispositivo, mas não substitui parecer jurídico nem demonstra, por si só, que todas as alternativas estejam factualmente corretas. Em q-m6-29 e q-m6-38, requisitos operacionais de trilha de auditoria e preservação de evidências são apresentados como práticas de governança/segurança; não devem ser descritos como transcrição literal de um único artigo legal.
+
+
+## Guia oficial de redes sociais institucionais — 2026-10-26
+
+- **Secretaria de Comunicação Social da Presidência da República (Secom) — Guia de Boas Práticas para atuação de redes sociais do Governo Federal.** Página oficial de referência: https://www.gov.br/secom/pt-br/acesso-a-informacao/perguntas-frequentes/onde-posso-encontrar-o-guia. PDF indicado pela própria Secom: https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf.
+- Verificação: a página de perguntas frequentes da Secom aponta explicitamente o guia e o PDF. A questão q-m6-46 usa o documento como apoio geral à correção clara e responsável de informação institucional; não atribui ao guia uma obrigação legal específica.
+- A inclusão da referência não substitui leitura completa do guia nem validação independente de cada recomendação da questão.
