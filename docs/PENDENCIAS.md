@@ -235,12 +235,12 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 ## Revisão manual de citações legais do M6 — 2026-10-26
 
 - [x] Corrigir as citações de q-m6-02 e q-m6-06 para princípios de impessoalidade/transparência e linguagem clara, removendo a referência inadequada ao art. 29, § 1º, III, da Lei nº 14.129/2021.
-- [ ] q-m6-03: complementar a fonte de finalidade do tratamento com LGPD, art. 6º, I–III; art. 1º isolado não sustenta o princípio da finalidade.
-- [ ] q-m6-29: revisar a referência à Lei nº 14.129/2021, art. 43, I e IV; esse artigo trata de ferramentas de comunicação/notificação eletrônica, não de toda trilha de auditoria de sistemas.
-- [ ] q-m6-31: revisar a referência ao art. 43, IV, da Lei nº 14.129/2021; para a obrigação de manter sítio oficial, priorizar LAI, art. 8º, § 2º, e transparência de serviços, Lei nº 14.129/2021, art. 3º, IV.
-- [ ] q-m6-32: especificar no enunciado o Poder Executivo federal e citar Lei nº 12.813/2013, arts. 3º, I, 4º e 5º, V. A fonte atual (CF/88 e Lei nº 14.129/2021, art. 3º, IV e VI) não é suficiente para o cenário de conflito de interesses.
-- [ ] q-m6-38: substituir a referência genérica ao art. 43, IV, da Lei nº 14.129/2021 por base de gestão de riscos/auditoria (arts. 48 e 49) e segurança de dados (LGPD, art. 46), mantendo as referências da LAI pertinentes.
-- [ ] Incluir a Lei nº 12.813/2013 no catálogo de referências verificadas após aplicar a correção de q-m6-32.
+- [x] q-m6-03: fonte complementada com LGPD, art. 6º, I–III (finalidade, adequação e necessidade).
+- [x] q-m6-29: removida a referência inadequada ao art. 43 da Lei nº 14.129/2021; a base foi ajustada para LAI, arts. 6º, III, e 34, e LGPD, arts. 6º, X, 37 e 46.
+- [x] q-m6-31: removida a referência inadequada ao art. 43; fonte ajustada para LAI, art. 8º, caput e § 2º, e Lei nº 14.129/2021, art. 3º, IV.
+- [x] q-m6-32: contexto delimitado ao Poder Executivo federal; fonte ajustada para Lei nº 12.813/2013, arts. 3º, I, 4º e 5º, V, além da CF/88, art. 37, caput.
+- [x] q-m6-38: removida a referência inadequada à Lei nº 14.129/2021, art. 43; fonte ajustada para LAI, arts. 6º, III, 32, IV, e 34, e LGPD, arts. 37, 46, 48 e 49.
+- [x] Lei nº 12.813/2013 cadastrada em `references.js` e documentada em `referencias/referencias-verificadas.md`, com URL oficial e dispositivos usados em q-m6-32.
 - [x] Revalidar após as correções de q-m6-02 e q-m6-06: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250565014 — success.
 
 
