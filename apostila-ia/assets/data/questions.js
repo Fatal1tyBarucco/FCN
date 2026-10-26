@@ -70,7 +70,7 @@ var questoesBanco = [
     nivel: "basico",
     topico: "modulo-1-unidade-1-topico-1-sub-1",
     assunto: "M1.1 Ecossistema Microsoft 365",
-    contexto: "Secretaria com 40 postos de trabalho que precisa de Teams, 5 TB de OneDrive por usuário e atualização contínua de funcionalidades. O fornecedor apresentou três opções e documentação de uma licença organizacional elegível com a cota de armazenamento exigida confirmada.",
+    contexto: "Secretaria com 40 postos de trabalho que precisa de Teams, 5 TB de OneDrive por usuário e atualização contínua de funcionalidades. A documentação do fornecedor confirma uma licença elegível com direito ao Teams e cota de 5 TB para os usuários envolvidos.",
     enunciado: "Qual opção atende integralmente à demanda descrita?",
     alternativas: [
       { letra: "A", texto: "Office LTSC por licenciamento por volume — compra única, com atualizações apenas de segurança." },
@@ -88,6 +88,7 @@ var questoesBanco = [
     },
     regra: "Modelo de licenciamento: assinatura (recorrente, serviços na nuvem + atualizações de funcionalidades) × perpétuo (compra única, apenas atualizações de segurança, sem serviços em nuvem).",
     pegadinha: "A palavra 'atualizações' aparece nas duas alternativas — a pegadinha é não distinguir tipo de atualização (segurança × funcionalidade) e esquecer que Teams/OneDrive em nuvem só aparecem na assinatura."
+    fonte: "Microsoft — comparação de planos com e sem Teams: https://www.microsoft.com/pt-BR/microsoft-365/business/microsoft-365-plans-and-pricing; descrição do serviço OneDrive e limites de armazenamento: https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description.",
   },
   {
     id: "q-m1-02",
@@ -123,13 +124,13 @@ var questoesBanco = [
     contexto: "Equipe distribuída precisa acessar os aplicativos do Microsoft 365 em três cenários: estação fixa, navegador em máquina compartilhada e celular em campo.",
     enunciado: "Sobre as versões web, desktop e mobile do Microsoft 365, assinale a opção correta.",
     alternativas: [
-      { letra: "A", texto: "A versão web requer internet e oferece funcionalidades básicas; a desktop tem funcionalidades completas e funciona offline; a mobile é simplificada e sincroniza com a nuvem." },
+      { letra: "A", texto: "A versão web é acessada pelo navegador e normalmente requer internet; a desktop instalada oferece mais recursos e pode funcionar offline após instalação e ativação; a mobile adapta a experiência à tela e também permite trabalho offline com arquivos disponíveis no dispositivo." },
       { letra: "B", texto: "As três versões oferecem exatamente as mesmas funcionalidades, variando apenas o esquema de cores da interface." },
       { letra: "C", texto: "A versão desktop só é atualizada por download manual; a versão web não recebe atualização automática; a mobile funciona exclusivamente offline." },
       { letra: "D", texto: "A versão mobile oferece todas as funcionalidades do desktop, e a versão web não requer conexão com a internet." }
     ],
     gabarito: "A",
-    justificativa: "O currículo descreve: web = via navegador, funcionalidades básicas, atualizações automáticas, requer internet; desktop = instalação local, funcionalidades completas, atualizações via Microsoft Update, funciona offline; mobile = apps iOS/Android, funcionalidades simplificadas, visualização e edição básica, sincronização com nuvem. A alternativa A reproduz fielmente os três conjuntos de características.",
+    justificativa: "As versões diferem em recursos e condições de uso. A versão web é acessada pelo navegador e depende normalmente de conexão; algumas funcionalidades avançadas podem estar disponíveis apenas no aplicativo desktop. Os aplicativos desktop, depois de instalados e ativados, podem ser usados offline para arquivos locais ou sincronizados, embora instalação, ativação, atualização e acesso a arquivos somente na nuvem exijam conexão. Os aplicativos móveis têm recursos adaptados ao dispositivo e podem trabalhar offline com arquivos previamente disponíveis, sincronizando alterações quando a conexão retorna. A alternativa A é a única que preserva essas distinções sem afirmar paridade funcional.",
     analise: {
       A: "CORRETA. Reproduz as três descrições do currículo sem acrescentar nem omitir características.",
       B: "INCORRETA. Erro conceitual: equivalência indevida entre plataformas. O currículo registra explicitamente que a web é 'básica' e a mobile é 'simplificada' — não há paridade funcional.",
@@ -138,6 +139,7 @@ var questoesBanco = [
     },
     regra: "Classificação de clientes de aplicativo: servidor (web), instalação local (desktop) e aplicativo nativo com sincronização (mobile) — as três diferem em requisito de rede, escopo funcional e canal de atualização.",
     pegadinha: "As alternativas B e D são 'quase verdade' para quem lê só uma frase do enunciado; a palavra-chave é comparar TODOS os atributos (funcionalidade, internet, atualização) de cada versão."
+    fonte: "Microsoft Support — diferença entre Microsoft 365 e Office 2024, incluindo uso offline após instalação/ativação: https://support.microsoft.com/pt-br/office/lifecycle/lc-account/what-s-the-difference-between-microsoft-365-and-office-2024; comparação de recursos Word Web/Desktop: https://support.microsoft.com/pt-br/word/word-features-comparison-word-for-the-web-vs-desktop.",
   },
   {
     id: "q-m1-04",
@@ -160,6 +162,7 @@ var questoesBanco = [
     },
     regra: "Divisão de papéis no M365: OneDrive = armazenamento pessoal do usuário; SharePoint = armazenamento e colaboração de equipe; o limite de capacidade é propriedade do plano licenciado.",
     pegadinha: "A pegadinha é generalizar a cota de armazenamento: o enunciado limita a oferta a planos elegíveis e às condições documentadas; não presume que todos os planos Enterprise ofereçam 5 TB."
+    fonte: "Microsoft Learn — limites de armazenamento do OneDrive por plano: https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description; gerenciamento do limite por usuário: https://learn.microsoft.com/en-us/onedrive/change-user-storage.",
   },
   {
     id: "q-m1-05",
