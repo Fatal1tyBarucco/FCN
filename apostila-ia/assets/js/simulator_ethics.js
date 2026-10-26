@@ -140,7 +140,7 @@
     + '.sim-etica-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
     + '.sim-etica-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
     '.sim-etica-bloco .sim-etica-sub{color:#cbd5e1}' +
-    + '.sim-etica-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}'
+    '.sim-etica-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}'
     + '.sim-etica-link{color:#174ea6;cursor:pointer;text-decoration:underline;font-size:.85rem}'
     + '.sim-etica-opts label{display:block;margin:4px 0;font-size:.85rem}'
     + '.sim-etica-opts input{margin-right:8px}'
