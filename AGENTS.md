@@ -191,6 +191,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `675cddb4d1c3d2a06313c1619f894dbdbe023eaa`.
 - Este passe cobre apenas q-m4-31..q-m4-35; não é validação jurídica integral das 85 questões do M4. O CI deve ser consultado no HEAD resultante antes de considerar validada a sintaxe.
 
+## Auditoria semântica incremental — lote M4 q-m4-36 a q-m4-40 (2026-10-26)
+
+- q-m4-36: revisada; mantida a distinção entre competências administrativas da ANPD e funções judiciais/criminais, com referência aos arts. 55-A e 55-J da LGPD. A verificação final da redação vigente da Lei nº 15.352/2026 ainda deve ser confirmada por fonte oficial.
+- q-m4-37: mantida após revisão focal; identifica o art. 5º, X e LXXIX, da Constituição e a EC nº 115/2022, sem confundir o direito à proteção de dados com a disciplina infraconstitucional da LGPD.
+- q-m4-38: reescrita para distinguir controlador, operador e titular, remover a equivalência incorreta entre agentes e eliminar a afirmação absoluta de que só o controlador tem deveres. Fontes legais ampliadas para arts. 5º, 37, 39 e 42 da LGPD.
+- q-m4-39: corrigida referência legal incorreta: a definição de dado pessoal está no art. 5º, I, não no inciso IX (que trata de anonimização). Enunciado atualizado para “pessoa natural identificada ou identificável”.
+- q-m4-40: revisada; mantida a complementaridade entre o Marco Civil da Internet e a LGPD, evitando afirmar que uma lei substitui ou dispensa a outra.
+- Commit de conteúdo: `fd697035d2e9248b756392c830a597c7dd1b93a3`; q-m4-31/q-m4-33 foram alteradas no commit `675cddb4d1c3d2a06313c1619f894dbdbe023eaa`.
+- Este passe cobre q-m4-36..q-m4-40, não valida juridicamente todo o bloco legal do M4. Verificar os workflows do HEAD atual antes de considerar o lote aprovado.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
