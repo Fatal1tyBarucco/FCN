@@ -858,7 +858,7 @@ const moduleQuestions6 = [
     },
     regra: "N0 manual; N1 apoio; N2 revisão prévia; N3 revisão posterior/amostral; N4 alçada; N5 automação plena — salvaguardas crescem com o nível.",
     pegadinha: "A diferença entre N2 e N3 é o momento da revisão (antes ou depois do efeito), não a existência dela.",
-    fonte: "Currículo do Módulo 6, unidade 6.6 (classificação didática de níveis de automação); Lei nº 14.129/2021, art. 48, II (2026-10-21)."
+    fonte: "Currículo do Módulo 6, unidade 6.6 (classificação didática de níveis de automação); Lei nº 14.129/2021, art. 48, II, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   { id: "q-m6-37", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
