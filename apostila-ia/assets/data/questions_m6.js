@@ -437,7 +437,7 @@ const moduleQuestions6 = [
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho determinante é «diretriz … e não mera faculdade»: o art. 3º, III, enumera a utilização de meios de comunicação viabilizados pela tecnologia da informação entre as diretrizes que os procedimentos de acesso devem observar, e o art. 8º, § 2º, torna obrigatória a divulgação em sítios oficiais.",
-    justificativa: "O art. 3º fixa cinco diretrizes a serem observadas nos procedimentos de acesso, entre elas a do inciso III (meios viabilizados pela tecnologia da informação). A obrigatoriedade é reforçada pelo art. 8º, § 2º, que impõe a divulgação em sítios oficiais da rede mundial de computadores. Não há, portanto, discricionariedade sobre adotar ou não o meio digital.",
+    justificativa: "O art. 3º fixa diretrizes que devem ser observadas nos procedimentos de acesso, entre elas a utilização de meios de comunicação viabilizados pela tecnologia da informação (inciso III). A obrigatoriedade de observar a diretriz decorre do art. 3º, III. O art. 8º, § 2º, prevê divulgação em sítios oficiais, ressalvadas as hipóteses legais específicas, como a exceção do § 4º para municípios com até 10 mil habitantes quanto à divulgação obrigatória na internet, sem afastar as demais obrigações legais.",
     analise: {
       item: "Item CERTO. O inciso III do art. 3º é diretriz vinculante, e o art. 8º, § 2º, torna o sítio oficial obrigatório.",
       leituraIncorreta: "Leitura que induz ao erro: tratar diretriz como recomendação. Diretriz, na lei, é parâmetro de execução do procedimento — descumpri-la é descumprir o art. 3º."
