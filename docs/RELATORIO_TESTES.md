@@ -465,3 +465,14 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Outros snapshots na branch registram 399 questões e 460 flashcards. Como os SHA são diferentes, não tratar as contagens como uma única execução nem assumir que o workflow histórico valida o HEAD atual.
 - Os testes reportados cobrem regressões interativas específicas (SOMA, CIDR, phishing, avaliação de prompt, histograma e SVG), mas não demonstram correção semântica integral, WCAG, leitor de tela ou teste físico multiplataforma.
 - **Esta retomada foi documental; nenhum teste foi executado por esta atualização.** A próxima execução deve registrar comando, SHA, exit code, artefatos e falhas, sem extrapolar o alcance dos testes.
+
+## Auditoria estrutural mais recente e regressão de acessibilidade — 2026-10-26
+
+- Run: [40409912389](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40409912389), SHA testado: `4e0c9eae346116c7c9c0957196ea315dd4f16b00`.
+- Concluíram com sucesso nesse run: sintaxe JavaScript; geração da matriz; rastreabilidade de ativos; validação estrutural do repositório; heurísticas de qualidade das questões; smoke test Chromium no modo `file://`.
+- O teste de interação falhou na asserção axe-core de WCAG 2.1 A/AA devido a `color-contrast`: texto `#4b5563` sobre `#1f232c` apresentou razão 2,08:1, quando o mínimo para texto normal é 4,5:1.
+- Correção enviada posteriormente à branch: a cor dos textos auxiliares foi alterada para `#cbd5e1` nos seis simuladores. A matriz curricular foi sincronizada a partir dos arquivos de origem, preservando 295 subtópicos e refletindo 888 exemplos e 592 exercícios contados estruturalmente.
+- O artefato de auditoria desse run reconheceu 132 tópicos, 460 flashcards e 399 questões. A heurística não sinalizou duplicatas exatas ou outros alertas, mas identificou 112 questões sem fonte no campo examinado e concentração incomum de gabaritos no M1 (A=4, B=15, C=5, D=2, E=0 em 26 questões MC). Esses achados foram adicionados a `docs/PENDENCIAS.md`.
+- **Limitação:** o run acima antecede a correção de contraste e os commits documentais posteriores. Não representa aprovação do HEAD atual. É necessário conferir um run completo do SHA final.
+- Ainda não cobertos: revisão semântica independente de todas as questões, validação de cada fonte normativa/técnica, teste manual com leitor de tela, auditoria WCAG manual e compatibilidade em dispositivos físicos.
+
