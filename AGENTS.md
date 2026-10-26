@@ -882,6 +882,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Os 40 IDs de M8 foram encontrados no arquivo; as questões são agrupadas por tópico curricular, não necessariamente por ordem numérica.
 - Revisão semântica focal dos 40 itens concluída. Validação automatizada ainda precisa ser confirmada no HEAD mais recente.
 
+## Revisão semântica focal de M1 — q-m1-01..q-m1-44 (2026-10-26)
+
+- q-m1-01..q-m1-10: revisados licenciamento Microsoft 365, diferenças entre LTSC e assinatura, clientes web/desktop/mobile, limites de armazenamento, histórico de versões e formatos do Word.
+- q-m1-11..q-m1-25: revisados estilos e sumários, Enter/Shift+Enter, tabulação decimal, listas, quebras de seção, referências cruzadas, propriedades de tabelas, revisão, restrição de edição, PDF acessível e compatibilidade.
+- q-m1-26..q-m1-44: revisados animações/transições, Slide Mestre, sincronização versus backup, limites de retenção do OneDrive, PowerPoint offline, funções e referências do Excel, PROCX e separadores regionais, além de tabelas estruturadas, filtros, validação e formatação condicional.
+- q-m1-30: corrigida afirmação desatualizada de que a unidade 1.3 Microsoft Excel não existia em `curriculum.js`; a unidade e seus tópicos estão presentes.
+- O lote M1 revisado não teve outras alterações de conteúdo nesta passada. Recursos e limites comerciais da Microsoft devem continuar condicionados ao plano, tipo de conta e política do locatário; não generalizar configurações.
+- Commit de conteúdo: `771540e2606792fc2199989de94b29bb4d6b9246`.
+- Revisão semântica focal concluída; validação automatizada no HEAD atual ainda necessária.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
