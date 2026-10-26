@@ -1730,20 +1730,21 @@ id: "q-m1-09",
     nivel: "intermediario",
     topico: "m3-u1-t1-s2",
     assunto: "M3.1 E-mail — POP3 e IMAP",
-    contexto: "Migração de estações: o setor deseja confirmar o comportamento de armazenamento antes de escolher o protocolo.",
-    enunciado: "O POP3, por padrão, baixa os e-mails do servidor para o dispositivo local e os apaga do servidor, enquanto o IMAP mantém as mensagens no servidor e permite criar pastas no servidor e buscar mensagens sem baixá-las por completo.",
+    contexto: "Migração de estações: o setor deseja confirmar como os protocolos de recebimento tratam mensagens e estado da caixa.",
+    enunciado: "O POP3 permite baixar mensagens para o cliente e, conforme a configuração do cliente, pode removê-las do servidor; o IMAP mantém o estado da caixa no servidor e permite sincronizar mensagens e pastas entre dispositivos.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o POP3, por padrão, baixa os e-mails ... e os apaga do servidor, enquanto o IMAP mantém as mensagens no servidor e permite criar pastas no servidor e buscar mensagens sem baixá-las por completo'.",
-    justificativa: "O currículo registra: POP3 'baixa e-mails do servidor para o dispositivo local e, por padrão, apaga do servidor'; IMAP 'mantém e-mails sincronizados no servidor e no cliente ... permite criar pastas no servidor, buscar mensagens sem baixar, e manter cópia no servidor'. O exemplo 'erro' do módulo corrige quem afirma que IMAP apaga após o download.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a distinção entre download e comportamento configurável no POP3 e sincronização do estado da caixa no IMAP; o item não afirma que todo cliente POP3 apaga mensagens por padrão.",
+    justificativa: "POP3 permite recuperar mensagens para um cliente, mas manter ou remover a cópia do servidor depende das opções e do comportamento do cliente de correio. IMAP trabalha com estado e pastas mantidos no servidor e permite sincronização entre clientes. A distinção importante é o modelo de acesso e sincronização, não uma regra universal de exclusão após download.",
     analise: {
-      item: "Item VERDADEIRO. As três características atribuídas (apagar por padrão, manter no servidor, pastas/busca no servidor) constam do conteúdo.",
-      leituraIncorreta: "Leitura que induz ao erro: lembrar que POP3 'pode' manter cópia (existe a opção) e negar o padrão. O item fala em 'por padrão' — é esse qualificador que o torna verdadeiro."
+      item: "Item VERDADEIRO. O comportamento de remoção no POP3 é condicionado à configuração; IMAP oferece sincronização do estado da caixa no servidor.",
+      leituraIncorreta: "Leitura que induz ao erro: memorizar que POP3 sempre apaga as mensagens. O protocolo não impõe esse comportamento universal; clientes podem manter cópias no servidor."
     },
-    regra: "Estado das mensagens: POP3 = propriedade local após download (padrão apagar no servidor); IMAP = estado no servidor sincronizado com clientes.",
-    pegadinha: "O qualificador 'por padrão' é tudo: sem ele, a afirmação sobre POP3 seria falsa (a opção de manter cópia existe). No CESPE, qualificadores decidem itens."
+    regra: "POP3 = recuperação/download; manter ou remover a cópia no servidor depende da configuração do cliente. IMAP = estado da caixa e pastas sincronizados no servidor.",
+    pegadinha: "Evite transformar uma configuração comum de cliente em regra do protocolo. POP3 não oferece a mesma sincronização de estado do IMAP, mas isso não significa que toda cópia seja apagada.",
+    fonte: "Currículo M3, unidade 1, tópico 2 — POP3 e IMAP."
   },
-  {
+{
     id: "q-m3-08",
     modulo: 3,
     formato: "mc",
