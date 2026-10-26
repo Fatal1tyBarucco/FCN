@@ -1315,3 +1315,8 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - A distribuição de gabaritos é apenas um sinal de revisão. Nunca alterar gabaritos corretos apenas para equilibrar letras.
 - Preservar PR #17 aberto e Draft, sem merge.
 
+## Verificação cruzada adicional de gabaritos — 2026-10-26
+
+- Verificação textual read-only dos seis arquivos: 324/324 questões MC apresentam o gabarito como chave de análise com marcador de correção reconhecível; 75/75 questões C/E têm gabarito `certo` ou `errado`.
+- Isso confirma coerência estrutural entre os campos, não correção factual nem qualidade pedagógica. Revisão semântica humana continua pendente para os 399 itens.
+
