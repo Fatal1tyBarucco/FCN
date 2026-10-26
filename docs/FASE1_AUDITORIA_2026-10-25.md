@@ -16,7 +16,7 @@ Fonte de requisitos: `Escrita.txt` (raiz; SHA consultado: `a7da4ad0c8905e2f7ece4
 - `README.md`: confirma SPA estática HTML/CSS/JS, sem framework/build, publicada via GitHub Pages a partir de `apostila-ia/`.
 - `AGENTS.md`: descreve a estrutura de dados, módulos e restrições operacionais.
 - `inventario/INVENTARIO_CURRICULAR.md` e `docs/INVENTARIO_CURRICULAR.md`: declaram 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos, 427 nós, 885 exemplos, 590 exercícios, 404 flashcards e 365 questões.
-- `docs/MATRIZ_COBERTURA.csv`: é uma matriz **agregada por módulo** (8 linhas de módulos + total), não uma matriz rastreável por subtópico.
+- `docs/MATRIZ_COBERTURA.csv`: no estado inicial da inspeção, a matriz era descrita como agregada; após as alterações do PR #17, o CSV passou a conter linhas por subtópico e campos de presença/contagem, com status de auditoria qualitativa ainda não revisado. Conferir sempre o SHA da matriz ao comparar estados.
 - `apostila-ia/assets/data/curriculum.js`: contém dados curriculares literais do Módulo 1.
 - `apostila-ia/assets/data/questions.js`: define esquema de questão com gabarito, justificativa, análise de alternativas, regra e pegadinha; seus comentários registram limitações históricas de cobertura que precisam ser reconciliadas com os arquivos atuais.
 - `docs/PLANO_EXECUCAO.md`, `docs/DECISOES_ARQUITETURAIS.md`, `docs/RELATORIO_TESTES.md` e `docs/PENDENCIAS.md`: já existem, mas registram estados/datas diferentes entre si e devem ser reconciliados na próxima atualização.
