@@ -2433,7 +2433,7 @@ id: "q-m1-40",
       { letra: "D", texto: "Jitter é a latência média do enlace; como o ping está estável, o jitter é necessariamente alto." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: largura de banda = capacidade máxima teórica (1 Gbps); throughput = taxa real alcançada, SEMPRE menor que a largura de banda, devido a overhead de protocolo, colisões, congestionamento e qualidade do sinal. Jitter = variação na latência entre pacotes consecutivos, crítico para VoIP (áudio interrompido). Latência e jitter são métricas distintas: ping estável não implica jitter alto nem baixo. A alternativa B é a única coerente.",
+    justificativa: "O currículo distingue largura de banda nominal (capacidade do enlace) de throughput (taxa útil observada), normalmente menor devido a overhead de protocolo, congestionamento, erros e outras condições da rede. Jitter = variação na latência entre pacotes consecutivos, crítico para VoIP (áudio interrompido). Latência e jitter são métricas distintas: ping estável não implica jitter alto nem baixo. A alternativa B é a única coerente.",
     analise: {
       A: "INCORRETA. Erro conceitual: afirma que largura de banda e throughput são sinônimos (o currículo corrige isso) e reduz a diferença a 'colisões apenas', ignorando overhead, congestionamento e qualidade do sinal.",
       B: "CORRETA. Throughput é a taxa real (sempre < largura de banda) e o áudio interrompido em VoIP é sintoma de jitter alto; a latência estável (ping) é métrica distinta do jitter, conforme o currículo.",
