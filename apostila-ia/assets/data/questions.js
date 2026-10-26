@@ -2433,7 +2433,7 @@ id: "q-m1-09",
     enunciado: "Considerando largura de banda, throughput, latência e jitter, assinale a alternativa que interpreta corretamente o cenário.",
     alternativas: [
       { letra: "A", texto: "Largura de banda e throughput são sinônimos; os 280 Mbps restantes são consumidos exclusivamente por colisões." },
-      { letra: "B", texto: "Throughput (720 Mbps) é a taxa real alcançada, inferior à largura de banda teórica (1 Gbps); o áudio interrompido é típico de jitter alto, não de latência estável." },
+      { letra: "B", texto: "Throughput (720 Mbps) é a taxa real alcançada, inferior à largura de banda nominal (1 Gbps); o áudio interrompido é compatível com jitter alto, que deve ser medido separadamente da latência." },
       { letra: "C", texto: "Throughput nunca é inferior à largura de banda; se mede 720 Mbps, a largura de banda real é 720 Mbps." },
       { letra: "D", texto: "Jitter é a latência média do enlace; como o ping está estável, o jitter é necessariamente alto." }
     ],
@@ -2441,7 +2441,7 @@ id: "q-m1-09",
     justificativa: "O currículo distingue largura de banda nominal (capacidade do enlace) de throughput (taxa útil observada), normalmente menor devido a overhead de protocolo, congestionamento, erros e outras condições da rede. Jitter = variação na latência entre pacotes consecutivos, crítico para VoIP (áudio interrompido). Latência e jitter são métricas distintas: ping estável não implica jitter alto nem baixo. A alternativa B é a única coerente.",
     analise: {
       A: "INCORRETA. Erro conceitual: afirma que largura de banda e throughput são sinônimos (o currículo corrige isso) e reduz a diferença a 'colisões apenas', ignorando overhead, congestionamento e qualidade do sinal.",
-      B: "CORRETA. Throughput é a taxa real (sempre < largura de banda) e o áudio interrompido em VoIP é sintoma de jitter alto; a latência estável (ping) é métrica distinta do jitter, conforme o currículo.",
+      B: "CORRETA. Throughput é a taxa real (normalmente inferior à capacidade nominal) e o áudio interrompido pode ser compatível com jitter; ping estável não mede a variação entre pacotes, que precisa ser avaliada separadamente.",
       C: "INCORRETA. Erro conceitual: inverte a regra — o currículo afirma que 'throughput nunca excede largura de banda', ou seja, é sempre menor ou igual, não que seriam iguais.",
       D: "INCORRETA. Erro conceitual: define jitter como 'latência média' (é a VARIAÇÃO da latência) e deduz jitter alto de ping estável — dois erros, pois latência e jitter são independentes."
     },
@@ -2483,12 +2483,12 @@ id: "q-m1-09",
     enunciado: "Sobre os tipos de comunicação empregados nesses dois casos, assinale a alternativa correta.",
     alternativas: [
       { letra: "A", texto: "Ambos são unicast; a videoaula exigiria 200 fluxos separados para ser eficiente." },
-      { letra: "B", texto: "O acesso ao site é unicast (um-para-um); a videoaula é mais eficiente em multicast (um-para-muitos, grupo inscrito), evitando 200 fluxos duplicados." },
+      { letra: "B", texto: "O acesso ao site é unicast (um-para-um); se a aplicação e a infraestrutura suportarem multicast, a videoaula pode usar um fluxo para o grupo em vez de 200 fluxos unicast independentes." },
       { letra: "C", texto: "A videoaula é broadcast, pois atinge muitos receptores, e atravessa roteadores até todos os setores." },
       { letra: "D", texto: "O acesso ao site é anycast e a videoaula é broadcast, que exige inscrição em grupo via IGMP." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define unicast como comunicação um-para-um (ex.: acessar um site) e multicast como um-para-muitos, para um grupo específico que se inscreveu (ex.: streaming de vídeo IPTV), exigindo inscrição do receptor (IGMP join). No exemplo de aplicação, streaming para muitos funcionários é mais eficiente em multicast do que em unicast (que exigiria N fluxos separados). A alternativa B aplica corretamente essas definições.",
+    justificativa: "O currículo define unicast como comunicação um-para-um (ex.: acessar um site) e multicast como um-para-muitos, para um grupo específico que se inscreveu (ex.: streaming de vídeo IPTV), exigindo inscrição do receptor (IGMP join). Quando a aplicação e a infraestrutura suportam multicast, o streaming para muitos funcionários pode reduzir fluxos duplicados em comparação com N sessões unicast. A alternativa B aplica essas definições ao cenário.",
     analise: {
       A: "INCORRETA. Erro conceitual: a videoaula para muitos é o caso típico de multicast; afirmar que 'unicast é mais eficiente' contradiz o exemplo do currículo (unicast exigiria 200 fluxos, consumindo muito mais banda).",
       B: "CORRETA. Site = unicast (um-para-um); videoaula = multicast (um-para-muitos, com inscrição em grupo), mais eficiente que N fluxos unicast, conforme o currículo.",
