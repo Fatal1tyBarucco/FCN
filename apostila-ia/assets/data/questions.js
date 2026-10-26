@@ -551,23 +551,23 @@ id: "q-m1-09",
     nivel: "intermediario",
     topico: "modulo-1-unidade-2-topico-8-sub-1",
     assunto: "M1.2 Word — tabelas, referências e acessibilidade",
-    contexto: "Norma interna exige o texto 'Veja a Figura 3' no corpo do texto, que deve permanecer correto mesmo quando a figura é movida ou reordenada no documento.",
-    enunciado: "Qual recurso do Word produz o texto indicado com atualização automática?",
+    contexto: "Norma interna exige o texto 'Veja a Figura 3' no corpo do texto, que deve poder ser corrigido de forma consistente após mover ou reordenar a figura e atualizar os campos do documento.",
+    enunciado: "Qual recurso do Word cria a referência vinculada que pode ser atualizada após mover a figura?",
     alternativas: [
       { letra: "A", texto: "Legenda automática inserida sob a figura, digitada manualmente no corpo." },
-      { letra: "B", texto: "Referência cruzada, que cria link para locais específicos e se atualiza quando o objeto é movido." },
+      { letra: "B", texto: "Referência cruzada, que cria um campo vinculado à legenda/figura e pode ser atualizado quando o objeto é movido ou renumerado." },
       { letra: "C", texto: "Índice remissivo, gerado a partir das marcas de entrada de índice." },
       { letra: "D", texto: "Citação bibliográfica gerenciada pelo grupo 'Referências'." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: 'Referências cruzadas criam links que saltam para locais específicos (ex: Veja a Figura 1) que atualizam automaticamente quando a figura é movida'. A legenda (A) identifica a figura no seu local, mas não gera o texto atualizável no corpo.",
+    justificativa: "O currículo define referências cruzadas como vínculos para locais específicos (por exemplo, 'Veja a Figura 1'). No Word, a referência cruzada é inserida como campo e pode ser atualizada (por exemplo, selecionando o campo e usando Atualizar Campo/F9) após mover ou renumerar a figura. A legenda identifica e numera a figura, mas não mantém por si só o texto de referência no corpo.",
     analise: {
       A: "INCORRETA. Erro conceitual: confundir identificação com vinculação. A legenda dá o número à figura; o texto no corpo continua estático se digitado à mão.",
-      B: "CORRETA. É o recurso nomeado no currículo, com o exemplo idêntico ('Veja a Figura 1').",
+      B: "CORRETA. A referência cruzada cria um campo vinculado à figura/legenda, que pode ser atualizado após mudanças no documento.",
       C: "INCORRETA. Erro conceitual: finalidade trocada. Índice remissivo é gerado das marcas de entrada de índice marcadas ao longo do texto — não vincula figuras.",
       D: "INCORRETA. Erro conceitual: mesmo grupo de interface ('Referências'), função diferente — gerenciar fontes e bibliografia, não figuras."
     },
-    regra: "Referência cruzada = vínculo interno atualizável (campos); legenda = numeração do objeto; índice = mapa de marcas de entrada.",
+    regra: "Referência cruzada = campo interno que pode ser atualizado; legenda = numeração do objeto; índice remissivo = mapa de marcas de entrada.",
     pegadinha: "Três recursos ficam no mesmo grupo de guiia 'Referências' — a pegadinha é escolher pela proximidade de menu em vez da função descrita."
   },
   {
