@@ -1802,7 +1802,7 @@ id: "q-m1-09",
     },
     regra: "POP3 = recuperação/download; manter ou remover a cópia no servidor depende da configuração do cliente. IMAP = estado da caixa e pastas sincronizados no servidor.",
     pegadinha: "Evite transformar uma configuração comum de cliente em regra do protocolo. POP3 não oferece a mesma sincronização de estado do IMAP, mas isso não significa que toda cópia seja apagada.",
-    fonte: "Currículo M3, unidade 1, tópico 2 — POP3 e IMAP."
+    fonte: "IETF RFC 1939 — POP3; RFC 9051 — IMAP4rev2: https://www.rfc-editor.org/rfc/rfc1939.html ; https://www.rfc-editor.org/rfc/rfc9051.html"
   },
 {
     id: "q-m3-08",
