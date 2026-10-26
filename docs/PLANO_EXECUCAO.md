@@ -16,13 +16,28 @@ Responsável: orquestrador (verificação direta no repo real, sem delegação d
 | 7 — Testes técnicos | Carregamento, links, cálculos, gráficos, persistência, acessibilidade, modo direto `file://` | PARCIAL | `node --check` passou para todos os `.js`; smoke test `verify_nodes.js` passou; testes de simulador Excel (111 asserts) passaram; testes de perguntas (deduplicação, campos obrigatórios) passaram | Faltam testes de interface visual completa e de abertura direta (`file://`) em navegador real no dispositivo do usuário |
 | 8 — Auditoria final | Matriz de conformidade com todos os critérios de aceite (Seção 18) | CONCLUÍDO (Fase 8) | docs/AUDITORIA_FINAL.md — matriz dos 19 critérios com evidência/teste/resultado/limitação/correção | Veredito: APROVADO COM RESSALVAS; D4 (navegador real) pendente |
 
-## Estado atual resumido (sem substituição por placeholders)
+## Estado atual consolidado — 2026-10-26
 
-- Fase 4 (conteúdo didático) = CONCLUÍDA com evidências numéricas.
-- Fase 5 (funcionalidade) = PARCIAL; a interface está montada, mas a verificação funcional completa ainda não foi executada por um agente independente.
-- Fase 6 (validação curricular) = PENDENTE; requer leitura independente de cada módulo para confirmar 3 exemplos resolvidos por unidade (critério de aceite nº 4) e qualidade mínima.
-- Fase 7 (testes técnicos) = PARCIAL; testes de código e de dados passaram; testes de interface completa e de `file://` ainda não executados.
-- Fase 8 (auditoria final) = PENDENTE.
+Este bloco prevalece sobre snapshots históricos abaixo quando houver divergência de status ou contagens. O histórico é preservado para rastreabilidade, não como descrição do estado corrente.
+
+| Etapa do prompt mestre (Seção 17) | Estado corrente | Evidência / pendência real |
+|---|---|---|
+| 1 — Inventário | Estruturalmente concluído | Inventário e IDs existem; reconciliar contagens antigas nos documentos auxiliares. |
+| 2 — Matriz de cobertura | Parcial para aceite semântico | Matriz estrutural existe; associação por tópico não prova que cada subtópico foi ensinado em profundidade. |
+| 3 — Arquitetura | Implementada | SPA estática, 8 módulos e modo de abertura direta documentado. |
+| 4 — Implementação didática | Implementada estruturalmente; profundidade ainda sob auditoria | Conteúdo, exemplos e exercícios existem; amostragem estrutural não equivale a revisão linha a linha. |
+| 5 — Implementação funcional | Testes automatizados aprovados no HEAD indicado abaixo | Simuladores, busca, gráficos, persistência e interações passaram nos testes configurados; limitações de navegador/dispositivo continuam explícitas. |
+| 6 — Validação curricular | Parcial quanto à qualidade substantiva | Continuar revisão em lotes por módulo: gabaritos, distratores, justificativas, redundância, fontes e profundidade. |
+| 7 — Testes técnicos | Checks CI aprovados no HEAD `77c4cd14b98af1b7c5522fd5918458348bc744a1` | [Auditoria estática e smoke/interações](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266280519) e [CodeQL/análises](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266276949); não substituem testes manuais. |
+| 8 — Auditoria final | Aprovada com ressalvas documentadas; não é aceite final irrestrito | `docs/AUDITORIA_FINAL.md` precisa ser lido junto com as limitações: WCAG independente, leitor de tela e dispositivos físicos não certificados. |
+
+### Critérios de saída ainda necessários
+
+1. Executar auditoria semântica em lotes por módulo, registrando IDs revisados, defeitos, correções e evidências; não usar contagem de gabaritos como único critério.
+2. Reconciliar contagens e status em inventário, matriz, plano, pendências e relatório de testes, distinguindo dados históricos de contagens atuais geradas pelo CI.
+3. Validar fontes oficiais para afirmações normativas/técnicas e remover atribuições sem fonte rastreável.
+4. Executar revisão manual de acessibilidade e responsividade em ambientes disponíveis; se não for possível testar dispositivos físicos/leitor de tela neste ambiente, manter a limitação explícita.
+5. Manter PR #17 em Draft até os critérios qualitativos estarem satisfeitos; não fazer merge só porque o CI está verde.
 
 ## FASE 3 DO ORQUESTRADOR — INICIADA (2026-10-23)
 Modo: multiagente conforme missao escrita pelo usuario. Nenhum arquivo de código do repo alterado ainda; funcionalidade existente (navigation.js, simuladores, quiz-engine) preservada. Subagentes delegados em batch (ver tarefas abaixo). Contrato de trabalho por subagente: identificador + objetivo + arquivos de entrada + resultado esperado + arquivos alteráveis + dependências/restricoes + criterios de aceite + testes exigidos + evidencias.
