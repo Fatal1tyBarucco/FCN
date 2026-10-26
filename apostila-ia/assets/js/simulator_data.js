@@ -434,7 +434,7 @@
     + '.sim-dados-stats .sim-dados-stats-label{color:#8b94a5;font-size:.75rem}'
     + '.sim-dados-selector,.sim-dados-input-sm{display:inline-block;font-size:.82rem;background:#1b1e24;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:2px 6px;margin:2px}'
     + '.sim-dados-svg{display:block;margin:8px 0;background:#111318;border:1px solid #333947;border-radius:4px}'
-    + '.chart-svg{width:100%;height:auto}'
+    + '.chart-svg{width:100%;height:auto;background-color:#111318}'
     + '.chart-svg .chart-svg-titulo{font-size:12px;font-weight:600;fill:#e3e9ff}'
     + '.chart-svg .chart-txt{font-size:9px;fill:#c5c9d4;pointer-events:none}'
     + '.chart-svg .chart-eixo{stroke:#3a4252;stroke-width:1}'
