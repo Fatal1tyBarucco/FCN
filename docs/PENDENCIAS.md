@@ -323,3 +323,13 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Distribuição de M7 após o lote: A=17, B=0, C=13, D=1, E=2 em 33 questões de múltipla escolha; A/B caíram de 87,9% para 51,5% no módulo.
 - [ ] Revisar os bancos M4, M6 e M8 por lotes pequenos e com remapeamento explícito de referências a letras. A distribuição global ainda é concentrada: A=133, B=131, C=41, D=8, E=8 em 321 questões de múltipla escolha (A/B=82,2%).
 - [ ] A aprovação do CI confirma sintaxe, estrutura e smoke test, mas não substitui revisão independente completa de gabaritos, distratores, fontes e profundidade pedagógica.
+
+
+## Balanceamento editorial — atualização consolidada — 2026-10-26
+
+- [x] Revisar em lotes controlados 10 questões de M4, 8 de M6 e 5 de M8, conferindo texto da resposta correta, gabarito, análise dos distratores e referências a letras.
+- [x] Confirmar CI no HEAD `75a42f115be0305d939d487a481645f166423513`: [auditoria curricular e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258812457), [workflow do PR](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258810281) e [Code Quality](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258810062) passaram.
+- [x] Recalcular a distribuição do banco de 321 questões de múltipla escolha: A=110, B=131, C=64, D=8, E=8; A/B=75,1%.
+- [ ] Continuar a revisão dos gabaritos por pequenos lotes; não forçar distribuição uniforme nem alterar questão sem conferir justificativa, distratores e referências.
+- [ ] Realizar revisão pedagógica independente e completar a verificação por fontes oficiais para afirmações normativas/técnicas; CI verde não certifica esses aspectos.
+- [ ] Atualizar este relatório e o relatório de qualidade após cada lote validado, sem deixar que os snapshots históricos sejam confundidos com o estado atual.
