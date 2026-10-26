@@ -255,3 +255,13 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 5. **P2 — fontes normativas:** confirmar a vigência e a pertinência de cada referência legal/normativa citada, registrando URL, dispositivo e data de consulta.
 6. **P3 — delegação multiagente:** a ferramenta de delegação especializada não está disponível nesta execução; não atribuir tarefas a agentes fictícios. Prosseguir com lotes isolados e revisão independente documentada.
 7. **Controle de integração:** manter o desenvolvimento no branch do PR #17 e não executar merge enquanto critérios obrigatórios qualitativos ou de navegador permanecerem pendentes.
+
+
+## Fase 2 — inspeção remota (2026-10-25)
+
+- [ ] Consultar o resultado final do workflow `validate-curriculum` para o HEAD mais recente do PR #17; a execução consultada ainda estava em fila.
+- [ ] Reconciliar a contagem de flashcards/questões e a matriz CSV com o mesmo SHA do branch.
+- [ ] Revisar os scripts de auditoria para falsos negativos e limites de análise textual.
+- [ ] Fazer revisão semântica estratificada de questões e fontes, priorizando gabaritos concentrados em A/B e módulos com distribuição extrema.
+- [ ] Auditar os seis simuladores por entradas inválidas, limites e consistência dos resultados; UI montada não basta.
+- [ ] Testar teclado/leitor de tela, responsividade física, síntese de voz e embeds em ambiente apropriado.
