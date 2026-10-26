@@ -1610,7 +1610,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: memorizar '100 m' como limite universal de par trançado (verdadeiro para 1 Gbps e para Cat6a em 10 Gbps). O limite depende da TAXA: 10 Gbps × Cat6 = 55 m."
     },
     regra: "Limites UTP: Cat5e — 1 Gbps; Cat6 — 10 Gbps até 55 m; Cat6a — 10 Gbps até 100 m. Alcance padrão de par trançado = 100 m na taxa de 1 Gbps.",
-    pegadinha: "Número + categoria + taxa: três variáveis no mesmo item. O CESPE troca apenas uma (100 m no lugar de 55 m) — quem lê '100 m é padrão de UTP' e não confere a taxa marca Certo por engano."
+    pegadinha: "Número + categoria + taxa: três variáveis no mesmo item. O CESPE troca apenas uma (100 m no lugar de 55 m) — quem lê '100 m é padrão de UTP' e não confere a taxa marca Certo por engano.",
     fonte: "Cisco — 10GBASE-T: até 55 m em Cat6 UTP e até 100 m em Cat6 blindado/Cat6A/Cat7: https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html",
   },
   /* ===================== FIM BLOCO INICIAL M2 (q-m2-01..q-m2-26) ===================== */
@@ -2131,7 +2131,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: o currículo compara as três destacando diferenciais distintos (collaboração contínua × simplicidade × webinars) — não há equivalência."
     },
     regra: "Critérios de escolha registrados no currículo: Teams = colaboração contínua no M365; Meet = simplicidade; Zoom = webinars e grandes eventos.",
-    pegadinha: "A alternativa D ('todas iguais') é o relativismo típico da FGV — o material justamente diferencia as plataformas; quem lê só o enunciado e não o comparativo cai nela."
+    pegadinha: "A alternativa D ('todas iguais') é o relativismo típico da FGV — o material justamente diferencia as plataformas; quem lê só o enunciado e não o comparativo cai nela.",
     fonte: "Zoom Support — requisitos e capacidade de salas paralelas em webinars, incluindo licenças elegíveis e aplicativo de desktop: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838; Zoom Support — gerenciar salas paralelas em webinars: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
   },
   {
@@ -2634,7 +2634,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: associar 'Cat6 = 10 Gbps' ao alcance máximo de 100 m do par trançado (esse 100 m vale para 1 Gbps; a 10 Gbps o Cat6 cai para 55 m)."
     },
     regra: "UTP: Cat5e (1 Gbps), Cat6 (10 Gbps até 55 m), Cat6a (10 Gbps até 100 m). O alcance de 100 m só se mantém a 10 Gbps com Cat6a.",
-    pegadinha: "Confundir Cat6 com Cat6a: a letra 'a' (augmented) é justamente o que estende 10 Gbps aos 100 m completos."
+    pegadinha: "Confundir Cat6 com Cat6a: a letra 'a' (augmented) é justamente o que estende 10 Gbps aos 100 m completos.",
     fonte: "Cisco — 10GBASE-T: até 55 m em Cat6 UTP e até 100 m em Cat6 blindado/Cat6A/Cat7: https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html",
   },
   {
@@ -3154,7 +3154,7 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: memorizar 'Meet = simples/no navegador' e 'Zoom = recursos avançados' mas trocá-las ao responder; o exemplo 'erro' do currículo já corrige 'Google Meet requer instalação de software' = Errado."
     },
     regra: "Diferenciais: Meet = simplicidade/navegador (sem instalação); Zoom = webinars e breakout rooms; Teams = integração M365. Não inverter as atribuições.",
-    pegadinha: "Item de duas metades trocadas: cada característica pertence à plataforma oposta — estilo CESPE que pune a meia-verdade por troca de sujeito."
+    pegadinha: "Item de duas metades trocadas: cada característica pertence à plataforma oposta — estilo CESPE que pune a meia-verdade por troca de sujeito.",
     fonte: "Zoom Support — salas paralelas em webinars exigem aplicativo desktop ou móvel e licença elegível: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838; Google Meet Help — reuniões em navegadores compatíveis: https://support.google.com/meet/answer/7317473?hl=pt-BR",
   },
   {
