@@ -265,7 +265,7 @@ if (r && r.q44) {
   check('q-m4-44 gabarito === "A"', q44.gabarito === 'A', 'real=' + q44.gabarito);
   const just44 = norm(q44.justificativa);
   check('q-m4-44 justificativa compara LGPD e Marco Civil',
-    just44.includes('LGPD') && just44.includes('Marco Civil') && just44.includes('complementares'));
+    just44.includes('lgpd') && just44.includes('marco civil') && just44.includes('complementares'));
 } else {
   check('q-m4-44 presente', false, 'não encontrada no banco fundido');
 }
