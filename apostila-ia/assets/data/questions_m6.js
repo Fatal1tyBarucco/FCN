@@ -288,7 +288,7 @@ const moduleQuestions6 = [
       A: "INCORRETA. Erro conceitual de inversão: a lei adota publicidade como preceito geral e sigilo como exceção.",
       B: "INCORRETA. Erro conceitual de restrição: o alcance inclui os três Poderes e o Ministério Público, em todos os entes federativos.",
       C: "CORRETA. Corresponde à ementa e ao art. 1º, caput e parágrafo único.",
-      D: "INCORRETA. Erro conceitual de substituição: os regimes convivem e prevalece o mais restritivo.",
+      D: "INCORRETA. Erro conceitual de substituição: os regimes convivem e devem ser harmonizados conforme a natureza da informação e as hipóteses legais aplicáveis.",
       E: "INCORRETA. Erro conceitual de atribuição: cadastro de servidores não é objeto da LAI."
     },
     regra: "LAI: escopo amplo (três Poderes, MP, administração indireta) e diretriz de publicidade como preceito geral.",
@@ -464,12 +464,12 @@ const moduleQuestions6 = [
       A: "CORRETA. Reproduz o art. 31, § 1º, I, incluindo a independência em relação à classificação de sigilo.",
       B: "INCORRETA. Erro conceitual de confusão de regimes: informação pessoal não se protege por classificação, e sim pelo art. 31.",
       C: "INCORRETA. Erro conceitual: a lei fixa prazo máximo de 100 anos.",
-      D: "INCORRETA. Erro conceitual: a ausência de classificação não autoriza divulgação; exige-se previsão legal ou consentimento expresso (§ 1º, II).",
+      D: "INCORRETA. Erro conceitual: a ausência de classificação não autoriza divulgação; exigem-se os requisitos do art. 31, observadas também as exceções legais do § 3º.",
       E: "INCORRETA. Erro conceitual: o § 4º veda usar a restrição para prejudicar apuração de irregularidades em que o titular esteja envolvido."
     },
-    regra: "Informação pessoal (art. 31): restrição por 100 anos, independentemente de classificação; divulgação a terceiros só com previsão legal ou consentimento expresso.",
+    regra: "Informação pessoal (art. 31): restrição por 100 anos, independentemente de classificação; acesso e divulgação a terceiros conforme as hipóteses legais do art. 31, inclusive autorização legal ou consentimento e as exceções previstas no § 3º.",
     pegadinha: "A alternativa E transforma a proteção da privacidade em escudo contra accountability — vedação expressa do § 4º.",
-    fonte: "Lei nº 12.527/2011 (LAI), art. 31, caput, § 1º, I e II, § 2º e § 4º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 31, caput, § 1º, I e II, § 2º, § 3º e § 4º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-20", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral",
