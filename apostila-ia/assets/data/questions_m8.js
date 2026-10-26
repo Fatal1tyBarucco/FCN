@@ -563,7 +563,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "25." }
     ],
     gabarito: "C",
-    justificativa: "Posição de percentil p = (n − 1) × p + 1 = (10 − 1) × 0,25 + 1 = 3,25. O valor é entre o 3º (21) e o 4º (25): 21 + 0,25 × (25 − 21) = 21 + 1 = 22. A alternativa C reproduz o cálculo. A B (22,5) é 21 + 0,5 × 4; a C (23) ignora a interpolação; a D (25) é a posição 4, não o Q1.",
+    justificativa: "Posição de percentil p = (n − 1) × p + 1 = (10 − 1) × 0,25 + 1 = 3,25. O valor é entre o 3º (21) e o 4º (25): 21 + 0,25 × (25 − 21) = 21 + 1 = 22. A alternativa C reproduz o cálculo. A (22,5) resulta de interpolação com peso 0,5; B (23) não segue a posição 3,25 do método tipo 7; D (25) é o 4º valor, não o Q1 calculado por interpolação.",
     analise: {
       A: "INCORRETA. Erro conceitual: 22,5 indicaria interpolação com peso 0,5, e a posição válida é 3,25.",
       B: "INCORRETA. Erro conceitual: 23 seria posição 3,5 ou a média de 21 e 25 sem a regra de posicionamento do método tipo 7.",
@@ -628,8 +628,8 @@ const moduleQuestions8 = [
       C: "INCORRETA. Erro conceitual: viés de não-resposta não desaparece com 10 mil respostas; o viés permanece.",
       D: "INCORRETA. Erro conceitual: generalização exige amostragem probabilística com margem declarada; amplitude não garante representatividade."
     },
-    regra: "Errou de amostragem ≠ viés: o tamanho reduz flutuação, não erro sistemático; viés de seleção, não-resposta, sobrevivência e medição precisam de delineamento probabilístico.",
-    pegadinha: "A pegadinha é '10 mil é detona' — o exame cobra a distinção conceitual entre flutuação aleatória e viés sistemático.",
+    regra: "Erro de amostragem ≠ viés: o tamanho reduz flutuação aleatória, não erro sistemático; viés de seleção, não-resposta, sobrevivência e medição exigem análise do delineamento e do mecanismo de coleta.",
+    pegadinha: "A pegadinha é '10 mil respostas resolvem tudo' — o tamanho reduz parte da flutuação aleatória, mas não garante representatividade nem elimina viés sistemático.",
     fonte: "Currículo M8 — modulo-8-unidade-3-topico-6 (M8.3.6 Amostragem e viés).",
   },
   {
@@ -650,14 +650,14 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Nenhuma opção, pois a análise sempre exige licença empresarial." }
     ],
     gabarito: "A",
-    justificativa: "O currículo define que para estudo/pessoal, ferramenta gratuita com publicação pública e dados fictícios é adequada, desde que os dados sejam realmente fictícios e rotulados como tal. O cenário diz 'dados fictícios' e 'sem orçamento'; a alternativa A reproduz isso. B erra: licença paga não é requisito quando os dados são fictícios e não há governança sensível. C erra: o Tableau Public publica em área pública, o que não é condizente com 'não internet'? mais tarde; o currículo não exige esse uso para estudo; e D é exagerada.",
+    justificativa: "O cenário exige autoria local, funcionamento sem internet e custo zero. A alternativa A atende a esses requisitos. Uma ferramenta que depende de serviço online não atende à restrição de conectividade; o Tableau Public também é inadequado para esse cenário porque envolve publicação pública. Licença paga não é requisito universal de segurança, e a análise não exige necessariamente licença empresarial.",
     analise: {
       A: "CORRETA. Reproduz o cenário do currículo: dados fictícios + gratuidade + sem custo, desde que rotulados.",
       B: "INCORRETA. Erro conceitual: licença paga não é requisito nem necessário nem suficiente para governança; o currículo prioriza uso e governança, não o preço.",
       C: "INCORRETA. Erro conceitual: o Tableau Public publica em área aberta; para dados fictícios em estudo, a questionamento é mais fino — o currículo não o recomenda nesse perfil e a alternativa A é o caminho do currículo.",
       D: "INCORRETA. Erro conceitual: exagera — gratuidade para dados fictícios é uma opção documentada no currículo."
     },
-    regra: "Escolha por uso: estudo gratuito com dados fictícios + rotulagem; esquivo accessível exige controle de acesso; governança e licença declarada logo que dados sensíveis.",
+    regra: "Escolha conforme uso, conectividade e sensibilidade: para estudo offline, prefira ferramenta gratuita com autoria local e dados fictícios; para dados sensíveis, exija controles de acesso, governança e licença/termos compatíveis.",
     pegadinha: "A pegadinha é 'licença paga é mais seguro' — o currículo exige o uso adequado, e dados fictícios tornam licença desnecessária.",
     fonte: "Currículo M8 — modulo-8-unidade-4-topico-4 (M8.4.4 Comparação de ferramentas e cenários).",
   },
@@ -679,7 +679,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Projeção de 1.200 atendimentos, só se confirmar no trimestre seguinte." }
     ],
     gabarito: "C",
-    justificativa: "O currículo exige comunicar incerteza: rótulo de estimativa, faixa de erro/intervalo, cenários e premissas declaradas. A alternativa C faz isso: faixa (1.050–1.300), premissas ('tendência dos 12 meses') e estímulo. B, C e D omitem a incerteza ou a prometem como fato, o que o currículo classifica como compromisso de integridade.",
+    justificativa: "O currículo exige comunicar incerteza: rótulo de estimativa, faixa de erro/intervalo, cenários e premissas declaradas. A alternativa C faz isso: faixa (1.050–1.300), premissas ('tendência dos 12 meses') e estímulo. A, B e D omitem a incerteza ou apresentam a estimativa como fato, comprometendo a integridade da comunicação.",
     analise: {
       A: "INCORRETA. Erro conceitual: apresentar estimativa ponto a ponto como fato distorce a incerteza.",
       B: "INCORRETA. Erro conceitual: 'sem premissas' não existe — qualquer estimativa tem premissas; omitir as torna não acessíveis.",
@@ -727,7 +727,7 @@ const moduleQuestions8 = [
     origem: "autoral",
     nivel: "intermediario",
     topico: "modulo-8-unidade-2-topico-3",
-    assunto: "M8.2.3 Ordenação e legalidade de barras",
+    assunto: "M8.2.3 Ordenação e legibilidade de barras",
     contexto: "Unidades A = 450, B = 320, C = 280, D = 190. O gráfico mostra barras em ordem aleatória.",
     enunciado: "Sobre a leitura do gráfico de barras com barras desordenadas, assinale a opção correta.",
     alternativas: [
@@ -831,7 +831,7 @@ const moduleQuestions8 = [
       C: "INCORRETA. Erro conceitual: a média dos tickets (média de médias) é distinta da agregação da soma, e o filtro influencia o cálculo.",
       D: "INCORRETA. Erro conceitual: o DAX respeita o contexto de filtro; a medida não é fixa."
     },
-    regra: "Medida (schnitt) é avaliada no contexto de visual/filtros; agregação correta = somar antes de dividir; média de médias é vício de agregação.",
+    regra: "Medida DAX é avaliada no contexto do visual e dos filtros; agregação correta = somar antes de dividir quando essa é a definição da métrica; média de médias pode distorcer o resultado.",
     pegadinha: "A alternativa A é a pegadinha: parece 'média de todos os registros', mas a definição correta usa Soma/Soma no contexto de filtro.",
     fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 DAX e contexto de filtro).",
   },
