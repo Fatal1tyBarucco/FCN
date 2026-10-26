@@ -1265,3 +1265,11 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Preservar conteúdo já validado ao corrigir defeitos.
 - Documentar decisões e trade-offs nos arquivos de inventário/matriz (mantê-los em dia com o código).
 - `Escrita.txt` é a fonte de verdade para requisitos; este AGENTS.md descreve o estado real do código.
+
+## Continuidade da orquestração — 2026-10-26
+
+- PR ativo: [#17](https://github.com/Fatal1tyBarucco/FCN/pull/17), branch `feat/fase-1-orquestracao-20261025`; manter alterações nesta branch, sem push direto em `main`, sem merge e sem retirar o estado Draft antes da auditoria qualitativa.
+- Fase 1 retomada a partir da leitura de `Escrita.txt` e deste arquivo. O prompt mestre exige 8 módulos, cobertura por subtópico, ≥3 exemplos distintos por unidade, ≥400 flashcards e ≥320 questões autorais, comentários completos por alternativa, cinco gráficos, simuladores, busca, áudio, persistência, acessibilidade e auditoria final. Os mínimos quantitativos não provam qualidade semântica.
+- Os documentos de governança e o código da branch devem ser lidos antes de novas alterações. Evitar repetir a geração de inventário/matriz já existente; atualizar com evidências novas e preservar o histórico.
+- Evidência do PR descreve testes Playwright em `file://` e auditorias automatizadas; isso não comprova revisão semântica independente, conformidade WCAG ou testes físicos. Confirmar checks no HEAD atual antes de registrar estado verde.
+- Próximo foco: revisão independente por lotes de questões/gabaritos e validação de fontes primárias, seguida de revisão de acessibilidade e compatibilidade. Registrar IDs revisados para impedir retrabalho.
