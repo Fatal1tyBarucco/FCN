@@ -80,7 +80,7 @@ Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplic
 - Simuladores com UI montada (5/5): Excel (`#excel-app`), Redes (`#redes-app`), Segurança (`#seguranca-app`), Prompts (`#prompts-app`), Dados (`#dados-app`) — montagem inline com guardas triplas.
 - Gráficos (5/5): histograma, linha, barras, dispersão, boxplot (SVG próprio, `#charts-app`).
 - Flashcards: 460/460 IDs presentes nos arquivos de dados, repetição espaçada SM-2 simplificado.
-- Questões: 396/320 (piso quantitativo atingido), 15 escopos de simulado (m1..m8 + cum-2..cum-8). Distribuição real medida: níveis 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos 290 múltipla escolha + 75 Certo/Errado; estilos CESPE 216 / FGV 58 / FCC 52 / VUNESP 39. Desvio da sugestão 30/45/25 documentado e justificado (Seção 10 admite ajuste).
+- Questões: **399/320** (piso quantitativo atingido), 15 escopos de simulado (m1..m8 + cum-2..cum-8). A distribuição de níveis, formatos e estilos registrada nos snapshots antigos corresponde a uma versão anterior do banco e precisa ser recalculada antes de ser tratada como atual.
 - Busca (`window.SearchApp`) e áudio (`window.AudioApp`) implementados e conectados.
 - Persistência (`storage.js`) e referências (`references.js`) implementados e carregados.
 
@@ -150,7 +150,7 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - q-m1-33 a q-m1-35 foram alinhadas a subtópicos de Excel, deixando de apontar para um tópico de formatos do Word.
 - q-m2-34 foi alinhada a métricas de desempenho; q-m2-38 a q-m2-40 foram alinhadas ao tópico de cálculo CIDR.
 - q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40 foram alinhadas aos tópicos de lobby, controle de participantes e gravações de reuniões.
-- Snapshot histórico da auditoria estrutural: 365 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas; reexecutar a rastreabilidade para as 396 questões atuais. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
+- Snapshot histórico da auditoria estrutural: 365 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas; reexecutar a rastreabilidade para as 399 questões atuais. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
 - Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802.
 
 
@@ -171,7 +171,7 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 
 **Fonte normativa lida:** `Escrita.txt` no branch `main`, blob SHA `a7da4ad0c8905e2f7ece405dfe4a3b95518cbb76`. O prompt define oito módulos curriculares e critérios de aceite técnicos, pedagógicos e quantitativos. A árvore estrutural e as contagens abaixo são evidências de inventário, não aprovação semântica de todo o material.
 
-**Baseline recontado em 2026-10-26:** 8 módulos; 37 unidades; 132 tópicos; 295 subtópicos (427 nós); 885 exemplos e 590 exercícios na matriz; 460 flashcards e 396 questões autorais nos arquivos atuais. Os snapshots antigos de 404 flashcards/365 questões e 389 questões são históricos, não a contagem atual. A contagem estrutural não substitui revisão semântica nem reexecução da rastreabilidade.
+**Baseline recontado em 2026-10-26:** 8 módulos; 37 unidades; 132 tópicos; 295 subtópicos (427 nós); 885 exemplos e 590 exercícios na matriz; 460 flashcards e 396 questões autorais nos arquivos atuais. Os snapshots antigos de 404 flashcards/365 questões e 389/396 questões são históricos, não a contagem atual. A contagem estrutural não substitui revisão semântica nem reexecução da rastreabilidade.
 
 **Módulos obrigatórios:**
 1. Microsoft 365 e aplicações de escritório (Word, Excel, PowerPoint, OneDrive).
