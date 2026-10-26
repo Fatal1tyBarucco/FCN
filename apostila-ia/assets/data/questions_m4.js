@@ -855,7 +855,7 @@ const moduleQuestions4 = [
     },
     regra: "ANPD = Agência Nacional de Proteção de Dados; autarquia de natureza especial com competências de regulação e fiscalização.",
     pegadinha: "Não usar a denominação histórica Autoridade Nacional como nome institucional atual após a Lei nº 15.352/2026.",
-    fonte: "Lei nº 13.709/2018, arts. 55-A e 55-J, com redação dada pela Lei nº 15.352/2026."
+    fonte: "Lei nº 13.709/2018, arts. 55-A e 55-J, com redação dada pela Lei nº 15.352/2026, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm; LGPD compilada: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-35", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -905,7 +905,7 @@ const moduleQuestions4 = [
     },
     regra: "A ANPD zela pela proteção de dados e fiscaliza o cumprimento da LGPD; também possui competências específicas relativas ao tratamento realizado pelo Poder Público.",
     pegadinha: "Não confundir a fiscalização administrativa da LGPD pela ANPD com competências judiciais, criminais ou de controle interno.",
-    fonte: "Lei nº 13.709/2018, art. 55-A e art. 55-J, IV, XI e XVI, com redação vigente em 25/10/2026."
+    fonte: "Lei nº 13.709/2018, arts. 55-A e 55-J, texto oficial com redação dada pela Lei nº 15.352/2026: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm; LGPD compilada: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-37", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -930,7 +930,7 @@ const moduleQuestions4 = [
     },
     regra: "CF/88, art. 5º, X: intimidade e vida privada; art. 5º, LXXIX: direito fundamental à proteção de dados pessoais; LGPD: disciplina o tratamento.",
     pegadinha: "Não atribuir a proteção expressa de dados pessoais ao caput do art. 5º; o inciso LXXIX foi incluído pela EC nº 115/2022.",
-    fonte: "Constituição Federal, art. 5º, X e LXXIX; Emenda Constitucional nº 115/2022; Lei nº 13.709/2018, art. 1º."
+    fonte: "Constituição Federal, art. 5º, X e LXXIX, texto oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Emenda Constitucional nº 115/2022: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc115.htm; Lei nº 13.709/2018 (LGPD), texto compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-38", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
