@@ -314,3 +314,8 @@ Os incisos/parágrafos não listados (art. 37: I? já listado; demais não confe
 - Data de verificação: 2026-10-24.
 - Arquivo de referência: `apostila-ia/assets/data/references.js` (20 novas entradas; total 72).
 - Nenhuma URL inventada; nenhuma citação de dispositivo inexistente.
+
+
+## Fonte de acessibilidade verificada em 2026-10-26
+
+- **W3C — Web Content Accessibility Guidelines (WCAG) 2.2:** https://www.w3.org/TR/WCAG22/. Referência primária consultada diretamente para princípios de alternativas textuais, conteúdo audiovisual acessível, estrutura semântica e uso de cor. A inclusão da fonte não equivale a uma auditoria WCAG do site; essa auditoria permanece pendente.
