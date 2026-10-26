@@ -681,27 +681,27 @@ const moduleQuestions6 = [
 
   { id: "q-m6-29", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral",
     nivel: "intermediario", topico: "m6-u3-t3-s1", assunto: "6.3 — Rastreabilidade e trilha de auditoria",
-    contexto: "A responsabilização depende de reconstruir a cadeia de eventos de uma decisão ou de um acesso a dados.",
-    enunciado: "Uma trilha de auditoria é considerada útil para responsabilização quando registra, no mínimo,",
+    contexto: "Um órgão público precisa investigar alterações em registros e acessos a dados pessoais sem coletar informações excessivas nem manter registros indefinidamente.",
+    enunciado: "Ao definir uma trilha de auditoria para esse sistema, qual abordagem é tecnicamente mais adequada e compatível com os princípios de proteção de dados?",
     alternativas: [
-      { letra: "A", texto: "usuário individual, data e hora, ação executada, objeto afetado, resultado e versão da regra aplicada." },
-      { letra: "B", texto: "apenas o endereço IP da estação, que identifica o servidor responsável pelo acesso." },
-      { letra: "C", texto: "apenas data e hora do acesso, preservada a identidade por política de privacidade interna." },
-      { letra: "D", texto: "o total de acessos por setor, sem detalhamento individual." },
-      { letra: "E", texto: "a senha compartilhada do setor e o turno em que ocorreu o acesso." }
+      { letra: "A", texto: "Adotar um conjunto fixo de campos como mínimo legal universal, incluindo sempre a identidade civil completa do usuário e a versão de toda regra existente." },
+      { letra: "B", texto: "Registrar eventos relevantes conforme a finalidade e o risco, com identificação adequada do ator ou serviço, data e hora, ação e recurso afetado; acrescentar contexto necessário, proteger os registros e definir acesso e retenção." },
+      { letra: "C", texto: "Anonimizar irreversivelmente todos os registros no momento da criação, independentemente de a finalidade documentada exigir apuração individual de incidentes." },
+      { letra: "D", texto: "Registrar somente totais agregados por setor, pois dados individualizados nunca podem ser tratados para segurança ou responsabilização." },
+      { letra: "E", texto: "Guardar senhas ou tokens reutilizáveis junto aos eventos para provar qual credencial foi usada, mantendo os registros sem prazo de eliminação." }
     ],
-    gabarito: "A",
-    justificativa: "Rastreabilidade é a capacidade de reconstruir quem fez o quê, quando, em que sistema, com que autorização e sobre qual versão da regra. Os componentes mínimos são identificador do usuário (conta individual), data e hora com fuso, ação, objeto afetado, resultado e versão da regra ou do modelo. A alternativa B confunde estação com pessoa; C suprime a identidade, inviabilizando imputação; D agrega e perde o indivíduo; E registra credencial compartilhada, que por definição não identifica autoria — além de ser prática contrária ao não repúdio.",
+    gabarito: "B",
+    justificativa: "A trilha deve ser projetada para a finalidade concreta, os riscos e as exigências legais ou setoriais aplicáveis. Em geral, registros úteis podem incluir identidade técnica do usuário ou serviço, data e hora confiáveis, ação, recurso afetado, resultado e contexto necessário à investigação; a versão de uma regra ou modelo pode ser relevante quando influenciar a decisão. Isso não constitui uma lista legal universal nem autoriza coletar dados sem necessidade. É preciso controlar acesso, integridade, retenção e eventual dado pessoal registrado. A LGPD prevê registro das operações de tratamento e medidas de segurança, além do princípio da responsabilização e prestação de contas; não fixa nesses dispositivos um único esquema de campos para toda trilha. Anonimização, pseudonimização e identificação devem ser avaliadas conforme a finalidade e os riscos. Senhas e tokens secretos não devem ser registrados em logs.",
     analise: {
-      A: "CORRETA. Reúne os seis componentes que permitem reconstituir o caso concreto.",
-      B: "INCORRETA. Erro conceitual: IP identifica estação/rede, não a pessoa; sem conta individual não há autoria.",
-      C: "INCORRETA. Erro conceitual: anonimizar o log de auditoria elimina a própria finalidade da trilha.",
-      D: "INCORRETA. Erro conceitual de agregação indevida: total por setor não permite apuração individual.",
-      E: "INCORRETA. Erro conceitual: credencial compartilhada impede não repúdio e responsabilização."
+      A: "INCORRETA. Erro de generalização: não há nos dispositivos citados um conjunto fixo de campos imposto como mínimo legal universal; a coleta também deve respeitar finalidade e necessidade.",
+      B: "CORRETA. Ajusta os eventos registrados à finalidade e ao risco e inclui controles de proteção, acesso e retenção, sem transformar boas práticas técnicas em regra legal absoluta.",
+      C: "INCORRETA. Erro de absolutização: anonimização pode ser adequada em alguns usos, mas não é obrigatoriamente aplicável a todo registro no instante da criação; a decisão depende da finalidade, da necessidade e das salvaguardas.",
+      D: "INCORRETA. Erro de generalização: dados agregados podem servir a métricas, mas podem ser insuficientes para investigar eventos individuais quando essa apuração for legítima e necessária.",
+      E: "INCORRETA. Erro de segurança e retenção: segredos de autenticação não devem ser gravados em logs, e o prazo de conservação deve ser definido segundo finalidade, obrigações aplicáveis e necessidade."
     },
-    regra: "Trilha útil = usuário individual + data/hora + ação + objeto + resultado + versão da regra; sem isso, a apuração é narrativa.",
-    pegadinha: "Log sem identidade individual parece 'proteção de dados', mas destrói accountability — proteção de dados não se faz apagando autoria de acesso.",
-    fonte: "Lei nº 12.527/2011, arts. 6º, III, e 34; Lei nº 13.709/2018, arts. 6º, X, 37 e 46 (verificados em fontes oficiais em 2026-10-26)."
+    regra: "Desenhar a trilha conforme finalidade, risco e requisitos aplicáveis; registrar apenas eventos e atributos necessários e proteger acesso, integridade e retenção.",
+    pegadinha: "Não confundir uma prática técnica recomendável com um mínimo legal universal; proteção de dados não significa apagar sempre a autoria nem registrar indiscriminadamente todos os dados.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, III e X, 37 e 46; Lei nº 12.527/2011 (LAI), art. 6º, III; NIST SP 800-92, Guide to Computer Security Log Management (2006)."
   },
 
   { id: "q-m6-30", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
