@@ -91,3 +91,8 @@ A auditoria heurística não avalia se cada artigo citado sustenta a afirmação
 - Contagens confirmadas pelo artefato `curriculum-audit-reports`: 132 tópicos reconhecidos, 460 flashcards e 389 questões. A auditoria heurística identificou 0 IDs duplicados, 0 pares idênticos de contexto/enunciado e 0 alertas; isso não equivale a validação semântica.
 - Distribuição MC atualizada: A=145, B=129, C=27, D=6, E=7; A/B representam 87,3% das 314 questões MC. M7: A=29, B=0, C=1, D=1, E=2 (33 MC). M6 continua A=30/30.
 - Artefato com matrizes CSV e relatórios: `curriculum-audit-reports`, gerado na execução de CI do PR.
+
+
+## Proveniência das questões M8 — 2026-10-26
+
+A auditoria anterior detectou ausência do campo `fonte` em 40/40 questões M8. Foi aplicado um ajuste de proveniência: cada item agora identifica explicitamente o tópico curricular M8 e o assunto que fundamenta a questão, seguindo o padrão já utilizado no M7. Isso torna a origem curricular rastreável; **não representa citação de fonte externa independente** nem valida a correção factual do conteúdo. A auditoria de CI do novo HEAD deve confirmar os campos e a integridade sintática.
