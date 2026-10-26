@@ -187,7 +187,7 @@ const moduleQuestions8 = [
       leituraIncorreta: "Leitura que induz ao erro: considerar que o Power Query é só 'caminho de importação' — na verdade o editor transforma e registra a sequência, e é por isso que o item é certo."
     },
     regra: "Power Query registra passos de preparação que podem ser reexecutados na atualização; a posição da transformação em relação à carga depende do destino e da arquitetura.",
-    pegadinha: "CSNIF: cada um dos itens C/E costuma inverter uma característica — aqui o candente é o 'fica registrado' e 'executado', ambos presentes no currículo.",
+    pegadinha: "O registro das etapas torna a transformação reproduzível, mas não elimina falhas de fonte, credenciais, mudança de esquema ou necessidade de manutenção.",
     fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 Power Query e transformações).",
   },
   { id: "q-m8-08", modulo: 8, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "basico",
