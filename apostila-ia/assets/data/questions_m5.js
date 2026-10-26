@@ -2,8 +2,7 @@
  * 42 questões autorais: 5.1 Fundamentos (10), 5.2 Aprendizado de Máquina (10),
  * 5.3 IA Generativa/LLMs (11), 5.4 Engenharia de Prompts (11).
  * Níveis medidos no banco atual: 12 básicos, 18 intermediários e 12 avançados.
- * Autorais (origem: 'autoral'); formato compatível com quiz-engine.js.
- * Formato compatível com quiz-engine.js. */
+ * Autorais (origem: 'autoral'); formato compatível com quiz-engine.js. */
 const moduleQuestions5 = [
 
   /* ===================== 5.1 Fundamentos de IA (10 questões) ===================== */
@@ -510,7 +509,7 @@ const moduleQuestions5 = [
     fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
   },
 
-  /* ===================== 5.3 IA Generativa/LLMs (10 questões) ===================== */
+  /* ===================== 5.3 IA Generativa/LLMs (11 questões) ===================== */
 
   { id: "q-m5-21", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m5-u3-t1-s1", assunto: "5.3 — O que é IA generativa",
