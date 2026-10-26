@@ -575,6 +575,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - O verificador é uma suíte de regressão com expectativas explícitas de conteúdo; quando uma questão é intencionalmente revisada, suas asserções associadas precisam ser atualizadas para a nova redação, sem remover as verificações substantivas.
 - A execução mais recente precisa ser consultada para confirmar que a correção passou no CI; os runs anteriores no HEAD `af6706d05a02f6942061dc33ffce95d014ff8534` falharam especificamente na asserção de q-m4-44.
 
+## Revisão adicional do M5 — q-m5-06 a q-m5-10 (2026-10-26)
+
+- q-m5-06: viés/variância e padrões de subajuste/sobreajuste tratados como interpretações diagnósticas, não equivalências absolutas.
+- q-m5-07: XAI delimitada a explicações com escopo e limitações; não prova causalidade, justiça ou correção factual.
+- q-m5-08: reescrita com cenário operacional para distinguir inferência da etapa de treinamento e da seleção de hiperparâmetros.
+- q-m5-09 e q-m5-10: mantida avaliação alinhada ao caso de uso, dados não usados no ajuste, análise de erros/subgrupos, limites e monitoramento.
+- Commit de conteúdo: `8388d6cd11e7372ba7d36a8837f8f5e20f34ad0d`. Verificar fonte nova de inferência no validador de links e aguardar CI do HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
