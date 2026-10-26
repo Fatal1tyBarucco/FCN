@@ -148,6 +148,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Validação pendente para o novo HEAD: os resultados de CI do commit anterior não certificam este commit; consultar os workflows associados ao HEAD atual antes de declarar aprovação.
 - Próximo lote proposto: revisão focal de q-m5-06..q-m5-10, verificando precisão conceitual, alternativas, justificativas e fontes.
 
+## Recuperação do catálogo de referências — 2026-10-26
+
+- O workflow `40330161977` identificou erro de sintaxe em `references.js` no commit `2f052f8da637871bf2f0de1ab32f345bb9dffa52`. A causa foi uma atualização via API que enviou apenas o bloco terminal de referências, em vez do arquivo completo.
+- O arquivo foi restaurado a partir da versão íntegra do commit `9be6af8f94e27dbf5d272451ea004ab9a2179d91` e a referência de Saito e Rehmsmeier (2015) foi inserida antes do fechamento do array, preservando o catálogo anterior. Commit de recuperação: `b1dc86e908f0e906cb147b6b8efd5dcdc80ce68f`.
+- Verificação pós-gravação por leitura remota: arquivo inicia com o cabeçalho `references.js`, termina com a exposição `window.references = references`, e contém as entradas WCAG 2.2 e Saito/Rehmsmeier. Isso é uma verificação textual, não substitui `node --check`.
+- A execução que detectou o defeito falhou; os resultados de commits posteriores ainda precisam ser consultados. Não declarar CI verde até o workflow completar no HEAD atual.
+- Ao usar `update_file`, sempre enviar o conteúdo integral do arquivo atualizado; antes de gravar, validar o início, o final e os marcadores esperados para evitar substituição parcial.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
