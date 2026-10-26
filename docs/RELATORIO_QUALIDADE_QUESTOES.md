@@ -129,3 +129,26 @@ Triagem manual do texto, gabarito, justificativa e análises por alternativa:
 
 **Limite da revisão:** não foi identificado erro evidente de gabarito nesta triagem, mas ela não equivale a revisão jurídica independente nem valida todas as fontes externas. As referências dessas sete questões apontam principalmente para os tópicos curriculares internos; quando usadas como questões de prova com pretensão normativa específica, devem ser complementadas por fontes oficiais pertinentes. A distribuição de gabaritos do banco completo continua sendo um problema editorial separado.
 \n\n## Estado de validação após correções de acessibilidade — 2026-10-26\n\nNo HEAD `3ae660db7e23f0594e347e6c59701bd1f61746b2`, a auditoria curricular e o smoke test Chromium/Playwright via `file://` passaram ([execução](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40256956212)). O banco carregou 396 questões; o inventário de controles registrou 465 controles, zero sem nome acessível, zero imagens sem `alt`, link de salto presente, um marco `main` e `pageErrors: []`. O relatório heurístico continua com zero IDs duplicados, zero pares idênticos de contexto/enunciado e zero alertas.\n\nA distribuição de múltipla escolha permanece A=145, B=131, C=29, D=8 e E=8. **Não corrigir essa assimetria com permutações automáticas cegas:** cada candidato exige conferência do texto da alternativa correta, gabarito, justificativa e análise dos distratores. Smoke test e auditoria heurística não são uma validação pedagógica independente.
+
+## Balanceamento editorial M4, M6 e M8 — estado consolidado — 2026-10-26
+
+Foram realizados lotes controlados de reposicionamento das alternativas corretas, preservando o texto da resposta, o gabarito, as análises por alternativa e as referências explícitas às letras:
+
+- **M4:** `q-m4-29`, `q-m4-48`, `q-m4-50`, `q-m4-52`, `q-m4-63`, `q-m4-65`, `q-m4-66`, `q-m4-68`, `q-m4-69`, `q-m4-73` — resposta correta de A para C.
+- **M6:** `q-m6-01`, `q-m6-02`, `q-m6-04`, `q-m6-05`, `q-m6-07`, `q-m6-09`, `q-m6-11`, `q-m6-15` — resposta correta de A para C.
+- **M8:** `q-m8-15`, `q-m8-21`, `q-m8-25`, `q-m8-37`, `q-m8-40` — resposta correta de A para C.
+
+A distribuição consolidada das **321 questões de múltipla escolha** no HEAD `75a42f115be0305d939d487a481645f166423513` é:
+
+| Gabarito | Quantidade |
+|---|---:|
+| A | 110 |
+| B | 131 |
+| C | 64 |
+| D | 8 |
+| E | 8 |
+| **Total** | **321** |
+
+A e B somam 241/321 (75,1%), uma redução em relação aos 86,0% registrados antes dos lotes recentes. A distribuição não é uniforme e ainda exige revisão editorial, especialmente M5 (A=24, B=14) e M8 (B=25). M6 também permanece assimétrico (A=22, C=9). Não se deve perseguir uniformidade artificial se isso exigir distratores ruins ou respostas ambíguas.
+
+**Validação automatizada:** no HEAD `75a42f115be0305d939d487a481645f166423513`, auditoria curricular/smoke test, workflow do PR e Code Quality concluíram com sucesso: [auditoria](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258812457), [PR](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258810281), [Code Quality](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258810062). Esses testes verificam estrutura e execução automatizada; não substituem revisão pedagógica independente nem validação jurídica externa.
