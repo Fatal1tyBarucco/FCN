@@ -438,6 +438,36 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m8-31..q-m8-40: revisados paleta divergente, histogramas de densidade, lacunas temporais, convenções de box plot, média ponderada, outliers, causalidade observacional, contagem distinta, agregação DAX e estudo de caso. Corrigidos q-m8-33 (lacuna temporal), q-m8-35 (justificativa de cálculo), q-m8-37 (causalidade sem afirmações absolutas), q-m8-39 (termo residual) e q-m8-40 (gramática e correspondência das alternativas), commit `a7271180d3ca01b5c27b4a319dc89f142be89222`.
 - Verificação textual residual no arquivo M8 confirmou ausência de marcadores problemáticos encontrados durante a revisão (`CSNIF`, `detona`, `schnitt`, `corção`, `mais bons`, `questionamento é mais fino`, `sinalizar a vigência`, `os critérios são vencedores`, entre outros). A revisão focal das 40 questões M8 está concluída; sintaxe e auditorias precisam ser confirmadas no novo HEAD após este registro.
 
+## Auditoria semântica incremental — bancos M1, M2 e M3 (2026-10-26)
+
+### M1 — Microsoft 365, Word, Excel, PowerPoint e OneDrive (44 questões)
+- Revisadas q-m1-01..q-m1-44.
+- q-m1-01 e q-m1-04: a cota de 5 TB do OneDrive foi condicionada à elegibilidade do plano e à confirmação documental; não se deve generalizar para qualquer assinatura ou plano Enterprise.
+- q-m1-06: corrigida afirmação universal de retenção fixa de 30 dias no histórico de versões; item agora é Errado porque a retenção depende do serviço, conta e políticas aplicáveis. Corrigida vírgula ausente em objeto da análise.
+- q-m1-08: reescrita para não generalizar prazo de lixeira nem disponibilidade de controles de link para todas as contas e locatários.
+- q-m1-24: corrigido erro de digitação em acessibilidade de PDF; q-m1-25: modo de compatibilidade descrito como restrição de alguns recursos incompatíveis, sem afirmar que desabilita indiscriminadamente tudo após 2007.
+- q-m1-39: reescrita para não afirmar limite universal de 500 versões ou prazo fixo de 30 dias; orientação atual é verificar serviço, conta, política e testar restauração.
+- Commits de conteúdo relevantes: `8b0cbe0fc795f238841fbbe78d05afd32299300f`, `4110eda4a3fd52d8c95a10be8899e2a29720a2fa`, `3551b6cc6970c06f6749b8420767c531d6ee47af`, `7389e822826d412774b3efce887fedd65ce2b5c2`, `9ecc2dd3b9026b0c6cfb2271418ffa7758cd3cef`.
+
+### M2 — Redes e protocolos (54 questões)
+- Revisadas q-m2-01..q-m2-54; cálculos CIDR /26, /27 e /28 conferidos.
+- q-m2-04: esclarecido que implementações P2P podem usar serviços auxiliares de coordenação/indexação.
+- q-m2-13 e q-m2-15: corrigida a comparação entre comutação de pacotes IP e caminhos lógicos MPLS/Frame Relay, evitando equiparar MPLS à comutação clássica de circuitos.
+- q-m2-18: IGMP delimitado a multicast IPv4, com MLD como mecanismo correspondente em IPv6.
+- q-m2-17 e q-m2-35: anycast descrito como seleção pela política de roteamento, frequentemente topológica, não necessariamente pela distância geográfica.
+- q-m2-28 e q-m2-34: throughput explicado sem absoluto excessivo; a taxa útil costuma ficar abaixo da capacidade nominal, conforme definições e condições de medição.
+- Commits de conteúdo relevantes: `d39486b793a6f7c73e75b29a8d98485e4d429e64`, `64dd4064d762bbaaed6ab564e6b2a3d09a5ae456`, `5c7b624217d73f4143aa43fe42126c2e01d078b0`.
+
+### M3 — E-mail, calendários e reuniões (47 questões)
+- Revisadas q-m3-01..q-m3-47.
+- q-m3-05: POP3 descrito como comportamento padrão sujeito à configuração de manter cópia.
+- q-m3-14 e q-m3-32: SPF/DKIM/DMARC descritos como controles que ajudam a reduzir spoofing de domínio, não como garantia contra toda falsificação.
+- q-m3-15 e q-m3-31: phishing direcionado tratado como subtipo de phishing, não como escala universal de gravidade.
+- q-m3-19: capacidade de webinar para 500 participantes condicionada à licença e à configuração contratadas.
+- q-m3-21: corrigida a formulação para não tratar consentimento como base universal obrigatória; exige avaliar hipótese legal, transparência, finalidade, retenção, segurança e direitos aplicáveis.
+- Commits de conteúdo relevantes: `be1df77c12875b243887a885161d90a0f320970c` e `22b1ddc73eb32f5134fa300f3380b299f594e00d`.
+- As revisões acima são focais e baseadas nos dados do projeto e conhecimento técnico; requisitos de produto e licenciamento devem ser conferidos na documentação vigente do fornecedor antes de implantação. A validação automatizada precisa ser confirmada no HEAD resultante deste registro.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
