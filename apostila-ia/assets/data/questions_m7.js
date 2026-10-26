@@ -54,18 +54,17 @@ const moduleQuestions7 = [
     contexto: "Quatro analistas descrevem o mesmo registro de atendimento de formas diferentes.",
     enunciado: "A característica que define um DADO, e não uma informação, é:",
     alternativas: [
-      { letra: "A", texto: "Ser registro bruto, sem contexto nem interpretação atribuída." },
-      { letra: "B", texto: "Estar armazenado em tabela com colunas tipadas." },
-      { letra: "C", texto: "Ter sido conferido contra cadastro oficial." },
-      { letra: "D", texto: "Expressar julgamento sobre as consequências da decisão." },
-      { letra: "E", texto: "Descrever a estrutura de outro conjunto de dados." }
+{ letra: "A", texto: "Estar armazenado em tabela com colunas tipadas." },
+{ letra: "B", texto: "Ter sido conferido contra cadastro oficial." },
+{ letra: "C", texto: "Ser registro bruto, sem contexto nem interpretação atribuída." },
+{ letra: "D", texto: "Expressar julgamento sobre as consequências da decisão." },
+{ letra: "E", texto: "Descrever a estrutura de outro conjunto de dados." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O critério do DIKW é o grau de elaboração, não o suporte: dado é registro bruto, sem contexto nem interpretação. Estar em tabela tipada é forma de armazenamento (dado estruturado continua sendo dado); conferir contra cadastro oficial é acurácia (dimensão de qualidade, unidade 7.2); julgar consequências é sabedoria; descrever a estrutura de outro conjunto é metadado.",
-    analise: {
-      A: "CORRETA. Ausência de contexto e de interpretação é o que caracteriza o nível mais baixo da hierarquia.",
-      B: "INCORRETA. A estrutura (tabela, colunas tipadas) descreve a forma do dado, não o eleva a informação.",
-      C: "INCORRETA. Confronto com cadastro oficial mede acurácia; um registro acurado ainda pode ser apenas dado.",
+    analise: {C: "CORRETA. Ausência de contexto e de interpretação é o que caracteriza o nível mais baixo da hierarquia.",
+      A: "INCORRETA. A estrutura (tabela, colunas tipadas) descreve a forma do dado, não o eleva a informação.",
+      B: "INCORRETA. Confronto com cadastro oficial mede acurácia; um registro acurado ainda pode ser apenas dado.",
       D: "INCORRETA. Julgar consequências é sabedoria, o nível mais alto do modelo.",
       E: "INCORRETA. Descrever a estrutura de outro conjunto é a definição de metadado técnico."
     },
@@ -80,18 +79,17 @@ const moduleQuestions7 = [
     contexto: "Uma diretoria anuncia que, ao dobrar o volume de dados coletados, a organização 'alcançará sabedoria'.",
     enunciado: "À luz das limitações do modelo DIKW apontadas no currículo, essa afirmação é:",
     alternativas: [
-      { letra: "A", texto: "Incorreta: a passagem entre níveis exige contextualização, interpretação e julgamento — volume de dados, por si, não produz sabedoria." },
-      { letra: "B", texto: "Correta: a pirâmide DIKW prevê transformação automática e proporcional entre os níveis." },
-      { letra: "C", texto: "Correta, desde que os dados coletados sejam estruturados." },
-      { letra: "D", texto: "Incorreta apenas porque sabedoria não faz parte do modelo DIKW." },
-      { letra: "E", texto: "Correta, desde que exista catálogo de dados atualizado." }
+{ letra: "A", texto: "Correta: a pirâmide DIKW prevê transformação automática e proporcional entre os níveis." },
+{ letra: "B", texto: "Correta, desde que os dados coletados sejam estruturados." },
+{ letra: "C", texto: "Incorreta: a passagem entre níveis exige contextualização, interpretação e julgamento — volume de dados, por si, não produz sabedoria." },
+{ letra: "D", texto: "Incorreta apenas porque sabedoria não faz parte do modelo DIKW." },
+{ letra: "E", texto: "Correta, desde que exista catálogo de dados atualizado." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo lista como limitação do DIKW a linearidade: a pirâmide sugere transformação mecânica e cumulativa, quando cada passagem exige trabalho explícito — contextualizar (dado→informação), interpretar com experiência (informação→conhecimento) e julgar consequências (conhecimento→sabedoria). Acrescenta que acervo sem contexto e sem qualidade amplia ruído, não sabedoria. Catálogo e estruturação são instrumentos úteis, mas não removem essa limitação.",
-    analise: {
-      A: "CORRETA. Reproduz a limitação de linearidade: a passagem de nível é trabalho explícito, não efeito automático do volume.",
-      B: "INCORRETA. O currículo nega expressamente a transformação automática e proporcional entre níveis.",
-      C: "INCORRETA. Estruturação melhora tratamento e consulta, mas não converte dado em sabedoria.",
+    analise: {C: "CORRETA. Reproduz a limitação de linearidade: a passagem de nível é trabalho explícito, não efeito automático do volume.",
+      A: "INCORRETA. O currículo nega expressamente a transformação automática e proporcional entre níveis.",
+      B: "INCORRETA. Estruturação melhora tratamento e consulta, mas não converte dado em sabedoria.",
       D: "INCORRETA. Sabedoria integra o modelo; o erro da afirmação original é outro (a automaticidade).",
       E: "INCORRETA. Catálogo é instrumento de governança e descoberta, não motor de transformação de níveis."
     },
@@ -188,18 +186,17 @@ const moduleQuestions7 = [
     contexto: "Uma equipe calculou a média das matrículas dos servidores admitidos no ano e divulgou o valor 20260431 como 'matrícula média'.",
     enunciado: "O erro dessa divulgação é que:",
     alternativas: [
-      { letra: "A", texto: "Matrícula é código de identificação (qualitativa nominal): média não tem significado para códigos, ainda que sejam formados por dígitos." },
-      { letra: "B", texto: "A média deveria ser substituída pela mediana, pois matrícula é variável ordinal." },
-      { letra: "C", texto: "Matrícula é variável contínua, de modo que a média exigiria também o desvio padrão." },
-      { letra: "D", texto: "O cálculo seria válido se todas as matrículas tivessem o mesmo número de dígitos." },
-      { letra: "E", texto: "O problema é apenas de arredondamento do valor final divulgado." }
+{ letra: "A", texto: "A média deveria ser substituída pela mediana, pois matrícula é variável ordinal." },
+{ letra: "B", texto: "Matrícula é variável contínua, de modo que a média exigiria também o desvio padrão." },
+{ letra: "C", texto: "Matrícula é código de identificação (qualitativa nominal): média não tem significado para códigos, ainda que sejam formados por dígitos." },
+{ letra: "D", texto: "O cálculo seria válido se todas as matrículas tivessem o mesmo número de dígitos." },
+{ letra: "E", texto: "O problema é apenas de arredondamento do valor final divulgado." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O critério do currículo é a validade da operação aritmética, não a presença de dígitos: matrícula, CEP e telefone são códigos qualitativos nominais, e a média de matrículas não significa nada. Mediana também não resolve (não há ordem com significado), o número de dígitos não cria escala e não existe erro de arredondamento a corrigir: o indicador é inválido por construção.",
-    analise: {
-      A: "CORRETA. Aplicação literal da regra 'número escrito não significa dado quantitativo'.",
-      B: "INCORRETA. Mediana exige ordem com significado; matrícula é nominal, não ordinal.",
-      C: "INCORRETA. Não há medição em intervalo: o código não expressa quantidade.",
+    analise: {C: "CORRETA. Aplicação literal da regra 'número escrito não significa dado quantitativo'.",
+      A: "INCORRETA. Mediana exige ordem com significado; matrícula é nominal, não ordinal.",
+      B: "INCORRETA. Não há medição em intervalo: o código não expressa quantidade.",
       D: "INCORRETA. Uniformidade de formato não cria escala numérica com significado.",
       E: "INCORRETA. O problema é conceitual (tipo de variável), não de precisão do cálculo."
     },
@@ -216,18 +213,17 @@ const moduleQuestions7 = [
     contexto: "Pesquisa de satisfação classifica o atendimento em ruim, regular e bom. Para 'facilitar', a equipe converteu as categorias em 1, 2 e 3 e passou a divulgar a 'média de satisfação'.",
     enunciado: "Sobre esse procedimento, é correto afirmar que:",
     alternativas: [
-      { letra: "A", texto: "A escala é ordinal: há ordem, mas as distâncias entre graus não são comparáveis, de modo que a média exige suposição que a escala não garante." },
-      { letra: "B", texto: "A escala é nominal, portanto apenas a moda é legítima." },
-      { letra: "C", texto: "A escala é discreta, logo a média é sempre legítima e o desvio padrão é obrigatório." },
-      { letra: "D", texto: "A escala é contínua de razão, e a média é a única estatística possível." },
-      { letra: "E", texto: "Qualquer escala admite média, desde que os códigos atribuídos sejam números inteiros." }
+{ letra: "A", texto: "A escala é nominal, portanto apenas a moda é legítima." },
+{ letra: "B", texto: "A escala é discreta, logo a média é sempre legítima e o desvio padrão é obrigatório." },
+{ letra: "C", texto: "A escala é ordinal: há ordem, mas as distâncias entre graus não são comparáveis, de modo que a média exige suposição que a escala não garante." },
+{ letra: "D", texto: "A escala é contínua de razão, e a média é a única estatística possível." },
+{ letra: "E", texto: "Qualquer escala admite média, desde que os códigos atribuídos sejam números inteiros." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "No currículo, nível ordinal tem ordem sem distâncias comparáveis (ruim < regular < bom): valem contagem, moda e mediana; a média exige suposição adicional de equidistância que a escala não garante. A escala não é nominal (há ordem explícita), não é discreta de contagem (os códigos 1-2-3 não representam quantidades contadas) e muito menos contínua de razão.",
-    analise: {
-      A: "CORRETA. Ordem sem distância comparável é a definição de ordinal; a média passa a depender de suposição declarada.",
-      B: "INCORRETA. Há ordem entre as categorias, o que exclui o nível nominal.",
-      C: "INCORRETA. Contagem não é o que a variável mede; desvio padrão também depende de distâncias iguais.",
+    analise: {C: "CORRETA. Ordem sem distância comparável é a definição de ordinal; a média passa a depender de suposição declarada.",
+      A: "INCORRETA. Há ordem entre as categorias, o que exclui o nível nominal.",
+      B: "INCORRETA. Contagem não é o que a variável mede; desvio padrão também depende de distâncias iguais.",
       D: "INCORRETA. Não há medição em intervalo nem zero com significado.",
       E: "INCORRETA. Codificar em inteiros não cria escala intervalar — o significado das distâncias continua indefinido."
     },
@@ -242,18 +238,17 @@ const moduleQuestions7 = [
     contexto: "Uma base cadastral traz CEP, telefone e matrícula, todos compostos apenas por dígitos.",
     enunciado: "O nível de mensuração dessas três variáveis é:",
     alternativas: [
-      { letra: "A", texto: "Nominal: são códigos de identificação, e ordenar ou calcular média não produz informação válida." },
-      { letra: "B", texto: "Ordinal, pois os dígitos crescem da esquerda para a direita." },
-      { letra: "C", texto: "Discreto, pois são números inteiros." },
-      { letra: "D", texto: "Contínuo, pois admitem casas decimais quando necessário." },
-      { letra: "E", texto: "Intervalar, pois a diferença entre dois códigos é constante." }
+{ letra: "A", texto: "Ordinal, pois os dígitos crescem da esquerda para a direita." },
+{ letra: "B", texto: "Discreto, pois são números inteiros." },
+{ letra: "C", texto: "Nominal: são códigos de identificação, e ordenar ou calcular média não produz informação válida." },
+{ letra: "D", texto: "Contínuo, pois admitem casas decimais quando necessário." },
+{ letra: "E", texto: "Intervalar, pois a diferença entre dois códigos é constante." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo classifica CEP, telefone e matrícula como códigos qualitativos nominais: a média de matrículas não significa nada, ordenar e subtrair CEP não produz distância geográfica. Ser inteiro não cria escala (discreto exige contagem com distâncias iguais), e não há zero nem intervalo com significado para sustentar nível intervalar ou contínuo.",
-    analise: {
-      A: "CORRETA. Códigos de identificação são nominais: contagem, frequência e moda são as operações válidas.",
-      B: "INCORRETA. A ordem dos dígitos é convenção de escrita, não ordem da variável.",
-      C: "INCORRETA. Discreto pressupõe contagem com distâncias iguais entre valores consecutivos.",
+    analise: {C: "CORRETA. Códigos de identificação são nominais: contagem, frequência e moda são as operações válidas.",
+      A: "INCORRETA. A ordem dos dígitos é convenção de escrita, não ordem da variável.",
+      B: "INCORRETA. Discreto pressupõe contagem com distâncias iguais entre valores consecutivos.",
       D: "INCORRETA. Não há medição em intervalo; casas decimais não teriam significado.",
       E: "INCORRETA. A diferença entre dois CEPs não tem unidade nem significado constante."
     },
@@ -270,18 +265,17 @@ const moduleQuestions7 = [
     contexto: "O dicionário de dados de um sistema registra, para o campo 'prazo': a unidade (dias úteis), a regra de cálculo e o dono responsável pelo domínio.",
     enunciado: "Esses registros são:",
     alternativas: [
-      { letra: "A", texto: "Metadados de negócio, que descrevem significado, unidade de medida, regra e responsável pelo dado." },
-      { letra: "B", texto: "Dados transacionais produzidos pelo processo administrativo." },
-      { letra: "C", texto: "Metadados técnicos, pois tratam do tipo de armazenamento físico." },
-      { letra: "D", texto: "Dados derivados, calculados a partir do prazo original." },
-      { letra: "E", texto: "Quasi-identificadores do titular do dado." }
+{ letra: "A", texto: "Dados transacionais produzidos pelo processo administrativo." },
+{ letra: "B", texto: "Metadados técnicos, pois tratam do tipo de armazenamento físico." },
+{ letra: "C", texto: "Metadados de negócio, que descrevem significado, unidade de medida, regra e responsável pelo dado." },
+{ letra: "D", texto: "Dados derivados, calculados a partir do prazo original." },
+{ letra: "E", texto: "Quasi-identificadores do titular do dado." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo separa três classes: técnicos (nome de tabela/coluna, tipo, tamanho, chave, partição — 'como está armazenado'); de negócio (significado do campo, unidade, regra de cálculo, dono, sensibilidade — 'o que significa e a quem pertence'); e de processo/uso (data da extração, versão do job, quem consultou). Unidade, regra de cálculo e dono são, pela própria definição, metadados de negócio.",
-    analise: {
-      A: "CORRETA. Significado, unidade, regra de cálculo e dono compõem o metadado de negócio.",
-      B: "INCORRETA. Dado transacional é conteúdo do processo, não descrição do campo.",
-      C: "INCORRETA. Metadado técnico descreveria tipo, tamanho e formato de armazenamento — não a unidade de negócio.",
+    analise: {C: "CORRETA. Significado, unidade, regra de cálculo e dono compõem o metadado de negócio.",
+      A: "INCORRETA. Dado transacional é conteúdo do processo, não descrição do campo.",
+      B: "INCORRETA. Metadado técnico descreveria tipo, tamanho e formato de armazenamento — não a unidade de negócio.",
       D: "INCORRETA. Nada foi calculado: descreve-se o campo, não se produz valor derivado.",
       E: "INCORRETA. Quasi-identificador é atributo que ajuda a reidentificar pessoa (idade, CEP, cargo), tema da unidade 7.3."
     },
@@ -298,18 +292,17 @@ const moduleQuestions7 = [
     contexto: "O número de um painel gerencial não bate com a base de origem; a equipe precisa descobrir em qual etapa o valor divergiu.",
     enunciado: "O instrumento adequado para percorrer extração, transformação, carga e agregação até localizar onde o valor mudou é:",
     alternativas: [
-      { letra: "A", texto: "A linhagem (lineage), que registra a trajetória do dado e as transformações sofridas." },
-      { letra: "B", texto: "O catálogo de dados, que inventaria o que existe e o que significa." },
-      { letra: "C", texto: "O dicionário de dados, que descreve tipos e domínios de campos." },
-      { letra: "D", texto: "A política de retenção, que define prazos de guarda e descarte." },
-      { letra: "E", texto: "A matriz de classificação de sensibilidade da informação." }
+{ letra: "A", texto: "O catálogo de dados, que inventaria o que existe e o que significa." },
+{ letra: "B", texto: "O dicionário de dados, que descreve tipos e domínios de campos." },
+{ letra: "C", texto: "A linhagem (lineage), que registra a trajetória do dado e as transformações sofridas." },
+{ letra: "D", texto: "A política de retenção, que define prazos de guarda e descarte." },
+{ letra: "E", texto: "A matriz de classificação de sensibilidade da informação." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo opõe os dois conceitos: linhagem é histórico/fluxo — responde 'de onde veio este número e o que já passou por ele', permitindo rastrear a causa da divergência etapa por etapa; catálogo é índice/estado — responde 'o que existe, o que significa e como achar'. O catálogo é consultado em seguida, para confirmar a definição do indicador e o dono; dicionário, retenção e classificação não registram trajetória.",
-    analise: {
-      A: "CORRETA. Percorrer as etapas e localizar onde o valor divergiu é exatamente a função da linhagem.",
-      B: "INCORRETA. O catálogo descreve o estado dos ativos; sem registro de transformação, não explica como o número foi calculado.",
-      C: "INCORRETA. O dicionário descreve campos e domínios (metadado técnico/negócio), não o fluxo entre sistemas.",
+    analise: {C: "CORRETA. Percorrer as etapas e localizar onde o valor divergiu é exatamente a função da linhagem.",
+      A: "INCORRETA. O catálogo descreve o estado dos ativos; sem registro de transformação, não explica como o número foi calculado.",
+      B: "INCORRETA. O dicionário descreve campos e domínios (metadado técnico/negócio), não o fluxo entre sistemas.",
       D: "INCORRETA. Retenção trata de prazos de guarda e descarte, não de rastreabilidade do valor.",
       E: "INCORRETA. Classificação de sensibilidade orienta acesso, não reconstitui a trajetória do dado."
     },
@@ -326,18 +319,17 @@ const moduleQuestions7 = [
     contexto: "Encerrado o processo seletivo, uma área pede para manter indefinidamente a base de candidatos não aprovados, 'por precaução'.",
     enunciado: "Conforme o ciclo de vida dos dados descrito no currículo, a conduta correta é:",
     alternativas: [
-      { letra: "A", texto: "Definir prazo de retenção justificado (inclusive por eventual contencioso), restringir o acesso nesse período e eliminar ou anonimizar ao término da finalidade." },
-      { letra: "B", texto: "Manter indefinidamente, pois guardar dado nunca gera custo nem risco." },
-      { letra: "C", texto: "Eliminar imediatamente todos os registros, inclusive os necessários a auditoria e responsabilização." },
-      { letra: "D", texto: "Manter a base apenas em planilha local, sem controle de acesso, para reduzir custo." },
-      { letra: "E", texto: "Compartilhar a base com terceiros para reuso em finalidade diversa, evitando retrabalho de coleta." }
+{ letra: "A", texto: "Manter indefinidamente, pois guardar dado nunca gera custo nem risco." },
+{ letra: "B", texto: "Eliminar imediatamente todos os registros, inclusive os necessários a auditoria e responsabilização." },
+{ letra: "C", texto: "Definir prazo de retenção justificado (inclusive por eventual contencioso), restringir o acesso nesse período e eliminar ou anonimizar ao término da finalidade." },
+{ letra: "D", texto: "Manter a base apenas em planilha local, sem controle de acesso, para reduzir custo." },
+{ letra: "E", texto: "Compartilhar a base com terceiros para reuso em finalidade diversa, evitando retrabalho de coleta." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo fixa dois limites para a retenção: mínimo (manter enquanto houver finalidade ou obrigação) e máximo (não manter indefinidamente 'por precaução'); manter além do necessário aumenta custo e exposição sem benefício, e a eliminação de dado que deveria ser arquivado é tão grave quanto o excesso de guarda. No descarte, o alcance inclui cópias, backups, caches e extrações — não apenas o arquivo principal.",
-    analise: {
-      A: "CORRETA. Equilibra os dois limites da retenção e trata o descarte como etapa com prazo e registro.",
-      B: "INCORRETA. O currículo afirma o oposto: guarda indefinida é custo e risco sem finalidade.",
-      C: "INCORRETA. Eliminar o que deve ser arquivado destrói evidência necessária a auditoria e responsabilização.",
+    analise: {C: "CORRETA. Equilibra os dois limites da retenção e trata o descarte como etapa com prazo e registro.",
+      A: "INCORRETA. O currículo afirma o oposto: guarda indefinida é custo e risco sem finalidade.",
+      B: "INCORRETA. Eliminar o que deve ser arquivado destrói evidência necessária a auditoria e responsabilização.",
       D: "INCORRETA. Planilha local sem controle de acesso agrava o risco e contraria a fase de armazenamento.",
       E: "INCORRETA. Reuso em finalidade diversa contraria a restrição à finalidade declarada (fase de uso/compartilhamento)."
     },
@@ -356,18 +348,17 @@ const moduleQuestions7 = [
     contexto: "Uma base de endereços registra a unidade federativa em campo próprio; a conferência encontrou 12 linhas com o valor 'XX'.",
     enunciado: "A dimensão de qualidade violada pelo valor 'XX' é:",
     alternativas: [
-      { letra: "A", texto: "Validade: o valor não pertence ao domínio de unidades federativas existentes, o que se verifica pela regra, sem consulta externa." },
-      { letra: "B", texto: "Acurácia: seria necessário confrontar cada linha com o cadastro oficial do cidadão." },
-      { letra: "C", texto: "Completude: o campo está vazio." },
-      { letra: "D", texto: "Tempestividade: o dado está atrasado em relação ao fato." },
-      { letra: "E", texto: "Unicidade: há registros duplicados na base." }
+{ letra: "A", texto: "Acurácia: seria necessário confrontar cada linha com o cadastro oficial do cidadão." },
+{ letra: "B", texto: "Completude: o campo está vazio." },
+{ letra: "C", texto: "Validade: o valor não pertence ao domínio de unidades federativas existentes, o que se verifica pela regra, sem consulta externa." },
+{ letra: "D", texto: "Tempestividade: o dado está atrasado em relação ao fato." },
+{ letra: "E", texto: "Unicidade: há registros duplicados na base." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo define validade pela aderência ao formato, ao domínio e às regras definidas — 'UF com dois dígitos válidos, valor não negativo, código presente na tabela de referência' — e destaca que validade se confere pela REGRA, internamente, enquanto acurácia se confere pela REALIDADE. 'XX' não é UF existente: viola domínio. O campo está preenchido (não é completude), não há atraso nem duplicidade envolvidos.",
-    analise: {
-      A: "CORRETA. Domínio violado = validade; a verificação é interna, contra a tabela de referência.",
-      B: "INCORRETA. Confronto com cadastro oficial mede acurácia — outro eixo, mais caro e aqui desnecessário.",
-      C: "INCORRETA. O campo contém valor; completude mede presença, não conformidade.",
+    analise: {C: "CORRETA. Domínio violado = validade; a verificação é interna, contra a tabela de referência.",
+      A: "INCORRETA. Confronto com cadastro oficial mede acurácia — outro eixo, mais caro e aqui desnecessário.",
+      B: "INCORRETA. O campo contém valor; completude mede presença, não conformidade.",
       D: "INCORRETA. Tempestividade compara data do fato com data de disponibilidade.",
       E: "INCORRETA. Unicidade mede duplicatas, não valores fora do domínio."
     },
@@ -408,18 +399,17 @@ const moduleQuestions7 = [
     contexto: "Em uma base de 100 registros, 6 estão com o campo 'data de nascimento' vazio; o campo é obrigatório para o uso declarado.",
     enunciado: "A completude desse campo e a leitura correta do resultado são:",
     alternativas: [
-      { letra: "A", texto: "94%, o que não autoriza concluir que o dado é acurado: preenchimento não prova correspondência com a realidade." },
-      { letra: "B", texto: "6%, pois a métrica conta as ausências e não os preenchimentos." },
-      { letra: "C", texto: "100%, pois o campo existe na estrutura da tabela." },
-      { letra: "D", texto: "Indeterminada em qualquer hipótese, pois completude não se calcula." },
-      { letra: "E", texto: "94%, e esse percentual também comprova a validade das datas restantes." }
+{ letra: "A", texto: "6%, pois a métrica conta as ausências e não os preenchimentos." },
+{ letra: "B", texto: "100%, pois o campo existe na estrutura da tabela." },
+{ letra: "C", texto: "94%, o que não autoriza concluir que o dado é acurado: preenchimento não prova correspondência com a realidade." },
+{ letra: "D", texto: "Indeterminada em qualquer hipótese, pois completude não se calcula." },
+{ letra: "E", texto: "94%, e esse percentual também comprova a validade das datas restantes." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Completude mede-se pela fração de registros (ou de campo obrigatório) sem valor ausente: (100 − 6) ÷ 100 = 94%. O currículo alerta que completude é relativa à regra — contar nulos sem saber se o campo é obrigatório não é medir qualidade — e que preenchimento (completude) e formato (validade) não garantem correspondência com a realidade (acurácia); formulários obrigatórios ampliam até o risco de preenchimento inventado.",
-    analise: {
-      A: "CORRETA. 94% de completude, sem qualquer inferência automática sobre acurácia.",
-      B: "INCORRETA. A métrica usual é o percentual de registros conformes (preenchidos), não o de ausentes.",
-      C: "INCORRETA. Existir na estrutura não significa estar preenchido.",
+    analise: {C: "CORRETA. 94% de completude, sem qualquer inferência automática sobre acurácia.",
+      A: "INCORRETA. A métrica usual é o percentual de registros conformes (preenchidos), não o de ausentes.",
+      B: "INCORRETA. Existir na estrutura não significa estar preenchido.",
       D: "INCORRETA. A completude é calculável e o próprio currículo traz o cálculo.",
       E: "INCORRETA. Completude não verifica se a data é plausível ou está no domínio — isso é validade, medida em outro eixo."
     },
@@ -434,18 +424,17 @@ const moduleQuestions7 = [
     contexto: "Um sistema aceitou, no campo de data de nascimento, o valor 31/02/2020.",
     enunciado: "Antes de qualquer confronto com a realidade do titular, esse registro viola a dimensão de:",
     alternativas: [
-      { letra: "A", texto: "Validade, pois a data não existe no calendário e descumpre o domínio permitido." },
-      { letra: "B", texto: "Acurácia, pois só o titular pode dizer se a data é verdadeira." },
-      { letra: "C", texto: "Completude, pois falta o ano do nascimento." },
-      { letra: "D", texto: "Tempestividade, pois a data é antiga." },
-      { letra: "E", texto: "Unicidade, pois outro registro pode ter a mesma data." }
+{ letra: "A", texto: "Acurácia, pois só o titular pode dizer se a data é verdadeira." },
+{ letra: "B", texto: "Completude, pois falta o ano do nascimento." },
+{ letra: "C", texto: "Validade, pois a data não existe no calendário e descumpre o domínio permitido." },
+{ letra: "D", texto: "Tempestividade, pois a data é antiga." },
+{ letra: "E", texto: "Unicidade, pois outro registro pode ter a mesma data." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo define validade como obediência ao formato, ao domínio e às regras definidas — 'data dentro do intervalo permitido' é exemplo expresso. 31/02 não existe: a violação é detectável internamente, pela regra, sem consultar o titular (o que seria necessário para aferir acurácia). O campo está preenchido (não é completude), a data não é 'antiga' em relação a um fato recente (não é tempestividade) e datas iguais entre pessoas diferentes são legítimas (não é unicidade).",
-    analise: {
-      A: "CORRETA. Data inexistente viola domínio/regra: validade, verificável sem referência externa.",
-      B: "INCORRETA. Acurácia responderia 'nasceu nesse dia?'; aqui o dia nem existe.",
-      C: "INCORRETA. O campo está preenchido; o problema é o conteúdo, não a ausência.",
+    analise: {C: "CORRETA. Data inexistente viola domínio/regra: validade, verificável sem referência externa.",
+      A: "INCORRETA. Acurácia responderia 'nasceu nesse dia?'; aqui o dia nem existe.",
+      B: "INCORRETA. O campo está preenchido; o problema é o conteúdo, não a ausência.",
       D: "INCORRETA. Tempestividade compara o fato com o momento da disponibilização.",
       E: "INCORRETA. Unicidade trata de entidades repetidas, não de valores de campo."
     },
@@ -460,18 +449,17 @@ const moduleQuestions7 = [
     contexto: "Em auditoria, um cadastro apresentou CPF com 11 dígitos, dígitos verificadores válidos e campo preenchido. A conferência com o titular revelou que o número pertence a outra pessoa.",
     enunciado: "A conclusão tecnicamente correta é que:",
     alternativas: [
-      { letra: "A", texto: "Completude e validade estão atendidas e a acurácia está violada, pois a correspondência com a realidade só se verifica por referência externa." },
-      { letra: "B", texto: "A validade está violada, pois o CPF pertence a outra pessoa." },
-      { letra: "C", texto: "A completude está violada, pois faltam informações do titular." },
-      { letra: "D", texto: "As três dimensões estão violadas, pois o registro é falso." },
-      { letra: "E", texto: "Nenhuma dimensão está violada, pois formato e preenchimento estão corretos." }
+{ letra: "A", texto: "A validade está violada, pois o CPF pertence a outra pessoa." },
+{ letra: "B", texto: "A completude está violada, pois faltam informações do titular." },
+{ letra: "C", texto: "Completude e validade estão atendidas e a acurácia está violada, pois a correspondência com a realidade só se verifica por referência externa." },
+{ letra: "D", texto: "As três dimensões estão violadas, pois o registro é falso." },
+{ letra: "E", texto: "Nenhuma dimensão está violada, pois formato e preenchimento estão corretos." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo apresenta exatamente esse caso: 'sistema mostra CPF com todos os dígitos preenchidos e formato correto, mas o titular real é outro' — a completude está ok (campo preenchido), a validade também (formato e dígitos verificadores passam), e a violação é de acurácia, que só se detecta confrontando com referência. Dizer que 'validade está violada porque o CPF é de outra pessoa' desloca para a regra um problema de realidade.",
-    analise: {
-      A: "CORRETA. Separa corretamente presença (completude), conformidade (validade) e correspondência (acurácia).",
-      B: "INCORRETA. Validade se verifica pela regra de formato e dígitos verificadores, que passaram.",
-      C: "INCORRETA. Nenhum campo obrigatório está vazio.",
+    analise: {C: "CORRETA. Separa corretamente presença (completude), conformidade (validade) e correspondência (acurácia).",
+      A: "INCORRETA. Validade se verifica pela regra de formato e dígitos verificadores, que passaram.",
+      B: "INCORRETA. Nenhum campo obrigatório está vazio.",
       D: "INCORRETA. Generalização indevida: duas dimensões estão atendidas; só a acurácia falha.",
       E: "INCORRETA. Ignora que o valor registrado não corresponde à pessoa real."
     },
