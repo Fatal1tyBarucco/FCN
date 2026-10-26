@@ -2096,20 +2096,20 @@ id: "q-m1-09",
     contexto: "Secretaria vai gravar reuniões com servidores e precisa instituir política formal, cumprindo as exigências de proteção de dados aplicáveis.",
     enunciado: "Qual conjunto melhor representa os elementos de uma política de gravação descrita no currículo?",
     alternativas: [
-      { letra: "A", texto: "Consentimento informado dos participantes, definição de finalidade, prazo de retenção, armazenamento com criptografia, controle de acesso, regras de compartilhamento e procedimento de exclusão." },
+      { letra: "A", texto: "Informação prévia aos participantes e definição da base legal adequada (consentimento quando aplicável), finalidade, prazo de retenção, armazenamento protegido, controle de acesso, regras de compartilhamento e procedimento de exclusão." },
       { letra: "B", texto: "Apenas o aviso verbal no início da reunião, dispensando qualquer definição adicional." },
       { letra: "C", texto: "Número máximo de participantes, duração máxima da reunião e quantidade de gravações simultâneas permitidas." },
       { letra: "D", texto: "Consentimento único e permanente, válido para qualquer finalidade futura, sem prazo de retenção definido." }
     ],
     gabarito: "A",
-    justificativa: "O currículo lista os elementos: 'definir quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter ... Retenção ... Acesso ... Compartilhamento ... Proteção: criptografar gravações sensíveis', e o exemplo introdutório resume: 'Quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem tem acesso, regras de compartilhamento, proteção (criptografia), e procedimento para exclusão'. A aplicação da LGPD exige identificar a hipótese legal adequada, definir finalidade e retenção, adotar medidas de segurança e atender aos direitos dos titulares; consentimento é necessário quando for a base aplicável, não em todos os tratamentos.",
+    justificativa: "O currículo lista os elementos: definir quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter, regras de acesso/compartilhamento, proteção e exclusão. A aplicação da LGPD exige identificar a hipótese legal adequada, definir finalidade e retenção, adotar medidas de segurança e atender aos direitos dos titulares; consentimento é necessário quando for a base aplicável, não em todos os tratamentos.",
     analise: {
-      A: "CORRETA. Reúne todos os elementos do currículo mais o consentimento exigido no exemplo de aplicação com LGPD.",
+      A: "CORRETA. Reúne os elementos de governança e exige informação prévia e base legal apropriada; o consentimento é incluído quando essa for a hipótese legal aplicável.",
       B: "INCORRETA. Erro conceitual: omissão sistemática — sem finalidade, retenção, acesso e proteção, a política não atende ao descrito (e a LGPD exige mais do que um aviso isolado).",
       C: "INCORRETA. Erro conceitual: critérios operacionais de reunião, não de governança da gravação — nenhum dos itens da lista do currículo aparece.",
-      D: "INCORRETA. Erro conceitual: consentimento genérico e permanente sem finalidade/prazo contraria a lógica descrita (definição de finalidade, prazo de retenção, direito de acesso e exclusão)."
+      D: "INCORRETA. Erro conceitual: consentimento genérico e permanente sem finalidade/prazo não substitui base legal adequada, transparência, finalidade e retenção justificada."
     },
-    regra: "Governança de gravação: finalidade → consentimento → quem/grava/onde/retém → controle de acesso → compartilhamento → proteção → exclusão.",
+    regra: "Governança de gravação: base legal adequada e transparência → finalidade → quem grava/onde/retém → controle de acesso → compartilhamento → proteção → exclusão.",
     pegadinha: "A alternativa D é a 'confortável': consentimento único soa profissional, mas sem finalidade e prazo ela viola o próprio exemplo de aplicação do módulo — a FCC cobra a política completa.",
     fonte: "Currículo M3, unidade 2, tópico 3; Lei nº 13.709/2018 (LGPD), arts. 6º, 9º e 46.",
   },
