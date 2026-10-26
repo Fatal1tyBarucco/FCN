@@ -534,3 +534,12 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - HEAD de código no momento da alteração: `816b771ac7323229801564570670a7702a777ac1`. CI desse HEAD ainda precisa ser confirmado.
 
 - A alternativa C de `q-m3-19` foi encurtada para reduzir pistas involuntárias pelo comprimento da resposta; os nomes das licenças elegíveis permaneceram na justificativa. O SHA do código atualizado é `816b771ac7323229801564570670a7702a777ac1`; aguardar CI no HEAD atualizado.
+
+## Validação do HEAD após reconciliação documental — 2026-10-26
+
+- Run [40420580863](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40420580863), SHA `15533145e506dcec5988f91b73be09a6c4462ad0`: **success**. Sintaxe de 39 arquivos, matriz curricular, rastreabilidade, estrutura, heurísticas de questões, smoke test Chromium em `file://` e regressões interativas passaram.
+- Questões: 399 itens, 0 IDs duplicados, 0 alertas heurísticos; os seis arquivos de questões somam 399 IDs e 399 campos `fonte` não vazios.
+- Referências: 43 entradas no `references.js` (20 vídeos + 23 referências técnicas), 43 `verificado`, 0 `pendente`, 43 URLs preenchidas. Contagens anteriores de 73/79 foram reconciliadas nos documentos de governança.
+- axe-core: 58 passes, 2 incomplete, 0 violações; `pageErrors: []`. As verificações incompletas são `color-contrast` (89 textos SVG) e `frame-tested` (20 iframes externos). A verificação `label-content-name-mismatch` não aparece mais.
+- Revisão matemática das cores SVG sobre `#111318`: título `#e3e9ff` = 15,37:1; texto geral `#c5c9d4` = 11,22:1; rótulos de eixo `#8b94a5` = 6,08:1. Todos excedem 4,5:1. Isso não elimina a necessidade de inspeção visual, testes de teclado/leitor de tela, WCAG manual e compatibilidade física.
+- A revisão semântica independente das 399 questões e a verificação HTTP individual de todas as URLs continuam pendentes.

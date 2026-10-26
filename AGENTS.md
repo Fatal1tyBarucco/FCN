@@ -1322,10 +1322,10 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 
 ## Acessibilidade automatizada — resultado final atual — 2026-10-26
 
-- Run [40413529441](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40413529441), SHA de código `7db9ef553e453ad246913c90fe1a78332beba7fd`: **success**.
-- axe-core: 58 passes, 3 incomplete, **0 violações**; o teste exige agora zero violações, não apenas ausência de impacto crítico/grave.
-- A violação moderada `landmark-unique` foi corrigida ao tornar únicos os nomes acessíveis dos landmarks de navegação dos simuladores de Segurança, Prompts e Dados.
-- Permanecem 3 verificações incompletas (contraste, frames e label-content-name-mismatch) e validação manual de teclado/leitor de tela/WCAG; não declarar a acessibilidade integralmente certificada.
+- Run [40420580863](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40420580863), HEAD `15533145e506dcec5988f91b73be09a6c4462ad0`: **success**. Sintaxe, auditorias estruturais, smoke `file://` e regressões interativas passaram; `pageErrors: []`.
+- axe-core: 58 passes, **2 verificações incompletas e 0 violações**. `label-content-name-mismatch` não aparece mais. Permanecem 89 nós de texto SVG em `color-contrast` e 20 iframes em `frame-tested`; são resultados incompletos, não violações confirmadas.
+- Revisão matemática das cores SVG sobre o fundo explícito `#111318`: título `#e3e9ff` = 15,37:1; texto geral `#c5c9d4` = 11,22:1; rótulos de eixo `#8b94a5` = 6,08:1. Todos excedem 4,5:1; axe-core não consegue concluir automaticamente a avaliação desses textos SVG. A verificação de contraste por fórmula não substitui inspeção visual/manual em escalas e dispositivos reais.
+- Permanecem pendentes teclado/foco manual, leitor de tela, auditoria WCAG manual, revisão visual dos gráficos em dispositivos e avaliação dos frames externos; não declarar acessibilidade integralmente certificada.
 - Revisão das questões: campos de fonte presentes em 399/399 após as quatro adições. Conferir as URLs adicionadas e as afirmações que sustentam; presença do campo não equivale a auditoria semântica completa.
 
 ## Fontes oficiais das quatro questões anteriormente sem referência — 2026-10-26
