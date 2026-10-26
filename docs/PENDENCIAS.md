@@ -493,6 +493,6 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] Revisão semântica focal de `q-m3-19`: enunciado e distratores foram alinhados para testar a distinção entre capacidade licenciada para 500 participantes e licença específica para salas paralelas em webinars Zoom. A alternativa C lista as modalidades elegíveis indicadas pela documentação oficial consultada. Essa revisão focal não substitui a auditoria semântica integral das 399 questões.
 - [ ] Não afirmar validação HTTP automática de todas as URLs. Revisão semântica completa das 399 questões continua pendente.
 
-- [ ] Validar em CI o commit `816b771ac7323229801564570670a7702a777ac1`, que alterou `q-m3-19`; não inferir sucesso a partir do run anterior.
+- [x] Validado em CI o commit `816b771ac7323229801564570670a7702a777ac1`, que alterou `q-m3-19`: o run [40419347175](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40419347175) concluiu com `success`; o código também foi validado em runs posteriores.
 
-- [x] Ajuste editorial final em `q-m3-19`: distratores com extensão mais equilibrada; as licenças elegíveis detalhadas foram mantidas na justificativa. A validação automatizada do SHA atual deve ser confirmada antes de declarar a tarefa concluída.
+- [x] Ajuste editorial final em `q-m3-19`: distratores com extensão mais equilibrada; as licenças elegíveis detalhadas foram mantidas na justificativa. O código passou no run [40419347175](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40419347175), e o HEAD documental `15533145e506dcec5988f91b73be09a6c4462ad0` passou no run [40420580863](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40420580863).
