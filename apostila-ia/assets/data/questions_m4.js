@@ -2028,128 +2028,95 @@ const moduleQuestions4 = [
     fonte: "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
-  { id: "q-m4-81", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Controles Preventivos",
-    contexto: "Os controles preventivos agem antes de um evento ocorrer.",
-    enunciado: "Controles preventivos são:",
+  { id: "q-m4-81", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Seleção de controles preventivos",
+    contexto: "Antes de liberar um serviço para a internet, a equipe identifica uma interface administrativa que não deveria estar acessível externamente.",
+    enunciado: "Qual medida atua principalmente como controle preventivo nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Controles que agem antes de um evento, evitando sua ocorrência." },
-      { letra: "B", texto: "Controles que agem após um evento." },
-      { letra: "C", texto: "Controles que apenas reportam eventos." },
-      { letra: "D", texto: "Controles que aumentam o risco." },
-      { letra: "E", texto: "Controles que ignoram o evento." }
+      { letra: "A", texto: "Restringir a interface à rede administrativa autorizada, exigir autenticação adequada e bloquear o acesso externo desnecessário antes de ocorrer um incidente." },
+      { letra: "B", texto: "Revisar os logs depois de detectar uma tentativa de acesso." },
+      { letra: "C", texto: "Restaurar o serviço a partir de backup após um comprometimento." },
+      { letra: "D", texto: "Documentar as lições aprendidas depois de um incidente." },
+      { letra: "E", texto: "Investigar a origem de uma invasão já confirmada." }
     ],
     gabarito: "A",
-    justificativa: "Controles preventivos agem antes de um evento para evitar sua ocorrência — como firewall, criptografia, política de senha, treinamento. Ação após evento (alternativa B incorreta); relatar eventos (alternativa C incorreta); aumentar risco (alternativa D incorreta); ignorar (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Controles preventivos evitam a ocorrência de eventos.",
-      B: "INCORRETA. Ação após evento é controle corretivo.",
-      C: "INCORRETA. Relatar eventos é controle detectivo.",
-      D: "INCORRETA. Controles preventivos reduzem risco, não aumentam.",
-      E: "INCORRETA. Ignorar eventos é uma falha de gestão."
-    },
-    regra: "Preventivo = 'antes'. Evita a ocorrência de incidentes.",
-    pegadinha: "Preventivo não é 'depois' — é 'antes' do evento.",
-    fonte: "NIST SP 800-53 (Control Categories)."
+    justificativa: "Controles preventivos reduzem a probabilidade de um evento indesejado antes que ocorra, por exemplo, restringindo a exposição e aplicando autenticação e autorização. Revisão de logs e investigação são atividades detectivas ou de resposta; restauração e lições aprendidas ocorrem depois do evento.",
+    analise: { A: "CORRETA. A restrição de exposição e o controle de acesso atuam antes de um incidente.", B: "INCORRETA. Revisar logs para identificar atividade suspeita é principalmente detectivo.", C: "INCORRETA. Restaurar um serviço após comprometimento é uma atividade de recuperação/correção.", D: "INCORRETA. Lições aprendidas são parte da melhoria após um incidente.", E: "INCORRETA. Investigar uma invasão confirmada é resposta a um evento já ocorrido." },
+    regra: "Preventivo reduz a probabilidade de um evento antes que ocorra; detectivo identifica, e corretivo/recuperação trata os efeitos após o evento.",
+    pegadinha: "A classificação depende da função do controle no cenário, não apenas do nome da ferramenta usada.",
+    fonte: "NIST SP 800-53 Rev. 5 — Security and Privacy Controls: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
-  { id: "q-m4-82", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.4 — Controles Detectivos",
-    contexto: "Os controles detectivos identificam a ocorrência de eventos.",
-    enunciado: "Controles detectivos são:",
+  { id: "q-m4-82", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Controles detectivos e qualidade dos alertas",
+    contexto: "A organização coleta eventos de autenticação e rede, mas gera tantos alertas repetidos que a equipe não consegue priorizar os incidentes relevantes.",
+    enunciado: "Qual ação melhora a utilidade dos controles detectivos?",
     alternativas: [
-      { letra: "A", texto: "Controles que identificam a ocorrência de eventos, como logs, IDS e auditoria." },
-      { letra: "B", texto: "Controles que evitam eventos." },
-      { letra: "C", texto: "Controles que corrigem eventos." },
-      { letra: "D", texto: "Controles que ignoram eventos." },
-      { letra: "E", texto: "Controles que aumentam o risco." }
+      { letra: "A", texto: "Desativar todos os alertas para reduzir o volume de trabalho." },
+      { letra: "B", texto: "Correlacionar eventos, ajustar regras com base em evidências, definir severidade e escalonamento e avaliar falsos positivos e falsos negativos." },
+      { letra: "C", texto: "Considerar todo alerta prova conclusiva de ataque confirmado." },
+      { letra: "D", texto: "Registrar apenas eventos bem-sucedidos e descartar falhas de autenticação." },
+      { letra: "E", texto: "Substituir registros por mensagens verbais sem data ou responsável." }
     ],
-    gabarito: "A",
-    justificativa: "Controles detectivos identificam a ocorrência de eventos — log, IDS, IPS, auditoria, monitoramento. Evitar eventos (alternativa B incorreta); corrigir eventos (alternativa C incorreta); ignorar (alternativa D incorreta); aumentar risco (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Controles detectivos identificam a ocorrência de eventos.",
-      B: "INCORRETA. Evitar é controle preventivo.",
-      C: "INCORRETA. Corrigir é controle corretivo.",
-      D: "INCORRETA. Ignorar eventos é uma falha de segurança.",
-      E: "INCORRETA. Controles detectivos reduzem risco, não aumentam."
-    },
-    regra: "Detectivo = 'identificar'. Alertar quando o evento ocorreu.",
-    pegadinha: "Detectivo não é 'adesivo' — é 'detector' de eventos.",
-    fonte: "NIST SP 800-53 (RA-5, AU-2)."
+    gabarito: "B",
+    justificativa: "Controles detectivos são úteis quando os eventos relevantes são registrados e analisados de forma que permita priorizar e investigar. Correlação, ajuste de regras, classificação de severidade e procedimentos de escalonamento ajudam a lidar com o volume de alertas. Alertas são sinais para análise, não prova automática de comprometimento.",
+    analise: { A: "INCORRETA. Desativar alertas elimina a capacidade de detectar eventos relevantes.", B: "CORRETA. A alternativa melhora priorização e investigação sem presumir que todo alerta seja verdadeiro.", C: "INCORRETA. Alertas podem ser falsos positivos e precisam de validação.", D: "INCORRETA. Falhas de autenticação podem ser importantes para detectar ataques.", E: "INCORRETA. Registros estruturados e rastreáveis são necessários para análise e resposta." },
+    regra: "Detecção eficaz combina eventos relevantes, correlação, priorização, investigação e ajuste contínuo das regras.",
+    pegadinha: "Alerta é indício que exige triagem, não prova automática de ataque nem justificativa para desativar a monitoração.",
+    fonte: "NIST SP 800-92 — Guide to Computer Security Log Management: https://csrc.nist.gov/pubs/sp/800/92/final; NIST SP 800-61 Rev. 3: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
-  { id: "q-m4-83", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Controles Corretivos",
-    contexto: "Os controles corretivos agem após um evento.",
-    enunciado: "Controles corretivos são:",
+  { id: "q-m4-83", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controles corretivos e recuperação",
+    contexto: "Após confirmar que uma conta administrativa foi comprometida, a equipe remove o acesso indevido e precisa restaurar a operação com segurança.",
+    enunciado: "Qual conjunto de ações é mais adequado como parte da correção e recuperação?",
     alternativas: [
-      { letra: "A", texto: "Controles que agem após um evento, corrigindo os efeitos e restaurando o estado." },
-      { letra: "B", texto: "Controles que evitam eventos." },
-      { letra: "C", texto: "Controles que identificam eventos." },
-      { letra: "D", texto: "Controles que ignoram eventos." },
-      { letra: "E", texto: "Controles que aumentam o risco." }
+      { letra: "A", texto: "Revogar sessões e credenciais comprometidas, corrigir a causa identificada, restaurar sistemas de fonte confiável e verificar o funcionamento e a segurança antes de retomar o serviço." },
+      { letra: "B", texto: "Reativar a mesma conta sem alterar credenciais ou revisar os registros." },
+      { letra: "C", texto: "Apagar todos os registros para que a conta comprometida não apareça na investigação." },
+      { letra: "D", texto: "Retomar o serviço imediatamente, sem verificar se o vetor de comprometimento permanece." },
+      { letra: "E", texto: "Considerar o incidente encerrado assim que a conta for desativada, sem avaliar o impacto." }
     ],
     gabarito: "A",
-    justificativa: "Controles corretivos atuam após a ocorrência do evento, corrigindo os efeitos e restaurando o estado normal — como backup, EDR, remoção de malware. Evitar eventos (alternativa B incorreta); identificar eventos (alternativa C incorreta); ignorar (alternativa D incorreta); aumentar risco (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Controles corretivos agem após o evento, corrigindo e restaurando o estado.",
-      B: "INCORRETA. Evitar é controle preventivo.",
-      C: "INCORRETA. Identificar é controle detectivo.",
-      D: "INCORRETA. Ignorar eventos é falha de segurança.",
-      E: "INCORRETA. Controles corretivos reduzem o risco, não aumentam."
-    },
-    regra: "Corretivo = 'depois'. Corrige os danos e restaura o estado normal.",
-    pegadinha: "Corretivo não é 'preventivo' — é 'após o fato'.",
-    fonte: "NIST SP 800-53 (CP-2, CP-4)."
+    justificativa: "A correção e recuperação devem remover o acesso comprometido, tratar a causa conhecida, restaurar a partir de fontes confiáveis e verificar se os sistemas estão íntegros antes de retomar a operação. A equipe deve preservar evidências e avaliar o alcance do incidente; uma única ação, como desativar a conta, não comprova que todo o risco foi eliminado.",
+    analise: { A: "CORRETA. A alternativa combina contenção de credenciais, correção da causa, recuperação confiável e validação antes da retomada.", B: "INCORRETA. Reativar credenciais sem correção pode permitir novo comprometimento.", C: "INCORRETA. Apagar registros destrói evidências e compromete a investigação.", D: "INCORRETA. Se o vetor permanecer, a retomada pode resultar em novo incidente.", E: "INCORRETA. O alcance e os efeitos do incidente precisam ser avaliados antes do encerramento." },
+    regra: "Correção/recuperação exige remover o acesso comprometido, tratar a causa, restaurar de fonte confiável, validar e preservar evidências.",
+    pegadinha: "Conter um sintoma não comprova que a causa foi eliminada nem que o serviço pode ser retomado com segurança.",
+    fonte: "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
-  { id: "q-m4-84", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.4 — Controles Compensatórios",
-    contexto: "Controles compensatórios são alternativas quando o controle principal não é aplicável.",
-    enunciado: "Controles compensatórios são:",
+  { id: "q-m4-84", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controle compensatório para sistema legado",
+    contexto: "Um equipamento industrial não pode ser atualizado imediatamente sem interromper uma operação crítica. O fabricante não oferece correção imediata, e o equipamento precisa continuar em serviço por período limitado.",
+    enunciado: "Qual decisão representa melhor um controle compensatório responsável?",
     alternativas: [
-      { letra: "A", texto: "Alternativas que mantêm a segurança quando o controle primário não pode ser implementado." },
-      { letra: "B", texto: "Controles que aumentam o risco." },
-      { letra: "C", texto: "Controles que eliminam a necessidade de segurança." },
-      { letra: "D", texto: "Controles que ignoram a segurança." },
-      { letra: "E", texto: "Controles que são apenas sugestões." }
+      { letra: "A", texto: "Isolar o equipamento em uma zona de rede restrita, permitir apenas comunicações necessárias, monitorar acessos e definir prazo, responsável e revisão para a exceção." },
+      { letra: "B", texto: "Conectar o equipamento diretamente à internet para facilitar a manutenção." },
+      { letra: "C", texto: "Declarar o equipamento seguro apenas porque não há correção disponível." },
+      { letra: "D", texto: "Remover os registros de rede para evitar alertas durante a operação." },
+      { letra: "E", texto: "Manter a exceção indefinidamente sem documentar o risco." }
     ],
     gabarito: "A",
-    justificativa: "Controles compensatórios são alternativas de segurança que mantêm o nível de proteção quando o controle primário não pode ser implementado. Aumentar risco (alternativa B incorreta); eliminar necessidade (alternativa C incorreta); ignorar (alternativa D incorreta); apenas sugestões (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Controles compensatórios são alternativas que mantêm a segurança quando o primário não é viável.",
-      B: "INCORRETA. Controles compensatórios reduzem o risco, não aumentam.",
-      C: "INCORRETA. Controles compensatórios não eliminam a necessidade de segurança.",
-      D: "INCORRETA. Controles compensatórios não ignoram a segurança — são medidas de segurança legítimas.",
-      E: "INCORRETA. Controles compensatórios são obrigatórios quando aplicados."
-    },
-    regra: "Compensatório = 'alívio seguro'. Quando o controle ideal não é possível, usa-se uma alternativa segura.",
-    pegadinha: "Controle compensatório não é 'deixar passar' — é 'controle alternativo seguro'.",
-    fonte: "NIST SP 800-53 (CP-10)."
+    justificativa: "Quando a correção preferencial não está disponível ou não pode ser aplicada imediatamente, controles compensatórios podem reduzir a exposição, como isolamento, restrição de comunicações e monitoramento. Eles não eliminam necessariamente a vulnerabilidade; a exceção deve ter justificativa, responsável, prazo, risco residual e reavaliação.",
+    analise: { A: "CORRETA. A alternativa reduz exposição e inclui governança temporária da exceção.", B: "INCORRETA. Exposição direta amplia a superfície de ataque sem necessidade demonstrada.", C: "INCORRETA. A ausência de correção não significa que o sistema seja seguro.", D: "INCORRETA. Remover registros prejudica detecção e investigação.", E: "INCORRETA. Exceções sem prazo e revisão tornam o risco residual invisível e permanente." },
+    regra: "Controle compensatório reduz exposição quando a correção preferencial não é viável; registre e reavalie a exceção e o risco residual.",
+    pegadinha: "Uma limitação técnica não transforma a vulnerabilidade em risco aceitável automaticamente.",
+    fonte: "NIST SP 800-53 Rev. 5: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final; CISA, Known Exploited Vulnerabilities Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog."
   },
 
-  { id: "q-m4-85", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.4 — Vulnerabilidade",
-    contexto: "Uma vulnerabilidade é uma fraqueza que pode ser explorada por uma ameaça.",
-    enunciado: "Uma vulnerabilidade em segurança da informação é:",
+  { id: "q-m4-85", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Ameaça, vulnerabilidade e risco",
+    contexto: "Um servidor exposto à internet contém uma falha conhecida. Um grupo tenta explorar essa falha para obter acesso; o servidor suporta um serviço público crítico.",
+    enunciado: "Qual alternativa distingue melhor ameaça, vulnerabilidade e risco nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Uma fraqueza que pode ser explorada por uma ameaça para causar dano." },
-      { letra: "B", texto: "Uma característica de segurança." },
-      { letra: "C", texto: "Um tipo de malware." },
-      { letra: "D", texto: "Um padrão de criptografia." },
-      { letra: "E", texto: "Um método de autenticação." }
+      { letra: "A", texto: "A falha é a vulnerabilidade; o grupo ou evento capaz de explorá-la é uma ameaça; o risco considera a possibilidade e o impacto do cenário sobre o serviço." },
+      { letra: "B", texto: "A vulnerabilidade é o grupo atacante, e a ameaça é a correção instalada." },
+      { letra: "C", texto: "Risco é sinônimo de vulnerabilidade e não depende de impacto ou contexto." },
+      { letra: "D", texto: "A existência de uma vulnerabilidade prova que o incidente já ocorreu." },
+      { letra: "E", texto: "Uma ameaça só existe quando o dano já foi confirmado." }
     ],
     gabarito: "A",
-    justificativa: "Uma vulnerabilidade é uma fraqueza (padrão, configuração, bug, design) que pode ser explorada por uma ameaça para causar dano ou acesso não autorizado. Característica de segurança (alternativa B incorreta); tipo de malware (alternativa C incorreta); padrão de criptografia (alternativa D incorreta); método de autenticação (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Vulnerabilidade é uma fraqueza que pode ser explorada por ameaça.",
-      B: "INCORRETA. Vulnerabilidade é uma fraqueza, não uma característica de segurança.",
-      C: "INCORRETA. Vulnerabilidade é um estado de fraqueza, não um tipo de malware.",
-      D: "INCORRETA. Padrão de criptografia não é uma definição de vulnerabilidade.",
-      E: "INCORRETA. Método de autenticação não é uma definição de vulnerabilidade."
-    },
-    regra: "Vulnerabilidade = 'brecha'. Fraqueza que pode ser explorada por uma ameaça.",
-    pegadinha: "Vulnerabilidade não é 'ameaça' — é 'dobra' (fraqueza). Ameaça é quem aplica a dobrada.",
-    fonte: "ISO/IEC 27000:2018."
+    justificativa: "Vulnerabilidade é uma fraqueza que pode ser explorada; ameaça é uma circunstância, evento ou agente com potencial de causar dano; risco expressa a combinação de probabilidade e consequências no contexto considerado, segundo o método de avaliação adotado. A presença de uma vulnerabilidade não prova que houve exploração, mas sua exposição e a existência de atividade ameaçadora podem elevar a prioridade de tratamento.",
+    analise: { A: "CORRETA. A alternativa separa a fraqueza técnica, o agente/evento potencial e o risco contextual.", B: "INCORRETA. O grupo atacante pode ser uma ameaça; a falha é a vulnerabilidade, e uma correção é uma medida de tratamento.", C: "INCORRETA. Risco não é sinônimo de vulnerabilidade e depende do cenário e das consequências.", D: "INCORRETA. Uma vulnerabilidade pode existir sem que tenha sido explorada.", E: "INCORRETA. A ameaça pode existir antes de o dano ocorrer." },
+    regra: "Vulnerabilidade = fraqueza; ameaça = agente/evento potencialmente danoso; risco = avaliação contextual da possibilidade e das consequências.",
+    pegadinha: "Encontrar uma vulnerabilidade não prova exploração; a avaliação de risco considera exposição, ameaça, probabilidade e impacto.",
+    fonte: "NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments: https://csrc.nist.gov/pubs/sp/800/30/r1/final; ISO/IEC 27000:2018."
   },
+
+
 ];
