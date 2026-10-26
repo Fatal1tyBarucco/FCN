@@ -1030,7 +1030,7 @@ const moduleQuestions4 = [
 
   { id: "q-m4-41", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "avancado", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Lei de Acesso à Informação",
-    contexto: "A Lei nº 12.527/2011 (Lei de Acesso à Informação Pública) garante o acesso à informação pública.",
+    contexto: "A Lei nº 12.527/2011 (Lei de Acesso à Informação) garante o acesso à informação pública.",
     enunciado: "A Lei nº 12.527/2011 (Lei de Acesso à Informação Pública) estabelece, entre outros, que:",
     alternativas: [
       { letra: "A", texto: "O acesso à informação pública é negado em todas as hipóteses." },
@@ -1046,7 +1046,7 @@ const moduleQuestions4 = [
       B: "CORRETA. A publicidade é a regra, mas a lei preserva hipóteses legais de sigilo e a proteção de informações pessoais.",
       C: "INCORRETA. A lei é uma das principais garantias de transparência no Brasil.",
       D: "INCORRETA. A lei não é proibitiva — é estimuladora do acesso à informação.",
-      E: "INCORRETA. A lei possuí diversos dispositivos sobre acesso à informação."
+      E: "INCORRETA. A lei possui diversos dispositivos que disciplinam o acesso à informação."
     },
     regra: "LAI (Lei nº 12.527/2011): publicidade como regra e sigilo como exceção, respeitadas as restrições legais.",
     pegadinha: "A LAI garante acesso à informação pública, mas não torna todo dado irrestritamente público.",
@@ -1054,28 +1054,28 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-42", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil e Proteção de Dados",
-    contexto: "O Marco Civil da Internet (Lei 12.965/2014) estabelece que o acesso a dados de usuários exige:",
-    enunciado: "No âmbito do Marco Civil da Internet, a exposição de dados pessoais por provedores exige:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil — registros e acesso a dados",
+    contexto: "Um órgão público pretende obter de um provedor registros de conexão ou de acesso a aplicações de internet para instruir uma investigação.",
+    enunciado: "Como regra, segundo o Marco Civil da Internet, a disponibilização a terceiros de registros de conexão e de acesso a aplicações de internet depende de:",
     alternativas: [
-      { letra: "A", texto: "Ordem judicial ou fundamento legal." },
-      { letra: "B", texto: "Aceitação do usuário." },
-      { letra: "C", texto: "Nenhuma autorização." },
-      { letra: "D", texto: "Prioridade de atendimento." },
-      { letra: "E", texto: "Frequência de uso." }
+      { letra: "A", texto: "Autorização judicial, observadas as hipóteses legais específicas e os limites do pedido." },
+      { letra: "B", texto: "Apenas da frequência com que a pessoa utiliza o serviço." },
+      { letra: "C", texto: "Nenhuma formalidade, pois os registros são sempre públicos." },
+      { letra: "D", texto: "Somente de uma solicitação informal feita por qualquer servidor público." },
+      { letra: "E", texto: "Da publicação prévia dos dados pelo próprio provedor, independentemente de lei." }
     ],
     gabarito: "A",
-    justificativa: "O Marco Civil da Internet exige que o acesso a dados de usuários por provedores seja fundamentado em lei ou ordem judicial. Aceitação do usuário (alternativa B incorreta); nenhuma autorização (alternativa C incorreta); prioridade de atendimento (alternativa D incorreta); frequência de uso (alternativa E incorreta).",
+    justificativa: "O art. 10 do Marco Civil da Internet estabelece salvaguardas para a guarda e disponibilização de registros e dados. O § 1º condiciona, como regra, a disponibilização dos registros de conexão e de acesso a aplicações de internet à ordem judicial, nos termos legais; o § 3º prevê regime específico para acesso a dados cadastrais por autoridades com competência legal. Por isso, a questão trata dos registros e explicita a regra geral, sem confundi-los com dados cadastrais ou sugerir acesso irrestrito.",
     analise: {
-      A: "CORRETA. O acesso a dados de usuários exige fundamento legal ou ordem judicial.",
-      B: "INCORRETA. Usuário pode revogar autorização, mas o acesso à informação deve seguir a lei.",
-      C: "INCORRETA. Nenhuma autorização não é permitida — é necessária uma base legal.",
-      D: "INCORRETA. Prioridade de atendimento não é requisito de permissão de acesso a dados.",
-      E: "INCORRETA. Frequência de uso não é requisito para acesso a dados."
+      A: "CORRETA. A regra para disponibilização de registros é a autorização judicial, respeitadas as hipóteses legais específicas e os limites do pedido.",
+      B: "INCORRETA. A frequência de uso não é fundamento jurídico para disponibilizar registros.",
+      C: "INCORRETA. Registros não são sempre públicos; a lei prevê salvaguardas de privacidade e acesso.",
+      D: "INCORRETA. Uma solicitação informal não substitui a ordem judicial exigida para a disponibilização de registros, ressalvadas as hipóteses legais específicas.",
+      E: "INCORRETA. A publicação pelo provedor não é requisito nem autorização geral para disponibilizar registros."
     },
-    regra: "Marco Civil: 'dados de usuários protegidos'. Acesso por provedores requer base legal ou ordem judicial.",
-    pegadinha: "Marco Civil não é 'aberto a todos' — é 'aberto a quem segue a lei'.",
-    fonte: "Lei nº 12.965/2014, arts. 5º, 7º."
+    regra: "Marco Civil, art. 10: protege a privacidade e estabelece condições legais para a disponibilização de registros; a regra geral para registros é a ordem judicial, com exceções legais específicas.",
+    pegadinha: "Não confundir registros de conexão/acesso com dados cadastrais, que podem estar sujeitos a regime legal específico.",
+    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet), art. 10, §§ 1º e 3º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm."
   },
 
   { id: "q-m4-43", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -1148,7 +1148,7 @@ const moduleQuestions4 = [
       D: "INCORRETA. Abertura de dados é o oposto do princípio de confidencialidade.",
       E: "INCORRETA. A confidencialidade pode ser garantida por criptografia."
     },
-    regra: "Confidencialidade = 'ninguém além de quem têm autorização'.",
+    regra: "Confidencialidade = acesso à informação restrito a quem tem autorização.",
     pegadinha: "Confidencialidade não é 'direito de acesso' — é 'exclusão de acesso' a quem não tem autorização.",
     fonte: "NIST SP 800-53 (SC-5)."
   },
