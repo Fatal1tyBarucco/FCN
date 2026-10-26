@@ -267,3 +267,5 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [ ] Testar teclado/leitor de tela, responsividade física, síntese de voz e embeds em ambiente apropriado.
 
 - [ ] **P1 — integração de persistência:** `storage.js` está carregado, mas seu próprio cabeçalho declara que navegação, flashcards e questões continuam gravando em namespaces separados no `localStorage`. Definir contrato único ou documentar/validar interoperabilidade, migração, backup e recuperação antes de declarar a persistência integrada.
+
+- [ ] **P1 — balanceamento editorial M7/M6:** o piloto `q-m7-01` moveu a resposta correta de A para E, remapeando gabarito e análises sem mudar o conteúdo pedagógico. Aguardando CI no commit `62fe8991bf654613862a63fe77ded2a14b023c11`. Expandir por pequenos lotes, conferindo toda menção a letras em justificativas antes de cada alteração. O banco M7 ainda permanece fortemente concentrado em A.
