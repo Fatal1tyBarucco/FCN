@@ -286,3 +286,10 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Contagens reconciliadas no mesmo SHA: 132 tópicos, 460 flashcards, 389 questões; 0 IDs duplicados, 0 pares idênticos de contexto/enunciado, 0 alertas heurísticos.
 - [x] Distribuição de 314 questões MC atualizada: A=145, B=129, C=27, D=6, E=7. A/B ainda representam 87,3%; revisão editorial permanece bloqueadora.
 - [ ] Fazer revisão semântica individual dos distratores e análises do M7 antes de novos rearranjos; o CI valida estrutura, não correção pedagógica.
+
+
+## Proveniência curricular do M8 — 2026-10-26
+
+- [x] Adicionar campo `fonte` às 40 questões M8 com referência explícita ao identificador do tópico curricular e ao assunto correspondente.
+- [ ] Confirmar via CI no novo HEAD que a sintaxe, rastreabilidade e auditoria de ativos continuam aprovadas.
+- [ ] Revisar separadamente se as questões M8 necessitam de fontes externas normativas/técnicas para afirmações específicas; a referência ao currículo é proveniência interna, não evidência externa independente.
