@@ -998,10 +998,10 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A mediana é insuficiente; a média deve ser relatada isoladamente." }
     ],
     gabarito: "B",
-    justificativa: "A mediana de 12 min indica que a metade dos atendimentos é ágil; a média elevada (30 min) indica cauda longa. A conduta correta é investigar os casos de cauda, e não agir sobre a média isolada. A alternativa B reproduz exatamente isso. A erra: agir sobre a média sem investigar a cauda desperdiça esforço. C erra: diferença média/mediana não comprova erro de digitação. D erra: a média sozinha não é insuficiente.",
+    justificativa: "A mediana de 12 min indica que metade dos tempos de espera está em 12 min ou menos e metade em 12 min ou mais; a média elevada (30 min) sugere que esperas mais longas puxam a média para cima. A conduta correta é investigar a cauda superior, e não agir sobre a média isolada. A alternativa B reproduz exatamente isso. A erra: agir sobre a média sem investigar a cauda desperdiça esforço. C erra: diferença média/mediana não comprova erro de digitação. D erra: a média sozinha não é insuficiente.",
     analise: {
       A: "INCORRETA. Erro conceitual: média é sensível a extremos; agir sobre ela sem investigar a cauda pode desperdiçar esforço.",
-      B: "CORRETA. Reproduz a leitura correta: a mediana descreve o caso típico; a cauda requer investigação.",
+      B: "CORRETA. A mediana indica a posição central; a diferença entre mediana e média sugere esperas longas que merecem investigação.",
       C: "INCORRETA. Erro conceitual: a diferença média/mediana não comprova erro de data; a remoção sem investigação apaga informação.",
       D: "INCORRETA. Erro conceitual: a mediana é robusta e informativa; a média sozinha não é suficiente."
     },
@@ -1076,24 +1076,24 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-4-topico-1",
     assunto: "M8.4.1 DAX: agregar antes de dividir",
-    contexto: "Medida 'média do ticket' aplicada a faturamento e quantidade, com linhas de quantidade diferente.",
-    enunciado: "A afirmação correta sobre a medida 'ticket médio' = Soma(Faturamento) ÷ Soma(Quantidade) é:",
+    contexto: "Medida de preço médio por unidade aplicada a faturamento e quantidade, com linhas de quantidades diferentes.",
+    enunciado: "A afirmação correta sobre a medida 'preço médio por unidade' = Soma(Faturamento) ÷ Soma(Quantidade) é:",
     alternativas: [
-      { letra: "A", texto: "É equivalente à média dos tickets por linha quando cada linha tem quantidade diferente de 1." },
+      { letra: "A", texto: "É equivalente à média simples dos preços unitários calculados linha a linha, mesmo quando as quantidades variam." },
       { letra: "B", texto: "Ocorre o erro de média de médias: somar antes de dividir é correto; dividi-los linha a linha distorce quando a quantidade varia." },
       { letra: "C", texto: "A média de cada linha fica fixa independente do filtro." },
       { letra: "D", texto: "O DAX não agrega; a medida é calculada linha a linha." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que média de linhas (Faturamento ÷ Quantidade em cada linha) e média agregada (Soma(Faturamento) ÷ Soma(Quantidade)) diferem quando as quantidades variam — o erro de 'média de médias'. A alternativa B reproduz isso. A erra: não é equivalente quando as quantidades variam. C erra: a média por filtro varia conforme o contexto de filtro. D erra: o DAX respeita o contexto de filtro e agrega conforme a consulta.",
+    justificativa: "O currículo define que a média simples dos preços unitários calculados por linha e a razão entre faturamento total e quantidade total diferem quando as quantidades variam — a razão entre totais é uma média ponderada pela quantidade, não uma média simples de linhas. A alternativa B reproduz isso. A erra: não é equivalente quando as quantidades variam. C erra: a média por filtro varia conforme o contexto de filtro. D erra: o DAX respeita o contexto de filtro e agrega conforme a consulta.",
     analise: {
-      A: "INCORRETA. Erro conceitual: média de linhas ≠ média agregada quando a quantidade varia; é o erro de média de médias.",
+      A: "INCORRETA. Erro conceitual: média simples dos preços unitários não equivale necessariamente à razão entre faturamento total e quantidade total quando as quantidades variam.",
       B: "CORRETA. Reproduz a regra do currículo: soma antes de dividir; média de médias distorce quando a quantidade varia.",
       C: "INCORRETA. Erro conceitual: a média por linha não é fixa — o filtro de contexto altera o cálculo e a agregação.",
       D: "INCORRETA. Erro conceitual: o DAX agrega conforme a consulta e respeita o contexto de filtro."
     },
-    regra: "DAX média correta = Soma(valor) ÷ Soma(quantidade); média de médias é um vício de agregação quando a quantidade varia.",
-    pegadinha: "A pegadinha é confundir a média dos quocientes por linha com o quociente entre as somas; quando as quantidades variam, as duas medidas podem diferir.",
+    regra: "Preço médio por unidade = Soma(Faturamento) ÷ Soma(Quantidade); média simples dos preços unitários por linha pode distorcer quando as quantidades variam.",
+    pegadinha: "A pegadinha é confundir a média simples dos preços unitários por linha com o quociente entre as somas; quando as quantidades variam, as duas medidas podem diferir.",
     fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 DAX: agregar antes de dividir).",
   },
   {
