@@ -201,7 +201,7 @@
     return last >= maximo(ticks) ? last : maximo(ticks);
   }
   function svgInicio(aria) {
-    return '<svg class="chart-svg" viewBox="0 0 ' + DW + ' ' + DH + '" role="img" aria-label="' + esc(aria) + '" xmlns="http://www.w3.org/2000/svg">';
+    return '<svg class="chart-svg" viewBox="0 0 ' + DW + ' ' + DH + '" role="img" aria-label="' + esc(aria) + '" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#111318" aria-hidden="true" />';
   }
   function svgTitulo(txt) {
     return '<text class="chart-svg-titulo" x="12" y="20">' + esc(txt) + '</text>';
