@@ -17,8 +17,8 @@
  * ----------------------------------------------------------------------------
  * O QUE ESTE SCRIPT VERIFICA
  * ----------------------------------------------------------------------------
- * 1) Fusão questions.js + questions_m4..m8 por id → total === 389; distribuição
- *    por módulo {1:40, 2:40, 3:40, 4:85, 5:40, 6:40, 7:40, 8:40}; 0 ids
+ * 1) Fusão questions.js + questions_m4..m8 por id → total === 396; distribuição
+ *    por módulo {1:44, 2:54, 3:47, 4:85, 5:42, 6:44, 7:40, 8:40}; 0 ids
  *    duplicados.
  * 2) Aplica o validarQuestao REAL do quiz-engine.js (carregado em contexto vm
  *    com stubs mínimos de DOM, listeners de DOMContentLoaded disparados;
@@ -27,7 +27,7 @@
  *    módulo {1:66, 2:56, 3:68, 4:54, 5:66, 6:50, 7:50, 8:50}.
  * 4) Cada tag <script src> do index.html resolve para arquivo existente em
  *    disco, e a contagem total de tags é EXATAMENTE 39 (24 de dados + 15 de JS).
- * 5) manifest.webmanifest é JSON válido e a description menciona "389".
+ * 5) manifest.webmanifest é JSON válido e a description menciona "396".
  * 6) Imprime níveis / formatos / estilos (contagens reais) para conferência.
  * 7) q-m4-32: id/formato/gabarito + CONTEÚDO — alternativa B cita os princípios
  *    reais do art. 3º (neutralidade, privacidade, dados pessoais; sem
@@ -208,9 +208,9 @@ try {
   check('execução da fusão', false, e.message);
 }
 
-const ESPERADO_MODULO = { 1: 43, 2: 54, 3: 47, 4: 85, 5: 40, 6: 40, 7: 40, 8: 40 };
+const ESPERADO_MODULO = { 1: 44, 2: 54, 3: 47, 4: 85, 5: 42, 6: 44, 7: 40, 8: 40 };
 if (r) {
-  check('total de questões fundidas === 389', r.total === 389, 'real=' + r.total + ', esperado=389');
+  check('total de questões fundidas === 396', r.total === 396, 'real=' + r.total + ', esperado=396');
   check('0 ids duplicados', r.duplicados.length === 0,
     r.duplicados.length ? ('duplicados: ' + r.duplicados.join(', ')) : 'ok');
   for (const m of Object.keys(ESPERADO_MODULO)) {
@@ -323,8 +323,8 @@ for (const src of scriptSrcs) {
 check('todas as tags locais resolvem p/ arquivo em disco (' + locais + ' locais, ' + externas + ' externas)',
   ausentes.length === 0, ausentes.length ? ('ausentes: ' + ausentes.join(', ')) : 'nenhum 404');
 
-/* ---------------------------------------------------- manifest: JSON + "389" */
-secao('7. manifest.webmanifest → JSON VÁLIDO + description com "389"');
+/* ---------------------------------------------------- manifest: JSON + "396" */
+secao('7. manifest.webmanifest → JSON VÁLIDO + description com "396"');
 let manifest = null;
 try {
   manifest = JSON.parse(fs.readFileSync(path.join(APP, 'manifest.webmanifest'), 'utf8'));
@@ -334,8 +334,8 @@ try {
 }
 if (manifest) {
   const desc = typeof manifest.description === 'string' ? manifest.description : '';
-  check('description menciona "389"', desc.includes('389'), 'description contém 389=' + desc.includes('389'));
-  check('description contém a contagem de questões 389 e não a contagem antiga 365 questões', desc.includes('389 questões') && !desc.includes('365 questões'), '');
+  check('description menciona "396"', desc.includes('396'), 'description contém 396=' + desc.includes('389'));
+  check('description contém a contagem de questões 396 e não a contagem anterior 389 questões', desc.includes('396 questões') && !desc.includes('389 questões'), '');
 }
 
 /* ------------------------------------------- níveis / formatos / estilos (info) */
