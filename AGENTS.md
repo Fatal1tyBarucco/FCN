@@ -311,6 +311,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m4-09: removido o trecho em inglês “nothing more”.
 - Commit adicional de conteúdo: `9644a6c31d2a7496893d09b4b76a20ddbd76ebd3`.
 
+## Auditoria semântica incremental — lote M4 q-m4-11 a q-m4-15 (2026-10-26)
+
+- q-m4-11: corrigidos erros de digitação/inglês e reformulada a diferença entre vírus e worm sem absolutos sobre interação do usuário.
+- q-m4-12: trojan descrito como malware que induz execução por disfarce; backdoor é possibilidade, não requisito universal. Removidas metáforas imprecisas.
+- q-m4-13: ransomware descrito com bloqueio/criptografia e possíveis formas de extorsão por exfiltração; esclarecido que pagamento não garante recuperação ou sigilo. Ortografia final conferida.
+- q-m4-14: botnet descrita como conjunto de dispositivos comprometidos coordenados remotamente, com finalidades variáveis; removida regra mnemônica sem sentido.
+- q-m4-15: rootkit descrito pelo aspecto de ocultação, sem afirmar que todo caso necessariamente obtém privilégios administrativos; corrigida referência MITRE para T1014 (Rootkit), em vez de T1055.
+- Commit principal do lote: `d283cdbe7f799d10457a18c8a7a0228220971d96`; correção ortográfica adicional q-m4-13: `aca9607b772962133516eff17948d6232172c3ed`.
+- Fontes citadas: NIST SP 800-83 Rev. 1, CISA #StopRansomware, CISA DDoS e MITRE ATT&CK T1014. Revisão focal, sujeita a validação automatizada no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
