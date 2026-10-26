@@ -999,23 +999,28 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-43", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "modulo-6-unidade-5-topico-3", assunto: "Acessibilidade e inclusão digital", contexto: "Formulário de serviço público tem 27 campos, não permite salvar e retomar e exibe erros sem indicar como corrigi-los.", enunciado: "Qual resposta reduz barreiras sem abandonar a digitalização?",
+    topico: "modulo-6-unidade-5-topico-3", assunto: "Acessibilidade e inclusão digital",
+    contexto: "Formulário de serviço público contém 27 campos, não permite salvar e retomar e, quando detecta erros, não identifica claramente o campo nem orienta a correção. A equipe ainda não verificou quais dados são indispensáveis nem testou o fluxo com tecnologias assistivas.",
+    enunciado: "Qual resposta reduz barreiras e permite avaliar se o serviço digital se tornou mais acessível?",
     alternativas: [
-      { letra: "A", texto: "Manter formulário e recomendar outro navegador." },
-      { letra: "B", texto: "Adicionar mais campos obrigatórios." },
-      { letra: "C", texto: "Remover mensagens de erro para simplificar a página." },
-      { letra: "D", texto: "Mapear dados necessários, simplificar etapas, permitir salvar e retomar, corrigir acessibilidade e medir abandono." },
-      { letra: "E", texto: "Tornar canal digital exclusivo e encaminhar dificuldades apenas a um FAQ." }
+      { letra: "A", texto: "Manter o formulário e recomendar outro navegador, sem alterar o processo." },
+      { letra: "B", texto: "Adicionar mais campos obrigatórios para evitar dúvidas posteriores." },
+      { letra: "C", texto: "Remover mensagens de erro e deixar que o usuário descubra o problema." },
+      { letra: "D", texto: "Validar a necessidade de cada dado, simplificar etapas, permitir salvar e retomar, oferecer erros identificáveis e orientações de correção, testar acessibilidade e acompanhar conclusão e abandono." },
+      { letra: "E", texto: "Tornar o canal digital exclusivo e encaminhar dificuldades apenas a uma página de perguntas frequentes." }
     ],
-    gabarito: "D", justificativa: "A solução deve eliminar exigências desnecessárias, tornar erros compreensíveis, apoiar a continuidade e testar acessibilidade; a taxa de abandono permite avaliar o efeito.",
+    gabarito: "D",
+    justificativa: "A equipe deve verificar se cada dado é necessário, reduzir etapas evitáveis e apoiar a recuperação de erros e a continuidade do preenchimento. A Lei Brasileira de Inclusão, art. 63, exige acessibilidade nos sítios governamentais. As WCAG 2.2, critérios 3.3.1 e 3.3.3, tratam da identificação textual dos erros e, quando conhecidas, de sugestões para corrigi-los. Testes com pessoas e tecnologias assistivas, junto de métricas de conclusão e abandono, ajudam a verificar resultados; a quantidade de campos, isoladamente, não prova uma violação.",
     analise: {
       A: "INCORRETA. Recomendar outro navegador transfere o ônus ao cidadão sem investigar as barreiras do serviço.",
-      B: "INCORRETA. Campos obrigatórios adicionais podem aumentar esforço e coleta excessiva, em vez de simplificar.",
-      C: "INCORRETA. Mensagens de erro claras são necessárias para que a pessoa consiga corrigir o formulário.",
-      D: "CORRETA. Simplificação, salvamento e retomada, correção de acessibilidade e medição de abandono permitem reduzir barreiras e avaliar o resultado.",
-      E: "INCORRETA. Um FAQ não corrige a barreira do formulário, e exclusividade digital pode excluir pessoas."
+      B: "INCORRETA. Campos obrigatórios adicionais podem aumentar esforço e coleta excessiva; cada campo deve ser justificado pela finalidade do serviço.",
+      C: "INCORRETA. Erros detectados devem ser identificados em texto, e sugestões de correção devem ser fornecidas quando conhecidas e apropriadas.",
+      D: "CORRETA. A alternativa combina simplificação baseada em necessidade, continuidade, assistência para corrigir erros, testes de acessibilidade e métricas de resultado.",
+      E: "INCORRETA. Um FAQ não corrige por si só as barreiras do formulário, e a exclusividade digital pode excluir pessoas que enfrentam obstáculos de acesso."
     },
-    regra: "Acessibilidade exige remover barreiras, testar e acompanhar conclusão e abandono.", pegadinha: "Digitalizar um processo não o torna automaticamente acessível ou simples.", fonte: "Currículo M6 — modulo-6-unidade-5-topico-3 (acessibilidade e inclusão digital)."
+    regra: "Serviços digitais acessíveis devem remover barreiras verificadas, identificar erros de forma compreensível, orientar correções e ser avaliados com testes e métricas de uso.",
+    pegadinha: "Não concluir que 27 campos, por si só, tornam o formulário inacessível; a avaliação considera necessidade, barreiras reais e conformidade com diretrizes aplicáveis.",
+    fonte: "Lei nº 13.146/2015 (Lei Brasileira de Inclusão), art. 63, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm; W3C, Web Content Accessibility Guidelines (WCAG) 2.2, critérios 3.3.1 — Error Identification e 3.3.3 — Error Suggestion: https://www.w3.org/TR/wcag/; Governo Digital, Modelo de Acessibilidade em Governo Eletrônico (eMAG): https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/modelo-de-acessibilidade."
   },
   {
     id: "q-m6-44", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
