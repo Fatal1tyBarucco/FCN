@@ -351,3 +351,12 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - **Automação observada:** workflows de deploy e validação; auditorias estruturais curriculares, rastreabilidade de ativos e heurísticas de qualidade de questões.
 - **CI do commit consultado:** status observado como `queued`, sem conclusão disponível no momento da consulta. Não marcar como PASS nesta atualização.
 - **Execução local nesta fase:** não realizada. Nenhum novo teste de código ou navegador é declarado nesta inspeção remota.
+
+
+## Resultado confirmado após a última atualização do PR — 2026-10-26
+
+- **PASS — GitHub Actions: validação curricular e ativos de aprendizagem.** Execução [40253838180](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40253838180), commit `ba914e349d9f97809968c986a366702389742e29`, conclusão `success`.
+- **PASS — Code Quality do PR.** Execução [40253837455](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40253837455), mesmo commit, conclusão `success`.
+- **PENDENTE — workflow agregado do PR.** Execução [40253837089](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40253837089) ainda estava `in_progress` na consulta. Não declarar todos os checks do PR concluídos.
+- **Limite de evidência:** o sucesso da validação comprova apenas as etapas executadas pelo workflow (sintaxe JavaScript, auditorias estruturais e verificações configuradas). Não comprova revisão semântica integral, operação em navegador real, leitor de tela ou comportamento em todos os navegadores.
+- **Achado de arquitetura que requer avaliação:** `apostila-ia/assets/js/storage.js` está incluído no HTML, mas seu cabeçalho declara que os módulos existentes de navegação, flashcards e questões continuam gravando diretamente em chaves próprias de `localStorage`. Portanto, a camada unificada não é atualmente a fonte única de persistência; testar recuperação, backup e consistência entre namespaces antes de declarar persistência plenamente integrada.
