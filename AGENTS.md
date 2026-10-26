@@ -806,6 +806,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Fontes referenciadas incluem NIST SP 800-83, SP 800-207, SP 800-53, SP 800-123, SP 800-40, SP 800-94, SP 800-77, SP 800-92, SP 800-52, CISA, CIS Controls e RFC 5905.
 - Revisão focal; validação automatizada e CI devem ser confirmados no HEAD mais recente.
 
+## Revisão focal de q-m4-71..q-m4-80 (2026-10-26)
+
+- q-m4-71..q-m4-75: revisados controles compensatórios/risco residual, escalada vertical e horizontal, mitigação de força bruta, password spraying e credential stuffing. Sem alteração de conteúdo neste lote.
+- q-m4-76..q-m4-80: revisados SSRF, tratamento de risco, preservação de evidências em incidentes, BIA e exercícios do plano de resposta. Sem alteração de conteúdo neste lote.
+- As questões diferenciam autenticação de autorização, password spraying de credential stuffing, controles compensatórios de eliminação de risco e resposta técnica de governança. As medidas são apresentadas como redução de risco, sem garantia de prevenção absoluta.
+- Fontes referenciadas incluem NIST SP 800-53, SP 800-30, SP 800-39, SP 800-61 Rev. 3, SP 800-34, OWASP Cheat Sheets e Microsoft Entra.
+- Revisão focal; validação automatizada deve ser conferida no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
