@@ -689,14 +689,14 @@ id: "q-m1-09",
     enunciado: "O Modo de Compatibilidade, ativado ao abrir arquivos .doc legados no Word moderno, restringe alguns recursos posteriores que não são compatíveis com o formato original para preservar a compatibilidade do conteúdo.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'desabilita funcionalidades introduzidas depois de 2007 para preservar a integridade do conteúdo original' — definição literal do tópico de compatibilidade.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'restringe alguns recursos posteriores que não são compatíveis com o formato original': a limitação depende dos recursos suportados pelo formato legado, não de um corte universal por ano.",
     justificativa: "O currículo descreve o Modo de Compatibilidade como forma de preservar a estrutura de arquivos legados, restringindo recursos que não são compatíveis com o formato original. Converter para .docx pode permitir recursos mais recentes, mas também pode alterar a formatação; por isso, recomenda-se salvar uma cópia antes da conversão.",
     analise: {
-      item: "Item VERDADEIRO. Gatilho (.doc no 365), efeito (desabilitar funções pós-2007) e finalidade (integridade) coincidem com o currículo.",
+      item: "Item VERDADEIRO. O formato legado .doc pode restringir recursos não suportados por esse formato; o modo busca preservar a compatibilidade do conteúdo, sem estabelecer um corte universal para todas as funções por ano.",
       leituraIncorreta: "Leitura que induz ao erro: supor que o modo 'congela tudo' ou que impede salvar. Ele limita funcionalidades novas, não bloqueia o documento — salvar em .docx sai do modo."
     },
     regra: "Compatibilidade de formatos: .doc (binário legado) → modo de compatibilidade e restrições de alguns recursos; .docx (Open XML) → suporte a recursos modernos; .pdf → distribuição.",
-    pegadinha: "O ano (2007) é o marco que separa 'funcionalidades antigas' de 'novas' — itens C/E costumam trocá-lo por 2003 ou 2010; aqui ele está correto, então o item é Certo."
+    pegadinha: "A pegadinha é presumir que o modo de compatibilidade desativa todas as funções de uma data específica em diante; a restrição depende da compatibilidade entre o recurso e o formato legado."
   },
   {
     id: "q-m1-26",
