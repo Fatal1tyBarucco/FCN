@@ -1050,7 +1050,8 @@ const moduleQuestions6 = [
     },
     regra: "Ao conciliar transparência e proteção de dados, identifique a base legal de eventual restrição e viabilize acesso à parte não protegida; a ocultação precisa ser efetiva.",
     pegadinha: "Evite os dois extremos: divulgar indiscriminadamente dados protegidos ou negar todo o documento só porque contém algum dado pessoal.",
-    fonte: "Lei nº 12.527/2011 (LAI), arts. 7º, § 2º, e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Ministério da Gestão e da Inovação em Serviços Públicos, Boas práticas em anonimização de dados, publicado em 19/05/2026: https://www.gov.br/gestao/pt-br/acesso-a-informacao/privacidade-e-protecao-de-dados/lgpd-no-mgi-1/anonimizacao/boas-praticas-em-anonimizacao-de-dados.",
+    fonte: "Lei nº 12.527/2011 (LAI), arts. 7º, § 2º, e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Ministério da Gestão e da Inovação em Serviços Públicos, Boas práticas em anonimização de dados, publicado em 19/05/2026: https://www.gov.br/gestao/pt-br/acesso-a-informacao/privacidade-e-protecao-de-dados/lgpd-no-mgi-1/anonimizacao/boas-praticas-em-anonimizacao-de-dados."
+  },
   {
     id: "q-m6-45", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "intermediario",
     topico: "m6-u1-t3", assunto: "6.1 — Síntese aplicada dos princípios administrativos",
