@@ -828,6 +828,12 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m4-82 usa objeto `analise` em formato compacto; leitura manual confirmou B como correta e A/C/D/E incorretas. A detecção automatizada inicial não reconheceu esse formato, sem indicar erro de gabarito.
 - Commit de conteúdo: `8ece6b830472585ff53a4bfac937a4546962f8c8`. Reexecutar validadores no HEAD atual.
 
+## Resultado da segunda varredura de gabaritos (2026-10-26)
+
+- Reexecutada a verificação cruzada entre `gabarito` e a alternativa marcada `CORRETA` nos bancos M4–M8, incluindo objetos `analise` compactos.
+- Resultado: M4=85, M5=42, M6=47, M7=40, M8=40; zero divergências entre gabarito e análise nas questões de múltipla escolha verificadas. Itens C/E foram excluídos dessa comparação de letras e permanecem sujeitos aos seus próprios validadores.
+- A verificação textual não comprova, isoladamente, correção pedagógica, jurídica ou de fonte; ela complementa a revisão semântica focal e os testes do projeto.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
