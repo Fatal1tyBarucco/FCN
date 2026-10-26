@@ -59,7 +59,7 @@ const moduleQuestions4 = [
     },
     regra: "Tríade CIA: Confidencialidade (acesso restrito), Integridade (dados corretos e não alterados), Disponibilidade (acesso quando necessário).",
     pegadinha: "Não confundir disponibilidade com confidencialidade: disponibilidade é 'quando precisa', confidencialidade é 'quem pode acessar'.",
-    fonte: "NIST SP 800-122 (Guia para a proteção de informações pessoais), 2010."
+    fonte: "NIST SP 800-122 (2010); NIST CSRC Glossary — segurança e confidencialidade: https://csrc.nist.gov/glossary/term/security."
   },
 
   { id: "q-m4-02", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -84,7 +84,7 @@ const moduleQuestions4 = [
     },
     regra: "Integridade: dados precisos, consistentes e não alterados sem autorização.",
     pegadinha: "A integridade não significa 'sem erro algum', mas 'sem alteração não autorizada'.",
-    fonte: "ISO/IEC 27000:2018, Cláusula 3.5.2 (Integridade de informação)."
+    fonte: "NIST CSRC Glossary — integridade e segurança da informação: https://csrc.nist.gov/glossary/term/security."
   },
 
   { id: "q-m4-03", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -109,7 +109,7 @@ const moduleQuestions4 = [
     },
     regra: "Disponibilidade: 'a informação está lá quando você precisa' — uptime, redundância, escalonamento.",
     pegadinha: "Disponibilidade não é 'acessível a todos' — é 'acessível quando necessário'. Confidencialidade é quem pode acessar.",
-    fonte: "ISO/IEC 27000:2018, Cláusula 3.5.3 (Disponibilidade de informação)."
+    fonte: "NIST CSRC Glossary — disponibilidade: https://csrc.nist.gov/glossary/term/availability."
   },
 
   { id: "q-m4-04", modulo: 4, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -150,7 +150,7 @@ const moduleQuestions4 = [
     },
     regra: "Fatores de autenticação: 1) Saber (senha, PIN), 2) Possuir (token, celular), 3) Ser (biometria).",
     pegadinha: "A MFA não elimina a senha — ela a complementa com um segundo fator independente.",
-    fonte: "NIST SP 800-63B (Digital Identity Guidelines), 2017."
+    fonte: "NIST SP 800-63B-4 — Digital Identity Guidelines: Authentication and Authenticator Management (publicado em julho de 2025; substitui SP 800-63B): https://csrc.nist.gov/pubs/sp/800/63/b/4/final."
   },
 
   { id: "q-m4-06", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -175,7 +175,7 @@ const moduleQuestions4 = [
     },
     regra: "Criptografia simétrica usa chave secreta compartilhada; criptografia assimétrica usa um par de chaves relacionadas. Exemplos e operações dependem do algoritmo.",
     pegadinha: "Simétrica e assimétrica diferem pela quantidade de chaves: 1 para simétrica, 2 (par) para assimétrica.",
-    fonte: "NIST FIPS 197 (AES), 2001."
+    fonte: "NIST SP 800-57 Part 1 Rev. 5 — Recommendation for Key Management; tipos de chaves e gestão criptográfica: https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final."
   },
 
   { id: "q-m4-07", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -200,7 +200,7 @@ const moduleQuestions4 = [
     },
     regra: "3-2-1: três cópias, dois tipos de mídia e uma cópia fora do local; offline ou imutável são proteções adicionais.",
     pegadinha: "O 3-2-1 não é 3 três cópias, 2 dois sistemas, 1 um único local — o 1 é a cópia fora do local.",
-    fonte: "Veeam Blog — The 3-2-1 Backup Rule, 2016."
+    fonte: "Veeam — 3-2-1 Backup Rule: https://www.veeam.com/blog/321-backup-rule.html."
   },
 
   { id: "q-m4-08", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -250,7 +250,7 @@ const moduleQuestions4 = [
     },
     regra: "Menor privilégio: conceder somente as permissões necessárias para a função, reduzindo a superfície de ataque.",
     pegadinha: "Menor privilégio não significa 'nenhum acesso', significa 'nenhum além do necessário'.",
-    fonte: "NIST SP 800-53 (AC-2: Account Management; AC-3: Access Enforcement)."
+    fonte: "NIST SP 800-53 Rev. 5, controle AC-6 (Least Privilege); NIST CSRC Glossary: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final ; https://csrc.nist.gov/glossary/term/least_privilege."
   },
 
   { id: "q-m4-10", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -611,7 +611,7 @@ const moduleQuestions4 = [
     },
     regra: "Ataques online exigem controles no serviço; ataques offline exigem armazenamento de senha resistente a tentativas e proteção do material obtido.",
     pegadinha: "Limitar tentativas no login não protege, por si só, hashes de senha já roubados.",
-    fonte: "NIST SP 800-63B — Digital Identity Guidelines: Authentication and Lifecycle Management: https://pages.nist.gov/800-63-4/sp800-63b.html."
+    fonte: "NIST SP 800-63B-4 — Digital Identity Guidelines: Authentication and Authenticator Management: https://csrc.nist.gov/pubs/sp/800/63/b/4/final."
   },
 
 { id: "q-m4-25", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Man-in-the-Middle e validação de identidade",
@@ -707,7 +707,7 @@ const moduleQuestions4 = [
     },
     regra: "Replay é a reutilização de mensagem/transação capturada; use mecanismos de frescor e vinculação ao contexto previstos pelo protocolo.",
     pegadinha: "Uma mensagem autenticada pode ser reproduzida se o protocolo não verificar frescor, sequência ou unicidade.",
-    fonte: "NIST SP 800-63B — Digital Identity Guidelines: https://pages.nist.gov/800-63-4/sp800-63b.html; RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3: https://www.rfc-editor.org/rfc/rfc8446."
+    fonte: "NIST SP 800-63B-4 — Digital Identity Guidelines: Authentication and Authenticator Management: https://csrc.nist.gov/pubs/sp/800/63/b/4/final; RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3: https://www.rfc-editor.org/rfc/rfc8446."
   },
 
   { id: "q-m4-29", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Indicadores de comprometimento (IoCs)",
