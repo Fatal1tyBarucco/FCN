@@ -351,6 +351,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `f12023fdf42705c873c4ad56815f84fe7304bcdc`.
 - Fontes citadas: CISA DDoS, ANPD comunicação de incidente, NIST SP 800-63B, RFC 8446, CISA incident playbooks e orientação CISA sobre cadeia de suprimentos. Revisão focal, sujeita a CI no HEAD atual.
 
+## Verificação de fontes oficiais — questões legais M4 (2026-10-26)
+
+- Conferência dos textos oficiais no Portal Planalto confirmou que a Lei nº 15.352/2026 transformou a ANPD em Agência Nacional de Proteção de Dados, autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública. As questões q-m4-34 e q-m4-36 agora incluem ligação para a lei e para a LGPD compilada.
+- q-m4-37 passou a apontar a Constituição Federal, a EC nº 115/2022 e a LGPD compilada; q-m4-40 passou a apontar os textos oficiais do Marco Civil da Internet e da LGPD.
+- Referências oficiais consultadas: Lei nº 15.352/2026, Lei nº 12.965/2014 e Lei nº 13.709/2018 compilada.
+- Commits de atualização das fontes: `53ed872c400e42f67c52e1819b69e91ddaf78214` e `95b1844e58bb58c9aba432d6f6219e31cf24ff6c`.
+- A conferência confirma os dispositivos citados nos limites desta revisão; não equivale a parecer jurídico nem valida todo o conteúdo legislativo do módulo.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
