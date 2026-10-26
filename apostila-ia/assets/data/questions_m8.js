@@ -592,10 +592,10 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A mediana é sensível à distância entre os extremos e, por isso, não é 8." }
     ],
     gabarito: "A",
-    justificativa: "A cauda à direita puxa a média acima da mediana: 13,14 > 8. A alternativa A reproduz exatamente esse princípio. B erra (não há cauda à esquerda; o 2 é um dos centrais). C erra (não é simétrica). D erra: a mediana é robusta e não é alterada por extrema distância — ela permanece 8.",
+    justificativa: "A cauda à direita puxa a média acima da mediana: 13,14 > 8. A alternativa A reproduz exatamente esse princípio. B erra: o valor 2, isoladamente, não caracteriza assimetria à esquerda; o 50 alonga a cauda à direita e eleva a média. C erra (não é simétrica). D erra: a mediana é robusta e não é alterada por extrema distância — ela permanece 8.",
     analise: {
       A: "CORRETA. Em uma distribuição com cauda à direita, o valor extremo pode elevar a média acima da mediana; neste conjunto, 13,14 > 8.",
-      B: "INCORRETA. Erro conceitual: não há cauda à esquerda; o 2 está no centro dos centrais e não puxa para a esquerda.",
+      B: "INCORRETA. Erro conceitual: o valor mínimo 2, isoladamente, não torna a distribuição assimétrica à esquerda; o valor 50 alonga a cauda à direita e eleva a média.",
       C: "INCORRETA. Erro conceitual: a presença do 50 isolado na cauda quebra a simetria.",
       D: "INCORRETA. Erro conceitual: a mediana é robusta; o valor de 50 não altera — a mediana é 8."
     },
