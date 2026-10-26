@@ -87,7 +87,7 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: invenção de produto. O currículo não descreve 'LTSC com pacote de nuvem'; LTSC e M365 são modelos distintos (perpétuo × assinatura), não versões empilháveis."
     },
     regra: "Modelo de licenciamento: assinatura (recorrente, serviços na nuvem + atualizações de funcionalidades) × perpétuo (compra única, apenas atualizações de segurança, sem serviços em nuvem).",
-    pegadinha: "A palavra 'atualizações' aparece nas duas alternativas — a pegadinha é não distinguir tipo de atualização (segurança × funcionalidade) e esquecer que Teams/OneDrive em nuvem só aparecem na assinatura."
+    pegadinha: "A palavra 'atualizações' aparece nas duas alternativas — a pegadinha é não distinguir tipo de atualização (segurança × funcionalidade) e esquecer que Teams/OneDrive em nuvem só aparecem na assinatura.",
     fonte: "Microsoft — comparação de planos com e sem Teams: https://www.microsoft.com/pt-BR/microsoft-365/business/microsoft-365-plans-and-pricing; descrição do serviço OneDrive e limites de armazenamento: https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description.",
   },
   {
