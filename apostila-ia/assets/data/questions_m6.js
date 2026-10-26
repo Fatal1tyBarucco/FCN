@@ -886,31 +886,31 @@ const moduleQuestions6 = [
     fonte: "Lei nº 14.129/2021, art. 48, II; Currículo do Módulo 6, unidade 6.6 (desenho da supervisão humana)."
   },
 
-  { id: "q-m6-38", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
+  {
+    id: "q-m6-38", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
     nivel: "avancado", topico: "m6-u6-t2-s1", assunto: "6.6 — Estudo de caso: vazamento com credencial legítima",
-    contexto: "Auditoria aponta que o perfil de consulta permitia exportar a base inteira de beneficiários sem registro de download, e três fornecedores usavam esse perfil. Após a denúncia, a equipe rotacionou todas as credenciais antes de copiar os logs.",
+    contexto: "Auditoria aponta que o perfil de consulta permitia exportar a base inteira de beneficiários sem registro de download, e três fornecedores usavam esse perfil. Após a denúncia, a equipe revogou as credenciais compartilhadas. A investigação posterior constatou que os registros de sessão eram voláteis, foram sobrescritos durante a revogação e não havia cópia centralizada; não foi possível reconstruir todas as ações realizadas.",
     enunciado: "Sobre a condução do caso, a análise correta é:",
     alternativas: [
-      { letra: "A", texto: "houve falha de desenho — exportação massiva sem registro e sem menor privilégio — e falha na preservação da evidência, pois a rotação de credenciais antes da cópia dos logs compromete a apuração." },
-      { letra: "B", texto: "a rotação imediata de credenciais é suficiente e dispensa a preservação de logs, pois o risco foi eliminado." },
+      { letra: "A", texto: "houve falha de desenho — exportação massiva sem registro e sem menor privilégio — e falha de resposta por não preservar os registros voláteis antes de uma ação que comprovadamente os sobrescreveu; a contenção das credenciais, por si só, não é o erro." },
+      { letra: "B", texto: "a revogação imediata de credenciais é suficiente e dispensa a preservação de logs, pois o risco foi eliminado." },
       { letra: "C", texto: "não há falha de desenho, pois o acesso era legítimo e autorizado." },
       { letra: "D", texto: "a responsabilidade é exclusivamente dos fornecedores, por serem os usuários do perfil." },
       { letra: "E", texto: "o caso se resolve com a comunicação ao titular, sem necessidade de apuração interna." }
     ],
     gabarito: "A",
-    justificativa: "O caso tem duas falhas autônomas. A primeira é de desenho: perfil de consulta que permite exportação massiva, sem registro de download e compartilhado por três fornecedores, contraria o menor privilégio e o dever de segurança (art. 46 da LGPD) e a exigência de controles proporcionais ao risco (art. 48 da Lei nº 14.129/2021). A segunda é de resposta ao incidente: a evidência deve ser preservada antes de qualquer rotação de credencial. A responsabilidade do órgão é direta (art. 34 da LAI), o que afasta a alternativa D; comunicar o titular não substitui apuração nem correção de desenho.",
+    justificativa: "O caso apresenta uma falha de desenho: um perfil compartilhado permite exportação massiva sem registro de download, contrariando a necessidade de medidas de segurança proporcionais ao risco (LGPD, arts. 46 e 49). Também houve falha de resposta porque os registros de sessão, que eram voláteis e foram sobrescritos durante a revogação, não foram preservados nem copiados centralmente. A contenção de credenciais pode ser necessária e não deve ser atrasada automaticamente; a equipe deve coordenar a contenção com a coleta e preservação das evidências, documentando as ações. A alternativa D atribui responsabilidade exclusiva aos fornecedores sem investigação; a aplicação do art. 34 da LAI depende de divulgação não autorizada ou uso indevido de informação sigilosa ou pessoal, fatos que precisam ser apurados. Comunicação de incidente, quando cabível, não substitui investigação nem correção dos controles.",
     analise: {
-      A: "CORRETA. Separa falha de desenho e falha de preservação de evidência, na ordem correta de tratamento.",
-      B: "INCORRETA. Erro de método: conter não é apagar rastro; a rotação antes da cópia destrói a trilha.",
-      C: "INCORRETA. Erro conceitual: acesso autorizado não equivale a controle adequado — exportação massiva sem registro é falha de desenho.",
-      D: "INCORRETA. Erro conceitual: a responsabilidade do órgão é direta, sem prejuízo da apuração do terceiro.",
-      E: "INCORRETA. Erro conceitual: comunicação ao titular é uma providência entre outras; não dispensa apuração e correção."
+      A: "CORRETA. Identifica a falha de desenho e a perda comprovada de evidência, sem tratar a revogação de credenciais como erro por definição.",
+      B: "INCORRETA. Erro de método: conter o acesso não dispensa preservar evidências relevantes nem documentar as providências.",
+      C: "INCORRETA. Erro conceitual: autorização de acesso não justifica privilégio excessivo, compartilhamento de perfil ou ausência de registro de exportações.",
+      D: "INCORRETA. Erro de atribuição prematura: o uso por fornecedores não exclui a necessidade de apurar controles do órgão, condutas individuais e responsabilidades aplicáveis.",
+      E: "INCORRETA. Erro de procedimento: comunicar o incidente quando exigido não substitui apuração, preservação de evidências e correção das falhas."
     },
-    regra: "Incidente: conter, preservar evidência, avaliar extensão, comunicar, analisar o controle que falhou, corrigir e registrar.",
-    pegadinha: "A ordem das providências é objeto de prova: preservar a prova vem antes de mexer no ambiente.",
-    fonte: "Lei nº 12.527/2011, arts. 6º, III, 32, IV, e 34; Lei nº 13.709/2018, arts. 37, 46, 48 e 49 (verificados em fontes oficiais em 2026-10-26)."
+    regra: "Resposta a incidente: coordenar contenção e preservação de evidências; coletar registros voláteis antes de ações que possam sobrescrevê-los, quando isso puder ser feito sem atrasar uma contenção urgente; documentar as ações e corrigir os controles.",
+    pegadinha: "Não confunda a revogação de credenciais — medida potencialmente necessária de contenção — com a perda de evidência causada por uma ação que sobrescreve registros sem preservação prévia.",
+    fonte: "Lei nº 13.709/2018, arts. 46, 48 e 49 (texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm); Lei nº 12.527/2011, art. 34 (aplicabilidade condicionada à divulgação não autorizada ou uso indevido de informação sigilosa ou pessoal: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm); NIST SP 800-61 Rev. 2, Computer Security Incident Handling Guide, seções sobre contenção e coleta/preservação de evidências (https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf; consultado em 2026-10-26)."
   },
-
   { id: "q-m6-39", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
     nivel: "avancado", topico: "m6-u6-t2-s2", assunto: "6.6 — Estudo de caso: uso de IA sem revisão",
     contexto: "Servidor usa ferramenta de IA generativa para redigir resposta a reclamação, insere o texto integral da reclamação (com nome e CPF), não revisa o resultado e publica no canal oficial. A resposta informa prazo que não consta do sistema.",
