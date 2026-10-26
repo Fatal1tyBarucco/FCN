@@ -182,8 +182,9 @@
   var securityCss = '<style>'
     + '.sim-seguranca{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-seguranca h3{margin:8px 0 2px}.sim-seguranca h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-seguranca-sub{color:#cbd5e1;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-seguranca-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
+    + '.sim-seguranca-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-seguranca-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0} +
+    '.sim-seguranca-bloco .sim-seguranca-sub{color:#cbd5e1}''
     + '.sim-sgmt-msg{border:1px solid #3a4252;border-radius:6px;padding:10px;margin:8px 0;background:#161a21}'
     + '.sim-sgmt-msg-header{display:flex;justify-content:space-between;align-items:center}'
     + '.sim-sgmt-emit{font-size:.78rem;color:#8b94a5}'
