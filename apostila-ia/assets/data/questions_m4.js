@@ -845,7 +845,7 @@ const moduleQuestions4 = [
       { letra: "E", texto: "A ANPD não exerce fiscalização de dados pessoais." }
     ],
     gabarito: "B",
-    justificativa: "A Lei nº 15.352/2026 alterou a denominação e a natureza institucional da ANPD: atualmente, a Agência Nacional de Proteção de Dados é uma autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública. Suas competências incluem zelar pela proteção de dados e fiscalizar o cumprimento da LGPD. Entidade privada (alternativa A incorreta); ausência de competência fiscalizatória (alternativas C e E incorretas); ausência de competências legais (alternativa D incorreta).",
+    justificativa: "A Lei nº 15.352/2026 atualizou a denominação institucional para Agência Nacional de Proteção de Dados e a redação do art. 55-A da LGPD, que atualmente a define como autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública. A natureza de autarquia especial já havia sido estabelecida pela Lei nº 14.460/2022; portanto, não se deve afirmar que a transformação em autarquia ocorreu pela primeira vez em 2026. As competências incluem zelar pela proteção de dados e fiscalizar o cumprimento da LGPD. Entidade privada (alternativa A incorreta); ausência de competência fiscalizatória (alternativas C e E incorretas); ausência de competências legais (alternativa D incorreta).",
     analise: {
       A: "INCORRETA. A ANPD é uma autarquia federal de natureza especial, não uma entidade privada.",
       B: "CORRETA. A ANPD possui competências legais para zelar pela proteção de dados e fiscalizar o cumprimento da LGPD.",
@@ -855,7 +855,7 @@ const moduleQuestions4 = [
     },
     regra: "ANPD = Agência Nacional de Proteção de Dados; autarquia de natureza especial com competências de regulação e fiscalização.",
     pegadinha: "Não usar a denominação histórica Autoridade Nacional como nome institucional atual após a Lei nº 15.352/2026.",
-    fonte: "Lei nº 13.709/2018, arts. 55-A e 55-J, com redação dada pela Lei nº 15.352/2026, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm; LGPD compilada: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
+    fonte: "Lei nº 13.709/2018, arts. 55-A e 55-J, com redação dada pela Lei nº 15.352/2026: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm; Lei nº 14.460/2022, que transformou a ANPD em autarquia de natureza especial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14460.htm; LGPD compilada: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-35", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
