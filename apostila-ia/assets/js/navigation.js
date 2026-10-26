@@ -192,16 +192,18 @@ document.addEventListener('DOMContentLoaded', () => {
    * descritivo; roving tabindex + navegação por teclado tratados abaixo. */
   function renderModulo(chave, mod, moduloIndex, totalModulos) {
     let html = '';
-    html += '<li class="tree-node tree-modulo" role="treeitem" aria-level="1" ';
+    html += '<li class="tree-node tree-modulo has-children" role="treeitem" aria-level="1" ';
     html += 'aria-setsize="' + totalModulos + '" aria-posinset="' + (moduloIndex + 1) + '" ';
-    html += 'aria-expanded="true" data-node-type="modulo">';
+    html += 'aria-expanded="true" data-node-type="modulo" data-node-label="' + esc(chave + ' — ' + mod.titulo) + '">';
+    html += '<button type="button" class="tree-toggle" aria-label="Recolher unidades de ' + esc(chave + ' — ' + mod.titulo) + '" aria-expanded="true" tabindex="-1">▾</button>';
     html += '<span class="tree-label tree-modulo-label">' + esc(chave) + ' — ' + esc(mod.titulo) + '</span>';
     html += '<ul class="tree-group" role="group">';
     const unidades = mod.unidades || [];
     unidades.forEach((unidade, ui) => {
-      html += '<li class="tree-node tree-unidade" role="treeitem" aria-level="2" ';
+      html += '<li class="tree-node tree-unidade has-children" role="treeitem" aria-level="2" ';
       html += 'aria-setsize="' + unidades.length + '" aria-posinset="' + (ui + 1) + '" ';
-      html += 'aria-expanded="true" data-node-type="unidade">';
+      html += 'aria-expanded="true" data-node-type="unidade" data-node-label="' + esc(unidade.titulo) + '">';
+      html += '<button type="button" class="tree-toggle" aria-label="Recolher tópicos de ' + esc(unidade.titulo) + '" aria-expanded="true" tabindex="-1">▾</button>';
       html += '<span class="tree-label tree-unidade-label">' + esc(unidade.titulo) + '</span>';
       html += '<ul class="tree-group" role="group">';
       const topicos = unidade.topicos || [];
@@ -341,10 +343,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (toggle) {
       toggle.setAttribute('aria-expanded', String(novo));
       toggle.textContent = novo ? '▾' : '▸';
-      const titulo = (no.getAttribute('data-topic-id') && indice[no.getAttribute('data-topic-id')]) ? indice[no.getAttribute('data-topic-id')].titulo : '';
-      if (titulo) toggle.setAttribute('aria-label', (novo ? 'Recolher' : 'Expandir') + ' subtópicos de ' + titulo);
+      const tipo = no.getAttribute('data-node-type') || 'topico';
+      const titulo = no.getAttribute('data-node-label') || ((no.getAttribute('data-topic-id') && indice[no.getAttribute('data-topic-id')]) ? indice[no.getAttribute('data-topic-id')].titulo : '');
+      const objeto = tipo === 'modulo' ? 'unidades de ' : (tipo === 'unidade' ? 'tópicos de ' : 'subtópicos de ');
+      if (titulo) toggle.setAttribute('aria-label', (novo ? 'Recolher ' : 'Expandir ') + objeto + titulo);
     }
-    const grupo = no.querySelector(':scope > .tree-subtopicos');
+    const grupo = no.querySelector(':scope > .tree-subtopicos, :scope > .tree-group');
     if (grupo) {
       if (novo) grupo.removeAttribute('hidden'); else grupo.setAttribute('hidden', '');
     }
@@ -426,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (ativo.classList.contains('has-children')) {
             if (ativo.getAttribute('aria-expanded') !== 'true') {
               alternarNo(ativo);
-              const primeiroFilho = ativo.querySelector(':scope > .tree-subtopicos > .tree-node');
+              const primeiroFilho = ativo.querySelector(':scope > .tree-group > .tree-node, :scope > .tree-subtopicos > .tree-node');
               if (primeiroFilho) focar(primeiroFilho);
             } else {
               const primeiroFilho = ativo.querySelector(':scope > .tree-subtopicos > .tree-node');
