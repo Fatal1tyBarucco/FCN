@@ -257,3 +257,7 @@ Foi executada uma verificação textual independente sobre os seis arquivos de q
 
 **Limitação:** a verificação apenas compara campos e marcadores textuais. Não confirma que a alternativa marcada está factualmente correta, que as demais alternativas são falsas, que a justificativa é válida ou que a fonte sustenta o item. A revisão semântica humana continua obrigatória.
 
+## Estado de acessibilidade após revalidação — 2026-10-26
+
+O workflow [40413529441](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40413529441), SHA `7db9ef553e453ad246913c90fe1a78332beba7fd`, concluiu com sucesso e reportou **58 passes, 3 verificações incompletas e 0 violações axe-core**. A violação moderada `landmark-unique` detectada na execução anterior foi corrigida com nomes acessíveis distintos para os landmarks dos simuladores de Segurança, Prompts e Dados. As verificações incompletas não equivalem a violações confirmadas e continuam sujeitas a revisão complementar/manual.
+
