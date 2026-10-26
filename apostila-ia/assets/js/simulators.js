@@ -1391,7 +1391,7 @@
   ];
   var excelCss = '<style>' +
     '.sim-excel{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}.sim-excel h3{margin:8px 0 2px}.sim-excel h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}' +
-    '.sim-excel-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}.sim-excel-tabela{border-collapse:collapse;width:100%;margin:8px 0}' +
+    '.sim-excel-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}.sim-excel-tabela{border-collapse:collapse;width:100%;margin:8px 0}' +
     '.sim-excel-tabela th,.sim-excel-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}' +
     '.sim-excel-tabela th{background:#2a2f3a;color:#cdd4de}.sim-excel-rownum{background:#22262e;color:#8b94a5;width:28px}' +
     ".sim-excel-cel{width:90px;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:3px;padding:2px 4px}" +
@@ -1465,7 +1465,7 @@
   function excelBuildConsole() {
     var h = '<div class="sim-excel-bloco"><h4>Console de fórmulas (executa contra a tabela acima)</h4>';
     h += "<p>Digite uma fórmula (com ou sem <code>=</code> inicial) e pressione Calcular — veja o resultado ou o código de erro real.</p>";
-    h += "<textarea id='excel-console-fm' class='sim-excel-console' rows='2'>=MÉDIA(B2:B7)</textarea>";
+    h += "<textarea id='excel-console-fm' class='sim-excel-console' rows='2' aria-label='Fórmula do Excel para calcular'>=MÉDIA(B2:B7)</textarea>";
     h += "<button type='button' class='sim-excel-btn' data-act='excel-console-calcular'>Calcular</button>";
     h += "<button type='button' class='sim-excel-btn' data-act='excel-console-limpar'>Limpar</button>";
     h += "<p class='sim-excel-resgrande' id='excel-console-res'>—</p>";
