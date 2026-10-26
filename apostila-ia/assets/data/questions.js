@@ -3115,17 +3115,17 @@ id: "q-m1-09",
       { letra: "A", texto: "Prazo de retenção das gravações." },
       { letra: "B", texto: "Proteção das gravações sensíveis por criptografia." },
       { letra: "C", texto: "Número máximo de participantes por reunião." },
-      { letra: "D", texto: "Consentimento/informação dos participantes sobre a gravação." }
+      { letra: "D", texto: "Informação/transparência aos participantes e base legal adequada para a gravação, com consentimento quando aplicável." }
     ],
     gabarito: "C",
-    justificativa: "O currículo lista os elementos de uma política de gravação: 'quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter' e, no exemplo, 'quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem tem acesso, regras de compartilhamento, proteção (criptografia), e procedimento para exclusão', além do consentimento. O exercício do currículo é literal: 'Qual elemento NÃO é essencial em uma política de gravação?' → C (Número máximo de participantes).",
+    justificativa: "O currículo lista os elementos de uma política de gravação: quando e como gravar, quem pode gravar, onde armazenar, prazo de retenção, acesso, compartilhamento, proteção e exclusão. Também é necessário informar os participantes e identificar a base legal adequada; consentimento é necessário quando essa for a hipótese aplicável. O exercício pergunta qual elemento NÃO é essencial: C (número máximo de participantes).",
     analise: {
       A: "INCORRETA (para o enunciado). Erro conceitual: prazo de retenção ('quanto tempo manter') É essencial — está na lista do currículo.",
       B: "INCORRETA (para o enunciado). Erro conceitual: proteção por criptografia ('criptografar gravações sensíveis') É essencial — consta na política.",
       C: "CORRETA. Número máximo de participantes não integra a política de gravação — é o elemento NÃO essencial, conforme o exercício do currículo.",
-      D: "INCORRETA (para o enunciado). Erro conceitual: consentimento/informação dos participantes É essencial quando há dados pessoais — o currículo o exige."
+      D: "INCORRETA (para o enunciado). Transparência aos participantes e base legal adequada são elementos de governança; o consentimento é exigido quando essa for a hipótese legal aplicável."
     },
-    regra: "Política de gravação: quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem acessa, compartilhamento, criptografia, exclusão e consentimento. Limite de participantes não é elemento da política.",
+    regra: "Política de gravação: base legal adequada e transparência, quando/quem grava, armazenamento, prazo de retenção, acesso, compartilhamento, proteção e exclusão. Limite de participantes não é elemento da política.",
     pegadinha: "A pegadinha é a inversão do comando ('NÃO é essencial'): três alternativas são itens reais da política; só o número máximo de participantes é alheio a ela."
   },
   {
