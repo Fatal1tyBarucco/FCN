@@ -922,26 +922,26 @@ const moduleQuestions5 = [
 
   { id: "q-m5-38", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Curva de aprendizado",
-    contexto: "Curva de aprendizado de erro vs. tamanho da amostra.",
-    enunciado: "Curva de aprendizado mostra o erro de treinamento e validação em função do tamanho da amostra. Se o erro de treino diminui com o aumento da amostra e o erro de validação estabiliza, indica:",
+    contexto: "A curva de aprendizado compara os erros de treinamento e validação conforme cresce a amostra.",
+    enunciado: "À medida que a amostra aumenta, o erro de treinamento sobe levemente, o erro de validação cai e a distância entre ambos diminui. A interpretação mais adequada é:",
     alternativas: [
-      { letra: "A", texto: "Que o modelo está aprendendo com mais dados e o risco de overfitting diminui." },
+      { letra: "A", texto: "Que os resultados são compatíveis com redução da diferença de generalização; o padrão sugere benefício de mais dados, mas deve ser confirmado em validação independente." },
       { letra: "B", texto: "Que o modelo está com overfitting." },
       { letra: "C", texto: "Que é melhor reduzir a quantidade de dados." },
       { letra: "D", texto: "Que a curva é sempre decrescente." },
       { letra: "E", texto: "Que o modelo não aprende." }
     ],
     gabarito: "A",
-    justificativa: "Erro de treino caindo e validação estabilizada indicam que o modelo está absorvendo o padrão, reduzindo overfit com mais dados.",
+    justificativa: "Quando a amostra cresce, o erro de treinamento pode subir um pouco porque o conjunto fica mais diverso, enquanto o erro de validação cai. A aproximação das curvas é compatível com redução da diferença de generalização; a avaliação ainda depende de validação independente e de dados representativos.",
     analise: {
-      A: "CORRETA. Mais dados reduz discrepância e overfit.",
+      A: "CORRETA. A queda do erro de validação e a aproximação das curvas são compatíveis com melhor generalização; não constituem garantia isolada de ausência de overfitting.",
       B: "INCORRETA. Overfitting mostra treino baixo e validação alta.",
       C: "INCORRETA. Mais dados ajuda, não prejudica.",
       D: "INCORRETA. Curvas não são sempre decrescentes — podem estabilizar ou subir.",
       E: "INCORRETA. Modelo está aprendendo."
     },
-    regra: "Curva de aprendizado: queda do erro com tamanho da amostra indica aprendizado.",
-    pegadinha: "Overfitting mostra erro baixo de treino e alto de validação.",
+    regra: "Curvas de aprendizado: avalie conjuntamente erros de treino e validação, a evolução com o tamanho da amostra e a distância entre as curvas.",
+    pegadinha: "Não deduza generalização apenas pelo erro de treino: compare-o com o erro de validação e observe sua evolução com mais dados."
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
   },
 
@@ -975,23 +975,23 @@ const moduleQuestions5 = [
     contexto: "MAE 1,9 e RMSE 6,4 em previsão de demanda.",
     enunciado: "A distância entre RMSE e MAE típica de 6,4 indica:",
     alternativas: [
-      { letra: "A", texto: "Que há alguns erros muito grandes que puxam o RMSE para cima." },
+      { letra: "A", texto: "Que erros de maior magnitude pesam desproporcionalmente no RMSE; é necessário investigar sua distribuição e os segmentos em que ocorrem." },
       { letra: "B", texto: "Que o modelo não aprende." },
       { letra: "C", texto: "Que os dados não são relevantes." },
       { letra: "D", texto: "Que o modelo está overfitado." },
       { letra: "E", texto: "Que a métrica é incorreta." }
     ],
     gabarito: "A",
-    justificativa: "RMSE ≥ MAE; quando RMSE está bem acima do MAE, há poucos erros de grande módulo. O modelo é bom em média, mas com casos extremos.",
+    justificativa: "RMSE ≥ MAE. Uma diferença grande entre eles indica que os erros de maior magnitude pesam desproporcionalmente na métrica quadrática. Isso justifica investigar a distribuição dos erros e possíveis casos extremos, mas não basta para concluir que o modelo é bom em média nem para identificar sozinho a causa.",
     analise: {
-      A: "CORRETA. Maior discrepância RMSE vs. MAE indica erros extremos.",
+      A: "CORRETA. A diferença entre RMSE e MAE destaca a influência de erros de maior magnitude, que devem ser investigados nos dados e por segmento.",
       B: "INCORRETA. Erro médio absoluto menor não indica não aprendizado.",
       C: "INCORRETA. Desempenho imprevisível não é prova de irrelevância.",
       D: "INCORRETA. Overfitting é detectado por treino × validação, não por métricas.",
       E: "INCORRETA. RMSE é uma métrica válida e corretamente calculada."
     },
-    regra: "RMSE ≥ MAE; grande diferença indica erros extremos.",
-    pegadinha: "RMSE não é 'erro' — é 'raiz da média dos quadrados'.",
+    regra: "RMSE ≥ MAE; diferença grande indica maior influência relativa de erros de grande magnitude e pede análise da distribuição."
+    pegadinha: "A diferença entre RMSE e MAE não revela, por si só, a causa dos erros nem prova a qualidade geral do modelo."
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
   },
 
