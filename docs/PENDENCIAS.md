@@ -310,3 +310,5 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 
 - [x] Fazer triagem editorial dirigida das sete questões novas: enunciados, alternativas, gabaritos e análises coerentes na revisão realizada; detalhar os critérios de acessibilidade de PDF em q-m1-44.
 - [ ] Para questões que venham a afirmar regra jurídica/técnica específica, complementar a referência curricular interna com fonte externa oficial ou documentação primária e registrar data de consulta.
+
+- [ ] Executar e analisar o inventário de acessibilidade adicionado ao smoke test: nomes acessíveis de controles, imagens sem `alt`, link para pular ao conteúdo e marco principal. Esse inventário é diagnóstico inicial, não substitui axe/WCAG, teste por teclado ou leitor de tela.
