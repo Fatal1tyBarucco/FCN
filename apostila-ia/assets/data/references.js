@@ -32,7 +32,17 @@ const references = [
     topico: "M4 — Segurança da informação (LGPD)",
     dataVerificacao: "2026-10-20",
     status: "verificado",
-    dispositivos: ["art. 1º", "art. 2º", "art. 3º", "art. 4º", "art. 5º", "art. 17", "art. 18", "art. 46"]
+    dispositivos: ["art. 1º", "art. 2º", "art. 3º", "art. 4º", "art. 5º", "art. 6º, I a III e X", "art. 17", "art. 18", "art. 37", "art. 46", "art. 48", "art. 49"]
+  },
+  {
+    id: "ref-conflito-interesses-12813-2013",
+    titulo: "Lei de Conflito de Interesses — Lei nº 12.813, de 16 de maio de 2013",
+    organizacao: "Planalto (Presidência da República)",
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12813.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público (conflito de interesses)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["art. 1º", "art. 2º", "art. 3º, I", "art. 4º", "art. 5º, V", "art. 10"]
   },
   {
     id: "ref-lai-12527-2011",
