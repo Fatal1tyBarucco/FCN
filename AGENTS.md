@@ -851,6 +851,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Fontes referenciadas incluem LAI, LGPD compilada, Lei nº 12.813/2013, Lei nº 14.129/2021, manuais da CGU, NIST SP 800-61 e diretrizes de acessibilidade.
 - A revisão é focal; validação automatizada do HEAD atual ainda deve ser confirmada.
 
+## Início da revisão focal do M7 — q-m7-01..q-m7-30 (2026-10-26)
+
+- q-m7-01..q-m7-10: revisados conceitos DIKW, limitações do modelo, dado qualitativo codificado em número, escalas de mensuração, estrutura dos dados, metadados e linhagem/catálogo. Sem alteração, além da verificação da ordem física por tópico.
+- q-m7-11..q-m7-20: revisadas dimensões de qualidade (validade, acurácia, completude, consistência, unicidade, tempestividade), estágios do pipeline e trade-offs de deduplicação. q-m7-20 foi precisada para distinguir perda de completude histórica de completude de campos.
+- q-m7-21..q-m7-30: revisados ETL/ELT, valores ausentes seletivos, ordenação lexicográfica, z-score, formas normais, anonimização/pseudonimização, reidentificação e papéis de governança.
+- q-m7-21: removida a afirmação universal de que “não existe fluxo sem transformação”; ETL e ELT incluem transformação, mas arquiteturas EL também existem.
+- Commits de conteúdo: `9e3f030bb990904c513808bb6f573b9b9cd4b756` (q-m7-20) e `0f1f5c8b0bcbe1fd9d8a678b02df5b295b515b16` (q-m7-21).
+- O banco está organizado por tópico curricular, portanto os IDs não aparecem necessariamente em ordem numérica no arquivo. Foi confirmada a existência dos 40 IDs únicos de q-m7-01..q-m7-40; não reordenar blocos sem necessidade, pois isso pode alterar agrupamento curricular.
+- Revisão focal; validação automatizada no HEAD atualizado ainda necessária.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
