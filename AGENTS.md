@@ -800,7 +800,7 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 
 - q-m7-01 a q-m7-05: conceitos DIKW (dado, informação, conhecimento, sabedoria) definidos de forma consistente com o currículo, sem assumir conversão automática entre níveis.
 - q-m7-06 a q-m7-10: código numérico nominal, estrutura dos dados, metadados de negócio, escala ordinal e linhagem diferenciados do catálogo.
-- q-m7-11 a q-m7-20: validade, acurácia, completude, consistência, unicidade e tempestividade separados; calculados e trade-offs de qualidade revisados.
+- q-m7-11 a q-m7-20: validade, acurácia, completude, consistência, unicidade e tempestividade separados; após a revisão inicial, q-m7-14 foi corrigida para comparar 2,0 m com 220 cm (divergência real), pois 2,0 m e 200 cm seriam equivalentes. A questão agora distingue inconsistência entre fontes de acurácia, que exige referência externa.
 - q-m7-21: ETL distinguido de ELT pela ordem e local da transformação.
 - q-m7-22: substituição de CPF por token com chave preservada corretamente identificada como pseudonimização, não anonimização.
 - q-m7-23: duplicidade vinculada à violação de unicidade e à inflação de contagens/somas.
