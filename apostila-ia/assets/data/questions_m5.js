@@ -766,9 +766,9 @@ const moduleQuestions5 = [
       { letra: "E", texto: "Comparar apenas um caso." }
     ],
     gabarito: "A",
-    justificativa: "Versão de conjunto de teste e métrica definida antes garantem comparação justa e reprodutível.",
+    justificativa: "Um conjunto de teste versionado e uma métrica definida antes da execução favorecem comparações mais consistentes e reproduzíveis. Também é necessário manter condições comparáveis, registrar configurações e considerar a variabilidade dos resultados.",
     analise: {
-      A: "CORRETA. Conjunto + métrica + versão são requisitos de avaliação fundamentais.",
+      A: "CORRETA. Conjunto versionado e métrica pré-definida reduzem mudanças oportunistas no critério de avaliação; a reprodutibilidade também depende de registrar as condições do teste.",
       B: "INCORRETA. Impressão não é evidência.",
       C: "INCORRETA. Modelo diferente descontextualiza a comparação.",
       D: "INCORRETA. Métrica é essencial para comparação.",
@@ -797,7 +797,7 @@ const moduleQuestions5 = [
       B: "INCORRETA. Registro é essencial para auditoria.",
       C: "INCORRETA. Restrições são necessárias para segurança.",
       D: "INCORRETA. Controle de acesso é exigido.",
-      E: "INCORRETA. Alterações sem registro anulam a governança."
+      E: "INCORRETA. Alterações sem registro comprometem a governança."
     },
     regra: "Prompt governável = versionado + avaliação + revisão.",
     pegadinha: "Prompt não é só 'texto bonito'.",
@@ -841,7 +841,7 @@ const moduleQuestions5 = [
       E: "INCORRETA. Produtividade sem teste e registro é insegura."
     },
     regra: "Implantação responsável = teste + registro + monitoramento.",
-    pegadinha: "Solo no teste não basta.",
+    pegadinha: "Testar uma vez não basta: é necessário registrar a versão, monitorar e reavaliar quando o contexto mudar.",
     fonte: "NIST — AI Risk Management Framework, 2023."
   },
 
