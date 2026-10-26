@@ -906,19 +906,19 @@ const moduleQuestions8 = [
     enunciado: "Para representar uma série temporal com lacuna de coleta, a alternativa correta é:",
     alternativas: [
       { letra: "A", texto: "Conectar os pontos adjacentes à lacuna, pois a linha continua a ser uma estimativa." },
-      { letra: "B", texto: "Quebrar a linha na lacuna e sinalizar a vigência, sem conectar diretamente." },
+      { letra: "B", texto: "Quebrar a linha na lacuna e sinalizar o período sem coleta, sem conectar diretamente." },
       { letra: "C", texto: "Substituir o valor ausente pela média da série, mantendo a linha contínua." },
       { letra: "D", texto: "O gráfico de linhas não suporta lacunas; o painel deve ser convertido em tabela." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa B reproduz exatamente isso. A erra: conectar gera falso continuidade. C erra: substituir pela média inventa um valor. D erra: gráficos de linhas suportam lacunas (quebradas), e a conversão para tabela não é obrigatória.",
+    justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa B reproduz exatamente isso. A erra: conectar gera falsa continuidade. C erra: substituir pela média inventa um valor. D erra: gráficos de linhas suportam lacunas (quebradas), e a conversão para tabela não é obrigatória.",
     analise: {
       A: "INCORRETA. Erro conceitual: conectar gera ilusão de continuidade e de valores intermediários inexistentes.",
       B: "CORRETA. Reproduz a regra do currículo: quebrar a linha na lacuna e sinalizar, sem conectar diretamente.",
       C: "INCORRETA. Erro conceitual: substituir o valor ausente pela média fabrica dados que não existem.",
       D: "INCORRETA. Erro conceitual: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho."
     },
-    regra: "Série temporal com lacuna: quebrar a linha e sinalizar a vigência; conectar ou interpolar fabrica continuidade e valores inexistentes.",
+    regra: "Série temporal com lacuna: quebrar a linha e sinalizar o período sem dados; conectar ou interpolar sem base explícita fabrica continuidade e valores inexistentes.",
     pegadinha: "A pegadinha é 'a linha pode ser interpolada' — a continuidade do gráfico exige dados contínuos.",
     fonte: "Currículo M8 — modulo-8-unidade-2-topico-2 (M8.2.2 Linhas, lacunas e continuidade).",
   },
@@ -969,7 +969,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "9,0." }
     ],
     gabarito: "B",
-    justificativa: "Média ponderada = Σ(valor × peso) ÷ Σ(pesos) = (7×2 + 5×3 + 9×1) ÷ (2+3+1) = (14+15+9) ÷ 6 = 38 ÷ 6 ≈ 6,33. A alternativa B reproduz o cálculo. A A é a média simples (7+5+9)/3 = 7,0. C erra (38/7? não). D é a nota de maior peso, não a ponderada.",
+    justificativa: "Média ponderada = Σ(valor × peso) ÷ Σ(pesos) = (7×2 + 5×3 + 9×1) ÷ (2+3+1) = (14+15+9) ÷ 6 = 38 ÷ 6 ≈ 6,33. A alternativa B reproduz o cálculo. A A é a média simples (7+5+9)/3 = 7,0. C erra: 5,33 não corresponde ao cálculo; o divisor correto é 6, soma dos pesos. D é a nota de maior peso, não a ponderada.",
     analise: {
       A: "INCORRETA. Erro conceitual: média simples (7+5+9)/3 = 7,0, ignorando os pesos.",
       B: "CORRETA. Reproduz exatamente o cálculo da média ponderada com pesos 2, 3, 1.",
@@ -1027,7 +1027,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A ausência de experimento transforma a associação em causa provada." }
     ],
     gabarito: "C",
-    justificativa: "O currículo define critérios clássicos: temporalidade, força e consistência, gradiente, plausibilidade e ausência de confundente controlável (randomização como o mais forte). O estudo está no caminho dos critérios clássicos, mas o desenho observacional não sustenta a conclusão mais forte de causalidade. A alternativa C reproduz isso com precisão: os critérios são vencedores, mas o desenho observacional impede a conclusão definitiva. B erra: observacional não é 'nenhuma hipótese', há suporte parcial. C erra: força não é o único critério. D erra: sem experimento não há causalidade provada.",
+    justificativa: "O currículo define critérios clássicos: temporalidade, força e consistência, gradiente, plausibilidade e ausência de confundente controlável (randomização como o mais forte). Os critérios descritos fortalecem a plausibilidade de uma hipótese causal, mas não bastam isoladamente para provar causalidade. É necessário avaliar o desenho, a temporalidade, os possíveis confundentes e as análises realizadas. A alternativa C expressa esse limite sem descartar toda evidência observacional. A erra ao tratar a ausência de randomização como impedimento absoluto; B reduz a avaliação à força da associação; D transforma associação em prova causal.",
     analise: {
       A: "INCORRETA. Erro conceitual: observacional sustenta suporte dos critérios clássicos; não é 'nenhuma hipótese'.",
       B: "INCORRETA. Erro conceitual: força não é o único critério; o currículo lista temporalidade, consistência, gradiente, plausibilidade e ausência de confundente.",
@@ -1092,8 +1092,8 @@ const moduleQuestions8 = [
       C: "INCORRETA. Erro conceitual: a média por linha não é fixa — o filtro de contexto altera o cálculo e a agregação.",
       D: "INCORRETA. Erro conceitual: o DAX agrega conforme a consulta e respeita o contexto de filtro."
     },
-    regra: "DAX média correta = Soma(valor) ÷ Soma(quantidade); média de médias é o viço de agregação quando a quantidade varia.",
-    pegadinha: "A alternativa A tenta o erro de 'é só média de todos os registros' — a agregação Soma/Soma é a definição correta.",
+    regra: "DAX média correta = Soma(valor) ÷ Soma(quantidade); média de médias é um vício de agregação quando a quantidade varia.",
+    pegadinha: "A pegadinha é confundir a média dos quocientes por linha com o quociente entre as somas; quando as quantidades variam, as duas medidas podem diferir.",
     fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 DAX: agregar antes de dividir).",
   },
   {
@@ -1108,13 +1108,13 @@ const moduleQuestions8 = [
     contexto: "Painel de gestão com 5 gráficos obrigatórios: linhas, barras, box plot, histograma e dispersão.",
     enunciado: "No estudo de caso integrador do currículo, a recomendação fundamentada corresponde a:",
     alternativas: [
-      { letra: "A", texto: "Aumentar o tamanho da amostra e tirar o outlier para que os indicadores fiquem mais bons." },
+      { letra: "A", texto: "Aumentar o tamanho da amostra e remover o outlier para que os indicadores fiquem melhores." },
       { letra: "B", texto: "Reportar somente a média, pois a cauda é erro de dados e não deve ser mostrada." },
       { letra: "C", texto: "Investigar o procedimento responsável pela cauda (valor 50), priorizar a unidade de maior volume e revisar em 60 dias." },
       { letra: "D", texto: "Mostrar a série de atendimentos com e sem a unidade A, sem declarar a variável de controle." }
     ],
     gabarito: "C",
-    justificativa: "O estudo de caso define: box plot mostra cauda extrema (outlier 50) e histograma mostra a cauda à direita; a recomendação fundamentada é investigar o procedimento responsável pela cauda, priorizar a unidade de maior volume, revisar em 60 dias, e declarar que todos os números são fictícios. A alternativa C reproduz isso. B erra: remover o outlier sem investigação apaga informação real. C erra: média sozinha não é informativa; a cauda é legítima. D erra: não declarar a variável de controle comprometia a integridade.",
+    justificativa: "O estudo de caso define: box plot mostra cauda extrema (outlier 50) e histograma mostra a cauda à direita; a recomendação fundamentada é investigar o procedimento responsável pela cauda, priorizar a unidade de maior volume, revisar em 60 dias, e declarar que todos os números são fictícios. A alternativa C reproduz isso. A erra: remover o outlier sem investigação pode apagar informação relevante. B erra: a média isolada perde a informação da cauda, que pode ser legítima. D erra: não declarar a variável de controle compromete a integridade.",
     analise: {
       A: "INCORRETA. Erro conceitual: remover o outlier sem investigar apaga informação real (fraudes, gargalos, casos raros).",
       B: "INCORRETA. Erro conceitual: média isolada perde a cauda legítima; a cauda não é erro de dados.",
