@@ -951,7 +951,7 @@ const moduleQuestions6 = [
     regra: "Portal em conformidade: rol do art. 8º, § 1º, completo, requisitos do § 3º (inclusive atualização) e dados abertos atualizados com histórico.",
     pegadinha: "Órgão que 'responde bem aos pedidos' mas não publica cria a aparência de conformidade — a prova cobra justamente a distinção.",
     fonte: "Lei nº 12.527/2011, art. 8º, § 1º, IV, e § 3º, VI, e art. 30; Lei nº 14.129/2021, art. 29, § 1º, VI (verificados em 2026-10-21)."
-  }
+  },
   {
     id: "q-m6-41", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
     topico: "modulo-6-unidade-1-topico-3", assunto: "Ética e governança em TI", contexto: "Durante uma contratação pública, integrante da comissão identifica relação pessoal relevante com representante de empresa participante.", enunciado: "Qual conduta inicial é mais compatível com integridade e prevenção de conflito de interesses?",
