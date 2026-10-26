@@ -376,3 +376,16 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 **Fontes oficiais consultadas:** [LGPD — Lei nº 13.709/2018](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm), [Lei nº 12.813/2013](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12813.htm), [Lei nº 14.129/2021](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm).
 
 **Status de testes:** as alterações foram enviadas ao branch e aguardam a execução final de CI no HEAD resultante. Não houve execução local nesta operação. A revisão não valida todas as questões nem substitui conferência semântica artigo por artigo.
+
+
+## Revalidação após lote editorial M7 — 2026-10-26
+
+- **HEAD testado:** `4df80216f1b0e6f20329a5345468ad56074f8abd`.
+- **CI de validação curricular no PR:** [40254853715](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254853715) — success.
+- **CI de validação no push:** [40254851951](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254851951) — success.
+- **Code Quality:** [40254851749](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254851749) — success.
+- **Workflow do PR:** [40254851850](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254851850) — success.
+- Sintaxe aprovada para 39 arquivos JavaScript; auditorias de matriz curricular, rastreabilidade, estrutura e heurísticas concluídas; smoke test Playwright/Chromium em modo `file://` aprovado com 8 módulos renderizados e `pageErrors: []`.
+- Contagens confirmadas no artefato: 132 tópicos, 460 flashcards e 389 questões. Auditoria heurística: 0 IDs duplicados, 0 pares idênticos de contexto/enunciado e 0 alertas.
+- Distribuição das 314 questões MC: A=145, B=129, C=27, D=6, E=7. M7 após o lote: A=29, B=0, C=1, D=1, E=2. M6 permanece com A=30/30.
+- **Limitação:** estes resultados não certificam correção factual, validade de fontes, qualidade dos distratores, acessibilidade, responsividade em dispositivo físico ou revisão semântica completa.
