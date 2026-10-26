@@ -820,7 +820,7 @@ const moduleQuestions8 = [
     alternativas: [
       { letra: "A", texto: "A divisão é feita linha a linha: Faturamento ÷ Quantidade em cada linha, o que é equivalente à média." },
       { letra: "B", texto: "A medida calcula Soma(Faturamento) ÷ Soma(Quantidade) no contexto de cada visual e filtros ativos, o que é o correto." },
-      { letra: "C", texto: "A medida deve ser substituída por média dos valores de TicketMedio, caso em que o filtro não influencia." },
+      { letra: "C", texto: "A medida deve ser substituída pela média simples dos preços unitários, que não é necessariamente equivalente à razão entre os totais." },
       { letra: "D", texto: "A agregação do DAX não respeita o contexto de filtro, e a medida fica fixa." }
     ],
     gabarito: "B",
