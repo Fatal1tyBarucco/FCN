@@ -190,3 +190,26 @@ Não foi confirmada neste ambiente uma ferramenta de delegação multiagente esp
 - O workflow associado ao commit consultado foi observado como `queued`; não há nesta operação resultado final de execução a declarar. Resultados anteriores mencionados no corpo do PR permanecem evidência reportada daquele run, não de uma execução nova.
 
 **Próximo passo seguro:** aguardar/consultar a validação automatizada do HEAD atual, comparar a matriz gerada com os arquivos de dados do mesmo SHA e revisar as pendências semânticas antes de modificar componentes da aplicação.
+
+
+## Fase 3 — auditoria arquitetural inicial (2026-10-26)
+
+**Status: diagnóstico estático inicial concluído; correções funcionais não iniciadas.**
+
+### Componentes examinados
+- `index.html`: carrega os módulos de simuladores, gráficos, quiz, flashcards e `storage.js` diretamente, compatível com a arquitetura sem build.
+- `simulators.js`: declara parser de fórmulas Excel próprio, sem `eval`/`new Function`; declaração de capacidade não substitui execução de testes.
+- `simulator_data.js` e `charts.js`: declaram gráficos SVG calculados a partir dos dados, incluindo histograma, linha, barras, dispersão e box plot; validar casos degenerados e dados inválidos.
+- `quiz-engine.js`: declara simulados por módulo/nível/estilo/formato, temporizador e correção; revisar integridade do pool, respostas não respondidas e estado após recarga.
+- `flashcards.js`: declara repetição espaçada; revisar persistência de estado, cartão novo e agendamento após resposta.
+- `storage.js`: divergência de arquitetura identificada. O arquivo oferece uma abstração de persistência, mas o próprio cabeçalho informa que navegação, flashcards e quiz seguem escrevendo diretamente em namespaces separados. Não é seguro declarar uma camada unificada integrada sem revisar os consumidores e definir estratégia de migração.
+
+### Decisão de execução
+Não alterar simultaneamente os seis simuladores nem reescrever a persistência em bloco. A próxima implementação deverá começar por testes de regressão reproduzíveis e um contrato de persistência documentado; então aplicar patch mínimo em um consumidor por vez, mantendo compatibilidade com dados já gravados em `localStorage`.
+
+### Aceite da Fase 3
+- Todos os recursos obrigatórios têm consumidor real e estão conectados ao HTML.
+- Fórmulas e estatísticas calculam resultados a partir das entradas.
+- Dados de progresso sobrevivem a recarga e não são perdidos por migração/erro de armazenamento.
+- A abertura direta via `file://` continua funcional; não depender de rede ou build.
+- Testes negativos, limites, teclado e mensagens de erro são evidenciados antes de aprovar.
