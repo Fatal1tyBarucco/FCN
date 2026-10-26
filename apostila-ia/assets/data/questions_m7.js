@@ -682,7 +682,7 @@ const moduleQuestions7 = [
       D: "INCORRETA. Zero não é neutralidade: é um valor com significado próprio e distorce médias e somas.",
       E: "INCORRETA. Isso é generalização indevida da amostra enviesada — exatamente o que o currículo condena."
     },
-    regra: "Antes de imputar, classifique a causa: aleatória, dependente de variáveis observadas ou dependente do próprio valor (seletiva). Só a primeira admite imputação relativamente segura.",
+    regra: "Antes de imputar, classifique o mecanismo de ausência (MCAR, MAR ou MNAR). A imputação depende das hipóteses e do modelo; quando a ausência depende do próprio valor não observado, imputação simples não elimina o viés.",
     pegadinha: "Imputação parece 'cuidado com os dados', mas em ausência seletiva ela fabrica resultado.",
     fonte: "Currículo M7 — m7-u2-t3-s1 (Valores ausentes e estratégias de tratamento)."
   },
