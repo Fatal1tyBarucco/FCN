@@ -613,6 +613,12 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 
 - Verificador q-m4-44: a asserção anterior dependia de uma frase específica da justificativa e falhou em merges de PR que continham outra versão semanticamente equivalente da questão. A verificação foi reduzida a termos essenciais e estáveis após normalização (`lgpd`, `marco civil`, `dados pessoais`), além do gabarito definido pela versão da questão no branch. Commit: `c8eca4f3992a0a7f1271a3d5b6614cdb7b01b245`. Confirmar no próximo CI do HEAD atual.
 
+## Precisão jurídica adicional — q-m4-34 (2026-10-26)
+
+- Conferida a fonte oficial do Planalto: a Lei nº 15.352/2026 atualizou a denominação para Agência Nacional de Proteção de Dados e a redação do art. 55-A da LGPD; porém, a natureza de autarquia especial já havia sido estabelecida pela Lei nº 14.460/2022.
+- Corrigida a justificativa de q-m4-34 para não atribuir à lei de 2026 a transformação inicial em autarquia especial; acrescentada a Lei nº 14.460/2022 às fontes.
+- Commit de conteúdo: `d8435c305884422ca1d6ec787b7fdbacece36798`. Fontes oficiais: Lei nº 15.352/2026 e Lei nº 14.460/2022. A correção factual foi conferida no texto oficial; CI ainda precisa validar o HEAD atualizado.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
