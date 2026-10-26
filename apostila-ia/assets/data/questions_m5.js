@@ -341,7 +341,7 @@ const moduleQuestions5 = [
     alternativas: [
       { letra: "A", texto: "Tipos de algoritmos." },
       { letra: "B", texto: "Serviços de nuvem." },
-      { letra: "C", texto: "Etapas da coleta de dados; atributos são variáveis de entrada; variáveis-alvo são saídas esperadas." },
+      { letra: "C", texto: "Conceitos da preparação e modelagem dos dados: rotulagem atribui rótulos, atributos são variáveis de entrada e variáveis-alvo são saídas esperadas." },
       { letra: "D", texto: "Ferramentas de visualização." },
       { letra: "E", texto: "Dados criptografados." }
     ],
