@@ -133,7 +133,7 @@ const moduleQuestions4 = [
     contexto: "Uma organização adota Multi-Fator Authentication (MFA) para proteger o acesso aos sistemas.",
     enunciado: "Sobre a Autenticação em Múltiplos Fatores (MFA), é correto afirmar que:",
     alternativas: [
-      { letra: "A", texto: "A MFA substitui completamente a senha, eliminando-o do processo." },
+      { letra: "A", texto: "A MFA elimina necessariamente a senha em todos os sistemas." },
       { letra: "B", texto: "A MFA exige duas ou mais formas independentes de verificação." },
       { letra: "C", texto: "A MFA é aplicável apenas a sistemas operacionais." },
       { letra: "D", texto: "A MFA aumenta a segurança, mas sempre impede o acesso remoto." },
@@ -173,7 +173,7 @@ const moduleQuestions4 = [
       D: "INCORRETA. A assimétrica é fundamental para assinatura digital e troca de chaves.",
       E: "INCORRETA. Criptografia simétrica é altamente segura quando a chave é protegida."
     },
-    regra: "Simétrica: mesma chave (AES, DES, 3DES). Assimétrica: par chave (RSA, ECDSA, Diffie-Hellman).",
+    regra: "Criptografia simétrica usa chave secreta compartilhada; criptografia assimétrica usa um par de chaves relacionadas. Exemplos e operações dependem do algoritmo.",
     pegadinha: "Simétrica e assimétrica diferem pela quantidade de chaves: 1 para simétrica, 2 (par) para assimétrica.",
     fonte: "NIST FIPS 197 (AES), 2001."
   },
@@ -194,11 +194,11 @@ const moduleQuestions4 = [
     analise: {
       A: "INCORRETA. 3 cópias são o '3' da estratégia — o 3 está correto, mas a pergunta pede o 1.",
       B: "INCORRETA. Dois sistemas de armazenamento são o '2'.",
-      C: "CORRETA. O '1' refere-se à cópia offline/imutável fora do local.",
+      C: "CORRETA. O '1' da regra tradicional refere-se a uma cópia fora do local; offline ou imutável são proteções adicionais.",
       D: "INCORRETA. A regra 3-2-1 não define frequência de backup.",
       E: "INCORRETA. Documentação de planos de recuperação é importante, mas não é o '1' da estratégia 3-2-1."
     },
-    regra: "3-2-1: 3 cópias, 2 mídias/arquiteturas diferentes, 1 cópia fora do local ou offline.",
+    regra: "3-2-1: três cópias, dois tipos de mídia e uma cópia fora do local; offline ou imutável são proteções adicionais.",
     pegadinha: "O 3-2-1 não é 3 três cópias, 2 dois sistemas, 1 um único local — o 1 é a cópia fora do local.",
     fonte: "Veeam Blog — The 3-2-1 Backup Rule, 2016."
   },
@@ -248,7 +248,7 @@ const moduleQuestions4 = [
       D: "INCORRETA. O princípio não nega acesso; ele restringe ao necessário.",
       E: "INCORRETA. Criptografia é um controle de segurança, não o único controle de acesso."
     },
-    regra: "Menor privilégio: 'só o que é necessário, nothing more' — reduz superfície de ataque.",
+    regra: "Menor privilégio: conceder somente as permissões necessárias para a função, reduzindo a superfície de ataque.",
     pegadinha: "Menor privilégio não significa 'nenhum acesso', significa 'nenhum além do necessário'.",
     fonte: "NIST SP 800-53 (AC-2: Account Management; AC-3: Access Enforcement)."
   },
