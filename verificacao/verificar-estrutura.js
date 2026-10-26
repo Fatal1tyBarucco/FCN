@@ -335,7 +335,7 @@ try {
 if (manifest) {
   const desc = typeof manifest.description === 'string' ? manifest.description : '';
   check('description menciona "389"', desc.includes('389'), 'description contém 389=' + desc.includes('389'));
-  check('description menciona "389" e não contém a contagem obsoleta "365"', desc.includes('389') && !desc.includes('365'), '');
+  check('description contém a contagem de questões 389 e não a contagem antiga 365 questões', desc.includes('389 questões') && !desc.includes('365 questões'), '');
 }
 
 /* ------------------------------------------- níveis / formatos / estilos (info) */
