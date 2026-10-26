@@ -187,7 +187,7 @@ const moduleQuestions6 = [
       B: "INCORRETA. Erro conceitual de concentração: o consentimento é uma entre outras hipóteses de tratamento previstas na lei.",
       C: "CORRETA. Decorre do art. 1º (aplicação ao direito público) e do art. 5º, V e VI (controlador e operador), com o dever de segurança do art. 46.",
       D: "INCORRETA. Erro conceitual: dado pessoal sensível (art. 5º, II) exige disciplina própria e mais restritiva; 'finalidade pública' não é salvo-conduto.",
-      E: "INCORRETA. Erro conceitual de oposição: os regimes se somam e prevalece o mais restritivo que incida sobre o conjunto."
+      E: "INCORRETA. Erro conceitual de oposição: LAI e LGPD devem ser harmonizadas conforme a natureza da informação e as regras aplicáveis; uma não afasta automaticamente a outra."
     },
     regra: "LGPD alcança o poder público (art. 1º); o órgão é agente de tratamento e responde por segurança (art. 46) e pelos direitos do titular (arts. 17 e 18).",
     pegadinha: "Cuidado com 'consentimento é a única base': no setor público, outras hipóteses legais coexistem — e a LAI soma-se à LGPD, não é afastada por ela.",
@@ -206,13 +206,13 @@ const moduleQuestions6 = [
       { letra: "E", texto: "indiferente aos princípios, pois se trata de decisão de interface, não de ato administrativo." }
     ],
     gabarito: "A",
-    justificativa: "A interface do serviço é o próprio serviço: exibir oferta alheia ao pedido usa a posição institucional em finalidade diversa, o que ofende a moralidade (finalidade real distinta da declarada) e a impessoalidade (o cidadão é tratado como audiência comercial, não como usuário de serviço). A alternativa B troca legalidade por arrecadação; C supõe que a possibilidade de fechar a oferta sana o desvio; D reduz o problema a desempenho; E separa artificialmente interface e ato administrativo, quando a interface é o meio de prestação do serviço.",
+    justificativa: "A interface integra a prestação do serviço público e influencia a forma como o cidadão é atendido. Exibir oferta alheia ao pedido pode usar a posição institucional para finalidade estranha ao serviço, comprometendo moralidade e impessoalidade ao tratar o usuário como audiência comercial em vez de atender à finalidade pública. A alternativa B troca legalidade por arrecadação; C supõe que a possibilidade de fechar a oferta sana o desvio; D reduz o problema a desempenho; E separa artificialmente interface e ato administrativo, quando a interface é o meio de prestação do serviço.",
     analise: {
       A: "CORRETA. Identifica o desvio de finalidade e o uso da posição institucional, atingindo moralidade e impessoalidade.",
       B: "INCORRETA. Erro conceitual: arrecadação não legitima finalidade estranha ao serviço.",
       C: "INCORRETA. Erro conceitual: a opção de fechar não elimina o uso da posição do órgão para fim alheio.",
       D: "INCORRETA. Erro conceitual de redução: o problema é de finalidade e de isonomia, não apenas de desempenho.",
-      E: "INCORRETA. Erro conceitual de separação indevida: a interface é o canal de prestação do serviço e integra o ato administrativo."
+      E: "INCORRETA. Erro conceitual de separação indevida: a interface é parte da prestação do serviço público e deve observar os princípios aplicáveis à atuação do órgão."
     },
     regra: "A interface é parte do serviço: espaço institucional não é espaço comercial, e finalidade declarada deve coincidir com a finalidade real.",
     pegadinha: "A alternativa C explora o argumento 'é só um banner, o usuário pode fechar' — consentimento de navegação não sana desvio de finalidade.",
