@@ -3905,7 +3905,7 @@ var questoesBanco = [
       { letra: "E", texto: "Exportar para PDF primeiro e estruturar o documento nesse formato." }
     ],
     gabarito: "C",
-    justificativa: "Estilos estruturam a hierarquia e permitem gerar sumário; quebras de seção controlam cabeçalhos distintos; campos devem ser atualizados e a estrutura e as opções de exportação acessível do PDF devem ser verificadas.",
+    justificativa: "Estilos estruturam a hierarquia e permitem gerar sumário; quebras de seção controlam cabeçalhos distintos; campos devem ser atualizados. Na entrega em PDF, verificar marcação estrutural, ordem de leitura, idioma, texto alternativo pertinente e opções de exportação acessível, além de testar o resultado.",
     analise: {
       A: "INCORRETA. A formatação manual não oferece estrutura confiável para sumário automático.",
       B: "INCORRETA. Quebras de página não substituem quebras de seção quando a configuração varia.",
