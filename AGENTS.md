@@ -89,7 +89,7 @@ python3 -m http.server 8080     # Modo B — servidor estático opcional
 
 ## Registro de execução — PR #17 (atualizado em 2026-10-26)
 
-Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://github.com/Fatal1tyBarucco/FCN/pull/17). Este registro resume o trabalho de revisão e validação conhecido até o HEAD `b76afe874791d8d8acd8f28d8eef8ad083bbd458`; não substitui o diff completo nem declara concluídas as pendências abertas.
+Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://github.com/Fatal1tyBarucco/FCN/pull/17). Este registro resume o trabalho de revisão e validação conhecido até o HEAD `7bc610a873ff62ba96dc3a7689c03d527f61d8df`; não substitui o diff completo nem declara concluídas as pendências abertas.
 
 ### Governança do PR e estratégia de trabalho
 
@@ -119,7 +119,7 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 ### CI e estado de validação
 
 - Run `40267735657` passou no HEAD histórico `7a6ac2425f00ccdbebc8be2d206796037358e75d`: validação curricular/ativos, geração de relatórios, verificador estrutural, heurísticas, smoke/regressões Chromium/Playwright em `file://`, além de CodeQL e análises JavaScript/TypeScript/Actions naquele mesmo SHA.
-- Esse resultado **não certifica** o HEAD posterior. Para o HEAD `b76afe874791d8d8acd8f28d8eef8ad083bbd458`, a execução `40269970430` foi registrada como **queued** na última consulta; não declarar sucesso até consultar a execução e seus jobs novamente.
+- Esse resultado **não certifica** o HEAD posterior. Para o HEAD `b76afe874791d8d8acd8f28d8eef8ad083bbd458`, a execução `40269970430` estava queued. No commit de documentação `fb9c36e07cd33866d48d6670abe5c32c447c9ffa`, uma execução falhou na checagem de sintaxe de `questions_m5.js`: faltava uma vírgula entre `pegadinha` e `fonte` em q-m5-24. O defeito foi corrigido no commit `7bc610a873ff62ba96dc3a7689c03d527f61d8df`; validar o novo HEAD e não considerar o run que falhou como validação do arquivo corrigido.
 - Contagens históricas de 365 questões e 72 referências que ainda apareçam em documentos antigos devem ser tratadas como snapshots, não como valores atuais.
 - Permanecem pendentes: auditoria semântica das questões não cobertas pelos lotes acima; verificação individual de referências remanescentes; reconciliação dos inventários/matrizes/relatórios com a saída mais recente dos validadores; avaliação manual de teclado, leitor de tela, responsividade e dispositivos físicos; e conclusão dos critérios para tirar o PR de Draft. Testes automatizados/headless não equivalem a certificação WCAG nem à conclusão integral da Fase 1.
 
