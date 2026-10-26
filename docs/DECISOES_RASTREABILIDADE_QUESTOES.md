@@ -1,0 +1,43 @@
+# Decisões de rastreabilidade das questões — lote M4/M5
+
+**Data da revisão:** 2026-10-26  
+**Branch:** `feat/fase-1-orquestracao-20261025`  
+**Critério:** conferir o assunto e o enunciado de cada questão; selecionar o tópico que representa o conceito avaliado. Não alterar gabaritos para satisfazer o mapeamento. Quando a questão trata de segurança geral e estava alocada em Legislação, foi associada ao tópico de segurança correspondente. As associações continuam sujeitas à revisão pedagógica independente.
+
+## M4 — Segurança da Informação e Governança Digital
+
+| Tópico de destino | Questões associadas |
+|---|---|
+| Unidade 1, tópico 1 — Confidencialidade, integridade, disponibilidade e responsabilização | q-m4-45, q-m4-46, q-m4-47 |
+| Unidade 1, tópico 2 — Controles de segurança e gestão de acesso | q-m4-04, q-m4-05, q-m4-09, q-m4-10, q-m4-20, q-m4-48, q-m4-49, q-m4-50, q-m4-71, q-m4-81, q-m4-83, q-m4-84 |
+| Unidade 1, tópico 3 — Criptografia, hashes, assinaturas e certificados | q-m4-06, q-m4-55, q-m4-56, q-m4-57, q-m4-58, q-m4-59, q-m4-70 |
+| Unidade 1, tópico 4 — Backup, continuidade, RPO e RTO | q-m4-07, q-m4-08, q-m4-51, q-m4-52, q-m4-53, q-m4-54, q-m4-79 |
+| Unidade 2, tópico 1 — Malwares | q-m4-14, q-m4-15, q-m4-61 |
+| Unidade 2, tópico 2 — Firewalls e filtragem de tráfego | q-m4-16, q-m4-66 |
+| Unidade 2, tópico 3 — Detecção, resposta e proteção de endpoints | q-m4-17, q-m4-19, q-m4-62, q-m4-67, q-m4-69, q-m4-82 |
+| Unidade 2, tópico 4 — Segmentação, hardening, vulnerabilidades e defesa em profundidade | q-m4-18, q-m4-63, q-m4-64, q-m4-65, q-m4-68, q-m4-85 |
+| Unidade 3, tópico 1 — Engenharia social e fraudes de identidade | q-m4-60 |
+| Unidade 3, tópico 2 — Ataques a credenciais, à disponibilidade e à comunicação | q-m4-24, q-m4-25, q-m4-26, q-m4-28, q-m4-30, q-m4-73, q-m4-74, q-m4-75 |
+| Unidade 3, tópico 3 — Comprometimento, indicadores e resposta | q-m4-27, q-m4-29, q-m4-72, q-m4-76, q-m4-77, q-m4-78, q-m4-80 |
+| Unidade 4, tópico 1 — LGPD | q-m4-31, q-m4-33, q-m4-34, q-m4-35, q-m4-36, q-m4-37, q-m4-38, q-m4-39, q-m4-43 |
+| Unidade 4, tópico 2 — Marco Civil, articulação normativa e limites das afirmações | q-m4-32, q-m4-40, q-m4-41, q-m4-42, q-m4-44 |
+
+**Total M4 neste lote: 76 questões.** As questões q-m4-31 a q-m4-44 permaneceram nos tópicos legais. Questões q-m4-45 a q-m4-85 que tratavam de segurança técnica foram realocadas para tópicos conceituais de segurança.
+
+## M5 — Inteligência Artificial
+
+| Tópico de destino | Questões associadas |
+|---|---|
+| Unidade 1, tópico 1 — IA, sistemas baseados em regras, aprendizado de máquina e aprendizado profundo | q-m5-03, q-m5-08 |
+| Unidade 1, tópico 2 — Treinamento, validação, teste, generalização e limitações | q-m5-04, q-m5-05, q-m5-06, q-m5-10 |
+| Unidade 2, tópico 2 — Preparação de dados: atributos, separação e desbalanceamento | q-m5-14, q-m5-15, q-m5-17, q-m5-19 |
+| Unidade 2, tópico 3 — Métricas de avaliação | q-m5-16, q-m5-18, q-m5-20, q-m5-38, q-m5-39, q-m5-40 |
+| Unidade 3, tópico 3 — Aplicação, avaliação de resultados e riscos | q-m5-07, q-m5-09 |
+| Unidade 4, tópico 1 — Anatomia do prompt, delimitação e exemplos | q-m5-30 |
+| Unidade 4, tópico 3 — Avaliação, iteração, laboratório comparativo e segurança | q-m5-33 |
+
+**Total M5 neste lote: 20 questões.** A associação de q-m5-07 e q-m5-09 ao tópico de avaliação/riscos é baseada no assunto e deve ser confirmada na revisão pedagógica independente.
+
+## Resultado técnico do lote
+
+A auditoria automatizada executada no GitHub Actions reconheceu 132 tópicos, 460 flashcards e 365 questões; detectou **0 questões vinculadas somente à unidade** e **0 referências curriculares desconhecidas**. Esse resultado prova a existência dos IDs de destino, não a correção semântica de todas as associações.

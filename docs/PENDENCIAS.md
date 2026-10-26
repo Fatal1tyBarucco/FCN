@@ -158,3 +158,14 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Associar 12 questões M1 ao subtópico correspondente após conferir seus assuntos e enunciados: q-m1-26, q-m1-27, q-m1-28, q-m1-29, q-m1-30, q-m1-31, q-m1-32 e q-m1-36 a q-m1-40.
 - [x] Reexecutar a auditoria no GitHub Actions: [execução aprovada](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246710464). Total atual: 96 questões com referência apenas à unidade, 0 referências curriculares não mapeadas; 460 flashcards e 365 questões preservados.
 - [ ] Revisar as 96 questões ainda associadas apenas à unidade (principalmente M4/M5) antes de vinculá-las a tópicos. Não atribuir automaticamente com base apenas no número da unidade.
+
+
+## Atualização de rastreabilidade e revisão legal — 2026-10-26
+
+- [x] Associar as 96 questões que ainda apontavam somente para unidades a tópicos existentes, após revisar assunto/enunciado. Auditoria automatizada: 365 questões com referência direta, 0 unit-only, 0 referências desconhecidas. Ver `docs/DECISOES_RASTREABILIDADE_QUESTOES.md`.
+- [x] Corrigir sete questões legais do M4 (q-m4-34, q-m4-35, q-m4-36, q-m4-37, q-m4-40, q-m4-41, q-m4-43) e atualizar as referências oficiais após conferir a Lei nº 15.352/2026, a Constituição Federal e a LAI.
+- [x] Executar sintaxe, auditorias estruturais, verificador de estrutura e smoke test Playwright/Chromium via `file://`: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902 — **success**.
+- [ ] Revisar semanticamente as 365 questões, incluindo gabaritos, justificativas, distratores e fontes. O mapeamento estrutural não substitui revisão pedagógica.
+- [ ] Tratar os 36 tópicos sem questão diretamente associada: M1=6, M2=15, M3=9, M5=2, M6=4. A ausência de associação direta não prova ausência de cobertura indireta.
+- [ ] Revisar todas as referências legais em `references.js` e no conteúdo dos módulos à luz das alterações normativas recentes; não generalizar a atualização de M4 como auditoria completa de todas as normas.
+- [ ] Testar fluxos interativos completos, teclado, leitores de tela, WCAG 2.1 AA, backup/importação, responsividade em dispositivos reais e PWA via HTTP/HTTPS.

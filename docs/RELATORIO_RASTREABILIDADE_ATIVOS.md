@@ -1,62 +1,64 @@
 # Relatório de rastreabilidade de flashcards e questões
 
-**Data:** 2026-10-25  
+**Data:** 2026-10-26  
 **Repositório:** `Fatal1tyBarucco/FCN`  
 **Branch:** `feat/fase-1-orquestracao-20261025`  
-**Script:** `scripts/audit_learning_assets.mjs`  
-**Execução reproduzível:** [GitHub Actions — validação e auditorias](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246710464)
+**Auditoria:** `scripts/audit_learning_assets.mjs`  
+**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902)
 
-## Resultado estrutural
+## Resultado estrutural atual
 
 - Tópicos curriculares reconhecidos: **132**.
 - Flashcards reconhecidos: **460**.
 - Questões reconhecidas: **365**.
-- Ativos com referência apenas à unidade curricular: **96 questões**.
+- Questões vinculadas somente a uma unidade, sem tópico: **0**.
 - Referências sem associação curricular reconhecível: **0**.
-- A execução foi concluída com sucesso no GitHub Actions; os arquivos CSV gerados foram preservados no artefato `curriculum-audit-reports` dessa execução.
+- Questões com referência direta a tópico: **365/365**.
+- Flashcards com referência direta a tópico: **460/460**.
+
+O resultado significa que as referências apontam para IDs de tópicos existentes. Não certifica que cada questão seja pedagogicamente correta, tenha gabarito correto ou esteja perfeitamente alinhada ao tópico.
 
 ## Associação direta por módulo
 
-| Módulo | Tópicos | Flashcards associados diretamente | Questões associadas diretamente | Tópicos sem questão associada diretamente |
+| Módulo | Tópicos | Flashcards associados | Questões associadas | Tópicos sem questão direta |
 |---|---:|---:|---:|---:|
-| M1 — Microsoft 365 | 23 | 66 | 40 | 10 |
+| M1 — Microsoft 365 | 23 | 66 | 40 | 6 |
 | M2 — Redes | 19 | 56 | 40 | 15 |
 | M3 — Comunicação e colaboração | 14 | 68 | 40 | 9 |
-| M4 — Segurança e governança | 13 | 54 | 9 | 10 |
-| M5 — Inteligência artificial | 13 | 66 | 20 | 5 |
+| M4 — Segurança e governança | 13 | 54 | 85 | 0 |
+| M5 — Inteligência artificial | 13 | 66 | 40 | 2 |
 | M6 — Ética e responsabilidade digital | 18 | 50 | 40 | 4 |
 | M7 — Engenharia de dados | 9 | 50 | 40 | 0 |
 | M8 — Visualização e storytelling | 23 | 50 | 40 | 0 |
 
-A coluna “questões associadas diretamente” conta apenas questões que apontam para um tópico curricular identificável. As questões vinculadas somente à unidade não foram distribuídas artificialmente entre os tópicos.
+A ausência de questão diretamente associada a um tópico é um sinal para revisão, não prova automática de ausência de cobertura indireta. Os tópicos sem questão direta identificados pelo script são 6 no M1, 15 no M2, 9 no M3, 2 no M5 e 4 no M6.
 
-## Referências de questão que apontam somente para a unidade
+## Correções de rastreabilidade desta etapa
 
-| Unidade curricular | Quantidade | IDs |
-|---|---:|---|
-| M4 — Unidade 1 | 7 | q-m4-04 a q-m4-10 |
-| M4 — Unidade 2 | 7 | q-m4-14 a q-m4-20 |
-| M4 — Unidade 3 | 7 | q-m4-24 a q-m4-30 |
-| M4 — Unidade 4 | 55 | q-m4-31 a q-m4-85 |
-| M5 — Unidade 1 | 8 | q-m5-03 a q-m5-10 |
-| M5 — Unidade 2 | 10 | q-m5-14 a q-m5-20 e q-m5-38 a q-m5-40 |
-| M5 — Unidade 4 | 2 | q-m5-30 e q-m5-33 |
-| **Total** | **96** | — |
+As 96 questões restantes no relatório anterior foram associadas a tópicos curriculares depois da conferência de seus assuntos e enunciados:
 
-## Interpretação e ações pendentes
+- M4: 76 questões anteriormente vinculadas somente às unidades 1, 2, 3 e 4, incluindo questões de segurança geral que foram realocadas ao tópico conceitualmente correspondente; questões legais permaneceram nos tópicos de legislação.
+- M5: 20 questões sobre fundamentos de IA, preparação de dados, métricas e engenharia de prompts foram associadas aos tópicos correspondentes.
+- A lista completa dos IDs e seus tópicos de destino está em `docs/DECISOES_RASTREABILIDADE_QUESTOES.md`.
 
-1. Restam 96 questões com referência apenas à unidade. As 12 questões M1 anteriormente nesse estado foram associadas a subtópicos após revisão de seus enunciados e assuntos; a execução posterior confirmou a redução de 108 para 96.
-2. Revisar e, quando a evidência do conteúdo permitir, associar as 96 questões restantes ao tópico mais específico. Não alterar gabaritos nem conteúdo técnico apenas para satisfazer o mapeamento.
-3. Revisar os tópicos marcados sem questão direta; a ausência de associação é um sinal para revisão, não prova automática de que não haja cobertura indireta.
-4. A matriz CSV detalhada é gerada por `node scripts/audit_learning_assets.mjs` e está no artefato `curriculum-audit-reports`. O script pode regenerá-la na raiz do repositório.
-5. Esta auditoria é estrutural. Não certifica qualidade pedagógica, correção de gabaritos, atualidade de fontes, comportamento em navegador, acessibilidade ou compatibilidade integral com `file://`.
+## Revisão qualitativa de legislação
+
+A consulta direta a fontes oficiais revelou que a Lei nº 15.352/2026 alterou a denominação institucional para **Agência Nacional de Proteção de Dados (ANPD)**. Também foram corrigidas questões com referência constitucional imprecisa, direitos da LGPD apresentados sem limites, descrição excessivamente ampla da LAI e confusão entre direitos do titular e responsabilidades dos agentes de tratamento.
+
+As questões atualizadas são q-m4-34, q-m4-35, q-m4-36, q-m4-37, q-m4-40, q-m4-41 e q-m4-43. A evidência e as URLs primárias estão em `referencias/referencias-verificadas.md`.
 
 ## Critérios de validação executados
 
-Na execução indicada acima, passaram:
-- `node --check` em todos os arquivos JavaScript de `apostila-ia/assets`;
-- `scripts/audit_curriculum_matrix.mjs`;
-- `scripts/audit_learning_assets.mjs`;
-- `verificacao/verificar-estrutura.js`, com **0 falhas estruturais**.
+Na execução aprovada acima:
+- `node --check` passou para os arquivos JavaScript em `apostila-ia/assets`;
+- `scripts/audit_curriculum_matrix.mjs` passou;
+- `scripts/audit_learning_assets.mjs` passou, com 132 tópicos, 460 flashcards, 365 questões, 0 referências somente à unidade e 0 referências desconhecidas;
+- `verificacao/verificar-estrutura.js` passou, com 0 falhas estruturais;
+- Playwright/Chromium headless abriu a aplicação via `file://`, renderizou 8 módulos, 460 flashcards, 365 questões, 5 SVGs e os contêineres dos 6 simuladores, validou round-trip de `localStorage` e não registrou exceções JavaScript.
 
-A validação de navegador real e a revisão semântica independente permanecem pendentes.
+## Limitações e próximos passos
+
+1. Revisar qualitativamente os 365 enunciados, gabaritos, justificativas, distratores e fontes. O mapeamento estrutural não equivale à aprovação semântica.
+2. Criar ou revisar questões específicas para os 36 tópicos sem questão diretamente associada.
+3. Validar interações completas dos simuladores, backup/importação, navegação por teclado, leitores de tela, WCAG 2.1 AA e Service Worker em HTTP/HTTPS.
+4. Revisar as referências legais e técnicas do projeto diante de alterações normativas recentes.

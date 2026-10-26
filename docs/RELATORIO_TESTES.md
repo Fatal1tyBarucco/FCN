@@ -240,3 +240,15 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Execução de validação incluindo Playwright/Chromium: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246710464 — **success**.
 - Auditoria estrutural pós-correção: 132 tópicos; 460 flashcards; 365 questões; 96 referências apenas em nível de unidade; 0 referências sem associação curricular reconhecível.
 - Smoke test `file://`: 8 módulos renderizados, 460 flashcards, 365 questões, 5 SVGs, 6 simuladores com UI, `localStorage` round-trip e 0 exceções JavaScript.
+
+
+## Revalidação do lote de rastreabilidade e revisão legal — 2026-10-26
+
+- Commit testado: `f6a536314e88f5aeafa4fa29bf03679ca84bb7ac`.
+- Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902 — **success**.
+- `node --check` em todos os JavaScript de `apostila-ia/assets`: passou.
+- `scripts/audit_curriculum_matrix.mjs`: passou.
+- `scripts/audit_learning_assets.mjs`: 132 tópicos, 460 flashcards, 365 questões, 0 questões unit-only e 0 referências desconhecidas.
+- `verificacao/verificar-estrutura.js`: passou, 0 falhas estruturais.
+- Playwright/Chromium headless em `file://`: PASS; 8 módulos, 460 flashcards, 365 questões, 5 SVGs, UI dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
+- Escopo não coberto: correção semântica completa de todas as questões, auditoria WCAG independente, dispositivos físicos e registro/offline do Service Worker via HTTP/HTTPS.

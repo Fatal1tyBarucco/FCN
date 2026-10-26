@@ -119,3 +119,18 @@ A matriz em `docs/MATRIZ_COBERTURA.csv` contém somente agregados por módulo; a
 A matriz docs/MATRIZ_COBERTURA.csv foi expandida para uma linha por subtópico detectado nos oito arquivos curriculares. O processamento remoto identificou 295 IDs de subtópicos, distribuídos em M1=37, M2=52, M3=35, M4=39, M5=35, M6=46, M7=23 e M8=28. A contagem textual detectou 888 exemplos e 592 exercícios. A inspeção dos arquivos de flashcards encontrou 460 IDs, todos únicos dentro do conjunto; a inspeção dos arquivos de questões encontrou 365 IDs, todos únicos dentro do conjunto.
 
 Esses números descrevem uma auditoria estrutural dos arquivos remotos. Não comprovam originalidade, correção técnica, qualidade didática, análise completa dos distratores, validade atual de fontes nem funcionamento de interface. O script reprodutível scripts/audit_curriculum_matrix.mjs foi adicionado ao repositório, mas **ainda não foi executado localmente nesta execução**; sua execução e comparação do resultado permanecem pendentes.
+
+
+---
+
+## Snapshot estrutural revalidado — 2026-10-26
+
+Este bloco substitui as contagens anteriores apenas para o estado corrente do branch; as anotações históricas acima permanecem como registros da inspeção anterior.
+
+- 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos e 427 nós curriculares.
+- 888 exemplos e 592 exercícios detectados estruturalmente nos arquivos curriculares; a contagem não equivale à revisão pedagógica.
+- 460 flashcards e 365 questões autorais.
+- 6 simuladores com UI e 5 gráficos SVG.
+- Auditoria de rastreabilidade: 365/365 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas.
+- Evidência de validação técnica: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902.
+- Estado pedagógico: revisão semântica independente e revisão integral de gabaritos/fontes ainda pendentes.
