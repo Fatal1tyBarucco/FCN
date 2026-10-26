@@ -431,7 +431,7 @@ const moduleQuestions5 = [
     },
     regra: "No desbalanceamento, use métricas por classe e mantenha reamostragem dentro do treino; avalie em dados representativos e isolados.",
     pegadinha: "Oversampling ou SMOTE antes da divisão pode causar vazamento; não altere a distribuição do teste para inflar métricas.",
-    fonte: "Chawla et al., SMOTE: Synthetic Minority Over-sampling Technique (2002): https://doi.org/10.1613/jair.953; scikit-learn, Imbalanced datasets: https://scikit-learn.org/stable/modules/cross_validation.html."
+    fonte: "Chawla et al., SMOTE: Synthetic Minority Over-sampling Technique (2002): https://doi.org/10.1613/jair.953; imbalanced-learn, Common pitfalls and recommended practices: https://imbalanced-learn.org/stable/common_pitfalls.html."
   },
 
   { id: "q-m5-18", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
