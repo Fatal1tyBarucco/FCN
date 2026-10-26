@@ -2807,7 +2807,7 @@ id: "q-m1-09",
     alternativas: [
       { letra: "A", texto: "POP3, porque sincroniza o estado das mensagens no servidor para todos os dispositivos." },
       { letra: "B", texto: "IMAP, porque mantém as mensagens sincronizadas no servidor e no cliente, permitindo acesso multi-dispositivo." },
-      { letra: "C", texto: "POP3, porque sincroniza o estado das mensagens no servidor para todos os dispositivos." },
+      { letra: "C", texto: "POP3, porque mantém cópia permanente no servidor e nunca apaga as mensagens baixadas." },
       { letra: "D", texto: "SMTP, porque é o protocolo de recebimento que sincroniza as caixas entre os dispositivos." }
     ],
     gabarito: "B",
