@@ -2119,7 +2119,7 @@ id: "q-m1-09",
     alternativas: [
       { letra: "A", texto: "Microsoft Teams, pela colaboração contínua em canais." },
       { letra: "B", texto: "Google Meet, pela simplicidade de uso em navegador." },
-      { letra: "C", texto: "Zoom Webinars, com capacidade licenciada para 500 participantes e licença elegível para salas paralelas de webinar (por exemplo, Zoom Webinars Plus ou Zoom Events, conforme a modalidade contratada)." },
+      { letra: "C", texto: "Zoom Webinars, com capacidade licenciada para 500 participantes e licença elegível para salas paralelas de webinar (por exemplo, Zoom Webinars Plus Unlimited, Zoom Webinars Plus Pay Per Attendee ou Zoom Events Unlimited, conforme a modalidade contratada)." },
       { letra: "D", texto: "Qualquer plataforma é equivalente — todas têm os mesmos recursos." }
     ],
     gabarito: "C",
