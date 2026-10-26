@@ -822,6 +822,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Revisão focal sem alteração de conteúdo neste lote. Fontes citadas incluem OECD, Russell & Norvig, Mitchell, scikit-learn, Google ML Crash Course, literatura XAI e NIST AI RMF.
 - Validação automatizada do HEAD atualizado ainda deve ser confirmada.
 
+## Revisão focal de q-m5-11..q-m5-20 (2026-10-26)
+
+- q-m5-11..q-m5-15: revisados paradigmas supervisionado/não supervisionado/reforço, classificação versus regressão, agrupamento versus redução de dimensionalidade, rótulos/atributos/alvo e vazamento de dados. Sem alteração de conteúdo.
+- q-m5-16..q-m5-20: revisadas métricas de classificação, desbalanceamento, MAE/RMSE, engenharia de atributos e acurácia enganosa em classe rara. Sem alteração de conteúdo.
+- Os itens explicitam que o teste deve permanecer independente, que reamostragem deve ocorrer apenas no treino, que atributos precisam existir no momento real da previsão e que métricas devem refletir os custos dos erros.
+- Fontes referenciadas incluem Murphy, ISL, scikit-learn, imbalanced-learn, NIST AI RMF e literatura sobre precisão/recall em dados desbalanceados.
+- Revisão focal; validação automatizada do HEAD final permanece necessária.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
