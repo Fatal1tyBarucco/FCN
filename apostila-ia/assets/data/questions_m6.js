@@ -166,7 +166,7 @@ const moduleQuestions6 = [
     },
     regra: "Critério oculto = violação simultânea de impessoalidade e publicidade; o critério de decisão é informação pública.",
     pegadinha: "A alternativa E explora a confusão entre discricionariedade e arbitrariedade — a mais clássica das provas de administrativo.",
-    fonte: "CF/88, art. 37, caput; Lei nº 12.527/2011, arts. 3º, V, e 7º, V; Lei nº 14.129/2021, art. 3º, IV e VII (verificados em 2026-10-21)."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 12.527/2011 (LAI), arts. 3º, V, e 7º, V: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Lei nº 14.129/2021, art. 3º, IV e VII: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   { id: "q-m6-07", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -191,7 +191,7 @@ const moduleQuestions6 = [
     },
     regra: "LGPD alcança o poder público (art. 1º); o órgão é agente de tratamento e responde por segurança (art. 46) e pelos direitos do titular (arts. 17 e 18).",
     pegadinha: "Cuidado com 'consentimento é a única base': no setor público, outras hipóteses legais coexistem — e a LAI soma-se à LGPD, não é afastada por ela.",
-    fonte: "Lei nº 13.709/2018, arts. 1º, 5º (I, II, V, VI), 17, 18 e 46 (verificado em 2026-10-20); Lei nº 14.129/2021, art. 1º, parágrafo único (2026-10-21)."
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 1º, 5º, 17, 18 e 46, texto oficial compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Lei nº 14.129/2021, art. 1º, parágrafo único: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   { id: "q-m6-08", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -216,7 +216,7 @@ const moduleQuestions6 = [
     },
     regra: "A interface é parte do serviço: espaço institucional não é espaço comercial, e finalidade declarada deve coincidir com a finalidade real.",
     pegadinha: "A alternativa C explora o argumento 'é só um banner, o usuário pode fechar' — consentimento de navegação não sana desvio de finalidade.",
-    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, art. 3º, XVII (verificado em 2026-10-21)."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 14.129/2021, art. 3º, XVII: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   /* ---- 6.2 Transparência: LAI e Lei de Governo Digital (11) ---- */
@@ -243,7 +243,7 @@ const moduleQuestions6 = [
     },
     regra: "Ativa = divulgação de ofício (art. 8º); passiva = resposta a pedido (art. 10 e art. 11).",
     pegadinha: "A alternativa A é a definição correta de outro instituto: trocar o rótulo é a pegadinha mais comum do tema.",
-    fonte: "Lei nº 12.527/2011, art. 8º, caput, § 1º e § 2º (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 8º, caput e §§ 1º e 2º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-10", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -268,7 +268,7 @@ const moduleQuestions6 = [
     },
     regra: "Painel do art. 22: solicitações em andamento e concluídas, tempo médio e satisfação; indicador parcial produz diagnóstico falso.",
     pegadinha: "Métrica correta com recorte conveniente engana: 'tempo médio das concluídas no prazo' não mede o serviço, mede o subconjunto que se quer mostrar.",
-    fonte: "Lei nº 14.129/2021, arts. 3º, XVI, 14 e 22 (verificado em 2026-10-21)."
+    fonte: "Lei nº 14.129/2021, arts. 3º, XVI, 14 e 22, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   { id: "q-m6-11", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
