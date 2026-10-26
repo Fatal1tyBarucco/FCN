@@ -710,6 +710,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo para q-m6-37: `d56fa380a1baf74f06727a68df860c20e403dfaf`; fonte adicional q-m6-36: `727187151585d8f871c2be1d9096695f1926772e`.
 - Revisão focal; confirmar CI no HEAD mais recente.
 
+## Auditoria semântica incremental — lote M7 q-m7-01 a q-m7-15 (2026-10-26)
+
+- q-m7-01 a q-m7-05: revisão focal do modelo DIKW, distinguindo dado bruto, informação contextualizada, conhecimento com experiência/julgamento e sabedoria como discernimento; mantidas as ressalvas de que volume, estrutura e catálogo não produzem sabedoria automaticamente.
+- q-m7-06 a q-m7-10: revisados códigos qualitativos nominais, dados estruturados/semiestruturados/não estruturados, metadados de negócio, escala ordinal e linhagem versus catálogo. A numeração dos IDs reflete a ordem histórica de criação; o conteúdo está agrupado por tópico no arquivo.
+- q-m7-11 a q-m7-15: revisadas validade, acurácia, completude e consistência; mantida a distinção entre conformidade interna a regras e correspondência externa com a realidade.
+- q-m7-14 foi corrigida: o exemplo anterior comparava 2,0 m com 200 cm, valores equivalentes, e por isso não demonstrava inconsistência. O cenário agora compara 2,0 m com 220 cm para o mesmo objeto/momento e distingue a divergência entre fontes da avaliação de acurácia contra referência externa.
+- Commit de conteúdo q-m7-14: `97dafec342847bbc805d9fd17c1ab63042830a99`.
+- As definições DIKW e as categorias de metadados citam o currículo do M7 como fonte didática; a revisão não as apresenta como taxonomia universal obrigatória.
+- Revisão focal; validar os dados e os workflows no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
