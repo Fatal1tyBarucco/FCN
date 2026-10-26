@@ -2105,7 +2105,7 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: consentimento genérico e permanente sem finalidade/prazo contraria a lógica descrita (definição de finalidade, prazo de retenção, direito de acesso e exclusão)."
     },
     regra: "Governança de gravação: finalidade → consentimento → quem/grava/onde/retém → controle de acesso → compartilhamento → proteção → exclusão.",
-    pegadinha: "A alternativa D é a 'confortável': consentimento único soa profissional, mas sem finalidade e prazo ela viola o próprio exemplo de aplicação do módulo — a FCC cobra a política completa."
+    pegadinha: "A alternativa D é a 'confortável': consentimento único soa profissional, mas sem finalidade e prazo ela viola o próprio exemplo de aplicação do módulo — a FCC cobra a política completa.",
     fonte: "Currículo M3, unidade 2, tópico 3; Lei nº 13.709/2018 (LGPD), arts. 6º, 9º e 46.",
   },
   {
@@ -2128,7 +2128,7 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: atribuir ao art. 46 direitos do titular (que são do art. 18, também verificado) ou fundamentos (art. 2º). Cada artigo tem objeto próprio — confira o dispositivo citado."
     },
     regra: "LGPD — Lei 13.709/2018 (art. 46): obrigatoriedade de medidas de segurança técnicas e administrativas pelos agentes de tratamento. Referência primária: planalto.gov.br (verificado em 2026-10-20).",
-    pegadinha: "Em questões jurídicas, a pegadinha é a REFORMULAÇÃO que altera o sentido (trocar 'agentes de tratamento' por 'titulares', ou 'medidas de segurança' por 'consentimento'). Aqui o item transcreve o dispositivo sem trocas — logo, Certo."
+    pegadinha: "Em questões jurídicas, a pegadinha é a REFORMULAÇÃO que altera o sentido (trocar 'agentes de tratamento' por 'titulares', ou 'medidas de segurança' por 'consentimento'). Aqui o item transcreve o dispositivo sem trocas — logo, Certo.",
     fonte: "Lei nº 13.709/2018 (LGPD), art. 46 — medidas de segurança técnicas e administrativas.",
   },
   {
@@ -3092,7 +3092,7 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: crer que 'o anfitrião pode gravar' implica 'gravar sem jamais informar' — o exemplo 'erro' do currículo corrige que a LGPD/Marco Civil podem exigir consentimento."
     },
     regra: "Anfitrião grava (vídeo/áudio/chat) e aplica proteções (senha, lobby, bloqueio); gravação com dados pessoais pode exigir consentimento (LGPD/Marco Civil) — informar sempre os participantes.",
-    pegadinha: "A armadilha é o absolutismo 'o anfitrião decide tudo sobre a gravação': a competência técnica de gravar não elimina a obrigação de consentimento quando há dados pessoais."
+    pegadinha: "A armadilha é o absolutismo 'o anfitrião decide tudo sobre a gravação': a competência técnica de gravar não elimina a obrigação de consentimento quando há dados pessoais.",
     fonte: "Currículo M3, unidade 4, tópico 3; Lei nº 13.709/2018 (LGPD), arts. 6º e 46.",
   },
   {
