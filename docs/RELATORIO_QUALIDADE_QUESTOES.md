@@ -19,13 +19,13 @@ Distribuição do gabarito nas 314 questões de múltipla escolha:
 
 | Letra correta | Quantidade |
 |---|---:|
-| A | 149 |
+| A | 145 |
 | B | 129 |
-| C | 26 |
-| D | 5 |
-| E | 5 |
+| C | 27 |
+| D | 6 |
+| E | 7 |
 
-As 24 questões novas foram balanceadas em suas posições corretas (A=4, B=5, C=5, D=5, E=5), sem alterar o texto das respostas ou as análises. O banco completo ainda apresenta concentração em A/B: essas letras representam 88,5% das 314 questões de múltipla escolha. Isso pode tornar o padrão previsível e exige revisão editorial do banco legado. A distribuição não prova que as respostas individuais estejam incorretas, mas é uma fragilidade de desenho de avaliação.
+As 24 questões novas foram balanceadas em suas posições corretas (A=4, B=5, C=5, D=5, E=5), sem alterar o texto das respostas ou as análises. O banco completo ainda apresenta concentração em A/B: essas letras representam 87,3% das 314 questões de múltipla escolha. Isso pode tornar o padrão previsível e exige revisão editorial do banco legado. A distribuição não prova que as respostas individuais estejam incorretas, mas é uma fragilidade de desenho de avaliação.
 
 **Ação recomendada:** revisar manualmente cada questão e, quando necessário, reorganizar as alternativas sem alterar a resposta correta, a análise individual nem as justificativas que mencionam letras. Não reequilibrar o gabarito automaticamente sem preservar essas relações.
 
@@ -46,10 +46,10 @@ A matriz completa por questão está disponível no artefato `curriculum-audit-r
 | M4 | 38 | 43 | 3 | 0 | 0 | 84 |
 | M5 | 24 | 13 | 1 | 0 | 0 | 38 |
 | M6 | 30 | 0 | 0 | 0 | 0 | 30 |
-| M7 | 33 | 0 | 0 | 0 | 0 | 33 |
+| M7 | 29 | 0 | 1 | 1 | 2 | 33 |
 | M8 | 10 | 25 | 1 | 0 | 0 | 36 |
 
-A auditoria recomenda revisão manual de posições em M1, M4, M5, M6, M7 e M8. Em M6 e M7, todas as questões de múltipla escolha têm gabarito A; em M4, M5 e M8, a concentração em A/B também é extrema. O lote de 24 questões novas foi balanceado, mas isso não corrige automaticamente o banco legado.
+A auditoria recomenda revisão manual de posições em M1, M4, M5, M6, M7 e M8. Em M6, todas as questões de múltipla escolha têm gabarito A; em M7, o lote controlado reduziu a concentração para A=29/33; em M4, M5 e M8, a concentração em A/B também é extrema. O lote de 24 questões novas foi balanceado, mas isso não corrige automaticamente o banco legado.
 
 Evidência e matriz heurística gerada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
 
@@ -71,7 +71,7 @@ A auditoria heurística não avalia se cada artigo citado sustenta a afirmação
 - Gabarito atualizado para E; análises A/E remapeadas para manter a correspondência entre alternativa e rótulo CORRETA/INCORRETA.
 - Enunciado, contexto, justificativa conceitual, regra, pegadinha e fonte foram preservados.
 - O piloto é intencionalmente limitado a uma questão. Expandir a permutação somente após CI confirmar a integridade estrutural e após revisar referências a letras dentro de justificativas.
-- Distribuição esperada do M7 após o piloto: A=32, E=1 nas 33 questões de múltipla escolha contabilizadas no relatório anterior. Reexecutar a auditoria para confirmar.
+- A auditoria posterior confirmou o piloto: a distribuição de M7 após `q-m7-01` e o lote seguinte é A=29, B=0, C=1, D=1, E=2 nas 33 questões de múltipla escolha.
 
 
 ## Balanceamento editorial controlado — segundo lote M7 — 2026-10-26
@@ -80,5 +80,14 @@ A auditoria heurística não avalia se cada artigo citado sustenta a afirmação
 - Em cada questão, a alternativa correta e sua análise foram movidas juntas; o texto da resposta, o enunciado, o contexto, a justificativa, a regra, a pegadinha e a fonte foram preservados.
 - As alternativas foram reordenadas no array pela letra A–E para manter a ordem de apresentação.
 - A inspeção dos três blocos não encontrou referências explícitas a letras nas justificativas. Isso não substitui revisão pedagógica do conteúdo.
-- Somando o piloto anterior (`q-m7-01`, A→E), a distribuição esperada para as 33 questões MC de M7 passa a A=29, B=0, C=1, D=1, E=2. A distribuição efetiva e a integridade estrutural dependem da execução de CI após este commit.
+- Somando o piloto anterior (`q-m7-01`, A→E), a distribuição esperada para as 33 questões MC de M7 passa a A=29, B=0, C=1, D=1, E=2. A execução de CI no HEAD `4df80216f1b0e6f20329a5345468ad56074f8abd` confirmou a integridade estrutural e a distribuição efetiva.
 - O balanceamento segue sendo parcial: não foram alterados gabaritos conceituais, apenas posições de alternativas.
+
+
+## Revalidação do lote M7 — HEAD `4df80216f1b0e6f20329a5345468ad56074f8abd`
+
+- [CI do PR](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254853715) e [CI do push](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254851951): **success**.
+- Sintaxe validada em 39 arquivos JavaScript; auditorias estruturais e heurísticas concluídas; smoke test Playwright/Chromium em `file://` aprovado, sem erros de página.
+- Contagens confirmadas pelo artefato `curriculum-audit-reports`: 132 tópicos reconhecidos, 460 flashcards e 389 questões. A auditoria heurística identificou 0 IDs duplicados, 0 pares idênticos de contexto/enunciado e 0 alertas; isso não equivale a validação semântica.
+- Distribuição MC atualizada: A=145, B=129, C=27, D=6, E=7; A/B representam 87,3% das 314 questões MC. M7: A=29, B=0, C=1, D=1, E=2 (33 MC). M6 continua A=30/30.
+- Artefato com matrizes CSV e relatórios: `curriculum-audit-reports`, gerado na execução de CI do PR.
