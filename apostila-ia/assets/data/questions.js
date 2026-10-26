@@ -1219,7 +1219,7 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: premissa falsa — toda comunicação em rede passa por algum modelo de comutação; o currículo classifica a Internet explicitamente."
     },
     regra: "Comutação de circuitos (caminho dedicado, antes da fala) × comutação de pacotes (divisão e roteamento independente, após a fala).",
-    pegadinha: "A alternativa C é a 'sofisticada': circuito VIRTUAL parece conciliar os dois — mas no currículo ela é exempificação de outro protocolo (MPLS/Frame Relay), não da Internet."
+    pegadinha: "A alternativa C tenta confundir com caminhos lógicos predefinidos em algumas tecnologias. Isso não transforma o encaminhamento IP da Internet em comutação clássica de circuitos; MPLS usa caminhos comutados por rótulos e não deve ser tratado como circuito telefônico dedicado."
   },
   {
     id: "q-m2-14",
@@ -1263,12 +1263,12 @@ id: "q-m1-09",
     alternativas: null,
     gabarito: "errado",
     trechoDeterminante: "O trecho que torna o item FALSO é 'sempre seguem o mesmo caminho': na comutação de pacotes, cada pacote é roteado independentemente e pode seguir caminhos diferentes — o caminho lógico predefinido é característica de circuitos virtuais (Frame Relay, MPLS).",
-    justificativa: "O exemplo 'erro' do currículo: 'Incorreto. Na comutação de pacotes (como na Internet), cada pacote é roteado independentemente e pode seguir caminhos diferentes. Na comutação de circuitos virtuais (Frame Relay, MPLS), há um caminho lógico predefinido.' A observação do cenário (chegada desordenada) é a consequência natural desse roteamento independente.",
+    justificativa: "O exemplo 'erro' do currículo: 'Incorreto. Na comutação de pacotes IP, os datagramas podem seguir caminhos diferentes conforme as decisões de roteamento. Algumas tecnologias, como Frame Relay e MPLS, podem estabelecer caminhos lógicos de encaminhamento; isso não as torna equivalentes à comutação clássica de circuitos.' A observação do cenário (chegada desordenada) é a consequência natural desse roteamento independente.",
     analise: {
       item: "Item FALSO. O advérbio 'sempre' contradiz o roteamento independente por pacote; a ordenação no destino é justamente uma das desvantagens listadas (necessidade de reordenação).",
       leituraIncorreta: "Leitura que induz ao erro: confundir sessão/conexão TCP (comunicacionalmente contínua) com caminho de encaminhamento dos pacotes — continuidade lógica não implica rota física única."
     },
-    regra: "Encaminhamento stateless por pacote × circuito virtual com caminho lógico predefinido; reordenação é responsabilidade das camadas superiores quando necessário.",
+    regra: "Encaminhamento IP por pacote pode variar; caminhos lógicos de tecnologias como MPLS/Frame Relay são outra forma de organizar o encaminhamento, não comutação clássica de circuitos. A reordenação, quando ocorre, deve ser tratada pelo protocolo ou aplicação apropriados.",
     pegadinha: "A palavra 'sempre' é o gatilho; mas atenção — o item só cai por causa dela: se fosse 'cada pacote é roteado independentemente', seria Certo. Identifique o modificador, não a impressão geral."
   },
   {
@@ -1337,16 +1337,16 @@ id: "q-m1-09",
     topico: "m2-u1-t2-s1",
     assunto: "M2.1 Comunicação — unicast, broadcast, multicast e anycast",
     contexto: "Servidor de streaming corporativo entrega um fluxo de vídeo a estações que demonstraram interesse em recebê-lo.",
-    enunciado: "No multicast, o receptor precisa inscrever-se em um grupo para receber o tráfego, gerenciamento realizado por meio do protocolo IGMP.",
+    enunciado: "Em redes IPv4, a associação de receptores a grupos multicast é gerenciada por IGMP; em IPv6, a função correspondente é realizada por MLD.",
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o receptor precisa inscrever-se em um grupo para receber o tráfego, gerenciamento realizado por meio do protocolo IGMP'.",
-    justificativa: "O currículo define multicast como 'um-para-muitos (grupo específico que se inscreveu)' e afirma que 'multicast usa IGMP para gerenciamento de grupo'; o exercício registrado responde 'Certo. O receptor envia IGMP join para receber tráfego multicast'.",
+    justificativa: "Em IPv4, multicast permite que receptores se associem a grupos e o IGMP gerencia essa associação. Em IPv6, o protocolo correspondente é MLD. O item é correto porque delimita explicitamente o uso de IGMP a redes IPv4.",
     analise: {
       item: "Item VERDADEIRO. Inscrição no grupo e papel do IGMP constam tanto do conteúdo quanto do exercício do currículo.",
       leituraIncorreta: "Leitura que induz ao erro: confundir com broadcast, que é enviado a todos sem inscrição — a distinção central é o JOIN (participação opt-in)."
     },
-    regra: "Multicast: envio único replicado apenas nos pontos de ramificação; participação opt-in gerenciada por IGMP (IP de camada 3).",
+    regra: "Multicast: envio para um grupo; em IPv4, IGMP gerencia associação de membros; em IPv6, MLD desempenha função correspondente. A rede replica o tráfego nos pontos necessários.",
     pegadinha: "O item combina conceito (inscrição) e protocolo (IGMP) — quem decora só um dos dois relê e decide Errado; leia cláusula a cláusula."
   },
   {
