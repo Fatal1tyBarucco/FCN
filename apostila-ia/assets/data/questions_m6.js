@@ -930,17 +930,17 @@ const moduleQuestions6 = [
 
   { id: "q-m6-40", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "avancado", topico: "m6-u6-t2-s2", assunto: "6.6 — Estudo de caso: transparência administrativa incompleta",
-    contexto: "O portal de transparência publica a estrutura organizacional, mas não traz resultados de licitações nem contratos do exercício corrente; o conjunto de dados abertos não é atualizado há 18 meses. O órgão afirma que cumpre a LAI porque responde pedidos em 20 dias.",
+    contexto: "O portal de transparência publica a estrutura organizacional, mas não traz resultados de licitações nem contratos do exercício corrente. O catálogo de dados abertos não registra atualização há 18 meses, embora tenham ocorrido novas licitações e contratos no período. O órgão afirma que cumpre a LAI porque responde pedidos em 20 dias.",
     enunciado: "A afirmação do órgão é",
     alternativas: [
-      { letra: "A", texto: "incorreta: o art. 8º, § 1º, IV, exige divulgação de licitações, inclusive resultados, e de todos os contratos, e o § 3º, VI, exige manutenção atualizada; atender pedidos não supre o dever de divulgação de ofício." },
+      { letra: "A", texto: "incorreta: o art. 8º, § 1º, IV, da LAI exige divulgação de informações sobre procedimentos licitatórios, inclusive editais e resultados, e sobre todos os contratos celebrados; o § 3º, VI, exige manter atualizadas as informações disponíveis. Atender pedidos não substitui a divulgação de ofício." },
       { letra: "B", texto: "correta, pois a LAI exige apenas resposta a pedidos de acesso." },
       { letra: "C", texto: "correta, pois a atualização dos dados publicados é facultativa." },
       { letra: "D", texto: "incorreta apenas quanto ao prazo de resposta, que deveria ser de 48 horas." },
       { letra: "E", texto: "correta, desde que o órgão publique anualmente o rol de informações classificadas." }
     ],
     gabarito: "A",
-    justificativa: "O art. 8º, § 1º, IV, exige informações concernentes a procedimentos licitatórios, inclusive editais e resultados, e a todos os contratos celebrados; o § 3º, VI, exige manutenção atualizada das informações. A Lei nº 14.129/2021, art. 29, § 1º, VI, exige atualização periódica com histórico. Transparência ativa e passiva são cumulativas: responder pedidos não sana a omissão de divulgação de ofício. A alternativa D erra o prazo (o art. 11 da LAI fixa 20 dias, prorrogáveis por 10) e não enfrenta a omissão principal; E trata de dever diverso (art. 30 da LAI) e não supre o § 1º, IV.",
+    justificativa: "A LAI determina a divulgação de ofício, no mínimo, das informações sobre procedimentos licitatórios — inclusive editais e resultados — e de todos os contratos celebrados (art. 8º, § 1º, IV); também exige manter atualizadas as informações disponibilizadas no sítio (art. 8º, § 3º, VI). O cenário registra licitações e contratos novos sem divulgação e ausência prolongada de atualização do catálogo, não apenas uma periodicidade abstrata. A Lei nº 14.129/2021, art. 29, § 1º, VI, prevê atualização periódica com histórico para os órgãos e entidades abrangidos por seu âmbito de aplicação. Transparência ativa e passiva são cumulativas: responder pedidos não sana a omissão de divulgação de ofício. A alternativa D erra o prazo: o art. 11 da LAI prevê até 20 dias, prorrogáveis por mais 10 mediante justificativa expressa; E trata do dever distinto do art. 30 e não supre a omissão descrita.",
     analise: {
       A: "CORRETA. Aponta os dois dispositivos descumpridos e a independência entre transparência ativa e passiva.",
       B: "INCORRETA. Erro conceitual: a LAI impõe também o dever de divulgar de ofício.",
@@ -950,7 +950,7 @@ const moduleQuestions6 = [
     },
     regra: "Portal em conformidade: rol do art. 8º, § 1º, completo, requisitos do § 3º (inclusive atualização) e dados abertos atualizados com histórico.",
     pegadinha: "Órgão que 'responde bem aos pedidos' mas não publica cria a aparência de conformidade — a prova cobra justamente a distinção.",
-    fonte: "Lei nº 12.527/2011, art. 8º, § 1º, IV, e § 3º, VI, e art. 30; Lei nº 14.129/2021, art. 29, § 1º, VI (verificados em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011, arts. 8º, § 1º, IV, § 3º, VI, 11 e 30 (texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm); Lei nº 14.129/2021, art. 29, § 1º, VI, observada a aplicabilidade definida no art. 2º (texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm)."
   },
   {
     id: "q-m6-41", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
