@@ -537,12 +537,12 @@ const moduleQuestions4 = [
       D: "INCORRETA. Logotipos podem ser copiados e não autenticam a origem.",
       E: "INCORRETA. Mensagens fraudulentas podem ser bem escritas e personalizadas."
     },
-    regra: "Phishing usa engano para induzir divulgação de dados, acesso a páginas falsas ou execução de ações maliciosas.",
-    pegadinha: "Logotipo, nome conhecido e texto bem escrito não provam autenticidade; verifique a solicitação por canal independente.",
-    fonte: "CISA, Recognize and Report Phishing: https://www.cisa.gov/secure-our-world/recognize-and-report-phishing."
+    regra: "Phishing usa engano para induzir divulgação de dados, acesso a páginas falsas ou execução de ações.",
+    pegadinha: "Não dependa de erros ortográficos ou da aparência visual; confirme solicitações sensíveis por canal independente.",
+    fonte: "CISA, Avoiding Social Engineering and Phishing Attacks: https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks."
   },
 
-  { id: "q-m4-22", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s2", assunto: "4.3 — Pharming e resolução de nomes",
+{ id: "q-m4-22", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s2", assunto: "4.3 — Pharming e resolução de nomes",
     contexto: "Uma pessoa digita corretamente o endereço de um serviço conhecido, mas é direcionada a uma página fraudulenta por uma alteração indevida na resolução do nome ou na configuração do dispositivo.",
     enunciado: "Qual descrição é mais compatível com pharming?",
     alternativas: [
@@ -561,12 +561,12 @@ const moduleQuestions4 = [
       D: "INCORRETA. Filtro de spam é um controle defensivo.",
       E: "INCORRETA. Teste autorizado de capacidade não é pharming."
     },
-    regra: "Pharming redireciona a vítima para destino fraudulento por manipulação técnica, como alteração de resolução de nomes ou configurações locais.",
-    pegadinha: "A vítima pode digitar o endereço correto; o redirecionamento pode ocorrer sem depender de um link de phishing.",
-    fonte: "CISA, Secure Our World — Recognize and Report Phishing: https://www.cisa.gov/secure-our-world/recognize-and-report-phishing; ICANN, DNS Security: https://www.icann.org/resources/pages/dns-security-2019-03-05-en."
+    regra: "Pharming redireciona a vítima para destino fraudulento por manipulação de resolução ou configuração.",
+    pegadinha: "Phishing costuma induzir a vítima a interagir com conteúdo enganoso; pharming pode redirecioná-la por manipulação técnica.",
+    fonte: "CISA, Understanding and Responding to Distributed Denial-of-Service Attacks (contexto de segurança de rede): https://www.cisa.gov/news-events/news/understanding-and-responding-distributed-denial-service-attacks; NIST SP 800-81 Rev. 2 — Secure Domain Name System (DNS) Deployment Guide: https://csrc.nist.gov/pubs/sp/800/81/r2/final."
   },
 
-  { id: "q-m4-23", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s3", assunto: "4.3 — Engenharia social e verificação de solicitações",
+{ id: "q-m4-23", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s3", assunto: "4.3 — Engenharia social e verificação de solicitações",
     contexto: "Uma pessoa que se apresenta como suporte técnico pede a um servidor público que informe um código de autenticação de uso único para resolver uma suposta falha urgente.",
     enunciado: "Qual resposta aplica melhor uma defesa contra engenharia social?",
     alternativas: [
@@ -585,12 +585,12 @@ const moduleQuestions4 = [
       D: "INCORRETA. Urgência e linguagem profissional podem ser usadas para manipular a vítima.",
       E: "INCORRETA. Publicar o código expõe a credencial e amplia o risco."
     },
-    regra: "Contra engenharia social, verifique solicitações sensíveis por canal independente e nunca compartilhe códigos de autenticação.",
-    pegadinha: "Autoridade aparente, dados verdadeiros e urgência não autenticam a pessoa que fez o pedido.",
-    fonte: "CISA, Recognize and Report Phishing: https://www.cisa.gov/secure-our-world/recognize-and-report-phishing."
+    regra: "Confirme pedidos sensíveis por canal independente e nunca compartilhe códigos de autenticação.",
+    pegadinha: "Conhecimento de dados pessoais ou linguagem profissional não comprova identidade nem legitimidade.",
+    fonte: "CISA, Avoiding Social Engineering and Phishing Attacks: https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks."
   },
 
-  { id: "q-m4-24", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Força bruta e tentativas de autenticação",
+{ id: "q-m4-24", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Força bruta e tentativas de autenticação",
     contexto: "Um serviço observa tentativas automatizadas de adivinhar senhas. A equipe precisa diferenciar ataques online contra o serviço de tentativas offline contra hashes de senhas obtidos indevidamente.",
     enunciado: "Qual afirmação sobre força bruta e suas mitigações é correta?",
     alternativas: [
@@ -606,15 +606,15 @@ const moduleQuestions4 = [
       A: "CORRETA. A alternativa diferencia os cenários online e offline e associa controles adequados a cada um.",
       B: "INCORRETA. Autenticação sem senha é um mecanismo de autenticação, não um ataque de força bruta.",
       C: "INCORRETA. O atacante offline pode testar candidatos sem consultar o serviço online.",
-      D: "INCORRETA. Senhas não devem ser armazenadas em texto claro.",
-      E: "INCORRETA. Controles podem reduzir probabilidade e impacto, embora não eliminem todo risco."
+      D: "INCORRETA. Senhas não devem ser armazenadas em texto claro; detecção não justifica expor credenciais.",
+      E: "INCORRETA. Controles diferentes reduzem a viabilidade e o impacto, embora não garantam risco zero."
     },
-    regra: "Ataques online exigem controles de autenticação e detecção; ataques offline dependem também da resistência do armazenamento de senhas a adivinhação.",
-    pegadinha: "Limitar tentativas no site não impede que hashes roubados sejam atacados offline.",
-    fonte: "NIST SP 800-63B — Digital Identity Guidelines: https://pages.nist.gov/800-63-4/sp800-63b.html; OWASP Authentication Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html."
+    regra: "Ataques online exigem controles no serviço; ataques offline exigem armazenamento de senha resistente a tentativas e proteção do material obtido.",
+    pegadinha: "Limitar tentativas no login não protege, por si só, hashes de senha já roubados.",
+    fonte: "NIST SP 800-63B — Digital Identity Guidelines: Authentication and Lifecycle Management: https://pages.nist.gov/800-63-4/sp800-63b.html."
   },
 
-  { id: "q-m4-25", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Man-in-the-Middle e validação de identidade",
+{ id: "q-m4-25", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Man-in-the-Middle e validação de identidade",
     contexto: "Um usuário acessa um serviço por uma rede pública. Um atacante tenta intermediar a comunicação e apresentar um certificado inválido para se passar pelo servidor.",
     enunciado: "Qual medida ajuda a impedir que o cliente aceite um intermediário fraudulento?",
     alternativas: [
@@ -631,14 +631,14 @@ const moduleQuestions4 = [
       B: "CORRETA. A validação de identidade é essencial para evitar confiar em um intermediário fraudulento.",
       C: "INCORRETA. Firewall local não substitui a autenticação do servidor no canal.",
       D: "INCORRETA. Uma rede Wi-Fi protegida por senha não é necessariamente confiável.",
-      E: "INCORRETA. Criptografia sem validação correta de identidade pode proteger a conexão com o atacante."
+      E: "INCORRETA. Criptografia sem validação correta de identidade pode proteger um canal com o endpoint errado."
     },
-    regra: "Contra MitM, use protocolos seguros com validação correta de certificado e nome do servidor; não ignore alertas de identidade.",
-    pegadinha: "Criptografia protege o canal, mas sem autenticação correta o canal pode terminar no intermediário errado.",
-    fonte: "NIST SP 800-52 Rev. 2 — Guidelines for the Selection, Configuration, and Use of TLS Implementations: https://csrc.nist.gov/pubs/sp/800/52/r2/final; OWASP, Transport Layer Security Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html."
+    regra: "Criptografia de canal deve ser acompanhada de validação correta da identidade do servidor.",
+    pegadinha: "Criptografia sem validação do endpoint não garante que a conexão foi estabelecida com o servidor pretendido.",
+    fonte: "NIST SP 800-52 Rev. 2 — Guidelines for the Selection, Configuration, and Use of TLS Implementations: https://csrc.nist.gov/pubs/sp/800/52/r2/final."
   },
 
-  { id: "q-m4-26", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "avancado", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — DoS/DDoS e mitigação",
+{ id: "q-m4-26", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "avancado", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — DoS/DDoS e mitigação",
     contexto: "Um portal público fica indisponível durante um pico de requisições distribuídas provenientes de muitos dispositivos. A equipe precisa manter serviços essenciais acessíveis.",
     enunciado: "Qual resposta técnica inicial é mais adequada para um possível ataque de negação de serviço distribuído (DDoS)?",
     alternativas: [
