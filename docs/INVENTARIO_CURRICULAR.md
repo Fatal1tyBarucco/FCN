@@ -163,3 +163,26 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - Sete nós de síntese/revisão não têm questão exclusiva; não restam tópicos substantivos sem questão direta.
 - Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126.
 - Pendente: revisão semântica integral e auditoria independente de acessibilidade/interações.
+
+
+---
+
+## 5. Registro de orquestração — Fase 1 (2026-10-25)
+
+**Fonte normativa lida:** `Escrita.txt` no branch `main`, blob SHA `a7da4ad0c8905e2f7ece405dfe4a3b95518cbb76`. O prompt define oito módulos curriculares e critérios de aceite técnicos, pedagógicos e quantitativos. A árvore estrutural e as contagens abaixo são evidências de inventário, não aprovação semântica de todo o material.
+
+**Baseline confirmado pelos artefatos do PR #17:** 8 módulos; 37 unidades; 132 tópicos; 295 subtópicos (427 nós); 885 exemplos detectados; 590 exercícios detectados; 460 flashcards e 389 questões segundo a auditoria estrutural mais recente descrita no PR. Esses números diferem dos registros históricos de 404 flashcards/365 questões; prevalece a contagem do commit validado no PR após execução do workflow, e a divergência histórica não deve ser tratada como erro atual sem comparar o mesmo SHA e os mesmos arquivos.
+
+**Módulos obrigatórios:**
+1. Microsoft 365 e aplicações de escritório (Word, Excel, PowerPoint, OneDrive).
+2. Redes de computadores.
+3. Comunicação e colaboração.
+4. Segurança da informação e governança digital.
+5. Inteligência artificial.
+6. Ética e responsabilidade digital no serviço público.
+7. Fundamentos e engenharia de dados.
+8. Visualização, análise e storytelling com dados.
+
+**Regra de aceite curricular:** presença de objetivo/conteúdo/exemplos/exercícios na matriz não comprova profundidade, correção ou suficiência didática. A validação semântica e a revisão independente continuam sendo critérios separados.
+
+**Identificadores:** há formatos longos e compactos legados documentados na seção 4. Não renumerar IDs existentes em lote; qualquer normalização exige auditoria de referências cruzadas em questões, flashcards, progresso e navegação.
