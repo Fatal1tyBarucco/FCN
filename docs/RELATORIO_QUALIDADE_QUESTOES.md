@@ -62,3 +62,13 @@ A auditoria heurística também comparou os rótulos CORRETA/INCORRETA nas anál
 ## Limitação da revisão de fontes jurídicas — 2026-10-26
 
 A auditoria heurística não avalia se cada artigo citado sustenta a afirmação. A revisão manual encontrou cinco pendências no M6: q-m6-03, q-m6-29, q-m6-31, q-m6-32 e q-m6-38. Os ajustes de q-m6-02 e q-m6-06 foram aplicados e passaram na execução https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250565014. A revisão legal do módulo permanece aberta.
+
+
+## Balanceamento editorial controlado — piloto M7 — 2026-10-26
+
+- Questão alterada: `q-m7-01`.
+- A alternativa correta foi movida de A para E por troca apenas das posições de resposta “Dado” e “Metadado”.
+- Gabarito atualizado para E; análises A/E remapeadas para manter a correspondência entre alternativa e rótulo CORRETA/INCORRETA.
+- Enunciado, contexto, justificativa conceitual, regra, pegadinha e fonte foram preservados.
+- O piloto é intencionalmente limitado a uma questão. Expandir a permutação somente após CI confirmar a integridade estrutural e após revisar referências a letras dentro de justificativas.
+- Distribuição esperada do M7 após o piloto: A=32, E=1 nas 33 questões de múltipla escolha contabilizadas no relatório anterior. Reexecutar a auditoria para confirmar.
