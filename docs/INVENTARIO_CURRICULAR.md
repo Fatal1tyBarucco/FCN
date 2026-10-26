@@ -3,7 +3,7 @@
 Fonte de requisitos: `Escrita.txt` (prompt mestre), seções 1–4 e 6.
 Fonte de verdade do estado atual: código em `apostila-ia/assets/data/*.js`; contagens curriculares recontadas em 2026-10-26.
 Data de verificação do inventário: 2026-10-26.
-Estado real recontado em 2026-10-26: **8 módulos carregados, 132 tópicos + 295 subtópicos = 427 nós**, 885 exemplos e 590 exercícios na matriz estrutural; **460 flashcards e 396 questões autorais** nos arquivos de dados. Testes automatizados de UI e limitações estão documentados em `docs/RELATORIO_TESTES.md`.
+Estado real recontado em 2026-10-26: **8 módulos carregados, 132 tópicos + 295 subtópicos = 427 nós**, 885 exemplos e 590 exercícios na matriz estrutural; **460 flashcards e 399 questões autorais** nos arquivos de dados. Testes automatizados de UI e limitações estão documentados em `docs/RELATORIO_TESTES.md`.
 
 ---
 
@@ -129,7 +129,7 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 
 - 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos e 427 nós curriculares.
 - 888 exemplos e 592 exercícios detectados estruturalmente nos arquivos curriculares; a contagem não equivale à revisão pedagógica.
-- 460 flashcards e 396 questões autorais.
+- 460 flashcards e 399 questões autorais.
 - 6 simuladores com UI e 5 gráficos SVG.
 - Auditoria de rastreabilidade histórica: 365/365 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas.
 - Evidência de validação técnica: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902.
@@ -190,5 +190,5 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 
 ## Reconciliação de contagens — 2026-10-26
 
-Os arquivos de dados atuais foram recontados por identificadores únicos `q-mN-NN` em todos os bancos de questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40 e M8=40, totalizando **396 questões**. Os arquivos de flashcards contêm **460 itens** distribuídos em M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50. Essa contagem verifica IDs/itens presentes, não qualidade semântica, ausência de duplicidade conceitual ou rastreabilidade correta de cada item. O relatório de rastreabilidade precisa ser reexecutado no mesmo HEAD para validar as associações dos 396 itens de questão.
+Os arquivos de dados atuais foram recontados por identificadores únicos `q-mN-NN` em todos os bancos de questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40 e M8=40, totalizando **399 questões**. Os arquivos de flashcards contêm **460 itens** distribuídos em M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50. Essa contagem verifica IDs/itens presentes, não qualidade semântica, ausência de duplicidade conceitual ou rastreabilidade correta de cada item. O relatório de rastreabilidade precisa ser reexecutado no mesmo HEAD para validar as associações dos 396 itens de questão.
 
