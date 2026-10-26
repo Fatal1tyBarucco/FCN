@@ -307,3 +307,6 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 
 - [x] Corrigir as análises por alternativa das quatro questões M6 novas para que os distratores sejam explicados conforme o enunciado específico.
 - [ ] Fazer revisão semântica independente das sete questões novas e validar suas fontes e gabaritos; a aprovação estrutural não comprova correção pedagógica.
+
+- [x] Fazer triagem editorial dirigida das sete questões novas: enunciados, alternativas, gabaritos e análises coerentes na revisão realizada; detalhar os critérios de acessibilidade de PDF em q-m1-44.
+- [ ] Para questões que venham a afirmar regra jurídica/técnica específica, complementar a referência curricular interna com fonte externa oficial ou documentação primária e registrar data de consulta.
