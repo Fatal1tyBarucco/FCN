@@ -2560,8 +2560,7 @@ id: "q-m1-09",
     contexto: "Uma rede predial tem todos os computadores conectados a um switch central; a falha de um cabo afeta apenas o computador daquele cabo.",
     enunciado: "Sobre a topologia descrita, assinale a alternativa correta.",
     alternativas: [
-      { letra: "A", texto: "É topologia em anel: a falha de um nó quebra o círculo e derruba toda a rede.",
-      letra2: null },
+      { letra: "A", texto: "É topologia em anel: a falha de um nó quebra o círculo e derruba toda a rede." },
       { letra: "B", texto: "É topologia em estrela: a falha de um nó afeta apenas esse nó; a falha do dispositivo central (switch) derruba toda a rede." },
       { letra: "C", texto: "É topologia em barra (bus): a falha do switch é irrelevante e só a falha do cabo central derruba a rede." },
       { letra: "D", texto: "É topologia em malha: há um único dispositivo central e alta redundância por definição." }
