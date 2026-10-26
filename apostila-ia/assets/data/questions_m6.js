@@ -585,7 +585,7 @@ const moduleQuestions6 = [
     fonte: "Lei nº 12.527/2011, arts. 8º e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Lei nº 13.709/2018, arts. 6º, 23 e 26, texto compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
-id: "q-m6-25", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
+{ id: "q-m6-25", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
     nivel: "avancado", topico: "m6-u2-t3-s1", assunto: "6.2 — Anonimização como via de publicação",
     contexto: "Uma secretaria quer publicar base de atendimentos para pesquisa e monitoramento de política pública. A base contém nome, CPF, diagnóstico e município.",
     enunciado: "A solução compatível com a LAI e com a Lei nº 14.129/2021 é",
