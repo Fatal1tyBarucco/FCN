@@ -2043,11 +2043,11 @@ id: "q-m1-09",
     alternativas: [
       { letra: "A", texto: "Microsoft Teams, pela colaboração contínua em canais." },
       { letra: "B", texto: "Google Meet, pela simplicidade de uso em navegador." },
-      { letra: "C", texto: "Zoom, pelo suporte a webinars com grande número de participantes e salas simultâneas (breakout rooms)." },
+      { letra: "C", texto: "Zoom, se o plano contratado suportar 500 participantes, webinars e salas simultâneas (breakout rooms)." },
       { letra: "D", texto: "Qualquer plataforma é equivalente — todas têm os mesmos recursos." }
     ],
     gabarito: "C",
-    justificativa: "O exemplo de aplicação do currículo é este cenário: 'Uma universidade precisa dar uma palestra online para 500 alunos. Teams, Meet ou Zoom? → Zoom — suporte a webinars com grande número de participantes, salas simultâneas e recursos avançados de moderação'.",
+    justificativa: "O exemplo de aplicação do currículo é este cenário: 'Uma universidade precisa dar uma palestra online para 500 alunos. Teams, Meet ou Zoom? → Zoom — webinars e salas simultâneas, desde que a licença contratada suporte 500 participantes e os recursos de moderação exigidos'.",
     analise: {
       A: "INCORRETA. Erro conceitual: o ponto forte do Teams (colaboração contínua, canais) não é o critério do evento (webinar com grande público).",
       B: "INCORRETA. Erro conceitual: simplicidade não atende aos requisitos de webinar/salas simultâneas destacados no exemplo.",
