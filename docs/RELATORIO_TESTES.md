@@ -342,3 +342,12 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - **PASS:** estado do PR identificado como aberto/draft; decisão de preservar a trilha existente.
 - **NÃO EXECUTADO nesta operação:** suíte de testes, auditorias Node, Playwright/Chromium, teste com leitor de tela e validação física/responsiva. Não são declarados como executados agora.
 - **PENDENTE:** reconciliação de contagens históricas entre documentos e os resultados mais recentes do PR usando o mesmo SHA; revisão semântica completa do currículo e dos bancos.
+
+
+## Fase 2 — inspeção remota (2026-10-25)
+
+- **Inspeção de estrutura: PASS.** Listagens remotas confirmaram os diretórios `apostila-ia/assets/js`, `apostila-ia/assets/data`, `scripts`, `verificacao` e workflows.
+- **Arquitetura observada:** SPA estática HTML/CSS/JS; entrada em `apostila-ia/index.html`; sem `package.json` ou etapa de build descrita no README.
+- **Automação observada:** workflows de deploy e validação; auditorias estruturais curriculares, rastreabilidade de ativos e heurísticas de qualidade de questões.
+- **CI do commit consultado:** status observado como `queued`, sem conclusão disponível no momento da consulta. Não marcar como PASS nesta atualização.
+- **Execução local nesta fase:** não realizada. Nenhum novo teste de código ou navegador é declarado nesta inspeção remota.
