@@ -83,56 +83,56 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-04", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Treinamento, validação e teste",
-    contexto: "Divisão de dados em conjuntos para modelagem é essencial no aprendizado de máquina.",
-    enunciado: "A separação de dados em conjuntos de treinamento, validação e teste é importante porque:",
+    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Separação de treino, validação e teste",
+    contexto: "Uma equipe compara modelos e ajusta hiperparâmetros várias vezes. Ela quer estimar o desempenho em dados novos sem contaminar a avaliação final.",
+    enunciado: "Qual procedimento reduz melhor o risco de superestimar a capacidade de generalização do modelo?",
     alternativas: [
-      { letra: "A", texto: "Permite que o modelo roteie todos os dados para treino." },
-      { letra: "B", texto: "Permite estimar o desempenho do modelo em dados não vistos." },
-      { letra: "C", texto: "Substitui a necessidade de validação." },
-      { letra: "D", texto: "Elimina a necessidade de teste." },
-      { letra: "E", texto: "Garante que o modelo nunca erra." }
+      { letra: "A", texto: "Usar o conjunto de teste a cada ajuste de hiperparâmetros e informar o melhor resultado observado como desempenho final." },
+      { letra: "B", texto: "Treinar com o conjunto de treino, usar validação para selecionar modelos/hiperparâmetros e reservar o teste para uma avaliação final após as decisões de modelagem." },
+      { letra: "C", texto: "Duplicar registros entre treino e teste para garantir que os dois conjuntos tenham a mesma distribuição de exemplos." },
+      { letra: "D", texto: "Escolher o modelo somente pelo desempenho no treino, pois dados não vistos não são relevantes." },
+      { letra: "E", texto: "Ajustar o modelo no conjunto de teste e depois tratá-lo como dado independente." }
     ],
     gabarito: "B",
-    justificativa: "A divisão treino/validação/teste permite que o modelo aprenda (treino), ajuste hiperparâmetros (validação) e, posteriormente, avalie seu desempenho em dados nunca vistos (teste), estimando a capacidade de generalização. O modelo roteia todos os dados (alternativa A incorreta); substitui a validação (alternativa C incorreta); elimina a necessidade de teste (alternativa D incorreta); garante que o modelo nunca erra (alternativa E incorreta).",
+    justificativa: "O conjunto de treino ajusta os parâmetros do modelo; a validação apoia a seleção de modelos e hiperparâmetros; o teste deve permanecer separado das decisões de modelagem para fornecer uma estimativa final menos enviesada do desempenho em dados não vistos. Consultar repetidamente o teste e escolher com base nesses resultados transforma-o, na prática, em parte do processo de ajuste e pode produzir estimativas otimistas. Também é necessário prevenir vazamento de dados e respeitar dependências temporais ou por grupo na divisão.",
     analise: {
-      A: "INCORRETA. O modelo treina apenas com o conjunto de treino — não roteia todos os dados.",
-      B: "CORRETA. A divisão permite estimar o desempenho do modelo em dados nunca vistos.",
-      C: "INCORRETA. Validação é necessária para ajustar hiperparâmetros — testes não substituem.",
-      D: "INCORRETA. Teste é necessário para avaliar a performance final do modelo.",
-      E: "INCORRETA. Nenhum modelo garante que nunca erra."
+      A: "INCORRETA. A seleção repetida com base no teste adapta o processo a esse conjunto e compromete sua independência.",
+      B: "CORRETA. A separação preserva o teste para a avaliação final e reduz o risco de estimativa otimista.",
+      C: "INCORRETA. Registros duplicados entre conjuntos podem causar vazamento e inflar artificialmente o desempenho.",
+      D: "INCORRETA. O desempenho no treino não estima, por si só, a generalização para dados novos.",
+      E: "INCORRETA. Depois de usado para ajustar decisões, o conjunto deixa de funcionar como avaliação independente."
     },
-    regra: "Treinamento/validação/teste = 'aprender, ajustar, testar'. Três conjuntos separados de dados.",
-    pegadinha: "Não confunda: treino é 'aprender', validação é 'ajustar hiperparâmetros', teste é 'avaliar desempenho'.",
-    fonte: "James, G. et al. — An Introduction to Statistical Learning, 2021."
+    regra: "Treino ajusta parâmetros; validação orienta escolhas; teste fica reservado à avaliação final. Evite vazamento entre conjuntos.",
+    pegadinha: "Um teste consultado repetidamente para escolher modelos deixa de ser uma avaliação final independente.",
+    fonte: "scikit-learn, Cross-validation: evaluating estimator performance: https://scikit-learn.org/stable/modules/cross_validation.html; Google, Machine Learning Crash Course — Data preparation and feature engineering: https://developers.google.com/machine-learning/crash-course."
   },
 
-  { id: "q-m5-05", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Overfitting e underfitting",
-    contexto: "Generalização é um dos desafios centrais do aprendizado de máquina.",
-    enunciado: "No contexto de aprendizado de máquina, overfitting significa:",
+{ id: "q-m5-05", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Overfitting e generalização",
+    contexto: "Um modelo obtém desempenho muito alto nos exemplos de treinamento, mas comete muito mais erros em um conjunto de avaliação que não foi usado para ajustá-lo.",
+    enunciado: "Qual interpretação é mais compatível com esse resultado?",
     alternativas: [
-      { letra: "A", texto: "O modelo performa mal tanto nos dados de treino quanto nos de teste." },
-      { letra: "B", texto: "O modelo não aprende nada." },
-      { letra: "C", texto: "O modelo performa bem nos dados de treino e mal nos dados de teste." },
-      { letra: "D", texto: "O modelo é usado apenas para prever valores futuros." },
-      { letra: "E", texto: "O modelo não possui parâmetros." }
+      { letra: "A", texto: "Há evidência de overfitting: o modelo se ajustou excessivamente às características do treino e generaliza pior para dados não vistos." },
+      { letra: "B", texto: "Há prova de underfitting, pois o modelo necessariamente falha tanto no treino quanto no teste." },
+      { letra: "C", texto: "O modelo generaliza perfeitamente, pois o resultado de treino é alto." },
+      { letra: "D", texto: "O modelo não possui parâmetros ajustáveis, porque há diferença entre os conjuntos." },
+      { letra: "E", texto: "O resultado demonstra que qualquer conjunto de teste está incorreto e deve ser descartado." }
     ],
-    gabarito: "C",
-    justificativa: "Overfitting ocorre quando o modelo aprende o ruído dos dados de treino, performando bem nos dados de treino mas mal em dados novos/teste. O modelo performa mal nos treino e teste (alternativa A incorreta); não aprende nada (alternativa B incorreta); só prever valores futuros (alternativa D incorreta); não possui parâmetros (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Overfitting ocorre quando o modelo se ajusta em excesso aos dados de treinamento, incluindo padrões específicos ou ruído que não se repetem em novos exemplos. Um sinal comum é o desempenho elevado no treino e significativamente pior na validação ou no teste. A interpretação deve considerar a representatividade dos conjuntos, possíveis mudanças de distribuição, vazamento e a métrica utilizada; a diferença observada é evidência a investigar, não diagnóstico automático em qualquer contexto.",
     analise: {
-      A: "INCORRETA. Desempenho ruim tanto nos dados de treino quanto nos de teste caracteriza underfitting, não overfitting.",
-      B: "INCORRETA. Overfitting é aprender o ruído dos dados em excesso, não 'não aprender nada'.",
-      C: "CORRETA. Overfitting costuma se manifestar como bom desempenho no treino e desempenho pior em dados não vistos.",
-      D: "INCORRETA. Prever valores futuros é uma tarefa específica, não a definição de overfitting.",
-      E: "INCORRETA. Overfitting se manifesta justamente quando o modelo possui parâmetros (alta complexidade)."
+      A: "CORRETA. O contraste entre treino muito bom e desempenho inferior em dados não vistos é compatível com overfitting.",
+      B: "INCORRETA. Underfitting costuma aparecer como desempenho insuficiente já no treino, além de desempenho ruim fora dele.",
+      C: "INCORRETA. Desempenho no treino não garante generalização.",
+      D: "INCORRETA. A diferença de desempenho não significa ausência de parâmetros; modelos ajustáveis podem sobreajustar.",
+      E: "INCORRETA. O resultado exige investigação da avaliação e dos dados, não descarte automático do teste."
     },
-    regra: "Overfitting = ajuste excessivo aos dados de treino, com generalização prejudicada.",
-    pegadinha: "Overfitting não é 'não aprender' — é 'aprender demais o ruído'.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    regra: "Overfitting: bom ajuste ao treino e generalização prejudicada; confirme a interpretação com dados e avaliação adequados.",
+    pegadinha: "A diferença treino/teste é um sinal de possível sobreajuste, mas também pode refletir vazamento, amostragem inadequada ou mudança de distribuição.",
+    fonte: "scikit-learn, Underfitting vs. Overfitting: https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html; Hastie, Tibshirani e Friedman, The Elements of Statistical Learning: https://hastie.su.domains/ElemStatLearn/."
   },
 
-  { id: "q-m5-06", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+{ id: "q-m5-06", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "m5-u1-t2-s2", assunto: "5.1 — Viés, variância e generalização",
     contexto: "Dois modelos são avaliados em diferentes amostras de treino. O modelo X apresenta erro alto tanto no treino quanto na validação; o modelo Y apresenta erro muito baixo no treino, mas varia bastante entre amostras e tem erro alto na validação.",
     enunciado: "Qual interpretação é mais adequada?",
