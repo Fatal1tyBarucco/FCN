@@ -654,7 +654,7 @@ const moduleQuestions8 = [
     analise: {
       A: "CORRETA. Reproduz o cenário do currículo: dados fictícios + gratuidade + sem custo, desde que rotulados.",
       B: "INCORRETA. Erro conceitual: licença paga não é requisito nem necessário nem suficiente para governança; o currículo prioriza uso e governança, não o preço.",
-      C: "INCORRETA. Erro conceitual: o Tableau Public publica em área aberta; para dados fictícios em estudo, a questionamento é mais fino — o currículo não o recomenda nesse perfil e a alternativa A é o caminho do currículo.",
+      C: "INCORRETA. Erro conceitual: o Tableau Public publica em área aberta; para este cenário offline, o serviço de publicação não atende ao requisito de funcionamento sem internet; a alternativa A atende melhor às restrições.",
       D: "INCORRETA. Erro conceitual: exagera — gratuidade para dados fictícios é uma opção documentada no currículo."
     },
     regra: "Escolha conforme uso, conectividade e sensibilidade: para estudo offline, prefira ferramenta gratuita com autoria local e dados fictícios; para dados sensíveis, exija controles de acesso, governança e licença/termos compatíveis.",
