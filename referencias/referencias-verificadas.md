@@ -343,3 +343,11 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - **Secretaria de Comunicação Social da Presidência da República (Secom) — Guia de Boas Práticas para atuação de redes sociais do Governo Federal.** Página oficial de referência: https://www.gov.br/secom/pt-br/acesso-a-informacao/perguntas-frequentes/onde-posso-encontrar-o-guia. PDF indicado pela própria Secom: https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf.
 - Verificação: a página de perguntas frequentes da Secom aponta explicitamente o guia e o PDF. A questão q-m6-46 usa o documento como apoio geral à correção clara e responsável de informação institucional; não atribui ao guia uma obrigação legal específica.
 - A inclusão da referência não substitui leitura completa do guia nem validação independente de cada recomendação da questão.
+
+
+## Métricas de classificação em classes desbalanceadas — 2026-10-26
+
+- **Saito, T.; Rehmsmeier, M. (2015).** *The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets*. PLOS ONE 10(3): e0118432. DOI: https://doi.org/10.1371/journal.pone.0118432.
+- A página editorial da PLOS confirma título, autoria, data de publicação e DOI. O artigo discute limitações de interpretar classificadores em bases desbalanceadas apenas por métricas/curvas agregadas e explica a utilidade de precisão-revocação nesse contexto.
+- Aplicação no projeto: q-m5-20 usa o exemplo de 1% de positivos para demonstrar que prever sempre a classe negativa gera 99% de acurácia, mas recall zero para a classe positiva. O cenário é didático e autoral; não é dado empírico extraído do artigo.
+- Verificação: página editorial da PLOS consultada em 2026-10-26.
