@@ -201,6 +201,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `fd697035d2e9248b756392c830a597c7dd1b93a3`; q-m4-31/q-m4-33 foram alteradas no commit `675cddb4d1c3d2a06313c1619f894dbdbe023eaa`.
 - Este passe cobre q-m4-36..q-m4-40, não valida juridicamente todo o bloco legal do M4. Verificar os workflows do HEAD atual antes de considerar o lote aprovado.
 
+## Auditoria semântica incremental — lote M4 q-m4-41 a q-m4-45 (2026-10-26)
+
+- q-m4-41: padronizado o nome da Lei nº 12.527/2011 para “Lei de Acesso à Informação” e corrigido erro ortográfico na análise.
+- q-m4-42: reescrita para delimitar a regra geral de ordem judicial para disponibilização de registros de conexão e de acesso a aplicações, distinguindo esses registros do regime específico de dados cadastrais e apontando o art. 10, §§ 1º e 3º, do Marco Civil.
+- q-m4-43: revisada; mantida a distinção entre agentes de tratamento, autoridades e titulares, sem atribuir ao titular a responsabilidade automática pelo tratamento.
+- q-m4-44: revisada; mantida a complementaridade entre LGPD e Marco Civil, embora a expressão “prioriza” seja uma síntese pedagógica, não uma exclusão de temas compartilhados.
+- q-m4-45: corrigida a concordância na regra de confidencialidade (“quem tem autorização”).
+- Commit de conteúdo: `8874dc1e23c1f1ddf66f7e5bc0569e23bb78f531`.
+- Este passe é focal, não uma auditoria jurídica integral. Confirmar sintaxe e workflows no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
