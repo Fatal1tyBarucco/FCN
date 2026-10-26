@@ -113,3 +113,18 @@ Distribuição MC após as sete inclusões: A=145, B=131, C=29, D=8, E=8. A/B re
 - Auditoria heurística: 0 IDs duplicados, 0 pares de contexto/enunciado idênticos e 0 alertas. Resultado estrutural, não prova de correção semântica.
 - Smoke test Playwright/Chromium usando `file://`: **PASS**, 396 questões conectadas ao quiz e `pageErrors: []`.
 - Revisão editorial adicional: as análises das quatro questões novas M6 foram individualizadas para explicar cada distrator. Ainda é necessária uma revisão semântica independente do conjunto completo de sete questões novas e das respectivas fontes.
+
+
+## Revisão editorial dirigida das sete questões novas
+
+Triagem manual do texto, gabarito, justificativa e análises por alternativa:
+
+- `q-m1-44`: gabarito C coerente com estilos, quebras de seção e atualização de campos. A justificativa foi detalhada para exigir verificação de marcação estrutural, ordem de leitura, idioma, texto alternativo e teste do PDF exportado; apenas escolher uma opção de exportação não comprova acessibilidade.
+- `q-m5-41`: gabarito D coerente com recuperação de atos vigentes, evidência verificável, encaminhamento de lacunas e avaliação de fidelidade.
+- `q-m5-42`: gabarito B coerente com fonte/versionamento, formato de saída, evidência, tratamento de lacunas, minimização de dados e avaliação.
+- `q-m6-41`: gabarito E é a conduta prudente. O enunciado não conclui automaticamente que existe conflito jurídico; remete o enquadramento ao procedimento e ao regime aplicável.
+- `q-m6-42`: gabarito C cobre identidade individual, privilégio mínimo, autenticação, rastreabilidade e aprovação editorial.
+- `q-m6-43`: gabarito D trata as barreiras descritas e inclui avaliação por abandono; a implementação deve preservar alternativas de atendimento adequadas.
+- `q-m6-44`: gabarito B descreve um método de resolução consistente com a necessidade de identificar contexto, regime e dispositivo aplicável.
+
+**Limite da revisão:** não foi identificado erro evidente de gabarito nesta triagem, mas ela não equivale a revisão jurídica independente nem valida todas as fontes externas. As referências dessas sete questões apontam principalmente para os tópicos curriculares internos; quando usadas como questões de prova com pretensão normativa específica, devem ser complementadas por fontes oficiais pertinentes. A distribuição de gabaritos do banco completo continua sendo um problema editorial separado.
