@@ -1095,6 +1095,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - O relatório versionado `docs/RELATORIO_QUALIDADE_QUESTOES.md` foi atualizado no commit `53911a014c9ebc8b167b5950243cfd948d1bdf60` com a distribuição atual A=83, B=104, C=72, D=37, E=28.
 - Este registro cria um novo commit documental. **A validação verde acima refere-se ao HEAD `97a41e85`; o workflow do HEAD resultante deve concluir antes de declarar a validação atualizada.**
 
+## Regressão de acessibilidade por teclado — 2026-10-26
+
+- Revisão estática de `accessibility.js`, `navigation.js`, `quiz-engine.js`, `flashcards.js`, `charts.js` e `search.js` confirmou implementações existentes de skip link, foco visível, preferência por movimento reduzido, landmarks, região de conteúdo, navegação por setas na árvore curricular, nomes acessíveis em botões/inputs dinâmicos e descrições de gráficos SVG.
+- A regressão `verificacao/test-browser-interactions.cjs` foi ampliada para testar, em Chromium e modo `file://`, que o primeiro Tab foca e revela o skip link, Enter move o foco para `#curriculum`, e ArrowLeft/ArrowRight recolhem e expandem o primeiro nó da árvore curricular.
+- Commit do teste: `f074defd79a171c61e899b3642a54bedbf7026a3`.
+- Limite: estes testes verificam comportamento automatizável de teclado; não equivalem a teste com leitor de tela, avaliação manual de contraste em todos os estados, uso em dispositivos físicos ou certificação WCAG.
+- O CI verde mais recente antes desta alteração foi no HEAD `a3e61cc52dd9fe07cf37dea6bd4f83a068af4207` (runs `40408028057`, `40408029434`, `40408029293`). Este commit documental e a alteração do teste geram novo HEAD; aguardar a nova execução de sintaxe, auditorias, smoke e regressões antes de declarar aprovação atualizada.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
