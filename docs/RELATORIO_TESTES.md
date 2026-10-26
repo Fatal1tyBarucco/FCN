@@ -288,9 +288,18 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 ## Auditoria heurística de qualidade do banco — 2026-10-26
 
 - Commit testado: `f0beb421ebb25d086d9ea740c45ecd20762473a2`.
-- Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754 — **success**.
+- Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249669582 — **success**.
 - Passaram: sintaxe JavaScript, auditoria curricular, auditoria de rastreabilidade, verificador estrutural, auditoria heurística e smoke test Playwright/Chromium via `file://`.
 - Banco: 389 questões, 460 flashcards; 0 IDs duplicados, 0 pares com contexto/enunciado idênticos e 0 alertas heurísticos.
 - Smoke test: 8 módulos, 389 questões, 460 flashcards, 5 SVGs, 6 simuladores com UI, `localStorage` round-trip e 0 exceções JavaScript.
 - Achado editorial não bloqueante para CI, mas importante antes da aprovação final: gabaritos MC A=169, B=124, C=21, D=0, E=0. Exige revisão humana da posição das alternativas.
 - A validação estrutural e heurística não certifica a verdade das respostas nem substitui revisão semântica independente.
+
+
+## Revalidação após balanceamento do lote novo — 2026-10-26
+
+- Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249669582 — **success**.
+- Auditoria heurística: 389 questões; 0 IDs duplicados; 0 pares de contexto/enunciado idênticos; 0 alertas heurísticos.
+- As 24 questões adicionadas tiveram a posição correta distribuída em A=4, B=5, C=5, D=5, E=5, mantendo o texto de cada alternativa associado à sua análise.
+- Distribuição global de gabaritos MC: A=149, B=129, C=26, D=5, E=5. A/B representam 88,5% e exigem revisão editorial do banco legado.
+- Smoke test Chromium/Playwright via `file://`: PASS; 8 módulos, 389 questões, 460 flashcards, 5 SVGs, 6 simuladores com UI, persistência local e 0 exceções JavaScript.

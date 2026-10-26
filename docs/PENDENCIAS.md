@@ -204,6 +204,13 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Resultado: 389 questões lidas; 0 IDs duplicados; 0 pares com contexto e enunciado idênticos; 0 alertas heurísticos após corrigir regras que geravam falsos positivos.
 - [x] Adicionar fontes para q-m3-21, q-m3-22 e q-m3-38, que tratam de política de gravação e medidas de segurança sob a LGPD.
 - [x] Execução aprovada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754.
-- [ ] **Prioridade alta:** revisar a distribuição das posições do gabarito nas 314 questões de múltipla escolha: A=169, B=124, C=21, D=0, E=0. Não alterar gabaritos automaticamente; revisar cada questão e reorganizar alternativas apenas preservando a correspondência entre texto, gabarito e análise.
+- [ ] **Prioridade alta:** revisar a distribuição das posições do gabarito nas 314 questões de múltipla escolha: A=149, B=129, C=26, D=5, E=5. Não alterar gabaritos automaticamente; revisar cada questão e reorganizar alternativas apenas preservando a correspondência entre texto, gabarito e análise.
 - [ ] Revisar semanticamente os 389 enunciados, gabaritos, justificativas, distratores e fontes. A ausência de alertas heurísticos não prova correção factual.
 - [ ] Concluir auditoria independente WCAG, leitores de tela, teclado, dispositivos reais, simuladores e PWA/offline.
+
+
+## Revisão da posição das alternativas — 2026-10-26
+
+- [x] Reordenar as alternativas das 24 questões novas sem alterar conteúdo correto, análise ou justificativa: distribuição interna do lote A=4, B=5, C=5, D=5, E=5.
+- [x] Reexecutar a auditoria heurística e o smoke test: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249669582 — **success**.
+- [ ] **Prioridade alta:** o banco completo ainda tem concentração de gabaritos A/B (A=149, B=129, C=26, D=5, E=5; A/B=88,5% das 314 questões MC). Revisar as questões legadas e reorganizar alternativas somente quando for possível preservar a relação entre texto, gabarito, análise e justificativa.

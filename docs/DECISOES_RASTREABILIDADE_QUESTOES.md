@@ -80,3 +80,10 @@ Essas 24 questões foram adicionadas ao banco autoral com IDs estáveis, cinco a
 ## Resultado da cobertura direta após o lote
 
 O relatório estrutural identifica apenas sete nós de síntese/revisão sem questão direta: M1 unidade 2/tópico 14; M5 unidade 3/tópico 4 e unidade 4/tópico 4; M6 unidade 1/tópico 3, unidade 4/tópico 3, unidade 5/tópico 3 e unidade 6/tópico 3. **Não restam tópicos substantivos sem questão direta**, segundo a associação de IDs. A revisão semântica integral dos 389 itens permanece pendente.
+
+
+## Balanceamento das 24 questões novas e distribuição global
+
+As questões q-m1-41..q-m1-43, q-m2-41..q-m2-54 e q-m3-41..q-m3-47 foram reorganizadas para distribuir a alternativa correta em A=4, B=5, C=5, D=5 e E=5. A transformação trocou de posição a alternativa correta com a alternativa-alvo e aplicou a mesma permutação às chaves de análise; não alterou o conteúdo de nenhuma alternativa.
+
+O banco completo agora tem 314 questões MC com gabaritos A=149, B=129, C=26, D=5, E=5. A/B representam 88,5% do total, indicando uma concentração persistente no banco legado. Essa fragilidade precisa de revisão editorial manual; não deve ser corrigida por alteração cega dos gabaritos.

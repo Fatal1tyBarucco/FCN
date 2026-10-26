@@ -19,13 +19,13 @@ Distribuição do gabarito nas 314 questões de múltipla escolha:
 
 | Letra correta | Quantidade |
 |---|---:|
-| A | 169 |
-| B | 124 |
-| C | 21 |
-| D | 0 |
-| E | 0 |
+| A | 149 |
+| B | 129 |
+| C | 26 |
+| D | 5 |
+| E | 5 |
 
-A ausência de gabaritos D e E e a concentração em A/B podem tornar o padrão previsível para quem faz o simulado. Isso não prova que as respostas individuais estejam incorretas, mas é uma fragilidade de desenho de avaliação.
+As 24 questões novas foram balanceadas em suas posições corretas (A=4, B=5, C=5, D=5, E=5), sem alterar o texto das respostas ou as análises. O banco completo ainda apresenta concentração em A/B: essas letras representam 88,5% das 314 questões de múltipla escolha. Isso pode tornar o padrão previsível e exige revisão editorial do banco legado. A distribuição não prova que as respostas individuais estejam incorretas, mas é uma fragilidade de desenho de avaliação.
 
 **Ação recomendada:** revisar manualmente cada questão e, quando necessário, reorganizar as alternativas sem alterar a resposta correta, a análise individual nem as justificativas que mencionam letras. Não reequilibrar o gabarito automaticamente sem preservar essas relações.
 

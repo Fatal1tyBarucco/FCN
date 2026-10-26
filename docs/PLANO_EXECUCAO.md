@@ -124,3 +124,11 @@ A associação por tópico-pai é uma ferramenta de triagem e não prova cobertu
 | 8 — Critérios de aceite | Pendente | PR #17 permanece draft; não fazer merge até revisar gabaritos, fontes, acessibilidade e fluxos interativos. |
 
 **Última execução técnica aprovada:** https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754. O sucesso técnico não deve ser confundido com aprovação editorial final.
+
+
+### Atualização da qualidade das questões — 2026-10-26
+
+- As 24 questões novas tiveram suas alternativas reorganizadas com preservação da correspondência entre alternativa, gabarito e análise.
+- O lote novo distribui gabaritos MC em A=4, B=5, C=5, D=5 e E=5.
+- O banco global continua concentrado em A/B (88,5% das questões MC); revisão manual das 290 questões MC legadas permanece pendente antes da aprovação editorial.
+- A execução técnica mais recente passou: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249669582.
