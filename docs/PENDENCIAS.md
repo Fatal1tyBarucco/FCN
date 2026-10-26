@@ -1,5 +1,18 @@
 # PENDÊNCIAS — Apostila Web Interativa FCN
 
+## Estado consolidado — 2026-10-26
+
+Este resumo prevalece sobre checklists históricos abaixo quando houver divergência. Itens antigos não marcados como concluídos podem refletir o estado no momento em que foram escritos; validar contra as evidências atuais antes de reabrir trabalho já executado.
+
+- [x] Checks CI do commit `77c4cd14b98af1b7c5522fd5918458348bc744a1`: CodeQL, auditoria estática/cobertura, análise de Actions e análises JavaScript/TypeScript concluídos com sucesso. [Auditoria](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266280519) · [CodeQL/análises](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266276949).
+- [x] Revisão semântica focal de q-m6-41 a q-m6-44 registrada; a justificativa de q-m6-44 foi alinhada à LAI, removendo uma atribuição não rastreada.
+- [ ] Revisão semântica em lotes do banco restante: gabaritos, distratores, justificativas, redundância, profundidade e fontes. Priorizar por módulo e registrar IDs revisados; não alterar respostas em massa sem remapeamento e conferência.
+- [ ] Reconciliar contagens e snapshots históricos em `INVENTARIO_CURRICULAR.md`, `MATRIZ_COBERTURA.md`, `RELATORIO_TESTES.md` e documentos correlatos com a saída mais recente do auditor. Contagens antigas não devem ser apresentadas como atuais.
+- [ ] Verificar fontes oficiais para afirmações normativas/técnicas e garantir rastreabilidade de título, órgão, URL e data de verificação.
+- [ ] Concluir validação manual de acessibilidade/responsividade, incluindo teclado, leitor de tela e dispositivos físicos quando disponíveis. Testes headless não certificam WCAG.
+- [ ] Manter PR #17 aberto em Draft até as pendências qualitativas serem resolvidas; CI verde não significa conclusão integral da Fase 1.
+
+
 1. Referências (reconciliado I6, 2026-10-24): **73 itens em `references.js`** = 20 vídeos (verificados via oembed, 2026-10-24) + 53 referências técnicas (LGPD, LAI, Lei 14.129/2021, Marco Civil, Microsoft Learn, RFCs 791/792/793/826/959/1034/1035/2131/2663/3022/4301/5321/7230/7231/8446/9110, CERT.br, ANPD órgão + 13 resoluções CD/ANPD, CF art. 37 + art. 5º incisos, Leis 8.429/1992, 1.079/1950, 13.146/2015, 10.098/2000, 10.741/2003, 13.460/2017, 12.682/2012, 14.063/2020, LC 101/2000, LC 105/2001, LGPD art. 7º). **73/73 verificados, 0 pendentes em references.js.** Pendentes remanescentes (NÃO cadastrados — limitação C, não defeito): demais resoluções da ANPD, demais RFCs não listadas, demais incisos/parágrafos CF art. 37/5º não enumerados, verificação artigo a artigo das leis adicionais citadas por remissão em M6.
 2. Vídeos: 20 validados via oembed (2026-10-24) em referencias/referencias-verificadas.md e references.js (IDs verificados). Embeds incorporados no index.html (20/20 videos em 8 módulos, Seção 12.2). Pendente: verificação de disponibilidade regional/incorporação em navegador real; vídeos não substituem a apostila (Seção 12.2). Status: embeds concluídos no incremento atual.
 3. Service Worker: arquivo válido (node --check OK) e registro condicional; registro em navegador real não confirmado (sem exceções JS em headless).
