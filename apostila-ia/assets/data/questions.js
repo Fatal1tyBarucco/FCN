@@ -59,7 +59,7 @@
  * (lê window.questoesBanco) passam a enxergar o banco fundido sem qualquer
  * alteração nesses dois arquivos. Deduplicação por id acontece na fusão. */
 var questoesBanco = [
-  /* ===================== MÓDULO 1 — Microsoft 365 (32 questões) ===================== */
+  /* ===================== BLOCO INICIAL M1 — Microsoft 365 (q-m1-01..q-m1-32; 44 no total) ===================== */
 
   {
     id: "q-m1-01",
@@ -884,12 +884,11 @@ id: "q-m1-09",
     regra: "Escopo declarado × funcionalidade (Seção 7.1 do prompt mestre — laboratórios com ações e resultados reais dentro do escopo declarado): entradas fora do escopo são recusadas ANTES da avaliação com mensagem útil iniciada por 'ERRO DE ENTRADA'; erros de execução usam os códigos Excel declarados (#N/A, #REF!, #VAL!, #DIV/0!, #NUM!); e PROCV/PROCH/PROCX executam busca real — nenhum resultado pode ser apresentado como real quando não o for.",
     pegadinha: "Item técnico com duas cláusulas que tratam de canais distintos: a primeira é sobre RECUSA de entrada (antes da avaliação) e a segunda sobre COMPORTAMENTO das funções de pesquisa (durante a execução). Quem associa 'mensagem de erro' a defeito, ou decorou a limitação antiga de PROCX, tende a marcar Errado o que o código atual confirma."
   },
-  /* ===================== FIM MÓDULO 1 (44 questões) ===================== */
-  /* ===================== MÓDULO 2 — Redes de Computadores (54 questões) =====================
+  /* ===================== FIM BLOCO INICIAL M1 (q-m1-01..q-m1-32) ===================== */
+  /* ===================== BLOCO INICIAL M2 — Redes (q-m2-01..q-m2-26; 54 no total) =====================
    * Fonte: assets/data/curriculum_m2.js — unidades 2.1 a 2.5.
-   * As cinco unidades e seus tópicos estão mapeados no currículo; as questões
-   * M2 cobrem fundamentos, modelos OSI/TCP-IP, protocolos, endereçamento/
-   * sub-redes e segurança/diagnóstico conforme o escopo curricular. */
+   * As questões q-m2-27..q-m2-54 aparecem em bloco posterior para preservar
+   * o histórico de adições; o banco agregado contém 54 questões M2. */
 
   {
     id: "q-m2-01",
@@ -1559,11 +1558,11 @@ id: "q-m1-09",
     regra: "Limites UTP: Cat5e — 1 Gbps; Cat6 — 10 Gbps até 55 m; Cat6a — 10 Gbps até 100 m. Alcance padrão de par trançado = 100 m na taxa de 1 Gbps.",
     pegadinha: "Número + categoria + taxa: três variáveis no mesmo item. O CESPE troca apenas uma (100 m no lugar de 55 m) — quem lê '100 m é padrão de UTP' e não confere a taxa marca Certo por engano."
   },
-  /* ===================== FIM MÓDULO 2 (26 questões) ===================== */
-  /* ===================== MÓDULO 3 — Comunicação e Colaboração (24 questões) =====================
-   * Fonte: assets/data/curriculum_m3.js — 3.1 Correio eletrônico (4 subtópicos)
-   * e 3.2 Calendários e reuniões (4 subtópicos). Questões jurídicas citam
-   * APENAS os artigos da LGPD verificados em referencias/referencias-verificadas.md. */
+  /* ===================== FIM BLOCO INICIAL M2 (q-m2-01..q-m2-26) ===================== */
+  /* ===================== BLOCO INICIAL M3 — Comunicação e Colaboração (q-m3-01..q-m3-24; 47 no total) =====================
+   * Fonte: assets/data/curriculum_m3.js — unidades 3.1 a 3.5.
+   * As questões q-m3-25..q-m3-47 aparecem em bloco posterior para preservar
+   * o histórico de adições; o banco agregado contém 47 questões M3. */
 
   {
     id: "q-m3-01",
@@ -2189,7 +2188,7 @@ id: "q-m1-09",
 
 
 ,
-/* ===================== Continuação MÓDULO 1 — Microsoft 365 (q-m1-33..q-m1-40) ===================== */
+/* ===================== CONTINUAÇÃO M1 — Microsoft 365 (q-m1-33..q-m1-44) ===================== */
 
   {
     id: "q-m1-33",
