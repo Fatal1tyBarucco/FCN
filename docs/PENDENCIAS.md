@@ -421,3 +421,15 @@ A aprovação do workflow automatizado não encerra pendências qualitativas nem
 - Revisão de consistência de q-m6-45, q-m6-46 e q-m6-47: cenários, enunciados, alternativas, gabaritos e análises estão internamente coerentes; q-m6-45 usa a referência constitucional já presente no catálogo.
 - **Rastreabilidade de fontes — atualização:** a página oficial de perguntas frequentes da Secom confirma a existência do Guia de Boas Práticas e aponta o PDF citado em q-m6-46; a referência foi cadastrada em `references.js` e documentada em `referencias/referencias-verificadas.md`. A WCAG 2.2 já estava cadastrada no catálogo com ID `ref-w3c-wcag-22`; a pendência anterior decorria de uma busca textual demasiado específica. A auditoria WCAG do produto permanece pendente.
 - Esta é uma revisão focal de consistência, não uma validação independente da fonte Secom nem uma certificação legal/técnica. Não alterar gabaritos corretos apenas para balancear a distribuição.
+
+## Continuidade auditável — 2026-10-26
+
+1. **Bloqueante — confirmar CI do HEAD atual:** a execução 40262096277 validou o SHA `81472b91ea33a421db66f4fa502e28d0e09d0c65`; confirmar checks no HEAD mais recente antes de declarar estado verde.
+2. **Bloqueante — revisão semântica independente:** revisar lotes coesos de questões, incluindo enunciado, gabarito, análise de cada alternativa/distrator, explicação, dificuldade, pegadinha, alinhamento curricular e fonte aplicável. Registrar IDs e resultados para evitar retrabalho.
+3. **Bloqueante — distribuição de gabaritos:** recalcular no banco atual e inspecionar padrões suspeitos; não alterar respostas corretas apenas para equilibrar letras.
+4. **Bloqueante — fontes primárias:** conferir afirmações técnicas e normativas contra documentação oficial, registrando URL direta e data. Não extrapolar verificações de referências para artigos/dispositivos não verificados individualmente.
+5. **Bloqueante — acessibilidade independente:** executar testes manuais de teclado, foco, semântica e leitor de tela. Inventário automatizado não equivale a certificação WCAG.
+6. **Pendente — compatibilidade:** testar dispositivos/navegadores adicionais quando houver ambiente real disponível; documentar o que não pôde ser testado.
+7. **Pendente — reconciliação de métricas:** snapshots registram 396 e 399 questões em SHAs diferentes. Reexecutar scripts no HEAD exato antes de publicar contagens atuais.
+
+**Estado geral:** PR #17 permanece Draft; não fazer merge até haver evidências suficientes para os critérios obrigatórios pendentes.
