@@ -950,13 +950,13 @@ const moduleQuestions7 = [
     enunciado: "Nesse caso, houve anonimização, e a base deixou de conter dado pessoal.",
     gabarito: "errado",
     trechoDeterminante: "O trecho que torna o item FALSO é 'guardou ... a tabela que liga cada código ao CPF': a existência de chave de reatribuição é exatamente o que separa pseudonimização de anonimização, e o currículo afirma que a chave é o critério decisivo.",
-    justificativa: "O currículo define anonimização como transformação que elimina a possibilidade de reconstruir a identidade a partir do conjunto publicado, e pseudonimização como substituição do identificador por código com tabela de reatribuição mantida separada e protegida — caso em que o dado continua sendo dado pessoal, pois a identificação segue possível para quem detém a chave. 'Anonimizar mantendo a chave em cofre' é pseudonimização.",
+    justificativa: "O currículo distingue anonimização — processo que torna o titular não identificável considerando os meios técnicos razoáveis e disponíveis no contexto — de pseudonimização, que substitui o identificador por código enquanto mantém uma tabela de reatribuição separada e protegida. Como a chave continua disponível, a identificação permanece possível para quem a detém e os dados continuam sendo pessoais. 'Anonimizar mantendo a chave em cofre' é pseudonimização.",
     analise: {
       item: "Item FALSO. Com a tabela de correspondência preservada, há reatribuição possível: é pseudonimização, medida de segurança, e o dado permanece pessoal.",
       leituraIncorreta: "Leitura que induz ao erro: concluir que 'saiu o CPF, então anonimizou'. Remover o identificador direto é o primeiro passo, não a descaracterização."
     },
-    regra: "Anonimização: não há como reatribuir. Pseudonimização: há chave guardada — o dado continua pessoal.",
-    pegadinha: "O cofre protege a chave, mas não a elimina: proteção de acesso não transforma pseudonimização em anonimização.",
+    regra: "Anonimização: a identificação não é razoavelmente possível com os meios disponíveis no contexto. Pseudonimização: há chave de reatribuição — o dado continua pessoal.",
+    pegadinha: "O cofre protege a chave, mas não a elimina: proteção de acesso não transforma pseudonimização em anonimização; a avaliação de anonimização depende dos meios razoáveis de identificação disponíveis no contexto.",
     fonte: "Currículo M7 — m7-u3-t1-s1 (Anonimização x pseudonimização)."
   },
 
