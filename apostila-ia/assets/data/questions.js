@@ -2115,23 +2115,23 @@ id: "q-m1-09",
     topico: "m3-u2-t2-s1",
     assunto: "M3.2 Plataformas de reunião",
     contexto: "Uma universidade organizará um evento online para 500 alunos, com apresentação em formato webinar, moderação e atividades em grupos menores. A equipe exige salas paralelas dentro do próprio webinar, e não apenas salas de reunião.",
-    enunciado: "Qual plataforma o currículo aponta como a mais adequada ao cenário?",
+    enunciado: "Antes de confirmar o Zoom para esse evento, qual verificação é indispensável para garantir tanto 500 participantes quanto salas paralelas dentro do webinar?",
     alternativas: [
-      { letra: "A", texto: "Microsoft Teams, pela colaboração contínua em canais." },
-      { letra: "B", texto: "Google Meet, pela simplicidade de uso em navegador." },
+      { letra: "A", texto: "Basta usar uma licença Microsoft 365 com canais de equipe, pois canais garantem capacidade de webinar e salas paralelas em qualquer evento." },
+      { letra: "B", texto: "Basta confirmar que o Google Meet permite reuniões de 500 participantes; esse limite, por si só, garante salas paralelas no formato webinar." },
       { letra: "C", texto: "Zoom Webinars, com capacidade licenciada para 500 participantes e licença elegível para salas paralelas de webinar (por exemplo, Zoom Webinars Plus Unlimited, Zoom Webinars Plus Pay Per Attendee ou Zoom Events Unlimited, conforme a modalidade contratada)." },
-      { letra: "D", texto: "Qualquer plataforma é equivalente — todas têm os mesmos recursos." }
+      { letra: "D", texto: "Qualquer licença paga do Zoom garante 500 participantes e salas paralelas de webinar, sem checar o tipo de licença ou o cliente utilizado." }
     ],
     gabarito: "C",
     justificativa: "O Zoom é adequado quando a licença contratada cobre a capacidade de 500 participantes e os requisitos do evento. A documentação oficial distingue a capacidade do webinar da elegibilidade para salas paralelas: este último recurso exige uma licença compatível, webinar agendado, recurso habilitado e aplicativo desktop ou móvel suportado. A capacidade e os recursos disponíveis devem ser confirmados no plano contratado.",
     analise: {
-      A: "INCORRETA. Erro conceitual: o ponto forte do Teams (colaboração contínua, canais) não é o critério do evento (webinar com grande público).",
-      B: "INCORRETA. Erro conceitual: simplicidade não atende aos requisitos de webinar/salas simultâneas destacados no exemplo.",
+      A: "INCORRETA. Canais de colaboração não determinam a capacidade licenciada de um evento nem garantem os requisitos específicos de salas paralelas em webinar.",
+      B: "INCORRETA. O limite de participantes de uma reunião Meet não demonstra que a solução oferece salas paralelas dentro de um webinar Zoom; são produtos e condições distintos.",
       C: "CORRETA. A alternativa explicita as duas condições independentes: capacidade licenciada para 500 participantes e licença elegível para salas paralelas dentro de um webinar. Não basta assumir que qualquer licença Zoom inclui ambos os recursos.",
-      D: "INCORRETA. Erro conceitual: o currículo compara as três destacando diferenciais distintos (collaboração contínua × simplicidade × webinars) — não há equivalência."
+      D: "INCORRETA. Nem toda licença paga inclui qualquer capacidade ou o recurso de salas paralelas em webinar; é necessário confirmar a modalidade e os requisitos oficiais.",
     },
     regra: "Escolha por requisitos, não por marca: validar formato do evento, capacidade licenciada, recursos premium e requisitos de cliente. No Zoom, a capacidade de participantes e a elegibilidade para salas paralelas em webinars são condições distintas.",
-    pegadinha: "A alternativa D ('todas iguais') é o relativismo típico da FGV — o material justamente diferencia as plataformas; quem lê só o enunciado e não o comparativo cai nela.",
+    pegadinha: "A pegadinha é confundir capacidade de participantes com disponibilidade de um recurso premium. Uma licença que suporta 500 pessoas não garante, isoladamente, salas paralelas dentro de um webinar.",
     fonte: "Zoom Support — comparação entre licenças e capacidade de participantes em reuniões/webinars: https://support.zoom.com/hc/pb/article?id=zm_kb&sysparm_article=KB0062412; requisitos para salas paralelas em webinars, incluindo licença elegível e aplicativo desktop/móvel: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
   },
   {
