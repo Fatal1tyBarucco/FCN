@@ -136,6 +136,18 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Validação pendente para o novo HEAD: executar/consultar workflow de sintaxe, auditoria estrutural, smoke e regressões; a última aprovação anterior, no HEAD `8b9683dfb589212225d31361cd69512db828dc8d`, não certifica estes commits posteriores.
 - Próximo lote proposto: revisão semântica q-m5-11..q-m5-15, sem assumir cobertura dos demais itens do módulo.
 
+## Auditoria semântica incremental — lote M5 q-m5-11 a q-m5-15 (2026-10-26)
+
+- Revisão focal de q-m5-11..q-m5-15; não representa auditoria integral do módulo.
+- q-m5-11: reescrita para distinguir corretamente aprendizado supervisionado (alvos conhecidos), não supervisionado (estrutura sem alvos fornecidos) e por reforço (interação e recompensas). A formulação anterior reduzia indevidamente a distinção à presença/ausência de rótulos.
+- q-m5-12: corrigidos erros ortográficos em “prevê”.
+- q-m5-13: reescrita para separar clustering de redução de dimensionalidade, explicitar que a redução pode perder informação e evitar afirmar que toda redução é não supervisionada. PCA é citado apenas como exemplo comum de método tipicamente não supervisionado.
+- q-m5-14 e q-m5-15 foram revisadas neste passe focal; não foi identificado motivo para alterar gabarito ou estrutura neste lote.
+- Commit de conteúdo: `4bb937ee0a80e6bb853faefded6cc328beff602d`.
+- O lote q-m5-16..q-m5-20 está documentado na seção imediatamente anterior. O catálogo de fontes foi atualizado com a referência editorial verificada de Saito e Rehmsmeier (2015).
+- Validação pendente para o novo HEAD: os resultados de CI do commit anterior não certificam este commit; consultar os workflows associados ao HEAD atual antes de declarar aprovação.
+- Próximo lote proposto: revisão focal de q-m5-06..q-m5-10, verificando precisão conceitual, alternativas, justificativas e fontes.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
