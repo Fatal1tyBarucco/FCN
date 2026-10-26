@@ -622,6 +622,20 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - `apostila-web/` e `entregas/` estão vazios — não é código funcional.
 - Inventário/matriz já foram sincronizados (2026-10-21 e 2026-10-22, incrementalmente nos P1-A, P1-C e P1-D), mas **sempre que o código mudar, atualizá-los junto** — o código é a fonte de verdade.
 
+## Revisão inicial do M6 — questões 1 a 10 (2026-10-26)
+
+- q-m6-01: corrigida justificativa que atribuía incorretamente à alternativa correta C um erro de conveniência; agora distingue legalidade, eficiência, dotação orçamentária e poder regulamentar.
+- q-m6-02: corrigida justificativa que classificava a alternativa correta C como opacidade; agora mapeia critérios objetivos, transparência, tratamento diferenciado legítimo e competência do órgão.
+- q-m6-03: conferidos finalidade, adequação, necessidade e tratamento de dados pelo poder público, sem presumir que toda reutilização seja proibida ou automaticamente válida.
+- q-m6-04: corrigida justificativa que classificava a alternativa correta C como faculdade; agora distingue publicidade, proteção de informação pessoal e hipóteses de sigilo.
+- q-m6-05: corrigida justificativa que dizia que a alternativa C eliminava controles, embora ela os preserve; referências à Lei de Governo Digital alinhadas ao texto da alternativa.
+- q-m6-06: critério oculto analisado sob impessoalidade e publicidade, sem tratar discricionariedade como imunidade ao controle.
+- q-m6-07: corrigida justificativa que atribuía ao item C a crítica sobre consentimento, embora B fosse a alternativa sobre consentimento exclusivo.
+- q-m6-08: uso da interface institucional para finalidade alheia ao serviço tratado como possível desvio de finalidade, não como mero detalhe visual.
+- q-m6-09: corrigida justificativa que atribuía ao item C uma crítica aplicável à alternativa B; transparência ativa permanece definida conforme art. 8º da LAI.
+- q-m6-10: conferidos os indicadores mínimos do painel da Lei nº 14.129/2021 e a necessidade de não inferir eficiência apenas de um indicador parcial.
+- Commits de conteúdo: `9974767bf60e2a150088b2663c7963739076a787` e `2c035b1a4cd9a02e3c66d9a491bc379c1a97ab4f`. Reexecutar CI e verificar as fontes jurídicas antes de considerar o lote validado.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
