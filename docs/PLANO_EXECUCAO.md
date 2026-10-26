@@ -213,3 +213,26 @@ Não alterar simultaneamente os seis simuladores nem reescrever a persistência 
 - Dados de progresso sobrevivem a recarga e não são perdidos por migração/erro de armazenamento.
 - A abertura direta via `file://` continua funcional; não depender de rede ou build.
 - Testes negativos, limites, teclado e mensagens de erro são evidenciados antes de aprovar.
+
+
+## Marco de validação — 2026-10-26 — PR #17 / commit 8fdf771
+
+### Concluído e testado
+- CI curricular e de ativos: [execução 40261787364](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40261787364) terminou com sucesso.
+- Sintaxe JavaScript, matriz curricular, rastreabilidade, estrutura e heurísticas: PASS.
+- Chromium instalado no runner; smoke test e regressões interativas Playwright via `file://`: PASS.
+- Verificação funcional: fórmula Excel `SOMA(1;2)`, cálculo CIDR, feedback dos simuladores de segurança/prompts/ética, recálculo de histograma e mudança do SVG após editar valor numérico: PASS.
+- Artefato gerado: [curriculum-audit-reports](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40261787364/artifacts/12625340191).
+
+### Ainda pendente / não certificado
+- Code Quality deve ser verificado por execução própria no mesmo HEAD; nenhum status desse workflow é inferido aqui.
+- Revisão semântica independente integral dos módulos, questões, alternativas, gabaritos e fontes.
+- Revisão editorial da distribuição dos gabaritos; não alterar respostas corretas apenas para equilibrar letras.
+- Auditoria WCAG independente, navegação manual por teclado, leitor de tela e teste em dispositivos físicos/navegadores adicionais.
+- Reconciliar contagens e descrições históricas dos documentos de inventário sem apagar a trilha de auditoria.
+
+### Próxima ação
+1. Consultar o workflow Code Quality para o HEAD do PR.
+2. Registrar resultado real e links de execução.
+3. Corrigir somente defeitos comprovados em lotes pequenos e executar regressões afetadas.
+4. Manter PR #17 aberto e draft até resolver os critérios obrigatórios pendentes; não fazer merge nesta etapa.
