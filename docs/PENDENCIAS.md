@@ -333,3 +333,12 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [ ] Continuar a revisão dos gabaritos por pequenos lotes; não forçar distribuição uniforme nem alterar questão sem conferir justificativa, distratores e referências.
 - [ ] Realizar revisão pedagógica independente e completar a verificação por fontes oficiais para afirmações normativas/técnicas; CI verde não certifica esses aspectos.
 - [ ] Atualizar este relatório e o relatório de qualidade após cada lote validado, sem deixar que os snapshots históricos sejam confundidos com o estado atual.
+
+
+## Lote editorial M5 — atualização — 2026-10-26
+
+- [x] Revisar oito questões MC de conceitos básicos de aprendizado de máquina e avaliação de modelos (q-m5-05, q-m5-09, q-m5-13 a q-m5-18), preservando o conteúdo correto e remapeando análises e referências às letras.
+- [x] Ajustar o texto da resposta correta em q-m5-14 para descrever rotulagem, atributos e variável-alvo com precisão conceitual.
+- [x] Recalcular a distribuição estática: A=102, B=131, C=72, D=8, E=8 em 321 questões MC; A/B=72,6%. M5: A=16, B=14, C=9, D=1, E=0 em 40 questões MC.
+- [ ] Confirmar auditoria curricular, smoke test, Code Quality e workflow do PR no HEAD após este lote.
+- [ ] Prosseguir apenas com lotes pequenos e conferência semântica; não interpretar distribuição de gabaritos como métrica única de qualidade.
