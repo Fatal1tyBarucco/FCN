@@ -482,3 +482,11 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - O axe-core reportou 58 passes, 3 verificações incompletas e 0 violações. As verificações incompletas foram contraste, frame-tested e label-content-name-mismatch; elas não são violações confirmadas, mas exigem avaliação complementar/manual quando aplicável.
 - [ ] Continuam pendentes leitor de tela, navegação manual completa por teclado, auditoria WCAG manual e testes em dispositivos físicos.
 
+## Fontes das quatro questões pendentes — atualização 2026-10-26
+
+- [x] Acrescentadas fontes oficiais para `q-m2-26` e `q-m2-32` (Cisco: Cat6 UTP até 55 m a 10 Gbps; Cat6 blindado/Cat6A/Cat7 até 100 m).
+- [x] Acrescentadas fontes oficiais para `q-m3-19` (licenciamento/capacidade de webinar e requisitos de salas paralelas) e `q-m3-36` (salas paralelas do Zoom Webinar e navegadores compatíveis com Google Meet).
+- [x] Atualizados o catálogo `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md`.
+- [ ] Reexecutar auditoria de qualidade e confirmar que as 399 questões têm fonte registrada; antes da execução, a contagem documentada era 395/399.
+- [ ] Revisar semanticamente `q-m3-19` e `q-m3-36`, preservando a dependência de licenças, tipo de evento e aplicativo; uma referência pertinente não garante que todo o enunciado esteja correto em todos os contextos.
+- [ ] Não afirmar validação HTTP automática de todas as URLs. Revisão semântica completa das 399 questões continua pendente.
