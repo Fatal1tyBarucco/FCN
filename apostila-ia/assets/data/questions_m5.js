@@ -260,128 +260,128 @@ const moduleQuestions5 = [
   /* ===================== 5.2 Aprendizado de Máquina (10 questões) ===================== */
 
   { id: "q-m5-11", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u2-t1-s1", assunto: "5.2 — Paradigmas de Aprendizado",
-    contexto: "Os paradigmas de aprendizado de máquina diferem pelo tipo de sinal de supervisão ou feedback disponível.",
-    enunciado: "Qual alternativa descreve corretamente os paradigmas supervisionado, não supervisionado e por reforço?",
+    nivel: "intermediario", topico: "m5-u2-t1-s1", assunto: "5.2 — Paradigmas de aprendizado",
+    contexto: "Uma equipe tem três problemas: prever a categoria de um pedido com exemplos rotulados, encontrar grupos em dados sem rótulos e treinar um agente que escolhe ações com base em recompensas.",
+    enunciado: "Qual associação entre problema e paradigma de aprendizado está correta?",
     alternativas: [
-      { letra: "A", texto: "São distinguidos principalmente pela linguagem de programação usada para implementar o modelo." },
-      { letra: "B", texto: "No supervisionado há exemplos com alvos conhecidos; no não supervisionado busca-se estrutura sem alvos fornecidos; no reforço o agente aprende por interação e recompensas." },
-      { letra: "C", texto: "O aprendizado por reforço é apenas aprendizado supervisionado com rótulos binários." },
-      { letra: "D", texto: "O aprendizado não supervisionado exige que cada exemplo tenha uma saída correta fornecida por um especialista." },
-      { letra: "E", texto: "O aprendizado supervisionado não utiliza dados para ajustar parâmetros." }
+      { letra: "A", texto: "Prever categoria: não supervisionado; agrupar sem rótulos: reforço; escolher ações por recompensa: supervisionado." },
+      { letra: "B", texto: "Prever categoria com alvos: supervisionado; buscar grupos sem alvos: não supervisionado; aprender ações por interação e recompensa: por reforço." },
+      { letra: "C", texto: "Os três problemas são supervisionados porque todos usam dados." },
+      { letra: "D", texto: "O paradigma é determinado apenas pelo tamanho do conjunto de dados." },
+      { letra: "E", texto: "Aprendizado por reforço é sempre classificação com duas categorias." }
     ],
     gabarito: "B",
-    justificativa: "No aprendizado supervisionado, o treinamento usa exemplos associados a alvos conhecidos. No não supervisionado, o método procura estrutura nos dados sem receber esses alvos como resposta desejada. No aprendizado por reforço, um agente interage com um ambiente e usa sinais de recompensa para orientar suas ações. Esses paradigmas não são definidos pela linguagem de programação nem são intercambiáveis.",
+    justificativa: "No aprendizado supervisionado, exemplos são associados a alvos conhecidos. Métodos não supervisionados buscam estrutura sem receber esses alvos como resposta desejada. No aprendizado por reforço, um agente interage com um ambiente, escolhe ações e recebe recompensas ou penalidades que influenciam a política aprendida. Há métodos híbridos e variações, mas esses sinais de aprendizado distinguem os paradigmas no cenário apresentado.",
     analise: {
-      A: "INCORRETA. A linguagem de programação é uma escolha de implementação, não define o paradigma de aprendizagem.",
-      B: "CORRETA. A alternativa distingue alvos conhecidos, descoberta de estrutura sem alvos e feedback por recompensas.",
-      C: "INCORRETA. Aprendizado por reforço envolve interação, ações e recompensas; não é apenas classificação binária supervisionada.",
-      D: "INCORRETA. No aprendizado não supervisionado não se exige uma saída correta rotulada para cada exemplo.",
-      E: "INCORRETA. O aprendizado supervisionado ajusta o modelo usando dados e os alvos correspondentes."
+      A: "INCORRETA. Troca os três paradigmas e associa cada tarefa ao sinal de aprendizagem errado.",
+      B: "CORRETA. As associações correspondem aos alvos conhecidos, à descoberta de estrutura e à interação com recompensa.",
+      C: "INCORRETA. Usar dados não torna automaticamente o método supervisionado; importa o sinal de aprendizagem.",
+      D: "INCORRETA. O tamanho da base não define o paradigma.",
+      E: "INCORRETA. Reforço não se limita a classificação binária; envolve decisões sequenciais e recompensas."
     },
-    regra: "Supervisionado = exemplos com alvos; não supervisionado = estrutura sem alvos fornecidos; reforço = interação com o ambiente e recompensas.",
-    pegadinha: "A ausência de rótulos não define sozinha o aprendizado por reforço: o elemento distintivo é a interação com o ambiente e o sinal de recompensa.",
-    fonte: "Murphy, K. P. — Machine Learning: A Probabilistic Perspective, 2012."
+    regra: "Supervisionado aprende com alvos; não supervisionado procura estrutura sem alvos fornecidos; reforço aprende decisões por interação e recompensa.",
+    pegadinha: "Não confunda 'há dados' com 'há rótulos': o tipo de sinal disponível é central para distinguir paradigmas.",
+    fonte: "Murphy, K. P. — Machine Learning: A Probabilistic Perspective, MIT Press, 2012."
   },
 
   { id: "q-m5-12", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u2-t1-s2", assunto: "5.2 — Classificação e Regressão",
-    contexto: "Classificação e regressão são tarefas fundamentais de aprendizado supervisionado.",
-    enunciado: "A diferença entre classificação e regressão é:",
+    nivel: "intermediario", topico: "m5-u2-t1-s2", assunto: "5.2 — Classificação e regressão",
+    contexto: "Uma equipe treina dois modelos supervisionados: o primeiro prevê se uma solicitação deve ser encaminhada para revisão (sim/não); o segundo estima o tempo de atendimento em minutos.",
+    enunciado: "Como as tarefas devem ser classificadas?",
     alternativas: [
-      { letra: "A", texto: "A classificação prevê valores contínuos; a regressão prevê categorias discretas." },
-      { letra: "B", texto: "A classificação prevê rótulos discretos (categorias); a regressão prevê valores contínuos." },
-      { letra: "C", texto: "A classificação é um tipo de aprendizado não supervisionado." },
-      { letra: "D", texto: "A regressão é um tipo de aprendizado não supervisionado." },
-      { letra: "E", texto: "Tanto classificação quanto regressão não usam aprendizado supervisionado." }
+      { letra: "A", texto: "Ambas são regressão porque o resultado é produzido por um modelo numérico." },
+      { letra: "B", texto: "A primeira é classificação por prever categorias; a segunda é regressão por estimar uma quantidade numérica contínua." },
+      { letra: "C", texto: "A primeira é não supervisionada porque tem duas classes; a segunda é reforço porque prevê tempo." },
+      { letra: "D", texto: "A primeira é regressão e a segunda é classificação, independentemente da variável-alvo." },
+      { letra: "E", texto: "A distinção depende da linguagem de programação e não do objetivo da previsão." }
     ],
     gabarito: "B",
-    justificativa: "Classificação prevê rótulos discretos (categorias): sim/não, spam/não spam, etc. Regressão prevê valores contínuos: preço, temperatura, etc. Classificação prevê valores contínuos (alternativa A incorreta); classificação é não supervisionado (alternativa C incorreta); regressão não supervisionado (alternativa D incorreta); nenhum usa supervisão (alternativa E incorreta).",
+    justificativa: "Classificação prevê categorias ou rótulos, como sim/não. Regressão estima uma quantidade numérica, como duração ou custo. O tipo de tarefa depende da variável-alvo e da formulação do problema, não da linguagem de programação. Em casos específicos, variáveis numéricas discretizadas podem ser tratadas como classes, mas isso altera a pergunta que o modelo responde.",
     analise: {
-      A: "INCORRETA. Classificação prevê categorias discretas; regressão prevê valores contínuos.",
-      B: "CORRETA. Classificação: rótulos discretos; Regressão: valores contínuos.",
-      C: "INCORRETA. Classificação é aprendizado supervisionado, não não supervisionado.",
-      D: "INCORRETA. Regressão é aprendizado supervisionado, não não supervisionado.",
-      E: "INCORRETA. Tanto classificação quanto regressão são métodos de aprendizado supervisionado."
+      A: "INCORRETA. O fato de um programa calcular números internamente não transforma a tarefa em regressão.",
+      B: "CORRETA. O primeiro alvo é categórico e o segundo é uma quantidade numérica contínua.",
+      C: "INCORRETA. Duas classes não tornam a tarefa não supervisionada, e prever duração não é aprendizado por reforço.",
+      D: "INCORRETA. A alternativa inverte as tarefas e ignora o tipo de alvo.",
+      E: "INCORRETA. O paradigma é determinado pela tarefa e pelos dados, não pela linguagem."
     },
-    regra: "Classificação = 'categorias discretas'. Regressão = 'valores contínuos'.",
-    pegadinha: "Classificação prevê 'qual categoria' — regressão prevê 'qual valor'.",
-    fonte: "James, G. et al. — An Introduction to Statistical Learning, 2021."
+    regra: "Classificação prevê categorias; regressão estima valores numéricos. Defina a tarefa a partir do alvo e do objetivo de negócio.",
+    pegadinha: "Não classifique a tarefa pelo formato interno do código; observe o que se pretende prever e como o alvo foi definido.",
+    fonte: "James et al., An Introduction to Statistical Learning, 2nd ed., 2021: https://www.statlearning.com/."
   },
 
   { id: "q-m5-13", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m5-u2-t1-s3", assunto: "5.2 — Agrupamento e Redução de Dimensionalidade",
-    contexto: "Agrupamento e redução de dimensionalidade são técnicas distintas que podem apoiar a análise exploratória de dados.",
-    enunciado: "Sobre agrupamento (clustering) e redução de dimensionalidade, é correto afirmar que:",
+    nivel: "intermediario", topico: "m5-u2-t1-s3", assunto: "5.2 — Agrupamento e redução de dimensionalidade",
+    contexto: "Uma equipe explora registros sem rótulos. Primeiro procura segmentos de comportamento; depois deseja representar cada registro com menos variáveis para visualização.",
+    enunciado: "Qual afirmação diferencia corretamente as duas técnicas?",
     alternativas: [
-      { letra: "A", texto: "Agrupamento necessariamente aumenta o número de variáveis." },
-      { letra: "B", texto: "Redução de dimensionalidade é sempre um tipo de agrupamento." },
-      { letra: "C", texto: "Agrupamento reúne observações semelhantes; redução de dimensionalidade representa os dados com menos dimensões, podendo perder parte da informação." },
-      { letra: "D", texto: "As duas técnicas são sinônimos e produzem necessariamente os mesmos resultados." },
-      { letra: "E", texto: "Ambas são exclusivamente métodos de classificação supervisionada." }
+      { letra: "A", texto: "Agrupamento reúne observações segundo similaridade; redução de dimensionalidade representa os dados em menos dimensões, podendo descartar parte da variação ou informação." },
+      { letra: "B", texto: "Agrupamento e redução de dimensionalidade são sinônimos e sempre produzem a mesma saída." },
+      { letra: "C", texto: "Redução de dimensionalidade sempre aumenta o número de atributos." },
+      { letra: "D", texto: "Agrupamento exige necessariamente uma variável-alvo rotulada." },
+      { letra: "E", texto: "Toda técnica de redução de dimensionalidade é não supervisionada e não envolve escolhas sobre informação preservada." }
     ],
-    gabarito: "C",
-    justificativa: "Clustering organiza observações em grupos segundo uma medida de similaridade ou distância. Redução de dimensionalidade transforma ou projeta os dados em um espaço com menos dimensões; a quantidade de informação preservada depende do método e dos dados. PCA é um exemplo comum de redução não supervisionada, mas existem métodos de redução supervisionados, portanto a técnica não é necessariamente não supervisionada.",
+    gabarito: "A",
+    justificativa: "Agrupamento procura organizar observações em grupos segundo critérios de similaridade ou distância. Redução de dimensionalidade busca uma representação com menos dimensões, por exemplo para visualização, compressão ou preparação de dados. As técnicas podem ser combinadas, mas têm objetivos diferentes; a redução pode perder informação relevante e nem todo método de redução é necessariamente não supervisionado.",
     analise: {
-      A: "INCORRETA. Agrupamento não exige nem implica aumento do número de variáveis.",
-      B: "INCORRETA. Redução de dimensionalidade e agrupamento resolvem objetivos diferentes.",
-      C: "CORRETA. Uma técnica busca grupos; a outra reduz dimensões e pode introduzir perda de informação.",
-      D: "INCORRETA. Podem ser combinadas em um fluxo de análise, mas não são sinônimos nem garantem os mesmos resultados.",
-      E: "INCORRETA. Nenhuma das duas é exclusivamente classificação supervisionada; há técnicas não supervisionadas e, para redução, também métodos supervisionados."
+      A: "CORRETA. A alternativa descreve os objetivos distintos e reconhece o possível compromisso de informação na redução.",
+      B: "INCORRETA. Os resultados e objetivos são diferentes, ainda que as técnicas possam ser usadas em sequência.",
+      C: "INCORRETA. Redução de dimensionalidade busca diminuir o número de dimensões da representação.",
+      D: "INCORRETA. Muitos algoritmos de agrupamento operam sem rótulos de classe.",
+      E: "INCORRETA. Existem métodos supervisionados de redução, e a informação preservada depende do método e dos dados."
     },
-    regra: "Clustering = agrupar observações semelhantes; redução de dimensionalidade = representar dados com menos dimensões, considerando o compromisso entre simplicidade e informação preservada.",
-    pegadinha: "Não generalize: PCA é tipicamente não supervisionado, mas nem toda técnica de redução de dimensionalidade pertence a esse paradigma.",
-    fonte: "Jain, A. K. — Data Clustering: 50 Years of Development, 2010."
+    regra: "Clustering busca grupos; redução de dimensionalidade busca uma representação menor. São objetivos distintos e podem ser combinados.",
+    pegadinha: "PCA é um exemplo comum de redução não supervisionada, mas não representa todas as técnicas de redução de dimensionalidade.",
+    fonte: "Jain, A. K. — Data Clustering: 50 Years Beyond K-means, Pattern Recognition Letters, 2010: https://doi.org/10.1016/j.patrec.2009.09.011."
   },
 
   { id: "q-m5-14", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Rotulagem, Atributos e Variáveis-Alvo",
-    contexto: "A preparação de dados é uma etapa crítica no aprendizado supervisionado.",
-    enunciado: "Rotulagem, atributos e variáveis-alvo são:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Rotulagem, atributos e variável-alvo",
+    contexto: "Para treinar um modelo que priorize solicitações, uma equipe revisa exemplos históricos, define a prioridade correta de cada caso e seleciona informações disponíveis no momento da triagem.",
+    enunciado: "Qual alternativa distingue corretamente rótulo, atributo e variável-alvo?",
     alternativas: [
-      { letra: "A", texto: "Tipos de algoritmos." },
-      { letra: "B", texto: "Serviços de nuvem." },
-      { letra: "C", texto: "Conceitos da preparação e modelagem dos dados: rotulagem atribui rótulos, atributos são variáveis de entrada e variáveis-alvo são saídas esperadas." },
-      { letra: "D", texto: "Ferramentas de visualização." },
-      { letra: "E", texto: "Dados criptografados." }
+      { letra: "A", texto: "Rótulo é sempre uma variável de entrada; atributo é a resposta correta; variável-alvo é o identificador do registro." },
+      { letra: "B", texto: "Rotulagem atribui a resposta esperada aos exemplos; atributos são informações de entrada; variável-alvo é o resultado que o modelo deve prever." },
+      { letra: "C", texto: "Atributos são sempre dados pessoais, enquanto rótulos são sempre números contínuos." },
+      { letra: "D", texto: "A variável-alvo deve ser incluída como atributo para que o modelo aprenda diretamente a resposta." },
+      { letra: "E", texto: "Rotulagem é a etapa que criptografa todos os dados antes de treinar." }
     ],
-    gabarito: "C",
-    justificativa: "Rotulagem é a atribuição de rótulos aos dados de entrada. Atributos são variáveis de entrada (features) que o modelo usa para aprender. Variáveis-alvo são saídas desejadas a serem previstas. Tipos de algoritmos (alternativa A incorreta); serviços de nuvem (alternativa B incorreta); ferramentas de visualização (alternativa D incorreta); dados criptografados (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Rotulagem associa exemplos a respostas esperadas segundo critérios definidos. Atributos (features) são variáveis usadas como entradas; a variável-alvo é aquilo que se pretende prever e, em classificação, costuma representar a classe. A definição do alvo exige regras consistentes e controle de qualidade dos rótulos. Incluir no conjunto de entrada informação que revela diretamente o alvo causa vazamento e invalida a avaliação.",
     analise: {
-      A: "INCORRETA. Tipos de algoritmos não definem rotulagem, atributos e variáveis-alvo.",
-      B: "INCORRETA. Serviços de nuvem não estão relacionados.",
-      C: "CORRETA. Atributos = variáveis de entrada; variáveis-alvo = saídas esperadas; rotulagem = etiqueta dos dados.",
-      D: "INCORRETA. Ferramentas de visualização não definem essas etapas.",
-      E: "INCORRETA. Dados criptografados não são rotulagem, atributos ou variáveis-alvo."
+      A: "INCORRETA. A alternativa troca os papéis de atributos, rótulo e alvo.",
+      B: "CORRETA. A alternativa distingue a construção dos rótulos, as entradas e o resultado previsto.",
+      C: "INCORRETA. Atributos podem ser numéricos, categóricos ou outros tipos; rótulos também variam conforme a tarefa.",
+      D: "INCORRETA. Usar o alvo como entrada causa vazamento, não aprendizado válido.",
+      E: "INCORRETA. Criptografia é uma técnica de proteção, não o significado de rotulagem."
     },
-    regra: "Rotulagem = 'marcação'. Atributos = 'variáveis de entrada'. Variáveis-alvo = 'saída desejada'.",
-    pegadinha: "Atributos não são 'saídas' — são 'variáveis de entrada' ao modelo.",
-    fonte: "Han, J. et al. — Data Mining: Concepts and Techniques, 2020."
+    regra: "Atributos = entradas; variável-alvo = resultado a prever; rotulagem = atribuição consistente das respostas esperadas aos exemplos.",
+    pegadinha: "Se um atributo contém a resposta ou informação posterior ao resultado, o modelo pode aparentar ótimo desempenho por vazamento.",
+    fonte: "Han, Kamber e Pei — Data Mining: Concepts and Techniques, 3rd ed., 2011."
   },
 
   { id: "q-m5-15", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Vazamento de dados (Data Leakage)",
-    contexto: "O vazamento de dados é um erro comum que invalida a avaliação do modelo.",
-    enunciado: "O vazamento de dados (data leakage) ocorre quando:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Vazamento de dados (data leakage)",
+    contexto: "Um analista normaliza a base inteira antes de separar treino e teste. Em outro experimento, usa uma variável calculada somente após a decisão que o modelo deveria prever.",
+    enunciado: "Qual diagnóstico é mais adequado para esses experimentos?",
     alternativas: [
-      { letra: "A", texto: "Dados são armazenados corretamente." },
-      { letra: "B", texto: "O modelo é treinado corretamente." },
-      { letra: "C", texto: "Informações do conjunto de teste (ou do futuro) são usadas durante o treinamento." },
-      { letra: "D", texto: "O teste é realizado." },
-      { letra: "E", texto: "Os dados são validados." }
+      { letra: "A", texto: "Nenhum envolve vazamento, porque os dados vieram do mesmo sistema institucional." },
+      { letra: "B", texto: "Ambos podem introduzir vazamento: o primeiro permite que estatísticas do teste influenciem a transformação; o segundo usa informação futura em relação ao momento da previsão." },
+      { letra: "C", texto: "Somente o segundo é vazamento; calcular estatísticas da base completa antes da divisão é sempre seguro." },
+      { letra: "D", texto: "Vazamento significa apenas perder registros durante a importação." },
+      { letra: "E", texto: "Vazamento é aceitável se melhorar a métrica no conjunto de teste." }
     ],
-    gabarito: "C",
-    justificativa: "Data leakage ocorre quando informações do conjunto de teste (ou do futuro) são usadas durante o treinamento, fazendo com que o modelo pareça performar melhor do que realmente seria em produção. Dados armazenados corretamente (alternativa A incorreta); modelo treinado corretamente (alternativa B incorreta); teste realizado (alternativa D incorreta); dados validados (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Data leakage ocorre quando informação que não estaria legitimamente disponível no treinamento ou no instante de previsão influencia o ajuste ou a avaliação. Ajustar transformações usando a base completa antes da divisão permite que estatísticas do teste influenciem o pipeline; usar variáveis posteriores ao resultado cria vazamento temporal ou de alvo. Separe os conjuntos primeiro e ajuste as transformações apenas no treino, aplicando depois os parâmetros aprendidos aos dados de validação/teste.",
     analise: {
-      A: "INCORRETA. Armazenamento correto de dados não é vazamento.",
-      B: "INCORRETA. Treinamento correto não é vazamento.",
-      C: "CORRETA. Data leakage acontece quando informações do teste/futuro são usadas no treino.",
-      D: "INCORRETA. Realizar teste não é vazamento.",
-      E: "INCORRETA. Validar dados não é vazamento."
+      A: "INCORRETA. A origem comum dos dados não impede vazamento entre treino, teste e futuro.",
+      B: "CORRETA. Os dois cenários deixam informação inadequada influenciar a avaliação ou a previsão.",
+      C: "INCORRETA. Estatísticas calculadas com o teste podem contaminar a avaliação, mesmo sem usar explicitamente o rótulo.",
+      D: "INCORRETA. Perda de registros é outro problema; leakage é uso indevido de informação.",
+      E: "INCORRETA. Melhorar artificialmente a métrica torna a estimativa menos confiável, não mais aceitável."
     },
-    regra: "Data leakage = 'dicas do futuro'. Teste não pode informar o treino.",
-    pegadinha: "Data leakage não é 'perda de dados' — é 'informação do teste usada no treino'.",
-    fonte: "Kaufman, S. et al. — Leakage in Data Mining, 2012."
+    regra: "Separe treino e teste antes de ajustar transformações; use apenas atributos disponíveis no momento real da previsão.",
+    pegadinha: "Vazamento pode ocorrer sem incluir diretamente o rótulo: estatísticas do teste ou dados do futuro também podem contaminar o processo.",
+    fonte: "scikit-learn, Common pitfalls and recommended practices: https://scikit-learn.org/stable/common_pitfalls.html."
   },
 
   { id: "q-m5-16", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
