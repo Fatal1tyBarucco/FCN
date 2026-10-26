@@ -239,3 +239,15 @@ Lote revisado no texto versionado de `apostila-ia/assets/data/questions_m6.js`, 
 
 Foram adicionadas ao catálogo as referências oficiais NIST AI 600-1 e Google Cloud Grounding. **Limite:** a inclusão foi verificada no arquivo versionado; o CI do HEAD atual ainda precisa confirmar a validação estrutural e de execução. As referências acadêmicas remanescentes exigem auditoria própria.
 
+## Auditoria de fontes após revisão M1–M3 — 2026-10-26
+
+Evidência: workflow [40412457818](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40412457818), SHA `5232348fa553a58317c6b4b28ab9dfafc088beb9`.
+
+- Questões lidas: 399; IDs duplicados: 0; alertas heurísticos: 0; pares contexto/enunciado idênticos: 0.
+- Justificativas detectadas: 399/399; contextos detectados: 399/399.
+- Fontes detectadas pelo script: 395/399. Os quatro itens sem fonte são `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36`.
+- As fontes foram adicionadas a questões M1, M2 e M3 e 38 referências oficiais foram adicionadas ao catálogo `apostila-ia/assets/data/references.js`. A presença do campo `fonte` é apenas um indicador estrutural; ainda é necessária a conferência manual de que cada URL abre e sustenta a afirmação exata.
+- Os dois itens de M2 sem fonte exigem referência técnica verificável para o alcance de 10 Gbps em Cat6/Cat6a. Os dois de M3 sem fonte exigem documentação oficial do Zoom para as alegações específicas sobre webinars, salas simultâneas e funcionamento no navegador.
+- Distribuição MC geral: A=83, B=104, C=72, D=37, E=28. Em M1: A=4, B=15, C=5, D=2, E=0 (26 itens). A distribuição é um sinal para revisão manual, não motivo para alterar gabaritos corretos.
+- Limitação: zero alertas heurísticos não prova correção factual, qualidade dos distratores ou adequação pedagógica.
+
