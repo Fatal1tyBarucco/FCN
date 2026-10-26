@@ -1110,6 +1110,13 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit da correção: `1e70eb727ba4d889b4bd5b7480a4093d23878df2`.
 - A regressão de teclado foi mantida para prevenir recorrência. O workflow precisa ser repetido no novo HEAD; não declarar a correção validada até smoke e regressões concluírem.
 
+## Auditoria automatizada WCAG — extensão dos testes de navegador (2026-10-26)
+
+- Ampliado `verificacao/test-browser-interactions.cjs` com uma varredura axe-core sobre a aplicação renderizada, usando tags WCAG 2.0/2.1 A/AA e best-practice. A etapa bloqueia violações de impacto `critical` ou `serious` e imprime os detalhes para diagnóstico.
+- Atualizado `.github/workflows/validate-curriculum.yml` para instalar `axe-core` junto com Playwright no ambiente efêmero de CI.
+- Commits: `077e0874f9d31ee41b7d6a75d11373056eb8da0c` (teste) e `9786cf366f7b3148e059c114f5982acd7bb56c18` (workflow).
+- A nova varredura é uma verificação automatizada e não substitui testes com leitor de tela ou auditoria manual. A execução final do CI no HEAD resultante precisa confirmar que a página não contém violações críticas/graves.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
