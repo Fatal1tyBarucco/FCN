@@ -627,6 +627,17 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - O verificador estrutural para q-m4-44 foi ajustado para não depender de frases literais frágeis; as últimas execuções foram afetadas por versões diferentes da questão no branch/merge de PR e não devem ser consideradas conclusivas. Verificar a nova execução no HEAD atual antes de declarar CI verde.
 - Fontes oficiais consultadas para a correção de q-m4-34: Lei nº 14.460/2022 e Lei nº 15.352/2026 no Planalto. Isso valida a distinção histórica específica; não equivale a uma auditoria jurídica integral de todo o banco.
 
+## Auditoria semântica incremental — lote M6 q-m6-01 a q-m6-10 (2026-10-26)
+
+- q-m6-01 a q-m6-05: revisão focal de legalidade, impessoalidade, finalidade/adequação, publicidade e eficiência na digitalização. Mantidas as distinções entre regime administrativo, dever de transparência, hipóteses de sigilo e preservação de direitos/controles.
+- q-m6-06: critério oculto de priorização tratado como problema de impessoalidade e publicidade, sem afirmar que discricionariedade seja imune a controle.
+- q-m6-07: esclarecido que a incidência conjunta de LGPD e LAI deve ser harmonizada conforme a natureza da informação e as regras aplicáveis; removida a regra simplista de que sempre prevalece “o mais restritivo”.
+- q-m6-08: reduzida a afirmação categórica de que a interface “é o próprio serviço” e removida a alegação de que a interface necessariamente “integra o ato administrativo”; mantida a conclusão de que a interface faz parte da prestação do serviço e deve observar os princípios aplicáveis.
+- q-m6-09 e q-m6-10: revisão focal de transparência ativa e indicadores da Lei de Governo Digital; mantida a distinção entre transparência ativa/passiva e a necessidade de não ocultar solicitações em andamento.
+- Foram adicionadas URLs oficiais do Planalto para CF/88, LAI, LGPD compilada e Lei nº 14.129/2021 nas questões iniciais que citavam apenas dispositivos e data de verificação.
+- Commit de conteúdo com as clarificações e fontes: `9754205428e6cf6d9af8a8746d886b9afa3f4af5`.
+- Revisão focal; conferir sintaxe, estrutura e workflows no HEAD mais recente.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
