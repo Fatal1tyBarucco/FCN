@@ -220,7 +220,7 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 
 - [x] Ampliar a auditoria para produzir distribuição A–E por módulo e alertas de concentração.
 - [x] Execução aprovada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
-- [ ] **Bloqueador editorial para o aceite do simulado:** revisar manualmente as posições de resposta em M1, M4, M5, M6, M7 e M8. M6 tem 30/30 questões MC com gabarito A; M7 tem 33/33 com gabarito A; M4 tem 38 A, 43 B e 3 C em 84 questões MC; M5 tem 24 A, 13 B e 1 C em 38; M8 tem 10 A, 25 B e 1 C em 36.
+- [ ] **Bloqueador editorial para o aceite do simulado:** revisar manualmente as posições de resposta em M1, M4, M5, M6, M7 e M8. M6 tem 30/30 questões MC com gabarito A; após lote editorial controlado, M7 tem A=29, C=1, D=1, E=2 em 33 questões MC; M4 tem 38 A, 43 B e 3 C em 84 questões MC; M5 tem 24 A, 13 B e 1 C em 38; M8 tem 10 A, 25 B e 1 C em 36.
 - [ ] Não reorganizar alternativas por lote sem verificar que o gabarito, a análise de cada alternativa e toda referência explícita a letras permaneçam coerentes.
 - [ ] Revalidar todos os itens alterados com verificador estrutural e revisão editorial antes de retirar esse bloqueio.
 
@@ -276,5 +276,13 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - Lote controlado aplicado a `q-m7-04`, `q-m7-05` e `q-m7-07`, além do piloto anterior `q-m7-01`.
 - Em cada questão, foram movidas em conjunto a alternativa correta, o gabarito e as análises associadas; arrays mantidos em ordem A–E.
 - CI do commit anterior `47fc2332a1339c8750d606e6477332000ee3ce50`: validação curricular/estrutural, auditoria heurística e smoke test Playwright em `file://` concluídos com sucesso ([run 40254320845](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254320845)).
-- O lote atual ainda aguarda CI próprio. Não tratar o resultado anterior como validação dos novos commits.
-- Próximo passo: verificar distribuição e consistência do lote atual; somente depois escolher novo lote. M7 permanece concentrado em A, e M6/M4/M5/M8 continuam pendentes de revisão individual.
+- CI do HEAD `4df80216f1b0e6f20329a5345468ad56074f8abd` concluído com sucesso: sintaxe, auditorias estruturais/heurísticas e smoke test Playwright em `file://` aprovados ([run PR 40254853715](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254853715), [run push 40254851951](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254851951)).
+- Distribuição efetiva confirmada no artefato: M7 A=29, B=0, C=1, D=1, E=2; a concentração ainda é alta. Próximo passo: revisão individual dos distratores, análises e fontes antes de qualquer novo lote. M6/M4/M5/M8 continuam pendentes de revisão individual.
+
+
+### Revalidação do HEAD — 2026-10-26
+
+- [x] CI de push e PR no SHA `4df80216f1b0e6f20329a5345468ad56074f8abd` aprovado: sintaxe de 39 arquivos, auditoria da matriz curricular, rastreabilidade, estrutura do repositório, heurísticas de questões e smoke test Chromium/Playwright via `file://`.
+- [x] Contagens reconciliadas no mesmo SHA: 132 tópicos, 460 flashcards, 389 questões; 0 IDs duplicados, 0 pares idênticos de contexto/enunciado, 0 alertas heurísticos.
+- [x] Distribuição de 314 questões MC atualizada: A=145, B=129, C=27, D=6, E=7. A/B ainda representam 87,3%; revisão editorial permanece bloqueadora.
+- [ ] Fazer revisão semântica individual dos distratores e análises do M7 antes de novos rearranjos; o CI valida estrutura, não correção pedagógica.
