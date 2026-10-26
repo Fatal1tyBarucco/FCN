@@ -583,6 +583,20 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m5-09 e q-m5-10: mantida avaliação alinhada ao caso de uso, dados não usados no ajuste, análise de erros/subgrupos, limites e monitoramento.
 - Commit de conteúdo: `8388d6cd11e7372ba7d36a8837f8f5e20f34ad0d`. Verificar fonte nova de inferência no validador de links e aguardar CI do HEAD atual.
 
+## Revisão adicional do M5 — q-m5-11 a q-m5-20 (2026-10-26)
+
+- q-m5-11: paradigmas supervisionado, não supervisionado e por reforço diferenciados pelo sinal de aprendizagem.
+- q-m5-12: classificação e regressão definidas pelo tipo de variável-alvo e pela pergunta do modelo.
+- q-m5-13: agrupamento e redução de dimensionalidade distinguidos, com ressalva de perda de informação e métodos supervisionados de redução.
+- q-m5-14: rótulos, atributos e variável-alvo diferenciados; alertado o vazamento quando o alvo entra como atributo.
+- q-m5-15: vazamento por transformação ajustada antes da divisão e por variável posterior ao resultado; pipeline deve ajustar transformações no treino.
+- q-m5-16: métricas de classificação relacionadas aos custos de falsos positivos/negativos; precisão, recall e especificidade definidos.
+- q-m5-17: reamostragem/ponderação confinadas ao treino, com avaliação representativa e métricas por classe.
+- q-m5-18: MAE e RMSE diferenciados pela agregação e sensibilidade a erros grandes.
+- q-m5-19: engenharia de atributos limitada à informação disponível no momento real da previsão.
+- q-m5-20: exemplo de 99% de acurácia com recall zero na classe rara; não se usa acurácia isolada para decidir aptidão.
+- Exceto pelas correções registradas em q-m5-04, q-m5-05 e q-m5-08, não foram necessários patches adicionais nos itens q-m5-11..q-m5-20 nesta passada focal. Validar fontes e CI no HEAD atualizado.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
