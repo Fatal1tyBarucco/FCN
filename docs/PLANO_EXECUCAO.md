@@ -260,3 +260,22 @@ A correção pontual q-m6-41–q-m6-44 foi commitada no branch do PR #17 (`7c9b0
 2. Reexecutar a auditoria de referências e verificar IDs únicos no conjunto de questões.
 3. Revisar qualidade semântica e distribuição de gabaritos em lote, sem alterar respostas corretas para balanceamento artificial.
 4. Prosseguir com as pendências de revisão independente e acessibilidade; manter o PR aberto em draft enquanto houver critérios obrigatórios pendentes.
+
+## Retomada da orquestração — 2026-10-26
+
+| Fase | Estado após inspeção | Próxima ação verificável |
+|---|---|---|
+| 1 — Inventário e matriz | **Artefatos existentes; atualização incremental necessária.** `docs/INVENTARIO_CURRICULAR.md` e `docs/MATRIZ_COBERTURA.csv` foram localizados na branch do PR. O prompt mestre foi consultado. | Executar auditorias sobre o HEAD da branch e reconciliar contagens com saída real, sem copiar snapshots históricos. |
+| 2 — Inspeção do repositório | **Inspeção documental realizada.** SPA estática vanilla em `apostila-ia/`; sem build de aplicação; workflows de validação/deploy presentes. | Inspecionar patches e scripts de auditoria antes de escolher a próxima alteração de código. |
+| 3 — Arquitetura e infraestrutura | **Implementação existente; não reimplementar.** | Validar pontos de persistência, segurança, links, execução `file://` e compatibilidade com os testes existentes. |
+| 4 — Conteúdo didático | **Quantitativos reportados acima do mínimo em snapshots recentes; qualidade semântica ainda pendente.** | Revisão independente em lotes por módulo, com IDs revisados e evidências de fonte. |
+| 5 — Recursos interativos | **UI e regressões automatizadas reportadas; não equivale a auditoria completa.** | Executar testes do HEAD atual e ampliar cobertura para persistência/erros/teclado conforme ambiente disponível. |
+| 6–8 — Revisão, correção e aceite | **Pendentes parcialmente.** | Resolver defeitos com patches mínimos; rerodar testes afetados; manter PR Draft até todos os critérios obrigatórios terem status honesto. |
+
+### Protocolo contra retrabalho
+
+1. Trabalhar na branch `feat/fase-1-orquestracao-20261025` do PR #17.
+2. Antes de editar, ler `AGENTS.md`, os relatórios existentes e os scripts relacionados ao requisito.
+3. Registrar IDs e arquivos revisados; não repetir lotes aprovados sem nova evidência.
+4. Nunca declarar execução local se só existe um resultado de CI histórico. Associar cada resultado ao SHA exato.
+5. Não fazer merge nem promover o PR a ready-for-review enquanto houver pendências qualitativas obrigatórias.
