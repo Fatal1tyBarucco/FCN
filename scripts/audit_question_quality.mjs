@@ -96,6 +96,10 @@ for (const question of questions) {
   formatDistribution[question.format] = (formatDistribution[question.format] || 0) + 1;
 }
 const flagged = questions.filter(question => question.flags.length);
+const multipleChoiceTotal = Object.values(multipleChoiceAnswerDistribution).reduce((sum, count) => sum + count, 0);
+const answerPositionABShare = multipleChoiceTotal
+  ? (multipleChoiceAnswerDistribution.A + multipleChoiceAnswerDistribution.B) / multipleChoiceTotal
+  : 0;
 const csvRows = [[
   "id", "modulo", "formato", "gabarito", "topico", "assunto",
   "quantidade_alternativas", "quantidade_analises", "tem_contexto",
@@ -119,6 +123,7 @@ const report = [
   "- Distribuição por módulo: " + Object.entries(byModule).sort(([a], [b]) => Number(a) - Number(b)).map(([module, count]) => "M" + module + "=" + count).join(", ") + ".",
   "- Distribuição de gabaritos (incluindo C/E): " + Object.entries(answerDistribution).map(([answer, count]) => answer + "=" + count).join(", ") + ".",
   "- Distribuição de gabaritos MC (A-E): " + Object.entries(multipleChoiceAnswerDistribution).map(([answer, count]) => answer + "=" + count).join(", ") + ".",
+  ...(answerPositionABShare >= 0.8 ? ["- Atenção editorial: A/B representam " + (answerPositionABShare * 100).toFixed(1) + "% das questões MC; revisar manualmente a posição das alternativas, sem alterar gabaritos corretos."] : []),
   ...(multipleChoiceAnswerDistribution.D === 0 ? ["- Revisão manual recomendada: nenhuma questão de múltipla escolha tem gabarito D; confirmar a distribuição das posições sem alterar respostas corretas por conveniência."] : []),
   "- Distribuição de formato: " + Object.entries(formatDistribution).map(([format, count]) => format + "=" + count).join(", ") + ".", "",
   "## Alertas", "",
