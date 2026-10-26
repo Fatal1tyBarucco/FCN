@@ -516,6 +516,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `ccb8d6b252a732e09dd5302abbc2de43b1c97754`.
 - Fontes legais referenciadas nos itens: Constituição Federal, EC nº 115/2022, LGPD e Marco Civil da Internet. Trata-se de revisão focal, não de parecer jurídico integral; a validade sintática e estrutural depende do CI do HEAD atual.
 
+## Revisão focal adicional — q-m4-46 a q-m4-65 (2026-10-26)
+
+- q-m4-46: conferido o uso de hash criptográfico para detectar alteração, com a ressalva de que o hash não prova autoria nem legitimidade da versão.
+- q-m4-47 e q-m4-51 a q-m4-54: revisados os conceitos de RTO/RPO, testes de restauração, continuidade versus recuperação de desastres e estratégia 3-2-1; não há equivalência entre cópia externa e cópia offline/imutável.
+- q-m4-48 a q-m4-50: MFA depende de fatores de categorias distintas; menor privilégio considera as tarefas atuais; logs requerem integridade, separação de funções e retenção adequada.
+- q-m4-55 a q-m4-59: conferidas distinções entre criptografia simétrica/assimétrica, hash de senha, assinatura digital e certificados X.509; validação não deve ser reduzida à aparência do documento ou à existência de certificado.
+- q-m4-60 e q-m4-61: spear phishing e categorias de malware tratadas sem indicadores simplistas ou pressupostos de propagação universal.
+- q-m4-62 a q-m4-65: EDR versus antimalware, segmentação, hardening e priorização de vulnerabilidades contextualizados, sem prometer prevenção absoluta.
+- Não foi necessário alterar os itens desse intervalo durante esta passada focal. Essa revisão semântica não substitui execução de validadores, testes funcionais ou conferência de todas as fontes.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
