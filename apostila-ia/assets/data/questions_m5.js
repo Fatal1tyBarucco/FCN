@@ -750,7 +750,7 @@ const moduleQuestions5 = [
       E: "INCORRETA. Delimitação não reduz o tamanho necessário."
     },
     regra: "Delimitação = separar instrução e dado.",
-    pegadinha: "Delimitação ajuda, mas não substitui defesa em camadas contra injeção de prompt."
+    pegadinha: "Delimitação ajuda, mas não substitui defesa em camadas contra injeção de prompt.",
     fonte: "NIST — Adversarial Machine Learning, 2024."
   },
 
