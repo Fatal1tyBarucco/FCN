@@ -341,6 +341,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `81d1118a88648fa3d915ba10f93180b95065c96c`.
 - Fontes citadas: CISA phishing, ICANN DNS security, NIST SP 800-63B, NIST SP 800-52 Rev. 2 e OWASP TLS Cheat Sheet. Revisão focal, sujeita a CI no HEAD atual.
 
+## Auditoria semântica incremental — lote M4 q-m4-26 a q-m4-30 (2026-10-26)
+
+- q-m4-26: DoS/DDoS reescrito como cenário de resposta operacional, com validação por telemetria, coordenação de mitigação e preservação de evidências; removidas afirmações absolutas sobre detecção.
+- q-m4-27: exposição de dados por configuração incorreta tratada como possível incidente, com contenção, preservação, avaliação de escopo e acionamento dos responsáveis para determinar obrigações aplicáveis.
+- q-m4-28: removida a segunda questão redundante sobre MitM e substituída por ataque de repetição (replay), com frescor, nonces, sequência e vinculação ao contexto.
+- q-m4-29: IoCs definidos como evidências contextuais que orientam investigação, não como prova conclusiva isolada.
+- q-m4-30: removida a terceira questão redundante sobre MitM e substituída por ataque à cadeia de suprimentos de software.
+- Commit de conteúdo: `f12023fdf42705c873c4ad56815f84fe7304bcdc`.
+- Fontes citadas: CISA DDoS, ANPD comunicação de incidente, NIST SP 800-63B, RFC 8446, CISA incident playbooks e orientação CISA sobre cadeia de suprimentos. Revisão focal, sujeita a CI no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
