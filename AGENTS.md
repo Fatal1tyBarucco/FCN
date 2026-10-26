@@ -156,6 +156,12 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - A execução que detectou o defeito falhou; os resultados de commits posteriores ainda precisam ser consultados. Não declarar CI verde até o workflow completar no HEAD atual.
 - Ao usar `update_file`, sempre enviar o conteúdo integral do arquivo atualizado; antes de gravar, validar o início, o final e os marcadores esperados para evitar substituição parcial.
 
+## Correção de sintaxe após lote M5 q-m5-11..q-m5-15 — 2026-10-26
+
+- O workflow `40330396395` reportou `Unexpected token ':'` em `questions_m5.js`, na declaração de q-m5-12. A substituição dos blocos q-m5-11 e q-m5-13 havia removido a chave de abertura dos objetos q-m5-12 e q-m5-14.
+- Corrigidos os dois delimitadores e feita uma verificação textual no arquivo para garantir que não restassem linhas de propriedades `id: "q-m5-NN"` sem o prefixo `{`. Commit: `dbd50d420ccafd9e4fdbf3d2892c9fd648a091c7`.
+- A verificação textual não equivale a compilação; aguardar `node --check` e o workflow completo no HEAD atual antes de considerar o lote validado.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
