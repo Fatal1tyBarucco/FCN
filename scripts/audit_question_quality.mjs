@@ -32,7 +32,9 @@ function parseQuestions(path) {
     const id = field(segment, "id");
     const alternatives = [...segment.matchAll(/letra:\s*"([A-E])"\s*,\s*texto:\s*"((?:\\.|[^"\\])*)"/g)]
       .map(item => ({ letter: item[1], text: decode(item[2]) }));
-    const analysisKeys = [...segment.matchAll(/^\s{6}([A-E]):\s*"/gm)].map(item => item[1]);
+    const analysisEntries = [...segment.matchAll(/^\s{6}([A-E]):\s*("(?:\\.|[^"\\])*")/gm)]
+      .map(item => ({ letter: item[1], text: decode(item[2]) }));
+    const analysisKeys = analysisEntries.map(item => item.letter);
     const answer = field(segment, "gabarito");
     const format = field(segment, "formato");
     const topic = field(segment, "topico");
@@ -53,6 +55,17 @@ function parseQuestions(path) {
       const missingAnalysis = alternatives.filter(option => !analysisKeys.includes(option.letter)).map(option => option.letter);
       if (missingAnalysis.length) flags.push("análise ausente para " + missingAnalysis.join("/"));
       if (new Set(alternatives.map(option => option.text.trim().toLowerCase())).size !== alternatives.length) flags.push("alternativas duplicadas");
+      const hasAnalysisLabels = analysisEntries.some(item => /^\s*(CORRETA|INCORRETA)\b/i.test(item.text));
+      if (hasAnalysisLabels) {
+        for (const option of alternatives) {
+          const analysis = analysisEntries.find(item => item.letter === option.letter);
+          const prefix = analysis?.text.match(/^\s*(CORRETA|INCORRETA)\b/i);
+          const expected = option.letter === answer ? "CORRETA" : "INCORRETA";
+          if (!prefix || prefix[1].toUpperCase() !== expected) {
+            flags.push("rótulo de análise incompatível com gabarito em " + option.letter);
+          }
+        }
+      }
     } else if (!["certo", "errado", "true", "false", "c", "e"].includes(answer.toLowerCase())) {
       flags.push("formato sem alternativas e gabarito não reconhecido como C/E");
     }
