@@ -3138,16 +3138,16 @@ id: "q-m1-09",
     topico: "m3-u4-t3-s2",
     assunto: "M3.2 Reuniões — gravação com dados pessoais e proteção",
     contexto: "Reunião gravada pelo órgão contém dados pessoais dos participantes (nomes, falas, eventual identificação de cargos).",
-    enunciado: "Quando uma gravação de reunião contém dados pessoais dos participantes, a política deve prever consentimento ou informação dos participantes, definição de finalidade, prazo de retenção e segurança no armazenamento, assegurando aos titulares o direito de acesso e exclusão.",
+    enunciado: "Quando uma gravação de reunião contém dados pessoais dos participantes, a política deve prever transparência aos participantes, base legal adequada (consentimento quando aplicável), finalidade, prazo de retenção e segurança no armazenamento, além de atender aos direitos dos titulares previstos na legislação aplicável.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a lista 'consentimento/informação, finalidade, prazo de retenção, segurança no armazenamento, direito de acesso e exclusão': coincide com o exemplo de aplicação do currículo sobre gravação com dados pessoais.",
-    justificativa: "O exemplo de aplicação do currículo responde, para 'reunião gravada contém dados pessoais': 'Consentimento dos participantes para gravação, definição de finalidade, prazo de retenção, segurança no armazenamento (criptografia), e direito de acesso e exclusão pelos titulares.' O item reproduz esses elementos. A menção à proteção de dados é genérica, sem número de artigo.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a necessidade de transparência, base legal adequada, finalidade, prazo de retenção, segurança e atendimento aos direitos aplicáveis dos titulares.",
+    justificativa: "O exemplo de aplicação do currículo lista finalidade, prazo de retenção, segurança no armazenamento e direitos dos titulares. A política também deve informar os participantes e identificar a base legal aplicável; consentimento não é requisito universal para todo tratamento. A menção à proteção de dados é genérica, sem número de artigo.",
     analise: {
-      item: "Item VERDADEIRO. Consentimento/informação, finalidade, retenção, segurança (criptografia) e direitos de acesso/exclusão são exatamente os elementos do exemplo de aplicação.",
+      item: "Item VERDADEIRO. Transparência, base legal adequada, finalidade, retenção, segurança e atendimento aos direitos aplicáveis dos titulares compõem a governança; consentimento é necessário quando for a hipótese legal escolhida.",
       leituraIncorreta: "Leitura que induz ao erro: tratar a gravação como mero arquivo interno sem dados pessoais — contendo dados pessoais, ela cai nas práticas de proteção e nos direitos do titular descritas no currículo."
     },
-    regra: "Gravação com dados pessoais exige: consentimento/informação, finalidade, prazo de retenção, segurança (criptografia) e respeito aos direitos de acesso e exclusão dos titulares.",
+    regra: "Gravação com dados pessoais exige: transparência e base legal adequada, finalidade, prazo de retenção, segurança e atendimento aos direitos dos titulares; consentimento quando aplicável.",
     pegadinha: "Item simples por design; o risco é esquecer que uma gravação de reunião é tratamento de dados pessoais e, como tal, carrega finalidade, retenção e direitos do titular."
   },
   {
