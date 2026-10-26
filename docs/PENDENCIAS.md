@@ -269,3 +269,12 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [ ] **P1 — integração de persistência:** `storage.js` está carregado, mas seu próprio cabeçalho declara que navegação, flashcards e questões continuam gravando em namespaces separados no `localStorage`. Definir contrato único ou documentar/validar interoperabilidade, migração, backup e recuperação antes de declarar a persistência integrada.
 
 - [ ] **P1 — balanceamento editorial M7/M6:** o piloto `q-m7-01` moveu a resposta correta de A para E, remapeando gabarito e análises sem mudar o conteúdo pedagógico. Aguardando CI no commit `62fe8991bf654613862a63fe77ded2a14b023c11`. Expandir por pequenos lotes, conferindo toda menção a letras em justificativas antes de cada alteração. O banco M7 ainda permanece fortemente concentrado em A.
+
+
+## Atualização — revisão editorial de gabaritos M7 (2026-10-26)
+
+- Lote controlado aplicado a `q-m7-04`, `q-m7-05` e `q-m7-07`, além do piloto anterior `q-m7-01`.
+- Em cada questão, foram movidas em conjunto a alternativa correta, o gabarito e as análises associadas; arrays mantidos em ordem A–E.
+- CI do commit anterior `47fc2332a1339c8750d606e6477332000ee3ce50`: validação curricular/estrutural, auditoria heurística e smoke test Playwright em `file://` concluídos com sucesso ([run 40254320845](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254320845)).
+- O lote atual ainda aguarda CI próprio. Não tratar o resultado anterior como validação dos novos commits.
+- Próximo passo: verificar distribuição e consistência do lote atual; somente depois escolher novo lote. M7 permanece concentrado em A, e M6/M4/M5/M8 continuam pendentes de revisão individual.
