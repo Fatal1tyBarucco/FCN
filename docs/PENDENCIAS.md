@@ -497,3 +497,11 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] Validado em CI o commit `816b771ac7323229801564570670a7702a777ac1`, que alterou `q-m3-19`: o run [40419347175](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40419347175) concluiu com `success`; o código também foi validado em runs posteriores.
 
 - [x] Ajuste editorial final em `q-m3-19`: distratores com extensão mais equilibrada; as licenças elegíveis detalhadas foram mantidas na justificativa. O código passou no run [40419347175](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40419347175), e o HEAD documental `15533145e506dcec5988f91b73be09a6c4462ad0` passou no run [40420580863](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40420580863).
+
+
+## Auditoria focal de questões M1 — 2026-10-26
+
+- [x] Corrigida a referência de `q-m1-05` para documentação oficial específica de objetos vinculados/incorporados e OLE; a fonte anterior sobre atualização de campos do Word não era a melhor evidência para vínculo dinâmico Excel→Word.
+- [x] Reforçada a fonte de `q-m1-06` com a documentação atual de limites de histórico de versões do SharePoint/OneDrive. A afirmação falsa do item é a universalização de um prazo fixo, ignorando configurações e políticas; a documentação do serviço descreve limites automáticos/manuais e possibilidade de desativação administrativa.
+- [x] Reforçadas as fontes de `q-m1-08` para separar retenção da lixeira (30 dias para contas pessoais versus até 93 dias em contas corporativas/escolares, sujeito à configuração) dos controles de compartilhamento de links, que dependem das políticas aplicáveis.
+- [ ] Continuar a revisão semântica independente em lotes, verificando todas as alternativas, justificativas, dificuldade, aderência curricular e fontes. Esta revisão focal não conclui M1 nem as 399 questões.

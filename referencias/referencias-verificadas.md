@@ -359,3 +359,12 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - Google Meet Help, *Saiba quais requisitos você precisa para usar o Google Meet*: https://support.google.com/meet/answer/7317473?hl=pt-BR. A página lista navegadores compatíveis para reuniões do Meet. Aplicação: q-m3-36.
 - As páginas oficiais foram localizadas e seu conteúdo relevante foi consultado em 2026-10-26. A presença da referência não substitui revisão semântica completa do item nem confirma que cada formulação de questão seja universal para todos os planos e contextos.
 - Google Meet Help, *Usar salas temáticas no Google Meet*: https://support.google.com/google-workspace-individual/answer/10099500?hl=pt-BR. A página lista as edições elegíveis para salas temáticas; disponibilidade não é universal para qualquer conta. Aplicação: q-m3-36.
+
+
+## Auditoria focal M1 — fontes e precisão das afirmações (2026-10-26)
+
+- Microsoft Support, *Objetos vinculados e incorporados*: https://support.microsoft.com/pt-br/word/linked-objects-and-embedded-objects. Confirma que objetos vinculados podem ser atualizados a partir do arquivo de origem, enquanto objetos incorporados não refletem alterações no arquivo original. Aplicação: q-m1-05.
+- Microsoft Learn, *Limites do histórico de versão para a biblioteca de documentos e visão geral do OneDrive*: https://learn.microsoft.com/pt-br/sharepoint/document-library-version-history-limits. Documenta limites de contagem/expiração configuráveis e comportamentos de retenção; usado para evitar tratar 30 dias como regra universal para todas as bibliotecas/locatários. Aplicação: q-m1-06.
+- Microsoft Support, *Restaurar arquivos ou pastas excluídos no OneDrive*: https://support.microsoft.com/pt-br/onedrive/restore-deleted-files-or-folders-in-onedrive. Distingue até 30 dias para contas pessoais e até 93 dias para contas corporativas/escolares, salvo alteração administrativa. Aplicação: q-m1-08.
+- Microsoft Learn, *Gerenciar configurações de compartilhamento do SharePoint e do OneDrive*: https://learn.microsoft.com/pt-br/sharepoint/turn-external-sharing-on-or-off. Expiração e permissões dos links dependem de opções de compartilhamento habilitadas e das políticas do site/organização. Aplicação: q-m1-08.
+- As páginas oficiais foram consultadas diretamente em 2026-10-26. A revisão focal confirma a adequação dessas referências aos conceitos mencionados; não é uma aprovação semântica integral das 399 questões nem validação HTTP automática de todas as URLs.

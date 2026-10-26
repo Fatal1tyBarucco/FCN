@@ -192,7 +192,7 @@ var questoesBanco = [
     },
     regra: "Integração entre aplicativos Microsoft: OLE (objeto vinculado/embutido) para vínculo dinâmico, Microsoft Graph/APIs REST para automação entre serviços, Power Automate para fluxos.",
     pegadinha: "A palavra 'automática' no enunciado exclui qualquer alternativa baseada em reentrada manual; a pegadinha é confundir 'colar especial (pegar manter vínculo)' com exportação estática.",
-    fonte: "Microsoft Support — Campos de atualização no Word: https://support.microsoft.com/pt-br/word/update-fields",
+    fonte: "Microsoft Support — Objetos vinculados e incorporados: https://support.microsoft.com/pt-br/word/linked-objects-and-embedded-objects; inserir/vincular um objeto no Word: https://support.microsoft.com/pt-br/word/insert-an-object-in-word-or-outlook",
   },
   {
     id: "q-m1-06",
@@ -215,7 +215,7 @@ var questoesBanco = [
     },
     regra: "Retenção × backup: histórico de versões é retenção limitada e configurável dentro do serviço; backup é cópia independente (recomendação 3-2-1 citada no currículo do OneDrive).",
     pegadinha: "A pegadinha é o prazo universal: não confunda uma configuração observada em determinado ambiente com regra fixa para todo serviço, tipo de conta e locatário.",
-    fonte: "Microsoft Support — Histórico de versões no OneDrive e no SharePoint: https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive",
+    fonte: "Microsoft Learn — Limites do histórico de versão para bibliotecas de documentos e OneDrive (configurações automáticas/manuais e limites de expiração): https://learn.microsoft.com/pt-br/sharepoint/document-library-version-history-limits; Microsoft Support — Restaurar versão anterior no OneDrive (controle de versões pode ser desativado pelo administrador): https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive",
   },
   {
     id: "q-m1-07",
@@ -267,7 +267,7 @@ var questoesBanco = [
     },
     regra: "Verifique retenção e compartilhamento conforme o tipo de conta, o serviço e as políticas do locatário; não confunda lixeira com histórico de versões.",
     pegadinha: "Palavras absolutas como 'qualquer', 'exatamente' e 'sempre' tornam falsa uma afirmação que ignora as configurações aplicáveis.",
-    fonte: "Microsoft Support — Como o OneDrive protege dados na nuvem, incluindo histórico de versões e links protegidos/expiráveis: https://support.microsoft.com/pt-br/onedrive/how-onedrive-safeguards-your-data-in-the-cloud",
+    fonte: "Microsoft Support — Retenção da lixeira varia entre contas pessoais (até 30 dias) e corporativas/escolares (até 93 dias, salvo alteração do administrador): https://support.microsoft.com/pt-br/onedrive/restore-deleted-files-or-folders-in-onedrive; Microsoft Learn — opções de compartilhamento, expiração e permissões de links dependem das configurações da organização/site: https://learn.microsoft.com/pt-br/sharepoint/turn-external-sharing-on-or-off",
   },
   {
 id: "q-m1-09",

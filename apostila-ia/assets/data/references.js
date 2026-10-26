@@ -1336,5 +1336,46 @@ const references = [
     "status": "verificado",
     "dispositivos": null
   }
+
+  {
+    id: "ref-ms-word-linked-embedded-objects",
+    titulo: "Objetos vinculados e incorporados",
+    organizacao: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/word/linked-objects-and-embedded-objects",
+    topico: "M1 — Microsoft 365 (vínculo dinâmico Word/Excel e OLE)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-sharepoint-version-history-limits",
+    titulo: "Limites do histórico de versão para a biblioteca de documentos e visão geral do OneDrive",
+    organizacao: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/sharepoint/document-library-version-history-limits",
+    topico: "M1 — Microsoft 365 (histórico de versões e políticas de retenção)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-onedrive-restore-deleted-files",
+    titulo: "Restaurar arquivos ou pastas excluídos no OneDrive",
+    organizacao: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/onedrive/restore-deleted-files-or-folders-in-onedrive",
+    topico: "M1 — Microsoft 365 (retenção da lixeira conforme o tipo de conta)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-sharepoint-external-sharing-settings",
+    titulo: "Gerenciar configurações de compartilhamento do SharePoint e do OneDrive no Microsoft 365",
+    organizacao: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/sharepoint/turn-external-sharing-on-or-off",
+    topico: "M1 — Microsoft 365 (políticas, permissões e expiração de links)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
 ];
 if (typeof window !== 'undefined') window.references = references;

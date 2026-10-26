@@ -545,3 +545,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Conferência estrutural adicional: os 20 iframes de vídeo têm `title` não vazio e único; a auditoria axe-core não inspeciona o conteúdo interno desses frames externos.
 - As quatro páginas oficiais novas (Cisco, dois artigos do Zoom Support e Google Meet Help) foram abertas e consultadas diretamente em 2026-10-26. Isso valida acesso/conteúdo consultado dessas páginas, não uma verificação HTTP automatizada de todas as URLs do catálogo.
 - A revisão semântica independente das 399 questões e a verificação HTTP individual de todas as URLs continuam pendentes.
+
+
+## Auditoria focal M1 — 2026-10-26
+
+- `q-m1-05`: a referência foi corrigida de uma página genérica sobre atualização de campos para documentação Microsoft sobre objetos vinculados/incorporados e inserção de objetos no Word, mais diretamente alinhada ao vínculo dinâmico Excel→Word.
+- `q-m1-06`: a fonte agora inclui a documentação Microsoft Learn sobre limites de histórico de versões, que descreve políticas automáticas/manuais e limites configuráveis; isso sustenta a rejeição de uma regra universal de 30 dias independentemente de configurações.
+- `q-m1-08`: fontes específicas distinguem retenção da lixeira de contas pessoais (até 30 dias) e corporativas/escolares (até 93 dias, salvo alteração administrativa) e documentam que expiração/permissões dos links dependem das configurações de compartilhamento.
+- As páginas oficiais foram consultadas em 2026-10-26. A revisão focal e a presença das fontes não substituem a revisão semântica integral nem a validação HTTP automática de todas as URLs.

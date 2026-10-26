@@ -1344,3 +1344,10 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - O código atualizado está no SHA `816b771ac7323229801564570670a7702a777ac1`; aguardar os workflows desse HEAD antes de registrar aprovação. Não fazer merge; manter PR #17 em Draft.
 
 - Ajuste final da questão `q-m3-19`: alternativa C encurtada para evitar que o comprimento denuncie o gabarito; os nomes específicos das licenças elegíveis foram mantidos na justificativa. SHA atual do código: `816b771ac7323229801564570670a7702a777ac1`; validar CI no HEAD posterior à atualização documental.
+
+
+## Auditoria focal M1 — 2026-10-26
+
+- Revisadas as evidências de `q-m1-05`, `q-m1-06` e `q-m1-08`. As fontes foram alinhadas a documentação Microsoft oficial específica para vínculo OLE, limites configuráveis do histórico de versões e retenção da lixeira/controles de compartilhamento.
+- A distinção central em `q-m1-08` é que 30 dias não é uma regra universal para a lixeira: a documentação distingue contas pessoais de contas corporativas/escolares. Os controles de expiração e permissões dos links também dependem da configuração de compartilhamento.
+- As fontes oficiais foram consultadas em 2026-10-26. A revisão continua focal: não afirmar conclusão semântica integral das 399 questões nem validação HTTP automatizada de todas as URLs.
