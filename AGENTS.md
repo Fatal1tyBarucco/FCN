@@ -597,6 +597,12 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m5-20: exemplo de 99% de acurácia com recall zero na classe rara; não se usa acurácia isolada para decidir aptidão.
 - Exceto pelas correções registradas em q-m5-04, q-m5-05 e q-m5-08, não foram necessários patches adicionais nos itens q-m5-11..q-m5-20 nesta passada focal. Validar fontes e CI no HEAD atualizado.
 
+## Correção de rastreabilidade M5 — q-m5-09 (2026-10-26)
+
+- A auditoria `scripts/audit_learning_assets.mjs` reportava um ativo diretamente associado à unidade `m5-u1`: q-m5-09 tinha `topico: "m5-u1-t3-s1"`, mas o currículo da unidade 5.1 contém somente os tópicos 1 e 2. O item avalia métricas de desempenho, conteúdo explicitamente localizado em “5.2 — Métricas de avaliação” / `modulo-5-unidade-2-topico-3`.
+- Corrigidos o mapeamento curricular e o rótulo do assunto, sem alterar enunciado, alternativas, gabarito ou total de questões.
+- Commit: `092b19417482ab7de15f9816a5156f5c5c0fa114`. A auditoria deve ser executada novamente para confirmar que a associação à unidade desapareceu.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
