@@ -1375,7 +1375,7 @@ const references = [
     dataVerificacao: "2026-10-26",
     status: "verificado",
     dispositivos: null
-  },,
+  },
   {
     "id": "ref-word-repeat-table-header",
     "titulo": "Repetir o cabeçalho da tabela nas páginas subsequentes",
