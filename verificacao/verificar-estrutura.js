@@ -34,7 +34,7 @@
  *    "suscetibilidade"/"portabilidade") e justificativa/analise.D não citam
  *    mais os arts. 8º/15 como fonte da vedação de filtragem/anonimato (a citação
  *    correta é art. 9º, §3º, e art. 19 — re-verificação do PR #5, 2026-10-23).
- * 8) q-m4-44: gabarito === "B" e justificativa cita "art. 3º" e "art. 2º".
+ * 8) q-m4-44: compara o escopo da LGPD e do Marco Civil; gabarito A e justificativa reconhece aplicação complementar.
  *
  * Sai com exit code 1 se qualquer verificação falhar.
  * ----------------------------------------------------------------------------
@@ -262,10 +262,10 @@ if (r && r.q32) {
 if (r && r.q44) {
   const q44 = r.q44;
   check('q-m4-44 presente', true);
-  check('q-m4-44 gabarito === "B"', q44.gabarito === 'B', 'real=' + q44.gabarito);
+  check('q-m4-44 gabarito === "A"', q44.gabarito === 'A', 'real=' + q44.gabarito);
   const just44 = norm(q44.justificativa);
-  check('q-m4-44 justificativa cita "art. 3º" e "art. 2º"',
-    just44.includes('art. 3º') && just44.includes('art. 2º'));
+  check('q-m4-44 justificativa compara LGPD e Marco Civil',
+    just44.includes('LGPD') && just44.includes('Marco Civil') && just44.includes('complementares'));
 } else {
   check('q-m4-44 presente', false, 'não encontrada no banco fundido');
 }
