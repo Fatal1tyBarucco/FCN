@@ -116,3 +116,14 @@ documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta audito
 - Inventário de flashcards corrigido: 460 total (M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50, M8=50). A auditoria de rastreabilidade é por tópico-pai e identificou 108 questões com referência somente à unidade, sem tópico específico; elas permanecem sem atribuição artificial.
 - `storage.js` oferece uma API de persistência e `progress.js` a consome com fallback. `navigation.js`, `flashcards.js` e `quiz-engine.js` ainda mantêm gravações próprias em `localStorage`; a existência de `storage.js` não significa que todos os consumidores estejam centralizados nele.
 - O workflow e as auditorias não substituem teste de navegador real, avaliação WCAG com tecnologia assistiva ou revisão semântica de conteúdo.
+
+
+---
+
+## Registro de decisão — orquestração Fase 1 (2026-10-25)
+
+- **D-ORQ-001 — Preservar o PR existente:** desenvolver no branch `feat/fase-1-orquestracao-20261025` associado ao PR #17; não escrever em `main` nem abrir PR duplicado sem necessidade.
+- **D-ORQ-002 — Contagem não equivale a qualidade:** relatórios estruturais são evidência de integridade e rastreabilidade, não de correção factual ou suficiência didática.
+- **D-ORQ-003 — Resolver divergências por SHA:** os documentos históricos citam 404/365, enquanto o PR #17 declara 460/389 após novas alterações. Ao relatar contagens, indicar a origem e o commit/execução; não misturar números de estados distintos.
+- **D-ORQ-004 — Delegação honesta:** nenhum agente externo será alegado como executado sem ferramenta disponível e resultado verificável. A ferramenta de delegação mencionada anteriormente não está disponível neste contexto; revisão independente será feita em etapa separada, registrando autor, escopo e evidências.
+- **D-ORQ-005 — Compatibilidade file://:** a abertura direta continua sendo requisito principal. Service Worker e certas capacidades PWA têm restrições do navegador em `file://`; documentar como limitação em vez de prometer suporte universal.
