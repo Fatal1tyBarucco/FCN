@@ -196,3 +196,14 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Incluir WCAG 2.2 do W3C como referência verificada no catálogo; o catálogo agora contém 74 referências.
 - [ ] Revisar semanticamente todos os 389 enunciados, gabaritos, justificativas, distratores e fontes. A validação estrutural não comprova correção pedagógica integral.
 - [ ] Testar todas as interações dos simuladores, backup/importação, teclado, leitor de tela, WCAG 2.1 AA e Service Worker em HTTP/HTTPS.
+
+
+## Auditoria heurística das 389 questões — 2026-10-26
+
+- [x] Adicionar `scripts/audit_question_quality.mjs` ao CI e gerar relatório/matriz heurísticos como artefato.
+- [x] Resultado: 389 questões lidas; 0 IDs duplicados; 0 pares com contexto e enunciado idênticos; 0 alertas heurísticos após corrigir regras que geravam falsos positivos.
+- [x] Adicionar fontes para q-m3-21, q-m3-22 e q-m3-38, que tratam de política de gravação e medidas de segurança sob a LGPD.
+- [x] Execução aprovada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754.
+- [ ] **Prioridade alta:** revisar a distribuição das posições do gabarito nas 314 questões de múltipla escolha: A=169, B=124, C=21, D=0, E=0. Não alterar gabaritos automaticamente; revisar cada questão e reorganizar alternativas apenas preservando a correspondência entre texto, gabarito e análise.
+- [ ] Revisar semanticamente os 389 enunciados, gabaritos, justificativas, distratores e fontes. A ausência de alertas heurísticos não prova correção factual.
+- [ ] Concluir auditoria independente WCAG, leitores de tela, teclado, dispositivos reais, simuladores e PWA/offline.

@@ -283,3 +283,14 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Flashcards: 460, IDs únicos; rastreabilidade: 0 questões unit-only e 0 referências desconhecidas.
 - Playwright/Chromium headless via `file://`: PASS; 8 módulos, 460 flashcards, 389 questões, 5 SVGs, interfaces dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
 - A auditoria de tópicos encontrou sete nós de síntese/revisão sem questão direta; nenhum tópico substantivo ficou sem questão direta. A revisão semântica independente continua pendente.
+
+
+## Auditoria heurística de qualidade do banco — 2026-10-26
+
+- Commit testado: `f0beb421ebb25d086d9ea740c45ecd20762473a2`.
+- Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754 — **success**.
+- Passaram: sintaxe JavaScript, auditoria curricular, auditoria de rastreabilidade, verificador estrutural, auditoria heurística e smoke test Playwright/Chromium via `file://`.
+- Banco: 389 questões, 460 flashcards; 0 IDs duplicados, 0 pares com contexto/enunciado idênticos e 0 alertas heurísticos.
+- Smoke test: 8 módulos, 389 questões, 460 flashcards, 5 SVGs, 6 simuladores com UI, `localStorage` round-trip e 0 exceções JavaScript.
+- Achado editorial não bloqueante para CI, mas importante antes da aprovação final: gabaritos MC A=169, B=124, C=21, D=0, E=0. Exige revisão humana da posição das alternativas.
+- A validação estrutural e heurística não certifica a verdade das respostas nem substitui revisão semântica independente.

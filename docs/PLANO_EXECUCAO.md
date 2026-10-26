@@ -108,3 +108,19 @@ A inspeção remota consultou `Escrita.txt`, `README.md`, `AGENTS.md`, o invent�
 Foi adicionado `scripts/audit_learning_assets.mjs` para gerar uma matriz por tópico-pai com IDs de flashcards e questões, além de um relatório de referências não mapeadas. O commit do script está na branch do PR #17. O script **ainda não foi executado**: os arquivos CSV/relatório que ele gera não devem ser considerados validados até que a execução local seja realizada e sua saída inspecionada.
 
 A associação por tópico-pai é uma ferramenta de triagem e não prova cobertura didática individual de cada subtópico. Revisão semântica, execução dos testes do produto, navegador, modo `file://` e CI permanecem pendentes. Não realizar merge enquanto esses critérios não tiverem evidências suficientes e o PR continuar em revisão.
+
+
+## Estado de execução revalidado — 2026-10-26
+
+| Fase | Estado | Evidência / próximo passo |
+|---|---|---|
+| 1 — Inventário curricular | Parcial concluída | 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos; matriz estrutural gerada. Revisão pedagógica completa ainda pendente. |
+| 2 — Inspeção do repositório | Concluída estruturalmente | PR #17, branch, arquivos de dados, verificadores e workflow inspecionados. |
+| 3 — Arquitetura e infraestrutura | Parcial | Workflow de validação e smoke test adicionados; auditoria completa de arquitetura, acessibilidade e PWA ainda pendente. |
+| 4 — Conteúdo e rastreabilidade | Cobertura direta estrutural concluída | 389/389 questões e 460/460 flashcards apontam para tópicos existentes; 24 questões adicionadas para cobrir tópicos substantivos antes sem questão direta. |
+| 5 — Simuladores | Parcial | Smoke test confirma seis contêineres com UI; interações completas e correção dos resultados ainda precisam de testes dedicados. |
+| 6 — Revisão independente | Pendente | Auditoria heurística estrutural passou; não foi confirmado uso de agentes especializados independentes. Revisão semântica integral segue aberta. |
+| 7 — Correções e retestes | Em andamento | Correções legais M4/M6, rastreabilidade, banco de questões e CI; distribuição de gabaritos exige revisão manual. |
+| 8 — Critérios de aceite | Pendente | PR #17 permanece draft; não fazer merge até revisar gabaritos, fontes, acessibilidade e fluxos interativos. |
+
+**Última execução técnica aprovada:** https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754. O sucesso técnico não deve ser confundido com aprovação editorial final.

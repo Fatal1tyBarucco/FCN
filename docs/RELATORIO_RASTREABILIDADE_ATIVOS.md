@@ -4,7 +4,7 @@
 **Repositório:** `Fatal1tyBarucco/FCN`  
 **Branch:** `feat/fase-1-orquestracao-20261025`  
 **Auditoria:** `scripts/audit_learning_assets.mjs`  
-**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126)
+**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754)
 
 ## Resultado estrutural atual
 
@@ -62,3 +62,11 @@ Na execução aprovada acima:
 2. Os 7 tópicos restantes sem questão direta são nós de síntese/revisão, não lacunas substantivas de conteúdo.
 3. Validar interações completas dos simuladores, backup/importação, navegação por teclado, leitores de tela, WCAG 2.1 AA e Service Worker em HTTP/HTTPS.
 4. Revisar as referências legais e técnicas do projeto diante de alterações normativas recentes.
+
+
+## Auditoria heurística do banco de questões — 2026-10-26
+
+- Execução aprovada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754.
+- Questões lidas: 389; IDs duplicados: 0; pares com contexto e enunciado idênticos: 0; alertas heurísticos após reduzir falsos positivos: 0.
+- A matriz heurística completa foi gerada como artefato do workflow.
+- Limitação relevante identificada: entre 314 questões de múltipla escolha, distribuição do gabarito A=169, B=124, C=21, D=0, E=0. Isso não altera a correção individual, mas cria um padrão previsível de posição e exige revisão editorial manual antes de usar o banco como simulado de alta fidelidade.
