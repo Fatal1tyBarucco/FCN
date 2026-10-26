@@ -433,3 +433,20 @@ A aprovação do workflow automatizado não encerra pendências qualitativas nem
 7. **Pendente — reconciliação de métricas:** snapshots registram 396 e 399 questões em SHAs diferentes. Reexecutar scripts no HEAD exato antes de publicar contagens atuais.
 
 **Estado geral:** PR #17 permanece Draft; não fazer merge até haver evidências suficientes para os critérios obrigatórios pendentes.
+
+## Resultados de auditoria estrutural e acessibilidade — 2026-10-26
+
+Evidências do workflow de validação executado no SHA `4e0c9eae346116c7c9c0957196ea315dd4f16b00` (run [40409912389](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40409912389)); os artefatos são resultados desse SHA, não do HEAD atual.
+
+- [x] Sintaxe JavaScript, geração da matriz, rastreabilidade estrutural, validação da estrutura do repositório, heurísticas de qualidade, smoke test Chromium em `file://`: etapas concluídas com sucesso nesse run.
+- [ ] **Bloqueante — acessibilidade automatizada:** a regressão de interação falhou na regra axe-core `color-contrast`: textos auxiliares `#4b5563` sobre `#1f232c` resultaram em contraste 2,08:1, abaixo de 4,5:1. Foi alterada a cor desses textos para `#cbd5e1` nos seis simuladores (Excel, Redes, Segurança, Prompts, Dados e Ética). Falta confirmar o resultado de um novo run após essas alterações.
+- [x] **Contagem estrutural reconciliada:** os 8 arquivos curriculares contêm 295 subtópicos; os contadores por subtópico somam 888 exemplos e 592 exercícios. A matriz `docs/MATRIZ_COBERTURA.csv` foi regenerada/sincronizada a partir dos arquivos curriculares, com 295 linhas de dados. Essa contagem é estrutural; não prova que cada exemplo seja pedagogicamente distinto nem que cada exercício tenha qualidade.
+- [x] **Rastreabilidade estrutural:** no relatório do run citado, 132 tópicos, 460 flashcards e 399 questões foram reconhecidos; nenhuma referência curricular ficou sem associação pelo padrão do script. A associação é no nível de tópico-pai e requer revisão qualitativa.
+- [ ] **Bloqueante — fontes das questões:** a auditoria heurística encontrou 112/399 questões sem fonte identificada no campo analisado (36 em M1, 40 em M2 e 36 em M3). Todas as 399 têm contexto e justificativa detectados pelo script, mas isso não comprova correção factual. Revisar as 112 questões e associar fontes primárias pertinentes, sem inventar referências nem presumir que fonte do tópico cubra cada afirmação.
+- [ ] **Bloqueante — distribuição de gabaritos:** distribuição MC total A=83, B=104, C=72, D=37, E=28. M1 apresenta A=4, B=15, C=5, D=2, E=0 em 26 questões de múltipla escolha; revisar padrão e qualidade dos itens, sem alterar gabaritos corretos apenas para balancear letras.
+- [ ] **Bloqueante — revisão semântica:** zero alertas heurísticos não equivale a zero defeitos. Revisar em lotes coesos enunciado, gabarito, justificativa de cada alternativa, qualidade dos distratores, nível de dificuldade, alinhamento curricular e fonte. Registrar IDs concluídos para impedir retrabalho.
+- [ ] **Pendente — acessibilidade manual:** testes com teclado, ordem de foco, ampliação, leitor de tela e verificação manual WCAG; o axe-core é apenas uma camada automatizada.
+- [ ] **Pendente — compatibilidade física:** navegadores e dispositivos adicionais não foram comprovados por esta execução.
+
+A mudança de cor e a atualização da matriz geraram commits posteriores ao run 40409912389. Não declarar o HEAD atual aprovado até o workflow disparado para o SHA atual terminar e ser inspecionado.
+
