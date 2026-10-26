@@ -1029,22 +1029,27 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-44", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "modulo-6-unidade-6-topico-3", assunto: "Método de resolução de questões", contexto: "Um item descreve publicação de documento por servidor, mas não esclarece se é público, pessoal ou sigiloso. Alternativas misturam transparência, proteção de dados e sigilo.", enunciado: "Qual método reduz o risco de marcar uma alternativa apenas por parecer correta?",
+    topico: "modulo-6-unidade-6-topico-3", assunto: "Método de resolução de questões — transparência e dados pessoais",
+    contexto: "Um cidadão solicita cópia de processo de contratação pública. O documento contém objeto, valores e decisões administrativas, mas também CPF, endereço residencial e dados de contato pessoal de pessoas físicas. A equipe considera negar acesso ao processo inteiro por conter dados pessoais.",
+    enunciado: "À luz da LAI e das orientações de transparência e proteção de dados, qual encaminhamento é mais adequado?",
     alternativas: [
-      { letra: "A", texto: "Escolher a alternativa com mais citações sem verificar contexto." },
-      { letra: "B", texto: "Identificar sujeito e conduta, definir o regime, localizar o dispositivo e confrontar as afirmações com a norma aplicável." },
-      { letra: "C", texto: "Tratar transparência como regra absoluta que sempre prevalece." },
-      { letra: "D", texto: "Assumir que a intenção do servidor determina sozinha a legalidade." },
-      { letra: "E", texto: "Ignorar o enunciado e memorizar o número da lei." }
+      { letra: "A", texto: "Avaliar quais trechos estão sujeitos a restrição legal, ocultar de modo seguro os dados pessoais cuja divulgação não seja autorizada e fornecer o restante do documento, com a justificativa cabível." },
+      { letra: "B", texto: "Negar integralmente o acesso sempre que um documento público contiver qualquer dado pessoal." },
+      { letra: "C", texto: "Divulgar todos os dados sem análise, pois a publicidade administrativa elimina qualquer proteção de dados pessoais." },
+      { letra: "D", texto: "Substituir o documento por um resumo elaborado pela equipe, mesmo quando seja possível fornecer cópia parcial." },
+      { letra: "E", texto: "Cobrir visualmente os dados no PDF, sem verificar se o texto ocultado continua selecionável ou recuperável no arquivo." }
     ],
-    gabarito: "B", justificativa: "A resolução parte do contexto e da conduta, identifica o regime e testa as alternativas contra o dispositivo pertinente, observando termos absolutos e mistura de regimes.",
+    gabarito: "A",
+    justificativa: "A análise deve distinguir a informação de interesse público dos trechos cuja divulgação esteja legalmente restrita. A LAI estabelece a publicidade como regra, mas protege informações pessoais nos termos do art. 31. A orientação pública da CGU para compatibilizar LAI e LGPD recomenda restringir a parte protegida e permitir acesso à parte não sigilosa, por exemplo mediante cópia com ocultação dos trechos pertinentes. A ocultação deve ser efetiva, e não apenas uma tarja visual que deixe o dado recuperável. A decisão depende do conteúdo e da base legal aplicável; a presença de dado pessoal não justifica automaticamente negar o documento inteiro.",
     analise: {
-      A: "INCORRETA. Mais citações não garantem pertinência; é necessário verificar o contexto e a norma aplicável.",
-      B: "CORRETA. A sequência identifica os fatos relevantes, o regime jurídico e o dispositivo antes de avaliar as alternativas.",
-      C: "INCORRETA. Transparência tem de ser conciliada com proteção de dados e hipóteses legais de sigilo, conforme o caso.",
-      D: "INCORRETA. A intenção isolada não determina a legalidade; importam a conduta, o contexto e a norma.",
-      E: "INCORRETA. Memorizar o número da lei sem interpretar o dispositivo não permite resolver o caso concreto."
+      A: "CORRETA. Preserva o acesso à informação pública e restringe apenas os trechos cuja divulgação não seja autorizada, com tratamento seguro e justificativa adequada.",
+      B: "INCORRETA. A existência de dados pessoais não torna automaticamente todo o documento inacessível; deve-se avaliar o acesso à parte não restrita.",
+      C: "INCORRETA. A publicidade como regra não elimina as restrições e salvaguardas previstas em lei para informações pessoais.",
+      D: "INCORRETA. Um resumo não substitui automaticamente o acesso à parte não sigilosa quando a cópia parcial é viável.",
+      E: "INCORRETA. Uma tarja meramente visual pode deixar o dado recuperável; a versão pública deve ser sanitizada de forma efetiva, preservando o original restrito."
     },
-    regra: "Leia o item integralmente, determine o regime e confira a alternativa contra o dispositivo aplicável.", pegadinha: "Termos absolutos e mistura de regimes exigem conferir o alcance exato da norma.", fonte: "Currículo M6 — modulo-6-unidade-6-topico-3 (método de análise de questões e dispositivos)."
-  },
+    regra: "Ao conciliar transparência e proteção de dados, identifique a base legal de eventual restrição e viabilize acesso à parte não protegida; a ocultação precisa ser efetiva.",
+    pegadinha: "Evite os dois extremos: divulgar indiscriminadamente dados protegidos ou negar todo o documento só porque contém algum dado pessoal.",
+    fonte: "Lei nº 12.527/2011 (LAI), especialmente arts. 7º, § 2º, e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; CGU, Enunciado nº 12/2023 sobre acesso à parte não sigilosa mediante certidão, extrato ou cópia com ocultação dos trechos protegidos; Ministério da Gestão e da Inovação em Serviços Públicos, Boas práticas em anonimização de dados, publicado em 19/05/2026: https://www.gov.br/gestao/pt-br/acesso-a-informacao/privacidade-e-protecao-de-dados/lgpd-no-mgi-1/anonimizacao/boas-praticas-em-anonimizacao-de-dados."
+  }
   ];
