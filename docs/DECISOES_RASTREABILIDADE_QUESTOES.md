@@ -41,3 +41,27 @@
 ## Resultado técnico do lote
 
 A auditoria automatizada executada no GitHub Actions reconheceu 132 tópicos, 460 flashcards e 365 questões; detectou **0 questões vinculadas somente à unidade** e **0 referências curriculares desconhecidas**. Esse resultado prova a existência dos IDs de destino, não a correção semântica de todas as associações.
+
+
+## M1–M3 — correções adicionais de associação por conteúdo
+
+| Questão | Tópico de destino | Motivo |
+|---|---|---|
+| q-m1-33 | M1, unidade 3, tópico 2, subtema 1 — referências relativas, absolutas e mistas | O enunciado trata de ajuste de referências ao copiar fórmulas do Excel; a associação anterior era a um tópico de formatos do Word. |
+| q-m1-34 | M1, unidade 3, tópico 4, subtema 1 — PROCX e funções de pesquisa/referência | O enunciado avalia o comportamento do PROCX e do argumento `se_não_encontrado`. |
+| q-m1-35 | M1, unidade 3, tópico 3, subtema 2 — funções e fórmulas | O enunciado avalia sintaxe de fórmula e separadores regionais do Excel. |
+| q-m2-34 | M2, unidade 1, tópico 3, subtema 1 — métricas de desempenho | O enunciado define throughput; a associação anterior apontava para topologia. |
+| q-m2-38 | M2, unidade 4, tópico 2, subtema 1 — CIDR e cálculo de rede/broadcast | A questão avalia cálculo de sub-rede IPv4 /26. |
+| q-m2-39 | M2, unidade 4, tópico 2, subtema 2 — quantidade de hosts e validação | A questão avalia contagem de endereços/hosts e broadcast em /27. |
+| q-m2-40 | M2, unidade 4, tópico 2, subtema 1 — CIDR e cálculo de rede/broadcast | A questão avalia cálculo de sub-rede IPv4 /28. |
+| q-m3-20 | M3, unidade 4, tópico 1, subtema 1 — lobby e sala de espera | O enunciado define a função do lobby. |
+| q-m3-21 | M3, unidade 4, tópico 3, subtema 1 — política de gravação | O enunciado pede elementos de uma política de gravação. |
+| q-m3-22 | M3, unidade 4, tópico 3, subtema 3 — proteção de gravações | O enunciado aborda medidas de segurança para dados pessoais em gravações. |
+| q-m3-37 | M3, unidade 4, tópico 1, subtema 2 — remoção e moderação de participantes | O enunciado aborda controle de participantes em reuniões. |
+| q-m3-38 | M3, unidade 4, tópico 3, subtema 3 — proteção de gravações | O enunciado combina gravação e medidas de proteção. |
+| q-m3-39 | M3, unidade 4, tópico 3, subtema 1 — política de gravação | O enunciado avalia componentes de uma política de gravação. |
+| q-m3-40 | M3, unidade 4, tópico 3, subtema 2 — consentimento e bases legais | O enunciado aborda informação/consentimento, finalidade e direitos em gravações com dados pessoais. |
+
+## Lacunas diretas após as correções
+
+A auditoria atual identifica **31 tópicos sem questão direta**: M1=4, M2=14, M3=7, M5=2 e M6=4. Desses, sete são nós de síntese ou revisão (M1: unidade 2/tópico 14; M5: unidade 3/tópico 4 e unidade 4/tópico 4; M6: unidade 1/tópico 3, unidade 4/tópico 3, unidade 5/tópico 3 e unidade 6/tópico 3). Não é obrigatório que cada nó de síntese tenha uma questão exclusiva. Permanecem **24 lacunas substantivas**: M1=3, M2=14 e M3=7. A próxima etapa deverá criar ou realocar questões com base no conteúdo dos tópicos, sem preencher lacunas com associações artificiais.

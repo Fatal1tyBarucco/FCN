@@ -4,7 +4,7 @@
 **Repositório:** `Fatal1tyBarucco/FCN`  
 **Branch:** `feat/fase-1-orquestracao-20261025`  
 **Auditoria:** `scripts/audit_learning_assets.mjs`  
-**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289)
+**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802)
 
 ## Resultado estrutural atual
 
@@ -22,16 +22,16 @@ O resultado significa que as referências apontam para IDs de tópicos existente
 
 | Módulo | Tópicos | Flashcards associados | Questões associadas | Tópicos sem questão direta |
 |---|---:|---:|---:|---:|
-| M1 — Microsoft 365 | 23 | 66 | 40 | 6 |
-| M2 — Redes | 19 | 56 | 40 | 15 |
-| M3 — Comunicação e colaboração | 14 | 68 | 40 | 9 |
+| M1 — Microsoft 365 | 23 | 66 | 40 | 4 |
+| M2 — Redes | 19 | 56 | 40 | 14 |
+| M3 — Comunicação e colaboração | 14 | 68 | 40 | 7 |
 | M4 — Segurança e governança | 13 | 54 | 85 | 0 |
 | M5 — Inteligência artificial | 13 | 66 | 40 | 2 |
 | M6 — Ética e responsabilidade digital | 18 | 50 | 40 | 4 |
 | M7 — Engenharia de dados | 9 | 50 | 40 | 0 |
 | M8 — Visualização e storytelling | 23 | 50 | 40 | 0 |
 
-A ausência de questão diretamente associada a um tópico é um sinal para revisão, não prova automática de ausência de cobertura indireta. Os tópicos sem questão direta identificados pelo script são 6 no M1, 15 no M2, 9 no M3, 2 no M5 e 4 no M6.
+A ausência de questão diretamente associada a um tópico é um sinal para revisão, não prova automática de ausência de cobertura indireta. Após a correção de referências M1–M3, o script identifica 4 tópicos sem questão direta no M1, 14 no M2, 7 no M3, 2 no M5 e 4 no M6: 31 no total. Sete são nós de síntese/pegadinhas; 24 são tópicos substantivos que merecem receber questões diretas.
 
 ## Correções de rastreabilidade desta etapa
 

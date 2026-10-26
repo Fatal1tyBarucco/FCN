@@ -143,3 +143,12 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - As exceções do art. 4º não são descritas como autorização para tratar dados em desconformidade: o texto registra a exigência de legislação específica, proporcionalidade, devido processo, princípios gerais e direitos do titular no § 1º.
 - A Lei nº 15.352/2026 foi incluída no catálogo de referências visível da aplicação.
 - Evidência da validação técnica do lote anterior: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289.
+
+
+## Correção de rastreabilidade M1–M3 — 2026-10-26
+
+- q-m1-33 a q-m1-35 foram alinhadas a subtópicos de Excel, deixando de apontar para um tópico de formatos do Word.
+- q-m2-34 foi alinhada a métricas de desempenho; q-m2-38 a q-m2-40 foram alinhadas ao tópico de cálculo CIDR.
+- q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40 foram alinhadas aos tópicos de lobby, controle de participantes e gravações de reuniões.
+- A auditoria permanece estrutural: 365 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
+- Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802.

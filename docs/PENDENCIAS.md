@@ -178,3 +178,10 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Corrigir a generalização de que o Estado é sempre controlador e operador: o papel depende das operações concretas.
 - [x] Validar o commit `c54e13f7d166910f2a1c62ffa0199c6727b3b33e` no GitHub Actions: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289 — **success**.
 - [ ] Auditar semanticamente todo o conteúdo jurídico dos módulos M4 e M6 e verificar eventuais alterações normativas além das questões e trechos corrigidos neste lote.
+
+
+## Correção de referências curriculares M1–M3 — 2026-10-26
+
+- [x] Corrigir 14 associações em `questions.js`: três questões de Excel (q-m1-33 a q-m1-35), quatro de métricas/CIDR em Redes (q-m2-34 e q-m2-38 a q-m2-40) e sete sobre lobby/gravação em reuniões (q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40).
+- [x] Validação de sintaxe, auditoria de ativos, verificador estrutural e smoke test no commit `b306d9a295035d24317f83f604882ecb73054e57`: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802 — **success**.
+- [ ] Criar questões diretas para 24 tópicos substantivos ainda sem associação direta: M1=3, M2=14, M3=7. Os 7 tópicos restantes sem questão direta são nós de síntese/revisão, que não exigem necessariamente questão exclusiva.

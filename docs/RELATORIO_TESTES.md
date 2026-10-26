@@ -263,3 +263,12 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Verificador estrutural passou sem falhas.
 - Playwright/Chromium headless via `file://`: 8 módulos, 460 flashcards, 365 questões, 5 SVGs, interfaces dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
 - Escopo não certificado: correção semântica de todas as questões, auditoria WCAG independente, dispositivos físicos e funcionamento PWA/offline por HTTP/HTTPS.
+
+
+## Revalidação após correções de associação M1–M3 — 2026-10-26
+
+- Commit testado: `b306d9a295035d24317f83f604882ecb73054e57`.
+- Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802 — **success**.
+- `node --check`, `scripts/audit_curriculum_matrix.mjs`, `scripts/audit_learning_assets.mjs`, `verificacao/verificar-estrutura.js` e Playwright/Chromium via `file://` passaram.
+- Questões e flashcards continuam com IDs estáveis; 365 questões, 460 flashcards, 0 referências somente à unidade e 0 referências desconhecidas.
+- A auditoria por tópico identifica 31 tópicos sem questão direta; 7 são nós de síntese/revisão e 24 são lacunas substantivas (M1=3, M2=14, M3=7).
