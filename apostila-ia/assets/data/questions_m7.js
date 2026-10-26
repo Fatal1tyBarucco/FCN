@@ -106,11 +106,11 @@ const moduleQuestions7 = [
     contexto: "Um técnico recebe o alerta de que a leitura de um sensor ultrapassou o limite de segurança do equipamento.",
     enunciado: "Segundo o modelo DIKW adotado no currículo, conhecimento corresponde a:",
     alternativas: [
-      { letra: "A", texto: "Decisão já executada e registrada em ata." }
+      { letra: "A", texto: "Decisão já executada e registrada em ata." },
       { letra: "B", texto: "Registro bruto, ainda sem tratamento." },
       { letra: "C", texto: "Dado apenas com contexto atribuído." },
       { letra: "D", texto: "Conjunto de metadados técnicos do sensor." },
-      { letra: "E", texto: "Informação combinada com experiência e julgamento, apta a orientar ação." },
+      { letra: "E", texto: "Informação combinada com experiência e julgamento, apta a orientar ação." }
     ],
     gabarito: "E",
     justificativa: "O currículo adota como definição de trabalho: conhecimento é informação combinada com experiência e julgamento, aplicada por alguém ou por regra explícita de decisão. Registro bruto é dado; dado com contexto é informação; metadados descrevem o dado; a decisão executada é o produto da aplicação (sabedoria/ação), não o nível de conhecimento em si.",
