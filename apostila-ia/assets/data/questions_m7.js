@@ -566,13 +566,13 @@ const moduleQuestions7 = [
     contexto: "Para reduzir duplicidades, a equipe propõe descartar as linhas mais antigas e manter apenas o registro mais recente de cada entidade, sem preservar histórico.",
     enunciado: "A medida melhora a unicidade e não afeta outras dimensões, pois duplicidade é sempre um defeito a eliminar.",
     gabarito: "errado",
-    trechoDeterminante: "O trecho que torna o item FALSO é 'não afeta outras dimensões': o currículo afirma que deduplicar para ganhar unicidade pode reduzir completude se a regra de fusão descartar histórico, e que qualidade é gestão de trade-offs com métrica declarada.",
-    justificativa: "O currículo trata conflitos entre dimensões explicitamente: ganhar unicidade pode custar completude (perda de histórico), coletar tudo por precaução melhora completude e piora minimização e tempestividade, e validação rígida reduz erro mas rejeita registros legítimos. Qualidade não é estado absoluto: é gestão de compromissos, com regra de fusão documentada e métrica declarada.",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'não afeta outras dimensões': o currículo alerta que deduplicar para ganhar unicidade pode reduzir a completude histórica do conjunto quando a regra de fusão descarta registros históricos, e que qualidade é gestão de trade-offs com métrica declarada.",
+    justificativa: "O currículo trata conflitos entre dimensões explicitamente: ganhar unicidade pode custar completude histórica (perda de registros do passado), coletar tudo por precaução pode melhorar cobertura mas piorar minimização e tempestividade, e validação rígida reduz certos erros mas pode rejeitar registros legítimos. Qualidade não é estado absoluto: é gestão de compromissos, com regra de fusão documentada e métrica declarada.",
     analise: {
-      item: "Item FALSO. A deduplicação por descarte do histórico melhora unicidade e pode degradar completude — a afirmação de que nada mais é afetado é o erro central.",
+      item: "Item FALSO. A deduplicação por descarte do histórico pode melhorar unicidade e degradar a completude histórica — a afirmação de que nada mais é afetado é o erro central.",
       leituraIncorreta: "Leitura que induz ao erro: tratar 'duplicidade' como defeito absoluto, ignorando que o registro antigo pode conter informação que o recente perdeu (endereço anterior, vínculo encerrado, evidência de auditoria)."
     },
-    regra: "Dimensões de qualidade conflitam entre si: toda intervenção deve declarar o ganho, a perda e a métrica usada.",
+    regra: "Dimensões de qualidade e requisitos de histórico podem entrar em conflito: toda intervenção deve declarar o ganho, a perda histórica e a métrica usada.",
     pegadinha: "A primeira metade do item é verdadeira ('melhora a unicidade') — o erro está na segunda ('não afeta outras dimensões'). Em C/E, basta uma proposição falsa para o item ser falso.",
     fonte: "Currículo M7 — m7-u2-t1-s2 (Consistência, unicidade e tempestividade)."
   },
