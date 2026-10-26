@@ -485,26 +485,26 @@ const moduleQuestions7 = [
   { id: "q-m7-14", modulo: 7, formato: "mc", estilo: "fcc", origem: "autoral",
     nivel: "intermediario", topico: "m7-u2-t1-s2",
     assunto: "7.2 — Consistência",
-    contexto: "Filial e matriz registram a mesma estante em bases separadas: 2,0 m em uma e 200 cm na outra, sem regra de conversão.",
+    contexto: "Filial e matriz registram a mesma estante, medida no mesmo momento: 2,0 m em uma base e 220 cm na outra, sem regra de reconciliação.",
     enunciado: "A dimensão de qualidade violada é:",
     alternativas: [
       { letra: "A", texto: "Consistência: o mesmo fato é representado de forma incompatível entre fontes." },
       { letra: "B", texto: "Unicidade: há duas linhas para a mesma entidade." },
       { letra: "C", texto: "Tempestividade: o dado da filial é mais antigo." },
       { letra: "D", texto: "Completude: falta a unidade de medida em uma das bases." },
-      { letra: "E", texto: "Acurácia: obrigatoriamente um dos dois valores é falso." }
+      { letra: "E", texto: "Acurácia: a correspondência com a medida real exige uma referência externa; a divergência entre fontes já indica inconsistência." }
     ],
     gabarito: "A",
-    justificativa: "O currículo classifica exatamente esse exemplo como inconsistência — 'o mesmo fato, unidades incompatíveis, regra de conversão ausente' — e acrescenta que consistência se mede por divergências em regras de reconciliação, dentro do registro (soma dos itens ≠ total) e entre sistemas. Não há duplicidade (são bases distintas), nada indica atraso e a unidade está declarada nos dois lados: 2,0 m e 200 cm descrevem a mesma medida.",
+    justificativa: "A inconsistência ocorre porque duas fontes atribuem valores divergentes ao mesmo atributo do mesmo objeto e momento: 2,0 m equivalem a 200 cm, não a 220 cm. A dimensão de consistência pode ser verificada pela regra de reconciliação entre fontes, sem que isso, por si só, determine qual fonte corresponde à realidade. Não há duplicidade (são bases distintas), nada indica atraso e as unidades estão declaradas. Acurácia exige comparar o valor com uma referência confiável sobre a medida real.",
     analise: {
       A: "CORRETA. Representações incompatíveis do mesmo fato = inconsistência entre fontes.",
       B: "INCORRETA. Duas bases com o mesmo objeto não configuram, por si, duplicidade de entidade.",
       C: "INCORRETA. O enunciado não informa data de atualização.",
       D: "INCORRETA. As unidades estão presentes (m e cm); o problema é a falta de conversão.",
-      E: "INCORRETA. 2,0 m e 200 cm são equivalentes: nenhum dos valores precisa ser falso."
+      E: "INCORRETA. A divergência entre fontes indica inconsistência, mas a acurácia de cada valor depende de comparação com uma referência confiável; o enunciado não fornece essa referência."
     },
     regra: "Consistência = mesmo fato representado de forma compatível, dentro do registro e entre sistemas.",
-    pegadinha: "Unidades diferentes com o mesmo significado é inconsistência, não acurácia: converter resolveria sem qualquer consulta à realidade.",
+    pegadinha: "Valores divergentes para o mesmo fato indicam inconsistência entre fontes; determinar qual valor é acurado exige referência externa.",
     fonte: "Currículo M7 — m7-u2-t1-s2 (Consistência, unicidade e tempestividade)."
   },
 
