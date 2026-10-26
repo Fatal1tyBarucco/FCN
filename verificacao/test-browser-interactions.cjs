@@ -48,14 +48,17 @@ const axeCore = require("axe-core");
       return {
         passes: results.passes.length,
         incomplete: results.incomplete.length,
+        incompleteChecks: results.incomplete.map(result => ({
+          id: result.id,
+          impact: result.impact,
+          description: result.description,
+          nodeCount: result.nodes.length
+        })),
         violations: results.violations.map(violation => ({
           id: violation.id,
           impact: violation.impact,
           description: violation.description,
-          nodes: violation.nodes.map(node => ({
-            target: node.target,
-            summary: node.failureSummary
-          }))
+          targets: violation.nodes.map(node => node.target)
         }))
       };
     });
@@ -185,7 +188,14 @@ const axeCore = require("axe-core");
         passes: accessibilityAudit.passes,
         incomplete: accessibilityAudit.incomplete,
         totalViolations: accessibilityAudit.violations.length,
-        blockingViolations: blockingAccessibilityViolations.length
+        blockingViolations: blockingAccessibilityViolations.length,
+        violations: accessibilityAudit.violations.map(violation => ({
+          id: violation.id,
+          impact: violation.impact,
+          description: violation.description,
+          targets: violation.targets
+        })),
+        incompleteChecks: accessibilityAudit.incompleteChecks
       },
       pageErrors
     }, null, 2));
