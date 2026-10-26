@@ -672,7 +672,7 @@ const moduleQuestions5 = [
       D: "INCORRETA. Nenhuma está correta é falso.",
       E: "INCORRETA. Os efeitos são tendências gerais da amostragem, não garantias universais independentes do modelo e da configuração."
     },
-    regra: "Temperatura: alta tende a aumentar a variabilidade; baixa tende a reduzir a aleatoriedade, mas não garante determinismo em toda configuração."
+    regra: "Temperatura: alta tende a aumentar a variabilidade; baixa tende a reduzir a aleatoriedade, mas não garante determinismo em toda configuração.",
     pegadinha: "Alta temperatura não é 'melhor criatividade'.",
     fonte: "Hugging Face — Temperature, Top-K, Top-P, 2024."
   },
