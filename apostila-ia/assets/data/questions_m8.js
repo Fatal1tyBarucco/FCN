@@ -300,7 +300,7 @@ const moduleQuestions8 = [
     nivel: "basico",
     topico: "modulo-8-unidade-2-topico-5",
     assunto: "M8.2.5 Box plot e quartis",
-    contexto: "Conjunto 2, 4, 6, 8, 10, 12, 50. Professor pede osquartis, o IIQ e a presença de outliers pela convenção de Tukey.",
+    contexto: "Conjunto 2, 4, 6, 8, 10, 12, 50. Professor pede os quartis, o IIQ e a presença de outliers pela convenção de Tukey.",
     enunciado: "No box plot de Tukey, o intervalo interquartílico (IIQ) é Q3 − Q1; os limites para identificar outliers são Q1 − 1,5 × IIQ e Q3 + 1,5 × IIQ, e os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites.",
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites': o IIQ é Q3 − Q1, e os limites de Tukey para identificar outliers são Q1 − 1,5×IIQ e Q3 + 1,5×IIQ.",
@@ -451,7 +451,7 @@ const moduleQuestions8 = [
     analise: {
       A: "INCORRETA. Erro conceitual: com larguras diferentes, a altura não representa a frequência; a área (densidade) sim.",
       B: "CORRETA. Reproduz a regra de densidade e área para comparação com larguras distintas.",
-      C: "INCORRETA. Exagero: comparar histogramas exige largura igual, não necessariamente o mesmo número de classes; o currículo não exige igualdade de quantidade de classes.",
+      C: "INCORRETA. O número de classes, isoladamente, não determina a validade da comparação; com larguras diferentes, a frequência deve ser representada pela área e a altura pela densidade, usando escalas e critérios compatíveis.",
       D: "INCORRETA. Erro conceitual: densidade absoluta é usada quando se mantém n como soma das áreas; não é restrita à frequência relativa."
     },
     regra: "Histograma de densidade: altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou = 1 (relativa); a comparação requer critérios e escalas compatíveis; com larguras diferentes, interprete a área e a densidade, não apenas a altura.",
@@ -478,8 +478,8 @@ const moduleQuestions8 = [
     gabarito: "C",
     justificativa: "Variação percentual = (valor atual − anterior) ÷ anterior. Janeiro→fevereiro: (132−120)/120 = +10,0% (A: denominador errado — 132, não 120); Fevereiro→março: (115−132)/132 ≈ −12,9% (B: inverte numerador e denominador); Março→abril: (140−115)/115 ≈ +21,7% (C, correta); Janeiro→abril: (140−120)/120 ≈ +16,7% (D: usa 140 em vez de 120). A única afirmação fiel é C.",
     analise: {
-      A: "INCORRETA. (120 − 132) ÷ 120 = −10,0%, não +10,0%: a alternativa inverte o sinal da variação.",
-      B: "INCORRETA. Variação fev→mar = (115 − 132) ÷ 132 ≈ −12,9%; a alternativa inverte numerador e denominador.",
+      A: "INCORRETA. A alternativa usa 132 como denominador; a variação correta usa o valor anterior: (132 − 120) ÷ 120 = +10,0%."
+      B: "INCORRETA. A alternativa calcula (132 − 115) ÷ 132, que é positivo; a variação fev→mar é (115 − 132) ÷ 132 ≈ −12,9%."
       C: "CORRETA. (140 − 115) ÷ 115 = 25 ÷ 115 ≈ +21,74%; é o único cálculo fiel ao método anterior/denominador.",
       D: "INCORRETA. Janeiro → abril usa denominador 120: (140 − 120) ÷ 120 ≈ +16,67%, não 14,3%."
     },
