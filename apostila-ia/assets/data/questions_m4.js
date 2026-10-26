@@ -398,130 +398,125 @@ const moduleQuestions4 = [
     fonte: "MITRE ATT&CK, T1014 — Rootkit: https://attack.mitre.org/techniques/T1014/."
   },
 
-  { id: "q-m4-16", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-2", assunto: "4.2 — Firewalls",
-    contexto: "Uma organização usa um firewall para filtrar tráfego de rede.",
-    enunciado: "O que um Firewall (bastão de watt) faz?",
+  { id: "q-m4-16", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "modulo-4-unidade-2-topico-2", assunto: "4.2 — Firewalls e filtragem de tráfego",
+    contexto: "Uma organização precisa impedir que conexões externas não autorizadas alcancem serviços internos e limitar conexões de saída que não sejam necessárias.",
+    enunciado: "Qual é a função principal de um firewall nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Criptografa todos os dados que passam pela rede." },
-      { letra: "B", texto: "Filtra o tráfego de rede baseado em regras de segurança." },
-      { letra: "C", texto: "Remove vírus automaticamente." },
-      { letra: "D", texto: "Protege contra phishing apenas." },
-      { letra: "E", texto: "Substitui a necessidade de autenticação." }
+      { letra: "A", texto: "Filtrar o tráfego de rede conforme regras de origem, destino, porta, protocolo ou outros atributos suportados." },
+      { letra: "B", texto: "Criptografar automaticamente todos os arquivos armazenados em cada computador." },
+      { letra: "C", texto: "Remover qualquer malware de todos os dispositivos sem ferramentas adicionais." },
+      { letra: "D", texto: "Substituir a autenticação e a autorização de usuários em cada aplicação." },
+      { letra: "E", texto: "Garantir que nenhuma mensagem de phishing chegue aos usuários." }
     ],
-    gabarito: "B",
-    justificativa: "Firewall é um dispositivo ou software que filtra o tráfego de rede baseado em regras de segurança (endereços, portas, protocolos, aplicações). Criptografa? Não (alternativa A incorreta); remove vírus? Não (é o papel do antivírus/EDR, não do firewall tradicional; alternativa C incorreta); protege contra phishing? Apenas de forma limitada (alternativa D incorreta); não substitui autenticação (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Firewall aplica regras para permitir ou bloquear tráfego de rede, conforme sua arquitetura e capacidade. Ele pode ser um dispositivo, software ou serviço; não substitui controles de endpoint, autenticação, segurança de aplicações ou conscientização contra phishing.",
     analise: {
-      A: "INCORRETA. Firewall filtra tráfego; criptografia é feita por outros meios (SSL/TLS, IPSec).",
-      B: "CORRETA. Firewall é um sistema que filtra o tráfego de entrada e saída pela rede.",
-      C: "INCORRETA. Remoção de vírus é a responsabilidade do antivírus/EDR, não do firewall.",
-      D: "INCORRETA. Firewall pode ajudar, mas não é a principal defesa contra phishing.",
-      E: "INCORRETA. Firewall não substitui autenticação. Movimento de controle de acesso é complementar."
+      A: "CORRETA. Filtrar tráfego conforme regras é a função central de um firewall.",
+      B: "INCORRETA. Criptografia de arquivos é um controle distinto e não decorre automaticamente do firewall.",
+      C: "INCORRETA. Remediação de malware é função de ferramentas e processos específicos.",
+      D: "INCORRETA. Firewall não substitui autenticação nem autorização dentro das aplicações.",
+      E: "INCORRETA. Um firewall pode integrar filtros complementares, mas não garante que toda tentativa de phishing seja bloqueada."
     },
-    regra: "Firewall = filtro de tráfego. 'O que entra e o que sai' — baseando-se em regras de segurança.",
-    pegadinha: "Firewall não é 'chave de segurança' — é 'bastão de watt' que controla o fluxo de dados.",
-    fonte: "Cisco — Introduction to Firewalls, 2020."
+    regra: "Firewall permite ou bloqueia tráfego conforme regras; é uma camada complementar de segurança.",
+    pegadinha: "A presença de firewall não garante proteção completa contra malware, phishing ou falhas de aplicação.",
+    fonte: "NIST SP 800-41 Rev. 1 — Guidelines on Firewalls and Firewall Policy: https://csrc.nist.gov/pubs/sp/800/41/r1/final."
   },
 
-  { id: "q-m4-17", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — IDS e IPS",
-    contexto: "Uma empresa adota sistemas de detecção e prevenção de intrusão.",
-    enunciado: "A diferença fundamental entre IDS (Intrusion Detection System) e IPS (Intrusion Prevention System) é que:",
+  { id: "q-m4-17", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-2", assunto: "4.2 — Regras de firewall e negação por padrão",
+    contexto: "Uma equipe configura regras de rede para um servidor que precisa receber HTTPS e consultar um serviço de atualização autorizado. Nenhuma outra comunicação é necessária.",
+    enunciado: "Qual política de firewall segue melhor o princípio de reduzir a exposição?",
     alternativas: [
-      { letra: "A", texto: "IDS só detecta, IPS só previne." },
-      { letra: "B", texto: "IDS gera alertas sobre atividade suspeita; IPS age para bloquear ou impedir o ataque." },
-      { letra: "C", texto: "IDS é de rede, IPS é de hospedeiro." },
-      { letra: "D", texto: "IDS e IPS são sinônimos." },
-      { letra: "E", texto: "IPS só funciona com criptografia ativa." }
+      { letra: "A", texto: "Permitir todo o tráfego e bloquear apenas conexões que já tenham causado incidente." },
+      { letra: "B", texto: "Permitir somente os fluxos necessários, documentar as exceções e negar por padrão o tráfego não autorizado, validando as dependências do serviço." },
+      { letra: "C", texto: "Bloquear todo o tráfego sem verificar se isso impede o funcionamento legítimo do serviço." },
+      { letra: "D", texto: "Criar uma regra ampla de entrada e confiar apenas no antivírus instalado no servidor." },
+      { letra: "E", texto: "Permitir tráfego de qualquer origem para todas as portas de administração." }
     ],
     gabarito: "B",
-    justificativa: "IDS monitora o tráfego e gera alertas (detecção); IPS também monitora, mas também age para bloquear o tráfego malintencionado em tempo real (prevenção). IDS não impede (alternativa A incorreta); IDS gera alertas e pode tomar ações limitadas, mas a característica definidora é IDS detectar vs IPS prevenir (alternativa C incorreta); IDS e IPS não são sinônimos (alternativa D incorreta); IPS não requer ativação de criptografia (alternativa E incorreta).",
+    justificativa: "Uma política restritiva permite os fluxos necessários e nega por padrão os demais, com exceções explícitas e justificadas. A implementação deve considerar dependências legítimas, monitorar efeitos e revisar as regras; uma regra excessivamente ampla aumenta a superfície de ataque, enquanto bloquear tudo sem análise pode causar indisponibilidade.",
     analise: {
-      A: "INCORRETA. IDS detecta (alerta), IPS impede (age) — não são 'só detecta/ somente impede'.",
-      B: "CORRETA. IDS gera alertas; IPS bloqueia o tráfego malintencionado ativamente.",
-      C: "INCORRETA. Ambos podem ser rede (NIDS/NIPS) e de host (HIDS/HIPS).",
-      D: "INCORRETA. IDS (detecção) e IPS (prevenção) são conceitos distintos.",
-      E: "INCORRETA. IPS não requer criptografia ativa para funcionar."
+      A: "INCORRETA. Permitir tudo transfere a defesa para a reação após o incidente e amplia a exposição.",
+      B: "CORRETA. A política limita a comunicação ao necessário e mantém exceções controladas.",
+      C: "INCORRETA. A restrição precisa preservar os fluxos legítimos necessários ao serviço.",
+      D: "INCORRETA. Antivírus não substitui a restrição de tráfego de rede.",
+      E: "INCORRETA. Expor portas administrativas a qualquer origem aumenta significativamente o risco."
     },
-    regra: "IDS = 'olhar e alertar'; IPS = 'olhar, alertar e impedir'.",
-    pegadinha: "IDS é de monitoramento; IPS é de bloqueio ativo. Diferença na ação, não na arquitetura.",
-    fonte: "SANS Institute — Intrusion Detection Systems, 2018."
+    regra: "Negação por padrão: permitir apenas fluxos necessários, com exceções justificadas, testadas e revisadas.",
+    pegadinha: "Regra restritiva não significa bloquear sem análise; é preciso equilibrar exposição e continuidade do serviço.",
+    fonte: "NIST SP 800-41 Rev. 1 — Guidelines on Firewalls and Firewall Policy: https://csrc.nist.gov/pubs/sp/800/41/r1/final."
   },
 
-  { id: "q-m4-18", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Defesa em Profundidade",
-    contexto: "Uma organização implementa várias camadas de controle de segurança para proteger seus ativos.",
-    enunciado: "O conceito de 'defesa em profundidade' (defense in depth) significa que:",
+  { id: "q-m4-18", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "avancado", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Defesa em profundidade",
+    contexto: "Uma organização depende de um único firewall de borda. Um invasor consegue roubar credenciais válidas e acessar um serviço interno por um caminho permitido.",
+    enunciado: "Qual abordagem melhor representa defesa em profundidade para reduzir a dependência de um único controle?",
     alternativas: [
-      { letra: "A", texto: "Apenas um controle de segurança é necessário." },
-      { letra: "B", texto: "Várias camadas de defesa são implementadas para compensar falhas de controle." },
-      { letra: "C", texto: "Todas as defesas são centralizadas em um único firewall." },
-      { letra: "D", texto: "Segurança é ignorada quando outros controles estão presentes." },
-      { letra: "E", texto: "O antivírus é o único controle necessário." }
+      { letra: "A", texto: "Adicionar camadas complementares, como MFA, menor privilégio, segmentação, monitoramento e proteção de endpoint, ajustadas ao risco." },
+      { letra: "B", texto: "Comprar um firewall maior e dispensar os demais controles." },
+      { letra: "C", texto: "Considerar que credenciais válidas tornam qualquer atividade do usuário confiável." },
+      { letra: "D", texto: "Desativar os registros internos para reduzir o volume de alertas." },
+      { letra: "E", texto: "Concentrar todos os controles em uma única conta administrativa compartilhada." }
+    ],
+    gabarito: "A",
+    justificativa: "Defesa em profundidade combina controles diferentes e complementares para reduzir a probabilidade e o impacto de falhas individuais. MFA, menor privilégio, segmentação, monitoramento e proteção de endpoint podem limitar caminhos de ataque e apoiar detecção e resposta. Nenhuma combinação garante risco zero; a seleção deve considerar o contexto e ser testada.",
+    analise: {
+      A: "CORRETA. Camadas complementares reduzem a dependência de um único controle e limitam o impacto de credenciais comprometidas.",
+      B: "INCORRETA. Um único controle continua sendo um ponto de dependência e não cobre todos os riscos.",
+      C: "INCORRETA. Credenciais válidas podem ser roubadas; autorização e monitoramento continuam necessários.",
+      D: "INCORRETA. Desativar registros reduz a capacidade de detectar e investigar atividade indevida.",
+      E: "INCORRETA. Contas compartilhadas enfraquecem atribuição individual e aumentam o impacto de comprometimento."
+    },
+    regra: "Defesa em profundidade combina controles preventivos, detectivos e de resposta adequados ao risco; não promete proteção absoluta.",
+    pegadinha: "Um controle pode falhar ou ser contornado; camadas distintas devem reduzir o impacto sem duplicar cegamente a mesma defesa.",
+    fonte: "NIST SP 800-53 Rev. 5 — Security and Privacy Controls: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
+  },
+
+  { id: "q-m4-19", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Gestão segura de logs",
+    contexto: "Um órgão precisa usar logs para investigar incidentes, mas os registros contêm identificadores pessoais e podem ser alterados por administradores do sistema investigado.",
+    enunciado: "Qual desenho de gestão de logs é mais adequado?",
+    alternativas: [
+      { letra: "A", texto: "Coletar eventos relevantes, restringir e registrar o acesso aos logs, proteger sua integridade, definir retenção e limitar dados ao necessário para a finalidade." },
+      { letra: "B", texto: "Guardar todos os dados indefinidamente e permitir acesso irrestrito para facilitar auditorias." },
+      { letra: "C", texto: "Permitir que a conta investigada apague seus próprios registros sem gerar alerta." },
+      { letra: "D", texto: "Coletar apenas eventos bem-sucedidos e descartar todas as falhas de autenticação." },
+      { letra: "E", texto: "Substituir os logs por relatos verbais sem horário, autoria ou contexto." }
+    ],
+    gabarito: "A",
+    justificativa: "Logs ajudam na detecção, investigação, auditoria e reconstrução de eventos quando sua coleta é adequada e os registros são protegidos. O desenho deve restringir acessos, detectar alterações, sincronizar horários, definir retenção e considerar minimização e proteção de dados pessoais. Mais coleta e retenção não significam automaticamente melhor segurança.",
+    analise: {
+      A: "CORRETA. A alternativa equilibra utilidade investigativa, integridade, controle de acesso, retenção e minimização.",
+      B: "INCORRETA. Retenção indefinida e acesso irrestrito ampliam riscos de privacidade e adulteração.",
+      C: "INCORRETA. A possibilidade de apagar evidências sem detecção compromete a confiabilidade dos registros.",
+      D: "INCORRETA. Falhas de autenticação podem ser essenciais para detectar ataques.",
+      E: "INCORRETA. Relatos verbais não substituem registros estruturados e rastreáveis."
+    },
+    regra: "Logs úteis devem ser relevantes, protegidos, acessíveis apenas a pessoas autorizadas, retidos conforme regras e minimizados conforme a finalidade.",
+    pegadinha: "Coletar e reter tudo indefinidamente não é sinônimo de boa auditoria; considere finalidade, acesso, integridade e privacidade.",
+    fonte: "NIST SP 800-92 — Guide to Computer Security Log Management: https://csrc.nist.gov/pubs/sp/800/92/final."
+  },
+
+  { id: "q-m4-20", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controle de acesso e menor privilégio",
+    contexto: "Uma servidora muda de função e deixa de precisar exportar dados pessoais. Seu perfil de acesso ainda permite exportação em massa e administração de usuários.",
+    enunciado: "Qual ação aplica melhor o princípio do menor privilégio?",
+    alternativas: [
+      { letra: "A", texto: "Manter as permissões antigas para evitar solicitações de acesso no futuro." },
+      { letra: "B", texto: "Revisar o perfil conforme as tarefas atuais, remover permissões desnecessárias e manter processo formal para conceder exceções justificadas." },
+      { letra: "C", texto: "Conceder acesso administrativo a todos os integrantes da equipe." },
+      { letra: "D", texto: "Compartilhar uma conta com permissões amplas para facilitar a substituição entre funcionários." },
+      { letra: "E", texto: "Negar permanentemente qualquer acesso, independentemente das responsabilidades da servidora." }
     ],
     gabarito: "B",
-    justificativa: "Defesa em profundidade adota múltiplas camadas de controle para garantir que se uma falhar, outras ainda protejam o ativo. Apenas um controle é insuficiente (alternativa A incorreta); a centralização em um único firewall é uma fraqueza — defesa em profundidade requer múltiplas camadas (alternativa C incorreta); segurança não é ignorada — é reforçada (alternativa D incorreta); o antivírus é apenas uma camada, não o único controle (alternativa E incorreta).",
+    justificativa: "O menor privilégio exige que as permissões correspondam às tarefas e responsabilidades atuais. Mudanças de função devem acionar revisão de acesso, remoção de permissões desnecessárias e registro das exceções aprovadas. Contas individuais e revisões periódicas melhoram a rastreabilidade e reduzem o impacto de credenciais comprometidas.",
     analise: {
-      A: "INCORRETA. Defesa em profundidade requer múltiplas camadas.",
-      B: "CORRETA. Múltiplas camadas compensam falhas de controle em cascata.",
-      C: "INCORRETA. Centralização em um único firewall é um único ponto de falha.",
-      D: "INCORRETA. Segurança é reforçada, não ignorada.",
-      E: "INCORRETA. Antivírus é uma camada, não o único controle de segurança."
+      A: "INCORRETA. Permissões obsoletas mantêm acesso além da necessidade atual.",
+      B: "CORRETA. A alternativa ajusta as permissões à função e prevê tratamento controlado de exceções.",
+      C: "INCORRETA. Acesso administrativo generalizado viola o menor privilégio.",
+      D: "INCORRETA. Contas compartilhadas enfraquecem a atribuição individual e ampliam o acesso.",
+      E: "INCORRETA. Menor privilégio limita o acesso ao necessário; não significa negar todo acesso."
     },
-    regra: "Defesa em profundidade = 'múltiplas camadas, sem confiar em uma só'.",
-    pegadinha: "Não basta um firewall — defesa em profundidade exige camadas de segurança diversas.",
-    fonte: "NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment)."
+    regra: "Revise permissões quando funções mudam, remova acessos obsoletos e conceda exceções por processo formal.",
+    pegadinha: "Menor privilégio não é acesso zero; é conceder o acesso necessário e nenhum privilégio desnecessário.",
+    fonte: "NIST SP 800-53 Rev. 5, AC-2 e AC-6: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
-
-  { id: "q-m4-19", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Monitoramento e registros",
-    contexto: "Um departamento de TI implementa um sistema de monitoramento de logs.",
-    enunciado: "A importância do monitoramento e dos logs (registros) na segurança da informação é:",
-    alternativas: [
-      { letra: "A", texto: "Permitir o acesso irrestrito a todos os sistemas." },
-      { letra: "B", texto: "Fornecer audibilidade, detecção de incidentes e análise forense." },
-      { letra: "C", texto: "Não ter valor na detecção de ameaças." },
-      { letra: "D", texto: "Substituir a necessidade de backups." },
-      { letra: "E", texto: "Criptografar todos os dados automaticamente." }
-    ],
-    gabarito: "B",
-    justificativa: "Logs e monitoramento são essenciais para auditoria, detecção de incidentes, análise forense e conformidade. Permitir acesso irrestrito (alternativa A incorreta); não ter valor na detecção (alternativa C incorreta); não substituem backups (alternativa D incorreta); nem criptografam dados automaticamente (alternativa E incorreta).",
-    analise: {
-      A: "INCORRETA. Logs são usados para auditoria, não para acesso irrestrito.",
-      B: "CORRETA. Monitoramento e logs são a base da auditoria, detecção e análise forense.",
-      C: "INCORRETA. Logs são fundamentais para detecção e análise de incidentes.",
-      D: "INCORRETA. Logs não substituem backups — são informações demográficas, não cópias.",
-      E: "INCORRETA. Log monitoring não criptografa dados automaticamente."
-    },
-    regra: "Logs = 'memória do sistema'. São essenciais para auditoria, detecção e resposta.",
-    pegadinha: "Monitoramento de logs não é 'visualização de dados' — é 'gravação e análise de eventos'.",
-    fonte: "NIST SP 800-92 (Guide to Computer Security Log Management), 2007."
-  },
-
-  { id: "q-m4-20", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.2 — Controle de acesso",
-    contexto: "Uma agência pública adota políticas de controle de acesso aos sistemas e dados.",
-    enunciado: "A política de controle de acesso baseada no menor privilégio garante que:",
-    alternativas: [
-      { letra: "A", texto: "Qualquer usuário pode acessar qualquer recurso." },
-      { letra: "B", texto: "Usuários recebem apenas os direitos necessários para suas funções." },
-      { letra: "C", texto: "Acesso é concedido com base no cargo e não na necessidade funcional." },
-      { letra: "D", texto: "Todos os administradores recebem privilégios ilimitados." }
-    ],
-    gabarito: "B",
-    justificativa: "Menor privilégio: conceder ao usuário apenas os privilégios necessários para sua função. Ninguém é 'qualquer um' (alternativa A incorreta); o acesso é baseado na necessidade de saber e função, não apenas no cargo (alternativa C incorreta); administradores também seguem a mínimação, com privilégios quando necessário (alternativa D incorreta).",
-    analise: {
-      A: "INCORRETA. Controle de acesso exige restrição, não acesso irrestrito.",
-      B: "CORRETA. O menor privilégio atribui apenas o necessário para cada função.",
-      C: "INCORRETA. Acesso deve basear-se na necessidade e no papel, não apenas no cargo.",
-      D: "INCORRETA. Administradores também seguem o princípio do menor privilégio."
-    },
-    regra: "Menor privilégio = 'só o necessário para a função' — não mais, não menos.",
-    pegadinha: "Menor privilégio é 'quanto é necessário' — não leva em conta 'o que ele quer'.",
-    fonte: "NIST SP 800-53 (AC-2, AC-3, AC-6: Least Privilege)."
-  },
-
-  /* ===================== 4.3 Ameaças e Ataques (10 questões) ===================== */
 
   { id: "q-m4-21", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m4-u3-t1-s1", assunto: "4.3 — Phishing",
