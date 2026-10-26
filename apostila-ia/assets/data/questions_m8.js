@@ -143,35 +143,31 @@ const moduleQuestions8 = [
     fonte: "Currículo M8 — integridade gráfica e escolha de escalas."
   },
 
-  {
-    id: "q-m8-06",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fgv",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-3-topico-1",
-    assunto: "M8.3.1 Média, mediana e moda",
-    contexto: "Conjunto 2, 4, 4, 4, 5, 5, 7, 9. Professora pede a classe a média, mediana e moda para decidir qual descreve o 'caso típico'.",
+  { id: "q-m8-06", modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-3-topico-1", assunto: "M8.3.1 Média, mediana e moda",
+    contexto: "Conjunto 2, 4, 4, 4, 5, 5, 7, 9. A professora pede a média, a mediana e a moda para decidir qual descreve o caso típico.",
     enunciado: "Para o conjunto 2, 4, 4, 4, 5, 5, 7, 9, a média, a mediana e a moda são, respectivamente:",
     alternativas: [
-      { letra: "A", texto: "5,0; 4,5 e 4" },
-      { letra: "B", texto: "5,0; 5 e 4" },
-      { letra: "C", texto: "4,5; 5 e 5" },
-      { letra: "D", texto: "5,0; 4 e 4,5" }
+      { letra: "A", texto: "5,0; 4,5 e 4." },
+      { letra: "B", texto: "5,0; 5 e 4." },
+      { letra: "C", texto: "4,5; 5 e 5." },
+      { letra: "D", texto: "5,0; 4 e 4,5." },
+      { letra: "E", texto: "4,0; 4,5 e 5." }
     ],
     gabarito: "A",
-    justificativa: "Média = soma ÷ n = 40 ÷ 8 = 5,0. Mediana: n par, média dos dois centrais (4 e 5) = 4,5. Moda: valor mais frequente = 4 (aparece 3 vezes). A alternativa A reproduz exatamente essas medidas.",
+    justificativa: "Média = soma ÷ n = 40 ÷ 8 = 5,0. Mediana: como n é par, calcula-se a média dos dois valores centrais (4 e 5), resultando em 4,5. Moda: o valor mais frequente é 4, que aparece três vezes.",
     analise: {
       A: "CORRETA. Média 5,0; mediana 4,5; moda 4.",
-      B: "INCORRETA. Mediana incorreta: confunde posições centrais (4 e 5 dão 4,5, não 5).",
-      C: "INCORRETA. Erro de múltiplos cálculos: média e moda trocadas.",
-      D: "INCORRETA. Mista: média correta, mediana e moda trocadas."
+      B: "INCORRETA. A mediana é a média de 4 e 5, não 5.",
+      C: "INCORRETA. A média e a moda estão incorretas.",
+      D: "INCORRETA. Mediana e moda foram trocadas.",
+      E: "INCORRETA. A média não é 4,0 e a moda não é 5."
     },
-    regra: "Média = Σ valores ÷ n; mediana = valor central (média dos dois centrais, se n par); moda = valor de maior frequência.",
-    pegadinha: "A pegadinha é a mediana: n par exige média dos dois centrais, e o aluno que pega o 5º valor apenas (5) erra.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-1 (M8.3.1 Média, mediana e moda).",
+    regra: "Média = soma dos valores ÷ quantidade; mediana = valor central (média dos dois centrais se n par); moda = valor de maior frequência.",
+    pegadinha: "Com quantidade par de observações, a mediana não é simplesmente o valor da posição central superior.",
+    fonte: "Currículo M8 — M8.3.1 Média, mediana e moda."
   },
+
   {
     id: "q-m8-07",
     modulo: 8,
@@ -190,68 +186,60 @@ const moduleQuestions8 = [
       item: "Item VERDADEIRO. Os passos registrados são reexecutados a cada atualização, o que elimina retrabalho manual.",
       leituraIncorreta: "Leitura que induz ao erro: considerar que o Power Query é só 'caminho de importação' — na verdade o editor transforma e registra a sequência, e é por isso que o item é certo."
     },
-    regra: "Power Query = ETL declarativo em passos; cada atualização refaz os passos registrados; o fluxo é extrair → transformar → carregar (ETL/ELT).",
+    regra: "Power Query registra passos de preparação que podem ser reexecutados na atualização; a posição da transformação em relação à carga depende do destino e da arquitetura.",
     pegadinha: "CSNIF: cada um dos itens C/E costuma inverter uma característica — aqui o candente é o 'fica registrado' e 'executado', ambos presentes no currículo.",
     fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 Power Query e transformações).",
   },
-  {
-    id: "q-m8-08",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fcc",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-4-topico-3",
-    assunto: "M8.4.3 Modelagem analítica",
+  { id: "q-m8-08", modulo: 8, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-4-topico-3", assunto: "M8.4.3 Modelagem analítica",
     contexto: "Relatório de pagamentos exibe 1.500 linhas de fatos associadas a 1.200 protocolos distintos; algumas etapas do processo geram mais de uma linha por protocolo.",
     enunciado: "No modelo estrela, por que contar linhas da tabela de fatos como se cada linha fosse um protocolo pode superestimar a quantidade de protocolos?",
     alternativas: [
-      { letra: "A", texto: "a tabela de fato armazena medidas numéricas e chaves simples." },
-      { letra: "B", texto: "a granularidade permite várias linhas por protocolo, mas o relatório interpreta cada linha como um protocolo distinto." },
-      { letra: "C", texto: "as dimensões são enxutas e possuem chave única." },
-      { letra: "D", texto: "a granularidade do fato está declarada." }
+      { letra: "A", texto: "A tabela de fatos armazena medidas numéricas e chaves simples." },
+      { letra: "B", texto: "A granularidade permite várias linhas por protocolo, mas o relatório interpreta cada linha como um protocolo distinto." },
+      { letra: "C", texto: "As dimensões são enxutas e possuem chave única." },
+      { letra: "D", texto: "A granularidade do fato está declarada." },
+      { letra: "E", texto: "A medida correta pode exigir contagem distinta do identificador de protocolo, e não contagem simples de linhas." }
     ],
     gabarito: "B",
-    justificativa: "A contagem de linhas mede registros na granularidade da tabela de fatos, não necessariamente protocolos distintos. Se um protocolo pode gerar várias linhas de fato, contar cada linha como um protocolo superestima o total de protocolos. A alternativa B descreve essa incompatibilidade entre granularidade e métrica. As demais não explicam o problema apresentado.",
+    justificativa: "A contagem de linhas mede registros na granularidade da tabela de fatos, não necessariamente protocolos distintos. Se um protocolo pode gerar várias linhas de fato, contar cada linha como um protocolo superestima o total. Para medir protocolos únicos, pode ser necessária uma contagem distinta do identificador, conforme a granularidade e as regras do modelo.",
     analise: {
-      A: "INCORRETA. Erro conceitual: medida + chave simples é modelo saudável; a duplicação é o defeito.",
-      B: "CORRETA. Distingue a granularidade das linhas de fatos da entidade que o relatório pretende contar.",
-      C: "INCORRETA. Erro conceitual: dimensões enxutas com chave única resolvem a temporalidade, não causam erro.",
-      D: "INCORRETA. Erro conceitual: declarar granularidade é a solução, não a causa do erro."
+      A: "INCORRETA. Medidas e chaves são componentes normais da tabela de fatos e não explicam a superestimação.",
+      B: "CORRETA. A incompatibilidade entre granularidade das linhas e entidade contada produz a superestimação.",
+      C: "INCORRETA. Chaves únicas nas dimensões não garantem uma linha de fato por protocolo.",
+      D: "INCORRETA. Declarar a granularidade ajuda a compreender o modelo, mas não impede uma medida incorreta.",
+      E: "INCORRETA. A contagem distinta pode corrigir o indicador, mas a pergunta pede a causa da superestimação, descrita na alternativa B."
     },
-    regra: "Modelo estrela: fato transacional no centro, dimensões ao redor. A contagem de linhas representa a unidade de negócio desejada somente quando a granularidade da fato coincide com essa unidade; para contar protocolos com várias linhas por protocolo, conte protocolos distintos pela chave correta.",
-    pegadinha: "A pegadinha é confundir quantidade de linhas com quantidade de entidades de negócio. Uma linha de fato pode representar item, evento, etapa ou parcela, e não necessariamente um protocolo único.",
-    fonte: "Currículo M8 — modulo-8-unidade-4-topico-3 (M8.4.3 Modelagem analítica).",
+    regra: "A contagem simples de linhas mede linhas no grão da tabela de fatos; conte entidades distintas quando essa for a métrica pretendida.",
+    pegadinha: "Contagem de linhas não equivale automaticamente à contagem de entidades de negócio.",
+    fonte: "Currículo M8 — modelagem analítica e granularidade."
   },
-  {
-    id: "q-m8-09",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fgv",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-5-topico-1",
-    assunto: "M8.5.1 Arco narrativo",
+
+  { id: "q-m8-09", modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-5-topico-1", assunto: "M8.5.1 Arco narrativo",
     contexto: "Gestor pede uma apresentação de dados sobre uma meta não atingida e pede recomendações.",
-    enunciado: "Para estruturar uma narrativa de decisão, a recomendação final de storytelling com dados deve indicar:",
+    enunciado: "Para estruturar uma narrativa de decisão, a recomendação final deve indicar:",
     alternativas: [
-      { letra: "A", texto: "apenas a ação proposta, sem responsável, prazo ou custo de não agir." },
-      { letra: "B", texto: "ação proposta, responsável, prazo, custo previsto e consequência de não executar a ação." },
-      { letra: "C", texto: "a ordem em que os dados foram coletados, para preservar o contexto original." },
-      { letra: "D", texto: "todos os indicadores calculados, em quantidade ilimitada." }
+      { letra: "A", texto: "Apenas a ação proposta, sem responsável, prazo ou consequência de não agir." },
+      { letra: "B", texto: "Ação proposta, responsável, prazo, custo previsto e consequência de não executar a ação." },
+      { letra: "C", texto: "A ordem em que os dados foram coletados, para preservar a sequência original." },
+      { letra: "D", texto: "Todos os indicadores calculados, sem limite de quantidade." },
+      { letra: "E", texto: "Apenas o gráfico mais visualmente atraente, deixando a decisão para o público." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que a RECOMENDAÇÃO deve conter a ação proposta, com responsável, prazo, custo e o que acontece se não for feita. A alternativa B reúne os cinco componentes: ação proposta, responsável, prazo, custo previsto e consequência de não agir. A alternativa A omite os elementos obrigatórios; a C inverte a ordem da narrativa (seguir a ordem dos dados não é a ordem da decisão); a D é anti-restrição e viola a regra de 'uma mensagem por gráfico'.",
+    justificativa: "A recomendação deve converter a análise em ação: indicar o que fazer, quem responde, em qual prazo, qual custo previsto e o que pode ocorrer se a ação não for executada. A sequência de coleta não é necessariamente a ordem da narrativa decisória, e incluir todos os indicadores pode dispersar a mensagem principal.",
     analise: {
-      A: "INCORRETA. Erro conceitual: recomendação sem responsável, prazo e custo de não agir é constatação, não decide.",
-      B: "CORRETA. Inclui ação proposta, responsável, prazo, custo previsto e consequência de não executar a ação.",
-      C: "INCORRETA. Erro conceitual: a ordem da investigação não é a ordem da narrativa de decisão; concluir primeiro e justificar depois é a regra.",
-      D: "INCORRETA. Erro conceitual: todos os indicadores em quantidade ilimitada satura o painel e paralisa a decisão (visão completa é anti-padrão de gestão)."
+      A: "INCORRETA. Sem responsável e prazo, a ação fica pouco executável; omitir consequências enfraquece a decisão.",
+      B: "CORRETA. Reúne ação, responsabilidade, prazo, custo e consequência de não agir.",
+      C: "INCORRETA. A narrativa deve seguir a lógica da pergunta e da decisão, não necessariamente a ordem de coleta.",
+      D: "INCORRETA. Excesso de indicadores pode ocultar a mensagem principal.",
+      E: "INCORRETA. A visualização deve apoiar uma recomendação fundamentada, não substituir a análise."
     },
-    regra: "Storytelling de decisão: contexto → conflito → descoberta → recomendação, com recomendações que indiquem ação, responsável, prazo, custo previsto e consequência de não agir.",
-    pegadinha: "A alternativa C pega quem associa 'fiel ao processo de coleta' à 'narrativa de comunicação', mas o currículo exige a ordem da decisão, não a do processo.",
-    fonte: "Currículo M8 — modulo-8-unidade-5-topico-1 (M8.5.1 Arco narrativo).",
+    regra: "Recomendação executável especifica ação, responsável, prazo, custo previsto e consequência de não agir.",
+    pegadinha: "Uma apresentação de dados não termina na constatação: deve conectar evidência a uma decisão clara.",
+    fonte: "Currículo M8 — storytelling com dados e narrativa de decisão."
   },
+
   {
     id: "q-m8-10",
     modulo: 8,
