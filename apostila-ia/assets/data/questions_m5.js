@@ -440,7 +440,7 @@ const moduleQuestions5 = [
     enunciado: "Métricas de regressão apropriadas ao escopo são importantes porque:",
     alternativas: [
       { letra: "A", texto: "Não são úteis para regressão." },
-      { letra: "B", texto: "Substituiem o conjunto de teste." },
+      { letra: "B", texto: "Substituem o conjunto de teste." },
       { letra: "C", texto: "Permitem avaliar o quão bem o modelo prevê valores contínuos." },
       { letra: "D", texto: "Eliminam a necessidade de validação." },
       { letra: "E", texto: "Garantem erro zero." }
