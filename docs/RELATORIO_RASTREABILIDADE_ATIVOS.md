@@ -13,10 +13,10 @@
 > Esta seção prevalece sobre os números de snapshots históricos abaixo. O corpo anterior contém resultados de execuções antigas e não deve ser lido como relatório gerado novamente no HEAD atual.
 
 - HEAD consultado antes desta atualização: `cefd7fa005118b37af112b2bf67146ebb26c1163`.
-- Contagem por varredura dos IDs `q-mN-NN` nos seis arquivos de questões: **399 IDs esperados após inclusão de q-m6-45..47**, sem duplicações detectadas nessa varredura.
-- Distribuição por arquivo: `questions.js` (145; módulos 1–3), M4 (85), M5 (42), M6 (44), M7 (40) e M8 (40).
+- Contagem estrutural do commit atual: **399 questões esperadas** (145 no arquivo `questions.js`, M4=85, M5=42, M6=47, M7=40 e M8=40). A execução integral de auditoria do novo commit está pendente.
+- Distribuição por arquivo: `questions.js` (145; módulos 1–3), M4 (85), M5 (42), M6 (47), M7 (40) e M8 (40).
 - Flashcards: **460**, conforme inventário atual do repositório.
-- Auditoria estrutural focal dos conteúdos remotos: **396/396 no commit anterior; 399 itens esperados após o patch** questões com campos obrigatórios detectados; **0** IDs duplicados; **0** referências de tópico não reconhecidas entre as questões. A normalização comparou as referências com os IDs curriculares atuais. Essa verificação não executou `scripts/audit_learning_assets.mjs` nem regenerou a matriz CSV; a matriz completa por tópico ainda requer execução reproduzível do script no ambiente do projeto.
+- Auditoria estrutural focal dos conteúdos remotos: **396/396 no commit anterior; 399 itens esperados após o patch**; **0** IDs duplicados; **0** referências de tópico não reconhecidas entre as questões. A normalização comparou as referências com os IDs curriculares atuais. Essa verificação não executou `scripts/audit_learning_assets.mjs` nem regenerou a matriz CSV; a matriz completa por tópico ainda requer execução reproduzível do script no ambiente do projeto.
 - A execução de CI consultada para o HEAD `cefd7fa...` concluiu com sucesso para os checks configurados, incluindo auditoria estática/cobertura e análises JavaScript/TypeScript/Actions. Isso não certifica a semântica dos enunciados, gabaritos ou fontes.
 
 ---
