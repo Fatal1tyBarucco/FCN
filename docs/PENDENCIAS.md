@@ -1,10 +1,28 @@
+## Estado CI mais recente — 2026-10-26 04:12 UTC
+
+- HEAD: `7a6ac2425f00ccdbebc8be2d206796037358e75d`.
+- [Validação curricular, ativos e testes de navegador](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40267735657): **success** — sintaxe, matriz, rastreabilidade, verificador estrutural, heurísticas, smoke test Chromium/Playwright `file://`, regressões interativas e upload dos relatórios.
+- CodeQL, Analyze JavaScript/TypeScript e Analyze Actions: todos **success** para o mesmo HEAD.
+- Contagem atual: **399 questões** (M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40) e **460 flashcards**. q-m6-45..47 cobrem os três tópicos de síntese apontados na auditoria anterior.
+- CI técnico verde não encerra revisão semântica, conferência de fontes, revisão editorial da distribuição de gabaritos nem auditoria WCAG independente.
+
+### Próximas tarefas sem retrabalho
+
+1. Revisar semanticamente em lotes coesos por módulo; registrar os IDs revisados e não reabrir lotes já concluídos sem nova evidência.
+2. Priorizar concentração de gabaritos, sobretudo M6/M7, sem alterar gabaritos corretos apenas para equilibrar letras.
+3. Conferir afirmações normativas e técnicas contra fontes primárias, registrando título, órgão, URL e data.
+4. Fazer avaliação manual de teclado/leitor de tela e compatibilidade física quando houver ambiente disponível; inventário automatizado não equivale a certificação WCAG.
+5. Manter PR #17 em Draft até os critérios qualitativos serem resolvidos; não fazer merge nesta etapa.
+
+---
+
 # PENDÊNCIAS — Apostila Web Interativa FCN
 
 ## Snapshot atual — 2026-10-26 04:08 UTC
 
 - Banco de questões após a inclusão de `q-m6-45` a `q-m6-47`: **399 esperadas** (M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40).
 - Os checks anteriores identificaram um erro de sintaxe na primeira gravação das questões novas; foi corrigido em commit posterior. Não considerar aquele run reprovado como validação do arquivo corrigido.
-- A auditoria estrutural e o smoke test do commit corrigido ainda precisam terminar antes de declarar a inclusão validada.
+- A auditoria estrutural e o smoke test do commit corrigido terminaram com sucesso na execução 40267735657; ver o estado CI mais recente no início deste documento.
 
 ## Estado consolidado — 2026-10-26
 
