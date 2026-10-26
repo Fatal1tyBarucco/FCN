@@ -1285,6 +1285,46 @@ const references = [
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
+  },,
+  {
+    "id": "ref-cisco-10gbase-t-cat6-cat6a",
+    "titulo": "Cisco Catalyst 6500 16-Port 10 Gigabit Ethernet Copper Module",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html",
+    "topico": "M2 — Redes (Ethernet 10GBASE-T e alcance de cabeamento)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
   },
+  {
+    "id": "ref-zoom-webinar-capacity",
+    "titulo": "Comparação entre licenças para reuniões e webinars",
+    "organizacao": "Zoom Support",
+    "url": "https://support.zoom.com/hc/pb/article?id=zm_kb&sysparm_article=KB0062412",
+    "topico": "M3 — Comunicação (capacidade e licenciamento de webinars)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-zoom-webinar-breakout-rooms",
+    "titulo": "Managing webinar breakout rooms",
+    "organizacao": "Zoom Support",
+    "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
+    "topico": "M3 — Comunicação (salas paralelas em webinars e requisitos)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-google-meet-browser-requirements",
+    "titulo": "Saiba quais requisitos você precisa para usar o Google Meet",
+    "organizacao": "Google Meet Help",
+    "url": "https://support.google.com/meet/answer/7317473?hl=pt-BR",
+    "topico": "M3 — Comunicação (reuniões pelo navegador)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  }
 ];
 if (typeof window !== 'undefined') window.references = references;
