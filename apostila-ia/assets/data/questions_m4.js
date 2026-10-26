@@ -1279,128 +1279,128 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-51", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — Backup",
-    contexto: "O backup é uma cópia de segurança de dados e sistemas.",
-    enunciado: "O backup é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Backups e testes de restauração",
+    contexto: "Uma equipe confirma que os backups são executados diariamente, mas nunca realizou uma restauração de teste.",
+    enunciado: "Qual ação é mais importante para verificar se o plano de backup atende à necessidade de recuperação?",
     alternativas: [
-      { letra: "A", texto: "Um processo de restauração de sistemas a partir de uma cópia de segurança." },
-      { letra: "B", texto: "Um processo de criação de uma cópia de segurança dos dados." },
-      { letra: "C", texto: "Um processo de criptografia de dados." },
-      { letra: "D", texto: "Um processo de exclusão de dados." },
-      { letra: "E", texto: "Um processo de verificação de dados." }
+      { letra: "A", texto: "Considerar o backup válido apenas porque a tarefa terminou sem erro aparente." },
+      { letra: "B", texto: "Executar restaurações de teste em ambiente controlado, verificar a integridade e a consistência dos dados e medir o tempo de recuperação." },
+      { letra: "C", texto: "Manter todas as cópias na mesma conta administrativa e no mesmo ambiente de produção." },
+      { letra: "D", texto: "Desativar os registros de execução para economizar armazenamento." },
+      { letra: "E", texto: "Presumir que um backup pode ser restaurado mesmo sem verificar chaves, dependências e permissões." }
     ],
     gabarito: "B",
-    justificativa: "Backup é o processo de criar cópias de segurança de dados para proteção contra perda, corrupção ou destruição. Restauração (alternativa A incorreta); criptografia (alternativa C incorreta); exclusão (alternativa D incorreta); verificação (alternativa E incorreta).",
+    justificativa: "A conclusão bem-sucedida de uma tarefa de backup não comprova, por si só, que os dados possam ser restaurados de forma íntegra e dentro do tempo necessário. Testes de restauração devem validar consistência, dependências, permissões e tempos de recuperação, com escopo e periodicidade definidos pelo risco e pelos objetivos de continuidade.",
     analise: {
-      A: "INCORRETA. Restauração é o uso do backup, não o backup em si.",
-      B: "CORRETA. Backup = criar cópias de segurança dos dados.",
-      C: "INCORRETA. Criptografia é proteção de dados, não backup.",
-      D: "INCORRETA. Backup não é exclusão — é cópia.",
-      E: "INCORRETA. Verificação não é backup."
+      A: "INCORRETA. A conclusão da tarefa é evidência limitada e não substitui teste de restauração.",
+      B: "CORRETA. Testes de restauração verificam a recuperabilidade real e ajudam a medir se os objetivos de recuperação são viáveis.",
+      C: "INCORRETA. Concentrar cópias no mesmo ambiente e sob a mesma administração aumenta o risco de comprometimento simultâneo.",
+      D: "INCORRETA. Registros são necessários para identificar falhas e demonstrar execução e resultado.",
+      E: "INCORRETA. Chaves, dependências, permissões e outros requisitos podem impedir uma restauração mesmo com os arquivos presentes."
     },
-    regra: "Backup = 'cópia para não perder'. Criação de cópia de segurança.",
-    pegadinha: "Backup não é 'restaurar' — é 'fazer a cópia'. Restaurar é usar o backup.",
-    fonte: "ITIL — Service Design; NIST SP 800-115."
+    regra: "Backup confiável exige testes periódicos de restauração, verificação de integridade e medição do tempo necessário para recuperar o serviço.",
+    pegadinha: "Backup concluído não é sinônimo de restauração comprovada.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-52", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — Recuperação de Desastres",
-    contexto: "A recuperação de desastres é o plano de resposta a incidentes que afetam sistemas críticos.",
-    enunciado: "A recuperação de desastres é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Recuperação de desastres e continuidade",
+    contexto: "Uma interrupção no datacenter afeta sistemas internos, atendimento ao público, comunicação com fornecedores e a capacidade de executar serviços essenciais.",
+    enunciado: "Qual abordagem diferencia corretamente recuperação de desastres e continuidade de negócios?",
     alternativas: [
-      { letra: "A", texto: "Um processo de exclusão de dados." },
-      { letra: "B", texto: "Um processo de criptografia de backups." },
-      { letra: "C", texto: "Um plano para prever e responder a incidentes que ameçam a continuidade dos negócios." },
-      { letra: "D", texto: "Um processo de verificação de desempenho." },
-      { letra: "E", texto: "Um processo de criação de backups." }
+      { letra: "A", texto: "Recuperação de desastres trata apenas da compra de novos equipamentos, e continuidade é apenas o backup diário." },
+      { letra: "B", texto: "Recuperação de desastres foca no restabelecimento de sistemas e infraestrutura afetados; continuidade de negócios abrange manter ou retomar processos e serviços prioritários, inclusive por meios alternativos." },
+      { letra: "C", texto: "Os termos são sempre sinônimos e não precisam ser definidos no planejamento." },
+      { letra: "D", texto: "Continuidade de negócios começa somente depois que todos os sistemas forem recuperados." },
+      { letra: "E", texto: "Ambos garantem que nenhum incidente possa interromper os serviços." }
     ],
-    gabarito: "C",
-    justificativa: "Recuperação de desastres é um plano que visa à continuidade dos negócios, incluindo a prevenção e resposta a incidentes que ameçam a operação dos sistemas críticos. Exclusão (alternativa A incorreta); criptografia (alternativa B incorreta); verificação de desempenho (alternativa D incorreta); criação de backups (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Os planos de recuperação de desastres e de continuidade de negócios são relacionados, mas têm escopos diferentes. A recuperação de desastres concentra-se no restabelecimento de recursos de tecnologia e ambientes afetados; a continuidade considera processos prioritários, pessoas, fornecedores, instalações e formas alternativas de prestar serviços durante a interrupção. A terminologia exata pode variar conforme a organização e o referencial adotado.",
     analise: {
-      A: "INCORRETA. Recuperação de desastres não é exclusão de dados.",
-      B: "INCORRETA. Criptografia não é a definição da recuperação de desastres.",
-      C: "CORRETA. Recuperação de desastres = plano que garante continuidade e resposta a incidentes que ameaçam os negócios.",
-      D: "INCORRETA. Desempenho não é o foco principal da recuperação de desastres.",
-      E: "INCORRETA. Criação de backups é parte, mas não é a definição completa."
+      A: "INCORRETA. Recuperação não se limita à compra de equipamentos, e continuidade não se resume a backup.",
+      B: "CORRETA. A alternativa distingue recuperação de recursos tecnológicos da manutenção ou retomada dos processos essenciais.",
+      C: "INCORRETA. Embora relacionados, os planos devem ter objetivos, responsabilidades e interfaces definidos.",
+      D: "INCORRETA. Medidas de continuidade podem operar durante a interrupção, antes da recuperação integral da tecnologia.",
+      E: "INCORRETA. Os planos reduzem impacto e organizam resposta; não garantem ausência de incidentes."
     },
-    regra: "Recuperação de desastres = 'continuidade'. Plano para não parar os negócios com emergências.",
-    pegadinha: "Recuperação de desastres não é 'backup simples' — é 'plano completo de continuidade'.",
-    fonte: "NIST SP 800-34 (Contingency Planning)."
+    regra: "Recuperação de desastres restabelece recursos afetados; continuidade de negócios mantém ou retoma processos e serviços prioritários.",
+    pegadinha: "Continuidade pode exigir procedimentos alternativos enquanto a recuperação tecnológica ainda está em andamento.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-53", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — RTO e RPO",
-    contexto: "RTO e RPO são métricas críticas para o planejamento de continuidade.",
-    enunciado: "A relação correta entre RTO e RPO é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Planejamento de recuperação baseado em risco",
+    contexto: "Um serviço processa transações continuamente. A área de negócio informa que perder mais de cinco minutos de transações seria inaceitável, enquanto a equipe técnica estima que a recuperação completa pode levar até duas horas.",
+    enunciado: "Como a equipe deve usar essas informações no planejamento de continuidade?",
     alternativas: [
-      { letra: "A", texto: "RTO é o tempo máximo de indisponibilidade; RPO é a quantidade máxima de dados que pode ser perdida." },
-      { letra: "B", texto: "RTO é a quantidade de dados perdida; RPO é o tempo de indisponibilidade." },
-      { letra: "C", texto: "RTO e RPO são sinônimos." },
-      { letra: "D", texto: "RTO é o tempo de e RPO é a quantidade de dados — invertido." },
-      { letra: "E", texto: "RTO é a contagem do tempo; RPO é a contagem dos dados." }
+      { letra: "A", texto: "Definir RPO e RTO a partir da necessidade de negócio, validar se a arquitetura e os procedimentos suportam as metas e testar a recuperação." },
+      { letra: "B", texto: "Definir RPO igual a duas horas, pois RPO é sempre igual ao tempo de recuperação." },
+      { letra: "C", texto: "Adotar metas sem consultar a área de negócio, pois somente a infraestrutura determina o impacto aceitável." },
+      { letra: "D", texto: "Considerar que backup a cada dia atende automaticamente a uma perda máxima de cinco minutos." },
+      { letra: "E", texto: "Dispensar testes porque os valores foram acordados entre as equipes." }
     ],
     gabarito: "A",
-    justificativa: "RTO (Recovery Time Objective) = tempo máximo de indisponibilidade aceitável; RPO (Recovery Point Objective) = quantidade máxima de dados que pode ser perdida. A alternativa B inverte os conceitos; C é incorreta por definição; D está invertido; E confunde as métricas com contagens.",
+    justificativa: "As metas de recuperação devem refletir o impacto tolerável para o negócio e ser confrontadas com as capacidades reais da solução. A tolerância a perda de transações informa o RPO; o tempo de restabelecimento aceitável informa o RTO. A equipe deve verificar se frequência de cópia, replicação, procedimentos, dependências e testes sustentam as metas definidas.",
     analise: {
-      A: "CORRETA. RTO = tempo de indisponibilidade; RPO = quantidade de dados perdida.",
-      B: "INCORRETA. RTO não é quantidade de dados — é tempo de indisponibilidade.",
-      C: "INCORRETA. RTO e RPO são métricas distintas.",
-      D: "INCORRETA. RTO e RPO não estão invertidos — A está correta.",
-      E: "INCORRETA. RTO e RPO não são 'contagem do tempo' / 'contagem dos dados'."
+      A: "CORRETA. Metas derivadas do impacto de negócio precisam ser verificadas contra a capacidade técnica e validadas por testes.",
+      B: "INCORRETA. RPO e RTO medem aspectos diferentes e não precisam ter o mesmo valor.",
+      C: "INCORRETA. As metas dependem do impacto para o negócio e das capacidades técnicas, exigindo coordenação entre áreas.",
+      D: "INCORRETA. Backup diário não satisfaz, por si só, uma tolerância a perda de apenas cinco minutos.",
+      E: "INCORRETA. O acordo não comprova que as metas sejam tecnicamente alcançáveis."
     },
-    regra: "RTO = 'quanto tempo'. RPO = 'quanto de dados'. Métricas para continuidade.",
-    pegadinha: "RTO e RPO não são 'tanto quanto' — RTO é tempo, RPO é dados.",
-    fonte: "ITIL v3 — Service Continuity Management."
+    regra: "Defina RTO/RPO com base no impacto de negócio e valide a viabilidade com arquitetura, procedimentos e testes de recuperação.",
+    pegadinha: "Metas acordadas no papel não demonstram que a infraestrutura consegue cumpri-las.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-54", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — Estratégia 3-2-1",
-    contexto: "A estratégia 3-2-1 é amplamente recomendada para backup e recuperação.",
-    enunciado: "A estratégia de backups 3-2-1 indica:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Estratégia de cópias 3-2-1",
+    contexto: "Uma organização guarda três cópias dos arquivos em dois dispositivos de armazenamento, mas todos ficam no mesmo prédio e podem ser acessados com a mesma conta administrativa.",
+    enunciado: "Qual avaliação da estratégia 3-2-1 é mais correta?",
     alternativas: [
-      { letra: "A", texto: "3 cópias, 2 sistemas de armazenamento diferentes, 1 cópia offline ou fora do local." },
-      { letra: "B", texto: "3 sistemas de armazenamento, 2 Backup, 1 cópia." },
-      { letra: "C", texto: "3 backup, 2 sistemas, 1 offline." },
-      { letra: "D", texto: "3 offline, 2 locales, 1 sistema." },
-      { letra: "E", texto: "3 dados, 2 sistemas, 1 rede." }
+      { letra: "A", texto: "A estratégia está completa, pois a quantidade de cópias torna desnecessária qualquer separação física ou lógica." },
+      { letra: "B", texto: "A regra tradicional recomenda três cópias dos dados, em dois tipos de mídia, com uma cópia fora do local; controles offline ou imutáveis podem fortalecer a resiliência contra ransomware." },
+      { letra: "C", texto: "A regra exige exatamente três contas de usuário, duas senhas e um arquivo compactado." },
+      { letra: "D", texto: "A regra tradicional exige que todas as cópias estejam offline, no mesmo dispositivo." },
+      { letra: "E", texto: "Uma cópia fora do local elimina a necessidade de testar a restauração." }
     ],
-    gabarito: "A",
-    justificativa: "A estratégia 3-2-1: 3 cópias dos dados, 2 sistemas de armazenamento diferentes, 1 cópia offline ou fora do local (imutável). As demais alternativas distorcem a distribuição (alternativas B, C, D, E incorretas).",
+    gabarito: "B",
+    justificativa: "A regra 3-2-1 é uma recomendação de resiliência: manter três cópias dos dados, usar dois tipos de mídia e guardar uma cópia fora do local. A regra tradicional não exige que a cópia externa seja necessariamente offline; cópias offline ou imutáveis podem adicionar proteção contra ransomware. Separação de credenciais e testes de restauração continuam importantes.",
     analise: {
-      A: "CORRETA. 3 cópias, 2 sistemas de armazenamento, 1 para offline/fu licence.",
-      B: "INCORRETA. A distribuição é 3-2-1 (cópias, sistemas, cópia offline).",
-      C: "INCORRETA. Não é 3 backup, 2 sistemas, 1 offline.",
-      D: "INCORRETA. Não é 3 offline, 2 locales, 1 sistema.",
-      E: "INCORRETA. Não é 3 dados, 2 sistemas, 1 rede."
+      A: "INCORRETA. Cópias concentradas no mesmo local e sob a mesma administração podem ser afetadas pelo mesmo desastre ou comprometimento.",
+      B: "CORRETA. A alternativa apresenta a regra tradicional e distingue medidas adicionais de proteção contra ransomware.",
+      C: "INCORRETA. Os números se referem a cópias e meios de armazenamento, não a contas, senhas ou arquivos compactados.",
+      D: "INCORRETA. A regra não exige que todas as cópias estejam offline nem que compartilhem um dispositivo.",
+      E: "INCORRETA. A cópia externa não comprova que os dados possam ser restaurados corretamente."
     },
-    regra: "3-2-1 = 3 cópias, 2 sistemas, 1 offline/fu license. Proteção contra perda e ransomware.",
-    pegadinha: "O 1 final não é 'um backup' — é 'uma cópia offline ou fora do local'.",
-    fonte: "Veeam Blog — 3-2-1 Backup Rule."
+    regra: "3-2-1 = três cópias, dois tipos de mídia, uma cópia fora do local; cópias offline/imutáveis e testes de restauração reforçam a estratégia.",
+    pegadinha: "“Fora do local” não significa automaticamente “offline”; são propriedades diferentes.",
+    fonte: "CISA, #StopRansomware Guide: https://www.cisa.gov/stopransomware/ransomware-guide."
   },
 
   { id: "q-m4-55", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Criptografia Simétrica",
-    contexto: "Criptografia simétrica é o método de criptografia mais antigo e eficiente.",
-    enunciado: "A criptografia simétrica é caracterizada por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Criptografia simétrica e gestão de chaves",
+    contexto: "Um serviço precisa criptografar grandes volumes de dados armazenados e também permitir que diferentes instâncias autorizadas os processem.",
+    enunciado: "Qual afirmação descreve uma característica e um requisito importante da criptografia simétrica?",
     alternativas: [
-      { letra: "A", texto: "Uso de um único par de chaves público/privada." },
-      { letra: "B", texto: "Uso de uma única chave compartilhada para criptografar e descriptografar." },
-      { letra: "C", texto: "Uso de chaves diferentes para cada usuário." },
-      { letra: "D", texto: "Uso de quadros de criptografia." },
-      { letra: "E", texto: "Uso de chaves infinitas." }
+      { letra: "A", texto: "Usa uma chave pública para criptografar e uma chave privada para descriptografar em todos os algoritmos simétricos." },
+      { letra: "B", texto: "Usa uma chave secreta compartilhada para as operações criptográficas correspondentes; a distribuição, o armazenamento, a rotação e o controle de acesso à chave precisam ser protegidos." },
+      { letra: "C", texto: "Dispensa gestão de chaves porque o algoritmo torna a chave pública." },
+      { letra: "D", texto: "Garante autenticidade e integridade em qualquer modo de operação, mesmo sem mecanismo adicional." },
+      { letra: "E", texto: "É inadequada para grandes volumes de dados porque sempre exige um par de chaves por bloco." }
     ],
     gabarito: "B",
-    justificativa: "Criptografia simétrica usa uma única chave compartilhada (secreta) para criptografar e descriptografar os dados. Uso de par público/privada (alternativa A incorreta); chaves diferentes para cada usuário (alternativa C incorreta); quadros (alternativa D incorreta); chaves infinitas (alternativa E incorreta).",
+    justificativa: "A criptografia simétrica utiliza uma chave secreta compartilhada para cifrar e decifrar conforme o algoritmo. A segurança prática depende não só do algoritmo, mas também da geração, distribuição, armazenamento, rotação e proteção da chave. Nem todo modo de cifragem oferece autenticação ou integridade; quando necessário, deve-se usar um modo autenticado ou um mecanismo apropriado.",
     analise: {
-      A: "INCORRETA. Par público/privada é a criptografia assimétrica.",
-      B: "CORRETA. Criptografia simétrica usa uma única chave compartilhada.",
-      C: "INCORRETA. Chaves diferentes é a criptografia assimétrica.",
-      D: "INCORRETA. Quadros não são o conceito central da criptografia simétrica.",
-      E: "INCORRETA. Chaves finitas são usadas, não infinitas."
+      A: "INCORRETA. Par de chaves pública/privada caracteriza criptografia assimétrica, não simétrica.",
+      B: "CORRETA. A chave secreta é central e precisa de gestão segura ao longo de seu ciclo de vida.",
+      C: "INCORRETA. A chave continua secreta; a gestão de chaves é parte essencial da segurança.",
+      D: "INCORRETA. A garantia de autenticidade e integridade depende do algoritmo e do modo de operação utilizados.",
+      E: "INCORRETA. Criptografia simétrica é amplamente utilizada para grandes volumes de dados e não exige um par de chaves por bloco."
     },
-    regra: "Simétrica = 'uma chave só'. Tudo que entra e sai com a mesma chave.",
-    pegadinha: "Simétrica não é 'dois pares' — é 'uma única chave' compartilhada.",
-    fonte: "NIST FIPS 197 (AES)."
+    regra: "Criptografia simétrica usa chave secreta compartilhada; gestão de chaves e escolha de modo de operação são essenciais.",
+    pegadinha: "Cifrar não garante automaticamente integridade ou autenticidade; verifique se o modo usado oferece autenticação.",
+    fonte: "NIST FIPS 197 — Advanced Encryption Standard (AES): https://csrc.nist.gov/pubs/fips/197/final; NIST SP 800-38D — GCM and GMAC: https://csrc.nist.gov/pubs/sp/800/38/d/final."
   },
 
   { id: "q-m4-56", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
