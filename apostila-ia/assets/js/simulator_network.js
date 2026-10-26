@@ -151,7 +151,7 @@
     '.sim-redes h3{margin:8px 0 2px}.sim-redes h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}' +
     '.sim-redes-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}' +
     '.sim-redes-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
-    '.sim-redes-bloco .sim-redes-sub{color:#cbd5e1}' + +
+    '.sim-redes-bloco .sim-redes-sub{color:#cbd5e1}' +
     '.sim-redes-in{width:140px;font-family:Courier New,monospace;font-size:.85rem;background:#1b1e24;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 6px;margin-right:6px}' +
     '.sim-redes-in.small{width:70px}' +
     '.sim-redes-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 10px;font-size:.8rem;cursor:pointer}' +
