@@ -508,7 +508,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - O teste Playwright agora exige uma lista vazia de violações axe-core, incluindo níveis moderados, além de bloquear explicitamente níveis críticos/graves.
 - As verificações incompletas de contraste, frames e correspondência entre rótulo e conteúdo não foram reportadas como violações. A auditoria automatizada não substitui validação manual, leitor de tela nem teste em dispositivos físicos.
 
-## Atualização de fontes das questões — 2026-10-26 (primeiro CI concluído; nova revisão aguardando CI)
+## Atualização de fontes e acessibilidade — 2026-10-26 (primeiro CI concluído; HEAD atualizado validado)
 
 - Adicionadas fontes oficiais às questões `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36`, antes identificadas como as quatro lacunas no campo fonte.
 - Atualizados `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md` com Cisco, Zoom Support e Google Meet Help.
@@ -516,10 +516,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Auditoria de questões: 399 itens; 0 IDs duplicados, 0 alertas heurísticos e 0 pares com contexto/enunciado duplicados. A conferência por segmento confirmou campo `fonte` não vazio em 399/399 itens.
 - axe-core: 58 passes, 3 incomplete, 0 violações confirmadas. Permanecem incompletas as avaliações de contraste, frames e correspondência entre rótulo e nome acessível; não equivalem a violações confirmadas.
 - As páginas oficiais foram consultadas para fundamentar as quatro fontes novas; não houve validação HTTP automatizada individual de todas as URLs. Revisão semântica completa, verificação de todas as afirmações, leitor de tela, WCAG manual e testes físicos continuam pendentes.
-- A execução `pull_request` para o HEAD anterior concluiu com sucesso no run [40416882352](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40416882352). A reescrita posterior de `q-m3-36` e a correção de ícones decorativos na árvore ocorreram depois desses runs e precisam de CI no HEAD novo.
+- A execução `pull_request` para o HEAD anterior concluiu com sucesso no run [40416882352](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40416882352). A validação do código atualizado está registrada no run [40417637983](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40417637983).
 
 ## Revisão de `q-m3-36` e acessibilidade da árvore — 2026-10-26
 
 - A formulação de `q-m3-36` foi corrigida para refletir que salas temáticas do Google Meet dependem de edições elegíveis do Workspace; a fonte oficial correspondente foi adicionada ao catálogo.
-- Em `navigation.js`, os glifos de expandir/recolher foram colocados em spans `aria-hidden="true"` para evitar que o símbolo decorativo conflite com o nome acessível do botão. A validação do novo HEAD ainda está em execução.
-- O relatório axe-core anterior tinha 177 nós em `label-content-name-mismatch`, concentrados nos botões da árvore, além de 266 nós com contraste inconclusivo e 20 frames sem avaliação completa. Verificar o resultado após a alteração; não assumir que a alteração eliminou os avisos até ver o relatório.
+- Em `navigation.js` e `styles.css`, os ícones de expansão/recolhimento são triângulos CSS, sem texto visível dentro dos botões, e os botões têm cores explícitas para os modos claro e escuro.
+- No run 40417637983, sintaxe JavaScript passou em 39 arquivos; smoke test `file://` e regressões interativas passaram; `pageErrors: []`. axe-core: 0 violações confirmadas; `label-content-name-mismatch` deixou de aparecer. `color-contrast` caiu de 266 para 89 nós, concentrados em textos SVG de gráficos; `frame-tested` permanece em 20 iframes externos.
+- Permanecem pendentes avaliação manual dos textos SVG, frames externos, leitor de tela, WCAG manual e testes físicos. A revisão semântica completa das questões também continua pendente.

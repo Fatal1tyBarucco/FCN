@@ -485,9 +485,9 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 ## Fontes das quatro questões pendentes — atualização 2026-10-26
 
 - [x] Acrescentadas fontes oficiais para `q-m2-26` e `q-m2-32` (Cisco: Cat6 UTP até 55 m a 10 Gbps; Cat6 blindado/Cat6A/Cat7 até 100 m).
-- [x] Acrescentadas fontes oficiais para `q-m3-19` (licenciamento/capacidade de webinar e requisitos de salas paralelas) e `q-m3-36` (salas paralelas do Zoom Webinar e navegadores compatíveis com Google Meet).
+- [x] Acrescentadas fontes oficiais para `q-m3-19` (licenciamento/capacidade de webinar e requisitos de salas paralelas) e `q-m3-36` (elegibilidade das salas temáticas do Google Meet e requisitos de salas paralelas em webinars Zoom).
 - [x] Atualizados o catálogo `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md`.
 - [x] Auditoria no run [40416873641](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40416873641) concluída com sucesso; conferência dos seis arquivos confirma `fonte` preenchido em 399/399 questões. Isso verifica presença estrutural, não correção factual de cada item.
-- [x] Reescrita de `q-m3-36` para evitar a alegação ampla de que o Zoom se distingue por funcionar sem instalação; o item agora testa que salas temáticas do Google Meet dependem de edições elegíveis do Workspace e mantém a ressalva de licença/aplicativo para salas paralelas em webinars Zoom. Aguardar CI e revisar a semântica após o resultado.
+- [x] Reescrita de `q-m3-36` para evitar a alegação ampla de que o Zoom se distingue por funcionar sem instalação; o item agora testa que salas temáticas do Google Meet dependem de edições elegíveis do Workspace e mantém a ressalva de licença/aplicativo para salas paralelas em webinars Zoom. O run [40417637983](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40417637983) passou no SHA `acbb14f6adb83b47049a923e9737b16d68c64c94`.
 - [ ] Revisar semanticamente `q-m3-19`, sobretudo a condição de licença/plano para 500 participantes e recursos premium; a revisão completa das 399 questões continua pendente.
 - [ ] Não afirmar validação HTTP automática de todas as URLs. Revisão semântica completa das 399 questões continua pendente.
