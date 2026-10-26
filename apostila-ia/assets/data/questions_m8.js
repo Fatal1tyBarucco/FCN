@@ -46,19 +46,19 @@ const moduleQuestions8 = [
     enunciado: "Qual fator explica a distorção visual que faz a barra de B parecer o dobro da barra de A?",
     alternativas: [
       { letra: "A", texto: "O eixo de valores iniciando em 60 é sempre aceitável, independentemente da forma do gráfico." },
-      { letra: "B", texto: "Em gráficos de barras, o comprimento visual deve ser proporcional ao valor e, em geral, a linha de base deve começar em zero." },
+      { letra: "B", texto: "A razão numérica entre 80 e 70 é exatamente 2, pois a base do eixo foi deslocada." }
       { letra: "C", texto: "Eixos truncados tornam qualquer gráfico mais preciso quando o leitor é informado." },
       { letra: "D", texto: "A distorção só acontece em gráficos 3D, não em barras bidimensionais." },
-      { letra: "E", texto: "A razão numérica entre 80 e 70 é exatamente 2, pois a base do eixo foi deslocada." }
+      { letra: "E", texto: "Em gráficos de barras, o comprimento visual deve ser proporcional ao valor e, em geral, a linha de base deve começar em zero." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "Com base 60, as alturas aparentes são 10 e 20, sugerindo uma razão visual de 2. Porém, os valores são 70 e 80, cuja razão é aproximadamente 1,14. Em gráficos de barras, a comparação é feita pelo comprimento; iniciar o eixo em zero preserva a proporcionalidade visual. Em outros tipos de gráfico, eixos truncados podem ser usados com cautela, mas não devem distorcer a magnitude das barras.",
     analise: {
       A: "INCORRETA. A aceitabilidade depende do tipo de visualização; em barras, a base truncada distorce a comparação de comprimento.",
-      B: "CORRETA. A linha de base zero preserva a proporcionalidade entre valor e comprimento da barra.",
+      B: "INCORRETA. A razão numérica é 80/70 ≈ 1,14; o deslocamento altera a percepção, não os dados."
       C: "INCORRETA. Avisar o leitor não elimina a distorção visual criada pela escala.",
       D: "INCORRETA. Barras 2D também podem distorcer a magnitude quando o eixo é truncado.",
-      E: "INCORRETA. A razão numérica é 80/70 ≈ 1,14; o deslocamento altera a percepção, não os dados."
+      E: "CORRETA. A linha de base zero preserva a proporcionalidade entre valor e comprimento da barra.",
     },
     regra: "Em gráficos de barras, use linha de base zero para preservar a proporcionalidade do comprimento com o valor.",
     pegadinha: "O truncamento altera a percepção visual, não a razão numérica entre os valores.",
@@ -71,19 +71,19 @@ const moduleQuestions8 = [
     contexto: "Uma diretoria quer comparar o total de atendimentos de seis unidades em um único mês e identificar qual unidade teve maior volume.",
     enunciado: "Qual visualização atende melhor à pergunta?",
     alternativas: [
-      { letra: "A", texto: "Gráfico de barras, com categorias identificadas e eixo de valores iniciando em zero." },
+      { letra: "A", texto: "Gráfico de dispersão sem indicar quais pontos representam cada unidade." },
       { letra: "B", texto: "Gráfico de linhas ligando as unidades, como se formassem uma série temporal contínua." },
       { letra: "C", texto: "Histograma dos nomes das unidades." },
-      { letra: "D", texto: "Gráfico de dispersão sem indicar quais pontos representam cada unidade." },
+      { letra: "D", texto: "Gráfico de barras, com categorias identificadas e eixo de valores iniciando em zero." },
       { letra: "E", texto: "Gráfico de área acumulada, mesmo sem variável temporal ou composição acumulativa." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "A tarefa é comparar magnitudes entre categorias discretas em um único período. Um gráfico de barras com linha de base zero permite comparar comprimentos e identificar o maior valor. Gráfico de linhas é mais adequado para evolução ordenada, geralmente temporal; histograma é usado para distribuição de variável quantitativa; dispersão examina relação entre variáveis quantitativas; área acumulada pressupõe outra estrutura de análise.",
     analise: {
-      A: "CORRETA. Barras permitem comparar magnitudes de categorias distintas de forma direta.",
+      A: "INCORRETA. Dispersão é voltada à relação entre variáveis quantitativas e pontos sem identificação dificultam a leitura.",
       B: "INCORRETA. Conectar categorias sem continuidade temporal ou ordinal pode sugerir uma relação inexistente.",
       C: "INCORRETA. Nomes de unidades são categorias, não uma variável quantitativa contínua para histograma.",
-      D: "INCORRETA. Dispersão é voltada à relação entre variáveis quantitativas e pontos sem identificação dificultam a leitura.",
+      D: "CORRETA. Barras permitem comparar magnitudes de categorias distintas de forma direta.",
       E: "INCORRETA. Área acumulada não corresponde à tarefa descrita e pode sugerir composição temporal inexistente."
     },
     regra: "Escolha o gráfico pela pergunta: barras para comparar magnitudes entre categorias; linhas para evolução ordenada; histograma para distribuição quantitativa.",
@@ -97,19 +97,19 @@ const moduleQuestions8 = [
     contexto: "Um analista constrói um histograma para representar a distribuição de uma variável quantitativa contínua.",
     enunciado: "Qual afirmação sobre a construção e a leitura de histogramas é correta?",
     alternativas: [
-      { letra: "A", texto: "As barras são encostadas para representar classes contíguas de uma variável quantitativa." },
+      { letra: "A", texto: "As barras devem ter espaços como em um gráfico de categorias independentes." },
       { letra: "B", texto: "O eixo y deve sempre representar frequência relativa, independentemente da largura das classes." },
       { letra: "C", texto: "Quando as classes têm larguras diferentes, a frequência deve sempre ser representada pela altura sem ajuste." },
-      { letra: "D", texto: "As barras devem ter espaços como em um gráfico de categorias independentes." },
+      { letra: "D", texto: "As barras são encostadas para representar classes contíguas de uma variável quantitativa." },
       { letra: "E", texto: "O histograma é a visualização preferencial para comparar nomes de categorias sem ordem." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "As barras de um histograma são encostadas porque representam intervalos contíguos de uma variável quantitativa. Se as classes têm larguras iguais, a altura pode representar frequência ou frequência relativa de modo comparável; com larguras diferentes, deve-se considerar densidade para que a área da barra represente a frequência. Categorias independentes costumam ser comparadas por gráfico de barras com espaços.",
     analise: {
-      A: "CORRETA. O encosto representa a continuidade dos intervalos quantitativos.",
+      A: "INCORRETA. Espaços são típicos de barras categóricas, não de intervalos contíguos de histograma.",
       B: "INCORRETA. A representação do eixo y depende do objetivo e da largura das classes; densidade pode ser necessária.",
       C: "INCORRETA. Com larguras diferentes, altura sem ajuste pode distorcer a comparação; a área deve corresponder à frequência.",
-      D: "INCORRETA. Espaços são típicos de barras categóricas, não de intervalos contíguos de histograma.",
+      D: "CORRETA. O encosto representa a continuidade dos intervalos quantitativos.",
       E: "INCORRETA. Nomes de categorias não constituem distribuição quantitativa para histograma."
     },
     regra: "Histograma: barras encostadas; com larguras de classe diferentes, use densidade para que a área represente a frequência.",
@@ -124,19 +124,19 @@ const moduleQuestions8 = [
     enunciado: "Qual avaliação distingue corretamente a razão numérica da percepção visual no gráfico?",
     alternativas: [
       { letra: "A", texto: "A razão numérica A/D é 450/190 ≈ 2,37, e o gráfico truncado não altera esse cálculo." },
-      { letra: "B", texto: "Com base 100, a razão visual das alturas é 350/90 ≈ 3,89, maior que a razão numérica." },
+      { letra: "B", texto: "O truncamento altera os dados originais, fazendo o valor de A passar a 350." }
       { letra: "C", texto: "Com base 100, a razão visual é 2,37, igual à razão numérica." },
       { letra: "D", texto: "A razão real deve ser calculada sobre o total, nunca entre os valores das unidades." },
-      { letra: "E", texto: "O truncamento altera os dados originais, fazendo o valor de A passar a 350." }
+      { letra: "E", texto: "Com base 100, a razão visual das alturas é 350/90 ≈ 3,89, maior que a razão numérica." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "A razão numérica é 450/190 ≈ 2,37. Com eixo iniciado em 100, as alturas aparentes são 350 e 90, e a razão visual passa a 350/90 ≈ 3,89. Os dados não mudam; a escala truncada é que exagera a diferença visual. Em gráfico de barras, a linha de base zero é a opção apropriada para preservar proporcionalidade.",
     analise: {
       A: "INCORRETA. O cálculo numérico está correto, mas não responde à distorção visual solicitada.",
-      B: "CORRETA. A razão das alturas truncadas é aproximadamente 3,89, maior que 2,37.",
+      B: "INCORRETA. O truncamento altera a representação visual, não os valores originais."
       C: "INCORRETA. 350/90 não é 2,37; o truncamento altera a razão visual.",
       D: "INCORRETA. A razão entre duas unidades pode ser calculada diretamente quando essa é a pergunta.",
-      E: "INCORRETA. O truncamento altera a representação visual, não os valores originais."
+      E: "CORRETA. A razão das alturas truncadas é aproximadamente 3,89, maior que 2,37.",
     },
     regra: "Diferencie valor dos dados e medida visual: o eixo truncado não muda os dados, mas pode exagerar a razão percebida.",
     pegadinha: "Não confunda a altura aparente da barra com o valor original nem com a razão numérica.",
@@ -148,20 +148,20 @@ const moduleQuestions8 = [
     contexto: "Conjunto 2, 4, 4, 4, 5, 5, 7, 9. A professora pede a média, a mediana e a moda para decidir qual descreve o caso típico.",
     enunciado: "Para o conjunto 2, 4, 4, 4, 5, 5, 7, 9, a média, a mediana e a moda são, respectivamente:",
     alternativas: [
-      { letra: "A", texto: "5,0; 4,5 e 4." },
+      { letra: "A", texto: "4,0; 4,5 e 5." }
       { letra: "B", texto: "5,0; 5 e 4." },
       { letra: "C", texto: "4,5; 5 e 5." },
       { letra: "D", texto: "5,0; 4 e 4,5." },
-      { letra: "E", texto: "4,0; 4,5 e 5." }
+      { letra: "E", texto: "5,0; 4,5 e 4." },
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "Média = soma ÷ n = 40 ÷ 8 = 5,0. Mediana: como n é par, calcula-se a média dos dois valores centrais (4 e 5), resultando em 4,5. Moda: o valor mais frequente é 4, que aparece três vezes.",
     analise: {
-      A: "CORRETA. Média 5,0; mediana 4,5; moda 4.",
+      A: "INCORRETA. A média não é 4,0 e a moda não é 5."
       B: "INCORRETA. A mediana é a média de 4 e 5, não 5.",
       C: "INCORRETA. A média e a moda estão incorretas.",
       D: "INCORRETA. Mediana e moda foram trocadas.",
-      E: "INCORRETA. A média não é 4,0 e a moda não é 5."
+      E: "CORRETA. Média 5,0; mediana 4,5; moda 4.",
     },
     regra: "Média = soma dos valores ÷ quantidade; mediana = valor central (média dos dois centrais se n par); moda = valor de maior frequência.",
     pegadinha: "Com quantidade par de observações, a mediana não é simplesmente o valor da posição central superior.",
@@ -221,18 +221,18 @@ const moduleQuestions8 = [
     enunciado: "Para estruturar uma narrativa de decisão, a recomendação final deve indicar:",
     alternativas: [
       { letra: "A", texto: "Apenas a ação proposta, sem responsável, prazo ou consequência de não agir." },
-      { letra: "B", texto: "Ação proposta, responsável, prazo, custo previsto e consequência de não executar a ação." },
+      { letra: "B", texto: "Todos os indicadores calculados, sem limite de quantidade." },
       { letra: "C", texto: "A ordem em que os dados foram coletados, para preservar a sequência original." },
-      { letra: "D", texto: "Todos os indicadores calculados, sem limite de quantidade." },
+      { letra: "D", texto: "Ação proposta, responsável, prazo, custo previsto e consequência de não executar a ação." },
       { letra: "E", texto: "Apenas o gráfico mais visualmente atraente, deixando a decisão para o público." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "A recomendação deve converter a análise em ação: indicar o que fazer, quem responde, em qual prazo, qual custo previsto e o que pode ocorrer se a ação não for executada. A sequência de coleta não é necessariamente a ordem da narrativa decisória, e incluir todos os indicadores pode dispersar a mensagem principal.",
     analise: {
       A: "INCORRETA. Sem responsável e prazo, a ação fica pouco executável; omitir consequências enfraquece a decisão.",
-      B: "CORRETA. Reúne ação, responsabilidade, prazo, custo e consequência de não agir.",
+      B: "INCORRETA. Excesso de indicadores pode ocultar a mensagem principal.",
       C: "INCORRETA. A narrativa deve seguir a lógica da pergunta e da decisão, não necessariamente a ordem de coleta.",
-      D: "INCORRETA. Excesso de indicadores pode ocultar a mensagem principal.",
+      D: "CORRETA. Reúne ação, responsabilidade, prazo, custo e consequência de não agir.",
       E: "INCORRETA. A visualização deve apoiar uma recomendação fundamentada, não substituir a análise."
     },
     regra: "Recomendação executável especifica ação, responsável, prazo, custo previsto e consequência de não agir.",
@@ -500,17 +500,17 @@ const moduleQuestions8 = [
     enunciado: "Assinale a frase que NÃO deve aparecer em um relatório analítico baseado apenas nessa correlação.",
     alternativas: [
       { letra: "A", texto: "Houve associação positiva entre horas de estudo e pontuação." },
-      { letra: "B", texto: "Cada hora extra de estudo causa, em média, 80 pontos a mais." },
+      { letra: "B", texto: "É preciso considerar variáveis confundentes antes de afirmar efeito." }
       { letra: "C", texto: "A associação é positiva e forte, mas não demonstra causalidade." },
-      { letra: "D", texto: "É preciso considerar variáveis confundentes antes de afirmar efeito." }
+      { letra: "D", texto: "Cada hora extra de estudo causa, em média, 80 pontos a mais." },
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo enfatiza que correlação nunca sustenta causalidade. 'Cada hora extra causa +80 pontos' inverte associação em causa e inventa unidade de efeito — r não informa essas duas coisas. As alternativas A, C e D são todas frases corretas para o currículo: associação, não causalidade; 'forte' quando r próximo de 1; e controle de confundentes.",
     analise: {
       A: "INCORRETA. Não é incorreta: afirma associação positiva, exatamente o que r sustenta.",
-      B: "CORRETA. Esta é a frase que NÃO deve aparecer: troca associação por causa e adiciona unidade de efeito.",
+      B: "INCORRETA. Não é incorreta: é o que o currículo exige antes de concluir causalidade."
       C: "INCORRETA. Não é incorreta: repete o princípio de que correlação não é causalidade.",
-      D: "INCORRETA. Não é incorreta: é o que o currículo exige antes de concluir causalidade."
+      D: "CORRETA. Esta é a frase que NÃO deve aparecer: troca associação por causa e adiciona unidade de efeito.",
     },
     regra: "r mede força da associação linear; 'causa' exige delineamento experimental ou controle de confundentes; jamais escrever 'X causa Y' com base só em r.",
     pegadinha: "A pegadinha é a frase 'sua' — quem lê 'causa' e salta, esquece que r = 0,8 só suporta associação.",

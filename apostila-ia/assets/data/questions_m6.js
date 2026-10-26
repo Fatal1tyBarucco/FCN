@@ -74,19 +74,19 @@ const moduleQuestions6 = [
     contexto: "Um órgão coleta dados pessoais para prestar atendimento a cidadãos. Sem informar essa finalidade adicional, sem demonstrar compatibilidade com a finalidade pública do serviço e sem identificar fundamento jurídico aplicável, uma equipe decide reutilizar os registros para classificar individualmente o desempenho dos usuários do serviço.",
     enunciado: "Considerando os princípios da finalidade e da adequação da LGPD e as regras aplicáveis ao tratamento de dados pelo poder público, qual avaliação é correta?",
     alternativas: [
-      { letra: "A", texto: "A reutilização descrita é incompatível com o regime de proteção de dados, pois a finalidade adicional não foi informada nem demonstrada como compatível com a finalidade pública e com um fundamento jurídico aplicável." },
+      { letra: "A", texto: "A reutilização é sempre proibida, mesmo quando houver finalidade pública compatível, fundamento jurídico e transparência." },
       { letra: "B", texto: "A reutilização é automaticamente válida se os critérios de classificação forem públicos e aplicados de modo impessoal." },
       { letra: "C", texto: "A reutilização é automaticamente válida porque o órgão já coletou legitimamente os dados para o atendimento." },
-      { letra: "D", texto: "A reutilização é sempre proibida, mesmo quando houver finalidade pública compatível, fundamento jurídico e transparência." },
+      { letra: "D", texto: "A reutilização descrita é incompatível com o regime de proteção de dados, pois a finalidade adicional não foi informada nem demonstrada como compatível com a finalidade pública e com um fundamento jurídico aplicável." },
       { letra: "E", texto: "A reutilização torna-se válida apenas porque uma pessoa revisa manualmente a classificação produzida." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "A LGPD exige propósitos legítimos, específicos, explícitos e informados, compatibilidade entre o tratamento e as finalidades informadas e limitação ao mínimo necessário (art. 6º, I a III). Para o poder público, o art. 23 também exige finalidade pública e tratamento orientado às competências ou atribuições legais, com informação clara sobre previsão legal, finalidade, procedimentos e práticas. No cenário, a equipe não informou a finalidade adicional nem demonstrou sua compatibilidade ou o fundamento jurídico aplicável. Isso não significa que toda reutilização seja proibida: ela precisa ser avaliada à luz da finalidade pública, da base jurídica, da adequação, da necessidade e da transparência.",
     analise: {
-      A: "CORRETA. Identifica a ausência de informação e de demonstração de compatibilidade e fundamento jurídico no cenário apresentado.",
+      A: "INCORRETA. A LGPD não proíbe toda finalidade adicional; exige análise de compatibilidade, fundamento jurídico, necessidade, transparência e demais requisitos aplicáveis.",
       B: "INCORRETA. Publicidade e impessoalidade dos critérios não substituem os requisitos da LGPD para a finalidade e o tratamento pelo poder público.",
       C: "INCORRETA. A coleta legítima para uma finalidade não autoriza automaticamente qualquer uso posterior.",
-      D: "INCORRETA. A LGPD não proíbe toda finalidade adicional; exige análise de compatibilidade, fundamento jurídico, necessidade, transparência e demais requisitos aplicáveis.",
+      D: "CORRETA. Identifica a ausência de informação e de demonstração de compatibilidade e fundamento jurídico no cenário apresentado.",
       E: "INCORRETA. Revisão manual, isoladamente, não corrige a ausência de finalidade compatível ou de fundamento jurídico para o tratamento."
     },
     regra: "Finalidade e adequação: o uso deve corresponder a propósitos legítimos, específicos, explícitos e informados, ser compatível com o contexto e, no poder público, atender à finalidade pública e às competências ou atribuições legais.",
@@ -343,19 +343,19 @@ const moduleQuestions6 = [
     contexto: "O procedimento de acesso a informações está disciplinado nos arts. 10 a 15 da LAI.",
     enunciado: "Sobre o prazo de resposta a pedido de acesso à informação, a LAI estabelece que o órgão deve",
     alternativas: [
-      { letra: "A", texto: "conceder acesso imediato quando a informação estiver disponível e, não sendo possível, responder no prazo de até 20 dias, prorrogável por mais 10 mediante justificativa expressa, com ciência do requerente." },
+      { letra: "A", texto: "responder em 30 dias, sem possibilidade de prorrogação." },
       { letra: "B", texto: "responder em 48 horas, improrrogavelmente." },
       { letra: "C", texto: "responder em 5 dias úteis, prorrogáveis por mais 5." },
-      { letra: "D", texto: "responder em 30 dias, sem possibilidade de prorrogação." },
+      { letra: "D", texto: "conceder acesso imediato quando a informação estiver disponível e, não sendo possível, responder no prazo de até 20 dias, prorrogável por mais 10 mediante justificativa expressa, com ciência do requerente." },
       { letra: "E", texto: "responder somente após a identificação da autoridade hierarquicamente superior, em 120 horas." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "O art. 11 determina autorizar ou conceder o acesso imediato à informação disponível; não sendo possível, o órgão tem prazo não superior a 20 dias (art. 11, § 1º) para comunicar data, local e modo, indicar as razões de fato ou de direito da recusa ou informar que não possui a informação, indicando o detentor ou remetendo o pedido. O § 2º admite prorrogação por mais 10 dias, mediante justificativa expressa, da qual o requerente é cientificado. As alternativas B, C, D e E apresentam prazos que a lei não fixa para a resposta ao pedido.",
     analise: {
-      A: "CORRETA. Reproduz o art. 11, caput e §§ 1º e 2º: acesso imediato quando possível; 20 dias, prorrogáveis por 10 com justificativa expressa.",
+      A: "INCORRETA. Erro de prazo e de regime: 30 dias ignora a prorrogação legal de 10 dias.",
       B: "INCORRETA. Erro de prazo: 48 horas não é prazo de resposta ao pedido; é usado em outros fluxos administrativos, não neste dispositivo.",
       C: "INCORRETA. Erro de prazo: 5 dias úteis não corresponde ao art. 11.",
-      D: "INCORRETA. Erro de prazo e de regime: 30 dias ignora a prorrogação legal de 10 dias.",
+      D: "CORRETA. Reproduz o art. 11, caput e §§ 1º e 2º: acesso imediato quando possível; 20 dias, prorrogáveis por 10 com justificativa expressa.",
       E: "INCORRETA. Erro de prazo e de procedimento: o art. 11 não condiciona a resposta à identificação prévia de autoridade superior nem fixa 120 horas."
     },
     regra: "Art. 11: acesso imediato quando possível; 20 dias para responder; prorrogação de 10 dias com justificativa expressa; informar recurso e autoridade (§ 4º).",
@@ -477,19 +477,19 @@ const moduleQuestions6 = [
     contexto: "O art. 8º, § 1º, da LAI lista o mínimo que deve ser divulgado independentemente de requerimento.",
     enunciado: "O rol mínimo de informações a divulgar de ofício inclui",
     alternativas: [
-      { letra: "A", texto: "registros das despesas, informações sobre procedimentos licitatórios e contratos celebrados e dados gerais para acompanhamento de programas, ações, projetos e obras, com metas e indicadores." },
+      { letra: "A", texto: "apenas o organograma e o horário de atendimento, sendo os demais itens facultativos." },
       { letra: "B", texto: "a íntegra dos prontuários e fichas de atendimento individual dos usuários do órgão." },
       { letra: "C", texto: "a relação nominal de beneficiários, com CPF e endereço, para conferência individual pela população." },
-      { letra: "D", texto: "apenas o organograma e o horário de atendimento, sendo os demais itens facultativos." },
+      { letra: "D", texto: "registros das despesas, informações sobre procedimentos licitatórios e contratos celebrados e dados gerais para acompanhamento de programas, ações, projetos e obras, com metas e indicadores." },
       { letra: "E", texto: "os contratos somente após o encerramento do exercício financeiro, quando não houver mais risco envolvido." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "O § 1º do art. 8º exige, no mínimo: competências e estrutura organizacional, endereços, telefones e horários (I); repasses e transferências (II); registros das despesas (III); licitações, inclusive editais e resultados, e todos os contratos celebrados (IV); dados gerais para acompanhamento de programas, ações, projetos e obras, com metas e indicadores (V); respostas a perguntas mais frequentes (VI). As alternativas B e C divulgam informação pessoal, protegida pelo art. 31; D reduz o rol mínimo a dois itens; E cria postergação inexistente.",
     analise: {
-      A: "CORRETA. Combina os incisos III, IV e V do § 1º.",
+      A: "INCORRETA. Erro conceitual de redução: o rol é mínimo e obrigatório, não exemplificativo facultativo.",
       B: "INCORRETA. Erro conceitual: prontuário e ficha individual são informação pessoal, com acesso restrito (art. 31).",
       C: "INCORRETA. Erro conceitual: relação nominal com CPF e endereço é divulgação irrestrita de dado pessoal, vedada sem base legal ou consentimento.",
-      D: "INCORRETA. Erro conceitual de redução: o rol é mínimo e obrigatório, não exemplificativo facultativo.",
+      D: "CORRETA. Combina os incisos III, IV e V do § 1º.",
       E: "INCORRETA. Erro conceitual de invenção de prazo: o inciso IV alcança todos os contratos celebrados, e o inciso VI exige manutenção atualizada."
     },
     regra: "Divulgação de ofício (art. 8º, § 1º): competências, repasses, despesas, licitações e contratos, programas com metas e indicadores, perguntas frequentes.",
@@ -617,19 +617,19 @@ const moduleQuestions6 = [
     contexto: "A LAI fixa graus de classificação e prazos máximos de restrição de acesso.",
     enunciado: "Quanto aos graus de classificação de sigilo e aos prazos máximos de restrição de acesso, a LAI estabelece",
     alternativas: [
-      { letra: "A", texto: "ultrassecreto — 25 anos; secreto — 15 anos; reservado — 5 anos, contados da data de produção." },
+      { letra: "A", texto: "prazo único de 5 anos para todos os graus, renovável indefinidamente." },
       { letra: "B", texto: "ultrassecreto — 25 anos; secreto — 10 anos; reservado — 5 anos, contados da data de produção." },
       { letra: "C", texto: "ultrassecreto — 30 anos; secreto — 15 anos; reservado — 5 anos, contados da data de produção." },
-      { letra: "D", texto: "prazo único de 5 anos para todos os graus, renovável indefinidamente." },
+      { letra: "D", texto: "ultrassecreto — 25 anos; secreto — 15 anos; reservado — 5 anos, contados da data de produção." },
       { letra: "E", texto: "prazos definidos caso a caso pela autoridade classificadora, sem limite legal." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "O art. 24 fixa os prazos máximos de restrição de acesso, contados da data de produção: ultrassecreto — 25 anos (I); secreto — 15 anos (II); reservado — 5 anos (III). O § 4º determina que, transcorrido o prazo ou consumado o evento que define o termo final, a informação se torna automaticamente de acesso público. As alternativas B e C alteram prazos; D cria prazo único renovável; E nega a existência de limite legal.",
     analise: {
-      A: "CORRETA. Reproduz o art. 24, I a III.",
+      A: "INCORRETA. Erro conceitual: não há prazo único nem renovação indefinida; a Lei nº 12.527/2011 substituiu a lógica de renovação sem limite.",
       B: "INCORRETA. Erro de prazo: secreto é 15 anos, não 10.",
       C: "INCORRETA. Erro de prazo: ultrassecreto é 25 anos, não 30.",
-      D: "INCORRETA. Erro conceitual: não há prazo único nem renovação indefinida; a Lei nº 12.527/2011 substituiu a lógica de renovação sem limite.",
+      D: "CORRETA. Reproduz o art. 24, I a III.",
       E: "INCORRETA. Erro conceitual: os prazos são legais, e a autoridade observa o critério menos restritivo possível (§ 5º)."
     },
     regra: "25 / 15 / 5 anos (ultrassecreto, secreto, reservado), contados da produção; esgotado o prazo, acesso público automático (§ 4º).",
@@ -841,20 +841,20 @@ const moduleQuestions6 = [
     contexto: "A classificação de níveis de automação é ferramenta de governança: quanto maior o nível, maior o conjunto de salvaguardas exigidas.",
     enunciado: "No nível em que o sistema decide e produz efeito imediato, com revisão posterior por amostra ou por gatilho de risco, tem-se",
     alternativas: [
-      { letra: "A", texto: "decisão automatizada com revisão posterior ou amostral." },
+      { letra: "A", texto: "automação plena, sem qualquer revisão." }
       { letra: "B", texto: "decisão manual pura, com apoio documental." },
       { letra: "C", texto: "apoio à decisão, com decisão final do servidor antes do efeito." },
       { letra: "D", texto: "decisão automatizada com revisão prévia como condição de eficácia." },
-      { letra: "E", texto: "automação plena, sem qualquer revisão." }
+      { letra: "E", texto: "decisão automatizada com revisão posterior ou amostral." },
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "A classificação didática adotada no módulo distingue: decisão manual pura (N0); apoio à decisão, em que o sistema calcula e o servidor decide (N1); decisão automatizada com revisão prévia, em que o efeito depende da revisão (N2); decisão automatizada com revisão posterior ou amostral, com efeito imediato e revisão por amostra ou gatilho (N3); decisão automatizada com autorização prévia em alçada (N4); e automação plena (N5). O enunciado descreve o N3, cuja exigência adicional é amostragem dimensionada e gatilhos de risco.",
     analise: {
-      A: "CORRETA. Corresponde ao nível em que o efeito é imediato e a revisão é posterior, por amostra ou gatilho.",
+      A: "INCORRETA. Erro conceitual: automação plena dispensa revisão — o enunciado prevê revisão posterior."
       B: "INCORRETA. Erro conceitual: no manual puro não há decisão do sistema.",
       C: "INCORRETA. Erro conceitual: no apoio à decisão o efeito só ocorre depois da decisão humana.",
       D: "INCORRETA. Erro conceitual: na revisão prévia o ato não produz efeito antes da revisão.",
-      E: "INCORRETA. Erro conceitual: automação plena dispensa revisão — o enunciado prevê revisão posterior."
+      E: "CORRETA. Corresponde ao nível em que o efeito é imediato e a revisão é posterior, por amostra ou gatilho.",
     },
     regra: "N0 manual; N1 apoio; N2 revisão prévia; N3 revisão posterior/amostral; N4 alçada; N5 automação plena — salvaguardas crescem com o nível.",
     pegadinha: "A diferença entre N2 e N3 é o momento da revisão (antes ou depois do efeito), não a existência dela.",
@@ -1033,20 +1033,20 @@ const moduleQuestions6 = [
     contexto: "Um cidadão solicita cópia de processo de contratação pública. O documento contém objeto, valores e decisões administrativas, mas também CPF, endereço residencial e dados de contato pessoal de pessoas físicas. A equipe considera negar acesso ao processo inteiro por conter dados pessoais.",
     enunciado: "À luz da LAI e das orientações de transparência e proteção de dados, qual encaminhamento é mais adequado?",
     alternativas: [
-      { letra: "A", texto: "Avaliar quais trechos estão sujeitos a restrição legal, ocultar de modo seguro os dados pessoais cuja divulgação não seja autorizada e fornecer o restante do documento, com a justificativa cabível." },
+      { letra: "A", texto: "Cobrir visualmente os dados no PDF, sem verificar se o texto ocultado continua selecionável ou recuperável no arquivo." }
       { letra: "B", texto: "Negar integralmente o acesso sempre que um documento público contiver qualquer dado pessoal." },
       { letra: "C", texto: "Divulgar todos os dados sem análise, pois a publicidade administrativa elimina qualquer proteção de dados pessoais." },
       { letra: "D", texto: "Substituir o documento por um resumo elaborado pela equipe, mesmo quando seja possível fornecer cópia parcial." },
-      { letra: "E", texto: "Cobrir visualmente os dados no PDF, sem verificar se o texto ocultado continua selecionável ou recuperável no arquivo." }
+      { letra: "E", texto: "Avaliar quais trechos estão sujeitos a restrição legal, ocultar de modo seguro os dados pessoais cuja divulgação não seja autorizada e fornecer o restante do documento, com a justificativa cabível." },
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "A análise deve distinguir a informação de interesse público dos trechos cuja divulgação esteja legalmente restrita. A LAI estabelece a publicidade como regra e prevê, no art. 7º, § 2º, o acesso à parte não sigilosa por certidão, extrato ou cópia com ocultação da parte sob sigilo. O art. 31 estabelece proteção específica para informações pessoais. A ocultação deve ser efetiva, e não apenas uma tarja visual que deixe o dado recuperável. A decisão depende do conteúdo e da base legal aplicável; a presença de dado pessoal não justifica automaticamente negar o documento inteiro.",
     analise: {
-      A: "CORRETA. Preserva o acesso à informação pública e restringe apenas os trechos cuja divulgação não seja autorizada, com tratamento seguro e justificativa adequada.",
+      A: "INCORRETA. Uma tarja meramente visual pode deixar o dado recuperável; a versão pública deve ser sanitizada de forma efetiva, preservando o original restrito."
       B: "INCORRETA. A existência de dados pessoais não torna automaticamente todo o documento inacessível; deve-se avaliar o acesso à parte não restrita.",
       C: "INCORRETA. A publicidade como regra não elimina as restrições e salvaguardas previstas em lei para informações pessoais.",
       D: "INCORRETA. Um resumo não substitui automaticamente o acesso à parte não sigilosa quando a cópia parcial é viável.",
-      E: "INCORRETA. Uma tarja meramente visual pode deixar o dado recuperável; a versão pública deve ser sanitizada de forma efetiva, preservando o original restrito."
+      E: "CORRETA. Preserva o acesso à informação pública e restringe apenas os trechos cuja divulgação não seja autorizada, com tratamento seguro e justificativa adequada.",
     },
     regra: "Ao conciliar transparência e proteção de dados, identifique a base legal de eventual restrição e viabilize acesso à parte não protegida; a ocultação precisa ser efetiva.",
     pegadinha: "Evite os dois extremos: divulgar indiscriminadamente dados protegidos ou negar todo o documento só porque contém algum dado pessoal.",

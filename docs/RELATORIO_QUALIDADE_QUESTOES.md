@@ -1,5 +1,23 @@
 # Relatório heurístico de qualidade das questões
 
+## Snapshot atual de distribuição — revisão editorial controlada (2026-10-26)
+
+- O banco contém 399 questões: 324 de múltipla escolha e 75 de certo/errado; IDs únicos e estrutura básica conferidos no HEAD anterior a este commit.
+- Foram reposicionadas 60 alternativas corretas sem alterar o conteúdo da resposta, atualizando em conjunto a posição da alternativa, o gabarito e o mapeamento da análise. O novo CI deve confirmar a consistência estrutural no HEAD resultante.
+- Distribuição atual prevista das 324 questões de múltipla escolha:
+
+| Letra correta | Quantidade | Percentual |
+|---|---:|---:|
+| A | 84 | 25,9% |
+| B | 103 | 31,8% |
+| C | 72 | 22,2% |
+| D | 37 | 11,4% |
+| E | 28 | 8,6% |
+| **Total** | **324** | **100%** |
+
+- A concentração em A/B diminui de 76,2% para 57,7%; D/E aumentam de 5,2% para 20,1%. O balanceamento reduz previsibilidade, mas não substitui revisão semântica nem exige distribuição idêntica entre letras.
+- A matriz de qualidade deve ser regenerada pelo workflow após este commit; relatórios históricos abaixo permanecem snapshots explicitamente datados e não devem ser tratados como resultado do novo HEAD.
+
 **Data:** 2026-10-26  
 **Execução:** [GitHub Actions — validação, auditoria heurística e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754)  
 **Script:** `scripts/audit_question_quality.mjs`

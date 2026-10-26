@@ -382,19 +382,19 @@ const moduleQuestions7 = [
     contexto: "Um cadastro apresenta nome de processo que não existe, CPF que pertence a outra pessoa e valor de pagamento divergente do comprovante.",
     enunciado: "A acurácia é a dimensão que exige referência externa porque:",
     alternativas: [
-      { letra: "A", texto: "mede a correspondência entre o valor registrado e a realidade que ele representa." },
+      { letra: "A", texto: "mede o intervalo entre o fato e a disponibilidade do dado." },
       { letra: "B", texto: "mede apenas se o campo está preenchido." },
       { letra: "C", texto: "mede a aderência ao formato e ao domínio definidos na regra." },
-      { letra: "D", texto: "mede o intervalo entre o fato e a disponibilidade do dado." },
+      { letra: "D", texto: "mede a correspondência entre o valor registrado e a realidade que ele representa." },
       { letra: "E", texto: "mede a ausência de registros duplicados." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "O currículo define acurácia como correspondência com a realidade — 'o nome do processo existe mesmo, o CPF pertence à pessoa dita, o valor bate com o comprovante' — e observa que se mede contra referência externa (cadastro oficial, conferência manual, leitura física), o que a torna a dimensão mais cara de verificar. As demais alternativas descrevem completude, validade, tempestividade e unicidade.",
     analise: {
-      A: "CORRETA. Correspondência com a realidade, verificada por referência externa, é a definição de acurácia.",
+      A: "INCORRETA. Intervalo entre fato e disponibilidade é tempestividade.",
       B: "INCORRETA. Presença de valor é completude.",
       C: "INCORRETA. Aderência a formato/domínio é validade, verificável internamente.",
-      D: "INCORRETA. Intervalo entre fato e disponibilidade é tempestividade.",
+      D: "CORRETA. Correspondência com a realidade, verificada por referência externa, é a definição de acurácia.",
       E: "INCORRETA. Ausência de duplicatas é unicidade."
     },
     regra: "Acurácia = valor corresponde à realidade (referência externa). É a dimensão mais cara de medir.",
@@ -488,19 +488,19 @@ const moduleQuestions7 = [
     contexto: "Filial e matriz registram a mesma estante, medida no mesmo momento: 2,0 m em uma base e 220 cm na outra, sem regra de reconciliação.",
     enunciado: "A dimensão de qualidade violada é:",
     alternativas: [
-      { letra: "A", texto: "Consistência: o mesmo fato é representado de forma incompatível entre fontes." },
+      { letra: "A", texto: "Completude: falta a unidade de medida em uma das bases." },
       { letra: "B", texto: "Unicidade: há duas linhas para a mesma entidade." },
       { letra: "C", texto: "Tempestividade: o dado da filial é mais antigo." },
-      { letra: "D", texto: "Completude: falta a unidade de medida em uma das bases." },
+      { letra: "D", texto: "Consistência: o mesmo fato é representado de forma incompatível entre fontes." },
       { letra: "E", texto: "Acurácia: a correspondência com a medida real exige uma referência externa; a divergência entre fontes já indica inconsistência." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "A inconsistência ocorre porque duas fontes atribuem valores divergentes ao mesmo atributo do mesmo objeto e momento: 2,0 m equivalem a 200 cm, não a 220 cm. A dimensão de consistência pode ser verificada pela regra de reconciliação entre fontes, sem que isso, por si só, determine qual fonte corresponde à realidade. Não há duplicidade (são bases distintas), nada indica atraso e as unidades estão declaradas. Acurácia exige comparar o valor com uma referência confiável sobre a medida real.",
     analise: {
-      A: "CORRETA. Representações incompatíveis do mesmo fato = inconsistência entre fontes.",
+      A: "INCORRETA. As unidades estão presentes (m e cm); o problema é a falta de conversão.",
       B: "INCORRETA. Duas bases com o mesmo objeto não configuram, por si, duplicidade de entidade.",
       C: "INCORRETA. O enunciado não informa data de atualização.",
-      D: "INCORRETA. As unidades estão presentes (m e cm); o problema é a falta de conversão.",
+      D: "CORRETA. Representações incompatíveis do mesmo fato = inconsistência entre fontes.",
       E: "INCORRETA. A divergência entre fontes indica inconsistência, mas a acurácia de cada valor depende de comparação com uma referência confiável; o enunciado não fornece essa referência."
     },
     regra: "Consistência = mesmo fato representado de forma compatível, dentro do registro e entre sistemas.",
@@ -514,19 +514,19 @@ const moduleQuestions7 = [
     contexto: "Três linhas idênticas do mesmo atendimento entraram na base porque o formulário foi reenviado.",
     enunciado: "A dimensão violada e a métrica típica correspondente são, respectivamente:",
     alternativas: [
-      { letra: "A", texto: "Unicidade; taxa de duplicatas." },
+      { letra: "A", texto: "Tempestividade; latência entre fato e disponibilidade." },
       { letra: "B", texto: "Consistência; divergência em regra de reconciliação." },
       { letra: "C", texto: "Completude; percentual de campos nulos." },
-      { letra: "D", texto: "Tempestividade; latência entre fato e disponibilidade." },
+      { letra: "D", texto: "Unicidade; taxa de duplicatas." },
       { letra: "E", texto: "Validade; percentual de valores fora do domínio." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "O currículo define unicidade como 'cada entidade real aparece uma única vez' e indica a métrica: taxa de duplicatas — registros idênticos ou quase idênticos por erro de carga, reenvio ou cadastro duplo. As demais alternativas associam dimensões corretas a métricas corretas, mas nenhuma delas descreve três linhas idênticas do mesmo atendimento.",
     analise: {
-      A: "CORRETA. Reenvio gerando linhas idênticas é o caso típico de violação de unicidade, medida por taxa de duplicatas.",
+      A: "INCORRETA. Não há informação sobre atraso na disponibilização.",
       B: "INCORRETA. Consistência trata de representações incompatíveis do mesmo fato, não de repetição de linhas.",
       C: "INCORRETA. Nenhum campo está vazio.",
-      D: "INCORRETA. Não há informação sobre atraso na disponibilização.",
+      D: "CORRETA. Reenvio gerando linhas idênticas é o caso típico de violação de unicidade, medida por taxa de duplicatas.",
       E: "INCORRETA. Os valores estão no domínio; o problema é a repetição do registro."
     },
     regra: "Unicidade = cada entidade real uma única vez; métrica: taxa de duplicatas.",
@@ -540,20 +540,20 @@ const moduleQuestions7 = [
     contexto: "O painel que apoia a decisão sobre a fila de atendimento é atualizado uma vez por dia, mas a decisão precisa ser tomada a cada hora.",
     enunciado: "O problema descrito é de:",
     alternativas: [
-      { letra: "A", texto: "Tempestividade: latência incompatível com o momento da decisão, ainda que o dado seja acurado e completo." },
+      { letra: "A", texto: "Completude: faltam campos no painel." }
       { letra: "B", texto: "Acurácia: os valores do painel não correspondem à realidade." },
       { letra: "C", texto: "Unicidade: há atendimentos repetidos no painel." },
       { letra: "D", texto: "Validade: a data de atualização está em formato inválido." },
-      { letra: "E", texto: "Completude: faltam campos no painel." }
+      { letra: "E", texto: "Tempestividade: latência incompatível com o momento da decisão, ainda que o dado seja acurado e completo." },
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "O currículo define tempestividade como disponibilidade no momento necessário, com latência aceitável, medida pelo intervalo entre o fato e sua disponibilidade, e registra a consequência: 'dado antigo pode ser acurado e completo e ainda assim inútil para decidir'. O enunciado não menciona erro de valor, repetição, formato ou ausência de campo.",
     analise: {
-      A: "CORRETA. Defasagem diante de decisão horária é violação de tempestividade.",
+      A: "INCORRETA. Não há campo faltante citado."
       B: "INCORRETA. Nada indica que os valores estejam errados — eles podem estar corretos e atrasados.",
       C: "INCORRETA. Duplicidade não é o tema do enunciado.",
       D: "INCORRETA. Formato de data não é mencionado.",
-      E: "INCORRETA. Não há campo faltante citado."
+      E: "CORRETA. Defasagem diante de decisão horária é violação de tempestividade.",
     },
     regra: "Tempestividade = dado disponível no momento necessário, com latência aceitável para a decisão.",
     pegadinha: "Tempestividade não é 'velocidade de processamento': é adequação ao momento do uso.",
@@ -585,20 +585,20 @@ const moduleQuestions7 = [
     contexto: "Após a carga, o total por unidade não fecha com a soma do detalhe. As duas fontes divergem sobre o mesmo fato e os nomes de unidade aparecem abreviados de formas diferentes.",
     enunciado: "O estágio em que a falha deve ser investigada e o que verificar são:",
     alternativas: [
-      { letra: "A", texto: "Integração — chaves não padronizadas, granularidade divergente e regra de prevalência entre fontes." },
+      { letra: "A", texto: "Descarte — o prazo de retenção venceu e removeu linhas." }
       { letra: "B", texto: "Coleta — a origem sempre explica a divergência, sem necessidade de conferência posterior." },
       { letra: "C", texto: "Consumo — o painel deve corrigir o total manualmente para fechar." },
       { letra: "D", texto: "Armazenamento — a causa é sempre ausência de backup." },
-      { letra: "E", texto: "Descarte — o prazo de retenção venceu e removeu linhas." }
+      { letra: "E", texto: "Integração — chaves não padronizadas, granularidade divergente e regra de prevalência entre fontes." },
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "O currículo responde a esse caso no estágio de integração (reconciliação): verificar chaves (unidade com nome abreviado divergente), granularidade (detalhe diário versus total mensal) e regra de prevalência entre fontes; a verificação é de consistência — a soma dos filhos deve igualar o total. Ajustar o painel manualmente mascara o erro e destrói a reprodutibilidade, e backup ou retenção não produzem divergência entre fonte e detalhe.",
     analise: {
-      A: "CORRETA. Divergência entre fontes com chaves e granularidades distintas é falha de integração/reconciliação.",
+      A: "INCORRETA. Descarte afeta disponibilidade futura, não a aritmética entre total e detalhe."
       B: "INCORRETA. A origem pode estar correta; o enunciado aponta conflito entre fontes, tratado na integração.",
       C: "INCORRETA. Corrigir no consumo mascara o erro e impede auditoria — o currículo condena ajuste manual como validação.",
       D: "INCORRETA. Falha de backup se manifesta como perda, não como total que não fecha com o detalhe.",
-      E: "INCORRETA. Descarte afeta disponibilidade futura, não a aritmética entre total e detalhe."
+      E: "CORRETA. Divergência entre fontes com chaves e granularidades distintas é falha de integração/reconciliação.",
     },
     regra: "Integração reconcilia fontes: padronizar chaves, alinhar granularidade e definir qual fonte prevalece. Soma dos filhos deve igualar o total.",
     pegadinha: "'O painel está errado, então conserta no painel' é a armadilha: o consumo mostra o efeito, não a causa.",

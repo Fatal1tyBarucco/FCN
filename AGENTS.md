@@ -918,6 +918,15 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo: `b4b05f5bd92def80877d8f10f401e4710792de60`, `212925e4582a8d0cd32129353784201be0bffc42`, `f97a2be8225042461baf9bf28761385e3dfd214f`, `252355ab6fac056883b9947f7cdd253b818324d4`, `932ded88c987d91293315cb9cc4f4597da35735a`, `2683f210802a31b8689485712ac61703c928ef91`, `434cb69de8beaa487496d96c8270ac14376f156a` e `3c7e49e231648fd48b6febca1e62f0433cd45725`.
 - Revisão semântica focal dos 47 itens concluída; validar sintaxe, esquema e CI no HEAD atual.
 
+## Rebalanceamento editorial controlado dos gabaritos — 2026-10-26
+
+- Foram reposicionadas 60 alternativas corretas em questões de múltipla escolha, distribuídas entre M1–M8. A operação troca apenas a posição de duas alternativas completas e remapeia os textos correspondentes em `analise`, além de atualizar `gabarito`; não altera o conteúdo semântico da resposta correta.
+- As questões selecionadas foram filtradas para evitar referências textuais explícitas às letras das alternativas. O script de transformação validou, para cada questão, que o texto originalmente correto passou à nova posição, que a análise `CORRETA` acompanha o novo gabarito, que a posição anterior permanece `INCORRETA` e que a sequência de alternativas continua válida.
+- Distribuição antes: A=122, B=125, C=60, D=10, E=7 (324 questões MC; A/B=76,2%; D/E=5,2%).
+- Distribuição após: A=84, B=103, C=72, D=37, E=28 (324 questões MC; A/B=57,7%; D/E=20,1%).
+- O balanceamento é um controle editorial, não um objetivo de uniformidade perfeita. A distribuição por módulo ainda deve ser monitorada e qualquer mudança posterior deve preservar gabarito, alternativa e análise como um conjunto.
+- A validação automatizada de sintaxe, consistência e testes de navegador deve ser executada no novo HEAD antes de declarar concluído.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)

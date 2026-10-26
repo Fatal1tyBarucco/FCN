@@ -209,19 +209,19 @@ const moduleQuestions4 = [
     enunciado: "Qual alternativa distingue corretamente RPO (Recovery Point Objective) de RTO (Recovery Time Objective)?",
     alternativas: [
       { letra: "A", texto: "RPO é o tempo-alvo para recuperar o serviço; RTO é o ponto de recuperação dos dados." },
-      { letra: "B", texto: "RPO define o ponto temporal de recuperação e a perda de dados tolerável; RTO define o tempo-alvo para restabelecer o serviço." },
+      { letra: "B", texto: "RTO e RPO garantem que nunca haverá perda de dados ou indisponibilidade." }
       { letra: "C", texto: "RPO e RTO são sinônimos e podem ser usados sem distinção." },
       { letra: "D", texto: "RPO mede o número de usuários simultâneos; RTO mede a capacidade de armazenamento." },
-      { letra: "E", texto: "RTO e RPO garantem que nunca haverá perda de dados ou indisponibilidade." }
+      { letra: "E", texto: "RPO define o ponto temporal de recuperação e a perda de dados tolerável; RTO define o tempo-alvo para restabelecer o serviço." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "RPO (Recovery Point Objective) estabelece o ponto temporal até o qual os dados devem ser recuperados e orienta a perda de dados tolerável. RTO (Recovery Time Objective) estabelece o tempo-alvo para restabelecer o serviço. São objetivos distintos, derivados das necessidades de negócio e validados por meio de testes de recuperação.",
     analise: {
       A: "INCORRETA. Inverte os conceitos: RPO trata do ponto de recuperação dos dados; RTO, do tempo de recuperação do serviço.",
-      B: "CORRETA. A alternativa distingue a perda de dados tolerável do tempo-alvo para restabelecimento.",
+      B: "INCORRETA. São metas de planejamento, não garantias de perda zero ou disponibilidade contínua."
       C: "INCORRETA. RPO e RTO representam objetivos diferentes.",
       D: "INCORRETA. Essas descrições não correspondem aos conceitos de recuperação.",
-      E: "INCORRETA. São metas de planejamento, não garantias de perda zero ou disponibilidade contínua."
+      E: "CORRETA. A alternativa distingue a perda de dados tolerável do tempo-alvo para restabelecimento.",
     },
     regra: "RPO = ponto de recuperação/perda de dados tolerável; RTO = tempo-alvo para restabelecer o serviço.",
     pegadinha: "Metas de RPO e RTO precisam ser tecnicamente viáveis e testadas; defini-las não garante que serão cumpridas.",
@@ -259,19 +259,19 @@ const moduleQuestions4 = [
     enunciado: "Qual alternativa diferencia corretamente ameaça, vulnerabilidade e risco?",
     alternativas: [
       { letra: "A", texto: "A ameaça é a falha técnica; a vulnerabilidade é o impacto financeiro." },
-      { letra: "B", texto: "A vulnerabilidade é uma fraqueza; a ameaça é um agente ou evento potencialmente danoso; o risco considera a possibilidade e as consequências no contexto." },
+      { letra: "B", texto: "Uma ameaça só existe depois que o dano está confirmado." }
       { letra: "C", texto: "Risco é sinônimo de ameaça e independe da criticidade do ativo." },
       { letra: "D", texto: "A presença de uma vulnerabilidade prova que ela já foi explorada." },
-      { letra: "E", texto: "Uma ameaça só existe depois que o dano está confirmado." }
+      { letra: "E", texto: "A vulnerabilidade é uma fraqueza; a ameaça é um agente ou evento potencialmente danoso; o risco considera a possibilidade e as consequências no contexto." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "Vulnerabilidade é uma fraqueza que pode ser explorada; ameaça é uma circunstância, evento ou agente com potencial de causar dano; risco é avaliado considerando probabilidade e consequências no contexto. Uma vulnerabilidade não comprova, por si só, que houve exploração, e a priorização depende da exposição, da criticidade e do impacto potencial.",
     analise: {
       A: "INCORRETA. A falha técnica é a vulnerabilidade; impacto e probabilidade integram a avaliação de risco.",
-      B: "CORRETA. A alternativa diferencia os três conceitos e considera o contexto da avaliação.",
+      B: "INCORRETA. A ameaça pode existir antes de qualquer dano confirmado."
       C: "INCORRETA. Ameaça e risco são conceitos relacionados, mas não sinônimos; criticidade e contexto importam.",
       D: "INCORRETA. Uma vulnerabilidade pode existir sem ter sido explorada.",
-      E: "INCORRETA. A ameaça pode existir antes de qualquer dano confirmado."
+      E: "CORRETA. A alternativa diferencia os três conceitos e considera o contexto da avaliação.",
     },
     regra: "Vulnerabilidade = fraqueza; ameaça = agente/evento potencialmente danoso; risco = avaliação contextual de possibilidade e consequências.",
     pegadinha: "Encontrar uma vulnerabilidade não prova exploração; diferencie a fraqueza, a ameaça e o risco associado.",
@@ -282,18 +282,18 @@ const moduleQuestions4 = [
     contexto: "Uma equipe analisa dois códigos maliciosos: um infecta arquivos executáveis e outro consegue se propagar entre sistemas vulneráveis sem precisar ser anexado a um arquivo hospedeiro.",
     enunciado: "Qual distinção entre vírus e worm é mais precisa?",
     alternativas: [
-      { letra: "A", texto: "Um vírus normalmente se associa a um arquivo ou programa hospedeiro; um worm é capaz de se replicar e se propagar de forma independente." },
+      { letra: "A", texto: "Worms não podem causar danos nem instalar outros componentes." },
       { letra: "B", texto: "Vírus se propagam apenas pela internet, enquanto worms se propagam apenas por mídias removíveis." },
-      { letra: "C", texto: "Worms não podem causar danos nem instalar outros componentes." },
+      { letra: "C", texto: "Um vírus normalmente se associa a um arquivo ou programa hospedeiro; um worm é capaz de se replicar e se propagar de forma independente." },
       { letra: "D", texto: "Vírus sempre exigem uma ação humana para cada propagação e worms nunca dependem de condições externas." },
       { letra: "E", texto: "A diferença é determinada pelo tamanho do arquivo malicioso." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Um vírus se associa a um arquivo, programa ou objeto hospedeiro e sua propagação costuma depender da execução desse objeto. Um worm é um programa independente capaz de se propagar entre sistemas, por exemplo explorando serviços vulneráveis. Ambos podem transportar outras cargas maliciosas, e a propagação real depende do ambiente e das condições técnicas.",
     analise: {
-      A: "CORRETA. A distinção central é a dependência de um hospedeiro para o vírus versus a capacidade de propagação independente do worm.",
+      A: "INCORRETA. Worms podem causar danos ou distribuir outras cargas maliciosas.",
       B: "INCORRETA. Os meios de propagação não se limitam dessa forma.",
-      C: "INCORRETA. Worms podem causar danos ou distribuir outras cargas maliciosas.",
+      C: "CORRETA. A distinção central é a dependência de um hospedeiro para o vírus versus a capacidade de propagação independente do worm.",
       D: "INCORRETA. A propagação depende do mecanismo e do ambiente; a alternativa usa absolutos indevidos.",
       E: "INCORRETA. Tamanho do arquivo não define a categoria."
     },
@@ -306,18 +306,18 @@ const moduleQuestions4 = [
     contexto: "Um usuário instala um utilitário que aparenta ser legítimo, mas que, após execução, realiza atividades não autorizadas.",
     enunciado: "Qual característica é mais associada a um cavalo de Troia (trojan)?",
     alternativas: [
-      { letra: "A", texto: "Disfarçar sua finalidade ou se apresentar como software legítimo para induzir a execução; suas funções podem incluir roubo de dados ou acesso remoto." },
+      { letra: "A", texto: "Ser um controle de rede que bloqueia conexões não autorizadas." },
       { letra: "B", texto: "Replicar-se automaticamente em todos os dispositivos sem depender de execução ou interação." },
-      { letra: "C", texto: "Ser um controle de rede que bloqueia conexões não autorizadas." },
+      { letra: "C", texto: "Disfarçar sua finalidade ou se apresentar como software legítimo para induzir a execução; suas funções podem incluir roubo de dados ou acesso remoto." },
       { letra: "D", texto: "Ser um mecanismo de backup que restaura arquivos excluídos." },
       { letra: "E", texto: "Ser um protocolo criptográfico que autentica servidores." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Um trojan se apresenta ou é distribuído como algo legítimo para induzir sua execução, mas realiza ações não autorizadas. Pode instalar outros componentes, roubar dados ou permitir acesso remoto, mas nenhuma dessas funções é obrigatória em todos os trojans. A autorreplicação independente é mais característica de worms.",
     analise: {
-      A: "CORRETA. O disfarce ou a aparência legítima é característica comum do trojan; a carga maliciosa varia.",
+      A: "INCORRETA. Um controle de rede é uma medida defensiva, não um trojan.",
       B: "INCORRETA. A propagação independente não é a característica definidora de um trojan.",
-      C: "INCORRETA. Um controle de rede é uma medida defensiva, não um trojan.",
+      C: "CORRETA. O disfarce ou a aparência legítima é característica comum do trojan; a carga maliciosa varia.",
       D: "INCORRETA. Backup e restauração são funções de recuperação.",
       E: "INCORRETA. Protocolo criptográfico é uma tecnologia de segurança, não malware."
     },
@@ -330,18 +330,18 @@ const moduleQuestions4 = [
     contexto: "Uma organização perde acesso a arquivos críticos e recebe uma mensagem exigindo pagamento. A equipe também encontra indícios de que dados podem ter sido copiados antes do bloqueio.",
     enunciado: "Qual afirmação sobre ransomware é mais correta?",
     alternativas: [
-      { letra: "A", texto: "Ransomware pode bloquear ou criptografar dados e exigir resgate; algumas campanhas também ameaçam divulgar informações exfiltradas." },
+      { letra: "A", texto: "Pagar o resgate garante recuperação dos dados e impede divulgação." },
       { letra: "B", texto: "Todo ransomware apenas exclui arquivos temporariamente e não pode afetar cópias de segurança." },
-      { letra: "C", texto: "Pagar o resgate garante recuperação dos dados e impede divulgação." },
+      { letra: "C", texto: "Ransomware pode bloquear ou criptografar dados e exigir resgate; algumas campanhas também ameaçam divulgar informações exfiltradas." },
       { letra: "D", texto: "Ransomware é um método legítimo de testar a segurança, independentemente de autorização." },
       { letra: "E", texto: "Ransomware só existe quando o atacante consegue criptografar todos os dispositivos da organização." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Ransomware pode negar acesso por criptografia ou outros mecanismos e exigir pagamento. Algumas campanhas combinam isso com exfiltração e ameaça de divulgação, chamada frequentemente de dupla extorsão. O pagamento não garante recuperação nem impede publicação; a resposta deve seguir o plano de incidentes, preservar evidências e acionar equipes e autoridades pertinentes.",
     analise: {
-      A: "CORRETA. A alternativa inclui bloqueio/criptografia e a possibilidade de extorsão baseada em dados exfiltrados.",
+      A: "INCORRETA. Não há garantia de que o pagamento resulte em recuperação ou confidencialidade.",
       B: "INCORRETA. O impacto pode persistir e cópias acessíveis podem ser afetadas; backups precisam ser isolados e testados.",
-      C: "INCORRETA. Não há garantia de que o pagamento resulte em recuperação ou confidencialidade.",
+      C: "CORRETA. A alternativa inclui bloqueio/criptografia e a possibilidade de extorsão baseada em dados exfiltrados.",
       D: "INCORRETA. A autorização e o escopo são indispensáveis para testes de segurança legítimos.",
       E: "INCORRETA. O ataque pode afetar apenas parte dos sistemas ou usar outras formas de bloqueio e extorsão."
     },
@@ -354,18 +354,18 @@ const moduleQuestions4 = [
     contexto: "Uma equipe de segurança identifica milhares de dispositivos comprometidos que recebem comandos de uma infraestrutura de controle e geram tráfego coordenado.",
     enunciado: "Qual descrição de botnet é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Conjunto de dispositivos comprometidos coordenados por um operador ou infraestrutura de comando e controle, que podem ser usados para atividades como DDoS, spam ou outras ações maliciosas." },
+      { letra: "A", texto: "Algoritmo criptográfico que distribui chaves públicas." },
       { letra: "B", texto: "Rede privada protegida por firewall, sem dispositivos comprometidos." },
-      { letra: "C", texto: "Algoritmo criptográfico que distribui chaves públicas." },
+      { letra: "C", texto: "Conjunto de dispositivos comprometidos coordenados por um operador ou infraestrutura de comando e controle, que podem ser usados para atividades como DDoS, spam ou outras ações maliciosas." },
       { letra: "D", texto: "Serviço de backup que replica dados entre dispositivos." },
       { letra: "E", texto: "Protocolo seguro que impede o controle remoto de dispositivos." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Uma botnet é um conjunto de dispositivos comprometidos que podem ser coordenados remotamente. Os dispositivos podem pertencer a usuários ou organizações sem que estes percebam o comprometimento. A finalidade varia conforme a operação, e a presença de tráfego coordenado deve ser investigada com evidências e controles defensivos.",
     analise: {
-      A: "CORRETA. A alternativa descreve dispositivos comprometidos e coordenação para ações potencialmente maliciosas.",
+      A: "INCORRETA. Um algoritmo criptográfico não é uma rede de dispositivos comprometidos.",
       B: "INCORRETA. Uma rede protegida por firewall não é, por isso, uma botnet.",
-      C: "INCORRETA. Um algoritmo criptográfico não é uma rede de dispositivos comprometidos.",
+      C: "CORRETA. A alternativa descreve dispositivos comprometidos e coordenação para ações potencialmente maliciosas.",
       D: "INCORRETA. Replicação de backup é uma função legítima de proteção de dados.",
       E: "INCORRETA. Um protocolo seguro não define botnet e não garante, sozinho, que dispositivos não serão comprometidos."
     },
@@ -378,18 +378,18 @@ const moduleQuestions4 = [
     contexto: "Uma ferramenta de resposta a incidentes encontra sinais de que processos, arquivos ou atividades privilegiadas estão sendo ocultados do sistema operacional.",
     enunciado: "Qual característica é mais associada a um rootkit?",
     alternativas: [
-      { letra: "A", texto: "Ocultar a presença de componentes ou atividades maliciosas, podendo operar em diferentes níveis do sistema." },
+      { letra: "A", texto: "Ser um protocolo de sincronização de relógios." },
       { letra: "B", texto: "Realizar exclusivamente cópias de segurança de arquivos." },
-      { letra: "C", texto: "Ser um protocolo de sincronização de relógios." },
+      { letra: "C", texto: "Ocultar a presença de componentes ou atividades maliciosas, podendo operar em diferentes níveis do sistema." },
       { letra: "D", texto: "Ser uma ferramenta que necessariamente concede privilégios administrativos em todos os casos." },
       { letra: "E", texto: "Ser um algoritmo que criptografa dados para garantir confidencialidade." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Rootkit é uma categoria de técnicas ou componentes maliciosos associados à ocultação de sua presença ou de outras atividades no sistema. Pode envolver diferentes níveis de privilégio e técnicas de persistência; não é correto afirmar que todo rootkit necessariamente concede privilégios administrativos, pois pode depender de acesso previamente obtido ou explorar outros mecanismos.",
     analise: {
-      A: "CORRETA. A ocultação de componentes ou atividades é característica associada a rootkits.",
+      A: "INCORRETA. NTP é um protocolo de sincronização temporal.",
       B: "INCORRETA. Backup é uma função de recuperação, não um rootkit.",
-      C: "INCORRETA. NTP é um protocolo de sincronização temporal.",
+      C: "CORRETA. A ocultação de componentes ou atividades é característica associada a rootkits.",
       D: "INCORRETA. A obtenção de privilégio elevado pode estar relacionada, mas não é uma exigência universal da definição.",
       E: "INCORRETA. Algoritmos criptográficos são mecanismos de proteção, não rootkits."
     },
@@ -402,18 +402,18 @@ const moduleQuestions4 = [
     contexto: "Uma organização precisa impedir que conexões externas não autorizadas alcancem serviços internos e limitar conexões de saída que não sejam necessárias.",
     enunciado: "Qual é a função principal de um firewall nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Filtrar o tráfego de rede conforme regras de origem, destino, porta, protocolo ou outros atributos suportados." },
+      { letra: "A", texto: "Remover qualquer malware de todos os dispositivos sem ferramentas adicionais." },
       { letra: "B", texto: "Criptografar automaticamente todos os arquivos armazenados em cada computador." },
-      { letra: "C", texto: "Remover qualquer malware de todos os dispositivos sem ferramentas adicionais." },
+      { letra: "C", texto: "Filtrar o tráfego de rede conforme regras de origem, destino, porta, protocolo ou outros atributos suportados." },
       { letra: "D", texto: "Substituir a autenticação e a autorização de usuários em cada aplicação." },
       { letra: "E", texto: "Garantir que nenhuma mensagem de phishing chegue aos usuários." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Firewall aplica regras para permitir ou bloquear tráfego de rede, conforme sua arquitetura e capacidade. Ele pode ser um dispositivo, software ou serviço; não substitui controles de endpoint, autenticação, segurança de aplicações ou conscientização contra phishing.",
     analise: {
-      A: "CORRETA. Filtrar tráfego conforme regras é a função central de um firewall.",
+      A: "INCORRETA. Remediação de malware é função de ferramentas e processos específicos.",
       B: "INCORRETA. Criptografia de arquivos é um controle distinto e não decorre automaticamente do firewall.",
-      C: "INCORRETA. Remediação de malware é função de ferramentas e processos específicos.",
+      C: "CORRETA. Filtrar tráfego conforme regras é a função central de um firewall.",
       D: "INCORRETA. Firewall não substitui autenticação nem autorização dentro das aplicações.",
       E: "INCORRETA. Um firewall pode integrar filtros complementares, mas não garante que toda tentativa de phishing seja bloqueada."
     },
@@ -427,19 +427,19 @@ const moduleQuestions4 = [
     enunciado: "Qual política de firewall segue melhor o princípio de reduzir a exposição?",
     alternativas: [
       { letra: "A", texto: "Permitir todo o tráfego e bloquear apenas conexões que já tenham causado incidente." },
-      { letra: "B", texto: "Permitir somente os fluxos necessários, documentar as exceções e negar por padrão o tráfego não autorizado, validando as dependências do serviço." },
+      { letra: "B", texto: "Permitir tráfego de qualquer origem para todas as portas de administração." }
       { letra: "C", texto: "Bloquear todo o tráfego sem verificar se isso impede o funcionamento legítimo do serviço." },
       { letra: "D", texto: "Criar uma regra ampla de entrada e confiar apenas no antivírus instalado no servidor." },
-      { letra: "E", texto: "Permitir tráfego de qualquer origem para todas as portas de administração." }
+      { letra: "E", texto: "Permitir somente os fluxos necessários, documentar as exceções e negar por padrão o tráfego não autorizado, validando as dependências do serviço." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "Uma política restritiva permite os fluxos necessários e nega por padrão os demais, com exceções explícitas e justificadas. A implementação deve considerar dependências legítimas, monitorar efeitos e revisar as regras; uma regra excessivamente ampla aumenta a superfície de ataque, enquanto bloquear tudo sem análise pode causar indisponibilidade.",
     analise: {
       A: "INCORRETA. Permitir tudo transfere a defesa para a reação após o incidente e amplia a exposição.",
-      B: "CORRETA. A política limita a comunicação ao necessário e mantém exceções controladas.",
+      B: "INCORRETA. Expor portas administrativas a qualquer origem aumenta significativamente o risco."
       C: "INCORRETA. A restrição precisa preservar os fluxos legítimos necessários ao serviço.",
       D: "INCORRETA. Antivírus não substitui a restrição de tráfego de rede.",
-      E: "INCORRETA. Expor portas administrativas a qualquer origem aumenta significativamente o risco."
+      E: "CORRETA. A política limita a comunicação ao necessário e mantém exceções controladas.",
     },
     regra: "Negação por padrão: permitir apenas fluxos necessários, com exceções justificadas, testadas e revisadas.",
     pegadinha: "Regra restritiva não significa bloquear sem análise; é preciso equilibrar exposição e continuidade do serviço.",
@@ -450,18 +450,18 @@ const moduleQuestions4 = [
     contexto: "Uma organização depende de um único firewall de borda. Um invasor consegue roubar credenciais válidas e acessar um serviço interno por um caminho permitido.",
     enunciado: "Qual abordagem melhor representa defesa em profundidade para reduzir a dependência de um único controle?",
     alternativas: [
-      { letra: "A", texto: "Adicionar camadas complementares, como MFA, menor privilégio, segmentação, monitoramento e proteção de endpoint, ajustadas ao risco." },
+      { letra: "A", texto: "Considerar que credenciais válidas tornam qualquer atividade do usuário confiável." },
       { letra: "B", texto: "Comprar um firewall maior e dispensar os demais controles." },
-      { letra: "C", texto: "Considerar que credenciais válidas tornam qualquer atividade do usuário confiável." },
+      { letra: "C", texto: "Adicionar camadas complementares, como MFA, menor privilégio, segmentação, monitoramento e proteção de endpoint, ajustadas ao risco." },
       { letra: "D", texto: "Desativar os registros internos para reduzir o volume de alertas." },
       { letra: "E", texto: "Concentrar todos os controles em uma única conta administrativa compartilhada." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Defesa em profundidade combina controles diferentes e complementares para reduzir a probabilidade e o impacto de falhas individuais. MFA, menor privilégio, segmentação, monitoramento e proteção de endpoint podem limitar caminhos de ataque e apoiar detecção e resposta. Nenhuma combinação garante risco zero; a seleção deve considerar o contexto e ser testada.",
     analise: {
-      A: "CORRETA. Camadas complementares reduzem a dependência de um único controle e limitam o impacto de credenciais comprometidas.",
+      A: "INCORRETA. Credenciais válidas podem ser roubadas; autorização e monitoramento continuam necessários.",
       B: "INCORRETA. Um único controle continua sendo um ponto de dependência e não cobre todos os riscos.",
-      C: "INCORRETA. Credenciais válidas podem ser roubadas; autorização e monitoramento continuam necessários.",
+      C: "CORRETA. Camadas complementares reduzem a dependência de um único controle e limitam o impacto de credenciais comprometidas.",
       D: "INCORRETA. Desativar registros reduz a capacidade de detectar e investigar atividade indevida.",
       E: "INCORRETA. Contas compartilhadas enfraquecem atribuição individual e aumentam o impacto de comprometimento."
     },
@@ -474,18 +474,18 @@ const moduleQuestions4 = [
     contexto: "Um órgão precisa usar logs para investigar incidentes, mas os registros contêm identificadores pessoais e podem ser alterados por administradores do sistema investigado.",
     enunciado: "Qual desenho de gestão de logs é mais adequado?",
     alternativas: [
-      { letra: "A", texto: "Coletar eventos relevantes, restringir e registrar o acesso aos logs, proteger sua integridade, definir retenção e limitar dados ao necessário para a finalidade." },
+      { letra: "A", texto: "Permitir que a conta investigada apague seus próprios registros sem gerar alerta." },
       { letra: "B", texto: "Guardar todos os dados indefinidamente e permitir acesso irrestrito para facilitar auditorias." },
-      { letra: "C", texto: "Permitir que a conta investigada apague seus próprios registros sem gerar alerta." },
+      { letra: "C", texto: "Coletar eventos relevantes, restringir e registrar o acesso aos logs, proteger sua integridade, definir retenção e limitar dados ao necessário para a finalidade." },
       { letra: "D", texto: "Coletar apenas eventos bem-sucedidos e descartar todas as falhas de autenticação." },
       { letra: "E", texto: "Substituir os logs por relatos verbais sem horário, autoria ou contexto." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Logs ajudam na detecção, investigação, auditoria e reconstrução de eventos quando sua coleta é adequada e os registros são protegidos. O desenho deve restringir acessos, detectar alterações, sincronizar horários, definir retenção e considerar minimização e proteção de dados pessoais. Mais coleta e retenção não significam automaticamente melhor segurança.",
     analise: {
-      A: "CORRETA. A alternativa equilibra utilidade investigativa, integridade, controle de acesso, retenção e minimização.",
+      A: "INCORRETA. A possibilidade de apagar evidências sem detecção compromete a confiabilidade dos registros.",
       B: "INCORRETA. Retenção indefinida e acesso irrestrito ampliam riscos de privacidade e adulteração.",
-      C: "INCORRETA. A possibilidade de apagar evidências sem detecção compromete a confiabilidade dos registros.",
+      C: "CORRETA. A alternativa equilibra utilidade investigativa, integridade, controle de acesso, retenção e minimização.",
       D: "INCORRETA. Falhas de autenticação podem ser essenciais para detectar ataques.",
       E: "INCORRETA. Relatos verbais não substituem registros estruturados e rastreáveis."
     },
@@ -499,19 +499,19 @@ const moduleQuestions4 = [
     enunciado: "Qual ação aplica melhor o princípio do menor privilégio?",
     alternativas: [
       { letra: "A", texto: "Manter as permissões antigas para evitar solicitações de acesso no futuro." },
-      { letra: "B", texto: "Revisar o perfil conforme as tarefas atuais, remover permissões desnecessárias e manter processo formal para conceder exceções justificadas." },
+      { letra: "B", texto: "Negar permanentemente qualquer acesso, independentemente das responsabilidades da servidora." }
       { letra: "C", texto: "Conceder acesso administrativo a todos os integrantes da equipe." },
       { letra: "D", texto: "Compartilhar uma conta com permissões amplas para facilitar a substituição entre funcionários." },
-      { letra: "E", texto: "Negar permanentemente qualquer acesso, independentemente das responsabilidades da servidora." }
+      { letra: "E", texto: "Revisar o perfil conforme as tarefas atuais, remover permissões desnecessárias e manter processo formal para conceder exceções justificadas." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "O menor privilégio exige que as permissões correspondam às tarefas e responsabilidades atuais. Mudanças de função devem acionar revisão de acesso, remoção de permissões desnecessárias e registro das exceções aprovadas. Contas individuais e revisões periódicas melhoram a rastreabilidade e reduzem o impacto de credenciais comprometidas.",
     analise: {
       A: "INCORRETA. Permissões obsoletas mantêm acesso além da necessidade atual.",
-      B: "CORRETA. A alternativa ajusta as permissões à função e prevê tratamento controlado de exceções.",
+      B: "INCORRETA. Menor privilégio limita o acesso ao necessário; não significa negar todo acesso."
       C: "INCORRETA. Acesso administrativo generalizado viola o menor privilégio.",
       D: "INCORRETA. Contas compartilhadas enfraquecem a atribuição individual e ampliam o acesso.",
-      E: "INCORRETA. Menor privilégio limita o acesso ao necessário; não significa negar todo acesso."
+      E: "CORRETA. A alternativa ajusta as permissões à função e prevê tratamento controlado de exceções.",
     },
     regra: "Revise permissões quando funções mudam, remova acessos obsoletos e conceda exceções por processo formal.",
     pegadinha: "Menor privilégio não é acesso zero; é conceder o acesso necessário e nenhum privilégio desnecessário.",
@@ -522,18 +522,18 @@ const moduleQuestions4 = [
     contexto: "Uma pessoa recebe uma mensagem que imita seu banco, cria urgência e direciona para uma página que solicita senha e código de autenticação.",
     enunciado: "Qual característica indica uma tentativa de phishing?",
     alternativas: [
-      { letra: "A", texto: "A mensagem tenta induzir a pessoa a revelar informações, abrir um link malicioso ou executar uma ação por meio de engano." },
+      { letra: "A", texto: "O phishing consiste exclusivamente em criptografar arquivos locais." },
       { letra: "B", texto: "A mensagem foi enviada por um canal eletrônico, o que por si só prova que é fraudulenta." },
-      { letra: "C", texto: "O phishing consiste exclusivamente em criptografar arquivos locais." },
+      { letra: "C", texto: "A mensagem tenta induzir a pessoa a revelar informações, abrir um link malicioso ou executar uma ação por meio de engano." },
       { letra: "D", texto: "A mensagem é legítima sempre que contém o logotipo correto da instituição." },
       { letra: "E", texto: "O ataque só existe quando há erros ortográficos evidentes." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Phishing é uma forma de engenharia social que usa mensagens, páginas ou outros meios enganosos para induzir a vítima a revelar informações, abrir conteúdo malicioso ou realizar ações que favoreçam o atacante. Logotipos e linguagem correta podem ser copiados; a avaliação deve considerar remetente, destino, contexto e solicitações incomuns, com verificação por canal independente.",
     analise: {
-      A: "CORRETA. A característica central é a indução por engano a revelar dados ou executar ações prejudiciais.",
+      A: "INCORRETA. Criptografar arquivos pode ocorrer em ransomware, mas não define phishing.",
       B: "INCORRETA. O meio eletrônico, por si só, não determina fraude.",
-      C: "INCORRETA. Criptografar arquivos pode ocorrer em ransomware, mas não define phishing.",
+      C: "CORRETA. A característica central é a indução por engano a revelar dados ou executar ações prejudiciais.",
       D: "INCORRETA. Logotipos podem ser copiados e não autenticam a origem.",
       E: "INCORRETA. Mensagens fraudulentas podem ser bem escritas e personalizadas."
     },
@@ -546,18 +546,18 @@ const moduleQuestions4 = [
     contexto: "Uma pessoa digita corretamente o endereço de um serviço conhecido, mas é direcionada a uma página fraudulenta por uma alteração indevida na resolução do nome ou na configuração do dispositivo.",
     enunciado: "Qual descrição é mais compatível com pharming?",
     alternativas: [
-      { letra: "A", texto: "Manipular a resolução de nomes ou outra infraestrutura de direcionamento para levar a vítima a um destino fraudulento, mesmo sem erro de digitação." },
+      { letra: "A", texto: "Aumentar a velocidade legítima de resolução de DNS." },
       { letra: "B", texto: "Enviar exclusivamente uma mensagem de e-mail com erro ortográfico." },
-      { letra: "C", texto: "Aumentar a velocidade legítima de resolução de DNS." },
+      { letra: "C", texto: "Manipular a resolução de nomes ou outra infraestrutura de direcionamento para levar a vítima a um destino fraudulento, mesmo sem erro de digitação." },
       { letra: "D", texto: "Bloquear mensagens de spam por meio de um filtro de e-mail." },
       { letra: "E", texto: "Gerar tráfego autorizado para testar a capacidade de um servidor." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "Pharming descreve técnicas de redirecionamento da vítima para um destino fraudulento, por exemplo mediante manipulação de DNS ou de configurações locais. A técnica pode ocorrer sem que a vítima clique em um link enganoso ou digite incorretamente o endereço. O mecanismo específico deve ser investigado; não se deve equiparar pharming a qualquer ataque de intermediário.",
     analise: {
-      A: "CORRETA. A alternativa descreve redirecionamento técnico para destino fraudulento, inclusive por manipulação de resolução de nomes.",
+      A: "INCORRETA. Pharming não é uma melhoria de desempenho do DNS.",
       B: "INCORRETA. E-mail com erro ortográfico é um possível veículo de phishing, não a definição de pharming.",
-      C: "INCORRETA. Pharming não é uma melhoria de desempenho do DNS.",
+      C: "CORRETA. A alternativa descreve redirecionamento técnico para destino fraudulento, inclusive por manipulação de resolução de nomes.",
       D: "INCORRETA. Filtro de spam é um controle defensivo.",
       E: "INCORRETA. Teste autorizado de capacidade não é pharming."
     },
@@ -571,19 +571,19 @@ const moduleQuestions4 = [
     enunciado: "Qual resposta aplica melhor uma defesa contra engenharia social?",
     alternativas: [
       { letra: "A", texto: "Fornecer o código porque o solicitante conhece o cargo e o nome do servidor." },
-      { letra: "B", texto: "Interromper a interação e confirmar a solicitação por um canal institucional independente já conhecido, sem compartilhar o código." },
+      { letra: "B", texto: "Publicar o código em um canal interno para que outras pessoas confirmem se é válido." }
       { letra: "C", texto: "Enviar o código, mas solicitar que o suporte prometa não reutilizá-lo." },
       { letra: "D", texto: "Confiar na solicitação sempre que houver urgência e linguagem profissional." },
-      { letra: "E", texto: "Publicar o código em um canal interno para que outras pessoas confirmem se é válido." }
+      { letra: "E", texto: "Interromper a interação e confirmar a solicitação por um canal institucional independente já conhecido, sem compartilhar o código." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "Engenharia social explora confiança, autoridade, urgência, familiaridade ou medo para induzir ações. Dados reais sobre a vítima não autenticam o solicitante. Códigos de uso único e outros segredos de autenticação não devem ser compartilhados; solicitações sensíveis devem ser confirmadas por um canal independente e reportadas conforme o procedimento institucional.",
     analise: {
       A: "INCORRETA. Conhecer dados do servidor não prova a identidade do solicitante.",
-      B: "CORRETA. A confirmação independente evita depender do mesmo canal potencialmente fraudulento.",
+      B: "INCORRETA. Publicar o código expõe a credencial e amplia o risco."
       C: "INCORRETA. Um código de autenticação é segredo temporário e não deve ser compartilhado.",
       D: "INCORRETA. Urgência e linguagem profissional podem ser usadas para manipular a vítima.",
-      E: "INCORRETA. Publicar o código expõe a credencial e amplia o risco."
+      E: "CORRETA. A confirmação independente evita depender do mesmo canal potencialmente fraudulento.",
     },
     regra: "Confirme pedidos sensíveis por canal independente e nunca compartilhe códigos de autenticação.",
     pegadinha: "Conhecimento de dados pessoais ou linguagem profissional não comprova identidade nem legitimidade.",
@@ -594,19 +594,19 @@ const moduleQuestions4 = [
     contexto: "Um serviço observa tentativas automatizadas de adivinhar senhas. A equipe precisa diferenciar ataques online contra o serviço de tentativas offline contra hashes de senhas obtidos indevidamente.",
     enunciado: "Qual afirmação sobre força bruta e suas mitigações é correta?",
     alternativas: [
-      { letra: "A", texto: "Força bruta testa sistematicamente combinações candidatas; limites de tentativa ajudam em ataques online, enquanto hashes de senha robustos e parâmetros de custo ajudam a dificultar ataques offline." },
+      { letra: "A", texto: "O armazenamento de senhas em texto claro é a melhor forma de detectar força bruta." },
       { letra: "B", texto: "Força bruta é uma técnica de autenticação sem senha." },
       { letra: "C", texto: "A limitação de tentativas no site impede qualquer tentativa offline contra hashes roubados." },
-      { letra: "D", texto: "O armazenamento de senhas em texto claro é a melhor forma de detectar força bruta." },
+      { letra: "D", texto: "Força bruta testa sistematicamente combinações candidatas; limites de tentativa ajudam em ataques online, enquanto hashes de senha robustos e parâmetros de custo ajudam a dificultar ataques offline." },
       { letra: "E", texto: "Força bruta não pode ser mitigada por nenhum controle." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Força bruta envolve testar sistematicamente combinações candidatas para encontrar uma senha ou chave. Em ataques online, limitação adaptativa, detecção, MFA e controles de autenticação reduzem oportunidades; em ataques offline, o atacante testa candidatos contra material obtido, por isso o armazenamento de senhas deve usar esquemas adequados com sal e custo. Nenhuma medida isolada garante bloqueio absoluto.",
     analise: {
-      A: "CORRETA. A alternativa diferencia os cenários online e offline e associa controles adequados a cada um.",
+      A: "INCORRETA. Senhas não devem ser armazenadas em texto claro; detecção não justifica expor credenciais.",
       B: "INCORRETA. Autenticação sem senha é um mecanismo de autenticação, não um ataque de força bruta.",
       C: "INCORRETA. O atacante offline pode testar candidatos sem consultar o serviço online.",
-      D: "INCORRETA. Senhas não devem ser armazenadas em texto claro; detecção não justifica expor credenciais.",
+      D: "CORRETA. A alternativa diferencia os cenários online e offline e associa controles adequados a cada um.",
       E: "INCORRETA. Controles diferentes reduzem a viabilidade e o impacto, embora não garantam risco zero."
     },
     regra: "Ataques online exigem controles no serviço; ataques offline exigem armazenamento de senha resistente a tentativas e proteção do material obtido.",
@@ -619,19 +619,19 @@ const moduleQuestions4 = [
     enunciado: "Qual medida ajuda a impedir que o cliente aceite um intermediário fraudulento?",
     alternativas: [
       { letra: "A", texto: "Ignorar avisos de certificado para manter o acesso disponível." },
-      { letra: "B", texto: "Validar corretamente o certificado, a cadeia de confiança e o nome do servidor, usando um protocolo seguro configurado de forma adequada." },
+      { letra: "B", texto: "Presumir que o uso de criptografia torna impossível um ataque de intermediário, mesmo com validação desativada." }
       { letra: "C", texto: "Usar apenas um firewall local e dispensar a autenticação do servidor." },
       { letra: "D", texto: "Confiar em qualquer rede Wi-Fi que exija senha." },
-      { letra: "E", texto: "Presumir que o uso de criptografia torna impossível um ataque de intermediário, mesmo com validação desativada." }
+      { letra: "E", texto: "Validar corretamente o certificado, a cadeia de confiança e o nome do servidor, usando um protocolo seguro configurado de forma adequada." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "Um ataque Man-in-the-Middle (MitM) pode permitir que um intermediário observe ou altere a comunicação. Um protocolo criptográfico corretamente configurado e a validação do certificado e do nome do servidor ajudam a autenticar o endpoint e proteger o canal. Ignorar avisos ou desativar validação pode permitir que a conexão criptografada seja estabelecida com o endpoint errado.",
     analise: {
       A: "INCORRETA. Ignorar avisos pode eliminar uma defesa importante contra certificados inválidos.",
-      B: "CORRETA. A validação de identidade é essencial para evitar confiar em um intermediário fraudulento.",
+      B: "INCORRETA. Criptografia sem validação correta de identidade pode proteger um canal com o endpoint errado."
       C: "INCORRETA. Firewall local não substitui a autenticação do servidor no canal.",
       D: "INCORRETA. Uma rede Wi-Fi protegida por senha não é necessariamente confiável.",
-      E: "INCORRETA. Criptografia sem validação correta de identidade pode proteger um canal com o endpoint errado."
+      E: "CORRETA. A validação de identidade é essencial para evitar confiar em um intermediário fraudulento.",
     },
     regra: "Criptografia de canal deve ser acompanhada de validação correta da identidade do servidor.",
     pegadinha: "Criptografia sem validação do endpoint não garante que a conexão foi estabelecida com o servidor pretendido.",
@@ -643,19 +643,19 @@ const moduleQuestions4 = [
     enunciado: "Qual resposta técnica inicial é mais adequada para um possível ataque de negação de serviço distribuído (DDoS)?",
     alternativas: [
       { letra: "A", texto: "Desligar permanentemente todos os serviços e descartar os registros de tráfego." },
-      { letra: "B", texto: "Validar a anomalia com telemetria, acionar o provedor e os controles de mitigação disponíveis, priorizar serviços essenciais e preservar evidências." },
+      { letra: "B", texto: "Desativar monitoramento e alertas para reduzir a carga do sistema." }
       { letra: "C", texto: "Aumentar indiscriminadamente todos os limites de conexão, sem observar a capacidade da infraestrutura." },
       { letra: "D", texto: "Presumir que o tráfego é legítimo porque vem de muitos endereços IP diferentes." },
-      { letra: "E", texto: "Desativar monitoramento e alertas para reduzir a carga do sistema." }
+      { letra: "E", texto: "Validar a anomalia com telemetria, acionar o provedor e os controles de mitigação disponíveis, priorizar serviços essenciais e preservar evidências." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "DoS busca degradar ou interromper a disponibilidade; DDoS envolve origens distribuídas. A resposta depende do vetor e da arquitetura e pode incluir validação por telemetria, coordenação com provedores, filtragem ou mitigação especializada, priorização de serviços e preservação de evidências. Não há uma medida única que resolva todos os ataques.",
     analise: {
       A: "INCORRETA. Desligamento indiscriminado e descarte de registros podem ampliar o impacto e prejudicar a investigação.",
-      B: "CORRETA. A resposta combina análise, mitigação coordenada, priorização de serviços e preservação de evidências.",
+      B: "INCORRETA. Desativar monitoramento reduz a visibilidade durante o incidente."
       C: "INCORRETA. Aumentar limites sem análise pode sobrecarregar ainda mais a infraestrutura.",
       D: "INCORRETA. A distribuição de origens é compatível com DDoS e não prova legitimidade.",
-      E: "INCORRETA. Desativar monitoramento reduz a visibilidade durante o incidente."
+      E: "CORRETA. A resposta combina análise, mitigação coordenada, priorização de serviços e preservação de evidências.",
     },
     regra: "DDoS visa degradar disponibilidade com tráfego ou solicitações distribuídas; a mitigação deve ser orientada por telemetria, vetor e capacidade.",
     pegadinha: "Muitas origens não significam necessariamente tráfego legítimo; investigue o padrão e coordene a mitigação.",
@@ -666,19 +666,19 @@ const moduleQuestions4 = [
     contexto: "Uma agência pública descobre que um repositório foi configurado como público e pode ter exposto dados pessoais a pessoas não autorizadas.",
     enunciado: "Qual é a resposta inicial mais adequada após identificar a possível exposição?",
     alternativas: [
-      { letra: "A", texto: "Restringir o acesso indevido, preservar registros e evidências, avaliar o escopo e o impacto e acionar os responsáveis para cumprir os procedimentos de resposta e as obrigações aplicáveis." },
+      { letra: "A", texto: "Divulgar a lista de pessoas afetadas e seus dados para demonstrar transparência." },
       { letra: "B", texto: "Apagar imediatamente todos os dados e logs sem preservar evidências." },
       { letra: "C", texto: "Aguardar uma reclamação pública antes de investigar." },
-      { letra: "D", texto: "Divulgar a lista de pessoas afetadas e seus dados para demonstrar transparência." },
+      { letra: "D", texto: "Restringir o acesso indevido, preservar registros e evidências, avaliar o escopo e o impacto e acionar os responsáveis para cumprir os procedimentos de resposta e as obrigações aplicáveis." },
       { letra: "E", texto: "Presumir que não houve incidente porque a exposição resultou de configuração, e não de invasão." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Uma exposição não autorizada pode constituir incidente mesmo quando decorre de erro de configuração, sem invasão comprovada. A resposta deve restringir o acesso indevido, preservar evidências, avaliar dados e pessoas potencialmente afetados, documentar decisões e acionar responsáveis jurídicos, de privacidade e de segurança para determinar notificações e outras obrigações conforme o caso.",
     analise: {
-      A: "CORRETA. A alternativa combina contenção, preservação, avaliação e escalonamento para decidir as medidas aplicáveis.",
+      A: "INCORRETA. Divulgar dados das pessoas afetadas pode agravar a exposição.",
       B: "INCORRETA. A exclusão indiscriminada pode destruir evidências e não substitui contenção segura.",
       C: "INCORRETA. A organização deve investigar prontamente, sem depender de reclamação pública.",
-      D: "INCORRETA. Divulgar dados das pessoas afetadas pode agravar a exposição.",
+      D: "CORRETA. A alternativa combina contenção, preservação, avaliação e escalonamento para decidir as medidas aplicáveis.",
       E: "INCORRETA. Uma configuração incorreta pode expor dados sem exploração ativa e ainda assim exigir resposta."
     },
     regra: "Em possível exposição de dados, contenha, preserve evidências, avalie escopo/impacto e acione responsáveis para definir obrigações e comunicações.",
@@ -690,19 +690,19 @@ const moduleQuestions4 = [
     contexto: "Um serviço aceita uma mensagem de autorização capturada anteriormente, embora ela tenha sido enviada em uma sessão legítima no passado.",
     enunciado: "Qual propriedade ou mecanismo ajuda a reduzir o risco de um ataque de repetição (replay)?",
     alternativas: [
-      { letra: "A", texto: "Usar nonces, números de sequência, timestamps ou identificadores de sessão validados para rejeitar mensagens repetidas ou fora de contexto." },
+      { letra: "A", texto: "Confiar apenas no endereço IP de origem, sem verificar a sessão ou a mensagem." },
       { letra: "B", texto: "Reutilizar indefinidamente a mesma mensagem de autorização, pois ela foi válida uma vez." },
       { letra: "C", texto: "Desativar autenticação para evitar que mensagens sejam rejeitadas." },
-      { letra: "D", texto: "Confiar apenas no endereço IP de origem, sem verificar a sessão ou a mensagem." },
+      { letra: "D", texto: "Usar nonces, números de sequência, timestamps ou identificadores de sessão validados para rejeitar mensagens repetidas ou fora de contexto." },
       { letra: "E", texto: "Aumentar o tamanho dos arquivos transmitidos." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Um ataque de repetição reapresenta mensagens ou transações válidas capturadas anteriormente. Protocolos podem usar nonces, números de sequência, timestamps, expiração e vinculação à sessão para detectar duplicação ou contexto inválido. Esses mecanismos precisam ser validados corretamente e não substituem a proteção geral do protocolo.",
     analise: {
-      A: "CORRETA. Valores únicos e controles temporais ou de sequência permitem detectar mensagens repetidas ou fora de contexto.",
+      A: "INCORRETA. Endereços IP podem ser compartilhados, alterados ou falsificados e não provam validade da transação.",
       B: "INCORRETA. Uma mensagem válida no passado não deve ser automaticamente aceita de novo.",
       C: "INCORRETA. Desativar autenticação enfraquece a proteção contra abuso.",
-      D: "INCORRETA. Endereços IP podem ser compartilhados, alterados ou falsificados e não provam validade da transação.",
+      D: "CORRETA. Valores únicos e controles temporais ou de sequência permitem detectar mensagens repetidas ou fora de contexto.",
       E: "INCORRETA. O tamanho do arquivo não previne replay."
     },
     regra: "Replay é a reutilização de mensagem/transação capturada; use mecanismos de frescor e vinculação ao contexto previstos pelo protocolo.",
@@ -714,19 +714,19 @@ const moduleQuestions4 = [
     contexto: "Um analista encontra um hash de arquivo suspeito, conexões com um domínio associado a malware e uma sequência incomum de processos em um endpoint.",
     enunciado: "Como os indicadores de comprometimento (IoCs) devem ser usados na investigação?",
     alternativas: [
-      { letra: "A", texto: "Como evidências que orientam a investigação e a correlação, avaliadas no contexto e atualizadas conforme novas informações." },
+      { letra: "A", texto: "Como substitutos de registros, análise e confirmação do incidente." },
       { letra: "B", texto: "Como prova isolada e definitiva de que todo sistema que contém o indicador está comprometido." },
       { letra: "C", texto: "Como ferramentas que removem automaticamente qualquer malware." },
-      { letra: "D", texto: "Como substitutos de registros, análise e confirmação do incidente." },
+      { letra: "D", texto: "Como evidências que orientam a investigação e a correlação, avaliadas no contexto e atualizadas conforme novas informações." },
       { letra: "E", texto: "Como métricas exclusivamente de desempenho de rede." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "IoCs são artefatos ou padrões observáveis que podem indicar comprometimento, como hashes, domínios, endereços, artefatos de host ou padrões de comportamento. Um indicador pode ser compartilhado por atividade legítima, ficar desatualizado ou ter baixa especificidade; deve ser correlacionado com outras evidências e com o contexto antes de concluir que ocorreu comprometimento.",
     analise: {
-      A: "CORRETA. IoCs ajudam a orientar busca e correlação, mas precisam de contexto e validação.",
+      A: "INCORRETA. A investigação exige registros, análise e confirmação conforme a evidência disponível.",
       B: "INCORRETA. Um indicador isolado não é necessariamente prova conclusiva e pode gerar falsos positivos.",
       C: "INCORRETA. IoCs são evidências ou padrões; não são, por si, ferramentas de remediação.",
-      D: "INCORRETA. A investigação exige registros, análise e confirmação conforme a evidência disponível.",
+      D: "CORRETA. IoCs ajudam a orientar busca e correlação, mas precisam de contexto e validação.",
       E: "INCORRETA. IoCs não se limitam a métricas de desempenho."
     },
     regra: "IoCs são pistas técnicas para orientar detecção e investigação; correlacione indicadores com contexto e outras evidências.",
@@ -738,19 +738,19 @@ const moduleQuestions4 = [
     contexto: "Uma organização instala uma atualização legítima de um fornecedor, mas depois descobre que o mecanismo de distribuição ou o processo de desenvolvimento foi comprometido.",
     enunciado: "Qual cenário caracteriza um ataque à cadeia de suprimentos de software?",
     alternativas: [
-      { letra: "A", texto: "Comprometer um fornecedor, dependência, processo de construção ou canal de distribuição para atingir organizações que confiam no componente ou atualização." },
+      { letra: "A", texto: "Realizar uma cópia de segurança testada antes de uma implantação." },
       { letra: "B", texto: "Executar exclusivamente um ataque de força bruta contra uma única conta de usuário." },
       { letra: "C", texto: "Aplicar uma atualização oficial verificada e autorizada conforme o processo de gestão de mudanças." },
-      { letra: "D", texto: "Realizar uma cópia de segurança testada antes de uma implantação." },
+      { letra: "D", texto: "Comprometer um fornecedor, dependência, processo de construção ou canal de distribuição para atingir organizações que confiam no componente ou atualização." },
       { letra: "E", texto: "Monitorar logs para identificar mudanças não autorizadas." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Ataques à cadeia de suprimentos comprometem um fornecedor, dependência, ferramenta, ambiente de build ou canal de distribuição para alcançar organizações que confiam nesses componentes. A defesa pode incluir inventário de dependências, revisão de fornecedores, proteção do pipeline, verificação de assinaturas e proveniência, segregação de funções e monitoramento; nenhuma medida isolada elimina todo o risco.",
     analise: {
-      A: "CORRETA. A alternativa descreve o comprometimento de um elo confiável para afetar consumidores do software ou serviço.",
+      A: "INCORRETA. Backup testado é uma prática de recuperação, não um ataque à cadeia de suprimentos.",
       B: "INCORRETA. Força bruta contra uma conta não caracteriza, por si, ataque à cadeia de suprimentos.",
       C: "INCORRETA. Uma atualização autorizada e verificada faz parte da gestão legítima de mudanças.",
-      D: "INCORRETA. Backup testado é uma prática de recuperação, não um ataque à cadeia de suprimentos.",
+      D: "CORRETA. A alternativa descreve o comprometimento de um elo confiável para afetar consumidores do software ou serviço.",
       E: "INCORRETA. Monitoramento de logs é um controle defensivo."
     },
     regra: "Ataque à cadeia de suprimentos compromete fornecedor, dependência, pipeline ou distribuição para alcançar consumidores que confiam no componente.",
@@ -764,19 +764,19 @@ const moduleQuestions4 = [
     enunciado: "À luz da LGPD, qual prática está alinhada aos princípios que regem o tratamento de dados pessoais?",
     alternativas: [
       { letra: "A", texto: "Coletar todos os dados que possam ser úteis no futuro, mesmo sem finalidade definida." },
-      { letra: "B", texto: "Definir finalidades legítimas e específicas, limitar a coleta ao necessário e informar o titular de modo adequado." },
+      { letra: "B", texto: "Conservar os dados indefinidamente, pois a LGPD proíbe a eliminação de registros." }
       { letra: "C", texto: "Tratar qualquer dado pessoal apenas com consentimento, independentemente da hipótese legal aplicável." },
       { letra: "D", texto: "Publicar os dados pessoais para demonstrar transparência, mesmo quando não houver base legal para divulgação." },
-      { letra: "E", texto: "Conservar os dados indefinidamente, pois a LGPD proíbe a eliminação de registros." }
+      { letra: "E", texto: "Definir finalidades legítimas e específicas, limitar a coleta ao necessário e informar o titular de modo adequado." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "A LGPD estabelece princípios como finalidade, adequação, necessidade e transparência (art. 6º). A organização deve definir propósitos legítimos e específicos, limitar os dados ao mínimo pertinente e fornecer informações claras sobre o tratamento. Consentimento é uma das bases legais, não a única; a existência de dados pessoais não autoriza divulgação pública indiscriminada nem conservação sem limite.",
     analise: {
       A: "INCORRETA. A coleta deve observar finalidade, adequação e necessidade; utilidade futura genérica não justifica acumular dados sem limite.",
-      B: "CORRETA. A alternativa aplica finalidade específica, minimização e transparência, em conformidade com os princípios do art. 6º.",
+      B: "INCORRETA. A conservação deve respeitar a finalidade e as hipóteses legais; a LGPD prevê eliminação quando cabível, ressalvadas as exceções legais."
       C: "INCORRETA. A LGPD prevê diferentes bases legais, cuja aplicabilidade depende do contexto; consentimento não é obrigatório em todo tratamento.",
       D: "INCORRETA. Transparência no tratamento não significa divulgação pública irrestrita de dados pessoais.",
-      E: "INCORRETA. A conservação deve respeitar a finalidade e as hipóteses legais; a LGPD prevê eliminação quando cabível, ressalvadas as exceções legais."
+      E: "CORRETA. A alternativa aplica finalidade específica, minimização e transparência, em conformidade com os princípios do art. 6º.",
     },
     regra: "Princípios da LGPD incluem finalidade, adequação, necessidade, transparência, segurança, prevenção, não discriminação e responsabilização, entre outros do art. 6º.",
     pegadinha: "Base legal não é sinônimo de consentimento; transparência não significa tornar dados pessoais públicos.",
@@ -814,19 +814,19 @@ const moduleQuestions4 = [
     enunciado: "Antes de iniciar esse tratamento, qual análise é mais adequada à LGPD?",
     alternativas: [
       { letra: "A", texto: "Considerar que a existência de cadastro torna qualquer uso posterior dos dados automaticamente permitido." },
-      { letra: "B", texto: "Identificar uma base legal aplicável à finalidade, avaliar necessidade e compatibilidade do uso, cumprir deveres de transparência e respeitar os direitos dos titulares." },
+      { letra: "B", texto: "Dispensar medidas de segurança quando os dados forem utilizados apenas para publicidade." }
       { letra: "C", texto: "Compartilhar os dados com qualquer parceiro comercial, pois o marketing é uma finalidade econômica." },
       { letra: "D", texto: "Exigir consentimento em todos os casos, sem analisar as demais bases legais previstas na LGPD." },
-      { letra: "E", texto: "Dispensar medidas de segurança quando os dados forem utilizados apenas para publicidade." }
+      { letra: "E", texto: "Identificar uma base legal aplicável à finalidade, avaliar necessidade e compatibilidade do uso, cumprir deveres de transparência e respeitar os direitos dos titulares." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "O uso de dados para marketing não é automaticamente autorizado pela existência de cadastro. O controlador deve identificar uma base legal válida para a finalidade concreta, observar os princípios do art. 6º, informar o titular de forma adequada e implementar medidas de segurança. Se invocar legítimo interesse, deve avaliar finalidade, necessidade, expectativas e direitos e liberdades do titular, documentando a análise; essa hipótese não se aplica a dados pessoais sensíveis nos termos do art. 11.",
     analise: {
       A: "INCORRETA. A coleta inicial não autoriza qualquer reutilização; a finalidade e a base legal do novo tratamento precisam ser avaliadas.",
-      B: "CORRETA. A alternativa reúne base legal, finalidade, necessidade, transparência e respeito aos direitos, sem presumir autorização automática.",
+      B: "INCORRETA. As obrigações de segurança não desaparecem porque o uso é publicitário."
       C: "INCORRETA. O compartilhamento exige análise de finalidade, base legal, transparência e salvaguardas aplicáveis.",
       D: "INCORRETA. Consentimento é uma das bases legais; a base apropriada depende do caso e deve ser demonstrável.",
-      E: "INCORRETA. As obrigações de segurança não desaparecem porque o uso é publicitário."
+      E: "CORRETA. A alternativa reúne base legal, finalidade, necessidade, transparência e respeito aos direitos, sem presumir autorização automática.",
     },
     regra: "Para cada finalidade de tratamento, identifique e documente a base legal e observe finalidade, necessidade, transparência, segurança e direitos do titular.",
     pegadinha: "Legítimo interesse não é autorização genérica para marketing; exige avaliação concreta e não serve como base do art. 11 para dados pessoais sensíveis.",
@@ -888,19 +888,19 @@ const moduleQuestions4 = [
     contexto: "Após apurar uma infração à LGPD, uma organização questiona se a ANPD pode adotar medidas administrativas ou se a proteção de dados é matéria exclusivamente judicial.",
     enunciado: "Qual afirmação descreve melhor a competência da ANPD quanto à fiscalização e às sanções previstas na LGPD?",
     alternativas: [
-      { letra: "A", texto: "A ANPD pode fiscalizar o cumprimento da LGPD e aplicar as sanções administrativas previstas em lei, observados o procedimento aplicável e os limites legais." },
+      { letra: "A", texto: "A competência da ANPD elimina todas as competências do Poder Judiciário e de outras autoridades legalmente competentes." },
       { letra: "B", texto: "A ANPD só pode publicar recomendações e nunca pode fiscalizar ou sancionar agentes de tratamento." },
       { letra: "C", texto: "A ANPD pode impor qualquer penalidade, mesmo que não esteja prevista na legislação." },
-      { letra: "D", texto: "A competência da ANPD elimina todas as competências do Poder Judiciário e de outras autoridades legalmente competentes." },
+      { letra: "D", texto: "A ANPD pode fiscalizar o cumprimento da LGPD e aplicar as sanções administrativas previstas em lei, observados o procedimento aplicável e os limites legais." },
       { letra: "E", texto: "A ANPD só pode fiscalizar empresas privadas, nunca operações realizadas pelo Poder Público." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "A LGPD atribui à ANPD competências de fiscalização e de aplicação das sanções administrativas legalmente previstas. O exercício dessas competências deve respeitar a lei, o procedimento aplicável e as garantias pertinentes; a atuação administrativa não elimina as atribuições judiciais ou de outras autoridades nos respectivos âmbitos. A ANPD também possui competências relativas a tratamentos realizados pelo Poder Público.",
     analise: {
-      A: "CORRETA. A fiscalização e a aplicação das sanções previstas na LGPD integram as competências legais da ANPD, sujeitas aos limites e procedimentos aplicáveis.",
+      A: "INCORRETA. A competência administrativa da ANPD não elimina as atribuições do Judiciário ou de outras autoridades.",
       B: "INCORRETA. A lei prevê competências fiscalizatórias e sancionatórias para a ANPD.",
       C: "INCORRETA. A autoridade deve atuar dentro das sanções e dos limites estabelecidos em lei.",
-      D: "INCORRETA. A competência administrativa da ANPD não elimina as atribuições do Judiciário ou de outras autoridades.",
+      D: "CORRETA. A fiscalização e a aplicação das sanções previstas na LGPD integram as competências legais da ANPD, sujeitas aos limites e procedimentos aplicáveis.",
       E: "INCORRETA. A LGPD também prevê competências da ANPD relacionadas ao tratamento de dados pelo Poder Público."
     },
     regra: "A ANPD fiscaliza o cumprimento da LGPD e aplica as sanções administrativas previstas em lei, respeitando os limites e procedimentos aplicáveis.",
@@ -914,19 +914,19 @@ const moduleQuestions4 = [
     enunciado: "Qual alternativa identifica corretamente a proteção constitucional de dados pessoais e sua relação com a LGPD?",
     alternativas: [
       { letra: "A", texto: "A CF/88 não menciona dados pessoais." },
-      { letra: "B", texto: "A Constituição protege a intimidade e a vida privada no art. 5º, X, e reconhece o direito fundamental à proteção de dados pessoais no art. 5º, LXXIX; a LGPD disciplina o tratamento desses dados." },
+      { letra: "B", texto: "A CF/88 e a LGPD são incompatíveis." }
       { letra: "C", texto: "A LGPD substitui a CF/88." },
       { letra: "D", texto: "A CF/88 é inexistente." },
-      { letra: "E", texto: "A CF/88 e a LGPD são incompatíveis." }
+      { letra: "E", texto: "A Constituição protege a intimidade e a vida privada no art. 5º, X, e reconhece o direito fundamental à proteção de dados pessoais no art. 5º, LXXIX; a LGPD disciplina o tratamento desses dados." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "O art. 5º, X, da Constituição protege a intimidade e a vida privada. O art. 5º, LXXIX, incluído pela Emenda Constitucional nº 115/2022, assegura o direito à proteção dos dados pessoais, inclusive nos meios digitais. A LGPD disciplina o tratamento de dados pessoais. Portanto, a Constituição e a LGPD são complementares, mas os dispositivos constitucionais precisam ser identificados corretamente.",
     analise: {
       A: "INCORRETA. A Constituição menciona expressamente a proteção de dados pessoais no art. 5º, LXXIX, incluído pela EC nº 115/2022.",
-      B: "CORRETA. O art. 5º, X, protege a intimidade e a vida privada; o inciso LXXIX assegura o direito à proteção de dados pessoais.",
+      B: "INCORRETA. A Constituição e a LGPD são complementares na proteção de direitos fundamentais e na disciplina do tratamento de dados pessoais."
       C: "INCORRETA. A LGPD não substitui a Constituição; as normas têm funções complementares.",
       D: "INCORRETA. A Constituição Federal de 1988 está vigente.",
-      E: "INCORRETA. A Constituição e a LGPD são complementares na proteção de direitos fundamentais e na disciplina do tratamento de dados pessoais."
+      E: "CORRETA. O art. 5º, X, protege a intimidade e a vida privada; o inciso LXXIX assegura o direito à proteção de dados pessoais.",
     },
     regra: "CF/88, art. 5º, X: intimidade e vida privada; art. 5º, LXXIX: direito fundamental à proteção de dados pessoais; LGPD: disciplina o tratamento.",
     pegadinha: "Não atribuir a proteção expressa de dados pessoais ao caput do art. 5º; o inciso LXXIX foi incluído pela EC nº 115/2022.",
@@ -938,19 +938,19 @@ const moduleQuestions4 = [
     contexto: "Uma organização define as finalidades do tratamento de dados pessoais e contrata uma empresa para executar parte das operações seguindo suas instruções.",
     enunciado: "À luz da LGPD, qual afirmação distingue corretamente controlador e operador?",
     alternativas: [
-      { letra: "A", texto: "O controlador toma as decisões referentes ao tratamento; o operador realiza o tratamento em nome do controlador, observadas as instruções e as obrigações legais aplicáveis." },
+      { letra: "A", texto: "A LGPD atribui deveres apenas ao controlador e nunca ao operador." },
       { letra: "B", texto: "O operador é sempre o titular dos dados e decide livremente as finalidades." },
       { letra: "C", texto: "A contratação de um operador transfere automaticamente ao fornecedor todas as responsabilidades legais do controlador." },
-      { letra: "D", texto: "A LGPD atribui deveres apenas ao controlador e nunca ao operador." },
+      { letra: "D", texto: "O controlador toma as decisões referentes ao tratamento; o operador realiza o tratamento em nome do controlador, observadas as instruções e as obrigações legais aplicáveis." },
       { letra: "E", texto: "Controlador e operador são sinônimos definidos pela lei." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "A LGPD distingue controlador — a quem competem as decisões referentes ao tratamento — de operador — quem realiza o tratamento em nome do controlador. Ambos podem ter deveres e responder nas hipóteses legais aplicáveis; a contratação não elimina automaticamente as obrigações do controlador nem torna os papéis equivalentes.",
     analise: {
-      A: "CORRETA. A alternativa expressa a distinção do art. 5º e reconhece que as obrigações concretas dependem da lei e do papel desempenhado.",
+      A: "INCORRETA. A LGPD prevê obrigações e hipóteses de responsabilização para operadores, além dos controladores.",
       B: "INCORRETA. Titular é a pessoa natural a quem os dados se referem; operador não é sinônimo de titular nem decide livremente as finalidades.",
       C: "INCORRETA. Contratar um operador não transfere automaticamente todas as responsabilidades legais do controlador.",
-      D: "INCORRETA. A LGPD prevê obrigações e hipóteses de responsabilização para operadores, além dos controladores.",
+      D: "CORRETA. A alternativa expressa a distinção do art. 5º e reconhece que as obrigações concretas dependem da lei e do papel desempenhado.",
       E: "INCORRETA. São papéis distintos, com definições próprias na LGPD."
     },
     regra: "Controlador decide as finalidades e os elementos essenciais do tratamento; operador trata dados em nome do controlador, dentro das atribuições e instruções aplicáveis.",
@@ -963,19 +963,19 @@ const moduleQuestions4 = [
     contexto: "Uma equipe avalia se identificadores indiretos e informações de localização estão sujeitos à LGPD.",
     enunciado: "De acordo com a definição da LGPD, qual informação se enquadra como dado pessoal?",
     alternativas: [
-      { letra: "A", texto: "Informação relacionada a pessoa natural identificada ou identificável." },
+      { letra: "A", texto: "Somente endereço residencial, nunca localização ou identificadores indiretos." },
       { letra: "B", texto: "Somente o nome completo de uma pessoa." },
       { letra: "C", texto: "Apenas informação financeira armazenada por bancos." },
-      { letra: "D", texto: "Somente endereço residencial, nunca localização ou identificadores indiretos." },
+      { letra: "D", texto: "Informação relacionada a pessoa natural identificada ou identificável." },
       { letra: "E", texto: "Qualquer dado de pessoa jurídica, mesmo sem relação com pessoa natural identificada ou identificável." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "O art. 5º, I, da LGPD define dado pessoal como informação relacionada a pessoa natural identificada ou identificável. A classificação depende do contexto e da possibilidade de associação a uma pessoa natural; não se limita a nome, endereço, e-mail ou dados financeiros. Dados de pessoa jurídica, por si sós, não são dados pessoais pela definição da LGPD, embora possam conter informações pessoais de indivíduos.",
     analise: {
-      A: "CORRETA. É a definição legal do art. 5º, I, da LGPD.",
+      A: "INCORRETA. Localização e identificadores indiretos podem ser dados pessoais conforme o contexto e a possibilidade de identificação.",
       B: "INCORRETA. Nome completo é apenas um exemplo; outros identificadores e informações relacionáveis também podem ser dados pessoais.",
       C: "INCORRETA. A definição não se restringe a dados financeiros nem a um setor específico.",
-      D: "INCORRETA. Localização e identificadores indiretos podem ser dados pessoais conforme o contexto e a possibilidade de identificação.",
+      D: "CORRETA. É a definição legal do art. 5º, I, da LGPD.",
       E: "INCORRETA. A definição legal refere-se a pessoa natural identificada ou identificável, embora registros empresariais possam conter dados pessoais de indivíduos."
     },
     regra: "Dado pessoal, para a LGPD, é informação relacionada a pessoa natural identificada ou identificável.",
@@ -1038,19 +1038,19 @@ const moduleQuestions4 = [
     contexto: "Um órgão público pretende obter de um provedor registros de conexão ou de acesso a aplicações de internet para instruir uma investigação.",
     enunciado: "Como regra, segundo o Marco Civil da Internet, a disponibilização a terceiros de registros de conexão e de acesso a aplicações de internet depende de:",
     alternativas: [
-      { letra: "A", texto: "Autorização judicial, observadas as hipóteses legais específicas e os limites do pedido." },
+      { letra: "A", texto: "Somente de uma solicitação informal feita por qualquer servidor público." },
       { letra: "B", texto: "Apenas da frequência com que a pessoa utiliza o serviço." },
       { letra: "C", texto: "Nenhuma formalidade, pois os registros são sempre públicos." },
-      { letra: "D", texto: "Somente de uma solicitação informal feita por qualquer servidor público." },
+      { letra: "D", texto: "Autorização judicial, observadas as hipóteses legais específicas e os limites do pedido." },
       { letra: "E", texto: "Da publicação prévia dos dados pelo próprio provedor, independentemente de lei." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "O art. 10 do Marco Civil da Internet estabelece salvaguardas para a guarda e disponibilização de registros e dados. O § 1º condiciona, como regra, a disponibilização dos registros de conexão e de acesso a aplicações de internet à ordem judicial, nos termos legais; o § 3º prevê regime específico para acesso a dados cadastrais por autoridades com competência legal. Por isso, a questão trata dos registros e explicita a regra geral, sem confundi-los com dados cadastrais ou sugerir acesso irrestrito.",
     analise: {
-      A: "CORRETA. A regra para disponibilização de registros é a autorização judicial, respeitadas as hipóteses legais específicas e os limites do pedido.",
+      A: "INCORRETA. Uma solicitação informal não substitui a ordem judicial exigida para a disponibilização de registros, ressalvadas as hipóteses legais específicas.",
       B: "INCORRETA. A frequência de uso não é fundamento jurídico para disponibilizar registros.",
       C: "INCORRETA. Registros não são sempre públicos; a lei prevê salvaguardas de privacidade e acesso.",
-      D: "INCORRETA. Uma solicitação informal não substitui a ordem judicial exigida para a disponibilização de registros, ressalvadas as hipóteses legais específicas.",
+      D: "CORRETA. A regra para disponibilização de registros é a autorização judicial, respeitadas as hipóteses legais específicas e os limites do pedido.",
       E: "INCORRETA. A publicação pelo provedor não é requisito nem autorização geral para disponibilizar registros."
     },
     regra: "Marco Civil, art. 10: protege a privacidade e estabelece condições legais para a disponibilização de registros; a regra geral para registros é a ordem judicial, com exceções legais específicas.",
@@ -1113,19 +1113,19 @@ const moduleQuestions4 = [
     contexto: "Uma equipe armazena documentos com dados pessoais e informações internas. O repositório permite que qualquer funcionário leia todos os arquivos, mesmo quando não precisa deles para executar suas tarefas.",
     enunciado: "Qual medida aplica melhor o princípio da confidencialidade nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Aplicar controle de acesso baseado nas funções e necessidades, revisar permissões e proteger os dados contra divulgação a pessoas não autorizadas." },
+      { letra: "A", texto: "Desativar a autenticação para evitar bloqueios de acesso." },
       { letra: "B", texto: "Permitir acesso irrestrito a todos os funcionários para garantir transparência interna." },
       { letra: "C", texto: "Publicar os documentos e confiar que os usuários não os copiarão." },
-      { letra: "D", texto: "Desativar a autenticação para evitar bloqueios de acesso." },
+      { letra: "D", texto: "Aplicar controle de acesso baseado nas funções e necessidades, revisar permissões e proteger os dados contra divulgação a pessoas não autorizadas." },
       { letra: "E", texto: "Manter permissões amplas indefinidamente, mesmo após mudanças de função." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Confidencialidade busca assegurar que informações sejam acessíveis apenas a entidades autorizadas. Controle de acesso, menor privilégio, autenticação adequada e revisão de permissões ajudam a reduzir divulgação não autorizada. A criptografia pode ser uma medida complementar, mas não substitui a gestão de identidade e autorização no uso cotidiano do repositório.",
     analise: {
-      A: "CORRETA. A alternativa limita o acesso conforme a necessidade e prevê revisão das permissões.",
+      A: "INCORRETA. Desativar autenticação reduz a capacidade de restringir o acesso a usuários autorizados.",
       B: "INCORRETA. Transparência não exige acesso irrestrito a toda informação interna.",
       C: "INCORRETA. Publicar dados aumenta a exposição e não é um controle de confidencialidade.",
-      D: "INCORRETA. Desativar autenticação reduz a capacidade de restringir o acesso a usuários autorizados.",
+      D: "CORRETA. A alternativa limita o acesso conforme a necessidade e prevê revisão das permissões.",
       E: "INCORRETA. Permissões obsoletas mantêm exposição desnecessária e violam o princípio do menor privilégio."
     },
     regra: "Confidencialidade: restringir o acesso à informação a entidades autorizadas; aplicar menor privilégio e revisar permissões.",

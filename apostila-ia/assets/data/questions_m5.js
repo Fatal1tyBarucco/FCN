@@ -13,19 +13,19 @@ const moduleQuestions5 = [
     enunciado: "Qual definição de inteligência artificial é mais adequada para analisar esses sistemas?",
     alternativas: [
       { letra: "A", texto: "Qualquer programa de computador, independentemente da tarefa ou do método utilizado." },
-      { letra: "B", texto: "Um campo que desenvolve sistemas capazes de executar tarefas associadas a capacidades como percepção, previsão, geração, raciocínio ou tomada de decisão, conforme o método e o contexto." },
+      { letra: "B", texto: "Um programa que sempre aprende sozinho e nunca utiliza regras explícitas." }
       { letra: "C", texto: "Somente robôs físicos que imitam movimentos humanos." },
       { letra: "D", texto: "Um sistema que necessariamente possui consciência e emoções humanas." },
-      { letra: "E", texto: "Um programa que sempre aprende sozinho e nunca utiliza regras explícitas." }
+      { letra: "E", texto: "Um campo que desenvolve sistemas capazes de executar tarefas associadas a capacidades como percepção, previsão, geração, raciocínio ou tomada de decisão, conforme o método e o contexto." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "IA é um campo amplo que abrange diferentes métodos para construir sistemas que realizam tarefas como percepção, previsão, geração de conteúdo, raciocínio ou apoio à decisão. Nem todo sistema de IA é um robô, tem consciência ou aprende autonomamente durante o uso. Sistemas baseados em regras e modelos treinados a partir de dados podem ambos integrar soluções de IA, dependendo de sua concepção e finalidade.",
     analise: {
       A: "INCORRETA. Nem todo programa é classificado como IA; a classificação depende do problema, das capacidades e do método do sistema.",
-      B: "CORRETA. A definição cobre diferentes tarefas e abordagens sem atribuir capacidades humanas universais.",
+      B: "INCORRETA. Há sistemas de IA baseados em regras explícitas e sistemas que aprendem com dados."
       C: "INCORRETA. IA também existe em software sem corpo físico.",
       D: "INCORRETA. Sistemas de IA não precisam ter consciência ou emoções humanas.",
-      E: "INCORRETA. Há sistemas de IA baseados em regras explícitas e sistemas que aprendem com dados."
+      E: "CORRETA. A definição cobre diferentes tarefas e abordagens sem atribuir capacidades humanas universais.",
     },
     regra: "IA é um campo de métodos e sistemas para tarefas como percepção, previsão, geração e decisão; não implica robô, consciência ou aprendizado autônomo.",
     pegadinha: "Não confunda IA com robótica, consciência ou aprendizado de máquina: são conceitos relacionados, mas não equivalentes.",
@@ -37,19 +37,19 @@ const moduleQuestions5 = [
     contexto: "Um sistema de triagem usa regras explícitas, como encaminhar solicitações com determinado código para uma fila específica. A equipe avalia se esse desenho é apropriado para as regras institucionais conhecidas.",
     enunciado: "Qual afirmação descreve melhor um sistema baseado em regras?",
     alternativas: [
-      { letra: "A", texto: "Suas decisões decorrem de regras e condições explicitamente representadas; mudanças no domínio podem exigir revisão das regras, e a abordagem pode ser combinada com métodos de aprendizado." },
+      { letra: "A", texto: "É sinônimo de rede neural treinada com milhões de parâmetros." },
       { letra: "B", texto: "Aprende necessariamente novas regras a partir de exemplos sem qualquer configuração ou intervenção." },
       { letra: "C", texto: "É incapaz de executar decisões condicionais." },
-      { letra: "D", texto: "É sinônimo de rede neural treinada com milhões de parâmetros." },
+      { letra: "D", texto: "Suas decisões decorrem de regras e condições explicitamente representadas; mudanças no domínio podem exigir revisão das regras, e a abordagem pode ser combinada com métodos de aprendizado." },
       { letra: "E", texto: "Dispensa testes, porque regras explícitas não podem conter conflitos ou lacunas." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Sistemas baseados em regras representam conhecimento por condições e ações explícitas, por exemplo regras SE–ENTÃO. Podem ser transparentes e adequados quando as regras são conhecidas, mas precisam de manutenção, testes de conflitos e tratamento de exceções. A existência de regras não impede que a solução seja combinada com modelos estatísticos ou aprendizado de máquina.",
     analise: {
-      A: "CORRETA. A alternativa descreve regras explícitas, manutenção e possibilidade de arquiteturas híbridas.",
+      A: "INCORRETA. Regras explícitas e redes neurais são abordagens diferentes, embora possam coexistir.",
       B: "INCORRETA. Aprender regras automaticamente não é uma propriedade necessária de um sistema puramente baseado em regras.",
       C: "INCORRETA. Condições e decisões são parte central desse tipo de sistema.",
-      D: "INCORRETA. Regras explícitas e redes neurais são abordagens diferentes, embora possam coexistir.",
+      D: "CORRETA. A alternativa descreve regras explícitas, manutenção e possibilidade de arquiteturas híbridas.",
       E: "INCORRETA. Regras podem entrar em conflito, ficar desatualizadas ou não cobrir exceções; testes continuam necessários."
     },
     regra: "Sistema baseado em regras aplica condições e ações explicitamente definidas; mantenha, teste e documente as regras e suas exceções.",
@@ -63,19 +63,19 @@ const moduleQuestions5 = [
     enunciado: "Qual descrição de aprendizado de máquina é mais adequada?",
     alternativas: [
       { letra: "A", texto: "Uma técnica que exige que cada decisão futura seja programada manualmente como uma regra individual." },
-      { letra: "B", texto: "Um conjunto de métodos que ajustam modelos a partir de dados ou experiência para identificar padrões e produzir previsões ou decisões, conforme o objetivo e o paradigma." },
+      { letra: "B", texto: "Uma garantia de que qualquer modelo melhora sempre que recebe mais dados, mesmo que sejam inadequados." }
       { letra: "C", texto: "Um sinônimo de armazenamento de arquivos em banco de dados." },
       { letra: "D", texto: "Uma abordagem que utiliza exclusivamente dados rotulados e não pode aprender estrutura sem rótulos." },
-      { letra: "E", texto: "Uma garantia de que qualquer modelo melhora sempre que recebe mais dados, mesmo que sejam inadequados." }
+      { letra: "E", texto: "Um conjunto de métodos que ajustam modelos a partir de dados ou experiência para identificar padrões e produzir previsões ou decisões, conforme o objetivo e o paradigma." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "Aprendizado de máquina reúne métodos que ajustam modelos a partir de dados ou experiência para executar tarefas como previsão, classificação, agrupamento ou decisão. Existem paradigmas supervisionados, não supervisionados e por reforço, entre outros. A qualidade depende da adequação dos dados, da formulação, do procedimento de treinamento e da avaliação; mais dados não garantem melhoria se forem inadequados ou enviesados.",
     analise: {
       A: "INCORRETA. Aprender padrões a partir de dados pode reduzir a necessidade de programar cada regra individual, embora a lógica explícita também seja útil em outros sistemas.",
-      B: "CORRETA. A alternativa define o ajuste de modelos a partir de dados/experiência e admite diferentes tarefas e paradigmas.",
+      B: "INCORRETA. Dados irrelevantes, enviesados ou de baixa qualidade podem não melhorar e até prejudicar o modelo."
       C: "INCORRETA. Armazenamento é distinto do treinamento de modelos.",
       D: "INCORRETA. Aprendizado não supervisionado não exige rótulos fornecidos para cada exemplo.",
-      E: "INCORRETA. Dados irrelevantes, enviesados ou de baixa qualidade podem não melhorar e até prejudicar o modelo."
+      E: "CORRETA. A alternativa define o ajuste de modelos a partir de dados/experiência e admite diferentes tarefas e paradigmas.",
     },
     regra: "Aprendizado de máquina ajusta modelos a partir de dados ou experiência; desempenho depende de dados, método, objetivo e avaliação.",
     pegadinha: "Mais dados não garantem automaticamente melhor desempenho, e aprendizado de máquina não se limita a exemplos rotulados.",
@@ -88,19 +88,19 @@ const moduleQuestions5 = [
     enunciado: "Qual procedimento reduz melhor o risco de superestimar a capacidade de generalização do modelo?",
     alternativas: [
       { letra: "A", texto: "Usar o conjunto de teste a cada ajuste de hiperparâmetros e informar o melhor resultado observado como desempenho final." },
-      { letra: "B", texto: "Treinar com o conjunto de treino, usar validação para selecionar modelos/hiperparâmetros e reservar o teste para uma avaliação final após as decisões de modelagem." },
+      { letra: "B", texto: "Ajustar o modelo no conjunto de teste e depois tratá-lo como dado independente." }
       { letra: "C", texto: "Duplicar registros entre treino e teste para garantir que os dois conjuntos tenham a mesma distribuição de exemplos." },
       { letra: "D", texto: "Escolher o modelo somente pelo desempenho no treino, pois dados não vistos não são relevantes." },
-      { letra: "E", texto: "Ajustar o modelo no conjunto de teste e depois tratá-lo como dado independente." }
+      { letra: "E", texto: "Treinar com o conjunto de treino, usar validação para selecionar modelos/hiperparâmetros e reservar o teste para uma avaliação final após as decisões de modelagem." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "O conjunto de treino ajusta os parâmetros do modelo; a validação apoia a seleção de modelos e hiperparâmetros; o teste deve permanecer separado das decisões de modelagem para fornecer uma estimativa final menos enviesada do desempenho em dados não vistos. Consultar repetidamente o teste e escolher com base nesses resultados transforma-o, na prática, em parte do processo de ajuste e pode produzir estimativas otimistas. Também é necessário prevenir vazamento de dados e respeitar dependências temporais ou por grupo na divisão.",
     analise: {
       A: "INCORRETA. A seleção repetida com base no teste adapta o processo a esse conjunto e compromete sua independência.",
-      B: "CORRETA. A separação preserva o teste para a avaliação final e reduz o risco de estimativa otimista.",
+      B: "INCORRETA. Depois de usado para ajustar decisões, o conjunto deixa de funcionar como avaliação independente."
       C: "INCORRETA. Registros duplicados entre conjuntos podem causar vazamento e inflar artificialmente o desempenho.",
       D: "INCORRETA. O desempenho no treino não estima, por si só, a generalização para dados novos.",
-      E: "INCORRETA. Depois de usado para ajustar decisões, o conjunto deixa de funcionar como avaliação independente."
+      E: "CORRETA. A separação preserva o teste para a avaliação final e reduz o risco de estimativa otimista.",
     },
     regra: "Treino ajusta parâmetros; validação orienta escolhas; teste fica reservado à avaliação final. Evite vazamento entre conjuntos.",
     pegadinha: "Um teste consultado repetidamente para escolher modelos deixa de ser uma avaliação final independente.",
@@ -112,19 +112,19 @@ const moduleQuestions5 = [
     contexto: "Um modelo obtém desempenho muito alto nos exemplos de treinamento, mas comete muito mais erros em um conjunto de avaliação que não foi usado para ajustá-lo.",
     enunciado: "Qual interpretação é mais compatível com esse resultado?",
     alternativas: [
-      { letra: "A", texto: "Há evidência de overfitting: o modelo se ajustou excessivamente às características do treino e generaliza pior para dados não vistos." },
+      { letra: "A", texto: "O modelo não possui parâmetros ajustáveis, porque há diferença entre os conjuntos." },
       { letra: "B", texto: "Há prova de underfitting, pois o modelo necessariamente falha tanto no treino quanto no teste." },
       { letra: "C", texto: "O modelo generaliza perfeitamente, pois o resultado de treino é alto." },
-      { letra: "D", texto: "O modelo não possui parâmetros ajustáveis, porque há diferença entre os conjuntos." },
+      { letra: "D", texto: "Há evidência de overfitting: o modelo se ajustou excessivamente às características do treino e generaliza pior para dados não vistos." },
       { letra: "E", texto: "O resultado demonstra que qualquer conjunto de teste está incorreto e deve ser descartado." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Overfitting ocorre quando o modelo se ajusta em excesso aos dados de treinamento, incluindo padrões específicos ou ruído que não se repetem em novos exemplos. Um sinal comum é o desempenho elevado no treino e significativamente pior na validação ou no teste. A interpretação deve considerar a representatividade dos conjuntos, possíveis mudanças de distribuição, vazamento e a métrica utilizada; a diferença observada é evidência a investigar, não diagnóstico automático em qualquer contexto.",
     analise: {
-      A: "CORRETA. O contraste entre treino muito bom e desempenho inferior em dados não vistos é compatível com overfitting.",
+      A: "INCORRETA. A diferença de desempenho não significa ausência de parâmetros; modelos ajustáveis podem sobreajustar.",
       B: "INCORRETA. Underfitting costuma aparecer como desempenho insuficiente já no treino, além de desempenho ruim fora dele.",
       C: "INCORRETA. Desempenho no treino não garante generalização.",
-      D: "INCORRETA. A diferença de desempenho não significa ausência de parâmetros; modelos ajustáveis podem sobreajustar.",
+      D: "CORRETA. O contraste entre treino muito bom e desempenho inferior em dados não vistos é compatível com overfitting.",
       E: "INCORRETA. O resultado exige investigação da avaliação e dos dados, não descarte automático do teste."
     },
     regra: "Overfitting: bom ajuste ao treino e generalização prejudicada; confirme a interpretação com dados e avaliação adequados.",
@@ -137,19 +137,19 @@ const moduleQuestions5 = [
     contexto: "Dois modelos são avaliados em diferentes amostras de treino. O modelo X apresenta erro alto tanto no treino quanto na validação; o modelo Y apresenta erro muito baixo no treino, mas varia bastante entre amostras e tem erro alto na validação.",
     enunciado: "Qual interpretação é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "X sugere subajuste (underfitting); Y sugere sobreajuste (overfitting), frequentemente associado a alta variância." },
+      { letra: "A", texto: "Erro de treino baixo garante erro baixo em dados novos." },
       { letra: "B", texto: "X necessariamente sofre overfitting; Y necessariamente sofre underfitting." },
       { letra: "C", texto: "Viés e variância são sinônimos e não afetam a generalização." },
-      { letra: "D", texto: "Erro de treino baixo garante erro baixo em dados novos." },
+      { letra: "D", texto: "X sugere subajuste (underfitting); Y sugere sobreajuste (overfitting), frequentemente associado a alta variância." },
       { letra: "E", texto: "A variância mede exclusivamente o número de atributos do conjunto de dados." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Erro elevado no treino e na validação sugere que o modelo não capturou adequadamente os padrões, situação compatível com subajuste e viés elevado. Desempenho muito bom no treino, mas fraco ou instável em dados não vistos, sugere sobreajuste e maior variância. Essa interpretação é diagnóstica, não uma identidade absoluta: os resultados também dependem da qualidade dos dados, da distribuição, da regularização e do procedimento de avaliação.",
     analise: {
-      A: "CORRETA. Os padrões de erro descritos são compatíveis, respectivamente, com subajuste e sobreajuste.",
+      A: "INCORRETA. Ajuste excelente no treino pode coexistir com desempenho ruim em dados novos.",
       B: "INCORRETA. Inverte as interpretações típicas dos padrões de treino e validação.",
       C: "INCORRETA. Viés e variância são conceitos distintos que ajudam a compreender fontes de erro e generalização.",
-      D: "INCORRETA. Ajuste excelente no treino pode coexistir com desempenho ruim em dados novos.",
+      D: "CORRETA. Os padrões de erro descritos são compatíveis, respectivamente, com subajuste e sobreajuste.",
       E: "INCORRETA. Variância não é o número de atributos; refere-se, nesse contexto, à sensibilidade do modelo aos dados de treinamento."
     },
     regra: "Erro alto no treino e validação sugere subajuste; treino muito bom e validação ruim ou instável sugere sobreajuste/alta variância.",
@@ -163,19 +163,19 @@ const moduleQuestions5 = [
     enunciado: "Sobre explicabilidade em inteligência artificial (XAI), é correto afirmar que:",
     alternativas: [
       { letra: "A", texto: "Uma explicação local de uma previsão garante que o modelo inteiro seja transparente." },
-      { letra: "B", texto: "Técnicas de XAI podem oferecer explicações úteis sobre previsões ou comportamento do modelo, mas não garantem explicação completa nem causalidade." },
+      { letra: "B", texto: "XAI consiste em ocultar os dados de entrada para proteger o modelo." }
       { letra: "C", texto: "XAI é uma técnica exclusiva de redes neurais profundas." },
       { letra: "D", texto: "Uma explicação gerada pelo modelo prova que a decisão é justa e correta." },
-      { letra: "E", texto: "XAI consiste em ocultar os dados de entrada para proteger o modelo." }
+      { letra: "E", texto: "Técnicas de XAI podem oferecer explicações úteis sobre previsões ou comportamento do modelo, mas não garantem explicação completa nem causalidade." },
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "XAI reúne métodos para tornar certos aspectos das previsões ou do comportamento de modelos mais compreensíveis. O alcance depende da técnica, do modelo e do contexto: uma explicação local não descreve necessariamente todo o modelo, e uma explicação não prova causalidade, justiça ou correção factual.",
     analise: {
       A: "INCORRETA. Uma explicação local se refere a uma previsão ou região específica e não garante transparência global.",
-      B: "CORRETA. A explicação pode apoiar análise e auditoria, mas possui escopo e limitações que devem ser avaliados.",
+      B: "INCORRETA. Ocultar dados de entrada não define XAI."
       C: "INCORRETA. Há técnicas de explicabilidade aplicáveis a diferentes famílias de modelos, não apenas redes profundas.",
       D: "INCORRETA. Explicabilidade não prova, por si só, justiça, validade ou correção da decisão.",
-      E: "INCORRETA. Ocultar dados de entrada não define XAI."
+      E: "CORRETA. A explicação pode apoiar análise e auditoria, mas possui escopo e limitações que devem ser avaliados.",
     },
     regra: "XAI = métodos para compreender aspectos das previsões ou do comportamento de um modelo, com limitações explícitas.",
     pegadinha: "Uma explicação plausível não é prova de causalidade, justiça ou correção; confira o escopo da técnica usada.",
@@ -314,19 +314,19 @@ const moduleQuestions5 = [
     contexto: "Uma equipe explora registros sem rótulos. Primeiro procura segmentos de comportamento; depois deseja representar cada registro com menos variáveis para visualização.",
     enunciado: "Qual afirmação diferencia corretamente as duas técnicas?",
     alternativas: [
-      { letra: "A", texto: "Agrupamento reúne observações segundo similaridade; redução de dimensionalidade representa os dados em menos dimensões, podendo descartar parte da variação ou informação." },
+      { letra: "A", texto: "Agrupamento exige necessariamente uma variável-alvo rotulada." },
       { letra: "B", texto: "Agrupamento e redução de dimensionalidade são sinônimos e sempre produzem a mesma saída." },
       { letra: "C", texto: "Redução de dimensionalidade sempre aumenta o número de atributos." },
-      { letra: "D", texto: "Agrupamento exige necessariamente uma variável-alvo rotulada." },
+      { letra: "D", texto: "Agrupamento reúne observações segundo similaridade; redução de dimensionalidade representa os dados em menos dimensões, podendo descartar parte da variação ou informação." },
       { letra: "E", texto: "Toda técnica de redução de dimensionalidade é não supervisionada e não envolve escolhas sobre informação preservada." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Agrupamento procura organizar observações em grupos segundo critérios de similaridade ou distância. Redução de dimensionalidade busca uma representação com menos dimensões, por exemplo para visualização, compressão ou preparação de dados. As técnicas podem ser combinadas, mas têm objetivos diferentes; a redução pode perder informação relevante e nem todo método de redução é necessariamente não supervisionado.",
     analise: {
-      A: "CORRETA. A alternativa descreve os objetivos distintos e reconhece o possível compromisso de informação na redução.",
+      A: "INCORRETA. Muitos algoritmos de agrupamento operam sem rótulos de classe.",
       B: "INCORRETA. Os resultados e objetivos são diferentes, ainda que as técnicas possam ser usadas em sequência.",
       C: "INCORRETA. Redução de dimensionalidade busca diminuir o número de dimensões da representação.",
-      D: "INCORRETA. Muitos algoritmos de agrupamento operam sem rótulos de classe.",
+      D: "CORRETA. A alternativa descreve os objetivos distintos e reconhece o possível compromisso de informação na redução.",
       E: "INCORRETA. Existem métodos supervisionados de redução, e a informação preservada depende do método e dos dados."
     },
     regra: "Clustering busca grupos; redução de dimensionalidade busca uma representação menor. São objetivos distintos e podem ser combinados.",

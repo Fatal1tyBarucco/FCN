@@ -74,17 +74,17 @@ var questoesBanco = [
     enunciado: "Qual opção atende integralmente à demanda descrita?",
     alternativas: [
       { letra: "A", texto: "Office LTSC por licenciamento por volume — compra única, com atualizações apenas de segurança." },
-      { letra: "B", texto: "Microsoft 365 por assinatura — inclui Office, OneDrive, Teams e atualizações contínuas." },
+      { letra: "B", texto: "Office LTSC com pacote de nuvem opcional — mesmo escopo do Microsoft 365." }
       { letra: "C", texto: "Versão perpétua Home & Student — compra única com Word, Excel e PowerPoint." },
-      { letra: "D", texto: "Office LTSC com pacote de nuvem opcional — mesmo escopo do Microsoft 365." }
+      { letra: "D", texto: "Microsoft 365 por assinatura — inclui Office, OneDrive, Teams e atualizações contínuas." },
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O Microsoft 365 por assinatura é a única categoria entre as opções que pode reunir Office, Teams e atualizações contínuas; a contratação deve confirmar a elegibilidade do plano, a cota de 5 TB e as condições aplicáveis ao locatário, pois nem toda assinatura garante automaticamente esse limite. O Office LTSC é versão perpétua com apps selecionados, sem Teams/OneDrive em nuvem e com apenas atualizações de segurança; a versão perpétua é compra única com apps limitados (Word, Excel, PowerPoint). Por isso as alternativas A e C não satisfazem a demanda, e D descreve um produto não existente no currículo.",
     analise: {
       A: "INCORRETA. Erro conceitual: confundir 'atualização' com 'atualização de segurança'. O LTSC recebe apenas patches de segurança e não inclui Teams nem OneDrive em nuvem, logo não atende a nenhum dos três requisitos.",
-      B: "CORRETA. A assinatura é a opção compatível com Office, Teams e atualizações contínuas; a cota de 5 TB deve constar da licença elegível confirmada na documentação do fornecedor.",
+      B: "INCORRETA. Erro conceitual: invenção de produto. O currículo não descreve 'LTSC com pacote de nuvem'; LTSC e M365 são modelos distintos (perpétuo × assinatura), não versões empilháveis."
       C: "INCORRETA. Erro conceitual: a versão perpétua é compra única com apps limitados e sem armazenamento em nuvem integrado nem Teams — erro idêntico ao documentado no exemplo 'erro' do próprio currículo.",
-      D: "INCORRETA. Erro conceitual: invenção de produto. O currículo não descreve 'LTSC com pacote de nuvem'; LTSC e M365 são modelos distintos (perpétuo × assinatura), não versões empilháveis."
+      D: "CORRETA. A assinatura é a opção compatível com Office, Teams e atualizações contínuas; a cota de 5 TB deve constar da licença elegível confirmada na documentação do fornecedor.",
     },
     regra: "Modelo de licenciamento: assinatura (recorrente, serviços na nuvem + atualizações de funcionalidades) × perpétuo (compra única, apenas atualizações de segurança, sem serviços em nuvem).",
     pegadinha: "A palavra 'atualizações' aparece nas duas alternativas — a pegadinha é não distinguir tipo de atualização (segurança × funcionalidade) e esquecer que Teams/OneDrive em nuvem só aparecem na assinatura.",
@@ -177,16 +177,16 @@ var questoesBanco = [
     enunciado: "Qual mecanismo de integração descrito no currículo atende ao requisito de atualização automática da tabela no Word?",
     alternativas: [
       { letra: "A", texto: "Copiar e colar a tabela como imagem estática, sem qualquer vínculo com a planilha." },
-      { letra: "B", texto: "Inserir a tabela do Excel como objeto vinculado (link dinâmico), mecanismo de integração via OLE." },
-      { letra: "C", texto: "Transcrever manualmente os valores como texto puro e repetir o processo a cada alteração." },
+      { letra: "B", texto: "Transcrever manualmente os valores como texto puro e repetir o processo a cada alteração." },
+      { letra: "C", texto: "Inserir a tabela do Excel como objeto vinculado (link dinâmico), mecanismo de integração via OLE." },
       { letra: "D", texto: "Exportar a planilha para PDF e inserir o PDF como anexo não vinculado." }
     ],
-    gabarito: "B",
+    gabarito: "C",
     justificativa: "O tópico 'Integração entre aplicações' cita explicitamente 'Inserir tabela do Excel em Word com link dinâmico' e identifica os mecanismos de integração: OLE, APIs REST do Microsoft Graph e compatibilidade de formatos. Apenas o objeto vinculado mantém a atualização automática exigida pelo cenário.",
     analise: {
       A: "INCORRETA. Erro conceitual: estaticidade. Uma imagem não mantém vínculo com a origem; a tabela não muda quando o Excel muda.",
-      B: "CORRETA. É o mecanismo nomeado no currículo (tabela do Excel em Word com link dinâmico), cujo transporte técnico é a integração via OLE.",
-      C: "INCORRETA. Erro conceitual: confundir integração com reimpressão manual — não há vínculo nem automação, e o risco de erro humano é alto.",
+      B: "INCORRETA. Erro conceitual: confundir integração com reimpressão manual — não há vínculo nem automação, e o risco de erro humano é alto.",
+      C: "CORRETA. É o mecanismo nomeado no currículo (tabela do Excel em Word com link dinâmico), cujo transporte técnico é a integração via OLE.",
       D: "INCORRETA. Erro conceitual: finalidade trocada. Exportar para PDF preserva layout para distribuição (topico-12), não cria vínculo dinâmico de dados entre aplicativos."
     },
     regra: "Integração entre aplicativos Microsoft: OLE (objeto vinculado/embutido) para vínculo dinâmico, Microsoft Graph/APIs REST para automação entre serviços, Power Automate para fluxos.",
@@ -1443,17 +1443,17 @@ id: "q-m1-09",
     enunciado: "Qual a causa provável do problema e a providência indicada pelo currículo?",
     alternativas: [
       { letra: "A", texto: "Perda de pacotes alta; solução: aumentar a largura de banda do link." },
-      { letra: "B", texto: "Jitter alto (variação de latência); solução: habilitar QoS para priorizar tráfego de voz ou usar buffer de jitter no receptor." },
+      { letra: "B", texto: "Throughput baixo; solução: reduzir o número de dispositivos na rede." }
       { letra: "C", texto: "Latência média alta; solução: trocar o meio de transmissão para fibra óptica." },
-      { letra: "D", texto: "Throughput baixo; solução: reduzir o número de dispositivos na rede." }
+      { letra: "D", texto: "Jitter alto (variação de latência); solução: habilitar QoS para priorizar tráfego de voz ou usar buffer de jitter no receptor." },
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O exemplo de aplicação do currículo descreve o caso: 'ping está estável (30 ms) mas o jitter é alto (50 ms) → Jitter alto — variação na latência. Solução: habilitar QoS (Quality of Service) para priorizar tráfego de voz, ou usar buffer de jitter no receptor'. Com ping estável, a latência média não é o problema — a variação é.",
     analise: {
       A: "INCORRETA. Erro conceitual: perda de pacotes teria sintoma de truncamento/ruído por ausência de pacotes, e o cenário não reporta perda; a métrica problemática informada é o jitter.",
-      B: "CORRETA. Diagnóstico e remédio idênticos ao exemplo do currículo.",
+      B: "INCORRETA. Erro conceitual: throughput não é a métrica de suavidade temporal da voz; remover dispositivos não trata variação de latência."
       C: "INCORRETA. Erro conceitual: latência alta seria ping alto e constante — o ping está estável em 30 ms (baixo).",
-      D: "INCORRETA. Erro conceitual: throughput não é a métrica de suavidade temporal da voz; remover dispositivos não trata variação de latência."
+      D: "CORRETA. Diagnóstico e remédio idênticos ao exemplo do currículo.",
     },
     regra: "Interpretação de métricas: ping estável + jitter alto = variação (problema de temporização); ping alto = latência; perda = pacotes ausentes. Mitigação de jitter: QoS e buffer de jitter.",
     pegadinha: "A FCC cobra ler o DIAGNÓSTICO inteiro: as alternativas A, C e D descrevem problemas reais de rede, mas nenhum deles é o que os dados do enunciado indicam."
@@ -1862,16 +1862,16 @@ id: "q-m1-09",
     enunciado: "Como classificar corretamente as duas mensagens?",
     alternativas: [
       { letra: "A", texto: "Ambas são spam; a diferença é apenas o remetente." },
-      { letra: "B", texto: "A propaganda não solicitada é spam; a mensagem fraudulenta que se passa por banco para roubar credenciais é phishing." },
-      { letra: "C", texto: "A propaganda é phishing leve; a do banco é spam agressivo." },
+      { letra: "B", texto: "A propaganda é phishing leve; a do banco é spam agressivo." },
+      { letra: "C", texto: "A propaganda não solicitada é spam; a mensagem fraudulenta que se passa por banco para roubar credenciais é phishing." },
       { letra: "D", texto: "São spoofing as duas, pois ambas foram não solicitadas." }
     ],
-    gabarito: "B",
+    gabarito: "C",
     justificativa: "O currículo define: 'Spam: e-mails não solicitados, geralmente comerciais ou maliciosos. Phishing: e-mails fraudulentos que se passam por entidades confiáveis (bancos, empresas) para roubar credenciais ou dados', e o exemplo introdutório diferencia: spam 'sem necessariamente ter intenção maliciosa'; phishing 'com intenção de roubar dados ou credenciais'.",
     analise: {
       A: "INCORRETA. Erro conceitual: apaga a distinção de intenção — o currículo separa não-solicitado (spam) de fraudulento (phishing).",
-      B: "CORRETA. Classificação exatamente conforme as definições e o exemplo do currículo.",
-      C: "INCORRETA. Erro conceitual: 'phishing leve' não existe como categoria; phishing é fraude com intenção de roubo — a propaganda é spam.",
+      B: "INCORRETA. Erro conceitual: 'phishing leve' não existe como categoria; phishing é fraude com intenção de roubo — a propaganda é spam.",
+      C: "CORRETA. Classificação exatamente conforme as definições e o exemplo do currículo.",
       D: "INCORRETA. Erro conceitual: spoofing é falsificação do remetente (técnica), não a classificação do conteúdo — e propaganda comercial não é necessariamente falsificada."
     },
     regra: "Classificação por conteúdo e intenção: spam = não solicitado (comercial/malicioso); phishing = fraude para roubo de dados; spoofing = falsificação do endereço 'From'.",
