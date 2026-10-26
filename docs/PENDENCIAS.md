@@ -450,3 +450,12 @@ Evidências do workflow de validação executado no SHA `4e0c9eae346116c7c9c0957
 
 A mudança de cor e a atualização da matriz geraram commits posteriores ao run 40409912389. Não declarar o HEAD atual aprovado até o workflow disparado para o SHA atual terminar e ser inspecionado.
 
+## Revalidação após correção contextual de contraste — 2026-10-26
+
+- [x] **Acessibilidade automatizada de regressão:** run [40410948115](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40410948115), SHA validado `4a4ab1f2016bc4afaf0b8afea6dc4dcbe9e4f814`, concluiu com `success`. Sintaxe, geração da matriz, rastreabilidade, estrutura, heurísticas de questões, smoke test Chromium em `file://` e regressões de interação/axe-core passaram.
+- A correção final separa cores por contexto: `#4b5563` nos textos auxiliares sobre fundos claros e `#cbd5e1` nos mesmos tipos de texto dentro de painéis escuros. A tentativa intermediária com cor clara global falhou no fundo branco; ela foi substituída por seletores contextuais e validada pelo run acima.
+- [x] **Revisão focal de consistência:** `q-m1-01` tinha contradição entre o gabarito D e a justificativa, que dizia que D descrevia um produto inexistente. O texto da alternativa e a justificativa foram corrigidos para exigir a confirmação do plano Microsoft 365 elegível e da cota de 5 TB no contrato/documentação.
+- O run 40410948115 valida o código no SHA indicado. Os commits documentais feitos após esse SHA não alteram o código da aplicação; ainda assim, os checks devem ser conferidos no estado final da branch quando disponíveis.
+- [ ] **Continuam bloqueantes:** revisar fontes primárias das 112 questões sem fonte identificada; auditar a distribuição de gabaritos, especialmente M1; fazer revisão semântica independente das questões; executar testes manuais de teclado/leitor de tela e auditoria WCAG; validar navegadores e dispositivos físicos adicionais.
+- PR #17 permanece aberto e Draft; não fazer merge enquanto os critérios qualitativos obrigatórios estiverem pendentes.
+
