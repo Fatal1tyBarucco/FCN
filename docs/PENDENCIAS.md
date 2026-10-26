@@ -242,7 +242,7 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 
 - [x] Ampliar a auditoria para produzir distribuição A–E por módulo e alertas de concentração.
 - [x] Execução aprovada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
-- [ ] **Bloqueador editorial para o aceite do simulado:** revisar manualmente as posições de resposta em M1, M4, M5, M6, M7 e M8. M6 tem 30/30 questões MC com gabarito A; após lote editorial controlado, M7 tem A=29, C=1, D=1, E=2 em 33 questões MC; M4 tem 38 A, 43 B e 3 C em 84 questões MC; M5 tem 24 A, 13 B e 1 C em 38; M8 tem 10 A, 25 B e 1 C em 36.
+- [ ] **Bloqueador editorial para o aceite do simulado:** revisar manualmente as posições de resposta em M1, M4, M5, M6, M7 e M8. M6 tem 22/37 questões MC com gabarito A (após as três questões de síntese, distribuição A=22, B=2, C=10, D=3, E=0); após lote editorial controlado, M7 tem A=29, C=1, D=1, E=2 em 33 questões MC; M4 tem 38 A, 43 B e 3 C em 84 questões MC; M5 tem 24 A, 13 B e 1 C em 38; M8 tem 10 A, 25 B e 1 C em 36.
 - [ ] Não reorganizar alternativas por lote sem verificar que o gabarito, a análise de cada alternativa e toda referência explícita a letras permaneçam coerentes.
 - [ ] Revalidar todos os itens alterados com verificador estrutural e revisão editorial antes de retirar esse bloqueio.
 
@@ -322,7 +322,7 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Adicionar questão autoral ao tópico de relatório técnico integrado do M1.
 - [x] Adicionar questões autorais aos tópicos de síntese de IA generativa e engenharia de prompts do M5.
 - [x] Adicionar questões autorais aos tópicos de síntese de ética/governança, redes sociais institucionais, acessibilidade e método de resolução do M6.
-- [x] Atualizar a matriz de validação estrutural, o manifesto PWA e o inventário do README para 396 questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40; 321 MC e 75 itens certo/errado.
+- [x] Atualizar a matriz de validação estrutural, o manifesto PWA e o inventário do README para 399 questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40; 324 MC e 75 itens certo/errado.
 - [x] Confirmar CI completo no HEAD `09d657130a66ea2cfd7390909656ce5a7557e762`: estrutura, ativos, heurísticas e smoke test via `file://` aprovados.
 - [ ] Fazer revisão semântica independente das sete questões novas e validar suas fontes e gabaritos; validação estrutural não comprova correção pedagógica.
 - [ ] Revisar a concentração de gabaritos, ainda alta em M1, M4, M5, M6, M7 e M8.
@@ -375,7 +375,7 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [ ] Confirmar separadamente o workflow Code Quality no HEAD atual; não inferir esse resultado do workflow curricular.
 - [ ] Continuar revisão semântica independente de conteúdo, fontes, gabaritos e distratores; priorizar a concentração de letras de gabarito já documentada.
 - [ ] Executar validação manual por teclado e leitor de tela, avaliação WCAG independente e testes em dispositivos/navegadores adicionais.
-- [ ] Reconciliar contagens e descrições históricas de inventário/matriz para que contagens antigas não sejam confundidas com o estado atual (132 tópicos, 460 flashcards, 396 questões no HEAD testado).
+- [ ] Reconciliar contagens e descrições históricas de inventário/matriz para que contagens antigas não sejam confundidas com o estado atual (132 tópicos, 460 flashcards, 399 questões esperadas após o patch; confirmar no HEAD validado).
 
 A aprovação do workflow automatizado não encerra pendências qualitativas nem altera o estado draft do PR.
 
