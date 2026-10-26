@@ -152,3 +152,10 @@ A distribuição consolidada das **321 questões de múltipla escolha** no HEAD 
 A e B somam 241/321 (75,1%), uma redução em relação aos 86,0% registrados antes dos lotes recentes. A distribuição não é uniforme e ainda exige revisão editorial, especialmente M5 (A=24, B=14) e M8 (B=25). M6 também permanece assimétrico (A=22, C=9). Não se deve perseguir uniformidade artificial se isso exigir distratores ruins ou respostas ambíguas.
 
 **Validação automatizada:** no HEAD `75a42f115be0305d939d487a481645f166423513`, auditoria curricular/smoke test, workflow do PR e Code Quality concluíram com sucesso: [auditoria](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258812457), [PR](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258810281), [Code Quality](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40258810062). Esses testes verificam estrutura e execução automatizada; não substituem revisão pedagógica independente nem validação jurídica externa.
+
+
+## Lote editorial M5 — 2026-10-26
+
+Foram revisadas as questões `q-m5-05`, `q-m5-09`, `q-m5-13`, `q-m5-14`, `q-m5-15`, `q-m5-16`, `q-m5-17` e `q-m5-18`. A alternativa correta foi movida de A para C, com remapeamento conjunto das alternativas, gabaritos, análises e menções explícitas a letras. Durante a conferência, a opção correta de `q-m5-14` foi reescrita para distinguir rotulagem, atributos e variável-alvo sem classificá-los genericamente como etapas da coleta.
+
+Após esse lote, a distribuição global recalculada é A=102, B=131, C=72, D=8 e E=8 (321 questões MC). A/B somam 233/321 (72,6%). M5 passa a A=16, B=14, C=9, D=1, E=0 em 40 questões MC. Esses números refletem a contagem estática do banco na branch; a confirmação final de integridade e execução depende dos workflows do HEAD mais recente.
