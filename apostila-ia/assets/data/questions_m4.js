@@ -1904,128 +1904,128 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-76", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Ataque SSRF",
-    contexto: "O SSRF (Server-Side Request Forgery) explora a capacidade de um servidor de fazer requisições.",
-    enunciado: "O ataque SSRF (Server-Side Request Forgery) é caracterizado por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — SSRF e validação de destinos",
+    contexto: "Uma aplicação permite que usuários informem uma URL para que o servidor busque conteúdo externo. O recurso também pode alcançar endereços internos da rede.",
+    enunciado: "Qual medida reduz melhor o risco de Server-Side Request Forgery (SSRF)?",
     alternativas: [
-      { letra: "A", texto: "Forçar o servidor a fazer requisições internas a sistemas internos, muitas vezes para escapar." },
-      { letra: "B", texto: "Criptografar requisições." },
-      { letra: "C", texto: "Excluir requisições." },
-      { letra: "D", texto: "Gerar requisições aleatórias." },
-      { letra: "E", texto: "Proteger requisições." }
+      { letra: "A", texto: "Validar e restringir esquemas, destinos e endereços resolvidos por lista de permissões, bloquear acesso a redes internas e metadados sensíveis e revalidar após resolução de DNS." },
+      { letra: "B", texto: "Aceitar qualquer URL porque a requisição parte do servidor e, portanto, é confiável." },
+      { letra: "C", texto: "Bloquear apenas URLs que contenham a palavra 'admin', sem validar destino ou redirecionamentos." },
+      { letra: "D", texto: "Permitir redirecionamentos ilimitados e confiar somente na extensão do recurso." },
+      { letra: "E", texto: "Exibir o conteúdo obtido sem registrar ou limitar as requisições feitas pelo servidor." }
     ],
     gabarito: "A",
-    justificativa: "SSRF força o servidor a realizar requisições HTTP para recursos internos (internet, sistemas internos), muitas vezes para escapar de controles de segurança. Criptografar (alternativa B incorreta); excluir requisições (alternativa C incorreta); gerar aleatoriamente (alternativa D incorreta); proteger requisições (alternativa E incorreta).",
+    justificativa: "SSRF ocorre quando um atacante influencia requisições originadas pelo servidor para destinos que não deveriam estar acessíveis por esse caminho. A mitigação deve restringir esquemas e destinos, considerar endereços IPv4/IPv6 e DNS, tratar redirecionamentos e impedir acesso a serviços internos ou endpoints de metadados. A validação superficial de texto não é suficiente, e controles de rede complementam a validação na aplicação.",
     analise: {
-      A: "CORRETA. SSRF força o servidor a fazer requisições para sistemas internos, escapando dos controles.",
-      B: "INCORRETA. SSRF não criptografa requisições.",
-      C: "INCORRETA. SSRF não exclui requisições.",
-      D: "INCORRETA. SSRF não gera requisições aleatoriamente — direciona requisições internas.",
-      E: "INCORRETA. SSRF não protege requisições."
+      A: "CORRETA. A alternativa combina validação rigorosa de destino com restrições de rede e atenção a DNS e redirecionamentos.",
+      B: "INCORRETA. Uma requisição iniciada pelo servidor pode abusar da confiança e do acesso de rede desse servidor.",
+      C: "INCORRETA. Filtrar uma palavra não valida o destino e pode ser contornado por variações de URL ou redirecionamentos.",
+      D: "INCORRETA. Redirecionamentos podem conduzir a destinos não autorizados e precisam ser controlados.",
+      E: "INCORRETA. A ausência de limites e de observabilidade dificulta prevenção, detecção e investigação."
     },
-    regra: "SSRF = 'requisição do servidor'. Forçar o servidor a chamar o que ele não deveria.",
-    pegadinha: "SSRF não é 'teclado do servidor' — é 'redirecionamento de requisição do servidor'.",
-    fonte: "OWASP — Server-Side Request Forgery (SSRF)."
+    regra: "Mitigue SSRF restringindo esquemas e destinos, validando endereços resolvidos, controlando redirecionamentos e bloqueando acesso desnecessário a redes internas.",
+    pegadinha: "Validar apenas o texto da URL não basta: DNS, endereços alternativos e redirecionamentos podem mudar o destino efetivo.",
+    fonte: "OWASP, Server Side Request Forgery Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html."
   },
 
   { id: "q-m4-77", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Mitigação de Ameaças",
-    contexto: "A mitigação de ameaças é um processo contínuo de controle de riscos.",
-    enunciado: "A mitigação de ameaças envolve:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Tratamento de risco de segurança",
+    contexto: "Uma avaliação identifica risco relevante em um sistema legado. A organização compara correção técnica, isolamento temporário, transferência contratual e eventual aceitação formal do risco residual.",
+    enunciado: "Qual abordagem representa uma gestão de risco responsável?",
     alternativas: [
-      { letra: "A", texto: "Identificar, avaliar e tomar ações para reduzir riscos de ameaças." },
-      { letra: "B", texto: "Ignorar ameaças." },
-      { letra: "C", texto: "Criptografar ameaças." },
-      { letra: "D", texto: "Excluir ameaças." },
-      { letra: "E", texto: "Omitir ameaças." }
+      { letra: "A", texto: "Registrar o risco, estimar probabilidade e impacto, selecionar tratamento proporcional, atribuir responsáveis e acompanhar o risco residual." },
+      { letra: "B", texto: "Presumir que toda ameaça pode ser eliminada por completo antes de qualquer operação." },
+      { letra: "C", texto: "Aceitar automaticamente todo risco de baixo custo de correção, sem aprovação ou documentação." },
+      { letra: "D", texto: "Transferir um contrato e concluir que a organização deixou de ter qualquer responsabilidade." },
+      { letra: "E", texto: "Tratar todos os riscos da mesma forma, independentemente de impacto, contexto ou criticidade." }
     ],
     gabarito: "A",
-    justificativa: "Mitigação de ameaças é o processo de identificar, avaliar e tomar ações para reduzir o risco de ameaças — através de controles preventivos, detectivos, corretivos ou compensatórios. Ignorar (alternativa B incorreta); criptografar (alternativa C incorreta); excluir (alternativa D incorreta); omitir (alternativa E incorreta).",
+    justificativa: "Gestão de risco envolve identificar e analisar cenários, avaliar probabilidade e impacto, selecionar uma resposta adequada e monitorar o risco residual. Tratamentos podem incluir mitigação, evitação, compartilhamento/transferência e aceitação formal conforme a governança. Nenhuma opção garante risco zero ou elimina automaticamente as responsabilidades da organização.",
     analise: {
-      A: "CORRETA. Mitigação envolve identificar, avaliar e tomar ações para reduzir riscos.",
-      B: "INCORRETA. Ignorar ameaças aumenta o risco de incidentes não tratados.",
-      C: "INCORRETA. Criptografar ameaças não é mitigação — é uma medida de proteção.",
-      D: "INCORRETA. Excluir ameaças é irreversível e geralmente impraticável.",
-      E: "INCORRETA. Omitir ameaças é uma falha de gestão de riscos."
+      A: "CORRETA. A alternativa inclui análise, tratamento proporcional, responsabilidade e acompanhamento do risco residual.",
+      B: "INCORRETA. Risco zero raramente é uma premissa realista; decisões devem considerar tolerância e impacto.",
+      C: "INCORRETA. Aceitação de risco deve seguir autoridade, critérios e registro definidos pela governança.",
+      D: "INCORRETA. Contratos podem distribuir obrigações, mas não eliminam automaticamente todas as responsabilidades da organização.",
+      E: "INCORRETA. O tratamento deve considerar o contexto, a criticidade e o impacto do risco."
     },
-    regra: "Mitigação = 'controlar o risco'. Identificar, avaliar e agir para reduzir ameaças.",
-    pegadinha: "Mitigação não é 'eliminar' — é 'reduzir o risco'.",
-    fonte: "NIST SP 800-30 (Guide for Conducting Risk Assessments)."
+    regra: "Gestão de risco: identificar, analisar, avaliar, tratar, documentar e acompanhar o risco residual.",
+    pegadinha: "Transferir ou aceitar risco não significa que ele desapareceu; a decisão precisa ser autorizada e monitorada.",
+    fonte: "NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments: https://csrc.nist.gov/pubs/sp/800/30/r1/final; NIST SP 800-39 — Managing Information Security Risk: https://csrc.nist.gov/pubs/sp/800/39/final."
   },
 
   { id: "q-m4-78", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Gestão de Incidentes",
-    contexto: "A gestão de incidentes é a disciplina de responder a incidentes de segurança.",
-    enunciado: "A gestão de incidentes envolve:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Evidências e comunicação em incidentes",
+    contexto: "Uma equipe identifica possível comprometimento de uma conta privilegiada. Há risco de novas ações, e os registros podem ser sobrescritos em pouco tempo.",
+    enunciado: "Qual é a resposta inicial mais adequada, respeitando os procedimentos de resposta a incidentes?",
     alternativas: [
-      { letra: "A", texto: "Processos para detectar, responder, conter e recuperar de incidentes de segurança." },
-      { letra: "B", texto: "Ignorar incidentes." },
-      { letra: "C", texto: "Criptografar incidentes." },
-      { letra: "D", texto: "Excluir incidentes." },
-      { letra: "E", texto: "Omitir incidentes." }
+      { letra: "A", texto: "Preservar evidências relevantes, conter o risco de forma proporcional, acionar responsáveis e registrar decisões, horários e ações realizadas." },
+      { letra: "B", texto: "Apagar todos os registros e reinstalar o sistema imediatamente, sem documentar o ocorrido." },
+      { letra: "C", texto: "Publicar os dados técnicos e pessoais do incidente em redes sociais para alertar todos os usuários." },
+      { letra: "D", texto: "Esperar até que o atacante conclua as ações para reunir evidências completas." },
+      { letra: "E", texto: "Alterar os registros para que todos os eventos pareçam ocorrer no mesmo horário." }
     ],
     gabarito: "A",
-    justificativa: "Gestão de incidentes define processos para detecção, análise, contenção, erradicação, recuperação e lições aprendidas de incidentes de segurança. Ignorar (alternativa B incorreta); criptografar (alternativa C incorreta); excluir (alternativa D incorreta); omitir (alternativa E incorreta).",
+    justificativa: "A resposta inicial deve equilibrar contenção e preservação de evidências, seguindo o plano institucional e a gravidade do caso. A equipe deve documentar decisões e ações, preservar registros relevantes, limitar acessos comprometidos e comunicar as pessoas responsáveis pelos canais apropriados. A sequência exata depende do incidente e dos riscos imediatos; ações precipitadas podem destruir evidências ou ampliar o impacto.",
     analise: {
-      A: "CORRETA. Gestão de incidentes inclui processos para responder a incidentes de segurança.",
-      B: "INCORRETA. Ignorar incidentes aumenta o dano potencial.",
-      C: "INCORRETA. Criptografar incidentes não é gestão de incidentes.",
-      D: "INCORRETA. Excluir incidentes não é possível — é registrar e aprender com eles.",
-      E: "INCORRETA. Omitir incidentes compromete a segurança e a conformidade."
+      A: "CORRETA. A alternativa combina contenção proporcional, preservação de evidências, escalonamento e documentação.",
+      B: "INCORRETA. Apagar registros sem preservação pode destruir evidências úteis e dificultar a investigação.",
+      C: "INCORRETA. A divulgação indiscriminada pode expor dados pessoais e detalhes sensíveis; a comunicação deve seguir os canais e deveres aplicáveis.",
+      D: "INCORRETA. A demora pode ampliar o dano; contenção e preservação devem ser avaliadas conforme o risco.",
+      E: "INCORRETA. Alterar horários ou registros compromete a integridade das evidências."
     },
-    regra: "Gestão de incidentes = 'detectar, responder, aprender'. Ciclo contínuo de resposta.",
-    pegadinha: "Gestão de incidentes não é 'evitar' — é 'responder e recomeçar'.",
-    fonte: "NIST SP 800-61 (Computer Security Incident Handling Guide)."
+    regra: "Em incidentes, siga o plano, contenha proporcionalmente, preserve evidências, registre ações e comunique pelos canais autorizados.",
+    pegadinha: "Conter o incidente é importante, mas ações sem planejamento podem destruir evidências ou afetar sistemas críticos.",
+    fonte: "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
   { id: "q-m4-79", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.4 — Plano de Continuidade",
-    contexto: "O plano de continuidade é definido para manter ou recuperar serviços críticos.",
-    enunciado: "O plano de continuidade de negócios é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Análise de impacto nos negócios (BIA)",
+    contexto: "Uma organização tem recursos limitados para preparar a continuidade de dezenas de processos. Alguns serviços são essenciais para a população; outros podem permanecer indisponíveis por mais tempo sem impacto crítico.",
+    enunciado: "Qual é a principal contribuição da análise de impacto nos negócios (BIA) para o planejamento de continuidade?",
     alternativas: [
-      { letra: "A", texto: "Um plano para manter ou recuperar serviços essenciais após uma interrupção." },
-      { letra: "B", texto: "Um processo de excluir serviços." },
-      { letra: "C", texto: "Um processo de criptografar serviços." },
-      { letra: "D", texto: "Um processo de verificar serviços." },
-      { letra: "E", texto: "Um processo de reduzir serviços." }
+      { letra: "A", texto: "Identificar processos prioritários, impactos de interrupção, dependências e necessidades de recuperação para orientar prioridades e recursos." },
+      { letra: "B", texto: "Garantir que nenhum processo sofra interrupção." },
+      { letra: "C", texto: "Substituir todos os testes de recuperação por uma lista de contatos." },
+      { letra: "D", texto: "Definir prioridades exclusivamente pela facilidade técnica de restaurar um sistema." },
+      { letra: "E", texto: "Limitar o planejamento à compra de cópias de segurança, sem avaliar processos de negócio." }
     ],
     gabarito: "A",
-    justificativa: "Plano de continuidade de negócios (BCP) define como manter ou recuperar serviços essenciais após uma interrupção, incluindo backup, recuperação de desastres e aumentar a capacidade. Excluir serviços (alternativa B incorreta); criptografar (alternativa C incorreta); verificar (alternativa D incorreta); reduzir (alternativa E incorreta).",
+    justificativa: "A BIA identifica funções e processos críticos, consequências de interrupções, dependências e prioridades de recuperação. Seus resultados orientam recursos, estratégias de continuidade e metas como RTO/RPO, mas não garantem ausência de interrupções nem substituem testes e revisão periódica.",
     analise: {
-      A: "CORRETA. BCP = plano para manter ou recuperar serviços essenciais após interrupção.",
-      B: "INCORRETA. BCP não exclui serviços — garante sua continuidade.",
-      C: "INCORRETA. BCP não criptografa serviços — trata de continuidade operacional.",
-      D: "INCORRETA. Verificação não é a definição — é um plano de continuidade.",
-      E: "INCORRETA. BCP não reduz serviços — garante a operação em emergências."
+      A: "CORRETA. A BIA conecta impacto para o negócio, criticidade, dependências e prioridades de recuperação.",
+      B: "INCORRETA. A análise orienta preparação e resposta, mas não garante interrupção zero.",
+      C: "INCORRETA. Lista de contatos não substitui estratégias, procedimentos e testes de recuperação.",
+      D: "INCORRETA. Prioridade deve considerar impacto no negócio, não apenas facilidade técnica.",
+      E: "INCORRETA. A BIA abrange processos e impactos organizacionais, não apenas backups."
     },
-    regra: "BCP = 'não parar'. Manter e recuperar serviços essenciais em emergências.",
-    pegadinha: "BCP não é 'backup' — é 'plano estratégico de continuidade'.",
-    fonte: "NIST SP 800-34 (Contingency Planning)."
+    regra: "BIA identifica processos críticos, impactos, dependências e prioridades para orientar estratégias e metas de recuperação.",
+    pegadinha: "O sistema tecnicamente mais fácil de recuperar não é necessariamente o processo de maior prioridade para o negócio.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-80", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.4 — Resposta a Incidentes",
-    contexto: "Resposta a incidentes envolve múltiplos estágios e papéis.",
-    enunciado: "Os estágios típicos de resposta a incidentes incluem:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Plano de resposta a incidentes e exercícios",
+    contexto: "Uma organização tem um documento de resposta a incidentes, mas os responsáveis não sabem quem autoriza isolamento de sistemas, quem comunica áreas afetadas nem como avaliar a recuperação.",
+    enunciado: "Qual medida melhora a capacidade real de resposta da organização?",
     alternativas: [
-      { letra: "A", texto: "Detecção, análise, contenção, erradicação, recuperação e lições aprendidas." },
-      { letra: "B", texto: "Detecção, análise, contenção, erradicação, recuperação e repetição." },
-      { letra: "C", texto: "Detecção, análise, contenção, erradicação, recuperação e excluir." },
-      { letra: "D", texto: "Detecção, análise, contenção, erradicação, recuperação e criptografar." },
-      { letra: "E", texto: "Detecção, análise, contenção, erradicação, recuperação e omitir." }
+      { letra: "A", texto: "Manter o documento sem exercícios, pois sua existência comprova prontidão." },
+      { letra: "B", texto: "Definir papéis e critérios de escalonamento, exercitar cenários, revisar resultados e atualizar o plano com as lições aprendidas." },
+      { letra: "C", texto: "Deixar todas as decisões para o primeiro técnico que detectar um alerta, sem limites de autoridade." },
+      { letra: "D", texto: "Impedir comunicação entre equipes para evitar divergência de informações." },
+      { letra: "E", texto: "Tratar cada incidente sem registrar decisões para preservar flexibilidade." }
     ],
-    gabarito: "A",
-    justificativa: "Estágios típicos de resposta: detecção, análise, contenção, erradicação, recuperação e lições aprendidas. Detecção → análise → contenção → erradicação → recuperação → lições aprendidas (alternativa B incorreta); excluir (alternativa C incorreta); criptografar (alternativa D incorreta); omitir (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Um plano é útil quando as responsabilidades, os critérios de escalonamento, as comunicações e as ações de resposta são compreendidos e testados. Exercícios ajudam a revelar lacunas em decisões, dependências e comunicação. Os resultados devem ser documentados e usados para atualizar o plano; a preparação não elimina a possibilidade de incidentes.",
     analise: {
-      A: "CORRETA. Ciclo de resposta: detecção, análise, contenção, erradicação, recuperação, lições aprendidas.",
-      B: "INCORRETA. 'Repetição' não faz parte do ciclo — é 'lições aprendidas'.",
-      C: "INCORRETA. Exclusão não faz parte do ciclo — é 'lições aprendidas'.",
-      D: "INCORRETA. Criptografia não faz parte do ciclo — é 'lições aprendidas'.",
-      E: "INCORRETA. Omitir não faz parte do ciclo — é 'lições aprendidas'."
+      A: "INCORRETA. A existência do documento não comprova que os participantes consigam executá-lo.",
+      B: "CORRETA. Papéis definidos, exercícios, revisão e lições aprendidas transformam o plano em capacidade operacional.",
+      C: "INCORRETA. A resposta precisa de autoridade, critérios e coordenação proporcionais ao impacto.",
+      D: "INCORRETA. Comunicação coordenada é necessária para responder de modo consistente e evitar ações conflitantes.",
+      E: "INCORRETA. Registrar decisões permite reconstruir ações, avaliar eficácia e melhorar o plano."
     },
-    regra: "Ciclo de resposta: 'detectar, analisar, conter, erradicar, recuperar e aprender'.",
-    pegadinha: "Resposta a incidentes não é 'pular' — é 'curto'.",
-    fonte: "NIST SP 800-61."
+    regra: "Plano de resposta eficaz exige papéis claros, critérios de escalonamento, comunicação, exercícios e melhoria contínua baseada em evidências.",
+    pegadinha: "Documento publicado não é prova de prontidão; a capacidade deve ser exercitada e atualizada.",
+    fonte: "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
   { id: "q-m4-81", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
