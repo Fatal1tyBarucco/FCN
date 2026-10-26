@@ -2,6 +2,8 @@
 
 ## Estado consolidado — 2026-10-26
 
+- [x] Lote semântico focal M4 (q-m4-33 a q-m4-35): corrigida a fonte de q-m4-33 para os arts. 7º e 10 da LGPD (bases legais e legítimo interesse), mantendo o art. 5º como referência de definições; q-m4-34 conferida contra a Lei nº 15.352/2026, que criou a Agência Nacional de Proteção de Dados como autarquia de natureza especial. Texto oficial: [Lei nº 15.352/2026 no Planalto](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm). A revisão foi focal e não representa auditoria completa do M4.
+
 Este resumo prevalece sobre checklists históricos abaixo quando houver divergência. Itens antigos não marcados como concluídos podem refletir o estado no momento em que foram escritos; validar contra as evidências atuais antes de reabrir trabalho já executado.
 
 - [x] Checks CI do commit `77c4cd14b98af1b7c5522fd5918458348bc744a1`: CodeQL, auditoria estática/cobertura, análise de Actions e análises JavaScript/TypeScript concluídos com sucesso. [Auditoria](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266280519) · [CodeQL/análises](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266276949).
