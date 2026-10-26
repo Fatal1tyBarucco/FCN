@@ -952,4 +952,84 @@ const moduleQuestions6 = [
     pegadinha: "Órgão que 'responde bem aos pedidos' mas não publica cria a aparência de conformidade — a prova cobra justamente a distinção.",
     fonte: "Lei nº 12.527/2011, art. 8º, § 1º, IV, e § 3º, VI, e art. 30; Lei nº 14.129/2021, art. 29, § 1º, VI (verificados em 2026-10-21)."
   }
+  {
+    id: "q-m6-41", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
+    topico: "modulo-6-unidade-1-topico-3", assunto: "Ética e governança em TI", contexto: "Durante uma contratação pública, integrante da comissão identifica relação pessoal relevante com representante de empresa participante.", enunciado: "Qual conduta inicial é mais compatível com integridade e prevenção de conflito de interesses?",
+    alternativas: [
+      { letra: "A", texto: "Prosseguir, desde que não assine o contrato final." },
+      { letra: "B", texto: "Ocultar a relação para não atrasar a contratação." },
+      { letra: "C", texto: "Participar após declaração informal de apoio técnico." },
+      { letra: "D", texto: "Publicar dados pessoais do representante em rede social." },
+      { letra: "E", texto: "Declarar formalmente a situação e acionar o procedimento institucional competente antes de atuar." }
+    ],
+    gabarito: "E", justificativa: "A situação deve ser declarada e tratada pelo procedimento aplicável, prevenindo influência indevida e registrando a decisão; o enquadramento concreto depende do regime jurídico e das regras do órgão.",
+    analise: {
+      A: "INCORRETA. A influência pode ocorrer durante a instrução, não apenas na assinatura.",
+      B: "INCORRETA. Ocultar impede avaliação e controle institucional.",
+      C: "INCORRETA. A alternativa não trata adequadamente o risco ou o procedimento aplicável.",
+      D: "INCORRETA. A alternativa não resolve a falha de governança descrita.",
+      E: "CORRETA. É a única alternativa que aplica o procedimento ou princípio descrito no enunciado."
+    },
+    regra: "Risco de conflito deve ser declarado e tratado por canal formal.", pegadinha: "Transparência não autoriza exposição indiscriminada de dados pessoais.", fonte: "Currículo M6 — modulo-6-unidade-1-topico-3 (ética e governança em TI)."
+  },
+  {
+    id: "q-m6-42", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
+    topico: "modulo-6-unidade-4-topico-3", assunto: "Governança de redes sociais institucionais", contexto: "Cinco servidores acessam o perfil institucional usando a mesma senha. Não há autoria confiável nem fluxo formal de aprovação.", enunciado: "Qual conjunto de medidas corrige melhor a falha de governança?",
+    alternativas: [
+      { letra: "A", texto: "Manter senha compartilhada e pedir planilha mensal assinada." },
+      { letra: "B", texto: "Desativar registros para reduzir coleta de dados." },
+      { letra: "C", texto: "Adotar acessos individualizados, privilégio mínimo, autenticação forte, registro de autoria e aprovação formal." },
+      { letra: "D", texto: "Permitir publicação livre e revisar apenas após reclamações." },
+      { letra: "E", texto: "Criar uma segunda senha comum para quem aprova conteúdo." }
+    ],
+    gabarito: "C", justificativa: "Identidades individuais e privilégio mínimo permitem atribuir ações; autenticação forte reduz acesso indevido; registros e aprovação formal fortalecem auditoria e controle editorial.",
+    analise: {
+      A: "INCORRETA. A influência pode ocorrer durante a instrução, não apenas na assinatura.",
+      B: "INCORRETA. Ocultar impede avaliação e controle institucional.",
+      C: "CORRETA. É a única alternativa que aplica o procedimento ou princípio descrito no enunciado.",
+      D: "INCORRETA. A alternativa não resolve a falha de governança descrita.",
+      E: "INCORRETA. A alternativa não estabelece controle formal adequado."
+    },
+    regra: "Canal institucional exige identidade individual, acesso mínimo, trilha de auditoria e responsabilidades editoriais.", pegadinha: "Assinar planilha depois da publicação não equivale a autenticação individual.", fonte: "Currículo M6 — modulo-6-unidade-4-topico-3 (governança de redes sociais e conduta)."
+  },
+  {
+    id: "q-m6-43", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
+    topico: "modulo-6-unidade-5-topico-3", assunto: "Acessibilidade e inclusão digital", contexto: "Formulário de serviço público tem 27 campos, não permite salvar e retomar e exibe erros sem indicar como corrigi-los.", enunciado: "Qual resposta reduz barreiras sem abandonar a digitalização?",
+    alternativas: [
+      { letra: "A", texto: "Manter formulário e recomendar outro navegador." },
+      { letra: "B", texto: "Adicionar mais campos obrigatórios." },
+      { letra: "C", texto: "Remover mensagens de erro para simplificar a página." },
+      { letra: "D", texto: "Mapear dados necessários, simplificar etapas, permitir salvar e retomar, corrigir acessibilidade e medir abandono." },
+      { letra: "E", texto: "Tornar canal digital exclusivo e encaminhar dificuldades apenas a um FAQ." }
+    ],
+    gabarito: "D", justificativa: "A solução deve eliminar exigências desnecessárias, tornar erros compreensíveis, apoiar a continuidade e testar acessibilidade; a taxa de abandono permite avaliar o efeito.",
+    analise: {
+      A: "INCORRETA. A influência pode ocorrer durante a instrução, não apenas na assinatura.",
+      B: "INCORRETA. Ocultar impede avaliação e controle institucional.",
+      C: "INCORRETA. A alternativa não trata adequadamente o risco ou o procedimento aplicável.",
+      D: "CORRETA. É a única alternativa que aplica o procedimento ou princípio descrito no enunciado.",
+      E: "INCORRETA. A alternativa não estabelece controle formal adequado."
+    },
+    regra: "Acessibilidade exige remover barreiras, testar e acompanhar conclusão e abandono.", pegadinha: "Digitalizar um processo não o torna automaticamente acessível ou simples.", fonte: "Currículo M6 — modulo-6-unidade-5-topico-3 (acessibilidade e inclusão digital)."
+  },
+  {
+    id: "q-m6-44", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
+    topico: "modulo-6-unidade-6-topico-3", assunto: "Método de resolução de questões", contexto: "Um item descreve publicação de documento por servidor, mas não esclarece se é público, pessoal ou sigiloso. Alternativas misturam transparência, proteção de dados e sigilo.", enunciado: "Qual método reduz o risco de marcar uma alternativa apenas por parecer correta?",
+    alternativas: [
+      { letra: "A", texto: "Escolher a alternativa com mais citações sem verificar contexto." },
+      { letra: "B", texto: "Identificar sujeito e conduta, definir o regime, localizar o dispositivo e confrontar as afirmações com a norma aplicável." },
+      { letra: "C", texto: "Tratar transparência como regra absoluta que sempre prevalece." },
+      { letra: "D", texto: "Assumir que a intenção do servidor determina sozinha a legalidade." },
+      { letra: "E", texto: "Ignorar o enunciado e memorizar o número da lei." }
+    ],
+    gabarito: "B", justificativa: "A resolução parte do contexto e da conduta, identifica o regime e testa as alternativas contra o dispositivo pertinente, observando termos absolutos e mistura de regimes.",
+    analise: {
+      A: "INCORRETA. A influência pode ocorrer durante a instrução, não apenas na assinatura.",
+      B: "CORRETA. É a única alternativa que aplica o procedimento ou princípio descrito no enunciado.",
+      C: "INCORRETA. A alternativa não trata adequadamente o risco ou o procedimento aplicável.",
+      D: "INCORRETA. A alternativa não resolve a falha de governança descrita.",
+      E: "INCORRETA. A alternativa não estabelece controle formal adequado."
+    },
+    regra: "Leia o item integralmente, determine o regime e confira a alternativa contra o dispositivo aplicável.", pegadinha: "Termos absolutos e mistura de regimes exigem conferir o alcance exato da norma.", fonte: "Currículo M6 — modulo-6-unidade-6-topico-3 (método de análise de questões e dispositivos)."
+  },
   ];
