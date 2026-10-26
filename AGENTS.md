@@ -638,6 +638,18 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m6-10: conferidos os indicadores mínimos do painel da Lei nº 14.129/2021 e a necessidade de não inferir eficiência apenas de um indicador parcial.
 - Commits de conteúdo: `9974767bf60e2a150088b2663c7963739076a787` e `2c035b1a4cd9a02e3c66d9a491bc379c1a97ab4f`. Reexecutar CI e verificar as fontes jurídicas antes de considerar o lote validado.
 
+## Revisão adicional do M6 — questões 11 a 20 (2026-10-26)
+
+- q-m6-11: corrigida justificativa que atribuía à alternativa correta C uma restrição de alcance; agora diferencia o escopo da LAI e os distratores.
+- q-m6-12: pedido de acesso sem exigência de motivação alinhado ao art. 10, §§ 1º e 3º, da LAI.
+- q-m6-13: alcance sobre entidades privadas delimitado ao art. 2º da LAI, conforme recebimento de recursos públicos para ações de interesse público.
+- q-m6-14: prazo de resposta tratado conforme art. 11: acesso imediato quando disponível, até 20 dias e prorrogação de 10 dias com justificativa expressa.
+- q-m6-15: corrigida justificativa que atribuía à alternativa correta C a definição de banco de dados; agora distingue documento, banco de dados, informação sigilosa e primariedade.
+- q-m6-16 a q-m6-18: conferidas a complementaridade entre transparência ativa/passiva, requisitos dos sítios oficiais e diretriz de uso de tecnologia da informação.
+- q-m6-19: regime de informação pessoal da LAI diferenciado de classificação de sigilo.
+- q-m6-20: conteúdo mínimo de transparência ativa relacionado ao art. 8º, § 1º, sem divulgar prontuários ou dados pessoais identificáveis indiscriminadamente.
+- Commits de conteúdo: `fc47b23d58fdd92fbc878fd15d8d50294e63d67b` e commits de correção M6 anteriores `9974767bf60e2a150088b2663c7963739076a787`, `2c035b1a4cd9a02e3c66d9a491bc379c1a97ab4f`. Verificar CI e fontes legais no HEAD atual.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
