@@ -302,6 +302,15 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `4e89103902ea94ac301c81bf31a9267c5c70be08`.
 - Revisão pontual de q-m4-01..q-m4-10 encontrou temas fundamentais repetidos com q-m4-46..q-m4-50 e q-m4-81..q-m4-85; os lotes posteriores foram aprofundados para reduzir essa repetição. Ainda é necessário revisar redação e fontes de q-m4-01..q-m4-07 e q-m4-09, inclusive a formulação da estratégia 3-2-1 em q-m4-07.
 
+## Revisão adicional de q-m4-05..q-m4-09 (2026-10-26)
+
+- q-m4-05: corrigida alternativa distratora sobre MFA para evitar erro de concordância e esclarecer que MFA não elimina necessariamente a senha.
+- q-m4-06: atualizada a regra mnemônica para não incluir DES/3DES como exemplos recomendados atuais e para não simplificar o par assimétrico como “dois pares”.
+- q-m4-07: corrigida a distinção da estratégia 3-2-1: a cópia “fora do local” não é sinônimo de “offline” ou “imutável”; estes podem ser controles adicionais.
+- q-m4-08 e q-m4-10 foram reescritas no commit `4e89103902ea94ac301c81bf31a9267c5c70be08`.
+- q-m4-09: removido o trecho em inglês “nothing more”.
+- Commit adicional de conteúdo: `9644a6c31d2a7496893d09b4b76a20ddbd76ebd3`.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
