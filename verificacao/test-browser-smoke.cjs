@@ -64,7 +64,7 @@ const { chromium } = require("playwright");
             const title = element.getAttribute("title");
             const text = (element.innerText || element.value || element.alt || "").trim();
             const labels = element.labels ? Array.from(element.labels).some(label => label.innerText.trim()) : false;
-            return Boolean((ariaLabel && ariaLabel.trim()) || (labelledBy && labelledBy.trim().split(/\\s+/).some(id => document.getElementById(id))) ||
+            return Boolean((ariaLabel && ariaLabel.trim()) || (labelledBy && labelledBy.trim().split(/\s+/).some(id => document.getElementById(id))) ||
               (title && title.trim()) || text || labels);
           };
           const controls = Array.from(document.querySelectorAll("button, input, select, textarea, [role='button']"));
