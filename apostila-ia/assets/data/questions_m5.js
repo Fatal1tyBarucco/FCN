@@ -183,31 +183,31 @@ const moduleQuestions5 = [
   },
 
     { id: "q-m5-08", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-1", assunto: "5.1 — Dados, ativos, parâmetros e inferência",
-    contexto: "Modelos de IA consomem dados e geram inferências.",
-    enunciado: "No contexto de modelos de IA, o termo 'inferência' refere-se a:",
+    nivel: "basico", topico: "m5-u1-t1-s3", assunto: "5.1 — Treinamento e inferência",
+    contexto: "Um modelo de classificação já foi treinado e validado. Agora, uma aplicação envia novas solicitações para que o modelo indique a categoria provável de cada uma.",
+    enunciado: "Nesse fluxo, qual etapa corresponde à inferência?",
     alternativas: [
-      { letra: "A", texto: "O processo de treinamento do modelo." },
-      { letra: "B", texto: "O processo de usar um modelo treinado para fazer previsões ou decisões sobre novos dados." },
-      { letra: "C", texto: "O processo de remover dados." },
-      { letra: "D", texto: "O processo de compactar arquivos." },
-      { letra: "E", texto: "O processo de criar novos parâmetros." }
+      { letra: "A", texto: "Ajustar os parâmetros do modelo usando exemplos de treinamento." },
+      { letra: "B", texto: "Executar o modelo treinado sobre novas entradas e produzir previsões ou saídas." },
+      { letra: "C", texto: "Selecionar hiperparâmetros usando exclusivamente os resultados do conjunto de teste." },
+      { letra: "D", texto: "Reunir e rotular os dados antes de iniciar o treinamento." },
+      { letra: "E", texto: "Excluir os registros históricos sem executar o modelo." }
     ],
     gabarito: "B",
-    justificativa: "Inferência é o uso de um modelo treinado para fazer previsões ou decisões sobre novos dados, com base no conhecimento aprendido. O processo de treinamento (alternativa A incorreta); remover dados (alternativa C incorreta); comprimir arquivos (alternativa D incorreta); criar novos parâmetros (alternativa E incorreta).",
+    justificativa: "Inferência é a execução de um modelo já treinado para produzir previsões, classificações, gerações ou outras saídas a partir de entradas. Treinamento ajusta parâmetros; validação pode orientar a seleção de modelos e hiperparâmetros; preparação de dados e rotulagem são atividades distintas. Em sistemas reais, a inferência também exige monitoramento de desempenho, latência e possíveis mudanças nos dados.",
     analise: {
-      A: "INCORRETA. Treinamento é o processo de aprendizagem; inferência é o uso do modelo.",
-      B: "CORRETA. Inferência = usar o modelo treinado para previsões/ decisões com novos dados.",
-      C: "INCORRETA. Remoção de dados não é inferência.",
-      D: "INCORRETA. Compressão de arquivos não é inferência.",
-      E: "INCORRETA. Criação de novos parâmetros não é inferência."
+      A: "INCORRETA. Ajustar parâmetros com exemplos é parte do treinamento, não da inferência.",
+      B: "CORRETA. A aplicação usa o modelo já treinado para gerar saídas a partir de novas entradas.",
+      C: "INCORRETA. Selecionar hiperparâmetros é uma atividade de modelagem e usar repetidamente o teste compromete sua independência.",
+      D: "INCORRETA. Preparação e rotulagem dos dados ocorrem antes ou durante a construção do conjunto de treinamento.",
+      E: "INCORRETA. Excluir registros não corresponde à execução de um modelo."
     },
-    regra: "Inferência = 'usar o modelo para prever/ decidir'. Uso de modelo treinado.",
-    pegadinha: "Inferência não é 'treinar' — é 'usar o modelo já treinado para tomar decisão'.",
-    fonte: "Goodfellow, I. et al. — Deep Learning, 2016."
+    regra: "Treinamento ajusta o modelo; inferência usa o modelo treinado para produzir saídas em novas entradas.",
+    pegadinha: "Inferência não significa necessariamente raciocínio humano: é a etapa de aplicação do modelo, inclusive para classificação, previsão ou geração.",
+    fonte: "Google, Machine Learning Glossary — Inference: https://developers.google.com/machine-learning/glossary#inference."
   },
 
-  { id: "q-m5-09", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+{ id: "q-m5-09", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "m5-u1-t3-s1", assunto: "5.1 — Avaliação de desempenho e qualidade",
     contexto: "Um modelo apresenta boa métrica média em um conjunto de teste, mas a equipe ainda precisa decidir se ele está pronto para apoiar um serviço público.",
     enunciado: "Qual procedimento oferece a avaliação mais responsável?",
