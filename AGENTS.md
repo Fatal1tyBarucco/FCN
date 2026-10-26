@@ -162,6 +162,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Corrigidos os dois delimitadores e feita uma verificação textual no arquivo para garantir que não restassem linhas de propriedades `id: "q-m5-NN"` sem o prefixo `{`. Commit: `dbd50d420ccafd9e4fdbf3d2892c9fd648a091c7`.
 - A verificação textual não equivale a compilação; aguardar `node --check` e o workflow completo no HEAD atual antes de considerar o lote validado.
 
+## Auditoria semântica incremental — lote M5 q-m5-06 a q-m5-10 (2026-10-26)
+
+- q-m5-06: viés alto/baixa variância e viés baixo/alta variância passaram a ser descritos como tendências típicas, evitando tratar o diagnóstico como equivalência determinística; ortografia atualizada para “consequência”.
+- q-m5-07: reescrita a definição de XAI para deixar claro que explicações dependem do método e do contexto; uma explicação local não garante transparência global, causalidade, justiça ou correção.
+- q-m5-08: revisada; mantida a distinção entre treinamento e inferência.
+- q-m5-09: contexto e análise ajustados para descrever avaliação como evidência sobre desempenho nas condições avaliadas, não como garantia de ausência de falhas.
+- q-m5-10: removida a expressão indefinida “IA completa” como critério técnico universal. A questão agora aborda definição de caso de uso, limites, critérios de desempenho, adequação dos dados e análise de riscos antes da implantação.
+- Commit de conteúdo: `3bb83da4c5e1e7ee48810249dd41f15516d1b249`.
+- Lotes q-m5-06..q-m5-20 foram revisados em passes focais documentados, mas isso não equivale à revisão completa das 42 questões do M5. Os checks de sintaxe e de navegador devem ser confirmados no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
