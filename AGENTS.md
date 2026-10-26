@@ -861,6 +861,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - O banco está organizado por tópico curricular, portanto os IDs não aparecem necessariamente em ordem numérica no arquivo. Foi confirmada a existência dos 40 IDs únicos de q-m7-01..q-m7-40; não reordenar blocos sem necessidade, pois isso pode alterar agrupamento curricular.
 - Revisão focal; validação automatizada no HEAD atualizado ainda necessária.
 
+## Fechamento da revisão focal do M7 — q-m7-31..q-m7-40 (2026-10-26)
+
+- q-m7-31..q-m7-40: revisados falso positivo/negativo na deduplicação, controlador/operador, ETL por sensibilidade, ausência com marcador/zero substituto, taxa de duplicidade, min-max fora da faixa, normalização estatística versus normalização relacional, média de médias, anonimização/pseudonimização, risco de reidentificação, governança e minimização.
+- q-m7-21: removida afirmação universal de que não existe pipeline sem transformação; a distinção ETL/ELT foi mantida para o cenário descrito.
+- q-m7-20: especificada a perda de completude histórica quando a deduplicação descarta registros antigos, sem confundir esse conceito com completude de campos.
+- q-m7-22: anonimização agora é descrita em termos contextuais — identificabilidade considerando meios técnicos razoáveis e disponíveis —, evitando garantia absoluta; chave de reatribuição continua caracterizando pseudonimização.
+- Commits de conteúdo: `0f1f5c8b0bcbe1fd9d8a678b02df5b295b515b16`, `9e3f030bb990904c513808bb6f573b9b9cd4b756` e `61c053579bfd3a0ae09ad976d7993bebd128dd2b`.
+- Os 40 identificadores do M7 foram localizados sem lacuna ou duplicidade aparente; a ordem física do arquivo acompanha seções curriculares e não necessariamente a numeração dos IDs.
+- Revisão semântica focal dos 40 itens concluída. A validação automatizada deve ser confirmada no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
