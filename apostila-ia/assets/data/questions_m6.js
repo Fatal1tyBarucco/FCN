@@ -1029,7 +1029,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-44", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "m6-u3-t2-s2", assunto: "6.3 — Método de resolução de questões — transparência e dados pessoais",
+    topico: "m6-u6-t3-s1", assunto: "6.6 — Método de resolução de questões — transparência e dados pessoais",
     contexto: "Um cidadão solicita cópia de processo de contratação pública. O documento contém objeto, valores e decisões administrativas, mas também CPF, endereço residencial e dados de contato pessoal de pessoas físicas. A equipe considera negar acesso ao processo inteiro por conter dados pessoais.",
     enunciado: "À luz da LAI e das orientações de transparência e proteção de dados, qual encaminhamento é mais adequado?",
     alternativas: [
