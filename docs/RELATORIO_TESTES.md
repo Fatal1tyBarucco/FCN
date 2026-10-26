@@ -496,7 +496,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Smoke test: aplicação com 8 módulos, 460 flashcards e 399 questões; sem erros JavaScript de página.
 - axe-core: 58 regras aprovadas, 3 resultados incompletos, 1 violação total não bloqueante e 0 violações críticas/graves bloqueantes.
 - Auditoria de questões: 399 lidas, 0 IDs duplicados, 0 alertas heurísticos, 0 pares com contexto/enunciado idênticos; 395 com campo de fonte detectado e 4 sem fonte.
-- O sucesso automatizado não substitui verificação de URLs, revisão semântica, leitor de tela, WCAG manual ou testes físicos. As quatro lacunas de fonte e a distribuição de gabaritos de M1 estão registradas em `docs/PENDENCIAS.md`.
+- O sucesso automatizado não substitui verificação individual de URLs, revisão semântica, leitor de tela, WCAG manual ou testes físicos. As quatro lacunas estruturais de fonte foram fechadas; a distribuição de gabaritos de M1 e a validação semântica permanecem registradas em `docs/PENDENCIAS.md`.
 
 ## Revalidação axe-core com zero violações — 2026-10-26
 
@@ -510,7 +510,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 
 ## Atualização de fontes e acessibilidade — 2026-10-26 (primeiro CI concluído; HEAD atualizado validado)
 
-- Adicionadas fontes oficiais às questões `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36`, antes identificadas como as quatro lacunas no campo fonte.
+- Adicionadas fontes oficiais às questões `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36`, antes identificadas como as quatro lacunas no campo fonte. A contagem estrutural atual é 399/399 questões com campo de fonte; não equivale à validação semântica de cada fonte.
 - Atualizados `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md` com Cisco, Zoom Support e Google Meet Help.
 - Run [40416873641](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40416873641), SHA `e35d9f75849a33767f205339edfaf21ef8d01952`: **success**. Sintaxe JavaScript, matriz curricular, rastreabilidade, estrutura, auditoria heurística, smoke test Chromium em `file://` e testes interativos passaram.
 - Auditoria de questões: 399 itens; 0 IDs duplicados, 0 alertas heurísticos e 0 pares com contexto/enunciado duplicados. A conferência por segmento confirmou campo `fonte` não vazio em 399/399 itens.
