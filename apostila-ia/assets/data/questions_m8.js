@@ -795,7 +795,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A presença de um confounder (temperatura) invalida a associação." }
     ],
     gabarito: "B",
-    justificativa: "O currículo destaca que correlação não implica causalidade e que quatro explicações são possíveis: X causa Y, Y causa X, confounder causa as duas, ou coincidência. A alterativa B reconhece que a associação existe, mas a causalidade exige controle de confundentes (como temperatura, que explica sorvete e afogamentos). A alterativa A é incorreta: nenhum r sustenta causalidade. A C afirma o oposto do currículo. A D é exagerada: o confounder não invalida a associação, apenas impede a conclusão de causalidade.",
+    justificativa: "O currículo destaca que correlação não implica causalidade e que quatro explicações são possíveis: X causa Y, Y causa X, confounder causa as duas, ou coincidência. A alternativa B reconhece que a associação existe, mas a causalidade exige controle de confundentes (como temperatura, que explica sorvete e afogamentos). A alterativa A é incorreta: nenhum r sustenta causalidade. A C afirma o oposto do currículo. A D é exagerada: o confounder não invalida a associação, apenas impede a conclusão de causalidade.",
     analise: {
       A: "INCORRETA. Erro conceitual: nenhum r sustenta causalidade; associação ≠ causa.",
       B: "CORRETA. Reproduz a limitação do estudo observacional: associação real, causalidade não demonstrada sem controle de confundentes.",
@@ -879,7 +879,7 @@ const moduleQuestions8 = [
       { letra: "A", texto: "A altura da barra representa a frequência da classe, e a densidade é ignorada." },
       { letra: "B", texto: "A frequência é representada pela área do retângulo, e a altura é a densidade = frequência ÷ largura." },
       { letra: "C", texto: "A densidade é usada apenas para classes com frequência relativa, nunca com frequência absoluta." },
-      { letra: "D", texto: "A áreas não devem ser consideradas: a altura é a propriedade geométrica do histograma." }
+      { letra: "D", texto: "As áreas não devem ser consideradas: a altura é a única propriedade relevante do histograma." }
     ],
     gabarito: "B",
     justificativa: "O currículo define que com larguras diferentes, a frequência está na área (altura = densidade = frequência ÷ largura). A alternativa B reproduz isso. A erra: altura é densidade, não frequência. C erra: densidade absoluta é usada quando Σ(altura × largura) = n; não é restrita à relativa. D erra: a área é a propriedade que representa a frequência, e ignorar a densidade faz classes largas parecerem mais frequentes.",
@@ -931,10 +931,10 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-2-topico-5",
     assunto: "M8.2.6 Box plot e convenções de bigode",
-    contexto: "Dois softwares apresentam o mesmo conjunto, com bigodes diferentes quando configurados com a mesma convenção de Tukey.",
+    contexto: "Dois softwares apresentam o mesmo conjunto, mas usam configurações padrão diferentes para a convenção dos bigodes, sem que a equipe tenha harmonizado os parâmetros.",
     enunciado: "A causa mais provável da diferença entre os bigodes em dois softwares é:",
     alternativas: [
-      { letra: "A", texto: "Os quartis são calculados diferentemente entre métodos de interpolacão." },
+      { letra: "A", texto: "Os quartis são calculados diferentemente entre métodos de interpolação." },
       { letra: "B", texto: "O múltiplo do IIQ não é universal: há softwares com 1,0; 1,5 ou 2,0 como convenção." },
       { letra: "C", texto: "Um software traça outliers, o outro não." },
       { letra: "D", texto: "Os bigodes sempre são diferentes, pois não há definição matemática." }
