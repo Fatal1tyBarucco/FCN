@@ -131,3 +131,9 @@ documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta audito
 
 - **D-ORQ-006 — Persistência em namespaces:** não consolidar nem migrar chaves `localStorage` sem contrato de compatibilidade e testes de leitura/escrita para os consumidores existentes. O cabeçalho de `storage.js` informa que a camada não é usada como fonte única por navegação, flashcards e quiz; registrar como lacuna arquitetural, não como falha comprovada de perda de dados.
 - **D-ORQ-007 — Ordem de correção:** primeiro validar CI e estabelecer testes de regressão; depois corrigir uma área por vez. Mudanças de conteúdo, simuladores e persistência devem permanecer em commits pequenos e rastreáveis no branch do PR #17.
+
+
+## Registro incremental — 2026-10-26
+
+- **D-ORQ-008 — Correção rastreável em lote:** as quatro referências inválidas q-m6-41–q-m6-44 foram corrigidas no arquivo de questões, sem reescrever o conteúdo didático das questões. A alteração foi limitada a `topico` e rótulos `assunto`; cada padrão antigo foi exigido como ocorrência única antes da gravação. Commit: `7c9b0dd7871048d94294b5c7530f90e52de97f4d`.
+- **D-ORQ-009 — Validação posterior obrigatória:** a pré-validação textual não substitui CI, auditoria de rastreabilidade nem revisão semântica independente. Esses resultados só serão registrados após evidência no novo HEAD.
