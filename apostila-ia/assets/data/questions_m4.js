@@ -1084,31 +1084,31 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-44", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Escopo da LGPD e do Marco Civil da Internet",
-    contexto: "Uma equipe jurídica precisa identificar qual norma orienta cada parte de um projeto que envolve uma plataforma online e o tratamento de dados pessoais de seus usuários.",
-    enunciado: "Qual comparação entre a LGPD e o Marco Civil da Internet é mais precisa?",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Comparação entre LGPD e Marco Civil",
+    contexto: "Uma equipe precisa identificar qual norma orienta o tratamento de dados pessoais e qual estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil.",
+    enunciado: "Qual alternativa compara corretamente a LGPD e o Marco Civil da Internet sem sugerir que uma lei substitui a outra?",
     alternativas: [
-      { letra: "A", texto: "A LGPD disciplina o tratamento de dados pessoais; o Marco Civil estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, incluindo regras relacionadas à privacidade e aos registros." },
-      { letra: "B", texto: "A LGPD regula exclusivamente crimes cibernéticos, enquanto o Marco Civil trata apenas de publicidade." },
-      { letra: "C", texto: "O Marco Civil substituiu a LGPD e tornou desnecessária qualquer análise de base legal para tratamento de dados." },
-      { letra: "D", texto: "A LGPD só se aplica a dados publicados na internet, não a tratamentos realizados fora dela." },
-      { letra: "E", texto: "As duas leis são incompatíveis e nunca podem ser aplicadas ao mesmo tratamento." }
+      { letra: "A", texto: "A LGPD só se aplica a provedores de conexão, enquanto o Marco Civil regula qualquer tratamento de dados pessoais em todos os setores." },
+      { letra: "B", texto: "A LGPD disciplina o tratamento de dados pessoais; o Marco Civil estabelece princípios, garantias, direitos e deveres para o uso da internet, incluindo regras relacionadas à privacidade e aos registros." },
+      { letra: "C", texto: "O Marco Civil substituiu a LGPD por ser anterior e tratar de privacidade." },
+      { letra: "D", texto: "A LGPD proíbe qualquer tratamento de dados pessoais, enquanto o Marco Civil autoriza sua divulgação irrestrita." },
+      { letra: "E", texto: "As duas leis têm o mesmo objeto e os mesmos requisitos, portanto apenas uma delas precisa ser observada." }
     ],
-    gabarito: "A",
-    justificativa: "A LGPD disciplina o tratamento de dados pessoais e estabelece princípios, bases legais, direitos e deveres dos agentes de tratamento. O Marco Civil da Internet disciplina o uso da internet no Brasil e estabelece garantias e deveres próprios, incluindo proteção da privacidade e condições para a guarda e disponibilização de registros. As normas podem ser complementares quando um serviço online trata dados pessoais.",
+    gabarito: "B",
+    justificativa: "A Lei nº 13.709/2018 (LGPD) disciplina o tratamento de dados pessoais, com bases legais, princípios, direitos dos titulares e deveres dos agentes de tratamento. A Lei nº 12.965/2014 (Marco Civil da Internet) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. No Marco Civil, o art. 2º apresenta fundamentos, como liberdade de expressão, pluralidade e diversidade; o art. 3º estabelece princípios, entre eles proteção da privacidade, proteção de dados pessoais e neutralidade de rede. Os campos normativos se relacionam, mas uma lei não substitui a outra.",
     analise: {
-      A: "CORRETA. A alternativa diferencia os escopos centrais e reconhece a possibilidade de aplicação complementar.",
-      B: "INCORRETA. Nenhuma das duas leis tem esse escopo exclusivo.",
-      C: "INCORRETA. O Marco Civil não substituiu a LGPD nem elimina a necessidade de identificar base legal para o tratamento de dados pessoais.",
-      D: "INCORRETA. A LGPD não se limita a dados publicados na internet; sua aplicação depende dos critérios e das exceções legais.",
-      E: "INCORRETA. As leis possuem âmbitos distintos e podem incidir de forma complementar conforme o caso."
+      A: "INCORRETA. A LGPD não se limita a provedores de conexão e o Marco Civil não substitui o regime geral de tratamento de dados.",
+      B: "CORRETA. A alternativa descreve o foco normativo de cada lei e reconhece sua complementaridade.",
+      C: "INCORRETA. A anterioridade do Marco Civil não revoga nem substitui a LGPD.",
+      D: "INCORRETA. A LGPD permite tratamentos amparados por base legal e o Marco Civil não autoriza divulgação irrestrita.",
+      E: "INCORRETA. As leis têm objetos e disposições distintos; a aplicabilidade deve ser avaliada conforme o caso."
     },
-    regra: "LGPD: tratamento de dados pessoais. Marco Civil: direitos, garantias e deveres do uso da internet, incluindo privacidade e registros. Podem ser complementares.",
-    pegadinha: "Não reduzir a LGPD a dados online nem tratar o Marco Civil como substituto da LGPD.",
-    fonte: "Lei nº 13.709/2018 (LGPD), texto oficial compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Lei nº 12.965/2014 (Marco Civil da Internet): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm."
+    regra: "LGPD: tratamento de dados pessoais. Marco Civil: uso da internet e respectivas garantias, direitos e deveres. Aplicação complementar quando pertinente.",
+    pegadinha: "Não resumir as leis a slogans nem presumir que a incidência de uma exclui a outra.",
+    fonte: "Lei nº 13.709/2018 (LGPD): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm; Lei nº 12.965/2014 (Marco Civil da Internet): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm."
   },
 
-  { id: "q-m4-45", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
+{ id: "q-m4-45", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Confidencialidade e controle de acesso",
     contexto: "Uma equipe armazena documentos com dados pessoais e informações internas. O repositório permite que qualquer funcionário leia todos os arquivos, mesmo quando não precisa deles para executar suas tarefas.",
     enunciado: "Qual medida aplica melhor o princípio da confidencialidade nesse cenário?",
