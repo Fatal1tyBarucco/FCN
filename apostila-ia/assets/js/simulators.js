@@ -1395,8 +1395,8 @@
     '.sim-excel-tabela th,.sim-excel-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}' +
     '.sim-excel-tabela th{background:#2a2f3a;color:#cdd4de}.sim-excel-rownum{background:#22262e;color:#8b94a5;width:28px}' +
     ".sim-excel-cel{width:90px;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:3px;padding:2px 4px}" +
-    '.sim-excel-res{margin-left:6px;color:#ffd57c;font-weight:600;min-width:48px;display:inline-block}.sim-excel-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0} +
-    '.sim-excel-bloco .sim-excel-sub{color:#cbd5e1}'' +
+    '.sim-excel-res{margin-left:6px;color:#ffd57c;font-weight:600;min-width:48px;display:inline-block}.sim-excel-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
+    '.sim-excel-bloco .sim-excel-sub{color:#cbd5e1}' + +
     '.sim-excel-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 10px;font-size:.8rem;cursor:pointer;margin-right:6px}.sim-excel-btn:hover{background:#4a5466}' +
     ".sim-excel-console{width:100%;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:4px;padding:6px;resize:vertical}" +
     '.sim-excel-resgrande{margin:8px 0 0;color:#ffd57c;font-family:"Courier New",monospace;font-size:.95rem;min-height:1.4em}' +
