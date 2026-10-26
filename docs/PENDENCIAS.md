@@ -233,7 +233,7 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Atualizar o smoke test, o verificador estrutural, o manifesto PWA e o estado da interface para 389 questões e 460 flashcards.
 - [x] Corrigir a associação de q-m3-22 para o tópico de segurança e gravação de reuniões, mantendo a cobertura direta dos tópicos de gravação no M3.
 - [x] Validação no GitHub Actions: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126 — **success**. Auditoria: 132 tópicos, 460 flashcards, 389 questões, 0 unit-only, 0 referências desconhecidas. Smoke test via `file://`: PASS.
-- [x] Incluir WCAG 2.2 do W3C como referência verificada no catálogo; o catálogo agora contém 74 referências.
+- [x] Incluir WCAG 2.2 do W3C como referência verificada no catálogo; o catálogo agora contém 75 referências.
 - [ ] Revisar semanticamente todos os 389 enunciados, gabaritos, justificativas, distratores e fontes. A validação estrutural não comprova correção pedagógica integral.
 - [ ] Testar todas as interações dos simuladores, backup/importação, teclado, leitor de tela, WCAG 2.1 AA e Service Worker em HTTP/HTTPS.
 
