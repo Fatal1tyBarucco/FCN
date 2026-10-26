@@ -563,7 +563,7 @@ const moduleQuestions4 = [
     },
     regra: "Pharming redireciona a vítima para destino fraudulento por manipulação de resolução ou configuração.",
     pegadinha: "Phishing costuma induzir a vítima a interagir com conteúdo enganoso; pharming pode redirecioná-la por manipulação técnica.",
-    fonte: "CISA, Understanding and Responding to Distributed Denial-of-Service Attacks (contexto de segurança de rede): https://www.cisa.gov/news-events/news/understanding-and-responding-distributed-denial-service-attacks; NIST SP 800-81 Rev. 2 — Secure Domain Name System (DNS) Deployment Guide: https://csrc.nist.gov/pubs/sp/800/81/r2/final."
+    fonte: "NIST SP 800-81 Rev. 2 — Secure Domain Name System (DNS) Deployment Guide: https://csrc.nist.gov/pubs/sp/800/81/r2/final."
   },
 
 { id: "q-m4-23", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s3", assunto: "4.3 — Engenharia social e verificação de solicitações",
