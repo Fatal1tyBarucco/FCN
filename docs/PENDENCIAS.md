@@ -365,3 +365,12 @@ A aprovação do workflow automatizado não encerra pendências qualitativas nem
 - [ ] Reexecutar auditoria de rastreabilidade e validação estrutural no HEAD atualizado.
 - [ ] Revisar independentemente enunciados, gabaritos, distratores, justificativas e fontes das quatro questões alteradas.
 - [ ] Continuar as pendências qualitativas já registradas; a correção de IDs não equivale a aprovação pedagógica.
+
+
+## Revalidação da correção q-m6-41 a q-m6-44 — 2026-10-26
+
+- [x] Inspecionar o workflow disparado pelo HEAD `c9d3780a2a9b6a28906d4ea0c906fd93fb16a7e3`: [execução 40265636717](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40265636717) concluída com `success`.
+- [x] Confirmar que o job passou por sintaxe JavaScript, matriz curricular, rastreabilidade de ativos, estrutura do repositório, heurísticas de questões, smoke test Chromium/Playwright em `file://` e regressões interativas; relatórios de auditoria foram enviados como artefato.
+- [ ] Confirmar separadamente Code Quality no HEAD atual; o resultado curricular verde não comprova esse workflow.
+- [ ] Revisar semanticamente q-m6-41 a q-m6-44, incluindo enunciados, gabaritos, distratores, justificativas e fontes.
+- [ ] Continuar as pendências globais de revisão editorial, fontes oficiais, acessibilidade WCAG/leitor de tela e testes em dispositivos reais. O PR #17 permanece draft até os critérios qualitativos serem atendidos.
