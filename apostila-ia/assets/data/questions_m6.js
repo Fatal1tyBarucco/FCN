@@ -745,7 +745,7 @@ const moduleQuestions6 = [
     },
     regra: "Canal institucional: titularidade do órgão, conta individual com segundo fator, política editorial, registro de publicação e rotina de correção; rede social é complementar.",
     pegadinha: "A alternativa C parece 'colaborativa' e é justamente o exemplo de falha de controle do currículo.",
-    fonte: "Lei nº 12.527/2011, art. 8º, caput e § 2º; Lei nº 14.129/2021, art. 3º, IV (transparência na execução dos serviços públicos e divulgação de informações de interesse público; verificados em fontes oficiais em 2026-10-26)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 8º, caput e § 2º: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Lei nº 14.129/2021, art. 3º, IV: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   { id: "q-m6-32", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -787,7 +787,7 @@ const moduleQuestions6 = [
     },
     regra: "Dever de reserva alcança o canal pessoal: dado de terceiro obtido no serviço não se divulga, com ou sem menção ao órgão.",
     pegadinha: "«Não citei o órgão» é o argumento mais frequente para tentar descaracterizar a violação — e não funciona.",
-    fonte: "Lei nº 12.527/2011, art. 31, caput e § 2º, e art. 32, IV; Lei nº 13.709/2018, art. 5º, I, e art. 46 (verificados em 2026-10-20/21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 31, caput e § 2º, e art. 32, IV: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Lei nº 13.709/2018 (LGPD), art. 5º, I, e art. 46: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   /* ---- 6.5 Acessibilidade e inclusão digital (2) ---- */
@@ -814,7 +814,7 @@ const moduleQuestions6 = [
     },
     regra: "Acessibilidade: base legal nos sítios oficiais (LAI, art. 8º, § 3º, VIII) e diretriz do Governo Digital (art. 3º, XIX), com práticas técnicas verificáveis.",
     pegadinha: "Trocar 'formato aberto' por 'acessível' é o erro conceitual mais frequente da unidade 6.5.",
-    fonte: "Lei nº 12.527/2011, art. 8º, § 3º, VIII; Lei nº 14.129/2021, art. 3º, XIX (verificados em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 8º, § 3º, VIII: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Lei nº 14.129/2021, art. 3º, XIX: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   { id: "q-m6-35", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -831,7 +831,7 @@ const moduleQuestions6 = [
     },
     regra: "Digitalizar não é extinguir: art. 3º, XVI, e art. 14 preservam o atendimento presencial e exigem tecnologia de amplo acesso.",
     pegadinha: "Itens que deduzem extinção de canal a partir de preferência legal invertem o sentido da diretriz.",
-    fonte: "Lei nº 14.129/2021, arts. 3º, X e XVI, e 14 (verificado em 2026-10-21)."
+    fonte: "Lei nº 14.129/2021 (Governo Digital), arts. 3º, X e XVI, e 14, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   /* ---- 6.6 Automação, supervisão humana e estudos de caso (8) ---- */
