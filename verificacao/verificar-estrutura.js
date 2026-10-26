@@ -18,7 +18,7 @@
  * O QUE ESTE SCRIPT VERIFICA
  * ----------------------------------------------------------------------------
  * 1) Fusão questions.js + questions_m4..m8 por id → total === 399; distribuição
- *    por módulo {1:44, 2:54, 3:47, 4:85, 5:42, 6:44, 7:40, 8:40}; 0 ids
+ *    por módulo {1:44, 2:54, 3:47, 4:85, 5:42, 6:47, 7:40, 8:40}; 0 ids
  *    duplicados.
  * 2) Aplica o validarQuestao REAL do quiz-engine.js (carregado em contexto vm
  *    com stubs mínimos de DOM, listeners de DOMContentLoaded disparados;
@@ -208,9 +208,9 @@ try {
   check('execução da fusão', false, e.message);
 }
 
-const ESPERADO_MODULO = { 1: 44, 2: 54, 3: 47, 4: 85, 5: 42, 6: 44, 7: 40, 8: 40 };
+const ESPERADO_MODULO = { 1: 44, 2: 54, 3: 47, 4: 85, 5: 42, 6: 47, 7: 40, 8: 40 };
 if (r) {
-  check('total de questões fundidas === 399', r.total === 399, 'real=' + r.total + ', esperado=396');
+  check('total de questões fundidas === 399', r.total === 399, 'real=' + r.total + ', esperado=399');
   check('0 ids duplicados', r.duplicados.length === 0,
     r.duplicados.length ? ('duplicados: ' + r.duplicados.join(', ')) : 'ok');
   for (const m of Object.keys(ESPERADO_MODULO)) {
@@ -323,7 +323,7 @@ for (const src of scriptSrcs) {
 check('todas as tags locais resolvem p/ arquivo em disco (' + locais + ' locais, ' + externas + ' externas)',
   ausentes.length === 0, ausentes.length ? ('ausentes: ' + ausentes.join(', ')) : 'nenhum 404');
 
-/* ---------------------------------------------------- manifest: JSON + "396" */
+/* ---------------------------------------------------- manifest: JSON + "399" */
 secao('7. manifest.webmanifest → JSON VÁLIDO + description com "399"');
 let manifest = null;
 try {
