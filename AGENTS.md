@@ -927,6 +927,20 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - O balanceamento é um controle editorial, não um objetivo de uniformidade perfeita. A distribuição por módulo ainda deve ser monitorada e qualquer mudança posterior deve preservar gabarito, alternativa e análise como um conjunto.
 - A primeira execução de CI após o reposicionamento detectou separadores ausentes porque as alternativas e as entradas de análise levavam a vírgula junto com o texto trocado. Os 60 blocos foram normalizados para manter vírgulas em todas as opções/chaves intermediárias e removê-las apenas das últimas entradas. A validação automatizada de sintaxe, consistência e testes de navegador deve confirmar o novo HEAD.
 
+## Revisão semântica em lote — q-m4-21 a q-m4-60 (2026-10-26)
+
+- Revisão focal por grupos de cinco questões, verificando coerência entre enunciado, alternativas, gabarito, análises A–E, regra, pegadinha e fonte:
+  - q-m4-21..q-m4-25: phishing, pharming, engenharia social, força bruta online/offline e validação TLS; gabaritos e análises coerentes.
+  - q-m4-26..q-m4-30: DDoS, exposição de dados, replay, IoCs e cadeia de suprimentos; respostas e limites dos controles adequadamente delimitados.
+  - q-m4-31..q-m4-35: princípios da LGPD, distinção entre fundamentos e princípios do Marco Civil, base legal para marketing, competência/natureza da ANPD e direitos dos titulares.
+  - q-m4-36..q-m4-40: fiscalização e sanções da ANPD, proteção constitucional de dados, controlador/operador, conceito de dado pessoal e complementaridade entre LGPD e Marco Civil.
+  - q-m4-41..q-m4-45: LAI e acesso parcial, acesso a registros conforme Marco Civil, papéis na proteção de dados, comparação LGPD/Marco Civil e confidencialidade.
+  - q-m4-46..q-m4-50: hash e integridade de arquivo, RTO/RPO, limites de MFA por e-mail, menor privilégio e proteção contra adulteração de logs.
+  - q-m4-51..q-m4-55: teste de restauração, continuidade versus recuperação de desastres, planejamento baseado em risco, regra 3-2-1 e gestão de chaves simétricas.
+  - q-m4-56..q-m4-60: usos de criptografia assimétrica, armazenamento seguro de senhas, validação de assinatura digital, certificados X.509 e spear phishing.
+- Nesta passada não foi necessário alterar o conteúdo desses itens; a revisão é focal e não substitui conferência independente de todas as fontes, nem auditoria jurídica exaustiva. Questões de legislação devem permanecer alinhadas ao texto oficial vigente.
+- Próxima faixa a revisar: q-m4-61..q-m4-65; depois validar o arquivo inteiro, o inventário curricular e o CI no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
