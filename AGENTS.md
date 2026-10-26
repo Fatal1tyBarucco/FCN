@@ -506,6 +506,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m4-45: removida referência inadequada a NIST SP 800-53 SC-5 (proteção contra negação de serviço); nova fonte NIST FIPS 199 e distinção entre confidencialidade, integridade e disponibilidade.
 - Commit de conteúdo: `2be07e067fbe5da09a961e07856c86f351eabefe`. Revisão focal, não equivale a parecer jurídico nem à validação integral de todas as referências legais.
 
+## Auditoria semântica incremental — lote M4 q-m4-36 a q-m4-40 (2026-10-26)
+
+- q-m4-36: conferida a distinção entre competência fiscalizatória/sancionatória da ANPD e os limites legais e procedimentais; não se presume exclusividade sobre outras autoridades.
+- q-m4-37: corrigido o assunto, que dizia “LGPD — Incisos do Art. 5º” embora o item avalie o art. 5º, X e LXXIX, da Constituição Federal e a EC nº 115/2022.
+- q-m4-38: conferida a distinção entre controlador e operador, sem presumir transferência automática de toda responsabilidade contratual/legal.
+- q-m4-39: conferida a definição de dado pessoal do art. 5º, I, da LGPD, com dependência do contexto e da identificabilidade da pessoa natural.
+- q-m4-40: aprofundada a relação entre Marco Civil da Internet e LGPD com cenário de serviço digital e registros; substituídos distratores simplistas por erros jurídicos plausíveis.
+- Commit de conteúdo: `ccb8d6b252a732e09dd5302abbc2de43b1c97754`.
+- Fontes legais referenciadas nos itens: Constituição Federal, EC nº 115/2022, LGPD e Marco Civil da Internet. Trata-se de revisão focal, não de parecer jurídico integral; a validade sintática e estrutural depende do CI do HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
