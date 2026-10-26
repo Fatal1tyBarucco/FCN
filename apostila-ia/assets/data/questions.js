@@ -2132,7 +2132,7 @@ id: "q-m1-09",
     },
     regra: "Critérios de escolha registrados no currículo: Teams = colaboração contínua no M365; Meet = simplicidade; Zoom = webinars e grandes eventos.",
     pegadinha: "A alternativa D ('todas iguais') é o relativismo típico da FGV — o material justamente diferencia as plataformas; quem lê só o enunciado e não o comparativo cai nela.",
-    fonte: "Zoom Support — requisitos e capacidade de salas paralelas em webinars, incluindo licenças elegíveis e aplicativo de desktop: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838; Zoom Support — gerenciar salas paralelas em webinars: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
+    fonte: "Zoom Support — comparação entre licenças e capacidade de participantes em reuniões/webinars: https://support.zoom.com/hc/pb/article?id=zm_kb&sysparm_article=KB0062412; requisitos para salas paralelas em webinars, incluindo licença elegível e aplicativo desktop/móvel: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
   },
   {
     id: "q-m3-20",
