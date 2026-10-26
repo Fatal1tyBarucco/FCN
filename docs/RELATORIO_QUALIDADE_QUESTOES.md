@@ -159,3 +159,16 @@ A e B somam 241/321 (75,1%), uma redução em relação aos 86,0% registrados an
 Foram revisadas as questões `q-m5-05`, `q-m5-09`, `q-m5-13`, `q-m5-14`, `q-m5-15`, `q-m5-16`, `q-m5-17` e `q-m5-18`. A alternativa correta foi movida de A para C, com remapeamento conjunto das alternativas, gabaritos, análises e menções explícitas a letras. Durante a conferência, a opção correta de `q-m5-14` foi reescrita para distinguir rotulagem, atributos e variável-alvo sem classificá-los genericamente como etapas da coleta.
 
 Após esse lote, a distribuição global recalculada é A=102, B=131, C=72, D=8 e E=8 (321 questões MC). A/B somam 233/321 (72,6%). M5 passa a A=16, B=14, C=9, D=1, E=0 em 40 questões MC. Esses números refletem a contagem estática do banco na branch; a confirmação final de integridade e execução depende dos workflows do HEAD mais recente.
+
+## Revisão semântica dirigida — lote M6 q45–q47 — 2026-10-26
+
+Lote revisado no texto versionado de `apostila-ia/assets/data/questions_m6.js`, após confirmação de que o CI do HEAD anterior estava verde:
+
+- **`q-m6-45` — princípios administrativos e automação:** gabarito C coerente com o cenário e com os distratores. A questão é uma síntese de governança, não uma regra legal específica sobre revisão humana. A fonte foi esclarecida para separar os princípios constitucionais gerais das práticas de documentação, avaliação de risco, revisão e contestação.
+- **`q-m6-46` — retificação de informação institucional:** gabarito B coerente. A referência Secom é apoio orientativo; a questão não atribui ao guia uma obrigação legal específica. O registro e a preservação da correção devem seguir o procedimento institucional aplicável.
+- **`q-m6-47` — acessibilidade:** gabarito D coerente. A melhora na taxa agregada de conclusão não demonstra conformidade integral; a referência WCAG 2.2 deve ser lida em conjunto com os testes técnicos e com avaliação por usuários diversos. A questão não declara que uma única métrica comprova conformidade.
+
+**Resultado do lote:** não foi identificado erro evidente de gabarito nem ambiguidade que exigisse trocar a alternativa correta. Foi corrigida a explicitação do escopo da fonte de `q-m6-45`. Não se alteraram os textos das alternativas ou os gabaritos das três questões.
+
+**Limites:** revisão semântica focal do enunciado, gabarito, justificativa, análise de alternativas e fonte declarada; não equivale a parecer jurídico, auditoria de acessibilidade completa ou revisão independente de todo o banco. O CI deve ser revalidado após os commits deste lote.
+
