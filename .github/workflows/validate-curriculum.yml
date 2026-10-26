@@ -53,8 +53,8 @@ jobs:
       - name: Audit question quality heuristics
         run: node scripts/audit_question_quality.mjs
 
-      - name: Install Playwright test dependency
-        run: npm install --no-save playwright
+      - name: Install Playwright and axe-core test dependencies
+        run: npm install --no-save playwright axe-core
 
       - name: Install Chromium for browser smoke test
         run: npx playwright install --with-deps chromium
