@@ -1,5 +1,18 @@
 # Relatório de rastreabilidade de flashcards e questões
 
+# Snapshot de contagem atualizado — 2026-10-26 04:01 UTC
+
+> Esta seção prevalece sobre os números de snapshots históricos abaixo. O corpo anterior contém resultados de execuções antigas e não deve ser lido como relatório gerado novamente no HEAD atual.
+
+- HEAD consultado antes desta atualização: `cefd7fa005118b37af112b2bf67146ebb26c1163`.
+- Contagem por varredura dos IDs `q-mN-NN` nos seis arquivos de questões: **396 IDs únicos**, sem duplicações detectadas nessa varredura.
+- Distribuição por arquivo: `questions.js` (145; módulos 1–3), M4 (85), M5 (42), M6 (44), M7 (40) e M8 (40).
+- Flashcards: **460**, conforme inventário atual do repositório.
+- O scan de IDs não é a execução integral de `scripts/audit_learning_assets.mjs`; portanto, a distribuição por tópico, a cobertura e a ausência de referências curriculares inválidas ainda precisam de nova execução do auditor no HEAD atual.
+- A execução de CI consultada para o HEAD `cefd7fa...` concluiu com sucesso para os checks configurados, incluindo auditoria estática/cobertura e análises JavaScript/TypeScript/Actions. Isso não certifica a semântica dos enunciados, gabaritos ou fontes.
+
+---
+
 **Data:** 2026-10-26  
 **Repositório:** `Fatal1tyBarucco/FCN`  
 **Branch:** `feat/fase-1-orquestracao-20261025`  
