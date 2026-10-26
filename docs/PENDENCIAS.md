@@ -1,5 +1,11 @@
 # PENDÊNCIAS — Apostila Web Interativa FCN
 
+## Snapshot atual — 2026-10-26 04:08 UTC
+
+- Banco de questões após a inclusão de `q-m6-45` a `q-m6-47`: **399 esperadas** (M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40).
+- Os checks anteriores identificaram um erro de sintaxe na primeira gravação das questões novas; foi corrigido em commit posterior. Não considerar aquele run reprovado como validação do arquivo corrigido.
+- A auditoria estrutural e o smoke test do commit corrigido ainda precisam terminar antes de declarar a inclusão validada.
+
 ## Estado consolidado — 2026-10-26
 
 - [x] Lote semântico focal M4 (q-m4-33 a q-m4-35): corrigida a fonte de q-m4-33 para os arts. 7º e 10 da LGPD (bases legais e legítimo interesse), mantendo o art. 5º como referência de definições; q-m4-34 conferida contra a Lei nº 15.352/2026, que criou a Agência Nacional de Proteção de Dados como autarquia de natureza especial. Texto oficial: [Lei nº 15.352/2026 no Planalto](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm). A revisão foi focal e não representa auditoria completa do M4.
