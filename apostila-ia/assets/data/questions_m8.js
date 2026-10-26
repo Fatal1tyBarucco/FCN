@@ -37,6 +37,7 @@ const moduleQuestions8 = [
     },
     regra: "Método de escolha de gráfico: (1) a pergunta embasa a tarefa analítica; (2) a tarefa define a forma; (3) a ferramenta é meio. Limite do gráfico: quando se precisa de precisão exata de todos os valores, a tabela supera o gráfico.",
     pegadinha: "Pegadinha de ferramenta: 'a ferramenta tem rosca' é um erro de critério. O exame cobra a ordem de decisão: pergunta → tarefa → gráfico, nunca gráfico → pergunta."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-1 (M8.1.1 Propósito da visualização).",
   },
   {
     id: "q-m8-02",
@@ -65,6 +66,7 @@ const moduleQuestions8 = [
     },
     regra: "Regra de ouro de escala: eixo truncado em barras distorce a razão visual; em séries temporais de valores altos também é aceito apenas com sinalização explícita do corte.",
     pegadinha: "A pegadinha é 'qualquer eixo truncado é ruim' — o currículo exige distinguir barras (sempre começar em zero) de linhas (podem ser truncados com aviso)."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-3 (M8.1.3 Eixos e escala).",
   },
   {
     id: "q-m8-03",
@@ -94,6 +96,7 @@ const moduleQuestions8 = [
     },
     regra: "Legítimo truncamento: gráfico de linhas de séries temporais com aviso explícito da base cortada; gráfico de barras: base zero, salvo comunicação explícita e registrada do leitor.",
     pegadinha: "A alternativa B é a pegadinha de quem prefere a conclusão desejada à regra de escala — FCC cobra a aplicação do princípio, não o resultado desejado."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-3 (M8.1.3 Integridade gráfica).",
   },
   {
     id: "q-m8-04",
@@ -122,6 +125,7 @@ const moduleQuestions8 = [
     },
     regra: "Histograma: eixo x = classes contínuas (contagem), eixo y = frequência/área, barras encostadas, largura igual quando possível, declaração do número e da largura das classes.",
     pegadinha: "A alternativa D captura o erro de 'esticar' o eixo x para destacar um valor, transformando um histograma em gráfico enganoso."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-1 (M8.2.1 Histograma e classes).",
   },
   {
     id: "q-m8-05",
@@ -150,6 +154,7 @@ const moduleQuestions8 = [
     },
     regra: "Razão visual de barras = (valorA − base)/(valorB − base); em relação à razão real, o truncamento só é fiel na base zero.",
     pegadinha: "A pegadinha é 'a razão numérica não muda' como se isso dissesse que o gráfico está correto — FCC cobra a distinção entre dado e leitura visual."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-3 (M8.2.3 Barras e colunas).",
   },
   {
     id: "q-m8-06",
@@ -178,6 +183,7 @@ const moduleQuestions8 = [
     },
     regra: "Média = Σ valores ÷ n; mediana = valor central (média dos dois centrais, se n par); moda = valor de maior frequência.",
     pegadinha: "A pegadinha é a mediana: n par exige média dos dois centrais, e o aluno que pega o 5º valor apenas (5) erra."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-1 (M8.3.1 Média, mediana e moda).",
   },
   {
     id: "q-m8-07",
@@ -199,6 +205,7 @@ const moduleQuestions8 = [
     },
     regra: "Power Query = ETL declarativo em passos; cada atualização refaz os passos registrados; o fluxo é extrair → transformar → carregar (ETL/ELT).",
     pegadinha: "CSNIF: cada um dos itens C/E costuma inverter uma característica — aqui o candente é o 'fica registrado' e 'executado', ambos presentes no currículo."
+    fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 Power Query e transformações).",
   },
   {
     id: "q-m8-08",
@@ -227,6 +234,7 @@ const moduleQuestions8 = [
     },
     regra: "Modelo estrela: fato transacional no centro, dimensões ao redor. A contagem de linhas representa a unidade de negócio desejada somente quando a granularidade da fato coincide com essa unidade; para contar protocolos com várias linhas por protocolo, conte protocolos distintos pela chave correta.",
     pegadinha: "A pegadinha é confundir quantidade de linhas com quantidade de entidades de negócio. Uma linha de fato pode representar item, evento, etapa ou parcela, e não necessariamente um protocolo único."
+    fonte: "Currículo M8 — modulo-8-unidade-4-topico-3 (M8.4.3 Modelagem analítica).",
   },
   {
     id: "q-m8-09",
@@ -255,6 +263,7 @@ const moduleQuestions8 = [
     },
     regra: "Storytelling de decisão: contexto → conflito → descoberta → recomendação, com recomendações que indiquem ação, responsável, prazo, custo previsto e consequência de não agir.",
     pegadinha: "A alternativa C pega quem associa 'fiel ao processo de coleta' à 'narrativa de comunicação', mas o currículo exige a ordem da decisão, não a do processo."
+    fonte: "Currículo M8 — modulo-8-unidade-5-topico-1 (M8.5.1 Arco narrativo).",
   },
   {
     id: "q-m8-10",
@@ -276,6 +285,7 @@ const moduleQuestions8 = [
     },
     regra: "Métrica de processo permite agir antes do resultado consolidar; métrica de resultado confirma o que já aconteceu. Painel equilibra as duas.",
     pegadinha: "A pegadinha do item é a inversão 'resultado primeiro e processo dispensável', típica de quem lê só a primeira frase."
+    fonte: "Currículo M8 — modulo-8-unidade-5-topico-2 (M8.5.2 Métricas de processo e resultado).",
   },
   {
     id: "q-m8-11",
@@ -304,6 +314,7 @@ const moduleQuestions8 = [
     },
     regra: "Escolha por custo de autoria vs. publicação: Tableau Public gratuito com publicação pública; Looker Studio gratuito para autoria básica; Desktop licenciado; dados sensíveis ou confidenciais não devem ser publicados em área aberta.",
     pegadinha: "A alternativa A é a pegadinha: gratuidade simples não legifera o uso público de dados escolares; o exame cobra o uso mais adequado, não o mais barato."
+    fonte: "Currículo M8 — modulo-8-unidade-4-topico-2 (M8.4.2 Tableau e Looker Studio).",
   },
   {
     id: "q-m8-12",
@@ -325,6 +336,7 @@ const moduleQuestions8 = [
     },
     regra: "Tukey: limites para outliers em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; cada bigode vai até o valor observado mais extremo dentro do limite correspondente; IIQ = Q3 − Q1 mede a dispersão central.",
     pegadinha: "A pegadinha é confundir o limite teórico de 1,5×IIQ com a extremidade efetiva do bigode: o bigode termina no valor observado mais extremo que ainda está dentro do limite."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-5 (M8.2.5 Box plot e quartis).",
   },
   {
     id: "q-m8-13",
@@ -353,6 +365,7 @@ const moduleQuestions8 = [
     },
     regra: "Categorias nominais → paleta categórica (poucas cores); magnitudes ordenadas → paleta sequencial (luminosidade); valores acima e abaixo de uma referência → paleta divergente (neutro na referência).",
     pegadinha: "A pegadinha é 'paleta arco-íris é mais atrativa' — no currículo, a atratividade decorativa é ruído quando a tarefa é ler magnitude."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Paleta sequencial).",
   },
   {
     id: "q-m8-14",
@@ -381,6 +394,7 @@ const moduleQuestions8 = [
     },
     regra: "Acessibilidade: redundância (cor + rótulo/forma/padrão), testes em escala de cinza, texto alternativo, dados subjacentes e fonte legível.",
     pegadinha: "A pegadinha é concluir 'cor bem contrastada' de cara; acessibilidade é sinônimo de redundância, não de contraste isolado."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Acessibilidade e redundância visual).",
   },
   {
     id: "q-m8-15",
@@ -409,6 +423,7 @@ const moduleQuestions8 = [
     },
     regra: "Escala linear: passo = diferença absoluta. Escala logarítmica: passo = razão (multiplicação). Em log, subida visual igual = mesmo fator, não mesmo acréscimo.",
     pegadinha: "A pegadinha é aceitar 'passo igual = valor novo' — no log, 'ae iguais' significa 'multiplicaram pelo mesmo fator'."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-3 (M8.1.3 Escalas lineares e logarítmicas).",
   },
   {
     id: "q-m8-16",
@@ -437,6 +452,7 @@ const moduleQuestions8 = [
     },
     regra: "Matriz de decisão: comparar categorias → barras; evoluir no tempo → linhas; distribuir → histograma/box plot; relacionar duas variáveis → dispersão; comparar um todo → barras empilhadas/tabela.",
     pegadinha: "A pegadinha é 'linha para (a) porque é série' — o (a) é nominal, e linhas impõem continuidade e tendência que só existem em (b)."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-4 (M8.1.4 Escolha do gráfico pela tarefa).",
   },
   {
     id: "q-m8-17",
@@ -465,6 +481,7 @@ const moduleQuestions8 = [
     },
     regra: "Histograma de densidade: altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou = 1 (relativa); comparação legítima exige mesma largura de classe.",
     pegadinha: "A alternativa A tenta o alerta 'altura sempre é a medida' — o currículo só exige densidade quando há larguras diferentes."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-1 (M8.2.1 Histograma: densidade e intervalos).",
   },
   {
     id: "q-m8-18",
@@ -493,6 +510,7 @@ const moduleQuestions8 = [
     },
     regra: "Variação percentual = (valor atual − anterior) ÷ anterior × 100; sempre com denominador do valor anterior, não o atual.",
     pegadinha: "A pegadinha é usar o valor atual como denominador ou inverter o sinal: a variação percentual divide sempre (atual − anterior) pelo anterior.",
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-2 (M8.2.2 Gráfico de linhas).",
   },
   {
     id: "q-m8-19",
@@ -521,6 +539,7 @@ const moduleQuestions8 = [
     },
     regra: "r mede força da associação linear; 'causa' exige delineamento experimental ou controle de confundentes; jamais escrever 'X causa Y' com base só em r.",
     pegadinha: "A pegadinha é a frase 'sua' — quem lê 'causa' e salta, esquece que r = 0,8 só suporta associação."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-4 (M8.2.4 Dispersão e correlação).",
   },
   {
     id: "q-m8-20",
@@ -549,6 +568,7 @@ const moduleQuestions8 = [
     },
     regra: "Desvio-padrão amostral: divisor n − 1 (Bessel), para estimativa não enviesada da variância populacional; retorna à unidade original.",
     pegadinha: "A pegadinha é 'é só raiz quadrada de 4,0' — o exercício pede a amostra, que exige o divisor n − 1, e 4,0 é a variância populacional."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-2 (M8.3.2 Variância, desvio-padrão e coeficiente de variação).",
   },
   {
     id: "q-m8-21",
@@ -577,6 +597,7 @@ const moduleQuestions8 = [
     },
     regra: "Método tipo 7: posição = (n − 1) × p + 1; interpolação linear entre os vizinhos; usado por R e Excel QUARTILE.INC.",
     pegadinha: "A pegadinha é usar n em vez de n − 1 na posição; com n = 10, posição 3,25 (não 2,5) gera o Q1 = 22."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-3 (M8.3.3 Quartis, percentis e método de posicionamento).",
   },
   {
     id: "q-m8-22",
@@ -605,6 +626,7 @@ const moduleQuestions8 = [
     },
     regra: "Assimetria à direita: média > mediana > moda; média é sensível a extremos e mediana é robusta; em assimetria à esquerda a ordem inverte.",
     pegadinha: "A pegadinha é aceitar 'média abaixo de mediana' por questão de equação — o teste é o 50 na cauda da direita."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-4 (M8.3.4 Assimetria e média vs mediana).",
   },
   {
     id: "q-m8-23",
@@ -633,6 +655,7 @@ const moduleQuestions8 = [
     },
     regra: "Errou de amostragem ≠ viés: o tamanho reduz flutuação, não erro sistemático; viés de seleção, não-resposta, sobrevivência e medição precisam de delineamento probabilístico.",
     pegadinha: "A pegadinha é '10 mil é detona' — o exame cobra a distinção conceitual entre flutuação aleatória e viés sistemático."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-6 (M8.3.6 Amostragem e viés).",
   },
   {
     id: "q-m8-24",
@@ -661,6 +684,7 @@ const moduleQuestions8 = [
     },
     regra: "Escolha por uso: estudo gratuito com dados fictícios + rotulagem; esquivo accessível exige controle de acesso; governança e licença declarada logo que dados sensíveis.",
     pegadinha: "A pegadinha é 'licença paga é mais seguro' — o currículo exige o uso adequado, e dados fictícios tornam licença desnecessária."
+    fonte: "Currículo M8 — modulo-8-unidade-4-topico-4 (M8.4.4 Comparação de ferramentas e cenários).",
   },
   {
     id: "q-m8-25",
@@ -689,6 +713,7 @@ const moduleQuestions8 = [
     },
     regra: "Comunicar incerteza: faixa, rótulo de estimativa, cenários e premissas; omitir a incerteza rompe a confiança e a legitimidade do relato.",
     pegadinha: "A pegadinha é 'a frase mais cientifica é a que mostra um único número' — a integridade gráfica pede faixa, não o único valor."
+    fonte: "Currículo M8 — modulo-8-unidade-5-topico-3 (M8.5.3 Incerteza e integridade gráfica).",
   },
   {
     id: "q-m8-26",
@@ -717,6 +742,7 @@ const moduleQuestions8 = [
     },
     regra: "Painel de gestão: poucos indicadores, exceções em destaque, metas, tendência curta, atualização declarada; relatórios analíticos contêm o detalhe.",
     pegadinha: "A pegadinha é 'visão completa' — o currículo a desconsidera como causa de paralisia."
+    fonte: "Currículo M8 — modulo-8-unidade-5-topico-4 (M8.5.4 Painéis de gestão).",
   },
   {
     id: "q-m8-27",
@@ -745,6 +771,7 @@ const moduleQuestions8 = [
     },
     regra: "Ordenação para ranquear: decrescente (ou crescente); a escala afeta a leitura percebida; a ordem alfabética só quando consulta alfabética é o uso.",
     pegadinha: "A pegadinha é 'os valores não mudaram, então a leitura não mudou' — o padrão visual muda, e isso muda a conclusão."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-3 (M8.2.3 Ordenação e legalidade de barras).",
   },
   {
     id: "q-m8-28",
@@ -773,6 +800,7 @@ const moduleQuestions8 = [
     },
     regra: "Hierarquia visual: uma cor forte para a série de interesse, fundo neutro para o contexto, no máximo três cores fortes, redundância de rótulo.",
     pegadinha: "A pegadinha é 'muitas cores = mais vivo' — o currículo reforça que muitas cores fortes nivelam tudo."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Hierarquia visual e destaque).",
   },
   {
     id: "q-m8-29",
@@ -801,6 +829,7 @@ const moduleQuestions8 = [
     },
     regra: "Quatro explicações para X e Y andarem juntos: X causa Y, Y causa X, confounder causa as duas, coincidência. Causalidade exige experimento ou controle de confundentes.",
     pegadinha: "A alternativa D 'invalida' é a pegadinha — o confounder não invalida, ele limita a interpretação para causalidade."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-5 (M8.3.5 Correlação e causalidade).",
   },
   {
     id: "q-m8-30",
@@ -829,6 +858,7 @@ const moduleQuestions8 = [
     },
     regra: "Medida (schnitt) é avaliada no contexto de visual/filtros; agregação correta = somar antes de dividir; média de médias é vício de agregação.",
     pegadinha: "A alternativa A é a pegadinha: parece 'média de todos os registros', mas a definição correta usa Soma/Soma no contexto de filtro."
+    fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 DAX e contexto de filtro).",
   },
   {
     id: "q-m8-31",
@@ -857,6 +887,7 @@ const moduleQuestions8 = [
     },
     regra: "Referência central (meta, acima/abaixo) → paleta divergente com neutro na referência; categorias sem ordem → categóricas; magnitude → sequencial.",
     pegadinha: "A alternativa D espanta quem confunde 'intensidade' com a regra do neutro na referência."
+    fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Paleta divergente com referência central).",
   },
   {
     id: "q-m8-32",
@@ -885,6 +916,7 @@ const moduleQuestions8 = [
     },
     regra: "Histograma de densidade: frequência está na área; altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou 1 (relativa).",
     pegadinha: "A alternativa A tenta a afirmação 'a altura é sempre a frequência' — o currículo só exige densidade com larguras diferentes."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-1 (M8.2.1 Histogramas com classes de larguras diferentes).",
   },
   {
     id: "q-m8-33",
@@ -913,6 +945,7 @@ const moduleQuestions8 = [
     },
     regra: "Série temporal com lacuna: quebrar a linha e sinalizar a vigência; conectar ou interpolar fabrica continuidade e valores inexistentes.",
     pegadinha: "A pegadinha é 'a linha pode ser interpolada' — a continuidade do gráfico exige dados contínuos."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-2 (M8.2.2 Linhas, lacunas e continuidade).",
   },
   {
     id: "q-m8-34",
@@ -941,6 +974,7 @@ const moduleQuestions8 = [
     },
     regra: "Bigode de Tukey: limite em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; convenções alternativas (1,0; 1,5; 2,0) e métodos de quartil são declaráveis e afetam os bigodes.",
     pegadinha: "A alternativa A é a pegadinha: quartis podem variar, mas a causa mais direta da diferença no bigode é o múltiplo do IIQ."
+    fonte: "Currículo M8 — modulo-8-unidade-2-topico-5 (M8.2.6 Box plot e convenções de bigode).",
   },
   {
     id: "q-m8-35",
@@ -969,6 +1003,7 @@ const moduleQuestions8 = [
     },
     regra: "Média ponderada = Σ(valor × peso) ÷ Σ(pesos); a média simples ignora os pesos e pode superestimar.",
     pegadinha: "A pegadinha é 'a simples média é 7,0' — o exercício pede ponderada, que deve ser 6,33."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-1 (M8.3.1 Média ponderada).",
   },
   {
     id: "q-m8-36",
@@ -997,6 +1032,7 @@ const moduleQuestions8 = [
     },
     regra: "Outlier não é sinônimo de erro; inspecione (erro de digitação? unidade trocada? caso real legítimo?), e use média robusta (mediana, IIQ) ou transformação quando houver cauda.",
     pegadinha: "A pegadinha é 'a média de 30 é erro' — a cauda real (no primeiro exemplo do currículo, valor 50) é legítima e informativa."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-4 (M8.3.4 Outliers e tratamento de extremos).",
   },
   {
     id: "q-m8-37",
@@ -1025,6 +1061,7 @@ const moduleQuestions8 = [
     },
     regra: "Causalidade em observacional: suporte de critérios clássicos (temporalidade, força, consistência, gradiente, plausibilidade), ainda assim limitado sem randomização — 'causa' reservar para evidência experimental ou argumento bem sustentado.",
     pegadinha: "A alternativa B 'nenhuma hipótese' é exagerada — o currículo reconhece que os critérios de apoio existem, mas o desenho limita."
+    fonte: "Currículo M8 — modulo-8-unidade-3-topico-5 (M8.3.5 Critérios clássicos de causalidade).",
   },
   {
     id: "q-m8-38",
@@ -1053,6 +1090,7 @@ const moduleQuestions8 = [
     },
     regra: "Contagem de linhas inflada pela duplicidade de chave → contagem distinta do protocolo; granularidade declarada é a solução.",
     pegadinha: "A alternativa A é a pegadinha: linhas = fatos duplicados; a contagem distinta é o evento real."
+    fonte: "Currículo M8 — modulo-8-unidade-4-topico-3 (M8.4.3 Contagem distinta e granularidade).",
   },
   {
     id: "q-m8-39",
@@ -1081,6 +1119,7 @@ const moduleQuestions8 = [
     },
     regra: "DAX média correta = Soma(valor) ÷ Soma(quantidade); média de médias é o viço de agregação quando a quantidade varia.",
     pegadinha: "A alternativa A tenta o erro de 'é só média de todos os registros' — a agregação Soma/Soma é a definição correta."
+    fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 DAX: agregar antes de dividir).",
   },
   {
     id: "q-m8-40",
@@ -1109,5 +1148,6 @@ const moduleQuestions8 = [
     },
     regra: "Recomendação fundamentada: investigar outliers antes de removê-los; declarar se os dados são fictícios; reportar medidas robustas (mediana, IIQ) e não apenas média.",
     pegadinha: "A alternativa B 'tirar o outlier' é a pegadinha — remover sem investigação é mascaramento, não limpeza."
+    fonte: "Currículo M8 — modulo-8-unidade-5-topico-4 (M8.5.4 Estudo de caso e integridade).",
   },
 ];
