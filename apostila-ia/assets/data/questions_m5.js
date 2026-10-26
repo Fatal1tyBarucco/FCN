@@ -936,7 +936,7 @@ const moduleQuestions5 = [
     analise: {
       A: "CORRETA. A queda do erro de validação e a aproximação das curvas são compatíveis com melhor generalização; não constituem garantia isolada de ausência de overfitting.",
       B: "INCORRETA. Overfitting mostra treino baixo e validação alta.",
-      C: "INCORRETA. Mais dados ajuda, não prejudica.",
+      C: "INCORRETA. O padrão descrito não justifica reduzir a amostra; mais dados representativos podem ajudar, mas o efeito precisa ser medido.",
       D: "INCORRETA. Curvas não são sempre decrescentes — podem estabilizar ou subir.",
       E: "INCORRETA. Modelo está aprendendo."
     },
@@ -967,32 +967,32 @@ const moduleQuestions5 = [
     },
     regra: "Precisão = 'quando acusou, quantos estavam corretos'.",
     pegadinha: "Precisão e recall têm denominadores diferentes.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
+    fonte: "Provost, F. & Fawcett, T. — Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking, 2013."
   },
 
   { id: "q-m5-40", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "avancado", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — RMSE e penalização de erros grandes",
-    contexto: "MAE 1,9 e RMSE 6,4 em previsão de demanda.",
-    enunciado: "A distância entre RMSE e MAE típica de 6,4 indica:",
+    contexto: "Em uma previsão de demanda, um modelo apresenta MAE de 1,9 unidade e RMSE de 6,4 unidades no mesmo conjunto de avaliação.",
+    enunciado: "Qual interpretação desses resultados é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Que erros de maior magnitude pesam desproporcionalmente no RMSE; é necessário investigar sua distribuição e os segmentos em que ocorrem." },
-      { letra: "B", texto: "Que o modelo não aprende." },
-      { letra: "C", texto: "Que os dados não são relevantes." },
-      { letra: "D", texto: "Que o modelo está overfitado." },
-      { letra: "E", texto: "Que a métrica é incorreta." }
+      { letra: "A", texto: "O RMSE penaliza erros grandes de forma mais intensa que o MAE; a diferença observada justifica investigar a distribuição dos erros e os segmentos em que ocorrem." },
+      { letra: "B", texto: "O modelo necessariamente sofre overfitting, mesmo sem comparar treino e validação." },
+      { letra: "C", texto: "O MAE menor prova que o modelo tem bom desempenho em todos os segmentos." },
+      { letra: "D", texto: "RMSE menor que MAE seria obrigatório para um modelo bem calibrado." },
+      { letra: "E", texto: "A diferença entre as métricas prova que os dados de avaliação são irrelevantes." }
     ],
     gabarito: "A",
-    justificativa: "RMSE ≥ MAE. Uma diferença grande entre eles indica que os erros de maior magnitude pesam desproporcionalmente na métrica quadrática. Isso justifica investigar a distribuição dos erros e possíveis casos extremos, mas não basta para concluir que o modelo é bom em média nem para identificar sozinho a causa.",
+    justificativa: "MAE calcula a média dos valores absolutos dos erros, enquanto RMSE calcula a raiz da média dos erros quadráticos, dando peso relativamente maior aos erros de grande magnitude. RMSE costuma ser maior ou igual ao MAE no mesmo conjunto. A diferença entre os valores pode motivar a investigação de erros extremos ou segmentos específicos, mas não identifica sozinha a causa nem comprova overfitting ou qualidade global.",
     analise: {
-      A: "CORRETA. A diferença entre RMSE e MAE destaca a influência de erros de maior magnitude, que devem ser investigados nos dados e por segmento.",
-      B: "INCORRETA. Erro médio absoluto menor não indica não aprendizado.",
-      C: "INCORRETA. Desempenho imprevisível não é prova de irrelevância.",
-      D: "INCORRETA. Overfitting é detectado por treino × validação, não por métricas.",
-      E: "INCORRETA. RMSE é uma métrica válida e corretamente calculada."
+      A: "CORRETA. A diferença entre RMSE e MAE indica influência relativa maior de erros grandes e justifica investigar sua distribuição.",
+      B: "INCORRETA. Overfitting exige analisar desempenho em treino e dados de validação/teste; a diferença entre MAE e RMSE não basta.",
+      C: "INCORRETA. Uma média global não demonstra desempenho adequado em todos os segmentos.",
+      D: "INCORRETA. No mesmo conjunto, RMSE é matematicamente maior ou igual ao MAE; não é necessário que seja menor.",
+      E: "INCORRETA. A diferença entre métricas não prova irrelevância dos dados."
     },
-    regra: "RMSE ≥ MAE; diferença grande indica maior influência relativa de erros de grande magnitude e pede análise da distribuição.",
-    pegadinha: "A diferença entre RMSE e MAE não revela, por si só, a causa dos erros nem prova a qualidade geral do modelo.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    regra: "MAE resume erros absolutos; RMSE dá peso quadrático maior a erros grandes. Compare-os no mesmo conjunto e investigue segmentos e extremos.",
+    pegadinha: "A diferença entre MAE e RMSE não diagnostica sozinha overfitting nem demonstra qualidade uniforme do modelo.",
+    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2nd ed., 2009."
   },
 
   {
