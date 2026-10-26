@@ -2114,7 +2114,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "avancado",
-    topico: "m3-u2-t3-s1"",
+    topico: "m3-u2-t3-s1",
     assunto: "M3.2 Segurança e gravação de reuniões",
     contexto: "Questionário de conformidade cita a LGPD (Lei nº 13.709, de 14 de agosto de 2018) para a proteção de dados pessoais em gravações de reuniões.",
     enunciado: "A LGPD determina que os agentes de tratamento adotem medidas de segurança, técnicas e administrativas aptas a proteger os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas.",
