@@ -3888,7 +3888,7 @@ var questoesBanco = [
     regra: "Em suspeita de phishing, interromper interação, verificar independentemente e reportar.",
     pegadinha: "SPF, DKIM e DMARC não garantem que toda mensagem seja legítima ou segura.",
     fonte: "Currículo M3, unidade 5, tópico 3 — phishing direcionado e autenticação de e-mail."
-  }
+  },
 
 
   {
