@@ -199,3 +199,13 @@ Lote revisado no texto versionado de `apostila-ia/assets/data/questions_m6.js`, 
 
 **Resultado do lote:** uma precisão conceitual sobre os limites da avaliação e dois ajustes editoriais. Nenhum gabarito foi alterado. As referências bibliográficas declaradas nas questões não foram auditadas individualmente nesta rodada.
 
+## Revisão semântica dirigida — lote M5 q26–q30 — 2026-10-26
+
+- **`q-m5-26` — RLHF e vieses:** mantido o gabarito “errado”; corrigidos erros gramaticais e explicitado que o ajuste por preferências pode reduzir alguns comportamentos, sem garantir ausência de vieses.
+- **`q-m5-27` — temperatura:** mantido o gabarito C. Corrigidos o contexto e um distrator malformado; as explicações agora tratam os efeitos da temperatura como tendências gerais, sem prometer determinismo universal em baixa temperatura.
+- **`q-m5-28` — componentes de prompt:** alternativa A e conceito coerentes; sem alteração semântica necessária.
+- **`q-m5-29` — zero-shot/few-shot:** definição e gabarito A coerentes; sem alteração semântica necessária.
+- **`q-m5-30` — delimitação e injeção de prompt:** mantido o gabarito A, mas corrigida a justificativa excessiva. Delimitadores podem ajudar a separar instruções de dados; não bloqueiam sozinhos prompt injection e devem integrar defesa em camadas.
+
+**Resultado do lote:** correções de precisão conceitual e editorial sem alteração dos gabaritos. As referências bibliográficas individuais ainda precisam de verificação de correspondência exata com cada afirmação.
+
