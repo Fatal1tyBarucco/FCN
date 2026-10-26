@@ -138,16 +138,16 @@ const moduleQuestions5 = [
     enunciado: "Sobre viés (bias) e variância (variance) em modelos de aprendizado de máquina, é correto afirmar que:",
     alternativas: [
       { letra: "A", texto: "Viés alto e variância baixa indicam bom equilíbrio no modelo." },
-      { letra: "B", texto: "Viés baixo e variância alta indicam overfitting." },
+      { letra: "B", texto: "Viés baixo e variância alta tendem a indicar overfitting." },
       { letra: "C", texto: "Viés e variância são conceitos irrelevantes para a generalização." },
       { letra: "D", texto: "Viés baixo e variância baixa referem-se ao mesmo modelo." },
-      { letra: "E", texto: "Viés alto é conseqüência exclusiva de overfitting." }
+      { letra: "E", texto: "Viés alto é consequência exclusiva de overfitting." }
     ],
     gabarito: "B",
     justificativa: "Viés baixo (modelo complexo, se ajusta aos dados) e variância alta (sensível a pequenas variações nos dados) indicam overfitting. Viés alto e variância baixa indicam underfitting (alternativa A incorreta); viés e variância são relevantes para generalização (alternativa C incorreta); baixo viés e baixa variância não são o mesmo modelo (alternativa D incorreta); viés alto não é conseqüência de overfitting — overfitting é alta variância (alternativa E incorreta).",
     analise: {
       A: "INCORRETA. Viés alto + variância baixa indica underfitting, não equilíbrio.",
-      B: "CORRETA. Baixo viés + alta variância indica overfitting (modelo complexo).",
+      B: "CORRETA. Baixo viés + alta variância tende a indicar overfitting, embora o diagnóstico dependa do comportamento do modelo e dos dados.",
       C: "INCORRETA. Viés e variância são fundamentais para a análise de generalização.",
       D: "INCORRETA. Modelos diferentes têm combinações distintas de viés e variância.",
       E: "INCORRETA. Viés alto não é conseqüência exclusiva de overfitting — overfitting é alta variância."
@@ -159,30 +159,30 @@ const moduleQuestions5 = [
 
   { id: "q-m5-07", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-5-unidade-3-topico-3", assunto: "5.1 — Explicabilidade (XAI)",
-    contexto: "Explicabilidade é essencial em aplicações críticas de IA.",
-    enunciado: "Sobre a explicabilidade (XAI — eXplainable Artificial Intelligence), é correto afirmar que:",
+    contexto: "Técnicas de explicabilidade podem ajudar a analisar o comportamento de modelos de IA, inclusive modelos complexos.",
+    enunciado: "Sobre explicabilidade em inteligência artificial (XAI), é correto afirmar que:",
     alternativas: [
-      { letra: "A", texto: "É o processo de tornar os modelos de IA mais difíceis de entender." },
-      { letra: "B", texto: "É o conjunto de técnicas para tornar os modelos de IA interpretáveis e transparentes para os humanos." },
-      { letra: "C", texto: "É a utilização de modelos de caixa-preta sem ressalva." },
-      { letra: "D", texto: "É o uso exclusivo de redes neurais profundas." },
-      { letra: "E", texto: "É o processo de esconder os dados." }
+      { letra: "A", texto: "Uma explicação local de uma previsão garante que o modelo inteiro seja transparente." },
+      { letra: "B", texto: "Técnicas de XAI podem oferecer explicações úteis sobre previsões ou comportamento do modelo, mas não garantem explicação completa nem causalidade." },
+      { letra: "C", texto: "XAI é uma técnica exclusiva de redes neurais profundas." },
+      { letra: "D", texto: "Uma explicação gerada pelo modelo prova que a decisão é justa e correta." },
+      { letra: "E", texto: "XAI consiste em ocultar os dados de entrada para proteger o modelo." }
     ],
     gabarito: "B",
-    justificativa: "XAI é o conjunto de técnicas que tornam os modelos de IA mais interpretáveis e transparentes para humanos, permitindo compreender decisões e processos. Tornar o modelo mais difícil de entender (alternativa A incorreta); caixa-preta (alternativa C incorreta); uso exclusivo de redes profundas (alternativa D incorreta); esconder dados (alternativa E incorreta).",
+    justificativa: "XAI reúne métodos para tornar certos aspectos das previsões ou do comportamento de modelos mais compreensíveis. O alcance depende da técnica, do modelo e do contexto: uma explicação local não descreve necessariamente todo o modelo, e uma explicação não prova causalidade, justiça ou correção factual.",
     analise: {
-      A: "INCORRETA. XAI visa tornar o modelo mais interpretável, não mais difícil.",
-      B: "CORRETA. XAI torna o modelo interpretável e transparente para humanos.",
-      C: "INCORRETA. XAI visa remover caixa-preta, não mantê-la.",
-      D: "INCORRETA. XAI não é restrito a redes neurais profundas.",
-      E: "INCORRETA. XAI não esconde dados — revela processos."
+      A: "INCORRETA. Uma explicação local se refere a uma previsão ou região específica e não garante transparência global.",
+      B: "CORRETA. A explicação pode apoiar análise e auditoria, mas possui escopo e limitações que devem ser avaliados.",
+      C: "INCORRETA. Há técnicas de explicabilidade aplicáveis a diferentes famílias de modelos, não apenas redes profundas.",
+      D: "INCORRETA. Explicabilidade não prova, por si só, justiça, validade ou correção da decisão.",
+      E: "INCORRETA. Ocultar dados de entrada não define XAI."
     },
-    regra: "XAI = 'entenda o que a IA pensou'. Tornar modelos interpretáveis.",
-    pegadinha: "XAI não é 'explicar tudo de uma vez' — é tornar a IA compreensível.",
-    fonte: "Arrieta, A. et al. — XAI: Explainable Artificial Intelligence, 2020."
+    regra: "XAI = métodos para compreender aspectos das previsões ou do comportamento de um modelo, com limitações explícitas.",
+    pegadinha: "Uma explicação plausível não é prova de causalidade, justiça ou correção; confira o escopo da técnica usada.",
+    fonte: "Arrieta, A. et al. — Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, 2020."
   },
 
-  { id: "q-m5-08", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+    { id: "q-m5-08", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-5-unidade-1-topico-1", assunto: "5.1 — Dados, ativos, parâmetros e inferência",
     contexto: "Modelos de IA consomem dados e geram inferências.",
     enunciado: "No contexto de modelos de IA, o termo 'inferência' refere-se a:",
@@ -209,7 +209,7 @@ const moduleQuestions5 = [
 
   { id: "q-m5-09", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-5-unidade-3-topico-3", assunto: "5.1 — Avaliação de Performance e Qualidade",
-    contexto: "Avaliação é essencial para garantir que o modelo atenda aos objetivos.",
+    contexto: "A avaliação permite estimar se um modelo atende aos objetivos definidos e generaliza para dados não vistos.",
     enunciado: "A avaliação de desempenho e qualidade em aprendizado de máquina é importante porque:",
     alternativas: [
       { letra: "A", texto: "É um processo redundante." },
@@ -225,7 +225,7 @@ const moduleQuestions5 = [
       B: "INCORRETA. Avaliação não substitui validação — complementa.",
       C: "CORRETA. Avaliação verifica se o modelo atende aos objetivos e generaliza.",
       D: "INCORRETA. Avaliação não elimina a necessidade de teste.",
-      E: "INCORRETA. Avaliação não garante que o modelo nunca falhar."
+      E: "INCORRETA. Avaliação não garante ausência de falhas; fornece evidências sobre o desempenho nas condições avaliadas."
     },
     regra: "Avaliação = 'qualidade do modelo'. Verificar atendimento aos objetivos.",
     pegadinha: "Avaliação não é 'garantir sucesso' — é 'medir o quão bom o modelo é'.",
@@ -233,28 +233,28 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-10", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Regra geral de completude",
-    contexto: "IA abrange sistemas que realizam tarefas de inteligência humana.",
-    enunciado: "Para considerar um sistema de IA como 'completo' do ponto de vista técnico, ele deve:",
+    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Definição de escopo e avaliação de sistemas de IA",
+    contexto: "Uma equipe pretende adotar um sistema de IA para apoiar a triagem de solicitações em um serviço público.",
+    enunciado: "Antes de colocar o sistema em uso, qual abordagem técnica é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Ser capaz de realizar todas as tarefas humanas." },
-      { letra: "B", texto: "Ter um escopo definido e realizar tarefas específicas com precisão." },
-      { letra: "C", texto: "Não usar dados." },
-      { letra: "D", texto: "Não precisar de treinamento." },
-      { letra: "E", texto: "Ser capaz de falar em alguns idiomas." }
+      { letra: "A", texto: "Exigir que o sistema realize todas as tarefas humanas para considerá-lo tecnicamente válido." },
+      { letra: "B", texto: "Definir tarefas e limites de uso, critérios de desempenho e riscos, e avaliar o sistema com dados adequados ao contexto pretendido." },
+      { letra: "C", texto: "Dispensar avaliação quando o sistema apresenta bons resultados em exemplos escolhidos pela equipe." },
+      { letra: "D", texto: "Presumir que um sistema de IA funciona sem dados, validação ou supervisão após a implantação." },
+      { letra: "E", texto: "Usar a capacidade de conversar em vários idiomas como critério suficiente de qualidade para qualquer tarefa." }
     ],
     gabarito: "B",
-    justificativa: "Um sistema de IA 'completo' tem escopo definido e realiza tarefas específicas com precisão — não necessariamente tudo o que um humano faz (alternativa A incorreta); usar dados (alternativa C incorreta); necessidade de treinamento não é eliminada (alternativa D incorreta); idiomas são apenas um recurso (alternativa E incorreta).",
+    justificativa: "A avaliação de um sistema de IA deve partir de um caso de uso definido, critérios de desempenho verificáveis, dados pertinentes e análise de riscos e limitações. Não existe requisito geral de que todo sistema execute todas as tarefas humanas, e uma demonstração favorável ou capacidade linguística não substitui avaliação apropriada ao uso pretendido.",
     analise: {
-      A: "INCORRETA. IA não realiza todas as tarefas humanas — tem escopo definido.",
-      B: "CORRETA. Um sistema de IA completo tem escopo definido e realiza tarefas específicas com precisão.",
-      C: "INCORRETA. Sistemas de IA usam dados — ausência de dados impede o aprendizado.",
-      D: "INCORRETA. Sistemas de IA necessitam de treinamento para aprenderem padrões.",
-      E: "INCORRETA. Idiomas são apenas um recurso — não definem completude."
+      A: "INCORRETA. Um sistema pode ser projetado para uma tarefa delimitada; não precisa substituir todas as capacidades humanas.",
+      B: "CORRETA. Escopo, critérios de desempenho, adequação dos dados e riscos devem ser definidos e avaliados para o contexto de uso.",
+      C: "INCORRETA. Exemplos selecionados podem ser enviesados e não substituem uma avaliação planejada e representativa.",
+      D: "INCORRETA. Necessidades de dados, validação, monitoramento e supervisão dependem do sistema e do risco; não podem ser presumidas ausentes.",
+      E: "INCORRETA. Fluência linguística é apenas uma capacidade e não demonstra qualidade para tarefas não relacionadas."
     },
-    regra: "IA completa = 'escopo definido + precisão + dados + treinamento'.",
-    pegadinha: "IA não é 'robô com tudo' — é 'sistema com escopo definido e dados'.",
-    fonte: "ISO/IEC 22989 (Artificial Intelligence — Concepts and Terminology)."
+    regra: "Avalie sistemas de IA contra objetivos, dados, métricas, riscos e limites definidos para o caso de uso.",
+    pegadinha: "Não trate 'IA completa' como uma categoria técnica universal: a adequação é relativa à tarefa, aos critérios e ao contexto de implantação.",
+    fonte: "ISO/IEC 22989 — Artificial intelligence — Concepts and terminology."
   },
 
   /* ===================== 5.2 Aprendizado de Máquina (10 questões) ===================== */
