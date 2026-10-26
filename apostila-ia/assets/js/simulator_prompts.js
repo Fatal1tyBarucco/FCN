@@ -246,7 +246,7 @@
     return '<div class="sim-prompts">'
       + '<h3>Simulador de Engenharia de Prompts (Seção 7.4)</h3>'
       + '<p class="sim-prompts-sub">Edite, avalie e compare prompts. <strong>Simulação local — sem API externa.</strong> Nenhuma saída é apresentada como geração real de modelo de IA.</p>'
-      + '<nav class="sim-prompts-nav" aria-label="Seções do simulador">'
+      + '<nav class="sim-prompts-nav" aria-label="Navegação das seções do simulador de prompts">'
       + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="editor">1. Editor de prompts</button>'
       + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="comparacao">2. Comparação entre prompts</button>'
       + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="ambiguidade">3. Ambiguidade</button>'
