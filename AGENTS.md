@@ -235,6 +235,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `e1e15193829ff4974bd96be452b217e3770310c9`.
 - Este passe não substitui a revisão integral do módulo nem valida a sintaxe por si só. Consultar CI no HEAD atual.
 
+## Auditoria semântica incremental — lote M4 q-m4-56 a q-m4-60 (2026-10-26)
+
+- q-m4-56: corrigida a simplificação de que criptografia assimétrica sempre cifra com chave pública e decifra com privada; diferencia assinaturas de mecanismos de estabelecimento de chaves.
+- q-m4-57: corrigido o erro de digitação “ballote” e substituída a definição rasa por uma distinção entre hash criptográfico geral e armazenamento de senhas com sal e custo adequados.
+- q-m4-58: removida a afirmação absoluta de que assinatura digital garante automaticamente não repúdio em qualquer contexto; agora requer validação da assinatura, integridade, cadeia e estado do certificado, conforme aplicável.
+- q-m4-59: reescrita a função de certificado X.509 como vínculo entre chave pública e identidade/nome; explicita validação de cadeia, nome, validade e estado e não promete segurança global do site.
+- q-m4-60: substituída definição genérica e metáforas imprecisas por cenário de spear phishing direcionado, com confirmação por canal independente e reporte.
+- Commit de conteúdo: `8c4249e801702374ebb8165550dc59cc24369aab`.
+- Fontes técnicas citadas incluem NIST FIPS 186-5, SP 800-56A, FIPS 180-4, SP 800-63B, RFC 5280, ITU-T X.509, MITRE ATT&CK e CISA. Este passe não substitui a revisão integral do M4 nem a validação automatizada do HEAD.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
