@@ -910,7 +910,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: (1) tratar 'ERRO DE ENTRADA' como sinal de falha do simulador — é recusa deliberada, documentada e anterior à execução; (2) supor, por descrições desatualizadas do banco, que PROCX não foi implementado ou que PROCV/PROCH apenas avisam que não buscam — as três funções executam busca real; (3) confundir os dois canais de erro: 'ERRO DE ENTRADA' (entrada fora do escopo, antes da avaliação) é diferente dos códigos #N/A, #REF!, #VAL!, #DIV/0! e #NUM! (erros durante a execução)."
     },
     regra: "Escopo declarado × funcionalidade (Seção 7.1 do prompt mestre — laboratórios com ações e resultados reais dentro do escopo declarado): entradas fora do escopo são recusadas ANTES da avaliação com mensagem útil iniciada por 'ERRO DE ENTRADA'; erros de execução usam os códigos Excel declarados (#N/A, #REF!, #VAL!, #DIV/0!, #NUM!); e PROCV/PROCH/PROCX executam busca real — nenhum resultado pode ser apresentado como real quando não o for.",
-    pegadinha: "Item técnico com duas cláusulas que tratam de canais distintos: a primeira é sobre RECUSA de entrada (antes da avaliação) e a segunda sobre COMPORTAMENTO das funções de pesquisa (durante a execução). Quem associa 'mensagem de erro' a defeito, ou decorou a limitação antiga de PROCX, tende a marcar Errado o que o código atual confirma."
+    pegadinha: "Item técnico com duas cláusulas que tratam de canais distintos: a primeira é sobre RECUSA de entrada (antes da avaliação) e a segunda sobre COMPORTAMENTO das funções de pesquisa (durante a execução). Quem associa 'mensagem de erro' a defeito, ou decorou a limitação antiga de PROCX, tende a marcar Errado o que o código atual confirma.",
+    fonte: "Fonte primária interna: escopo implementado em apostila-ia/assets/js/simulators.js (cabeçalho \"TIPOS E ERROS\", tokenizador/analisador, fnProcv, fnProch, fnProcx e rejeitaEntradaInvalida) e conteúdo curricular em apostila-ia/assets/data/curriculum.js. A verificação externa dos limites gerais de compatibilidade do Excel deve ser tratada separadamente.",
   },
   /* ===================== FIM BLOCO INICIAL M1 (q-m1-01..q-m1-32) ===================== */
   /* ===================== BLOCO INICIAL M2 — Redes (q-m2-01..q-m2-26; 54 no total) =====================
@@ -2255,7 +2256,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: validar a metade inicial e parar aí. A estrutura 'Embora X, não-Y' exige decidir sobre Y — e Y é precisamente o que o currículo afirma que o IMAP faz."
     },
     regra: "Capacidades do IMAP (servidor): pastas no servidor, busca sem download completo, cópia mantida no servidor, sincronização multi-dispositivo.",
-    pegadinha: "Estrutura concessiva: a parte antes da vírgula é verdadeira de propósito, para conduzir à marcação errada. Analise a cláusula principal separadamente — é onde mora o gabarito."
+    pegadinha: "Estrutura concessiva: a parte antes da vírgula é verdadeira de propósito, para conduzir à marcação errada. Analise a cláusula principal separadamente — é onde mora o gabarito.",
+    fonte: "IETF RFC 9051 — IMAP4rev2, comandos e recursos de organização/pesquisa de mensagens no servidor: https://www.rfc-editor.org/rfc/rfc9051.html",
   }
 
 
@@ -3252,7 +3254,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: tratar a gravação como mero arquivo interno sem dados pessoais — contendo dados pessoais, ela cai nas práticas de proteção e nos direitos do titular descritas no currículo."
     },
     regra: "Gravação com dados pessoais exige: transparência e base legal adequada, finalidade, prazo de retenção, segurança e atendimento aos direitos dos titulares; consentimento quando aplicável.",
-    pegadinha: "Item simples por design; o risco é esquecer que uma gravação de reunião é tratamento de dados pessoais e, como tal, carrega finalidade, retenção e direitos do titular."
+    pegadinha: "Item simples por design; o risco é esquecer que uma gravação de reunião é tratamento de dados pessoais e, como tal, carrega finalidade, retenção e direitos do titular.",
+    fonte: "Lei nº 13.709/2018 (LGPD), texto oficial no Planalto — tratamento de dados pessoais, princípios e direitos dos titulares: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
   },
   {
     id: "q-m1-41",
