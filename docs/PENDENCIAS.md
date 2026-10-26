@@ -242,3 +242,16 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [ ] q-m6-38: substituir a referência genérica ao art. 43, IV, da Lei nº 14.129/2021 por base de gestão de riscos/auditoria (arts. 48 e 49) e segurança de dados (LGPD, art. 46), mantendo as referências da LAI pertinentes.
 - [ ] Incluir a Lei nº 12.813/2013 no catálogo de referências verificadas após aplicar a correção de q-m6-32.
 - [x] Revalidar após as correções de q-m6-02 e q-m6-06: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250565014 — success.
+
+
+---
+
+## Atualização de continuidade — 2026-10-25
+
+1. **P1 — reconciliação de contagens por commit:** documentos históricos mencionam 404 flashcards/365 questões; o PR #17 declara 460 flashcards/389 questões após alterações posteriores. Confirmar os números executando a auditoria no SHA atual do branch e sincronizar todos os documentos derivados.
+2. **P1 — qualidade editorial de questões:** o próprio PR registra concentração de gabaritos no banco legado, incluindo módulos com todas as respostas na alternativa A. Revisar posição das alternativas e coerência de cada análise sem alterar o significado do gabarito.
+3. **P1 — revisão semântica:** revisar conteúdo, exemplos, exercícios, fontes e gabaritos; a existência de campos e a aprovação de sintaxe não satisfazem o critério de aprendizagem completa.
+4. **P2 — testes de navegador e acessibilidade:** completar teclado/leitor de tela, responsividade em dispositivo real, áudio e comportamento dos embeds, distinguindo teste headless de teste físico.
+5. **P2 — fontes normativas:** confirmar a vigência e a pertinência de cada referência legal/normativa citada, registrando URL, dispositivo e data de consulta.
+6. **P3 — delegação multiagente:** a ferramenta de delegação especializada não está disponível nesta execução; não atribuir tarefas a agentes fictícios. Prosseguir com lotes isolados e revisão independente documentada.
+7. **Controle de integração:** manter o desenvolvimento no branch do PR #17 e não executar merge enquanto critérios obrigatórios qualitativos ou de navegador permanecerem pendentes.
