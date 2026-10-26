@@ -172,6 +172,15 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `3bb83da4c5e1e7ee48810249dd41f15516d1b249`.
 - Lotes q-m5-06..q-m5-20 foram revisados em passes focais documentados, mas isso não equivale à revisão completa das 42 questões do M5. Os checks de sintaxe e de navegador devem ser confirmados no HEAD atual.
 
+## Auditoria semântica incremental — lote M5 q-m5-01 a q-m5-05 (2026-10-26)
+
+- q-m5-01: ajustada a explicação para distinguir a necessidade de dados de treinamento para redes neurais da definição mais ampla de sistemas de IA.
+- q-m5-02: corrigida frase truncada na justificativa do distrator E e substituída a expressão imprecisa “conhecimento vivo codificado” por “conhecimento do domínio explicitado em regras”.
+- q-m5-03 e q-m5-04: revisadas neste passe focal; mantidas as distinções entre ML e tarefas específicas, e entre treino, validação e teste.
+- q-m5-05: refinada a explicação de overfitting para descrever ajuste excessivo aos dados de treino e generalização prejudicada, sem sugerir que todo caso precise ser descrito literalmente como memorização de ruído.
+- Commit de conteúdo: `4be5ee9793f53b4a1d0ccdba69395c1d2aa5d0c3`.
+- O passe q-m5-01..q-m5-20 cobre apenas os itens explicitamente revisados nas seções incrementais; ainda não constitui revisão integral do banco de 42 questões do M5. A validação automatizada do HEAD atual permanece obrigatória.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
