@@ -106,20 +106,20 @@ const moduleQuestions7 = [
     contexto: "Um técnico recebe o alerta de que a leitura de um sensor ultrapassou o limite de segurança do equipamento.",
     enunciado: "Segundo o modelo DIKW adotado no currículo, conhecimento corresponde a:",
     alternativas: [
-      { letra: "A", texto: "Informação combinada com experiência e julgamento, apta a orientar ação." },
+      { letra: "E", texto: "Informação combinada com experiência e julgamento, apta a orientar ação." },
       { letra: "B", texto: "Registro bruto, ainda sem tratamento." },
       { letra: "C", texto: "Dado apenas com contexto atribuído." },
       { letra: "D", texto: "Conjunto de metadados técnicos do sensor." },
-      { letra: "E", texto: "Decisão já executada e registrada em ata." }
+      { letra: "A", texto: "Decisão já executada e registrada em ata." }
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "O currículo adota como definição de trabalho: conhecimento é informação combinada com experiência e julgamento, aplicada por alguém ou por regra explícita de decisão. Registro bruto é dado; dado com contexto é informação; metadados descrevem o dado; a decisão executada é o produto da aplicação (sabedoria/ação), não o nível de conhecimento em si.",
     analise: {
-      A: "CORRETA. Definição literal do currículo: informação + experiência + julgamento, orientada à ação.",
+      E: "CORRETA. Definição literal do currículo: informação + experiência + julgamento, orientada à ação.",
       B: "INCORRETA. Registro bruto é o nível 'dado'.",
       C: "INCORRETA. Dado com contexto é o nível 'informação' — ainda falta experiência e julgamento.",
       D: "INCORRETA. Metadados descrevem o dado e apoiam interpretação; não são conhecimento.",
-      E: "INCORRETA. Decisão executada é aplicação (sabedoria em ato), não o conceito de conhecimento."
+      A: "INCORRETA. Decisão executada é aplicação (sabedoria em ato), não o conceito de conhecimento."
     },
     regra: "Conhecimento = informação + experiência + julgamento, apta a orientar ação.",
     pegadinha: "Conhecimento não é 'informação organizada' apenas — a definição do curso exige experiência e julgamento.",
@@ -132,19 +132,19 @@ const moduleQuestions7 = [
     contexto: "Um gestor dispõe de informação consolidada e de conhecimento técnico sobre o problema e precisa escolher entre duas condutas com efeitos distintos sobre os usuários.",
     enunciado: "No modelo DIKW, o nível em que se exerce discernimento para decidir, considerando consequências e valores, é:",
     alternativas: [
-      { letra: "A", texto: "Sabedoria." },
+      { letra: "D", texto: "Sabedoria." },
       { letra: "B", texto: "Dado." },
       { letra: "C", texto: "Informação." },
-      { letra: "D", texto: "Conhecimento." },
+      { letra: "A", texto: "Conhecimento." },
       { letra: "E", texto: "Metadado de processo." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "O currículo trata sabedoria como discernimento — o nível em que se julga o que fazer diante de consequências e valores, e não apenas se conhece o mecanismo. Dado é registro bruto; informação é dado contextualizado; conhecimento é informação com experiência e julgamento aplicada a uma regra; metadado de processo registra como o dado chegou (extração, versão do job, responsável).",
     analise: {
-      A: "CORRETA. Discernimento sobre consequências e valores na decisão é exatamente o nível de sabedoria.",
+      D: "CORRETA. Discernimento sobre consequências e valores na decisão é exatamente o nível de sabedoria.",
       B: "INCORRETA. Dado é registro bruto, sem interpretação.",
       C: "INCORRETA. Informação é o dado contextualizado, sem o julgamento de valor envolvido na escolha.",
-      D: "INCORRETA. Conhecimento orienta a ação, mas o enunciado destaca o julgamento de consequências e valores — nível de sabedoria.",
+      A: "INCORRETA. Conhecimento orienta a ação, mas o enunciado destaca o julgamento de consequências e valores — nível de sabedoria.",
       E: "INCORRETA. Metadado de processo descreve a trajetória operacional do dado, não decide nada."
     },
     regra: "Sabedoria = discernimento: aplicar conhecimento considerando consequências e valores.",
@@ -160,18 +160,18 @@ const moduleQuestions7 = [
     contexto: "Um órgão recebe três arquivos: (i) tabela de servidores com colunas tipadas; (ii) arquivo JSON de sensores, em que campos aparecem ou faltam conforme o registro; (iii) gravação em vídeo de uma audiência pública.",
     enunciado: "A classificação correta dos três arquivos, nessa ordem, é:",
     alternativas: [
-      { letra: "A", texto: "Estruturado — semiestruturado — não estruturado." },
+      { letra: "C", texto: "Estruturado — semiestruturado — não estruturado." },
       { letra: "B", texto: "Estruturado — não estruturado — semiestruturado." },
-      { letra: "C", texto: "Semiestruturado — estruturado — não estruturado." },
+      { letra: "A", texto: "Semiestruturado — estruturado — não estruturado." },
       { letra: "D", texto: "Não estruturado — semiestruturado — estruturado." },
       { letra: "E", texto: "Estruturado — estruturado — semiestruturado." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "O currículo define: estruturado = schema rígido com tipo, regra e domínio definidos de antemão (tabela relacional, planilha); semiestruturado = sem schema imposto de fora, mas com marcadores internos que descrevem a estrutura (JSON, XML, log), permitindo parsing ainda que campos variem por registro; não estruturado = sem formato computável de campos (texto livre, PDF digitalizado, imagem, áudio, vídeo).",
     analise: {
-      A: "CORRETA. Tabela tipada = estruturado; JSON com campos variáveis = semiestruturado; vídeo = não estruturado.",
+      C: "CORRETA. Tabela tipada = estruturado; JSON com campos variáveis = semiestruturado; vídeo = não estruturado.",
       B: "INCORRETA. JSON tem marcadores internos (é semiestruturado) e vídeo não tem campo algum (não estruturado) — a ordem está invertida.",
-      C: "INCORRETA. A tabela tipada é o caso mais rígido de estrutura, não o JSON.",
+      A: "INCORRETA. A tabela tipada é o caso mais rígido de estrutura, não o JSON.",
       D: "INCORRETA. Inverte os três graus: a tabela é a mais estruturada, não a menos.",
       E: "INCORRETA. JSON não é estruturado no sentido do currículo: não há schema único imposto sobre todos os registros."
     },
