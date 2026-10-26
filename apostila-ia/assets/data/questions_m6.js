@@ -964,11 +964,11 @@ const moduleQuestions6 = [
     ],
     gabarito: "E", justificativa: "A situação deve ser declarada e tratada pelo procedimento aplicável, prevenindo influência indevida e registrando a decisão; o enquadramento concreto depende do regime jurídico e das regras do órgão.",
     analise: {
-      A: "INCORRETA. A influência pode ocorrer durante a instrução, não apenas na assinatura.",
-      B: "INCORRETA. Ocultar impede avaliação e controle institucional.",
-      C: "INCORRETA. A alternativa não trata adequadamente o risco ou o procedimento aplicável.",
-      D: "INCORRETA. A alternativa não resolve a falha de governança descrita.",
-      E: "CORRETA. É a única alternativa que aplica o procedimento ou princípio descrito no enunciado."
+      A: "INCORRETA. A influência pode ocorrer durante a instrução e na avaliação da proposta, mesmo que o integrante não assine o contrato.",
+      B: "INCORRETA. O ocultamento impede que a instituição avalie e trate o possível conflito.",
+      C: "INCORRETA. Uma declaração informal de apoio técnico não substitui o procedimento formal de análise do conflito.",
+      D: "INCORRETA. Expor dados pessoais em rede social não é procedimento de integridade e pode criar outro dano.",
+      E: "CORRETA. A declaração formal e o encaminhamento permitem que a instituição avalie o caso antes da atuação do integrante."
     },
     regra: "Risco de conflito deve ser declarado e tratado por canal formal.", pegadinha: "Transparência não autoriza exposição indiscriminada de dados pessoais.", fonte: "Currículo M6 — modulo-6-unidade-1-topico-3 (ética e governança em TI)."
   },
@@ -984,11 +984,11 @@ const moduleQuestions6 = [
     ],
     gabarito: "C", justificativa: "Identidades individuais e privilégio mínimo permitem atribuir ações; autenticação forte reduz acesso indevido; registros e aprovação formal fortalecem auditoria e controle editorial.",
     analise: {
-      A: "INCORRETA. A influência pode ocorrer durante a instrução, não apenas na assinatura.",
-      B: "INCORRETA. Ocultar impede avaliação e controle institucional.",
-      C: "CORRETA. É a única alternativa que aplica o procedimento ou princípio descrito no enunciado.",
-      D: "INCORRETA. A alternativa não resolve a falha de governança descrita.",
-      E: "INCORRETA. A alternativa não estabelece controle formal adequado."
+      A: "INCORRETA. Uma planilha assinada posteriormente não garante identidade digital nem atribuição confiável de cada ação.",
+      B: "INCORRETA. A trilha de auditoria deve ser proporcional e protegida, não simplesmente desativada.",
+      C: "CORRETA. Contas individuais, privilégio mínimo, autenticação forte, registros e aprovação formal cobrem identidade, acesso, rastreabilidade e controle editorial.",
+      D: "INCORRETA. Revisão apenas após reclamações é reativa e não previne publicações indevidas.",
+      E: "INCORRETA. Uma segunda senha compartilhada mantém o problema de atribuição individual e controle de acesso."
     },
     regra: "Canal institucional exige identidade individual, acesso mínimo, trilha de auditoria e responsabilidades editoriais.", pegadinha: "Assinar planilha depois da publicação não equivale a autenticação individual.", fonte: "Currículo M6 — modulo-6-unidade-4-topico-3 (governança de redes sociais e conduta)."
   },
@@ -1004,11 +1004,11 @@ const moduleQuestions6 = [
     ],
     gabarito: "D", justificativa: "A solução deve eliminar exigências desnecessárias, tornar erros compreensíveis, apoiar a continuidade e testar acessibilidade; a taxa de abandono permite avaliar o efeito.",
     analise: {
-      A: "INCORRETA. A influência pode ocorrer durante a instrução, não apenas na assinatura.",
-      B: "INCORRETA. Ocultar impede avaliação e controle institucional.",
-      C: "INCORRETA. A alternativa não trata adequadamente o risco ou o procedimento aplicável.",
-      D: "CORRETA. É a única alternativa que aplica o procedimento ou princípio descrito no enunciado.",
-      E: "INCORRETA. A alternativa não estabelece controle formal adequado."
+      A: "INCORRETA. Recomendar outro navegador transfere o ônus ao cidadão sem investigar as barreiras do serviço.",
+      B: "INCORRETA. Campos obrigatórios adicionais podem aumentar esforço e coleta excessiva, em vez de simplificar.",
+      C: "INCORRETA. Mensagens de erro claras são necessárias para que a pessoa consiga corrigir o formulário.",
+      D: "CORRETA. Simplificação, salvamento e retomada, correção de acessibilidade e medição de abandono permitem reduzir barreiras e avaliar o resultado.",
+      E: "INCORRETA. Um FAQ não corrige a barreira do formulário, e exclusividade digital pode excluir pessoas."
     },
     regra: "Acessibilidade exige remover barreiras, testar e acompanhar conclusão e abandono.", pegadinha: "Digitalizar um processo não o torna automaticamente acessível ou simples.", fonte: "Currículo M6 — modulo-6-unidade-5-topico-3 (acessibilidade e inclusão digital)."
   },
@@ -1024,11 +1024,11 @@ const moduleQuestions6 = [
     ],
     gabarito: "B", justificativa: "A resolução parte do contexto e da conduta, identifica o regime e testa as alternativas contra o dispositivo pertinente, observando termos absolutos e mistura de regimes.",
     analise: {
-      A: "INCORRETA. A influência pode ocorrer durante a instrução, não apenas na assinatura.",
-      B: "CORRETA. É a única alternativa que aplica o procedimento ou princípio descrito no enunciado.",
-      C: "INCORRETA. A alternativa não trata adequadamente o risco ou o procedimento aplicável.",
-      D: "INCORRETA. A alternativa não resolve a falha de governança descrita.",
-      E: "INCORRETA. A alternativa não estabelece controle formal adequado."
+      A: "INCORRETA. Mais citações não garantem pertinência; é necessário verificar o contexto e a norma aplicável.",
+      B: "CORRETA. A sequência identifica os fatos relevantes, o regime jurídico e o dispositivo antes de avaliar as alternativas.",
+      C: "INCORRETA. Transparência tem de ser conciliada com proteção de dados e hipóteses legais de sigilo, conforme o caso.",
+      D: "INCORRETA. A intenção isolada não determina a legalidade; importam a conduta, o contexto e a norma.",
+      E: "INCORRETA. Memorizar o número da lei sem interpretar o dispositivo não permite resolver o caso concreto."
     },
     regra: "Leia o item integralmente, determine o regime e confira a alternativa contra o dispositivo aplicável.", pegadinha: "Termos absolutos e mistura de regimes exigem conferir o alcance exato da norma.", fonte: "Currículo M6 — modulo-6-unidade-6-topico-3 (método de análise de questões e dispositivos)."
   },
