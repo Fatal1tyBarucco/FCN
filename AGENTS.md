@@ -830,6 +830,18 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Fontes referenciadas incluem Murphy, ISL, scikit-learn, imbalanced-learn, NIST AI RMF e literatura sobre precisão/recall em dados desbalanceados.
 - Revisão focal; validação automatizada do HEAD final permanece necessária.
 
+## Início da revisão focal do M6 — q-m6-01..q-m6-25 (2026-10-26)
+
+- q-m6-01..q-m6-06: revisados legalidade, impessoalidade, finalidade/adequação, publicidade e eficiência, além de critérios ocultos de priorização. Sem alteração neste subconjunto.
+- q-m6-07: corrigida generalização de que o poder público seria sempre controlador; a classificação depende do papel efetivamente exercido (controlador ou operador), mantendo a incidência da LGPD sobre o setor público.
+- q-m6-08..q-m6-18: revisados uso de posição institucional, transparência ativa/passiva, escopo da LAI, exigência de motivos, entidades privadas sem fins lucrativos com recursos públicos, prazos de resposta, conceitos legais, atos processuais eletrônicos e automação administrativa.
+- q-m6-19: ajustada a regra de informação pessoal para remeter às hipóteses legais do art. 31 da LAI, incluindo exceções do § 3º; não se deve transformar a regra de acesso restrito em vedação absoluta.
+- q-m6-20..q-m6-25: revisados divulgação ativa, relação entre transparência e proteção de dados e anonimização para publicação de bases.
+- q-m6-11: removida a formulação simplista de que “prevalece o mais restritivo” entre LAI e LGPD; os regimes devem ser harmonizados conforme o caso e suas hipóteses legais.
+- q-m6-22: corrigida inferência sobre o art. 48 da Lei nº 14.129/2021. O artigo exige gestão de riscos e controles internos proporcionais aos riscos e proteção de direitos fundamentais; não estabelece literalmente uma categoria genérica de “controle reforçado” para indeferimentos.
+- Commits de conteúdo: `e8bac912e4dad4e83c6a88c5bce1d3af17c300a0`, `1d6c9609e774716ac37b05aa659d3a9e2bfda4d7` e `7b67f7a085bcf77b3072d2a1d4b5dc37e590622d`.
+- Fontes legais citadas incluem Constituição Federal, LAI, LGPD compilada e Lei nº 14.129/2021. Revisão focal, pendente de validação automatizada no HEAD atualizado.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
