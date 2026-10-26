@@ -701,7 +701,7 @@ const moduleQuestions6 = [
     },
     regra: "Trilha útil = usuário individual + data/hora + ação + objeto + resultado + versão da regra; sem isso, a apuração é narrativa.",
     pegadinha: "Log sem identidade individual parece 'proteção de dados', mas destrói accountability — proteção de dados não se faz apagando autoria de acesso.",
-    fonte: "Lei nº 12.527/2011, arts. 6º, III, e 34; Lei nº 13.709/2018, arts. 6º, X, 37 e 46; Lei nº 14.129/2021, art. 49 (verificados em fontes oficiais em 2026-10-26)."
+    fonte: "Lei nº 12.527/2011, arts. 6º, III, e 34; Lei nº 13.709/2018, arts. 6º, X, 37 e 46 (verificados em fontes oficiais em 2026-10-26)."
   },
 
   { id: "q-m6-30", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
