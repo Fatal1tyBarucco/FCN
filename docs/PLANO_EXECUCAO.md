@@ -174,3 +174,19 @@ A checagem das fontes oficiais levou à correção das citações de q-m6-02 e q
 
 ### Delegação e ferramentas
 Não foi confirmada neste ambiente uma ferramenta de delegação multiagente especializada. O plugin de delegação referido nos registros anteriores consta como indisponível; portanto, tarefas não serão atribuídas ficticiamente a modelos. A execução continuará por lotes isolados, com revisão posterior separada da etapa de autoria e com esta limitação registrada.
+
+
+## Fase 2 — inspeção do repositório remoto (2026-10-25)
+
+**Status: inspeção documental inicial concluída; auditoria funcional aprofundada pendente.**
+
+- Branch: `feat/fase-1-orquestracao-20261025`; PR #17 aberto, draft, base `main`.
+- Aplicação: SPA estática em `apostila-ia/index.html`; HTML/CSS/JavaScript nativo, sem etapa de build documentada. O README instrui execução por `file://` ou servidor estático Python.
+- Dados: oito arquivos de currículo (M1 em `curriculum.js), oito bancos de flashcards, banco de questões dividido em `questions.js` e `questions_m4.js`–`questions_m8.js), além de `references.js`.
+- Componentes: navegação, armazenamento, progresso, busca, áudio, flashcards, motor de quiz, gráficos SVG e simuladores de Excel/dados, rede, segurança, prompts e ética.
+- Qualidade: três scripts de auditoria estrutural e workflow `.github/workflows/validate-curriculum.yml`; workflow de deploy separado.
+- Matriz: o CSV no branch do PR é gerado por subtópico; a descrição anterior em `docs/FASE1_AUDITORIA_2026-10-25.md` que a caracterizava apenas como agregada por módulo ficou desatualizada após a alteração do PR.
+- O PR contém alterações em dados de currículo, flashcards, questões, referências, HTML e infraestrutura de auditoria. Evitar sobrescrever esses arquivos sem comparar o diff e preservar o trabalho existente.
+- O workflow associado ao commit consultado foi observado como `queued`; não há nesta operação resultado final de execução a declarar. Resultados anteriores mencionados no corpo do PR permanecem evidência reportada daquele run, não de uma execução nova.
+
+**Próximo passo seguro:** aguardar/consultar a validação automatizada do HEAD atual, comparar a matriz gerada com os arquivos de dados do mesmo SHA e revisar as pendências semânticas antes de modificar componentes da aplicação.
