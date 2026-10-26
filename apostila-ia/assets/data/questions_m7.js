@@ -106,11 +106,11 @@ const moduleQuestions7 = [
     contexto: "Um técnico recebe o alerta de que a leitura de um sensor ultrapassou o limite de segurança do equipamento.",
     enunciado: "Segundo o modelo DIKW adotado no currículo, conhecimento corresponde a:",
     alternativas: [
-      { letra: "E", texto: "Informação combinada com experiência e julgamento, apta a orientar ação." },
+      { letra: "A", texto: "Decisão já executada e registrada em ata." }
       { letra: "B", texto: "Registro bruto, ainda sem tratamento." },
       { letra: "C", texto: "Dado apenas com contexto atribuído." },
       { letra: "D", texto: "Conjunto de metadados técnicos do sensor." },
-      { letra: "A", texto: "Decisão já executada e registrada em ata." }
+      { letra: "E", texto: "Informação combinada com experiência e julgamento, apta a orientar ação." },
     ],
     gabarito: "E",
     justificativa: "O currículo adota como definição de trabalho: conhecimento é informação combinada com experiência e julgamento, aplicada por alguém ou por regra explícita de decisão. Registro bruto é dado; dado com contexto é informação; metadados descrevem o dado; a decisão executada é o produto da aplicação (sabedoria/ação), não o nível de conhecimento em si.",
@@ -132,10 +132,10 @@ const moduleQuestions7 = [
     contexto: "Um gestor dispõe de informação consolidada e de conhecimento técnico sobre o problema e precisa escolher entre duas condutas com efeitos distintos sobre os usuários.",
     enunciado: "No modelo DIKW, o nível em que se exerce discernimento para decidir, considerando consequências e valores, é:",
     alternativas: [
-      { letra: "D", texto: "Sabedoria." },
+      { letra: "A", texto: "Conhecimento." },
       { letra: "B", texto: "Dado." },
       { letra: "C", texto: "Informação." },
-      { letra: "A", texto: "Conhecimento." },
+      { letra: "D", texto: "Sabedoria." },
       { letra: "E", texto: "Metadado de processo." }
     ],
     gabarito: "D",
@@ -160,9 +160,9 @@ const moduleQuestions7 = [
     contexto: "Um órgão recebe três arquivos: (i) tabela de servidores com colunas tipadas; (ii) arquivo JSON de sensores, em que campos aparecem ou faltam conforme o registro; (iii) gravação em vídeo de uma audiência pública.",
     enunciado: "A classificação correta dos três arquivos, nessa ordem, é:",
     alternativas: [
-      { letra: "C", texto: "Estruturado — semiestruturado — não estruturado." },
-      { letra: "B", texto: "Estruturado — não estruturado — semiestruturado." },
       { letra: "A", texto: "Semiestruturado — estruturado — não estruturado." },
+      { letra: "B", texto: "Estruturado — não estruturado — semiestruturado." },
+      { letra: "C", texto: "Estruturado — semiestruturado — não estruturado." },
       { letra: "D", texto: "Não estruturado — semiestruturado — estruturado." },
       { letra: "E", texto: "Estruturado — estruturado — semiestruturado." }
     ],
