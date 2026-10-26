@@ -293,7 +293,7 @@
     return '<div class="sim-seguranca">'
       + '<h3>Simulador de Seguran\u00e7a (Se\u00e7\u00e3o 7.3)</h3>'
       + '<p class="sim-seguranca-sub">Simula\u00e7\u00e3o did\u00e1tica e ambiente isolado \u2014 n\u00e3o executa ataques reais. Dados fict\u00edcios (Se\u00e7\u00e3o 4.3).</p>'
-      + '<nav class="sim-sec-nav" aria-label="Seções do simulador">'
+      + '<nav class="sim-sec-nav" aria-label="Navegação das seções do simulador de segurança">'
       + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="phishing">1. Triagem de phishing</button>'
       + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="backup">2. Política de backup</button>'
       + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="authz">3. Autenticação e privilégio mínimo</button>'
