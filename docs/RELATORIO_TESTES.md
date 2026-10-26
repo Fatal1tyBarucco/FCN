@@ -389,3 +389,13 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Contagens confirmadas no artefato: 132 tópicos, 460 flashcards e 389 questões. Auditoria heurística: 0 IDs duplicados, 0 pares idênticos de contexto/enunciado e 0 alertas.
 - Distribuição das 314 questões MC: A=145, B=129, C=27, D=6, E=7. M7 após o lote: A=29, B=0, C=1, D=1, E=2. M6 permanece com A=30/30.
 - **Limitação:** estes resultados não certificam correção factual, validade de fontes, qualidade dos distratores, acessibilidade, responsividade em dispositivo físico ou revisão semântica completa.
+
+
+## Expansão de cobertura de questões — 2026-10-26
+
+- Foram adicionadas sete questões autorais focadas em tópicos de síntese antes sem questão associada: M1 (+1), M5 (+2) e M6 (+4).
+- O verificador estrutural foi atualizado para exigir 396 questões e a distribuição por módulo M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40 e M8=40.
+- O manifesto PWA e o README foram sincronizados com 396 questões (321 múltipla escolha e 75 certo/errado).
+- Uma execução de CI anterior à atualização das expectativas carregou os bancos e validou individualmente as questões, mas falhou nas asserções históricas de total/distribuição (esperava 389, M1=43, M5=40 e M6=40). Essa execução não é considerada aprovação final.
+- **Status:** aguardar a execução de CI no HEAD atual; não declarar smoke test final aprovado até a nova execução terminar com sucesso.
+- **Limitação pedagógica:** as sete questões têm justificativa e análise por alternativa, mas ainda precisam de revisão humana independente de gabarito, distratores e fonte curricular.
