@@ -1914,14 +1914,14 @@ id: "q-m1-09",
     enunciado: "O SPF lista servidores autorizados para o domínio e o DKIM assina mensagens; em conjunto com alinhamento e política DMARC, ajudam a reduzir spoofing do domínio, mas não bloqueiam todas as formas de falsificação de remetente.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o SPF lista os servidores autorizados a enviar e-mails em nome do domínio, e o DKIM assina digitalmente as mensagens para garantir autenticidade, medidas que previnem o spoofing de remetente'.",
+    trechoDeterminante: "O trecho determinante é 'em conjunto com alinhamento e política DMARC, ajudam a reduzir spoofing do domínio, mas não bloqueiam todas as formas de falsificação': SPF e DKIM fornecem sinais de autenticação, sem garantir a eliminação de toda falsificação.",
     justificativa: "SPF e DKIM fornecem sinais de autenticação do domínio/remetente; DMARC permite definir tratamento e relatórios para mensagens que falham nos critérios configurados. Esses controles ajudam a reduzir spoofing de domínio, mas não garantem impedir toda falsificação, como nomes de exibição enganosos.",
     analise: {
-      item: "Item VERDADEIRO. As duas funções (lista de servidores × assinatura) e a finalidade (prevenir spoofing) coincidem com o conteúdo do módulo.",
+      item: "Item VERDADEIRO. As funções de SPF e DKIM estão descritas corretamente e, com DMARC configurado, ajudam a reduzir spoofing de domínio sem garantir proteção contra toda falsificação.",
       leituraIncorreta: "Leitura que induz ao erro: pensar que SPF/DKIM 'impedem' o envio falsificado no ato — eles permitem DETECTAR/verificar; a aplicação da política (bloquear/quarentenar) é do DMARC. A expressão do currículo ('previnem spoofing verificando') é a base do item."
     },
-    regra: "Detecção × aplicação: SPF/DKIM provem os elementos de verificação; DMARC aplica política; o cliente recebe apenas mensagens que passam no filtro.",
-    pegadinha: "Cuidado com verbos de força ('impede', 'bloqueia'): o currículo diz 'previnem ... verificando' — o item adota o verbo do material, o que o torna verdadeiro."
+    regra: "SPF autoriza servidores, DKIM fornece assinatura verificável e DMARC define política e relatórios com base nos resultados e no alinhamento configurado; esses controles ajudam a reduzir spoofing de domínio, sem bloquear todas as falsificações.",
+    pegadinha: "Não trate autenticação de domínio como garantia absoluta: SPF/DKIM/DMARC ajudam a reduzir spoofing, mas não eliminam todos os ataques de engenharia social ou falsificação de nome de exibição."
   },
   {
     id: "q-m3-15",
@@ -2934,7 +2934,7 @@ id: "q-m1-40",
       { letra: "D", texto: "DKIM usa criptografia simétrica e compartilha a chave privada com o destinatário para que ele verifique a mensagem." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: 'SPF (Sender Policy Framework): define quais servidores podem enviar e-mails para o domínio. DKIM (DomainKeys Identified Mail): assina digitalmente o e-mail para garantir autenticidade. DMARC (Domain-based Message Authentication, Reporting & Conformance) — previne spoofing ... define política para falhas de SPF/DKIM (rejeitar, quarentenar, aceitar).' O exercício do currículo confirma que 'DKIM usa criptografia assimétrica para assinar e-mails' (Certo). A alternativa B reproduz as três funções.",
+    justificativa: "SPF identifica servidores autorizados para o domínio; DKIM permite verificar a assinatura da mensagem; DMARC define políticas e relatórios baseados nos resultados e no alinhamento de SPF/DKIM. Esses mecanismos ajudam a reduzir spoofing de domínio, mas não garantem impedir todas as formas de falsificação. A alternativa B associa corretamente as funções centrais.",
     analise: {
       A: "INCORRETA. Erro conceitual: troca as funções — listar servidores é SPF (não DKIM), assinar é DKIM (não SPF), e DMARC define política de falhas, não 'criptografa o corpo'.",
       B: "CORRETA. É a única que associa cada protocolo à sua função conforme o currículo (SPF = servidores autorizados; DKIM = assinatura de autenticidade; DMARC = política para falhas).",
