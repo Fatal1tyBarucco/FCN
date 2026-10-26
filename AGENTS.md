@@ -799,6 +799,13 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m8-36 a q-m8-40: outliers não removidos sem investigação, critérios de causalidade, granularidade/contagem distinta, agregação DAX e estudo de caso integrador revisados.
 - Commits de conteúdo M8: `a4653cafda5ed1b70537f9511fbabafcdcd8c0c5` e `a4451aea28dca2e0dbedb26a7a548fac3c44df65`. Revisão focal concluída; aguardar validadores no HEAD atual.
 
+## Auditoria cruzada de gabaritos e análises (2026-10-26)
+
+- Varredura automatizada dos bancos M4–M8 confirmou IDs únicos e contagens esperadas: M4=85, M5=42, M6=47, M7=40, M8=40.
+- A comparação entre gabarito e rótulos de análise detectou uma ambiguidade textual em q-m7-28: a alternativa E iniciava com “CORRETA no cálculo” apesar de ser incorreta no conjunto. A redação foi alterada para “INCORRETA no conjunto: o cálculo está correto, mas a conclusão está errada...”, deixando explícito que apenas A é correta.
+- q-m4-82 usa objeto `analise` em formato compacto; leitura manual confirmou B como correta e A/C/D/E incorretas. A detecção automatizada inicial não reconheceu esse formato, sem indicar erro de gabarito.
+- Commit de conteúdo: `8ece6b830472585ff53a4bfac937a4546962f8c8`. Reexecutar validadores no HEAD atual.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
