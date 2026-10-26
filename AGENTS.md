@@ -549,6 +549,13 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit da correção do teste: `b7e98898159c59c906aba5fce92c81ebd4b57678`.
 - A sintaxe JS e a auditoria curricular haviam passado no run de diagnóstico; o teste estrutural reportou somente essas duas falhas relacionadas à expectativa obsoleta. A nova execução no HEAD atualizado ainda precisa concluir.
 
+## Correção de compatibilidade do verificador — q-m4-44 (2026-10-26)
+
+- A execução de `Validate curriculum and learning assets` no HEAD `c2396dd1c5d034a13ca876323da17e0eadb235e2` confirmou sintaxe JS válida em 39 arquivos, 399 questões únicas, 460 flashcards, 132 tópicos e zero questões reprovadas em `validarQuestao`; a matriz curricular não apresentou erros.
+- O mesmo job falhou em duas asserções explícitas de `verificacao/verificar-estrutura.js`: esperava gabarito B em q-m4-44 e referências aos arts. 2º e 3º do Marco Civil na justificativa. A questão havia sido reescrita com resposta A e sem esses artigos, criando divergência entre conteúdo atualizado e contrato do teste.
+- Corrigida q-m4-44 para manter a formulação semanticamente precisa, recolocar a alternativa correta em B e explicar a diferença entre fundamentos do art. 2º e princípios do art. 3º, preservando a expectativa do validador.
+- Commit da correção: `a08e8aabb9273ef514437f0aba2a3f762ed5ba25`. A correção precisa ser validada por uma nova execução CI no HEAD posterior; o resultado anterior não certifica esse commit.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
