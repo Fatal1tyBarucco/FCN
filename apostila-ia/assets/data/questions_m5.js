@@ -941,7 +941,7 @@ const moduleQuestions5 = [
       E: "INCORRETA. Modelo está aprendendo."
     },
     regra: "Curvas de aprendizado: avalie conjuntamente erros de treino e validação, a evolução com o tamanho da amostra e a distância entre as curvas.",
-    pegadinha: "Não deduza generalização apenas pelo erro de treino: compare-o com o erro de validação e observe sua evolução com mais dados."
+    pegadinha: "Não deduza generalização apenas pelo erro de treino: compare-o com o erro de validação e observe sua evolução com mais dados.",
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
   },
 
@@ -990,8 +990,8 @@ const moduleQuestions5 = [
       D: "INCORRETA. Overfitting é detectado por treino × validação, não por métricas.",
       E: "INCORRETA. RMSE é uma métrica válida e corretamente calculada."
     },
-    regra: "RMSE ≥ MAE; diferença grande indica maior influência relativa de erros de grande magnitude e pede análise da distribuição."
-    pegadinha: "A diferença entre RMSE e MAE não revela, por si só, a causa dos erros nem prova a qualidade geral do modelo."
+    regra: "RMSE ≥ MAE; diferença grande indica maior influência relativa de erros de grande magnitude e pede análise da distribuição.",
+    pegadinha: "A diferença entre RMSE e MAE não revela, por si só, a causa dos erros nem prova a qualidade geral do modelo.",
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
   },
 
