@@ -568,24 +568,24 @@ const moduleQuestions6 = [
     fonte: "Lei nº 12.527/2011, art. 11, § 1º, III, e § 4º (verificado em 2026-10-21)."
   },
 
-  { id: "q-m6-24", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
+  {   { id: "q-m6-24", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m6-u2-t3-s1", assunto: "6.2 — Publicidade administrativa e dados pessoais",
-    contexto: "Para «dar transparência» a um programa social, um órgão publica no portal e em rede social a relação nominal dos beneficiários de um bairro, com nome completo e valor recebido, invocando o art. 8º da LAI.",
-    enunciado: "A publicação é legítima, pois o art. 8º da LAI impõe a divulgação de informações de interesse coletivo ou geral.",
+    contexto: "Para dar transparência a um programa social, um órgão publica no portal e em rede social a relação nominal dos beneficiários de um bairro, com nome completo e valor recebido, invocando apenas o art. 8º da LAI, sem indicar norma específica que autorize a divulgação nominativa nem avaliar a necessidade dessa exposição.",
+    enunciado: "A publicação é automaticamente legítima, pois o art. 8º da LAI impõe a divulgação de informações de interesse coletivo ou geral.",
     alternativas: null,
     gabarito: "errado",
-    trechoDeterminante: "O trecho que torna o item FALSO é «é legítima, pois o art. 8º impõe»: o dever de publicidade incide sobre o que é público; nome e valor recebido são informação pessoal e dado pessoal, cuja divulgação por terceiros exige previsão legal ou consentimento expresso (art. 31, § 1º, II, da LAI).",
-    justificativa: "A publicidade administrativa divulga o que é público do órgão; a lista nominada expõe o que é da pessoa. O art. 31, caput, exige tratamento transparente com respeito à intimidade, vida privada, honra e imagem; o § 1º, II, só admite divulgação a terceiros com previsão legal ou consentimento expresso; o § 4º impede invocar a restrição para prejudicar apuração, mas não autoriza divulgação. A via correta é dado agregado (art. 8º, § 1º, V) e, para pesquisa, base anonimizada (art. 31, § 3º, II; art. 36 da Lei nº 14.129/2021).",
+    trechoDeterminante: "O trecho que torna o item FALSO é «automaticamente legítima»: o dever de transparência ativa não autoriza, por si só, qualquer divulgação nominativa de dados pessoais. É necessário avaliar o regime legal aplicável, a finalidade pública, a base jurídica, a necessidade e a proporcionalidade da exposição, preservando os direitos dos titulares.",
+    justificativa: "O art. 8º da LAI impõe divulgação de informações de interesse coletivo ou geral, mas deve ser interpretado em conjunto com o art. 31 da LAI, a LGPD e as regras específicas do programa. A divulgação nominativa pode depender de fundamento legal e de avaliação de finalidade, necessidade, proporcionalidade e salvaguardas; não se deve presumir que consentimento seja sempre obrigatório nem que transparência autorize exposição irrestrita. Quando suficiente para o controle social, dados agregados ou anonimizados podem reduzir a exposição sem eliminar a informação relevante.",
     analise: {
-      item: "Item FALSO. A finalidade de transparência não converte dado pessoal em informação pública; falta base legal ou consentimento.",
-      leituraIncorreta: "Leitura que induz ao erro: concluir que 'transparência total' é dever. O art. 29, § 1º, VIII, da Lei nº 14.129/2021 exige respeito à privacidade dos dados pessoais e sensíveis justamente na transparência ativa."
+      item: "Item FALSO. O dever geral de transparência não torna automática qualquer publicação nominativa; o caso exige análise do regime legal e da proporcionalidade.",
+      leituraIncorreta: "Leitura que induz ao erro: concluir que o art. 8º da LAI sempre exige publicar nomes e valores individualizados. A solução depende da norma aplicável ao programa, da finalidade de transparência e dos limites de proteção de dados."
     },
-    regra: "Publicidade administrativa ≠ divulgação irrestrita de dados pessoais: o que é da pessoa só se divulga com base legal ou consentimento, e preferencialmente de forma agregada.",
-    pegadinha: "A expressão «em nome da transparência» precede, com frequência, o erro mais grave do módulo.",
-    fonte: "Lei nº 12.527/2011, art. 4º, IV, art. 8º, § 1º, V, e art. 31, caput, § 1º, II e § 3º, II; Lei nº 13.709/2018, art. 5º, I; Lei nº 14.129/2021, arts. 29, § 1º, VIII, e 36 (verificados em 2026-10-20/21)."
+    regra: "Transparência ativa deve ser conciliada com a LAI, a LGPD e a norma específica do programa; avalie base jurídica, finalidade, necessidade, proporcionalidade e salvaguardas.",
+    pegadinha: "Não presuma nem que toda informação nominativa deve ser publicada nem que consentimento é sempre a única base: verifique o fundamento legal e o contexto.",
+    fonte: "Lei nº 12.527/2011, arts. 8º e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Lei nº 13.709/2018, arts. 6º, 23 e 26, texto compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
-  { id: "q-m6-25", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
+id: "q-m6-25", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
     nivel: "avancado", topico: "m6-u2-t3-s1", assunto: "6.2 — Anonimização como via de publicação",
     contexto: "Uma secretaria quer publicar base de atendimentos para pesquisa e monitoramento de política pública. A base contém nome, CPF, diagnóstico e município.",
     enunciado: "A solução compatível com a LAI e com a Lei nº 14.129/2021 é",
