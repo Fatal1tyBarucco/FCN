@@ -779,28 +779,28 @@ const moduleQuestions4 = [
   /* ===================== 4.4 Legislação (10 questões) ===================== */
 
   { id: "q-m4-31", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Lei 13.709/2018",
-    contexto: "A LGPD (Lei nº 13.709/2018) regulamenta o tratamento de dados pessoais no Brasil.",
-    enunciado: "A LGPD (Lei nº 13.709/2018) tem como princípio fundamental:",
+    nivel: "basico", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — princípios do tratamento",
+    contexto: "Uma organização define como coletará e utilizará dados pessoais para prestar um serviço.",
+    enunciado: "À luz da LGPD, qual prática está alinhada aos princípios que regem o tratamento de dados pessoais?",
     alternativas: [
-      { letra: "A", texto: "A liberdade incondicional de acesso a todos os dados." },
-      { letra: "B", texto: "O tratamento de dados pessoais com base em bases legais e orientado aos direitos dos titulares." },
-      { letra: "C", texto: "A venda ilimitada de dados pessoais." },
-      { letra: "D", texto: "A exclusão total de todos os registros." },
-      { letra: "E", texto: "A publicidade irrestrita de dados pessoais." }
+      { letra: "A", texto: "Coletar todos os dados que possam ser úteis no futuro, mesmo sem finalidade definida." },
+      { letra: "B", texto: "Definir finalidades legítimas e específicas, limitar a coleta ao necessário e informar o titular de modo adequado." },
+      { letra: "C", texto: "Tratar qualquer dado pessoal apenas com consentimento, independentemente da hipótese legal aplicável." },
+      { letra: "D", texto: "Publicar os dados pessoais para demonstrar transparência, mesmo quando não houver base legal para divulgação." },
+      { letra: "E", texto: "Conservar os dados indefinidamente, pois a LGPD proíbe a eliminação de registros." }
     ],
     gabarito: "B",
-    justificativa: "A LGPD estabelece princípios para o tratamento de dados pessoais, com foco nos direitos dos titulares (demandantes) e nas bases legais do tratamento. Liberdade incondicional (alternativa A incorreta); venda ilimitada (alternativa C incorreta); exclusão total (alternativa D incorreta); publicidade irrestrita dos dados (alternativa E incorreta).",
+    justificativa: "A LGPD estabelece princípios como finalidade, adequação, necessidade e transparência (art. 6º). A organização deve definir propósitos legítimos e específicos, limitar os dados ao mínimo pertinente e fornecer informações claras sobre o tratamento. Consentimento é uma das bases legais, não a única; a existência de dados pessoais não autoriza divulgação pública indiscriminada nem conservação sem limite.",
     analise: {
-      A: "INCORRETA. A LGPD não é liberal incondicional — respeita os direitos fundamentais.",
-      B: "CORRETA. A LGPD regula o tratamento de dados pessoais, exigindo bases legais e protegendo os titulares.",
-      C: "INCORRETA. A LGPD não autoriza venda ilimitada de dados pessoais.",
-      D: "INCORRETA. A exclusão é um direito, mas não é o princípio central — tratamento com base legal é central.",
-      E: "INCORRETA. Dados pessoais não têm acesso público irrestrito."
+      A: "INCORRETA. A coleta deve observar finalidade, adequação e necessidade; utilidade futura genérica não justifica acumular dados sem limite.",
+      B: "CORRETA. A alternativa aplica finalidade específica, minimização e transparência, em conformidade com os princípios do art. 6º.",
+      C: "INCORRETA. A LGPD prevê diferentes bases legais, cuja aplicabilidade depende do contexto; consentimento não é obrigatório em todo tratamento.",
+      D: "INCORRETA. Transparência no tratamento não significa divulgação pública irrestrita de dados pessoais.",
+      E: "INCORRETA. A conservação deve respeitar a finalidade e as hipóteses legais; a LGPD prevê eliminação quando cabível, ressalvadas as exceções legais."
     },
-    regra: "LGPD = 'direito de saber, decidir e controlar' o uso de seus dados.",
-    pegadinha: "LGPD não é 'dados em aberto' — é 'dados protegidos, acesso limitado, consentimento e base legal'.",
-    fonte: "Lei nº 13.709/2018 (LGPD), arts. 1º, 3º, 4º."
+    regra: "Princípios da LGPD incluem finalidade, adequação, necessidade, transparência, segurança, prevenção, não discriminação e responsabilização, entre outros do art. 6º.",
+    pegadinha: "Base legal não é sinônimo de consentimento; transparência não significa tornar dados pessoais públicos.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, 7º e 16, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-32", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -829,28 +829,28 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-33", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Base Legal",
-    contexto: "Uma empresa deseja tratar dados de clientes para enviar ofertas.",
-    enunciado: "Para tratar dados pessoais com base na LGPD, é necessário que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — base legal e marketing",
+    contexto: "Uma empresa pretende enviar ofertas personalizadas a clientes usando dados obtidos durante compras anteriores.",
+    enunciado: "Antes de iniciar esse tratamento, qual análise é mais adequada à LGPD?",
     alternativas: [
-      { letra: "A", texto: "A empresa possua qualquer base de dados." },
-      { letra: "B", texto: "O tratamento tenha uma base legal prevista na lei e os direitos dos titulares sejam respeitados." },
-      { letra: "C", texto: "Os dados sejam compartilhados com terceiros." },
-      { letra: "D", texto: "Os dados sejam eliminados." },
-      { letra: "E", texto: "Os dados não sejam tratados." }
+      { letra: "A", texto: "Considerar que a existência de cadastro torna qualquer uso posterior dos dados automaticamente permitido." },
+      { letra: "B", texto: "Identificar uma base legal aplicável à finalidade, avaliar necessidade e compatibilidade do uso, cumprir deveres de transparência e respeitar os direitos dos titulares." },
+      { letra: "C", texto: "Compartilhar os dados com qualquer parceiro comercial, pois o marketing é uma finalidade econômica." },
+      { letra: "D", texto: "Exigir consentimento em todos os casos, sem analisar as demais bases legais previstas na LGPD." },
+      { letra: "E", texto: "Dispensar medidas de segurança quando os dados forem utilizados apenas para publicidade." }
     ],
     gabarito: "B",
-    justificativa: "A LGPD requer que o tratamento de dados pessoais tenha uma das bases legais previstas (consentimento, contratual, legítimo interesse, obrigação legal etc.) e respeite os direitos dos titulares (direito de acesso, correção, exclusão etc.). Qualquer base de dados (alternativa A incorreta); compartilhamento com terceiros sem bases legais (alternativa C incorreta); exclusão total (alternativa D incorreta); não tratar (alternativa E incorreta).",
+    justificativa: "O uso de dados para marketing não é automaticamente autorizado pela existência de cadastro. O controlador deve identificar uma base legal válida para a finalidade concreta, observar os princípios do art. 6º, informar o titular de forma adequada e implementar medidas de segurança. Se invocar legítimo interesse, deve avaliar finalidade, necessidade, expectativas e direitos e liberdades do titular, documentando a análise; essa hipótese não se aplica a dados pessoais sensíveis nos termos do art. 11.",
     analise: {
-      A: "INCORRETA. O tratamento é regido por regras de base legal e direitos dos titulares.",
-      B: "CORRETA. O tratamento deve ter base legal definida e respeitar os direitos dos titulares.",
-      C: "INCORRETA. Compartilhamento com terceiros exige base legal e, em muitos casos, autorização.",
-      D: "INCORRETA. Exclusão é um direito, mas não a única regra de tratamento.",
-      E: "INCORRETA. O tratamento deve ocorrer com base legal, não de forma proibida."
+      A: "INCORRETA. A coleta inicial não autoriza qualquer reutilização; a finalidade e a base legal do novo tratamento precisam ser avaliadas.",
+      B: "CORRETA. A alternativa reúne base legal, finalidade, necessidade, transparência e respeito aos direitos, sem presumir autorização automática.",
+      C: "INCORRETA. O compartilhamento exige análise de finalidade, base legal, transparência e salvaguardas aplicáveis.",
+      D: "INCORRETA. Consentimento é uma das bases legais; a base apropriada depende do caso e deve ser demonstrável.",
+      E: "INCORRETA. As obrigações de segurança não desaparecem porque o uso é publicitário."
     },
-    regra: "LGPD — 'trate seus dados como se fossem seus' — base legal obrigatória.",
-    pegadinha: "Não confunda: base legal não é 'qualquer base' — é uma das base legais previstas por lei.",
-    fonte: "Lei nº 13.709/2018, arts. 7º e 10 (bases legais e legítimo interesse); art. 5º para definições."
+    regra: "Para cada finalidade de tratamento, identifique e documente a base legal e observe finalidade, necessidade, transparência, segurança e direitos do titular.",
+    pegadinha: "Legítimo interesse não é autorização genérica para marketing; exige avaliação concreta e não serve como base do art. 11 para dados pessoais sensíveis.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, 7º, 10 e 11, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-34", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
