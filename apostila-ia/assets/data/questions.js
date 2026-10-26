@@ -3890,6 +3890,34 @@ var questoesBanco = [
     fonte: "Currículo M3, unidade 5, tópico 3 — phishing direcionado e autenticação de e-mail."
   }
 
+
+  {
+    id: "q-m1-44", modulo: 1, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
+    topico: "modulo-1-unidade-2-topico-14",
+    assunto: "M1.2 — Relatório técnico integrado no Word",
+    contexto: "Uma equipe precisa publicar relatório técnico longo com títulos hierárquicos, sumário, tabelas, figuras, cabeçalhos diferentes entre seções e PDF acessível.",
+    enunciado: "Qual procedimento reduz retrabalho e mantém a estrutura consistente?",
+    alternativas: [
+      { letra: "A", texto: "Formatar cada título manualmente e digitar o sumário." },
+      { letra: "B", texto: "Usar apenas quebras de página e o mesmo cabeçalho em todas as seções." },
+      { letra: "C", texto: "Aplicar estilos semânticos, usar quebras de seção quando necessário, atualizar campos e revisar acessibilidade antes de exportar." },
+      { letra: "D", texto: "Converter todo o texto em imagens para impedir alterações." },
+      { letra: "E", texto: "Exportar para PDF primeiro e estruturar o documento nesse formato." }
+    ],
+    gabarito: "C",
+    justificativa: "Estilos estruturam a hierarquia e permitem gerar sumário; quebras de seção controlam cabeçalhos distintos; campos devem ser atualizados e a acessibilidade revisada antes da entrega.",
+    analise: {
+      A: "INCORRETA. A formatação manual não oferece estrutura confiável para sumário automático.",
+      B: "INCORRETA. Quebras de página não substituem quebras de seção quando a configuração varia.",
+      C: "CORRETA. Combina estrutura semântica, controle de seção, atualização de campos e acessibilidade.",
+      D: "INCORRETA. Imagens prejudicam busca, seleção, leitura assistiva e manutenção.",
+      E: "INCORRETA. O PDF é formato de entrega, não o melhor ambiente para estruturar o documento."
+    },
+    regra: "Documentos longos exigem estilos, campos atualizáveis, quebras apropriadas e validação do PDF.",
+    pegadinha: "Aparência visual não garante estrutura semântica.",
+    fonte: "Currículo M1 — modulo-1-unidade-2-topico-14 (criação e correção de documentos complexos)."
+  },
+
 ];
 
 /* ----------------------------------------------------------------------------
