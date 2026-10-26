@@ -1,5 +1,10 @@
 # AUDITORIA FINAL — MATRIZ DE CONFORMIDADE (Fase 8)
 
+## Nota de atualização — 2026-10-26
+
+Esta matriz foi produzida em 2026-10-24 e seus números de 404 flashcards/365 questões representam um snapshot histórico, não o banco atual. A recontagem atual dos arquivos de dados encontrou **460 flashcards e 396 questões**; consulte `docs/INVENTARIO_CURRICULAR.md`. A auditoria de campos/gabaritos descrita abaixo não foi reexecutada integralmente para as 31 questões acrescentadas desde o snapshot antigo. Portanto, os critérios 6 e 7 devem ser interpretados como aprovados para o conjunto histórico auditado, não como validação semântica completa do conjunto atual. A matriz estrutural e os checks CI recentes não substituem a auditoria editorial nem a validação manual de acessibilidade.
+
+
 **Projeto:** apostila-ia (Apostila Web Interativa FCN)
 **Data:** 2026-10-24
 **Fonte de requisitos:** `Escrita.txt` (Seção 18 — 19 critérios de aceite)
