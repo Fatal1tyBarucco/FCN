@@ -1048,4 +1048,4 @@ const moduleQuestions5 = [
 
 ];
 
-/* Verificação rápida do padrão: 40 questões, 12 básico / 18 intermediário / 10 avançado. */
+/* Verificação rápida do padrão: 42 questões, 9 básico / 20 intermediário / 13 avançado. */
