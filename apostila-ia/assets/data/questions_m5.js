@@ -642,13 +642,13 @@ const moduleQuestions5 = [
     enunciado: "Afirmação: 'Modelos generativos alinhados por reforço de preferência (RLHF) são isentos de vieses.'",
     corrigir: true,
     gabarito: "errado",
-    trechoDeterminante: "A afirmação é falsa: RLHF reduza, mas não elimine, vieses; a avaliação por subgrupos continua sendo necessária.",
-    justificativa: "O alinhamento por preferência reduz padrões de vieses visíveis, mas não elimina todos — especialmente vieses sutis ou de subgrupos pouco representados. A avaliação por subgrupos é necessária para confirmar o efeito.",
+    trechoDeterminante: "A afirmação é falsa: RLHF pode reduzir certos comportamentos indesejados, mas não elimina vieses; a avaliação por subgrupos continua sendo necessária.",
+    justificativa: "O ajuste por preferências humanas pode reduzir alguns comportamentos indesejados, mas não garante ausência de vieses, inclusive em subgrupos pouco representados. A avaliação por subgrupos e o monitoramento são necessários para identificar efeitos residuais.",
     analise: {
-      item: "INCORRETA. RLHF reduza vieses, mas não elimina; é necessário monitoramento continuo e avaliação por subgrupos."
+      item: "INCORRETA. RLHF pode reduzir certos vieses, mas não os elimina; é necessário monitoramento contínuo e avaliação por subgrupos."
     },
     regra: "Alinhamento reduz vieses, não os elimina.",
-    pegadinha: "A alinhamento não é 'pureza'.",
+    pegadinha: "Alinhamento não significa ausência total de vieses."
     fonte: "OpenAI — Training language models to follow instructions, 2022."
   },
 
@@ -661,18 +661,18 @@ const moduleQuestions5 = [
       { letra: "B", texto: "Apenas II está correta." },
       { letra: "C", texto: "I e II estão corretas." },
       { letra: "D", texto: "Nenhuma está correta." },
-      { letra: "E", texto: "Apenas I, II e III corretas." }
+      { letra: "E", texto: "I e II são garantidas em qualquer modelo e configuração." }
     ],
     gabarito: "C",
-    justificativa: "Ambas corretas: temperatura controla aleatoriedade vs. determinismo no decodificação de tokens.",
+    justificativa: "Ambas descrevem tendências gerais: temperatura maior costuma tornar a distribuição de amostragem mais plana e a saída mais variável; temperatura menor tende a concentrar a probabilidade nos tokens mais prováveis. Temperatura baixa não garante determinismo em todas as configurações.",
     analise: {
-      A: "INCORRETA. Apenas I está correta, mas a afirmação C é mais completa.",
-      B: "INCORRETA. Apenas II está correta, mas a afirmação C é mais completa.",
+      A: "INCORRETA. I descreve uma tendência geral, mas II também está correta.",
+      B: "INCORRETA. II descreve uma tendência geral, mas I também está correta.",
       C: "CORRETA. I e II estão corretas — temperatura controla a aleatoriedade da amostragem.",
       D: "INCORRETA. Nenhuma está correta é falso.",
-      E: "INCORRETA. Não há uma III correta — são apenas I e II."
+      E: "INCORRETA. Os efeitos são tendências gerais da amostragem, não garantias universais independentes do modelo e da configuração."
     },
-    regra: "Temperatura: alto = mais variável; baixo = mais determinístico.",
+    regra: "Temperatura: alta tende a aumentar a variabilidade; baixa tende a reduzir a aleatoriedade, mas não garante determinismo em toda configuração."
     pegadinha: "Alta temperatura não é 'melhor criatividade'.",
     fonte: "Hugging Face — Temperature, Top-K, Top-P, 2024."
   },
@@ -741,22 +741,22 @@ const moduleQuestions5 = [
       { letra: "E", texto: "Diminuir o tamanho do prompt." }
     ],
     gabarito: "A",
-    justificativa: "Delimitação clara (marcadores de início/fim) reduz a área de superfície onde instruções maliciosas podem ser aceitas.",
+    justificativa: "Delimitadores ajudam a distinguir instruções confiáveis de conteúdo fornecido como dado, mas não impedem sozinhos que o modelo siga instruções maliciosas inseridas no conteúdo. São uma camada de mitigação, combinada com controles de acesso, validação de saída e testes adversariais."
     analise: {
-      A: "CORRETA. Delimitação reduz a superfície de injeção.",
+      A: "CORRETA. Delimitação explícita pode reduzir a confusão entre instruções e dados, mitigando parte do risco; não é uma defesa suficiente por si só."
       B: "INCORRETA. Delimitação não aumenta o custo.",
       C: "INCORRETA. Delimitação não elimina a necessidade de verificação humana.",
       D: "INCORRETA. Delimitação torna o modelo mais previsível, não indeterminístico.",
       E: "INCORRETA. Delimitação não reduz o tamanho necessário."
     },
     regra: "Delimitação = separar instrução e dado.",
-    pegadinha: "Delimitação reduz, não elimina a injeção.",
+    pegadinha: "Delimitação ajuda, mas não substitui defesa em camadas contra injeção de prompt."
     fonte: "NIST — Adversarial Machine Learning, 2024."
   },
 
   { id: "q-m5-31", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "m5-u4-t2-s1", assunto: "5.4 — Avaliação de prompts",
-    contexto: "Dois prompts testados com impressão.",
+    contexto: "Uma equipe compara duas configurações de temperatura em um assistente de atendimento."
     enunciado: "A avaliação de prompts de forma confiável exige:",
     alternativas: [
       { letra: "A", texto: "Conjunto de teste versionado e métrica definida antes da execução." },
