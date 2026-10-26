@@ -1404,128 +1404,128 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-56", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Criptografia Assimétrica",
-    contexto: "Criptografia assimétrica usa um par de chaves público/privada.",
-    enunciado: "A criptografia assimétrica é caracterizada por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Criptografia assimétrica e usos de chaves",
+    contexto: "Uma aplicação precisa autenticar a origem de uma mensagem e também estabelecer material de chave para proteger uma sessão.",
+    enunciado: "Qual afirmação sobre criptografia assimétrica é tecnicamente correta?",
     alternativas: [
-      { letra: "A", texto: "Uso de um único par de chaves público/privada para cada comunicação." },
-      { letra: "B", texto: "Uso de uma chave única compartilhada." },
-      { letra: "C", texto: "Uso de quadros de criptografia." },
-      { letra: "D", texto: "Uso de chaves infinitas." },
-      { letra: "E", texto: "Uso de chaves próprias para cada comunicação." }
+      { letra: "A", texto: "Toda operação assimétrica usa obrigatoriamente a chave pública para cifrar e a privada para decifrar; assinaturas digitais funcionam da mesma maneira." },
+      { letra: "B", texto: "Um par de chaves pública e privada pode apoiar operações diferentes, como assinatura/verificação ou mecanismos de estabelecimento de chave; o uso exato depende do algoritmo e do protocolo." },
+      { letra: "C", texto: "A chave pública deve ser mantida em segredo e a chave privada publicada." },
+      { letra: "D", texto: "Criptografia assimétrica dispensa validação de chaves e certificados em qualquer contexto." },
+      { letra: "E", texto: "Cada mensagem exige obrigatoriamente um novo par de chaves, independentemente do protocolo." }
     ],
-    gabarito: "A",
-    justificativa: "Criptografia assimétrica usa um par de chaves (pública e privada) — uma para criptografar, outra para descriptografar, ou uma para assinar, outra para verificar. Uso de uma chave única compartilhada (alternativa B incorreta); quadros (alternativa C incorreta); chaves infinitas (alternativa D incorreta); chave própria para cada comunicação (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "A criptografia assimétrica utiliza um par relacionado de chaves, mas o papel de cada chave depende do algoritmo e da operação. Em assinaturas digitais, a chave privada gera a assinatura e a chave pública permite verificá-la; em mecanismos de cifragem ou estabelecimento de chaves, aplicam-se outros procedimentos. A chave privada deve ser protegida, enquanto a chave pública pode ser distribuída com controles de autenticidade apropriados.",
     analise: {
-      A: "CORRETA. Criptografia assimétrica usa um par único de chaves público/privada para comunicação.",
-      B: "INCORRETA. Uma chave única compartilhada é a criptografia simétrica.",
-      C: "INCORRETA. Quadros não são o conceito central da criptografia assimétrica.",
-      D: "INCORRETA. Chaves finitas são usadas, não infinitas.",
-      E: "INCORRETA. Cada comunicação não usa uma chave própria — usa um par público/privado."
+      A: "INCORRETA. A descrição simplifica indevidamente os usos assimétricos e confunde assinatura digital com cifragem.",
+      B: "CORRETA. A alternativa reconhece usos distintos do par de chaves conforme algoritmo e protocolo.",
+      C: "INCORRETA. A chave privada deve permanecer protegida; a chave pública pode ser distribuída.",
+      D: "INCORRETA. A validação de chave, identidade, certificado e contexto é essencial quando aplicável.",
+      E: "INCORRETA. A geração e a reutilização de chaves dependem do algoritmo, do protocolo e da política de segurança."
     },
-    regra: "Assimétrica = 'dois pares'. Uma chave pública para codificar, uma privada para decodificar.",
-    pegadinha: "Assimétrica não é 'uma chave' — é 'um par de chaves' (pública + privada).",
-    fonte: "NIST FIPS 186 (RSA)."
+    regra: "Em criptografia assimétrica, a chave pública pode ser distribuída e a privada deve ser protegida; o uso do par depende do algoritmo e do protocolo.",
+    pegadinha: "Assinatura digital não é simplesmente cifrar a mensagem com a chave privada; assinatura e cifragem têm objetivos e operações distintos.",
+    fonte: "NIST FIPS 186-5 — Digital Signature Standard: https://csrc.nist.gov/pubs/fips/186-5/final; NIST SP 800-56A Rev. 3 — Pair-Wise Key-Establishment Schemes: https://csrc.nist.gov/pubs/sp/800/56/a/r3/final."
   },
 
   { id: "q-m4-57", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Código Hash",
-    contexto: "Código hash é uma função que mapeia dados de qualquer tamanho para um valor fixo.",
-    enunciado: "Um código hash (resumo de mensagem) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Hash criptográfico e senhas",
+    contexto: "Um serviço armazena senhas de usuários e também precisa comparar arquivos para detectar alterações.",
+    enunciado: "Qual afirmação distingue corretamente hash criptográfico e armazenamento seguro de senhas?",
     alternativas: [
-      { letra: "A", texto: "Uma função que converte dados de qualquer tamanho em um valor fixo de tamanho." },
-      { letra: "B", texto: "Um processo de criptografia de dados." },
-      { letra: "C", texto: "Um processo de compressão de dados." },
-      { letra: "D", texto: "Um processo de recuperação de dados." },
-      { letra: "E", texto: "Um processo de verificação de senhas." }
+      { letra: "A", texto: "Basta armazenar o hash rápido e sem sal da senha, pois o resumo de tamanho fixo impede ataques por tentativa." },
+      { letra: "B", texto: "Funções hash criptográficas produzem resumos de tamanho definido; para senhas, devem-se usar esquemas específicos de derivação/hash de senha, com sal único e parâmetros de custo adequados." },
+      { letra: "C", texto: "Hash é uma forma de criptografia reversível, de modo que a senha pode ser recuperada diretamente do resumo." },
+      { letra: "D", texto: "Todos os algoritmos de hash garantem integridade e autenticidade, independentemente do modo de uso." },
+      { letra: "E", texto: "O mesmo hash para arquivos diferentes prova que os arquivos são necessariamente idênticos em qualquer situação." }
     ],
-    gabarito: "A",
-    justificativa: "Hash é uma função que mapeia dados de qualquer tamanho para um valor (hash) de tamanho fixo — usado para integridade, verificação de senhas, assinatura digital. Criptografia (alternativa B incorreta); compressão (alternativa C incorreta); recuperação (alternativa D incorreta); verificação de senhas (alternativa E incorreta — é uma aplicação do hash, não a definição).",
+    gabarito: "B",
+    justificativa: "Uma função hash criptográfica mapeia uma entrada para um resumo de tamanho definido e pode apoiar a detecção de alterações quando o valor de referência é confiável. Senhas exigem tratamento específico: funções de derivação ou hash de senha, sal único e parâmetros de custo dificultam ataques de adivinhação. Um hash simples e rápido não é a escolha adequada para armazenar senhas; hash tampouco é criptografia reversível nem fornece autenticação por si só.",
     analise: {
-      A: "CORRETA. Hash converte dados de qualquer tamanho em um valor fixo (resumo).",
-      B: "INCORRETA. Hash não é criptografia — não é diretamente reversível.",
-      C: "INCORRETA. Compressão é a redução de tamanho, não o hash.",
-      D: "INCORRETA. Recuperação de dados é outra operação, não hash.",
-      E: "INCORRETA. Hash é usado para verificação de senhas, mas a definição é o resumo."
+      A: "INCORRETA. Hash rápido sem sal facilita ataques offline e não impede tentativas de adivinhação.",
+      B: "CORRETA. A alternativa diferencia o uso geral de hash do armazenamento especializado de senhas.",
+      C: "INCORRETA. Hash criptográfico não foi projetado para permitir recuperação direta da entrada.",
+      D: "INCORRETA. Integridade e autenticidade dependem do uso correto, da proteção do valor de referência e de mecanismos adicionais quando necessários.",
+      E: "INCORRETA. Colisões são teoricamente possíveis; igualdade de hash é evidência útil, mas não prova matemática de identidade absoluta."
     },
-    regra: "Hash = 'ballote'. Dados de qualquer tamanho → saída fixa, sem reversão.",
-    pegadinha: "Hash não é 'criptografia' — não pode ser revertido para obter os dados originais.",
-    fonte: "NIST FIPS 180-4 (SHA-256)."
+    regra: "Use hashes criptográficos para resumos e verificação; para senhas, use algoritmos específicos, sal único e custo adequado.",
+    pegadinha: "Um hash simples de senha não equivale a um esquema seguro de armazenamento de senhas.",
+    fonte: "NIST FIPS 180-4 — Secure Hash Standard: https://csrc.nist.gov/pubs/fips/180-4/upd1/final; NIST SP 800-63B — Digital Identity Guidelines: https://pages.nist.gov/800-63-4/sp800-63b.html."
   },
 
   { id: "q-m4-58", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Assinatura Digital",
-    contexto: "A assinatura digital é um mecanismo de segurança que garante autenticidade e integridade.",
-    enunciado: "A assinatura digital é um método que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Assinatura digital: integridade e validação",
+    contexto: "Uma entidade recebe um documento assinado digitalmente e precisa verificar se ele foi alterado e se a assinatura corresponde à chave pública declarada.",
+    enunciado: "Qual procedimento oferece uma validação técnica adequada da assinatura digital?",
     alternativas: [
-      { letra: "A", texto: "Garante autenticidade, integridade e não repúdio de mensagens." },
-      { letra: "B", texto: "Criptografa todos os dados." },
-      { letra: "C", texto: "Remove a necessidade de autenticação." },
-      { letra: "D", texto: "Substitui a verificação de senhas." },
-      { letra: "E", texto: "Cria dados aleatórios." }
+      { letra: "A", texto: "Verificar a assinatura com a chave pública, validar a associação dessa chave à identidade por meio da cadeia de confiança e conferir validade, revogação e contexto do certificado conforme a política aplicável." },
+      { letra: "B", texto: "Considerar o documento válido apenas porque existe uma imagem da assinatura manuscrita no PDF." },
+      { letra: "C", texto: "Presumir que a assinatura digital criptografa todo o conteúdo e dispensa verificação de integridade." },
+      { letra: "D", texto: "Aceitar qualquer certificado vencido, pois a chave pública não tem relação com a identidade." },
+      { letra: "E", texto: "Concluir automaticamente que houve não repúdio absoluto em qualquer disputa jurídica, sem examinar contexto ou evidências." }
     ],
     gabarito: "A",
-    justificativa: "A assinatura digital garante autenticidade (quem assinou), integridade (dados não alterados) e não repúdio (o autor não pode negar a assinatura). Criptografar todos os dados (alternativa B incorreta); remover necessidade de autenticação (alternativa C incorreta); substituir senhas (alternativa D incorreta); criar dados aleatórios (alternativa E incorreta).",
+    justificativa: "A validação técnica envolve verificar a assinatura e a integridade do conteúdo, além de avaliar se a chave pública está corretamente vinculada à identidade e se o certificado e a cadeia de confiança atendem às regras aplicáveis. O resultado não deve ser reduzido à aparência visual de uma assinatura nem tratado como prova absoluta de todos os fatos ou de uma conclusão jurídica em qualquer contexto.",
     analise: {
-      A: "CORRETA. Assinatura digital garante autenticidade, integridade e não repúdio.",
-      B: "INCORRETA. A assinatura digital não criptografa todos os dados — apenas afaixa a integridade/identidade.",
-      C: "INCORRETA. A assinatura digital não remove a autenticação — é uma forma de autenticação.",
-      D: "INCORRETA. A assinatura digital não substitui a verificação de senhas — é complementar.",
-      E: "INCORRETA. Assinatura digital não cria dados aleatórios."
+      A: "CORRETA. A alternativa contempla verificação criptográfica e validação do vínculo de confiança e do estado do certificado.",
+      B: "INCORRETA. Uma imagem pode ser copiada e não comprova uma assinatura digital criptográfica.",
+      C: "INCORRETA. Assinatura digital não significa que todo o documento foi cifrado; a verificação de integridade é parte do processo.",
+      D: "INCORRETA. Validade temporal, revogação e cadeia de confiança podem ser relevantes à validação.",
+      E: "INCORRETA. A assinatura oferece evidências técnicas importantes, mas não determina automaticamente todas as conclusões jurídicas ou factuais."
     },
-    regra: "Assinatura digital = 'garantia de quem, o que e quando'. Autentica + integridade + não repúdio.",
-    pegadinha: "Assinatura digital não é 'levar um documento' — é 'criptografia matemática' para provar autoria.",
-    fonte: "NIST FIPS 186 (DSA), FIPS 197 (AES)."
+    regra: "Valide a assinatura, a integridade, o vínculo entre chave e identidade e o estado do certificado conforme a política aplicável.",
+    pegadinha: "Assinatura digital não equivale a criptografar o documento nem torna dispensável a validação do certificado.",
+    fonte: "NIST FIPS 186-5 — Digital Signature Standard: https://csrc.nist.gov/pubs/fips/186-5/final; ICP-Brasil, documentos e normas oficiais: https://www.gov.br/iti/pt-br/assuntos/icp-brasil."
   },
 
   { id: "q-m4-59", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.4 — Certificados Digitais",
-    contexto: "Certificados digitais são usados para verificar a identidade de usuários e sistemas.",
-    enunciado: "Certificado digital é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Certificados digitais e cadeia de confiança",
+    contexto: "Um navegador recebe um certificado de servidor para uma conexão HTTPS e precisa decidir se confia na identidade apresentada.",
+    enunciado: "Qual afirmação descreve corretamente a função de um certificado digital X.509?",
     alternativas: [
-      { letra: "A", texto: "Um documento que verifica a identidade de uma entidade em uma comunicação segura." },
-      { letra: "B", texto: "Um documento de identidade físico." },
-      { letra: "C", texto: "Um documento de acesso a sistemas." },
-      { letra: "D", texto: "Um documento de backup." },
-      { letra: "E", texto: "Um documento de verificação de senha." }
+      { letra: "A", texto: "Vincula uma chave pública a uma identidade ou nome, sendo a confiança avaliada por validação da cadeia, do período de validade, do nome e do estado do certificado." },
+      { letra: "B", texto: "Garante que o servidor não contém vulnerabilidades e que todo conteúdo é seguro." },
+      { letra: "C", texto: "Substitui a necessidade de validar o nome do servidor e a cadeia de certificação." },
+      { letra: "D", texto: "É um backup criptografado dos dados do usuário." },
+      { letra: "E", texto: "Prova, por si só, que a pessoa que controla o domínio tem autorização legal para todo conteúdo publicado nele." }
     ],
     gabarito: "A",
-    justificativa: "Certificado digital é um documento digital (geralmente baseado em X.509) que vincula uma chave pública a uma entidade, verificando sua identidade em comunicação segura. Documento físico (alternativa B incorreta); documento de acesso (alternativa C incorreta); documento de backup (alternativa D incorreta); documento de verificação de senha (alternativa E incorreta).",
+    justificativa: "Um certificado X.509 associa uma chave pública a uma identidade ou nome conforme os campos e as políticas aplicáveis. O cliente precisa validar a cadeia até uma âncora de confiança, o período de validade, a correspondência do nome e, conforme o perfil, o estado de revogação e outros requisitos. Um certificado válido não atesta que o sistema esteja livre de vulnerabilidades ou que o conteúdo seja legítimo em todos os sentidos.",
     analise: {
-      A: "CORRETA. Certificado digital verifica a identidade de uma entidade em comunicação segura.",
-      B: "INCORRETA. Certificado digital é digital, não físico.",
-      C: "INCORRETA. Certificado não é documento de acesso — é de identidade em rede.",
-      D: "INCORRETA. Certificado não é documento de backup.",
-      E: "INCORRETA. Certificado não verifica senha — vincula chave pública a uma entidade."
+      A: "CORRETA. A alternativa descreve a função de vinculação e os principais aspectos da validação.",
+      B: "INCORRETA. Certificados não são auditorias de segurança do servidor nem garantem a segurança do conteúdo.",
+      C: "INCORRETA. A cadeia e a correspondência do nome precisam ser verificadas.",
+      D: "INCORRETA. Certificado digital não é um backup.",
+      E: "INCORRETA. O certificado não comprova autorização legal para todo conteúdo nem a veracidade de tudo que o site publica."
     },
-    regra: "Certificado digital = 'carteira de identidade eletrônica'. Verifica quem está falando.",
-    pegadinha: "Certificado digital não é 'documento físico' — é 'certificado eletrônico' para rede.",
-    fonte: "ITU-T X.509; NIST SP 800-25."
+    regra: "Certificado X.509 vincula chave pública a uma identidade/nome; confiança depende da validação do certificado e da cadeia segundo regras aplicáveis.",
+    pegadinha: "Um certificado aceito não garante que o site seja confiável em todos os aspectos, livre de malware ou correto no conteúdo.",
+    fonte: "ITU-T X.509 — Information technology — Public-key and attribute certificate frameworks: https://www.itu.int/rec/T-REC-X.509; RFC 5280 — Internet X.509 Public Key Infrastructure Certificate and CRL Profile: https://www.rfc-editor.org/rfc/rfc5280."
   },
 
   { id: "q-m4-60", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-1", assunto: "4.4 — Phishing Avançado",
-    contexto: "Phishing avançado usa técnicas sofisticadas para enganar usuários.",
-    enunciado: "O 'spear phishing' (phishing direcionado) é caracterizado por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-1", assunto: "4.3 — Phishing direcionado (spear phishing)",
+    contexto: "Uma servidora recebe mensagem que cita seu cargo, uma reunião real e o nome de seu gestor. A mensagem solicita que ela abra um link e informe credenciais em uma página externa.",
+    enunciado: "Qual característica torna esse caso compatível com spear phishing e qual resposta inicial é mais segura?",
     alternativas: [
-      { letra: "A", texto: "Um ataque generalizado, sem alvo específico." },
-      { letra: "B", texto: "Um ataque personalizado contra uma pessoa ou organização específica." },
-      { letra: "C", texto: "Um ataque que não envia e-mails." },
-      { letra: "D", texto: "Um ataque que não usa tecnologia." },
-      { letra: "E", texto: "Um ataque que não usa fraudes." }
+      { letra: "A", texto: "É uma mensagem legítima por mencionar fatos reais; basta abrir o link para confirmar." },
+      { letra: "B", texto: "É uma tentativa direcionada e personalizada; a servidora deve evitar o link, verificar o pedido por canal independente e reportar a mensagem conforme o procedimento institucional." },
+      { letra: "C", texto: "Spear phishing ocorre apenas por telefone, nunca por e-mail ou mensagens." },
+      { letra: "D", texto: "O uso de informações públicas impede que a mensagem seja fraudulenta." },
+      { letra: "E", texto: "A mensagem só é suspeita se contiver erros ortográficos evidentes." }
     ],
     gabarito: "B",
-    justificativa: "Spear phishing é um ataque personalizado contra uma pessoa ou organização específica, usando informações de pesquisa para aumentar a credibilidade. Ataque geralizado (alternativa A incorreta); não envia e-mails (alternativa C incorreta); não usa tecnologia (alternativa D incorreta); não usa fraude (alternativa E incorreta).",
+    justificativa: "Spear phishing é uma tentativa de phishing direcionada a uma pessoa ou organização e pode incorporar detalhes reais para aumentar a credibilidade. Esses detalhes não autenticam o remetente nem o destino do link. A resposta segura é não interagir com o conteúdo suspeito, confirmar solicitações por canal independente já conhecido e reportar conforme os procedimentos da organização.",
     analise: {
-      A: "INCORRETA. Spear phishing é direcionado, não generalizado (o geral é 'phishing' comum).",
-      B: "CORRETA. Spear phishing é personalizado contra uma pessoa ou organização específica.",
-      C: "INCORRETA. Normalmente envia e-mails (ou outras mídias) como veículo de ataque.",
-      D: "INCORRETA. O ataque usa tecnologia (e-mail, sites falsos, etc.).",
-      E: "INCORRETA. Spear phishing é uma fraude — enganar o alvo é sua essência."
+      A: "INCORRETA. Informações verdadeiras podem ser obtidas publicamente ou por comprometimento e não autenticam a mensagem.",
+      B: "CORRETA. A personalização é compatível com spear phishing; a verificação independente e o reporte reduzem o risco.",
+      C: "INCORRETA. O ataque pode usar e-mail, mensagens, redes sociais ou outros canais.",
+      D: "INCORRETA. Informações públicas podem ser usadas para tornar a fraude mais convincente.",
+      E: "INCORRETA. Mensagens bem escritas também podem ser fraudulentas; erros de linguagem não são requisito para identificar phishing."
     },
-    regra: "Spear phishing = 'furada de caça'. Alvo específico, elaborado e personalizado.",
-    pegadinha: "Spear phishing não é 'golpe espalhado' — é 'espada de caça', focado e preciso.",
-    fonte: "MITRE ATT&CK — T1566 (Phishing)."
+    regra: "Spear phishing é phishing direcionado e personalizado; confirme solicitações sensíveis por canal independente e reporte mensagens suspeitas.",
+    pegadinha: "Detalhes reais e texto bem escrito não provam autenticidade do remetente ou do link.",
+    fonte: "MITRE ATT&CK, T1566 — Phishing: https://attack.mitre.org/techniques/T1566/; CISA, Recognize and Report Phishing: https://www.cisa.gov/secure-our-world/recognize-and-report-phishing."
   },
 
   { id: "q-m4-61", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
