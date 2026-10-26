@@ -284,7 +284,7 @@ const moduleQuestions5 = [
     fonte: "Murphy, K. P. — Machine Learning: A Probabilistic Perspective, 2012."
   },
 
-  id: "q-m5-12", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+  { id: "q-m5-12", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m5-u2-t1-s2", assunto: "5.2 — Classificação e Regressão",
     contexto: "Classificação e regressão são tarefas fundamentais de aprendizado supervisionado.",
     enunciado: "A diferença entre classificação e regressão é:",
@@ -334,7 +334,7 @@ const moduleQuestions5 = [
     fonte: "Jain, A. K. — Data Clustering: 50 Years of Development, 2010."
   },
 
-  id: "q-m5-14", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+  { id: "q-m5-14", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Rotulagem, Atributos e Variáveis-Alvo",
     contexto: "A preparação de dados é uma etapa crítica no aprendizado supervisionado.",
     enunciado: "Rotulagem, atributos e variáveis-alvo são:",
