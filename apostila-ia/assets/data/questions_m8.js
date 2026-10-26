@@ -790,7 +790,7 @@ const moduleQuestions8 = [
     enunciado: "Sobre essa associação, assinale a alternativa que reconhece corretamente a limitação do estudo.",
     alternativas: [
       { letra: "A", texto: "Correlação de 0,8 demonstra que o consumo de sorvete causa afogamentos." },
-      { letra: "B", texto: "A associação é real, mas a causalidade não pode ser afirmada sem controle de confundentes." },
+      { letra: "B", texto: "Os dados observados mostram associação, mas a causalidade não pode ser afirmada sem controle de confundentes." },
       { letra: "C", texto: "O r = 0,8 descarta qualquer relação entre as duas variáveis." },
       { letra: "D", texto: "A presença de um confounder (temperatura) invalida a associação." }
     ],
@@ -798,7 +798,7 @@ const moduleQuestions8 = [
     justificativa: "O currículo destaca que correlação não implica causalidade e que quatro explicações são possíveis: X causa Y, Y causa X, confounder causa as duas, ou coincidência. A alternativa B reconhece que a associação existe, mas a causalidade exige controle de confundentes (como temperatura, que explica sorvete e afogamentos). A alterativa A é incorreta: nenhum r sustenta causalidade. A C afirma o oposto do currículo. A D é exagerada: o confounder não invalida a associação, apenas impede a conclusão de causalidade.",
     analise: {
       A: "INCORRETA. Erro conceitual: nenhum r sustenta causalidade; associação ≠ causa.",
-      B: "CORRETA. Reproduz a limitação do estudo observacional: associação real, causalidade não demonstrada sem controle de confundentes.",
+      B: "CORRETA. Reproduz a limitação do estudo observacional: associação observada nos dados, causalidade não demonstrada sem controle de confundentes.",
       C: "INCORRETA. Erro conceitual: r ≠ 0 descarta apenas associação linear; relação não linear pode existir.",
       D: "INCORRETA. Erro conceitual: um confounder não invalida a associação; dificulta a inferência causal. A associação permanece, mas a interpretação é limitada."
     },
