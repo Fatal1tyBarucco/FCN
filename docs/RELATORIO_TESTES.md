@@ -412,3 +412,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Advertências não bloqueantes nos logs: depreciação de `punycode`/`url.parse()` e aviso de runtime Node 20 em ações do workflow; não foram falhas do job.
 - **Limites:** testes automatizados em Chromium headless Linux não equivalem a auditoria WCAG independente, testes manuais de teclado/leitor de tela, compatibilidade em dispositivos físicos, nem revisão semântica completa de questões, gabaritos, fontes e conteúdo.
 - **Estado do PR na consulta:** #17 permanece aberto, draft, não mergeado. O sucesso comprova apenas os checks configurados; não autoriza declarar o projeto curricular concluído.
+
+
+## Correção pontual de rastreabilidade — questões M6 41–44 — 2026-10-26
+
+- Alteração commitada no branch do PR #17: `7c9b0dd7871048d94294b5c7530f90e52de97f4d`.
+- Foram corrigidos quatro campos `topico` que apontavam para IDs legados inexistentes no currículo M6: q-m6-41 → `m6-u4-t2-s1`; q-m6-42 → `m6-u4-t1-s2`; q-m6-43 → `m6-u5-t1-s2`; q-m6-44 → `m6-u6-t3-s1`.
+- Pré-validação da alteração: cada valor antigo ocorreu exatamente uma vez no arquivo e foi substituído; o script da alteração interromperia a gravação caso a contagem não fosse 1.
+- **Ainda não testado após a alteração:** execução CI no novo HEAD, auditoria integral de referências, revisão semântica independente das quatro questões e validação global de gabaritos. Não inferir aprovação a partir da pré-validação textual.
