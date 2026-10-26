@@ -138,7 +138,7 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: afirma exatamente o oposto do currículo (mobile simplificado; web requer internet). É a alternativa 'espelho' típica de FCC/VUNESP."
     },
     regra: "Classificação de clientes de aplicativo: servidor (web), instalação local (desktop) e aplicativo nativo com sincronização (mobile) — as três diferem em requisito de rede, escopo funcional e canal de atualização.",
-    pegadinha: "As alternativas B e D são 'quase verdade' para quem lê só uma frase do enunciado; a palavra-chave é comparar TODOS os atributos (funcionalidade, internet, atualização) de cada versão."
+    pegadinha: "As alternativas B e D são 'quase verdade' para quem lê só uma frase do enunciado; a palavra-chave é comparar TODOS os atributos (funcionalidade, internet, atualização) de cada versão.",
     fonte: "Microsoft Support — diferença entre Microsoft 365 e Office 2024, incluindo uso offline após instalação/ativação: https://support.microsoft.com/pt-br/office/lifecycle/lc-account/what-s-the-difference-between-microsoft-365-and-office-2024; comparação de recursos Word Web/Desktop: https://support.microsoft.com/pt-br/word/word-features-comparison-word-for-the-web-vs-desktop.",
   },
   {
@@ -161,7 +161,7 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: generalizar os 5 TB para todos os planos. O item é verdadeiro justamente porque o enunciado limita a 'Enterprise' — se ele dissesse 'em todos os planos Microsoft 365', seria FALSO."
     },
     regra: "Divisão de papéis no M365: OneDrive = armazenamento pessoal do usuário; SharePoint = armazenamento e colaboração de equipe; o limite de capacidade é propriedade do plano licenciado.",
-    pegadinha: "A pegadinha é generalizar a cota de armazenamento: o enunciado limita a oferta a planos elegíveis e às condições documentadas; não presume que todos os planos Enterprise ofereçam 5 TB."
+    pegadinha: "A pegadinha é generalizar a cota de armazenamento: o enunciado limita a oferta a planos elegíveis e às condições documentadas; não presume que todos os planos Enterprise ofereçam 5 TB.",
     fonte: "Microsoft Learn — limites de armazenamento do OneDrive por plano: https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description; gerenciamento do limite por usuário: https://learn.microsoft.com/en-us/onedrive/change-user-storage.",
   },
   {
