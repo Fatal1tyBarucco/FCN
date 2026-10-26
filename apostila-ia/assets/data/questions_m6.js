@@ -521,7 +521,7 @@ const moduleQuestions6 = [
     },
     regra: "Art. 6º: atos processuais em meio eletrônico como regra, com exceções expressas e digitalização do documento-base na prática em papel.",
     pegadinha: "Dizer que 'a lei obriga sempre' é tão errado quanto dizer que 'é facultativo': o regime tem regra e exceções nominadas.",
-    fonte: "Lei nº 14.129/2021, art. 6º (verificado em 2026-10-21)."
+    fonte: "Lei nº 14.129/2021 (Governo Digital), art. 6º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   { id: "q-m6-22", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -538,7 +538,7 @@ const moduleQuestions6 = [
     },
     regra: "Requisitos de conformidade da decisão automatizada: norma de competência, critério escrito e versionado, motivação, registro e canal de revisão.",
     pegadinha: "Itens que oferecem 'uniformidade' ou 'alta acurácia' como justificativa tentam trocar legalidade por consistência estatística.",
-    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, arts. 5º, 6º e 48 (verificado em 2026-10-21)."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 14.129/2021, arts. 5º, 6º e 48, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
   },
 
   /* ---- 6.2 Transparência passiva e limites da publicidade (3) ---- */
@@ -565,7 +565,7 @@ const moduleQuestions6 = [
     },
     regra: "Art. 11, § 1º: três respostas possíveis (data/local/modo; razões de recusa; não possui, com indicação do detentor ou remessa) — e o § 4º exige informar recurso.",
     pegadinha: "A alternativa B é a armadilha do 'cumpriu o prazo, logo está certo' — prazo e conteúdo são requisitos autônomos.",
-    fonte: "Lei nº 12.527/2011, art. 11, § 1º, III, e § 4º (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 11, § 1º, III, e § 4º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-24", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -607,7 +607,7 @@ const moduleQuestions6 = [
     },
     regra: "Anonimizar antes de disponibilizar, preservar granularidade útil e documentar a base: é assim que transparência e proteção de dados convivem.",
     pegadinha: "Suprimir o nome e manter CPF é o exemplo clássico de falsa anonimização.",
-    fonte: "Lei nº 12.527/2011, art. 31, § 3º, II; Lei nº 14.129/2021, arts. 29, § 1º, III, e 36; Lei nº 13.709/2018, art. 5º, II e III (verificados em 2026-10-20/21)."
+    fonte: "Lei nº 12.527/2011, art. 31, § 3º, II: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm; Lei nº 14.129/2021, arts. 29, § 1º, III, e 36: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm; Lei nº 13.709/2018 (LGPD), art. 5º, II e III: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   /* ---- 6.3 Sigilo, informação pessoal e responsabilização (5) ---- */
