@@ -848,7 +848,7 @@ id: "q-m1-09",
     analise: {
       A: "INCORRETA. Erro conceitual: achar que a quantidade de argumentos define a condição; a SE só devolve o segundo argumento se a condição for verdadeira.",
       B: "CORRETA. Condição falsa → terceiro argumento ('Reprovado'), conforme a semântica documentada da função.",
-      C: "INCORRETA. Erro conceitual: retorno posicional fixo. A SE devolve o segundo OU o terceiro argumento conforme a condição — não 'sempre o último' (SE(6>=7; 'A'; 'B') retornaria 'A' na verdade... em sentido contrário: se a condição fosse verdadeira, retornaria o segundo).",
+      C: "INCORRETA. Erro conceitual: retorno posicional fixo. A SE devolve o segundo argumento quando a condição é verdadeira e o terceiro quando é falsa; não retorna sempre o último argumento.",
       D: "INCORRETA. Erro conceitual: a SE existe justamente para avaliar condições lógicas; o simulador aceita comparações numéricas na primeira posição dos argumentos."
     },
     regra: "SE(condição; valor_se_verdadeiro; valor_se_falso): retorna o 2º argumento quando a condição é verdadeira e o 3º quando é falsa. Ordem dos argumentos é obrigatória (erro comum documentado: inverter a ordem).",
