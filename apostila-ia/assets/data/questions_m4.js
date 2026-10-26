@@ -909,9 +909,9 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-37", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — Incisos do Art. 5º",
-    contexto: "A Constituição protege a intimidade e a vida privada; após a Emenda Constitucional nº 115/2022, o art. 5º, LXXIX, reconhece expressamente o direito fundamental à proteção dos dados pessoais.",
-    enunciado: "A relação correta entre a CF/88 e a LGPD em relação aos dados pessoais é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — Constituição Federal — direito fundamental à proteção de dados",
+    contexto: "Uma questão de concurso pede a relação entre a Constituição Federal e a legislação infraconstitucional de proteção de dados, considerando a Emenda Constitucional nº 115/2022.",
+    enunciado: "Qual alternativa identifica corretamente a proteção constitucional de dados pessoais e sua relação com a LGPD?",
     alternativas: [
       { letra: "A", texto: "A CF/88 não menciona dados pessoais." },
       { letra: "B", texto: "A Constituição protege a intimidade e a vida privada no art. 5º, X, e reconhece o direito fundamental à proteção de dados pessoais no art. 5º, LXXIX; a LGPD disciplina o tratamento desses dados." },
@@ -984,28 +984,28 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-40", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil e LGPD",
-    contexto: "Múltiplas leis federais regulam a proteção de dados e a internet no Brasil.",
-    enunciado: "A relação entre Marco Civil da Internet e a LGPD no contexto da proteção de dados é:",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil da Internet e LGPD",
+    contexto: "Um serviço digital coleta dados pessoais de usuários para fornecer funcionalidades e também mantém registros de conexão nos termos aplicáveis.",
+    enunciado: "Como o Marco Civil da Internet e a LGPD se relacionam nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "A LGPD substitui o Marco Civil da Internet." },
-      { letra: "B", texto: "O Marco Civil e a LGPD são complementares, conectados por princípios e competências." },
-      { letra: "C", texto: "O Marco Civil dispensa a LGPD." },
-      { letra: "D", texto: "O Marco Civil não tem relação com dados pessoais." },
-      { letra: "E", texto: "A LGPD é irrelevante para o Marco Civil." }
+      { letra: "A", texto: "A LGPD substitui integralmente o Marco Civil sempre que houver dados pessoais." },
+      { letra: "B", texto: "As leis têm objetos e disposições próprios e complementares; a aplicação concreta depende do tratamento realizado e das regras pertinentes de cada diploma." },
+      { letra: "C", texto: "O Marco Civil autoriza qualquer uso secundário de dados, dispensando a análise de base legal prevista na LGPD." },
+      { letra: "D", texto: "A LGPD se aplica apenas a empresas privadas, enquanto o Marco Civil se aplica apenas ao Poder Público." },
+      { letra: "E", texto: "O cumprimento de uma das leis elimina automaticamente todas as obrigações previstas na outra." }
     ],
     gabarito: "B",
-    justificativa: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, incluindo garantias relacionadas à privacidade. A LGPD (Lei nº 13.709/2018) disciplina o tratamento de dados pessoais. As normas são complementares; nenhuma substitui ou dispensa a outra.",
+    justificativa: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, incluindo regras relativas à privacidade e a registros. A LGPD (Lei nº 13.709/2018) disciplina o tratamento de dados pessoais. As normas são complementares; a organização deve identificar quais disposições se aplicam a cada atividade, sem presumir que uma lei substitui ou dispensa a outra.",
     analise: {
-      A: "INCORRETA. A LGPD complementa o Marco Civil e a Lei 12.965/2014; não substitui.",
-      B: "CORRETA. O Marco Civil disciplina o uso da internet; a LGPD disciplina o tratamento de dados pessoais. As normas têm campos complementares.",
-      C: "INCORRETA. O Marco Civil não dispensa a LGPD — ambas têm âmbitos complementares.",
-      D: "INCORRETA. O Marco Civil trata de dados pessoais no contexto da internet.",
-      E: "INCORRETA. A LGPD é relevante para a proteção de dados no âmbito do Marco Civil."
+      A: "INCORRETA. A LGPD não substitui integralmente o Marco Civil.",
+      B: "CORRETA. Os diplomas têm âmbitos próprios e complementares, cuja aplicação depende do caso concreto.",
+      C: "INCORRETA. O Marco Civil não autoriza indistintamente qualquer uso secundário de dados pessoais.",
+      D: "INCORRETA. O âmbito de cada lei não se divide dessa forma simplista entre setor privado e Poder Público.",
+      E: "INCORRETA. Cumprir uma lei não elimina automaticamente obrigações pertinentes da outra."
     },
-    regra: "Marco Civil: princípios, garantias, direitos e deveres para o uso da internet. LGPD: regras para o tratamento de dados pessoais. As normas são complementares.",
-    pegadinha: "Não reduzir o Marco Civil a uma lei sobre dados públicos: ele disciplina o uso da internet e contém garantias relacionadas à privacidade.",
-    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet), texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm; Lei nº 13.709/2018 (LGPD), texto compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
+    regra: "Marco Civil regula direitos e deveres no uso da internet; LGPD disciplina o tratamento de dados pessoais. A aplicação pode ser complementar.",
+    pegadinha: "Não trate os diplomas como substitutos nem presuma que cumprir um elimina as obrigações pertinentes do outro.",
+    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm; Lei nº 13.709/2018 (LGPD): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-41", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
