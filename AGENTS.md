@@ -211,6 +211,18 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `8874dc1e23c1f1ddf66f7e5bc0569e23bb78f531`.
 - Este passe é focal, não uma auditoria jurídica integral. Confirmar sintaxe e workflows no HEAD atual.
 
+## Auditoria semântica e didática incremental — lote M4 q-m4-46 a q-m4-50 (2026-10-26)
+
+- O lote anterior repetia definições elementares de integridade, disponibilidade, autenticação, autorização e auditoria. Para aumentar a profundidade sem aumentar o número de questões, q-m4-46..q-m4-50 foram substituídas por cenários aplicados:
+  - q-m4-46: uso de hash criptográfico para detectar alteração, com ressalvas sobre referência confiável, autoria e legitimidade.
+  - q-m4-47: distinção entre Recovery Time Objective (RTO) e Recovery Point Objective (RPO), sem tratá-los como garantias.
+  - q-m4-48: independência das categorias de fatores em MFA e riscos dos fluxos de recuperação de conta.
+  - q-m4-49: menor privilégio, separação de funções, identidades individuais e revisão de permissões.
+  - q-m4-50: integridade de logs, sincronização de horário, restrição de acesso, detecção de adulteração e retenção.
+- As questões citam materiais NIST específicos e foram redigidas para evitar alegações absolutas de segurança.
+- Commit de conteúdo: `de82626f2b4b511be6e323ceb7f1d7d3be0b0620`.
+- Este lote é uma revisão de conteúdo e não uma auditoria completa do M4. Validar sintaxe e testes automatizados no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
