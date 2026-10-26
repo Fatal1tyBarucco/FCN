@@ -390,7 +390,7 @@ const moduleQuestions5 = [
     enunciado: "Métricas de classificação como precisão, recall, especificidade e F1 são importantes porque:",
     alternativas: [
       { letra: "A", texto: "Não são úteis para avaliação." },
-      { letra: "B", texto: "Substituiem o conjunto de teste." },
+      { letra: "B", texto: "Substituem o conjunto de teste." },
       { letra: "C", texto: "Permitem avaliar a qualidade do modelo, considerando diferentes aspectos de desempenho." },
       { letra: "D", texto: "Eliminam a necessidade de validação." },
       { letra: "E", texto: "Garantem que o modelo nunca erra." }
@@ -455,7 +455,7 @@ const moduleQuestions5 = [
       E: "INCORRETA. Métricas não garantem erro zero."
     },
     regra: "Métricas de regressão = 'erro numérico'. MAE, MSE, RMSE — medem distância entre previsão e realidade.",
-    pegadinha: "RMSE não é 'erro' — é 'raiz quadrada da média dos erros ao quadrado'.",
+    pegadinha: "RMSE não é a média simples dos erros: é a raiz quadrada da média dos erros ao quadrado.",
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
   },
 
@@ -471,7 +471,7 @@ const moduleQuestions5 = [
       { letra: "E", texto: "A remoção de outliers." }
     ],
     gabarito: "A",
-    justificativa: "A engenharia de atributos envolve a criação de novos atributos a partir de dados ou transformação de atributos existentes para melhorar o desempenho do modelo — como normalizar, codificar, criar interações, ecc. Excluir todos os atributos (alternativa B incorreta); criptografia (alternativa C incorreta); verificação (alternativa D incorreta); remoção de outliers (alternativa E incorreta).",
+    justificativa: "A engenharia de atributos envolve a criação de novos atributos a partir de dados ou transformação de atributos existentes para melhorar o desempenho do modelo — como normalizar, codificar, criar interações, etc. Excluir todos os atributos (alternativa B incorreta); criptografia (alternativa C incorreta); verificação (alternativa D incorreta); remoção de outliers (alternativa E incorreta).",
     analise: {
       A: "CORRETA. Engenharia de atributos envolve criação/transformação de atributos para melhorar desempenho.",
       B: "INCORRETA. Excluir todos os atributos anularia o processo.",
@@ -485,28 +485,28 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-20", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Avaliação de Desempenho",
-    contexto: "A avaliação de desempenho é um passo crítico no ciclo de vida do modelo.",
-    enunciado: "A avaliação de desempenho e qualidade em aprendizado de máquina é importante porque:",
+    nivel: "avancado", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Avaliação de Desempenho",
+    contexto: "Um serviço público classifica solicitações urgentes em uma base na qual apenas 1% dos casos são realmente urgentes. Um modelo que prevê todos os casos como não urgentes alcança 99% de acurácia, mas deixa passar todos os casos urgentes.",
+    enunciado: "Qual conclusão é tecnicamente mais adequada para avaliar esse classificador?",
     alternativas: [
-      { letra: "A", texto: "Permite verificar se o modelo atende aos objetivos e se generaliza bem." },
-      { letra: "B", texto: "É um processo opcional." },
-      { letra: "C", texto: "Substitui a necessidade de validação." },
-      { letra: "D", texto: "Elimina a necessidade de teste." },
-      { letra: "E", texto: "Garante que o modelo nunca falhe." }
+      { letra: "A", texto: "A acurácia de 99% demonstra que o modelo atende ao objetivo, mesmo sem identificar casos urgentes." },
+      { letra: "B", texto: "A acurácia isolada é insuficiente; é necessário examinar recall da classe urgente e outras métricas alinhadas ao custo dos erros." },
+      { letra: "C", texto: "O F1-score será necessariamente 99%, pois a acurácia é 99%." },
+      { letra: "D", texto: "A especificidade será zero, porque o modelo não prevê nenhum caso urgente." },
+      { letra: "E", texto: "O conjunto de teste deve ser descartado porque a distribuição das classes é desigual." }
     ],
-    gabarito: "A",
-    justificativa: "A avaliação de desempenho e qualidade é essencial para verificar se o modelo atende aos objetivos, se generaliza e se é apropriado para o contexto. Processo opcional (alternativa B incorreta); substitui validação (alternativa C incorreta); elimina teste (alternativa D incorreta); garante erro (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Como apenas 1% dos registros é urgente, prever todos como não urgentes produz 99% de acurácia, mas recall zero para a classe urgente: nenhum positivo real foi identificado. A avaliação deve incluir métricas por classe, como recall e precisão, e considerar os custos relativos de falsos negativos e falsos positivos. A métrica escolhida não deve ser interpretada isoladamente nem substituir a avaliação em dados adequados.",
     analise: {
-      A: "CORRETA. Avaliação de desempenho verifica atendimento aos objetivos e generalização.",
-      B: "INCORRETA. Avaliação não é opcional — é essencial para a qualidade.",
-      C: "INCORRETA. Avaliação não substitui validação.",
-      D: "INCORRETA. Avaliação não elimina a necessidade de teste.",
-      E: "INCORRETA. Avaliação não garante que o modelo nunca falhar."
+      A: "INCORRETA. A acurácia elevada decorre da classe majoritária e oculta a falha total em identificar urgências.",
+      B: "CORRETA. O recall da classe urgente revela que nenhum caso urgente foi encontrado; a escolha das métricas deve refletir o objetivo e o custo dos erros.",
+      C: "INCORRETA. A acurácia não determina o F1-score. Neste exemplo, a precisão e o recall da classe urgente são zero ou indefinidos conforme a convenção de cálculo, e o F1 dessa classe é zero quando a convenção usual trata a precisão indefinida como zero.",
+      D: "INCORRETA. Se todos os casos são previstos como negativos, todos os negativos reais são identificados; a especificidade é 100%, assumindo que há negativos reais.",
+      E: "INCORRETA. Desbalanceamento não invalida automaticamente o conjunto de teste; exige desenho de avaliação e métricas adequados, mantendo uma amostra representativa do uso pretendido."
     },
-    regra: "Avaliação de desempenho = 'medir qualidade'. É fundamental para projetos de ML.",
-    pegadinha: "Avaliação não é 'certurar sucesso' — é 'medir o quão bom o modelo é'.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
+    regra: "Em classes desbalanceadas, acurácia pode ocultar desempenho ruim na classe minoritária. Examine métricas por classe e o custo dos falsos positivos e falsos negativos.",
+    pegadinha: "Uma taxa de acerto alta não prova utilidade: o modelo pode acertar quase sempre a classe majoritária e falhar justamente no evento que importa.",
+    fonte: "Saito, T. & Rehmsmeier, M. — The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets, 2015."
   },
 
   /* ===================== 5.3 IA Generativa/LLMs (11 questões) ===================== */
