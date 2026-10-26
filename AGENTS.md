@@ -181,6 +181,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `4be5ee9793f53b4a1d0ccdba69395c1d2aa5d0c3`.
 - O passe q-m5-01..q-m5-20 cobre apenas os itens explicitamente revisados nas seções incrementais; ainda não constitui revisão integral do banco de 42 questões do M5. A validação automatizada do HEAD atual permanece obrigatória.
 
+## Auditoria semântica incremental — lote M4 q-m4-31 a q-m4-35 (2026-10-26)
+
+- q-m4-31: reescrita para testar princípios expressos no art. 6º da LGPD (finalidade, necessidade e transparência), evitando a formulação vaga “princípio fundamental” e a impressão de que consentimento é sempre a única base legal.
+- q-m4-32: mantida após revisão focal; diferencia fundamentos do art. 2º e princípios do art. 3º do Marco Civil da Internet. A redação já distingue neutralidade de rede, proteção da privacidade e proteção de dados pessoais e aponta os dispositivos legais pertinentes.
+- q-m4-33: reescrita em cenário de marketing com dados de compras anteriores. Explicita que cadastro prévio não autoriza automaticamente qualquer uso posterior, exige análise da base legal e dos princípios e limita o recurso ao legítimo interesse conforme os arts. 10 e 11 da LGPD.
+- q-m4-34: mantida provisoriamente após revisão focal da formulação sobre a natureza institucional e as competências da ANPD; requer conferência final da legislação vigente e da fonte oficial antes de encerrar a auditoria jurídica do bloco.
+- q-m4-35: mantida após revisão focal; descreve direitos do art. 18 sem transformar eliminação ou portabilidade em direitos absolutos.
+- Commit de conteúdo: `675cddb4d1c3d2a06313c1619f894dbdbe023eaa`.
+- Este passe cobre apenas q-m4-31..q-m4-35; não é validação jurídica integral das 85 questões do M4. O CI deve ser consultado no HEAD resultante antes de considerar validada a sintaxe.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
