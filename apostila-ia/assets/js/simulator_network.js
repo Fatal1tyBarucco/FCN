@@ -149,7 +149,7 @@
   var netCss = '<style>' +
     '.sim-redes{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}' +
     '.sim-redes h3{margin:8px 0 2px}.sim-redes h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}' +
-    '.sim-redes-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}' +
+    '.sim-redes-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}' +
     '.sim-redes-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
     '.sim-redes-in{width:140px;font-family:Courier New,monospace;font-size:.85rem;background:#1b1e24;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 6px;margin-right:6px}' +
     '.sim-redes-in.small{width:70px}' +
@@ -164,32 +164,32 @@
   function netSectionDNS() {
     return '<div class="sim-redes-bloco"><h4>Resolução de DNS (simulação)</h4>' +
       '<p>Consulta a uma tabela estática local — sem resolução real via DNS.</p>' +
-      '<input id="net-dns-host" type="text" class="sim-redes-in" placeholder="ex.: google.com" value="google.com" />' +
+      '<input id="net-dns-host" type="text" class="sim-redes-in" placeholder="ex.: google.com" value="google.com" aria-label="Nome de domínio para consulta DNS simulada" />' +
       '<button type="button" class="sim-redes-btn" data-act="net-dns">Resolver</button>' +
-      '<pre id="net-dns-out" class="sim-redes-out">—</pre></div>';
+      '<pre tabindex="0" id="net-dns-out" class="sim-redes-out">—</pre></div>';
   }
   function netSectionCIDR() {
     return '<div class="sim-redes-bloco"><h4>Calculadora IPv4/CIDR (cálculo real)</h4>' +
       '<p>Informe IP e máscara — cálculo binário IP AND máscara (rede, broadcast, hosts).</p>' +
-      '<input id="net-cidr-ip" type="text" class="sim-redes-in" placeholder="ex.: 192.168.1.10" value="192.168.1.10" />' +
-      '<input id="net-cidr-mask" type="text" class="sim-redes-in small" placeholder="ex.: /24 ou 255.255.255.0" value="/24" />' +
+      '<input id="net-cidr-ip" type="text" class="sim-redes-in" placeholder="ex.: 192.168.1.10" value="192.168.1.10" aria-label="Endereço IPv4 para cálculo de rede" />' +
+      '<input id="net-cidr-mask" type="text" class="sim-redes-in small" placeholder="ex.: /24 ou 255.255.255.0" value="/24" aria-label="Máscara de sub-rede ou prefixo CIDR" />' +
       '<button type="button" class="sim-redes-btn" data-act="net-cidr">Calcular</button>' +
-      '<pre id="net-cidr-out" class="sim-redes-out">—</pre></div>';
+      '<pre tabindex="0" id="net-cidr-out" class="sim-redes-out">—</pre></div>';
   }
   function netSectionPing() {
     return '<div class="sim-redes-bloco"><h4>Ping (ICMP simulado)</h4>' +
       '<p>Eco simulado — latências e TTL são valores fictícios (não executa ICMP real).</p>' +
-      '<input id="net-ping-host" type="text" class="sim-redes-in" placeholder="ex.: 8.8.8.8" value="8.8.8.8" />' +
-      '<input id="net-ping-count" type="number" class="sim-redes-in small" min="1" max="20" value="4" />' +
+      '<input id="net-ping-host" type="text" class="sim-redes-in" placeholder="ex.: 8.8.8.8" value="8.8.8.8" aria-label="Endereço ou nome de host para ping simulado" />' +
+      '<input id="net-ping-count" type="number" class="sim-redes-in small" min="1" max="20" value="4" aria-label="Quantidade de pacotes ICMP simulados" />' +
       '<button type="button" class="sim-redes-btn" data-act="net-ping">Enviar</button>' +
-      '<pre id="net-ping-out" class="sim-redes-out">—</pre></div>';
+      '<pre tabindex="0" id="net-ping-out" class="sim-redes-out">—</pre></div>';
   }
   function netSectionTraceroute() {
     return '<div class="sim-redes-bloco"><h4>Traceroute (TTL simulado)</h4>' +
       '<p>Saltos fictícios por camada — traceroute real usa TTL incremental e ICMP Time Exceeded.</p>' +
-      '<input id="net-tr-host" type="text" class="sim-redes-in" placeholder="ex.: 1.1.1.1" value="1.1.1.1" />' +
+      '<input id="net-tr-host" type="text" class="sim-redes-in" placeholder="ex.: 1.1.1.1" value="1.1.1.1" aria-label="Endereço ou nome de host para traceroute simulado" />' +
       '<button type="button" class="sim-redes-btn" data-act="net-traceroute">Rastrear</button>' +
-      '<pre id="net-tr-out" class="sim-redes-out">—</pre></div>';
+      '<pre tabindex="0" id="net-tr-out" class="sim-redes-out">—</pre></div>';
   }
   function netSectionEncap() {
     var linhas = encapsulamento.map(function (e) {
@@ -205,9 +205,9 @@
     }).join('');
     return '<div class="sim-redes-bloco"><h4>Diagnóstico por camadas / rotas (simulação)</h4>' +
       '<p>Selecione origem→destino — rota e estado de porta são simulados (topologia fictícia).</p>' +
-      '<select id="net-route-sel" class="sim-redes-in">' + opts + '</select>' +
+      '<select id="net-route-sel" class="sim-redes-in" aria-label="Selecionar origem e destino da rota simulada">' + opts + '</select>' +
       '<button type="button" class="sim-redes-btn" data-act="net-route">Diagnosticar</button>' +
-      '<pre id="net-route-out" class="sim-redes-out">—</pre></div>';
+      '<pre tabindex="0" id="net-route-out" class="sim-redes-out">—</pre></div>';
   }
   function netBuildLimites() {
     var n = (NetworkSimulator.escopo && NetworkSimulator.escopo.operacoes) ? NetworkSimulator.escopo.operacoes.length : 0;
