@@ -6,26 +6,26 @@
 
 ## Resultado estrutural
 
-- Questões lidas: **389**.
+- Questões lidas: **396**.
 - IDs duplicados: **0**.
 - Pares com contexto e enunciado idênticos: **0**.
 - Alertas heurísticos após correção das regras de falso positivo: **0**.
-- Distribuição por módulo: M1=43, M2=54, M3=47, M4=85, M5=40, M6=40, M7=40, M8=40.
-- Formatos: 314 questões de múltipla escolha e 75 itens de certo/errado.
+- Distribuição por módulo: M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40, M8=40.
+- Formatos: 321 questões de múltipla escolha e 75 itens de certo/errado.
 
 ## Achado editorial que exige revisão
 
-Distribuição do gabarito nas 314 questões de múltipla escolha:
+Distribuição do gabarito nas 321 questões de múltipla escolha:
 
 | Letra correta | Quantidade |
 |---|---:|
 | A | 145 |
-| B | 129 |
-| C | 27 |
-| D | 6 |
-| E | 7 |
+| B | 131 |
+| C | 29 |
+| D | 8 |
+| E | 8 |
 
-As 24 questões novas foram balanceadas em suas posições corretas (A=4, B=5, C=5, D=5, E=5), sem alterar o texto das respostas ou as análises. O banco completo ainda apresenta concentração em A/B: essas letras representam 87,3% das 314 questões de múltipla escolha. Isso pode tornar o padrão previsível e exige revisão editorial do banco legado. A distribuição não prova que as respostas individuais estejam incorretas, mas é uma fragilidade de desenho de avaliação.
+As 24 questões novas do lote anterior foram balanceadas em suas posições corretas (A=4, B=5, C=5, D=5, E=5), sem alterar o texto das respostas ou as análises. O banco completo ainda apresenta concentração em A/B: essas letras representam 87,3% das 314 questões de múltipla escolha. Isso pode tornar o padrão previsível e exige revisão editorial do banco legado. A distribuição não prova que as respostas individuais estejam incorretas, mas é uma fragilidade de desenho de avaliação.
 
 **Ação recomendada:** revisar manualmente cada questão e, quando necessário, reorganizar as alternativas sem alterar a resposta correta, a análise individual nem as justificativas que mencionam letras. Não reequilibrar o gabarito automaticamente sem preservar essas relações.
 
@@ -40,16 +40,16 @@ A matriz completa por questão está disponível no artefato `curriculum-audit-r
 
 | Módulo | A | B | C | D | E | Total MC |
 |---|---:|---:|---:|---:|---:|---:|
-| M1 | 3 | 18 | 3 | 1 | 0 | 25 |
+| M1 | 3 | 18 | 4 | 1 | 0 | 26 |
 | M2 | 8 | 16 | 8 | 2 | 3 | 37 |
 | M3 | 3 | 14 | 10 | 2 | 2 | 31 |
 | M4 | 38 | 43 | 3 | 0 | 0 | 84 |
-| M5 | 24 | 13 | 1 | 0 | 0 | 38 |
-| M6 | 30 | 0 | 0 | 0 | 0 | 30 |
+| M5 | 24 | 14 | 1 | 1 | 0 | 40 |
+| M6 | 30 | 1 | 1 | 1 | 1 | 34 |
 | M7 | 29 | 0 | 1 | 1 | 2 | 33 |
 | M8 | 10 | 25 | 1 | 0 | 0 | 36 |
 
-A auditoria recomenda revisão manual de posições em M1, M4, M5, M6, M7 e M8. Em M6, todas as questões de múltipla escolha têm gabarito A; em M7, o lote controlado reduziu a concentração para A=29/33; em M4, M5 e M8, a concentração em A/B também é extrema. O lote de 24 questões novas foi balanceado, mas isso não corrige automaticamente o banco legado.
+A auditoria recomenda revisão manual de posições em M1, M4, M5, M6, M7 e M8. Em M6, 30/34 questões MC ainda têm gabarito A; em M7, o lote controlado reduziu a concentração para A=29/33; em M4, M5 e M8, a concentração em A/B também é extrema. O lote de 24 questões novas foi balanceado, mas isso não corrige automaticamente o banco legado.
 
 Evidência e matriz heurística gerada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
 
@@ -89,10 +89,17 @@ A auditoria heurística não avalia se cada artigo citado sustenta a afirmação
 - [CI do PR](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254853715) e [CI do push](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254851951): **success**.
 - Sintaxe validada em 39 arquivos JavaScript; auditorias estruturais e heurísticas concluídas; smoke test Playwright/Chromium em `file://` aprovado, sem erros de página.
 - Contagens confirmadas pelo artefato `curriculum-audit-reports`: 132 tópicos reconhecidos, 460 flashcards e 389 questões. A auditoria heurística identificou 0 IDs duplicados, 0 pares idênticos de contexto/enunciado e 0 alertas; isso não equivale a validação semântica.
-- Distribuição MC atualizada: A=145, B=129, C=27, D=6, E=7; A/B representam 87,3% das 314 questões MC. M7: A=29, B=0, C=1, D=1, E=2 (33 MC). M6 continua A=30/30.
+- Distribuição MC atualizada: A=145, B=129, C=27, D=6, E=7; A/B representam 86,0% das 321 questões MC. M7: A=29, B=0, C=1, D=1, E=2 (33 MC). M6 continua A=30/30.
 - Artefato com matrizes CSV e relatórios: `curriculum-audit-reports`, gerado na execução de CI do PR.
 
 
 ## Proveniência das questões M8 — 2026-10-26
 
 A auditoria anterior detectou ausência do campo `fonte` em 40/40 questões M8. Foi aplicado um ajuste de proveniência: cada item agora identifica explicitamente o tópico curricular M8 e o assunto que fundamenta a questão, seguindo o padrão já utilizado no M7. Isso torna a origem curricular rastreável; **não representa citação de fonte externa independente** nem valida a correção factual do conteúdo. A auditoria de CI do novo HEAD deve confirmar os campos e a integridade sintática.
+
+
+## Ampliação da cobertura de tópicos de síntese — 2026-10-26
+
+Foram adicionadas sete questões autorais aos tópicos que a matriz de rastreabilidade identificava sem questão direta: uma em M1 (relatório técnico integrado), duas em M5 (IA generativa e engenharia de prompts) e quatro em M6 (ética/governança, redes sociais institucionais, acessibilidade e método de resolução). A contagem passa a 396 questões (321 MC e 75 itens certo/errado), distribuídas M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40 e M8=40.
+
+Distribuição MC após as sete inclusões: A=145, B=131, C=29, D=8, E=8. A/B representam 86,0% das 321 questões MC. A revisão editorial da distribuição permanece necessária. O CI da versão que contém estas questões identificou que o verificador estrutural ainda mantinha contagens antigas; os testes e o manifesto foram atualizados, e a execução final do novo HEAD ainda deve confirmar a aprovação.
