@@ -1,14 +1,22 @@
 # Relatório de rastreabilidade de flashcards e questões
 
+# Atualização estrutural — 2026-10-26 04:05 UTC
+
+- O workflow de CI executou `scripts/audit_learning_assets.mjs` no merge ref do PR #17 e registrou: **132 tópicos, 460 flashcards, 396 questões, 0 ativos apenas em nível de unidade e 0 referências desconhecidas**. O mesmo job identificou **3 tópicos de síntese do M6 sem questão associada**: `m6-u1-t3`, `m6-u4-t3`, `m6-u5-t3`.
+- Foram adicionadas as questões autorais `q-m6-45`, `q-m6-46` e `q-m6-47`, uma para cada tópico de síntese identificado. O banco esperado passa a **399 questões**; a nova execução do auditor e a matriz CSV regenerada ainda precisam confirmar esse resultado no commit posterior.
+- A execução de CI do commit anterior `cf0087b1d70d0b9d40fa34306d6cf7c4022a7577` concluiu com sucesso: CodeQL, auditoria estática/cobertura e análises JavaScript/TypeScript/Actions. Isso não cobre o commit com as três novas questões.
+
+---
+
 # Snapshot de contagem atualizado — 2026-10-26 04:01 UTC
 
 > Esta seção prevalece sobre os números de snapshots históricos abaixo. O corpo anterior contém resultados de execuções antigas e não deve ser lido como relatório gerado novamente no HEAD atual.
 
 - HEAD consultado antes desta atualização: `cefd7fa005118b37af112b2bf67146ebb26c1163`.
-- Contagem por varredura dos IDs `q-mN-NN` nos seis arquivos de questões: **396 IDs únicos**, sem duplicações detectadas nessa varredura.
+- Contagem por varredura dos IDs `q-mN-NN` nos seis arquivos de questões: **399 IDs esperados após inclusão de q-m6-45..47**, sem duplicações detectadas nessa varredura.
 - Distribuição por arquivo: `questions.js` (145; módulos 1–3), M4 (85), M5 (42), M6 (44), M7 (40) e M8 (40).
 - Flashcards: **460**, conforme inventário atual do repositório.
-- Auditoria estrutural focal dos conteúdos remotos: **396/396** questões com campos obrigatórios detectados; **0** IDs duplicados; **0** referências de tópico não reconhecidas entre as questões. A normalização comparou as referências com os IDs curriculares atuais. Essa verificação não executou `scripts/audit_learning_assets.mjs` nem regenerou a matriz CSV; a matriz completa por tópico ainda requer execução reproduzível do script no ambiente do projeto.
+- Auditoria estrutural focal dos conteúdos remotos: **396/396 no commit anterior; 399 itens esperados após o patch** questões com campos obrigatórios detectados; **0** IDs duplicados; **0** referências de tópico não reconhecidas entre as questões. A normalização comparou as referências com os IDs curriculares atuais. Essa verificação não executou `scripts/audit_learning_assets.mjs` nem regenerou a matriz CSV; a matriz completa por tópico ainda requer execução reproduzível do script no ambiente do projeto.
 - A execução de CI consultada para o HEAD `cefd7fa...` concluiu com sucesso para os checks configurados, incluindo auditoria estática/cobertura e análises JavaScript/TypeScript/Actions. Isso não certifica a semântica dos enunciados, gabaritos ou fontes.
 
 ---
