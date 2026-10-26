@@ -152,14 +152,14 @@ var questoesBanco = [
     enunciado: "Em um plano Microsoft 365 Enterprise elegível, o OneDrive pode oferecer 5 TB por usuário conforme as condições de licenciamento; o SharePoint é indicado para armazenamento e colaboração de equipe.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o OneDrive oferece 5 TB de armazenamento por usuário e o SharePoint é o serviço indicado para armazenamento e colaboração de equipe' — correspondem exatamente à descrição do currículo para o plano Enterprise.",
+    trechoDeterminante: "O trecho determinante é 'plano Microsoft 365 Enterprise elegível' e 'pode oferecer 5 TB conforme as condições de licenciamento': a capacidade é condicional, enquanto o papel do SharePoint está corretamente descrito.",
     justificativa: "A cota de armazenamento deve ser confirmada para a licença e o locatário específicos; não é correto generalizar 5 TB para todo plano Enterprise. O papel do SharePoint para armazenamento e colaboração de equipe está corretamente atribuído.",
     analise: {
       item: "Item VERDADEIRO. A afirmação sobre 5 TB depende de elegibilidade e condições do plano; o papel do SharePoint para colaboração de equipe está corretamente atribuído.",
       leituraIncorreta: "Leitura que induz ao erro: generalizar os 5 TB para todos os planos. O item é verdadeiro justamente porque o enunciado limita a 'Enterprise' — se ele dissesse 'em todos os planos Microsoft 365', seria FALSO."
     },
     regra: "Divisão de papéis no M365: OneDrive = armazenamento pessoal do usuário; SharePoint = armazenamento e colaboração de equipe; o limite de capacidade é propriedade do plano licenciado.",
-    pegadinha: "A pegadinha clássica de item Certo/Errado é o quantificador escondido ('todos os planos', 'sempre'). Aqui o quantificador correto ('Enterprise') está explícito — quem lê com pressa tende a 'consertar' o item e o marca Errado."
+    pegadinha: "A pegadinha é generalizar a cota de armazenamento: o enunciado limita a oferta a planos elegíveis e às condições documentadas; não presume que todos os planos Enterprise ofereçam 5 TB."
   },
   {
     id: "q-m1-05",
@@ -205,7 +205,7 @@ var questoesBanco = [
     trechoDeterminante: "O trecho que torna o item FALSO é 'sempre de 30 dias por padrão, independentemente do tipo de conta, plano e política do locatário': o prazo de histórico de versões depende do serviço, do tipo de conta e das configurações aplicáveis.",
     justificativa: "Histórico de versões e lixeira são mecanismos distintos. Não se deve ensinar um prazo universal de 30 dias para o histórico de versões; a retenção varia conforme o tipo de conta, a configuração do serviço e as políticas aplicáveis. As políticas de retenção do locatário podem ser administradas, mas isso não torna universal um prazo fixo.",
     analise: {
-      item: "Item FALSO. O prazo fixo universal de 30 dias não pode ser presumido para todo histórico de versões do OneDrive/SharePoint."
+      item: "Item FALSO. O prazo fixo universal de 30 dias não pode ser presumido para todo histórico de versões do OneDrive/SharePoint.",
       leituraIncorreta: "Leitura que induz ao erro: confundir 'histórico de versões' com 'backup'. O histórico é funcionalidade de recuperação dentro do próprio serviço — a questão do backup separado aparece no tópico 1.5 (OneDrive), e lá o currículo afirma que sincronização não substitui backup."
     },
     regra: "Retenção × backup: histórico de versões é retenção limitada e configurável dentro do serviço; backup é cópia independente (recomendação 3-2-1 citada no currículo do OneDrive).",
@@ -248,21 +248,21 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "modulo-1-unidade-1-topico-1-sub-8",
     assunto: "M1.1 Ecossistema Microsoft 365",
-    contexto: "Documento compartilhado externamente precisa de expiração de link e recuperação acidental; ver tópico 'Permissões, compartilhamento, privacidade e recuperação de arquivos'.",
-    enunciado: "No Microsoft 365, a lixeira retém arquivos por 30 dias e o compartilhamento por link pode ser configurado com expiração, senha e permissão de download.",
+    contexto: "Um órgão define política de compartilhamento externo e recuperação de arquivos para contas pessoais e organizacionais.",
+    enunciado: "Em qualquer conta do Microsoft 365, a lixeira retém arquivos exatamente 30 dias e todos os links podem sempre receber expiração, senha e restrição de download, sem depender do tipo de conta ou das políticas do locatário.",
     alternativas: null,
-    gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'a lixeira retém arquivos por 30 dias e o compartilhamento por link pode ser configurado com expiração, senha e permissão de download' — todas as capacidades constam do subtópico correspondente.",
-    justificativa: "Os recursos de compartilhamento por link (expiração, senha e controle de download) dependem do tipo de conta, da configuração do locatário e das políticas de compartilhamento. A retenção da lixeira também varia entre contas pessoais e organizacionais e conforme a política aplicável; não é seguro fixar 30 dias para todo Microsoft 365.",
+    gabarito: "errado",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'em qualquer conta', 'exatamente 30 dias' e 'sem depender ... das políticas do locatário': a retenção e os controles de compartilhamento variam conforme o tipo de conta, o serviço e a configuração aplicável.",
+    justificativa: "Não se deve generalizar um prazo único de retenção da lixeira para todas as contas pessoais e organizacionais. Da mesma forma, expiração, senha e restrição de download em links dependem dos recursos disponíveis e das políticas configuradas pelo administrador. A política deve ser verificada para o serviço, o tipo de conta e o locatário específicos; histórico de versões e lixeira são mecanismos distintos.",
     analise: {
-      item: "Item VERDADEIRO. Prazo (30 dias) e controles de link (expiração, senha, download) são exatamente os registrados no currículo.",
-      leituraIncorreta: "Leitura que induz ao erro: achar que 'expiração e senha' são recursos de tier pago exclusivo e portanto inexistentes. O currículo não faz essa restrição — quem infere restrição não encontrada marca Errado indevidamente."
+      item: "Item FALSO. O enunciado transforma opções configuráveis em garantias universais e ignora diferenças entre contas e políticas.",
+      leituraIncorreta: "Leitura que induz ao erro: reconhecer que alguns links oferecem esses controles e generalizar que todos os links e contas sempre os oferecem."
     },
-    regra: "Princípio de compartilhamento mínimo: permissão necessária pelo menor tempo possível (expiração) + autenticação do link (senha) + controle de cópia (download).",
-    pegadinha: "Item composto: se apenas um dos três controles de link não existisse, o item seria falso. O examinando deve validar CADA elemento do trecho, não a ideia geral."
+    regra: "Verifique retenção e compartilhamento conforme o tipo de conta, o serviço e as políticas do locatário; não confunda lixeira com histórico de versões.",
+    pegadinha: "Palavras absolutas como 'qualquer', 'exatamente' e 'sempre' tornam falsa uma afirmação que ignora as configurações aplicáveis."
   },
   {
-    id: "q-m1-09",
+id: "q-m1-09",
     modulo: 1,
     formato: "mc",
     estilo: "fgv",
