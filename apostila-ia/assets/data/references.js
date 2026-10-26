@@ -857,6 +857,26 @@ const references = [
     dispositivos: ["art. 5º, I", "art. 5º, II", "art. 5º, III", "art. 5º, IV", "art. 5º, V", "art. 5º, VI", "art. 5º, VII", "art. 5º, VIII", "art. 5º, IX", "art. 5º, XI", "art. 5º, XIII", "art. 5º, XV", "art. 5º, XVI", "art. 5º, XVII", "art. 5º, XVIII", "art. 5º, XIX", "art. 5º, XX", "art. 5º, XXI", "art. 5º, XXII", "art. 5º, XXIII", "art. 5º, XXIV", "art. 5º, XXV", "art. 5º, XXVI", "art. 5º, XXVII", "art. 5º, XXVIII", "art. 5º, XXIX", "art. 5º, XXX", "art. 5º, XXXI", "art. 5º, XXXII", "art. 5º, XXXIV", "art. 5º, XXXV", "art. 5º, XXXVI", "art. 5º, XXXVII", "art. 5º, XXXVIII", "art. 5º, XXXIX", "art. 5º, XL", "art. 5º, LXXVIII", "art. 5º, § 1º", "art. 5º, § 2º", "art. 5º, § 3º", "art. 5º, § 4º"]
   },
   {
+    id: "ref-nist-genai-profile-2024",
+    titulo: "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://doi.org/10.6028/NIST.AI.600-1",
+    topico: "M5 — IA generativa (confabulação/alucinação e gestão de riscos)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-google-cloud-grounding",
+    titulo: "Design chat prompts — Grounding",
+    organizacao: "Google Cloud",
+    url: "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/chat/chat-prompts",
+    topico: "M5 — IA generativa (fundamentação por contexto recuperado)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
     id: "ref-secom-guia-redes-sociais-governo-federal",
     titulo: "Guia de Boas Práticas para atuação de redes sociais do Governo Federal",
     organizacao: "Secretaria de Comunicação Social da Presidência da República (Secom)",
