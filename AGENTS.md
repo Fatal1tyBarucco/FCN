@@ -1054,6 +1054,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo: `c130a700c5856f517e340c5a706301a558f09ebf` (q-m5-31..q-m5-35), `3ab2b227ca09c902d7ff4fd76f24155861cc2969` (q-m5-38..q-m5-40) e `be851d182d4c8ff8b8c7361601ddcba858c6e455` (contagem e níveis).
 - Revisão semântica focal do M5 concluída em lotes documentados; isso não equivale a validação integral de todas as fontes ou a aprovação dos workflows. Confirmar sintaxe, esquema, rastreabilidade curricular e CI no HEAD mais recente.
 
+## Correção de rastreabilidade curricular M5 — q-m5-03 e q-m5-08 (2026-10-26)
+
+- A conferência direta dos IDs de subtópicos encontrou duas referências inexistentes em `curriculum_m5.js`.
+- q-m5-03 foi remapeada de `m5-u1-t1-s3` (inexistente) para `m5-u1-t1-s1`, que cobre abordagens de IA, regras e aprendizado de máquina.
+- q-m5-08 foi remapeada de `m5-u1-t1-s3` (inexistente) para `m5-u1-t1-s2`, que cobre dados, parâmetros, treinamento e inferência.
+- Commit: `c90e76fb7663c905bb7281c69615ff7ab5236fa1`.
+- A checagem estrutural inicial encontrou exatamente essas duas referências inválidas; a rastreabilidade deve ser reconferida no relatório gerado pelo CI para o HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
