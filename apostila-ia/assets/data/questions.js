@@ -2807,18 +2807,18 @@ id: "q-m1-09",
     alternativas: [
       { letra: "A", texto: "POP3, porque sincroniza o estado das mensagens no servidor para todos os dispositivos." },
       { letra: "B", texto: "IMAP, porque mantém as mensagens sincronizadas no servidor e no cliente, permitindo acesso multi-dispositivo." },
-      { letra: "C", texto: "POP3, porque mantém cópia permanente no servidor e nunca apaga as mensagens baixadas." },
+      { letra: "C", texto: "POP3, porque sincroniza o estado das mensagens no servidor para todos os dispositivos." },
       { letra: "D", texto: "SMTP, porque é o protocolo de recebimento que sincroniza as caixas entre os dispositivos." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: 'IMAP: mantém e-mails sincronizados no servidor e no cliente. Ideal para multi-dispositivo (celular, tablet, computador)'. O exemplo de aplicação reforça: 'IMAP. Com POP3, os e-mails baixados para um dispositivo são apagados do servidor e não estarão disponíveis no outro dispositivo.' A alternativa B reproduz a definição de IMAP.",
+    justificativa: "O currículo define IMAP como apropriado à sincronização multi-dispositivo. POP3 permite baixar mensagens; a manutenção ou remoção da cópia no servidor depende da configuração do cliente. A alternativa B reproduz a definição de IMAP sem depender de uma regra universal de exclusão no POP3.",
     analise: {
-      A: "INCORRETA. Erro conceitual: POP3 não sincroniza o estado entre dispositivos — ele baixa e, por padrão, apaga do servidor; a sincronização é propriedade do IMAP.",
+      A: "INCORRETA. Erro conceitual: POP3 não sincroniza o estado entre dispositivos; a sincronização de pastas e marcações é característica do IMAP.",
       B: "CORRETA. Sincronização servidor-cliente e acesso multi-dispositivo são a definição de IMAP no currículo.",
-      C: "INCORRETA. Erro conceitual: inverte o comportamento do POP3 — por padrão ele APAGA do servidor após o download; 'cópia permanente' não é o padrão.",
+      C: "INCORRETA. Erro conceitual: a afirmação de que POP3 nunca apaga mensagens é absoluta e ignora as configurações de cada cliente; POP3 não oferece a sincronização de estado do IMAP.",
       D: "INCORRETA. Erro conceitual: SMTP é protocolo de ENVIO, não de recebimento/sincronização — confusão de função já corrigida no exemplo 'erro' do currículo."
     },
-    regra: "IMAP (143/993): estado no servidor, sincronização multi-dispositivo. POP3 (110/995): download local, apaga por padrão — 1 dispositivo/offline.",
+    regra: "IMAP (143/993): estado no servidor, sincronização multi-dispositivo. POP3 (110/995): recuperação/download; a cópia no servidor pode ser mantida ou removida conforme a configuração do cliente.",
     pegadinha: "A alternativa C veste o POP3 com um comportamento confortável ('cópia permanente') que não é o padrão; a A atribui a POP3 a sincronização que pertence ao IMAP."
   },
   {
@@ -2831,17 +2831,17 @@ id: "q-m1-09",
     topico: "m3-u1-t1-s2",
     assunto: "M3.1 E-mail — POP3 (apagamento por padrão) vs. IMAP",
     contexto: "Configuração padrão de um cliente de e-mail usando POP3 em um único computador da repartição.",
-    enunciado: "Por padrão, o POP3 baixa as mensagens do servidor para o dispositivo local e as apaga do servidor, tornando o conteúdo indisponível em outros dispositivos; o IMAP, ao contrário, mantém as mensagens no servidor.",
+    enunciado: "O POP3 permite baixar mensagens para um cliente; a manutenção ou remoção da cópia no servidor depende da configuração do cliente. O IMAP mantém o estado da caixa no servidor e permite sincronizar mensagens e pastas entre dispositivos.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'POP3 baixa ... e as apaga do servidor, tornando o conteúdo indisponível em outros dispositivos' e 'IMAP ... mantém as mensagens no servidor': coincidem com o conteúdo 'POP3: baixa e-mails ... e, por padrão, apaga do servidor' e 'IMAP: mantém e-mails sincronizados no servidor'.",
-    justificativa: "O currículo afirma: 'POP3 (Post Office Protocol versão 3): baixa e-mails do servidor para o dispositivo local e, por padrão, apaga do servidor' e 'IMAP ... mantém e-mails sincronizados no servidor e no cliente'. O item combina as duas definições corretamente.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a distinção entre download com POP3 e comportamento de cópia dependente da configuração do cliente, em contraste com a sincronização do estado da caixa pelo IMAP.",
+    justificativa: "POP3 permite recuperar mensagens para o cliente; a permanência da cópia no servidor depende da configuração do cliente de correio. IMAP mantém o estado da caixa e permite sincronização entre clientes. O item combina corretamente esses comportamentos sem transformar uma configuração específica em regra universal.",
     analise: {
-      item: "Item VERDADEIRO. O apagamento por padrão do POP3 e a manutenção no servidor pelo IMAP são as definições literais do currículo.",
-      leituraIncorreta: "Leitura que induz ao erro: supor que POP3 'deixa cópia no servidor por padrão' — o currículo marca isso como exceção (há opção de manter cópia), não como comportamento padrão."
+      item: "Item VERDADEIRO. POP3 permite download e a cópia no servidor depende da configuração; IMAP oferece sincronização do estado da caixa no servidor.",
+      leituraIncorreta: "Leitura que induz ao erro: confundir a capacidade de configurar o cliente para manter uma cópia com uma regra universal do protocolo. O comportamento efetivo deve ser conferido na configuração do cliente."
     },
-    regra: "POP3: download + apagamento por padrão (1 dispositivo). IMAP: cópia mantida no servidor (multi-dispositivo). A 'opção de manter cópia' do POP3 é exceção, não padrão.",
-    pegadinha: "A pegadinha é a memória de que 'dá para configurar o POP3 para manter cópia' e concluir que o padrão é manter — o padrão é apagar."
+    regra: "POP3: recuperação/download; manter ou remover a cópia no servidor depende do cliente. IMAP: estado da caixa e pastas sincronizados no servidor, adequado a vários dispositivos.",
+    pegadinha: "A pegadinha é transformar uma configuração comum em regra do protocolo: POP3 não oferece a mesma sincronização de estado do IMAP, mas não se deve afirmar que toda implementação apaga a cópia do servidor."
   },
   {
     id: "q-m3-29",
