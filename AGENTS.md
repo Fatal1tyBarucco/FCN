@@ -985,6 +985,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Não foram necessários ajustes de conteúdo nesta faixa. Revisão focal, não substitui avaliação empírica dos modelos ou validação de todas as referências.
 - CI no HEAD anterior `a3bbe39359de7987a6349effb17bbc24aa640717` passou nos três workflows; a atualização deste registro cria novo HEAD e requer reconfirmação dos workflows.
 
+## Auditoria semântica incremental — M5 q-m5-01 a q-m5-20 (2026-10-26)
+
+- q-m5-01..q-m5-10: revisados definição de IA, sistemas baseados em regras, aprendizado de máquina, separação treino/validação/teste, overfitting, viés/variância, XAI, inferência e avaliação responsável de sistemas.
+- q-m5-11..q-m5-15: revisados paradigmas de aprendizagem, classificação/regressão, agrupamento/redução de dimensionalidade, rotulagem/atributos/alvo e vazamento de dados.
+- q-m5-16..q-m5-20: revisados métricas de classificação, desbalanceamento, MAE/RMSE, engenharia de atributos e acurácia enganosa em classe minoritária.
+- As questões mantêm gabaritos e análises alinhados; foram conferidas as ressalvas sobre vazamento de dados, uso de teste, representatividade, métricas por classe e limitações de explicabilidade. Não foi necessário alterar o conteúdo dessa faixa.
+- Referências técnicas principais: OECD AI system definition; scikit-learn; imbalanced-learn; NIST AI RMF; artigos acadêmicos sobre XAI e precision-recall.
+- Revisão focal: não substitui experimentos reprodutíveis, validação estatística integral ou verificação de todas as referências bibliográficas.
+- CI de `a3bbe39359de7987a6349effb17bbc24aa640717` passou nos três workflows. O HEAD intermediário `4e62e8de200ce444bd19c799cc94afe21ad84592` também passou nos três. Este novo commit documental requer reconfirmação no HEAD atualizado.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
