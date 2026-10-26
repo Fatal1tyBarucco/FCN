@@ -568,7 +568,7 @@ const moduleQuestions6 = [
     fonte: "Lei nº 12.527/2011, art. 11, § 1º, III, e § 4º (verificado em 2026-10-21)."
   },
 
-  {   { id: "q-m6-24", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
+  { id: "q-m6-24", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m6-u2-t3-s1", assunto: "6.2 — Publicidade administrativa e dados pessoais",
     contexto: "Para dar transparência a um programa social, um órgão publica no portal e em rede social a relação nominal dos beneficiários de um bairro, com nome completo e valor recebido, invocando apenas o art. 8º da LAI, sem indicar norma específica que autorize a divulgação nominativa nem avaliar a necessidade dessa exposição.",
     enunciado: "A publicação é automaticamente legítima, pois o art. 8º da LAI impõe a divulgação de informações de interesse coletivo ou geral.",
