@@ -1,5 +1,11 @@
 # RELATÓRIO DE TESTES — Apostila Web Interativa FCN
 
+## Nota de atualização — 2026-10-26 04:08 UTC
+
+O relatório abaixo contém snapshots históricos e resultados de execuções anteriores. Após a inclusão das questões `q-m6-45` a `q-m6-47`, o banco esperado é de **399 questões**. O workflow do commit `9e79ea02d7c0695b8d0029e36bd7c76ecd2a72e8` está pendente; não atribuir os resultados antigos a esse commit até a conclusão dos checks.
+
+---
+
 Data: 2026-10-23
 Ambiente: Termux/Android, Chromium 155 headless + CDP, Node.js
 
