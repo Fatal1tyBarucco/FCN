@@ -17,7 +17,7 @@
 
 const moduleQuestions6 = [
 
-  /* ---- 6.1 Princípios constitucionais aplicados a sistemas digitais (9) ---- */
+  /* ---- 6.1 Princípios constitucionais aplicados a sistemas digitais (10) ---- */
 
   { id: "q-m6-01", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m6-u1-t1-s2", assunto: "6.1 — Legalidade administrativa",
