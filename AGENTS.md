@@ -995,6 +995,17 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Revisão focal: não substitui experimentos reprodutíveis, validação estatística integral ou verificação de todas as referências bibliográficas.
 - CI de `a3bbe39359de7987a6349effb17bbc24aa640717` passou nos três workflows. O HEAD intermediário `4e62e8de200ce444bd19c799cc94afe21ad84592` também passou nos três. Este novo commit documental requer reconfirmação no HEAD atualizado.
 
+## Correção de rastreabilidade curricular M6 (2026-10-26)
+
+- Auditoria do banco `questions_m6.js` encontrou 47 questões, enquanto o cabeçalho declarava 44. Foram recalculados os totais reais: 37 múltipla escolha + 10 certo/errado; 12 básicas, 21 intermediárias e 14 avançadas.
+- Distribuição por assunto, após correções: 6.1 = 9; 6.2 = 14; 6.3 = 9; 6.4 = 6; 6.5 = 4; 6.6 = 5 (total 47).
+- q-m6-03: conteúdo sobre finalidade/adequação da LGPD estava mapeado para tópico de princípios administrativos e rotulado como 6.1. Corrigido para unidade 6.3 e tópico real `m6-u3-t1-s2`.
+- q-m6-44: caso de acesso parcial sob LAI e proteção de dados estava classificado como 6.6/automação. Corrigido para 6.3 e tópico real `m6-u3-t2-s2`.
+- q-m6-45, q-m6-46 e q-m6-47: IDs de tópico estavam truncados (`m6-u1-t3`, `m6-u4-t3`, `m6-u5-t3`). Corrigidos para subtópicos reais `m6-u1-t3-s4`, `m6-u4-t3-s3` e `m6-u5-t3-s3`.
+- Verificação automatizada após a correção: 47 IDs únicos e contíguos; 37 MC + 10 CE; níveis e distribuição por assunto totalizam 47; todos os tópicos de questão têm formato `m6-uN-tN-sN` e correspondem a IDs existentes em `curriculum_m6.js`. Nenhuma referência curricular ausente ou ID duplicado.
+- Commit de conteúdo: `7df24e2db62e15b99cc6c46c9dab85be719cc0a7`.
+- O cabeçalho foi sincronizado com a contagem real; CI do novo HEAD deve ser reconfirmado após esta atualização documental.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
