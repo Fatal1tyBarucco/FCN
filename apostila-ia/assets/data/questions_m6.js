@@ -954,7 +954,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-41", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "modulo-6-unidade-1-topico-3", assunto: "Ética e governança em TI",
+    topico: "m6-u4-t2-s1", assunto: "6.4 — Conflito de interesses",
     contexto: "No âmbito do Poder Executivo federal, agente público abrangido pela Lei nº 12.813/2013 participa de decisão administrativa que pode favorecer empresa ligada a interesse privado seu. A apuração inicial ainda não identificou prejuízo ao erário nem vantagem efetivamente recebida.",
     enunciado: "Qual conclusão é juridicamente mais adequada sobre a ausência de prejuízo ou de vantagem comprovada?",
     alternativas: [
@@ -979,7 +979,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-42", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "modulo-6-unidade-4-topico-3", assunto: "Governança de redes sociais institucionais",
+    topico: "m6-u4-t1-s2", assunto: "6.4 — Governança de redes sociais institucionais",
     contexto: "Cinco servidores publicam e moderam o perfil oficial de um órgão usando a mesma senha. A instituição não consegue atribuir com confiança cada ação, não revisa periodicamente as permissões e não definiu fluxo de aprovação nem procedimento para retirar acessos quando alguém muda de função.",
     enunciado: "Qual conjunto de controles enfrenta melhor os riscos de acesso indevido, falta de rastreabilidade e publicação não autorizada?",
     alternativas: [
@@ -1004,7 +1004,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-43", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "modulo-6-unidade-5-topico-3", assunto: "Acessibilidade e inclusão digital",
+    topico: "m6-u5-t1-s2", assunto: "6.5 — Acessibilidade e inclusão digital",
     contexto: "Formulário de serviço público contém 27 campos, não permite salvar e retomar e, quando detecta erros, não identifica claramente o campo nem orienta a correção. A equipe ainda não verificou quais dados são indispensáveis nem testou o fluxo com tecnologias assistivas.",
     enunciado: "Qual resposta reduz barreiras e permite avaliar se o serviço digital se tornou mais acessível?",
     alternativas: [
@@ -1029,7 +1029,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-44", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "modulo-6-unidade-6-topico-3", assunto: "Método de resolução de questões — transparência e dados pessoais",
+    topico: "m6-u6-t3-s1", assunto: "6.6 — Método de resolução de questões — transparência e dados pessoais",
     contexto: "Um cidadão solicita cópia de processo de contratação pública. O documento contém objeto, valores e decisões administrativas, mas também CPF, endereço residencial e dados de contato pessoal de pessoas físicas. A equipe considera negar acesso ao processo inteiro por conter dados pessoais.",
     enunciado: "À luz da LAI e das orientações de transparência e proteção de dados, qual encaminhamento é mais adequado?",
     alternativas: [
