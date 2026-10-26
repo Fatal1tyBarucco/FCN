@@ -1084,56 +1084,56 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-44", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Comparação LGPD e Marco Civil",
-    contexto: "É possível observar diferenças conceituais entre LGPD e Marco Civil.",
-    enunciado: "A principal diferença conceitual entre LGPD e Marco Civil da Internet está em:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Comparação entre LGPD e Marco Civil",
+    contexto: "Uma equipe precisa identificar qual norma orienta o tratamento de dados pessoais e qual estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil.",
+    enunciado: "Qual alternativa compara corretamente a LGPD e o Marco Civil da Internet sem sugerir que uma lei substitui a outra?",
     alternativas: [
-      { letra: "A", texto: "Ambas tratam de dados pessoais." },
-      { letra: "B", texto: "A LGPD prioriza a proteção de dados pessoais; o Marco Civil prioriza a liberdade e a regulação da internet." },
-      { letra: "C", texto: "A LGPD não protege dados." },
-      { letra: "D", texto: "O Marco Civil é obsoleto." },
-      { letra: "E", texto: "A LGPD é irrelevante." }
-    ],
-    gabarito: "B",
-    justificativa: "A LGPD é a lei que protege dados pessoais com base nos direitos dos titulares; o Marco Civil (12.965/2014) regula a internet no Brasil, com princípios como a garantia da liberdade de expressão, a proteção da privacidade e a neutralidade de rede (art. 3º) e fundamentos como a pluralidade e a diversidade (art. 2º). Ambas tratam de dados (alternativa A incorreta); a LGPD é fundamentada nos direitos da pessoa, o Marco Civil na regulação da internet; a LGPD não é irrelevante (alternativa E incorreta); o Marco Civil não é obsoleto (alternativa D incorreta).",
-    analise: {
-      A: "INCORRETA. Ambas tratam de dados pessoais, mas com abrangências diferentes.",
-      B: "CORRETA. LGPD protege dados pessoais; Marco Civil regula a internet e seus princípios.",
-      C: "INCORRETA. A LGPD é a lei que protege dados pessoais.",
-      D: "INCORRETA. O Marco Civil não é obsoleto — é a lei da internet no Brasil.",
-      E: "INCORRETA. A LGPD é relevante para a proteção de dados no contexto de internet."
-    },
-    regra: "LGPD = 'dados protegidos'. Marco Civil = 'internet regulada'. Complementares.",
-    pegadinha: "LGPD não é 'direito de acesso' — é 'direito de controle'. Marco Civil não é 'obsoleto' — é a lei da internet.",
-    fonte: "Lei nº 13.709/2018; Lei nº 12.965/2014, arts. 2º e 3º — verificado em planalto.gov.br em 2026-10-22."
-  },
-
-  { id: "q-m4-45", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Confidencialidade",
-    contexto: "A confidencialidade é um princípio fundamental de segurança da informação.",
-    enunciado: "A confidencialidade estrita é:",
-    alternativas: [
-      { letra: "A", texto: "Um princípio que garante que a informação só pode ser acessada por usuários autorizados." },
-      { letra: "B", texto: "Um princípio que garante acesso a todos os sistemas." },
-      { letra: "C", texto: "Um princípio de liberdade de informação." },
-      { letra: "D", texto: "Um princípio de abertura de dados." },
-      { letra: "E", texto: "Um princípio de não criptografia." }
+      { letra: "A", texto: "A LGPD disciplina o tratamento de dados pessoais; o Marco Civil estabelece princípios, garantias, direitos e deveres para o uso da internet, incluindo regras relacionadas à privacidade e aos registros." },
+      { letra: "B", texto: "A LGPD só se aplica a provedores de conexão, enquanto o Marco Civil regula qualquer tratamento de dados pessoais em todos os setores." },
+      { letra: "C", texto: "O Marco Civil substituiu a LGPD por ser anterior e tratar de privacidade." },
+      { letra: "D", texto: "A LGPD proíbe qualquer tratamento de dados pessoais, enquanto o Marco Civil autoriza sua divulgação irrestrita." },
+      { letra: "E", texto: "As duas leis têm o mesmo objeto e os mesmos requisitos, portanto apenas uma delas precisa ser observada." }
     ],
     gabarito: "A",
-    justificativa: "Confidencialidade é o princípio que assegura que a informação só possa ser acessada por usuários ou sistemas autorizados. É a definição correta do princípio de confidencialidade (alternativa A correta). Garantir acesso a todos os sistemas (alternativa B incorreta); princípio de liberdade de informação (alternativa C incorreta); abertura de dados (alternativa D incorreta); não criptografia (alternativa E incorreta).",
+    justificativa: "A Lei nº 13.709/2018 (LGPD) disciplina o tratamento de dados pessoais, com bases legais, princípios, direitos dos titulares e deveres dos agentes de tratamento. A Lei nº 12.965/2014 (Marco Civil da Internet) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, incluindo proteção da privacidade e regras para registros. Os campos podem se relacionar e devem ser interpretados em conjunto quando aplicável; uma lei não substitui a outra.",
     analise: {
-      A: "CORRETA. Confidencialidade = acesso restrito a usuários autorizados.",
-      B: "INCORRETA. Acesso a todos os sistemas é o oposto do princípio de confidencialidade.",
-      C: "INCORRETA. Confidencialidade não é princípio de liberdade de informação.",
-      D: "INCORRETA. Abertura de dados é o oposto do princípio de confidencialidade.",
-      E: "INCORRETA. A confidencialidade pode ser garantida por criptografia."
+      A: "CORRETA. A alternativa descreve o foco normativo de cada lei e reconhece sua complementaridade.",
+      B: "INCORRETA. A LGPD não se limita a provedores de conexão e o Marco Civil não substitui o regime geral de tratamento de dados.",
+      C: "INCORRETA. A anterioridade do Marco Civil não revoga nem substitui a LGPD.",
+      D: "INCORRETA. A LGPD permite tratamentos amparados por base legal e o Marco Civil não autoriza divulgação irrestrita.",
+      E: "INCORRETA. As leis têm objetos e disposições distintos; a aplicabilidade deve ser avaliada conforme o caso."
     },
-    regra: "Confidencialidade = acesso à informação restrito a quem tem autorização.",
-    pegadinha: "Confidencialidade não é 'direito de acesso' — é 'exclusão de acesso' a quem não tem autorização.",
-    fonte: "NIST SP 800-53 (SC-5)."
+    regra: "LGPD: tratamento de dados pessoais. Marco Civil: uso da internet e respectivas garantias, direitos e deveres. Aplicação complementar quando pertinente.",
+    pegadinha: "Não resumir as leis a slogans nem presumir que a incidência de uma exclui a outra.",
+    fonte: "Lei nº 13.709/2018 (LGPD): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm; Lei nº 12.965/2014 (Marco Civil da Internet): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm."
   },
 
-  { id: "q-m4-46", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
+{ id: "q-m4-45", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
+    nivel: "basico", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Confidencialidade",
+    contexto: "Uma equipe precisa impedir que pessoas sem autorização consultem informações internas, sem impedir o acesso de quem precisa delas para executar suas funções.",
+    enunciado: "Qual alternativa define melhor a confidencialidade na segurança da informação?",
+    alternativas: [
+      { letra: "A", texto: "Preservar o acesso à informação para pessoas, processos ou sistemas autorizados, evitando divulgação ou consulta não autorizada." },
+      { letra: "B", texto: "Garantir que qualquer pessoa possa acessar todos os sistemas." },
+      { letra: "C", texto: "Garantir que os dados estejam sempre corretos e completos, mesmo após falhas." },
+      { letra: "D", texto: "Garantir que todos os serviços permaneçam disponíveis em qualquer circunstância." },
+      { letra: "E", texto: "Eliminar a necessidade de autenticação, autorização e controles de acesso." }
+    ],
+    gabarito: "A",
+    justificativa: "Confidencialidade busca impedir acesso ou divulgação não autorizados e permitir o acesso a entidades autorizadas. Integridade trata da proteção contra alteração ou destruição imprópria; disponibilidade trata do acesso e uso confiável quando necessário. Autenticação, autorização, criptografia e gestão de permissões podem contribuir para a confidencialidade, conforme o contexto.",
+    analise: {
+      A: "CORRETA. A definição centra-se no acesso autorizado e na prevenção de divulgação não autorizada.",
+      B: "INCORRETA. Acesso irrestrito contraria a confidencialidade.",
+      C: "INCORRETA. Correção e completude relacionam-se principalmente à integridade.",
+      D: "INCORRETA. Disponibilidade é um objetivo distinto da confidencialidade.",
+      E: "INCORRETA. Autenticação, autorização e controles de acesso são mecanismos importantes para aplicar a confidencialidade."
+    },
+    regra: "Confidencialidade = evitar acesso ou divulgação não autorizados; integridade = proteger correção e completude; disponibilidade = acesso quando necessário.",
+    pegadinha: "Não confundir os três componentes da tríade CIA: confidencialidade, integridade e disponibilidade.",
+    fonte: "NIST FIPS PUB 199 — Standards for Security Categorization of Federal Information and Information Systems: https://csrc.nist.gov/pubs/fips/199/final."
+  },
+
+{ id: "q-m4-46", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.1 — Integridade e verificação de alterações",
     contexto: "Um órgão precisa detectar se um arquivo de configuração foi modificado sem autorização entre duas implantações.",
     enunciado: "Qual medida fornece evidência técnica útil para verificar se o conteúdo do arquivo mudou?",
