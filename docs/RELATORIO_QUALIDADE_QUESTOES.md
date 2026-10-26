@@ -172,3 +172,13 @@ Lote revisado no texto versionado de `apostila-ia/assets/data/questions_m6.js`, 
 
 **Limites:** revisão semântica focal do enunciado, gabarito, justificativa, análise de alternativas e fonte declarada; não equivale a parecer jurídico, auditoria de acessibilidade completa ou revisão independente de todo o banco. O CI deve ser revalidado após os commits deste lote.
 
+## Revisão semântica dirigida — lote M5 q36–q40 — 2026-10-26
+
+- **`q-m5-36` (underfitting):** definição e gabarito coerentes; erro alto em treinamento e validação é um sinal típico de capacidade insuficiente, considerado junto ao contexto do modelo.
+- **`q-m5-37` (validação cruzada):** finalidade corretamente descrita como estimativa mais estável de desempenho em partições distintas; a validação cruzada não cria dados e não substitui automaticamente um conjunto de teste final.
+- **`q-m5-38` (curva de aprendizado):** corrigida a descrição anterior, que atribuía queda do erro de treino ao aumento da amostra como padrão geral. O novo cenário descreve erro de treino subindo levemente, erro de validação caindo e curvas se aproximando. A interpretação é apresentada como evidência compatível com melhor generalização, não como garantia.
+- **`q-m5-39` (precisão):** fórmula `VP / (VP + FP)` e distinção em relação a recall e acurácia coerentes.
+- **`q-m5-40` (RMSE e MAE):** refinada a conclusão para dizer que erros de maior magnitude pesam desproporcionalmente no RMSE. A diferença entre as métricas, isoladamente, não prova que o modelo seja bom em média nem identifica a causa dos erros.
+
+**Resultado do lote:** uma correção conceitual na questão 38 e uma precisão interpretativa na questão 40; os gabaritos foram mantidos porque as alternativas corretas continuam adequadas após a revisão. Revisão focal do conteúdo e das justificativas, não auditoria independente de todas as fontes acadêmicas.
+
