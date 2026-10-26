@@ -526,6 +526,22 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m4-62 a q-m4-65: EDR versus antimalware, segmentação, hardening e priorização de vulnerabilidades contextualizados, sem prometer prevenção absoluta.
 - Não foi necessário alterar os itens desse intervalo durante esta passada focal. Essa revisão semântica não substitui execução de validadores, testes funcionais ou conferência de todas as fontes.
 
+## Revisão focal adicional — q-m4-66 a q-m4-80 (2026-10-26)
+
+- q-m4-66: WAF delimitado como controle complementar para tráfego de aplicação web, sem substituir correção de código.
+- q-m4-67: IDS e IPS diferenciados pela função típica de detecção versus prevenção em linha, reconhecendo que produtos podem integrar ambas.
+- q-m4-68: VPN descrita como túnel entre pontos definidos; removida qualquer promessa de anonimato absoluto ou proteção integral do endpoint.
+- q-m4-69: sincronização temporal via fonte confiável separada da autenticidade e integridade dos logs.
+- q-m4-70: comunicação segura combinando validação de identidade, protocolo configurado corretamente e gestão de chaves.
+- q-m4-71: controle compensatório exige avaliação do risco residual, responsável, prazo e revisão; não presume eliminação do risco.
+- q-m4-72: distinção entre escalada vertical e horizontal, com autorização verificada após autenticação.
+- q-m4-73 a q-m4-75: força bruta, password spraying e credential stuffing diferenciados pelos padrões de tentativa e pela origem/reutilização das credenciais.
+- q-m4-76: SSRF mitigada por validação e restrição de destinos, atenção a DNS/redirecionamentos e controles de rede.
+- q-m4-77: gestão de risco com tratamento proporcional e acompanhamento do risco residual; transferência contratual não elimina automaticamente responsabilidades.
+- q-m4-78: resposta inicial equilibra contenção, preservação de evidências, escalonamento e documentação.
+- q-m4-79 e q-m4-80: BIA e exercícios de resposta ligados a prioridades, dependências, papéis, critérios de escalonamento e melhoria contínua.
+- Revisão focal concluída para q-m4-66..q-m4-80 sem alterações de conteúdo nesta passada. Verificar os testes automatizados no HEAD atualizado antes de considerar o lote validado.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
