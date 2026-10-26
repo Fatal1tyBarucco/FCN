@@ -102,4 +102,14 @@ A auditoria anterior detectou ausência do campo `fonte` em 40/40 questões M8. 
 
 Foram adicionadas sete questões autorais aos tópicos que a matriz de rastreabilidade identificava sem questão direta: uma em M1 (relatório técnico integrado), duas em M5 (IA generativa e engenharia de prompts) e quatro em M6 (ética/governança, redes sociais institucionais, acessibilidade e método de resolução). A contagem passa a 396 questões (321 MC e 75 itens certo/errado), distribuídas M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40 e M8=40.
 
-Distribuição MC após as sete inclusões: A=145, B=131, C=29, D=8, E=8. A/B representam 86,0% das 321 questões MC. A revisão editorial da distribuição permanece necessária. O CI da versão que contém estas questões identificou que o verificador estrutural ainda mantinha contagens antigas; os testes e o manifesto foram atualizados, e a execução final do novo HEAD ainda deve confirmar a aprovação.
+Distribuição MC após as sete inclusões: A=145, B=131, C=29, D=8, E=8. A/B representam 86,0% das 321 questões MC. A revisão editorial da distribuição permanece necessária. A primeira execução após a inclusão encontrou expectativas antigas no verificador e no smoke test; ambos foram atualizados. O CI do HEAD `09d657130a66ea2cfd7390909656ce5a7557e762` passou com 396 questões, 0 reprovadas no validador individual, 0 alertas heurísticos, smoke test em `file://` aprovado e `pageErrors: []`.
+
+
+## Revalidação da ampliação de cobertura — HEAD `09d657130a66ea2cfd7390909656ce5a7557e762`
+
+- [Validação curricular e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40255954463): **success**.
+- [Checks do PR](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40255953600) e [qualidade de código](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40255953485): **success**.
+- Sintaxe verificada em 39 arquivos JavaScript; total de 396 questões carregadas, distribuição por módulo conforme acima e zero questões reprovadas pelo validador individual.
+- Auditoria heurística: 0 IDs duplicados, 0 pares de contexto/enunciado idênticos e 0 alertas. Resultado estrutural, não prova de correção semântica.
+- Smoke test Playwright/Chromium usando `file://`: **PASS**, 396 questões conectadas ao quiz e `pageErrors: []`.
+- Revisão editorial adicional: as análises das quatro questões novas M6 foram individualizadas para explicar cada distrator. Ainda é necessária uma revisão semântica independente do conjunto completo de sete questões novas e das respectivas fontes.
