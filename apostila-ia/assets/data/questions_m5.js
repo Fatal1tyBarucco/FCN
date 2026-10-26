@@ -8,77 +8,77 @@ const moduleQuestions5 = [
   /* ===================== 5.1 Fundamentos de IA (10 questões) ===================== */
 
   { id: "q-m5-01", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u1-t1-s1", assunto: "5.1 — O que é IA?",
-    contexto: "Inteligência Artificial é um conceito central na tecnologia atual.",
-    enunciado: "Inteligência Artificial (IA) pode ser melhor definida como:",
+    nivel: "basico", topico: "m5-u1-t1-s1", assunto: "5.1 — O que é inteligência artificial?",
+    contexto: "Um órgão compara um sistema que aplica regras fixas para encaminhar processos e outro que reconhece padrões em documentos e sugere classificações.",
+    enunciado: "Qual definição de inteligência artificial é mais adequada para analisar esses sistemas?",
     alternativas: [
-      { letra: "A", texto: "Um computador que substitui completamente o ser humano em todas as tarefas." },
-      { letra: "B", texto: "Sistema capaz de realizar tarefas que normalmente requerem inteligência humana." },
-      { letra: "C", texto: "Um programa que apenas executa cálculos matemáticos." },
-      { letra: "D", texto: "Uma rede neural que funciona sem dados." },
-      { letra: "E", texto: "Um hardware específico para jogos." }
+      { letra: "A", texto: "Qualquer programa de computador, independentemente da tarefa ou do método utilizado." },
+      { letra: "B", texto: "Um campo que desenvolve sistemas capazes de executar tarefas associadas a capacidades como percepção, previsão, geração, raciocínio ou tomada de decisão, conforme o método e o contexto." },
+      { letra: "C", texto: "Somente robôs físicos que imitam movimentos humanos." },
+      { letra: "D", texto: "Um sistema que necessariamente possui consciência e emoções humanas." },
+      { letra: "E", texto: "Um programa que sempre aprende sozinho e nunca utiliza regras explícitas." }
     ],
     gabarito: "B",
-    justificativa: "IA é um sistema capaz de realizar tarefas que normalmente requerem inteligência humana, como aprendizado, raciocínio, reconhecimento de padrões e tomada de decisão. Substituir completamente humanos (alternativa A incorreta); apenas calcular (alternativa C incorreta); funcionar sem dados (alternativa D incorreta); ser hardware para jogos (alternativa E incorreta).",
+    justificativa: "IA é um campo amplo que abrange diferentes métodos para construir sistemas que realizam tarefas como percepção, previsão, geração de conteúdo, raciocínio ou apoio à decisão. Nem todo sistema de IA é um robô, tem consciência ou aprende autonomamente durante o uso. Sistemas baseados em regras e modelos treinados a partir de dados podem ambos integrar soluções de IA, dependendo de sua concepção e finalidade.",
     analise: {
-      A: "INCORRETA. IA não substitui humanos em todas as tarefas — tem limitações e escopo definido.",
-      B: "CORRETA. IA é um sistema que realiza tarefas que exigem inteligência humana.",
-      C: "INCORRETA. Cálculos são tarefas computacionais, não a definição de IA.",
-      D: "INCORRETA. Redes neurais precisam de dados para serem treinadas; isso não define toda a IA, nem torna válida a afirmação de que uma rede aprende sem dados.",
-      E: "INCORRETA. Hardware para jogos é uma aplicação de TI, não definição de IA."
+      A: "INCORRETA. Nem todo programa é classificado como IA; a classificação depende do problema, das capacidades e do método do sistema.",
+      B: "CORRETA. A definição cobre diferentes tarefas e abordagens sem atribuir capacidades humanas universais.",
+      C: "INCORRETA. IA também existe em software sem corpo físico.",
+      D: "INCORRETA. Sistemas de IA não precisam ter consciência ou emoções humanas.",
+      E: "INCORRETA. Há sistemas de IA baseados em regras explícitas e sistemas que aprendem com dados."
     },
-    regra: "IA = 'sistema que faz o que exige inteligência humana, com dados'.",
-    pegadinha: "IA não é 'robô que pensa' — é 'sistema que realiza tarefas que exigem inteligência'.",
-    fonte: "IEEE — Definition of Artificial Intelligence, 2021."
+    regra: "IA é um campo de métodos e sistemas para tarefas como percepção, previsão, geração e decisão; não implica robô, consciência ou aprendizado autônomo.",
+    pegadinha: "Não confunda IA com robótica, consciência ou aprendizado de máquina: são conceitos relacionados, mas não equivalentes.",
+    fonte: "OECD, Explanatory memorandum on the updated OECD definition of an AI system: https://oecd.ai/en/wonk/ai-system-definition-update."
   },
 
   { id: "q-m5-02", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u1-t1-s2", assunto: "5.1 — Sistemas baseados em regras",
-    contexto: "Sistemas baseados em regras usam conhecimento explícito estruturado.",
-    enunciado: "Sobre sistemas baseados em regras, é correto afirmar que:",
+    nivel: "intermediario", topico: "m5-u1-t1-s2", assunto: "5.1 — Sistemas baseados em regras",
+    contexto: "Um sistema de triagem usa regras explícitas, como encaminhar solicitações com determinado código para uma fila específica. A equipe avalia se esse desenho é apropriado para as regras institucionais conhecidas.",
+    enunciado: "Qual afirmação descreve melhor um sistema baseado em regras?",
     alternativas: [
-      { letra: "A", texto: "Aprendem com dados sem programação." },
-      { letra: "B", texto: "Utilizam conhecimento expresso em regras if-then do conhecimento humano." },
-      { letra: "C", texto: "Não exigem nenhum tipo de regra." },
-      { letra: "D", texto: "Funcionam apenas com aprendizado profundo." },
-      { letra: "E", texto: "São incapazes de tomar decisões." }
+      { letra: "A", texto: "Suas decisões decorrem de regras e condições explicitamente representadas; mudanças no domínio podem exigir revisão das regras, e a abordagem pode ser combinada com métodos de aprendizado." },
+      { letra: "B", texto: "Aprende necessariamente novas regras a partir de exemplos sem qualquer configuração ou intervenção." },
+      { letra: "C", texto: "É incapaz de executar decisões condicionais." },
+      { letra: "D", texto: "É sinônimo de rede neural treinada com milhões de parâmetros." },
+      { letra: "E", texto: "Dispensa testes, porque regras explícitas não podem conter conflitos ou lacunas." }
     ],
-    gabarito: "B",
-    justificativa: "Sistemas baseados em regras usam regras if-then para representar conhecimento e tomar decisões baseadas em lógica do domínio. Aprendem com dados (alternativa A incorreta); não têm regras (alternativa C incorreta); usam ML (alternativa D incorreta); afirmar que são incapazes de decidir (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Sistemas baseados em regras representam conhecimento por condições e ações explícitas, por exemplo regras SE–ENTÃO. Podem ser transparentes e adequados quando as regras são conhecidas, mas precisam de manutenção, testes de conflitos e tratamento de exceções. A existência de regras não impede que a solução seja combinada com modelos estatísticos ou aprendizado de máquina.",
     analise: {
-      A: "INCORRETA. Sistemas baseados em regras usam conhecimento humano codificado, não aprendizado de dados.",
-      B: "CORRETA. Sistemas baseados em regras usam regras if-then para tomar decisões.",
-      C: "INCORRETA. Sistemas baseados em regras dependem de regras estruturadas.",
-      D: "INCORRETA. Sistemas baseados em regras podem usar regras simbólicas, não apenas redes neurais.",
-      E: "INCORRETA. Sistemas baseados em regras são capazes de tomar decisões baseadas em regras."
+      A: "CORRETA. A alternativa descreve regras explícitas, manutenção e possibilidade de arquiteturas híbridas.",
+      B: "INCORRETA. Aprender regras automaticamente não é uma propriedade necessária de um sistema puramente baseado em regras.",
+      C: "INCORRETA. Condições e decisões são parte central desse tipo de sistema.",
+      D: "INCORRETA. Regras explícitas e redes neurais são abordagens diferentes, embora possam coexistir.",
+      E: "INCORRETA. Regras podem entrar em conflito, ficar desatualizadas ou não cobrir exceções; testes continuam necessários."
     },
-    regra: "Sistemas baseados em regras = regras if-then que explicitam conhecimento do domínio.",
-    pegadinha: "A armadilha é a alternativa A: sistemas baseados em regras decidem por lógica do domínio, com conhecimento humano já codificado em regras if-then — 'aprender com dados' sem programação é característica de aprendizado de máquina, não deles.",
-    fonte: "Russell, S. & Norvig, P. — Artificial Intelligence: A Modern Approach, 2020."
+    regra: "Sistema baseado em regras aplica condições e ações explicitamente definidas; mantenha, teste e documente as regras e suas exceções.",
+    pegadinha: "Transparência das regras não significa ausência de conflitos nem dispensa validação; também não significa que a solução nunca possa ser híbrida.",
+    fonte: "Russell, S. J. e Norvig, P. — Artificial Intelligence: A Modern Approach, 4th ed., 2020."
   },
 
   { id: "q-m5-03", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "modulo-5-unidade-1-topico-1", assunto: "5.1 — Aprendizado de Máquina",
-    contexto: "O aprendizado de máquina é uma subárea da IA.",
-    enunciado: "O aprendizado de máquina (Machine Learning) é:",
+    nivel: "basico", topico: "m5-u1-t1-s3", assunto: "5.1 — Aprendizado de máquina",
+    contexto: "Uma equipe fornece exemplos históricos a um algoritmo para ajustar um modelo que prevê a categoria de novas solicitações.",
+    enunciado: "Qual descrição de aprendizado de máquina é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Um modelo que só funciona com dados rotulados." },
-      { letra: "B", texto: "Um conjunto de técnicas que permitem que computadores aprendam padrões a partir de dados sem serem explicitamente programados." },
-      { letra: "C", texto: "Um algoritmo de classificação." },
-      { letra: "D", texto: "Um sistema de arquivos." },
-      { letra: "E", texto: "Um método de compressão de dados." }
+      { letra: "A", texto: "Uma técnica que exige que cada decisão futura seja programada manualmente como uma regra individual." },
+      { letra: "B", texto: "Um conjunto de métodos que ajustam modelos a partir de dados ou experiência para identificar padrões e produzir previsões ou decisões, conforme o objetivo e o paradigma." },
+      { letra: "C", texto: "Um sinônimo de armazenamento de arquivos em banco de dados." },
+      { letra: "D", texto: "Uma abordagem que utiliza exclusivamente dados rotulados e não pode aprender estrutura sem rótulos." },
+      { letra: "E", texto: "Uma garantia de que qualquer modelo melhora sempre que recebe mais dados, mesmo que sejam inadequados." }
     ],
     gabarito: "B",
-    justificativa: "Machine Learning é um conjunto de técnicas que permite que computadores aprendam padrões a partir de dados, melhorando a performance com base em experiência (dados), sem ser explicitamente programados para cada tarefa. Só com dados rotulados (alternativa A incorreta); apenas um algoritmo de classificação (alternativa C incorreta); é um sistema de arquivos (alternativa D incorreta); método de compressão (alternativa E incorreta).",
+    justificativa: "Aprendizado de máquina reúne métodos que ajustam modelos a partir de dados ou experiência para executar tarefas como previsão, classificação, agrupamento ou decisão. Existem paradigmas supervisionados, não supervisionados e por reforço, entre outros. A qualidade depende da adequação dos dados, da formulação, do procedimento de treinamento e da avaliação; mais dados não garantem melhoria se forem inadequados ou enviesados.",
     analise: {
-      A: "INCORRETA. ML pode usar dados rotulados, sem rotulados ou com reforço — não está limitado a um único tipo.",
-      B: "CORRETA. ML é um conjunto de técnicas que aprendem padrões a partir de dados sem programação explícita.",
-      C: "INCORRETA. Classificação é uma tarefa de ML, mas não define o aprendizado de máquina em si.",
-      D: "INCORRETA. Sistema de arquivos é armazenamento de dados, não aprendizado.",
-      E: "INCORRETA. Compressão é outra área da computação, não ML."
+      A: "INCORRETA. Aprender padrões a partir de dados pode reduzir a necessidade de programar cada regra individual, embora a lógica explícita também seja útil em outros sistemas.",
+      B: "CORRETA. A alternativa define o ajuste de modelos a partir de dados/experiência e admite diferentes tarefas e paradigmas.",
+      C: "INCORRETA. Armazenamento é distinto do treinamento de modelos.",
+      D: "INCORRETA. Aprendizado não supervisionado não exige rótulos fornecidos para cada exemplo.",
+      E: "INCORRETA. Dados irrelevantes, enviesados ou de baixa qualidade podem não melhorar e até prejudicar o modelo."
     },
-    regra: "Aprendizado de Máquina = 'aprender com dados'. Computador melhora com experiência (dados).",
-    pegadinha: "ML não é só 'classificar' — é 'aprender padrões a partir de dados, melhorando desempenho'.",
+    regra: "Aprendizado de máquina ajusta modelos a partir de dados ou experiência; desempenho depende de dados, método, objetivo e avaliação.",
+    pegadinha: "Mais dados não garantem automaticamente melhor desempenho, e aprendizado de máquina não se limita a exemplos rotulados.",
     fonte: "Mitchell, T. M. — Machine Learning, McGraw-Hill, 1997."
   },
 
@@ -133,28 +133,28 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-06", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Viés e variância",
-    contexto: "Viés e variância são propriedades fundamentais dos modelos de ML.",
-    enunciado: "Sobre viés (bias) e variância (variance) em modelos de aprendizado de máquina, é correto afirmar que:",
+    nivel: "intermediario", topico: "m5-u1-t2-s2", assunto: "5.1 — Viés, variância e generalização",
+    contexto: "Dois modelos são avaliados em diferentes amostras de treino. O modelo X apresenta erro alto tanto no treino quanto na validação; o modelo Y apresenta erro muito baixo no treino, mas varia bastante entre amostras e tem erro alto na validação.",
+    enunciado: "Qual interpretação é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Viés alto e variância baixa indicam bom equilíbrio no modelo." },
-      { letra: "B", texto: "Viés baixo e variância alta tendem a indicar overfitting." },
-      { letra: "C", texto: "Viés e variância são conceitos irrelevantes para a generalização." },
-      { letra: "D", texto: "Viés baixo e variância baixa referem-se ao mesmo modelo." },
-      { letra: "E", texto: "Viés alto é consequência exclusiva de overfitting." }
+      { letra: "A", texto: "X sugere subajuste (underfitting); Y sugere sobreajuste (overfitting), frequentemente associado a alta variância." },
+      { letra: "B", texto: "X necessariamente sofre overfitting; Y necessariamente sofre underfitting." },
+      { letra: "C", texto: "Viés e variância são sinônimos e não afetam a generalização." },
+      { letra: "D", texto: "Erro de treino baixo garante erro baixo em dados novos." },
+      { letra: "E", texto: "A variância mede exclusivamente o número de atributos do conjunto de dados." }
     ],
-    gabarito: "B",
-    justificativa: "Viés baixo (modelo complexo, se ajusta aos dados) e variância alta (sensível a pequenas variações nos dados) indicam overfitting. Viés alto e variância baixa indicam underfitting (alternativa A incorreta); viés e variância são relevantes para generalização (alternativa C incorreta); baixo viés e baixa variância não são o mesmo modelo (alternativa D incorreta); viés alto não é conseqüência de overfitting — overfitting é alta variância (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Erro elevado no treino e na validação sugere que o modelo não capturou adequadamente os padrões, situação compatível com subajuste e viés elevado. Desempenho muito bom no treino, mas fraco ou instável em dados não vistos, sugere sobreajuste e maior variância. Essa interpretação é diagnóstica, não uma identidade absoluta: os resultados também dependem da qualidade dos dados, da distribuição, da regularização e do procedimento de avaliação.",
     analise: {
-      A: "INCORRETA. Viés alto + variância baixa indica underfitting, não equilíbrio.",
-      B: "CORRETA. Baixo viés + alta variância tende a indicar overfitting, embora o diagnóstico dependa do comportamento do modelo e dos dados.",
-      C: "INCORRETA. Viés e variância são fundamentais para a análise de generalização.",
-      D: "INCORRETA. Modelos diferentes têm combinações distintas de viés e variância.",
-      E: "INCORRETA. Viés alto não é conseqüência exclusiva de overfitting — overfitting é alta variância."
+      A: "CORRETA. Os padrões de erro descritos são compatíveis, respectivamente, com subajuste e sobreajuste.",
+      B: "INCORRETA. Inverte as interpretações típicas dos padrões de treino e validação.",
+      C: "INCORRETA. Viés e variância são conceitos distintos que ajudam a compreender fontes de erro e generalização.",
+      D: "INCORRETA. Ajuste excelente no treino pode coexistir com desempenho ruim em dados novos.",
+      E: "INCORRETA. Variância não é o número de atributos; refere-se, nesse contexto, à sensibilidade do modelo aos dados de treinamento."
     },
-    regra: "Viés = erro sistemático. Variância = sensibilidade a ruído. Trade-off fundamental.",
-    pegadinha: "Viés alto não é overfitting — é underfitting. Overfitting é variância alta.",
-    fonte: "Geman, S. et al. — Neural Networks and the Bias/Variance Dilemma, 1992."
+    regra: "Erro alto no treino e validação sugere subajuste; treino muito bom e validação ruim ou instável sugere sobreajuste/alta variância.",
+    pegadinha: "Use viés e variância como diagnóstico no contexto; não trate a associação como regra absoluta independente dos dados e do método.",
+    fonte: "Geman, S., Bienenstock, E. e Doursat, R. — Neural Networks and the Bias/Variance Dilemma, Neural Computation, 1992: https://doi.org/10.1162/neco.1992.4.1.1."
   },
 
   { id: "q-m5-07", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -208,28 +208,28 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-09", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-3-topico-3", assunto: "5.1 — Avaliação de Performance e Qualidade",
-    contexto: "A avaliação permite estimar se um modelo atende aos objetivos definidos e generaliza para dados não vistos.",
-    enunciado: "A avaliação de desempenho e qualidade em aprendizado de máquina é importante porque:",
+    nivel: "intermediario", topico: "m5-u1-t3-s1", assunto: "5.1 — Avaliação de desempenho e qualidade",
+    contexto: "Um modelo apresenta boa métrica média em um conjunto de teste, mas a equipe ainda precisa decidir se ele está pronto para apoiar um serviço público.",
+    enunciado: "Qual procedimento oferece a avaliação mais responsável?",
     alternativas: [
-      { letra: "A", texto: "É um processo redundante." },
-      { letra: "B", texto: "Substitui a necessidade de validação." },
-      { letra: "C", texto: "Permite verificar se o modelo atende aos objetivos e se generaliza bem." },
-      { letra: "D", texto: "Elimina a necessidade de teste." },
-      { letra: "E", texto: "Garante que o modelo nunca falhe." }
+      { letra: "A", texto: "Considerar a métrica média suficiente, sem verificar erros por classe, subgrupo ou cenário de uso." },
+      { letra: "B", texto: "Escolher o modelo com maior número de parâmetros, pois complexidade comprova qualidade." },
+      { letra: "C", texto: "Definir critérios alinhados ao uso, avaliar em dados adequados e não usados no ajuste, examinar tipos de erro e subgrupos relevantes e documentar limitações e monitoramento." },
+      { letra: "D", texto: "Usar apenas os resultados do treino para evitar variações no conjunto de teste." },
+      { letra: "E", texto: "Interpretar qualquer métrica alta como garantia de justiça, segurança e desempenho futuro." }
     ],
     gabarito: "C",
-    justificativa: "A avaliação de desempenho e qualidade é essencial para verificar se o modelo atende aos objetivos, se generaliza bem para dados novos e se é adequado para o contexto. Processo redundante (alternativa A incorreta); substitui validação (alternativa B incorreta); elimina teste (alternativa D incorreta); garante falha (alternativa E incorreta).",
+    justificativa: "A avaliação deve corresponder ao uso pretendido e considerar dados representativos, métricas adequadas, erros relevantes, possíveis diferenças entre subgrupos e limitações. O conjunto de teste deve permanecer separado do processo de ajuste e seleção, e o desempenho precisa ser acompanhado quando o sistema entra em operação, pois dados e condições podem mudar. Uma métrica isolada não prova justiça, segurança ou sucesso futuro.",
     analise: {
-      A: "INCORRETA. Avaliação não é redundante — é fundamental para a qualidade.",
-      B: "INCORRETA. Avaliação não substitui validação — complementa.",
-      C: "CORRETA. Avaliação verifica se o modelo atende aos objetivos e generaliza.",
-      D: "INCORRETA. Avaliação não elimina a necessidade de teste.",
-      E: "INCORRETA. Avaliação não garante ausência de falhas; fornece evidências sobre o desempenho nas condições avaliadas."
+      A: "INCORRETA. Uma média pode ocultar erros graves em classes, subgrupos ou cenários específicos.",
+      B: "INCORRETA. Maior complexidade não comprova melhor generalização nem adequação ao problema.",
+      C: "CORRETA. A alternativa reúne critérios ligados ao uso, avaliação isolada, análise de erros e acompanhamento.",
+      D: "INCORRETA. O desempenho de treino tende a ser otimista e não substitui avaliação em dados não usados no ajuste.",
+      E: "INCORRETA. Métricas são evidências limitadas, não garantias de justiça, segurança ou estabilidade futura."
     },
-    regra: "Avaliação = 'qualidade do modelo'. Verificar atendimento aos objetivos.",
-    pegadinha: "Avaliação não é 'garantir sucesso' — é 'medir o quão bom o modelo é'.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
+    regra: "Avalie modelos contra critérios do uso real, com dados isolados e métricas adequadas; analise erros e acompanhe o desempenho em produção.",
+    pegadinha: "Uma métrica alta não garante ausência de viés, segurança ou estabilidade após mudanças nos dados e no contexto.",
+    fonte: "NIST, AI Risk Management Framework 1.0: https://www.nist.gov/itl/ai-risk-management-framework."
   },
 
   { id: "q-m5-10", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
