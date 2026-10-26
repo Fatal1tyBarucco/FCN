@@ -607,7 +607,7 @@ const moduleQuestions5 = [
       E: "INCORRETA. Encerrar não resolve o problema de alucinação."
     },
     regra: "Recuperação + fontes ancora a geração.",
-    pegadinha: "RAG reduz certos riscos, mas não garante resposta correta: verifique a fonte, a vigência e a sustentação de cada afirmação."
+    pegadinha: "RAG reduz certos riscos, mas não garante resposta correta: verifique a fonte, a vigência e a sustentação de cada afirmação.",
     fonte: "Google Cloud — Grounding in Gemini and grounding overview. https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/chat/chat-prompts."
   },
 
