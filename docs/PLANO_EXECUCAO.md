@@ -236,3 +236,12 @@ Não alterar simultaneamente os seis simuladores nem reescrever a persistência 
 2. Registrar resultado real e links de execução.
 3. Corrigir somente defeitos comprovados em lotes pequenos e executar regressões afetadas.
 4. Manter PR #17 aberto e draft até resolver os critérios obrigatórios pendentes; não fazer merge nesta etapa.
+
+
+### Registro incremental — 2026-10-26
+
+A correção pontual q-m6-41–q-m6-44 foi commitada no branch do PR #17 (`7c9b0dd7871048d94294b5c7530f90e52de97f4d`). Próxima sequência, sem repetir a edição já concluída:
+1. Consultar checks/workflows associados ao novo HEAD e registrar os resultados reais.
+2. Reexecutar a auditoria de referências e verificar IDs únicos no conjunto de questões.
+3. Revisar qualidade semântica e distribuição de gabaritos em lote, sem alterar respostas corretas para balanceamento artificial.
+4. Prosseguir com as pendências de revisão independente e acessibilidade; manter o PR aberto em draft enquanto houver critérios obrigatórios pendentes.
