@@ -774,6 +774,13 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit da correção q-m4-32: `403bcc0c62247d9d6548551beca6c29457e0921c`.
 - A revisão é focal, não substitui revisão jurídica integral nem validação automática do HEAD mais recente.
 
+## Revisão focal de q-m4-41 (LAI) — 2026-10-26
+
+- q-m4-41 foi reescrita: as alternativas anteriores eram triviais e não avaliavam a aplicação da LAI. A nova questão apresenta relatório administrativo com dados pessoais e testa publicidade como regra, restrições legais e possibilidade de acesso parcial mediante ocultação da parte protegida, quando cabível.
+- Fonte: Lei nº 12.527/2011, especialmente art. 7º, § 2º, além das regras aplicáveis a acesso e informações pessoais.
+- Commit de conteúdo: `52463d300c299fa4dab0d577b3a134215879e5f4`.
+- A nova questão evita tanto a divulgação irrestrita quanto a negativa automática do documento inteiro; a decisão concreta continua dependente da natureza da informação e da lei aplicável.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
