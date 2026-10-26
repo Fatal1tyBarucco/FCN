@@ -25,7 +25,7 @@ Distribuição do gabarito nas 321 questões de múltipla escolha:
 | D | 8 |
 | E | 8 |
 
-As 24 questões novas do lote anterior foram balanceadas em suas posições corretas (A=4, B=5, C=5, D=5, E=5), sem alterar o texto das respostas ou as análises. O banco completo ainda apresenta concentração em A/B: essas letras representam 87,3% das 314 questões de múltipla escolha. Isso pode tornar o padrão previsível e exige revisão editorial do banco legado. A distribuição não prova que as respostas individuais estejam incorretas, mas é uma fragilidade de desenho de avaliação.
+As 24 questões novas do lote anterior foram balanceadas em suas posições corretas (A=4, B=5, C=5, D=5, E=5), sem alterar o texto das respostas ou as análises. O banco completo ainda apresenta concentração em A/B: essas letras representam 86,0% das 321 questões de múltipla escolha. Isso pode tornar o padrão previsível e exige revisão editorial do banco legado. A distribuição não prova que as respostas individuais estejam incorretas, mas é uma fragilidade de desenho de avaliação.
 
 **Ação recomendada:** revisar manualmente cada questão e, quando necessário, reorganizar as alternativas sem alterar a resposta correta, a análise individual nem as justificativas que mencionam letras. Não reequilibrar o gabarito automaticamente sem preservar essas relações.
 
@@ -49,7 +49,7 @@ A matriz completa por questão está disponível no artefato `curriculum-audit-r
 | M7 | 29 | 0 | 1 | 1 | 2 | 33 |
 | M8 | 10 | 25 | 1 | 0 | 0 | 36 |
 
-A auditoria recomenda revisão manual de posições em M1, M4, M5, M6, M7 e M8. Em M6, 30/34 questões MC ainda têm gabarito A; em M7, o lote controlado reduziu a concentração para A=29/33; em M4, M5 e M8, a concentração em A/B também é extrema. O lote de 24 questões novas foi balanceado, mas isso não corrige automaticamente o banco legado.
+A auditoria recomenda revisão manual de posições em M1, M4, M5, M6, M7 e M8. Em M6, 30/34 questões MC ainda têm gabarito A; em M7, o lote controlado reduziu a concentração para A=29/33; em M4, M5 e M8, a concentração em A/B também é extrema. O lote de 24 questões novas do ciclo anterior foi balanceado, mas isso não corrige automaticamente o banco legado.
 
 Evidência e matriz heurística gerada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
 
