@@ -492,6 +492,20 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo deste lote: `28a3781aaf57f0486701ae183cf686a549149208`.
 - Fontes legais citadas no lote incluem textos oficiais do Planalto para LGPD, Marco Civil, Constituição Federal, EC nº 115/2022 e Lei nº 15.352/2026; fontes técnicas incluem CISA, NIST, OWASP, RFC 8446 e ICANN. Revisão semântica focal; validar automatizadamente no HEAD atual antes de considerar o lote concluído.
 
+## Auditoria semântica incremental — q-m4-31 a q-m4-45 (2026-10-26)
+
+- q-m4-31: conferidos os princípios de finalidade, necessidade e transparência (LGPD, art. 6º); a questão distingue consentimento de outras bases legais.
+- q-m4-32: conferida a distinção entre fundamentos do art. 2º e princípios do art. 3º do Marco Civil; a redação separa a regra geral de neutralidade e as hipóteses legais.
+- q-m4-33: marketing não tratado como autorização automática; legítimo interesse condicionado a análise de finalidade, necessidade, expectativas e direitos, sem aplicá-lo como base para dados pessoais sensíveis.
+- q-m4-34: revisada a descrição da ANPD conforme o enquadramento legal registrado no material; manter validação da referência à Lei nº 15.352/2026 no verificador de fontes jurídicas.
+- q-m4-35 e q-m4-36: direitos dos titulares e competências fiscalizatórias/sancionatórias descritos sem criar direitos absolutos ou poderes fora da lei.
+- q-m4-37: relação entre CF/88, art. 5º, X e LXXIX, e EC nº 115/2022 descrita corretamente.
+- q-m4-38 e q-m4-39: conferidas as definições de controlador, operador e dado pessoal da LGPD.
+- q-m4-40 a q-m4-43: mantida a distinção entre LGPD, Marco Civil e LAI; acesso a registros foi diferenciado de acesso a dados cadastrais e a responsabilidade foi descrita conforme o papel legal.
+- q-m4-44: reescrita para substituir slogans imprecisos por comparação objetiva entre os escopos complementares da LGPD e do Marco Civil.
+- q-m4-45: removida referência inadequada a NIST SP 800-53 SC-5 (proteção contra negação de serviço); nova fonte NIST FIPS 199 e distinção entre confidencialidade, integridade e disponibilidade.
+- Commit de conteúdo: `2be07e067fbe5da09a961e07856c86f351eabefe`. Revisão focal, não equivale a parecer jurídico nem à validação integral de todas as referências legais.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
