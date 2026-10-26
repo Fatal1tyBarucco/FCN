@@ -750,6 +750,26 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m7-40: revisão de acesso temporário e minimização de dados ligada à finalidade e à revisão/expiração de permissões.
 - Revisão focal sem patches de conteúdo nesta passada. Validar fontes, matriz e CI no HEAD atual.
 
+## Revisão focal do M8 — questões 1 a 40 (2026-10-26)
+
+- q-m8-01 a q-m8-05: pergunta de negócio e escolha de gráfico, linha de base zero em barras e histograma de classes contíguas revisados.
+- q-m8-06: média 5,0, mediana 4,5 e moda 4 conferidas para o conjunto apresentado.
+- q-m8-07 a q-m8-11: Power Query, granularidade de fatos e escolha de ferramenta de painel revisados; disponibilidade/custo de ferramentas devem ser revalidados se usados como informação de produto atual.
+- q-m8-12: corrigido o erro de digitação “osquartis”; regra de Tukey distingue limites de outlier da extremidade observada dos bigodes.
+- q-m8-13 a q-m8-16: paletas sequenciais, redundância de codificação para acessibilidade, escala logarítmica e escolha de gráficos por tarefa conferidas.
+- q-m8-17: densidade de histograma tratada como altura (frequência ÷ largura) e área como frequência; corrigida explicação sobre comparação com diferentes larguras de classe.
+- q-m8-18: corrigidas análises das alternativas A e B para refletir corretamente o denominador anterior e o sinal da variação percentual.
+- q-m8-19 e q-m8-20: correlação não tratada como causalidade; variância e desvio-padrão amostrais calculados com divisor n−1.
+- q-m8-21 a q-m8-25: quartil tipo 7 calculado em Q1=22; assimetria, viés de amostragem, escolha de ferramenta e comunicação de incerteza revisados.
+- q-m8-26 a q-m8-30: foco de painel, ordenação de barras, hierarquia visual, correlação/causalidade e contexto de filtro DAX revisados.
+- q-m8-31: paleta divergente com neutro na referência central.
+- q-m8-32: histograma de densidade com classes de larguras diferentes.
+- q-m8-33: lacunas temporais representadas sem fabricar continuidade.
+- q-m8-34: corrigido o contexto contraditório sobre convenção de Tukey; diferença de bigodes agora decorre de configurações padrão não harmonizadas. Corrigido também “interpolacão”.
+- q-m8-35: média ponderada calculada em 38/6 ≈ 6,33.
+- q-m8-36 a q-m8-40: outliers não removidos sem investigação, critérios de causalidade, granularidade/contagem distinta, agregação DAX e estudo de caso integrador revisados.
+- Commits de conteúdo M8: `a4653cafda5ed1b70537f9511fbabafcdcd8c0c5` e `a4451aea28dca2e0dbedb26a7a548fac3c44df65`. Revisão focal concluída; aguardar validadores no HEAD atual.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
