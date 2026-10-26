@@ -52,7 +52,8 @@ const axeCore = require("axe-core");
           id: result.id,
           impact: result.impact,
           description: result.description,
-          nodeCount: result.nodes.length
+          nodeCount: result.nodes.length,
+          sampleTargets: result.nodes.slice(0, 20).map(node => node.target)
         })),
         violations: results.violations.map(violation => ({
           id: violation.id,
