@@ -1,11 +1,11 @@
 /* questions_m6.js — MÓDULO 6: ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO
- * 44 questões autorais (origem: 'autoral' sempre — o campo 'estilo' registra apenas
+ * 47 questões autorais (origem: 'autoral' sempre — o campo 'estilo' registra apenas
  * o FORMATO DE COBRANÇA inspirado em banca, nunca atribuição a banca real).
- * Distribuição atual: 6.1 Princípios (10), 6.2 Transparência/LAI/Governo Digital (14),
- * 6.3 Proteção de dados e sigilo (7), 6.4 Redes sociais e conduta (4),
- * 6.5 Acessibilidade e inclusão (3), 6.6 Automação e supervisão (6).
- * Níveis medidos no banco atual: 12 básicos, 18 intermediários e 14 avançados.
- * Formatos: 34 múltipla escolha + 10 certo/errado. Estilo indica apenas formato de cobrança,
+ * Distribuição atual: 6.1 Princípios (9), 6.2 Transparência/LAI/Governo Digital (14),
+ * 6.3 Proteção de dados e sigilo (9), 6.4 Redes sociais e conduta (6),
+ * 6.5 Acessibilidade e inclusão (4), 6.6 Automação e supervisão (5).
+ * Níveis medidos no banco atual: 12 básicos, 21 intermediários e 14 avançados.
+ * Formatos: 37 múltipla escolha + 10 certo/errado. Estilo indica apenas formato de cobrança,
  * não atribuição a banca real; todas as questões são autorais.
  * Tópicos: cada 'topico' é um id REAL de subtópico de curriculum_m6.js
  * (esquema m6-u{unidade}-t{topico}-s{subtopico}), conferido por script em 2026-10-22.
@@ -70,7 +70,7 @@ const moduleQuestions6 = [
   },
 
   { id: "q-m6-03", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m6-u1-t1-s2", assunto: "6.1 — Finalidade e adequação no tratamento de dados",
+    nivel: "basico", topico: "m6-u3-t1-s2", assunto: "6.3 — Finalidade e adequação no tratamento de dados",
     contexto: "Um órgão coleta dados pessoais para prestar atendimento a cidadãos. Sem informar essa finalidade adicional, sem demonstrar compatibilidade com a finalidade pública do serviço e sem identificar fundamento jurídico aplicável, uma equipe decide reutilizar os registros para classificar individualmente o desempenho dos usuários do serviço.",
     enunciado: "Considerando os princípios da finalidade e da adequação da LGPD e as regras aplicáveis ao tratamento de dados pelo poder público, qual avaliação é correta?",
     alternativas: [
@@ -1029,7 +1029,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-44", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "m6-u6-t3-s1", assunto: "6.6 — Método de resolução de questões — transparência e dados pessoais",
+    topico: "m6-u3-t2-s2", assunto: "6.3 — Método de resolução de questões — transparência e dados pessoais",
     contexto: "Um cidadão solicita cópia de processo de contratação pública. O documento contém objeto, valores e decisões administrativas, mas também CPF, endereço residencial e dados de contato pessoal de pessoas físicas. A equipe considera negar acesso ao processo inteiro por conter dados pessoais.",
     enunciado: "À luz da LAI e das orientações de transparência e proteção de dados, qual encaminhamento é mais adequado?",
     alternativas: [
@@ -1054,7 +1054,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-45", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "intermediario",
-    topico: "m6-u1-t3", assunto: "6.1 — Síntese aplicada dos princípios administrativos",
+    topico: "m6-u1-t3-s4", assunto: "6.1 — Síntese aplicada dos princípios administrativos",
     contexto: "Uma equipe de governo digital propõe automatizar a concessão de um benefício. O sistema reduz o tempo médio de resposta, mas não documenta critérios, não permite contestação e não prevê revisão de decisões potencialmente equivocadas.",
     enunciado: "Qual encaminhamento melhor concilia eficiência administrativa com os demais princípios aplicáveis ao serviço público?",
     alternativas: [
@@ -1079,7 +1079,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-46", modulo: 6, formato: "mc", estilo: "vunesp", origem: "autoral", nivel: "intermediario",
-    topico: "m6-u4-t3", assunto: "6.4 — Síntese aplicada de comunicação e conduta digital",
+    topico: "m6-u4-t3-s3", assunto: "6.4 — Síntese aplicada de comunicação e conduta digital",
     contexto: "Um perfil institucional publica informação incorreta sobre um serviço. A equipe identifica o erro, mas alguns responsáveis defendem apagar silenciosamente a publicação e não registrar a correção para evitar críticas.",
     enunciado: "Qual procedimento é mais adequado para uma comunicação pública responsável?",
     alternativas: [
@@ -1104,7 +1104,7 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-47", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "intermediario",
-    topico: "m6-u5-t3", assunto: "6.5 — Síntese aplicada de acessibilidade e inclusão",
+    topico: "m6-u5-t3-s3", assunto: "6.5 — Síntese aplicada de acessibilidade e inclusão",
     contexto: "Após reformular um serviço digital, a equipe observa que mais usuários concluem o formulário. Ainda não testou navegação por teclado, leitor de tela nem a compreensão das mensagens de erro por pessoas com diferentes necessidades.",
     enunciado: "Qual conclusão e próxima ação são tecnicamente mais adequadas?",
     alternativas: [
