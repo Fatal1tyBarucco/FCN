@@ -512,6 +512,8 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 
 - Adicionadas fontes oficiais às questões `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36`, antes identificadas como as quatro lacunas no campo fonte.
 - Atualizados `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md` com Cisco, Zoom Support e Google Meet Help.
-- Contagem anterior: 395/399 com fonte detectada. A expectativa após esta mudança é 399/399, pendente de reexecução da auditoria automatizada.
-- A consulta às páginas oficiais sustenta os pontos técnicos referenciados; não houve validação HTTP automatizada individual de todas as URLs. Revisão semântica completa e manual segue pendente.
-- Novo CI ainda precisa validar sintaxe, auditorias, smoke test `file://` e testes interativos no HEAD atualizado.
+- Run [40416873641](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40416873641), SHA `e35d9f75849a33767f205339edfaf21ef8d01952`: **success**. Sintaxe JavaScript, matriz curricular, rastreabilidade, estrutura, auditoria heurística, smoke test Chromium em `file://` e testes interativos passaram.
+- Auditoria de questões: 399 itens; 0 IDs duplicados, 0 alertas heurísticos e 0 pares com contexto/enunciado duplicados. A conferência por segmento confirmou campo `fonte` não vazio em 399/399 itens.
+- axe-core: 58 passes, 3 incomplete, 0 violações confirmadas. Permanecem incompletas as avaliações de contraste, frames e correspondência entre rótulo e nome acessível; não equivalem a violações confirmadas.
+- As páginas oficiais foram consultadas para fundamentar as quatro fontes novas; não houve validação HTTP automatizada individual de todas as URLs. Revisão semântica completa, verificação de todas as afirmações, leitor de tela, WCAG manual e testes físicos continuam pendentes.
+- A execução de validação disparada pelo evento `pull_request` no mesmo HEAD deve ser acompanhada separadamente; não confundir com o run `push` já concluído.

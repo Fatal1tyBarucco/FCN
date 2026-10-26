@@ -1,4 +1,4 @@
-## Estado CI mais recente — 2026-10-26 04:12 UTC
+## Estado CI mais recente — 2026 10 26 04:12 UTC
 
 - HEAD: `7a6ac2425f00ccdbebc8be2d206796037358e75d`.
 - [Validação curricular, ativos e testes de navegador](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40267735657): **success** — sintaxe, matriz, rastreabilidade, verificador estrutural, heurísticas, smoke test Chromium/Playwright `file://`, regressões interativas e upload dos relatórios.
