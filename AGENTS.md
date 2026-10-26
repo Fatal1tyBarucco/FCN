@@ -660,6 +660,12 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `b3af43a3bc391abfa0c6281acc95439083be8265`.
 - Revisão focal; validar o HEAD atual por CI antes de considerar o lote encerrado.
 
+## Correção de sintaxe M8 — q-m8 (2026-10-26)
+
+- O workflow `Validate curriculum and learning assets` no HEAD `b3af43a3bc391abfa0c6281acc95439083be8265` falhou em `node --check apostila-ia/assets/data/questions_m8.js`, linha 482: faltava uma vírgula entre as propriedades `A` e `B) do objeto `analise` de uma questão sobre variação percentual.
+- Inserida apenas a vírgula ausente, preservando enunciado, gabarito e explicações. Commit: `d19d322079e5172825169ef7be9c1104155af9d3`.
+- A nova execução de sintaxe, auditoria estrutural e testes de navegador precisa concluir no HEAD resultante.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
