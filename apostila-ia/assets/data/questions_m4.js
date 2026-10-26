@@ -800,7 +800,7 @@ const moduleQuestions4 = [
       A: "INCORRETA. Escala mundial da rede, pluralidade e diversidade, e abertura e colaboração são FUNDAMENTOS da disciplina (art. 2º, I, III e IV), não princípios do art. 3º.",
       B: "CORRETA. Neutralidade de rede (art. 3º, IV), proteção da privacidade (art. 3º, II) e proteção de dados pessoais (art. 3º, III) são princípios expressos do art. 3º.",
       C: "INCORRETA. Livre iniciativa, livre concorrência, defesa do consumidor e finalidade social da rede são FUNDAMENTOS (art. 2º, V e VI), não princípios do art. 3º.",
-      D: "INCORRETA. Não há princípio de regulamentação prévia de conteúdos; a vedação de bloquear/filtrar pacotes está no art. 9º, §3º (com as ressalvas do §1º), e a remoção de conteúdo por ordem judicial é tratada no art. 19. A menção ao anonimato não corresponde a princípio do art. 3º; o art. 15 trata da guarda de registros de acesso a aplicações, não de anonimato.",
+      D: "INCORRETA. Não há princípio de regulamentação prévia de conteúdos; a vedação de bloquear, monitorar, filtrar ou analisar o conteúdo dos pacotes de dados está no art. 9º, §3º (com as ressalvas do §1º), e a remoção de conteúdo por ordem judicial é tratada no art. 19. A menção ao anonimato não corresponde a princípio do art. 3º; o art. 15 trata da guarda de registros de acesso a aplicações, não de anonimato.",
       E: "INCORRETA. O acesso a dados de conexão pelos provedores exige hipótese legal ou ordem judicial (art. 7º) — não há liberdade absoluta de compartilhamento sem autorização legal."
     },
     regra: "Marco Civil: art. 2º = FUNDAMENTOS; art. 3º = PRINCÍPIOS. Neutralidade de rede, proteção da privacidade e proteção de dados pessoais são PRINCÍPIOS (art. 3º, II, III e IV).",
