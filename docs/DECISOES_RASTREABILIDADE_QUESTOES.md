@@ -87,3 +87,18 @@ O relatório estrutural identifica apenas sete nós de síntese/revisão sem que
 As questões q-m1-41..q-m1-43, q-m2-41..q-m2-54 e q-m3-41..q-m3-47 foram reorganizadas para distribuir a alternativa correta em A=4, B=5, C=5, D=5 e E=5. A transformação trocou de posição a alternativa correta com a alternativa-alvo e aplicou a mesma permutação às chaves de análise; não alterou o conteúdo de nenhuma alternativa.
 
 O banco completo agora tem 314 questões MC com gabaritos A=149, B=129, C=26, D=5, E=5. A/B representam 88,5% do total, indicando uma concentração persistente no banco legado. Essa fragilidade precisa de revisão editorial manual; não deve ser corrigida por alteração cega dos gabaritos.
+
+
+## Distribuição de gabaritos por módulo — revisão necessária
+
+Execução da auditoria: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448. Distribuição MC:
+- M1: A=3, B=18, C=3, D=1, E=0.
+- M2: A=8, B=16, C=8, D=2, E=3.
+- M3: A=3, B=14, C=10, D=2, E=2.
+- M4: A=38, B=43, C=3, D=0, E=0.
+- M5: A=24, B=13, C=1, D=0, E=0.
+- M6: A=30, B=0, C=0, D=0, E=0.
+- M7: A=33, B=0, C=0, D=0, E=0.
+- M8: A=10, B=25, C=1, D=0, E=0.
+
+As 24 questões novas distribuem gabaritos em A=4, B=5, C=5, D=5 e E=5. A concentração remanescente pertence ao banco legado e deve ser revisada manualmente; não se deve alterar o gabarito sem preservar a relação entre alternativa, análise e justificativa.

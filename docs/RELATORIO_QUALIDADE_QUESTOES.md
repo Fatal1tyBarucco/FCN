@@ -34,3 +34,21 @@ As 24 questões novas foram balanceadas em suas posições corretas (A=4, B=5, C
 A auditoria verifica IDs, estrutura básica, alternativas, gabaritos, análises, duplicação de contexto/enunciado e alguns sinais textuais. Não valida automaticamente fatos, fontes, qualidade pedagógica, ambiguidade ou correção semântica. **Zero alertas heurísticos não significa zero erros.**
 
 A matriz completa por questão está disponível no artefato `curriculum-audit-reports` da execução acima.
+
+
+## Distribuição por módulo — evidência de 2026-10-26
+
+| Módulo | A | B | C | D | E | Total MC |
+|---|---:|---:|---:|---:|---:|---:|
+| M1 | 3 | 18 | 3 | 1 | 0 | 25 |
+| M2 | 8 | 16 | 8 | 2 | 3 | 37 |
+| M3 | 3 | 14 | 10 | 2 | 2 | 31 |
+| M4 | 38 | 43 | 3 | 0 | 0 | 84 |
+| M5 | 24 | 13 | 1 | 0 | 0 | 38 |
+| M6 | 30 | 0 | 0 | 0 | 0 | 30 |
+| M7 | 33 | 0 | 0 | 0 | 0 | 33 |
+| M8 | 10 | 25 | 1 | 0 | 0 | 36 |
+
+A auditoria recomenda revisão manual de posições em M1, M4, M5, M6, M7 e M8. Em M6 e M7, todas as questões de múltipla escolha têm gabarito A; em M4, M5 e M8, a concentração em A/B também é extrema. O lote de 24 questões novas foi balanceado, mas isso não corrige automaticamente o banco legado.
+
+Evidência e matriz heurística gerada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448.

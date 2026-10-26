@@ -214,3 +214,12 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [x] Reordenar as alternativas das 24 questões novas sem alterar conteúdo correto, análise ou justificativa: distribuição interna do lote A=4, B=5, C=5, D=5, E=5.
 - [x] Reexecutar a auditoria heurística e o smoke test: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249669582 — **success**.
 - [ ] **Prioridade alta:** o banco completo ainda tem concentração de gabaritos A/B (A=149, B=129, C=26, D=5, E=5; A/B=88,5% das 314 questões MC). Revisar as questões legadas e reorganizar alternativas somente quando for possível preservar a relação entre texto, gabarito, análise e justificativa.
+
+
+## Distribuição de gabaritos por módulo — 2026-10-26
+
+- [x] Ampliar a auditoria para produzir distribuição A–E por módulo e alertas de concentração.
+- [x] Execução aprovada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448.
+- [ ] **Bloqueador editorial para o aceite do simulado:** revisar manualmente as posições de resposta em M1, M4, M5, M6, M7 e M8. M6 tem 30/30 questões MC com gabarito A; M7 tem 33/33 com gabarito A; M4 tem 38 A, 43 B e 3 C em 84 questões MC; M5 tem 24 A, 13 B e 1 C em 38; M8 tem 10 A, 25 B e 1 C em 36.
+- [ ] Não reorganizar alternativas por lote sem verificar que o gabarito, a análise de cada alternativa e toda referência explícita a letras permaneçam coerentes.
+- [ ] Revalidar todos os itens alterados com verificador estrutural e revisão editorial antes de retirar esse bloqueio.

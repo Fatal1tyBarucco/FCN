@@ -132,3 +132,8 @@ A associação por tópico-pai é uma ferramenta de triagem e não prova cobertu
 - O lote novo distribui gabaritos MC em A=4, B=5, C=5, D=5 e E=5.
 - O banco global continua concentrado em A/B (88,5% das questões MC); revisão manual das 290 questões MC legadas permanece pendente antes da aprovação editorial.
 - A execução técnica mais recente passou: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249669582.
+
+
+### Bloqueio editorial identificado — 2026-10-26
+
+A auditoria por módulo detectou distribuição de gabaritos inadequada para um simulado de alta fidelidade: M6 tem 30/30 MC com resposta A; M7 tem 33/33 com resposta A; M4/M5/M8 concentram respostas em A/B. A revisão manual de alternativas, gabaritos e análises torna-se prioridade antes do aceite final. A validação técnica passou em https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448, mas não substitui esse controle editorial.
