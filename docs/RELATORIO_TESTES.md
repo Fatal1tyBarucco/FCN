@@ -476,3 +476,14 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - **Limitação:** o run acima antecede a correção de contraste e os commits documentais posteriores. Não representa aprovação do HEAD atual. É necessário conferir um run completo do SHA final.
 - Ainda não cobertos: revisão semântica independente de todas as questões, validação de cada fonte normativa/técnica, teste manual com leitor de tela, auditoria WCAG manual e compatibilidade em dispositivos físicos.
 
+## Revalidação de acessibilidade e regressões — 2026-10-26
+
+- Workflow: [40410948115](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40410948115).
+- SHA validado: `4a4ab1f2016bc4afaf0b8afea6dc4dcbe9e4f814`.
+- Resultado final: **success**.
+- Etapas aprovadas: sintaxe JavaScript; geração da matriz curricular; rastreabilidade de ativos; validação estrutural; heurísticas de qualidade de questões; instalação de dependências/Chromium; smoke test do navegador em `file://`; regressões interativas Playwright com axe-core.
+- A falha de contraste observada no run 40410550253 levou à correção dos estilos por contexto: textos auxiliares escuros sobre fundo claro e claros dentro dos painéis escuros. O run 40410948115 passou após essa correção.
+- Também foi corrigida a contradição de justificativa em `q-m1-01`; a sintaxe JavaScript da versão final do arquivo passou no workflow.
+- O SHA testado antecede commits posteriores de documentação, mas inclui as alterações de código nos simuladores e a revisão focal de `q-m1-01`. O código da aplicação não foi alterado depois desse SHA no momento do registro.
+- **Escopo limitado:** este sucesso não comprova revisão semântica integral, validade de todas as fontes, conformidade WCAG independente, testes com leitor de tela ou compatibilidade em dispositivos físicos. Permanecem 112 questões sem fonte identificada pelo auditor estrutural e a distribuição de gabaritos do M1 requer análise.
+
