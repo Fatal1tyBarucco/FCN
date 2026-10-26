@@ -1576,7 +1576,7 @@ id: "q-m1-09",
     contexto: "Funcionário enviará e-mails corporativos com segurança por meio do servidor de submissão do órgão.",
     enunciado: "Qual porta SMTP é recomendada para envio seguro de e-mail, conforme o currículo?",
     alternativas: [
-      { letra: "A", texto: "Porta 25 — porta padrão do SMTP sem criptografia." },
+      { letra: "A", texto: "Porta 25 — usada principalmente para relay SMTP entre servidores; não é a porta recomendada para submissão autenticada de clientes." },
       { letra: "B", texto: "Porta 110 — porta POP3 sem criptografia." },
       { letra: "C", texto: "Porta 587 — submissão com STARTTLS." },
       { letra: "D", texto: "Porta 143 — porta IMAP sem criptografia." }
@@ -1682,9 +1682,9 @@ id: "q-m1-09",
       { letra: "D", texto: "POP3 com configuração padrão, pois apaga do servidor apenas após o segundo download." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: 'IMAP: mantém e-mails sincronizados no servidor e no cliente. Ideal para multi-dispositivo (celular, tablet, computador)', e o exemplo de aplicação responde: 'IMAP. Com a configuração padrão de POP3, as mensagens baixadas podem ser removidas do servidor e deixar de estar disponíveis em outro dispositivo; o comportamento depende das opções de manter cópia.'",
+    justificativa: "O currículo define IMAP como adequado ao uso em múltiplos dispositivos porque mantém o estado sincronizado entre cliente e servidor. POP3 é orientado ao download; a disponibilidade da mensagem em outros dispositivos depende de opções como manter cópia no servidor, e não se deve presumir que todo cliente apague mensagens automaticamente.",
     analise: {
-      A: "INCORRETA. Erro conceitual: POP3 baixa e, por padrão, apaga do servidor — o segundo dispositivo ficaria sem as mensagens.",
+      A: "INCORRETA. POP3 é orientado ao download; a permanência das mensagens no servidor depende das opções do cliente e da configuração. Não oferece, por si só, a sincronização de estado entre dispositivos que o cenário requer.",
       B: "CORRETA. Sincronização servidor-cliente é o requisito do cenário (multi-dispositivo).",
       C: "INCORRETA. Erro conceitual: SMTP é protocolo de ENVIO, não de recebimento (o currículo registra esse engano como exemplo 'erro').",
       D: "INCORRETA. Erro conceitual: invenção de comportamento ('apaga após o segundo download') — o currículo descreve o apagamento por padrão no download."
