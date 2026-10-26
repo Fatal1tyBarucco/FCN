@@ -183,7 +183,7 @@ const moduleQuestions8 = [
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'os passos de transformação são registrados e executados sempre que a consulta é atualizada': o currículo afirma que o Power Query mantém os passos como um script declarativo, permitindo reexecutar o processo inteiro sem ajuste manual.",
     justificativa: "O Power Query é um editor de preparação que registra transformações em etapas (filtrar colunas, trocar tipos, agregar, mesclar, expandir) e as reexecuta ao atualizar a consulta, desde que as fontes, credenciais e configuração estejam disponíveis. Isso reduz retrabalho manual, mas não elimina toda a operação ou manutenção.",
     analise: {
-      item: "Item VERDADEIRO. Os passos registrados são reexecutados a cada atualização, o que elimina retrabalho manual.",
+      item: "Item VERDADEIRO. Os passos registrados são reexecutados a cada atualização, o que reduz o retrabalho manual nas transformações já configuradas; fontes e esquemas ainda podem exigir manutenção.",
       leituraIncorreta: "Leitura que induz ao erro: considerar que o Power Query é só 'caminho de importação' — na verdade o editor transforma e registra a sequência, e é por isso que o item é certo."
     },
     regra: "Power Query registra passos de preparação que podem ser reexecutados na atualização; a posição da transformação em relação à carga depende do destino e da arquitetura.",
