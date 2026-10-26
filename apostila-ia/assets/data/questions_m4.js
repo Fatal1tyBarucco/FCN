@@ -518,129 +518,124 @@ const moduleQuestions4 = [
     fonte: "NIST SP 800-53 Rev. 5, AC-2 e AC-6: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
-  { id: "q-m4-21", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m4-u3-t1-s1", assunto: "4.3 — Phishing",
-    contexto: "Um usuário recebe uma mensagem de e-mail que imita uma instituição financeira.",
-    enunciado: "O 'phishing' é um ataque que se caracteriza por:",
+  { id: "q-m4-21", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "m4-u3-t1-s1", assunto: "4.3 — Phishing e engenharia social",
+    contexto: "Uma pessoa recebe uma mensagem que imita seu banco, cria urgência e direciona para uma página que solicita senha e código de autenticação.",
+    enunciado: "Qual característica indica uma tentativa de phishing?",
     alternativas: [
-      { letra: "A", texto: "Criptografar os dados do usuário." },
-      { letra: "B", texto: "Tentar induzir o usuário a fornecer informações confidenciais." },
-      { letra: "C", texto: "Aumentar a velocidade de rede." },
-      { letra: "D", texto: "Melhorar a segurança da autenticação." },
-      { letra: "E", texto: "Estudar a segurança do sistema." }
+      { letra: "A", texto: "A mensagem tenta induzir a pessoa a revelar informações, abrir um link malicioso ou executar uma ação por meio de engano." },
+      { letra: "B", texto: "A mensagem foi enviada por um canal eletrônico, o que por si só prova que é fraudulenta." },
+      { letra: "C", texto: "O phishing consiste exclusivamente em criptografar arquivos locais." },
+      { letra: "D", texto: "A mensagem é legítima sempre que contém o logotipo correto da instituição." },
+      { letra: "E", texto: "O ataque só existe quando há erros ortográficos evidentes." }
     ],
-    gabarito: "B",
-    justificativa: "Phishing é um tipo de engenharia social onde o atacante imita uma entidade legítima para induzir o usuário a divulgar informações confidenciais (senhas, dados bancários). Criptografia não é phishing (alternativa A incorreta); aumento de velocidade não está relacionado (alternativa C incorreta); melhoria de segurança é oposta ao objetivo do ataque (alternativa D incorreta); 'estudar a segurança' é vago e incorreto (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Phishing é uma forma de engenharia social que usa mensagens, páginas ou outros meios enganosos para induzir a vítima a revelar informações, abrir conteúdo malicioso ou realizar ações que favoreçam o atacante. Logotipos e linguagem correta podem ser copiados; a avaliação deve considerar remetente, destino, contexto e solicitações incomuns, com verificação por canal independente.",
     analise: {
-      A: "INCORRETA. Criptografia é uma técnica de proteção, não um objetivo do phishing.",
-      B: "CORRETA. Phishing é induzir o usuário a fornecer informações confidenciais por engano.",
-      C: "INCORRETA. Phishing não tem relação com velocidade de rede.",
-      D: "INCORRETA. Phishing visa substituir métodos seguros por engano, não melhorar a segurança.",
-      E: "INCORRETA. Estudar a segurança é uma atividade de defesa, não de ataque."
+      A: "CORRETA. A característica central é a indução por engano a revelar dados ou executar ações prejudiciais.",
+      B: "INCORRETA. O meio eletrônico, por si só, não determina fraude.",
+      C: "INCORRETA. Criptografar arquivos pode ocorrer em ransomware, mas não define phishing.",
+      D: "INCORRETA. Logotipos podem ser copiados e não autenticam a origem.",
+      E: "INCORRETA. Mensagens fraudulentas podem ser bem escritas e personalizadas."
     },
-    regra: "Phishing = 'pegar' — imitar quem confiável para roubar credenciais ou dados.",
-    pegadinha: "Phishing é 'enganação' — o atacante simula uma entidade confiável para induzir a ação.",
-    fonte: "APWG (Anti-Phishing Working Group) — Phishing Activity Trends Report, 2022."
+    regra: "Phishing usa engano para induzir divulgação de dados, acesso a páginas falsas ou execução de ações maliciosas.",
+    pegadinha: "Logotipo, nome conhecido e texto bem escrito não provam autenticidade; verifique a solicitação por canal independente.",
+    fonte: "CISA, Recognize and Report Phishing: https://www.cisa.gov/secure-our-world/recognize-and-report-phishing."
   },
 
-  { id: "q-m4-22", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m4-u3-t1-s2", assunto: "4.3 — Pharming",
-    contexto: "Um atacante redireciona um domínio de um site legítimo para um site falso.",
-    enunciado: "O 'pharming' é um ataque que:",
+  { id: "q-m4-22", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s2", assunto: "4.3 — Pharming e resolução de nomes",
+    contexto: "Uma pessoa digita corretamente o endereço de um serviço conhecido, mas é direcionada a uma página fraudulenta por uma alteração indevida na resolução do nome ou na configuração do dispositivo.",
+    enunciado: "Qual descrição é mais compatível com pharming?",
     alternativas: [
-      { letra: "A", texto: "Oferece uma página de login legítima." },
-      { letra: "B", texto: "Redireciona o acesso a um domínio de um site legítimo para um site falso." },
-      { letra: "C", texto: "Melhora o desempenho de DNS." },
-      { letra: "D", texto: "Bloqueia e-mails spam." },
-      { letra: "E", texto: "Gera tráfego de rede para testes." }
+      { letra: "A", texto: "Manipular a resolução de nomes ou outra infraestrutura de direcionamento para levar a vítima a um destino fraudulento, mesmo sem erro de digitação." },
+      { letra: "B", texto: "Enviar exclusivamente uma mensagem de e-mail com erro ortográfico." },
+      { letra: "C", texto: "Aumentar a velocidade legítima de resolução de DNS." },
+      { letra: "D", texto: "Bloquear mensagens de spam por meio de um filtro de e-mail." },
+      { letra: "E", texto: "Gerar tráfego autorizado para testar a capacidade de um servidor." }
     ],
-    gabarito: "B",
-    justificativa: "Pharming redireciona tecnicamente o acesso a um domínio para um site falso (invadindo DNS ou arquitetura do host). Diferente de phishing, que engana o usuário (alternativa A incorreta); não melhora o DNS (alternativa C incorreta); não bloqueia spam (alternativa D incorreta); não gera tráfego para testes (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Pharming descreve técnicas de redirecionamento da vítima para um destino fraudulento, por exemplo mediante manipulação de DNS ou de configurações locais. A técnica pode ocorrer sem que a vítima clique em um link enganoso ou digite incorretamente o endereço. O mecanismo específico deve ser investigado; não se deve equiparar pharming a qualquer ataque de intermediário.",
     analise: {
-      A: "INCORRETA. Pharming redireciona para um site falso, não legítimo.",
-      B: "CORRETA. Pharming redireciona o tráfego de um domínio legítimo para um site falso.",
-      C: "INCORRETA. Pharming não melhora o desempenho de DNS.",
-      D: "INCORRETA. Bloqueio de spam é uma função de filtro, não do pharming.",
-      E: "INCORRETA. Geração de tráfego para testes não é pharming."
+      A: "CORRETA. A alternativa descreve redirecionamento técnico para destino fraudulento, inclusive por manipulação de resolução de nomes.",
+      B: "INCORRETA. E-mail com erro ortográfico é um possível veículo de phishing, não a definição de pharming.",
+      C: "INCORRETA. Pharming não é uma melhoria de desempenho do DNS.",
+      D: "INCORRETA. Filtro de spam é um controle defensivo.",
+      E: "INCORRETA. Teste autorizado de capacidade não é pharming."
     },
-    regra: "Pharming = 'redirecionar' — muda o DNS/roteamento para forçar acesso a site falso.",
-    pegadinha: "Pharming é 'forçado' — o usuário não precisa ser enganado; o tráfego é redirecionado.",
-    fonte: "MITRE ATT&CK — T1557 (Man-in-the-Middle), sub-technique T1557.001.",
+    regra: "Pharming redireciona a vítima para destino fraudulento por manipulação técnica, como alteração de resolução de nomes ou configurações locais.",
+    pegadinha: "A vítima pode digitar o endereço correto; o redirecionamento pode ocorrer sem depender de um link de phishing.",
+    fonte: "CISA, Secure Our World — Recognize and Report Phishing: https://www.cisa.gov/secure-our-world/recognize-and-report-phishing; ICANN, DNS Security: https://www.icann.org/resources/pages/dns-security-2019-03-05-en."
   },
 
-  { id: "q-m4-23", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m4-u3-t1-s3", assunto: "4.3 — Engenharia Social",
-    contexto: "Um atacante se identifica como um técnico de suporte para obter acesso.",
-    enunciado: "A 'engenharia social' em segurança da informação refere-se a:",
+  { id: "q-m4-23", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s3", assunto: "4.3 — Engenharia social e verificação de solicitações",
+    contexto: "Uma pessoa que se apresenta como suporte técnico pede a um servidor público que informe um código de autenticação de uso único para resolver uma suposta falha urgente.",
+    enunciado: "Qual resposta aplica melhor uma defesa contra engenharia social?",
     alternativas: [
-      { letra: "A", texto: "Técnicas de criptografia de dados." },
-      { letra: "B", texto: "A manipulação psicológica de pessoas para obter acesso ou informações." },
-      { letra: "C", texto: "A implementação de firewalls." },
-      { letra: "D", texto: "O uso de antivírus." },
-      { letra: "E", texto: "A configuração de roteadores." }
+      { letra: "A", texto: "Fornecer o código porque o solicitante conhece o cargo e o nome do servidor." },
+      { letra: "B", texto: "Interromper a interação e confirmar a solicitação por um canal institucional independente já conhecido, sem compartilhar o código." },
+      { letra: "C", texto: "Enviar o código, mas solicitar que o suporte prometa não reutilizá-lo." },
+      { letra: "D", texto: "Confiar na solicitação sempre que houver urgência e linguagem profissional." },
+      { letra: "E", texto: "Publicar o código em um canal interno para que outras pessoas confirmem se é válido." }
     ],
     gabarito: "B",
-    justificativa: "Engenharia social é o processo de manipulação psicológica de pessoas para obter acesso a sistemas, informações ou ações, aproveitando a confiança, a autoridade ou a urgência. Técnicas de criptografia são técnicas de proteção (alternativa A incorreta); firewalls são defensivos (alternativa C incorreta); antivírus são ferramentas defensivas (alternativa D incorreta); configuração de roteadores é um procedimento técnico (alternativa E incorreta).",
+    justificativa: "Engenharia social explora confiança, autoridade, urgência, familiaridade ou medo para induzir ações. Dados reais sobre a vítima não autenticam o solicitante. Códigos de uso único e outros segredos de autenticação não devem ser compartilhados; solicitações sensíveis devem ser confirmadas por um canal independente e reportadas conforme o procedimento institucional.",
     analise: {
-      A: "INCORRETA. Engenharia social é uma técnica de manipulação social, não de criptografia.",
-      B: "CORRETA. Engenharia social explora a psicologia humana para obter acesso ou informações.",
-      C: "INCORRETA. Firewall é uma defesa, não um ataque de engenharia social.",
-      D: "INCORRETA. Antivírus é uma ferramenta defensiva, não um ataque.",
-      E: "INCORRETA. Configuração de roteadores é uma atividade de administração de rede."
+      A: "INCORRETA. Conhecer dados do servidor não prova a identidade do solicitante.",
+      B: "CORRETA. A confirmação independente evita depender do mesmo canal potencialmente fraudulento.",
+      C: "INCORRETA. Um código de autenticação é segredo temporário e não deve ser compartilhado.",
+      D: "INCORRETA. Urgência e linguagem profissional podem ser usadas para manipular a vítima.",
+      E: "INCORRETA. Publicar o código expõe a credencial e amplia o risco."
     },
-    regra: "Engenharia social = 'estupidez tecnológica'. Explora a psicologia humana para obter o que se quer.",
-    pegadinha: "Engenharia social não é 'engenharia inversa' — é 'manipulação de pessoas'.",
-    fonte: "NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment)."
+    regra: "Contra engenharia social, verifique solicitações sensíveis por canal independente e nunca compartilhe códigos de autenticação.",
+    pegadinha: "Autoridade aparente, dados verdadeiros e urgência não autenticam a pessoa que fez o pedido.",
+    fonte: "CISA, Recognize and Report Phishing: https://www.cisa.gov/secure-our-world/recognize-and-report-phishing."
   },
 
-  { id: "q-m4-24", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Força Bruta e Password Spraying",
-    contexto: "Um atacante tenta adivinhar senhas de contas de usuários.",
-    enunciado: "A 'força bruta' em criptografia é uma técnica de:",
+  { id: "q-m4-24", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Força bruta e tentativas de autenticação",
+    contexto: "Um serviço observa tentativas automatizadas de adivinhar senhas. A equipe precisa diferenciar ataques online contra o serviço de tentativas offline contra hashes de senhas obtidos indevidamente.",
+    enunciado: "Qual afirmação sobre força bruta e suas mitigações é correta?",
     alternativas: [
-      { letra: "A", texto: "Que garante a segurança de uma senha." },
-      { letra: "B", texto: "Que testa todas as combinações possíveis de caracteres até encontrar a senha." },
-      { letra: "C", texto: "Que criptografa dados de forma mais segura." },
-      { letra: "D", texto: "De autenticação sem senha." },
-      { letra: "E", texto: "De limpeza de dados." }
+      { letra: "A", texto: "Força bruta testa sistematicamente combinações candidatas; limites de tentativa ajudam em ataques online, enquanto hashes de senha robustos e parâmetros de custo ajudam a dificultar ataques offline." },
+      { letra: "B", texto: "Força bruta é uma técnica de autenticação sem senha." },
+      { letra: "C", texto: "A limitação de tentativas no site impede qualquer tentativa offline contra hashes roubados." },
+      { letra: "D", texto: "O armazenamento de senhas em texto claro é a melhor forma de detectar força bruta." },
+      { letra: "E", texto: "Força bruta não pode ser mitigada por nenhum controle." }
     ],
-    gabarito: "B",
-    justificativa: "Força bruta é uma técnica de quebra de senhas/criptografia que testa sistematicamente todas as combinações possíveis até achar a correta. Garante segurança? Não (alternativa A incorreta); criptografa mais segura? Inversamente, enfraquece (alternativa C incorreta); autenticação sem senha é a autenticação MFA ou biométrica (alternativa D incorreta); limpeza de dados não se aplica (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Força bruta envolve testar sistematicamente combinações candidatas para encontrar uma senha ou chave. Em ataques online, limitação adaptativa, detecção, MFA e controles de autenticação reduzem oportunidades; em ataques offline, o atacante testa candidatos contra material obtido, por isso o armazenamento de senhas deve usar esquemas adequados com sal e custo. Nenhuma medida isolada garante bloqueio absoluto.",
     analise: {
-      A: "INCORRETA. Força bruta é uma técnica de quebra, não de segurança.",
-      B: "CORRETA. Força bruta testa todas as combinações até encontrar a chave/senha.",
-      C: "INCORRETA. Força bruta não criptografa mais segura — enfraquece a segurança.",
-      D: "INCORRETA. Autenticação sem senha é uma alternativa, não a força bruta.",
-      E: "INCORRETA. Limpeza de dados não é uma definição de força bruta."
+      A: "CORRETA. A alternativa diferencia os cenários online e offline e associa controles adequados a cada um.",
+      B: "INCORRETA. Autenticação sem senha é um mecanismo de autenticação, não um ataque de força bruta.",
+      C: "INCORRETA. O atacante offline pode testar candidatos sem consultar o serviço online.",
+      D: "INCORRETA. Senhas não devem ser armazenadas em texto claro.",
+      E: "INCORRETA. Controles podem reduzir probabilidade e impacto, embora não eliminem todo risco."
     },
-    regra: "Força bruta = 'tentar todas as senhas possíveis' — 'adivinhar tudo'.",
-    pegadinha: "Força bruta não é 'quebrar' — é 'tentar todas as opções' até acertar.",
-    fonte: "Offensive Security — Brute Force Attacks, 2021."
+    regra: "Ataques online exigem controles de autenticação e detecção; ataques offline dependem também da resistência do armazenamento de senhas a adivinhação.",
+    pegadinha: "Limitar tentativas no site não impede que hashes roubados sejam atacados offline.",
+    fonte: "NIST SP 800-63B — Digital Identity Guidelines: https://pages.nist.gov/800-63-4/sp800-63b.html; OWASP Authentication Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html."
   },
 
-  { id: "q-m4-25", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataque de “Man-in-the-Middle” (MitM)",
-    contexto: "Dois sistemas se comunicam, e um atacante intercepta e maliciosamente modifica as mensagens.",
-    enunciado: "O ataque de 'Man-in-the-Middle' (MitM) consiste em:",
+  { id: "q-m4-25", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Man-in-the-Middle e validação de identidade",
+    contexto: "Um usuário acessa um serviço por uma rede pública. Um atacante tenta intermediar a comunicação e apresentar um certificado inválido para se passar pelo servidor.",
+    enunciado: "Qual medida ajuda a impedir que o cliente aceite um intermediário fraudulento?",
     alternativas: [
-      { letra: "A", texto: "Autenticar duas partes legítimas." },
-      { letra: "B", texto: "Um atacante se posicionando entre as duas partes, interceptando e modificando a comunicação." },
-      { letra: "C", texto: "Criptografar a comunicação entre as partes." },
-      { letra: "D", texto: "Melhorar a velocidade de rede." },
-      { letra: "E", texto: "Proteger os dados contra interceptação." }
+      { letra: "A", texto: "Ignorar avisos de certificado para manter o acesso disponível." },
+      { letra: "B", texto: "Validar corretamente o certificado, a cadeia de confiança e o nome do servidor, usando um protocolo seguro configurado de forma adequada." },
+      { letra: "C", texto: "Usar apenas um firewall local e dispensar a autenticação do servidor." },
+      { letra: "D", texto: "Confiar em qualquer rede Wi-Fi que exija senha." },
+      { letra: "E", texto: "Presumir que o uso de criptografia torna impossível um ataque de intermediário, mesmo com validação desativada." }
     ],
     gabarito: "B",
-    justificativa: "MitM é um ataque onde o invasor coloca-se entre duas partes que estão se comunicando, podendo interceptar e/ou modificar mensagens. Autenticar partes legítimas é uma função de rede segura (alternativa A incorreta); criptografar é uma defesa, não um ataque MitM (alternativa C incorreta); melhorar velocidade de rede não está relacionado (alternativa D incorreta); proteger contra interceptação é o oposto (alternativa E incorreta).",
+    justificativa: "Um ataque Man-in-the-Middle (MitM) pode permitir que um intermediário observe ou altere a comunicação. Um protocolo criptográfico corretamente configurado e a validação do certificado e do nome do servidor ajudam a autenticar o endpoint e proteger o canal. Ignorar avisos ou desativar validação pode permitir que a conexão criptografada seja estabelecida com o endpoint errado.",
     analise: {
-      A: "INCORRETA. MitM não autentica partes legítimas — ele se passa por intermediário.",
-      B: "CORRETA. MitM é a posse do canal de comunicação, permitindo interceptação e modificação.",
-      C: "INCORRETA. Criptografia dificulta MitM, não é um ataque.",
-      D: "INCORRETA. MitM não melhora velocidade — além disso, pode degradar.",
-      E: "INCORRETA. MitM é uma forma de interceptação, não proteção."
+      A: "INCORRETA. Ignorar avisos pode eliminar uma defesa importante contra certificados inválidos.",
+      B: "CORRETA. A validação de identidade é essencial para evitar confiar em um intermediário fraudulento.",
+      C: "INCORRETA. Firewall local não substitui a autenticação do servidor no canal.",
+      D: "INCORRETA. Uma rede Wi-Fi protegida por senha não é necessariamente confiável.",
+      E: "INCORRETA. Criptografia sem validação correta de identidade pode proteger a conexão com o atacante."
     },
-    regra: "MitM = 'porta do diabo'. O atacante se torna o 'meio' entre duas partes.",
-    pegadinha: "MitM não é 'proteção' — é 'intercepção' de comunicação entre duas partes.",
-    fonte: "NIST SP 800-53 (SC-7: Boundary Protection)."
+    regra: "Contra MitM, use protocolos seguros com validação correta de certificado e nome do servidor; não ignore alertas de identidade.",
+    pegadinha: "Criptografia protege o canal, mas sem autenticação correta o canal pode terminar no intermediário errado.",
+    fonte: "NIST SP 800-52 Rev. 2 — Guidelines for the Selection, Configuration, and Use of TLS Implementations: https://csrc.nist.gov/pubs/sp/800/52/r2/final; OWASP, Transport Layer Security Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html."
   },
 
   { id: "q-m4-26", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
