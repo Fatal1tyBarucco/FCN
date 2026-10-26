@@ -334,7 +334,7 @@ try {
 }
 if (manifest) {
   const desc = typeof manifest.description === 'string' ? manifest.description : '';
-  check('description menciona "396"', desc.includes('396'), 'description contém 396=' + desc.includes('389'));
+  check('description menciona "396"', desc.includes('396'), 'description contém 396=' + desc.includes('396'));
   check('description contém a contagem de questões 396 e não a contagem anterior 389 questões', desc.includes('396 questões') && !desc.includes('389 questões'), '');
 }
 
