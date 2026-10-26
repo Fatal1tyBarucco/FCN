@@ -1,12 +1,12 @@
 /* questions_m6.js — MÓDULO 6: ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO
- * 40 questões autorais (origem: 'autoral' sempre — o campo 'estilo' registra apenas
+ * 44 questões autorais (origem: 'autoral' sempre — o campo 'estilo' registra apenas
  * o FORMATO DE COBRANÇA inspirado em banca, nunca atribuição a banca real).
- * Distribuição real (medida por script em 2026-10-22): 6.1 Princípios (9),
- * 6.2 Transparência/LAI/Governo Digital (14), 6.3 Proteção de dados e sigilo (7),
- * 6.4 Redes sociais e conduta (3), 6.5 Acessibilidade e inclusão (2),
- * 6.6 Automação e supervisão (5).
- * Níveis: 12 básico / 18 intermediário / 10 avançado. Formatos: 30 mc + 10 ce.
- * Estilos (formato de cobrança, NÃO banca real): cespe 22, fgv 8, fcc 6, vunesp 4.
+ * Distribuição atual: 6.1 Princípios (10), 6.2 Transparência/LAI/Governo Digital (14),
+ * 6.3 Proteção de dados e sigilo (7), 6.4 Redes sociais e conduta (4),
+ * 6.5 Acessibilidade e inclusão (3), 6.6 Automação e supervisão (6).
+ * Níveis medidos no banco atual: 12 básicos, 18 intermediários e 14 avançados.
+ * Formatos: 34 múltipla escolha + 10 certo/errado. Estilo indica apenas formato de cobrança,
+ * não atribuição a banca real; todas as questões são autorais.
  * Tópicos: cada 'topico' é um id REAL de subtópico de curriculum_m6.js
  * (esquema m6-u{unidade}-t{topico}-s{subtopico}), conferido por script em 2026-10-22.
  * BASE NORMATIVA: apenas dispositivos conferidos em referencias/referencias-verificadas.md
