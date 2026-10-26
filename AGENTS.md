@@ -1036,6 +1036,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `c130a700c5856f517e340c5a706301a558f09ebf`.
 - Fontes atualizadas incluem NIST AI 600-1, NIST AI RMF, scikit-learn e OWASP LLM Prompt Injection Prevention Cheat Sheet. Revisão focal; validar sintaxe, esquema e CI no HEAD final.
 
+## Auditoria semântica incremental — M5 q-m5-36 a q-m5-40 (2026-10-26)
+
+- q-m5-36: mantida a definição de underfitting como padrão compatível com erro elevado em treino e validação; a leitura depende do desenho da avaliação.
+- q-m5-37: mantida a finalidade da validação cruzada para avaliar desempenho em diferentes partições; esclarecido que ela não aumenta dados nem substitui automaticamente teste final.
+- q-m5-38: removida a generalização “mais dados ajuda, não prejudica”; o padrão descrito não justifica reduzir a amostra, mas dados adicionais precisam ser representativos e seu efeito medido.
+- q-m5-39: corrigido o título bibliográfico da obra de Provost e Fawcett para *Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking* (2013).
+- q-m5-40: reescrita para corrigir o enunciado ambíguo “distância entre RMSE e MAE típica de 6,4”; agora apresenta MAE=1,9 e RMSE=6,4 no mesmo conjunto e explica que RMSE dá peso quadrático maior aos erros grandes, sem diagnosticar sozinho overfitting.
+- Commit de conteúdo: `3ab2b227ca09c902d7ff4fd76f24155861cc2969`.
+- Revisão focal; validar sintaxe, esquema, referências e CI no HEAD final.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
