@@ -261,42 +261,42 @@ const moduleQuestions5 = [
 
   { id: "q-m5-11", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m5-u2-t1-s1", assunto: "5.2 — Paradigmas de Aprendizado",
-    contexto: "Existem diferentes paradigmas de aprendizado de máquina.",
-    enunciado: "A classificação dos paradigmas de aprendizado de máquina em supervisionado, não supervisionado e por reforço baseia-se em:",
+    contexto: "Os paradigmas de aprendizado de máquina diferem pelo tipo de sinal de supervisão ou feedback disponível.",
+    enunciado: "Qual alternativa descreve corretamente os paradigmas supervisionado, não supervisionado e por reforço?",
     alternativas: [
-      { letra: "A", texto: "O tipo de algoritmo usado." },
-      { letra: "B", texto: "A presença ou ausência de rótulos (saídas esperadas) durante o treinamento." },
-      { letra: "C", texto: "O tamanho do conjunto de dados." },
-      { letra: "D", texto: "A linguagem de programação." },
-      { letra: "E", texto: "A arquitetura da rede neural." }
+      { letra: "A", texto: "São distinguidos principalmente pela linguagem de programação usada para implementar o modelo." },
+      { letra: "B", texto: "No supervisionado há exemplos com alvos conhecidos; no não supervisionado busca-se estrutura sem alvos fornecidos; no reforço o agente aprende por interação e recompensas." },
+      { letra: "C", texto: "O aprendizado por reforço é apenas aprendizado supervisionado com rótulos binários." },
+      { letra: "D", texto: "O aprendizado não supervisionado exige que cada exemplo tenha uma saída correta fornecida por um especialista." },
+      { letra: "E", texto: "O aprendizado supervisionado não utiliza dados para ajustar parâmetros." }
     ],
     gabarito: "B",
-    justificativa: "Paradigmas de aprendizado são definidos pela presença ou ausência de rótulos (saídas desejadas) durante o treinamento: supervisionado (com rótulos), não supervisionado (sem rótulos), reforço (aprender por recompensas). Tipo de algoritmo (alternativa A incorreta); tamanho do conjunto (alternativa C incorreta); linguagem de programação (alternativa D incorreta); arquitetura de rede (alternativa E incorreta).",
+    justificativa: "No aprendizado supervisionado, o treinamento usa exemplos associados a alvos conhecidos. No não supervisionado, o método procura estrutura nos dados sem receber esses alvos como resposta desejada. No aprendizado por reforço, um agente interage com um ambiente e usa sinais de recompensa para orientar suas ações. Esses paradigmas não são definidos pela linguagem de programação nem são intercambiáveis.",
     analise: {
-      A: "INCORRETA. Tipo de algoritmo não define o paradigma de aprendizado.",
-      B: "CORRETA. Paradigmas são definidos pela presença/ausência de rótulos (saídas desejadas).",
-      C: "INCORRETA. Tamanho do conjunto de dados não define o paradigma.",
-      D: "INCORRETA. Linguagem de programação é uma escolha técnica, não o paradigma.",
-      E: "INCORRETA. Arquitetura de rede não define o paradigma de aprendizado."
+      A: "INCORRETA. A linguagem de programação é uma escolha de implementação, não define o paradigma de aprendizagem.",
+      B: "CORRETA. A alternativa distingue alvos conhecidos, descoberta de estrutura sem alvos e feedback por recompensas.",
+      C: "INCORRETA. Aprendizado por reforço envolve interação, ações e recompensas; não é apenas classificação binária supervisionada.",
+      D: "INCORRETA. No aprendizado não supervisionado não se exige uma saída correta rotulada para cada exemplo.",
+      E: "INCORRETA. O aprendizado supervisionado ajusta o modelo usando dados e os alvos correspondentes."
     },
-    regra: "Paradigmas = 'com rótulos ou sem'. Supervisionado, não supervisionado, reforço.",
-    pegadinha: "Não confunda: supervisionado não significa 'superar' — é 'com rótulos'.",
+    regra: "Supervisionado = exemplos com alvos; não supervisionado = estrutura sem alvos fornecidos; reforço = interação com o ambiente e recompensas.",
+    pegadinha: "A ausência de rótulos não define sozinha o aprendizado por reforço: o elemento distintivo é a interação com o ambiente e o sinal de recompensa.",
     fonte: "Murphy, K. P. — Machine Learning: A Probabilistic Perspective, 2012."
   },
 
-  { id: "q-m5-12", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+  id: "q-m5-12", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m5-u2-t1-s2", assunto: "5.2 — Classificação e Regressão",
     contexto: "Classificação e regressão são tarefas fundamentais de aprendizado supervisionado.",
     enunciado: "A diferença entre classificação e regressão é:",
     alternativas: [
       { letra: "A", texto: "A classificação prevê valores contínuos; a regressão prevê categorias discretas." },
-      { letra: "B", texto: "A classificação prevê rótulos discretos (categorias); a regressão previsa valores contínuos." },
+      { letra: "B", texto: "A classificação prevê rótulos discretos (categorias); a regressão prevê valores contínuos." },
       { letra: "C", texto: "A classificação é um tipo de aprendizado não supervisionado." },
       { letra: "D", texto: "A regressão é um tipo de aprendizado não supervisionado." },
       { letra: "E", texto: "Tanto classificação quanto regressão não usam aprendizado supervisionado." }
     ],
     gabarito: "B",
-    justificativa: "Classificação prevê rótulos discretos (categorias): sim/não, spam/não spam, etc. Regressão prevê valores contínuos: preço, temperatura, etc. Classificação previsa valores contínuos (alternativa A incorreta); classificação é não supervisionado (alternativa C incorreta); regressão não supervisionado (alternativa D incorreta); nenhum usa supervisão (alternativa E incorreta).",
+    justificativa: "Classificação prevê rótulos discretos (categorias): sim/não, spam/não spam, etc. Regressão prevê valores contínuos: preço, temperatura, etc. Classificação prevê valores contínuos (alternativa A incorreta); classificação é não supervisionado (alternativa C incorreta); regressão não supervisionado (alternativa D incorreta); nenhum usa supervisão (alternativa E incorreta).",
     analise: {
       A: "INCORRETA. Classificação prevê categorias discretas; regressão prevê valores contínuos.",
       B: "CORRETA. Classificação: rótulos discretos; Regressão: valores contínuos.",
@@ -311,30 +311,30 @@ const moduleQuestions5 = [
 
   { id: "q-m5-13", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "m5-u2-t1-s3", assunto: "5.2 — Agrupamento e Redução de Dimensionalidade",
-    contexto: "Técnicas não supervisionadas incluim agrupamento e redução de dimensionalidade.",
+    contexto: "Agrupamento e redução de dimensionalidade são técnicas distintas que podem apoiar a análise exploratória de dados.",
     enunciado: "Sobre agrupamento (clustering) e redução de dimensionalidade, é correto afirmar que:",
     alternativas: [
-      { letra: "A", texto: "Agrupamento aumenta o número de variáveis." },
-      { letra: "B", texto: "Redução de dimensionalidade é um tipo de agrupamento." },
-      { letra: "C", texto: "Agrupamento divide os dados em grupos com base em similaridade; redução de dimensionalidade diminui o número de variáveis." },
-      { letra: "D", texto: "Agrupamento e redução de dimensionalidade não têm relação." },
-      { letra: "E", texto: "Ambos são métodos de classificação supervisionada." }
+      { letra: "A", texto: "Agrupamento necessariamente aumenta o número de variáveis." },
+      { letra: "B", texto: "Redução de dimensionalidade é sempre um tipo de agrupamento." },
+      { letra: "C", texto: "Agrupamento reúne observações semelhantes; redução de dimensionalidade representa os dados com menos dimensões, podendo perder parte da informação." },
+      { letra: "D", texto: "As duas técnicas são sinônimos e produzem necessariamente os mesmos resultados." },
+      { letra: "E", texto: "Ambas são exclusivamente métodos de classificação supervisionada." }
     ],
     gabarito: "C",
-    justificativa: "Agrupamento (clustering) particiona dados em grupos baseados em similaridade. Redução de dimensionalidade diminui o número de variáveis (features) mantendo a informação crucial. Agrupamento aumenta variáveis (alternativa A incorreta); redução não é agrupamento (alternativa B incorreta); não há relação (alternativa D incorreta); métodos de classificação supervisionada (alternativa E incorreta).",
+    justificativa: "Clustering organiza observações em grupos segundo uma medida de similaridade ou distância. Redução de dimensionalidade transforma ou projeta os dados em um espaço com menos dimensões; a quantidade de informação preservada depende do método e dos dados. PCA é um exemplo comum de redução não supervisionada, mas existem métodos de redução supervisionados, portanto a técnica não é necessariamente não supervisionada.",
     analise: {
-      A: "INCORRETA. Agrupamento diminui a estrutura de grupos, não aumenta variáveis.",
-      B: "INCORRETA. Redução de dimensionalidade não é um tipo de agrupamento.",
-      C: "CORRETA. Agrupamento particiona dados por similaridade; redução diminui variáveis mantendo informação.",
-      D: "INCORRETA. Estão relacionados — ambas são técnicas não supervisionadas de análise de dados.",
-      E: "INCORRETA. Ambos são métodos não supervisionados, não de classificação supervisionada."
+      A: "INCORRETA. Agrupamento não exige nem implica aumento do número de variáveis.",
+      B: "INCORRETA. Redução de dimensionalidade e agrupamento resolvem objetivos diferentes.",
+      C: "CORRETA. Uma técnica busca grupos; a outra reduz dimensões e pode introduzir perda de informação.",
+      D: "INCORRETA. Podem ser combinadas em um fluxo de análise, mas não são sinônimos nem garantem os mesmos resultados.",
+      E: "INCORRETA. Nenhuma das duas é exclusivamente classificação supervisionada; há técnicas não supervisionadas e, para redução, também métodos supervisionados."
     },
-    regra: "Agrupamento = 'agrupar parecidos'. Redução = 'diminuir variáveis'. Ambos não supervisionados.",
-    pegadinha: "Agrupamento não é 'decidir categorias' — é 'descobrir grupos naturais'.",
+    regra: "Clustering = agrupar observações semelhantes; redução de dimensionalidade = representar dados com menos dimensões, considerando o compromisso entre simplicidade e informação preservada.",
+    pegadinha: "Não generalize: PCA é tipicamente não supervisionado, mas nem toda técnica de redução de dimensionalidade pertence a esse paradigma.",
     fonte: "Jain, A. K. — Data Clustering: 50 Years of Development, 2010."
   },
 
-  { id: "q-m5-14", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+  id: "q-m5-14", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Rotulagem, Atributos e Variáveis-Alvo",
     contexto: "A preparação de dados é uma etapa crítica no aprendizado supervisionado.",
     enunciado: "Rotulagem, atributos e variáveis-alvo são:",
