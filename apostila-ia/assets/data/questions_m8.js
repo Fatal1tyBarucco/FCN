@@ -873,7 +873,7 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-2-topico-1",
     assunto: "M8.2.1 Histogramas com classes de larguras diferentes",
-    contexto: "Dois histogramas sobre a mesma base, uma com largura igual e outra com classes de largura diferente.",
+    contexto: "Dois histogramas representam a mesma base: um usa classes de largura igual, e o outro, classes de larguras diferentes.",
     enunciado: "No histograma de densidade com largura de classe diferente, a afirmação correta sobre a representação é:",
     alternativas: [
       { letra: "A", texto: "A altura da barra representa a frequência da classe, e a densidade é ignorada." },
@@ -931,24 +931,24 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-2-topico-5",
     assunto: "M8.2.6 Box plot e convenções de bigode",
-    contexto: "Dois softwares apresentam o mesmo conjunto, mas usam configurações padrão diferentes para a convenção dos bigodes, sem que a equipe tenha harmonizado os parâmetros.",
+    contexto: "Dois softwares apresentam o mesmo conjunto e o mesmo método de quartis, mas usam multiplicadores diferentes do intervalo interquartílico (por exemplo, 1,0 e 1,5) para definir os limites dos bigodes.",
     enunciado: "A causa mais provável da diferença entre os bigodes em dois softwares é:",
     alternativas: [
       { letra: "A", texto: "Os quartis são calculados diferentemente entre métodos de interpolação." },
-      { letra: "B", texto: "O múltiplo do IIQ não é universal: há softwares com 1,0; 1,5 ou 2,0 como convenção." },
+      { letra: "B", texto: "O multiplicador do IIQ usado para definir os limites dos bigodes pode variar por configuração e precisa ser declarado e harmonizado." },
       { letra: "C", texto: "Um software traça outliers, o outro não." },
       { letra: "D", texto: "Os bigodes sempre são diferentes, pois não há definição matemática." }
     ],
     gabarito: "B",
-    justificativa: "O currículo registra que o múltiplo do IIQ não é universal (há softwares com 1,0; 1,5; 2,0) e que os quartis podem variar conforme o método de interpolação. A alternativa B reproduz exatamente a causa declarada. A A é parcialmente verdadeira (os quartis podem variar), mas a causa mais direta da diferença nos bigodes é o múltiplo do IIQ. C erra: a regra de outliers está no currículo. D erra: há definição matemática (convenção 1,5×IIQ, e variações declaradas).",
+    justificativa: "O limite dos bigodes depende do multiplicador aplicado ao IIQ e da convenção adotada. Como o cenário fixa o mesmo conjunto e o mesmo método de quartis, a diferença decorre do multiplicador configurado; ele deve ser declarado e harmonizado para comparar os gráficos. A alternativa A poderia explicar diferenças em outro cenário, se o método de quartis variasse, mas isso foi excluído do enunciado. C não explica a divergência descrita, e D erra ao afirmar que não há definição matemática.",
     analise: {
       A: "INCORRETA. Erro conceitual: variação de quartis pode existir, mas a causa mais direta da diferença nos bigodes é o múltiplo do IIQ.",
-      B: "CORRETA. Reproduz a declaração do currículo: o múltiplo não é universal (1,0; 1,5; 2,0) e altera os bigodes.",
+      B: "CORRETA. O multiplicador do IIQ altera os limites dos bigodes; a configuração deve ser declarada e harmonizada.",
       C: "INCORRETA. Erro conceitual: a regra de outliers é o mesmo critério; a diferença é a convenção dos bigodes, não a presença de outliers.",
       D: "INCORRETA. Erro conceitual: há definição matemática de bigode (1,5×IIQ); as diferenças vêm de convenção declarada, não de ausência de regra."
     },
-    regra: "Bigode de Tukey: limite em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; convenções alternativas (1,0; 1,5; 2,0) e métodos de quartil são declaráveis e afetam os bigodes.",
-    pegadinha: "A alternativa A é a pegadinha: quartis podem variar, mas a causa mais direta da diferença no bigode é o múltiplo do IIQ.",
+    regra: "Convenção de Tukey usual: limites em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ. Se o software permite outro multiplicador ou método de quartis, declare e harmonize os parâmetros antes de comparar gráficos.",
+    pegadinha: "A alternativa A é uma explicação possível em outros cenários, mas o enunciado fixa o método de quartis; a diferença apresentada decorre do multiplicador do IIQ.",
     fonte: "Currículo M8 — modulo-8-unidade-2-topico-5 (M8.2.6 Box plot e convenções de bigode).",
   },
   {
