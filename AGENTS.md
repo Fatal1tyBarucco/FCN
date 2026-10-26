@@ -975,7 +975,7 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m4-04: corrigida referência bibliográfica. A referência anterior atribuía incorretamente as categorias “preventivo” e “corretivo” às famílias CP e CA do NIST SP 800-53. A fonte agora é o CISA Cyber Resilience Review (CRR) Supplemental Resource Guide, que descreve explicitamente controles preventivos, detectivos, corretivos e compensatórios.
 - Commit de conteúdo: `cdde6523216277e6b85d29528d61a2ef3d7ab188`.
 - Verificação estrutural programática preliminar confirmou 85 IDs únicos q-m4-01..q-m4-85 e 84 questões de múltipla escolha + uma questão certo/errado. A validação detalhada de análise/gabarito deve ser feita com parser compatível com os dois formatos; uma primeira regex genérica não foi conclusiva para objetos de análise multilinha e não deve ser tratada como falha do conteúdo.
-- CI precisa ser conferido no HEAD final; não considerar runs de HEADs anteriores como certificação deste commit.
+- Validação CI observada no HEAD anterior a esta atualização documental (a3bbe39359de7987a6349effb17bbc24aa640717): `Validate curriculum and learning assets` run 40405174858 = success, incluindo matriz curricular, rastreabilidade de assets, estrutura do repositório, heurísticas de qualidade, smoke test e regressões de interação Playwright em `file://`; `PR #17` run 40405176792 = success; `Code Quality: PR #17` run 40405176837 = success. Como esta atualização de AGENTS.md cria novo HEAD, os workflows devem ser reconfirmados para o commit documental resultante.
 
 ## Pitfalls conhecidos
 
