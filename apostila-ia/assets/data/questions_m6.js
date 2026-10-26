@@ -283,7 +283,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "criar cadastro único nacional de servidores públicos." }
     ],
     gabarito: "C",
-    justificativa: "A ementa da LAI registra que ela regula o acesso a informações previsto no art. 5º, XXXIII, no art. 37, § 3º, II, e no art. 216, § 2º, da CF/88, e o parágrafo único do art. 1º subordina ao regime os órgãos da administração direta dos Poderes Executivo, Legislativo (incluindo Cortes de Contas) e Judiciário, o Ministério Público e as entidades da administração indireta. A alternativa A inverte a diretriz do art. 3º, I; C restringe indevidamente o alcance; D cria substituição que não existe — LAI e LGPD se complementam; E atribui à lei objeto que ela não tem.",
+    justificativa: "A LAI regula o acesso às informações previsto na Constituição e, conforme o art. 1º, alcança órgãos da administração direta dos Poderes Executivo, Legislativo e Judiciário, incluindo Cortes de Contas, o Ministério Público e entidades da administração indireta, nos termos legais. A alternativa A inverte a regra de publicidade do art. 3º, I; B restringe indevidamente o alcance ao Executivo federal; C está correta ao descrever o escopo geral da lei; D presume uma substituição inexistente, pois LAI e LGPD se complementam; E atribui à lei objeto que ela não tem.",
     analise: {
       A: "INCORRETA. Erro conceitual de inversão: a lei adota publicidade como preceito geral e sigilo como exceção.",
       B: "INCORRETA. Erro conceitual de restrição: o alcance inclui os três Poderes e o Ministério Público, em todos os entes federativos.",
@@ -375,7 +375,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "a informação coletada na fonte, com o máximo de detalhamento e sem modificações." }
     ],
     gabarito: "C",
-    justificativa: "O art. 4º, II, define documento como unidade de registro de informações, qualquer que seja o suporte ou formato — o que inclui o documento nativo digital. A alternativa A restringe a suportes e formalidades não previstos; C descreve banco de dados, conceito da LGPD; D descreve informação sigilosa (art. 4º, III); E descreve primariedade (art. 4º, IX).",
+    justificativa: "O art. 4º, II, define documento como unidade de registro de informações, qualquer que seja o suporte ou formato, incluindo registros digitais. A alternativa A restringe indevidamente a definição a papel e formalidades específicas; B descreve banco de dados, conceito previsto na LGPD; C está correta e corresponde à definição legal; D descreve informação sigilosa (art. 4º, III); E descreve primariedade (art. 4º, IX).",
     analise: {
       A: "INCORRETA. Erro conceitual de restrição: suporte e formato são indiferentes para a definição legal.",
       B: "INCORRETA. Erro conceitual de troca de conceito: banco de dados é definição da LGPD (art. 5º, IV), não da LAI.",
