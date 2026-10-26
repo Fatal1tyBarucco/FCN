@@ -553,3 +553,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - `q-m1-06`: a fonte agora inclui a documentação Microsoft Learn sobre limites de histórico de versões, que descreve políticas automáticas/manuais e limites configuráveis; isso sustenta a rejeição de uma regra universal de 30 dias independentemente de configurações.
 - `q-m1-08`: fontes específicas distinguem retenção da lixeira de contas pessoais (até 30 dias) e corporativas/escolares (até 93 dias, salvo alteração administrativa) e documentam que expiração/permissões dos links dependem das configurações de compartilhamento.
 - As páginas oficiais foram consultadas em 2026-10-26. A revisão focal e a presença das fontes não substituem a revisão semântica integral nem a validação HTTP automática de todas as URLs.
+
+
+## Correções adicionais da auditoria focal M1 — 2026-10-26
+
+- `q-m1-14`: corrigida a justificativa sobre alinhamento decimal. A versão anterior tinha um exemplo inconsistente com a afirmação; a nova redação explica corretamente a diferença entre tabulação decimal e à direita quando há quantidades diferentes de casas decimais.
+- `q-m1-21`: fontes agora correspondem diretamente aos dois recursos exigidos — repetição do cabeçalho da tabela e classificação por coluna.
+- `q-m1-24`: fonte agora aponta para as instruções Microsoft específicas de criação de PDFs acessíveis e marcas estruturais para leitores de tela.
+- O run [40422839184](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40422839184) falhou na etapa de sintaxe JavaScript porque a primeira adição ao catálogo `references.js` não incluía uma vírgula após a entrada anterior. O erro foi localizado nos logs e corrigido no HEAD subsequente; não considerar o run como validação verde. Aguardar o CI do commit corretivo.

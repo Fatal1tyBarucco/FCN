@@ -505,3 +505,11 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] Reforçada a fonte de `q-m1-06` com a documentação atual de limites de histórico de versões do SharePoint/OneDrive. A afirmação falsa do item é a universalização de um prazo fixo, ignorando configurações e políticas; a documentação do serviço descreve limites automáticos/manuais e possibilidade de desativação administrativa.
 - [x] Reforçadas as fontes de `q-m1-08` para separar retenção da lixeira (30 dias para contas pessoais versus até 93 dias em contas corporativas/escolares, sujeito à configuração) dos controles de compartilhamento de links, que dependem das políticas aplicáveis.
 - [ ] Continuar a revisão semântica independente em lotes, verificando todas as alternativas, justificativas, dificuldade, aderência curricular e fontes. Esta revisão focal não conclui M1 nem as 399 questões.
+
+
+## Continuação da auditoria focal M1 — 2026-10-26
+
+- [x] Corrigida a justificativa e a análise da alternativa D em `q-m1-14`: o texto anterior afirmava incorretamente que alinhamento à direita falharia quando todos os valores tivessem a mesma precisão decimal. A explicação agora reflete que o cenário tem precisões diferentes (1,0; 2,50; 10,750).
+- [x] Corrigida a fonte de `q-m1-21` para as páginas oficiais específicas sobre repetir cabeçalhos de tabelas e classificar conteúdo de tabela no Word.
+- [x] Corrigida a fonte de `q-m1-24` para documentação específica de criação de PDFs acessíveis e marcas estruturais para leitores de tela.
+- [ ] Manter a revisão semântica independente de todos os itens pendente; alterações focais não encerram o M1 nem as 399 questões.

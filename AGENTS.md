@@ -1351,3 +1351,9 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Revisadas as evidências de `q-m1-05`, `q-m1-06` e `q-m1-08`. As fontes foram alinhadas a documentação Microsoft oficial específica para vínculo OLE, limites configuráveis do histórico de versões e retenção da lixeira/controles de compartilhamento.
 - A distinção central em `q-m1-08` é que 30 dias não é uma regra universal para a lixeira: a documentação distingue contas pessoais de contas corporativas/escolares. Os controles de expiração e permissões dos links também dependem da configuração de compartilhamento.
 - As fontes oficiais foram consultadas em 2026-10-26. A revisão continua focal: não afirmar conclusão semântica integral das 399 questões nem validação HTTP automatizada de todas as URLs.
+
+
+## Auditoria focal M1 — 2026-10-26
+
+- Revisadas as questões `q-m1-14`, `q-m1-21` e `q-m1-24`. A justificativa de alinhamento decimal foi corrigida para evitar generalização incorreta; as fontes de repetição/classificação de tabelas e exportação de PDFs acessíveis foram alinhadas a páginas oficiais específicas.
+- O run [40422839184](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40422839184) falhou antes dos testes funcionais por erro de sintaxe em `references.js` (vírgula ausente entre objetos). O defeito foi localizado e corrigido no commit corretivo; aguardar a execução do CI no HEAD atual antes de declarar validação.

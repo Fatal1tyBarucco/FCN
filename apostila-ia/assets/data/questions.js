@@ -420,12 +420,12 @@ id: "q-m1-09",
       { letra: "D", texto: "Tabulador à direita, que alinha o fim de todos os valores na mesma parada." }
     ],
     gabarito: "C",
-    justificativa: "O currículo lista os tipos de tabulação — 'tabulador simples, centrado, decimal, direita' — e o objetivo do enunciado é alinhar a vírgula decimal, função exclusiva do tabulador decimal. O alinhamento à direita (D) alinharia o último caractere de cada valor, o que não satisfaz o critério da vírgula quando os valores têm casas decimais iguais, mas tamanhos inteiros diferentes (1,00 × 100,00).",
+    justificativa: "O tabulador decimal ancora os valores pela vírgula decimal, mesmo quando a quantidade de casas decimais varia (1,0; 2,50; 10,750). O tabulador à direita alinha o fim de cada texto; com precisões decimais diferentes, ele não garante que as vírgulas fiquem na mesma posição. Se todos os valores tivessem a mesma quantidade de casas decimais, o alinhamento à direita poderia coincidir visualmente, mas esse não é o cenário apresentado.",
     analise: {
       A: "INCORRETA. Erro conceitual: tabulador genérico — serve para deslocar o cursor, não para alinhar colunas numéricas por casa decimal.",
       B: "INCORRETA. Erro conceitual: centrar é para títulos ou cabeçalhos curtos; com números de tamanhos distintos, o centro das strings não coincide com a vírgula.",
       C: "CORRETA. Alinhamento decimal é a parada desenhada para alinhar vírgulas decimais em coluna.",
-      D: "INCORRETA. Erro conceitual: resposta 'quase certa'. Alinha à direita o fim do texto; em valores com mesma precisão decimal o efeito visual é próximo, mas a parada que ancora a vírgula é a decimal — e é ela que o currículo associa ao alinhamento por casa decimal."
+      D: "INCORRETA. Alinha o fim dos textos. Como o cenário mistura uma, duas e três casas decimais, a posição final não faz as vírgulas coincidirem; a parada decimal é a opção que ancora explicitamente a vírgula."
     },
     regra: "Paradas de tabulação do Word: simples (esquerda), centrado, decimal (alinha pela vírgula) e direita (alinha o fim do texto).",
     pegadinha: "A proximidade visual entre 'decimal' e 'direita' é o filtro natural da FCC: quem não leu a definição dos quatro tipos escolhe a opção que 'parece' alinhar.",
@@ -614,7 +614,7 @@ id: "q-m1-09",
     },
     regra: "Propriedades de tabela do Word: cabeçalho repetido por página, classificação/filtros, autoajuste, sombreamento — funções da própria tabela, não da página.",
     pegadinha: "A alternativa A soa técnica ('SUM/AVERAGE' aparece no currículo) mas é irrelevante ao objetivo — a pegadinha é confundir cálculo com organização.",
-    fonte: "Microsoft Support — Tornar documentos do Word acessíveis: https://support.microsoft.com/pt-br/accessibility/word/make-your-word-documents-accessible-to-everyone-with-accessibility-assistant",
+    fonte: "Microsoft Support — Repetir o cabeçalho da tabela nas páginas subsequentes: https://support.microsoft.com/pt-br/word/repeat-table-header-on-subsequent-pages; classificar o conteúdo de uma tabela: https://support.microsoft.com/pt-br/word/sort-the-contents-of-a-table",
   },
   {
     id: "q-m1-22",
@@ -695,7 +695,7 @@ id: "q-m1-09",
     },
     regra: "Acessibilidade documental: texto alternativo + hierarquia de títulos (estilos) + contraste + navegação por teclado; a exportação deve preservar essas estruturas.",
     pegadinha: "A alternativa B atrai quem associa 'PDF = imagem fixa'; o ponto cobrado é que acessibilidade depende de estrutura preservada, não de fidelidade visual.",
-    fonte: "Microsoft Support — Tornar documentos do Word acessíveis e usar o verificador de acessibilidade: https://support.microsoft.com/pt-br/accessibility/word/make-your-word-documents-accessible-to-everyone-with-accessibility-assistant",
+    fonte: "Microsoft Support — Criar PDFs acessíveis (marcas de acessibilidade e estrutura para leitores de tela): https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs; salvar ou converter para PDF/XPS nos aplicativos da área de trabalho do Office (marcas estruturais para acessibilidade): https://support.microsoft.com/pt-br/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps",
   },
   {
     id: "q-m1-25",

@@ -1335,8 +1335,7 @@ const references = [
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
-  }
-
+  },
   {
     id: "ref-ms-word-linked-embedded-objects",
     titulo: "Objetos vinculados e incorporados",
@@ -1376,6 +1375,36 @@ const references = [
     dataVerificacao: "2026-10-26",
     status: "verificado",
     dispositivos: null
+  },,
+  {
+    "id": "ref-word-repeat-table-header",
+    "titulo": "Repetir o cabeçalho da tabela nas páginas subsequentes",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/repeat-table-header-on-subsequent-pages",
+    "topico": "M1 — Microsoft 365 (tabelas longas no Word)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
   },
+  {
+    "id": "ref-word-sort-table-content",
+    "titulo": "Classificar o conteúdo de uma tabela",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/sort-the-contents-of-a-table",
+    "topico": "M1 — Microsoft 365 (classificação de linhas em tabelas Word)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-ms-create-accessible-pdfs",
+    "titulo": "Criar PDFs acessíveis",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs",
+    "topico": "M1 — Microsoft 365 (exportação acessível de documentos PDF)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  }
 ];
 if (typeof window !== 'undefined') window.references = references;

@@ -368,3 +368,12 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - Microsoft Support, *Restaurar arquivos ou pastas excluídos no OneDrive*: https://support.microsoft.com/pt-br/onedrive/restore-deleted-files-or-folders-in-onedrive. Distingue até 30 dias para contas pessoais e até 93 dias para contas corporativas/escolares, salvo alteração administrativa. Aplicação: q-m1-08.
 - Microsoft Learn, *Gerenciar configurações de compartilhamento do SharePoint e do OneDrive*: https://learn.microsoft.com/pt-br/sharepoint/turn-external-sharing-on-or-off. Expiração e permissões dos links dependem de opções de compartilhamento habilitadas e das políticas do site/organização. Aplicação: q-m1-08.
 - As páginas oficiais foram consultadas diretamente em 2026-10-26. A revisão focal confirma a adequação dessas referências aos conceitos mencionados; não é uma aprovação semântica integral das 399 questões nem validação HTTP automática de todas as URLs.
+
+
+## Auditoria focal M1 — tabelas, precisão decimal e PDF acessível (2026-10-26)
+
+- Microsoft Support, *Repetir o cabeçalho da tabela nas páginas subsequentes*: https://support.microsoft.com/pt-br/word/repeat-table-header-on-subsequent-pages. Documenta repetição da linha de cabeçalho em tabelas longas. Aplicação: q-m1-21.
+- Microsoft Support, *Classificar o conteúdo de uma tabela*: https://support.microsoft.com/pt-br/word/sort-the-contents-of-a-table. Documenta classificação por coluna e ordem crescente/decrescente. Aplicação: q-m1-21.
+- Microsoft Support, *Criar PDFs acessíveis*: https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs. Orienta usar o verificador de acessibilidade e marcas de estrutura do documento para leitores de tela na geração do PDF. Aplicação: q-m1-24.
+- Corrigida a justificativa de q-m1-14: o tabulador à direita pode coincidir visualmente com o alinhamento decimal quando os valores têm a mesma precisão; no cenário apresentado, com uma, duas e três casas decimais, o tabulador decimal é o que garante o alinhamento pela vírgula.
+- As fontes foram consultadas em 2026-10-26. Revisão focal não equivale à auditoria semântica integral nem à validação HTTP automática de todas as URLs.
