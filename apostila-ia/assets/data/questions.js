@@ -807,7 +807,7 @@ id: "q-m1-09",
     nivel: "basico",
     topico: "modulo-1-unidade-3-topico-3-sub-2",
     assunto: "M1.3 Excel (simulador documentado)",
-    contexto: "Planilha com notas 7,5; 8,0; 6,5; 9,0 e 8,5. Fonte do conteúdo: escopo documentado do simulador Excel (assets/js/simulators.js) e exemplos resolvidos do index.html — a unidade 1.3 NÃO possui entrada de currículo em curriculum.js (limitação declarada do repositório).",
+    contexto: "Planilha com notas 7,5; 8,0; 6,5; 9,0 e 8,5. O exercício aplica a função MÉDIA ao conteúdo de Excel da unidade 1.3 e ao simulador documentado em assets/js/simulators.js.",
     enunciado: "Qual o resultado de MÉDIA(7,5; 8,0; 6,5; 9,0; 8,5)?",
     alternativas: [
       { letra: "A", texto: "7,9" },
