@@ -482,6 +482,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m4-30: cadeia de suprimentos definida por comprometimento de fornecedor, dependência, pipeline ou distribuição; assinatura e reputação não são garantia absoluta.
 - Commit de conteúdo: `3cb53759c15432eac125fab4c323eac49eff996c`. As referências devem ser confirmadas pelos validadores de links/catálogo e o conjunto deve passar novamente pelos testes automatizados.
 
+## Auditoria semântica incremental — lote M4 q-m4-21 a q-m4-40 (2026-10-26)
+
+- q-m4-21 a q-m4-30: revisão focal de phishing, pharming, engenharia social, força bruta online/offline, MitM, DDoS, exposição de dados, replay, IoCs e cadeia de suprimentos. Conceitos centrais, gabaritos e distratores estavam coerentes no conteúdo consultado; mantidos sem reescrita ampla para evitar mudanças sem necessidade.
+- q-m4-22: a descrição de pharming é coerente com redirecionamento técnico, mas a fonte CISA citada é mais diretamente sobre phishing; a referência ICANN de segurança de DNS dá contexto técnico, não deve ser tratada como uma definição normativa exclusiva de pharming.
+- q-m4-31 a q-m4-35: revisão focal de princípios e bases legais da LGPD, distinção entre fundamentos/princípios do Marco Civil, natureza e competências da ANPD, e direitos dos titulares. Mantida a distinção entre direitos legais e direito absoluto de apagar todos os registros.
+- q-m4-35: adicionada referência ao texto oficial compilado da LGPD para facilitar conferência dos direitos previstos no art. 18.
+- q-m4-36: eliminada duplicação substancial com q-m4-34. A questão agora aborda fiscalização e sanções administrativas da ANPD, com limites legais, sem sugerir poderes ilimitados nem exclusividade sobre competências judiciais/criminais.
+- Commit de conteúdo deste lote: `28a3781aaf57f0486701ae183cf686a549149208`.
+- Fontes legais citadas no lote incluem textos oficiais do Planalto para LGPD, Marco Civil, Constituição Federal, EC nº 115/2022 e Lei nº 15.352/2026; fontes técnicas incluem CISA, NIST, OWASP, RFC 8446 e ICANN. Revisão semântica focal; validar automatizadamente no HEAD atual antes de considerar o lote concluído.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
