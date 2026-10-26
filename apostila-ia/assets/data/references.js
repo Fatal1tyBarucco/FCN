@@ -1325,6 +1325,16 @@ const references = [
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
+  },
+  {
+    "id": "ref-google-meet-breakout-eligibility",
+    "titulo": "Usar salas temáticas no Google Meet",
+    "organizacao": "Google Meet Help",
+    "url": "https://support.google.com/google-workspace-individual/answer/10099500?hl=pt-BR",
+    "topico": "M3 — Comunicação (elegibilidade de salas temáticas)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
   }
 ];
 if (typeof window !== 'undefined') window.references = references;
