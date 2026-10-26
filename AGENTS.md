@@ -245,6 +245,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `8c4249e801702374ebb8165550dc59cc24369aab`.
 - Fontes técnicas citadas incluem NIST FIPS 186-5, SP 800-56A, FIPS 180-4, SP 800-63B, RFC 5280, ITU-T X.509, MITRE ATT&CK e CISA. Este passe não substitui a revisão integral do M4 nem a validação automatizada do HEAD.
 
+## Auditoria semântica e didática incremental — lote M4 q-m4-61 a q-m4-65 (2026-10-26)
+
+- q-m4-61: substituída a metáfora imprecisa por um cenário de ransomware/trojan; esclarece que categorias podem se sobrepor e que nem todo malware se replica automaticamente.
+- q-m4-62: corrigida a generalização de que antivírus só detecta por assinatura e EDR sempre responde em tempo real; a questão descreve capacidades típicas e dependência do produto/configuração.
+- q-m4-63: corrigida a descrição de segmentação e a fonte técnica; agora trata de zonas, regras explícitas e redução do movimento lateral, sem afirmar que sub-redes por si só isolam tráfego.
+- q-m4-64: removida a expressão sem sentido “afeitamento/agentar a segurança” e a metáfora “tirar a faca”; a questão aborda hardening, redução da superfície de ataque, atualização controlada e privilégio mínimo.
+- q-m4-65: substituída a definição elementar por priorização contextual de vulnerabilidades, considerando exploração conhecida, exposição, criticidade, mitigação, verificação e exceções documentadas.
+- Commit de conteúdo: `9c28aea9f2b03e272d9ed98bcac46bed3044eee2`.
+- Fontes técnicas citadas incluem NIST SP 800-83 Rev. 1, SP 800-207, SP 800-53 Rev. 5, CIS Controls v8.1, NIST SP 800-40 Rev. 4 e o catálogo CISA KEV. Este passe não substitui a revisão integral do M4 nem os testes no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
