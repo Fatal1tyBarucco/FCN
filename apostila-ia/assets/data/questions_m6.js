@@ -293,7 +293,7 @@ const moduleQuestions6 = [
     },
     regra: "LAI: escopo amplo (três Poderes, MP, administração indireta) e diretriz de publicidade como preceito geral.",
     pegadinha: "'Exclusivamente o Executivo federal' explora a confusão entre âmbito de aplicação e âmbito de regulamentação.",
-    fonte: "Lei nº 12.527/2011, art. 1º, caput e parágrafo único, e art. 3º, I (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 1º, caput e parágrafo único, e art. 3º, I, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-12", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -310,7 +310,7 @@ const moduleQuestions6 = [
     },
     regra: "Pedido de acesso: identificação do requerente + especificação da informação; vedado exigir motivos.",
     pegadinha: "Itens que introduzem requisito não previsto em lei são falsos ainda que soem 'administrativamente razoáveis'.",
-    fonte: "Lei nº 12.527/2011, art. 10, caput, § 1º e § 3º (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 10, caput, §§ 1º e 3º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-13", modulo: 6, formato: "mc", estilo: "vunesp", origem: "autoral",
@@ -335,7 +335,7 @@ const moduleQuestions6 = [
     },
     regra: "LAI alcança, no que couber, entidade privada sem fins lucrativos que receba recurso público para ação de interesse público — publicidade limitada à parcela pública.",
     pegadinha: "A palavra 'restrita' é decisiva: quem lê só 'entidades privadas' erra por generalização.",
-    fonte: "Lei nº 12.527/2011, art. 2º, e art. 22 (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), arts. 2º e 22, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-14", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -360,7 +360,7 @@ const moduleQuestions6 = [
     },
     regra: "Art. 11: acesso imediato quando possível; 20 dias para responder; prorrogação de 10 dias com justificativa expressa; informar recurso e autoridade (§ 4º).",
     pegadinha: "Prazos redondos e curtos (48 h, 120 h, 5 dias) são inventados com frequência em prova: memorize apenas o par 20 + 10.",
-    fonte: "Lei nº 12.527/2011, art. 11, caput e §§ 1º, 2º e 4º (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 11, caput e §§ 1º, 2º e 4º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-15", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -385,7 +385,7 @@ const moduleQuestions6 = [
     },
     regra: "Documento = unidade de registro, qualquer suporte ou formato; a LAI é indiferente ao meio.",
     pegadinha: "A questão cobra a troca entre os nove conceitos do art. 4º; leia todos antes de responder.",
-    fonte: "Lei nº 12.527/2011, art. 4º, I a IX (verificado em 2026-10-21)."
+    fonte: "Lei nº 12.527/2011 (LAI), art. 4º, I a IX, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m6-16", modulo: 6, formato: "ce", estilo: "cespe", origem: "autoral",
