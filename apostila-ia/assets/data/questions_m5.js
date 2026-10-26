@@ -179,7 +179,7 @@ const moduleQuestions5 = [
     },
     regra: "XAI = métodos para compreender aspectos das previsões ou do comportamento de um modelo, com limitações explícitas.",
     pegadinha: "Uma explicação plausível não é prova de causalidade, justiça ou correção; confira o escopo da técnica usada.",
-    fonte: "Arrieta, A. et al. — Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, 2020."
+    fonte: "Arrieta, A. et al. — Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, Information Fusion, 58 (2020), DOI: https://doi.org/10.1016/j.inffus.2019.12.012."
   },
 
     { id: "q-m5-08", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
