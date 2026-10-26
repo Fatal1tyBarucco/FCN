@@ -1283,3 +1283,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Os documentos de governança e o código da branch devem ser lidos antes de novas alterações. Evitar repetir a geração de inventário/matriz já existente; atualizar com evidências novas e preservar o histórico.
 - Evidência do PR descreve testes Playwright em `file://` e auditorias automatizadas; isso não comprova revisão semântica independente, conformidade WCAG ou testes físicos. Confirmar checks no HEAD atual antes de registrar estado verde.
 - Próximo foco: revisão independente por lotes de questões/gabaritos e validação de fontes primárias, seguida de revisão de acessibilidade e compatibilidade. Registrar IDs revisados para impedir retrabalho.
+
+## Evidências e continuidade após auditoria de 2026-10-26
+
+- Run `40409912389` testou o SHA `4e0c9eae346116c7c9c0957196ea315dd4f16b00`. Sintaxe, matriz estrutural, rastreabilidade, estrutura do repositório, heurísticas e smoke test `file://` passaram; o teste de interação falhou por contraste axe-core 2,08:1 (`#4b5563` sobre `#1f232c`).
+- Correção aplicada na branch: textos auxiliares dos seis simuladores foram alterados para `#cbd5e1`. A correção é candidata, não aprovada, até um novo workflow concluir.
+- Contagem curricular derivada dos oito arquivos de origem: 295 subtópicos, 888 exemplos e 592 exercícios detectados estruturalmente. `docs/MATRIZ_COBERTURA.csv` tem 295 linhas de dados e foi sincronizada com os contadores por subtópico.
+- Artefato do run 40409912389: 132 tópicos, 460 flashcards e 399 questões; nenhuma duplicata/alerta heurístico detectado. Ainda assim, 112 questões não têm fonte identificada no campo analisado (M1=36, M2=40, M3=36). M1 também apresenta distribuição MC A=4, B=15, C=5, D=2, E=0 (26 questões). Revisar conteúdo e fontes; não mudar gabaritos corretos para equilibrar letras.
+- Achados, limitações e itens pendentes estão registrados em `docs/PENDENCIAS.md` e `docs/RELATORIO_TESTES.md`. Revisão semântica integral, conferência de fontes, leitor de tela, auditoria manual WCAG e testes físicos continuam pendentes.
+- Commits recentes: correção de contraste nos simuladores; sincronização de `docs/MATRIZ_COBERTURA.csv`; registros de auditoria em `docs/PENDENCIAS.md` e `docs/RELATORIO_TESTES.md`. O HEAD deve ser consultado antes de associar qualquer execução de CI à branch.
+- Preservar PR #17 como Draft; não fazer merge. Executar as tarefas em lotes coerentes e evitar commits redundantes que reiniciem os mesmos testes.
+
