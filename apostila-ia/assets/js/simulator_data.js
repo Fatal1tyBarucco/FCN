@@ -416,7 +416,7 @@
   var dataCss = '<style>'
     + '.sim-dados{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-dados h3{margin:8px 0 2px}.sim-dados h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-dados-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-dados-sub{color:#cbd5e1;font-size:.85rem;margin:0 0 12px}'
     + '.sim-dados-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
     + '.sim-dados-tabela{border-collapse:collapse;width:100%;margin:8px 0}'
     + '.sim-dados-tabela th,.sim-dados-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}'
