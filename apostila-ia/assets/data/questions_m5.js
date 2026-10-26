@@ -648,7 +648,7 @@ const moduleQuestions5 = [
       item: "INCORRETA. RLHF pode reduzir certos vieses, mas não os elimina; é necessário monitoramento contínuo e avaliação por subgrupos."
     },
     regra: "Alinhamento reduz vieses, não os elimina.",
-    pegadinha: "Alinhamento não significa ausência total de vieses."
+    pegadinha: "Alinhamento não significa ausência total de vieses.",
     fonte: "OpenAI — Training language models to follow instructions, 2022."
   },
 
