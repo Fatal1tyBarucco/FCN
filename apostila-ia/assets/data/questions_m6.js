@@ -70,28 +70,28 @@ const moduleQuestions6 = [
   },
 
   { id: "q-m6-03", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m6-u1-t1-s2", assunto: "6.1 — Moralidade e finalidade do tratamento de dados",
-    contexto: "A moralidade administrativa opera na zona que a lei não cobre e complementa a legalidade.",
-    enunciado: "A moralidade administrativa, aplicada ao tratamento de dados em serviço público digital, veda, entre outras condutas,",
+    nivel: "basico", topico: "m6-u1-t1-s2", assunto: "6.1 — Finalidade e adequação no tratamento de dados",
+    contexto: "Um órgão coleta dados pessoais para prestar atendimento a cidadãos. Sem informar essa finalidade adicional, sem demonstrar compatibilidade com a finalidade pública do serviço e sem identificar fundamento jurídico aplicável, uma equipe decide reutilizar os registros para classificar individualmente o desempenho dos usuários do serviço.",
+    enunciado: "Considerando os princípios da finalidade e da adequação da LGPD e as regras aplicáveis ao tratamento de dados pelo poder público, qual avaliação é correta?",
     alternativas: [
-      { letra: "A", texto: "o desvio de finalidade: usar dado coletado para o atendimento com propósito diverso, como ranking de desempenho." },
-      { letra: "B", texto: "a adoção de critérios públicos e impessoais de decisão." },
-      { letra: "C", texto: "a recusa de vantagem pessoal oferecida por fornecedor interessado no contrato." },
-      { letra: "D", texto: "a divulgação, em transparência ativa, de indicadores agregados de atendimento." },
-      { letra: "E", texto: "a revisão humana de decisões automatizadas de maior impacto." }
+      { letra: "A", texto: "A reutilização descrita é incompatível com o regime de proteção de dados, pois a finalidade adicional não foi informada nem demonstrada como compatível com a finalidade pública e com um fundamento jurídico aplicável." },
+      { letra: "B", texto: "A reutilização é automaticamente válida se os critérios de classificação forem públicos e aplicados de modo impessoal." },
+      { letra: "C", texto: "A reutilização é automaticamente válida porque o órgão já coletou legitimamente os dados para o atendimento." },
+      { letra: "D", texto: "A reutilização é sempre proibida, mesmo quando houver finalidade pública compatível, fundamento jurídico e transparência." },
+      { letra: "E", texto: "A reutilização torna-se válida apenas porque uma pessoa revisa manualmente a classificação produzida." }
     ],
     gabarito: "A",
-    justificativa: "A moralidade exige compatibilidade entre a finalidade declarada e a finalidade real do tratamento. Coletar dado para atender e usá-lo para ranking é desvio de finalidade — conduta vedada ainda que houvesse algum amparo formal. As demais alternativas descrevem condutas conformes: critérios públicos (B), recusa de vantagem (C), transparência ativa de dado agregado (D) e revisão humana de decisões de impacto (E).",
+    justificativa: "A LGPD exige propósitos legítimos, específicos, explícitos e informados, compatibilidade entre o tratamento e as finalidades informadas e limitação ao mínimo necessário (art. 6º, I a III). Para o poder público, o art. 23 também exige finalidade pública e tratamento orientado às competências ou atribuições legais, com informação clara sobre previsão legal, finalidade, procedimentos e práticas. No cenário, a equipe não informou a finalidade adicional nem demonstrou sua compatibilidade ou o fundamento jurídico aplicável. Isso não significa que toda reutilização seja proibida: ela precisa ser avaliada à luz da finalidade pública, da base jurídica, da adequação, da necessidade e da transparência.",
     analise: {
-      A: "CORRETA. Desvio de finalidade é o exemplo típico de violação da moralidade no tratamento de dados: o dado serve ao serviço, não a finalidade superveniente.",
-      B: "INCORRETA. Erro conceitual de inversão: critério público e impessoal é o que a moralidade e a impessoalidade exigem, não o que vedam.",
-      C: "INCORRETA. Erro conceitual de inversão: recusar vantagem é conduta exigível; a vedação recai sobre aceitá-la.",
-      D: "INCORRETA. Erro conceitual de confusão entre transparência e exposição: indicador agregado é transparência legítima; a exposição vedada é a de dado identificável.",
-      E: "INCORRETA. Erro conceitual de inversão: a revisão humana é salvaguarda, não conduta vedada."
+      A: "CORRETA. Identifica a ausência de informação e de demonstração de compatibilidade e fundamento jurídico no cenário apresentado.",
+      B: "INCORRETA. Publicidade e impessoalidade dos critérios não substituem os requisitos da LGPD para a finalidade e o tratamento pelo poder público.",
+      C: "INCORRETA. A coleta legítima para uma finalidade não autoriza automaticamente qualquer uso posterior.",
+      D: "INCORRETA. A LGPD não proíbe toda finalidade adicional; exige análise de compatibilidade, fundamento jurídico, necessidade, transparência e demais requisitos aplicáveis.",
+      E: "INCORRETA. Revisão manual, isoladamente, não corrige a ausência de finalidade compatível ou de fundamento jurídico para o tratamento."
     },
-    regra: "Moralidade digital: a finalidade declarada da coleta deve ser a finalidade real do uso; desvio de finalidade é violação autônoma.",
-    pegadinha: "Questões que apresentam como 'vedado' exatamente o que a norma exige são armadilha de leitura; confira a direção do verbo.",
-    fonte: "CF/88, art. 37, caput; Lei nº 12.527/2011, art. 31, caput; Lei nº 13.709/2018, arts. 5º, I, e 6º, I a III (finalidade, adequação e necessidade; verificados em fontes oficiais em 2026-10-26)."
+    regra: "Finalidade e adequação: o uso deve corresponder a propósitos legítimos, específicos, explícitos e informados, ser compatível com o contexto e, no poder público, atender à finalidade pública e às competências ou atribuições legais.",
+    pegadinha: "Não confunda coleta inicialmente legítima com autorização irrestrita para reutilização; tampouco conclua que toda finalidade adicional é proibida.",
+    fonte: "Lei nº 13.709/2018 (LGPD), art. 6º, I a III, e art. 23, caput e inciso I, texto oficial consolidado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Constituição Federal, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm."
   },
 
   { id: "q-m6-04", modulo: 6, formato: "mc", estilo: "vunesp", origem: "autoral",
