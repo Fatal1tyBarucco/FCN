@@ -271,7 +271,7 @@ const moduleQuestions8 = [
     nivel: "basico",
     topico: "modulo-8-unidade-4-topico-2",
     assunto: "M8.4.2 Tableau e Looker Studio",
-    contexto: "Escola quer publicar um painel simples ligado a uma planilha, sem instalação e sem custo inicial.",
+    contexto: "Uma escola quer compartilhar com a equipe interna um painel ligado a uma planilha com dados operacionais não destinados à publicação pública; não pode instalar software nem assumir custo inicial.",
     enunciado: "Em relação à escolha de ferramenta para o cenário descrito, assinale a opção correta.",
     alternativas: [
       { letra: "A", texto: "Tableau Public, pois é gratuita e não exige instalação para a leitura." },
@@ -280,7 +280,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Nenhum, pois o painel sempre exige licença paga." }
     ],
     gabarito: "B",
-    justificativa: "O currículo registra que o Looker Studio é uma ferramenta de painéis em navegador, com editor gratuito para uso básico e conectores a fontes de dados; elimina instalação e custo inicial de autoria. A alternativa B reproduz isso nos termos do cenário. A alternativa A é um erro de uso: o Tableau Public publica em área pública, incompatível com bom senso de dados. A C erra: o Desktop é licenciado (pago) e para autoria. A D é exagerada: o uso básico do Looker Studio é gratuito.",
+    justificativa: "O currículo registra que o Looker Studio é uma ferramenta de painéis em navegador, com editor gratuito para uso básico e conectores a fontes de dados; elimina instalação e custo inicial de autoria. A alternativa B reproduz isso nos termos do cenário e permite compartilhar o painel conforme as permissões configuradas. A alternativa A é inadequada porque Tableau Public é voltado à publicação pública, incompatível com os dados operacionais internos descritos. A C erra: o Desktop é licenciado para autoria. A D é exagerada: o uso básico do Looker Studio é gratuito.",
     analise: {
       A: "INCORRETA. Erro conceitual: publicação pública de dados da escola não é condizente com bom senso; o Looker Studio é mais adequado ao cenário descrito.",
       B: "CORRETA. Reproduz as três características fundamentais: navegador, conectores e gratuidade básica.",
@@ -386,7 +386,7 @@ const moduleQuestions8 = [
       { letra: "A", texto: "Em escala logarítmica, distâncias iguais significam acréscimo absoluto igual." },
       { letra: "B", texto: "O gráfico logarítmico inverte a escala, fazendo os valores crescerem decrescente." },
       { letra: "C", texto: "Cada passo multiplica pelo mesmo fator, e a escala logarítmica exige que cada passo represente uma razão constante." },
-      { letra: "D", texto: "A escala logarítmica só funciona para dados positivos, sem influenciar a distância." }
+      { letra: "D", texto: "A escala logarítmica só funciona para valores positivos, mas as distâncias visuais continuam proporcionais aos acréscimos absolutos." }
     ],
     gabarito: "C",
     justificativa: "O currículo afirma que em escala logarítmica, distâncias iguais representam razões iguais: cada passo multiplica. O passo visual entre 10 e 100 é igual ao entre 100 e 1.000 porque ambos são multiplicação por 10. A alternativa C reproduz isso. A B está invertida: em logaritmo, passo igual significa fator multiplicativo, não acréscimo absoluto. A D está incorreta porque a escala logarítmica altera as distâncias visuais de acordo com razões multiplicativas; ela não deixa a distância sem influência.",
@@ -394,7 +394,7 @@ const moduleQuestions8 = [
       A: "INCORRETA. Inverte o princípio: em escala logarítmica, passo igual significa fator multiplicativo, não acréscimo absoluto.",
       B: "INCORRETA. Erro conceitual: a escala logarítmica não inverte a ordem; os valores aumentam em sequência.",
       C: "CORRETA. Reproduz a definição do currículo: passo igual = razão constante (fator multiplicativo).",
-      D: "INCORRETA. Erro conceitual: a distância no gráfico logarítmico é determinada pela razão, não por um 'nenhum influência' vago."
+      D: "INCORRETA. Embora a escala logarítmica comum exija valores positivos, as distâncias visuais representam razões multiplicativas, não acréscimos absolutos."
     },
     regra: "Escala linear: passo = diferença absoluta. Escala logarítmica: passo = razão (multiplicação). Em log, subida visual igual = mesmo fator, não mesmo acréscimo.",
     pegadinha: "A pegadinha é aceitar 'passo igual = valor novo' — na escala logarítmica, distâncias visuais iguais correspondem ao mesmo fator multiplicativo.",
