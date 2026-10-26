@@ -400,6 +400,19 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Fontes: Murphy (2012), ISLR (2ª ed., 2021), Jain (2010; DOI 10.1016/j.patrec.2009.09.011) e documentação scikit-learn sobre armadilhas comuns.
 - Commit de conteúdo: `e0e64d51e4fb04a4401ac71abda74d1de6d4f595`. Validar sintaxe e auditorias automatizadas no HEAD atual antes de considerar o lote concluído.
 
+## Auditoria semântica incremental — lote M5 q-m5-01..q-m5-10 (2026-10-26)
+
+- q-m5-01: atualizada a definição de IA para abranger diferentes tarefas e métodos, sem pressupor consciência, robótica ou aprendizado autônomo.
+- q-m5-02: sistema baseado em regras contextualizado; incluídos manutenção, conflitos, exceções e possibilidade de arquitetura híbrida.
+- q-m5-03: ampliada a definição de aprendizado de máquina para incluir diferentes paradigmas e a ressalva de que mais dados não garantem melhora.
+- q-m5-04 e q-m5-05: revisão focal sem alteração de conteúdo; continuam distinguindo treino/validação/teste e sobreajuste.
+- q-m5-06: reescrita para associar padrões de erro a subajuste/sobreajuste sem tratar viés/variância como regras absolutas.
+- q-m5-07 e q-m5-08: revisão focal sem alteração; XAI mantém ressalvas sobre causalidade e explicações, inferência permanece distinta de treinamento.
+- q-m5-09: atualizada para incluir métricas alinhadas ao uso, análise de erros/subgrupos, separação de teste e monitoramento.
+- q-m5-10: revisão focal sem alteração; escopo e avaliação vinculados ao caso de uso, aos critérios e aos riscos.
+- Fontes: OECD AI system definition; Russell & Norvig; Mitchell; Geman et al. (DOI 10.1162/neco.1992.4.1.1); NIST AI RMF 1.0. Commit de conteúdo: `efa0562605a895839f184b41d6cb8e1df3fd6f30`.
+- Aguardando conclusão da validação automatizada do HEAD atualizado; não assumir aprovação com base em execuções canceladas ou em commits anteriores.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
