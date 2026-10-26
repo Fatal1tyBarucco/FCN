@@ -1016,6 +1016,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `3319f3dfed4db198b09a78e5251d90b51b83d391`.
 - Revisão focal; validar sintaxe, esquema, fontes e CI no HEAD final.
 
+## Auditoria semântica incremental — M5 q-m5-26 a q-m5-30 (2026-10-26)
+
+- q-m5-26: mantida a afirmação de que RLHF pode reduzir certos comportamentos indesejados sem eliminar vieses; fonte atualizada para o NIST AI 600-1.
+- q-m5-27: mantidas as tendências gerais da temperatura, com ressalva explícita de que baixa temperatura não garante determinismo em qualquer modelo/configuração.
+- q-m5-28: refinada a justificativa para dizer que tarefa, contexto, restrições e formato podem reduzir ambiguidades e facilitar avaliação, sem garantir respostas idênticas ou corretas.
+- q-m5-29: mantida a distinção entre zero-shot (sem exemplos no prompt) e few-shot (com exemplos), sem alegar diferença universal de velocidade.
+- q-m5-30: removida a afirmação de que delimitadores tornam o modelo “mais previsível”; delimitadores ajudam a separar instruções e dados, mas não determinam o comportamento de amostragem nem bloqueiam sozinhos injeções.
+- Commits de conteúdo: `2b8ab1f702535487573e44931b2204bac1c1c50e`; as questões q-m5-21 e q-m5-25 foram reescritas no commit `3319f3dfed4db198b09a78e5251d90b51b83d391`.
+- Revisão focal; validar sintaxe, esquema e CI no HEAD final.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
