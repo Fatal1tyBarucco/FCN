@@ -649,6 +649,17 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `cf64fc34b8bf3da6af6f629254ee979071c52609`.
 - Revisão focal; validação automatizada ainda deve ser confirmada no HEAD atual.
 
+## Auditoria semântica incremental — lote M6 q-m6-16 a q-m6-20 (2026-10-26)
+
+- q-m6-16: mantida a coexistência entre transparência ativa (art. 8º) e passiva (arts. 10 e 11); divulgação de ofício não elimina o direito de pedir informações não publicadas.
+- q-m6-17: requisitos dos sítios oficiais da LAI revistos, incluindo formatos abertos/não proprietários, acesso automatizado legível por máquina, atualização, autenticidade e acessibilidade.
+- q-m6-18: mantida a leitura de uso de tecnologia da informação como diretriz do art. 3º, III, e delimitada a exceção de municípios com até 10 mil habitantes ao dever específico de divulgação na internet do art. 8º, § 2º, sem afastar as demais obrigações.
+- q-m6-19: mantida a distinção entre informação pessoal e informação classificada; o prazo máximo de 100 anos do art. 31 não depende de classificação de sigilo, com ressalvas e hipóteses legais aplicáveis.
+- q-m6-20: mantido o rol mínimo de divulgação ativa do art. 8º, § 1º, com distinção entre transparência pública e exposição irrestrita de dados pessoais.
+- Adicionadas URLs oficiais do Planalto para a LAI nas cinco questões.
+- Commit de conteúdo: `b3af43a3bc391abfa0c6281acc95439083be8265`.
+- Revisão focal; validar o HEAD atual por CI antes de considerar o lote encerrado.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
