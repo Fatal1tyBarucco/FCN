@@ -944,7 +944,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: desconexão com o conteúdo — rede compartilha recursos e informação, não energia elétrica."
     },
     regra: "Modelo requisição-resposta: cliente solicita → servidor processa e responde. Papéis são funcionais, não físicos (o mesmo dispositivo pode ter ambos).",
-    pegadinha: "Alternativa A é o oposto exato da definição; quem decora 'cliente-servidor' sem ler os verbos (solicitar × fornecer) tropeça nela."
+    pegadinha: "Alternativa A é o oposto exato da definição; quem decora 'cliente-servidor' sem ler os verbos (solicitar × fornecer) tropeça nela.",
+    fonte: "Cisco — LANs cliente/servidor e peer-to-peer: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
   },
   {
     id: "q-m2-02",
@@ -966,7 +967,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: tratar 'cliente-servidor' como classificação fixa do equipamento. É classificação do MOMENTO da comunicação — é por isso que o exercício do currículo marca o item como Errado."
     },
     regra: "Papéis funcionais por comunicação: em uma cadeia A→B→C, B é servidor para A e cliente para C.",
-    pegadinha: "Palavras absolutas ('nunca', 'sempre', 'somente') são os gatilhos clássicos de item C/E falso — mas só o conteúdo decide; aqui o currículo fornece contraprova explícita."
+    pegadinha: "Palavras absolutas ('nunca', 'sempre', 'somente') são os gatilhos clássicos de item C/E falso — mas só o conteúdo decide; aqui o currículo fornece contraprova explícita.",
+    fonte: "Cisco — LANs cliente/servidor e peer-to-peer: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
   },
   {
     id: "q-m2-03",
@@ -994,7 +996,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: restrição geográfica indevida. A classificação cliente-servidor descreve qualquer comunicação de rede, interna ou não."
     },
     regra: "Nós = todos os dispositivos (finais e intermediários); enlaces = canais; cliente/servidor = papéis por recurso solicitado/fornecido.",
-    pegadinha: "A alternativa C é a pegadinha conceitual mais comum: 'quem pede é cliente, quem dá é servidor' — inverter os verbos leva a C, não a A."
+    pegadinha: "A alternativa C é a pegadinha conceitual mais comum: 'quem pede é cliente, quem dá é servidor' — inverter os verbos leva a C, não a A.",
+    fonte: "Cisco — tipos de rede e componentes de rede: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html",
   },
   {
     id: "q-m2-04",
@@ -1022,7 +1025,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: nega a oferta de recursos; e a inexistência de servidor dedicado não apaga o papel funcional de servidor."
     },
     regra: "Arquitetura P2P: os pares podem ofertar e consumir recursos; a distribuição não depende necessariamente de um servidor central dedicado, embora algumas implementações usem servidores de coordenação ou indexação.",
-    pegadinha: "A FGV adora a alternativa 'conceito radicalmente correto-errada' (A): ela parece profundamente técnica ('os papéis desaparecem'), mas contradiz a correção explícita do material."
+    pegadinha: "A FGV adora a alternativa 'conceito radicalmente correto-errada' (A): ela parece profundamente técnica ('os papéis desaparecem'), mas contradiz a correção explícita do material.",
+    fonte: "Cisco — LANs cliente/servidor e peer-to-peer: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
   },
   {
     id: "q-m2-05",
@@ -1050,7 +1054,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: generalização indevida — WAN é usada entre cidades/países; para uma única cidade, MAN é a classificação específica."
     },
     regra: "Classificação por escopo geográfico: PAN (pessoal) < LAN/WLAN (local) < MAN (cidade) < WAN (país/continente).",
-    pegadinha: "WAN é a tentação clássica ('maior é melhor'); a classificação é por ABRANGÊNCIA MÍNIMA necessária, não pelo tamanho da organização."
+    pegadinha: "WAN é a tentação clássica ('maior é melhor'); a classificação é por ABRANGÊNCIA MÍNIMA necessária, não pelo tamanho da organização.",
+    fonte: "Cisco — LAN e WAN e como conectam dispositivos e redes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html ; https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-06",
@@ -1072,7 +1077,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: considerar WLAN uma categoria autônoma, distinta de LAN (o currículo a define como subtipo)."
     },
     regra: "Siglas de abrangência: PAN/LAN/MAN/WAN classificam área; o sufixo 'W' (Wireless) indica meio, não nova área.",
-    pegadinha: "Item simples por design (básico): o risco é o excesso de confiança — itens C/E fáceis aparecem misturados com difíceis para testar disciplina de leitura."
+    pegadinha: "Item simples por design (básico): o risco é o excesso de confiança — itens C/E fáceis aparecem misturados com difíceis para testar disciplina de leitura.",
+    fonte: "Cisco — LAN com dispositivos conectados por cabo ou sem fio: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
   },
   {
     id: "q-m2-07",
@@ -1100,7 +1106,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: PAN é curto alcance pessoal (Bluetooth), não interligação entre sedes."
     },
     regra: "WAN = interconexão de redes sobre longa distância; meios: VPN sobre Internet ou circuito dedicado (MPLS, fibra alugada).",
-    pegadinha: "A alternativa B explora a palavra 'cidade' — quem lê 'duas cidades' e para aí escolhe MAN não percebe que a MAN do currículo cobre uma única área metropolitana."
+    pegadinha: "A alternativa B explora a palavra 'cidade' — quem lê 'duas cidades' e para aí escolhe MAN não percebe que a MAN do currículo cobre uma única área metropolitana.",
+    fonte: "Cisco — WAN como interconexão de LANs e redes geograficamente separadas: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-08",
@@ -1122,7 +1129,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: validar só o trecho técnico (TCP/IP) e ignorar a identificação de rede. O critério distintivo é o ACESSO (privado/restrito × público global), não o protocolo."
     },
     regra: "Igualdade de protocolo ≠ igualdade de rede: distinção por domínio administrativo e política de acesso (intranet privada, extranet estendida a terceiros, Internet pública).",
-    pegadinha: "Item composto com metade verdadeira — a pegadinha CESPE mais frequente. Anote cada cláusula separadamente antes de decidir."
+    pegadinha: "Item composto com metade verdadeira — a pegadinha CESPE mais frequente. Anote cada cláusula separadamente antes de decidir.",
+    fonte: "Cisco — visão geral de redes de computadores e tipos de rede: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html ; IETF RFC 1122 — arquitetura e hosts da Internet: https://www.rfc-editor.org/rfc/rfc1122.html",
   },
   {
     id: "q-m2-09",
@@ -1150,7 +1158,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: em malha completa cada nó ligaria a todos os outros (12×11/2 = 66 enlaces); o cenário tem 12 enlaces até o central."
     },
     regra: "Estrela: enlaces ponta-a-ponta até hub/switch central; ponto único de falha = dispositivo central.",
-    pegadinha: "A alternativa D soa 'moderna' (malha = alta disponibilidade), mas o critério é a disposição física dos enlaces descritos, não a qualidade desejada."
+    pegadinha: "A alternativa D soa 'moderna' (malha = alta disponibilidade), mas o critério é a disposição física dos enlaces descritos, não a qualidade desejada.",
+    fonte: "Cisco — topologia física e lógica de redes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-10",
@@ -1172,7 +1181,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: aceitar a primeira parte ('falha derruba tudo') por parecer 'preocupante e técnico'. A topologia estrela foi desenhada justamente para isolar falhas de nó — o custo é a dependência do central."
     },
     regra: "Estrela: tolerância a falha de nó; vulnerabilidade ao ponto central. Bus: falha do backbone derruba tudo. Anel: falha de nó pode quebrar o anel. Malha: redundância contra falha de enlace.",
-    pegadinha: "Inversão de predicados em item composto — a mesma estrutura do item de listas no M1; a leitura cláusula a cláusula resolve."
+    pegadinha: "Inversão de predicados em item composto — a mesma estrutura do item de listas no M1; a leitura cláusula a cláusula resolve.",
+    fonte: "Cisco — topologia de rede, interconexões e pontos de falha: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-11",
@@ -1200,7 +1210,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: o switch central é ponto único de falha — a estrela não elimina falha; apenas isola falhas de nó."
     },
     regra: "Trade-off topologia × disponibilidade × custo: malha = redundância máxima/custo máximo; estrela = custo baixo/dependência do central; bus = ponto único de falha.",
-    pegadinha: "A alternativa D nega a realidade ('elimina a possibilidade de falha') — qualquer afirmação absoluta sobre falhas em rede deve acender alerta; a FCC cobra o trade-off explícito custo × disponibilidade."
+    pegadinha: "A alternativa D nega a realidade ('elimina a possibilidade de falha') — qualquer afirmação absoluta sobre falhas em rede deve acender alerta; a FCC cobra o trade-off explícito custo × disponibilidade.",
+    fonte: "Cisco — topologia de rede, redundância e requisitos de disponibilidade: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-12",
@@ -1222,7 +1233,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: imaginar que o cabo 'partido' ainda conduz parte da rede (em bus com terminadores, a integridade do enlace é necessária em toda a extensão)."
     },
     regra: "Bus: enlace compartilhado único — indisponibilidade total em falha do backbone e colisões por domínio de contenção compartilhado.",
-    pegadinha: "Item Certo 'tecnicalmente duro': o examinando pode associar bus apenas a 'rede antiga' e reler o efeito da falha; a cobrança é do ponto único de falha, não da antiguidade."
+    pegadinha: "Item Certo 'tecnicalmente duro': o examinando pode associar bus apenas a 'rede antiga' e reler o efeito da falha; a cobrança é do ponto único de falha, não da antiguidade.",
+    fonte: "Cisco — topologia física e limitações de conexões de rede: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-13",
@@ -1250,7 +1262,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: premissa falsa — toda comunicação em rede passa por algum modelo de comutação; o currículo classifica a Internet explicitamente."
     },
     regra: "Comutação de circuitos (caminho dedicado, antes da fala) × comutação de pacotes (divisão e roteamento independente, após a fala).",
-    pegadinha: "A alternativa C tenta confundir com caminhos lógicos predefinidos em algumas tecnologias. Isso não transforma o encaminhamento IP da Internet em comutação clássica de circuitos; MPLS usa caminhos comutados por rótulos e não deve ser tratado como circuito telefônico dedicado."
+    pegadinha: "A alternativa C tenta confundir com caminhos lógicos predefinidos em algumas tecnologias. Isso não transforma o encaminhamento IP da Internet em comutação clássica de circuitos; MPLS usa caminhos comutados por rótulos e não deve ser tratado como circuito telefônico dedicado.",
+    fonte: "Cisco — comutação de pacotes em WANs: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html ; IETF RFC 1122 — arquitetura de comunicação da Internet: https://www.rfc-editor.org/rfc/rfc1122.html",
   },
   {
     id: "q-m2-14",
@@ -1278,7 +1291,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: perda e reordenação são listadas como DESVANTAGENS do modelo — nada é eliminado."
     },
     regra: "Trade-off: circuitos = reserva fixa (desperdício ocioso, latência previsível) × pacotes = compartilhamento (eficiência, jitter, perda, reordenação).",
-    pegadinha: "A alternativa A atrai quem associa 'VoIP = mais rápida'; a FGV cobra separar a característica do modelo (previsibilidade × eficiência), não a sensação de uso."
+    pegadinha: "A alternativa A atrai quem associa 'VoIP = mais rápida'; a FGV cobra separar a característica do modelo (previsibilidade × eficiência), não a sensação de uso.",
+    fonte: "Cisco — comutação de pacotes e redes WAN: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-15",
@@ -1300,7 +1314,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: confundir sessão/conexão TCP (comunicacionalmente contínua) com caminho de encaminhamento dos pacotes — continuidade lógica não implica rota física única."
     },
     regra: "Encaminhamento IP por pacote pode variar; caminhos lógicos de tecnologias como MPLS/Frame Relay são outra forma de organizar o encaminhamento, não comutação clássica de circuitos. A reordenação, quando ocorre, deve ser tratada pelo protocolo ou aplicação apropriados.",
-    pegadinha: "A palavra 'sempre' é o gatilho; mas atenção — o item só cai por causa dela: se fosse 'cada pacote é roteado independentemente', seria Certo. Identifique o modificador, não a impressão geral."
+    pegadinha: "A palavra 'sempre' é o gatilho; mas atenção — o item só cai por causa dela: se fosse 'cada pacote é roteado independentemente', seria Certo. Identifique o modificador, não a impressão geral.",
+    fonte: "Cisco — pacotes podem seguir rotas de rede e a Internet usa comutação de pacotes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-16",
@@ -1328,7 +1343,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: premissa de garantia inexistente. Jitter e perda são desvantagens registradas da comutação de pacotes; priorização exige QoS configurada (aparece no exemplo de aplicação de métricas)."
     },
     regra: "PSTN/circuito: setup → circuito reservado → liberação. VoIP/pacotes: encapsulamento da voz em pacotes sujeitos a fila, jitter e perda — mitigáveis com QoS.",
-    pegadinha: "A alternativa D 'resolve o problema' com uma garantia universal ('em qualquer rede') — afirmações de garantia absoluta em redes são quase sempre falsas."
+    pegadinha: "A alternativa D 'resolve o problema' com uma garantia universal ('em qualquer rede') — afirmações de garantia absoluta em redes são quase sempre falsas.",
+    fonte: "Cisco — redes WAN, comutação de pacotes e TCP/IP: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-17",
@@ -1356,7 +1372,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: anycast distribui várias réplicas do mesmo serviço e entrega à mais próxima (ex.: servidores DNS raiz, CDN) — não é o modelo de acesso direto a um site específico."
     },
     regra: "Tipos de comunicação por cardinalidade: unicast (1:1), broadcast (1:todos no domínio), multicast (1:grupo inscrito), anycast (1:réplica mais próxima).",
-    pegadinha: "Anycast (D) é a alternativa moderna tentadora: 'servidor mais próximo' parece plausível para sites, mas o currículo o associa a serviços distribuídos (DNS raiz/CDN), não ao acesso web genérico do exemplo."
+    pegadinha: "Anycast (D) é a alternativa moderna tentadora: 'servidor mais próximo' parece plausível para sites, mas o currículo o associa a serviços distribuídos (DNS raiz/CDN), não ao acesso web genérico do exemplo.",
+    fonte: "IETF RFC 4291 — endereços IPv6 unicast, anycast e multicast: https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-18",
@@ -1378,7 +1395,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: confundir com broadcast, que é enviado a todos sem inscrição — a distinção central é o JOIN (participação opt-in)."
     },
     regra: "Multicast: envio para um grupo; em IPv4, IGMP gerencia associação de membros; em IPv6, MLD desempenha função correspondente. A rede replica o tráfego nos pontos necessários.",
-    pegadinha: "O item combina conceito (inscrição) e protocolo (IGMP) — quem decora só um dos dois relê e decide Errado; leia cláusula a cláusula."
+    pegadinha: "O item combina conceito (inscrição) e protocolo (IGMP) — quem decora só um dos dois relê e decide Errado; leia cláusula a cláusula.",
+    fonte: "IETF RFC 1112 — multicast IPv4 e associação a grupos via IGMP; RFC 4291 — multicast IPv6: https://www.rfc-editor.org/rfc/rfc1112.html ; https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-19",
@@ -1406,7 +1424,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: anycast distribui réplicas de serviço para nós distintos mais próximos — não resolve entrega simultânea do mesmo fluxo a um grupo na LAN."
     },
     regra: "Eficiência de entrega: unicast usa fluxos independentes por destinatário; multicast pode reduzir tráfego replicando o fluxo nos pontos necessários, quando há suporte de rede e aplicação.",
-    pegadinha: "A alternativa B parece resolver ('todos precisam receber'), mas broadcast é indiscriminado e limitado ao domínio — a pegadinha é confundir 'todo mundo quer' com 'todo mundo do domínio recebe'."
+    pegadinha: "A alternativa B parece resolver ('todos precisam receber'), mas broadcast é indiscriminado e limitado ao domínio — a pegadinha é confundir 'todo mundo quer' com 'todo mundo do domínio recebe'.",
+    fonte: "IETF RFC 1112 — entrega multicast a grupos de hosts; RFC 4291 — tipos de endereço IPv6: https://www.rfc-editor.org/rfc/rfc1112.html ; https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-20",
@@ -1428,7 +1447,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: associação com multicast (que trafega entre redes quando o roteamento multicast existe) ou com a ideia de que 'broadcast = alta propagação'. São mecanismos distintos."
     },
     regra: "Domínio de broadcast = sub-rede; roteador encaminha tráfego unicast/multicast roteável, mas bloqueia broadcast para evitar tempestade (broadcast storm).",
-    pegadinha: "Exemplo prático no currículo: DHCP discovery e ARP usam broadcast justamente porque se destinam à sub-rede local — é essa a fronteira natural do mecanismo."
+    pegadinha: "Exemplo prático no currículo: DHCP discovery e ARP usam broadcast justamente porque se destinam à sub-rede local — é essa a fronteira natural do mecanismo.",
+    fonte: "IETF RFC 4291 — IPv6 não possui broadcast, função substituída por multicast: https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-21",
@@ -1456,7 +1476,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: latência é tempo de trânsito, não capacidade do canal; e a diferença é multicausa (overhead, colisões, congestionamento, sinal)."
     },
     regra: "bandwidth = capacidade máxima teórica; throughput = taxa efetiva medida (≤ bandwidth); causas da diferença: overhead de cabeçalhos, colisões, congestionamento, qualidade do sinal.",
-    pegadinha: "A alternativa C inverte os termos — a FGV cobra o par conceitual (teórico × real) sob pressão numérica; escreva os rótulos antes de decidir."
+    pegadinha: "A alternativa C inverte os termos — a FGV cobra o par conceitual (teórico × real) sob pressão numérica; escreva os rótulos antes de decidir.",
+    fonte: "Cisco — latência e variação de latência (jitter) em redes: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
   },
   {
     id: "q-m2-22",
@@ -1484,7 +1505,8 @@ id: "q-m1-09",
       D: "CORRETA. Diagnóstico e remédio idênticos ao exemplo do currículo."
     },
     regra: "Interpretação de métricas: ping estável + jitter alto = variação (problema de temporização); ping alto = latência; perda = pacotes ausentes. Mitigação de jitter: QoS e buffer de jitter.",
-    pegadinha: "A FCC cobra ler o DIAGNÓSTICO inteiro: as alternativas A, C e D descrevem problemas reais de rede, mas nenhum deles é o que os dados do enunciado indicam."
+    pegadinha: "A FCC cobra ler o DIAGNÓSTICO inteiro: as alternativas A, C e D descrevem problemas reais de rede, mas nenhum deles é o que os dados do enunciado indicam.",
+    fonte: "Cisco — latência, limitações de largura de banda e otimização de WAN: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html ; https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-23",
@@ -1506,7 +1528,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: tratar jitter como 'latência alta' (sinônimo). Jitter é DIFERENÇA entre latências — por isso VoIP falha mesmo com ping baixo (ver exemplo de aplicação do currículo)."
     },
     regra: "Métricas temporais: latência (nível), jitter (variação do nível), perda (ausência). Causas de perda: congestionamento, erro de transmissão, firewall.",
-    pegadinha: "Item duplo com duas definições — valide cada uma separadamente; a segunda metade traz 'pode indicar' (lista de hipóteses), o que é compatível com o texto-base e não invalida o item."
+    pegadinha: "Item duplo com duas definições — valide cada uma separadamente; a segunda metade traz 'pode indicar' (lista de hipóteses), o que é compatível com o texto-base e não invalida o item.",
+    fonte: "Cisco — jitter como variação imprevisível da latência: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
   },
   {
     id: "q-m2-24",
@@ -1534,7 +1557,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: viola a premissa 'rede cabeada' do cenário e o Wi-Fi é suscetível a interferência em ambiente industrial."
     },
     regra: "Meios × ambiente: UTP (barato, suscetível) / STP (blindado, EMI) / fibra (imune, maior custo) / coaxial (legado) / Wi-Fi (sem fio, 2,4/5 GHz).",
-    pegadinha: "A alternativa D até 'resolve' a EMI por não ter fio, mas fere a premissa explícita do enunciado ('rede cabeada') — premissas do cenário são parte da questão."
+    pegadinha: "A alternativa D até 'resolve' a EMI por não ter fio, mas fere a premissa explícita do enunciado ('rede cabeada') — premissas do cenário são parte da questão.",
+    fonte: "Cisco — componentes e meios de conexão de uma LAN: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html ; Cisco — arquitetura e conectividade de redes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html",
   },
   {
     id: "q-m2-25",
@@ -1562,7 +1586,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: coaxial é meio legado de curta/média distância em redes antigas; não é a solução de longa distância imune a EMI."
     },
     regra: "Limites de alcance: UTP até 100 m (Cat6 10 Gbps até 55 m; Cat6a 10 Gbps até 100 m); fibra monomodo para longa distância; fibra multimodo para curta distância (LED).",
-    pegadinha: "A alternativa A repete um dado verdadeiro (Cat6 = 10 Gbps) fora de contexto (distância) — a VUNESP cobra combinar TODAS as propriedades: taxa, alcance e imunidade."
+    pegadinha: "A alternativa A repete um dado verdadeiro (Cat6 = 10 Gbps) fora de contexto (distância) — a VUNESP cobra combinar TODAS as propriedades: taxa, alcance e imunidade.",
+    fonte: "Cisco — WAN, fibra e conexões entre locais distantes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html ; Cisco — componentes de rede: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html",
   },
   {
     id: "q-m2-26",
@@ -2472,7 +2497,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: troca as vantagens/desvantagens. Banda garantida e setup lento são características da comutação de CIRCUITOS; a vantagem dos pacotes é o aproveitamento de banda."
     },
     regra: "Comutação de pacotes: dados em pacotes independentes, banda compartilhada, tolerância a falhas; latência variável e possível perda/reordenação. A Internet usa pacotes; a telefonia tradicional, circuitos.",
-    pegadinha: "Inverter vantagens e desvantagens entre os dois tipos de comutação: 'banda garantida' e 'setup lento' pertencem aos circuitos, não aos pacotes."
+    pegadinha: "Inverter vantagens e desvantagens entre os dois tipos de comutação: 'banda garantida' e 'setup lento' pertencem aos circuitos, não aos pacotes.",
+    fonte: "Cisco — comutação de pacotes em WANs: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-28",
@@ -2500,7 +2526,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: define jitter como 'latência média' (é a VARIAÇÃO da latência) e deduz jitter alto de ping estável — dois erros, pois latência e jitter são independentes."
     },
     regra: "Largura de banda (teórica) ≥ throughput (real). Jitter = variação da latência entre pacotes; é distinto da latência média e crítico para VoIP/streaming.",
-    pegadinha: "Confundir latência (ping) com jitter (variação da latência): ping estável não diz nada sobre o jitter, que é o que causa o áudio interrompido."
+    pegadinha: "Confundir latência (ping) com jitter (variação da latência): ping estável não diz nada sobre o jitter, que é o que causa o áudio interrompido.",
+    fonte: "Cisco — latência, jitter e desempenho de rede: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
   },
   {
     id: "q-m2-29",
@@ -2522,7 +2549,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: achar que broadcast 'chega a toda a Internet' (o próprio exemplo 'erro' do currículo corrige: roteadores não encaminham 255.255.255.255 para evitar tempestades de broadcast)."
     },
     regra: "Broadcast = um-para-todos no domínio de broadcast; limitado pela sub-rede, não atravessa roteadores. ARP e DHCP discovery são exemplos didáticos.",
-    pegadinha: "Itens simples por design: o risco é a superstição de que 'broadcast se espalha por toda a rede/Internet'; ele é contido na sub-rede pelos roteadores."
+    pegadinha: "Itens simples por design: o risco é a superstição de que 'broadcast se espalha por toda a rede/Internet'; ele é contido na sub-rede pelos roteadores.",
+    fonte: "IETF RFC 826 — ARP e resolução de endereços em rede local; IETF RFC 2131 — DHCP: https://www.rfc-editor.org/rfc/rfc826.html ; https://www.rfc-editor.org/rfc/rfc2131.html",
   },
   {
     id: "q-m2-30",
@@ -2550,7 +2578,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: acesso a um site é unicast, não anycast; e quem exige inscrição via IGMP é o multicast, não o broadcast — troca de conceitos."
     },
     regra: "Unicast (1:1, ex.: site) × multicast (1:many, grupo inscrito, IGMP, ex.: streaming) × broadcast (1:all da sub-rede, limitado por roteadores) × anycast (1:mais-próximo).",
-    pegadinha: "Confundir multicast com broadcast: multicast exige grupo inscrito (IGMP) e é contido de forma diferente; broadcast atinge todos da sub-rede e não atravessa roteadores."
+    pegadinha: "Confundir multicast com broadcast: multicast exige grupo inscrito (IGMP) e é contido de forma diferente; broadcast atinge todos da sub-rede e não atravessa roteadores.",
+    fonte: "IETF RFC 1112 — multicast IPv4; IETF RFC 4291 — unicast, anycast, multicast e ausência de broadcast em IPv6: https://www.rfc-editor.org/rfc/rfc1112.html ; https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-31",
@@ -2578,7 +2607,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: coaxial é citado como meio de redes antigas/TV a cabo, não como recomendação moderna entre prédios; a imunidade a interferência pertence à fibra."
     },
     regra: "UTP: até 100 m, suscetível a EMI (Cat6: 10 Gbps/55 m; Cat6a: 10 Gbps/100 m). Fibra óptica: alta banda, imune a EMI, longa distância sem repetidor.",
-    pegadinha: "Atribuir a UTP a imunidade a interferência eletromagnética (é da fibra) e esquecer o teto de 100 m do par trançado."
+    pegadinha: "Atribuir a UTP a imunidade a interferência eletromagnética (é da fibra) e esquecer o teto de 100 m do par trançado.",
+    fonte: "Cisco — meios de conectividade de redes e WAN: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html ; https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-32",
@@ -2628,7 +2658,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: malha conecta cada nó a todos os outros (redundância por múltiplos caminhos), sem dispositivo central único — a descrição mistura malha com estrela."
     },
     regra: "Estrela: todos os nós a um switch/hub central; falha de nó = isolada; falha do central = rede toda caída. Malha = redundância por múltiplos caminhos.",
-    pegadinha: "A pegadinha é localizar o ponto único de falha: na estrela é o dispositivo central (não o nó), ao contrário do bus, onde é o cabo backbone."
+    pegadinha: "A pegadinha é localizar o ponto único de falha: na estrela é o dispositivo central (não o nó), ao contrário do bus, onde é o cabo backbone.",
+    fonte: "Cisco — topologia física/lógica e redundância: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-34",
@@ -2650,7 +2681,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: tratar largura de banda e throughput como sinônimos (o exemplo 'erro' do currículo corrige justamente essa equiparação)."
     },
     regra: "Largura de banda = capacidade nominal do enlace; throughput = taxa útil medida, normalmente inferior por overhead e condições de rede. Compare-os usando definições e unidades compatíveis.",
-    pegadinha: "Itens C/E básicos misturam definições próximas; a disciplina é não confundir 'capacidade teórica' (banda) com 'taxa real' (throughput)."
+    pegadinha: "Itens C/E básicos misturam definições próximas; a disciplina é não confundir 'capacidade teórica' (banda) com 'taxa real' (throughput).",
+    fonte: "Cisco — latência e métricas de desempenho: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
   },
   {
     id: "q-m2-35",
@@ -2672,7 +2704,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: confundir anycast com multicast (anycast não exige inscrição em grupo; entrega ao nó mais próximo) ou achar que multicast atinge 'todos' (é grupo específico)."
     },
     regra: "Anycast encaminha para uma instância selecionada pela política de roteamento, muitas vezes a mais próxima em termos topológicos (ex.: serviços DNS/CDN); multicast envia a um grupo; broadcast alcança o domínio local; unicast é 1:1.",
-    pegadinha: "A pegadinha é trocar os mecanismos: anycast não exige inscrição (IGMP); quem exige grupo inscrito é o multicast."
+    pegadinha: "A pegadinha é trocar os mecanismos: anycast não exige inscrição (IGMP); quem exige grupo inscrito é o multicast.",
+    fonte: "IETF RFC 4291 — unicast, anycast e multicast IPv6; IETF RFC 1112 — multicast IPv4: https://www.rfc-editor.org/rfc/rfc4291.html ; https://www.rfc-editor.org/rfc/rfc1112.html",
   },
   {
     id: "q-m2-36",
@@ -2694,7 +2727,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: achar que a Internet estabelece caminho dedicado (isso é comutação de circuitos) ou que a PSTN divide dados em pacotes (isso é comutação de pacotes)."
     },
     regra: "Comutação de circuitos = caminho dedicado (PSTN/telefonia tradicional); comutação de pacotes = dados em pacotes independentes (Internet/VoIP).",
-    pegadinha: "Itens simples que testam se o examinando associa cada tecnologia ao tipo de comutação correto, sem inverter PSTN (circuitos) e Internet (pacotes)."
+    pegadinha: "Itens simples que testam se o examinando associa cada tecnologia ao tipo de comutação correto, sem inverter PSTN (circuitos) e Internet (pacotes).",
+    fonte: "Cisco — comutação de pacotes em redes WAN e Internet: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-37",
@@ -2716,7 +2750,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: confundir o ponto único de falha da barra (o cabo) com o da estrela (o dispositivo central) — são topologias distintas."
     },
     regra: "Barra (bus): cabo compartilhado; falha no cabo backbone = rede toda caída (ponto único de falha); colisões frequentes.",
-    pegadinha: "A pegadinha é localizar o ponto único de falha: na barra é o cabo; na estrela é o switch/hub central."
+    pegadinha: "A pegadinha é localizar o ponto único de falha: na barra é o cabo; na estrela é o switch/hub central.",
+    fonte: "Cisco — topologias físicas, barra e limitações de conectividade: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-38",
@@ -2744,7 +2779,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: número correto de hosts (62) mas broadcast trocado — .62 é o ÚLTIMO HOST, e o broadcast é .63; além disso limita os hosts a .61."
     },
     regra: "CIDR: hosts válidos = 2^(32−prefixo) − 2. /26 → 64 endereços / 62 hosts; bloco de 64 no último octeto; máscara 255.255.255.192; broadcast = último endereço do bloco.",
-    pegadinha: "Confundir broadcast com o último host: o broadcast é .63 (último do bloco), enquanto .62 é o último host utilizável — a alternativa D explora essa troca."
+    pegadinha: "Confundir broadcast com o último host: o broadcast é .63 (último do bloco), enquanto .62 é o último host utilizável — a alternativa D explora essa troca.",
+    fonte: "IETF RFC 4632 — CIDR, prefixos e tamanhos de blocos IPv4: https://www.rfc-editor.org/rfc/rfc4632.html",
   },
   {
     id: "q-m2-39",
@@ -2766,7 +2802,8 @@ id: "q-m1-09",
       leituraIncorreta: "Leitura que induz ao erro: contar o broadcast (ou a rede) como host válido, ou confundir o tamanho do bloco (/27 = 32, não 16 nem 64)."
     },
     regra: "CIDR: total = 2^(32−prefixo); hosts válidos = total − 2. /27 → 32 endereços / 30 hosts; bloco de 32 no último octeto; broadcast = último endereço do bloco (10.0.0.31).",
-    pegadinha: "A pegadinha é contar rede e broadcast como hosts utilizáveis — a regra subtrai 2, restando 30 hosts válidos."
+    pegadinha: "A pegadinha é contar rede e broadcast como hosts utilizáveis — a regra subtrai 2, restando 30 hosts válidos.",
+    fonte: "IETF RFC 4632 — CIDR e tamanhos de sub-rede; RFC 791 — IPv4: https://www.rfc-editor.org/rfc/rfc4632.html ; https://www.rfc-editor.org/rfc/rfc791.html",
   },
   {
     id: "q-m2-40",
@@ -2794,7 +2831,8 @@ id: "q-m1-09",
       D: "INCORRETA. Erro conceitual: usa o bloco /28 ANTERIOR (172.16.5.0/28, rede .0, broadcast .15); a VLAN recebeu o bloco que começa em .16, não em .0."
     },
     regra: "CIDR: hosts válidos = 2^(32−prefixo) − 2. /28 → 16 endereços / 14 hosts; bloco de 16 no último octeto; máscara 255.255.255.240; rede .16 → broadcast .31.",
-    pegadinha: "Dupla armadilha: (1) trocar broadcast (.31) pelo último host (.30); (2) confundir o bloco pedido (.16/28) com o bloco anterior (.0/28)."
+    pegadinha: "Dupla armadilha: (1) trocar broadcast (.31) pelo último host (.30); (2) confundir o bloco pedido (.16/28) com o bloco anterior (.0/28).",
+    fonte: "IETF RFC 4632 — CIDR e prefixos IPv4; RFC 1918 — endereços IPv4 privados: https://www.rfc-editor.org/rfc/rfc4632.html ; https://www.rfc-editor.org/rfc/rfc1918.html",
   },
 {
     id: "q-m3-25",
