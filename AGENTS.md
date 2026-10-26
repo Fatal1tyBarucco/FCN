@@ -285,6 +285,16 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `3a0ec921ba68e7acc777fcfa6aca1aa12a682a60`.
 - Fontes citadas: OWASP SSRF Prevention Cheat Sheet, NIST SP 800-30 Rev. 1, NIST SP 800-34 Rev. 1 e NIST SP 800-61 Rev. 3. Este passe focal não substitui CI nem auditoria integral do M4.
 
+## Auditoria semântica incremental — lote M4 q-m4-81 a q-m4-85 (2026-10-26)
+
+- q-m4-81: controle preventivo aplicado a uma interface administrativa exposta, diferenciando prevenção, detecção, resposta e recuperação.
+- q-m4-82: controle detectivo em ambiente com excesso de alertas; incluídos correlação, severidade, triagem e avaliação de falsos positivos/negativos.
+- q-m4-83: recuperação após comprometimento de conta, incluindo revogação de sessões/credenciais, correção da causa, restauração confiável e validação antes da retomada.
+- q-m4-84: controle compensatório temporário para equipamento legado, com isolamento, monitoramento, prazo, responsável e reavaliação do risco residual.
+- q-m4-85: substituída definição superficial de vulnerabilidade por cenário que diferencia ameaça, vulnerabilidade e risco contextual.
+- Commit de conteúdo: `345ed88c6b3542858ec3a438c625fd78612938b4`.
+- Os passes registrados de q-m4-31..q-m4-85 cobrem todas as questões desse intervalo em revisões focais; não significam revisão completa das q-m4-01..q-m4-30 nem auditoria jurídica integral das questões legislativas. Sintaxe, esquema dos dados, matriz curricular e testes do HEAD atual ainda precisam ser confirmados.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
