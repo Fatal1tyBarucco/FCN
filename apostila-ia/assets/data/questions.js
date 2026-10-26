@@ -884,11 +884,12 @@ id: "q-m1-09",
     regra: "Escopo declarado × funcionalidade (Seção 7.1 do prompt mestre — laboratórios com ações e resultados reais dentro do escopo declarado): entradas fora do escopo são recusadas ANTES da avaliação com mensagem útil iniciada por 'ERRO DE ENTRADA'; erros de execução usam os códigos Excel declarados (#N/A, #REF!, #VAL!, #DIV/0!, #NUM!); e PROCV/PROCH/PROCX executam busca real — nenhum resultado pode ser apresentado como real quando não o for.",
     pegadinha: "Item técnico com duas cláusulas que tratam de canais distintos: a primeira é sobre RECUSA de entrada (antes da avaliação) e a segunda sobre COMPORTAMENTO das funções de pesquisa (durante a execução). Quem associa 'mensagem de erro' a defeito, ou decorou a limitação antiga de PROCX, tende a marcar Errado o que o código atual confirma."
   },
-  /* ===================== FIM MÓDULO 1 (32 questões) ===================== */
-  /* ===================== MÓDULO 2 — Redes de Computadores (26 questões) =====================
-   * Fonte: assets/data/curriculum_m2.js — unidade 2.1 (7 subtópicos reais).
-   * As unidades 2.2–2.5 ainda não possuem entrada de currículo; por isso não
-   * há questões para elas (nada foi inventado para cobrir a lacuna). */
+  /* ===================== FIM MÓDULO 1 (44 questões) ===================== */
+  /* ===================== MÓDULO 2 — Redes de Computadores (54 questões) =====================
+   * Fonte: assets/data/curriculum_m2.js — unidades 2.1 a 2.5.
+   * As cinco unidades e seus tópicos estão mapeados no currículo; as questões
+   * M2 cobrem fundamentos, modelos OSI/TCP-IP, protocolos, endereçamento/
+   * sub-redes e segurança/diagnóstico conforme o escopo curricular. */
 
   {
     id: "q-m2-01",
