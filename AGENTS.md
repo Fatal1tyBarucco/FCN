@@ -359,6 +359,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de atualização das fontes: `53ed872c400e42f67c52e1819b69e91ddaf78214` e `95b1844e58bb58c9aba432d6f6219e31cf24ff6c`.
 - A conferência confirma os dispositivos citados nos limites desta revisão; não equivale a parecer jurídico nem valida todo o conteúdo legislativo do módulo.
 
+## Auditoria semântica incremental — M6 q-m6-01 a q-m6-25 (2026-10-26)
+
+- Revisão focal de q-m6-01..q-m6-25: a maioria dos itens foi mantida após leitura por se encontrar bem delimitada e fundamentada; duas questões receberam correções relevantes.
+- q-m6-18: ajustada a justificativa sobre uso de tecnologia da informação na LAI. O art. 3º, III, estabelece diretriz, mas o art. 8º, § 4º, contém exceção específica à divulgação obrigatória em sítios oficiais para municípios com até 10 mil habitantes, ressalvadas obrigações fiscais. A fonte oficial da LAI foi adicionada.
+- q-m6-24: reformulada para não afirmar que a divulgação nominativa de beneficiários é sempre proibida sem consentimento nem que a LAI sempre exige nomes e valores individualizados. O item agora afirma que o art. 8º, isoladamente, não torna a divulgação automaticamente legítima; a análise depende de norma específica, base jurídica, finalidade, necessidade, proporcionalidade e salvaguardas, conciliando LAI e LGPD.
+- Commit q-m6-18: `4e31a170d12f48bddf7bec6370661b79cf7b3b6a`; commit q-m6-24: `f9abeb51546a40746aaf6b3cbf0e47a94214e006`.
+- Este passe cobre q-m6-01..q-m6-25 de forma focal, não constitui revisão integral de todas as normas nem validação automatizada do HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
