@@ -737,6 +737,24 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de correção q-m7-26: `61edfbd23d77fb4173b50d76be94a3197f381afd`.
 - Revisão semântica focal do M7 concluída nas 40 questões identificadas no arquivo atual; isso não substitui validação automatizada, auditoria de cobertura curricular ou conferência final das referências do currículo.
 
+## Auditoria semântica incremental — lote M8 q-m8-01 a q-m8-40 (2026-10-26)
+
+- q-m8-01 a q-m8-10: revisados escolha de gráfico pela pergunta, escalas e eixos, histogramas, medidas centrais, Power Query, granularidade e narrativa/métricas de processo.
+- q-m8-07: suavizada a promessa absoluta de que os passos do Power Query “eliminam” retrabalho; eles reduzem trabalho manual repetitivo, mas fontes, credenciais e mudanças de esquema ainda podem exigir manutenção.
+- q-m8-11 a q-m8-20: revisados escolha de ferramentas, box plot de Tukey, paletas sequenciais/acessibilidade, escalas logarítmicas, seleção de gráfico, densidade de histogramas, variação percentual, correlação e variância amostral.
+- q-m8-11: explicitado que o painel será compartilhado internamente com dados operacionais não destinados à publicação pública, para eliminar ambiguidade na escolha entre Looker Studio e Tableau Public.
+- q-m8-18: corrigidos os cálculos dos distratores de variação percentual: janeiro→fevereiro usa 9,1% se dividido incorretamente pelo valor atual; fevereiro→março, com a direção invertida, é +12,9%, enquanto a variação correta é −12,9%.
+- q-m8-21 a q-m8-30: revisados método tipo 7 para quartis, assimetria, viés de amostragem, ferramenta offline, projeções com incerteza, foco de painéis, ordenação de barras, hierarquia visual, causalidade e medidas DAX.
+- q-m8-22: removida referência indevida à moda em um conjunto sem moda única; a explicação passa a se concentrar na média elevada pela cauda à direita e na robustez da mediana.
+- q-m8-25: explicitado que a faixa de projeção 1.050–1.300 vem do modelo de projeção, evitando que pareça intervalo arbitrário sem base.
+- q-m8-27: corrigido erro de digitação em referência à legibilidade das barras; q-m8-28: corrigida concordância gramatical.
+- q-m8-30 e q-m8-39: corrigido o termo “ticket médio” aplicado incorretamente a Soma(Faturamento) ÷ Soma(Quantidade); o nome correto para essa razão é “preço médio por unidade”. Os distratores e justificativas agora distinguem a média simples de preços unitários da razão ponderada entre totais.
+- q-m8-32: corrigida redação sobre dois histogramas. q-m8-34: a comparação entre bigodes foi delimitada a mesmo conjunto/método de quartis e multiplicadores diferentes do IIQ, sem alegar que todos os softwares adotam padrões universais de 1,0/1,5/2,0.
+- q-m8-36: substituída a afirmação vaga de que “metade dos atendimentos é ágil” pela definição exata da mediana e pela interpretação cautelosa de esperas longas.
+- q-m8-37 a q-m8-40: revisados critérios observacionais de causalidade, contagem distinta/granularidade, preço médio por unidade em DAX e recomendação integradora. Os exemplos matemáticos e os gabaritos consultados conferem.
+- Commits de conteúdo representativos: `108a36198f4d6984971113a612de932c50b7d9c4`, `ead755c961f00433eae465ecd1f5277e06f801c0`, `38e19502ac1785148a795791aaab94abdc831506`, `8b7f170455d2721dc90ee7538ed3aed4ad8a1e46`, `5fe4c8964815dd1cdee1383b5b9c27ea1f7012da`, `fd12f18d118ab774679e03a49242474f2e245460`, `7f064c90f6c45c0a349338da5e865f102fead855`, `1d6f747020ec91d8973aad489e94a3d6bb014a9e`, `e52e43f416103f331824513ad695879f975ba0ce`.
+- Revisão semântica focal das 40 questões M8 identificadas concluída. Isso não equivale a certificação de completude de todo o material ou aprovação dos workflows; verificar CI no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
