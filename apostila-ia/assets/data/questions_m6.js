@@ -181,7 +181,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "A LGPD afasta a incidência da LAI sobre os conjuntos de dados comuns aos dois regimes." }
     ],
     gabarito: "C",
-    justificativa: "O art. 1º da LGPD dispõe sobre o tratamento de dados pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado; o art. 5º define controlador como quem decide sobre o tratamento. A alternativa A nega a incidência expressa da lei; C reduz o regime ao consentimento, quando a própria lei prevê outras hipóteses de tratamento; D ignora que dado sensível tem disciplina mais restritiva, mesmo no setor público; E cria oposição inexistente: LAI e LGPD se complementam e o art. 1º, parágrafo único, da Lei de Governo Digital manda observar ambas.",
+    justificativa: "O art. 1º da LGPD abrange o tratamento de dados pessoais por pessoas jurídicas de direito público ou privado, e o art. 5º define controlador como quem toma as decisões referentes ao tratamento. A alternativa A nega indevidamente a incidência da lei sobre o poder público; B erra ao tratar o consentimento como única hipótese, pois a LGPD prevê outras bases e regras aplicáveis; C está correta quanto ao papel do poder público como agente de tratamento e aos deveres de segurança, sem dispensar a análise do papel concreto; D ignora o regime específico dos dados sensíveis; E cria oposição inexistente, pois LAI e LGPD devem ser observadas conforme suas respectivas incidências.",
     analise: {
       A: "INCORRETA. Erro conceitual de exclusão indevida: o art. 1º nomeia expressamente a pessoa jurídica de direito público.",
       B: "INCORRETA. Erro conceitual de concentração: o consentimento é uma entre outras hipóteses de tratamento previstas na lei.",
@@ -233,7 +233,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "adotar medida facultativa, conforme a disponibilidade de pessoal do órgão." }
     ],
     gabarito: "C",
-    justificativa: "O art. 8º, caput, da LAI impõe o dever de promover, independentemente de requerimentos, a divulgação, em local de fácil acesso, de informações de interesse coletivo ou geral produzidas ou custodiadas pelo órgão. A alternativa A descreve transparência passiva; C reduz o dever a dois itens de um rol mínimo maior; D inventa restrição de destinatários; E transforma dever em faculdade.",
+    justificativa: "O art. 8º, caput, da LAI impõe a divulgação de ofício, em local de fácil acesso, de informações de interesse coletivo ou geral produzidas ou custodiadas pelo órgão. A alternativa A descreve transparência passiva; B reduz indevidamente a transparência ativa a apenas dois tipos de informação, embora o § 1º do art. 8º estabeleça um rol mínimo mais amplo; C está correta; D restringe indevidamente os destinatários; E transforma um dever legal em faculdade.",
     analise: {
       A: "INCORRETA. Erro conceitual de troca de regime: descreve a transparência passiva (pedido), não a ativa.",
       B: "INCORRETA. Erro conceitual de redução: o § 1º do art. 8º traz rol mínimo com despesas, licitações, contratos, programas e respostas a perguntas frequentes, entre outros.",
