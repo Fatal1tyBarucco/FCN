@@ -17,7 +17,7 @@
  * ----------------------------------------------------------------------------
  * O QUE ESTE SCRIPT VERIFICA
  * ----------------------------------------------------------------------------
- * 1) Fusão questions.js + questions_m4..m8 por id → total === 396; distribuição
+ * 1) Fusão questions.js + questions_m4..m8 por id → total === 399; distribuição
  *    por módulo {1:44, 2:54, 3:47, 4:85, 5:42, 6:44, 7:40, 8:40}; 0 ids
  *    duplicados.
  * 2) Aplica o validarQuestao REAL do quiz-engine.js (carregado em contexto vm
@@ -27,7 +27,7 @@
  *    módulo {1:66, 2:56, 3:68, 4:54, 5:66, 6:50, 7:50, 8:50}.
  * 4) Cada tag <script src> do index.html resolve para arquivo existente em
  *    disco, e a contagem total de tags é EXATAMENTE 39 (24 de dados + 15 de JS).
- * 5) manifest.webmanifest é JSON válido e a description menciona "396".
+ * 5) manifest.webmanifest é JSON válido e a description menciona "399".
  * 6) Imprime níveis / formatos / estilos (contagens reais) para conferência.
  * 7) q-m4-32: id/formato/gabarito + CONTEÚDO — alternativa B cita os princípios
  *    reais do art. 3º (neutralidade, privacidade, dados pessoais; sem
@@ -210,7 +210,7 @@ try {
 
 const ESPERADO_MODULO = { 1: 44, 2: 54, 3: 47, 4: 85, 5: 42, 6: 44, 7: 40, 8: 40 };
 if (r) {
-  check('total de questões fundidas === 396', r.total === 396, 'real=' + r.total + ', esperado=396');
+  check('total de questões fundidas === 399', r.total === 399, 'real=' + r.total + ', esperado=396');
   check('0 ids duplicados', r.duplicados.length === 0,
     r.duplicados.length ? ('duplicados: ' + r.duplicados.join(', ')) : 'ok');
   for (const m of Object.keys(ESPERADO_MODULO)) {
@@ -324,7 +324,7 @@ check('todas as tags locais resolvem p/ arquivo em disco (' + locais + ' locais,
   ausentes.length === 0, ausentes.length ? ('ausentes: ' + ausentes.join(', ')) : 'nenhum 404');
 
 /* ---------------------------------------------------- manifest: JSON + "396" */
-secao('7. manifest.webmanifest → JSON VÁLIDO + description com "396"');
+secao('7. manifest.webmanifest → JSON VÁLIDO + description com "399"');
 let manifest = null;
 try {
   manifest = JSON.parse(fs.readFileSync(path.join(APP, 'manifest.webmanifest'), 'utf8'));
@@ -334,8 +334,8 @@ try {
 }
 if (manifest) {
   const desc = typeof manifest.description === 'string' ? manifest.description : '';
-  check('description menciona "396"', desc.includes('396'), 'description contém 396=' + desc.includes('396'));
-  check('description contém a contagem de questões 396 e não a contagem anterior 389 questões', desc.includes('396 questões') && !desc.includes('389 questões'), '');
+  check('description menciona "399"', desc.includes('399'), 'description contém 399=' + desc.includes('399'));
+  check('description contém a contagem de questões 399 e não a contagem anterior 389 questões', desc.includes('399 questões') && !desc.includes('389 questões'), '');
 }
 
 /* ------------------------------------------- níveis / formatos / estilos (info) */
