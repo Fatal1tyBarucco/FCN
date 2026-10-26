@@ -459,3 +459,13 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [ ] **Continuam bloqueantes:** revisar fontes primárias das 112 questões sem fonte identificada; auditar a distribuição de gabaritos, especialmente M1; fazer revisão semântica independente das questões; executar testes manuais de teclado/leitor de tela e auditoria WCAG; validar navegadores e dispositivos físicos adicionais.
 - PR #17 permanece aberto e Draft; não fazer merge enquanto os critérios qualitativos obrigatórios estiverem pendentes.
 
+## Estado atualizado após auditoria M1–M3 — 2026-10-26
+
+- [x] **Fontes estruturais:** foram acrescentadas fontes aos itens M1, M2 e M3; 38 registros foram adicionados ao catálogo de referências oficiais. A auditoria automatizada do run [40412457818](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40412457818) detectou fonte em 395/399 questões.
+- [ ] **Quatro lacunas de fonte restantes:** `q-m2-26`, `q-m2-32` (Cat6/Cat6a: alcance a 10 Gbps) e `q-m3-19`, `q-m3-36` (comparação de recursos do Zoom). Não preencher com URLs supostas; localizar documentação técnica/fornecedor oficial que sustente exatamente a afirmação.
+- [ ] **Validação de links:** conferir manualmente a abertura e a pertinência de cada URL recém-adicionada nas fontes das questões. O script verifica presença textual, não HTTP 200 nem suporte semântico.
+- [ ] **Revisão semântica:** os 399 itens ainda precisam de revisão independente de gabarito, enunciado, justificativas, distratores e aderência curricular. O auditor não encontrou alertas heurísticos, mas não verifica verdade factual.
+- [ ] **Distribuição de gabaritos M1:** A=4, B=15, C=5, D=2, E=0 em 26 questões MC. Investigar possíveis padrões sem alterar respostas corretas apenas para balancear letras.
+- [ ] **Acessibilidade fora do automatizado:** leitor de tela, teclado/foco manual, auditoria WCAG manual e compatibilidade em dispositivos físicos permanecem pendentes.
+- O run 40412457818 concluiu com sucesso para o SHA `5232348fa553a58317c6b4b28ab9dfafc088beb9`. Os commits documentais posteriores não alteram o código da aplicação; consultar o HEAD e os checks mais recentes antes de declarar o PR validado.
+
