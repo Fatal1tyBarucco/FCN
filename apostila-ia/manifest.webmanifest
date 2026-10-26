@@ -1,7 +1,7 @@
 {
   "name": "Apostila Web Interativa FCN",
   "short_name": "Apostila FCN",
-  "description": "Apostila interativa de TI, Dados e IA para concursos públicos: 8 módulos (Microsoft 365, Redes, Comunicação, Segurança, IA, Ética, Dados, Visualização), flashcards (404) e 365 questões autorais carregadas. SPA estática sem build — funciona em file:// sem service worker; PWA opcional (SW registrado apenas em http/https).",
+  "description": "Apostila interativa de TI, Dados e IA para concursos públicos: 8 módulos (Microsoft 365, Redes, Comunicação, Segurança, IA, Ética, Dados, Visualização), flashcards (460) e 389 questões autorais carregadas. SPA estática sem build — funciona em file:// sem service worker; PWA opcional (SW registrado apenas em http/https).",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f8f9fa",

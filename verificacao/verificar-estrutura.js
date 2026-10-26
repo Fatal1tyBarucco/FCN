@@ -17,7 +17,7 @@
  * ----------------------------------------------------------------------------
  * O QUE ESTE SCRIPT VERIFICA
  * ----------------------------------------------------------------------------
- * 1) Fusão questions.js + questions_m4..m8 por id → total === 365; distribuição
+ * 1) Fusão questions.js + questions_m4..m8 por id → total === 389; distribuição
  *    por módulo {1:40, 2:40, 3:40, 4:85, 5:40, 6:40, 7:40, 8:40}; 0 ids
  *    duplicados.
  * 2) Aplica o validarQuestao REAL do quiz-engine.js (carregado em contexto vm
@@ -27,7 +27,7 @@
  *    módulo {1:66, 2:56, 3:68, 4:54, 5:66, 6:50, 7:50, 8:50}.
  * 4) Cada tag <script src> do index.html resolve para arquivo existente em
  *    disco, e a contagem total de tags é EXATAMENTE 39 (24 de dados + 15 de JS).
- * 5) manifest.webmanifest é JSON válido e a description menciona "365".
+ * 5) manifest.webmanifest é JSON válido e a description menciona "389".
  * 6) Imprime níveis / formatos / estilos (contagens reais) para conferência.
  * 7) q-m4-32: id/formato/gabarito + CONTEÚDO — alternativa B cita os princípios
  *    reais do art. 3º (neutralidade, privacidade, dados pessoais; sem
@@ -208,9 +208,9 @@ try {
   check('execução da fusão', false, e.message);
 }
 
-const ESPERADO_MODULO = { 1: 40, 2: 40, 3: 40, 4: 85, 5: 40, 6: 40, 7: 40, 8: 40 };
+const ESPERADO_MODULO = { 1: 43, 2: 54, 3: 47, 4: 85, 5: 40, 6: 40, 7: 40, 8: 40 };
 if (r) {
-  check('total de questões fundidas === 365', r.total === 365, 'real=' + r.total + ', esperado=365');
+  check('total de questões fundidas === 389', r.total === 389, 'real=' + r.total + ', esperado=389');
   check('0 ids duplicados', r.duplicados.length === 0,
     r.duplicados.length ? ('duplicados: ' + r.duplicados.join(', ')) : 'ok');
   for (const m of Object.keys(ESPERADO_MODULO)) {
@@ -323,8 +323,8 @@ for (const src of scriptSrcs) {
 check('todas as tags locais resolvem p/ arquivo em disco (' + locais + ' locais, ' + externas + ' externas)',
   ausentes.length === 0, ausentes.length ? ('ausentes: ' + ausentes.join(', ')) : 'nenhum 404');
 
-/* ---------------------------------------------------- manifest: JSON + "365" */
-secao('7. manifest.webmanifest → JSON VÁLIDO + description com "365"');
+/* ---------------------------------------------------- manifest: JSON + "389" */
+secao('7. manifest.webmanifest → JSON VÁLIDO + description com "389"');
 let manifest = null;
 try {
   manifest = JSON.parse(fs.readFileSync(path.join(APP, 'manifest.webmanifest'), 'utf8'));
@@ -334,8 +334,8 @@ try {
 }
 if (manifest) {
   const desc = typeof manifest.description === 'string' ? manifest.description : '';
-  check('description menciona "365"', desc.includes('365'), 'description contém 365=' + desc.includes('365'));
-  check('description menciona "365" e não contém "120"', !desc.includes('120'), '');
+  check('description menciona "389"', desc.includes('389'), 'description contém 389=' + desc.includes('389'));
+  check('description menciona "389" e não contém a contagem obsoleta "365"', desc.includes('389') && !desc.includes('365'), '');
 }
 
 /* ------------------------------------------- níveis / formatos / estilos (info) */
