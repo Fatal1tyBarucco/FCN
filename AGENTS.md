@@ -567,6 +567,14 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m5-05: reescrita para contextualizar overfitting como sinal de generalização prejudicada, incluindo ressalva para mudança de distribuição e avaliação inadequada.
 - Commit de conteúdo: `caa6230ec504e1ffc239095fb4a780892e7ebf75`. Validar links de fontes e CI no HEAD atual.
 
+## Correção do verificador após revisão de q-m4-44 (2026-10-26)
+
+- O CI falhou no job `Validate repository structure` porque `verificacao/verificar-estrutura.js` ainda esperava o gabarito e a justificativa da versão antiga de q-m4-44.
+- A versão atual de q-m4-44 usa gabarito B e compara corretamente os escopos da LGPD e do Marco Civil, esclarecendo que uma lei não substitui a outra.
+- Atualizado o verificador para esperar gabarito B e confirmar que a justificativa menciona ambas as leis e que uma não substitui a outra. Commit: `31c8b3d7c44f4a5a5558f0501be9e74e596d23fd`.
+- O verificador é uma suíte de regressão com expectativas explícitas de conteúdo; quando uma questão é intencionalmente revisada, suas asserções associadas precisam ser atualizadas para a nova redação, sem remover as verificações substantivas.
+- A execução mais recente precisa ser consultada para confirmar que a correção passou no CI; os runs anteriores no HEAD `af6706d05a02f6942061dc33ffce95d014ff8534` falharam especificamente na asserção de q-m4-44.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
