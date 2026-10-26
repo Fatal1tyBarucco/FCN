@@ -91,7 +91,7 @@ O banco completo agora tem 314 questões MC com gabaritos A=149, B=129, C=26, D=
 
 ## Distribuição de gabaritos por módulo — revisão necessária
 
-Execução da auditoria: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448. Distribuição MC:
+Execução da auditoria: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507. Distribuição MC:
 - M1: A=3, B=18, C=3, D=1, E=0.
 - M2: A=8, B=16, C=8, D=2, E=3.
 - M3: A=3, B=14, C=10, D=2, E=2.
@@ -102,3 +102,8 @@ Execução da auditoria: https://github.com/Fatal1tyBarucco/FCN/actions/runs/402
 - M8: A=10, B=25, C=1, D=0, E=0.
 
 As 24 questões novas distribuem gabaritos em A=4, B=5, C=5, D=5 e E=5. A concentração remanescente pertence ao banco legado e deve ser revisada manualmente; não se deve alterar o gabarito sem preservar a relação entre alternativa, análise e justificativa.
+
+
+## Checagem estrutural de rótulos de análise
+
+A execução https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507 comparou rótulos CORRETA/INCORRETA de análises por alternativa com o gabarito declarado e não detectou incompatibilidades. A verificação não comprova correção factual; a concentração de gabaritos por módulo segue como pendência editorial.

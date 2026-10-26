@@ -4,7 +4,7 @@
 **Repositório:** `Fatal1tyBarucco/FCN`  
 **Branch:** `feat/fase-1-orquestracao-20261025`  
 **Auditoria:** `scripts/audit_learning_assets.mjs`  
-**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448)
+**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507)
 
 ## Resultado estrutural atual
 
@@ -66,7 +66,7 @@ Na execução aprovada acima:
 
 ## Auditoria heurística do banco de questões — 2026-10-26
 
-- Execução aprovada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448.
+- Execução aprovada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
 - Questões lidas: 389; IDs duplicados: 0; pares com contexto e enunciado idênticos: 0; alertas heurísticos após reduzir falsos positivos: 0.
 - A matriz heurística completa foi gerada como artefato do workflow.
 - Limitação relevante identificada: entre 314 questões de múltipla escolha, distribuição do gabarito A=169, B=124, C=21, D=0, E=0. Isso não altera a correção individual, mas cria um padrão previsível de posição e exige revisão editorial manual antes de usar o banco como simulado de alta fidelidade.
@@ -74,9 +74,14 @@ Na execução aprovada acima:
 
 ## Achado de qualidade do banco — 2026-10-26
 
-A auditoria heurística leu 389 questões, sem IDs duplicados, sem pares com contexto/enunciado idênticos e sem alertas textuais após a correção dos falsos positivos. Ainda assim, a distribuição global das 314 questões MC é A=149, B=129, C=26, D=5, E=5; A/B representam 88,5%. O lote de 24 questões novas foi balanceado, mas a distribuição do banco legado requer revisão humana. Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448.
+A auditoria heurística leu 389 questões, sem IDs duplicados, sem pares com contexto/enunciado idênticos e sem alertas textuais após a correção dos falsos positivos. Ainda assim, a distribuição global das 314 questões MC é A=149, B=129, C=26, D=5, E=5; A/B representam 88,5%. O lote de 24 questões novas foi balanceado, mas a distribuição do banco legado requer revisão humana. Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
 
 
 ## Revisão editorial pendente da distribuição de gabaritos
 
-O relatório heurístico por módulo indica forte concentração de respostas em A/B, incluindo 30/30 gabaritos A em M6 e 33/33 em M7. As 24 questões novas foram balanceadas, mas o banco legado ainda exige revisão manual. Execução mais recente: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448.
+O relatório heurístico por módulo indica forte concentração de respostas em A/B, incluindo 30/30 gabaritos A em M6 e 33/33 em M7. As 24 questões novas foram balanceadas, mas o banco legado ainda exige revisão manual. Execução mais recente: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
+
+
+## Consistência de análise e gabarito
+
+A auditoria heurística comparou os rótulos CORRETA/INCORRETA com os gabaritos quando esse padrão existe e não encontrou incompatibilidades. Isso não substitui revisão factual de cada resposta, distrator e fonte. Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.

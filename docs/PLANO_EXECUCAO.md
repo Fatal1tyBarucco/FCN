@@ -131,9 +131,14 @@ A associação por tópico-pai é uma ferramenta de triagem e não prova cobertu
 - As 24 questões novas tiveram suas alternativas reorganizadas com preservação da correspondência entre alternativa, gabarito e análise.
 - O lote novo distribui gabaritos MC em A=4, B=5, C=5, D=5 e E=5.
 - O banco global continua concentrado em A/B (88,5% das questões MC); revisão manual das 290 questões MC legadas permanece pendente antes da aprovação editorial.
-- A execução técnica mais recente passou: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249669582.
+- A execução técnica mais recente passou: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
 
 
 ### Bloqueio editorial identificado — 2026-10-26
 
-A auditoria por módulo detectou distribuição de gabaritos inadequada para um simulado de alta fidelidade: M6 tem 30/30 MC com resposta A; M7 tem 33/33 com resposta A; M4/M5/M8 concentram respostas em A/B. A revisão manual de alternativas, gabaritos e análises torna-se prioridade antes do aceite final. A validação técnica passou em https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448, mas não substitui esse controle editorial.
+A auditoria por módulo detectou distribuição de gabaritos inadequada para um simulado de alta fidelidade: M6 tem 30/30 MC com resposta A; M7 tem 33/33 com resposta A; M4/M5/M8 concentram respostas em A/B. A revisão manual de alternativas, gabaritos e análises torna-se prioridade antes do aceite final. A validação técnica passou em https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507, mas não substitui esse controle editorial.
+
+
+### Triagem semântica inicial do M7 — 2026-10-26
+
+A primeira leitura dos 40 enunciados, contextos, gabaritos e justificativas do M7 não encontrou erro factual óbvio. A revisão integral de alternativas, análises de distratores e fontes continua pendente; não considerar o módulo aprovado. A auditoria automática de rótulos CORRETA/INCORRETA versus gabarito passou sem incompatibilidades. Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.

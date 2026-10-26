@@ -51,4 +51,9 @@ A matriz completa por questão está disponível no artefato `curriculum-audit-r
 
 A auditoria recomenda revisão manual de posições em M1, M4, M5, M6, M7 e M8. Em M6 e M7, todas as questões de múltipla escolha têm gabarito A; em M4, M5 e M8, a concentração em A/B também é extrema. O lote de 24 questões novas foi balanceado, mas isso não corrige automaticamente o banco legado.
 
-Evidência e matriz heurística gerada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250104448.
+Evidência e matriz heurística gerada: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
+
+
+## Consistência entre gabarito e rótulo da análise — 2026-10-26
+
+A auditoria heurística também comparou os rótulos CORRETA/INCORRETA nas análises por alternativa com o gabarito declarado. Resultado: **0 incompatibilidades detectadas** nas questões que usam esses rótulos. Isso é uma checagem estrutural de consistência, não prova que o gabarito esteja factualmente correto.
