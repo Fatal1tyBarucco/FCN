@@ -102,10 +102,10 @@ const { chromium } = require("playwright");
     const chartCell = page.locator("#charts-app input[data-celula='histograma:0:0']");
     await chartCell.waitFor({ state: "visible", timeout: 5000 });
     const chartBefore = await page.locator("#saida-histograma svg").evaluate(el => el.outerHTML);
-    await chartCell.fill("10");
+    await chartCell.fill("90");
     await page.waitForFunction(() => {
-      const cell = document.querySelector("#charts-app input[data-celula='histograma:0:1']");
-      return cell && cell.value === "10";
+      const cell = document.querySelector("#charts-app input[data-celula='histograma:0:0']");
+      return cell && cell.value === "90";
     }, null, { timeout: 5000 });
     const chartAfter = await page.locator("#saida-histograma svg").evaluate(el => el.outerHTML);
     assert.notEqual(chartAfter, chartBefore, "editing a numeric chart input must recalculate SVG");
