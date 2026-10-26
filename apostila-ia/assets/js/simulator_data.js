@@ -419,7 +419,7 @@
     + '.sim-dados-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
     + '.sim-dados-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
     '.sim-dados-bloco .sim-dados-sub{color:#cbd5e1}' +
-    + '.sim-dados-tabela{border-collapse:collapse;width:100%;margin:8px 0}'
+    '.sim-dados-tabela{border-collapse:collapse;width:100%;margin:8px 0}'
     + '.sim-dados-tabela th,.sim-dados-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}'
     + '.sim-dados-tabela th{background:#2a2f3a;color:#cdd4de}'
     + '.sim-dados-cel{width:70px;font-family:"Courier New",monospace;font-size:.82rem;background:#111318;color:#e3e9ff;border:1px solid #4a5265;border-radius:3px;padding:2px 6px}'
