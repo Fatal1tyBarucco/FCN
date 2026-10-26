@@ -178,7 +178,7 @@ button { display: inline-flex; align-items: center; justify-content: center; }
   align-items: center;
   justify-content: center;
 }
-.tree-toggle::before {
+button.tree-toggle::before {
   content: "";
   width: 0;
   height: 0;
@@ -186,7 +186,7 @@ button { display: inline-flex; align-items: center; justify-content: center; }
   border-right: 4px solid transparent;
   border-top: 6px solid currentColor;
 }
-.tree-toggle[aria-expanded="false"]::before {
+button.tree-toggle[aria-expanded="false"]::before {
   border-top: 0;
   border-bottom: 6px solid currentColor;
 }
