@@ -906,5 +906,385 @@ const references = [
     status: "verificado",
     dispositivos: null
   },
+  {
+    "id": "ref-rfc-1122-host-requirements",
+    "titulo": "RFC 1122 — Requirements for Internet Hosts: Communication Layers",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc1122.html",
+    "topico": "M2 — Redes (arquitetura da Internet e hosts)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-1112-ip-multicast",
+    "titulo": "RFC 1112 — Host Extensions for IP Multicasting",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc1112.html",
+    "topico": "M2 — Redes (multicast IPv4)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-4291-ipv6-addressing",
+    "titulo": "RFC 4291 — IP Version 6 Addressing Architecture",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc4291.html",
+    "topico": "M2 — Redes (unicast, anycast, multicast e endereçamento IPv6)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-4632-cidr",
+    "titulo": "RFC 4632 — Classless Inter-domain Routing (CIDR)",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc4632.html",
+    "topico": "M2 — Redes (CIDR e prefixos IPv4)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-8314-email-tls",
+    "titulo": "RFC 8314 — Cleartext Considered Obsolete: TLS for Email Submission and Access",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc8314.html",
+    "topico": "M3 — Comunicação (TLS e portas SMTP/POP3/IMAP)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-9051-imap4rev2",
+    "titulo": "RFC 9051 — Internet Message Access Protocol (IMAP) Version 4rev2",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc9051.html",
+    "topico": "M3 — Comunicação (IMAP)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-1939-pop3",
+    "titulo": "RFC 1939 — Post Office Protocol Version 3 (POP3)",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc1939.html",
+    "topico": "M3 — Comunicação (POP3)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-5322-message-format",
+    "titulo": "RFC 5322 — Internet Message Format",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc5322.html",
+    "topico": "M3 — Comunicação (cabeçalhos e destinatários de e-mail)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-7208-spf",
+    "titulo": "RFC 7208 — Sender Policy Framework (SPF)",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc7208.html",
+    "topico": "M3 — Comunicação (autenticação de e-mail SPF)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-6376-dkim",
+    "titulo": "RFC 6376 — DomainKeys Identified Mail (DKIM) Signatures",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc6376.html",
+    "topico": "M3 — Comunicação (autenticação de e-mail DKIM)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-9989-dmarc",
+    "titulo": "RFC 9989 — Domain-Based Message Authentication, Reporting, and Conformance (DMARC)",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc9989.html",
+    "topico": "M3 — Comunicação (DMARC; substitui RFC 7489 e RFC 9091)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-lan",
+    "titulo": "What Is a LAN? Local Area Network",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
+    "topico": "M2 — Redes (LAN, cliente-servidor e peer-to-peer)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-wan",
+    "titulo": "What Is a WAN? Wide-Area Network",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
+    "topico": "M2 — Redes (WAN, interconexão e comutação de pacotes)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-networking",
+    "titulo": "What Is Computer Networking?",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html",
+    "topico": "M2 — Redes (tipos e componentes de redes)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-topology",
+    "titulo": "What Is Network Topology?",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
+    "topico": "M2 — Redes (topologia física/lógica, redundância e pontos de falha)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-low-latency",
+    "titulo": "What Is Low Latency?",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
+    "topico": "M2 — Redes (latência e jitter)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisa-phishing",
+    "titulo": "Secure Our World — Recognize and Report Phishing",
+    "organizacao": "Cybersecurity and Infrastructure Security Agency (CISA)",
+    "url": "https://www.cisa.gov/be-cyber-smart/report-incident",
+    "topico": "M3 — Comunicação (phishing e mensagens suspeitas)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-google-meet-host-controls",
+    "titulo": "Gerenciar os controles do anfitrião no Google Meet",
+    "organizacao": "Google Meet Help",
+    "url": "https://support.google.com/meet/answer/16229038?co=GENIE.Platform%3DDesktop&hl=pt-br",
+    "topico": "M3 — Comunicação (controle de participantes e moderação)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-google-meet-recording",
+    "titulo": "Gravar uma videochamada",
+    "organizacao": "Google Meet Help",
+    "url": "https://support.google.com/meet/answer/9308681?co=GENIE.Platform%3DDesktop&hl=pt-br",
+    "topico": "M3 — Comunicação (gravação de reuniões e consentimento)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-version-history",
+    "titulo": "Restaurar uma versão anterior de um ficheiro armazenado no OneDrive",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive?ad=br&rs=pt-br&ui=pt-br",
+    "topico": "M1 — Microsoft 365 (histórico de versões)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-safeguards",
+    "titulo": "Como o OneDrive protege seus dados na nuvem",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/onedrive/how-onedrive-safeguards-your-data-in-the-cloud",
+    "topico": "M1 — Microsoft 365 (proteção de dados, links e histórico de versões)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-ransomware",
+    "titulo": "Como detectar ransomware e recuperar arquivos usando o OneDrive",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/onedrive/how-to-detect-ransomware-and-recover-files-using-onedrive",
+    "topico": "M1 — Microsoft 365 (detecção/recuperação de ransomware)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-cross-reference",
+    "titulo": "Criar uma referência cruzada",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/create-a-cross-reference",
+    "topico": "M1 — Microsoft 365 (Word: campos e referências cruzadas)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-compare-merge",
+    "titulo": "Comparar e mesclar duas versões de um documento",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/compare-and-merge-two-versions-of-a-document",
+    "topico": "M1 — Microsoft 365 (Word: revisão e comparação de documentos)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-read-only",
+    "titulo": "Tornar um documento somente leitura no Word",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/make-a-document-read-only-in-word",
+    "topico": "M1 — Microsoft 365 (Word: proteção e restrição de edição)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-lists",
+    "titulo": "Criar uma lista numerada ou com marcadores",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/training/create-a-bulleted-or-numbered-list",
+    "topico": "M1 — Microsoft 365 (Word: listas)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-tab-stops",
+    "titulo": "Inserir ou adicionar paradas de tabulação no Word",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/insert-or-add-tab-stops",
+    "topico": "M1 — Microsoft 365 (Word: tabulações)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-accessibility",
+    "titulo": "Tornar documentos do Word acessíveis com o Assistente de Acessibilidade",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/accessibility/word/make-your-word-documents-accessible-to-everyone-with-accessibility-assistant",
+    "topico": "M1 — Microsoft 365 (Word: acessibilidade)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-slide-master",
+    "titulo": "Personalizar um slide mestre",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master",
+    "topico": "M1 — Microsoft 365 (PowerPoint: slide mestre)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-transitions",
+    "titulo": "Adicionar, alterar ou remover transições entre slides",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/add-change-or-remove-transitions-between-slides",
+    "topico": "M1 — Microsoft 365 (PowerPoint: transições)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-animation",
+    "titulo": "Animações e transições para o PowerPoint na Web",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/video-animations-and-transitions-for-powerpoint-web",
+    "topico": "M1 — Microsoft 365 (PowerPoint: animações e transições)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-pdf",
+    "titulo": "Salvar apresentações do PowerPoint como arquivos PDF",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/save-powerpoint-presentations-as-pdf-files",
+    "topico": "M1 — Microsoft 365 (PowerPoint: exportação para PDF)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-excel-xlookup",
+    "titulo": "Função PROCX",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/functions/xlookup-function",
+    "topico": "M1 — Microsoft 365 (Excel: PROCX)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-excel-if",
+    "titulo": "SE (Função SE)",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/functions/if-function",
+    "topico": "M1 — Microsoft 365 (Excel: função SE)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-outlook-calendar-sharing",
+    "titulo": "Compartilhamento de calendários no Microsoft 365",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/outlook/calendar-sharing-in-microsoft-365",
+    "topico": "M3 — Comunicação (calendários e permissões)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-outlook-time-zones",
+    "titulo": "Gerenciar configurações de fuso horário no Outlook",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/outlook/getstarted/manage-time-zone-settings-in-outlook",
+    "topico": "M3 — Comunicação (reuniões e fusos horários)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-teams-calendar",
+    "titulo": "Introdução ao calendário do Microsoft Teams",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/teams/meetings/get-started-with-the-microsoft-teams-calendar",
+    "topico": "M3 — Comunicação (integração Teams/Microsoft 365)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-teams-recording",
+    "titulo": "Reproduzir, compartilhar e baixar gravações de reuniões no Microsoft Teams",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/teams/meetings/play-share-and-download-meeting-recordings-in-microsoft-teams",
+    "topico": "M3 — Comunicação (gravação de reuniões)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
 ];
 if (typeof window !== 'undefined') window.references = references;
