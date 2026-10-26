@@ -251,3 +251,9 @@ Evidência: workflow [40412457818](https://github.com/Fatal1tyBarucco/FCN/action
 - Distribuição MC geral: A=83, B=104, C=72, D=37, E=28. Em M1: A=4, B=15, C=5, D=2, E=0 (26 itens). A distribuição é um sinal para revisão manual, não motivo para alterar gabaritos corretos.
 - Limitação: zero alertas heurísticos não prova correção factual, qualidade dos distratores ou adequação pedagógica.
 
+## Conferência cruzada adicional de gabarito e análise — 2026-10-26
+
+Foi executada uma verificação textual independente sobre os seis arquivos de questões versionados. Nas **324 questões de múltipla escolha**, o gabarito indicado correspondeu a uma chave de análise encontrada no objeto `analise`, com marcador de correção reconhecível. Não foram encontrados casos em que o gabarito apontasse para uma letra ausente da análise nem questões MC sem análise detectável. As 75 questões C/E também apresentaram gabarito textual `certo` ou `errado`.
+
+**Limitação:** a verificação apenas compara campos e marcadores textuais. Não confirma que a alternativa marcada está factualmente correta, que as demais alternativas são falsas, que a justificativa é válida ou que a fonte sustenta o item. A revisão semântica humana continua obrigatória.
+
