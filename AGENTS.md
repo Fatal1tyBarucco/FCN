@@ -892,6 +892,19 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit de conteúdo: `771540e2606792fc2199989de94b29bb4d6b9246`.
 - Revisão semântica focal concluída; validação automatizada no HEAD atual ainda necessária.
 
+## Revisão semântica focal de M2 — q-m2-01..q-m2-54 (2026-10-26)
+
+- q-m2-01..q-m2-20: revisados cliente-servidor/P2P, LAN/WLAN/MAN/WAN, intranet/extranet, topologias, comutação de circuitos/pacotes e unicast/broadcast/multicast/anycast.
+- q-m2-21..q-m2-40: revisados largura de banda/throughput, latência/jitter/perda, meios de transmissão e limites de UTP Cat6/Cat6a, além de cálculos CIDR /26, /27 e /28.
+- q-m2-41..q-m2-50: revisados modelos OSI/TCP-IP, fluxo HTTPS sobre TCP, IPv4/IPv6, TCP/UDP, DNS/DHCP, SFTP/FTPS/SSH, VPN/NAT/PAT, endereços privados, VLSM/sumarização e abreviação IPv6.
+- q-m2-51..q-m2-54: revisados ping/traceroute, ipconfig, nslookup/dig e diagnóstico por camadas.
+- q-m2-19 e q-m2-30: condicionada a vantagem de multicast ao suporte da aplicação e da infraestrutura, evitando presumir que toda rede entrega multicast automaticamente.
+- q-m2-28: áudio interrompido passou a ser descrito como compatível com jitter, a confirmar por medição, em vez de diagnóstico conclusivo a partir de ping estável.
+- q-m2-33: removida a propriedade residual `letra2: null` de uma alternativa.
+- Comentário de cobertura em questions.js atualizado: M2 possui 54 questões e curriculum_m2.js contém unidades 2.1–2.5; removida a anotação antiga que dizia haver apenas 26 questões e ausência de unidades 2.2–2.5.
+- Commits de conteúdo: `820d699def60c5953db90ea683df30f9f86855f2`, `2d18dc11fe7108d1985752f4f45fa2c560dea0fa`, `d7971da8d94a0ee436036f3dbaa315a893d33d38` e `a602c54f5a7912cbcaec6f1e9c789fa611c6062f`.
+- Revisão semântica focal dos 54 itens concluída; validar sintaxe, esquema e CI no HEAD mais recente.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
