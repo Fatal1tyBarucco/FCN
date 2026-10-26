@@ -2362,32 +2362,34 @@ id: "q-m1-09",
     pegadinha: "Não transforme um valor padrão observado em uma configuração específica em regra universal para todas as contas e locatários."
   },
   {
-id: "q-m1-40",
+  {
+    id: "q-m1-40",
     modulo: 1,
     formato: "mc",
     estilo: "fgv",
     origem: "autoral",
     nivel: "avancado",
     topico: "modulo-1-unidade-4-topico-1-sub-1",
-    assunto: "M1.4 PowerPoint — PDF vs Empacotar Apresentação para CD",
-    contexto: "Uma autarquia preparará uma apresentação em PowerPoint que será exibida em um projetor em sala sem internet e em um computador que não possui o PowerPoint instalado. O responsável precisa escolher como disponibilizar o arquivo para esse ambiente offline. Fonte: unidade 1.4 (curriculumPowerPoint14) — exportação e empacotamento.",
-    enunciado: "À luz da unidade 1.4, sobre como garantir que a apresentação funcione corretamente nesse ambiente offline (sem internet e sem o PowerPoint instalado), assinale a alternativa correta.",
+    assunto: "M1.4 PowerPoint — PDF para exibição offline sem PowerPoint",
+    contexto: "Uma autarquia exibirá uma apresentação estática (sem animações nem vídeos) em um computador sem PowerPoint e sem internet. O computador tem um leitor de PDF instalado, e o requisito é preservar o layout dos slides.",
+    enunciado: "Qual opção atende melhor ao requisito descrito?",
     alternativas: [
-      { letra: "A", texto: "Basta exportar a apresentação para PDF, pois o PDF já vincula as fontes e inclui toda a mídia, transformando o arquivo em apresentação executável e dispensando qualquer outro procedimento." },
-      { letra: "B", texto: "Para apresentação offline em máquina sem o PowerPoint, deve-se usar 'Empacotar Apresentação para CD' (Package Presentation), que inclui fontes vinculadas e mídia; a exportação para PDF preserva o layout, mas não converte o arquivo em apresentação executável." },
-      { letra: "C", texto: "O modo de apresentação (Slide Show) roda mesmo sem o PowerPoint instalado, desde que haja conexão com a internet para carregar os slides." },
-      { letra: "D", texto: "A exportação para PDF e o 'Empacotar Apresentação para CD' têm exatamente a mesma função e podem ser usados de forma totalmente intercambiável em qualquer situação." }
+      { letra: "A", texto: "Exportar para PDF: preserva o layout e permite visualizar os slides em um computador com leitor de PDF, mas não preserva animações/transições como apresentação interativa." },
+      { letra: "B", texto: "Usar 'Empacotar Apresentação para CD', pois o pacote de fontes e arquivos vinculados substitui o aplicativo necessário para abrir e reproduzir a apresentação." },
+      { letra: "C", texto: "Usar PowerPoint para a Web, que funciona sem conexão com a internet após o arquivo ser carregado." },
+      { letra: "D", texto: "Usar PDF e pacote de apresentação como formatos intercambiáveis, pois ambos preservam animações, transições e todos os recursos interativos." }
     ],
-    gabarito: "B",
-    justificativa: "A unidade 1.4 trata dois recursos distintos: 'Exportação para PDF preserva layout' e, 'para apresentação offline, usar \"Empacotar Apresentação para CD\" (Package Presentation) incluindo fontes vinculadas e mídia'. O Empacotar é o caminho para levar a apresentação (com fontes e mídia) a um ambiente offline; o PDF, por sua vez, preserva o layout mas é um documento para leitura/impressão, não uma apresentação executável no PowerPoint. A alternativa B respeita essa distinção.",
+    gabarito: "A",
+    justificativa: "A documentação oficial da Microsoft informa que exportar para PDF congela a formatação e o layout e permite visualizar os slides sem ter o PowerPoint instalado. O PDF não mantém a apresentação interativa com suas animações e transições. 'Empacotar Apresentação para CD/USB' transfere fontes e arquivos externos, mas não substitui um aplicativo compatível; o Visualizador do PowerPoint foi descontinuado. O PowerPoint para a Web exige conexão e armazenamento em serviço online, portanto não atende ao cenário offline.",
     analise: {
-      A: "INCORRETA. Erro conceitual: atribui ao PDF o que o currículo reserva ao Empacotar (vincular fontes e incluir mídia) e o transforma em 'apresentação executável'. O PDF preserva layout, mas não é a ferramenta de empacotamento offline descrita.",
-      B: "CORRETA. É a única que aplica corretamente a unidade 1.4: para offline sem PowerPoint usa-se 'Empacotar Apresentação para CD' (fontes vinculadas + mídia); o PDF preserva o layout mas não converte o arquivo em apresentação executável.",
-      C: "INCORRETA. Erro conceitual: invenção dupla. O modo de apresentação (Slide Show) exige o PowerPoint instalado e não depende de internet; a alternativa afirma o oposto (roda sem o programa e precisa de internet).",
-      D: "INCORRETA. Erro conceitual: equiparação indevida. O currículo descreve funções distintas (PDF preserva layout; Empacotar leva fontes e mídia para offline); não são intercambiáveis em qualquer situação."
+      A: "CORRETA. O cenário exige somente exibição estática, layout preservado e funcionamento offline com leitor de PDF disponível.",
+      B: "INCORRETA. O pacote transfere fontes e arquivos vinculados, mas não instala por si só um visualizador compatível; o Visualizador do PowerPoint foi descontinuado.",
+      C: "INCORRETA. PowerPoint para a Web requer conexão com a internet para abrir a apresentação armazenada em serviço online.",
+      D: "INCORRETA. PDF preserva o layout para visualização, mas não reproduz a sequência de animações e transições como uma apresentação PowerPoint."
     },
-    regra: "Exportação para PDF preserva o layout (documento para leitura/impressão). Para apresentação offline, usar 'Empacotar Apresentação para CD' (Package Presentation), que inclui fontes vinculadas e mídia.",
-    pegadinha: "A armadilha é a alternativa A, que transfere ao PDF a responsabilidade de vincular fontes e incluir mídia — papel que a unidade 1.4 atribui ao Empacotar para CD — e a D, que apaga a distinção entre os dois recursos."
+    regra: "Sem PowerPoint e sem internet: PDF é adequado para slides estáticos quando há leitor de PDF. Para preservar animações, narração e temporização, escolha um formato de vídeo compatível ou garanta previamente um aplicativo de apresentação compatível.",
+    pegadinha: "Empacotar fontes e arquivos externos não equivale a fornecer um aplicativo para reproduzir a apresentação; PDF é adequado para visualização estática, não para preservar a interatividade.",
+    fonte: "Microsoft Support — Salvar apresentações do PowerPoint como PDF: https://support.microsoft.com/pt-br/powerpoint/training/save-powerpoint-presentations-as-pdf-files; Exibir uma apresentação sem o PowerPoint (inclui aviso de que o Visualizador foi desativado): https://support.microsoft.com/pt-br/powerpoint/view-a-presentation-without-powerpoint; Empacotar apresentação para CD/USB: https://support.microsoft.com/en-au/powerpoint/package-a-presentation-for-cd-or-usb-flash-drive."
   },
   /* ===================== FIM do bloco q-m1-33..q-m1-40 (Módulo 1) ===================== */
 {
