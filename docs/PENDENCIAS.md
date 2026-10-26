@@ -487,6 +487,7 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] Acrescentadas fontes oficiais para `q-m2-26` e `q-m2-32` (Cisco: Cat6 UTP até 55 m a 10 Gbps; Cat6 blindado/Cat6A/Cat7 até 100 m).
 - [x] Acrescentadas fontes oficiais para `q-m3-19` (licenciamento/capacidade de webinar e requisitos de salas paralelas) e `q-m3-36` (salas paralelas do Zoom Webinar e navegadores compatíveis com Google Meet).
 - [x] Atualizados o catálogo `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md`.
-- [ ] Reexecutar auditoria de qualidade e confirmar que as 399 questões têm fonte registrada; antes da execução, a contagem documentada era 395/399.
-- [ ] Revisar semanticamente `q-m3-19` e `q-m3-36`, preservando a dependência de licenças, tipo de evento e aplicativo; uma referência pertinente não garante que todo o enunciado esteja correto em todos os contextos.
+- [x] Auditoria no run [40416873641](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40416873641) concluída com sucesso; conferência dos seis arquivos confirma `fonte` preenchido em 399/399 questões. Isso verifica presença estrutural, não correção factual de cada item.
+- [x] Reescrita de `q-m3-36` para evitar a alegação ampla de que o Zoom se distingue por funcionar sem instalação; o item agora testa que salas temáticas do Google Meet dependem de edições elegíveis do Workspace e mantém a ressalva de licença/aplicativo para salas paralelas em webinars Zoom. Aguardar CI e revisar a semântica após o resultado.
+- [ ] Revisar semanticamente `q-m3-19`, sobretudo a condição de licença/plano para 500 participantes e recursos premium; a revisão completa das 399 questões continua pendente.
 - [ ] Não afirmar validação HTTP automática de todas as URLs. Revisão semântica completa das 399 questões continua pendente.
