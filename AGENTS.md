@@ -367,6 +367,12 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commit q-m6-18: `4e31a170d12f48bddf7bec6370661b79cf7b3b6a`; commit q-m6-24: `f9abeb51546a40746aaf6b3cbf0e47a94214e006`.
 - Este passe cobre q-m6-01..q-m6-25 de forma focal, não constitui revisão integral de todas as normas nem validação automatizada do HEAD atual.
 
+## Correção de sintaxe após revisão M6 — 2026-10-26
+
+- O workflow `40335281895` falhou em `node --check` no arquivo `apostila-ia/assets/data/questions_m6.js`, linha 571: `Unexpected token '{'`. A causa foi a substituição de q-m6-24 a partir do identificador, que deixou a chave de abertura original e acrescentou outra, produzindo `{ { id: "q-m6-24"`.
+- Removida a chave duplicada no commit `3ffa29dd72e86e991a0624187fc3b52b9c91935b`. A correção precisa ser confirmada por nova execução de `node --check` e pelo workflow completo no HEAD resultante.
+- Lição operacional: ao substituir um objeto inteiro, incluir/remover o delimitador de abertura de forma consistente; não iniciar a substituição no identificador se o bloco novo também inclui a chave e a chave original permanecerá no arquivo.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
