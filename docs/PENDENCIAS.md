@@ -481,6 +481,7 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] A violação moderada `landmark-unique` foi removida tornando únicos os nomes acessíveis dos landmarks de navegação dos simuladores de Segurança, Prompts e Dados.
 - Atualização no run [40420580863](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40420580863), HEAD `15533145e506dcec5988f91b73be09a6c4462ad0`: 58 passes, 2 verificações incompletas e 0 violações. `label-content-name-mismatch` deixou de aparecer; permanecem 89 nós de texto SVG em `color-contrast` e 20 iframes em `frame-tested`.
 - Revisão matemática dos textos SVG contra o fundo `#111318`: `#e3e9ff` (título) = 15,37:1; `#c5c9d4` (texto geral) = 11,22:1; `#8b94a5` (rótulos de eixo) = 6,08:1. Os três valores excedem 4,5:1. O axe-core não conclui automaticamente esses nós SVG; inspeção visual/manual, leitor de tela, teclado e testes físicos continuam pendentes.
+- Conferência estrutural do HTML: 20/20 iframes incorporados têm atributo `title` não vazio e único. O resultado `frame-tested` continua incompleto porque a ferramenta não avalia o conteúdo interno de frames externos; isso não é uma violação confirmada.
 - [ ] Continuam pendentes leitor de tela, navegação manual completa por teclado, auditoria WCAG manual e testes em dispositivos físicos.
 
 ## Fontes das quatro questões pendentes — atualização 2026-10-26
