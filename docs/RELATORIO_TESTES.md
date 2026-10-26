@@ -487,3 +487,14 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - O SHA testado antecede commits posteriores de documentação, mas inclui as alterações de código nos simuladores e a revisão focal de `q-m1-01`. O código da aplicação não foi alterado depois desse SHA no momento do registro.
 - **Escopo limitado:** este sucesso não comprova revisão semântica integral, validade de todas as fontes, conformidade WCAG independente, testes com leitor de tela ou compatibilidade em dispositivos físicos. Permanecem 112 questões sem fonte identificada pelo auditor estrutural e a distribuição de gabaritos do M1 requer análise.
 
+## Validação completa após inclusão de fontes M1–M3 — 2026-10-26
+
+- Workflow: [40412457818](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40412457818).
+- SHA testado: `5232348fa553a58317c6b4b28ab9dfafc088beb9`.
+- Resultado: **success**.
+- Passaram: sintaxe JavaScript (39 arquivos), geração da matriz curricular, rastreabilidade de ativos, validação estrutural, auditoria heurística de questões, smoke test Chromium em `file://` e testes interativos Playwright/axe-core.
+- Smoke test: aplicação com 8 módulos, 460 flashcards e 399 questões; sem erros JavaScript de página.
+- axe-core: 58 regras aprovadas, 3 resultados incompletos, 1 violação total não bloqueante e 0 violações críticas/graves bloqueantes.
+- Auditoria de questões: 399 lidas, 0 IDs duplicados, 0 alertas heurísticos, 0 pares com contexto/enunciado idênticos; 395 com campo de fonte detectado e 4 sem fonte.
+- O sucesso automatizado não substitui verificação de URLs, revisão semântica, leitor de tela, WCAG manual ou testes físicos. As quatro lacunas de fonte e a distribuição de gabaritos de M1 estão registradas em `docs/PENDENCIAS.md`.
+
