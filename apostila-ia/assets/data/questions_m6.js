@@ -954,23 +954,28 @@ const moduleQuestions6 = [
   },
   {
     id: "q-m6-41", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
-    topico: "modulo-6-unidade-1-topico-3", assunto: "Ética e governança em TI", contexto: "Durante uma contratação pública, integrante da comissão identifica relação pessoal relevante com representante de empresa participante.", enunciado: "Qual conduta inicial é mais compatível com integridade e prevenção de conflito de interesses?",
+    topico: "modulo-6-unidade-1-topico-3", assunto: "Ética e governança em TI",
+    contexto: "No âmbito do Poder Executivo federal, agente público abrangido pela Lei nº 12.813/2013 participa de decisão administrativa que pode favorecer empresa ligada a interesse privado seu. A apuração inicial ainda não identificou prejuízo ao erário nem vantagem efetivamente recebida.",
+    enunciado: "Qual conclusão é juridicamente mais adequada sobre a ausência de prejuízo ou de vantagem comprovada?",
     alternativas: [
-      { letra: "A", texto: "Prosseguir, desde que não assine o contrato final." },
-      { letra: "B", texto: "Ocultar a relação para não atrasar a contratação." },
-      { letra: "C", texto: "Participar após declaração informal de apoio técnico." },
-      { letra: "D", texto: "Publicar dados pessoais do representante em rede social." },
-      { letra: "E", texto: "Declarar formalmente a situação e acionar o procedimento institucional competente antes de atuar." }
+      { letra: "A", texto: "Ela afasta necessariamente o conflito, pois só existe infração quando há dano financeiro." },
+      { letra: "B", texto: "Ela impede qualquer avaliação até que se comprove pagamento ao agente público." },
+      { letra: "C", texto: "Ela torna o caso exclusivamente disciplinar, sem necessidade de prevenção." },
+      { letra: "D", texto: "Ela não afasta, por si só, a possibilidade de conflito; a situação deve ser avaliada e prevenida conforme a lei e as circunstâncias." },
+      { letra: "E", texto: "Ela prova que houve conflito e determina exoneração automática." }
     ],
-    gabarito: "E", justificativa: "A situação deve ser declarada e tratada pelo procedimento aplicável, prevenindo influência indevida e registrando a decisão; o enquadramento concreto depende do regime jurídico e das regras do órgão.",
+    gabarito: "D",
+    justificativa: "A Lei nº 12.813/2013, art. 4º, exige prevenir ou impedir possível conflito e resguardar informação privilegiada. Seu § 2º estabelece que a ocorrência de conflito independe de lesão ao patrimônio público ou de recebimento de vantagem pelo agente ou por terceiro. Isso não significa que qualquer vínculo prove automaticamente uma infração: é necessário avaliar os fatos, a função e o regime aplicável.",
     analise: {
-      A: "INCORRETA. A influência pode ocorrer durante a instrução e na avaliação da proposta, mesmo que o integrante não assine o contrato.",
-      B: "INCORRETA. O ocultamento impede que a instituição avalie e trate o possível conflito.",
-      C: "INCORRETA. Uma declaração informal de apoio técnico não substitui o procedimento formal de análise do conflito.",
-      D: "INCORRETA. Expor dados pessoais em rede social não é procedimento de integridade e pode criar outro dano.",
-      E: "CORRETA. A declaração formal e o encaminhamento permitem que a instituição avalie o caso antes da atuação do integrante."
+      A: "INCORRETA. A lei não condiciona a existência de conflito a dano financeiro.",
+      B: "INCORRETA. A prevenção não depende de comprovar pagamento ou vantagem consumada.",
+      C: "INCORRETA. O dever legal inclui prevenir ou impedir situações potencialmente conflitantes.",
+      D: "CORRETA. Ausência de dano ou vantagem não encerra a análise; o risco deve ser avaliado sem presumir automaticamente uma infração.",
+      E: "INCORRETA. A ausência de dano não prova nem exclui o conflito, e a lei não estabelece exoneração automática apenas por essa circunstância."
     },
-    regra: "Risco de conflito deve ser declarado e tratado por canal formal.", pegadinha: "Transparência não autoriza exposição indiscriminada de dados pessoais.", fonte: "Currículo M6 — modulo-6-unidade-1-topico-3 (ética e governança em TI)."
+    regra: "No âmbito de aplicação da Lei nº 12.813/2013, conflito de interesses não depende de dano ao erário nem de vantagem efetivamente recebida; a avaliação deve considerar os fatos e o dever preventivo.",
+    pegadinha: "Não confundir ausência de prejuízo com ausência de conflito, nem risco potencial com infração automaticamente comprovada.",
+    fonte: "Lei nº 12.813/2013, arts. 1º a 4º, especialmente art. 4º, § 2º (texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12813.htm). A lei tem âmbito próprio; a incidência concreta depende do cargo, entidade e circunstâncias previstos nela."
   },
   {
     id: "q-m6-42", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
