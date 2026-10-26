@@ -181,7 +181,7 @@ const moduleQuestions8 = [
     enunciado: "No Power Query, os passos de transformação são registrados e executados sempre que a consulta é atualizada, permitindo refazer a carga sem retrabalho manual.",
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'os passos de transformação são registrados e executados sempre que a consulta é atualizada': o currículo afirma que o Power Query mantém os passos como um script declarativo, permitindo reexecutar o processo inteiro sem ajuste manual.",
-    justificativa: "O Power Query é o editor de preparação que executa transformações por passos registrados (filtrar colunas, trocar tipos, agregar, mesclar, expandir). Esses passos ficam documentados e são reexecutados a cada atualização da consulta, o que é o enunciado. A afirmação é, portanto, verdadeira.",
+    justificativa: "O Power Query é um editor de preparação que registra transformações em etapas (filtrar colunas, trocar tipos, agregar, mesclar, expandir) e as reexecuta ao atualizar a consulta, desde que as fontes, credenciais e configuração estejam disponíveis. Isso reduz retrabalho manual, mas não elimina toda a operação ou manutenção.",
     analise: {
       item: "Item VERDADEIRO. Os passos registrados são reexecutados a cada atualização, o que elimina retrabalho manual.",
       leituraIncorreta: "Leitura que induz ao erro: considerar que o Power Query é só 'caminho de importação' — na verdade o editor transforma e registra a sequência, e é por isso que o item é certo."
@@ -199,7 +199,7 @@ const moduleQuestions8 = [
       { letra: "B", texto: "A granularidade permite várias linhas por protocolo, mas o relatório interpreta cada linha como um protocolo distinto." },
       { letra: "C", texto: "As dimensões são enxutas e possuem chave única." },
       { letra: "D", texto: "A granularidade do fato está declarada." },
-      { letra: "E", texto: "A medida correta pode exigir contagem distinta do identificador de protocolo, e não contagem simples de linhas." }
+      { letra: "E", texto: "A contagem simples sempre equivale à contagem distinta quando as dimensões têm chave única." }
     ],
     gabarito: "B",
     justificativa: "A contagem de linhas mede registros na granularidade da tabela de fatos, não necessariamente protocolos distintos. Se um protocolo pode gerar várias linhas de fato, contar cada linha como um protocolo superestima o total. Para medir protocolos únicos, pode ser necessária uma contagem distinta do identificador, conforme a granularidade e as regras do modelo.",
