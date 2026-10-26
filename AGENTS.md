@@ -1340,4 +1340,6 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 
 ## Atualização de execução — 2026-10-26
 - `q-m3-19` foi reformulada para perguntar por requisitos verificáveis de licenciamento, em vez de pressupor superioridade geral de uma plataforma. A alternativa correta exige capacidade licenciada para 500 participantes e uma licença elegível para salas paralelas dentro de webinar; as análises dos distratores foram alinhadas ao enunciado.
-- O código atualizado está no SHA `2fef7e7e6729a6828e841e577e91338b380a3b7d`; aguardar os workflows desse HEAD antes de registrar aprovação. Não fazer merge; manter PR #17 em Draft.
+- O código atualizado está no SHA `816b771ac7323229801564570670a7702a777ac1`; aguardar os workflows desse HEAD antes de registrar aprovação. Não fazer merge; manter PR #17 em Draft.
+
+- Ajuste final da questão `q-m3-19`: alternativa C encurtada para evitar que o comprimento denuncie o gabarito; os nomes específicos das licenças elegíveis foram mantidos na justificativa. SHA atual do código: `816b771ac7323229801564570670a7702a777ac1`; validar CI no HEAD posterior à atualização documental.

@@ -531,4 +531,6 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - A documentação oficial Zoom distingue capacidade do webinar e elegibilidade para salas paralelas. A capacidade para 500 participantes não garante, por si só, o recurso de salas paralelas.
 - A questão foi ajustada para perguntar quais condições precisam ser verificadas. A alternativa C especifica uma capacidade contratada para 500 participantes e uma licença elegível (`Zoom Webinars Plus Unlimited`, `Zoom Webinars Plus Pay Per Attendee` ou `Zoom Events Unlimited`), além dos requisitos de webinar agendado, recurso habilitado e aplicativo desktop/móvel suportado descritos pela documentação.
 - As análises de A, B e D foram ajustadas para não tratar diferenciais gerais de plataforma como prova suficiente. A revisão focal foi feita; a revisão semântica completa do banco permanece pendente.
-- HEAD de código no momento da alteração: `2fef7e7e6729a6828e841e577e91338b380a3b7d`. CI desse HEAD ainda precisa ser confirmado.
+- HEAD de código no momento da alteração: `816b771ac7323229801564570670a7702a777ac1`. CI desse HEAD ainda precisa ser confirmado.
+
+- A alternativa C de `q-m3-19` foi encurtada para reduzir pistas involuntárias pelo comprimento da resposta; os nomes das licenças elegíveis permaneceram na justificativa. O SHA do código atualizado é `816b771ac7323229801564570670a7702a777ac1`; aguardar CI no HEAD atualizado.
