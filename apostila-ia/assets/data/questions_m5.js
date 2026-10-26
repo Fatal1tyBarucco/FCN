@@ -995,6 +995,57 @@ const moduleQuestions5 = [
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
   }
 
+  {
+    id: "q-m5-41", modulo: 5, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "avancado",
+    topico: "modulo-5-unidade-3-topico-4", assunto: "5.3 — Síntese aplicada: alucinação em atendimento público",
+    contexto: "Um assistente institucional informa prazos de requerimentos sem localizar ato normativo que os sustente. A amostragem encontra respostas plausíveis, mas sem fundamento verificável.",
+    enunciado: "Qual plano trata melhor a causa do risco e permite medir se houve melhora?",
+    alternativas: [
+      { letra: "A", texto: "Acrescentar 'não invente' ao prompt e considerar o risco resolvido." },
+      { letra: "B", texto: "Aumentar o tamanho das respostas para incluir mais contexto." },
+      { letra: "C", texto: "Apagar registros de conversa para evitar reutilização de respostas erradas." },
+      { letra: "D", texto: "Ancorar respostas em atos vigentes recuperados, exigir evidência citável, encaminhar lacunas a uma pessoa e medir fidelidade." },
+      { letra: "E", texto: "Completar prazos ausentes com base na prática de outros órgãos." }
+    ],
+    gabarito: "D",
+    justificativa: "O problema é afirmar sem evidência normativa. Recuperação documental com metadados de vigência, resposta condicionada à evidência, encaminhamento seguro e avaliação periódica atacam a causa e permitem auditoria.",
+    analise: {
+      A: "INCORRETA. Instrução isolada não garante fidelidade nem verifica a resposta.",
+      B: "INCORRETA. Mais texto pode ampliar o erro sem fornecer evidência.",
+      C: "INCORRETA. Apagar registros reduz a capacidade de auditar e corrigir.",
+      D: "CORRETA. Combina fonte autoritativa, tratamento seguro de lacunas, supervisão e medição.",
+      E: "INCORRETA. A prática de outro órgão não fundamenta o prazo legal aplicável."
+    },
+    regra: "Afirmações institucionais devem ser verificáveis contra documentos vigentes; o modelo não é fonte normativa.",
+    pegadinha: "Um prompt mais enfático não substitui recuperação de fonte, validação e governança.",
+    fonte: "Currículo M5 — modulo-5-unidade-3-topico-4 (casos aplicados de IA generativa e governança)."
+  },
+  {
+    id: "q-m5-42", modulo: 5, formato: "mc", estilo: "vunesp", origem: "autoral", nivel: "avancado",
+    topico: "modulo-5-unidade-4-topico-4", assunto: "5.4 — Síntese aplicada: engenharia de prompts institucional",
+    contexto: "Um órgão usa assistente para responder sobre regimento atualizado por portarias. O prompt só diz: 'Responda com base no regimento e, se não souber, diga que não sabe'.",
+    enunciado: "Qual revisão torna o procedimento mais controlável para uso institucional?",
+    alternativas: [
+      { letra: "A", texto: "Retirar restrições e pedir respostas criativas para cobrir lacunas." },
+      { letra: "B", texto: "Definir documento e versão vigentes, tarefa e formato, exigir trecho de suporte, estabelecer conduta para lacunas e dados sensíveis e avaliar resultados." },
+      { letra: "C", texto: "Adicionar apenas uma persona de especialista." },
+      { letra: "D", texto: "Incluir todos os dados pessoais disponíveis para maximizar o contexto." },
+      { letra: "E", texto: "Pedir citações legais mesmo quando a norma correspondente não for recuperada." }
+    ],
+    gabarito: "B",
+    justificativa: "O prompt institucional deve delimitar fonte e vigência, tarefa, restrições e formato; também precisa definir comportamento quando a base não responde, minimizar dados e permitir avaliação.",
+    analise: {
+      A: "INCORRETA. Criatividade irrestrita aumenta o risco de respostas sem fundamento.",
+      B: "CORRETA. Explicita os componentes do pedido e os controles de fidelidade, privacidade e avaliação.",
+      C: "INCORRETA. Persona não resolve fonte versionada, lacunas, formato e validação.",
+      D: "INCORRETA. Contraria a minimização de dados e pode expor informação desnecessária.",
+      E: "INCORRETA. Solicitar citações sem evidência pode produzir referências inventadas."
+    },
+    regra: "Prompt é parte do controle; fonte versionada, validação, minimização de dados e avaliação continuam necessárias.",
+    pegadinha: "Dizer 'se não souber, diga que não sabe' é insuficiente sem fonte, evidência e encaminhamento.",
+    fonte: "Currículo M5 — modulo-5-unidade-4-topico-4 (casos aplicados de engenharia de prompts)."
+  },
+
 ];
 
 /* Verificação rápida do padrão: 40 questões, 12 básico / 18 intermediário / 10 avançado. */
