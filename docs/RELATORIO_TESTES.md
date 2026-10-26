@@ -252,3 +252,14 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - `verificacao/verificar-estrutura.js`: passou, 0 falhas estruturais.
 - Playwright/Chromium headless em `file://`: PASS; 8 módulos, 460 flashcards, 365 questões, 5 SVGs, UI dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
 - Escopo não coberto: correção semântica completa de todas as questões, auditoria WCAG independente, dispositivos físicos e registro/offline do Service Worker via HTTP/HTTPS.
+
+
+## Revalidação de legislação M4/M6 e rastreabilidade — 2026-10-26
+
+- Commit de código testado: `c54e13f7d166910f2a1c62ffa0199c6727b3b33e`.
+- Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289 — **success**.
+- `node --check` passou para os arquivos JavaScript de `apostila-ia/assets`.
+- Auditoria curricular e rastreabilidade passaram: 132 tópicos, 460 flashcards, 365 questões, 0 referências somente à unidade e 0 referências desconhecidas.
+- Verificador estrutural passou sem falhas.
+- Playwright/Chromium headless via `file://`: 8 módulos, 460 flashcards, 365 questões, 5 SVGs, interfaces dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
+- Escopo não certificado: correção semântica de todas as questões, auditoria WCAG independente, dispositivos físicos e funcionamento PWA/offline por HTTP/HTTPS.

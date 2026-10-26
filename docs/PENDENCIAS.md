@@ -169,3 +169,12 @@ Evidência do job aprovado: https://github.com/Fatal1tyBarucco/FCN/actions/runs/
 - [ ] Tratar os 36 tópicos sem questão diretamente associada: M1=6, M2=15, M3=9, M5=2, M6=4. A ausência de associação direta não prova ausência de cobertura indireta.
 - [ ] Revisar todas as referências legais em `references.js` e no conteúdo dos módulos à luz das alterações normativas recentes; não generalizar a atualização de M4 como auditoria completa de todas as normas.
 - [ ] Testar fluxos interativos completos, teclado, leitores de tela, WCAG 2.1 AA, backup/importação, responsividade em dispositivos reais e PWA via HTTP/HTTPS.
+
+
+## Atualização legal e de referências da aplicação — 2026-10-26
+
+- [x] Adicionar ao catálogo visível da aplicação a Lei nº 15.352/2026 como fonte oficial verificada em 2026-10-25; o catálogo passou de 72 para 73 referências.
+- [x] Corrigir no conteúdo do Módulo 6 a definição vigente de encarregado, a composição dos agentes de tratamento, a definição da autoridade nacional, os direitos do art. 18 (incluindo incisos VI e IX) e a explicação das exceções do art. 4º da LGPD.
+- [x] Corrigir a generalização de que o Estado é sempre controlador e operador: o papel depende das operações concretas.
+- [x] Validar o commit `c54e13f7d166910f2a1c62ffa0199c6727b3b33e` no GitHub Actions: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289 — **success**.
+- [ ] Auditar semanticamente todo o conteúdo jurídico dos módulos M4 e M6 e verificar eventuais alterações normativas além das questões e trechos corrigidos neste lote.

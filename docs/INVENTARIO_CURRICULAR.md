@@ -134,3 +134,12 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - Auditoria de rastreabilidade: 365/365 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas.
 - Evidência de validação técnica: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902.
 - Estado pedagógico: revisão semântica independente e revisão integral de gabaritos/fontes ainda pendentes.
+
+
+## Atualização de conteúdo legal e referências — 2026-10-26
+
+- A definição legal de encarregado e de agentes de tratamento no Módulo 6 foi alinhada à redação vigente da LGPD após a Lei nº 15.352/2026.
+- A lista de direitos do art. 18 foi corrigida para preservar a numeração vigente e distinguir eliminação de dados tratados com consentimento (inciso VI) da revogação do consentimento (inciso IX).
+- As exceções do art. 4º não são descritas como autorização para tratar dados em desconformidade: o texto registra a exigência de legislação específica, proporcionalidade, devido processo, princípios gerais e direitos do titular no § 1º.
+- A Lei nº 15.352/2026 foi incluída no catálogo de referências visível da aplicação.
+- Evidência da validação técnica do lote anterior: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289.

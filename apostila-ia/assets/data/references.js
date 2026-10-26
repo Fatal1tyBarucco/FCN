@@ -470,6 +470,16 @@ const references = [
     dispositivos: null
   },
   {
+    id: "ref-lgpd-lei-15352-2026",
+    titulo: "Lei nº 15.352, de 25 de fevereiro de 2026 — altera a LGPD e atualiza a denominação institucional da ANPD",
+    organizacao: "Presidência da República — Planalto",
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm",
+    topico: "M4 — Segurança da informação (LGPD e competências da ANPD)",
+    dataVerificacao: "2026-10-25",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
     id: "ref-anpd-resolucao-2-2022",
     titulo: "Resolução CD/ANPD nº 2, de 27 de janeiro de 2022 — Regulamento de aplicação da LGPD para agentes de tratamento de pequeno porte",
     organizacao: "ANPD (Gov.br)",

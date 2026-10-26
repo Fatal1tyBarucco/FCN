@@ -4,7 +4,7 @@
 **Repositório:** `Fatal1tyBarucco/FCN`  
 **Branch:** `feat/fase-1-orquestracao-20261025`  
 **Auditoria:** `scripts/audit_learning_assets.mjs`  
-**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902)
+**Execução aprovada:** [GitHub Actions — auditoria estrutural e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289)
 
 ## Resultado estrutural atual
 
@@ -45,7 +45,7 @@ As 96 questões restantes no relatório anterior foram associadas a tópicos cur
 
 A consulta direta a fontes oficiais revelou que a Lei nº 15.352/2026 alterou a denominação institucional para **Agência Nacional de Proteção de Dados (ANPD)**. Também foram corrigidas questões com referência constitucional imprecisa, direitos da LGPD apresentados sem limites, descrição excessivamente ampla da LAI e confusão entre direitos do titular e responsabilidades dos agentes de tratamento.
 
-As questões atualizadas são q-m4-34, q-m4-35, q-m4-36, q-m4-37, q-m4-40, q-m4-41 e q-m4-43. A evidência e as URLs primárias estão em `referencias/referencias-verificadas.md`.
+As questões atualizadas são q-m4-34, q-m4-35, q-m4-36, q-m4-37, q-m4-40, q-m4-41 e q-m4-43. O módulo M6 também teve as definições do art. 5º, os papéis do setor público, as exceções do art. 4º e a lista numerada de direitos do art. 18 corrigidos conforme o texto vigente. A Lei nº 15.352/2026 foi incluída no catálogo de fontes da aplicação. Evidência e URLs primárias: `referencias/referencias-verificadas.md` e `apostila-ia/assets/data/references.js`.
 
 ## Critérios de validação executados
 
