@@ -205,25 +205,27 @@ const moduleQuestions4 = [
 
   { id: "q-m4-08", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — RPO e RTO",
-    contexto: "Uma empresa define objetivos de recuperação para seus sistemas críticos.",
-    enunciado: "Sobre RPO (Recovery Point Objective) e RTO (Recovery Time Objective), é correto afirmar que:",
+    contexto: "Uma organização define objetivos de recuperação para seus sistemas críticos.",
+    enunciado: "Qual alternativa distingue corretamente RPO (Recovery Point Objective) de RTO (Recovery Time Objective)?",
     alternativas: [
-      { letra: "A", texto: "RPO mede o tempo máximo de indisponibilidade aceitável; RTO mede quantotempo será perdido de dados." },
-      { letra: "B", texto: "RPO mede a quantidade máxima de dados que pode ser perdida; RTO mede o tempo máximo para se recuperar." },
-      { letra: "C", texto: "RPO e RTO são sinônimos." },
-      { letra: "D", texto: "RPO é o tempo de resposta a incidentes; RTO é o tempo disponível." }
+      { letra: "A", texto: "RPO é o tempo-alvo para recuperar o serviço; RTO é o ponto de recuperação dos dados." },
+      { letra: "B", texto: "RPO define o ponto temporal de recuperação e a perda de dados tolerável; RTO define o tempo-alvo para restabelecer o serviço." },
+      { letra: "C", texto: "RPO e RTO são sinônimos e podem ser usados sem distinção." },
+      { letra: "D", texto: "RPO mede o número de usuários simultâneos; RTO mede a capacidade de armazenamento." },
+      { letra: "E", texto: "RTO e RPO garantem que nunca haverá perda de dados ou indisponibilidade." }
     ],
     gabarito: "B",
-    justificativa: "RPO define a quantidade máxima de dados que pode ser perdida (ex: se RPO=1 hora, podem ser perdidos até 1 hora de dados recentes); RTO define o tempo máximo que o sistema pode ficar indisponível. A alternativa A inverte os conceitos; as alternativas C e D são incorretas pela definição. RTO e RPO são conceitos distintos e necessários para planejamento de recuperação.",
+    justificativa: "RPO (Recovery Point Objective) estabelece o ponto temporal até o qual os dados devem ser recuperados e orienta a perda de dados tolerável. RTO (Recovery Time Objective) estabelece o tempo-alvo para restabelecer o serviço. São objetivos distintos, derivados das necessidades de negócio e validados por meio de testes de recuperação.",
     analise: {
-      A: "INCORRETA. RPO mede quantidade de dados perdidos, RTO mede tempo de indisponibilidade.",
-      B: "CORRETA. RPO é o limite de perda de dados; RTO é o tempo máximo de indisponibilidade.",
-      C: "INCORRETA. RPO (perda de dados) e RTO (tempo de indisponibilidade) são conceitos distintos.",
-      D: "INCORRETA. RPO e RTO não incluem tempo de resposta como definidos."
+      A: "INCORRETA. Inverte os conceitos: RPO trata do ponto de recuperação dos dados; RTO, do tempo de recuperação do serviço.",
+      B: "CORRETA. A alternativa distingue a perda de dados tolerável do tempo-alvo para restabelecimento.",
+      C: "INCORRETA. RPO e RTO representam objetivos diferentes.",
+      D: "INCORRETA. Essas descrições não correspondem aos conceitos de recuperação.",
+      E: "INCORRETA. São metas de planejamento, não garantias de perda zero ou disponibilidade contínua."
     },
-    regra: "RPO = quanto de dados pode ser perdido; RTO = quanto tempo o sistema pode ficar indisponível.",
-    pegadinha: "Não confundir: RPO é 'quanto de dados', RTO é 'quanto tempo'. Ambos são medidos nas unidades certas.",
-    fonte: "ITIL v3 — Continual Service Improvement, recovery objectives."
+    regra: "RPO = ponto de recuperação/perda de dados tolerável; RTO = tempo-alvo para restabelecer o serviço.",
+    pegadinha: "Metas de RPO e RTO precisam ser tecnicamente viáveis e testadas; defini-las não garante que serão cumpridas.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-09", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -252,29 +254,29 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-10", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Risco e ameaça",
-    contexto: "Um gestor de TI define os conceitos de risco e ameaça para o planejamento de segurança.",
-    enunciado: "A relação correta entre risco e ameaça é que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Ameaça, vulnerabilidade e risco",
+    contexto: "Um servidor exposto à internet possui uma falha conhecida e recebe tentativas de exploração.",
+    enunciado: "Qual alternativa diferencia corretamente ameaça, vulnerabilidade e risco?",
     alternativas: [
-      { letra: "A", texto: "Ameaça é a probabilidade de um risco se materializar; risco é a causa da ameaça." },
-      { letra: "B", texto: "Ameaça é uma situação que pode explorar uma vulnerabilidade; risco é o impacto ou probabilidade de dano." },
-      { letra: "C", texto: "Risco e ameaça são sinônimos." },
-      { letra: "D", texto: "Ameaça é uma condição que torna os ativos mais expostos; risco é a probabilidade de dano." }
+      { letra: "A", texto: "A ameaça é a falha técnica; a vulnerabilidade é o impacto financeiro." },
+      { letra: "B", texto: "A vulnerabilidade é uma fraqueza; a ameaça é um agente ou evento potencialmente danoso; o risco considera a possibilidade e as consequências no contexto." },
+      { letra: "C", texto: "Risco é sinônimo de ameaça e independe da criticidade do ativo." },
+      { letra: "D", texto: "A presença de uma vulnerabilidade prova que ela já foi explorada." },
+      { letra: "E", texto: "Uma ameaça só existe depois que o dano está confirmado." }
     ],
     gabarito: "B",
-    justificativa: "Ameaça é uma situação ou entidade capaz de explorar uma vulnerabilidade (ex: malware, atacante); risco é o impacto ou probabilidade de dano que resulta dessa possibilidade. A alternativa A inverte a relação; C é incorreta por definição; a alternativa D descreve vulnerabilidade, não ameaça.",
+    justificativa: "Vulnerabilidade é uma fraqueza que pode ser explorada; ameaça é uma circunstância, evento ou agente com potencial de causar dano; risco é avaliado considerando probabilidade e consequências no contexto. Uma vulnerabilidade não comprova, por si só, que houve exploração, e a priorização depende da exposição, da criticidade e do impacto potencial.",
     analise: {
-      A: "INCORRETA. Inverte as definições: ameaça é a situação que pode causar dano; risco é o dano potencial.",
-      B: "CORRETA. Ameaça é a possibilidade de exploração; risco é o impacto/probabilidade do dano.",
-      C: "INCORRETA. Risco e ameaça são conceitos distintos, embora relacionados.",
-      D: "INCORRETA. Isso descreve vulnerabilidade, não ameaça."
+      A: "INCORRETA. A falha técnica é a vulnerabilidade; impacto e probabilidade integram a avaliação de risco.",
+      B: "CORRETA. A alternativa diferencia os três conceitos e considera o contexto da avaliação.",
+      C: "INCORRETA. Ameaça e risco são conceitos relacionados, mas não sinônimos; criticidade e contexto importam.",
+      D: "INCORRETA. Uma vulnerabilidade pode existir sem ter sido explorada.",
+      E: "INCORRETA. A ameaça pode existir antes de qualquer dano confirmado."
     },
-    regra: "Ameaça = oportunidade de exploração; Vulnerabilidade = fraqueza; Risco = impacto da exploração.",
-    pegadinha: "Não confundir: ameaça é quem/ o que possa atacar; vulnerabilidade é o que pode ser atacado; risco é o dano resultante.",
-    fonte: "ISO/IEC 27000:2018, cláusulas 3.9 (Ameaça), 3.11 (Vulnerabilidade), 3.15 (Risco)."
+    regra: "Vulnerabilidade = fraqueza; ameaça = agente/evento potencialmente danoso; risco = avaliação contextual de possibilidade e consequências.",
+    pegadinha: "Encontrar uma vulnerabilidade não prova exploração; diferencie a fraqueza, a ameaça e o risco associado.",
+    fonte: "NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments: https://csrc.nist.gov/pubs/sp/800/30/r1/final."
   },
-
-  /* ===================== 4.2 Malwares (10 questões) ===================== */
 
   { id: "q-m4-11", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m4-u2-t1-s1", assunto: "4.2 — Vírus e worms",
