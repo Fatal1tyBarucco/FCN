@@ -209,3 +209,13 @@ Lote revisado no texto versionado de `apostila-ia/assets/data/questions_m6.js`, 
 
 **Resultado do lote:** correções de precisão conceitual e editorial sem alteração dos gabaritos. As referências bibliográficas individuais ainda precisam de verificação de correspondência exata com cada afirmação.
 
+## Revisão semântica dirigida — lote M5 q21–q25 — 2026-10-26
+
+- **`q-m5-21` — IA generativa:** definição e gabarito B coerentes; sem alteração necessária.
+- **`q-m5-22` — alucinação/confabulação:** substituída a referência enciclopédica por publicação oficial do NIST (NIST AI 600-1). O enunciado e a justificativa foram ajustados para incluir conteúdo incorreto, contraditório ou sem suporte verificável, sem exigir ausência explícita de reconhecimento de incerteza.
+- **`q-m5-23` — atenção em Transformers:** descrição conceitual e gabarito A coerentes; sem alteração necessária.
+- **`q-m5-24` — RAG e redução de alucinação:** refinada a justificativa para não sugerir que recuperação e citação garantam correção. Reforçada a necessidade de verificar relevância, vigência e sustentação das afirmações. A fonte Google Cloud foi incluída no catálogo de referências.
+- **`q-m5-25` — IA baseada em regras versus generativa:** gabarito B coerente no contexto da questão; a supervisão deve ser proporcional ao risco e não depende apenas da família do sistema.
+
+Foram adicionadas ao catálogo as referências oficiais NIST AI 600-1 e Google Cloud Grounding. **Limite:** a inclusão foi verificada no arquivo versionado; o CI do HEAD atual ainda precisa confirmar a validação estrutural e de execução. As referências acadêmicas remanescentes exigem auditoria própria.
+
