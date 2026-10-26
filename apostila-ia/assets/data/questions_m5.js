@@ -58,7 +58,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-03", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u1-t1-s3", assunto: "5.1 — Aprendizado de máquina",
+    nivel: "basico", topico: "m5-u1-t1-s1", assunto: "5.1 — Aprendizado de máquina",
     contexto: "Uma equipe fornece exemplos históricos a um algoritmo para ajustar um modelo que prevê a categoria de novas solicitações.",
     enunciado: "Qual descrição de aprendizado de máquina é mais adequada?",
     alternativas: [
@@ -183,7 +183,7 @@ const moduleQuestions5 = [
   },
 
     { id: "q-m5-08", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u1-t1-s3", assunto: "5.1 — Treinamento e inferência",
+    nivel: "basico", topico: "m5-u1-t1-s2", assunto: "5.1 — Treinamento e inferência",
     contexto: "Um modelo de classificação já foi treinado e validado. Agora, uma aplicação envia novas solicitações para que o modelo indique a categoria provável de cada uma.",
     enunciado: "Nesse fluxo, qual etapa corresponde à inferência?",
     alternativas: [
