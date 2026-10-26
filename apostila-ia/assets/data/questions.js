@@ -3149,7 +3149,7 @@ id: "q-m1-09",
     },
     regra: "Gravação com dados pessoais exige: consentimento/informação, finalidade, prazo de retenção, segurança (criptografia) e respeito aos direitos de acesso e exclusão dos titulares.",
     pegadinha: "Item simples por design; o risco é esquecer que uma gravação de reunião é tratamento de dados pessoais e, como tal, carrega finalidade, retenção e direitos do titular."
-  },,
+  },
   {
     id: "q-m1-41",
     modulo: 1,
