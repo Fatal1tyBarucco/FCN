@@ -345,7 +345,7 @@ const moduleQuestions4 = [
       D: "INCORRETA. A autorização e o escopo são indispensáveis para testes de segurança legítimos.",
       E: "INCORRETA. O ataque pode afetar apenas parte dos sistemas ou usar outras formas de bloqueio e extorsão."
     },
-    regra: "Ransomware pode bloquear/crifrar dados e extorquir; algumas campanhas também exfiltram dados. Pagamento não garante recuperação.",
+    regra: "Ransomware pode bloquear/criptografar dados e extorquir; algumas campanhas também exfiltram dados. Pagamento não garante recuperação.",
     pegadinha: "Não reduza ransomware a criptografia de todos os arquivos nem presuma que pagar resolve o incidente.",
     fonte: "CISA, #StopRansomware Guide: https://www.cisa.gov/stopransomware/ransomware-guide."
   },
