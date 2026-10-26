@@ -164,11 +164,11 @@ button { display: inline-flex; align-items: center; justify-content: center; }
   .curriculum-tree .tree-node:focus-visible { background: #1e3050; }
 }
 .tree-toggle {
-  background: transparent;
+  background-color: #ffffff;
+  color: #1f2937;
   border: 1px solid #c6d0d9;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.85rem;
   line-height: 1;
   padding: 0.1rem 0.35rem;
   margin-right: 0.35rem;
@@ -178,6 +178,18 @@ button { display: inline-flex; align-items: center; justify-content: center; }
   align-items: center;
   justify-content: center;
 }
+.tree-toggle::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid currentColor;
+}
+.tree-toggle[aria-expanded="false"]::before {
+  border-top: 0;
+  border-bottom: 6px solid currentColor;
+}
 .tree-toggle-placeholder { opacity: 0.4; border: none; }
 .tree-label { font-weight: 500; }
 .tree-modulo-label { font-weight: 700; color: #0b1d36; }
@@ -185,6 +197,11 @@ button { display: inline-flex; align-items: center; justify-content: center; }
 @media (prefers-color-scheme: dark) {
   .tree-modulo-label { color: #e8eaed; }
   .tree-unidade-label { color: #8ab4f8; }
+  .tree-toggle {
+    background-color: #202124;
+    color: #e8eaed;
+    border-color: #5f6368;
+  }
 }
 
 /* Responsividade: breakpoints 360, 768, 1024, 1440 */

@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     html += '<li class="tree-node tree-modulo has-children" role="treeitem" aria-level="1" ';
     html += 'aria-setsize="' + totalModulos + '" aria-posinset="' + (moduloIndex + 1) + '" ';
     html += 'aria-expanded="true" data-node-type="modulo" data-node-label="' + esc(chave + ' — ' + mod.titulo) + '">';
-    html += '<button type="button" class="tree-toggle" aria-label="Recolher unidades de ' + esc(chave + ' — ' + mod.titulo) + '" aria-expanded="true" tabindex="-1"><span aria-hidden="true">▾</span></button>';
+    html += '<button type="button" class="tree-toggle" aria-label="Recolher unidades de ' + esc(chave + ' — ' + mod.titulo) + '" aria-expanded="true" tabindex="-1"></button>';
     html += '<span class="tree-label tree-modulo-label">' + esc(chave) + ' — ' + esc(mod.titulo) + '</span>';
     html += '<ul class="tree-group" role="group">';
     const unidades = mod.unidades || [];
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
       html += '<li class="tree-node tree-unidade has-children" role="treeitem" aria-level="2" ';
       html += 'aria-setsize="' + unidades.length + '" aria-posinset="' + (ui + 1) + '" ';
       html += 'aria-expanded="true" data-node-type="unidade" data-node-label="' + esc(unidade.titulo) + '">';
-      html += '<button type="button" class="tree-toggle" aria-label="Recolher tópicos de ' + esc(unidade.titulo) + '" aria-expanded="true" tabindex="-1"><span aria-hidden="true">▾</span></button>';
+      html += '<button type="button" class="tree-toggle" aria-label="Recolher tópicos de ' + esc(unidade.titulo) + '" aria-expanded="true" tabindex="-1"></button>';
       html += '<span class="tree-label tree-unidade-label">' + esc(unidade.titulo) + '</span>';
       html += '<ul class="tree-group" role="group">';
       const topicos = unidade.topicos || [];
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (temSub) html += 'aria-expanded="false" ';
         html += 'data-node-type="topico" data-topic-id="' + esc(topico.id) + '">';
         if (temSub) {
-          html += '<button type="button" class="tree-toggle" aria-label="Expandir subtópicos de ' + esc(topico.titulo) + '" aria-expanded="false" tabindex="-1"><span aria-hidden="true">▸</span></button>';
+          html += '<button type="button" class="tree-toggle" aria-label="Expandir subtópicos de ' + esc(topico.titulo) + '" aria-expanded="false" tabindex="-1"></button>';
         } else {
           html += '<span class="tree-toggle tree-toggle-placeholder" aria-hidden="true">•</span>';
         }
@@ -342,8 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggle = no.querySelector(':scope > .tree-toggle');
     if (toggle) {
       toggle.setAttribute('aria-expanded', String(novo));
-      const icon = toggle.querySelector('span[aria-hidden="true"]');
-      if (icon) icon.textContent = novo ? '▾' : '▸';
+      // O ícone é desenhado em CSS a partir de aria-expanded; não há texto visual no botão.
       const tipo = no.getAttribute('data-node-type') || 'topico';
       const titulo = no.getAttribute('data-node-label') || ((no.getAttribute('data-topic-id') && indice[no.getAttribute('data-topic-id')]) ? indice[no.getAttribute('data-topic-id')].titulo : '');
       const objeto = tipo === 'modulo' ? 'unidades de ' : (tipo === 'unidade' ? 'tópicos de ' : 'subtópicos de ');
