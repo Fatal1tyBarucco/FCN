@@ -1611,6 +1611,7 @@ id: "q-m1-09",
     },
     regra: "Limites UTP: Cat5e — 1 Gbps; Cat6 — 10 Gbps até 55 m; Cat6a — 10 Gbps até 100 m. Alcance padrão de par trançado = 100 m na taxa de 1 Gbps.",
     pegadinha: "Número + categoria + taxa: três variáveis no mesmo item. O CESPE troca apenas uma (100 m no lugar de 55 m) — quem lê '100 m é padrão de UTP' e não confere a taxa marca Certo por engano."
+    fonte: "Cisco — 10GBASE-T: até 55 m em Cat6 UTP e até 100 m em Cat6 blindado/Cat6A/Cat7: https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html",
   },
   /* ===================== FIM BLOCO INICIAL M2 (q-m2-01..q-m2-26) ===================== */
   /* ===================== BLOCO INICIAL M3 — Comunicação e Colaboração (q-m3-01..q-m3-24; 47 no total) =====================
@@ -2131,6 +2132,7 @@ id: "q-m1-09",
     },
     regra: "Critérios de escolha registrados no currículo: Teams = colaboração contínua no M365; Meet = simplicidade; Zoom = webinars e grandes eventos.",
     pegadinha: "A alternativa D ('todas iguais') é o relativismo típico da FGV — o material justamente diferencia as plataformas; quem lê só o enunciado e não o comparativo cai nela."
+    fonte: "Zoom Support — requisitos e capacidade de salas paralelas em webinars, incluindo licenças elegíveis e aplicativo de desktop: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838; Zoom Support — gerenciar salas paralelas em webinars: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
   },
   {
     id: "q-m3-20",
@@ -2633,6 +2635,7 @@ id: "q-m1-09",
     },
     regra: "UTP: Cat5e (1 Gbps), Cat6 (10 Gbps até 55 m), Cat6a (10 Gbps até 100 m). O alcance de 100 m só se mantém a 10 Gbps com Cat6a.",
     pegadinha: "Confundir Cat6 com Cat6a: a letra 'a' (augmented) é justamente o que estende 10 Gbps aos 100 m completos."
+    fonte: "Cisco — 10GBASE-T: até 55 m em Cat6 UTP e até 100 m em Cat6 blindado/Cat6A/Cat7: https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html",
   },
   {
     id: "q-m2-33",
@@ -3152,6 +3155,7 @@ id: "q-m1-09",
     },
     regra: "Diferenciais: Meet = simplicidade/navegador (sem instalação); Zoom = webinars e breakout rooms; Teams = integração M365. Não inverter as atribuições.",
     pegadinha: "Item de duas metades trocadas: cada característica pertence à plataforma oposta — estilo CESPE que pune a meia-verdade por troca de sujeito."
+    fonte: "Zoom Support — salas paralelas em webinars exigem aplicativo desktop ou móvel e licença elegível: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838; Google Meet Help — reuniões em navegadores compatíveis: https://support.google.com/meet/answer/7317473?hl=pt-BR",
   },
   {
     id: "q-m3-37",
