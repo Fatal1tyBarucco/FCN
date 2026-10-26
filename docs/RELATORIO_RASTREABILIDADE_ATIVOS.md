@@ -8,7 +8,7 @@
 - Contagem por varredura dos IDs `q-mN-NN` nos seis arquivos de questões: **396 IDs únicos**, sem duplicações detectadas nessa varredura.
 - Distribuição por arquivo: `questions.js` (145; módulos 1–3), M4 (85), M5 (42), M6 (44), M7 (40) e M8 (40).
 - Flashcards: **460**, conforme inventário atual do repositório.
-- O scan de IDs não é a execução integral de `scripts/audit_learning_assets.mjs`; portanto, a distribuição por tópico, a cobertura e a ausência de referências curriculares inválidas ainda precisam de nova execução do auditor no HEAD atual.
+- Auditoria estrutural focal dos conteúdos remotos: **396/396** questões com campos obrigatórios detectados; **0** IDs duplicados; **0** referências de tópico não reconhecidas entre as questões. A normalização comparou as referências com os IDs curriculares atuais. Essa verificação não executou `scripts/audit_learning_assets.mjs` nem regenerou a matriz CSV; a matriz completa por tópico ainda requer execução reproduzível do script no ambiente do projeto.
 - A execução de CI consultada para o HEAD `cefd7fa...` concluiu com sucesso para os checks configurados, incluindo auditoria estática/cobertura e análises JavaScript/TypeScript/Actions. Isso não certifica a semântica dos enunciados, gabaritos ou fontes.
 
 ---
