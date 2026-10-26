@@ -1075,7 +1075,7 @@ const moduleQuestions6 = [
     },
     regra: "A eficiência deve ser conciliada com legalidade, impessoalidade, transparência cabível, motivação, controle e responsabilização.",
     pegadinha: "Não confundir melhoria de desempenho médio com prova suficiente de que cada decisão é correta, justa e contestável.",
-    fonte: "Constituição Federal, art. 37, caput, texto oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm."
+    fonte: "Constituição Federal, art. 37, caput (princípios gerais da Administração Pública), texto oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm. Os controles específicos de documentação, avaliação de riscos, revisão e contestação são apresentados nesta questão como práticas de governança digital proporcionais ao risco, não como transcrição literal de um único dispositivo."
   },
   {
     id: "q-m6-46", modulo: 6, formato: "mc", estilo: "vunesp", origem: "autoral", nivel: "intermediario",
