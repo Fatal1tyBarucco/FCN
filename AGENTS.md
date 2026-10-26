@@ -697,6 +697,23 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - q-m6-40: transparência ativa e passiva tratadas como cumulativas; divulgação de licitações/contratos e atualização do sítio não são substituídas pelo atendimento a pedidos.
 - Revisão focal sem patches de conteúdo nesta passada. Conferir fontes e CI no HEAD atual.
 
+## Revisão focal do M7 — questões 1 a 30 (2026-10-26)
+
+- q-m7-01 a q-m7-05: conceitos DIKW (dado, informação, conhecimento, sabedoria) definidos de forma consistente com o currículo, sem assumir conversão automática entre níveis.
+- q-m7-06 a q-m7-10: código numérico nominal, estrutura dos dados, metadados de negócio, escala ordinal e linhagem diferenciados do catálogo.
+- q-m7-11 a q-m7-20: validade, acurácia, completude, consistência, unicidade e tempestividade separados; calculados e trade-offs de qualidade revisados.
+- q-m7-21: ETL distinguido de ELT pela ordem e local da transformação.
+- q-m7-22: substituição de CPF por token com chave preservada corretamente identificada como pseudonimização, não anonimização.
+- q-m7-23: duplicidade vinculada à violação de unicidade e à inflação de contagens/somas.
+- q-m7-24: CEP, telefone e matrícula tratados como códigos nominais, sem operações aritméticas significativas.
+- q-m7-25: retenção ligada a finalidade/obrigação, prazo justificado e descarte de cópias, sem guarda indefinida por precaução.
+- q-m7-26: ausência seletiva de respostas não tratada por imputação cega; limitação e viés declarados.
+- q-m7-27: ordenação lexicográfica explicada como erro de tipo, com conversão explícita e registro de falhas.
+- q-m7-28: z-scores recalculados: 1,5 e 2,0; desempenho relativo distinguido da nota absoluta.
+- q-m7-29: lista de telefones em uma célula reconhecida como violação de atomicidade da 1FN.
+- q-m7-30: papéis de dono do dado e steward diferenciados no processo de governança.
+- Revisão focal sem patches de conteúdo nesta passada. Verificar a matriz curricular e CI no HEAD atual.
+
 ## Regras de contribuição
 
 - Trabalhar em incrementos completos e funcionais — nunca placeholder, nunca "implementar depois".
