@@ -1,10 +1,20 @@
+# Estado mais recente confirmado — 2026-10-26 04:12 UTC
+
+- HEAD validado: `7a6ac2425f00ccdbebc8be2d206796037358e75d`.
+- [Workflow de auditoria](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40267735657): **success**. Matriz curricular, relatório de rastreabilidade, verificação estrutural, heurísticas de questões, smoke test Chromium/Playwright em `file://`, regressões interativas e upload do artefato concluídos.
+- Contagem esperada no HEAD: **399 questões** (M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40) e **460 flashcards**. A auditoria confirma estruturalmente 132 tópicos, 0 ativos somente em nível de unidade e 0 referências desconhecidas. As questões q-m6-45..47 foram adicionadas para cobrir os três tópicos de síntese antes sinalizados.
+- CodeQL, análise JavaScript/TypeScript e análise de Actions também concluíram com `success` no mesmo HEAD.
+- Limite: rastreabilidade estrutural não certifica gabaritos, profundidade pedagógica, validade integral das fontes ou WCAG. A matriz CSV foi gerada no workflow e disponibilizada como artefato; não afirmar que esteja versionada sem verificar o conteúdo do repositório.
+
+---
+
 # Relatório de rastreabilidade de flashcards e questões
 
 # Atualização estrutural — 2026-10-26 04:05 UTC
 
 - O workflow de CI executou `scripts/audit_learning_assets.mjs` no merge ref do PR #17 e registrou: **132 tópicos, 460 flashcards, 396 questões, 0 ativos apenas em nível de unidade e 0 referências desconhecidas**. O mesmo job identificou **3 tópicos de síntese do M6 sem questão associada**: `m6-u1-t3`, `m6-u4-t3`, `m6-u5-t3`.
 - Foram adicionadas as questões autorais `q-m6-45`, `q-m6-46` e `q-m6-47`, uma para cada tópico de síntese identificado. O banco esperado passa a **399 questões**; a nova execução do auditor e a matriz CSV regenerada ainda precisam confirmar esse resultado no commit posterior.
-- A execução de CI do commit anterior `cf0087b1d70d0b9d40fa34306d6cf7c4022a7577` concluiu com sucesso: CodeQL, auditoria estática/cobertura e análises JavaScript/TypeScript/Actions. Isso não cobre o commit com as três novas questões.
+- Esta nota descreve a execução inicial e é complementada pelo estado mais recente no início do documento.
 
 ---
 
