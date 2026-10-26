@@ -429,3 +429,14 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Job `Static validation and coverage audits`: sucesso. Etapas concluídas: verificação sintática JavaScript; geração da matriz curricular; relatório de rastreabilidade dos ativos; validação da estrutura do repositório; heurísticas de qualidade das questões; instalação do Playwright/Chromium; smoke test em modo `file://`; regressões interativas em modo `file://`; upload dos relatórios de auditoria.
 - Resultado comprovado: todos os passos configurados nesse workflow concluíram com sucesso após a correção de q-m6-41 a q-m6-44.
 - **Limite:** o workflow não substitui revisão semântica independente dessas questões, auditoria WCAG/manual nem confirmação do workflow Code Quality no mesmo HEAD. Não declarar o PR pronto ou fazer merge com base apenas neste check.
+
+
+## Auditoria semântica focal das questões M6 — 2026-10-26
+
+- Revisadas q-m6-41 a q-m6-44 quanto à coerência entre cenário, comando, gabarito, justificativa e alternativas.
+- q-m6-41: a conclusão de que conflito de interesses no âmbito da Lei nº 12.813/2013 não depende de dano ao erário ou vantagem consumada está acompanhada da ressalva de que os fatos e o âmbito legal precisam ser avaliados.
+- q-m6-42: a resposta combina gestão individualizada de acessos quando suportada, privilégio mínimo, autenticação, revisão/revogação, rastreabilidade e aprovação; registra a necessidade de controles compensatórios quando a plataforma não oferece funções adequadas.
+- q-m6-43: a resposta não presume que a quantidade de campos, isoladamente, prova inacessibilidade; conecta identificação e sugestão de erros aos critérios WCAG citados e propõe testes e métricas.
+- q-m6-44: corrigida a justificativa/fonte para fundamentar o acesso parcial diretamente no art. 7º, § 2º, da LAI e a proteção de informações pessoais no art. 31, removendo a atribuição ao Enunciado CGU nº 12/2023 que não constava no inventário de referências verificadas deste projeto. A ocultação efetiva continua destacada.
+- Esta é uma revisão focal de consistência, não uma certificação jurídica independente nem uma auditoria integral de todas as fontes do módulo.
+- Commit da revisão de q-m6-44: `fb5ef5deaa7e58ffbcfa6201fa4104f0a39c9ae5`. Os checks deste novo HEAD ainda devem concluir antes de registrar a validação técnica final.
