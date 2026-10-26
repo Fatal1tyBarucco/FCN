@@ -278,129 +278,124 @@ const moduleQuestions4 = [
     fonte: "NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments: https://csrc.nist.gov/pubs/sp/800/30/r1/final."
   },
 
-  { id: "q-m4-11", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m4-u2-t1-s1", assunto: "4.2 — Vírus e worms",
-    contexto: "Dois tipos de malwares são comparados: vírus e worm.",
-    enunciado: "A principal diferença entre vírus e worm é que:",
+  { id: "q-m4-11", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "m4-u2-t1-s1", assunto: "4.2 — Vírus e worms",
+    contexto: "Uma equipe analisa dois códigos maliciosos: um infecta arquivos executáveis e outro consegue se propagar entre sistemas vulneráveis sem precisar ser anexado a um arquivo hospedeiro.",
+    enunciado: "Qual distinção entre vírus e worm é mais precisa?",
     alternativas: [
-      { letra: "A", texto: "Worms precisam de uma hospeste para se propagar, vírus não." },
-      { letra: "B", texto: "Vírus se propagam apenas pela rede, worms não." },
-      { letra: "C", texto: "Worms se replicam e se propagam de forma independente, sem necessidade de anexo ou interação do usuário." },
-      { letra: "D", texto: "Vírus são sempre perigosos, worms não." },
-      { letra: "E", texto: "Worms não podem ser detectados por antivírus." }
+      { letra: "A", texto: "Um vírus normalmente se associa a um arquivo ou programa hospedeiro; um worm é capaz de se replicar e se propagar de forma independente." },
+      { letra: "B", texto: "Vírus se propagam apenas pela internet, enquanto worms se propagam apenas por mídias removíveis." },
+      { letra: "C", texto: "Worms não podem causar danos nem instalar outros componentes." },
+      { letra: "D", texto: "Vírus sempre exigem uma ação humana para cada propagação e worms nunca dependem de condições externas." },
+      { letra: "E", texto: "A diferença é determinada pelo tamanho do arquivo malicioso." }
     ],
-    gabarito: "C",
-    justificativa: "Worms são malwares independentes que se replicam e se propagam por redes sem interação do usuário. Vírus depende de um programa hospedeiro e da ação do usuário para se propagar (alternativa A incorreta); vírus se propagam por muitos meios, não apenas pela rede (alternativa B incorreta); tanto vírus quanto worms podem causar danos — nem um nem outro são sempre perigosos (alternativas D e E incorretas).",
+    gabarito: "A",
+    justificativa: "Um vírus se associa a um arquivo, programa ou objeto hospedeiro e sua propagação costuma depender da execução desse objeto. Um worm é um programa independente capaz de se propagar entre sistemas, por exemplo explorando serviços vulneráveis. Ambos podem transportar outras cargas maliciosas, e a propagação real depende do ambiente e das condições técnicas.",
     analise: {
-      A: "INCORRETA. Worms são independentes e não precisam de hospeste nem ação do usuário.",
-      B: "INCORRETA. Vírus se propagam por muitos meios, incluindo anexos, periféricos, etc.",
-      C: "CORRETA. Worms se replicam independentemente, sem precisar de ação do usuário.",
-      D: "INCORRETA. Tanto vírus quanto worms podem ser danificados ou inofensivos.",
-      E: "INCORRETA. Worms podem ser detectados por antivírus, embora evasivos sometimes."
+      A: "CORRETA. A distinção central é a dependência de um hospedeiro para o vírus versus a capacidade de propagação independente do worm.",
+      B: "INCORRETA. Os meios de propagação não se limitam dessa forma.",
+      C: "INCORRETA. Worms podem causar danos ou distribuir outras cargas maliciosas.",
+      D: "INCORRETA. A propagação depende do mecanismo e do ambiente; a alternativa usa absolutos indevidos.",
+      E: "INCORRETA. Tamanho do arquivo não define a categoria."
     },
-    regra: "Vírus: depende de hospedeiro + ação do usuário. Worm: replica e se propaga sozinho pela rede.",
-    pegadinha: "Worms são 'independentes' — não precisam de anexo nem clique do usuário para se propagar.",
-    fonte: "CERT.br — Guia de Malware, 2021."
+    regra: "Vírus se associa a um hospedeiro; worm é independente e pode se propagar entre sistemas.",
+    pegadinha: "A diferença não é o grau de perigo nem o tamanho; considere dependência de hospedeiro e mecanismo de propagação.",
+    fonte: "NIST SP 800-83 Rev. 1 — Guide to Malware Incident Prevention and Handling for Desktops and Laptops: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
-  { id: "q-m4-12", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m4-u2-t1-s2", assunto: "4.2 — Trojans e backdoors",
-    contexto: "Um equipamento é comprometido por um malware que se disfarça de software legítimo.",
-    enunciado: "Sobre o 'Trojan' (cavalo de troia), é correto afirmar que:",
+  { id: "q-m4-12", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "m4-u2-t1-s2", assunto: "4.2 — Trojan e execução induzida",
+    contexto: "Um usuário instala um utilitário que aparenta ser legítimo, mas que, após execução, realiza atividades não autorizadas.",
+    enunciado: "Qual característica é mais associada a um cavalo de Troia (trojan)?",
     alternativas: [
-      { letra: "A", texto: "É um malware que se replica automaticamente." },
-      { letra: "B", texto: "É um malware disfarçado de software legítimo, que abre um backdoor para ataques." },
-      { letra: "C", texto: "É um tipo de firewall." },
-      { letra: "D", texto: "É um ataque de negação de serviço." },
-      { letra: "E", texto: "É uma ferramenta de criptografia." }
+      { letra: "A", texto: "Disfarçar sua finalidade ou se apresentar como software legítimo para induzir a execução; suas funções podem incluir roubo de dados ou acesso remoto." },
+      { letra: "B", texto: "Replicar-se automaticamente em todos os dispositivos sem depender de execução ou interação." },
+      { letra: "C", texto: "Ser um controle de rede que bloqueia conexões não autorizadas." },
+      { letra: "D", texto: "Ser um mecanismo de backup que restaura arquivos excluídos." },
+      { letra: "E", texto: "Ser um protocolo criptográfico que autentica servidores." }
     ],
-    gabarito: "B",
-    justificativa: "Trojan é um malware disfarçado de software legítimo. Uma vez executado, pode abrir um backdoor, roubar dados ou conceder acesso remoto. Trojans não se replicam sozinhos (alternativa A incorreta); não é firewall (alternativa C incorreta); não é DoS (alternativa D incorreta); não é criptografia (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Um trojan se apresenta ou é distribuído como algo legítimo para induzir sua execução, mas realiza ações não autorizadas. Pode instalar outros componentes, roubar dados ou permitir acesso remoto, mas nenhuma dessas funções é obrigatória em todos os trojans. A autorreplicação independente é mais característica de worms.",
     analise: {
-      A: "INCORRETA. Trojans não se replicam — diferente de vírus e worms.",
-      B: "CORRETA. Trojans disfarçados de software legítimo, que secretamente abrem porta de acesso.",
-      C: "INCORRETA. Firewall é uma defesa; Trojan é um malware.",
-      D: "INCORRETA. DoS é um ataque de negação de serviço.",
-      E: "INCORRETA. Criptografia é uma ferramenta de proteção, não um malware."
+      A: "CORRETA. O disfarce ou a aparência legítima é característica comum do trojan; a carga maliciosa varia.",
+      B: "INCORRETA. A propagação independente não é a característica definidora de um trojan.",
+      C: "INCORRETA. Um controle de rede é uma medida defensiva, não um trojan.",
+      D: "INCORRETA. Backup e restauração são funções de recuperação.",
+      E: "INCORRETA. Protocolo criptográfico é uma tecnologia de segurança, não malware."
     },
-    regra: "Trojan: 'pensando que é algo útil, o usuário instala um ataque' — sociedade do ingênuo.",
-    pegadinha: "Trojan não se replica — ele se disfarce de algo legítimo e pede para ser executado.",
-    fonte: "Symantec — CyberCrime Report, 2020."
+    regra: "Trojan induz a execução ao se apresentar como software ou conteúdo legítimo; suas funções maliciosas variam.",
+    pegadinha: "Nem todo trojan abre um backdoor, e nem todo malware que rouba dados é necessariamente classificado apenas como trojan.",
+    fonte: "NIST SP 800-83 Rev. 1 — Guide to Malware Incident Prevention and Handling for Desktops and Laptops: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
-  { id: "q-m4-13", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m4-u2-t1-s3", assunto: "4.2 — Ransomware",
-    contexto: "Uma organização é vítima de um ataque de ransomware que criptografa os dados.",
-    enunciado: "O ransomware é definido como um malware que:",
+  { id: "q-m4-13", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "m4-u2-t1-s3", assunto: "4.2 — Ransomware e extorsão",
+    contexto: "Uma organização perde acesso a arquivos críticos e recebe uma mensagem exigindo pagamento. A equipe também encontra indícios de que dados podem ter sido copiados antes do bloqueio.",
+    enunciado: "Qual afirmação sobre ransomware é mais correta?",
     alternativas: [
-      { letra: "A", texto: "Espiona o usuário e rouba informações." },
-      { letra: "B", texto: "Criptografa os dados do usuário e exige pagamento para descriptografar." },
-      { letra: "C", texto: "Cria redes de bots para ataques." },
-      { letra: "D", texto: "Exclui arquivos temporariamente." },
-      { letra: "E", texto: "Estuda a segurança do sistema." }
+      { letra: "A", texto: "Ransomware pode bloquear ou criptografar dados e exigir resgate; algumas campanhas também ameaçam divulgar informações exfiltradas." },
+      { letra: "B", texto: "Todo ransomware apenas exclui arquivos temporariamente e não pode afetar cópias de segurança." },
+      { letra: "C", texto: "Pagar o resgate garante recuperação dos dados e impede divulgação." },
+      { letra: "D", texto: "Ransomware é um método legítimo de testar a segurança, independentemente de autorização." },
+      { letra: "E", texto: "Ransomware só existe quando o atacante consegue criptografar todos os dispositivos da organização." }
     ],
-    gabarito: "B",
-    justificativa: "Ransomware criptografa os dados do alvo e exige um pagamento (resgate) para liberar o acesso. Espionagem é o spyware (alternativa A incorreta); criação de botnets é outro tipo de malware (alternativa C incorreta); exclusão temporária não é a definição de ransomware (alternativa D incorreta); 'estudar a segurança' é uma descrição vaga e incorreta (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Ransomware pode negar acesso por criptografia ou outros mecanismos e exigir pagamento. Algumas campanhas combinam isso com exfiltração e ameaça de divulgação, chamada frequentemente de dupla extorsão. O pagamento não garante recuperação nem impede publicação; a resposta deve seguir o plano de incidentes, preservar evidências e acionar equipes e autoridades pertinentes.",
     analise: {
-      A: "INCORRETA. Espionagem é o spyware, não o ransomware.",
-      B: "CORRETA. Ransomware criptografa dados e exige pagamento pela descriptografia.",
-      C: "INCORRETA. Criação de botnets é outra categoria de malware (ex: botnet).",
-      D: "INCORRETA. Exclusão de arquivos pode ocorrer, mas o recurso definidor é a criptografia e o resgate.",
-      E: "INCORRETA. Estudo de segurança não é uma definição de ransomware."
+      A: "CORRETA. A alternativa inclui bloqueio/criptografia e a possibilidade de extorsão baseada em dados exfiltrados.",
+      B: "INCORRETA. O impacto pode persistir e cópias acessíveis podem ser afetadas; backups precisam ser isolados e testados.",
+      C: "INCORRETA. Não há garantia de que o pagamento resulte em recuperação ou confidencialidade.",
+      D: "INCORRETA. A autorização e o escopo são indispensáveis para testes de segurança legítimos.",
+      E: "INCORRETA. O ataque pode afetar apenas parte dos sistemas ou usar outras formas de bloqueio e extorsão."
     },
-    regra: "Ransomware = criptografia + extorsão. 'Se não pagar, seus dados ficam inacessíveis'.",
-    pegadinha: "Ransomware não é só exlusão — é criptografia dos dados com requerimento de resgate.",
-    fonte: "FBI — Internet Crime Complaint Center (IC3) Annual Report, 2022."
+    regra: "Ransomware pode bloquear/crifrar dados e extorquir; algumas campanhas também exfiltram dados. Pagamento não garante recuperação.",
+    pegadinha: "Não reduza ransomware a criptografia de todos os arquivos nem presuma que pagar resolve o incidente.",
+    fonte: "CISA, #StopRansomware Guide: https://www.cisa.gov/stopransomware/ransomware-guide."
   },
 
-  { id: "q-m4-14", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Botnets",
-    contexto: "Um atacante controla uma rede de dispositivos infectados sem o conhecimento dos donos.",
-    enunciado: "O termo 'botnet' refere-se a:",
+  { id: "q-m4-14", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Botnets e dispositivos comprometidos",
+    contexto: "Uma equipe de segurança identifica milhares de dispositivos comprometidos que recebem comandos de uma infraestrutura de controle e geram tráfego coordenado.",
+    enunciado: "Qual descrição de botnet é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Um sistema de firewall distribuído." },
-      { letra: "B", texto: "Uma rede de computadores infectados sob controle remoto de um atacante." },
-      { letra: "C", texto: "Um tipo de algoritmo de encriptação." },
-      { letra: "D", texto: "Um protocolo de rede seguro." },
-      { letra: "E", texto: "Um software de backup automatizado." }
+      { letra: "A", texto: "Conjunto de dispositivos comprometidos coordenados por um operador ou infraestrutura de comando e controle, que podem ser usados para atividades como DDoS, spam ou outras ações maliciosas." },
+      { letra: "B", texto: "Rede privada protegida por firewall, sem dispositivos comprometidos." },
+      { letra: "C", texto: "Algoritmo criptográfico que distribui chaves públicas." },
+      { letra: "D", texto: "Serviço de backup que replica dados entre dispositivos." },
+      { letra: "E", texto: "Protocolo seguro que impede o controle remoto de dispositivos." }
     ],
-    gabarito: "B",
-    justificativa: "Botnet é uma rede de dispositivos (computadores, IoT, servidores) infectados e controlados remotamente por um atacante (botmaster), usada para enviar spam, realizar DDoS, criptomoedas etc. Não é firewall (alternativa A incorreta); não é algoritmo de criptografia (alternativa C incorreta); nem protocolo de rede (alternativa D incorreta); nem software de backup (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Uma botnet é um conjunto de dispositivos comprometidos que podem ser coordenados remotamente. Os dispositivos podem pertencer a usuários ou organizações sem que estes percebam o comprometimento. A finalidade varia conforme a operação, e a presença de tráfego coordenado deve ser investigada com evidências e controles defensivos.",
     analise: {
-      A: "INCORRETA. Firewall é uma defesa, botnet é um ataque distribuído de dispositivos infectados.",
-      B: "CORRETA. Botnet é uma rede de dispositivos comprometidos sob controle remoto de um atacante.",
-      C: "INCORRETA. Algoritmo de criptografia é uma função matemática, não um malware.",
-      D: "INCORRETA. Protocolo de rede seguro é uma especificação de comunicação.",
-      E: "INCORRETA. Software de backup automatizado é uma ferramenta de proteção."
+      A: "CORRETA. A alternativa descreve dispositivos comprometidos e coordenação para ações potencialmente maliciosas.",
+      B: "INCORRETA. Uma rede protegida por firewall não é, por isso, uma botnet.",
+      C: "INCORRETA. Um algoritmo criptográfico não é uma rede de dispositivos comprometidos.",
+      D: "INCORRETA. Replicação de backup é uma função legítima de proteção de dados.",
+      E: "INCORRETA. Um protocolo seguro não define botnet e não garante, sozinho, que dispositivos não serão comprometidos."
     },
-    regra: "Botnet = 'cada um no controle do outro' — uma rede de 'robots' infectados sob comando remoto.",
-    pegadinha: "Botnet não é 'rede segura' — é uma rede de máquinas infectadas no controle de um atacante.",
-    fonte: "Kaspersky Lab — Botnet Evolution Report, 2021."
+    regra: "Botnet é uma rede de dispositivos comprometidos coordenados remotamente; a finalidade e o método de controle podem variar.",
+    pegadinha: "Nem toda botnet executa DDoS; spam, fraude, roubo de dados e outras ações também podem ocorrer.",
+    fonte: "CISA, Understanding and Responding to Distributed Denial-of-Service Attacks: https://www.cisa.gov/news-events/news/understanding-and-responding-distributed-denial-service-attacks; NIST SP 800-83 Rev. 1: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
-  { id: "q-m4-15", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Rootkits",
-    contexto: "Um ataque de rootkit consegue esconder sua presença no sistema operacional.",
-    enunciado: "O termo 'rootkit' refere-se a:",
+  { id: "q-m4-15", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Rootkits e ocultação",
+    contexto: "Uma ferramenta de resposta a incidentes encontra sinais de que processos, arquivos ou atividades privilegiadas estão sendo ocultados do sistema operacional.",
+    enunciado: "Qual característica é mais associada a um rootkit?",
     alternativas: [
-      { letra: "A", texto: "Um software de análise de segurança." },
-      { letra: "B", texto: "Um tipo de malware projetado para ganhar acesso de root e esconder sua presença." },
-      { letra: "C", texto: "Um tipo de protocolo de rede." },
-      { letra: "D", texto: "Um serviço de backup automático." },
-      { letra: "E", texto: "Um sistema operacional próprio." }
+      { letra: "A", texto: "Ocultar a presença de componentes ou atividades maliciosas, podendo operar em diferentes níveis do sistema." },
+      { letra: "B", texto: "Realizar exclusivamente cópias de segurança de arquivos." },
+      { letra: "C", texto: "Ser um protocolo de sincronização de relógios." },
+      { letra: "D", texto: "Ser uma ferramenta que necessariamente concede privilégios administrativos em todos os casos." },
+      { letra: "E", texto: "Ser um algoritmo que criptografa dados para garantir confidencialidade." }
     ],
-    gabarito: "B",
-    justificativa: "Rootkit é um conjunto de ferramentas que concede acesso privilegiado (root/admin) e esconde sua presença do usuário e sistema. Não é software de análise (alternativa A incorreta); não é protocolo de rede (alternativa C incorreta); não é backup (alternativa D incorreta); não é um sistema operacional (alternativa E incorreta).",
+    gabarito: "A",
+    justificativa: "Rootkit é uma categoria de técnicas ou componentes maliciosos associados à ocultação de sua presença ou de outras atividades no sistema. Pode envolver diferentes níveis de privilégio e técnicas de persistência; não é correto afirmar que todo rootkit necessariamente concede privilégios administrativos, pois pode depender de acesso previamente obtido ou explorar outros mecanismos.",
     analise: {
-      A: "INCORRETA. Rootkit é um malwares com capacidade de persistência e ocultação.",
-      B: "CORRETA. Rootkit = acesso root + tecnologia de ocultação.",
-      C: "INCORRETA. Rootkit não é um protocolo de rede.",
-      D: "INCORRETA. Rootkit não é backup automático.",
-      E: "INCORRETA. Rootkit é um malware, não um sistema operacional."
+      A: "CORRETA. A ocultação de componentes ou atividades é característica associada a rootkits.",
+      B: "INCORRETA. Backup é uma função de recuperação, não um rootkit.",
+      C: "INCORRETA. NTP é um protocolo de sincronização temporal.",
+      D: "INCORRETA. A obtenção de privilégio elevado pode estar relacionada, mas não é uma exigência universal da definição.",
+      E: "INCORRETA. Algoritmos criptográficos são mecanismos de proteção, não rootkits."
     },
-    regra: "Rootkit = 'chave mestra + ocultação'. Dá root e esconde o malwares do sistema.",
-    pegadinha: "Rootkit não é só 'root' — é root + tecnologia que esconde a presença.",
-    fonte: "MITRE ATT&CK — T1055 (Rootkit), 2022."
+    regra: "Rootkit está associado à ocultação de componentes ou atividades maliciosas; os mecanismos e níveis de privilégio variam.",
+    pegadinha: "Não confunda rootkit com uma garantia de que o malware sempre obtém root/admin; a ocultação é o aspecto central.",
+    fonte: "MITRE ATT&CK, T1014 — Rootkit: https://attack.mitre.org/techniques/T1014/."
   },
 
   { id: "q-m4-16", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
