@@ -1679,14 +1679,14 @@ id: "q-m1-09",
       { letra: "D", texto: "POP3 com configuração padrão, pois apaga do servidor apenas após o segundo download." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: 'IMAP: mantém e-mails sincronizados no servidor e no cliente. Ideal para multi-dispositivo (celular, tablet, computador)', e o exemplo de aplicação responde: 'IMAP. Com POP3, os e-mails baixados para um dispositivo são apagados do servidor e não estarão disponíveis no outro dispositivo.'",
+    justificativa: "O currículo define: 'IMAP: mantém e-mails sincronizados no servidor e no cliente. Ideal para multi-dispositivo (celular, tablet, computador)', e o exemplo de aplicação responde: 'IMAP. Com a configuração padrão de POP3, as mensagens baixadas podem ser removidas do servidor e deixar de estar disponíveis em outro dispositivo; o comportamento depende das opções de manter cópia.'",
     analise: {
       A: "INCORRETA. Erro conceitual: POP3 baixa e, por padrão, apaga do servidor — o segundo dispositivo ficaria sem as mensagens.",
       B: "CORRETA. Sincronização servidor-cliente é o requisito do cenário (multi-dispositivo).",
       C: "INCORRETA. Erro conceitual: SMTP é protocolo de ENVIO, não de recebimento (o currículo registra esse engano como exemplo 'erro').",
       D: "INCORRETA. Erro conceitual: invenção de comportamento ('apaga após o segundo download') — o currículo descreve o apagamento por padrão no download."
     },
-    regra: "POP3 (110/995): download local, apaga por padrão — 1 dispositivo/offline. IMAP (143/993): estado no servidor, sincronização — multi-dispositivo.",
+    regra: "POP3 (110/995): download local; conforme a configuração, pode apagar a cópia do servidor — adequado a cenários de um dispositivo/offline. IMAP (143/993): estado no servidor e sincronização — multi-dispositivo.",
     pegadinha: "A alternativa D inventa uma exceção confortável ('só apaga no segundo download') — quando a exceção não está no material, ela é pegadinha, não conhecimento."
   },
   {
@@ -1911,11 +1911,11 @@ id: "q-m1-09",
     topico: "m3-u1-t2-s1",
     assunto: "M3.1 E-mail — spam, phishing e autenticação",
     contexto: "Auditoria de segurança do e-mail corporativo revisa os registros DNS de autenticação.",
-    enunciado: "O SPF lista os servidores autorizados a enviar e-mails em nome do domínio, e o DKIM assina digitalmente as mensagens para garantir autenticidade, medidas que previnem o spoofing de remetente.",
+    enunciado: "O SPF lista servidores autorizados para o domínio e o DKIM assina mensagens; em conjunto com alinhamento e política DMARC, ajudam a reduzir spoofing do domínio, mas não bloqueiam todas as formas de falsificação de remetente.",
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o SPF lista os servidores autorizados a enviar e-mails em nome do domínio, e o DKIM assina digitalmente as mensagens para garantir autenticidade, medidas que previnem o spoofing de remetente'.",
-    justificativa: "O currículo descreve o spoofing como 'falsificação do endereço From para fazer o e-mail parecer legítimo' e apresenta SPF, DKIM e DMARC como 'técnicas de autenticação [que] previnem spoofing verificando o servidor remetente', com as funções exatas de SPF e DKIM citadas no item. O exercício registrado afirma: '(C/E) DKIM usa criptografia para assinar e-mails — Certo'.",
+    justificativa: "SPF e DKIM fornecem sinais de autenticação do domínio/remetente; DMARC permite definir tratamento e relatórios para mensagens que falham nos critérios configurados. Esses controles ajudam a reduzir spoofing de domínio, mas não garantem impedir toda falsificação, como nomes de exibição enganosos.",
     analise: {
       item: "Item VERDADEIRO. As duas funções (lista de servidores × assinatura) e a finalidade (prevenir spoofing) coincidem com o conteúdo do módulo.",
       leituraIncorreta: "Leitura que induz ao erro: pensar que SPF/DKIM 'impedem' o envio falsificado no ato — eles permitem DETECTAR/verificar; a aplicação da política (bloquear/quarentenar) é do DMARC. A expressão do currículo ('previnem spoofing verificando') é a base do item."
@@ -1948,7 +1948,7 @@ id: "q-m1-09",
       C: "INCORRETA. Erro conceitual: o cenário inclui pedido fraudulento de credencial/acesso — há intenção de roubo, não apenas falsificação.",
       D: "INCORRETA. Erro conceitual: marketing não solicita credenciais por link fingindo autoridade; citação interna é engenharia social, não comercialização."
     },
-    regra: "Hierarquia de ameaças por e-mail: spam (não solicitado) < phishing (fraude genérica) < spear phishing (fraude direcionada/personalizada); spoofing é técnica de falsificação usada em todas.",
+    regra: "Distinção entre categorias: spam é mensagem não solicitada; phishing é fraude para induzir ação ou obter dados; spear phishing é phishing direcionado/personalizado. Não é uma escala universal de gravidade; spoofing é uma técnica que pode acompanhar diferentes ataques.",
     pegadinha: "A VUNESP cobra o critério de DIRECIONAMENTO: mesma fraude, público genérico = phishing; público específico com detalhes reais = spear phishing."
   },
   {
@@ -2097,7 +2097,7 @@ id: "q-m1-09",
       { letra: "D", texto: "Consentimento único e permanente, válido para qualquer finalidade futura, sem prazo de retenção definido." }
     ],
     gabarito: "A",
-    justificativa: "O currículo lista os elementos: 'definir quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter ... Retenção ... Acesso ... Compartilhamento ... Proteção: criptografar gravações sensíveis', e o exemplo introdutório resume: 'Quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem tem acesso, regras de compartilhamento, proteção (criptografia), e procedimento para exclusão'. A aplicação (LGPD) exige consentimento, finalidade, prazo, segurança e direitos dos titulares (exemplo de aplicação do módulo).",
+    justificativa: "O currículo lista os elementos: 'definir quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter ... Retenção ... Acesso ... Compartilhamento ... Proteção: criptografar gravações sensíveis', e o exemplo introdutório resume: 'Quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem tem acesso, regras de compartilhamento, proteção (criptografia), e procedimento para exclusão'. A aplicação da LGPD exige identificar a hipótese legal adequada, definir finalidade e retenção, adotar medidas de segurança e atender aos direitos dos titulares; consentimento é necessário quando for a base aplicável, não em todos os tratamentos.",
     analise: {
       A: "CORRETA. Reúne todos os elementos do currículo mais o consentimento exigido no exemplo de aplicação com LGPD.",
       B: "INCORRETA. Erro conceitual: omissão sistemática — sem finalidade, retenção, acesso e proteção, a política não atende ao descrito (e a LGPD exige mais do que um aviso isolado).",
