@@ -905,6 +905,19 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Commits de conteúdo: `820d699def60c5953db90ea683df30f9f86855f2`, `2d18dc11fe7108d1985752f4f45fa2c560dea0fa`, `d7971da8d94a0ee436036f3dbaa315a893d33d38` e `a602c54f5a7912cbcaec6f1e9c789fa611c6062f`.
 - Revisão semântica focal dos 54 itens concluída; validar sintaxe, esquema e CI no HEAD mais recente.
 
+## Revisão semântica focal de M3 — q-m3-01..q-m3-47 (2026-10-26)
+
+- q-m3-01..q-m3-15: revisados SMTP, POP3/IMAP, cabeçalhos To/Cc/Bcc, spam/phishing/spear phishing, SPF/DKIM/DMARC e fluxos de e-mail.
+- q-m3-16..q-m3-30: revisados permissões de calendário, convites/fusos horários, plataformas de reunião, controle de participantes, gravação, segurança e requisitos da LGPD.
+- q-m3-31..q-m3-47: revisados classificação de spam/phishing, autenticação de domínio, acessibilidade, comunicação institucional, compartilhamento de tela, intrusão em reuniões e exposição de dados em convites.
+- q-m3-07, q-m3-27 e q-m3-28: corrigida generalização de que POP3 apaga mensagens do servidor por padrão; o comportamento de manter/remover cópias depende da configuração do cliente, enquanto IMAP oferece sincronização de estado.
+- q-m3-21, q-m3-39 e q-m3-40: substituída a leitura de consentimento universal para gravações por transparência e identificação da base legal adequada, com consentimento quando aplicável.
+- q-m3-31: removida notação de subconjunto excessivamente categórica entre spam e phishing; as categorias podem se sobrepor, mas não são sinônimas.
+- q-m3-32: DKIM descrito como assinatura verificável associada ao domínio e à integridade da mensagem, sem prometer autenticação da pessoa remetente.
+- q-m3-40: removida vírgula duplicada que criava slot vazio no array de questões.
+- Commits de conteúdo: `b4b05f5bd92def80877d8f10f401e4710792de60`, `212925e4582a8d0cd32129353784201be0bffc42`, `f97a2be8225042461baf9bf28761385e3dfd214f`, `252355ab6fac056883b9947f7cdd253b818324d4`, `932ded88c987d91293315cb9cc4f4597da35735a`, `2683f210802a31b8689485712ac61703c928ef91`, `434cb69de8beaa487496d96c8270ac14376f156a` e `3c7e49e231648fd48b6febca1e62f0433cd45725`.
+- Revisão semântica focal dos 47 itens concluída; validar sintaxe, esquema e CI no HEAD atual.
+
 ## Pitfalls conhecidos
 
 - `progress.js` e `accessibility.js` **agora EXISTEM e estão carregados no `index.html`** (P1-F) — progress.js junto aos demais JS (após charts.js) e accessibility.js antes de storage.js/app.js; contêineres `#progress-app` e `#accessibility-app`. `storage.js` e `assets/data/references.js` **foram criados no P1-E e estão carregados no `index.html`** (storage.js antes de app.js; references.js entre os dados) — infraestrutura de persistência e referências verificadas. (`search.js` **passou a existir e está carregado com `defer`** (contêiner `#search-app`); `audio.js` idem (`#audio-app`); `manifest.webmanifest` e `service-worker.js` **existem** e o `<link rel="manifest">` está no `<head>` com registro condicional de SW — PWA condicional, não testado em navegador real. `charts.js` **passou a existir e está carregado**: laboratório dos 5 gráficos obrigatórios em SVG próprio, contêiner `#charts-app`. `flashcards.js` **existe e está carregado**: UI de flashcards + repetição espaçada SM-2 simplificado. `quiz-engine.js` **existe e está carregado**: motor de simulados da Seção 10.2.)
