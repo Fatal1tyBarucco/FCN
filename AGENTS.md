@@ -1328,3 +1328,11 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Permanecem 3 verificações incompletas (contraste, frames e label-content-name-mismatch) e validação manual de teclado/leitor de tela/WCAG; não declarar a acessibilidade integralmente certificada.
 - Revisão das questões: 395/399 com fonte detectada; lacunas externas ainda abertas: `q-m2-26`, `q-m2-32`, `q-m3-19`, `q-m3-36`. Conferir as URLs adicionadas e suas afirmações, não apenas a presença do campo.
 
+## Fontes oficiais das quatro questões anteriormente sem referência — 2026-10-26
+
+- Adicionadas referências diretamente às questões `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36` em `apostila-ia/assets/data/questions.js`.
+- Acrescentadas quatro entradas ao catálogo `apostila-ia/assets/data/references.js` e registradas as fontes em `referencias/referencias-verificadas.md`: Cisco 10GBASE-T/Cat6, Zoom capacidade/licenças, Zoom webinar breakout rooms e Google Meet requisitos de navegador.
+- Evidência técnica consultada: Cat6 UTP até 55 m para 10GBASE-T e Cat6 blindado/Cat6A/Cat7 até 100 m; webinar de 500 participantes e recursos premium dependem de licença; salas paralelas em webinars exigem licença elegível e aplicativo suportado; Google Meet aceita navegadores compatíveis.
+- A auditoria anterior reportou 395/399 questões com fonte. Com as quatro adições, o esperado é 399/399; aguardar a auditoria automatizada do novo HEAD antes de declarar a contagem final.
+- Não declarar revisão semântica integral concluída. Revisar as generalizações de `q-m3-36` e as condições de licenciamento/recursos em `q-m3-19`. URLs foram consultadas em resultados de fontes oficiais, mas não alegar teste HTTP automatizado de todas as URLs.
+- Manter PR #17 aberto e Draft, sem merge.
