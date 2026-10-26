@@ -1,26 +1,26 @@
 # Relatório heurístico de qualidade das questões
 
-## Snapshot atual de distribuição — revisão editorial controlada (2026-10-26)
+## Snapshot validado pelo CI — 2026-10-26
 
-- O banco contém 399 questões: 324 de múltipla escolha e 75 de certo/errado; IDs únicos e estrutura básica conferidos no HEAD anterior a este commit.
-- Foram reposicionadas 60 alternativas corretas sem alterar o conteúdo da resposta, atualizando em conjunto a posição da alternativa, o gabarito e o mapeamento da análise. O novo CI deve confirmar a consistência estrutural no HEAD resultante.
-- Distribuição atual prevista das 324 questões de múltipla escolha:
+- **HEAD validado:** `995f26cf718eb46d463c331d88557b33b3759d39`.
+- **Workflow:** [Validate curriculum and learning assets — run 40407484248](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40407484248) — sucesso.
+- Sintaxe JavaScript, matriz curricular, rastreabilidade, validação estrutural, auditoria heurística, smoke test `file://` e regressões de interação Playwright passaram.
+- O banco contém 399 questões: 324 de múltipla escolha e 75 de certo/errado; IDs duplicados: **0**; pares com contexto e enunciado idênticos: **0**; alertas heurísticos: **0**.
+- Distribuição atual das 324 questões de múltipla escolha, extraída do artefato de CI:
 
 | Letra correta | Quantidade | Percentual |
 |---|---:|---:|
-| A | 84 | 25,9% |
-| B | 103 | 31,8% |
+| A | 83 | 25,6% |
+| B | 104 | 32,1% |
 | C | 72 | 22,2% |
 | D | 37 | 11,4% |
 | E | 28 | 8,6% |
 | **Total** | **324** | **100%** |
 
-- A concentração em A/B diminui de 76,2% para 57,7%; D/E aumentam de 5,2% para 20,1%. O balanceamento reduz previsibilidade, mas não substitui revisão semântica nem exige distribuição idêntica entre letras.
-- A matriz de qualidade deve ser regenerada pelo workflow após este commit; relatórios históricos abaixo permanecem snapshots explicitamente datados e não devem ser tratados como resultado do novo HEAD.
-
-**Data:** 2026-10-26  
-**Execução:** [GitHub Actions — validação, auditoria heurística e smoke test](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754)  
-**Script:** `scripts/audit_question_quality.mjs`
+- A concentração em A/B é 57,7%; D/E representam 20,1%. A distribuição é um indicador editorial, não prova de qualidade nem objetivo de uniformidade perfeita.
+- Auditoria de rastreabilidade no mesmo run: 132 tópicos, 460 flashcards, 399 questões, zero ativos sem associação reconhecível, zero tópicos sem flashcard e zero tópicos sem questão.
+- O relatório de qualidade sinalizou inicialmente q-m4-81..q-m4-85 por um limite do parser de análises inline; a regex foi corrigida e o artefato após a correção apresentou zero alertas.
+- **Escopo:** o resultado confirma as verificações automatizadas no HEAD indicado; não substitui revisão factual independente, auditoria jurídica exaustiva, teste manual de acessibilidade ou validação em dispositivos físicos.
 
 ## Resultado estrutural — snapshot de dados do HEAD `cf64fc34b8bf3da6af6f629254ee979071c52609`
 
