@@ -1,7 +1,8 @@
 /* questions_m5.js — MÓDULO 5: INTELIGÊNCIA ARTIFICIAL
- * 40 questões autorais: 5.1 Fundamentos (10), 5.2 Aprendizado de Máquina (10),
- * 5.3 IA Generativa/LLMs (10), 5.4 Engenharia de Prompts (10).
- * Distribuição: 30% básico, 45% intermediário, 25% avançado. Autorais (origem: 'autoral').
+ * 42 questões autorais: 5.1 Fundamentos (10), 5.2 Aprendizado de Máquina (10),
+ * 5.3 IA Generativa/LLMs (11), 5.4 Engenharia de Prompts (11).
+ * Níveis medidos no banco atual: 12 básicos, 18 intermediários e 12 avançados.
+ * Autorais (origem: 'autoral'); formato compatível com quiz-engine.js.
  * Formato compatível com quiz-engine.js. */
 const moduleQuestions5 = [
 
@@ -677,7 +678,7 @@ const moduleQuestions5 = [
     fonte: "Hugging Face — Temperature, Top-K, Top-P, 2024."
   },
 
-  /* ===================== 5.4 Engenharia de Prompts (10 questões) ===================== */
+  /* ===================== 5.4 Engenharia de Prompts (11 questões) ===================== */
 
   { id: "q-m5-28", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m5-u4-t1-s1", assunto: "5.4 — Componentes de um prompt",
