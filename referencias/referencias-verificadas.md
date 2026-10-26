@@ -8,9 +8,18 @@
 - Texto compilado (republicado parcialmente 15.08.2018 — edição extra): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm
 - Alteração pela Lei nº 13.853, de 2019 (inclui parágrafo único art. 1º; altera art. 3º inciso II; altera art. 4º; altera art. 5º; altera art. 11): confirmada no texto oficial — referência NÃO inventada; citada quando usada.
 - Vigência: promulgada 14/08/2018; disposições civis efetivas 18/09/2020; sanções administrativas efetivas 01/08/2021 (fonte: ANPD / texto oficial — verificação parcial; data de vigência das sanções citada apenas com ressalva "segundo texto oficial").
-- Regulador: Autoridade Nacional de Proteção de Dados (ANPD) — URL oficial: https://www.gov.br/anpd/pt-br (não citada ainda como verificada neste arquivo; necessário confirmar com acesso direto antes de incluir como referência primária).
+- Denominação institucional atualizada: a Lei nº 15.352, de 25 de fevereiro de 2026, alterou a LGPD para denominar a entidade como **Agência Nacional de Proteção de Dados (ANPD)**, autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública. A denominação anterior, Autoridade Nacional de Proteção de Dados, é histórica. Texto oficial da alteração: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm (acesso direto em 2026-10-25).
 - Relação com Marco Civil (Lei 12.965/2014): LGPD altera o Marco Civil (art. 5º e outros) — confirmado no preâmbulo do texto oficial.
 - Relação com LAI (Lei 12.527/2011): art. 23 da LGPD menciona explicitamente a LAI — confirmado no texto oficial.
+
+
+## Atualização normativa verificada em 2026-10-25 — nome da ANPD, Constituição e LAI
+
+- **Lei nº 15.352/2026:** texto oficial consultado diretamente em https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm. O art. 1º altera a Lei nº 13.709/2018, incluindo a denominação Agência Nacional de Proteção de Dados (ANPD), a natureza de autarquia especial vinculada ao Ministério da Justiça e Segurança Pública e ajustes na definição de encarregado e da autoridade nacional. As questões devem usar a denominação atual, não repetir a denominação institucional histórica.
+- **LGPD consolidada:** https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm. Consultados diretamente os arts. 1º, 5º, 18, 55-A e 55-J. O art. 55-J contém competências da ANPD, incluindo zelar pela proteção de dados, fiscalizar e aplicar sanções, solicitar informações ao Poder Público e realizar auditorias nos termos da lei.
+- **Constituição Federal:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm. Consultados diretamente art. 5º, X (intimidade e vida privada) e art. 5º, LXXIX (direito à proteção de dados pessoais, incluído pela EC nº 115/2022).
+- **Lei de Acesso à Informação:** https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm. Consultados diretamente arts. 3º, I (publicidade como regra e sigilo como exceção), 6º, III (proteção de informações sigilosas e pessoais) e 7º (escopo do acesso).
+- **Correções decorrentes:** corrigidas as questões q-m4-34, q-m4-36 e q-m4-37 para refletir a denominação atual da ANPD e a referência constitucional exata; corrigidas q-m4-35, q-m4-40, q-m4-41 e q-m4-43 para qualificar direitos, delimitar a relação entre Marco Civil e LGPD, remover afirmação não sustentada sobre prioridade de atendimento na LAI e separar direitos do titular das responsabilidades dos agentes de tratamento.
 
 ## Artigos verificados (texto direto do site oficial; nenhuma citação inventada)
 - Art. 1º: "Esta Lei dispõe sobre o tratamento de dados pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural."
