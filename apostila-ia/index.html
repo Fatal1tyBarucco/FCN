@@ -193,7 +193,7 @@
 
   <article>
     <h3>Exemplo 1 (introdução) — Criar sumário automático</h3>
-    <pre><code>Problema: documento com capítulos "1. Introdução", "2. Desenvolvimento", "3. Conclusão".
+    <pre tabindex="0"><code>Problema: documento com capítulos "1. Introdução", "2. Desenvolvimento", "3. Conclusão".
 Passos:
   1. Aplicar estilo "Título 1" a cada capítulo.
   2. Posicionar cursor no início.
@@ -206,7 +206,7 @@ Erro comum: aplicar formatação direta (negrito, tamanho) sem estilo; o sumári
 
   <article>
     <h3>Exemplo 2 (aplicação prática) — Cabeçalhos diferentes por seção</h3>
-    <pre><code>Problema: relatório técnico com capa (sem cabeçalho), corpo (título no cabeçalho), anexos (numeração romana).
+    <pre tabindex="0"><code>Problema: relatório técnico com capa (sem cabeçalho), corpo (título no cabeçalho), anexos (numeração romana).
 Passos:
   1. Inserir Quebra de Seção (Next Page) após capa.
   2. Em cada seção, desmarcar "Vincular ao anterior" no cabeçalho.
@@ -219,7 +219,7 @@ Erro comum: usar quebra de página em vez de seção; cabeçalho persiste igual 
 
   <article>
     <h3>Exemplo 3 (interpretação de erro) — Sumário vazio após atualização</h3>
-    <pre><code>Problema: após atualizar o sumário, aparece "Nenhuma entrada de sumário encontrada."
+    <pre tabindex="0"><code>Problema: após atualizar o sumário, aparece "Nenhuma entrada de sumário encontrada."
 Diagnóstico:
   - Verificar se os capítulos têm estilo "Título 1" aplicado (não apenas formatação direta).
   - Confirmar que o campo do sumário está inserido (não texto estático copiado manualmente).
@@ -285,7 +285,7 @@ Justificativa técnica: o sumário usa campos de referência baseados em estilos
 
   <article>
     <h3>Exemplo 1 (introdução) — Cálculo de média, máximo e mínimo de notas</h3>
-    <pre><code>Problema: planilha com notas 7,5; 8,0; 6,5; 9,0; 8,5. Calcular média, máximo e mínimo.
+    <pre tabindex="0"><code>Problema: planilha com notas 7,5; 8,0; 6,5; 9,0; 8,5. Calcular média, máximo e mínimo.
 Funções aplicáveis (simulador): MÉDIA, MÁXIMO, MÍNIMO.
 Execução (simulador):
   MÉDIA(7.5, 8, 6.5, 9, 8.5) => (7.5+8+6.5+9+8.5)/5 = 39.5/5 = 7.9
@@ -299,7 +299,7 @@ Limite documentado: o simulador não aceita nomes definidos, tabelas estruturada
 
   <article>
     <h3>Exemplo 2 (aplicação prática) — Função SE com múltiplas condições</h3>
-    <pre><code>Problema: classificar nota 7,5 como "Aprovado" (se >=7) ou "Reprovado" (se <7).
+    <pre tabindex="0"><code>Problema: classificar nota 7,5 como "Aprovado" (se >=7) ou "Reprovado" (se <7).
 Função: SE.
 Execução (simulador):
   SE(7.5 >= 7, "Aprovado", "Reprovado") => "Aprovado"
@@ -311,7 +311,7 @@ Erro comum: inverter ordem dos argumentos — colocar mensagem antes da condiç�
 
   <article>
     <h3>Exemplo 3 (interpretação de erro / limitação) — Erro de execução × rejeição de entrada</h3>
-    <pre><code>Problema: usuário digita SOMASE(10; "texto"; 20) — o 1º argumento de SOMASE deve
+    <pre tabindex="0"><code>Problema: usuário digita SOMASE(10; "texto"; 20) — o 1º argumento de SOMASE deve
 ser um intervalo (ex.: A1:B5); um número no lugar do intervalo é erro de uso.
 Comportamento real do simulador (saídas executadas em Node em 2026-10-20):
   - SOMASE(10; "texto"; 20) => #VAL! com detalhe "SOMASE exige um intervalo —
