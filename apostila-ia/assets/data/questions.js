@@ -710,14 +710,14 @@ id: "q-m1-09",
     enunciado: "O Modo de Compatibilidade, ativado ao abrir arquivos .doc legados no Word moderno, restringe alguns recursos posteriores que não são compatíveis com o formato original para preservar a compatibilidade do conteúdo.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'restringe alguns recursos posteriores que não são compatíveis com o formato original': a limitação depende dos recursos suportados pelo formato legado, não de um corte universal por ano.",
-    justificativa: "O currículo descreve o Modo de Compatibilidade como forma de preservar a estrutura de arquivos legados, restringindo recursos que não são compatíveis com o formato original. Converter para .docx pode permitir recursos mais recentes, mas também pode alterar a formatação; por isso, recomenda-se salvar uma cópia antes da conversão.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'restringe alguns recursos posteriores que não são compatíveis com o formato original': o currículo registra que o Modo de Compatibilidade desabilita funcionalidades introduzidas após 2007 para preservar a integridade do conteúdo original (formato .doc legado).",
+    justificativa: "O currículo descreve o Modo de Compatibilidade como forma de preservar a estrutura de arquivos legados, desabilitando funcionalidades introduzidas após 2007 (não compatíveis com o formato .doc original). Converter para .docx pode permitir recursos mais recentes, mas também pode alterar a formatação; por isso, recomenda-se salvar uma cópia antes da conversão.",
     analise: {
-      item: "Item VERDADEIRO. O formato legado .doc pode restringir recursos não suportados por esse formato; o modo busca preservar a compatibilidade do conteúdo, sem estabelecer um corte universal para todas as funções por ano.",
+      item: "Item VERDADEIRO. O Modo de Compatibilidade desabilita funcionalidades introduzidas após 2007 (não compatíveis com o formato legado .doc), preservando a integridade do conteúdo original.",
       leituraIncorreta: "Leitura que induz ao erro: supor que o modo 'congela tudo' ou que impede salvar. Ele limita funcionalidades novas, não bloqueia o documento — salvar em .docx sai do modo."
     },
     regra: "Compatibilidade de formatos: .doc (binário legado) → modo de compatibilidade e restrições de alguns recursos; .docx (Open XML) → suporte a recursos modernos; .pdf → distribuição.",
-    pegadinha: "A pegadinha é presumir que o modo de compatibilidade desativa todas as funções de uma data específica em diante; a restrição depende da compatibilidade entre o recurso e o formato legado.",
+    pegadinha: "A pegadinha é presumir que o modo 'congela tudo' ou impede salvar; ele limita funcionalidades posteriores ao formato legado, não bloqueia o documento — salvar em .docx sai do modo.",
     fonte: "Microsoft Support — Formatos de arquivo para salvar documentos no Word: https://support.microsoft.com/pt-br/word/file-formats-for-saving-documents",
   },
   {

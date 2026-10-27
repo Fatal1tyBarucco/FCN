@@ -38,18 +38,11 @@ Nenhum par idêntico detectado.
 - Alertas de fonte, denominação legal e duplicação exigem avaliação humana do contexto.
 - A distribuição de letras do gabarito é descritiva e não prova qualidade nem viés por si só.
 
-## Revisão semântica — lote M1 q-m1-01..q-m1-10 (2026-10-27)
+## Revisão semântica — lote M1 q-m1-21..q-m1-30 (2026-10-27)
 
-- Questões revisadas: 10 (q-m1-01 a q-m1-10).
-- Escopo verificado: enunciado, alternativas, gabarito, justificativa, análise de distratores e fonte, contra `assets/data/curriculum.js` (unidade 1.1 e 1.2) e documentação Microsoft citada.
-- Alterações de conteúdo: nenhuma. Gabaritos preservados (D, errado, A, certo, C, errado, B, errado, D, errado).
-- Fontes: todas as 10 questões possuem campo `fonte` preenchido; nenhuma pendência de fonte registrada neste lote.
-- Validação de sintaxe: `node --check assets/data/questions.js` → OK.
-
-## Revisão semântica — lote M1 q-m1-11..q-m1-20 (2026-10-27)
-
-- Questões revisadas: 10 (q-m1-11 a q-m1-20).
-- Escopo verificado: enunciado, alternativas, gabarito, justificativa, análise de distratores, regra, pegadinha e fonte, contra `assets/data/curriculum.js` (unidades 1.2 — estilos/sumários, parágrafos/tabulações/listas, quebras de página/seção, referências cruzadas) e documentação Microsoft citada.
-- Alterações de conteúdo: nenhuma. Gabaritos preservados (B, errado, C, C, errado, B, certo, D, certo, D).
-- Fontes: todas as 10 questões possuem campo `fonte` preenchido; nenhuma pendência de fonte registrada neste lote.
-- Validação de sintaxe: `node --check assets/data/questions.js` → OK.
+- Questões revisadas: 10 (q-m1-21 a q-m1-30). Módulo 1, unidades 2.9–2.13, 4.1, 5.1, 3.3.
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores, fonte; cruzamento com `curriculum.js` (conteúdo base) e simulador documentado.
+- Resultado: gabaritos mantidos (B, certo, B, A, certo, B, errado, B, errado, A). Nenhum gabarito alterado.
+- Correção aplicada: q-m1-25 (Modo de Compatibilidade) — ajuste de justificativa/trechoDeterminante/analise/pegadinha para alinhar ao currículo: desabilita funcionalidades introduzidas após 2007 (formato .doc legado), removendo a afirmação contraditória de "sem corte universal por ano".
+- Demais 9 questões (q-m1-21, 22, 23, 24, 26, 27, 28, 29, 30) sem alteração; fontes Microsoft Support mantidas.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
