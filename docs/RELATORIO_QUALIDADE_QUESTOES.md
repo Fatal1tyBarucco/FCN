@@ -101,3 +101,23 @@ Nenhum par idêntico detectado.
   - q-m2-20: broadcast é limitado ao domínio de broadcast (sub-rede local); roteadores não encaminham 255.255.255.255 (evita broadcast storm).
 - Fontes: mantidas (Cisco topologia/comutação; IETF RFC 1112, RFC 1122 e RFC 4291 quando aplicável); nenhuma URL inventada ou removida.
 - Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
+
+## Revisão semântica — lote M2 q-m2-21..q-m2-30 (2026-10-27)
+
+- Questões revisadas: 10 (q-m2-21 a q-m2-30). Módulo 2, subtópicos m2-u1-t3-s1 (métricas de desempenho), m2-u1-t4-s1 (meios de transmissão), m2-u1-t1-s4 (comutação de circuitos vs. pacotes), m2-u1-t1-s2 (unicast/broadcast/multicast/anycast).
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores, fonte; cruzamento com `apostila-ia/assets/data/curriculum_m2.js` (unidade 2.1, tópicos 3 e 4; tópicos 1 e 2).
+- Resultado: gabaritos mantidos (A, D, certo, B, C, errado, B, B, certo, B). Nenhum gabarito alterado.
+- Correção aplicada: q-m2-28 — `topico`/`assunto` corrigidos de `m2-u1-t1-s1` ("Fundamentos — métricas de desempenho") para `m2-u1-t3-s1` ("M2.1 Métricas de desempenho"), alinhando a questão ao subtópico real de métricas (largura de banda, throughput, jitter). Demais 9 questões sem alteração de conteúdo.
+- Itens verificados individualmente:
+  - q-m2-21: largura de banda (100 Mbps, teórica) × throughput (85 Mbps, real); causas (overhead, colisões, congestionamento, sinal).
+  - q-m2-22: ping estável (30 ms) + jitter alto (50 ms) → variação; QoS/buffer de jitter.
+  - q-m2-23: jitter = variação da latência entre pacotes; perda pode indicar congestionamento/erro/firewall.
+  - q-m2-24: fábrica com EMI → STP (blindagem); UTP suscetível; Wi-Fi fere premissa cabeada.
+  - q-m2-25: dois prédios a 500 m com EMI → fibra monomodo (imune, sem repetidor); UTP limita-se a 100 m (Cat6 55 m em 10 Gbps).
+  - q-m2-26: CE falso — Cat6 suporta 10 Gbps até 55 m (não 100 m; 100 m em 10 Gbps é Cat6a).
+  - q-m2-27: Internet usa comutação de pacotes (roteamento independente, compartilhamento de banda, tolerância a falhas); circuitos = banda garantida/setup lento.
+  - q-m2-28: throughput (720 Mbps) ≤ largura de banda (1 Gbps); áudio interrompido compatível com jitter alto, independente do ping estável.
+  - q-m2-29: ARP e DHCP discovery = broadcast, contido na sub-rede (não atravessa roteadores).
+  - q-m2-30: site = unicast (1:1); videoaula para grupo pode usar multicast (um fluxo + IGMP), mais eficiente que 200 fluxos unicast.
+- Fontes: mantidas (Cisco latência/jitter/WAN/LAN; IETF RFC 826, RFC 2131, RFC 1112, RFC 4291); nenhuma URL inventada ou removida.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
