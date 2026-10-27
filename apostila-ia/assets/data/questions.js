@@ -3290,7 +3290,7 @@ id: "q-m1-09",
     },
     regra: "Cabeçalhos e rodapés são controlados por opções de layout e, quando necessário, por seções.",
     pegadinha: "Não confundir Primeira Página Diferente com remover o cabeçalho do documento inteiro.",
-    fonte: "Currículo M1, unidade 2, tópico 5 — cabeçalhos, rodapés, notas e numeração."
+    fonte: "Microsoft Support — Alterar ou excluir um cabeçalho ou rodapé em uma única página (opção Primeira Página Diferente): https://support.microsoft.com/pt-br/word/change-or-delete-a-header-or-footer-on-a-single-page; iniciar a numeração de página mais adiante no documento: https://support.microsoft.com/pt-br/word/start-page-numbering-later-in-your-document"
   },
   {
     id: "q-m1-42",
@@ -3321,7 +3321,7 @@ id: "q-m1-09",
     },
     regra: "Células formam intervalos; Tabelas acrescentam estrutura e recursos a listas de dados.",
     pegadinha: "Aplicar cores não é o mesmo que converter um intervalo em Tabela.",
-    fonte: "Currículo M1, unidade 3, tópico 1 — pasta de trabalho, planilhas, células, intervalos e tabelas."
+    fonte: "Microsoft Support — Visão geral de tabelas do Excel (cabeçalhos, referências estruturadas e expansão para novas linhas): https://support.microsoft.com/pt-br/excel/overview-of-excel-tables; redimensionar uma tabela adicionando ou removendo linhas e colunas: https://support.microsoft.com/pt-br/excel/resize-a-table-by-adding-or-removing-rows-and-columns-in-excel"
   },
   {
     id: "q-m1-43",
@@ -3352,7 +3352,7 @@ id: "q-m1-09",
     },
     regra: "Filtro seleciona o que fica visível; classificação muda a ordem; validação controla entradas.",
     pegadinha: "Não confundir classificação com filtragem.",
-    fonte: "Currículo M1, unidade 3, tópico 5 — classificação, filtros, validação, formatação condicional e visualização."
+    fonte: "Microsoft Support — Filtrar dados em um intervalo ou tabela no Excel: https://support.microsoft.com/pt-br/excel/get-started/filter-data-in-a-range-or-table-in-excel; aplicar validação de dados às células: https://support.microsoft.com/pt-br/excel/get-started/apply-data-validation-to-cells; utilizar formatação condicional para realçar informações: https://support.microsoft.com/pt-br/excel/use-conditional-formatting-to-highlight-information-in-excel"
   },
   {
     id: "q-m2-41",
@@ -4031,7 +4031,7 @@ id: "q-m1-09",
     },
     regra: "Documentos longos exigem estilos, campos atualizáveis, quebras apropriadas e verificação da estrutura e das opções de acessibilidade do PDF.",
     pegadinha: "Aparência visual não garante estrutura semântica.",
-    fonte: "Currículo M1 — modulo-1-unidade-2-topico-14 (criação e correção de documentos complexos)."
+    fonte: "Microsoft Support — Inserir um sumário automático no Word: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents; usar quebras de seção para alterar layout ou formatação: https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document; criar PDFs acessíveis: https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs"
   },
 
 ];
