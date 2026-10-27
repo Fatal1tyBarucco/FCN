@@ -38,3 +38,33 @@ Nenhum par idêntico detectado.
 - Uma questão sem alerta ainda pode conter erro factual, ambiguidade, gabarito incorreto ou distrator fraco.
 - Alertas de fonte, denominação legal e duplicação exigem avaliação humana do contexto.
 - A distribuição de letras do gabarito é descritiva e não prova qualidade nem viés por si só.
+
+---
+
+## Questões sem fonte externa — lista acionável para próxima sessão (2026-10-27)
+
+Total: **102 questões (25,6% do banco)** com campo `fonte` contendo apenas proveniência curricular interna ("Currículo Mx …"), sem URL/autor/obra. M7 e M8 estão 100% nessa situação.
+
+**Regra para a próxima sessão:** adicionar fonte externa verificável (URL direta + título + órgão + data de verificação) reutilizando as 149 entradas de `references.js` quando aplicável; adicionar novas entradas ao catálogo apenas com URL verificada (webfetch). Não inventar URLs. Não alterar enunciado/alternativas/gabarito/análise.
+
+### M7 (40) — q-m7-01..q-m7-40
+Temas: DIKW (dado/informação/conhecimento/sabedoria), dados estruturados/semiestruturados/não estruturados, qualitativos/quantitativos, nominais/ordinais/discretos/contínuos, metadados/linhagem/catálogo/ciclo de vida, qualidade (acurácia, completude, consistência, validade, unicidade, tempestividade), ETL/ELT, limpeza, valores ausentes, duplicidades, inconsistências, normalização estatística vs BD, agregação/deduplicação, anonimização/pseudonimização/reidentificação, governança/acesso/minimização/proteção.
+Fontes candidatas (a verificar): DAMA-DMBOK, ISO 8000 (qualidade de dados), documentação de ferramentas de engenharia de dados.
+
+### M8 (40) — q-m8-01..q-m8-40
+Temas: visualização, Gestalt, cores/contraste/escalas/hierarquia, chartjunk/integridade gráfica, eixos/rótulos/unidades/legendas, escalas linear/log/truncada, escolha de gráficos, histograma/linha/barras/dispersão/box plot, média/mediana/moda/dispersão, quartis/percentis, distribuições/assimetria/outliers, correlação/causalidade, amostragem/vieses, incerteza/agregação, Power BI/Power Query/DAX, Tableau, Looker Studio, storytelling.
+Fontes candidatas (a verificar): documentação oficial de Power BI (learn.microsoft.com/power-bi), Tableau (help.tableau.com), Looker Studio (support.google.com/looker-studio), W3C (acessibilidade de gráficos).
+
+### M2 (14) — q-m2-41..q-m2-54
+Temas: modelos OSI/TCP-IP, IPv4/IPv6, TCP/UDP, DNS/DHCP, SFTP/FTPS/SSH, VPN/NAT/PAT, endereços privados, VLSM/sumarização, IPv6 abreviação, ping/traceroute, ipconfig, nslookup/dig, diagnóstico por camadas.
+Fontes candidatas: RFC 791 (IPv4), RFC 793 (TCP), RFC 8200 (IPv6), RFC 1034/1035 (DNS), RFC 2131 (DHCP), RFC 9110 (HTTP) — a maioria já cadastrada em `references.js`.
+
+### M3 (6) — q-m3-41, q-m3-43, q-m3-44, q-m3-45, q-m3-46, q-m3-47
+Temas: classificação spam/phishing, autenticação de domínio (SPF/DKIM/DMARC), acessibilidade, comunicação institucional, compartilhamento de tela, intrusão em reuniões, exposição de dados em convites.
+Fontes candidatas: RFC 7208 (SPF), RFC 6376 (DKIM), RFC 7489 (DMARC), W3C WCAG 2.2 (já cadastrada), LGPD (já cadastrada).
+
+### M5 (2) — q-m5-41, q-m5-42
+Temas: respostas institucionais sem fundamento, governança de prompts com documentos versionados.
+Fontes candidatas: NIST AI RMF 1.0 (já cadastrada), OWASP LLM Prompt Injection Prevention Cheat Sheet (já cadastrada).
+
+**Ação recomendada na próxima sessão:** executar em lotes por módulo (M7+M8 primeiro, maior bloco homogêneo), reutilizando URLs já verificadas do catálogo; registrar cada fonte adicionada no campo `fonte` e, se nova, no catálogo `references.js` + `referencias/referencias-verificadas.md`. Atualizar este relatório com a contagem final.
