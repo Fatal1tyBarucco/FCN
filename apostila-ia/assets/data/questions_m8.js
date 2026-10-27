@@ -331,7 +331,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Paleta sequencial, com variação de luminosidade de uma cor para outra, de claro para escuro." }
     ],
     gabarito: "D",
-    justificativa: "O currículo classifica a variável como sequencial (magnitude contínua, ordenada) e indica paleta sequencial: variação de luminosidade de uma cor, de menor a maior, respeitando a ordem perceptiva. A alternativa B reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (D) não comunicam magnitude.",
+    justificativa: "O currículo classifica a variável como sequencial (magnitude contínua, ordenada) e indica paleta sequencial: variação de luminosidade de uma cor, de menor a maior, respeitando a ordem perceptiva. A alternativa D reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (B) não comunicam magnitude.",
     analise: {
       A: "INCORRETA. Erro conceitual: variável contínua ordenada não é categórica; as cores distintas impõem divisões artificiais.",
       B: "INCORRETA. Erro conceitual: sem escala, o leitor não decora a intensidade; a regra de ouro é escala para magnitude.",
@@ -737,7 +737,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A ordenação decrescente é obrigatória em todos os gráficos de barras." }
     ],
     gabarito: "C",
-    justificativa: "O currículo registra: 'ordem alfabética só quando a consulta alfabética for o uso real; ordenação afeta a leitura: a mesma tabela com barras decrescentes comunica ranking; embaralhada, esconde o pior resultado'. A alternativa B reproduz exatamente isso. A erra: a ordem não é neutra — afeta a leitura. C erra: a ordem é relevante independente de metáfora. D erra: a ordem decrescente é recomendada quando o objetivo é ranquear, não obrigatória em todos os casos.",
+    justificativa: "O currículo registra: 'ordem alfabética só quando a consulta alfabética for o uso real; ordenação afeta a leitura: a mesma tabela com barras decrescentes comunica ranking; embaralhada, esconde o pior resultado'. A alternativa C reproduz exatamente isso. A erra: a ordem não é neutra — afeta a leitura. B erra: a ordem é relevante independente de metáfora. D erra: a ordem decrescente é recomendada quando o objetivo é ranquear, não obrigatória em todos os casos.",
     analise: {
       A: "INCORRETA. Erro conceitual: a ordem altera a leitura — embaralhada esconde o pior resultado.",
       B: "INCORRETA. Erro conceitual: a ordem é relevante independente de metáfora.",
@@ -911,7 +911,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Quebrar a linha na lacuna e sinalizar o período sem coleta, sem conectar diretamente." }
     ],
     gabarito: "D",
-    justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa B reproduz exatamente isso. A erra: conectar gera falsa continuidade. C erra: substituir pela média inventa um valor. D erra: gráficos de linhas suportam lacunas (quebradas), e a conversão para tabela não é obrigatória.",
+    justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa D reproduz exatamente isso. A erra: conectar gera falsa continuidade. B erra: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho. C erra: substituir pela média inventa um valor.",
     analise: {
       A: "INCORRETA. Erro conceitual: conectar gera ilusão de continuidade e de valores intermediários inexistentes.",
       B: "INCORRETA. Erro conceitual: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho.",
