@@ -1406,3 +1406,10 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - `q-m1-41` agora usa fontes sobre Primeira Página Diferente e numeração; `q-m1-42` sobre tabelas e expansão; `q-m1-43` sobre filtros, validação e formatação condicional; `q-m1-44` sobre sumário automático, quebras de seção e PDFs acessíveis.
 - O catálogo `apostila-ia/assets/data/references.js` contém 149 IDs únicos (20 referências de vídeo e 129 referências técnicas), todos com URL e status `verificado` no arquivo. Isso é uma conferência estrutural, não prova que cada URL foi testada por HTTP nem que cada questão foi validada semanticamente.
 - O CI do conjunto final destas alterações ainda precisa ser confirmado. Manter PR #17 em Draft, sem merge.
+
+### CI após correção do catálogo — 2026-10-26
+
+- O commit `a7ef1634d836e75da808ebe7fefc8186421c2ab9` corrigiu uma vírgula ausente entre entradas do catálogo de referências, identificada pela verificação de sintaxe.
+- O workflow `pull_request` [40426312732](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40426312732) passou no SHA `a7ef1634d836e75da808ebe7fefc8186421c2ab9`.
+- Resultado: sintaxe aprovada em 39 arquivos; 399 questões carregadas; auditoria heurística com zero itens sinalizados; smoke `file://` e regressões interativas passaram; `pageErrors: []`; axe-core com zero violações confirmadas.
+- Permanecem incompletas 89 avaliações de contraste dos textos SVG e 20 verificações de iframes externos. Não declarar conformidade WCAG completa.
