@@ -372,6 +372,28 @@
     if (isErro(c)) return c;
     return c ? args[1] : args[2];
   }
+  /* SES (IFS): pares (condição; valor) avaliados preguiçosamente na ordem
+   * dada; devolve o valor da primeira condição verdadeira. Se a quantidade
+   * de argumentos for ímpar, o último argumento é o valor padrão devolvido
+   * quando nenhuma condição for verdadeira. Se todas forem falsas e não
+   * houver padrão, devolve #N/A. */
+  function fnSES(args) {
+    if (!Array.isArray(args) || args.length < 2) {
+      return erro("#VAL!", "SES requer ao menos um par (condição; valor) — ex.: SES(cond1; val1; cond2; val2; [padrão])");
+    }
+    let i = 0;
+    while (i < args.length) {
+      if (i + 1 >= args.length) {
+        /* valor padrão (argumento final solto) */
+        return args[i];
+      }
+      const c = paraLogico(args[i], "SES");
+      if (isErro(c)) return c;
+      if (c) return args[i + 1];
+      i += 2;
+    }
+    return erro("#N/A", "nenhuma condição verdadeira em SES (e nenhum valor padrão fornecido)");
+  }
   function fnSeErro(args) {
     if (args.length < 2) return erro("#VAL!", "SEERRO requer (valor; valor_se_erro)");
     return isErro(args[0]) ? args[1] : args[0];
@@ -782,7 +804,7 @@
     MINIMO: fnMinimo,
     CONTVALORES: fnContValores,
     SE: fnSe,
-    SES: fnE,
+    SES: fnSES,
     E: fnE,
     OU: fnOu,
     NAO: fnNao,
@@ -1007,7 +1029,7 @@
   /* ------------------------------------------------------------------
    * 7. Analisador sintático (descida recursiva) e avaliador
    * ------------------------------------------------------------------ */
-  const LENTIOSAS = { SE: true, SEERRO: true };
+  const LENTIOSAS = { SE: true, SEERRO: true, SES: true };
 
   function analisar(tokens, textoOriginal) {
     let p = 0;
@@ -1187,6 +1209,21 @@
             const v = avaliar(no.args[0], ctx);
             if (isErro(v)) return avaliar(no.args[1], ctx);
             return v;
+          }
+          if (no.nome === "SES") {
+            if (no.args.length < 2) return erro("#VAL!", "SES requer ao menos um par (condição; valor)");
+            let i = 0;
+            while (i < no.args.length) {
+              if (i + 1 >= no.args.length) {
+                return avaliar(no.args[i], ctx);
+              }
+              const cond = avaliar(no.args[i], ctx);
+              const l = paraLogico(cond, "SES");
+              if (isErro(l)) return l;
+              if (l) return avaliar(no.args[i + 1], ctx);
+              i += 2;
+            }
+            return erro("#N/A", "nenhuma condição verdadeira em SES (e nenhum valor padrão fornecido)");
           }
         }
         const args = [];

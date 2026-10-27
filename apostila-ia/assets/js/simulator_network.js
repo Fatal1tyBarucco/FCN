@@ -103,7 +103,7 @@
     }
     if (prefixo < 0 || prefixo > 32) return 'ERRO: prefixo deve estar entre 0 e 32.';
     var ipOctetos = ip.split('.').map(Number);
-    if (ipOctetos.length !== 4 || ipOctetos.some(function (o) { return isNaN(o) || o < 0 || o > 255; })) return 'ERRO: IP inválido. Use formato x.x.x.x (0-255).';
+    if (ipOctetos.length !== 4 || ipOctetos.some(function (o) { return isNaN(o) || o < 0 || o > 255 || !Number.isInteger(o); })) return 'ERRO: IP inválido. Use formato x.x.x.x (0-255).';
     var ipBinario = ipOctetos.map(function (o) { return o.toString(2).padStart(8, '0'); }).join('');
     var redeBinario = ipBinario.substring(0, prefixo).padEnd(32, '0');
     var broadcastBinario = ipBinario.substring(0, prefixo).padEnd(32, '1');
@@ -111,12 +111,34 @@
     var rede = binParaIp(redeBinario);
     var broadcast = binParaIp(broadcastBinario);
     var totalHosts = Math.pow(2, 32 - prefixo);
+    var ipToInt = function (octs) { return (((octs[0] << 24) >>> 0) + (octs[1] << 16) + (octs[2] << 8) + octs[3]); };
+    var intToIp = function (n) { return [(n >>> 24) & 255, (n >>> 16) & 255, (n >>> 8) & 255, n & 255].join('.'); };
+    var redeInt = ipToInt(rede.split('.').map(Number));
+    var broadcastInt = ipToInt(broadcast.split('.').map(Number));
+    var primeiroHost, ultimoHost, hostsValidos;
+    if (prefixo === 32) {
+      primeiroHost = rede; ultimoHost = rede; hostsValidos = 1;
+    } else if (prefixo === 31) {
+      primeiroHost = rede; ultimoHost = broadcast; hostsValidos = 2;
+    } else {
+      primeiroHost = intToIp(redeInt + 1);
+      ultimoHost = intToIp(broadcastInt - 1);
+      hostsValidos = totalHosts - 2;
+    }
+    /* classe pelo primeiro octeto (classful) */
+    var primeiroOcteto = ipOctetos[0];
+    var classe;
+    if (primeiroOcteto <= 127) classe = 'A';
+    else if (primeiroOcteto <= 191) classe = 'B';
+    else if (primeiroOcteto <= 223) classe = 'C';
+    else if (primeiroOcteto <= 239) classe = 'D';
+    else classe = 'E';
     return {
       ip: ip, mascara_decimal: binParaIp('1'.repeat(prefixo).padEnd(32, '0')), prefixo: prefixo,
       endereco_rede: rede, endereco_broadcast: broadcast,
-      primeiro_host: binParaIp(redeBinario.slice(0, 31) + '1'), ultimo_host: binParaIp(broadcastBinario.slice(0, 31) + '0'),
-      total_enderecos: totalHosts, hosts_validos: totalHosts - 2,
-      classe: prefixo <= 8 ? 'A' : prefixo <= 16 ? 'B' : 'C',
+      primeiro_host: primeiroHost, ultimo_host: ultimoHost,
+      total_enderecos: totalHosts, hosts_validos: hostsValidos,
+      classe: classe,
       observacao: 'CÁLCULO REAL — baseado em operação binária IP AND máscara.'
     };
   }
