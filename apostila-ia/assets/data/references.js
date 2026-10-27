@@ -1485,7 +1485,7 @@ const references = [
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
-  }
+  },
   {
     "id": "ref-word-pdf-export",
     "titulo": "Salvar ou converter em PDF ou XPS nos aplicativos da área de trabalho do Office",
