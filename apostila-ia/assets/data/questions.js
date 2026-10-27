@@ -296,7 +296,7 @@ id: "q-m1-09",
     },
     regra: "Escolha de formato por objetivo: edição colaborativa → .docx; distribuição leitura-only → .pdf; compatibilidade antiga → .doc; texto puro → .txt; interoperabilidade intermediária → .rtf.",
     pegadinha: "A pegadinha é a 'meia solução': .txt e .doc atendem um critério do enunciado, mas violam o outro — a FGV cobra interpretar todas as condições, não a primeira que se lê.",
-    fonte: "Microsoft Support — Convertendo documentos em um novo formato (Modo de Compatibilidade desabilita temporariamente recursos recentes e preserva o layout): https://support.microsoft.com/pt-br/word/converting-documents-to-a-newer-format",
+    fonte: "Microsoft Support — Salvar ou converter em PDF ou XPS nos aplicativos da área de trabalho do Office (PDF preserva a aparência na maioria dos computadores e é adequado para documentos destinados à leitura e impressão): https://support.microsoft.com/pt-br/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps",
   },
   {
     id: "q-m1-10",
