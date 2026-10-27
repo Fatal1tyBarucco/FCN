@@ -386,3 +386,10 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - Microsoft Support, *Sincronizar arquivos e pastas do computador com o OneDrive*: https://support.microsoft.com/pt-BR/onedrive/sync-your-computer-s-files-and-folders-with-onedrive. Explica que adições, alterações e exclusões são propagadas entre a pasta sincronizada e a nuvem. Aplicação: q-m1-28 e q-m1-29.
 - Microsoft Support, *Fazer backup de suas pastas com o OneDrive*: https://support.microsoft.com/pt-br/onedrive/back-up-your-folders-with-onedrive. Documenta a configuração de backup de pastas conhecidas, sem implicar que qualquer pasta sincronizada seja automaticamente uma cópia independente e imutável. Aplicação: q-m1-28.
 - Fontes consultadas em 2026-10-26. A distinção entre sincronização e backup deve ser ensinada com precisão: sincronização propaga alterações; o OneDrive oferece recursos de backup de pastas, mas isso não equivale a uma garantia universal de backup imutável/independente para toda organização.
+
+
+## Auditoria focal M1 — licenciamento organizacional (2026-10-26)
+
+- Microsoft Learn, *Learn about eDiscovery features and components*: https://learn.microsoft.com/en-us/purview/edisc-features-components. Especifica os requisitos de licenciamento Enterprise E3/E5 para os usuários e administradores que trabalham com eDiscovery, além de permissões e limitações. Aplicação: q-m1-07.
+- Microsoft Learn, *Planos e opções de licenciamento do Microsoft Intune*: https://learn.microsoft.com/pt-br/intune/fundamentals/licensing/. Descreve os planos de Intune, requisitos de licença e inclusão em pacotes Microsoft 365 elegíveis. Aplicação: q-m1-07.
+- O catálogo foi reconciliado para 135 entradas únicas (20 vídeos + 115 referências técnicas), todas com status `verificado` e URL preenchida. A revisão semântica independente e a verificação HTTP automatizada individual de todas as URLs continuam pendentes.

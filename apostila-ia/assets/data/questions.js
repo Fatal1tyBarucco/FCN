@@ -244,7 +244,7 @@ var questoesBanco = [
     },
     regra: "Classificação de identidades no M365: conta pessoal/familiar (consumo) × conta organizacional (diretório e administração central); recursos avançados como eDiscovery e gestão de dispositivos dependem do plano/licenças.",
     pegadinha: "A alternativa C é a pegadinha contemporânea: MFA resolve autenticação, não governança — em provas de precisão conceitual (FCC) separar 'quem entra' de 'como a organização gerencia' é o ponto cobrado.",
-    fonte: "Microsoft 365 — Comparação de planos e licenciamento: https://www.microsoft.com/pt-BR/microsoft-365/business/microsoft-365-plans-and-pricing",
+    fonte: "Microsoft 365 — Comparação de planos e licenciamento: https://www.microsoft.com/pt-BR/microsoft-365/business/microsoft-365-plans-and-pricing; Microsoft Purview eDiscovery — recursos, permissões e licenciamento E3/E5: https://learn.microsoft.com/en-us/purview/edisc-features-components; Microsoft Intune — planos, requisitos e licenciamento: https://learn.microsoft.com/pt-br/intune/fundamentals/licensing/",
   },
   {
     id: "q-m1-08",

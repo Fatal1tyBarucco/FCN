@@ -1407,7 +1407,7 @@ const references = [
     "dispositivos": null
   }  ,
   {
-    "id": "ref-powerpoint-slide-master",
+    "id": "ref-powerpoint-slide-master-overview",
     "titulo": "O que é um slide mestre no PowerPoint?",
     "organizacao": "Microsoft Support",
     "url": "https://support.microsoft.com/pt-br/powerpoint/training/what-is-a-slide-master-in-powerpoint",
@@ -1442,6 +1442,26 @@ const references = [
     "organizacao": "Microsoft Support",
     "url": "https://support.microsoft.com/pt-br/onedrive/back-up-your-folders-with-onedrive",
     "topico": "M1 — Microsoft 365 (backup de pastas conhecidas e configuração)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-purview-ediscovery-features",
+    "titulo": "Learn about eDiscovery features and components",
+    "organizacao": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/purview/edisc-features-components",
+    "topico": "M1 — Microsoft 365 (eDiscovery e licenciamento Enterprise)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-intune-licensing",
+    "titulo": "Planos e opções de licenciamento do Microsoft Intune",
+    "organizacao": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/pt-br/intune/fundamentals/licensing/",
+    "topico": "M1 — Microsoft 365 (gerenciamento de dispositivos e licenciamento)",
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
