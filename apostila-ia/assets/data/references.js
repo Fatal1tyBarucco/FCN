@@ -1405,6 +1405,46 @@ const references = [
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
+  }  ,
+  {
+    "id": "ref-powerpoint-slide-master",
+    "titulo": "O que é um slide mestre no PowerPoint?",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/what-is-a-slide-master-in-powerpoint",
+    "topico": "M1 — Microsoft 365 (Slide Mestre, identidade visual global)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-animate-text-objects",
+    "titulo": "Animar texto ou objetos",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/animate-text-or-objects",
+    "topico": "M1 — Microsoft 365 (animação de objetos no PowerPoint)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-sync-files-folders",
+    "titulo": "Sincronizar arquivos e pastas do computador com o OneDrive",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-BR/onedrive/sync-your-computer-s-files-and-folders-with-onedrive",
+    "topico": "M1 — Microsoft 365 (sincronização bidirecional)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-backup-folders",
+    "titulo": "Fazer backup de suas pastas com o OneDrive",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/onedrive/back-up-your-folders-with-onedrive",
+    "topico": "M1 — Microsoft 365 (backup de pastas conhecidas e configuração)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
   }
 ];
 if (typeof window !== 'undefined') window.references = references;

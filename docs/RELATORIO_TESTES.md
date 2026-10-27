@@ -569,3 +569,10 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Sintaxe JavaScript passou em 39 arquivos; 399 questões, auditorias estruturais e heurísticas, smoke test `file://`, regressões interativas e `pageErrors: []` passaram. axe-core: 0 violações confirmadas; continuam 2 verificações incompletas — 89 nós SVG em `color-contrast` e 20 iframes em `frame-tested`.
 - O catálogo de referências contém 83 entradas no total (20 vídeos + 63 referências técnicas); todas estão marcadas `verificado` e têm URL preenchida. Essa contagem descreve o catálogo, não comprova a validação HTTP individual de todas as URLs.
 - Revisão focal M1: fontes mais específicas para `q-m1-05`, `q-m1-06`, `q-m1-08`, `q-m1-21` e `q-m1-24`; justificativa sobre tabulação decimal corrigida em `q-m1-14`. Revisão semântica integral e acessibilidade manual continuam pendentes.
+
+
+## Auditoria focal M1 — PowerPoint e OneDrive (2026-10-26)
+
+- `q-m1-26`: fontes agora correspondem especificamente ao Slide Mestre e a animações aplicadas a objetos, em vez de uma página genérica de design.
+- `q-m1-28` e `q-m1-29`: fontes agora documentam a propagação bidirecional de alterações pela sincronização, o backup configurável de pastas e a recuperação de arquivos após ransomware. A distinção entre sincronização e cópia de backup independente continua explicitada na justificativa.
+- O HEAD parent `5418baf7085938a3c34632036978e152748ed191` passou nos workflows [40423520875](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423520875) e [40423527406](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423527406). A validação do lote novo está pendente de CI.

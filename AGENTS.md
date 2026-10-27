@@ -1365,3 +1365,10 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - Sintaxe JavaScript passou em 39 arquivos; 399 questões, auditorias estruturais e heurísticas, smoke test `file://`, regressões interativas e `pageErrors: []` passaram. axe-core: 0 violações confirmadas; continuam 2 verificações incompletas — 89 nós SVG em `color-contrast` e 20 iframes em `frame-tested`.
 - O catálogo de referências contém 83 entradas no total (20 vídeos + 63 referências técnicas); todas estão marcadas `verificado` e têm URL preenchida. Essa contagem descreve o catálogo, não comprova a validação HTTP individual de todas as URLs.
 - Revisão focal M1: fontes mais específicas para `q-m1-05`, `q-m1-06`, `q-m1-08`, `q-m1-21` e `q-m1-24`; justificativa sobre tabulação decimal corrigida em `q-m1-14`. Revisão semântica integral e acessibilidade manual continuam pendentes.
+
+
+## Auditoria focal M1 — PowerPoint e OneDrive (2026-10-26)
+
+- Corrigidas as fontes de `q-m1-26` para documentar diretamente o Slide Mestre e animações de objetos.
+- Corrigidas as fontes de `q-m1-28` e `q-m1-29` para documentar sincronização bidirecional, backup configurável de pastas e recuperação de ransomware. A revisão preserva a distinção entre sincronização e backup independente/imutável.
+- Parent `5418baf7085938a3c34632036978e152748ed191` passou nos workflows de push e pull_request. O lote novo está aguardando os próprios checks.

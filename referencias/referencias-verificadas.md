@@ -377,3 +377,12 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - Microsoft Support, *Criar PDFs acessíveis*: https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs. Orienta usar o verificador de acessibilidade e marcas de estrutura do documento para leitores de tela na geração do PDF. Aplicação: q-m1-24.
 - Corrigida a justificativa de q-m1-14: o tabulador à direita pode coincidir visualmente com o alinhamento decimal quando os valores têm a mesma precisão; no cenário apresentado, com uma, duas e três casas decimais, o tabulador decimal é o que garante o alinhamento pela vírgula.
 - As fontes foram consultadas em 2026-10-26. Revisão focal não equivale à auditoria semântica integral nem à validação HTTP automática de todas as URLs.
+
+
+## Auditoria focal M1 — PowerPoint e OneDrive (2026-10-26)
+
+- Microsoft Support, *O que é um slide mestre no PowerPoint?*: https://support.microsoft.com/pt-br/powerpoint/training/what-is-a-slide-master-in-powerpoint. Confirma que fontes e imagens/logotipos podem ser alterados no Slide Mestre para slides baseados nele. Aplicação: q-m1-26.
+- Microsoft Support, *Animar texto ou objetos*: https://support.microsoft.com/pt-br/powerpoint/training/animate-text-or-objects. Define animações como efeitos aplicados a texto/objetos dentro do slide. Aplicação: q-m1-26.
+- Microsoft Support, *Sincronizar arquivos e pastas do computador com o OneDrive*: https://support.microsoft.com/pt-BR/onedrive/sync-your-computer-s-files-and-folders-with-onedrive. Explica que adições, alterações e exclusões são propagadas entre a pasta sincronizada e a nuvem. Aplicação: q-m1-28 e q-m1-29.
+- Microsoft Support, *Fazer backup de suas pastas com o OneDrive*: https://support.microsoft.com/pt-br/onedrive/back-up-your-folders-with-onedrive. Documenta a configuração de backup de pastas conhecidas, sem implicar que qualquer pasta sincronizada seja automaticamente uma cópia independente e imutável. Aplicação: q-m1-28.
+- Fontes consultadas em 2026-10-26. A distinção entre sincronização e backup deve ser ensinada com precisão: sincronização propaga alterações; o OneDrive oferece recursos de backup de pastas, mas isso não equivale a uma garantia universal de backup imutável/independente para toda organização.
