@@ -14,7 +14,7 @@ O código (`assets/data/*.js`, `assets/js/*.js`, `apostila-ia/index.html`) é a 
 | m1-u4 | PowerPoint | MIGRADOS e renderizam (1 subtópico cada, 3 exemplos + 2 exercícios); consts antigas comentadas como migradas | 3 exemplos + 2 exercícios | 0 | 0 | Nenhum | Microsoft Learn (verificada 2026-10-24) | Parcial |
 | m1-u5 | OneDrive | MIGRADOS e renderizam (1 subtópico cada, 3 exemplos + 2 exercícios); consts antigas comentadas como migradas | 3 exemplos + 2 exercícios | 0 | 0 | Nenhum | LGPD art.46 | Parcial |
 
-Flashcards M1: **50/50**. Questões M1: **40/40** (autorais, cespe/fgv/fcc/vunesp).
+Flashcards M1: **66**. Questões M1: **44** (autorais, cespe/fgv/fcc/vunesp).
 
 ## MÓDULO 2 — REDES (parcial)
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
@@ -22,7 +22,7 @@ Flashcards M1: **50/50**. Questões M1: **40/40** (autorais, cespe/fgv/fcc/vunes
 | m2-u1-t1..t4 | 2.1 Fundamentos de Redes | IMPLEMENTADO, renderiza | 4 conjuntos + exercícios | 10 | 26 | `simulator_network.js`: ping/traceroute simulados, CIDR com cálculo real; UI montada (`#redes-app`, P1-D) | RFCs/IETF (verificadas 2026-10-24) | Parcial |
 | m2-u2..u5 | Modelos OSI/TCP-IP; protocolos; endereçamento e sub-redes; diagnóstico | IMPLEMENTADOS e renderizam (5 unidades, 19 tópicos, 52 subtópicos) | — | 18 (restante do piso 40) | 0 | Mesmo simulador de redes | - | currículo completo |
 
-Flashcards M2: 50/50. Questões M2: **40/40** (M1-M3 = 40 cada, cespe/fgv/fcc/vunesp).
+Flashcards M2: **56**. Questões M2: **54** (cespe/fgv/fcc/vunesp).
 
 ## MÓDULO 3 — COMUNICAÇÃO E COLABORAÇÃO
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
@@ -30,7 +30,7 @@ Flashcards M2: 50/50. Questões M2: **40/40** (M1-M3 = 40 cada, cespe/fgv/fcc/vu
 | m3-u1-t1..t2 | 3.1 Correio Eletrônico | IMPLEMENTADO, renderiza | 4 subtópicos × exemplos + exercícios | 25 | 17 | Nenhum | RFCs/IETF (verificadas 2026-10-24) e LGPD (verificada) | Parcial |
 | m3-u2-t1..t3 | 3.2 Calendários e Reuniões | IMPLEMENTADO, renderiza | 4 subtópicos × exemplos + exercícios | 25 | 7 | Nenhum | LGPD (verificada) | Parcial |
 
-Flashcards M3: 50/50. Questões M3: **40/40**.
+Flashcards M3: **68**. Questões M3: **47**.
 
 ## MÓDULO 4 — SEGURANÇA
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
@@ -40,40 +40,40 @@ Flashcards M3: 50/50. Questões M3: **40/40**.
 | m4-u3 | Ameaças e ataques | IMPLEMENTADO, renderiza | presentes | idem | idem | Simulador defensivo de phishing: UI montada (`#seguranca-app`, P1-D; triagem didática, sem ataques reais) | — | Parcial |
 | m4-u4 | Legislação e conformidade | IMPLEMENTADO, renderiza | presentes | idem | idem | — | LGPD verificada; Marco Civil verificada (2026-10-23) | Parcial |
 
-Flashcards M4: 54/54 conectados. Questões M4: **85/40** (piso atingido; cespe/fgv/fcc/vunesp).
+Flashcards M4: **54**. Questões M4: **85** (cespe/fgv/fcc/vunesp).
 
 ## MÓDULO 5 — INTELIGÊNCIA ARTIFICIAL
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
 | m5-u1..u4 (4 unidades, 13 tópicos, 35 subtópicos) | 5.1–5.4 | IMPLEMENTADO, carregado e renderizado; 5.3–5.4 entrou em P1-C | 105 exemplos + 70 exercícios | 50 conectados | 40/40 | Laboratório interativo de prompts: UI montada (`#prompts-app`, P1-D; Seção 7.4; simulação local, sem IA real) | Gerais | Parcial |
 
-Flashcards M5: 50/50. Questões M5: 40/40. 5.4 (engenharia de prompts) segue didático no currículo; o laboratório interativo de prompts existe com UI no P1-D (`#prompts-app`, Seção 7.4, simulação local sem IA real).
+Flashcards M5: **66**. Questões M5: **42**. 5.4 (engenharia de prompts) segue didático no currículo; o laboratório interativo de prompts existe com UI no P1-D (`#prompts-app`, Seção 7.4, simulação local sem IA real).
 
 ## MÓDULO 6 — ÉTICA NO SERVIÇO PÚBLICO
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
 | m6-u1..u6 (6 unidades, 18 tópicos, 46 subtópicos) | 6.1–6.6 | IMPLEMENTADO, carregado e renderizado | 138 exemplos + 92 exercícios | 50 conectados | 40/40 | Simulador próprio: inexistente | CF art.37; LAI 12.527/2011; Lei 14.129/2021 | Parcial |
 
-Flashcards M6: 50/50. Questões M6: 40/40.
+Flashcards M6: **50**. Questões M6: **47**.
 
 ## MÓDULO 7 — FUNDAMENTOS E ENGENHARIA DE DADOS
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
 | m7-u1..u3 (3 unidades, 9 tópicos, 23 subtópicos) | 7.1–7.3 | IMPLEMENTADO, carregado e renderizado | presentes | 50 conectados | 40/40 | Simulador de dados: núcleo carregado (`simulator_data.js`); UI montada (`#dados-app`, P1-D; Seção 7.5) | Governo com dados | Parcial |
 
-Flashcards M7: 50/50. Questões M7: 40/40.
+Flashcards M7: **50**. Questões M7: **40**.
 
 ## MÓDULO 8 — VISUALIZAÇÃO E STORYTELLING
 | ID | Título | Conteúdo | Exemplos | Flashcards | Questões | Visual/Sim | Referência | Estado |
 |---|---|---|---|---|---|---|---|---|
 | m8-u1..u5 (5 unidades, 23 tópicos, 28 subtópicos) | 8.1–8.5 | IMPLEMENTADO, carregado e renderizado | presentes | 50 conectados | 40/40 | Gráficos 5/5 carregados (SVG próprio, sem biblioteca externa) | Documentação oficial das ferramentas | Parcial |
 
-Flashcards M8: 50/50. Questões M8: 40/40.
+Flashcards M8: **50**. Questões M8: **40**.
 
 ## TOTAL GLOBAIS (P1-D, código em execução)
 - Currículo: **132 tópicos / 295 subtópicos = 427 nós**, carregado e renderizado (8 módulos).
-- Flashcards: **404/404** conectados (piso 400 atingido em quantidade).
-- Questões: **365/320** (piso 320 atingido), ≥40 em cada módulo — M1=40, M2=40, M3=40, M4=85, M5=40, M6=40, M7=40, M8=40. Distribuição REAL medida em Node/vm (2026-10-22, deduplicada por `id`): níveis — 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos — 290 múltipla escolha + 75 Certo/Errado; estilos de cobrança — CESPE 216 / FGV 58 / FCC 52 / VUNESP 39 (formato de cobrança, não banca real; todas autorais). **Decisão documentada**: a proporção real difere da sugerida 30/45/25 (Seção 10) — desvio intencional e justificado (a Seção 10 admite ajuste de distribuição quando justificado).
+- Flashcards: **460/460** conectados (piso 400 atingido em quantidade).
+- Questões: **399/320** (piso 320 atingido), ≥40 em cada módulo — M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40. Distribuição REAL medida em Node/vm (2026-10-22, deduplicada por `id`): níveis — 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos — 290 múltipla escolha + 75 Certo/Errado; estilos de cobrança — CESPE 216 / FGV 58 / FCC 52 / VUNESP 39 (formato de cobrança, não banca real; todas autorais). **Decisão documentada**: a proporção real difere da sugerida 30/45/25 (Seção 10) — desvio intencional e justificado (a Seção 10 admite ajuste de distribuição quando justificado).
 - Gráficos: 5/5 implementados e carregados.
 - Busca (`SearchApp`) e áudio (`AudioApp`) implementados e conectados.
 - Manifest + service-worker existentes.

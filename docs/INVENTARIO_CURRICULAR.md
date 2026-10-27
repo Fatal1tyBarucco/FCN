@@ -71,7 +71,7 @@ Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplic
 - **M3 — Comunicação e Colaboração (completo)**: 3.1–3.5 (5 unidades, 14 tópicos, 35 subtópicos). Flashcards 68. Questões 47.
 - **M4 — Segurança (completo)**: 4.1 Fundamentos, 4.2 Malwares/ferramentas defensivas, 4.3 Ameaças/ataques, 4.4 Legislação/conformidade (4 unidades, 13 tópicos, 39 subtópicos). Simulador defensivo de phishing (triagem didática local). Flashcards 54. Questões 85.
 - **M5 — IA (completo)**: 5.1 Fundamentos, 5.2 ML, 5.3 IA generativa/LLMs, 5.4 Engenharia de prompts (4 unidades, 13 tópicos, 35 subtópicos). Laboratório de prompts (simulação local, sem IA real). Flashcards 66. Questões 42.
-- **M6 — Ética (completo, integrado no P1-C)**: 6.1–6.6 (6 unidades, 18 tópicos, 46 subtópicos). Flashcards 50. Questões 44 (conectadas no P1-D).
+- **M6 — Ética (completo, integrado no P1-C)**: 6.1–6.6 (6 unidades, 18 tópicos, 46 subtópicos). Flashcards 50. Questões 47 (conectadas no P1-D).
 - **M7 — Dados (completo)**: 7.1–7.3 (3 unidades, 9 tópicos, 23 subtópicos). Flashcards 50. Questões 40. (Simulador de dados compartilhado do P1-D.)
 - **M8 — Visualização (completo)**: 8.1 Fundamentos visuais, 8.2 Gráficos estatísticos, 8.3 Estatística aplicada, 8.4 Ferramentas, 8.5 Storytelling (5 unidades, 23 tópicos, 28 subtópicos). 5 gráficos SVG. Flashcards 50. Questões 40.
 
@@ -116,7 +116,7 @@ A matriz em `docs/MATRIZ_COBERTURA.csv` contém somente agregados por módulo; a
 
 ## Revalidação estrutural remota — 2026-10-25 (execução atual)
 
-A matriz docs/MATRIZ_COBERTURA.csv foi expandida para uma linha por subtópico detectado nos oito arquivos curriculares. O processamento remoto identificou 295 IDs de subtópicos, distribuídos em M1=37, M2=52, M3=35, M4=39, M5=35, M6=46, M7=23 e M8=28. A contagem textual detectou 888 exemplos e 592 exercícios. A inspeção dos arquivos de flashcards encontrou 460 IDs, todos únicos dentro do conjunto; a inspeção dos arquivos de questões encontrou 365 IDs, todos únicos dentro do conjunto.
+A matriz docs/MATRIZ_COBERTURA.csv foi expandida para uma linha por subtópico detectado nos oito arquivos curriculares. O processamento remoto identificou 295 IDs de subtópicos, distribuídos em M1=37, M2=52, M3=35, M4=39, M5=35, M6=46, M7=23 e M8=28. A contagem textual detectou 888 exemplos e 592 exercícios. A inspeção dos arquivos de flashcards encontrou 460 IDs, todos únicos dentro do conjunto; a inspeção dos arquivos de questões encontrou 399 IDs, todos únicos dentro do conjunto.
 
 Esses números descrevem uma auditoria estrutural dos arquivos remotos. Não comprovam originalidade, correção técnica, qualidade didática, análise completa dos distratores, validade atual de fontes nem funcionamento de interface. O script reprodutível scripts/audit_curriculum_matrix.mjs foi adicionado ao repositório, mas **ainda não foi executado localmente nesta execução**; sua execução e comparação do resultado permanecem pendentes.
 
