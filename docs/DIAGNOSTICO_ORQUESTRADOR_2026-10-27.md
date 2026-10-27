@@ -40,7 +40,7 @@
   - M3: 6 (q-m3-41,43,44,45,46,47) — `questions.js:3792`
   - M5: 2 (q-m5-41,42) — `questions_m5.js:999`
   - M1: 0
-- **20 questões** com citação bibliográfica sem URL/DOI: M5=15 (livros: Russell&Norvig, Murphy, Hastie, Provost&Fawcett), M6=4 (dispositivos legais remetendo a referencias-verificadas.md), M1=1 (q-m1-32, fonte interna simulators.js).
+- **0 questões** com citação bibliográfica sem URL/DOI (CORRIGIDO em 2026-10-27: 15 M5 + 4 M6 + 1 M1 = 20 fontes normalizadas com URLs).
 
 Nota: o número 112 citado em PENDENCIAS.md ("36 M1, 40 M2, 36 M3") é histórico obsoleto (critério antigo = ausência do campo `fonte`).
 
