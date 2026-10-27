@@ -851,7 +851,7 @@ id: "q-m1-09",
     },
     regra: "Média aritmética simples = soma dos valores ÷ quantidade de valores. No simulador: MÉDIA aceita vírgula ou ponto e ignora valores não numéricos.",
     pegadinha: "As alternativas B, C e D são resultados reais de OUTRAS funções do mesmo escopo (início da lista, MÁXIMO, SOMA) — a pegadinha é identificar a função pedida antes de calcular.",
-    fonte: "Microsoft Support — Função MÉDIA no Excel: https://support.microsoft.com/pt-PT/Excel/average-function",
+    fonte: "Microsoft Support — Função MÉDIA no Excel (documentação em português do Brasil): https://support.microsoft.com/pt-br/excel/functions/average-function",
   },
   {
     id: "q-m1-31",
