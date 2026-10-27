@@ -311,8 +311,8 @@ const scriptSrcs = [];
 const reSrc = /<script[^>]*\ssrc\s*=\s*["']([^"']+)["'][^>]*>/gi;
 let mm;
 while ((mm = reSrc.exec(idxHtml)) !== null) scriptSrcs.push(mm[1]);
-check('tags <script src> do index.html === 39', scriptSrcs.length === 39,
-  'real=' + scriptSrcs.length + ', esperado=39');
+check('tags <script src> do index.html === 40', scriptSrcs.length === 40,
+  'real=' + scriptSrcs.length + ', esperado=40');
 let externas = 0, locais = 0, ausentes = [];
 for (const src of scriptSrcs) {
   if (/^(https?:)?\/\//i.test(src) || /^(data|blob):/i.test(src)) { externas++; continue; }
