@@ -609,3 +609,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - `q-m1-41` a `q-m1-44` receberam fontes Microsoft específicas para os conceitos cobrados.
 - `apostila-ia/assets/data/references.js` foi conferido por contagem estrutural: 149 entradas, 149 IDs únicos, 149 URLs e 149 status `verificado`; 20 IDs são de vídeos e 129 de referências técnicas.
 - Esta conferência não constitui teste HTTP automatizado nem validação factual independente de todas as questões. O CI das alterações mais recentes precisa ser confirmado no SHA final após os commits documentais.
+
+## CI confirmado após correção do catálogo — 2026-10-26
+
+- O catálogo apresentou uma falha de sintaxe por vírgula ausente antes da primeira entrada adicionada. Corrigido no commit `a7ef1634d836e75da808ebe7fefc8186421c2ab9`.
+- Workflow `pull_request` [40426312732](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40426312732): **success**, SHA `a7ef1634d836e75da808ebe7fefc8186421c2ab9`.
+- Sintaxe JavaScript: 39 arquivos aprovados. Auditorias estruturais e heurísticas: 399 questões, zero sinalizações heurísticas. Smoke test `file://` e regressões interativas passaram; `pageErrors: []`.
+- axe-core: 0 violações confirmadas; 2 verificações incompletas — `color-contrast` em 89 nós SVG e `frame-tested` em 20 iframes externos.
+- Catálogo: 149 IDs únicos (20 vídeos + 129 referências técnicas), todos com URL e status `verificado` presentes. A revisão manual dos contrastes/iframes, a revisão semântica integral e o teste HTTP individual de URLs continuam pendentes.
