@@ -601,3 +601,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - [x] Contagem atual do catálogo: 137 IDs únicos (20 vídeos + 117 referências técnicas), todos verificados estruturalmente e com URL preenchida.
 - O parent 370ba6e24f9095599d3e810b9e99ac4171794623 passou no workflow pull_request 40424415199. O workflow de push 40424410451 ainda estava em execução no momento desta atualização; este lote novo aguarda seus próprios checks.
 - A revisão semântica independente das 399 questões permanece pendente.
+
+## Auditoria focal M1 — fontes e semântica de PDF (2026-10-26)
+
+- Corrigida a fonte de `q-m1-09` para a página Microsoft Support sobre salvar/converter PDF/XPS. O enunciado e a justificativa foram ajustados para distinguir distribuição com layout preservado de bloqueio de edição: a documentação Microsoft afirma que PDFs podem ser abertos e editados em ferramentas compatíveis.
+- `q-m1-30` passou a apontar para a documentação da função MÉDIA em pt-BR.
+- `q-m1-41` a `q-m1-44` receberam fontes Microsoft específicas para os conceitos cobrados.
+- `apostila-ia/assets/data/references.js` foi conferido por contagem estrutural: 149 entradas, 149 IDs únicos, 149 URLs e 149 status `verificado`; 20 IDs são de vídeos e 129 de referências técnicas.
+- Esta conferência não constitui teste HTTP automatizado nem validação factual independente de todas as questões. O CI das alterações mais recentes precisa ser confirmado no SHA final após os commits documentais.
