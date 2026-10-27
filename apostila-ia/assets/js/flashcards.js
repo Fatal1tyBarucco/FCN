@@ -309,6 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
     return cartoes.filter((c) => {
       if (filtros.modulo && String(c.modulo) !== String(filtros.modulo)) return false;
       if (filtros.nivel && c.nivel !== filtros.nivel) return false;
+      if (filtros.topico && c.topico !== filtros.topico) return false;
+      if (filtros.assunto && String(c.assunto || '').indexOf(filtros.assunto) === -1) return false;
       return true;
     });
   }
