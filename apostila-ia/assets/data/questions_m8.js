@@ -37,7 +37,7 @@ const moduleQuestions8 = [
     },
     regra: "Método de escolha de gráfico: (1) a pergunta embasa a tarefa analítica; (2) a tarefa define a forma; (3) a ferramenta é meio. Limite do gráfico: quando se precisa de precisão exata de todos os valores, a tabela supera o gráfico.",
     pegadinha: "Pegadinha de ferramenta: 'a ferramenta tem rosca' é um erro de critério. O exame cobra a ordem de decisão: pergunta → tarefa → gráfico, nunca gráfico → pergunta.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   { id: "q-m8-02",
     modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
@@ -62,7 +62,7 @@ const moduleQuestions8 = [
     },
     regra: "Em gráficos de barras, use linha de base zero para preservar a proporcionalidade do comprimento com o valor.",
     pegadinha: "O truncamento altera a percepção visual, não a razão numérica entre os valores.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26)."
   },
 
   { id: "q-m8-03",
@@ -88,7 +88,7 @@ const moduleQuestions8 = [
     },
     regra: "Escolha o gráfico pela pergunta: barras para comparar magnitudes entre categorias; linhas para evolução ordenada; histograma para distribuição quantitativa.",
     pegadinha: "Não use linhas apenas porque há vários valores: a conexão visual pode sugerir continuidade inexistente.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26)."
   },
 
   { id: "q-m8-04",
@@ -140,7 +140,7 @@ const moduleQuestions8 = [
     },
     regra: "Diferencie valor dos dados e medida visual: o eixo truncado não muda os dados, mas pode exagerar a razão percebida.",
     pegadinha: "Não confunda a altura aparente da barra com o valor original nem com a razão numérica.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26)."
   },
 
   { id: "q-m8-06", modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
@@ -340,7 +340,7 @@ const moduleQuestions8 = [
     },
     regra: "Categorias nominais → paleta categórica (poucas cores); magnitudes ordenadas → paleta sequencial (luminosidade); valores acima e abaixo de uma referência → paleta divergente (neutro na referência).",
     pegadinha: "A pegadinha é 'paleta arco-íris é mais atrativa' — no currículo, a atratividade decorativa é ruído quando a tarefa é ler magnitude.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-14",
@@ -369,7 +369,7 @@ const moduleQuestions8 = [
     },
     regra: "Acessibilidade: redundância (cor + rótulo/forma/padrão), testes em escala de cinza, texto alternativo, dados subjacentes e fonte legível.",
     pegadinha: "A pegadinha é concluir 'cor bem contrastada' de cara; acessibilidade não se reduz ao contraste: combine cor com rótulos, formas ou padrões.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-15",
@@ -398,7 +398,7 @@ const moduleQuestions8 = [
     },
     regra: "Escala linear: passo = diferença absoluta. Escala logarítmica: passo = razão (multiplicação). Em log, subida visual igual = mesmo fator, não mesmo acréscimo.",
     pegadinha: "A pegadinha é aceitar 'passo igual = valor novo' — na escala logarítmica, distâncias visuais iguais correspondem ao mesmo fator multiplicativo.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-16",
@@ -427,7 +427,7 @@ const moduleQuestions8 = [
     },
     regra: "Matriz de decisão: comparar categorias → barras; evoluir no tempo → linhas; distribuir → histograma/box plot; relacionar duas variáveis → dispersão; comparar um todo → barras empilhadas/tabela.",
     pegadinha: "A pegadinha é 'linha para (a) porque é série' — o (a) é nominal, e linhas impõem continuidade e tendência que só existem em (b).",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-17",
@@ -485,7 +485,7 @@ const moduleQuestions8 = [
     },
     regra: "Variação percentual = (valor atual − anterior) ÷ anterior × 100; sempre com denominador do valor anterior, não o atual.",
     pegadinha: "A pegadinha é usar o valor atual como denominador ou inverter o sinal: a variação percentual divide sempre (atual − anterior) pelo anterior.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-19",
@@ -688,7 +688,7 @@ const moduleQuestions8 = [
     },
     regra: "Comunicar incerteza: faixa, rótulo de estimativa, cenários e premissas; omitir a incerteza rompe a confiança e a legitimidade do relato.",
     pegadinha: "A pegadinha é 'a frase mais cientifica é a que mostra um único número' — a integridade gráfica pede faixa, não o único valor.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-26",
@@ -717,7 +717,7 @@ const moduleQuestions8 = [
     },
     regra: "Painel de gestão: poucos indicadores, exceções em destaque, metas, tendência curta, atualização declarada; relatórios analíticos contêm o detalhe.",
     pegadinha: "A pegadinha é 'visão completa' — o currículo a desconsidera como causa de paralisia.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-27",
@@ -746,7 +746,7 @@ const moduleQuestions8 = [
     },
     regra: "Ordenação para ranquear: decrescente (ou crescente); a escala afeta a leitura percebida; a ordem alfabética só quando consulta alfabética é o uso.",
     pegadinha: "A pegadinha é 'os valores não mudaram, então a leitura não mudou' — o padrão visual muda, e isso muda a conclusão.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-28",
@@ -775,7 +775,7 @@ const moduleQuestions8 = [
     },
     regra: "Hierarquia visual: uma cor forte para a série de interesse, fundo neutro para o contexto, no máximo três cores fortes, redundância de rótulo.",
     pegadinha: "A pegadinha é 'muitas cores = mais vivo' — o currículo reforça que muitas cores fortes nivelam tudo.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-29",
@@ -862,7 +862,7 @@ const moduleQuestions8 = [
     },
     regra: "Referência central (meta, acima/abaixo) → paleta divergente com neutro na referência; categorias sem ordem → categóricas; magnitude → sequencial.",
     pegadinha: "A alternativa D espanta quem confunde 'intensidade' com a regra do neutro na referência.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-32",
@@ -920,7 +920,7 @@ const moduleQuestions8 = [
     },
     regra: "Série temporal com lacuna: quebrar a linha e sinalizar o período sem dados; conectar ou interpolar sem base explícita fabrica continuidade e valores inexistentes.",
     pegadinha: "A pegadinha é 'a linha pode ser interpolada' — a continuidade do gráfico exige dados contínuos.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-34",
@@ -1123,6 +1123,6 @@ const moduleQuestions8 = [
     },
     regra: "Recomendação fundamentada: investigar outliers antes de removê-los; declarar se os dados são fictícios; reportar medidas robustas (mediana, IIQ) e não apenas média.",
     pegadinha: "A alternativa A 'tirar o outlier' é a pegadinha — remover sem investigação é mascaramento, não limpeza.",
-    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
 ];

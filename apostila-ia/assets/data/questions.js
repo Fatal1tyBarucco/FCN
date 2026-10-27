@@ -3445,7 +3445,7 @@ id: "q-m1-09",
     },
     regra: "DNS resolve nomes; TCP estabelece transporte; TLS protege a sessão; HTTP define requisições e respostas.",
     pegadinha: "A sequência depende da versão: HTTP/3 usa QUIC, não TCP.",
-    fonte: "RFC 9110 — HTTP Semantics: https://www.rfc-editor.org/info/rfc9110/ (verificado em 2026-10-26)."
+    fonte: "RFC 1034/1035 (DNS) + RFC 793 (TCP) + RFC 8446 (TLS) + RFC 9110 (HTTP Semantics): https://www.rfc-editor.org/info/rfc1034/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-44",
@@ -3507,7 +3507,7 @@ id: "q-m1-09",
     },
     regra: "Obter IP por DHCP é diferente de resolver o nome do servidor por DNS.",
     pegadinha: "Não confundir configuração de rede com resolução de nomes.",
-    fonte: "RFC 9110 — HTTP Semantics: https://www.rfc-editor.org/info/rfc9110/ (verificado em 2026-10-26)."
+    fonte: "RFC 2131 (DHCP) + RFC 1034/1035 (DNS) + RFC 9110 (HTTP Semantics): https://www.rfc-editor.org/info/rfc2131/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-46",
@@ -3538,7 +3538,7 @@ id: "q-m1-09",
     },
     regra: "SFTP usa SSH; FTPS usa TLS para proteger FTP.",
     pegadinha: "SFTP não é apenas outro nome para FTPS.",
-    fonte: "RFC 959 — File Transfer Protocol (FTP): https://www.rfc-editor.org/info/rfc959/ (verificado em 2026-10-26)."
+    fonte: "RFC 4251/4253 (SSH) + RFC 959 (FTP): https://www.rfc-editor.org/info/rfc4251/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-47",
@@ -3569,7 +3569,7 @@ id: "q-m1-09",
     },
     regra: "NAT/PAT traduzem endereços/portas; proxy intermedeia solicitações; VPN cria conectividade lógica protegida.",
     pegadinha: "NAT não é sinônimo de firewall nem garante segurança por si só.",
-    fonte: "RFC 3022 — Traditional IP Network Address Translator (NAT): https://www.rfc-editor.org/info/rfc3022/ (verificado em 2026-10-26)."
+    fonte: "RFC 4301 (IPsec) + RFC 3022 (NAT): https://www.rfc-editor.org/info/rfc4301/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-48",
@@ -3724,7 +3724,7 @@ id: "q-m1-09",
     },
     regra: "Escolher a ferramenta conforme o sintoma: configuração, DNS, alcance ou rota.",
     pegadinha: "Não usar nslookup para verificar máscara ou gateway local.",
-    fonte: "RFC 1122 — Requirements for Internet Hosts — Communication Layers: https://www.rfc-editor.org/info/rfc1122/ (verificado em 2026-10-26)."
+    fonte: "Microsoft Learn — ipconfig command: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-53",
@@ -3786,7 +3786,7 @@ id: "q-m1-09",
     },
     regra: "Diagnosticar por camadas e comparar sintomas antes de concluir a causa.",
     pegadinha: "O primeiro sintoma orienta a hipótese, mas não é prova definitiva.",
-    fonte: "RFC 1122 — Requirements for Internet Hosts — Communication Layers: https://www.rfc-editor.org/info/rfc1122/ (verificado em 2026-10-26)."
+    fonte: "RFC 792 (ICMP) + RFC 1122 (Host Requirements): https://www.rfc-editor.org/info/rfc792/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m3-41",
@@ -3910,7 +3910,7 @@ id: "q-m1-09",
     },
     regra: "Compartilhamento seguro aplica minimização, revisão e controle de permissões.",
     pegadinha: "Notificações e janelas de fundo também podem revelar informações.",
-    fonte: "Microsoft Learn — Microsoft 365 documentation: https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide (verificado em 2026-10-26)."
+    fonte: "Microsoft Teams — Meeting policies: https://learn.microsoft.com/en-us/microsoftteams/meeting-policies-in-teams (verificado em 2026-10-26). Zoom — Sharing your screen: https://support.zoom.us/hc/en-us/articles/115005759423-Sharing-your-screen-or-content-during-a-Zoom-meeting (verificado em 2026-10-26)."
   },
   {
     id: "q-m3-45",
@@ -3972,7 +3972,7 @@ id: "q-m1-09",
     },
     regra: "Aplicar minimização e controle de acesso também a metadados de calendários.",
     pegadinha: "O título do evento pode expor informação pessoal mesmo que o corpo esteja restrito.",
-    fonte: "Microsoft Learn — Microsoft 365 documentation: https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide (verificado em 2026-10-26)."
+    fonte: "LGPD — Lei nº 13.709/2018 (Planalto): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm (verificado em 2026-10-26). Microsoft Teams — Meeting policies: https://learn.microsoft.com/en-us/microsoftteams/meeting-policies-in-teams (verificado em 2026-10-26)."
   },
   {
     id: "q-m3-47",
