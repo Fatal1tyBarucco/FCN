@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     arvoreHtml = '<p role="status">Nenhum conteúdo curricular carregado. Verifique os arquivos em assets/data/.</p>';
   } else {
     arvoreHtml = '<h3 id="arvore-titulo">Árvore de currículo (dados de assets/data/)</h3>';
-    arvoreHtml += '<ul class="curriculum-tree" role="tree" aria-label="Árvore curricular" aria-multiselectable="false" tabindex="0">';
+    arvoreHtml += '<ul class="curriculum-tree" role="tree" aria-label="Árvore curricular" aria-multiselectable="false" tabindex="-1">';
     chaves.forEach((chave, mi) => {
       arvoreHtml += renderModulo(chave, apostilaDados.curriculum[chave], mi, chaves.length);
     });
@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
           handled = false;
       }
       if (handled) e.preventDefault();
-    });
+    }, true);
   }
 
   /* API pública mínima para integração (ex.: busca global): exibe o conteúdo de um tópico/subtópico. */

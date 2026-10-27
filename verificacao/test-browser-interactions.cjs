@@ -97,6 +97,10 @@ const axeCore = require("axe-core");
     const firstTreeItem = page.locator("#curriculum .curriculum-tree .tree-node[role='treeitem']").first();
     await firstTreeItem.focus();
     assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "true", "first curriculum node should start expanded");
+    await page.waitForFunction(() => {
+      const item = document.querySelector("#curriculum .curriculum-tree .tree-node[role='treeitem']");
+      return Boolean(item) && document.activeElement === item;
+    }, null, { timeout: 5000 });
     await page.keyboard.press("ArrowLeft");
     assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "false", "ArrowLeft should collapse the focused curriculum node");
     await page.keyboard.press("ArrowRight");
