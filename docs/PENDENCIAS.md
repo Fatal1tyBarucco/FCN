@@ -554,3 +554,13 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] Contagem atual do catálogo: 137 IDs únicos (20 vídeos + 117 referências técnicas), todos verificados estruturalmente e com URL preenchida.
 - O parent 370ba6e24f9095599d3e810b9e99ac4171794623 passou no workflow pull_request 40424415199. O workflow de push 40424410451 ainda estava em execução no momento desta atualização; este lote novo aguarda seus próprios checks.
 - A revisão semântica independente das 399 questões permanece pendente.
+
+## Auditoria focal M1 — 2026-10-26
+
+- [x] `q-m1-09`: fonte substituída pela orientação oficial de PDF; questão ajustada para não afirmar que PDF bloqueia edição. Quando necessário impedir alterações, usar controles de acesso/proteção separados.
+- [x] `q-m1-30`: fonte da função MÉDIA alinhada à documentação Microsoft em pt-BR.
+- [x] `q-m1-41` a `q-m1-44`: substituídas referências exclusivamente curriculares por documentação Microsoft específica sobre cabeçalhos/numeração, tabelas, filtros/validação/formatação condicional, sumário, quebras de seção e PDFs acessíveis.
+- [x] Catálogo reconciliado diretamente em `references.js`: 149 IDs únicos (20 vídeos + 129 referências técnicas), todos com URL e status `verificado` presentes.
+- [ ] Confirmar CI dos commits de código e do catálogo mais recentes.
+- [ ] Continuar revisão semântica independente de todas as 399 questões; a revisão focal de M1 não equivale a uma auditoria integral.
+- [ ] Realizar teste HTTP individual de URLs, avaliação manual de acessibilidade, leitor de tela, navegação completa por teclado e testes em dispositivos/navegadores adicionais.
