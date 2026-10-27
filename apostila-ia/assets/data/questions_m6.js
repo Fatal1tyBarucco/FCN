@@ -41,7 +41,7 @@ const moduleQuestions6 = [
     },
     regra: "Legalidade administrativa: a Administração só faz o que a norma autoriza e como a norma autoriza — competência e procedimento incluídos.",
     pegadinha: "A alternativa A é a 'lógica do particular' transplantada para o Poder Público; é o distrator mais recorrente em prova de princípios.",
-    fonte: "CF/88, art. 37, caput (verificado em referencias/referencias-verificadas.md, 2026-10-21)."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm (verificado em 2026-10-27)."
   },
 
   { id: "q-m6-02", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -66,7 +66,7 @@ const moduleQuestions6 = [
     },
     regra: "Impessoalidade = mesmo critério para casos iguais, com critério escrito, comunicável e auditável; não é indiferença nem resultado uniforme.",
     pegadinha: "'Tratar todos exatamente igual' parece elogio e é erro: o que se exige é igualdade de critério, não de resultado.",
-    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, art. 3º, IV e VII (transparência na execução dos serviços e linguagem clara; verificado em 2026-10-21)."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 14.129/2021, art. 3º, IV e VII: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm (verificado em 2026-10-27)."
   },
 
   { id: "q-m6-03", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -116,7 +116,7 @@ const moduleQuestions6 = [
     },
     regra: "Publicidade = preceito geral; sigilo = exceção legal e formalizada (LAI, art. 3º, I, e arts. 23 e 28).",
     pegadinha: "'Tudo é público' e 'nada é público' são igualmente errados: a régua é a natureza da informação, não a vontade do gestor.",
-    fonte: "CF/88, art. 37, caput, e art. 5º, XXXIII; Lei nº 12.527/2011, art. 3º, I, e art. 8º, § 2º (verificados em 2026-10-21)."
+    fonte: "CF/88, art. 37, caput e art. 5º, XXXIII: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 12.527/2011, art. 3º, I e art. 8º, § 2º: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm (verificado em 2026-10-27)."
   },
 
   { id: "q-m6-05", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -141,7 +141,7 @@ const moduleQuestions6 = [
     },
     regra: "Eficiência = resultado com uso racional de recursos, com indicadores e sem renúncia a direitos; não é sinônimo de corte de custo nem de supressão de controle.",
     pegadinha: "Alternativas que opõem eficiência a controle ou a acessibilidade criam falsa incompatibilidade — os princípios convivem e se ponderam.",
-    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, arts. 3º, XI, XVI, 14 e 22 (verificado em 2026-10-21)."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 14.129/2021, arts. 3º, XI, XVI, 14 e 22: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm (verificado em 2026-10-27)."
   },
 
   { id: "q-m6-06", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
