@@ -146,6 +146,25 @@ Após fechamento de P0 (+ P1 recomendado): tirar de Draft, solicitar revisão fi
 
 ---
 
+## Atualização P2 — 2026-10-27 (orquestrador)
+
+### Ações executadas
+- HTTP URLs: script `scripts/verify_urls.mjs` criado; 183 URLs verificadas (149 OK, 6 redirect, 28 fail). Falhas reais: SECOM 404, W3C 403, PLOS 503, Microsoft Learn 403, etc. Relatório: `docs/VERIFICACAO_URLS_2026-10-27.md`.
+- Revisão semântica (91 questões: 80 de M7/M8 + 11 com números/prazos): 3 inconsistências textuais corrigidas (q-m8-13, q-m8-27, q-m8-33 — justificativa desalinhada com gabarito/análise). Commit `110f274`. Fórmulas e leis verificadas sem divergências.
+- Verificação estrutural: 0 falhas.
+
+### Status P2
+- P2-4 (HTTP URLs): PARCIALMENTE FECHADO (149/183 OK; 28 fail documentados como limitação real — URLs de fontes que retornam 403/404/503; não inventar substitutos).
+- P2-3 (WCAG manual/leitor de tela): NÃO VERIFICÁVEL neste ambiente (limitação honesta, documentada).
+- P2-1 (axe-core SVG contrast): cálculo manual indica conformidade; inspeção visual pendente.
+- P2-2 (iframes YouTube): conteúdo externo não auditado.
+- P2-5 (interação simuladores): smoke Excel (111 asserts) OK; interação real pendente.
+- P2-6 (persistência real): localStorage roundtrip OK em file:// (CDP); dispositivo físico pendente.
+- P2-7 (vídeos regionais): não testado.
+
+### Veredito
+APROVADO COM RESSALVAS. P0/P1 fechados. P2 parcialmente fechado (HTTP URLs verificadas; demais limitações de ferramenta/ambiente documentadas). CI verde no HEAD atual. PR #18 aberto.
+
 ## Atualização pós-fechamento P0/P1 — 2026-10-27 (orquestrador)
 
 ### Ações executadas
