@@ -47,18 +47,18 @@ const moduleQuestions8 = [
     alternativas: [
       { letra: "A", texto: "O eixo de valores iniciando em 60 é sempre aceitável, independentemente da forma do gráfico." },
       { letra: "B", texto: "A razão numérica entre 80 e 70 é exatamente 2, pois a base do eixo foi deslocada." },
-      { letra: "C", texto: "Eixos truncados tornam qualquer gráfico mais preciso quando o leitor é informado." },
+      { letra: "C", texto: "Em gráficos de barras, o comprimento visual deve ser proporcional ao valor e, em geral, a linha de base deve começar em zero." },
       { letra: "D", texto: "A distorção só acontece em gráficos 3D, não em barras bidimensionais." },
-      { letra: "E", texto: "Em gráficos de barras, o comprimento visual deve ser proporcional ao valor e, em geral, a linha de base deve começar em zero." }
+      { letra: "E", texto: "Eixos truncados tornam qualquer gráfico mais preciso quando o leitor é informado." }
     ],
-    gabarito: "E",
+    gabarito: "C",
     justificativa: "Com base 60, as alturas aparentes são 10 e 20, sugerindo uma razão visual de 2. Porém, os valores são 70 e 80, cuja razão é aproximadamente 1,14. Em gráficos de barras, a comparação é feita pelo comprimento; iniciar o eixo em zero preserva a proporcionalidade visual. Em outros tipos de gráfico, eixos truncados podem ser usados com cautela, mas não devem distorcer a magnitude das barras.",
     analise: {
       A: "INCORRETA. A aceitabilidade depende do tipo de visualização; em barras, a base truncada distorce a comparação de comprimento.",
       B: "INCORRETA. A razão numérica é 80/70 ≈ 1,14; o deslocamento altera a percepção, não os dados.",
-      C: "INCORRETA. Avisar o leitor não elimina a distorção visual criada pela escala.",
+      C: "CORRETA. A linha de base zero preserva a proporcionalidade entre valor e comprimento da barra.",
       D: "INCORRETA. Barras 2D também podem distorcer a magnitude quando o eixo é truncado.",
-      E: "CORRETA. A linha de base zero preserva a proporcionalidade entre valor e comprimento da barra."
+      E: "INCORRETA. Avisar o leitor não elimina a distorção visual criada pela escala."
     },
     regra: "Em gráficos de barras, use linha de base zero para preservar a proporcionalidade do comprimento com o valor.",
     pegadinha: "O truncamento altera a percepção visual, não a razão numérica entre os valores.",
@@ -148,20 +148,20 @@ const moduleQuestions8 = [
     contexto: "Conjunto 2, 4, 4, 4, 5, 5, 7, 9. A professora pede a média, a mediana e a moda para decidir qual descreve o caso típico.",
     enunciado: "Para o conjunto 2, 4, 4, 4, 5, 5, 7, 9, a média, a mediana e a moda são, respectivamente:",
     alternativas: [
-      { letra: "A", texto: "4,0; 4,5 e 5." },
+      { letra: "A", texto: "5,0; 4,5 e 4." },
       { letra: "B", texto: "5,0; 5 e 4." },
       { letra: "C", texto: "4,5; 5 e 5." },
       { letra: "D", texto: "5,0; 4 e 4,5." },
-      { letra: "E", texto: "5,0; 4,5 e 4." }
+      { letra: "E", texto: "4,0; 4,5 e 5." }
     ],
-    gabarito: "E",
+    gabarito: "A",
     justificativa: "Média = soma ÷ n = 40 ÷ 8 = 5,0. Mediana: como n é par, calcula-se a média dos dois valores centrais (4 e 5), resultando em 4,5. Moda: o valor mais frequente é 4, que aparece três vezes.",
     analise: {
-      A: "INCORRETA. A média não é 4,0 e a moda não é 5.",
+      A: "CORRETA. Média 5,0; mediana 4,5; moda 4.",
       B: "INCORRETA. A mediana é a média de 4 e 5, não 5.",
       C: "INCORRETA. A média e a moda estão incorretas.",
       D: "INCORRETA. Mediana e moda foram trocadas.",
-      E: "CORRETA. Média 5,0; mediana 4,5; moda 4."
+      E: "INCORRETA. A média não é 4,0 e a moda não é 5."
     },
     regra: "Média = soma dos valores ÷ quantidade; mediana = valor central (média dos dois centrais se n par); moda = valor de maior frequência.",
     pegadinha: "Com quantidade par de observações, a mediana não é simplesmente o valor da posição central superior.",
@@ -326,17 +326,17 @@ const moduleQuestions8 = [
     enunciado: "Para representar essas magnitudes em um mapa de calor, assinale a paleta mais adequada.",
     alternativas: [
       { letra: "A", texto: "Paleta categórica com cores distintas e de força igual para cada faixa de valor." },
-      { letra: "B", texto: "Paleta sequencial, com variação de luminosidade de uma cor para outra, de claro para escuro." },
+      { letra: "B", texto: "Usar poucas cores claras, sem escala, para reduzir o esforço de leitura." },
       { letra: "C", texto: "Paleta arco-íris, pois aproveita todas as cores disponíveis e é mais legível." },
-      { letra: "D", texto: "Usar poucas cores claras, sem escala, para reduzir o esforço de leitura." }
+      { letra: "D", texto: "Paleta sequencial, com variação de luminosidade de uma cor para outra, de claro para escuro." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo classifica a variável como sequencial (magnitude contínua, ordenada) e indica paleta sequencial: variação de luminosidade de uma cor, de menor a maior, respeitando a ordem perceptiva. A alternativa B reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (D) não comunicam magnitude.",
     analise: {
       A: "INCORRETA. Erro conceitual: variável contínua ordenada não é categórica; as cores distintas impõem divisões artificiais.",
-      B: "CORRETA. Reproduz a regra de ouro: sequencial para magnitudes, gradação por luminosidade.",
+      B: "INCORRETA. Erro conceitual: sem escala, o leitor não decora a intensidade; a regra de ouro é escala para magnitude.",
       C: "INCORRETA. Erro conceitual: paleta decorativa não codifica ordem; dificulta a leitura de 'mais/ou menos'.",
-      D: "INCORRETA. Erro conceitual: sem escala, o leitor não decora a intensidade; a regra de ouro é escala para magnitude."
+      D: "CORRETA. Reproduz a regra de ouro: sequencial para magnitudes, gradação por luminosidade."
     },
     regra: "Categorias nominais → paleta categórica (poucas cores); magnitudes ordenadas → paleta sequencial (luminosidade); valores acima e abaixo de uma referência → paleta divergente (neutro na referência).",
     pegadinha: "A pegadinha é 'paleta arco-íris é mais atrativa' — no currículo, a atratividade decorativa é ruído quando a tarefa é ler magnitude.",
@@ -470,17 +470,17 @@ const moduleQuestions8 = [
     contexto: "Série temporal de atendimentos mensais: 120, 132, 115, 140 (janeiro a abril), já ordenada cronologicamente.",
     enunciado: "Assinale a afirmação correta sobre a leitura desse gráfico de linhas.",
     alternativas: [
-      { letra: "A", texto: "A variação de janeiro para fevereiro é (132 − 120) ÷ 132 ≈ +9,1%." },
+      { letra: "A", texto: "A variação percentual de março para abril é (140 − 115) ÷ 115 ≈ +21,7%." },
       { letra: "B", texto: "A variação percentual de fevereiro para março é (132 − 115) ÷ 132 ≈ +12,9%." },
-      { letra: "C", texto: "A variação percentual de março para abril é (140 − 115) ÷ 115 ≈ +21,7%." },
+      { letra: "C", texto: "A variação de janeiro para fevereiro é (132 − 120) ÷ 132 ≈ +9,1%." },
       { letra: "D", texto: "A variação de janeiro para abril é (140 − 120) ÷ 140 ≈ +14,3%." }
     ],
-    gabarito: "C",
+    gabarito: "A",
     justificativa: "Variação percentual = (valor atual − anterior) ÷ anterior. Janeiro→fevereiro: (132−120)/120 = +10,0% (A: denominador errado — 132, não 120); Fevereiro→março: (115−132)/132 ≈ −12,9% (B: inverte numerador e denominador); Março→abril: (140−115)/115 ≈ +21,7% (C, correta); Janeiro→abril: (140−120)/120 ≈ +16,7% (D: usa 140 em vez de 120). A única afirmação fiel é C.",
     analise: {
-      A: "INCORRETA. A alternativa usa 132 como denominador; a variação correta usa o valor anterior: (132 − 120) ÷ 120 = +10,0%.",
+      A: "CORRETA. (140 − 115) ÷ 115 = 25 ÷ 115 ≈ +21,74%; é o único cálculo fiel ao método anterior/denominador.",
       B: "INCORRETA. A alternativa inverte o sentido da variação e por isso mostra aumento; de fevereiro para março, a variação é (115 − 132) ÷ 132 ≈ −12,9%.",
-      C: "CORRETA. (140 − 115) ÷ 115 = 25 ÷ 115 ≈ +21,74%; é o único cálculo fiel ao método anterior/denominador.",
+      C: "INCORRETA. A alternativa usa 132 como denominador; a variação correta usa o valor anterior: (132 − 120) ÷ 120 = +10,0%.",
       D: "INCORRETA. Janeiro → abril usa denominador 120: (140 − 120) ÷ 120 ≈ +16,67%, não 14,3%."
     },
     regra: "Variação percentual = (valor atual − anterior) ÷ anterior × 100; sempre com denominador do valor anterior, não o atual.",
@@ -732,16 +732,16 @@ const moduleQuestions8 = [
     enunciado: "Sobre a leitura do gráfico de barras com barras desordenadas, assinale a opção correta.",
     alternativas: [
       { letra: "A", texto: "A ordem aleatória não altera a leitura, pois os valores dos eixos são os mesmos." },
-      { letra: "B", texto: "A ordenação afeta a leitura: embaralhada, o gráfico esconde o pior resultado." },
-      { letra: "C", texto: "A ordenação só importa se houver metáfora de comparação." },
+      { letra: "B", texto: "A ordenação só importa se houver metáfora de comparação." },
+      { letra: "C", texto: "A ordenação afeta a leitura: embaralhada, o gráfico esconde o pior resultado." },
       { letra: "D", texto: "A ordenação decrescente é obrigatória em todos os gráficos de barras." }
     ],
-    gabarito: "B",
+    gabarito: "C",
     justificativa: "O currículo registra: 'ordem alfabética só quando a consulta alfabética for o uso real; ordenação afeta a leitura: a mesma tabela com barras decrescentes comunica ranking; embaralhada, esconde o pior resultado'. A alternativa B reproduz exatamente isso. A erra: a ordem não é neutra — afeta a leitura. C erra: a ordem é relevante independente de metáfora. D erra: a ordem decrescente é recomendada quando o objetivo é ranquear, não obrigatória em todos os casos.",
     analise: {
       A: "INCORRETA. Erro conceitual: a ordem altera a leitura — embaralhada esconde o pior resultado.",
-      B: "CORRETA. Reproduz a regra de que a ordenação determina o ranking percebido.",
-      C: "INCORRETA. Erro conceitual: a ordem é relevante independente de metáfora.",
+      B: "INCORRETA. Erro conceitual: a ordem é relevante independente de metáfora.",
+      C: "CORRETA. Reproduz a regra de que a ordenação determina o ranking percebido.",
       D: "INCORRETA. Erro conceitual: a ordem decrescente é recomendada para ranquear, não obrigatória em todos os casos."
     },
     regra: "Ordenação para ranquear: decrescente (ou crescente); a escala afeta a leitura percebida; a ordem alfabética só quando consulta alfabética é o uso.",
@@ -906,17 +906,17 @@ const moduleQuestions8 = [
     enunciado: "Para representar uma série temporal com lacuna de coleta, a alternativa correta é:",
     alternativas: [
       { letra: "A", texto: "Conectar os pontos adjacentes à lacuna, pois a linha continua a ser uma estimativa." },
-      { letra: "B", texto: "Quebrar a linha na lacuna e sinalizar o período sem coleta, sem conectar diretamente." },
+      { letra: "B", texto: "O gráfico de linhas não suporta lacunas; o painel deve ser convertido em tabela." },
       { letra: "C", texto: "Substituir o valor ausente pela média da série, mantendo a linha contínua." },
-      { letra: "D", texto: "O gráfico de linhas não suporta lacunas; o painel deve ser convertido em tabela." }
+      { letra: "D", texto: "Quebrar a linha na lacuna e sinalizar o período sem coleta, sem conectar diretamente." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa B reproduz exatamente isso. A erra: conectar gera falsa continuidade. C erra: substituir pela média inventa um valor. D erra: gráficos de linhas suportam lacunas (quebradas), e a conversão para tabela não é obrigatória.",
     analise: {
       A: "INCORRETA. Erro conceitual: conectar gera ilusão de continuidade e de valores intermediários inexistentes.",
-      B: "CORRETA. Reproduz a regra do currículo: quebrar a linha na lacuna e sinalizar, sem conectar diretamente.",
+      B: "INCORRETA. Erro conceitual: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho.",
       C: "INCORRETA. Erro conceitual: substituir o valor ausente pela média fabrica dados que não existem.",
-      D: "INCORRETA. Erro conceitual: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho."
+      D: "CORRETA. Reproduz a regra do currículo: quebrar a linha na lacuna e sinalizar, sem conectar diretamente."
     },
     regra: "Série temporal com lacuna: quebrar a linha e sinalizar o período sem dados; conectar ou interpolar sem base explícita fabrica continuidade e valores inexistentes.",
     pegadinha: "A pegadinha é 'a linha pode ser interpolada' — a continuidade do gráfico exige dados contínuos.",

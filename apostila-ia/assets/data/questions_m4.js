@@ -68,18 +68,18 @@ const moduleQuestions4 = [
     enunciado: "Em termos de segurança da informação, a integridade significa que:",
     alternativas: [
       { letra: "A", texto: "A informação está disponível a qualquer usuário." },
-      { letra: "B", texto: "A informação não pode ser alterada sem autorização." },
+      { letra: "B", texto: "A informação é armazenada em backups múltiplos." },
       { letra: "C", texto: "A informação é criptografada com chave pública." },
-      { letra: "D", texto: "A informação é armazenada em backups múltiplos." },
+      { letra: "D", texto: "A informação não pode ser alterada sem autorização." },
       { letra: "E", texto: "A informação é assinada digitalmente." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "Integridade garante que os dados são precisos e não foram modificados de maneira não autorizada. A disponibilidade é a característica de 'acesso quando necessário' (alternativa A incorreta); a criptografia e a assinatura digital são mecanismos que ajudam a preservar integridade, mas não a definam o princípio (alternativas C e E incorretas); a múltipla cópia (backup) protege contra perda, não garante integridade (alternativa D incorreta).",
     analise: {
       A: "INCORRETA. Disponibilidade — o conceito que garante acesso quando necessário.",
-      B: "CORRETA. Integridade é a propriedade de preservação da exatidão e não alteração não autorizada.",
+      B: "INCORRETA. Backup protege contra perda de dados, não garante integridade.",
       C: "INCORRETA. Criptografia é um meio de proteção, não a definição de integridade.",
-      D: "INCORRETA. Backup protege contra perda de dados, não garante integridade.",
+      D: "CORRETA. Integridade é a propriedade de preservação da exatidão e não alteração não autorizada.",
       E: "INCORRETA. Assinatura digital ajuda a garantir autenticidade e integridade, mas o princípio é a integridade."
     },
     regra: "Integridade: dados precisos, consistentes e não alterados sem autorização.",
@@ -134,19 +134,19 @@ const moduleQuestions4 = [
     enunciado: "Sobre a Autenticação em Múltiplos Fatores (MFA), é correto afirmar que:",
     alternativas: [
       { letra: "A", texto: "A MFA elimina necessariamente a senha em todos os sistemas." },
-      { letra: "B", texto: "A MFA exige duas ou mais formas independentes de verificação." },
+      { letra: "B", texto: "A MFA é uma política de criptografia de dados." },
       { letra: "C", texto: "A MFA é aplicável apenas a sistemas operacionais." },
       { letra: "D", texto: "A MFA aumenta a segurança, mas sempre impede o acesso remoto." },
-      { letra: "E", texto: "A MFA é uma política de criptografia de dados." }
+      { letra: "E", texto: "A MFA exige duas ou mais formas independentes de verificação." }
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "MFA exige duas ou mais formas independentes de verificação: saber (senha), possuir (dispositivo) ou ser (biometria). A MFA não elimina a senha — pode usá-la como um dos fatores (alternativa A incorreta); a MFA é amplamente aplicável a qualquer sistema crítico, não apenas sistemas operacionais (alternativa C incorreta); a MFA reduz significativamente o risco, mas não garante absolutamente impedir tudo (alternativa D incorreta); a criptografia é outra camada de segurança, não a definição de MFA (alternativa E incorreta).",
     analise: {
       A: "INCORRETA. A MFA não elimina a senha — pode integrar-se a ela como um dos fatores.",
-      B: "CORRETA. MFA exige duas ou mais formas independentes de verificação (saber, possuir, ser).",
+      B: "INCORRETA. A MFA é um mecanismo de autenticação que comprova a identidade do usuário por dois ou mais fatores independentes; política de criptografia é controle distinto, que protege os dados em repouso e em trânsito.",
       C: "INCORRETA. A MFA é aplicável a sistemas e serviços de toda a arquitetura da informação.",
       D: "INCORRETA. A MFA aumenta a segurança significativamente, mas não garante absoluto.",
-      E: "INCORRETA. A MFA é um mecanismo de autenticação que comprova a identidade do usuário por dois ou mais fatores independentes; política de criptografia é controle distinto, que protege os dados em repouso e em trânsito."
+      E: "CORRETA. MFA exige duas ou mais formas independentes de verificação (saber, possuir, ser)."
     },
     regra: "Fatores de autenticação: 1) Saber (senha, PIN), 2) Possuir (token, celular), 3) Ser (biometria).",
     pegadinha: "A MFA não elimina a senha — ela a complementa com um segundo fator independente.",
@@ -1138,19 +1138,19 @@ const moduleQuestions4 = [
     contexto: "Um órgão precisa detectar se um arquivo de configuração foi modificado sem autorização entre duas implantações.",
     enunciado: "Qual medida fornece evidência técnica útil para verificar se o conteúdo do arquivo mudou?",
     alternativas: [
-      { letra: "A", texto: "Calcular e comparar um hash criptográfico confiável do arquivo antes e depois, protegendo a referência esperada." },
+      { letra: "A", texto: "Permitir escrita a todos os usuários e confiar no histórico verbal da equipe." },
       { letra: "B", texto: "Verificar apenas se o nome e a extensão do arquivo continuam iguais." },
       { letra: "C", texto: "Confiar que a data de modificação não pode ser alterada." },
-      { letra: "D", texto: "Permitir escrita a todos os usuários e confiar no histórico verbal da equipe." },
+      { letra: "D", texto: "Calcular e comparar um hash criptográfico confiável do arquivo antes e depois, protegendo a referência esperada." },
       { letra: "E", texto: "Criptografar o nome do arquivo sem verificar o conteúdo." }
     ],
-    gabarito: "A",
+    gabarito: "D",
     justificativa: "Um hash criptográfico pode ajudar a detectar alterações no conteúdo quando o valor esperado é confiável e protegido contra substituição. A comparação não identifica necessariamente quem alterou o arquivo nem prova que a versão original era legítima; por isso, deve ser combinada com controle de acesso, gestão de mudanças e registros apropriados.",
     analise: {
-      A: "CORRETA. Comparar hashes confiáveis ajuda a detectar mudanças no conteúdo; a proteção da referência esperada é essencial.",
+      A: "INCORRETA. Permissões excessivas aumentam o risco e relatos verbais não fornecem evidência técnica confiável.",
       B: "INCORRETA. Nome e extensão podem permanecer iguais mesmo quando o conteúdo é alterado.",
       C: "INCORRETA. Metadados de data podem ser modificados e não constituem prova suficiente de integridade.",
-      D: "INCORRETA. Permissões excessivas aumentam o risco e relatos verbais não fornecem evidência técnica confiável.",
+      D: "CORRETA. Comparar hashes confiáveis ajuda a detectar mudanças no conteúdo; a proteção da referência esperada é essencial.",
       E: "INCORRETA. Proteger o nome não permite verificar se o conteúdo do arquivo mudou."
     },
     regra: "Hash criptográfico confiável ajuda a detectar alteração de conteúdo, mas não prova autoria nem legitimidade da versão original.",
@@ -1163,20 +1163,20 @@ const moduleQuestions4 = [
     contexto: "Um sistema de atendimento deve voltar a operar rapidamente após uma interrupção, e a organização precisa definir quanto tempo e quantos dados pode perder.",
     enunciado: "Qual associação entre objetivos de recuperação está correta?",
     alternativas: [
-      { letra: "A", texto: "RTO é o tempo-alvo para recuperação do serviço; RPO é o ponto no tempo até o qual os dados precisam ser recuperados, refletindo a perda de dados tolerável." },
+      { letra: "A", texto: "RTO e RPO são sinônimos de criptografia em repouso." },
       { letra: "B", texto: "RTO mede a quantidade de dados pessoais coletados e RPO mede o número de usuários autorizados." },
       { letra: "C", texto: "RTO e RPO significam que a organização nunca terá interrupção ou perda de dados." },
       { letra: "D", texto: "RPO define o tempo de resposta da equipe de suporte, enquanto RTO define a senha de recuperação." },
-      { letra: "E", texto: "RTO e RPO são sinônimos de criptografia em repouso." }
+      { letra: "E", texto: "RTO é o tempo-alvo para recuperação do serviço; RPO é o ponto no tempo até o qual os dados precisam ser recuperados, refletindo a perda de dados tolerável." }
     ],
-    gabarito: "A",
+    gabarito: "E",
     justificativa: "O Recovery Time Objective (RTO) estabelece o tempo-alvo para restabelecer um serviço após uma interrupção. O Recovery Point Objective (RPO) estabelece o ponto temporal de recuperação dos dados e, na prática, orienta a perda máxima de dados que a organização pode tolerar. Ambos são objetivos de planejamento, não garantias de ausência de incidentes.",
     analise: {
-      A: "CORRETA. RTO trata do tempo de recuperação; RPO trata do ponto de recuperação dos dados e da perda tolerável.",
+      A: "INCORRETA. RTO e RPO são objetivos de recuperação, não técnicas criptográficas.",
       B: "INCORRETA. Essas descrições não correspondem aos objetivos de recuperação.",
       C: "INCORRETA. RTO e RPO são metas de continuidade, não promessas de interrupção ou perda zero.",
       D: "INCORRETA. Nenhuma dessas definições corresponde aos termos RTO e RPO.",
-      E: "INCORRETA. RTO e RPO são objetivos de recuperação, não técnicas criptográficas."
+      E: "CORRETA. RTO trata do tempo de recuperação; RPO trata do ponto de recuperação dos dados e da perda tolerável."
     },
     regra: "RTO = tempo-alvo para restaurar o serviço; RPO = ponto temporal de recuperação dos dados e perda de dados tolerável.",
     pegadinha: "Metas de recuperação orientam a arquitetura e os testes, mas não garantem por si sós que a meta será cumprida.",
@@ -1313,18 +1313,18 @@ const moduleQuestions4 = [
     contexto: "Um serviço processa transações continuamente. A área de negócio informa que perder mais de cinco minutos de transações seria inaceitável, enquanto a equipe técnica estima que a recuperação completa pode levar até duas horas.",
     enunciado: "Como a equipe deve usar essas informações no planejamento de continuidade?",
     alternativas: [
-      { letra: "A", texto: "Definir RPO e RTO a partir da necessidade de negócio, validar se a arquitetura e os procedimentos suportam as metas e testar a recuperação." },
+      { letra: "A", texto: "Adotar metas sem consultar a área de negócio, pois somente a infraestrutura determina o impacto aceitável." },
       { letra: "B", texto: "Definir RPO igual a duas horas, pois RPO é sempre igual ao tempo de recuperação." },
-      { letra: "C", texto: "Adotar metas sem consultar a área de negócio, pois somente a infraestrutura determina o impacto aceitável." },
+      { letra: "C", texto: "Definir RPO e RTO a partir da necessidade de negócio, validar se a arquitetura e os procedimentos suportam as metas e testar a recuperação." },
       { letra: "D", texto: "Considerar que backup a cada dia atende automaticamente a uma perda máxima de cinco minutos." },
       { letra: "E", texto: "Dispensar testes porque os valores foram acordados entre as equipes." }
     ],
-    gabarito: "A",
+    gabarito: "C",
     justificativa: "As metas de recuperação devem refletir o impacto tolerável para o negócio e ser confrontadas com as capacidades reais da solução. A tolerância a perda de transações informa o RPO; o tempo de restabelecimento aceitável informa o RTO. A equipe deve verificar se frequência de cópia, replicação, procedimentos, dependências e testes sustentam as metas definidas.",
     analise: {
-      A: "CORRETA. Metas derivadas do impacto de negócio precisam ser verificadas contra a capacidade técnica e validadas por testes.",
+      A: "INCORRETA. As metas dependem do impacto para o negócio e das capacidades técnicas, exigindo coordenação entre áreas.",
       B: "INCORRETA. RPO e RTO medem aspectos diferentes e não precisam ter o mesmo valor.",
-      C: "INCORRETA. As metas dependem do impacto para o negócio e das capacidades técnicas, exigindo coordenação entre áreas.",
+      C: "CORRETA. Metas derivadas do impacto de negócio precisam ser verificadas contra a capacidade técnica e validadas por testes.",
       D: "INCORRETA. Backup diário não satisfaz, por si só, uma tolerância a perda de apenas cinco minutos.",
       E: "INCORRETA. O acordo não comprova que as metas sejam tecnicamente alcançáveis."
     },

@@ -25,17 +25,17 @@ const moduleQuestions6 = [
     enunciado: "Sobre o princípio da legalidade aplicado à Administração Pública, assinale a alternativa correta.",
     alternativas: [
       { letra: "A", texto: "A Administração pode praticar qualquer ato que a lei não proíba, como ocorre nas relações entre particulares." },
-      { letra: "B", texto: "A legalidade autoriza o gestor a afastar a norma quando a medida se mostrar mais eficiente." },
-      { letra: "C", texto: "A Administração só pode praticar atos previstos ou autorizados em norma, observando a competência e o procedimento definidos." },
+      { letra: "B", texto: "A Administração só pode praticar atos previstos ou autorizados em norma, observando a competência e o procedimento definidos." },
+      { letra: "C", texto: "A legalidade autoriza o gestor a afastar a norma quando a medida se mostrar mais eficiente." },
       { letra: "D", texto: "A legalidade se satisfaz com a existência de dotação orçamentária para a despesa pretendida." },
       { letra: "E", texto: "A legalidade impede que o Poder Executivo edite atos normativos de regulamentação." }
     ],
-    gabarito: "C",
+    gabarito: "B",
     justificativa: "A legalidade administrativa submete a atuação pública à Constituição e às normas aplicáveis, inclusive quanto à competência e ao procedimento. A alternativa A transpõe indevidamente para a Administração a lógica geral de liberdade dos particulares; B erra porque eficiência não autoriza descumprir a lei; C está correta; D confunde legalidade com disponibilidade orçamentária, que não basta para autorizar o ato; E erra porque o poder regulamentar pode ser exercido nos limites legais.",
     analise: {
       A: "INCORRETA. Erro conceitual de inversão de regimes: no direito privado, o que não é proibido é permitido; na Administração, só é permitido o que a norma autoriza.",
-      B: "INCORRETA. Erro conceitual de confusão entre princípios: eficiência não é autorização para descumprir a lei — não há eficiência legítima contra a legalidade.",
-      C: "CORRETA. Traduz a legalidade como submissão à norma, com competência e procedimento — a formulação compatível com o art. 37, caput, da CF/88.",
+      B: "CORRETA. Traduz a legalidade como submissão à norma, com competência e procedimento — a formulação compatível com o art. 37, caput, da CF/88.",
+      C: "INCORRETA. Erro conceitual de confusão entre princípios: eficiência não é autorização para descumprir a lei — não há eficiência legítima contra a legalidade.",
       D: "INCORRETA. Erro conceitual de redução: dotação orçamentária é requisito de execução da despesa, não fundamento de validade do ato.",
       E: "INCORRETA. Erro conceitual de inversão: o poder regulamentar é forma de concretizar a lei, e não conduta vedada pela legalidade."
     },
@@ -50,17 +50,17 @@ const moduleQuestions6 = [
     enunciado: "À luz do princípio da impessoalidade, os critérios de priorização de atendimento devem ser",
     alternativas: [
       { letra: "A", texto: "definidos caso a caso pelo servidor que opera o sistema, conforme sua avaliação do requerente." },
-      { letra: "B", texto: "mantidos sob sigilo, para evitar que os cidadãos controvertam a ordem da fila." },
-      { letra: "C", texto: "definidos previamente, escritos, comunicáveis ao cidadão e auditáveis, vedado o favorecimento por vínculo pessoal." },
+      { letra: "B", texto: "definidos previamente, escritos, comunicáveis ao cidadão e auditáveis, vedado o favorecimento por vínculo pessoal." },
+      { letra: "C", texto: "mantidos sob sigilo, para evitar que os cidadãos controvertam a ordem da fila." },
       { letra: "D", texto: "idênticos para todos os requerentes, ainda que a lei determine tratamento diferenciado." },
       { letra: "E", texto: "definidos pelo fornecedor do sistema, que responde tecnicamente pela ordem de atendimento." }
     ],
-    gabarito: "C",
+    gabarito: "B",
     justificativa: "Impessoalidade exige que a Administração aplique critérios objetivos, previamente definidos e compatíveis com a lei, sem favorecimento pessoal. A alternativa A permite arbítrio individual; B propõe sigilo injustificado dos critérios; C está correta ao exigir critérios comunicáveis e auditáveis; D confunde impessoalidade com resultado idêntico e ignora diferenciações legalmente exigidas; E transfere indevidamente ao fornecedor uma decisão que compete ao órgão.",
     analise: {
       A: "INCORRETA. Erro conceitual: decisão caso a caso por preferência do operador é exatamente o arbítrio que a impessoalidade veda.",
-      B: "INCORRETA. Erro conceitual duplo: sigilo do critério impede demonstrar igualdade de tratamento (impessoalidade) e contraria a publicidade do modo de decidir.",
-      C: "CORRETA. Critério prévio, escrito, comunicável e auditável é a tradução operacional da impessoalidade em sistemas.",
+      B: "CORRETA. Critério prévio, escrito, comunicável e auditável é a tradução operacional da impessoalidade em sistemas.",
+      C: "INCORRETA. Erro conceitual duplo: sigilo do critério impede demonstrar igualdade de tratamento (impessoalidade) e contraria a publicidade do modo de decidir.",
       D: "INCORRETA. Erro conceitual: confunde impessoalidade formal com resultado idêntico; a lei admite e às vezes exige tratamento diferenciado por razões legítimas.",
       E: "INCORRETA. Erro conceitual de imputação: o fornecedor executa tecnicamente; a definição do critério e a responsabilidade pelo ato são do órgão."
     },
@@ -100,17 +100,17 @@ const moduleQuestions6 = [
     enunciado: "O princípio da publicidade, na Administração Pública, significa que",
     alternativas: [
       { letra: "A", texto: "todos os documentos devem ser divulgados, inclusive os que contêm dados pessoais identificáveis." },
-      { letra: "B", texto: "a publicidade é faculdade do gestor, que decide conforme conveniência e oportunidade." },
-      { letra: "C", texto: "a divulgação do que é público é preceito geral, e o sigilo é exceção que depende de hipótese legal e de formalização." },
+      { letra: "B", texto: "a divulgação do que é público é preceito geral, e o sigilo é exceção que depende de hipótese legal e de formalização." },
+      { letra: "C", texto: "a publicidade é faculdade do gestor, que decide conforme conveniência e oportunidade." },
       { letra: "D", texto: "a publicidade se limita à afixação de avisos na sede do órgão." },
       { letra: "E", texto: "a publicidade autoriza a divulgação de informação sigilosa quando houver interesse jornalístico." }
     ],
-    gabarito: "C",
+    gabarito: "B",
     justificativa: "A LAI estabelece a publicidade como preceito geral e o sigilo como exceção (art. 3º, I), enquanto a Constituição ressalva hipóteses de sigilo imprescindível à segurança da sociedade e do Estado. A alternativa A ignora a proteção de informações pessoais (art. 31 da LAI) e a legislação aplicável; B trata o dever de publicidade como faculdade; C está correta ao exigir divulgação do que é público e sigilo fundamentado em hipótese legal; D reduz a publicidade a um único meio de divulgação; E presume uma exceção ao sigilo que não decorre automaticamente de interesse jornalístico.",
     analise: {
       A: "INCORRETA. Erro conceitual: publicidade não alcança informação pessoal identificável, que tem regime próprio de proteção.",
-      B: "INCORRETA. Erro conceitual: publicidade é dever, não faculdade sujeita a conveniência.",
-      C: "CORRETA. Reproduz a diretriz legal: publicidade como preceito geral, sigilo como exceção fundamentada e formalizada.",
+      B: "CORRETA. Reproduz a diretriz legal: publicidade como preceito geral, sigilo como exceção fundamentada e formalizada.",
+      C: "INCORRETA. Erro conceitual: publicidade é dever, não faculdade sujeita a conveniência.",
       D: "INCORRETA. Erro conceitual de anacronismo: o art. 8º, § 2º, torna obrigatória a divulgação em sítios oficiais.",
       E: "INCORRETA. Erro conceitual: interesse jornalístico não é hipótese legal de afastamento de sigilo; o art. 22 preserva as hipóteses legais de sigilo."
     },
@@ -199,17 +199,17 @@ const moduleQuestions6 = [
     contexto: "Uma ferramenta de atendimento foi configurada para exibir, antes do resultado da consulta, oferta de serviço de parceiro privado sem relação com o pedido do cidadão.",
     enunciado: "Do ponto de vista dos princípios aplicados a sistemas digitais, a prática é",
     alternativas: [
-      { letra: "A", texto: "incompatível com a moralidade e com a impessoalidade, por usar a posição do órgão para finalidade alheia ao serviço." },
-      { letra: "B", texto: "compatível, pois amplia a arrecadação do órgão." },
+      { letra: "A", texto: "compatível, pois amplia a arrecadação do órgão." },
+      { letra: "B", texto: "incompatível com a moralidade e com a impessoalidade, por usar a posição do órgão para finalidade alheia ao serviço." },
       { letra: "C", texto: "compatível, desde que o cidadão possa fechar a oferta." },
       { letra: "D", texto: "incompatível apenas com a eficiência, por acrescentar etapas ao atendimento." },
       { letra: "E", texto: "indiferente aos princípios, pois se trata de decisão de interface, não de ato administrativo." }
     ],
-    gabarito: "A",
+    gabarito: "B",
     justificativa: "A interface integra a prestação do serviço público e influencia a forma como o cidadão é atendido. Exibir oferta alheia ao pedido pode usar a posição institucional para finalidade estranha ao serviço, comprometendo moralidade e impessoalidade ao tratar o usuário como audiência comercial em vez de atender à finalidade pública. A alternativa B troca legalidade por arrecadação; C supõe que a possibilidade de fechar a oferta sana o desvio; D reduz o problema a desempenho; E separa artificialmente interface e ato administrativo, quando a interface é o meio de prestação do serviço.",
     analise: {
-      A: "CORRETA. Identifica o desvio de finalidade e o uso da posição institucional, atingindo moralidade e impessoalidade.",
-      B: "INCORRETA. Erro conceitual: arrecadação não legitima finalidade estranha ao serviço.",
+      A: "INCORRETA. Erro conceitual: arrecadação não legitima finalidade estranha ao serviço.",
+      B: "CORRETA. Identifica o desvio de finalidade e o uso da posição institucional, atingindo moralidade e impessoalidade.",
       C: "INCORRETA. Erro conceitual: a opção de fechar não elimina o uso da posição do órgão para fim alheio.",
       D: "INCORRETA. Erro conceitual de redução: o problema é de finalidade e de isonomia, não apenas de desempenho.",
       E: "INCORRETA. Erro conceitual de separação indevida: a interface é parte da prestação do serviço público e deve observar os princípios aplicáveis à atuação do órgão."
@@ -452,17 +452,17 @@ const moduleQuestions6 = [
     contexto: "A LAI trata a informação pessoal em regime próprio, distinto do sigilo classificado.",
     enunciado: "Sobre a proteção da informação pessoal na Lei nº 12.527/2011, é correto afirmar que",
     alternativas: [
-      { letra: "A", texto: "o acesso a informações relativas à intimidade, vida privada, honra e imagem é restrito, independentemente de classificação de sigilo, pelo prazo máximo de 100 anos a contar da produção." },
-      { letra: "B", texto: "a proteção depende de classificação nos graus ultrassecreto, secreto ou reservado." },
+      { letra: "A", texto: "a proteção depende de classificação nos graus ultrassecreto, secreto ou reservado." },
+      { letra: "B", texto: "o acesso a informações relativas à intimidade, vida privada, honra e imagem é restrito, independentemente de classificação de sigilo, pelo prazo máximo de 100 anos a contar da produção." },
       { letra: "C", texto: "a restrição é perpétua, sem prazo definido em lei." },
       { letra: "D", texto: "qualquer servidor pode divulgar informação pessoal, desde que não exista sigilo classificado." },
       { letra: "E", texto: "a restrição pode ser invocada para impedir a apuração de irregularidades em que o titular esteja envolvido." }
     ],
-    gabarito: "A",
+    gabarito: "B",
     justificativa: "O art. 31, § 1º, I, restringe o acesso a informações relativas à intimidade, vida privada, honra e imagem a agentes públicos legalmente autorizados e à própria pessoa, pelo prazo máximo de 100 anos a contar da produção, independentemente de classificação de sigilo. A alternativa B confunde o regime da informação pessoal com o da informação classificada (arts. 23 e 24); C ignora o prazo legal; D contraria o § 1º e o § 2º; E é expressamente vedada pelo § 4º.",
     analise: {
-      A: "CORRETA. Reproduz o art. 31, § 1º, I, incluindo a independência em relação à classificação de sigilo.",
-      B: "INCORRETA. Erro conceitual de confusão de regimes: informação pessoal não se protege por classificação, e sim pelo art. 31.",
+      A: "INCORRETA. Erro conceitual de confusão de regimes: informação pessoal não se protege por classificação, e sim pelo art. 31.",
+      B: "CORRETA. Reproduz o art. 31, § 1º, I, incluindo a independência em relação à classificação de sigilo.",
       C: "INCORRETA. Erro conceitual: a lei fixa prazo máximo de 100 anos.",
       D: "INCORRETA. Erro conceitual: a ausência de classificação não autoriza divulgação; exigem-se os requisitos do art. 31, observadas também as exceções legais do § 3º.",
       E: "INCORRETA. Erro conceitual: o § 4º veda usar a restrição para prejudicar apuração de irregularidades em que o titular esteja envolvido."

@@ -234,7 +234,7 @@ var questoesBanco = [
       { letra: "C", texto: "Conta Microsoft pessoal com autenticação em dois fatores, pois o MFA substitui a gestão por domínio." },
       { letra: "D", texto: "Conta local do sistema operacional, pois contas em nuvem não suportam políticas de segurança." }
     ],
-    gabarito: "B",
+    gabarito: "A",
     justificativa: "O currículo diferencia contas pessoais, voltadas ao uso doméstico, de contas organizacionais, que permitem administração centralizada e recursos de gestão. O requisito só é atendido por um plano organizacional que inclua explicitamente eDiscovery, gerenciamento de dispositivos e os recursos de compliance necessários; a disponibilidade exata varia conforme o plano e as licenças atribuídas.",
     analise: {
       A: "INCORRETA. Erro conceitual: escopo doméstico. Contas pessoais/familiares não têm gestão centralizada nem eDiscovery — características do tópico 'contas organizacionais'.",
@@ -286,7 +286,7 @@ id: "q-m1-09",
       { letra: "C", texto: ".txt — texto puro, elimina qualquer formatação acidental." },
       { letra: "D", texto: ".doc — formato legado binário, compatível com o Word 2003 e anteriores." }
     ],
-    gabarito: "B",
+    gabarito: "A",
     justificativa: "A documentação Microsoft recomenda PDF quando o arquivo deve manter aparência semelhante em diferentes computadores e se destina à leitura ou impressão. PDF não garante bloqueio de edição: alguns programas, incluindo o Word, podem abrir e editar PDFs. Neste cenário, o PDF é o melhor formato para distribuir uma versão final com layout preservado; se a organização precisar impedir alterações, deverá aplicar controles de acesso/proteção apropriados, não depender apenas da extensão.",
     analise: {
       A: "INCORRETA. Erro conceitual: finalidade trocada. O .docx é indicado para edição colaborativa — justamente o comportamento que o cenário quer evitar.",
@@ -338,7 +338,7 @@ id: "q-m1-09",
       { letra: "C", texto: "Nada muda, porque estilos valem apenas para a criação de sumários." },
       { letra: "D", texto: "Apenas o sumário automático passa a exibir 16 pt, sem alterar os títulos do corpo." }
     ],
-    gabarito: "B",
+    gabarito: "A",
     justificativa: "O currículo define estilos como 'conjuntos nomeados de formatação que podem ser aplicados globalmente: modificar um estilo atualiza todo o texto formatado com ele'. É essa propriedade de propagação que distingue estilo de formatação direta.",
     analise: {
       A: "INCORRETA. Erro conceitual: descrição da formatação direta (atributo aplicado ao texto selecionado), não de estilo.",
@@ -519,17 +519,17 @@ id: "q-m1-09",
     enunciado: "O sumário automático do Word é gerado a partir de:",
     alternativas: [
       { letra: "A", texto: "qualquer trecho de texto previamente selecionado com o mouse." },
-      { letra: "B", texto: "estilos de título aplicados aos capítulos (Título 1, Título 2 etc.), inserido como campo atualizável." },
+      { letra: "B", texto: "da lista de figuras e tabelas criada automaticamente no documento." },
       { letra: "C", texto: "parágrafos com negrito e tamanho maiores que o restante do texto." },
-      { letra: "D", texto: "da lista de figuras e tabelas criada automaticamente no documento." }
+      { letra: "D", texto: "estilos de título aplicados aos capítulos (Título 1, Título 2 etc.), inserido como campo atualizável." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo descreve o processo: aplicar estilos de títulos aos tópicos, posicionar o cursor, usar 'Referências > Sumário' e escolher o formato; o sumário é inserido como um campo atualizável ('Atualizar campo'). A base de geração são os estilos de título, não aparência nem seleção manual.",
     analise: {
       A: "INCORRETA. Erro conceitual: seleção manual não alimenta campo indexado — o sumário é regenerável a partir de toda a estrutura, não de um recorte.",
-      B: "CORRETA. Reúne os dois elementos corretos: estilos de título como fonte e campo atualizável como mecanismo.",
+      B: "INCORRETA. Erro conceitual: confundir recursos do grupo 'Referências'. Lista de figuras/legendas é gerada por legendas automáticas (topico-8), não é a fonte do sumário.",
       C: "INCORRETA. Erro conceitual: aparência × estrutura (idêntico ao erro documentado no exemplo 'erro' do módulo: formatação direta não é reconhecida).",
-      D: "INCORRETA. Erro conceitual: confundir recursos do grupo 'Referências'. Lista de figuras/legendas é gerada por legendas automáticas (topico-8), não é a fonte do sumário."
+      D: "CORRETA. Reúne os dois elementos corretos: estilos de título como fonte e campo atualizável como mecanismo."
     },
     regra: "Sumário = campo indexado por estilos de título; atualização manual via 'Atualizar campo' após mudanças estruturais.",
     pegadinha: "A alternativa C repete o erro mais comum dos alunos — a VUNESP a coloca em posição de plausibilidade justamente porque 'negrito grande' parece título.",
@@ -3279,7 +3279,7 @@ id: "q-m1-09",
       { letra: "D", texto: "Converter o documento em texto simples." },
       { letra: "E", texto: "Desativar o cabeçalho em todo o documento." }
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "A opção Primeira Página Diferente permite ocultar ou personalizar cabeçalho e rodapé da capa sem removê-los das páginas seguintes. Uma quebra de seção é útil quando partes do documento precisam de layouts ou numerações diferentes.",
     analise: {
       A: "INCORRETA. Negrito muda a aparência do texto, não a exibição do cabeçalho.",
