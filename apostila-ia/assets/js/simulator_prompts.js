@@ -149,7 +149,7 @@
       filled += i < val ? '\u25a0' : '\u25a1';
     }
     var classe = val >= 4 ? 'sim-prom-ok' : val >= 2 ? 'sim-prom-aviso' : 'sim-prom-err';
-    return '<span class="' + classe + '">' + esc(label) + ': ' + filled + ' (' + val + '/5)</span>';
+    return '<span class="' + esc(classe) + '">' + esc(label) + ': ' + filled + ' (' + val + '/5)</span>';
   }
 
   /* ------------------------------------------------------------------
@@ -326,7 +326,7 @@
     if (!alvo || !alvo.getAttribute || alvo.getAttribute('data-act') !== 'prom-mostrar-indicadores') return;
     var exId = alvo.getAttribute('data-ex');
     if (!exId) return;
-    var box = containerEl.querySelector('#prom-ind-' + exId);
+    var box = containerEl.querySelector('#' + CSS.escape('prom-ind-' + exId));
     if (!box) return;
     if (box.style.display === 'block') {
       box.style.display = 'none';
@@ -341,7 +341,7 @@
     var box = containerEl.querySelector('#prom-resultado');
     if (!box) return;
     if (classe) {
-      box.innerHTML = '<div class="' + classe + '">' + html + '</div>';
+      box.innerHTML = '<div class="' + esc(classe) + '">' + html + '</div>';
     } else {
       box.innerHTML = html;
     }

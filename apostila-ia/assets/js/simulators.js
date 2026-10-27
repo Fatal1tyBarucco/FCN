@@ -1573,12 +1573,12 @@
         var vals = plan.listar();
         excelCols.forEach(function (c) {
           for (var r = 1; r <= excelDefault.length; r++) {
-            var span = containerEl.querySelector("#excel-res-" + (c + r));
+            var span = containerEl.querySelector("#" + CSS.escape("excel-res-" + (c + r)));
             if (span) span.textContent = excelFmt(vals[c + r]);
           }
         });
         excelComparacao.forEach(function (f) {
-          var sp = containerEl.querySelector("#" + f[2]);
+          var sp = containerEl.querySelector("#" + CSS.escape(f[2]));
           if (sp) sp.textContent = excelFmt(ExcelSimulator.calcularFormula(f[1], plan));
         });
       }
@@ -1594,7 +1594,7 @@
         var i = row - 1;
         if (i < 0 || i >= entradas.length || j < 0) return;
         entradas[i][j] = alvo.value;
-        var span = containerEl.querySelector("#excel-res-" + ref);
+        var span = containerEl.querySelector("#" + CSS.escape("excel-res-" + ref));
         try {
           plan.definir(ref, alvo.value);
           renderValores();
@@ -1627,8 +1627,8 @@
       }
 
       function verificarExercicio(id) {
-        var inp = containerEl.querySelector("#excel-ex-" + id);
-        var fb = containerEl.querySelector("#excel-fb-" + id);
+        var inp = containerEl.querySelector("#" + CSS.escape("excel-ex-" + id));
+        var fb = containerEl.querySelector("#" + CSS.escape("excel-fb-" + id));
         if (!inp || !fb) return;
         var txt = (inp.value || "").trim();
         if (!txt) { fb.innerHTML = '<span class="sim-excel-fb sim-excel-err">Digite uma fórmula.</span>'; return; }
@@ -1641,7 +1641,7 @@
         var ok = conferirExercicio(id, res, esperado);
         var classe = ok ? "sim-excel-ok" : "sim-excel-err";
         var label = ok ? "Correto" : "Incorreto";
-        fb.innerHTML = '<span class="sim-excel-fb ' + classe + '">' + esc(label) + " — resultado: " + esc(excelFmt(res)) + "; esperado: " + esc(excelFmt(esperado)) + ". " + esc(meta.explicacao) + "</span>";
+        fb.innerHTML = '<span class="sim-excel-fb ' + esc(classe) + '">' + esc(label) + " — resultado: " + esc(excelFmt(res)) + "; esperado: " + esc(excelFmt(esperado)) + ". " + esc(meta.explicacao) + "</span>";
       }
 
       function conferirExercicio(id, res, esperado) {

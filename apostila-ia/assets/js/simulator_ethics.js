@@ -201,12 +201,14 @@
       if (cenarios[i].id === cenId) { cen = cenarios[i]; break; }
     }
     if (!cen) return;
-    var radios = containerEl.querySelectorAll('input[name="etica-' + cenId + '"]');
+    var allRadios = containerEl.querySelectorAll('input[type="radio"]');
+    var radios = [];
+    for (var _r = 0; _r < allRadios.length; _r++) { if (allRadios[_r].name === 'etica-' + cenId) radios.push(allRadios[_r]); }
     var selecionado = -1;
     for (var j = 0; j < radios.length; j++) {
       if (radios[j].checked) { selecionado = parseInt(radios[j].value, 10); break; }
     }
-    var fb = containerEl.querySelector('#etica-fb-' + cenId);
+    var fb = containerEl.querySelector('#' + CSS.escape('etica-fb-' + cenId));
     if (!fb) return;
     if (selecionado === -1) {
       fb.innerHTML = '<div class="sim-etica-fb sim-etica-aviso">Selecione uma opção antes de verificar.</div>';
@@ -215,7 +217,7 @@
     var ok = selecionado === cen.correta;
     var classe = ok ? 'sim-etica-ok' : 'sim-etica-err';
     var label = ok ? 'Correto' : 'Incorreto';
-    var texto = '<div class="sim-etica-fb ' + classe + '">'
+    var texto = '<div class="sim-etica-fb ' + esc(classe) + '">'
       + esc(label) + ': ' + esc(cen.justificativa)
       + '<br><strong>Princípio/dispositivo:</strong> ' + esc(cen.principio)
       + '</div>';

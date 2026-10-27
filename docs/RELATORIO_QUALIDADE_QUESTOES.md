@@ -63,3 +63,22 @@ Nenhum par idêntico detectado.
   - q-m1-40 a q-m1-44: exportação PDF, cabeçalhos/rodapés ("Primeira Página Diferente"), Tabelas do Excel, filtros/validação/formatação condicional e relatório técnico integrado (estilos, seções, campos, PDF acessível) consistentes com o currículo e fontes Microsoft Support.
 - Fontes: mantidas (Microsoft Support/Learn, RFCs quando aplicável); nenhuma URL inventada ou removida.
 - Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
+
+## Revisão semântica — lote M2 q-m2-01..q-m2-10 (2026-10-27)
+
+- Questões revisadas: 10 (q-m2-01 a q-m2-10). Módulo 2, subtópicos m2-u1-t1-s1 (conceitos e componentes), m2-u1-t1-s2 (classificação de redes) e m2-u1-t1-s3 (topologias físicas e lógicas).
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores e fonte; cruzamento com `apostila-ia/assets/data/curriculum_m2.js` (unidade 2.1, tópico 1, subtópicos s1–s3) e exemplos/exercícios registrados.
+- Resultado: gabaritos mantidos (B, errado, A, B, C, certo, C, errado, B, errado). Nenhum gabarito alterado.
+- Correções aplicadas: nenhuma. Itens verificados individualmente:
+  - q-m2-01: função principal do servidor (fornecer recursos/serviços); distratores cobrem cliente, roteamento/WAN e item absurdo (energia).
+  - q-m2-02: CE falso por absoluto "nunca"; servidor pode ser cliente de outro servidor (servidor web → banco de dados).
+  - q-m2-03: mapeamento nós/enlaces/clientes/servidores do exemplo resolvido do currículo (20 estações, servidor de arquivos e de impressão).
+  - q-m2-04: P2P torna papéis dinâmicos, sem eliminá-los; implementações podem usar coordenação/indexação.
+  - q-m2-05: prefeitura em uma cidade → MAN; WAN é tentação por "maior".
+  - q-m2-06: WLAN é subtipo de LAN (meio sem fio), não categoria autônoma.
+  - q-m2-07: São Paulo–Rio de Janeiro → WAN, com VPN ou circuito dedicado; MAN cobre uma única área metropolitana.
+  - q-m2-08: intranet (privada/restrita) ≠ Internet (pública global), embora ambas usem TCP/IP.
+  - q-m2-09: 12 estações convergindo a switch central → estrela (12 enlaces, não malha completa de 66).
+  - q-m2-10: em estrela, falha de nó afeta apenas o nó; falha do central derruba a rede (inversão do enunciado).
+- Fontes: mantidas (Cisco LAN/WAN/topologia; IETF RFC 1122 quando aplicável); nenhuma URL inventada ou removida.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.

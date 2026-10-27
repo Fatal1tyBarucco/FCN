@@ -620,7 +620,7 @@
     alvo.classList.remove('sim-dados-err');
     dados[linha][field] = num;
     /* Atualiza apenas a célula de média desta linha (não reconstrói a tabela). */
-    var mediaCell = containerEl.querySelector('input[data-field="media"][data-linha="' + linha + '"]');
+    var mediaCell = containerEl.querySelector('input[data-field="media"][data-linha="' + CSS.escape(String(linha)) + '"]');
     if (mediaCell) mediaCell.value = fmt(mediaAluno(dados[linha]), 1);
     dataRefreshVisuals(containerEl, dados, state);
   }

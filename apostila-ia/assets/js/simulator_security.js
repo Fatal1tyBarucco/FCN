@@ -217,11 +217,12 @@
    * UI builders
    * ------------------------------------------------------------------ */
   function securityBuildMsgBox(msg, indice) {
-    var riscoClasse = 'sim-sec-risco-' + msg.risco;
+    var riscoVal = (msg.risco === 'alto' || msg.risco === 'medio' || msg.risco === 'baixo') ? msg.risco : 'baixo';
+    var riscoClasse = 'sim-sec-risco-' + riscoVal;
     return '<div class="sim-sgmt-msg" data-msg="' + esc(msg.id) + '">'
       + '<div class="sim-sgmt-msg-header">'
       + '<span class="sim-sgmt-emit">De: ' + esc(msg.remetenteExibido) + '</span>'
-      + '<span class="sim-sec-risco ' + riscoClasse + '">Risco: ' + esc(msg.risco.toUpperCase()) + '</span>'
+      + '<span class="sim-sec-risco ' + esc(riscoClasse) + '">Risco: ' + esc(msg.risco.toUpperCase()) + '</span>'
       + '</div>'
       + '<div class="sim-sgmt-assunto">' + esc(msg.assunto) + '</div>'
       + '<div class="sim-sgmt-corpo">' + esc(msg.corpo) + '</div>'
@@ -337,12 +338,12 @@
       if (mensagens[i].id === msgId) { msg = mensagens[i]; break; }
     }
     if (!msg) return;
-    var fb = containerEl.querySelector('#sec-fb-' + msgId);
+    var fb = containerEl.querySelector('#' + CSS.escape('sec-fb-' + msgId));
     if (!fb) return;
     var correto = (resp === 'phishing' && msg.ehPhishing) || (resp === 'seguro' && !msg.ehPhishing);
     var classe = correto ? 'sim-sec-ok' : 'sim-sec-err';
     var label = correto ? 'Correto' : 'Incorreto';
-    var html = '<div class="sim-sec-fb ' + classe + '">' + esc(label) + ': esta mensagem \u00e9 '
+    var html = '<div class="sim-sec-fb ' + esc(classe) + '">' + esc(label) + ': esta mensagem \u00e9 '
       + (msg.ehPhishing ? 'PHISHING' : 'SEGURA') + '. ' + esc(msg.justificativa) + '</div>';
     fb.innerHTML = html;
     securityUpdateProgress(containerEl);
@@ -359,7 +360,7 @@
       if (mensagens[i].id === msgId) { msg = mensagens[i]; break; }
     }
     if (!msg) return;
-    var box = containerEl.querySelector('#sec-ind-' + msgId);
+    var box = containerEl.querySelector('#' + CSS.escape('sec-ind-' + msgId));
     if (!box) return;
     if (box.style.display === 'block') {
       box.style.display = 'none';
@@ -406,7 +407,7 @@
     var detalhes = erros.length === 0
       ? 'Sua pol\u00edtica atende ao princ\u00edpio 3-2-1. C\u00f3pia imut\u00e1vel: ' + (imutavel ? 'sim' : 'n\u00e3o (recomendado).') + ' RPO/RTO: defina periodicidade de backup e teste de restaura\u00e7\u00e3o periodicamente.'
       : erros.join(', ') + '. Regra 3-2-1: 3 c\u00f3pias, 2 m\u00eddias, 1 offsite.';
-    fb.innerHTML = '<div class="sim-sec-fb ' + classe + '">' + esc(label) + ': ' + esc(detalhes) + '</div>';
+    fb.innerHTML = '<div class="sim-sec-fb ' + esc(classe) + '">' + esc(label) + ': ' + esc(detalhes) + '</div>';
   }
 
   function securityOnAuthz(e, containerEl) {
@@ -420,12 +421,14 @@
       if (exerciciosAuthz[i].id === exId) { ex = exerciciosAuthz[i]; break; }
     }
     if (!ex) return;
-    var radios = containerEl.querySelectorAll('input[name="authz-' + exId + '"]');
+    var allRadios = containerEl.querySelectorAll('input[type="radio"]');
+    var radios = [];
+    for (var _r = 0; _r < allRadios.length; _r++) { if (allRadios[_r].name === 'authz-' + exId) radios.push(allRadios[_r]); }
     var selecionado = -1;
     for (var j = 0; j < radios.length; j++) {
       if (radios[j].checked) { selecionado = parseInt(radios[j].value, 10); break; }
     }
-    var fb = containerEl.querySelector('#authz-fb-' + exId);
+    var fb = containerEl.querySelector('#' + CSS.escape('authz-fb-' + exId));
     if (!fb) return;
     if (selecionado === -1) {
       fb.innerHTML = '<div class="sim-sec-fb sim-sec-aviso">Selecione uma op\u00e7\u00e3o antes de verificar.</div>';
@@ -434,7 +437,7 @@
     var ok = selecionado === ex.correta;
     var classe = ok ? 'sim-sec-ok' : 'sim-sec-err';
     var label = ok ? 'Correto' : 'Incorreto';
-    fb.innerHTML = '<div class="sim-sec-fb ' + classe + '">' + esc(label) + ': ' + esc(ex.justificativa) + '</div>';
+    fb.innerHTML = '<div class="sim-sec-fb ' + esc(classe) + '">' + esc(label) + ': ' + esc(ex.justificativa) + '</div>';
   }
 
   function securityOnClick(e, containerEl) {
