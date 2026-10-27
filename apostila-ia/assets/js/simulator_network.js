@@ -81,6 +81,11 @@
   }
 
   function _calcularCIDR(ip, mascara) {
+    if (typeof ip === 'string' && ip.indexOf('/') !== -1 && !mascara) {
+      var partes = ip.split('/');
+      ip = partes[0];
+      mascara = '/' + partes[1];
+    }
     if (!ip || !mascara) return 'ERRO: informe IP e máscara (ex: 192.168.1.0/24 ou IP + 255.255.255.0).';
     var prefixo;
     if (mascara.indexOf('/') === 0) {

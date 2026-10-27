@@ -31,7 +31,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "A legalidade impede que o Poder Executivo edite atos normativos de regulamentação." }
     ],
     gabarito: "B",
-    justificativa: "A legalidade administrativa submete a atuação pública à Constituição e às normas aplicáveis, inclusive quanto à competência e ao procedimento. A alternativa A transpõe indevidamente para a Administração a lógica geral de liberdade dos particulares; B erra porque eficiência não autoriza descumprir a lei; C está correta; D confunde legalidade com disponibilidade orçamentária, que não basta para autorizar o ato; E erra porque o poder regulamentar pode ser exercido nos limites legais.",
+    justificativa: "A legalidade administrativa submete a atuação pública à Constituição e às normas aplicáveis, inclusive quanto à competência e ao procedimento. A alternativa A transpõe indevidamente para a Administração a lógica geral de liberdade dos particulares; B está correta, ao traduzir a legalidade como submissão à norma, com competência e procedimento; C erra porque eficiência não autoriza descumprir a lei; D confunde legalidade com disponibilidade orçamentária, que não basta para autorizar o ato; E erra porque o poder regulamentar pode ser exercido nos limites legais.",
     analise: {
       A: "INCORRETA. Erro conceitual de inversão de regimes: no direito privado, o que não é proibido é permitido; na Administração, só é permitido o que a norma autoriza.",
       B: "CORRETA. Traduz a legalidade como submissão à norma, com competência e procedimento — a formulação compatível com o art. 37, caput, da CF/88.",

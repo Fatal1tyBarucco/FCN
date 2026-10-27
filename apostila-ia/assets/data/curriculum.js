@@ -11,6 +11,12 @@ const curriculum = {
           {
             "id": "modulo-1-unidade-1-topico-1",
             "titulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+            "metadados": {
+              "recursosVisuais": [],
+              "fontes": [],
+              "testes": ["node-check", "smoke-vm"],
+              "estado": "implementado"
+            },
             "subtopicos": [
               {
                 "id": "modulo-1-unidade-1-topico-1-sub-1",
@@ -25,7 +31,8 @@ const curriculum = {
                 "exercicios": [
                   { "tipo": "certos_erro", "enunciado": "(C/E) O Office LTSC inclui Teams e atualizações de funcionalidades continuamente.", "resposta": "Errado. LTSC = apenas apps selecionados, apenas segurança, sem Teams/OneDrive cloud." },
                   { "tipo": "multipla", "enunciado": "Qual é a diferença principal entre M365 e versão perpétua? A) Preço; B) Modelo de assinatura vs compra única + atualizações; C) Apenas interface.", "resposta": "B" }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar um produto Microsoft (M365/LTSC/perpétuo) a partir de requisitos de colaboração, atualização e licenciamento, evidenciado por resposta correta a item de múltipla escolha."
               },
               {
                 "id": "modulo-1-unidade-1-topico-1-sub-2",

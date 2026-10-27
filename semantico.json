@@ -1,0 +1,232 @@
+{
+  "gerado_em": "2026-10-27",
+  "escopo": "Revisão semântica read-only. Amostra estratificada: 3 questões por módulo (1 básica, 1 intermediária, 1 avançada), total 24.",
+  "totais_por_arquivo": {
+    "questions.js": 145,
+    "questions_m4.js": 85,
+    "questions_m5.js": 42,
+    "questions_m6.js": 47,
+    "questions_m7.js": 40,
+    "questions_m8.js": 40,
+    "total": 399
+  },
+  "observacao_contagens": "O total real nos 6 arquivos é 399 (145+85+42+47+40+40). O AGENTS.md citava M7=33 e total 324, mas o arquivo questions_m7.js contém 40 itens (q-m7-01..q-m7-40); portanto a contagem atual do código é 40 e o total 399. Cabeçalho de questions_m4.js declara 85 e confere. Nenhum .js foi editado.",
+  "questoes": [
+    {
+      "modulo": 1,
+      "id_questao": "q-m1-01",
+      "arquivo": "questions.js",
+      "nivel": "basico",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 65 (id q-m1-01), gabarito D; análise: CORRETA. A assinatura com plano elegível confirmado é a única opção compatível com os requisitos descritos; a cota de 5 TB, o direito ao Teams e as condições de atualização devem constar da documentação da licença contratada."
+    },
+    {
+      "modulo": 1,
+      "id_questao": "q-m1-04",
+      "arquivo": "questions.js",
+      "nivel": "intermediario",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 146 (id q-m1-04), gabarito certo; análise: Leitura que induz ao erro: generalizar os 5 TB para todos os planos. O item é verdadeiro justamente porque o enunciado limita a 'Enterprise' — se ele dissesse 'em todos os planos Microsoft 365', seria FALSO."
+    },
+    {
+      "modulo": 1,
+      "id_questao": "q-m1-07",
+      "arquivo": "questions.js",
+      "nivel": "avancado",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 221 (id q-m1-07), gabarito B; análise: INCORRETA. Erro conceitual: premissa falsa. O currículo atribui 'políticas de segurança avançadas' às contas organizacionais no M365 — a negação de suporte em contas nuvem não existe no conteúdo base."
+    },
+    {
+      "modulo": 2,
+      "id_questao": "q-m2-01",
+      "arquivo": "questions.js",
+      "nivel": "basico",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 923 (id q-m2-01), gabarito B; análise: INCORRETA. Erro conceitual: desconexão com o conteúdo — rede compartilha recursos e informação, não energia elétrica."
+    },
+    {
+      "modulo": 2,
+      "id_questao": "q-m2-03",
+      "arquivo": "questions.js",
+      "nivel": "intermediario",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 975 (id q-m2-03), gabarito A; análise: INCORRETA. Erro conceitual: restrição geográfica indevida. A classificação cliente-servidor descreve qualquer comunicação de rede, interna ou não."
+    },
+    {
+      "modulo": 2,
+      "id_questao": "q-m2-04",
+      "arquivo": "questions.js",
+      "nivel": "avancado",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 1004 (id q-m2-04), gabarito B; análise: INCORRETA. Erro conceitual: nega a oferta de recursos; e a inexistência de servidor dedicado não apaga o papel funcional de servidor."
+    },
+    {
+      "modulo": 3,
+      "id_questao": "q-m3-01",
+      "arquivo": "questions.js",
+      "nivel": "basico",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 1623 (id q-m3-01), gabarito C; análise: INCORRETA. Erro conceitual: a porta 143 é do IMAP sem criptografia — protocolo de recebimento."
+    },
+    {
+      "modulo": 3,
+      "id_questao": "q-m3-02",
+      "arquivo": "questions.js",
+      "nivel": "intermediario",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 1652 (id q-m3-02), gabarito certo; análise: Item VERDADEIRO. Camada de aplicação (7) + transporte TCP (4) é a arquitetura descrita no conteúdo e confirmada no exercício."
+    },
+    {
+      "modulo": 3,
+      "id_questao": "q-m3-15",
+      "arquivo": "questions.js",
+      "nivel": "avancado",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 1999 (id q-m3-15), gabarito B; análise: INCORRETA. Erro conceitual: marketing não solicita credenciais por link fingindo autoridade; citação interna é engenharia social, não comercialização."
+    },
+    {
+      "modulo": 4,
+      "id_questao": "q-m4-01",
+      "arquivo": "questions_m4.js",
+      "nivel": "basico",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 40 (id q-m4-01), gabarito C; análise: INCORRETA. Não repúdio impede a negação de uma operação realizada, sendo um requisito complementar."
+    },
+    {
+      "modulo": 4,
+      "id_questao": "q-m4-04",
+      "arquivo": "questions_m4.js",
+      "nivel": "intermediario",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 115 (id q-m4-04), gabarito errado; análise: INCORRETA. Controles corretivos agem depois da ocorrência de um incidente (ex: remediação, recuperação), não antes. Controles preventivos agem antes (ex: firewall, criptografia), e controles detectivos identificam a ocorrência (ex: IDS, logs)."
+    },
+    {
+      "modulo": 4,
+      "id_questao": "q-m4-09",
+      "arquivo": "questions_m4.js",
+      "nivel": "avancado",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 231 (id q-m4-09), gabarito B; análise: INCORRETA. Criptografia é um controle de segurança, não o único controle de acesso."
+    },
+    {
+      "modulo": 5,
+      "id_questao": "q-m5-01",
+      "arquivo": "questions_m5.js",
+      "nivel": "basico",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 10 (id q-m5-01), gabarito E; análise: CORRETA. A definição cobre diferentes tarefas e abordagens sem atribuir capacidades humanas universais."
+    },
+    {
+      "modulo": 5,
+      "id_questao": "q-m5-02",
+      "arquivo": "questions_m5.js",
+      "nivel": "intermediario",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 35 (id q-m5-02), gabarito D; análise: INCORRETA. Regras podem entrar em conflito, ficar desatualizadas ou não cobrir exceções; testes continuam necessários."
+    },
+    {
+      "modulo": 5,
+      "id_questao": "q-m5-20",
+      "arquivo": "questions_m5.js",
+      "nivel": "avancado",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 487 (id q-m5-20), gabarito B; análise: INCORRETA. Desbalanceamento não invalida automaticamente o conjunto de teste; exige desenho de avaliação e métricas adequados, mantendo uma amostra representativa do uso pretendido."
+    },
+    {
+      "modulo": 6,
+      "id_questao": "q-m6-01",
+      "arquivo": "questions_m6.js",
+      "nivel": "basico",
+      "resultado": "REVISAR",
+      "motivo": "Justificativa contradiz gabarito e análise: afirma 'B erra porque eficiência não autoriza descumprir a lei' e 'C está correta', mas o gabarito é B e a análise marca B como CORRETA e C como incorreta (C afasta norma por eficiência).",
+      "citacao": "linha 22 (id q-m6-01), justificativa: \"A alternativa A transpõe indevidamente para a Administração a lógica geral de liberdade dos particulares; B erra porque eficiência não autoriza descumprir a lei; C está correta; D confunde legalidade com disponibilidade orçamentária, que não basta para autorizar o ato; E erra porque o poder regulamentar pode ser exercido nos limites legais.\" (gabarito: B; análise: B CORRETA)."
+    },
+    {
+      "modulo": 6,
+      "id_questao": "q-m6-05",
+      "arquivo": "questions_m6.js",
+      "nivel": "intermediario",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 122 (id q-m6-05), gabarito C; análise: INCORRETA. Erro conceitual: sem indicador não há verificação de eficiência; o painel do art. 22 existe justamente para medi-la."
+    },
+    {
+      "modulo": 6,
+      "id_questao": "q-m6-10",
+      "arquivo": "questions_m6.js",
+      "nivel": "avancado",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 249 (id q-m6-10), gabarito A; análise: INCORRETA. Erro conceitual: excluir casos em andamento elimina justamente a informação sobre fila e tempo de espera."
+    },
+    {
+      "modulo": 7,
+      "id_questao": "q-m7-01",
+      "arquivo": "questions_m7.js",
+      "nivel": "basico",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 25 (id q-m7-01), gabarito E; análise: CORRETA. Número sem unidade, sem titular e sem data permanece registro bruto — o nível 'dado' do DIKW."
+    },
+    {
+      "modulo": 7,
+      "id_questao": "q-m7-06",
+      "arquivo": "questions_m7.js",
+      "nivel": "intermediario",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 185 (id q-m7-06), gabarito C; análise: INCORRETA. O problema é conceitual (tipo de variável), não de precisão do cálculo."
+    },
+    {
+      "modulo": 7,
+      "id_questao": "q-m7-18",
+      "arquivo": "questions_m7.js",
+      "nivel": "avancado",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 457 (id q-m7-18), gabarito C; análise: INCORRETA. Ignora que o valor registrado não corresponde à pessoa real."
+    },
+    {
+      "modulo": 8,
+      "id_questao": "q-m8-01",
+      "arquivo": "questions_m8.js",
+      "nivel": "basico",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 21 (id q-m8-01), gabarito certo; análise: Item VERDADEIRO. A definição do gráfico é imposta pela tarefa analítica, e não pela ferramenta. Leitura incorreta: achar que 'preciso de uma rosca porque tenho uma rosca', ignorando que a pergunta impõe barras ou tabela."
+    },
+    {
+      "modulo": 8,
+      "id_questao": "q-m8-13",
+      "arquivo": "questions_m8.js",
+      "nivel": "intermediario",
+      "resultado": "REVISAR",
+      "motivo": "Justificativa atribui incorretamente a alternativa correta: diz 'A alternativa B reproduz isso', mas o gabarito é D e a análise marca D como CORRETA; também rotula D como 'cores claras sem escala', quando D é a paleta sequencial.",
+      "citacao": "linha 317 (id q-m8-13), justificativa: \"O currículo classifica a variável como sequencial ... A alternativa B reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (D) não comunicam magnitude.\" (gabarito: D; análise: D CORRETA)."
+    },
+    {
+      "modulo": 8,
+      "id_questao": "q-m8-30",
+      "arquivo": "questions_m8.js",
+      "nivel": "avancado",
+      "resultado": "OK",
+      "motivo": "Sem inconsistência detectada na amostra: gabarito coerente com a análise individual e com a justificativa; distratores explicados por erro conceitual.",
+      "citacao": "linha 810 (id q-m8-30), gabarito B; análise: INCORRETA. Erro conceitual: o DAX respeita o contexto de filtro; a medida não é fixa."
+    }
+  ]
+}

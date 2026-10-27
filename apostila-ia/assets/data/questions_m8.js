@@ -331,7 +331,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Paleta sequencial, com variação de luminosidade de uma cor para outra, de claro para escuro." }
     ],
     gabarito: "D",
-    justificativa: "O currículo classifica a variável como sequencial (magnitude contínua, ordenada) e indica paleta sequencial: variação de luminosidade de uma cor, de menor a maior, respeitando a ordem perceptiva. A alternativa B reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (D) não comunicam magnitude.",
+    justificativa: "O currículo classifica a variável como sequencial (magnitude contínua, ordenada) e indica paleta sequencial: variação de luminosidade de uma cor, de menor a maior, respeitando a ordem perceptiva. A alternativa D reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (B) não comunicam magnitude.",
     analise: {
       A: "INCORRETA. Erro conceitual: variável contínua ordenada não é categórica; as cores distintas impõem divisões artificiais.",
       B: "INCORRETA. Erro conceitual: sem escala, o leitor não decora a intensidade; a regra de ouro é escala para magnitude.",

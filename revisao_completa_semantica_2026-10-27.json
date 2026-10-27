@@ -1,0 +1,86 @@
+{
+  "data": "2026-10-27",
+  "total_verificado": 399,
+  "total_consistente": 388,
+  "total_revisar": 11,
+  "questoes_com_revisao": 11,
+  "lista_revisoes": [
+    {
+      "id": "q-m4-04",
+      "arquivo": "apostila-ia/assets/data/questions_m4.js",
+      "tipo_inconsistencia": "analise_incompleta_ce",
+      "trecho_citado": "analise keys: item",
+      "observacao": "CE com menos de 2 entradas de analise (falta leituraIncorreta)."
+    },
+    {
+      "id": "q-m5-26",
+      "arquivo": "apostila-ia/assets/data/questions_m5.js",
+      "tipo_inconsistencia": "analise_incompleta_ce",
+      "trecho_citado": "analise keys: item",
+      "observacao": "CE com menos de 2 entradas de analise (falta leituraIncorreta)."
+    },
+    {
+      "id": "q-m5-33",
+      "arquivo": "apostila-ia/assets/data/questions_m5.js",
+      "tipo_inconsistencia": "analise_incompleta_ce",
+      "trecho_citado": "analise keys: item",
+      "observacao": "CE com menos de 2 entradas de analise (falta leituraIncorreta)."
+    },
+    {
+      "id": "q-m6-02",
+      "arquivo": "apostila-ia/assets/data/questions_m6.js",
+      "tipo_inconsistencia": "justificativa_afirma_outra_correta",
+      "trecho_citado": "Impessoalidade exige que a Administração aplique critérios objetivos, previamente definidos e compatíveis com a lei, sem favorecimento pessoal. A alternativa A permite arbítrio individual; B propõe si",
+      "observacao": "justificativa afirma correta para C mas gabarito=B."
+    },
+    {
+      "id": "q-m6-04",
+      "arquivo": "apostila-ia/assets/data/questions_m6.js",
+      "tipo_inconsistencia": "justificativa_afirma_outra_correta",
+      "trecho_citado": "A LAI estabelece a publicidade como preceito geral e o sigilo como exceção (art. 3º, I), enquanto a Constituição ressalva hipóteses de sigilo imprescindível à segurança da sociedade e do Estado. A alt",
+      "observacao": "justificativa afirma correta para C mas gabarito=B."
+    },
+    {
+      "id": "q-m8-16",
+      "arquivo": "apostila-ia/assets/data/questions_m8.js",
+      "tipo_inconsistencia": "justificativa_afirma_gabarito_errado",
+      "trecho_citado": "O currículo define: comparar categorias → barras (com ordenação decrescente quando for ranqueamento); evoluir no tempo → linhas; distribuir uma variável quantitativa → histograma. A alternativa D segu",
+      "observacao": "justificativa afirma que a alternativa do gabarito (D) está errada/incorreta."
+    },
+    {
+      "id": "q-m8-17",
+      "arquivo": "apostila-ia/assets/data/questions_m8.js",
+      "tipo_inconsistencia": "justificativa_afirma_gabarito_errado",
+      "trecho_citado": "Quando as classes têm larguras diferentes, a área de cada retângulo representa a frequência e a altura representa a densidade (frequência ÷ largura). Isso permite representar corretamente as frequênci",
+      "observacao": "justificativa afirma que a alternativa do gabarito (D) está errada/incorreta."
+    },
+    {
+      "id": "q-m8-23",
+      "arquivo": "apostila-ia/assets/data/questions_m8.js",
+      "tipo_inconsistencia": "justificativa_afirma_gabarito_errado",
+      "trecho_citado": "O currículo distingue erro de amostragem (flutuação esperada, reduzida com n maior) de viés (erro sistemático, não desaparece com amostra grande). A alternativa D reproduz exatamente isso. A A erra: 1",
+      "observacao": "justificativa afirma que a alternativa do gabarito (D) está errada/incorreta."
+    },
+    {
+      "id": "q-m8-27",
+      "arquivo": "apostila-ia/assets/data/questions_m8.js",
+      "tipo_inconsistencia": "justificativa_afirma_gabarito_errado",
+      "trecho_citado": "O currículo registra: 'ordem alfabética só quando a consulta alfabética for o uso real; ordenação afeta a leitura: a mesma tabela com barras decrescentes comunica ranking; embaralhada, esconde o pior ",
+      "observacao": "justificativa afirma que a alternativa do gabarito (C) está errada/incorreta."
+    },
+    {
+      "id": "q-m8-33",
+      "arquivo": "apostila-ia/assets/data/questions_m8.js",
+      "tipo_inconsistencia": "justificativa_afirma_gabarito_errado",
+      "trecho_citado": "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa B reprodu",
+      "observacao": "justificativa afirma que a alternativa do gabarito (D) está errada/incorreta."
+    },
+    {
+      "id": "q-m8-34",
+      "arquivo": "apostila-ia/assets/data/questions_m8.js",
+      "tipo_inconsistencia": "justificativa_afirma_gabarito_errado",
+      "trecho_citado": "O limite dos bigodes depende do multiplicador aplicado ao IIQ e da convenção adotada. Como o cenário fixa o mesmo conjunto e o mesmo método de quartis, a diferença decorre do multiplicador configurado",
+      "observacao": "justificativa afirma que a alternativa do gabarito (D) está errada/incorreta."
+    }
+  ]
+}
