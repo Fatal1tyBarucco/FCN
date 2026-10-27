@@ -300,3 +300,10 @@ A correção pontual q-m6-41–q-m6-44 foi commitada no branch do PR #17 (`7c9b0
 - P2: acessibilidade manual (leitor de tela, WCAG manual, dispositivos).
 
 **Limite de delegação:** o limite de uso free dos subagentes foi atingido nesta sessão; as tarefas de conteúdo (P0-1, P0-4, P1-1) requerem delegação a @conteudo/@revisor quando o limite resetar. A orquestração de governança (docs, sincronização, CI) foi concluída.
+
+
+## Reconciliação 2026-10-27
+
+- P0-1 (fontes): concluído. P0-4 (revisão semântica, 399 IDs): concluído. P1-1 (5 gabaritos corrigidos): concluído. P2-4 (183 URLs verificadas, 1 pendência login): concluído. P2-6 (auditoria persistência): concluído.
+- Contagens atuais: 399 questões, 460 flashcards, 183 referências.
+- Pendentes mantidos: P2-1, P2-2, P2-3, P1-2, P1-3, P1-4.

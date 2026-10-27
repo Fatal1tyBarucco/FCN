@@ -34,7 +34,7 @@ const moduleQuestions7 = [
       { letra: "D", texto: "Sabedoria." },
       { letra: "E", texto: "Dado." }
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "O currículo define dado como registro bruto, anterior a contexto e interpretação: '238' sem unidade, sem paciente e sem data é exatamente isso. Informação é o dado já contextualizado ('238 mmHg, sistólica do paciente X, medida às 9h'); conhecimento é informação combinada com experiência e julgamento; sabedoria é o discernimento que orienta a decisão; metadado é dado que descreve outro dado, o que não é o caso do número em si.",
     analise: {
       A: "INCORRETA. Metadado descreve outro dado (tipo, unidade, dono, origem); o número 238 é o conteúdo, não a descrição.",
@@ -112,7 +112,7 @@ const moduleQuestions7 = [
       { letra: "D", texto: "Conjunto de metadados técnicos do sensor." },
       { letra: "E", texto: "Informação combinada com experiência e julgamento, apta a orientar ação." }
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "O currículo adota como definição de trabalho: conhecimento é informação combinada com experiência e julgamento, aplicada por alguém ou por regra explícita de decisão. Registro bruto é dado; dado com contexto é informação; metadados descrevem o dado; a decisão executada é o produto da aplicação (sabedoria/ação), não o nível de conhecimento em si.",
     analise: {
       E: "CORRETA. Definição literal do currículo: informação + experiência + julgamento, orientada à ação.",
@@ -138,7 +138,7 @@ const moduleQuestions7 = [
       { letra: "D", texto: "Sabedoria." },
       { letra: "E", texto: "Metadado de processo." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo trata sabedoria como discernimento — o nível em que se julga o que fazer diante de consequências e valores, e não apenas se conhece o mecanismo. Dado é registro bruto; informação é dado contextualizado; conhecimento é informação com experiência e julgamento aplicada a uma regra; metadado de processo registra como o dado chegou (extração, versão do job, responsável).",
     analise: {
       D: "CORRETA. Discernimento sobre consequências e valores na decisão é exatamente o nível de sabedoria.",
@@ -166,7 +166,7 @@ const moduleQuestions7 = [
       { letra: "D", texto: "Não estruturado — semiestruturado — estruturado." },
       { letra: "E", texto: "Estruturado — estruturado — semiestruturado." }
     ],
-    gabarito: "B",
+    gabarito: "C",
     justificativa: "O currículo define: estruturado = schema rígido com tipo, regra e domínio definidos de antemão (tabela relacional, planilha); semiestruturado = sem schema imposto de fora, mas com marcadores internos que descrevem a estrutura (JSON, XML, log), permitindo parsing ainda que campos variem por registro; não estruturado = sem formato computável de campos (texto livre, PDF digitalizado, imagem, áudio, vídeo).",
     analise: {
       C: "CORRETA. Tabela tipada = estruturado; JSON com campos variáveis = semiestruturado; vídeo = não estruturado.",
@@ -362,7 +362,7 @@ const moduleQuestions7 = [
 { letra: "D", texto: "Tempestividade: o dado está atrasado em relação ao fato." },
 { letra: "E", texto: "Unicidade: há registros duplicados na base." }
     ],
-    gabarito: "B",
+    gabarito: "C",
     justificativa: "O currículo define validade pela aderência ao formato, ao domínio e às regras definidas — 'UF com dois dígitos válidos, valor não negativo, código presente na tabela de referência' — e destaca que validade se confere pela REGRA, internamente, enquanto acurácia se confere pela REALIDADE. 'XX' não é UF existente: viola domínio. O campo está preenchido (não é completude), não há atraso nem duplicidade envolvidos.",
     analise: {
       A: "INCORRETA. Confronto com cadastro oficial mede acurácia — outro eixo, mais caro e aqui desnecessário.",

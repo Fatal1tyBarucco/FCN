@@ -164,3 +164,41 @@ Nenhum par idêntico detectado.
   - q-m2-54: acesso por IP ok + falha por nome → hipótese inicial DNS (não prova definitiva).
 - Fontes: mantidas (RFC 1122, 1034/1035, 793, 8446, 9110, 791, 2131, 4251/4253, 959, 4301, 3022, 1918, 4632, 5952, 792); nenhuma URL inventada ou removida.
 - Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
+
+## Revisão semântica — lote M3 q-m3-01..q-m3-10 (2026-10-27)
+
+- Questões revisadas: 10 (q-m3-01 a q-m3-10). Módulo 3, subtópicos m3-u1-t1-s1 (SMTP), m3-u1-t1-s2 (POP3/IMAP) e m3-u1-t1-s3 (cabeçalhos e destinatários).
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores, fonte; cruzamento com `apostila-ia/assets/data/curriculum_m3.js` (unidade 3.1, tópico 1, subtópicos s1–s3) e exemplos/exercícios registrados.
+- Resultado: gabaritos mantidos (C, certo, C, errado, B, C, certo, A, C, certo). Nenhum gabarito alterado.
+- Correções aplicadas: nenhuma. Itens verificados individualmente:
+  - q-m3-01: SMTP seguro = 587 (STARTTLS) ou 465 (SMTPS); 25 é relay e deve ser bloqueado para clientes externos; distratores são portas de POP3/IMAP.
+  - q-m3-02: SMTP na camada de aplicação (7) usando TCP no transporte (4).
+  - q-m3-03: sequência SMTP HELO/EHLO → MAIL FROM → RCPT TO → DATA; destinatário = RCPT TO.
+  - q-m3-04: porta 25 não é recomendada para clientes externos nem "segura" (sem criptografia por padrão).
+  - q-m3-05: cenário multi-dispositivo/sincronização → IMAP; POP3 é download local.
+  - q-m3-06: IMAP com SSL/TLS = 993 (143 sem criptografia; 995 é POP3 seguro).
+  - q-m3-07: POP3 pode remover do servidor conforme configuração do cliente; IMAP mantém estado/pastas no servidor.
+  - q-m3-08: um dispositivo + offline → POP3 (indicação do material).
+  - q-m3-09: Bcc oculta destinatários dos demais (To/Cc são visíveis).
+  - q-m3-10: Cc visível a todos; Bcc oculto, preservando privacidade.
+- Fontes: mantidas (IETF RFC 5321, RFC 8314, RFC 5322, RFC 9051, RFC 1939); nenhuma URL inventada ou removida.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
+
+## Revisão semântica — lote M3 q-m3-11..q-m3-20 (2026-10-27)
+
+- Questões revisadas: 10 (q-m3-11 a q-m3-20). Módulo 3, subtópicos m3-u1-t1-s3 (cabeçalhos e destinatários), m3-u1-t2-s1 (spam, phishing e autenticação) e m3-u2-t1-s1/m3-u2-t2-s1 (calendários e plataformas de reunião).
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores, fonte; cruzamento com `apostila-ia/assets/data/curriculum_m3.js` (unidade 3.1, tópico 1, subtópico s3; unidade 3.1, tópico 2, subtópico s1; unidade 3.2, tópicos 1 e 2) e exemplos/exercícios registrados.
+- Resultado: gabaritos mantidos (C, C, C, certo, B, B, certo, B, C, certo). Nenhum gabarito alterado.
+- Correções aplicadas: nenhuma. Itens verificados individualmente:
+  - q-m3-11: 500 clientes sem expor endereços → Bcc (privacidade + evita respostas em cadeia); Reply-To não oculta destinatários.
+  - q-m3-12: propaganda não solicitada = spam; mensagem fraudulenta se passando por banco = phishing; spoofing é técnica, não classificação do conteúdo.
+  - q-m3-13: DMARC define a política (rejeitar/quarentenar/aceitar) para falhas de SPF/DKIM; SPF = servidores autorizados, DKIM = assinatura.
+  - q-m3-14: SPF/DKIM com DMARC ajudam a reduzir spoofing de domínio, mas não bloqueiam todas as falsificações (nome de exibição, domínios parecidos).
+  - q-m3-15: mensagem personalizada e direcionada (processo interno, nome da chefia) se passando por corregedoria = spear phishing.
+  - q-m3-16: modificação de evento sem controle total → editor (proprietário > editor > comentar > visualização).
+  - q-m3-17: convites distinguem obrigatórios/opcionais, recorrência e lembretes automáticos — item composto, todos confirmados no currículo.
+  - q-m3-18: organização no Google Workspace → Google Meet (integração nativa + navegador, sem instalação); Slack não é descrito no currículo.
+  - q-m3-19: Zoom para 500 participantes e salas paralelas em webinar exige confirmar capacidade licenciada e elegibilidade da licença; não basta assumir que qualquer licença paga inclui ambos.
+  - q-m3-20: lobby permite ao anfitrião aprovar/rejeitar participantes antes da entrada; remoção é faculdade do anfitrião.
+- Fontes: mantidas (IETF RFC 5322, RFC 7208, RFC 6376, RFC 9989; CISA; Microsoft Support; Zoom Support; Google Meet Help); nenhuma URL inventada ou removida. RFC 9989 (DMARC, maio de 2026) confirmada como publicação real.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.

@@ -581,3 +581,10 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] axe-core: zero violações confirmadas.
 - [ ] Avaliar manualmente 89 nós de texto SVG ainda marcados como contraste incompleto e 20 iframes externos.
 - [ ] Revisão semântica independente das 399 questões; verificação HTTP individual das URLs; leitor de tela, teclado e testes em dispositivos/navegadores adicionais.
+
+
+## Reconciliação 2026-10-27
+
+- P0-1 (fontes): concluído. P0-4 (revisão semântica, 399 IDs): concluído. P1-1 (5 gabaritos corrigidos): concluído. P2-4 (183 URLs verificadas, 1 pendência login): concluído. P2-6 (auditoria persistência): concluído.
+- Contagens atuais: 399 questões, 460 flashcards, 183 referências.
+- Pendentes mantidos: P2-1, P2-2, P2-3, P1-2, P1-3, P1-4.

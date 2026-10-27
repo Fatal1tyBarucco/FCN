@@ -3941,7 +3941,7 @@ id: "q-m1-09",
     },
     regra: "Resposta a intrusões combina contenção, controle de participantes e reporte.",
     pegadinha: "Remover o intruso pode ser insuficiente se o link continuar público e as permissões permanecerem abertas.",
-    fonte: "Currículo M3, unidade 5, tópico 1 — zoombombing e intrusão em reuniões."
+    fonte: "Zoom Support — Advanced security settings (Waiting Room, passcode, autenticação): https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061300 (verificado em 2026-10-27)."
   },
   {
     id: "q-m3-46",

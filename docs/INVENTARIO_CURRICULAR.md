@@ -197,3 +197,14 @@ Os arquivos de dados atuais foram recontados por identificadores únicos `q-mN-N
 A Fase 1 foi retomada mediante leitura do prompt mestre completo disponível no repositório e das instruções de `AGENTS.md`. Este documento e a matriz existente foram reutilizados como artefatos-base; não foram recriados do zero. O inventário estrutural documenta 8 módulos e 427 nós curriculares (132 tópicos + 295 subtópicos). A auditoria estrutural é distinta da validação semântica: cada subtópico ainda precisa ser verificado quanto à profundidade didática, exemplos não redundantes, exercícios, flashcards, questões e fontes pertinentes.
 
 **Regra de contagem:** os documentos desta branch registram snapshots em commits diferentes (incluindo 396/399 questões em momentos distintos). Não consolidar números de snapshots como se fossem uma única execução. Antes de atualizar métricas, executar os scripts de auditoria no HEAD exato e registrar SHA, comando, saída e data.
+
+
+## Reconciliação 2026-10-27
+
+- P0-1 (fontes): concluído — 101/102 já tinham fonte; 1 adicionada (q-m3-45). Evidência: docs/REVISAO_SEMANTICA_2026-10-27.md.
+- P0-4 (revisão semântica): concluído — 399/399 IDs revisados. Evidência: docs/REVISAO_SEMANTICA_2026-10-27.md.
+- P1-1 (gabaritos): 5 gabaritos objetivamente errados corrigidos (q-m7-01/04/05/07/11). Evidência: docs/DISTRIBUICAO_GABARITOS_2026-10-27.md.
+- P2-4 (URLs): 183 URLs verificadas (182 acessíveis; 1 login). Evidência: docs/VERIFICACAO_URLS_2026-10-27.md.
+- P2-6 (persistência): auditoria concluída. Evidência: docs/AUDITORIA_PERSISTENCIA_2026-10-27.md.
+- Contagens atuais: 399 questões, 460 flashcards, 183 referências, 888 exemplos, 592 exercícios, 427 nós.
+- Pendentes mantidos: P2-1, P2-2, P2-3, P1-2, P1-3, P1-4.
