@@ -121,3 +121,23 @@ Nenhum par idêntico detectado.
   - q-m2-30: site = unicast (1:1); videoaula para grupo pode usar multicast (um fluxo + IGMP), mais eficiente que 200 fluxos unicast.
 - Fontes: mantidas (Cisco latência/jitter/WAN/LAN; IETF RFC 826, RFC 2131, RFC 1112, RFC 4291); nenhuma URL inventada ou removida.
 - Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
+
+## Revisão semântica — lote M2 q-m2-31..q-m2-40 (2026-10-27)
+
+- Questões revisadas: 10 (q-m2-31 a q-m2-40). Módulo 2, subtópicos m2-u1-t1-s4 (meios de transmissão UTP/fibra), m2-u1-t1-s1 (topologias físicas), m2-u1-t3-s1 (métricas de desempenho), m2-u1-t1-s2 (tipos de comunicação), m2-u4-t2-s1/s2 (cálculo CIDR).
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores e fonte; cruzamento com `apostila-ia/assets/data/curriculum_m2.js` (unidade 2.1, tópicos 1, 3 e 4).
+- Resultado: gabaritos mantidos (B, errado, B, certo, certo, certo, certo, A, certo, A). Nenhum gabarito alterado.
+- Correção aplicada: q-m2-35 — enunciado ajustado para evitar imprecisão ("receptor mais próximo de um grupo" → "instância mais próxima selecionada pela política de roteamento"), alinhando anycast ao currículo (um-para-o-mais-próximo por política de roteamento, não grupo inscrito); gabarito mantido (certo). Demais 9 questões sem alteração de conteúdo.
+- Itens verificados individualmente:
+  - q-m2-31: fábrica com EMI a 300 m → fibra óptica (alta banda, imune a EMI, alcance sem repetidor); UTP limita-se a 100 m (Cat6: 10 Gbps/55 m; Cat6a: 10 Gbps/100 m).
+  - q-m2-32: CE falso — Cat6 suporta 10 Gbps até 55 m (não 100 m; 100 m em 10 Gbps exige Cat6a).
+  - q-m2-33: topologia em estrela (nós ao switch central; falha de nó isolada; falha do central derruba tudo).
+  - q-m2-34: throughput (taxa útil medida) não excede a capacidade nominal (largura de banda), sob definições/unidades compatíveis.
+  - q-m2-35: anycast = um-para-o-mais-próximo (DNS raiz/CDN, por política de roteamento); multicast = grupo inscrito (IGMP join).
+  - q-m2-36: PSTN = comutação de circuitos (caminho dedicado); Internet = comutação de pacotes.
+  - q-m2-37: topologia em barra (bus) — cabo backbone é ponto único de falha; sua ruptura derruba a rede.
+  - q-m2-38: /26 → 64 endereços, 62 hosts válidos; rede .0, broadcast .63, hosts .1–.62, máscara 255.255.255.192.
+  - q-m2-39: /27 → 32 endereços, 30 hosts válidos; broadcast 10.0.0.31.
+  - q-m2-40: /28 → 16 endereços, 14 hosts válidos; rede .16, broadcast .31, hosts .17–.30, máscara 255.255.255.240.
+- Fontes: mantidas (Cisco topologia/meios/WAN; IETF RFC 1112, RFC 4291, RFC 4632, RFC 1918, RFC 791); nenhuma URL inventada ou removida.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
