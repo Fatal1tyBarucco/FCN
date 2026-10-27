@@ -858,7 +858,7 @@ const moduleQuestions6 = [
     },
     regra: "N0 manual; N1 apoio; N2 revisão prévia; N3 revisão posterior/amostral; N4 alçada; N5 automação plena — salvaguardas crescem com o nível.",
     pegadinha: "A diferença entre N2 e N3 é o momento da revisão (antes ou depois do efeito), não a existência dela.",
-    fonte: "Currículo do Módulo 6, unidade 6.6 (classificação didática de níveis de automação); Lei nº 14.129/2021, art. 48, II, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
+    fonte: "Lei nº 14.129/2021, art. 48, II: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm; Currículo Módulo 6, unidade 6.6 (classificação didática de níveis de automação, verificado em 2026-10-27)."
   },
 
   { id: "q-m6-37", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -883,7 +883,7 @@ const moduleQuestions6 = [
     },
     regra: "Supervisão = alçada + gatilho + amostragem estratificada + registro + indicadores por subgrupo; reclamação é complemento, não controle.",
     pegadinha: "'Existe revisão humana' é resposta de aparência: o que se avalia é o desenho, não a existência.",
-    fonte: "Lei nº 14.129/2021, art. 48, II, sobre gestão de riscos e controles proporcionais: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm; Lei nº 13.709/2018 (LGPD), art. 20, sobre solicitação de revisão de decisões tomadas unicamente com base em tratamento automatizado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Currículo do Módulo 6, unidade 6.6 (taxonomia didática de supervisão humana)."
+    fonte: "Lei nº 14.129/2021, art. 48, II: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm; Lei nº 13.709/2018 (LGPD), art. 20: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Currículo Módulo 6, unidade 6.6 (taxonomia didática de supervisão humana, verificado em 2026-10-27)."
   },
 
   {
