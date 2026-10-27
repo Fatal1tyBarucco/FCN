@@ -42,7 +42,7 @@ Nenhum par idêntico detectado.
 
 Rebalanceamento editorial controlado recomendado pela revisão independente (docs/REVISAO_INDEPENDENTE_FONTE_2026-10-27.md, seção 5). Troca-se apenas a POSIÇÃO de duas alternativas completas (texto + análise), remapeando `gabarito` e `analise`, SEM alterar o conteúdo semântico da resposta correta. Nenhum gabarito correto foi alterado. Verificado: `node --check` nos 4 arquivos alterados (OK) e `scripts/audit_question_quality.mjs` (0 divergências gabarito×análise, 0 alertas).
 
-Total: 25 trocas aplicadas (M7=5, M1=5, M6=5, M4=5, M8=5). Questões com gabarito inexistente na letra alvo (sem alternativa E, etc.) foram substituídas por equivalentes sem auto-referência a letras.
+Total: 26 trocas aplicadas (M7=5, M1=5, M6=5, M4=5, M8=6). Questões com gabarito inexistente na letra alvo (sem alternativa E, etc.) foram substituídas por equivalentes sem auto-referência a letras.
 
 | Módulo | ID | Troca | Observação |
 |---|---|---|---|
