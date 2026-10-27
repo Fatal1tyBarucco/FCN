@@ -82,3 +82,22 @@ Nenhum par idêntico detectado.
   - q-m2-10: em estrela, falha de nó afeta apenas o nó; falha do central derruba a rede (inversão do enunciado).
 - Fontes: mantidas (Cisco LAN/WAN/topologia; IETF RFC 1122 quando aplicável); nenhuma URL inventada ou removida.
 - Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
+
+## Revisão semântica — lote M2 q-m2-11..q-m2-20 (2026-10-27)
+
+- Questões revisadas: 10 (q-m2-11 a q-m2-20). Módulo 2, subtópicos m2-u1-t1-s3 (topologias físicas e lógicas), m2-u1-t1-s4 (comutação de circuitos vs. pacotes) e m2-u1-t2-s1 (unicast, broadcast, multicast e anycast).
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores e fonte; cruzamento com `apostila-ia/assets/data/curriculum_m2.js` (unidade 2.1, tópicos 1 e 2, subtópicos s3, s4 e s1) e exemplos/exercícios registrados.
+- Resultado: gabaritos mantidos (C, certo, B, B, errado, B, A, certo, C, errado). Nenhum gabarito alterado.
+- Correções aplicadas: nenhuma. Itens verificados individualmente:
+  - q-m2-11: alta disponibilidade/tolerância a falhas com orçamento para cabos → malha (múltiplos caminhos + redirecionamento), com trade-off de custo; bus/anel/estrela simples refutados.
+  - q-m2-12: bus tem backbone como ponto único de falha e colisões frequentes; corte no backbone derruba toda a rede.
+  - q-m2-13: Internet usa comutação de pacotes; PSTN usa circuitos; circuitos virtuais (Frame Relay/MPLS) não equivalem a circuito clássico.
+  - q-m2-14: principal vantagem dos pacotes é compartilhar largura de banda; latência previsível e ausência de perda/reordenação são atributos do circuito, não do pacote.
+  - q-m2-15: "sempre o mesmo caminho" é falso; roteamento independente por pacote; caminho lógico predefinido é de circuitos virtuais.
+  - q-m2-16: PSTN = circuito dedicado (latência previsível, banda fixa); VoIP = pacotes competindo com outros tráfegos (jitter/perda mitigáveis com QoS).
+  - q-m2-17: acesso web a um site = unicast (1:1); broadcast/multicast/anycast não se aplicam ao caso.
+  - q-m2-18: em IPv4, associação a grupos multicast é gerenciada por IGMP; em IPv6, função correspondente é MLD; item certo.
+  - q-m2-19: streaming simultâneo do mesmo conteúdo para grupo → multicast (replicação nos pontos de ramificação), quando rede e aplicação suportam.
+  - q-m2-20: broadcast é limitado ao domínio de broadcast (sub-rede local); roteadores não encaminham 255.255.255.255 (evita broadcast storm).
+- Fontes: mantidas (Cisco topologia/comutação; IETF RFC 1112, RFC 1122 e RFC 4291 quando aplicável); nenhuma URL inventada ou removida.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
