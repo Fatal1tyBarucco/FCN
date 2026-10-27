@@ -267,3 +267,7 @@ O workflow [40413529441](https://github.com/Fatal1tyBarucco/FCN/actions/runs/404
 - `q-m1-30`: referência ajustada para a documentação Microsoft da função MÉDIA em português do Brasil.
 - `q-m1-41` a `q-m1-44`: fontes alinhadas a documentação oficial específica para os recursos citados.
 - Limite: esta é uma revisão focal dos itens registrados, não uma revisão semântica independente das 399 questões. Gabaritos e distratores dos demais itens continuam sujeitos à auditoria.
+
+## Validação estrutural pós-auditoria focal — 2026-10-26
+
+O workflow `pull_request` [40426312732](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40426312732) passou no SHA `a7ef1634d836e75da808ebe7fefc8186421c2ab9`. A auditoria heurística continua reportando zero itens sinalizados em 399 questões; isso não substitui a revisão factual independente. O catálogo possui 149 IDs únicos (20 vídeos + 129 referências técnicas). A correção de `q-m1-09` reforça que PDF não impede edição por si só.
