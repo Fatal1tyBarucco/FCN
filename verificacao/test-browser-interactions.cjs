@@ -91,7 +91,7 @@ const axeCore = require("axe-core");
     assert.equal(skipState.left, "0px", "focused skip link should move into the viewport");
     assert.ok(skipState.width > 0, "focused skip link should have visible dimensions");
     await page.keyboard.press("Enter");
-    await page.waitForFunction(() => document.activeElement && document.activeElement.id === "curriculum", null, { timeout: 5000 });
+    await page.waitForFunction(() => document.activeElement && document.activeElement.id === "main-content", null, { timeout: 5000 });
 
     // Accessibility: curriculum tree supports ArrowLeft/ArrowRight expansion by keyboard.
     const firstTreeItem = page.locator("#curriculum .curriculum-tree .tree-node[role='treeitem']").first();
