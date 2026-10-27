@@ -593,3 +593,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - [x] Contagem atual do catálogo: 136 referências únicas (20 vídeos + 116 referências técnicas), todas com status `verificado` e URL preenchida.
 - O parent `8b9dc729c436100bfef860978d4de2bdc9d4d331` passou nos workflows de push [40424186175](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40424186175) e `pull_request` [40424192846](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40424192846). Este lote aguarda CI próprio.
 - A revisão semântica independente das 399 questões permanece pendente.
+
+
+## Auditoria focal M1 — OneDrive e SharePoint (2026-10-26)
+
+- [x] q-m1-04: adicionada fonte oficial específica para a função do SharePoint como espaço de armazenamento e colaboração de equipe; as fontes existentes continuam cobrindo os limites de armazenamento do OneDrive conforme o plano/licenciamento.
+- [x] Contagem atual do catálogo: 137 IDs únicos (20 vídeos + 117 referências técnicas), todos verificados estruturalmente e com URL preenchida.
+- O parent 370ba6e24f9095599d3e810b9e99ac4171794623 passou no workflow pull_request 40424415199. O workflow de push 40424410451 ainda estava em execução no momento desta atualização; este lote novo aguarda seus próprios checks.
+- A revisão semântica independente das 399 questões permanece pendente.

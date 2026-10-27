@@ -163,7 +163,7 @@ var questoesBanco = [
     },
     regra: "Divisão de papéis no M365: OneDrive = armazenamento pessoal do usuário; SharePoint = armazenamento e colaboração de equipe; o limite de capacidade é propriedade do plano licenciado.",
     pegadinha: "A pegadinha é generalizar a cota de armazenamento: o enunciado limita a oferta a planos elegíveis e às condições documentadas; não presume que todos os planos Enterprise ofereçam 5 TB.",
-    fonte: "Microsoft Learn — limites de armazenamento do OneDrive por plano: https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description; gerenciamento do limite por usuário: https://learn.microsoft.com/en-us/onedrive/change-user-storage.",
+    fonte: "Microsoft Learn — limites de armazenamento do OneDrive por plano: https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description; gerenciamento do limite por usuário: https://learn.microsoft.com/en-us/onedrive/change-user-storage; Microsoft Support — sites de equipe do SharePoint para armazenamento e colaboração compartilhada: https://support.microsoft.com/pt-br/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site.",
   },
   {
     id: "q-m1-05",

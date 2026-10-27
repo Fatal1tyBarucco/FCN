@@ -1475,6 +1475,16 @@ const references = [
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
+  },
+  {
+    "id": "ref-sharepoint-team-site",
+    "titulo": "O que é um site de equipe do SharePoint?",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site",
+    "topico": "M1 — Microsoft 365 (SharePoint: armazenamento e colaboração em equipe)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
   }
 ];
 if (typeof window !== 'undefined') window.references = references;

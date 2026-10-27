@@ -399,3 +399,9 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 
 - Microsoft Support, *Convertendo documentos em um novo formato*: https://support.microsoft.com/pt-br/word/converting-documents-to-a-newer-format. A página explica que o Modo de Compatibilidade desativa temporariamente recursos novos/aprimorados para preservar a edição por versões anteriores e manter o layout. Aplicação: q-m1-25.
 - Com essa entrada, o catálogo passa a conter 136 referências únicas (20 vídeos + 116 referências técnicas), todas com status `verificado` e URL preenchida. A revisão semântica integral e a validação HTTP automatizada individual de todas as URLs continuam pendentes.
+
+
+## Auditoria focal M1 — papel do SharePoint (2026-10-26)
+
+- Microsoft Support, *O que é um site de equipe do SharePoint?*: https://support.microsoft.com/pt-br/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site. Documenta o uso de sites de equipe para conteúdo compartilhado, armazenamento de arquivos e colaboração. Aplicação: q-m1-04.
+- Com esta referência, o catálogo passa a conter 137 IDs únicos (20 vídeos + 117 referências técnicas), todos com status verificado e URL preenchida. Revisão semântica integral e validação HTTP automatizada individual das URLs permanecem pendentes.
