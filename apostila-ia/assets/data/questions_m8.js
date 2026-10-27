@@ -413,17 +413,17 @@ const moduleQuestions8 = [
     enunciado: "A sequência de gráficos mais adequada para os quatro problemas acima é:",
     alternativas: [
       { letra: "A", texto: "barras (a), linhas (b), pizza (c), dispersão (d)" },
-      { letra: "B", texto: "barras agrupadas ordenadas (a), linhas (b), histograma (c), dispersão (d)" },
+      { letra: "B", texto: "barras empilhadas (a), linhas (b), pizza (c), dispersão (d)" },
       { letra: "C", texto: "linhas (a), barras (b), dispersão (c), pizza (d)" },
-      { letra: "D", texto: "barras empilhadas (a), linhas (b), pizza (c), dispersão (d)" }
+      { letra: "D", texto: "barras agrupadas ordenadas (a), linhas (b), histograma (c), dispersão (d)" }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define: comparar categorias → barras (com ordenação decrescente quando for ranqueamento); evoluir no tempo → linhas; distribuir uma variável quantitativa → histograma. A alternativa B segue exatamente essa matriz. A A erra no (c) — para distribuição de idade de 1.000, histograma é superior a pizza. A C erra no (a) — linhas exigem ordem temporal, e 'tipo de reclamação' é nominal. A D erra no (a) — barras empilhadas não comparam categorias isoladas com clareza no cenário (a) e não é a primeira opção para comparação de tipos.",
+    gabarito: "D",
+    justificativa: "O currículo define: comparar categorias → barras (com ordenação decrescente quando for ranqueamento); evoluir no tempo → linhas; distribuir uma variável quantitativa → histograma. A alternativa D segue exatamente essa matriz. A A erra no (c) — para distribuição de idade de 1.000, histograma é superior a pizza. A C erra no (a) — linhas exigem ordem temporal, e 'tipo de reclamação' é nominal. A D erra no (a) — barras empilhadas não comparam categorias isoladas com clareza no cenário (a) e não é a primeira opção para comparação de tipos.",
     analise: {
       A: "INCORRETA. Erro conceitual: (c) idade de 1.000 é quantitativa contínua → histograma, não pizza.",
-      B: "CORRETA. Reproduz a matriz de decisão do currículo: barras (comparar categorias), linhas (evolução temporal), histograma (distribuição), dispersão (duas variáveis quantitativas).",
+      B: "INCORRETA. Erro conceitual: (a) comparar tipos de reclamação não é melhor com barras empilhadas; e (c) idade segue histograma.",
       C: "INCORRETA. Erro conceitual: (a) tipo de reclamação é nominal sem ordem → linhas implicam continuidade inexistente.",
-      D: "INCORRETA. Erro conceitual: (a) comparar tipos de reclamação não é melhor com barras empilhadas; e (c) idade segue histograma."
+      D: "CORRETA. Reproduz a matriz de decisão do currículo: barras (comparar categorias), linhas (evolução temporal), histograma (distribuição), dispersão (duas variáveis quantitativas)."
     },
     regra: "Matriz de decisão: comparar categorias → barras; evoluir no tempo → linhas; distribuir → histograma/box plot; relacionar duas variáveis → dispersão; comparar um todo → barras empilhadas/tabela.",
     pegadinha: "A pegadinha é 'linha para (a) porque é série' — o (a) é nominal, e linhas impõem continuidade e tendência que só existem em (b).",
@@ -442,17 +442,17 @@ const moduleQuestions8 = [
     enunciado: "Ao comparar dois histogramas com larguras de classe diferentes, a afirmação correta é:",
     alternativas: [
       { letra: "A", texto: "A altura da barra é sempre a medida legítima, independentemente da largura." },
-      { letra: "B", texto: "A frequência é representada pela área do retângulo, e a altura é a densidade (frequência ÷ largura)." },
+      { letra: "B", texto: "A densidade é usada apenas para representar a frequência relativa, nunca absoluta." },
       { letra: "C", texto: "Comparar dois histogramas só é legítimo se tiverem o mesmo número de classes." },
-      { letra: "D", texto: "A densidade é usada apenas para representar a frequência relativa, nunca absoluta." }
+      { letra: "D", texto: "A frequência é representada pela área do retângulo, e a altura é a densidade (frequência ÷ largura)." }
     ],
-    gabarito: "B",
-    justificativa: "Quando as classes têm larguras diferentes, a área de cada retângulo representa a frequência e a altura representa a densidade (frequência ÷ largura). Isso permite representar corretamente as frequências com larguras distintas; para comparar distribuições, mantenha critérios e escalas compatíveis e interprete as áreas, não apenas as alturas. A alternativa B expressa a relação correta. A A ignora a largura; a C confunde quantidade de classes com validade da representação; a D erra ao restringir densidade à frequência relativa.",
+    gabarito: "D",
+    justificativa: "Quando as classes têm larguras diferentes, a área de cada retângulo representa a frequência e a altura representa a densidade (frequência ÷ largura). Isso permite representar corretamente as frequências com larguras distintas; para comparar distribuições, mantenha critérios e escalas compatíveis e interprete as áreas, não apenas as alturas. A alternativa D expressa a relação correta. A A ignora a largura; a C confunde quantidade de classes com validade da representação; a D erra ao restringir densidade à frequência relativa.",
     analise: {
       A: "INCORRETA. Erro conceitual: com larguras diferentes, a altura não representa a frequência; a área (densidade) sim.",
-      B: "CORRETA. Reproduz a regra de densidade e área para comparação com larguras distintas.",
+      B: "INCORRETA. Erro conceitual: densidade absoluta é usada quando se mantém n como soma das áreas; não é restrita à frequência relativa.",
       C: "INCORRETA. O número de classes, isoladamente, não determina a validade da comparação; com larguras diferentes, a frequência deve ser representada pela área e a altura pela densidade, usando escalas e critérios compatíveis.",
-      D: "INCORRETA. Erro conceitual: densidade absoluta é usada quando se mantém n como soma das áreas; não é restrita à frequência relativa."
+      D: "CORRETA. Reproduz a regra de densidade e área para comparação com larguras distintas."
     },
     regra: "Histograma de densidade: altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou = 1 (relativa); a comparação requer critérios e escalas compatíveis; com larguras diferentes, interprete a área e a densidade, não apenas a altura.",
     pegadinha: "A alternativa A tenta o alerta 'altura sempre é a medida' — o currículo só exige densidade quando há larguras diferentes.",
@@ -616,17 +616,17 @@ const moduleQuestions8 = [
     enunciado: "Assinale a afirmação correta sobre o resultado da pesquisa de 10.000 respostas vindas de e-mail.",
     alternativas: [
       { letra: "A", texto: "Com 10.000 respostas, o resultado é representativo da população." },
-      { letra: "B", texto: "O tamanho da amostra reduz o erro de amostragem, não o viés de seleção." },
+      { letra: "B", texto: "O resultado pode ser generalizado para toda a população, quando a amostra é grande." },
       { letra: "C", texto: "A amostra grande elimina o viés de não-resposta." },
-      { letra: "D", texto: "O resultado pode ser generalizado para toda a população, quando a amostra é grande." }
+      { letra: "D", texto: "O tamanho da amostra reduz o erro de amostragem, não o viés de seleção." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo distingue erro de amostragem (flutuação esperada, reduzida com n maior) de viés (erro sistemático, não desaparece com amostra grande). A alternativa B reproduz exatamente isso. A A erra: 10.000 respostas de e-mail não são necessariamente representativas; B é a correção do erro de viés. C erra: não-resposta é viés que não se elimina com tamanho. D erra: generalização exige amostragem probabilística, não apenas tamanho.",
+    gabarito: "D",
+    justificativa: "O currículo distingue erro de amostragem (flutuação esperada, reduzida com n maior) de viés (erro sistemático, não desaparece com amostra grande). A alternativa D reproduz exatamente isso. A A erra: 10.000 respostas de e-mail não são necessariamente representativas; B é a correção do erro de viés. C erra: não-resposta é viés que não se elimina com tamanho. D erra: generalização exige amostragem probabilística, não apenas tamanho.",
     analise: {
       A: "INCORRETA. Erro conceitual: tamanho não elimina viés; amostra de e-mail é por conveniência e suspeita de viés de seleção.",
-      B: "CORRETA. Reproduz a distinção do currículo entre erro de amostragem (aleatório, reduzido com n) e viés (sistemático, inalterado por n).",
+      B: "INCORRETA. Erro conceitual: generalização exige amostragem probabilística com margem declarada; amplitude não garante representatividade.",
       C: "INCORRETA. Erro conceitual: viés de não-resposta não desaparece com 10 mil respostas; o viés permanece.",
-      D: "INCORRETA. Erro conceitual: generalização exige amostragem probabilística com margem declarada; amplitude não garante representatividade."
+      D: "CORRETA. Reproduz a distinção do currículo entre erro de amostragem (aleatório, reduzido com n) e viés (sistemático, inalterado por n)."
     },
     regra: "Erro de amostragem ≠ viés: o tamanho reduz flutuação aleatória, não erro sistemático; viés de seleção, não-resposta, sobrevivência e medição exigem análise do delineamento e do mecanismo de coleta.",
     pegadinha: "A pegadinha é '10 mil respostas resolvem tudo' — o tamanho reduz parte da flutuação aleatória, mas não garante representatividade nem elimina viés sistemático.",
@@ -703,17 +703,17 @@ const moduleQuestions8 = [
     enunciado: "Assinale a afirmação correta sobre o conteúdo de um painel de gestão.",
     alternativas: [
       { letra: "A", texto: "Deve exibir todos os indicadores disponíveis para dar visão completa." },
-      { letra: "B", texto: "Deve destacar poucos indicadores ligados a decisões, com exceções em destaque." },
+      { letra: "B", texto: "O painel completo é aquele com mais gráficos possíveis." },
       { letra: "C", texto: "Deve incluir todas as métricas calculadas para que o gestor decida melhor." },
-      { letra: "D", texto: "O painel completo é aquele com mais gráficos possíveis." }
+      { letra: "D", texto: "Deve destacar poucos indicadores ligados a decisões, com exceções em destaque." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define que painel de gestão destaca poucos indicadores ligados a decisões, com exceções em destaque; o restante pertence a relatório analítico ou drill-down. A alternativa B reproduz isso. A, C e D são anti-padrão: exibir tudo causa paralisia, redundância e saturação visual.",
+    gabarito: "D",
+    justificativa: "O currículo define que painel de gestão destaca poucos indicadores ligados a decisões, com exceções em destaque; o restante pertence a relatório analítico ou drill-down. A alternativa D reproduz isso. A, C e D são anti-padrão: exibir tudo causa paralisia, redundância e saturação visual.",
     analise: {
       A: "INCORRETA. Erro conceitual: visão completa produz paralisia; o currículo reconhece que o painel destaca poucos indicadores.",
-      B: "CORRETA. Reproduz a definição de painel de gestão: poucos indicadores, exceções em destaque, ligação a decisão.",
+      B: "INCORRETA. Erro conceitual: 'mais gráficos' não é 'mais completo'; o painel gosta de foco.",
       C: "INCORRETA. Erro conceitual: métricas calculadas não são sangue do painel; são as métricas ligadas a decisão.",
-      D: "INCORRETA. Erro conceitual: 'mais gráficos' não é 'mais completo'; o painel gosta de foco."
+      D: "CORRETA. Reproduz a definição de painel de gestão: poucos indicadores, exceções em destaque, ligação a decisão."
     },
     regra: "Painel de gestão: poucos indicadores, exceções em destaque, metas, tendência curta, atualização declarada; relatórios analíticos contêm o detalhe.",
     pegadinha: "A pegadinha é 'visão completa' — o currículo a desconsidera como causa de paralisia.",
@@ -935,17 +935,17 @@ const moduleQuestions8 = [
     enunciado: "A causa mais provável da diferença entre os bigodes em dois softwares é:",
     alternativas: [
       { letra: "A", texto: "Os quartis são calculados diferentemente entre métodos de interpolação." },
-      { letra: "B", texto: "O multiplicador do IIQ usado para definir os limites dos bigodes pode variar por configuração e precisa ser declarado e harmonizado." },
+      { letra: "B", texto: "Os bigodes sempre são diferentes, pois não há definição matemática." },
       { letra: "C", texto: "Um software traça outliers, o outro não." },
-      { letra: "D", texto: "Os bigodes sempre são diferentes, pois não há definição matemática." }
+      { letra: "D", texto: "O multiplicador do IIQ usado para definir os limites dos bigodes pode variar por configuração e precisa ser declarado e harmonizado." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O limite dos bigodes depende do multiplicador aplicado ao IIQ e da convenção adotada. Como o cenário fixa o mesmo conjunto e o mesmo método de quartis, a diferença decorre do multiplicador configurado; ele deve ser declarado e harmonizado para comparar os gráficos. A alternativa A poderia explicar diferenças em outro cenário, se o método de quartis variasse, mas isso foi excluído do enunciado. C não explica a divergência descrita, e D erra ao afirmar que não há definição matemática.",
     analise: {
       A: "INCORRETA. Erro conceitual: variação de quartis pode existir, mas a causa mais direta da diferença nos bigodes é o múltiplo do IIQ.",
-      B: "CORRETA. O multiplicador do IIQ altera os limites dos bigodes; a configuração deve ser declarada e harmonizada.",
+      B: "INCORRETA. Erro conceitual: há definição matemática de bigode (1,5×IIQ); as diferenças vêm de convenção declarada, não de ausência de regra.",
       C: "INCORRETA. Erro conceitual: a regra de outliers é o mesmo critério; a diferença é a convenção dos bigodes, não a presença de outliers.",
-      D: "INCORRETA. Erro conceitual: há definição matemática de bigode (1,5×IIQ); as diferenças vêm de convenção declarada, não de ausência de regra."
+      D: "CORRETA. O multiplicador do IIQ altera os limites dos bigodes; a configuração deve ser declarada e harmonizada."
     },
     regra: "Convenção de Tukey usual: limites em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ. Se o software permite outro multiplicador ou método de quartis, declare e harmonize os parâmetros antes de comparar gráficos.",
     pegadinha: "A alternativa A é uma explicação possível em outros cenários, mas o enunciado fixa o método de quartis; a diferença apresentada decorre do multiplicador do IIQ.",

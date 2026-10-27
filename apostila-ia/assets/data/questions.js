@@ -282,17 +282,17 @@ id: "q-m1-09",
     enunciado: "Qual formato de arquivo atende melhor à exigência descrita?",
     alternativas: [
       { letra: "A", texto: ".docx — padrão Open XML, para edição colaborativa." },
-      { letra: "B", texto: ".pdf — formato portátil que tende a preservar o layout e é adequado para distribuição e impressão, embora possa ser editado com ferramentas compatíveis." },
+      { letra: "B", texto: ".doc — formato legado binário, compatível com o Word 2003 e anteriores." },
       { letra: "C", texto: ".txt — texto puro, elimina qualquer formatação acidental." },
-      { letra: "D", texto: ".doc — formato legado binário, compatível com o Word 2003 e anteriores." }
+      { letra: "D", texto: ".pdf — formato portátil que tende a preservar o layout e é adequado para distribuição e impressão, embora possa ser editado com ferramentas compatíveis." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "A documentação Microsoft recomenda PDF quando o arquivo deve manter aparência semelhante em diferentes computadores e se destina à leitura ou impressão. PDF não garante bloqueio de edição: alguns programas, incluindo o Word, podem abrir e editar PDFs. Neste cenário, o PDF é o melhor formato para distribuir uma versão final com layout preservado; se a organização precisar impedir alterações, deverá aplicar controles de acesso/proteção apropriados, não depender apenas da extensão.",
     analise: {
       A: "INCORRETA. Erro conceitual: finalidade trocada. O .docx é indicado para edição colaborativa — justamente o comportamento que o cenário quer evitar.",
-      B: "CORRETA. É apropriado para distribuir uma versão final com layout preservado e uso orientado à leitura/impressão; não deve ser confundido com uma garantia técnica de bloqueio de edição.",
+      B: "INCORRETA. Erro conceitual: confundir compatibilidade com distribuição segura. O .doc é legado/binário e editável; serve a compatibilidade antiga, não à leitura-only.",
       C: "INCORRETA. O .txt descarta a formatação e não preserva colunas, figuras e numeração; portanto não atende ao requisito de fidelidade visual.",
-      D: "INCORRETA. Erro conceitual: confundir compatibilidade com distribuição segura. O .doc é legado/binário e editável; serve a compatibilidade antiga, não à leitura-only."
+      D: "CORRETA. É apropriado para distribuir uma versão final com layout preservado e uso orientado à leitura/impressão; não deve ser confundido com uma garantia técnica de bloqueio de edição."
     },
     regra: "Escolha de formato por objetivo: edição colaborativa → .docx; distribuição final para leitura/impressão com layout preservado → .pdf; compatibilidade antiga → .doc; texto puro → .txt; interoperabilidade intermediária → .rtf. PDF não substitui controles de acesso quando é necessário impedir tecnicamente a edição.",
     pegadinha: "A pegadinha é confundir o formato de distribuição com um mecanismo de proteção: PDF preserva melhor a apresentação, mas não garante que o conteúdo não possa ser editado.",
@@ -571,17 +571,17 @@ id: "q-m1-09",
     enunciado: "Qual recurso do Word cria a referência vinculada que pode ser atualizada após mover a figura?",
     alternativas: [
       { letra: "A", texto: "Legenda automática inserida sob a figura, digitada manualmente no corpo." },
-      { letra: "B", texto: "Referência cruzada, que cria um campo vinculado à legenda/figura e pode ser atualizado quando o objeto é movido ou renumerado." },
+      { letra: "B", texto: "Citação bibliográfica gerenciada pelo grupo 'Referências'." },
       { letra: "C", texto: "Índice remissivo, gerado a partir das marcas de entrada de índice." },
-      { letra: "D", texto: "Citação bibliográfica gerenciada pelo grupo 'Referências'." }
+      { letra: "D", texto: "Referência cruzada, que cria um campo vinculado à legenda/figura e pode ser atualizado quando o objeto é movido ou renumerado." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo define referências cruzadas como vínculos para locais específicos (por exemplo, 'Veja a Figura 1'). No Word, a referência cruzada é inserida como campo e pode ser atualizada (por exemplo, selecionando o campo e usando Atualizar Campo/F9) após mover ou renumerar a figura. A legenda identifica e numera a figura, mas não mantém por si só o texto de referência no corpo.",
     analise: {
       A: "INCORRETA. Erro conceitual: confundir identificação com vinculação. A legenda dá o número à figura; o texto no corpo continua estático se digitado à mão.",
-      B: "CORRETA. A referência cruzada cria um campo vinculado à figura/legenda, que pode ser atualizado após mudanças no documento.",
+      B: "INCORRETA. Erro conceitual: mesmo grupo de interface ('Referências'), função diferente — gerenciar fontes e bibliografia, não figuras.",
       C: "INCORRETA. Erro conceitual: finalidade trocada. Índice remissivo é gerado das marcas de entrada de índice marcadas ao longo do texto — não vincula figuras.",
-      D: "INCORRETA. Erro conceitual: mesmo grupo de interface ('Referências'), função diferente — gerenciar fontes e bibliografia, não figuras."
+      D: "CORRETA. A referência cruzada cria um campo vinculado à figura/legenda, que pode ser atualizado após mudanças no documento."
     },
     regra: "Referência cruzada = campo interno que pode ser atualizado; legenda = numeração do objeto; índice remissivo = mapa de marcas de entrada.",
     pegadinha: "Três recursos ficam no mesmo grupo de guiia 'Referências' — a pegadinha é escolher pela proximidade de menu em vez da função descrita.",
@@ -3274,19 +3274,19 @@ id: "q-m1-09",
     enunciado: "Qual recurso atende diretamente ao requisito?",
     alternativas: [
       { letra: "A", texto: "Aplicar negrito ao título da capa." },
-      { letra: "B", texto: "Ativar Primeira Página Diferente nas configurações de cabeçalho e rodapé." },
+      { letra: "B", texto: "Converter o documento em texto simples." },
       { letra: "C", texto: "Inserir uma tabela vazia na capa." },
-      { letra: "D", texto: "Converter o documento em texto simples." },
-      { letra: "E", texto: "Desativar o cabeçalho em todo o documento." }
+      { letra: "D", texto: "Desativar o cabeçalho em todo o documento." },
+      { letra: "E", texto: "Ativar Primeira Página Diferente nas configurações de cabeçalho e rodapé." }
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "A opção Primeira Página Diferente permite ocultar ou personalizar cabeçalho e rodapé da capa sem removê-los das páginas seguintes. Uma quebra de seção é útil quando partes do documento precisam de layouts ou numerações diferentes.",
     analise: {
       A: "INCORRETA. Negrito muda a aparência do texto, não a exibição do cabeçalho.",
-      B: "CORRETA. Permite configurar a primeira página separadamente, preservando os elementos nas seguintes.",
+      B: "INCORRETA. Texto simples remove formatação e não atende à paginação.",
       C: "INCORRETA. Tabelas não controlam cabeçalhos e rodapés.",
-      D: "INCORRETA. Texto simples remove formatação e não atende à paginação.",
-      E: "INCORRETA. Isso remove o elemento também das páginas que precisam exibi-lo."
+      D: "INCORRETA. Isso remove o elemento também das páginas que precisam exibi-lo.",
+      E: "CORRETA. Permite configurar a primeira página separadamente, preservando os elementos nas seguintes."
     },
     regra: "Cabeçalhos e rodapés são controlados por opções de layout e, quando necessário, por seções.",
     pegadinha: "Não confundir Primeira Página Diferente com remover o cabeçalho do documento inteiro.",
