@@ -261,3 +261,9 @@ Foi executada uma verificação textual independente sobre os seis arquivos de q
 
 O workflow [40413529441](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40413529441), SHA `7db9ef553e453ad246913c90fe1a78332beba7fd`, concluiu com sucesso e reportou **58 passes, 3 verificações incompletas e 0 violações axe-core**. A violação moderada `landmark-unique` detectada na execução anterior foi corrigida com nomes acessíveis distintos para os landmarks dos simuladores de Segurança, Prompts e Dados. As verificações incompletas não equivalem a violações confirmadas e continuam sujeitas a revisão complementar/manual.
 
+## Revisão focal adicional M1 — 2026-10-26
+
+- `q-m1-09`: identificado risco semântico no texto anterior, que tratava PDF como se não fosse editável. A versão corrigida diz que PDF preserva melhor a apresentação e é apropriado para distribuição/leitura/impressão, mas não impede edição por si só; controles de acesso são requisito separado.
+- `q-m1-30`: referência ajustada para a documentação Microsoft da função MÉDIA em português do Brasil.
+- `q-m1-41` a `q-m1-44`: fontes alinhadas a documentação oficial específica para os recursos citados.
+- Limite: esta é uma revisão focal dos itens registrados, não uma revisão semântica independente das 399 questões. Gabaritos e distratores dos demais itens continuam sujeitos à auditoria.
