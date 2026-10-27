@@ -17,24 +17,24 @@
  * ----------------------------------------------------------------------------
  * O QUE ESTE SCRIPT VERIFICA
  * ----------------------------------------------------------------------------
- * 1) Fusão questions.js + questions_m4..m8 por id → total === 365; distribuição
- *    por módulo {1:40, 2:40, 3:40, 4:85, 5:40, 6:40, 7:40, 8:40}; 0 ids
+ * 1) Fusão questions.js + questions_m4..m8 por id → total === 399; distribuição
+ *    por módulo {1:44, 2:54, 3:47, 4:85, 5:42, 6:47, 7:40, 8:40}; 0 ids
  *    duplicados.
  * 2) Aplica o validarQuestao REAL do quiz-engine.js (carregado em contexto vm
  *    com stubs mínimos de DOM, listeners de DOMContentLoaded disparados;
  *    window.QuizApp exposto) e espera 0 reprovadas.
- * 3) Contagem de flashcards (flashcards_m1..m8) → total 404 + mapa exato por
- *    módulo {1:50, 2:50, 3:50, 4:54, 5:50, 6:50, 7:50, 8:50}.
+ * 3) Contagem de flashcards (flashcards_m1..m8) → total 460 + mapa exato por
+ *    módulo {1:66, 2:56, 3:68, 4:54, 5:66, 6:50, 7:50, 8:50}.
  * 4) Cada tag <script src> do index.html resolve para arquivo existente em
- *    disco, e a contagem total de tags é EXATAMENTE 38 (23 de dados + 15 de JS).
- * 5) manifest.webmanifest é JSON válido e a description menciona "365".
+ *    disco, e a contagem total de tags é EXATAMENTE 39 (24 de dados + 15 de JS).
+ * 5) manifest.webmanifest é JSON válido e a description menciona "399".
  * 6) Imprime níveis / formatos / estilos (contagens reais) para conferência.
  * 7) q-m4-32: id/formato/gabarito + CONTEÚDO — alternativa B cita os princípios
  *    reais do art. 3º (neutralidade, privacidade, dados pessoais; sem
  *    "suscetibilidade"/"portabilidade") e justificativa/analise.D não citam
  *    mais os arts. 8º/15 como fonte da vedação de filtragem/anonimato (a citação
  *    correta é art. 9º, §3º, e art. 19 — re-verificação do PR #5, 2026-10-23).
- * 8) q-m4-44: gabarito === "B" e justificativa cita "art. 3º" e "art. 2º".
+ * 8) q-m4-44: compara o escopo da LGPD e do Marco Civil; gabarito B e justificativa confirma que uma lei não substitui a outra.
  *
  * Sai com exit code 1 se qualquer verificação falhar.
  * ----------------------------------------------------------------------------
@@ -208,9 +208,9 @@ try {
   check('execução da fusão', false, e.message);
 }
 
-const ESPERADO_MODULO = { 1: 40, 2: 40, 3: 40, 4: 85, 5: 40, 6: 40, 7: 40, 8: 40 };
+const ESPERADO_MODULO = { 1: 44, 2: 54, 3: 47, 4: 85, 5: 42, 6: 47, 7: 40, 8: 40 };
 if (r) {
-  check('total de questões fundidas === 365', r.total === 365, 'real=' + r.total + ', esperado=365');
+  check('total de questões fundidas === 399', r.total === 399, 'real=' + r.total + ', esperado=399');
   check('0 ids duplicados', r.duplicados.length === 0,
     r.duplicados.length ? ('duplicados: ' + r.duplicados.join(', ')) : 'ok');
   for (const m of Object.keys(ESPERADO_MODULO)) {
@@ -264,14 +264,14 @@ if (r && r.q44) {
   check('q-m4-44 presente', true);
   check('q-m4-44 gabarito === "B"', q44.gabarito === 'B', 'real=' + q44.gabarito);
   const just44 = norm(q44.justificativa);
-  check('q-m4-44 justificativa cita "art. 3º" e "art. 2º"',
-    just44.includes('art. 3º') && just44.includes('art. 2º'));
+  check('q-m4-44 justificativa compara LGPD e Marco Civil',
+    just44.includes('lgpd') && just44.includes('marco civil') && just44.includes('dados pessoais'));
 } else {
   check('q-m4-44 presente', false, 'não encontrada no banco fundido');
 }
 
-/* ------------------------------------------------------------ flashcards 404 */
-secao('5. FLASHCARDS (flashcards_m1..m8 → total 404)');
+/* ------------------------------------------------------------ flashcards 460 */
+secao('5. FLASHCARDS (flashcards_m1..m8 → total 460)');
 /* No vm, `const` em topo de script é binding léxico do contexto (não é
  * propriedade de window). Para contar sem eval, avaliamos uma expressão
  * explícita por nome via vm.runInContext — nada é interpretado dinamicamente. */
@@ -289,12 +289,12 @@ for (let m = 1; m <= 8; m++) {
     flashPorModulo[m] = 0; flashFaltantes.push(nome + ' (' + e.message + ')');
   }
 }
-check('flashcards total === 404', flashTotal === 404, 'real=' + flashTotal + ', esperado=404');
+check('flashcards total === 460', flashTotal === 460, 'real=' + flashTotal + ', esperado=460');
 check('nenhum módulo de flashcards ausente', flashFaltantes.length === 0,
   flashFaltantes.length ? ('ausentes: ' + flashFaltantes.join(', ')) : 'm1..m8 presentes');
-const FLASH_ESPERADO = { 1: 50, 2: 50, 3: 50, 4: 54, 5: 50, 6: 50, 7: 50, 8: 50 };
+const FLASH_ESPERADO = { 1: 66, 2: 56, 3: 68, 4: 54, 5: 66, 6: 50, 7: 50, 8: 50 };
 const mapOk = Object.keys(FLASH_ESPERADO).every((m) => flashPorModulo[m] === FLASH_ESPERADO[m]);
-check('mapa de flashcards por módulo === {1:50,2:50,3:50,4:54,5:50,6:50,7:50,8:50}', mapOk,
+check('mapa de flashcards por módulo === {1:66,2:56,3:68,4:54,5:66,6:50,7:50,8:50}', mapOk,
   'real=' + JSON.stringify(flashPorModulo) + ', esperado=' + JSON.stringify(FLASH_ESPERADO));
 console.log('       detalhe por módulo: ' + JSON.stringify(flashPorModulo));
 
@@ -311,8 +311,8 @@ const scriptSrcs = [];
 const reSrc = /<script[^>]*\ssrc\s*=\s*["']([^"']+)["'][^>]*>/gi;
 let mm;
 while ((mm = reSrc.exec(idxHtml)) !== null) scriptSrcs.push(mm[1]);
-check('tags <script src> do index.html === 38', scriptSrcs.length === 38,
-  'real=' + scriptSrcs.length + ', esperado=38');
+check('tags <script src> do index.html === 39', scriptSrcs.length === 39,
+  'real=' + scriptSrcs.length + ', esperado=39');
 let externas = 0, locais = 0, ausentes = [];
 for (const src of scriptSrcs) {
   if (/^(https?:)?\/\//i.test(src) || /^(data|blob):/i.test(src)) { externas++; continue; }
@@ -323,8 +323,8 @@ for (const src of scriptSrcs) {
 check('todas as tags locais resolvem p/ arquivo em disco (' + locais + ' locais, ' + externas + ' externas)',
   ausentes.length === 0, ausentes.length ? ('ausentes: ' + ausentes.join(', ')) : 'nenhum 404');
 
-/* ---------------------------------------------------- manifest: JSON + "365" */
-secao('7. manifest.webmanifest → JSON VÁLIDO + description com "365"');
+/* ---------------------------------------------------- manifest: JSON + "399" */
+secao('7. manifest.webmanifest → JSON VÁLIDO + description com "399"');
 let manifest = null;
 try {
   manifest = JSON.parse(fs.readFileSync(path.join(APP, 'manifest.webmanifest'), 'utf8'));
@@ -334,8 +334,8 @@ try {
 }
 if (manifest) {
   const desc = typeof manifest.description === 'string' ? manifest.description : '';
-  check('description menciona "365"', desc.includes('365'), 'description contém 365=' + desc.includes('365'));
-  check('description menciona "365" e não contém "120"', !desc.includes('120'), '');
+  check('description menciona "399"', desc.includes('399'), 'description contém 399=' + desc.includes('399'));
+  check('description contém a contagem de questões 399 e não a contagem anterior 389 questões', desc.includes('399 questões') && !desc.includes('389 questões'), '');
 }
 
 /* ------------------------------------------- níveis / formatos / estilos (info) */

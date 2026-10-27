@@ -36,149 +36,138 @@ const moduleQuestions8 = [
       leituraIncorreta: "Leitura que induz ao erro: priorizar a disponibilidade da ferramenta em vez da pergunta. O gráfico é interface entre dado e decisão; se ele não responde à pergunta em uma frase, deve ser trocado."
     },
     regra: "Método de escolha de gráfico: (1) a pergunta embasa a tarefa analítica; (2) a tarefa define a forma; (3) a ferramenta é meio. Limite do gráfico: quando se precisa de precisão exata de todos os valores, a tabela supera o gráfico.",
-    pegadinha: "Pegadinha de ferramenta: 'a ferramenta tem rosca' é um erro de critério. O exame cobra a ordem de decisão: pergunta → tarefa → gráfico, nunca gráfico → pergunta."
+    pegadinha: "Pegadinha de ferramenta: 'a ferramenta tem rosca' é um erro de critério. O exame cobra a ordem de decisão: pergunta → tarefa → gráfico, nunca gráfico → pergunta.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
-  {
-    id: "q-m8-02",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fgv",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-1-topico-3",
-    assunto: "M8.1.3 Eixos e escala",
+  { id: "q-m8-02",
+    modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-1-topico-3", assunto: "M8.1.3 Eixos e escala",
     contexto: "Gráfico de barras mostra dois valores: A = 70 e B = 80. O gráfico foi criado com o eixo de valores iniciando em 60.",
-    enunciado: "Em um gráfico de barras, a barra de B parece o dobro da barra de A. Essa leitura visual está correta em razão de:",
+    enunciado: "Qual fator explica a distorção visual que faz a barra de B parecer o dobro da barra de A?",
     alternativas: [
-      { letra: "A", texto: "O eixo de valores iniciando em 60 é sempre aceitável, e portanto a leitura fica correta." },
-      { letra: "B", texto: "A comparação de barras é de comprimento, e comprimento só é proporcional quando começa na origem." },
-      { letra: "C", texto: "Eixos truncados são permitidos em barras quando o leitor é informado." },
-      { letra: "D", texto: "A distorção só acontece em gráficos 3D, não em barras bidimensionais." }
+      { letra: "A", texto: "O eixo de valores iniciando em 60 é sempre aceitável, independentemente da forma do gráfico." },
+      { letra: "B", texto: "A razão numérica entre 80 e 70 é exatamente 2, pois a base do eixo foi deslocada." },
+      { letra: "C", texto: "Em gráficos de barras, o comprimento visual deve ser proporcional ao valor e, em geral, a linha de base deve começar em zero." },
+      { letra: "D", texto: "A distorção só acontece em gráficos 3D, não em barras bidimensionais." },
+      { letra: "E", texto: "Eixos truncados tornam qualquer gráfico mais preciso quando o leitor é informado." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo registra que, em barras, a comparação é de comprimento/área e o comprimento só é proporcional quando o eixo começa em zero. Com base 60, as alturas seriam 10 e 20, o que faz a barra de B parecer o dobro da de A, embora 80/70 = 1,14. A correção é iniciar o eixo de magnitude em zero.",
+    gabarito: "C",
+    justificativa: "Com base 60, as alturas aparentes são 10 e 20, sugerindo uma razão visual de 2. Porém, os valores são 70 e 80, cuja razão é aproximadamente 1,14. Em gráficos de barras, a comparação é feita pelo comprimento; iniciar o eixo em zero preserva a proporcionalidade visual. Em outros tipos de gráfico, eixos truncados podem ser usados com cautela, mas não devem distorcer a magnitude das barras.",
     analise: {
-      A: "INCORRETA. Erro conceitual: generaliza 'eixo truncado pode ser aceito' para barras, contorcendo o enunciado.",
-      B: "CORRETA. Reproduz a regra de ouro do currículo: a comparação visual de comprimento só é fiel quando a linha de base é zero.",
-      C: "INCORRETA. Erro conceitual: confundir o critério. O truncamento é aceito em LINHAS, não em BARRAS, por causa da diferença de que a linha não compara área/comprimento.",
-      D: "INCORRETA. Erro conceitual: invenção de regra. O currículo trata do truncamento em barras diretamente."
+      A: "INCORRETA. A aceitabilidade depende do tipo de visualização; em barras, a base truncada distorce a comparação de comprimento.",
+      B: "INCORRETA. A razão numérica é 80/70 ≈ 1,14; o deslocamento altera a percepção, não os dados.",
+      C: "CORRETA. A linha de base zero preserva a proporcionalidade entre valor e comprimento da barra.",
+      D: "INCORRETA. Barras 2D também podem distorcer a magnitude quando o eixo é truncado.",
+      E: "INCORRETA. Avisar o leitor não elimina a distorção visual criada pela escala."
     },
-    regra: "Regra de ouro de escala: eixo truncado em barras distorce a razão visual; em séries temporais de valores altos também é aceito apenas com sinalização explícita do corte.",
-    pegadinha: "A pegadinha é 'qualquer eixo truncado é ruim' — o currículo exige distinguir barras (sempre começar em zero) de linhas (podem ser truncados com aviso)."
+    regra: "Em gráficos de barras, use linha de base zero para preservar a proporcionalidade do comprimento com o valor.",
+    pegadinha: "O truncamento altera a percepção visual, não a razão numérica entre os valores.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26)."
   },
-  {
-    id: "q-m8-03",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fcc",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-1-topico-3",
-    assunto: "M8.1.3 Integridade gráfica",
-    contexto: "Painel de gestão reúne valores de atendimentos de duas unidades: A = 70 e B = 80. O gráfico de barras começa o eixo em 60 para 'enfatizar a diferença'.",
-    enunciado: "Assinale a afirmação que correta o gráfico acima, sem alterar a informação nos dados.",
+
+  { id: "q-m8-03",
+    modulo: 8, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-1-topico-2", assunto: "M8.1.2 Escolha do gráfico pela tarefa analítica",
+    contexto: "Uma diretoria quer comparar o total de atendimentos de seis unidades em um único mês e identificar qual unidade teve maior volume.",
+    enunciado: "Qual visualização atende melhor à pergunta?",
     alternativas: [
-      { letra: "A", texto: "Deixar o eixo iniciando em 0, de modo que a razão visual volte a ser 80/70 = 1,14." },
-      { letra: "B", texto: "Manter o eixo em 60, pois o leitor precisa ver a diferença."
-      },
-      { letra: "C", texto: "Trocar para gráfico de linhas, que tornou-se mais fiel." },
-      { letra: "D", texto: "Inserir a tabela dos dois valores abaixo do gráfico, que substitui a necessidade de reescala." }
+      { letra: "A", texto: "Gráfico de dispersão sem indicar quais pontos representam cada unidade." },
+      { letra: "B", texto: "Gráfico de linhas ligando as unidades, como se formassem uma série temporal contínua." },
+      { letra: "C", texto: "Histograma dos nomes das unidades." },
+      { letra: "D", texto: "Gráfico de barras, com categorias identificadas e eixo de valores iniciando em zero." },
+      { letra: "E", texto: "Gráfico de área acumulada, mesmo sem variável temporal ou composição acumulativa." }
     ],
-    gabarito: "A",
-    justificativa: "No gráfico de barras, a comparação é de comprimento/área e qualquer truncamento gera falsa proporção (10 vs 20, visualizando dobro). A correção é iniciar a base em zero. A tabela abaixo não corrige a distorção existente; o gráfico já está errado. O gráfico de linhas também não seria o correto para comparação de magnitude de categorias.",
+    gabarito: "D",
+    justificativa: "A tarefa é comparar magnitudes entre categorias discretas em um único período. Um gráfico de barras com linha de base zero permite comparar comprimentos e identificar o maior valor. Gráfico de linhas é mais adequado para evolução ordenada, geralmente temporal; histograma é usado para distribuição de variável quantitativa; dispersão examina relação entre variáveis quantitativas; área acumulada pressupõe outra estrutura de análise.",
     analise: {
-      A: "CORRETA. Restaura a proporção visual de 1,14 e elimina a falsa 'dobradez'.",
-      B: "INCORRETA. Reforça o erro: manter o truncamento preserva o engano.",
-      C: "INCORRETA. Linha não resolve a comparação de magnitude categórica; adiciona uma forma inapta.",
-      D: "INCORRETA. Tabela não 'substitui a necessidade de reescala'; o gráfico permanece distorcido e, se a tabela não estiver devidamente vinculada, apenas adiciona ruído."
+      A: "INCORRETA. Dispersão é voltada à relação entre variáveis quantitativas e pontos sem identificação dificultam a leitura.",
+      B: "INCORRETA. Conectar categorias sem continuidade temporal ou ordinal pode sugerir uma relação inexistente.",
+      C: "INCORRETA. Nomes de unidades são categorias, não uma variável quantitativa contínua para histograma.",
+      D: "CORRETA. Barras permitem comparar magnitudes de categorias distintas de forma direta.",
+      E: "INCORRETA. Área acumulada não corresponde à tarefa descrita e pode sugerir composição temporal inexistente."
     },
-    regra: "Legítimo truncamento: gráfico de linhas de séries temporais com aviso explícito da base cortada; gráfico de barras: base zero, salvo comunicação explícita e registrada do leitor.",
-    pegadinha: "A alternativa B é a pegadinha de quem prefere a conclusão desejada à regra de escala — FCC cobra a aplicação do princípio, não o resultado desejado."
+    regra: "Escolha o gráfico pela pergunta: barras para comparar magnitudes entre categorias; linhas para evolução ordenada; histograma para distribuição quantitativa.",
+    pegadinha: "Não use linhas apenas porque há vários valores: a conexão visual pode sugerir continuidade inexistente.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26)."
   },
-  {
-    id: "q-m8-04",
-    modulo: 8,
-    formato: "mc",
-    estilo: "vunesp",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-2-topico-1",
-    assunto: "M8.2.1 Histograma e classes",
-    contexto: "Requisito curricular: construir histograma de uma variável quantitativa com classes de amplitude igual, sem folga entre barras.",
-    enunciado: "Em relação à construção de histograma, assinale a opção correta.",
+
+  { id: "q-m8-04",
+    modulo: 8, formato: "mc", estilo: "vunesp", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-2-topico-1", assunto: "M8.2.1 Histograma e classes",
+    contexto: "Um analista constrói um histograma para representar a distribuição de uma variável quantitativa contínua.",
+    enunciado: "Qual afirmação sobre a construção e a leitura de histogramas é correta?",
     alternativas: [
-      { letra: "A", texto: "As barras devem ser encostadas, pois a folga entre elas indicaria categorias discretas e sem ordem." },
-      { letra: "B", texto: "O eixo y apresenta a frequência relativa, e a altura é sempre a medida correta da classe." },
-      { letra: "C", texto: "Classes de larguras diferentes exigem que a frequência esteja na altura da barra." },
-      { letra: "D", texto: "O histograma deve começar o eixo x fora do menor valor observado." }
+      { letra: "A", texto: "As barras devem ter espaços como em um gráfico de categorias independentes." },
+      { letra: "B", texto: "O eixo y deve sempre representar frequência relativa, independentemente da largura das classes." },
+      { letra: "C", texto: "Quando as classes têm larguras diferentes, a frequência deve sempre ser representada pela altura sem ajuste." },
+      { letra: "D", texto: "As barras são encostadas para representar classes contíguas de uma variável quantitativa." },
+      { letra: "E", texto: "O histograma é a visualização preferencial para comparar nomes de categorias sem ordem." }
     ],
-    gabarito: "A",
-    justificativa: "O currículo define que as barras de um histograma são encostadas, sem folga, porque a continuidade visual sinaliza que os intervalos se tocam. A alternativa A reproduz exatamente essa regra. A alternativa B está incorreta porque, com larguras diferentes, a altura não é a medida correta — a área (densidade) sim. A C está invertida: com larguras diferentes a frequência está na área. A D está incorreta: o eixo x inicia-se no mínimo dos dados (ou no limite inferior da primeira classe), não fora.",
+    gabarito: "D",
+    justificativa: "As barras de um histograma são encostadas porque representam intervalos contíguos de uma variável quantitativa. Se as classes têm larguras iguais, a altura pode representar frequência ou frequência relativa de modo comparável; com larguras diferentes, deve-se considerar densidade para que a área da barra represente a frequência. Categorias independentes costumam ser comparadas por gráfico de barras com espaços.",
     analise: {
-      A: "CORRETA. Reproduz a regra de encosto, base da continuidade entre classes.",
-      B: "INCORRETA. Erro conceitual: a altura é a frequência apenas para larguras iguais; com larguras diferentes, é a área que representa a frequência.",
-      C: "INCORRETA. Inverte o princípio: com larguras diferentes, o correto é a densidade na altura, não a frequência.",
-      D: "INCORRETA. Erro conceitual: o eixo x começa no menor limite de classe, não fora dos dados; isso inventa um limite que não existe."
+      A: "INCORRETA. Espaços são típicos de barras categóricas, não de intervalos contíguos de histograma.",
+      B: "INCORRETA. A representação do eixo y depende do objetivo e da largura das classes; densidade pode ser necessária.",
+      C: "INCORRETA. Com larguras diferentes, altura sem ajuste pode distorcer a comparação; a área deve corresponder à frequência.",
+      D: "CORRETA. O encosto representa a continuidade dos intervalos quantitativos.",
+      E: "INCORRETA. Nomes de categorias não constituem distribuição quantitativa para histograma."
     },
-    regra: "Histograma: eixo x = classes contínuas (contagem), eixo y = frequência/área, barras encostadas, largura igual quando possível, declaração do número e da largura das classes.",
-    pegadinha: "A alternativa D captura o erro de 'esticar' o eixo x para destacar um valor, transformando um histograma em gráfico enganoso."
+    regra: "Histograma: barras encostadas; com larguras de classe diferentes, use densidade para que a área represente a frequência.",
+    pegadinha: "Não confunda histograma de intervalos quantitativos com gráfico de barras de categorias.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26)."
   },
-  {
-    id: "q-m8-05",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fcc",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-2-topico-3",
-    assunto: "M8.2.3 Barras e colunas",
-    contexto: "Unidades A = 450 e D = 190 atendimentos. Um gráfico iniciante parte o eixo de valores em 100 para 'enfatizar' a diferença.",
-    enunciado: "Assinale a opção correta sobre a comparação entre A e D.",
+
+  { id: "q-m8-05",
+    modulo: 8, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-2-topico-3", assunto: "M8.2.3 Barras e colunas",
+    contexto: "Unidades A = 450 e D = 190 atendimentos. Um gráfico iniciante parte o eixo de valores em 100 para enfatizar a diferença.",
+    enunciado: "Qual avaliação distingue corretamente a razão numérica da percepção visual no gráfico?",
     alternativas: [
-      { letra: "A", texto: "A razão real A/D é 450/190 ≈ 2,4, e o gráfico truncado não altera esse valor numérico." },
-      { letra: "B", texto: "O gráfico truncado não deixa ver a razão real, pois a diferença visual é inflada." },
-      { letra: "C", texto: "A partir de 100, a razão visual entre A e D é 2,4, exatamente como a razão numérica." },
-      { letra: "D", texto: "A razão real é calculada sobre o total, não sobre o valor de cada unidade." }
+      { letra: "A", texto: "A razão numérica A/D é 450/190 ≈ 2,37, e o gráfico truncado não altera esse cálculo." },
+      { letra: "B", texto: "O truncamento altera os dados originais, fazendo o valor de A passar a 350." },
+      { letra: "C", texto: "Com base 100, a razão visual é 2,37, igual à razão numérica." },
+      { letra: "D", texto: "A razão real deve ser calculada sobre o total, nunca entre os valores das unidades." },
+      { letra: "E", texto: "Com base 100, a razão visual das alturas é 350/90 ≈ 3,89, maior que a razão numérica." }
     ],
-    gabarito: "B",
-    justificativa: "A razão real é 450/190 ≈ 2,37 (quase 2,4). No gráfico com eixo de 100, as alturas são 350 e 90 — a razão visual vira 350/90 ≈ 3,89, inflada. O valor numérico é preservado (a dos dados não muda), mas a leitura visual é distorcida. A alternativa B reproduz corretamente essa distinção entre valor numérico invariante e razão visual distorcida.",
+    gabarito: "E",
+    justificativa: "A razão numérica é 450/190 ≈ 2,37. Com eixo iniciado em 100, as alturas aparentes são 350 e 90, e a razão visual passa a 350/90 ≈ 3,89. Os dados não mudam; a escala truncada é que exagera a diferença visual. Em gráfico de barras, a linha de base zero é a opção apropriada para preservar proporcionalidade.",
     analise: {
-      A: "INCORRETA. Não aborda a distorção visual: o truncamento não altera o valor numérico, mas altera a percepção da razão.",
-      B: "CORRETA. Diferencia valor numérico (inevariante) de leitura visual (distorcida), o que o currículo exige.",
-      C: "INCORRETA. Inválida: a razão visual com base 100 é 350/90 ≈ 3,89, não 2,4",
-      D: "INCORRETA. Erro conceitual: a razão A/D é calculada sobre os valores de cada unidade (450/190 ≈ 2,4), não sobre o 'total'. A afirmação inverte a base de cálculo.",
+      A: "INCORRETA. O cálculo numérico está correto, mas não responde à distorção visual solicitada.",
+      B: "INCORRETA. O truncamento altera a representação visual, não os valores originais.",
+      C: "INCORRETA. 350/90 não é 2,37; o truncamento altera a razão visual.",
+      D: "INCORRETA. A razão entre duas unidades pode ser calculada diretamente quando essa é a pergunta.",
+      E: "CORRETA. A razão das alturas truncadas é aproximadamente 3,89, maior que 2,37."
     },
-    regra: "Razão visual de barras = (valorA − base)/(valorB − base); em relação à razão real, o truncamento só é fiel na base zero.",
-    pegadinha: "A pegadinha é 'a razão numérica não muda' como se isso dissesse que o gráfico está correto — FCC cobra a distinção entre dado e leitura visual."
+    regra: "Diferencie valor dos dados e medida visual: o eixo truncado não muda os dados, mas pode exagerar a razão percebida.",
+    pegadinha: "Não confunda a altura aparente da barra com o valor original nem com a razão numérica.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26)."
   },
-  {
-    id: "q-m8-06",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fgv",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-3-topico-1",
-    assunto: "M8.3.1 Média, mediana e moda",
-    contexto: "Conjunto 2, 4, 4, 4, 5, 5, 7, 9. Professora pede a classe a média, mediana e moda para decidir qual descreve o 'caso típico'.",
+
+  { id: "q-m8-06", modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-3-topico-1", assunto: "M8.3.1 Média, mediana e moda",
+    contexto: "Conjunto 2, 4, 4, 4, 5, 5, 7, 9. A professora pede a média, a mediana e a moda para decidir qual descreve o caso típico.",
     enunciado: "Para o conjunto 2, 4, 4, 4, 5, 5, 7, 9, a média, a mediana e a moda são, respectivamente:",
     alternativas: [
-      { letra: "A", texto: "5,0; 4,5 e 4" },
-      { letra: "B", texto: "5,0; 5 e 4" },
-      { letra: "C", texto: "4,5; 5 e 5" },
-      { letra: "D", texto: "5,0; 4 e 4,5" }
+      { letra: "A", texto: "5,0; 4,5 e 4." },
+      { letra: "B", texto: "5,0; 5 e 4." },
+      { letra: "C", texto: "4,5; 5 e 5." },
+      { letra: "D", texto: "5,0; 4 e 4,5." },
+      { letra: "E", texto: "4,0; 4,5 e 5." }
     ],
     gabarito: "A",
-    justificativa: "Média = soma ÷ n = 40 ÷ 8 = 5,0. Mediana: n par, média dos dois centrais (4 e 5) = 4,5. Moda: valor mais frequente = 4 (aparece 3 vezes). A alternativa A reproduz exatamente essas medidas.",
+    justificativa: "Média = soma ÷ n = 40 ÷ 8 = 5,0. Mediana: como n é par, calcula-se a média dos dois valores centrais (4 e 5), resultando em 4,5. Moda: o valor mais frequente é 4, que aparece três vezes.",
     analise: {
       A: "CORRETA. Média 5,0; mediana 4,5; moda 4.",
-      B: "INCORRETA. Mediana incorreta: confunde posições centrais (4 e 5 dão 4,5, não 5).",
-      C: "INCORRETA. Erro de múltiplos cálculos: média e moda trocadas.",
-      D: "INCORRETA. Mista: média correta, mediana e moda trocadas."
+      B: "INCORRETA. A mediana é a média de 4 e 5, não 5.",
+      C: "INCORRETA. A média e a moda estão incorretas.",
+      D: "INCORRETA. Mediana e moda foram trocadas.",
+      E: "INCORRETA. A média não é 4,0 e a moda não é 5."
     },
-    regra: "Média = Σ valores ÷ n; mediana = valor central (média dos dois centrais, se n par); moda = valor de maior frequência.",
-    pegadinha: "A pegadinha é a mediana: n par exige média dos dois centrais, e o aluno que pega o 5º valor apenas (5) erra."
+    regra: "Média = soma dos valores ÷ quantidade; mediana = valor central (média dos dois centrais se n par); moda = valor de maior frequência.",
+    pegadinha: "Com quantidade par de observações, a mediana não é simplesmente o valor da posição central superior.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26)."
   },
+
   {
     id: "q-m8-07",
     modulo: 8,
@@ -192,70 +181,65 @@ const moduleQuestions8 = [
     enunciado: "No Power Query, os passos de transformação são registrados e executados sempre que a consulta é atualizada, permitindo refazer a carga sem retrabalho manual.",
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'os passos de transformação são registrados e executados sempre que a consulta é atualizada': o currículo afirma que o Power Query mantém os passos como um script declarativo, permitindo reexecutar o processo inteiro sem ajuste manual.",
-    justificativa: "O Power Query é o editor de preparação que executa transformações por passos registrados (filtrar colunas, trocar tipos, agregar, mesclar, expandir). Esses passos ficam documentados e são reexecutados a cada atualização da consulta, o que é o enunciado. A afirmação é, portanto, verdadeira.",
+    justificativa: "O Power Query é um editor de preparação que registra transformações em etapas (filtrar colunas, trocar tipos, agregar, mesclar, expandir) e as reexecuta ao atualizar a consulta, desde que as fontes, credenciais e configuração estejam disponíveis. Isso reduz retrabalho manual, mas não elimina toda a operação ou manutenção.",
     analise: {
-      item: "Item VERDADEIRO. Os passos registrados são reexecutados a cada atualização, o que elimina retrabalho manual.",
+      item: "Item VERDADEIRO. Os passos registrados são reexecutados a cada atualização, o que reduz o retrabalho manual nas transformações já configuradas; fontes e esquemas ainda podem exigir manutenção.",
       leituraIncorreta: "Leitura que induz ao erro: considerar que o Power Query é só 'caminho de importação' — na verdade o editor transforma e registra a sequência, e é por isso que o item é certo."
     },
-    regra: "Power Query = ETL declarativo em passos; cada atualização refaz os passos registrados; o fluxo é extrair → transformar → carregar (ETL/ELT).",
-    pegadinha: "CSNIF: cada um dos itens C/E costuma inverter uma característica — aqui o candente é o 'fica registrado' e 'executado', ambos presentes no currículo."
+    regra: "Power Query registra passos de preparação que podem ser reexecutados na atualização; a posição da transformação em relação à carga depende do destino e da arquitetura.",
+    pegadinha: "O registro das etapas torna a transformação reproduzível, mas não elimina falhas de fonte, credenciais, mudança de esquema ou necessidade de manutenção.",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
-  {
-    id: "q-m8-08",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fcc",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-4-topico-3",
-    assunto: "M8.4.3 Modelagem analítica",
-    contexto: "Relatório de pagamentos exibe 1.500 'atendimentos' (linhas) sobre uma base com 1.200 protocolos distintos.",
-    enunciado: "No modelo estrela, o erro de contar 'linhas do fato' até para contar eventos reais ocorre quando:",
+  { id: "q-m8-08", modulo: 8, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-4-topico-3", assunto: "M8.4.3 Modelagem analítica",
+    contexto: "Relatório de pagamentos exibe 1.500 linhas de fatos associadas a 1.200 protocolos distintos; algumas etapas do processo geram mais de uma linha por protocolo.",
+    enunciado: "No modelo estrela, por que contar linhas da tabela de fatos como se cada linha fosse um protocolo pode superestimar a quantidade de protocolos?",
     alternativas: [
-      { letra: "A", texto: "a tabela de fato armazena medidas numéricas e chaves simples." },
-      { letra: "B", texto: "a tabela de fato duplica linhas por causa de chave identidade não única." },
-      { letra: "C", texto: "as dimensões são enxutas e possuem chave única." },
-      { letra: "D", texto: "a granularidade do fato está declarada." }
+      { letra: "A", texto: "A tabela de fatos armazena medidas numéricas e chaves simples." },
+      { letra: "B", texto: "A granularidade permite várias linhas por protocolo, mas o relatório interpreta cada linha como um protocolo distinto." },
+      { letra: "C", texto: "As dimensões são enxutas e possuem chave única." },
+      { letra: "D", texto: "A granularidade do fato está declarada." },
+      { letra: "E", texto: "A contagem simples sempre equivale à contagem distinta quando as dimensões têm chave única." }
     ],
     gabarito: "B",
-    justificativa: "A armadilha clássica do currículo: contar linhas do fato inflada pela duplicidade de chave. Quando a chave não é única, uma linha do fato repete um evento, e a contagem por linhas exagerará. A alternativa B reproduz esse cenário. As demais estão incorretas: A não causa duplicidade; C (dimensões enxutas com chave única) é o ideal; D (granularidade declarada) evita o erro.",
+    justificativa: "A contagem de linhas mede registros na granularidade da tabela de fatos, não necessariamente protocolos distintos. Se um protocolo pode gerar várias linhas de fato, contar cada linha como um protocolo superestima o total. Para medir protocolos únicos, pode ser necessária uma contagem distinta do identificador, conforme a granularidade e as regras do modelo.",
     analise: {
-      A: "INCORRETA. Erro conceitual: medida + chave simples é modelo saudável; a duplicação é o defeito.",
-      B: "CORRETA. Reproduz exatamente a armadilha de contagem inflada por duplicidade de chave.",
-      C: "INCORRETA. Erro conceitual: dimensões enxutas com chave única resolvem a temporalidade, não causam erro.",
-      D: "INCORRETA. Erro conceitual: declarar granularidade é a solução, não a causa do erro."
+      A: "INCORRETA. Medidas e chaves são componentes normais da tabela de fatos e não explicam a superestimação.",
+      B: "CORRETA. A incompatibilidade entre granularidade das linhas e entidade contada produz a superestimação.",
+      C: "INCORRETA. Chaves únicas nas dimensões não garantem uma linha de fato por protocolo.",
+      D: "INCORRETA. Declarar a granularidade ajuda a compreender o modelo, mas não impede uma medida incorreta.",
+      E: "INCORRETA. A contagem distinta pode corrigir o indicador, mas a pergunta pede a causa da superestimação, descrita na alternativa B."
     },
-    regra: "Modelo estrela: fato transacional no centro, dimensões ao redor; medir por contagem de linhas só é válido se a chave do fato for única (caio); use contagem distinta quando houver possíveis duplicatas.",
-    pegadinha: "A pegadinha é a alternativa A: parece correta, mas a duplicidade de chave não está na base, e o exame quer a condição que GERA o erro (B)."
+    regra: "A contagem simples de linhas mede linhas no grão da tabela de fatos; conte entidades distintas quando essa for a métrica pretendida.",
+    pegadinha: "Contagem de linhas não equivale automaticamente à contagem de entidades de negócio.",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
   },
-  {
-    id: "q-m8-09",
-    modulo: 8,
-    formato: "mc",
-    estilo: "fgv",
-    origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-8-unidade-5-topico-1",
-    assunto: "M8.5.1 Arco narrativo",
+
+  { id: "q-m8-09", modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
+    topico: "modulo-8-unidade-5-topico-1", assunto: "M8.5.1 Arco narrativo",
     contexto: "Gestor pede uma apresentação de dados sobre uma meta não atingida e pede recomendações.",
-    enunciado: "Para estruturar uma narrativa de decisão, a recomendação final de storytelling com dados deve indicar:",
+    enunciado: "Para estruturar uma narrativa de decisão, a recomendação final deve indicar:",
     alternativas: [
-      { letra: "A", texto: "apenas a ação proposta, sem responsável, prazo ou custo de não agir." },
-      { letra: "B", texto: "ação, responsável, prazo e o que acontece se a ação não for feita." },
-      { letra: "C", texto: "a ordem em que os dados foram coletados, para preservar o contexto original." },
-      { letra: "D", texto: "todos os indicadores calculados, em quantidade ilimitada." }
+      { letra: "A", texto: "Apenas a ação proposta, sem responsável, prazo ou consequência de não agir." },
+      { letra: "B", texto: "Todos os indicadores calculados, sem limite de quantidade." },
+      { letra: "C", texto: "A ordem em que os dados foram coletados, para preservar a sequência original." },
+      { letra: "D", texto: "Ação proposta, responsável, prazo, custo previsto e consequência de não executar a ação." },
+      { letra: "E", texto: "Apenas o gráfico mais visualmente atraente, deixando a decisão para o público." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define que a RECOMENDAÇÃO deve conter a ação proposta, com responsável, prazo, custo e o que acontece se não for feita. A alternativa B reproduz exatamente esses quatro elementos. A alternativa A omite os elementos obrigatórios; a C inverte a ordem da narrativa (seguir a ordem dos dados não é a ordem da decisão); a D é anti-restrição e viola a regra de 'uma mensagem por gráfico'.",
+    gabarito: "D",
+    justificativa: "A recomendação deve converter a análise em ação: indicar o que fazer, quem responde, em qual prazo, qual custo previsto e o que pode ocorrer se a ação não for executada. A sequência de coleta não é necessariamente a ordem da narrativa decisória, e incluir todos os indicadores pode dispersar a mensagem principal.",
     analise: {
-      A: "INCORRETA. Erro conceitual: recomendação sem responsável, prazo e custo de não agir é constatação, não decide.",
-      B: "CORRETA. Reproduz os quatro movimentos obrigatórios do recomendado no currículo.",
-      C: "INCORRETA. Erro conceitual: a ordem da investigação não é a ordem da narrativa de decisão; concluir primeiro e justificar depois é a regra.",
-      D: "INCORRETA. Erro conceitual: todos os indicadores em quantidade ilimitada satura o painel e paralisa a decisão (visão completa é anti-padrão de gestão)."
+      A: "INCORRETA. Sem responsável e prazo, a ação fica pouco executável; omitir consequências enfraquece a decisão.",
+      B: "INCORRETA. Excesso de indicadores pode ocultar a mensagem principal.",
+      C: "INCORRETA. A narrativa deve seguir a lógica da pergunta e da decisão, não necessariamente a ordem de coleta.",
+      D: "CORRETA. Reúne ação, responsabilidade, prazo, custo e consequência de não agir.",
+      E: "INCORRETA. A visualização deve apoiar uma recomendação fundamentada, não substituir a análise."
     },
-    regra: "Storytelling de decisão: contexto → conflito → descoberta → recomendação, com recomendações que contenham ação, responsável, prazo e custo de não agir.",
-    pegadinha: "A alternativa C pega quem associa 'fiel ao processo de coleta' à 'narrativa de comunicação', mas o currículo exige a ordem da decisão, não a do processo."
+    regra: "Recomendação executável especifica ação, responsável, prazo, custo previsto e consequência de não agir.",
+    pegadinha: "Uma apresentação de dados não termina na constatação: deve conectar evidência a uma decisão clara.",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
   },
+
   {
     id: "q-m8-10",
     modulo: 8,
@@ -266,16 +250,17 @@ const moduleQuestions8 = [
     topico: "modulo-8-unidade-5-topico-2",
     assunto: "M8.5.2 Métricas de processo e resultado",
     contexto: "Painel de atendimento exibe métricas de resultado e métricas de processo.",
-    enunciado: "Qual das afirmações abaixo está de acordo com o currículo sobre métricas de um painel?",
+    enunciado: "Métricas de resultado consolidam o que já aconteceu, enquanto métricas de processo podem sinalizar desvios e permitir intervenção antes de o resultado final se consolidar.",
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'métricas de resultado consolidam o passado e métricas de processo permitem corrigir antes que o resultado piora': o currículo afirma que o resultado consolida o passado, e a métrica de processo (fila, prazo de resposta) permite agir ANTES do resultado consolidar.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a distinção entre métricas de resultado, que registram resultados já ocorridos, e métricas de processo, que podem sinalizar desvios antes da consolidação do resultado final.",
     justificativa: "O currículo distingue métricas de resultado (lagging: o que já aconteceu — receita realizada, atendimentos concluídos) de métricas de processo (leading: o que antecede o resultado — prazo de resposta, fila de entrada). A afirmação combina as duas ideias de forma correta.",
     analise: {
       item: "Item VERDADEIRO. Métrica de processo é necessária justamente porque o resultado consolida o passado e reage tarde.",
       leituraIncorreta: "Leitura que induz ao erro: 'resultados são o que importa'; o currículo descompensa essa leitura."
     },
     regra: "Métrica de processo permite agir antes do resultado consolidar; métrica de resultado confirma o que já aconteceu. Painel equilibra as duas.",
-    pegadinha: "A pegadinha do item é a inversão 'resultado primeiro e processo dispensável', típica de quem lê só a primeira frase."
+    pegadinha: "A pegadinha do item é a inversão 'resultado primeiro e processo dispensável', típica de quem lê só a primeira frase.",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-11",
@@ -286,7 +271,7 @@ const moduleQuestions8 = [
     nivel: "basico",
     topico: "modulo-8-unidade-4-topico-2",
     assunto: "M8.4.2 Tableau e Looker Studio",
-    contexto: "Escola quer publicar um painel simples ligado a uma planilha, sem instalação e sem custo inicial.",
+    contexto: "Uma escola quer compartilhar com a equipe interna um painel ligado a uma planilha com dados operacionais não destinados à publicação pública; não pode instalar software nem assumir custo inicial.",
     enunciado: "Em relação à escolha de ferramenta para o cenário descrito, assinale a opção correta.",
     alternativas: [
       { letra: "A", texto: "Tableau Public, pois é gratuita e não exige instalação para a leitura." },
@@ -295,15 +280,16 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Nenhum, pois o painel sempre exige licença paga." }
     ],
     gabarito: "B",
-    justificativa: "O currículo registra que o Looker Studio é uma ferramenta de painéis em navegador, com editor gratuito para uso básico e conectores a fontes de dados; elimina instalação e custo inicial de autoria. A alternativa B reproduz isso nos termos do cenário. A alternativa A é um erro de uso: o Tableau Public publica em área pública, incompatível com bom senso de dados. A C erra: o Desktop é licenciado (pago) e para autoria. A D é exagerada: o uso básico do Looker Studio é gratuito.",
+    justificativa: "O currículo registra que o Looker Studio é uma ferramenta de painéis em navegador, com editor gratuito para uso básico e conectores a fontes de dados; elimina instalação e custo inicial de autoria. A alternativa B reproduz isso nos termos do cenário e permite compartilhar o painel conforme as permissões configuradas. A alternativa A é inadequada porque Tableau Public é voltado à publicação pública, incompatível com os dados operacionais internos descritos. A C erra: o Desktop é licenciado para autoria. A D é exagerada: o uso básico do Looker Studio é gratuito.",
     analise: {
-      A: "INCORRETA. Erro conceitual: publicação pública de dados da escola não é condizente com bom senso; o Looker Studio é o perfil do cenário.",
+      A: "INCORRETA. Erro conceitual: publicação pública de dados da escola não é condizente com bom senso; o Looker Studio é mais adequado ao cenário descrito.",
       B: "CORRETA. Reproduz as três características fundamentais: navegador, conectores e gratuidade básica.",
       C: "INCORRETA. Erro conceitual: o Tableau Desktop é licenciado pago para autoria; não é o caminho gratuito do peso.",
       D: "INCORRETA. Erro conceitual: exagera; a edição básica do Looker Studio é gratuita."
     },
-    regra: "Escolha por custo de autoria vs. publicação: Tableau Public gratuito com publicação pública; Looker Studio gratuito para autoria básica; Desktop licenciado; pré-público sensible não vai para área aberta.",
-    pegadinha: "A alternativa A é a pegadinha: gratuidade simples não legifera o uso público de dados escolares; o exame cobra o uso mais adequado, não o mais barato."
+    regra: "Escolha por custo de autoria vs. publicação: Tableau Public gratuito com publicação pública; Looker Studio gratuito para autoria básica; Desktop licenciado; dados sensíveis ou confidenciais não devem ser publicados em área aberta.",
+    pegadinha: "A alternativa A é a pegadinha: gratuidade simples não legifera o uso público de dados escolares; o exame cobra o uso mais adequado, não o mais barato.",
+    fonte: "Tableau Help (Desktop/Web Authoring): https://help.tableau.com/current/pro/desktop/en-us/default.htm (verificado em 2026-10-26). Google Looker Studio Help: https://support.google.com/looker-studio/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-12",
@@ -314,17 +300,18 @@ const moduleQuestions8 = [
     nivel: "basico",
     topico: "modulo-8-unidade-2-topico-5",
     assunto: "M8.2.5 Box plot e quartis",
-    contexto: "Conjunto 2, 4, 6, 8, 10, 12, 50. Professor pede osquartis, o IIQ e a presença de outliers pela convenção de Tukey.",
-    enunciado: "No box plot de Tukey, o intervalo interquartílico (IIQ) é Q3 − Q1, e os bigodes vão de Q1 − 1,5 × IIQ até Q3 + 1,5 × IIQ, valorizando o aquele que está dentro dos limites.",
+    contexto: "Conjunto 2, 4, 6, 8, 10, 12, 50. Professor pede os quartis, o IIQ e a presença de outliers pela convenção de Tukey.",
+    enunciado: "No box plot de Tukey, o intervalo interquartílico (IIQ) é Q3 − Q1; os limites para identificar outliers são Q1 − 1,5 × IIQ e Q3 + 1,5 × IIQ, e os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites.",
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'IIQ = Q3 − Q1 e os bigodes vão de Q1 − 1,5×IIQ até Q3 + 1,5×IIQ': o currículo define exatamente o IIQ como Q3 − Q1 e a convenção de Tukey com múltiplo 1,5.",
-    justificativa: "O currículo define: bigode de Tukey limita em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; bigode vai até o maior/menor valor dentro dos limites; outliers são plotados isoladamente. O enunciado reproduz essas regras.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'os bigodes alcançam os valores observados mais extremos que permanecem dentro desses limites': o IIQ é Q3 − Q1, e os limites de Tukey para identificar outliers são Q1 − 1,5×IIQ e Q3 + 1,5×IIQ.",
+    justificativa: "O currículo define os limites de Tukey em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; cada bigode vai até o valor observado mais extremo que permanece dentro do limite correspondente, enquanto valores fora são plotados isoladamente. O enunciado reproduz essas regras.",
     analise: {
-      item: "Item VERDADEIRO. IIQ = Q3 − Q1; bigodes pelos limites de 1,5×IIQ; valores fora são outliers.",
+      item: "Item VERDADEIRO. IIQ = Q3 − Q1; os limites de 1,5×IIQ identificam outliers; cada bigode alcança o valor observado mais extremo dentro do limite correspondente.",
       leituraIncorreta: "Leitura que induz ao erro: 'bigode vai até o valor máximo/ mínimo absoluto' — isso só ocorre em convenções alternativas; a convenção de Tukey usa o intervalo de 1,5×IIQ."
     },
-    regra: "Tukey: bigodes em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; outliers são pontos fora desses limites; IIQ = Q3 − Q1 mede a dispersão central.",
-    pegadinha: "A pegadinha é confundir 'bigode até o extremo' com 'bigode até o limite de 1,5×IIQ' — a convenção de Tukey define o feno do limite, não o valor absoluto."
+    regra: "Tukey: limites para outliers em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; cada bigode vai até o valor observado mais extremo dentro do limite correspondente; IIQ = Q3 − Q1 mede a dispersão central.",
+    pegadinha: "A pegadinha é confundir o limite teórico de 1,5×IIQ com a extremidade efetiva do bigode: o bigode termina no valor observado mais extremo que ainda está dentro do limite.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-13",
@@ -339,20 +326,21 @@ const moduleQuestions8 = [
     enunciado: "Para representar essas magnitudes em um mapa de calor, assinale a paleta mais adequada.",
     alternativas: [
       { letra: "A", texto: "Paleta categórica com cores distintas e de força igual para cada faixa de valor." },
-      { letra: "B", texto: "Paleta sequencial, com variação de luminosidade de uma cor para outra, de claro para escuro." },
+      { letra: "B", texto: "Usar poucas cores claras, sem escala, para reduzir o esforço de leitura." },
       { letra: "C", texto: "Paleta arco-íris, pois aproveita todas as cores disponíveis e é mais legível." },
-      { letra: "D", texto: "Poucas cores claras, sem escala, para 'não cansativar' a leitura." }
+      { letra: "D", texto: "Paleta sequencial, com variação de luminosidade de uma cor para outra, de claro para escuro." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo classifica a variável como sequencial (magnitude contínua, ordenada) e indica paleta sequencial: variação de luminosidade de uma cor, de menor a maior, respeitando a ordem perceptiva. A alternativa B reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (D) não comunicam magnitude.",
     analise: {
       A: "INCORRETA. Erro conceitual: variável contínua ordenada não é categórica; as cores distintas impõem divisões artificiais.",
-      B: "CORRETA. Reproduz a regra de ouro: sequencial para magnitudes, gradação por luminosidade.",
+      B: "INCORRETA. Erro conceitual: sem escala, o leitor não decora a intensidade; a regra de ouro é escala para magnitude.",
       C: "INCORRETA. Erro conceitual: paleta decorativa não codifica ordem; dificulta a leitura de 'mais/ou menos'.",
-      D: "INCORRETA. Erro conceitual: sem escala, o leitor não decora a intensidade; a regra de ouro é escala para magnitude."
+      D: "CORRETA. Reproduz a regra de ouro: sequencial para magnitudes, gradação por luminosidade."
     },
-    regra: "Categorias nominais → paleta categórica (poucas cores); magnitudes ordenas → paleta sequencial (luminosidade); metade vs total → divergente (neutro na referência).",
-    pegadinha: "A pegadinha é 'paleta arco-íris é mais atrativa' — no currículo, a atratividade decorativa é ruído quando a tarefa é ler magnitude."
+    regra: "Categorias nominais → paleta categórica (poucas cores); magnitudes ordenadas → paleta sequencial (luminosidade); valores acima e abaixo de uma referência → paleta divergente (neutro na referência).",
+    pegadinha: "A pegadinha é 'paleta arco-íris é mais atrativa' — no currículo, a atratividade decorativa é ruído quando a tarefa é ler magnitude.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-14",
@@ -372,7 +360,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Para torná-lo acessível, é preciso remover a escala de cores." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que acessibilidade exige mais que contraste: redundância além da cor (rótulo, forma, padrão ou posição), pois uma grande parte da população tem dificuldade de matizes, e vermelho/verde é a combinação mais problemática. A alternativa B reproduz exatamente isso. A alternativa A ignora a dependência exclusiva da cor; a C é a armadilha da corção ('verde/vermelho é universal'), e a D erra: remover a escala não torna o gráfico acessível.",
+    justificativa: "O currículo define que acessibilidade exige mais que contraste: redundância além da cor (rótulo, forma, padrão ou posição), pois uma grande parte da população tem dificuldade de matizes, e vermelho/verde é a combinação mais problemática. A alternativa B reproduz exatamente isso. A alternativa A ignora a dependência exclusiva da cor; a C é a armadilha da ideia de que verde/vermelho é universalmente distinguível, e a D erra: remover a escala não torna o gráfico acessível.",
     analise: {
       A: "INCORRETA. Erro conceitual: contraste é necessário, não suficiente; o currículo exige redundância além da cor.",
       B: "CORRETA. Reproduz a regra de ouro de acessibilidade em visualização: cor acompanhada de outra codificação.",
@@ -380,7 +368,8 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: remover a escala não resolve a dependência da cor; a leitura de magnitude também é prejudicada."
     },
     regra: "Acessibilidade: redundância (cor + rótulo/forma/padrão), testes em escala de cinza, texto alternativo, dados subjacentes e fonte legível.",
-    pegadinha: "A pegadinha é concluir 'cor bem contrastada' de cara; acessibilidade é sinônimo de redundância, não de contraste isolado."
+    pegadinha: "A pegadinha é concluir 'cor bem contrastada' de cara; acessibilidade não se reduz ao contraste: combine cor com rótulos, formas ou padrões.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-15",
@@ -394,21 +383,22 @@ const moduleQuestions8 = [
     contexto: "Série com valores muito discrepantes: 10, 30, 100, 300, 1.000.",
     enunciado: "Em escala logarítmica, a distância visual entre 10 e 100 é igual à distância entre 100 e 1.000, porque:",
     alternativas: [
-      { letra: "A", texto: "Cada passo multiplica pelo mesmo fator, e a escala logarítmica exige que cada passo represente uma razão constante." },
-      { letra: "B", texto: "Em escala logarítmica, distâncias iguais significam acréscimo absoluto igual." },
-      { letra: "C", texto: "O gráfico logarítmico inverte a escala, fazendo os valores crescerem decrescente." },
-      { letra: "D", texto: "A escala logarítmica só funciona para dados positivos, sem influenciar a distância." }
+      { letra: "A", texto: "Em escala logarítmica, distâncias iguais significam acréscimo absoluto igual." },
+      { letra: "B", texto: "O gráfico logarítmico inverte a escala, fazendo os valores crescerem decrescente." },
+      { letra: "C", texto: "Cada passo multiplica pelo mesmo fator, e a escala logarítmica exige que cada passo represente uma razão constante." },
+      { letra: "D", texto: "A escala logarítmica só funciona para valores positivos, mas as distâncias visuais continuam proporcionais aos acréscimos absolutos." }
     ],
-    gabarito: "A",
-    justificativa: "O currículo afirma que em escala logarítmica, distâncias iguais representam razões iguais: cada passo multiplica. O passo visual entre 10 e 100 é igual ao entre 100 e 1.000 porque ambos são multiplicação por 10. A alternativa A reproduz isso. A B está invertida: em logaritmo, passo igual significa fator multiplicativo, não acréscimo absoluto. A C e a D são invenções.",
+    gabarito: "C",
+    justificativa: "O currículo afirma que em escala logarítmica, distâncias iguais representam razões iguais: cada passo multiplica. O passo visual entre 10 e 100 é igual ao entre 100 e 1.000 porque ambos são multiplicação por 10. A alternativa C reproduz isso. A B está invertida: em logaritmo, passo igual significa fator multiplicativo, não acréscimo absoluto. A D está incorreta porque a escala logarítmica altera as distâncias visuais de acordo com razões multiplicativas; ela não deixa a distância sem influência.",
     analise: {
-      A: "CORRETA. Reproduz a definição do currículo: passo igual = razão constante (fator multiplicativo).",
-      B: "INCORRETA. Inverte o princípio: em escala logarítmica, passo igual significa fator multiplicativo, não acréscimo absoluto.",
-      C: "INCORRETA. Erro conceitual: a escala logarítmica não inverte a ordem; os valores aumentam em sequência.",
-      D: "INCORRETA. Erro conceitual: a distância no gráfico logarítmico é determinada pela razão, não por um 'nenhum influência' vago."
+      A: "INCORRETA. Inverte o princípio: em escala logarítmica, passo igual significa fator multiplicativo, não acréscimo absoluto.",
+      B: "INCORRETA. Erro conceitual: a escala logarítmica não inverte a ordem; os valores aumentam em sequência.",
+      C: "CORRETA. Reproduz a definição do currículo: passo igual = razão constante (fator multiplicativo).",
+      D: "INCORRETA. Embora a escala logarítmica comum exija valores positivos, as distâncias visuais representam razões multiplicativas, não acréscimos absolutos."
     },
     regra: "Escala linear: passo = diferença absoluta. Escala logarítmica: passo = razão (multiplicação). Em log, subida visual igual = mesmo fator, não mesmo acréscimo.",
-    pegadinha: "A pegadinha é aceitar 'passo igual = valor novo' — no log, 'ae iguais' significa 'multiplicaram pelo mesmo fator'."
+    pegadinha: "A pegadinha é aceitar 'passo igual = valor novo' — na escala logarítmica, distâncias visuais iguais correspondem ao mesmo fator multiplicativo.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-16",
@@ -423,20 +413,21 @@ const moduleQuestions8 = [
     enunciado: "A sequência de gráficos mais adequada para os quatro problemas acima é:",
     alternativas: [
       { letra: "A", texto: "barras (a), linhas (b), pizza (c), dispersão (d)" },
-      { letra: "B", texto: "barras agrupadas ordenadas (a), linhas (b), histograma (c), dispersão (d)" },
+      { letra: "B", texto: "barras empilhadas (a), linhas (b), pizza (c), dispersão (d)" },
       { letra: "C", texto: "linhas (a), barras (b), dispersão (c), pizza (d)" },
-      { letra: "D", texto: "barras empilhadas (a), linhas (b), pizza (c), dispersão (d)" }
+      { letra: "D", texto: "barras agrupadas ordenadas (a), linhas (b), histograma (c), dispersão (d)" }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define: comparar categorias → barras (com ordenação decrescente quando for ranqueamento); evoluir no tempo → linhas; distribuir uma variável quantitativa → histograma. A alternativa B segue exatamente essa matriz. A A erra no (c) — para distribuição de idade de 1.000, histograma é superior a pizza. A C erra no (a) — linhas exigem ordem temporal, e 'tipo de reclamação' é nominal. A D erra no (a) — barras empilhadas não comparam categorias isoladas com clareza no cenário (a) e não é a primeira opção para comparação de tipos.",
+    gabarito: "D",
+    justificativa: "O currículo define: comparar categorias → barras (com ordenação decrescente quando for ranqueamento); evoluir no tempo → linhas; distribuir uma variável quantitativa → histograma. A alternativa D segue exatamente essa matriz. A A erra no (c) — para distribuição de idade de 1.000, histograma é superior a pizza. A C erra no (a) — linhas exigem ordem temporal, e 'tipo de reclamação' é nominal. A D erra no (a) — barras empilhadas não comparam categorias isoladas com clareza no cenário (a) e não é a primeira opção para comparação de tipos.",
     analise: {
       A: "INCORRETA. Erro conceitual: (c) idade de 1.000 é quantitativa contínua → histograma, não pizza.",
-      B: "CORRETA. Reproduz a matriz de decisão do currículo: barras (comparar categorias), linhas (evolução temporal), histograma (distribuição), dispersão (duas variáveis quantitativas).",
+      B: "INCORRETA. Erro conceitual: (a) comparar tipos de reclamação não é melhor com barras empilhadas; e (c) idade segue histograma.",
       C: "INCORRETA. Erro conceitual: (a) tipo de reclamação é nominal sem ordem → linhas implicam continuidade inexistente.",
-      D: "INCORRETA. Erro conceitual: (a) comparar tipos de reclamação não é melhor com barras empilhadas; e (c) idade segue histograma."
+      D: "CORRETA. Reproduz a matriz de decisão do currículo: barras (comparar categorias), linhas (evolução temporal), histograma (distribuição), dispersão (duas variáveis quantitativas)."
     },
     regra: "Matriz de decisão: comparar categorias → barras; evoluir no tempo → linhas; distribuir → histograma/box plot; relacionar duas variáveis → dispersão; comparar um todo → barras empilhadas/tabela.",
-    pegadinha: "A pegadinha é 'linha para (a) porque é série' — o (a) é nominal, e linhas impõem continuidade e tendência que só existem em (b)."
+    pegadinha: "A pegadinha é 'linha para (a) porque é série' — o (a) é nominal, e linhas impõem continuidade e tendência que só existem em (b).",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-17",
@@ -451,20 +442,21 @@ const moduleQuestions8 = [
     enunciado: "Ao comparar dois histogramas com larguras de classe diferentes, a afirmação correta é:",
     alternativas: [
       { letra: "A", texto: "A altura da barra é sempre a medida legítima, independentemente da largura." },
-      { letra: "B", texto: "A frequência é representada pela área do retângulo, e a altura é a densidade (frequência ÷ largura)." },
+      { letra: "B", texto: "A densidade é usada apenas para representar a frequência relativa, nunca absoluta." },
       { letra: "C", texto: "Comparar dois histogramas só é legítimo se tiverem o mesmo número de classes." },
-      { letra: "D", texto: "A densidade é usada apenas para representar a frequência relativa, nunca absoluta." }
+      { letra: "D", texto: "A frequência é representada pela área do retângulo, e a altura é a densidade (frequência ÷ largura)." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo afirma que, em histograma com classes de larguras diferentes, a frequência está na ÁREA (altura = densidade = frequência ÷ largura), e a comparação entre dois histogramas só é legítima com a mesma largura de classe. A alternativa B reproduz exatamente isso. A A está invertida: altura é densidade quando há larguras diferentes. A C é exagerada (a regra é mesma largura; o número de classes pode variar) e contradiz o currículo. A D está incorreta: densidade é usada tanto para frequência absoluta (Σ altura × largura = n) quanto relativa.",
+    gabarito: "D",
+    justificativa: "Quando as classes têm larguras diferentes, a área de cada retângulo representa a frequência e a altura representa a densidade (frequência ÷ largura). Isso permite representar corretamente as frequências com larguras distintas; para comparar distribuições, mantenha critérios e escalas compatíveis e interprete as áreas, não apenas as alturas. A alternativa D expressa a relação correta. A A ignora a largura; a C confunde quantidade de classes com validade da representação; a D erra ao restringir densidade à frequência relativa.",
     analise: {
       A: "INCORRETA. Erro conceitual: com larguras diferentes, a altura não representa a frequência; a área (densidade) sim.",
-      B: "CORRETA. Reproduz a regra de densidade e área para comparação com larguras distintas.",
-      C: "INCORRETA. Exagero: comparar histogramas exige largura igual, não necessariamente o mesmo número de classes; o currículo não exige igualdade de quantidade de classes.",
-      D: "INCORRETA. Erro conceitual: densidade absoluta é usada quando se mantém n como soma das áreas; não é restrita à frequência relativa."
+      B: "INCORRETA. Erro conceitual: densidade absoluta é usada quando se mantém n como soma das áreas; não é restrita à frequência relativa.",
+      C: "INCORRETA. O número de classes, isoladamente, não determina a validade da comparação; com larguras diferentes, a frequência deve ser representada pela área e a altura pela densidade, usando escalas e critérios compatíveis.",
+      D: "CORRETA. Reproduz a regra de densidade e área para comparação com larguras distintas."
     },
-    regra: "Histograma de densidade: altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou = 1 (relativa); comparação legítima exige mesma largura de classe.",
-    pegadinha: "A alternativa A tenta o alerta 'altura sempre é a medida' — o currículo só exige densidade quando há larguras diferentes."
+    regra: "Histograma de densidade: altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou = 1 (relativa); a comparação requer critérios e escalas compatíveis; com larguras diferentes, interprete a área e a densidade, não apenas a altura.",
+    pegadinha: "A alternativa A tenta o alerta 'altura sempre é a medida' — o currículo só exige densidade quando há larguras diferentes.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-18",
@@ -478,21 +470,22 @@ const moduleQuestions8 = [
     contexto: "Série temporal de atendimentos mensais: 120, 132, 115, 140 (janeiro a abril), já ordenada cronologicamente.",
     enunciado: "Assinale a afirmação correta sobre a leitura desse gráfico de linhas.",
     alternativas: [
-      { letra: "A", texto: "A variação de janeiro para fevereiro é (132 − 120) ÷ 132 ≈ +10,0%." },
-      { letra: "B", texto: "A variação percentual de fevereiro para março é (132 − 115) ÷ 132 ≈ −12,9%." },
-      { letra: "C", texto: "A variação percentual de março para abril é (140 − 115) ÷ 115 ≈ +21,7%." },
+      { letra: "A", texto: "A variação percentual de março para abril é (140 − 115) ÷ 115 ≈ +21,7%." },
+      { letra: "B", texto: "A variação percentual de fevereiro para março é (132 − 115) ÷ 132 ≈ +12,9%." },
+      { letra: "C", texto: "A variação de janeiro para fevereiro é (132 − 120) ÷ 132 ≈ +9,1%." },
       { letra: "D", texto: "A variação de janeiro para abril é (140 − 120) ÷ 140 ≈ +14,3%." }
     ],
-    gabarito: "C",
+    gabarito: "A",
     justificativa: "Variação percentual = (valor atual − anterior) ÷ anterior. Janeiro→fevereiro: (132−120)/120 = +10,0% (A: denominador errado — 132, não 120); Fevereiro→março: (115−132)/132 ≈ −12,9% (B: inverte numerador e denominador); Março→abril: (140−115)/115 ≈ +21,7% (C, correta); Janeiro→abril: (140−120)/120 ≈ +16,7% (D: usa 140 em vez de 120). A única afirmação fiel é C.",
     analise: {
-      A: "INCORRETA. (120 − 132) ÷ 120 = −10,0%, não +10,0%: a alternativa inverte o sinal da variação.",
-      B: "INCORRETA. Variação fev→mar = (115 − 132) ÷ 132 ≈ −12,9%; a alternativa inverte numerador e denominador.",
-      C: "CORRETA. (140 − 115) ÷ 115 = 25 ÷ 115 ≈ +21,74%; é o único cálculo fiel ao método anterior/denominador.",
+      A: "CORRETA. (140 − 115) ÷ 115 = 25 ÷ 115 ≈ +21,74%; é o único cálculo fiel ao método anterior/denominador.",
+      B: "INCORRETA. A alternativa inverte o sentido da variação e por isso mostra aumento; de fevereiro para março, a variação é (115 − 132) ÷ 132 ≈ −12,9%.",
+      C: "INCORRETA. A alternativa usa 132 como denominador; a variação correta usa o valor anterior: (132 − 120) ÷ 120 = +10,0%.",
       D: "INCORRETA. Janeiro → abril usa denominador 120: (140 − 120) ÷ 120 ≈ +16,67%, não 14,3%."
     },
     regra: "Variação percentual = (valor atual − anterior) ÷ anterior × 100; sempre com denominador do valor anterior, não o atual.",
     pegadinha: "A pegadinha é usar o valor atual como denominador ou inverter o sinal: a variação percentual divide sempre (atual − anterior) pelo anterior.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-19",
@@ -507,20 +500,21 @@ const moduleQuestions8 = [
     enunciado: "Assinale a frase que NÃO deve aparecer em um relatório analítico baseado apenas nessa correlação.",
     alternativas: [
       { letra: "A", texto: "Houve associação positiva entre horas de estudo e pontuação." },
-      { letra: "B", texto: "Cada hora extra de estudo causa, em média, 80 pontos a mais." },
+      { letra: "B", texto: "É preciso considerar variáveis confundentes antes de afirmar efeito." },
       { letra: "C", texto: "A associação é positiva e forte, mas não demonstra causalidade." },
-      { letra: "D", texto: "É preciso considerar variáveis confundentes antes de afirmar efeito." }
+      { letra: "D", texto: "Cada hora extra de estudo causa, em média, 80 pontos a mais." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo enfatiza que correlação nunca sustenta causalidade. 'Cada hora extra causa +80 pontos' inverte associação em causa e inventa unidade de efeito — r não informa essas duas coisas. As alternativas A, C e D são todas frases corretas para o currículo: associação, não causalidade; 'forte' quando r próximo de 1; e controle de confundentes.",
     analise: {
       A: "INCORRETA. Não é incorreta: afirma associação positiva, exatamente o que r sustenta.",
-      B: "CORRETA. Esta é a frase que NÃO deve aparecer: troca associação por causa e adiciona unidade de efeito.",
+      B: "INCORRETA. Não é incorreta: é o que o currículo exige antes de concluir causalidade.",
       C: "INCORRETA. Não é incorreta: repete o princípio de que correlação não é causalidade.",
-      D: "INCORRETA. Não é incorreta: é o que o currículo exige antes de concluir causalidade."
+      D: "CORRETA. Esta é a frase que NÃO deve aparecer: troca associação por causa e adiciona unidade de efeito."
     },
     regra: "r mede força da associação linear; 'causa' exige delineamento experimental ou controle de confundentes; jamais escrever 'X causa Y' com base só em r.",
-    pegadinha: "A pegadinha é a frase 'sua' — quem lê 'causa' e salta, esquece que r = 0,8 só suporta associação."
+    pegadinha: "A pegadinha é a frase 'sua' — quem lê 'causa' e salta, esquece que r = 0,8 só suporta associação.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-20",
@@ -548,7 +542,8 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: divisor 8,3 não é n − 1; e 3,86 não é o resultado de 32 ÷ 7."
     },
     regra: "Desvio-padrão amostral: divisor n − 1 (Bessel), para estimativa não enviesada da variância populacional; retorna à unidade original.",
-    pegadinha: "A pegadinha é 'é só raiz quadrada de 4,0' — o exercício pede a amostra, que exige o divisor n − 1, e 4,0 é a variância populacional."
+    pegadinha: "A pegadinha é 'é só raiz quadrada de 4,0' — o exercício pede a amostra, que exige o divisor n − 1, e 4,0 é a variância populacional.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-21",
@@ -562,21 +557,22 @@ const moduleQuestions8 = [
     contexto: "Conjunto 12, 18, 21, 25, 27, 30, 33, 38, 44, 60 (n = 10), usando interpolação linear (método tipo 7).",
     enunciado: "Com o método de interpolação linear, o Q1 (percentil 25) deste conjunto é:",
     alternativas: [
-      { letra: "A", texto: "22." },
-      { letra: "B", texto: "22,5." },
-      { letra: "C", texto: "23." },
+      { letra: "A", texto: "22,5." },
+      { letra: "B", texto: "23." },
+      { letra: "C", texto: "22." },
       { letra: "D", texto: "25." }
     ],
-    gabarito: "A",
-    justificativa: "Posição de percentil p = (n − 1) × p + 1 = (10 − 1) × 0,25 + 1 = 3,25. O valor é entre o 3º (21) e o 4º (25): 21 + 0,25 × (25 − 21) = 21 + 1 = 22. A alternativa A reproduz o cálculo. A B (22,5) é 21 + 0,5 × 4; a C (23) ignora a interpolação; a D (25) é a posição 4, não o Q1.",
+    gabarito: "C",
+    justificativa: "Posição de percentil p = (n − 1) × p + 1 = (10 − 1) × 0,25 + 1 = 3,25. O valor é entre o 3º (21) e o 4º (25): 21 + 0,25 × (25 − 21) = 21 + 1 = 22. A alternativa C reproduz o cálculo. A (22,5) resulta de interpolação com peso 0,5; B (23) não segue a posição 3,25 do método tipo 7; D (25) é o 4º valor, não o Q1 calculado por interpolação.",
     analise: {
-      A: "CORRETA. Posição 3,25; interpolação entre 21 e 25: 21 + 0,25 × 4 = 22.",
-      B: "INCORRETA. Erro conceitual: 22,5 indicaria interpolação com peso 0,5, e a posição válida é 3,25.",
-      C: "INCORRETA. Erro conceitual: 23 seria posição 3,5 ou a média de 21 e 25 sem a regra de posicionamento do método tipo 7.",
+      A: "INCORRETA. Erro conceitual: 22,5 indicaria interpolação com peso 0,5, e a posição válida é 3,25.",
+      B: "INCORRETA. Erro conceitual: 23 seria posição 3,5 ou a média de 21 e 25 sem a regra de posicionamento do método tipo 7.",
+      C: "CORRETA. Posição 3,25; interpolação entre 21 e 25: 21 + 0,25 × 4 = 22.",
       D: "INCORRETA. Erro conceitual: 25 é o 4º valor (posição 4), o que corresponde ao percentil acima de 25."
     },
     regra: "Método tipo 7: posição = (n − 1) × p + 1; interpolação linear entre os vizinhos; usado por R e Excel QUARTILE.INC.",
-    pegadinha: "A pegadinha é usar n em vez de n − 1 na posição; com n = 10, posição 3,25 (não 2,5) gera o Q1 = 22."
+    pegadinha: "A pegadinha é usar n em vez de n − 1 na posição; com n = 10, posição 3,25 (não 2,5) gera o Q1 = 22.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-22",
@@ -596,15 +592,16 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A mediana é sensível à distância entre os extremos e, por isso, não é 8." }
     ],
     gabarito: "A",
-    justificativa: "A cauda à direita puxa a média acima da mediana: 13,14 > 8. A alternativa A reproduz exatamente esse princípio. B erra (não há cauda à esquerda; o 2 é um dos centrais). C erra (não é simétrica). D erra: a mediana é robusta e não é alterada por extrema distância — ela permanece 8.",
+    justificativa: "A cauda à direita puxa a média acima da mediana: 13,14 > 8. A alternativa A reproduz exatamente esse princípio. B erra: o valor 2, isoladamente, não caracteriza assimetria à esquerda; o 50 alonga a cauda à direita e eleva a média. C erra (não é simétrica). D erra: a mediana é robusta e não é alterada por extrema distância — ela permanece 8.",
     analise: {
-      A: "CORRETA. Reproduz a relação moda < mediana < média em distribuição assimétrica à direita.",
-      B: "INCORRETA. Erro conceitual: não há cauda à esquerda; o 2 está no centro dos centrais e não puxa para a esquerda.",
+      A: "CORRETA. Em uma distribuição com cauda à direita, o valor extremo pode elevar a média acima da mediana; neste conjunto, 13,14 > 8.",
+      B: "INCORRETA. Erro conceitual: o valor mínimo 2, isoladamente, não torna a distribuição assimétrica à esquerda; o valor 50 alonga a cauda à direita e eleva a média.",
       C: "INCORRETA. Erro conceitual: a presença do 50 isolado na cauda quebra a simetria.",
       D: "INCORRETA. Erro conceitual: a mediana é robusta; o valor de 50 não altera — a mediana é 8."
     },
-    regra: "Assimetria à direita: média > mediana > moda; média é sensível a extremos e mediana é robusta; em assimetria à esquerda a ordem inverte.",
-    pegadinha: "A pegadinha é aceitar 'média abaixo de mediana' por questão de equação — o teste é o 50 na cauda da direita."
+    regra: "Assimetria à direita: a média tende a ficar acima da mediana porque é sensível a valores extremos; a mediana é mais robusta. A relação com a moda depende da forma da distribuição e pode não se aplicar quando não há moda única.",
+    pegadinha: "A pegadinha é aceitar 'média abaixo de mediana' por questão de equação — o teste é o 50 na cauda da direita.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-23",
@@ -619,20 +616,21 @@ const moduleQuestions8 = [
     enunciado: "Assinale a afirmação correta sobre o resultado da pesquisa de 10.000 respostas vindas de e-mail.",
     alternativas: [
       { letra: "A", texto: "Com 10.000 respostas, o resultado é representativo da população." },
-      { letra: "B", texto: "O tamanho da amostra reduz o erro de amostragem, não o viés de seleção." },
+      { letra: "B", texto: "O resultado pode ser generalizado para toda a população, quando a amostra é grande." },
       { letra: "C", texto: "A amostra grande elimina o viés de não-resposta." },
-      { letra: "D", texto: "O resultado pode ser generalizado para toda a população, quando a amostra é grande." }
+      { letra: "D", texto: "O tamanho da amostra reduz o erro de amostragem, não o viés de seleção." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo distingue erro de amostragem (flutuação esperada, reduzida com n maior) de viés (erro sistemático, não desaparece com amostra grande). A alternativa B reproduz exatamente isso. A A erra: 10.000 respostas de e-mail não são necessariamente representativas; B é a correção do erro de viés. C erra: não-resposta é viés que não se elimina com tamanho. D erra: generalização exige amostragem probabilística, não apenas tamanho.",
+    gabarito: "D",
+    justificativa: "O currículo distingue erro de amostragem (flutuação esperada, reduzida com n maior) de viés (erro sistemático, não desaparece com amostra grande). A alternativa D reproduz exatamente isso. A A erra: 10.000 respostas de e-mail não são necessariamente representativas; B é a correção do erro de viés. C erra: não-resposta é viés que não se elimina com tamanho. D erra: generalização exige amostragem probabilística, não apenas tamanho.",
     analise: {
       A: "INCORRETA. Erro conceitual: tamanho não elimina viés; amostra de e-mail é por conveniência e suspeita de viés de seleção.",
-      B: "CORRETA. Reproduz a distinção do currículo entre erro de amostragem (aleatório, reduzido com n) e viés (sistemático, inalterado por n).",
+      B: "INCORRETA. Erro conceitual: generalização exige amostragem probabilística com margem declarada; amplitude não garante representatividade.",
       C: "INCORRETA. Erro conceitual: viés de não-resposta não desaparece com 10 mil respostas; o viés permanece.",
-      D: "INCORRETA. Erro conceitual: generalização exige amostragem probabilística com margem declarada; amplitude não garante representatividade."
+      D: "CORRETA. Reproduz a distinção do currículo entre erro de amostragem (aleatório, reduzido com n) e viés (sistemático, inalterado por n)."
     },
-    regra: "Errou de amostragem ≠ viés: o tamanho reduz flutuação, não erro sistemático; viés de seleção, não-resposta, sobrevivência e medição precisam de delineamento probabilístico.",
-    pegadinha: "A pegadinha é '10 mil é detona' — o exame cobra a distinção conceitual entre flutuação aleatória e viés sistemático."
+    regra: "Erro de amostragem ≠ viés: o tamanho reduz flutuação aleatória, não erro sistemático; viés de seleção, não-resposta, sobrevivência e medição exigem análise do delineamento e do mecanismo de coleta.",
+    pegadinha: "A pegadinha é '10 mil respostas resolvem tudo' — o tamanho reduz parte da flutuação aleatória, mas não garante representatividade nem elimina viés sistemático.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-24",
@@ -652,15 +650,16 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Nenhuma opção, pois a análise sempre exige licença empresarial." }
     ],
     gabarito: "A",
-    justificativa: "O currículo define que para estudo/pessoal, ferramenta gratuita com publicação pública e dados fictícios é adequada, desde que os dados sejam realmente fictícios e rotulados como tal. O cenário diz 'dados fictícios' e 'sem orçamento'; a alternativa A reproduz isso. B erra: licença paga não é requisito quando os dados são fictícios e não há governança sensível. C erra: o Tableau Public publica em área pública, o que não é condizente com 'não internet'? mais tarde; o currículo não exige esse uso para estudo; e D é exagerada.",
+    justificativa: "O cenário exige autoria local, funcionamento sem internet e custo zero. A alternativa A atende a esses requisitos. Uma ferramenta que depende de serviço online não atende à restrição de conectividade; o Tableau Public também é inadequado para esse cenário porque envolve publicação pública. Licença paga não é requisito universal de segurança, e a análise não exige necessariamente licença empresarial.",
     analise: {
       A: "CORRETA. Reproduz o cenário do currículo: dados fictícios + gratuidade + sem custo, desde que rotulados.",
       B: "INCORRETA. Erro conceitual: licença paga não é requisito nem necessário nem suficiente para governança; o currículo prioriza uso e governança, não o preço.",
-      C: "INCORRETA. Erro conceitual: o Tableau Public publica em área aberta; para dados fictícios em estudo, a questionamento é mais fino — o currículo não o recomenda nesse perfil e a alternativa A é o caminho do currículo.",
+      C: "INCORRETA. Erro conceitual: o Tableau Public publica em área aberta; para este cenário offline, o serviço de publicação não atende ao requisito de funcionamento sem internet; a alternativa A atende melhor às restrições.",
       D: "INCORRETA. Erro conceitual: exagera — gratuidade para dados fictícios é uma opção documentada no currículo."
     },
-    regra: "Escolha por uso: estudo gratuito com dados fictícios + rotulagem; esquivo accessível exige controle de acesso; governança e licença declarada logo que dados sensíveis.",
-    pegadinha: "A pegadinha é 'licença paga é mais seguro' — o currículo exige o uso adequado, e dados fictícios tornam licença desnecessária."
+    regra: "Escolha conforme uso, conectividade e sensibilidade: para estudo offline, prefira ferramenta gratuita com autoria local e dados fictícios; para dados sensíveis, exija controles de acesso, governança e licença/termos compatíveis.",
+    pegadinha: "A pegadinha é 'licença paga é mais seguro' — o currículo exige o uso adequado, e dados fictícios tornam licença desnecessária.",
+    fonte: "Tableau Help (Desktop/Web Authoring): https://help.tableau.com/current/pro/desktop/en-us/default.htm (verificado em 2026-10-26). Google Looker Studio Help: https://support.google.com/looker-studio/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-25",
@@ -671,24 +670,25 @@ const moduleQuestions8 = [
     nivel: "intermediario",
     topico: "modulo-8-unidade-5-topico-3",
     assunto: "M8.5.3 Incerteza e integridade gráfica",
-    contexto: "Projeção de demanda: 1.200 atendimentos no próximo trimestre, com premissas baseadas em tendência dos 12 meses.",
+    contexto: "Modelo de projeção baseado na tendência dos 12 meses estima 1.200 atendimentos no próximo trimestre e calcula intervalo de projeção de 1.050 a 1.300 atendimentos.",
     enunciado: "Assinale a comunicação de projeção que NÃO compromete a integridade gráfica.",
     alternativas: [
-      { letra: "A", texto: "Projeção de 1.050 a 1.300 atendimentos no próximo trimestre, com base na tendência dos 12 meses." },
-      { letra: "B", texto: "Projeção de 1.200 atendimentos, exatamente, com base na tendência dos 12 meses." },
-      { letra: "C", texto: "Projeção de 1.200 atendimentos, sem premissas, já que o leitor entenderá." },
+      { letra: "A", texto: "Projeção de 1.200 atendimentos, exatamente, com base na tendência dos 12 meses." },
+      { letra: "B", texto: "Projeção de 1.200 atendimentos, sem premissas, já que o leitor entenderá." },
+      { letra: "C", texto: "Projeção de 1.050 a 1.300 atendimentos no próximo trimestre, com base na tendência dos 12 meses." },
       { letra: "D", texto: "Projeção de 1.200 atendimentos, só se confirmar no trimestre seguinte." }
     ],
-    gabarito: "A",
-    justificativa: "O currículo exige comunicar incerteza: rótulo de estimativa, faixa de erro/intervalo, cenários e premissas declaradas. A alternativa A faz isso: faixa (1.050–1.300), premissas ('tendência dos 12 meses') e estímulo. B, C e D omitem a incerteza ou a prometem como fato, o que o currículo classifica como compromisso de integridade.",
+    gabarito: "C",
+    justificativa: "O currículo exige comunicar incerteza: rótulo de estimativa, faixa de erro/intervalo, cenários e premissas declaradas. A alternativa C faz isso: faixa (1.050–1.300) e premissa declarada ('tendência dos 12 meses'). A, B e D omitem a incerteza ou apresentam a estimativa como fato, comprometendo a integridade da comunicação.",
     analise: {
-      A: "CORRETA. Comunica faixa e premissa, preservando integridade; a faixa é sincera sobre a incerteza.",
-      B: "INCORRETA. Erro conceitual: apresentar estimativa ponto a ponto como fato distorce a incerteza.",
-      C: "INCORRETA. Erro conceitual: 'sem premissas' não existe — qualquer estimativa tem premissas; omitir as torna não acessíveis.",
+      A: "INCORRETA. Erro conceitual: apresentar estimativa ponto a ponto como fato distorce a incerteza.",
+      B: "INCORRETA. Erro conceitual: 'sem premissas' não existe — qualquer estimativa tem premissas; omitir as torna não acessíveis.",
+      C: "CORRETA. Comunica faixa e premissa, preservando integridade; a faixa é sincera sobre a incerteza.",
       D: "INCORRETA. Erro conceitual: a resolução depende de confirmar no trimestre; a comunicação precisa de faixa e premissa."
     },
     regra: "Comunicar incerteza: faixa, rótulo de estimativa, cenários e premissas; omitir a incerteza rompe a confiança e a legitimidade do relato.",
-    pegadinha: "A pegadinha é 'a frase mais cientifica é a que mostra um único número' — a integridade gráfica pede faixa, não o único valor."
+    pegadinha: "A pegadinha é 'a frase mais cientifica é a que mostra um único número' — a integridade gráfica pede faixa, não o único valor.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-26",
@@ -703,20 +703,21 @@ const moduleQuestions8 = [
     enunciado: "Assinale a afirmação correta sobre o conteúdo de um painel de gestão.",
     alternativas: [
       { letra: "A", texto: "Deve exibir todos os indicadores disponíveis para dar visão completa." },
-      { letra: "B", texto: "Deve destacar poucos indicadores ligados a decisões, com exceções em destaque." },
+      { letra: "B", texto: "O painel completo é aquele com mais gráficos possíveis." },
       { letra: "C", texto: "Deve incluir todas as métricas calculadas para que o gestor decida melhor." },
-      { letra: "D", texto: "O painel completo é aquele com mais gráficos possíveis." }
+      { letra: "D", texto: "Deve destacar poucos indicadores ligados a decisões, com exceções em destaque." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define que painel de gestão destaca poucos indicadores ligados a decisões, com exceções em destaque; o restante pertence a relatório analítico ou drill-down. A alternativa B reproduz isso. A, C e D são anti-padrão: exibir tudo causa paralisia, redundância e saturação visual.",
+    gabarito: "D",
+    justificativa: "O currículo define que painel de gestão destaca poucos indicadores ligados a decisões, com exceções em destaque; o restante pertence a relatório analítico ou drill-down. A alternativa D reproduz isso. A, C e D são anti-padrão: exibir tudo causa paralisia, redundância e saturação visual.",
     analise: {
       A: "INCORRETA. Erro conceitual: visão completa produz paralisia; o currículo reconhece que o painel destaca poucos indicadores.",
-      B: "CORRETA. Reproduz a definição de painel de gestão: poucos indicadores, exceções em destaque, ligação a decisão.",
+      B: "INCORRETA. Erro conceitual: 'mais gráficos' não é 'mais completo'; o painel gosta de foco.",
       C: "INCORRETA. Erro conceitual: métricas calculadas não são sangue do painel; são as métricas ligadas a decisão.",
-      D: "INCORRETA. Erro conceitual: 'mais gráficos' não é 'mais completo'; o painel gosta de foco."
+      D: "CORRETA. Reproduz a definição de painel de gestão: poucos indicadores, exceções em destaque, ligação a decisão."
     },
     regra: "Painel de gestão: poucos indicadores, exceções em destaque, metas, tendência curta, atualização declarada; relatórios analíticos contêm o detalhe.",
-    pegadinha: "A pegadinha é 'visão completa' — o currículo a desconsidera como causa de paralisia."
+    pegadinha: "A pegadinha é 'visão completa' — o currículo a desconsidera como causa de paralisia.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-27",
@@ -726,25 +727,26 @@ const moduleQuestions8 = [
     origem: "autoral",
     nivel: "intermediario",
     topico: "modulo-8-unidade-2-topico-3",
-    assunto: "M8.2.3 Ordenação e legalidade de barras",
+    assunto: "M8.2.3 Ordenação e legibilidade de barras",
     contexto: "Unidades A = 450, B = 320, C = 280, D = 190. O gráfico mostra barras em ordem aleatória.",
     enunciado: "Sobre a leitura do gráfico de barras com barras desordenadas, assinale a opção correta.",
     alternativas: [
       { letra: "A", texto: "A ordem aleatória não altera a leitura, pois os valores dos eixos são os mesmos." },
-      { letra: "B", texto: "A ordenação afeta a leitura: embaralhada, o gráfico esconde o pior resultado." },
-      { letra: "C", texto: "A ordenação só importa se houver metáfora de comparação." },
+      { letra: "B", texto: "A ordenação só importa se houver metáfora de comparação." },
+      { letra: "C", texto: "A ordenação afeta a leitura: embaralhada, o gráfico esconde o pior resultado." },
       { letra: "D", texto: "A ordenação decrescente é obrigatória em todos os gráficos de barras." }
     ],
-    gabarito: "B",
+    gabarito: "C",
     justificativa: "O currículo registra: 'ordem alfabética só quando a consulta alfabética for o uso real; ordenação afeta a leitura: a mesma tabela com barras decrescentes comunica ranking; embaralhada, esconde o pior resultado'. A alternativa B reproduz exatamente isso. A erra: a ordem não é neutra — afeta a leitura. C erra: a ordem é relevante independente de metáfora. D erra: a ordem decrescente é recomendada quando o objetivo é ranquear, não obrigatória em todos os casos.",
     analise: {
       A: "INCORRETA. Erro conceitual: a ordem altera a leitura — embaralhada esconde o pior resultado.",
-      B: "CORRETA. Reproduz a regra de que a ordenação determina o ranking percebido.",
-      C: "INCORRETA. Erro conceitual: a ordem é relevante independente de metáfora.",
+      B: "INCORRETA. Erro conceitual: a ordem é relevante independente de metáfora.",
+      C: "CORRETA. Reproduz a regra de que a ordenação determina o ranking percebido.",
       D: "INCORRETA. Erro conceitual: a ordem decrescente é recomendada para ranquear, não obrigatória em todos os casos."
     },
     regra: "Ordenação para ranquear: decrescente (ou crescente); a escala afeta a leitura percebida; a ordem alfabética só quando consulta alfabética é o uso.",
-    pegadinha: "A pegadinha é 'os valores não mudaram, então a leitura não mudou' — o padrão visual muda, e isso muda a conclusão."
+    pegadinha: "A pegadinha é 'os valores não mudaram, então a leitura não mudou' — o padrão visual muda, e isso muda a conclusão.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-28",
@@ -755,7 +757,7 @@ const moduleQuestions8 = [
     nivel: "intermediario",
     topico: "modulo-8-unidade-1-topico-2",
     assunto: "M8.1.2 Hierarquia visual e destaque",
-    contexto: "Painel de gestão destaca uma séries de interesse, mas as cores usadas são homogêneas.",
+    contexto: "Painel de gestão destaca uma série de interesse, mas as cores usadas são homogêneas.",
     enunciado: "Assinale a afirmação correta sobre hierarquia visual em painel.",
     alternativas: [
       { letra: "A", texto: "Hierarquia é garantida quando muitas cores fortes disputam atenção, tornando o painel vibrante." },
@@ -772,7 +774,8 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: múltiplas linguagens não garantem hierarquia; a hierarquia vem da codificação de cor/prioridade."
     },
     regra: "Hierarquia visual: uma cor forte para a série de interesse, fundo neutro para o contexto, no máximo três cores fortes, redundância de rótulo.",
-    pegadinha: "A pegadinha é 'muitas cores = mais vivo' — o currículo reforça que muitas cores fortes nivelam tudo."
+    pegadinha: "A pegadinha é 'muitas cores = mais vivo' — o currículo reforça que muitas cores fortes nivelam tudo.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-29",
@@ -783,24 +786,25 @@ const moduleQuestions8 = [
     nivel: "intermediario",
     topico: "modulo-8-unidade-3-topico-5",
     assunto: "M8.3.5 Correlação e causalidade",
-    contexto: "Estudo observacional registra associação forte entre consumo de sorvete e afogamentos em uma cidade.",
+    contexto: "Estudo observacional registra correlação r = 0,8 entre consumo de sorvete e afogamentos em uma cidade.",
     enunciado: "Sobre essa associação, assinale a alternativa que reconhece corretamente a limitação do estudo.",
     alternativas: [
       { letra: "A", texto: "Correlação de 0,8 demonstra que o consumo de sorvete causa afogamentos." },
-      { letra: "B", texto: "A associação é real, mas a causalidade não pode ser afirmada sem controle de confundentes." },
+      { letra: "B", texto: "Os dados observados mostram associação, mas a causalidade não pode ser afirmada sem controle de confundentes." },
       { letra: "C", texto: "O r = 0,8 descarta qualquer relação entre as duas variáveis." },
       { letra: "D", texto: "A presença de um confounder (temperatura) invalida a associação." }
     ],
     gabarito: "B",
-    justificativa: "O currículo destaca que correlação não implica causalidade e que quatro explicações são possíveis: X causa Y, Y causa X, confounder causa as duas, ou coincidência. A alterativa B reconhece que a associação existe, mas a causalidade exige controle de confundentes (como temperatura, que explica sorvete e afogamentos). A alterativa A é incorreta: nenhum r sustenta causalidade. A C afirma o oposto do currículo. A D é exagerada: o confounder não invalida a associação, apenas impede a conclusão de causalidade.",
+    justificativa: "O currículo destaca que correlação não implica causalidade e que quatro explicações são possíveis: X causa Y, Y causa X, confounder causa as duas, ou coincidência. A alternativa B reconhece que a associação existe, mas a causalidade exige controle de confundentes (como temperatura, que explica sorvete e afogamentos). A alterativa A é incorreta: nenhum r sustenta causalidade. A C afirma o oposto do currículo. A D é exagerada: o confounder não invalida a associação, apenas impede a conclusão de causalidade.",
     analise: {
       A: "INCORRETA. Erro conceitual: nenhum r sustenta causalidade; associação ≠ causa.",
-      B: "CORRETA. Reproduz a limitação do estudo observacional: associação real, causalidade não demonstrada sem controle de confundentes.",
+      B: "CORRETA. Reproduz a limitação do estudo observacional: associação observada nos dados, causalidade não demonstrada sem controle de confundentes.",
       C: "INCORRETA. Erro conceitual: r ≠ 0 descarta apenas associação linear; relação não linear pode existir.",
       D: "INCORRETA. Erro conceitual: um confounder não invalida a associação; dificulta a inferência causal. A associação permanece, mas a interpretação é limitada."
     },
     regra: "Quatro explicações para X e Y andarem juntos: X causa Y, Y causa X, confounder causa as duas, coincidência. Causalidade exige experimento ou controle de confundentes.",
-    pegadinha: "A alternativa D 'invalida' é a pegadinha — o confounder não invalida, ele limita a interpretação para causalidade."
+    pegadinha: "A alternativa D 'invalida' é a pegadinha — o confounder não invalida, ele limita a interpretação para causalidade.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-30",
@@ -811,24 +815,25 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-4-topico-1",
     assunto: "M8.4.1 DAX e contexto de filtro",
-    contexto: "Medida 'Ticket médio' definida como Soma(Faturamento) ÷ Soma(Quantidade). Relatório com filtro por loja e mês.",
-    enunciado: "Sobre a medida 'Ticket médio' acima, assinale a opção correta no contexto de Power BI/DAX.",
+    contexto: "Medida 'Preço médio por unidade' definida como Soma(Faturamento) ÷ Soma(Quantidade). Relatório com filtro por loja e mês.",
+    enunciado: "Sobre a medida 'Preço médio por unidade' acima, assinale a opção correta no contexto de Power BI/DAX.",
     alternativas: [
       { letra: "A", texto: "A divisão é feita linha a linha: Faturamento ÷ Quantidade em cada linha, o que é equivalente à média." },
       { letra: "B", texto: "A medida calcula Soma(Faturamento) ÷ Soma(Quantidade) no contexto de cada visual e filtros ativos, o que é o correto." },
-      { letra: "C", texto: "A medida deve ser substituída por média dos valores de TicketMedio, caso em que o filtro não influencia." },
+      { letra: "C", texto: "A medida deve ser substituída pela média simples dos preços unitários, que não é necessariamente equivalente à razão entre os totais." },
       { letra: "D", texto: "A agregação do DAX não respeita o contexto de filtro, e a medida fica fixa." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que medida é cálculo avaliado no contexto de cada visual (dinâmica), e o contexto de filtro do relatório alimenta as medidas. A alternativa B reproduz isso: Soma(Faturamento) ÷ Soma(Quantidade) é calculada no contexto de filtros ativos (loja, mês), e a agregação é feita corretamente somando antes de dividir. A A erra: média linha a linha ≠ média agregada. A C erra: a média dos tickets não é equivalente à agregação condizente. A D erra: o DAX respeita o contexto de filtro.",
+    justificativa: "O currículo define que medida é cálculo avaliado no contexto de cada visual (dinâmica), e o contexto de filtro do relatório alimenta as medidas. A alternativa B reproduz isso: Soma(Faturamento) ÷ Soma(Quantidade) é calculada no contexto de filtros ativos (loja, mês), e a agregação é feita corretamente somando antes de dividir. A A erra: média linha a linha ≠ média agregada. A C erra: a média dos preços unitários não é equivalente à razão entre totais quando as quantidades variam. A D erra: o DAX respeita o contexto de filtro.",
     analise: {
       A: "INCORRETA. Erro conceitual: média de linhas (Faturamento ÷ Quantidade em cada linha) difere de Soma(Faturamento) ÷ Soma(Quantidade) quando as quantidades variam.",
       B: "CORRETA. Reproduz o contexto de filtro e a agregação correta do DAX (somar antes de dividir).",
-      C: "INCORRETA. Erro conceitual: a média dos tickets (média de médias) é distinta da agregação da soma, e o filtro influencia o cálculo.",
+      C: "INCORRETA. Erro conceitual: a média simples dos preços unitários é distinta da razão entre totais quando as quantidades variam; o filtro influencia o cálculo.",
       D: "INCORRETA. Erro conceitual: o DAX respeita o contexto de filtro; a medida não é fixa."
     },
-    regra: "Medida (schnitt) é avaliada no contexto de visual/filtros; agregação correta = somar antes de dividir; média de médias é vício de agregação.",
-    pegadinha: "A alternativa A é a pegadinha: parece 'média de todos os registros', mas a definição correta usa Soma/Soma no contexto de filtro."
+    regra: "Medida DAX é avaliada no contexto do visual e dos filtros; agregação correta = somar antes de dividir quando essa é a definição da métrica; média de médias pode distorcer o resultado.",
+    pegadinha: "A alternativa A é a pegadinha: parece 'média de todos os registros', mas a definição correta usa Soma/Soma no contexto de filtro para calcular o preço médio ponderado pela quantidade.",
+    fonte: "Microsoft Learn — DAX (Data Analysis Expressions): https://learn.microsoft.com/en-us/dax/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-31",
@@ -856,7 +861,8 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: a intensidade sem neutro não comunica 'na meta' como referência."
     },
     regra: "Referência central (meta, acima/abaixo) → paleta divergente com neutro na referência; categorias sem ordem → categóricas; magnitude → sequencial.",
-    pegadinha: "A alternativa D espanta quem confunde 'intensidade' com a regra do neutro na referência."
+    pegadinha: "A alternativa D espanta quem confunde 'intensidade' com a regra do neutro na referência.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-32",
@@ -867,13 +873,13 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-2-topico-1",
     assunto: "M8.2.1 Histogramas com classes de larguras diferentes",
-    contexto: "Dois histogramas sobre a mesma base, uma com largura igual e outra com classes de largura diferente.",
+    contexto: "Dois histogramas representam a mesma base: um usa classes de largura igual, e o outro, classes de larguras diferentes.",
     enunciado: "No histograma de densidade com largura de classe diferente, a afirmação correta sobre a representação é:",
     alternativas: [
       { letra: "A", texto: "A altura da barra representa a frequência da classe, e a densidade é ignorada." },
       { letra: "B", texto: "A frequência é representada pela área do retângulo, e a altura é a densidade = frequência ÷ largura." },
       { letra: "C", texto: "A densidade é usada apenas para classes com frequência relativa, nunca com frequência absoluta." },
-      { letra: "D", texto: "A áreas não devem ser consideradas: a altura é a propriedade geométrica do histograma." }
+      { letra: "D", texto: "As áreas não devem ser consideradas: a altura é a única propriedade relevante do histograma." }
     ],
     gabarito: "B",
     justificativa: "O currículo define que com larguras diferentes, a frequência está na área (altura = densidade = frequência ÷ largura). A alternativa B reproduz isso. A erra: altura é densidade, não frequência. C erra: densidade absoluta é usada quando Σ(altura × largura) = n; não é restrita à relativa. D erra: a área é a propriedade que representa a frequência, e ignorar a densidade faz classes largas parecerem mais frequentes.",
@@ -884,7 +890,8 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: a área é o que representa a frequência; ignorar a densidade distorce a comparação."
     },
     regra: "Histograma de densidade: frequência está na área; altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou 1 (relativa).",
-    pegadinha: "A alternativa A tenta a afirmação 'a altura é sempre a frequência' — o currículo só exige densidade com larguras diferentes."
+    pegadinha: "A alternativa A tenta a afirmação 'a altura é sempre a frequência' — o currículo só exige densidade com larguras diferentes.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-33",
@@ -899,20 +906,21 @@ const moduleQuestions8 = [
     enunciado: "Para representar uma série temporal com lacuna de coleta, a alternativa correta é:",
     alternativas: [
       { letra: "A", texto: "Conectar os pontos adjacentes à lacuna, pois a linha continua a ser uma estimativa." },
-      { letra: "B", texto: "Quebrar a linha na lacuna e sinalizar a vigência, sem conectar diretamente." },
+      { letra: "B", texto: "O gráfico de linhas não suporta lacunas; o painel deve ser convertido em tabela." },
       { letra: "C", texto: "Substituir o valor ausente pela média da série, mantendo a linha contínua." },
-      { letra: "D", texto: "O gráfico de linhas não suporta lacunas; o painel deve ser convertido em tabela." }
+      { letra: "D", texto: "Quebrar a linha na lacuna e sinalizar o período sem coleta, sem conectar diretamente." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa B reproduz exatamente isso. A erra: conectar gera falso continuidade. C erra: substituir pela média inventa um valor. D erra: gráficos de linhas suportam lacunas (quebradas), e a conversão para tabela não é obrigatória.",
+    gabarito: "D",
+    justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa B reproduz exatamente isso. A erra: conectar gera falsa continuidade. C erra: substituir pela média inventa um valor. D erra: gráficos de linhas suportam lacunas (quebradas), e a conversão para tabela não é obrigatória.",
     analise: {
       A: "INCORRETA. Erro conceitual: conectar gera ilusão de continuidade e de valores intermediários inexistentes.",
-      B: "CORRETA. Reproduz a regra do currículo: quebrar a linha na lacuna e sinalizar, sem conectar diretamente.",
+      B: "INCORRETA. Erro conceitual: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho.",
       C: "INCORRETA. Erro conceitual: substituir o valor ausente pela média fabrica dados que não existem.",
-      D: "INCORRETA. Erro conceitual: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho."
+      D: "CORRETA. Reproduz a regra do currículo: quebrar a linha na lacuna e sinalizar, sem conectar diretamente."
     },
-    regra: "Série temporal com lacuna: quebrar a linha e sinalizar a vigência; conectar ou interpolar fabrica continuidade e valores inexistentes.",
-    pegadinha: "A pegadinha é 'a linha pode ser interpolada' — a continuidade do gráfico exige dados contínuos."
+    regra: "Série temporal com lacuna: quebrar a linha e sinalizar o período sem dados; conectar ou interpolar sem base explícita fabrica continuidade e valores inexistentes.",
+    pegadinha: "A pegadinha é 'a linha pode ser interpolada' — a continuidade do gráfico exige dados contínuos.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-34",
@@ -923,24 +931,25 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-2-topico-5",
     assunto: "M8.2.6 Box plot e convenções de bigode",
-    contexto: "Dois softwares apresentam o mesmo conjunto, com bigodes diferentes quando configurados com a mesma convenção de Tukey.",
+    contexto: "Dois softwares apresentam o mesmo conjunto e o mesmo método de quartis, mas usam multiplicadores diferentes do intervalo interquartílico (por exemplo, 1,0 e 1,5) para definir os limites dos bigodes.",
     enunciado: "A causa mais provável da diferença entre os bigodes em dois softwares é:",
     alternativas: [
-      { letra: "A", texto: "Os quartis são calculados diferentemente entre métodos de interpolacão." },
-      { letra: "B", texto: "O múltiplo do IIQ não é universal: há softwares com 1,0; 1,5 ou 2,0 como convenção." },
+      { letra: "A", texto: "Os quartis são calculados diferentemente entre métodos de interpolação." },
+      { letra: "B", texto: "Os bigodes sempre são diferentes, pois não há definição matemática." },
       { letra: "C", texto: "Um software traça outliers, o outro não." },
-      { letra: "D", texto: "Os bigodes sempre são diferentes, pois não há definição matemática." }
+      { letra: "D", texto: "O multiplicador do IIQ usado para definir os limites dos bigodes pode variar por configuração e precisa ser declarado e harmonizado." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo registra que o múltiplo do IIQ não é universal (há softwares com 1,0; 1,5; 2,0) e que os quartis podem variar conforme o método de interpolação. A alternativa B reproduz exatamente a causa declarada. A A é parcialmente verdadeira (os quartis podem variar), mas a causa mais direta da diferença nos bigodes é o múltiplo do IIQ. C erra: a regra de outliers está no currículo. D erra: há definição matemática (convenção 1,5×IIQ, e variações declaradas).",
+    gabarito: "D",
+    justificativa: "O limite dos bigodes depende do multiplicador aplicado ao IIQ e da convenção adotada. Como o cenário fixa o mesmo conjunto e o mesmo método de quartis, a diferença decorre do multiplicador configurado; ele deve ser declarado e harmonizado para comparar os gráficos. A alternativa A poderia explicar diferenças em outro cenário, se o método de quartis variasse, mas isso foi excluído do enunciado. C não explica a divergência descrita, e D erra ao afirmar que não há definição matemática.",
     analise: {
       A: "INCORRETA. Erro conceitual: variação de quartis pode existir, mas a causa mais direta da diferença nos bigodes é o múltiplo do IIQ.",
-      B: "CORRETA. Reproduz a declaração do currículo: o múltiplo não é universal (1,0; 1,5; 2,0) e altera os bigodes.",
+      B: "INCORRETA. Erro conceitual: há definição matemática de bigode (1,5×IIQ); as diferenças vêm de convenção declarada, não de ausência de regra.",
       C: "INCORRETA. Erro conceitual: a regra de outliers é o mesmo critério; a diferença é a convenção dos bigodes, não a presença de outliers.",
-      D: "INCORRETA. Erro conceitual: há definição matemática de bigode (1,5×IIQ); as diferenças vêm de convenção declarada, não de ausência de regra."
+      D: "CORRETA. O multiplicador do IIQ altera os limites dos bigodes; a configuração deve ser declarada e harmonizada."
     },
-    regra: "Bigode de Tukey: limite em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; convenções alternativas (1,0; 1,5; 2,0) e métodos de quartil são declaráveis e afetam os bigodes.",
-    pegadinha: "A alternativa A é a pegadinha: quartis podem variar, mas a causa mais direta da diferença no bigode é o múltiplo do IIQ."
+    regra: "Convenção de Tukey usual: limites em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ. Se o software permite outro multiplicador ou método de quartis, declare e harmonize os parâmetros antes de comparar gráficos.",
+    pegadinha: "A alternativa A é uma explicação possível em outros cenários, mas o enunciado fixa o método de quartis; a diferença apresentada decorre do multiplicador do IIQ.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-35",
@@ -960,7 +969,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "9,0." }
     ],
     gabarito: "B",
-    justificativa: "Média ponderada = Σ(valor × peso) ÷ Σ(pesos) = (7×2 + 5×3 + 9×1) ÷ (2+3+1) = (14+15+9) ÷ 6 = 38 ÷ 6 ≈ 6,33. A alternativa B reproduz o cálculo. A A é a média simples (7+5+9)/3 = 7,0. C erra (38/7? não). D é a nota de maior peso, não a ponderada.",
+    justificativa: "Média ponderada = Σ(valor × peso) ÷ Σ(pesos) = (7×2 + 5×3 + 9×1) ÷ (2+3+1) = (14+15+9) ÷ 6 = 38 ÷ 6 ≈ 6,33. A alternativa B reproduz o cálculo. A A é a média simples (7+5+9)/3 = 7,0. C erra: 5,33 não corresponde ao cálculo; o divisor correto é 6, soma dos pesos. D é a nota de maior peso, não a ponderada.",
     analise: {
       A: "INCORRETA. Erro conceitual: média simples (7+5+9)/3 = 7,0, ignorando os pesos.",
       B: "CORRETA. Reproduz exatamente o cálculo da média ponderada com pesos 2, 3, 1.",
@@ -968,7 +977,8 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: a nota de maior peso não é o resultado ponderado; o peso altera a média, não a substitui."
     },
     regra: "Média ponderada = Σ(valor × peso) ÷ Σ(pesos); a média simples ignora os pesos e pode superestimar.",
-    pegadinha: "A pegadinha é 'a simples média é 7,0' — o exercício pede ponderada, que deve ser 6,33."
+    pegadinha: "A pegadinha é 'a simples média é 7,0' — o exercício pede ponderada, que deve ser 6,33.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-36",
@@ -988,15 +998,16 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A mediana é insuficiente; a média deve ser relatada isoladamente." }
     ],
     gabarito: "B",
-    justificativa: "A mediana de 12 min indica que a metade dos atendimentos é ágil; a média elevada (30 min) indica cauda longa. A conduta correta é investigar os casos de cauda, e não agir sobre a média isolada. A alternativa B reproduz exatamente isso. A erra: agir sobre a média sem investigar a cauda desperdiça esforço. C erra: diferença média/mediana não comprova erro de digitação. D erra: a média sozinha não é insuficiente.",
+    justificativa: "A mediana de 12 min indica que metade dos tempos de espera está em 12 min ou menos e metade em 12 min ou mais; a média elevada (30 min) sugere que esperas mais longas puxam a média para cima. A conduta correta é investigar a cauda superior, e não agir sobre a média isolada. A alternativa B reproduz exatamente isso. A erra: agir sobre a média sem investigar a cauda desperdiça esforço. C erra: diferença média/mediana não comprova erro de digitação. D erra: a média sozinha não é insuficiente.",
     analise: {
       A: "INCORRETA. Erro conceitual: média é sensível a extremos; agir sobre ela sem investigar a cauda pode desperdiçar esforço.",
-      B: "CORRETA. Reproduz a leitura correta: a mediana descreve o caso típico; a cauda requer investigação.",
+      B: "CORRETA. A mediana indica a posição central; a diferença entre mediana e média sugere esperas longas que merecem investigação.",
       C: "INCORRETA. Erro conceitual: a diferença média/mediana não comprova erro de data; a remoção sem investigação apaga informação.",
       D: "INCORRETA. Erro conceitual: a mediana é robusta e informativa; a média sozinha não é suficiente."
     },
     regra: "Outlier não é sinônimo de erro; inspecione (erro de digitação? unidade trocada? caso real legítimo?), e use média robusta (mediana, IIQ) ou transformação quando houver cauda.",
-    pegadinha: "A pegadinha é 'a média de 30 é erro' — a cauda real (no primeiro exemplo do currículo, valor 50) é legítima e informativa."
+    pegadinha: "A pegadinha é 'a média de 30 é erro' — a cauda real (no primeiro exemplo do currículo, valor 50) é legítima e informativa.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-37",
@@ -1010,21 +1021,22 @@ const moduleQuestions8 = [
     contexto: "Estudo observacional de alta força e consistência, com temporalidade, gradiente e mecanismo plausível, mas sem randomização.",
     enunciado: "Sobre o suporte à causalidade nesse estudo observacional, assinale a afirmação correta.",
     alternativas: [
-      { letra: "A", texto: "A alta força e consistência, temporalidade e gradiente sustentam a causalidade, mas o desenho observacional impede a conclusão mais forte." },
-      { letra: "B", texto: "Na ausência de randomização, a causalidade não pode ser afirmada sob nenhuma hipótese." },
-      { letra: "C", texto: "A força é o único critério necessário para afirmar causalidade em observacional." },
+      { letra: "A", texto: "Na ausência de randomização, a causalidade não pode ser afirmada sob nenhuma hipótese." },
+      { letra: "B", texto: "A força é o único critério necessário para afirmar causalidade em observacional." },
+      { letra: "C", texto: "A alta força e consistência, temporalidade e gradiente sustentam a causalidade, mas o desenho observacional impede a conclusão mais forte." },
       { letra: "D", texto: "A ausência de experimento transforma a associação em causa provada." }
     ],
-    gabarito: "A",
-    justificativa: "O currículo define critérios clássicos: temporalidade, força e consistência, gradiente, plausibilidade e ausência de confundente controlável (randomização como o mais forte). O estudo está no caminho dos critérios clássicos, mas o desenho observacional não sustenta a conclusão mais forte de causalidade. A alternativa A reproduz isso com precisão: os critérios são vencedores, mas o desenho observacional impede a conclusão definitiva. B erra: observacional não é 'nenhuma hipótese', há suporte parcial. C erra: força não é o único critério. D erra: sem experimento não há causalidade provada.",
+    gabarito: "C",
+    justificativa: "O currículo define critérios clássicos: temporalidade, força e consistência, gradiente, plausibilidade e ausência de confundente controlável (randomização como o mais forte). Os critérios descritos fortalecem a plausibilidade de uma hipótese causal, mas não bastam isoladamente para provar causalidade. É necessário avaliar o desenho, a temporalidade, os possíveis confundentes e as análises realizadas. A alternativa C expressa esse limite sem descartar toda evidência observacional. A erra ao tratar a ausência de randomização como impedimento absoluto; B reduz a avaliação à força da associação; D transforma associação em prova causal.",
     analise: {
-      A: "CORRETA. Reproduz a avaliação equilibrada: critérios clássicos fortes, mas desenho observacional limita a conclusão causal mais forte.",
-      B: "INCORRETA. Erro conceitual: observacional sustenta suporte dos critérios clássicos; não é 'nenhuma hipótese'.",
-      C: "INCORRETA. Erro conceitual: força não é o único critério; o currículo lista temporalidade, consistência, gradiente, plausibilidade e ausência de confundente.",
+      A: "INCORRETA. Erro conceitual: observacional sustenta suporte dos critérios clássicos; não é 'nenhuma hipótese'.",
+      B: "INCORRETA. Erro conceitual: força não é o único critério; o currículo lista temporalidade, consistência, gradiente, plausibilidade e ausência de confundente.",
+      C: "CORRETA. Reproduz a avaliação equilibrada: critérios clássicos fortes, mas desenho observacional limita a conclusão causal mais forte.",
       D: "INCORRETA. Erro conceitual: sem randomização/experimento não há causalidade 'provada'; essa frase inverteria o sentido do currículo."
     },
     regra: "Causalidade em observacional: suporte de critérios clássicos (temporalidade, força, consistência, gradiente, plausibilidade), ainda assim limitado sem randomização — 'causa' reservar para evidência experimental ou argumento bem sustentado.",
-    pegadinha: "A alternativa B 'nenhuma hipótese' é exagerada — o currículo reconhece que os critérios de apoio existem, mas o desenho limita."
+    pegadinha: "A alternativa A 'nenhuma hipótese' é exagerada — o currículo reconhece que os critérios de apoio existem, mas o desenho limita.",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-38",
@@ -1052,7 +1064,8 @@ const moduleQuestions8 = [
       D: "INCORRETA. Erro conceitual: a contagem distinta é método correto; a média não resolve a duplicidade."
     },
     regra: "Contagem de linhas inflada pela duplicidade de chave → contagem distinta do protocolo; granularidade declarada é a solução.",
-    pegadinha: "A alternativa A é a pegadinha: linhas = fatos duplicados; a contagem distinta é o evento real."
+    pegadinha: "A alternativa A é a pegadinha: linhas = fatos duplicados; a contagem distinta é o evento real.",
+    fonte: "Microsoft Learn — DAX (Data Analysis Expressions): https://learn.microsoft.com/en-us/dax/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-39",
@@ -1063,24 +1076,25 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-4-topico-1",
     assunto: "M8.4.1 DAX: agregar antes de dividir",
-    contexto: "Medida 'média do ticket' aplicada a faturamento e quantidade, com linhas de quantidade diferente.",
-    enunciado: "A afirmação correta sobre a medida 'ticket médio' = Soma(Faturamento) ÷ Soma(Quantidade) é:",
+    contexto: "Medida de preço médio por unidade aplicada a faturamento e quantidade, com linhas de quantidades diferentes.",
+    enunciado: "A afirmação correta sobre a medida 'preço médio por unidade' = Soma(Faturamento) ÷ Soma(Quantidade) é:",
     alternativas: [
-      { letra: "A", texto: "É equivalente à média dos tickets por linha quando cada linha tem quantidade diferente de 1." },
+      { letra: "A", texto: "É equivalente à média simples dos preços unitários calculados linha a linha, mesmo quando as quantidades variam." },
       { letra: "B", texto: "Ocorre o erro de média de médias: somar antes de dividir é correto; dividi-los linha a linha distorce quando a quantidade varia." },
       { letra: "C", texto: "A média de cada linha fica fixa independente do filtro." },
       { letra: "D", texto: "O DAX não agrega; a medida é calculada linha a linha." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define que média de linhas (Faturamento ÷ Quantidade em cada linha) e média agregada (Soma(Faturamento) ÷ Soma(Quantidade)) diferem quando as quantidades variam — o erro de 'média de médias'. A alternativa B reproduz isso. A erra: não é equivalente quando as quantidades variam. C erra: a média por filtro varia conforme o contexto de filtro. D erra: o DAX respeita o contexto de filtro e agrega conforme a consulta.",
+    justificativa: "O currículo define que a média simples dos preços unitários calculados por linha e a razão entre faturamento total e quantidade total diferem quando as quantidades variam — a razão entre totais é uma média ponderada pela quantidade, não uma média simples de linhas. A alternativa B reproduz isso. A erra: não é equivalente quando as quantidades variam. C erra: a média por filtro varia conforme o contexto de filtro. D erra: o DAX respeita o contexto de filtro e agrega conforme a consulta.",
     analise: {
-      A: "INCORRETA. Erro conceitual: média de linhas ≠ média agregada quando a quantidade varia; é o erro de média de médias.",
+      A: "INCORRETA. Erro conceitual: média simples dos preços unitários não equivale necessariamente à razão entre faturamento total e quantidade total quando as quantidades variam.",
       B: "CORRETA. Reproduz a regra do currículo: soma antes de dividir; média de médias distorce quando a quantidade varia.",
       C: "INCORRETA. Erro conceitual: a média por linha não é fixa — o filtro de contexto altera o cálculo e a agregação.",
       D: "INCORRETA. Erro conceitual: o DAX agrega conforme a consulta e respeita o contexto de filtro."
     },
-    regra: "DAX média correta = Soma(valor) ÷ Soma(quantidade); média de médias é o viço de agregação quando a quantidade varia.",
-    pegadinha: "A alternativa A tenta o erro de 'é só média de todos os registros' — a agregação Soma/Soma é a definição correta."
+    regra: "Preço médio por unidade = Soma(Faturamento) ÷ Soma(Quantidade); média simples dos preços unitários por linha pode distorcer quando as quantidades variam.",
+    pegadinha: "A pegadinha é confundir a média simples dos preços unitários por linha com o quociente entre as somas; quando as quantidades variam, as duas medidas podem diferir.",
+    fonte: "Microsoft Learn — DAX (Data Analysis Expressions): https://learn.microsoft.com/en-us/dax/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-40",
@@ -1094,20 +1108,21 @@ const moduleQuestions8 = [
     contexto: "Painel de gestão com 5 gráficos obrigatórios: linhas, barras, box plot, histograma e dispersão.",
     enunciado: "No estudo de caso integrador do currículo, a recomendação fundamentada corresponde a:",
     alternativas: [
-      { letra: "A", texto: "Investigar o procedimento responsável pela cauda (valor 50), priorizar a unidade de maior volume e revisar em 60 dias." },
-      { letra: "B", texto: "Aumentar o tamanho da amostra e tirar o outlier para que os indicadores fiquem mais bons." },
-      { letra: "C", texto: "Reportar somente a média, pois a cauda é erro de dados e não deve ser mostrada." },
+      { letra: "A", texto: "Aumentar o tamanho da amostra e remover o outlier para que os indicadores fiquem melhores." },
+      { letra: "B", texto: "Reportar somente a média, pois a cauda é erro de dados e não deve ser mostrada." },
+      { letra: "C", texto: "Investigar o procedimento responsável pela cauda (valor 50), priorizar a unidade de maior volume e revisar em 60 dias." },
       { letra: "D", texto: "Mostrar a série de atendimentos com e sem a unidade A, sem declarar a variável de controle." }
     ],
-    gabarito: "A",
-    justificativa: "O estudo de caso define: box plot mostra cauda extrema (outlier 50) e histograma mostra a cauda à direita; a recomendação fundamentada é investigar o procedimento responsável pela cauda, priorizar a unidade de maior volume, revisar em 60 dias, e declarar que todos os números são fictícios. A alternativa A reproduz isso. B erra: remover o outlier sem investigação apaga informação real. C erra: média sozinha não é informativa; a cauda é legítima. D erra: não declarar a variável de controle comprometia a integridade.",
+    gabarito: "C",
+    justificativa: "O estudo de caso define: box plot mostra cauda extrema (outlier 50) e histograma mostra a cauda à direita; a recomendação fundamentada é investigar o procedimento responsável pela cauda, priorizar a unidade de maior volume, revisar em 60 dias, e declarar que todos os números são fictícios. A alternativa C reproduz isso. A erra: remover o outlier sem investigação pode apagar informação relevante. B erra: a média isolada perde a informação da cauda, que pode ser legítima. D erra: não declarar a variável de controle compromete a integridade.",
     analise: {
-      A: "CORRETA. Reproduz a recomendação fundamentada do estudo de caso, incluindo investigação da cauda, prioridade de volume e prazo de 60 dias.",
-      B: "INCORRETA. Erro conceitual: remover o outlier sem investigar apaga informação real (fraudes, gargalos, casos raros).",
-      C: "INCORRETA. Erro conceitual: média isolada perde a cauda legítima; a cauda não é erro de dados.",
+      A: "INCORRETA. Erro conceitual: remover o outlier sem investigar apaga informação real (fraudes, gargalos, casos raros).",
+      B: "INCORRETA. Erro conceitual: média isolada perde a cauda legítima; a cauda não é erro de dados.",
+      C: "CORRETA. Reproduz a recomendação fundamentada do estudo de caso, incluindo investigação da cauda, prioridade de volume e prazo de 60 dias.",
       D: "INCORRETA. Erro conceitual: não declarar a variável de controle compromete a integridade gráfica."
     },
     regra: "Recomendação fundamentada: investigar outliers antes de removê-los; declarar se os dados são fictícios; reportar medidas robustas (mediana, IIQ) e não apenas média.",
-    pegadinha: "A alternativa B 'tirar o outlier' é a pegadinha — remover sem investigação é mascaramento, não limpeza."
+    pegadinha: "A alternativa A 'tirar o outlier' é a pegadinha — remover sem investigação é mascaramento, não limpeza.",
+    fonte: "Interaction Design Foundation — Data Visualization: https://www.interaction-design.org/literature/topics/data-visualization (verificado em 2026-10-26).",
   },
 ];

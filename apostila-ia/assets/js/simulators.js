@@ -372,6 +372,28 @@
     if (isErro(c)) return c;
     return c ? args[1] : args[2];
   }
+  /* SES (IFS): pares (condição; valor) avaliados preguiçosamente na ordem
+   * dada; devolve o valor da primeira condição verdadeira. Se a quantidade
+   * de argumentos for ímpar, o último argumento é o valor padrão devolvido
+   * quando nenhuma condição for verdadeira. Se todas forem falsas e não
+   * houver padrão, devolve #N/A. */
+  function fnSES(args) {
+    if (!Array.isArray(args) || args.length < 2) {
+      return erro("#VAL!", "SES requer ao menos um par (condição; valor) — ex.: SES(cond1; val1; cond2; val2; [padrão])");
+    }
+    let i = 0;
+    while (i < args.length) {
+      if (i + 1 >= args.length) {
+        /* valor padrão (argumento final solto) */
+        return args[i];
+      }
+      const c = paraLogico(args[i], "SES");
+      if (isErro(c)) return c;
+      if (c) return args[i + 1];
+      i += 2;
+    }
+    return erro("#N/A", "nenhuma condição verdadeira em SES (e nenhum valor padrão fornecido)");
+  }
   function fnSeErro(args) {
     if (args.length < 2) return erro("#VAL!", "SEERRO requer (valor; valor_se_erro)");
     return isErro(args[0]) ? args[1] : args[0];
@@ -782,7 +804,7 @@
     MINIMO: fnMinimo,
     CONTVALORES: fnContValores,
     SE: fnSe,
-    SES: fnE,
+    SES: fnSES,
     E: fnE,
     OU: fnOu,
     NAO: fnNao,
@@ -1007,7 +1029,7 @@
   /* ------------------------------------------------------------------
    * 7. Analisador sintático (descida recursiva) e avaliador
    * ------------------------------------------------------------------ */
-  const LENTIOSAS = { SE: true, SEERRO: true };
+  const LENTIOSAS = { SE: true, SEERRO: true, SES: true };
 
   function analisar(tokens, textoOriginal) {
     let p = 0;
@@ -1187,6 +1209,21 @@
             const v = avaliar(no.args[0], ctx);
             if (isErro(v)) return avaliar(no.args[1], ctx);
             return v;
+          }
+          if (no.nome === "SES") {
+            if (no.args.length < 2) return erro("#VAL!", "SES requer ao menos um par (condição; valor)");
+            let i = 0;
+            while (i < no.args.length) {
+              if (i + 1 >= no.args.length) {
+                return avaliar(no.args[i], ctx);
+              }
+              const cond = avaliar(no.args[i], ctx);
+              const l = paraLogico(cond, "SES");
+              if (isErro(l)) return l;
+              if (l) return avaliar(no.args[i + 1], ctx);
+              i += 2;
+            }
+            return erro("#N/A", "nenhuma condição verdadeira em SES (e nenhum valor padrão fornecido)");
           }
         }
         const args = [];
@@ -1391,11 +1428,12 @@
   ];
   var excelCss = '<style>' +
     '.sim-excel{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}.sim-excel h3{margin:8px 0 2px}.sim-excel h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}' +
-    '.sim-excel-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}.sim-excel-tabela{border-collapse:collapse;width:100%;margin:8px 0}' +
+    '.sim-excel-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}.sim-excel-tabela{border-collapse:collapse;width:100%;margin:8px 0}' +
     '.sim-excel-tabela th,.sim-excel-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}' +
     '.sim-excel-tabela th{background:#2a2f3a;color:#cdd4de}.sim-excel-rownum{background:#22262e;color:#8b94a5;width:28px}' +
     ".sim-excel-cel{width:90px;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:3px;padding:2px 4px}" +
     '.sim-excel-res{margin-left:6px;color:#ffd57c;font-weight:600;min-width:48px;display:inline-block}.sim-excel-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
+    '.sim-excel-bloco .sim-excel-sub{color:#cbd5e1}' +
     '.sim-excel-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 10px;font-size:.8rem;cursor:pointer;margin-right:6px}.sim-excel-btn:hover{background:#4a5466}' +
     ".sim-excel-console{width:100%;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:4px;padding:6px;resize:vertical}" +
     '.sim-excel-resgrande{margin:8px 0 0;color:#ffd57c;font-family:"Courier New",monospace;font-size:.95rem;min-height:1.4em}' +
@@ -1465,7 +1503,7 @@
   function excelBuildConsole() {
     var h = '<div class="sim-excel-bloco"><h4>Console de fórmulas (executa contra a tabela acima)</h4>';
     h += "<p>Digite uma fórmula (com ou sem <code>=</code> inicial) e pressione Calcular — veja o resultado ou o código de erro real.</p>";
-    h += "<textarea id='excel-console-fm' class='sim-excel-console' rows='2'>=MÉDIA(B2:B7)</textarea>";
+    h += "<textarea id='excel-console-fm' class='sim-excel-console' rows='2' aria-label='Fórmula do Excel para calcular'>=MÉDIA(B2:B7)</textarea>";
     h += "<button type='button' class='sim-excel-btn' data-act='excel-console-calcular'>Calcular</button>";
     h += "<button type='button' class='sim-excel-btn' data-act='excel-console-limpar'>Limpar</button>";
     h += "<p class='sim-excel-resgrande' id='excel-console-res'>—</p>";
@@ -1535,12 +1573,12 @@
         var vals = plan.listar();
         excelCols.forEach(function (c) {
           for (var r = 1; r <= excelDefault.length; r++) {
-            var span = containerEl.querySelector("#excel-res-" + (c + r));
+            var span = containerEl.querySelector("#" + CSS.escape("excel-res-" + (c + r)));
             if (span) span.textContent = excelFmt(vals[c + r]);
           }
         });
         excelComparacao.forEach(function (f) {
-          var sp = containerEl.querySelector("#" + f[2]);
+          var sp = containerEl.querySelector("#" + CSS.escape(f[2]));
           if (sp) sp.textContent = excelFmt(ExcelSimulator.calcularFormula(f[1], plan));
         });
       }
@@ -1556,7 +1594,7 @@
         var i = row - 1;
         if (i < 0 || i >= entradas.length || j < 0) return;
         entradas[i][j] = alvo.value;
-        var span = containerEl.querySelector("#excel-res-" + ref);
+        var span = containerEl.querySelector("#" + CSS.escape("excel-res-" + ref));
         try {
           plan.definir(ref, alvo.value);
           renderValores();
@@ -1589,8 +1627,8 @@
       }
 
       function verificarExercicio(id) {
-        var inp = containerEl.querySelector("#excel-ex-" + id);
-        var fb = containerEl.querySelector("#excel-fb-" + id);
+        var inp = containerEl.querySelector("#" + CSS.escape("excel-ex-" + id));
+        var fb = containerEl.querySelector("#" + CSS.escape("excel-fb-" + id));
         if (!inp || !fb) return;
         var txt = (inp.value || "").trim();
         if (!txt) { fb.innerHTML = '<span class="sim-excel-fb sim-excel-err">Digite uma fórmula.</span>'; return; }
@@ -1603,7 +1641,7 @@
         var ok = conferirExercicio(id, res, esperado);
         var classe = ok ? "sim-excel-ok" : "sim-excel-err";
         var label = ok ? "Correto" : "Incorreto";
-        fb.innerHTML = '<span class="sim-excel-fb ' + classe + '">' + esc(label) + " — resultado: " + esc(excelFmt(res)) + "; esperado: " + esc(excelFmt(esperado)) + ". " + esc(meta.explicacao) + "</span>";
+        fb.innerHTML = '<span class="sim-excel-fb ' + esc(classe) + '">' + esc(label) + " — resultado: " + esc(excelFmt(res)) + "; esperado: " + esc(excelFmt(esperado)) + ". " + esc(meta.explicacao) + "</span>";
       }
 
       function conferirExercicio(id, res, esperado) {

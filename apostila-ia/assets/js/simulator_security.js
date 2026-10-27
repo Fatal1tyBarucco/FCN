@@ -182,9 +182,10 @@
   var securityCss = '<style>'
     + '.sim-seguranca{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-seguranca h3{margin:8px 0 2px}.sim-seguranca h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-seguranca-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-seguranca-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
-    + '.sim-sgmt-msg{border:1px solid #3a4252;border-radius:6px;padding:10px;margin:8px 0;background:#161a21}'
+    + '.sim-seguranca-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-seguranca-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
+    '.sim-seguranca-bloco .sim-seguranca-sub{color:#cbd5e1}' +
+    '.sim-sgmt-msg{border:1px solid #3a4252;border-radius:6px;padding:10px;margin:8px 0;background:#161a21}'
     + '.sim-sgmt-msg-header{display:flex;justify-content:space-between;align-items:center}'
     + '.sim-sgmt-emit{font-size:.78rem;color:#8b94a5}'
     + '.sim-sgmt-assunto{font-weight:600;color:#e3e9ff;margin:4px 0;font-size:.88rem}'
@@ -207,8 +208,8 @@
     + '.sim-sec-risco-alto{color:#ff7b7b;font-weight:600}'
     + '.sim-sec-risco-medio{color:#ffd57c;font-weight:600}'
     + '.sim-sec-risco-baixo{color:#5ee0a0;font-weight:600}'
-    + '.sim-sec-link{color:#4a94d4;cursor:pointer;text-decoration:underline}'
-    + '.sim-sec-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
+    + '.sim-sec-link{color:#174ea6;cursor:pointer;text-decoration:underline}'
+    + '.sim-sec-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-sec-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
     + '.sim-sec-nav-btn:hover{background:#3a4252}'
     + '</style>';
 
@@ -216,11 +217,12 @@
    * UI builders
    * ------------------------------------------------------------------ */
   function securityBuildMsgBox(msg, indice) {
-    var riscoClasse = 'sim-sec-risco-' + msg.risco;
+    var riscoVal = (msg.risco === 'alto' || msg.risco === 'medio' || msg.risco === 'baixo') ? msg.risco : 'baixo';
+    var riscoClasse = 'sim-sec-risco-' + riscoVal;
     return '<div class="sim-sgmt-msg" data-msg="' + esc(msg.id) + '">'
       + '<div class="sim-sgmt-msg-header">'
       + '<span class="sim-sgmt-emit">De: ' + esc(msg.remetenteExibido) + '</span>'
-      + '<span class="sim-sec-risco ' + riscoClasse + '">Risco: ' + esc(msg.risco.toUpperCase()) + '</span>'
+      + '<span class="sim-sec-risco ' + esc(riscoClasse) + '">Risco: ' + esc(msg.risco.toUpperCase()) + '</span>'
       + '</div>'
       + '<div class="sim-sgmt-assunto">' + esc(msg.assunto) + '</div>'
       + '<div class="sim-sgmt-corpo">' + esc(msg.corpo) + '</div>'
@@ -292,10 +294,12 @@
     return '<div class="sim-seguranca">'
       + '<h3>Simulador de Seguran\u00e7a (Se\u00e7\u00e3o 7.3)</h3>'
       + '<p class="sim-seguranca-sub">Simula\u00e7\u00e3o did\u00e1tica e ambiente isolado \u2014 n\u00e3o executa ataques reais. Dados fict\u00edcios (Se\u00e7\u00e3o 4.3).</p>'
-      + '<p class="sim-seguranca-sub">Navega\u00e7\u00e3o: <span class="sim-sec-link" data-act="nav" data-target="phishing">1. Triagem de phishing</span>'
-      + ' | <span class="sim-sec-link" data-act="nav" data-target="backup">2. Pol\u00edtica de backup</span>'
-      + ' | <span class="sim-sec-link" data-act="nav" data-target="authz">3. Autentica\u00e7\u00e3o e privil\u00e9gio m\u00ednimo</span>'
-      + ' | <span class="sim-sec-link" data-act="nav" data-target="limites">4. Escopo declarado</span></p>'
+      + '<nav class="sim-sec-nav" aria-label="Navegação das seções do simulador de segurança">'
+      + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="phishing">1. Triagem de phishing</button>'
+      + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="backup">2. Política de backup</button>'
+      + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="authz">3. Autenticação e privilégio mínimo</button>'
+      + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="limites">4. Escopo declarado</button>'
+      + '</nav>'
       + '<div id="sec-pane-phishing" class="sec-pane">' + securityBuildPhishing() + '</div>'
       + '<div id="sec-pane-backup" class="sec-pane" style="display:none">' + securityBuildBackup() + '</div>'
       + '<div id="sec-pane-authz" class="sec-pane" style="display:none">' + securityBuildAuthz() + '</div>'
@@ -334,12 +338,12 @@
       if (mensagens[i].id === msgId) { msg = mensagens[i]; break; }
     }
     if (!msg) return;
-    var fb = containerEl.querySelector('#sec-fb-' + msgId);
+    var fb = containerEl.querySelector('#' + CSS.escape('sec-fb-' + msgId));
     if (!fb) return;
     var correto = (resp === 'phishing' && msg.ehPhishing) || (resp === 'seguro' && !msg.ehPhishing);
     var classe = correto ? 'sim-sec-ok' : 'sim-sec-err';
     var label = correto ? 'Correto' : 'Incorreto';
-    var html = '<div class="sim-sec-fb ' + classe + '">' + esc(label) + ': esta mensagem \u00e9 '
+    var html = '<div class="sim-sec-fb ' + esc(classe) + '">' + esc(label) + ': esta mensagem \u00e9 '
       + (msg.ehPhishing ? 'PHISHING' : 'SEGURA') + '. ' + esc(msg.justificativa) + '</div>';
     fb.innerHTML = html;
     securityUpdateProgress(containerEl);
@@ -356,7 +360,7 @@
       if (mensagens[i].id === msgId) { msg = mensagens[i]; break; }
     }
     if (!msg) return;
-    var box = containerEl.querySelector('#sec-ind-' + msgId);
+    var box = containerEl.querySelector('#' + CSS.escape('sec-ind-' + msgId));
     if (!box) return;
     if (box.style.display === 'block') {
       box.style.display = 'none';
@@ -403,7 +407,7 @@
     var detalhes = erros.length === 0
       ? 'Sua pol\u00edtica atende ao princ\u00edpio 3-2-1. C\u00f3pia imut\u00e1vel: ' + (imutavel ? 'sim' : 'n\u00e3o (recomendado).') + ' RPO/RTO: defina periodicidade de backup e teste de restaura\u00e7\u00e3o periodicamente.'
       : erros.join(', ') + '. Regra 3-2-1: 3 c\u00f3pias, 2 m\u00eddias, 1 offsite.';
-    fb.innerHTML = '<div class="sim-sec-fb ' + classe + '">' + esc(label) + ': ' + esc(detalhes) + '</div>';
+    fb.innerHTML = '<div class="sim-sec-fb ' + esc(classe) + '">' + esc(label) + ': ' + esc(detalhes) + '</div>';
   }
 
   function securityOnAuthz(e, containerEl) {
@@ -417,12 +421,14 @@
       if (exerciciosAuthz[i].id === exId) { ex = exerciciosAuthz[i]; break; }
     }
     if (!ex) return;
-    var radios = containerEl.querySelectorAll('input[name="authz-' + exId + '"]');
+    var allRadios = containerEl.querySelectorAll('input[type="radio"]');
+    var radios = [];
+    for (var _r = 0; _r < allRadios.length; _r++) { if (allRadios[_r].name === 'authz-' + exId) radios.push(allRadios[_r]); }
     var selecionado = -1;
     for (var j = 0; j < radios.length; j++) {
       if (radios[j].checked) { selecionado = parseInt(radios[j].value, 10); break; }
     }
-    var fb = containerEl.querySelector('#authz-fb-' + exId);
+    var fb = containerEl.querySelector('#' + CSS.escape('authz-fb-' + exId));
     if (!fb) return;
     if (selecionado === -1) {
       fb.innerHTML = '<div class="sim-sec-fb sim-sec-aviso">Selecione uma op\u00e7\u00e3o antes de verificar.</div>';
@@ -431,7 +437,7 @@
     var ok = selecionado === ex.correta;
     var classe = ok ? 'sim-sec-ok' : 'sim-sec-err';
     var label = ok ? 'Correto' : 'Incorreto';
-    fb.innerHTML = '<div class="sim-sec-fb ' + classe + '">' + esc(label) + ': ' + esc(ex.justificativa) + '</div>';
+    fb.innerHTML = '<div class="sim-sec-fb ' + esc(classe) + '">' + esc(label) + ': ' + esc(ex.justificativa) + '</div>';
   }
 
   function securityOnClick(e, containerEl) {

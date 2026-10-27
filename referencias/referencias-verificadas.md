@@ -8,9 +8,18 @@
 - Texto compilado (republicado parcialmente 15.08.2018 — edição extra): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm
 - Alteração pela Lei nº 13.853, de 2019 (inclui parágrafo único art. 1º; altera art. 3º inciso II; altera art. 4º; altera art. 5º; altera art. 11): confirmada no texto oficial — referência NÃO inventada; citada quando usada.
 - Vigência: promulgada 14/08/2018; disposições civis efetivas 18/09/2020; sanções administrativas efetivas 01/08/2021 (fonte: ANPD / texto oficial — verificação parcial; data de vigência das sanções citada apenas com ressalva "segundo texto oficial").
-- Regulador: Autoridade Nacional de Proteção de Dados (ANPD) — URL oficial: https://www.gov.br/anpd/pt-br (não citada ainda como verificada neste arquivo; necessário confirmar com acesso direto antes de incluir como referência primária).
+- Natureza institucional: a Lei nº 14.460, de 25 de outubro de 2022, transformou a então Autoridade Nacional de Proteção de Dados em autarquia de natureza especial (texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14460.htm). Em seguida, a Lei nº 15.352, de 25 de fevereiro de 2026, atualizou a denominação para **Agência Nacional de Proteção de Dados (ANPD)** e a redação do art. 55-A da LGPD, mantendo a natureza de autarquia especial vinculada ao Ministério da Justiça e Segurança Pública (texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm). A denominação anterior, Autoridade Nacional de Proteção de Dados, é histórica. Ambos os textos oficiais foram consultados em 2026-10-26.
 - Relação com Marco Civil (Lei 12.965/2014): LGPD altera o Marco Civil (art. 5º e outros) — confirmado no preâmbulo do texto oficial.
 - Relação com LAI (Lei 12.527/2011): art. 23 da LGPD menciona explicitamente a LAI — confirmado no texto oficial.
+
+
+## Atualização normativa verificada em 2026-10-25 — nome da ANPD, Constituição e LAI
+
+- **Lei nº 15.352/2026:** texto oficial consultado diretamente em https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm. O art. 1º altera a Lei nº 13.709/2018, incluindo a denominação Agência Nacional de Proteção de Dados (ANPD), a natureza de autarquia especial vinculada ao Ministério da Justiça e Segurança Pública e ajustes na definição de encarregado e da autoridade nacional. As questões devem usar a denominação atual, não repetir a denominação institucional histórica.
+- **LGPD consolidada:** https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm. Consultados diretamente os arts. 1º, 5º, 18, 55-A e 55-J. O art. 55-J contém competências da ANPD, incluindo zelar pela proteção de dados, fiscalizar e aplicar sanções, solicitar informações ao Poder Público e realizar auditorias nos termos da lei.
+- **Constituição Federal:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm. Consultados diretamente art. 5º, X (intimidade e vida privada) e art. 5º, LXXIX (direito à proteção de dados pessoais, incluído pela EC nº 115/2022).
+- **Lei de Acesso à Informação:** https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm. Consultados diretamente arts. 3º, I (publicidade como regra e sigilo como exceção), 6º, III (proteção de informações sigilosas e pessoais) e 7º (escopo do acesso).
+- **Correções decorrentes:** corrigidas as questões q-m4-34, q-m4-36 e q-m4-37 para refletir a denominação atual da ANPD e a referência constitucional exata; corrigidas q-m4-35, q-m4-40, q-m4-41 e q-m4-43 para qualificar direitos, delimitar a relação entre Marco Civil e LGPD, remover afirmação não sustentada sobre prioridade de atendimento na LAI e separar direitos do titular das responsabilidades dos agentes de tratamento.
 
 ## Artigos verificados (texto direto do site oficial; nenhuma citação inventada)
 - Art. 1º: "Esta Lei dispõe sobre o tratamento de dados pessoais, inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural."
@@ -305,3 +314,126 @@ Os incisos/parágrafos não listados (art. 37: I? já listado; demais não confe
 - Data de verificação: 2026-10-24.
 - Arquivo de referência: `apostila-ia/assets/data/references.js` (20 novas entradas; total 72).
 - Nenhuma URL inventada; nenhuma citação de dispositivo inexistente.
+
+
+## Fonte de acessibilidade verificada em 2026-10-26
+
+- **W3C — Web Content Accessibility Guidelines (WCAG) 2.2:** https://www.w3.org/TR/WCAG22/. Referência primária consultada diretamente para princípios de alternativas textuais, conteúdo audiovisual acessível, estrutura semântica e uso de cor. A inclusão da fonte não equivale a uma auditoria WCAG do site; essa auditoria permanece pendente.
+
+
+## Revisão focal de referências do Módulo 6 — 2026-10-26
+
+### Lei nº 12.813/2013 — conflito de interesses
+- Texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12813.htm
+- Dispositivos usados na questão q-m6-32: arts. 3º, I (conceito de conflito de interesses), 4º (dever de prevenir ou impedir conflito) e 5º, V (ato em benefício de pessoa jurídica da qual participe agente público ou parente até terceiro grau, nas condições legais).
+- Escopo importante: esta lei trata de cargos/empregos no Poder Executivo federal; o contexto de q-m6-32 foi delimitado expressamente a esse âmbito.
+- Verificação: acesso ao texto oficial em 2026-10-26.
+
+### LGPD — Lei nº 13.709/2018
+- Texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm
+- Dispositivos revisados para o lote: art. 6º, I a III (finalidade, adequação e necessidade); art. 6º, X (responsabilização e prestação de contas); art. 37 (registro das operações de tratamento, quando aplicável); arts. 46 e 49 (segurança e requisitos dos sistemas); art. 48 (comunicação de incidente de segurança relevante).
+- Verificação: acesso ao texto oficial em 2026-10-26.
+
+### Limites da revisão
+A correção das referências melhora o vínculo entre questão e dispositivo, mas não substitui parecer jurídico nem demonstra, por si só, que todas as alternativas estejam factualmente corretas. Em q-m6-29 e q-m6-38, requisitos operacionais de trilha de auditoria e preservação de evidências são apresentados como práticas de governança/segurança; não devem ser descritos como transcrição literal de um único artigo legal.
+
+
+## Guia oficial de redes sociais institucionais — 2026-10-26
+
+- **Secretaria de Comunicação Social da Presidência da República (Secom) — Guia de Boas Práticas para atuação de redes sociais do Governo Federal.** Página oficial de referência: https://www.gov.br/secom/pt-br/acesso-a-informacao/perguntas-frequentes/onde-posso-encontrar-o-guia. PDF indicado pela própria Secom: https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf.
+- Verificação: a página de perguntas frequentes da Secom aponta explicitamente o guia e o PDF. A questão q-m6-46 usa o documento como apoio geral à correção clara e responsável de informação institucional; não atribui ao guia uma obrigação legal específica.
+- A inclusão da referência não substitui leitura completa do guia nem validação independente de cada recomendação da questão.
+
+
+## Métricas de classificação em classes desbalanceadas — 2026-10-26
+
+- **Saito, T.; Rehmsmeier, M. (2015).** *The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets*. PLOS ONE 10(3): e0118432. DOI: https://doi.org/10.1371/journal.pone.0118432.
+- A página editorial da PLOS confirma título, autoria, data de publicação e DOI. O artigo discute limitações de interpretar classificadores em bases desbalanceadas apenas por métricas/curvas agregadas e explica a utilidade de precisão-revocação nesse contexto.
+- Aplicação no projeto: q-m5-20 usa o exemplo de 1% de positivos para demonstrar que prever sempre a classe negativa gera 99% de acurácia, mas recall zero para a classe positiva. O cenário é didático e autoral; não é dado empírico extraído do artigo.
+- Verificação: página editorial da PLOS consultada em 2026-10-26.
+## Fontes oficiais adicionadas — redes e plataformas de reunião (2026-10-26)
+
+- Cisco, *Catalyst 6500 16-Port 10 Gigabit Ethernet Copper Module*: https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html. A página informa 10GBASE-T até 55 m em Cat6 UTP e até 100 m em Cat6 blindado/Cat6A/Cat7. Aplicação: q-m2-26 e q-m2-32.
+- Zoom Support, *Comparação entre licenças para reuniões e webinars*: https://support.zoom.com/hc/pb/article?id=zm_kb&sysparm_article=KB0062412. A capacidade depende da licença; aplicação: q-m3-19.
+- Zoom Support, *Managing webinar breakout rooms*: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838. A documentação descreve requisitos de licença e aplicativo desktop/móvel para salas paralelas em webinars. Aplicação: q-m3-19 e q-m3-36.
+- Google Meet Help, *Saiba quais requisitos você precisa para usar o Google Meet*: https://support.google.com/meet/answer/7317473?hl=pt-BR. A página lista navegadores compatíveis para reuniões do Meet. Aplicação: q-m3-36.
+- As páginas oficiais foram localizadas e seu conteúdo relevante foi consultado em 2026-10-26. A presença da referência não substitui revisão semântica completa do item nem confirma que cada formulação de questão seja universal para todos os planos e contextos.
+- Google Meet Help, *Usar salas temáticas no Google Meet*: https://support.google.com/google-workspace-individual/answer/10099500?hl=pt-BR. A página lista as edições elegíveis para salas temáticas; disponibilidade não é universal para qualquer conta. Aplicação: q-m3-36.
+
+
+## Auditoria focal M1 — fontes e precisão das afirmações (2026-10-26)
+
+- Microsoft Support, *Objetos vinculados e incorporados*: https://support.microsoft.com/pt-br/word/linked-objects-and-embedded-objects. Confirma que objetos vinculados podem ser atualizados a partir do arquivo de origem, enquanto objetos incorporados não refletem alterações no arquivo original. Aplicação: q-m1-05.
+- Microsoft Learn, *Limites do histórico de versão para a biblioteca de documentos e visão geral do OneDrive*: https://learn.microsoft.com/pt-br/sharepoint/document-library-version-history-limits. Documenta limites de contagem/expiração configuráveis e comportamentos de retenção; usado para evitar tratar 30 dias como regra universal para todas as bibliotecas/locatários. Aplicação: q-m1-06.
+- Microsoft Support, *Restaurar arquivos ou pastas excluídos no OneDrive*: https://support.microsoft.com/pt-br/onedrive/restore-deleted-files-or-folders-in-onedrive. Distingue até 30 dias para contas pessoais e até 93 dias para contas corporativas/escolares, salvo alteração administrativa. Aplicação: q-m1-08.
+- Microsoft Learn, *Gerenciar configurações de compartilhamento do SharePoint e do OneDrive*: https://learn.microsoft.com/pt-br/sharepoint/turn-external-sharing-on-or-off. Expiração e permissões dos links dependem de opções de compartilhamento habilitadas e das políticas do site/organização. Aplicação: q-m1-08.
+- As páginas oficiais foram consultadas diretamente em 2026-10-26. A revisão focal confirma a adequação dessas referências aos conceitos mencionados; não é uma aprovação semântica integral das 399 questões nem validação HTTP automática de todas as URLs.
+
+
+## Auditoria focal M1 — tabelas, precisão decimal e PDF acessível (2026-10-26)
+
+- Microsoft Support, *Repetir o cabeçalho da tabela nas páginas subsequentes*: https://support.microsoft.com/pt-br/word/repeat-table-header-on-subsequent-pages. Documenta repetição da linha de cabeçalho em tabelas longas. Aplicação: q-m1-21.
+- Microsoft Support, *Classificar o conteúdo de uma tabela*: https://support.microsoft.com/pt-br/word/sort-the-contents-of-a-table. Documenta classificação por coluna e ordem crescente/decrescente. Aplicação: q-m1-21.
+- Microsoft Support, *Criar PDFs acessíveis*: https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs. Orienta usar o verificador de acessibilidade e marcas de estrutura do documento para leitores de tela na geração do PDF. Aplicação: q-m1-24.
+- Corrigida a justificativa de q-m1-14: o tabulador à direita pode coincidir visualmente com o alinhamento decimal quando os valores têm a mesma precisão; no cenário apresentado, com uma, duas e três casas decimais, o tabulador decimal é o que garante o alinhamento pela vírgula.
+- As fontes foram consultadas em 2026-10-26. Revisão focal não equivale à auditoria semântica integral nem à validação HTTP automática de todas as URLs.
+
+
+## Auditoria focal M1 — PowerPoint e OneDrive (2026-10-26)
+
+- Microsoft Support, *O que é um slide mestre no PowerPoint?*: https://support.microsoft.com/pt-br/powerpoint/training/what-is-a-slide-master-in-powerpoint. Confirma que fontes e imagens/logotipos podem ser alterados no Slide Mestre para slides baseados nele. Aplicação: q-m1-26.
+- Microsoft Support, *Animar texto ou objetos*: https://support.microsoft.com/pt-br/powerpoint/training/animate-text-or-objects. Define animações como efeitos aplicados a texto/objetos dentro do slide. Aplicação: q-m1-26.
+- Microsoft Support, *Sincronizar arquivos e pastas do computador com o OneDrive*: https://support.microsoft.com/pt-BR/onedrive/sync-your-computer-s-files-and-folders-with-onedrive. Explica que adições, alterações e exclusões são propagadas entre a pasta sincronizada e a nuvem. Aplicação: q-m1-28 e q-m1-29.
+- Microsoft Support, *Fazer backup de suas pastas com o OneDrive*: https://support.microsoft.com/pt-br/onedrive/back-up-your-folders-with-onedrive. Documenta a configuração de backup de pastas conhecidas, sem implicar que qualquer pasta sincronizada seja automaticamente uma cópia independente e imutável. Aplicação: q-m1-28.
+- Fontes consultadas em 2026-10-26. A distinção entre sincronização e backup deve ser ensinada com precisão: sincronização propaga alterações; o OneDrive oferece recursos de backup de pastas, mas isso não equivale a uma garantia universal de backup imutável/independente para toda organização.
+
+
+## Auditoria focal M1 — licenciamento organizacional (2026-10-26)
+
+- Microsoft Learn, *Learn about eDiscovery features and components*: https://learn.microsoft.com/en-us/purview/edisc-features-components. Especifica os requisitos de licenciamento Enterprise E3/E5 para os usuários e administradores que trabalham com eDiscovery, além de permissões e limitações. Aplicação: q-m1-07.
+- Microsoft Learn, *Planos e opções de licenciamento do Microsoft Intune*: https://learn.microsoft.com/pt-br/intune/fundamentals/licensing/. Descreve os planos de Intune, requisitos de licença e inclusão em pacotes Microsoft 365 elegíveis. Aplicação: q-m1-07.
+- O catálogo foi reconciliado para 135 entradas únicas (20 vídeos + 115 referências técnicas), todas com status `verificado` e URL preenchida. A revisão semântica independente e a verificação HTTP automatizada individual de todas as URLs continuam pendentes.
+
+
+## Auditoria focal M1 — Modo de Compatibilidade do Word (2026-10-26)
+
+- Microsoft Support, *Convertendo documentos em um novo formato*: https://support.microsoft.com/pt-br/word/converting-documents-to-a-newer-format. A página explica que o Modo de Compatibilidade desativa temporariamente recursos novos/aprimorados para preservar a edição por versões anteriores e manter o layout. Aplicação: q-m1-25.
+- Com essa entrada, o catálogo passa a conter 136 referências únicas (20 vídeos + 116 referências técnicas), todas com status `verificado` e URL preenchida. A revisão semântica integral e a validação HTTP automatizada individual de todas as URLs continuam pendentes.
+
+
+## Auditoria focal M1 — papel do SharePoint (2026-10-26)
+
+- Microsoft Support, *O que é um site de equipe do SharePoint?*: https://support.microsoft.com/pt-br/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site. Documenta o uso de sites de equipe para conteúdo compartilhado, armazenamento de arquivos e colaboração. Aplicação: q-m1-04.
+- Com esta referência, o catálogo passa a conter 137 IDs únicos (20 vídeos + 117 referências técnicas), todos com status verificado e URL preenchida. Revisão semântica integral e validação HTTP automatizada individual das URLs permanecem pendentes.
+
+## Auditoria focal M1 — referências oficiais para distribuição, Excel e documentos longos (2026-10-26)
+
+- Microsoft Support, *Salvar ou converter em PDF ou XPS nos aplicativos da área de trabalho do Office*: https://support.microsoft.com/pt-br/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps. Sustenta o uso do PDF para preservar a aparência e distribuir documentos para leitura/impressão, mas também alerta que PDFs podem ser editados com ferramentas compatíveis; PDF sozinho não é controle de acesso. Aplicação: q-m1-09.
+- Microsoft Support, *Função MÉDIA no Excel*: https://support.microsoft.com/pt-br/excel/functions/average-function. Documenta a finalidade e a sintaxe da função MÉDIA. Aplicação: q-m1-30.
+- Microsoft Support, *Alterar ou excluir um cabeçalho ou rodapé em uma única página*: https://support.microsoft.com/pt-br/word/change-or-delete-a-header-or-footer-on-a-single-page; *Iniciar a numeração de página mais adiante no documento*: https://support.microsoft.com/pt-br/word/start-page-numbering-later-in-your-document. Aplicação: q-m1-41.
+- Microsoft Support, *Visão geral de tabelas do Excel*: https://support.microsoft.com/pt-br/excel/overview-of-excel-tables; *Redimensionar uma tabela adicionando ou removendo linhas e colunas*: https://support.microsoft.com/pt-br/excel/resize-a-table-by-adding-or-removing-rows-and-columns-in-excel. Cobrem cabeçalhos, referências estruturadas e expansão de tabelas. Aplicação: q-m1-42.
+- Microsoft Support, *Filtrar dados em um intervalo ou tabela no Excel*: https://support.microsoft.com/pt-br/excel/get-started/filter-data-in-a-range-or-table-in-excel; *Aplicar validação de dados às células*: https://support.microsoft.com/pt-br/excel/get-started/apply-data-validation-to-cells; *Utilizar formatação condicional para realçar informações*: https://support.microsoft.com/pt-br/excel/use-conditional-formatting-to-highlight-information-in-excel. Aplicação: q-m1-43.
+- Microsoft Support, *Inserir um sumário automático no Word*: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents; *Usar quebras de seção para alterar layout ou formatação*: https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document; *Criar PDFs acessíveis*: https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs. Aplicação: q-m1-44.
+- O catálogo de references.js recebeu 12 IDs de referências oficiais específicas nesta rodada. A existência e a especificidade das fontes foram revisadas por consulta documental; não afirmar que todas as URLs do repositório passaram por teste HTTP automatizado.
+
+## Auditoria focal 2026-10-27 — fontes externas para questões M2/M3/M5/M7/M8
+
+- RFC 8200 (IPv6): https://www.rfc-editor.org/info/rfc8200/ — M2.
+- RFC 1918 (endereços privados): https://www.rfc-editor.org/info/rfc1918/ — M2.
+- RFC 4632 (CIDR/VLSM): https://www.rfc-editor.org/info/rfc4632/ — M2.
+- RFC 5952 (representação textual IPv6): https://www.rfc-editor.org/info/rfc5952/ — M2.
+- RFC 1122 (requisitos de hosts): https://www.rfc-editor.org/info/rfc1122/ — M2.
+- RFC 4251 (arquitetura SSH): https://www.rfc-editor.org/info/rfc4251/ — M2.
+- RFC 950 (sub-redes): https://www.rfc-editor.org/info/rfc950/ — M2.
+- RFC 1855 (netiqueta): https://www.rfc-editor.org/info/rfc1855/ — M3.
+- RFC 7208 (SPF): https://www.rfc-editor.org/info/rfc7208/ — M3.
+- RFC 6376 (DKIM): https://www.rfc-editor.org/info/rfc6376/ — M3.
+- RFC 7489 (DMARC): https://www.rfc-editor.org/info/rfc7489/ — M3.
+- NIST SP 1500-18r2 (Research Data Framework): https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html — M7.
+- NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ — M7/M8.
+- NIST AI RMF 1.0: https://www.nist.gov/itl/ai-risk-management-framework — M5.
+- OWASP LLM Prompt Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html — M5.
+- Tableau Help: https://help.tableau.com/current/pro/desktop/en-us/default.htm — M8.
+- Looker Studio Help: https://support.google.com/looker-studio/ — M8.
+
+Pendência: q-m3-45 (zoombombing/intrusão em reuniões) mantém fonte curricular — não foi localizada fonte primária verificada nos domínios permitidos (Zoom docs não verificadas). Registrar como pendente.

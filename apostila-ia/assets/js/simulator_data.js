@@ -201,7 +201,7 @@
     return last >= maximo(ticks) ? last : maximo(ticks);
   }
   function svgInicio(aria) {
-    return '<svg class="chart-svg" viewBox="0 0 ' + DW + ' ' + DH + '" role="img" aria-label="' + esc(aria) + '" xmlns="http://www.w3.org/2000/svg">';
+    return '<svg class="chart-svg" viewBox="0 0 ' + DW + ' ' + DH + '" role="img" aria-label="' + esc(aria) + '" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#111318" aria-hidden="true" />';
   }
   function svgTitulo(txt) {
     return '<text class="chart-svg-titulo" x="12" y="20">' + esc(txt) + '</text>';
@@ -416,9 +416,10 @@
   var dataCss = '<style>'
     + '.sim-dados{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-dados h3{margin:8px 0 2px}.sim-dados h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-dados-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-dados-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
-    + '.sim-dados-tabela{border-collapse:collapse;width:100%;margin:8px 0}'
+    + '.sim-dados-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-dados-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
+    '.sim-dados-bloco .sim-dados-sub{color:#cbd5e1}' +
+    '.sim-dados-tabela{border-collapse:collapse;width:100%;margin:8px 0}'
     + '.sim-dados-tabela th,.sim-dados-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}'
     + '.sim-dados-tabela th{background:#2a2f3a;color:#cdd4de}'
     + '.sim-dados-cel{width:70px;font-family:"Courier New",monospace;font-size:.82rem;background:#111318;color:#e3e9ff;border:1px solid #4a5265;border-radius:3px;padding:2px 6px}'
@@ -433,7 +434,7 @@
     + '.sim-dados-stats .sim-dados-stats-label{color:#8b94a5;font-size:.75rem}'
     + '.sim-dados-selector,.sim-dados-input-sm{display:inline-block;font-size:.82rem;background:#1b1e24;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:2px 6px;margin:2px}'
     + '.sim-dados-svg{display:block;margin:8px 0;background:#111318;border:1px solid #333947;border-radius:4px}'
-    + '.chart-svg{width:100%;height:auto}'
+    + '.chart-svg{width:100%;height:auto;background-color:#111318}'
     + '.chart-svg .chart-svg-titulo{font-size:12px;font-weight:600;fill:#e3e9ff}'
     + '.chart-svg .chart-txt{font-size:9px;fill:#c5c9d4;pointer-events:none}'
     + '.chart-svg .chart-eixo{stroke:#3a4252;stroke-width:1}'
@@ -441,8 +442,8 @@
     + '.chart-svg .chart-barra{fill:#4a94d4}'
     + '.chart-svg .chart-barra-modada{fill:#5ee0a0}'
     + '.chart-svg .chart-eixo-rotulo{font-size:10px;fill:#8b94a5}'
-    + '.sim-dados-link{color:#4a94d4;cursor:pointer;text-decoration:underline}'
-    + '.sim-dados-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
+    + '.sim-dados-link{color:#174ea6;cursor:pointer;text-decoration:underline}'
+    + '.sim-dados-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-dados-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
     + '.sim-dados-nav-btn:hover{background:#3a4252}'
     + '.sim-dados-explicacao{background:#161a21;border-left:3px solid #4a94d4;padding:10px;margin:8px 0;font-size:.82rem;color:#b9c0d4;border-radius:4px}'
     + '</style>';
@@ -457,7 +458,7 @@
     h += '</tr></thead><tbody>';
     for (var i = 0; i < dados.length; i++) {
       h += '<tr data-linha="' + i + '">';
-      h += '<td><input type="text" class="sim-dados-cel sim-dados-cel-ro" data-field="nome" data-linha="' + i + '" value="' + esc(dados[i].nome) + '" readonly/></td>';
+      h += '<td><input type="text" class="sim-dados-cel sim-dados-cel-ro" data-field="nome" data-linha="' + i + '" value="' + esc(dados[i].nome) + '" readonly aria-label="Nome da linha ' + (i + 1) + ': ' + esc(dados[i].nome) + ' (somente leitura)"/></td>';
       for (var j = 1; j < COLUNAS.length; j++) {
         var field = ['nome', 'n1', 'n2', 'n3', 'media'][j];
         var readOnly = (field === 'media');
@@ -575,11 +576,13 @@
     return '<div class="sim-dados">'
       + '<h3>Simulador de Dados e Visualização (Seção 7.5)</h3>'
       + '<p class="sim-dados-sub">Edite o conjunto de dados à direita — todos os gráficos e estatísticas recalculam em tempo real. Implementação própria em SVG (sem Chart.js).</p>'
-      + '<p class="sim-dados-sub">Navegação: <span class="sim-dados-link" data-act="nav" data-target="table">1. Dados editáveis</span>'
-      + ' | <span class="sim-dados-link" data-act="nav" data-target="stats">2. Estatísticas</span>'
-      + ' | <span class="sim-dados-link" data-act="nav" data-target="charts">3. Gráficos</span>'
-      + ' | <span class="sim-dados-link" data-act="nav" data-target="explicacao">4. Explicação dinâmica</span>'
-      + ' | <span class="sim-dados-link" data-act="nav" data-target="limites">5. Escopo declarado</span></p>'
+      + '<nav class="sim-dados-nav" aria-label="Navegação das seções do simulador de dados">'
+      + '<button type="button" class="sim-dados-nav-btn" data-act="nav" data-target="table">1. Dados editáveis</button>'
+      + '<button type="button" class="sim-dados-nav-btn" data-act="nav" data-target="stats">2. Estatísticas</button>'
+      + '<button type="button" class="sim-dados-nav-btn" data-act="nav" data-target="charts">3. Gráficos</button>'
+      + '<button type="button" class="sim-dados-nav-btn" data-act="nav" data-target="explicacao">4. Explicação dinâmica</button>'
+      + '<button type="button" class="sim-dados-nav-btn" data-act="nav" data-target="limites">5. Escopo declarado</button>'
+      + '</nav>'
       + '<div id="data-pane-table" class="data-pane">' + dataBuildTable(dados) + '</div>'
       + '<div id="data-pane-stats" class="data-pane" style="display:none">' + dataBuildStats(dados) + '</div>'
       + '<div id="data-pane-charts" class="data-pane" style="display:none">' + dataBuildCharts(dados, state.colIdx, state.bins) + '</div>'
@@ -617,7 +620,7 @@
     alvo.classList.remove('sim-dados-err');
     dados[linha][field] = num;
     /* Atualiza apenas a célula de média desta linha (não reconstrói a tabela). */
-    var mediaCell = containerEl.querySelector('input[data-field="media"][data-linha="' + linha + '"]');
+    var mediaCell = containerEl.querySelector('input[data-field="media"][data-linha="' + CSS.escape(String(linha)) + '"]');
     if (mediaCell) mediaCell.value = fmt(mediaAluno(dados[linha]), 1);
     dataRefreshVisuals(containerEl, dados, state);
   }
@@ -700,6 +703,10 @@
       containerEl.innerHTML = dataCss + dataBuildUI(dados, state);
       /* delegate events */
       containerEl.addEventListener('input', function (e) { dataOnInput(e, containerEl, dados, state); });
+      containerEl.addEventListener('change', function (e) {
+        dataOnChangeCol(e, containerEl, dados, state);
+        dataOnChangeBins(e, containerEl, dados, state);
+      });
       containerEl.addEventListener('click', function (e) { dataOnClick(e, containerEl, dados, state); });
       /* store state on container for external access */
       containerEl.__dataSimState = { dados: dados, state: state };

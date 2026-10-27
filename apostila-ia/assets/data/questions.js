@@ -59,7 +59,7 @@
  * (lê window.questoesBanco) passam a enxergar o banco fundido sem qualquer
  * alteração nesses dois arquivos. Deduplicação por id acontece na fusão. */
 var questoesBanco = [
-  /* ===================== MÓDULO 1 — Microsoft 365 (32 questões) ===================== */
+  /* ===================== BLOCO INICIAL M1 — Microsoft 365 (q-m1-01..q-m1-32; 44 no total) ===================== */
 
   {
     id: "q-m1-01",
@@ -70,24 +70,25 @@ var questoesBanco = [
     nivel: "basico",
     topico: "modulo-1-unidade-1-topico-1-sub-1",
     assunto: "M1.1 Ecossistema Microsoft 365",
-    contexto: "Secretaria com 40 postos de trabalho que precisa de Teams, 5 TB de OneDrive por usuário e atualização contínua de funcionalidades. Três opções de licenciamento foram apresentadas pelo fornecedor.",
+    contexto: "Secretaria com 40 postos de trabalho que precisa de Teams, 5 TB de OneDrive por usuário e atualização contínua de funcionalidades. A documentação do fornecedor confirma uma licença elegível com direito ao Teams e cota de 5 TB para os usuários envolvidos.",
     enunciado: "Qual opção atende integralmente à demanda descrita?",
     alternativas: [
       { letra: "A", texto: "Office LTSC por licenciamento por volume — compra única, com atualizações apenas de segurança." },
-      { letra: "B", texto: "Microsoft 365 por assinatura — inclui Office, OneDrive, Teams e atualizações contínuas." },
+      { letra: "B", texto: "Office LTSC com pacote de nuvem opcional — mesmo escopo do Microsoft 365." },
       { letra: "C", texto: "Versão perpétua Home & Student — compra única com Word, Excel e PowerPoint." },
-      { letra: "D", texto: "Office LTSC com pacote de nuvem opcional — mesmo escopo do Microsoft 365." }
+      { letra: "D", texto: "Microsoft 365 por assinatura, com plano elegível confirmado para incluir Office, Teams, OneDrive com cota de 5 TB e atualizações contínuas." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define o Microsoft 365 como serviço de assinatura com Office, OneDrive, Teams e atualizações contínuas — exatamente os três requisitos da demanda (Teams, 5 TB de OneDrive por usuário e atualizações de funcionalidades). O Office LTSC é versão perpétua com apps selecionados, sem Teams/OneDrive em nuvem e com apenas atualizações de segurança; a versão perpétua é compra única com apps limitados (Word, Excel, PowerPoint). Por isso as alternativas A e C não satisfazem a demanda, e D descreve um produto não existente no currículo.",
+    gabarito: "D",
+    justificativa: "O Microsoft 365 por assinatura é a única categoria entre as opções que pode reunir Office, Teams e atualizações contínuas; a contratação deve confirmar a elegibilidade do plano, a cota de 5 TB e as condições aplicáveis ao locatário, pois nem toda assinatura garante automaticamente esse limite. O Office LTSC é versão perpétua com apps selecionados, sem Teams/OneDrive em nuvem e com apenas atualizações de segurança; a versão perpétua é compra única com apps limitados (Word, Excel, PowerPoint). Por isso as alternativas A e C não satisfazem a demanda. A alternativa D é a correta somente com a confirmação contratual do plano elegível e das condições de armazenamento descritas no contexto.",
     analise: {
       A: "INCORRETA. Erro conceitual: confundir 'atualização' com 'atualização de segurança'. O LTSC recebe apenas patches de segurança e não inclui Teams nem OneDrive em nuvem, logo não atende a nenhum dos três requisitos.",
-      B: "CORRETA. É a única alternativa que reúne os três requisitos: assinatura com Office + OneDrive + Teams + atualizações contínuas, conforme a definição do currículo.",
+      B: "INCORRETA. Erro conceitual: invenção de produto. O currículo não descreve 'LTSC com pacote de nuvem'; LTSC e M365 são modelos distintos (perpétuo × assinatura), não versões empilháveis.",
       C: "INCORRETA. Erro conceitual: a versão perpétua é compra única com apps limitados e sem armazenamento em nuvem integrado nem Teams — erro idêntico ao documentado no exemplo 'erro' do próprio currículo.",
-      D: "INCORRETA. Erro conceitual: invenção de produto. O currículo não descreve 'LTSC com pacote de nuvem'; LTSC e M365 são modelos distintos (perpétuo × assinatura), não versões empilháveis."
+      D: "CORRETA. A assinatura com plano elegível confirmado é a única opção compatível com os requisitos descritos; a cota de 5 TB, o direito ao Teams e as condições de atualização devem constar da documentação da licença contratada."
     },
     regra: "Modelo de licenciamento: assinatura (recorrente, serviços na nuvem + atualizações de funcionalidades) × perpétuo (compra única, apenas atualizações de segurança, sem serviços em nuvem).",
-    pegadinha: "A palavra 'atualizações' aparece nas duas alternativas — a pegadinha é não distinguir tipo de atualização (segurança × funcionalidade) e esquecer que Teams/OneDrive em nuvem só aparecem na assinatura."
+    pegadinha: "A palavra 'atualizações' aparece nas duas alternativas — a pegadinha é não distinguir tipo de atualização (segurança × funcionalidade) e esquecer que Teams/OneDrive em nuvem só aparecem na assinatura.",
+    fonte: "Microsoft — comparação de planos com e sem Teams: https://www.microsoft.com/pt-BR/microsoft-365/business/microsoft-365-plans-and-pricing; descrição do serviço OneDrive e limites de armazenamento: https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description.",
   },
   {
     id: "q-m1-02",
@@ -109,7 +110,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: considerar que 'toda suíte Office moderna acompanha Teams', ou que 'atualização contínua' é padrão de qualquer produto Microsoft. A distinção correta é modelo de licenciamento (assinatura × perpétuo), não marca do produto."
     },
     regra: "LTSC = Long Term Servicing Channel: canal de suporte longo com atualizações de segurança, sem atualizações de funcionalidades e sem serviços em nuvem associados.",
-    pegadinha: "Item duplo: mesmo que o examinando aceite parcialmente o trecho ('inclui Teams'), o item só é Certo se TODA a afirmação for verdadeira — estilo CESPE/CEBRASPE penaliza a meia-verdade."
+    pegadinha: "Item duplo: mesmo que o examinando aceite parcialmente o trecho ('inclui Teams'), o item só é Certo se TODA a afirmação for verdadeira — estilo CESPE/CEBRASPE penaliza a meia-verdade.",
+    fonte: "Microsoft Learn — Descrição de serviços dos aplicativos do Office (diferenças entre Office LTSC e aplicativos Microsoft 365): https://learn.microsoft.com/pt-br/office365/servicedescriptions/office-applications-service-description/office-applications-service-description",
   },
   {
     id: "q-m1-03",
@@ -123,13 +125,13 @@ var questoesBanco = [
     contexto: "Equipe distribuída precisa acessar os aplicativos do Microsoft 365 em três cenários: estação fixa, navegador em máquina compartilhada e celular em campo.",
     enunciado: "Sobre as versões web, desktop e mobile do Microsoft 365, assinale a opção correta.",
     alternativas: [
-      { letra: "A", texto: "A versão web requer internet e oferece funcionalidades básicas; a desktop tem funcionalidades completas e funciona offline; a mobile é simplificada e sincroniza com a nuvem." },
+      { letra: "A", texto: "A versão web é acessada pelo navegador e normalmente requer internet; a desktop instalada oferece mais recursos e pode funcionar offline após instalação e ativação; a mobile adapta a experiência à tela e também permite trabalho offline com arquivos disponíveis no dispositivo." },
       { letra: "B", texto: "As três versões oferecem exatamente as mesmas funcionalidades, variando apenas o esquema de cores da interface." },
       { letra: "C", texto: "A versão desktop só é atualizada por download manual; a versão web não recebe atualização automática; a mobile funciona exclusivamente offline." },
       { letra: "D", texto: "A versão mobile oferece todas as funcionalidades do desktop, e a versão web não requer conexão com a internet." }
     ],
     gabarito: "A",
-    justificativa: "O currículo descreve: web = via navegador, funcionalidades básicas, atualizações automáticas, requer internet; desktop = instalação local, funcionalidades completas, atualizações via Microsoft Update, funciona offline; mobile = apps iOS/Android, funcionalidades simplificadas, visualização e edição básica, sincronização com nuvem. A alternativa A reproduz fielmente os três conjuntos de características.",
+    justificativa: "As versões diferem em recursos e condições de uso. A versão web é acessada pelo navegador e depende normalmente de conexão; algumas funcionalidades avançadas podem estar disponíveis apenas no aplicativo desktop. Os aplicativos desktop, depois de instalados e ativados, podem ser usados offline para arquivos locais ou sincronizados, embora instalação, ativação, atualização e acesso a arquivos somente na nuvem exijam conexão. Os aplicativos móveis têm recursos adaptados ao dispositivo e podem trabalhar offline com arquivos previamente disponíveis, sincronizando alterações quando a conexão retorna. A alternativa A é a única que preserva essas distinções sem afirmar paridade funcional.",
     analise: {
       A: "CORRETA. Reproduz as três descrições do currículo sem acrescentar nem omitir características.",
       B: "INCORRETA. Erro conceitual: equivalência indevida entre plataformas. O currículo registra explicitamente que a web é 'básica' e a mobile é 'simplificada' — não há paridade funcional.",
@@ -137,7 +139,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: afirma exatamente o oposto do currículo (mobile simplificado; web requer internet). É a alternativa 'espelho' típica de FCC/VUNESP."
     },
     regra: "Classificação de clientes de aplicativo: servidor (web), instalação local (desktop) e aplicativo nativo com sincronização (mobile) — as três diferem em requisito de rede, escopo funcional e canal de atualização.",
-    pegadinha: "As alternativas B e D são 'quase verdade' para quem lê só uma frase do enunciado; a palavra-chave é comparar TODOS os atributos (funcionalidade, internet, atualização) de cada versão."
+    pegadinha: "As alternativas B e D são 'quase verdade' para quem lê só uma frase do enunciado; a palavra-chave é comparar TODOS os atributos (funcionalidade, internet, atualização) de cada versão.",
+    fonte: "Microsoft Support — diferença entre Microsoft 365 e Office 2024, incluindo uso offline após instalação/ativação: https://support.microsoft.com/pt-br/office/lifecycle/lc-account/what-s-the-difference-between-microsoft-365-and-office-2024; comparação de recursos Word Web/Desktop: https://support.microsoft.com/pt-br/word/word-features-comparison-word-for-the-web-vs-desktop.",
   },
   {
     id: "q-m1-04",
@@ -148,18 +151,19 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "modulo-1-unidade-1-topico-1-sub-4",
     assunto: "M1.1 Ecossistema Microsoft 365",
-    contexto: "Plano Enterprise do Microsoft 365 contratado por um órgão; descrição do armazenamento conforme o tópico 'Armazenamento local e em nuvem'.",
-    enunciado: "No Microsoft 365 Enterprise, o OneDrive oferece 5 TB de armazenamento por usuário e o SharePoint é o serviço indicado para armazenamento e colaboração de equipe.",
+    contexto: "Plano Enterprise elegível contratado por um órgão, com a documentação do licenciamento confirmando a cota de armazenamento; descrição do armazenamento conforme o tópico 'Armazenamento local e em nuvem'.",
+    enunciado: "Em um plano Microsoft 365 Enterprise elegível, o OneDrive pode oferecer 5 TB por usuário conforme as condições de licenciamento; o SharePoint é indicado para armazenamento e colaboração de equipe.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o OneDrive oferece 5 TB de armazenamento por usuário e o SharePoint é o serviço indicado para armazenamento e colaboração de equipe' — correspondem exatamente à descrição do currículo para o plano Enterprise.",
-    justificativa: "O currículo registra: 'OneDrive (5TB por usuário Enterprise), SharePoint (armazenamento equipe/collaborativo), armazenamento local', além de integração com sincronização automática, acesso remoto, histórico de versões e recuperação de arquivos. O item combina as duas afirmações corretamente.",
+    trechoDeterminante: "O trecho determinante é 'plano Microsoft 365 Enterprise elegível' e 'pode oferecer 5 TB conforme as condições de licenciamento': a capacidade é condicional, enquanto o papel do SharePoint está corretamente descrito.",
+    justificativa: "A cota de armazenamento deve ser confirmada para a licença e o locatário específicos; não é correto generalizar 5 TB para todo plano Enterprise. O papel do SharePoint para armazenamento e colaboração de equipe está corretamente atribuído.",
     analise: {
-      item: "Item VERDADEIRO. O valor 5 TB por usuário é restrito ao plano Enterprise (como declara o próprio currículo), e o papel do SharePoint (armazenamento colaborativo de equipe) está corretamente atribuído.",
+      item: "Item VERDADEIRO. A afirmação sobre 5 TB depende de elegibilidade e condições do plano; o papel do SharePoint para colaboração de equipe está corretamente atribuído.",
       leituraIncorreta: "Leitura que induz ao erro: generalizar os 5 TB para todos os planos. O item é verdadeiro justamente porque o enunciado limita a 'Enterprise' — se ele dissesse 'em todos os planos Microsoft 365', seria FALSO."
     },
     regra: "Divisão de papéis no M365: OneDrive = armazenamento pessoal do usuário; SharePoint = armazenamento e colaboração de equipe; o limite de capacidade é propriedade do plano licenciado.",
-    pegadinha: "A pegadinha clássica de item Certo/Errado é o quantificador escondido ('todos os planos', 'sempre'). Aqui o quantificador correto ('Enterprise') está explícito — quem lê com pressa tende a 'consertar' o item e o marca Errado."
+    pegadinha: "A pegadinha é generalizar a cota de armazenamento: o enunciado limita a oferta a planos elegíveis e às condições documentadas; não presume que todos os planos Enterprise ofereçam 5 TB.",
+    fonte: "Microsoft Learn — limites de armazenamento do OneDrive por plano: https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description; gerenciamento do limite por usuário: https://learn.microsoft.com/en-us/onedrive/change-user-storage; Microsoft Support — sites de equipe do SharePoint para armazenamento e colaboração compartilhada: https://support.microsoft.com/pt-br/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site.",
   },
   {
     id: "q-m1-05",
@@ -174,20 +178,21 @@ var questoesBanco = [
     enunciado: "Qual mecanismo de integração descrito no currículo atende ao requisito de atualização automática da tabela no Word?",
     alternativas: [
       { letra: "A", texto: "Copiar e colar a tabela como imagem estática, sem qualquer vínculo com a planilha." },
-      { letra: "B", texto: "Inserir a tabela do Excel como objeto vinculado (link dinâmico), mecanismo de integração via OLE." },
-      { letra: "C", texto: "Transcrever manualmente os valores como texto puro e repetir o processo a cada alteração." },
+      { letra: "B", texto: "Transcrever manualmente os valores como texto puro e repetir o processo a cada alteração." },
+      { letra: "C", texto: "Inserir a tabela do Excel como objeto vinculado (link dinâmico), mecanismo de integração via OLE." },
       { letra: "D", texto: "Exportar a planilha para PDF e inserir o PDF como anexo não vinculado." }
     ],
-    gabarito: "B",
+    gabarito: "C",
     justificativa: "O tópico 'Integração entre aplicações' cita explicitamente 'Inserir tabela do Excel em Word com link dinâmico' e identifica os mecanismos de integração: OLE, APIs REST do Microsoft Graph e compatibilidade de formatos. Apenas o objeto vinculado mantém a atualização automática exigida pelo cenário.",
     analise: {
       A: "INCORRETA. Erro conceitual: estaticidade. Uma imagem não mantém vínculo com a origem; a tabela não muda quando o Excel muda.",
-      B: "CORRETA. É o mecanismo nomeado no currículo (tabela do Excel em Word com link dinâmico), cujo transporte técnico é a integração via OLE.",
-      C: "INCORRETA. Erro conceitual: confundir integração com reimpressão manual — não há vínculo nem automação, e o risco de erro humano é alto.",
+      B: "INCORRETA. Erro conceitual: confundir integração com reimpressão manual — não há vínculo nem automação, e o risco de erro humano é alto.",
+      C: "CORRETA. É o mecanismo nomeado no currículo (tabela do Excel em Word com link dinâmico), cujo transporte técnico é a integração via OLE.",
       D: "INCORRETA. Erro conceitual: finalidade trocada. Exportar para PDF preserva layout para distribuição (topico-12), não cria vínculo dinâmico de dados entre aplicativos."
     },
     regra: "Integração entre aplicativos Microsoft: OLE (objeto vinculado/embutido) para vínculo dinâmico, Microsoft Graph/APIs REST para automação entre serviços, Power Automate para fluxos.",
-    pegadinha: "A palavra 'automática' no enunciado exclui qualquer alternativa baseada em reentrada manual; a pegadinha é confundir 'colar especial (pegar manter vínculo)' com exportação estática."
+    pegadinha: "A palavra 'automática' no enunciado exclui qualquer alternativa baseada em reentrada manual; a pegadinha é confundir 'colar especial (pegar manter vínculo)' com exportação estática.",
+    fonte: "Microsoft Support — Objetos vinculados e incorporados: https://support.microsoft.com/pt-br/word/linked-objects-and-embedded-objects; inserir/vincular um objeto no Word: https://support.microsoft.com/pt-br/word/insert-an-object-in-word-or-outlook",
   },
   {
     id: "q-m1-06",
@@ -199,17 +204,18 @@ var questoesBanco = [
     topico: "modulo-1-unidade-1-topico-1-sub-6",
     assunto: "M1.1 Ecossistema Microsoft 365",
     contexto: "Política de recuperação de arquivos do órgão baseada no tópico 'Salvamento automático, sincronização, colaboração simultânea e histórico de versões'.",
-    enunciado: "O histórico de versões do OneDrive/SharePoint mantém cópias de recuperação por 30 dias por padrão e permite ao administrador configurar políticas de retenção.",
+    enunciado: "A retenção do histórico de versões do OneDrive/SharePoint é sempre de 30 dias por padrão, independentemente do tipo de conta, plano e política do locatário.",
     alternativas: null,
-    gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'mantém cópias de recuperação por 30 dias por padrão e permite ao administrador configurar políticas de retenção' — ambos os valores constam do currículo (30 dias padrão; políticas de retenção configuráveis por administrador).",
-    justificativa: "O currículo descreve: 'Histórico de versões: cópias de recuperação por 30 dias padrão, restauração de versões anteriores. Políticas de retenção configuráveis por administrador.' O item combina as duas informações sem alterar prazo nem responsável pela configuração.",
+    gabarito: "errado",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'sempre de 30 dias por padrão, independentemente do tipo de conta, plano e política do locatário': o prazo de histórico de versões depende do serviço, do tipo de conta e das configurações aplicáveis.",
+    justificativa: "Histórico de versões e lixeira são mecanismos distintos. Não se deve ensinar um prazo universal de 30 dias para o histórico de versões; a retenção varia conforme o tipo de conta, a configuração do serviço e as políticas aplicáveis. As políticas de retenção do locatário podem ser administradas, mas isso não torna universal um prazo fixo.",
     analise: {
-      item: "Item VERDADEIRO. Os dois componentes estão corretos: prazo padrão (30 dias) e agente de configuração (administrador).",
+      item: "Item FALSO. O prazo fixo universal de 30 dias não pode ser presumido para todo histórico de versões do OneDrive/SharePoint.",
       leituraIncorreta: "Leitura que induz ao erro: confundir 'histórico de versões' com 'backup'. O histórico é funcionalidade de recuperação dentro do próprio serviço — a questão do backup separado aparece no tópico 1.5 (OneDrive), e lá o currículo afirma que sincronização não substitui backup."
     },
     regra: "Retenção × backup: histórico de versões é retenção limitada e configurável dentro do serviço; backup é cópia independente (recomendação 3-2-1 citada no currículo do OneDrive).",
-    pegadinha: "Número + agente: itens C/E falsos costumam trocar o número (30 dias → 90 dias) ou o responsável ('usuário final' em vez de 'administrador'). Aqui ambos estão corretos."
+    pegadinha: "A pegadinha é o prazo universal: não confunda uma configuração observada em determinado ambiente com regra fixa para todo serviço, tipo de conta e locatário.",
+    fonte: "Microsoft Learn — Limites do histórico de versão para bibliotecas de documentos e OneDrive (configurações automáticas/manuais e limites de expiração): https://learn.microsoft.com/pt-br/sharepoint/document-library-version-history-limits; Microsoft Support — Restaurar versão anterior no OneDrive (controle de versões pode ser desativado pelo administrador): https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive",
   },
   {
     id: "q-m1-07",
@@ -224,20 +230,21 @@ var questoesBanco = [
     enunciado: "Que tipo de conta do Microsoft 365 é adequado ao requisito descrito?",
     alternativas: [
       { letra: "A", texto: "Conta pessoal (Personal/Family), pois oferece licença familiar e recursos focados no uso doméstico." },
-      { letra: "B", texto: "Conta organizacional (Business/Enterprise), por oferecer gestão centralizada, domínios personalizados, eDiscovery, gerenciamento de dispositivos e recursos de compliance." },
+      { letra: "B", texto: "Conta organizacional (Business/Enterprise) com plano elegível que inclua as capacidades exigidas: gestão centralizada, domínio personalizado, eDiscovery, gerenciamento de dispositivos e compliance." },
       { letra: "C", texto: "Conta Microsoft pessoal com autenticação em dois fatores, pois o MFA substitui a gestão por domínio." },
       { letra: "D", texto: "Conta local do sistema operacional, pois contas em nuvem não suportam políticas de segurança." }
     ],
     gabarito: "B",
-    justificativa: "O currículo diferencia contas pessoais (limite de usuários, recursos domésticos) de contas organizacionais (Business/Enterprise): gestão centralizada, domínios personalizados, políticas de segurança avançadas, eDiscovery, gerenciamento de dispositivos e recursos de compliance. Todos os requisitos do órgão estão na descrição das contas organizacionais.",
+    justificativa: "O currículo diferencia contas pessoais, voltadas ao uso doméstico, de contas organizacionais, que permitem administração centralizada e recursos de gestão. O requisito só é atendido por um plano organizacional que inclua explicitamente eDiscovery, gerenciamento de dispositivos e os recursos de compliance necessários; a disponibilidade exata varia conforme o plano e as licenças atribuídas.",
     analise: {
       A: "INCORRETA. Erro conceitual: escopo doméstico. Contas pessoais/familiares não têm gestão centralizada nem eDiscovery — características do tópico 'contas organizacionais'.",
-      B: "CORRETA. Reproduz integralmente o conjunto de capacidades organizacionais descrito no currículo.",
+      B: "CORRETA. O cenário exige uma conta organizacional e um plano elegível que confirme todas as capacidades; a categoria da conta, sozinha, não garante cada recurso.",
       C: "INCORRETA. Erro conceitual: confundir fator de autenticação com modelo de gestão. MFA é controle de acesso; não cria domínio personalizado, eDiscovery nem conformidade.",
       D: "INCORRETA. Erro conceitual: premissa falsa. O currículo atribui 'políticas de segurança avançadas' às contas organizacionais no M365 — a negação de suporte em contas nuvem não existe no conteúdo base."
     },
-    regra: "Classificação de identidades no M365: conta pessoal/familiar (consumo) × conta organizacional (diretório, domínio, compliance e administração central).",
-    pegadinha: "A alternativa C é a pegadinha contemporânea: MFA resolve autenticação, não governança — em provas de precisão conceitual (FCC) separar 'quem entra' de 'como a organização gerencia' é o ponto cobrado."
+    regra: "Classificação de identidades no M365: conta pessoal/familiar (consumo) × conta organizacional (diretório e administração central); recursos avançados como eDiscovery e gestão de dispositivos dependem do plano/licenças.",
+    pegadinha: "A alternativa C é a pegadinha contemporânea: MFA resolve autenticação, não governança — em provas de precisão conceitual (FCC) separar 'quem entra' de 'como a organização gerencia' é o ponto cobrado.",
+    fonte: "Microsoft 365 — Comparação de planos e licenciamento: https://www.microsoft.com/pt-BR/microsoft-365/business/microsoft-365-plans-and-pricing; Microsoft Purview eDiscovery — recursos, permissões e licenciamento E3/E5: https://learn.microsoft.com/en-us/purview/edisc-features-components; Microsoft Intune — planos, requisitos e licenciamento: https://learn.microsoft.com/pt-br/intune/fundamentals/licensing/",
   },
   {
     id: "q-m1-08",
@@ -248,21 +255,22 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "modulo-1-unidade-1-topico-1-sub-8",
     assunto: "M1.1 Ecossistema Microsoft 365",
-    contexto: "Documento compartilhado externamente precisa de expiração de link e recuperação acidental; ver tópico 'Permissões, compartilhamento, privacidade e recuperação de arquivos'.",
-    enunciado: "No Microsoft 365, a lixeira retém arquivos por 30 dias e o compartilhamento por link pode ser configurado com expiração, senha e permissão de download.",
+    contexto: "Um órgão define política de compartilhamento externo e recuperação de arquivos para contas pessoais e organizacionais.",
+    enunciado: "Em qualquer conta do Microsoft 365, a lixeira retém arquivos exatamente 30 dias e todos os links podem sempre receber expiração, senha e restrição de download, sem depender do tipo de conta ou das políticas do locatário.",
     alternativas: null,
-    gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'a lixeira retém arquivos por 30 dias e o compartilhamento por link pode ser configurado com expiração, senha e permissão de download' — todas as capacidades constam do subtópico correspondente.",
-    justificativa: "O currículo lista: permissões granulares (visualizar, editar, comentar, controlar), compartilhamento por link com expiração, senha protegido e permissões de download, privacidade via configurações de locatário e rotulagem de dados, e recuperação: lixeira (30 dias), versões anteriores e eDiscovery para administradores Enterprise.",
+    gabarito: "errado",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'em qualquer conta', 'exatamente 30 dias' e 'sem depender ... das políticas do locatário': a retenção e os controles de compartilhamento variam conforme o tipo de conta, o serviço e a configuração aplicável.",
+    justificativa: "Não se deve generalizar um prazo único de retenção da lixeira para todas as contas pessoais e organizacionais. Da mesma forma, expiração, senha e restrição de download em links dependem dos recursos disponíveis e das políticas configuradas pelo administrador. A política deve ser verificada para o serviço, o tipo de conta e o locatário específicos; histórico de versões e lixeira são mecanismos distintos.",
     analise: {
-      item: "Item VERDADEIRO. Prazo (30 dias) e controles de link (expiração, senha, download) são exatamente os registrados no currículo.",
-      leituraIncorreta: "Leitura que induz ao erro: achar que 'expiração e senha' são recursos de tier pago exclusivo e portanto inexistentes. O currículo não faz essa restrição — quem infere restrição não encontrada marca Errado indevidamente."
+      item: "Item FALSO. O enunciado transforma opções configuráveis em garantias universais e ignora diferenças entre contas e políticas.",
+      leituraIncorreta: "Leitura que induz ao erro: reconhecer que alguns links oferecem esses controles e generalizar que todos os links e contas sempre os oferecem."
     },
-    regra: "Princípio de compartilhamento mínimo: permissão necessária pelo menor tempo possível (expiração) + autenticação do link (senha) + controle de cópia (download).",
-    pegadinha: "Item composto: se apenas um dos três controles de link não existisse, o item seria falso. O examinando deve validar CADA elemento do trecho, não a ideia geral."
+    regra: "Verifique retenção e compartilhamento conforme o tipo de conta, o serviço e as políticas do locatário; não confunda lixeira com histórico de versões.",
+    pegadinha: "Palavras absolutas como 'qualquer', 'exatamente' e 'sempre' tornam falsa uma afirmação que ignora as configurações aplicáveis.",
+    fonte: "Microsoft Support — Retenção da lixeira varia entre contas pessoais (até 30 dias) e corporativas/escolares (até 93 dias, salvo alteração do administrador): https://support.microsoft.com/pt-br/onedrive/restore-deleted-files-or-folders-in-onedrive; Microsoft Learn — opções de compartilhamento, expiração e permissões de links dependem das configurações da organização/site: https://learn.microsoft.com/pt-br/sharepoint/turn-external-sharing-on-or-off",
   },
   {
-    id: "q-m1-09",
+id: "q-m1-09",
     modulo: 1,
     formato: "mc",
     estilo: "fgv",
@@ -270,24 +278,25 @@ var questoesBanco = [
     nivel: "basico",
     topico: "modulo-1-unidade-2-topico-1-sub-2",
     assunto: "M1.2 Word — interface e formatos",
-    contexto: "Manual técnico será distribuído a leitores externos que não devem alterar o documento, mas o layout (colunas, figuras, numeração) deve preservar-se em qualquer computador.",
+    contexto: "Manual técnico será distribuído a leitores externos como versão final para leitura e impressão. O layout (colunas, figuras, numeração) deve preservar-se em diferentes computadores, e a edição não deve fazer parte do fluxo normal de uso.",
     enunciado: "Qual formato de arquivo atende melhor à exigência descrita?",
     alternativas: [
       { letra: "A", texto: ".docx — padrão Open XML, para edição colaborativa." },
-      { letra: "B", texto: ".pdf — formato portátil que preserva o layout e não é editável sem ferramentas específicas." },
+      { letra: "B", texto: ".doc — formato legado binário, compatível com o Word 2003 e anteriores." },
       { letra: "C", texto: ".txt — texto puro, elimina qualquer formatação acidental." },
-      { letra: "D", texto: ".doc — formato legado binário, compatível com o Word 2003 e anteriores." }
+      { letra: "D", texto: ".pdf — formato portátil que tende a preservar o layout e é adequado para distribuição e impressão, embora possa ser editado com ferramentas compatíveis." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define: .pdf é portátil, preserva layout e não é editável sem ferramentas específicas; a escolha do formato depende do objetivo — 'distribuição leitura-only (.pdf)'. O cenário exige exatamente isso: distribuição sem edição com preservação de layout.",
+    gabarito: "D",
+    justificativa: "A documentação Microsoft recomenda PDF quando o arquivo deve manter aparência semelhante em diferentes computadores e se destina à leitura ou impressão. PDF não garante bloqueio de edição: alguns programas, incluindo o Word, podem abrir e editar PDFs. Neste cenário, o PDF é o melhor formato para distribuir uma versão final com layout preservado; se a organização precisar impedir alterações, deverá aplicar controles de acesso/proteção apropriados, não depender apenas da extensão.",
     analise: {
       A: "INCORRETA. Erro conceitual: finalidade trocada. O .docx é indicado para edição colaborativa — justamente o comportamento que o cenário quer evitar.",
-      B: "CORRETA. Combina portabilidade + preservação de layout + não edição, os três requisitos do enunciado.",
-      C: "INCORRETA. Erro conceitual: perder a restrição de layout. O .txt descarta formatação (colunas, figuras, numeração) — resolve a não-edição e quebra a preservação.",
-      D: "INCORRETA. Erro conceitual: confundir compatibilidade com distribuição segura. O .doc é legado/binário e editável; serve a compatibilidade antiga, não à leitura-only."
+      B: "INCORRETA. Erro conceitual: confundir compatibilidade com distribuição segura. O .doc é legado/binário e editável; serve a compatibilidade antiga, não à leitura-only.",
+      C: "INCORRETA. O .txt descarta a formatação e não preserva colunas, figuras e numeração; portanto não atende ao requisito de fidelidade visual.",
+      D: "CORRETA. É apropriado para distribuir uma versão final com layout preservado e uso orientado à leitura/impressão; não deve ser confundido com uma garantia técnica de bloqueio de edição."
     },
-    regra: "Escolha de formato por objetivo: edição colaborativa → .docx; distribuição leitura-only → .pdf; compatibilidade antiga → .doc; texto puro → .txt; interoperabilidade intermediária → .rtf.",
-    pegadinha: "A pegadinha é a 'meia solução': .txt e .doc atendem um critério do enunciado, mas violam o outro — a FGV cobra interpretar todas as condições, não a primeira que se lê."
+    regra: "Escolha de formato por objetivo: edição colaborativa → .docx; distribuição final para leitura/impressão com layout preservado → .pdf; compatibilidade antiga → .doc; texto puro → .txt; interoperabilidade intermediária → .rtf. PDF não substitui controles de acesso quando é necessário impedir tecnicamente a edição.",
+    pegadinha: "A pegadinha é confundir o formato de distribuição com um mecanismo de proteção: PDF preserva melhor a apresentação, mas não garante que o conteúdo não possa ser editado.",
+    fonte: "Microsoft Support — Salvar ou converter em PDF ou XPS nos aplicativos da área de trabalho do Office (PDF preserva a aparência na maioria dos computadores e é adequado para documentos destinados à leitura e impressão): https://support.microsoft.com/pt-br/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps",
   },
   {
     id: "q-m1-10",
@@ -309,7 +318,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: memorizar que 'm de macro' aparece em alguma extensão e inferir que todo .dxm existe. A regra mnemotécnica correta é: DOC = documento, DOT = modelo; o sufixo M = macros habilitadas."
     },
     regra: "Matriz de extensões: DOCX (documento padrão) / DOCM (documento com macros) / DOTX (modelo) / DOTM (modelo com macros) / DOC (legado binário).",
-    pegadinha: "Itens com duas cláusulas exigem avaliar AMBAS. Mesmo que o examinando acerte uma metade, o item é Errado — e o CESPE cobra exatamente essa disciplina de leitura."
+    pegadinha: "Itens com duas cláusulas exigem avaliar AMBAS. Mesmo que o examinando acerte uma metade, o item é Errado — e o CESPE cobra exatamente essa disciplina de leitura.",
+    fonte: "Microsoft Support — Formatos de arquivo para salvar documentos no Word (.dotx, .dotm, .docm): https://support.microsoft.com/pt-br/word/file-formats-for-saving-documents",
   },
   {
     id: "q-m1-11",
@@ -337,7 +347,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: inverter causa e efeito. O sumário referencia os títulos; alterar só o sumário não modifica o corpo do documento."
     },
     regra: "Formatação direta × estilo: direta altera a seleção atual; estilo é definição nomeada propagante (mudou o estilo, mudou todo o texto com aquele estilo).",
-    pegadinha: "A alternativa D é a pegadinha de quem conhece o sumário, mas não entende o vínculo estilo → texto → sumário (nesta ordem)."
+    pegadinha: "A alternativa D é a pegadinha de quem conhece o sumário, mas não entende o vínculo estilo → texto → sumário (nesta ordem).",
+    fonte: "Microsoft Support — Adicionar um título a um documento do Word e usar estilos: https://support.microsoft.com/pt-br/word/add-a-heading-in-a-word-document",
   },
   {
     id: "q-m1-12",
@@ -359,7 +370,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: supor que o sumário 'olha' a aparência (negrito grande = título). O sumário é um campo baseado em estilos — aparência não é estrutura."
     },
     regra: "Sumário automático = campo indexado por estilos de título. Regra prática: estrutura (estilos) → sumário; formatação direta → apenas aparência.",
-    pegadinha: "Item quase-verdade: formatação direta de fato 'faz o texto parecer título'. A pegadinha é confundir efeito visual com marcação estrutural — o erro mais comum documentado no exemplo 'erro' do próprio currículo."
+    pegadinha: "Item quase-verdade: formatação direta de fato 'faz o texto parecer título'. A pegadinha é confundir efeito visual com marcação estrutural — o erro mais comum documentado no exemplo 'erro' do próprio currículo.",
+    fonte: "Microsoft Support — Inserir um sumário automático no Word: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents",
   },
   {
     id: "q-m1-13",
@@ -387,7 +399,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: confundir salto de linha com tabulador; tabulação é avanço para parada definida (Tab simples, centrado, decimal, direita)."
     },
     regra: "Enter = quebra de parágrafo (novo parágrafo, com formatação parágrafo própria); Shift+Enter = quebra de linha (mesmo parágrafo).",
-    pegadinha: "A alternativa A pega quem associa qualquer 'quebra' à página; o nome técnico ('quebra de linha') está no currículo — leia o termo, não a intuição."
+    pegadinha: "A alternativa A pega quem associa qualquer 'quebra' à página; o nome técnico ('quebra de linha') está no currículo — leia o termo, não a intuição.",
+    fonte: "Microsoft Support — Atalhos de teclado no Word: https://support.microsoft.com/pt-br/accessibility/word/keyboard-shortcuts-in-word",
   },
   {
     id: "q-m1-14",
@@ -398,7 +411,7 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "modulo-1-unidade-2-topico-3-sub-1",
     assunto: "M1.2 Word — parágrafos, listas e paginação",
-    contexto: "Coluna de valores monetários com vírgula decimal (1,00; 2,50; 10,75) deve alinhar as vírgulas verticalmente, formando coluna.",
+    contexto: "Coluna de medições com vírgula decimal e precisões diferentes (1,0; 2,50; 10,750) deve alinhar as vírgulas verticalmente, formando coluna.",
     enunciado: "Qual tipo de tabulação atende ao alinhamento descrito?",
     alternativas: [
       { letra: "A", texto: "Tabulador simples, que avança o cursor até a próxima parada de tabulação." },
@@ -407,15 +420,16 @@ var questoesBanco = [
       { letra: "D", texto: "Tabulador à direita, que alinha o fim de todos os valores na mesma parada." }
     ],
     gabarito: "C",
-    justificativa: "O currículo lista os tipos de tabulação — 'tabulador simples, centrado, decimal, direita' — e o objetivo do enunciado é alinhar a vírgula decimal, função exclusiva do tabulador decimal. O alinhamento à direita (D) alinharia o último caractere de cada valor, o que não satisfaz o critério da vírgula quando os valores têm casas decimais iguais, mas tamanhos inteiros diferentes (1,00 × 100,00).",
+    justificativa: "O tabulador decimal ancora os valores pela vírgula decimal, mesmo quando a quantidade de casas decimais varia (1,0; 2,50; 10,750). O tabulador à direita alinha o fim de cada texto; com precisões decimais diferentes, ele não garante que as vírgulas fiquem na mesma posição. Se todos os valores tivessem a mesma quantidade de casas decimais, o alinhamento à direita poderia coincidir visualmente, mas esse não é o cenário apresentado.",
     analise: {
       A: "INCORRETA. Erro conceitual: tabulador genérico — serve para deslocar o cursor, não para alinhar colunas numéricas por casa decimal.",
       B: "INCORRETA. Erro conceitual: centrar é para títulos ou cabeçalhos curtos; com números de tamanhos distintos, o centro das strings não coincide com a vírgula.",
       C: "CORRETA. Alinhamento decimal é a parada desenhada para alinhar vírgulas decimais em coluna.",
-      D: "INCORRETA. Erro conceitual: resposta 'quase certa'. Alinha à direita o fim do texto; em valores com mesma precisão decimal o efeito visual é próximo, mas a parada que ancora a vírgula é a decimal — e é ela que o currículo associa ao alinhamento por casa decimal."
+      D: "INCORRETA. Alinha o fim dos textos. Como o cenário mistura uma, duas e três casas decimais, a posição final não faz as vírgulas coincidirem; a parada decimal é a opção que ancora explicitamente a vírgula."
     },
     regra: "Paradas de tabulação do Word: simples (esquerda), centrado, decimal (alinha pela vírgula) e direita (alinha o fim do texto).",
-    pegadinha: "A proximidade visual entre 'decimal' e 'direita' é o filtro natural da FCC: quem não leu a definição dos quatro tipos escolhe a opção que 'parece' alinhar."
+    pegadinha: "A proximidade visual entre 'decimal' e 'direita' é o filtro natural da FCC: quem não leu a definição dos quatro tipos escolhe a opção que 'parece' alinhar.",
+    fonte: "Microsoft Support — Inserir ou adicionar paradas de tabulação no Word: https://support.microsoft.com/pt-br/word/insert-or-add-tab-stops",
   },
   {
     id: "q-m1-15",
@@ -437,7 +451,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: a frase soa 'técnica e plausível' e quem lê depressa valida o vocabulário em vez da relação. A inversão é o único defeito do item — a parte sobre a existência dos dois tipos de lista está correta."
     },
     regra: "Escolha de lista por semântica: ordem importa → numeração/letras sequenciais; ordem irrelevante → marcadores (bullet).",
-    pegadinha: "Inversão de predicados — pegadinha padrão de item C/E: tudo parece certo porque todos os termos existem; só a relação entre eles está trocada."
+    pegadinha: "Inversão de predicados — pegadinha padrão de item C/E: tudo parece certo porque todos os termos existem; só a relação entre eles está trocada.",
+    fonte: "Microsoft Support — Criar listas numeradas ou com marcadores no Word: https://support.microsoft.com/pt-br/word/training/create-a-bulleted-or-numbered-list",
   },
   {
     id: "q-m1-16",
@@ -465,7 +480,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: formatação visual no lugar de estrutura; numeração contínua não satisfaz capa/romano e o número digitado manualmente não recalcula."
     },
     regra: "Quebra de página = mesma formatação, nova página; quebra de seção = fronteira de formatação (numeração, margens, orientação, cabeçalhos/rodapés) — e o vínculo 'Vincular ao anterior' deve ser desmarcado por seção.",
-    pegadinha: "A alternativa C é a 'meia verdade' favorita da FGV: o desvincular é necessário, mas não suficiente sem a quebra de seção — cobram a combinação completa de passos."
+    pegadinha: "A alternativa C é a 'meia verdade' favorita da FGV: o desvincular é necessário, mas não suficiente sem a quebra de seção — cobram a combinação completa de passos.",
+    fonte: "Microsoft Support — Personalizar numeração de página por seção no Word: https://support.microsoft.com/pt-br/word/customize-page-numbers-and-their-formats-in-different-word-document-sections",
   },
   {
     id: "q-m1-17",
@@ -487,7 +503,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: supor que só a quebra de página muda colunas, ou que toda quebra de seção força nova página. Só o modo Next Page força a página nova — o Contínuo, não."
     },
     regra: "Tipos de quebra de seção: Next Page (nova página + formatação nova) × Continuous (mesma página + formatação nova); colunas múltiplas mudam por seção, não por quebra de página.",
-    pegadinha: "A pegadinha é a palavra 'Contínuo' sugerir 'nada muda'. Na verdade, é justamente a quebra que muda formatação SEM mudar de página — o examinando deve separar localização (página) de formatação (seção)."
+    pegadinha: "A pegadinha é a palavra 'Contínuo' sugerir 'nada muda'. Na verdade, é justamente a quebra que muda formatação SEM mudar de página — o examinando deve separar localização (página) de formatação (seção).",
+    fonte: "Microsoft Support — Usar quebras de seção para alterar o layout ou a formatação: https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document",
   },
   {
     id: "q-m1-18",
@@ -502,20 +519,21 @@ var questoesBanco = [
     enunciado: "O sumário automático do Word é gerado a partir de:",
     alternativas: [
       { letra: "A", texto: "qualquer trecho de texto previamente selecionado com o mouse." },
-      { letra: "B", texto: "estilos de título aplicados aos capítulos (Título 1, Título 2 etc.), inserido como campo atualizável." },
+      { letra: "B", texto: "da lista de figuras e tabelas criada automaticamente no documento." },
       { letra: "C", texto: "parágrafos com negrito e tamanho maiores que o restante do texto." },
-      { letra: "D", texto: "da lista de figuras e tabelas criada automaticamente no documento." }
+      { letra: "D", texto: "estilos de título aplicados aos capítulos (Título 1, Título 2 etc.), inserido como campo atualizável." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O currículo descreve o processo: aplicar estilos de títulos aos tópicos, posicionar o cursor, usar 'Referências > Sumário' e escolher o formato; o sumário é inserido como um campo atualizável ('Atualizar campo'). A base de geração são os estilos de título, não aparência nem seleção manual.",
     analise: {
       A: "INCORRETA. Erro conceitual: seleção manual não alimenta campo indexado — o sumário é regenerável a partir de toda a estrutura, não de um recorte.",
-      B: "CORRETA. Reúne os dois elementos corretos: estilos de título como fonte e campo atualizável como mecanismo.",
+      B: "INCORRETA. Erro conceitual: confundir recursos do grupo 'Referências'. Lista de figuras/legendas é gerada por legendas automáticas (topico-8), não é a fonte do sumário.",
       C: "INCORRETA. Erro conceitual: aparência × estrutura (idêntico ao erro documentado no exemplo 'erro' do módulo: formatação direta não é reconhecida).",
-      D: "INCORRETA. Erro conceitual: confundir recursos do grupo 'Referências'. Lista de figuras/legendas é gerada por legendas automáticas (topico-8), não é a fonte do sumário."
+      D: "CORRETA. Reúne os dois elementos corretos: estilos de título como fonte e campo atualizável como mecanismo."
     },
     regra: "Sumário = campo indexado por estilos de título; atualização manual via 'Atualizar campo' após mudanças estruturais.",
-    pegadinha: "A alternativa C repete o erro mais comum dos alunos — a VUNESP a coloca em posição de plausibilidade justamente porque 'negrito grande' parece título."
+    pegadinha: "A alternativa C repete o erro mais comum dos alunos — a VUNESP a coloca em posição de plausibilidade justamente porque 'negrito grande' parece título.",
+    fonte: "Microsoft Support — Inserir um sumário automático no Word: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents",
   },
   {
     id: "q-m1-19",
@@ -537,7 +555,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: pensar que o sumário se atualiza sozinho como a numeração de páginas. A atualização é automática em alguns eventos, mas o comando manual é o procedimento documentado para refletir mudanças estruturais."
     },
     regra: "Campo do Word: objeto com instrução de atualização; sumário é campo baseado em estilos de título.",
-    pegadinha: "A palavra 'sempre' do currículo ('sempre que estilos ou estrutura mudarem') não significa atualização instantânea automática — quem transforma 'sempre' em 'sozinho' marca Errado."
+    pegadinha: "A palavra 'sempre' do currículo ('sempre que estilos ou estrutura mudarem') não significa atualização instantânea automática — quem transforma 'sempre' em 'sozinho' marca Errado.",
+    fonte: "Microsoft Support — Atualizar campos e sumários no Word: https://support.microsoft.com/pt-br/word/update-fields",
   },
   {
     id: "q-m1-20",
@@ -548,24 +567,25 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "modulo-1-unidade-2-topico-8-sub-1",
     assunto: "M1.2 Word — tabelas, referências e acessibilidade",
-    contexto: "Norma interna exige o texto 'Veja a Figura 3' no corpo do texto, que deve permanecer correto mesmo quando a figura é movida ou reordenada no documento.",
-    enunciado: "Qual recurso do Word produz o texto indicado com atualização automática?",
+    contexto: "Norma interna exige o texto 'Veja a Figura 3' no corpo do texto, que deve poder ser corrigido de forma consistente após mover ou reordenar a figura e atualizar os campos do documento.",
+    enunciado: "Qual recurso do Word cria a referência vinculada que pode ser atualizada após mover a figura?",
     alternativas: [
       { letra: "A", texto: "Legenda automática inserida sob a figura, digitada manualmente no corpo." },
-      { letra: "B", texto: "Referência cruzada, que cria link para locais específicos e se atualiza quando o objeto é movido." },
+      { letra: "B", texto: "Citação bibliográfica gerenciada pelo grupo 'Referências'." },
       { letra: "C", texto: "Índice remissivo, gerado a partir das marcas de entrada de índice." },
-      { letra: "D", texto: "Citação bibliográfica gerenciada pelo grupo 'Referências'." }
+      { letra: "D", texto: "Referência cruzada, que cria um campo vinculado à legenda/figura e pode ser atualizado quando o objeto é movido ou renumerado." }
     ],
-    gabarito: "B",
-    justificativa: "O currículo define: 'Referências cruzadas criam links que saltam para locais específicos (ex: Veja a Figura 1) que atualizam automaticamente quando a figura é movida'. A legenda (A) identifica a figura no seu local, mas não gera o texto atualizável no corpo.",
+    gabarito: "D",
+    justificativa: "O currículo define referências cruzadas como vínculos para locais específicos (por exemplo, 'Veja a Figura 1'). No Word, a referência cruzada é inserida como campo e pode ser atualizada (por exemplo, selecionando o campo e usando Atualizar Campo/F9) após mover ou renumerar a figura. A legenda identifica e numera a figura, mas não mantém por si só o texto de referência no corpo.",
     analise: {
       A: "INCORRETA. Erro conceitual: confundir identificação com vinculação. A legenda dá o número à figura; o texto no corpo continua estático se digitado à mão.",
-      B: "CORRETA. É o recurso nomeado no currículo, com o exemplo idêntico ('Veja a Figura 1').",
+      B: "INCORRETA. Erro conceitual: mesmo grupo de interface ('Referências'), função diferente — gerenciar fontes e bibliografia, não figuras.",
       C: "INCORRETA. Erro conceitual: finalidade trocada. Índice remissivo é gerado das marcas de entrada de índice marcadas ao longo do texto — não vincula figuras.",
-      D: "INCORRETA. Erro conceitual: mesmo grupo de interface ('Referências'), função diferente — gerenciar fontes e bibliografia, não figuras."
+      D: "CORRETA. A referência cruzada cria um campo vinculado à figura/legenda, que pode ser atualizado após mudanças no documento."
     },
-    regra: "Referência cruzada = vínculo interno atualizável (campos); legenda = numeração do objeto; índice = mapa de marcas de entrada.",
-    pegadinha: "Três recursos ficam no mesmo grupo de guiia 'Referências' — a pegadinha é escolher pela proximidade de menu em vez da função descrita."
+    regra: "Referência cruzada = campo interno que pode ser atualizado; legenda = numeração do objeto; índice remissivo = mapa de marcas de entrada.",
+    pegadinha: "Três recursos ficam no mesmo grupo de guiia 'Referências' — a pegadinha é escolher pela proximidade de menu em vez da função descrita.",
+    fonte: "Microsoft Support — Criar uma referência cruzada atualizável no Word: https://support.microsoft.com/pt-br/word/create-a-cross-reference",
   },
   {
     id: "q-m1-21",
@@ -593,7 +613,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: modos de exibição não alteram propriedades internas da tabela."
     },
     regra: "Propriedades de tabela do Word: cabeçalho repetido por página, classificação/filtros, autoajuste, sombreamento — funções da própria tabela, não da página.",
-    pegadinha: "A alternativa A soa técnica ('SUM/AVERAGE' aparece no currículo) mas é irrelevante ao objetivo — a pegadinha é confundir cálculo com organização."
+    pegadinha: "A alternativa A soa técnica ('SUM/AVERAGE' aparece no currículo) mas é irrelevante ao objetivo — a pegadinha é confundir cálculo com organização.",
+    fonte: "Microsoft Support — Repetir o cabeçalho da tabela nas páginas subsequentes: https://support.microsoft.com/pt-br/word/repeat-table-header-on-subsequent-pages; classificar o conteúdo de uma tabela: https://support.microsoft.com/pt-br/word/sort-the-contents-of-a-table",
   },
   {
     id: "q-m1-22",
@@ -615,7 +636,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: tratar 'Comparar e Mesclar' e 'Combinar' como sinônimos. A diferença está na quantidade de versões envolvidas (duas × múltiplas), e é esse o critério do currículo."
     },
     regra: "Revisão colaborativa: rastreamento de alterações (marcação) → comentários → comparação (duas versões) → combinação (múltiplas versões).",
-    pegadinha: "Prova de atenção nominal: dois comandos de nome parecido com domínios distintos — quem lê 'e' como 'ou' aceita o item sem perceber a especificação."
+    pegadinha: "Prova de atenção nominal: dois comandos de nome parecido com domínios distintos — quem lê 'e' como 'ou' aceita o item sem perceber a especificação.",
+    fonte: "Microsoft Support — Comparar e mesclar versões de um documento do Word: https://support.microsoft.com/pt-br/word/compare-and-merge-two-versions-of-a-document",
   },
   {
     id: "q-m1-23",
@@ -643,7 +665,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: leva o controle para fora do arquivo. O currículo trata do link de permissão (visualizar/editar/comentar com expiração), mas o cenário exige controle INTERNO por seção dentro do documento — e sem edição livre não há como revisar."
     },
     regra: "Camadas de proteção do Word: restrição de edição (granular, por área/papel) × senha de abertura (acesso) × senha de modificação (escrita) × marca d'água (sinalização).",
-    pegadinha: "A alternativa D é plausível porque 'visualizar apenas' parece atender à leitura — mas o cenário exige edição restrita a áreas, o que só a restrição interna resolve."
+    pegadinha: "A alternativa D é plausível porque 'visualizar apenas' parece atender à leitura — mas o cenário exige edição restrita a áreas, o que só a restrição interna resolve.",
+    fonte: "Microsoft Support — Tornar um documento somente leitura e restringir edição no Word: https://support.microsoft.com/pt-br/word/make-a-document-read-only-in-word",
   },
   {
     id: "q-m1-24",
@@ -663,7 +686,7 @@ var questoesBanco = [
       { letra: "D", texto: "Que o arquivo seja salvo como .doc antes da publicação, pois o PDF não suporta acessibilidade." }
     ],
     gabarito: "A",
-    justificativa: "O currículo descreve a exportação (Arquivo > Exportar > Criar PDF/XPS) com opções para 'preservar cametas de acessibilidade (texto alternativo, estruturas de heading) para leitores de tela' e recomenda 'verificar PDF resultante para garantir preservação de elementos essenciais'. O Verificar Acessibilidade identifica justamente texto alternativo ausente, uso de estilos de título, contraste e navegação por teclado.",
+    justificativa: "O currículo descreve a exportação (Arquivo > Exportar > Criar PDF/XPS) com opções para 'preservar camadas de acessibilidade (texto alternativo, estrutura de títulos) para leitores de tela' e recomenda 'verificar PDF resultante para garantir preservação de elementos essenciais'. O Verificar Acessibilidade identifica justamente texto alternativo ausente, uso de estilos de título, contraste e navegação por teclado.",
     analise: {
       A: "CORRETA. Reúne os dois elementos de acessibilidade citados no currículo: texto alternativo e estruturas de títulos.",
       B: "INCORRETA. Erro conceitual: converter texto/figuras em imagem bitmap costuma destruir a camada de texto e o texto alternativo — efeito contrário ao desejado.",
@@ -671,7 +694,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: premissa falsa — o próprio currículo descreve preservação de acessibilidade na exportação para PDF."
     },
     regra: "Acessibilidade documental: texto alternativo + hierarquia de títulos (estilos) + contraste + navegação por teclado; a exportação deve preservar essas estruturas.",
-    pegadinha: "A alternativa B atrai quem associa 'PDF = imagem fixa'; o ponto cobrado é que acessibilidade depende de estrutura preservada, não de fidelidade visual."
+    pegadinha: "A alternativa B atrai quem associa 'PDF = imagem fixa'; o ponto cobrado é que acessibilidade depende de estrutura preservada, não de fidelidade visual.",
+    fonte: "Microsoft Support — Criar PDFs acessíveis (marcas de acessibilidade e estrutura para leitores de tela): https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs; salvar ou converter para PDF/XPS nos aplicativos da área de trabalho do Office (marcas estruturais para acessibilidade): https://support.microsoft.com/pt-br/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps",
   },
   {
     id: "q-m1-25",
@@ -683,17 +707,18 @@ var questoesBanco = [
     topico: "modulo-1-unidade-2-topico-13-sub-1",
     assunto: "M1.2 Word — interface e formatos",
     contexto: "Arquivo legado .doc recebido de terceiro é aberto no Word 365 e exibe aviso de Modo de Compatibilidade.",
-    enunciado: "O Modo de Compatibilidade, ativado ao abrir arquivos .doc no Word 365, desabilita funcionalidades introduzidas depois de 2007 para preservar a integridade do conteúdo original.",
+    enunciado: "O Modo de Compatibilidade, ativado ao abrir arquivos .doc legados no Word moderno, restringe alguns recursos posteriores que não são compatíveis com o formato original para preservar a compatibilidade do conteúdo.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'desabilita funcionalidades introduzidas depois de 2007 para preservar a integridade do conteúdo original' — definição literal do tópico de compatibilidade.",
-    justificativa: "O currículo afirma: 'O Modo de Compatibilidade desabilita funcionalidades introduzidas após 2007 para preservar integridade do conteúdo original' e que é ativado ao abrir .doc no Word 365. A conversão para .docx remove o modo, mas 'pode reformatar elementos' — razão pela qual se recomenda salvar cópia antes.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'restringe alguns recursos posteriores que não são compatíveis com o formato original': o currículo registra que o Modo de Compatibilidade desabilita funcionalidades introduzidas após 2007 para preservar a integridade do conteúdo original (formato .doc legado).",
+    justificativa: "O currículo descreve o Modo de Compatibilidade como forma de preservar a estrutura de arquivos legados, desabilitando funcionalidades introduzidas após 2007 (não compatíveis com o formato .doc original). Converter para .docx pode permitir recursos mais recentes, mas também pode alterar a formatação; por isso, recomenda-se salvar uma cópia antes da conversão.",
     analise: {
-      item: "Item VERDADEIRO. Gatilho (.doc no 365), efeito (desabilitar funções pós-2007) e finalidade (integridade) coincidem com o currículo.",
+      item: "Item VERDADEIRO. O Modo de Compatibilidade desabilita funcionalidades introduzidas após 2007 (não compatíveis com o formato legado .doc), preservando a integridade do conteúdo original.",
       leituraIncorreta: "Leitura que induz ao erro: supor que o modo 'congela tudo' ou que impede salvar. Ele limita funcionalidades novas, não bloqueia o documento — salvar em .docx sai do modo."
     },
-    regra: "Compatibilidade de formatos: .doc (binário legado) → Modo de Compatibilidade no editor moderno; .docx (Open XML) → funcionalidades completas; .pdf → distribuição.",
-    pegadinha: "O ano (2007) é o marco que separa 'funcionalidades antigas' de 'novas' — itens C/E costumam trocá-lo por 2003 ou 2010; aqui ele está correto, então o item é Certo."
+    regra: "Compatibilidade de formatos: .doc (binário legado) → modo de compatibilidade e restrições de alguns recursos; .docx (Open XML) → suporte a recursos modernos; .pdf → distribuição.",
+    pegadinha: "A pegadinha é presumir que o modo 'congela tudo' ou impede salvar; ele limita funcionalidades posteriores ao formato legado, não bloqueia o documento — salvar em .docx sai do modo.",
+    fonte: "Microsoft Support — Formatos de arquivo para salvar documentos no Word: https://support.microsoft.com/pt-br/word/file-formats-for-saving-documents",
   },
   {
     id: "q-m1-26",
@@ -702,7 +727,7 @@ var questoesBanco = [
     estilo: "fgv",
     origem: "autoral",
     nivel: "basico",
-    topico: "modulo-1-unidade-4",
+    topico: "modulo-1-unidade-4-topico-1-sub-1",
     assunto: "M1.4 PowerPoint",
     contexto: "Apresentação corporativa: deseja-se que o logotipo e as fontes mudem em todos os slides de uma vez, e que um gráfico 'entre' em cena quando o slide for exibido.",
     enunciado: "Sobre os recursos do PowerPoint citados, assinale a opção correta.",
@@ -721,7 +746,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: nega o Slide Mestre, que é justamente o mecanismo de alteração global de identidade visual (tipografia, cores, logotipos) descrito no conteúdo base."
     },
     regra: "Slide Mestre = propagação de identidade visual; animação = objeto no slide; transição = fronteira entre slides.",
-    pegadinha: "A alternativa A é o 'espelho' clássico: quem decorou os dois termos sem associar o alvo (objeto × slide) escolhe a inversão."
+    pegadinha: "A alternativa A é o 'espelho' clássico: quem decorou os dois termos sem associar o alvo (objeto × slide) escolhe a inversão.",
+    fonte: "Microsoft Support — O que é um slide mestre no PowerPoint (fontes/logotipos aplicados a slides vinculados): https://support.microsoft.com/pt-br/powerpoint/training/what-is-a-slide-master-in-powerpoint; animar texto ou objetos: https://support.microsoft.com/pt-br/powerpoint/training/animate-text-or-objects",
   },
   {
     id: "q-m1-27",
@@ -730,7 +756,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "modulo-1-unidade-4",
+    topico: "modulo-1-unidade-4-topico-1-sub-1",
     assunto: "M1.4 PowerPoint",
     contexto: "Servidor atualizou a fonte do título no Slide Mestre e a alteração apareceu na apresentação inteira.",
     enunciado: "A alteração do Slide Mestre afeta apenas o slide atual em que o comando foi executado.",
@@ -743,7 +769,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: associar 'mestre' ao slide aberto ('o slide que estou editando'). Mestre é a hierarquia pai — daí a propagação."
     },
     regra: "Hierarquia do PowerPoint: Slide Mestre (pai) → layouts filhos → slides; mudanças descem na hierarquia para todos os vinculados.",
-    pegadinha: "O item inverte escopo global/local — a mesma pegadinha da quebra de seção no Word, agora com a árvore de layouts."
+    pegadinha: "O item inverte escopo global/local — a mesma pegadinha da quebra de seção no Word, agora com a árvore de layouts.",
+    fonte: "Microsoft Support — Personalizar o Slide Mestre no PowerPoint: https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master",
   },
   {
     id: "q-m1-28",
@@ -752,26 +779,27 @@ var questoesBanco = [
     estilo: "fcc",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "modulo-1-unidade-5",
+    topico: "modulo-1-unidade-5-topico-1-sub-1",
     assunto: "M1.5 OneDrive",
     contexto: "Usuário pergunta se manter a pasta do OneDrive sincronizada no computador já configura o backup da empresa.",
     enunciado: "Sobre a diferença entre sincronização e backup no OneDrive, qual afirmação é correta?",
     alternativas: [
       { letra: "A", texto: "Sincronização e backup são a mesma funcionalidade, mudando apenas o nome do serviço." },
-      { letra: "B", texto: "Sincronização é propagação bidirecional entre local e nuvem (inclusive de alterações maliciosas); backup é cópia independente e imutável." },
+      { letra: "B", texto: "Sincronização propaga alterações entre local e nuvem (inclusive alterações maliciosas); backup é uma cópia independente para recuperação, idealmente versionada e protegida contra alteração/exclusão." },
       { letra: "C", texto: "Sincronização é apenas download de arquivos para a nuvem, sem retorno de alterações." },
       { letra: "D", texto: "Backup propaga automaticamente todas as alterações locais para todos os dispositivos do usuário." }
     ],
     gabarito: "B",
-    justificativa: "O conteúdo do OneDrive (curriculumOneDrive15) define: 'Sincronização (Sync): cliente baixa cópia local e mantém sincronização bidirecional; alterações locais propagam para a nuvem e vice-versa' e alerta: 'OneDrive NÃO substitui backup corporativo completo; é sincronização, não backup imutável (ransomware pode propagar alterações maliciosas para a nuvem)'. O exercício registrado no conteúdo é este, com resposta B equivalente.",
+    justificativa: "O conteúdo do OneDrive (curriculumOneDrive15) define sincronização como manutenção de cópias locais e na nuvem, com alterações propagadas nos dois sentidos, e alerta que isso não substitui backup corporativo. Uma cópia de backup deve ser independente e recuperável; imutabilidade/versionamento são proteções recomendadas, não uma propriedade obrigatória de toda solução de backup. Ransomware pode afetar arquivos sincronizados, por isso são necessárias cópias separadas e testadas.",
     analise: {
       A: "INCORRETA. Erro conceitual: sinonímia. O conteúdo base separa explicitamente os dois conceitos (exercício 'sincronização × backup').",
-      B: "CORRETA. Reproduz as duas definições: propagação bidirecional × cópia independente/imutável.",
+      B: "CORRETA. Distingue propagação de alterações de uma cópia independente para recuperação; versionamento e imutabilidade acrescentam proteção contra alterações maliciosas.",
       C: "INCORRETA. Erro conceitual: descreve upload unidirecional; a sincronização é bidirecional (alterações da nuvem também voltam ao local).",
       D: "INCORRETA. Erro conceitual: descreve propagação (comportamento da sincronização) e a chama de backup — o oposto da imutabilidade exigida de um backup."
     },
-    regra: "Sincronização = espelhamento bidirecional (propaga alterações); backup = cópia independente para recuperação (recomendação 3-2-1 citada no conteúdo).",
-    pegadinha: "A alternativa D troca os rótulos dos dois conceitos — quem lê 'propaga alterações' e para aí marca D sem notar que a palavra usada foi 'backup'."
+    regra: "Sincronização = espelhamento bidirecional (propaga alterações); backup = cópia independente para recuperação, idealmente versionada/imutável e testada (recomendação 3-2-1 citada no conteúdo).",
+    pegadinha: "A alternativa D troca os rótulos dos dois conceitos — quem lê 'propaga alterações' e para aí marca D sem notar que a palavra usada foi 'backup'.",
+    fonte: "Microsoft Support — Sincronizar arquivos e pastas do computador com o OneDrive (alterações locais e na nuvem são propagadas): https://support.microsoft.com/pt-BR/onedrive/sync-your-computer-s-files-and-folders-with-onedrive; fazer backup de suas pastas com o OneDrive: https://support.microsoft.com/pt-br/onedrive/back-up-your-folders-with-onedrive",
   },
   {
     id: "q-m1-29",
@@ -780,7 +808,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "avancado",
-    topico: "modulo-1-unidade-5",
+    topico: "modulo-1-unidade-5-topico-1-sub-1",
     assunto: "M1.5 OneDrive",
     contexto: "Setor de TI afirma que a política de retenção de arquivos no OneDrive torna desnecessário manter cópias de segurança separadas do órgão.",
     enunciado: "O OneDrive é um backup imutável que protege automaticamente os usuários contra ransomware, dispensando cópias de segurança separadas.",
@@ -793,7 +821,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: o raciocínio de que 'está na nuvem, então está salvo'. A nuvem sincronizada é alvo da mesma ameaça que afeta a estação — é o modo como o ransomware se espalha."
     },
     regra: "Propriedades de backup: cópia independente, imutável e testável (3-2-1). Sincronização cumpre disponibilidade, não essas três propriedades.",
-    pegadinha: "Item com conclusão de política ('dispensa backup'): mesmo que parte da frase pareça protetora, a negação de cópias separadas é suficiente para tornar o item falso."
+    pegadinha: "Item com conclusão de política ('dispensa backup'): mesmo que parte da frase pareça protetora, a negação de cópias separadas é suficiente para tornar o item falso.",
+    fonte: "Microsoft Support — Sincronizar arquivos e pastas do computador com o OneDrive (alterações, inclusive exclusões, são propagadas entre local e nuvem): https://support.microsoft.com/pt-BR/onedrive/sync-your-computer-s-files-and-folders-with-onedrive; detecção de ransomware e recuperação de arquivos usando OneDrive: https://support.microsoft.com/pt-br/onedrive/how-to-detect-ransomware-and-recover-files-using-onedrive",
   },
   {
     id: "q-m1-30",
@@ -802,9 +831,9 @@ var questoesBanco = [
     estilo: "fcc",
     origem: "autoral",
     nivel: "basico",
-    topico: "modulo-1-unidade-3",
+    topico: "modulo-1-unidade-3-topico-3-sub-2",
     assunto: "M1.3 Excel (simulador documentado)",
-    contexto: "Planilha com notas 7,5; 8,0; 6,5; 9,0 e 8,5. Fonte do conteúdo: escopo documentado do simulador Excel (assets/js/simulators.js) e exemplos resolvidos do index.html — a unidade 1.3 NÃO possui entrada de currículo em curriculum.js (limitação declarada do repositório).",
+    contexto: "Planilha com notas 7,5; 8,0; 6,5; 9,0 e 8,5. O exercício aplica a função MÉDIA ao conteúdo de Excel da unidade 1.3 e ao simulador documentado em assets/js/simulators.js.",
     enunciado: "Qual o resultado de MÉDIA(7,5; 8,0; 6,5; 9,0; 8,5)?",
     alternativas: [
       { letra: "A", texto: "7,9" },
@@ -821,7 +850,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: 39,5 é a SOMA — a média exige dividir pela contagem; retornar a soma é o erro típico de esquecer a divisão."
     },
     regra: "Média aritmética simples = soma dos valores ÷ quantidade de valores. No simulador: MÉDIA aceita vírgula ou ponto e ignora valores não numéricos.",
-    pegadinha: "As alternativas B, C e D são resultados reais de OUTRAS funções do mesmo escopo (início da lista, MÁXIMO, SOMA) — a pegadinha é identificar a função pedida antes de calcular."
+    pegadinha: "As alternativas B, C e D são resultados reais de OUTRAS funções do mesmo escopo (início da lista, MÁXIMO, SOMA) — a pegadinha é identificar a função pedida antes de calcular.",
+    fonte: "Microsoft Support — Função MÉDIA no Excel (documentação em português do Brasil): https://support.microsoft.com/pt-br/excel/functions/average-function",
   },
   {
     id: "q-m1-31",
@@ -830,7 +860,7 @@ var questoesBanco = [
     estilo: "vunesp",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "modulo-1-unidade-3",
+    topico: "modulo-1-unidade-3-topico-3-sub-2",
     assunto: "M1.3 Excel (simulador documentado)",
     contexto: "Classificação de notas com o padrão do órgão: nota maior ou igual a 7 é 'Aprovado'; menor que 7 é 'Reprovado'. Fonte do conteúdo: exemplos resolvidos do index.html e escopo do simulador (assets/js/simulators.js).",
     enunciado: "Qual o resultado de SE(6,0 >= 7; \"Aprovado\"; \"Reprovado\")?",
@@ -845,11 +875,12 @@ var questoesBanco = [
     analise: {
       A: "INCORRETA. Erro conceitual: achar que a quantidade de argumentos define a condição; a SE só devolve o segundo argumento se a condição for verdadeira.",
       B: "CORRETA. Condição falsa → terceiro argumento ('Reprovado'), conforme a semântica documentada da função.",
-      C: "INCORRETA. Erro conceitual: retorno posicional fixo. A SE devolve o segundo OU o terceiro argumento conforme a condição — não 'sempre o último' (SE(6>=7; 'A'; 'B') retornaria 'A' na verdade... em sentido contrário: se a condição fosse verdadeira, retornaria o segundo).",
+      C: "INCORRETA. Erro conceitual: retorno posicional fixo. A SE devolve o segundo argumento quando a condição é verdadeira e o terceiro quando é falsa; não retorna sempre o último argumento.",
       D: "INCORRETA. Erro conceitual: a SE existe justamente para avaliar condições lógicas; o simulador aceita comparações numéricas na primeira posição dos argumentos."
     },
     regra: "SE(condição; valor_se_verdadeiro; valor_se_falso): retorna o 2º argumento quando a condição é verdadeira e o 3º quando é falsa. Ordem dos argumentos é obrigatória (erro comum documentado: inverter a ordem).",
-    pegadinha: "A alternativa C imita quem decora 'o último valor digitado'. A regra é posicional e CONDICIONAL — releia sempre qual argumento corresponde ao ramo falso."
+    pegadinha: "A alternativa C imita quem decora 'o último valor digitado'. A regra é posicional e CONDICIONAL — releia sempre qual argumento corresponde ao ramo falso.",
+    fonte: "Microsoft Support — Função SE no Excel: https://support.microsoft.com/pt-br/excel/functions/if-function",
   },
   {
     id: "q-m1-32",
@@ -858,7 +889,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "avancado",
-    topico: "modulo-1-unidade-3",
+    topico: "modulo-1-unidade-3-topico-6-sub-2",
     assunto: "M1.3 Excel (simulador documentado)",
     /* Reescrita (2026-10-20, incremento P0): a versão anterior afirmava que
      * PROCV/PROCH/PROCX "retornam mensagem documentada de não-execução de
@@ -879,13 +910,14 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: (1) tratar 'ERRO DE ENTRADA' como sinal de falha do simulador — é recusa deliberada, documentada e anterior à execução; (2) supor, por descrições desatualizadas do banco, que PROCX não foi implementado ou que PROCV/PROCH apenas avisam que não buscam — as três funções executam busca real; (3) confundir os dois canais de erro: 'ERRO DE ENTRADA' (entrada fora do escopo, antes da avaliação) é diferente dos códigos #N/A, #REF!, #VAL!, #DIV/0! e #NUM! (erros durante a execução)."
     },
     regra: "Escopo declarado × funcionalidade (Seção 7.1 do prompt mestre — laboratórios com ações e resultados reais dentro do escopo declarado): entradas fora do escopo são recusadas ANTES da avaliação com mensagem útil iniciada por 'ERRO DE ENTRADA'; erros de execução usam os códigos Excel declarados (#N/A, #REF!, #VAL!, #DIV/0!, #NUM!); e PROCV/PROCH/PROCX executam busca real — nenhum resultado pode ser apresentado como real quando não o for.",
-    pegadinha: "Item técnico com duas cláusulas que tratam de canais distintos: a primeira é sobre RECUSA de entrada (antes da avaliação) e a segunda sobre COMPORTAMENTO das funções de pesquisa (durante a execução). Quem associa 'mensagem de erro' a defeito, ou decorou a limitação antiga de PROCX, tende a marcar Errado o que o código atual confirma."
+    pegadinha: "Item técnico com duas cláusulas que tratam de canais distintos: a primeira é sobre RECUSA de entrada (antes da avaliação) e a segunda sobre COMPORTAMENTO das funções de pesquisa (durante a execução). Quem associa 'mensagem de erro' a defeito, ou decorou a limitação antiga de PROCX, tende a marcar Errado o que o código atual confirma.",
+    fonte: "Fonte primária interna: escopo implementado em apostila-ia/assets/js/simulators.js (cabeçalho \"TIPOS E ERROS\", tokenizador/analisador, fnProcv, fnProch, fnProcx e rejeitaEntradaInvalida) e conteúdo curricular em apostila-ia/assets/data/curriculum.js. A verificação externa dos limites gerais de compatibilidade do Excel deve ser tratada separadamente.",
   },
-  /* ===================== FIM MÓDULO 1 (32 questões) ===================== */
-  /* ===================== MÓDULO 2 — Redes de Computadores (26 questões) =====================
-   * Fonte: assets/data/curriculum_m2.js — unidade 2.1 (7 subtópicos reais).
-   * As unidades 2.2–2.5 ainda não possuem entrada de currículo; por isso não
-   * há questões para elas (nada foi inventado para cobrir a lacuna). */
+  /* ===================== FIM BLOCO INICIAL M1 (q-m1-01..q-m1-32) ===================== */
+  /* ===================== BLOCO INICIAL M2 — Redes (q-m2-01..q-m2-26; 54 no total) =====================
+   * Fonte: assets/data/curriculum_m2.js — unidades 2.1 a 2.5.
+   * As questões q-m2-27..q-m2-54 aparecem em bloco posterior para preservar
+   * o histórico de adições; o banco agregado contém 54 questões M2. */
 
   {
     id: "q-m2-01",
@@ -913,7 +945,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: desconexão com o conteúdo — rede compartilha recursos e informação, não energia elétrica."
     },
     regra: "Modelo requisição-resposta: cliente solicita → servidor processa e responde. Papéis são funcionais, não físicos (o mesmo dispositivo pode ter ambos).",
-    pegadinha: "Alternativa A é o oposto exato da definição; quem decora 'cliente-servidor' sem ler os verbos (solicitar × fornecer) tropeça nela."
+    pegadinha: "Alternativa A é o oposto exato da definição; quem decora 'cliente-servidor' sem ler os verbos (solicitar × fornecer) tropeça nela.",
+    fonte: "Cisco — LANs cliente/servidor e peer-to-peer: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
   },
   {
     id: "q-m2-02",
@@ -935,7 +968,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: tratar 'cliente-servidor' como classificação fixa do equipamento. É classificação do MOMENTO da comunicação — é por isso que o exercício do currículo marca o item como Errado."
     },
     regra: "Papéis funcionais por comunicação: em uma cadeia A→B→C, B é servidor para A e cliente para C.",
-    pegadinha: "Palavras absolutas ('nunca', 'sempre', 'somente') são os gatilhos clássicos de item C/E falso — mas só o conteúdo decide; aqui o currículo fornece contraprova explícita."
+    pegadinha: "Palavras absolutas ('nunca', 'sempre', 'somente') são os gatilhos clássicos de item C/E falso — mas só o conteúdo decide; aqui o currículo fornece contraprova explícita.",
+    fonte: "Cisco — LANs cliente/servidor e peer-to-peer: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
   },
   {
     id: "q-m2-03",
@@ -946,7 +980,7 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "m2-u1-t1-s1",
     assunto: "M2.1 Fundamentos — conceitos e componentes",
-    contexto: "Empresa com 20 estações de trabalho, 1 servidor de arquivos e 1 impressora de rede; as estações acessam arquivos e enviam trabalhos de impressão.",
+    contexto: "Empresa com 20 estações de trabalho, 1 servidor de arquivos, 1 servidor de impressão e 1 impressora de rede; as estações acessam arquivos e enviam trabalhos de impressão.",
     enunciado: "Qual a classificação correta dos dispositivos do cenário?",
     alternativas: [
       { letra: "A", texto: "Servidores: servidor de arquivos e servidor de impressão (gerencia a impressora); clientes: as 20 estações quando acessam arquivos ou enviam impressões; nós: todos os dispositivos; enlaces: cabos ou Wi-Fi." },
@@ -963,7 +997,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: restrição geográfica indevida. A classificação cliente-servidor descreve qualquer comunicação de rede, interna ou não."
     },
     regra: "Nós = todos os dispositivos (finais e intermediários); enlaces = canais; cliente/servidor = papéis por recurso solicitado/fornecido.",
-    pegadinha: "A alternativa C é a pegadinha conceitual mais comum: 'quem pede é cliente, quem dá é servidor' — inverter os verbos leva a C, não a A."
+    pegadinha: "A alternativa C é a pegadinha conceitual mais comum: 'quem pede é cliente, quem dá é servidor' — inverter os verbos leva a C, não a A.",
+    fonte: "Cisco — tipos de rede e componentes de rede: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html",
   },
   {
     id: "q-m2-04",
@@ -983,15 +1018,16 @@ var questoesBanco = [
       { letra: "D", texto: "Em P2P só existe o papel de cliente, porque não há servidores dedicados na camada física." }
     ],
     gabarito: "B",
-    justificativa: "O exemplo 'erro' do currículo corrige exatamente a afirmação da alternativa A: 'Parcialmente incorreto. Em P2P cada nó pode ser cliente E servidor simultaneamente (ex: BitTorrent), mas isso não elimina os papéis — apenas os torna dinâmicos'. O cenário (baixar e servir ao mesmo tempo) é a materialização desse conceito.",
+    justificativa: "Em P2P, cada par pode consumir e fornecer recursos em momentos diferentes ou simultaneamente. Isso não impede que uma implementação use serviços auxiliares de coordenação ou indexação; o aspecto distintivo é a participação dos pares no compartilhamento de recursos.",
     analise: {
       A: "INCORRETA. Erro conceitual: eliminar a distinção em vez de torná-la dinâmica — é literalmente a correção documentada no exemplo 'erro' do currículo.",
       B: "CORRETA. Dualidade e dinamismo de papéis, conforme a correção do currículo.",
       C: "INCORRETA. Erro conceitual: negar a solicitação; se todos só servissem, ninguém baixaria — contraria o próprio cenário.",
       D: "INCORRETA. Erro conceitual: nega a oferta de recursos; e a inexistência de servidor dedicado não apaga o papel funcional de servidor."
     },
-    regra: "Arquitetura P2P: sem servidor central dedicado, mas com papéis funcionais simétricos — cada nó oferta e demanda recursos conforme a comunicação.",
-    pegadinha: "A FGV adora a alternativa 'conceito radicalmente correto-errada' (A): ela parece profundamente técnica ('os papéis desaparecem'), mas contradiz a correção explícita do material."
+    regra: "Arquitetura P2P: os pares podem ofertar e consumir recursos; a distribuição não depende necessariamente de um servidor central dedicado, embora algumas implementações usem servidores de coordenação ou indexação.",
+    pegadinha: "A FGV adora a alternativa 'conceito radicalmente correto-errada' (A): ela parece profundamente técnica ('os papéis desaparecem'), mas contradiz a correção explícita do material.",
+    fonte: "Cisco — LANs cliente/servidor e peer-to-peer: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
   },
   {
     id: "q-m2-05",
@@ -1019,7 +1055,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: generalização indevida — WAN é usada entre cidades/países; para uma única cidade, MAN é a classificação específica."
     },
     regra: "Classificação por escopo geográfico: PAN (pessoal) < LAN/WLAN (local) < MAN (cidade) < WAN (país/continente).",
-    pegadinha: "WAN é a tentação clássica ('maior é melhor'); a classificação é por ABRANGÊNCIA MÍNIMA necessária, não pelo tamanho da organização."
+    pegadinha: "WAN é a tentação clássica ('maior é melhor'); a classificação é por ABRANGÊNCIA MÍNIMA necessária, não pelo tamanho da organização.",
+    fonte: "Cisco — LAN e WAN e como conectam dispositivos e redes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html ; https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-06",
@@ -1041,7 +1078,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: considerar WLAN uma categoria autônoma, distinta de LAN (o currículo a define como subtipo)."
     },
     regra: "Siglas de abrangência: PAN/LAN/MAN/WAN classificam área; o sufixo 'W' (Wireless) indica meio, não nova área.",
-    pegadinha: "Item simples por design (básico): o risco é o excesso de confiança — itens C/E fáceis aparecem misturados com difíceis para testar disciplina de leitura."
+    pegadinha: "Item simples por design (básico): o risco é o excesso de confiança — itens C/E fáceis aparecem misturados com difíceis para testar disciplina de leitura.",
+    fonte: "Cisco — LAN com dispositivos conectados por cabo ou sem fio: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
   },
   {
     id: "q-m2-07",
@@ -1069,7 +1107,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: PAN é curto alcance pessoal (Bluetooth), não interligação entre sedes."
     },
     regra: "WAN = interconexão de redes sobre longa distância; meios: VPN sobre Internet ou circuito dedicado (MPLS, fibra alugada).",
-    pegadinha: "A alternativa B explora a palavra 'cidade' — quem lê 'duas cidades' e para aí escolhe MAN não percebe que a MAN do currículo cobre uma única área metropolitana."
+    pegadinha: "A alternativa B explora a palavra 'cidade' — quem lê 'duas cidades' e para aí escolhe MAN não percebe que a MAN do currículo cobre uma única área metropolitana.",
+    fonte: "Cisco — WAN como interconexão de LANs e redes geograficamente separadas: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-08",
@@ -1091,7 +1130,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: validar só o trecho técnico (TCP/IP) e ignorar a identificação de rede. O critério distintivo é o ACESSO (privado/restrito × público global), não o protocolo."
     },
     regra: "Igualdade de protocolo ≠ igualdade de rede: distinção por domínio administrativo e política de acesso (intranet privada, extranet estendida a terceiros, Internet pública).",
-    pegadinha: "Item composto com metade verdadeira — a pegadinha CESPE mais frequente. Anote cada cláusula separadamente antes de decidir."
+    pegadinha: "Item composto com metade verdadeira — a pegadinha CESPE mais frequente. Anote cada cláusula separadamente antes de decidir.",
+    fonte: "Cisco — visão geral de redes de computadores e tipos de rede: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html ; IETF RFC 1122 — arquitetura e hosts da Internet: https://www.rfc-editor.org/rfc/rfc1122.html",
   },
   {
     id: "q-m2-09",
@@ -1119,7 +1159,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: em malha completa cada nó ligaria a todos os outros (12×11/2 = 66 enlaces); o cenário tem 12 enlaces até o central."
     },
     regra: "Estrela: enlaces ponta-a-ponta até hub/switch central; ponto único de falha = dispositivo central.",
-    pegadinha: "A alternativa D soa 'moderna' (malha = alta disponibilidade), mas o critério é a disposição física dos enlaces descritos, não a qualidade desejada."
+    pegadinha: "A alternativa D soa 'moderna' (malha = alta disponibilidade), mas o critério é a disposição física dos enlaces descritos, não a qualidade desejada.",
+    fonte: "Cisco — topologia física e lógica de redes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-10",
@@ -1141,7 +1182,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: aceitar a primeira parte ('falha derruba tudo') por parecer 'preocupante e técnico'. A topologia estrela foi desenhada justamente para isolar falhas de nó — o custo é a dependência do central."
     },
     regra: "Estrela: tolerância a falha de nó; vulnerabilidade ao ponto central. Bus: falha do backbone derruba tudo. Anel: falha de nó pode quebrar o anel. Malha: redundância contra falha de enlace.",
-    pegadinha: "Inversão de predicados em item composto — a mesma estrutura do item de listas no M1; a leitura cláusula a cláusula resolve."
+    pegadinha: "Inversão de predicados em item composto — a mesma estrutura do item de listas no M1; a leitura cláusula a cláusula resolve.",
+    fonte: "Cisco — topologia de rede, interconexões e pontos de falha: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-11",
@@ -1169,7 +1211,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: o switch central é ponto único de falha — a estrela não elimina falha; apenas isola falhas de nó."
     },
     regra: "Trade-off topologia × disponibilidade × custo: malha = redundância máxima/custo máximo; estrela = custo baixo/dependência do central; bus = ponto único de falha.",
-    pegadinha: "A alternativa D nega a realidade ('elimina a possibilidade de falha') — qualquer afirmação absoluta sobre falhas em rede deve acender alerta; a FCC cobra o trade-off explícito custo × disponibilidade."
+    pegadinha: "A alternativa D nega a realidade ('elimina a possibilidade de falha') — qualquer afirmação absoluta sobre falhas em rede deve acender alerta; a FCC cobra o trade-off explícito custo × disponibilidade.",
+    fonte: "Cisco — topologia de rede, redundância e requisitos de disponibilidade: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-12",
@@ -1191,7 +1234,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: imaginar que o cabo 'partido' ainda conduz parte da rede (em bus com terminadores, a integridade do enlace é necessária em toda a extensão)."
     },
     regra: "Bus: enlace compartilhado único — indisponibilidade total em falha do backbone e colisões por domínio de contenção compartilhado.",
-    pegadinha: "Item Certo 'tecnicalmente duro': o examinando pode associar bus apenas a 'rede antiga' e reler o efeito da falha; a cobrança é do ponto único de falha, não da antiguidade."
+    pegadinha: "Item Certo 'tecnicalmente duro': o examinando pode associar bus apenas a 'rede antiga' e reler o efeito da falha; a cobrança é do ponto único de falha, não da antiguidade.",
+    fonte: "Cisco — topologia física e limitações de conexões de rede: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-13",
@@ -1219,7 +1263,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: premissa falsa — toda comunicação em rede passa por algum modelo de comutação; o currículo classifica a Internet explicitamente."
     },
     regra: "Comutação de circuitos (caminho dedicado, antes da fala) × comutação de pacotes (divisão e roteamento independente, após a fala).",
-    pegadinha: "A alternativa C é a 'sofisticada': circuito VIRTUAL parece conciliar os dois — mas no currículo ela é exempificação de outro protocolo (MPLS/Frame Relay), não da Internet."
+    pegadinha: "A alternativa C tenta confundir com caminhos lógicos predefinidos em algumas tecnologias. Isso não transforma o encaminhamento IP da Internet em comutação clássica de circuitos; MPLS usa caminhos comutados por rótulos e não deve ser tratado como circuito telefônico dedicado.",
+    fonte: "Cisco — comutação de pacotes em WANs: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html ; IETF RFC 1122 — arquitetura de comunicação da Internet: https://www.rfc-editor.org/rfc/rfc1122.html",
   },
   {
     id: "q-m2-14",
@@ -1247,7 +1292,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: perda e reordenação são listadas como DESVANTAGENS do modelo — nada é eliminado."
     },
     regra: "Trade-off: circuitos = reserva fixa (desperdício ocioso, latência previsível) × pacotes = compartilhamento (eficiência, jitter, perda, reordenação).",
-    pegadinha: "A alternativa A atrai quem associa 'VoIP = mais rápida'; a FGV cobra separar a característica do modelo (previsibilidade × eficiência), não a sensação de uso."
+    pegadinha: "A alternativa A atrai quem associa 'VoIP = mais rápida'; a FGV cobra separar a característica do modelo (previsibilidade × eficiência), não a sensação de uso.",
+    fonte: "Cisco — comutação de pacotes e redes WAN: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-15",
@@ -1263,13 +1309,14 @@ var questoesBanco = [
     alternativas: null,
     gabarito: "errado",
     trechoDeterminante: "O trecho que torna o item FALSO é 'sempre seguem o mesmo caminho': na comutação de pacotes, cada pacote é roteado independentemente e pode seguir caminhos diferentes — o caminho lógico predefinido é característica de circuitos virtuais (Frame Relay, MPLS).",
-    justificativa: "O exemplo 'erro' do currículo: 'Incorreto. Na comutação de pacotes (como na Internet), cada pacote é roteado independentemente e pode seguir caminhos diferentes. Na comutação de circuitos virtuais (Frame Relay, MPLS), há um caminho lógico predefinido.' A observação do cenário (chegada desordenada) é a consequência natural desse roteamento independente.",
+    justificativa: "O exemplo 'erro' do currículo: 'Incorreto. Na comutação de pacotes IP, os datagramas podem seguir caminhos diferentes conforme as decisões de roteamento. Algumas tecnologias, como Frame Relay e MPLS, podem estabelecer caminhos lógicos de encaminhamento; isso não as torna equivalentes à comutação clássica de circuitos.' A observação do cenário (chegada desordenada) é a consequência natural desse roteamento independente.",
     analise: {
       item: "Item FALSO. O advérbio 'sempre' contradiz o roteamento independente por pacote; a ordenação no destino é justamente uma das desvantagens listadas (necessidade de reordenação).",
       leituraIncorreta: "Leitura que induz ao erro: confundir sessão/conexão TCP (comunicacionalmente contínua) com caminho de encaminhamento dos pacotes — continuidade lógica não implica rota física única."
     },
-    regra: "Encaminhamento stateless por pacote × circuito virtual com caminho lógico predefinido; reordenação é responsabilidade das camadas superiores quando necessário.",
-    pegadinha: "A palavra 'sempre' é o gatilho; mas atenção — o item só cai por causa dela: se fosse 'cada pacote é roteado independentemente', seria Certo. Identifique o modificador, não a impressão geral."
+    regra: "Encaminhamento IP por pacote pode variar; caminhos lógicos de tecnologias como MPLS/Frame Relay são outra forma de organizar o encaminhamento, não comutação clássica de circuitos. A reordenação, quando ocorre, deve ser tratada pelo protocolo ou aplicação apropriados.",
+    pegadinha: "A palavra 'sempre' é o gatilho; mas atenção — o item só cai por causa dela: se fosse 'cada pacote é roteado independentemente', seria Certo. Identifique o modificador, não a impressão geral.",
+    fonte: "Cisco — pacotes podem seguir rotas de rede e a Internet usa comutação de pacotes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-16",
@@ -1297,7 +1344,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: premissa de garantia inexistente. Jitter e perda são desvantagens registradas da comutação de pacotes; priorização exige QoS configurada (aparece no exemplo de aplicação de métricas)."
     },
     regra: "PSTN/circuito: setup → circuito reservado → liberação. VoIP/pacotes: encapsulamento da voz em pacotes sujeitos a fila, jitter e perda — mitigáveis com QoS.",
-    pegadinha: "A alternativa D 'resolve o problema' com uma garantia universal ('em qualquer rede') — afirmações de garantia absoluta em redes são quase sempre falsas."
+    pegadinha: "A alternativa D 'resolve o problema' com uma garantia universal ('em qualquer rede') — afirmações de garantia absoluta em redes são quase sempre falsas.",
+    fonte: "Cisco — redes WAN, comutação de pacotes e TCP/IP: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-17",
@@ -1325,7 +1373,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: anycast distribui várias réplicas do mesmo serviço e entrega à mais próxima (ex.: servidores DNS raiz, CDN) — não é o modelo de acesso direto a um site específico."
     },
     regra: "Tipos de comunicação por cardinalidade: unicast (1:1), broadcast (1:todos no domínio), multicast (1:grupo inscrito), anycast (1:réplica mais próxima).",
-    pegadinha: "Anycast (D) é a alternativa moderna tentadora: 'servidor mais próximo' parece plausível para sites, mas o currículo o associa a serviços distribuídos (DNS raiz/CDN), não ao acesso web genérico do exemplo."
+    pegadinha: "Anycast (D) é a alternativa moderna tentadora: 'servidor mais próximo' parece plausível para sites, mas o currículo o associa a serviços distribuídos (DNS raiz/CDN), não ao acesso web genérico do exemplo.",
+    fonte: "IETF RFC 4291 — endereços IPv6 unicast, anycast e multicast: https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-18",
@@ -1337,17 +1386,18 @@ var questoesBanco = [
     topico: "m2-u1-t2-s1",
     assunto: "M2.1 Comunicação — unicast, broadcast, multicast e anycast",
     contexto: "Servidor de streaming corporativo entrega um fluxo de vídeo a estações que demonstraram interesse em recebê-lo.",
-    enunciado: "No multicast, o receptor precisa inscrever-se em um grupo para receber o tráfego, gerenciamento realizado por meio do protocolo IGMP.",
+    enunciado: "Em redes IPv4, a associação de receptores a grupos multicast é gerenciada por IGMP; em IPv6, a função correspondente é realizada por MLD.",
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o receptor precisa inscrever-se em um grupo para receber o tráfego, gerenciamento realizado por meio do protocolo IGMP'.",
-    justificativa: "O currículo define multicast como 'um-para-muitos (grupo específico que se inscreveu)' e afirma que 'multicast usa IGMP para gerenciamento de grupo'; o exercício registrado responde 'Certo. O receptor envia IGMP join para receber tráfego multicast'.",
+    justificativa: "Em IPv4, multicast permite que receptores se associem a grupos e o IGMP gerencia essa associação. Em IPv6, o protocolo correspondente é MLD. O item é correto porque delimita explicitamente o uso de IGMP a redes IPv4.",
     analise: {
       item: "Item VERDADEIRO. Inscrição no grupo e papel do IGMP constam tanto do conteúdo quanto do exercício do currículo.",
       leituraIncorreta: "Leitura que induz ao erro: confundir com broadcast, que é enviado a todos sem inscrição — a distinção central é o JOIN (participação opt-in)."
     },
-    regra: "Multicast: envio único replicado apenas nos pontos de ramificação; participação opt-in gerenciada por IGMP (IP de camada 3).",
-    pegadinha: "O item combina conceito (inscrição) e protocolo (IGMP) — quem decora só um dos dois relê e decide Errado; leia cláusula a cláusula."
+    regra: "Multicast: envio para um grupo; em IPv4, IGMP gerencia associação de membros; em IPv6, MLD desempenha função correspondente. A rede replica o tráfego nos pontos necessários.",
+    pegadinha: "O item combina conceito (inscrição) e protocolo (IGMP) — quem decora só um dos dois relê e decide Errado; leia cláusula a cláusula.",
+    fonte: "IETF RFC 1112 — multicast IPv4 e associação a grupos via IGMP; RFC 4291 — multicast IPv6: https://www.rfc-editor.org/rfc/rfc1112.html ; https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-19",
@@ -1363,19 +1413,20 @@ var questoesBanco = [
     alternativas: [
       { letra: "A", texto: "Unicast, pois cada funcionário receberia fluxo próprio com menor latência individual." },
       { letra: "B", texto: "Broadcast, pois todos os funcionários devem receber o conteúdo." },
-      { letra: "C", texto: "Multicast, pois um fluxo único é replicado apenas nos pontos de ramificação — em vez dos 50 fluxos exigidos pelo unicast." },
+      { letra: "C", texto: "Multicast, se a rede e a aplicação suportarem esse recurso, pois um fluxo pode ser replicado nos pontos de ramificação em vez de enviar 50 fluxos unicast independentes." },
       { letra: "D", texto: "Anycast, pois o servidor mais próximo atenderia cada funcionário." }
     ],
     gabarito: "C",
-    justificativa: "O exemplo de aplicação do currículo: 'Multicast — o servidor envia um fluxo único que é replicado pela rede apenas nos pontos de ramificação. Unicast exigiria 50 fluxos separados, consumindo 50x a largura de banda'. O exemplo introdutório de multicast é justamente streaming (IPTV).",
+    justificativa: "O exemplo de aplicação do currículo compara um fluxo multicast, replicado nos pontos de ramificação, com fluxos unicast independentes. Essa economia depende de suporte a multicast na aplicação e na infraestrutura de rede; streaming IPTV é um exemplo de uso possível.",
     analise: {
-      A: "INCORRETA. Erro conceitual: eficiência de banda ignorada — 50 fluxos independentes, consumo multiplicado (o currículo quantifica 50×).",
+      A: "INCORRETA. Para o mesmo conteúdo, unicast exige fluxos independentes para cada destinatário e pode consumir mais banda que multicast suportado pela infraestrutura.",
       B: "INCORRETA. Erro conceitual: broadcast atinge todos do domínio (inclusive quem não quer), é limitado por roteador e não é o modelo de 'grupo que se inscreveu'.",
       C: "CORRETA. Reproduz o raciocínio de eficiência documentado no exemplo do currículo.",
       D: "INCORRETA. Erro conceitual: anycast distribui réplicas de serviço para nós distintos mais próximos — não resolve entrega simultânea do mesmo fluxo a um grupo na LAN."
     },
-    regra: "Eficiência de entrega: unicast escala linearmente em banda (N receptores = N fluxos); multicast replica só onde há ramificação de grupo.",
-    pegadinha: "A alternativa B parece resolver ('todos precisam receber'), mas broadcast é indiscriminado e limitado ao domínio — a pegadinha é confundir 'todo mundo quer' com 'todo mundo do domínio recebe'."
+    regra: "Eficiência de entrega: unicast usa fluxos independentes por destinatário; multicast pode reduzir tráfego replicando o fluxo nos pontos necessários, quando há suporte de rede e aplicação.",
+    pegadinha: "A alternativa B parece resolver ('todos precisam receber'), mas broadcast é indiscriminado e limitado ao domínio — a pegadinha é confundir 'todo mundo quer' com 'todo mundo do domínio recebe'.",
+    fonte: "IETF RFC 1112 — entrega multicast a grupos de hosts; RFC 4291 — tipos de endereço IPv6: https://www.rfc-editor.org/rfc/rfc1112.html ; https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-20",
@@ -1397,7 +1448,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: associação com multicast (que trafega entre redes quando o roteamento multicast existe) ou com a ideia de que 'broadcast = alta propagação'. São mecanismos distintos."
     },
     regra: "Domínio de broadcast = sub-rede; roteador encaminha tráfego unicast/multicast roteável, mas bloqueia broadcast para evitar tempestade (broadcast storm).",
-    pegadinha: "Exemplo prático no currículo: DHCP discovery e ARP usam broadcast justamente porque se destinam à sub-rede local — é essa a fronteira natural do mecanismo."
+    pegadinha: "Exemplo prático no currículo: DHCP discovery e ARP usam broadcast justamente porque se destinam à sub-rede local — é essa a fronteira natural do mecanismo.",
+    fonte: "IETF RFC 4291 — IPv6 não possui broadcast, função substituída por multicast: https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-21",
@@ -1425,7 +1477,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: latência é tempo de trânsito, não capacidade do canal; e a diferença é multicausa (overhead, colisões, congestionamento, sinal)."
     },
     regra: "bandwidth = capacidade máxima teórica; throughput = taxa efetiva medida (≤ bandwidth); causas da diferença: overhead de cabeçalhos, colisões, congestionamento, qualidade do sinal.",
-    pegadinha: "A alternativa C inverte os termos — a FGV cobra o par conceitual (teórico × real) sob pressão numérica; escreva os rótulos antes de decidir."
+    pegadinha: "A alternativa C inverte os termos — a FGV cobra o par conceitual (teórico × real) sob pressão numérica; escreva os rótulos antes de decidir.",
+    fonte: "Cisco — latência e variação de latência (jitter) em redes: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
   },
   {
     id: "q-m2-22",
@@ -1440,20 +1493,21 @@ var questoesBanco = [
     enunciado: "Qual a causa provável do problema e a providência indicada pelo currículo?",
     alternativas: [
       { letra: "A", texto: "Perda de pacotes alta; solução: aumentar a largura de banda do link." },
-      { letra: "B", texto: "Jitter alto (variação de latência); solução: habilitar QoS para priorizar tráfego de voz ou usar buffer de jitter no receptor." },
+      { letra: "B", texto: "Throughput baixo; solução: reduzir o número de dispositivos na rede." },
       { letra: "C", texto: "Latência média alta; solução: trocar o meio de transmissão para fibra óptica." },
-      { letra: "D", texto: "Throughput baixo; solução: reduzir o número de dispositivos na rede." }
+      { letra: "D", texto: "Jitter alto (variação de latência); solução: habilitar QoS para priorizar tráfego de voz ou usar buffer de jitter no receptor." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "O exemplo de aplicação do currículo descreve o caso: 'ping está estável (30 ms) mas o jitter é alto (50 ms) → Jitter alto — variação na latência. Solução: habilitar QoS (Quality of Service) para priorizar tráfego de voz, ou usar buffer de jitter no receptor'. Com ping estável, a latência média não é o problema — a variação é.",
     analise: {
       A: "INCORRETA. Erro conceitual: perda de pacotes teria sintoma de truncamento/ruído por ausência de pacotes, e o cenário não reporta perda; a métrica problemática informada é o jitter.",
-      B: "CORRETA. Diagnóstico e remédio idênticos ao exemplo do currículo.",
+      B: "INCORRETA. Erro conceitual: throughput não é a métrica de suavidade temporal da voz; remover dispositivos não trata variação de latência.",
       C: "INCORRETA. Erro conceitual: latência alta seria ping alto e constante — o ping está estável em 30 ms (baixo).",
-      D: "INCORRETA. Erro conceitual: throughput não é a métrica de suavidade temporal da voz; remover dispositivos não trata variação de latência."
+      D: "CORRETA. Diagnóstico e remédio idênticos ao exemplo do currículo."
     },
     regra: "Interpretação de métricas: ping estável + jitter alto = variação (problema de temporização); ping alto = latência; perda = pacotes ausentes. Mitigação de jitter: QoS e buffer de jitter.",
-    pegadinha: "A FCC cobra ler o DIAGNÓSTICO inteiro: as alternativas A, C e D descrevem problemas reais de rede, mas nenhum deles é o que os dados do enunciado indicam."
+    pegadinha: "A FCC cobra ler o DIAGNÓSTICO inteiro: as alternativas A, C e D descrevem problemas reais de rede, mas nenhum deles é o que os dados do enunciado indicam.",
+    fonte: "Cisco — latência, limitações de largura de banda e otimização de WAN: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html ; https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-23",
@@ -1475,7 +1529,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: tratar jitter como 'latência alta' (sinônimo). Jitter é DIFERENÇA entre latências — por isso VoIP falha mesmo com ping baixo (ver exemplo de aplicação do currículo)."
     },
     regra: "Métricas temporais: latência (nível), jitter (variação do nível), perda (ausência). Causas de perda: congestionamento, erro de transmissão, firewall.",
-    pegadinha: "Item duplo com duas definições — valide cada uma separadamente; a segunda metade traz 'pode indicar' (lista de hipóteses), o que é compatível com o texto-base e não invalida o item."
+    pegadinha: "Item duplo com duas definições — valide cada uma separadamente; a segunda metade traz 'pode indicar' (lista de hipóteses), o que é compatível com o texto-base e não invalida o item.",
+    fonte: "Cisco — jitter como variação imprevisível da latência: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
   },
   {
     id: "q-m2-24",
@@ -1503,7 +1558,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: viola a premissa 'rede cabeada' do cenário e o Wi-Fi é suscetível a interferência em ambiente industrial."
     },
     regra: "Meios × ambiente: UTP (barato, suscetível) / STP (blindado, EMI) / fibra (imune, maior custo) / coaxial (legado) / Wi-Fi (sem fio, 2,4/5 GHz).",
-    pegadinha: "A alternativa D até 'resolve' a EMI por não ter fio, mas fere a premissa explícita do enunciado ('rede cabeada') — premissas do cenário são parte da questão."
+    pegadinha: "A alternativa D até 'resolve' a EMI por não ter fio, mas fere a premissa explícita do enunciado ('rede cabeada') — premissas do cenário são parte da questão.",
+    fonte: "Cisco — componentes e meios de conexão de uma LAN: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html ; Cisco — arquitetura e conectividade de redes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html",
   },
   {
     id: "q-m2-25",
@@ -1531,7 +1587,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: coaxial é meio legado de curta/média distância em redes antigas; não é a solução de longa distância imune a EMI."
     },
     regra: "Limites de alcance: UTP até 100 m (Cat6 10 Gbps até 55 m; Cat6a 10 Gbps até 100 m); fibra monomodo para longa distância; fibra multimodo para curta distância (LED).",
-    pegadinha: "A alternativa A repete um dado verdadeiro (Cat6 = 10 Gbps) fora de contexto (distância) — a VUNESP cobra combinar TODAS as propriedades: taxa, alcance e imunidade."
+    pegadinha: "A alternativa A repete um dado verdadeiro (Cat6 = 10 Gbps) fora de contexto (distância) — a VUNESP cobra combinar TODAS as propriedades: taxa, alcance e imunidade.",
+    fonte: "Cisco — WAN, fibra e conexões entre locais distantes: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html ; Cisco — componentes de rede: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html",
   },
   {
     id: "q-m2-26",
@@ -1553,13 +1610,14 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: memorizar '100 m' como limite universal de par trançado (verdadeiro para 1 Gbps e para Cat6a em 10 Gbps). O limite depende da TAXA: 10 Gbps × Cat6 = 55 m."
     },
     regra: "Limites UTP: Cat5e — 1 Gbps; Cat6 — 10 Gbps até 55 m; Cat6a — 10 Gbps até 100 m. Alcance padrão de par trançado = 100 m na taxa de 1 Gbps.",
-    pegadinha: "Número + categoria + taxa: três variáveis no mesmo item. O CESPE troca apenas uma (100 m no lugar de 55 m) — quem lê '100 m é padrão de UTP' e não confere a taxa marca Certo por engano."
+    pegadinha: "Número + categoria + taxa: três variáveis no mesmo item. O CESPE troca apenas uma (100 m no lugar de 55 m) — quem lê '100 m é padrão de UTP' e não confere a taxa marca Certo por engano.",
+    fonte: "Cisco — 10GBASE-T: até 55 m em Cat6 UTP e até 100 m em Cat6 blindado/Cat6A/Cat7: https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html",
   },
-  /* ===================== FIM MÓDULO 2 (26 questões) ===================== */
-  /* ===================== MÓDULO 3 — Comunicação e Colaboração (24 questões) =====================
-   * Fonte: assets/data/curriculum_m3.js — 3.1 Correio eletrônico (4 subtópicos)
-   * e 3.2 Calendários e reuniões (4 subtópicos). Questões jurídicas citam
-   * APENAS os artigos da LGPD verificados em referencias/referencias-verificadas.md. */
+  /* ===================== FIM BLOCO INICIAL M2 (q-m2-01..q-m2-26) ===================== */
+  /* ===================== BLOCO INICIAL M3 — Comunicação e Colaboração (q-m3-01..q-m3-24; 47 no total) =====================
+   * Fonte: assets/data/curriculum_m3.js — unidades 3.1 a 3.5.
+   * As questões q-m3-25..q-m3-47 aparecem em bloco posterior para preservar
+   * o histórico de adições; o banco agregado contém 47 questões M3. */
 
   {
     id: "q-m3-01",
@@ -1573,7 +1631,7 @@ var questoesBanco = [
     contexto: "Funcionário enviará e-mails corporativos com segurança por meio do servidor de submissão do órgão.",
     enunciado: "Qual porta SMTP é recomendada para envio seguro de e-mail, conforme o currículo?",
     alternativas: [
-      { letra: "A", texto: "Porta 25 — porta padrão do SMTP sem criptografia." },
+      { letra: "A", texto: "Porta 25 — usada principalmente para relay SMTP entre servidores; não é a porta recomendada para submissão autenticada de clientes." },
       { letra: "B", texto: "Porta 110 — porta POP3 sem criptografia." },
       { letra: "C", texto: "Porta 587 — submissão com STARTTLS." },
       { letra: "D", texto: "Porta 143 — porta IMAP sem criptografia." }
@@ -1587,7 +1645,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: a porta 143 é do IMAP sem criptografia — protocolo de recebimento."
     },
     regra: "Portas do ecossistema de e-mail: SMTP 25 (relay/sem TLS), 587 (submissão + STARTTLS), 465 (SMTPS); POP3 110/995; IMAP 143/993.",
-    pegadinha: "A pegadinha é misturar as portas de ENVIO (SMTP) com as de RECEBIMENTO (POP3/IMAP) — todas as distratoras são portas reais de e-mail, só que de outro protocolo."
+    pegadinha: "A pegadinha é misturar as portas de ENVIO (SMTP) com as de RECEBIMENTO (POP3/IMAP) — todas as distratoras são portas reais de e-mail, só que de outro protocolo.",
+    fonte: "IETF RFC 5321 — Simple Mail Transfer Protocol; RFC 8314 — TLS para envio e acesso de e-mail: https://www.rfc-editor.org/rfc/rfc5321.html ; https://www.rfc-editor.org/rfc/rfc8314.html",
   },
   {
     id: "q-m3-02",
@@ -1609,7 +1668,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: lembrar que SMTP usa TCP e concluir que 'opera na camada de transporte'. Usar um serviço de outra camada não determina a camada do próprio protocolo — o currículo marca o exercício ('SMTP opera na camada de transporte') como Errado."
     },
     regra: "Posicionamento por função: SMTP é protocolo de transferência de mensagens entre agentes (camada de aplicação); o transporte confiável é fornecido pelo TCP.",
-    pegadinha: "Item clássico de 'camada × protocolo subjacente' — o exercício do próprio currículo já documenta esse erro como o mais comum."
+    pegadinha: "Item clássico de 'camada × protocolo subjacente' — o exercício do próprio currículo já documenta esse erro como o mais comum.",
+    fonte: "IETF RFC 5321 — especificação SMTP e modelo cliente/servidor: https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-03",
@@ -1637,7 +1697,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: DATA vem DEPOIS dos destinatários — é a etapa do corpo da mensagem."
     },
     regra: "Sequência SMTP: HELO/EHLO → MAIL FROM → RCPT TO → DATA → (encaminhamento/entrega) → QUIT.",
-    pegadinha: "A ordem dos comandos é o conteúdo cobrado; a alternativa D só funciona depois que todos os RCPT TO foram declarados — em vários destinatários, RCPT TO se repete antes do DATA."
+    pegadinha: "A ordem dos comandos é o conteúdo cobrado; a alternativa D só funciona depois que todos os RCPT TO foram declarados — em vários destinatários, RCPT TO se repete antes do DATA.",
+    fonte: "IETF RFC 5321 — comandos SMTP, incluindo MAIL FROM, RCPT TO e DATA: https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-04",
@@ -1659,7 +1720,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: associar 'porta padrão do SMTP' a 'porta recomendada'. Padrão ≠ recomendado — a porta padrão é justamente a que deve ser fechada para o exterior."
     },
     regra: "Higiene de porta SMTP: 25 só para relay servidor-a-servidor (bloquear de clientes externos); submissão de clientes via 587/465 com TLS.",
-    pegadinha: "Item com recomendação INVERTIDA: o vocabulário ('deve ser mantida', 'recomendada') soa normativo; quem decora apenas as portas e não a política de bloqueio marca Certo."
+    pegadinha: "Item com recomendação INVERTIDA: o vocabulário ('deve ser mantida', 'recomendada') soa normativo; quem decora apenas as portas e não a política de bloqueio marca Certo.",
+    fonte: "IETF RFC 8314 — recomendações TLS e portas para submissão/acesso de e-mail: https://www.rfc-editor.org/rfc/rfc8314.html",
   },
   {
     id: "q-m3-05",
@@ -1679,15 +1741,16 @@ var questoesBanco = [
       { letra: "D", texto: "POP3 com configuração padrão, pois apaga do servidor apenas após o segundo download." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: 'IMAP: mantém e-mails sincronizados no servidor e no cliente. Ideal para multi-dispositivo (celular, tablet, computador)', e o exemplo de aplicação responde: 'IMAP. Com POP3, os e-mails baixados para um dispositivo são apagados do servidor e não estarão disponíveis no outro dispositivo.'",
+    justificativa: "O currículo define IMAP como adequado ao uso em múltiplos dispositivos porque mantém o estado sincronizado entre cliente e servidor. POP3 é orientado ao download; a disponibilidade da mensagem em outros dispositivos depende de opções como manter cópia no servidor, e não se deve presumir que todo cliente apague mensagens automaticamente.",
     analise: {
-      A: "INCORRETA. Erro conceitual: POP3 baixa e, por padrão, apaga do servidor — o segundo dispositivo ficaria sem as mensagens.",
+      A: "INCORRETA. POP3 é orientado ao download; a permanência das mensagens no servidor depende das opções do cliente e da configuração. Não oferece, por si só, a sincronização de estado entre dispositivos que o cenário requer.",
       B: "CORRETA. Sincronização servidor-cliente é o requisito do cenário (multi-dispositivo).",
       C: "INCORRETA. Erro conceitual: SMTP é protocolo de ENVIO, não de recebimento (o currículo registra esse engano como exemplo 'erro').",
       D: "INCORRETA. Erro conceitual: invenção de comportamento ('apaga após o segundo download') — o currículo descreve o apagamento por padrão no download."
     },
-    regra: "POP3 (110/995): download local, apaga por padrão — 1 dispositivo/offline. IMAP (143/993): estado no servidor, sincronização — multi-dispositivo.",
-    pegadinha: "A alternativa D inventa uma exceção confortável ('só apaga no segundo download') — quando a exceção não está no material, ela é pegadinha, não conhecimento."
+    regra: "POP3 (110/995): download local; conforme a configuração, pode apagar a cópia do servidor — adequado a cenários de um dispositivo/offline. IMAP (143/993): estado no servidor e sincronização — multi-dispositivo.",
+    pegadinha: "A alternativa D inventa uma exceção confortável ('só apaga no segundo download') — quando a exceção não está no material, ela é pegadinha, não conhecimento.",
+    fonte: "IETF RFC 9051 — IMAP4rev2; RFC 1939 — Post Office Protocol v3: https://www.rfc-editor.org/rfc/rfc9051.html ; https://www.rfc-editor.org/rfc/rfc1939.html",
   },
   {
     id: "q-m3-06",
@@ -1715,7 +1778,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: 995 é a versão segura do POP3 — protocolo trocado."
     },
     regra: "Mapa de portas: POP3 110 / 995(TLS); IMAP 143 / 993(TLS). Lembrete: porta '99x' = versão com SSL/TLS do protocolo correspondente.",
-    pegadinha: "Duas dimensões por alternativa (protocolo × criptografia): errar uma já invalida — pare cada caractere antes de marcar."
+    pegadinha: "Duas dimensões por alternativa (protocolo × criptografia): errar uma já invalida — pare cada caractere antes de marcar.",
+    fonte: "IETF RFC 8314 — porta padrão 993 para IMAP com TLS implícito: https://www.rfc-editor.org/rfc/rfc8314.html",
   },
   {
     id: "q-m3-07",
@@ -1726,20 +1790,21 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "m3-u1-t1-s2",
     assunto: "M3.1 E-mail — POP3 e IMAP",
-    contexto: "Migração de estações: o setor deseja confirmar o comportamento de armazenamento antes de escolher o protocolo.",
-    enunciado: "O POP3, por padrão, baixa os e-mails do servidor para o dispositivo local e os apaga do servidor, enquanto o IMAP mantém as mensagens no servidor e permite criar pastas no servidor e buscar mensagens sem baixá-las por completo.",
+    contexto: "Migração de estações: o setor deseja confirmar como os protocolos de recebimento tratam mensagens e estado da caixa.",
+    enunciado: "O POP3 permite baixar mensagens para o cliente e, conforme a configuração do cliente, pode removê-las do servidor; o IMAP mantém o estado da caixa no servidor e permite sincronizar mensagens e pastas entre dispositivos.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o POP3, por padrão, baixa os e-mails ... e os apaga do servidor, enquanto o IMAP mantém as mensagens no servidor e permite criar pastas no servidor e buscar mensagens sem baixá-las por completo'.",
-    justificativa: "O currículo registra: POP3 'baixa e-mails do servidor para o dispositivo local e, por padrão, apaga do servidor'; IMAP 'mantém e-mails sincronizados no servidor e no cliente ... permite criar pastas no servidor, buscar mensagens sem baixar, e manter cópia no servidor'. O exemplo 'erro' do módulo corrige quem afirma que IMAP apaga após o download.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a distinção entre download e comportamento configurável no POP3 e sincronização do estado da caixa no IMAP; o item não afirma que todo cliente POP3 apaga mensagens por padrão.",
+    justificativa: "POP3 permite recuperar mensagens para um cliente, mas manter ou remover a cópia do servidor depende das opções e do comportamento do cliente de correio. IMAP trabalha com estado e pastas mantidos no servidor e permite sincronização entre clientes. A distinção importante é o modelo de acesso e sincronização, não uma regra universal de exclusão após download.",
     analise: {
-      item: "Item VERDADEIRO. As três características atribuídas (apagar por padrão, manter no servidor, pastas/busca no servidor) constam do conteúdo.",
-      leituraIncorreta: "Leitura que induz ao erro: lembrar que POP3 'pode' manter cópia (existe a opção) e negar o padrão. O item fala em 'por padrão' — é esse qualificador que o torna verdadeiro."
+      item: "Item VERDADEIRO. O comportamento de remoção no POP3 é condicionado à configuração; IMAP oferece sincronização do estado da caixa no servidor.",
+      leituraIncorreta: "Leitura que induz ao erro: memorizar que POP3 sempre apaga as mensagens. O protocolo não impõe esse comportamento universal; clientes podem manter cópias no servidor."
     },
-    regra: "Estado das mensagens: POP3 = propriedade local após download (padrão apagar no servidor); IMAP = estado no servidor sincronizado com clientes.",
-    pegadinha: "O qualificador 'por padrão' é tudo: sem ele, a afirmação sobre POP3 seria falsa (a opção de manter cópia existe). No CESPE, qualificadores decidem itens."
+    regra: "POP3 = recuperação/download; manter ou remover a cópia no servidor depende da configuração do cliente. IMAP = estado da caixa e pastas sincronizados no servidor.",
+    pegadinha: "Evite transformar uma configuração comum de cliente em regra do protocolo. POP3 não oferece a mesma sincronização de estado do IMAP, mas isso não significa que toda cópia seja apagada.",
+    fonte: "IETF RFC 1939 — POP3; RFC 9051 — IMAP4rev2: https://www.rfc-editor.org/rfc/rfc1939.html ; https://www.rfc-editor.org/rfc/rfc9051.html"
   },
-  {
+{
     id: "q-m3-08",
     modulo: 3,
     formato: "mc",
@@ -1765,7 +1830,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: premissa falsa — POP3 foi desjustamente para trabalho offline (baixa local das mensagens)."
     },
     regra: "Escolha por perfil de uso: 1 dispositivo + offline → POP3; múltiplos dispositivos + sincronização → IMAP.",
-    pegadinha: "A alternativa B é a 'moderna e plausível' (todo mundo usa IMAP), mas a FGV cobra a indicação EXATA do material para o caso — leia o perfil do usuário, não a tendência."
+    pegadinha: "A alternativa B é a 'moderna e plausível' (todo mundo usa IMAP), mas a FGV cobra a indicação EXATA do material para o caso — leia o perfil do usuário, não a tendência.",
+    fonte: "IETF RFC 9051 — IMAP4rev2; RFC 1939 — POP3: https://www.rfc-editor.org/rfc/rfc9051.html ; https://www.rfc-editor.org/rfc/rfc1939.html",
   },
   {
     id: "q-m3-09",
@@ -1793,7 +1859,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: From identifica o remetente, não destinatários."
     },
     regra: "Campos de destinatário: To (principal, visível) / Cc (cópia, visível) / Bcc (cópia oculta).",
-    pegadinha: "Cc e Bcc têm o mesmo comportamento de entrega; a diferença é VISIBILIDADE — a pegadinha é confundir 'cópia' com 'ocultação'."
+    pegadinha: "Cc e Bcc têm o mesmo comportamento de entrega; a diferença é VISIBILIDADE — a pegadinha é confundir 'cópia' com 'ocultação'.",
+    fonte: "IETF RFC 5322 — formato de mensagens de Internet e campos de cabeçalho: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-10",
@@ -1815,7 +1882,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: supor que o Bcc oculta também os destinatários do To — o remetente escolhe; oculto é o que está em Bcc para os demais."
     },
     regra: "Visibilidade de destinatários: To e Cc são explícitos em todas as caixas; Bcc aparece apenas na caixa de cada oculto (e no remetente).",
-    pegadinha: "A expressão 'ocultos uns dos outros' refere-se aos Bcc entre si e para os demais; a leitura apressada pode transformar em 'todos ocultos' — o item fala o que o currículo fala."
+    pegadinha: "A expressão 'ocultos uns dos outros' refere-se aos Bcc entre si e para os demais; a leitura apressada pode transformar em 'todos ocultos' — o item fala o que o currículo fala.",
+    fonte: "IETF RFC 5322 — campos To, Cc e Bcc na estrutura da mensagem: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-11",
@@ -1843,7 +1911,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: Reply-To define o endereço de resposta (que pode ser diferente do remetente) — não oculta destinatários."
     },
     regra: "Privacidade em discurso em massa: destinatários em Bcc + (boas práticas) reply controlado; To/Cc expõem a lista.",
-    pegadinha: "A alternativa D usa um cabeçalho real e mal compreendido (Reply-To) — ele muda PARA ONDE vão as respostas, não quem vê a lista de destinatários."
+    pegadinha: "A alternativa D usa um cabeçalho real e mal compreendido (Reply-To) — ele muda PARA ONDE vão as respostas, não quem vê a lista de destinatários.",
+    fonte: "IETF RFC 5322 — cabeçalhos de mensagem e destinatários: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-12",
@@ -1858,20 +1927,21 @@ var questoesBanco = [
     enunciado: "Como classificar corretamente as duas mensagens?",
     alternativas: [
       { letra: "A", texto: "Ambas são spam; a diferença é apenas o remetente." },
-      { letra: "B", texto: "A propaganda não solicitada é spam; a mensagem fraudulenta que se passa por banco para roubar credenciais é phishing." },
-      { letra: "C", texto: "A propaganda é phishing leve; a do banco é spam agressivo." },
+      { letra: "B", texto: "A propaganda é phishing leve; a do banco é spam agressivo." },
+      { letra: "C", texto: "A propaganda não solicitada é spam; a mensagem fraudulenta que se passa por banco para roubar credenciais é phishing." },
       { letra: "D", texto: "São spoofing as duas, pois ambas foram não solicitadas." }
     ],
-    gabarito: "B",
+    gabarito: "C",
     justificativa: "O currículo define: 'Spam: e-mails não solicitados, geralmente comerciais ou maliciosos. Phishing: e-mails fraudulentos que se passam por entidades confiáveis (bancos, empresas) para roubar credenciais ou dados', e o exemplo introdutório diferencia: spam 'sem necessariamente ter intenção maliciosa'; phishing 'com intenção de roubar dados ou credenciais'.",
     analise: {
       A: "INCORRETA. Erro conceitual: apaga a distinção de intenção — o currículo separa não-solicitado (spam) de fraudulento (phishing).",
-      B: "CORRETA. Classificação exatamente conforme as definições e o exemplo do currículo.",
-      C: "INCORRETA. Erro conceitual: 'phishing leve' não existe como categoria; phishing é fraude com intenção de roubo — a propaganda é spam.",
+      B: "INCORRETA. Erro conceitual: 'phishing leve' não existe como categoria; phishing é fraude com intenção de roubo — a propaganda é spam.",
+      C: "CORRETA. Classificação exatamente conforme as definições e o exemplo do currículo.",
       D: "INCORRETA. Erro conceitual: spoofing é falsificação do remetente (técnica), não a classificação do conteúdo — e propaganda comercial não é necessariamente falsificada."
     },
     regra: "Classificação por conteúdo e intenção: spam = não solicitado (comercial/malicioso); phishing = fraude para roubo de dados; spoofing = falsificação do endereço 'From'.",
-    pegadinha: "A FGV cobra a diferença de INTENÇÃO entre categorias aparentemente parecidas; 'spam malicioso' existe no currículo, mas phishing é definido pela fraude, não pelo volume."
+    pegadinha: "A FGV cobra a diferença de INTENÇÃO entre categorias aparentemente parecidas; 'spam malicioso' existe no currículo, mas phishing é definido pela fraude, não pelo volume.",
+    fonte: "CISA — orientação oficial para reconhecer e reportar phishing: https://www.cisa.gov/be-cyber-smart/report-incident",
   },
   {
     id: "q-m3-13",
@@ -1899,7 +1969,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: TLS protege o canal (transporte), não autentica o remetente nem define política de falha."
     },
     regra: "Tríade de autenticação de e-mail: SPF (quem pode enviar) + DKIM (assinatura) → DMARC (política e reporte em falha).",
-    pegadinha: "Os três protocolos são descritos no mesmo parágrafo do currículo — a cobrança FCC é a de composição: verificação (SPF/DKIM) × decisão (DMARC)."
+    pegadinha: "Os três protocolos são descritos no mesmo parágrafo do currículo — a cobrança FCC é a de composição: verificação (SPF/DKIM) × decisão (DMARC).",
+    fonte: "IETF RFC 9989 — especificação atual de DMARC (publicada em maio de 2026, substitui RFC 7489 e RFC 9091): https://www.rfc-editor.org/rfc/rfc9989.html",
   },
   {
     id: "q-m3-14",
@@ -1911,17 +1982,18 @@ var questoesBanco = [
     topico: "m3-u1-t2-s1",
     assunto: "M3.1 E-mail — spam, phishing e autenticação",
     contexto: "Auditoria de segurança do e-mail corporativo revisa os registros DNS de autenticação.",
-    enunciado: "O SPF lista os servidores autorizados a enviar e-mails em nome do domínio, e o DKIM assina digitalmente as mensagens para garantir autenticidade, medidas que previnem o spoofing de remetente.",
+    enunciado: "O SPF lista servidores autorizados para o domínio e o DKIM assina mensagens; em conjunto com alinhamento e política DMARC, ajudam a reduzir spoofing do domínio, mas não bloqueiam todas as formas de falsificação de remetente.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'o SPF lista os servidores autorizados a enviar e-mails em nome do domínio, e o DKIM assina digitalmente as mensagens para garantir autenticidade, medidas que previnem o spoofing de remetente'.",
-    justificativa: "O currículo descreve o spoofing como 'falsificação do endereço From para fazer o e-mail parecer legítimo' e apresenta SPF, DKIM e DMARC como 'técnicas de autenticação [que] previnem spoofing verificando o servidor remetente', com as funções exatas de SPF e DKIM citadas no item. O exercício registrado afirma: '(C/E) DKIM usa criptografia para assinar e-mails — Certo'.",
+    trechoDeterminante: "O trecho determinante é 'em conjunto com alinhamento e política DMARC, ajudam a reduzir spoofing do domínio, mas não bloqueiam todas as formas de falsificação': SPF e DKIM fornecem sinais de autenticação, sem garantir a eliminação de toda falsificação.",
+    justificativa: "SPF e DKIM fornecem sinais de autenticação do domínio/remetente; DMARC permite definir tratamento e relatórios para mensagens que falham nos critérios configurados. Esses controles ajudam a reduzir spoofing de domínio, mas não garantem impedir toda falsificação, como nomes de exibição enganosos.",
     analise: {
-      item: "Item VERDADEIRO. As duas funções (lista de servidores × assinatura) e a finalidade (prevenir spoofing) coincidem com o conteúdo do módulo.",
+      item: "Item VERDADEIRO. As funções de SPF e DKIM estão descritas corretamente e, com DMARC configurado, ajudam a reduzir spoofing de domínio sem garantir proteção contra toda falsificação.",
       leituraIncorreta: "Leitura que induz ao erro: pensar que SPF/DKIM 'impedem' o envio falsificado no ato — eles permitem DETECTAR/verificar; a aplicação da política (bloquear/quarentenar) é do DMARC. A expressão do currículo ('previnem spoofing verificando') é a base do item."
     },
-    regra: "Detecção × aplicação: SPF/DKIM provem os elementos de verificação; DMARC aplica política; o cliente recebe apenas mensagens que passam no filtro.",
-    pegadinha: "Cuidado com verbos de força ('impede', 'bloqueia'): o currículo diz 'previnem ... verificando' — o item adota o verbo do material, o que o torna verdadeiro."
+    regra: "SPF autoriza servidores, DKIM fornece assinatura verificável e DMARC define política e relatórios com base nos resultados e no alinhamento configurado; esses controles ajudam a reduzir spoofing de domínio, sem bloquear todas as falsificações.",
+    pegadinha: "Não trate autenticação de domínio como garantia absoluta: SPF/DKIM/DMARC ajudam a reduzir spoofing, mas não eliminam todos os ataques de engenharia social ou falsificação de nome de exibição.",
+    fonte: "IETF RFC 7208 — SPF; RFC 6376 — DKIM; RFC 9989 — DMARC e alinhamento de domínio: https://www.rfc-editor.org/rfc/rfc7208.html ; https://www.rfc-editor.org/rfc/rfc6376.html ; https://www.rfc-editor.org/rfc/rfc9989.html",
   },
   {
     id: "q-m3-15",
@@ -1948,8 +2020,9 @@ var questoesBanco = [
       C: "INCORRETA. Erro conceitual: o cenário inclui pedido fraudulento de credencial/acesso — há intenção de roubo, não apenas falsificação.",
       D: "INCORRETA. Erro conceitual: marketing não solicita credenciais por link fingindo autoridade; citação interna é engenharia social, não comercialização."
     },
-    regra: "Hierarquia de ameaças por e-mail: spam (não solicitado) < phishing (fraude genérica) < spear phishing (fraude direcionada/personalizada); spoofing é técnica de falsificação usada em todas.",
-    pegadinha: "A VUNESP cobra o critério de DIRECIONAMENTO: mesma fraude, público genérico = phishing; público específico com detalhes reais = spear phishing."
+    regra: "Distinção entre categorias: spam é mensagem não solicitada; phishing é fraude para induzir ação ou obter dados; spear phishing é phishing direcionado/personalizado. Não é uma escala universal de gravidade; spoofing é uma técnica que pode acompanhar diferentes ataques.",
+    pegadinha: "A VUNESP cobra o critério de DIRECIONAMENTO: mesma fraude, público genérico = phishing; público específico com detalhes reais = spear phishing.",
+    fonte: "CISA — reconhecer e reportar phishing, incluindo mensagens com links/solicitações suspeitas: https://www.cisa.gov/be-cyber-smart/report-incident",
   },
   {
     id: "q-m3-16",
@@ -1977,7 +2050,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: visualização é somente leitura."
     },
     regra: "Permissões de calendário por menor privilégio: proprietário > editor > comentar > somente visualização — escolha a menor que satisfaz a necessidade.",
-    pegadinha: "A alternativa A é o 'excesso de privilégio' — em provas de serviço público, o menor privilégio funcional é a resposta esperada quando o cenário descarta o controle total."
+    pegadinha: "A alternativa A é o 'excesso de privilégio' — em provas de serviço público, o menor privilégio funcional é a resposta esperada quando o cenário descarta o controle total.",
+    fonte: "Microsoft Support — compartilhamento de calendários e níveis de permissão no Microsoft 365: https://support.microsoft.com/pt-br/outlook/calendar-sharing-in-microsoft-365 ; https://support.microsoft.com/pt-br/outlook/sharing-your-calendar",
   },
   {
     id: "q-m3-17",
@@ -1999,7 +2073,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: supor que recorrência e lembrete sejam exclusivos de uma plataforma. O currículo trata das capacidades genéricas de calendários digitais (Google Calendar, Outlook Calendar)."
     },
     regra: "Estrutura de convite: identificação (título), temporalidade (data/hora/fuso, recorrência), participantes (papéis), contexto (descrição, anexos), alerta (lembretes).",
-    pegadinha: "Item composto de três afirmações — valide cada uma; a pegadinha é achar que uma das partes ('opcionais') é invenção, quando consta explicitamente entre os campos do convite."
+    pegadinha: "Item composto de três afirmações — valide cada uma; a pegadinha é achar que uma das partes ('opcionais') é invenção, quando consta explicitamente entre os campos do convite.",
+    fonte: "Microsoft Support — agendar reuniões, recorrência, fusos horários e lembretes no Outlook: https://support.microsoft.com/pt-br/outlook/create-modify-or-delete-a-meeting-request-or-appointment-in-outlook-on-the-web",
   },
   {
     id: "q-m3-18",
@@ -2027,7 +2102,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: invenção — Slack não é descrito no currículo como integrado ao Google Workspace."
     },
     regra: "Integração é o critério de escolha no currículo: Teams × M365; Meet × Google Workspace; Zoom × webinars/eventos externos.",
-    pegadinha: "As alternativas A e C descrevem QUALIDADES REAIS das plataformas (Teams integrada ao M365; Zoom com webinars) — mas fora do contexto do cenário. A pegadinha é escolher 'a melhor plataforma' em vez da integrada ao ecossistema pedido."
+    pegadinha: "As alternativas A e C descrevem QUALIDADES REAIS das plataformas (Teams integrada ao M365; Zoom com webinars) — mas fora do contexto do cenário. A pegadinha é escolher 'a melhor plataforma' em vez da integrada ao ecossistema pedido.",
+    fonte: "Google Meet Help — controles do anfitrião no Google Meet/Workspace: https://support.google.com/meet/answer/16229038?co=GENIE.Platform%3DDesktop&hl=pt-br",
   },
   {
     id: "q-m3-19",
@@ -2038,24 +2114,25 @@ var questoesBanco = [
     nivel: "intermediario",
     topico: "m3-u2-t2-s1",
     assunto: "M3.2 Plataformas de reunião",
-    contexto: "Universidade realizará palestra online com 500 alunos, com moderação, salas paralelas de trabalho e recursos de webinar.",
-    enunciado: "Qual plataforma o currículo aponta como a mais adequada ao cenário?",
+    contexto: "Uma universidade organizará um evento online para 500 alunos, com apresentação em formato webinar, moderação e atividades em grupos menores. A equipe exige salas paralelas dentro do próprio webinar, e não apenas salas de reunião.",
+    enunciado: "Antes de confirmar o Zoom para esse evento, qual verificação é indispensável para garantir tanto 500 participantes quanto salas paralelas dentro do webinar?",
     alternativas: [
-      { letra: "A", texto: "Microsoft Teams, pela colaboração contínua em canais." },
-      { letra: "B", texto: "Google Meet, pela simplicidade de uso em navegador." },
-      { letra: "C", texto: "Zoom, pelo suporte a webinars com grande número de participantes e salas simultâneas (breakout rooms)." },
-      { letra: "D", texto: "Qualquer plataforma é equivalente — todas têm os mesmos recursos." }
+      { letra: "A", texto: "Basta usar uma licença Microsoft 365 com canais de equipe, pois canais garantem capacidade de webinar e salas paralelas em qualquer evento." },
+      { letra: "B", texto: "Basta confirmar que o Google Meet permite reuniões de 500 participantes; esse limite, por si só, garante salas paralelas no formato webinar." },
+      { letra: "C", texto: "Confirmar capacidade licenciada para 500 participantes e elegibilidade da licença para salas paralelas de webinar." },
+      { letra: "D", texto: "Qualquer licença paga do Zoom garante 500 participantes e salas paralelas de webinar, sem checar o tipo de licença ou o cliente utilizado." }
     ],
     gabarito: "C",
-    justificativa: "O exemplo de aplicação do currículo é este cenário: 'Uma universidade precisa dar uma palestra online para 500 alunos. Teams, Meet ou Zoom? → Zoom — suporte a webinars com grande número de participantes, salas simultâneas e recursos avançados de moderação'.",
+    justificativa: "O Zoom é adequado quando a licença contratada cobre a capacidade de 500 participantes e os requisitos do evento. A documentação oficial distingue a capacidade do webinar da elegibilidade para salas paralelas: esse recurso exige Zoom Webinars Plus Unlimited, Zoom Webinars Plus Pay Per Attendee ou Zoom Events Unlimited, conforme a modalidade, além de webinar agendado, recurso habilitado e aplicativo desktop ou móvel suportado. A capacidade e os recursos disponíveis devem ser confirmados no plano contratado.",
     analise: {
-      A: "INCORRETA. Erro conceitual: o ponto forte do Teams (colaboração contínua, canais) não é o critério do evento (webinar com grande público).",
-      B: "INCORRETA. Erro conceitual: simplicidade não atende aos requisitos de webinar/salas simultâneas destacados no exemplo.",
-      C: "CORRETA. É a escolha do exemplo de aplicação do currículo, com os mesmos critérios (webinar, salas simultâneas, moderação).",
-      D: "INCORRETA. Erro conceitual: o currículo compara as três destacando diferenciais distintos (collaboração contínua × simplicidade × webinars) — não há equivalência."
+      A: "INCORRETA. Canais de colaboração não determinam a capacidade licenciada de um evento nem garantem os requisitos específicos de salas paralelas em webinar.",
+      B: "INCORRETA. O limite de participantes de uma reunião Meet não demonstra que a solução oferece salas paralelas dentro de um webinar Zoom; são produtos e condições distintos.",
+      C: "CORRETA. A alternativa explicita as duas condições independentes: capacidade licenciada para 500 participantes e licença elegível para salas paralelas dentro de um webinar. Não basta assumir que qualquer licença Zoom inclui ambos os recursos.",
+      D: "INCORRETA. Nem toda licença paga inclui qualquer capacidade ou o recurso de salas paralelas em webinar; é necessário confirmar a modalidade e os requisitos oficiais.",
     },
-    regra: "Critérios de escolha registrados no currículo: Teams = colaboração contínua no M365; Meet = simplicidade; Zoom = webinars e grandes eventos.",
-    pegadinha: "A alternativa D ('todas iguais') é o relativismo típico da FGV — o material justamente diferencia as plataformas; quem lê só o enunciado e não o comparativo cai nela."
+    regra: "Escolha por requisitos, não por marca: validar formato do evento, capacidade licenciada, recursos premium e requisitos de cliente. No Zoom, a capacidade de participantes e a elegibilidade para salas paralelas em webinars são condições distintas.",
+    pegadinha: "A pegadinha é confundir capacidade de participantes com disponibilidade de um recurso premium. Uma licença que suporta 500 pessoas não garante, isoladamente, salas paralelas dentro de um webinar.",
+    fonte: "Zoom Support — comparação entre licenças e capacidade de participantes em reuniões/webinars: https://support.zoom.com/hc/pb/article?id=zm_kb&sysparm_article=KB0062412; requisitos para salas paralelas em webinars, incluindo licença elegível e aplicativo desktop/móvel: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
   },
   {
     id: "q-m3-20",
@@ -2064,7 +2141,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "m3-u2-t2-s2",
+    topico: "m3-u4-t1-s1",
     assunto: "M3.2 Plataformas de reunião",
     contexto: "Reunião sensível com participantes externos: o anfitrião aprovou cada entrada pela sala de espera e removeu um participante não convidado.",
     enunciado: "O lobby (sala de espera) permite ao anfitrião aprovar ou rejeitar participantes antes que entrem, e a remoção de participantes é faculdade do anfitrião.",
@@ -2077,7 +2154,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: supor que qualquer participante possa remover outros — o currículo atribui a remoção ao anfitrião; e confundir lobby com chat (ambos aparecem na mesma lista de recursos)."
     },
     regra: "Controle de reunião online: lobby (filtro de entrada), senha, remoção, bloqueio de mídia/compartilhamento — todos com o anfitrião como agente.",
-    pegadinha: "Item de duas cláusulas: quem acerta só o lobby e não sabe quem remove marca Errado — o CESPE exige domínio completo do trecho."
+    pegadinha: "Item de duas cláusulas: quem acerta só o lobby e não sabe quem remove marca Errado — o CESPE exige domínio completo do trecho.",
+    fonte: "Google Meet Help — controles do anfitrião, adicionar/remover participantes e moderação: https://support.google.com/meet/answer/16229038?co=GENIE.Platform%3DDesktop&hl=pt-br",
   },
   {
     id: "q-m3-21",
@@ -2086,26 +2164,27 @@ var questoesBanco = [
     estilo: "fcc",
     origem: "autoral",
     nivel: "avancado",
-    topico: "m3-u2-t3-s1",
+    topico: "m3-u4-t3-s1",
     assunto: "M3.2 Segurança e gravação de reuniões",
     contexto: "Secretaria vai gravar reuniões com servidores e precisa instituir política formal, cumprindo as exigências de proteção de dados aplicáveis.",
     enunciado: "Qual conjunto melhor representa os elementos de uma política de gravação descrita no currículo?",
     alternativas: [
-      { letra: "A", texto: "Consentimento informado dos participantes, definição de finalidade, prazo de retenção, armazenamento com criptografia, controle de acesso, regras de compartilhamento e procedimento de exclusão." },
+      { letra: "A", texto: "Informação prévia aos participantes e definição da base legal adequada (consentimento quando aplicável), finalidade, prazo de retenção, armazenamento protegido, controle de acesso, regras de compartilhamento e procedimento de exclusão." },
       { letra: "B", texto: "Apenas o aviso verbal no início da reunião, dispensando qualquer definição adicional." },
       { letra: "C", texto: "Número máximo de participantes, duração máxima da reunião e quantidade de gravações simultâneas permitidas." },
       { letra: "D", texto: "Consentimento único e permanente, válido para qualquer finalidade futura, sem prazo de retenção definido." }
     ],
     gabarito: "A",
-    justificativa: "O currículo lista os elementos: 'definir quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter ... Retenção ... Acesso ... Compartilhamento ... Proteção: criptografar gravações sensíveis', e o exemplo introdutório resume: 'Quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem tem acesso, regras de compartilhamento, proteção (criptografia), e procedimento para exclusão'. A aplicação (LGPD) exige consentimento, finalidade, prazo, segurança e direitos dos titulares (exemplo de aplicação do módulo).",
+    justificativa: "O currículo lista os elementos: definir quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter, regras de acesso/compartilhamento, proteção e exclusão. A aplicação da LGPD exige identificar a hipótese legal adequada, definir finalidade e retenção, adotar medidas de segurança e atender aos direitos dos titulares; consentimento é necessário quando for a base aplicável, não em todos os tratamentos.",
     analise: {
-      A: "CORRETA. Reúne todos os elementos do currículo mais o consentimento exigido no exemplo de aplicação com LGPD.",
+      A: "CORRETA. Reúne os elementos de governança e exige informação prévia e base legal apropriada; o consentimento é incluído quando essa for a hipótese legal aplicável.",
       B: "INCORRETA. Erro conceitual: omissão sistemática — sem finalidade, retenção, acesso e proteção, a política não atende ao descrito (e a LGPD exige mais do que um aviso isolado).",
       C: "INCORRETA. Erro conceitual: critérios operacionais de reunião, não de governança da gravação — nenhum dos itens da lista do currículo aparece.",
-      D: "INCORRETA. Erro conceitual: consentimento genérico e permanente sem finalidade/prazo contraria a lógica descrita (definição de finalidade, prazo de retenção, direito de acesso e exclusão)."
+      D: "INCORRETA. Erro conceitual: consentimento genérico e permanente sem finalidade/prazo não substitui base legal adequada, transparência, finalidade e retenção justificada."
     },
-    regra: "Governança de gravação: finalidade → consentimento → quem/grava/onde/retém → controle de acesso → compartilhamento → proteção → exclusão.",
-    pegadinha: "A alternativa D é a 'confortável': consentimento único soa profissional, mas sem finalidade e prazo ela viola o próprio exemplo de aplicação do módulo — a FCC cobra a política completa."
+    regra: "Governança de gravação: base legal adequada e transparência → finalidade → quem grava/onde/retém → controle de acesso → compartilhamento → proteção → exclusão.",
+    pegadinha: "A alternativa D é a 'confortável': consentimento único soa profissional, mas sem finalidade e prazo ela viola o próprio exemplo de aplicação do módulo — a FCC cobra a política completa.",
+    fonte: "Currículo M3, unidade 2, tópico 3; Lei nº 13.709/2018 (LGPD), arts. 6º, 9º e 46 — texto oficial no Planalto: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
   },
   {
     id: "q-m3-22",
@@ -2127,7 +2206,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: atribuir ao art. 46 direitos do titular (que são do art. 18, também verificado) ou fundamentos (art. 2º). Cada artigo tem objeto próprio — confira o dispositivo citado."
     },
     regra: "LGPD — Lei 13.709/2018 (art. 46): obrigatoriedade de medidas de segurança técnicas e administrativas pelos agentes de tratamento. Referência primária: planalto.gov.br (verificado em 2026-10-20).",
-    pegadinha: "Em questões jurídicas, a pegadinha é a REFORMULAÇÃO que altera o sentido (trocar 'agentes de tratamento' por 'titulares', ou 'medidas de segurança' por 'consentimento'). Aqui o item transcreve o dispositivo sem trocas — logo, Certo."
+    pegadinha: "Em questões jurídicas, a pegadinha é a REFORMULAÇÃO que altera o sentido (trocar 'agentes de tratamento' por 'titulares', ou 'medidas de segurança' por 'consentimento'). Aqui o item transcreve o dispositivo sem trocas — logo, Certo.",
+    fonte: "Lei nº 13.709/2018 (LGPD), art. 46 — medidas de segurança técnicas e administrativas; texto oficial no Planalto: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
   },
   {
     id: "q-m3-23",
@@ -2155,7 +2235,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: começa pelo destinatário sem saudação nem remetente — inviabiliza o roteamento da mensagem."
     },
     regra: "Sessão SMTP: HELO/EHLO (identificação) → MAIL FROM (origem) → RCPT TO (destino; repetível) → DATA (conteúdo) → QUIT; depois, encaminhamento servidor-a-servidor.",
-    pegadinha: "A FCC adora sequências permutadas: todos os comandos do item são REAIS — só a ordem muda. Decore a LÓGICA (quem envia, para quem, o quê), não a lista."
+    pegadinha: "A FCC adora sequências permutadas: todos os comandos do item são REAIS — só a ordem muda. Decore a LÓGICA (quem envia, para quem, o quê), não a lista.",
+    fonte: "IETF RFC 5321 — fluxo SMTP, comandos de transação e transferência da mensagem: https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-24",
@@ -2177,12 +2258,13 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: validar a metade inicial e parar aí. A estrutura 'Embora X, não-Y' exige decidir sobre Y — e Y é precisamente o que o currículo afirma que o IMAP faz."
     },
     regra: "Capacidades do IMAP (servidor): pastas no servidor, busca sem download completo, cópia mantida no servidor, sincronização multi-dispositivo.",
-    pegadinha: "Estrutura concessiva: a parte antes da vírgula é verdadeira de propósito, para conduzir à marcação errada. Analise a cláusula principal separadamente — é onde mora o gabarito."
+    pegadinha: "Estrutura concessiva: a parte antes da vírgula é verdadeira de propósito, para conduzir à marcação errada. Analise a cláusula principal separadamente — é onde mora o gabarito.",
+    fonte: "IETF RFC 9051 — IMAP4rev2, comandos e recursos de organização/pesquisa de mensagens no servidor: https://www.rfc-editor.org/rfc/rfc9051.html",
   }
 
 
 ,
-/* ===================== Continuação MÓDULO 1 — Microsoft 365 (q-m1-33..q-m1-40) ===================== */
+/* ===================== CONTINUAÇÃO M1 — Microsoft 365 (q-m1-33..q-m1-44) ===================== */
 
   {
     id: "q-m1-33",
@@ -2191,7 +2273,7 @@ var questoesBanco = [
     estilo: "fcc",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "modulo-1-unidade-2-topico-13-sub-1",
+    topico: "modulo-1-unidade-3-topico-2-sub-1",
     assunto: "M1.3 Excel — referências absolutas/mistas ao copiar fórmula",
     contexto: "Planilha do simulador Excel (assets/js/simulators.js) com uma taxa unitária fixa na célula B1 e valores brutos na coluna A. Em C2 foi digitada a fórmula =A2*$B$1 e ela é copiada para a célula imediatamente abaixo, C3. Fonte: escopo documentado do simulador (refs A1, $A$1 absoluta, $A1/B$2 mistas e a regra de ajustarFormulaAoCopiar).",
     enunciado: "De acordo com a regra do simulador para ajuste de fórmulas ao copiar, qual será o conteúdo da célula C3 após a cópia de C2?",
@@ -2210,7 +2292,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: converter indevidamente A2 em $A2/$A3. A referência original A2 não possui trava; copiá-la não adiciona uma trava nova — a trava só se preserva quando já existia."
     },
     regra: "Referências ao copiar: relativa (A2) muda em ambos os eixos conforme o deslocamento; absoluta ($A$1) nunca muda; mista ($A2 ou A$2) muda apenas o eixo sem $. O simulador implementa isso em ajustarFormulaAoCopiar (trava $ preservada; mistas ajustam só o eixo relativo).",
-    pegadinha: "A pegadinha é a mistura de dois eixos numa só fórmula: quem copia 'no olho' tende a deslocar também a célula travada ($B$1) ou a esquecer de deslocar a relativa (A2)."
+    pegadinha: "A pegadinha é a mistura de dois eixos numa só fórmula: quem copia 'no olho' tende a deslocar também a célula travada ($B$1) ou a esquecer de deslocar a relativa (A2).",
+    fonte: "Microsoft Support — Visão geral de fórmulas e referências relativas, absolutas e mistas no Excel: https://support.microsoft.com/pt-br/excel/get-started/overview-of-formulas-in-excel",
   },
   {
     id: "q-m1-34",
@@ -2219,7 +2302,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "avancado",
-    topico: "modulo-1-unidade-2-topico-13-sub-1",
+    topico: "modulo-1-unidade-3-topico-4-sub-1",
     assunto: "M1.3 Excel — PROCX e o argumento opcional se_não_encontrado",
     contexto: "Afirmação sobre o comportamento documentado da função de pesquisa PROCX no simulador Excel (assets/js/simulators.js — cabeçalho 'FUNÇÕES SUPORTADAS' e exemplo de sintaxe PROCX(20; A1:A3; B1:B3; \"n/a\"; 0)).",
     enunciado: "No simulador documentado, o PROCX realiza correspondência exata por padrão e, quando o valor procurado não é encontrado e o argumento opcional \"se_não_encontrado\" foi informado, a função devolve esse valor personalizado em vez do código de erro #N/A.",
@@ -2232,7 +2315,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: (1) confundir PROCX com PROCV, achando que o padrão é busca aproximada; (2) crer que o PROCX sempre lança #N/A sem alternativa, ignorando o argumento opcional 'se_não_encontrado' que permite um retorno customizado; (3) tratar o #N/A como obrigatório mesmo quando o usuário forneceu um valor de fallback."
     },
     regra: "PROCX(procurar; intervalo_busca; intervalo_retorno; [se_não_encontrado]; [modo]): correspondência exata por padrão; na ausência de correspondência, devolve #N/A ou o valor do argumento opcional 'se_não_encontrado', quando informado.",
-    pegadinha: "A armadilha é projetar o comportamento do PROCV (aproximado por padrão, sem retorno customizado simples) sobre o PROCX, que é exato por padrão e possui o argumento específico 'se_não_encontrado'."
+    pegadinha: "A armadilha é projetar o comportamento do PROCV (aproximado por padrão, sem retorno customizado simples) sobre o PROCX, que é exato por padrão e possui o argumento específico 'se_não_encontrado'.",
+    fonte: "Microsoft Support — Função PROCX, correspondência e argumento se_não_encontrada: https://support.microsoft.com/pt-br/excel/functions/xlookup-function",
   },
   {
     id: "q-m1-35",
@@ -2241,7 +2325,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "modulo-1-unidade-2-topico-13-sub-1",
+    topico: "modulo-1-unidade-3-topico-3-sub-2",
     assunto: "M1.3 Excel — separador regional de argumentos e decimais",
     contexto: "Afirmação sobre a regra de desambiguação do separador regional no simulador Excel (assets/js/simulators.js — cabeçalho 'SEPARADOR REGIONAL').",
     enunciado: "No simulador documentado, a fórmula SOMA(1,5; 2,5) resulta em 4, porque a presença do ponto e vírgula ativa o modo regional pt-BR, em que o ponto e vírgula separa argumentos e a vírgula funciona como separador decimal; já SOMA(1,5), sem o ponto e vírgula, resulta em 6, por ser interpretada como dois argumentos no modo internacional.",
@@ -2254,7 +2338,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: (1) assumir que ',' é sempre decimal, ignorando que, sem ';', o simulador entra em modo internacional e a trata como separador de argumentos; (2) calcular SOMA(1,5) como se fosse 1,5 (um único valor), quando a ausência de ';' a torna dois argumentos (1 e 5 = 6)."
     },
     regra: "Desambiguação pelo ';': com ';' (fora de textos) → modo pt-BR (';' separa argumentos, ',' ou '.' é decimal); sem ';' → modo internacional (',' separa argumentos, '.' é decimal). Consequência declarada: SOMA(1,5) sem ';' = 6.",
-    pegadinha: "A armadilha é a aparente identidade textual entre '1,5' (decimal em pt-BR) e '1,5' (dois argumentos em modo internacional): o que decide é a presença ou não do ponto e vírgula."
+    pegadinha: "A armadilha é a aparente identidade textual entre '1,5' (decimal em pt-BR) e '1,5' (dois argumentos em modo internacional): o que decide é a presença ou não do ponto e vírgula.",
+    fonte: "Microsoft Support — Separadores de argumentos e fórmulas no Excel: https://support.microsoft.com/pt-br/excel/how-to-avoid-broken-formulas-in-excel",
   },
   {
     id: "q-m1-36",
@@ -2263,7 +2348,7 @@ var questoesBanco = [
     estilo: "vunesp",
     origem: "autoral",
     nivel: "basico",
-    topico: "modulo-1-unidade-4",
+    topico: "modulo-1-unidade-4-topico-1-sub-1",
     assunto: "M1.4 PowerPoint — diferença entre animação e transição",
     contexto: "Secretário municipal prepara uma apresentação de prestação de contas em PowerPoint e precisa aplicar efeitos visuais. Ele confunde 'animação' com 'transição'. Fonte: conteúdo da unidade 1.4 (curriculumPowerPoint14).",
     enunciado: "Sobre animações e transições no PowerPoint, conforme a unidade 1.4, assinale a alternativa que apresenta a diferença correta entre os dois conceitos.",
@@ -2282,7 +2367,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: invenção de restrição inexistente. O currículo não limita transições ao primeiro slide nem animações ao último; ambos os efeitos são aplicáveis a qualquer slide/objeto."
     },
     regra: "Animação = efeito em objeto individual dentro de um slide (entrada, ênfase, saída). Transição = efeito entre slides (fade, push, wipe). São conceitos distintos.",
-    pegadinha: "A alternativa A é a inversão direta da definição; quem decorou os termos sem fixar 'dentro × entre' tende a escolhê-la."
+    pegadinha: "A alternativa A é a inversão direta da definição; quem decorou os termos sem fixar 'dentro × entre' tende a escolhê-la.",
+    fonte: "Microsoft Support — Animações e transições no PowerPoint: https://support.microsoft.com/pt-br/powerpoint/training/video-animations-and-transitions-for-powerpoint-web",
   },
   {
     id: "q-m1-37",
@@ -2291,7 +2377,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "modulo-1-unidade-4",
+    topico: "modulo-1-unidade-4-topico-1-sub-1",
     assunto: "M1.4 PowerPoint — escopo de ação do Slide Mestre",
     contexto: "Afirmação sobre o comportamento do Slide Mestre (Slide Master) na unidade 1.4 (curriculumPowerPoint14).",
     enunciado: "No PowerPoint, ao alterar o Slide Mestre (layout pai), a modificação é aplicada apenas ao slide atualmente selecionado, pois cada slide guarda uma cópia independente dos elementos de layout definidos pelo mestre.",
@@ -2304,7 +2390,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: imaginar que cada slide 'congelou' uma cópia dos elementos do mestre no momento da criação, de modo que editá-lo só afetaria o slide aberto. Na verdade, os slides permanecem vinculados ao mestre, e a edição do mestre os atualiza em conjunto."
     },
     regra: "Slide Mestre (Slide Master): define tipografia, cores, logotipos e layouts filhos; alterá-lo propaga para todos os slides vinculados (e seus layouts filhos).",
-    pegadinha: "A armadilha é a intuição de 'cópia local fixa': quem acredita que o slide guarda uma cópia independente dos elementos do mestre conclui, equivocadamente, que a edição do mestre afeta só o slide aberto."
+    pegadinha: "A armadilha é a intuição de 'cópia local fixa': quem acredita que o slide guarda uma cópia independente dos elementos do mestre conclui, equivocadamente, que a edição do mestre afeta só o slide aberto.",
+    fonte: "Microsoft Support — Personalizar o Slide Mestre no PowerPoint: https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master",
   },
   {
     id: "q-m1-38",
@@ -2313,7 +2400,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "modulo-1-unidade-5",
+    topico: "modulo-1-unidade-5-topico-1-sub-1",
     assunto: "M1.5 OneDrive — sincronização não é backup imutável",
     contexto: "Afirmação sobre a natureza do OneDrive como serviço de armazenamento em nuvem (unidade 1.5, curriculumOneDrive15).",
     enunciado: "Como o OneDrive é um serviço de sincronização bidirecional e não de backup imutável, alterações maliciosas — como as provocadas por ransomware em arquivos locais — podem se propagar para a nuvem, razão pela qual ele não substitui um backup corporativo completo e separado.",
@@ -2326,35 +2413,37 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: confundir 'ter uma cópia na nuvem' com 'ter backup'. Como a cópia é sincronizada (não imutável), um arquivo criptografado localmente por ransomware é replicado para a nuvem, destruindo a suposta proteção. A cópia em nuvem só protege se houver um backup independente e não sincronizado."
     },
     regra: "OneDrive = sincronização bidirecional, não backup imutável. Alterações (inclusive maliciosas) propagam para a nuvem; não substitui backup corporativo completo (recomendação 3-2-1: 3 cópias, 2 mídias, 1 offsite).",
-    pegadinha: "A armadilha é equiparar 'armazenamento em nuvem' a 'backup': a sincronização replica o estado atual (inclusive o danificado), enquanto o backup exige uma cópia independente e imutável."
+    pegadinha: "A armadilha é equiparar 'armazenamento em nuvem' a 'backup': a sincronização replica o estado atual (inclusive o danificado), enquanto o backup exige uma cópia independente e imutável.",
+    fonte: "Microsoft Support — Como detectar ransomware e recuperar arquivos usando OneDrive: https://support.microsoft.com/pt-br/onedrive/how-to-detect-ransomware-and-recover-files-using-onedrive",
   },
   {
     id: "q-m1-39",
     modulo: 1,
     formato: "mc",
-    estilo: "fcc",
+    estilo: "vunesp",
     origem: "autoral",
-    nivel: "basico",
-    topico: "modulo-1-unidade-5",
-    assunto: "M1.5 OneDrive — histórico de versões e restauração",
-    contexto: "Um servidor editou por engano um documento armazenado no OneDrive e precisa recuperar o conteúdo de dias atrás. Fonte: unidade 1.5 (curriculumOneDrive15) — histórico de versões.",
-    enunciado: "Sobre o histórico de versões de um arquivo no OneDrive, conforme a unidade 1.5, assinale a alternativa correta.",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-1-topico-1-sub-6",
+    assunto: "M1.1 OneDrive — histórico de versões e restauração",
+    contexto: "Um órgão está definindo procedimentos de recuperação de arquivos no OneDrive e precisa documentar limites aplicáveis ao seu ambiente.",
+    enunciado: "Qual orientação sobre o histórico de versões é tecnicamente mais segura?",
     alternativas: [
-      { letra: "A", texto: "Ao restaurar uma versão anterior, o OneDrive exclui automaticamente a versão atual do arquivo, que passa a não existir mais." },
-      { letra: "B", texto: "O OneDrive armazena versões anteriores (30 dias padrão no M365, até 500 versões) e, ao restaurar uma versão anterior, preserva a versão atual, criando uma cópia restaurada." },
-      { letra: "C", texto: "O histórico de versões é ilimitado e retém versões por tempo indeterminado, sem qualquer teto de quantidade de versões." },
-      { letra: "D", texto: "As versões anteriores só podem ser restauradas por um administrador do locatário e nunca geram uma cópia no arquivo." }
+      { letra: "A", texto: "Todos os arquivos mantêm exatamente 500 versões por 30 dias, independentemente do tipo de conta e das políticas." },
+      { letra: "B", texto: "Verifique o tipo de conta, o serviço e as políticas de retenção aplicáveis; não presuma um limite universal de versões ou prazo, e teste o processo de restauração." },
+      { letra: "C", texto: "Restaurar uma versão anterior sempre apaga definitivamente a versão atual." },
+      { letra: "D", texto: "O histórico de versões é um backup imutável e substitui cópias de segurança independentes." }
     ],
     gabarito: "B",
-    justificativa: "A unidade 1.5 define: cada arquivo armazena versões anteriores (30 dias padrão no M365; até 500 versões) e a restauração não exclui a versão atual — cria uma cópia restaurada. A alternativa B reproduz exatamente esses três pontos (teto de 500 versões, janela padrão de 30 dias e preservação da versão atual).",
+    justificativa: "A retenção e a quantidade de versões disponíveis dependem do serviço, do tipo de conta e das configurações e políticas aplicáveis; não se deve generalizar um prazo ou limite único para todo ambiente Microsoft 365. Antes de definir um procedimento institucional, confirme a configuração efetiva e teste a restauração. O histórico de versões é útil para recuperação, mas não equivale, por si só, a um backup independente e imutável.",
     analise: {
-      A: "INCORRETA. Erro conceitual: afirma que a restauração exclui a versão atual. A unidade 1.5 diz o oposto — a restauração NÃO exclui a versão atual, mas cria uma cópia restaurada.",
-      B: "CORRETA. É a única que respeita a definição: 30 dias padrão no M365, teto de até 500 versões e preservação da versão atual (a restauração cria uma cópia, sem apagar a atual).",
-      C: "INCORRETA. Erro conceitual: inventa ilimitação. A unidade 1.5 fixa teto de até 500 versões e janela padrão de 30 dias — não é ilimitado nem por tempo indeterminado.",
-      D: "INCORRETA. Erro conceitual: invenção de restrição de permissão e negação da cópia. O currículo não condiciona a restauração a administrador e afirma que a restauração gera cópia — a alternativa nega exatamente o que o texto diz."
+      A: "INCORRETA. Transforma valores que podem variar por serviço e política em garantias universais.",
+      B: "CORRETA. A orientação exige confirmar a configuração aplicável e validar o procedimento de recuperação.",
+      C: "INCORRETA. A restauração não deve ser descrita como exclusão definitiva universal da versão atual; o comportamento deve ser verificado na experiência documentada do serviço.",
+      D: "INCORRETA. Histórico de versões e backup independente têm propriedades e objetivos distintos; sincronização/histórico não substituem uma estratégia de backup."
     },
-    regra: "Histórico de versões no OneDrive: versões anteriores retidas por 30 dias padrão no M365, até 500 versões; a restauração preserva a versão atual e cria uma cópia restaurada.",
-    pegadinha: "A pegadinha é a alternativa A, que inverte a regra central ('restauração não exclui a versão atual'); quem associa 'restaurar' a 'sobrescrever/apagar' tende a marcá-la."
+    regra: "Documente a retenção conforme serviço, tipo de conta e política do locatário; teste restauração e mantenha backup independente conforme o risco.",
+    pegadinha: "Não transforme um valor padrão observado em uma configuração específica em regra universal para todas as contas e locatários.",
+    fonte: "Microsoft Support — Histórico de versões e restauração de arquivos no OneDrive: https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive",
   },
   {
     id: "q-m1-40",
@@ -2363,26 +2452,27 @@ var questoesBanco = [
     estilo: "fgv",
     origem: "autoral",
     nivel: "avancado",
-    topico: "modulo-1-unidade-4",
-    assunto: "M1.4 PowerPoint — PDF vs Empacotar Apresentação para CD",
-    contexto: "Uma autarquia preparará uma apresentação em PowerPoint que será exibida em um projetor em sala sem internet e em um computador que não possui o PowerPoint instalado. O responsável precisa escolher como disponibilizar o arquivo para esse ambiente offline. Fonte: unidade 1.4 (curriculumPowerPoint14) — exportação e empacotamento.",
-    enunciado: "À luz da unidade 1.4, sobre como garantir que a apresentação funcione corretamente nesse ambiente offline (sem internet e sem o PowerPoint instalado), assinale a alternativa correta.",
+    topico: "modulo-1-unidade-4-topico-1-sub-1",
+    assunto: "M1.4 PowerPoint — PDF para exibição offline sem PowerPoint",
+    contexto: "Uma autarquia exibirá uma apresentação estática (sem animações nem vídeos) em um computador sem PowerPoint e sem internet. O computador tem um leitor de PDF instalado, e o requisito é preservar o layout dos slides.",
+    enunciado: "Qual opção atende melhor ao requisito descrito?",
     alternativas: [
-      { letra: "A", texto: "Basta exportar a apresentação para PDF, pois o PDF já vincula as fontes e inclui toda a mídia, transformando o arquivo em apresentação executável e dispensando qualquer outro procedimento." },
-      { letra: "B", texto: "Para apresentação offline em máquina sem o PowerPoint, deve-se usar 'Empacotar Apresentação para CD' (Package Presentation), que inclui fontes vinculadas e mídia; a exportação para PDF preserva o layout, mas não converte o arquivo em apresentação executável." },
-      { letra: "C", texto: "O modo de apresentação (Slide Show) roda mesmo sem o PowerPoint instalado, desde que haja conexão com a internet para carregar os slides." },
-      { letra: "D", texto: "A exportação para PDF e o 'Empacotar Apresentação para CD' têm exatamente a mesma função e podem ser usados de forma totalmente intercambiável em qualquer situação." }
+      { letra: "A", texto: "Exportar para PDF: preserva o layout e permite visualizar os slides em um computador com leitor de PDF, mas não preserva animações/transições como apresentação interativa." },
+      { letra: "B", texto: "Usar 'Empacotar Apresentação para CD', pois o pacote de fontes e arquivos vinculados substitui o aplicativo necessário para abrir e reproduzir a apresentação." },
+      { letra: "C", texto: "Usar PowerPoint para a Web, que funciona sem conexão com a internet após o arquivo ser carregado." },
+      { letra: "D", texto: "Usar PDF e pacote de apresentação como formatos intercambiáveis, pois ambos preservam animações, transições e todos os recursos interativos." }
     ],
-    gabarito: "B",
-    justificativa: "A unidade 1.4 trata dois recursos distintos: 'Exportação para PDF preserva layout' e, 'para apresentação offline, usar \"Empacotar Apresentação para CD\" (Package Presentation) incluindo fontes vinculadas e mídia'. O Empacotar é o caminho para levar a apresentação (com fontes e mídia) a um ambiente offline; o PDF, por sua vez, preserva o layout mas é um documento para leitura/impressão, não uma apresentação executável no PowerPoint. A alternativa B respeita essa distinção.",
+    gabarito: "A",
+    justificativa: "A documentação oficial da Microsoft informa que exportar para PDF congela a formatação e o layout e permite visualizar os slides sem ter o PowerPoint instalado. O PDF não mantém a apresentação interativa com suas animações e transições. 'Empacotar Apresentação para CD/USB' transfere fontes e arquivos externos, mas não substitui um aplicativo compatível; o Visualizador do PowerPoint foi descontinuado. O PowerPoint para a Web exige conexão e armazenamento em serviço online, portanto não atende ao cenário offline.",
     analise: {
-      A: "INCORRETA. Erro conceitual: atribui ao PDF o que o currículo reserva ao Empacotar (vincular fontes e incluir mídia) e o transforma em 'apresentação executável'. O PDF preserva layout, mas não é a ferramenta de empacotamento offline descrita.",
-      B: "CORRETA. É a única que aplica corretamente a unidade 1.4: para offline sem PowerPoint usa-se 'Empacotar Apresentação para CD' (fontes vinculadas + mídia); o PDF preserva o layout mas não converte o arquivo em apresentação executável.",
-      C: "INCORRETA. Erro conceitual: invenção dupla. O modo de apresentação (Slide Show) exige o PowerPoint instalado e não depende de internet; a alternativa afirma o oposto (roda sem o programa e precisa de internet).",
-      D: "INCORRETA. Erro conceitual: equiparação indevida. O currículo descreve funções distintas (PDF preserva layout; Empacotar leva fontes e mídia para offline); não são intercambiáveis em qualquer situação."
+      A: "CORRETA. O cenário exige somente exibição estática, layout preservado e funcionamento offline com leitor de PDF disponível.",
+      B: "INCORRETA. O pacote transfere fontes e arquivos vinculados, mas não instala por si só um visualizador compatível; o Visualizador do PowerPoint foi descontinuado.",
+      C: "INCORRETA. PowerPoint para a Web requer conexão com a internet para abrir a apresentação armazenada em serviço online.",
+      D: "INCORRETA. PDF preserva o layout para visualização, mas não reproduz a sequência de animações e transições como uma apresentação PowerPoint."
     },
-    regra: "Exportação para PDF preserva o layout (documento para leitura/impressão). Para apresentação offline, usar 'Empacotar Apresentação para CD' (Package Presentation), que inclui fontes vinculadas e mídia.",
-    pegadinha: "A armadilha é a alternativa A, que transfere ao PDF a responsabilidade de vincular fontes e incluir mídia — papel que a unidade 1.4 atribui ao Empacotar para CD — e a D, que apaga a distinção entre os dois recursos."
+    regra: "Sem PowerPoint e sem internet: PDF é adequado para slides estáticos quando há leitor de PDF. Para preservar animações, narração e temporização, escolha um formato de vídeo compatível ou garanta previamente um aplicativo de apresentação compatível.",
+    pegadinha: "Empacotar fontes e arquivos externos não equivale a fornecer um aplicativo para reproduzir a apresentação; PDF é adequado para visualização estática, não para preservar a interatividade.",
+    fonte: "Microsoft Support — Salvar apresentações do PowerPoint como PDF: https://support.microsoft.com/pt-br/powerpoint/training/save-powerpoint-presentations-as-pdf-files; Exibir uma apresentação sem o PowerPoint (inclui aviso de que o Visualizador foi desativado): https://support.microsoft.com/pt-br/powerpoint/view-a-presentation-without-powerpoint; Empacotar apresentação para CD/USB: https://support.microsoft.com/en-au/powerpoint/package-a-presentation-for-cd-or-usb-flash-drive."
   },
   /* ===================== FIM do bloco q-m1-33..q-m1-40 (Módulo 1) ===================== */
 {
@@ -2411,7 +2501,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: troca as vantagens/desvantagens. Banda garantida e setup lento são características da comutação de CIRCUITOS; a vantagem dos pacotes é o aproveitamento de banda."
     },
     regra: "Comutação de pacotes: dados em pacotes independentes, banda compartilhada, tolerância a falhas; latência variável e possível perda/reordenação. A Internet usa pacotes; a telefonia tradicional, circuitos.",
-    pegadinha: "Inverter vantagens e desvantagens entre os dois tipos de comutação: 'banda garantida' e 'setup lento' pertencem aos circuitos, não aos pacotes."
+    pegadinha: "Inverter vantagens e desvantagens entre os dois tipos de comutação: 'banda garantida' e 'setup lento' pertencem aos circuitos, não aos pacotes.",
+    fonte: "Cisco — comutação de pacotes em WANs: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-28",
@@ -2420,26 +2511,27 @@ var questoesBanco = [
     estilo: "fgv",
     origem: "autoral",
     nivel: "avancado",
-    topico: "m2-u1-t1-s1",
-    assunto: "M2.1 Fundamentos — métricas de desempenho",
+    topico: "m2-u1-t3-s1",
+    assunto: "M2.1 Métricas de desempenho",
     contexto: "Um enlace de 1 Gbps apresenta, em teste, throughput de 720 Mbps; o ping é estável, mas aplicações de voz apresentam áudio interrompido.",
     enunciado: "Considerando largura de banda, throughput, latência e jitter, assinale a alternativa que interpreta corretamente o cenário.",
     alternativas: [
       { letra: "A", texto: "Largura de banda e throughput são sinônimos; os 280 Mbps restantes são consumidos exclusivamente por colisões." },
-      { letra: "B", texto: "Throughput (720 Mbps) é a taxa real alcançada, inferior à largura de banda teórica (1 Gbps); o áudio interrompido é típico de jitter alto, não de latência estável." },
+      { letra: "B", texto: "Throughput (720 Mbps) é a taxa real alcançada, inferior à largura de banda nominal (1 Gbps); o áudio interrompido é compatível com jitter alto, que deve ser medido separadamente da latência." },
       { letra: "C", texto: "Throughput nunca é inferior à largura de banda; se mede 720 Mbps, a largura de banda real é 720 Mbps." },
       { letra: "D", texto: "Jitter é a latência média do enlace; como o ping está estável, o jitter é necessariamente alto." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: largura de banda = capacidade máxima teórica (1 Gbps); throughput = taxa real alcançada, SEMPRE menor que a largura de banda, devido a overhead de protocolo, colisões, congestionamento e qualidade do sinal. Jitter = variação na latência entre pacotes consecutivos, crítico para VoIP (áudio interrompido). Latência e jitter são métricas distintas: ping estável não implica jitter alto nem baixo. A alternativa B é a única coerente.",
+    justificativa: "O currículo distingue largura de banda nominal (capacidade do enlace) de throughput (taxa útil observada), normalmente menor devido a overhead de protocolo, congestionamento, erros e outras condições da rede. Jitter = variação na latência entre pacotes consecutivos, crítico para VoIP (áudio interrompido). Latência e jitter são métricas distintas: ping estável não implica jitter alto nem baixo. A alternativa B é a única coerente.",
     analise: {
       A: "INCORRETA. Erro conceitual: afirma que largura de banda e throughput são sinônimos (o currículo corrige isso) e reduz a diferença a 'colisões apenas', ignorando overhead, congestionamento e qualidade do sinal.",
-      B: "CORRETA. Throughput é a taxa real (sempre < largura de banda) e o áudio interrompido em VoIP é sintoma de jitter alto; a latência estável (ping) é métrica distinta do jitter, conforme o currículo.",
+      B: "CORRETA. Throughput é a taxa real (normalmente inferior à capacidade nominal) e o áudio interrompido pode ser compatível com jitter; ping estável não mede a variação entre pacotes, que precisa ser avaliada separadamente.",
       C: "INCORRETA. Erro conceitual: inverte a regra — o currículo afirma que 'throughput nunca excede largura de banda', ou seja, é sempre menor ou igual, não que seriam iguais.",
       D: "INCORRETA. Erro conceitual: define jitter como 'latência média' (é a VARIAÇÃO da latência) e deduz jitter alto de ping estável — dois erros, pois latência e jitter são independentes."
     },
     regra: "Largura de banda (teórica) ≥ throughput (real). Jitter = variação da latência entre pacotes; é distinto da latência média e crítico para VoIP/streaming.",
-    pegadinha: "Confundir latência (ping) com jitter (variação da latência): ping estável não diz nada sobre o jitter, que é o que causa o áudio interrompido."
+    pegadinha: "Confundir latência (ping) com jitter (variação da latência): ping estável não diz nada sobre o jitter, que é o que causa o áudio interrompido.",
+    fonte: "Cisco — latência, jitter e desempenho de rede: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
   },
   {
     id: "q-m2-29",
@@ -2461,7 +2553,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: achar que broadcast 'chega a toda a Internet' (o próprio exemplo 'erro' do currículo corrige: roteadores não encaminham 255.255.255.255 para evitar tempestades de broadcast)."
     },
     regra: "Broadcast = um-para-todos no domínio de broadcast; limitado pela sub-rede, não atravessa roteadores. ARP e DHCP discovery são exemplos didáticos.",
-    pegadinha: "Itens simples por design: o risco é a superstição de que 'broadcast se espalha por toda a rede/Internet'; ele é contido na sub-rede pelos roteadores."
+    pegadinha: "Itens simples por design: o risco é a superstição de que 'broadcast se espalha por toda a rede/Internet'; ele é contido na sub-rede pelos roteadores.",
+    fonte: "IETF RFC 826 — ARP e resolução de endereços em rede local; IETF RFC 2131 — DHCP: https://www.rfc-editor.org/rfc/rfc826.html ; https://www.rfc-editor.org/rfc/rfc2131.html",
   },
   {
     id: "q-m2-30",
@@ -2476,12 +2569,12 @@ var questoesBanco = [
     enunciado: "Sobre os tipos de comunicação empregados nesses dois casos, assinale a alternativa correta.",
     alternativas: [
       { letra: "A", texto: "Ambos são unicast; a videoaula exigiria 200 fluxos separados para ser eficiente." },
-      { letra: "B", texto: "O acesso ao site é unicast (um-para-um); a videoaula é mais eficiente em multicast (um-para-muitos, grupo inscrito), evitando 200 fluxos duplicados." },
+      { letra: "B", texto: "O acesso ao site é unicast (um-para-um); se a aplicação e a infraestrutura suportarem multicast, a videoaula pode usar um fluxo para o grupo em vez de 200 fluxos unicast independentes." },
       { letra: "C", texto: "A videoaula é broadcast, pois atinge muitos receptores, e atravessa roteadores até todos os setores." },
       { letra: "D", texto: "O acesso ao site é anycast e a videoaula é broadcast, que exige inscrição em grupo via IGMP." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define unicast como comunicação um-para-um (ex.: acessar um site) e multicast como um-para-muitos, para um grupo específico que se inscreveu (ex.: streaming de vídeo IPTV), exigindo inscrição do receptor (IGMP join). No exemplo de aplicação, streaming para muitos funcionários é mais eficiente em multicast do que em unicast (que exigiria N fluxos separados). A alternativa B aplica corretamente essas definições.",
+    justificativa: "O currículo define unicast como comunicação um-para-um (ex.: acessar um site) e multicast como um-para-muitos, para um grupo específico que se inscreveu (ex.: streaming de vídeo IPTV), exigindo inscrição do receptor (IGMP join). Quando a aplicação e a infraestrutura suportam multicast, o streaming para muitos funcionários pode reduzir fluxos duplicados em comparação com N sessões unicast. A alternativa B aplica essas definições ao cenário.",
     analise: {
       A: "INCORRETA. Erro conceitual: a videoaula para muitos é o caso típico de multicast; afirmar que 'unicast é mais eficiente' contradiz o exemplo do currículo (unicast exigiria 200 fluxos, consumindo muito mais banda).",
       B: "CORRETA. Site = unicast (um-para-um); videoaula = multicast (um-para-muitos, com inscrição em grupo), mais eficiente que N fluxos unicast, conforme o currículo.",
@@ -2489,7 +2582,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: acesso a um site é unicast, não anycast; e quem exige inscrição via IGMP é o multicast, não o broadcast — troca de conceitos."
     },
     regra: "Unicast (1:1, ex.: site) × multicast (1:many, grupo inscrito, IGMP, ex.: streaming) × broadcast (1:all da sub-rede, limitado por roteadores) × anycast (1:mais-próximo).",
-    pegadinha: "Confundir multicast com broadcast: multicast exige grupo inscrito (IGMP) e é contido de forma diferente; broadcast atinge todos da sub-rede e não atravessa roteadores."
+    pegadinha: "Confundir multicast com broadcast: multicast exige grupo inscrito (IGMP) e é contido de forma diferente; broadcast atinge todos da sub-rede e não atravessa roteadores.",
+    fonte: "IETF RFC 1112 — multicast IPv4; IETF RFC 4291 — unicast, anycast, multicast e ausência de broadcast em IPv6: https://www.rfc-editor.org/rfc/rfc1112.html ; https://www.rfc-editor.org/rfc/rfc4291.html",
   },
   {
     id: "q-m2-31",
@@ -2517,7 +2611,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: coaxial é citado como meio de redes antigas/TV a cabo, não como recomendação moderna entre prédios; a imunidade a interferência pertence à fibra."
     },
     regra: "UTP: até 100 m, suscetível a EMI (Cat6: 10 Gbps/55 m; Cat6a: 10 Gbps/100 m). Fibra óptica: alta banda, imune a EMI, longa distância sem repetidor.",
-    pegadinha: "Atribuir a UTP a imunidade a interferência eletromagnética (é da fibra) e esquecer o teto de 100 m do par trançado."
+    pegadinha: "Atribuir a UTP a imunidade a interferência eletromagnética (é da fibra) e esquecer o teto de 100 m do par trançado.",
+    fonte: "Cisco — meios de conectividade de redes e WAN: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html ; https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-32",
@@ -2539,7 +2634,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: associar 'Cat6 = 10 Gbps' ao alcance máximo de 100 m do par trançado (esse 100 m vale para 1 Gbps; a 10 Gbps o Cat6 cai para 55 m)."
     },
     regra: "UTP: Cat5e (1 Gbps), Cat6 (10 Gbps até 55 m), Cat6a (10 Gbps até 100 m). O alcance de 100 m só se mantém a 10 Gbps com Cat6a.",
-    pegadinha: "Confundir Cat6 com Cat6a: a letra 'a' (augmented) é justamente o que estende 10 Gbps aos 100 m completos."
+    pegadinha: "Confundir Cat6 com Cat6a: a letra 'a' (augmented) é justamente o que estende 10 Gbps aos 100 m completos.",
+    fonte: "Cisco — 10GBASE-T: até 55 m em Cat6 UTP e até 100 m em Cat6 blindado/Cat6A/Cat7: https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html",
   },
   {
     id: "q-m2-33",
@@ -2553,8 +2649,7 @@ var questoesBanco = [
     contexto: "Uma rede predial tem todos os computadores conectados a um switch central; a falha de um cabo afeta apenas o computador daquele cabo.",
     enunciado: "Sobre a topologia descrita, assinale a alternativa correta.",
     alternativas: [
-      { letra: "A", texto: "É topologia em anel: a falha de um nó quebra o círculo e derruba toda a rede.",
-      letra2: null },
+      { letra: "A", texto: "É topologia em anel: a falha de um nó quebra o círculo e derruba toda a rede." },
       { letra: "B", texto: "É topologia em estrela: a falha de um nó afeta apenas esse nó; a falha do dispositivo central (switch) derruba toda a rede." },
       { letra: "C", texto: "É topologia em barra (bus): a falha do switch é irrelevante e só a falha do cabo central derruba a rede." },
       { letra: "D", texto: "É topologia em malha: há um único dispositivo central e alta redundância por definição." }
@@ -2568,7 +2663,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: malha conecta cada nó a todos os outros (redundância por múltiplos caminhos), sem dispositivo central único — a descrição mistura malha com estrela."
     },
     regra: "Estrela: todos os nós a um switch/hub central; falha de nó = isolada; falha do central = rede toda caída. Malha = redundância por múltiplos caminhos.",
-    pegadinha: "A pegadinha é localizar o ponto único de falha: na estrela é o dispositivo central (não o nó), ao contrário do bus, onde é o cabo backbone."
+    pegadinha: "A pegadinha é localizar o ponto único de falha: na estrela é o dispositivo central (não o nó), ao contrário do bus, onde é o cabo backbone.",
+    fonte: "Cisco — topologia física/lógica e redundância: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-34",
@@ -2577,20 +2673,21 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "basico",
-    topico: "m2-u1-t1-s3",
+    topico: "m2-u1-t3-s1",
     assunto: "M2.1 Fundamentos — métricas de desempenho",
     contexto: "Um enlace de 1 Gbps é testado e apresenta throughput de 850 Mbps.",
-    enunciado: "Throughput é a taxa real de transferência alcançada em um enlace e, por isso, nunca excede a largura de banda teórica do canal.",
+    enunciado: "Throughput é a taxa útil efetivamente observada em um enlace e, sob definições e unidades de medida compatíveis, não excede a capacidade nominal do canal.",
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho 'throughput ... nunca excede a largura de banda teórica' é VERDADEIRO: o currículo define 'Throughput: taxa real de transferência alcançada (sempre menor que a largura de banda)' e afirma explicitamente que 'Throughput nunca excede largura de banda'.",
-    justificativa: "O currículo diferencia largura de banda (capacidade máxima teórica, ex.: 1 Gbps) de throughput (taxa real alcançada, sempre menor), atribuindo a diferença a overhead de protocolo (cabeçalhos TCP/IP), colisões, congestionamento e qualidade do sinal. O item está de acordo com a regra 'throughput nunca excede largura de banda'.",
+    justificativa: "A largura de banda descreve a capacidade nominal do enlace; throughput é a taxa útil efetivamente medida. Em condições reais, overhead, congestionamento e erros costumam deixar o throughput abaixo da capacidade nominal, e a comparação exige definições e unidades compatíveis.",
     analise: {
       item: "Item VERDADEIRO. Throughput é a taxa real e é sempre menor ou igual à largura de banda teórica — o currículo registra isso duas vezes (definição e correção do exemplo 'erro').",
       leituraIncorreta: "Leitura que induz ao erro: tratar largura de banda e throughput como sinônimos (o exemplo 'erro' do currículo corrige justamente essa equiparação)."
     },
-    regra: "Largura de banda = capacidade teórica máxima; throughput = taxa real medida, sempre ≤ largura de banda (diferença por overhead, colisões, congestionamento, sinal).",
-    pegadinha: "Itens C/E básicos misturam definições próximas; a disciplina é não confundir 'capacidade teórica' (banda) com 'taxa real' (throughput)."
+    regra: "Largura de banda = capacidade nominal do enlace; throughput = taxa útil medida, normalmente inferior por overhead e condições de rede. Compare-os usando definições e unidades compatíveis.",
+    pegadinha: "Itens C/E básicos misturam definições próximas; a disciplina é não confundir 'capacidade teórica' (banda) com 'taxa real' (throughput).",
+    fonte: "Cisco — latência e métricas de desempenho: https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
   },
   {
     id: "q-m2-35",
@@ -2602,7 +2699,7 @@ var questoesBanco = [
     topico: "m2-u1-t1-s2",
     assunto: "M2.1 Fundamentos — tipos de comunicação",
     contexto: "Um engenheiro documenta os tipos de tráfego usados por servidores DNS raiz, por uma CDN e por um serviço de streaming de vídeo.",
-    enunciado: "O anycast direciona o tráfego para o receptor mais próximo de um grupo (sendo usado em servidores DNS raiz e CDNs), enquanto o multicast exige que os receptores se inscrevam em um grupo.",
+    enunciado: "O anycast direciona o tráfego para a instância mais próxima selecionada pela política de roteamento (sendo usado em servidores DNS raiz e CDNs), enquanto o multicast exige que os receptores se inscrevam em um grupo.",
     alternativas: null,
     gabarito: "certo",
     trechoDeterminante: "O trecho é VERDADEIRO: o currículo define anycast como 'um-para-o-mais-próximo (ex: DNS root servers, CDN)' e multicast como 'um-para-muitos (grupo específico que se inscreveu)', com o receptor enviando IGMP join.",
@@ -2611,8 +2708,9 @@ var questoesBanco = [
       item: "Item VERDADEIRO. AnyCast = mais-próximo (DNS raiz/CDN); multicast = grupo inscrito (IGMP) — ambas as afirmações coincidem com o currículo.",
       leituraIncorreta: "Leitura que induz ao erro: confundir anycast com multicast (anycast não exige inscrição em grupo; entrega ao nó mais próximo) ou achar que multicast atinge 'todos' (é grupo específico)."
     },
-    regra: "Anycast = 1:mais-próximo (DNS raiz, CDN); multicast = 1:grupo-inscrito (IGMP); broadcast = 1:todos da sub-rede; unicast = 1:1.",
-    pegadinha: "A pegadinha é trocar os mecanismos: anycast não exige inscrição (IGMP); quem exige grupo inscrito é o multicast."
+    regra: "Anycast encaminha para uma instância selecionada pela política de roteamento, muitas vezes a mais próxima em termos topológicos (ex.: serviços DNS/CDN); multicast envia a um grupo; broadcast alcança o domínio local; unicast é 1:1.",
+    pegadinha: "A pegadinha é trocar os mecanismos: anycast não exige inscrição (IGMP); quem exige grupo inscrito é o multicast.",
+    fonte: "IETF RFC 4291 — unicast, anycast e multicast IPv6; IETF RFC 1112 — multicast IPv4: https://www.rfc-editor.org/rfc/rfc4291.html ; https://www.rfc-editor.org/rfc/rfc1112.html",
   },
   {
     id: "q-m2-36",
@@ -2634,7 +2732,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: achar que a Internet estabelece caminho dedicado (isso é comutação de circuitos) ou que a PSTN divide dados em pacotes (isso é comutação de pacotes)."
     },
     regra: "Comutação de circuitos = caminho dedicado (PSTN/telefonia tradicional); comutação de pacotes = dados em pacotes independentes (Internet/VoIP).",
-    pegadinha: "Itens simples que testam se o examinando associa cada tecnologia ao tipo de comutação correto, sem inverter PSTN (circuitos) e Internet (pacotes)."
+    pegadinha: "Itens simples que testam se o examinando associa cada tecnologia ao tipo de comutação correto, sem inverter PSTN (circuitos) e Internet (pacotes).",
+    fonte: "Cisco — comutação de pacotes em redes WAN e Internet: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
   },
   {
     id: "q-m2-37",
@@ -2656,7 +2755,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: confundir o ponto único de falha da barra (o cabo) com o da estrela (o dispositivo central) — são topologias distintas."
     },
     regra: "Barra (bus): cabo compartilhado; falha no cabo backbone = rede toda caída (ponto único de falha); colisões frequentes.",
-    pegadinha: "A pegadinha é localizar o ponto único de falha: na barra é o cabo; na estrela é o switch/hub central."
+    pegadinha: "A pegadinha é localizar o ponto único de falha: na barra é o cabo; na estrela é o switch/hub central.",
+    fonte: "Cisco — topologias físicas, barra e limitações de conectividade: https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
   },
   {
     id: "q-m2-38",
@@ -2665,7 +2765,7 @@ var questoesBanco = [
     estilo: "fcc",
     origem: "autoral",
     nivel: "avancado",
-    topico: "m2-u1-t1-s1",
+    topico: "m2-u4-t2-s1",
     assunto: "M2.1 Fundamentos — cálculo CIDR (/26)",
     contexto: "Um administrador recebe o bloco 192.168.10.0/26 para uma nova sub-rede de servidores.",
     enunciado: "Sobre os endereços dessa sub-rede, assinale a alternativa correta.",
@@ -2684,7 +2784,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: número correto de hosts (62) mas broadcast trocado — .62 é o ÚLTIMO HOST, e o broadcast é .63; além disso limita os hosts a .61."
     },
     regra: "CIDR: hosts válidos = 2^(32−prefixo) − 2. /26 → 64 endereços / 62 hosts; bloco de 64 no último octeto; máscara 255.255.255.192; broadcast = último endereço do bloco.",
-    pegadinha: "Confundir broadcast com o último host: o broadcast é .63 (último do bloco), enquanto .62 é o último host utilizável — a alternativa D explora essa troca."
+    pegadinha: "Confundir broadcast com o último host: o broadcast é .63 (último do bloco), enquanto .62 é o último host utilizável — a alternativa D explora essa troca.",
+    fonte: "IETF RFC 4632 — CIDR, prefixos e tamanhos de blocos IPv4: https://www.rfc-editor.org/rfc/rfc4632.html",
   },
   {
     id: "q-m2-39",
@@ -2693,7 +2794,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "m2-u1-t1-s1",
+    topico: "m2-u4-t2-s2",
     assunto: "M2.1 Fundamentos — cálculo CIDR (/27)",
     contexto: "Um administrador segmenta o bloco 10.0.0.0 em sub-redes e destina uma delas como 10.0.0.0/27.",
     enunciado: "A sub-rede 10.0.0.0/27 possui 32 endereços no total, dos quais 30 são hosts válidos, e seu endereço de broadcast é 10.0.0.31.",
@@ -2706,7 +2807,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: contar o broadcast (ou a rede) como host válido, ou confundir o tamanho do bloco (/27 = 32, não 16 nem 64)."
     },
     regra: "CIDR: total = 2^(32−prefixo); hosts válidos = total − 2. /27 → 32 endereços / 30 hosts; bloco de 32 no último octeto; broadcast = último endereço do bloco (10.0.0.31).",
-    pegadinha: "A pegadinha é contar rede e broadcast como hosts utilizáveis — a regra subtrai 2, restando 30 hosts válidos."
+    pegadinha: "A pegadinha é contar rede e broadcast como hosts utilizáveis — a regra subtrai 2, restando 30 hosts válidos.",
+    fonte: "IETF RFC 4632 — CIDR e tamanhos de sub-rede; RFC 791 — IPv4: https://www.rfc-editor.org/rfc/rfc4632.html ; https://www.rfc-editor.org/rfc/rfc791.html",
   },
   {
     id: "q-m2-40",
@@ -2715,7 +2817,7 @@ var questoesBanco = [
     estilo: "fgv",
     origem: "autoral",
     nivel: "avancado",
-    topico: "m2-u1-t1-s1",
+    topico: "m2-u4-t2-s1",
     assunto: "M2.1 Fundamentos — cálculo CIDR (/28)",
     contexto: "Uma VLAN recebeu o bloco 172.16.5.16/28 para segmentar um segmento de servidores.",
     enunciado: "Sobre os endereços dessa sub-rede, assinale a alternativa correta.",
@@ -2734,7 +2836,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: usa o bloco /28 ANTERIOR (172.16.5.0/28, rede .0, broadcast .15); a VLAN recebeu o bloco que começa em .16, não em .0."
     },
     regra: "CIDR: hosts válidos = 2^(32−prefixo) − 2. /28 → 16 endereços / 14 hosts; bloco de 16 no último octeto; máscara 255.255.255.240; rede .16 → broadcast .31.",
-    pegadinha: "Dupla armadilha: (1) trocar broadcast (.31) pelo último host (.30); (2) confundir o bloco pedido (.16/28) com o bloco anterior (.0/28)."
+    pegadinha: "Dupla armadilha: (1) trocar broadcast (.31) pelo último host (.30); (2) confundir o bloco pedido (.16/28) com o bloco anterior (.0/28).",
+    fonte: "IETF RFC 4632 — CIDR e prefixos IPv4; RFC 1918 — endereços IPv4 privados: https://www.rfc-editor.org/rfc/rfc4632.html ; https://www.rfc-editor.org/rfc/rfc1918.html",
   },
 {
     id: "q-m3-25",
@@ -2762,7 +2865,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: inverte a função — SMTP é de ENVIO, não de recebimento/baixar mensagens, conforme o exemplo 'erro' documentado no currículo."
     },
     regra: "SMTP = envio/transferência entre agentes de correio (cliente→servidor remetente→servidor destinatário). Recebimento/armazenamento na caixa = POP3/IMAP.",
-    pegadinha: "A pegadinha é trocar a função: quem associa 'SMTP' a 'caixa de entrada/baixar e-mail' inverte envio e recebimento — conceito corrigido no próprio exemplo 'erro' do currículo."
+    pegadinha: "A pegadinha é trocar a função: quem associa 'SMTP' a 'caixa de entrada/baixar e-mail' inverte envio e recebimento — conceito corrigido no próprio exemplo 'erro' do currículo.",
+    fonte: "IETF RFC 5321 — transporte de e-mail por SMTP entre clientes/servidores e relays: https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-26",
@@ -2784,7 +2888,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: confundir a porta 25 com 'submissão segura' — ela é a de relay (sem criptografia) e deve ser bloqueada para clientes externos; a submissão segura é 587/465."
     },
     regra: "Portas SMTP: 25 (relay, sem TLS, bloquear de externos), 587 (submissão + STARTTLS), 465 (SMTPS, SSL/TLS implícito). Criptografia é adicionada, não inerente.",
-    pegadinha: "Item composto: basta uma das três associações de porta estivesse trocada que seria Errado — a armadilha é a tentação de 'confiar' na porta 25 como segura."
+    pegadinha: "Item composto: basta uma das três associações de porta estivesse trocada que seria Errado — a armadilha é a tentação de 'confiar' na porta 25 como segura.",
+    fonte: "IETF RFC 8314 — TLS implícito para submissão/acesso e portas 465/993/995; RFC 5321 — SMTP: https://www.rfc-editor.org/rfc/rfc8314.html ; https://www.rfc-editor.org/rfc/rfc5321.html",
   },
   {
     id: "q-m3-27",
@@ -2804,15 +2909,16 @@ var questoesBanco = [
       { letra: "D", texto: "SMTP, porque é o protocolo de recebimento que sincroniza as caixas entre os dispositivos." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: 'IMAP: mantém e-mails sincronizados no servidor e no cliente. Ideal para multi-dispositivo (celular, tablet, computador)'. O exemplo de aplicação reforça: 'IMAP. Com POP3, os e-mails baixados para um dispositivo são apagados do servidor e não estarão disponíveis no outro dispositivo.' A alternativa B reproduz a definição de IMAP.",
+    justificativa: "O currículo define IMAP como apropriado à sincronização multi-dispositivo. POP3 permite baixar mensagens; a manutenção ou remoção da cópia no servidor depende da configuração do cliente. A alternativa B reproduz a definição de IMAP sem depender de uma regra universal de exclusão no POP3.",
     analise: {
-      A: "INCORRETA. Erro conceitual: POP3 não sincroniza o estado entre dispositivos — ele baixa e, por padrão, apaga do servidor; a sincronização é propriedade do IMAP.",
+      A: "INCORRETA. Erro conceitual: POP3 não sincroniza o estado entre dispositivos; a sincronização de pastas e marcações é característica do IMAP.",
       B: "CORRETA. Sincronização servidor-cliente e acesso multi-dispositivo são a definição de IMAP no currículo.",
-      C: "INCORRETA. Erro conceitual: inverte o comportamento do POP3 — por padrão ele APAGA do servidor após o download; 'cópia permanente' não é o padrão.",
+      C: "INCORRETA. Erro conceitual: a afirmação de que POP3 nunca apaga mensagens é absoluta e ignora as configurações de cada cliente; POP3 não oferece a sincronização de estado do IMAP.",
       D: "INCORRETA. Erro conceitual: SMTP é protocolo de ENVIO, não de recebimento/sincronização — confusão de função já corrigida no exemplo 'erro' do currículo."
     },
-    regra: "IMAP (143/993): estado no servidor, sincronização multi-dispositivo. POP3 (110/995): download local, apaga por padrão — 1 dispositivo/offline.",
-    pegadinha: "A alternativa C veste o POP3 com um comportamento confortável ('cópia permanente') que não é o padrão; a A atribui a POP3 a sincronização que pertence ao IMAP."
+    regra: "IMAP (143/993): estado no servidor, sincronização multi-dispositivo. POP3 (110/995): recuperação/download; a cópia no servidor pode ser mantida ou removida conforme a configuração do cliente.",
+    pegadinha: "A alternativa C veste o POP3 com um comportamento confortável ('cópia permanente') que não é o padrão; a A atribui a POP3 a sincronização que pertence ao IMAP.",
+    fonte: "IETF RFC 9051 — IMAP4rev2; RFC 1939 — POP3: https://www.rfc-editor.org/rfc/rfc9051.html ; https://www.rfc-editor.org/rfc/rfc1939.html",
   },
   {
     id: "q-m3-28",
@@ -2824,17 +2930,18 @@ var questoesBanco = [
     topico: "m3-u1-t1-s2",
     assunto: "M3.1 E-mail — POP3 (apagamento por padrão) vs. IMAP",
     contexto: "Configuração padrão de um cliente de e-mail usando POP3 em um único computador da repartição.",
-    enunciado: "Por padrão, o POP3 baixa as mensagens do servidor para o dispositivo local e as apaga do servidor, tornando o conteúdo indisponível em outros dispositivos; o IMAP, ao contrário, mantém as mensagens no servidor.",
+    enunciado: "O POP3 permite baixar mensagens para um cliente; a manutenção ou remoção da cópia no servidor depende da configuração do cliente. O IMAP mantém o estado da caixa no servidor e permite sincronizar mensagens e pastas entre dispositivos.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é 'POP3 baixa ... e as apaga do servidor, tornando o conteúdo indisponível em outros dispositivos' e 'IMAP ... mantém as mensagens no servidor': coincidem com o conteúdo 'POP3: baixa e-mails ... e, por padrão, apaga do servidor' e 'IMAP: mantém e-mails sincronizados no servidor'.",
-    justificativa: "O currículo afirma: 'POP3 (Post Office Protocol versão 3): baixa e-mails do servidor para o dispositivo local e, por padrão, apaga do servidor' e 'IMAP ... mantém e-mails sincronizados no servidor e no cliente'. O item combina as duas definições corretamente.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a distinção entre download com POP3 e comportamento de cópia dependente da configuração do cliente, em contraste com a sincronização do estado da caixa pelo IMAP.",
+    justificativa: "POP3 permite recuperar mensagens para o cliente; a permanência da cópia no servidor depende da configuração do cliente de correio. IMAP mantém o estado da caixa e permite sincronização entre clientes. O item combina corretamente esses comportamentos sem transformar uma configuração específica em regra universal.",
     analise: {
-      item: "Item VERDADEIRO. O apagamento por padrão do POP3 e a manutenção no servidor pelo IMAP são as definições literais do currículo.",
-      leituraIncorreta: "Leitura que induz ao erro: supor que POP3 'deixa cópia no servidor por padrão' — o currículo marca isso como exceção (há opção de manter cópia), não como comportamento padrão."
+      item: "Item VERDADEIRO. POP3 permite download e a cópia no servidor depende da configuração; IMAP oferece sincronização do estado da caixa no servidor.",
+      leituraIncorreta: "Leitura que induz ao erro: confundir a capacidade de configurar o cliente para manter uma cópia com uma regra universal do protocolo. O comportamento efetivo deve ser conferido na configuração do cliente."
     },
-    regra: "POP3: download + apagamento por padrão (1 dispositivo). IMAP: cópia mantida no servidor (multi-dispositivo). A 'opção de manter cópia' do POP3 é exceção, não padrão.",
-    pegadinha: "A pegadinha é a memória de que 'dá para configurar o POP3 para manter cópia' e concluir que o padrão é manter — o padrão é apagar."
+    regra: "POP3: recuperação/download; manter ou remover a cópia no servidor depende do cliente. IMAP: estado da caixa e pastas sincronizados no servidor, adequado a vários dispositivos.",
+    pegadinha: "A pegadinha é transformar uma configuração comum em regra do protocolo: POP3 não oferece a mesma sincronização de estado do IMAP, mas não se deve afirmar que toda implementação apaga a cópia do servidor.",
+    fonte: "IETF RFC 9051 — IMAP4rev2 e estado de caixa no servidor; RFC 1939 — POP3: https://www.rfc-editor.org/rfc/rfc9051.html ; https://www.rfc-editor.org/rfc/rfc1939.html",
   },
   {
     id: "q-m3-29",
@@ -2862,7 +2969,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: From define o remetente, não tem relação com a visibilidade/ocultação dos destinatários."
     },
     regra: "To (principal, visível) × Cc (secundário, visível entre todos) × Bcc (oculto, protege privacidade em listas).",
-    pegadinha: "A pegadinha é confundir Cc com Bcc: ambos são 'cópias', mas só o Bcc oculta os endereços — a pegadinha do próprio exemplo 'erro' do currículo ('Cc e Bcc têm a mesma funcionalidade' = Errado)."
+    pegadinha: "A pegadinha é confundir Cc com Bcc: ambos são 'cópias', mas só o Bcc oculta os endereços — a pegadinha do próprio exemplo 'erro' do currículo ('Cc e Bcc têm a mesma funcionalidade' = Errado).",
+    fonte: "IETF RFC 5322 — campos de destinatários em mensagens de Internet: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-30",
@@ -2884,7 +2992,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: tratar Cc e Bcc como equivalentes — o exemplo 'erro' do currículo corrige exatamente isso ('Cc e Bcc têm a mesma funcionalidade' = Errado)."
     },
     regra: "Cc = visível para todos os destinatários; Bcc = oculto para os demais. Funções distintas.",
-    pegadinha: "A armadilha é a suposição de equivalência entre Cc e Bcc; a diferença está na visibilidade dos endereços."
+    pegadinha: "A armadilha é a suposição de equivalência entre Cc e Bcc; a diferença está na visibilidade dos endereços.",
+    fonte: "IETF RFC 5322 — cabeçalhos To, Cc e Bcc: https://www.rfc-editor.org/rfc/rfc5322.html",
   },
   {
     id: "q-m3-31",
@@ -2911,8 +3020,9 @@ var questoesBanco = [
       C: "INCORRETA. Erro conceitual: não são sinônimos — têm propósitos distintos (spam = não solicitado; phishing = fraude para roubo de dados).",
       D: "INCORRETA. Erro conceitual: inverte a definição de spear phishing, que é justamente o direcionado (a pessoa/organização específica), não o genérico em massa."
     },
-    regra: "Spam (não solicitado) ⊃ phishing (fraude para roubo); spear phishing = phishing direcionado. 'Todo phishing pode ser spam, mas nem todo spam é phishing.'",
-    pegadinha: "A pegadinha é a generalização 'todo spam é phishing' (A) e a inversão de spear phishing (D) — ambos opostos ao que o currículo afirma."
+    regra: "Spam = mensagem não solicitada; phishing = fraude para induzir ação ou obter dados; as categorias podem se sobrepor, mas não são sinônimas. Spear phishing = phishing direcionado.",
+    pegadinha: "A pegadinha é a generalização 'todo spam é phishing' (A) e a inversão de spear phishing (D) — ambos opostos ao que o currículo afirma.",
+    fonte: "CISA — reconhecer e reportar phishing e mensagens suspeitas: https://www.cisa.gov/be-cyber-smart/report-incident",
   },
   {
     id: "q-m3-32",
@@ -2927,20 +3037,21 @@ var questoesBanco = [
     enunciado: "Sobre SPF, DKIM e DMARC, assinale a alternativa que descreve corretamente as funções de cada um, conforme o currículo.",
     alternativas: [
       { letra: "A", texto: "SPF assina digitalmente a mensagem com criptografia simétrica; DKIM lista os servidores autorizados a enviar; DMARC criptografa o corpo do e-mail." },
-      { letra: "B", texto: "SPF define quais servidores podem enviar e-mails para o domínio; DKIM assina digitalmente a mensagem para garantir autenticidade; DMARC define a política para falhas de SPF/DKIM (rejeitar, quarentenar, aceitar)." },
+      { letra: "B", texto: "SPF define quais servidores podem enviar pelo domínio; DKIM assina a mensagem para permitir verificar a assinatura e a integridade associada ao domínio; DMARC define a política para falhas de SPF/DKIM (rejeitar, quarentenar ou monitorar)." },
       { letra: "C", texto: "Basta o DMARC estar ativo; SPF e DKIM são desnecessários porque o DMARC já autentica o servidor remetente." },
       { letra: "D", texto: "DKIM usa criptografia simétrica e compartilha a chave privada com o destinatário para que ele verifique a mensagem." }
     ],
     gabarito: "B",
-    justificativa: "O currículo define: 'SPF (Sender Policy Framework): define quais servidores podem enviar e-mails para o domínio. DKIM (DomainKeys Identified Mail): assina digitalmente o e-mail para garantir autenticidade. DMARC (Domain-based Message Authentication, Reporting & Conformance) — previne spoofing ... define política para falhas de SPF/DKIM (rejeitar, quarentenar, aceitar).' O exercício do currículo confirma que 'DKIM usa criptografia assimétrica para assinar e-mails' (Certo). A alternativa B reproduz as três funções.",
+    justificativa: "SPF identifica servidores autorizados para o domínio; DKIM permite verificar uma assinatura associada ao domínio e detectar alterações na mensagem; DMARC define políticas e relatórios baseados nos resultados e no alinhamento de SPF/DKIM. Esses mecanismos ajudam a reduzir spoofing de domínio, mas não garantem impedir todas as formas de falsificação. A alternativa B associa corretamente as funções centrais.",
     analise: {
       A: "INCORRETA. Erro conceitual: troca as funções — listar servidores é SPF (não DKIM), assinar é DKIM (não SPF), e DMARC define política de falhas, não 'criptografa o corpo'.",
       B: "CORRETA. É a única que associa cada protocolo à sua função conforme o currículo (SPF = servidores autorizados; DKIM = assinatura de autenticidade; DMARC = política para falhas).",
       C: "INCORRETA. Erro conceitual: invenção — o currículo apresenta SPF, DKIM e DMARC como técnicas complementares; não afirma que o DMARC torna os outros desnecessários.",
       D: "INCORRETA. Erro conceitual duplo: DKIM usa criptografia ASSIMÉTRICA (exercício do currículo), e nunca compartilha a chave privada — a verificação usa a chave pública publicada no domínio."
     },
-    regra: "SPF = lista de servidores autorizados a enviar pelo domínio; DKIM = assinatura digital (criptografia assimétrica) de autenticidade; DMARC = política de tratamento das falhas de SPF/DKIM (rejeitar/quarentenar/aceitar).",
-    pegadinha: "A pegadinha é a troca de funções (A) e o erro sobre DKIM como 'simétrica com chave privada compartilhada' (D) — a assinatura é assimétrica e a chave privada nunca sai do domínio."
+    regra: "SPF = política de servidores autorizados; DKIM = assinatura verificável associada ao domínio e à integridade da mensagem; DMARC = política/relatórios para resultados e alinhamento de SPF/DKIM.",
+    pegadinha: "A pegadinha é a troca de funções (A) e o erro sobre DKIM como 'simétrica com chave privada compartilhada' (D) — a assinatura é assimétrica e a chave privada nunca sai do domínio.",
+    fonte: "IETF RFC 7208 — SPF; RFC 6376 — DKIM; RFC 9989 — DMARC (especificação atual): https://www.rfc-editor.org/rfc/rfc7208.html ; https://www.rfc-editor.org/rfc/rfc6376.html ; https://www.rfc-editor.org/rfc/rfc9989.html",
   },
   {
     id: "q-m3-33",
@@ -2968,7 +3079,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: 'somente visualização' é leitura pura; o assistente não poderia alterar nada."
     },
     regra: "Permissões de calendário: proprietário (controle total) > editor (modifica) > comentar > somente visualização (leitura).",
-    pegadinha: "A pegadinha é dar poder demais (Proprietário) ou de menos (Comentar/Visualização): o termo-chave do cenário é 'modificar sem assumir a propriedade' = Editor."
+    pegadinha: "A pegadinha é dar poder demais (Proprietário) ou de menos (Comentar/Visualização): o termo-chave do cenário é 'modificar sem assumir a propriedade' = Editor.",
+    fonte: "Microsoft Support — níveis de permissão e compartilhamento de calendários do Microsoft 365: https://support.microsoft.com/pt-br/outlook/calendar-sharing-in-microsoft-365",
   },
   {
     id: "q-m3-34",
@@ -2990,7 +3102,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: achar que cada participante precisa anotar manualmente o horário alheio — o currículo diz que a conversão é automática quando o calendário suporta fuso."
     },
     regra: "Convite = título, data/hora (com fuso), local/link, participantes obrigatórios e opcionais, pauta, anexos. Calendários com fuso convertem automaticamente por participante.",
-    pegadinha: "Item simples por design; o risco é duvidar da conversão automática de fuso, que é justamente a solução do exemplo de aplicação do currículo."
+    pegadinha: "Item simples por design; o risco é duvidar da conversão automática de fuso, que é justamente a solução do exemplo de aplicação do currículo.",
+    fonte: "Microsoft Support — fusos horários, recorrência e lembretes em solicitações de reunião no Outlook: https://support.microsoft.com/pt-br/outlook/create-modify-or-delete-a-meeting-request-or-appointment-in-outlook-on-the-web ; https://support.microsoft.com/pt-br/outlook/getstarted/manage-time-zone-settings-in-outlook",
   },
   {
     id: "q-m3-35",
@@ -3018,7 +3131,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: webinars avançados e breakout rooms são destaque do ZOOM, não do Meet — troca de plataforma."
     },
     regra: "Teams = integração M365 / colaboração contínua; Meet = simplicidade, navegador (Google Workspace); Zoom = webinars, breakout rooms, grandes eventos. Gravação/compartilhamento/chat são comuns às três.",
-    pegadinha: "A pegadinha é confundir diferenciais: 'webinars/breakout' é Zoom (não Meet), e 'gravação' é comum a todas — o critério do cenário é a integração com M365."
+    pegadinha: "A pegadinha é confundir diferenciais: 'webinars/breakout' é Zoom (não Meet), e 'gravação' é comum a todas — o critério do cenário é a integração com M365.",
+    fonte: "Microsoft Support — calendário do Teams integrado ao Microsoft 365 e compartilhamento de calendário: https://support.microsoft.com/pt-br/teams/meetings/get-started-with-the-microsoft-teams-calendar",
   },
   {
     id: "q-m3-36",
@@ -3030,17 +3144,18 @@ var questoesBanco = [
     topico: "m3-u2-t2-s1",
     assunto: "M3.2 Reuniões — diferenciais de Teams, Meet e Zoom",
     contexto: "Comparação de recursos para decidir qual plataforma adotar em três cenários distintos (colaboração contínua, simplicidade e grandes eventos).",
-    enunciado: "O Google Meet é a plataforma que se destaca por recursos avançados de webinars e salas simultâneas (breakout rooms), enquanto o Zoom se diferencia por funcionar no navegador sem exigir instalação de software.",
+    enunciado: "O Google Meet disponibiliza salas temáticas para qualquer conta, sem depender da edição do Google Workspace, enquanto o Zoom oferece salas paralelas em webinars somente com licença elegível e aplicativo compatível.",
     alternativas: null,
     gabarito: "errado",
-    trechoDeterminante: "O trecho que torna o item FALSO é 'Google Meet ... se destaca por ... webinars e salas simultâneas (breakout rooms)' e 'Zoom ... funciona no navegador sem exigir instalação': o currículo reserva breakout rooms/webinars ao ZOOM e o 'não requer instalação (navegador)' ao MEET — as atribuições estão trocadas.",
-    justificativa: "O currículo define: 'Zoom: ... recursos avançados de webinars, salas simultâneas (breakout rooms)' e 'Google Meet: ... não requer instalação (navegador)'. O item inverte as duas características, atribuindo os diferenciais de forma cruzada.",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'para qualquer conta, sem depender da edição do Google Workspace': o Google informa que salas temáticas só estão disponíveis em edições elegíveis. A parte sobre salas paralelas em webinars do Zoom também depende de licença e aplicativo compatíveis.",
+    justificativa: "As salas temáticas do Google Meet não estão disponíveis em todas as edições do Workspace. No Zoom Webinar, salas paralelas também têm requisitos específicos de licença e aplicativo. A comparação deve considerar a edição/plano contratado e o tipo de evento, não generalizações de que uma plataforma sempre oferece ou nunca oferece um recurso.",
     analise: {
-      item: "Item FALSO. As duas atribuições estão invertidas: breakout rooms/webinars são do Zoom; funcionamento no navegador sem instalação é do Meet.",
+      item: "Item FALSO. O Google Meet limita salas temáticas a determinadas edições do Workspace; portanto, a afirmação de que estão disponíveis em qualquer conta é incorreta. As salas paralelas em webinars do Zoom também dependem da licença e do aplicativo compatível.",
       leituraIncorreta: "Leitura que induz ao erro: memorizar 'Meet = simples/no navegador' e 'Zoom = recursos avançados' mas trocá-las ao responder; o exemplo 'erro' do currículo já corrige 'Google Meet requer instalação de software' = Errado."
     },
-    regra: "Diferenciais: Meet = simplicidade/navegador (sem instalação); Zoom = webinars e breakout rooms; Teams = integração M365. Não inverter as atribuições.",
-    pegadinha: "Item de duas metades trocadas: cada característica pertence à plataforma oposta — estilo CESPE que pune a meia-verdade por troca de sujeito."
+    regra: "Comparar os recursos por tipo de evento e elegibilidade: salas temáticas do Meet dependem da edição do Workspace; salas paralelas em webinars do Zoom dependem da licença e do aplicativo suportados.",
+    pegadinha: "Pegadinha: transformar diferenças de plano e tipo de evento em afirmações universais. Verifique elegibilidade, licença e aplicativo exigido antes de comparar recursos.",
+    fonte: "Google Meet Help — salas temáticas disponíveis somente em edições elegíveis do Google Workspace: https://support.google.com/google-workspace-individual/answer/10099500?hl=pt-BR; Zoom Support — salas paralelas em webinars exigem licença e aplicativo compatíveis: https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
   },
   {
     id: "q-m3-37",
@@ -3049,7 +3164,7 @@ var questoesBanco = [
     estilo: "fcc",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "m3-u2-t2-s2",
+    topico: "m3-u4-t1-s2",
     assunto: "M3.2 Reuniões — lobby e controle de participantes",
     contexto: "Reunião sensível com participantes externos; o anfitrião quer controlar quem entra e impedir a ação de intrusos.",
     enunciado: "Sobre o controle de participantes em reuniões online, assinale a alternativa correta, conforme o currículo.",
@@ -3068,7 +3183,8 @@ var questoesBanco = [
       D: "INCORRETA. Erro conceitual: o exemplo de aplicação orienta 'desativar a entrada de participantes após o início' — é possível impedir a entrada, o oposto do afirmado."
     },
     regra: "Controle do anfitrião: lobby (aprovação prévia), remover participantes, bloquear vídeo/microfone, controlar quem compartilha, senha, impedir entrada após início.",
-    pegadinha: "A pegadinha é atribuir ao 'qualquer participante' (A) poderes exclusivos do anfitrião; C e D negam recursos que o currículo lista explicitamente."
+    pegadinha: "A pegadinha é atribuir ao 'qualquer participante' (A) poderes exclusivos do anfitrião; C e D negam recursos que o currículo lista explicitamente.",
+    fonte: "Google Meet Help — controles do anfitrião, gestão de participantes e moderação: https://support.google.com/meet/answer/16229038?co=GENIE.Platform%3DDesktop&hl=pt-br",
   },
   {
     id: "q-m3-38",
@@ -3077,7 +3193,7 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "avancado",
-    topico: "m3-u2-t2-s2",
+    topico: "m3-u4-t3-s3",
     assunto: "M3.2 Reuniões — gravação, proteção e consentimento",
     contexto: "Política interna de reuniões online do órgão, que grava sessões com participação de servidores e cidadãos.",
     enunciado: "O anfitrião pode gravar a reunião (vídeo, áudio e chat) e combinar medidas de proteção — senha da reunião, lobby e bloqueio do vídeo/microfone dos participantes —, mas a gravação de comunicações com dados pessoais pode exigir o consentimento dos participantes, conforme a legislação aplicável.",
@@ -3090,7 +3206,8 @@ var questoesBanco = [
       leituraIncorreta: "Leitura que induz ao erro: crer que 'o anfitrião pode gravar' implica 'gravar sem jamais informar' — o exemplo 'erro' do currículo corrige que a LGPD/Marco Civil podem exigir consentimento."
     },
     regra: "Anfitrião grava (vídeo/áudio/chat) e aplica proteções (senha, lobby, bloqueio); gravação com dados pessoais pode exigir consentimento (LGPD/Marco Civil) — informar sempre os participantes.",
-    pegadinha: "A armadilha é o absolutismo 'o anfitrião decide tudo sobre a gravação': a competência técnica de gravar não elimina a obrigação de consentimento quando há dados pessoais."
+    pegadinha: "A armadilha é o absolutismo 'o anfitrião decide tudo sobre a gravação': a competência técnica de gravar não elimina a obrigação de consentimento quando há dados pessoais.",
+    fonte: "Currículo M3, unidade 4, tópico 3; Lei nº 13.709/2018 (LGPD), arts. 6º, 7º, 8º e 46 — texto oficial no Planalto: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
   },
   {
     id: "q-m3-39",
@@ -3099,7 +3216,7 @@ var questoesBanco = [
     estilo: "vunesp",
     origem: "autoral",
     nivel: "intermediario",
-    topico: "m3-u2-t3-s1",
+    topico: "m3-u4-t3-s1",
     assunto: "M3.2 Reuniões — elementos de uma política de gravação",
     contexto: "Órgão está redigindo uma política de gravação de reuniões online e precisa separar o que é essencial do que é acessório.",
     enunciado: "Dentre os elementos abaixo, assinale aquele que NÃO é essencial em uma política de gravação, conforme o currículo.",
@@ -3107,18 +3224,19 @@ var questoesBanco = [
       { letra: "A", texto: "Prazo de retenção das gravações." },
       { letra: "B", texto: "Proteção das gravações sensíveis por criptografia." },
       { letra: "C", texto: "Número máximo de participantes por reunião." },
-      { letra: "D", texto: "Consentimento/informação dos participantes sobre a gravação." }
+      { letra: "D", texto: "Informação/transparência aos participantes e base legal adequada para a gravação, com consentimento quando aplicável." }
     ],
     gabarito: "C",
-    justificativa: "O currículo lista os elementos de uma política de gravação: 'quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter' e, no exemplo, 'quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem tem acesso, regras de compartilhamento, proteção (criptografia), e procedimento para exclusão', além do consentimento. O exercício do currículo é literal: 'Qual elemento NÃO é essencial em uma política de gravação?' → C (Número máximo de participantes).",
+    justificativa: "O currículo lista os elementos de uma política de gravação: quando e como gravar, quem pode gravar, onde armazenar, prazo de retenção, acesso, compartilhamento, proteção e exclusão. Também é necessário informar os participantes e identificar a base legal adequada; consentimento é necessário quando essa for a hipótese aplicável. O exercício pergunta qual elemento NÃO é essencial: C (número máximo de participantes).",
     analise: {
       A: "INCORRETA (para o enunciado). Erro conceitual: prazo de retenção ('quanto tempo manter') É essencial — está na lista do currículo.",
       B: "INCORRETA (para o enunciado). Erro conceitual: proteção por criptografia ('criptografar gravações sensíveis') É essencial — consta na política.",
       C: "CORRETA. Número máximo de participantes não integra a política de gravação — é o elemento NÃO essencial, conforme o exercício do currículo.",
-      D: "INCORRETA (para o enunciado). Erro conceitual: consentimento/informação dos participantes É essencial quando há dados pessoais — o currículo o exige."
+      D: "INCORRETA (para o enunciado). Transparência aos participantes e base legal adequada são elementos de governança; o consentimento é exigido quando essa for a hipótese legal aplicável."
     },
-    regra: "Política de gravação: quando gravar, quem pode gravar, onde armazenar, prazo de retenção, quem acessa, compartilhamento, criptografia, exclusão e consentimento. Limite de participantes não é elemento da política.",
-    pegadinha: "A pegadinha é a inversão do comando ('NÃO é essencial'): três alternativas são itens reais da política; só o número máximo de participantes é alheio a ela."
+    regra: "Política de gravação: base legal adequada e transparência, quando/quem grava, armazenamento, prazo de retenção, acesso, compartilhamento, proteção e exclusão. Limite de participantes não é elemento da política.",
+    pegadinha: "A pegadinha é a inversão do comando ('NÃO é essencial'): três alternativas são itens reais da política; só o número máximo de participantes é alheio a ela.",
+    fonte: "Microsoft Support — gravações de reuniões no Teams: https://support.microsoft.com/pt-br/teams/meetings/play-share-and-download-meeting-recordings-in-microsoft-teams ; Google Meet Help — gravação de reuniões: https://support.google.com/meet/answer/9308681?co=GENIE.Platform%3DDesktop&hl=pt-br ; Lei nº 13.709/2018 (LGPD), arts. 6º, 7º, 8º, 9º e 46 — texto oficial no Planalto: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm.",
   },
   {
     id: "q-m3-40",
@@ -3127,21 +3245,795 @@ var questoesBanco = [
     estilo: "cespe",
     origem: "autoral",
     nivel: "basico",
-    topico: "m3-u2-t3-s1",
+    topico: "m3-u4-t3-s2",
     assunto: "M3.2 Reuniões — gravação com dados pessoais e proteção",
     contexto: "Reunião gravada pelo órgão contém dados pessoais dos participantes (nomes, falas, eventual identificação de cargos).",
-    enunciado: "Quando uma gravação de reunião contém dados pessoais dos participantes, a política deve prever consentimento ou informação dos participantes, definição de finalidade, prazo de retenção e segurança no armazenamento, assegurando aos titulares o direito de acesso e exclusão.",
+    enunciado: "Quando uma gravação de reunião contém dados pessoais dos participantes, a política deve prever transparência aos participantes, base legal adequada (consentimento quando aplicável), finalidade, prazo de retenção e segurança no armazenamento, além de atender aos direitos dos titulares previstos na legislação aplicável.",
     alternativas: null,
     gabarito: "certo",
-    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a lista 'consentimento/informação, finalidade, prazo de retenção, segurança no armazenamento, direito de acesso e exclusão': coincide com o exemplo de aplicação do currículo sobre gravação com dados pessoais.",
-    justificativa: "O exemplo de aplicação do currículo responde, para 'reunião gravada contém dados pessoais': 'Consentimento dos participantes para gravação, definição de finalidade, prazo de retenção, segurança no armazenamento (criptografia), e direito de acesso e exclusão pelos titulares.' O item reproduz esses elementos. A menção à proteção de dados é genérica, sem número de artigo.",
+    trechoDeterminante: "O trecho que torna o item VERDADEIRO é a necessidade de transparência, base legal adequada, finalidade, prazo de retenção, segurança e atendimento aos direitos aplicáveis dos titulares.",
+    justificativa: "O exemplo de aplicação do currículo lista finalidade, prazo de retenção, segurança no armazenamento e direitos dos titulares. A política também deve informar os participantes e identificar a base legal aplicável; consentimento não é requisito universal para todo tratamento. A menção à proteção de dados é genérica, sem número de artigo.",
     analise: {
-      item: "Item VERDADEIRO. Consentimento/informação, finalidade, retenção, segurança (criptografia) e direitos de acesso/exclusão são exatamente os elementos do exemplo de aplicação.",
+      item: "Item VERDADEIRO. Transparência, base legal adequada, finalidade, retenção, segurança e atendimento aos direitos aplicáveis dos titulares compõem a governança; consentimento é necessário quando for a hipótese legal escolhida.",
       leituraIncorreta: "Leitura que induz ao erro: tratar a gravação como mero arquivo interno sem dados pessoais — contendo dados pessoais, ela cai nas práticas de proteção e nos direitos do titular descritas no currículo."
     },
-    regra: "Gravação com dados pessoais exige: consentimento/informação, finalidade, prazo de retenção, segurança (criptografia) e respeito aos direitos de acesso e exclusão dos titulares.",
-    pegadinha: "Item simples por design; o risco é esquecer que uma gravação de reunião é tratamento de dados pessoais e, como tal, carrega finalidade, retenção e direitos do titular."
+    regra: "Gravação com dados pessoais exige: transparência e base legal adequada, finalidade, prazo de retenção, segurança e atendimento aos direitos dos titulares; consentimento quando aplicável.",
+    pegadinha: "Item simples por design; o risco é esquecer que uma gravação de reunião é tratamento de dados pessoais e, como tal, carrega finalidade, retenção e direitos do titular.",
+    fonte: "Lei nº 13.709/2018 (LGPD), texto oficial no Planalto — tratamento de dados pessoais, princípios e direitos dos titulares: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
   },
+  {
+    id: "q-m1-41",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-2-topico-5",
+    assunto: "M1.2 Word — cabeçalhos e rodapés",
+    contexto: "Um relatório deve exibir cabeçalho e número de página, exceto na capa; as páginas seguintes devem manter esses elementos.",
+    enunciado: "Qual recurso atende diretamente ao requisito?",
+    alternativas: [
+      { letra: "A", texto: "Aplicar negrito ao título da capa." },
+      { letra: "B", texto: "Converter o documento em texto simples." },
+      { letra: "C", texto: "Inserir uma tabela vazia na capa." },
+      { letra: "D", texto: "Desativar o cabeçalho em todo o documento." },
+      { letra: "E", texto: "Ativar Primeira Página Diferente nas configurações de cabeçalho e rodapé." }
+    ],
+    gabarito: "E",
+    justificativa: "A opção Primeira Página Diferente permite ocultar ou personalizar cabeçalho e rodapé da capa sem removê-los das páginas seguintes. Uma quebra de seção é útil quando partes do documento precisam de layouts ou numerações diferentes.",
+    analise: {
+      A: "INCORRETA. Negrito muda a aparência do texto, não a exibição do cabeçalho.",
+      B: "INCORRETA. Texto simples remove formatação e não atende à paginação.",
+      C: "INCORRETA. Tabelas não controlam cabeçalhos e rodapés.",
+      D: "INCORRETA. Isso remove o elemento também das páginas que precisam exibi-lo.",
+      E: "CORRETA. Permite configurar a primeira página separadamente, preservando os elementos nas seguintes."
+    },
+    regra: "Cabeçalhos e rodapés são controlados por opções de layout e, quando necessário, por seções.",
+    pegadinha: "Não confundir Primeira Página Diferente com remover o cabeçalho do documento inteiro.",
+    fonte: "Microsoft Support — Alterar ou excluir um cabeçalho ou rodapé em uma única página (opção Primeira Página Diferente): https://support.microsoft.com/pt-br/word/change-or-delete-a-header-or-footer-on-a-single-page; iniciar a numeração de página mais adiante no documento: https://support.microsoft.com/pt-br/word/start-page-numbering-later-in-your-document"
+  },
+  {
+    id: "q-m1-42",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-3-topico-1",
+    assunto: "M1.3 Excel — células, intervalos e tabelas",
+    contexto: "Uma lista de solicitações recebe novas linhas semanalmente. A coluna calculada deve acompanhar os novos registros e os dados precisam de cabeçalhos e filtros.",
+    enunciado: "Qual recurso é mais adequado para estruturar a lista?",
+    alternativas: [
+      { letra: "A", texto: "Colocar cada registro em uma planilha diferente." },
+      { letra: "B", texto: "Mesclar todas as células da primeira linha." },
+      { letra: "C", texto: "Formatar o intervalo como Tabela do Excel, com cabeçalhos." },
+      { letra: "D", texto: "Converter os dados em imagens." },
+      { letra: "E", texto: "Alinhar valores com espaços." }
+    ],
+    gabarito: "C",
+    justificativa: "Tabelas do Excel estruturam dados, fornecem filtros e podem expandir-se com novas linhas; colunas calculadas e referências estruturadas facilitam a manutenção.",
+    analise: {
+      A: "INCORRETA. Isso dificulta análise, filtragem e consolidação.",
+      B: "INCORRETA. Células mescladas prejudicam a estrutura tabular.",
+      C: "CORRETA. Tabelas estruturam listas, expandem-se com novos registros e facilitam filtros e fórmulas.",
+      D: "INCORRETA. Imagens não preservam dados editáveis e estruturados.",
+      E: "INCORRETA. Espaços não substituem células, colunas ou referências."
+    },
+    regra: "Células formam intervalos; Tabelas acrescentam estrutura e recursos a listas de dados.",
+    pegadinha: "Aplicar cores não é o mesmo que converter um intervalo em Tabela.",
+    fonte: "Microsoft Support — Visão geral de tabelas do Excel (cabeçalhos, referências estruturadas e expansão para novas linhas): https://support.microsoft.com/pt-br/excel/overview-of-excel-tables; redimensionar uma tabela adicionando ou removendo linhas e colunas: https://support.microsoft.com/pt-br/excel/resize-a-table-by-adding-or-removing-rows-and-columns-in-excel"
+  },
+  {
+    id: "q-m1-43",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-3-topico-5",
+    assunto: "M1.3 Excel — filtros, validação e formatação condicional",
+    contexto: "Uma planilha deve exibir apenas inscrições pendentes, restringir Status a uma lista aprovada e destacar prazos vencidos.",
+    enunciado: "Qual combinação de recursos atende aos requisitos?",
+    alternativas: [
+      { letra: "A", texto: "Proteger a pasta e ocultar todas as linhas." },
+      { letra: "B", texto: "Mesclar células, congelar painéis e usar negrito." },
+      { letra: "C", texto: "Classificar, inserir comentário e mudar orientação da página." },
+      { letra: "D", texto: "Filtro, Validação de Dados e Formatação Condicional." },
+      { letra: "E", texto: "Usar apenas um gráfico de pizza." }
+    ],
+    gabarito: "D",
+    justificativa: "Os três recursos atendem funções diferentes: filtro para exibição, validação para entradas permitidas e formatação condicional para destaque automático.",
+    analise: {
+      A: "INCORRETA. Ocultar tudo impede a análise e não valida os dados.",
+      B: "INCORRETA. Esses recursos não implementam os três requisitos.",
+      C: "INCORRETA. Classificação ordena dados, mas os outros recursos não validam entradas nem destacam vencimentos.",
+      D: "CORRETA. Filtro limita linhas exibidas; validação restringe entradas; formatação condicional destaca valores por regra.",
+      E: "INCORRETA. Um gráfico não substitui filtros, validação e regras de formatação."
+    },
+    regra: "Filtro seleciona o que fica visível; classificação muda a ordem; validação controla entradas.",
+    pegadinha: "Não confundir classificação com filtragem.",
+    fonte: "Microsoft Support — Filtrar dados em um intervalo ou tabela no Excel: https://support.microsoft.com/pt-br/excel/get-started/filter-data-in-a-range-or-table-in-excel; aplicar validação de dados às células: https://support.microsoft.com/pt-br/excel/get-started/apply-data-validation-to-cells; utilizar formatação condicional para realçar informações: https://support.microsoft.com/pt-br/excel/use-conditional-formatting-to-highlight-information-in-excel"
+  },
+  {
+    id: "q-m2-41",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u2-t1-s1",
+    assunto: "M2.2 Modelo OSI — funções das camadas",
+    contexto: "A equipe precisa distinguir endereçamento lógico, entrega fim a fim e transmissão física.",
+    enunciado: "Qual associação está correta?",
+    alternativas: [
+      { letra: "A", texto: "Enlace: endereços IP públicos; Transporte: resolução de nomes." },
+      { letra: "B", texto: "Física: endereços IP; Rede: conectores; Transporte: nomes DNS." },
+      { letra: "C", texto: "Aplicação: encaminhamento de quadros; Enlace: aplicações do usuário." },
+      { letra: "D", texto: "Sessão: sinais ópticos; Apresentação: rotas IP." },
+      { letra: "E", texto: "Rede: endereçamento lógico/roteamento; Transporte: comunicação fim a fim; Física: transmissão de bits." }
+    ],
+    gabarito: "E",
+    justificativa: "No OSI, Rede trata de endereçamento lógico e encaminhamento; Transporte oferece comunicação entre processos; Física transmite bits pelo meio.",
+    analise: {
+      A: "INCORRETA. IP pertence à camada Rede e DNS à Aplicação.",
+      B: "INCORRETA. Troca funções de Rede, Física e Aplicação.",
+      C: "INCORRETA. Quadros são tratados em Enlace; aplicações ficam na camada Aplicação.",
+      D: "INCORRETA. Sinais são da camada Física; rotas são da camada Rede.",
+      E: "CORRETA. Essas funções correspondem às camadas Rede, Transporte e Física."
+    },
+    regra: "As sete camadas são Física, Enlace, Rede, Transporte, Sessão, Apresentação e Aplicação.",
+    pegadinha: "Não confundir endereço IP (Rede) com endereço MAC/quadros (Enlace).",
+    fonte: "RFC 1122 — Requirements for Internet Hosts — Communication Layers: https://www.rfc-editor.org/info/rfc1122/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-42",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u2-t2-s1",
+    assunto: "M2.2 Modelo TCP/IP — quatro camadas",
+    contexto: "Uma equipe documenta uma arquitetura de rede usando o modelo TCP/IP de quatro camadas.",
+    enunciado: "Qual lista corresponde à nomenclatura usual?",
+    alternativas: [
+      { letra: "A", texto: "Acesso à rede, Internet, Transporte e Aplicação." },
+      { letra: "B", texto: "Física, Enlace, Sessão e Apresentação." },
+      { letra: "C", texto: "Internet, Sessão, Apresentação e Física." },
+      { letra: "D", texto: "Aplicação, Banco de Dados, Segurança e Hardware." },
+      { letra: "E", texto: "Transporte, Roteamento, Criptografia e Interface Gráfica." }
+    ],
+    gabarito: "A",
+    justificativa: "A representação didática usual do TCP/IP agrupa protocolos em Acesso à Rede, Internet, Transporte e Aplicação.",
+    analise: {
+      A: "CORRETA. Essa é a representação usual de quatro camadas do TCP/IP.",
+      B: "INCORRETA. Mistura camadas OSI e omite camadas TCP/IP.",
+      C: "INCORRETA. Sessão e Apresentação não são camadas independentes no modelo TCP/IP de quatro camadas.",
+      D: "INCORRETA. Não são as quatro camadas do TCP/IP.",
+      E: "INCORRETA. São funções ou componentes, não a lista de camadas."
+    },
+    regra: "Modelos diferentes agrupam funções de modo diferente; não há correspondência um-para-um perfeita entre todas as camadas OSI e TCP/IP.",
+    pegadinha: "Não misturar nomes de camadas OSI com a lista de quatro camadas TCP/IP.",
+    fonte: "RFC 1122 — Requirements for Internet Hosts — Communication Layers: https://www.rfc-editor.org/info/rfc1122/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-43",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u2-t3-s1",
+    assunto: "M2.2 Comunicação cliente-servidor — HTTPS sobre TCP",
+    contexto: "Considere HTTPS sobre TCP, sem HTTP/3/QUIC. O navegador acessará um domínio que não está no cache DNS.",
+    enunciado: "Qual sequência didática descreve melhor o fluxo antes de receber o conteúdo HTTP?",
+    alternativas: [
+      { letra: "A", texto: "Enviar HTTP antes de resolver o nome e estabelecer transporte." },
+      { letra: "B", texto: "Resolver o nome via DNS, estabelecer TCP, negociar TLS e enviar a requisição HTTP." },
+      { letra: "C", texto: "Executar DHCP para cada pacote e usar FTP para abrir a página." },
+      { letra: "D", texto: "Negociar TLS sem identificar/endereço do servidor e dispensar transporte." },
+      { letra: "E", texto: "Usar ARP para resolver o nome público na Internet inteira." }
+    ],
+    gabarito: "B",
+    justificativa: "No cenário especificado, DNS resolve o nome, TCP estabelece transporte, TLS protege a conexão e HTTP troca requisições e respostas. HTTP/3 usa QUIC, por isso foi excluído do enunciado.",
+    analise: {
+      A: "INCORRETA. A requisição precisa de destino e conexão apropriados.",
+      B: "CORRETA. É o fluxo usual de HTTPS sobre TCP no cenário delimitado.",
+      C: "INCORRETA. DHCP configura a rede; FTP não é o protocolo de acesso à página.",
+      D: "INCORRETA. O cenário requer transporte e identificação do destino.",
+      E: "INCORRETA. ARP resolve endereços de enlace IPv4 no domínio local, não nomes DNS."
+    },
+    regra: "DNS resolve nomes; TCP estabelece transporte; TLS protege a sessão; HTTP define requisições e respostas.",
+    pegadinha: "A sequência depende da versão: HTTP/3 usa QUIC, não TCP.",
+    fonte: "RFC 1034/1035 (DNS) + RFC 793 (TCP) + RFC 8446 (TLS) + RFC 9110 (HTTP Semantics): https://www.rfc-editor.org/info/rfc1034/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-44",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u3-t1-s1",
+    assunto: "M2.3 IPv4, IPv6, TCP e UDP",
+    contexto: "Um aplicativo precisa distinguir protocolos de endereçamento de rede dos protocolos de transporte.",
+    enunciado: "Qual afirmação está correta?",
+    alternativas: [
+      { letra: "A", texto: "UDP garante entrega ordenada; TCP não mantém estado de conexão." },
+      { letra: "B", texto: "IPv6 é transporte confiável e TCP é um endereço IP." },
+      { letra: "C", texto: "IPv4/IPv6 tratam de endereçamento e encaminhamento; TCP/UDP são protocolos de transporte com características distintas." },
+      { letra: "D", texto: "IPv4 e IPv6 são protocolos de aplicação para consultar DNS." },
+      { letra: "E", texto: "TCP e UDP definem máscaras e endereços de broadcast." }
+    ],
+    gabarito: "C",
+    justificativa: "IPv4/IPv6 endereçam e encaminham pacotes; TCP fornece transporte orientado à conexão com mecanismos de confiabilidade; UDP transporta datagramas sem garantir entrega ou ordenação.",
+    analise: {
+      A: "INCORRETA. TCP fornece confiabilidade/ordenação; UDP não garante isso por padrão.",
+      B: "INCORRETA. IPv6 não é transporte e TCP não é endereço IP.",
+      C: "CORRETA. Separa corretamente os protocolos de Internet dos protocolos de transporte.",
+      D: "INCORRETA. DNS é protocolo de aplicação; IP opera em nível de rede.",
+      E: "INCORRETA. Esses são conceitos de endereçamento, não funções de transporte."
+    },
+    regra: "IP cuida do endereçamento/encaminhamento; TCP e UDP transportam dados de aplicações.",
+    pegadinha: "Não afirmar que UDP é sempre melhor ou mais rápido; a escolha depende da aplicação.",
+    fonte: "RFC 791 — Internet Protocol (IPv4): https://www.rfc-editor.org/info/rfc791/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-45",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u3-t2-s1",
+    assunto: "M2.3 HTTP, HTTPS, DNS e DHCP",
+    contexto: "Um notebook recebe configuração de rede automaticamente. Ao abrir um site por nome de domínio, o navegador precisa encontrar o servidor.",
+    enunciado: "Qual associação de funções está correta?",
+    alternativas: [
+      { letra: "A", texto: "DHCP resolve nomes públicos; DNS negocia certificados; HTTPS distribui IPs." },
+      { letra: "B", texto: "DNS atribui o IP local; DHCP traduz nomes; HTTPS substitui o roteamento." },
+      { letra: "C", texto: "HTTPS atribui IP; DHCP criptografa páginas; DNS transfere arquivos." },
+      { letra: "D", texto: "DHCP configura parâmetros de rede; DNS resolve nomes; HTTPS protege a comunicação web por TLS." },
+      { letra: "E", texto: "DNS e DHCP são protocolos de transporte que substituem TCP e UDP." }
+    ],
+    gabarito: "D",
+    justificativa: "DHCP distribui parâmetros como endereço IP e gateway; DNS resolve nomes; HTTPS é HTTP protegido por TLS.",
+    analise: {
+      A: "INCORRETA. As funções estão trocadas.",
+      B: "INCORRETA. Troca as funções dos protocolos.",
+      C: "INCORRETA. Nenhum desses protocolos tem as funções descritas.",
+      D: "CORRETA. Cada protocolo está associado à função adequada.",
+      E: "INCORRETA. DNS e DHCP são protocolos de aplicação."
+    },
+    regra: "Obter IP por DHCP é diferente de resolver o nome do servidor por DNS.",
+    pegadinha: "Não confundir configuração de rede com resolução de nomes.",
+    fonte: "RFC 2131 (DHCP) + RFC 1034/1035 (DNS) + RFC 9110 (HTTP Semantics): https://www.rfc-editor.org/info/rfc2131/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-46",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u3-t3-s1",
+    assunto: "M2.3 FTP, FTPS, SFTP, SSH e ICMP",
+    contexto: "Uma equipe precisa transferir arquivos entre servidores por um canal seguro e já utiliza SSH.",
+    enunciado: "Qual protocolo usa a infraestrutura SSH para transferir arquivos?",
+    alternativas: [
+      { letra: "A", texto: "SMTP." },
+      { letra: "B", texto: "FTP sem criptografia." },
+      { letra: "C", texto: "ICMP Echo." },
+      { letra: "D", texto: "DHCP." },
+      { letra: "E", texto: "SFTP." }
+    ],
+    gabarito: "E",
+    justificativa: "SFTP é um protocolo de transferência de arquivos sobre SSH. FTPS protege FTP com TLS; são tecnologias diferentes.",
+    analise: {
+      A: "INCORRETA. SMTP transporta mensagens de e-mail.",
+      B: "INCORRETA. FTP simples não protege conteúdo e credenciais por padrão.",
+      C: "INCORRETA. ICMP Echo é usado em diagnóstico de conectividade.",
+      D: "INCORRETA. DHCP distribui parâmetros de configuração.",
+      E: "CORRETA. SFTP opera sobre SSH."
+    },
+    regra: "SFTP usa SSH; FTPS usa TLS para proteger FTP.",
+    pegadinha: "SFTP não é apenas outro nome para FTPS.",
+    fonte: "RFC 4251/4253 (SSH) + RFC 959 (FTP): https://www.rfc-editor.org/info/rfc4251/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-47",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u3-t4-s3",
+    assunto: "M2.3 NAT/PAT, proxy e VPN",
+    contexto: "Funcionários precisam acessar a rede interna remotamente por um túnel protegido e autenticado.",
+    enunciado: "Qual tecnologia atende diretamente ao requisito?",
+    alternativas: [
+      { letra: "A", texto: "VPN configurada com autenticação e criptografia adequadas." },
+      { letra: "B", texto: "NAT, que por si só criptografa todo o tráfego." },
+      { letra: "C", texto: "Proxy DNS, que substitui autenticação." },
+      { letra: "D", texto: "PAT, que garante confidencialidade de ponta a ponta." },
+      { letra: "E", texto: "ICMP, que cria um túnel de aplicação autenticado." }
+    ],
+    gabarito: "A",
+    justificativa: "VPN é a tecnologia indicada para conectividade remota protegida, com autenticação, criptografia e controles adequados.",
+    analise: {
+      A: "CORRETA. Uma VPN pode criar conectividade remota protegida quando configurada corretamente.",
+      B: "INCORRETA. NAT traduz endereços e não é mecanismo de criptografia.",
+      C: "INCORRETA. Proxy DNS não substitui autenticação e controle de acesso.",
+      D: "INCORRETA. PAT traduz portas e endereços, sem garantir confidencialidade.",
+      E: "INCORRETA. ICMP não é protocolo de túnel autenticado."
+    },
+    regra: "NAT/PAT traduzem endereços/portas; proxy intermedeia solicitações; VPN cria conectividade lógica protegida.",
+    pegadinha: "NAT não é sinônimo de firewall nem garante segurança por si só.",
+    fonte: "RFC 4301 (IPsec) + RFC 3022 (NAT): https://www.rfc-editor.org/info/rfc4301/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-48",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u4-t1-s1",
+    assunto: "M2.4 Estrutura IPv4 — endereços privados",
+    contexto: "Um computador usa o endereço 192.168.10.25/24.",
+    enunciado: "Qual afirmação é correta?",
+    alternativas: [
+      { letra: "A", texto: "É um endereço loopback." },
+      { letra: "B", texto: "Está no espaço IPv4 privado e não é, por si só, um endereço público roteável na Internet." },
+      { letra: "C", texto: "É necessariamente multicast." },
+      { letra: "D", texto: "Todo endereço iniciado por 192 é privado." },
+      { letra: "E", texto: "Um endereço privado nunca pode acessar a Internet." }
+    ],
+    gabarito: "B",
+    justificativa: "192.168.10.25 pertence ao bloco privado 192.168.0.0/16; o acesso externo depende da arquitetura de borda.",
+    analise: {
+      A: "INCORRETA. Loopback IPv4 usa 127.0.0.0/8.",
+      B: "CORRETA. 192.168.0.0/16 é um bloco privado.",
+      C: "INCORRETA. Multicast IPv4 usa 224.0.0.0/4.",
+      D: "INCORRETA. A classificação depende do bloco completo, não apenas do primeiro número.",
+      E: "INCORRETA. Redes privadas podem acessar por gateways/NAT ou outras arquiteturas."
+    },
+    regra: "Blocos privados IPv4: 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16.",
+    pegadinha: "Não classificar o endereço apenas pelo primeiro octeto.",
+    fonte: "RFC 1918 — Address Allocation for Private Internets: https://www.rfc-editor.org/info/rfc1918/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-49",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u4-t3-s1",
+    assunto: "M2.4 VLSM e sumarização de rotas",
+    contexto: "Uma organização tem departamentos com diferentes necessidades de hosts e quer reduzir a quantidade de rotas anunciadas.",
+    enunciado: "Qual alternativa diferencia VLSM de sumarização?",
+    alternativas: [
+      { letra: "A", texto: "VLSM exige máscaras idênticas; sumarização cria um endereço por host." },
+      { letra: "B", texto: "VLSM criptografa pacotes; sumarização converte IPv4 em IPv6." },
+      { letra: "C", texto: "VLSM usa prefixos de tamanhos diferentes conforme a necessidade; sumarização agrega redes contíguas quando os limites permitem." },
+      { letra: "D", texto: "VLSM é transporte; sumarização é DNS." },
+      { letra: "E", texto: "Ambos são nomes diferentes para DHCP." }
+    ],
+    gabarito: "C",
+    justificativa: "VLSM permite dimensionar sub-redes com prefixos variados; sumarização representa redes contíguas por um prefixo agregado quando o alinhamento permite.",
+    analise: {
+      A: "INCORRETA. VLSM permite prefixos variáveis.",
+      B: "INCORRETA. Não são funções de criptografia nem conversão de versões IP.",
+      C: "CORRETA. Distingue dimensionamento de sub-redes e agregação de rotas.",
+      D: "INCORRETA. São conceitos de endereçamento e roteamento.",
+      E: "INCORRETA. DHCP configura interfaces, não substitui VLSM ou sumarização."
+    },
+    regra: "VLSM melhora a alocação; sumarização reduz a quantidade de rotas.",
+    pegadinha: "Não se pode sumarizar arbitrariamente redes não contíguas ou desalinhadas.",
+    fonte: "RFC 4632 — Classless Inter-domain Routing (CIDR): https://www.rfc-editor.org/info/rfc4632/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-50",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u4-t4-s1",
+    assunto: "M2.4 IPv6 — abreviação",
+    contexto: "Um analista precisa abreviar 2001:0db8:0000:0000:0000:ff00:0042:8329.",
+    enunciado: "Qual representação é válida e preserva o endereço?",
+    alternativas: [
+      { letra: "A", texto: "2001:db8:ff00:42:8329" },
+      { letra: "B", texto: "2001:db8:::ff00:42:8329" },
+      { letra: "C", texto: "2001:db8::ff00::42:8329" },
+      { letra: "D", texto: "2001:db8::ff00:42:8329" },
+      { letra: "E", texto: "2001:0db8:0000:0000:0000:ff00:0042:8329:0000" }
+    ],
+    gabarito: "D",
+    justificativa: "Zeros à esquerda podem ser removidos e uma sequência contínua de hextetos zero pode ser substituída por ::, usada no máximo uma vez.",
+    analise: {
+      A: "INCORRETA. Omitir hextetos sem :: altera o endereço.",
+      B: "INCORRETA. Três dois-pontos consecutivos não são a forma válida de compressão.",
+      C: "INCORRETA. :: aparece duas vezes e torna ambíguo o número de hextetos omitidos.",
+      D: "CORRETA. Remove zeros à esquerda e comprime uma sequência de hextetos zero com ::.",
+      E: "INCORRETA. Adiciona um hexteto e excede a estrutura de oito hextetos."
+    },
+    regra: "IPv6 usa oito hextetos; :: comprime uma sequência de hextetos zero.",
+    pegadinha: "Não usar :: duas vezes no mesmo endereço.",
+    fonte: "RFC 5952 — A Recommendation for IPv6 Address Text Representation: https://www.rfc-editor.org/info/rfc5952/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-51",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u5-t1-s1",
+    assunto: "M2.5 ping e traceroute",
+    contexto: "Um usuário relata lentidão e suspeita de falha em algum salto entre origem e destino.",
+    enunciado: "Qual alternativa diferencia ping de traceroute/tracert?",
+    alternativas: [
+      { letra: "A", texto: "Ambos sempre funcionam mesmo quando mensagens de controle são filtradas." },
+      { letra: "B", texto: "Ping lista todas as rotas da Internet; traceroute altera DNS." },
+      { letra: "C", texto: "Ping configura IP; traceroute distribui endereços DHCP." },
+      { letra: "D", texto: "Ping criptografa tráfego; traceroute instala certificados TLS." },
+      { letra: "E", texto: "Ping testa alcance e tempos de resposta; traceroute/tracert tenta revelar os saltos do caminho." }
+    ],
+    gabarito: "E",
+    justificativa: "Ping ajuda a avaliar alcance e tempo de resposta; traceroute/tracert infere saltos do caminho. Filtragem pode limitar a saída.",
+    analise: {
+      A: "INCORRETA. Filtros e ausência de respostas podem limitar resultados.",
+      B: "INCORRETA. Nenhum comando faz essas ações.",
+      C: "INCORRETA. Configuração IP e DHCP são funções distintas.",
+      D: "INCORRETA. Esses comandos não executam essas funções.",
+      E: "CORRETA. Resume as funções diagnósticas principais."
+    },
+    regra: "Usar ferramentas de diagnóstico conforme o sintoma e interpretar respostas com cautela.",
+    pegadinha: "A ausência de resposta de um salto não prova que o roteador esteja fora de serviço.",
+    fonte: "RFC 792 — Internet Control Message Protocol (ICMP): https://www.rfc-editor.org/info/rfc792/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-52",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u5-t2-s1",
+    assunto: "M2.5 ipconfig e comandos de configuração",
+    contexto: "Em Windows, o técnico precisa conferir endereço IP, máscara, gateway e DNS recebidos pela interface.",
+    enunciado: "Qual comando exibe diretamente esses parâmetros em detalhe?",
+    alternativas: [
+      { letra: "A", texto: "ipconfig /all." },
+      { letra: "B", texto: "nslookup." },
+      { letra: "C", texto: "tracert." },
+      { letra: "D", texto: "ping -t." },
+      { letra: "E", texto: "net use." }
+    ],
+    gabarito: "A",
+    justificativa: "ipconfig /all exibe a configuração detalhada das interfaces, incluindo endereço, máscara, gateway e servidores DNS quando configurados.",
+    analise: {
+      A: "CORRETA. Mostra informações detalhadas da configuração IP no Windows.",
+      B: "INCORRETA. Consulta registros/resolução DNS.",
+      C: "INCORRETA. Investiga o caminho até um destino.",
+      D: "INCORRETA. Testa alcance e tempos de resposta de forma contínua.",
+      E: "INCORRETA. Gerencia conexões com recursos compartilhados."
+    },
+    regra: "Escolher a ferramenta conforme o sintoma: configuração, DNS, alcance ou rota.",
+    pegadinha: "Não usar nslookup para verificar máscara ou gateway local.",
+    fonte: "Microsoft Learn — ipconfig command: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-53",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u5-t3-s1",
+    assunto: "M2.5 nslookup e dig",
+    contexto: "O acesso por IP funciona, mas é necessário confirmar se api.exemplo.gov.br resolve para o endereço esperado.",
+    enunciado: "Qual ferramenta consulta registros DNS desse nome?",
+    alternativas: [
+      { letra: "A", texto: "ipconfig /release." },
+      { letra: "B", texto: "nslookup ou dig." },
+      { letra: "C", texto: "traceroute sem destino." },
+      { letra: "D", texto: "chmod." },
+      { letra: "E", texto: "tasklist." }
+    ],
+    gabarito: "B",
+    justificativa: "nslookup e dig permitem consultar DNS e inspecionar respostas; o resultado ajuda a distinguir problemas de nome, cache, resolvedor ou registro.",
+    analise: {
+      A: "INCORRETA. Libera a configuração DHCP no Windows.",
+      B: "CORRETA. Ambas consultam servidores DNS e mostram respostas de resolução.",
+      C: "INCORRETA. Não consulta registros DNS diretamente.",
+      D: "INCORRETA. Altera permissões em sistemas Unix-like.",
+      E: "INCORRETA. Lista processos no Windows."
+    },
+    regra: "Usar nslookup/dig para testar resolução e consultar registros DNS.",
+    pegadinha: "Falha de resolução não prova que o servidor esteja indisponível pelo IP.",
+    fonte: "RFC 1034 — Domain Names: Concepts and Facilities: https://www.rfc-editor.org/info/rfc1034/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m2-54",
+    modulo: 2,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m2-u5-t4-s1",
+    assunto: "M2.5 Diagnóstico por camadas",
+    contexto: "O usuário acessa um servidor pelo endereço IP, mas falha ao usar o nome DNS. Outros serviços de rede continuam funcionando.",
+    enunciado: "Qual hipótese deve ser investigada primeiro?",
+    alternativas: [
+      { letra: "A", texto: "Ausência total de conectividade IP." },
+      { letra: "B", texto: "Falha total do cabo físico." },
+      { letra: "C", texto: "Resolução DNS, comparando a consulta do nome com o endereço esperado." },
+      { letra: "D", texto: "Falha obrigatória de DHCP em todos os dispositivos." },
+      { letra: "E", texto: "Necessidade de substituir TCP por FTP." }
+    ],
+    gabarito: "C",
+    justificativa: "O acesso por IP demonstra conectividade; a falha específica por nome direciona a investigação para DNS, cache e configuração do resolvedor, sem excluir outras causas.",
+    analise: {
+      A: "INCORRETA. O servidor é acessível por IP.",
+      B: "INCORRETA. O acesso por IP indica alguma conectividade funcional.",
+      C: "CORRETA. A diferença entre acesso por IP e por nome aponta inicialmente para DNS.",
+      D: "INCORRETA. O sintoma não prova falha de DHCP na rede.",
+      E: "INCORRETA. FTP não corrige resolução de nomes."
+    },
+    regra: "Diagnosticar por camadas e comparar sintomas antes de concluir a causa.",
+    pegadinha: "O primeiro sintoma orienta a hipótese, mas não é prova definitiva.",
+    fonte: "RFC 792 (ICMP) + RFC 1122 (Host Requirements): https://www.rfc-editor.org/info/rfc792/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m3-41",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u3-t1-s1",
+    assunto: "M3.3 Netiqueta profissional",
+    contexto: "Uma equipe distribuída usa e-mail e chat para coordenar tarefas com prazos curtos.",
+    enunciado: "Qual comportamento demonstra netiqueta profissional?",
+    alternativas: [
+      { letra: "A", texto: "Usar ironia e abreviações ambíguas." },
+      { letra: "B", texto: "Escrever todas as mensagens em maiúsculas para indicar urgência." },
+      { letra: "C", texto: "Encaminhar todas as conversas para todos os contatos." },
+      { letra: "D", texto: "Usar assunto claro, linguagem respeitosa, contexto suficiente e canal adequado; evitar responder a todos sem necessidade." },
+      { letra: "E", texto: "Enviar decisões por canal pessoal e não registrar o resultado." }
+    ],
+    gabarito: "D",
+    justificativa: "Netiqueta inclui respeito, clareza, concisão, contexto, pertinência e escolha apropriada do canal.",
+    analise: {
+      A: "INCORRETA. Isso pode reduzir a compreensão e gerar conflito.",
+      B: "INCORRETA. Maiúsculas podem ser interpretadas como grito e não substituem prioridade explícita.",
+      C: "INCORRETA. Cópias indiscriminadas aumentam ruído e exposição.",
+      D: "CORRETA. Favorece clareza, respeito e pertinência.",
+      E: "INCORRETA. Compromete rastreabilidade e continuidade."
+    },
+    regra: "Comunicação digital profissional deve ser respeitosa, inclusiva, pertinente e rastreável.",
+    pegadinha: "Netiqueta não é apenas polidez; também envolve privacidade e escolha do canal.",
+    fonte: "RFC 1855 — Netiquette Guidelines: https://www.rfc-editor.org/info/rfc1855/ (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m3-42",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u3-t2-s1",
+    assunto: "M3.3 Acessibilidade na comunicação",
+    contexto: "Uma equipe publica vídeo de treinamento e documentos com gráficos para pessoas com diferentes necessidades sensoriais.",
+    enunciado: "Qual conjunto melhora a acessibilidade?",
+    alternativas: [
+      { letra: "A", texto: "Repetir o mesmo texto alternativo em todas as imagens." },
+      { letra: "B", texto: "Fonte pequena, baixo contraste e instruções baseadas apenas em cor." },
+      { letra: "C", texto: "Converter todo texto em imagem." },
+      { letra: "D", texto: "Remover títulos e estrutura semântica." },
+      { letra: "E", texto: "Legendas/transcrição, texto alternativo significativo e informação que não dependa apenas da cor." }
+    ],
+    gabarito: "E",
+    justificativa: "Legendas/transcrições apoiam quem não ouve o áudio; texto alternativo comunica o propósito da imagem; contraste e pistas além da cor ajudam diferentes usuários.",
+    analise: {
+      A: "INCORRETA. Texto alternativo deve transmitir a função ou informação relevante.",
+      B: "INCORRETA. Cria barreiras visuais e cognitivas.",
+      C: "INCORRETA. Reduz seleção, redimensionamento e acesso semântico.",
+      D: "INCORRETA. Dificulta orientação e navegação assistiva.",
+      E: "CORRETA. Oferece alternativas ao áudio e às imagens e evita depender só de cor."
+    },
+    regra: "Acessibilidade exige conteúdo perceptível, navegável, semanticamente estruturado e com alternativas apropriadas.",
+    pegadinha: "Texto alternativo deve ser significativo, não repetitivo ou decorativo sem necessidade.",
+    fonte: "W3C — WCAG 2.2, https://www.w3.org/TR/WCAG22/."
+  },
+  {
+    id: "q-m3-43",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u3-t3-s1",
+    assunto: "M3.3 Comunicação institucional",
+    contexto: "Um órgão solicita providência formal a outra unidade, precisa registrar a decisão e acompanhar o prazo.",
+    enunciado: "Qual abordagem é mais adequada?",
+    alternativas: [
+      { letra: "A", texto: "Usar canal oficial aprovado, assunto descritivo, linguagem objetiva, responsável e prazo, preservando o registro." },
+      { letra: "B", texto: "Enviar por conta pessoal e apagar a conversa após a resposta." },
+      { letra: "C", texto: "Usar assunto genérico e omitir o prazo." },
+      { letra: "D", texto: "Enviar dados pessoais desnecessários a todos os destinatários." },
+      { letra: "E", texto: "Substituir sempre o registro formal por conversa verbal." }
+    ],
+    gabarito: "A",
+    justificativa: "A comunicação institucional deve ser clara, rastreável e realizada em canal aprovado; responsável, prazo e contexto apoiam prestação de contas.",
+    analise: {
+      A: "CORRETA. Favorece clareza, rastreabilidade e acompanhamento.",
+      B: "INCORRETA. Compromete governança e continuidade.",
+      C: "INCORRETA. Dificulta triagem e acompanhamento.",
+      D: "INCORRETA. Viola minimização e amplia exposição.",
+      E: "INCORRETA. A conversa pode complementar, mas não substitui registros exigidos."
+    },
+    regra: "Combinar finalidade, canal, clareza, rastreabilidade e proteção de dados.",
+    pegadinha: "Rastreabilidade não significa copiar todos os envolvidos nem compartilhar dados em excesso.",
+    fonte: "LGPD — Lei nº 13.709/2018 (Planalto): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m3-44",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u4-t2-s1",
+    assunto: "M3.4 Compartilhamento de tela seguro",
+    contexto: "Durante uma reunião externa, a área de trabalho contém notificações e janelas com informações pessoais. O servidor precisa mostrar uma planilha específica.",
+    enunciado: "Qual prática reduz melhor a exposição acidental?",
+    alternativas: [
+      { letra: "A", texto: "Compartilhar a tela inteira e deixar notificações ativas." },
+      { letra: "B", texto: "Compartilhar somente a janela necessária, silenciar notificações e revisar o conteúdo antes de transmitir." },
+      { letra: "C", texto: "Abrir documentos sigilosos para encontrá-los rapidamente durante a reunião." },
+      { letra: "D", texto: "Permitir controle remoto a todos sem necessidade." },
+      { letra: "E", texto: "Publicar a senha da reunião no chat aberto." }
+    ],
+    gabarito: "B",
+    justificativa: "Compartilhar apenas a janela necessária, revisar o conteúdo e limitar notificações reduz a exposição de dados fora do escopo da reunião.",
+    analise: {
+      A: "INCORRETA. Pode revelar dados sem relação com a reunião.",
+      B: "CORRETA. Limita a superfície exposta e reduz vazamentos acidentais.",
+      C: "INCORRETA. Aumenta o risco de exibição acidental.",
+      D: "INCORRETA. Concede privilégios excessivos.",
+      E: "INCORRETA. Facilita acesso não autorizado."
+    },
+    regra: "Compartilhamento seguro aplica minimização, revisão e controle de permissões.",
+    pegadinha: "Notificações e janelas de fundo também podem revelar informações.",
+    fonte: "Microsoft Teams — Meeting policies: https://learn.microsoft.com/en-us/microsoftteams/meeting-policies-in-teams (verificado em 2026-10-26). Zoom — Sharing your screen: https://support.zoom.us/hc/en-us/articles/115005759423-Sharing-your-screen-or-content-during-a-Zoom-meeting (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m3-45",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u5-t1-s1",
+    assunto: "M3.5 Zoombombing e intrusão em reuniões",
+    contexto: "Uma reunião institucional recebe participante desconhecido que interrompe a sessão e tenta compartilhar conteúdo ofensivo.",
+    enunciado: "Qual resposta combina melhor contenção e prevenção?",
+    alternativas: [
+      { letra: "A", texto: "Conceder privilégio de anfitrião ao participante." },
+      { letra: "B", texto: "Publicar o link da reunião nas redes sociais." },
+      { letra: "C", texto: "Remover o intruso, restringir compartilhamento/entrada, ativar lobby ou senha e reportar o incidente." },
+      { letra: "D", texto: "Desativar autenticação e deixar a reunião aberta." },
+      { letra: "E", texto: "Ignorar o incidente e manter permissões abertas." }
+    ],
+    gabarito: "C",
+    justificativa: "A contenção exige remover o intruso, restringir recursos abusáveis, rever controles de entrada e registrar o evento conforme o procedimento institucional.",
+    analise: {
+      A: "INCORRETA. Aumenta o risco e o alcance do intruso.",
+      B: "INCORRETA. Amplia a exposição e pode atrair novos intrusos.",
+      C: "CORRETA. Contém o evento e reduz recorrência.",
+      D: "INCORRETA. Facilita novas entradas não autorizadas.",
+      E: "INCORRETA. Deixa o vetor de risco ativo."
+    },
+    regra: "Resposta a intrusões combina contenção, controle de participantes e reporte.",
+    pegadinha: "Remover o intruso pode ser insuficiente se o link continuar público e as permissões permanecerem abertas.",
+    fonte: "Zoom Support — Advanced security settings (Waiting Room, passcode, autenticação): https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061300 (verificado em 2026-10-27)."
+  },
+  {
+    id: "q-m3-46",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u5-t2-s2",
+    assunto: "M3.5 Exposição em calendários e convites",
+    contexto: "Um convite enviado a muitos participantes externos contém no título o nome de um paciente e no corpo detalhes confidenciais desnecessários.",
+    enunciado: "Qual ajuste aplica melhor minimização e proteção de dados?",
+    alternativas: [
+      { letra: "A", texto: "Adicionar os endereços de todos os convidados no corpo do evento." },
+      { letra: "B", texto: "Manter todos os detalhes porque os convidados receberam o convite." },
+      { letra: "C", texto: "Tornar o calendário público." },
+      { letra: "D", texto: "Usar título neutro, remover detalhes pessoais desnecessários e restringir os detalhes aos participantes autorizados." },
+      { letra: "E", texto: "Copiar o conteúdo completo para canal público." }
+    ],
+    gabarito: "D",
+    justificativa: "Convites podem expor dados em títulos, descrições, participantes e permissões; deve-se limitar o conteúdo ao necessário e controlar a visibilidade.",
+    analise: {
+      A: "INCORRETA. Expõe identificadores sem necessidade.",
+      B: "INCORRETA. Receber convite não justifica expor dados desnecessários.",
+      C: "INCORRETA. Amplia a exposição.",
+      D: "CORRETA. Reduz a quantidade de dados expostos e limita acesso.",
+      E: "INCORRETA. Divulga informação confidencial a público inadequado."
+    },
+    regra: "Aplicar minimização e controle de acesso também a metadados de calendários.",
+    pegadinha: "O título do evento pode expor informação pessoal mesmo que o corpo esteja restrito.",
+    fonte: "LGPD — Lei nº 13.709/2018 (Planalto): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm (verificado em 2026-10-26). Microsoft Teams — Meeting policies: https://learn.microsoft.com/en-us/microsoftteams/meeting-policies-in-teams (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m3-47",
+    modulo: 3,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "m3-u5-t3-s1",
+    assunto: "M3.5 Phishing direcionado e spoofing",
+    contexto: "Uma mensagem usa nome de exibição semelhante ao do gestor, exige credenciais com urgência e contém link para domínio parecido com o institucional.",
+    enunciado: "Qual resposta é mais segura?",
+    alternativas: [
+      { letra: "A", texto: "Desativar filtros antiphishing." },
+      { letra: "B", texto: "Responder com a senha para confirmar a identidade." },
+      { letra: "C", texto: "Confiar no nome exibido, pois ele não pode ser falsificado." },
+      { letra: "D", texto: "Encaminhar a mensagem a todos com o link ativo." },
+      { letra: "E", texto: "Não clicar nem fornecer credenciais; verificar por canal independente e reportar a mensagem." }
+    ],
+    gabarito: "E",
+    justificativa: "A aparência do remetente pode ser falsificada; verificar por canal independente, evitar o link e reportar reduz o risco. SPF/DKIM/DMARC ajudam na autenticação, mas não eliminam toda engenharia social.",
+    analise: {
+      A: "INCORRETA. Reduz a proteção.",
+      B: "INCORRETA. Senhas não devem ser compartilhadas por e-mail.",
+      C: "INCORRETA. O nome de exibição pode ser falsificado.",
+      D: "INCORRETA. Pode ampliar a campanha maliciosa.",
+      E: "CORRETA. Evita interação com o vetor suspeito e confirma o pedido fora do canal comprometido."
+    },
+    regra: "Em suspeita de phishing, interromper interação, verificar independentemente e reportar.",
+    pegadinha: "SPF, DKIM e DMARC não garantem que toda mensagem seja legítima ou segura.",
+    fonte: "RFC 7208 — Sender Policy Framework (SPF) for Authorizing Use of Domains in Email: https://www.rfc-editor.org/info/rfc7208/ (verificado em 2026-10-26)."
+  },
+
+
+  {
+    id: "q-m1-44", modulo: 1, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "avancado",
+    topico: "modulo-1-unidade-2-topico-14",
+    assunto: "M1.2 — Relatório técnico integrado no Word",
+    contexto: "Uma equipe precisa publicar relatório técnico longo com títulos hierárquicos, sumário, tabelas, figuras, cabeçalhos diferentes entre seções e PDF acessível.",
+    enunciado: "Qual procedimento reduz retrabalho e mantém a estrutura consistente?",
+    alternativas: [
+      { letra: "A", texto: "Formatar cada título manualmente e digitar o sumário." },
+      { letra: "B", texto: "Usar apenas quebras de página e o mesmo cabeçalho em todas as seções." },
+      { letra: "C", texto: "Aplicar estilos semânticos, usar quebras de seção quando necessário, atualizar campos e validar a estrutura e as opções de exportação acessível do PDF." },
+      { letra: "D", texto: "Converter todo o texto em imagens para impedir alterações." },
+      { letra: "E", texto: "Exportar para PDF primeiro e estruturar o documento nesse formato." }
+    ],
+    gabarito: "C",
+    justificativa: "Estilos estruturam a hierarquia e permitem gerar sumário; quebras de seção controlam cabeçalhos distintos; campos devem ser atualizados. Na entrega em PDF, verificar marcação estrutural, ordem de leitura, idioma, texto alternativo pertinente e opções de exportação acessível, além de testar o resultado.",
+    analise: {
+      A: "INCORRETA. A formatação manual não oferece estrutura confiável para sumário automático.",
+      B: "INCORRETA. Quebras de página não substituem quebras de seção quando a configuração varia.",
+      C: "CORRETA. Combina estrutura semântica, controle de seção, atualização de campos e verificação da exportação acessível.",
+      D: "INCORRETA. Imagens prejudicam busca, seleção, leitura assistiva e manutenção.",
+      E: "INCORRETA. O PDF é formato de entrega, não o melhor ambiente para estruturar o documento."
+    },
+    regra: "Documentos longos exigem estilos, campos atualizáveis, quebras apropriadas e verificação da estrutura e das opções de acessibilidade do PDF.",
+    pegadinha: "Aparência visual não garante estrutura semântica.",
+    fonte: "Microsoft Support — Inserir um sumário automático no Word: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents; usar quebras de seção para alterar layout ou formatação: https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document; criar PDFs acessíveis: https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs"
+  },
+
 ];
 
 /* ----------------------------------------------------------------------------

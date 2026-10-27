@@ -32,7 +32,17 @@ const references = [
     topico: "M4 — Segurança da informação (LGPD)",
     dataVerificacao: "2026-10-20",
     status: "verificado",
-    dispositivos: ["art. 1º", "art. 2º", "art. 3º", "art. 4º", "art. 5º", "art. 17", "art. 18", "art. 46"]
+    dispositivos: ["art. 1º", "art. 2º", "art. 3º", "art. 4º", "art. 5º", "art. 6º, I a III e X", "art. 17", "art. 18", "art. 37", "art. 46", "art. 48", "art. 49"]
+  },
+  {
+    id: "ref-conflito-interesses-12813-2013",
+    titulo: "Lei de Conflito de Interesses — Lei nº 12.813, de 16 de maio de 2013",
+    organizacao: "Planalto (Presidência da República)",
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/lei/l12813.htm",
+    topico: "M6 — Ética e responsabilidade digital no serviço público (conflito de interesses)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["art. 1º", "art. 2º", "art. 3º, I", "art. 4º", "art. 5º, V", "art. 10"]
   },
   {
     id: "ref-lai-12527-2011",
@@ -470,6 +480,16 @@ const references = [
     dispositivos: null
   },
   {
+    id: "ref-lgpd-lei-15352-2026",
+    titulo: "Lei nº 15.352, de 25 de fevereiro de 2026 — altera a LGPD e atualiza a denominação institucional da ANPD",
+    organizacao: "Presidência da República — Planalto",
+    url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm",
+    topico: "M4 — Segurança da informação (LGPD e competências da ANPD)",
+    dataVerificacao: "2026-10-25",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
     id: "ref-anpd-resolucao-2-2022",
     titulo: "Resolução CD/ANPD nº 2, de 27 de janeiro de 2022 — Regulamento de aplicação da LGPD para agentes de tratamento de pequeno porte",
     organizacao: "ANPD (Gov.br)",
@@ -835,6 +855,1098 @@ const references = [
     dataVerificacao: "2026-10-24",
     status: "verificado",
     dispositivos: ["art. 5º, I", "art. 5º, II", "art. 5º, III", "art. 5º, IV", "art. 5º, V", "art. 5º, VI", "art. 5º, VII", "art. 5º, VIII", "art. 5º, IX", "art. 5º, XI", "art. 5º, XIII", "art. 5º, XV", "art. 5º, XVI", "art. 5º, XVII", "art. 5º, XVIII", "art. 5º, XIX", "art. 5º, XX", "art. 5º, XXI", "art. 5º, XXII", "art. 5º, XXIII", "art. 5º, XXIV", "art. 5º, XXV", "art. 5º, XXVI", "art. 5º, XXVII", "art. 5º, XXVIII", "art. 5º, XXIX", "art. 5º, XXX", "art. 5º, XXXI", "art. 5º, XXXII", "art. 5º, XXXIV", "art. 5º, XXXV", "art. 5º, XXXVI", "art. 5º, XXXVII", "art. 5º, XXXVIII", "art. 5º, XXXIX", "art. 5º, XL", "art. 5º, LXXVIII", "art. 5º, § 1º", "art. 5º, § 2º", "art. 5º, § 3º", "art. 5º, § 4º"]
-  }
+  },
+  {
+    id: "ref-nist-genai-profile-2024",
+    titulo: "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://doi.org/10.6028/NIST.AI.600-1",
+    topico: "M5 — IA generativa (confabulação/alucinação e gestão de riscos)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-google-cloud-grounding",
+    titulo: "Design chat prompts — Grounding",
+    organizacao: "Google Cloud",
+    url: "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/chat/chat-prompts",
+    topico: "M5 — IA generativa (fundamentação por contexto recuperado)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-secom-guia-redes-sociais-governo-federal",
+    titulo: "Guia de Boas Práticas para atuação de redes sociais do Governo Federal",
+    organizacao: "Secretaria de Comunicação Social da Presidência da República (Secom)",
+    url: "https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf",
+    topico: "M6 — Comunicação e conduta digital (redes sociais institucionais)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-w3c-wcag-22",
+    titulo: "Web Content Accessibility Guidelines (WCAG) 2.2",
+    organizacao: "W3C",
+    url: "https://www.w3.org/TR/WCAG22/",
+    topico: "M3 — Comunicação e colaboração (acessibilidade digital)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-saito-rehmsmeier-precision-recall-2015",
+    titulo: "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets",
+    organizacao: "PLOS ONE",
+    url: "https://doi.org/10.1371/journal.pone.0118432",
+    topico: "M5 — Aprendizado de máquina (métricas de classificação em classes desbalanceadas)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    "id": "ref-rfc-1122-host-requirements",
+    "titulo": "RFC 1122 — Requirements for Internet Hosts: Communication Layers",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc1122.html",
+    "topico": "M2 — Redes (arquitetura da Internet e hosts)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-1112-ip-multicast",
+    "titulo": "RFC 1112 — Host Extensions for IP Multicasting",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc1112.html",
+    "topico": "M2 — Redes (multicast IPv4)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-4291-ipv6-addressing",
+    "titulo": "RFC 4291 — IP Version 6 Addressing Architecture",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc4291.html",
+    "topico": "M2 — Redes (unicast, anycast, multicast e endereçamento IPv6)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-4632-cidr",
+    "titulo": "RFC 4632 — Classless Inter-domain Routing (CIDR)",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc4632.html",
+    "topico": "M2 — Redes (CIDR e prefixos IPv4)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-8314-email-tls",
+    "titulo": "RFC 8314 — Cleartext Considered Obsolete: TLS for Email Submission and Access",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc8314.html",
+    "topico": "M3 — Comunicação (TLS e portas SMTP/POP3/IMAP)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-9051-imap4rev2",
+    "titulo": "RFC 9051 — Internet Message Access Protocol (IMAP) Version 4rev2",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc9051.html",
+    "topico": "M3 — Comunicação (IMAP)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-1939-pop3",
+    "titulo": "RFC 1939 — Post Office Protocol Version 3 (POP3)",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc1939.html",
+    "topico": "M3 — Comunicação (POP3)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-5322-message-format",
+    "titulo": "RFC 5322 — Internet Message Format",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc5322.html",
+    "topico": "M3 — Comunicação (cabeçalhos e destinatários de e-mail)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-7208-spf",
+    "titulo": "RFC 7208 — Sender Policy Framework (SPF)",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc7208.html",
+    "topico": "M3 — Comunicação (autenticação de e-mail SPF)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-6376-dkim",
+    "titulo": "RFC 6376 — DomainKeys Identified Mail (DKIM) Signatures",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc6376.html",
+    "topico": "M3 — Comunicação (autenticação de e-mail DKIM)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-rfc-9989-dmarc",
+    "titulo": "RFC 9989 — Domain-Based Message Authentication, Reporting, and Conformance (DMARC)",
+    "organizacao": "IETF / RFC Editor",
+    "url": "https://www.rfc-editor.org/rfc/rfc9989.html",
+    "topico": "M3 — Comunicação (DMARC; substitui RFC 7489 e RFC 9091)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-lan",
+    "titulo": "What Is a LAN? Local Area Network",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-lan-local-area-network.html",
+    "topico": "M2 — Redes (LAN, cliente-servidor e peer-to-peer)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-wan",
+    "titulo": "What Is a WAN? Wide-Area Network",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-a-wan-wide-area-network.html",
+    "topico": "M2 — Redes (WAN, interconexão e comutação de pacotes)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-networking",
+    "titulo": "What Is Computer Networking?",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-computer-networking.html",
+    "topico": "M2 — Redes (tipos e componentes de redes)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-topology",
+    "titulo": "What Is Network Topology?",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html",
+    "topico": "M2 — Redes (topologia física/lógica, redundância e pontos de falha)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-low-latency",
+    "titulo": "What Is Low Latency?",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/site/us/en/learn/topics/cloud-networking/what-is-low-latency.html",
+    "topico": "M2 — Redes (latência e jitter)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisa-phishing",
+    "titulo": "Secure Our World — Recognize and Report Phishing",
+    "organizacao": "Cybersecurity and Infrastructure Security Agency (CISA)",
+    "url": "https://www.cisa.gov/be-cyber-smart/report-incident",
+    "topico": "M3 — Comunicação (phishing e mensagens suspeitas)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-google-meet-host-controls",
+    "titulo": "Gerenciar os controles do anfitrião no Google Meet",
+    "organizacao": "Google Meet Help",
+    "url": "https://support.google.com/meet/answer/16229038?co=GENIE.Platform%3DDesktop&hl=pt-br",
+    "topico": "M3 — Comunicação (controle de participantes e moderação)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-google-meet-recording",
+    "titulo": "Gravar uma videochamada",
+    "organizacao": "Google Meet Help",
+    "url": "https://support.google.com/meet/answer/9308681?co=GENIE.Platform%3DDesktop&hl=pt-br",
+    "topico": "M3 — Comunicação (gravação de reuniões e consentimento)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-version-history",
+    "titulo": "Restaurar uma versão anterior de um ficheiro armazenado no OneDrive",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/onedrive/restore-a-previous-version-of-a-file-stored-in-onedrive?ad=br&rs=pt-br&ui=pt-br",
+    "topico": "M1 — Microsoft 365 (histórico de versões)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-safeguards",
+    "titulo": "Como o OneDrive protege seus dados na nuvem",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/onedrive/how-onedrive-safeguards-your-data-in-the-cloud",
+    "topico": "M1 — Microsoft 365 (proteção de dados, links e histórico de versões)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-ransomware",
+    "titulo": "Como detectar ransomware e recuperar arquivos usando o OneDrive",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/onedrive/how-to-detect-ransomware-and-recover-files-using-onedrive",
+    "topico": "M1 — Microsoft 365 (detecção/recuperação de ransomware)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-cross-reference",
+    "titulo": "Criar uma referência cruzada",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/create-a-cross-reference",
+    "topico": "M1 — Microsoft 365 (Word: campos e referências cruzadas)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-compare-merge",
+    "titulo": "Comparar e mesclar duas versões de um documento",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/compare-and-merge-two-versions-of-a-document",
+    "topico": "M1 — Microsoft 365 (Word: revisão e comparação de documentos)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-read-only",
+    "titulo": "Tornar um documento somente leitura no Word",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/make-a-document-read-only-in-word",
+    "topico": "M1 — Microsoft 365 (Word: proteção e restrição de edição)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-lists",
+    "titulo": "Criar uma lista numerada ou com marcadores",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/training/create-a-bulleted-or-numbered-list",
+    "topico": "M1 — Microsoft 365 (Word: listas)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-tab-stops",
+    "titulo": "Inserir ou adicionar paradas de tabulação no Word",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/insert-or-add-tab-stops",
+    "topico": "M1 — Microsoft 365 (Word: tabulações)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-accessibility",
+    "titulo": "Tornar documentos do Word acessíveis com o Assistente de Acessibilidade",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/accessibility/word/make-your-word-documents-accessible-to-everyone-with-accessibility-assistant",
+    "topico": "M1 — Microsoft 365 (Word: acessibilidade)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-slide-master",
+    "titulo": "Personalizar um slide mestre",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/customize-a-slide-master",
+    "topico": "M1 — Microsoft 365 (PowerPoint: slide mestre)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-transitions",
+    "titulo": "Adicionar, alterar ou remover transições entre slides",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/add-change-or-remove-transitions-between-slides",
+    "topico": "M1 — Microsoft 365 (PowerPoint: transições)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-animation",
+    "titulo": "Animações e transições para o PowerPoint na Web",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/video-animations-and-transitions-for-powerpoint-web",
+    "topico": "M1 — Microsoft 365 (PowerPoint: animações e transições)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-pdf",
+    "titulo": "Salvar apresentações do PowerPoint como arquivos PDF",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/save-powerpoint-presentations-as-pdf-files",
+    "topico": "M1 — Microsoft 365 (PowerPoint: exportação para PDF)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-excel-xlookup",
+    "titulo": "Função PROCX",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/functions/xlookup-function",
+    "topico": "M1 — Microsoft 365 (Excel: PROCX)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-excel-if",
+    "titulo": "SE (Função SE)",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/functions/if-function",
+    "topico": "M1 — Microsoft 365 (Excel: função SE)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-outlook-calendar-sharing",
+    "titulo": "Compartilhamento de calendários no Microsoft 365",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/outlook/calendar-sharing-in-microsoft-365",
+    "topico": "M3 — Comunicação (calendários e permissões)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-outlook-time-zones",
+    "titulo": "Gerenciar configurações de fuso horário no Outlook",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/outlook/getstarted/manage-time-zone-settings-in-outlook",
+    "topico": "M3 — Comunicação (reuniões e fusos horários)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-teams-calendar",
+    "titulo": "Introdução ao calendário do Microsoft Teams",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/teams/meetings/get-started-with-the-microsoft-teams-calendar",
+    "topico": "M3 — Comunicação (integração Teams/Microsoft 365)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-teams-recording",
+    "titulo": "Reproduzir, compartilhar e baixar gravações de reuniões no Microsoft Teams",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/teams/meetings/play-share-and-download-meeting-recordings-in-microsoft-teams",
+    "topico": "M3 — Comunicação (gravação de reuniões)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-cisco-10gbase-t-cat6-cat6a",
+    "titulo": "Cisco Catalyst 6500 16-Port 10 Gigabit Ethernet Copper Module",
+    "organizacao": "Cisco",
+    "url": "https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-16-port-10-gigabit-ethernet-copper-module/index.html",
+    "topico": "M2 — Redes (Ethernet 10GBASE-T e alcance de cabeamento)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-zoom-webinar-capacity",
+    "titulo": "Comparação entre licenças para reuniões e webinars",
+    "organizacao": "Zoom Support",
+    "url": "https://support.zoom.com/hc/pb/article?id=zm_kb&sysparm_article=KB0062412",
+    "topico": "M3 — Comunicação (capacidade e licenciamento de webinars)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-zoom-webinar-breakout-rooms",
+    "titulo": "Managing webinar breakout rooms",
+    "organizacao": "Zoom Support",
+    "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057838",
+    "topico": "M3 — Comunicação (salas paralelas em webinars e requisitos)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-google-meet-browser-requirements",
+    "titulo": "Saiba quais requisitos você precisa para usar o Google Meet",
+    "organizacao": "Google Meet Help",
+    "url": "https://support.google.com/meet/answer/7317473?hl=pt-BR",
+    "topico": "M3 — Comunicação (reuniões pelo navegador)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-google-meet-breakout-eligibility",
+    "titulo": "Usar salas temáticas no Google Meet",
+    "organizacao": "Google Meet Help",
+    "url": "https://support.google.com/google-workspace-individual/answer/10099500?hl=pt-BR",
+    "topico": "M3 — Comunicação (elegibilidade de salas temáticas)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    id: "ref-ms-word-linked-embedded-objects",
+    titulo: "Objetos vinculados e incorporados",
+    organizacao: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/word/linked-objects-and-embedded-objects",
+    topico: "M1 — Microsoft 365 (vínculo dinâmico Word/Excel e OLE)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-sharepoint-version-history-limits",
+    titulo: "Limites do histórico de versão para a biblioteca de documentos e visão geral do OneDrive",
+    organizacao: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/sharepoint/document-library-version-history-limits",
+    topico: "M1 — Microsoft 365 (histórico de versões e políticas de retenção)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-onedrive-restore-deleted-files",
+    titulo: "Restaurar arquivos ou pastas excluídos no OneDrive",
+    organizacao: "Microsoft Support",
+    url: "https://support.microsoft.com/pt-br/onedrive/restore-deleted-files-or-folders-in-onedrive",
+    topico: "M1 — Microsoft 365 (retenção da lixeira conforme o tipo de conta)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-sharepoint-external-sharing-settings",
+    titulo: "Gerenciar configurações de compartilhamento do SharePoint e do OneDrive no Microsoft 365",
+    organizacao: "Microsoft Learn",
+    url: "https://learn.microsoft.com/pt-br/sharepoint/turn-external-sharing-on-or-off",
+    topico: "M1 — Microsoft 365 (políticas, permissões e expiração de links)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    "id": "ref-word-repeat-table-header",
+    "titulo": "Repetir o cabeçalho da tabela nas páginas subsequentes",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/repeat-table-header-on-subsequent-pages",
+    "topico": "M1 — Microsoft 365 (tabelas longas no Word)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-sort-table-content",
+    "titulo": "Classificar o conteúdo de uma tabela",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/sort-the-contents-of-a-table",
+    "topico": "M1 — Microsoft 365 (classificação de linhas em tabelas Word)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-ms-create-accessible-pdfs",
+    "titulo": "Criar PDFs acessíveis",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs",
+    "topico": "M1 — Microsoft 365 (exportação acessível de documentos PDF)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  }  ,
+  {
+    "id": "ref-powerpoint-slide-master-overview",
+    "titulo": "O que é um slide mestre no PowerPoint?",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/what-is-a-slide-master-in-powerpoint",
+    "topico": "M1 — Microsoft 365 (Slide Mestre, identidade visual global)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-powerpoint-animate-text-objects",
+    "titulo": "Animar texto ou objetos",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/powerpoint/training/animate-text-or-objects",
+    "topico": "M1 — Microsoft 365 (animação de objetos no PowerPoint)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-sync-files-folders",
+    "titulo": "Sincronizar arquivos e pastas do computador com o OneDrive",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-BR/onedrive/sync-your-computer-s-files-and-folders-with-onedrive",
+    "topico": "M1 — Microsoft 365 (sincronização bidirecional)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-onedrive-backup-folders",
+    "titulo": "Fazer backup de suas pastas com o OneDrive",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/onedrive/back-up-your-folders-with-onedrive",
+    "topico": "M1 — Microsoft 365 (backup de pastas conhecidas e configuração)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-purview-ediscovery-features",
+    "titulo": "Learn about eDiscovery features and components",
+    "organizacao": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/en-us/purview/edisc-features-components",
+    "topico": "M1 — Microsoft 365 (eDiscovery e licenciamento Enterprise)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-intune-licensing",
+    "titulo": "Planos e opções de licenciamento do Microsoft Intune",
+    "organizacao": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/pt-br/intune/fundamentals/licensing/",
+    "topico": "M1 — Microsoft 365 (gerenciamento de dispositivos e licenciamento)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-compatibility-mode",
+    "titulo": "Convertendo documentos em um novo formato",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/converting-documents-to-a-newer-format",
+    "topico": "M1 — Microsoft 365 (Word: Modo de Compatibilidade)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-sharepoint-team-site",
+    "titulo": "O que é um site de equipe do SharePoint?",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/sharepoint/sites-in-sharepoint/what-is-a-sharepoint-team-site",
+    "topico": "M1 — Microsoft 365 (SharePoint: armazenamento e colaboração em equipe)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+  {
+    "id": "ref-word-pdf-export",
+    "titulo": "Salvar ou converter em PDF ou XPS nos aplicativos da área de trabalho do Office",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps",
+    "topico": "M1 — Word: distribuição de documentos em PDF e limitações de edição",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-average-function-ptbr",
+    "titulo": "Função MÉDIA no Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/functions/average-function",
+    "topico": "M1 — Excel: cálculo de média aritmética",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-word-first-page-header-footer",
+    "titulo": "Alterar ou excluir um cabeçalho ou rodapé em uma única página",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/change-or-delete-a-header-or-footer-on-a-single-page",
+    "topico": "M1 — Word: cabeçalho e rodapé diferentes na primeira página",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-word-start-page-numbering-later",
+    "titulo": "Iniciar a numeração de página mais adiante no documento",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/start-page-numbering-later-in-your-document",
+    "topico": "M1 — Word: paginação a partir de seção/página posterior",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-tables-overview",
+    "titulo": "Visão geral de tabelas do Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/overview-of-excel-tables",
+    "topico": "M1 — Excel: tabelas, cabeçalhos e referências estruturadas",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-resize-table",
+    "titulo": "Redimensionar uma tabela adicionando ou removendo linhas e colunas no Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/resize-a-table-by-adding-or-removing-rows-and-columns-in-excel",
+    "topico": "M1 — Excel: expansão de tabelas com novos registros",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-filter-data",
+    "titulo": "Filtrar dados em um intervalo ou tabela no Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/get-started/filter-data-in-a-range-or-table-in-excel",
+    "topico": "M1 — Excel: filtros de dados",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-data-validation",
+    "titulo": "Aplicar validação de dados às células",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/get-started/apply-data-validation-to-cells",
+    "topico": "M1 — Excel: validação de dados e listas",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-conditional-formatting",
+    "titulo": "Utilizar formatação condicional para realçar informações no Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/use-conditional-formatting-to-highlight-information-in-excel",
+    "topico": "M1 — Excel: formatação condicional",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-word-table-of-contents",
+    "titulo": "Inserir um sumário automático no Word",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents",
+    "topico": "M1 — Word: estilos e sumário automático",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-word-section-breaks",
+    "titulo": "Usar quebras de seção para alterar o layout ou a formatação",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document",
+    "topico": "M1 — Word: estrutura de seções em documentos longos",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-office-accessible-pdf",
+    "titulo": "Criar PDFs acessíveis",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs",
+    "topico": "M1 — Word: exportação e acessibilidade de PDF",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+
+  {
+    id: "ref-rfc-8200-ipv6",
+    titulo: "RFC 8200 — Internet Protocol, Version 6 (IPv6) Specification (Internet Standard)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc8200/",
+    topico: "M2 — Redes e protocolos (IPv6)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 8200"]
+  },
+  {
+    id: "ref-rfc-1918-private-addresses",
+    titulo: "RFC 1918 — Address Allocation for Private Internets",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1918/",
+    topico: "M2 — Redes e protocolos (endereços privados)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1918"]
+  },
+  {
+    id: "ref-rfc-4632-cidr-2",
+    titulo: "RFC 4632 — Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4632/",
+    topico: "M2 — Redes e protocolos (VLSM e sumarização)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 4632"]
+  },
+  {
+    id: "ref-rfc-5952-ipv6-text",
+    titulo: "RFC 5952 — A Recommendation for IPv6 Address Text Representation",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc5952/",
+    topico: "M2 — Redes e protocolos (IPv6 abreviação)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 5952"]
+  },
+  {
+    id: "ref-rfc-1122-hosts",
+    titulo: "RFC 1122 — Requirements for Internet Hosts: Communication Layers (STD 3)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1122/",
+    topico: "M2 — Redes e protocolos (OSI/TCP-IP e diagnóstico)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1122"]
+  },
+  {
+    id: "ref-rfc-4251-ssh-architecture",
+    titulo: "RFC 4251 — The Secure Shell (SSH) Protocol Architecture",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4251/",
+    topico: "M2 — Redes e protocolos (SSH/SFTP)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 4251"]
+  },
+  {
+    id: "ref-rfc-950-subnetting",
+    titulo: "RFC 950 — Internet Standard Subnetting Procedure (STD 5)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc950/",
+    topico: "M2 — Redes e protocolos (sub-redes)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 950"]
+  },
+  {
+    id: "ref-rfc-1855-netiquette",
+    titulo: "RFC 1855 — Netiquette Guidelines",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1855/",
+    topico: "M3 — Comunicação (netiqueta profissional)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1855"]
+  },
+  {
+    id: "ref-rfc-7208-spf-2",
+    titulo: "RFC 7208 — Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7208/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 7208"]
+  },
+  {
+    id: "ref-rfc-6376-dkim-2",
+    titulo: "RFC 6376 — DomainKeys Identified Mail (DKIM) Signatures",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc6376/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 6376"]
+  },
+  {
+    id: "ref-rfc-7489-dmarc",
+    titulo: "RFC 7489 — Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7489/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 7489"]
+  },
+  {
+    id: "ref-nist-rdaf-1500-18",
+    titulo: "NIST SP 1500-18r2 — Research Data Framework (RDaF), Version 2.0",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html",
+    topico: "M7 — Dados (qualidade, metadados e governança)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST SP 1500-18r2"]
+  },
+  {
+    id: "ref-nist-stats-handbook",
+    titulo: "NIST/SEMATECH e-Handbook of Statistical Methods",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://www.itl.nist.gov/div898/handbook/",
+    topico: "M7/M8 — Estatística e visualização",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST/SEMATECH e-Handbook"]
+  },
+  {
+    id: "ref-nist-ai-rmf-10",
+    titulo: "NIST — Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://www.nist.gov/itl/ai-risk-management-framework",
+    topico: "M5 — IA (governança e risco)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST AI RMF 1.0"]
+  },
+  {
+    id: "ref-owasp-llm-prompt-injection",
+    titulo: "OWASP — LLM Prompt Injection Prevention Cheat Sheet",
+    organizacao: "OWASP Foundation",
+    url: "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    topico: "M5 — IA (engenharia de prompts)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["OWASP LLM Prompt Injection Prevention Cheat Sheet"]
+  },
+  {
+    id: "ref-tableau-help-desktop",
+    titulo: "Tableau Desktop and Web Authoring Help",
+    organizacao: "Tableau (Salesforce)",
+    url: "https://help.tableau.com/current/pro/desktop/en-us/default.htm",
+    topico: "M8 — Visualização (Tableau)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["Tableau Help"]
+  },
+  {
+    id: "ref-looker-studio-help",
+    titulo: "Google Looker Studio Help",
+    organizacao: "Google",
+    url: "https://support.google.com/looker-studio/",
+    topico: "M8 — Visualização (Looker Studio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["Looker Studio Help"]
+  },
+
+  {
+    id: "ref-rfc-8200-ipv6-2",
+    titulo: "RFC 8200 — Internet Protocol, Version 6 (IPv6) Specification (Internet Standard)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc8200/",
+    topico: "M2 — Redes e protocolos (IPv6)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 8200"]
+  },
+  {
+    id: "ref-rfc-1918-private-addresses-2",
+    titulo: "RFC 1918 — Address Allocation for Private Internets",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1918/",
+    topico: "M2 — Redes e protocolos (endereços privados)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1918"]
+  },
+  {
+    id: "ref-rfc-4632-cidr-3",
+    titulo: "RFC 4632 — Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4632/",
+    topico: "M2 — Redes e protocolos (VLSM e sumarização)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 4632"]
+  },
+  {
+    id: "ref-rfc-5952-ipv6-text-2",
+    titulo: "RFC 5952 — A Recommendation for IPv6 Address Text Representation",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc5952/",
+    topico: "M2 — Redes e protocolos (IPv6 abreviação)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 5952"]
+  },
+  {
+    id: "ref-rfc-1122-hosts-2",
+    titulo: "RFC 1122 — Requirements for Internet Hosts: Communication Layers (STD 3)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1122/",
+    topico: "M2 — Redes e protocolos (OSI/TCP-IP e diagnóstico)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1122"]
+  },
+  {
+    id: "ref-rfc-4251-ssh-architecture-2",
+    titulo: "RFC 4251 — The Secure Shell (SSH) Protocol Architecture",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4251/",
+    topico: "M2 — Redes e protocolos (SSH/SFTP)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 4251"]
+  },
+  {
+    id: "ref-rfc-950-subnetting-2",
+    titulo: "RFC 950 — Internet Standard Subnetting Procedure (STD 5)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc950/",
+    topico: "M2 — Redes e protocolos (sub-redes)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 950"]
+  },
+  {
+    id: "ref-rfc-1855-netiquette-2",
+    titulo: "RFC 1855 — Netiquette Guidelines",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1855/",
+    topico: "M3 — Comunicação (netiqueta profissional)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1855"]
+  },
+  {
+    id: "ref-rfc-7208-spf-3",
+    titulo: "RFC 7208 — Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7208/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 7208"]
+  },
+  {
+    id: "ref-rfc-6376-dkim-3",
+    titulo: "RFC 6376 — DomainKeys Identified Mail (DKIM) Signatures",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc6376/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 6376"]
+  },
+  {
+    id: "ref-rfc-7489-dmarc-2",
+    titulo: "RFC 7489 — Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7489/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 7489"]
+  },
+  {
+    id: "ref-nist-rdaf-1500-18-2",
+    titulo: "NIST SP 1500-18r2 — Research Data Framework (RDaF), Version 2.0",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html",
+    topico: "M7 — Dados (qualidade, metadados e governança)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST SP 1500-18r2"]
+  },
+  {
+    id: "ref-nist-stats-handbook-2",
+    titulo: "NIST/SEMATECH e-Handbook of Statistical Methods",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://www.itl.nist.gov/div898/handbook/",
+    topico: "M7/M8 — Estatística e visualização",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST/SEMATECH e-Handbook"]
+  },
+  {
+    id: "ref-nist-ai-rmf-10-2",
+    titulo: "NIST — Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://www.nist.gov/itl/ai-risk-management-framework",
+    topico: "M5 — IA (governança e risco)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST AI RMF 1.0"]
+  },
+  {
+    id: "ref-owasp-llm-prompt-injection-2",
+    titulo: "OWASP — LLM Prompt Injection Prevention Cheat Sheet",
+    organizacao: "OWASP Foundation",
+    url: "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    topico: "M5 — IA (engenharia de prompts)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["OWASP LLM Prompt Injection Prevention Cheat Sheet"]
+  },
+  {
+    id: "ref-tableau-help-desktop-2",
+    titulo: "Tableau Desktop and Web Authoring Help",
+    organizacao: "Tableau (Salesforce)",
+    url: "https://help.tableau.com/current/pro/desktop/en-us/default.htm",
+    topico: "M8 — Visualização (Tableau)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["Tableau Help"]
+  },
+  {
+    id: "ref-looker-studio-help-2",
+    titulo: "Google Looker Studio Help",
+    organizacao: "Google",
+    url: "https://support.google.com/looker-studio/",
+    topico: "M8 — Visualização (Looker Studio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["Looker Studio Help"]
+  },
 ];
 if (typeof window !== 'undefined') window.references = references;

@@ -394,7 +394,7 @@
       html += '</div>';
     }
 
-    html += '<textarea id="aud-texto" placeholder="Digite ou cole aqui o texto a ser lido em voz alta (acentos e pontuação preservados).">' + esc(ESTADO.textoDigitado || '') + '</textarea>';
+    html += '<textarea id="aud-texto" aria-label="Texto para leitura em voz alta" placeholder="Digite ou cole aqui o texto a ser lido em voz alta (acentos e pontuação preservados).">' + esc(ESTADO.textoDigitado || '') + '</textarea>';
     html += '<div class="aud-acoes">';
     html += '<button type="button" id="aud-ler-tela" class="sec">Ler conteúdo da tela</button>';
     var playDisabled = (!api || !!ESTADO.falando);

@@ -164,19 +164,31 @@ button { display: inline-flex; align-items: center; justify-content: center; }
   .curriculum-tree .tree-node:focus-visible { background: #1e3050; }
 }
 .tree-toggle {
-  background: transparent;
+  background-color: #ffffff;
+  color: #1f2937;
   border: 1px solid #c6d0d9;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.85rem;
   line-height: 1;
   padding: 0.1rem 0.35rem;
   margin-right: 0.35rem;
-  min-height: 28px;
-  min-width: 28px;
+  min-height: 44px;
+  min-width: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+button.tree-toggle::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid currentColor;
+}
+button.tree-toggle[aria-expanded="false"]::before {
+  border-top: 0;
+  border-bottom: 6px solid currentColor;
 }
 .tree-toggle-placeholder { opacity: 0.4; border: none; }
 .tree-label { font-weight: 500; }
@@ -185,6 +197,11 @@ button { display: inline-flex; align-items: center; justify-content: center; }
 @media (prefers-color-scheme: dark) {
   .tree-modulo-label { color: #e8eaed; }
   .tree-unidade-label { color: #8ab4f8; }
+  .tree-toggle {
+    background-color: #202124;
+    color: #e8eaed;
+    border-color: #5f6368;
+  }
 }
 
 /* Responsividade: breakpoints 360, 768, 1024, 1440 */
@@ -221,11 +238,27 @@ button { display: inline-flex; align-items: center; justify-content: center; }
   body { font-size: 1.05rem; }
 }
 
-/* Evitar overflow horizontal global */
-html, body { overflow-x: hidden; }
+/* Evitar overflow horizontal global que corte foco: usar quebra de palavra e rolagem local */
+html, body { max-width: 100%; overflow-wrap: break-word; }
 img, svg, table, pre { max-width: 100%; }
 
-/* Garantia: outline não é removido globalmente em nenhum elemento. */
+/* Skip link para conteúdo principal */
+.skip-link, .a11y-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: #0b1d36;
+  color: #fff;
+  padding: .5rem .8rem;
+  border-radius: 0 0 8px 0;
+  font-weight: 700;
+  text-decoration: none;
+}
+.skip-link:focus, .a11y-skip-link:focus {
+  left: 0;
+  outline: 3px solid #fdd663;
+}
 /* Vídeos complementares (Seção 12.2 do Escrita.txt) — embeds responsivos */
 .videos-complementares {
   margin-top: 1rem;

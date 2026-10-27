@@ -1,9 +1,9 @@
 /* flashcards.js — UI de flashcards com repetição espaçada (Seção 9 do Escrita.txt).
  *
- * CONECTA OS CARTÕES JÁ EXISTENTES: assets/data/flashcards_m1.js (10),
- * flashcards_m2.js (50), flashcards_m3.js (50) e flashcards_m4.js (54) —
- * 164 cartões no total. NENHUM cartão novo foi inventado; este arquivo
- * apenas consome os dados (P1.1: as fontes são descobertas, não fixadas).
+ * CONSUME OS CARTÕES EXISTENTES: flashcards_m1..m8.js — 460 cartões no total
+ * (M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50, M8=50; contagem
+ * verificada em CI em 2026-10-25). Este arquivo não cria cartões; apenas
+ * consome os dados (as fontes são descobertas dinamicamente).
  *
  * ============================================================================
  * ALGORITMO DE REPETIÇÃO ESPAÇADA — SM-2 SIMPLIFICADO (documentado)

@@ -1,539 +1,539 @@
 /* questions_m5.js — MÓDULO 5: INTELIGÊNCIA ARTIFICIAL
- * 40 questões autorais: 5.1 Fundamentos (10), 5.2 Aprendizado de Máquina (10),
- * 5.3 IA Generativa/LLMs (10), 5.4 Engenharia de Prompts (10).
- * Distribuição: 30% básico, 45% intermediário, 25% avançado. Autorais (origem: 'autoral').
- * Formato compatível com quiz-engine.js. */
+ * 42 questões autorais: 5.1 Fundamentos (10), 5.2 Aprendizado de Máquina (10),
+ * 5.3 IA Generativa/LLMs (11), 5.4 Engenharia de Prompts (11).
+ * Níveis medidos no banco atual: 12 básicos, 18 intermediários e 12 avançados.
+ * Autorais (origem: 'autoral'); formato compatível com quiz-engine.js. */
 const moduleQuestions5 = [
 
   /* ===================== 5.1 Fundamentos de IA (10 questões) ===================== */
 
   { id: "q-m5-01", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u1-t1-s1", assunto: "5.1 — O que é IA?",
-    contexto: "Inteligência Artificial é um conceito central na tecnologia atual.",
-    enunciado: "Inteligência Artificial (IA) pode ser melhor definida como:",
+    nivel: "basico", topico: "m5-u1-t1-s1", assunto: "5.1 — O que é inteligência artificial?",
+    contexto: "Um órgão compara um sistema que aplica regras fixas para encaminhar processos e outro que reconhece padrões em documentos e sugere classificações.",
+    enunciado: "Qual definição de inteligência artificial é mais adequada para analisar esses sistemas?",
     alternativas: [
-      { letra: "A", texto: "Um computador que substitui completamente o ser humano em todas as tarefas." },
-      { letra: "B", texto: "Sistema capaz de realizar tarefas que normalmente requerem inteligência humana." },
-      { letra: "C", texto: "Um programa que apenas executa cálculos matemáticos." },
-      { letra: "D", texto: "Uma rede neural que funciona sem dados." },
-      { letra: "E", texto: "Um hardware específico para jogos." }
+      { letra: "A", texto: "Qualquer programa de computador, independentemente da tarefa ou do método utilizado." },
+      { letra: "B", texto: "Um programa que sempre aprende sozinho e nunca utiliza regras explícitas." },
+      { letra: "C", texto: "Somente robôs físicos que imitam movimentos humanos." },
+      { letra: "D", texto: "Um sistema que necessariamente possui consciência e emoções humanas." },
+      { letra: "E", texto: "Um campo que desenvolve sistemas capazes de executar tarefas associadas a capacidades como percepção, previsão, geração, raciocínio ou tomada de decisão, conforme o método e o contexto." }
     ],
-    gabarito: "B",
-    justificativa: "IA é um sistema capaz de realizar tarefas que normalmente requerem inteligência humana, como aprendizado, raciocínio, reconhecimento de padrões e tomada de decisão. Substituir completamente humanos (alternativa A incorreta); apenas calcular (alternativa C incorreta); funcionar sem dados (alternativa D incorreta); ser hardware para jogos (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "IA é um campo amplo que abrange diferentes métodos para construir sistemas que realizam tarefas como percepção, previsão, geração de conteúdo, raciocínio ou apoio à decisão. Nem todo sistema de IA é um robô, tem consciência ou aprende autonomamente durante o uso. Sistemas baseados em regras e modelos treinados a partir de dados podem ambos integrar soluções de IA, dependendo de sua concepção e finalidade.",
     analise: {
-      A: "INCORRETA. IA não substitui humanos em todas as tarefas — tem limitações e escopo definido.",
-      B: "CORRETA. IA é um sistema que realiza tarefas que exigem inteligência humana.",
-      C: "INCORRETA. Cálculos são tarefas computacionais, não a definição de IA.",
-      D: "INCORRETA. Redes neurais precisam de dados para aprender — ausência de dados impede o aprendizado.",
-      E: "INCORRETA. Hardware para jogos é uma aplicação de TI, não definição de IA."
+      A: "INCORRETA. Nem todo programa é classificado como IA; a classificação depende do problema, das capacidades e do método do sistema.",
+      B: "INCORRETA. Há sistemas de IA baseados em regras explícitas e sistemas que aprendem com dados.",
+      C: "INCORRETA. IA também existe em software sem corpo físico.",
+      D: "INCORRETA. Sistemas de IA não precisam ter consciência ou emoções humanas.",
+      E: "CORRETA. A definição cobre diferentes tarefas e abordagens sem atribuir capacidades humanas universais."
     },
-    regra: "IA = 'sistema que faz o que exige inteligência humana, com dados'.",
-    pegadinha: "IA não é 'robô que pensa' — é 'sistema que realiza tarefas que exigem inteligência'.",
-    fonte: "IEEE — Definition of Artificial Intelligence, 2021."
+    regra: "IA é um campo de métodos e sistemas para tarefas como percepção, previsão, geração e decisão; não implica robô, consciência ou aprendizado autônomo.",
+    pegadinha: "Não confunda IA com robótica, consciência ou aprendizado de máquina: são conceitos relacionados, mas não equivalentes.",
+    fonte: "OECD, Explanatory memorandum on the updated OECD definition of an AI system: https://oecd.ai/en/wonk/ai-system-definition-update."
   },
 
   { id: "q-m5-02", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u1-t1-s2", assunto: "5.1 — Sistemas baseados em regras",
-    contexto: "Sistemas baseados em regras usam conhecimento explícito estruturado.",
-    enunciado: "Sobre sistemas baseados em regras, é correto afirmar que:",
+    nivel: "intermediario", topico: "m5-u1-t1-s2", assunto: "5.1 — Sistemas baseados em regras",
+    contexto: "Um sistema de triagem usa regras explícitas, como encaminhar solicitações com determinado código para uma fila específica. A equipe avalia se esse desenho é apropriado para as regras institucionais conhecidas.",
+    enunciado: "Qual afirmação descreve melhor um sistema baseado em regras?",
     alternativas: [
-      { letra: "A", texto: "Aprendem com dados sem programação." },
-      { letra: "B", texto: "Utilizam conhecimento expresso em regras if-then do conhecimento humano." },
-      { letra: "C", texto: "Não exigem nenhum tipo de regra." },
-      { letra: "D", texto: "Funcionam apenas com aprendizado profundo." },
-      { letra: "E", texto: "São incapazes de tomar decisões." }
+      { letra: "A", texto: "É sinônimo de rede neural treinada com milhões de parâmetros." },
+      { letra: "B", texto: "Aprende necessariamente novas regras a partir de exemplos sem qualquer configuração ou intervenção." },
+      { letra: "C", texto: "É incapaz de executar decisões condicionais." },
+      { letra: "D", texto: "Suas decisões decorrem de regras e condições explicitamente representadas; mudanças no domínio podem exigir revisão das regras, e a abordagem pode ser combinada com métodos de aprendizado." },
+      { letra: "E", texto: "Dispensa testes, porque regras explícitas não podem conter conflitos ou lacunas." }
     ],
-    gabarito: "B",
-    justificativa: "Sistemas baseados em regras usam regras if-then para representar conhecimento e tomar decisões baseadas em lógica do domínio. Aprendem com dados (alternativa A incorreta); não têm regras (alternativa C incorreta); usam ML (alternativa D incorreta); só pegam decisões (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Sistemas baseados em regras representam conhecimento por condições e ações explícitas, por exemplo regras SE–ENTÃO. Podem ser transparentes e adequados quando as regras são conhecidas, mas precisam de manutenção, testes de conflitos e tratamento de exceções. A existência de regras não impede que a solução seja combinada com modelos estatísticos ou aprendizado de máquina.",
     analise: {
-      A: "INCORRETA. Sistemas baseados em regras usam conhecimento humano codificado, não aprendizado de dados.",
-      B: "CORRETA. Sistemas baseados em regras usam regras if-then para tomar decisões.",
-      C: "INCORRETA. Sistemas baseados em regras dependem de regras estruturadas.",
-      D: "INCORRETA. Sistemas baseados em regras podem usar regras simbólicas, não apenas redes neurais.",
-      E: "INCORRETA. Sistemas baseados em regras são capazes de tomar decisões baseadas em regras."
+      A: "INCORRETA. Regras explícitas e redes neurais são abordagens diferentes, embora possam coexistir.",
+      B: "INCORRETA. Aprender regras automaticamente não é uma propriedade necessária de um sistema puramente baseado em regras.",
+      C: "INCORRETA. Condições e decisões são parte central desse tipo de sistema.",
+      D: "CORRETA. A alternativa descreve regras explícitas, manutenção e possibilidade de arquiteturas híbridas.",
+      E: "INCORRETA. Regras podem entrar em conflito, ficar desatualizadas ou não cobrir exceções; testes continuam necessários."
     },
-    regra: "Sistemas baseados em regras = 'if-then'. Conhecimento vivo codificado em regras.",
-    pegadinha: "A armadilha é a alternativa A: sistemas baseados em regras decidem por lógica do domínio, com conhecimento humano já codificado em regras if-then — 'aprender com dados' sem programação é característica de aprendizado de máquina, não deles.",
-    fonte: "Russell, S. & Norvig, P. — Artificial Intelligence: A Modern Approach, 2020."
+    regra: "Sistema baseado em regras aplica condições e ações explicitamente definidas; mantenha, teste e documente as regras e suas exceções.",
+    pegadinha: "Transparência das regras não significa ausência de conflitos nem dispensa validação; também não significa que a solução nunca possa ser híbrida.",
+    fonte: "Russell, S. J. e Norvig, P. — Artificial Intelligence: A Modern Approach, 4th ed., 2020."
   },
 
   { id: "q-m5-03", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "modulo-5-unidade-1", assunto: "5.1 — Aprendizado de Máquina",
-    contexto: "O aprendizado de máquina é uma subárea da IA.",
-    enunciado: "O aprendizado de máquina (Machine Learning) é:",
+    nivel: "basico", topico: "m5-u1-t1-s1", assunto: "5.1 — Aprendizado de máquina",
+    contexto: "Uma equipe fornece exemplos históricos a um algoritmo para ajustar um modelo que prevê a categoria de novas solicitações.",
+    enunciado: "Qual descrição de aprendizado de máquina é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Um modelo que só funciona com dados rotulados." },
-      { letra: "B", texto: "Um conjunto de técnicas que permitem que computadores aprendam padrões a partir de dados sem serem explicitamente programados." },
-      { letra: "C", texto: "Um algoritmo de classificação." },
-      { letra: "D", texto: "Um sistema de arquivos." },
-      { letra: "E", texto: "Um método de compressão de dados." }
+      { letra: "A", texto: "Uma técnica que exige que cada decisão futura seja programada manualmente como uma regra individual." },
+      { letra: "B", texto: "Uma garantia de que qualquer modelo melhora sempre que recebe mais dados, mesmo que sejam inadequados." },
+      { letra: "C", texto: "Um sinônimo de armazenamento de arquivos em banco de dados." },
+      { letra: "D", texto: "Uma abordagem que utiliza exclusivamente dados rotulados e não pode aprender estrutura sem rótulos." },
+      { letra: "E", texto: "Um conjunto de métodos que ajustam modelos a partir de dados ou experiência para identificar padrões e produzir previsões ou decisões, conforme o objetivo e o paradigma." }
     ],
-    gabarito: "B",
-    justificativa: "Machine Learning é um conjunto de técnicas que permite que computadores aprendam padrões a partir de dados, melhorando a performance com base em experiência (dados), sem ser explicitamente programados para cada tarefa. Só com dados rotulados (alternativa A incorreta); apenas um algoritmo de classificação (alternativa C incorreta); é um sistema de arquivos (alternativa D incorreta); método de compressão (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "Aprendizado de máquina reúne métodos que ajustam modelos a partir de dados ou experiência para executar tarefas como previsão, classificação, agrupamento ou decisão. Existem paradigmas supervisionados, não supervisionados e por reforço, entre outros. A qualidade depende da adequação dos dados, da formulação, do procedimento de treinamento e da avaliação; mais dados não garantem melhoria se forem inadequados ou enviesados.",
     analise: {
-      A: "INCORRETA. ML pode usar dados rotulados, sem rotulados ou com reforço — não está limitado a um único tipo.",
-      B: "CORRETA. ML é um conjunto de técnicas que aprendem padrões a partir de dados sem programação explícita.",
-      C: "INCORRETA. Classificação é uma tarefa de ML, mas não define o aprendizado de máquina em si.",
-      D: "INCORRETA. Sistema de arquivos é armazenamento de dados, não aprendizado.",
-      E: "INCORRETA. Compressão é outra área da computação, não ML."
+      A: "INCORRETA. Aprender padrões a partir de dados pode reduzir a necessidade de programar cada regra individual, embora a lógica explícita também seja útil em outros sistemas.",
+      B: "INCORRETA. Dados irrelevantes, enviesados ou de baixa qualidade podem não melhorar e até prejudicar o modelo.",
+      C: "INCORRETA. Armazenamento é distinto do treinamento de modelos.",
+      D: "INCORRETA. Aprendizado não supervisionado não exige rótulos fornecidos para cada exemplo.",
+      E: "CORRETA. A alternativa define o ajuste de modelos a partir de dados/experiência e admite diferentes tarefas e paradigmas."
     },
-    regra: "Aprendizado de Máquina = 'aprender com dados'. Computador melhora com experiência (dados).",
-    pegadinha: "ML não é só 'classificar' — é 'aprender padrões a partir de dados, melhorando desempenho'.",
+    regra: "Aprendizado de máquina ajusta modelos a partir de dados ou experiência; desempenho depende de dados, método, objetivo e avaliação.",
+    pegadinha: "Mais dados não garantem automaticamente melhor desempenho, e aprendizado de máquina não se limita a exemplos rotulados.",
     fonte: "Mitchell, T. M. — Machine Learning, McGraw-Hill, 1997."
   },
 
   { id: "q-m5-04", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Treinamento, validação e teste",
-    contexto: "Divisão de dados em conjuntos para modelagem é essencial no aprendizado de máquina.",
-    enunciado: "A separação de dados em conjuntos de treinamento, validação e teste é importante porque:",
+    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Separação de treino, validação e teste",
+    contexto: "Uma equipe compara modelos e ajusta hiperparâmetros várias vezes. Ela quer estimar o desempenho em dados novos sem contaminar a avaliação final.",
+    enunciado: "Qual procedimento reduz melhor o risco de superestimar a capacidade de generalização do modelo?",
     alternativas: [
-      { letra: "A", texto: "Permite que o modelo roteie todos os dados para treino." },
-      { letra: "B", texto: "Permite estimar o desempenho do modelo em dados não vistos." },
-      { letra: "C", texto: "Substitui a necessidade de validação." },
-      { letra: "D", texto: "Elimina a necessidade de teste." },
-      { letra: "E", texto: "Garante que o modelo nunca erra." }
+      { letra: "A", texto: "Usar o conjunto de teste a cada ajuste de hiperparâmetros e informar o melhor resultado observado como desempenho final." },
+      { letra: "B", texto: "Ajustar o modelo no conjunto de teste e depois tratá-lo como dado independente." },
+      { letra: "C", texto: "Duplicar registros entre treino e teste para garantir que os dois conjuntos tenham a mesma distribuição de exemplos." },
+      { letra: "D", texto: "Escolher o modelo somente pelo desempenho no treino, pois dados não vistos não são relevantes." },
+      { letra: "E", texto: "Treinar com o conjunto de treino, usar validação para selecionar modelos/hiperparâmetros e reservar o teste para uma avaliação final após as decisões de modelagem." }
     ],
-    gabarito: "B",
-    justificativa: "A divisão treino/validação/teste permite que o modelo aprenda (treino), ajuste hiperparâmetros (validação) e, posteriormente, avalie seu desempenho em dados nunca vistos (teste), estimando a capacidade de generalização. O modelo roteia todos os dados (alternativa A incorreta); substitui a validação (alternativa C incorreta); elimina a necessidade de teste (alternativa D incorreta); garante que o modelo nunca erra (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "O conjunto de treino ajusta os parâmetros do modelo; a validação apoia a seleção de modelos e hiperparâmetros; o teste deve permanecer separado das decisões de modelagem para fornecer uma estimativa final menos enviesada do desempenho em dados não vistos. Consultar repetidamente o teste e escolher com base nesses resultados transforma-o, na prática, em parte do processo de ajuste e pode produzir estimativas otimistas. Também é necessário prevenir vazamento de dados e respeitar dependências temporais ou por grupo na divisão.",
     analise: {
-      A: "INCORRETA. O modelo treina apenas com o conjunto de treino — não roteia todos os dados.",
-      B: "CORRETA. A divisão permite estimar o desempenho do modelo em dados nunca vistos.",
-      C: "INCORRETA. Validação é necessária para ajustar hiperparâmetros — testes não substituem.",
-      D: "INCORRETA. Teste é necessário para avaliar a performance final do modelo.",
-      E: "INCORRETA. Nenhum modelo garante que nunca erra."
+      A: "INCORRETA. A seleção repetida com base no teste adapta o processo a esse conjunto e compromete sua independência.",
+      B: "INCORRETA. Depois de usado para ajustar decisões, o conjunto deixa de funcionar como avaliação independente.",
+      C: "INCORRETA. Registros duplicados entre conjuntos podem causar vazamento e inflar artificialmente o desempenho.",
+      D: "INCORRETA. O desempenho no treino não estima, por si só, a generalização para dados novos.",
+      E: "CORRETA. A separação preserva o teste para a avaliação final e reduz o risco de estimativa otimista."
     },
-    regra: "Treinamento/validação/teste = 'aprender, ajustar, testar'. Três conjuntos separados de dados.",
-    pegadinha: "Não confunda: treino é 'aprender', validação é 'ajustar hiperparâmetros', teste é 'avaliar desempenho'.",
-    fonte: "James, G. et al. — An Introduction to Statistical Learning, 2021."
+    regra: "Treino ajusta parâmetros; validação orienta escolhas; teste fica reservado à avaliação final. Evite vazamento entre conjuntos.",
+    pegadinha: "Um teste consultado repetidamente para escolher modelos deixa de ser uma avaliação final independente.",
+    fonte: "scikit-learn, Cross-validation: evaluating estimator performance: https://scikit-learn.org/stable/modules/cross_validation.html; Google, Machine Learning Crash Course — Data preparation and feature engineering: https://developers.google.com/machine-learning/crash-course."
   },
 
-  { id: "q-m5-05", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Overfitting e underfitting",
-    contexto: "Generalização é um dos desafios centrais do aprendizado de máquina.",
-    enunciado: "No contexto de aprendizado de máquina, overfitting significa:",
+{ id: "q-m5-05", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Overfitting e generalização",
+    contexto: "Um modelo obtém desempenho muito alto nos exemplos de treinamento, mas comete muito mais erros em um conjunto de avaliação que não foi usado para ajustá-lo.",
+    enunciado: "Qual interpretação é mais compatível com esse resultado?",
     alternativas: [
-      { letra: "A", texto: "O modelo performa bem nos dados de treino e mal nos dados de teste." },
-      { letra: "B", texto: "O modelo performa mal tanto nos dados de treino quanto nos de teste." },
-      { letra: "C", texto: "O modelo não aprende nada." },
-      { letra: "D", texto: "O modelo é usado apenas para prever valores futuros." },
-      { letra: "E", texto: "O modelo não possui parâmetros." }
+      { letra: "A", texto: "O modelo não possui parâmetros ajustáveis, porque há diferença entre os conjuntos." },
+      { letra: "B", texto: "Há prova de underfitting, pois o modelo necessariamente falha tanto no treino quanto no teste." },
+      { letra: "C", texto: "O modelo generaliza perfeitamente, pois o resultado de treino é alto." },
+      { letra: "D", texto: "Há evidência de overfitting: o modelo se ajustou excessivamente às características do treino e generaliza pior para dados não vistos." },
+      { letra: "E", texto: "O resultado demonstra que qualquer conjunto de teste está incorreto e deve ser descartado." }
     ],
-    gabarito: "A",
-    justificativa: "Overfitting ocorre quando o modelo aprende o ruído dos dados de treino, performando bem nos dados de treino mas mal em dados novos/teste. O modelo performa mal nos treino e teste (alternativa B incorreta); não aprende nada (alternativa C incorreta); só prever valores futuros (alternativa D incorreta); não possui parâmetros (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Overfitting ocorre quando o modelo se ajusta em excesso aos dados de treinamento, incluindo padrões específicos ou ruído que não se repetem em novos exemplos. Um sinal comum é o desempenho elevado no treino e significativamente pior na validação ou no teste. A interpretação deve considerar a representatividade dos conjuntos, possíveis mudanças de distribuição, vazamento e a métrica utilizada; a diferença observada é evidência a investigar, não diagnóstico automático em qualquer contexto.",
     analise: {
-      A: "CORRETA. Overfitting: bom nos dados de treino, má generalização.",
-      B: "INCORRETA. Desempenho ruim tanto nos dados de treino quanto nos de teste caracteriza underfitting, não overfitting.",
-      C: "INCORRETA. Overfitting é aprender o ruído dos dados em excesso, não 'não aprender nada'.",
-      D: "INCORRETA. Prever valores futuros é uma tarefa específica, não a definição de overfitting.",
-      E: "INCORRETA. Overfitting se manifesta justamente quando o modelo possui parâmetros (alta complexidade)."
+      A: "INCORRETA. A diferença de desempenho não significa ausência de parâmetros; modelos ajustáveis podem sobreajustar.",
+      B: "INCORRETA. Underfitting costuma aparecer como desempenho insuficiente já no treino, além de desempenho ruim fora dele.",
+      C: "INCORRETA. Desempenho no treino não garante generalização.",
+      D: "CORRETA. O contraste entre treino muito bom e desempenho inferior em dados não vistos é compatível com overfitting.",
+      E: "INCORRETA. O resultado exige investigação da avaliação e dos dados, não descarte automático do teste."
     },
-    regra: "Overfitting = 'decorar o treino'. Bom nos treino, má generalização.",
-    pegadinha: "Overfitting não é 'não aprender' — é 'aprender demais o ruído'.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    regra: "Overfitting: bom ajuste ao treino e generalização prejudicada; confirme a interpretação com dados e avaliação adequados.",
+    pegadinha: "A diferença treino/teste é um sinal de possível sobreajuste, mas também pode refletir vazamento, amostragem inadequada ou mudança de distribuição.",
+    fonte: "scikit-learn, Underfitting vs. Overfitting: https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html; Hastie, Tibshirani e Friedman, The Elements of Statistical Learning: https://hastie.su.domains/ElemStatLearn/."
   },
 
-  { id: "q-m5-06", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Viés e variância",
-    contexto: "Viés e variância são propriedades fundamentais dos modelos de ML.",
-    enunciado: "Sobre viés (bias) e variância (variance) em modelos de aprendizado de máquina, é correto afirmar que:",
+{ id: "q-m5-06", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+    nivel: "intermediario", topico: "m5-u1-t2-s2", assunto: "5.1 — Viés, variância e generalização",
+    contexto: "Dois modelos são avaliados em diferentes amostras de treino. O modelo X apresenta erro alto tanto no treino quanto na validação; o modelo Y apresenta erro muito baixo no treino, mas varia bastante entre amostras e tem erro alto na validação.",
+    enunciado: "Qual interpretação é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Viés alto e variância baixa indicam bom equilíbrio no modelo." },
-      { letra: "B", texto: "Viés baixo e variância alta indicam overfitting." },
-      { letra: "C", texto: "Viés e variância são conceitos irrelevantes para a generalização." },
-      { letra: "D", texto: "Viés baixo e variância baixa referem-se ao mesmo modelo." },
-      { letra: "E", texto: "Viés alto é conseqüência exclusiva de overfitting." }
+      { letra: "A", texto: "Erro de treino baixo garante erro baixo em dados novos." },
+      { letra: "B", texto: "X necessariamente sofre overfitting; Y necessariamente sofre underfitting." },
+      { letra: "C", texto: "Viés e variância são sinônimos e não afetam a generalização." },
+      { letra: "D", texto: "X sugere subajuste (underfitting); Y sugere sobreajuste (overfitting), frequentemente associado a alta variância." },
+      { letra: "E", texto: "A variância mede exclusivamente o número de atributos do conjunto de dados." }
     ],
-    gabarito: "B",
-    justificativa: "Viés baixo (modelo complexo, se ajusta aos dados) e variância alta (sensível a pequenas variações nos dados) indicam overfitting. Viés alto e variância baixa indicam underfitting (alternativa A incorreta); viés e variância são relevantes para generalização (alternativa C incorreta); baixo viés e baixa variância não são o mesmo modelo (alternativa D incorreta); viés alto não é conseqüência de overfitting — overfitting é alta variância (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Erro elevado no treino e na validação sugere que o modelo não capturou adequadamente os padrões, situação compatível com subajuste e viés elevado. Desempenho muito bom no treino, mas fraco ou instável em dados não vistos, sugere sobreajuste e maior variância. Essa interpretação é diagnóstica, não uma identidade absoluta: os resultados também dependem da qualidade dos dados, da distribuição, da regularização e do procedimento de avaliação.",
     analise: {
-      A: "INCORRETA. Viés alto + variância baixa indica underfitting, não equilíbrio.",
-      B: "CORRETA. Baixo viés + alta variância indica overfitting (modelo complexo).",
-      C: "INCORRETA. Viés e variância são fundamentais para a análise de generalização.",
-      D: "INCORRETA. Modelos diferentes têm combinações distintas de viés e variância.",
-      E: "INCORRETA. Viés alto não é conseqüência exclusiva de overfitting — overfitting é alta variância."
+      A: "INCORRETA. Ajuste excelente no treino pode coexistir com desempenho ruim em dados novos.",
+      B: "INCORRETA. Inverte as interpretações típicas dos padrões de treino e validação.",
+      C: "INCORRETA. Viés e variância são conceitos distintos que ajudam a compreender fontes de erro e generalização.",
+      D: "CORRETA. Os padrões de erro descritos são compatíveis, respectivamente, com subajuste e sobreajuste.",
+      E: "INCORRETA. Variância não é o número de atributos; refere-se, nesse contexto, à sensibilidade do modelo aos dados de treinamento."
     },
-    regra: "Viés = erro sistemático. Variância = sensibilidade a ruído. Trade-off fundamental.",
-    pegadinha: "Viés alto não é overfitting — é underfitting. Overfitting é variância alta.",
-    fonte: "Geman, S. et al. — Neural Networks and the Bias/Variance Dilemma, 1992."
+    regra: "Erro alto no treino e validação sugere subajuste; treino muito bom e validação ruim ou instável sugere sobreajuste/alta variância.",
+    pegadinha: "Use viés e variância como diagnóstico no contexto; não trate a associação como regra absoluta independente dos dados e do método.",
+    fonte: "Geman, S., Bienenstock, E. e Doursat, R. — Neural Networks and the Bias/Variance Dilemma, Neural Computation, 1992: https://doi.org/10.1162/neco.1992.4.1.1."
   },
 
   { id: "q-m5-07", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Explicabilidade (XAI)",
-    contexto: "Explicabilidade é essencial em aplicações críticas de IA.",
-    enunciado: "Sobre a explicabilidade (XAI — eXplainable Artificial Intelligence), é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-5-unidade-3-topico-3", assunto: "5.1 — Explicabilidade (XAI)",
+    contexto: "Técnicas de explicabilidade podem ajudar a analisar o comportamento de modelos de IA, inclusive modelos complexos.",
+    enunciado: "Sobre explicabilidade em inteligência artificial (XAI), é correto afirmar que:",
     alternativas: [
-      { letra: "A", texto: "É o processo de tornar os modelos de IA mais difíceis de entender." },
-      { letra: "B", texto: "É o conjunto de técnicas para tornar os modelos de IA interpretáveis e transparentes para os humanos." },
-      { letra: "C", texto: "É a utilização de modelos de caixa-preta sem ressalva." },
-      { letra: "D", texto: "É o uso exclusivo de redes neurais profundas." },
-      { letra: "E", texto: "É o processo de esconder os dados." }
+      { letra: "A", texto: "Uma explicação local de uma previsão garante que o modelo inteiro seja transparente." },
+      { letra: "B", texto: "XAI consiste em ocultar os dados de entrada para proteger o modelo." },
+      { letra: "C", texto: "XAI é uma técnica exclusiva de redes neurais profundas." },
+      { letra: "D", texto: "Uma explicação gerada pelo modelo prova que a decisão é justa e correta." },
+      { letra: "E", texto: "Técnicas de XAI podem oferecer explicações úteis sobre previsões ou comportamento do modelo, mas não garantem explicação completa nem causalidade." }
     ],
-    gabarito: "B",
-    justificativa: "XAI é o conjunto de técnicas que tornam os modelos de IA mais interpretáveis e transparentes para humanos, permitindo compreender decisões e processos. Tornar o modelo mais difícil de entender (alternativa A incorreta); caixa-preta (alternativa C incorreta); uso exclusivo de redes profundas (alternativa D incorreta); esconder dados (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "XAI reúne métodos para tornar certos aspectos das previsões ou do comportamento de modelos mais compreensíveis. O alcance depende da técnica, do modelo e do contexto: uma explicação local não descreve necessariamente todo o modelo, e uma explicação não prova causalidade, justiça ou correção factual.",
     analise: {
-      A: "INCORRETA. XAI visa tornar o modelo mais interpretável, não mais difícil.",
-      B: "CORRETA. XAI torna o modelo interpretável e transparente para humanos.",
-      C: "INCORRETA. XAI visa remover caixa-preta, não mantê-la.",
-      D: "INCORRETA. XAI não é restrito a redes neurais profundas.",
-      E: "INCORRETA. XAI não esconde dados — revela processos."
+      A: "INCORRETA. Uma explicação local se refere a uma previsão ou região específica e não garante transparência global.",
+      B: "INCORRETA. Ocultar dados de entrada não define XAI.",
+      C: "INCORRETA. Há técnicas de explicabilidade aplicáveis a diferentes famílias de modelos, não apenas redes profundas.",
+      D: "INCORRETA. Explicabilidade não prova, por si só, justiça, validade ou correção da decisão.",
+      E: "CORRETA. A explicação pode apoiar análise e auditoria, mas possui escopo e limitações que devem ser avaliados."
     },
-    regra: "XAI = 'entenda o que a IA pensou'. Tornar modelos interpretáveis.",
-    pegadinha: "XAI não é 'explicar tudo de uma vez' — é tornar a IA compreensível.",
-    fonte: "Arrieta, A. et al. — XAI: Explainable Artificial Intelligence, 2020."
+    regra: "XAI = métodos para compreender aspectos das previsões ou do comportamento de um modelo, com limitações explícitas.",
+    pegadinha: "Uma explicação plausível não é prova de causalidade, justiça ou correção; confira o escopo da técnica usada.",
+    fonte: "Arrieta, A. et al. — Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI, Information Fusion, 58 (2020), DOI: https://doi.org/10.1016/j.inffus.2019.12.012."
   },
 
-  { id: "q-m5-08", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Dados, ativos, parâmetros e inferência",
-    contexto: "Modelos de IA consomem dados e geram inferências.",
-    enunciado: "No contexto de modelos de IA, o termo 'inferência' refere-se a:",
+    { id: "q-m5-08", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+    nivel: "basico", topico: "m5-u1-t1-s2", assunto: "5.1 — Treinamento e inferência",
+    contexto: "Um modelo de classificação já foi treinado e validado. Agora, uma aplicação envia novas solicitações para que o modelo indique a categoria provável de cada uma.",
+    enunciado: "Nesse fluxo, qual etapa corresponde à inferência?",
     alternativas: [
-      { letra: "A", texto: "O processo de treinamento do modelo." },
-      { letra: "B", texto: "O processo de usar um modelo treinado para fazer previsões ou decisões sobre novos dados." },
-      { letra: "C", texto: "O processo de remover dados." },
-      { letra: "D", texto: "O processo de compactar arquivos." },
-      { letra: "E", texto: "O processo de criar novos parâmetros." }
+      { letra: "A", texto: "Ajustar os parâmetros do modelo usando exemplos de treinamento." },
+      { letra: "B", texto: "Executar o modelo treinado sobre novas entradas e produzir previsões ou saídas." },
+      { letra: "C", texto: "Selecionar hiperparâmetros usando exclusivamente os resultados do conjunto de teste." },
+      { letra: "D", texto: "Reunir e rotular os dados antes de iniciar o treinamento." },
+      { letra: "E", texto: "Excluir os registros históricos sem executar o modelo." }
     ],
     gabarito: "B",
-    justificativa: "Inferência é o uso de um modelo treinado para fazer previsões ou decisões sobre novos dados, com base no conhecimento aprendido. O processo de treinamento (alternativa A incorreta); remover dados (alternativa C incorreta); comprimir arquivos (alternativa D incorreta); criar novos parâmetros (alternativa E incorreta).",
+    justificativa: "Inferência é a execução de um modelo já treinado para produzir previsões, classificações, gerações ou outras saídas a partir de entradas. Treinamento ajusta parâmetros; validação pode orientar a seleção de modelos e hiperparâmetros; preparação de dados e rotulagem são atividades distintas. Em sistemas reais, a inferência também exige monitoramento de desempenho, latência e possíveis mudanças nos dados.",
     analise: {
-      A: "INCORRETA. Treinamento é o processo de aprendizagem; inferência é o uso do modelo.",
-      B: "CORRETA. Inferência = usar o modelo treinado para previsões/ decisões com novos dados.",
-      C: "INCORRETA. Remoção de dados não é inferência.",
-      D: "INCORRETA. Compressão de arquivos não é inferência.",
-      E: "INCORRETA. Criação de novos parâmetros não é inferência."
+      A: "INCORRETA. Ajustar parâmetros com exemplos é parte do treinamento, não da inferência.",
+      B: "CORRETA. A aplicação usa o modelo já treinado para gerar saídas a partir de novas entradas.",
+      C: "INCORRETA. Selecionar hiperparâmetros é uma atividade de modelagem e usar repetidamente o teste compromete sua independência.",
+      D: "INCORRETA. Preparação e rotulagem dos dados ocorrem antes ou durante a construção do conjunto de treinamento.",
+      E: "INCORRETA. Excluir registros não corresponde à execução de um modelo."
     },
-    regra: "Inferência = 'usar o modelo para prever/ decidir'. Uso de modelo treinado.",
-    pegadinha: "Inferência não é 'treinar' — é 'usar o modelo já treinado para tomar decisão'.",
-    fonte: "Goodfellow, I. et al. — Deep Learning, 2016."
+    regra: "Treinamento ajusta o modelo; inferência usa o modelo treinado para produzir saídas em novas entradas.",
+    pegadinha: "Inferência não significa necessariamente raciocínio humano: é a etapa de aplicação do modelo, inclusive para classificação, previsão ou geração.",
+    fonte: "Google, Machine Learning Glossary — Inference: https://developers.google.com/machine-learning/glossary#inference."
   },
 
-  { id: "q-m5-09", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Avaliação de Performance e Qualidade",
-    contexto: "Avaliação é essencial para garantir que o modelo atenda aos objetivos.",
-    enunciado: "A avaliação de desempenho e qualidade em aprendizado de máquina é importante porque:",
+{ id: "q-m5-09", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Métricas de avaliação",
+    contexto: "Um modelo apresenta boa métrica média em um conjunto de teste, mas a equipe ainda precisa decidir se ele está pronto para apoiar um serviço público.",
+    enunciado: "Qual procedimento oferece a avaliação mais responsável?",
     alternativas: [
-      { letra: "A", texto: "Permite verificar se o modelo atende aos objetivos e se generaliza bem." },
-      { letra: "B", texto: "É um processo redundante." },
-      { letra: "C", texto: "Substitui a necessidade de validação." },
-      { letra: "D", texto: "Elimina a necessidade de teste." },
-      { letra: "E", texto: "Garante que o modelo nunca falhe." }
+      { letra: "A", texto: "Considerar a métrica média suficiente, sem verificar erros por classe, subgrupo ou cenário de uso." },
+      { letra: "B", texto: "Escolher o modelo com maior número de parâmetros, pois complexidade comprova qualidade." },
+      { letra: "C", texto: "Definir critérios alinhados ao uso, avaliar em dados adequados e não usados no ajuste, examinar tipos de erro e subgrupos relevantes e documentar limitações e monitoramento." },
+      { letra: "D", texto: "Usar apenas os resultados do treino para evitar variações no conjunto de teste." },
+      { letra: "E", texto: "Interpretar qualquer métrica alta como garantia de justiça, segurança e desempenho futuro." }
     ],
-    gabarito: "A",
-    justificativa: "A avaliação de desempenho e qualidade é essencial para verificar se o modelo atende aos objetivos, se generaliza bem para dados novos e se é adequado para o contexto. Processo redundante (alternativa B incorreta); substitui validação (alternativa C incorreta); elimina teste (alternativa D incorreta); garante falha (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "A avaliação deve corresponder ao uso pretendido e considerar dados representativos, métricas adequadas, erros relevantes, possíveis diferenças entre subgrupos e limitações. O conjunto de teste deve permanecer separado do processo de ajuste e seleção, e o desempenho precisa ser acompanhado quando o sistema entra em operação, pois dados e condições podem mudar. Uma métrica isolada não prova justiça, segurança ou sucesso futuro.",
     analise: {
-      A: "CORRETA. Avaliação verifica se o modelo atende aos objetivos e generaliza.",
-      B: "INCORRETA. Avaliação não é redundante — é fundamental para a qualidade.",
-      C: "INCORRETA. Avaliação não substitui validação — complementa.",
-      D: "INCORRETA. Avaliação não elimina a necessidade de teste.",
-      E: "INCORRETA. Avaliação não garante que o modelo nunca falhar."
+      A: "INCORRETA. Uma média pode ocultar erros graves em classes, subgrupos ou cenários específicos.",
+      B: "INCORRETA. Maior complexidade não comprova melhor generalização nem adequação ao problema.",
+      C: "CORRETA. A alternativa reúne critérios ligados ao uso, avaliação isolada, análise de erros e acompanhamento.",
+      D: "INCORRETA. O desempenho de treino tende a ser otimista e não substitui avaliação em dados não usados no ajuste.",
+      E: "INCORRETA. Métricas são evidências limitadas, não garantias de justiça, segurança ou estabilidade futura."
     },
-    regra: "Avaliação = 'qualidade do modelo'. Verificar atendimento aos objetivos.",
-    pegadinha: "Avaliação não é 'garantir sucesso' — é 'medir o quão bom o modelo é'.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
+    regra: "Avalie modelos contra critérios do uso real, com dados isolados e métricas adequadas; analise erros e acompanhe o desempenho em produção.",
+    pegadinha: "Uma métrica alta não garante ausência de viés, segurança ou estabilidade após mudanças nos dados e no contexto.",
+    fonte: "NIST, AI Risk Management Framework 1.0: https://www.nist.gov/itl/ai-risk-management-framework."
   },
 
   { id: "q-m5-10", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-1", assunto: "5.1 — Regra geral de completude",
-    contexto: "IA abrange sistemas que realizam tarefas de inteligência humana.",
-    enunciado: "Para considerar um sistema de IA como 'completo' do ponto de vista técnico, ele deve:",
+    nivel: "intermediario", topico: "modulo-5-unidade-1-topico-2", assunto: "5.1 — Definição de escopo e avaliação de sistemas de IA",
+    contexto: "Uma equipe pretende adotar um sistema de IA para apoiar a triagem de solicitações em um serviço público.",
+    enunciado: "Antes de colocar o sistema em uso, qual abordagem técnica é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Ser capaz de realizar todas as tarefas humanas." },
-      { letra: "B", texto: "Ter um escopo definido e realizar tarefas específicas com precisão." },
-      { letra: "C", texto: "Não usar dados." },
-      { letra: "D", texto: "Não precisar de treinamento." },
-      { letra: "E", texto: "Ser capaz de falar em alguns idiomas." }
+      { letra: "A", texto: "Exigir que o sistema realize todas as tarefas humanas para considerá-lo tecnicamente válido." },
+      { letra: "B", texto: "Definir tarefas e limites de uso, critérios de desempenho e riscos, e avaliar o sistema com dados adequados ao contexto pretendido." },
+      { letra: "C", texto: "Dispensar avaliação quando o sistema apresenta bons resultados em exemplos escolhidos pela equipe." },
+      { letra: "D", texto: "Presumir que um sistema de IA funciona sem dados, validação ou supervisão após a implantação." },
+      { letra: "E", texto: "Usar a capacidade de conversar em vários idiomas como critério suficiente de qualidade para qualquer tarefa." }
     ],
     gabarito: "B",
-    justificativa: "Um sistema de IA 'completo' tem escopo definido e realiza tarefas específicas com precisão — não necessariamente tudo o que um humano faz (alternativa A incorreta); usar dados (alternativa C incorreta); necessidade de treinamento não é eliminada (alternativa D incorreta); idiomas são apenas um recurso (alternativa E incorreta).",
+    justificativa: "A avaliação de um sistema de IA deve partir de um caso de uso definido, critérios de desempenho verificáveis, dados pertinentes e análise de riscos e limitações. Não existe requisito geral de que todo sistema execute todas as tarefas humanas, e uma demonstração favorável ou capacidade linguística não substitui avaliação apropriada ao uso pretendido.",
     analise: {
-      A: "INCORRETA. IA não realiza todas as tarefas humanas — tem escopo definido.",
-      B: "CORRETA. Um sistema de IA completo tem escopo definido e realiza tarefas específicas com precisão.",
-      C: "INCORRETA. Sistemas de IA usam dados — ausência de dados impede o aprendizado.",
-      D: "INCORRETA. Sistemas de IA necessitam de treinamento para aprenderem padrões.",
-      E: "INCORRETA. Idiomas são apenas um recurso — não definem completude."
+      A: "INCORRETA. Um sistema pode ser projetado para uma tarefa delimitada; não precisa substituir todas as capacidades humanas.",
+      B: "CORRETA. Escopo, critérios de desempenho, adequação dos dados e riscos devem ser definidos e avaliados para o contexto de uso.",
+      C: "INCORRETA. Exemplos selecionados podem ser enviesados e não substituem uma avaliação planejada e representativa.",
+      D: "INCORRETA. Necessidades de dados, validação, monitoramento e supervisão dependem do sistema e do risco; não podem ser presumidas ausentes.",
+      E: "INCORRETA. Fluência linguística é apenas uma capacidade e não demonstra qualidade para tarefas não relacionadas."
     },
-    regra: "IA completa = 'escopo definido + precisão + dados + treinamento'.",
-    pegadinha: "IA não é 'robô com tudo' — é 'sistema com escopo definido e dados'.",
-    fonte: "ISO/IEC 22989 (Artificial Intelligence — Concepts and Terminology)."
+    regra: "Avalie sistemas de IA contra objetivos, dados, métricas, riscos e limites definidos para o caso de uso.",
+    pegadinha: "Não trate 'IA completa' como uma categoria técnica universal: a adequação é relativa à tarefa, aos critérios e ao contexto de implantação.",
+    fonte: "ISO/IEC 22989 — Artificial intelligence — Concepts and terminology."
   },
 
   /* ===================== 5.2 Aprendizado de Máquina (10 questões) ===================== */
 
   { id: "q-m5-11", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u2-t1-s1", assunto: "5.2 — Paradigmas de Aprendizado",
-    contexto: "Existem diferentes paradigmas de aprendizado de máquina.",
-    enunciado: "A classificação dos paradigmas de aprendizado de máquina em supervisionado, não supervisionado e por reforço baseia-se em:",
+    nivel: "intermediario", topico: "m5-u2-t1-s1", assunto: "5.2 — Paradigmas de aprendizado",
+    contexto: "Uma equipe tem três problemas: prever a categoria de um pedido com exemplos rotulados, encontrar grupos em dados sem rótulos e treinar um agente que escolhe ações com base em recompensas.",
+    enunciado: "Qual associação entre problema e paradigma de aprendizado está correta?",
     alternativas: [
-      { letra: "A", texto: "O tipo de algoritmo usado." },
-      { letra: "B", texto: "A presença ou ausência de rótulos (saídas esperadas) durante o treinamento." },
-      { letra: "C", texto: "O tamanho do conjunto de dados." },
-      { letra: "D", texto: "A linguagem de programação." },
-      { letra: "E", texto: "A arquitetura da rede neural." }
+      { letra: "A", texto: "Prever categoria: não supervisionado; agrupar sem rótulos: reforço; escolher ações por recompensa: supervisionado." },
+      { letra: "B", texto: "Prever categoria com alvos: supervisionado; buscar grupos sem alvos: não supervisionado; aprender ações por interação e recompensa: por reforço." },
+      { letra: "C", texto: "Os três problemas são supervisionados porque todos usam dados." },
+      { letra: "D", texto: "O paradigma é determinado apenas pelo tamanho do conjunto de dados." },
+      { letra: "E", texto: "Aprendizado por reforço é sempre classificação com duas categorias." }
     ],
     gabarito: "B",
-    justificativa: "Paradigmas de aprendizado são definidos pela presença ou ausência de rótulos (saídas desejadas) durante o treinamento: supervisionado (com rótulos), não supervisionado (sem rótulos), reforço (aprender por recompensas). Tipo de algoritmo (alternativa A incorreta); tamanho do conjunto (alternativa C incorreta); linguagem de programação (alternativa D incorreta); arquitetura de rede (alternativa E incorreta).",
+    justificativa: "No aprendizado supervisionado, exemplos são associados a alvos conhecidos. Métodos não supervisionados buscam estrutura sem receber esses alvos como resposta desejada. No aprendizado por reforço, um agente interage com um ambiente, escolhe ações e recebe recompensas ou penalidades que influenciam a política aprendida. Há métodos híbridos e variações, mas esses sinais de aprendizado distinguem os paradigmas no cenário apresentado.",
     analise: {
-      A: "INCORRETA. Tipo de algoritmo não define o paradigma de aprendizado.",
-      B: "CORRETA. Paradigmas são definidos pela presença/ausência de rótulos (saídas desejadas).",
-      C: "INCORRETA. Tamanho do conjunto de dados não define o paradigma.",
-      D: "INCORRETA. Linguagem de programação é uma escolha técnica, não o paradigma.",
-      E: "INCORRETA. Arquitetura de rede não define o paradigma de aprendizado."
+      A: "INCORRETA. Troca os três paradigmas e associa cada tarefa ao sinal de aprendizagem errado.",
+      B: "CORRETA. As associações correspondem aos alvos conhecidos, à descoberta de estrutura e à interação com recompensa.",
+      C: "INCORRETA. Usar dados não torna automaticamente o método supervisionado; importa o sinal de aprendizagem.",
+      D: "INCORRETA. O tamanho da base não define o paradigma.",
+      E: "INCORRETA. Reforço não se limita a classificação binária; envolve decisões sequenciais e recompensas."
     },
-    regra: "Paradigmas = 'com rótulos ou sem'. Supervisionado, não supervisionado, reforço.",
-    pegadinha: "Não confunda: supervisionado não significa 'superar' — é 'com rótulos'.",
-    fonte: "Murphy, K. P. — Machine Learning: A Probabilistic Perspective, 2012."
+    regra: "Supervisionado aprende com alvos; não supervisionado procura estrutura sem alvos fornecidos; reforço aprende decisões por interação e recompensa.",
+    pegadinha: "Não confunda 'há dados' com 'há rótulos': o tipo de sinal disponível é central para distinguir paradigmas.",
+    fonte: "Murphy, K. P. — Machine Learning: A Probabilistic Perspective, MIT Press, 2012."
   },
 
   { id: "q-m5-12", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u2-t1-s2", assunto: "5.2 — Classificação e Regressão",
-    contexto: "Classificação e regressão são tarefas fundamentais de aprendizado supervisionado.",
-    enunciado: "A diferença entre classificação e regressão é:",
+    nivel: "intermediario", topico: "m5-u2-t1-s2", assunto: "5.2 — Classificação e regressão",
+    contexto: "Uma equipe treina dois modelos supervisionados: o primeiro prevê se uma solicitação deve ser encaminhada para revisão (sim/não); o segundo estima o tempo de atendimento em minutos.",
+    enunciado: "Como as tarefas devem ser classificadas?",
     alternativas: [
-      { letra: "A", texto: "A classificação prevê valores contínuos; a regressão prevê categorias discretas." },
-      { letra: "B", texto: "A classificação prevê rótulos discretos (categorias); a regressão previsa valores contínuos." },
-      { letra: "C", texto: "A classificação é um tipo de aprendizado não supervisionado." },
-      { letra: "D", texto: "A regressão é um tipo de aprendizado não supervisionado." },
-      { letra: "E", texto: "Tanto classificação quanto regressão não usam aprendizado supervisionado." }
+      { letra: "A", texto: "Ambas são regressão porque o resultado é produzido por um modelo numérico." },
+      { letra: "B", texto: "A primeira é classificação por prever categorias; a segunda é regressão por estimar uma quantidade numérica contínua." },
+      { letra: "C", texto: "A primeira é não supervisionada porque tem duas classes; a segunda é reforço porque prevê tempo." },
+      { letra: "D", texto: "A primeira é regressão e a segunda é classificação, independentemente da variável-alvo." },
+      { letra: "E", texto: "A distinção depende da linguagem de programação e não do objetivo da previsão." }
     ],
     gabarito: "B",
-    justificativa: "Classificação prevê rótulos discretos (categorias): sim/não, spam/não spam, etc. Regressão prevê valores contínuos: preço, temperatura, etc. Classificação previsa valores contínuos (alternativa A incorreta); classificação é não supervisionado (alternativa C incorreta); regressão não supervisionado (alternativa D incorreta); nenhum usa supervisão (alternativa E incorreta).",
+    justificativa: "Classificação prevê categorias ou rótulos, como sim/não. Regressão estima uma quantidade numérica, como duração ou custo. O tipo de tarefa depende da variável-alvo e da formulação do problema, não da linguagem de programação. Em casos específicos, variáveis numéricas discretizadas podem ser tratadas como classes, mas isso altera a pergunta que o modelo responde.",
     analise: {
-      A: "INCORRETA. Classificação prevê categorias discretas; regressão prevê valores contínuos.",
-      B: "CORRETA. Classificação: rótulos discretos; Regressão: valores contínuos.",
-      C: "INCORRETA. Classificação é aprendizado supervisionado, não não supervisionado.",
-      D: "INCORRETA. Regressão é aprendizado supervisionado, não não supervisionado.",
-      E: "INCORRETA. Tanto classificação quanto regressão são métodos de aprendizado supervisionado."
+      A: "INCORRETA. O fato de um programa calcular números internamente não transforma a tarefa em regressão.",
+      B: "CORRETA. O primeiro alvo é categórico e o segundo é uma quantidade numérica contínua.",
+      C: "INCORRETA. Duas classes não tornam a tarefa não supervisionada, e prever duração não é aprendizado por reforço.",
+      D: "INCORRETA. A alternativa inverte as tarefas e ignora o tipo de alvo.",
+      E: "INCORRETA. O paradigma é determinado pela tarefa e pelos dados, não pela linguagem."
     },
-    regra: "Classificação = 'categorias discretas'. Regressão = 'valores contínuos'.",
-    pegadinha: "Classificação prevê 'qual categoria' — regressão prevê 'qual valor'.",
-    fonte: "James, G. et al. — An Introduction to Statistical Learning, 2021."
+    regra: "Classificação prevê categorias; regressão estima valores numéricos. Defina a tarefa a partir do alvo e do objetivo de negócio.",
+    pegadinha: "Não classifique a tarefa pelo formato interno do código; observe o que se pretende prever e como o alvo foi definido.",
+    fonte: "James et al., An Introduction to Statistical Learning, 2nd ed., 2021: https://www.statlearning.com/."
   },
 
   { id: "q-m5-13", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m5-u2-t1-s3", assunto: "5.2 — Agrupamento e Redução de Dimensionalidade",
-    contexto: "Técnicas não supervisionadas incluim agrupamento e redução de dimensionalidade.",
-    enunciado: "Sobre agrupamento (clustering) e redução de dimensionalidade, é correto afirmar que:",
+    nivel: "intermediario", topico: "m5-u2-t1-s3", assunto: "5.2 — Agrupamento e redução de dimensionalidade",
+    contexto: "Uma equipe explora registros sem rótulos. Primeiro procura segmentos de comportamento; depois deseja representar cada registro com menos variáveis para visualização.",
+    enunciado: "Qual afirmação diferencia corretamente as duas técnicas?",
     alternativas: [
-      { letra: "A", texto: "Agrupamento divide os dados em grupos com base em similaridade; redução de dimensionalidade diminui o número de variáveis." },
-      { letra: "B", texto: "Agrupamento aumenta o número de variáveis." },
-      { letra: "C", texto: "Redução de dimensionalidade é um tipo de agrupamento." },
-      { letra: "D", texto: "Agrupamento e redução de dimensionalidade não têm relação." },
-      { letra: "E", texto: "Ambos são métodos de classificação supervisionada." }
+      { letra: "A", texto: "Agrupamento exige necessariamente uma variável-alvo rotulada." },
+      { letra: "B", texto: "Agrupamento e redução de dimensionalidade são sinônimos e sempre produzem a mesma saída." },
+      { letra: "C", texto: "Redução de dimensionalidade sempre aumenta o número de atributos." },
+      { letra: "D", texto: "Agrupamento reúne observações segundo similaridade; redução de dimensionalidade representa os dados em menos dimensões, podendo descartar parte da variação ou informação." },
+      { letra: "E", texto: "Toda técnica de redução de dimensionalidade é não supervisionada e não envolve escolhas sobre informação preservada." }
     ],
-    gabarito: "A",
-    justificativa: "Agrupamento (clustering) particiona dados em grupos baseados em similaridade. Redução de dimensionalidade diminui o número de variáveis (features) mantendo a informação crucial. Agrupamento aumenta variáveis (alternativa B incorreta); redução não é agrupamento (alternativa C incorreta); não há relação (alternativa D incorreta); métodos de classificação supervisionada (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Agrupamento procura organizar observações em grupos segundo critérios de similaridade ou distância. Redução de dimensionalidade busca uma representação com menos dimensões, por exemplo para visualização, compressão ou preparação de dados. As técnicas podem ser combinadas, mas têm objetivos diferentes; a redução pode perder informação relevante e nem todo método de redução é necessariamente não supervisionado.",
     analise: {
-      A: "CORRETA. Agrupamento particiona dados por similaridade; redução diminui variáveis mantendo informação.",
-      B: "INCORRETA. Agrupamento diminui a estrutura de grupos, não aumenta variáveis.",
-      C: "INCORRETA. Redução de dimensionalidade não é um tipo de agrupamento.",
-      D: "INCORRETA. Estão relacionados — ambas são técnicas não supervisionadas de análise de dados.",
-      E: "INCORRETA. Ambos são métodos não supervisionados, não de classificação supervisionada."
+      A: "INCORRETA. Muitos algoritmos de agrupamento operam sem rótulos de classe.",
+      B: "INCORRETA. Os resultados e objetivos são diferentes, ainda que as técnicas possam ser usadas em sequência.",
+      C: "INCORRETA. Redução de dimensionalidade busca diminuir o número de dimensões da representação.",
+      D: "CORRETA. A alternativa descreve os objetivos distintos e reconhece o possível compromisso de informação na redução.",
+      E: "INCORRETA. Existem métodos supervisionados de redução, e a informação preservada depende do método e dos dados."
     },
-    regra: "Agrupamento = 'agrupar parecidos'. Redução = 'diminuir variáveis'. Ambos não supervisionados.",
-    pegadinha: "Agrupamento não é 'decidir categorias' — é 'descobrir grupos naturais'.",
-    fonte: "Jain, A. K. — Data Clustering: 50 Years of Development, 2010."
+    regra: "Clustering busca grupos; redução de dimensionalidade busca uma representação menor. São objetivos distintos e podem ser combinados.",
+    pegadinha: "PCA é um exemplo comum de redução não supervisionada, mas não representa todas as técnicas de redução de dimensionalidade.",
+    fonte: "Jain, A. K. — Data Clustering: 50 Years Beyond K-means, Pattern Recognition Letters, 2010: https://doi.org/10.1016/j.patrec.2009.09.011."
   },
 
   { id: "q-m5-14", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Rotulagem, Atributos e Variáveis-Alvo",
-    contexto: "A preparação de dados é uma etapa crítica no aprendizado supervisionado.",
-    enunciado: "Rotulagem, atributos e variáveis-alvo são:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Rotulagem, atributos e variável-alvo",
+    contexto: "Para treinar um modelo que priorize solicitações, uma equipe revisa exemplos históricos, define a prioridade correta de cada caso e seleciona informações disponíveis no momento da triagem.",
+    enunciado: "Qual alternativa distingue corretamente rótulo, atributo e variável-alvo?",
     alternativas: [
-      { letra: "A", texto: "Etapas da coleta de dados; atributos são variáveis de entrada; variáveis-alvo são saídas esperadas." },
-      { letra: "B", texto: "Tipos de algoritmos." },
-      { letra: "C", texto: "Serviços de nuvem." },
-      { letra: "D", texto: "Ferramentas de visualização." },
-      { letra: "E", texto: "Dados criptografados." }
+      { letra: "A", texto: "Rótulo é sempre uma variável de entrada; atributo é a resposta correta; variável-alvo é o identificador do registro." },
+      { letra: "B", texto: "Rotulagem atribui a resposta esperada aos exemplos; atributos são informações de entrada; variável-alvo é o resultado que o modelo deve prever." },
+      { letra: "C", texto: "Atributos são sempre dados pessoais, enquanto rótulos são sempre números contínuos." },
+      { letra: "D", texto: "A variável-alvo deve ser incluída como atributo para que o modelo aprenda diretamente a resposta." },
+      { letra: "E", texto: "Rotulagem é a etapa que criptografa todos os dados antes de treinar." }
     ],
-    gabarito: "A",
-    justificativa: "Rotulagem é a atribuição de rótulos aos dados de entrada. Atributos são variáveis de entrada (features) que o modelo usa para aprender. Variáveis-alvo são saídas desejadas a serem previstas. Tipos de algoritmos (alternativa B incorreta); serviços de nuvem (alternativa C incorreta); ferramentas de visualização (alternativa D incorreta); dados criptografados (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Rotulagem associa exemplos a respostas esperadas segundo critérios definidos. Atributos (features) são variáveis usadas como entradas; a variável-alvo é aquilo que se pretende prever e, em classificação, costuma representar a classe. A definição do alvo exige regras consistentes e controle de qualidade dos rótulos. Incluir no conjunto de entrada informação que revela diretamente o alvo causa vazamento e invalida a avaliação.",
     analise: {
-      A: "CORRETA. Atributos = variáveis de entrada; variáveis-alvo = saídas esperadas; rotulagem = etiqueta dos dados.",
-      B: "INCORRETA. Tipos de algoritmos não definem rotulagem, atributos e variáveis-alvo.",
-      C: "INCORRETA. Serviços de nuvem não estão relacionados.",
-      D: "INCORRETA. Ferramentas de visualização não definem essas etapas.",
-      E: "INCORRETA. Dados criptografados não são rotulagem, atributos ou variáveis-alvo."
+      A: "INCORRETA. A alternativa troca os papéis de atributos, rótulo e alvo.",
+      B: "CORRETA. A alternativa distingue a construção dos rótulos, as entradas e o resultado previsto.",
+      C: "INCORRETA. Atributos podem ser numéricos, categóricos ou outros tipos; rótulos também variam conforme a tarefa.",
+      D: "INCORRETA. Usar o alvo como entrada causa vazamento, não aprendizado válido.",
+      E: "INCORRETA. Criptografia é uma técnica de proteção, não o significado de rotulagem."
     },
-    regra: "Rotulagem = 'marcação'. Atributos = 'variáveis de entrada'. Variáveis-alvo = 'saída desejada'.",
-    pegadinha: "Atributos não são 'saídas' — são 'variáveis de entrada' ao modelo.",
-    fonte: "Han, J. et al. — Data Mining: Concepts and Techniques, 2020."
+    regra: "Atributos = entradas; variável-alvo = resultado a prever; rotulagem = atribuição consistente das respostas esperadas aos exemplos.",
+    pegadinha: "Se um atributo contém a resposta ou informação posterior ao resultado, o modelo pode aparentar ótimo desempenho por vazamento.",
+    fonte: "Han, Kamber e Pei — Data Mining: Concepts and Techniques, 3rd ed., 2011."
   },
 
   { id: "q-m5-15", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Vazamento de dados (Data Leakage)",
-    contexto: "O vazamento de dados é um erro comum que invalida a avaliação do modelo.",
-    enunciado: "O vazamento de dados (data leakage) ocorre quando:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Vazamento de dados (data leakage)",
+    contexto: "Um analista normaliza a base inteira antes de separar treino e teste. Em outro experimento, usa uma variável calculada somente após a decisão que o modelo deveria prever.",
+    enunciado: "Qual diagnóstico é mais adequado para esses experimentos?",
     alternativas: [
-      { letra: "A", texto: "Informações do conjunto de teste (ou do futuro) são usadas durante o treinamento." },
-      { letra: "B", texto: "Dados são armazenados corretamente." },
-      { letra: "C", texto: "O modelo é treinado corretamente." },
-      { letra: "D", texto: "O teste é realizado." },
-      { letra: "E", texto: "Os dados são validados." }
+      { letra: "A", texto: "Nenhum envolve vazamento, porque os dados vieram do mesmo sistema institucional." },
+      { letra: "B", texto: "Ambos podem introduzir vazamento: o primeiro permite que estatísticas do teste influenciem a transformação; o segundo usa informação futura em relação ao momento da previsão." },
+      { letra: "C", texto: "Somente o segundo é vazamento; calcular estatísticas da base completa antes da divisão é sempre seguro." },
+      { letra: "D", texto: "Vazamento significa apenas perder registros durante a importação." },
+      { letra: "E", texto: "Vazamento é aceitável se melhorar a métrica no conjunto de teste." }
     ],
-    gabarito: "A",
-    justificativa: "Data leakage ocorre quando informações do conjunto de teste (ou do futuro) são usadas durante o treinamento, fazendo com que o modelo pareça performar melhor do que realmente seria em produção. Dados armazenados corretamente (alternativa B incorreta); modelo treinado corretamente (alternativa C incorreta); teste realizado (alternativa D incorreta); dados validados (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Data leakage ocorre quando informação que não estaria legitimamente disponível no treinamento ou no instante de previsão influencia o ajuste ou a avaliação. Ajustar transformações usando a base completa antes da divisão permite que estatísticas do teste influenciem o pipeline; usar variáveis posteriores ao resultado cria vazamento temporal ou de alvo. Separe os conjuntos primeiro e ajuste as transformações apenas no treino, aplicando depois os parâmetros aprendidos aos dados de validação/teste.",
     analise: {
-      A: "CORRETA. Data leakage acontece quando informações do teste/futuro são usadas no treino.",
-      B: "INCORRETA. Armazenamento correto de dados não é vazamento.",
-      C: "INCORRETA. Treinamento correto não é vazamento.",
-      D: "INCORRETA. Realizar teste não é vazamento.",
-      E: "INCORRETA. Validar dados não é vazamento."
+      A: "INCORRETA. A origem comum dos dados não impede vazamento entre treino, teste e futuro.",
+      B: "CORRETA. Os dois cenários deixam informação inadequada influenciar a avaliação ou a previsão.",
+      C: "INCORRETA. Estatísticas calculadas com o teste podem contaminar a avaliação, mesmo sem usar explicitamente o rótulo.",
+      D: "INCORRETA. Perda de registros é outro problema; leakage é uso indevido de informação.",
+      E: "INCORRETA. Melhorar artificialmente a métrica torna a estimativa menos confiável, não mais aceitável."
     },
-    regra: "Data leakage = 'dicas do futuro'. Teste não pode informar o treino.",
-    pegadinha: "Data leakage não é 'perda de dados' — é 'informação do teste usada no treino'.",
-    fonte: "Kaufman, S. et al. — Leakage in Data Mining, 2012."
+    regra: "Separe treino e teste antes de ajustar transformações; use apenas atributos disponíveis no momento real da previsão.",
+    pegadinha: "Vazamento pode ocorrer sem incluir diretamente o rótulo: estatísticas do teste ou dados do futuro também podem contaminar o processo.",
+    fonte: "scikit-learn, Common pitfalls and recommended practices: https://scikit-learn.org/stable/common_pitfalls.html."
   },
 
   { id: "q-m5-16", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Métricas de Classificação",
-    contexto: "Métricas de classificação são essenciais para avaliar modelos.",
-    enunciado: "Métricas de classificação como precisão, recall, especificidade e F1 são importantes porque:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Métricas de classificação",
+    contexto: "Um órgão avalia um classificador que identifica solicitações que exigem atendimento prioritário. Falsos negativos e falsos positivos têm custos diferentes.",
+    enunciado: "Qual abordagem de avaliação é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Permitem avaliar a qualidade do modelo, considerando diferentes aspectos de desempenho." },
-      { letra: "B", texto: "Não são úteis para avaliação." },
-      { letra: "C", texto: "Substituiem o conjunto de teste." },
-      { letra: "D", texto: "Eliminam a necessidade de validação." },
-      { letra: "E", texto: "Garantem que o modelo nunca erra." }
+      { letra: "A", texto: "Usar somente acurácia, pois ela resume todos os tipos de erro independentemente da distribuição das classes." },
+      { letra: "B", texto: "Escolher métricas alinhadas ao objetivo e aos custos dos erros, examinando a matriz de confusão e medidas como precisão, recall e especificidade." },
+      { letra: "C", texto: "Usar F1 como garantia de que o modelo será justo e correto em produção." },
+      { letra: "D", texto: "Substituir os dados de teste pelas métricas calculadas no conjunto de treino." },
+      { letra: "E", texto: "Escolher a métrica com o valor numérico mais alto, sem considerar sua definição." }
     ],
-    gabarito: "A",
-    justificativa: "Métricas de classificação permitem avaliar a qualidade do modelo considerando diferentes aspectos: precisão (quando prevê positivo, quantos estão corretos), recall (quantos positivos foram identificados), especificidade (quantos negativos foram corretamente identificados) e F1 (balanceamento entre precisão e recall). Métricas não são úteis (alternativa B incorreta); substituem teste (alternativa C incorreta); eliminam validação (alternativa D incorreta); garantem erro (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "A matriz de confusão permite identificar verdadeiros e falsos positivos e negativos. Precisão (precision) é a proporção de previsões positivas que são corretas; recall/sensibilidade é a proporção de positivos reais identificados; especificidade é a proporção de negativos reais corretamente identificados. A escolha depende da tarefa, da distribuição dos dados e do custo de cada erro; nenhuma métrica isolada garante qualidade em produção.",
     analise: {
-      A: "CORRETA. Métricas de classificação avaliam a qualidade do modelo em várias dimensões.",
-      B: "INCORRETA. Métricas são essenciais para avaliar desempenho de classificação.",
-      C: "INCORRETA. Métricas não substituem o conjunto de teste — usam os resultados do teste.",
-      D: "INCORRETA. Métricas não eliminam a necessidade de validação.",
-      E: "INCORRETA. Métricas não garantem que o modelo nunca errar."
+      A: "INCORRETA. Acurácia pode mascarar falhas na classe minoritária e não expressa todos os custos de erro.",
+      B: "CORRETA. A avaliação combina medidas interpretáveis com o contexto e as consequências dos erros.",
+      C: "INCORRETA. F1 resume precisão e recall por uma média harmônica, mas não garante justiça nem desempenho futuro.",
+      D: "INCORRETA. Dados de treino servem ao ajuste; avaliação final exige dados não usados para treinar ou escolher o modelo.",
+      E: "INCORRETA. Métricas diferentes têm definições e escalas distintas; maior valor não significa automaticamente melhor modelo."
     },
-    regra: "Métricas de classificação = 'múltiplas lentes'. Precisão, recall, F1, acurácia e especificidade.",
-    pegadinha: "Precisão não é 'erro' — é 'quando prevê positivo, quantos estão corretos'.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
+    regra: "Escolha métricas conforme objetivo, classes e custo dos erros; interprete matriz de confusão, precisão, recall e especificidade no contexto.",
+    pegadinha: "Precisão (precision) não é sinônimo de acurácia; F1 não inclui diretamente verdadeiros negativos e não garante desempenho em produção.",
+    fonte: "scikit-learn, Model evaluation: https://scikit-learn.org/stable/modules/model_evaluation.html."
   },
 
   { id: "q-m5-17", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Desbalanceamento de Classes",
-    contexto: "Classes desbalanceadas afetam o desempenho dos modelos.",
-    enunciado: "O desbalanceamento de classes ocorre quando:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Desbalanceamento de classes",
+    contexto: "Em uma base de triagem, 98% dos registros pertencem à classe comum e 2% à classe que exige análise especializada.",
+    enunciado: "Qual estratégia trata o desbalanceamento sem produzir uma avaliação artificialmente otimista?",
     alternativas: [
-      { letra: "A", texto: "Um ou mais rótulos predominam em relação aos outros no conjunto de dados." },
-      { letra: "B", texto: "Todos os rótulos têm a mesma frequência." },
-      { letra: "C", texto: "O modelo não aprende." },
-      { letra: "D", texto: "Os dados estão faltando." },
-      { letra: "E", texto: "Os dados são categóricos." }
+      { letra: "A", texto: "Avaliar somente a acurácia, pois a classe majoritária representa a maior parte dos registros." },
+      { letra: "B", texto: "Aplicar oversampling antes de separar treino e teste, para garantir que todos os conjuntos tenham exemplos sintéticos semelhantes." },
+      { letra: "C", texto: "Usar divisão de dados adequada, métricas por classe e, se necessário, técnicas de reamostragem ou ponderação aplicadas apenas ao treino, avaliando em dados representativos não usados no ajuste." },
+      { letra: "D", texto: "Eliminar a classe minoritária para tornar o treinamento mais rápido." },
+      { letra: "E", texto: "Duplicar a classe minoritária em todo o conjunto e reportar a acurácia resultante como desempenho esperado em produção." }
     ],
-    gabarito: "A",
-    justificativa: "Desbalanceamento ocorre quando a distribuição de classes é desigual: um ou mais rótulos são mais frequentes que outros. Todos os rótulos têm mesma frequência (alternativa B incorreta); modelo não aprende (alternativa C incorreta); dados faltando (alternativa D incorreta); dados categóricos (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Desbalanceamento é uma distribuição desigual entre classes e pode fazer a acurácia parecer alta mesmo quando o modelo falha na classe minoritária. A avaliação deve considerar métricas por classe, como precisão, recall, F1 e, conforme a tarefa, curvas precision-recall. Reamostragem e ponderação podem ajudar, mas devem ser ajustadas sem contaminar validação ou teste; o conjunto de avaliação deve representar o cenário de uso.",
     analise: {
-      A: "CORRETA. Desbalanceamento ocorre quando uma classe predomina em relação às outras.",
-      B: "INCORRETA. Quando todos os rótulos têm mesma frequência, não há desbalanceamento.",
-      C: "INCORRETA. Desbalanceamento não significa que o modelo não aprende.",
-      D: "INCORRETA. Dados faltando é um problema diferente — 'valores ausentes'.",
-      E: "INCORRETA. Dados categóricos não implica desbalanceamento."
+      A: "INCORRETA. Acurácia isolada pode ocultar a baixa detecção da classe minoritária.",
+      B: "INCORRETA. Reamostrar antes da divisão pode vazar informação e produzir estimativas otimistas.",
+      C: "CORRETA. A estratégia separa treinamento e avaliação e mede o desempenho relevante para ambas as classes.",
+      D: "INCORRETA. Eliminar a classe de interesse impede avaliar ou aprender a detectá-la.",
+      E: "INCORRETA. Alterar artificialmente a distribuição de teste distorce a estimativa de desempenho no cenário real."
     },
-    regra: "Desbalanceamento = 'classes desiguais'. Uma classe domina as outras.",
-    pegadinha: "Desbalanceamento não é 'dados faltando' — é 'distribuição desigual de classes'.",
-    fonte: "Chawla, N. V. et al. — SMOTE: Synthetic Minority Over-sampling Technique, 2002."
+    regra: "No desbalanceamento, use métricas por classe e mantenha reamostragem dentro do treino; avalie em dados representativos e isolados.",
+    pegadinha: "Oversampling ou SMOTE antes da divisão pode causar vazamento; não altere a distribuição do teste para inflar métricas.",
+    fonte: "Chawla et al., SMOTE: Synthetic Minority Over-sampling Technique (2002): https://doi.org/10.1613/jair.953; imbalanced-learn, Common pitfalls and recommended practices: https://imbalanced-learn.org/stable/common_pitfalls.html."
   },
 
   { id: "q-m5-18", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Métricas de Regressão",
-    contexto: "Métricas de regressão são usadas para avaliar modelos que preveem valores contínuos.",
-    enunciado: "Métricas de regressão apropriadas ao escopo são importantes porque:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Métricas de regressão",
+    contexto: "Um modelo prevê o tempo de atendimento em minutos. A equipe compara MAE e RMSE antes de selecionar uma versão para avaliação final.",
+    enunciado: "Qual afirmação sobre MAE e RMSE é correta?",
     alternativas: [
-      { letra: "A", texto: "Permitem avaliar o quão bem o modelo prevê valores contínuos." },
-      { letra: "B", texto: "Não são úteis para regressão." },
-      { letra: "C", texto: "Substituiem o conjunto de teste." },
-      { letra: "D", texto: "Eliminam a necessidade de validação." },
-      { letra: "E", texto: "Garantem erro zero." }
+      { letra: "A", texto: "MAE e RMSE são sempre iguais, independentemente dos erros observados." },
+      { letra: "B", texto: "RMSE calcula a média simples dos erros com sinal e, por isso, erros positivos e negativos se cancelam." },
+      { letra: "C", texto: "MAE calcula a média dos valores absolutos dos erros; RMSE calcula a raiz da média dos erros ao quadrado e penaliza relativamente mais erros grandes." },
+      { letra: "D", texto: "Um RMSE menor prova que o modelo é imparcial e generaliza para qualquer população." },
+      { letra: "E", texto: "As métricas de regressão dispensam comparação com uma linha de base e inspeção dos resíduos." }
     ],
-    gabarito: "A",
-    justificativa: "Métricas de regressão — como MAE, MSE, RMSE — permitem avaliar o quão bem o modelo prevê valores contínuos, comparando previsões com valores reais. Métricas não são úteis (alternativa B incorreta); substituem conjunto de teste (alternativa C incorreta); eliminam validação (alternativa D incorreta); garantem erro zero (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "MAE é a média dos valores absolutos das diferenças entre previsões e valores observados. RMSE é a raiz quadrada da média dos erros ao quadrado; o quadrado dá maior peso relativo a erros de grande magnitude. Ambas são expressas na unidade da variável-alvo quando calculadas nessa escala, mas resumem aspectos distintos e devem ser interpretadas com a distribuição dos erros, uma linha de base e o contexto do problema.",
     analise: {
-      A: "CORRETA. Métricas de regressão avaliam o quão bem o modelo prevê valores contínuos.",
-      B: "INCORRETA. Métricas são essenciais para avaliar modelos de regressão.",
-      C: "INCORRETA. Métricas não substituem o conjunto de teste.",
-      D: "INCORRETA. Métricas não eliminam a necessidade de validação.",
-      E: "INCORRETA. Métricas não garantem erro zero."
+      A: "INCORRETA. MAE e RMSE podem diferir, especialmente quando há erros de magnitudes muito distintas.",
+      B: "INCORRETA. RMSE não usa a média simples dos erros com sinal; ele eleva os erros ao quadrado antes da média.",
+      C: "CORRETA. A alternativa apresenta as definições e a maior sensibilidade do RMSE a erros grandes.",
+      D: "INCORRETA. Uma métrica menor, isoladamente, não demonstra ausência de viés nem generalização universal.",
+      E: "INCORRETA. Linhas de base, validação e análise de resíduos ajudam a contextualizar o desempenho."
     },
-    regra: "Métricas de regressão = 'erro numérico'. MAE, MSE, RMSE — medem distância entre previsão e realidade.",
-    pegadinha: "RMSE não é 'erro' — é 'raiz quadrada da média dos erros ao quadrado'.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    regra: "MAE = média dos erros absolutos; RMSE = raiz da média dos erros ao quadrado, mais sensível a erros grandes.",
+    pegadinha: "RMSE não é a média simples dos erros; uma melhora agregada não revela, sozinha, viés, subgrupos problemáticos ou generalização.",
+    fonte: "scikit-learn, Regression metrics: https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics."
   },
 
   { id: "q-m5-19", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Engenharia de Atributos",
-    contexto: "A engenharia de atributos (feature engineering) é essencial no pré-processamento.",
-    enunciado: "A engenharia de atributos (feature engineering) envolve:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-2", assunto: "5.2 — Engenharia de atributos e vazamento de dados",
+    contexto: "Uma equipe prepara dados para prever a concessão de um benefício. Um atributo foi calculado a partir de uma decisão registrada somente depois da concessão.",
+    enunciado: "Qual procedimento é mais adequado ao desenvolver atributos para esse modelo?",
     alternativas: [
-      { letra: "A", texto: "A criação de novos atributos a partir de dados ou transformação de atributos existentes para melhorar o desempenho do modelo." },
-      { letra: "B", texto: "A exclusão de todos os atributos." },
-      { letra: "C", texto: "A criptografia de atributos." },
-      { letra: "D", texto: "A verificação de atributos." },
-      { letra: "E", texto: "A remoção de outliers." }
+      { letra: "A", texto: "Manter o atributo posterior, pois qualquer variável correlacionada aumenta legitimamente a precisão." },
+      { letra: "B", texto: "Criar ou transformar atributos disponíveis no momento da previsão, ajustar transformações usando somente dados de treino e verificar vazamento de informação." },
+      { letra: "C", texto: "Criptografar todos os atributos, pois isso garante que o modelo não aprenderá padrões espúrios." },
+      { letra: "D", texto: "Remover obrigatoriamente todo atributo categórico antes do treinamento." },
+      { letra: "E", texto: "Calcular normalização com toda a base, incluindo teste, para garantir que as escalas sejam idênticas." }
     ],
-    gabarito: "A",
-    justificativa: "A engenharia de atributos envolve a criação de novos atributos a partir de dados ou transformação de atributos existentes para melhorar o desempenho do modelo — como normalizar, codificar, criar interações, ecc. Excluir todos os atributos (alternativa B incorreta); criptografia (alternativa C incorreta); verificação (alternativa D incorreta); remoção de outliers (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Engenharia de atributos inclui criar, selecionar ou transformar variáveis para representar melhor o problema. Os atributos devem estar disponíveis no instante real da previsão e não podem incorporar direta ou indiretamente informações posteriores ao resultado. Transformações que aprendem parâmetros, como imputação, normalização e seleção, devem ser ajustadas no treino e aplicadas aos demais conjuntos sem recalcular seus parâmetros a partir do teste.",
     analise: {
-      A: "CORRETA. Engenharia de atributos envolve criação/transformação de atributos para melhorar desempenho.",
-      B: "INCORRETA. Excluir todos os atributos anularia o processo.",
-      C: "INCORRETA. Criptografia não é engenharia de atributos.",
-      D: "INCORRETA. Verificação não é engenharia de atributos.",
-      E: "INCORRETA. Remoção de outliers é parte do pré-processamento, mas não a definição da engenharia de atributos."
+      A: "INCORRETA. Atributos posteriores ao resultado geram vazamento e estimativas irreais de desempenho.",
+      B: "CORRETA. A alternativa considera disponibilidade temporal dos dados e separação correta entre treino e avaliação.",
+      C: "INCORRETA. Criptografia protege confidencialidade em certos contextos, mas não corrige vazamento ou seleção inadequada de atributos.",
+      D: "INCORRETA. Atributos categóricos podem ser codificados de forma apropriada ao modelo.",
+      E: "INCORRETA. Ajustar transformações com o teste permite que informação do teste influencie o processo de treinamento."
     },
-    regra: "Engenharia de atributos = 'criar atributos melhores'. Transformar/criar features que ajudem o modelo.",
-    pegadinha: "Engenharia de atributos não é 'remover atributos' — é 'melhorar os atributos'.",
-    fonte: "Kuhn, M. & Johnson, K. — Feature Engineering and Selection, 2019."
+    regra: "Use atributos disponíveis no momento da previsão e ajuste transformações no treino; evite vazamento de alvo ou do conjunto de teste.",
+    pegadinha: "Uma variável que melhora muito a métrica pode ser inválida se só existir depois do evento previsto.",
+    fonte: "scikit-learn, Common pitfalls and recommended practices: https://scikit-learn.org/stable/common_pitfalls.html."
   },
 
   { id: "q-m5-20", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Avaliação de Desempenho",
-    contexto: "A avaliação de desempenho é um passo crítico no ciclo de vida do modelo.",
-    enunciado: "A avaliação de desempenho e qualidade em aprendizado de máquina é importante porque:",
+    nivel: "avancado", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Avaliação de Desempenho",
+    contexto: "Um serviço público classifica solicitações urgentes em uma base na qual apenas 1% dos casos são realmente urgentes. Um modelo que prevê todos os casos como não urgentes alcança 99% de acurácia, mas deixa passar todos os casos urgentes.",
+    enunciado: "Qual conclusão é tecnicamente mais adequada para avaliar esse classificador?",
     alternativas: [
-      { letra: "A", texto: "Permite verificar se o modelo atende aos objetivos e se generaliza bem." },
-      { letra: "B", texto: "É um processo opcional." },
-      { letra: "C", texto: "Substitui a necessidade de validação." },
-      { letra: "D", texto: "Elimina a necessidade de teste." },
-      { letra: "E", texto: "Garante que o modelo nunca falhe." }
+      { letra: "A", texto: "A acurácia de 99% demonstra que o modelo atende ao objetivo, mesmo sem identificar casos urgentes." },
+      { letra: "B", texto: "A acurácia isolada é insuficiente; é necessário examinar recall da classe urgente e outras métricas alinhadas ao custo dos erros." },
+      { letra: "C", texto: "O F1-score será necessariamente 99%, pois a acurácia é 99%." },
+      { letra: "D", texto: "A especificidade será zero, porque o modelo não prevê nenhum caso urgente." },
+      { letra: "E", texto: "O conjunto de teste deve ser descartado porque a distribuição das classes é desigual." }
     ],
-    gabarito: "A",
-    justificativa: "A avaliação de desempenho e qualidade é essencial para verificar se o modelo atende aos objetivos, se generaliza e se é apropriado para o contexto. Processo opcional (alternativa B incorreta); substitui validação (alternativa C incorreta); elimina teste (alternativa D incorreta); garante erro (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Como apenas 1% dos registros é urgente, prever todos como não urgentes produz 99% de acurácia, mas recall zero para a classe urgente: nenhum positivo real foi identificado. A avaliação deve incluir métricas por classe, como recall e precisão, e considerar os custos relativos de falsos negativos e falsos positivos. A métrica escolhida não deve ser interpretada isoladamente nem substituir a avaliação em dados adequados.",
     analise: {
-      A: "CORRETA. Avaliação de desempenho verifica atendimento aos objetivos e generalização.",
-      B: "INCORRETA. Avaliação não é opcional — é essencial para a qualidade.",
-      C: "INCORRETA. Avaliação não substitui validação.",
-      D: "INCORRETA. Avaliação não elimina a necessidade de teste.",
-      E: "INCORRETA. Avaliação não garante que o modelo nunca falhar."
+      A: "INCORRETA. A acurácia elevada decorre da classe majoritária e oculta a falha total em identificar urgências.",
+      B: "CORRETA. O recall da classe urgente revela que nenhum caso urgente foi encontrado; a escolha das métricas deve refletir o objetivo e o custo dos erros.",
+      C: "INCORRETA. A acurácia não determina o F1-score. Neste exemplo, a precisão e o recall da classe urgente são zero ou indefinidos conforme a convenção de cálculo, e o F1 dessa classe é zero quando a convenção usual trata a precisão indefinida como zero.",
+      D: "INCORRETA. Se todos os casos são previstos como negativos, todos os negativos reais são identificados; a especificidade é 100%, assumindo que há negativos reais.",
+      E: "INCORRETA. Desbalanceamento não invalida automaticamente o conjunto de teste; exige desenho de avaliação e métricas adequados, mantendo uma amostra representativa do uso pretendido."
     },
-    regra: "Avaliação de desempenho = 'medir qualidade'. É fundamental para projetos de ML.",
-    pegadinha: "Avaliação não é 'certurar sucesso' — é 'medir o quão bom o modelo é'.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
+    regra: "Em classes desbalanceadas, acurácia pode ocultar desempenho ruim na classe minoritária. Examine métricas por classe e o custo dos falsos positivos e falsos negativos.",
+    pegadinha: "Uma taxa de acerto alta não prova utilidade: o modelo pode acertar quase sempre a classe majoritária e falhar justamente no evento que importa.",
+    fonte: "Saito, T. & Rehmsmeier, M. — The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets, PLOS ONE, 2015: https://doi.org/10.1371/journal.pone.0118432."
   },
 
-  /* ===================== 5.3 IA Generativa/LLMs (10 questões) ===================== */
+  /* ===================== 5.3 IA Generativa/LLMs (11 questões) ===================== */
 
   { id: "q-m5-21", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m5-u3-t1-s1", assunto: "5.3 — O que é IA generativa",
-    contexto: "Uma secretaria ganha um assistente que redige e-mails a partir de tópicos.",
-    enunciado: "Sobre o que é IA generativa, é correto afirmar que:",
+    contexto: "Uma secretaria avalia um assistente que redige rascunhos de e-mails a partir de instruções e exemplos fornecidos pelo servidor.",
+    enunciado: "Qual descrição caracteriza melhor a IA generativa e a diferencia de um sistema que apenas recupera documentos existentes?",
     alternativas: [
-      { letra: "A", texto: "Reúne dados de forma segmentada." },
-      { letra: "B", texto: "Gera conteúdo novo (texto, imagem, áudio) a partir de padrões aprendidos." },
-      { letra: "C", texto: "Armazena arquivos." },
-      { letra: "D", texto: "Aumenta a velocidade de rede." },
-      { letra: "E", texto: "Permite acesso físico a servidores." }
+      { letra: "A", texto: "A IA generativa apenas localiza e copia documentos existentes, sem produzir novas sequências de conteúdo." },
+      { letra: "B", texto: "A IA generativa produz conteúdo como texto, imagem ou áudio a partir de padrões aprendidos; a saída deve ser avaliada porque pode conter erros ou conteúdo sem suporte." },
+      { letra: "C", texto: "Qualquer sistema que armazene dados ou execute uma consulta a um banco de dados é necessariamente IA generativa." },
+      { letra: "D", texto: "A IA generativa garante que todo conteúdo produzido seja original, verdadeiro e livre de vieses." },
+      { letra: "E", texto: "A IA generativa é definida por aumentar a velocidade da rede ou conceder acesso físico a servidores." }
     ],
     gabarito: "B",
-    justificativa: "IA generativa aprende distribuições de dados e gera conteúdo novo, diferente de sistemas que apenas reúnem, armazenam ou acessam. A alternativa A descreve um sistema de reunião de dados; a C, armazenamento; a D, rede; e a E, acesso físico — nenhuma é a definição de IA generativa.",
+    justificativa: "IA generativa é uma classe de sistemas de IA que gera conteúdo novo, como texto, imagem, áudio ou outros formatos, a partir de padrões aprendidos durante o treinamento e de entradas fornecidas. Isso difere de uma ferramenta que apenas recupera um documento existente, embora sistemas reais possam combinar geração, busca e recuperação. A novidade aparente não garante originalidade absoluta, correção factual, ausência de vieses ou adequação ao uso.",
     analise: {
-      A: "INCORRETA. Reunir dados é um sistema de integração, não de geração.",
-      B: "CORRETA. IA generativa produz conteúdo novo a partir de padrões aprendidos.",
-      C: "INCORRETA. Armazenar arquivos é um sistema de armazenamento, não geração.",
-      D: "INCORRETA. Aumentar velocidade de rede não é IA generativa.",
-      E: "INCORRETA. Acesso físico a servidores não é geração de conteúdo."
+      A: "INCORRETA. Recuperação de documentos pode ser combinada com geração, mas não define por si só a capacidade generativa.",
+      B: "CORRETA. A alternativa define a produção de conteúdo e registra que a saída precisa de avaliação.",
+      C: "INCORRETA. Armazenamento e consulta a dados não tornam automaticamente um sistema generativo.",
+      D: "INCORRETA. Sistemas generativos podem produzir erros, reproduzir vieses ou gerar conteúdo semelhante a materiais existentes.",
+      E: "INCORRETA. Velocidade de rede e acesso físico não definem IA generativa."
     },
-    regra: "Generativa = gera; discriminativa = classifica.",
-    pegadinha: "Não confunda com 'busca' — a saída é produzida, não recuperada.",
-    fonte: "OpenAI — GPT-4 Technical Report, 2023."
+    regra: "IA generativa produz conteúdo a partir de padrões aprendidos; sistemas reais podem combinar geração e recuperação, e a saída precisa ser avaliada.",
+    pegadinha: "Conteúdo novo não significa necessariamente conteúdo verdadeiro, inédito em sentido jurídico ou livre de vieses.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-22", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -541,24 +541,24 @@ const moduleQuestions5 = [
     contexto: "Um atendente recebe resposta do assistente com numeração de prazo inexistente.",
     enunciado: "A 'alucinação' de um modelo generativo ocorre quando:",
     alternativas: [
-      { letra: "A", texto: "Gera texto coerente, mas factualmente incorreto, sem reconhecimento de incerteza." },
+      { letra: "A", texto: "Gera conteúdo plausível, mas factualmente incorreto, contraditório ou sem suporte verificável." },
       { letra: "B", texto: "Repete fielmente o prompt enviado." },
       { letra: "C", texto: "Requer mais memória que o necessário." },
       { letra: "D", texto: "Demora a responder." },
       { letra: "E", texto: "Produz apenas imagens." }
     ],
     gabarito: "A",
-    justificativa: "Alucinação é a produção de afirmação factualmente falsa, linguisticamente coerente. Não é repetição de prompt, gargalo de memória, latência ou produção apenas de imagem.",
+    justificativa: "Alucinação (também chamada confabulação em algumas referências) ocorre quando o sistema gera conteúdo incorreto, falso, contraditório ou sem fundamento, que pode parecer convincente. Não exige que o texto seja sempre fluente nem que o modelo deixe explicitamente de reconhecer a incerteza.",
     analise: {
-      A: "CORRETA. Alucinação = plausibilidade sem fundamento factual.",
+      A: "CORRETA. A saída pode parecer plausível, mas conter afirmações incorretas ou sem suporte verificável.",
       B: "INCORRETA. Repetição de prompt é 'echo', não alucinação.",
       C: "INCORRETA. Memória excessiva não é alucinação.",
       D: "INCORRETA. Latência é tempo de resposta, não alucinação.",
-      E: "INCORRETA. Geração de imagem é um modalidade, não alucinação."
+      E: "INCORRETA. Geração de imagem é uma modalidade de saída, não a definição de alucinação."
     },
     regra: "Alucinação = plausibilidade sem fundamento factual.",
     pegadinha: "Não confunda alucinação com erro de digitação do sistema.",
-    fonte: "Wikipedia — Hallucination (artificial intelligence), 2024."
+    fonte: "NIST — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1), 2024. https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-23", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -598,42 +598,42 @@ const moduleQuestions5 = [
       { letra: "E", texto: "Encerrar a conversa." }
     ],
     gabarito: "B",
-    justificativa: "Recuperação aumentada (RAG) ancora a geração a fontes verificáveis e exibir fontes permite auditoria, reduzindo alucinações. Aumentar temperatura (A) aumenta variabilidade; ignorar contexto (C) aumenta alucinação; modelo sem limites (D) é arriscado; encerrar (E) não resolve o problema.",
+    justificativa: "A geração aumentada por recuperação (RAG) fornece contexto recuperado para fundamentar a resposta e pode melhorar atualidade e factualidade; ainda assim, a relevância e a vigência das fontes recuperadas, a correspondência entre evidência e afirmação e a saída gerada precisam ser verificadas. Aumentar a temperatura não é uma mitigação confiável; ignorar o contexto remove a fundamentação; encerrar a conversa não corrige o processo.",
     analise: {
       A: "INCORRETA. Aumentar temperatura aumenta a variabilidade e o risco de alucinação.",
-      B: "CORRETA. Recuperação + fontes ancora a geração e permite auditoria.",
-      C: "INCORRETA. Ignorar contexto aumenta alucinação por conhecimento parâmetro.",
+      B: "CORRETA. Contexto recuperado e fontes verificáveis ajudam a fundamentar a resposta e permitem auditoria, sem garantir ausência de erros.",
+      C: "INCORRETA. Ignorar o contexto recuperado remove uma fonte de evidência e deixa a resposta depender mais do conhecimento aprendido pelo modelo, que pode estar incompleto ou desatualizado.",
       D: "INCORRETA. Modelo sem limites não é solução segura.",
       E: "INCORRETA. Encerrar não resolve o problema de alucinação."
     },
     regra: "Recuperação + fontes ancora a geração.",
-    pegadinha: "Temperatura mais alta não reduz alucinação.",
-    fonte: "Google Cloud — Prompt design best practices, 2024."
+    pegadinha: "RAG reduz certos riscos, mas não garante resposta correta: verifique a fonte, a vigência e a sustentação de cada afirmação.",
+    fonte: "Google Cloud — Grounding in Gemini and grounding overview. https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/chat/chat-prompts."
   },
 
   { id: "q-m5-25", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "m5-u3-t2-s2", assunto: "5.3 — IA clássica vs. generativa",
-    contexto: "Órgão público tria chamados de atendimento.",
-    enunciado: "Sobre a diferença prática entre IA baseada em regras e IA generativa em atendimento, é correto afirmar que:",
+    nivel: "avancado", topico: "m5-u3-t2-s2", assunto: "5.3 — IA baseada em regras e IA generativa",
+    contexto: "Um órgão público tria chamados. Um componente aplica regras explícitas para encaminhar solicitações por categoria; outro redige um resumo do chamado para apoiar o atendente.",
+    enunciado: "Qual comparação entre os componentes é mais precisa?",
     alternativas: [
-      { letra: "A", texto: "A IA generativa sempre substitui regras e nunca comete erros." },
-      { letra: "B", texto: "A IA generativa é probabilística, com saídas variáveis, e precisa de verificação." },
-      { letra: "C", texto: "IA baseada em regras gera respostas novas a cada execução." },
-      { letra: "D", texto: "IA generativa não precisa de supervisão humana." },
-      { letra: "E", texto: "IA baseada em regras é sempre mais flexível." }
+      { letra: "A", texto: "O componente generativo sempre substitui as regras, não comete erros e pode decidir sozinho qualquer encaminhamento." },
+      { letra: "B", texto: "O componente de regras aplica condições explicitamente programadas; o generativo produz texto com base no modelo e no contexto, podendo variar e exigir validação conforme o risco." },
+      { letra: "C", texto: "O componente baseado em regras aprende necessariamente novos critérios a partir de cada chamado, sem alteração de configuração." },
+      { letra: "D", texto: "A geração de texto garante que o resumo seja factual e que nenhuma informação importante seja omitida." },
+      { letra: "E", texto: "Apenas sistemas generativos podem ser supervisionados, auditados ou testados." }
     ],
     gabarito: "B",
-    justificativa: "IA generativa é probabilística e variável; IA baseada em regras é determinística. Ambas exigem supervisão conforme o risco.",
+    justificativa: "Um sistema baseado em regras executa condições explicitamente definidas e tende a ser previsível para a mesma entrada e configuração. Um sistema generativo produz conteúdo com base no modelo e no contexto; sua saída pode variar conforme parâmetros e implementação e pode conter erros ou omissões. As duas abordagens podem ser testadas e auditadas, e o grau de supervisão deve considerar o risco da decisão ou do conteúdo.",
     analise: {
-      A: "INCORRETA. IA generativa não é infalível — precisa de verificação.",
-      B: "CORRETA. IA generativa é probabilística, variável e exige verificação.",
-      C: "INCORRETA. IA baseada em regras é determinística e reprodutível.",
-      D: "INCORRETA. IA generativa também precisa de supervisão humana.",
-      E: "INCORRETA. IA baseada em regras não é sempre mais flexível."
+      A: "INCORRETA. IA generativa não substitui sempre regras nem deve ser presumida infalível ou autônoma para qualquer decisão.",
+      B: "CORRETA. A alternativa distingue regras explícitas de geração contextual e inclui a necessidade de validação proporcional ao risco.",
+      C: "INCORRETA. Regras não aprendem necessariamente de cada chamado; a mudança depende de implementação ou atualização explícita.",
+      D: "INCORRETA. Um resumo gerado pode conter erros factuais ou omitir informações relevantes.",
+      E: "INCORRETA. Sistemas baseados em regras também podem ser testados, monitorados e auditados."
     },
-    regra: "Generativa probabilística; regras determinísticas.",
-    pegadinha: "Selecionar sempre a 'melhor' não é uma política.",
-    fonte: "AWS — Generative AI vs. traditional AI, 2024."
+    regra: "Regras explícitas executam condições configuradas; IA generativa produz conteúdo contextual e requer validação proporcional ao risco.",
+    pegadinha: "Não equipare previsibilidade de regras a correção garantida nem fluência de texto gerado a fidelidade factual.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1; OECD, AI Principles: https://oecd.ai/en/ai-principles."
   },
 
   { id: "q-m5-26", modulo: 5, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -642,14 +642,14 @@ const moduleQuestions5 = [
     enunciado: "Afirmação: 'Modelos generativos alinhados por reforço de preferência (RLHF) são isentos de vieses.'",
     corrigir: true,
     gabarito: "errado",
-    trechoDeterminante: "A afirmação é falsa: RLHF reduza, mas não elimine, vieses; a avaliação por subgrupos continua sendo necessária.",
-    justificativa: "O alinhamento por preferência reduz padrões de vieses visíveis, mas não elimina todos — especialmente vieses sutis ou de subgrupos pouco representados. A avaliação por subgrupos é necessária para confirmar o efeito.",
+    trechoDeterminante: "A afirmação é falsa: RLHF pode reduzir certos comportamentos indesejados, mas não elimina vieses; a avaliação por subgrupos continua sendo necessária.",
+    justificativa: "O ajuste por preferências humanas pode reduzir alguns comportamentos indesejados, mas não garante ausência de vieses, inclusive em subgrupos pouco representados. A avaliação por subgrupos e o monitoramento são necessários para identificar efeitos residuais.",
     analise: {
-      item: "INCORRETA. RLHF reduza vieses, mas não elimina; é necessário monitoramento continuo e avaliação por subgrupos."
+      item: "INCORRETA. RLHF pode reduzir certos vieses, mas não os elimina; é necessário monitoramento contínuo e avaliação por subgrupos."
     },
     regra: "Alinhamento reduz vieses, não os elimina.",
-    pegadinha: "A alinhamento não é 'pureza'.",
-    fonte: "OpenAI — Training language models to follow instructions, 2022."
+    pegadinha: "Alinhamento não significa ausência total de vieses.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-27", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -661,23 +661,23 @@ const moduleQuestions5 = [
       { letra: "B", texto: "Apenas II está correta." },
       { letra: "C", texto: "I e II estão corretas." },
       { letra: "D", texto: "Nenhuma está correta." },
-      { letra: "E", texto: "Apenas I, II e III corretas." }
+      { letra: "E", texto: "I e II são garantidas em qualquer modelo e configuração." }
     ],
     gabarito: "C",
-    justificativa: "Ambas corretas: temperatura controla aleatoriedade vs. determinismo no decodificação de tokens.",
+    justificativa: "Ambas descrevem tendências gerais: temperatura maior costuma tornar a distribuição de amostragem mais plana e a saída mais variável; temperatura menor tende a concentrar a probabilidade nos tokens mais prováveis. Temperatura baixa não garante determinismo em todas as configurações.",
     analise: {
-      A: "INCORRETA. Apenas I está correta, mas a afirmação C é mais completa.",
-      B: "INCORRETA. Apenas II está correta, mas a afirmação C é mais completa.",
+      A: "INCORRETA. I descreve uma tendência geral, mas II também está correta.",
+      B: "INCORRETA. II descreve uma tendência geral, mas I também está correta.",
       C: "CORRETA. I e II estão corretas — temperatura controla a aleatoriedade da amostragem.",
       D: "INCORRETA. Nenhuma está correta é falso.",
-      E: "INCORRETA. Não há uma III correta — são apenas I e II."
+      E: "INCORRETA. Os efeitos são tendências gerais da amostragem, não garantias universais independentes do modelo e da configuração."
     },
-    regra: "Temperatura: alto = mais variável; baixo = mais determinístico.",
+    regra: "Temperatura: alta tende a aumentar a variabilidade; baixa tende a reduzir a aleatoriedade, mas não garante determinismo em toda configuração.",
     pegadinha: "Alta temperatura não é 'melhor criatividade'.",
     fonte: "Hugging Face — Temperature, Top-K, Top-P, 2024."
   },
 
-  /* ===================== 5.4 Engenharia de Prompts (10 questões) ===================== */
+  /* ===================== 5.4 Engenharia de Prompts (11 questões) ===================== */
 
   { id: "q-m5-28", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "basico", topico: "m5-u4-t1-s1", assunto: "5.4 — Componentes de um prompt",
@@ -691,9 +691,9 @@ const moduleQuestions5 = [
       { letra: "E", texto: "A temperatura máxima sempre." }
     ],
     gabarito: "A",
-    justificativa: "Contexto, restrições e formato tornam a saída consistente e auditável. Apenas perguntar (B), exigir código-fonte (C), fornecer senha (D) e temperatura máxima (E) não melhoram a consistência.",
+    justificativa: "Um prompt útil especifica a tarefa e, conforme o caso, contexto, restrições e formato de saída. Esses elementos reduzem ambiguidades, mas não garantem respostas idênticas ou corretas. Exigir código-fonte do modelo, incluir senhas ou fixar sempre a temperatura máxima não é requisito geral para consistência.",
     analise: {
-      A: "CORRETA. Contexto, restrições e formato melhoram consistência e auditoria.",
+      A: "CORRETA. Contexto, tarefa, restrições e formato de saída podem reduzir ambiguidades e facilitar a avaliação.",
       B: "INCORRETA. Apenas perguntar gera saídas variáveis.",
       C: "INCORRETA. Código-fonte não é parte do prompt.",
       D: "INCORRETA. Senha não é parte do prompt e representa risco.",
@@ -730,7 +730,7 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-30", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "modulo-5-unidade-4", assunto: "5.4 — Delimitação e injeção",
+    nivel: "basico", topico: "modulo-5-unidade-4-topico-1", assunto: "5.4 — Delimitação e injeção",
     contexto: "Prompt com 'ignore tudo anterior'.",
     enunciado: "A delimitação explícita de entrada e saída serve para:",
     alternativas: [
@@ -741,133 +741,133 @@ const moduleQuestions5 = [
       { letra: "E", texto: "Diminuir o tamanho do prompt." }
     ],
     gabarito: "A",
-    justificativa: "Delimitação clara (marcadores de início/fim) reduz a área de superfície onde instruções maliciosas podem ser aceitas.",
+    justificativa: "Delimitadores ajudam a distinguir instruções confiáveis de conteúdo fornecido como dado, mas não impedem sozinhos que o modelo siga instruções maliciosas inseridas no conteúdo. São uma camada de mitigação, combinada com controles de acesso, validação de saída e testes adversariais.",
     analise: {
-      A: "CORRETA. Delimitação reduz a superfície de injeção.",
+      A: "CORRETA. Delimitação explícita pode ajudar a separar instruções confiáveis de conteúdo tratado como dado, mas não impede sozinha toda injeção de prompt.",
       B: "INCORRETA. Delimitação não aumenta o custo.",
       C: "INCORRETA. Delimitação não elimina a necessidade de verificação humana.",
-      D: "INCORRETA. Delimitação torna o modelo mais previsível, não indeterminístico.",
+      D: "INCORRETA. Delimitadores não são um parâmetro de amostragem e não tornam, por si sós, a geração determinística ou indeterminística.",
       E: "INCORRETA. Delimitação não reduz o tamanho necessário."
     },
     regra: "Delimitação = separar instrução e dado.",
-    pegadinha: "Delimitação reduz, não elimina a injeção.",
+    pegadinha: "Delimitação ajuda, mas não substitui defesa em camadas contra injeção de prompt.",
     fonte: "NIST — Adversarial Machine Learning, 2024."
   },
 
   { id: "q-m5-31", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m5-u4-t2-s1", assunto: "5.4 — Avaliação de prompts",
-    contexto: "Dois prompts testados com impressão.",
-    enunciado: "A avaliação de prompts de forma confiável exige:",
+    nivel: "intermediario", topico: "m5-u4-t2-s1", assunto: "5.4 — Avaliação comparativa de prompts",
+    contexto: "Uma equipe compara duas versões de um prompt para classificar solicitações de atendimento e precisa decidir qual delas reduz erros sem piorar a segurança.",
+    enunciado: "Qual procedimento oferece evidência mais confiável para comparar as duas versões?",
     alternativas: [
-      { letra: "A", texto: "Conjunto de teste versionado e métrica definida antes da execução." },
-      { letra: "B", texto: "Medir apenas pela impressão do resultado." },
-      { letra: "C", texto: "Executar cada prompt em modelo diferente." },
-      { letra: "D", texto: "Omitir métrica." },
-      { letra: "E", texto: "Comparar apenas um caso." }
+      { letra: "A", texto: "Definir previamente critérios e casos de teste representativos, manter condições comparáveis, registrar versões e parâmetros e avaliar erros relevantes em várias execuções quando houver variabilidade." },
+      { letra: "B", texto: "Escolher a versão que produziu a resposta mais convincente em um único exemplo." },
+      { letra: "C", texto: "Alterar os critérios de sucesso depois de observar os resultados de cada versão." },
+      { letra: "D", texto: "Comparar as versões com conjuntos de dados e modelos diferentes, sem registrar essas diferenças." },
+      { letra: "E", texto: "Medir apenas o tamanho médio das respostas, independentemente da tarefa." }
     ],
     gabarito: "A",
-    justificativa: "Versão de conjunto de teste e métrica definida antes garantem comparação justa e reprodutível.",
+    justificativa: "Uma avaliação comparativa útil exige critérios definidos antes do teste, exemplos representativos, condições de execução comparáveis e registro de versões, parâmetros e resultados. Para sistemas com saídas variáveis, múltiplas execuções podem ajudar a estimar a variabilidade. As métricas devem refletir a tarefa e seus riscos, incluindo erros críticos e não apenas uma impressão geral.",
     analise: {
-      A: "CORRETA. Conjunto + métrica + versão são requisitos de avaliação fundamentais.",
-      B: "INCORRETA. Impressão não é evidência.",
-      C: "INCORRETA. Modelo diferente descontextualiza a comparação.",
-      D: "INCORRETA. Métrica é essencial para comparação.",
-      E: "INCORRETA. Um caso não é conjunto de teste."
+      A: "CORRETA. O procedimento reduz comparações oportunistas e permite rastrear quais configurações produziram os resultados.",
+      B: "INCORRETA. Um único exemplo pode ser atípico e não estima desempenho geral.",
+      C: "INCORRETA. Alterar critérios após observar resultados introduz viés de avaliação.",
+      D: "INCORRETA. Mudanças não controladas impedem atribuir diferenças ao prompt com confiança.",
+      E: "INCORRETA. Tamanho da resposta, isoladamente, não mede correção, utilidade nem segurança."
     },
-    regra: "Avaliação por conjunto + métrica + versão.",
-    pegadinha: "Impressão não é evidência.",
-    fonte: "OpenAI — Evaluating AI Systems, 2024."
+    regra: "Compare prompts com critérios prévios, casos representativos, condições controladas, versões registradas e métricas adequadas ao risco.",
+    pegadinha: "Uma resposta convincente ou uma métrica única não demonstra que o prompt melhorou em todas as dimensões relevantes.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-32", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "avancado", topico: "m5-u4-t2-s2", assunto: "5.4 — Prompt como artefato de governança",
-    contexto: "Assistência de atendimento com prompt produz ação.",
-    enunciado: "O prompt funciona como artefato de governança quando:",
+    contexto: "Um assistente institucional produz respostas para servidores. A equipe precisa reconstruir qual instrução estava ativa quando uma resposta incorreta foi emitida e decidir se uma atualização pode ser implantada.",
+    enunciado: "Qual prática transforma o prompt em um artefato governável e auditável?",
     alternativas: [
-      { letra: "A", texto: "Está versionado, auditado e vinculado a critérios de aceite." },
-      { letra: "B", texto: "É inserido em chat sem registro." },
-      { letra: "C", texto: "Não possui restrições." },
-      { letra: "D", texto: "É compartilhado sem controle de acesso." },
-      { letra: "E", texto: "É alterado sem registo." }
+      { letra: "A", texto: "Versionar o prompt, identificar responsável e finalidade, registrar mudanças e parâmetros relevantes, manter testes e critérios de aceite e monitorar resultados após a implantação." },
+      { letra: "B", texto: "Manter o prompt apenas em uma conversa individual, sem cópia controlada ou histórico de alterações." },
+      { letra: "C", texto: "Permitir que qualquer pessoa altere a instrução em produção sem revisão para acelerar melhorias." },
+      { letra: "D", texto: "Considerar a aprovação inicial suficiente, independentemente de mudanças no modelo, nos dados ou no contexto de uso." },
+      { letra: "E", texto: "Registrar apenas o texto final da resposta, sem identificar a versão do prompt ou a configuração usada." }
     ],
     gabarito: "A",
-    justificativa: "Governança exige versionamento, auditoria e critérios de aceite — além de revisão por dono e medição contínua.",
+    justificativa: "Governança de prompts requer rastreabilidade do artefato e de seu uso: versão, finalidade, responsável, mudanças, parâmetros relevantes, critérios de avaliação, aprovação e monitoramento. O controle deve ser proporcional ao risco e integrado ao processo de mudança; um prompt versionado não garante, sozinho, qualidade ou segurança.",
     analise: {
-      A: "CORRETA. Versionamento + auditoria + critérios = artefato de governança.",
-      B: "INCORRETA. Registro é essencial para auditoria.",
-      C: "INCORRETA. Restrições são necessárias para segurança.",
-      D: "INCORRETA. Controle de acesso é exigido.",
-      E: "INCORRETA. Alterações sem registro anulam a governança."
+      A: "CORRETA. A alternativa permite rastrear mudanças, testar antes de implantar e observar efeitos em produção.",
+      B: "INCORRETA. Sem histórico controlado, fica difícil reproduzir ou investigar o comportamento.",
+      C: "INCORRETA. Mudanças sem revisão e teste podem introduzir regressões e riscos.",
+      D: "INCORRETA. Alterações no modelo ou no contexto podem invalidar avaliações anteriores.",
+      E: "INCORRETA. Sem versão e configuração, o registro é insuficiente para atribuir o resultado à configuração usada."
     },
-    regra: "Prompt governável = versionado + avaliação + revisão.",
-    pegadinha: "Prompt não é só 'texto bonito'.",
-    fonte: "Microsoft — Responsible AI, 2024."
+    regra: "Governança de prompts combina versionamento, responsabilidade, histórico de mudanças, testes, critérios de aceite e monitoramento.",
+    pegadinha: "Versionar é necessário para rastreabilidade, mas não substitui avaliação nem revisão de mudanças.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-33", modulo: 5, formato: "ce", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-5-unidade-4", assunto: "5.4 — Segurança e dados sensíveis",
-    contexto: "Prompt tenta extrair dados sensíveis.",
-    enunciado: "Afirmação: 'Inserir segredos no prompt é seguro, porque o modelo não os repetirá.'",
+    nivel: "avancado", topico: "modulo-5-unidade-4-topico-3", assunto: "5.4 — Segredos e injeção de prompt",
+    contexto: "Um assistente recebe documentos externos e pode usar ferramentas para consultar sistemas institucionais.",
+    enunciado: "Afirmação: 'É seguro inserir credenciais, chaves de API ou outros segredos diretamente no prompt, pois o modelo não os repetirá nem poderá revelá-los por meio de ferramentas.'",
     corrigir: true,
     gabarito: "errado",
-    trechoDeterminante: "A afirmação é falsa: o modelo pode expor ou derivar conteúdo do contexto por meio de injeção ou execução; segredos não devem estar no prompt.",
-    justificativa: "Segredos devem viver fora do prompt e ser protegidos por controle de acesso e verificação de saída.",
+    trechoDeterminante: "A afirmação é falsa: conteúdo fornecido ao modelo pode ser exposto por saídas, registros, integrações ou ataques de injeção; segredos devem ser geridos fora do prompt e protegidos por controles de acesso.",
+    justificativa: "Prompts e conteúdos de contexto não são um cofre de segredos. Dados sensíveis podem aparecer em saídas, logs ou integrações, e conteúdo não confiável pode tentar induzir o modelo a revelar informação ou usar ferramentas de forma indevida. Credenciais devem ser armazenadas em mecanismos próprios de gestão de segredos, concedidas com privilégio mínimo e nunca expostas desnecessariamente ao modelo.",
     analise: {
-      item: "INCORRETA. Segredos no prompt aumentam risco de exposição."
+      item: "INCORRETA. Não se deve confiar que o modelo sempre ocultará segredos; a prevenção exige gestão externa de credenciais, controle de acesso, validação e limites nas ferramentas."
     },
-    regra: "Segredos fora do prompt; controle por camadas.",
-    pegadinha: "'O modelo não repetiu' não é garantia.",
-    fonte: "MITRE — Prompt Injection, 2024."
+    regra: "Mantenha credenciais fora do prompt; use gestão de segredos, privilégio mínimo e controles sobre ferramentas e saídas.",
+    pegadinha: "A ausência de vazamento em um teste não garante que o segredo permanecerá protegido em outros contextos.",
+    fonte: "OWASP, LLM Prompt Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html; NIST AI 600-1: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-34", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "m5-u4-t3-s1", assunto: "5.4 — Implantação responsável",
-    contexto: "Equipe imputa prompt para atendimento.",
-    enunciado: "Uma conduta correta ao implantar um prompt em produção é:",
+    nivel: "avancado", topico: "m5-u4-t3-s1", assunto: "5.4 — Implantação responsável de prompts",
+    contexto: "Uma equipe altera um prompt que apoia o atendimento ao cidadão e pretende disponibilizar a nova versão aos usuários.",
+    enunciado: "Qual sequência representa uma implantação responsável?",
     alternativas: [
-      { letra: "A", texto: "Testar com casos adversariais e registrar parâmetros e versão." },
-      { letra: "B", texto: "Implantar sem teste." },
-      { letra: "C", texto: "Alterar o prompt a cada chamada." },
-      { letra: "D", texto: "Não registrar a versão." },
-      { letra: "E", texto: "Usar o prompt apenas em produção." }
+      { letra: "A", texto: "Testar casos representativos e adversariais, revisar resultados e riscos, registrar a versão e os parâmetros, aprovar a mudança, implantar de forma controlada e monitorar com possibilidade de reversão." },
+      { letra: "B", texto: "Publicar imediatamente a alteração e avaliar os erros somente se houver reclamações." },
+      { letra: "C", texto: "Alterar o prompt a cada chamada sem registrar as mudanças, para adaptar a resposta ao usuário." },
+      { letra: "D", texto: "Executar um único teste favorável e considerar dispensados testes futuros, mesmo após mudança de modelo." },
+      { letra: "E", texto: "Usar apenas em produção, porque testes offline não refletem qualquer comportamento real." }
     ],
     gabarito: "A",
-    justificativa: "Teste adversário, registro de versão e parâmetros são padrões de governança para prompts em produção.",
+    justificativa: "Uma mudança responsável deve passar por avaliação proporcional ao risco, incluindo casos comuns, limites e tentativas adversariais; registrar a configuração; obter revisão apropriada; e ser implantada com monitoramento e estratégia de reversão. A avaliação precisa ser repetida quando mudanças relevantes ocorrerem no prompt, modelo, ferramentas, dados ou contexto de uso.",
     analise: {
-      A: "CORRETA. Teste adversário + registro = implantação responsável.",
-      B: "INCORRETA. Implantação sem teste é arriscada.",
-      C: "INCORRETA. Alterar a cada chamada inviabiliza auditoria.",
-      D: "INCORRETA. Registro é essencial.",
-      E: "INCORRETA. Produtividade sem teste e registro é insegura."
+      A: "CORRETA. A sequência integra teste, revisão, rastreabilidade, implantação controlada e monitoramento.",
+      B: "INCORRETA. Esperar reclamações ignora falhas que podem não ser percebidas ou reportadas.",
+      C: "INCORRETA. Mudanças não registradas prejudicam rastreabilidade, comparação e investigação.",
+      D: "INCORRETA. Um teste isolado não cobre todos os riscos, e mudanças relevantes podem alterar o comportamento.",
+      E: "INCORRETA. Testes controlados são essenciais, ainda que devam ser complementados por monitoramento de produção."
     },
-    regra: "Implantação responsável = teste + registro + monitoramento.",
-    pegadinha: "Solo no teste não basta.",
-    fonte: "NIST — AI Risk Management Framework, 2023."
+    regra: "Implantação responsável: testar, revisar, versionar, aprovar, implantar de forma controlada, monitorar e permitir reversão.",
+    pegadinha: "Um teste favorável não substitui cobertura de casos adversariais nem avaliação após mudanças relevantes.",
+    fonte: "NIST AI 600-1 — Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile: https://doi.org/10.6028/NIST.AI.600-1."
   },
 
   { id: "q-m5-35", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m5-u2-t1-s1", assunto: "5.2 — Generalização",
-    contexto: "Um modelo treina com dados de um setor e é aplicado a outro.",
-    enunciado: "A generalização se refere a:",
+    nivel: "intermediario", topico: "m5-u2-t1-s1", assunto: "5.2 — Generalização e mudança de distribuição",
+    contexto: "Um modelo treinado com solicitações de uma secretaria urbana apresenta bons resultados no teste original, mas comete mais erros quando aplicado a uma secretaria rural cujas solicitações e vocabulário são diferentes.",
+    enunciado: "Qual interpretação é mais adequada para esse resultado?",
     alternativas: [
-      { letra: "A", texto: "A capacidade do modelo performar bem em dados nunca vistos." },
-      { letra: "B", texto: "A capacidade de memorizar os dados de treino." },
-      { letra: "C", texto: "A necessidade de mais dados rotulados." },
-      { letra: "D", texto: "A velocidade de treinamento." },
-      { letra: "E", texto: "A escolha do algoritmo." }
+      { letra: "A", texto: "O modelo generaliza perfeitamente, pois teve bom desempenho no teste original." },
+      { letra: "B", texto: "O modelo pode não generalizar para a nova população devido à mudança de distribuição; é necessário avaliar dados representativos do novo contexto." },
+      { letra: "C", texto: "A queda de desempenho prova que o algoritmo não pode aprender nenhum padrão útil." },
+      { letra: "D", texto: "A única solução possível é aumentar o número de parâmetros, sem analisar os dados." },
+      { letra: "E", texto: "O resultado não importa, porque o teste original já provou a qualidade em qualquer população." }
     ],
-    gabarito: "A",
-    justificativa: "Generalização é a capacidade de ir bem em dados nunca vistos — o objetivo real do aprendizado.",
+    gabarito: "B",
+    justificativa: "Generalização refere-se ao desempenho em dados não usados no ajuste, mas esse desempenho depende de quão bem os dados de avaliação representam o contexto de uso. Uma mudança na distribuição, no vocabulário ou na relação entre atributos e resultados pode reduzir a qualidade. É necessário medir o desempenho no novo contexto, investigar erros e considerar adaptação ou novo treinamento conforme a evidência.",
     analise: {
-      A: "CORRETA. Generalização = bom desempenho em dados nunca vistos.",
-      B: "INCORRETA. Memorizar treino é overfitting, não generalização.",
-      C: "INCORRETA. Mais dados rotulados não define generalização.",
-      D: "INCORRETA. Velocidade de treinamento não é generalização.",
-      E: "INCORRETA. Escolha de algoritmo é estratégia, não definição de generalização."
+      A: "INCORRETA. Bom desempenho no teste original não garante desempenho em uma população com distribuição diferente.",
+      B: "CORRETA. A queda sugere possível mudança de distribuição e justifica avaliação representativa do contexto de destino.",
+      C: "INCORRETA. O resultado mostra limite de transferência para esse contexto, não ausência de qualquer padrão útil.",
+      D: "INCORRETA. Aumentar parâmetros sem diagnóstico não resolve necessariamente a mudança de distribuição.",
+      E: "INCORRETA. Um teste representa apenas as condições e a população cobertas por seu desenho."
     },
-    regra: "Generalização = 'desempenho em dados nunca vistos'.",
-    pegadinha: "Generalização não é 'decorar o treino' — é 'funcionar em novos casos'.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    regra: "Generalização precisa ser avaliada para a população e o contexto de uso; mudança de distribuição pode reduzir desempenho.",
+    pegadinha: "Desempenho em um teste não garante qualidade em toda população ou em contextos futuros.",
+    fonte: "scikit-learn, Cross-validation: evaluating estimator performance: https://scikit-learn.org/stable/modules/cross_validation.html; NIST AI RMF 1.0: https://doi.org/10.6028/NIST.AI.100-1."
   },
 
   { id: "q-m5-36", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -921,32 +921,32 @@ const moduleQuestions5 = [
   },
 
   { id: "q-m5-38", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-5-unidade-2", assunto: "5.2 — Curva de aprendizado",
-    contexto: "Curva de aprendizado de erro vs. tamanho da amostra.",
-    enunciado: "Curva de aprendizado mostra o erro de treinamento e validação em função do tamanho da amostra. Se o erro de treino diminui com o aumento da amostra e o erro de validação estabiliza, indica:",
+    nivel: "intermediario", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Curva de aprendizado",
+    contexto: "A curva de aprendizado compara os erros de treinamento e validação conforme cresce a amostra.",
+    enunciado: "À medida que a amostra aumenta, o erro de treinamento sobe levemente, o erro de validação cai e a distância entre ambos diminui. A interpretação mais adequada é:",
     alternativas: [
-      { letra: "A", texto: "Que o modelo está aprendendo com mais dados e o risco de overfitting diminui." },
+      { letra: "A", texto: "Que os resultados são compatíveis com redução da diferença de generalização; o padrão sugere benefício de mais dados, mas deve ser confirmado em validação independente." },
       { letra: "B", texto: "Que o modelo está com overfitting." },
       { letra: "C", texto: "Que é melhor reduzir a quantidade de dados." },
       { letra: "D", texto: "Que a curva é sempre decrescente." },
       { letra: "E", texto: "Que o modelo não aprende." }
     ],
     gabarito: "A",
-    justificativa: "Erro de treino caindo e validação estabilizada indicam que o modelo está absorvendo o padrão, reduzindo overfit com mais dados.",
+    justificativa: "Quando a amostra cresce, o erro de treinamento pode subir um pouco porque o conjunto fica mais diverso, enquanto o erro de validação cai. A aproximação das curvas é compatível com redução da diferença de generalização; a avaliação ainda depende de validação independente e de dados representativos.",
     analise: {
-      A: "CORRETA. Mais dados reduz discrepância e overfit.",
+      A: "CORRETA. A queda do erro de validação e a aproximação das curvas são compatíveis com melhor generalização; não constituem garantia isolada de ausência de overfitting.",
       B: "INCORRETA. Overfitting mostra treino baixo e validação alta.",
-      C: "INCORRETA. Mais dados ajuda, não prejudica.",
+      C: "INCORRETA. O padrão descrito não justifica reduzir a amostra; mais dados representativos podem ajudar, mas o efeito precisa ser medido.",
       D: "INCORRETA. Curvas não são sempre decrescentes — podem estabilizar ou subir.",
       E: "INCORRETA. Modelo está aprendendo."
     },
-    regra: "Curva de aprendizado: queda do erro com tamanho da amostra indica aprendizado.",
-    pegadinha: "Overfitting mostra erro baixo de treino e alto de validação.",
+    regra: "Curvas de aprendizado: avalie conjuntamente erros de treino e validação, a evolução com o tamanho da amostra e a distância entre as curvas.",
+    pegadinha: "Não deduza generalização apenas pelo erro de treino: compare-o com o erro de validação e observe sua evolução com mais dados.",
     fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
   },
 
   { id: "q-m5-39", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-5-unidade-2", assunto: "5.2 — Matriz de confusão e métricas",
+    nivel: "avancado", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — Matriz de confusão e métricas",
     contexto: "Triagem de risco com matriz de confusão.",
     enunciado: "Na matriz de confusão, a precisão (precision) é:",
     alternativas: [
@@ -967,34 +967,85 @@ const moduleQuestions5 = [
     },
     regra: "Precisão = 'quando acusou, quantos estavam corretos'.",
     pegadinha: "Precisão e recall têm denominadores diferentes.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science and Its Applications, 2013."
+    fonte: "Provost, F. & Fawcett, T. — Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking, 2013."
   },
 
   { id: "q-m5-40", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-5-unidade-2", assunto: "5.2 — RMSE e penalização de erros grandes",
-    contexto: "MAE 1,9 e RMSE 6,4 em previsão de demanda.",
-    enunciado: "A distância entre RMSE e MAE típica de 6,4 indica:",
+    nivel: "avancado", topico: "modulo-5-unidade-2-topico-3", assunto: "5.2 — RMSE e penalização de erros grandes",
+    contexto: "Em uma previsão de demanda, um modelo apresenta MAE de 1,9 unidade e RMSE de 6,4 unidades no mesmo conjunto de avaliação.",
+    enunciado: "Qual interpretação desses resultados é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Que há alguns erros muito grandes que puxam o RMSE para cima." },
-      { letra: "B", texto: "Que o modelo não aprende." },
-      { letra: "C", texto: "Que os dados não são relevantes." },
-      { letra: "D", texto: "Que o modelo está overfitado." },
-      { letra: "E", texto: "Que a métrica é incorreta." }
+      { letra: "A", texto: "O RMSE penaliza erros grandes de forma mais intensa que o MAE; a diferença observada justifica investigar a distribuição dos erros e os segmentos em que ocorrem." },
+      { letra: "B", texto: "O modelo necessariamente sofre overfitting, mesmo sem comparar treino e validação." },
+      { letra: "C", texto: "O MAE menor prova que o modelo tem bom desempenho em todos os segmentos." },
+      { letra: "D", texto: "RMSE menor que MAE seria obrigatório para um modelo bem calibrado." },
+      { letra: "E", texto: "A diferença entre as métricas prova que os dados de avaliação são irrelevantes." }
     ],
     gabarito: "A",
-    justificativa: "RMSE ≥ MAE; quando RMSE está bem acima do MAE, há poucos erros de grande módulo. O modelo é bom em média, mas com casos extremos.",
+    justificativa: "MAE calcula a média dos valores absolutos dos erros, enquanto RMSE calcula a raiz da média dos erros quadráticos, dando peso relativamente maior aos erros de grande magnitude. RMSE costuma ser maior ou igual ao MAE no mesmo conjunto. A diferença entre os valores pode motivar a investigação de erros extremos ou segmentos específicos, mas não identifica sozinha a causa nem comprova overfitting ou qualidade global.",
     analise: {
-      A: "CORRETA. Maior discrepância RMSE vs. MAE indica erros extremos.",
-      B: "INCORRETA. Erro médio absoluto menor não indica não aprendizado.",
-      C: "INCORRETA. Desempenho imprevisível não é prova de irrelevância.",
-      D: "INCORRETA. Overfitting é detectado por treino × validação, não por métricas.",
-      E: "INCORRETA. RMSE é uma métrica válida e corretamente calculada."
+      A: "CORRETA. A diferença entre RMSE e MAE indica influência relativa maior de erros grandes e justifica investigar sua distribuição.",
+      B: "INCORRETA. Overfitting exige analisar desempenho em treino e dados de validação/teste; a diferença entre MAE e RMSE não basta.",
+      C: "INCORRETA. Uma média global não demonstra desempenho adequado em todos os segmentos.",
+      D: "INCORRETA. No mesmo conjunto, RMSE é matematicamente maior ou igual ao MAE; não é necessário que seja menor.",
+      E: "INCORRETA. A diferença entre métricas não prova irrelevância dos dados."
     },
-    regra: "RMSE ≥ MAE; grande diferença indica erros extremos.",
-    pegadinha: "RMSE não é 'erro' — é 'raiz da média dos quadrados'.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
-  }
+    regra: "MAE resume erros absolutos; RMSE dá peso quadrático maior a erros grandes. Compare-os no mesmo conjunto e investigue segmentos e extremos.",
+    pegadinha: "A diferença entre MAE e RMSE não diagnostica sozinha overfitting nem demonstra qualidade uniforme do modelo.",
+    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2nd ed., 2009."
+  },
+
+  {
+    id: "q-m5-41", modulo: 5, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "avancado",
+    topico: "modulo-5-unidade-3-topico-4", assunto: "5.3 — Síntese aplicada: alucinação em atendimento público",
+    contexto: "Um assistente institucional informa prazos de requerimentos sem localizar ato normativo que os sustente. A amostragem encontra respostas plausíveis, mas sem fundamento verificável.",
+    enunciado: "Qual plano trata melhor a causa do risco e permite medir se houve melhora?",
+    alternativas: [
+      { letra: "A", texto: "Acrescentar 'não invente' ao prompt e considerar o risco resolvido." },
+      { letra: "B", texto: "Aumentar o tamanho das respostas para incluir mais contexto." },
+      { letra: "C", texto: "Apagar registros indiscriminadamente, sem corrigir a base documental nem avaliar novas respostas, e declarar o problema resolvido." },
+      { letra: "D", texto: "Ancorar respostas em atos vigentes recuperados, exigir evidência citável, encaminhar lacunas a uma pessoa e medir fidelidade." },
+      { letra: "E", texto: "Completar prazos ausentes com base na prática de outros órgãos." }
+    ],
+    gabarito: "D",
+    justificativa: "O problema é afirmar sem evidência normativa. Recuperação documental com metadados de vigência, resposta condicionada à evidência, encaminhamento seguro e avaliação periódica atacam a causa e permitem auditoria.",
+    analise: {
+      A: "INCORRETA. Instrução isolada não garante fidelidade nem verifica a resposta.",
+      B: "INCORRETA. Mais texto pode ampliar o erro sem fornecer evidência.",
+      C: "INCORRETA. A retenção deve seguir política de privacidade e guarda aplicável; apagar registros, por si só, não corrige a fonte nem demonstra redução das respostas sem fundamento.",
+      D: "CORRETA. Combina fonte autoritativa, tratamento seguro de lacunas, supervisão e medição.",
+      E: "INCORRETA. A prática de outro órgão não fundamenta o prazo legal aplicável."
+    },
+    regra: "Afirmações institucionais devem ser verificáveis contra documentos vigentes; o modelo não é fonte normativa.",
+    pegadinha: "Um prompt mais enfático não substitui recuperação de fonte, validação e governança.",
+    fonte: "NIST — AI Risk Management Framework (AI RMF 1.0): https://www.nist.gov/itl/ai-risk-management-framework (verificado em 2026-10-26). OWASP — LLM Prompt Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html (verificado em 2026-10-26)."
+  },
+  {
+    id: "q-m5-42", modulo: 5, formato: "mc", estilo: "vunesp", origem: "autoral", nivel: "avancado",
+    topico: "modulo-5-unidade-4-topico-4", assunto: "5.4 — Síntese aplicada: engenharia de prompts institucional",
+    contexto: "Um órgão usa assistente para responder sobre regimento atualizado por portarias. O prompt só diz: 'Responda com base no regimento e, se não souber, diga que não sabe'.",
+    enunciado: "Qual revisão torna o procedimento mais controlável para uso institucional?",
+    alternativas: [
+      { letra: "A", texto: "Retirar restrições e pedir respostas criativas para cobrir lacunas." },
+      { letra: "B", texto: "Identificar versões e vigência dos documentos, respeitar a hierarquia normativa aplicável, exigir evidência recuperada e verificável, encaminhar lacunas ou conflitos não resolvidos, minimizar dados e avaliar resultados." },
+      { letra: "C", texto: "Adicionar apenas uma persona de especialista." },
+      { letra: "D", texto: "Incluir todos os dados pessoais disponíveis para maximizar o contexto." },
+      { letra: "E", texto: "Pedir citações legais mesmo quando a norma correspondente não for recuperada." }
+    ],
+    gabarito: "B",
+    justificativa: "O procedimento deve identificar documentos e versões vigentes, respeitar a hierarquia normativa definida pela instituição e registrar a data de referência. A resposta precisa apresentar evidência recuperada e verificável; diante de lacunas ou conflitos não resolvidos, deve se abster ou encaminhar o caso. Minimização de dados e testes periódicos completam o controle.",
+    analise: {
+      A: "INCORRETA. Criatividade irrestrita aumenta o risco de respostas sem fundamento.",
+      B: "CORRETA. Combina controle de versão e vigência, evidência verificável, tratamento de conflitos e lacunas, minimização de dados e avaliação periódica.",
+      C: "INCORRETA. Persona não resolve fonte versionada, lacunas, formato e validação.",
+      D: "INCORRETA. Contraria a minimização de dados e pode expor informação desnecessária.",
+      E: "INCORRETA. Solicitar citações sem evidência pode produzir referências inventadas."
+    },
+    regra: "Prompt é parte do controle; fonte versionada, hierarquia documental, evidência recuperada, tratamento de lacunas, minimização de dados e avaliação continuam necessários.",
+    pegadinha: "Dizer 'se não souber, diga que não sabe' é insuficiente sem fonte, evidência e encaminhamento.",
+    fonte: "NIST — AI Risk Management Framework (AI RMF 1.0): https://www.nist.gov/itl/ai-risk-management-framework (verificado em 2026-10-26). OWASP — LLM Prompt Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html (verificado em 2026-10-26)."
+  },
 
 ];
 
-/* Verificação rápida do padrão: 40 questões, 12 básico / 18 intermediário / 10 avançado. */
+/* Verificação rápida do padrão: 42 questões, 9 básico / 20 intermediário / 13 avançado. */

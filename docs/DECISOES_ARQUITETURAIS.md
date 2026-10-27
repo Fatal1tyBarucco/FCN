@@ -10,7 +10,7 @@
 - Simuladores locais (sem ataques reais, sem IA real, sem comandos no SO).
 - Questões autorais (não atribuídas a bancas reais); estilos de cobrança como formato.
 - Flashcards SM-2 simplificado (documentado).
-- Vídeos: nenhum publicado como validado (decisão intencional).
+- Referências e vídeos: 72 itens estruturados, incluindo 20 vídeos com IDs verificados via oEmbed em 2026-10-24; disponibilidade regional e execução dos embeds em navegador real ainda precisam de teste.
 - PWA condicional: manifest + SW; SW não registra em file://.
 - Referências verificadas: LGPD, LAI, Lei 14.129/2021, Marco Civil, CF art. 37/art. 5º.
 
@@ -26,7 +26,7 @@ Auditoria read-only realizada em 2026-10-24 contra a Seção 3 do `Escrita.txt`
 |---|---|---|---|
 | 1 | HTML5 semântico | `index.html` usa `<!DOCTYPE html>`, `<header>`, `<main>`, `<section aria-label>`, `<article>` (exemplos), `<footer>` | OK |
 | 2 | CSS3 responsivo | `assets/css/styles.css` + media queries `max-width: 480px` em CSS inline do index; variáveis `:root` | OK |
-| 3 | JS nativo, organizado em módulos quando possível | 38 tags `<script src>` locais; módulos por arquivo (`navigation.js`, `simulators.js`, …); IIFEs em storage/flashcards/... | OK (sem ES modules, por causa de file://) |
+| 3 | JS nativo, organizado em módulos quando possível | 39 tags `<script src>` locais; módulos por arquivo (`navigation.js`, `simulators.js`, …); IIFEs em storage/flashcards/... | OK (sem ES modules, por causa de file://) |
 | 4 | IndexedDB para grandes volumes "quando necessário" | **Não implementado**. Dados curriculares/questões/flashcards são objetos JS literais carregados por `<script>`; progresso em localStorage. Decisão justificada: volume atual (~tamanho KB) cabe em localStorage/memória; IndexedDB adicionaria complexidade sem ganho. Ver trade-off T5. | PARCIAL (decisão documentada) |
 | 5 | localStorage para preferências/dados pequenos | Chave `apostila-ia-progresso`; `storage.js` + `navigation.js` + `progress.js` consomem | OK |
 | 6 | Service Worker + manifest PWA opcionais, evolução offline | `manifest.webmanifest` válido; `service-worker.js` (precache não fatal + cache-on-fetch); registro condicional em index.html (somente `http/https`) | OK (condicional) |
@@ -51,7 +51,7 @@ Auditoria read-only realizada em 2026-10-24 contra a Seção 3 do `Escrita.txt`
 ### 2. Trade-offs e decisões
 
 - **T1 — Sem build / sem ES modules.** Trade-off: simplicidade de entrega em file:// e zero toolchain vs. ausência de tree-shaking, linting automático e modularização real. Escolhido: scripts clássicos com IIFEs. Mitigação: `node --check` no CI (workflow Pages) + smoke tests em Node/vm.
-- **T2 — Dados por módulo (`flashcards_m1..m8.js`) em vez de um único `flashcards.js`.** A Seção 3.3 sugere `assets/data/flashcards.js` singular. Escolhido: um arquivo por módulo para escalabilidade e diff menor, descobertos dinamicamente. Trade-off: mais tags `<script>` (38) e ordem de carregamento manual. Mitigação: convenção de nomenclatura + descoberta por `typeof`.
+- **T2 — Dados por módulo (`flashcards_m1..m8.js`) em vez de um único `flashcards.js`.** A Seção 3.3 sugere `assets/data/flashcards.js` singular. Escolhido: um arquivo por módulo para escalabilidade e diff menor, descobertos dinamicamente. Trade-off: mais tags `<script>` (39) e ordem de carregamento manual. Mitigação: convenção de nomenclatura + descoberta por `typeof`.
 - **T3 — Descoberta por `switch` explícito de `typeof` em vez de `window['curriculumM' + n]`.** Motivo: `const` no escopo global léxico não viram propriedades de `window`, e `eval` é proibido. Trade-off: código verboso e limite fixo de 8 módulos. Mitigação: constante `MAX_MODULOS_DESCOBERTA`; adicionar módulo exige editar o switch (documentado). Alternativa rejeitada: `eval` (proibido).
 - **T4 — Migração de versão de storage é nominal.** `storage.js` incrementa `_v` mas não transforma dados antigos. Trade-off: simplicidade vs. robustez de migração. Mitigação: namespaces isolados por módulo; dados corrompidos são descartados (fallback `{ _v }`). Recomendação: implementar migração real se o esquema evoluir.
 - **T5 — IndexedDB não implementado.** Decisão: localStorage + objetos literais em memória bastam para o volume atual (conteúdo em KB, progresso pequeno). Trade-off: limite de ~5MB do localStorage e ausência de histórico massivo de aprendizagem. Recomendação: adotar IndexedDB quando houver (a) histórico de questões > milhares, (b) cache offline de conteúdo grande, ou (c) necessidade de busca full-text persistente.
@@ -89,3 +89,66 @@ navegação dono único, descoberta dinâmica via typeof, persistência na chave
 sanitização, sem eval, acessibilidade básica). As lacunas (IndexedDB, a11y parcial,
 PWA não validada em navegador, migração nominal de storage) são decisões/trade-offs
 documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta auditoria.
+
+
+## Atualização — 2026-10-25: política de evidência da nova execução
+
+- Fonte de requisitos: `Escrita.txt` na raiz; o arquivo foi localizado e sua revisão remota está registrada em `docs/FASE1_AUDITORIA_2026-10-25.md`.
+- Não inferir estado atual a partir de descrições antigas em `AGENTS.md`, comentários de código ou relatórios sem reexecutar as verificações correspondentes.
+- Distinguir quatro estados: **declarado em documentação**, **inspecionado estaticamente**, **testado com evidência reproduzível** e **aprovado independentemente**.
+- A matriz agregada por módulo não substitui rastreabilidade por tópico/subtópico. Não se deve declarar a cobertura curricular integral até a matriz detalhada ser gerada e validada contra os dados de origem.
+- Alterações da execução serão feitas em branch dedicada e propostas por pull request; não alterar `main` diretamente.
+- Não se declara delegação multiagente executada apenas porque existem perfis ou configuração. Se a execução dos subagentes não for confirmada por evidências, o trabalho será reportado como realizado pelo orquestrador sem subagentes.
+
+
+## Decisão DA-2026-10-25-01 — Auditoria curricular estrutural
+
+**Decisão:** manter a aplicação estática atual e acrescentar um script Node.js sem dependências para gerar a matriz curricular, sem avaliar os arquivos de dados como código executável.
+
+**Motivação:** preservar a execução direta de apostila-ia/index.html e permitir uma auditoria reproduzível dos IDs e campos curriculares sem introduzir framework ou etapa de build.
+
+**Trade-off:** a extração por padrões textuais detecta estrutura, não valida semântica, conteúdo pedagógico, gabaritos, fontes ou comportamento no navegador. O script scripts/audit_curriculum_matrix.mjs foi versionado, mas sua execução local ainda precisa ser comprovada antes de tratá-lo como verificado.
+
+
+## Atualização de evidências — 2026-10-25 (PR #17)
+
+- A validação automatizada do PR foi executada no GitHub Actions: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246156393. Resultado: sintaxe JS aprovada, scripts de auditoria executados e `verificacao/verificar-estrutura.js` com 0 falhas.
+- Inventário de flashcards corrigido: 460 total (M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50, M8=50). A auditoria de rastreabilidade é por tópico-pai e identificou 108 questões com referência somente à unidade, sem tópico específico; elas permanecem sem atribuição artificial.
+- `storage.js` oferece uma API de persistência e `progress.js` a consome com fallback. `navigation.js`, `flashcards.js` e `quiz-engine.js` ainda mantêm gravações próprias em `localStorage`; a existência de `storage.js` não significa que todos os consumidores estejam centralizados nele.
+- O workflow e as auditorias não substituem teste de navegador real, avaliação WCAG com tecnologia assistiva ou revisão semântica de conteúdo.
+
+
+---
+
+## Registro de decisão — orquestração Fase 1 (2026-10-25)
+
+- **D-ORQ-001 — Preservar o PR existente:** desenvolver no branch `feat/fase-1-orquestracao-20261025` associado ao PR #17; não escrever em `main` nem abrir PR duplicado sem necessidade.
+- **D-ORQ-002 — Contagem não equivale a qualidade:** relatórios estruturais são evidência de integridade e rastreabilidade, não de correção factual ou suficiência didática.
+- **D-ORQ-003 — Resolver divergências por SHA:** os documentos históricos citam 404/365, enquanto o PR #17 declara 460/389 após novas alterações. Ao relatar contagens, indicar a origem e o commit/execução; não misturar números de estados distintos.
+- **D-ORQ-004 — Delegação honesta:** nenhum agente externo será alegado como executado sem ferramenta disponível e resultado verificável. A ferramenta de delegação mencionada anteriormente não está disponível neste contexto; revisão independente será feita em etapa separada, registrando autor, escopo e evidências.
+- **D-ORQ-005 — Compatibilidade file://:** a abertura direta continua sendo requisito principal. Service Worker e certas capacidades PWA têm restrições do navegador em `file://`; documentar como limitação em vez de prometer suporte universal.
+
+
+- **D-ORQ-006 — Persistência em namespaces:** não consolidar nem migrar chaves `localStorage` sem contrato de compatibilidade e testes de leitura/escrita para os consumidores existentes. O cabeçalho de `storage.js` informa que a camada não é usada como fonte única por navegação, flashcards e quiz; registrar como lacuna arquitetural, não como falha comprovada de perda de dados.
+- **D-ORQ-007 — Ordem de correção:** primeiro validar CI e estabelecer testes de regressão; depois corrigir uma área por vez. Mudanças de conteúdo, simuladores e persistência devem permanecer em commits pequenos e rastreáveis no branch do PR #17.
+
+
+## Registro incremental — 2026-10-26
+
+- **D-ORQ-008 — Correção rastreável em lote:** as quatro referências inválidas q-m6-41–q-m6-44 foram corrigidas no arquivo de questões, sem reescrever o conteúdo didático das questões. A alteração foi limitada a `topico` e rótulos `assunto`; cada padrão antigo foi exigido como ocorrência única antes da gravação. Commit: `7c9b0dd7871048d94294b5c7530f90e52de97f4d`.
+- **D-ORQ-009 — Validação posterior obrigatória:** a pré-validação textual não substitui CI, auditoria de rastreabilidade nem revisão semântica independente. Esses resultados só serão registrados após evidência no novo HEAD.
+
+## Decisões de continuidade — 2026-10-26
+
+- **D-ORQ-01 — Branch do PR:** todas as alterações desta continuidade devem ser commitadas em `feat/fase-1-orquestracao-20261025`, vinculada ao PR #17; não alterar `main` diretamente.
+- **D-ORQ-02 — Reuso antes de reconstrução:** inventário, matriz, scripts de auditoria e testes existentes são a base. Só alterar o que uma discrepância demonstrada ou uma lacuna identificada exigir.
+- **D-ORQ-03 — Evidência ligada ao SHA:** contagens e resultados de testes só podem ser associados ao commit em que foram obtidos. Documentos contêm snapshots históricos com contagens divergentes; isso deve ser reconciliado por execução reproduzível, não por escolha arbitrária de um número.
+- **D-ORQ-04 — Revisão independente:** o autor de uma questão/componente não deve ser o único aprovador. A validação semântica de gabaritos, distratores, fontes e requisitos pedagógicos permanece separada dos testes estruturais.
+- **D-ORQ-05 — Critério de conclusão:** interface existente, quantidade mínima de ativos ou CI verde não equivalem, isoladamente, a conclusão integral. Limitações de WCAG manual e dispositivos físicos devem permanecer explícitas até teste real.
+
+## Decisão — subtópico com 6 exemplos (`curriculum.js:450`) — 2026-10-27
+
+- **Contexto:** o subtópico `modulo-1-unidade-2-topico-14-sub-1` ("Criação de relatório técnico integrado") possui 6 exemplos (2 de cada tipo: introducao, aplicacao, erro), enquanto os outros 294 subtópicos possuem exatamente 3 (um de cada tipo). Total publicado: 888 exemplos (885 esperados + 3 excedentes).
+- **Decisão:** manter os 6 exemplos (não remover conteúdo válido). Corrigir o total divulgado para "888 exemplos (294 subtópicos × 3 + 1 subtópico × 6)" e registrar a nota em `docs/DIAGNOSTICO_ORQUESTRADOR_2026-10-27.md` §4.1.
+- **Motivo:** remover exemplos válidos reduziria o valor pedagógico; a inflação é documentada e auditável. Os 3 exemplos excedentes são de naturezas distintas (não duplicação literal).
+- **Alternativa descartada:** remover os 3 excedentes (total 885) — rejeitada por perda de conteúdo.

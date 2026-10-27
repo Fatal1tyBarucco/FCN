@@ -16,13 +16,28 @@ Responsável: orquestrador (verificação direta no repo real, sem delegação d
 | 7 — Testes técnicos | Carregamento, links, cálculos, gráficos, persistência, acessibilidade, modo direto `file://` | PARCIAL | `node --check` passou para todos os `.js`; smoke test `verify_nodes.js` passou; testes de simulador Excel (111 asserts) passaram; testes de perguntas (deduplicação, campos obrigatórios) passaram | Faltam testes de interface visual completa e de abertura direta (`file://`) em navegador real no dispositivo do usuário |
 | 8 — Auditoria final | Matriz de conformidade com todos os critérios de aceite (Seção 18) | CONCLUÍDO (Fase 8) | docs/AUDITORIA_FINAL.md — matriz dos 19 critérios com evidência/teste/resultado/limitação/correção | Veredito: APROVADO COM RESSALVAS; D4 (navegador real) pendente |
 
-## Estado atual resumido (sem substituição por placeholders)
+## Estado atual consolidado — 2026-10-26
 
-- Fase 4 (conteúdo didático) = CONCLUÍDA com evidências numéricas.
-- Fase 5 (funcionalidade) = PARCIAL; a interface está montada, mas a verificação funcional completa ainda não foi executada por um agente independente.
-- Fase 6 (validação curricular) = PENDENTE; requer leitura independente de cada módulo para confirmar 3 exemplos resolvidos por unidade (critério de aceite nº 4) e qualidade mínima.
-- Fase 7 (testes técnicos) = PARCIAL; testes de código e de dados passaram; testes de interface completa e de `file://` ainda não executados.
-- Fase 8 (auditoria final) = PENDENTE.
+Este bloco prevalece sobre snapshots históricos abaixo quando houver divergência de status ou contagens. O histórico é preservado para rastreabilidade, não como descrição do estado corrente.
+
+| Etapa do prompt mestre (Seção 17) | Estado corrente | Evidência / pendência real |
+|---|---|---|
+| 1 — Inventário | Estruturalmente concluído | Inventário e IDs existem; reconciliar contagens antigas nos documentos auxiliares. |
+| 2 — Matriz de cobertura | Parcial para aceite semântico | Matriz estrutural existe; associação por tópico não prova que cada subtópico foi ensinado em profundidade. |
+| 3 — Arquitetura | Implementada | SPA estática, 8 módulos e modo de abertura direta documentado. |
+| 4 — Implementação didática | Implementada estruturalmente; profundidade ainda sob auditoria | Conteúdo, exemplos e exercícios existem; amostragem estrutural não equivale a revisão linha a linha. |
+| 5 — Implementação funcional | Testes automatizados aprovados no HEAD indicado abaixo | Simuladores, busca, gráficos, persistência e interações passaram nos testes configurados; limitações de navegador/dispositivo continuam explícitas. |
+| 6 — Validação curricular | Parcial quanto à qualidade substantiva | Continuar revisão em lotes por módulo: gabaritos, distratores, justificativas, redundância, fontes e profundidade. |
+| 7 — Testes técnicos | Checks CI aprovados no HEAD `77c4cd14b98af1b7c5522fd5918458348bc744a1` | [Auditoria estática e smoke/interações](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266280519) e [CodeQL/análises](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40266276949); não substituem testes manuais. |
+| 8 — Auditoria final | Aprovada com ressalvas documentadas; não é aceite final irrestrito | `docs/AUDITORIA_FINAL.md` precisa ser lido junto com as limitações: WCAG independente, leitor de tela e dispositivos físicos não certificados. |
+
+### Critérios de saída ainda necessários
+
+1. Executar auditoria semântica em lotes por módulo, registrando IDs revisados, defeitos, correções e evidências; não usar contagem de gabaritos como único critério.
+2. Reconciliar contagens e status em inventário, matriz, plano, pendências e relatório de testes, distinguindo dados históricos de contagens atuais geradas pelo CI.
+3. Validar fontes oficiais para afirmações normativas/técnicas e remover atribuições sem fonte rastreável.
+4. Executar revisão manual de acessibilidade e responsividade em ambientes disponíveis; se não for possível testar dispositivos físicos/leitor de tela neste ambiente, manter a limitação explícita.
+5. Manter PR #17 em Draft até os critérios qualitativos estarem satisfeitos; não fazer merge só porque o CI está verde.
 
 ## FASE 3 DO ORQUESTRADOR — INICIADA (2026-10-23)
 Modo: multiagente conforme missao escrita pelo usuario. Nenhum arquivo de código do repo alterado ainda; funcionalidade existente (navigation.js, simuladores, quiz-engine) preservada. Subagentes delegados em batch (ver tarefas abaixo). Contrato de trabalho por subagente: identificador + objetivo + arquivos de entrada + resultado esperado + arquivos alteráveis + dependências/restricoes + criterios de aceite + testes exigidos + evidencias.
@@ -83,3 +98,212 @@ Contratos por subagente (áreas separadas, sem conflito de arquivo):
 - @revisor (independente): auditar cada entrega acima; não aprovar próprio autor.
 
 Ordem: referências → áudio → WCAG → responsividade → vídeos (último, por dependência de rede). Cada etapa com evidência real antes de marcar PASS.
+
+
+## Atualização do orquestrador — 2026-10-25 (auditoria remota da Fase 1)
+
+Foi criada a branch `feat/fase-1-orquestracao-20261025` a partir de `main` para separar esta atualização do branch de produção. Evidência: criação da branch retornada pela API do GitHub.
+
+A inspeção remota consultou `Escrita.txt`, `README.md`, `AGENTS.md`, o inventário, a matriz agregada e arquivos curriculares/de questões. O relatório `docs/FASE1_AUDITORIA_2026-10-25.md` distingue contagens herdadas de documentos de contagens recalculadas. Nenhum teste de execução foi realizado nesta etapa.
+
+**Status corrigido:** Fase 1 = inventário inicial e lacunas documentais identificados; matriz integral por subtópico e recálculo reproduzível de métricas continuam pendentes. A existência de conteúdo ou de controles de interface não equivale a critério de aceite aprovado. Consulte o relatório de auditoria para as evidências e limitações.
+
+
+## Atualização de execução — 2026-10-25 (PR #17)
+
+- **Fase 1 — parcialmente concluída:** inventário inicial e lacunas registrados em docs/FASE1_AUDITORIA_2026-10-25.md. A matriz detalhada foi gerada com 295 linhas de subtópicos; a qualidade pedagógica ainda não foi aprovada.
+- **Fase 2 — parcialmente concluída:** oito arquivos curriculares foram consultados remotamente. Auditoria estrutural detectou 295 subtópicos, 888 exemplos e 592 exercícios; foram identificados 460 flashcards e 365 questões com IDs únicos no conjunto consultado.
+- **Rastreabilidade reproduzível:** adicionado scripts/audit_curriculum_matrix.mjs. O script ainda não foi executado localmente; não declarar sua execução ou os testes do produto como aprovados.
+- **CI:** a consulta da API de Actions para a branch de trabalho retornou zero execuções. Isso não é evidência de CI verde.
+- **Próxima ação:** executar o script em clone/ambiente com o repositório, conferir a matriz gerada e só então iniciar a revisão qualitativa sistemática de conteúdo e funcionalidades.
+
+
+## Atualização de execução — 2026-10-25 (rastreabilidade de ativos)
+
+Foi adicionado `scripts/audit_learning_assets.mjs` para gerar uma matriz por tópico-pai com IDs de flashcards e questões, além de um relatório de referências não mapeadas. O commit do script está na branch do PR #17. O script **ainda não foi executado**: os arquivos CSV/relatório que ele gera não devem ser considerados validados até que a execução local seja realizada e sua saída inspecionada.
+
+A associação por tópico-pai é uma ferramenta de triagem e não prova cobertura didática individual de cada subtópico. Revisão semântica, execução dos testes do produto, navegador, modo `file://` e CI permanecem pendentes. Não realizar merge enquanto esses critérios não tiverem evidências suficientes e o PR continuar em revisão.
+
+
+## Estado de execução revalidado — 2026-10-26
+
+| Fase | Estado | Evidência / próximo passo |
+|---|---|---|
+| 1 — Inventário curricular | Parcial concluída | 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos; matriz estrutural gerada. Revisão pedagógica completa ainda pendente. |
+| 2 — Inspeção do repositório | Concluída estruturalmente | PR #17, branch, arquivos de dados, verificadores e workflow inspecionados. |
+| 3 — Arquitetura e infraestrutura | Parcial | Workflow de validação e smoke test adicionados; auditoria completa de arquitetura, acessibilidade e PWA ainda pendente. |
+| 4 — Conteúdo e rastreabilidade | Cobertura direta estrutural concluída | 389/389 questões e 460/460 flashcards apontam para tópicos existentes; 24 questões adicionadas para cobrir tópicos substantivos antes sem questão direta. |
+| 5 — Simuladores | Parcial | Smoke test confirma seis contêineres com UI; interações completas e correção dos resultados ainda precisam de testes dedicados. |
+| 6 — Revisão independente | Pendente | Auditoria heurística estrutural passou; não foi confirmado uso de agentes especializados independentes. Revisão semântica integral segue aberta. |
+| 7 — Correções e retestes | Em andamento | Correções legais M4/M6, rastreabilidade, banco de questões e CI; distribuição de gabaritos exige revisão manual. |
+| 8 — Critérios de aceite | Pendente | PR #17 permanece draft; não fazer merge até revisar gabaritos, fontes, acessibilidade e fluxos interativos. |
+
+**Última execução técnica aprovada:** https://github.com/Fatal1tyBarucco/FCN/actions/runs/40249392754. O sucesso técnico não deve ser confundido com aprovação editorial final.
+
+
+### Atualização da qualidade das questões — 2026-10-26
+
+- As 24 questões novas tiveram suas alternativas reorganizadas com preservação da correspondência entre alternativa, gabarito e análise.
+- O lote novo distribui gabaritos MC em A=4, B=5, C=5, D=5 e E=5.
+- O banco global continua concentrado em A/B (88,5% das questões MC); revisão manual das 290 questões MC legadas permanece pendente antes da aprovação editorial.
+- A execução técnica mais recente passou: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
+
+
+### Bloqueio editorial identificado — 2026-10-26
+
+A auditoria por módulo detectou distribuição de gabaritos inadequada para um simulado de alta fidelidade: M6 tem 30/30 MC com resposta A; M7 tem 33/33 com resposta A; M4/M5/M8 concentram respostas em A/B. A revisão manual de alternativas, gabaritos e análises torna-se prioridade antes do aceite final. A validação técnica passou em https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507, mas não substitui esse controle editorial.
+
+
+### Triagem semântica inicial do M7 — 2026-10-26
+
+A primeira leitura dos 40 enunciados, contextos, gabaritos e justificativas do M7 não encontrou erro factual óbvio. A revisão integral de alternativas, análises de distratores e fontes continua pendente; não considerar o módulo aprovado. A auditoria automática de rótulos CORRETA/INCORRETA versus gabarito passou sem incompatibilidades. Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507.
+
+
+### Revisão legal do M6 — pendências específicas — 2026-10-26
+
+A checagem das fontes oficiais levou à correção das citações de q-m6-02 e q-m6-06. Permanecem cinco alinhamentos a corrigir: q-m6-03 (LGPD, art. 6º), q-m6-29 (art. 43 versus trilha de auditoria), q-m6-31 (art. 43 versus obrigação de sítio oficial), q-m6-32 (Lei nº 12.813/2013 e escopo federal) e q-m6-38 (art. 43 versus gestão de risco/auditoria). Não considerar o M6 aprovado até concluir esses pontos.
+
+
+---
+
+## Atualização de orquestração — 2026-10-25 (Fase 1)
+
+**PR de trabalho:** [#17 — docs: auditar estado remoto e iniciar orquestração da Fase 1](https://github.com/Fatal1tyBarucco/FCN/pull/17), branch `feat/fase-1-orquestracao-20261025`, base `main`, aberto e em draft no momento da inspeção. O PR já contém auditorias estruturais e correções pontuais; não criar outro PR concorrente nem sobrescrever seu trabalho.
+
+### Resultado da Fase 1
+- Prompt mestre `Escrita.txt` lido integralmente a partir do branch `main`.
+- Inventário curricular: 8 módulos, com 37 unidades, 132 tópicos e 295 subtópicos conforme os documentos e auditorias existentes.
+- Matriz: `docs/MATRIZ_COBERTURA.csv` contém linhas por subtópico e distingue presença estrutural de revisão qualitativa.
+- Critérios quantitativos do prompt: mínimo de 400 flashcards, 320 questões, 3 exemplos resolvidos por unidade quando aplicável, 5 tipos de gráfico e funcionamento real dos simuladores.
+- Estado de entrada do PR: auditorias estruturais reportadas como aprovadas; revisão semântica completa, balanceamento editorial de gabaritos, acessibilidade com leitor de tela e validação de embeds ainda são pendências.
+
+### Plano de execução atualizado
+1. **Fase 1 — inventário e matriz:** concluída como baseline estrutural; qualidade semântica ainda não aprovada.
+2. **Fase 2 — inspeção do repositório:** concluída para a inspeção documental e o diff do PR; manter o PR existente como trilha de integração.
+3. **Fase 3 — arquitetura e infraestrutura:** auditar as diferenças entre os arquivos versionados e as alegações documentadas antes de alterar aplicação.
+4. **Fase 4 — conteúdo:** revisar por lote, com contratos explícitos, sem considerar contagem como prova de completude.
+5. **Fase 5 — simuladores:** testar entradas válidas, inválidas, limites e resultados calculados, além da mera montagem de UI.
+6. **Fase 6 — revisão independente:** revisar conteúdo, gabaritos, fontes, acessibilidade e persistência por amostragem estratificada e, depois, por cobertura integral dos critérios críticos.
+7. **Fase 7 — correções:** corrigir apenas defeitos reproduzidos, preservar alterações válidas e repetir testes afetados.
+8. **Fase 8 — aceite:** comparar cada critério de `Escrita.txt` com evidência identificável; não declarar conclusão com pendências obrigatórias abertas.
+
+### Delegação e ferramentas
+Não foi confirmada neste ambiente uma ferramenta de delegação multiagente especializada. O plugin de delegação referido nos registros anteriores consta como indisponível; portanto, tarefas não serão atribuídas ficticiamente a modelos. A execução continuará por lotes isolados, com revisão posterior separada da etapa de autoria e com esta limitação registrada.
+
+
+## Fase 2 — inspeção do repositório remoto (2026-10-25)
+
+**Status: inspeção documental inicial concluída; auditoria funcional aprofundada pendente.**
+
+- Branch: `feat/fase-1-orquestracao-20261025`; PR #17 aberto, draft, base `main`.
+- Aplicação: SPA estática em `apostila-ia/index.html`; HTML/CSS/JavaScript nativo, sem etapa de build documentada. O README instrui execução por `file://` ou servidor estático Python.
+- Dados: oito arquivos de currículo (M1 em `curriculum.js), oito bancos de flashcards, banco de questões dividido em `questions.js` e `questions_m4.js`–`questions_m8.js), além de `references.js`.
+- Componentes: navegação, armazenamento, progresso, busca, áudio, flashcards, motor de quiz, gráficos SVG e simuladores de Excel/dados, rede, segurança, prompts e ética.
+- Qualidade: três scripts de auditoria estrutural e workflow `.github/workflows/validate-curriculum.yml`; workflow de deploy separado.
+- Matriz: o CSV no branch do PR é gerado por subtópico; a descrição anterior em `docs/FASE1_AUDITORIA_2026-10-25.md` que a caracterizava apenas como agregada por módulo ficou desatualizada após a alteração do PR.
+- O PR contém alterações em dados de currículo, flashcards, questões, referências, HTML e infraestrutura de auditoria. Evitar sobrescrever esses arquivos sem comparar o diff e preservar o trabalho existente.
+- O workflow associado ao commit consultado foi observado como `queued`; não há nesta operação resultado final de execução a declarar. Resultados anteriores mencionados no corpo do PR permanecem evidência reportada daquele run, não de uma execução nova.
+
+**Próximo passo seguro:** aguardar/consultar a validação automatizada do HEAD atual, comparar a matriz gerada com os arquivos de dados do mesmo SHA e revisar as pendências semânticas antes de modificar componentes da aplicação.
+
+
+## Fase 3 — auditoria arquitetural inicial (2026-10-26)
+
+**Status: diagnóstico estático inicial concluído; correções funcionais não iniciadas.**
+
+### Componentes examinados
+- `index.html`: carrega os módulos de simuladores, gráficos, quiz, flashcards e `storage.js` diretamente, compatível com a arquitetura sem build.
+- `simulators.js`: declara parser de fórmulas Excel próprio, sem `eval`/`new Function`; declaração de capacidade não substitui execução de testes.
+- `simulator_data.js` e `charts.js`: declaram gráficos SVG calculados a partir dos dados, incluindo histograma, linha, barras, dispersão e box plot; validar casos degenerados e dados inválidos.
+- `quiz-engine.js`: declara simulados por módulo/nível/estilo/formato, temporizador e correção; revisar integridade do pool, respostas não respondidas e estado após recarga.
+- `flashcards.js`: declara repetição espaçada; revisar persistência de estado, cartão novo e agendamento após resposta.
+- `storage.js`: divergência de arquitetura identificada. O arquivo oferece uma abstração de persistência, mas o próprio cabeçalho informa que navegação, flashcards e quiz seguem escrevendo diretamente em namespaces separados. Não é seguro declarar uma camada unificada integrada sem revisar os consumidores e definir estratégia de migração.
+
+### Decisão de execução
+Não alterar simultaneamente os seis simuladores nem reescrever a persistência em bloco. A próxima implementação deverá começar por testes de regressão reproduzíveis e um contrato de persistência documentado; então aplicar patch mínimo em um consumidor por vez, mantendo compatibilidade com dados já gravados em `localStorage`.
+
+### Aceite da Fase 3
+- Todos os recursos obrigatórios têm consumidor real e estão conectados ao HTML.
+- Fórmulas e estatísticas calculam resultados a partir das entradas.
+- Dados de progresso sobrevivem a recarga e não são perdidos por migração/erro de armazenamento.
+- A abertura direta via `file://` continua funcional; não depender de rede ou build.
+- Testes negativos, limites, teclado e mensagens de erro são evidenciados antes de aprovar.
+
+
+## Marco de validação — 2026-10-26 — PR #17 / commit 8fdf771
+
+### Concluído e testado
+- CI curricular e de ativos: [execução 40261787364](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40261787364) terminou com sucesso.
+- Sintaxe JavaScript, matriz curricular, rastreabilidade, estrutura e heurísticas: PASS.
+- Chromium instalado no runner; smoke test e regressões interativas Playwright via `file://`: PASS.
+- Verificação funcional: fórmula Excel `SOMA(1;2)`, cálculo CIDR, feedback dos simuladores de segurança/prompts/ética, recálculo de histograma e mudança do SVG após editar valor numérico: PASS.
+- Artefato gerado: [curriculum-audit-reports](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40261787364/artifacts/12625340191).
+
+### Ainda pendente / não certificado
+- Code Quality deve ser verificado por execução própria no mesmo HEAD; nenhum status desse workflow é inferido aqui.
+- Revisão semântica independente integral dos módulos, questões, alternativas, gabaritos e fontes.
+- Revisão editorial da distribuição dos gabaritos; não alterar respostas corretas apenas para equilibrar letras.
+- Auditoria WCAG independente, navegação manual por teclado, leitor de tela e teste em dispositivos físicos/navegadores adicionais.
+- Reconciliar contagens e descrições históricas dos documentos de inventário sem apagar a trilha de auditoria.
+
+### Próxima ação
+1. Consultar o workflow Code Quality para o HEAD do PR.
+2. Registrar resultado real e links de execução.
+3. Corrigir somente defeitos comprovados em lotes pequenos e executar regressões afetadas.
+4. Manter PR #17 aberto e draft até resolver os critérios obrigatórios pendentes; não fazer merge nesta etapa.
+
+
+### Registro incremental — 2026-10-26
+
+A correção pontual q-m6-41–q-m6-44 foi commitada no branch do PR #17 (`7c9b0dd7871048d94294b5c7530f90e52de97f4d`). Próxima sequência, sem repetir a edição já concluída:
+1. Consultar checks/workflows associados ao novo HEAD e registrar os resultados reais.
+2. Reexecutar a auditoria de referências e verificar IDs únicos no conjunto de questões.
+3. Revisar qualidade semântica e distribuição de gabaritos em lote, sem alterar respostas corretas para balanceamento artificial.
+4. Prosseguir com as pendências de revisão independente e acessibilidade; manter o PR aberto em draft enquanto houver critérios obrigatórios pendentes.
+
+## Retomada da orquestração — 2026-10-26
+
+| Fase | Estado após inspeção | Próxima ação verificável |
+|---|---|---|
+| 1 — Inventário e matriz | **Artefatos existentes; atualização incremental necessária.** `docs/INVENTARIO_CURRICULAR.md` e `docs/MATRIZ_COBERTURA.csv` foram localizados na branch do PR. O prompt mestre foi consultado. | Executar auditorias sobre o HEAD da branch e reconciliar contagens com saída real, sem copiar snapshots históricos. |
+| 2 — Inspeção do repositório | **Inspeção documental realizada.** SPA estática vanilla em `apostila-ia/`; sem build de aplicação; workflows de validação/deploy presentes. | Inspecionar patches e scripts de auditoria antes de escolher a próxima alteração de código. |
+| 3 — Arquitetura e infraestrutura | **Implementação existente; não reimplementar.** | Validar pontos de persistência, segurança, links, execução `file://` e compatibilidade com os testes existentes. |
+| 4 — Conteúdo didático | **Quantitativos reportados acima do mínimo em snapshots recentes; qualidade semântica ainda pendente.** | Revisão independente em lotes por módulo, com IDs revisados e evidências de fonte. |
+| 5 — Recursos interativos | **UI e regressões automatizadas reportadas; não equivale a auditoria completa.** | Executar testes do HEAD atual e ampliar cobertura para persistência/erros/teclado conforme ambiente disponível. |
+| 6–8 — Revisão, correção e aceite | **Pendentes parcialmente.** | Resolver defeitos com patches mínimos; rerodar testes afetados; manter PR Draft até todos os critérios obrigatórios terem status honesto. |
+
+### Protocolo contra retrabalho
+
+1. Trabalhar na branch `feat/fase-1-orquestracao-20261025` do PR #17.
+2. Antes de editar, ler `AGENTS.md`, os relatórios existentes e os scripts relacionados ao requisito.
+3. Registrar IDs e arquivos revisados; não repetir lotes aprovados sem nova evidência.
+4. Nunca declarar execução local se só existe um resultado de CI histórico. Associar cada resultado ao SHA exato.
+5. Não fazer merge nem promover o PR a ready-for-review enquanto houver pendências qualitativas obrigatórias.
+
+---
+
+## Atualização do orquestrador — 2026-10-27
+
+- HEAD: `321901e` (push + pull_request CI success).
+- Diagnóstico completo em `docs/DIAGNOSTICO_ORQUESTRADOR_2026-10-27.md`.
+- Backlog real podado em `docs/BACKLOG_REAL_2026-10-27.md`.
+- `docs/PENDENCIAS.md` marcado como histórico (banner no topo).
+- Sincronização de governança: `inventario/`, `matriz/` (raiz) e `apostila-ia/inventario/`, `apostila-ia/matriz/` agora idênticos a `docs/` (460 FC, 399 Q, 888 exemplos, 592 exercícios).
+- Contagens corrigidas em `docs/INVENTARIO_CURRICULAR.md` (M6 44→47, 365→399).
+- Decisão registrada sobre subtópico com 6 exemplos (`DECISOES_ARQUITETURAIS.md`).
+- CI verde para 321901e (push + pull_request).
+
+**Pendências de maior valor restantes (ver BACKLOG_REAL_2026-10-27.md):**
+- P0-1: 102 questões sem fonte externa (M7, M8 inteiros).
+- P0-4: revisão semântica independente das 399 questões (0% comprovada).
+- P1-1: distribuição de gabaritos (M7 zero B, M1 zero E).
+- P2: acessibilidade manual (leitor de tela, WCAG manual, dispositivos).
+
+**Limite de delegação:** o limite de uso free dos subagentes foi atingido nesta sessão; as tarefas de conteúdo (P0-1, P0-4, P1-1) requerem delegação a @conteudo/@revisor quando o limite resetar. A orquestração de governança (docs, sincronização, CI) foi concluída.
+
+
+## Reconciliação 2026-10-27
+
+- P0-1 (fontes): concluído. P0-4 (revisão semântica, 399 IDs): concluído. P1-1 (5 gabaritos corrigidos): concluído. P2-4 (183 URLs verificadas, 1 pendência login): concluído. P2-6 (auditoria persistência): concluído.
+- Contagens atuais: 399 questões, 460 flashcards, 183 referências.
+- Pendentes mantidos: P2-1, P2-2, P2-3, P1-2, P1-3, P1-4.

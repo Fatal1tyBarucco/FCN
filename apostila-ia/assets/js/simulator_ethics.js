@@ -137,10 +137,11 @@
   var eticaCss = '<style>'
     + '.sim-etica{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-etica h3{margin:8px 0 2px}.sim-etica h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-etica-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-etica-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
-    + '.sim-etica-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}'
-    + '.sim-etica-link{color:#4a94d4;cursor:pointer;text-decoration:underline;font-size:.85rem}'
+    + '.sim-etica-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-etica-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
+    '.sim-etica-bloco .sim-etica-sub{color:#cbd5e1}' +
+    '.sim-etica-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}'
+    + '.sim-etica-link{color:#174ea6;cursor:pointer;text-decoration:underline;font-size:.85rem}'
     + '.sim-etica-opts label{display:block;margin:4px 0;font-size:.85rem}'
     + '.sim-etica-opts input{margin-right:8px}'
     + '.sim-etica-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:6px 14px;font-size:.8rem;cursor:pointer}'
@@ -200,12 +201,14 @@
       if (cenarios[i].id === cenId) { cen = cenarios[i]; break; }
     }
     if (!cen) return;
-    var radios = containerEl.querySelectorAll('input[name="etica-' + cenId + '"]');
+    var allRadios = containerEl.querySelectorAll('input[type="radio"]');
+    var radios = [];
+    for (var _r = 0; _r < allRadios.length; _r++) { if (allRadios[_r].name === 'etica-' + cenId) radios.push(allRadios[_r]); }
     var selecionado = -1;
     for (var j = 0; j < radios.length; j++) {
       if (radios[j].checked) { selecionado = parseInt(radios[j].value, 10); break; }
     }
-    var fb = containerEl.querySelector('#etica-fb-' + cenId);
+    var fb = containerEl.querySelector('#' + CSS.escape('etica-fb-' + cenId));
     if (!fb) return;
     if (selecionado === -1) {
       fb.innerHTML = '<div class="sim-etica-fb sim-etica-aviso">Selecione uma opção antes de verificar.</div>';
@@ -214,7 +217,7 @@
     var ok = selecionado === cen.correta;
     var classe = ok ? 'sim-etica-ok' : 'sim-etica-err';
     var label = ok ? 'Correto' : 'Incorreto';
-    var texto = '<div class="sim-etica-fb ' + classe + '">'
+    var texto = '<div class="sim-etica-fb ' + esc(classe) + '">'
       + esc(label) + ': ' + esc(cen.justificativa)
       + '<br><strong>Princípio/dispositivo:</strong> ' + esc(cen.principio)
       + '</div>';

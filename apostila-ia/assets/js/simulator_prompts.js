@@ -149,7 +149,7 @@
       filled += i < val ? '\u25a0' : '\u25a1';
     }
     var classe = val >= 4 ? 'sim-prom-ok' : val >= 2 ? 'sim-prom-aviso' : 'sim-prom-err';
-    return '<span class="' + classe + '">' + esc(label) + ': ' + filled + ' (' + val + '/5)</span>';
+    return '<span class="' + esc(classe) + '">' + esc(label) + ': ' + filled + ' (' + val + '/5)</span>';
   }
 
   /* ------------------------------------------------------------------
@@ -158,9 +158,10 @@
   var promptCss = '<style>'
     + '.sim-prompts{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
     + '.sim-prompts h3{margin:8px 0 2px}.sim-prompts h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-prompts-sub{color:#8b94a5;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-prompts-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}'
-    + '.sim-prompts-field{margin-bottom:10px}'
+    + '.sim-prompts-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
+    + '.sim-prompts-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
+    '.sim-prompts-bloco .sim-prompts-sub{color:#cbd5e1}' +
+    '.sim-prompts-field{margin-bottom:10px}'
     + '.sim-prompts-label{display:block;font-size:.78rem;color:#8b94a5;margin-bottom:2px}'
     + '.sim-prompts-input{width:100%;font-family:"Courier New",monospace;font-size:.82rem;background:#111318;color:#e3e9ff;border:1px solid #3a4252;border-radius:4px;padding:6px;resize:vertical}'
     + '.sim-prompts-input textarea{width:100%;min-height:60px}'
@@ -172,8 +173,8 @@
     + '.sim-prompts-comparacao div{background:#161a21;border:1px solid #333947;border-radius:6px;padding:8px}'
     + '.sim-prompts-sim{background:#1b1e24;border-left:3px solid #4a94d4;margin:8px 0;padding:8px;font-size:.82rem;color:#b9c0d4}'
     + '.sim-prompts-nota{font-size:1.1rem;font-weight:600}'
-    + '.sim-prompts-link{color:#4a94d4;cursor:pointer;text-decoration:underline}'
-    + '.sim-prompts-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
+    + '.sim-prompts-link{color:#174ea6;cursor:pointer;text-decoration:underline}'
+    + '.sim-prompts-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-prompts-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
     + '.sim-prompts-nav-btn:hover{background:#3a4252}'
     + '.sim-prompts-ponteiro{cursor:col-resize}'
     + '</style>';
@@ -185,13 +186,13 @@
     var html = '<div class="sim-prompts-bloco"><h4>Editor de prompts</h4>';
     html += '<p class="sim-prompts-sub">Preencha os campos abaixo. A avaliação usa critérios heurísticos fixos (não é IA real).</p>';
     html += '<div class="sim-prompts-field"><label class="sim-prompts-label">Contexto (quem sou eu? quem é o público?)</label>';
-    html += '<textarea id="prom-ctx" class="sim-prompts-input" placeholder="Ex.: Sou estudante de concurso público. O público é candidatos a TI.">' + esc('') + '</textarea></div>';
+    html += '<textarea id="prom-ctx" aria-label="Contexto do prompt" class="sim-prompts-input" placeholder="Ex.: Sou estudante de concurso público. O público é candidatos a TI.">' + esc('') + '</textarea></div>';
     html += '<div class="sim-prompts-field"><label class="sim-prompts-label">Objetivo (o que quero que aconteça?)</label>';
-    html += '<textarea id="prom-obj" class="sim-prompts-input" placeholder="Ex.: Explique sub-redes IPv4 em 3 parágrafos.">' + esc('') + '</textarea></div>';
+    html += '<textarea id="prom-obj" aria-label="Objetivo do prompt" class="sim-prompts-input" placeholder="Ex.: Explique sub-redes IPv4 em 3 parágrafos.">' + esc('') + '</textarea></div>';
     html += '<div class="sim-prompts-field"><label class="sim-prompts-label">Restrições (limite de palavras, tom, formato de saída?)</label>';
-    html += '<textarea id="prom-res" class="sim-prompts-input" placeholder="Ex.: Máximo 150 palavras, tom didático, saída em JSON.">' + esc('') + '</textarea></div>';
+    html += '<textarea id="prom-res" aria-label="Restrições do prompt" class="sim-prompts-input" placeholder="Ex.: Máximo 150 palavras, tom didático, saída em JSON.">' + esc('') + '</textarea></div>';
     html += '<div class="sim-prompts-field"><label class="sim-prompts-label">Formato de saída (como a resposta deve ser estruturada?)</label>';
-    html += '<textarea id="prom-fmt" class="sim-prompts-input" placeholder="Ex.: Parágrafos curtos com exemplo numérico.">' + esc('') + '</textarea></div>';
+    html += '<textarea id="prom-fmt" aria-label="Formato de saída do prompt" class="sim-prompts-input" placeholder="Ex.: Parágrafos curtos com exemplo numérico.">' + esc('') + '</textarea></div>';
     html += '<button type="button" class="sim-prompts-btn" data-act="prom-avaliar">Avaliar prompt</button>';
     html += '<button type="button" class="sim-prompts-btn" data-act="prom-simular">Simular saída (local)</button>';
     html += '<button type="button" class="sim-prompts-btn" data-act="prom-reset">Nova avaliação</button>';
@@ -208,9 +209,9 @@
       html += '<div style="margin-bottom:16px">';
       html += '<strong>' + esc(ex.titulo) + '</strong>';
       html += '<div class="sim-prompts-comparacao">';
-      html += '<div><h5 style="margin:4px 0;color:#ff7b7b">Prompt ruim (ambíguo)</h5><pre class="sim-prompts-input">' + esc(ex.promptRuim) + '</pre>';
+      html += '<div><h5 style="margin:4px 0;color:#ff7b7b">Prompt ruim (ambíguo)</h5><pre class="sim-prompts-input" tabindex="0">' + esc(ex.promptRuim) + '</pre>';
       html += '<div style="margin-top:6px"><strong>Pontuação:</strong> ' + esc(promptScoreTotal(avaliarPrompt(ex.promptRuim))) + '%</div></div>';
-      html += '<div><h5 style="margin:4px 0;color:#5ee0a0">Prompt bom (engenharia aplicada)</h5><pre class="sim-prompts-input">' + esc(ex.promptBom) + '</pre>';
+      html += '<div><h5 style="margin:4px 0;color:#5ee0a0">Prompt bom (engenharia aplicada)</h5><pre class="sim-prompts-input" tabindex="0">' + esc(ex.promptBom) + '</pre>';
       html += '<div style="margin-top:6px"><strong>Pontuação:</strong> ' + esc(promptScoreTotal(avaliarPrompt(ex.promptBom))) + '%</div></div>';
       html += '</div>';
       html += '<button type="button" class="sim-prompts-btn" data-act="prom-mostrar-indicadores" data-ex="' + esc(ex.id) + '" style="margin:6px 0">Mostrar indicadores</button>';
@@ -224,11 +225,11 @@
   function promptBuildAmbi() {
     var html = '<div class="sim-prompts-bloco"><h4>Demonstração de ambiguidade</h4>';
     html += '<p class="sim-prompts-sub">Um prompt ambíguo pode ser interpretado de várias formas. Veja como restringir a interpretação:</p>';
-    html += '<div class="sim-prompts-sim"><strong>Prompt ambíguo:</strong><pre class="sim-prompts-input">Me dê informações sobre segurança.</pre>'
+    html += '<div class="sim-prompts-sim"><strong>Prompt ambíguo:</strong><pre class="sim-prompts-input" tabindex="0">Me dê informações sobre segurança.</pre>'
       + '<p><strong>Possível interpretação 1:</strong> segurança física (portas, cercas, vigilância).</p>'
       + '<p><strong>Possível interpretação 2:</strong> segurança da informação (firewalls, criptografia, MFA).</p>'
       + '<p><strong>Possível interpretação 3:</strong> segurança de software (vulnerabilidades, patches).</p></div>';
-    html += '<div class="sim-prompts-sim"><strong>Prompt restringido:</strong><pre class="sim-prompts-input">Explique três mecanismos de autenticação multifator (MFA) usados em segurança da informação, com exemplo de cada um, em até 3 frases por mecanismo.</pre>'
+    html += '<div class="sim-prompts-sim"><strong>Prompt restringido:</strong><pre class="sim-prompts-input" tabindex="0">Explique três mecanismos de autenticação multifator (MFA) usados em segurança da informação, com exemplo de cada um, em até 3 frases por mecanismo.</pre>'
       + '<p>Agora o escopo está claro: MFA, segurança da informação, 3 exemplos, formato de saída definido.</p></div>';
     html += '</div>';
     return html;
@@ -245,10 +246,12 @@
     return '<div class="sim-prompts">'
       + '<h3>Simulador de Engenharia de Prompts (Seção 7.4)</h3>'
       + '<p class="sim-prompts-sub">Edite, avalie e compare prompts. <strong>Simulação local — sem API externa.</strong> Nenhuma saída é apresentada como geração real de modelo de IA.</p>'
-      + '<p class="sim-prompts-sub">Navegação: <span class="sim-prompts-link" data-act="nav" data-target="editor">1. Editor de prompts</span>'
-      + ' | <span class="sim-prompts-link" data-act="nav" data-target="comparacao">2. Comparação entre prompts</span>'
-      + ' | <span class="sim-prompts-link" data-act="nav" data-target="ambiguidade">3. Ambiguidade</span>'
-      + ' | <span class="sim-prompts-link" data-act="nav" data-target="limites">4. Escopo declarado</span></p>'
+      + '<nav class="sim-prompts-nav" aria-label="Navegação das seções do simulador de prompts">'
+      + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="editor">1. Editor de prompts</button>'
+      + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="comparacao">2. Comparação entre prompts</button>'
+      + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="ambiguidade">3. Ambiguidade</button>'
+      + '<button type="button" class="sim-prompts-nav-btn" data-act="nav" data-target="limites">4. Escopo declarado</button>'
+      + '</nav>'
       + '<div id="prom-pane-editor" class="prom-pane">' + promptBuildEditor() + '</div>'
       + '<div id="prom-pane-comparacao" class="prom-pane" style="display:none">' + promptBuildComparacao() + '</div>'
       + '<div id="prom-pane-ambiguidade" class="prom-pane" style="display:none">' + promptBuildAmbi() + '</div>'
@@ -323,7 +326,7 @@
     if (!alvo || !alvo.getAttribute || alvo.getAttribute('data-act') !== 'prom-mostrar-indicadores') return;
     var exId = alvo.getAttribute('data-ex');
     if (!exId) return;
-    var box = containerEl.querySelector('#prom-ind-' + exId);
+    var box = containerEl.querySelector('#' + CSS.escape('prom-ind-' + exId));
     if (!box) return;
     if (box.style.display === 'block') {
       box.style.display = 'none';
@@ -338,7 +341,7 @@
     var box = containerEl.querySelector('#prom-resultado');
     if (!box) return;
     if (classe) {
-      box.innerHTML = '<div class="' + classe + '">' + html + '</div>';
+      box.innerHTML = '<div class="' + esc(classe) + '">' + html + '</div>';
     } else {
       box.innerHTML = html;
     }

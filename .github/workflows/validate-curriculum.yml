@@ -1,0 +1,79 @@
+name: Validate curriculum and learning assets
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - "feat/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Static validation and coverage audits
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find apostila-ia/assets -type f -name '*.js' -print | sort)
+          test "${#files[@]}" -gt 0
+          for file in "${files[@]}"; do
+            echo "Checking ${file}"
+            node --check "${file}"
+          done
+          echo "JavaScript syntax passed for ${#files[@]} files."
+
+      - name: Generate structural curriculum matrix
+        run: node scripts/audit_curriculum_matrix.mjs
+
+      - name: Generate learning asset traceability report
+        run: node scripts/audit_learning_assets.mjs
+
+      - name: Validate repository structure
+        run: node verificacao/verificar-estrutura.js
+
+      - name: Audit question quality heuristics
+        run: node scripts/audit_question_quality.mjs
+
+      - name: Install Playwright and axe-core test dependencies
+        run: npm install --no-save playwright axe-core
+
+      - name: Install Chromium for browser smoke test
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser smoke test in file URL mode
+        run: node verificacao/test-browser-smoke.cjs
+
+      - name: Browser interaction regression tests in file URL mode
+        run: node verificacao/test-browser-interactions.cjs
+
+      - name: Upload generated audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: curriculum-audit-reports
+          path: |
+            docs/MATRIZ_COBERTURA.csv
+            docs/MATRIZ_RASTREABILIDADE_ATIVOS.csv
+            docs/RELATORIO_RASTREABILIDADE_ATIVOS.md
+            docs/MATRIZ_QUALIDADE_QUESTOES.csv
+            docs/RELATORIO_QUALIDADE_QUESTOES.md
+          if-no-files-found: warn

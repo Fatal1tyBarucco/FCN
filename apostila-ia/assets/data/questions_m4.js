@@ -59,7 +59,7 @@ const moduleQuestions4 = [
     },
     regra: "Tríade CIA: Confidencialidade (acesso restrito), Integridade (dados corretos e não alterados), Disponibilidade (acesso quando necessário).",
     pegadinha: "Não confundir disponibilidade com confidencialidade: disponibilidade é 'quando precisa', confidencialidade é 'quem pode acessar'.",
-    fonte: "NIST SP 800-122 (Guia para a proteção de informações pessoais), 2010."
+    fonte: "NIST SP 800-122 (2010); NIST CSRC Glossary — segurança e confidencialidade: https://csrc.nist.gov/glossary/term/security."
   },
 
   { id: "q-m4-02", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -68,23 +68,23 @@ const moduleQuestions4 = [
     enunciado: "Em termos de segurança da informação, a integridade significa que:",
     alternativas: [
       { letra: "A", texto: "A informação está disponível a qualquer usuário." },
-      { letra: "B", texto: "A informação não pode ser alterada sem autorização." },
+      { letra: "B", texto: "A informação é armazenada em backups múltiplos." },
       { letra: "C", texto: "A informação é criptografada com chave pública." },
-      { letra: "D", texto: "A informação é armazenada em backups múltiplos." },
+      { letra: "D", texto: "A informação não pode ser alterada sem autorização." },
       { letra: "E", texto: "A informação é assinada digitalmente." }
     ],
-    gabarito: "B",
+    gabarito: "D",
     justificativa: "Integridade garante que os dados são precisos e não foram modificados de maneira não autorizada. A disponibilidade é a característica de 'acesso quando necessário' (alternativa A incorreta); a criptografia e a assinatura digital são mecanismos que ajudam a preservar integridade, mas não a definam o princípio (alternativas C e E incorretas); a múltipla cópia (backup) protege contra perda, não garante integridade (alternativa D incorreta).",
     analise: {
       A: "INCORRETA. Disponibilidade — o conceito que garante acesso quando necessário.",
-      B: "CORRETA. Integridade é a propriedade de preservação da exatidão e não alteração não autorizada.",
+      B: "INCORRETA. Backup protege contra perda de dados, não garante integridade.",
       C: "INCORRETA. Criptografia é um meio de proteção, não a definição de integridade.",
-      D: "INCORRETA. Backup protege contra perda de dados, não garante integridade.",
+      D: "CORRETA. Integridade é a propriedade de preservação da exatidão e não alteração não autorizada.",
       E: "INCORRETA. Assinatura digital ajuda a garantir autenticidade e integridade, mas o princípio é a integridade."
     },
     regra: "Integridade: dados precisos, consistentes e não alterados sem autorização.",
     pegadinha: "A integridade não significa 'sem erro algum', mas 'sem alteração não autorizada'.",
-    fonte: "ISO/IEC 27000:2018, Cláusula 3.5.2 (Integridade de informação)."
+    fonte: "NIST CSRC Glossary — integridade e segurança da informação: https://csrc.nist.gov/glossary/term/security."
   },
 
   { id: "q-m4-03", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -109,11 +109,11 @@ const moduleQuestions4 = [
     },
     regra: "Disponibilidade: 'a informação está lá quando você precisa' — uptime, redundância, escalonamento.",
     pegadinha: "Disponibilidade não é 'acessível a todos' — é 'acessível quando necessário'. Confidencialidade é quem pode acessar.",
-    fonte: "ISO/IEC 27000:2018, Cláusula 3.5.3 (Disponibilidade de informação)."
+    fonte: "NIST CSRC Glossary — disponibilidade: https://csrc.nist.gov/glossary/term/availability."
   },
 
   { id: "q-m4-04", modulo: 4, formato: "ce", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — Controles de segurança",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controles de segurança",
     contexto: "Um governo adota controles preventivos, detectivos e corretivos para proteger os ativos digitais.",
     enunciado: "Afirmação: 'Um controle corretivo é aquele que impede a ocorrência de uma ameaça antes que ela se materialize.'",
     corrigir: true,
@@ -125,36 +125,36 @@ const moduleQuestions4 = [
     },
     regra: "Controles: preventivos (antes), detectivos (durante), corretivos (depois), compensatórios (alternativos).",
     pegadinha: "Múltiplos controles na mesma frase podem confundir a ordem de atuação (antes/depois).",
-    fonte: "NIST SP 800-53 (Security and Privacy Controls), controle CP (Preventive) e CA (Corrective)."
+    fonte: "CISA, Cyber Resilience Review (CRR) Supplemental Resource Guide — control types: preventive, detective, corrective and compensating: https://www.cisa.gov/sites/default/files/c3vp/crr_resources_guides/CRR_Resource_Guide-CM.pdf."
   },
 
   { id: "q-m4-05", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — Autenticação MFA",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Autenticação MFA",
     contexto: "Uma organização adota Multi-Fator Authentication (MFA) para proteger o acesso aos sistemas.",
     enunciado: "Sobre a Autenticação em Múltiplos Fatores (MFA), é correto afirmar que:",
     alternativas: [
-      { letra: "A", texto: "A MFA substitui completamente a senha, eliminando-o do processo." },
-      { letra: "B", texto: "A MFA exige duas ou mais formas independentes de verificação." },
+      { letra: "A", texto: "A MFA elimina necessariamente a senha em todos os sistemas." },
+      { letra: "B", texto: "A MFA é uma política de criptografia de dados." },
       { letra: "C", texto: "A MFA é aplicável apenas a sistemas operacionais." },
       { letra: "D", texto: "A MFA aumenta a segurança, mas sempre impede o acesso remoto." },
-      { letra: "E", texto: "A MFA é uma política de criptografia de dados." }
+      { letra: "E", texto: "A MFA exige duas ou mais formas independentes de verificação." }
     ],
-    gabarito: "B",
+    gabarito: "E",
     justificativa: "MFA exige duas ou mais formas independentes de verificação: saber (senha), possuir (dispositivo) ou ser (biometria). A MFA não elimina a senha — pode usá-la como um dos fatores (alternativa A incorreta); a MFA é amplamente aplicável a qualquer sistema crítico, não apenas sistemas operacionais (alternativa C incorreta); a MFA reduz significativamente o risco, mas não garante absolutamente impedir tudo (alternativa D incorreta); a criptografia é outra camada de segurança, não a definição de MFA (alternativa E incorreta).",
     analise: {
       A: "INCORRETA. A MFA não elimina a senha — pode integrar-se a ela como um dos fatores.",
-      B: "CORRETA. MFA exige duas ou mais formas independentes de verificação (saber, possuir, ser).",
+      B: "INCORRETA. A MFA é um mecanismo de autenticação que comprova a identidade do usuário por dois ou mais fatores independentes; política de criptografia é controle distinto, que protege os dados em repouso e em trânsito.",
       C: "INCORRETA. A MFA é aplicável a sistemas e serviços de toda a arquitetura da informação.",
       D: "INCORRETA. A MFA aumenta a segurança significativamente, mas não garante absoluto.",
-      E: "INCORRETA. A MFA é um mecanismo de autenticação que comprova a identidade do usuário por dois ou mais fatores independentes; política de criptografia é controle distinto, que protege os dados em repouso e em trânsito."
+      E: "CORRETA. MFA exige duas ou mais formas independentes de verificação (saber, possuir, ser)."
     },
     regra: "Fatores de autenticação: 1) Saber (senha, PIN), 2) Possuir (token, celular), 3) Ser (biometria).",
     pegadinha: "A MFA não elimina a senha — ela a complementa com um segundo fator independente.",
-    fonte: "NIST SP 800-63B (Digital Identity Guidelines), 2017."
+    fonte: "NIST SP 800-63B-4 — Digital Identity Guidelines: Authentication and Authenticator Management (publicado em julho de 2025; substitui SP 800-63B): https://csrc.nist.gov/pubs/sp/800/63/b/4/final."
   },
 
   { id: "q-m4-06", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "modulo-4-unidade-1", assunto: "4.1 — Criptografia simétrica vs assimétrica",
+    nivel: "basico", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Criptografia simétrica vs assimétrica",
     contexto: "Dois sistemas precisam se comunicar com segurança. Um deles usa criptografia simétrica e outro, assimétrica.",
     enunciado: "Qual a principal diferença entre criptografia simétrica e assimétrica?",
     alternativas: [
@@ -173,13 +173,13 @@ const moduleQuestions4 = [
       D: "INCORRETA. A assimétrica é fundamental para assinatura digital e troca de chaves.",
       E: "INCORRETA. Criptografia simétrica é altamente segura quando a chave é protegida."
     },
-    regra: "Simétrica: mesma chave (AES, DES, 3DES). Assimétrica: par chave (RSA, ECDSA, Diffie-Hellman).",
+    regra: "Criptografia simétrica usa chave secreta compartilhada; criptografia assimétrica usa um par de chaves relacionadas. Exemplos e operações dependem do algoritmo.",
     pegadinha: "Simétrica e assimétrica diferem pela quantidade de chaves: 1 para simétrica, 2 (par) para assimétrica.",
-    fonte: "NIST FIPS 197 (AES), 2001."
+    fonte: "NIST SP 800-57 Part 1 Rev. 5 — Recommendation for Key Management; tipos de chaves e gestão criptográfica: https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final."
   },
 
   { id: "q-m4-07", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — Backup e estratégia 3-2-1",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Backup e estratégia 3-2-1",
     contexto: "Uma empresa adota a estratégia de backup 3-2-1 para proteção de dados.",
     enunciado: "Na estratégia de backup 3-2-1, o número 1 indica que:",
     alternativas: [
@@ -194,40 +194,42 @@ const moduleQuestions4 = [
     analise: {
       A: "INCORRETA. 3 cópias são o '3' da estratégia — o 3 está correto, mas a pergunta pede o 1.",
       B: "INCORRETA. Dois sistemas de armazenamento são o '2'.",
-      C: "CORRETA. O '1' refere-se à cópia offline/imutável fora do local.",
+      C: "CORRETA. O '1' da regra tradicional refere-se a uma cópia fora do local; offline ou imutável são proteções adicionais.",
       D: "INCORRETA. A regra 3-2-1 não define frequência de backup.",
       E: "INCORRETA. Documentação de planos de recuperação é importante, mas não é o '1' da estratégia 3-2-1."
     },
-    regra: "3-2-1: 3 cópias, 2 mídias/arquiteturas diferentes, 1 cópia fora do local ou offline.",
+    regra: "3-2-1: três cópias, dois tipos de mídia e uma cópia fora do local; offline ou imutável são proteções adicionais.",
     pegadinha: "O 3-2-1 não é 3 três cópias, 2 dois sistemas, 1 um único local — o 1 é a cópia fora do local.",
-    fonte: "Veeam Blog — The 3-2-1 Backup Rule, 2016."
+    fonte: "Veeam — 3-2-1 Backup Rule: https://www.veeam.com/blog/321-backup-rule.html."
   },
 
   { id: "q-m4-08", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — RPO e RTO",
-    contexto: "Uma empresa define objetivos de recuperação para seus sistemas críticos.",
-    enunciado: "Sobre RPO (Recovery Point Objective) e RTO (Recovery Time Objective), é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — RPO e RTO",
+    contexto: "Uma organização define objetivos de recuperação para seus sistemas críticos.",
+    enunciado: "Qual alternativa distingue corretamente RPO (Recovery Point Objective) de RTO (Recovery Time Objective)?",
     alternativas: [
-      { letra: "A", texto: "RPO mede o tempo máximo de indisponibilidade aceitável; RTO mede quantotempo será perdido de dados." },
-      { letra: "B", texto: "RPO mede a quantidade máxima de dados que pode ser perdida; RTO mede o tempo máximo para se recuperar." },
-      { letra: "C", texto: "RPO e RTO são sinônimos." },
-      { letra: "D", texto: "RPO é o tempo de resposta a incidentes; RTO é o tempo disponível." }
+      { letra: "A", texto: "RPO é o tempo-alvo para recuperar o serviço; RTO é o ponto de recuperação dos dados." },
+      { letra: "B", texto: "RTO e RPO garantem que nunca haverá perda de dados ou indisponibilidade." },
+      { letra: "C", texto: "RPO e RTO são sinônimos e podem ser usados sem distinção." },
+      { letra: "D", texto: "RPO mede o número de usuários simultâneos; RTO mede a capacidade de armazenamento." },
+      { letra: "E", texto: "RPO define o ponto temporal de recuperação e a perda de dados tolerável; RTO define o tempo-alvo para restabelecer o serviço." }
     ],
-    gabarito: "B",
-    justificativa: "RPO define a quantidade máxima de dados que pode ser perdida (ex: se RPO=1 hora, podem ser perdidos até 1 hora de dados recentes); RTO define o tempo máximo que o sistema pode ficar indisponível. A alternativa A inverte os conceitos; as alternativas C e D são incorretas pela definição. RTO e RPO são conceitos distintos e necessários para planejamento de recuperação.",
+    gabarito: "E",
+    justificativa: "RPO (Recovery Point Objective) estabelece o ponto temporal até o qual os dados devem ser recuperados e orienta a perda de dados tolerável. RTO (Recovery Time Objective) estabelece o tempo-alvo para restabelecer o serviço. São objetivos distintos, derivados das necessidades de negócio e validados por meio de testes de recuperação.",
     analise: {
-      A: "INCORRETA. RPO mede quantidade de dados perdidos, RTO mede tempo de indisponibilidade.",
-      B: "CORRETA. RPO é o limite de perda de dados; RTO é o tempo máximo de indisponibilidade.",
-      C: "INCORRETA. RPO (perda de dados) e RTO (tempo de indisponibilidade) são conceitos distintos.",
-      D: "INCORRETA. RPO e RTO não incluem tempo de resposta como definidos."
+      A: "INCORRETA. Inverte os conceitos: RPO trata do ponto de recuperação dos dados; RTO, do tempo de recuperação do serviço.",
+      B: "INCORRETA. São metas de planejamento, não garantias de perda zero ou disponibilidade contínua.",
+      C: "INCORRETA. RPO e RTO representam objetivos diferentes.",
+      D: "INCORRETA. Essas descrições não correspondem aos conceitos de recuperação.",
+      E: "CORRETA. A alternativa distingue a perda de dados tolerável do tempo-alvo para restabelecimento."
     },
-    regra: "RPO = quanto de dados pode ser perdido; RTO = quanto tempo o sistema pode ficar indisponível.",
-    pegadinha: "Não confundir: RPO é 'quanto de dados', RTO é 'quanto tempo'. Ambos são medidos nas unidades certas.",
-    fonte: "ITIL v3 — Continual Service Improvement, recovery objectives."
+    regra: "RPO = ponto de recuperação/perda de dados tolerável; RTO = tempo-alvo para restabelecer o serviço.",
+    pegadinha: "Metas de RPO e RTO precisam ser tecnicamente viáveis e testadas; defini-las não garante que serão cumpridas.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-09", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-1", assunto: "4.1 — Controle de acesso e princípio do menor privilégio",
+    nivel: "avancado", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controle de acesso e princípio do menor privilégio",
     contexto: "Uma organização adota o princípio do menor privilégio para gestão de acessos.",
     enunciado: "O princípio do menor privilégio (least privilege) significa que:",
     alternativas: [
@@ -246,565 +248,543 @@ const moduleQuestions4 = [
       D: "INCORRETA. O princípio não nega acesso; ele restringe ao necessário.",
       E: "INCORRETA. Criptografia é um controle de segurança, não o único controle de acesso."
     },
-    regra: "Menor privilégio: 'só o que é necessário, nothing more' — reduz superfície de ataque.",
+    regra: "Menor privilégio: conceder somente as permissões necessárias para a função, reduzindo a superfície de ataque.",
     pegadinha: "Menor privilégio não significa 'nenhum acesso', significa 'nenhum além do necessário'.",
-    fonte: "NIST SP 800-53 (AC-2: Account Management; AC-3: Access Enforcement)."
+    fonte: "NIST SP 800-53 Rev. 5, controle AC-6 (Least Privilege); NIST CSRC Glossary: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final ; https://csrc.nist.gov/glossary/term/least_privilege."
   },
 
   { id: "q-m4-10", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-1", assunto: "4.1 — Risco e ameaça",
-    contexto: "Um gestor de TI define os conceitos de risco e ameaça para o planejamento de segurança.",
-    enunciado: "A relação correta entre risco e ameaça é que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Ameaça, vulnerabilidade e risco",
+    contexto: "Um servidor exposto à internet possui uma falha conhecida e recebe tentativas de exploração.",
+    enunciado: "Qual alternativa diferencia corretamente ameaça, vulnerabilidade e risco?",
     alternativas: [
-      { letra: "A", texto: "Ameaça é a probabilidade de um risco se materializar; risco é a causa da ameaça." },
-      { letra: "B", texto: "Ameaça é uma situação que pode explorar uma vulnerabilidade; risco é o impacto ou probabilidade de dano." },
-      { letra: "C", texto: "Risco e ameaça são sinônimos." },
-      { letra: "D", texto: "Ameaça é uma condição que torna os ativos mais expostos; risco é a probabilidade de dano." }
+      { letra: "A", texto: "A ameaça é a falha técnica; a vulnerabilidade é o impacto financeiro." },
+      { letra: "B", texto: "Uma ameaça só existe depois que o dano está confirmado." },
+      { letra: "C", texto: "Risco é sinônimo de ameaça e independe da criticidade do ativo." },
+      { letra: "D", texto: "A presença de uma vulnerabilidade prova que ela já foi explorada." },
+      { letra: "E", texto: "A vulnerabilidade é uma fraqueza; a ameaça é um agente ou evento potencialmente danoso; o risco considera a possibilidade e as consequências no contexto." }
     ],
-    gabarito: "B",
-    justificativa: "Ameaça é uma situação ou entidade capaz de explorar uma vulnerabilidade (ex: malware, atacante); risco é o impacto ou probabilidade de dano que resulta dessa possibilidade. A alternativa A inverte a relação; C é incorreta por definição; a alternativa D descreve vulnerabilidade, não ameaça.",
+    gabarito: "E",
+    justificativa: "Vulnerabilidade é uma fraqueza que pode ser explorada; ameaça é uma circunstância, evento ou agente com potencial de causar dano; risco é avaliado considerando probabilidade e consequências no contexto. Uma vulnerabilidade não comprova, por si só, que houve exploração, e a priorização depende da exposição, da criticidade e do impacto potencial.",
     analise: {
-      A: "INCORRETA. Inverte as definições: ameaça é a situação que pode causar dano; risco é o dano potencial.",
-      B: "CORRETA. Ameaça é a possibilidade de exploração; risco é o impacto/probabilidade do dano.",
-      C: "INCORRETA. Risco e ameaça são conceitos distintos, embora relacionados.",
-      D: "INCORRETA. Isso descreve vulnerabilidade, não ameaça."
+      A: "INCORRETA. A falha técnica é a vulnerabilidade; impacto e probabilidade integram a avaliação de risco.",
+      B: "INCORRETA. A ameaça pode existir antes de qualquer dano confirmado.",
+      C: "INCORRETA. Ameaça e risco são conceitos relacionados, mas não sinônimos; criticidade e contexto importam.",
+      D: "INCORRETA. Uma vulnerabilidade pode existir sem ter sido explorada.",
+      E: "CORRETA. A alternativa diferencia os três conceitos e considera o contexto da avaliação."
     },
-    regra: "Ameaça = oportunidade de exploração; Vulnerabilidade = fraqueza; Risco = impacto da exploração.",
-    pegadinha: "Não confundir: ameaça é quem/ o que possa atacar; vulnerabilidade é o que pode ser atacado; risco é o dano resultante.",
-    fonte: "ISO/IEC 27000:2018, cláusulas 3.9 (Ameaça), 3.11 (Vulnerabilidade), 3.15 (Risco)."
+    regra: "Vulnerabilidade = fraqueza; ameaça = agente/evento potencialmente danoso; risco = avaliação contextual de possibilidade e consequências.",
+    pegadinha: "Encontrar uma vulnerabilidade não prova exploração; diferencie a fraqueza, a ameaça e o risco associado.",
+    fonte: "NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments: https://csrc.nist.gov/pubs/sp/800/30/r1/final."
   },
 
-  /* ===================== 4.2 Malwares (10 questões) ===================== */
-
-  { id: "q-m4-11", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m4-u2-t1-s1", assunto: "4.2 — Vírus e worms",
-    contexto: "Dois tipos de malwares são comparados: vírus e worm.",
-    enunciado: "A principal diferença entre vírus e worm é que:",
+  { id: "q-m4-11", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "m4-u2-t1-s1", assunto: "4.2 — Vírus e worms",
+    contexto: "Uma equipe analisa dois códigos maliciosos: um infecta arquivos executáveis e outro consegue se propagar entre sistemas vulneráveis sem precisar ser anexado a um arquivo hospedeiro.",
+    enunciado: "Qual distinção entre vírus e worm é mais precisa?",
     alternativas: [
-      { letra: "A", texto: "Worms precisam de uma hospeste para se propagar, vírus não." },
-      { letra: "B", texto: "Vírus se propagam apenas pela rede, worms não." },
-      { letra: "C", texto: "Worms se replicam e se propagam de forma independente, sem necessidade de anexo ou interação do usuário." },
-      { letra: "D", texto: "Vírus são sempre perigosos, worms não." },
-      { letra: "E", texto: "Worms não podem ser detectados por antivírus." }
+      { letra: "A", texto: "Worms não podem causar danos nem instalar outros componentes." },
+      { letra: "B", texto: "Vírus se propagam apenas pela internet, enquanto worms se propagam apenas por mídias removíveis." },
+      { letra: "C", texto: "Um vírus normalmente se associa a um arquivo ou programa hospedeiro; um worm é capaz de se replicar e se propagar de forma independente." },
+      { letra: "D", texto: "Vírus sempre exigem uma ação humana para cada propagação e worms nunca dependem de condições externas." },
+      { letra: "E", texto: "A diferença é determinada pelo tamanho do arquivo malicioso." }
     ],
     gabarito: "C",
-    justificativa: "Worms são malwares independentes que se replicam e se propagam por redes sem interação do usuário. Vírus depende de um programa hospedeiro e da ação do usuário para se propagar (alternativa A incorreta); vírus se propagam por muitos meios, não apenas pela rede (alternativa B incorreta); tanto vírus quanto worms podem causar danos — nem um nem outro são sempre perigosos (alternativas D e E incorretas).",
+    justificativa: "Um vírus se associa a um arquivo, programa ou objeto hospedeiro e sua propagação costuma depender da execução desse objeto. Um worm é um programa independente capaz de se propagar entre sistemas, por exemplo explorando serviços vulneráveis. Ambos podem transportar outras cargas maliciosas, e a propagação real depende do ambiente e das condições técnicas.",
     analise: {
-      A: "INCORRETA. Worms são independentes e não precisam de hospeste nem ação do usuário.",
-      B: "INCORRETA. Vírus se propagam por muitos meios, incluindo anexos, periféricos, etc.",
-      C: "CORRETA. Worms se replicam independentemente, sem precisar de ação do usuário.",
-      D: "INCORRETA. Tanto vírus quanto worms podem ser danificados ou inofensivos.",
-      E: "INCORRETA. Worms podem ser detectados por antivírus, embora evasivos sometimes."
+      A: "INCORRETA. Worms podem causar danos ou distribuir outras cargas maliciosas.",
+      B: "INCORRETA. Os meios de propagação não se limitam dessa forma.",
+      C: "CORRETA. A distinção central é a dependência de um hospedeiro para o vírus versus a capacidade de propagação independente do worm.",
+      D: "INCORRETA. A propagação depende do mecanismo e do ambiente; a alternativa usa absolutos indevidos.",
+      E: "INCORRETA. Tamanho do arquivo não define a categoria."
     },
-    regra: "Vírus: depende de hospedeiro + ação do usuário. Worm: replica e se propaga sozinho pela rede.",
-    pegadinha: "Worms são 'independentes' — não precisam de anexo nem clique do usuário para se propagar.",
-    fonte: "CERT.br — Guia de Malware, 2021."
+    regra: "Vírus se associa a um hospedeiro; worm é independente e pode se propagar entre sistemas.",
+    pegadinha: "A diferença não é o grau de perigo nem o tamanho; considere dependência de hospedeiro e mecanismo de propagação.",
+    fonte: "NIST SP 800-83 Rev. 1 — Guide to Malware Incident Prevention and Handling for Desktops and Laptops: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
-  { id: "q-m4-12", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m4-u2-t1-s2", assunto: "4.2 — Trojans e backdoors",
-    contexto: "Um equipamento é comprometido por um malware que se disfarça de software legítimo.",
-    enunciado: "Sobre o 'Trojan' (cavalo de troia), é correto afirmar que:",
+  { id: "q-m4-12", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "m4-u2-t1-s2", assunto: "4.2 — Trojan e execução induzida",
+    contexto: "Um usuário instala um utilitário que aparenta ser legítimo, mas que, após execução, realiza atividades não autorizadas.",
+    enunciado: "Qual característica é mais associada a um cavalo de Troia (trojan)?",
     alternativas: [
-      { letra: "A", texto: "É um malware que se replica automaticamente." },
-      { letra: "B", texto: "É um malware disfarçado de software legítimo, que abre um backdoor para ataques." },
-      { letra: "C", texto: "É um tipo de firewall." },
-      { letra: "D", texto: "É um ataque de negação de serviço." },
-      { letra: "E", texto: "É uma ferramenta de criptografia." }
+      { letra: "A", texto: "Ser um controle de rede que bloqueia conexões não autorizadas." },
+      { letra: "B", texto: "Replicar-se automaticamente em todos os dispositivos sem depender de execução ou interação." },
+      { letra: "C", texto: "Disfarçar sua finalidade ou se apresentar como software legítimo para induzir a execução; suas funções podem incluir roubo de dados ou acesso remoto." },
+      { letra: "D", texto: "Ser um mecanismo de backup que restaura arquivos excluídos." },
+      { letra: "E", texto: "Ser um protocolo criptográfico que autentica servidores." }
     ],
-    gabarito: "B",
-    justificativa: "Trojan é um malware disfarçado de software legítimo. Uma vez executado, pode abrir um backdoor, roubar dados ou conceder acesso remoto. Trojans não se replicam sozinhos (alternativa A incorreta); não é firewall (alternativa C incorreta); não é DoS (alternativa D incorreta); não é criptografia (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Um trojan se apresenta ou é distribuído como algo legítimo para induzir sua execução, mas realiza ações não autorizadas. Pode instalar outros componentes, roubar dados ou permitir acesso remoto, mas nenhuma dessas funções é obrigatória em todos os trojans. A autorreplicação independente é mais característica de worms.",
     analise: {
-      A: "INCORRETA. Trojans não se replicam — diferente de vírus e worms.",
-      B: "CORRETA. Trojans disfarçados de software legítimo, que secretamente abrem porta de acesso.",
-      C: "INCORRETA. Firewall é uma defesa; Trojan é um malware.",
-      D: "INCORRETA. DoS é um ataque de negação de serviço.",
-      E: "INCORRETA. Criptografia é uma ferramenta de proteção, não um malware."
+      A: "INCORRETA. Um controle de rede é uma medida defensiva, não um trojan.",
+      B: "INCORRETA. A propagação independente não é a característica definidora de um trojan.",
+      C: "CORRETA. O disfarce ou a aparência legítima é característica comum do trojan; a carga maliciosa varia.",
+      D: "INCORRETA. Backup e restauração são funções de recuperação.",
+      E: "INCORRETA. Protocolo criptográfico é uma tecnologia de segurança, não malware."
     },
-    regra: "Trojan: 'pensando que é algo útil, o usuário instala um ataque' — sociedade do ingênuo.",
-    pegadinha: "Trojan não se replica — ele se disfarce de algo legítimo e pede para ser executado.",
-    fonte: "Symantec — CyberCrime Report, 2020."
+    regra: "Trojan induz a execução ao se apresentar como software ou conteúdo legítimo; suas funções maliciosas variam.",
+    pegadinha: "Nem todo trojan abre um backdoor, e nem todo malware que rouba dados é necessariamente classificado apenas como trojan.",
+    fonte: "NIST SP 800-83 Rev. 1 — Guide to Malware Incident Prevention and Handling for Desktops and Laptops: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
-  { id: "q-m4-13", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m4-u2-t1-s3", assunto: "4.2 — Ransomware",
-    contexto: "Uma organização é vítima de um ataque de ransomware que criptografa os dados.",
-    enunciado: "O ransomware é definido como um malware que:",
+  { id: "q-m4-13", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "m4-u2-t1-s3", assunto: "4.2 — Ransomware e extorsão",
+    contexto: "Uma organização perde acesso a arquivos críticos e recebe uma mensagem exigindo pagamento. A equipe também encontra indícios de que dados podem ter sido copiados antes do bloqueio.",
+    enunciado: "Qual afirmação sobre ransomware é mais correta?",
     alternativas: [
-      { letra: "A", texto: "Espiona o usuário e rouba informações." },
-      { letra: "B", texto: "Criptografa os dados do usuário e exige pagamento para descriptografar." },
-      { letra: "C", texto: "Cria redes de bots para ataques." },
-      { letra: "D", texto: "Exclui arquivos temporariamente." },
-      { letra: "E", texto: "Estuda a segurança do sistema." }
+      { letra: "A", texto: "Pagar o resgate garante recuperação dos dados e impede divulgação." },
+      { letra: "B", texto: "Todo ransomware apenas exclui arquivos temporariamente e não pode afetar cópias de segurança." },
+      { letra: "C", texto: "Ransomware pode bloquear ou criptografar dados e exigir resgate; algumas campanhas também ameaçam divulgar informações exfiltradas." },
+      { letra: "D", texto: "Ransomware é um método legítimo de testar a segurança, independentemente de autorização." },
+      { letra: "E", texto: "Ransomware só existe quando o atacante consegue criptografar todos os dispositivos da organização." }
     ],
-    gabarito: "B",
-    justificativa: "Ransomware criptografa os dados do alvo e exige um pagamento (resgate) para liberar o acesso. Espionagem é o spyware (alternativa A incorreta); criação de botnets é outro tipo de malware (alternativa C incorreta); exclusão temporária não é a definição de ransomware (alternativa D incorreta); 'estudar a segurança' é uma descrição vaga e incorreta (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Ransomware pode negar acesso por criptografia ou outros mecanismos e exigir pagamento. Algumas campanhas combinam isso com exfiltração e ameaça de divulgação, chamada frequentemente de dupla extorsão. O pagamento não garante recuperação nem impede publicação; a resposta deve seguir o plano de incidentes, preservar evidências e acionar equipes e autoridades pertinentes.",
     analise: {
-      A: "INCORRETA. Espionagem é o spyware, não o ransomware.",
-      B: "CORRETA. Ransomware criptografa dados e exige pagamento pela descriptografia.",
-      C: "INCORRETA. Criação de botnets é outra categoria de malware (ex: botnet).",
-      D: "INCORRETA. Exclusão de arquivos pode ocorrer, mas o recurso definidor é a criptografia e o resgate.",
-      E: "INCORRETA. Estudo de segurança não é uma definição de ransomware."
+      A: "INCORRETA. Não há garantia de que o pagamento resulte em recuperação ou confidencialidade.",
+      B: "INCORRETA. O impacto pode persistir e cópias acessíveis podem ser afetadas; backups precisam ser isolados e testados.",
+      C: "CORRETA. A alternativa inclui bloqueio/criptografia e a possibilidade de extorsão baseada em dados exfiltrados.",
+      D: "INCORRETA. A autorização e o escopo são indispensáveis para testes de segurança legítimos.",
+      E: "INCORRETA. O ataque pode afetar apenas parte dos sistemas ou usar outras formas de bloqueio e extorsão."
     },
-    regra: "Ransomware = criptografia + extorsão. 'Se não pagar, seus dados ficam inacessíveis'.",
-    pegadinha: "Ransomware não é só exlusão — é criptografia dos dados com requerimento de resgate.",
-    fonte: "FBI — Internet Crime Complaint Center (IC3) Annual Report, 2022."
+    regra: "Ransomware pode bloquear/criptografar dados e extorquir; algumas campanhas também exfiltram dados. Pagamento não garante recuperação.",
+    pegadinha: "Não reduza ransomware a criptografia de todos os arquivos nem presuma que pagar resolve o incidente.",
+    fonte: "CISA, #StopRansomware Guide: https://www.cisa.gov/stopransomware/ransomware-guide."
   },
 
-  { id: "q-m4-14", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Botnets",
-    contexto: "Um atacante controla uma rede de dispositivos infectados sem o conhecimento dos donos.",
-    enunciado: "O termo 'botnet' refere-se a:",
+  { id: "q-m4-14", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Botnets e dispositivos comprometidos",
+    contexto: "Uma equipe de segurança identifica milhares de dispositivos comprometidos que recebem comandos de uma infraestrutura de controle e geram tráfego coordenado.",
+    enunciado: "Qual descrição de botnet é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Um sistema de firewall distribuído." },
-      { letra: "B", texto: "Uma rede de computadores infectados sob controle remoto de um atacante." },
-      { letra: "C", texto: "Um tipo de algoritmo de encriptação." },
-      { letra: "D", texto: "Um protocolo de rede seguro." },
-      { letra: "E", texto: "Um software de backup automatizado." }
+      { letra: "A", texto: "Algoritmo criptográfico que distribui chaves públicas." },
+      { letra: "B", texto: "Rede privada protegida por firewall, sem dispositivos comprometidos." },
+      { letra: "C", texto: "Conjunto de dispositivos comprometidos coordenados por um operador ou infraestrutura de comando e controle, que podem ser usados para atividades como DDoS, spam ou outras ações maliciosas." },
+      { letra: "D", texto: "Serviço de backup que replica dados entre dispositivos." },
+      { letra: "E", texto: "Protocolo seguro que impede o controle remoto de dispositivos." }
     ],
-    gabarito: "B",
-    justificativa: "Botnet é uma rede de dispositivos (computadores, IoT, servidores) infectados e controlados remotamente por um atacante (botmaster), usada para enviar spam, realizar DDoS, criptomoedas etc. Não é firewall (alternativa A incorreta); não é algoritmo de criptografia (alternativa C incorreta); nem protocolo de rede (alternativa D incorreta); nem software de backup (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Uma botnet é um conjunto de dispositivos comprometidos que podem ser coordenados remotamente. Os dispositivos podem pertencer a usuários ou organizações sem que estes percebam o comprometimento. A finalidade varia conforme a operação, e a presença de tráfego coordenado deve ser investigada com evidências e controles defensivos.",
     analise: {
-      A: "INCORRETA. Firewall é uma defesa, botnet é um ataque distribuído de dispositivos infectados.",
-      B: "CORRETA. Botnet é uma rede de dispositivos comprometidos sob controle remoto de um atacante.",
-      C: "INCORRETA. Algoritmo de criptografia é uma função matemática, não um malware.",
-      D: "INCORRETA. Protocolo de rede seguro é uma especificação de comunicação.",
-      E: "INCORRETA. Software de backup automatizado é uma ferramenta de proteção."
+      A: "INCORRETA. Um algoritmo criptográfico não é uma rede de dispositivos comprometidos.",
+      B: "INCORRETA. Uma rede protegida por firewall não é, por isso, uma botnet.",
+      C: "CORRETA. A alternativa descreve dispositivos comprometidos e coordenação para ações potencialmente maliciosas.",
+      D: "INCORRETA. Replicação de backup é uma função legítima de proteção de dados.",
+      E: "INCORRETA. Um protocolo seguro não define botnet e não garante, sozinho, que dispositivos não serão comprometidos."
     },
-    regra: "Botnet = 'cada um no controle do outro' — uma rede de 'robots' infectados sob comando remoto.",
-    pegadinha: "Botnet não é 'rede segura' — é uma rede de máquinas infectadas no controle de um atacante.",
-    fonte: "Kaspersky Lab — Botnet Evolution Report, 2021."
+    regra: "Botnet é uma rede de dispositivos comprometidos coordenados remotamente; a finalidade e o método de controle podem variar.",
+    pegadinha: "Nem toda botnet executa DDoS; spam, fraude, roubo de dados e outras ações também podem ocorrer.",
+    fonte: "CISA, Understanding and Responding to Distributed Denial-of-Service Attacks: https://www.cisa.gov/news-events/news/understanding-and-responding-distributed-denial-service-attacks; NIST SP 800-83 Rev. 1: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
-  { id: "q-m4-15", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Rootkits",
-    contexto: "Um ataque de rootkit consegue esconder sua presença no sistema operacional.",
-    enunciado: "O termo 'rootkit' refere-se a:",
+  { id: "q-m4-15", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Rootkits e ocultação",
+    contexto: "Uma ferramenta de resposta a incidentes encontra sinais de que processos, arquivos ou atividades privilegiadas estão sendo ocultados do sistema operacional.",
+    enunciado: "Qual característica é mais associada a um rootkit?",
     alternativas: [
-      { letra: "A", texto: "Um software de análise de segurança." },
-      { letra: "B", texto: "Um tipo de malware projetado para ganhar acesso de root e esconder sua presença." },
-      { letra: "C", texto: "Um tipo de protocolo de rede." },
-      { letra: "D", texto: "Um serviço de backup automático." },
-      { letra: "E", texto: "Um sistema operacional próprio." }
+      { letra: "A", texto: "Ser um protocolo de sincronização de relógios." },
+      { letra: "B", texto: "Realizar exclusivamente cópias de segurança de arquivos." },
+      { letra: "C", texto: "Ocultar a presença de componentes ou atividades maliciosas, podendo operar em diferentes níveis do sistema." },
+      { letra: "D", texto: "Ser uma ferramenta que necessariamente concede privilégios administrativos em todos os casos." },
+      { letra: "E", texto: "Ser um algoritmo que criptografa dados para garantir confidencialidade." }
     ],
-    gabarito: "B",
-    justificativa: "Rootkit é um conjunto de ferramentas que concede acesso privilegiado (root/admin) e esconde sua presença do usuário e sistema. Não é software de análise (alternativa A incorreta); não é protocolo de rede (alternativa C incorreta); não é backup (alternativa D incorreta); não é um sistema operacional (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Rootkit é uma categoria de técnicas ou componentes maliciosos associados à ocultação de sua presença ou de outras atividades no sistema. Pode envolver diferentes níveis de privilégio e técnicas de persistência; não é correto afirmar que todo rootkit necessariamente concede privilégios administrativos, pois pode depender de acesso previamente obtido ou explorar outros mecanismos.",
     analise: {
-      A: "INCORRETA. Rootkit é um malwares com capacidade de persistência e ocultação.",
-      B: "CORRETA. Rootkit = acesso root + tecnologia de ocultação.",
-      C: "INCORRETA. Rootkit não é um protocolo de rede.",
-      D: "INCORRETA. Rootkit não é backup automático.",
-      E: "INCORRETA. Rootkit é um malware, não um sistema operacional."
+      A: "INCORRETA. NTP é um protocolo de sincronização temporal.",
+      B: "INCORRETA. Backup é uma função de recuperação, não um rootkit.",
+      C: "CORRETA. A ocultação de componentes ou atividades é característica associada a rootkits.",
+      D: "INCORRETA. A obtenção de privilégio elevado pode estar relacionada, mas não é uma exigência universal da definição.",
+      E: "INCORRETA. Algoritmos criptográficos são mecanismos de proteção, não rootkits."
     },
-    regra: "Rootkit = 'chave mestra + ocultação'. Dá root e esconde o malwares do sistema.",
-    pegadinha: "Rootkit não é só 'root' — é root + tecnologia que esconde a presença.",
-    fonte: "MITRE ATT&CK — T1055 (Rootkit), 2022."
+    regra: "Rootkit está associado à ocultação de componentes ou atividades maliciosas; os mecanismos e níveis de privilégio variam.",
+    pegadinha: "Não confunda rootkit com uma garantia de que o malware sempre obtém root/admin; a ocultação é o aspecto central.",
+    fonte: "MITRE ATT&CK, T1014 — Rootkit: https://attack.mitre.org/techniques/T1014/."
   },
 
-  { id: "q-m4-16", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Firewalls",
-    contexto: "Uma organização usa um firewall para filtrar tráfego de rede.",
-    enunciado: "O que um Firewall (bastão de watt) faz?",
+  { id: "q-m4-16", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "modulo-4-unidade-2-topico-2", assunto: "4.2 — Firewalls e filtragem de tráfego",
+    contexto: "Uma organização precisa impedir que conexões externas não autorizadas alcancem serviços internos e limitar conexões de saída que não sejam necessárias.",
+    enunciado: "Qual é a função principal de um firewall nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Criptografa todos os dados que passam pela rede." },
-      { letra: "B", texto: "Filtra o tráfego de rede baseado em regras de segurança." },
-      { letra: "C", texto: "Remove vírus automaticamente." },
-      { letra: "D", texto: "Protege contra phishing apenas." },
-      { letra: "E", texto: "Substitui a necessidade de autenticação." }
+      { letra: "A", texto: "Remover qualquer malware de todos os dispositivos sem ferramentas adicionais." },
+      { letra: "B", texto: "Criptografar automaticamente todos os arquivos armazenados em cada computador." },
+      { letra: "C", texto: "Filtrar o tráfego de rede conforme regras de origem, destino, porta, protocolo ou outros atributos suportados." },
+      { letra: "D", texto: "Substituir a autenticação e a autorização de usuários em cada aplicação." },
+      { letra: "E", texto: "Garantir que nenhuma mensagem de phishing chegue aos usuários." }
     ],
-    gabarito: "B",
-    justificativa: "Firewall é um dispositivo ou software que filtra o tráfego de rede baseado em regras de segurança (endereços, portas, protocolos, aplicações). Criptografa? Não (alternativa A incorreta); remove vírus? Não (é o papel do antivírus/EDR, não do firewall tradicional; alternativa C incorreta); protege contra phishing? Apenas de forma limitada (alternativa D incorreta); não substitui autenticação (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Firewall aplica regras para permitir ou bloquear tráfego de rede, conforme sua arquitetura e capacidade. Ele pode ser um dispositivo, software ou serviço; não substitui controles de endpoint, autenticação, segurança de aplicações ou conscientização contra phishing.",
     analise: {
-      A: "INCORRETA. Firewall filtra tráfego; criptografia é feita por outros meios (SSL/TLS, IPSec).",
-      B: "CORRETA. Firewall é um sistema que filtra o tráfego de entrada e saída pela rede.",
-      C: "INCORRETA. Remoção de vírus é a responsabilidade do antivírus/EDR, não do firewall.",
-      D: "INCORRETA. Firewall pode ajudar, mas não é a principal defesa contra phishing.",
-      E: "INCORRETA. Firewall não substitui autenticação. Movimento de controle de acesso é complementar."
+      A: "INCORRETA. Remediação de malware é função de ferramentas e processos específicos.",
+      B: "INCORRETA. Criptografia de arquivos é um controle distinto e não decorre automaticamente do firewall.",
+      C: "CORRETA. Filtrar tráfego conforme regras é a função central de um firewall.",
+      D: "INCORRETA. Firewall não substitui autenticação nem autorização dentro das aplicações.",
+      E: "INCORRETA. Um firewall pode integrar filtros complementares, mas não garante que toda tentativa de phishing seja bloqueada."
     },
-    regra: "Firewall = filtro de tráfego. 'O que entra e o que sai' — baseando-se em regras de segurança.",
-    pegadinha: "Firewall não é 'chave de segurança' — é 'bastão de watt' que controla o fluxo de dados.",
-    fonte: "Cisco — Introduction to Firewalls, 2020."
+    regra: "Firewall permite ou bloqueia tráfego conforme regras; é uma camada complementar de segurança.",
+    pegadinha: "A presença de firewall não garante proteção completa contra malware, phishing ou falhas de aplicação.",
+    fonte: "NIST SP 800-41 Rev. 1 — Guidelines on Firewalls and Firewall Policy: https://csrc.nist.gov/pubs/sp/800/41/r1/final."
   },
 
-  { id: "q-m4-17", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — IDS e IPS",
-    contexto: "Uma empresa adota sistemas de detecção e prevenção de intrusão.",
-    enunciado: "A diferença fundamental entre IDS (Intrusion Detection System) e IPS (Intrusion Prevention System) é que:",
+  { id: "q-m4-17", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-2", assunto: "4.2 — Regras de firewall e negação por padrão",
+    contexto: "Uma equipe configura regras de rede para um servidor que precisa receber HTTPS e consultar um serviço de atualização autorizado. Nenhuma outra comunicação é necessária.",
+    enunciado: "Qual política de firewall segue melhor o princípio de reduzir a exposição?",
     alternativas: [
-      { letra: "A", texto: "IDS só detecta, IPS só previne." },
-      { letra: "B", texto: "IDS gera alertas sobre atividade suspeita; IPS age para bloquear ou impedir o ataque." },
-      { letra: "C", texto: "IDS é de rede, IPS é de hospedeiro." },
-      { letra: "D", texto: "IDS e IPS são sinônimos." },
-      { letra: "E", texto: "IPS só funciona com criptografia ativa." }
+      { letra: "A", texto: "Permitir todo o tráfego e bloquear apenas conexões que já tenham causado incidente." },
+      { letra: "B", texto: "Permitir tráfego de qualquer origem para todas as portas de administração." },
+      { letra: "C", texto: "Bloquear todo o tráfego sem verificar se isso impede o funcionamento legítimo do serviço." },
+      { letra: "D", texto: "Criar uma regra ampla de entrada e confiar apenas no antivírus instalado no servidor." },
+      { letra: "E", texto: "Permitir somente os fluxos necessários, documentar as exceções e negar por padrão o tráfego não autorizado, validando as dependências do serviço." }
     ],
-    gabarito: "B",
-    justificativa: "IDS monitora o tráfego e gera alertas (detecção); IPS também monitora, mas também age para bloquear o tráfego malintencionado em tempo real (prevenção). IDS não impede (alternativa A incorreta); IDS gera alertas e pode tomar ações limitadas, mas a característica definidora é IDS detectar vs IPS prevenir (alternativa C incorreta); IDS e IPS não são sinônimos (alternativa D incorreta); IPS não requer ativação de criptografia (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "Uma política restritiva permite os fluxos necessários e nega por padrão os demais, com exceções explícitas e justificadas. A implementação deve considerar dependências legítimas, monitorar efeitos e revisar as regras; uma regra excessivamente ampla aumenta a superfície de ataque, enquanto bloquear tudo sem análise pode causar indisponibilidade.",
     analise: {
-      A: "INCORRETA. IDS detecta (alerta), IPS impede (age) — não são 'só detecta/ somente impede'.",
-      B: "CORRETA. IDS gera alertas; IPS bloqueia o tráfego malintencionado ativamente.",
-      C: "INCORRETA. Ambos podem ser rede (NIDS/NIPS) e de host (HIDS/HIPS).",
-      D: "INCORRETA. IDS (detecção) e IPS (prevenção) são conceitos distintos.",
-      E: "INCORRETA. IPS não requer criptografia ativa para funcionar."
+      A: "INCORRETA. Permitir tudo transfere a defesa para a reação após o incidente e amplia a exposição.",
+      B: "INCORRETA. Expor portas administrativas a qualquer origem aumenta significativamente o risco.",
+      C: "INCORRETA. A restrição precisa preservar os fluxos legítimos necessários ao serviço.",
+      D: "INCORRETA. Antivírus não substitui a restrição de tráfego de rede.",
+      E: "CORRETA. A política limita a comunicação ao necessário e mantém exceções controladas."
     },
-    regra: "IDS = 'olhar e alertar'; IPS = 'olhar, alertar e impedir'.",
-    pegadinha: "IDS é de monitoramento; IPS é de bloqueio ativo. Diferença na ação, não na arquitetura.",
-    fonte: "SANS Institute — Intrusion Detection Systems, 2018."
+    regra: "Negação por padrão: permitir apenas fluxos necessários, com exceções justificadas, testadas e revisadas.",
+    pegadinha: "Regra restritiva não significa bloquear sem análise; é preciso equilibrar exposição e continuidade do serviço.",
+    fonte: "NIST SP 800-41 Rev. 1 — Guidelines on Firewalls and Firewall Policy: https://csrc.nist.gov/pubs/sp/800/41/r1/final."
   },
 
-  { id: "q-m4-18", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-2", assunto: "4.2 — Defesa em Profundidade",
-    contexto: "Uma organização implementa várias camadas de controle de segurança para proteger seus ativos.",
-    enunciado: "O conceito de 'defesa em profundidade' (defense in depth) significa que:",
+  { id: "q-m4-18", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "avancado", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Defesa em profundidade",
+    contexto: "Uma organização depende de um único firewall de borda. Um invasor consegue roubar credenciais válidas e acessar um serviço interno por um caminho permitido.",
+    enunciado: "Qual abordagem melhor representa defesa em profundidade para reduzir a dependência de um único controle?",
     alternativas: [
-      { letra: "A", texto: "Apenas um controle de segurança é necessário." },
-      { letra: "B", texto: "Várias camadas de defesa são implementadas para compensar falhas de controle." },
-      { letra: "C", texto: "Todas as defesas são centralizadas em um único firewall." },
-      { letra: "D", texto: "Segurança é ignorada quando outros controles estão presentes." },
-      { letra: "E", texto: "O antivírus é o único controle necessário." }
+      { letra: "A", texto: "Considerar que credenciais válidas tornam qualquer atividade do usuário confiável." },
+      { letra: "B", texto: "Comprar um firewall maior e dispensar os demais controles." },
+      { letra: "C", texto: "Adicionar camadas complementares, como MFA, menor privilégio, segmentação, monitoramento e proteção de endpoint, ajustadas ao risco." },
+      { letra: "D", texto: "Desativar os registros internos para reduzir o volume de alertas." },
+      { letra: "E", texto: "Concentrar todos os controles em uma única conta administrativa compartilhada." }
     ],
-    gabarito: "B",
-    justificativa: "Defesa em profundidade adota múltiplas camadas de controle para garantir que se uma falhar, outras ainda protejam o ativo. Apenas um controle é insuficiente (alternativa A incorreta); a centralização em um único firewall é uma fraqueza — defesa em profundidade requer múltiplas camadas (alternativa C incorreta); segurança não é ignorada — é reforçada (alternativa D incorreta); o antivírus é apenas uma camada, não o único controle (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Defesa em profundidade combina controles diferentes e complementares para reduzir a probabilidade e o impacto de falhas individuais. MFA, menor privilégio, segmentação, monitoramento e proteção de endpoint podem limitar caminhos de ataque e apoiar detecção e resposta. Nenhuma combinação garante risco zero; a seleção deve considerar o contexto e ser testada.",
     analise: {
-      A: "INCORRETA. Defesa em profundidade requer múltiplas camadas.",
-      B: "CORRETA. Múltiplas camadas compensam falhas de controle em cascata.",
-      C: "INCORRETA. Centralização em um único firewall é um único ponto de falha.",
-      D: "INCORRETA. Segurança é reforçada, não ignorada.",
-      E: "INCORRETA. Antivírus é uma camada, não o único controle de segurança."
+      A: "INCORRETA. Credenciais válidas podem ser roubadas; autorização e monitoramento continuam necessários.",
+      B: "INCORRETA. Um único controle continua sendo um ponto de dependência e não cobre todos os riscos.",
+      C: "CORRETA. Camadas complementares reduzem a dependência de um único controle e limitam o impacto de credenciais comprometidas.",
+      D: "INCORRETA. Desativar registros reduz a capacidade de detectar e investigar atividade indevida.",
+      E: "INCORRETA. Contas compartilhadas enfraquecem atribuição individual e aumentam o impacto de comprometimento."
     },
-    regra: "Defesa em profundidade = 'múltiplas camadas, sem confiar em uma só'.",
-    pegadinha: "Não basta um firewall — defesa em profundidade exige camadas de segurança diversas.",
-    fonte: "NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment)."
+    regra: "Defesa em profundidade combina controles preventivos, detectivos e de resposta adequados ao risco; não promete proteção absoluta.",
+    pegadinha: "Um controle pode falhar ou ser contornado; camadas distintas devem reduzir o impacto sem duplicar cegamente a mesma defesa.",
+    fonte: "NIST SP 800-53 Rev. 5 — Security and Privacy Controls: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
-  { id: "q-m4-19", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Monitoramento e registros",
-    contexto: "Um departamento de TI implementa um sistema de monitoramento de logs.",
-    enunciado: "A importância do monitoramento e dos logs (registros) na segurança da informação é:",
+  { id: "q-m4-19", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Gestão segura de logs",
+    contexto: "Um órgão precisa usar logs para investigar incidentes, mas os registros contêm identificadores pessoais e podem ser alterados por administradores do sistema investigado.",
+    enunciado: "Qual desenho de gestão de logs é mais adequado?",
     alternativas: [
-      { letra: "A", texto: "Permitir o acesso irrestrito a todos os sistemas." },
-      { letra: "B", texto: "Fornecer audibilidade, detecção de incidentes e análise forense." },
-      { letra: "C", texto: "Não ter valor na detecção de ameaças." },
-      { letra: "D", texto: "Substituir a necessidade de backups." },
-      { letra: "E", texto: "Criptografar todos os dados automaticamente." }
+      { letra: "A", texto: "Permitir que a conta investigada apague seus próprios registros sem gerar alerta." },
+      { letra: "B", texto: "Guardar todos os dados indefinidamente e permitir acesso irrestrito para facilitar auditorias." },
+      { letra: "C", texto: "Coletar eventos relevantes, restringir e registrar o acesso aos logs, proteger sua integridade, definir retenção e limitar dados ao necessário para a finalidade." },
+      { letra: "D", texto: "Coletar apenas eventos bem-sucedidos e descartar todas as falhas de autenticação." },
+      { letra: "E", texto: "Substituir os logs por relatos verbais sem horário, autoria ou contexto." }
     ],
-    gabarito: "B",
-    justificativa: "Logs e monitoramento são essenciais para auditoria, detecção de incidentes, análise forense e conformidade. Permitir acesso irrestrito (alternativa A incorreta); não ter valor na detecção (alternativa C incorreta); não substituem backups (alternativa D incorreta); nem criptografam dados automaticamente (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Logs ajudam na detecção, investigação, auditoria e reconstrução de eventos quando sua coleta é adequada e os registros são protegidos. O desenho deve restringir acessos, detectar alterações, sincronizar horários, definir retenção e considerar minimização e proteção de dados pessoais. Mais coleta e retenção não significam automaticamente melhor segurança.",
     analise: {
-      A: "INCORRETA. Logs são usados para auditoria, não para acesso irrestrito.",
-      B: "CORRETA. Monitoramento e logs são a base da auditoria, detecção e análise forense.",
-      C: "INCORRETA. Logs são fundamentais para detecção e análise de incidentes.",
-      D: "INCORRETA. Logs não substituem backups — são informações demográficas, não cópias.",
-      E: "INCORRETA. Log monitoring não criptografa dados automaticamente."
+      A: "INCORRETA. A possibilidade de apagar evidências sem detecção compromete a confiabilidade dos registros.",
+      B: "INCORRETA. Retenção indefinida e acesso irrestrito ampliam riscos de privacidade e adulteração.",
+      C: "CORRETA. A alternativa equilibra utilidade investigativa, integridade, controle de acesso, retenção e minimização.",
+      D: "INCORRETA. Falhas de autenticação podem ser essenciais para detectar ataques.",
+      E: "INCORRETA. Relatos verbais não substituem registros estruturados e rastreáveis."
     },
-    regra: "Logs = 'memória do sistema'. São essenciais para auditoria, detecção e resposta.",
-    pegadinha: "Monitoramento de logs não é 'visualização de dados' — é 'gravação e análise de eventos'.",
-    fonte: "NIST SP 800-92 (Guide to Computer Security Log Management), 2007."
+    regra: "Logs úteis devem ser relevantes, protegidos, acessíveis apenas a pessoas autorizadas, retidos conforme regras e minimizados conforme a finalidade.",
+    pegadinha: "Coletar e reter tudo indefinidamente não é sinônimo de boa auditoria; considere finalidade, acesso, integridade e privacidade.",
+    fonte: "NIST SP 800-92 — Guide to Computer Security Log Management: https://csrc.nist.gov/pubs/sp/800/92/final."
   },
 
-  { id: "q-m4-20", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-2", assunto: "4.2 — Controle de acesso",
-    contexto: "Uma agência pública adota políticas de controle de acesso aos sistemas e dados.",
-    enunciado: "A política de controle de acesso baseada no menor privilégio garante que:",
+  { id: "q-m4-20", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controle de acesso e menor privilégio",
+    contexto: "Uma servidora muda de função e deixa de precisar exportar dados pessoais. Seu perfil de acesso ainda permite exportação em massa e administração de usuários.",
+    enunciado: "Qual ação aplica melhor o princípio do menor privilégio?",
     alternativas: [
-      { letra: "A", texto: "Qualquer usuário pode acessar qualquer recurso." },
-      { letra: "B", texto: "Usuários recebem apenas os direitos necessários para suas funções." },
-      { letra: "C", texto: "Acesso é concedido com base no cargo e não na necessidade funcional." },
-      { letra: "D", texto: "Todos os administradores recebem privilégios ilimitados." }
+      { letra: "A", texto: "Manter as permissões antigas para evitar solicitações de acesso no futuro." },
+      { letra: "B", texto: "Negar permanentemente qualquer acesso, independentemente das responsabilidades da servidora." },
+      { letra: "C", texto: "Conceder acesso administrativo a todos os integrantes da equipe." },
+      { letra: "D", texto: "Compartilhar uma conta com permissões amplas para facilitar a substituição entre funcionários." },
+      { letra: "E", texto: "Revisar o perfil conforme as tarefas atuais, remover permissões desnecessárias e manter processo formal para conceder exceções justificadas." }
     ],
-    gabarito: "B",
-    justificativa: "Menor privilégio: conceder ao usuário apenas os privilégios necessários para sua função. Ninguém é 'qualquer um' (alternativa A incorreta); o acesso é baseado na necessidade de saber e função, não apenas no cargo (alternativa C incorreta); administradores também seguem a mínimação, com privilégios quando necessário (alternativa D incorreta).",
+    gabarito: "E",
+    justificativa: "O menor privilégio exige que as permissões correspondam às tarefas e responsabilidades atuais. Mudanças de função devem acionar revisão de acesso, remoção de permissões desnecessárias e registro das exceções aprovadas. Contas individuais e revisões periódicas melhoram a rastreabilidade e reduzem o impacto de credenciais comprometidas.",
     analise: {
-      A: "INCORRETA. Controle de acesso exige restrição, não acesso irrestrito.",
-      B: "CORRETA. O menor privilégio atribui apenas o necessário para cada função.",
-      C: "INCORRETA. Acesso deve basear-se na necessidade e no papel, não apenas no cargo.",
-      D: "INCORRETA. Administradores também seguem o princípio do menor privilégio."
+      A: "INCORRETA. Permissões obsoletas mantêm acesso além da necessidade atual.",
+      B: "INCORRETA. Menor privilégio limita o acesso ao necessário; não significa negar todo acesso.",
+      C: "INCORRETA. Acesso administrativo generalizado viola o menor privilégio.",
+      D: "INCORRETA. Contas compartilhadas enfraquecem a atribuição individual e ampliam o acesso.",
+      E: "CORRETA. A alternativa ajusta as permissões à função e prevê tratamento controlado de exceções."
     },
-    regra: "Menor privilégio = 'só o necessário para a função' — não mais, não menos.",
-    pegadinha: "Menor privilégio é 'quanto é necessário' — não leva em conta 'o que ele quer'.",
-    fonte: "NIST SP 800-53 (AC-2, AC-3, AC-6: Least Privilege)."
+    regra: "Revise permissões quando funções mudam, remova acessos obsoletos e conceda exceções por processo formal.",
+    pegadinha: "Menor privilégio não é acesso zero; é conceder o acesso necessário e nenhum privilégio desnecessário.",
+    fonte: "NIST SP 800-53 Rev. 5, AC-2 e AC-6: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
-  /* ===================== 4.3 Ameaças e Ataques (10 questões) ===================== */
-
-  { id: "q-m4-21", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "m4-u3-t1-s1", assunto: "4.3 — Phishing",
-    contexto: "Um usuário recebe uma mensagem de e-mail que imita uma instituição financeira.",
-    enunciado: "O 'phishing' é um ataque que se caracteriza por:",
+  { id: "q-m4-21", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "basico", topico: "m4-u3-t1-s1", assunto: "4.3 — Phishing e engenharia social",
+    contexto: "Uma pessoa recebe uma mensagem que imita seu banco, cria urgência e direciona para uma página que solicita senha e código de autenticação.",
+    enunciado: "Qual característica indica uma tentativa de phishing?",
     alternativas: [
-      { letra: "A", texto: "Criptografar os dados do usuário." },
-      { letra: "B", texto: "Tentar induzir o usuário a fornecer informações confidenciais." },
-      { letra: "C", texto: "Aumentar a velocidade de rede." },
-      { letra: "D", texto: "Melhorar a segurança da autenticação." },
-      { letra: "E", texto: "Estudar a segurança do sistema." }
+      { letra: "A", texto: "O phishing consiste exclusivamente em criptografar arquivos locais." },
+      { letra: "B", texto: "A mensagem foi enviada por um canal eletrônico, o que por si só prova que é fraudulenta." },
+      { letra: "C", texto: "A mensagem tenta induzir a pessoa a revelar informações, abrir um link malicioso ou executar uma ação por meio de engano." },
+      { letra: "D", texto: "A mensagem é legítima sempre que contém o logotipo correto da instituição." },
+      { letra: "E", texto: "O ataque só existe quando há erros ortográficos evidentes." }
     ],
-    gabarito: "B",
-    justificativa: "Phishing é um tipo de engenharia social onde o atacante imita uma entidade legítima para induzir o usuário a divulgar informações confidenciais (senhas, dados bancários). Criptografia não é phishing (alternativa A incorreta); aumento de velocidade não está relacionado (alternativa C incorreta); melhoria de segurança é oposta ao objetivo do ataque (alternativa D incorreta); 'estudar a segurança' é vago e incorreto (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Phishing é uma forma de engenharia social que usa mensagens, páginas ou outros meios enganosos para induzir a vítima a revelar informações, abrir conteúdo malicioso ou realizar ações que favoreçam o atacante. Logotipos e linguagem correta podem ser copiados; a avaliação deve considerar remetente, destino, contexto e solicitações incomuns, com verificação por canal independente.",
     analise: {
-      A: "INCORRETA. Criptografia é uma técnica de proteção, não um objetivo do phishing.",
-      B: "CORRETA. Phishing é induzir o usuário a fornecer informações confidenciais por engano.",
-      C: "INCORRETA. Phishing não tem relação com velocidade de rede.",
-      D: "INCORRETA. Phishing visa substituir métodos seguros por engano, não melhorar a segurança.",
-      E: "INCORRETA. Estudar a segurança é uma atividade de defesa, não de ataque."
+      A: "INCORRETA. Criptografar arquivos pode ocorrer em ransomware, mas não define phishing.",
+      B: "INCORRETA. O meio eletrônico, por si só, não determina fraude.",
+      C: "CORRETA. A característica central é a indução por engano a revelar dados ou executar ações prejudiciais.",
+      D: "INCORRETA. Logotipos podem ser copiados e não autenticam a origem.",
+      E: "INCORRETA. Mensagens fraudulentas podem ser bem escritas e personalizadas."
     },
-    regra: "Phishing = 'pegar' — imitar quem confiável para roubar credenciais ou dados.",
-    pegadinha: "Phishing é 'enganação' — o atacante simula uma entidade confiável para induzir a ação.",
-    fonte: "APWG (Anti-Phishing Working Group) — Phishing Activity Trends Report, 2022."
+    regra: "Phishing usa engano para induzir divulgação de dados, acesso a páginas falsas ou execução de ações.",
+    pegadinha: "Não dependa de erros ortográficos ou da aparência visual; confirme solicitações sensíveis por canal independente.",
+    fonte: "CISA, Avoiding Social Engineering and Phishing Attacks: https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks."
   },
 
-  { id: "q-m4-22", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m4-u3-t1-s2", assunto: "4.3 — Pharming",
-    contexto: "Um atacante redireciona um domínio de um site legítimo para um site falso.",
-    enunciado: "O 'pharming' é um ataque que:",
+{ id: "q-m4-22", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s2", assunto: "4.3 — Pharming e resolução de nomes",
+    contexto: "Uma pessoa digita corretamente o endereço de um serviço conhecido, mas é direcionada a uma página fraudulenta por uma alteração indevida na resolução do nome ou na configuração do dispositivo.",
+    enunciado: "Qual descrição é mais compatível com pharming?",
     alternativas: [
-      { letra: "A", texto: "Oferece uma página de login legítima." },
-      { letra: "B", texto: "Redireciona o acesso a um domínio de um site legítimo para um site falso." },
-      { letra: "C", texto: "Melhora o desempenho de DNS." },
-      { letra: "D", texto: "Bloqueia e-mails spam." },
-      { letra: "E", texto: "Gera tráfego de rede para testes." }
+      { letra: "A", texto: "Aumentar a velocidade legítima de resolução de DNS." },
+      { letra: "B", texto: "Enviar exclusivamente uma mensagem de e-mail com erro ortográfico." },
+      { letra: "C", texto: "Manipular a resolução de nomes ou outra infraestrutura de direcionamento para levar a vítima a um destino fraudulento, mesmo sem erro de digitação." },
+      { letra: "D", texto: "Bloquear mensagens de spam por meio de um filtro de e-mail." },
+      { letra: "E", texto: "Gerar tráfego autorizado para testar a capacidade de um servidor." }
     ],
-    gabarito: "B",
-    justificativa: "Pharming redireciona tecnicamente o acesso a um domínio para um site falso (invadindo DNS ou arquitetura do host). Diferente de phishing, que engana o usuário (alternativa A incorreta); não melhora o DNS (alternativa C incorreta); não bloqueia spam (alternativa D incorreta); não gera tráfego para testes (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Pharming descreve técnicas de redirecionamento da vítima para um destino fraudulento, por exemplo mediante manipulação de DNS ou de configurações locais. A técnica pode ocorrer sem que a vítima clique em um link enganoso ou digite incorretamente o endereço. O mecanismo específico deve ser investigado; não se deve equiparar pharming a qualquer ataque de intermediário.",
     analise: {
-      A: "INCORRETA. Pharming redireciona para um site falso, não legítimo.",
-      B: "CORRETA. Pharming redireciona o tráfego de um domínio legítimo para um site falso.",
-      C: "INCORRETA. Pharming não melhora o desempenho de DNS.",
-      D: "INCORRETA. Bloqueio de spam é uma função de filtro, não do pharming.",
-      E: "INCORRETA. Geração de tráfego para testes não é pharming."
+      A: "INCORRETA. Pharming não é uma melhoria de desempenho do DNS.",
+      B: "INCORRETA. E-mail com erro ortográfico é um possível veículo de phishing, não a definição de pharming.",
+      C: "CORRETA. A alternativa descreve redirecionamento técnico para destino fraudulento, inclusive por manipulação de resolução de nomes.",
+      D: "INCORRETA. Filtro de spam é um controle defensivo.",
+      E: "INCORRETA. Teste autorizado de capacidade não é pharming."
     },
-    regra: "Pharming = 'redirecionar' — muda o DNS/roteamento para forçar acesso a site falso.",
-    pegadinha: "Pharming é 'forçado' — o usuário não precisa ser enganado; o tráfego é redirecionado.",
-    fonte: "MITRE ATT&CK — T1557 (Man-in-the-Middle), sub-technique T1557.001.",
+    regra: "Pharming redireciona a vítima para destino fraudulento por manipulação de resolução ou configuração.",
+    pegadinha: "Phishing costuma induzir a vítima a interagir com conteúdo enganoso; pharming pode redirecioná-la por manipulação técnica.",
+    fonte: "NIST SP 800-81 Rev. 2 — Secure Domain Name System (DNS) Deployment Guide: https://csrc.nist.gov/pubs/sp/800/81/r2/final."
   },
 
-  { id: "q-m4-23", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "m4-u3-t1-s3", assunto: "4.3 — Engenharia Social",
-    contexto: "Um atacante se identifica como um técnico de suporte para obter acesso.",
-    enunciado: "A 'engenharia social' em segurança da informação refere-se a:",
+{ id: "q-m4-23", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "m4-u3-t1-s3", assunto: "4.3 — Engenharia social e verificação de solicitações",
+    contexto: "Uma pessoa que se apresenta como suporte técnico pede a um servidor público que informe um código de autenticação de uso único para resolver uma suposta falha urgente.",
+    enunciado: "Qual resposta aplica melhor uma defesa contra engenharia social?",
     alternativas: [
-      { letra: "A", texto: "Técnicas de criptografia de dados." },
-      { letra: "B", texto: "A manipulação psicológica de pessoas para obter acesso ou informações." },
-      { letra: "C", texto: "A implementação de firewalls." },
-      { letra: "D", texto: "O uso de antivírus." },
-      { letra: "E", texto: "A configuração de roteadores." }
+      { letra: "A", texto: "Fornecer o código porque o solicitante conhece o cargo e o nome do servidor." },
+      { letra: "B", texto: "Publicar o código em um canal interno para que outras pessoas confirmem se é válido." },
+      { letra: "C", texto: "Enviar o código, mas solicitar que o suporte prometa não reutilizá-lo." },
+      { letra: "D", texto: "Confiar na solicitação sempre que houver urgência e linguagem profissional." },
+      { letra: "E", texto: "Interromper a interação e confirmar a solicitação por um canal institucional independente já conhecido, sem compartilhar o código." }
     ],
-    gabarito: "B",
-    justificativa: "Engenharia social é o processo de manipulação psicológica de pessoas para obter acesso a sistemas, informações ou ações, aproveitando a confiança, a autoridade ou a urgência. Técnicas de criptografia são técnicas de proteção (alternativa A incorreta); firewalls são defensivos (alternativa C incorreta); antivírus são ferramentas defensivas (alternativa D incorreta); configuração de roteadores é um procedimento técnico (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "Engenharia social explora confiança, autoridade, urgência, familiaridade ou medo para induzir ações. Dados reais sobre a vítima não autenticam o solicitante. Códigos de uso único e outros segredos de autenticação não devem ser compartilhados; solicitações sensíveis devem ser confirmadas por um canal independente e reportadas conforme o procedimento institucional.",
     analise: {
-      A: "INCORRETA. Engenharia social é uma técnica de manipulação social, não de criptografia.",
-      B: "CORRETA. Engenharia social explora a psicologia humana para obter acesso ou informações.",
-      C: "INCORRETA. Firewall é uma defesa, não um ataque de engenharia social.",
-      D: "INCORRETA. Antivírus é uma ferramenta defensiva, não um ataque.",
-      E: "INCORRETA. Configuração de roteadores é uma atividade de administração de rede."
+      A: "INCORRETA. Conhecer dados do servidor não prova a identidade do solicitante.",
+      B: "INCORRETA. Publicar o código expõe a credencial e amplia o risco.",
+      C: "INCORRETA. Um código de autenticação é segredo temporário e não deve ser compartilhado.",
+      D: "INCORRETA. Urgência e linguagem profissional podem ser usadas para manipular a vítima.",
+      E: "CORRETA. A confirmação independente evita depender do mesmo canal potencialmente fraudulento."
     },
-    regra: "Engenharia social = 'estupidez tecnológica'. Explora a psicologia humana para obter o que se quer.",
-    pegadinha: "Engenharia social não é 'engenharia inversa' — é 'manipulação de pessoas'.",
-    fonte: "NIST SP 800-115 (Technical Guide to Information Security Testing and Assessment)."
+    regra: "Confirme pedidos sensíveis por canal independente e nunca compartilhe códigos de autenticação.",
+    pegadinha: "Conhecimento de dados pessoais ou linguagem profissional não comprova identidade nem legitimidade.",
+    fonte: "CISA, Avoiding Social Engineering and Phishing Attacks: https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks."
   },
 
-  { id: "q-m4-24", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Força Bruta e Password Spraying",
-    contexto: "Um atacante tenta adivinhar senhas de contas de usuários.",
-    enunciado: "A 'força bruta' em criptografia é uma técnica de:",
+{ id: "q-m4-24", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Força bruta e tentativas de autenticação",
+    contexto: "Um serviço observa tentativas automatizadas de adivinhar senhas. A equipe precisa diferenciar ataques online contra o serviço de tentativas offline contra hashes de senhas obtidos indevidamente.",
+    enunciado: "Qual afirmação sobre força bruta e suas mitigações é correta?",
     alternativas: [
-      { letra: "A", texto: "Que garante a segurança de uma senha." },
-      { letra: "B", texto: "Que testa todas as combinações possíveis de caracteres até encontrar a senha." },
-      { letra: "C", texto: "Que criptografa dados de forma mais segura." },
-      { letra: "D", texto: "De autenticação sem senha." },
-      { letra: "E", texto: "De limpeza de dados." }
+      { letra: "A", texto: "O armazenamento de senhas em texto claro é a melhor forma de detectar força bruta." },
+      { letra: "B", texto: "Força bruta é uma técnica de autenticação sem senha." },
+      { letra: "C", texto: "A limitação de tentativas no site impede qualquer tentativa offline contra hashes roubados." },
+      { letra: "D", texto: "Força bruta testa sistematicamente combinações candidatas; limites de tentativa ajudam em ataques online, enquanto hashes de senha robustos e parâmetros de custo ajudam a dificultar ataques offline." },
+      { letra: "E", texto: "Força bruta não pode ser mitigada por nenhum controle." }
     ],
-    gabarito: "B",
-    justificativa: "Força bruta é uma técnica de quebra de senhas/criptografia que testa sistematicamente todas as combinações possíveis até achar a correta. Garante segurança? Não (alternativa A incorreta); criptografa mais segura? Inversamente, enfraquece (alternativa C incorreta); autenticação sem senha é a autenticação MFA ou biométrica (alternativa D incorreta); limpeza de dados não se aplica (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Força bruta envolve testar sistematicamente combinações candidatas para encontrar uma senha ou chave. Em ataques online, limitação adaptativa, detecção, MFA e controles de autenticação reduzem oportunidades; em ataques offline, o atacante testa candidatos contra material obtido, por isso o armazenamento de senhas deve usar esquemas adequados com sal e custo. Nenhuma medida isolada garante bloqueio absoluto.",
     analise: {
-      A: "INCORRETA. Força bruta é uma técnica de quebra, não de segurança.",
-      B: "CORRETA. Força bruta testa todas as combinações até encontrar a chave/senha.",
-      C: "INCORRETA. Força bruta não criptografa mais segura — enfraquece a segurança.",
-      D: "INCORRETA. Autenticação sem senha é uma alternativa, não a força bruta.",
-      E: "INCORRETA. Limpeza de dados não é uma definição de força bruta."
+      A: "INCORRETA. Senhas não devem ser armazenadas em texto claro; detecção não justifica expor credenciais.",
+      B: "INCORRETA. Autenticação sem senha é um mecanismo de autenticação, não um ataque de força bruta.",
+      C: "INCORRETA. O atacante offline pode testar candidatos sem consultar o serviço online.",
+      D: "CORRETA. A alternativa diferencia os cenários online e offline e associa controles adequados a cada um.",
+      E: "INCORRETA. Controles diferentes reduzem a viabilidade e o impacto, embora não garantam risco zero."
     },
-    regra: "Força bruta = 'tentar todas as senhas possíveis' — 'adivinhar tudo'.",
-    pegadinha: "Força bruta não é 'quebrar' — é 'tentar todas as opções' até acertar.",
-    fonte: "Offensive Security — Brute Force Attacks, 2021."
+    regra: "Ataques online exigem controles no serviço; ataques offline exigem armazenamento de senha resistente a tentativas e proteção do material obtido.",
+    pegadinha: "Limitar tentativas no login não protege, por si só, hashes de senha já roubados.",
+    fonte: "NIST SP 800-63B-4 — Digital Identity Guidelines: Authentication and Authenticator Management: https://csrc.nist.gov/pubs/sp/800/63/b/4/final."
   },
 
-  { id: "q-m4-25", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Ataque de “Man-in-the-Middle” (MitM)",
-    contexto: "Dois sistemas se comunicam, e um atacante intercepta e maliciosamente modifica as mensagens.",
-    enunciado: "O ataque de 'Man-in-the-Middle' (MitM) consiste em:",
+{ id: "q-m4-25", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Man-in-the-Middle e validação de identidade",
+    contexto: "Um usuário acessa um serviço por uma rede pública. Um atacante tenta intermediar a comunicação e apresentar um certificado inválido para se passar pelo servidor.",
+    enunciado: "Qual medida ajuda a impedir que o cliente aceite um intermediário fraudulento?",
     alternativas: [
-      { letra: "A", texto: "Autenticar duas partes legítimas." },
-      { letra: "B", texto: "Um atacante se posicionando entre as duas partes, interceptando e modificando a comunicação." },
-      { letra: "C", texto: "Criptografar a comunicação entre as partes." },
-      { letra: "D", texto: "Melhorar a velocidade de rede." },
-      { letra: "E", texto: "Proteger os dados contra interceptação." }
+      { letra: "A", texto: "Ignorar avisos de certificado para manter o acesso disponível." },
+      { letra: "B", texto: "Presumir que o uso de criptografia torna impossível um ataque de intermediário, mesmo com validação desativada." },
+      { letra: "C", texto: "Usar apenas um firewall local e dispensar a autenticação do servidor." },
+      { letra: "D", texto: "Confiar em qualquer rede Wi-Fi que exija senha." },
+      { letra: "E", texto: "Validar corretamente o certificado, a cadeia de confiança e o nome do servidor, usando um protocolo seguro configurado de forma adequada." }
     ],
-    gabarito: "B",
-    justificativa: "MitM é um ataque onde o invasor coloca-se entre duas partes que estão se comunicando, podendo interceptar e/ou modificar mensagens. Autenticar partes legítimas é uma função de rede segura (alternativa A incorreta); criptografar é uma defesa, não um ataque MitM (alternativa C incorreta); melhorar velocidade de rede não está relacionado (alternativa D incorreta); proteger contra interceptação é o oposto (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "Um ataque Man-in-the-Middle (MitM) pode permitir que um intermediário observe ou altere a comunicação. Um protocolo criptográfico corretamente configurado e a validação do certificado e do nome do servidor ajudam a autenticar o endpoint e proteger o canal. Ignorar avisos ou desativar validação pode permitir que a conexão criptografada seja estabelecida com o endpoint errado.",
     analise: {
-      A: "INCORRETA. MitM não autentica partes legítimas — ele se passa por intermediário.",
-      B: "CORRETA. MitM é a posse do canal de comunicação, permitindo interceptação e modificação.",
-      C: "INCORRETA. Criptografia dificulta MitM, não é um ataque.",
-      D: "INCORRETA. MitM não melhora velocidade — além disso, pode degradar.",
-      E: "INCORRETA. MitM é uma forma de interceptação, não proteção."
+      A: "INCORRETA. Ignorar avisos pode eliminar uma defesa importante contra certificados inválidos.",
+      B: "INCORRETA. Criptografia sem validação correta de identidade pode proteger um canal com o endpoint errado.",
+      C: "INCORRETA. Firewall local não substitui a autenticação do servidor no canal.",
+      D: "INCORRETA. Uma rede Wi-Fi protegida por senha não é necessariamente confiável.",
+      E: "CORRETA. A validação de identidade é essencial para evitar confiar em um intermediário fraudulento."
     },
-    regra: "MitM = 'porta do diabo'. O atacante se torna o 'meio' entre duas partes.",
-    pegadinha: "MitM não é 'proteção' — é 'intercepção' de comunicação entre duas partes.",
-    fonte: "NIST SP 800-53 (SC-7: Boundary Protection)."
+    regra: "Criptografia de canal deve ser acompanhada de validação correta da identidade do servidor.",
+    pegadinha: "Criptografia sem validação do endpoint não garante que a conexão foi estabelecida com o servidor pretendido.",
+    fonte: "NIST SP 800-52 Rev. 2 — Guidelines for the Selection, Configuration, and Use of TLS Implementations: https://csrc.nist.gov/pubs/sp/800/52/r2/final."
   },
 
-  { id: "q-m4-26", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-3", assunto: "4.3 — Ataque de negação de serviço (DoS/DDoS)",
-    contexto: "Uma organização é alvo de um ataque de negação de serviço.",
-    enunciado: "Sobre o ataque de negação de serviço (DoS) e DDoS, é correto afirmar que:",
+{ id: "q-m4-26", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "avancado", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — DoS/DDoS e mitigação",
+    contexto: "Um portal público fica indisponível durante um pico de requisições distribuídas provenientes de muitos dispositivos. A equipe precisa manter serviços essenciais acessíveis.",
+    enunciado: "Qual resposta técnica inicial é mais adequada para um possível ataque de negação de serviço distribuído (DDoS)?",
     alternativas: [
-      { letra: "A", texto: "O objetivo é melhorar a disponibilidade do serviço." },
-      { letra: "B", texto: "O objetivo é travar ou inutilizar um sistema, impedindo o acesso legítimo." },
-      { letra: "C", texto: "O ataque não gera impacto mensurável." },
-      { letra: "D", texto: "O ataque é injusto e deve ser ignorado." },
-      { letra: "E", texto: "O ataque não pode ser detectado." }
+      { letra: "A", texto: "Desligar permanentemente todos os serviços e descartar os registros de tráfego." },
+      { letra: "B", texto: "Desativar monitoramento e alertas para reduzir a carga do sistema." },
+      { letra: "C", texto: "Aumentar indiscriminadamente todos os limites de conexão, sem observar a capacidade da infraestrutura." },
+      { letra: "D", texto: "Presumir que o tráfego é legítimo porque vem de muitos endereços IP diferentes." },
+      { letra: "E", texto: "Validar a anomalia com telemetria, acionar o provedor e os controles de mitigação disponíveis, priorizar serviços essenciais e preservar evidências." }
     ],
-    gabarito: "B",
-    justificativa: "DoS/DDoS buscam travar ou inutilizar um serviço, impedindo o acesso legítimo a ele. O objetivo é derrubar a disponibilidade, não melhorar (alternativa A incorreta); o impacto é claramente mensurável (queda de tráfego, indisponibilidade, perda de receita — alternativa C incorreta); o ataque é ilegal e deve ser reportado e mitigado — ignorar é negligência (alternativa D incorreta); o ataque é detectável por anomalias no tráfego (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "DoS busca degradar ou interromper a disponibilidade; DDoS envolve origens distribuídas. A resposta depende do vetor e da arquitetura e pode incluir validação por telemetria, coordenação com provedores, filtragem ou mitigação especializada, priorização de serviços e preservação de evidências. Não há uma medida única que resolva todos os ataques.",
     analise: {
-      A: "INCORRETA. O objetivo é reduzir a disponibilidade, não melhorar.",
-      B: "CORRETA. DoS/DDoS travar um sistema ou rede, impedindo o acesso legítimo.",
-      C: "INCORRETA. O impacto para o alvo é drástico — indisponibilidade e perdas financeiras.",
-      D: "INCORRETA. O ataque deve ser reportado e mitigado, não ignorado.",
-      E: "INCORRETA. O ataque é detectável por análise de tráfego anômalo."
+      A: "INCORRETA. Desligamento indiscriminado e descarte de registros podem ampliar o impacto e prejudicar a investigação.",
+      B: "INCORRETA. Desativar monitoramento reduz a visibilidade durante o incidente.",
+      C: "INCORRETA. Aumentar limites sem análise pode sobrecarregar ainda mais a infraestrutura.",
+      D: "INCORRETA. A distribuição de origens é compatível com DDoS e não prova legitimidade.",
+      E: "CORRETA. A resposta combina análise, mitigação coordenada, priorização de serviços e preservação de evidências."
     },
-    regra: "DoS/DDoS = 'tirar a internet do ar'. Infinitar tráfego injustamente para travar o serviço.",
-    pegadinha: "Não confundir: DoS é um ataque; 'DoS' em inglês também é 'serviço de negócios' — mas no contexto é ataque.",
-    fonte: "Cisco — Understanding Denial of Service Attacks, 2020."
+    regra: "DDoS visa degradar disponibilidade com tráfego ou solicitações distribuídas; a mitigação deve ser orientada por telemetria, vetor e capacidade.",
+    pegadinha: "Muitas origens não significam necessariamente tráfego legítimo; investigue o padrão e coordene a mitigação.",
+    fonte: "CISA, Understanding and Responding to Distributed Denial-of-Service Attacks: https://www.cisa.gov/news-events/news/understanding-and-responding-distributed-denial-service-attacks."
   },
 
-  { id: "q-m4-27", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Vazamento de dados",
-    contexto: "Ágencia pública expõe dados de cidadãos por falha de configuração.",
-    enunciado: "O 'vazamento de dados' (data breach) ocorre quando:",
+  { id: "q-m4-27", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Incidente de exposição de dados",
+    contexto: "Uma agência pública descobre que um repositório foi configurado como público e pode ter exposto dados pessoais a pessoas não autorizadas.",
+    enunciado: "Qual é a resposta inicial mais adequada após identificar a possível exposição?",
     alternativas: [
-      { letra: "A", texto: "Os dados são acessados ou divulgados de forma não autorizada." },
-      { letra: "B", texto: "Os dados são criptografados com segurança." },
-      { letra: "C", texto: "Os dados são armazenados emBackups." },
-      { letra: "D", texto: "Os dados são consolidados em relatórios." },
-      { letra: "E", texto: "Os dados são validados numericamente." }
+      { letra: "A", texto: "Divulgar a lista de pessoas afetadas e seus dados para demonstrar transparência." },
+      { letra: "B", texto: "Apagar imediatamente todos os dados e logs sem preservar evidências." },
+      { letra: "C", texto: "Aguardar uma reclamação pública antes de investigar." },
+      { letra: "D", texto: "Restringir o acesso indevido, preservar registros e evidências, avaliar o escopo e o impacto e acionar os responsáveis para cumprir os procedimentos de resposta e as obrigações aplicáveis." },
+      { letra: "E", texto: "Presumir que não houve incidente porque a exposição resultou de configuração, e não de invasão." }
     ],
-    gabarito: "A",
-    justificativa: "Vazamento de dados é o acesso, divulgação ou exposição não autorizada de informações sensíveis. Criptografia é uma proteção (alternativa B incorreta); backups são cópias de segurança (alternativa C incorreta); consolidação em relatórios não é vazamento (alternativa D incorreta); validação numérica não é vazamento (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Uma exposição não autorizada pode constituir incidente mesmo quando decorre de erro de configuração, sem invasão comprovada. A resposta deve restringir o acesso indevido, preservar evidências, avaliar dados e pessoas potencialmente afetados, documentar decisões e acionar responsáveis jurídicos, de privacidade e de segurança para determinar notificações e outras obrigações conforme o caso.",
     analise: {
-      A: "CORRETA. Data breach ocorre quando dados são acessados ou divulgados sem autorização.",
-      B: "INCORRETA. Criptografia protege contra vazamento, não é um vazamento em si.",
-      C: "INCORRETA. Backup é uma cópia de segurança, não um vazamento.",
-      D: "INCORRETA. Consolidação em relatórios não é vazamento de dados.",
-      E: "INCORRETA. Validação numérica não envolve vazamento."
+      A: "INCORRETA. Divulgar dados das pessoas afetadas pode agravar a exposição.",
+      B: "INCORRETA. A exclusão indiscriminada pode destruir evidências e não substitui contenção segura.",
+      C: "INCORRETA. A organização deve investigar prontamente, sem depender de reclamação pública.",
+      D: "CORRETA. A alternativa combina contenção, preservação, avaliação e escalonamento para decidir as medidas aplicáveis.",
+      E: "INCORRETA. Uma configuração incorreta pode expor dados sem exploração ativa e ainda assim exigir resposta."
     },
-    regra: "Data breach = 'dados fora do controle'. Exposição não autorizada de informações sensíveis.",
-    pegadinha: "Vazamento de dados não é 'erro de edição' — é 'acesso não autorizado'.",
-    fonte: "ANPD — Relatório de Incidentes de Vazamento, 2022."
+    regra: "Em possível exposição de dados, contenha, preserve evidências, avalie escopo/impacto e acione responsáveis para definir obrigações e comunicações.",
+    pegadinha: "A ausência de invasão comprovada não significa ausência de incidente ou de risco para titulares.",
+    fonte: "ANPD, Comunicação de incidente de segurança: https://www.gov.br/anpd/pt-br/assuntos/incidente-de-seguranca."
   },
 
-  { id: "q-m4-28", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Ataque de intermediário (Man-in-the-Middle) — telefonia",
-    contexto: "Em uma comunicação entre dois sistemas, um atacante consegue interceptar e modificar as mensagens:",
-    enunciado: "Em um ataque MitM no contexto de comunicação de dados, o atacante:",
+  { id: "q-m4-28", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Ataques de repetição (replay)",
+    contexto: "Um serviço aceita uma mensagem de autorização capturada anteriormente, embora ela tenha sido enviada em uma sessão legítima no passado.",
+    enunciado: "Qual propriedade ou mecanismo ajuda a reduzir o risco de um ataque de repetição (replay)?",
     alternativas: [
-      { letra: "A", texto: "Permite que os dois sistemas se comuniquem diretamente." },
-      { letra: "B", texto: "Estabelece uma ponte entre eles, intercetando e modificar mensagens." },
-      { letra: "C", texto: "Aumenta a velocidade da comunicação." },
-      { letra: "D", texto: "Bloqueia todas as mensagens permanentemente." },
-      { letra: "E", texto: "Substitui a criptografia pela autenticação." }
+      { letra: "A", texto: "Confiar apenas no endereço IP de origem, sem verificar a sessão ou a mensagem." },
+      { letra: "B", texto: "Reutilizar indefinidamente a mesma mensagem de autorização, pois ela foi válida uma vez." },
+      { letra: "C", texto: "Desativar autenticação para evitar que mensagens sejam rejeitadas." },
+      { letra: "D", texto: "Usar nonces, números de sequência, timestamps ou identificadores de sessão validados para rejeitar mensagens repetidas ou fora de contexto." },
+      { letra: "E", texto: "Aumentar o tamanho dos arquivos transmitidos." }
     ],
-    gabarito: "B",
-    justificativa: "MitM no contexto de comunicação de dados é entender a ponte entre duas partes, permitindo interceptar e potencialmente modificar as mensagens. Permite comunicação direta? Não (alternativa A incorreta); aumentar velocidade? Não (alternativa C incorreta); bloquear permanentemente todas as mensagens não é MitM (alternativa D incorreta); substituir criptografia pela autenticação não é MitM (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Um ataque de repetição reapresenta mensagens ou transações válidas capturadas anteriormente. Protocolos podem usar nonces, números de sequência, timestamps, expiração e vinculação à sessão para detectar duplicação ou contexto inválido. Esses mecanismos precisam ser validados corretamente e não substituem a proteção geral do protocolo.",
     analise: {
-      A: "INCORRETA. MitM interrompe a comunicação direta entre as partes.",
-      B: "CORRETA. MitM age como 'meio' intermediário, interceptando e modificando mensagens.",
-      C: "INCORRETA. MitM não melhora a velocidade da comunicação.",
-      D: "INCORRETA. Bloqueio permanente de todas as mensagens é um ataque de negação de serviço, não MitM.",
-      E: "INCORRETA. MitM não substitui criptografia pela autenticação — ele sabotagem o processo."
+      A: "INCORRETA. Endereços IP podem ser compartilhados, alterados ou falsificados e não provam validade da transação.",
+      B: "INCORRETA. Uma mensagem válida no passado não deve ser automaticamente aceita de novo.",
+      C: "INCORRETA. Desativar autenticação enfraquece a proteção contra abuso.",
+      D: "CORRETA. Valores únicos e controles temporais ou de sequência permitem detectar mensagens repetidas ou fora de contexto.",
+      E: "INCORRETA. O tamanho do arquivo não previne replay."
     },
-    regra: "MitM = 'meio entre dois'. A comunicação é vista e manipulada por um terceiro.",
-    pegadinha: "MitM não é 'seção' — é 'intercepção ativa' da comunicação entre dois lados.",
-    fonte: "Cyber threats — MITM attacks and prevention, 2022."
+    regra: "Replay é a reutilização de mensagem/transação capturada; use mecanismos de frescor e vinculação ao contexto previstos pelo protocolo.",
+    pegadinha: "Uma mensagem autenticada pode ser reproduzida se o protocolo não verificar frescor, sequência ou unicidade.",
+    fonte: "NIST SP 800-63B-4 — Digital Identity Guidelines: Authentication and Authenticator Management: https://csrc.nist.gov/pubs/sp/800/63/b/4/final; RFC 8446 — The Transport Layer Security (TLS) Protocol Version 1.3: https://www.rfc-editor.org/rfc/rfc8446."
   },
 
-  { id: "q-m4-29", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Indicadores de Comprometimento (IoCs)",
-    contexto: "Um analista de segurança identifica indicadores de que um sistema foi comprometido.",
-    enunciado: "Indicadores de Comprometimento (Indicators of Compromise, IoC) são:",
+  { id: "q-m4-29", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Indicadores de comprometimento (IoCs)",
+    contexto: "Um analista encontra um hash de arquivo suspeito, conexões com um domínio associado a malware e uma sequência incomum de processos em um endpoint.",
+    enunciado: "Como os indicadores de comprometimento (IoCs) devem ser usados na investigação?",
     alternativas: [
-      { letra: "A", texto: "Padrões ou evidências técnicas que sugerem um sistema foi comprometido." },
-      { letra: "B", texto: "Métricas de desempenho de rede." },
-      { letra: "C", texto: "Ferramentas de proteção anti-malware." },
-      { letra: "D", texto: "Protocolos de autenticação." },
-      { letra: "E", texto: "Relatórios de audiência." }
+      { letra: "A", texto: "Como substitutos de registros, análise e confirmação do incidente." },
+      { letra: "B", texto: "Como prova isolada e definitiva de que todo sistema que contém o indicador está comprometido." },
+      { letra: "C", texto: "Como ferramentas que removem automaticamente qualquer malware." },
+      { letra: "D", texto: "Como evidências que orientam a investigação e a correlação, avaliadas no contexto e atualizadas conforme novas informações." },
+      { letra: "E", texto: "Como métricas exclusivamente de desempenho de rede." }
     ],
-    gabarito: "A",
-    justificativa: "IoC são evidências técnicas (endereços IP, hash de arquivos, padrões de rede, comportamento incomum) que sugerem que um sistema foi comprometido. Métricas de desempenho (alternativa B incorreta); ferramentas de proteção são defesas, não indicadores (alternativa C incorreta); protocolos de autenticação são estruturas, não indicadores (alternativa D incorreta); relatórios de audiência são processos administrativos (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "IoCs são artefatos ou padrões observáveis que podem indicar comprometimento, como hashes, domínios, endereços, artefatos de host ou padrões de comportamento. Um indicador pode ser compartilhado por atividade legítima, ficar desatualizado ou ter baixa especificidade; deve ser correlacionado com outras evidências e com o contexto antes de concluir que ocorreu comprometimento.",
     analise: {
-      A: "CORRETA. IoC são padrões técnicos que indicam comprometimento de um sistema.",
-      B: "INCORRETA. Desempenho de rede é métrica, não indicador de comprometimento.",
-      C: "INCORRETA. Antivírus é uma defesa, não um indicador de comprometimento.",
-      D: "INCORRETA. Autenticação é um processo de segurança, não indicador de comprometimento.",
-      E: "INCORRETA. Relatório de audiência é processo administrativo."
+      A: "INCORRETA. A investigação exige registros, análise e confirmação conforme a evidência disponível.",
+      B: "INCORRETA. Um indicador isolado não é necessariamente prova conclusiva e pode gerar falsos positivos.",
+      C: "INCORRETA. IoCs são evidências ou padrões; não são, por si, ferramentas de remediação.",
+      D: "CORRETA. IoCs ajudam a orientar busca e correlação, mas precisam de contexto e validação.",
+      E: "INCORRETA. IoCs não se limitam a métricas de desempenho."
     },
-    regra: "IoC = 'pistas da invasão'. Evidências técnicas de que o sistema foi comprometido.",
-    pegadinha: "IoC não é 'indicador de desempenho' — é 'indicador de invasão'.",
-    fonte: "MITRE ATT&CK — Detection and Response, 2022."
+    regra: "IoCs são pistas técnicas para orientar detecção e investigação; correlacione indicadores com contexto e outras evidências.",
+    pegadinha: "Um IoC não prova sozinho o comprometimento nem garante que um sistema sem aquele indicador esteja limpo.",
+    fonte: "CISA, Cybersecurity Incident & Vulnerability Response Playbooks: https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks."
   },
 
-  { id: "q-m4-30", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-3", assunto: "4.3 — Ataque de “Man-in-the-Middle” — Redes",
-    contexto: "No contexto de redes, um ataque MitM ocorre quando um atacante intercepta a comunicação entre dois hosts:",
-    enunciado: "O ataque MitM no contexto de redes",
+  { id: "q-m4-30", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Ataques à cadeia de suprimentos",
+    contexto: "Uma organização instala uma atualização legítima de um fornecedor, mas depois descobre que o mecanismo de distribuição ou o processo de desenvolvimento foi comprometido.",
+    enunciado: "Qual cenário caracteriza um ataque à cadeia de suprimentos de software?",
     alternativas: [
-      { letra: "A", texto: "Permite a comunicação direta e segura entre dois hosts." },
-      { letra: "B", texto: "O atacante intercepta e maliciosamente modifica as mensagens entre os dois hosts." },
-      { letra: "C", texto: "Criptografa a comunicação entre dois hosts." },
-      { letra: "D", texto: "Elimina a necessidade de criptografia." },
-      { letra: "E", texto: "Betters a segurança da comunicação." }
+      { letra: "A", texto: "Realizar uma cópia de segurança testada antes de uma implantação." },
+      { letra: "B", texto: "Executar exclusivamente um ataque de força bruta contra uma única conta de usuário." },
+      { letra: "C", texto: "Aplicar uma atualização oficial verificada e autorizada conforme o processo de gestão de mudanças." },
+      { letra: "D", texto: "Comprometer um fornecedor, dependência, processo de construção ou canal de distribuição para atingir organizações que confiam no componente ou atualização." },
+      { letra: "E", texto: "Monitorar logs para identificar mudanças não autorizadas." }
     ],
-    gabarito: "B",
-    justificativa: "MitM no contexto de redes é quando o atacante intercepta e modifica passivamente as mensagens entre dois hosts. Permitir comunicação direta e segura (alternativa A incorreta); criptografar (alternativa C incorreta); eliminar necessidade de criptografia (alternativa D incorreta); melhorar segurança (alternativa E incorreta) não são definições de MitM.",
+    gabarito: "D",
+    justificativa: "Ataques à cadeia de suprimentos comprometem um fornecedor, dependência, ferramenta, ambiente de build ou canal de distribuição para alcançar organizações que confiam nesses componentes. A defesa pode incluir inventário de dependências, revisão de fornecedores, proteção do pipeline, verificação de assinaturas e proveniência, segregação de funções e monitoramento; nenhuma medida isolada elimina todo o risco.",
     analise: {
-      A: "INCORRETA. MitM não permite comunicação direta e segura — ele intercepta a comunicação.",
-      B: "CORRETA. MitM é a intercepção maliciosa e modificação de mensagens entre dois hosts.",
-      C: "INCORRETA. Criptografia é uma defesa, não um ataque MitM.",
-      D: "INCORRETA. MitM não elimina a necessidade de criptografia — ele a contorna.",
-      E: "INCORRETA. MitM não betters a segurança — ele a compromete."
+      A: "INCORRETA. Backup testado é uma prática de recuperação, não um ataque à cadeia de suprimentos.",
+      B: "INCORRETA. Força bruta contra uma conta não caracteriza, por si, ataque à cadeia de suprimentos.",
+      C: "INCORRETA. Uma atualização autorizada e verificada faz parte da gestão legítima de mudanças.",
+      D: "CORRETA. A alternativa descreve o comprometimento de um elo confiável para afetar consumidores do software ou serviço.",
+      E: "INCORRETA. Monitoramento de logs é um controle defensivo."
     },
-    regra: "MitM = 'troca de papéis'. A comunicação entre dois hosts é enganada e controlada por um atacante.",
-    pegadinha: "No MitM, o atacante não está 'do outro lado' — está 'no meio' entre eles.",
-    fonte: "MITRE ATT&CK — T1557 (Man-in-the-Middle), 2022."
+    regra: "Ataque à cadeia de suprimentos compromete fornecedor, dependência, pipeline ou distribuição para alcançar consumidores que confiam no componente.",
+    pegadinha: "Um pacote assinado ou vindo de fornecedor conhecido não é garantia absoluta se o processo confiável que o produziu foi comprometido.",
+    fonte: "CISA, Defending Against Software Supply Chain Attacks: https://www.cisa.gov/resources-tools/resources/defending-against-software-supply-chain-attacks."
   },
-
-  /* ===================== 4.4 Legislação (10 questões) ===================== */
 
   { id: "q-m4-31", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "basico", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Lei 13.709/2018",
-    contexto: "A LGPD (Lei nº 13.709/2018) regulamenta o tratamento de dados pessoais no Brasil.",
-    enunciado: "A LGPD (Lei nº 13.709/2018) tem como princípio fundamental:",
+    nivel: "basico", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — princípios do tratamento",
+    contexto: "Uma organização define como coletará e utilizará dados pessoais para prestar um serviço.",
+    enunciado: "À luz da LGPD, qual prática está alinhada aos princípios que regem o tratamento de dados pessoais?",
     alternativas: [
-      { letra: "A", texto: "A liberdade incondicional de acesso a todos os dados." },
-      { letra: "B", texto: "O tratamento de dados pessoais com base em bases legais e orientado aos direitos dos titulares." },
-      { letra: "C", texto: "A venda ilimitada de dados pessoais." },
-      { letra: "D", texto: "A exclusão total de todos os registros." },
-      { letra: "E", texto: "A publicidade irrestrita de dados pessoais." }
+      { letra: "A", texto: "Coletar todos os dados que possam ser úteis no futuro, mesmo sem finalidade definida." },
+      { letra: "B", texto: "Conservar os dados indefinidamente, pois a LGPD proíbe a eliminação de registros." },
+      { letra: "C", texto: "Tratar qualquer dado pessoal apenas com consentimento, independentemente da hipótese legal aplicável." },
+      { letra: "D", texto: "Publicar os dados pessoais para demonstrar transparência, mesmo quando não houver base legal para divulgação." },
+      { letra: "E", texto: "Definir finalidades legítimas e específicas, limitar a coleta ao necessário e informar o titular de modo adequado." }
     ],
-    gabarito: "B",
-    justificativa: "A LGPD estabelece princípios para o tratamento de dados pessoais, com foco nos direitos dos titulares (demandantes) e nas bases legais do tratamento. Liberdade incondicional (alternativa A incorreta); venda ilimitada (alternativa C incorreta); exclusão total (alternativa D incorreta); publicidade irrestrita dos dados (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "A LGPD estabelece princípios como finalidade, adequação, necessidade e transparência (art. 6º). A organização deve definir propósitos legítimos e específicos, limitar os dados ao mínimo pertinente e fornecer informações claras sobre o tratamento. Consentimento é uma das bases legais, não a única; a existência de dados pessoais não autoriza divulgação pública indiscriminada nem conservação sem limite.",
     analise: {
-      A: "INCORRETA. A LGPD não é liberal incondicional — respeita os direitos fundamentais.",
-      B: "CORRETA. A LGPD regula o tratamento de dados pessoais, exigindo bases legais e protegendo os titulares.",
-      C: "INCORRETA. A LGPD não autoriza venda ilimitada de dados pessoais.",
-      D: "INCORRETA. A exclusão é um direito, mas não é o princípio central — tratamento com base legal é central.",
-      E: "INCORRETA. Dados pessoais não têm acesso público irrestrito."
+      A: "INCORRETA. A coleta deve observar finalidade, adequação e necessidade; utilidade futura genérica não justifica acumular dados sem limite.",
+      B: "INCORRETA. A conservação deve respeitar a finalidade e as hipóteses legais; a LGPD prevê eliminação quando cabível, ressalvadas as exceções legais.",
+      C: "INCORRETA. A LGPD prevê diferentes bases legais, cuja aplicabilidade depende do contexto; consentimento não é obrigatório em todo tratamento.",
+      D: "INCORRETA. Transparência no tratamento não significa divulgação pública irrestrita de dados pessoais.",
+      E: "CORRETA. A alternativa aplica finalidade específica, minimização e transparência, em conformidade com os princípios do art. 6º."
     },
-    regra: "LGPD = 'direito de saber, decidir e controlar' o uso de seus dados.",
-    pegadinha: "LGPD não é 'dados em aberto' — é 'dados protegidos, acesso limitado, consentimento e base legal'.",
-    fonte: "Lei nº 13.709/2018 (LGPD), arts. 1º, 3º, 4º."
+    regra: "Princípios da LGPD incluem finalidade, adequação, necessidade, transparência, segurança, prevenção, não discriminação e responsabilização, entre outros do art. 6º.",
+    pegadinha: "Base legal não é sinônimo de consentimento; transparência não significa tornar dados pessoais públicos.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, 7º e 16, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-32", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Marco Civil da Internet",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil da Internet",
     contexto: "A Lei nº 12.965/2014 (Marco Civil da Internet) distingue, em seu texto, os fundamentos da disciplina (art. 2º) dos princípios do uso da internet no Brasil (art. 3º).",
     enunciado: "A Lei nº 12.965/2014 (Marco Civil da Internet) estabelece, em seu art. 3º, os princípios da disciplina de uso da internet no Brasil. Dentre esses princípios estão:",
     alternativas: [
@@ -820,7 +800,7 @@ const moduleQuestions4 = [
       A: "INCORRETA. Escala mundial da rede, pluralidade e diversidade, e abertura e colaboração são FUNDAMENTOS da disciplina (art. 2º, I, III e IV), não princípios do art. 3º.",
       B: "CORRETA. Neutralidade de rede (art. 3º, IV), proteção da privacidade (art. 3º, II) e proteção de dados pessoais (art. 3º, III) são princípios expressos do art. 3º.",
       C: "INCORRETA. Livre iniciativa, livre concorrência, defesa do consumidor e finalidade social da rede são FUNDAMENTOS (art. 2º, V e VI), não princípios do art. 3º.",
-      D: "INCORRETA. Não há princípio de regulamentação prévia de conteúdos; a vedação de bloquear/filtrar pacotes está no art. 9º, §3º (com as ressalvas do §1º), e a remoção de conteúdo por ordem judicial é tratada no art. 19. A menção ao anonimato não corresponde a princípio do art. 3º; o art. 15 trata da guarda de registros de acesso a aplicações, não de anonimato.",
+      D: "INCORRETA. Não há princípio de regulamentação prévia de conteúdos; a vedação de bloquear, monitorar, filtrar ou analisar o conteúdo dos pacotes de dados está no art. 9º, §3º (com as ressalvas do §1º), e a remoção de conteúdo por ordem judicial é tratada no art. 19. A menção ao anonimato não corresponde a princípio do art. 3º; o art. 15 trata da guarda de registros de acesso a aplicações, não de anonimato.",
       E: "INCORRETA. O acesso a dados de conexão pelos provedores exige hipótese legal ou ordem judicial (art. 7º) — não há liberdade absoluta de compartilhamento sem autorização legal."
     },
     regra: "Marco Civil: art. 2º = FUNDAMENTOS; art. 3º = PRINCÍPIOS. Neutralidade de rede, proteção da privacidade e proteção de dados pessoais são PRINCÍPIOS (art. 3º, II, III e IV).",
@@ -829,1327 +809,1294 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-33", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Base Legal",
-    contexto: "Uma empresa deseja tratar dados de clientes para enviar ofertas.",
-    enunciado: "Para tratar dados pessoais com base na LGPD, é necessário que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — base legal e marketing",
+    contexto: "Uma empresa pretende enviar ofertas personalizadas a clientes usando dados obtidos durante compras anteriores.",
+    enunciado: "Antes de iniciar esse tratamento, qual análise é mais adequada à LGPD?",
     alternativas: [
-      { letra: "A", texto: "A empresa possua qualquer base de dados." },
-      { letra: "B", texto: "O tratamento tenha uma base legal prevista na lei e os direitos dos titulares sejam respeitados." },
-      { letra: "C", texto: "Os dados sejam compartilhados com terceiros." },
-      { letra: "D", texto: "Os dados sejam eliminados." },
-      { letra: "E", texto: "Os dados não sejam tratados." }
+      { letra: "A", texto: "Considerar que a existência de cadastro torna qualquer uso posterior dos dados automaticamente permitido." },
+      { letra: "B", texto: "Dispensar medidas de segurança quando os dados forem utilizados apenas para publicidade." },
+      { letra: "C", texto: "Compartilhar os dados com qualquer parceiro comercial, pois o marketing é uma finalidade econômica." },
+      { letra: "D", texto: "Exigir consentimento em todos os casos, sem analisar as demais bases legais previstas na LGPD." },
+      { letra: "E", texto: "Identificar uma base legal aplicável à finalidade, avaliar necessidade e compatibilidade do uso, cumprir deveres de transparência e respeitar os direitos dos titulares." }
     ],
-    gabarito: "B",
-    justificativa: "A LGPD requer que o tratamento de dados pessoais tenha uma das bases legais previstas (consentimento, contratual, legítimo interesse, obrigação legal etc.) e respeite os direitos dos titulares (direito de acesso, correção, exclusão etc.). Qualquer base de dados (alternativa A incorreta); compartilhamento com terceiros sem bases legais (alternativa C incorreta); exclusão total (alternativa D incorreta); não tratar (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "O uso de dados para marketing não é automaticamente autorizado pela existência de cadastro. O controlador deve identificar uma base legal válida para a finalidade concreta, observar os princípios do art. 6º, informar o titular de forma adequada e implementar medidas de segurança. Se invocar legítimo interesse, deve avaliar finalidade, necessidade, expectativas e direitos e liberdades do titular, documentando a análise; essa hipótese não se aplica a dados pessoais sensíveis nos termos do art. 11.",
     analise: {
-      A: "INCORRETA. O tratamento é regido por regras de base legal e direitos dos titulares.",
-      B: "CORRETA. O tratamento deve ter base legal definida e respeitar os direitos dos titulares.",
-      C: "INCORRETA. Compartilhamento com terceiros exige base legal e, em muitos casos, autorização.",
-      D: "INCORRETA. Exclusão é um direito, mas não a única regra de tratamento.",
-      E: "INCORRETA. O tratamento deve ocorrer com base legal, não de forma proibida."
+      A: "INCORRETA. A coleta inicial não autoriza qualquer reutilização; a finalidade e a base legal do novo tratamento precisam ser avaliadas.",
+      B: "INCORRETA. As obrigações de segurança não desaparecem porque o uso é publicitário.",
+      C: "INCORRETA. O compartilhamento exige análise de finalidade, base legal, transparência e salvaguardas aplicáveis.",
+      D: "INCORRETA. Consentimento é uma das bases legais; a base apropriada depende do caso e deve ser demonstrável.",
+      E: "CORRETA. A alternativa reúne base legal, finalidade, necessidade, transparência e respeito aos direitos, sem presumir autorização automática."
     },
-    regra: "LGPD — 'trate seus dados como se fossem seus' — base legal obrigatória.",
-    pegadinha: "Não confunda: base legal não é 'qualquer base' — é uma das base legais previstas por lei.",
-    fonte: "Lei nº 13.709/2018, art. 5º."
+    regra: "Para cada finalidade de tratamento, identifique e documente a base legal e observe finalidade, necessidade, transparência, segurança e direitos do titular.",
+    pegadinha: "Legítimo interesse não é autorização genérica para marketing; exige avaliação concreta e não serve como base do art. 11 para dados pessoais sensíveis.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, 7º, 10 e 11, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-34", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — ANPD e LGPD",
-    contexto: "O ANPD (Autoridade Nacional de Proteção de Dados) é a autoridade responsável pelo monitoramento da LGPD.",
-    enunciado: "A respeito do ANPD e da LGPD, é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — ANPD e LGPD",
+    contexto: "A Agência Nacional de Proteção de Dados (ANPD) é a autarquia federal competente para zelar pela proteção de dados pessoais e fiscalizar o cumprimento da LGPD.",
+    enunciado: "A respeito da Agência Nacional de Proteção de Dados (ANPD) e da LGPD, é correto afirmar que:",
     alternativas: [
-      { letra: "A", texto: "O ANPD é uma entidade privada que fiscaliza os tratamentos de dados." },
-      { letra: "B", texto: "O ANPD é o órgão público federal responsável pela proteção de dados pessoais no Brasil." },
-      { letra: "C", texto: "O ANPD não tem hierarquia para fiscalizar tratamentos de dados." },
-      { letra: "D", texto: "O ANPD é um órgão sem competências para LGPD." },
-      { letra: "E", texto: "O ANPD é um órgão que não exerce fiscalização de dados." }
+      { letra: "A", texto: "A ANPD é uma entidade privada que fiscaliza os tratamentos de dados." },
+      { letra: "B", texto: "A ANPD é uma autarquia de natureza especial que zela pela proteção de dados e fiscaliza o cumprimento da LGPD." },
+      { letra: "C", texto: "A ANPD não tem competência para fiscalizar tratamentos de dados." },
+      { letra: "D", texto: "A ANPD é uma entidade sem competências previstas na LGPD." },
+      { letra: "E", texto: "A ANPD não exerce fiscalização de dados pessoais." }
     ],
     gabarito: "B",
-    justificativa: "O ANPD é um órgão público federal criado para fiscalizar a aplicação da LGPD, proteger dados pessoais e atender aos direitos dos titulares. Entidade privada (alternativa A incorreta); não tem hierarquia para fiscalizar (alternativa C incorreta); sem competências (alternativa D incorreta); não exerce fiscalização (alternativa E incorreta).",
+    justificativa: "A Lei nº 15.352/2026 atualizou a denominação institucional para Agência Nacional de Proteção de Dados e a redação do art. 55-A da LGPD, que atualmente a define como autarquia de natureza especial vinculada ao Ministério da Justiça e Segurança Pública. A natureza de autarquia especial já havia sido estabelecida pela Lei nº 14.460/2022; portanto, não se deve afirmar que a transformação em autarquia ocorreu pela primeira vez em 2026. As competências incluem zelar pela proteção de dados e fiscalizar o cumprimento da LGPD. Entidade privada (alternativa A incorreta); ausência de competência fiscalizatória (alternativas C e E incorretas); ausência de competências legais (alternativa D incorreta).",
     analise: {
-      A: "INCORRETA. O ANPD é um órgão público federal, não uma entidade privada.",
-      B: "CORRETA. ANPD é o órgão público federal responsável pela proteção de dados pessoais.",
-      C: "INCORRETA. O ANPD tem competências para fiscalizar o tratamento de dados.",
-      D: "INCORRETA. O ANPD possui competências regulatórias, sancionadoras e prestadora de serviços.",
-      E: "INCORRETA. O ANPD exerce fiscalização e regulamentação da LGPD."
+      A: "INCORRETA. A ANPD é uma autarquia federal de natureza especial, não uma entidade privada.",
+      B: "CORRETA. A ANPD possui competências legais para zelar pela proteção de dados e fiscalizar o cumprimento da LGPD.",
+      C: "INCORRETA. A fiscalização é uma das competências expressamente previstas na LGPD.",
+      D: "INCORRETA. A LGPD define competências regulatórias e fiscalizatórias para a ANPD.",
+      E: "INCORRETA. A ANPD exerce fiscalização nos termos da LGPD."
     },
-    regra: "ANPD = 'reguladora da LGPD'. Órgão público federal para proteção de dados.",
-    pegadinha: "ANPD não é 'autoridade privada' — é 'órgão público federal' para proteção de dados.",
-    fonte: "Lei nº 13.709/2018, art. 15 e seguintes (ANPD)."
+    regra: "ANPD = Agência Nacional de Proteção de Dados; autarquia de natureza especial com competências de regulação e fiscalização.",
+    pegadinha: "Não usar a denominação histórica Autoridade Nacional como nome institucional atual após a Lei nº 15.352/2026.",
+    fonte: "Lei nº 13.709/2018, arts. 55-A e 55-J, com redação dada pela Lei nº 15.352/2026: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm; Lei nº 14.460/2022, que transformou a ANPD em autarquia de natureza especial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14460.htm; LGPD compilada: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-35", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Direitos dos Titulares",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — Direitos dos Titulares",
     contexto: "Sob a LGPD, o titular dos dados tem direitos específicos sobre seus dados.",
     enunciado: "Entre os direitos dos titulares de dados pessoais previstos na LGPD estão:",
     alternativas: [
       { letra: "A", texto: "O direito de não ser lembrado de nenhum dado." },
-      { letra: "B", texto: "O direito de acesso, correção, atualização, exclusão e portabilidade dos dados." },
+      { letra: "B", texto: "O direito de acesso, correção de dados desatualizados, eliminação de dados nas hipóteses legais e portabilidade nos termos da regulamentação." },
       { letra: "C", texto: "O direito de fornecer dados falsos." },
       { letra: "D", texto: "O direito de excluir todos os registros do passado." },
       { letra: "E", texto: "O direito de não informar dados pessoais a qualquer autoridade." }
     ],
     gabarito: "B",
-    justificativa: "A LGPD reconhece ao titular direitos de acesso, correção, atualização, exclusão, portabilidade e revogação do consentimento. Esquecer dados (alternativa A incorreta); fornecer dados falsos (alternativa C incorreta); excluir todos os registros sem restrição (alternativa D incorreta); não informar dados a qualquer autoridade (alternativa E incorreta).",
+    justificativa: "O art. 18 da LGPD prevê, entre outros, confirmação do tratamento, acesso, correção de dados incompletos, inexatos ou desatualizados, anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade, portabilidade nos termos da regulamentação e revogação do consentimento quando aplicável. Esses direitos têm condições legais e não significam eliminação irrestrita de todo registro. As alternativas A, C, D e E descrevem direitos inexistentes ou absolutos.",
     analise: {
-      A: "INCORRETA. Esquecer é uma das figuras do direito, mas não o único — o direito de acesso é fundamental.",
-      B: "CORRETA. LGPD prevê acesso, correção, atualização, exclusão e portabilidade como direitos fundamentais.",
-      C: "INCORRETA. Fornecer dados falsos não é um direito previsto na LGPD.",
-      D: "INCORRETA. Exclusão não é absoluta — há limitações legais e de interesse público.",
-      E: "INCORRETA. Existem obrigações legais de informação a autoridades."
+      A: "INCORRETA. A LGPD não cria um direito geral e irrestrito de não ser lembrado de qualquer dado.",
+      B: "CORRETA. A LGPD prevê esses direitos, mas a eliminação e a portabilidade obedecem aos requisitos e limites legais aplicáveis.",
+      C: "INCORRETA. Fornecer dados falsos não é um direito previsto no art. 18 da LGPD.",
+      D: "INCORRETA. A eliminação não é absoluta; depende das hipóteses legais e pode haver deveres de conservação.",
+      E: "INCORRETA. A LGPD não estabelece uma proibição absoluta de fornecer dados a autoridades competentes."
     },
-    regra: "Direitos do titular: acesso, correção, atualização, exclusão, portabilidade, revogação.",
-    pegadinha: "Não confunda: 'direito de esquecer' é um direito, mas não é o único — o acesso ele é igualmente fundamental.",
-    fonte: "Lei nº 13.709/2018, art. 18."
+    regra: "Direitos do titular incluem acesso, correção, anonimização, bloqueio, eliminação nas hipóteses legais, portabilidade regulamentada e revogação do consentimento quando aplicável.",
+    pegadinha: "Não confundir direitos previstos na LGPD com um direito absoluto de apagar todo dado ou registro.",
+    fonte: "Lei nº 13.709/2018 (LGPD), art. 18, texto oficial compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-36", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD e Órgãos Competentes",
-    contexto: "A Lei nº 13.709/2018 (LGPD) estabelece o monitoramento do tratamento de dados pessoais no Brasil, inclusive no âmbito da administração pública.",
-    enunciado: "No âmbito da LGPD, os dados pessoais tratados pela administração pública federal são monitorados pelo:",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — ANPD — fiscalização e sanções administrativas",
+    contexto: "Após apurar uma infração à LGPD, uma organização questiona se a ANPD pode adotar medidas administrativas ou se a proteção de dados é matéria exclusivamente judicial.",
+    enunciado: "Qual afirmação descreve melhor a competência da ANPD quanto à fiscalização e às sanções previstas na LGPD?",
     alternativas: [
-      { letra: "A", texto: "Ministério Público." },
-      { letra: "B", texto: "ANPD." },
-      { letra: "C", texto: "Polícia Federal." },
-      { letra: "D", texto: "Justiça Federal." },
-      { letra: "E", texto: "Superintendência de Tecnologia da Informação." }
+      { letra: "A", texto: "A competência da ANPD elimina todas as competências do Poder Judiciário e de outras autoridades legalmente competentes." },
+      { letra: "B", texto: "A ANPD só pode publicar recomendações e nunca pode fiscalizar ou sancionar agentes de tratamento." },
+      { letra: "C", texto: "A ANPD pode impor qualquer penalidade, mesmo que não esteja prevista na legislação." },
+      { letra: "D", texto: "A ANPD pode fiscalizar o cumprimento da LGPD e aplicar as sanções administrativas previstas em lei, observados o procedimento aplicável e os limites legais." },
+      { letra: "E", texto: "A ANPD só pode fiscalizar empresas privadas, nunca operações realizadas pelo Poder Público." }
     ],
-    gabarito: "B",
-    justificativa: "ANPD é o órgão responsável pelo monitoramento da aplicação da LGPD, incluindo o tratamento de dados pelas administrações públicas. Ministério Público (alternativa A incorreta); Polícia Federal (alternativa C incorreta); Justiça Federal (alternativa D incorreta); Superintendência de TI (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "A LGPD atribui à ANPD competências de fiscalização e de aplicação das sanções administrativas legalmente previstas. O exercício dessas competências deve respeitar a lei, o procedimento aplicável e as garantias pertinentes; a atuação administrativa não elimina as atribuições judiciais ou de outras autoridades nos respectivos âmbitos. A ANPD também possui competências relativas a tratamentos realizados pelo Poder Público.",
     analise: {
-      A: "INCORRETA. Ministério Público pode agir em âmbito criminal, mas não é o órgão de monitoramento da LGPD.",
-      B: "CORRETA. ANPD é o órgão responsável pelo monitoramento da aplicação da LGPD.",
-      C: "INCORRETA. Polícia Federal não é o órgão regulador da LGPD.",
-      D: "INCORRETA. Justiça Federal atua em casos de infração, não no monitoramento sistemático.",
-      E: "INCORRETA. Superintendências de TI são órgãos administrativos, não reguladores."
+      A: "INCORRETA. A competência administrativa da ANPD não elimina as atribuições do Judiciário ou de outras autoridades.",
+      B: "INCORRETA. A lei prevê competências fiscalizatórias e sancionatórias para a ANPD.",
+      C: "INCORRETA. A autoridade deve atuar dentro das sanções e dos limites estabelecidos em lei.",
+      D: "CORRETA. A fiscalização e a aplicação das sanções previstas na LGPD integram as competências legais da ANPD, sujeitas aos limites e procedimentos aplicáveis.",
+      E: "INCORRETA. A LGPD também prevê competências da ANPD relacionadas ao tratamento de dados pelo Poder Público."
     },
-    regra: "ANPD = 'guardião da LGPD'. Monitora o tratamento de dados pessoais no Brasil.",
-    pegadinha: "ANPD não é 'órgão punidor' — é 'órgão regulador que atua com princípio correitor e assistencial'.",
-    fonte: "Lei nº 13.709/2018, art. 15."
+    regra: "A ANPD fiscaliza o cumprimento da LGPD e aplica as sanções administrativas previstas em lei, respeitando os limites e procedimentos aplicáveis.",
+    pegadinha: "Competência administrativa não significa poder ilimitado nem exclusividade sobre todas as consequências judiciais ou criminais.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 52, 55-J e 55-K, com alterações aplicáveis: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Lei nº 15.352/2026: https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15352.htm."
   },
 
   { id: "q-m4-37", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Incisos do Art. 5º",
-    contexto: "A CF/88 (art. 5º, caput) e a LGPD reforçam a proteção de dados pessoais.",
-    enunciado: "A relação correta entre a CF/88 e a LGPD em relação aos dados pessoais é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — Constituição Federal — direito fundamental à proteção de dados",
+    contexto: "Uma questão de concurso pede a relação entre a Constituição Federal e a legislação infraconstitucional de proteção de dados, considerando a Emenda Constitucional nº 115/2022.",
+    enunciado: "Qual alternativa identifica corretamente a proteção constitucional de dados pessoais e sua relação com a LGPD?",
     alternativas: [
       { letra: "A", texto: "A CF/88 não menciona dados pessoais." },
-      { letra: "B", texto: "A CF/88, art. 5º, caput, e a LGPD garantem a inviolabilidade da vida privada e a proteção de dados." },
+      { letra: "B", texto: "A CF/88 e a LGPD são incompatíveis." },
       { letra: "C", texto: "A LGPD substitui a CF/88." },
       { letra: "D", texto: "A CF/88 é inexistente." },
-      { letra: "E", texto: "A CF/88 e a LGPD são incompatíveis." }
+      { letra: "E", texto: "A Constituição protege a intimidade e a vida privada no art. 5º, X, e reconhece o direito fundamental à proteção de dados pessoais no art. 5º, LXXIX; a LGPD disciplina o tratamento desses dados." }
     ],
-    gabarito: "B",
-    justificativa: "A CF/88, art. 5º, caput, assegura a inviolabilidade da vida privácia e a proteção de dados. A CF/88 não é ignorada (alternativa A incorreta); a LGPD complementa e regulamenta a proteção dos dados — não substitui a CF/88 (alternativa C incorreta); CF/88 existe e é a norma máxima (alternativa D incorreta); CF/88 e LGPD são compatíveis e complementares (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "O art. 5º, X, da Constituição protege a intimidade e a vida privada. O art. 5º, LXXIX, incluído pela Emenda Constitucional nº 115/2022, assegura o direito à proteção dos dados pessoais, inclusive nos meios digitais. A LGPD disciplina o tratamento de dados pessoais. Portanto, a Constituição e a LGPD são complementares, mas os dispositivos constitucionais precisam ser identificados corretamente.",
     analise: {
-      A: "INCORRETA. A CF/88, art. 5º, caput, assegura a inviolabilidade da vida privácia e a proteção de dados.",
-      B: "CORRETA. CF/88 e LGPD são bases legais complementares para proteção de dados pessoais.",
-      C: "INCORRETA. A LGPD complementa a CF/88, não a substitui.",
-      D: "INCORRETA. A CF/88 é a constituição, que existe e é a norma máxima do ordenamento jurídico brasileiro.",
-      E: "INCORRETA. A CF/88 e a LGPD são teorias complementares e compatíveis."
+      A: "INCORRETA. A Constituição menciona expressamente a proteção de dados pessoais no art. 5º, LXXIX, incluído pela EC nº 115/2022.",
+      B: "INCORRETA. A Constituição e a LGPD são complementares na proteção de direitos fundamentais e na disciplina do tratamento de dados pessoais.",
+      C: "INCORRETA. A LGPD não substitui a Constituição; as normas têm funções complementares.",
+      D: "INCORRETA. A Constituição Federal de 1988 está vigente.",
+      E: "CORRETA. O art. 5º, X, protege a intimidade e a vida privada; o inciso LXXIX assegura o direito à proteção de dados pessoais."
     },
-    regra: "CF/88: privacidade = 'tope'. LGPD: regulamentação dos direitos dos titulares.",
-    pegadinha: "A CF/88 não é 'inexistente' — é a constituição que protege a vida privácia e dados pessoais.",
-    fonte: "CF/88, art. 5º, caput; Lei nº 13.709/2018, art. 1º."
+    regra: "CF/88, art. 5º, X: intimidade e vida privada; art. 5º, LXXIX: direito fundamental à proteção de dados pessoais; LGPD: disciplina o tratamento.",
+    pegadinha: "Não atribuir a proteção expressa de dados pessoais ao caput do art. 5º; o inciso LXXIX foi incluído pela EC nº 115/2022.",
+    fonte: "Constituição Federal, art. 5º, X e LXXIX, texto oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Emenda Constitucional nº 115/2022: https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc115.htm; Lei nº 13.709/2018 (LGPD), texto compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-38", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Responsabilidade",
-    contexto: "A LGPD define responsabilidades dos responsáveis pelo tratamento de dados.",
-    enunciado: "A respeito da responsabilidade no contexto da LGPD, é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — responsabilidades de controlador e operador",
+    contexto: "Uma organização define as finalidades do tratamento de dados pessoais e contrata uma empresa para executar parte das operações seguindo suas instruções.",
+    enunciado: "À luz da LGPD, qual afirmação distingue corretamente controlador e operador?",
     alternativas: [
-      { letra: "A", texto: "Apenas os usuários são responsáveis pelo tratamento de dados." },
-      { letra: "B", texto: "O responsável (controlador ou operador) tem deveres claros de segurança, tratamento e transparência." },
-      { letra: "C", texto: "A LGPD não define responsabilidade." },
-      { letra: "D", texto: "A responsabilidade é apenas dos fornecedores de infraestrutura." },
-      { letra: "E", texto: "A LGPD ignora a responsabilidade legal." }
+      { letra: "A", texto: "A LGPD atribui deveres apenas ao controlador e nunca ao operador." },
+      { letra: "B", texto: "O operador é sempre o titular dos dados e decide livremente as finalidades." },
+      { letra: "C", texto: "A contratação de um operador transfere automaticamente ao fornecedor todas as responsabilidades legais do controlador." },
+      { letra: "D", texto: "O controlador toma as decisões referentes ao tratamento; o operador realiza o tratamento em nome do controlador, observadas as instruções e as obrigações legais aplicáveis." },
+      { letra: "E", texto: "Controlador e operador são sinônimos definidos pela lei." }
     ],
-    gabarito: "B",
-    justificativa: "A LGPD define responsabilidades claras para controladores e operadores de dados, incluindo deveres de segurança, transparência, descarte controlado, etc. Usuários são tutelados, não responsáveis (alternativa A incorreta); a lei define responsabilidade (alternativa C incorreta); não é apenas provedores (alternativa D incorreta); a LGPD não ignora responsabilidade — define-a (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "A LGPD distingue controlador — a quem competem as decisões referentes ao tratamento — de operador — quem realiza o tratamento em nome do controlador. Ambos podem ter deveres e responder nas hipóteses legais aplicáveis; a contratação não elimina automaticamente as obrigações do controlador nem torna os papéis equivalentes.",
     analise: {
-      A: "INCORRETA. A LGPD define responsabilidades para controladores e operadores, não para usuários (que são titulares).",
-      B: "CORRETA. O responsável tem deveres claros de tratamento seguro, transparência e respeito aos direitos.",
-      C: "INCORRETA. A LGPD define responsabilidades para os órgãos envolvidos no tratamento de dados.",
-      D: "INCORRETA. A LGPD não limita a responsabilidade aos fornecedores de infraestrutura.",
-      E: "INCORRETA. A LGPD define responsabilidade legal expíria."
+      A: "INCORRETA. A LGPD prevê obrigações e hipóteses de responsabilização para operadores, além dos controladores.",
+      B: "INCORRETA. Titular é a pessoa natural a quem os dados se referem; operador não é sinônimo de titular nem decide livremente as finalidades.",
+      C: "INCORRETA. Contratar um operador não transfere automaticamente todas as responsabilidades legais do controlador.",
+      D: "CORRETA. A alternativa expressa a distinção do art. 5º e reconhece que as obrigações concretas dependem da lei e do papel desempenhado.",
+      E: "INCORRETA. São papéis distintos, com definições próprias na LGPD."
     },
-    regra: "LGPD: 'quem trata, responde'. Controlador ou operador com deveres de segurança e transparência.",
-    pegadinha: "Não confunda: a responsabilidade não é 'dos usuários' — é 'dos controladores e operadores'.",
-    fonte: "Lei nº 13.709/2018, arts. 5º, 7º, 8º, 11º."
+    regra: "Controlador decide as finalidades e os elementos essenciais do tratamento; operador trata dados em nome do controlador, dentro das atribuições e instruções aplicáveis.",
+    pegadinha: "A terceirização não elimina automaticamente a responsabilidade do controlador; a responsabilização de cada agente depende do papel e das hipóteses legais.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 5º, VI e VII, 37, 39 e 42, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-39", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — LGPD — Dados Pessoais",
-    contexto: "A LGPD define quais informações são consideradas dados pessoais.",
-    enunciado: "Segundo a LGPD, dados pessoais são:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — LGPD — conceito de dado pessoal",
+    contexto: "Uma equipe avalia se identificadores indiretos e informações de localização estão sujeitos à LGPD.",
+    enunciado: "De acordo com a definição da LGPD, qual informação se enquadra como dado pessoal?",
     alternativas: [
-      { letra: "A", texto: "Qualquer informação que possa identificar ou relacionar a uma pessoa natural." },
-      { letra: "B", texto: "Apenas nomes de pessoas." },
-      { letra: "C", texto: "Apenas dados financeiros." },
-      { letra: "D", texto: "Apenas endereços." },
-      { letra: "E", texto: "Apenas e-mails." }
+      { letra: "A", texto: "Somente endereço residencial, nunca localização ou identificadores indiretos." },
+      { letra: "B", texto: "Somente o nome completo de uma pessoa." },
+      { letra: "C", texto: "Apenas informação financeira armazenada por bancos." },
+      { letra: "D", texto: "Informação relacionada a pessoa natural identificada ou identificável." },
+      { letra: "E", texto: "Qualquer dado de pessoa jurídica, mesmo sem relação com pessoa natural identificada ou identificável." }
     ],
-    gabarito: "A",
-    justificativa: "A LGPD define dados pessoais como qualquer informação ligada a uma pessoa natural que possa identificar ou ser utilizada para identificar essa pessoa — como nome, CPF, e-mail, localização, comportamentos, etc. Apenas nomes (alternativa B incorreta); apenas dados financeiros (alternativa C incorreta); apenas endereços (alternativa D incorreta); apenas e-mails (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "O art. 5º, I, da LGPD define dado pessoal como informação relacionada a pessoa natural identificada ou identificável. A classificação depende do contexto e da possibilidade de associação a uma pessoa natural; não se limita a nome, endereço, e-mail ou dados financeiros. Dados de pessoa jurídica, por si sós, não são dados pessoais pela definição da LGPD, embora possam conter informações pessoais de indivíduos.",
     analise: {
-      A: "CORRETA. Dados pessoais são informações que identificam ou podem identificar uma pessoa natural.",
-      B: "INCORRECTA. Apenas nome é reducionista — dados pessoais incluem mais campos.",
-      C: "INCORRETA. Dados financeiros são alguns dados pessoais, mas não a definição exclusiva.",
-      D: "INCORRETA. Apenas endereços é redução insuficiente da definição.",
-      E: "INCORRETA. Apenas e-mail é uma parte dos dados pessoais, não a definição completa."
+      A: "INCORRETA. Localização e identificadores indiretos podem ser dados pessoais conforme o contexto e a possibilidade de identificação.",
+      B: "INCORRETA. Nome completo é apenas um exemplo; outros identificadores e informações relacionáveis também podem ser dados pessoais.",
+      C: "INCORRETA. A definição não se restringe a dados financeiros nem a um setor específico.",
+      D: "CORRETA. É a definição legal do art. 5º, I, da LGPD.",
+      E: "INCORRETA. A definição legal refere-se a pessoa natural identificada ou identificável, embora registros empresariais possam conter dados pessoais de indivíduos."
     },
-    regra: "LGPD: 'qualquer dado que identifique ou mais adiante possa identificar' — papel de quem define o escopo.",
-    pegadinha: "Dados pessoais não são 'apenas informações de contato' — podem ser comportamentos, hábitos, localizações.",
-    fonte: "Lei nº 13.709/2018, art. 5º, IX."
+    regra: "Dado pessoal, para a LGPD, é informação relacionada a pessoa natural identificada ou identificável.",
+    pegadinha: "Não confundir dado pessoal com apenas dado diretamente identificador; informações indiretas podem permitir identificação quando combinadas com outros dados.",
+    fonte: "Lei nº 13.709/2018 (LGPD), art. 5º, I, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-40", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Marco Civil e LGPD",
-    contexto: "Múltiplas leis federais regulam a proteção de dados e a internet no Brasil.",
-    enunciado: "A relação entre Marco Civil da Internet e a LGPD no contexto da proteção de dados é:",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil da Internet e LGPD",
+    contexto: "Um serviço digital coleta dados pessoais de usuários para fornecer funcionalidades e também mantém registros de conexão nos termos aplicáveis.",
+    enunciado: "Como o Marco Civil da Internet e a LGPD se relacionam nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "A LGPD substitui o Marco Civil da Internet." },
-      { letra: "B", texto: "O Marco Civil e a LGPD são complementares, conectados por princípios e competências." },
-      { letra: "C", texto: "O Marco Civil dispensa a LGPD." },
-      { letra: "D", texto: "O Marco Civil não tem relação com dados pessoais." },
-      { letra: "E", texto: "A LGPD é irrelevante para o Marco Civil." }
+      { letra: "A", texto: "A LGPD substitui integralmente o Marco Civil sempre que houver dados pessoais." },
+      { letra: "B", texto: "As leis têm objetos e disposições próprios e complementares; a aplicação concreta depende do tratamento realizado e das regras pertinentes de cada diploma." },
+      { letra: "C", texto: "O Marco Civil autoriza qualquer uso secundário de dados, dispensando a análise de base legal prevista na LGPD." },
+      { letra: "D", texto: "A LGPD se aplica apenas a empresas privadas, enquanto o Marco Civil se aplica apenas ao Poder Público." },
+      { letra: "E", texto: "O cumprimento de uma das leis elimina automaticamente todas as obrigações previstas na outra." }
     ],
     gabarito: "B",
-    justificativa: "Marco Civil (12.965/2014) e LGPD (13.709/2018) são normas complementares: o primeiro regula a internet e dados de caráter público, o segundo a proteção de dados pessoais. A LGPD não substitui o Marco Civil (alternativa A incorreta); o Marco Civil não dispensa a LGPD (alternativa C incorreta); o Marco Civil tem relação com dados (alternativa D incorreta); a LGPD é relevante para o Marco Civil (alternativa E incorreta).",
+    justificativa: "O Marco Civil da Internet (Lei nº 12.965/2014) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil, incluindo regras relativas à privacidade e a registros. A LGPD (Lei nº 13.709/2018) disciplina o tratamento de dados pessoais. As normas são complementares; a organização deve identificar quais disposições se aplicam a cada atividade, sem presumir que uma lei substitui ou dispensa a outra.",
     analise: {
-      A: "INCORRETA. A LGPD complementa o Marco Civil e a Lei 12.965/2014; não substitui.",
-      B: "CORRETA. São normas complementares, conectadas por princípios de proteção de dados e internet.",
-      C: "INCORRETA. O Marco Civil não dispensa a LGPD — ambas têm âmbitos complementares.",
-      D: "INCORRETA. O Marco Civil trata de dados pessoais no contexto da internet.",
-      E: "INCORRETA. A LGPD é relevante para a proteção de dados no âmbito do Marco Civil."
+      A: "INCORRETA. A LGPD não substitui integralmente o Marco Civil.",
+      B: "CORRETA. Os diplomas têm âmbitos próprios e complementares, cuja aplicação depende do caso concreto.",
+      C: "INCORRETA. O Marco Civil não autoriza indistintamente qualquer uso secundário de dados pessoais.",
+      D: "INCORRETA. O âmbito de cada lei não se divide dessa forma simplista entre setor privado e Poder Público.",
+      E: "INCORRETA. Cumprir uma lei não elimina automaticamente obrigações pertinentes da outra."
     },
-    regra: "Marco Civil + LGPD: complementares. Internet regular e dados pessoais protegidos.",
-    pegadinha: "Marco Civil não é 'obsoleto' — é a lei da internet; LGPD é a lei dos dados pessoais. Juntas, regulam o ambiente digital.",
-    fonte: "Lei nº 12.965/2014; Lei nº 13.709/2018."
+    regra: "Marco Civil regula direitos e deveres no uso da internet; LGPD disciplina o tratamento de dados pessoais. A aplicação pode ser complementar.",
+    pegadinha: "Não trate os diplomas como substitutos nem presuma que cumprir um elimina as obrigações pertinentes do outro.",
+    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm; Lei nº 13.709/2018 (LGPD): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm."
   },
 
   { id: "q-m4-41", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Lei de Acesso à Informação",
-    contexto: "A Lei nº 12.527/2011 (Lei de Acesso à Informação Pública) garante o acesso à informação pública.",
-    enunciado: "A Lei nº 12.527/2011 (Lei de Acesso à Informação Pública) estabelece, entre outros, que:",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Lei de Acesso à Informação",
+    contexto: "Um cidadão solicita a um órgão público um relatório administrativo que contém dados sobre a execução de uma política pública e alguns dados pessoais de terceiros.",
+    enunciado: "À luz da Lei nº 12.527/2011 (Lei de Acesso à Informação — LAI), qual encaminhamento melhor observa a regra de publicidade e as restrições legais?",
     alternativas: [
-      { letra: "A", texto: "O acesso à informação pública é negado em todas as hipóteses." },
-      { letra: "B", texto: "Os atos, documentos e dados das administrações públicas são acessíveis aos cidadãos." },
-      { letra: "C", texto: "A lei não garante acesso à informação." },
-      { letra: "D", texto: "A lei é proibitiva." },
-      { letra: "E", texto: "A lei não possui dispositivos sobre acesso." }
+      { letra: "A", texto: "Negar integralmente o pedido sempre que o documento contiver qualquer dado pessoal, sem avaliar a possibilidade de acesso parcial." },
+      { letra: "B", texto: "Conceder acesso ao relatório, avaliando as restrições aplicáveis e, quando cabível, fornecer a parte não protegida com ocultação das informações cujo acesso seja legalmente restrito." },
+      { letra: "C", texto: "Divulgar necessariamente o documento integral, pois a publicidade impede qualquer restrição relacionada a informações pessoais." },
+      { letra: "D", texto: "Classificar automaticamente todo relatório administrativo como ultrassecreto, por conter informação produzida pelo Poder Público." },
+      { letra: "E", texto: "Exigir que o solicitante demonstre interesse jurídico individual em qualquer pedido de informação pública." }
     ],
     gabarito: "B",
-    justificativa: "A Lei 12.527/2011 garante o acesso à informação pública, estabelecendo normas de transparência, escala de prioridade de atendimento e prazos. O acesso é negado (alternativa A incorreta); a lei garante acesso (alternativa C incorreta); não é proibitiva (alternativa D incorreta); possui dispositivos sobre acesso (alternativa E incorreta).",
+    justificativa: "A LAI adota a publicidade como regra e o sigilo como exceção, mas prevê restrições legais e proteção de informações pessoais. A presença de dados protegidos não autoriza automaticamente negar todo o documento: deve-se avaliar se é possível conceder acesso à parte não restrita, mediante ocultação ou tratamento adequado da parcela protegida. A solução concreta depende da natureza da informação e das regras legais aplicáveis.",
     analise: {
-      A: "INCORRETA. A Lei 12.527/2011 garante o acesso à informação pública, não o nega.",
-      B: "CORRETA. A lei estende o acesso aos atos, documentos e dados das administrações públicas.",
-      C: "INCORRETA. A lei é uma das principais garantias de transparência no Brasil.",
-      D: "INCORRETA. A lei não é proibitiva — é estimuladora do acesso à informação.",
-      E: "INCORRETA. A lei possuí diversos dispositivos sobre acesso à informação."
+      A: "INCORRETA. A presença de dados pessoais não implica, por si só, negar integralmente todo o documento; deve ser avaliada a possibilidade de acesso parcial.",
+      B: "CORRETA. A alternativa equilibra publicidade, restrições legais e acesso à parte não protegida quando isso for possível.",
+      C: "INCORRETA. A publicidade como regra não elimina as restrições legais nem a proteção de informações pessoais.",
+      D: "INCORRETA. A classificação de informação como sigilosa depende dos requisitos e procedimentos previstos em lei; não decorre automaticamente de ser documento administrativo.",
+      E: "INCORRETA. O acesso à informação pública não exige, como regra geral, demonstração de interesse jurídico individual."
     },
-    regra: "LAI (12.527/2011): 'informação aberta'. Acesso à administração pública ao cidadão.",
-    pegadinha: "LAI não é 'lei de sigilo' — é 'lei de acesso à informação'.",
-    fonte: "Lei nº 12.527/2011."
+    regra: "LAI: publicidade é a regra e sigilo é exceção; avalie restrições específicas e a possibilidade de acesso parcial à parte não protegida.",
+    pegadinha: "Não confunda publicidade como regra com divulgação irrestrita, nem presuma que a presença de dado pessoal exige negar todo o documento.",
+    fonte: "Lei nº 12.527/2011 (LAI), arts. 3º, 7º, § 2º, 10, § 3º, 22 e 31, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
   },
 
   { id: "q-m4-42", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Marco Civil e Proteção de Dados",
-    contexto: "O Marco Civil da Internet (Lei 12.965/2014) estabelece que o acesso a dados de usuários exige:",
-    enunciado: "No âmbito do Marco Civil da Internet, a exposição de dados pessoais por provedores exige:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Marco Civil — registros e acesso a dados",
+    contexto: "Um órgão público pretende obter de um provedor registros de conexão ou de acesso a aplicações de internet para instruir uma investigação.",
+    enunciado: "Como regra, segundo o Marco Civil da Internet, a disponibilização a terceiros de registros de conexão e de acesso a aplicações de internet depende de:",
     alternativas: [
-      { letra: "A", texto: "Ordem judicial ou fundamento legal." },
-      { letra: "B", texto: "Aceitação do usuário." },
-      { letra: "C", texto: "Nenhuma autorização." },
-      { letra: "D", texto: "Prioridade de atendimento." },
-      { letra: "E", texto: "Frequência de uso." }
+      { letra: "A", texto: "Somente de uma solicitação informal feita por qualquer servidor público." },
+      { letra: "B", texto: "Apenas da frequência com que a pessoa utiliza o serviço." },
+      { letra: "C", texto: "Nenhuma formalidade, pois os registros são sempre públicos." },
+      { letra: "D", texto: "Autorização judicial, observadas as hipóteses legais específicas e os limites do pedido." },
+      { letra: "E", texto: "Da publicação prévia dos dados pelo próprio provedor, independentemente de lei." }
     ],
-    gabarito: "A",
-    justificativa: "O Marco Civil da Internet exige que o acesso a dados de usuários por provedores seja fundamentado em lei ou ordem judicial. Aceitação do usuário (alternativa B incorreta); nenhuma autorização (alternativa C incorreta); prioridade de atendimento (alternativa D incorreta); frequência de uso (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "O art. 10 do Marco Civil da Internet estabelece salvaguardas para a guarda e disponibilização de registros e dados. O § 1º condiciona, como regra, a disponibilização dos registros de conexão e de acesso a aplicações de internet à ordem judicial, nos termos legais; o § 3º prevê regime específico para acesso a dados cadastrais por autoridades com competência legal. Por isso, a questão trata dos registros e explicita a regra geral, sem confundi-los com dados cadastrais ou sugerir acesso irrestrito.",
     analise: {
-      A: "CORRETA. O acesso a dados de usuários exige fundamento legal ou ordem judicial.",
-      B: "INCORRETA. Usuário pode revogar autorização, mas o acesso à informação deve seguir a lei.",
-      C: "INCORRETA. Nenhuma autorização não é permitida — é necessária uma base legal.",
-      D: "INCORRETA. Prioridade de atendimento não é requisito de permissão de acesso a dados.",
-      E: "INCORRETA. Frequência de uso não é requisito para acesso a dados."
+      A: "INCORRETA. Uma solicitação informal não substitui a ordem judicial exigida para a disponibilização de registros, ressalvadas as hipóteses legais específicas.",
+      B: "INCORRETA. A frequência de uso não é fundamento jurídico para disponibilizar registros.",
+      C: "INCORRETA. Registros não são sempre públicos; a lei prevê salvaguardas de privacidade e acesso.",
+      D: "CORRETA. A regra para disponibilização de registros é a autorização judicial, respeitadas as hipóteses legais específicas e os limites do pedido.",
+      E: "INCORRETA. A publicação pelo provedor não é requisito nem autorização geral para disponibilizar registros."
     },
-    regra: "Marco Civil: 'dados de usuários protegidos'. Acesso por provedores requer base legal ou ordem judicial.",
-    pegadinha: "Marco Civil não é 'aberto a todos' — é 'aberto a quem segue a lei'.",
-    fonte: "Lei nº 12.965/2014, arts. 5º, 7º."
+    regra: "Marco Civil, art. 10: protege a privacidade e estabelece condições legais para a disponibilização de registros; a regra geral para registros é a ordem judicial, com exceções legais específicas.",
+    pegadinha: "Não confundir registros de conexão/acesso com dados cadastrais, que podem estar sujeitos a regime legal específico.",
+    fonte: "Lei nº 12.965/2014 (Marco Civil da Internet), art. 10, §§ 1º e 3º, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm."
   },
 
   { id: "q-m4-43", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Proteção de Dados",
-    contexto: "A proteção de dados pessoais no Brasil é uma responsabilidade compartilhada entre governantes e cidadãos.",
+    nivel: "avancado", topico: "modulo-4-unidade-4-topico-1", assunto: "4.4 — Proteção de Dados",
+    contexto: "A LGPD estabelece deveres para os agentes de tratamento e competências para a autoridade nacional; o titular dos dados possui direitos próprios.",
     enunciado: "A responsabilidade pela proteção de dados pessoais no Brasil é:",
     alternativas: [
       { letra: "A", texto: "Apenas dos cidadãos." },
-      { letra: "B", texto: "Compartilhada entre controladores, operadores, titulares e o Estado." },
+      { letra: "B", texto: "Os deveres e as responsabilidades são distribuídos conforme as funções legais dos agentes de tratamento e as competências das autoridades, sem transformar o titular automaticamente em responsável pelo tratamento." },
       { letra: "C", texto: "Apenas do Estado." },
       { letra: "D", texto: "Apenas dos controladores." },
       { letra: "E", texto: "Apenas dos operadores." }
     ],
     gabarito: "B",
-    justificativa: "A proteção de dados pessoais envolve responsabilidades múltiplas: controladores e operadores tratam os dados, titulares têm direitos, e o Estado regula via órgãos como o ANPD. Apenas cidadãos (alternativa A incorreta); apenas Estado (alternativa C incorreta); apenas controladores (alternativa D incorreta); apenas operadores (alternativa E incorreta).",
+    justificativa: "A LGPD define controlador e operador como agentes de tratamento com funções e deveres distintos, prevê hipóteses de responsabilidade civil e atribui competências à ANPD. O titular é a pessoa a quem os dados se referem e possui direitos; não deve ser apresentado, apenas por ser titular, como responsável pelo tratamento. Por isso, a resposta correta descreve deveres e responsabilidades conforme as funções legais, não uma responsabilidade indiferenciada de todos os envolvidos.",
     analise: {
-      A: "INCORRETA. A proteção dos dados é uma responsabilidade compartilhada (controladores, operadores, Estado).",
-      B: "CORRETA. Controladores tratam; operadores executam; titulares têm direitos; Estado regula.",
-      C: "INCORRETA. Estado não é o único responsável — há múltiplos atores envolvidos.",
-      D: "INCORRETA. Controladores são uma parte, não a única responsável.",
-      E: "INCORRETA. Operadores são uma parte, não a única responsável."
+      A: "INCORRETA. A proteção de dados não é responsabilidade exclusiva dos cidadãos titulares.",
+      B: "CORRETA. Controladores e operadores têm deveres definidos em lei; as autoridades exercem competências próprias; o titular possui direitos.",
+      C: "INCORRETA. O Estado e as autoridades têm competências importantes, mas os deveres legais dos agentes de tratamento também são relevantes.",
+      D: "INCORRETA. A responsabilidade não recai exclusivamente sobre controladores em todos os casos; a LGPD também define o papel do operador.",
+      E: "INCORRETA. A responsabilidade não recai exclusivamente sobre operadores; a LGPD define funções e deveres distintos."
     },
-    regra: "Proteção de dados = 'feça de vários' — controladores, operadores, titulares e Estado juntos.",
-    pegadinha: "Não é 'somente o Estado' — é uma rede de responsabilidades com múltiplos atores.",
-    fonte: "Lei nº 13.709/2018; Lei nº 12.965/2014."
+    regra: "Controlador, operador e autoridade têm funções e deveres distintos; o titular é a pessoa a quem os dados se referem e possui direitos.",
+    pegadinha: "Não confundir titularidade de dados com responsabilidade jurídica pelo tratamento.",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 5º, V a VII, 42 e 55-J, texto oficial compilado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm."
   },
 
   { id: "q-m4-44", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Comparação LGPD e Marco Civil",
-    contexto: "É possível observar diferenças conceituais entre LGPD e Marco Civil.",
-    enunciado: "A principal diferença conceitual entre LGPD e Marco Civil da Internet está em:",
+    nivel: "intermediario", topico: "modulo-4-unidade-4-topico-2", assunto: "4.4 — Comparação entre LGPD e Marco Civil",
+    contexto: "Uma equipe precisa identificar qual norma orienta o tratamento de dados pessoais e qual estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil.",
+    enunciado: "Qual alternativa compara corretamente a LGPD e o Marco Civil da Internet sem sugerir que uma lei substitui a outra?",
     alternativas: [
-      { letra: "A", texto: "Ambas tratam de dados pessoais." },
-      { letra: "B", texto: "A LGPD prioriza a proteção de dados pessoais; o Marco Civil prioriza a liberdade e a regulação da internet." },
-      { letra: "C", texto: "A LGPD não protege dados." },
-      { letra: "D", texto: "O Marco Civil é obsoleto." },
-      { letra: "E", texto: "A LGPD é irrelevante." }
+      { letra: "A", texto: "A LGPD só se aplica a provedores de conexão, enquanto o Marco Civil regula qualquer tratamento de dados pessoais em todos os setores." },
+      { letra: "B", texto: "A LGPD disciplina o tratamento de dados pessoais; o Marco Civil estabelece princípios, garantias, direitos e deveres para o uso da internet, incluindo regras relacionadas à privacidade e aos registros." },
+      { letra: "C", texto: "O Marco Civil substituiu a LGPD por ser anterior e tratar de privacidade." },
+      { letra: "D", texto: "A LGPD proíbe qualquer tratamento de dados pessoais, enquanto o Marco Civil autoriza sua divulgação irrestrita." },
+      { letra: "E", texto: "As duas leis têm o mesmo objeto e os mesmos requisitos, portanto apenas uma delas precisa ser observada." }
     ],
     gabarito: "B",
-    justificativa: "A LGPD é a lei que protege dados pessoais com base nos direitos dos titulares; o Marco Civil (12.965/2014) regula a internet no Brasil, com princípios como a garantia da liberdade de expressão, a proteção da privacidade e a neutralidade de rede (art. 3º) e fundamentos como a pluralidade e a diversidade (art. 2º). Ambas tratam de dados (alternativa A incorreta); a LGPD é fundamentada nos direitos da pessoa, o Marco Civil na regulação da internet; a LGPD não é irrelevante (alternativa E incorreta); o Marco Civil não é obsoleto (alternativa D incorreta).",
+    justificativa: "A Lei nº 13.709/2018 (LGPD) disciplina o tratamento de dados pessoais, com bases legais, princípios, direitos dos titulares e deveres dos agentes de tratamento. A Lei nº 12.965/2014 (Marco Civil da Internet) estabelece princípios, garantias, direitos e deveres para o uso da internet no Brasil. No Marco Civil, o art. 2º apresenta fundamentos, como liberdade de expressão, pluralidade e diversidade; o art. 3º estabelece princípios, entre eles proteção da privacidade, proteção de dados pessoais e neutralidade de rede. Os campos normativos se relacionam, mas uma lei não substitui a outra.",
     analise: {
-      A: "INCORRETA. Ambas tratam de dados pessoais, mas com abrangências diferentes.",
-      B: "CORRETA. LGPD protege dados pessoais; Marco Civil regula a internet e seus princípios.",
-      C: "INCORRETA. A LGPD é a lei que protege dados pessoais.",
-      D: "INCORRETA. O Marco Civil não é obsoleto — é a lei da internet no Brasil.",
-      E: "INCORRETA. A LGPD é relevante para a proteção de dados no contexto de internet."
+      A: "INCORRETA. A LGPD não se limita a provedores de conexão e o Marco Civil não substitui o regime geral de tratamento de dados.",
+      B: "CORRETA. A alternativa descreve o foco normativo de cada lei e reconhece sua complementaridade.",
+      C: "INCORRETA. A anterioridade do Marco Civil não revoga nem substitui a LGPD.",
+      D: "INCORRETA. A LGPD permite tratamentos amparados por base legal e o Marco Civil não autoriza divulgação irrestrita.",
+      E: "INCORRETA. As leis têm objetos e disposições distintos; a aplicabilidade deve ser avaliada conforme o caso."
     },
-    regra: "LGPD = 'dados protegidos'. Marco Civil = 'internet regulada'. Complementares.",
-    pegadinha: "LGPD não é 'direito de acesso' — é 'direito de controle'. Marco Civil não é 'obsoleto' — é a lei da internet.",
-    fonte: "Lei nº 13.709/2018; Lei nº 12.965/2014, arts. 2º e 3º — verificado em planalto.gov.br em 2026-10-22."
+    regra: "LGPD: tratamento de dados pessoais. Marco Civil: uso da internet e respectivas garantias, direitos e deveres. Aplicação complementar quando pertinente.",
+    pegadinha: "Não resumir as leis a slogans nem presumir que a incidência de uma exclui a outra.",
+    fonte: "Lei nº 13.709/2018 (LGPD): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm; Lei nº 12.965/2014 (Marco Civil da Internet): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm."
   },
 
-  { id: "q-m4-45", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Confidencialidade",
-    contexto: "A confidencialidade é um princípio fundamental de segurança da informação.",
-    enunciado: "A confidencialidade estrita é:",
+{ id: "q-m4-45", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.4 — Confidencialidade e controle de acesso",
+    contexto: "Uma equipe armazena documentos com dados pessoais e informações internas. O repositório permite que qualquer funcionário leia todos os arquivos, mesmo quando não precisa deles para executar suas tarefas.",
+    enunciado: "Qual medida aplica melhor o princípio da confidencialidade nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Um princípio que garante que a informação só pode ser acessada por usuários autorizados." },
-      { letra: "B", texto: "Um princípio que garante acesso a todos os sistemas." },
-      { letra: "C", texto: "Um princípio de liberdade de informação." },
-      { letra: "D", texto: "Um princípio de abertura de dados." },
-      { letra: "E", texto: "Um princípio de não criptografia." }
+      { letra: "A", texto: "Desativar a autenticação para evitar bloqueios de acesso." },
+      { letra: "B", texto: "Permitir acesso irrestrito a todos os funcionários para garantir transparência interna." },
+      { letra: "C", texto: "Publicar os documentos e confiar que os usuários não os copiarão." },
+      { letra: "D", texto: "Aplicar controle de acesso baseado nas funções e necessidades, revisar permissões e proteger os dados contra divulgação a pessoas não autorizadas." },
+      { letra: "E", texto: "Manter permissões amplas indefinidamente, mesmo após mudanças de função." }
     ],
-    gabarito: "A",
-    justificativa: "Confidencialidade é o princípio que assegura que a informação só possa ser acessada por usuários ou sistemas autorizados. É a definição correta do princípio de confidencialidade (alternativa A correta). Garantir acesso a todos os sistemas (alternativa B incorreta); princípio de liberdade de informação (alternativa C incorreta); abertura de dados (alternativa D incorreta); não criptografia (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Confidencialidade busca assegurar que informações sejam acessíveis apenas a entidades autorizadas. Controle de acesso, menor privilégio, autenticação adequada e revisão de permissões ajudam a reduzir divulgação não autorizada. A criptografia pode ser uma medida complementar, mas não substitui a gestão de identidade e autorização no uso cotidiano do repositório.",
     analise: {
-      A: "CORRETA. Confidencialidade = acesso restrito a usuários autorizados.",
-      B: "INCORRETA. Acesso a todos os sistemas é o oposto do princípio de confidencialidade.",
-      C: "INCORRETA. Confidencialidade não é princípio de liberdade de informação.",
-      D: "INCORRETA. Abertura de dados é o oposto do princípio de confidencialidade.",
-      E: "INCORRETA. A confidencialidade pode ser garantida por criptografia."
+      A: "INCORRETA. Desativar autenticação reduz a capacidade de restringir o acesso a usuários autorizados.",
+      B: "INCORRETA. Transparência não exige acesso irrestrito a toda informação interna.",
+      C: "INCORRETA. Publicar dados aumenta a exposição e não é um controle de confidencialidade.",
+      D: "CORRETA. A alternativa limita o acesso conforme a necessidade e prevê revisão das permissões.",
+      E: "INCORRETA. Permissões obsoletas mantêm exposição desnecessária e violam o princípio do menor privilégio."
     },
-    regra: "Confidencialidade = 'ninguém além de quem têm autorização'.",
-    pegadinha: "Confidencialidade não é 'direito de acesso' — é 'exclusão de acesso' a quem não tem autorização.",
-    fonte: "NIST SP 800-53 (SC-5)."
+    regra: "Confidencialidade: restringir o acesso à informação a entidades autorizadas; aplicar menor privilégio e revisar permissões.",
+    pegadinha: "Confidencialidade não é acesso zero nem transparência irrestrita; é acesso apropriado conforme autorização e finalidade.",
+    fonte: "NIST SP 800-53 Rev. 5, AC-2 e AC-6: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final; NIST FIPS PUB 199: https://csrc.nist.gov/pubs/fips/199/final."
   },
 
-  { id: "q-m4-46", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Integridade",
-    contexto: "A integridade é um dos pilares da segurança da informação.",
-    enunciado: "A integridade de dados significa que:",
+{ id: "q-m4-46", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.1 — Integridade e verificação de alterações",
+    contexto: "Um órgão precisa detectar se um arquivo de configuração foi modificado sem autorização entre duas implantações.",
+    enunciado: "Qual medida fornece evidência técnica útil para verificar se o conteúdo do arquivo mudou?",
     alternativas: [
-      { letra: "A", texto: "Os dados estão disponíveis a qualquer usuário." },
-      { letra: "B", texto: "Os dados não foram alterados de forma não autorizada." },
-      { letra: "C", texto: "Os dados são acessíveis a todos com chave." },
-      { letra: "D", texto: "Os dados nunca são armazenados." },
-      { letra: "E", texto: "Os dados são apenas para leitura." }
+      { letra: "A", texto: "Permitir escrita a todos os usuários e confiar no histórico verbal da equipe." },
+      { letra: "B", texto: "Verificar apenas se o nome e a extensão do arquivo continuam iguais." },
+      { letra: "C", texto: "Confiar que a data de modificação não pode ser alterada." },
+      { letra: "D", texto: "Calcular e comparar um hash criptográfico confiável do arquivo antes e depois, protegendo a referência esperada." },
+      { letra: "E", texto: "Criptografar o nome do arquivo sem verificar o conteúdo." }
     ],
-    gabarito: "B",
-    justificativa: "Integridade garante que os dados não foram alterados de forma não autorizada — preservando a exatidão e a confiabilidade da informação. Disponibilidade (alternativa A incorreta); acesso a todos (alternativa C incorreta); armazenamento (alternativa D incorreta); apenas leitura (alternativa E incorreta).",
+    gabarito: "D",
+    justificativa: "Um hash criptográfico pode ajudar a detectar alterações no conteúdo quando o valor esperado é confiável e protegido contra substituição. A comparação não identifica necessariamente quem alterou o arquivo nem prova que a versão original era legítima; por isso, deve ser combinada com controle de acesso, gestão de mudanças e registros apropriados.",
     analise: {
-      A: "INCORRETA. Disponibilidade é outro dos pilares, não a definição de integridade.",
-      B: "CORRETA. Integridade = preservação da exatidão dos dados, sem alteração não autorizada.",
-      C: "INCORRETA. Acesso a todos não é integridade — é confidencialidade invertida.",
-      D: "INCORRETA. Armazenamento não é o foco da integridade.",
-      E: "INCORRETA. Somente leitura não garante integridade — alteração não autorizada seria o problema."
+      A: "INCORRETA. Permissões excessivas aumentam o risco e relatos verbais não fornecem evidência técnica confiável.",
+      B: "INCORRETA. Nome e extensão podem permanecer iguais mesmo quando o conteúdo é alterado.",
+      C: "INCORRETA. Metadados de data podem ser modificados e não constituem prova suficiente de integridade.",
+      D: "CORRETA. Comparar hashes confiáveis ajuda a detectar mudanças no conteúdo; a proteção da referência esperada é essencial.",
+      E: "INCORRETA. Proteger o nome não permite verificar se o conteúdo do arquivo mudou."
     },
-    regra: "Integridade = 'dados corretos e intactos'. Preservação da exatidão.",
-    pegadinha: "Integridade não é 'sempre correto' — é 'sem alteração não autorizada'.",
-    fonte: "ISO/IEC 27000:2018."
+    regra: "Hash criptográfico confiável ajuda a detectar alteração de conteúdo, mas não prova autoria nem legitimidade da versão original.",
+    pegadinha: "A detecção de mudança depende de uma referência confiável; se um invasor puder substituir o arquivo e o hash esperado, a comparação perde valor.",
+    fonte: "NIST, FIPS PUB 180-4 — Secure Hash Standard: https://csrc.nist.gov/pubs/fips/180-4/upd1/final."
   },
 
   { id: "q-m4-47", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Disponibilidade",
-    contexto: "A disponibilidade é a garantia de acesso quando necessário.",
-    enunciado: "A disponibilidade de sistemas e dados significa que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.1 — Disponibilidade, RTO e RPO",
+    contexto: "Um sistema de atendimento deve voltar a operar rapidamente após uma interrupção, e a organização precisa definir quanto tempo e quantos dados pode perder.",
+    enunciado: "Qual associação entre objetivos de recuperação está correta?",
     alternativas: [
-      { letra: "A", texto: "Os dados estão sempre online." },
-      { letra: "B", texto: "Os sistemas e dados estão acessíveis quando o uso for necessário." },
-      { letra: "C", texto: "Os dados nunca são acessados." },
-      { letra: "D", texto: "Os sistemas são sempre desativados." },
-      { letra: "E", texto: "Os dados são exclusivamente para leitura." }
+      { letra: "A", texto: "RTO e RPO são sinônimos de criptografia em repouso." },
+      { letra: "B", texto: "RTO mede a quantidade de dados pessoais coletados e RPO mede o número de usuários autorizados." },
+      { letra: "C", texto: "RTO e RPO significam que a organização nunca terá interrupção ou perda de dados." },
+      { letra: "D", texto: "RPO define o tempo de resposta da equipe de suporte, enquanto RTO define a senha de recuperação." },
+      { letra: "E", texto: "RTO é o tempo-alvo para recuperação do serviço; RPO é o ponto no tempo até o qual os dados precisam ser recuperados, refletindo a perda de dados tolerável." }
     ],
-    gabarito: "B",
-    justificativa: "Disponibilidade significa que sistemas e dados estão operacionais e acessíveis quando o usuário precisa acessá-los. Sempre online (alternativa A incorreta); nunca acessados (alternativa C incorreta); sempre desativados (alternativa D incorreta); exclusivamente para leitura (alternativa E incorreta).",
+    gabarito: "E",
+    justificativa: "O Recovery Time Objective (RTO) estabelece o tempo-alvo para restabelecer um serviço após uma interrupção. O Recovery Point Objective (RPO) estabelece o ponto temporal de recuperação dos dados e, na prática, orienta a perda máxima de dados que a organização pode tolerar. Ambos são objetivos de planejamento, não garantias de ausência de incidentes.",
     analise: {
-      A: "INCORRETA. 'Sempre online' não é a definição — é acessível 'quando necessário'.",
-      B: "CORRETA. Disponibilidade = sistemas e dados acessíveis quando o uso for necessário.",
-      C: "INCORRETA. Dados acessíveis quando needed, não 'nunca acessados'.",
-      D: "INCORRETA. Sistemas sempre desativados é o oposto de disponibilidade.",
-      E: "INCORRETA. Disponibilidade não se refere à leitura exclusiva."
+      A: "INCORRETA. RTO e RPO são objetivos de recuperação, não técnicas criptográficas.",
+      B: "INCORRETA. Essas descrições não correspondem aos objetivos de recuperação.",
+      C: "INCORRETA. RTO e RPO são metas de continuidade, não promessas de interrupção ou perda zero.",
+      D: "INCORRETA. Nenhuma dessas definições corresponde aos termos RTO e RPO.",
+      E: "CORRETA. RTO trata do tempo de recuperação; RPO trata do ponto de recuperação dos dados e da perda tolerável."
     },
-    regra: "Disponibilidade = 'quando você precisar'. Garantir que o sistema responda quando necessário.",
-    pegadinha: "Disponibilidade não é 'sempre ativo' — é 'disponível quando needed'.",
-    fonte: "NIST SP 800-53 (AVA-1)."
+    regra: "RTO = tempo-alvo para restaurar o serviço; RPO = ponto temporal de recuperação dos dados e perda de dados tolerável.",
+    pegadinha: "Metas de recuperação orientam a arquitetura e os testes, mas não garantem por si sós que a meta será cumprida.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-48", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Autenticação",
-    contexto: "A autenticação é o processo de verificação da identidade de um usuário ou sistema.",
-    enunciado: "A autenticação é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Autenticação multifator",
+    contexto: "Uma aplicação exige senha e envia um código para a caixa de e-mail da própria conta. A equipe afirma que essa combinação torna a autenticação resistente a phishing e impede a recuperação indevida da conta.",
+    enunciado: "Qual avaliação técnica é mais adequada para revisar essa afirmação?",
     alternativas: [
-      { letra: "A", texto: "O processo de verificar a identidade de um usuário ou sistema." },
-      { letra: "B", texto: "O processo de autorizar o acesso a recursos." },
-      { letra: "C", texto: "O processo de criptografar dados." },
-      { letra: "D", texto: "O processo de excluir dados." },
-      { letra: "E", texto: "O processo de criar dados." }
+      { letra: "A", texto: "A combinação é sempre resistente a phishing porque a senha e o código são solicitados em etapas diferentes." },
+      { letra: "B", texto: "É necessário avaliar a independência dos fatores e os fluxos de recuperação; para autenticação digital alinhada ao NIST, e-mail não é aceito como autenticador fora de banda." },
+      { letra: "C", texto: "Dois códigos enviados para a mesma caixa de e-mail constituem necessariamente dois fatores independentes." },
+      { letra: "D", texto: "Se houver MFA, não é necessário proteger sessões, dispositivos ou os mecanismos de recuperação." },
+      { letra: "E", texto: "Qualquer código de uso único impede todos os ataques de phishing e de tomada de conta." }
     ],
-    gabarito: "A",
-    justificativa: "Autenticação é o processo de verificar a identidade de um usuário ou sistema — saber 'quem é'. Autorização é um processo posterior (alternativa B incorreta); criptografia é proteção (alternativa C incorreta); exclusão (alternativa D incorreta); criação (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "MFA exige fatores de categorias distintas, mas a quantidade de etapas, por si só, não demonstra independência nem resistência a phishing. A recuperação da conta pode enfraquecer o controle se permitir contornar o autenticador. Nas diretrizes NIST SP 800-63B, o e-mail não é aceito como autenticador fora de banda; deve-se selecionar um autenticador apropriado ao nível de garantia e proteger também sessões e recuperação.",
     analise: {
-      A: "CORRETA. Autenticação = verificar a identidade de um usuário ou sistema.",
-      B: "INCORRETA. Autorização é o processo de conceder acesso — é posterior à autenticação.",
-      C: "INCORRETA. Criptografia é uma técnica de proteção, não autenticação.",
-      D: "INCORRETA. Exclusão é uma operação de gestão, não autenticação.",
-      E: "INCORRETA. Criação de dados não é autenticação."
+      A: "INCORRETA. Separar etapas não garante fatores independentes nem resistência a phishing.",
+      B: "CORRETA. A alternativa considera independência, recuperação e a restrição específica das diretrizes NIST para autenticação fora de banda por e-mail.",
+      C: "INCORRETA. Dois códigos enviados à mesma caixa não constituem automaticamente fatores independentes.",
+      D: "INCORRETA. MFA não substitui a proteção de sessões, dispositivos e mecanismos de recuperação.",
+      E: "INCORRETA. Códigos de uso único não eliminam todos os riscos, inclusive phishing em tempo real e abuso de recuperação."
     },
-    regra: "Autenticação = 'quem é?'. Verificar identidade antes de conceder acesso.",
-    pegadinha: "Autenticação não é 'quem pode acessar' — é 'quem é' (anterior à autorização).",
-    fonte: "NIST SP 800-63B."
+    regra: "MFA requer fatores de categorias distintas; avalie resistência a phishing e recuperação. Segundo o NIST SP 800-63B, e-mail não é autenticador fora de banda aceito.",
+    pegadinha: "Dois passos não significam dois fatores independentes; um segundo passo por e-mail não deve ser tratado como garantia de MFA resistente a phishing.",
+    fonte: "NIST SP 800-63B — Digital Identity Guidelines: Authentication and Lifecycle Management, versão vigente: https://pages.nist.gov/800-63-4/sp800-63b.html."
   },
 
   { id: "q-m4-49", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Autorização",
-    contexto: "A autorização é o processo de conceder ou recusar acesso a recursos.",
-    enunciado: "A autorização é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controle de acesso baseado em papéis",
+    contexto: "Uma equipe de atendimento precisa consultar dados de solicitações, mas não deve alterar regras de negócio nem exportar toda a base.",
+    enunciado: "Qual configuração aplica melhor o princípio do menor privilégio?",
     alternativas: [
-      { letra: "A", texto: "Processo de verificar a identidade de um usuário." },
-      { letra: "B", texto: "Processo de conceder ou recusar o acesso a recursos baseado em permissões." },
-      { letra: "C", texto: "Processo de criptografia de dados." },
-      { letra: "D", texto: "Processo de exclusão de dados." },
-      { letra: "E", texto: "Processo de geração de senhas." }
+      { letra: "A", texto: "Conceder perfil de administrador a toda a equipe para evitar solicitações de acesso." },
+      { letra: "B", texto: "Compartilhar uma única conta com todas as permissões e registrar apenas o horário de uso." },
+      { letra: "C", texto: "Conceder somente permissões necessárias às tarefas, separar funções incompatíveis e revisar os acessos periodicamente." },
+      { letra: "D", texto: "Manter permissões antigas após a mudança de função para evitar indisponibilidade." },
+      { letra: "E", texto: "Usar a mesma permissão para leitura, alteração, exportação e administração em todos os perfis." }
     ],
-    gabarito: "B",
-    justificativa: "Autorização é o processo de conceder ou recusar acesso a recursos, baseado em permissões, roles e políticas de segurança. Verificar identidade (alternativa A incorreta); criptografar (alternativa C incorreta); excluir (alternativa D incorreta); gerar senhas (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "O menor privilégio limita cada identidade às permissões necessárias para suas tarefas. A separação de funções reduz concentrações incompatíveis de poder, e revisões periódicas ajudam a remover acessos obsoletos. O desenho deve preservar a atribuição individual e acompanhar mudanças de função.",
     analise: {
-      A: "INCORRETA. Verificar identidade é autenticação, não autorização.",
-      B: "CORRETA. Autorização = conceder ou recusar acesso baseado em permissões.",
-      C: "INCORRETA. Criptografia é proteção de dados, não autorização.",
-      D: "INCORRETA. Exclusão é gestão de dados, não autorização.",
-      E: "INCORRETA. Geração de senhas é gestão de credenciais, não autorização."
+      A: "INCORRETA. Permissões administrativas amplas excedem o necessário para atendimento e ampliam o impacto de erros ou comprometimentos.",
+      B: "INCORRETA. Contas compartilhadas enfraquecem a atribuição individual e mantêm permissões excessivas.",
+      C: "CORRETA. A alternativa combina menor privilégio, separação de funções e revisão periódica de acesso.",
+      D: "INCORRETA. Acesso deve ser atualizado quando a função muda, conforme a necessidade atual.",
+      E: "INCORRETA. Permissões distintas devem refletir tarefas e responsabilidades diferentes."
     },
-    regra: "Autorização = 'quem pode usar o que'. Conceder/recusar acesso com base em regras.",
-    pegadinha: "Autorização não é 'ver quem está' — é 'conceder ou recusar acesso'.",
-    fonte: "NIST SP 800-53 (AC-3)."
+    regra: "Menor privilégio: conceder apenas o acesso necessário, manter identidades individuais e revisar permissões diante de mudanças de função.",
+    pegadinha: "Facilidade operacional não justifica privilégios administrativos para todos nem contas compartilhadas.",
+    fonte: "NIST SP 800-53 Rev. 5, AC-6 — Least Privilege: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
   { id: "q-m4-50", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Auditoria",
-    contexto: "A auditoria é o processo de monitoramento e registro de ações em sistemas.",
-    enunciado: "A auditoria em segurança da informação é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Registros de auditoria e proteção contra adulteração",
+    contexto: "Após um incidente, a equipe descobre que a conta comprometida tinha permissão para apagar os registros que documentariam suas próprias ações.",
+    enunciado: "Qual medida melhora a confiabilidade dos registros de auditoria?",
     alternativas: [
-      { letra: "A", texto: "O processo de monitorar e registrar ações para auditoria e análise." },
-      { letra: "B", texto: "O processo de excluir Logs." },
-      { letra: "C", texto: "O processo de criptografar acesso." },
-      { letra: "D", texto: "O processo de impedir acesso." },
-      { letra: "E", texto: "O processo de evitar relatórios." }
+      { letra: "A", texto: "Permitir que todos os usuários alterem e apaguem livremente os registros." },
+      { letra: "B", texto: "Desativar a sincronização de horário para evitar divergências entre sistemas." },
+      { letra: "C", texto: "Restringir e separar a administração dos logs, proteger sua integridade, sincronizar relógios e monitorar falhas de registro." },
+      { letra: "D", texto: "Guardar somente capturas de tela, sem registrar eventos relevantes." },
+      { letra: "E", texto: "Apagar os logs após cada incidente para reduzir o volume de armazenamento." }
     ],
-    gabarito: "A",
-    justificativa: "Auditoria é o processo de monitorar, registrar e analisar ações de sistemas e usuários — essencial para detecção, investigação e conformidade. Excluir Logs (alternativa B incorreta); criptografar acesso (alternativa C incorreta); impedir acesso (alternativa D incorreta); evitar relatórios (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "Registros de auditoria são mais úteis quando os eventos relevantes são definidos, os relógios são sincronizados, o acesso aos registros é restrito e a alteração ou exclusão não autorizada é detectável ou impedida. A separação de funções reduz a possibilidade de uma conta comprometida apagar suas próprias evidências. A retenção deve seguir requisitos legais, operacionais e de privacidade.",
     analise: {
-      A: "CORRETA. Auditoria = monitorar e registrar ações, para análise e conformidade.",
-      B: "INCORRETA. Auditoria requer Logs; excluí-los compromete a auditoria.",
-      C: "INCORRETA. Criptografia não é auditoria.",
-      D: "INCORRETA. Auditoria não impede acesso — é monitoramento pós-fato.",
-      E: "INCORRETA. Auditoria gera relatórios para análise."
+      A: "INCORRETA. Permissões amplas permitem adulteração e destruição de evidências.",
+      B: "INCORRETA. Sem sincronização de horário, correlacionar eventos entre sistemas fica mais difícil.",
+      C: "CORRETA. A alternativa reúne controles importantes para integridade, rastreabilidade e investigação.",
+      D: "INCORRETA. Capturas de tela não substituem registros estruturados de eventos necessários à investigação.",
+      E: "INCORRETA. A eliminação indiscriminada pode destruir evidências e contrariar políticas de retenção."
     },
-    regra: "Auditoria = 'olhar o que aconteceu'. Monitoramento, registro e análise de ações.",
-    pegadinha: "Auditoria não é 'impedir' — é 'registrar e analisar depois'.",
-    fonte: "NIST SP 800-53 (AU-2)."
+    regra: "Logs confiáveis exigem eventos relevantes, horário consistente, acesso restrito, proteção contra adulteração e retenção definida.",
+    pegadinha: "Registrar eventos não basta se a conta investigada puder apagar ou modificar os próprios registros sem detecção.",
+    fonte: "NIST SP 800-53 Rev. 5, família AU — Audit and Accountability: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
   { id: "q-m4-51", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Backup",
-    contexto: "O backup é uma cópia de segurança de dados e sistemas.",
-    enunciado: "O backup é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Backups e testes de restauração",
+    contexto: "Uma equipe confirma que os backups são executados diariamente, mas nunca realizou uma restauração de teste.",
+    enunciado: "Qual ação é mais importante para verificar se o plano de backup atende à necessidade de recuperação?",
     alternativas: [
-      { letra: "A", texto: "Um processo de restauração de sistemas a partir de uma cópia de segurança." },
-      { letra: "B", texto: "Um processo de criação de uma cópia de segurança dos dados." },
-      { letra: "C", texto: "Um processo de criptografia de dados." },
-      { letra: "D", texto: "Um processo de exclusão de dados." },
-      { letra: "E", texto: "Um processo de verificação de dados." }
+      { letra: "A", texto: "Considerar o backup válido apenas porque a tarefa terminou sem erro aparente." },
+      { letra: "B", texto: "Executar restaurações de teste em ambiente controlado, verificar a integridade e a consistência dos dados e medir o tempo de recuperação." },
+      { letra: "C", texto: "Manter todas as cópias na mesma conta administrativa e no mesmo ambiente de produção." },
+      { letra: "D", texto: "Desativar os registros de execução para economizar armazenamento." },
+      { letra: "E", texto: "Presumir que um backup pode ser restaurado mesmo sem verificar chaves, dependências e permissões." }
     ],
     gabarito: "B",
-    justificativa: "Backup é o processo de criar cópias de segurança de dados para proteção contra perda, corrupção ou destruição. Restauração (alternativa A incorreta); criptografia (alternativa C incorreta); exclusão (alternativa D incorreta); verificação (alternativa E incorreta).",
+    justificativa: "A conclusão bem-sucedida de uma tarefa de backup não comprova, por si só, que os dados possam ser restaurados de forma íntegra e dentro do tempo necessário. Testes de restauração devem validar consistência, dependências, permissões e tempos de recuperação, com escopo e periodicidade definidos pelo risco e pelos objetivos de continuidade.",
     analise: {
-      A: "INCORRETA. Restauração é o uso do backup, não o backup em si.",
-      B: "CORRETA. Backup = criar cópias de segurança dos dados.",
-      C: "INCORRETA. Criptografia é proteção de dados, não backup.",
-      D: "INCORRETA. Backup não é exclusão — é cópia.",
-      E: "INCORRETA. Verificação não é backup."
+      A: "INCORRETA. A conclusão da tarefa é evidência limitada e não substitui teste de restauração.",
+      B: "CORRETA. Testes de restauração verificam a recuperabilidade real e ajudam a medir se os objetivos de recuperação são viáveis.",
+      C: "INCORRETA. Concentrar cópias no mesmo ambiente e sob a mesma administração aumenta o risco de comprometimento simultâneo.",
+      D: "INCORRETA. Registros são necessários para identificar falhas e demonstrar execução e resultado.",
+      E: "INCORRETA. Chaves, dependências, permissões e outros requisitos podem impedir uma restauração mesmo com os arquivos presentes."
     },
-    regra: "Backup = 'cópia para não perder'. Criação de cópia de segurança.",
-    pegadinha: "Backup não é 'restaurar' — é 'fazer a cópia'. Restaurar é usar o backup.",
-    fonte: "ITIL — Service Design; NIST SP 800-115."
+    regra: "Backup confiável exige testes periódicos de restauração, verificação de integridade e medição do tempo necessário para recuperar o serviço.",
+    pegadinha: "Backup concluído não é sinônimo de restauração comprovada.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-52", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Recuperação de Desastres",
-    contexto: "A recuperação de desastres é o plano de resposta a incidentes que afetam sistemas críticos.",
-    enunciado: "A recuperação de desastres é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Recuperação de desastres e continuidade",
+    contexto: "Uma interrupção no datacenter afeta sistemas internos, atendimento ao público, comunicação com fornecedores e a capacidade de executar serviços essenciais.",
+    enunciado: "Qual abordagem diferencia corretamente recuperação de desastres e continuidade de negócios?",
     alternativas: [
-      { letra: "A", texto: "Um plano para prever e responder a incidentes que ameçam a continuidade dos negócios." },
-      { letra: "B", texto: "Um processo de exclusão de dados." },
-      { letra: "C", texto: "Um processo de criptografia de backups." },
-      { letra: "D", texto: "Um processo de verificação de desempenho." },
-      { letra: "E", texto: "Um processo de criação de backups." }
+      { letra: "A", texto: "Recuperação de desastres trata apenas da compra de novos equipamentos, e continuidade é apenas o backup diário." },
+      { letra: "B", texto: "Recuperação de desastres foca no restabelecimento de sistemas e infraestrutura afetados; continuidade de negócios abrange manter ou retomar processos e serviços prioritários, inclusive por meios alternativos." },
+      { letra: "C", texto: "Os termos são sempre sinônimos e não precisam ser definidos no planejamento." },
+      { letra: "D", texto: "Continuidade de negócios começa somente depois que todos os sistemas forem recuperados." },
+      { letra: "E", texto: "Ambos garantem que nenhum incidente possa interromper os serviços." }
     ],
-    gabarito: "A",
-    justificativa: "Recuperação de desastres é um plano que visa à continuidade dos negócios, incluindo a prevenção e resposta a incidentes que ameçam a operação dos sistemas críticos. Exclusão (alternativa B incorreta); criptografia (alternativa C incorreta); verificação de desempenho (alternativa D incorreta); criação de backups (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Os planos de recuperação de desastres e de continuidade de negócios são relacionados, mas têm escopos diferentes. A recuperação de desastres concentra-se no restabelecimento de recursos de tecnologia e ambientes afetados; a continuidade considera processos prioritários, pessoas, fornecedores, instalações e formas alternativas de prestar serviços durante a interrupção. A terminologia exata pode variar conforme a organização e o referencial adotado.",
     analise: {
-      A: "CORRETA. Recuperação de desastres = plano que garante continuidade e resposta a incidentes que ameaçam os negócios.",
-      B: "INCORRETA. Recuperação de desastres não é exclusão de dados.",
-      C: "INCORRETA. Criptografia não é a definição da recuperação de desastres.",
-      D: "INCORRETA. Desempenho não é o foco principal da recuperação de desastres.",
-      E: "INCORRETA. Criação de backups é parte, mas não é a definição completa."
+      A: "INCORRETA. Recuperação não se limita à compra de equipamentos, e continuidade não se resume a backup.",
+      B: "CORRETA. A alternativa distingue recuperação de recursos tecnológicos da manutenção ou retomada dos processos essenciais.",
+      C: "INCORRETA. Embora relacionados, os planos devem ter objetivos, responsabilidades e interfaces definidos.",
+      D: "INCORRETA. Medidas de continuidade podem operar durante a interrupção, antes da recuperação integral da tecnologia.",
+      E: "INCORRETA. Os planos reduzem impacto e organizam resposta; não garantem ausência de incidentes."
     },
-    regra: "Recuperação de desastres = 'continuidade'. Plano para não parar os negócios com emergências.",
-    pegadinha: "Recuperação de desastres não é 'backup simples' — é 'plano completo de continuidade'.",
-    fonte: "NIST SP 800-34 (Contingency Planning)."
+    regra: "Recuperação de desastres restabelece recursos afetados; continuidade de negócios mantém ou retoma processos e serviços prioritários.",
+    pegadinha: "Continuidade pode exigir procedimentos alternativos enquanto a recuperação tecnológica ainda está em andamento.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-53", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — RTO e RPO",
-    contexto: "RTO e RPO são métricas críticas para o planejamento de continuidade.",
-    enunciado: "A relação correta entre RTO e RPO é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Planejamento de recuperação baseado em risco",
+    contexto: "Um serviço processa transações continuamente. A área de negócio informa que perder mais de cinco minutos de transações seria inaceitável, enquanto a equipe técnica estima que a recuperação completa pode levar até duas horas.",
+    enunciado: "Como a equipe deve usar essas informações no planejamento de continuidade?",
     alternativas: [
-      { letra: "A", texto: "RTO é o tempo máximo de indisponibilidade; RPO é a quantidade máxima de dados que pode ser perdida." },
-      { letra: "B", texto: "RTO é a quantidade de dados perdida; RPO é o tempo de indisponibilidade." },
-      { letra: "C", texto: "RTO e RPO são sinônimos." },
-      { letra: "D", texto: "RTO é o tempo de e RPO é a quantidade de dados — invertido." },
-      { letra: "E", texto: "RTO é a contagem do tempo; RPO é a contagem dos dados." }
+      { letra: "A", texto: "Adotar metas sem consultar a área de negócio, pois somente a infraestrutura determina o impacto aceitável." },
+      { letra: "B", texto: "Definir RPO igual a duas horas, pois RPO é sempre igual ao tempo de recuperação." },
+      { letra: "C", texto: "Definir RPO e RTO a partir da necessidade de negócio, validar se a arquitetura e os procedimentos suportam as metas e testar a recuperação." },
+      { letra: "D", texto: "Considerar que backup a cada dia atende automaticamente a uma perda máxima de cinco minutos." },
+      { letra: "E", texto: "Dispensar testes porque os valores foram acordados entre as equipes." }
     ],
-    gabarito: "A",
-    justificativa: "RTO (Recovery Time Objective) = tempo máximo de indisponibilidade aceitável; RPO (Recovery Point Objective) = quantidade máxima de dados que pode ser perdida. A alternativa B inverte os conceitos; C é incorreta por definição; D está invertido; E confunde as métricas com contagens.",
+    gabarito: "C",
+    justificativa: "As metas de recuperação devem refletir o impacto tolerável para o negócio e ser confrontadas com as capacidades reais da solução. A tolerância a perda de transações informa o RPO; o tempo de restabelecimento aceitável informa o RTO. A equipe deve verificar se frequência de cópia, replicação, procedimentos, dependências e testes sustentam as metas definidas.",
     analise: {
-      A: "CORRETA. RTO = tempo de indisponibilidade; RPO = quantidade de dados perdida.",
-      B: "INCORRETA. RTO não é quantidade de dados — é tempo de indisponibilidade.",
-      C: "INCORRETA. RTO e RPO são métricas distintas.",
-      D: "INCORRETA. RTO e RPO não estão invertidos — A está correta.",
-      E: "INCORRETA. RTO e RPO não são 'contagem do tempo' / 'contagem dos dados'."
+      A: "INCORRETA. As metas dependem do impacto para o negócio e das capacidades técnicas, exigindo coordenação entre áreas.",
+      B: "INCORRETA. RPO e RTO medem aspectos diferentes e não precisam ter o mesmo valor.",
+      C: "CORRETA. Metas derivadas do impacto de negócio precisam ser verificadas contra a capacidade técnica e validadas por testes.",
+      D: "INCORRETA. Backup diário não satisfaz, por si só, uma tolerância a perda de apenas cinco minutos.",
+      E: "INCORRETA. O acordo não comprova que as metas sejam tecnicamente alcançáveis."
     },
-    regra: "RTO = 'quanto tempo'. RPO = 'quanto de dados'. Métricas para continuidade.",
-    pegadinha: "RTO e RPO não são 'tanto quanto' — RTO é tempo, RPO é dados.",
-    fonte: "ITIL v3 — Service Continuity Management."
+    regra: "Defina RTO/RPO com base no impacto de negócio e valide a viabilidade com arquitetura, procedimentos e testes de recuperação.",
+    pegadinha: "Metas acordadas no papel não demonstram que a infraestrutura consegue cumpri-las.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-54", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Estratégia 3-2-1",
-    contexto: "A estratégia 3-2-1 é amplamente recomendada para backup e recuperação.",
-    enunciado: "A estratégia de backups 3-2-1 indica:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Estratégia de cópias 3-2-1",
+    contexto: "Uma organização guarda três cópias dos arquivos em dois dispositivos de armazenamento, mas todos ficam no mesmo prédio e podem ser acessados com a mesma conta administrativa.",
+    enunciado: "Qual avaliação da estratégia 3-2-1 é mais correta?",
     alternativas: [
-      { letra: "A", texto: "3 cópias, 2 sistemas de armazenamento diferentes, 1 cópia offline ou fora do local." },
-      { letra: "B", texto: "3 sistemas de armazenamento, 2 Backup, 1 cópia." },
-      { letra: "C", texto: "3 backup, 2 sistemas, 1 offline." },
-      { letra: "D", texto: "3 offline, 2 locales, 1 sistema." },
-      { letra: "E", texto: "3 dados, 2 sistemas, 1 rede." }
+      { letra: "A", texto: "A estratégia está completa, pois a quantidade de cópias torna desnecessária qualquer separação física ou lógica." },
+      { letra: "B", texto: "A regra tradicional recomenda três cópias dos dados, em dois tipos de mídia, com uma cópia fora do local; controles offline ou imutáveis podem fortalecer a resiliência contra ransomware." },
+      { letra: "C", texto: "A regra exige exatamente três contas de usuário, duas senhas e um arquivo compactado." },
+      { letra: "D", texto: "A regra tradicional exige que todas as cópias estejam offline, no mesmo dispositivo." },
+      { letra: "E", texto: "Uma cópia fora do local elimina a necessidade de testar a restauração." }
     ],
-    gabarito: "A",
-    justificativa: "A estratégia 3-2-1: 3 cópias dos dados, 2 sistemas de armazenamento diferentes, 1 cópia offline ou fora do local (imutável). As demais alternativas distorcem a distribuição (alternativas B, C, D, E incorretas).",
+    gabarito: "B",
+    justificativa: "A regra 3-2-1 é uma recomendação de resiliência: manter três cópias dos dados, usar dois tipos de mídia e guardar uma cópia fora do local. A regra tradicional não exige que a cópia externa seja necessariamente offline; cópias offline ou imutáveis podem adicionar proteção contra ransomware. Separação de credenciais e testes de restauração continuam importantes.",
     analise: {
-      A: "CORRETA. 3 cópias, 2 sistemas de armazenamento, 1 para offline/fu licence.",
-      B: "INCORRETA. A distribuição é 3-2-1 (cópias, sistemas, cópia offline).",
-      C: "INCORRETA. Não é 3 backup, 2 sistemas, 1 offline.",
-      D: "INCORRETA. Não é 3 offline, 2 locales, 1 sistema.",
-      E: "INCORRETA. Não é 3 dados, 2 sistemas, 1 rede."
+      A: "INCORRETA. Cópias concentradas no mesmo local e sob a mesma administração podem ser afetadas pelo mesmo desastre ou comprometimento.",
+      B: "CORRETA. A alternativa apresenta a regra tradicional e distingue medidas adicionais de proteção contra ransomware.",
+      C: "INCORRETA. Os números se referem a cópias e meios de armazenamento, não a contas, senhas ou arquivos compactados.",
+      D: "INCORRETA. A regra não exige que todas as cópias estejam offline nem que compartilhem um dispositivo.",
+      E: "INCORRETA. A cópia externa não comprova que os dados possam ser restaurados corretamente."
     },
-    regra: "3-2-1 = 3 cópias, 2 sistemas, 1 offline/fu license. Proteção contra perda e ransomware.",
-    pegadinha: "O 1 final não é 'um backup' — é 'uma cópia offline ou fora do local'.",
-    fonte: "Veeam Blog — 3-2-1 Backup Rule."
+    regra: "3-2-1 = três cópias, dois tipos de mídia, uma cópia fora do local; cópias offline/imutáveis e testes de restauração reforçam a estratégia.",
+    pegadinha: "“Fora do local” não significa automaticamente “offline”; são propriedades diferentes.",
+    fonte: "CISA, #StopRansomware Guide: https://www.cisa.gov/stopransomware/ransomware-guide."
   },
 
   { id: "q-m4-55", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Criptografia Simétrica",
-    contexto: "Criptografia simétrica é o método de criptografia mais antigo e eficiente.",
-    enunciado: "A criptografia simétrica é caracterizada por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Criptografia simétrica e gestão de chaves",
+    contexto: "Um serviço precisa criptografar grandes volumes de dados armazenados e também permitir que diferentes instâncias autorizadas os processem.",
+    enunciado: "Qual afirmação descreve uma característica e um requisito importante da criptografia simétrica?",
     alternativas: [
-      { letra: "A", texto: "Uso de um único par de chaves público/privada." },
-      { letra: "B", texto: "Uso de uma única chave compartilhada para criptografar e descriptografar." },
-      { letra: "C", texto: "Uso de chaves diferentes para cada usuário." },
-      { letra: "D", texto: "Uso de quadros de criptografia." },
-      { letra: "E", texto: "Uso de chaves infinitas." }
+      { letra: "A", texto: "Usa uma chave pública para criptografar e uma chave privada para descriptografar em todos os algoritmos simétricos." },
+      { letra: "B", texto: "Usa uma chave secreta compartilhada para as operações criptográficas correspondentes; a distribuição, o armazenamento, a rotação e o controle de acesso à chave precisam ser protegidos." },
+      { letra: "C", texto: "Dispensa gestão de chaves porque o algoritmo torna a chave pública." },
+      { letra: "D", texto: "Garante autenticidade e integridade em qualquer modo de operação, mesmo sem mecanismo adicional." },
+      { letra: "E", texto: "É inadequada para grandes volumes de dados porque sempre exige um par de chaves por bloco." }
     ],
     gabarito: "B",
-    justificativa: "Criptografia simétrica usa uma única chave compartilhada (secreta) para criptografar e descriptografar os dados. Uso de par público/privada (alternativa A incorreta); chaves diferentes para cada usuário (alternativa C incorreta); quadros (alternativa D incorreta); chaves infinitas (alternativa E incorreta).",
+    justificativa: "A criptografia simétrica utiliza uma chave secreta compartilhada para cifrar e decifrar conforme o algoritmo. A segurança prática depende não só do algoritmo, mas também da geração, distribuição, armazenamento, rotação e proteção da chave. Nem todo modo de cifragem oferece autenticação ou integridade; quando necessário, deve-se usar um modo autenticado ou um mecanismo apropriado.",
     analise: {
-      A: "INCORRETA. Par público/privada é a criptografia assimétrica.",
-      B: "CORRETA. Criptografia simétrica usa uma única chave compartilhada.",
-      C: "INCORRETA. Chaves diferentes é a criptografia assimétrica.",
-      D: "INCORRETA. Quadros não são o conceito central da criptografia simétrica.",
-      E: "INCORRETA. Chaves finitas são usadas, não infinitas."
+      A: "INCORRETA. Par de chaves pública/privada caracteriza criptografia assimétrica, não simétrica.",
+      B: "CORRETA. A chave secreta é central e precisa de gestão segura ao longo de seu ciclo de vida.",
+      C: "INCORRETA. A chave continua secreta; a gestão de chaves é parte essencial da segurança.",
+      D: "INCORRETA. A garantia de autenticidade e integridade depende do algoritmo e do modo de operação utilizados.",
+      E: "INCORRETA. Criptografia simétrica é amplamente utilizada para grandes volumes de dados e não exige um par de chaves por bloco."
     },
-    regra: "Simétrica = 'uma chave só'. Tudo que entra e sai com a mesma chave.",
-    pegadinha: "Simétrica não é 'dois pares' — é 'uma única chave' compartilhada.",
-    fonte: "NIST FIPS 197 (AES)."
+    regra: "Criptografia simétrica usa chave secreta compartilhada; gestão de chaves e escolha de modo de operação são essenciais.",
+    pegadinha: "Cifrar não garante automaticamente integridade ou autenticidade; verifique se o modo usado oferece autenticação.",
+    fonte: "NIST FIPS 197 — Advanced Encryption Standard (AES): https://csrc.nist.gov/pubs/fips/197/final; NIST SP 800-38D — GCM and GMAC: https://csrc.nist.gov/pubs/sp/800/38/d/final."
   },
 
   { id: "q-m4-56", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Criptografia Assimétrica",
-    contexto: "Criptografia assimétrica usa um par de chaves público/privada.",
-    enunciado: "A criptografia assimétrica é caracterizada por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Criptografia assimétrica e usos de chaves",
+    contexto: "Uma aplicação precisa autenticar a origem de uma mensagem e também estabelecer material de chave para proteger uma sessão.",
+    enunciado: "Qual afirmação sobre criptografia assimétrica é tecnicamente correta?",
     alternativas: [
-      { letra: "A", texto: "Uso de um único par de chaves público/privada para cada comunicação." },
-      { letra: "B", texto: "Uso de uma chave única compartilhada." },
-      { letra: "C", texto: "Uso de quadros de criptografia." },
-      { letra: "D", texto: "Uso de chaves infinitas." },
-      { letra: "E", texto: "Uso de chaves próprias para cada comunicação." }
+      { letra: "A", texto: "Toda operação assimétrica usa obrigatoriamente a chave pública para cifrar e a privada para decifrar; assinaturas digitais funcionam da mesma maneira." },
+      { letra: "B", texto: "Um par de chaves pública e privada pode apoiar operações diferentes, como assinatura/verificação ou mecanismos de estabelecimento de chave; o uso exato depende do algoritmo e do protocolo." },
+      { letra: "C", texto: "A chave pública deve ser mantida em segredo e a chave privada publicada." },
+      { letra: "D", texto: "Criptografia assimétrica dispensa validação de chaves e certificados em qualquer contexto." },
+      { letra: "E", texto: "Cada mensagem exige obrigatoriamente um novo par de chaves, independentemente do protocolo." }
     ],
-    gabarito: "A",
-    justificativa: "Criptografia assimétrica usa um par de chaves (pública e privada) — uma para criptografar, outra para descriptografar, ou uma para assinar, outra para verificar. Uso de uma chave única compartilhada (alternativa B incorreta); quadros (alternativa C incorreta); chaves infinitas (alternativa D incorreta); chave própria para cada comunicação (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "A criptografia assimétrica utiliza um par relacionado de chaves, mas o papel de cada chave depende do algoritmo e da operação. Em assinaturas digitais, a chave privada gera a assinatura e a chave pública permite verificá-la; em mecanismos de cifragem ou estabelecimento de chaves, aplicam-se outros procedimentos. A chave privada deve ser protegida, enquanto a chave pública pode ser distribuída com controles de autenticidade apropriados.",
     analise: {
-      A: "CORRETA. Criptografia assimétrica usa um par único de chaves público/privada para comunicação.",
-      B: "INCORRETA. Uma chave única compartilhada é a criptografia simétrica.",
-      C: "INCORRETA. Quadros não são o conceito central da criptografia assimétrica.",
-      D: "INCORRETA. Chaves finitas são usadas, não infinitas.",
-      E: "INCORRETA. Cada comunicação não usa uma chave própria — usa um par público/privado."
+      A: "INCORRETA. A descrição simplifica indevidamente os usos assimétricos e confunde assinatura digital com cifragem.",
+      B: "CORRETA. A alternativa reconhece usos distintos do par de chaves conforme algoritmo e protocolo.",
+      C: "INCORRETA. A chave privada deve permanecer protegida; a chave pública pode ser distribuída.",
+      D: "INCORRETA. A validação de chave, identidade, certificado e contexto é essencial quando aplicável.",
+      E: "INCORRETA. A geração e a reutilização de chaves dependem do algoritmo, do protocolo e da política de segurança."
     },
-    regra: "Assimétrica = 'dois pares'. Uma chave pública para codificar, uma privada para decodificar.",
-    pegadinha: "Assimétrica não é 'uma chave' — é 'um par de chaves' (pública + privada).",
-    fonte: "NIST FIPS 186 (RSA)."
+    regra: "Em criptografia assimétrica, a chave pública pode ser distribuída e a privada deve ser protegida; o uso do par depende do algoritmo e do protocolo.",
+    pegadinha: "Assinatura digital não é simplesmente cifrar a mensagem com a chave privada; assinatura e cifragem têm objetivos e operações distintos.",
+    fonte: "NIST FIPS 186-5 — Digital Signature Standard: https://csrc.nist.gov/pubs/fips/186-5/final; NIST SP 800-56A Rev. 3 — Pair-Wise Key-Establishment Schemes: https://csrc.nist.gov/pubs/sp/800/56/a/r3/final."
   },
 
   { id: "q-m4-57", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Código Hash",
-    contexto: "Código hash é uma função que mapeia dados de qualquer tamanho para um valor fixo.",
-    enunciado: "Um código hash (resumo de mensagem) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Hash criptográfico e senhas",
+    contexto: "Um serviço armazena senhas de usuários e também precisa comparar arquivos para detectar alterações.",
+    enunciado: "Qual afirmação distingue corretamente hash criptográfico e armazenamento seguro de senhas?",
     alternativas: [
-      { letra: "A", texto: "Uma função que converte dados de qualquer tamanho em um valor fixo de tamanho." },
-      { letra: "B", texto: "Um processo de criptografia de dados." },
-      { letra: "C", texto: "Um processo de compressão de dados." },
-      { letra: "D", texto: "Um processo de recuperação de dados." },
-      { letra: "E", texto: "Um processo de verificação de senhas." }
+      { letra: "A", texto: "Basta armazenar o hash rápido e sem sal da senha, pois o resumo de tamanho fixo impede ataques por tentativa." },
+      { letra: "B", texto: "Funções hash criptográficas produzem resumos de tamanho definido; para senhas, devem-se usar esquemas específicos de derivação/hash de senha, com sal único e parâmetros de custo adequados." },
+      { letra: "C", texto: "Hash é uma forma de criptografia reversível, de modo que a senha pode ser recuperada diretamente do resumo." },
+      { letra: "D", texto: "Todos os algoritmos de hash garantem integridade e autenticidade, independentemente do modo de uso." },
+      { letra: "E", texto: "O mesmo hash para arquivos diferentes prova que os arquivos são necessariamente idênticos em qualquer situação." }
     ],
-    gabarito: "A",
-    justificativa: "Hash é uma função que mapeia dados de qualquer tamanho para um valor (hash) de tamanho fixo — usado para integridade, verificação de senhas, assinatura digital. Criptografia (alternativa B incorreta); compressão (alternativa C incorreta); recuperação (alternativa D incorreta); verificação de senhas (alternativa E incorreta — é uma aplicação do hash, não a definição).",
+    gabarito: "B",
+    justificativa: "Uma função hash criptográfica mapeia uma entrada para um resumo de tamanho definido e pode apoiar a detecção de alterações quando o valor de referência é confiável. Senhas exigem tratamento específico: funções de derivação ou hash de senha, sal único e parâmetros de custo dificultam ataques de adivinhação. Um hash simples e rápido não é a escolha adequada para armazenar senhas; hash tampouco é criptografia reversível nem fornece autenticação por si só.",
     analise: {
-      A: "CORRETA. Hash converte dados de qualquer tamanho em um valor fixo (resumo).",
-      B: "INCORRETA. Hash não é criptografia — não é diretamente reversível.",
-      C: "INCORRETA. Compressão é a redução de tamanho, não o hash.",
-      D: "INCORRETA. Recuperação de dados é outra operação, não hash.",
-      E: "INCORRETA. Hash é usado para verificação de senhas, mas a definição é o resumo."
+      A: "INCORRETA. Hash rápido sem sal facilita ataques offline e não impede tentativas de adivinhação.",
+      B: "CORRETA. A alternativa diferencia o uso geral de hash do armazenamento especializado de senhas.",
+      C: "INCORRETA. Hash criptográfico não foi projetado para permitir recuperação direta da entrada.",
+      D: "INCORRETA. Integridade e autenticidade dependem do uso correto, da proteção do valor de referência e de mecanismos adicionais quando necessários.",
+      E: "INCORRETA. Colisões são teoricamente possíveis; igualdade de hash é evidência útil, mas não prova matemática de identidade absoluta."
     },
-    regra: "Hash = 'ballote'. Dados de qualquer tamanho → saída fixa, sem reversão.",
-    pegadinha: "Hash não é 'criptografia' — não pode ser revertido para obter os dados originais.",
-    fonte: "NIST FIPS 180-4 (SHA-256)."
+    regra: "Use hashes criptográficos para resumos e verificação; para senhas, use algoritmos específicos, sal único e custo adequado.",
+    pegadinha: "Um hash simples de senha não equivale a um esquema seguro de armazenamento de senhas.",
+    fonte: "NIST FIPS 180-4 — Secure Hash Standard: https://csrc.nist.gov/pubs/fips/180-4/upd1/final; NIST SP 800-63B — Digital Identity Guidelines: https://pages.nist.gov/800-63-4/sp800-63b.html."
   },
 
   { id: "q-m4-58", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Assinatura Digital",
-    contexto: "A assinatura digital é um mecanismo de segurança que garante autenticidade e integridade.",
-    enunciado: "A assinatura digital é um método que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Assinatura digital: integridade e validação",
+    contexto: "Uma entidade recebe um documento assinado digitalmente e precisa verificar se ele foi alterado e se a assinatura corresponde à chave pública declarada.",
+    enunciado: "Qual procedimento oferece uma validação técnica adequada da assinatura digital?",
     alternativas: [
-      { letra: "A", texto: "Garante autenticidade, integridade e não repúdio de mensagens." },
-      { letra: "B", texto: "Criptografa todos os dados." },
-      { letra: "C", texto: "Remove a necessidade de autenticação." },
-      { letra: "D", texto: "Substitui a verificação de senhas." },
-      { letra: "E", texto: "Cria dados aleatórios." }
+      { letra: "A", texto: "Verificar a assinatura com a chave pública, validar a associação dessa chave à identidade por meio da cadeia de confiança e conferir validade, revogação e contexto do certificado conforme a política aplicável." },
+      { letra: "B", texto: "Considerar o documento válido apenas porque existe uma imagem da assinatura manuscrita no PDF." },
+      { letra: "C", texto: "Presumir que a assinatura digital criptografa todo o conteúdo e dispensa verificação de integridade." },
+      { letra: "D", texto: "Aceitar qualquer certificado vencido, pois a chave pública não tem relação com a identidade." },
+      { letra: "E", texto: "Concluir automaticamente que houve não repúdio absoluto em qualquer disputa jurídica, sem examinar contexto ou evidências." }
     ],
     gabarito: "A",
-    justificativa: "A assinatura digital garante autenticidade (quem assinou), integridade (dados não alterados) e não repúdio (o autor não pode negar a assinatura). Criptografar todos os dados (alternativa B incorreta); remover necessidade de autenticação (alternativa C incorreta); substituir senhas (alternativa D incorreta); criar dados aleatórios (alternativa E incorreta).",
+    justificativa: "A validação técnica envolve verificar a assinatura e a integridade do conteúdo, além de avaliar se a chave pública está corretamente vinculada à identidade e se o certificado e a cadeia de confiança atendem às regras aplicáveis. O resultado não deve ser reduzido à aparência visual de uma assinatura nem tratado como prova absoluta de todos os fatos ou de uma conclusão jurídica em qualquer contexto.",
     analise: {
-      A: "CORRETA. Assinatura digital garante autenticidade, integridade e não repúdio.",
-      B: "INCORRETA. A assinatura digital não criptografa todos os dados — apenas afaixa a integridade/identidade.",
-      C: "INCORRETA. A assinatura digital não remove a autenticação — é uma forma de autenticação.",
-      D: "INCORRETA. A assinatura digital não substitui a verificação de senhas — é complementar.",
-      E: "INCORRETA. Assinatura digital não cria dados aleatórios."
+      A: "CORRETA. A alternativa contempla verificação criptográfica e validação do vínculo de confiança e do estado do certificado.",
+      B: "INCORRETA. Uma imagem pode ser copiada e não comprova uma assinatura digital criptográfica.",
+      C: "INCORRETA. Assinatura digital não significa que todo o documento foi cifrado; a verificação de integridade é parte do processo.",
+      D: "INCORRETA. Validade temporal, revogação e cadeia de confiança podem ser relevantes à validação.",
+      E: "INCORRETA. A assinatura oferece evidências técnicas importantes, mas não determina automaticamente todas as conclusões jurídicas ou factuais."
     },
-    regra: "Assinatura digital = 'garantia de quem, o que e quando'. Autentica + integridade + não repúdio.",
-    pegadinha: "Assinatura digital não é 'levar um documento' — é 'criptografia matemática' para provar autoria.",
-    fonte: "NIST FIPS 186 (DSA), FIPS 197 (AES)."
+    regra: "Valide a assinatura, a integridade, o vínculo entre chave e identidade e o estado do certificado conforme a política aplicável.",
+    pegadinha: "Assinatura digital não equivale a criptografar o documento nem torna dispensável a validação do certificado.",
+    fonte: "NIST FIPS 186-5 — Digital Signature Standard: https://csrc.nist.gov/pubs/fips/186-5/final; ICP-Brasil, documentos e normas oficiais: https://www.gov.br/iti/pt-br/assuntos/icp-brasil."
   },
 
   { id: "q-m4-59", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Certificados Digitais",
-    contexto: "Certificados digitais são usados para verificar a identidade de usuários e sistemas.",
-    enunciado: "Certificado digital é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Certificados digitais e cadeia de confiança",
+    contexto: "Um navegador recebe um certificado de servidor para uma conexão HTTPS e precisa decidir se confia na identidade apresentada.",
+    enunciado: "Qual afirmação descreve corretamente a função de um certificado digital X.509?",
     alternativas: [
-      { letra: "A", texto: "Um documento que verifica a identidade de uma entidade em uma comunicação segura." },
-      { letra: "B", texto: "Um documento de identidade físico." },
-      { letra: "C", texto: "Um documento de acesso a sistemas." },
-      { letra: "D", texto: "Um documento de backup." },
-      { letra: "E", texto: "Um documento de verificação de senha." }
+      { letra: "A", texto: "Vincula uma chave pública a uma identidade ou nome, sendo a confiança avaliada por validação da cadeia, do período de validade, do nome e do estado do certificado." },
+      { letra: "B", texto: "Garante que o servidor não contém vulnerabilidades e que todo conteúdo é seguro." },
+      { letra: "C", texto: "Substitui a necessidade de validar o nome do servidor e a cadeia de certificação." },
+      { letra: "D", texto: "É um backup criptografado dos dados do usuário." },
+      { letra: "E", texto: "Prova, por si só, que a pessoa que controla o domínio tem autorização legal para todo conteúdo publicado nele." }
     ],
     gabarito: "A",
-    justificativa: "Certificado digital é um documento digital (geralmente baseado em X.509) que vincula uma chave pública a uma entidade, verificando sua identidade em comunicação segura. Documento físico (alternativa B incorreta); documento de acesso (alternativa C incorreta); documento de backup (alternativa D incorreta); documento de verificação de senha (alternativa E incorreta).",
+    justificativa: "Um certificado X.509 associa uma chave pública a uma identidade ou nome conforme os campos e as políticas aplicáveis. O cliente precisa validar a cadeia até uma âncora de confiança, o período de validade, a correspondência do nome e, conforme o perfil, o estado de revogação e outros requisitos. Um certificado válido não atesta que o sistema esteja livre de vulnerabilidades ou que o conteúdo seja legítimo em todos os sentidos.",
     analise: {
-      A: "CORRETA. Certificado digital verifica a identidade de uma entidade em comunicação segura.",
-      B: "INCORRETA. Certificado digital é digital, não físico.",
-      C: "INCORRETA. Certificado não é documento de acesso — é de identidade em rede.",
-      D: "INCORRETA. Certificado não é documento de backup.",
-      E: "INCORRETA. Certificado não verifica senha — vincula chave pública a uma entidade."
+      A: "CORRETA. A alternativa descreve a função de vinculação e os principais aspectos da validação.",
+      B: "INCORRETA. Certificados não são auditorias de segurança do servidor nem garantem a segurança do conteúdo.",
+      C: "INCORRETA. A cadeia e a correspondência do nome precisam ser verificadas.",
+      D: "INCORRETA. Certificado digital não é um backup.",
+      E: "INCORRETA. O certificado não comprova autorização legal para todo conteúdo nem a veracidade de tudo que o site publica."
     },
-    regra: "Certificado digital = 'carteira de identidade eletrônica'. Verifica quem está falando.",
-    pegadinha: "Certificado digital não é 'documento físico' — é 'certificado eletrônico' para rede.",
-    fonte: "ITU-T X.509; NIST SP 800-25."
+    regra: "Certificado X.509 vincula chave pública a uma identidade/nome; confiança depende da validação do certificado e da cadeia segundo regras aplicáveis.",
+    pegadinha: "Um certificado aceito não garante que o site seja confiável em todos os aspectos, livre de malware ou correto no conteúdo.",
+    fonte: "ITU-T X.509 — Information technology — Public-key and attribute certificate frameworks: https://www.itu.int/rec/T-REC-X.509; RFC 5280 — Internet X.509 Public Key Infrastructure Certificate and CRL Profile: https://www.rfc-editor.org/rfc/rfc5280."
   },
 
   { id: "q-m4-60", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Phishing Avançado",
-    contexto: "Phishing avançado usa técnicas sofisticadas para enganar usuários.",
-    enunciado: "O 'spear phishing' (phishing direcionado) é caracterizado por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-1", assunto: "4.3 — Phishing direcionado (spear phishing)",
+    contexto: "Uma servidora recebe mensagem que cita seu cargo, uma reunião real e o nome de seu gestor. A mensagem solicita que ela abra um link e informe credenciais em uma página externa.",
+    enunciado: "Qual característica torna esse caso compatível com spear phishing e qual resposta inicial é mais segura?",
     alternativas: [
-      { letra: "A", texto: "Um ataque generalizado, sem alvo específico." },
-      { letra: "B", texto: "Um ataque personalizado contra uma pessoa ou organização específica." },
-      { letra: "C", texto: "Um ataque que não envia e-mails." },
-      { letra: "D", texto: "Um ataque que não usa tecnologia." },
-      { letra: "E", texto: "Um ataque que não usa fraudes." }
+      { letra: "A", texto: "É uma mensagem legítima por mencionar fatos reais; basta abrir o link para confirmar." },
+      { letra: "B", texto: "É uma tentativa direcionada e personalizada; a servidora deve evitar o link, verificar o pedido por canal independente e reportar a mensagem conforme o procedimento institucional." },
+      { letra: "C", texto: "Spear phishing ocorre apenas por telefone, nunca por e-mail ou mensagens." },
+      { letra: "D", texto: "O uso de informações públicas impede que a mensagem seja fraudulenta." },
+      { letra: "E", texto: "A mensagem só é suspeita se contiver erros ortográficos evidentes." }
     ],
     gabarito: "B",
-    justificativa: "Spear phishing é um ataque personalizado contra uma pessoa ou organização específica, usando informações de pesquisa para aumentar a credibilidade. Ataque geralizado (alternativa A incorreta); não envia e-mails (alternativa C incorreta); não usa tecnologia (alternativa D incorreta); não usa fraude (alternativa E incorreta).",
+    justificativa: "Spear phishing é uma tentativa de phishing direcionada a uma pessoa ou organização e pode incorporar detalhes reais para aumentar a credibilidade. Esses detalhes não autenticam o remetente nem o destino do link. A resposta segura é não interagir com o conteúdo suspeito, confirmar solicitações por canal independente já conhecido e reportar conforme os procedimentos da organização.",
     analise: {
-      A: "INCORRETA. Spear phishing é direcionado, não generalizado (o geral é 'phishing' comum).",
-      B: "CORRETA. Spear phishing é personalizado contra uma pessoa ou organização específica.",
-      C: "INCORRETA. Normalmente envia e-mails (ou outras mídias) como veículo de ataque.",
-      D: "INCORRETA. O ataque usa tecnologia (e-mail, sites falsos, etc.).",
-      E: "INCORRETA. Spear phishing é uma fraude — enganar o alvo é sua essência."
+      A: "INCORRETA. Informações verdadeiras podem ser obtidas publicamente ou por comprometimento e não autenticam a mensagem.",
+      B: "CORRETA. A personalização é compatível com spear phishing; a verificação independente e o reporte reduzem o risco.",
+      C: "INCORRETA. O ataque pode usar e-mail, mensagens, redes sociais ou outros canais.",
+      D: "INCORRETA. Informações públicas podem ser usadas para tornar a fraude mais convincente.",
+      E: "INCORRETA. Mensagens bem escritas também podem ser fraudulentas; erros de linguagem não são requisito para identificar phishing."
     },
-    regra: "Spear phishing = 'furada de caça'. Alvo específico, elaborado e personalizado.",
-    pegadinha: "Spear phishing não é 'golpe espalhado' — é 'espada de caça', focado e preciso.",
-    fonte: "MITRE ATT&CK — T1566 (Phishing)."
+    regra: "Spear phishing é phishing direcionado e personalizado; confirme solicitações sensíveis por canal independente e reporte mensagens suspeitas.",
+    pegadinha: "Detalhes reais e texto bem escrito não provam autenticidade do remetente ou do link.",
+    fonte: "MITRE ATT&CK, T1566 — Phishing: https://attack.mitre.org/techniques/T1566/; CISA, Recognize and Report Phishing: https://www.cisa.gov/secure-our-world/recognize-and-report-phishing."
   },
 
   { id: "q-m4-61", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Malware Analisado",
-    contexto: "Os malwares são classificados por comportamento e disseminação.",
-    enunciado: "A classificação dos malwares (vírus, worms, trojans, ransomware) é baseada em:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-1", assunto: "4.2 — Categorias e comportamento de malware",
+    contexto: "Uma estação apresenta arquivos com extensões alteradas, notas de resgate e impossibilidade de abrir documentos; em outro equipamento, um programa se disfarça de utilitário legítimo para coletar credenciais.",
+    enunciado: "Qual classificação relaciona corretamente os comportamentos descritos?",
     alternativas: [
-      { letra: "A", texto: "Comportamento e meio de disseminação." },
-      { letra: "B", texto: "Tamanho do arquivo." },
-      { letra: "C", texto: "Cor do arquivo." },
-      { letra: "D", texto: "Data de criação." },
-      { letra: "E", texto: "Nenhum dos anteriores." }
+      { letra: "A", texto: "O primeiro caso é compatível com ransomware; o segundo pode ser um trojan, conforme sua forma de se disfarçar e suas funções." },
+      { letra: "B", texto: "Ambos são necessariamente worms, pois qualquer malware se propaga automaticamente pela rede." },
+      { letra: "C", texto: "O primeiro caso é spyware exclusivamente, pois criptografar arquivos é uma forma de monitoramento." },
+      { letra: "D", texto: "Nenhum caso pode ser malware sem replicação automática." },
+      { letra: "E", texto: "A classificação depende principalmente do tamanho e da extensão dos arquivos." }
     ],
     gabarito: "A",
-    justificativa: "Malwares são classificados por comportamento (ex: criptografia, espionagem, propagação) e meio de disseminação (ex: anexo, rede, macro). Tamanho do arquivo (alternativa B incorreta); cor (alternativa C incorreta); data de criação (alternativa D incorreta); nenhum dos anteriores (alternativa E incorreta).",
+    justificativa: "Ransomware é associado à extorsão, frequentemente por criptografia ou bloqueio de acesso a dados. Trojan descreve malware que se apresenta como algo legítimo ou útil para induzir sua execução; pode carregar funções adicionais. As categorias podem se sobrepor, e a classificação deve considerar comportamento observado e evidências, não apenas um sintoma isolado.",
     analise: {
-      A: "CORRETA. Malwares são classificados por comportamento e meio de disseminação.",
-      B: "INCORRETA. Tamanho do arquivo não é critério de classificação de malwares.",
-      C: "INCORRETA. Cor do arquivo não é critério.",
-      D: "INCORRETA. Data de criação não é critério.",
-      E: "INCORRETA. O critério é comportamento + disseminação."
+      A: "CORRETA. Os sintomas são compatíveis com ransomware no primeiro cenário e com um trojan no segundo, sem afirmar que a classificação seja exclusiva.",
+      B: "INCORRETA. Worms se caracterizam pela capacidade de propagação, mas nem todo malware se replica automaticamente.",
+      C: "INCORRETA. Criptografia de arquivos para extorsão é compatível com ransomware, não define spyware.",
+      D: "INCORRETA. Muitos malwares dependem de execução ou engano do usuário e não se replicam automaticamente.",
+      E: "INCORRETA. Tamanho e extensão não determinam a categoria de malware."
     },
-    regra: "Classificar malware = 'como se espalha' + 'o que faz'. Comportamento + disseminação.",
-    pegadinha: "Malware não é 'trojan de barco' — é 'vírus de computador' — mas a classificação é por comportamento.",
-    fonte: "Virus Bulletin — Classification of Malware."
+    regra: "Classifique malware pelo comportamento e pelas evidências: ransomware extorque/bloqueia dados; trojan disfarça sua natureza; worm se propaga automaticamente.",
+    pegadinha: "As categorias de malware podem se sobrepor; não conclua a família apenas pelo nome do arquivo ou por um único indicador.",
+    fonte: "CISA, Understanding and Responding to a Ransomware Attack: https://www.cisa.gov/stopransomware/ransomware-guide; NIST SP 800-83 Rev. 1 — Guide to Malware Incident Prevention and Handling for Desktops and Laptops: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
   { id: "q-m4-62", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Antivírus e EDR",
-    contexto: "Antivírus e EDR são defensas endpoint.",
-    enunciado: "A principal diferença entre Antivírus (AV) e EDR (Endpoint Detection and Response) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Antivírus, EDR e resposta a incidentes",
+    contexto: "Uma organização usa proteção antimalware nos endpoints e avalia adicionar uma plataforma para investigar comportamentos suspeitos e coordenar ações de contenção.",
+    enunciado: "Qual descrição diferencia de forma mais precisa antivírus tradicional e EDR?",
     alternativas: [
-      { letra: "A", texto: "Software AV só detecta, PDR detecta e responde ativamente." },
-      { letra: "B", texto: "AV e EDR são a mesma coisa." },
-      { letra: "C", texto: "AV é para servidores; EDR é para clientes." },
-      { letra: "D", texto: "EDR é mais antigo que AV." },
-      { letra: "E", texto: "AV é offline; EDR é online." }
+      { letra: "A", texto: "Antivírus tradicional pode detectar ameaças por assinaturas e outras técnicas; EDR acrescenta telemetria, investigação e capacidades de resposta, conforme o produto e a configuração." },
+      { letra: "B", texto: "Antivírus só funciona offline e EDR só funciona online." },
+      { letra: "C", texto: "EDR impede todos os incidentes e torna desnecessário o monitoramento." },
+      { letra: "D", texto: "Antivírus é exclusivo de estações pessoais e EDR é exclusivo de servidores." },
+      { letra: "E", texto: "EDR é apenas outro nome para firewall de rede." }
     ],
     gabarito: "A",
-    justificativa: "Antivírus clássico é uma defesa signature-based (assinatura), limitada a detecção; EDR é um sistema moderno que detecta, responde ativamente e permite investigação/remediação de ameaças em tempo real. AV e EDR não são a mesma coisa (alternativa B incorreta); ambos podem ser em servidores e cliente (alternativa C incorreta); EDR é mais recente que AV (alternativa D incorreta); AV pode ser online ou offline (alternativa E incorreta).",
+    justificativa: "Produtos antimalware modernos podem combinar assinaturas, heurísticas e análise comportamental. EDR normalmente amplia a visibilidade dos endpoints com telemetria, investigação e resposta, mas as capacidades variam por produto, licença e configuração. EDR não substitui controles de rede, gestão de vulnerabilidades, cópias de segurança ou resposta organizacional a incidentes.",
     analise: {
-      A: "CORRETA. AV é principalmente detecção (geralmente assinatura); EDR detecta e responde ativamente.",
-      B: "INCORRETA. AV e EDR são ferramentas diferentes com arquiteturas distintas.",
-      C: "INCORRETA. Ambos podem estar em servidores e clientes (endpoint).",
-      D: "INCORRETA. EDR é uma geração mais recente que o AV tradicional.",
-      E: "INCORRETA. AV pode funcionar offline ou online."
+      A: "CORRETA. A alternativa descreve diferenças típicas sem reduzir o antivírus a assinaturas nem prometer capacidades idênticas em todos os produtos.",
+      B: "INCORRETA. Tanto produtos antimalware quanto EDR podem ter componentes e modos de operação diferentes; a distinção não é simplesmente offline/online.",
+      C: "INCORRETA. EDR pode apoiar detecção e resposta, mas não elimina todos os incidentes nem dispensa monitoramento.",
+      D: "INCORRETA. Ambos podem proteger diferentes tipos de endpoints, conforme a solução.",
+      E: "INCORRETA. Firewall e EDR têm funções distintas, embora possam integrar sinais e respostas."
     },
-    regra: "AV = 'detectar + avisar'. EDR = 'detectar + responder + investigar'. EDR é mais completo.",
-    pegadinha: "AV não é 'fim do ataque' — é 'detecção de ameaça'. EDR é o próximo nível de defesa.",
-    fonte: "CrowdStrike — EDR vs Antivirus, 2022."
+    regra: "EDR costuma acrescentar telemetria, investigação e resposta no endpoint; a proteção efetiva depende das capacidades e da configuração.",
+    pegadinha: "Não trate EDR como garantia de prevenção total nem como substituto de todas as demais camadas de segurança.",
+    fonte: "NIST SP 800-83 Rev. 1 — Guide to Malware Incident Prevention and Handling for Desktops and Laptops: https://csrc.nist.gov/pubs/sp/800/83/r1/final."
   },
 
   { id: "q-m4-63", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Segmentação de Rede",
-    contexto: "A segmentação de rede divide a rede em sub-redes menores para isolar ameaças.",
-    enunciado: "A segmentação de rede é uma prática de segurança que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Segmentação de rede e movimento lateral",
+    contexto: "Uma rede corporativa mantém estações de usuários, servidores administrativos e sistemas críticos no mesmo segmento, com comunicação ampla entre dispositivos.",
+    enunciado: "Qual alteração reduz melhor o risco de que o comprometimento de uma estação alcance sistemas críticos?",
     alternativas: [
-      { letra: "A", texto: "Separar a rede em sub-redes menores para isolar zonas e controlar o tráfego entre elas." },
-      { letra: "B", texto: "Juntar todas as redes em uma única sub-rede." },
-      { letra: "C", texto: "Criptografar toda a rede." },
-      { letra: "D", texto: "Eliminar o tráfego de rede." },
-      { letra: "E", texto: "Criar uma rede sem segmentos." }
+      { letra: "A", texto: "Conectar todas as redes a um único segmento para facilitar o diagnóstico." },
+      { letra: "B", texto: "Separar zonas por função e risco, aplicar regras explícitas de comunicação entre elas e monitorar os fluxos autorizados." },
+      { letra: "C", texto: "Criptografar somente os nomes dos dispositivos e manter todo o tráfego permitido." },
+      { letra: "D", texto: "Eliminar qualquer comunicação de rede, inclusive a necessária aos serviços." },
+      { letra: "E", texto: "Criar sub-redes sem controles de tráfego, presumindo que a separação lógica bloqueie todos os ataques." }
     ],
-    gabarito: "A",
-    justificativa: "Segmentação de rede divide a infraestrutura em sub-redes/manejo, permitindo isolar zonas críticas e controlar o tráfego entre elas. Juntar redes (alternativa B incorreta); criptografar toda a rede (alternativa C incorreta); eliminar tráfego (alternativa D incorreta); criar rede sem segmentos (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "A segmentação divide a rede em zonas e limita a comunicação entre elas por meio de controles apropriados. Isso pode reduzir a superfície de ataque e dificultar o movimento lateral, mas a mera criação de sub-redes não garante isolamento se as regras permitirem tráfego amplo ou se os controles forem mal configurados.",
     analise: {
-      A: "CORRETA. Segmentação divide a rede em sub-redes, isolando zonas e controlando o tráfego.",
-      B: "INCORRETA. Junção de redes é o oposto de segmentação.",
-      C: "INCORRETA. Criptografia é uma defesa complementar, não a segmentação.",
-      D: "INCORRETA. Eliminar tráfego não é segmentação — é paralisação.",
-      E: "INCORRETA. 'Rede sem segmentos' é exatamente o que se evita com segmentação."
+      A: "INCORRETA. Um segmento amplo pode facilitar a propagação e o movimento lateral após o comprometimento.",
+      B: "CORRETA. Zonas definidas por função e risco, regras explícitas e monitoramento limitam comunicações desnecessárias.",
+      C: "INCORRETA. Criptografar nomes não controla os fluxos entre sistemas.",
+      D: "INCORRETA. O objetivo é controlar a comunicação necessária, não interromper indiscriminadamente todos os serviços.",
+      E: "INCORRETA. Sub-redes sem regras de controle não garantem isolamento efetivo."
     },
-    regra: "Segmentação = 'partes separadas'. Isolamento de zonas críticas e controle de tráfego.",
-    pegadinha: "Segmentação não é 'reduzir a rede' — é 'organizar a rede em zonas seguras'.",
-    fonte: "NIST SP 800-125 (Segmented Networks)."
+    regra: "Segmentação eficaz combina zonas bem definidas, controles de tráfego e monitoramento; sub-redes isoladas apenas no desenho não bastam.",
+    pegadinha: "A segmentação reduz risco, mas sua eficácia depende das regras e da aplicação real dos controles.",
+    fonte: "NIST SP 800-207 — Zero Trust Architecture: https://csrc.nist.gov/pubs/sp/800/207/final; NIST SP 800-53 Rev. 5, SC-7 — Boundary Protection: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
   { id: "q-m4-64", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Hardening",
-    contexto: "Hardening é o processo de reforçar a segurança de sistemas e redes.",
-    enunciado: "Hardening (afeitamento/agentar a segurança) de sistemas é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Hardening e redução da superfície de ataque",
+    contexto: "Um servidor recém-instalado mantém serviços padrão desnecessários, contas antigas, permissões amplas e atualizações pendentes.",
+    enunciado: "Qual conjunto de medidas representa uma abordagem adequada de hardening?",
     alternativas: [
-      { letra: "A", texto: "O processo de reforçar a segurança de sistemas e redes, desabilitando serviços desnecessários, aplicando patchs e configurações seguras." },
-      { letra: "B", texto: "O processo de instalar mais softwares." },
-      { letra: "C", texto: "O processo de desativar o firewall." },
-      { letra: "D", texto: "O processo de excluir conforme normas." },
-      { letra: "E", texto: "O processo de aumentar o tráfego de rede." }
+      { letra: "A", texto: "Desabilitar serviços e contas desnecessários, aplicar atualizações testadas, restringir privilégios e adotar uma configuração segura documentada." },
+      { letra: "B", texto: "Instalar ferramentas adicionais sem avaliar suas necessidades ou permissões." },
+      { letra: "C", texto: "Desativar o firewall para evitar conflitos e manter as configurações padrão." },
+      { letra: "D", texto: "Aplicar patches aleatórios em produção sem avaliação ou plano de reversão." },
+      { letra: "E", texto: "Compartilhar a conta administrativa para facilitar a operação e evitar atrasos." }
     ],
     gabarito: "A",
-    justificativa: "Hardening é o processo de reforçar a segurança de sistemas, desabilitando serviços desnecessários, aplicando patchs e configurações seguras para reduzir a superfície de ataque. Instalar mais softwares (alternativa B incorreta); desativar firewall (alternativa C incorreta); excluir conforme normas (alternativa D incorreta); aumentar tráfego (alternativa E incorreta).",
+    justificativa: "Hardening busca reduzir a superfície de ataque por meio de configuração segura, remoção ou desativação do que não é necessário, aplicação controlada de atualizações, restrição de privilégios e revisão de contas e serviços. As medidas precisam ser testadas e mantidas ao longo do ciclo de vida do sistema para não introduzir indisponibilidade ou regressões.",
     analise: {
-      A: "CORRETA. Hardening é o processo de reforçar a segurança, desabilitar serviços desnecessários e aplicar configurações seguras.",
-      B: "INCORRETA. Instalar mais softwares amplia a superfície de ataque, não segurança.",
-      C: "INCORRETA. Hardening não é desativar firewall.",
-      D: "INCORRETA. Exclusão de dados não é hardening.",
-      E: "INCORRETA. Aumentar tráfego não é hardening."
+      A: "CORRETA. A alternativa reúne redução de superfície, atualização controlada, privilégio mínimo e configuração documentada.",
+      B: "INCORRETA. Instalar ferramentas sem necessidade pode ampliar a superfície de ataque.",
+      C: "INCORRETA. Desativar controles e manter padrões inseguros contraria o hardening.",
+      D: "INCORRETA. Atualizações devem ser priorizadas, testadas e implantadas com controles adequados, não aleatoriamente.",
+      E: "INCORRETA. Contas administrativas compartilhadas enfraquecem a rastreabilidade e ampliam o impacto de comprometimento."
     },
-    regra: "Hardening = 'tirar a faca dos sistema'. Desabilitar o que não é necessário.",
-    pegadinha: "Hardening não é 'adormecer o sistema' — é 'fortalecer a postura de segurança'.",
-    fonte: "CIS Controls — Critical Security Controls, v8."
+    regra: "Hardening = reduzir a superfície de ataque com configuração segura, serviços mínimos, atualizações controladas e privilégios adequados.",
+    pegadinha: "Hardening não é instalar mais ferramentas nem alterar produção sem teste; é reduzir exposições com mudanças controladas.",
+    fonte: "CIS Critical Security Controls v8.1: https://www.cisecurity.org/controls/v8; NIST SP 800-123 — Guide to General Server Security: https://csrc.nist.gov/pubs/sp/800/123/final."
   },
 
   { id: "q-m4-65", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Gestão de Vulnerabilidades",
-    contexto: "A gestão de vulnerabilidades é um processo contínuo de identificação, avaliação e correção.",
-    enunciado: "A gestão de vulnerabilidades envolve:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Priorização de vulnerabilidades",
+    contexto: "Um scanner identifica dezenas de vulnerabilidades. Algumas têm pontuação técnica alta, mas não estão expostas; outra, de pontuação menor, afeta um serviço crítico exposto à internet e já tem exploração conhecida.",
+    enunciado: "Qual estratégia de gestão de vulnerabilidades é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Identificar, avaliar e corrigir vulnerabilidades de sistemas e aplicações." },
-      { letra: "B", texto: "Ignorar vulnerabilidades." },
-      { letra: "C", texto: "Criptografar vulnerabilidades." },
-      { letra: "D", texto: "Excluir todos os sistemas." },
-      { letra: "E", texto: "Aplicar patches aleatórios." }
+      { letra: "A", texto: "Corrigir sempre apenas pela pontuação técnica, sem considerar exposição ou criticidade do ativo." },
+      { letra: "B", texto: "Ignorar as vulnerabilidades de menor pontuação até que um incidente ocorra." },
+      { letra: "C", texto: "Priorizar considerando severidade, exploração conhecida, exposição, criticidade do ativo e impacto; remediar ou mitigar, verificar a correção e documentar exceções." },
+      { letra: "D", texto: "Aplicar todos os patches em qualquer ordem, diretamente em produção e sem teste." },
+      { letra: "E", texto: "Considerar a execução do scanner prova de que todas as vulnerabilidades foram encontradas." }
     ],
-    gabarito: "A",
-    justificativa: "Gestão de vulnerabilidades é o processo contínuo de identificar, avaliar, priorizar e corrigir (patchs, configurações) as fraquezas de sistemas e aplicações. Ignorar (alternativa B incorreta); criptografar (alternativa C incorreta); excluir sistemas (alternativa D incorreta); patches aleatórios (alternativa E incorreta).",
+    gabarito: "C",
+    justificativa: "A priorização deve combinar gravidade técnica com contexto operacional: exploração ativa ou conhecida, exposição, importância do ativo, impacto potencial e controles existentes. A correção deve ser verificada; quando não for possível corrigir imediatamente, a organização precisa definir mitigação, prazo, responsável e aceite formal do risco conforme sua governança. Scanners têm limites e não provam ausência de vulnerabilidades.",
     analise: {
-      A: "CORRETA. Gestão de vulnerabilidades identifica, avalia e corrige fraquezas de sistemas.",
-      B: "INCORRETA. Ignorar vulnerabilidades aumenta o risco.",
-      C: "INCORRETA. Criptografia não corrige vulnerabilidades — pode protegê-las.",
-      D: "INCORRETA. Eliminar todos os sistemas não é gestão de vulnerabilidades.",
-      E: "INCORRETA. Patches aleatórios são ineficazes — a gestão é sistemática e prioritária."
+      A: "INCORRETA. Uma pontuação isolada não representa todo o risco do ambiente.",
+      B: "INCORRETA. Vulnerabilidades de menor pontuação podem ser críticas no contexto de exposição e impacto.",
+      C: "CORRETA. A alternativa combina risco contextual, remediação/mitigação, verificação e governança das exceções.",
+      D: "INCORRETA. Mudanças precisam de planejamento e teste proporcionais ao risco para evitar falhas operacionais.",
+      E: "INCORRETA. Scanners podem produzir falsos positivos e negativos e não cobrem necessariamente todos os ativos e falhas."
     },
-    regra: "Gestão de vulnerabilidades = 'escavar'. Encontrar, classificar e remover pontos fracos.",
-    pegadinha: "Não confunda: gestão de vulnerabilidades não é 'esse bug é corrigido' — é 'um processo contínuo'.",
-    fonte: "NIST SP 800-40 (Guide to Enterprise Patch Management)."
+    regra: "Priorize vulnerabilidades pelo risco contextual e verifique a remediação; registre mitigação e exceções quando a correção imediata não for viável.",
+    pegadinha: "Pontuação técnica e resultado de scanner são insumos, não uma avaliação completa nem prova de segurança.",
+    fonte: "NIST SP 800-40 Rev. 4 — Guide to Enterprise Patch Management Planning: https://csrc.nist.gov/pubs/sp/800/40/r4/final; CISA, Known Exploited Vulnerabilities Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog."
   },
 
   { id: "q-m4-66", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — WAF",
-    contexto: "WAF (Web Application Firewall) protege aplicações web contra ataques específicos.",
-    enunciado: "Um WAF (Web Application Firewall) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-2", assunto: "4.2 — WAF e proteção de aplicações web",
+    contexto: "Uma aplicação web recebe tentativas de SQL injection e cross-site scripting. A equipe pretende adicionar um controle de segurança sem substituir a correção do código.",
+    enunciado: "Qual afirmação sobre um Web Application Firewall (WAF) é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Um firewall que protege aplicações web contra ataques comuns (SQLi, XSS, etc.)." },
-      { letra: "B", texto: "Um firewall de borda de rede." },
-      { letra: "C", texto: "Um firewall de dados." },
-      { letra: "D", texto: "Um firewall de backup." },
-      { letra: "E", texto: "Um firewall para e-mail." }
+      { letra: "A", texto: "Um WAF pode inspecionar requisições HTTP e bloquear padrões de ataque conforme suas regras, mas não substitui desenvolvimento seguro e correção de vulnerabilidades." },
+      { letra: "B", texto: "Um WAF garante que a aplicação não tenha vulnerabilidades e elimina a necessidade de testes." },
+      { letra: "C", texto: "Um WAF é destinado exclusivamente a filtrar mensagens de e-mail." },
+      { letra: "D", texto: "Um WAF deve bloquear toda requisição legítima para evitar falsos negativos." },
+      { letra: "E", texto: "Um WAF criptografa automaticamente o banco de dados e as cópias de segurança." }
     ],
     gabarito: "A",
-    justificativa: "WAF é um firewall projetado para proteger aplicações web contra ataques específicos, como SQL injection (SQLi), cross-site scripting (XSS), etc. Firewall de borda (alternativa B incorreta); firewall de dados (alternativa C incorreta); firewall de backup (alternativa D incorreta); firewall para e-mail (alternativa E incorreta).",
+    justificativa: "Um WAF atua sobre o tráfego HTTP/HTTPS e pode detectar ou bloquear padrões associados a ataques contra aplicações web. A eficácia depende das regras, do modo de implantação, do contexto e da manutenção; podem ocorrer falsos positivos e falsos negativos. Ele é uma camada complementar, não substitui correção no código, configuração segura ou testes.",
     analise: {
-      A: "CORRETA. WAF protege aplicações web contra ataques comuns como SQLi e XSS.",
-      B: "INCORRETA. Firewall de borda é um dispositivo de rede, não específico para aplicações web.",
-      C: "INCORRETA. WAF não é firewall de dados — é para aplicações web.",
-      D: "INCORRETA. WAF não é firewall de backup.",
-      E: "INCORRETA. WAF não é firewall para e-mail."
+      A: "CORRETA. A alternativa delimita a função típica do WAF e reconhece que ele complementa outras práticas de segurança.",
+      B: "INCORRETA. Um WAF não garante ausência de vulnerabilidades nem substitui testes ou correções.",
+      C: "INCORRETA. Filtragem de e-mail não é a função típica de um WAF.",
+      D: "INCORRETA. Bloquear indiscriminadamente o tráfego legítimo pode interromper o serviço e não é uma estratégia adequada.",
+      E: "INCORRETA. Um WAF não criptografa automaticamente bancos de dados nem backups."
     },
-    regra: "WAF = 'escudo para aplicação web'. Protege contra SQLi, XSS, CSRF e outros ataques.",
-    pegadinha: "WAF não é 'bloquear tudo' — é 'allowlist' de segurança para aplicações web.",
-    fonte: "OWASP — Web Application Firewall (WAF)."
+    regra: "WAF inspeciona e controla tráfego de aplicações web segundo regras; deve complementar, não substituir, correção e testes de segurança.",
+    pegadinha: "Ter WAF não prova que a aplicação está livre de SQL injection, XSS ou outras vulnerabilidades.",
+    fonte: "OWASP, Web Application Firewall: https://owasp.org/www-community/Web_Application_Firewall."
   },
 
   { id: "q-m4-67", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — IDS vs IPS — Detalhe",
-    contexto: "IDS e IPS são complementares, mas com diferenças fundamentais.",
-    enunciado: "Sobre a diferença entre IDS e IPS, é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — IDS/IPS e controles de detecção",
+    contexto: "Uma equipe quer monitorar tráfego suspeito e, em outro ponto da rede, bloquear automaticamente fluxos que correspondam a regras de prevenção.",
+    enunciado: "Qual distinção entre IDS e IPS é a mais precisa?",
     alternativas: [
-      { letra: "A", texto: "O IDS adiciona alertas sobre a atividade suspeita; o IPS impede ou bloqueia o tráfego malintencionoso." },
-      { letra: "B", texto: "O IDS e o IPS são a mesma tecnologia." },
-      { letra: "C", texto: "O IDS impede o tráfego; o IPS apenas monitora." },
-      { letra: "D", texto: "O IDS não monitora." },
-      { letra: "E", texto: "O IPS não gera alertas." }
+      { letra: "A", texto: "IDS é usado para detectar e alertar; IPS pode ser implantado em linha para bloquear tráfego, mas as capacidades e os efeitos dependem da arquitetura e das regras." },
+      { letra: "B", texto: "Todo IDS bloqueia automaticamente o tráfego e todo IPS apenas registra alertas." },
+      { letra: "C", texto: "IDS e IPS são sinônimos e sempre operam de forma idêntica." },
+      { letra: "D", texto: "IPS não pode gerar alertas nem produzir registros." },
+      { letra: "E", texto: "IDS não observa eventos ou tráfego de rede." }
     ],
     gabarito: "A",
-    justificativa: "IDS é monitoramento passivo que gera alertas sobre atividade suspeita; IPS é ativo, impedindo ou bloqueando o tráfego malintencionoso. IDS e IPS não são a mesma tecnologia (alternativa B incorreta); IDS não impede (alternativa C incorreta); IDS monitora sim (alternativa D incorreta); IPS também gera alertas (alternativa E incorreta).",
+    justificativa: "Um IDS é orientado à detecção e ao alerta, enquanto um IPS pode atuar em linha para impedir tráfego que corresponda a regras de prevenção. Implementações podem compartilhar tecnologia e recursos, e alguns produtos integram ambas as funções. A configuração deve equilibrar eficácia, falsos positivos e risco de interromper tráfego legítimo.",
     analise: {
-      A: "CORRETA. IDS = monitoramento e alertas; IPS = bloqueio ativo do tráfego malintencionoso.",
-      B: "INCORRETA. IDS e IPS têm funcionalidades diferentes — um monitora, o outro age.",
-      C: "INCORRETA. IDS não impede — é o IPS que impede o tráfego.",
-      D: "INCORRETA. IDS monitora continuamente o tráfego para gerar alertas.",
-      E: "INCORRETA. IPS, além de bloquear, também gera alertas de segurança."
+      A: "CORRETA. A alternativa descreve a distinção funcional típica e reconhece a dependência da implantação e configuração.",
+      B: "INCORRETA. A descrição inverte os papéis típicos de IDS e IPS.",
+      C: "INCORRETA. As funções são distintas, ainda que possam estar integradas no mesmo produto.",
+      D: "INCORRETA. Um IPS pode registrar eventos e gerar alertas.",
+      E: "INCORRETA. Monitorar eventos ou tráfego para detectar atividade suspeita é função típica de IDS."
     },
-    regra: "IDS = 'olhar e avisar'. IPS = 'olhar, avisar e impedir'. IDS é monitoramento; IPS é bloqueio.",
-    pegadinha: "Não confunda: IDS é 'monitoramento e alerta'; IPS é 'bloqueio e prevenção'.",
-    fonte: "SANS Institute — Intrusion Detection Systems."
+    regra: "IDS detecta e alerta; IPS pode bloquear tráfego em linha. A distinção funcional não significa que todo produto tenha apenas uma capacidade.",
+    pegadinha: "Bloqueio automático pode gerar falso positivo e indisponibilidade; regras e modo de implantação precisam ser testados.",
+    fonte: "NIST SP 800-94 — Guide to Intrusion Detection and Prevention Systems (IDPS): https://csrc.nist.gov/pubs/sp/800/94/final."
   },
 
   { id: "q-m4-68", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — VPN",
-    contexto: "VPN (Virtual Private Network) cria uma conexão segura entre duas redes.",
-    enunciado: "Uma VPN (Virtual Private Network) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — VPN, tunelamento e limites de confiança",
+    contexto: "Uma funcionária acessa a rede corporativa por uma VPN a partir de uma rede Wi-Fi pública.",
+    enunciado: "Qual conclusão sobre a proteção oferecida pela VPN é mais adequada?",
     alternativas: [
-      { letra: "A", texto: "Um método de criar uma rede privada segura sobre uma rede pública (internet)." },
-      { letra: "B", texto: "Um dispositivo de roteamento." },
-      { letra: "C", texto: "Um protocolo de e-mail." },
-      { letra: "D", texto: "Um sistema de backup." },
-      { letra: "E", texto: "Um serviço de armazenamento." }
+      { letra: "A", texto: "A VPN pode proteger o tráfego entre o dispositivo e o ponto de terminação do túnel, conforme a configuração, mas não torna automaticamente confiável o dispositivo nem todo destino acessado." },
+      { letra: "B", texto: "A VPN impede qualquer malware, phishing ou roubo de credenciais no dispositivo." },
+      { letra: "C", texto: "Toda VPN garante anonimato absoluto para qualquer atividade online." },
+      { letra: "D", texto: "A VPN torna desnecessários autenticação, atualização e controles de acesso." },
+      { letra: "E", texto: "A VPN sempre protege o tráfego de ponta a ponta até cada aplicação, independentemente da arquitetura." }
     ],
     gabarito: "A",
-    justificativa: "VPN é um método que cria uma rede privada segura sobre uma rede pública (internet), criptografando o tráfego e garantindo privacidade e integridade. Dispositivo de roteamento (alternativa B incorreta); protocolo de e-mail (alternativa C incorreta); sistema de backup (alternativa D incorreta); serviço de armazenamento (alternativa E incorreta).",
+    justificativa: "Uma VPN cria um túnel lógico entre pontos definidos e pode proteger o tráfego nesse percurso por meio de mecanismos criptográficos e autenticação. A proteção termina conforme a arquitetura do túnel e não elimina riscos no endpoint, phishing, malware, configuração incorreta ou observação do tráfego após a terminação. A VPN não garante anonimato absoluto.",
     analise: {
-      A: "CORRETA. VPN cria uma conexão privada segura sobre a internet pública.",
-      B: "INCORRETA. VPN não é um roteador — é um serviço de tunnel seguro.",
-      C: "INCORRETA. VPN não é protocolo de e-mail.",
-      D: "INCORRETA. VPN não é sistema de backup.",
-      E: "INCORRETA. VPN não é serviço de armazenamento."
+      A: "CORRETA. A alternativa delimita o trecho protegido e não atribui à VPN propriedades que dependem de outros controles.",
+      B: "INCORRETA. VPN não impede automaticamente malware, phishing ou comprometimento de credenciais.",
+      C: "INCORRETA. A VPN não garante anonimato absoluto; o provedor, o destino e outros identificadores podem continuar observáveis.",
+      D: "INCORRETA. Autenticação, atualização, controle de acesso e proteção do endpoint continuam necessários.",
+      E: "INCORRETA. A proteção depende dos pontos de terminação e da arquitetura, não necessariamente de ponta a ponta."
     },
-    regra: "VPN = 'canal privado via internet'. Criptografia e tunelamento para acesso seguro.",
-    pegadinha: "VPN não é 'acesso à internet' — é 'privacidade e segurança na internet'.",
-    fonte: "NIST SP 800-77 (VPN)."
+    regra: "VPN protege um túnel entre pontos definidos; não substitui segurança do endpoint, autenticação nem controles no destino.",
+    pegadinha: "“Usar VPN” não significa anonimato absoluto nem proteção integral de toda a atividade digital.",
+    fonte: "NIST SP 800-77 Rev. 1 — Guide to IPsec VPNs: https://csrc.nist.gov/pubs/sp/800/77/r1/final."
   },
 
   { id: "q-m4-69", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — NTP",
-    contexto: "O NTP (Network Time Protocol) é essencial para sincronizar relógios em redes.",
-    enunciado: "O NTP (Network Time Protocol) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Sincronização de tempo e integridade dos logs",
+    contexto: "Após um incidente, os horários registrados por servidores, firewall e ferramenta de identidade divergem vários minutos, dificultando a reconstrução da sequência dos eventos.",
+    enunciado: "Qual medida ajuda a melhorar a correlação temporal dos registros?",
     alternativas: [
-      { letra: "A", texto: "Um protocolo para sincronizar o relógio de sistemas em uma rede." },
-      { letra: "B", texto: "Um protocolo para roteamento de pacotes." },
-      { letra: "C", texto: "Um protocolo de segurança de dados." },
-      { letra: "D", texto: "Um protocolo de e-mail." },
-      { letra: "E", texto: "Um protocolo de backup." }
+      { letra: "A", texto: "Sincronizar os relógios com fontes de tempo confiáveis, monitorar desvios e registrar os horários de forma consistente, protegendo também os próprios logs." },
+      { letra: "B", texto: "Desativar o relógio de todos os servidores para evitar diferenças." },
+      { letra: "C", texto: "Ordenar os eventos apenas pelo nome do arquivo de log." },
+      { letra: "D", texto: "Permitir que cada usuário ajuste o relógio de seu dispositivo sem registro." },
+      { letra: "E", texto: "Presumir que o NTP, por si só, prova a autenticidade de todos os eventos registrados." }
     ],
     gabarito: "A",
-    justificativa: "NTP é um protocolo de rede para sincronizar o relógio de sistemas em uma rede — essencial para logs, certificados, auditoria e processos que dependem de tempo. Roteamento de pacotes (alternativa B incorreta); protocolo de segurança de dados (alternativa C incorreta); protocolo de e-mail (alternativa D incorreta); protocolo de backup (alternativa E incorreta).",
+    justificativa: "Sincronizar relógios com fontes confiáveis e monitorar desvios ajuda a correlacionar eventos de sistemas diferentes. NTP é um protocolo de sincronização de tempo, mas a segurança depende da configuração e da fonte utilizada; sincronização temporal não comprova, por si só, autenticidade ou integridade dos logs.",
     analise: {
-      A: "CORRETA. NTP é um protocolo para sincronizar o relógio de sistemas em rede.",
-      B: "INCORRETA. NTP não roteia pacotes — é o protocolo de sincronização de tempo.",
-      C: "INCORRETA. NTP não é um protocolo de segurança de dados.",
-      D: "INCORRETA. NTP não é protocolo de e-mail.",
-      E: "INCORRETA. NTP não é protocolo de backup."
+      A: "CORRETA. A sincronização monitorada melhora a correlação temporal e deve ser combinada com proteção dos registros.",
+      B: "INCORRETA. Sem horário confiável, a investigação e a correlação de eventos ficam prejudicadas.",
+      C: "INCORRETA. O nome do arquivo não determina a ordem real dos eventos.",
+      D: "INCORRETA. Ajustes livres e não registrados podem introduzir erros ou facilitar adulteração.",
+      E: "INCORRETA. NTP ajuda a sincronizar relógios, mas não garante autenticidade nem integridade dos eventos registrados."
     },
-    regra: "NTP = 'mesmo relógio para todos'. Sincronização de tempo é essencial para auditoria e segurança.",
-    pegadinha: "NTP não é 'roteamento' — é 'sincronização de relógios'.",
-    fonte: "RFC 5905 (Network Time Protocol)."
+    regra: "Sincronize relógios com fontes confiáveis e monitore desvios; trate sincronização temporal e integridade/autenticidade dos logs como controles distintos.",
+    pegadinha: "Horários coerentes ajudam a investigar, mas não provam que um registro é genuíno ou não foi adulterado.",
+    fonte: "RFC 5905 — Network Time Protocol Version 4: https://www.rfc-editor.org/rfc/rfc5905; NIST SP 800-92 — Guide to Computer Security Log Management: https://csrc.nist.gov/pubs/sp/800/92/final."
   },
 
   { id: "q-m4-70", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Dispositivos de Segurança",
-    contexto: "Diversos dispositivos de segurança são utilizados em redes.",
-    enunciado: "O mecanismo mais eficaz para garantir que a comunicação entre dois sistemas seja autêntica e protegida é:",
+    nivel: "avancado", topico: "modulo-4-unidade-1-topico-3", assunto: "4.1 — Comunicação segura e seleção de controles",
+    contexto: "Um sistema de folha de pagamento troca dados sensíveis com outro sistema por uma rede não confiável. A equipe precisa proteger a confidencialidade, detectar alterações e autenticar o servidor remoto.",
+    enunciado: "Qual desenho de segurança atende melhor aos objetivos, sem presumir que um único mecanismo resolva todos os riscos?",
     alternativas: [
-      { letra: "A", texto: "Uso de firewalls apenas." },
-      { letra: "B", texto: "Uso de criptografia, assinatura digital e certificados digitais." },
-      { letra: "C", texto: "Desativação de todos os firewalls." },
-      { letra: "D", texto: "Uso de senha única." },
-      { letra: "E", texto: "Uso de backup automático." }
+      { letra: "A", texto: "Usar apenas firewall de rede, sem proteger o canal nem autenticar o servidor." },
+      { letra: "B", texto: "Usar um protocolo seguro configurado corretamente, validar o certificado e o nome do servidor, empregar criptografia autenticada quando aplicável e gerir adequadamente as chaves." },
+      { letra: "C", texto: "Desativar o firewall e compartilhar uma senha fixa em texto claro." },
+      { letra: "D", texto: "Confiar em qualquer certificado, mesmo inválido, pois a criptografia sempre garante identidade." },
+      { letra: "E", texto: "Fazer backup automático dos dados e dispensar autenticação do canal." }
     ],
     gabarito: "B",
-    justificativa: "Para comunicação autêntica, segura e íntegra, o uso combinado de criptografia, assinatura digital e certificados digitais é o mais eficaz — garantindo confidencialidade, integridade, autenticidade e não repúdio. Uso de firewalls apenas (alternativa A incorreta); desativar firewalls (alternativa C incorreta); senha única (alternativa D incorreta); backup automático (alternativa E incorreta).",
+    justificativa: "A proteção de uma comunicação sensível requer controles compatíveis com os objetivos: um protocolo seguro, validação correta da identidade do servidor, criptografia adequada, gestão de chaves e configuração robusta. Um firewall e um backup podem ser controles complementares, mas não substituem autenticação e proteção do canal. A segurança depende da implementação e da manutenção, não apenas da presença nominal de um mecanismo.",
     analise: {
-      A: "INCORRETA. Firewalls, isoladamente, não garantem autenticidade nem proteção de ponta a ponta.",
-      B: "CORRETA. Criptografia + assinatura + certificados digitais garantem autenticidade, integridade e confidencialidade.",
-      C: "INCORRETA. Desativar firewalls aumenta a exposição, não a segurança.",
-      D: "INCORRETA. Senha única não garante autenticidade ou segurança de comunicação.",
-      E: "INCORRETA. Backup automático não garante segurança de comunicação."
+      A: "INCORRETA. Um firewall isolado não autentica o servidor nem garante confidencialidade e integridade do canal.",
+      B: "CORRETA. A alternativa reúne autenticação do endpoint, proteção criptográfica e gestão de chaves sem prometer segurança absoluta.",
+      C: "INCORRETA. Desativar controles e transmitir senha em texto claro aumenta o risco de comprometimento.",
+      D: "INCORRETA. Aceitar certificados inválidos enfraquece a autenticação e pode permitir ataques de intermediário.",
+      E: "INCORRETA. Backup não protege a comunicação em trânsito nem substitui a autenticação do canal."
     },
-    regra: "Proteção completa: 'criptografia + assinatura + certificado'. Combinação de camadas de segurança.",
-    pegadinha: "Nenhum dispositivo isolado garante segurança — é a combinação de criptografia, assinatura e certificado.",
-    fonte: "NIST SP 800-53 (SC-8, SC-12, SC-20, SC-23)."
+    regra: "Comunicação segura exige protocolo bem configurado, validação da identidade, proteção criptográfica adequada e gestão segura de chaves.",
+    pegadinha: "Criptografia sem validação correta do certificado pode proteger um canal com o endpoint errado.",
+    fonte: "NIST SP 800-52 Rev. 2 — Guidelines for the Selection, Configuration, and Use of TLS Implementations: https://csrc.nist.gov/pubs/sp/800/52/r2/final."
   },
 
   { id: "q-m4-71", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Compensatórios",
-    contexto: "Os controles compensatórios são alternativas seguras quando o controle principal não é viável.",
-    enunciado: "Os controles compensatórios em segurança da informação são:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controles compensatórios e risco residual",
+    contexto: "Um sistema legado não pode receber imediatamente uma atualização crítica porque ela interromperia um processo essencial ainda sem alternativa. A organização precisa reduzir a exposição enquanto prepara a mudança.",
+    enunciado: "Qual abordagem caracteriza melhor o uso responsável de controles compensatórios?",
     alternativas: [
-      { letra: "A", texto: "Alternativas que compensam a falha de um controle principal, mantendo o nível de segurança." },
-      { letra: "B", texto: "Controles que aumentam o risco de forma artificial." },
-      { letra: "C", texto: "Controles que eliminam a necessidade de segurança." },
-      { letra: "D", texto: "Controles que excluem a verificação." },
-      { letra: "E", texto: "Controles que afetam apenas o desempenho." }
+      { letra: "A", texto: "Documentar a limitação, avaliar o risco, aplicar controles alternativos proporcionais, definir responsável e prazo e reavaliar até que a correção principal seja possível." },
+      { letra: "B", texto: "Declarar que o risco foi eliminado assim que qualquer controle alternativo for instalado." },
+      { letra: "C", texto: "Ignorar a vulnerabilidade indefinidamente porque a atualização é inconveniente." },
+      { letra: "D", texto: "Remover todos os registros de auditoria para evitar alertas durante a mitigação." },
+      { letra: "E", texto: "Considerar o controle compensatório equivalente ao principal sem testar sua eficácia." }
     ],
     gabarito: "A",
-    justificativa: "Controles compensatórios são alternativas que mantêm o nível de segurança quando o controle primário não pode ser implementado (quer seja por restrições técnicas, financeiras ou operacionais). Aumentam o risco (alternativa B incorreta); eliminam necessidade de segurança (alternativa C incorreta); excluem verificação (alternativa D incorreta); afetam apenas desempenho (alternativa E incorreta).",
+    justificativa: "Um controle compensatório pode reduzir o risco quando o controle preferencial não é viável, mas não deve ser presumido equivalente nem suficiente sem avaliação. A organização precisa documentar a limitação, avaliar o risco residual, implementar medidas alternativas, atribuir responsabilidades e prazos e revisar a decisão conforme o contexto muda.",
     analise: {
-      A: "CORRETA. Controles compensatórios são alternativas que compensam a falha de controle principal.",
-      B: "INCORRETA. Controles compensatórios reduzem o risco, não aumentam artificialmente.",
-      C: "INCORRETA. Controles compensatórios não eliminam a necessidade de segurança.",
-      D: "INCORRETA. Controles compensatórios não excluem a verificação — são uma alternativa segura.",
-      E: "INCORRETA. Controles compensatórios afetam a segurança, não apenas desempenho."
+      A: "CORRETA. A alternativa combina mitigação temporária, avaliação de risco residual, responsabilidade, prazo e revisão.",
+      B: "INCORRETA. Um controle alternativo pode reduzir o risco, mas não prova sua eliminação.",
+      C: "INCORRETA. A dificuldade de atualização não justifica ignorar indefinidamente o risco.",
+      D: "INCORRETA. Remover registros enfraquece detecção, investigação e prestação de contas.",
+      E: "INCORRETA. A eficácia e as limitações do controle compensatório precisam ser avaliadas."
     },
-    regra: "Controle compensatório = 'retroalimentação segura'. Alternativa que mantém a segurança quando o ideal é inviável.",
-    pegadinha: "Controle compensatório não significa 'deixar passar' — é 'controle alternativo seguro'.",
-    fonte: "NIST SP 800-53 (CP-10: Contingency Planning)."
+    regra: "Controle compensatório reduz risco quando o controle preferencial não é viável; registre o risco residual, a justificativa, a responsabilidade, o prazo e a revisão.",
+    pegadinha: "Compensar não significa eliminar o risco nem autoriza uma exceção permanente sem reavaliação.",
+    fonte: "NIST SP 800-53 Rev. 5 — Security and Privacy Controls for Information Systems and Organizations: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
   { id: "q-m4-72", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Privilege Escalation",
-    contexto: "Privilege Escalation é o ato de obter privilégios mais altos do que deveria ter um usuário.",
-    enunciado: "O 'privilege escalation' (escalada de privilégios) é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Escalada vertical e horizontal de privilégios",
+    contexto: "Em um sistema, um usuário comum explora uma falha para executar ações administrativas. Em outro caso, um usuário acessa registros pertencentes a outro usuário com o mesmo nível de permissão.",
+    enunciado: "Qual classificação distingue corretamente os dois casos?",
     alternativas: [
-      { letra: "A", texto: "O processo pelo qual um usuário ou processo cancerce privilégios mais altos do que os concedidos." },
-      { letra: "B", texto: "O processo de conceder privilégios." },
-      { letra: "C", texto: "O processo de excluir privilégios." },
-      { letra: "D", texto: "O processo de criptografar privilégios." },
-      { letra: "E", texto: "O processo de verificar privilégios." }
+      { letra: "A", texto: "O primeiro é escalada vertical; o segundo pode caracterizar escalada horizontal ou acesso indevido entre contas do mesmo nível." },
+      { letra: "B", texto: "Ambos são necessariamente escalada vertical, pois qualquer acesso indevido aumenta o nível de privilégio." },
+      { letra: "C", texto: "O primeiro é apenas autenticação; o segundo é criptografia." },
+      { letra: "D", texto: "Nenhum caso envolve autorização, porque o usuário já estava autenticado." },
+      { letra: "E", texto: "Escalada de privilégios só ocorre quando alguém recebe formalmente uma nova função." }
     ],
     gabarito: "A",
-    justificativa: "Privilege escalation é o ato de obter privilégios mais altos do que os concedidos — seja por modo horizontal (mesma conta) ou vertical (mayor privilégios no próprio usuário). O processo de conceder privilégios (alternativa B incorreta); excluir privilégios (alternativa C incorreta); criptografar privilégios (alternativa D incorreta); verificar privilégios (alternativa E incorreta).",
+    justificativa: "Escalada vertical ocorre quando um usuário ou processo obtém permissões de nível superior às que deveria possuir. Escalada horizontal ocorre quando alguém acessa recursos de outra conta ou identidade no mesmo nível de privilégio. A classificação depende do recurso e das permissões obtidas; autenticação bem-sucedida não significa que todo acesso esteja autorizado.",
     analise: {
-      A: "CORRETA. Privilege escalation é obter privilégios mais altos do que os concedidos.",
-      B: "INCORRETA. Conceder privilégios é 'provisão', não 'escalada'.",
-      C: "INCORRETA. Excluir privilégios é 'diminuição', não 'escalada'.",
-      D: "INCORRETA. Criptografar privilégios não é escalada.",
-      E: "INCORRETA. Verificar privilégios é 'monitoring', não escalada."
+      A: "CORRETA. O primeiro cenário eleva o nível de permissão; o segundo envolve acesso a recursos de outra identidade no mesmo nível.",
+      B: "INCORRETA. Acesso indevido não implica sempre elevação vertical; pode ocorrer horizontalmente.",
+      C: "INCORRETA. Os cenários descrevem abuso de permissões, não criptografia ou simples autenticação.",
+      D: "INCORRETA. A autorização continua relevante depois da autenticação, em cada recurso e ação.",
+      E: "INCORRETA. A escalada pode resultar de falhas técnicas ou de configuração, não apenas de uma alteração formal de função."
     },
-    regra: "Privilege Escalation = 'dar mais do que deve'. Atingir privilégios acima do necessário.",
-    pegadinha: "Escalada não é 'dar privilégios' — é 'gastar privilégios' (obter além do concedido).",
-    fonte: "MITRE ATT&CK — T1068 (Privilege Escalation)."
+    regra: "Escalada vertical = obter privilégios superiores; horizontal = acessar recursos de outra identidade em nível semelhante.",
+    pegadinha: "Estar autenticado não autoriza acesso a todos os objetos; autorização deve ser verificada por recurso e ação.",
+    fonte: "MITRE ATT&CK, T1068 — Exploitation for Privilege Escalation: https://attack.mitre.org/techniques/T1068/; OWASP, Authorization Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html."
   },
 
   { id: "q-m4-73", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Brute Force",
-    contexto: "Ataques de força bruta são uma técnica comum de quebra de senhas.",
-    enunciado: "Sobre o ataque de força bruta, é correto afirmar que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Tentativas de senha e controles contra força bruta",
+    contexto: "Um portal registra muitas tentativas de autenticação contra uma conta. A equipe quer reduzir a probabilidade de adivinhação automatizada sem criar bloqueios que permitam negar serviço a usuários legítimos.",
+    enunciado: "Qual conjunto de controles é mais adequado para mitigar ataques de força bruta?",
     alternativas: [
-      { letra: "A", texto: "É uma técnica que testa sistematicamente todas as combinações possíveis de senhas até achar a correta." },
-      { letra: "B", texto: "É uma técnica que garante a segurança da senha." },
-      { letra: "C", texto: "É uma técnica que criptografa a senha." },
-      { letra: "D", texto: "É uma técnica que exclui a senha." },
-      { letra: "E", texto: "É uma técnica que não pode ser bloqueada." }
+      { letra: "A", texto: "Combinar limitação de tentativas e detecção de padrões, autenticação multifator e respostas de bloqueio proporcionais, monitoradas e resistentes a abuso." },
+      { letra: "B", texto: "Permitir tentativas ilimitadas, pois senhas longas tornam os controles desnecessários." },
+      { letra: "C", texto: "Bloquear permanentemente uma conta após uma única tentativa falha em qualquer circunstância." },
+      { letra: "D", texto: "Registrar a senha em texto claro para identificar rapidamente o atacante." },
+      { letra: "E", texto: "Desativar alertas para evitar que a equipe receba muitos eventos." }
     ],
     gabarito: "A",
-    justificativa: "Força bruta testa sistematicamente todas as combinações de caracteres até encontrar a senha correta. Garante segurança — não (alternativa B incorreta); criptografa a senha — não (alternativa C incorreta); exclui a senha — não (alternativa D incorreta); pode ser bloqueada com políticas (alternativa E incorreta).",
+    justificativa: "A mitigação pode combinar limitação adaptativa de tentativas, monitoramento, MFA, detecção de padrões e políticas de resposta que considerem o risco de bloqueio abusivo. Nenhum controle isolado elimina todos os ataques; a estratégia deve equilibrar segurança, disponibilidade, acessibilidade e experiência legítima do usuário.",
     analise: {
-      A: "CORRETA. Força bruta testa todas as combinações até achar a senha correta.",
-      B: "INCORRETA. Força bruta enfraquece a segurança — não garante nada.",
-      C: "INCORRETA. Força bruta não criptografa a senha — tenta adivinhar.",
-      D: "INCORRETA. Força bruta não exclui a senha — tenta adivinhar.",
-      E: "INCORRETA. Força bruta pode ser bloqueada com limitação de tentativas."
+      A: "CORRETA. A combinação de controles reduz tentativas automatizadas e permite resposta proporcional, com monitoramento.",
+      B: "INCORRETA. Senhas fortes ajudam, mas não tornam desnecessários controles de autenticação e monitoramento.",
+      C: "INCORRETA. Bloqueio rígido após uma falha pode permitir abuso para negar acesso a usuários legítimos.",
+      D: "INCORRETA. Senhas não devem ser armazenadas em texto claro; isso criaria um risco grave adicional.",
+      E: "INCORRETA. Desativar alertas reduz a capacidade de identificar ataques."
     },
-    regra: "Força bruta = 'tentar tudo'. Método sistemático de quebra de senhas.",
-    pegadinha: "Força bruta não é 'cifra' — é 'adivinhar todos os casos possíveis'.",
-    fonte: "NIST SP 800-63B."
+    regra: "Mitigue força bruta com controles em camadas: limitação proporcional, MFA, detecção, monitoramento e armazenamento seguro de credenciais.",
+    pegadinha: "Um bloqueio muito rígido pode ser abusado para negar serviço; controles precisam considerar ataques e usuários legítimos.",
+    fonte: "NIST SP 800-63B — Digital Identity Guidelines: Authentication and Lifecycle Management: https://pages.nist.gov/800-63-4/sp800-63b.html; OWASP Authentication Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html."
   },
 
   { id: "q-m4-74", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Password Spraying",
-    contexto: "Ataques de password spraying são uma variante da força bruta.",
-    enunciado: "O ataque de 'password spraying' é caracterizado por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Password spraying e defesa de identidade",
+    contexto: "Uma organização detecta tentativas de autenticação em muitas contas diferentes, com poucas falhas por conta e horários semelhantes.",
+    enunciado: "Qual interpretação e resposta são mais adequadas?",
     alternativas: [
-      { letra: "A", texto: "Usar uma senha comum em várias contas, evitando bloqueios por tentativas múltiplas." },
-      { letra: "B", texto: "Criptografar senhas." },
-      { letra: "C", texto: "Excluir contas." },
-      { letra: "D", texto: "Gerar senhas aleatórias." },
-      { letra: "E", texto: "Proteger contas." }
+      { letra: "A", texto: "O padrão é compatível com password spraying; a equipe deve correlacionar tentativas entre contas, investigar origem e aplicar controles proporcionais, MFA e monitoramento." },
+      { letra: "B", texto: "Não pode ser ataque porque cada conta apresenta poucas tentativas falhas." },
+      { letra: "C", texto: "É necessariamente credential stuffing, pois todos os ataques distribuídos usam credenciais vazadas." },
+      { letra: "D", texto: "A melhor resposta é desativar os registros para reduzir o volume de alertas." },
+      { letra: "E", texto: "Basta aumentar o tamanho mínimo da senha, sem investigar o padrão observado." }
     ],
     gabarito: "A",
-    justificativa: "Password spraying é um ataque que tenta uma senha comum em várias contas, evitando os mecanismos de bloqueio por múltiplas falhas de autenticação em uma única conta. Criptografar (alternativa B incorreta); excluir contas (alternativa C incorreta); gerar aleatoriamente (alternativa D incorreta); proteger (alternativa E incorreta).",
+    justificativa: "Password spraying costuma testar uma ou poucas senhas comuns em várias contas, tentando evitar limiares de bloqueio por conta. A detecção pode exigir correlação entre identidades, origens, horários e resultados. A resposta deve combinar investigação, controles de autenticação e monitoramento, sem presumir que todo padrão distribuído seja o mesmo tipo de ataque.",
     analise: {
-      A: "CORRETA. Password spraying usa uma senha comum em múltiplas contas para evitar bloqueios.",
-      B: "INCORRETA. Password spraying não criptografa senhas.",
-      C: "INCORRETA. Password spraying não exclui contas — tenta autenticação falsa.",
-      D: "INCORRETA. Password spraying não gera senhas aleatoriamente — usa senhas comuns.",
-      E: "INCORRETA. Password spraying não protege contas — esconde dentro delas."
+      A: "CORRETA. A distribuição entre muitas contas é compatível com password spraying e justifica correlação e investigação.",
+      B: "INCORRETA. A baixa quantidade de falhas por conta pode ser justamente uma característica da técnica.",
+      C: "INCORRETA. Credential stuffing usa pares de credenciais previamente comprometidas; password spraying tenta senhas comuns em várias contas.",
+      D: "INCORRETA. Desativar registros elimina evidências necessárias para detecção e resposta.",
+      E: "INCORRETA. Políticas de senha podem ajudar, mas não substituem análise do padrão e controles de autenticação."
     },
-    regra: "Password Spraying = 'senha comum em todas as contas'. Evita bloqueio ao testar poucas falhas por conta.",
-    pegadinha: "Password spraying é 'a senha do dia' — um esquema comum, distribuído em muitas contas.",
-    fonte: "Microsoft Security — Password Spraying Attack, 2021."
+    regra: "Password spraying distribui tentativas de poucas senhas entre várias contas; correlacione eventos por identidade, origem, horário e resultado.",
+    pegadinha: "Poucas falhas por conta não excluem um ataque quando há muitas contas envolvidas.",
+    fonte: "Microsoft Security, password spray attacks: https://learn.microsoft.com/en-us/entra/architecture/security-operations-password-spray."
   },
 
   { id: "q-m4-75", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Credential Stuffing",
-    contexto: "Credential stuffing é um ataque que usa credenciais violadas de outros serviços.",
-    enunciado: "O 'credential stuffing' é um ataque que:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-2", assunto: "4.3 — Credential stuffing e reutilização de senhas",
+    contexto: "Um serviço observa logins bem-sucedidos em contas de usuários que utilizam senhas reutilizadas após vazamentos em outros serviços.",
+    enunciado: "Qual controle reduz mais diretamente o risco de credential stuffing?",
     alternativas: [
-      { letra: "A", texto: "Usa credenciais (e-mail/senha) violadas de outros serviços para tentar login em conta." },
-      { letra: "B", texto: "Criptografa credenciais." },
-      { letra: "C", texto: "Exclui contas." },
-      { letra: "D", texto: "Gera senhas aleatórias." },
-      { letra: "E", texto: "Protege contas." }
+      { letra: "A", texto: "Incentivar senhas únicas por serviço, oferecer MFA resistente a phishing quando viável, detectar padrões de login e orientar a troca de credenciais comprometidas." },
+      { letra: "B", texto: "Permitir que usuários reutilizem a mesma senha em todos os serviços para facilitar a memorização." },
+      { letra: "C", texto: "Usar apenas um bloqueio por conta após a primeira falha, sem monitorar autenticações bem-sucedidas." },
+      { letra: "D", texto: "Armazenar senhas em texto claro para compará-las com listas de vazamentos." },
+      { letra: "E", texto: "Presumir que um login bem-sucedido é legítimo mesmo quando o padrão de acesso é anômalo." }
     ],
     gabarito: "A",
-    justificativa: "Credential stuffing é a tentativa de usar credenciais (e-mail/senha) violadas em outros serviços para obter acesso a contas. Criptografar (alternativa B incorreta); excluir contas (alternativa C incorreta); gerar aleatoriamente (alternativa D incorreta); proteger (alternativa E incorreta).",
+    justificativa: "Credential stuffing utiliza pares de usuário e senha expostos em um serviço para tentar acessar outros. Senhas únicas reduzem o efeito da reutilização, MFA acrescenta uma barreira, e a detecção de padrões de autenticação ajuda a identificar tentativas e acessos suspeitos. O serviço deve armazenar senhas com mecanismos apropriados e responder a credenciais comprometidas sem expor segredos.",
     analise: {
-      A: "CORRETA. Credential stuffing usa credenciais violadas de outros serviços para tentar login.",
-      B: "INCORRETA. Credential stuffing não criptografa credenciais.",
-      C: "INCORRETA. Credential stuffing não exclui contas — tenta acessá-las.",
-      D: "INCORRETA. Credential stuffing não gera senhas aleatoriamente.",
-      E: "INCORRETA. Credential stuffing não protege contas — esconde dentro delas."
+      A: "CORRETA. A alternativa combina prevenção da reutilização, fator adicional, detecção e resposta a credenciais comprometidas.",
+      B: "INCORRETA. Reutilizar senhas permite que um vazamento em um serviço afete outros.",
+      C: "INCORRETA. Um bloqueio isolado pode ser abusado e não identifica necessariamente tentativas distribuídas ou acessos bem-sucedidos suspeitos.",
+      D: "INCORRETA. Senhas não devem ser armazenadas em texto claro.",
+      E: "INCORRETA. Sucesso de autenticação não prova legitimidade quando há sinais de comprometimento ou anomalia."
     },
-    regra: "Credential stuffing = 'repetir o esquema'. Usar credenciais vazadas em outros sites para acessar contas.",
-    pegadinha: "Credential stuffing é 'mesma senha' — uma senha vlada, muitas contas.",
-    fonte: "Akamai — Credential Stuffing Attacks, 2022."
+    regra: "Credential stuffing explora reutilização de credenciais vazadas; use senhas únicas, MFA, detecção e resposta segura a credenciais comprometidas.",
+    pegadinha: "Uma autenticação bem-sucedida pode ser resultado de credenciais roubadas; avalie o contexto do acesso.",
+    fonte: "OWASP, Credential Stuffing Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html; NIST SP 800-63B: https://pages.nist.gov/800-63-4/sp800-63b.html."
   },
 
   { id: "q-m4-76", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Ataque SSRF",
-    contexto: "O SSRF (Server-Side Request Forgery) explora a capacidade de um servidor de fazer requisições.",
-    enunciado: "O ataque SSRF (Server-Side Request Forgery) é caracterizado por:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — SSRF e validação de destinos",
+    contexto: "Uma aplicação permite que usuários informem uma URL para que o servidor busque conteúdo externo. O recurso também pode alcançar endereços internos da rede.",
+    enunciado: "Qual medida reduz melhor o risco de Server-Side Request Forgery (SSRF)?",
     alternativas: [
-      { letra: "A", texto: "Forçar o servidor a fazer requisições internas a sistemas internos, muitas vezes para escapar." },
-      { letra: "B", texto: "Criptografar requisições." },
-      { letra: "C", texto: "Excluir requisições." },
-      { letra: "D", texto: "Gerar requisições aleatórias." },
-      { letra: "E", texto: "Proteger requisições." }
+      { letra: "A", texto: "Validar e restringir esquemas, destinos e endereços resolvidos por lista de permissões, bloquear acesso a redes internas e metadados sensíveis e revalidar após resolução de DNS." },
+      { letra: "B", texto: "Aceitar qualquer URL porque a requisição parte do servidor e, portanto, é confiável." },
+      { letra: "C", texto: "Bloquear apenas URLs que contenham a palavra 'admin', sem validar destino ou redirecionamentos." },
+      { letra: "D", texto: "Permitir redirecionamentos ilimitados e confiar somente na extensão do recurso." },
+      { letra: "E", texto: "Exibir o conteúdo obtido sem registrar ou limitar as requisições feitas pelo servidor." }
     ],
     gabarito: "A",
-    justificativa: "SSRF força o servidor a realizar requisições HTTP para recursos internos (internet, sistemas internos), muitas vezes para escapar de controles de segurança. Criptografar (alternativa B incorreta); excluir requisições (alternativa C incorreta); gerar aleatoriamente (alternativa D incorreta); proteger requisições (alternativa E incorreta).",
+    justificativa: "SSRF ocorre quando um atacante influencia requisições originadas pelo servidor para destinos que não deveriam estar acessíveis por esse caminho. A mitigação deve restringir esquemas e destinos, considerar endereços IPv4/IPv6 e DNS, tratar redirecionamentos e impedir acesso a serviços internos ou endpoints de metadados. A validação superficial de texto não é suficiente, e controles de rede complementam a validação na aplicação.",
     analise: {
-      A: "CORRETA. SSRF força o servidor a fazer requisições para sistemas internos, escapando dos controles.",
-      B: "INCORRETA. SSRF não criptografa requisições.",
-      C: "INCORRETA. SSRF não exclui requisições.",
-      D: "INCORRETA. SSRF não gera requisições aleatoriamente — direciona requisições internas.",
-      E: "INCORRETA. SSRF não protege requisições."
+      A: "CORRETA. A alternativa combina validação rigorosa de destino com restrições de rede e atenção a DNS e redirecionamentos.",
+      B: "INCORRETA. Uma requisição iniciada pelo servidor pode abusar da confiança e do acesso de rede desse servidor.",
+      C: "INCORRETA. Filtrar uma palavra não valida o destino e pode ser contornado por variações de URL ou redirecionamentos.",
+      D: "INCORRETA. Redirecionamentos podem conduzir a destinos não autorizados e precisam ser controlados.",
+      E: "INCORRETA. A ausência de limites e de observabilidade dificulta prevenção, detecção e investigação."
     },
-    regra: "SSRF = 'requisição do servidor'. Forçar o servidor a chamar o que ele não deveria.",
-    pegadinha: "SSRF não é 'teclado do servidor' — é 'redirecionamento de requisição do servidor'.",
-    fonte: "OWASP — Server-Side Request Forgery (SSRF)."
+    regra: "Mitigue SSRF restringindo esquemas e destinos, validando endereços resolvidos, controlando redirecionamentos e bloqueando acesso desnecessário a redes internas.",
+    pegadinha: "Validar apenas o texto da URL não basta: DNS, endereços alternativos e redirecionamentos podem mudar o destino efetivo.",
+    fonte: "OWASP, Server Side Request Forgery Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html."
   },
 
   { id: "q-m4-77", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Mitigação de Ameaças",
-    contexto: "A mitigação de ameaças é um processo contínuo de controle de riscos.",
-    enunciado: "A mitigação de ameaças envolve:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Tratamento de risco de segurança",
+    contexto: "Uma avaliação identifica risco relevante em um sistema legado. A organização compara correção técnica, isolamento temporário, transferência contratual e eventual aceitação formal do risco residual.",
+    enunciado: "Qual abordagem representa uma gestão de risco responsável?",
     alternativas: [
-      { letra: "A", texto: "Identificar, avaliar e tomar ações para reduzir riscos de ameaças." },
-      { letra: "B", texto: "Ignorar ameaças." },
-      { letra: "C", texto: "Criptografar ameaças." },
-      { letra: "D", texto: "Excluir ameaças." },
-      { letra: "E", texto: "Omitir ameaças." }
+      { letra: "A", texto: "Registrar o risco, estimar probabilidade e impacto, selecionar tratamento proporcional, atribuir responsáveis e acompanhar o risco residual." },
+      { letra: "B", texto: "Presumir que toda ameaça pode ser eliminada por completo antes de qualquer operação." },
+      { letra: "C", texto: "Aceitar automaticamente todo risco de baixo custo de correção, sem aprovação ou documentação." },
+      { letra: "D", texto: "Transferir um contrato e concluir que a organização deixou de ter qualquer responsabilidade." },
+      { letra: "E", texto: "Tratar todos os riscos da mesma forma, independentemente de impacto, contexto ou criticidade." }
     ],
     gabarito: "A",
-    justificativa: "Mitigação de ameaças é o processo de identificar, avaliar e tomar ações para reduzir o risco de ameaças — através de controles preventivos, detectivos, corretivos ou compensatórios. Ignorar (alternativa B incorreta); criptografar (alternativa C incorreta); excluir (alternativa D incorreta); omitir (alternativa E incorreta).",
+    justificativa: "Gestão de risco envolve identificar e analisar cenários, avaliar probabilidade e impacto, selecionar uma resposta adequada e monitorar o risco residual. Tratamentos podem incluir mitigação, evitação, compartilhamento/transferência e aceitação formal conforme a governança. Nenhuma opção garante risco zero ou elimina automaticamente as responsabilidades da organização.",
     analise: {
-      A: "CORRETA. Mitigação envolve identificar, avaliar e tomar ações para reduzir riscos.",
-      B: "INCORRETA. Ignorar ameaças aumenta o risco de incidentes não tratados.",
-      C: "INCORRETA. Criptografar ameaças não é mitigação — é uma medida de proteção.",
-      D: "INCORRETA. Excluir ameaças é irreversível e geralmente impraticável.",
-      E: "INCORRETA. Omitir ameaças é uma falha de gestão de riscos."
+      A: "CORRETA. A alternativa inclui análise, tratamento proporcional, responsabilidade e acompanhamento do risco residual.",
+      B: "INCORRETA. Risco zero raramente é uma premissa realista; decisões devem considerar tolerância e impacto.",
+      C: "INCORRETA. Aceitação de risco deve seguir autoridade, critérios e registro definidos pela governança.",
+      D: "INCORRETA. Contratos podem distribuir obrigações, mas não eliminam automaticamente todas as responsabilidades da organização.",
+      E: "INCORRETA. O tratamento deve considerar o contexto, a criticidade e o impacto do risco."
     },
-    regra: "Mitigação = 'controlar o risco'. Identificar, avaliar e agir para reduzir ameaças.",
-    pegadinha: "Mitigação não é 'eliminar' — é 'reduzir o risco'.",
-    fonte: "NIST SP 800-30 (Guide for Conducting Risk Assessments)."
+    regra: "Gestão de risco: identificar, analisar, avaliar, tratar, documentar e acompanhar o risco residual.",
+    pegadinha: "Transferir ou aceitar risco não significa que ele desapareceu; a decisão precisa ser autorizada e monitorada.",
+    fonte: "NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments: https://csrc.nist.gov/pubs/sp/800/30/r1/final; NIST SP 800-39 — Managing Information Security Risk: https://csrc.nist.gov/pubs/sp/800/39/final."
   },
 
   { id: "q-m4-78", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Gestão de Incidentes",
-    contexto: "A gestão de incidentes é a disciplina de responder a incidentes de segurança.",
-    enunciado: "A gestão de incidentes envolve:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Evidências e comunicação em incidentes",
+    contexto: "Uma equipe identifica possível comprometimento de uma conta privilegiada. Há risco de novas ações, e os registros podem ser sobrescritos em pouco tempo.",
+    enunciado: "Qual é a resposta inicial mais adequada, respeitando os procedimentos de resposta a incidentes?",
     alternativas: [
-      { letra: "A", texto: "Processos para detectar, responder, conter e recuperar de incidentes de segurança." },
-      { letra: "B", texto: "Ignorar incidentes." },
-      { letra: "C", texto: "Criptografar incidentes." },
-      { letra: "D", texto: "Excluir incidentes." },
-      { letra: "E", texto: "Omitir incidentes." }
+      { letra: "A", texto: "Preservar evidências relevantes, conter o risco de forma proporcional, acionar responsáveis e registrar decisões, horários e ações realizadas." },
+      { letra: "B", texto: "Apagar todos os registros e reinstalar o sistema imediatamente, sem documentar o ocorrido." },
+      { letra: "C", texto: "Publicar os dados técnicos e pessoais do incidente em redes sociais para alertar todos os usuários." },
+      { letra: "D", texto: "Esperar até que o atacante conclua as ações para reunir evidências completas." },
+      { letra: "E", texto: "Alterar os registros para que todos os eventos pareçam ocorrer no mesmo horário." }
     ],
     gabarito: "A",
-    justificativa: "Gestão de incidentes define processos para detecção, análise, contenção, erradicação, recuperação e lições aprendidas de incidentes de segurança. Ignorar (alternativa B incorreta); criptografar (alternativa C incorreta); excluir (alternativa D incorreta); omitir (alternativa E incorreta).",
+    justificativa: "A resposta inicial deve equilibrar contenção e preservação de evidências, seguindo o plano institucional e a gravidade do caso. A equipe deve documentar decisões e ações, preservar registros relevantes, limitar acessos comprometidos e comunicar as pessoas responsáveis pelos canais apropriados. A sequência exata depende do incidente e dos riscos imediatos; ações precipitadas podem destruir evidências ou ampliar o impacto.",
     analise: {
-      A: "CORRETA. Gestão de incidentes inclui processos para responder a incidentes de segurança.",
-      B: "INCORRETA. Ignorar incidentes aumenta o dano potencial.",
-      C: "INCORRETA. Criptografar incidentes não é gestão de incidentes.",
-      D: "INCORRETA. Excluir incidentes não é possível — é registrar e aprender com eles.",
-      E: "INCORRETA. Omitir incidentes compromete a segurança e a conformidade."
+      A: "CORRETA. A alternativa combina contenção proporcional, preservação de evidências, escalonamento e documentação.",
+      B: "INCORRETA. Apagar registros sem preservação pode destruir evidências úteis e dificultar a investigação.",
+      C: "INCORRETA. A divulgação indiscriminada pode expor dados pessoais e detalhes sensíveis; a comunicação deve seguir os canais e deveres aplicáveis.",
+      D: "INCORRETA. A demora pode ampliar o dano; contenção e preservação devem ser avaliadas conforme o risco.",
+      E: "INCORRETA. Alterar horários ou registros compromete a integridade das evidências."
     },
-    regra: "Gestão de incidentes = 'detectar, responder, aprender'. Ciclo contínuo de resposta.",
-    pegadinha: "Gestão de incidentes não é 'evitar' — é 'responder e recomeçar'.",
-    fonte: "NIST SP 800-61 (Computer Security Incident Handling Guide)."
+    regra: "Em incidentes, siga o plano, contenha proporcionalmente, preserve evidências, registre ações e comunique pelos canais autorizados.",
+    pegadinha: "Conter o incidente é importante, mas ações sem planejamento podem destruir evidências ou afetar sistemas críticos.",
+    fonte: "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
   { id: "q-m4-79", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Plano de Continuidade",
-    contexto: "O plano de continuidade é definido para manter ou recuperar serviços críticos.",
-    enunciado: "O plano de continuidade de negócios é:",
+    nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Análise de impacto nos negócios (BIA)",
+    contexto: "Uma organização tem recursos limitados para preparar a continuidade de dezenas de processos. Alguns serviços são essenciais para a população; outros podem permanecer indisponíveis por mais tempo sem impacto crítico.",
+    enunciado: "Qual é a principal contribuição da análise de impacto nos negócios (BIA) para o planejamento de continuidade?",
     alternativas: [
-      { letra: "A", texto: "Um plano para manter ou recuperar serviços essenciais após uma interrupção." },
-      { letra: "B", texto: "Um processo de excluir serviços." },
-      { letra: "C", texto: "Um processo de criptografar serviços." },
-      { letra: "D", texto: "Um processo de verificar serviços." },
-      { letra: "E", texto: "Um processo de reduzir serviços." }
+      { letra: "A", texto: "Identificar processos prioritários, impactos de interrupção, dependências e necessidades de recuperação para orientar prioridades e recursos." },
+      { letra: "B", texto: "Garantir que nenhum processo sofra interrupção." },
+      { letra: "C", texto: "Substituir todos os testes de recuperação por uma lista de contatos." },
+      { letra: "D", texto: "Definir prioridades exclusivamente pela facilidade técnica de restaurar um sistema." },
+      { letra: "E", texto: "Limitar o planejamento à compra de cópias de segurança, sem avaliar processos de negócio." }
     ],
     gabarito: "A",
-    justificativa: "Plano de continuidade de negócios (BCP) define como manter ou recuperar serviços essenciais após uma interrupção, incluindo backup, recuperação de desastres e aumentar a capacidade. Excluir serviços (alternativa B incorreta); criptografar (alternativa C incorreta); verificar (alternativa D incorreta); reduzir (alternativa E incorreta).",
+    justificativa: "A BIA identifica funções e processos críticos, consequências de interrupções, dependências e prioridades de recuperação. Seus resultados orientam recursos, estratégias de continuidade e metas como RTO/RPO, mas não garantem ausência de interrupções nem substituem testes e revisão periódica.",
     analise: {
-      A: "CORRETA. BCP = plano para manter ou recuperar serviços essenciais após interrupção.",
-      B: "INCORRETA. BCP não exclui serviços — garante sua continuidade.",
-      C: "INCORRETA. BCP não criptografa serviços — trata de continuidade operacional.",
-      D: "INCORRETA. Verificação não é a definição — é um plano de continuidade.",
-      E: "INCORRETA. BCP não reduz serviços — garante a operação em emergências."
+      A: "CORRETA. A BIA conecta impacto para o negócio, criticidade, dependências e prioridades de recuperação.",
+      B: "INCORRETA. A análise orienta preparação e resposta, mas não garante interrupção zero.",
+      C: "INCORRETA. Lista de contatos não substitui estratégias, procedimentos e testes de recuperação.",
+      D: "INCORRETA. Prioridade deve considerar impacto no negócio, não apenas facilidade técnica.",
+      E: "INCORRETA. A BIA abrange processos e impactos organizacionais, não apenas backups."
     },
-    regra: "BCP = 'não parar'. Manter e recuperar serviços essenciais em emergências.",
-    pegadinha: "BCP não é 'backup' — é 'plano estratégico de continuidade'.",
-    fonte: "NIST SP 800-34 (Contingency Planning)."
+    regra: "BIA identifica processos críticos, impactos, dependências e prioridades para orientar estratégias e metas de recuperação.",
+    pegadinha: "O sistema tecnicamente mais fácil de recuperar não é necessariamente o processo de maior prioridade para o negócio.",
+    fonte: "NIST SP 800-34 Rev. 1 — Contingency Planning Guide for Federal Information Systems: https://csrc.nist.gov/pubs/sp/800/34/r1/final."
   },
 
   { id: "q-m4-80", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Resposta a Incidentes",
-    contexto: "Resposta a incidentes envolve múltiplos estágios e papéis.",
-    enunciado: "Os estágios típicos de resposta a incidentes incluem:",
+    nivel: "intermediario", topico: "modulo-4-unidade-3-topico-3", assunto: "4.3 — Plano de resposta a incidentes e exercícios",
+    contexto: "Uma organização tem um documento de resposta a incidentes, mas os responsáveis não sabem quem autoriza isolamento de sistemas, quem comunica áreas afetadas nem como avaliar a recuperação.",
+    enunciado: "Qual medida melhora a capacidade real de resposta da organização?",
     alternativas: [
-      { letra: "A", texto: "Detecção, análise, contenção, erradicação, recuperação e lições aprendidas." },
-      { letra: "B", texto: "Detecção, análise, contenção, erradicação, recuperação e repetição." },
-      { letra: "C", texto: "Detecção, análise, contenção, erradicação, recuperação e excluir." },
-      { letra: "D", texto: "Detecção, análise, contenção, erradicação, recuperação e criptografar." },
-      { letra: "E", texto: "Detecção, análise, contenção, erradicação, recuperação e omitir." }
+      { letra: "A", texto: "Manter o documento sem exercícios, pois sua existência comprova prontidão." },
+      { letra: "B", texto: "Definir papéis e critérios de escalonamento, exercitar cenários, revisar resultados e atualizar o plano com as lições aprendidas." },
+      { letra: "C", texto: "Deixar todas as decisões para o primeiro técnico que detectar um alerta, sem limites de autoridade." },
+      { letra: "D", texto: "Impedir comunicação entre equipes para evitar divergência de informações." },
+      { letra: "E", texto: "Tratar cada incidente sem registrar decisões para preservar flexibilidade." }
     ],
-    gabarito: "A",
-    justificativa: "Estágios típicos de resposta: detecção, análise, contenção, erradicação, recuperação e lições aprendidas. Detecção → análise → contenção → erradicação → recuperação → lições aprendidas (alternativa B incorreta); excluir (alternativa C incorreta); criptografar (alternativa D incorreta); omitir (alternativa E incorreta).",
+    gabarito: "B",
+    justificativa: "Um plano é útil quando as responsabilidades, os critérios de escalonamento, as comunicações e as ações de resposta são compreendidos e testados. Exercícios ajudam a revelar lacunas em decisões, dependências e comunicação. Os resultados devem ser documentados e usados para atualizar o plano; a preparação não elimina a possibilidade de incidentes.",
     analise: {
-      A: "CORRETA. Ciclo de resposta: detecção, análise, contenção, erradicação, recuperação, lições aprendidas.",
-      B: "INCORRETA. 'Repetição' não faz parte do ciclo — é 'lições aprendidas'.",
-      C: "INCORRETA. Exclusão não faz parte do ciclo — é 'lições aprendidas'.",
-      D: "INCORRETA. Criptografia não faz parte do ciclo — é 'lições aprendidas'.",
-      E: "INCORRETA. Omitir não faz parte do ciclo — é 'lições aprendidas'."
+      A: "INCORRETA. A existência do documento não comprova que os participantes consigam executá-lo.",
+      B: "CORRETA. Papéis definidos, exercícios, revisão e lições aprendidas transformam o plano em capacidade operacional.",
+      C: "INCORRETA. A resposta precisa de autoridade, critérios e coordenação proporcionais ao impacto.",
+      D: "INCORRETA. Comunicação coordenada é necessária para responder de modo consistente e evitar ações conflitantes.",
+      E: "INCORRETA. Registrar decisões permite reconstruir ações, avaliar eficácia e melhorar o plano."
     },
-    regra: "Ciclo de resposta: 'detectar, analisar, conter, erradicar, recuperar e aprender'.",
-    pegadinha: "Resposta a incidentes não é 'pular' — é 'curto'.",
-    fonte: "NIST SP 800-61."
+    regra: "Plano de resposta eficaz exige papéis claros, critérios de escalonamento, comunicação, exercícios e melhoria contínua baseada em evidências.",
+    pegadinha: "Documento publicado não é prova de prontidão; a capacidade deve ser exercitada e atualizada.",
+    fonte: "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
-  { id: "q-m4-81", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "avancado", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Preventivos",
-    contexto: "Os controles preventivos agem antes de um evento ocorrer.",
-    enunciado: "Controles preventivos são:",
+  { id: "q-m4-81", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Seleção de controles preventivos",
+    contexto: "Antes de liberar um serviço para a internet, a equipe identifica uma interface administrativa que não deveria estar acessível externamente.",
+    enunciado: "Qual medida atua principalmente como controle preventivo nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Controles que agem antes de um evento, evitando sua ocorrência." },
-      { letra: "B", texto: "Controles que agem após um evento." },
-      { letra: "C", texto: "Controles que apenas reportam eventos." },
-      { letra: "D", texto: "Controles que aumentam o risco." },
-      { letra: "E", texto: "Controles que ignoram o evento." }
+      { letra: "A", texto: "Restringir a interface à rede administrativa autorizada, exigir autenticação adequada e bloquear o acesso externo desnecessário antes de ocorrer um incidente." },
+      { letra: "B", texto: "Revisar os logs depois de detectar uma tentativa de acesso." },
+      { letra: "C", texto: "Restaurar o serviço a partir de backup após um comprometimento." },
+      { letra: "D", texto: "Documentar as lições aprendidas depois de um incidente." },
+      { letra: "E", texto: "Investigar a origem de uma invasão já confirmada." }
     ],
     gabarito: "A",
-    justificativa: "Controles preventivos agem antes de um evento para evitar sua ocorrência — como firewall, criptografia, política de senha, treinamento. Ação após evento (alternativa B incorreta); relatar eventos (alternativa C incorreta); aumentar risco (alternativa D incorreta); ignorar (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Controles preventivos evitam a ocorrência de eventos.",
-      B: "INCORRETA. Ação após evento é controle corretivo.",
-      C: "INCORRETA. Relatar eventos é controle detectivo.",
-      D: "INCORRETA. Controles preventivos reduzem risco, não aumentam.",
-      E: "INCORRETA. Ignorar eventos é uma falha de gestão."
-    },
-    regra: "Preventivo = 'antes'. Evita a ocorrência de incidentes.",
-    pegadinha: "Preventivo não é 'depois' — é 'antes' do evento.",
-    fonte: "NIST SP 800-53 (Control Categories)."
+    justificativa: "Controles preventivos reduzem a probabilidade de um evento indesejado antes que ocorra, por exemplo, restringindo a exposição e aplicando autenticação e autorização. Revisão de logs e investigação são atividades detectivas ou de resposta; restauração e lições aprendidas ocorrem depois do evento.",
+    analise: { A: "CORRETA. A restrição de exposição e o controle de acesso atuam antes de um incidente.", B: "INCORRETA. Revisar logs para identificar atividade suspeita é principalmente detectivo.", C: "INCORRETA. Restaurar um serviço após comprometimento é uma atividade de recuperação/correção.", D: "INCORRETA. Lições aprendidas são parte da melhoria após um incidente.", E: "INCORRETA. Investigar uma invasão confirmada é resposta a um evento já ocorrido." },
+    regra: "Preventivo reduz a probabilidade de um evento antes que ocorra; detectivo identifica, e corretivo/recuperação trata os efeitos após o evento.",
+    pegadinha: "A classificação depende da função do controle no cenário, não apenas do nome da ferramenta usada.",
+    fonte: "NIST SP 800-53 Rev. 5 — Security and Privacy Controls: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final."
   },
 
-  { id: "q-m4-82", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Detectivos",
-    contexto: "Os controles detectivos identificam a ocorrência de eventos.",
-    enunciado: "Controles detectivos são:",
+  { id: "q-m4-82", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-3", assunto: "4.2 — Controles detectivos e qualidade dos alertas",
+    contexto: "A organização coleta eventos de autenticação e rede, mas gera tantos alertas repetidos que a equipe não consegue priorizar os incidentes relevantes.",
+    enunciado: "Qual ação melhora a utilidade dos controles detectivos?",
     alternativas: [
-      { letra: "A", texto: "Controles que identificam a ocorrência de eventos, como logs, IDS e auditoria." },
-      { letra: "B", texto: "Controles que evitam eventos." },
-      { letra: "C", texto: "Controles que corrigem eventos." },
-      { letra: "D", texto: "Controles que ignoram eventos." },
-      { letra: "E", texto: "Controles que aumentam o risco." }
+      { letra: "A", texto: "Desativar todos os alertas para reduzir o volume de trabalho." },
+      { letra: "B", texto: "Correlacionar eventos, ajustar regras com base em evidências, definir severidade e escalonamento e avaliar falsos positivos e falsos negativos." },
+      { letra: "C", texto: "Considerar todo alerta prova conclusiva de ataque confirmado." },
+      { letra: "D", texto: "Registrar apenas eventos bem-sucedidos e descartar falhas de autenticação." },
+      { letra: "E", texto: "Substituir registros por mensagens verbais sem data ou responsável." }
     ],
-    gabarito: "A",
-    justificativa: "Controles detectivos identificam a ocorrência de eventos — log, IDS, IPS, auditoria, monitoramento. Evitar eventos (alternativa B incorreta); corrigir eventos (alternativa C incorreta); ignorar (alternativa D incorreta); aumentar risco (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Controles detectivos identificam a ocorrência de eventos.",
-      B: "INCORRETA. Evitar é controle preventivo.",
-      C: "INCORRETA. Corrigir é controle corretivo.",
-      D: "INCORRETA. Ignorar eventos é uma falha de segurança.",
-      E: "INCORRETA. Controles detectivos reduzem risco, não aumentam."
-    },
-    regra: "Detectivo = 'identificar'. Alertar quando o evento ocorreu.",
-    pegadinha: "Detectivo não é 'adesivo' — é 'detector' de eventos.",
-    fonte: "NIST SP 800-53 (RA-5, AU-2)."
+    gabarito: "B",
+    justificativa: "Controles detectivos são úteis quando os eventos relevantes são registrados e analisados de forma que permita priorizar e investigar. Correlação, ajuste de regras, classificação de severidade e procedimentos de escalonamento ajudam a lidar com o volume de alertas. Alertas são sinais para análise, não prova automática de comprometimento.",
+    analise: { A: "INCORRETA. Desativar alertas elimina a capacidade de detectar eventos relevantes.", B: "CORRETA. A alternativa melhora priorização e investigação sem presumir que todo alerta seja verdadeiro.", C: "INCORRETA. Alertas podem ser falsos positivos e precisam de validação.", D: "INCORRETA. Falhas de autenticação podem ser importantes para detectar ataques.", E: "INCORRETA. Registros estruturados e rastreáveis são necessários para análise e resposta." },
+    regra: "Detecção eficaz combina eventos relevantes, correlação, priorização, investigação e ajuste contínuo das regras.",
+    pegadinha: "Alerta é indício que exige triagem, não prova automática de ataque nem justificativa para desativar a monitoração.",
+    fonte: "NIST SP 800-92 — Guide to Computer Security Log Management: https://csrc.nist.gov/pubs/sp/800/92/final; NIST SP 800-61 Rev. 3: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
-  { id: "q-m4-83", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Corretivos",
-    contexto: "Os controles corretivos agem após um evento.",
-    enunciado: "Controles corretivos são:",
+  { id: "q-m4-83", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controles corretivos e recuperação",
+    contexto: "Após confirmar que uma conta administrativa foi comprometida, a equipe remove o acesso indevido e precisa restaurar a operação com segurança.",
+    enunciado: "Qual conjunto de ações é mais adequado como parte da correção e recuperação?",
     alternativas: [
-      { letra: "A", texto: "Controles que agem após um evento, corrigindo os efeitos e restaurando o estado." },
-      { letra: "B", texto: "Controles que evitam eventos." },
-      { letra: "C", texto: "Controles que identificam eventos." },
-      { letra: "D", texto: "Controles que ignoram eventos." },
-      { letra: "E", texto: "Controles que aumentam o risco." }
+      { letra: "A", texto: "Revogar sessões e credenciais comprometidas, corrigir a causa identificada, restaurar sistemas de fonte confiável e verificar o funcionamento e a segurança antes de retomar o serviço." },
+      { letra: "B", texto: "Reativar a mesma conta sem alterar credenciais ou revisar os registros." },
+      { letra: "C", texto: "Apagar todos os registros para que a conta comprometida não apareça na investigação." },
+      { letra: "D", texto: "Retomar o serviço imediatamente, sem verificar se o vetor de comprometimento permanece." },
+      { letra: "E", texto: "Considerar o incidente encerrado assim que a conta for desativada, sem avaliar o impacto." }
     ],
     gabarito: "A",
-    justificativa: "Controles corretivos atuam após a ocorrência do evento, corrigindo os efeitos e restaurando o estado normal — como backup, EDR, remoção de malware. Evitar eventos (alternativa B incorreta); identificar eventos (alternativa C incorreta); ignorar (alternativa D incorreta); aumentar risco (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Controles corretivos agem após o evento, corrigindo e restaurando o estado.",
-      B: "INCORRETA. Evitar é controle preventivo.",
-      C: "INCORRETA. Identificar é controle detectivo.",
-      D: "INCORRETA. Ignorar eventos é falha de segurança.",
-      E: "INCORRETA. Controles corretivos reduzem o risco, não aumentam."
-    },
-    regra: "Corretivo = 'depois'. Corrige os danos e restaura o estado normal.",
-    pegadinha: "Corretivo não é 'preventivo' — é 'após o fato'.",
-    fonte: "NIST SP 800-53 (CP-2, CP-4)."
+    justificativa: "A correção e recuperação devem remover o acesso comprometido, tratar a causa conhecida, restaurar a partir de fontes confiáveis e verificar se os sistemas estão íntegros antes de retomar a operação. A equipe deve preservar evidências e avaliar o alcance do incidente; uma única ação, como desativar a conta, não comprova que todo o risco foi eliminado.",
+    analise: { A: "CORRETA. A alternativa combina contenção de credenciais, correção da causa, recuperação confiável e validação antes da retomada.", B: "INCORRETA. Reativar credenciais sem correção pode permitir novo comprometimento.", C: "INCORRETA. Apagar registros destrói evidências e compromete a investigação.", D: "INCORRETA. Se o vetor permanecer, a retomada pode resultar em novo incidente.", E: "INCORRETA. O alcance e os efeitos do incidente precisam ser avaliados antes do encerramento." },
+    regra: "Correção/recuperação exige remover o acesso comprometido, tratar a causa, restaurar de fonte confiável, validar e preservar evidências.",
+    pegadinha: "Conter um sintoma não comprova que a causa foi eliminada nem que o serviço pode ser retomado com segurança.",
+    fonte: "NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: https://csrc.nist.gov/pubs/sp/800/61/r3/final."
   },
 
-  { id: "q-m4-84", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Controles Compensatórios",
-    contexto: "Controles compensatórios são alternativas quando o controle principal não é aplicável.",
-    enunciado: "Controles compensatórios são:",
+  { id: "q-m4-84", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controle compensatório para sistema legado",
+    contexto: "Um equipamento industrial não pode ser atualizado imediatamente sem interromper uma operação crítica. O fabricante não oferece correção imediata, e o equipamento precisa continuar em serviço por período limitado.",
+    enunciado: "Qual decisão representa melhor um controle compensatório responsável?",
     alternativas: [
-      { letra: "A", texto: "Alternativas que mantêm a segurança quando o controle primário não pode ser implementado." },
-      { letra: "B", texto: "Controles que aumentam o risco." },
-      { letra: "C", texto: "Controles que eliminam a necessidade de segurança." },
-      { letra: "D", texto: "Controles que ignoram a segurança." },
-      { letra: "E", texto: "Controles que são apenas sugestões." }
+      { letra: "A", texto: "Isolar o equipamento em uma zona de rede restrita, permitir apenas comunicações necessárias, monitorar acessos e definir prazo, responsável e revisão para a exceção." },
+      { letra: "B", texto: "Conectar o equipamento diretamente à internet para facilitar a manutenção." },
+      { letra: "C", texto: "Declarar o equipamento seguro apenas porque não há correção disponível." },
+      { letra: "D", texto: "Remover os registros de rede para evitar alertas durante a operação." },
+      { letra: "E", texto: "Manter a exceção indefinidamente sem documentar o risco." }
     ],
     gabarito: "A",
-    justificativa: "Controles compensatórios são alternativas de segurança que mantêm o nível de proteção quando o controle primário não pode ser implementado. Aumentar risco (alternativa B incorreta); eliminar necessidade (alternativa C incorreta); ignorar (alternativa D incorreta); apenas sugestões (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Controles compensatórios são alternativas que mantêm a segurança quando o primário não é viável.",
-      B: "INCORRETA. Controles compensatórios reduzem o risco, não aumentam.",
-      C: "INCORRETA. Controles compensatórios não eliminam a necessidade de segurança.",
-      D: "INCORRETA. Controles compensatórios não ignoram a segurança — são medidas de segurança legítimas.",
-      E: "INCORRETA. Controles compensatórios são obrigatórios quando aplicados."
-    },
-    regra: "Compensatório = 'alívio seguro'. Quando o controle ideal não é possível, usa-se uma alternativa segura.",
-    pegadinha: "Controle compensatório não é 'deixar passar' — é 'controle alternativo seguro'.",
-    fonte: "NIST SP 800-53 (CP-10)."
+    justificativa: "Quando a correção preferencial não está disponível ou não pode ser aplicada imediatamente, controles compensatórios podem reduzir a exposição, como isolamento, restrição de comunicações e monitoramento. Eles não eliminam necessariamente a vulnerabilidade; a exceção deve ter justificativa, responsável, prazo, risco residual e reavaliação.",
+    analise: { A: "CORRETA. A alternativa reduz exposição e inclui governança temporária da exceção.", B: "INCORRETA. Exposição direta amplia a superfície de ataque sem necessidade demonstrada.", C: "INCORRETA. A ausência de correção não significa que o sistema seja seguro.", D: "INCORRETA. Remover registros prejudica detecção e investigação.", E: "INCORRETA. Exceções sem prazo e revisão tornam o risco residual invisível e permanente." },
+    regra: "Controle compensatório reduz exposição quando a correção preferencial não é viável; registre e reavalie a exceção e o risco residual.",
+    pegadinha: "Uma limitação técnica não transforma a vulnerabilidade em risco aceitável automaticamente.",
+    fonte: "NIST SP 800-53 Rev. 5: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final; CISA, Known Exploited Vulnerabilities Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog."
   },
 
-  { id: "q-m4-85", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
-    nivel: "intermediario", topico: "modulo-4-unidade-4", assunto: "4.4 — Vulnerabilidade",
-    contexto: "Uma vulnerabilidade é uma fraqueza que pode ser explorada por uma ameaça.",
-    enunciado: "Uma vulnerabilidade em segurança da informação é:",
+  { id: "q-m4-85", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Ameaça, vulnerabilidade e risco",
+    contexto: "Um servidor exposto à internet contém uma falha conhecida. Um grupo tenta explorar essa falha para obter acesso; o servidor suporta um serviço público crítico.",
+    enunciado: "Qual alternativa distingue melhor ameaça, vulnerabilidade e risco nesse cenário?",
     alternativas: [
-      { letra: "A", texto: "Uma fraqueza que pode ser explorada por uma ameaça para causar dano." },
-      { letra: "B", texto: "Uma característica de segurança." },
-      { letra: "C", texto: "Um tipo de malware." },
-      { letra: "D", texto: "Um padrão de criptografia." },
-      { letra: "E", texto: "Um método de autenticação." }
+      { letra: "A", texto: "A falha é a vulnerabilidade; o grupo ou evento capaz de explorá-la é uma ameaça; o risco considera a possibilidade e o impacto do cenário sobre o serviço." },
+      { letra: "B", texto: "A vulnerabilidade é o grupo atacante, e a ameaça é a correção instalada." },
+      { letra: "C", texto: "Risco é sinônimo de vulnerabilidade e não depende de impacto ou contexto." },
+      { letra: "D", texto: "A existência de uma vulnerabilidade prova que o incidente já ocorreu." },
+      { letra: "E", texto: "Uma ameaça só existe quando o dano já foi confirmado." }
     ],
     gabarito: "A",
-    justificativa: "Uma vulnerabilidade é uma fraqueza (padrão, configuração, bug, design) que pode ser explorada por uma ameaça para causar dano ou acesso não autorizado. Característica de segurança (alternativa B incorreta); tipo de malware (alternativa C incorreta); padrão de criptografia (alternativa D incorreta); método de autenticação (alternativa E incorreta).",
-    analise: {
-      A: "CORRETA. Vulnerabilidade é uma fraqueza que pode ser explorada por ameaça.",
-      B: "INCORRETA. Vulnerabilidade é uma fraqueza, não uma característica de segurança.",
-      C: "INCORRETA. Vulnerabilidade é um estado de fraqueza, não um tipo de malware.",
-      D: "INCORRETA. Padrão de criptografia não é uma definição de vulnerabilidade.",
-      E: "INCORRETA. Método de autenticação não é uma definição de vulnerabilidade."
-    },
-    regra: "Vulnerabilidade = 'brecha'. Fraqueza que pode ser explorada por uma ameaça.",
-    pegadinha: "Vulnerabilidade não é 'ameaça' — é 'dobra' (fraqueza). Ameaça é quem aplica a dobrada.",
-    fonte: "ISO/IEC 27000:2018."
+    justificativa: "Vulnerabilidade é uma fraqueza que pode ser explorada; ameaça é uma circunstância, evento ou agente com potencial de causar dano; risco expressa a combinação de probabilidade e consequências no contexto considerado, segundo o método de avaliação adotado. A presença de uma vulnerabilidade não prova que houve exploração, mas sua exposição e a existência de atividade ameaçadora podem elevar a prioridade de tratamento.",
+    analise: { A: "CORRETA. A alternativa separa a fraqueza técnica, o agente/evento potencial e o risco contextual.", B: "INCORRETA. O grupo atacante pode ser uma ameaça; a falha é a vulnerabilidade, e uma correção é uma medida de tratamento.", C: "INCORRETA. Risco não é sinônimo de vulnerabilidade e depende do cenário e das consequências.", D: "INCORRETA. Uma vulnerabilidade pode existir sem que tenha sido explorada.", E: "INCORRETA. A ameaça pode existir antes de o dano ocorrer." },
+    regra: "Vulnerabilidade = fraqueza; ameaça = agente/evento potencialmente danoso; risco = avaliação contextual da possibilidade e das consequências.",
+    pegadinha: "Encontrar uma vulnerabilidade não prova exploração; a avaliação de risco considera exposição, ameaça, probabilidade e impacto.",
+    fonte: "NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments: https://csrc.nist.gov/pubs/sp/800/30/r1/final; ISO/IEC 27000:2018."
   },
+
+
 ];
