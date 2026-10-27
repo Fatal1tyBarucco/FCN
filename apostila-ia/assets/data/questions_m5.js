@@ -254,7 +254,7 @@ const moduleQuestions5 = [
     },
     regra: "Avalie sistemas de IA contra objetivos, dados, métricas, riscos e limites definidos para o caso de uso.",
     pegadinha: "Não trate 'IA completa' como uma categoria técnica universal: a adequação é relativa à tarefa, aos critérios e ao contexto de implantação.",
-    fonte: "ISO/IEC 22989 — Artificial intelligence — Concepts and terminology."
+    fonte: "ISO/IEC 22989 — Artificial intelligence — Concepts and terminology: https://www.iso.org/standard/74296.html."
   },
 
   /* ===================== 5.2 Aprendizado de Máquina (10 questões) ===================== */
@@ -583,7 +583,7 @@ const moduleQuestions5 = [
     },
     regra: "Atenção = query×key → pesos sobre values.",
     pegadinha: "Atenção não é simples soma ou escolha aleatória.",
-    fonte: "Vaswani, A. et al. — Attention Is All You Need, NeurIPS 2017."
+    fonte: "Vaswani, A. et al. — Attention Is All You Need, NeurIPS 2017: https://arxiv.org/abs/1706.03762."
   },
 
   { id: "q-m5-24", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -674,7 +674,7 @@ const moduleQuestions5 = [
     },
     regra: "Temperatura: alta tende a aumentar a variabilidade; baixa tende a reduzir a aleatoriedade, mas não garante determinismo em toda configuração.",
     pegadinha: "Alta temperatura não é 'melhor criatividade'.",
-    fonte: "Hugging Face — Temperature, Top-K, Top-P, 2024."
+    fonte: "Hugging Face — Temperature, Top-K, Top-P, 2024: https://huggingface.co/docs/transformers/main/en/generation_strategies."
   },
 
   /* ===================== 5.4 Engenharia de Prompts (11 questões) ===================== */
@@ -701,7 +701,7 @@ const moduleQuestions5 = [
     },
     regra: "Prompt completo: contexto, tarefa, restrições, formato.",
     pegadinha: "Só perguntar não é suficiente.",
-    fonte: "Google Cloud — Prompt design, 2024."
+    fonte: "Google Cloud — Prompt design, 2024: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies."
   },
 
   { id: "q-m5-29", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -726,7 +726,7 @@ const moduleQuestions5 = [
     },
     regra: "Few-shot = fornecer exemplos no prompt.",
     pegadinha: "Few-shot não é mais lento sempre.",
-    fonte: "Brown, T. et al. — Language Models are Few-Shot Learners, NeurIPS 2020."
+    fonte: "Brown, T. et al. — Language Models are Few-Shot Learners, NeurIPS 2020: https://arxiv.org/abs/2005.14165."
   },
 
   { id: "q-m5-30", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -751,7 +751,7 @@ const moduleQuestions5 = [
     },
     regra: "Delimitação = separar instrução e dado.",
     pegadinha: "Delimitação ajuda, mas não substitui defesa em camadas contra injeção de prompt.",
-    fonte: "NIST — Adversarial Machine Learning, 2024."
+    fonte: "NIST — Adversarial Machine Learning, 2024: https://doi.org/10.6028/NIST.AI.100-2e2023."
   },
 
   { id: "q-m5-31", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",

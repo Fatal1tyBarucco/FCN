@@ -1160,7 +1160,7 @@ const moduleQuestions4 = [
 
   { id: "q-m4-47", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-1-topico-1", assunto: "4.1 — Disponibilidade, RTO e RPO",
-    contexto: "Um sistema de atendimento deve voltar a operar rapidamente após uma interrupção, e a organização precisa definir quanto tempo e quantos dados pode perder.",
+    contexto: "Portal de serviços ao cidadão deve voltar a operar rapidamente após uma interrupção, e a organização precisa definir quanto tempo e quantos dados pode perder.",
     enunciado: "Qual associação entre objetivos de recuperação está correta?",
     alternativas: [
       { letra: "A", texto: "RTO e RPO são sinônimos de criptografia em repouso." },
@@ -1335,7 +1335,7 @@ const moduleQuestions4 = [
 
   { id: "q-m4-54", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-1-topico-4", assunto: "4.1 — Estratégia de cópias 3-2-1",
-    contexto: "Uma organização guarda três cópias dos arquivos em dois dispositivos de armazenamento, mas todos ficam no mesmo prédio e podem ser acessados com a mesma conta administrativa.",
+    contexto: "Um hospital guarda três cópias dos prontuários em dois dispositivos de armazenamento, mas todos ficam no mesmo prédio e podem ser acessados com a mesma conta administrativa.",
     enunciado: "Qual avaliação da estratégia 3-2-1 é mais correta?",
     alternativas: [
       { letra: "A", texto: "A estratégia está completa, pois a quantidade de cópias torna desnecessária qualquer separação física ou lógica." },
@@ -1760,7 +1760,7 @@ const moduleQuestions4 = [
 
   { id: "q-m4-71", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral",
     nivel: "intermediario", topico: "modulo-4-unidade-1-topico-2", assunto: "4.1 — Controles compensatórios e risco residual",
-    contexto: "Um sistema legado não pode receber imediatamente uma atualização crítica porque ela interromperia um processo essencial ainda sem alternativa. A organização precisa reduzir a exposição enquanto prepara a mudança.",
+    contexto: "Aplicação de folha de pagamento legada não pode receber imediatamente uma atualização crítica porque interromperia o processamento mensal ainda sem alternativa. A organização precisa reduzir a exposição enquanto prepara a mudança.",
     enunciado: "Qual abordagem caracteriza melhor o uso responsável de controles compensatórios?",
     alternativas: [
       { letra: "A", texto: "Documentar a limitação, avaliar o risco, aplicar controles alternativos proporcionais, definir responsável e prazo e reavaliar até que a correção principal seja possível." },
@@ -2081,7 +2081,7 @@ const moduleQuestions4 = [
   },
 
   { id: "q-m4-85", modulo: 4, formato: "mc", estilo: "cespe", origem: "autoral", nivel: "intermediario", topico: "modulo-4-unidade-2-topico-4", assunto: "4.2 — Ameaça, vulnerabilidade e risco",
-    contexto: "Um servidor exposto à internet contém uma falha conhecida. Um grupo tenta explorar essa falha para obter acesso; o servidor suporta um serviço público crítico.",
+    contexto: "Aplicação web de agendamento de consultas possui falha de injeção; atacante tenta explorá-la; o sistema suporta dados de pacientes.",
     enunciado: "Qual alternativa distingue melhor ameaça, vulnerabilidade e risco nesse cenário?",
     alternativas: [
       { letra: "A", texto: "A falha é a vulnerabilidade; o grupo ou evento capaz de explorá-la é uma ameaça; o risco considera a possibilidade e o impacto do cenário sobre o serviço." },
