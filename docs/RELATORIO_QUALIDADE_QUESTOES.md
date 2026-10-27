@@ -46,3 +46,20 @@ Nenhum par idêntico detectado.
 - Correção aplicada: q-m1-25 (Modo de Compatibilidade) — ajuste de justificativa/trechoDeterminante/analise/pegadinha para alinhar ao currículo: desabilita funcionalidades introduzidas após 2007 (formato .doc legado), removendo a afirmação contraditória de "sem corte universal por ano".
 - Demais 9 questões (q-m1-21, 22, 23, 24, 26, 27, 28, 29, 30) sem alteração; fontes Microsoft Support mantidas.
 - Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
+
+## Revisão semântica — lote M1 q-m1-31..q-m1-44 (2026-10-27)
+
+- Questões revisadas: 14 (q-m1-31 a q-m1-44). Módulo 1, unidades 3.2–3.6 (Excel/simulador), 4.1 (PowerPoint), 5.1 (OneDrive), 1.1, 2.5/2.14 (Word), 3.1/3.5 (Excel).
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores, fonte; cruzamento com `curriculum.js`/`curriculumPowerPoint14`/`curriculumOneDrive15` e com `assets/js/simulators.js` (cabeçalho "TIPOS E ERROS", "SEPARADOR REGIONAL", "FUNÇÕES SUPORTADAS", `fnProcx`, `ajustarFormulaAoCopiar`).
+- Resultado: gabaritos mantidos (B, certo, B, certo, certo, B, errado, certo, B, A, E, C, D, C). Nenhum gabarito alterado.
+- Correções aplicadas: nenhuma. Itens verificados individualmente:
+  - q-m1-31 (SE): condição 6,0 >= 7 falsa → terceiro argumento "Reprovado"; consistente com a semântica documentada da função.
+  - q-m1-32 (escopo do simulador): recusa prévia "ERRO DE ENTRADA" e busca real em PROCX/PROCH/PROCV confirmadas no código.
+  - q-m1-33 (ajuste ao copiar): parte relativa A2→A3, absoluta $B$1 preservada; confirmado em `ajustarFormulaAoCopiar`.
+  - q-m1-34 (PROCX): correspondência exata por padrão (modo=0) e retorno de `se_não_encontrado` no lugar de #N/A confirmados em `fnProcx`.
+  - q-m1-35 (separador regional): SOMA(1,5; 2,5)=4 e SOMA(1,5)=6 conforme cabeçalho "SEPARADOR REGIONAL".
+  - q-m1-36/q-m1-37: animação (objeto no slide) × transição (entre slides) e escopo global do Slide Mestre confirmados em `curriculumPowerPoint14`.
+  - q-m1-38/q-m1-39: sincronização bidirecional ≠ backup imutável e retenção configurável confirmados em `curriculumOneDrive15`.
+  - q-m1-40 a q-m1-44: exportação PDF, cabeçalhos/rodapés ("Primeira Página Diferente"), Tabelas do Excel, filtros/validação/formatação condicional e relatório técnico integrado (estilos, seções, campos, PDF acessível) consistentes com o currículo e fontes Microsoft Support.
+- Fontes: mantidas (Microsoft Support/Learn, RFCs quando aplicável); nenhuma URL inventada ou removida.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
