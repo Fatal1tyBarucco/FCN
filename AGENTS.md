@@ -1397,3 +1397,12 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - [x] Contagem atual do catálogo: 137 IDs únicos (20 vídeos + 117 referências técnicas), todos verificados estruturalmente e com URL preenchida.
 - O parent 370ba6e24f9095599d3e810b9e99ac4171794623 passou no workflow pull_request 40424415199. O workflow de push 40424410451 ainda estava em execução no momento desta atualização; este lote novo aguarda seus próprios checks.
 - A revisão semântica independente das 399 questões permanece pendente.
+
+## Retomada de auditoria focal M1 — 2026-10-26
+
+- Revisadas as questões `q-m1-09`, `q-m1-30`, `q-m1-41` a `q-m1-44`: as fontes foram alinhadas à documentação oficial específica da Microsoft.
+- `q-m1-09` foi corrigida semanticamente: PDF é adequado para distribuição e preservação visual, mas não impede tecnicamente a edição. A justificativa recomenda controles de acesso/proteção separados quando a prevenção de alterações for requisito.
+- `q-m1-30` passou a usar a documentação da função MÉDIA em português do Brasil.
+- `q-m1-41` agora usa fontes sobre Primeira Página Diferente e numeração; `q-m1-42` sobre tabelas e expansão; `q-m1-43` sobre filtros, validação e formatação condicional; `q-m1-44` sobre sumário automático, quebras de seção e PDFs acessíveis.
+- O catálogo `apostila-ia/assets/data/references.js` contém 149 IDs únicos (20 referências de vídeo e 129 referências técnicas), todos com URL e status `verificado` no arquivo. Isso é uma conferência estrutural, não prova que cada URL foi testada por HTTP nem que cada questão foi validada semanticamente.
+- O CI do conjunto final destas alterações ainda precisa ser confirmado. Manter PR #17 em Draft, sem merge.
