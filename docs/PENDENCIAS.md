@@ -40,7 +40,7 @@ Este resumo prevalece sobre checklists históricos abaixo quando houver divergê
 - [ ] Manter PR #17 aberto em Draft até as pendências qualitativas serem resolvidas; CI verde não significa conclusão integral da Fase 1.
 
 
-1. Referências (HEAD atual auditado em 2026-10-26): **43 entradas em `references.js`** = 20 vídeos + 23 referências técnicas; **43/43 têm status `verificado` e URL preenchida**, 0 pendentes no catálogo. A contagem anterior de 73/73 era um snapshot documental que não correspondia ao arquivo atual; reconciliada nesta atualização. Permanecem fora do catálogo e fora do escopo de verificação individual: demais resoluções da ANPD, RFCs não listadas, demais incisos/parágrafos CF art. 37/5º e verificação artigo a artigo das leis adicionais citadas por remissão em M6.
+1. Referências (HEAD atual auditado em 2026-10-26): **83 entradas em `references.js`** = 20 vídeos + 63 referências técnicas; **83/83 têm status `verificado` e URL preenchida**, 0 pendentes no catálogo. A contagem anterior de 73/73 era um snapshot documental que não correspondia ao arquivo atual; reconciliada nesta atualização. Permanecem fora do catálogo e fora do escopo de verificação individual: demais resoluções da ANPD, RFCs não listadas, demais incisos/parágrafos CF art. 37/5º e verificação artigo a artigo das leis adicionais citadas por remissão em M6.
 2. Vídeos: 20 validados via oembed (2026-10-24) em referencias/referencias-verificadas.md e references.js (IDs verificados). Embeds incorporados no index.html (20/20 videos em 8 módulos, Seção 12.2). Pendente: verificação de disponibilidade regional/incorporação em navegador real; vídeos não substituem a apostila (Seção 12.2). Status: embeds concluídos no incremento atual.
 3. Service Worker: arquivo válido (node --check OK) e registro condicional; registro em navegador real não confirmado (sem exceções JS em headless).
 4. Accessibility container vazio em headless (verificar em navegador real; propósito screen reader).
@@ -513,3 +513,11 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [x] Corrigida a fonte de `q-m1-21` para as páginas oficiais específicas sobre repetir cabeçalhos de tabelas e classificar conteúdo de tabela no Word.
 - [x] Corrigida a fonte de `q-m1-24` para documentação específica de criação de PDFs acessíveis e marcas estruturais para leitores de tela.
 - [ ] Manter a revisão semântica independente de todos os itens pendente; alterações focais não encerram o M1 nem as 399 questões.
+
+
+## CI do HEAD corretivo — 2026-10-26
+
+- SHA `a3e0325b14b82b31c09b4d2d74a551b2c55a661e`: push [40423216305](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423216305) e `pull_request` [40423223898](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423223898) concluíram com `success`.
+- Sintaxe JavaScript passou em 39 arquivos; 399 questões, auditorias estruturais e heurísticas, smoke test `file://`, regressões interativas e `pageErrors: []` passaram. axe-core: 0 violações confirmadas; continuam 2 verificações incompletas — 89 nós SVG em `color-contrast` e 20 iframes em `frame-tested`.
+- O catálogo de referências contém 83 entradas no total (20 vídeos + 63 referências técnicas); todas estão marcadas `verificado` e têm URL preenchida. Essa contagem descreve o catálogo, não comprova a validação HTTP individual de todas as URLs.
+- Revisão focal M1: fontes mais específicas para `q-m1-05`, `q-m1-06`, `q-m1-08`, `q-m1-21` e `q-m1-24`; justificativa sobre tabulação decimal corrigida em `q-m1-14`. Revisão semântica integral e acessibilidade manual continuam pendentes.

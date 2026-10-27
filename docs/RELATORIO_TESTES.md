@@ -539,7 +539,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 
 - Run [40420580863](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40420580863), SHA `15533145e506dcec5988f91b73be09a6c4462ad0`: **success**. Sintaxe de 39 arquivos, matriz curricular, rastreabilidade, estrutura, heurísticas de questões, smoke test Chromium em `file://` e regressões interativas passaram.
 - Questões: 399 itens, 0 IDs duplicados, 0 alertas heurísticos; os seis arquivos de questões somam 399 IDs e 399 campos `fonte` não vazios.
-- Referências: 43 entradas no `references.js` (20 vídeos + 23 referências técnicas), 43 `verificado`, 0 `pendente`, 43 URLs preenchidas. Contagens anteriores de 73/79 foram reconciliadas nos documentos de governança.
+- Referências: 83 entradas no `references.js` (20 vídeos + 63 referências técnicas), 43 `verificado`, 0 `pendente`, 83 URLs preenchidas. Contagens anteriores de 73/79 foram reconciliadas nos documentos de governança.
 - axe-core: 58 passes, 2 incomplete, 0 violações; `pageErrors: []`. As verificações incompletas são `color-contrast` (89 textos SVG) e `frame-tested` (20 iframes externos). A verificação `label-content-name-mismatch` não aparece mais.
 - Revisão matemática das cores SVG sobre `#111318`: título `#e3e9ff` = 15,37:1; texto geral `#c5c9d4` = 11,22:1; rótulos de eixo `#8b94a5` = 6,08:1. Todos excedem 4,5:1. Isso não elimina a necessidade de inspeção visual, testes de teclado/leitor de tela, WCAG manual e compatibilidade física.
 - Conferência estrutural adicional: os 20 iframes de vídeo têm `title` não vazio e único; a auditoria axe-core não inspeciona o conteúdo interno desses frames externos.
@@ -561,3 +561,11 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - `q-m1-21`: fontes agora correspondem diretamente aos dois recursos exigidos — repetição do cabeçalho da tabela e classificação por coluna.
 - `q-m1-24`: fonte agora aponta para as instruções Microsoft específicas de criação de PDFs acessíveis e marcas estruturais para leitores de tela.
 - O run [40422839184](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40422839184) falhou na etapa de sintaxe JavaScript porque a primeira adição ao catálogo `references.js` não incluía uma vírgula após a entrada anterior. O erro foi localizado nos logs e corrigido no HEAD subsequente; não considerar o run como validação verde. Aguardar o CI do commit corretivo.
+
+
+## CI do HEAD corretivo — 2026-10-26
+
+- SHA `a3e0325b14b82b31c09b4d2d74a551b2c55a661e`: push [40423216305](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423216305) e `pull_request` [40423223898](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423223898) concluíram com `success`.
+- Sintaxe JavaScript passou em 39 arquivos; 399 questões, auditorias estruturais e heurísticas, smoke test `file://`, regressões interativas e `pageErrors: []` passaram. axe-core: 0 violações confirmadas; continuam 2 verificações incompletas — 89 nós SVG em `color-contrast` e 20 iframes em `frame-tested`.
+- O catálogo de referências contém 83 entradas no total (20 vídeos + 63 referências técnicas); todas estão marcadas `verificado` e têm URL preenchida. Essa contagem descreve o catálogo, não comprova a validação HTTP individual de todas as URLs.
+- Revisão focal M1: fontes mais específicas para `q-m1-05`, `q-m1-06`, `q-m1-08`, `q-m1-21` e `q-m1-24`; justificativa sobre tabulação decimal corrigida em `q-m1-14`. Revisão semântica integral e acessibilidade manual continuam pendentes.
