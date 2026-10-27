@@ -43,7 +43,11 @@ Nenhum par idêntico detectado.
 
 ## Questões sem fonte externa — lista acionável para próxima sessão (2026-10-27)
 
-Total: **102 questões (25,6% do banco)** com campo `fonte` contendo apenas proveniência curricular interna ("Currículo Mx …"), sem URL/autor/obra. M7 e M8 estão 100% nessa situação.
+Total: **1 questão (0,25% do banco)** com campo `fonte` contendo apenas proveniência curricular interna ("Currículo Mx …"), sem URL/autor/obra: q-m3-45 (zoombombing/intrusão em reuniões) — pendência registrada por ausência de fonte primária verificada nos domínios permitidos. As demais 101 questões do lote receberam fonte externa verificável (URL direta + título + órgão + data de verificação 2026-10-26/2026-10-27).
+
+**Resultado do lote (2026-10-27):** 101/102 questões com fonte externa verificável. Fontes reutilizadas/adicionadas ao catálogo: RFCs 8200, 1918, 4632, 5952, 1122, 4251, 950, 1855, 7208, 6376, 7489; NIST SP 1500-18r2 (RDaF); NIST/SEMATECH e-Handbook of Statistical Methods; NIST AI RMF 1.0; OWASP LLM Prompt Injection Prevention Cheat Sheet; Tableau Help; Looker Studio Help; além de reuso de LGPD, Microsoft Learn M365/Power BI/DAX, W3C WCAG 2.2 e RFCs já cadastradas.
+
+Pendência remanescente: q-m3-45 — manter fonte curricular até verificação de fonte primária (Zoom/CISA/NIST) para intrusão em reuniões virtuais.">
 
 **Regra para a próxima sessão:** adicionar fonte externa verificável (URL direta + título + órgão + data de verificação) reutilizando as 149 entradas de `references.js` quando aplicável; adicionar novas entradas ao catálogo apenas com URL verificada (webfetch). Não inventar URLs. Não alterar enunciado/alternativas/gabarito/análise.
 

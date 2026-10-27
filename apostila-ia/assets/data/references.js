@@ -1606,5 +1606,347 @@ const references = [
     "status": "verificado",
     "dispositivos": null
   },
+
+  {
+    id: "ref-rfc-8200-ipv6",
+    titulo: "RFC 8200 — Internet Protocol, Version 6 (IPv6) Specification (Internet Standard)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc8200/",
+    topico: "M2 — Redes e protocolos (IPv6)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 8200"]
+  },
+  {
+    id: "ref-rfc-1918-private-addresses",
+    titulo: "RFC 1918 — Address Allocation for Private Internets",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1918/",
+    topico: "M2 — Redes e protocolos (endereços privados)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1918"]
+  },
+  {
+    id: "ref-rfc-4632-cidr",
+    titulo: "RFC 4632 — Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4632/",
+    topico: "M2 — Redes e protocolos (VLSM e sumarização)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 4632"]
+  },
+  {
+    id: "ref-rfc-5952-ipv6-text",
+    titulo: "RFC 5952 — A Recommendation for IPv6 Address Text Representation",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc5952/",
+    topico: "M2 — Redes e protocolos (IPv6 abreviação)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 5952"]
+  },
+  {
+    id: "ref-rfc-1122-hosts",
+    titulo: "RFC 1122 — Requirements for Internet Hosts: Communication Layers (STD 3)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1122/",
+    topico: "M2 — Redes e protocolos (OSI/TCP-IP e diagnóstico)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1122"]
+  },
+  {
+    id: "ref-rfc-4251-ssh-architecture",
+    titulo: "RFC 4251 — The Secure Shell (SSH) Protocol Architecture",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4251/",
+    topico: "M2 — Redes e protocolos (SSH/SFTP)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 4251"]
+  },
+  {
+    id: "ref-rfc-950-subnetting",
+    titulo: "RFC 950 — Internet Standard Subnetting Procedure (STD 5)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc950/",
+    topico: "M2 — Redes e protocolos (sub-redes)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 950"]
+  },
+  {
+    id: "ref-rfc-1855-netiquette",
+    titulo: "RFC 1855 — Netiquette Guidelines",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1855/",
+    topico: "M3 — Comunicação (netiqueta profissional)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1855"]
+  },
+  {
+    id: "ref-rfc-7208-spf",
+    titulo: "RFC 7208 — Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7208/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 7208"]
+  },
+  {
+    id: "ref-rfc-6376-dkim",
+    titulo: "RFC 6376 — DomainKeys Identified Mail (DKIM) Signatures",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc6376/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 6376"]
+  },
+  {
+    id: "ref-rfc-7489-dmarc",
+    titulo: "RFC 7489 — Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7489/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 7489"]
+  },
+  {
+    id: "ref-nist-rdaf-1500-18",
+    titulo: "NIST SP 1500-18r2 — Research Data Framework (RDaF), Version 2.0",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html",
+    topico: "M7 — Dados (qualidade, metadados e governança)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST SP 1500-18r2"]
+  },
+  {
+    id: "ref-nist-stats-handbook",
+    titulo: "NIST/SEMATECH e-Handbook of Statistical Methods",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://www.itl.nist.gov/div898/handbook/",
+    topico: "M7/M8 — Estatística e visualização",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST/SEMATECH e-Handbook"]
+  },
+  {
+    id: "ref-nist-ai-rmf-10",
+    titulo: "NIST — Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://www.nist.gov/itl/ai-risk-management-framework",
+    topico: "M5 — IA (governança e risco)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST AI RMF 1.0"]
+  },
+  {
+    id: "ref-owasp-llm-prompt-injection",
+    titulo: "OWASP — LLM Prompt Injection Prevention Cheat Sheet",
+    organizacao: "OWASP Foundation",
+    url: "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    topico: "M5 — IA (engenharia de prompts)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["OWASP LLM Prompt Injection Prevention Cheat Sheet"]
+  },
+  {
+    id: "ref-tableau-help-desktop",
+    titulo: "Tableau Desktop and Web Authoring Help",
+    organizacao: "Tableau (Salesforce)",
+    url: "https://help.tableau.com/current/pro/desktop/en-us/default.htm",
+    topico: "M8 — Visualização (Tableau)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["Tableau Help"]
+  },
+  {
+    id: "ref-looker-studio-help",
+    titulo: "Google Looker Studio Help",
+    organizacao: "Google",
+    url: "https://support.google.com/looker-studio/",
+    topico: "M8 — Visualização (Looker Studio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["Looker Studio Help"]
+  },
+
+  {
+    id: "ref-rfc-8200-ipv6",
+    titulo: "RFC 8200 — Internet Protocol, Version 6 (IPv6) Specification (Internet Standard)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc8200/",
+    topico: "M2 — Redes e protocolos (IPv6)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 8200"]
+  },
+  {
+    id: "ref-rfc-1918-private-addresses",
+    titulo: "RFC 1918 — Address Allocation for Private Internets",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1918/",
+    topico: "M2 — Redes e protocolos (endereços privados)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1918"]
+  },
+  {
+    id: "ref-rfc-4632-cidr",
+    titulo: "RFC 4632 — Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4632/",
+    topico: "M2 — Redes e protocolos (VLSM e sumarização)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 4632"]
+  },
+  {
+    id: "ref-rfc-5952-ipv6-text",
+    titulo: "RFC 5952 — A Recommendation for IPv6 Address Text Representation",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc5952/",
+    topico: "M2 — Redes e protocolos (IPv6 abreviação)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 5952"]
+  },
+  {
+    id: "ref-rfc-1122-hosts",
+    titulo: "RFC 1122 — Requirements for Internet Hosts: Communication Layers (STD 3)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1122/",
+    topico: "M2 — Redes e protocolos (OSI/TCP-IP e diagnóstico)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1122"]
+  },
+  {
+    id: "ref-rfc-4251-ssh-architecture",
+    titulo: "RFC 4251 — The Secure Shell (SSH) Protocol Architecture",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4251/",
+    topico: "M2 — Redes e protocolos (SSH/SFTP)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 4251"]
+  },
+  {
+    id: "ref-rfc-950-subnetting",
+    titulo: "RFC 950 — Internet Standard Subnetting Procedure (STD 5)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc950/",
+    topico: "M2 — Redes e protocolos (sub-redes)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 950"]
+  },
+  {
+    id: "ref-rfc-1855-netiquette",
+    titulo: "RFC 1855 — Netiquette Guidelines",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc1855/",
+    topico: "M3 — Comunicação (netiqueta profissional)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 1855"]
+  },
+  {
+    id: "ref-rfc-7208-spf",
+    titulo: "RFC 7208 — Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7208/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 7208"]
+  },
+  {
+    id: "ref-rfc-6376-dkim",
+    titulo: "RFC 6376 — DomainKeys Identified Mail (DKIM) Signatures",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc6376/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 6376"]
+  },
+  {
+    id: "ref-rfc-7489-dmarc",
+    titulo: "RFC 7489 — Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc7489/",
+    topico: "M3 — Comunicação (autenticação de domínio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["RFC 7489"]
+  },
+  {
+    id: "ref-nist-rdaf-1500-18",
+    titulo: "NIST SP 1500-18r2 — Research Data Framework (RDaF), Version 2.0",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html",
+    topico: "M7 — Dados (qualidade, metadados e governança)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST SP 1500-18r2"]
+  },
+  {
+    id: "ref-nist-stats-handbook",
+    titulo: "NIST/SEMATECH e-Handbook of Statistical Methods",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://www.itl.nist.gov/div898/handbook/",
+    topico: "M7/M8 — Estatística e visualização",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST/SEMATECH e-Handbook"]
+  },
+  {
+    id: "ref-nist-ai-rmf-10",
+    titulo: "NIST — Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+    organizacao: "National Institute of Standards and Technology (NIST)",
+    url: "https://www.nist.gov/itl/ai-risk-management-framework",
+    topico: "M5 — IA (governança e risco)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["NIST AI RMF 1.0"]
+  },
+  {
+    id: "ref-owasp-llm-prompt-injection",
+    titulo: "OWASP — LLM Prompt Injection Prevention Cheat Sheet",
+    organizacao: "OWASP Foundation",
+    url: "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    topico: "M5 — IA (engenharia de prompts)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["OWASP LLM Prompt Injection Prevention Cheat Sheet"]
+  },
+  {
+    id: "ref-tableau-help-desktop",
+    titulo: "Tableau Desktop and Web Authoring Help",
+    organizacao: "Tableau (Salesforce)",
+    url: "https://help.tableau.com/current/pro/desktop/en-us/default.htm",
+    topico: "M8 — Visualização (Tableau)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["Tableau Help"]
+  },
+  {
+    id: "ref-looker-studio-help",
+    titulo: "Google Looker Studio Help",
+    organizacao: "Google",
+    url: "https://support.google.com/looker-studio/",
+    topico: "M8 — Visualização (Looker Studio)",
+    dataVerificacao: "2026-10-26",
+    status: "verificado",
+    dispositivos: ["Looker Studio Help"]
+  },
 ];
 if (typeof window !== 'undefined') window.references = references;

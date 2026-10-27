@@ -37,7 +37,7 @@ const moduleQuestions8 = [
     },
     regra: "Método de escolha de gráfico: (1) a pergunta embasa a tarefa analítica; (2) a tarefa define a forma; (3) a ferramenta é meio. Limite do gráfico: quando se precisa de precisão exata de todos os valores, a tabela supera o gráfico.",
     pegadinha: "Pegadinha de ferramenta: 'a ferramenta tem rosca' é um erro de critério. O exame cobra a ordem de decisão: pergunta → tarefa → gráfico, nunca gráfico → pergunta.",
-    fonte: "Currículo M8 — modulo-8-unidade-1-topico-1 (M8.1.1 Propósito da visualização).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   { id: "q-m8-02",
     modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
@@ -62,7 +62,7 @@ const moduleQuestions8 = [
     },
     regra: "Em gráficos de barras, use linha de base zero para preservar a proporcionalidade do comprimento com o valor.",
     pegadinha: "O truncamento altera a percepção visual, não a razão numérica entre os valores.",
-    fonte: "Currículo M8 — integridade gráfica e escolha de escalas."
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
   },
 
   { id: "q-m8-03",
@@ -88,7 +88,7 @@ const moduleQuestions8 = [
     },
     regra: "Escolha o gráfico pela pergunta: barras para comparar magnitudes entre categorias; linhas para evolução ordenada; histograma para distribuição quantitativa.",
     pegadinha: "Não use linhas apenas porque há vários valores: a conexão visual pode sugerir continuidade inexistente.",
-    fonte: "Currículo M8 — escolha do gráfico pela tarefa analítica."
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
   },
 
   { id: "q-m8-04",
@@ -114,7 +114,7 @@ const moduleQuestions8 = [
     },
     regra: "Histograma: barras encostadas; com larguras de classe diferentes, use densidade para que a área represente a frequência.",
     pegadinha: "Não confunda histograma de intervalos quantitativos com gráfico de barras de categorias.",
-    fonte: "Currículo M8 — histogramas, classes e densidade."
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26)."
   },
 
   { id: "q-m8-05",
@@ -140,7 +140,7 @@ const moduleQuestions8 = [
     },
     regra: "Diferencie valor dos dados e medida visual: o eixo truncado não muda os dados, mas pode exagerar a razão percebida.",
     pegadinha: "Não confunda a altura aparente da barra com o valor original nem com a razão numérica.",
-    fonte: "Currículo M8 — integridade gráfica e escolha de escalas."
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
   },
 
   { id: "q-m8-06", modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
@@ -165,7 +165,7 @@ const moduleQuestions8 = [
     },
     regra: "Média = soma dos valores ÷ quantidade; mediana = valor central (média dos dois centrais se n par); moda = valor de maior frequência.",
     pegadinha: "Com quantidade par de observações, a mediana não é simplesmente o valor da posição central superior.",
-    fonte: "Currículo M8 — M8.3.1 Média, mediana e moda."
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26)."
   },
 
   {
@@ -188,7 +188,7 @@ const moduleQuestions8 = [
     },
     regra: "Power Query registra passos de preparação que podem ser reexecutados na atualização; a posição da transformação em relação à carga depende do destino e da arquitetura.",
     pegadinha: "O registro das etapas torna a transformação reproduzível, mas não elimina falhas de fonte, credenciais, mudança de esquema ou necessidade de manutenção.",
-    fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 Power Query e transformações).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   { id: "q-m8-08", modulo: 8, formato: "mc", estilo: "fcc", origem: "autoral", nivel: "basico",
     topico: "modulo-8-unidade-4-topico-3", assunto: "M8.4.3 Modelagem analítica",
@@ -212,7 +212,7 @@ const moduleQuestions8 = [
     },
     regra: "A contagem simples de linhas mede linhas no grão da tabela de fatos; conte entidades distintas quando essa for a métrica pretendida.",
     pegadinha: "Contagem de linhas não equivale automaticamente à contagem de entidades de negócio.",
-    fonte: "Currículo M8 — modelagem analítica e granularidade."
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
   },
 
   { id: "q-m8-09", modulo: 8, formato: "mc", estilo: "fgv", origem: "autoral", nivel: "basico",
@@ -237,7 +237,7 @@ const moduleQuestions8 = [
     },
     regra: "Recomendação executável especifica ação, responsável, prazo, custo previsto e consequência de não agir.",
     pegadinha: "Uma apresentação de dados não termina na constatação: deve conectar evidência a uma decisão clara.",
-    fonte: "Currículo M8 — storytelling com dados e narrativa de decisão."
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26)."
   },
 
   {
@@ -260,7 +260,7 @@ const moduleQuestions8 = [
     },
     regra: "Métrica de processo permite agir antes do resultado consolidar; métrica de resultado confirma o que já aconteceu. Painel equilibra as duas.",
     pegadinha: "A pegadinha do item é a inversão 'resultado primeiro e processo dispensável', típica de quem lê só a primeira frase.",
-    fonte: "Currículo M8 — modulo-8-unidade-5-topico-2 (M8.5.2 Métricas de processo e resultado).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-11",
@@ -289,7 +289,7 @@ const moduleQuestions8 = [
     },
     regra: "Escolha por custo de autoria vs. publicação: Tableau Public gratuito com publicação pública; Looker Studio gratuito para autoria básica; Desktop licenciado; dados sensíveis ou confidenciais não devem ser publicados em área aberta.",
     pegadinha: "A alternativa A é a pegadinha: gratuidade simples não legifera o uso público de dados escolares; o exame cobra o uso mais adequado, não o mais barato.",
-    fonte: "Currículo M8 — modulo-8-unidade-4-topico-2 (M8.4.2 Tableau e Looker Studio).",
+    fonte: "Tableau Help (Desktop/Web Authoring): https://help.tableau.com/current/pro/desktop/en-us/default.htm (verificado em 2026-10-26). Google Looker Studio Help: https://support.google.com/looker-studio/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-12",
@@ -311,7 +311,7 @@ const moduleQuestions8 = [
     },
     regra: "Tukey: limites para outliers em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ; cada bigode vai até o valor observado mais extremo dentro do limite correspondente; IIQ = Q3 − Q1 mede a dispersão central.",
     pegadinha: "A pegadinha é confundir o limite teórico de 1,5×IIQ com a extremidade efetiva do bigode: o bigode termina no valor observado mais extremo que ainda está dentro do limite.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-5 (M8.2.5 Box plot e quartis).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-13",
@@ -340,7 +340,7 @@ const moduleQuestions8 = [
     },
     regra: "Categorias nominais → paleta categórica (poucas cores); magnitudes ordenadas → paleta sequencial (luminosidade); valores acima e abaixo de uma referência → paleta divergente (neutro na referência).",
     pegadinha: "A pegadinha é 'paleta arco-íris é mais atrativa' — no currículo, a atratividade decorativa é ruído quando a tarefa é ler magnitude.",
-    fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Paleta sequencial).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-14",
@@ -369,7 +369,7 @@ const moduleQuestions8 = [
     },
     regra: "Acessibilidade: redundância (cor + rótulo/forma/padrão), testes em escala de cinza, texto alternativo, dados subjacentes e fonte legível.",
     pegadinha: "A pegadinha é concluir 'cor bem contrastada' de cara; acessibilidade não se reduz ao contraste: combine cor com rótulos, formas ou padrões.",
-    fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Acessibilidade e redundância visual).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-15",
@@ -398,7 +398,7 @@ const moduleQuestions8 = [
     },
     regra: "Escala linear: passo = diferença absoluta. Escala logarítmica: passo = razão (multiplicação). Em log, subida visual igual = mesmo fator, não mesmo acréscimo.",
     pegadinha: "A pegadinha é aceitar 'passo igual = valor novo' — na escala logarítmica, distâncias visuais iguais correspondem ao mesmo fator multiplicativo.",
-    fonte: "Currículo M8 — modulo-8-unidade-1-topico-3 (M8.1.3 Escalas lineares e logarítmicas).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-16",
@@ -427,7 +427,7 @@ const moduleQuestions8 = [
     },
     regra: "Matriz de decisão: comparar categorias → barras; evoluir no tempo → linhas; distribuir → histograma/box plot; relacionar duas variáveis → dispersão; comparar um todo → barras empilhadas/tabela.",
     pegadinha: "A pegadinha é 'linha para (a) porque é série' — o (a) é nominal, e linhas impõem continuidade e tendência que só existem em (b).",
-    fonte: "Currículo M8 — modulo-8-unidade-1-topico-4 (M8.1.4 Escolha do gráfico pela tarefa).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-17",
@@ -456,7 +456,7 @@ const moduleQuestions8 = [
     },
     regra: "Histograma de densidade: altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou = 1 (relativa); a comparação requer critérios e escalas compatíveis; com larguras diferentes, interprete a área e a densidade, não apenas a altura.",
     pegadinha: "A alternativa A tenta o alerta 'altura sempre é a medida' — o currículo só exige densidade quando há larguras diferentes.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-1 (M8.2.1 Histograma: densidade e intervalos).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-18",
@@ -485,7 +485,7 @@ const moduleQuestions8 = [
     },
     regra: "Variação percentual = (valor atual − anterior) ÷ anterior × 100; sempre com denominador do valor anterior, não o atual.",
     pegadinha: "A pegadinha é usar o valor atual como denominador ou inverter o sinal: a variação percentual divide sempre (atual − anterior) pelo anterior.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-2 (M8.2.2 Gráfico de linhas).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-19",
@@ -514,7 +514,7 @@ const moduleQuestions8 = [
     },
     regra: "r mede força da associação linear; 'causa' exige delineamento experimental ou controle de confundentes; jamais escrever 'X causa Y' com base só em r.",
     pegadinha: "A pegadinha é a frase 'sua' — quem lê 'causa' e salta, esquece que r = 0,8 só suporta associação.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-4 (M8.2.4 Dispersão e correlação).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-20",
@@ -543,7 +543,7 @@ const moduleQuestions8 = [
     },
     regra: "Desvio-padrão amostral: divisor n − 1 (Bessel), para estimativa não enviesada da variância populacional; retorna à unidade original.",
     pegadinha: "A pegadinha é 'é só raiz quadrada de 4,0' — o exercício pede a amostra, que exige o divisor n − 1, e 4,0 é a variância populacional.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-2 (M8.3.2 Variância, desvio-padrão e coeficiente de variação).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-21",
@@ -572,7 +572,7 @@ const moduleQuestions8 = [
     },
     regra: "Método tipo 7: posição = (n − 1) × p + 1; interpolação linear entre os vizinhos; usado por R e Excel QUARTILE.INC.",
     pegadinha: "A pegadinha é usar n em vez de n − 1 na posição; com n = 10, posição 3,25 (não 2,5) gera o Q1 = 22.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-3 (M8.3.3 Quartis, percentis e método de posicionamento).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-22",
@@ -601,7 +601,7 @@ const moduleQuestions8 = [
     },
     regra: "Assimetria à direita: a média tende a ficar acima da mediana porque é sensível a valores extremos; a mediana é mais robusta. A relação com a moda depende da forma da distribuição e pode não se aplicar quando não há moda única.",
     pegadinha: "A pegadinha é aceitar 'média abaixo de mediana' por questão de equação — o teste é o 50 na cauda da direita.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-4 (M8.3.4 Assimetria e média vs mediana).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-23",
@@ -630,7 +630,7 @@ const moduleQuestions8 = [
     },
     regra: "Erro de amostragem ≠ viés: o tamanho reduz flutuação aleatória, não erro sistemático; viés de seleção, não-resposta, sobrevivência e medição exigem análise do delineamento e do mecanismo de coleta.",
     pegadinha: "A pegadinha é '10 mil respostas resolvem tudo' — o tamanho reduz parte da flutuação aleatória, mas não garante representatividade nem elimina viés sistemático.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-6 (M8.3.6 Amostragem e viés).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-24",
@@ -659,7 +659,7 @@ const moduleQuestions8 = [
     },
     regra: "Escolha conforme uso, conectividade e sensibilidade: para estudo offline, prefira ferramenta gratuita com autoria local e dados fictícios; para dados sensíveis, exija controles de acesso, governança e licença/termos compatíveis.",
     pegadinha: "A pegadinha é 'licença paga é mais seguro' — o currículo exige o uso adequado, e dados fictícios tornam licença desnecessária.",
-    fonte: "Currículo M8 — modulo-8-unidade-4-topico-4 (M8.4.4 Comparação de ferramentas e cenários).",
+    fonte: "Tableau Help (Desktop/Web Authoring): https://help.tableau.com/current/pro/desktop/en-us/default.htm (verificado em 2026-10-26). Google Looker Studio Help: https://support.google.com/looker-studio/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-25",
@@ -688,7 +688,7 @@ const moduleQuestions8 = [
     },
     regra: "Comunicar incerteza: faixa, rótulo de estimativa, cenários e premissas; omitir a incerteza rompe a confiança e a legitimidade do relato.",
     pegadinha: "A pegadinha é 'a frase mais cientifica é a que mostra um único número' — a integridade gráfica pede faixa, não o único valor.",
-    fonte: "Currículo M8 — modulo-8-unidade-5-topico-3 (M8.5.3 Incerteza e integridade gráfica).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-26",
@@ -717,7 +717,7 @@ const moduleQuestions8 = [
     },
     regra: "Painel de gestão: poucos indicadores, exceções em destaque, metas, tendência curta, atualização declarada; relatórios analíticos contêm o detalhe.",
     pegadinha: "A pegadinha é 'visão completa' — o currículo a desconsidera como causa de paralisia.",
-    fonte: "Currículo M8 — modulo-8-unidade-5-topico-4 (M8.5.4 Painéis de gestão).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-27",
@@ -746,7 +746,7 @@ const moduleQuestions8 = [
     },
     regra: "Ordenação para ranquear: decrescente (ou crescente); a escala afeta a leitura percebida; a ordem alfabética só quando consulta alfabética é o uso.",
     pegadinha: "A pegadinha é 'os valores não mudaram, então a leitura não mudou' — o padrão visual muda, e isso muda a conclusão.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-3 (M8.2.3 Ordenação e legibilidade de barras).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-28",
@@ -775,7 +775,7 @@ const moduleQuestions8 = [
     },
     regra: "Hierarquia visual: uma cor forte para a série de interesse, fundo neutro para o contexto, no máximo três cores fortes, redundância de rótulo.",
     pegadinha: "A pegadinha é 'muitas cores = mais vivo' — o currículo reforça que muitas cores fortes nivelam tudo.",
-    fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Hierarquia visual e destaque).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-29",
@@ -804,7 +804,7 @@ const moduleQuestions8 = [
     },
     regra: "Quatro explicações para X e Y andarem juntos: X causa Y, Y causa X, confounder causa as duas, coincidência. Causalidade exige experimento ou controle de confundentes.",
     pegadinha: "A alternativa D 'invalida' é a pegadinha — o confounder não invalida, ele limita a interpretação para causalidade.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-5 (M8.3.5 Correlação e causalidade).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-30",
@@ -833,7 +833,7 @@ const moduleQuestions8 = [
     },
     regra: "Medida DAX é avaliada no contexto do visual e dos filtros; agregação correta = somar antes de dividir quando essa é a definição da métrica; média de médias pode distorcer o resultado.",
     pegadinha: "A alternativa A é a pegadinha: parece 'média de todos os registros', mas a definição correta usa Soma/Soma no contexto de filtro para calcular o preço médio ponderado pela quantidade.",
-    fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 DAX e contexto de filtro).",
+    fonte: "Microsoft Learn — DAX (Data Analysis Expressions): https://learn.microsoft.com/en-us/dax/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-31",
@@ -862,7 +862,7 @@ const moduleQuestions8 = [
     },
     regra: "Referência central (meta, acima/abaixo) → paleta divergente com neutro na referência; categorias sem ordem → categóricas; magnitude → sequencial.",
     pegadinha: "A alternativa D espanta quem confunde 'intensidade' com a regra do neutro na referência.",
-    fonte: "Currículo M8 — modulo-8-unidade-1-topico-2 (M8.1.2 Paleta divergente com referência central).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-32",
@@ -891,7 +891,7 @@ const moduleQuestions8 = [
     },
     regra: "Histograma de densidade: frequência está na área; altura = frequência ÷ largura; Σ(altura × largura) = n (absoluta) ou 1 (relativa).",
     pegadinha: "A alternativa A tenta a afirmação 'a altura é sempre a frequência' — o currículo só exige densidade com larguras diferentes.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-1 (M8.2.1 Histogramas com classes de larguras diferentes).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-33",
@@ -920,7 +920,7 @@ const moduleQuestions8 = [
     },
     regra: "Série temporal com lacuna: quebrar a linha e sinalizar o período sem dados; conectar ou interpolar sem base explícita fabrica continuidade e valores inexistentes.",
     pegadinha: "A pegadinha é 'a linha pode ser interpolada' — a continuidade do gráfico exige dados contínuos.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-2 (M8.2.2 Linhas, lacunas e continuidade).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-34",
@@ -949,7 +949,7 @@ const moduleQuestions8 = [
     },
     regra: "Convenção de Tukey usual: limites em Q1 − 1,5×IIQ e Q3 + 1,5×IIQ. Se o software permite outro multiplicador ou método de quartis, declare e harmonize os parâmetros antes de comparar gráficos.",
     pegadinha: "A alternativa A é uma explicação possível em outros cenários, mas o enunciado fixa o método de quartis; a diferença apresentada decorre do multiplicador do IIQ.",
-    fonte: "Currículo M8 — modulo-8-unidade-2-topico-5 (M8.2.6 Box plot e convenções de bigode).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-35",
@@ -978,7 +978,7 @@ const moduleQuestions8 = [
     },
     regra: "Média ponderada = Σ(valor × peso) ÷ Σ(pesos); a média simples ignora os pesos e pode superestimar.",
     pegadinha: "A pegadinha é 'a simples média é 7,0' — o exercício pede ponderada, que deve ser 6,33.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-1 (M8.3.1 Média ponderada).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-36",
@@ -1007,7 +1007,7 @@ const moduleQuestions8 = [
     },
     regra: "Outlier não é sinônimo de erro; inspecione (erro de digitação? unidade trocada? caso real legítimo?), e use média robusta (mediana, IIQ) ou transformação quando houver cauda.",
     pegadinha: "A pegadinha é 'a média de 30 é erro' — a cauda real (no primeiro exemplo do currículo, valor 50) é legítima e informativa.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-4 (M8.3.4 Outliers e tratamento de extremos).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-37",
@@ -1036,7 +1036,7 @@ const moduleQuestions8 = [
     },
     regra: "Causalidade em observacional: suporte de critérios clássicos (temporalidade, força, consistência, gradiente, plausibilidade), ainda assim limitado sem randomização — 'causa' reservar para evidência experimental ou argumento bem sustentado.",
     pegadinha: "A alternativa A 'nenhuma hipótese' é exagerada — o currículo reconhece que os critérios de apoio existem, mas o desenho limita.",
-    fonte: "Currículo M8 — modulo-8-unidade-3-topico-5 (M8.3.5 Critérios clássicos de causalidade).",
+    fonte: "NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-38",
@@ -1065,7 +1065,7 @@ const moduleQuestions8 = [
     },
     regra: "Contagem de linhas inflada pela duplicidade de chave → contagem distinta do protocolo; granularidade declarada é a solução.",
     pegadinha: "A alternativa A é a pegadinha: linhas = fatos duplicados; a contagem distinta é o evento real.",
-    fonte: "Currículo M8 — modulo-8-unidade-4-topico-3 (M8.4.3 Contagem distinta e granularidade).",
+    fonte: "Microsoft Learn — DAX (Data Analysis Expressions): https://learn.microsoft.com/en-us/dax/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-39",
@@ -1094,7 +1094,7 @@ const moduleQuestions8 = [
     },
     regra: "Preço médio por unidade = Soma(Faturamento) ÷ Soma(Quantidade); média simples dos preços unitários por linha pode distorcer quando as quantidades variam.",
     pegadinha: "A pegadinha é confundir a média simples dos preços unitários por linha com o quociente entre as somas; quando as quantidades variam, as duas medidas podem diferir.",
-    fonte: "Currículo M8 — modulo-8-unidade-4-topico-1 (M8.4.1 DAX: agregar antes de dividir).",
+    fonte: "Microsoft Learn — DAX (Data Analysis Expressions): https://learn.microsoft.com/en-us/dax/ (verificado em 2026-10-26).",
   },
   {
     id: "q-m8-40",
@@ -1123,6 +1123,6 @@ const moduleQuestions8 = [
     },
     regra: "Recomendação fundamentada: investigar outliers antes de removê-los; declarar se os dados são fictícios; reportar medidas robustas (mediana, IIQ) e não apenas média.",
     pegadinha: "A alternativa A 'tirar o outlier' é a pegadinha — remover sem investigação é mascaramento, não limpeza.",
-    fonte: "Currículo M8 — modulo-8-unidade-5-topico-4 (M8.5.4 Estudo de caso e integridade).",
+    fonte: "Microsoft Learn — Power BI: https://learn.microsoft.com/en-us/power-bi/ (verificado em 2026-10-26).",
   },
 ];

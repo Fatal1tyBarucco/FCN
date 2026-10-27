@@ -415,3 +415,25 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - Microsoft Support, *Filtrar dados em um intervalo ou tabela no Excel*: https://support.microsoft.com/pt-br/excel/get-started/filter-data-in-a-range-or-table-in-excel; *Aplicar validação de dados às células*: https://support.microsoft.com/pt-br/excel/get-started/apply-data-validation-to-cells; *Utilizar formatação condicional para realçar informações*: https://support.microsoft.com/pt-br/excel/use-conditional-formatting-to-highlight-information-in-excel. Aplicação: q-m1-43.
 - Microsoft Support, *Inserir um sumário automático no Word*: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents; *Usar quebras de seção para alterar layout ou formatação*: https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document; *Criar PDFs acessíveis*: https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs. Aplicação: q-m1-44.
 - O catálogo de references.js recebeu 12 IDs de referências oficiais específicas nesta rodada. A existência e a especificidade das fontes foram revisadas por consulta documental; não afirmar que todas as URLs do repositório passaram por teste HTTP automatizado.
+
+## Auditoria focal 2026-10-27 — fontes externas para questões M2/M3/M5/M7/M8
+
+- RFC 8200 (IPv6): https://www.rfc-editor.org/info/rfc8200/ — M2.
+- RFC 1918 (endereços privados): https://www.rfc-editor.org/info/rfc1918/ — M2.
+- RFC 4632 (CIDR/VLSM): https://www.rfc-editor.org/info/rfc4632/ — M2.
+- RFC 5952 (representação textual IPv6): https://www.rfc-editor.org/info/rfc5952/ — M2.
+- RFC 1122 (requisitos de hosts): https://www.rfc-editor.org/info/rfc1122/ — M2.
+- RFC 4251 (arquitetura SSH): https://www.rfc-editor.org/info/rfc4251/ — M2.
+- RFC 950 (sub-redes): https://www.rfc-editor.org/info/rfc950/ — M2.
+- RFC 1855 (netiqueta): https://www.rfc-editor.org/info/rfc1855/ — M3.
+- RFC 7208 (SPF): https://www.rfc-editor.org/info/rfc7208/ — M3.
+- RFC 6376 (DKIM): https://www.rfc-editor.org/info/rfc6376/ — M3.
+- RFC 7489 (DMARC): https://www.rfc-editor.org/info/rfc7489/ — M3.
+- NIST SP 1500-18r2 (Research Data Framework): https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html — M7.
+- NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/ — M7/M8.
+- NIST AI RMF 1.0: https://www.nist.gov/itl/ai-risk-management-framework — M5.
+- OWASP LLM Prompt Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html — M5.
+- Tableau Help: https://help.tableau.com/current/pro/desktop/en-us/default.htm — M8.
+- Looker Studio Help: https://support.google.com/looker-studio/ — M8.
+
+Pendência: q-m3-45 (zoombombing/intrusão em reuniões) mantém fonte curricular — não foi localizada fonte primária verificada nos domínios permitidos (Zoom docs não verificadas). Registrar como pendente.

@@ -1018,7 +1018,7 @@ const moduleQuestions5 = [
     },
     regra: "Afirmações institucionais devem ser verificáveis contra documentos vigentes; o modelo não é fonte normativa.",
     pegadinha: "Um prompt mais enfático não substitui recuperação de fonte, validação e governança.",
-    fonte: "Currículo M5 — modulo-5-unidade-3-topico-4 (casos aplicados de IA generativa e governança)."
+    fonte: "NIST — AI Risk Management Framework (AI RMF 1.0): https://www.nist.gov/itl/ai-risk-management-framework (verificado em 2026-10-26). OWASP — LLM Prompt Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html (verificado em 2026-10-26)."
   },
   {
     id: "q-m5-42", modulo: 5, formato: "mc", estilo: "vunesp", origem: "autoral", nivel: "avancado",
@@ -1043,7 +1043,7 @@ const moduleQuestions5 = [
     },
     regra: "Prompt é parte do controle; fonte versionada, hierarquia documental, evidência recuperada, tratamento de lacunas, minimização de dados e avaliação continuam necessários.",
     pegadinha: "Dizer 'se não souber, diga que não sabe' é insuficiente sem fonte, evidência e encaminhamento.",
-    fonte: "Currículo M5 — modulo-5-unidade-4-topico-4 (casos aplicados de engenharia de prompts)."
+    fonte: "NIST — AI Risk Management Framework (AI RMF 1.0): https://www.nist.gov/itl/ai-risk-management-framework (verificado em 2026-10-26). OWASP — LLM Prompt Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html (verificado em 2026-10-26)."
   },
 
 ];

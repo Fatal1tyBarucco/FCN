@@ -45,7 +45,7 @@ const moduleQuestions7 = [
     },
     regra: "DIKW: dado (registro bruto) → informação (dado contextualizado) → conhecimento (informação + experiência/julgamento) → sabedoria (discernimento para decidir).",
     pegadinha: "O formato numérico engana: '238' só vira informação quando alguém atribui unidade, contexto e interpretação.",
-    fonte: "Currículo M7 — m7-u1-t1-s1 (Dado, informação, conhecimento e sabedoria)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-02", modulo: 7, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -71,7 +71,7 @@ const moduleQuestions7 = [
     },
     regra: "Dado = registro bruto; informação = dado com contexto e interpretação. O suporte (planilha, banco) não altera o nível.",
     pegadinha: "Dado estruturado não é informação: a estrutura é forma, e o DIKW classifica grau de elaboração.",
-    fonte: "Currículo M7 — m7-u1-t1-s1 (Dado, informação, conhecimento e sabedoria)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-03", modulo: 7, formato: "mc", estilo: "vunesp", origem: "autoral",
@@ -97,7 +97,7 @@ const moduleQuestions7 = [
     },
     regra: "DIKW é modelo didático, não lei de transformação: 'mais dados' não gera 'mais sabedoria' — cada passagem exige trabalho explícito.",
     pegadinha: "A alternativa 'correta, desde que estruturados/desde que haja catálogo' é a armadilha condicional: nenhum instrumento elimina a necessidade de interpretação e julgamento.",
-    fonte: "Currículo M7 — m7-u1-t1-s2 (Limitações conceituais do modelo DIKW)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-04", modulo: 7, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -123,7 +123,7 @@ const moduleQuestions7 = [
     },
     regra: "Conhecimento = informação + experiência + julgamento, apta a orientar ação.",
     pegadinha: "Conhecimento não é 'informação organizada' apenas — a definição do curso exige experiência e julgamento.",
-    fonte: "Currículo M7 — m7-u1-t1-s1 (Dado, informação, conhecimento e sabedoria)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-05", modulo: 7, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -149,7 +149,7 @@ const moduleQuestions7 = [
     },
     regra: "Sabedoria = discernimento: aplicar conhecimento considerando consequências e valores.",
     pegadinha: "Sabedoria não é 'acúmulo de conhecimento' nem 'decisão automática' — exige julgamento.",
-    fonte: "Currículo M7 — m7-u1-t1-s1 (Dado, informação, conhecimento e sabedoria)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u1-t2-s1 — Estruturados, semiestruturados e não estruturados ---- */
@@ -177,7 +177,7 @@ const moduleQuestions7 = [
     },
     regra: "Estruturado (schema rígido) / semiestruturado (marcadores, sem schema único) / não estruturado (sem campos computáveis).",
     pegadinha: "JSON e XML parecem 'estruturados' por terem formato reconhecível, mas são semiestruturados: o schema não é único nem imposto.",
-    fonte: "Currículo M7 — m7-u1-t2-s1 (Dados estruturados, semiestruturados e não estruturados)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u1-t2-s2 — Qualitativos e quantitativos ---- */
@@ -205,7 +205,7 @@ const moduleQuestions7 = [
     },
     regra: "Número não é sinônimo de dado quantitativo: o critério é a validade da operação aritmética sobre o valor.",
     pegadinha: "Códigos numéricos (matrícula, CEP, telefone, CPF) são qualitativos nominais — qualquer média sobre eles é erro de interpretação.",
-    fonte: "Currículo M7 — m7-u1-t2-s2 (Dados qualitativos e quantitativos)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u1-t2-s3 — Níveis de mensuração ---- */
@@ -233,7 +233,7 @@ const moduleQuestions7 = [
     },
     regra: "Ordinal: ordem sem distância comparável — valem contagem, moda e mediana; média só com suposição declarada.",
     pegadinha: "Atribuir 1/2/3 a ruim/regular/bom não transforma a escala em intervalar: a numeração é só codificação.",
-    fonte: "Currículo M7 — m7-u1-t2-s3 (Escalas nominal, ordinal, discreta e contínua)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-24", modulo: 7, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -259,7 +259,7 @@ const moduleQuestions7 = [
     },
     regra: "Nominal: categorias sem ordem — valem contagem, frequência e moda; nada de média.",
     pegadinha: "Dígitos não criam escala: o que define o nível é o significado da diferença entre valores.",
-    fonte: "Currículo M7 — m7-u1-t2-s3 (Escalas nominal, ordinal, discreta e contínua)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u1-t3-s1 — Metadados ---- */
@@ -287,7 +287,7 @@ const moduleQuestions7 = [
     },
     regra: "Metadado = dado sobre dado. Técnico (como está armazenado), de negócio (o que significa e a quem pertence), de processo (como chegou e quem mexeu).",
     pegadinha: "Nem todo metadado é técnico: unidade, regra de cálculo e dono são metadados de NEGÓCIO, e é deles que depende a leitura correta do número.",
-    fonte: "Currículo M7 — m7-u1-t3-s1 (Metadados: o que são e para que servem)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u1-t3-s2 — Linhagem e catálogo ---- */
@@ -315,7 +315,7 @@ const moduleQuestions7 = [
     },
     regra: "Linhagem = histórico do fluxo (como chegou); catálogo = índice do acervo (o que existe e o que significa).",
     pegadinha: "'Fonte: sistema X' registrado de forma isolada não é linhagem completa — é declaração parcial de origem.",
-    fonte: "Currículo M7 — m7-u1-t3-s2 (Linhagem (lineage) e catálogo de dados)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u1-t3-s3 — Ciclo de vida ---- */
@@ -343,7 +343,7 @@ const moduleQuestions7 = [
     },
     regra: "Retenção tem limite mínimo (finalidade/obrigação) e máximo (nada de guarda indefinida); descarte alcança cópias e backups.",
     pegadinha: "'Por precaução, guardar tudo para sempre' parece prudente, mas é justamente o que o ciclo de vida condena.",
-    fonte: "Currículo M7 — m7-u1-t3-s3 (Ciclo de vida dos dados)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ======== 7.2 Qualidade, Integração e Transformação de Dados ======== */
@@ -373,7 +373,7 @@ const moduleQuestions7 = [
     },
     regra: "Validade = aderência à regra, formato e domínio (verificação interna). Acurácia = correspondência com a realidade (referência externa).",
     pegadinha: "Valor inválido não é necessariamente valor falso: as dimensões são independentes e se medem por caminhos diferentes.",
-    fonte: "Currículo M7 — m7-u2-t1-s1 (Acurácia, completude e validade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-12", modulo: 7, formato: "mc", estilo: "vunesp", origem: "autoral",
@@ -399,7 +399,7 @@ const moduleQuestions7 = [
     },
     regra: "Acurácia = valor corresponde à realidade (referência externa). É a dimensão mais cara de medir.",
     pegadinha: "Base 100% preenchida e no formato correto pode ter acurácia baixa — as três dimensões não se implicam.",
-    fonte: "Currículo M7 — m7-u2-t1-s1 (Acurácia, completude e validade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-13", modulo: 7, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -425,7 +425,7 @@ const moduleQuestions7 = [
     },
     regra: "Completude = fração de registros com o campo preenchido, relativa à regra de obrigatoriedade. Não implica acurácia nem validade.",
     pegadinha: "A alternativa que 'aproveita' o número certo para concluir qualidade global é a mais perigosa: cada dimensão tem sua própria métrica e denominador.",
-    fonte: "Currículo M7 — m7-u2-t1-s1 (Acurácia, completude e validade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-15", modulo: 7, formato: "mc", estilo: "vunesp", origem: "autoral",
@@ -451,7 +451,7 @@ const moduleQuestions7 = [
     },
     regra: "Validade: valor obedece a formato, domínio e intervalo permitido — checagem interna.",
     pegadinha: "Confundir 'data impossível' (validade) com 'data errada' (acurácia) é o erro clássico da trinca.",
-    fonte: "Currículo M7 — m7-u2-t1-s1 (Acurácia, completude e validade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-18", modulo: 7, formato: "mc", estilo: "vunesp", origem: "autoral",
@@ -477,7 +477,7 @@ const moduleQuestions7 = [
     },
     regra: "Validade confere-se pela REGRA; acurácia, pela REALIDADE; completude, pela PRESENÇA.",
     pegadinha: "CPF válido não é CPF correto: dígito verificador só atesta consistência formal do número.",
-    fonte: "Currículo M7 — m7-u2-t1-s1 (Acurácia, completude e validade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t1-s2 — Consistência, unicidade e tempestividade ---- */
@@ -505,7 +505,7 @@ const moduleQuestions7 = [
     },
     regra: "Consistência = mesmo fato representado de forma compatível, dentro do registro e entre sistemas.",
     pegadinha: "Valores divergentes para o mesmo fato indicam inconsistência entre fontes; determinar qual valor é acurado exige referência externa.",
-    fonte: "Currículo M7 — m7-u2-t1-s2 (Consistência, unicidade e tempestividade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-16", modulo: 7, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -531,7 +531,7 @@ const moduleQuestions7 = [
     },
     regra: "Unicidade = cada entidade real uma única vez; métrica: taxa de duplicatas.",
     pegadinha: "Decorar a métrica sem a dimensão (ou o contrário) faz errar pares que parecem plausíveis isoladamente.",
-    fonte: "Currículo M7 — m7-u2-t1-s2 (Consistência, unicidade e tempestividade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-17", modulo: 7, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -557,7 +557,7 @@ const moduleQuestions7 = [
     },
     regra: "Tempestividade = dado disponível no momento necessário, com latência aceitável para a decisão.",
     pegadinha: "Tempestividade não é 'velocidade de processamento': é adequação ao momento do uso.",
-    fonte: "Currículo M7 — m7-u2-t1-s2 (Consistência, unicidade e tempestividade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-20", modulo: 7, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -574,7 +574,7 @@ const moduleQuestions7 = [
     },
     regra: "Dimensões de qualidade e requisitos de histórico podem entrar em conflito: toda intervenção deve declarar o ganho, a perda histórica e a métrica usada.",
     pegadinha: "A primeira metade do item é verdadeira ('melhora a unicidade') — o erro está na segunda ('não afeta outras dimensões'). Em C/E, basta uma proposição falsa para o item ser falso.",
-    fonte: "Currículo M7 — m7-u2-t1-s2 (Consistência, unicidade e tempestividade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t2-s1 — Estágios do pipeline ---- */
@@ -602,7 +602,7 @@ const moduleQuestions7 = [
     },
     regra: "Integração reconcilia fontes: padronizar chaves, alinhar granularidade e definir qual fonte prevalece. Soma dos filhos deve igualar o total.",
     pegadinha: "'O painel está errado, então conserta no painel' é a armadilha: o consumo mostra o efeito, não a causa.",
-    fonte: "Currículo M7 — m7-u2-t2-s1 (Estágios do pipeline de dados)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t2-s2 — ETL e ELT ---- */
@@ -630,7 +630,7 @@ const moduleQuestions7 = [
     },
     regra: "ETL: extrair → transformar → carregar. ELT: extrair → carregar → transformar.",
     pegadinha: "A pegadinha é acreditar que ELT não transforma — ele transforma depois, dentro do destino.",
-    fonte: "Currículo M7 — m7-u2-t2-s2 (ETL e ELT: diferenças e quando aplicar cada um)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-33", modulo: 7, formato: "mc", estilo: "vunesp", origem: "autoral",
@@ -656,7 +656,7 @@ const moduleQuestions7 = [
     },
     regra: "ELT exige disciplina extra de governança porque o bruto fica guardado antes do tratamento; com dado sensível, ETL protege o destino.",
     pegadinha: "Argumento de 'modernidade' e de 'capacidade do destino' são distratores: o critério decisivo aqui é a sensibilidade.",
-    fonte: "Currículo M7 — m7-u2-t2-s2 (ETL e ELT: diferenças e quando aplicar cada um)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t3-s1 — Valores ausentes ---- */
@@ -684,7 +684,7 @@ const moduleQuestions7 = [
     },
     regra: "Antes de imputar, classifique o mecanismo de ausência (MCAR, MAR ou MNAR). A imputação depende das hipóteses e do modelo; quando a ausência depende do próprio valor não observado, imputação simples não elimina o viés.",
     pegadinha: "Imputação parece 'cuidado com os dados', mas em ausência seletiva ela fabrica resultado.",
-    fonte: "Currículo M7 — m7-u2-t3-s1 (Valores ausentes e estratégias de tratamento)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-34", modulo: 7, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -710,7 +710,7 @@ const moduleQuestions7 = [
     },
     regra: "Ausência inclui nulo explícito, string vazia, marcador textual e zero substituto. Completude = registros com valor efetivamente medido ÷ total.",
     pegadinha: "Contar só os nulos explícitos é o erro mais comum: zero gravado por rotina parece dado e infla artificialmente a completude.",
-    fonte: "Currículo M7 — m7-u2-t3-s1 (Valores ausentes e estratégias de tratamento)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t3-s2 — Duplicidades, inconsistências e erros de tipo ---- */
@@ -729,7 +729,7 @@ const moduleQuestions7 = [
     },
     regra: "Coluna numérica importada como texto ordena lexicograficamente; corrigir exige conversão explícita com registro das falhas.",
     pegadinha: "Quem pensa em 'ajustar a visualização' não resolve: o problema está no tipo, e a correção precisa de conversão rastreável.",
-    fonte: "Currículo M7 — m7-u2-t3-s2 (Duplicidades, inconsistências e erros de tipo)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-35", modulo: 7, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -755,7 +755,7 @@ const moduleQuestions7 = [
     },
     regra: "Taxa de duplicidade = (linhas − entidades distintas) ÷ linhas. Duplicatas inflam contagens e somas.",
     pegadinha: "Trocar o denominador (dividir por 940) ou errar a casa decimal são os dois desvios mais frequentes nesse cálculo.",
-    fonte: "Currículo M7 — m7-u2-t3-s2 (Duplicidades, inconsistências e erros de tipo)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t3-s3 — Normalização estatística ---- */
@@ -783,7 +783,7 @@ const moduleQuestions7 = [
     },
     regra: "z = (x − média) ÷ desvio padrão: mede quantos desvios-padrão o valor está acima (ou abaixo) da média.",
     pegadinha: "A alternativa com os dois valores certos e conclusão invertida existe de propósito: em prova, o cálculo sozinho não garante o ponto.",
-    fonte: "Currículo M7 — m7-u2-t3-s3 (Normalização ESTATÍSTICA: z-score e min-max)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-36", modulo: 7, formato: "mc", estilo: "vunesp", origem: "autoral",
@@ -809,7 +809,7 @@ const moduleQuestions7 = [
     },
     regra: "min-max: x' = (x − min) ÷ (max − min); min → 0, max → 1, e valores fora da faixa geram resultados fora de [0; 1].",
     pegadinha: "Achar que min-max 'garante' o intervalo [0;1] para qualquer dado futuro é a armadilha: a garantia vale só para a amostra que fixou os parâmetros.",
-    fonte: "Currículo M7 — m7-u2-t3-s3 (Normalização ESTATÍSTICA: z-score e min-max)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t3-s4 — Normalização de bancos de dados ---- */
@@ -837,7 +837,7 @@ const moduleQuestions7 = [
     },
     regra: "1FN: valores atômicos. 2FN: sem dependência parcial da chave composta. 3FN: sem dependência transitória.",
     pegadinha: "Separar em duas colunas 'telefone1' e 'telefone2' não resolve de verdade: apenas desloca a repetição para o esquema.",
-    fonte: "Currículo M7 — m7-u2-t3-s4 (Normalização de BANCOS DE DADOS: formas normais)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-37", modulo: 7, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -863,7 +863,7 @@ const moduleQuestions7 = [
     },
     regra: "Normalização estatística = escala dos valores (z-score, min-max). Normalização de BD = organização das tabelas (1FN/2FN/3FN).",
     pegadinha: "A pergunta da prova revela o sentido: se aparecer 'z-score/min-max', é estatística; se aparecer 'redundância/dependência parcial', é banco de dados.",
-    fonte: "Currículo M7 — m7-u2-t3-s4 (Normalização de BANCOS DE DADOS: formas normais)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t4-s1 — Agregação e agrupamento ---- */
@@ -891,7 +891,7 @@ const moduleQuestions7 = [
     },
     regra: "Média global = Σ(nᵢ × médiaᵢ) ÷ Σnᵢ. Média simples das médias só vale com grupos de igual tamanho.",
     pegadinha: "Mediana e percentis não são agregáveis por média: a mediana de medianas não é a mediana do todo.",
-    fonte: "Currículo M7 — m7-u2-t4-s1 (Agregação e agrupamento)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u2-t4-s2 — Deduplicação ---- */
@@ -919,7 +919,7 @@ const moduleQuestions7 = [
     },
     regra: "Falso positivo = fundir quem não devia; falso negativo = não fundir quem devia. Nome sem normalização produz falso negativo.",
     pegadinha: "O sentido dos dois erros é trocado com frequência em prova: 'positivo' é a fusão, 'negativo' é a duplicata que sobra.",
-    fonte: "Currículo M7 — m7-u2-t4-s2 (Deduplicação: chaves de identidade, fusão e riscos)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-23", modulo: 7, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -936,7 +936,7 @@ const moduleQuestions7 = [
     },
     regra: "Duplicidade de linhas infla contagens e somas; unicidade se mede por taxa de duplicatas.",
     pegadinha: "A palavra 'imediato' no item é deliberada: o efeito sobre indicadores é direto, sem precisar de outra etapa.",
-    fonte: "Currículo M7 — m7-u2-t1-s2 (Consistência, unicidade e tempestividade)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ====== 7.3 Governança, Anonimização e Proteção de Dados ====== */
@@ -957,7 +957,7 @@ const moduleQuestions7 = [
     },
     regra: "Anonimização: a identificação não é razoavelmente possível com os meios disponíveis no contexto. Pseudonimização: há chave de reatribuição — o dado continua pessoal.",
     pegadinha: "O cofre protege a chave, mas não a elimina: proteção de acesso não transforma pseudonimização em anonimização; a avaliação de anonimização depende dos meios razoáveis de identificação disponíveis no contexto.",
-    fonte: "Currículo M7 — m7-u3-t1-s1 (Anonimização x pseudonimização)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-39", modulo: 7, formato: "ce", estilo: "cespe", origem: "autoral",
@@ -974,7 +974,7 @@ const moduleQuestions7 = [
     },
     regra: "Quasi-identificadores combinados reidentificam. Mitigações: agregar, suprimir atributos raros, garantir tamanho mínimo de grupo e testar reidentificação antes de publicar.",
     pegadinha: "'Risco nulo' é expressão que praticamente denuncia o item falso: anonimização é gestão de risco, não garantia.",
-    fonte: "Currículo M7 — m7-u3-t1-s2 (Riscos de reidentificação)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u3-t2-s1 — Governança de dados ---- */
@@ -993,7 +993,7 @@ const moduleQuestions7 = [
     },
     regra: "Dono do dado responde pelo conteúdo, regras e qualidade; steward executa e mantém metadados, dicionário e catálogo.",
     pegadinha: "Governança não é sinônimo de catálogo: catálogo é instrumento; governança é o sistema de decisões que o mantém útil.",
-    fonte: "Currículo M7 — m7-u3-t2-s1 (Governança de dados: papéis, políticas e padrões)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   { id: "q-m7-40", modulo: 7, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -1019,7 +1019,7 @@ const moduleQuestions7 = [
     },
     regra: "Acesso: menor privilégio, com expiração e revisão periódica. Minimização: usar e entregar apenas o necessário à finalidade declarada.",
     pegadinha: "Minimização não é 'apagar tudo o mais rápido possível': é proporcionalidade entre finalidade, necessidade e prazo — inclusive para preservar evidência de auditoria.",
-    fonte: "Currículo M7 — m7-u3-t2-s2 (Controle de acesso e minimização de dados)."
+    fonte: "NIST SP 1500-18 (Research Data Framework, RDaF) — qualidade, metadados e governança de dados: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html (verificado em 2026-10-26)."
   },
 
   /* ---- m7-u3-t2-s3 — LGPD ---- */
@@ -1038,7 +1038,7 @@ const moduleQuestions7 = [
     },
     regra: "LGPD: controlador decide sobre o tratamento; operador trata em nome do controlador; ambos respondem por medidas de segurança (art. 46).",
     pegadinha: "Questão de papéis é resolvida pela pergunta 'quem decide?': decidir é do controlador, sempre.",
-    fonte: "Currículo M7 — m7-u3-t2-s3 (Proteção de dados e a LGPD); Lei nº 13.709/2018, arts. 5º e 46 (verificação de 2026-10-20 em referencias/referencias-verificadas.md)."
+    fonte: "LGPD — Lei nº 13.709/2018 (Planalto): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm (verificado em 2026-10-26)."
   }
 
 ];

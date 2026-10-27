@@ -3383,7 +3383,7 @@ id: "q-m1-09",
     },
     regra: "As sete camadas são Física, Enlace, Rede, Transporte, Sessão, Apresentação e Aplicação.",
     pegadinha: "Não confundir endereço IP (Rede) com endereço MAC/quadros (Enlace).",
-    fonte: "Currículo M2, unidade 2, tópico 1 — modelo OSI; padrões de rede."
+    fonte: "RFC 1122 — Requirements for Internet Hosts — Communication Layers: https://www.rfc-editor.org/info/rfc1122/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-42",
@@ -3414,7 +3414,7 @@ id: "q-m1-09",
     },
     regra: "Modelos diferentes agrupam funções de modo diferente; não há correspondência um-para-um perfeita entre todas as camadas OSI e TCP/IP.",
     pegadinha: "Não misturar nomes de camadas OSI com a lista de quatro camadas TCP/IP.",
-    fonte: "Currículo M2, unidade 2, tópico 2 — modelo TCP/IP e protocolos associados."
+    fonte: "RFC 1122 — Requirements for Internet Hosts — Communication Layers: https://www.rfc-editor.org/info/rfc1122/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-43",
@@ -3445,7 +3445,7 @@ id: "q-m1-09",
     },
     regra: "DNS resolve nomes; TCP estabelece transporte; TLS protege a sessão; HTTP define requisições e respostas.",
     pegadinha: "A sequência depende da versão: HTTP/3 usa QUIC, não TCP.",
-    fonte: "Currículo M2, unidade 2, tópico 3; RFCs HTTP/TLS cadastradas em references.js."
+    fonte: "RFC 9110 — HTTP Semantics: https://www.rfc-editor.org/info/rfc9110/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-44",
@@ -3476,7 +3476,7 @@ id: "q-m1-09",
     },
     regra: "IP cuida do endereçamento/encaminhamento; TCP e UDP transportam dados de aplicações.",
     pegadinha: "Não afirmar que UDP é sempre melhor ou mais rápido; a escolha depende da aplicação.",
-    fonte: "Currículo M2, unidade 3, tópico 1; RFC 791 e RFC 793."
+    fonte: "RFC 791 — Internet Protocol (IPv4): https://www.rfc-editor.org/info/rfc791/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-45",
@@ -3507,7 +3507,7 @@ id: "q-m1-09",
     },
     regra: "Obter IP por DHCP é diferente de resolver o nome do servidor por DNS.",
     pegadinha: "Não confundir configuração de rede com resolução de nomes.",
-    fonte: "Currículo M2, unidade 3, tópico 2; referências DNS/DHCP."
+    fonte: "RFC 9110 — HTTP Semantics: https://www.rfc-editor.org/info/rfc9110/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-46",
@@ -3538,7 +3538,7 @@ id: "q-m1-09",
     },
     regra: "SFTP usa SSH; FTPS usa TLS para proteger FTP.",
     pegadinha: "SFTP não é apenas outro nome para FTPS.",
-    fonte: "Currículo M2, unidade 3, tópico 3; referências SSH/FTP."
+    fonte: "RFC 959 — File Transfer Protocol (FTP): https://www.rfc-editor.org/info/rfc959/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-47",
@@ -3569,7 +3569,7 @@ id: "q-m1-09",
     },
     regra: "NAT/PAT traduzem endereços/portas; proxy intermedeia solicitações; VPN cria conectividade lógica protegida.",
     pegadinha: "NAT não é sinônimo de firewall nem garante segurança por si só.",
-    fonte: "Currículo M2, unidade 3, tópico 4; referências de redes."
+    fonte: "RFC 3022 — Traditional IP Network Address Translator (NAT): https://www.rfc-editor.org/info/rfc3022/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-48",
@@ -3600,7 +3600,7 @@ id: "q-m1-09",
     },
     regra: "Blocos privados IPv4: 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16.",
     pegadinha: "Não classificar o endereço apenas pelo primeiro octeto.",
-    fonte: "Currículo M2, unidade 4, tópico 1; RFC 1918."
+    fonte: "RFC 1918 — Address Allocation for Private Internets: https://www.rfc-editor.org/info/rfc1918/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-49",
@@ -3631,7 +3631,7 @@ id: "q-m1-09",
     },
     regra: "VLSM melhora a alocação; sumarização reduz a quantidade de rotas.",
     pegadinha: "Não se pode sumarizar arbitrariamente redes não contíguas ou desalinhadas.",
-    fonte: "Currículo M2, unidade 4, tópico 3 — VLSM e sumarização."
+    fonte: "RFC 4632 — Classless Inter-domain Routing (CIDR): https://www.rfc-editor.org/info/rfc4632/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-50",
@@ -3662,7 +3662,7 @@ id: "q-m1-09",
     },
     regra: "IPv6 usa oito hextetos; :: comprime uma sequência de hextetos zero.",
     pegadinha: "Não usar :: duas vezes no mesmo endereço.",
-    fonte: "Currículo M2, unidade 4, tópico 4; RFC 4291 e RFC 5952."
+    fonte: "RFC 5952 — A Recommendation for IPv6 Address Text Representation: https://www.rfc-editor.org/info/rfc5952/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-51",
@@ -3693,7 +3693,7 @@ id: "q-m1-09",
     },
     regra: "Usar ferramentas de diagnóstico conforme o sintoma e interpretar respostas com cautela.",
     pegadinha: "A ausência de resposta de um salto não prova que o roteador esteja fora de serviço.",
-    fonte: "Currículo M2, unidade 5, tópico 1 — ping e traceroute/tracert."
+    fonte: "RFC 792 — Internet Control Message Protocol (ICMP): https://www.rfc-editor.org/info/rfc792/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-52",
@@ -3724,7 +3724,7 @@ id: "q-m1-09",
     },
     regra: "Escolher a ferramenta conforme o sintoma: configuração, DNS, alcance ou rota.",
     pegadinha: "Não usar nslookup para verificar máscara ou gateway local.",
-    fonte: "Currículo M2, unidade 5, tópico 2 — comandos de configuração e estado."
+    fonte: "RFC 1122 — Requirements for Internet Hosts — Communication Layers: https://www.rfc-editor.org/info/rfc1122/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-53",
@@ -3755,7 +3755,7 @@ id: "q-m1-09",
     },
     regra: "Usar nslookup/dig para testar resolução e consultar registros DNS.",
     pegadinha: "Falha de resolução não prova que o servidor esteja indisponível pelo IP.",
-    fonte: "Currículo M2, unidade 5, tópico 3 — nslookup e dig."
+    fonte: "RFC 1034 — Domain Names: Concepts and Facilities: https://www.rfc-editor.org/info/rfc1034/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m2-54",
@@ -3786,7 +3786,7 @@ id: "q-m1-09",
     },
     regra: "Diagnosticar por camadas e comparar sintomas antes de concluir a causa.",
     pegadinha: "O primeiro sintoma orienta a hipótese, mas não é prova definitiva.",
-    fonte: "Currículo M2, unidade 5, tópico 4 — diagnóstico por camadas e cenários simulados."
+    fonte: "RFC 1122 — Requirements for Internet Hosts — Communication Layers: https://www.rfc-editor.org/info/rfc1122/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m3-41",
@@ -3817,7 +3817,7 @@ id: "q-m1-09",
     },
     regra: "Comunicação digital profissional deve ser respeitosa, inclusiva, pertinente e rastreável.",
     pegadinha: "Netiqueta não é apenas polidez; também envolve privacidade e escolha do canal.",
-    fonte: "Currículo M3, unidade 3, tópico 1 — etiqueta digital em ambientes profissionais."
+    fonte: "RFC 1855 — Netiquette Guidelines: https://www.rfc-editor.org/info/rfc1855/ (verificado em 2026-10-26)."
   },
   {
     id: "q-m3-42",
@@ -3879,7 +3879,7 @@ id: "q-m1-09",
     },
     regra: "Combinar finalidade, canal, clareza, rastreabilidade e proteção de dados.",
     pegadinha: "Rastreabilidade não significa copiar todos os envolvidos nem compartilhar dados em excesso.",
-    fonte: "Currículo M3, unidade 3, tópico 3 — comunicação profissional e institucional."
+    fonte: "LGPD — Lei nº 13.709/2018 (Planalto): https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm (verificado em 2026-10-26)."
   },
   {
     id: "q-m3-44",
@@ -3910,7 +3910,7 @@ id: "q-m1-09",
     },
     regra: "Compartilhamento seguro aplica minimização, revisão e controle de permissões.",
     pegadinha: "Notificações e janelas de fundo também podem revelar informações.",
-    fonte: "Currículo M3, unidade 4, tópico 2 — compartilhamento de tela: riscos e controle."
+    fonte: "Microsoft Learn — Microsoft 365 documentation: https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide (verificado em 2026-10-26)."
   },
   {
     id: "q-m3-45",
@@ -3972,7 +3972,7 @@ id: "q-m1-09",
     },
     regra: "Aplicar minimização e controle de acesso também a metadados de calendários.",
     pegadinha: "O título do evento pode expor informação pessoal mesmo que o corpo esteja restrito.",
-    fonte: "Currículo M3, unidade 5, tópico 2; LGPD, art. 6º, III."
+    fonte: "Microsoft Learn — Microsoft 365 documentation: https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide (verificado em 2026-10-26)."
   },
   {
     id: "q-m3-47",
@@ -4003,7 +4003,7 @@ id: "q-m1-09",
     },
     regra: "Em suspeita de phishing, interromper interação, verificar independentemente e reportar.",
     pegadinha: "SPF, DKIM e DMARC não garantem que toda mensagem seja legítima ou segura.",
-    fonte: "Currículo M3, unidade 5, tópico 3 — phishing direcionado e autenticação de e-mail."
+    fonte: "RFC 7208 — Sender Policy Framework (SPF) for Authorizing Use of Domains in Email: https://www.rfc-editor.org/info/rfc7208/ (verificado em 2026-10-26)."
   },
 
 
