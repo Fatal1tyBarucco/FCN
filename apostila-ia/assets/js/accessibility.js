@@ -79,12 +79,12 @@
     if (document.querySelector('.a11y-skip-link')) return;
     var link = document.createElement('a');
     link.className = 'a11y-skip-link';
-    link.href = '#curriculum';
-    link.textContent = 'Pular para o currículo';
+    link.href = '#main-content';
+    link.textContent = 'Pular para o conteúdo principal';
     link.addEventListener('click', function (e) {
       // deixar o hash funcionar; garantir foco
       setTimeout(function () {
-        var target = document.getElementById('curriculum');
+        var target = document.getElementById('main-content');
         if (target) {
           try { target.focus(); } catch (err) {}
           if (document.activeElement !== target) {
@@ -150,7 +150,6 @@
     gerenciarFocoNavegacao();
     // marca container invisível
     if (el) {
-      el.setAttribute('aria-hidden', 'true');
       el.style.position = 'absolute';
       el.style.width = '1px';
       el.style.height = '1px';

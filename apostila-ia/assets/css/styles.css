@@ -172,8 +172,8 @@ button { display: inline-flex; align-items: center; justify-content: center; }
   line-height: 1;
   padding: 0.1rem 0.35rem;
   margin-right: 0.35rem;
-  min-height: 28px;
-  min-width: 28px;
+  min-height: 44px;
+  min-width: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -238,11 +238,27 @@ button.tree-toggle[aria-expanded="false"]::before {
   body { font-size: 1.05rem; }
 }
 
-/* Evitar overflow horizontal global */
-html, body { overflow-x: hidden; }
+/* Evitar overflow horizontal global que corte foco: usar quebra de palavra e rolagem local */
+html, body { max-width: 100%; overflow-wrap: break-word; }
 img, svg, table, pre { max-width: 100%; }
 
-/* Garantia: outline não é removido globalmente em nenhum elemento. */
+/* Skip link para conteúdo principal */
+.skip-link, .a11y-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: #0b1d36;
+  color: #fff;
+  padding: .5rem .8rem;
+  border-radius: 0 0 8px 0;
+  font-weight: 700;
+  text-decoration: none;
+}
+.skip-link:focus, .a11y-skip-link:focus {
+  left: 0;
+  outline: 3px solid #fdd663;
+}
 /* Vídeos complementares (Seção 12.2 do Escrita.txt) — embeds responsivos */
 .videos-complementares {
   margin-top: 1rem;
