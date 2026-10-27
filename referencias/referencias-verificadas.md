@@ -393,3 +393,9 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - Microsoft Learn, *Learn about eDiscovery features and components*: https://learn.microsoft.com/en-us/purview/edisc-features-components. Especifica os requisitos de licenciamento Enterprise E3/E5 para os usuários e administradores que trabalham com eDiscovery, além de permissões e limitações. Aplicação: q-m1-07.
 - Microsoft Learn, *Planos e opções de licenciamento do Microsoft Intune*: https://learn.microsoft.com/pt-br/intune/fundamentals/licensing/. Descreve os planos de Intune, requisitos de licença e inclusão em pacotes Microsoft 365 elegíveis. Aplicação: q-m1-07.
 - O catálogo foi reconciliado para 135 entradas únicas (20 vídeos + 115 referências técnicas), todas com status `verificado` e URL preenchida. A revisão semântica independente e a verificação HTTP automatizada individual de todas as URLs continuam pendentes.
+
+
+## Auditoria focal M1 — Modo de Compatibilidade do Word (2026-10-26)
+
+- Microsoft Support, *Convertendo documentos em um novo formato*: https://support.microsoft.com/pt-br/word/converting-documents-to-a-newer-format. A página explica que o Modo de Compatibilidade desativa temporariamente recursos novos/aprimorados para preservar a edição por versões anteriores e manter o layout. Aplicação: q-m1-25.
+- Com essa entrada, o catálogo passa a conter 136 referências únicas (20 vídeos + 116 referências técnicas), todas com status `verificado` e URL preenchida. A revisão semântica integral e a validação HTTP automatizada individual de todas as URLs continuam pendentes.

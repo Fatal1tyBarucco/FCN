@@ -1381,3 +1381,11 @@ Fonte de estado: branch `feat/fase-1-orquestracao-20261025`, PR [#17](https://gi
 - [x] Contagem recalculada diretamente pelos objetos do catálogo: 135 entradas únicas, sendo 20 vídeos e 115 referências técnicas; todas têm status `verificado` e URL preenchida.
 - O parent `bc5a479fd2926399fd9b993cb756e71228e1f2be` passou nos workflows de push [40423874477](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423874477) e `pull_request` [40423879070](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423879070). Este commit atualiza o catálogo/documentação e aguarda CI próprio.
 - A revisão semântica integral das 399 questões e a acessibilidade manual permanecem pendentes.
+
+
+## Auditoria focal M1 — Modo de Compatibilidade (2026-10-26)
+
+- [x] `q-m1-25`: a fonte foi corrigida para a página oficial específica que explica o Modo de Compatibilidade e os efeitos de desativação temporária de recursos recentes.
+- [x] Contagem atual do catálogo: 136 referências únicas (20 vídeos + 116 referências técnicas), todas com status `verificado` e URL preenchida.
+- O parent `8b9dc729c436100bfef860978d4de2bdc9d4d331` passou nos workflows de push [40424186175](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40424186175) e `pull_request` [40424192846](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40424192846). Este lote aguarda CI próprio.
+- A revisão semântica independente das 399 questões permanece pendente.

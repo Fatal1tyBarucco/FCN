@@ -1465,6 +1465,16 @@ const references = [
     "dataVerificacao": "2026-10-26",
     "status": "verificado",
     "dispositivos": null
+  },
+  {
+    "id": "ref-word-compatibility-mode",
+    "titulo": "Convertendo documentos em um novo formato",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/converting-documents-to-a-newer-format",
+    "topico": "M1 — Microsoft 365 (Word: Modo de Compatibilidade)",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
   }
 ];
 if (typeof window !== 'undefined') window.references = references;
