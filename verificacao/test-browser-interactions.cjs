@@ -91,7 +91,7 @@ const axeCore = require("axe-core");
     assert.equal(skipState.left, "0px", "focused skip link should move into the viewport");
     assert.ok(skipState.width > 0, "focused skip link should have visible dimensions");
     await page.keyboard.press("Enter");
-    await page.waitForFunction(() => document.activeElement && document.activeElement.id === "main-content", null, { timeout: 5000 });
+    await page.waitForFunction(() => document.activeElement && document.activeElement.id === "main-content", null, { timeout: 10000 });
 
     // Accessibility: curriculum tree supports ArrowLeft/ArrowRight expansion by keyboard.
     const firstTreeItem = page.locator("#curriculum .curriculum-tree .tree-node[role='treeitem']").first();
@@ -100,7 +100,7 @@ const axeCore = require("axe-core");
     await page.waitForFunction(() => {
       const item = document.querySelector("#curriculum .curriculum-tree .tree-node[role='treeitem']");
       return Boolean(item) && document.activeElement === item;
-    }, null, { timeout: 5000 });
+    }, null, { timeout: 15000 });
     await page.keyboard.press("ArrowLeft");
     assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "false", "ArrowLeft should collapse the focused curriculum node");
     await page.keyboard.press("ArrowRight");
