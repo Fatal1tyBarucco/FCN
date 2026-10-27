@@ -141,3 +141,26 @@ Nenhum par idêntico detectado.
   - q-m2-40: /28 → 16 endereços, 14 hosts válidos; rede .16, broadcast .31, hosts .17–.30, máscara 255.255.255.240.
 - Fontes: mantidas (Cisco topologia/meios/WAN; IETF RFC 1112, RFC 4291, RFC 4632, RFC 1918, RFC 791); nenhuma URL inventada ou removida.
 - Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
+
+## Revisão semântica — lote M2 q-m2-41..q-m2-54 (2026-10-27)
+
+- Questões revisadas: 14 (q-m2-41 a q-m2-54). Módulo 2, subtópicos m2-u2-t1-s1 (OSI), m2-u2-t2-s1 (TCP/IP quatro camadas), m2-u2-t3-s1 (HTTPS sobre TCP), m2-u3-t1-s1 (IPv4/IPv6/TCP/UDP), m2-u3-t2-s1 (HTTP/HTTPS/DNS/DHCP), m2-u3-t3-s1 (FTP/FTPS/SFTP/SSH/ICMP), m2-u3-t4-s3 (NAT/PAT/proxy/VPN), m2-u4-t1-s1 (IPv4 privado), m2-u4-t3-s1 (VLSM/sumarização), m2-u4-t4-s1 (IPv6 abreviação), m2-u5-t1-s1 (ping/traceroute), m2-u5-t2-s1 (ipconfig), m2-u5-t3-s1 (nslookup/dig), m2-u5-t4-s1 (diagnóstico por camadas).
+- Escopo verificado: enunciado, alternativas, gabarito, justificativa, distratores, fonte; cruzamento com `apostila-ia/assets/data/curriculum_m2.js` (unidades 2.2–2.5) e RFCs citadas.
+- Resultado: gabaritos mantidos (E, A, B, C, D, E, A, B, C, D, E, A, B, C). Nenhum gabarito alterado. Nenhuma correção de conteúdo aplicada; todos os 14 itens estão semanticamente coerentes com o currículo e as fontes citadas.
+- Itens verificados individualmente:
+  - q-m2-41: Rede = endereçamento lógico/roteamento; Transporte = comunicação fim a fim; Física = transmissão de bits.
+  - q-m2-42: TCP/IP quatro camadas = Acesso à rede, Internet, Transporte, Aplicação.
+  - q-m2-43: HTTPS sobre TCP = DNS → TCP → TLS → HTTP (HTTP/3/QUIC excluído do escopo).
+  - q-m2-44: IPv4/IPv6 = endereçamento/encaminhamento; TCP/UDP = transporte.
+  - q-m2-45: DHCP configura parâmetros; DNS resolve nomes; HTTPS protege via TLS.
+  - q-m2-46: SFTP opera sobre SSH; FTPS usa TLS (tecnologias distintas).
+  - q-m2-47: VPN = conectividade remota protegida; NAT/PAT/proxy não garantem confidencialidade.
+  - q-m2-48: 192.168.10.25/24 pertence ao bloco privado 192.168.0.0/16; privado não impede acesso via NAT/gateway.
+  - q-m2-49: VLSM = prefixos variáveis por necessidade; sumarização = agregação de redes contíguas quando alinhadas.
+  - q-m2-50: IPv6 abreviado = 2001:db8::ff00:42:8329 (zeros à esquerda removidos; :: usado uma única vez).
+  - q-m2-51: ping = alcance/RTT; traceroute/tracert = saltos do caminho; filtros podem limitar resultados.
+  - q-m2-52: ipconfig /all exibe IP, máscara, gateway e DNS no Windows.
+  - q-m2-53: nslookup/dig consultam registros DNS.
+  - q-m2-54: acesso por IP ok + falha por nome → hipótese inicial DNS (não prova definitiva).
+- Fontes: mantidas (RFC 1122, 1034/1035, 793, 8446, 9110, 791, 2131, 4251/4253, 959, 4301, 3022, 1918, 4632, 5952, 792); nenhuma URL inventada ou removida.
+- Validação: `node --check apostila-ia/assets/data/questions.js` → OK.
