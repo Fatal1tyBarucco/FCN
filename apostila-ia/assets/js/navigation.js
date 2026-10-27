@@ -331,7 +331,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     /* Vídeos complementares do módulo do tópico exibido (Seção 12.2). */
     html += videosComplementaresHtml(info.modulo);
+    /* Personalização: favorito + anotações (Seção 11). */
+    var fav = (window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.ehFavorito) ? window.ApostilaPersonalizacao.ehFavorito(topicoId) : false;
+    html += '<div class="personalizacao-bar" style="margin-top:12px;padding-top:8px;border-top:1px solid var(--border,#e5e7eb);">';
+    html += '<button type="button" class="btn-favorito" data-topic="' + esc(topicoId) + '" aria-pressed="' + (fav ? 'true' : 'false') + '" style="margin-right:8px;">' + (fav ? '★ Favorito' : '☆ Favoritar') + '</button>';
+    html += '<button type="button" class="btn-anotacao" data-topic="' + esc(topicoId) + '" style="margin-right:8px;">📝 Anotações</button>';
+    html += '</div>';
+    html += '<div class="anotacao-area" data-topic="' + esc(topicoId) + '" style="display:none;margin-top:8px;">';
+    html += '<textarea class="anotacao-texto" rows="4" style="width:100%;" placeholder="Escreva sua anotação...">' + esc((window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.obterAnotacao) ? window.ApostilaPersonalizacao.obterAnotacao(topicoId) : '') + '</textarea>';
+    html += '<button type="button" class="btn-salvar-anotacao" data-topic="' + esc(topicoId) + '" style="margin-top:4px;">Salvar anotação</button>';
+    html += '</div>';
     painel.innerHTML = html;
+    // registrar visita/retomada
+    if (window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.aoNavegar) window.ApostilaPersonalizacao.aoNavegar(topicoId);
+    // handlers
+    var btnFav = painel.querySelector('.btn-favorito');
+    if (btnFav) btnFav.addEventListener('click', function () {
+      if (!window.ApostilaPersonalizacao) return;
+      var agoraFav = window.ApostilaPersonalizacao.alternarFavorito(topicoId);
+      btnFav.textContent = agoraFav ? '★ Favorito' : '☆ Favoritar';
+      btnFav.setAttribute('aria-pressed', agoraFav ? 'true' : 'false');
+    });
+    var btnAnot = painel.querySelector('.btn-anotacao');
+    var area = painel.querySelector('.anotacao-area');
+    if (btnAnot && area) btnAnot.addEventListener('click', function () { area.style.display = (area.style.display === 'none' ? 'block' : 'none'); });
+    var btnSalvar = painel.querySelector('.btn-salvar-anotacao');
+    if (btnSalvar) btnSalvar.addEventListener('click', function () {
+      var ta = painel.querySelector('.anotacao-texto');
+      if (window.ApostilaPersonalizacao && ta) window.ApostilaPersonalizacao.salvarAnotacao(topicoId, ta.value);
+      btnSalvar.textContent = 'Salvo ✓';
+      setTimeout(function () { btnSalvar.textContent = 'Salvar anotação'; }, 1500);
+    });
   }
 
   function alternarNo(no) {

@@ -9,22 +9,24 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
   const html = document.documentElement;
 
   function applyTheme(isDark) {
-    if (isDark) {
-      html.setAttribute('data-theme', 'dark');
-    } else {
-      html.removeAttribute('data-theme');
-    }
+    if (isDark) html.setAttribute('data-theme', 'dark');
+    else html.removeAttribute('data-theme');
   }
 
-  applyTheme(prefersDark.matches);
-
-  prefersDark.addEventListener('change', (e) => {
-    applyTheme(e.matches);
-  });
+  // Tema inicial: preferência persistida ou sistema
+  var temaPersistido = (window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.obterTema) ? window.ApostilaPersonalizacao.obterTema() : null;
+  if (temaPersistido === 'dark') applyTheme(true);
+  else if (temaPersistido === 'light') applyTheme(false);
+  else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    applyTheme(prefersDark.matches);
+    prefersDark.addEventListener('change', (e) => {
+      if (!window.ApostilaPersonalizacao || !window.ApostilaPersonalizacao.obterTema()) applyTheme(e.matches);
+    });
+  }
 
   console.log('Apostila Web Interativa inicializada (tema + boot; navegação em navigation.js)');
 });
