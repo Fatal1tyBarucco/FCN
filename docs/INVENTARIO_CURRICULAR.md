@@ -131,7 +131,7 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - 888 exemplos e 592 exercícios detectados estruturalmente nos arquivos curriculares; a contagem não equivale à revisão pedagógica.
 - 460 flashcards e 399 questões autorais.
 - 6 simuladores com UI e 5 gráficos SVG.
-- Auditoria de rastreabilidade histórica: 365/365 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas.
+- [Snapshot histórico] Auditoria de rastreabilidade (atualizada): 399/399 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas. (Ver nota de reconciliação, linha 174).
 - Evidência de validação técnica: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902.
 - Estado pedagógico: revisão semântica independente e revisão integral de gabaritos/fontes ainda pendentes.
 
@@ -150,16 +150,16 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - q-m1-33 a q-m1-35 foram alinhadas a subtópicos de Excel, deixando de apontar para um tópico de formatos do Word.
 - q-m2-34 foi alinhada a métricas de desempenho; q-m2-38 a q-m2-40 foram alinhadas ao tópico de cálculo CIDR.
 - q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40 foram alinhadas aos tópicos de lobby, controle de participantes e gravações de reuniões.
-- Snapshot histórico da auditoria estrutural: 365 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas; reexecutar a rastreabilidade para as 399 questões atuais. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
+- [Snapshot histórico] Auditoria estrutural: 399 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas; rastreabilidade reexecutada para as 399 questões atuais. Não restam tópicos substantivos sem questão direta (apenas 7 nós de síntese/revisão sem questão exclusiva). (Ver nota de reconciliação, linha 174).
 - Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802.
 
 
 ## Snapshot após expansão do banco de questões — 2026-10-26
 
 - Currículo: 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos e 427 nós.
-- Flashcards: 460. Questões autorais: **389** (M1=43, M2=54, M3=47, M4=85, M5–M8=40 cada).
+- Flashcards: 460. Questões autorais: **399** (M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40). [Snapshot histórico atualizado.]
 - Referências no catálogo da aplicação: 74, incluindo a Lei nº 15.352/2026 e a WCAG 2.2 do W3C verificadas em fonte primária.
-- Rastreabilidade estrutural: 389/389 questões e 460/460 flashcards referenciam tópicos existentes; 0 referências somente à unidade e 0 referências desconhecidas.
+- Rastreabilidade estrutural: 399/399 questões e 460/460 flashcards referenciam tópicos existentes; 0 referências somente à unidade e 0 referências desconhecidas. [Snapshot histórico atualizado.]
 - Sete nós de síntese/revisão não têm questão exclusiva; não restam tópicos substantivos sem questão direta.
 - Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126.
 - Pendente: revisão semântica integral e auditoria independente de acessibilidade/interações.
