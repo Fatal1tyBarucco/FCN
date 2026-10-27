@@ -1628,7 +1628,7 @@ const references = [
     dispositivos: ["RFC 1918"]
   },
   {
-    id: "ref-rfc-4632-cidr",
+    id: "ref-rfc-4632-cidr-2",
     titulo: "RFC 4632 — Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc4632/",
@@ -1688,7 +1688,7 @@ const references = [
     dispositivos: ["RFC 1855"]
   },
   {
-    id: "ref-rfc-7208-spf",
+    id: "ref-rfc-7208-spf-2",
     titulo: "RFC 7208 — Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc7208/",
@@ -1698,7 +1698,7 @@ const references = [
     dispositivos: ["RFC 7208"]
   },
   {
-    id: "ref-rfc-6376-dkim",
+    id: "ref-rfc-6376-dkim-2",
     titulo: "RFC 6376 — DomainKeys Identified Mail (DKIM) Signatures",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc6376/",
@@ -1779,7 +1779,7 @@ const references = [
   },
 
   {
-    id: "ref-rfc-8200-ipv6",
+    id: "ref-rfc-8200-ipv6-2",
     titulo: "RFC 8200 — Internet Protocol, Version 6 (IPv6) Specification (Internet Standard)",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc8200/",
@@ -1789,7 +1789,7 @@ const references = [
     dispositivos: ["RFC 8200"]
   },
   {
-    id: "ref-rfc-1918-private-addresses",
+    id: "ref-rfc-1918-private-addresses-2",
     titulo: "RFC 1918 — Address Allocation for Private Internets",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc1918/",
@@ -1799,7 +1799,7 @@ const references = [
     dispositivos: ["RFC 1918"]
   },
   {
-    id: "ref-rfc-4632-cidr",
+    id: "ref-rfc-4632-cidr-3",
     titulo: "RFC 4632 — Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc4632/",
@@ -1809,7 +1809,7 @@ const references = [
     dispositivos: ["RFC 4632"]
   },
   {
-    id: "ref-rfc-5952-ipv6-text",
+    id: "ref-rfc-5952-ipv6-text-2",
     titulo: "RFC 5952 — A Recommendation for IPv6 Address Text Representation",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc5952/",
@@ -1819,7 +1819,7 @@ const references = [
     dispositivos: ["RFC 5952"]
   },
   {
-    id: "ref-rfc-1122-hosts",
+    id: "ref-rfc-1122-hosts-2",
     titulo: "RFC 1122 — Requirements for Internet Hosts: Communication Layers (STD 3)",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc1122/",
@@ -1829,7 +1829,7 @@ const references = [
     dispositivos: ["RFC 1122"]
   },
   {
-    id: "ref-rfc-4251-ssh-architecture",
+    id: "ref-rfc-4251-ssh-architecture-2",
     titulo: "RFC 4251 — The Secure Shell (SSH) Protocol Architecture",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc4251/",
@@ -1839,7 +1839,7 @@ const references = [
     dispositivos: ["RFC 4251"]
   },
   {
-    id: "ref-rfc-950-subnetting",
+    id: "ref-rfc-950-subnetting-2",
     titulo: "RFC 950 — Internet Standard Subnetting Procedure (STD 5)",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc950/",
@@ -1849,7 +1849,7 @@ const references = [
     dispositivos: ["RFC 950"]
   },
   {
-    id: "ref-rfc-1855-netiquette",
+    id: "ref-rfc-1855-netiquette-2",
     titulo: "RFC 1855 — Netiquette Guidelines",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc1855/",
@@ -1859,7 +1859,7 @@ const references = [
     dispositivos: ["RFC 1855"]
   },
   {
-    id: "ref-rfc-7208-spf",
+    id: "ref-rfc-7208-spf-3",
     titulo: "RFC 7208 — Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc7208/",
@@ -1869,7 +1869,7 @@ const references = [
     dispositivos: ["RFC 7208"]
   },
   {
-    id: "ref-rfc-6376-dkim",
+    id: "ref-rfc-6376-dkim-3",
     titulo: "RFC 6376 — DomainKeys Identified Mail (DKIM) Signatures",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc6376/",
@@ -1879,7 +1879,7 @@ const references = [
     dispositivos: ["RFC 6376"]
   },
   {
-    id: "ref-rfc-7489-dmarc",
+    id: "ref-rfc-7489-dmarc-2",
     titulo: "RFC 7489 — Domain-based Message Authentication, Reporting, and Conformance (DMARC)",
     organizacao: "IETF (RFC Editor)",
     url: "https://www.rfc-editor.org/info/rfc7489/",
@@ -1889,7 +1889,7 @@ const references = [
     dispositivos: ["RFC 7489"]
   },
   {
-    id: "ref-nist-rdaf-1500-18",
+    id: "ref-nist-rdaf-1500-18-2",
     titulo: "NIST SP 1500-18r2 — Research Data Framework (RDaF), Version 2.0",
     organizacao: "National Institute of Standards and Technology (NIST)",
     url: "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/1500-18/NIST.SP.1500-18r2.html",
@@ -1899,7 +1899,7 @@ const references = [
     dispositivos: ["NIST SP 1500-18r2"]
   },
   {
-    id: "ref-nist-stats-handbook",
+    id: "ref-nist-stats-handbook-2",
     titulo: "NIST/SEMATECH e-Handbook of Statistical Methods",
     organizacao: "National Institute of Standards and Technology (NIST)",
     url: "https://www.itl.nist.gov/div898/handbook/",
@@ -1909,7 +1909,7 @@ const references = [
     dispositivos: ["NIST/SEMATECH e-Handbook"]
   },
   {
-    id: "ref-nist-ai-rmf-10",
+    id: "ref-nist-ai-rmf-10-2",
     titulo: "NIST — Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
     organizacao: "National Institute of Standards and Technology (NIST)",
     url: "https://www.nist.gov/itl/ai-risk-management-framework",
@@ -1919,7 +1919,7 @@ const references = [
     dispositivos: ["NIST AI RMF 1.0"]
   },
   {
-    id: "ref-owasp-llm-prompt-injection",
+    id: "ref-owasp-llm-prompt-injection-2",
     titulo: "OWASP — LLM Prompt Injection Prevention Cheat Sheet",
     organizacao: "OWASP Foundation",
     url: "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
@@ -1929,7 +1929,7 @@ const references = [
     dispositivos: ["OWASP LLM Prompt Injection Prevention Cheat Sheet"]
   },
   {
-    id: "ref-tableau-help-desktop",
+    id: "ref-tableau-help-desktop-2",
     titulo: "Tableau Desktop and Web Authoring Help",
     organizacao: "Tableau (Salesforce)",
     url: "https://help.tableau.com/current/pro/desktop/en-us/default.htm",
@@ -1939,7 +1939,7 @@ const references = [
     dispositivos: ["Tableau Help"]
   },
   {
-    id: "ref-looker-studio-help",
+    id: "ref-looker-studio-help-2",
     titulo: "Google Looker Studio Help",
     organizacao: "Google",
     url: "https://support.google.com/looker-studio/",
