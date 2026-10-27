@@ -145,3 +145,10 @@ documentados e não bloqueiam o Modo A. Nenhum código foi alterado nesta audito
 - **D-ORQ-03 — Evidência ligada ao SHA:** contagens e resultados de testes só podem ser associados ao commit em que foram obtidos. Documentos contêm snapshots históricos com contagens divergentes; isso deve ser reconciliado por execução reproduzível, não por escolha arbitrária de um número.
 - **D-ORQ-04 — Revisão independente:** o autor de uma questão/componente não deve ser o único aprovador. A validação semântica de gabaritos, distratores, fontes e requisitos pedagógicos permanece separada dos testes estruturais.
 - **D-ORQ-05 — Critério de conclusão:** interface existente, quantidade mínima de ativos ou CI verde não equivalem, isoladamente, a conclusão integral. Limitações de WCAG manual e dispositivos físicos devem permanecer explícitas até teste real.
+
+## Decisão — subtópico com 6 exemplos (`curriculum.js:450`) — 2026-10-27
+
+- **Contexto:** o subtópico `modulo-1-unidade-2-topico-14-sub-1` ("Criação de relatório técnico integrado") possui 6 exemplos (2 de cada tipo: introducao, aplicacao, erro), enquanto os outros 294 subtópicos possuem exatamente 3 (um de cada tipo). Total publicado: 888 exemplos (885 esperados + 3 excedentes).
+- **Decisão:** manter os 6 exemplos (não remover conteúdo válido). Corrigir o total divulgado para "888 exemplos (294 subtópicos × 3 + 1 subtópico × 6)" e registrar a nota em `docs/DIAGNOSTICO_ORQUESTRADOR_2026-10-27.md` §4.1.
+- **Motivo:** remover exemplos válidos reduziria o valor pedagógico; a inflação é documentada e auditável. Os 3 exemplos excedentes são de naturezas distintas (não duplicação literal).
+- **Alternativa descartada:** remover os 3 excedentes (total 885) — rejeitada por perda de conteúdo.

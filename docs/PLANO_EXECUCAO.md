@@ -279,3 +279,24 @@ A correção pontual q-m6-41–q-m6-44 foi commitada no branch do PR #17 (`7c9b0
 3. Registrar IDs e arquivos revisados; não repetir lotes aprovados sem nova evidência.
 4. Nunca declarar execução local se só existe um resultado de CI histórico. Associar cada resultado ao SHA exato.
 5. Não fazer merge nem promover o PR a ready-for-review enquanto houver pendências qualitativas obrigatórias.
+
+---
+
+## Atualização do orquestrador — 2026-10-27
+
+- HEAD: `321901e` (push + pull_request CI success).
+- Diagnóstico completo em `docs/DIAGNOSTICO_ORQUESTRADOR_2026-10-27.md`.
+- Backlog real podado em `docs/BACKLOG_REAL_2026-10-27.md`.
+- `docs/PENDENCIAS.md` marcado como histórico (banner no topo).
+- Sincronização de governança: `inventario/`, `matriz/` (raiz) e `apostila-ia/inventario/`, `apostila-ia/matriz/` agora idênticos a `docs/` (460 FC, 399 Q, 888 exemplos, 592 exercícios).
+- Contagens corrigidas em `docs/INVENTARIO_CURRICULAR.md` (M6 44→47, 365→399).
+- Decisão registrada sobre subtópico com 6 exemplos (`DECISOES_ARQUITETURAIS.md`).
+- CI verde para 321901e (push + pull_request).
+
+**Pendências de maior valor restantes (ver BACKLOG_REAL_2026-10-27.md):**
+- P0-1: 102 questões sem fonte externa (M7, M8 inteiros).
+- P0-4: revisão semântica independente das 399 questões (0% comprovada).
+- P1-1: distribuição de gabaritos (M7 zero B, M1 zero E).
+- P2: acessibilidade manual (leitor de tela, WCAG manual, dispositivos).
+
+**Limite de delegação:** o limite de uso free dos subagentes foi atingido nesta sessão; as tarefas de conteúdo (P0-1, P0-4, P1-1) requerem delegação a @conteudo/@revisor quando o limite resetar. A orquestração de governança (docs, sincronização, CI) foi concluída.

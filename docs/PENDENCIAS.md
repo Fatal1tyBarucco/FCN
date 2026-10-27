@@ -1,3 +1,12 @@
+# ⚠️ BACKLOG REAL MOVIDO
+
+> **Este arquivo é histórico (574 linhas, 93 itens `[ ]`).** Muitos itens já foram superados.
+> O **backlog acionável e podado** está em `docs/BACKLOG_REAL_2026-10-27.md`.
+> Diagnóstico completo em `docs/DIAGNOSTICO_ORQUESTRADOR_2026-10-27.md`.
+> Use este arquivo apenas para rastreabilidade de execuções passadas.
+
+---
+
 ## Estado CI mais recente — 2026 10 26 04:12 UTC
 
 - HEAD: `7a6ac2425f00ccdbebc8be2d206796037358e75d`.
