@@ -1486,5 +1486,125 @@ const references = [
     "status": "verificado",
     "dispositivos": null
   }
+  {
+    "id": "ref-word-pdf-export",
+    "titulo": "Salvar ou converter em PDF ou XPS nos aplicativos da área de trabalho do Office",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/office/collab-files/save-or-convert-to-pdf-or-xps-in-office-desktop-apps",
+    "topico": "M1 — Word: distribuição de documentos em PDF e limitações de edição",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-average-function-ptbr",
+    "titulo": "Função MÉDIA no Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/functions/average-function",
+    "topico": "M1 — Excel: cálculo de média aritmética",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-word-first-page-header-footer",
+    "titulo": "Alterar ou excluir um cabeçalho ou rodapé em uma única página",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/change-or-delete-a-header-or-footer-on-a-single-page",
+    "topico": "M1 — Word: cabeçalho e rodapé diferentes na primeira página",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-word-start-page-numbering-later",
+    "titulo": "Iniciar a numeração de página mais adiante no documento",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/start-page-numbering-later-in-your-document",
+    "topico": "M1 — Word: paginação a partir de seção/página posterior",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-tables-overview",
+    "titulo": "Visão geral de tabelas do Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/overview-of-excel-tables",
+    "topico": "M1 — Excel: tabelas, cabeçalhos e referências estruturadas",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-resize-table",
+    "titulo": "Redimensionar uma tabela adicionando ou removendo linhas e colunas no Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/resize-a-table-by-adding-or-removing-rows-and-columns-in-excel",
+    "topico": "M1 — Excel: expansão de tabelas com novos registros",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-filter-data",
+    "titulo": "Filtrar dados em um intervalo ou tabela no Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/get-started/filter-data-in-a-range-or-table-in-excel",
+    "topico": "M1 — Excel: filtros de dados",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-data-validation",
+    "titulo": "Aplicar validação de dados às células",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/get-started/apply-data-validation-to-cells",
+    "topico": "M1 — Excel: validação de dados e listas",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-excel-conditional-formatting",
+    "titulo": "Utilizar formatação condicional para realçar informações no Excel",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/excel/use-conditional-formatting-to-highlight-information-in-excel",
+    "topico": "M1 — Excel: formatação condicional",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-word-table-of-contents",
+    "titulo": "Inserir um sumário automático no Word",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents",
+    "topico": "M1 — Word: estilos e sumário automático",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-word-section-breaks",
+    "titulo": "Usar quebras de seção para alterar o layout ou a formatação",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document",
+    "topico": "M1 — Word: estrutura de seções em documentos longos",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
+    {
+    "id": "ref-office-accessible-pdf",
+    "titulo": "Criar PDFs acessíveis",
+    "organizacao": "Microsoft Support",
+    "url": "https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs",
+    "topico": "M1 — Word: exportação e acessibilidade de PDF",
+    "dataVerificacao": "2026-10-26",
+    "status": "verificado",
+    "dispositivos": null
+  },
 ];
 if (typeof window !== 'undefined') window.references = references;
