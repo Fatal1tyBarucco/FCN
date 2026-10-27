@@ -564,3 +564,11 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 - [ ] Confirmar CI dos commits de código e do catálogo mais recentes.
 - [ ] Continuar revisão semântica independente de todas as 399 questões; a revisão focal de M1 não equivale a uma auditoria integral.
 - [ ] Realizar teste HTTP individual de URLs, avaliação manual de acessibilidade, leitor de tela, navegação completa por teclado e testes em dispositivos/navegadores adicionais.
+
+## CI da auditoria focal M1 — atualização (2026-10-26)
+
+- [x] Corrigida a vírgula ausente entre objetos do catálogo `references.js` após falha de sintaxe.
+- [x] Workflow `pull_request` [40426312732](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40426312732) aprovado no SHA `a7ef1634d836e75da808ebe7fefc8186421c2ab9`: 39 arquivos JavaScript, 399 questões, smoke `file://`, regressões interativas e auditorias estruturais passaram.
+- [x] axe-core: zero violações confirmadas.
+- [ ] Avaliar manualmente 89 nós de texto SVG ainda marcados como contraste incompleto e 20 iframes externos.
+- [ ] Revisão semântica independente das 399 questões; verificação HTTP individual das URLs; leitor de tela, teclado e testes em dispositivos/navegadores adicionais.
