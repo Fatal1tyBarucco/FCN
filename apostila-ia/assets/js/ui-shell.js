@@ -68,10 +68,24 @@
         curriculumNavigation.classList.add('curriculum-navigation-panel');
         curriculumNavigation.setAttribute('aria-label', 'Conteúdo do tópico selecionado');
         if (topicPanel && curriculum) {
+          const workspace = document.createElement('section');
+          workspace.className = 'study-workspace';
+          workspace.id = 'study-workspace';
+          workspace.setAttribute('aria-labelledby', 'study-workspace-title');
+          workspace.innerHTML = '<div class="study-workspace-heading"><span class="study-eyebrow">ÁREA DE APRENDIZAGEM</span><h2 id="study-workspace-title">Estude um tópico</h2><p>Escolha um módulo no menu lateral. O conteúdo, o objetivo de aprendizagem e os recursos complementares aparecerão aqui.</p></div>';
           topicPanel.classList.add('topic-content-panel');
-          curriculum.appendChild(topicPanel);
+          workspace.appendChild(topicPanel);
+          main.insertBefore(workspace, main.firstChild);
         }
       }
+    }
+
+    /* Conteúdo de apoio não deve competir com a área de estudo no primeiro
+       carregamento; mantém vídeos e progresso acessíveis, mas mais abaixo. */
+    const videosSection = document.getElementById('videos-app');
+    const progressSection = document.getElementById('progress-app');
+    if (videosSection && progressSection && progressSection.parentElement === main) {
+      main.insertBefore(videosSection, progressSection.nextSibling);
     }
 
     function setSidebarOpen(open) {
