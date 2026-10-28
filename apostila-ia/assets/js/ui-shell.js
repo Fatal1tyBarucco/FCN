@@ -40,7 +40,7 @@
       '<div class="sidebar-brand"><span class="sidebar-brand-mark" aria-hidden="true">TI</span><div><strong>Apostila TI &amp; Dados</strong><small>Central de aprendizagem</small></div></div>',
       '<nav class="quick-navigation" aria-label="Seções da apostila"><p class="sidebar-section-label">NAVEGAÇÃO</p>',
       '<a class="quick-link" href="#videos-app"><span aria-hidden="true">▶</span><span>Vídeos educacionais</span></a>',
-      '<a class="quick-link" href="#curriculum"><span aria-hidden="true">▤</span><span>Conteúdo e módulos</span></a>',
+      '<a class="quick-link" href="#study-workspace"><span aria-hidden="true">▤</span><span>Área de aprendizagem</span></a>',
       '<a class="quick-link" href="#flashcards"><span aria-hidden="true">▣</span><span>Flashcards</span></a>',
       '<a class="quick-link" href="#questoes"><span aria-hidden="true">✓</span><span>Questões e simulados</span></a>',
       '<a class="quick-link" href="#graficos"><span aria-hidden="true">▥</span><span>Visualização de dados</span></a>',
@@ -78,6 +78,22 @@
           workspace.appendChild(topicPanel);
           main.insertBefore(workspace, main.firstChild);
         }
+      }
+    }
+
+    /* O inventário detalhado é documentação de rastreabilidade, não o fluxo
+       principal de estudo. Mantém o conteúdo acessível em um disclosure fechado. */
+    if (curriculum && !curriculum.querySelector(':scope > details.inventory-details')) {
+      const originalHeading = curriculum.querySelector(':scope > h2');
+      if (originalHeading) {
+        const inventoryDetails = document.createElement('details');
+        inventoryDetails.className = 'inventory-details';
+        const summary = document.createElement('summary');
+        summary.innerHTML = '<span class="inventory-summary-title">Inventário curricular resumido</span><span class="inventory-summary-meta">Detalhes técnicos, cobertura e rastreabilidade</span>';
+        inventoryDetails.appendChild(summary);
+        originalHeading.remove();
+        while (curriculum.firstChild) inventoryDetails.appendChild(curriculum.firstChild);
+        curriculum.appendChild(inventoryDetails);
       }
     }
 
