@@ -199,6 +199,7 @@ const axeCore = require("axe-core");
     await menuToggle.click();
     await page.locator("#app-sidebar a[href='#flashcards']").click();
     assert.equal(await menuToggle.getAttribute("aria-expanded"), "false", "selecting a section must close the mobile menu");
+    await menuToggle.click();
     await page.locator("#sidebar-tree-host .tree-link").first().click();
     await page.waitForFunction(() => {
       const heading = document.querySelector("#study-workspace-title");
