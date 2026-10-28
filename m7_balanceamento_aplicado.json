@@ -1,0 +1,91 @@
+{
+  "modulo": 7,
+  "arquivo_questoes": "apostila-ia/assets/data/questions_m7.js",
+  "arquivo_curriculum": "apostila-ia/assets/data/curriculum_m7.js",
+  "total_candidatos_avaliados": 10,
+  "total_aplicados": 0,
+  "total_rejeitados": 10,
+  "observacao": "Nenhuma conversao foi aplicada. Em todas as 10 questoes avaliadas, a alternativa proposta como novo gabarito nao e tecnicamente correta segundo curriculum_m7.js; o gabarito original permanece unico correto. Nenhum arquivo de questoes foi alterado.",
+  "candidatos": [
+    {
+      "id": "q-m7-21",
+      "gabarito_original": "A",
+      "gabarito_novo_proposto": "B",
+      "confirmacao_curriculum": "nao",
+      "motivo": "Enunciado descreve tratamento fora do destino com dados ja tratados (ETL). ELT carrega bruto e transforma no destino, o oposto. Alternativa B nao e correta.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 622)"
+    },
+    {
+      "id": "q-m7-33",
+      "gabarito_original": "A",
+      "gabarito_novo_proposto": "B",
+      "confirmacao_curriculum": "nao",
+      "motivo": "Cenario de dados sensiveis exige tratamento antes da carga (ETL). Alternativa B (ELT por capacidade do destino) e incorreta segundo o curriculo, que afirma privacidade prevalece sobre capacidade.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 648)"
+    },
+    {
+      "id": "q-m7-26",
+      "gabarito_original": "A",
+      "gabarito_novo_proposto": "B",
+      "confirmacao_curriculum": "nao",
+      "motivo": "Ausencia seletiva (depende do valor ausente) exige declarar vies e limitar conclusao. Imputar media (B) e incorreto segundo o curriculo.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 676)"
+    },
+    {
+      "id": "q-m7-28",
+      "gabarito_original": "A",
+      "gabarito_novo_proposto": "D",
+      "confirmacao_curriculum": "nao",
+      "motivo": "z-scores corretos sao 1,5 e 2,0 com conclusao de melhor desempenho relativo na segunda prova. Alternativa D (0,85 e 0,70) nao corresponde a z-score.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 775)"
+    },
+    {
+      "id": "q-m7-36",
+      "gabarito_original": "A",
+      "gabarito_novo_proposto": "D",
+      "confirmacao_curriculum": "nao",
+      "motivo": "min-max para 110 e 40 com min 60 max 100 resulta 1,25 e -0,50. Alternativa D (1,25 e 0,00) ignora valor abaixo do minimo.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 801)"
+    },
+    {
+      "id": "q-m7-02",
+      "gabarito_original": "C",
+      "gabarito_novo_proposto": "B",
+      "confirmacao_curriculum": "nao",
+      "motivo": "Dado e registro bruto sem contexto. Alternativa B (conferido contra cadastro oficial) descreve acuracia, nao dado.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 63)"
+    },
+    {
+      "id": "q-m7-07",
+      "gabarito_original": "C",
+      "gabarito_novo_proposto": "B",
+      "confirmacao_curriculum": "nao",
+      "motivo": "Classificacao correta e estruturado/semiestruturado/nao estruturado. Alternativa B inverte semiestruturado e nao estruturado.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 169)"
+    },
+    {
+      "id": "q-m7-24",
+      "gabarito_original": "C",
+      "gabarito_novo_proposto": "B",
+      "confirmacao_curriculum": "nao",
+      "motivo": "CEP, telefone e matricula sao nominais. Alternativa B (discreto) exige contagem com distancias iguais, o que nao se aplica a codigos.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 251)"
+    },
+    {
+      "id": "q-m7-13",
+      "gabarito_original": "C",
+      "gabarito_novo_proposto": "E",
+      "confirmacao_curriculum": "nao",
+      "motivo": "Completude de 94% nao comprova validade das datas. Alternativa E erra ao inferir validade a partir de completude.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 417)"
+    },
+    {
+      "id": "q-m7-18",
+      "gabarito_original": "C",
+      "gabarito_novo_proposto": "E",
+      "confirmacao_curriculum": "nao",
+      "motivo": "Completude e validade atendidas; violacao e de acuracia. Alternativa E ignora a violacao de acuracia.",
+      "linha_alterada": "nenhuma (gabarito original mantido na linha 469)"
+    }
+  ]
+}

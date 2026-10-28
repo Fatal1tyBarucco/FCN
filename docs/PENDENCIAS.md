@@ -587,4 +587,17 @@ A mudança de cor e a atualização da matriz geraram commits posteriores ao run
 
 - P0-1 (fontes): concluído. P0-4 (revisão semântica, 399 IDs): concluído. P1-1 (5 gabaritos corrigidos): concluído. P2-4 (183 URLs verificadas, 1 pendência login): concluído. P2-6 (auditoria persistência): concluído.
 - Contagens atuais: 399 questões, 460 flashcards, 183 referências.
+
 - Pendentes mantidos: P2-1, P2-2, P2-3, P1-2, P1-3, P1-4.
+
+## Atualização de governança — 2026-10-27 (PENDÊNCIA #3)
+
+Evidências confirmadas por delegações anteriores (arquivos no workspace):
+
+- (a) **399 itens confirmados** no banco de questões autorais: M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40 (324 múltipla escolha + 75 certo/errado). Evidência: `semantico.json`.
+- (b) **M7 = 40 itens** (não 33): `questions_m7.js` contém q-m7-01..q-m7-40; os 33 referem-se apenas às questões de múltipla escolha do módulo. Evidência: `semantico.json`, `m7_balanceamento_aplicado.json`.
+- (c) **2 correções semânticas aplicadas**: q-m6-01 (`questions_m6.js`) e q-m8-13 (`questions_m8.js`); `node --check` OK. Evidência: `relatorio_correcoes_semanticas.json`.
+- (d) **Balanceamento de gabaritos rejeitado para M7**: proposta com 42 conversões (subagente A) não aplicada; 10 candidatos rejeitados em M7; nenhum arquivo de questão editado. Política `docs/DISTRIBUICAO_GABARITOS_2026-10-27.md` mantida.
+- (e) **Referências de evidência**: `semantico.json`, `m7_balanceamento_aplicado.json`, `relatorio_correcoes_semanticas.json` (existentes no workspace; sem URLs/datas inventadas).
+
+`inventario/INVENTARIO_CURRICULAR.md` e `matriz/MATRIZ_COBERTURA.md` já refletem 399 questões e M7=40; nenhuma alteração numérica foi necessária nesses arquivos. Detalhes em `docs/ATUALIZACAO_GOVERNANCA_2026-10-27.md`.

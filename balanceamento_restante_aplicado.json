@@ -1,0 +1,83 @@
+{
+  "gerado_em": "2026-10-27",
+  "modulos": ["M4", "M5", "M6", "M8"],
+  "total_proposto": 32,
+  "total_aplicado": 0,
+  "total_rejeitado": 32,
+  "observacao": "Nenhuma conversao aplicada. Verificacao estrutural (gabarito x marcador CORRETA/INCORRETA em analise) resultou em 0 divergencias em M4/M5/M6/M8; todas as alternativas nao-gabarito estao marcadas INCORRETA nas analises. Converter gabarito para qualquer alternativa nao-gabarito seria troca por balanceamento, proibida pelas regras do projeto e pela restricao explicita da tarefa. Consistente com o resultado de M7 (0/10). Nenhum arquivo de questoes foi alterado.",
+  "modulos_detalhe": [
+    {
+      "modulo": "M4",
+      "arquivo_questoes": "apostila-ia/assets/data/questions_m4.js",
+      "arquivo_curriculum": "apostila-ia/assets/data/curriculum_m4.js",
+      "total_proposto": 8,
+      "total_aplicado": 0,
+      "total_rejeitado": 8,
+      "candidatos": [
+        {"id":"q-m4-03","gabarito_original":"A","gabarito_novo_proposto":"(nenhum tecnicamente correto)","status":"rejeitado","motivo":"Alternativas B-E marcadas INCORRETA na analise; gabarito consistente com analise; sem divergencia estrutural."},
+        {"id":"q-m4-06","gabarito_original":"A","gabarito_novo_proposto":"(nenhum)","status":"rejeitado","motivo":"Idem: sem alternativa nao-gabarito tecnicamente correta."},
+        {"id":"q-m4-09","gabarito_original":"A","gabarito_novo_proposto":"(nenhum)","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m4-32","gabarito_original":"A","gabarito_novo_proposto":"(nenhum)","status":"rejeitado","motivo":"Idem (item com justificativa corrigida no PR #5; gabarito mantido)."},
+        {"id":"q-m4-34","gabarito_original":"A","gabarito_novo_proposto":"(nenhum)","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m4-35","gabarito_original":"A","gabarito_novo_proposto":"(nenhum)","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m4-40","gabarito_original":"B","gabarito_novo_proposto":"(nenhum)","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m4-41","gabarito_original":"B","gabarito_novo_proposto":"(nenhum)","status":"rejeitado","motivo":"Idem."}
+      ]
+    },
+    {
+      "modulo": "M5",
+      "arquivo_questoes": "apostila-ia/assets/data/questions_m5.js",
+      "arquivo_curriculum": "apostila-ia/assets/data/curriculum_m5.js",
+      "total_proposto": 11,
+      "total_aplicado": 0,
+      "total_rejeitado": 11,
+      "candidatos": [
+        {"id":"q-m5-08","gabarito_original":"B","status":"rejeitado","motivo":"Sem alternativa nao-gabarito tecnicamente correta (0 divergencias estruturais)."},
+        {"id":"q-m5-10","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-11","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-12","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-14","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-15","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-16","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-19","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-20","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-21","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m5-22","gabarito_original":"A","status":"rejeitado","motivo":"Idem."}
+      ]
+    },
+    {
+      "modulo": "M6",
+      "arquivo_questoes": "apostila-ia/assets/data/questions_m6.js",
+      "arquivo_curriculum": "apostila-ia/assets/data/curriculum_m6.js",
+      "total_proposto": 5,
+      "total_aplicado": 0,
+      "total_rejeitado": 5,
+      "candidatos": [
+        {"id":"q-m6-06","gabarito_original":"A","status":"rejeitado","motivo":"Sem alternativa nao-gabarito tecnicamente correta (0 divergencias estruturais)."},
+        {"id":"q-m6-10","gabarito_original":"A","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m6-13","gabarito_original":"A","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m6-17","gabarito_original":"A","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m6-21","gabarito_original":"A","status":"rejeitado","motivo":"Idem."}
+      ]
+    },
+    {
+      "modulo": "M8",
+      "arquivo_questoes": "apostila-ia/assets/data/questions_m8.js",
+      "arquivo_curriculum": "apostila-ia/assets/data/curriculum_m8.js",
+      "total_proposto": 8,
+      "total_aplicado": 0,
+      "total_rejeitado": 8,
+      "candidatos": [
+        {"id":"q-m8-03","gabarito_original":"D","status":"rejeitado","motivo":"Sem alternativa nao-gabarito tecnicamente correta (0 divergencias estruturais)."},
+        {"id":"q-m8-04","gabarito_original":"D","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m8-08","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m8-09","gabarito_original":"D","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m8-11","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m8-13","gabarito_original":"D","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m8-14","gabarito_original":"B","status":"rejeitado","motivo":"Idem."},
+        {"id":"q-m8-16","gabarito_original":"D","status":"rejeitado","motivo":"Idem."}
+      ]
+    }
+  ],
+  "verificacao_node_check": "node --check OK em questions.js, questions_m4.js, questions_m5.js, questions_m6.js, questions_m7.js, questions_m8.js (2026-10-27)"
+}

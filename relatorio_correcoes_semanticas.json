@@ -1,0 +1,25 @@
+{
+  "gerado_em": "2026-10-27",
+  "escopo": "Correção de 2 questões semânticas identificadas pelo subagente B (revisão semântica). Gabarito não foi alterado; apenas trechos contraditórios da justificativa foram corrigidos.",
+  "correcoes": [
+    {
+      "arquivo": "apostila-ia/assets/data/questions_m6.js",
+      "id_questao": "q-m6-01",
+      "tipo_correcao": "justificativa/alinhamento",
+      "trecho_antigo": "B erra porque eficiência não autoriza descumprir a lei; C está correta",
+      "trecho_novo": "B está correta, ao traduzir a legalidade como submissão à norma, com competência e procedimento; C erra porque eficiência não autoriza descumprir a lei",
+      "confirmado": "sim"
+    },
+    {
+      "arquivo": "apostila-ia/assets/data/questions_m8.js",
+      "id_questao": "q-m8-13",
+      "tipo_correcao": "justificativa/alinhamento",
+      "trecho_antigo": "A alternativa B reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (D) não comunicam magnitude.",
+      "trecho_novo": "A alternativa D reproduz isso. Categórica (A) destrói a ordem; arco-íris (C) é decorativa e nivelou a hierarquia; cores claras sem escala (B) não comunicam magnitude.",
+      "confirmado": "sim"
+    }
+  ],
+  "total_corrigidas": 2,
+  "gabaritos_alterados": false,
+  "validacao_sintaxe": "node --check OK para ambos os arquivos"
+}
