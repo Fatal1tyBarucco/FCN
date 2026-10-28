@@ -226,7 +226,19 @@ const axeCore = require("axe-core");
           right: Math.round(rect.right),
           width: Math.round(rect.width),
           position: style.position,
-          overflowX: style.overflowX
+          overflowX: style.overflowX,
+          ancestors: Array.from((function* () { let parent = element.parentElement; let depth = 0; while (parent && depth < 5) { yield parent; parent = parent.parentElement; depth++; } })()).map(parent => {
+            const parentRect = parent.getBoundingClientRect();
+            return {
+              selector: parent.tagName.toLowerCase() + (parent.id ? "#" + parent.id : "") + (typeof parent.className === "string" && parent.className ? "." + parent.className.trim().split(/\\s+/).join(".") : ""),
+              left: Math.round(parentRect.left),
+              right: Math.round(parentRect.right),
+              width: Math.round(parentRect.width),
+              scrollWidth: parent.scrollWidth,
+              clientWidth: parent.clientWidth,
+              overflowX: getComputedStyle(parent).overflowX
+            };
+          })
         };
       }).filter(item => item.right > window.innerWidth + 1 && item.position !== "fixed" && item.position !== "absolute")
         .sort((left, right) => right.right - left.right)
