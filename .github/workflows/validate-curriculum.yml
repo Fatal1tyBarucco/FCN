@@ -59,6 +59,9 @@ jobs:
       - name: Install Chromium for browser smoke test
         run: npx playwright install --with-deps chromium
 
+      - name: Simulator regression suite
+        run: node workspace/phase5_smoke.js
+
       - name: Browser smoke test in file URL mode
         run: node verificacao/test-browser-smoke.cjs
 

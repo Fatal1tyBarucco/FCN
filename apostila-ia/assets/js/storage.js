@@ -22,6 +22,7 @@
 
   var CHAVE = 'apostila-ia-progresso';
   const VERSAO = 1;
+  const VERSOES_SUPORTADAS = [1];
 
   function disponivel() {
     try {
@@ -34,6 +35,17 @@
     }
   }
 
+  function migrar(obj, deVersao) {
+    // Migração real por versão. Atualmente só versão 1; placeholder para futuras.
+    if (deVersao === VERSAO) return obj;
+    // Se versão desconhecida/antiga, normalizar campos conhecidos.
+    var out = {};
+    var chaves = Object.keys(obj || {});
+    for (var i = 0; i < chaves.length; i++) out[chaves[i]] = obj[chaves[i]];
+    out._v = VERSAO;
+    return out;
+  }
+
   function lerTudo() {
     if (!disponivel()) return { _v: VERSAO };
     try {
@@ -41,14 +53,22 @@
       if (raw === null || raw === '') return { _v: VERSAO };
       var obj = JSON.parse(raw);
       if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return { _v: VERSAO };
-      if (obj._v !== VERSAO) {
-        var normalizado = {};
-        var chaves = Object.keys(obj);
-        for (var i = 0; i < chaves.length; i++) {
-          normalizado[chaves[i]] = obj[chaves[i]];
+      // validação de versão + migração
+      if (typeof obj._v !== 'number' || VERSOES_SUPORTADAS.indexOf(obj._v) === -1) {
+        // versão desconhecida: tentar migração a partir de 0
+        obj = migrar(obj, 0);
+      } else if (obj._v !== VERSAO) {
+        obj = migrar(obj, obj._v);
+      }
+      // validação de namespaces conhecidos (prevenção de corrupção)
+      var chaves = Object.keys(obj);
+      for (var i = 0; i < chaves.length; i++) {
+        var k = chaves[i];
+        if (k === '_v') continue;
+        var v = obj[k];
+        if (v !== null && typeof v !== 'object') {
+          delete obj[k]; // remove valores corrompidos
         }
-        normalizado._v = VERSAO;
-        return normalizado;
       }
       return obj;
     } catch (e) {

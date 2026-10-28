@@ -239,11 +239,16 @@
         var nota = (t && typeof t.nota === 'number') ? t.nota : null;
         if (nota !== null) { soma += nota; if (nota > melhor) melhor = nota; }
       });
+      // Tempo de estudo (agregado de tentativas de simulado)
+      var tempoEstudoMs = 0;
+      tentativas.forEach(function (t) {
+        if (t && typeof t.tempoTotalMs === 'number') tempoEstudoMs += t.tempoTotalMs;
+      });
+      resultado.simulados.tempoEstudoMs = tempoEstudoMs;
       var comNota = tentativas.filter(function (t) { return t && typeof t.nota === 'number'; }).length;
       resultado.simulados.mediaNota = comNota ? soma / comNota : null;
       resultado.simulados.melhor = (melhor === -Infinity) ? null : melhor;
     }
-
     return resultado;
   }
 

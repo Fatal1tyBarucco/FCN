@@ -22,7 +22,7 @@ const { chromium } = require("playwright");
     await page.waitForFunction(() =>
       window.apostilaDados &&
       window.apostilaDados.curriculum &&
-      document.querySelectorAll("#curriculum .tree-modulo").length === 8,
+      document.querySelectorAll("#sidebar-tree-host .tree-modulo").length === 8,
       null,
       { timeout: 15000 }
     );
@@ -35,7 +35,7 @@ const { chromium } = require("playwright");
       return {
         title: document.title,
         modules: Object.keys(window.apostilaDados.curriculum).length,
-        curriculumModuleNodes: document.querySelectorAll("#curriculum .tree-modulo").length,
+        curriculumModuleNodes: document.querySelectorAll("#sidebar-tree-host .tree-modulo").length,
         flashcards,
         questions: Array.isArray(window.questoesBanco) ? window.questoesBanco.length : 0,
         chartSvgs: document.querySelectorAll("#charts-app svg").length,

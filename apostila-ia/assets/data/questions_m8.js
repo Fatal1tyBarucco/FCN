@@ -438,7 +438,7 @@ const moduleQuestions8 = [
     nivel: "intermediario",
     topico: "modulo-8-unidade-2-topico-1",
     assunto: "M8.2.1 Histograma: densidade e intervalos",
-    contexto: "Dois histogramas sobre a mesma base são construídos com larguras de classe diferentes.",
+    contexto: "Dois histogramas sobre tempos de atendimento em minutos são construídos com classes de larguras diferentes (5, 10 e 15 minutos).",
     enunciado: "Ao comparar dois histogramas com larguras de classe diferentes, a afirmação correta é:",
     alternativas: [
       { letra: "A", texto: "A altura da barra é sempre a medida legítima, independentemente da largura." },
@@ -737,7 +737,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "A ordenação decrescente é obrigatória em todos os gráficos de barras." }
     ],
     gabarito: "C",
-    justificativa: "O currículo registra: 'ordem alfabética só quando a consulta alfabética for o uso real; ordenação afeta a leitura: a mesma tabela com barras decrescentes comunica ranking; embaralhada, esconde o pior resultado'. A alternativa B reproduz exatamente isso. A erra: a ordem não é neutra — afeta a leitura. C erra: a ordem é relevante independente de metáfora. D erra: a ordem decrescente é recomendada quando o objetivo é ranquear, não obrigatória em todos os casos.",
+    justificativa: "O currículo registra: 'ordem alfabética só quando a consulta alfabética for o uso real; ordenação afeta a leitura: a mesma tabela com barras decrescentes comunica ranking; embaralhada, esconde o pior resultado'. A alternativa C reproduz exatamente isso. A erra: a ordem não é neutra — afeta a leitura. B erra: a ordem é relevante independente de metáfora. D erra: a ordem decrescente é recomendada quando o objetivo é ranquear, não obrigatória em todos os casos.",
     analise: {
       A: "INCORRETA. Erro conceitual: a ordem altera a leitura — embaralhada esconde o pior resultado.",
       B: "INCORRETA. Erro conceitual: a ordem é relevante independente de metáfora.",
@@ -873,7 +873,7 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-2-topico-1",
     assunto: "M8.2.1 Histogramas com classes de larguras diferentes",
-    contexto: "Dois histogramas representam a mesma base: um usa classes de largura igual, e o outro, classes de larguras diferentes.",
+    contexto: "Dois histogramas representam a distribuição de salários com classes de larguras desiguais (faixas de 1 mil, 2 mil e 5 mil reais).",
     enunciado: "No histograma de densidade com largura de classe diferente, a afirmação correta sobre a representação é:",
     alternativas: [
       { letra: "A", texto: "A altura da barra representa a frequência da classe, e a densidade é ignorada." },
@@ -911,7 +911,7 @@ const moduleQuestions8 = [
       { letra: "D", texto: "Quebrar a linha na lacuna e sinalizar o período sem coleta, sem conectar diretamente." }
     ],
     gabarito: "D",
-    justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa B reproduz exatamente isso. A erra: conectar gera falsa continuidade. C erra: substituir pela média inventa um valor. D erra: gráficos de linhas suportam lacunas (quebradas), e a conversão para tabela não é obrigatória.",
+    justificativa: "O currículo define que, com lacuna de coleta, deve-se quebrar a linha e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. A alternativa D reproduz exatamente isso. A erra: conectar gera falsa continuidade. B erra: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho. C erra: substituir pela média inventa um valor.",
     analise: {
       A: "INCORRETA. Erro conceitual: conectar gera ilusão de continuidade e de valores intermediários inexistentes.",
       B: "INCORRETA. Erro conceitual: lacunas são representadas por linha quebrada; conversão para tabela não é o único caminho.",
@@ -1047,7 +1047,7 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-4-topico-3",
     assunto: "M8.4.3 Contagem distinta e granularidade",
-    contexto: "Base tem 1.500 linhas, mas apenas 1.200 protocolos distintos.",
+    contexto: "Base de matrículas escolares: 1.500 linhas de movimentação, mas apenas 1.200 alunos distintos.",
     enunciado: "Se um relatório contar 'atendimentos por linhas' e informar 1.500, a medida correta é:",
     alternativas: [
       { letra: "A", texto: "Manter 1.500, pois é a contagem de linhas do fato." },
@@ -1076,7 +1076,7 @@ const moduleQuestions8 = [
     nivel: "avancado",
     topico: "modulo-8-unidade-4-topico-1",
     assunto: "M8.4.1 DAX: agregar antes de dividir",
-    contexto: "Medida de preço médio por unidade aplicada a faturamento e quantidade, com linhas de quantidades diferentes.",
+    contexto: "Medida de custo médio por unidade aplicada a custo total e quantidade produzida, com lotes de tamanhos diferentes e filtro por linha de produção.",
     enunciado: "A afirmação correta sobre a medida 'preço médio por unidade' = Soma(Faturamento) ÷ Soma(Quantidade) é:",
     alternativas: [
       { letra: "A", texto: "É equivalente à média simples dos preços unitários calculados linha a linha, mesmo quando as quantidades variam." },

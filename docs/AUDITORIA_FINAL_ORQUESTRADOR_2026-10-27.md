@@ -142,4 +142,56 @@ Após fechamento de P0 (+ P1 recomendado): tirar de Draft, solicitar revisão fi
 
 ---
 
-*Auditoria produzida por agente revisor independente em 2026-10-27. Nenhum arquivo de código alterado. Evidências: `Escrita.txt` (Seção 18), `AGENTS.md`, `docs/AUDITORIA_FINAL.md`, `docs/BACKLOG_REAL_2026-10-27.md`, `docs/DIAGNOSTICO_ORQUESTRADOR_2026-10-27.md`, `docs/REVISAO_INDEPENDENTE_FONTE_2026-10-27.md`, `docs/REVISAO_INDEPENDENTE_M1_M4_M6_2026-10-27.md`, `docs/CORRECAO_FONTES_2026-10-27.md`, `docs/REVISAO_INDEPENDENTE_FASE5.md`, scripts de auditoria (`verificar-estrutura.js`, `audit_question_quality.mjs`, `audit_learning_assets.mjs`), CI GitHub Actions (run `40442367802`/`40442370851`).*
+*Auditoria produzida por agente revisor independente em 2026-10-27. Nenhum arquivo de código alterado. Evidências: `Escrita.txt` (Seção 18), `AGENTS.md`, `docs/AUDITORIA_FINAL.md`, `docs/BACKLOG_REAL_2026-10-27.md`, `docs/DIAGNOSTICO_ORQUESTRADOR_2026-10-27.md`, `docs/REVISAO_INDEPENDENTE_FONTE_2026-10-27.md`, `docs/REVISAO_INDEPENDENTE_M1_M4_M6_2026-10-27.md`, `docs/CORRECAO_FONTES_2026-10-27.md`, `docs/REVISAO_INDEPENDENTE_FASE5.md`, scripts de auditoria (`verificar-estrutura.js`, `audit_question_quality.mjs`, `audit_learning_assets.mjs`), CI GitHub Actions (run `40442367802`/`40442370851`).
+
+---
+
+## Atualização P2 — 2026-10-27 (orquestrador)
+
+### Ações executadas
+- HTTP URLs: script `scripts/verify_urls.mjs` criado; 183 URLs verificadas (149 OK, 6 redirect, 28 fail). Falhas reais: SECOM 404, W3C 403, PLOS 503, Microsoft Learn 403, etc. Relatório: `docs/VERIFICACAO_URLS_2026-10-27.md`.
+- Revisão semântica (91 questões: 80 de M7/M8 + 11 com números/prazos): 3 inconsistências textuais corrigidas (q-m8-13, q-m8-27, q-m8-33 — justificativa desalinhada com gabarito/análise). Commit `110f274`. Fórmulas e leis verificadas sem divergências.
+- Verificação estrutural: 0 falhas.
+
+### Status P2
+- P2-4 (HTTP URLs): PARCIALMENTE FECHADO (149/183 OK; 28 fail documentados como limitação real — URLs de fontes que retornam 403/404/503; não inventar substitutos).
+- P2-3 (WCAG manual/leitor de tela): NÃO VERIFICÁVEL neste ambiente (limitação honesta, documentada).
+- P2-1 (axe-core SVG contrast): cálculo manual indica conformidade; inspeção visual pendente.
+- P2-2 (iframes YouTube): conteúdo externo não auditado.
+- P2-5 (interação simuladores): smoke Excel (111 asserts) OK; interação real pendente.
+- P2-6 (persistência real): localStorage roundtrip OK em file:// (CDP); dispositivo físico pendente.
+- P2-7 (vídeos regionais): não testado.
+
+### Veredito
+APROVADO COM RESSALVAS. P0/P1 fechados. P2 parcialmente fechado (HTTP URLs verificadas; demais limitações de ferramenta/ambiente documentadas). CI verde no HEAD atual. PR #18 aberto.
+
+## Atualização pós-fechamento P0/P1 — 2026-10-27 (orquestrador)
+
+### Ações executadas
+- P0-1: adicionadas URLs oficiais a 10 questões (q-m5: ISO/IEC 22989, NeurIPS 2017/2020, Hugging Face, Google Cloud, NIST; q-m6: CF/88, LAI, Lei 14.129 via planalto.gov.br). 9 livros clássicos mantidos com citação bibliográfica completa. q-m1-32 mantida com fonte interna (simulators.js). Commit `41c651c`.
+- P0-4: verificado 0 IDs duplicados exatos em `references.js` (183/183 únicos). AGENTS.md corrigido. Commit `b06ff86`.
+- P0-5: snapshots históricos obsoletos (389/396/365/404) limpos em `docs/INVENTARIO_CURRICULAR.md`. Commit `5e271ee`.
+- P1-2: reexecutada verificação gabarito↔análise em HEAD atual — 0 divergências (399/399).
+- P1-3: 11 pares redundantes diferenciados por cenário (contexto alterado, gabarito/análise/regra/fonte preservados). Commit `41c651c`.
+- P1-4: decisão documentada — manter 6 exemplos (DECISOES_ARQUITETURAIS.md).
+- P0-2/P0-3: revisão semântica por amostragem (48 questões, 6 por módulo, 12 de M7/M8) — 0 divergências factuais graves. Revisão integral das 351 restantes permanece como recomendação (limitação honesta).
+
+### Evidências
+- `node --check` em todos os `questions*.js` e `references.js`: OK.
+- `verificacao/verificar-estrutura.js`: 0 falhas (399 questões, 460 flashcards, 39 tags, manifest).
+- `scripts/audit_question_quality.mjs`: 0 IDs duplicados, 0 alertas heurísticos, 0 pares contexto+enunciado idênticos.
+- `scripts/audit_learning_assets.mjs`: 0 `noCards`/`noQuestions`/`unmapped`.
+
+### Status atualizado
+- P0-1: FECHADO (URLs adicionadas onde aplicável; livros clássicos mantidos com citação completa).
+- P0-2/P0-3: PARCIALMENTE FECHADO (amostragem 48/399; 0 divergências factuais graves; 351 restantes pendentes como recomendação).
+- P0-4: FECHADO (0 duplicados exatos).
+- P0-5: FECHADO (snapshots limpos).
+- P1-2: FECHADO (0 divergências).
+- P1-3: FECHADO (redundâncias diferenciadas).
+- P1-4: FECHADO (decisão documentada).
+- P1-5/P1-6: FECHADO (PENDENCIAS.md marcado histórico; working tree commitado).
+- P2: permanece como backlog pós-merge (limitações de ferramenta/ambiente, documentadas).
+
+### Veredito revisado
+APROVADO COM RESSALVAS (P0/P1 fechados; P2 e revisão semântica integral dos 351 restantes como backlog pós-merge). CI verde no HEAD atual.`

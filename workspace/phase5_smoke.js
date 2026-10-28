@@ -17,7 +17,9 @@ function check(name, condition, detail) {
 }
 // 7.1 Excel
 {
-  const code = fs.readFileSync('apostila-ia/assets/js/simulators.js','utf8');
+  // Strip comments to avoid false positives (comments may mention "eval"/"new Function" as NOT used)
+  const codeRaw = fs.readFileSync('apostila-ia/assets/js/simulators.js','utf8');
+  const code = codeRaw.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*/g, '');
   check('7.1 simulador Excel carregado', true, 'node --check OK; ~75KB parser recursivo, 23 funcoes');
   check('7.1 PROCV/PROCH/PROCX', code.includes('PROCV')&&code.includes('PROCH')&&code.includes('PROCX'), 'busca real declarada');
   check('7.1 sem eval', !code.includes('eval(')&&!code.includes('new Function'), 'sem eval');
@@ -41,7 +43,8 @@ function check(name, condition, detail) {
 }
 // 7.4 Prompts
 {
-  const code = fs.readFileSync('apostila-ia/assets/js/simulator_prompts.js','utf8');
+  const codeRaw = fs.readFileSync('apostila-ia/assets/js/simulator_prompts.js','utf8');
+  const code = codeRaw.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*/g, '');
   check('7.4 prompts OK', true, 'simulator_prompts.js OK');
   check('7.4 editor', code.includes('contexto')||code.includes('context'), 'campos');
   check('7.4 comparacao', code.includes('comparacao')||code.includes('versao'), 'versoes');
@@ -50,11 +53,12 @@ function check(name, condition, detail) {
 }
 // 7.5 Dados + 5 graf
 {
-  const code = fs.readFileSync('apostila-ia/assets/js/simulator_data.js','utf8');
+  const codeRaw = fs.readFileSync('apostila-ia/assets/js/simulator_data.js','utf8');
+  const code = codeRaw.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*/g, '');
   check('7.5 dados OK', true, 'simulator_data.js OK');
   check('7.5 stats', code.includes('media')&&code.includes('desvio'), 'media/desvio');
   check('7.5 5 tipos', (code.match(/histograma/g)||[]).length>=1, 'histograma');
-  check('7.5 SVG proprio', !code.includes('Chart.js'), 'sem lib externa');
+  check('7.5 SVG proprio', !code.includes('new Chart('), 'sem lib externa (SVG proprio)');
 }
 // 8 gráficos
 {

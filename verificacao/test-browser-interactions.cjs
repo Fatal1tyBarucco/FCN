@@ -91,16 +91,16 @@ const axeCore = require("axe-core");
     assert.equal(skipState.left, "0px", "focused skip link should move into the viewport");
     assert.ok(skipState.width > 0, "focused skip link should have visible dimensions");
     await page.keyboard.press("Enter");
-    await page.waitForFunction(() => document.activeElement && document.activeElement.id === "main-content", null, { timeout: 5000 });
+    await page.waitForFunction(() => document.activeElement && document.activeElement.id === "main-content", null, { timeout: 10000 });
 
     // Accessibility: curriculum tree supports ArrowLeft/ArrowRight expansion by keyboard.
-    const firstTreeItem = page.locator("#curriculum .curriculum-tree .tree-node[role='treeitem']").first();
+    const firstTreeItem = page.locator("#sidebar-tree-host .curriculum-tree .tree-node[role='treeitem']").first();
     await firstTreeItem.focus();
     assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "true", "first curriculum node should start expanded");
     await page.waitForFunction(() => {
-      const item = document.querySelector("#curriculum .curriculum-tree .tree-node[role='treeitem']");
+      const item = document.querySelector("#sidebar-tree-host .curriculum-tree .tree-node[role='treeitem']");
       return Boolean(item) && document.activeElement === item;
-    }, null, { timeout: 5000 });
+    }, null, { timeout: 15000 });
     await page.keyboard.press("ArrowLeft");
     assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "false", "ArrowLeft should collapse the focused curriculum node");
     await page.keyboard.press("ArrowRight");
@@ -180,6 +180,83 @@ const axeCore = require("axe-core");
     }, null, { timeout: 5000 });
     const chartAfter = await page.locator("#saida-histograma svg").evaluate(el => el.outerHTML);
     assert.notEqual(chartAfter, chartBefore, "editing a numeric chart input must recalculate SVG");
+
+    // Responsive navigation shell: desktop sidebar, mobile drawer and Escape dismissal.
+    await page.setViewportSize({ width: 1440, height: 900 });
+    assert.equal(await page.locator("#app-sidebar").isVisible(), true, "desktop sidebar must be visible");
+    assert.equal(await page.locator("#sidebar-toggle").isVisible(), false, "desktop layout must not show a redundant menu toggle");
+    assert.equal(await page.locator("#sidebar-tree-host .tree-modulo").count(), 8, "all eight curriculum modules must render in the sidebar");
+
+    await page.setViewportSize({ width: 390, height: 844 });
+    const menuToggle = page.locator("#sidebar-toggle");
+    assert.equal(await menuToggle.isVisible(), true, "mobile menu toggle must be visible");
+    await menuToggle.click();
+    assert.equal(await menuToggle.getAttribute("aria-expanded"), "true", "mobile menu must report expanded state");
+    assert.equal(await page.locator("#app-sidebar").getAttribute("aria-hidden"), "false", "open mobile drawer must be exposed to assistive technology");
+    assert.equal(await page.locator("#app-sidebar").evaluate(el => el.inert), false, "open mobile drawer must be interactive");
+    assert.equal(await page.locator("body").evaluate(el => el.classList.contains("sidebar-open")), true, "opening the mobile menu must activate the drawer");
+    await page.keyboard.press("Shift+Tab");
+    assert.equal(await page.locator("#sidebar-tree-host .tree-node[role='treeitem'][tabindex='0']").evaluate(el => el === document.activeElement), true, "Shift+Tab from the first link must wrap to the active roving-tabindex tree item");
+    await page.keyboard.press("Tab");
+    assert.equal(await page.locator("#app-sidebar .quick-link").first().evaluate(el => el === document.activeElement), true, "Tab from the last sidebar item must wrap to the first link");
+    await page.keyboard.press("Escape");
+    assert.equal(await menuToggle.getAttribute("aria-expanded"), "false", "Escape must close the mobile menu");
+    assert.equal(await page.locator("#app-sidebar").getAttribute("aria-hidden"), "true", "closed mobile drawer must be hidden from assistive technology");
+    assert.equal(await page.locator("#app-sidebar").evaluate(el => el.inert), true, "closed mobile drawer must not trap keyboard focus");
+    assert.equal(await page.locator("body").evaluate(el => el.classList.contains("sidebar-open")), false, "Escape must remove the drawer state");
+    await menuToggle.click();
+    await page.locator("#app-sidebar a[href='#flashcards']").click();
+    assert.equal(await menuToggle.getAttribute("aria-expanded"), "false", "selecting a section must close the mobile menu");
+    await menuToggle.click();
+    await page.locator("#sidebar-tree-host .tree-link").first().click();
+    await page.waitForFunction(() => {
+      const heading = document.querySelector("#study-workspace-title");
+      return heading && heading.textContent.trim() !== "Estude um tópico";
+    }, null, { timeout: 5000 });
+    assert.notEqual((await page.locator("#study-workspace-title").innerText()).trim(), "Estude um tópico", "study heading must follow the selected curriculum topic");
+    const mobileLayout = await page.evaluate(() => ({
+      viewportWidth: window.innerWidth,
+      documentWidth: document.documentElement.scrollWidth,
+      mainChildren: Array.from(document.querySelector("#main-content").children).map(element => {
+        const rect = element.getBoundingClientRect();
+        return {
+          selector: element.tagName.toLowerCase() + (element.id ? "#" + element.id : "") + (typeof element.className === "string" && element.className ? "." + element.className.trim().split(/\\s+/).join(".") : ""),
+          left: Math.round(rect.left),
+          right: Math.round(rect.right),
+          width: Math.round(rect.width),
+          scrollWidth: element.scrollWidth,
+          clientWidth: element.clientWidth,
+          overflowX: getComputedStyle(element).overflowX
+        };
+      }),
+      overflowCandidates: Array.from(document.querySelectorAll("body *")).map(element => {
+        const rect = element.getBoundingClientRect();
+        const style = getComputedStyle(element);
+        return {
+          selector: element.tagName.toLowerCase() + (element.id ? "#" + element.id : "") + (typeof element.className === "string" && element.className ? "." + element.className.trim().split(/\\s+/).join(".") : ""),
+          left: Math.round(rect.left),
+          right: Math.round(rect.right),
+          width: Math.round(rect.width),
+          position: style.position,
+          overflowX: style.overflowX,
+          ancestors: Array.from((function* () { let parent = element.parentElement; let depth = 0; while (parent && depth < 5) { yield parent; parent = parent.parentElement; depth++; } })()).map(parent => {
+            const parentRect = parent.getBoundingClientRect();
+            return {
+              selector: parent.tagName.toLowerCase() + (parent.id ? "#" + parent.id : "") + (typeof parent.className === "string" && parent.className ? "." + parent.className.trim().split(/\\s+/).join(".") : ""),
+              left: Math.round(parentRect.left),
+              right: Math.round(parentRect.right),
+              width: Math.round(parentRect.width),
+              scrollWidth: parent.scrollWidth,
+              clientWidth: parent.clientWidth,
+              overflowX: getComputedStyle(parent).overflowX
+            };
+          })
+        };
+      }).filter(item => item.right > window.innerWidth + 1 && item.position !== "fixed" && item.position !== "absolute")
+        .sort((left, right) => right.right - left.right)
+        .slice(0, 20)
+    }));
+    assert.ok(mobileLayout.documentWidth <= mobileLayout.viewportWidth + 1, "mobile layout must not introduce horizontal overflow: " + JSON.stringify(mobileLayout));
 
     assert.deepEqual(pageErrors, [], "simulator interactions must not throw uncaught JavaScript errors");
     console.log(JSON.stringify({

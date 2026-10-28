@@ -71,7 +71,7 @@ python3 -m http.server 8080     # Modo B — servidor estático opcional
 - M3: **renderiza** — `index.html` inclui `curriculum_m3.js` e `flashcards_m3.js`; 3.1–3.5 implementados (5 unidades, 14 tópicos, 35 subtópicos) + 68 flashcards.
 - M4, M5, M6, M7 e M8: **carregados e renderizam** — `curriculum_m4.js` (4 unidades, 13 tópicos, 39 subtópicos), `curriculum_m5.js` (**5.1–5.4: 4 unidades, 13 tópicos, 35 subtópicos, 105 exemplos, 70 exercícios — 5.3/5.4 entraram no P1-C**), `curriculum_m6.js` (**criado no P1-C: 6 unidades 6.1–6.6, 18 tópicos, 46 subtópicos, 138 exemplos, 92 exercícios**, chave `modulo-6`, no `index.html` desde o P1-C), `curriculum_m7.js` (3 unidades, 9 tópicos, 23 subtópicos) e `curriculum_m8.js` (8.1–8.5: 5 unidades, 23 tópicos, 28 subtópicos). A árvore renderiza os **8 módulos, 132 tópicos + 295 subtópicos = 427 nós** (M1 23 tópicos + 37 subtópicos; M2 19 + 52; M3 14 + 35; M4 13 + 39; M5 13 + 35; M6 18 + 46; M7 9 + 23; M8 23 + 28; conferido módulo a módulo em smoke Node/vm do P1-F). Flashcards: M4=54, M5=66, M6/M7/M8=50 cada (contagens estruturais confirmadas em 2026-10-25). O laboratório interativo de prompts (5.4) continua inexistente — 5.4 é conteúdo didático.
 - Flashcards: **460 no disco e conectados ao app** (M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50, M8=50; IDs únicos por arquivo). Questões: **399** (M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40). Os validadores de CI anteriores confirmaram a estrutura e a fusão de 399 questões, sem IDs duplicados; a nova execução no HEAD atual ainda precisa concluir. Quantidade de ativos não prova domínio curricular.
-- Referências (HEAD atual auditado em 2026-10-27): `apostila-ia/assets/data/references.js` contém **183 entradas** — 20 vídeos e 163 referências técnicas; todas têm status `verificado` e URL preenchida. CI validate-curriculum passou para HEAD `bab709d` (runs 40446152897 push e 40446156719 PR, success). Pendentes remanescentes (não cadastrados): demais resoluções ANPD, RFCs não listadas, demais incisos/parágrafos constitucionais e verificação artigo a artigo das leis adicionais citadas por remissão em M6.`
+- Referências (HEAD atual auditado em 2026-10-27): `apostila-ia/assets/data/references.js` contém **183 entradas** — 20 vídeos e 163 referências técnicas; IDs todos únicos (183/183, 0 duplicados exatos; sufixos -2/-3 garantem unicidade). Todas têm status `verificado` e URL preenchida. CI validate-curriculum passou para HEAD `bab709d` (runs 40446152897 push e 40446156719 PR, success). Pendentes remanescentes (não cadastrados): demais resoluções ANPD, RFCs não listadas, demais incisos/parágrafos constitucionais e verificação artigo a artigo das leis adicionais citadas por remissão em M6.`
 - Revisão pedagógica (I5, 2026-10-24): 7 correções pontuais em `curriculum.js` (M1) e `curriculum_m6.js` (M6) — erro de digitação "sinconexerência"→"sincronização", suavização de 5 afirmações não verificáveis (cotas OneDrive, prazos de retenção, art. 8º-A LAI), substituição de exercício com prazo não verificado. Documentado em `docs/REVISAO_PEDAGOGICA.md`. Contagem de nós preservada (427).
 
 - Deploy: `.github/workflows/deploy-pages.yml` roda `node --check` em todos os `assets/**/*.js` e publica `apostila-ia/` como raiz do site (push em `main` ou manual). A action `upload-pages-artifact` só aceita **um** diretório, então o job copia `inventario/` e `matriz/` (fonte, na raiz) para dentro de `apostila-ia/` antes do upload — é o que faz os dois links do `index.html` funcionarem no Pages **e** no `file://`.
@@ -91,3 +91,55 @@ python3 -m http.server 8080     # Modo B — servidor estático opcional
 ## Histórico de auditorias
 
 O histórico detalhado de auditorias semânticas, CI e revisões focais foi movido para `docs/HISTORICO_AUDITORIAS.md` para manter este arquivo legível. Consulte-o para rastreabilidade completa.
+
+
+## Refatoração visual e GitHub Pages — 2026-10-27
+
+- A folha de estilos canônica é `apostila-ia/assets/css/styles.css`; o bloco CSS inline de `apostila-ia/index.html` foi removido para eliminar cascata concorrente entre CSS externo e interno.
+- Redesenho aplicado: identidade editorial azul-marinho, fundo cinza-claro, cartões brancos com bordas arredondadas e sombras discretas, hierarquia tipográfica, componentes de formulário, botões, tabelas, flashcards, árvore curricular, vídeos e gráficos.
+- Responsividade refinada para telefones estreitos, tablets e desktops; áreas de toque mínimas de 44px, foco visível, redução de movimento, estilos de impressão e tema escuro via preferência do sistema.
+- Cabeçalho simplificado para apresentar a finalidade educacional, sem expor no topo contagens de auditoria, status de testes ou pendências técnicas.
+- O workflow `.github/workflows/deploy-pages.yml` publica somente após push em `main` ou execução manual. Alterações em PR não atualizam o site publicado até o merge e o deploy subsequente.
+- Estado desta alteração: CSS e HTML modificados na branch `feat/recursos-personalizacao-persistencia` (PR #19). A refatoração visual ainda exige validação visual real em desktop/mobile e verificação pós-deploy; não declarar equivalência visual ou WCAG integral sem evidências.
+
+
+## Refatoração profunda do frontend — continuação (2026-10-28)
+
+### Implementação
+- Criado `apostila-ia/assets/js/ui-shell.js`: monta o shell visual sem framework, adiciona menu lateral com atalhos para vídeos, currículo, flashcards, questões, gráficos, busca e progresso; reposiciona a árvore curricular existente no menu; implementa abertura/fechamento móvel, overlay, tecla Escape, foco e indicação da seção ativa.
+- Atualizado `apostila-ia/assets/css/styles.css`: layout editorial com sidebar azul-marinho, navegação hierárquica, conteúdo em cartões, breakpoints para desktop/tablet/celular, menu móvel sobreposto, estados ativos, foco, tema escuro e impressão.
+- Atualizado `apostila-ia/index.html` para carregar `ui-shell.js` imediatamente depois de `navigation.js`. Isso preserva a ordem de inicialização: a árvore é renderizada antes de ser movida para a sidebar.
+- O shell mantém os motores existentes de currículo, flashcards, banco de questões, simuladores, busca, áudio, gráficos e progresso; não substitui IDs de seções nem chaves de persistência.
+- A árvore de navegação permanece acessível por teclado; o painel de conteúdo do tópico continua no módulo curricular e recebe conteúdo pelo mesmo mecanismo existente.
+
+### Validações estruturais feitas
+- HTML: uma referência à folha CSS canônica e uma ao novo script; script de shell carregado após navegação; nenhum bloco CSS inline; nenhum ID duplicado.
+- CSS: chaves e parênteses balanceados.
+- JavaScript do shell: chaves balanceadas e funções de inicialização/controle presentes.
+- Não há execução de workflow/teste de navegador confirmada para este HEAD. Não declarar testes funcionais, auditoria WCAG completa ou inspeção visual física como aprovados sem evidência.
+- A versão publicada no GitHub Pages só refletirá a alteração depois do merge na `main` e de um deploy concluído. Não executar merge automaticamente como parte desta etapa.
+
+
+### Correção de integração do menu — 2026-10-28
+- A árvore curricular é movida como wrapper `#navegacao-curriculo`, não somente como elemento `.curriculum-tree`. O motor `navigation.js` delega eventos, enumera itens visíveis e calcula ancestrais com base no wrapper; preservar essa relação evita regressões na navegação por teclado, expansão e seleção.
+- Contagem real do HTML: 40 scripts externos (23 scripts de dados e 17 scripts JavaScript). O verificador estrutural foi corrigido para refletir o inventário efetivo do HTML.
+
+
+### Validação e refinamento contínuo do shell — 2026-10-28
+- Corrigido o teste de fumaça do navegador para localizar os oito módulos no novo host `#sidebar-tree-host`.
+- Adicionadas verificações de navegador para menu desktop/mobile, estado ARIA, fechamento por Escape, fechamento ao navegar e ausência de overflow horizontal em viewport móvel.
+- Adicionada verificação da atualização do título da área de estudo conforme o tópico selecionado.
+- O wrapper `#navegacao-curriculo` permanece ancestral da árvore no menu lateral para preservar os handlers delegados e a navegação por teclado de `navigation.js`.
+- O verificador estrutural reflete 40 tags de script existentes no HTML (23 dados + 17 scripts JavaScript).
+- Ampliado o workflow existente `.github/workflows/validate-curriculum.yml` com regressão dos simuladores e testes de navegador do shell responsivo.
+- O workflow de validação ainda não tem execução confirmada neste HEAD; os testes Playwright exigem dependências Chromium e axe-core. A PR segue aberta e a publicação não foi executada.
+
+
+### Validação e refinamento contínuo do shell — 2026-10-28
+- Corrigido o teste de fumaça do navegador para localizar os oito módulos no novo host `#sidebar-tree-host`.
+- Adicionadas verificações de navegador para menu desktop/mobile, estado ARIA, fechamento por Escape, fechamento ao navegar e ausência de overflow horizontal em viewport móvel.
+- Adicionada verificação da atualização do título da área de estudo conforme o tópico selecionado.
+- O wrapper `#navegacao-curriculo` permanece ancestral da árvore no menu lateral para preservar os handlers delegados e a navegação por teclado de `navigation.js`.
+- O verificador estrutural reflete 40 tags de script existentes no HTML (23 dados + 17 scripts JavaScript).
+- Ampliado o workflow existente `.github/workflows/validate-curriculum.yml` com regressão dos simuladores e testes de navegador do shell responsivo.
+- O workflow de validação ainda não tem execução confirmada neste HEAD; os testes Playwright exigem dependências Chromium e axe-core. A PR segue aberta e a publicação não foi executada.

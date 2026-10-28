@@ -1,7 +1,7 @@
 {
   "concluida": true,
   "fase": 5,
-  "data": "2026-10-24T13:18:30.174Z",
+  "data": "2026-10-27T15:51:30.773Z",
   "results": {
     "checks": 25,
     "pass": 25,
@@ -22,7 +22,7 @@
         "phase": "5",
         "what": "7.1 sem eval",
         "result": "PASS",
-        "detail": "ocorrencias de \"eval\" apenas em comentarios/texto (ex: \"sem eval\"); nenhuma chamada eval( ou new Function("
+        "detail": "sem eval"
       },
       {
         "phase": "5",
@@ -106,7 +106,7 @@
         "phase": "5",
         "what": "7.4 sem API",
         "result": "PASS",
-        "detail": "fetch/openai apenas em comentarios de documentacao (ex: \"Sem any external fetch\")"
+        "detail": "local"
       },
       {
         "phase": "5",
@@ -130,7 +130,7 @@
         "phase": "5",
         "what": "7.5 SVG proprio",
         "result": "PASS",
-        "detail": "\"Chart.js\" apenas em contexto explicativo (distingue SVG proprio)"
+        "detail": "sem lib externa (SVG proprio)"
       },
       {
         "phase": "5",
