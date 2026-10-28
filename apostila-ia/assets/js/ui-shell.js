@@ -38,6 +38,8 @@
     sidebar.setAttribute('aria-label', 'Menu principal e currículo');
     sidebar.innerHTML = [
       '<div class="sidebar-brand"><span class="sidebar-brand-mark" aria-hidden="true">TI</span><div><strong>Apostila TI &amp; Dados</strong><small>Central de aprendizagem</small></div></div>',
+      '<p class="sidebar-section-label">MÓDULOS</p>',
+      '<div id="nav-list" class="sidebar-nav-list"></div>',
       '<nav class="quick-navigation" aria-label="Seções da apostila"><p class="sidebar-section-label">NAVEGAÇÃO</p>',
       '<a class="quick-link" href="#videos-app"><span aria-hidden="true">▶</span><span>Vídeos educacionais</span></a>',
       '<a class="quick-link" href="#study-workspace"><span aria-hidden="true">▤</span><span>Área de aprendizagem</span></a>',

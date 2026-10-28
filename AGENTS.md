@@ -152,4 +152,33 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 - **state.js**: `currentModule` padrão alterado de `'modulo-1'` para `'msoffice'`.
 - **ui-shell.js**: seletores adaptados de `#main-content`/`header` para `#main`/`#header` existentes.
 - Verificação: `node --check` 43/43 passam; `verificar-estrutura.js` 0 falhas (42 tags, 399 questões, 460 flashcards); `phase5_smoke.js` 25/25; browser smoke (Chromium headless): 8 módulos × 6 abas com conteúdo não-vazio, 0 erros JS, TTS/busca/localStorage/tema funcionais, todos os 6 simuladores presentes.
-- Deploy: merge cf1ae9d em main; workflow deploy-pages deve publicar automaticamente.
+| Deploy: merge cf1ae9d em main; workflow deploy-pages deve publicar automaticamente.
+
+## Refatoração baseada em index_example.html (2026-10-28, sessão ativa)
+
+- **index.html**: reescrito seguindo a arquitetura SPA do `examples/index_example.html` — `App`/`DB`/`State` globals, `renderModuleView`/`renderTabs`/`bindTabs`/`renderModuleHook`→`initSimulators`/`DOMContentLoaded` listener. CSS completo via `:root` dark + `[data-theme="light"]` light theme variables (bg, surface, border, text, text-dim, primary, success, error, warning, accent, radius, shadow). Layout 2-colunas: `#main` fluid (max-width 1200px) + `#app-sidebar` fixed/sticky (280px, gerado por `ui-shell.js`). Header sticky interno ao `#main` com `#global-progress`, `#search-input`, controles TTS (`#tts-play`/`#tts-pause`/`#tts-rate`), `#theme-toggle`.
+- Tabs SPA dinâmicas: Teoria (HTML + Mermaid + vídeos), Mapas e Diagramas (Mermaid.js CDN), Simuladores, Resumo Relâmpago, Flashcards (SR: Easy/Hard/Wrong), Simulado — 6 tabs `.tab`/`.tab-content` com `.active` + `fadeIn` animation.
+- Corrigido bug de DOM wiping: containers de simuladores (`#charts-app`, `#excel-app`, `#redes-app`, `#seguranca-app`, `#prompts-app`, `#dados-app`, `#etica-app`) e containers antigos (`#curriculum`, `#flashcards-app`, `#quiz-app`, `#search-app`, `#audio-app`, `#progress-app`, `#accessibility-app`) movidos fora de `#content-area` — sobrevivem a re-renderizações de abas.
+- Corrigido dual-sidebar: removido `<aside id="sidebar">`; `navigation.js` renderiza os 8 módulos em `<div id="nav-list" class="sidebar-nav-list">` dentro de `#app-sidebar` (gerado por `ui-shell.js`).
+- Acessibilidade: `aria-label` em todos os controles interativos, skip-link `.a11y-skip-link`, landmarks `<main>`/`<header>`, `aria-hidden` em containers off-screen, `title` em inputs/buttons.
+- Persistência: localStorage chave `apostila-ia-progresso` com `progress`, `flashcards`, `quizScores`, `theme` — theme toggle salva e carrega no `State.load()`. Chave antiga `apostila_ti_state_v3` removida.
+- CDNs no `<head>`: Mermaid.js + Chart.js + chartjs-chart-box-and-violin-plot; `manifest.webmanifest` + ícone 192px; service worker condicional (HTTPS apenas).
+- `montarSimulador(global, id)` com guarda tripla (container presente / global presente / `mount()` não lança) para os 6 simuladores.
+- 40 tags `<script src>` (23 dados + 17 JS), todas locais, 0 externas.
+
+### Validações (todos passando)
+- `node --check` em todos os 43 JS files: 43/43 OK
+- `verificar-estrutura.js`: 0 falhas (42 tags script, 399 questões, 460 flashcards, manifesto válido)
+- `phase5_smoke.js`: 25/25 aprovados
+- Browser smoke (Chromium headless via CDP): 0 erros JS, 8 módulos × 6 abas, 6 simuladores montados e com conteúdo, 5 SVGs, 8 nav items, theme toggle→persistência, tab switching, flashcard flip (66 cards M1), quiz (12 M1), localStorage round-trip, 0 unnamed controls, 0 imagens sem alt, skip-link presente, 1 main landmark.
+- Limitação: Playwright não disponível em Android/Termux — browser smoke realizado via Chrome DevTools Protocol (Chromium 156 headless). PWA condicional (https-only) não testada em produção local.
+| Nº  | Módulo             | Título                              | Simulador                          | Flashcards | Questões | Mermaid | Vídeos |
+|-----|--------------------|-------------------------------------|------------------------------------|-----------|----------|---------|--------|
+| M1  | msoffice           | MS Office 365 (Excel, PPT, OneDrive)| Excel Formula (SOMA/MEDIA/SE/CONT.SE)| 66        | 44       | 1       | 1      |
+| M2  | redes              | Redes (OSI, IPv4, CIDR, ping/trace) | Network (ping/traceroute/CIDR)    | 56        | 54       | 1       | 1      |
+| M3  | comunicacao        | Comunicação (E-mail, Teams, Zoom)   | —                                  | 68        | 47       | 1       | 0      |
+| M4  | seguranca          | Segurança & Governança (Tríade CIA) | Security (Phishing Detection)     | 54        | 85       | 1       | 0      |
+| M5  | ia                 | Inteligência Artificial (Prompts)   | Prompt Engineering Workbench      | 66        | 42       | 1       | 0      |
+| M6  | etica              | Ética e Governo Digital (LIMPE/LAI) | Ethics — Simulador de Conflitos   | 50        | 47       | 1       | 0      |
+| M7  | dados              | Dados e Engenharia (DIKW, SQL)      | Data Visualization Studio         | 50        | 40       | 1       | 0      |
+| M8  | visualizacao       | Visualização (Gestalt, Power BI)    | —                                  | 50        | 40       | 1       | 0      |
