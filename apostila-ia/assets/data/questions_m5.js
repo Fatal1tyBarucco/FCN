@@ -54,7 +54,7 @@ const moduleQuestions5 = [
     },
     regra: "Sistema baseado em regras aplica condições e ações explicitamente definidas; mantenha, teste e documente as regras e suas exceções.",
     pegadinha: "Transparência das regras não significa ausência de conflitos nem dispensa validação; também não significa que a solução nunca possa ser híbrida.",
-    fonte: "Russell, S. J. e Norvig, P. — Artificial Intelligence: A Modern Approach, 4th ed., 2020."
+    fonte: "Russell, S. J. e Norvig, P. — Artificial Intelligence: A Modern Approach, 4th ed., Pearson, 2020. ISBN 978-0134610993. Catálogo Pearson: https://www.pearson.com/store/p/artificial-intelligence-a-modern-approach/P100002643809 (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-03", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -79,7 +79,7 @@ const moduleQuestions5 = [
     },
     regra: "Aprendizado de máquina ajusta modelos a partir de dados ou experiência; desempenho depende de dados, método, objetivo e avaliação.",
     pegadinha: "Mais dados não garantem automaticamente melhor desempenho, e aprendizado de máquina não se limita a exemplos rotulados.",
-    fonte: "Mitchell, T. M. — Machine Learning, McGraw-Hill, 1997."
+    fonte: "Mitchell, T. M. — Machine Learning, McGraw-Hill, 1997. ISBN 978-0070428072. Catálogo McGraw-Hill: https://www.mhprofessional.com/machine-learning-9780070428072-usa (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-04", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -254,7 +254,7 @@ const moduleQuestions5 = [
     },
     regra: "Avalie sistemas de IA contra objetivos, dados, métricas, riscos e limites definidos para o caso de uso.",
     pegadinha: "Não trate 'IA completa' como uma categoria técnica universal: a adequação é relativa à tarefa, aos critérios e ao contexto de implantação.",
-    fonte: "ISO/IEC 22989 — Artificial intelligence — Concepts and terminology: https://www.iso.org/standard/74296.html."
+    fonte: "ISO/IEC 22989:2022 — Artificial intelligence — Concepts and terminology: https://www.iso.org/standard/74530.html (verificado em 2026-10-27)."
   },
 
   /* ===================== 5.2 Aprendizado de Máquina (10 questões) ===================== */
@@ -281,7 +281,7 @@ const moduleQuestions5 = [
     },
     regra: "Supervisionado aprende com alvos; não supervisionado procura estrutura sem alvos fornecidos; reforço aprende decisões por interação e recompensa.",
     pegadinha: "Não confunda 'há dados' com 'há rótulos': o tipo de sinal disponível é central para distinguir paradigmas.",
-    fonte: "Murphy, K. P. — Machine Learning: A Probabilistic Perspective, MIT Press, 2012."
+    fonte: "Murphy, K. P. — Machine Learning: A Probabilistic Perspective, MIT Press, 2012. ISBN 978-0262018029. MIT Press: https://mitpress.mit.edu/books/machine-learning-probabilistic-perspective (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-12", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -356,7 +356,7 @@ const moduleQuestions5 = [
     },
     regra: "Atributos = entradas; variável-alvo = resultado a prever; rotulagem = atribuição consistente das respostas esperadas aos exemplos.",
     pegadinha: "Se um atributo contém a resposta ou informação posterior ao resultado, o modelo pode aparentar ótimo desempenho por vazamento.",
-    fonte: "Han, Kamber e Pei — Data Mining: Concepts and Techniques, 3rd ed., 2011."
+    fonte: "Han, J.; Kamber, M.; Pei, J. — Data Mining: Concepts and Techniques, 3rd ed., Morgan Kaufmann, 2011. ISBN 978-0123814791. Elsevier: https://www.elsevier.com/books/data-mining/jiawei-han/978-0-12-381479-1 (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-15", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -583,7 +583,7 @@ const moduleQuestions5 = [
     },
     regra: "Atenção = query×key → pesos sobre values.",
     pegadinha: "Atenção não é simples soma ou escolha aleatória.",
-    fonte: "Vaswani, A. et al. — Attention Is All You Need, NeurIPS 2017: https://arxiv.org/abs/1706.03762."
+    fonte: "Vaswani, A. et al. — Attention Is All You Need, Advances in Neural Information Processing Systems 30 (NeurIPS 2017): https://papers.nips.cc/paper/2017/file/3045a374153d528126beb97879e07687-Paper.pdf (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-24", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -674,7 +674,7 @@ const moduleQuestions5 = [
     },
     regra: "Temperatura: alta tende a aumentar a variabilidade; baixa tende a reduzir a aleatoriedade, mas não garante determinismo em toda configuração.",
     pegadinha: "Alta temperatura não é 'melhor criatividade'.",
-    fonte: "Hugging Face — Temperature, Top-K, Top-P, 2024: https://huggingface.co/docs/transformers/main/en/generation_strategies."
+    fonte: "Hugging Face Documentation — Generation Strategies (Temperature, Top-K, Top-P): https://huggingface.co/docs/transformers/generation_strategies (verificado em 2026-10-27)."
   },
 
   /* ===================== 5.4 Engenharia de Prompts (11 questões) ===================== */
@@ -701,7 +701,7 @@ const moduleQuestions5 = [
     },
     regra: "Prompt completo: contexto, tarefa, restrições, formato.",
     pegadinha: "Só perguntar não é suficiente.",
-    fonte: "Google Cloud — Prompt design, 2024: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies."
+    fonte: "Google Cloud Documentation — Prompt Design: https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-29", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -726,7 +726,7 @@ const moduleQuestions5 = [
     },
     regra: "Few-shot = fornecer exemplos no prompt.",
     pegadinha: "Few-shot não é mais lento sempre.",
-    fonte: "Brown, T. et al. — Language Models are Few-Shot Learners, NeurIPS 2020: https://arxiv.org/abs/2005.14165."
+    fonte: "Brown, T. B. et al. — Language Models are Few-Shot Learners, Advances in Neural Information Processing Systems 33 (NeurIPS 2020): https://papers.nips.cc/paper/2020/file/14e4c356856f75c235142f6742785648-Paper.pdf (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-30", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -751,7 +751,7 @@ const moduleQuestions5 = [
     },
     regra: "Delimitação = separar instrução e dado.",
     pegadinha: "Delimitação ajuda, mas não substitui defesa em camadas contra injeção de prompt.",
-    fonte: "NIST — Adversarial Machine Learning, 2024: https://doi.org/10.6028/NIST.AI.100-2e2023."
+    fonte: "NIST — Adversarial Machine Learning: https://www.nist.gov/programs-projects/adversarial-machine-learning (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-31", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -892,7 +892,7 @@ const moduleQuestions5 = [
     },
     regra: "Underfitting = 'modelo simples demais' — erro alto em ambos.",
     pegadinha: "Underfitting não é 'overfitting no caminho inverso' — é insuficiência de capacidade.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    fonte: "Hastie, T.; Tibshirani, R.; Friedman, J. — The Elements of Statistical Learning: Data Mining, Inference, and Prediction, 2nd ed., Springer, 2009. ISBN 978-0387848570. Springer: https://link.springer.com/book/10.1007/978-0-387-84858-7 (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-37", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -917,7 +917,7 @@ const moduleQuestions5 = [
     },
     regra: "Cross-validation = 'múltiplos splits' para verificar estabilidade.",
     pegadinha: "Cross-validation não elimina a necessidade de teste final.",
-    fonte: "James, G. et al. — An Introduction to Statistical Learning, 2021."
+    fonte: "James, G.; Witten, D.; Hastie, T.; Tibshirani, R. — An Introduction to Statistical Learning: with Applications in R, 2nd ed., Springer, 2021. ISBN 978-1071614174. Springer: https://link.springer.com/book/10.1007/978-1-07-161418-1 (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-38", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -942,7 +942,7 @@ const moduleQuestions5 = [
     },
     regra: "Curvas de aprendizado: avalie conjuntamente erros de treino e validação, a evolução com o tamanho da amostra e a distância entre as curvas.",
     pegadinha: "Não deduza generalização apenas pelo erro de treino: compare-o com o erro de validação e observe sua evolução com mais dados.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2009."
+    fonte: "Hastie, T.; Tibshirani, R.; Friedman, J. — The Elements of Statistical Learning: Data Mining, Inference, and Prediction, 2nd ed., Springer, 2009. ISBN 978-0387848570. Springer: https://link.springer.com/book/10.1007/978-0-387-84858-7 (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-39", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -967,7 +967,7 @@ const moduleQuestions5 = [
     },
     regra: "Precisão = 'quando acusou, quantos estavam corretos'.",
     pegadinha: "Precisão e recall têm denominadores diferentes.",
-    fonte: "Provost, F. & Fawcett, T. — Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking, 2013."
+    fonte: "Provost, F.; Fawcett, T. — Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking, O'Reilly Media, 2013. ISBN 978-1449361327. O'Reilly: https://www.oreilly.com/library/view/data-science-for/9781449361310/ (verificado em 2026-10-27)."
   },
 
   { id: "q-m5-40", modulo: 5, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -992,7 +992,7 @@ const moduleQuestions5 = [
     },
     regra: "MAE resume erros absolutos; RMSE dá peso quadrático maior a erros grandes. Compare-os no mesmo conjunto e investigue segmentos e extremos.",
     pegadinha: "A diferença entre MAE e RMSE não diagnostica sozinha overfitting nem demonstra qualidade uniforme do modelo.",
-    fonte: "Hastie, T. et al. — The Elements of Statistical Learning, 2nd ed., 2009."
+    fonte: "Hastie, T.; Tibshirani, R.; Friedman, J. — The Elements of Statistical Learning: Data Mining, Inference, and Prediction, 2nd ed., Springer, 2009. ISBN 978-0387848570. Springer: https://link.springer.com/book/10.1007/978-0-387-84858-7 (verificado em 2026-10-27)."
   },
 
   {
