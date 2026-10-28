@@ -99,3 +99,9 @@ Executar Fase A (inventário) antes de qualquer edição de CSS, para evitar mov
 - A folha CSS externa é a fonte visual canônica. A ordem de scripts garante que `navigation.js` crie a árvore antes de `ui-shell.js` reposicioná-la.
 - Os testes estruturais foram atualizados para a nova contagem de 41 scripts externos e o teste de teclado foi atualizado para localizar a árvore na sidebar.
 - Executar novamente `node verificacao/verificar-estrutura.js`, `node --check` para todos os JS, smoke tests e testes Playwright após a integração. Os resultados do HEAD atualizado ainda não estão disponíveis; não assumir aprovação.
+
+
+## Atualização de implementação — 2026-10-28
+A navegação lateral e a área de aprendizagem foram implementadas em `assets/js/ui-shell.js`. O shell preserva o wrapper original da árvore curricular para manter a delegação de eventos e sincroniza o título da área de estudo com o tópico selecionado. Os testes de fumaça e de interação foram adaptados à nova localização da árvore e agora incluem comportamento do menu responsivo e overflow móvel.
+
+Foi criado `.github/workflows/validate-frontend.yml` para executar a suíte estrutural e de navegador em pull requests. Ainda não há execução bem-sucedida confirmada para este HEAD. O status de conclusão exige resultados reais de CI e inspeção visual do GitHub Pages após deploy.
