@@ -94,11 +94,11 @@ const axeCore = require("axe-core");
     await page.waitForFunction(() => document.activeElement && document.activeElement.id === "main-content", null, { timeout: 10000 });
 
     // Accessibility: curriculum tree supports ArrowLeft/ArrowRight expansion by keyboard.
-    const firstTreeItem = page.locator("#curriculum .curriculum-tree .tree-node[role='treeitem']").first();
+    const firstTreeItem = page.locator("#sidebar-tree-host .curriculum-tree .tree-node[role='treeitem']").first();
     await firstTreeItem.focus();
     assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "true", "first curriculum node should start expanded");
     await page.waitForFunction(() => {
-      const item = document.querySelector("#curriculum .curriculum-tree .tree-node[role='treeitem']");
+      const item = document.querySelector("#sidebar-tree-host .curriculum-tree .tree-node[role='treeitem']");
       return Boolean(item) && document.activeElement === item;
     }, null, { timeout: 15000 });
     await page.keyboard.press("ArrowLeft");
