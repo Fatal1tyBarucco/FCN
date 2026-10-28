@@ -61,12 +61,13 @@
     shell.appendChild(overlay);
 
     if (curriculumNavigation) {
-      const tree = curriculumNavigation.querySelector('.curriculum-tree');
       const host = sidebar.querySelector('#sidebar-tree-host');
-      if (tree && host) {
-        host.appendChild(tree);
+      if (host) {
+        /* Mantém o wrapper original como ancestral: navigation.js delega eventos,
+           calcula os itens visíveis e resolve pais a partir desse contêiner. */
+        host.appendChild(curriculumNavigation);
         curriculumNavigation.classList.add('curriculum-navigation-panel');
-        curriculumNavigation.setAttribute('aria-label', 'Conteúdo do tópico selecionado');
+        curriculumNavigation.setAttribute('aria-label', 'Árvore curricular e navegação');
         if (topicPanel && curriculum) {
           const workspace = document.createElement('section');
           workspace.className = 'study-workspace';
