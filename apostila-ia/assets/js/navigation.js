@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (chaves.length === 0) {
     arvoreHtml = '<p role="status">Nenhum conteúdo curricular carregado. Verifique os arquivos em assets/data/.</p>';
   } else {
-    arvoreHtml = '<h3 id="arvore-titulo">Árvore de currículo (dados de assets/data/)</h3>';
+    arvoreHtml = '<h2 id="arvore-titulo">Árvore curricular</h2>';
     arvoreHtml += '<ul class="curriculum-tree" role="tree" aria-label="Árvore curricular" aria-multiselectable="false" tabindex="-1">';
     chaves.forEach((chave, mi) => {
       arvoreHtml += renderModulo(chave, apostilaDados.curriculum[chave], mi, chaves.length);
