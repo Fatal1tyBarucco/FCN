@@ -7,8 +7,8 @@
 
   function iniciarShell() {
     const body = document.body;
-    const header = body.querySelector(':scope > header');
-    const main = document.getElementById('main-content');
+    const header = document.getElementById('header');
+    const main = document.getElementById('main');
     const curriculum = document.getElementById('curriculum');
     const curriculumNavigation = document.getElementById('navegacao-curriculo');
     const topicPanel = document.getElementById('painel-conteudo');
@@ -196,7 +196,7 @@
       }
     });
 
-    const sections = Array.from(document.querySelectorAll('#main-content section[id]'));
+    const sections = Array.from(document.querySelectorAll('#main section[id]'));
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {

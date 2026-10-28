@@ -3,7 +3,7 @@
  * Usa a chave existente do repo: apostila-ia-progresso (defensiva: não quebra dados antigos).
  */
 const State = {
-  currentModule: 'modulo-1',
+  currentModule: 'msoffice',
   progress: {},        // { 'modulo-1': { completed: true, pct: 75 }, ... }
   flashcards: {},      // { 'modulo-1': [ { id, reps, interval, ease, quality } ] }
   quizScores: {},      // { 'modulo-1': { score, lastAttempt } }

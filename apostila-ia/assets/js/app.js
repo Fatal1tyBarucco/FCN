@@ -23,7 +23,7 @@ if (typeof App === 'undefined') {
       this.bindEvents();
       this.applyTheme((typeof State !== 'undefined' && State.theme) ? State.theme : 'dark');
       this.renderNav();
-      this.switchModule((typeof State !== 'undefined' && State.currentModule) ? State.currentModule : 'modulo-1');
+      this.switchModule((typeof State !== 'undefined' && State.currentModule && DB.modules.some(m=>m.id===State.currentModule)) ? State.currentModule : 'msoffice');
       this.updateGlobalProgress();
       if (typeof mermaid !== 'undefined') mermaid.initialize({ theme: 'dark', securityLevel: 'loose' });
       window.App = this;
@@ -103,6 +103,15 @@ if (typeof App === 'undefined') {
       ];
       const area = this.els.contentArea;
       if (!area) return;
+      // Preserve simulator containers (move back to persistent host before wiping)
+      const simIds = ['charts-app','excel-app','redes-app','seguranca-app','prompts-app','dados-app','etica-app'];
+      const persistent = document.getElementById('simulator-containers');
+      if (persistent) {
+        simIds.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && !persistent.contains(el)) persistent.appendChild(el);
+        });
+      }
       area.innerHTML =
         '<h1>' + (mod.icon || '') + ' ' + (mod.title || mod.label || moduleId) + '</h1>' +
         '<div class="card" style="background:linear-gradient(135deg,var(--primary),var(--accent));color:white;border:none;"><h3 style="color:white;margin-top:0;">🚀 Visão Geral Estratégica</h3><p style="color:white;">' + (mod.overview || '') + '</p></div>' +
@@ -128,8 +137,9 @@ if (typeof App === 'undefined') {
           t.classList.add('active');
           const pane = document.getElementById('tab-' + t.dataset.tab);
           if (pane) pane.classList.add('active');
+          this.loadTabContent(this.activeModuleId);
           if (t.dataset.tab === 'mapas' && typeof mermaid !== 'undefined') {
-            try { mermaid.init(undefined, document.querySelectorAll('#mermaid-host .mermaid')); } catch(e) {}
+            try { mermaid.init(undefined, document.querySelectorAll('#mermaid-host')); } catch(e) {}
           }
         });
       });
@@ -149,40 +159,30 @@ if (typeof App === 'undefined') {
     loadTeoria(moduleId) {
       const host = document.getElementById('teoria-host');
       if (!host) return;
-      // navigation.js já mantém #curriculum na página; copiamos referência
-      const panel = document.getElementById('topic-panel') || document.getElementById('curriculum-panel');
-      const tree = document.getElementById('curriculum');
-      if (tree && panel) {
-        host.innerHTML = '';
-        const clone = tree.cloneNode(true);
-        clone.id = 'curriculum-clone';
-        host.appendChild(clone);
-        if (panel.style) panel.style.display = '';
-      } else if (typeof initNavigation === 'function') {
-        initNavigation();
-        setTimeout(() => this.loadTeoria(moduleId), 300);
+      const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
+      let html = '';
+      if (mod) {
+        html += '<div class="card">' + (mod.theory || '') + '</div>';
+        if (Array.isArray(mod.videos) && mod.videos.length) {
+          html += '<h3>🎥 Vídeos de Apoio</h3>';
+          mod.videos.forEach(v => {
+            html += '<div class="card"><h4>' + (v.title || '') + '</h4><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/' + (v.id || '') + '" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>';
+          });
+        }
+      } else {
+        html = '<p>Módulo não encontrado.</p>';
       }
+      host.innerHTML = html;
+      if (typeof mermaid !== 'undefined') { try { mermaid.init(undefined, host.querySelectorAll('.mermaid')); } catch(e){} }
     },
 
     loadMapas(moduleId) {
       const host = document.getElementById('mermaid-host');
       if (!host) return;
-      const idx = this.getModuleIndex(moduleId);
-      let code = 'graph TD\n  ROOT["Módulo ' + idx + '"] --> A[Conteúdo curricular]';
-      if (typeof curriculum !== 'undefined' && curriculum['modulo-' + idx]) {
-        const mod = curriculum['modulo-' + idx];
-        if (mod.unidades && mod.unidades[0]) code = 'graph TD\n  R["' + (mod.titulo || '') + '"] --> U1["' + (mod.unidades[0].titulo || '') + '"]';
-      } else if (typeof window != 'undefined' && window.apostilaDados && window.apostilaDados.curriculum) {
-        const d = window.apostilaDados.curriculum;
-        if (d && d['modulo-' + idx] && d['modulo-' + idx].unidades) {
-          const mod = d['modulo-' + idx];
-          code = 'graph TD\n  R["' + (mod.titulo || '') + '"] --> U1["' + (mod.unidades[0].titulo || '') + '"]';
-        }
-      }
+      const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
+      const code = (mod && mod.mermaid) ? mod.mermaid : 'graph TD\n  ROOT["Módulo"] --> A[Conteúdo]';
       host.innerHTML = '<div class="mermaid">' + code + '</div>';
-      if (typeof mermaid !== 'undefined') {
-        try { mermaid.init(undefined, host); } catch(e) {}
-      }
+      if (typeof mermaid !== 'undefined') { try { mermaid.init(undefined, host); } catch(e){} }
     },
 
     getModuleIndex(moduleId) {
@@ -197,17 +197,16 @@ if (typeof App === 'undefined') {
     loadSimuladores(moduleId) {
       const host = document.getElementById('simuladores-host');
       if (!host) return;
-      // Simuladores já montados nos contêineres originais; apenas referencia
-      const simIds = { 'msoffice':'excel-app', 'seguranca':'seguranca-app', 'ia':'prompts-app', 'dados':'dados-app', 'visualizacao':'charts-app', 'redes':'redes-app', 'etica':'etica-app', 'comunicacao':'comunicacao-app' };
+      const simIds = { 'msoffice':'excel-app', 'redes':'redes-app', 'seguranca':'seguranca-app', 'ia':'prompts-app', 'dados':'dados-app', 'etica':'etica-app', 'visualizacao':'charts-app', 'comunicacao':null };
       const target = simIds[moduleId];
       if (target) {
-        host.innerHTML = '<div class="card"><h3>Simulador Interativo</h3><p>O simulador do módulo está montado no contêiner original <code>#' + target + '</code>.</p><div id="sim-ref-host"></div></div>';
+        host.innerHTML = '<div class="card"><h3>Simulador Interativo</h3><div id="sim-ref-host"></div></div>';
         const ref = document.getElementById('sim-ref-host');
         const orig = document.getElementById(target);
         if (ref && orig) {
-          // Move o conteúdo original (se já montado) sem destruir handlers
-          const inner = orig.querySelector('.sim-grid, .simulator, section') || orig.firstElementChild;
-          if (inner) { ref.appendChild(inner); orig.style.display = 'none'; }
+          // Move the original container (already mounted by inline script) without destroying handlers
+          ref.appendChild(orig);
+          orig.style.display = '';
         }
       } else {
         host.innerHTML = '<div class="card"><h3>Simulador em breve</h3><p>Simulador interativo ainda não implementado para este módulo.</p></div>';
@@ -217,50 +216,31 @@ if (typeof App === 'undefined') {
     loadFlash(moduleId) {
       const host = document.getElementById('flash-host');
       if (!host) return;
-      const idx = this.getModuleIndex(moduleId);
-      const bullets = [];
-      if (typeof window != 'undefined' && window.apostilaDados && window.apostilaDados.curriculum) {
-        const d = window.apostilaDados.curriculum;
-        const mod = d ? d['modulo-' + idx] : null;
-        if (mod && mod.unidades) mod.unidades.forEach(u => {
-          if (u.topicos) u.topicos.forEach(t => {
-            if (t.subtopicos) t.subtopicos.forEach(st => {
-              if (st.objetivoAprendizagem) bullets.push(st.objetivoAprendizagem);
-            });
-          });
-        });
-      }
-      if (bullets.length === 0) bullets.push('Resumo relâmpago será gerado a partir do conteúdo curricular real.');
-      const slice = bullets.slice(0, 20);
+      const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
+      const bullets = (mod && Array.isArray(mod.lightning) && mod.lightning.length) ? mod.lightning : ['Resumo relâmpago será gerado a partir do conteúdo curricular real.'];
       host.innerHTML = '<h3>⚡ Resumo-Relâmpago (Revisão de Véspera)</h3><ul style="font-size:1.1rem;line-height:2;">' +
-        slice.map(b => '<li><strong>➤</strong> ' + (b || '') + '</li>').join('') + '</ul>';
+        bullets.map(b => '<li><strong>➤</strong> ' + (b || '') + '</li>').join('') + '</ul>';
     },
 
     loadFlashcards(moduleId) {
       const deck = document.getElementById('fc-deck');
       if (!deck) return;
-      if (typeof FlashcardsEngine !== 'undefined' && typeof FlashcardsEngine.init === 'function') {
-        FlashcardsEngine.init(moduleId);
-        const existing = document.querySelector('#flashcards-app .fc-deck, [data-module="' + moduleId + '"]');
-        if (existing) { deck.innerHTML = ''; deck.appendChild(existing); }
-      } else {
-        const idx = this.getModuleIndex(moduleId);
-        const arr = (typeof window != 'undefined' && window['flashcardsM' + idx]) ? window['flashcardsM' + idx] : (idx === 1 && typeof flashcardsM1 !== 'undefined' ? flashcardsM1 : []);
-        if (!Array.isArray(arr) || arr.length === 0) { deck.innerHTML = '<p>Nenhum flashcard disponível.</p>'; return; }
-        if (typeof State !== 'undefined' && !State.flashcards[moduleId]) {
-          State.flashcards[moduleId] = arr.map((c, i) => ({ ...c, idx: i, reps: 0, interval: 0, ease: 2.5 }));
-        }
-        const cards = (typeof State !== 'undefined' && State.flashcards[moduleId]) ? State.flashcards[moduleId] : arr;
-        deck.innerHTML = '';
-        cards.forEach((card, i) => {
-          const el = document.createElement('div');
-          el.className = 'fc-card';
-          el.dataset.idx = i;
-          el.innerHTML = '<div class="fc-inner"><div class="fc-front"><div>Pergunta ' + (i+1) + '</div><div style="margin-top:1rem;font-size:1rem;">' + (card.frente || card.q || card.front || '') + '</div></div><div class="fc-back"><div>' + (card.verso || card.a || card.back || '') + '</div><div class="fc-actions"><button class="fc-btn-wrong" onclick="App.rateCard(\'' + moduleId + '\',' + i + ',1)">Errei</button><button class="fc-btn-hard" onclick="App.rateCard(\'' + moduleId + '\',' + i + ',3)">Difícil</button><button class="fc-btn-easy" onclick="App.rateCard(\'' + moduleId + '\',' + i + ',5)">Acertei</button></div></div></div>';
-          el.addEventListener('click', function(e) { if (e.target.tagName !== 'BUTTON') el.classList.toggle('flipped'); });
-          deck.appendChild(el);
-        });
+      const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
+      const arr = (mod && Array.isArray(mod.flashcards)) ? mod.flashcards : [];
+      if (!arr.length) { deck.innerHTML = '<p>Nenhum flashcard disponível.</p>'; return; }
+      if (typeof State !== 'undefined' && !State.flashcards[moduleId]) {
+        State.flashcards[moduleId] = arr.map((c, i) => ({ q: c.q, a: c.a, idx: i, reps: 0, interval: 0, ease: 2.5 }));
       }
+      const cards = (typeof State !== 'undefined' && State.flashcards[moduleId]) ? State.flashcards[moduleId] : arr;
+      deck.innerHTML = '';
+      cards.forEach((card, i) => {
+        const el = document.createElement('div');
+        el.className = 'fc-card';
+        el.dataset.idx = i;
+        el.innerHTML = '<div class="fc-inner"><div class="fc-front"><div>Pergunta ' + (i+1) + '</div><div style="margin-top:1rem;font-size:1rem;">' + (card.q || card.frente || '') + '</div></div><div class="fc-back"><div>' + (card.a || card.verso || '') + '</div><div class="fc-actions"><button class="fc-btn-wrong" onclick="App.rateCard(\'' + moduleId + '\',' + i + ',1)">Errei</button><button class="fc-btn-hard" onclick="App.rateCard(\'' + moduleId + '\',' + i + ',3)">Difícil</button><button class="fc-btn-easy" onclick="App.rateCard(\'' + moduleId + '\',' + i + ',5)">Acertei</button></div></div></div>';
+        el.addEventListener('click', function(e) { if (e.target.tagName !== 'BUTTON') el.classList.toggle('flipped'); });
+        deck.appendChild(el);
+      });
     },
 
     rateCard(moduleId, idx, quality) {
@@ -278,25 +258,27 @@ if (typeof App === 'undefined') {
     loadQuiz(moduleId) {
       const host = document.getElementById('quiz-host');
       if (!host) return;
-      if (typeof QuizEngine !== 'undefined' && typeof QuizEngine.render === 'function') {
-        QuizEngine.render(moduleId, host);
-      } else {
-        const idx = this.getModuleIndex(moduleId);
-        const arr = (typeof window != 'undefined' && window['questionsM' + idx]) ? window['questionsM' + idx] : (idx <= 3 && typeof questions !== 'undefined' ? questions : []);
-        if (!Array.isArray(arr) || arr.length === 0) { host.innerHTML = '<p>Nenhum simulado disponível.</p>'; return; }
-        host.innerHTML = arr.slice(0, 8).map((q, i) => '<div class="quiz-q"><h4>Questão ' + (i+1) + '</h4><p>' + (q.enunciado || q.question || '') + '</p>' +
-          '<div class="quiz-opts">' + ((q.alternativas || q.options || []).map((opt, oi) => '<label><input type="radio" name="q_' + moduleId + '_' + i + '" value="' + oi + '">' + opt + '</label>').join('')) + '</div>' +
-          '<button class="btn mt-1" onclick="App.checkQuizFallback(\'' + moduleId + '\',' + i + ',' + JSON.stringify(q) + ')">Verificar</button>' +
-          '<div class="quiz-exp" id="exp-' + moduleId + '_' + i + '"><strong>📚 Gabarito:</strong><br>' + (q.justificativa || q.explicacao || '') + '</div></div>').join('');
-      }
+      const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
+      const arr = (mod && Array.isArray(mod.quiz)) ? mod.quiz : [];
+      if (!arr.length) { host.innerHTML = '<p>Nenhum simulado disponível.</p>'; return; }
+      host.innerHTML = arr.slice(0, 12).map((q, i) => '<div class="quiz-q"><h4>Questão ' + (i+1) + '</h4><p>' + (q.q || '') + '</p>' +
+        '<div class="quiz-opts">' + (q.opts || []).map((opt, oi) => '<label><input type="radio" name="q_' + moduleId + '_' + i + '" value="' + oi + '">' + opt + '</label>').join('') + '</div>' +
+        '<button class="btn mt-1" onclick="App.checkQuizFallback(\'' + moduleId + '\',' + i + ')">Verificar</button>' +
+        '<div class="quiz-exp" id="exp-' + moduleId + '_' + i + '"><strong>📚 Gabarito:</strong><br>' + (q.opts && q.opts[q.ans] ? q.opts[q.ans] : '') + '<br><br>' + (q.exp || '') + '</div></div>').join('');
+      // store for checking
+      if (!window._quizData) window._quizData = {};
+      window._quizData[moduleId] = arr.slice(0, 12);
     },
 
-    checkQuizFallback(moduleId, qIdx, q) {
+    checkQuizFallback(moduleId, qIdx) {
+      const data = (window._quizData && window._quizData[moduleId]) ? window._quizData[moduleId] : [];
+      const q = data[qIdx];
+      if (!q) return;
       const radios = document.getElementsByName('q_' + moduleId + '_' + qIdx);
       let sel = -1;
       radios.forEach(r => { if (r.checked) sel = parseInt(r.value); });
       if (sel === -1) { alert('Selecione uma alternativa.'); return; }
-      const correct = q.gabarito || q.answer || q.correct || 0;
+      const correct = (typeof q.ans === 'number') ? q.ans : 0;
       const lbls = document.querySelectorAll('[name="q_' + moduleId + '_' + qIdx + '"]');
       lbls.forEach((r, i) => { const p = r.parentElement; if (i === correct) p.classList.add('correct'); else if (i === sel) p.classList.add('wrong'); });
       const exp = document.getElementById('exp-' + moduleId + '_' + qIdx);
