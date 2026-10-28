@@ -178,7 +178,11 @@
       }
       if (event.key === 'Tab') {
         const focusable = Array.from(sidebar.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'))
-          .filter(function (element) { return !element.hasAttribute('hidden') && element.getAttribute('aria-hidden') !== 'true'; });
+          .filter(function (element) {
+            return !element.hasAttribute('hidden') &&
+              element.getAttribute('aria-hidden') !== 'true' &&
+              element.getClientRects().length > 0;
+          });
         if (!focusable.length) return;
         const first = focusable[0];
         const last = focusable[focusable.length - 1];
