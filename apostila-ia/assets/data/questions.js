@@ -911,7 +911,7 @@ id: "q-m1-09",
     },
     regra: "Escopo declarado × funcionalidade (Seção 7.1 do prompt mestre — laboratórios com ações e resultados reais dentro do escopo declarado): entradas fora do escopo são recusadas ANTES da avaliação com mensagem útil iniciada por 'ERRO DE ENTRADA'; erros de execução usam os códigos Excel declarados (#N/A, #REF!, #VAL!, #DIV/0!, #NUM!); e PROCV/PROCH/PROCX executam busca real — nenhum resultado pode ser apresentado como real quando não o for.",
     pegadinha: "Item técnico com duas cláusulas que tratam de canais distintos: a primeira é sobre RECUSA de entrada (antes da avaliação) e a segunda sobre COMPORTAMENTO das funções de pesquisa (durante a execução). Quem associa 'mensagem de erro' a defeito, ou decorou a limitação antiga de PROCX, tende a marcar Errado o que o código atual confirma.",
-    fonte: "Fonte primária interna: escopo implementado em apostila-ia/assets/js/simulators.js (cabeçalho \"TIPOS E ERROS\", tokenizador/analisador, fnProcv, fnProch, fnProcx e rejeitaEntradaInvalida) e conteúdo curricular em apostila-ia/assets/data/curriculum.js. A verificação externa dos limites gerais de compatibilidade do Excel deve ser tratada separadamente.",
+    fonte: "Fonte primária interna: escopo implementado em apostila-ia/assets/js/simulators.js (cabeçalho \"TIPOS E ERROS\", tokenizador/analisador, fnProcv, fnProch, fnProcx e rejeitaEntradaInvalida) e conteúdo curricular em apostila-ia/assets/data/curriculum.js. A verificação externa dos limites gerais de compatibilidade do Excel deve ser tratada separadamente. Documentação do simulador: https://github.com/Fatal1tyBarucco/FCN/blob/main/apostila-ia/assets/js/simulators.js (verificado em 2026-10-27).",
   },
   /* ===================== FIM BLOCO INICIAL M1 (q-m1-01..q-m1-32) ===================== */
   /* ===================== BLOCO INICIAL M2 — Redes (q-m2-01..q-m2-26; 54 no total) =====================
@@ -2184,7 +2184,7 @@ id: "q-m1-09",
     },
     regra: "Governança de gravação: base legal adequada e transparência → finalidade → quem grava/onde/retém → controle de acesso → compartilhamento → proteção → exclusão.",
     pegadinha: "A alternativa D é a 'confortável': consentimento único soa profissional, mas sem finalidade e prazo ela viola o próprio exemplo de aplicação do módulo — a FCC cobra a política completa.",
-    fonte: "Currículo M3, unidade 2, tópico 3; Lei nº 13.709/2018 (LGPD), arts. 6º, 9º e 46 — texto oficial no Planalto: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, 9º e 46: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm; Currículo M3, unidade 2, tópico 3 (verificado em 2026-10-27)."
   },
   {
     id: "q-m3-22",
@@ -3207,7 +3207,7 @@ id: "q-m1-09",
     },
     regra: "Anfitrião grava (vídeo/áudio/chat) e aplica proteções (senha, lobby, bloqueio); gravação com dados pessoais pode exigir consentimento (LGPD/Marco Civil) — informar sempre os participantes.",
     pegadinha: "A armadilha é o absolutismo 'o anfitrião decide tudo sobre a gravação': a competência técnica de gravar não elimina a obrigação de consentimento quando há dados pessoais.",
-    fonte: "Currículo M3, unidade 4, tópico 3; Lei nº 13.709/2018 (LGPD), arts. 6º, 7º, 8º e 46 — texto oficial no Planalto: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    fonte: "Lei nº 13.709/2018 (LGPD), arts. 6º, 7º, 8º e 46: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm; Currículo M3, unidade 4, tópico 3 (verificado em 2026-10-27)."
   },
   {
     id: "q-m3-39",
