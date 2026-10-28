@@ -6,140 +6,15 @@
 <title>Apostila Web Interativa — Tecnologia da Informação, Dados e IA</title>
 <meta name="description" content="Apostila web interativa definitiva: 8 módulos, simuladores, flashcards, banco de questões, gráficos e inventário curricular verificável.">
 <link rel="stylesheet" href="assets/css/styles.css">
-<meta name="theme-color" content="#1a73e8">
+<meta name="theme-color" content="#1e2b40">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icons/icon-192.png" type="image/png">
-<style>
-  /* Estilo mínimo de contingência para abertura direta file:// */
-  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 1.2rem; background: #f8f9fa; color: #1a1a1a; line-height: 1.55; }
-  header { background: #0b1d36; color: #fff; padding: 1.2rem 1rem; border-radius: 12px; margin-bottom: 1.2rem; }
-  header h1 { margin: 0 0 .2rem; font-size: 1.6rem; }
-  header p { margin: 0; opacity: .9; font-size: .95rem; }
-  main { max-width: 960px; margin: 0 auto; }
-  section { background: #fff; border: 1px solid #dde2e7; border-radius: 10px; padding: 1.1rem 1.2rem; margin-bottom: 1.2rem; }
-  h2 { margin-top: 0; font-size: 1.15rem; color: #0b1d36; }
-  h3 { font-size: 1rem; color: #143a6b; margin-bottom: .4rem; }
-  ul { padding-left: 1.1rem; }
-  a { color: #1a73e8; text-decoration: underline; }
-  .label { display: inline-block; padding: .15rem .35rem; border-radius: 4px; font-size: .75rem; text-transform: uppercase; letter-spacing: .03em; font-weight: 700; margin-right: .3rem; }
-  .label-ok { background: #e6f4ea; color: #137333; }
-  .label-parc { background: #fff8e1; color: #8a4b00; } /* contraste AA: 6.40:1 */
-  .label-pend { background: #fce8e6; color: #a50e0e; }
-  .aviso { background: #fff3cd; border: 1px solid #ffe082; border-radius: 8px; padding: .8rem 1rem; color: #5a3a00; font-size: .92rem; }
-  /* Flashcards (UI de repetição espaçada) */
-  .fc-filtros { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin: .8rem 0; }
-  .fc-filtros label { font-size: .92rem; }
-  .fc-filtros select { font-size: .92rem; padding: .2rem .3rem; }
-  .fc-stats { margin: .6rem 0; font-size: .92rem; }
-  .fc-badge { display: inline-block; padding: .15rem .35rem; border-radius: 4px; font-size: .75rem; background: #e8eaed; color: #202124; }
-  .fc-cartao { border: 1px solid #dde2e7; border-radius: 10px; padding: 1rem; margin: .8rem 0; }
-  .fc-meta { font-size: .8rem; color: #5f6368; margin-bottom: .6rem; }
-  .fc-frente { font-size: 1.05rem; font-weight: 600; margin-bottom: .6rem; }
-  .fc-verso { margin: .4rem 0; }
-  .fc-explicacao { background: #f1f3f4; border-radius: 8px; padding: .5rem .7rem; font-size: .92rem; }
-  .fc-botoes { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
-  .fc-btn { border-radius: 8px; padding: .45rem .7rem; border: 1px solid transparent; cursor: pointer; font-size: .92rem; min-height: 44px; min-width: 44px; }
-  .fc-btn small { display: block; font-size: .72rem; opacity: .85; }
-  .fc-btn-ok { background: #e6f4ea; color: #137333; border-color: #137333; }
-  .fc-btn-dif { background: #fff8e1; color: #8a4b00; border-color: #8a4b00; } /* contraste AA */
-  .fc-btn-err { background: #fce8e6; color: #a50e0e; border-color: #a50e0e; }
-  .fc-mensagem { background: #e8f0fe; border: 1px solid #d2e3fc; border-radius: 8px; padding: .5rem .7rem; font-size: .9rem; }
-  .fc-backup { margin-top: 1rem; border-top: 1px dashed #dde2e7; padding-top: .6rem; }
-  .fc-import { font-size: .92rem; }
-  @media (prefers-color-scheme: dark) {
-    .fc-cartao { border-color: #5f6368; }
-    .fc-badge { background: #3c4043; color: #e8eaed; }
-    .fc-explicacao { background: #202124; }
-    .fc-btn-ok { background: #1e3a29; color: #81c995; border-color: #81c995; }
-    .fc-btn-dif { background: #3d3319; color: #fdd663; border-color: #fdd663; }
-    .fc-btn-err { background: #3d1d1a; color: #f28b82; border-color: #f28b82; }
-    .fc-mensagem { background: #1e3050; color: #d2e3fc; border-color: #8ab4f8; }
-    .fc-backup { border-top-color: #5f6368; }
-    .fc-meta, .chart-meta, .chart-tabela caption { color: #bdc1c6; }
-    footer { color: #bdc1c6; }
-  }
-  footer { text-align: center; color: #5f6368; font-size: .85rem; margin-top: 2rem; }
-  pre { background: #0b1d36; color: #e8eaed; padding: .8rem 1rem; border-radius: 8px; overflow-x: auto; font-size: .9rem; }
-  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-  /* Laboratório de gráficos (assets/js/charts.js — SVG próprio, sem biblioteca externa) */
-  .chart-card { border: 1px solid #dde2e7; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
-  .chart-card h3 { margin-top: 0; }
-  .chart-meta { font-size: .78rem; color: #5f6368; margin-top: -.3rem; }
-  .chart-didatica { font-size: .92rem; margin: .4rem 0 .8rem; }
-  .chart-didatica dt { font-weight: 700; color: #143a6b; margin-top: .45rem; }
-  .chart-didatica dd { margin: .1rem 0 0 .9rem; }
-  .chart-controles { display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0; }
-  .chart-controles button { border-radius: 8px; padding: .35rem .65rem; border: 1px solid #1a73e8; background: #e8f0fe; color: #174ea6; cursor: pointer; font-size: .88rem; min-height: 44px; min-width: 44px; }
-  .chart-params { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; margin: .5rem 0; font-size: .9rem; }
-  .chart-params input[type=text] { width: 15rem; max-width: 100%; }
-  .chart-params input[type=number] { width: 4.5rem; }
-  .chart-tabela { border-collapse: collapse; font-size: .88rem; margin: .4rem 0; width: 100%; }
-  .chart-tabela caption { text-align: left; font-size: .8rem; color: #5f6368; padding-bottom: .3rem; }
-  .chart-tabela th, .chart-tabela td { border: 1px solid #dde2e7; padding: .2rem .35rem; }
-  .chart-tabela thead th { background: #e8eaed; }
-  .chart-tabela input { width: 7.5rem; max-width: 100%; font-size: .88rem; padding: .15rem .3rem; border: 1px solid #c6d0d9; border-radius: 4px; }
-  .chart-svg-wrap { background: #fff; border: 1px solid #dde2e7; border-radius: 8px; padding: .4rem; margin: .5rem 0; }
-  .chart-svg { display: block; max-width: 100%; height: auto; }
-  .chart-svg .chart-grid { stroke: #e2e8ee; stroke-width: 1; }
-  .chart-svg .chart-eixo { stroke: #5f6368; stroke-width: 1.4; }
-  .chart-svg .chart-txt, .chart-svg .chart-svg-titulo, .chart-svg .chart-eixo-rotulo { fill: #202124; font-family: system-ui, sans-serif; }
-  .chart-svg .chart-txt { font-size: 12px; }
-  .chart-svg .chart-svg-titulo { font-size: 14px; font-weight: 700; }
-  .chart-svg .chart-eixo-rotulo { font-size: 12px; font-weight: 600; }
-  .chart-svg .chart-txt-barra { font-size: 11px; }
-  .chart-svg .chart-barra, .chart-svg .chart-caixa { fill: #8ab4f8; stroke: #174ea6; stroke-width: 1; }
-  .chart-svg .chart-barra-modada { fill: #1a73e8; }
-  .chart-svg .chart-linha { fill: none; stroke: #1a73e8; stroke-width: 2.2; }
-  .chart-svg .chart-tendencia { stroke: #a50e0e; stroke-width: 1.8; stroke-dasharray: 6 4; }
-  .chart-svg .chart-ponto { fill: #1a73e8; stroke: #0b1d36; stroke-width: .8; }
-  .chart-svg .chart-outlier { fill: #f28b82; stroke: #a50e0e; }
-  .chart-svg .chart-bigode { stroke: #5f6368; stroke-width: 1.6; }
-  .chart-svg .chart-mediana { stroke: #0b1d36; stroke-width: 2.4; }
-  .chart-svg .chart-aviso-svg { fill: #a50e0e; font-size: 12px; font-weight: 700; font-family: system-ui, sans-serif; }
-  .chart-desc { background: #f1f3f4; border-radius: 8px; padding: .5rem .7rem; font-size: .88rem; }
-  .chart-stats { border-collapse: collapse; font-size: .88rem; margin: .3rem 0 .6rem; }
-  .chart-stats th, .chart-stats td { border: 1px solid #dde2e7; padding: .2rem .45rem; text-align: left; }
-  .chart-stats thead th { background: #e8eaed; }
-  .chart-stats tbody th { font-weight: 600; background: #f8f9fa; }
-  .chart-aviso { background: #fce8e6; border: 1px solid #f6bbb4; border-radius: 8px; padding: .45rem .7rem; color: #a50e0e; font-size: .88rem; }
-  .chart-erro { background: #fce8e6; border: 1px solid #f6bbb4; border-radius: 8px; padding: .5rem .7rem; color: #a50e0e; }
-  @media (prefers-color-scheme: dark) {
-    .chart-card { border-color: #5f6368; }
-    .chart-didatica dt { color: #8ab4f8; }
-    .chart-controles button { background: #1e3050; color: #d2e3fc; border-color: #8ab4f8; }
-    .chart-tabela th, .chart-tabela td { border-color: #5f6368; }
-    .chart-tabela thead th { background: #3c4043; }
-    .chart-tabela input { background: #202124; color: #e8eaed; border-color: #5f6368; }
-    .chart-svg-wrap { background: #202124; border-color: #5f6368; }
-    .chart-svg .chart-grid { stroke: #3c4043; }
-    .chart-svg .chart-eixo { stroke: #9aa0a6; }
-    .chart-svg .chart-txt, .chart-svg .chart-svg-titulo, .chart-svg .chart-eixo-rotulo { fill: #e8eaed; }
-    .chart-svg .chart-barra, .chart-svg .chart-caixa { fill: #1e3a5f; stroke: #8ab4f8; }
-    .chart-svg .chart-barra-modada { fill: #1a73e8; }
-    .chart-svg .chart-ponto { fill: #8ab4f8; stroke: #e8eaed; }
-    .chart-svg .chart-bigode { stroke: #bdc1c6; }
-    .chart-svg .chart-mediana { stroke: #fdd663; }
-    .chart-svg .chart-aviso-svg { fill: #f28b82; }
-    .chart-desc { background: #202124; }
-    .chart-stats th, .chart-stats td { border-color: #5f6368; }
-    .chart-stats thead th { background: #3c4043; }
-    .chart-stats tbody th { background: #202124; }
-    .chart-aviso, .chart-erro { background: #3d1d1a; border-color: #f28b82; color: #f28b82; }
-  }
-  @media (max-width: 480px) {
-    body { padding: .8rem; }
-    header { padding: .9rem .8rem; }
-    section { padding: .8rem .9rem; }
-    .chart-params input[type=text] { width: 100%; }
-    .chart-params input[type=number] { width: 100%; }
-  }
-</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 <header>
-  <h1>Apostila Web Interativa — Definição Completa</h1>
-  <p>Tecnologia da Informação, Dados e Inteligência Artificial · Estado estrutural revalidado em 2026-10-26: currículo M1–M8 com 427 nós; 460 flashcards; 396 questões autorais (M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40, M8=40); 5 gráficos SVG; 6 simuladores; busca global, leitura em voz alta dependente da Web Speech API e PWA condicional. Smoke test Chromium via <code>file://</code> aprovado. Revisão semântica integral e auditoria WCAG independente permanecem pendentes.</p>
+  <h1>Apostila TI &amp; Dados</h1>
+  <p>Seu ambiente de estudos em Tecnologia da Informação, Dados e Inteligência Artificial. Aprenda os conceitos, pratique com ferramentas interativas e acompanhe sua evolução.</p>
 </header>
 <main id="main-content" tabindex="-1"><section id="videos-app" aria-label="Vídeos educacionais validados">
   <h2>Vídeos educacionais validados <span class="label label-ok">20/20 IDs verificados</span></h2>
@@ -496,7 +371,6 @@ Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com)
 </script>
 <script src="assets/js/accessibility.js"></script>
 <script src="assets/js/storage.js"></script>
-<script src="assets/js/personalization.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/navigation.js"></script>
 <script src="assets/js/simulators.js"></script>
