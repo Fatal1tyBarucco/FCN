@@ -133,3 +133,13 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 - O verificador estrutural reflete 40 tags de script existentes no HTML (23 dados + 17 scripts JavaScript).
 - Criado workflow `.github/workflows/validate-frontend.yml` para sintaxe JavaScript, validação estrutural, regressão de simuladores, smoke test, testes de interação e auditoria axe-core.
 - O workflow de validação ainda não tem execução confirmada neste HEAD; os testes Playwright exigem dependências Chromium e axe-core. A PR segue aberta e a publicação não foi executada.
+
+
+### Validação e refinamento contínuo do shell — 2026-10-28
+- Corrigido o teste de fumaça do navegador para localizar os oito módulos no novo host `#sidebar-tree-host`.
+- Adicionadas verificações de navegador para menu desktop/mobile, estado ARIA, fechamento por Escape, fechamento ao navegar e ausência de overflow horizontal em viewport móvel.
+- Adicionada verificação da atualização do título da área de estudo conforme o tópico selecionado.
+- O wrapper `#navegacao-curriculo` permanece ancestral da árvore no menu lateral para preservar os handlers delegados e a navegação por teclado de `navigation.js`.
+- O verificador estrutural reflete 40 tags de script existentes no HTML (23 dados + 17 scripts JavaScript).
+- Criado workflow `.github/workflows/validate-frontend.yml` para sintaxe JavaScript, validação estrutural, regressão de simuladores, smoke test, testes de interação e auditoria axe-core.
+- O workflow de validação ainda não tem execução confirmada neste HEAD; os testes Playwright exigem dependências Chromium e axe-core. A PR segue aberta e a publicação não foi executada.
