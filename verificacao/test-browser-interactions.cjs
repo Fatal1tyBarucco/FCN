@@ -217,6 +217,18 @@ const axeCore = require("axe-core");
     const mobileLayout = await page.evaluate(() => ({
       viewportWidth: window.innerWidth,
       documentWidth: document.documentElement.scrollWidth,
+      mainChildren: Array.from(document.querySelector("#main-content").children).map(element => {
+        const rect = element.getBoundingClientRect();
+        return {
+          selector: element.tagName.toLowerCase() + (element.id ? "#" + element.id : "") + (typeof element.className === "string" && element.className ? "." + element.className.trim().split(/\\s+/).join(".") : ""),
+          left: Math.round(rect.left),
+          right: Math.round(rect.right),
+          width: Math.round(rect.width),
+          scrollWidth: element.scrollWidth,
+          clientWidth: element.clientWidth,
+          overflowX: getComputedStyle(element).overflowX
+        };
+      }),
       overflowCandidates: Array.from(document.querySelectorAll("body *")).map(element => {
         const rect = element.getBoundingClientRect();
         const style = getComputedStyle(element);
