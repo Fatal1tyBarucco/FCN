@@ -177,20 +177,19 @@
         return;
       }
       if (event.key === 'Tab') {
-        const focusable = Array.from(sidebar.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+        const focusable = Array.from(sidebar.querySelectorAll('a.quick-link[href], .tree-node[role="treeitem"][tabindex="0"]'))
           .filter(function (element) {
-            return !element.hasAttribute('hidden') &&
-              element.getAttribute('aria-hidden') !== 'true' &&
-              element.tabIndex >= 0 &&
-              element.getClientRects().length > 0;
+            return element.getClientRects().length > 0 &&
+              element.getAttribute('aria-hidden') !== 'true';
           });
         if (!focusable.length) return;
         const first = focusable[0];
         const last = focusable[focusable.length - 1];
-        if (event.shiftKey && (document.activeElement === first || document.activeElement === sidebar)) {
+        const activeElementIsInsideSidebar = sidebar.contains(document.activeElement);
+        if (event.shiftKey && (!activeElementIsInsideSidebar || document.activeElement === first || document.activeElement === sidebar)) {
           event.preventDefault();
           last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
+        } else if (!event.shiftKey && (!activeElementIsInsideSidebar || document.activeElement === last)) {
           event.preventDefault();
           first.focus();
         }
