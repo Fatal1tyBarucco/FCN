@@ -1,0 +1,61 @@
+name: Validate FCN Frontend
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "apostila-ia/**"
+      - "verificacao/**"
+      - "workspace/phase5_smoke.js"
+      - ".github/workflows/validate-frontend.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-frontend-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  structural-and-browser-tests:
+    name: Structural, simulator and browser regression tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install browser test dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright axe-core
+          npx playwright install --with-deps chromium
+
+      - name: Validate JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find apostila-ia/assets -type f -name '*.js' | sort)
+          test "${#files[@]}" -gt 0
+          for file in "${files[@]}"; do
+            echo "node --check $file"
+            node --check "$file"
+          done
+
+      - name: Verify curriculum, questions, flashcards and local resources
+        run: node verificacao/verificar-estrutura.js
+
+      - name: Run simulator regression suite
+        run: node workspace/phase5_smoke.js
+
+      - name: Run browser smoke test
+        run: node verificacao/test-browser-smoke.cjs
+
+      - name: Run browser interaction and accessibility tests
+        run: node verificacao/test-browser-interactions.cjs
