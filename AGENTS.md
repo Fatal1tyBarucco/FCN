@@ -143,3 +143,13 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 - O verificador estrutural reflete 40 tags de script existentes no HTML (23 dados + 17 scripts JavaScript).
 - Ampliado o workflow existente `.github/workflows/validate-curriculum.yml` com regressão dos simuladores e testes de navegador do shell responsivo.
 - O workflow de validação ainda não tem execução confirmada neste HEAD; os testes Playwright exigem dependências Chromium e axe-core. A PR segue aberta e a publicação não foi executada.
+
+## Refatoração SPA — conteúdo real nas abas (2026-10-28, PR #22, merge cf1ae9d)
+
+- **db-modules.js**: `DB.init()` agora mapeia dados reais dos arquivos modulares (`curriculum*.js`, `flashcards_m*.js`, `questions*.js`, `references.js`) em `DB.modules`, incluindo theory HTML (de `conteudo`/`exemplos`/`exercicios`), diagramas Mermaid (de títulos reais de unidades/tópicos), vídeos verificados (agrupados por módulo via `references.js`), lightning bullets (de objetivos de aprendizagem), flashcards (`frente`/`verso`) e quiz (mapeado por `modulo`, com índice de resposta correta).
+- **index.html**: contêineres de simuladores (`#charts-app`, `#excel-app`, `#redes-app`, `#seguranca-app`, `#prompts-app`, `#dados-app`, `#etica-app`) movidos para fora de `#content-area` (persistem entre re-renderizações de abas); removidos duplicados do content-area.
+- **app.js**: `loadTeoria` renderiza conteúdo real do módulo + vídeos; `loadMapas` usa Mermaid real; `loadSimuladores` move contêiner montado para a aba; `loadFlash`/`loadFlashcards`/`loadQuiz` usam `DB.modules`; `bindTabs` recarrega conteúdo ao trocar aba; `renderModuleView` preserva contêineres de simuladores antes de limpar; default de módulo normalizado para `msoffice`.
+- **state.js**: `currentModule` padrão alterado de `'modulo-1'` para `'msoffice'`.
+- **ui-shell.js**: seletores adaptados de `#main-content`/`header` para `#main`/`#header` existentes.
+- Verificação: `node --check` 43/43 passam; `verificar-estrutura.js` 0 falhas (42 tags, 399 questões, 460 flashcards); `phase5_smoke.js` 25/25; browser smoke (Chromium headless): 8 módulos × 6 abas com conteúdo não-vazio, 0 erros JS, TTS/busca/localStorage/tema funcionais, todos os 6 simuladores presentes.
+- Deploy: merge cf1ae9d em main; workflow deploy-pages deve publicar automaticamente.
