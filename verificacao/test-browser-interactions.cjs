@@ -218,7 +218,7 @@ const axeCore = require("axe-core");
       viewportWidth: window.innerWidth,
       documentWidth: document.documentElement.scrollWidth
     }));
-    assert.ok(mobileLayout.documentWidth <= mobileLayout.viewportWidth + 1, "mobile layout must not introduce horizontal overflow");
+    assert.ok(mobileLayout.documentWidth <= mobileLayout.viewportWidth + 1, "mobile layout must not introduce horizontal overflow: " + JSON.stringify(mobileLayout));
 
     assert.deepEqual(pageErrors, [], "simulator interactions must not throw uncaught JavaScript errors");
     console.log(JSON.stringify({
