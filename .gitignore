@@ -1,3 +1,9 @@
+# Ambiente de runtime do agente (não versionar no repo do projeto)
+.hermes/
+
+# Arquivos de exemplo/artefatos de demonstração (não versionar)
+apostila-ia/examples/
+
 # Sistema/OS
 .DS_Store
 Thumbs.db
