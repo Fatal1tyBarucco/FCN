@@ -91,3 +91,13 @@ python3 -m http.server 8080     # Modo B — servidor estático opcional
 ## Histórico de auditorias
 
 O histórico detalhado de auditorias semânticas, CI e revisões focais foi movido para `docs/HISTORICO_AUDITORIAS.md` para manter este arquivo legível. Consulte-o para rastreabilidade completa.
+
+
+## Refatoração visual e GitHub Pages — 2026-10-27
+
+- A folha de estilos canônica é `apostila-ia/assets/css/styles.css`; o bloco CSS inline de `apostila-ia/index.html` foi removido para eliminar cascata concorrente entre CSS externo e interno.
+- Redesenho aplicado: identidade editorial azul-marinho, fundo cinza-claro, cartões brancos com bordas arredondadas e sombras discretas, hierarquia tipográfica, componentes de formulário, botões, tabelas, flashcards, árvore curricular, vídeos e gráficos.
+- Responsividade refinada para telefones estreitos, tablets e desktops; áreas de toque mínimas de 44px, foco visível, redução de movimento, estilos de impressão e tema escuro via preferência do sistema.
+- Cabeçalho simplificado para apresentar a finalidade educacional, sem expor no topo contagens de auditoria, status de testes ou pendências técnicas.
+- O workflow `.github/workflows/deploy-pages.yml` publica somente após push em `main` ou execução manual. Alterações em PR não atualizam o site publicado até o merge e o deploy subsequente.
+- Estado desta alteração: CSS e HTML modificados na branch `feat/recursos-personalizacao-persistencia` (PR #19). A refatoração visual ainda exige validação visual real em desktop/mobile e verificação pós-deploy; não declarar equivalência visual ou WCAG integral sem evidências.
