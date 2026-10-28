@@ -93,7 +93,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 <div id="curriculum" aria-label="Inventário curricular resumido"></div>
 <div id="flashcards-app"></div>
 <div id="quiz-app"></div>
-<div id="charts-app"></div>
 <div id="search-app" aria-label="Busca global"></div>
 <div id="audio-app" aria-label="Leitura em voz alta"></div>
 <div id="progress-app" aria-label="Painel de progresso"></div>
@@ -101,6 +100,15 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 
   </div>
 </main>
+<div id="simulator-containers" style="position:absolute;left:-9999px;top:0;width:1200px;height:800px;overflow:visible;" aria-hidden="true">
+  <div id="charts-app"></div>
+  <div id="excel-app"></div>
+  <div id="redes-app"></div>
+  <div id="seguranca-app"></div>
+  <div id="prompts-app"></div>
+  <div id="dados-app"></div>
+  <div id="etica-app"></div>
+</div>
 <div id="modal" class="modal">
   <div class="modal-content">
     <button class="modal-close" onclick="App.closeModal()">✖</button>
