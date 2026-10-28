@@ -26,7 +26,7 @@
  * 3) Contagem de flashcards (flashcards_m1..m8) → total 460 + mapa exato por
  *    módulo {1:66, 2:56, 3:68, 4:54, 5:66, 6:50, 7:50, 8:50}.
  * 4) Cada tag <script src> do index.html resolve para arquivo existente em
- *    disco, e a contagem total de tags é EXATAMENTE 39 (24 de dados + 15 de JS).
+ *    disco, e a contagem total de tags é EXATAMENTE 41 (24 de dados + 17 de JS).
  * 5) manifest.webmanifest é JSON válido e a description menciona "399".
  * 6) Imprime níveis / formatos / estilos (contagens reais) para conferência.
  * 7) q-m4-32: id/formato/gabarito + CONTEÚDO — alternativa B cita os princípios
@@ -311,8 +311,8 @@ const scriptSrcs = [];
 const reSrc = /<script[^>]*\ssrc\s*=\s*["']([^"']+)["'][^>]*>/gi;
 let mm;
 while ((mm = reSrc.exec(idxHtml)) !== null) scriptSrcs.push(mm[1]);
-check('tags <script src> do index.html === 40', scriptSrcs.length === 40,
-  'real=' + scriptSrcs.length + ', esperado=40');
+check('tags <script src> do index.html === 41', scriptSrcs.length === 41,
+  'real=' + scriptSrcs.length + ', esperado=41');
 let externas = 0, locais = 0, ausentes = [];
 for (const src of scriptSrcs) {
   if (/^(https?:)?\/\//i.test(src) || /^(data|blob):/i.test(src)) { externas++; continue; }
