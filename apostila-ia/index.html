@@ -4,306 +4,110 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apostila Web Interativa — Tecnologia da Informação, Dados e IA</title>
-<meta name="description" content="Apostila web interativa definitiva: 8 módulos, simuladores, flashcards, banco de questões, gráficos e inventário curricular verificável.">
+<meta name="description" content="Apostila web interativa: 8 modulos, simuladores, flashcards, questoes, graficos. Abra direto ou via localhost:8080">
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta name="theme-color" content="#1e2b40">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icons/icon-192.png" type="image/png">
+<style>
+:root {
+  --bg: #0f172a; --surface: #1e293b; --border: #334155; --text: #f8fafc; --text-dim: #94a3b8;
+  --primary: #3b82f6; --success: #10b981; --error: #ef4444; --warning: #f59e0b; --accent: #8b5cf6;
+  --radius: 8px; --shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
+}
+[data-theme="light"] {
+  --bg: #f1f5f9; --surface: #ffffff; --border: #cbd5e1; --text: #0f172a; --text-dim: #475569;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;display:flex;min-height:100vh;overflow-x:hidden}
+#sidebar{width:280px;background:var(--surface);border-right:1px solid var(--border);height:100vh;position:sticky;top:0;overflow-y:auto;padding:1rem;flex-shrink:0;z-index:100}
+#sidebar h2{font-size:1.2rem;text-align:center;border:none;padding:0;margin-bottom:1.5rem;color:var(--primary)}
+#sidebar .nav-item{display:block;padding:12px;border-radius:var(--radius);margin-bottom:8px;cursor:pointer;transition:.2s;color:var(--text-dim);border-left:3px solid transparent;font-weight:500}
+#sidebar .nav-item:hover{background:#ffffff10;color:var(--text)}
+#sidebar .nav-item.active{background:var(--primary);color:#fff;border-left-color:var(--warning)}
+#sidebar .progress-mini{height:4px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden}
+#sidebar .progress-mini-bar{height:100%;background:var(--success);width:0;transition:width .3s}
+#main{flex:1;padding:2rem;max-width:1200px;margin:0 auto;width:100%}
+#header{position:sticky;top:0;background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;z-index:90;backdrop-filter:blur(10px);margin:-2rem -2rem 2rem -2rem;width:calc(100% + 4rem)}
+#header .left{display:flex;align-items:center;gap:1rem}
+#header .progress-global{width:200px;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+#header .progress-global-bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));width:0;transition:width .5s}
+#header .search-box{padding:8px 16px;border-radius:20px;border:1px solid var(--border);background:var(--bg);color:var(--text);width:300px;font-size:.9rem}
+#header .btn{padding:8px 16px;border-radius:var(--radius);border:none;background:var(--primary);color:#fff;cursor:pointer;font-weight:bold;transition:.2s}
+#header .btn:hover{opacity:.9;transform:translateY(-1px)}
+#header .btn-sec{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+#header .tts-controls{display:flex;gap:.5rem;align-items:center;background:var(--surface);padding:8px;border-radius:20px}
+#header .tts-controls button{background:none;border:none;color:var(--text);font-size:1.2rem;cursor:pointer;padding:4px 8px}
+#header .tts-controls select{background:var(--bg);color:var(--text);border:none;padding:4px;border-radius:4px}
+.tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:1.5rem;overflow-x:auto}
+.tab{padding:12px 24px;cursor:pointer;border-bottom:3px solid transparent;font-weight:600;color:var(--text-dim);white-space:nowrap;transition:.2s}
+.tab:hover{color:var(--text)}
+.tab.active{border-bottom-color:var(--primary);color:var(--primary)}
+.tab-content{display:none;animation:fadeIn .3s}
+.tab-content.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem;box-shadow:var(--shadow)}
+.modal{display:none;position:fixed;inset:0;background:#000000cc;z-index:1000;justify-content:center;align-items:center;padding:2rem}
+.modal.show{display:flex}
+.modal-content{background:var(--surface);border-radius:var(--radius);padding:2rem;max-width:800px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
+.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
+.mark-complete{display:block;width:100%;padding:12px;background:var(--success);color:#fff;border:none;border-radius:var(--radius);font-weight:bold;font-size:1.1rem;cursor:pointer;margin-top:2rem;transition:.2s}
+.mark-complete:hover{background:#059669}
+.mark-complete.completed{background:var(--border);color:var(--text-dim);cursor:default}
+.search-highlight{background:#f59e0b40;padding:2px 4px;border-radius:2px}
+.hidden{display:none!important}
+@media(max-width:768px){body{flex-direction:column}#sidebar{width:100%;height:auto;position:relative;border-right:none;border-bottom:1px solid var(--border)}#main{padding:1rem}#header{flex-direction:column;gap:1rem;width:100%;margin:0 0 1rem 0;padding:1rem}}
+</style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
-<header>
-  <h1>Apostila TI &amp; Dados</h1>
-  <p>Seu ambiente de estudos em Tecnologia da Informação, Dados e Inteligência Artificial. Aprenda os conceitos, pratique com ferramentas interativas e acompanhe sua evolução.</p>
-</header>
-<main id="main-content" tabindex="-1"><section id="videos-app" aria-label="Vídeos educacionais validados">
-  <h2>Vídeos educacionais validados <span class="label label-ok">20/20 IDs verificados</span></h2>
-  <p>Conforme Seção 12.2 do prompt mestre: 20 vídeos educacionais do YouTube identificados e verificados via oembed. Embeds em <code>youtube-nocookie.com</code>. Não substituem a apostila — disponibilidade pode variar por região.</p>
-  <div class="videos-grid"><h3>Módulo M1</h3><article class="video-item"><p><strong>Curso Excel #01 - Como surgiu o Excel?</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/ZVURQLXZtIc" title="Curso Excel #01 - Como surgiu o Excel?" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Curso Excel #10 - Funções do Excel (Parte 1)</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/boUzkJJNOPI" title="Curso Excel #10 - Funções do Excel (Parte 1)" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><h3>Módulo M2</h3><article class="video-item"><p><strong>Curso de Redes - Vídeo 03 - Modelo OSI</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/WO1uGJRqrwI" title="Curso de Redes - Vídeo 03 - Modelo OSI" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Curso de redes - Vídeo 04 - Introdução ao TCP/IP</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/bH29oltn8Cw" title="Curso de redes - Vídeo 04 - Introdução ao TCP/IP" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Curso de Redes - Vídeo 05 - Endereço IP</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/XPWd08tLAuo" title="Curso de Redes - Vídeo 05 - Endereço IP" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><h3>Módulo M3</h3><article class="video-item"><p><strong>Funcionamento do protocolo SMTP</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/QtqbaEiwlyU" title="Funcionamento do protocolo SMTP" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><h3>Módulo M4</h3><article class="video-item"><p><strong>Introdução à Criptografia: Conceitos, Algoritmos e Segurança de Dados</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/cWld3rMD7Wk" title="Introdução à Criptografia: Conceitos, Algoritmos e Segurança de Dados" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Segurança da informação - Firewalls</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/TbjhWIhLQDU" title="Segurança da informação - Firewalls" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>O que a TI tem a ver com a LGPD?!?</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/wlaNFx73qh4" title="O que a TI tem a ver com a LGPD?!?" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Como se proteger de golpes de engenharia social – Seu mundo digital mais seguro #Ep3</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/qqgkhvsyL9Q" title="Como se proteger de golpes de engenharia social – Seu mundo digital mais seguro #Ep3" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><h3>Módulo M5</h3><article class="video-item"><p><strong>Seu primeiro código de Machine Learning com Python!</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/DNegkxwQJuY" title="Seu primeiro código de Machine Learning com Python!" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Você sabe o que é Deep Learning?</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/M8hoXE24PMo" title="Você sabe o que é Deep Learning?" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Machine Learning: Tutorial prático usando apenas o navegador</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/JyGGMyR3x5I" title="Machine Learning: Tutorial prático usando apenas o navegador" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><h3>Módulo M6</h3><article class="video-item"><p><strong>Sistemas de IA, IA no serviço público e em infraestruturas críticas</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/As0A-w1WmPI" title="Sistemas de IA, IA no serviço público e em infraestruturas críticas" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Comunicação Descomplicada no Serviço Público: Linguagem Simples, Inteligência Artificial</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/r7dYNidpM3k" title="Comunicação Descomplicada no Serviço Público: Linguagem Simples, Inteligência Artificial" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Transparência e imparcialidade nos usos da inteligência artificial no âmbito do serviço público</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/75RqMrSbenM" title="Transparência e imparcialidade nos usos da inteligência artificial no âmbito do serviço público" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>1 - Lei 14.129/2021 Governo Digital</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/Zjv2mZJkakw" title="1 - Lei 14.129/2021 Governo Digital" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><h3>Módulo M7</h3><article class="video-item"><p><strong>Excel Básico para Análise de Dados</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/LmhbPTMaJak" title="Excel Básico para Análise de Dados" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><article class="video-item"><p><strong>Te ensino TUDO sobre Pandas para análise de dados com Python</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/1JpYOqvDJNU" title="Te ensino TUDO sobre Pandas para análise de dados com Python" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article><h3>Módulo M8</h3><article class="video-item"><p><strong>É o fim do Power BI? Criando Dashboard com Python em 15 minutos</strong> — YouTube</p><div class="video-embed-wrap"><iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/P6E_Kts9pxE" title="É o fim do Power BI? Criando Dashboard com Python em 15 minutos" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></article></div>
-</section>
-
-<section aria-label="Aviso de escopo e limitações">
-  <h2>Estado atual e limitações documentadas <span class="label label-pend">TRANSPARENTE</span></h2>
-  <div class="aviso">
-    <strong>Não é uma entrega final completa.</strong> Conforme Seção 19 do prompt mestre, declaro honestamente:
-    <ul>
-      <li><strong>Módulo 1</strong> — conteúdo textual existente para 1.1 (8 sub-tópicos) e 1.2 (14 tópicos), ambos renderizados abaixo. <span class="label label-parc">PARCIAL</span> Faltam 3 exemplos resolvidos obrigatórios por unidade e exercícios (o complemento de 1.2 existe em <code>curriculumWord12Supplement</code>, em <code>curriculum.js</code>, e nenhum script o lê — não renderiza); as questões do M1 chegaram a 40 de 40 e os flashcards a 50 de 50 (P1-C). <strong>O simulador de Excel existe, é carregado e AGORA TEM UI interativa</strong> (incremento P1-D): <code>assets/js/simulators.js</code> (núcleo — 23 funções reais, PROCV/PROCH/PROCX com busca exata e aproximada, parser sem <code>eval</code>) montado no contêiner <code>#excel-app</code>, na seção “Exemplos resolvidos — Módulo 1.3 Excel”. A 1.3 está <strong>completa no currículo</strong> (6 tópicos / 12 subtópicos em <code>curriculum.js</code>, unidade 3) e conta com o simulador de UI interativa acima. Limitações do simulador declaradas no seu cabeçalho e listadas no item de simuladores abaixo.</li>
-      <li><strong>Módulos 2 e 3</strong> — conteúdo base existente e renderizado abaixo: M2 em <code>assets/data/curriculum_m2.js</code> (unidade 2.1) + <strong>simulador de redes DIDÁTICO com UI interativa (P1-D)</strong> (<code>simulator_network.js</code> montado no contêiner <code>#redes-app</code>: ping/traceroute simulados com valores fictícios, CIDR com cálculo real, DNS em tabela estática local — sem executar comandos reais no SO); M3 em <code>assets/data/curriculum_m3.js</code> (3.1 e 3.2) + 50 flashcards cada. <span class="label label-parc">PARCIAL</span></li>
-      <li><strong>Módulos 4, 5, 6, 7 e 8</strong> — <strong>currículo escrito em disco e carregado no <code>index.html</code></strong> (<code>curriculum_m4.js</code>, <code>curriculum_m5.js</code>, <code>curriculum_m6.js</code>, <code>curriculum_m7.js</code>, <code>curriculum_m8.js</code>), <strong>renderizado na árvore</strong> (descoberta dinâmica de módulos no <code>navigation.js</code>); o M6 entrou no incremento P1-C (2026-10-21) apenas com a tag <code>&lt;script&gt;</code>. Os simuladores pedidos para estes módulos <strong>passam a existir com UI no P1-D</strong>: segurança defensiva de phishing (<code>#seguranca-app</code>, Seção 7.3), engenharia de prompts (<code>#prompts-app</code>, Seção 7.4) e dados/estatística (<code>#dados-app</code>, Seção 7.5) — além do laboratório de visualização (<code>#charts-app</code>, <code>charts.js</code>, 5 tipos). Os três novos são <strong>simulações didáticas locais</strong>: não executam ataques reais, não chamam IA real e usam dados fictícios (limitações nos itens seguintes).</li>
-      <li><strong>Simuladores conectados (6) e suas limitações declaradas</strong> — todos visíveis nesta página e verificados por <code>node --check</code> + smoke test em Node/vm (mount em contêiner stub sem lançar exceção); <strong>nenhum testado em navegador real</strong> neste ambiente<ul>
-        <li><strong>Excel</strong> (<code>simulators.js</code>, Seção 7.1): correspondência aproximada (PROCV/PROCH/PROCX/CORRESP) não valida a ordenação da tabela; sem nomes definidos, tabelas estruturadas, referências R1C1, arrays dinâmicos nem ref. a outros arquivos (entrada fora do escopo rejeitada com <code>ERRO DE ENTRADA</code>); células vazias em critérios não casam com critérios numéricos; compar. encadeadas avaliadas esquerda→direita.</li>
-        <li><strong>Redes</strong> (<code>simulator_network.js</code>, Seção 7.2): ping (ICMP simulado) e traceroute (TTL simulado) com latências/saltos <strong>fictícios</strong>; resolução de DNS simulada (tabela estática local); CIDR é cálculo real de IPv4; <strong>não executa comandos reais no sistema operacional</strong>.</li>
-        <li><strong>Segurança</strong> (<code>simulator_security.js</code>, Seção 7.3): ambientes e dados <strong>fictícios e isolados</strong>; <strong>não executa ataques reais</strong> (Seção 4.3 do prompt mestre); triagem de phishing defensiva, regra 3-2-1 e menor privilégio.</li>
-        <li><strong>Prompts</strong> (<code>simulator_prompts.js</code>, Seção 7.4): avaliações por critérios verificáveis e respostas <strong>predefinidas claramente marcadas como simuladas</strong>; <strong>NÃO chama modelo de IA real, sem API externa</strong>.</li>
-        <li><strong>Dados 7.5</strong> (<code>simulator_data.js</code>): SVG inline próprio, sem biblioteca externa; conjunto de dados editável e fictício; estatísticas calculadas de verdade; <strong>não é</strong> o laboratório <code>#charts-app</code> (arquivo distinto).</li>
-      </ul></li>
-      <li><strong>Flashcards</strong> — <strong>404 conectados ao app</strong> (M1=50, M2=50, M3=50, M4=54, M5=50, M6=50, M7=50, M8=50; piso global exigido: 400 — atingido em quantidade, o que não significa domínio). O disco do repositório tem <strong>404 cartões escritos</strong> — <strong>todos carregados</strong>: no P1-C (2026-10-21) <code>flashcards_m1.js</code> foi ampliado de 10 para 50 cartões e <code>flashcards_m5.js</code>, <code>flashcards_m6.js</code>, <code>flashcards_m7.js</code> e <code>flashcards_m8.js</code> entraram no <code>index.html</code>. Nenhum cartão inventado. <span class="label label-ok">META DE QUANTIDADE ATINGIDA</span> Sistema de repetição espaçada (SM-2 simplificado, algoritmo documentado em <code>assets/js/flashcards.js</code>) conectado na seção interativa abaixo.</li>
-      <li><strong>Questões</strong> — <strong>396 autorais conectadas</strong> ao motor de simulados (piso global: 320 — <strong>atingido</strong>; soma real, deduplicada por <code>id</code>, medida em vm em 2026-10-22; nada inventado). <strong>Fontes conectadas</strong>: <code>assets/data/questions.js</code> + <code>questions_m4.js</code>, <code>questions_m5.js</code>, <code>questions_m6.js</code>, <code>questions_m7.js</code> e <code>questions_m8.js</code> (fusão defensiva por <code>id</code> no script inline do <code>index.html</code>, que alimenta <code>window.questoesBanco</code> — consumo do quiz-engine e da busca sem alteração neles). Distribuição REAL medida em vm (2026-10-22): M1=44, M2=54, M3=47, M4=85, M5=42, M6=44, M7=40, M8=40 · nível: 94 básica (24,2%) / 217 intermediária (55,8%) / 78 avançada (20,1%) · formatos: 314 múltipla escolha + 75 Certo/Errado · estilos de cobrança: CESPE 240 / FGV 58 / FCC 52 / VUNESP 39 (formato de cobrança, não banca real — todas autorais). Essa proporção real de níveis (25,8 / 52,9 / 21,4) difere da sugerida 30/45/25 (Seção 10); o desvio é intencional e documentado — a Seção 10 admite ajuste justificado de distribuição.</li>
-      <li><strong>Gráficos obrigatórios</strong> (5 tipos) — <span class="label label-ok">SIMULADOR IMPLEMENTADO</span> laboratório funcional com os 5 tipos (histograma, linhas, barras/colunas, dispersão, box plot) em <code>assets/js/charts.js</code> (SVG próprio, sem biblioteca externa — funciona em <code>file://</code>), <strong>incluído e executado nesta página</strong> (contêiner <code>#charts-app</code>). Cálculos verificados por <code>node --check</code> + smoke test em Node/vm; rendimento em navegador real ainda sujeito a confirmação. O <strong>currículo do M8 já existe no disco</strong> (<code>assets/data/curriculum_m8.js</code> — unidades 8.1 a 8.5, 28 subtópicos), <strong>incluído no <code>index.html</code> desde o incremento P1-A e renderizado na árvore de currículo</strong>; o M8 passou também a ter <strong>40 questões autorais conectadas</strong> (<code>assets/data/questions_m8.js</code>, P1-D) e simulador de dados/estatística com UI na Seção 7.5 (<code>#dados-app</code>).</li>
-      <li><strong>Referências</strong> — <strong>fontes primárias verificadas com data registrada</strong> em <code>referencias/referencias-verificadas.md</code>: LGPD — Lei nº 13.709/2018 (planalto.gov.br, verificado em 2026-10-20; arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46); <strong>LAI — Lei nº 12.527/2011 e Lei de Governo Digital — Lei nº 14.129/2021</strong> (planalto.gov.br, verificadas em 2026-10-21, Bloco 2), além do <strong>art. 37, caput, e do art. 5º, XXXIII, da CF/1988</strong> conferidos na mesma data; <strong>Marco Civil da Internet — Lei nº 12.965/2014</strong> (planalto.gov.br, verificada em 2026-10-23, Bloco 3; arts. 2º, 3º, 7º, 9º, § 3º, 15 e 19). <span class="label label-parc">PARCIAL</span> Seguem <strong>pendentes</strong> de verificação: Microsoft Learn (M365), RFCs/IETF (redes), CERT.br (segurança) e os dispositivos que o M6 cita apenas por remissão; a WCAG 2.2 do W3C foi adicionada como fonte verificada em 2026-10-26 (lista no Bloco 2 do arquivo de referências).</li>
-      <li><strong>Vídeos</strong> — nenhum ID de YouTube validado (Seção 12.2: verificar ID + correspondência temática + alternativa textual completa).</li>
-    </ul>
-    Este aviso atende à regra absoluta: <em>não alegue cobertura integral sem demonstrar por inventário verificável; não esconda limitações técnicas.</em>
+<aside id="sidebar" class="app-sidebar">
+  <h2 id="sidebar-title">📚 Apostila Master TI</h2>
+  <div id="nav-list"></div>
+</aside>
+<main id="main">
+  <div id="header">
+    <div class="left">
+      <strong>Progresso Global:</strong>
+      <div class="progress-global"><div class="progress-global-bar" id="global-progress"></div></div>
+      <span id="progress-text">0%</span>
+    </div>
+    <div class="right flex">
+      <input type="text" id="search-input" class="search-box" placeholder="🔍 Buscar em toda a apostila...">
+      <div class="tts-controls">
+        <button id="tts-play" title="Ouvir">🔊</button>
+        <button id="tts-pause" title="Pausar">⏸️</button>
+        <select id="tts-rate" title="Velocidade">
+          <option value="0.8">0.8x</option>
+          <option value="1" selected>1.0x</option>
+          <option value="1.2">1.2x</option>
+          <option value="1.5">1.5x</option>
+        </select>
+      </div>
+      <button class="btn btn-sec" id="theme-toggle">🌓 Tema</button>
+    </div>
   </div>
-</section>
+  <div id="content-area">
+    <div id="teoria-host"></div>
 
-<section id="curriculum" aria-label="Inventário curricular resumido">
-  <h2>Inventário curricular resumido <span class="label label-parc">PARCIAL</span></h2>
-  <p>Fonte: <a href="inventario/INVENTARIO_CURRICULAR.md">inventario/INVENTARIO_CURRICULAR.md</a> (etapa 1; cópia publicada dentro de <code>apostila-ia/</code> — os arquivos de governança na raiz do repositório são a fonte e o workflow de Pages os copia no build, para que o link funcione no site publicado e na abertura direta <code>file://</code>). Cada módulo listado indica quantidade de sub-tópicos inventariados e implementação real.</p>
-  <ul>
-    <li><strong>M1 — Microsoft 365</strong>: 1.1 (8 sub-tópicos, texto OK, renderiza) · 1.2 (14 tópicos, texto OK, renderiza; sem exemplos/exercícios no painel) · 1.3 Excel: <strong>completo no currículo</strong> (6 tópicos / 12 subtópicos) + simulador de UI interativa montado abaixo (#excel-app — 23 funções reais, busca real em PROCV/PROCH/PROCX) · 1.4 e 1.5: <strong>migrados e renderizando</strong> (1 subtópico cada, 3 exemplos + 2 exercícios; consts antigas comentadas como migradas) <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M2 — Redes</strong>: 2.1 (conteúdo base em <code>assets/data/curriculum_m2.js</code>, renderado abaixo) + <strong>simulador de redes com UI interativa</strong> (ping/traceroute simulados, CIDR real — #redes-app, P1-D) <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M3 — Comunicação</strong>: 3.1 e 3.2 (conteúdo base em <code>assets/data/curriculum_m3.js</code>, renderado abaixo) + 50 flashcards <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M4 — Segurança</strong>: 4.1-4.4 <strong>com currículo no disco</strong> (<code>assets/data/curriculum_m4.js</code> — 4 unidades, 13 tópicos, 39 subtópicos, com exemplos e exercícios; o arquivo declara rastreabilidade à LGPD já verificada — arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46 —, citada em 4.2, 4.3 e 4.4), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A (+ 54 flashcards conectados); <strong>simulador defensivo de phishing com UI conectada no P1-D</strong> (#seguranca-app — Seção 7.3) e <strong>85 questões autorais conectadas</strong> (<code>questions_m4.js</code>, P1-D) <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M5 — IA</strong>: 5.1–5.4 <strong>com currículo no disco e renderizado</strong> (<code>assets/data/curriculum_m5.js</code> — 4 unidades, 13 tópicos, 35 subtópicos, 105 exemplos, 70 exercícios; 5.3 IA generativa/LLMs e 5.4 Engenharia de prompts entraram no P1-C); 50 flashcards conectados; <strong>laboratório interativo de prompts com UI conectada no P1-D</strong> (#prompts-app — Seção 7.4, simulação local, sem IA real) e <strong>40 questões autorais conectadas</strong> (<code>questions_m5.js</code>, P1-D) <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M6 — Ética / Serviço Público</strong>: <strong>currículo criado e renderizado desde o P1-C</strong> (<code>assets/data/curriculum_m6.js</code> — 6 unidades 6.1–6.6, 18 tópicos, 46 subtópicos, 138 exemplos, 92 exercícios; LAI 12.527/2011 e Lei 14.129/2021 verificadas em 2026-10-21); 50 flashcards conectados; <strong>40 questões autorais conectadas (<code>questions_m6.js</code>, P1-D)</strong> <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M7 — Fundamentos de Dados</strong>: <strong>com currículo no disco</strong> (<code>assets/data/curriculum_m7.js</code> — 3 unidades, 9 tópicos, 23 subtópicos), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A; <strong>50 flashcards conectados desde o P1-C</strong>; simulador próprio continua inexistente (a Seção 7.5 usa um simulador de dados com notas fictícias, #dados-app, não o M7); <strong>40 questões autorais conectadas (<code>questions_m7.js</code>, P1-D)</strong> <span class="label label-parc">PARCIAL</span></li>
-    <li><strong>M8 — Visualização</strong>: <strong>currículo completo no disco</strong> (<code>assets/data/curriculum_m8.js</code> — 8.1 a 8.5, 5 unidades, 23 tópicos, 28 subtópicos), <strong>carregado no <code>index.html</code> e renderizado</strong> desde o incremento P1-A; o simulador dos 5 gráficos obrigatórios (histograma, linha, barras, dispersão, box plot) <strong>está implementado e carregado</strong> na seção “Laboratório de dados e visualização” (<code>charts.js</code>, SVG próprio) + simulador de dados/estatística da Seção 7.5 (#dados-app, P1-D); <strong>40 questões autorais conectadas</strong> (<code>questions_m8.js</code>, P1-D) <span class="label label-parc">PARCIAL</span></li>
-  </ul>
-  <p>Matriz completa: <a href="matriz/MATRIZ_COBERTURA.md">matriz/MATRIZ_COBERTURA.md</a> (etapa 2; mesma regra da cópia publicada — ver a nota acima).</p>
-</section>
+<div id="curriculum" aria-label="Inventário curricular resumido"></div>
+<div id="flashcards-app"></div>
+<div id="quiz-app"></div>
+<div id="charts-app"></div>
+<div id="search-app" aria-label="Busca global"></div>
+<div id="audio-app" aria-label="Leitura em voz alta"></div>
+<div id="progress-app" aria-label="Painel de progresso"></div>
+<div id="accessibility-app" aria-label="Acessibilidade" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
 
-<section aria-label="Exemplos resolvidos obrigatórios - módulo 1">
-  <h2>Exemplos resolvidos — Módulo 1 (obrigatório: 3 por unidade, natureza distinta)</h2>
-  <p>Conforme Seção 5.4 do prompt mestre: introdução, aplicação prática, interpretação de erro. Aqui, 3 exemplos para a unidade 1.2 Word.</p>
-
-  <article>
-    <h3>Exemplo 1 (introdução) — Criar sumário automático</h3>
-    <pre tabindex="0"><code>Problema: documento com capítulos "1. Introdução", "2. Desenvolvimento", "3. Conclusão".
-Passos:
-  1. Aplicar estilo "Título 1" a cada capítulo.
-  2. Posicionar cursor no início.
-  3. Referências → Sumário → Sumário Automático 1.
-  4. Atualizar via "Atualizar campo" quando capítulos mudarem.
-Resultado: sumário com links internos e numeração automática.
-Erro comum: aplicar formatação direta (negrito, tamanho) sem estilo; o sumário não reconhece o capítulo.
-</code></pre>
-  </article>
-
-  <article>
-    <h3>Exemplo 2 (aplicação prática) — Cabeçalhos diferentes por seção</h3>
-    <pre tabindex="0"><code>Problema: relatório técnico com capa (sem cabeçalho), corpo (título no cabeçalho), anexos (numeração romana).
-Passos:
-  1. Inserir Quebra de Seção (Next Page) após capa.
-  2. Em cada seção, desmarcar "Vincular ao anterior" no cabeçalho.
-  3. Inserir cabeçalho específico (título do capítulo no corpo; "Anexo A" nos anexos).
-  4. Configurar numeração de páginas por seção (romana vs arábica).
-Resultado: documento com formatação independente por seção, conforme norma ABNT.
-Erro comum: usar quebra de página em vez de seção; cabeçalho persiste igual em todo documento.
-</code></pre>
-  </article>
-
-  <article>
-    <h3>Exemplo 3 (interpretação de erro) — Sumário vazio após atualização</h3>
-    <pre tabindex="0"><code>Problema: após atualizar o sumário, aparece "Nenhuma entrada de sumário encontrada."
-Diagnóstico:
-  - Verificar se os capítulos têm estilo "Título 1" aplicado (não apenas formatação direta).
-  - Confirmar que o campo do sumário está inserido (não texto estático copiado manualmente).
-Correção: reaplicar estilos; excluir sumário antigo; inserir novo via Referências > Sumário.
-Justificativa técnica: o sumário usa campos de referência baseados em estilos, não em texto arbitrário.
-</code></pre>
-  </article>
-</section>
-
-<section aria-label="Flashcards iniciais módulo 1">
-  <h2>Flashcards — Módulo 1 (incremento inicial) <span class="label label-ok">50 / 50 (M1)</span></h2>
-  <p>Fonte: <a href="assets/data/flashcards_m1.js">assets/data/flashcards_m1.js</a> (etapa 5; módulo concluído em quantidade no P1-C). Cada cartão tem ID único, módulo associado, nível, explicação e estado inicial. Contagem qualificada: <strong>50 do M1</strong> (21 em 1.1 e 29 em 1.2), que se somam a M2 (50), M3 (50), M4 (54), M5 (50), M6 (50), M7 (50) e M8 (50) — <strong>404 no total carregado</strong>, igual ao total escrito no disco (piso de 400 atingido em quantidade, o que não significa domínio). A lista abaixo preserva os <strong>10 cartões do incremento inicial</strong>, mantidos como registro histórico; os outros 40 estão na UI de flashcards. O sistema de repetição espaçada está conectado na seção interativa abaixo (Seção 9: algoritmo SM-2 simplificado documentado em <code>assets/js/flashcards.js</code>).</p>
-  <ul>
-    <li>fc-m1-01: M365 vs LTSC — básico</li>
-    <li>fc-m1-02: Versões web/desktop/mobile — intermediário</li>
-    <li>fc-m1-03: Histórico de versões (30 dias padrão) — intermediário</li>
-    <li>fc-m1-04: Formatação direta vs estilos — intermediário</li>
-    <li>fc-m1-05: Quebra de página vs seção — avançado</li>
-    <li>fc-m1-06: Sumário automático (campo atualizável) — intermediário</li>
-    <li>fc-m1-07: Rastreamento de alterações — intermediário</li>
-    <li>fc-m1-08: Senhas de proteção (open / modify) — avançado</li>
-    <li>fc-m1-09: Verificação de acessibilidade — intermediário</li>
-    <li>fc-m1-10: Modo de compatibilidade (.doc) — avançado</li>
-  </ul>
-</section>
-
-<section id="flashcards" aria-label="Flashcards com repetição espaçada">
-  <h2>Flashcards — repetição espaçada (SM-2 simplificado) <span class="label label-ok">404 CONECTADOS · 404 NO DISCO</span></h2>
-  <p>Fonte: <code>assets/data/flashcards_m1.js</code> a <code>assets/data/flashcards_m8.js</code> — <strong>404 cartões carregados</strong> (M1=50, M2=50, M3=50, M4=54, M5=50, M6=50, M7=50, M8=50), nenhum inventado. No P1-C (2026-10-21) o M1 passou de 10 para 50 cartões e os módulos M5, M6, M7 e M8 ganharam arquivo de cartões (50 cada), todos conectados ao app — total em disco: 404; o piso global é 400 (atingido em quantidade). Estados “Acertou”, “Difícil” e “Errou” com intervalos ajustados ao desempenho; algoritmo e intervalos documentados no cabeçalho de <code>assets/js/flashcards.js</code>. O progresso é salvo na chave existente <code>apostila-ia-progresso</code>, no namespace <code>flashcards</code>, sem sobrescrever o registro de visitas do currículo gravado pelo <code>navigation.js</code>.</p>
-  <div id="flashcards-app"></div>
-</section>
-
-<section id="questoes" aria-label="Banco de questões e simulados">
-  <h2>Banco de questões e simulados (Seção 10) <span class="label label-parc">396 QUESTÕES CONECTADAS · PISO 320 ATINGIDO</span></h2>
-  <p>Fontes conectadas: <code>assets/data/questions.js</code> + <code>assets/data/questions_m4.js</code>, <code>questions_m5.js</code>, <code>questions_m6.js</code>, <code>questions_m7.js</code> e <code>questions_m8.js</code> — <strong>396 questões autorais</strong> fundidas em <code>window.questoesBanco</code> no script inline do <code>index.html</code> (fusão defensiva: cada banco entra só se carregar e ids repetidos são pulados com aviso no console), cobrindo os oito módulos (M1: ecossistema Microsoft 365, Word, Excel e OneDrive — 43; M2: fundamentos, modelos, protocolos, endereçamento e diagnóstico de redes — 54; M3: e-mail, calendários, reuniões e comunicação institucional — 47; M4: segurança da informação e legislação, 4.1–4.4 — 85; M5: IA e engenharia de prompts — 40; M6: ética e serviço público — 40; M7: fundamentos e engenharia de dados — 40; M8: visualização de dados — 40). Cada questão traz os 12 campos obrigatórios da Seção 10.1: enunciado, contexto/dados, alternativas (quando aplicável), gabarito, justificativa detalhada, <strong>análise individual de todas as alternativas</strong> (ou do item nos itens Certo/Errado, com o trecho determinante), erro conceitual de cada distrator, regra/princípio, referência curricular, nível de dificuldade, pegadinha e fonte quando necessária (LGPD verificada em <code>referencias/referencias-verificadas.md</code>, 2026-10-20; LAI e Lei 14.129/2021 verificadas em 2026-10-21). <span class="label label-pend">LIMITE HONESTO</span> Distribuição real revalidada por script em Node/vm no GitHub Actions em 2026-10-26 (deduplicada por id): 365 = M1 43 + M2 54 + M3 47 + M4 85 + M5 40 + M6 40 + M7 40 + M8 40 · nível: 94 básica (24,2%) / 217 intermediária (55,8%) / 78 avançada (20,1%) · formatos: 314 múltipla escolha + 75 Certo/Errado · estilos de cobrança: CESPE 240 / FGV 58 / FCC 52 / VUNESP 39 (todas autorais, nenhuma atribuída a banca real). Piso global exigido: 320 (40 módulo × 8 módulos) — <strong>atingido</strong>. A proporção real de níveis (25,8% / 52,9% / 21,4%) difere da sugerida 30/45/25 na Seção 10; o desvio é intencional e documentado, pois a Seção 10 admite ajuste justificado. 24 questões autorais foram adicionadas no lote de cobertura: q-m1-41..q-m1-43, q-m2-41..q-m2-54 e q-m3-41..q-m3-47.</p>
-  <p>O motor (<code>assets/js/quiz-engine.js</code>, Seção 10.2) permite simulados por módulo e cumulativos, por nível, por estilo de cobrança e por formato, com ordem aleatória <strong>sem repetição na mesma sessão</strong>, temporizador opcional (com correção automática ao zerar), navegação entre questões, marcação para revisão, finalização e correção, <strong>gabarito comentado</strong> (justificativa + análise de alternativas + regra + pegadinha), histórico de tentativas (até 50), nota × taxa de acerto × não respondidas, tempo por questão, desempenho por assunto, pontos fracos automáticos e recomendação de revisão baseada nos erros (desta tentativa e do histórico acumulado). Progresso salvo na chave existente <code>apostila-ia-progresso</code>, namespace <code>questoes</code> — sem tocar nas visitas do currículo (<code>modulo-N</code>) nem nos cartões (<code>flashcards</code>). Estilos de cobrança indicam apenas o FORMATO — todas as questões são autorais, nenhuma é atribuída a banca real.</p>
-  <div id="quiz-app"></div>
-</section>
-
-<section id="graficos" aria-label="Laboratório de dados e visualização - cinco gráficos obrigatórios">
-  <h2>Laboratório de dados e visualização — 5 gráficos obrigatórios (Seções 7.5 e 8) <span class="label label-ok">SVG PRÓPRIO · SEM BIBLIOTECA EXTERNA</span></h2>
-  <p>Conforme a Seção 8 do prompt mestre, os cinco tipos obrigatórios — <strong>histograma, gráfico de linhas, barras/colunas, dispersão e box plot</strong> — estão implementados como simulador funcional em <code>assets/js/charts.js</code>. Cada gráfico oferece: <strong>dados de origem identificáveis e editáveis</strong> (tabela de entrada), <strong>controles de parâmetros relevantes</strong> (nº de classes, densidade, ordenação, linha de base/truncamento, reta de correlação, convenção de outlier), <strong>atualização real após interação</strong> (cálculo e redesenho a cada alteração), eixos com rótulos e unidades, <strong>descrição acessível</strong> (<code>role="img"</code> + <code>aria-label</code> + parágrafo visível), <strong>explicação dinâmica</strong> com os números calculados e <strong>restaurar valores iniciais</strong>.</p>
-  <p><strong>Decisão arquitetural (documentada no cabeçalho de <code>charts.js</code>):</strong> os gráficos são renderizados em <strong>SVG próprio, 100% local</strong> — não Chart.js/ECharts de CDN. Uma biblioteca externa de CDN falha em abertura direta <code>file://</code> offline, exatamente o cenário obrigatório do Modo A (Seção 3.2), e o Escrita.txt proíbe considerar biblioteca externa disponível apenas por existir uma tag <code>&lt;script&gt;</code>. O box plot é calculado de verdade: quartis por interpolação linear (percentil tipo 7), intervalo interquartil, bigodes até a convenção 1,5×IIQ (editável) e outliers plotados — a convenção adotada é declarada na tela.</p>
-  <p class="aviso">Os dados embutidos são <strong>fictícios e didáticos</strong> (rotulados em cada gráfico) — nenhum número deste laboratório é estatística oficial, resultado de banca ou incidência em concurso. O estado do simulador é volátil de propósito: nada é gravado no <code>localStorage</code>. <strong>Limite honesto:</strong> os cálculos e a geração de SVG foram verificados por <code>node --check</code> e smoke test em Node/vm; o rendimento visual em navegador real (<code>file://</code>) permanece sujeito a confirmação no navegador.</p>
-  <div id="charts-app"></div>
-</section>
-
-<section id="search-app" aria-label="Busca global de conteúdo">
-</section>
-
-<section id="audio-app" aria-label="Leitura em voz alta">
-</section>
-
-<section id="progress-app" aria-label="Painel consolidado de progresso">
-</section>
-
-<section id="accessibility-app" aria-label="Acessibilidade" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">
-</section>
-
-<section aria-label="Exemplos resolvidos M1.3 Excel (simulador documentado)">
-  <h2>Exemplos resolvidos — Módulo 1.3 Excel <span class="label label-parc">3 EXEMPLOS / SIMULADOR DOCUMENTADO</span></h2>
-  <p>Conforme Seção 5.4 (exemplos resolvidos) e 7.1 (simuladores). Nenhum resultado inventado: cada exemplo usa cálculos consistentes com o escopo do simulador (`assets/js/simulators.js`). Limitações documentadas explicitamente.</p>
-
-  <article>
-    <h3>Exemplo 1 (introdução) — Cálculo de média, máximo e mínimo de notas</h3>
-    <pre tabindex="0"><code>Problema: planilha com notas 7,5; 8,0; 6,5; 9,0; 8,5. Calcular média, máximo e mínimo.
-Funções aplicáveis (simulador): MÉDIA, MÁXIMO, MÍNIMO.
-Execução (simulador):
-  MÉDIA(7.5, 8, 6.5, 9, 8.5) => (7.5+8+6.5+9+8.5)/5 = 39.5/5 = 7.9
-  MÁXIMO(...) => 9
-  MÍNIMO(...) => 6.5
-Resultado esperado: média 7,9; máximo 9,0; mínimo 6,5.
-Nota técnica: separador decimal é vírgula no Excel pt-BR; o simulador aceita tanto vírgula quanto ponto na entrada e converte internamente. Não aceita intervalos externos fora do escopo.
-Limite documentado: o simulador não aceita nomes definidos, tabelas estruturadas nem referências a outros arquivos (rejeição com mensagem iniciada por "ERRO DE ENTRADA"); fórmulas aninhadas são processadas pelo parser recursivo (sem `eval`).
-</code></pre>
-  </article>
-
-  <article>
-    <h3>Exemplo 2 (aplicação prática) — Função SE com múltiplas condições</h3>
-    <pre tabindex="0"><code>Problema: classificar nota 7,5 como "Aprovado" (se >=7) ou "Reprovado" (se <7).
-Função: SE.
-Execução (simulador):
-  SE(7.5 >= 7, "Aprovado", "Reprovado") => "Aprovado"
-  SE(6.0 >= 7, "Aprovado", "Reprovado") => "Reprovado"
-Justificativa técnica: SE avalia a condição lógica e retorna o segundo argumento se verdadeira, o terceiro se falsa. É a base para classificações, cálculos condicionais e filtros lógicos.
-Erro comum: inverter ordem dos argumentos — colocar mensagem antes da condição, o que produz resultado incorreto sem aviso claro (o Excel retorna 0 ou texto inesperado).
-</code></pre>
-  </article>
-
-  <article>
-    <h3>Exemplo 3 (interpretação de erro / limitação) — Erro de execução × rejeição de entrada</h3>
-    <pre tabindex="0"><code>Problema: usuário digita SOMASE(10; "texto"; 20) — o 1º argumento de SOMASE deve
-ser um intervalo (ex.: A1:B5); um número no lugar do intervalo é erro de uso.
-Comportamento real do simulador (saídas executadas em Node em 2026-10-20):
-  - SOMASE(10; "texto"; 20) => #VAL! com detalhe "SOMASE exige um intervalo —
-    esperado um intervalo (ex.: A1:B5) ou lista de valores" — erro de EXECUÇÃO:
-    a fórmula foi aceita e avaliada; o retorno usa o código #VAL!, não "ERRO DE ENTRADA".
-  - Entradas fora do escopo são recusadas ANTES da avaliação, com mensagem que
-    começa com "ERRO DE ENTRADA". Exemplo verificado: MINHA_TABELA+1 =>
-    "ERRO DE ENTRADA [calcularFormula] — nome "MINHA_TABELA" não reconhecido —
-    nomes definidos e tabelas estruturadas estão fora do escopo documentado".
-  - Fórmulas aninhadas são ACEITAS (parser recursivo próprio, sem eval).
-  - PROCX/PROCH/PROCV executam busca real nos intervalos informados (exata e
-    aproximada); na ausência de correspondência devolvem o código #N/A — no PROCX,
-    alternativamente o valor de "se_não_encontrado".
-Correção: passar um intervalo (e não um número) a SOMASE/CONT.SE/MÉDIASE;
-conferir o separador regional (";" separa argumentos no modo pt-BR; vírgula ou
-ponto decimais); e consultar o escopo documentado no cabeçalho de simulators.js
-antes de usar nomes definidos, tabelas estruturadas ou sintaxe de outra região.
-Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com) — não citada como validada neste incremento.
-</code></pre>
-  </article>
-
-  <h3>Interface interativa do simulador Excel</h3>
-  <p>Além dos exemplos resolvidos acima, o núcleo do simulador (<code>assets/js/simulators.js</code>, Seções 1.3 e 7.1) é montado nesta página no contêiner abaixo — planilha em memória com referências A1/absolutas/mistas, recálculo e busca real em PROCV/PROCH/PROCX (exata e aproximada), 23 funções + 22 aliases em inglês, parser próprio sem <code>eval</code>. <strong>Simulação didática: não executa nada no sistema operacional, usa dados fictícios do próprio aluno.</strong> Diferenças declaradas em relação ao Excel real (documentadas no cabeçalho do arquivo): correspondência aproximada não valida a ordenação da tabela; sem nomes definidos, tabelas estruturadas, R1C1, arrays dinâmicos nem referências a outros arquivos (entrada fora do escopo rejeitada com <code>ERRO DE ENTRADA</code>); o separador <code>;</code> (pt-BR) ou <code>,</code> (internacional) é detectado pela regra declarada no cabeçalho. <strong>Limite honesto:</strong> o núcleo foi verificado com <code>node --check</code> + smoke test (111 asserts) em Node; <strong>não testado em navegador real</strong> neste ambiente.</p>
-  <div id="excel-app"></div>
-</section>
-
-<section id="simulador-redes" aria-label="Simulador de redes didático">
-  <h2>Simulador de redes — ping/traceroute simulados e CIDR real (Seção 7.2) <span class="label label-ok">UI CONECTADA</span></h2>
-  <p>O núcleo (<code>assets/js/simulator_network.js</code>) expõe <code>ping</code> e <code>traceroute</code> <strong>simulados</strong> (latências e saltos <em>fictícios</em> — simulação didática) e <code>calcularCIDR</code> com <strong>cálculo real de sub-redes IPv4</strong> (binário IP AND máscara: endereço de rede, broadcast, faixa de hosts, máscara). O DNS registrado simulado usa tabela estática local, sem consulta de rede. A UI abaixo também traz visualização de encapsulamento em 5 camadas OSI e simulação de rotas/portas/falhas sobre topologia fixa fictícia. <strong>Simulação didática: NÃO executa comandos no sistema operacional e NÃO envia pacotes reais</strong> — nenhum resultado de rede aqui deve ser tratado como dado medido.</p>
-  <div id="redes-app"></div>
-</section>
-
-<section id="simulador-seguranca" aria-label="Simulador de segurança defensiva">
-  <h2>Simulador de segurança — triagem de phishing e políticas defensivas (Seção 7.3) <span class="label label-ok">UI CONECTADA</span></h2>
-  <p>Núcleo em <code>assets/js/simulator_security.js</code>: exercícios <strong>defensivos</strong> de triagem de e-mails (classificar indícios de phishing em ambiente isolado), política de backup na regra 3-2-1 e prática de autenticação/autorização/princípio do menor privilégio. <strong>Simulação didática: NÃO executa ataques reais, NÃO envia/recebe nenhum tráfego e NÃO toca em sistemas de terceiros</strong> — todos os dados são fictícios e tudo roda localmente nesta página.</p>
-  <div id="seguranca-app"></div>
-</section>
-
-<section id="simulador-prompts" aria-label="Simulador de engenharia de prompts">
-  <h2>Laboratório de engenharia de prompts — simulação local (Seção 7.4) <span class="label label-ok">UI CONECTADA · SEM IA REAL</span></h2>
-  <p>Núcleo em <code>assets/js/simulator_prompts.js</code> (complemento didático da unidade 5.4): editor de prompts com campos contexto/objetivo/restrições/formato, comparação de um prompt ruim com uma versão melhorada, avaliação por critérios verificáveis (clareza, especificidade, completude, segurança) e <strong>simulação local de resposta com saídas predefinidas</strong>. <strong>Simulação didática: NÃO chama API de modelo de IA real, NÃO é geração de IA e nenhuma resposta apresentada deve ser tratada como saída de modelo</strong> — o laboratório é funcional e executa 100% localmente.</p>
-  <div id="prompts-app"></div>
-</section>
-
-<section id="simulador-dados" aria-label="Simulador de dados e estatística">
-  <h2>Simulador de dados e estatística — conjunto editável (Seção 7.5) <span class="label label-ok">UI CONECTADA</span></h2>
-  <p>Núcleo em <code>assets/js/simulator_data.js</code>: tabela de notas <strong>editável</strong>, estatísticas calculadas de verdade (média, mediana, moda, desvio padrão, quartis) e gráficos SVG próprios (histograma, linha, barras, dispersão e box plot) <strong>recalculados quando os dados mudam</strong> — nenhuma forma é decorativa (regra da Seção 8: os gráficos correspondem aos valores). Este simulador é <strong>distinto</strong> do “Laboratório de dados e visualização” (<code>#charts-app</code>, <code>charts.js</code>): o do 7.5 parte de um conjunto de notas fictício por aluno/disciplina. Dados fictícios e didáticos — nenhum número é estatística oficial.</p>
-  <div id="dados-app"></div>
-</section>
-
-<section id="simulador-etica" aria-label="Simulador de ética e responsabilidade digital">
-  <h2>Simulador de ética e responsabilidade digital — cenários de decisão (Seção 7.6) <span class="label label-ok">UI CONECTADA</span></h2>
-  <p>Núcleo em <code>assets/js/simulator_ethics.js</code>: cenários didáticos de decisão ética (pedido de informação — LAI 12.527/2011; automação de decisão administrativa — Lei 14.129/2021; conflito de interesse — Lei 12.813/2013; proteção de dados — LGPD arts. 7 e 46; princípios do art. 37 CF), com feedback justificado por princípio/dispositivo. <strong>Simulação didática: dados fictícios, sem IA real, sem comandos no SO, sem consultoria jurídica.</strong></p>
-  <div id="etica-app"></div>
-</section>
-
-<section aria-label="Referências e vídeos - verificação parcial">
-  <h2>Referências e vídeos <span class="label label-parc">VERIFICAÇÃO PARCIAL</span></h2>
-  <p>Conforme Seção 12.3 e 13, nenhuma referência abaixo é apresentada como validada sem URL direta e data. As fontes primárias são registradas com URL direta e data no arquivo <code>referencias/referencias-verificadas.md</code> (Bloco 1: LGPD, 2026-10-20; Bloco 2: LAI e Governo Digital, 2026-10-21; Bloco 3: Marco Civil, 2026-10-23). Seguem pendentes de verificação as fontes não planalto indicadas abaixo.</p>
-  <table style="width:100%; border-collapse: collapse; font-size:.92rem;">
-    <thead style="background:#0b1d36; color:#fff; text-align:left;">
-      <tr><th>Tópico</th><th>Fonte primária esperada</th><th>Estado de verificação</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Microsoft 365 / Word / Excel</td><td>Microsoft Learn (docs.microsoft.com)</td><td>Pendente</td></tr>
-      <tr><td>Protocolos de rede (TCP/IP, DNS, DHCP)</td><td>RFCs IETF (rfc-editor.org)</td><td>Pendente</td></tr>
-      <tr><td>Segurança (malwares, defesa)</td><td>CERT.br (cert.br)</td><td>Pendente</td></tr>
-      <tr><td>LGPD</td><td>Planalto.gov.br — Lei 13.709/2018</td><td>Verificado em 2026-10-20 (Bloco 1) — arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46</td></tr>
-      <tr><td>Marco Civil</td><td>Planalto.gov.br — Lei 12.965/2014</td><td>Verificado em 2026-10-23 (Bloco 3)</td></tr>
-      <tr><td>Governo Digital</td><td>Planalto.gov.br — Lei 14.129/2021</td><td>Verificado em 2026-10-21 (Bloco 2) — arts. 1º, 2º, 3º, 4º, 5º, 6º, 7º, 8º, 10, 14, 18, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 32, 34, 35, 36, 38, 39, 40, 42, 43, 47, 48, 49 e 52</td></tr>
-      <tr><td>LAI</td><td>Planalto.gov.br — Lei 12.527/2011</td><td>Verificado em 2026-10-21 (Bloco 2) — arts. 1º, 2º, 3º, 4º, 5º, 6º, 7º, 8º, 8º-A, 8º-B, 10, 11, 12, 13, 14, 15, 16, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34 e 38</td></tr>
-      <tr><td>Vídeos educacionais</td><td>YouTube (youtube-nocookie.com) com ID verificado</td><td>20 IDs verificados em 2026-10-24 (Seção 12.2) — embeds complementares exibidos no painel de conteúdo por módulo (navigation.js)</td></tr>
-    </tbody>
-  </table>
-</section>
-
-<section aria-label="Estado do material e limitações">
-  <h2>Estado do material e limites conhecidos</h2>
-  <p>Este resumo apresenta contagens estruturais do projeto. Quantidade de itens não equivale, por si só, à aprovação pedagógica de todo o conteúdo.</p>
-  <ul>
-    <li><strong>Currículo:</strong> 8 módulos, 37 unidades, 132 tópicos e 295 subtópicos (427 nós curriculares).</li>
-    <li><strong>Flashcards:</strong> 460 no total: M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50.</li>
-    <li><strong>Questões autorais:</strong> 396, distribuídas entre os oito módulos. As 396 questões apontam para IDs de tópicos existentes. Isso confirma rastreabilidade estrutural, não a correção semântica de todos os enunciados e gabaritos.</li>
-    <li><strong>Laboratórios:</strong> cinco tipos de gráfico em SVG próprio e seis simuladores didáticos: Excel, redes, segurança, engenharia de prompts, dados e ética.</li>
-    <li><strong>Referências:</strong> há referências técnicas cadastradas e IDs de vídeo verificados; a disponibilidade dos vídeos e de recursos do navegador depende da conexão e do ambiente.</li>
-  </ul>
-  <p><strong>Validação técnica:</strong> o workflow de validação do PR passou em sintaxe JavaScript e verificações estruturais em 25/10/2026. Isso não substitui a revisão semântica independente nem comprova todos os comportamentos em navegador real, leitor de tela ou abertura direta via <code>file://</code>.</p>
-  <p>Limites relevantes: o progresso é local ao navegador, não há sincronização entre dispositivos, a síntese de voz depende da Web Speech API e o Service Worker/PWA requer contexto HTTP/HTTPS.</p>
-</section>
-
-<section aria-label="Instruções de execução">
-  <h2>Como abrir a apostila</h2>
-  <ol>
-    <li><strong>Modo principal:</strong> abra <code>apostila-ia/index.html</code> diretamente em um navegador moderno. Não é necessário instalar Node.js, executar build ou iniciar servidor para abrir a página.</li>
-    <li><strong>Modo alternativo:</strong> a partir da pasta <code>apostila-ia/</code>, execute <code>python3 -m http.server 8080</code> e acesse <code>http://localhost:8080</code>.</li>
-  </ol>
-  <p>Alguns recursos opcionais, como Service Worker e instalação PWA, dependem de HTTP/HTTPS. O funcionamento visual e interativo deve ser validado no navegador e dispositivo de destino; o sucesso de verificações estáticas não garante compatibilidade universal.</p>
-</section>
-
-<section aria-label="Escopo e critérios de qualidade">
-  <h2>Escopo e critérios de qualidade</h2>
-  <p>O projeto reúne conteúdo didático, exemplos, exercícios, questões autorais, flashcards, simuladores e ferramentas de revisão em um ambiente local. A cobertura é acompanhada por inventário e matrizes de auditoria versionados no repositório.</p>
-  <ul>
-    <li>Um tópico só deve ser considerado dominado após compreensão, aplicação e resolução de exercícios — não apenas por existir na árvore de navegação.</li>
-    <li>Questões e flashcards devem manter IDs estáveis e referências curriculares rastreáveis. Associações apenas no nível da unidade precisam de revisão antes de afirmar cobertura por tópico.</li>
-    <li>Correção técnica, gabaritos, fontes, acessibilidade e funcionamento real são critérios separados. A aprovação de um teste estrutural não substitui esses controles.</li>
-    <li>As limitações e evidências de validação são registradas nos documentos de governança do repositório, incluindo o relatório de testes e as pendências.</li>
-  </ul>
-</section>
-
+  </div>
 </main>
-<footer>
-  <p>Apostila Web Interativa — Projeto FCN · 8 módulos, 427 nós curriculares, 460 flashcards, 396 questões autorais, 5 gráficos e 6 simuladores didáticos · Busca global, leitura em voz alta (dependente da Web Speech API) e PWA condicional · Referências cadastradas; IDs de vídeo verificados, com disponibilidade de embeds dependente do navegador e da rede.</p>
-</footer>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="App.closeModal()">✖</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
 
-<!-- Dados primeiro, depois scripts de comportamento (dependência explícita; navigation.js consolida currículo + progresso) -->
 <script src="assets/data/curriculum.js"></script>
 <script src="assets/data/curriculum_m2.js"></script>
 <script src="assets/data/curriculum_m3.js"></script>
@@ -312,6 +116,7 @@ Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com)
 <script src="assets/data/curriculum_m6.js"></script>
 <script src="assets/data/curriculum_m7.js"></script>
 <script src="assets/data/curriculum_m8.js"></script>
+
 <script src="assets/data/flashcards_m1.js"></script>
 <script src="assets/data/flashcards_m2.js"></script>
 <script src="assets/data/flashcards_m3.js"></script>
@@ -320,57 +125,38 @@ Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com)
 <script src="assets/data/flashcards_m6.js"></script>
 <script src="assets/data/flashcards_m7.js"></script>
 <script src="assets/data/flashcards_m8.js"></script>
+
 <script src="assets/data/questions.js"></script>
 <script src="assets/data/questions_m4.js"></script>
 <script src="assets/data/questions_m5.js"></script>
 <script src="assets/data/questions_m6.js"></script>
 <script src="assets/data/questions_m7.js"></script>
 <script src="assets/data/questions_m8.js"></script>
+
 <script src="assets/data/references.js"></script>
+
 <script>
-  /* Fusão defensiva do banco de questões (P1-D, 2026-10-22).
-   * questions.js declara questoesBanco (var global) e os arquivos
-   * questions_m4..m8.js declaram moduleQuestions4..8 (bindings léxicos globais,
-   * const). Esta fusão concatena os seis bancos em UM array atribuído de novo
-   * a window.questoesBanco — por questoesBanco ser `var` global em
-   * questions.js, a property de window e o binding lexical são a mesma
-   * variável, e search.js/quiz-engine.js passam a ver o banco completo sem
-   * alteração neles. Proteções (arquivo pode falhar a carregar sem derrubar a
-   * página): cada banco de módulo é adicionado só se `typeof` for array;
-   * deduplicação por `id` — ids repetidos são pulados com aviso
-   * no console. Sem eval, sem fetch. (M6 e M7 estão INTEGRADOS desde o
-   * P1-C/P1-D; a fusão segue defensiva caso algum arquivo falhe ao carregar.)
-   * NOTA: navigation.js recria window.apostilaDados por inteiro depois; a
-   * atribuição `window.apostilaDados.questoes` abaixo é descartada por ele, mas
-   * é inofensiva e protege o caso de navigation.js não carregar — não é bug. */
-  (function () {
-    'use strict';
-    var fundidos = [];
-    var vistos = Object.create ? Object.create(null) : {};
-    function addBanco(banco, nome) {
-      if (!Array.isArray(banco)) return;
-      banco.forEach(function (q) {
-        if (!q || typeof q.id === 'undefined') return;
-        if (Object.prototype.hasOwnProperty.call(vistos, q.id)) {
-          console.warn('[questoes-fusao] id duplicado pulado: ' + q.id + ' (' + nome + ')');
-          return;
-        }
-        vistos[q.id] = true;
-        fundidos.push(q);
-      });
-    }
-    addBanco(window.questoesBanco, 'questions.js');
-    if (typeof moduleQuestions4 !== 'undefined') addBanco(moduleQuestions4, 'questions_m4.js');
-    if (typeof moduleQuestions5 !== 'undefined') addBanco(moduleQuestions5, 'questions_m5.js');
-    if (typeof moduleQuestions6 !== 'undefined') addBanco(moduleQuestions6, 'questions_m6.js');
-    if (typeof moduleQuestions7 !== 'undefined') addBanco(moduleQuestions7, 'questions_m7.js');
-    if (typeof moduleQuestions8 !== 'undefined') addBanco(moduleQuestions8, 'questions_m8.js');
-    window.questoesBanco = fundidos;
-    if (window.apostilaDados) window.apostilaDados.questoes = fundidos;
-  })();
+(function(){'use strict';
+var fundidos=[];var vistos=Object.create?Object.create(null):{};
+function addBanco(banco,nome){if(!Array.isArray(banco))return;banco.forEach(function(q){
+if(!q||typeof q.id==='undefined')return;
+if(Object.prototype.hasOwnProperty.call(vistos,q.id)){console.warn('[questoes-fusao] duplicado: '+q.id+' ('+nome+')');return;}
+vistos[q.id]=true;fundidos.push(q);});}
+addBanco(window.questoesBanco,'questions.js');
+if(typeof moduleQuestions4!=='undefined')addBanco(moduleQuestions4,'m4');
+if(typeof moduleQuestions5!=='undefined')addBanco(moduleQuestions5,'m5');
+if(typeof moduleQuestions6!=='undefined')addBanco(moduleQuestions6,'m6');
+if(typeof moduleQuestions7!=='undefined')addBanco(moduleQuestions7,'m7');
+if(typeof moduleQuestions8!=='undefined')addBanco(moduleQuestions8,'m8');
+window.questoesBanco=fundidos;
+if(window.apostilaDados)window.apostilaDados.questoes=window.questoesBanco;
+})();
 </script>
+
 <script src="assets/js/accessibility.js"></script>
 <script src="assets/js/storage.js"></script>
+<script src="assets/js/db-modules.js"></script>
+<script src="assets/js/state.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/navigation.js"></script>
 <script src="assets/js/ui-shell.js"></script>
@@ -386,67 +172,28 @@ Referência oficial ainda a ser verificada: Microsoft Learn (docs.microsoft.com)
 <script src="assets/js/progress.js"></script>
 <script src="assets/js/search.js" defer></script>
 <script src="assets/js/audio.js" defer></script>
+
 <script>
-  /* Montagem dos 6 simuladores com UI (P1-B; Seções 7.1–7.5 do Escrita.txt) — P1-D.
-   * Cada núcleo expõe um global (window.ExcelSimulator, NetworkSimulator,
-   * SecuritySimulator, PromptSimulator, DataSimulator) com função mount(el).
-   * Guarda tripla: contêiner presente, global presente, mount não lança
-   * (try/catch + aviso no console) — a página NÃO quebra se um simulador
-   * faltar. Sem eval, sem fetch. */
-  (function () {
-    'use strict';
-    function montarSimulador(nomeGlobal, idConteiner) {
-      try {
-        var el = document.getElementById(idConteiner);
-        if (!el) { console.warn('[simuladores] contêiner ausente: #' + idConteiner); return; }
-        var Sim = (typeof window !== 'undefined' && window[nomeGlobal]) || undefined;
-        if (!Sim || typeof Sim.mount !== 'function') {
-          console.warn('[simuladores] núcleo não carregado: ' + nomeGlobal);
-          return;
-        }
-        Sim.mount(el);
-      } catch (e) {
-        console.warn('[simuladores] falha ao montar ' + nomeGlobal + ': ' + (e && e.message ? e.message : e));
-      }
-    }
-    function montarSimuladores() {
-      montarSimulador('ExcelSimulator', 'excel-app');
-      montarSimulador('NetworkSimulator', 'redes-app');
-      montarSimulador('SecuritySimulator', 'seguranca-app');
-      montarSimulador('PromptSimulator', 'prompts-app');
-      montarSimulador('DataSimulator', 'dados-app');
-       montarSimulador('EthicsSimulator', 'etica-app');
-    }
-    if (typeof document !== 'undefined' && document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', montarSimuladores);
-    } else {
-      montarSimuladores();
-    }
-  })();
+(function(){'use strict';
+function montarSimulador(nomeGlobal,idConteiner){
+try{var el=document.getElementById(idConteiner);
+if(!el){console.warn('[sim] container ausente: '+idConteiner);return;}
+var Sim=window[nomeGlobal];
+if(!Sim||typeof Sim.mount!=='function'){console.warn('[sim] nucleo ausente: '+nomeGlobal);return;}
+Sim.mount(el);}catch(e){console.warn('[sim] falha '+nomeGlobal+': '+((e&&e.message)?e.message:e));}}
+document.addEventListener('DOMContentLoaded',function(){
+montarSimulador('ExcelSimulator','excel-app');
+montarSimulador('NetworkSimulator','redes-app');
+montarSimulador('SecuritySimulator','seguranca-app');
+montarSimulador('PromptSimulator','prompts-app');
+montarSimulador('DataSimulator','dados-app');
+montarSimulador('EthicsSimulator','etica-app');
+});})();
 </script>
-<!--
-  progress.js e accessibility.js AGORA EXISTEM e estão carregados acima
-  (accessibility.js antes de storage.js/app.js; progress.js junto aos demais
-  JS, após charts.js). Contêineres: #progress-app e #accessibility-app
-  (este último invisível). storage.js e assets/data/references.js já
-  existiam. Busca (search.js) e áudio (audio.js) JÁ existem e estão
-  carregados acima. Os 6 simuladores montam suas UIs nos contêineres
-  #excel-app / #redes-app / #seguranca-app / #prompts-app / #dados-app.
-  manifest.webmanifest e service-worker.js JÁ existem (PWA condicional).
-  questions_m6.js e questions_m7.js INTEGRADOS — banco fundido totaliza
-  396 questões autorais.
--->
+
 <script>
-  /* Registro condicional de Service Worker — Seção 3.1 do Escrita.txt.
-   * Em file:// o SW não existe (navigator.serviceWorker ausente ou registro
-   * falha silenciosamente) — o app funciona COMPLETO sem ele. Em http/https,
-   * o SW habilita cache offline de assets estáticos. */
-  if (typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('service-worker.js')
-        .catch(function () { /* file:// ou falha silenciosa — não crítico */ });
-    });
-  }
+if('serviceWorker'in navigator){navigator.serviceWorker.register('service-worker.js').catch(function(){});}
 </script>
+
 </body>
 </html>
