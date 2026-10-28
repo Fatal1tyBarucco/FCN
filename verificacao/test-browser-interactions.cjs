@@ -199,6 +199,12 @@ const axeCore = require("axe-core");
     await menuToggle.click();
     await page.locator("#app-sidebar a[href='#flashcards']").click();
     assert.equal(await menuToggle.getAttribute("aria-expanded"), "false", "selecting a section must close the mobile menu");
+    await page.locator("#sidebar-tree-host .tree-link").first().click();
+    await page.waitForFunction(() => {
+      const heading = document.querySelector("#study-workspace-title");
+      return heading && heading.textContent.trim() !== "Estude um tópico";
+    }, null, { timeout: 5000 });
+    assert.notEqual((await page.locator("#study-workspace-title").innerText()).trim(), "Estude um tópico", "study heading must follow the selected curriculum topic");
     const mobileLayout = await page.evaluate(() => ({
       viewportWidth: window.innerWidth,
       documentWidth: document.documentElement.scrollWidth
