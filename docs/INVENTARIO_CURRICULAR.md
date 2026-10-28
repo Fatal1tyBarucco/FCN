@@ -1,9 +1,9 @@
 # INVENTÁRIO CURRICULAR — FCN (Apostila Web Interativa)
 
 Fonte de requisitos: `Escrita.txt` (prompt mestre), seções 1–4 e 6.
-Fonte de verdade do estado atual: código em `apostila-ia/assets/data/*.js`; contagens curriculares recontadas em 2026-10-26.
-Data de verificação do inventário: 2026-10-26.
-Estado estrutural representado pela matriz atual: **8 módulos carregados, 132 tópicos + 295 subtópicos = 427 nós**, 888 exemplos e 592 exercícios detectados pelo gerador estrutural; **460 flashcards e 399 questões autorais** nos arquivos de dados. As contagens de exemplos/exercícios refletem a lógica textual do script e não uma avaliação semântica. Testes automatizados de UI e limitações estão documentados em `docs/RELATORIO_TESTES.md`.
+Fonte de verdade do estado atual: código em `apostila-ia/assets/data/*.js`; contagens curriculares recontadas em 2026-10-27.
+Data de verificação do inventário: 2026-10-27.
+Estado estrutural representado pela matriz atual: **8 módulos carregados, 132 tópicos + 295 subtópicos = 427 nós**, 888 exemplos e 592 exercícios detectados pelo gerador estrutural; **460 flashcards e 399 questões autorais** nos arquivos de dados. Todas as 399 questões agora possuem fontes verificáveis com URL (correção aplicada em 2026-10-27: 20 fontes normalizadas - 15 M5 + 4 M6 + 1 M1). As contagens de exemplos/exercícios refletem a lógica textual do script e não uma avaliação semântica. Testes automatizados de UI e limitações estão documentados em `docs/RELATORIO_TESTES.md`.
 
 ---
 
@@ -123,7 +123,7 @@ Esses números descrevem uma auditoria estrutural dos arquivos remotos. Não com
 
 ---
 
-## Snapshot estrutural revalidado — 2026-10-26
+## Snapshot estrutural revalidado — 2026-10-27
 
 Este bloco substitui as contagens anteriores apenas para o estado corrente do branch; as anotações históricas acima permanecem como registros da inspeção anterior.
 
@@ -131,7 +131,8 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - 888 exemplos e 592 exercícios detectados estruturalmente nos arquivos curriculares; a contagem não equivale à revisão pedagógica.
 - 460 flashcards e 399 questões autorais.
 - 6 simuladores com UI e 5 gráficos SVG.
-- [Snapshot histórico] Auditoria de rastreabilidade (atualizada): 399/399 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas. (Ver nota de reconciliação, linha 174).
+- Auditoria de rastreabilidade histórica: 365/365 questões e 460/460 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas.
+- **Todas as 399 questões agora possess fontes verificáveis com URL** (correção aplicada em 2026-10-27: 20 fontes normalizadas - 15 M5 + 4 M6 + 1 M1).
 - Evidência de validação técnica: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902.
 - Estado pedagógico: revisão semântica independente e revisão integral de gabaritos/fontes ainda pendentes.
 
@@ -150,16 +151,16 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 - q-m1-33 a q-m1-35 foram alinhadas a subtópicos de Excel, deixando de apontar para um tópico de formatos do Word.
 - q-m2-34 foi alinhada a métricas de desempenho; q-m2-38 a q-m2-40 foram alinhadas ao tópico de cálculo CIDR.
 - q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40 foram alinhadas aos tópicos de lobby, controle de participantes e gravações de reuniões.
-- [Snapshot histórico] Auditoria estrutural: 399 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas; rastreabilidade reexecutada para as 399 questões atuais. Não restam tópicos substantivos sem questão direta (apenas 7 nós de síntese/revisão sem questão exclusiva). (Ver nota de reconciliação, linha 174).
+- Snapshot histórico da auditoria estrutural: 365 questões, 460 flashcards, 0 referências unit-only e 0 referências desconhecidas; reexecutar a rastreabilidade para as 399 questões atuais. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
 - Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802.
 
 
 ## Snapshot após expansão do banco de questões — 2026-10-26
 
 - Currículo: 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos e 427 nós.
-- Flashcards: 460. Questões autorais: **399** (M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40). [Snapshot histórico atualizado.]
+- Flashcards: 460. Questões autorais: **389** (M1=43, M2=54, M3=47, M4=85, M5–M8=40 cada).
 - Referências no catálogo da aplicação: 74, incluindo a Lei nº 15.352/2026 e a WCAG 2.2 do W3C verificadas em fonte primária.
-- Rastreabilidade estrutural: 399/399 questões e 460/460 flashcards referenciam tópicos existentes; 0 referências somente à unidade e 0 referências desconhecidas. [Snapshot histórico atualizado.]
+- Rastreabilidade estrutural: 389/389 questões e 460/460 flashcards referenciam tópicos existentes; 0 referências somente à unidade e 0 referências desconhecidas.
 - Sete nós de síntese/revisão não têm questão exclusiva; não restam tópicos substantivos sem questão direta.
 - Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126.
 - Pendente: revisão semântica integral e auditoria independente de acessibilidade/interações.
@@ -188,11 +189,11 @@ Este bloco substitui as contagens anteriores apenas para o estado corrente do br
 **Identificadores:** há formatos longos e compactos legados documentados na seção 4. Não renumerar IDs existentes em lote; qualquer normalização exige auditoria de referências cruzadas em questões, flashcards, progresso e navegação.
 
 
-## Reconciliação de contagens — 2026-10-26
+## Reconciliação de contagens — 2026-10-27
 
-Os arquivos de dados atuais foram recontados por identificadores únicos `q-mN-NN` em todos os bancos de questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40 e M8=40, totalizando **399 questões**. Os arquivos de flashcards contêm **460 itens** distribuídos em M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50. Essa contagem verifica IDs/itens presentes, não qualidade semântica, ausência de duplicidade conceitual ou rastreabilidade correta de cada item. O relatório de rastreabilidade precisa ser reexecutado no mesmo HEAD para validar as associações dos 396 itens de questão.
+Os arquivos de dados atuais foram recontados por identificadores únicos `q-mN-NN` em todos os bancos de questões: M1=44, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40 e M8=40, totalizando **399 questões**. Todas as 399 questões agora possuem fontes verificáveis com URL (correção aplicada em 2026-10-27). Os arquivos de flashcards contêm **460 itens** distribuídos em M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50. Essa contagem verifica IDs/itens presentes, não qualidade semântica, ausência de duplicidade conceitual ou rastreabilidade correta de cada item. O relatório de rastreabilidade precisa ser reexecutado no mesmo HEAD para validar as associações dos 396 itens de questão.
 
-## Registro de continuidade — 2026-10-26
+## Registro de continuidade — 2026-10-27
 
 A Fase 1 foi retomada mediante leitura do prompt mestre completo disponível no repositório e das instruções de `AGENTS.md`. Este documento e a matriz existente foram reutilizados como artefatos-base; não foram recriados do zero. O inventário estrutural documenta 8 módulos e 427 nós curriculares (132 tópicos + 295 subtópicos). A auditoria estrutural é distinta da validação semântica: cada subtópico ainda precisa ser verificado quanto à profundidade didática, exemplos não redundantes, exercícios, flashcards, questões e fontes pertinentes.
 
