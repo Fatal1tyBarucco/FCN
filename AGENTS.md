@@ -118,3 +118,8 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 - JavaScript do shell: chaves balanceadas e funções de inicialização/controle presentes.
 - Não há execução de workflow/teste de navegador confirmada para este HEAD. Não declarar testes funcionais, auditoria WCAG completa ou inspeção visual física como aprovados sem evidência.
 - A versão publicada no GitHub Pages só refletirá a alteração depois do merge na `main` e de um deploy concluído. Não executar merge automaticamente como parte desta etapa.
+
+
+### Correção de integração do menu — 2026-10-28
+- A árvore curricular é movida como wrapper `#navegacao-curriculo`, não somente como elemento `.curriculum-tree`. O motor `navigation.js` delega eventos, enumera itens visíveis e calcula ancestrais com base no wrapper; preservar essa relação evita regressões na navegação por teclado, expansão e seleção.
+- Contagem real do HTML: 40 scripts externos (23 scripts de dados e 17 scripts JavaScript). O verificador estrutural foi corrigido para refletir o inventário efetivo do HTML.
