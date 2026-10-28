@@ -9,17 +9,12 @@
  *   - Retomada do último tópico visitado (localStorage 'apostila-ia-ultimo-topico').
  *   - Modo de foco (classe 'modo-foco' no <body>).
  *
- * Funciona em file:// (localStorage). Sem eval, sem fetch. Sanitização via esc().
+ * Funciona em file:// (localStorage). Sem eval, sem fetch.
  * Expõe window.ApostilaPersonalizacao.
  */
 (function () {
   'use strict';
 
-  function esc(s) {
-    return String(s == null ? '' : s)
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-  }
 
   function disponivel() {
     try {
