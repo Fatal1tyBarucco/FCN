@@ -89,3 +89,13 @@ Entregável: PR com diff de CSS e HTML.
 ## 6. Próximo passo recomendado
 
 Executar Fase A (inventário) antes de qualquer edição de CSS, para evitar mover regras órfãs.
+
+
+## Implementação registrada em 2026-10-28
+
+- Shell responsivo implementado em `assets/js/ui-shell.js`, com menu lateral desktop, gaveta móvel, overlay, fechamento por Escape e navegação por âncoras.
+- Árvore curricular renderizada pelo motor existente é movida para a sidebar; o painel de conteúdo do tópico permanece em área de estudo destacada no início do conteúdo principal.
+- Recursos de apoio em vídeo foram reposicionados após o painel de progresso para não dominar a primeira tela.
+- A folha CSS externa é a fonte visual canônica. A ordem de scripts garante que `navigation.js` crie a árvore antes de `ui-shell.js` reposicioná-la.
+- Os testes estruturais foram atualizados para a nova contagem de 41 scripts externos e o teste de teclado foi atualizado para localizar a árvore na sidebar.
+- Executar novamente `node verificacao/verificar-estrutura.js`, `node --check` para todos os JS, smoke tests e testes Playwright após a integração. Os resultados do HEAD atualizado ainda não estão disponíveis; não assumir aprovação.
