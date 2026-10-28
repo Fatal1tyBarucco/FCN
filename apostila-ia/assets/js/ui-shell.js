@@ -181,6 +181,7 @@
           .filter(function (element) {
             return !element.hasAttribute('hidden') &&
               element.getAttribute('aria-hidden') !== 'true' &&
+              element.tabIndex >= 0 &&
               element.getClientRects().length > 0;
           });
         if (!focusable.length) return;
