@@ -181,6 +181,30 @@ const axeCore = require("axe-core");
     const chartAfter = await page.locator("#saida-histograma svg").evaluate(el => el.outerHTML);
     assert.notEqual(chartAfter, chartBefore, "editing a numeric chart input must recalculate SVG");
 
+    // Responsive navigation shell: desktop sidebar, mobile drawer and Escape dismissal.
+    await page.setViewportSize({ width: 1440, height: 900 });
+    assert.equal(await page.locator("#app-sidebar").isVisible(), true, "desktop sidebar must be visible");
+    assert.equal(await page.locator("#sidebar-toggle").isVisible(), false, "desktop layout must not show a redundant menu toggle");
+    assert.equal(await page.locator("#sidebar-tree-host .tree-modulo").count(), 8, "all eight curriculum modules must render in the sidebar");
+
+    await page.setViewportSize({ width: 390, height: 844 });
+    const menuToggle = page.locator("#sidebar-toggle");
+    assert.equal(await menuToggle.isVisible(), true, "mobile menu toggle must be visible");
+    await menuToggle.click();
+    assert.equal(await menuToggle.getAttribute("aria-expanded"), "true", "mobile menu must report expanded state");
+    assert.equal(await page.locator("body").evaluate(el => el.classList.contains("sidebar-open")), true, "opening the mobile menu must activate the drawer");
+    await page.keyboard.press("Escape");
+    assert.equal(await menuToggle.getAttribute("aria-expanded"), "false", "Escape must close the mobile menu");
+    assert.equal(await page.locator("body").evaluate(el => el.classList.contains("sidebar-open")), false, "Escape must remove the drawer state");
+    await menuToggle.click();
+    await page.locator("#app-sidebar a[href='#flashcards']").click();
+    assert.equal(await menuToggle.getAttribute("aria-expanded"), "false", "selecting a section must close the mobile menu");
+    const mobileLayout = await page.evaluate(() => ({
+      viewportWidth: window.innerWidth,
+      documentWidth: document.documentElement.scrollWidth
+    }));
+    assert.ok(mobileLayout.documentWidth <= mobileLayout.viewportWidth + 1, "mobile layout must not introduce horizontal overflow");
+
     assert.deepEqual(pageErrors, [], "simulator interactions must not throw uncaught JavaScript errors");
     console.log(JSON.stringify({
       result: "PASS",
