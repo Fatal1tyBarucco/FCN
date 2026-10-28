@@ -24,6 +24,15 @@ const refs = ctx.__references;
 
 const entries = refs.map((r) => ({ id: r.id, url: r.url }));
 
+function markdownCell(value) {
+  return String(value == null ? "" : value)
+    .replace(/[\r\n\t]+/g, " ")
+    .replace(/\\/g, "\\\\")
+    .replace(/\|/g, "\\|")
+    .replace(/`/g, "\\`")
+    .replace(/\[/g, "\\[")
+    .replace(/\]/g, "\\]");
+}
 function sleep(ms) {
   return new Promise((res) => setTimeout(res, ms));
 }
@@ -116,7 +125,7 @@ lines.push("| # | ID | URL | Status HTTP | URL final | Resultado | Motivo |");
 lines.push("|---|---|---|---|---|---|---|");
 for (const r of results) {
   lines.push(
-    `| ${r.n} | ${r.id} | ${r.url} | ${r.status} | ${r.finalUrl} | ${r.resultado} | ${r.motivo} |`
+    `| ${r.n} | ${markdownCell(r.id)} | ${markdownCell(r.url)} | ${r.status} | ${markdownCell(r.finalUrl)} | ${markdownCell(r.resultado)} | ${markdownCell(r.motivo)} |`
   );
 }
 lines.push("");
@@ -128,7 +137,7 @@ if (fails.length === 0) {
 } else {
   lines.push("");
   for (const f of fails) {
-    lines.push(`- \`${f.id}\` — ${f.url} — ${f.motivo}`);
+    lines.push(`- \`${markdownCell(f.id)}\` — ${markdownCell(f.url)} — ${markdownCell(f.motivo)}`);
   }
 }
 lines.push("");
