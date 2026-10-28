@@ -31,7 +31,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "A legalidade impede que o Poder Executivo edite atos normativos de regulamentação." }
     ],
     gabarito: "B",
-    justificativa: "A legalidade administrativa submete a atuação pública à Constituição e às normas aplicáveis, inclusive quanto à competência e ao procedimento. A alternativa A transpõe indevidamente para a Administração a lógica geral de liberdade dos particulares; B erra porque eficiência não autoriza descumprir a lei; C está correta; D confunde legalidade com disponibilidade orçamentária, que não basta para autorizar o ato; E erra porque o poder regulamentar pode ser exercido nos limites legais.",
+    justificativa: "A legalidade administrativa submete a atuação pública à Constituição e às normas aplicáveis, inclusive quanto à competência e ao procedimento. A alternativa A transpõe indevidamente para a Administração a lógica geral de liberdade dos particulares; B está correta, ao traduzir a legalidade como submissão à norma, com competência e procedimento; C erra porque eficiência não autoriza descumprir a lei; D confunde legalidade com disponibilidade orçamentária, que não basta para autorizar o ato; E erra porque o poder regulamentar pode ser exercido nos limites legais.",
     analise: {
       A: "INCORRETA. Erro conceitual de inversão de regimes: no direito privado, o que não é proibido é permitido; na Administração, só é permitido o que a norma autoriza.",
       B: "CORRETA. Traduz a legalidade como submissão à norma, com competência e procedimento — a formulação compatível com o art. 37, caput, da CF/88.",
@@ -41,7 +41,7 @@ const moduleQuestions6 = [
     },
     regra: "Legalidade administrativa: a Administração só faz o que a norma autoriza e como a norma autoriza — competência e procedimento incluídos.",
     pegadinha: "A alternativa A é a 'lógica do particular' transplantada para o Poder Público; é o distrator mais recorrente em prova de princípios.",
-    fonte: "CF/88, art. 37, caput (verificado em referencias/referencias-verificadas.md, 2026-10-21): https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm (verificado em 2026-10-27)."
   },
 
   { id: "q-m6-02", modulo: 6, formato: "mc", estilo: "fgv", origem: "autoral",
@@ -66,7 +66,7 @@ const moduleQuestions6 = [
     },
     regra: "Impessoalidade = mesmo critério para casos iguais, com critério escrito, comunicável e auditável; não é indiferença nem resultado uniforme.",
     pegadinha: "'Tratar todos exatamente igual' parece elogio e é erro: o que se exige é igualdade de critério, não de resultado.",
-    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, art. 3º, IV e VII (transparência na execução dos serviços e linguagem clara; verificado em 2026-10-21): https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 14.129/2021, art. 3º, IV e VII: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm (verificado em 2026-10-27)."
   },
 
   { id: "q-m6-03", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -116,7 +116,7 @@ const moduleQuestions6 = [
     },
     regra: "Publicidade = preceito geral; sigilo = exceção legal e formalizada (LAI, art. 3º, I, e arts. 23 e 28).",
     pegadinha: "'Tudo é público' e 'nada é público' são igualmente errados: a régua é a natureza da informação, não a vontade do gestor.",
-    fonte: "CF/88, art. 37, caput, e art. 5º, XXXIII; Lei nº 12.527/2011, art. 3º, I, e art. 8º, § 2º (verificados em 2026-10-21): https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm."
+    fonte: "CF/88, art. 37, caput e art. 5º, XXXIII: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 12.527/2011, art. 3º, I e art. 8º, § 2º: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm (verificado em 2026-10-27)."
   },
 
   { id: "q-m6-05", modulo: 6, formato: "mc", estilo: "fcc", origem: "autoral",
@@ -141,7 +141,7 @@ const moduleQuestions6 = [
     },
     regra: "Eficiência = resultado com uso racional de recursos, com indicadores e sem renúncia a direitos; não é sinônimo de corte de custo nem de supressão de controle.",
     pegadinha: "Alternativas que opõem eficiência a controle ou a acessibilidade criam falsa incompatibilidade — os princípios convivem e se ponderam.",
-    fonte: "CF/88, art. 37, caput; Lei nº 14.129/2021, arts. 3º, XI, XVI, 14 e 22 (verificado em 2026-10-21): https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
+    fonte: "CF/88, art. 37, caput: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm; Lei nº 14.129/2021, arts. 3º, XI, XVI, 14 e 22: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm (verificado em 2026-10-27)."
   },
 
   { id: "q-m6-06", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -858,7 +858,7 @@ const moduleQuestions6 = [
     },
     regra: "N0 manual; N1 apoio; N2 revisão prévia; N3 revisão posterior/amostral; N4 alçada; N5 automação plena — salvaguardas crescem com o nível.",
     pegadinha: "A diferença entre N2 e N3 é o momento da revisão (antes ou depois do efeito), não a existência dela.",
-    fonte: "Currículo do Módulo 6, unidade 6.6 (classificação didática de níveis de automação); Lei nº 14.129/2021, art. 48, II, texto oficial: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm."
+    fonte: "Lei nº 14.129/2021, art. 48, II: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm; Currículo Módulo 6, unidade 6.6 (classificação didática de níveis de automação, verificado em 2026-10-27)."
   },
 
   { id: "q-m6-37", modulo: 6, formato: "mc", estilo: "cespe", origem: "autoral",
@@ -883,7 +883,7 @@ const moduleQuestions6 = [
     },
     regra: "Supervisão = alçada + gatilho + amostragem estratificada + registro + indicadores por subgrupo; reclamação é complemento, não controle.",
     pegadinha: "'Existe revisão humana' é resposta de aparência: o que se avalia é o desenho, não a existência.",
-    fonte: "Lei nº 14.129/2021, art. 48, II, sobre gestão de riscos e controles proporcionais: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm; Lei nº 13.709/2018 (LGPD), art. 20, sobre solicitação de revisão de decisões tomadas unicamente com base em tratamento automatizado: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Currículo do Módulo 6, unidade 6.6 (taxonomia didática de supervisão humana)."
+    fonte: "Lei nº 14.129/2021, art. 48, II: https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm; Lei nº 13.709/2018 (LGPD), art. 20: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm; Currículo Módulo 6, unidade 6.6 (taxonomia didática de supervisão humana, verificado em 2026-10-27)."
   },
 
   {
