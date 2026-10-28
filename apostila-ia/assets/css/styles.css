@@ -205,9 +205,7 @@ footer{margin:2rem auto 0;padding:1.5rem 1rem;text-align:center;color:var(--ink-
 
 /* App shell — navegação lateral persistente inspirada na referência visual */
 body>header{padding-top:clamp(1.6rem,3.5vw,2.8rem);padding-bottom:clamp(1.6rem,3.5vw,2.8rem);padding-left:max(1.5rem,calc((100vw - 1440px)/2));padding-right:max(1.5rem,calc((100vw - 1440px)/2));border-radius:0}
-body>header h1{padding-left:4.8rem}
-body>header p{padding-left:4.8rem}
-.sidebar-toggle{position:absolute;z-index:3;top:50%;left:max(1.5rem,calc((100vw - 1440px)/2));transform:translateY(-50%);display:inline-flex;align-items:center;gap:.65rem;min-height:44px;padding:.6rem .8rem;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:rgba(255,255,255,.08);color:#fff}
+.sidebar-toggle{display:none;position:absolute;z-index:3;top:50%;left:max(1.5rem,calc((100vw - 1440px)/2));transform:translateY(-50%);align-items:center;gap:.65rem;min-height:44px;padding:.6rem .8rem;border:1px solid rgba(255,255,255,.22);border-radius:12px;background:rgba(255,255,255,.08);color:#fff}
 .sidebar-toggle:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4)}
 .sidebar-toggle-icon{display:grid;gap:4px;width:20px}
 .sidebar-toggle-icon span{display:block;height:2px;width:20px;border-radius:2px;background:currentColor}
@@ -255,7 +253,7 @@ footer{max-width:1100px}
  body>header h1,body>header p{padding-left:0}
  body>header h1{font-size:clamp(1.45rem,4.8vw,2rem)}
  body>header p{font-size:.88rem;line-height:1.45}
- .sidebar-toggle{left:.75rem;top:1rem;transform:none;padding:.55rem .65rem}
+ .sidebar-toggle{display:inline-flex;left:.75rem;top:1rem;transform:none;padding:.55rem .65rem}
  .sidebar-toggle-text{display:none}
  .app-shell{display:block;position:relative}
  .app-sidebar{position:fixed;z-index:100;inset:0 auto 0 0;width:min(88vw,340px);height:100vh;height:100dvh;transform:translateX(-105%);transition:transform .22s ease;box-shadow:var(--shadow-pop)}
