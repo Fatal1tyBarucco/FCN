@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (tree) {
-    tree.addEventListener('keydown', (e) => {
+    container.addEventListener('keydown', (e) => {
       const ativo = document.activeElement && container.contains(document.activeElement)
         ? document.activeElement.closest('.tree-node[role="treeitem"]')
         : null;
