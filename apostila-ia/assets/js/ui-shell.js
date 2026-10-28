@@ -89,6 +89,23 @@
       main.insertBefore(videosSection, progressSection.nextSibling);
     }
 
+    if (topicPanel) {
+      const workspaceTitle = document.getElementById('study-workspace-title');
+      const workspaceDescription = document.querySelector('.study-workspace-heading p');
+      const topicObserver = new MutationObserver(function () {
+        const topicHeading = topicPanel.querySelector('h4');
+        if (!topicHeading || !workspaceTitle) return;
+        const topicTitle = topicHeading.textContent.trim();
+        if (topicTitle) {
+          workspaceTitle.textContent = topicTitle;
+          if (workspaceDescription) {
+            workspaceDescription.textContent = 'Conteúdo do currículo, objetivo de aprendizagem, referências e ferramentas de personalização deste tópico.';
+          }
+        }
+      });
+      topicObserver.observe(topicPanel, { childList: true, subtree: true, characterData: true });
+    }
+
     function setSidebarOpen(open) {
       const isOpen = Boolean(open);
       body.classList.toggle('sidebar-open', isOpen);
