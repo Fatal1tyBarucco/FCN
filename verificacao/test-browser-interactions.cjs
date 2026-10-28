@@ -216,7 +216,21 @@ const axeCore = require("axe-core");
     assert.notEqual((await page.locator("#study-workspace-title").innerText()).trim(), "Estude um tópico", "study heading must follow the selected curriculum topic");
     const mobileLayout = await page.evaluate(() => ({
       viewportWidth: window.innerWidth,
-      documentWidth: document.documentElement.scrollWidth
+      documentWidth: document.documentElement.scrollWidth,
+      overflowCandidates: Array.from(document.querySelectorAll("body *")).map(element => {
+        const rect = element.getBoundingClientRect();
+        const style = getComputedStyle(element);
+        return {
+          selector: element.tagName.toLowerCase() + (element.id ? "#" + element.id : "") + (typeof element.className === "string" && element.className ? "." + element.className.trim().split(/\\s+/).join(".") : ""),
+          left: Math.round(rect.left),
+          right: Math.round(rect.right),
+          width: Math.round(rect.width),
+          position: style.position,
+          overflowX: style.overflowX
+        };
+      }).filter(item => item.right > window.innerWidth + 1 && item.position !== "fixed" && item.position !== "absolute")
+        .sort((left, right) => right.right - left.right)
+        .slice(0, 20)
     }));
     assert.ok(mobileLayout.documentWidth <= mobileLayout.viewportWidth + 1, "mobile layout must not introduce horizontal overflow: " + JSON.stringify(mobileLayout));
 
