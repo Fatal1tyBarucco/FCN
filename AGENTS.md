@@ -101,3 +101,20 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 - Cabeçalho simplificado para apresentar a finalidade educacional, sem expor no topo contagens de auditoria, status de testes ou pendências técnicas.
 - O workflow `.github/workflows/deploy-pages.yml` publica somente após push em `main` ou execução manual. Alterações em PR não atualizam o site publicado até o merge e o deploy subsequente.
 - Estado desta alteração: CSS e HTML modificados na branch `feat/recursos-personalizacao-persistencia` (PR #19). A refatoração visual ainda exige validação visual real em desktop/mobile e verificação pós-deploy; não declarar equivalência visual ou WCAG integral sem evidências.
+
+
+## Refatoração profunda do frontend — continuação (2026-10-28)
+
+### Implementação
+- Criado `apostila-ia/assets/js/ui-shell.js`: monta o shell visual sem framework, adiciona menu lateral com atalhos para vídeos, currículo, flashcards, questões, gráficos, busca e progresso; reposiciona a árvore curricular existente no menu; implementa abertura/fechamento móvel, overlay, tecla Escape, foco e indicação da seção ativa.
+- Atualizado `apostila-ia/assets/css/styles.css`: layout editorial com sidebar azul-marinho, navegação hierárquica, conteúdo em cartões, breakpoints para desktop/tablet/celular, menu móvel sobreposto, estados ativos, foco, tema escuro e impressão.
+- Atualizado `apostila-ia/index.html` para carregar `ui-shell.js` imediatamente depois de `navigation.js`. Isso preserva a ordem de inicialização: a árvore é renderizada antes de ser movida para a sidebar.
+- O shell mantém os motores existentes de currículo, flashcards, banco de questões, simuladores, busca, áudio, gráficos e progresso; não substitui IDs de seções nem chaves de persistência.
+- A árvore de navegação permanece acessível por teclado; o painel de conteúdo do tópico continua no módulo curricular e recebe conteúdo pelo mesmo mecanismo existente.
+
+### Validações estruturais feitas
+- HTML: uma referência à folha CSS canônica e uma ao novo script; script de shell carregado após navegação; nenhum bloco CSS inline; nenhum ID duplicado.
+- CSS: chaves e parênteses balanceados.
+- JavaScript do shell: chaves balanceadas e funções de inicialização/controle presentes.
+- Não há execução de workflow/teste de navegador confirmada para este HEAD. Não declarar testes funcionais, auditoria WCAG completa ou inspeção visual física como aprovados sem evidência.
+- A versão publicada no GitHub Pages só refletirá a alteração depois do merge na `main` e de um deploy concluído. Não executar merge automaticamente como parte desta etapa.
