@@ -28,6 +28,7 @@
   --shadow-card:0 8px 28px rgba(26,42,64,.055);
   --shadow-pop:0 18px 50px rgba(18,31,49,.16);
   --content-width:1120px;
+  /* System font stack (Fase 4): prioriza fontes do sistema; sem fontes web externas. */
   --font-sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -355,3 +356,91 @@ pre code { color: inherit !important; }
 .sidebar-brand-mark{color:var(--navy-900) !important}
 
 #simulator-containers{max-width:100vw !important;overflow:hidden !important;}
+
+/* ===== Modernização Fases 1-3 (2026) — adições, sem remoção do legado ===== */
+
+/* Fase 1 — novas vars harmonizadas (OKLCH/color-mix), não substituem existentes */
+:root {
+  --color-brand: oklch(0.48 0.14 240);
+  --color-brand-soft: color-mix(in oklch, var(--color-brand) 14%, white);
+  --color-surface-2: color-mix(in oklch, var(--surface) 92%, var(--canvas));
+  --color-ink-soft: color-mix(in oklch, var(--ink-950) 70%, var(--ink-600));
+  --radius-xl: 32px;
+  --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem;
+  /* Escala tipográfica responsiva com clamp() */
+  --fs-h1: clamp(1.6rem, 3.2vw + .4rem, 2.6rem);
+  --fs-h2: clamp(1.25rem, 2vw + .5rem, 1.75rem);
+  --fs-h3: clamp(1.05rem, 1.4vw + .5rem, 1.35rem);
+  --fs-h4: clamp(1rem, 1.1vw + .45rem, 1.15rem);
+  --fs-h5: clamp(.95rem, 1vw + .4rem, 1.05rem);
+  --fs-h6: clamp(.9rem, .9vw + .35rem, 1rem);
+  --fs-body: clamp(.95rem, .6vw + .85rem, 1.0625rem);
+  --fs-small: clamp(.8rem, .5vw + .7rem, .9rem);
+}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+h5 { font-size: var(--fs-h5); }
+h6 { font-size: var(--fs-h6); }
+body { font-size: var(--fs-body); }
+
+/* Logical properties onde seguro */
+section, .topic-content-panel { padding-inline: clamp(1.25rem, 3vw, 2rem); padding-block: clamp(1.25rem, 3vw, 2rem); }
+main { margin-inline: auto; }
+
+/* Fase 2 — Container queries em cards (com @supports) */
+@supports (container-type: inline-size) {
+  .fc-cartao, .chart-card, .video-item { container-type: inline-size; container-name: card; }
+  @container card (min-width: 360px) {
+    .fc-cartao, .chart-card, .video-item { padding: 1.25rem 1.5rem; }
+  }
+  @container card (max-width: 359px) {
+    .fc-cartao, .chart-card, .video-item { padding: .85rem 1rem; }
+  }
+}
+
+/* Bento grid utilitário para dashboards */
+.bento-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.bento-grid > * { min-width: 0; }
+.bento-grid .bento-span-2 { grid-column: span 2; }
+.bento-grid .bento-span-3 { grid-column: span 3; }
+.bento-grid .bento-row-2 { grid-row: span 2; }
+@supports (grid-template-rows: subgrid) {
+  .bento-grid.subgrid { grid-template-rows: subgrid; }
+}
+@media (max-width: 900px) {
+  .bento-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bento-grid .bento-span-3 { grid-column: span 2; }
+}
+@media (max-width: 520px) {
+  .bento-grid { grid-template-columns: minmax(0, 1fr); }
+  .bento-grid .bento-span-2, .bento-grid .bento-span-3 { grid-column: span 1; }
+}
+
+/* Fase 3 — View transitions (CSS) */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) {
+  animation-duration: .28s;
+  animation-timing-function: ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none !important; }
+}
+
+/* Scroll-driven animations para progress bar / reveal (com @supports) */
+@supports (animation-timeline: scroll()) {
+  .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; transform-origin: left; background: var(--blue-600); animation: grow-progress linear; animation-timeline: scroll(root); }
+  @keyframes grow-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .reveal-on-scroll { animation: reveal linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+  @keyframes reveal { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress, .reveal-on-scroll { animation: none !important; }
+}
+
+/* Reduced motion global (complementa o existente) */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

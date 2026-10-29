@@ -151,6 +151,7 @@ summary:hover{color:var(--accent)}
 
 <!-- Main content: app.js SPA tab system -->
 <main id="main" tabindex="-1">
+  <h1 class="sr-only">Apostila Web Interativa FCN — TI, Dados e IA</h1>
   <!-- Top bar header: progress, live search, TTS, theme toggle -->
   <header id="header">
     <div class="left">
@@ -161,8 +162,8 @@ summary:hover{color:var(--accent)}
     <div class="right flex">
       <input type="text" id="search-input" class="search-box" placeholder="🔍 Buscar em toda a apostila..." title="Buscar em toda a apostila" aria-label="Buscar em toda a apostila">
       <div class="tts-controls">
-        <button id="tts-play" title="Ouvir (Text-to-Speech)">🔊</button>
-        <button id="tts-pause" title="Pausar leitura">⏸️</button>
+        <button id="tts-play" title="Ouvir (Text-to-Speech)" aria-label="Ouvir texto em voz alta">🔊</button>
+        <button id="tts-pause" title="Pausar leitura" aria-label="Pausar leitura">⏸️</button>
         <select id="tts-rate" title="Velocidade de leitura" aria-label="Velocidade de leitura">
           <option value="0.8">0.8x</option>
           <option value="1" selected>1.0x</option>
@@ -191,7 +192,7 @@ summary:hover{color:var(--accent)}
 
 <!-- Old-system engine containers (outside #content-area so app.js tab renderer
      never wipes them; ui-shell.js repositions #curriculum tree into the sidebar) -->
-<div id="curriculum" aria-label="Inventário curricular resumido"></div>
+<div id="curriculum" role="navigation" aria-label="Árvore curricular"></div>
 <div id="flashcards-app"></div>
 <div id="quiz-app"></div>
 <div id="search-app" aria-label="Busca global"></div>
@@ -298,6 +299,8 @@ montarSimulador('EthicsSimulator','etica-app');
 <script>
 if('serviceWorker'in navigator&&location.protocol==='https:'){navigator.serviceWorker.register('service-worker.js').catch(function(){});}
 </script>
+
+<footer role="contentinfo" style="text-align:center;padding:1rem;color:var(--text-dim);font-size:.85rem;">Apostila Web Interativa FCN — conteúdo educacional. Modo offline parcial em file://.</footer>
 
 </body>
 </html>
