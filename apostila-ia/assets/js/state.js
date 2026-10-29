@@ -8,7 +8,7 @@ const State = {
   flashcards: {},      // { 'modulo-1': [ { id, reps, interval, ease, quality } ] }
   quizScores: {},      // { 'modulo-1': { score, lastAttempt } }
   ttsRate: 1.0,
-  theme: 'light',
+  theme: 'dark',
 
   load() {
     try {
@@ -18,7 +18,7 @@ const State = {
         this.progress = (d && d.progress) ? d.progress : {};
         this.flashcards = (d && d.flashcards) ? d.flashcards : {};
         this.quizScores = (d && d.quizScores) ? d.quizScores : {};
-        this.theme = (d && d.theme) ? d.theme : 'light';
+        this.theme = (d && d.theme) ? d.theme : 'dark';
         if (d && d.currentModule) this.currentModule = d.currentModule;
       }
     } catch (e) {
