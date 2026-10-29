@@ -24,6 +24,8 @@ const axeCore = require("axe-core");
       timeout: 30000
     });
     console.log('DEBUG colorScheme dark:', await page.evaluate(() => window.matchMedia('(prefers-color-scheme: dark)').matches));
+    console.log('DEBUG study-eyebrow color:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-eyebrow')).color));
+    console.log('DEBUG study-eyebrow bg:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-eyebrow')).backgroundColor));
     await page.waitForFunction(() =>
       window.apostilaDados &&
       document.querySelector("#excel-app [data-act='excel-console-calcular']") &&
