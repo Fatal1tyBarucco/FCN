@@ -321,9 +321,10 @@ footer{max-width:1100px}
 .app-shell>main pre, .app-shell>main table{max-width:100%}
 
 /* Tabs e código com contraste adequado */
-.tab { color: #1f2937; background: transparent; }
+.tab { color: #1f2937 !important; background: transparent; }
 #search-app .bus-badge { color: #111827 !important; }
-code { color: #374151; }
+code { color: #1f2937 !important; }
+pre code { color: inherit !important; }
 
 /* Contraste WCAG (correção axe) — força texto escuro por padrão (modo claro/no-preference) */
 .mark-complete,.fc-import,.aviso code,#search-app .bus-header h3,#search-app #bus-status,#audio-app .aud-header h3,#audio-app .aud-controle label,#audio-app #aud-vel-label,#audio-app #aud-ler-tela,.pg-card strong,.pg-tabela th,.fc-filtros label,.qz-filtros label,.bus-header h3,.bus-status,.aud-header h3,.aud-controle label,#aud-vel-label,#aud-ler-tela { color: #111827 !important; }
