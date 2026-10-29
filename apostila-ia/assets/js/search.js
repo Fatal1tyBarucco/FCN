@@ -447,6 +447,7 @@
       '#search-app .bus-badge-intermediario { background: #fff8e1; color: #111827; }',
       '#search-app .bus-badge-avancado { background: #fce8e6; color: #111827; }',
       '#search-app .bus-titulo { font-size: 1rem; font-weight: 600; margin-bottom: .3rem; color: var(--text-color, #202124); }',
+      '#search-app .bus-meta-tipo { color: #111827; }',
       '#search-app .bus-excerpt { font-size: .88rem; line-height: 1.4; color: #3c4043; margin-bottom: .4rem; }',
       '#search-app .bus-result mark { background: #ffeb3b; color: #000; padding: 0 .15rem; border-radius: 2px; }',
       '#search-app .bus-link { display: inline-block; font-size: .82rem; color: var(--primary-color, #174878); text-decoration: underline; cursor: pointer; }',
@@ -463,6 +464,8 @@
       '#search-app .bus-filtros label { color: #b3b7bc; }',
       '#search-app .bus-filtros select { background: #3c4043; color: #e8eaed; border-color: #374151; }',
       '#search-app .bus-status { color: #b3b7bc; }',
+      '#search-app .bus-titulo { color: #e8eaed; }',
+      '#search-app .bus-meta-tipo { color: #b3b7bc; }',
       '#search-app .bus-excerpt { color: #b3b7bc; }',
       '#search-app .bus-preview { border-color: #374151; }',
       '#search-app .bus-vazio { color: #b3b7bc; }'

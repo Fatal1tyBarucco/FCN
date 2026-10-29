@@ -76,7 +76,7 @@
           workspace.className = 'study-workspace';
           workspace.id = 'study-workspace';
           workspace.setAttribute('aria-labelledby', 'study-workspace-title');
-          workspace.innerHTML = '<div class="study-workspace-heading"><span class="study-eyebrow">ÁREA DE APRENDIZAGEM</span><h2 id="study-workspace-title">Estude um tópico</h2><p>Escolha um módulo no menu lateral. O conteúdo, o objetivo de aprendizagem e os recursos complementares aparecerão aqui.</p></div>';
+          workspace.innerHTML = '<div class="study-workspace-heading"><span class="study-eyebrow" style="color:#111827;">ÁREA DE APRENDIZAGEM</span><h2 id="study-workspace-title">Estude um tópico</h2><p style="color:#111827;">Escolha um módulo no menu lateral. O conteúdo, o objetivo de aprendizagem e os recursos complementares aparecerão aqui.</p></div>';
           topicPanel.classList.add('topic-content-panel');
           workspace.appendChild(topicPanel);
           main.insertBefore(workspace, main.firstChild);
