@@ -287,5 +287,13 @@ montarSimulador('EthicsSimulator','etica-app');
 if('serviceWorker'in navigator&&location.protocol==='https:'){navigator.serviceWorker.register('service-worker.js').catch(function(){});}
 </script>
 
+<script>
+(function(){
+  var css = '.study-eyebrow,.study-workspace-heading p,[data-id] span,.bus-badge,.bus-meta-tipo{color:#111827 !important;}';
+  var st = document.createElement('style');
+  st.textContent = css;
+  (document.head || document.documentElement).appendChild(st);
+})();
+</script>
 </body>
 </html>
