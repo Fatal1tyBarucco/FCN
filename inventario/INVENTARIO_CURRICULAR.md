@@ -62,7 +62,7 @@ Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplic
 | M6 | Ética e Responsabilidade Digital no Serviço Público | 6 | 18 | 46 | 64 | 138 | 92 | 50 | 47 | Completo |
 | M7 | Fundamentos e Engenharia de Dados | 3 | 9 | 23 | 32 | 69 | 46 | 50 | 40 | Completo |
 | M8 | Visualização, Análise e Storytelling com Dados | 5 | 23 | 28 | 51 | 84 | 56 | 50 | 40 | Completo |
-| **Total** | — | **37** | **132** | **295** | **427** | **888** | **592** | **460** | **399** | — |
+| **Total** | — | **37** | **132** | **307** | **439** | **924** | **616** | **474** | **409** | — |
 
 ### 4.2 Escopo por módulo (conforme Escrita.txt Seção 6)
 

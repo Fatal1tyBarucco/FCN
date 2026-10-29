@@ -1,6 +1,6 @@
 /* flashcards.js — UI de flashcards com repetição espaçada (Seção 9 do Escrita.txt).
  *
- * CONSUME OS CARTÕES EXISTENTES: flashcards_m1..m8.js — 460 cartões no total
+ * CONSUME OS CARTÕES EXISTENTES: flashcards_m1..m8.js — 474 cartões no total
  * (M1=66, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50, M8=50; contagem
  * verificada em CI em 2026-10-25). Este arquivo não cria cartões; apenas
  * consome os dados (as fontes são descobertas dinamicamente).
