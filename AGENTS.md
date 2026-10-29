@@ -5,7 +5,7 @@ Projeto de apostila web interativa de TI, Dados e IA para concursos públicos br
 ## Visão geral
 
   SPA estática em vanilla HTML/CSS/JS. Sem build, framework ou `package.json`; `README.md` existe. CI: `deploy-pages.yml` publica em `main`/manual e `validate-curriculum.yml` valida PRs/branches `feat/**`. Testes estruturais Node/vm e auditorias estão versionados; navegador real e WCAG ainda exigem validação dedicada.
-- Fonte de requisitos: `Escrita.txt` (prompt mestre, 1207 linhas) — consultar antes de qualquer implementação nova.
+- Fonte de requisitos: `prompts/Escrita.txt` (prompt mestre, 1207 linhas) — consultar antes de qualquer implementação nova.
 - O app vive em `apostila-ia/` (o `index.html` **não** está na raiz do repo).
 
 ## Estrutura do repositório
