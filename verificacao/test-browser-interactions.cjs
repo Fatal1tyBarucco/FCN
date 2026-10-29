@@ -122,7 +122,7 @@ const axeCore = require("axe-core");
 
     // Excel: evaluate a formula against the simulator's real formula engine.
     await page.locator("#excel-console-fm").fill("=SOMA(1;2)");
-    await page.locator("#excel-app [data-act='excel-console-calcular']").scrollIntoViewIfNeeded()
+    await page.locator("#excel-app [data-act='excel-console-calcular']").scrollIntoViewIfNeeded();
     await page.locator("#excel-app [data-act='excel-console-calcular']").click();
     await page.waitForFunction(() =>
       (document.querySelector("#excel-console-res")?.innerText || "").trim().includes("3"),
