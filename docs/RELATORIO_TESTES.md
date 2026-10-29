@@ -1,6 +1,6 @@
 ## Validação mais recente — 2026-10-26 04:12 UTC
 
-- Banco esperado no HEAD validado: 399 questões e 460 flashcards.
+- Banco esperado no HEAD validado: 409 questões e 474 flashcards.
 - Testes de interação aprovados: Excel `SOMA(1;2)=3`, cálculo CIDR, feedback do classificador de phishing, avaliação de prompt, recálculo do histograma e atualização do SVG no laboratório de gráficos.
 - A execução de CI confirmou sucesso dos checks configurados; não equivale a auditoria semântica integral, validação WCAG independente, testes manuais com leitor de tela ou verificação em dispositivos físicos.
 - Após atualização documental posterior, o HEAD do PR passou a `c999baf3975f54b005576dc3455227e6b4098fcf`; checks desse novo HEAD ainda estavam em execução na última consulta. Revalidar antes de afirmar que o HEAD documental mais recente está verde.
@@ -11,7 +11,7 @@
 
 ## Nota de atualização — 2026-10-26 04:08 UTC
 
-O relatório abaixo contém snapshots históricos e resultados de execuções anteriores. Após a inclusão das questões `q-m6-45` a `q-m6-47`, o banco esperado é de **399 questões**. A execução [40267735657](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40267735657) no HEAD `7a6ac2425f00ccdbebc8be2d206796037358e75d` concluiu com sucesso: sintaxe, matriz curricular, rastreabilidade, verificação estrutural, heurísticas, smoke test Chromium/Playwright em `file://`, regressões interativas e upload de relatórios. CodeQL e análises JavaScript/TypeScript/Actions também passaram nesse HEAD. As contagens abaixo são snapshots históricos, não os números atuais.
+O relatório abaixo contém snapshots históricos e resultados de execuções anteriores. Após a inclusão das questões `q-m6-45` a `q-m6-47`, o banco esperado é de **409 questões**. A execução [40267735657](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40267735657) no HEAD `7a6ac2425f00ccdbebc8be2d206796037358e75d` concluiu com sucesso: sintaxe, matriz curricular, rastreabilidade, verificação estrutural, heurísticas, smoke test Chromium/Playwright em `file://`, regressões interativas e upload de relatórios. CodeQL e análises JavaScript/TypeScript/Actions também passaram nesse HEAD. As contagens abaixo são snapshots históricos, não os números atuais.
 
 ---
 
@@ -97,14 +97,14 @@ Resultado: NENHUMA CORREÇÃO APLICADA (Fase 7 — se a revisão independente Fa
 
 ## REVISÃO INDEPENDENTE — FASE 3 DO ORQUESTRADOR (2026-10-23)
 Revisor: orquestrador (substitui subagente REVISOR; delegate_task indisponível, registrado). Nenhum componente aprovado pelo próprio autor — revisão feita após cada passo isolado.
-Veredito sobre FASE 1: CONFIRMADO. Escrita.txt lido integralmente (1206 linhas, 12 seções); inventário (427 nós), matriz (365/404/5), plano — todos em docs/ com datas e fontes.
+Veredito sobre FASE 1: CONFIRMADO. Escrita.txt lido integralmente (1206 linhas, 12 seções); inventário (439 nós), matriz (365/404/5), plano — todos em docs/ com datas e fontes.
 Veredito sobre FASE 2: CONFIRMADO. Repo inspecionado; M1–M8 renderizam (AGENTS.md); nenhuma funcionalidade válida descartada; 38 tags <script> confirmadas pelo grep; M6 presente (linhas 482/490/496/535/603).
 Veredito sobre FASE 3 — ARQUITETURA: CONFIRMADO. node --check passou (app/navigation/quiz-engine/simulators, 0 falhas); schema `modulo-N` confirmado (chaves 1–8); navigation.js usa typeof/chain (sem eval/fetch); persistência `apostila-ia-progresso` e PWA condicional preservados; DECISOES_ARQUITETURAIS.md existente, não alterado de forma não justificada.
 Veredito sobre FASE 3 — REFERÊNCIAS PENDENTES: PARCIAL / HONESTO. Marco Civil 12.965/2014 verificado (2026-10-23, URL + arts. 2,3,7,9§3,15,19); LGPD 13.709/2018, LAI 12.527/2011, Lei 14.129/2021 verificadas (AGENTS.md). PENDENTES declarados (não inventados): Microsoft Learn (M1), RFC 791/793 (M2), CERT.br (M4), demais incisos CF art.37/art.5, dispositivos M6 apenas por remissão, vídeos (0 validados — decisão), acessibilidade real (não headless). Nenhuma fonte inventada.
 Veredito sobre FASE 3 — CÓDIGO: NENHUMA ALTERAÇÃO DE CÓDIGO FEITA AINDA (substituição registrada: delegate_task indisponível; execução direta). Nenhum arquivo .js do app modificado nesta sessão — apenas docs/ atualizados e evidências coletadas. Regra preservada: merge só via PR (fluxo branches+PR), nunca direto em main.
 Limitações honestas registradas (não ocultadas): nenhum simulador testado em navegador real (só node --check + smoke Node/vm); accessibility não testado com screen reader; manifest CORS bloqueado em file://; SW não registrado em file://; 0 vídeos validados; distribuição real de níveis (25,8/52,9/21,4) difere da sugerida 30/45/25 — intencional e documentado.
 
-Entrega do orquestrador: Fases 1–2 completas; Fase 3 iniciada (arquitetura confirmada, subagentes substituídos por passos isolados, revisão independente feita antes de qualquer alteração de código). Fase 4 concluída (2026-10-24, esta execução): conteúdo didático verificado diretamente nos arquivos `assets/data/*.js` (404 flashcards, 365 questões, 8 currículos, 427 nós). Nenhum arquivo `.js` do app alterado. Próximo passo (não executado ainda): corrigir referências pendentes e executar testes headless de busca/áudio/accessibility, sempre com evidência real antes de registrar como concluído.
+Entrega do orquestrador: Fases 1–2 completas; Fase 3 iniciada (arquitetura confirmada, subagentes substituídos por passos isolados, revisão independente feita antes de qualquer alteração de código). Fase 4 concluída (2026-10-24, esta execução): conteúdo didático verificado diretamente nos arquivos `assets/data/*.js` (404 flashcards, 365 questões, 8 currículos, 439 nós). Nenhum arquivo `.js` do app alterado. Próximo passo (não executado ainda): corrigir referências pendentes e executar testes headless de busca/áudio/accessibility, sempre com evidência real antes de registrar como concluído.
 
 - Revisão independente Fase 5 (perfil revisor, não autor): PASS — veredito em docs/REVISAO_INDEPENDENTE_FASE5.md (plugin advanced-delegation indisponível; substituído por revisão manual; nenhum defeito; nenhuma alteração em conteúdo; Fase 7 não necessária; pronto para Fase 6).
 
@@ -180,7 +180,7 @@ Nenhum teste de navegador, funcionalidade, persistência, acessibilidade ou buil
 | Oito arquivos curriculares encontrados e lidos remotamente | PASS | Arquivos `curriculum.js` e `curriculum_m2.js` a `curriculum_m8.js` | Não executados |
 | IDs de subtópicos extraídos por padrão específico de cada família | PASS — 295 IDs | 37 + 52 + 35 + 39 + 35 + 46 + 23 + 28 | Contagem sintática, não valida conteúdo nem unicidade global entre todos os dados |
 | Matriz por subtópico gerada | PASS — 295 linhas de dados | `docs/MATRIZ_COBERTURA.csv` | Indicadores de presença aproximados; status qualitativo continua pendente |
-| Qualidade didática dos 295 subtópicos | NÃO EXECUTADO | — | Requer revisão semântica por critério |
+| Qualidade didática dos 307 subtópicos | NÃO EXECUTADO | — | Requer revisão semântica por critério |
 | Contagens de exemplos/exercícios/questões/flashcards | NÃO EXECUTADO | — | Requer extração e validação separadas |
 | Execução da aplicação em `file://` ou navegador | NÃO EXECUTADO | — | Nenhuma evidência de runtime nesta etapa |
 
@@ -209,7 +209,7 @@ Esta inspeção foi estática e remota via GitHub; não é um teste de execuçã
 | Verificação | Método/evidência | Resultado | Classificação |
 |---|---|---|---|
 | IDs de subtópicos curriculares | Leitura dos oito arquivos e extração textual por padrão de ID | 295 IDs identificados; distribuição por módulo registrada na matriz | Estrutural; não é teste de execução |
-| Exemplos e exercícios | Contagem textual dos objetos nas seções exemplos e exercicios dos segmentos curriculares | 888 exemplos e 592 exercícios detectados | Estrutural; não avalia qualidade |
+| Exemplos e exercícios | Contagem textual dos objetos nas seções exemplos e exercicios dos segmentos curriculares | 924 exemplos e 616 exercícios detectados | Estrutural; não avalia qualidade |
 | Flashcards | Contagem de propriedades id nos oito arquivos flashcards_m*.js | 460 IDs e 460 únicos | Estrutural; não avalia duplicação semântica |
 | Questões | Contagem de propriedades id nos seis arquivos de banco consultados | 365 IDs e 365 únicos | Estrutural; não valida gabaritos |
 | Script de auditoria | Arquivo scripts/audit_curriculum_matrix.mjs adicionado à branch | Ainda não executado localmente nesta execução | Pendente |
@@ -226,8 +226,8 @@ Não houve execução local do JavaScript do projeto nem teste de navegador nest
 - Resultado do job de validação estática: **success**.
 - `node --check`: todos os arquivos JavaScript em `apostila-ia/assets` passaram.
 - `scripts/audit_curriculum_matrix.mjs`: executado com código de saída 0.
-- `scripts/audit_learning_assets.mjs`: executado com código de saída 0; 132 tópicos, 460 flashcards, 365 questões, 108 ativos associados somente à unidade e 0 referências sem associação curricular reconhecível.
-- `verificacao/verificar-estrutura.js`: todas as verificações estruturais passaram (0 falhas), após alinhar as expectativas ao inventário atual (460 flashcards, distribuição 66/56/68/54/66/50/50/50 e 39 tags `script src`).
+- `scripts/audit_learning_assets.mjs`: executado com código de saída 0; 132 tópicos, 474 flashcards, 365 questões, 108 ativos associados somente à unidade e 0 referências sem associação curricular reconhecível.
+- `verificacao/verificar-estrutura.js`: todas as verificações estruturais passaram (0 falhas), após alinhar as expectativas ao inventário atual (474 flashcards, distribuição 66/56/68/54/66/50/50/50 e 39 tags `script src`).
 - O workflow preserva os relatórios gerados como artefato `curriculum-audit-reports`.
 
 ### Defeitos corrigidos a partir da evidência de CI
@@ -245,7 +245,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 
 - Workflow: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246584032
 - Execução real de Playwright + Chromium headless abrindo o arquivo local via `file://` (não servidor HTTP).
-- Resultado: **PASS**; 8 módulos curriculares expostos e 8 nós de módulo renderizados; 460 flashcards conectados; 365 questões conectadas; 5 SVGs de gráficos; UI de flashcards, quiz e busca não vazias; seis contêineres de simuladores presentes e com conteúdo renderizado; round-trip de `localStorage` concluído; **0 exceções JavaScript não capturadas**.
+- Resultado: **PASS**; 8 módulos curriculares expostos e 8 nós de módulo renderizados; 474 flashcards conectados; 365 questões conectadas; 5 SVGs de gráficos; UI de flashcards, quiz e busca não vazias; seis contêineres de simuladores presentes e com conteúdo renderizado; round-trip de `localStorage` concluído; **0 exceções JavaScript não capturadas**.
 - O teste usa Chromium headless em runner Linux. Não substitui validação em dispositivos físicos, outros navegadores, tecnologia assistiva, navegação completa de todos os controles ou avaliação WCAG independente.
 
 
@@ -253,8 +253,8 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 
 - Commit com os 12 campos `topico` de q-m1-26..q-m1-32 e q-m1-36..q-m1-40 ajustados a subtópicos curriculares: `4e4db1100839b47148676dd3f93a142d11229665`.
 - Execução de validação incluindo Playwright/Chromium: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40246710464 — **success**.
-- Auditoria estrutural pós-correção: 132 tópicos; 460 flashcards; 365 questões; 96 referências apenas em nível de unidade; 0 referências sem associação curricular reconhecível.
-- Smoke test `file://`: 8 módulos renderizados, 460 flashcards, 365 questões, 5 SVGs, 6 simuladores com UI, `localStorage` round-trip e 0 exceções JavaScript.
+- Auditoria estrutural pós-correção: 132 tópicos; 474 flashcards; 365 questões; 96 referências apenas em nível de unidade; 0 referências sem associação curricular reconhecível.
+- Smoke test `file://`: 8 módulos renderizados, 474 flashcards, 365 questões, 5 SVGs, 6 simuladores com UI, `localStorage` round-trip e 0 exceções JavaScript.
 
 
 ## Revalidação do lote de rastreabilidade e revisão legal — 2026-10-26
@@ -263,9 +263,9 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902 — **success**.
 - `node --check` em todos os JavaScript de `apostila-ia/assets`: passou.
 - `scripts/audit_curriculum_matrix.mjs`: passou.
-- `scripts/audit_learning_assets.mjs`: 132 tópicos, 460 flashcards, 365 questões, 0 questões unit-only e 0 referências desconhecidas.
+- `scripts/audit_learning_assets.mjs`: 132 tópicos, 474 flashcards, 365 questões, 0 questões unit-only e 0 referências desconhecidas.
 - `verificacao/verificar-estrutura.js`: passou, 0 falhas estruturais.
-- Playwright/Chromium headless em `file://`: PASS; 8 módulos, 460 flashcards, 365 questões, 5 SVGs, UI dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
+- Playwright/Chromium headless em `file://`: PASS; 8 módulos, 474 flashcards, 365 questões, 5 SVGs, UI dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
 - Escopo não coberto: correção semântica completa de todas as questões, auditoria WCAG independente, dispositivos físicos e registro/offline do Service Worker via HTTP/HTTPS.
 
 
@@ -274,9 +274,9 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Commit de código testado: `c54e13f7d166910f2a1c62ffa0199c6727b3b33e`.
 - Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289 — **success**.
 - `node --check` passou para os arquivos JavaScript de `apostila-ia/assets`.
-- Auditoria curricular e rastreabilidade passaram: 132 tópicos, 460 flashcards, 365 questões, 0 referências somente à unidade e 0 referências desconhecidas.
+- Auditoria curricular e rastreabilidade passaram: 132 tópicos, 474 flashcards, 365 questões, 0 referências somente à unidade e 0 referências desconhecidas.
 - Verificador estrutural passou sem falhas.
-- Playwright/Chromium headless via `file://`: 8 módulos, 460 flashcards, 365 questões, 5 SVGs, interfaces dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
+- Playwright/Chromium headless via `file://`: 8 módulos, 474 flashcards, 365 questões, 5 SVGs, interfaces dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
 - Escopo não certificado: correção semântica de todas as questões, auditoria WCAG independente, dispositivos físicos e funcionamento PWA/offline por HTTP/HTTPS.
 
 
@@ -285,7 +285,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Commit testado: `b306d9a295035d24317f83f604882ecb73054e57`.
 - Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802 — **success**.
 - `node --check`, `scripts/audit_curriculum_matrix.mjs`, `scripts/audit_learning_assets.mjs`, `verificacao/verificar-estrutura.js` e Playwright/Chromium via `file://` passaram.
-- Questões e flashcards continuam com IDs estáveis; 365 questões, 460 flashcards, 0 referências somente à unidade e 0 referências desconhecidas.
+- Questões e flashcards continuam com IDs estáveis; 365 questões, 474 flashcards, 0 referências somente à unidade e 0 referências desconhecidas.
 - A auditoria por tópico identifica 31 tópicos sem questão direta; 7 são nós de síntese/revisão e 24 são lacunas substantivas (M1=3, M2=14, M3=7).
 
 
@@ -296,7 +296,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - `node --check` passou; auditorias curricular e de ativos passaram; verificador estrutural passou sem falhas.
 - Banco de questões: **389** no total, distribuição M1=43, M2=54, M3=47, M4=85, M5=40, M6=40, M7=40, M8=40. A validação de questões reprovou **0** itens.
 - Flashcards: 460, IDs únicos; rastreabilidade: 0 questões unit-only e 0 referências desconhecidas.
-- Playwright/Chromium headless via `file://`: PASS; 8 módulos, 460 flashcards, 389 questões, 5 SVGs, interfaces dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
+- Playwright/Chromium headless via `file://`: PASS; 8 módulos, 474 flashcards, 389 questões, 5 SVGs, interfaces dos 6 simuladores, round-trip de `localStorage` e 0 exceções JavaScript.
 - A auditoria de tópicos encontrou sete nós de síntese/revisão sem questão direta; nenhum tópico substantivo ficou sem questão direta. A revisão semântica independente continua pendente.
 
 
@@ -305,8 +305,8 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Commit testado: `f0beb421ebb25d086d9ea740c45ecd20762473a2`.
 - Execução: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40250363507 — **success**.
 - Passaram: sintaxe JavaScript, auditoria curricular, auditoria de rastreabilidade, verificador estrutural, auditoria heurística e smoke test Playwright/Chromium via `file://`.
-- Banco: 389 questões, 460 flashcards; 0 IDs duplicados, 0 pares com contexto/enunciado idênticos e 0 alertas heurísticos.
-- Smoke test: 8 módulos, 389 questões, 460 flashcards, 5 SVGs, 6 simuladores com UI, `localStorage` round-trip e 0 exceções JavaScript.
+- Banco: 389 questões, 474 flashcards; 0 IDs duplicados, 0 pares com contexto/enunciado idênticos e 0 alertas heurísticos.
+- Smoke test: 8 módulos, 389 questões, 474 flashcards, 5 SVGs, 6 simuladores com UI, `localStorage` round-trip e 0 exceções JavaScript.
 - Achado editorial não bloqueante para CI, mas importante antes da aprovação final: gabaritos MC A=169, B=124, C=21, D=0, E=0. Exige revisão humana da posição das alternativas.
 - A validação estrutural e heurística não certifica a verdade das respostas nem substitui revisão semântica independente.
 
@@ -317,7 +317,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Auditoria heurística: 389 questões; 0 IDs duplicados; 0 pares de contexto/enunciado idênticos; 0 alertas heurísticos.
 - As 24 questões adicionadas tiveram a posição correta distribuída em A=4, B=5, C=5, D=5, E=5, mantendo o texto de cada alternativa associado à sua análise.
 - Distribuição global de gabaritos MC: A=149, B=129, C=26, D=5, E=5. A/B representam 88,5% e exigem revisão editorial do banco legado.
-- Smoke test Chromium/Playwright via `file://`: PASS; 8 módulos, 389 questões, 460 flashcards, 5 SVGs, 6 simuladores com UI, persistência local e 0 exceções JavaScript.
+- Smoke test Chromium/Playwright via `file://`: PASS; 8 módulos, 389 questões, 474 flashcards, 5 SVGs, 6 simuladores com UI, persistência local e 0 exceções JavaScript.
 
 
 ## Auditoria de distribuição de gabaritos por módulo — 2026-10-26
@@ -401,7 +401,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - **Code Quality:** [40254851749](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254851749) — success.
 - **Workflow do PR:** [40254851850](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40254851850) — success.
 - Sintaxe aprovada para 39 arquivos JavaScript; auditorias de matriz curricular, rastreabilidade, estrutura e heurísticas concluídas; smoke test Playwright/Chromium em modo `file://` aprovado com 8 módulos renderizados e `pageErrors: []`.
-- Contagens confirmadas no artefato: 132 tópicos, 460 flashcards e 389 questões. Auditoria heurística: 0 IDs duplicados, 0 pares idênticos de contexto/enunciado e 0 alertas.
+- Contagens confirmadas no artefato: 132 tópicos, 474 flashcards e 389 questões. Auditoria heurística: 0 IDs duplicados, 0 pares idênticos de contexto/enunciado e 0 alertas.
 - Distribuição das 314 questões MC: A=145, B=129, C=27, D=6, E=7. M7 após o lote: A=29, B=0, C=1, D=1, E=2. M6 permanece com A=30/30.
 - **Limitação:** estes resultados não certificam correção factual, validade de fontes, qualidade dos distratores, acessibilidade, responsividade em dispositivo físico ou revisão semântica completa.
 
@@ -414,14 +414,14 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Uma execução de CI anterior à atualização das expectativas carregou os bancos e validou individualmente as questões, mas falhou nas asserções históricas de total/distribuição (esperava 389, M1=43, M5=40 e M6=40). Essa execução não é considerada aprovação final.
 - **Status:** aguardar a execução de CI no HEAD atual; não declarar smoke test final aprovado até a nova execução terminar com sucesso.
 - **Limitação pedagógica:** as sete questões têm justificativa e análise por alternativa, mas ainda precisam de revisão humana independente de gabarito, distratores e fonte curricular.
-\n\n## Revalidação após correções de acessibilidade — 2026-10-26\n\n- **HEAD:** `3ae660db7e23f0594e347e6c59701bd1f61746b2`.\n- **Validação curricular e smoke test:** [success](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40256956212).\n- **Workflow do PR:** [success](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40256951431).\n- **Code Quality:** [success](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40256951300).\n- Smoke test Chromium/Playwright via `file://`: 8 módulos, 460 flashcards, 396 questões, 5 SVGs, 6 simuladores, round-trip de `localStorage`, `pageErrors: []`.\n- Inventário automatizado: 465 controles, 0 controles sem nome acessível, 0 imagens sem `alt`, link de salto presente e exatamente 1 marco `main`.\n- **Limites:** inventário não substitui axe/WCAG, teste manual por teclado, leitor de tela, avaliação em dispositivos reais nem revisão semântica de todo o conteúdo.\n- A distribuição de gabaritos MC é A=145, B=131, C=29, D=8, E=8 (A/B=86,0%); exige revisão editorial individual sem mudar gabaritos corretos apenas para equilibrar letras.\n
+\n\n## Revalidação após correções de acessibilidade — 2026-10-26\n\n- **HEAD:** `3ae660db7e23f0594e347e6c59701bd1f61746b2`.\n- **Validação curricular e smoke test:** [success](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40256956212).\n- **Workflow do PR:** [success](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40256951431).\n- **Code Quality:** [success](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40256951300).\n- Smoke test Chromium/Playwright via `file://`: 8 módulos, 474 flashcards, 396 questões, 5 SVGs, 6 simuladores, round-trip de `localStorage`, `pageErrors: []`.\n- Inventário automatizado: 465 controles, 0 controles sem nome acessível, 0 imagens sem `alt`, link de salto presente e exatamente 1 marco `main`.\n- **Limites:** inventário não substitui axe/WCAG, teste manual por teclado, leitor de tela, avaliação em dispositivos reais nem revisão semântica de todo o conteúdo.\n- A distribuição de gabaritos MC é A=145, B=131, C=29, D=8, E=8 (A/B=86,0%); exige revisão editorial individual sem mudar gabaritos corretos apenas para equilibrar letras.\n
 
 ## Validação integrada do PR #17 — 2026-10-26 — commit 8fdf771
 
 - Execução GitHub Actions: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40261787364 — **success**.
 - Job `Static validation and coverage audits`: conclusão final `success`.
 - Passaram no mesmo SHA: sintaxe JavaScript; auditoria da matriz curricular; rastreabilidade dos ativos; verificação estrutural; auditoria heurística de questões; instalação do Playwright/Chromium; smoke test e teste de interação em navegador.
-- Smoke test Playwright/Chromium via `file://`: **PASS**; 8 módulos e 8 nós curriculares renderizados, 460 flashcards, 396 questões, 5 SVGs, 6 simuladores com UI, round-trip de `localStorage`, 465 controles examinados, 0 controles sem nome acessível, 0 imagens sem `alt`, link de salto presente, exatamente 1 marco `main` e `pageErrors: []`.
+- Smoke test Playwright/Chromium via `file://`: **PASS**; 8 módulos e 8 nós curriculares renderizados, 474 flashcards, 396 questões, 5 SVGs, 6 simuladores com UI, round-trip de `localStorage`, 465 controles examinados, 0 controles sem nome acessível, 0 imagens sem `alt`, link de salto presente, exatamente 1 marco `main` e `pageErrors: []`.
 - Teste de interações Playwright via `file://`: **PASS**; Excel `SOMA(1;2)=3`; cálculo CIDR produz rede `192.168.1.0/24`; classificação de phishing e avaliação de prompt retornam feedback; simulador de dados recalcula o histograma após mudança de classes; simulador de ética retorna feedback; edição de célula numérica no laboratório de gráficos altera o SVG do histograma; `pageErrors: []`.
 - Artefato de auditoria: [curriculum-audit-reports](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40261787364/artifacts/12625340191), upload concluído.
 - Advertências não bloqueantes nos logs: depreciação de `punycode`/`url.parse()` e aviso de runtime Node 20 em ações do workflow; não foram falhas do job.
@@ -461,8 +461,8 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 
 ## Registro de retomada da orquestração — 2026-10-26
 
-- O PR #17 registra sucesso do workflow [40262096277](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40262096277) para o SHA `81472b91ea33a421db66f4fa502e28d0e09d0c65`, com smoke Playwright/Chromium em `file://`, 8 módulos, 460 flashcards, 396 questões, 5 gráficos SVG, 6 simuladores com UI e `pageErrors: []`.
-- Outros snapshots na branch registram 399 questões e 460 flashcards. Como os SHA são diferentes, não tratar as contagens como uma única execução nem assumir que o workflow histórico valida o HEAD atual.
+- O PR #17 registra sucesso do workflow [40262096277](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40262096277) para o SHA `81472b91ea33a421db66f4fa502e28d0e09d0c65`, com smoke Playwright/Chromium em `file://`, 8 módulos, 474 flashcards, 396 questões, 5 gráficos SVG, 6 simuladores com UI e `pageErrors: []`.
+- Outros snapshots na branch registram 409 questões e 474 flashcards. Como os SHA são diferentes, não tratar as contagens como uma única execução nem assumir que o workflow histórico valida o HEAD atual.
 - Os testes reportados cobrem regressões interativas específicas (SOMA, CIDR, phishing, avaliação de prompt, histograma e SVG), mas não demonstram correção semântica integral, WCAG, leitor de tela ou teste físico multiplataforma.
 - **Esta retomada foi documental; nenhum teste foi executado por esta atualização.** A próxima execução deve registrar comando, SHA, exit code, artefatos e falhas, sem extrapolar o alcance dos testes.
 
@@ -471,8 +471,8 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Run: [40409912389](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40409912389), SHA testado: `4e0c9eae346116c7c9c0957196ea315dd4f16b00`.
 - Concluíram com sucesso nesse run: sintaxe JavaScript; geração da matriz; rastreabilidade de ativos; validação estrutural do repositório; heurísticas de qualidade das questões; smoke test Chromium no modo `file://`.
 - O teste de interação falhou na asserção axe-core de WCAG 2.1 A/AA devido a `color-contrast`: texto `#4b5563` sobre `#1f232c` apresentou razão 2,08:1, quando o mínimo para texto normal é 4,5:1.
-- Correção enviada posteriormente à branch: a cor dos textos auxiliares foi alterada para `#cbd5e1` nos seis simuladores. A matriz curricular foi sincronizada a partir dos arquivos de origem, preservando 295 subtópicos e refletindo 888 exemplos e 592 exercícios contados estruturalmente.
-- O artefato de auditoria desse run reconheceu 132 tópicos, 460 flashcards e 399 questões. A heurística não sinalizou duplicatas exatas ou outros alertas, mas identificou 112 questões sem fonte no campo examinado e concentração incomum de gabaritos no M1 (A=4, B=15, C=5, D=2, E=0 em 26 questões MC). Esses achados foram adicionados a `docs/PENDENCIAS.md`.
+- Correção enviada posteriormente à branch: a cor dos textos auxiliares foi alterada para `#cbd5e1` nos seis simuladores. A matriz curricular foi sincronizada a partir dos arquivos de origem, preservando 307 subtópicos e refletindo 924 exemplos e 616 exercícios contados estruturalmente.
+- O artefato de auditoria desse run reconheceu 132 tópicos, 474 flashcards e 409 questões. A heurística não sinalizou duplicatas exatas ou outros alertas, mas identificou 112 questões sem fonte no campo examinado e concentração incomum de gabaritos no M1 (A=4, B=15, C=5, D=2, E=0 em 26 questões MC). Esses achados foram adicionados a `docs/PENDENCIAS.md`.
 - **Limitação:** o run acima antecede a correção de contraste e os commits documentais posteriores. Não representa aprovação do HEAD atual. É necessário conferir um run completo do SHA final.
 - Ainda não cobertos: revisão semântica independente de todas as questões, validação de cada fonte normativa/técnica, teste manual com leitor de tela, auditoria WCAG manual e compatibilidade em dispositivos físicos.
 
@@ -493,7 +493,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - SHA testado: `5232348fa553a58317c6b4b28ab9dfafc088beb9`.
 - Resultado: **success**.
 - Passaram: sintaxe JavaScript (39 arquivos), geração da matriz curricular, rastreabilidade de ativos, validação estrutural, auditoria heurística de questões, smoke test Chromium em `file://` e testes interativos Playwright/axe-core.
-- Smoke test: aplicação com 8 módulos, 460 flashcards e 399 questões; sem erros JavaScript de página.
+- Smoke test: aplicação com 8 módulos, 474 flashcards e 409 questões; sem erros JavaScript de página.
 - axe-core: 58 regras aprovadas, 3 resultados incompletos, 1 violação total não bloqueante e 0 violações críticas/graves bloqueantes.
 - Auditoria de questões: 399 lidas, 0 IDs duplicados, 0 alertas heurísticos, 0 pares com contexto/enunciado idênticos; 395 com campo de fonte detectado e 4 sem fonte.
 - O sucesso automatizado não substitui verificação individual de URLs, revisão semântica, leitor de tela, WCAG manual ou testes físicos. As quatro lacunas estruturais de fonte foram fechadas; a distribuição de gabaritos de M1 e a validação semântica permanecem registradas em `docs/PENDENCIAS.md`.
@@ -510,10 +510,10 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 
 ## Atualização de fontes e acessibilidade — 2026-10-26 (primeiro CI concluído; HEAD atualizado validado)
 
-- Adicionadas fontes oficiais às questões `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36`, antes identificadas como as quatro lacunas no campo fonte. A contagem estrutural atual é 399/399 questões com campo de fonte; não equivale à validação semântica de cada fonte.
+- Adicionadas fontes oficiais às questões `q-m2-26`, `q-m2-32`, `q-m3-19` e `q-m3-36`, antes identificadas como as quatro lacunas no campo fonte. A contagem estrutural atual é 399/409 questões com campo de fonte; não equivale à validação semântica de cada fonte.
 - Atualizados `apostila-ia/assets/data/references.js` e `referencias/referencias-verificadas.md` com Cisco, Zoom Support e Google Meet Help.
 - Run [40416873641](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40416873641), SHA `e35d9f75849a33767f205339edfaf21ef8d01952`: **success**. Sintaxe JavaScript, matriz curricular, rastreabilidade, estrutura, auditoria heurística, smoke test Chromium em `file://` e testes interativos passaram.
-- Auditoria de questões: 399 itens; 0 IDs duplicados, 0 alertas heurísticos e 0 pares com contexto/enunciado duplicados. A conferência por segmento confirmou campo `fonte` não vazio em 399/399 itens.
+- Auditoria de questões: 399 itens; 0 IDs duplicados, 0 alertas heurísticos e 0 pares com contexto/enunciado duplicados. A conferência por segmento confirmou campo `fonte` não vazio em 409/409 itens.
 - axe-core: 58 passes, 3 incomplete, 0 violações confirmadas. Permanecem incompletas as avaliações de contraste, frames e correspondência entre rótulo e nome acessível; não equivalem a violações confirmadas.
 - As páginas oficiais foram consultadas para fundamentar as quatro fontes novas; não houve validação HTTP automatizada individual de todas as URLs. Revisão semântica completa, verificação de todas as afirmações, leitor de tela, WCAG manual e testes físicos continuam pendentes.
 - A execução `pull_request` do HEAD anterior concluiu com sucesso no run [40417644974](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40417644974). A validação do código atualizado, incluindo fundo explícito nos SVGs, concluiu com sucesso no run [40418226793](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40418226793), SHA `667c8a08449d1f334b015f2b07943cd3748e3ab0`.
@@ -544,7 +544,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - Revisão matemática das cores SVG sobre `#111318`: título `#e3e9ff` = 15,37:1; texto geral `#c5c9d4` = 11,22:1; rótulos de eixo `#8b94a5` = 6,08:1. Todos excedem 4,5:1. Isso não elimina a necessidade de inspeção visual, testes de teclado/leitor de tela, WCAG manual e compatibilidade física.
 - Conferência estrutural adicional: os 20 iframes de vídeo têm `title` não vazio e único; a auditoria axe-core não inspeciona o conteúdo interno desses frames externos.
 - As quatro páginas oficiais novas (Cisco, dois artigos do Zoom Support e Google Meet Help) foram abertas e consultadas diretamente em 2026-10-26. Isso valida acesso/conteúdo consultado dessas páginas, não uma verificação HTTP automatizada de todas as URLs do catálogo.
-- A revisão semântica independente das 399 questões e a verificação HTTP individual de todas as URLs continuam pendentes.
+- A revisão semântica independente das 409 questões e a verificação HTTP individual de todas as URLs continuam pendentes.
 
 
 ## Auditoria focal M1 — 2026-10-26
@@ -566,7 +566,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 ## CI do HEAD corretivo — 2026-10-26
 
 - SHA `a3e0325b14b82b31c09b4d2d74a551b2c55a661e`: push [40423216305](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423216305) e `pull_request` [40423223898](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423223898) concluíram com `success`.
-- Sintaxe JavaScript passou em 39 arquivos; 399 questões, auditorias estruturais e heurísticas, smoke test `file://`, regressões interativas e `pageErrors: []` passaram. axe-core: 0 violações confirmadas; continuam 2 verificações incompletas — 89 nós SVG em `color-contrast` e 20 iframes em `frame-tested`.
+- Sintaxe JavaScript passou em 39 arquivos; 409 questões, auditorias estruturais e heurísticas, smoke test `file://`, regressões interativas e `pageErrors: []` passaram. axe-core: 0 violações confirmadas; continuam 2 verificações incompletas — 89 nós SVG em `color-contrast` e 20 iframes em `frame-tested`.
 - O catálogo de referências contém 135 entradas no total (20 vídeos + 115 referências técnicas); todas estão marcadas `verificado` e têm URL preenchida. Essa contagem descreve o catálogo, não comprova a validação HTTP individual de todas as URLs.
 - Revisão focal M1: fontes mais específicas para `q-m1-05`, `q-m1-06`, `q-m1-08`, `q-m1-21` e `q-m1-24`; justificativa sobre tabulação decimal corrigida em `q-m1-14`. Revisão semântica integral e acessibilidade manual continuam pendentes.
 
@@ -584,7 +584,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - [x] Corrigido o ID duplicado `ref-powerpoint-slide-master` na referência de visão geral do Slide Mestre; a entrada agora usa `ref-powerpoint-slide-master-overview`.
 - [x] Contagem recalculada diretamente pelos objetos do catálogo: 135 entradas únicas, sendo 20 vídeos e 115 referências técnicas; todas têm status `verificado` e URL preenchida.
 - O parent `bc5a479fd2926399fd9b993cb756e71228e1f2be` passou nos workflows de push [40423874477](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423874477) e `pull_request` [40423879070](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40423879070). Este commit atualiza o catálogo/documentação e aguarda CI próprio.
-- A revisão semântica integral das 399 questões e a acessibilidade manual permanecem pendentes.
+- A revisão semântica integral das 409 questões e a acessibilidade manual permanecem pendentes.
 
 
 ## Auditoria focal M1 — Modo de Compatibilidade (2026-10-26)
@@ -592,7 +592,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - [x] `q-m1-25`: a fonte foi corrigida para a página oficial específica que explica o Modo de Compatibilidade e os efeitos de desativação temporária de recursos recentes.
 - [x] Contagem atual do catálogo: 136 referências únicas (20 vídeos + 116 referências técnicas), todas com status `verificado` e URL preenchida.
 - O parent `8b9dc729c436100bfef860978d4de2bdc9d4d331` passou nos workflows de push [40424186175](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40424186175) e `pull_request` [40424192846](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40424192846). Este lote aguarda CI próprio.
-- A revisão semântica independente das 399 questões permanece pendente.
+- A revisão semântica independente das 409 questões permanece pendente.
 
 
 ## Auditoria focal M1 — OneDrive e SharePoint (2026-10-26)
@@ -600,7 +600,7 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 - [x] q-m1-04: adicionada fonte oficial específica para a função do SharePoint como espaço de armazenamento e colaboração de equipe; as fontes existentes continuam cobrindo os limites de armazenamento do OneDrive conforme o plano/licenciamento.
 - [x] Contagem atual do catálogo: 137 IDs únicos (20 vídeos + 117 referências técnicas), todos verificados estruturalmente e com URL preenchida.
 - O parent 370ba6e24f9095599d3e810b9e99ac4171794623 passou no workflow pull_request 40424415199. O workflow de push 40424410451 ainda estava em execução no momento desta atualização; este lote novo aguarda seus próprios checks.
-- A revisão semântica independente das 399 questões permanece pendente.
+- A revisão semântica independente das 409 questões permanece pendente.
 
 ## Auditoria focal M1 — fontes e semântica de PDF (2026-10-26)
 
@@ -614,6 +614,6 @@ Esta execução comprova sintaxe e verificações estruturais automatizadas, nã
 
 - O catálogo apresentou uma falha de sintaxe por vírgula ausente antes da primeira entrada adicionada. Corrigido no commit `a7ef1634d836e75da808ebe7fefc8186421c2ab9`.
 - Workflow `pull_request` [40426312732](https://github.com/Fatal1tyBarucco/FCN/actions/runs/40426312732): **success**, SHA `a7ef1634d836e75da808ebe7fefc8186421c2ab9`.
-- Sintaxe JavaScript: 39 arquivos aprovados. Auditorias estruturais e heurísticas: 399 questões, zero sinalizações heurísticas. Smoke test `file://` e regressões interativas passaram; `pageErrors: []`.
+- Sintaxe JavaScript: 39 arquivos aprovados. Auditorias estruturais e heurísticas: 409 questões, zero sinalizações heurísticas. Smoke test `file://` e regressões interativas passaram; `pageErrors: []`.
 - axe-core: 0 violações confirmadas; 2 verificações incompletas — `color-contrast` em 89 nós SVG e `frame-tested` em 20 iframes externos.
 - Catálogo: 183 IDs únicos (20 vídeos + 163 referências técnicas), todos com URL e status `verificado` presentes. A revisão manual dos contrastes/iframes, a revisão semântica integral e o teste HTTP individual de URLs continuam pendentes.

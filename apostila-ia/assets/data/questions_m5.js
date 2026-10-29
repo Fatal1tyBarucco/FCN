@@ -645,7 +645,8 @@ const moduleQuestions5 = [
     trechoDeterminante: "A afirmação é falsa: RLHF pode reduzir certos comportamentos indesejados, mas não elimina vieses; a avaliação por subgrupos continua sendo necessária.",
     justificativa: "O ajuste por preferências humanas pode reduzir alguns comportamentos indesejados, mas não garante ausência de vieses, inclusive em subgrupos pouco representados. A avaliação por subgrupos e o monitoramento são necessários para identificar efeitos residuais.",
     analise: {
-      item: "INCORRETA. RLHF pode reduzir certos vieses, mas não os elimina; é necessário monitoramento contínuo e avaliação por subgrupos."
+      item: "INCORRETA. RLHF pode reduzir certos vieses, mas não os elimina; é necessário monitoramento contínuo e avaliação por subgrupos.",
+      "leituraIncorreta": "Leitura que induz ao erro: quem marca 'certo' supõe que RLHF elimina vieses, quando apenas os reduz."
     },
     regra: "Alinhamento reduz vieses, não os elimina.",
     pegadinha: "Alinhamento não significa ausência total de vieses.",
@@ -813,7 +814,8 @@ const moduleQuestions5 = [
     trechoDeterminante: "A afirmação é falsa: conteúdo fornecido ao modelo pode ser exposto por saídas, registros, integrações ou ataques de injeção; segredos devem ser geridos fora do prompt e protegidos por controles de acesso.",
     justificativa: "Prompts e conteúdos de contexto não são um cofre de segredos. Dados sensíveis podem aparecer em saídas, logs ou integrações, e conteúdo não confiável pode tentar induzir o modelo a revelar informação ou usar ferramentas de forma indevida. Credenciais devem ser armazenadas em mecanismos próprios de gestão de segredos, concedidas com privilégio mínimo e nunca expostas desnecessariamente ao modelo.",
     analise: {
-      item: "INCORRETA. Não se deve confiar que o modelo sempre ocultará segredos; a prevenção exige gestão externa de credenciais, controle de acesso, validação e limites nas ferramentas."
+      item: "INCORRETA. Não se deve confiar que o modelo sempre ocultará segredos; a prevenção exige gestão externa de credenciais, controle de acesso, validação e limites nas ferramentas.",
+      "leituraIncorreta": "Leitura que induz ao erro: quem marca 'certo' presume que o modelo não expõe segredos, ignorando vazamento por saída, logs e integrações."
     },
     regra: "Mantenha credenciais fora do prompt; use gestão de segredos, privilégio mínimo e controles sobre ferramentas e saídas.",
     pegadinha: "A ausência de vazamento em um teste não garante que o segredo permanecerá protegido em outros contextos.",

@@ -1,7 +1,10 @@
 /* personalization.js — Personalização e persistência estendida (Seção 11 e 14 do Escrita.txt).
  *
  * Implementa recursos que estavam ausentes/parciais:
- *   - Tema claro/escuro com toggle manual persistente (localStorage 'apostila-ia-tema').
+ *   - Tema claro/escuro com toggle manual persistente (FIX-04: fonte única de
+ *     verdade = app.js/state.js, gravado em localStorage['apostila-ia-progresso'].theme;
+ *     'apostila-ia-tema' é apenas fallback quando o SPA não está presente, e é lido
+ *     UMA vez na migração — nunca mais gravado em uso normal).
  *   - Favoritos (localStorage 'apostila-ia-favoritos').
  *   - Marcadores pessoais (localStorage 'apostila-ia-marcadores').
  *   - Anotações de estudo por tópico (localStorage 'apostila-ia-anotacoes').
@@ -41,27 +44,92 @@
     catch (e) { return false; }
   }
 
-  /* ---------- Tema ---------- */
+  /* ---------- Tema (FIX-04: fonte única de verdade) ----------
+   * Quando o SPA (app.js/state.js) está presente (window.App com applyTheme),
+   * o tema é LIDO e GRAVADO via State (localStorage 'apostila-ia-progresso'
+   * campo 'theme'), evitando dois controles divergentes. Sem o SPA, fallback
+   * na chave própria 'apostila-ia-tema'. Nota: State.save() serializa o
+   * objeto State inteiro; por isso a migração em init() grava DIRETO na
+   * chave de progresso (sem State.save()) para não sobrescrever progresso
+   * real com defaults antes do State.load().
+   */
   var CHAVE_TEMA = 'apostila-ia-tema';
-  function obterTema() { return lerChave(CHAVE_TEMA, null); } // 'dark' | 'light' | null (sistema)
-  function aplicarTema(valor) {
-    var html = document.documentElement;
-    if (valor === 'dark') html.setAttribute('data-theme', 'dark');
-    else if (valor === 'light') html.removeAttribute('data-theme');
-    else {
-      // sistema
-      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (dark) html.setAttribute('data-theme', 'dark'); else html.removeAttribute('data-theme');
+  var CHAVE_PROGRESSO = 'apostila-ia-progresso';
+
+  function controladorTemaDisponivel() {
+    return typeof window !== 'undefined' && typeof window.App !== 'undefined' &&
+           window.App !== null && typeof window.App.applyTheme === 'function';
+  }
+  function estadoTemaAtual() {
+    if (controladorTemaDisponivel() && typeof State !== 'undefined' && State.theme) {
+      return State.theme;
     }
+    return lerChave(CHAVE_TEMA, null); // 'dark' | 'light' | null (sistema) — fallback
+  }
+  function obterTema() {
+    return estadoTemaAtual();
+  }
+  function aplicarTemaLocal(valor) {
+    // FIX-04: CSS atual é :root escuro + override [data-theme="light"];
+    // por isso SEMPRE definimos o atributo (removê-lo renderizaria escuro).
+    var html = document.documentElement;
+    var efetivo;
+    if (valor === 'light' || valor === 'dark') efetivo = valor;
+    else efetivo = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    html.setAttribute('data-theme', efetivo);
+  }
+  function aplicarTema(valor) {
+    if (controladorTemaDisponivel()) {
+      try { window.App.applyTheme(valor); } catch (e) { aplicarTemaLocal(valor); }
+      return;
+    }
+    aplicarTemaLocal(valor);
   }
   function definirTema(valor) {
+    if (controladorTemaDisponivel() && typeof State !== 'undefined') {
+      var v = (valor === 'light') ? 'light' : 'dark';
+      State.theme = v;
+      if (typeof State.save === 'function') State.save(); // persiste em apostila-ia-progresso.theme
+      aplicarTema(v); // atualiza atributo/rótulo do botão via App.applyTheme
+      return;
+    }
     escreverChave(CHAVE_TEMA, valor);
     aplicarTema(valor);
   }
   function alternarTema() {
+    if (controladorTemaDisponivel() && typeof window.App.toggleTheme === 'function') {
+      // Caminho normal: App.toggleTheme alterna State.theme, salva em
+      // 'apostila-ia-progresso' e atualiza rótulo/atributo — fonte única.
+      try { window.App.toggleTheme(); } catch (e) {
+        definirTema(estadoTemaAtual() === 'light' ? 'dark' : 'light');
+      }
+      return;
+    }
     var atual = obterTema();
     if (atual === null) atual = (document.documentElement.getAttribute('data-theme') === 'dark') ? 'dark' : 'light';
     definirTema(atual === 'dark' ? 'light' : 'dark');
+  }
+  /* Migração única (FIX-04): se 'apostila-ia-tema' tem valor e
+   * 'apostila-ia-progresso' NÃO tem campo 'theme', aproveita o valor uma vez.
+   * A chave antiga NÃO é apagada (não descartar dados) e não é mais gravada. */
+  function migrarTemaLegado() {
+    if (!disponivel()) return false;
+    var antigoRaw = null, novoRaw = null;
+    try {
+      antigoRaw = localStorage.getItem(CHAVE_TEMA);
+      novoRaw = localStorage.getItem(CHAVE_PROGRESSO);
+    } catch (e) { return false; }
+    if (!antigoRaw) return false;
+    var prog = null;
+    if (novoRaw) { try { prog = JSON.parse(novoRaw); } catch (e) { prog = null; } }
+    if (prog && typeof prog === 'object' && !Array.isArray(prog) && prog.theme) return false; // já migrado
+    var antigo = null;
+    try { antigo = JSON.parse(antigoRaw); } catch (e) { antigo = antigoRaw; }
+    if (antigo !== 'dark' && antigo !== 'light') return false;
+    if (!prog || typeof prog !== 'object' || Array.isArray(prog)) prog = {};
+    prog.theme = antigo;
+    try { localStorage.setItem(CHAVE_PROGRESSO, JSON.stringify(prog)); return true; }
+    catch (e) { return false; }
   }
 
   /* ---------- Favoritos ---------- */
@@ -139,9 +207,11 @@
 
   /* ---------- UI mínima: injeção de controles no painel de conteúdo ---------- */
   function injetarControles() {
-    // Toggle de tema no header (se existir)
+    // Toggle de tema (FIX-04: só injeta se NENHUM controle de tema já existir —
+    // #theme-toggle (index.html/app.js), .btn-theme ou .theme-toggle-btn)
+    var controleTemaExistente = document.querySelector('#theme-toggle, .btn-theme, .theme-toggle-btn');
     var header = document.querySelector('header') || document.querySelector('#app-header');
-    if (header && !header.querySelector('.theme-toggle-btn')) {
+    if (header && !controleTemaExistente) {
       var btn = document.createElement('button');
       btn.className = 'theme-toggle-btn';
       btn.type = 'button';
@@ -172,6 +242,7 @@
 
   /* ---------- Inicialização ---------- */
   function init() {
+    migrarTemaLegado(); // aproveita valor antigo de 'apostila-ia-tema' UMA vez, sem apagar nada
     // tema inicial
     aplicarTema(obterTema());
     injetarControles();

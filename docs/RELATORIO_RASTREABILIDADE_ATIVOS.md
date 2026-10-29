@@ -3,14 +3,14 @@
 Gerado por scripts/audit_learning_assets.mjs. Contagens estruturais; não certificam qualidade semântica.
 
 - Tópicos curriculares reconhecidos: **132**.
-- Flashcards reconhecidos pelo padrão: **460**.
-- Questões reconhecidas pelo padrão: **399**.
+- Flashcards reconhecidos pelo padrão: **474**.
+- Questões reconhecidas pelo padrão: **409**.
 - Ativos referenciados diretamente a uma unidade, sem tópico específico: **0**.
 - Referências sem associação curricular reconhecível: **0**.
 
 | Módulo | Tópicos | Flashcards associados diretamente | Questões associadas diretamente | Tópicos sem flashcard | Tópicos sem questão |
 |---|---:|---:|---:|---:|---:|
-|M1|23|66|44|0|0|
+|M1|23|80|54|0|0|
 |M2|19|56|54|0|0|
 |M3|14|68|47|0|0|
 |M4|13|54|85|0|0|

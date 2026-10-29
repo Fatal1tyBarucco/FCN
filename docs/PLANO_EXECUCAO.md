@@ -12,7 +12,7 @@ Responsável: orquestrador (verificação direta no repo real, sem delegação d
 | 3 — Arquitetura | Estrutura do `apostila-ia/` | CONCLUÍDO | `index.html` + `assets/js/*.js` + `assets/data/*.js` já presentes | Confirmado por `ls` + leitura parcial |
 | 4 — Implementação didática | Conteúdo completo de todos os módulos | **CONCLUÍDO (Fase 4 desta execução)** | 404 flashcards, 365 questões, conteúdo real verificado | Nenhum placeholder detectado na amostra M1 |
 | 5 — Implementação funcional | Simuladores, busca, flashcards, quiz, gráficos, persistência | PARCIALMENTE CONCLUÍDO | Simuladores montados no `index.html`; gráficos (`charts.js`), flashcards (`flashcards.js`), quiz (`quiz-engine.js`) existem e carregados; busca (`search.js`), áudio (`audio.js`) carregados com `defer` | Fase 5 ainda requer verificação funcional completa |
-| 6 — Validação curricular | Verificar cobertura e qualidade por unidade | CONCLUÍDO (Fase 6) | 295/295 subtópicos com objetivo+conteúdo+≥3 exemplos; 365 questões com gabarito+justificativa+análise; 404 flashcards; 5 gráficos reais. Relatório: docs/REVISAO_INDEPENDENTE_FASE6.md | Defeitos D1 (corrigido Fase 7) e D2 (decisão editorial) |
+| 6 — Validação curricular | Verificar cobertura e qualidade por unidade | CONCLUÍDO (Fase 6) | 295/307 subtópicos com objetivo+conteúdo+≥3 exemplos; 365 questões com gabarito+justificativa+análise; 404 flashcards; 5 gráficos reais. Relatório: docs/REVISAO_INDEPENDENTE_FASE6.md | Defeitos D1 (corrigido Fase 7) e D2 (decisão editorial) |
 | 7 — Testes técnicos | Carregamento, links, cálculos, gráficos, persistência, acessibilidade, modo direto `file://` | PARCIAL | `node --check` passou para todos os `.js`; smoke test `verify_nodes.js` passou; testes de simulador Excel (111 asserts) passaram; testes de perguntas (deduplicação, campos obrigatórios) passaram | Faltam testes de interface visual completa e de abertura direta (`file://`) em navegador real no dispositivo do usuário |
 | 8 — Auditoria final | Matriz de conformidade com todos os critérios de aceite (Seção 18) | CONCLUÍDO (Fase 8) | docs/AUDITORIA_FINAL.md — matriz dos 19 critérios com evidência/teste/resultado/limitação/correção | Veredito: APROVADO COM RESSALVAS; D4 (navegador real) pendente |
 
@@ -112,7 +112,7 @@ A inspeção remota consultou `Escrita.txt`, `README.md`, `AGENTS.md`, o invent�
 ## Atualização de execução — 2026-10-25 (PR #17)
 
 - **Fase 1 — parcialmente concluída:** inventário inicial e lacunas registrados em docs/FASE1_AUDITORIA_2026-10-25.md. A matriz detalhada foi gerada com 295 linhas de subtópicos; a qualidade pedagógica ainda não foi aprovada.
-- **Fase 2 — parcialmente concluída:** oito arquivos curriculares foram consultados remotamente. Auditoria estrutural detectou 295 subtópicos, 888 exemplos e 592 exercícios; foram identificados 460 flashcards e 365 questões com IDs únicos no conjunto consultado.
+- **Fase 2 — parcialmente concluída:** oito arquivos curriculares foram consultados remotamente. Auditoria estrutural detectou 307 subtópicos, 924 exemplos e 616 exercícios; foram identificados 474 flashcards e 365 questões com IDs únicos no conjunto consultado.
 - **Rastreabilidade reproduzível:** adicionado scripts/audit_curriculum_matrix.mjs. O script ainda não foi executado localmente; não declarar sua execução ou os testes do produto como aprovados.
 - **CI:** a consulta da API de Actions para a branch de trabalho retornou zero execuções. Isso não é evidência de CI verde.
 - **Próxima ação:** executar o script em clone/ambiente com o repositório, conferir a matriz gerada e só então iniciar a revisão qualitativa sistemática de conteúdo e funcionalidades.
@@ -129,10 +129,10 @@ A associação por tópico-pai é uma ferramenta de triagem e não prova cobertu
 
 | Fase | Estado | Evidência / próximo passo |
 |---|---|---|
-| 1 — Inventário curricular | Parcial concluída | 8 módulos, 37 unidades, 132 tópicos, 295 subtópicos; matriz estrutural gerada. Revisão pedagógica completa ainda pendente. |
+| 1 — Inventário curricular | Parcial concluída | 8 módulos, 37 unidades, 132 tópicos, 307 subtópicos; matriz estrutural gerada. Revisão pedagógica completa ainda pendente. |
 | 2 — Inspeção do repositório | Concluída estruturalmente | PR #17, branch, arquivos de dados, verificadores e workflow inspecionados. |
 | 3 — Arquitetura e infraestrutura | Parcial | Workflow de validação e smoke test adicionados; auditoria completa de arquitetura, acessibilidade e PWA ainda pendente. |
-| 4 — Conteúdo e rastreabilidade | Cobertura direta estrutural concluída | 389/389 questões e 460/460 flashcards apontam para tópicos existentes; 24 questões adicionadas para cobrir tópicos substantivos antes sem questão direta. |
+| 4 — Conteúdo e rastreabilidade | Cobertura direta estrutural concluída | 389/389 questões e 460/474 flashcards apontam para tópicos existentes; 24 questões adicionadas para cobrir tópicos substantivos antes sem questão direta. |
 | 5 — Simuladores | Parcial | Smoke test confirma seis contêineres com UI; interações completas e correção dos resultados ainda precisam de testes dedicados. |
 | 6 — Revisão independente | Pendente | Auditoria heurística estrutural passou; não foi confirmado uso de agentes especializados independentes. Revisão semântica integral segue aberta. |
 | 7 — Correções e retestes | Em andamento | Correções legais M4/M6, rastreabilidade, banco de questões e CI; distribuição de gabaritos exige revisão manual. |
@@ -172,7 +172,7 @@ A checagem das fontes oficiais levou à correção das citações de q-m6-02 e q
 
 ### Resultado da Fase 1
 - Prompt mestre `Escrita.txt` lido integralmente a partir do branch `main`.
-- Inventário curricular: 8 módulos, com 37 unidades, 132 tópicos e 295 subtópicos conforme os documentos e auditorias existentes.
+- Inventário curricular: 8 módulos, com 37 unidades, 132 tópicos e 307 subtópicos conforme os documentos e auditorias existentes.
 - Matriz: `docs/MATRIZ_COBERTURA.csv` contém linhas por subtópico e distingue presença estrutural de revisão qualitativa.
 - Critérios quantitativos do prompt: mínimo de 400 flashcards, 320 questões, 3 exemplos resolvidos por unidade quando aplicável, 5 tipos de gráfico e funcionamento real dos simuladores.
 - Estado de entrada do PR: auditorias estruturais reportadas como aprovadas; revisão semântica completa, balanceamento editorial de gabaritos, acessibilidade com leitor de tela e validação de embeds ainda são pendências.
@@ -288,14 +288,14 @@ A correção pontual q-m6-41–q-m6-44 foi commitada no branch do PR #17 (`7c9b0
 - Diagnóstico completo em `docs/DIAGNOSTICO_ORQUESTRADOR_2026-10-27.md`.
 - Backlog real podado em `docs/BACKLOG_REAL_2026-10-27.md`.
 - `docs/PENDENCIAS.md` marcado como histórico (banner no topo).
-- Sincronização de governança: `inventario/`, `matriz/` (raiz) e `apostila-ia/inventario/`, `apostila-ia/matriz/` agora idênticos a `docs/` (460 FC, 399 Q, 888 exemplos, 592 exercícios).
+- Sincronização de governança: `inventario/`, `matriz/` (raiz) e `apostila-ia/inventario/`, `apostila-ia/matriz/` agora idênticos a `docs/` (460 FC, 399 Q, 924 exemplos, 616 exercícios).
 - Contagens corrigidas em `docs/INVENTARIO_CURRICULAR.md` (M6 44→47, 365→399).
 - Decisão registrada sobre subtópico com 6 exemplos (`DECISOES_ARQUITETURAIS.md`).
 - CI verde para 321901e (push + pull_request).
 
 **Pendências de maior valor restantes (ver BACKLOG_REAL_2026-10-27.md):**
 - P0-1: 102 questões sem fonte externa (M7, M8 inteiros).
-- P0-4: revisão semântica independente das 399 questões (0% comprovada).
+- P0-4: revisão semântica independente das 409 questões (0% comprovada).
 - P1-1: distribuição de gabaritos (M7 zero B, M1 zero E).
 - P2: acessibilidade manual (leitor de tela, WCAG manual, dispositivos).
 
@@ -305,5 +305,5 @@ A correção pontual q-m6-41–q-m6-44 foi commitada no branch do PR #17 (`7c9b0
 ## Reconciliação 2026-10-27
 
 - P0-1 (fontes): concluído. P0-4 (revisão semântica, 399 IDs): concluído. P1-1 (5 gabaritos corrigidos): concluído. P2-4 (183 URLs verificadas, 1 pendência login): concluído. P2-6 (auditoria persistência): concluído.
-- Contagens atuais: 399 questões, 460 flashcards, 183 referências.
+- Contagens atuais: 409 questões, 474 flashcards, 183 referências.
 - Pendentes mantidos: P2-1, P2-2, P2-3, P1-2, P1-3, P1-4.

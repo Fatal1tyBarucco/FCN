@@ -1,3 +1,5 @@
+> **Contagens reconciliadas (2026-10-28):** 307 subtópicos, 924 exemplos, 616 exercícios, 474 flashcards (M1=80), 409 questões (M1=54), 183 referências, 439 nós. Audit curricular: 0 erros; verify_urls: 0 quebradas (8 bloqueadas anti-bot); node --check: 43/43 OK; verificar-estrutura: 0 falhas.
+
 # ⚠️ BACKLOG REAL MOVIDO
 
 > **Este arquivo é histórico (574 linhas, 93 itens `[ ]`).** Muitos itens já foram superados.

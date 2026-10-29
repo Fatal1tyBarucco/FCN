@@ -1,12 +1,3 @@
-/* curriculum_m8.js — Módulo 8: Visualização, Análise e Storytelling com Dados
- * Conteúdo didático real para o M8 (Escrita.txt, Seção 6 — MÓDULO 8).
- * Mesmo esquema de curriculum_m3.js: cada subtópico tem objetivoAprendizagem,
- * conteudo, exemplos (introducao/aplicacao/erro) e exercicios (certos_erro/multipla).
- * Os cálculos numéricos dos exemplos foram conferidos com script independente em Node.
- * Nenhuma URL, estatística de incidência em concurso ou recurso específico de versão
- * de ferramenta foi inventado — dependências de versão/plano são declaradas.
- */
-
 const curriculumM8 = {
   "modulo-8": {
     "titulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
@@ -52,7 +43,8 @@ const curriculumM8 = {
                     "enunciado": "Para distribuição de idades de 500 servidores, o gráfico mais indicado é: A) linhas; B) histograma; C) pizza; D) dispersão.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará cada tarefa analítica ao tipo de gráfico capaz de executá-la, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m8-u1-t1-s2",
@@ -87,7 +79,8 @@ const curriculumM8 = {
                     "enunciado": "Separar categorias usando espaço (e não molduras) aplica qual princípio da Gestalt? A) fechamento; B) proximidade; C) figura-fundo; D) contraste.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará proximidade, similaridade, continuidade, fechamento e figura-fundo ao desenho de um gráfico, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -128,7 +121,8 @@ const curriculumM8 = {
                     "enunciado": "Para magnitudes contínuas ordenadas, a paleta indicada é: A) categórica; B) sequencial; C) arco-íris decorativa; D) apenas preto e branco.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno selecionará paleta conforme o tipo de variável e construirá hierarquia por contraste, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m8-u1-t2-s2",
@@ -163,7 +157,8 @@ const curriculumM8 = {
                     "enunciado": "O texto alternativo de um gráfico deve conter, no mínimo: A) apenas o nome do autor; B) quem, o quê, quando, unidade e mensagem principal; C) o código-fonte do painel; D) a paleta de cores usada.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno produzirá gráficos legíveis por pessoas com deficiência visual e por leitores de tela, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -204,7 +199,8 @@ const curriculumM8 = {
                     "enunciado": "Barra A = 70 e barra B = 80 com eixo y de 60 a 90. A leitura visual sugere que B é: A) 14% maior; B) o dobro de A; C) igual a A; D) 30% menor.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno eliminará elementos decorativos e detectará distorções que violam a integridade gráfica, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m8-u1-t3-s2",
@@ -239,7 +235,8 @@ const curriculumM8 = {
                     "enunciado": "Qual título é informativo? A) 'Vendas'; B) 'Indicadores'; C) 'Vendas caíram 12% no 2º trimestre'; D) 'Gráfico de barras'.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno completará um gráfico com todos os elementos de composição exigidos para leitura autônoma, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m8-u1-t3-s3",
@@ -274,7 +271,8 @@ const curriculumM8 = {
                     "enunciado": "Em escala logarítmica, subida visual igual corresponde a: A) mesmo acréscimo absoluto; B) mesmo fator multiplicativo; C) mesmo valor final; D) mesma mediana.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno escolherá e lerá escalas corretamente e justificará o uso de escala logarítmica ou eixo cortado, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -315,7 +313,8 @@ const curriculumM8 = {
                     "enunciado": "Para comparar a distribuição de um variável contínua entre três grupos, o mais indicado é: A) pizza; B) linhas; C) box plot (ou histogramas por grupo); D) área empilhada.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno decidirá o tipo de gráfico a partir da tarefa analítica e justificará a recusa de gráficos inadequados, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -362,7 +361,8 @@ const curriculumM8 = {
                     "enunciado": "Com Σfi = 25 e classes de R$ 500, a densidade da classe com fi = 9 é: A) 0,36; B) 0,018; C) 9; D) 450.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno construirá histograma de um conjunto real, interpretando forma, classe modal e assimetria, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m8-u2-t1-s2",
@@ -397,7 +397,8 @@ const curriculumM8 = {
                     "enunciado": "Com larguras de classe diferentes, a altura correta de cada retângulo é: A) frequência absoluta; B) frequência relativa; C) densidade (frequência ÷ largura); D) média da classe.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno calculará densidades e explicará como o número e os limites das classes alteram a leitura, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -438,7 +439,8 @@ const curriculumM8 = {
                     "enunciado": "Série 120 → 132. A variação percentual é: A) 12%; B) 10%; C) 90,9%; D) 132%.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno construirá e interpretará série temporal, calculando variações absolutas e percentuais, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -479,7 +481,8 @@ const curriculumM8 = {
                     "enunciado": "Unidade A = 450 e unidade D = 190. A razão correta A/D é aproximadamente: A) 2,4; B) 0,42; C) 260; D) 1,4.",
                     "resposta": "A"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno construirá barras ordenadas com linha de base correta e detectará escalas enganosas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -520,7 +523,8 @@ const curriculumM8 = {
                     "enunciado": "Uma variável oculta (temperatura) explica consumo de sorvete e afogamentos. O caso ilustra: A) causalidade direta; B) correlação com confundimento; C) multicolinearidade perfeita; D) erro de tipo.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno lerá dispersão calculando r de Pearson e reta de regressão, e distinguirá correlação de causalidade, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -561,7 +565,8 @@ const curriculumM8 = {
                     "enunciado": "Conjunto 2, 4, 6, 8, 10, 12, 50 (IIQ = 6, convenção 1,5×IIQ). O outlier é: A) 12; B) 50; C) 20; D) nenhum.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno calculará o box plot de um conjunto, identificando quartis, IIQ, bigodes e outliers pela convenção de Tukey, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -608,7 +613,8 @@ const curriculumM8 = {
                     "enunciado": "Conjunto 2, 4, 4, 4, 5, 5, 7, 9: média, mediana e moda são, respectivamente: A) 5, 4,5 e 4; B) 5, 5 e 5; C) 4,5, 4 e 5; D) 5, 4 e 4,5.",
                     "resposta": "A"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno calculará média, mediana e moda e decidirá qual delas descreve melhor um conjunto, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -649,7 +655,8 @@ const curriculumM8 = {
                     "enunciado": "Com Σ(x − x̄)² = 32 e n = 8 (dados como população), σ é: A) 2,0; B) 2,14; C) 4,0; D) 4,57.",
                     "resposta": "A"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno calculará variância e desvio padrão (populacional e amostral) e interpretará o resultado em unidade original, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -690,7 +697,8 @@ const curriculumM8 = {
                     "enunciado": "Nos dados 12, 18, 21, 25, 27, 30, 33, 38, 44, 60 (interpolação linear), Q1 é: A) 18; B) 21; C) 22; D) 25.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno calculará percentis por interpolação linear e interpretará cortes percentílicos corretamente, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -731,7 +739,8 @@ const curriculumM8 = {
                     "enunciado": "Duas filas misturadas (picos em 5 e 25 minutos) produzem distribuição: A) simétrica; B) bimodal; C) uniforme; D) leptocúrtica.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará a forma de uma distribuição e decidirá o tratamento de valores extremos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -772,7 +781,8 @@ const curriculumM8 = {
                     "enunciado": "Temperatura explica consumo de sorvete e afogamentos. Esse caso é: A) causalidade reversa; B) confundimento por variável oculta; C) causalidade direta; D) multicolinearidade.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno separará associação de causalidade e enumerará explicações alternativas para uma correlação observada, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -813,7 +823,8 @@ const curriculumM8 = {
                     "enunciado": "Pesquisa com z = 1,96, p = 0,5, margem de 5 p.p.: n mínimo é: A) 96; B) 385; C) 1.000; D) 64.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá erro de amostragem de viés e escolherá método de amostragem coerente com o objetivo, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -860,7 +871,8 @@ const curriculumM8 = {
                     "enunciado": "Em linguagem de BI, o recorte aplicado pelos filtros do relatório que afeta o cálculo de medidas é: A) contexto de linha; B) contexto de filtro; C) contexto de segurança; D) contexto de exportação.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá o papel de cada componente e construirá uma medida conceitual em linguagem de BI, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -901,7 +913,8 @@ const curriculumM8 = {
                     "enunciado": "Qual característica associa-se ao perfil do Looker Studio? A) instalação obrigatória no servidor; B) painel em navegador com conectores a fontes; C) licença exclusiva por servidor; D) ausência total de conectores.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno comparará ferramentas de visualização por modelo de acesso, preparação de dados e publicação, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -942,7 +955,8 @@ const curriculumM8 = {
                     "enunciado": "Para contar atendimentos únicos em base com linhas repetidas, a medida adequada é: A) soma das linhas; B) contagem distinta do protocolo; C) média por linha; D) máxima do protocolo.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno separará fatos de dimensões em um modelo e justificará o uso de medidas agregadas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -983,7 +997,8 @@ const curriculumM8 = {
                     "enunciado": "Para painel institucional com dados sensíveis, o critério que deve prevalecer é: A) menor custo de licença; B) controle de acesso e auditoria; C) maior número de tipos de gráfico; D) animações do painel.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno comparará ferramentas por critérios explícitos e recomendará opção para um cenário dado, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -1030,7 +1045,8 @@ const curriculumM8 = {
                     "enunciado": "O movimento que apresenta a tensão exigindo decisão é: A) contexto; B) conflito; C) coleta; D) apêndice.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno estruturará uma apresentação de dados em quatro movimentos e testará a narrativa em uma frase, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1071,7 +1087,8 @@ const curriculumM8 = {
                     "enunciado": "Qual é métrica de processo (leading)? A) receita realizada no mês; B) prazo médio de resposta na fila; C) total de atendimentos concluídos no trimestre; D) saldo orçamentário.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá público e decisão de uma comunicação e justificará a seleção de cada métrica, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1112,7 +1129,8 @@ const curriculumM8 = {
                     "enunciado": "Qual prática NÃO compromete a integridade? A) truncar eixo de barras sem aviso; B) declarar faixa de projeção com premissas; C) trocar a definição de métrica no meio do relato; D) ocultar fonte dos dados.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno comunicará incerteza e limitações sem enfraquecer a recomendação, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1153,7 +1171,8 @@ const curriculumM8 = {
                     "enunciado": "Em atendimentos 120, 132, 115, 140, a variação de março (115) para abril (140) é: A) +17,86%; B) +21,74%; C) +25%; D) +10%.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno desenhará painel para um cenário de gestão e resolverá estudo de caso com os cinco gráficos obrigatórios, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }

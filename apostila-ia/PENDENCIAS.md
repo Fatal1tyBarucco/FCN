@@ -1,3 +1,5 @@
+> **Contagens reconciliadas (2026-10-28):** 307 subtópicos, 924 exemplos, 616 exercícios, 474 flashcards (M1=80), 409 questões (M1=54), 183 referências, 439 nós.
+
 # PENDÊNCIAS — Apostila Web Interativa FCN
 
 1. Referências (atualizado 2026-10-24, Bloco 6): 32 total, 32 verificadas (LGPD, LAI, Lei 14.129, Marco Civil, Microsoft Learn, RFC 791/793/1034/1035/2131/7230/7231/8446/9110, CERT.br, ANPD órgão + Resoluções CD/ANPD nº 2/2022 e nº 4/2023, CF art. 37 caput + incisos II/III/XXI/§1º/§3ºII/§4º/§6º, CF art. 5º incisos X/XII/XIV/XXXIII/LXXIX, Lei 8.429/1992, Lei 1.079/1950, Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017, Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001, LGPD art. 7º). Pendentes restantes: demais resoluções da ANPD, demais RFCs (FTP, SMTP, ICMP, ARP, NAT, VPN etc.), demais incisos/parágrafos do art. 37 e do art. 5º da CF não listados.

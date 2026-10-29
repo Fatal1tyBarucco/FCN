@@ -883,7 +883,7 @@ const references = [
     url: "https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf",
     topico: "M6 — Comunicação e conduta digital (redes sociais institucionais)",
     dataVerificacao: "2026-10-26",
-    status: "verificado",
+    status: "indisponivel",
     dispositivos: null
   },
   {

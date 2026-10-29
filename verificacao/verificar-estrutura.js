@@ -23,11 +23,12 @@
  * 2) Aplica o validarQuestao REAL do quiz-engine.js (carregado em contexto vm
  *    com stubs mínimos de DOM, listeners de DOMContentLoaded disparados;
  *    window.QuizApp exposto) e espera 0 reprovadas.
- * 3) Contagem de flashcards (flashcards_m1..m8) → total 460 + mapa exato por
+ * 3) Contagem de flashcards (flashcards_m1..m8) → total 474 + mapa exato por
  *    módulo {1:66, 2:56, 3:68, 4:54, 5:66, 6:50, 7:50, 8:50}.
  * 4) Cada tag <script src> do index.html resolve para arquivo existente em
- *    disco, e a contagem total de tags é 42 (23 de dados + 19 de JS) — 2 novos
- *    scripts (state.js, db-modules.js) adicionados pela refatoracao SPA.
+ *    disco, e a contagem total de tags é 43 (23 de dados + 20 de JS) — 2 novos
+ *    scripts (state.js, db-modules.js) adicionados pela refatoracao SPA e
+ *    personalization.js carregado a partir do incremento FIX-02 (2026-10-28).
  * 5) manifest.webmanifest é JSON válido e a description menciona "399".
  * 6) Imprime níveis / formatos / estilos (contagens reais) para conferência.
  * 7) q-m4-32: id/formato/gabarito + CONTEÚDO — alternativa B cita os princípios
@@ -209,9 +210,9 @@ try {
   check('execução da fusão', false, e.message);
 }
 
-const ESPERADO_MODULO = { 1: 44, 2: 54, 3: 47, 4: 85, 5: 42, 6: 47, 7: 40, 8: 40 };
+const ESPERADO_MODULO = { 1: 54, 2: 54, 3: 47, 4: 85, 5: 42, 6: 47, 7: 40, 8: 40 };
 if (r) {
-  check('total de questões fundidas === 399', r.total === 399, 'real=' + r.total + ', esperado=399');
+  check('total de questões fundidas === 409', r.total === 409, 'real=' + r.total + ', esperado=409');
   check('0 ids duplicados', r.duplicados.length === 0,
     r.duplicados.length ? ('duplicados: ' + r.duplicados.join(', ')) : 'ok');
   for (const m of Object.keys(ESPERADO_MODULO)) {
@@ -272,7 +273,7 @@ if (r && r.q44) {
 }
 
 /* ------------------------------------------------------------ flashcards 460 */
-secao('5. FLASHCARDS (flashcards_m1..m8 → total 460)');
+secao('5. FLASHCARDS (flashcards_m1..m8 → total 474)');
 /* No vm, `const` em topo de script é binding léxico do contexto (não é
  * propriedade de window). Para contar sem eval, avaliamos uma expressão
  * explícita por nome via vm.runInContext — nada é interpretado dinamicamente. */
@@ -290,12 +291,12 @@ for (let m = 1; m <= 8; m++) {
     flashPorModulo[m] = 0; flashFaltantes.push(nome + ' (' + e.message + ')');
   }
 }
-check('flashcards total === 460', flashTotal === 460, 'real=' + flashTotal + ', esperado=460');
+check('flashcards total === 474', flashTotal === 474, 'real=' + flashTotal + ', esperado=474');
 check('nenhum módulo de flashcards ausente', flashFaltantes.length === 0,
   flashFaltantes.length ? ('ausentes: ' + flashFaltantes.join(', ')) : 'm1..m8 presentes');
-const FLASH_ESPERADO = { 1: 66, 2: 56, 3: 68, 4: 54, 5: 66, 6: 50, 7: 50, 8: 50 };
+const FLASH_ESPERADO = { 1: 80, 2: 56, 3: 68, 4: 54, 5: 66, 6: 50, 7: 50, 8: 50 };
 const mapOk = Object.keys(FLASH_ESPERADO).every((m) => flashPorModulo[m] === FLASH_ESPERADO[m]);
-check('mapa de flashcards por módulo === {1:66,2:56,3:68,4:54,5:66,6:50,7:50,8:50}', mapOk,
+check('mapa de flashcards por módulo === {1:80,2:56,3:68,4:54,5:66,6:50,7:50,8:50}', mapOk,
   'real=' + JSON.stringify(flashPorModulo) + ', esperado=' + JSON.stringify(FLASH_ESPERADO));
 console.log('       detalhe por módulo: ' + JSON.stringify(flashPorModulo));
 
@@ -312,8 +313,8 @@ const scriptSrcs = [];
 const reSrc = /<script[^>]*\ssrc\s*=\s*["']([^"']+)["'][^>]*>/gi;
 let mm;
 while ((mm = reSrc.exec(idxHtml)) !== null) scriptSrcs.push(mm[1]);
-check('tags <script src> do index.html === 42', scriptSrcs.length === 42,
-  'real=' + scriptSrcs.length + ', esperado=42');
+check('tags <script src> do index.html === 43', scriptSrcs.length === 43,
+  'real=' + scriptSrcs.length + ', esperado=43');
 let externas = 0, locais = 0, ausentes = [];
 for (const src of scriptSrcs) {
   if (/^(https?:)?\/\//i.test(src) || /^(data|blob):/i.test(src)) { externas++; continue; }

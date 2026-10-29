@@ -56,7 +56,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "definidos pelo fornecedor do sistema, que responde tecnicamente pela ordem de atendimento." }
     ],
     gabarito: "B",
-    justificativa: "Impessoalidade exige que a Administração aplique critérios objetivos, previamente definidos e compatíveis com a lei, sem favorecimento pessoal. A alternativa A permite arbítrio individual; B propõe sigilo injustificado dos critérios; C está correta ao exigir critérios comunicáveis e auditáveis; D confunde impessoalidade com resultado idêntico e ignora diferenciações legalmente exigidas; E transfere indevidamente ao fornecedor uma decisão que compete ao órgão.",
+    justificativa: "Impessoalidade exige que a Administração aplique critérios objetivos, previamente definidos e compatíveis com a lei, sem favorecimento pessoal. A alternativa A permite arbítrio individual; a alternativa C propõe sigilo injustificado dos critérios; a alternativa B está correta ao exigir critérios previamente definidos, comunicáveis e auditáveis; D confunde impessoalidade com resultado idêntico e ignora diferenciações legalmente exigidas; E transfere indevidamente ao fornecedor uma decisão que compete ao órgão.",
     analise: {
       A: "INCORRETA. Erro conceitual: decisão caso a caso por preferência do operador é exatamente o arbítrio que a impessoalidade veda.",
       B: "CORRETA. Critério prévio, escrito, comunicável e auditável é a tradução operacional da impessoalidade em sistemas.",
@@ -106,7 +106,7 @@ const moduleQuestions6 = [
       { letra: "E", texto: "a publicidade autoriza a divulgação de informação sigilosa quando houver interesse jornalístico." }
     ],
     gabarito: "B",
-    justificativa: "A LAI estabelece a publicidade como preceito geral e o sigilo como exceção (art. 3º, I), enquanto a Constituição ressalva hipóteses de sigilo imprescindível à segurança da sociedade e do Estado. A alternativa A ignora a proteção de informações pessoais (art. 31 da LAI) e a legislação aplicável; B trata o dever de publicidade como faculdade; C está correta ao exigir divulgação do que é público e sigilo fundamentado em hipótese legal; D reduz a publicidade a um único meio de divulgação; E presume uma exceção ao sigilo que não decorre automaticamente de interesse jornalístico.",
+    justificativa: "A LAI estabelece a publicidade como preceito geral e o sigilo como exceção (art. 3º, I), enquanto a Constituição ressalva hipóteses de sigilo imprescindível à segurança da sociedade e do Estado. A alternativa A ignora a proteção de informações pessoais (art. 31 da LAI) e a legislação aplicável; a alternativa C trata o dever de publicidade como faculdade; a alternativa B está correta ao exigir divulgação do que é público e sigilo fundamentado em hipótese legal; D reduz a publicidade a um único meio de divulgação; E presume uma exceção ao sigilo que não decorre automaticamente de interesse jornalístico.",
     analise: {
       A: "INCORRETA. Erro conceitual: publicidade não alcança informação pessoal identificável, que tem regime próprio de proteção.",
       B: "CORRETA. Reproduz a diretriz legal: publicidade como preceito geral, sigilo como exceção fundamentada e formalizada.",
