@@ -21,7 +21,7 @@ if (typeof App === 'undefined') {
       if (typeof DB !== 'undefined' && typeof DB.init === 'function') { DB.init(); }
       this.cacheElements();
       this.bindEvents();
-      this.applyTheme((typeof State !== 'undefined' && State.theme) ? State.theme : 'dark');
+      this.applyTheme((typeof State !== 'undefined' && State.theme) ? State.theme : 'light');
       this.renderNav();
       this.switchModule((typeof State !== 'undefined' && State.currentModule && DB.modules.some(m=>m.id===State.currentModule)) ? State.currentModule : 'msoffice');
       this.updateGlobalProgress();
@@ -309,7 +309,7 @@ if (typeof App === 'undefined') {
 
     applyTheme(theme) {
       if (!document.documentElement) return;
-      document.documentElement.setAttribute('data-theme', theme || 'dark');
+      document.documentElement.setAttribute('data-theme', theme || 'light');
       if (this.els.themeBtn) this.els.themeBtn.textContent = (theme === 'light') ? '🌙 Dark' : '☀️ Light';
     },
 
