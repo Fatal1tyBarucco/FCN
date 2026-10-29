@@ -465,7 +465,7 @@
       '#search-app .bus-filtros select { background: #3c4043; color: #e8eaed; border-color: #374151; }',
       '#search-app .bus-status { color: #b3b7bc; }',
       '#search-app .bus-titulo { color: #e8eaed; }',
-      '#search-app .bus-meta-tipo { color: #b3b7bc; }',
+      '#search-app .bus-meta-tipo { color: #e8eaed; }',
       '#search-app .bus-excerpt { color: #b3b7bc; }',
       '#search-app .bus-preview { border-color: #374151; }',
       '#search-app .bus-vazio { color: #b3b7bc; }'
