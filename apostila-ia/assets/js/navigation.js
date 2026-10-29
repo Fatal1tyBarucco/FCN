@@ -306,7 +306,8 @@ document.addEventListener('DOMContentLoaded', () => {
       html += '<article class="video-item">';
       html += '<p><strong>' + esc(v.titulo) + '</strong> — ' + esc(v.canal) + '</p>';
       html += '<div class="video-embed-wrap">';
-      html += '<iframe class="video-embed" src="' + esc(v.embed) + '" title="' + esc(v.titulo) + '" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      const tituloV = (typeof v.titulo === 'string' && v.titulo.trim()) ? v.titulo.trim() : (v.id || 'Vídeo complementar');
+      html += '<iframe class="video-embed" src="' + esc(v.embed) + '" title="' + esc(tituloV) + '" aria-label="' + esc(tituloV) + '" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
       html += '</div>';
       html += '</article>';
     });
