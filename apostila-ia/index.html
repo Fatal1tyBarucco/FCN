@@ -289,10 +289,17 @@ if('serviceWorker'in navigator&&location.protocol==='https:'){navigator.serviceW
 
 <script>
 (function(){
-  var css = '.study-eyebrow,.study-workspace-heading p,[data-id] span,.bus-badge,.bus-meta-tipo{color:#111827 !important;}';
-  var st = document.createElement('style');
-  st.textContent = css;
-  (document.head || document.documentElement).appendChild(st);
+  function fix(){
+    var sels = ['.study-eyebrow','.study-workspace-heading p','.bus-badge','.bus-meta-tipo'];
+    sels.forEach(function(sel){
+      document.querySelectorAll(sel).forEach(function(el){ el.style.setProperty('color','#111827','important'); });
+    });
+    document.querySelectorAll('[data-id] span').forEach(function(el){ el.style.setProperty('color','#111827','important'); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix); else fix();
+  // Re-apply after dynamic content loads
+  var obs = new MutationObserver(function(){ fix(); });
+  obs.observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 </body>
