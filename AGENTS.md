@@ -182,3 +182,9 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 | M6  | etica              | Ética e Governo Digital (LIMPE/LAI) | Ethics — Simulador de Conflitos   | 50        | 47       | 1       | 0      |
 | M7  | dados              | Dados e Engenharia (DIKW, SQL)      | Data Visualization Studio         | 50        | 40       | 1       | 0      |
 | M8  | visualizacao       | Visualização (Gestalt, Power BI)    | —                                  | 50        | 40       | 1       | 0      |
+
+## Checkpoint — 2026-10-29 (pós-merge PR #23)
+
+- PR #23 squash-merged em `main` (commit b1a00b0); branch `feat/orquestracao-integral-2026-10-28` deletada.
+- Fix de CI incluído no merge: contraste axe zerado (130→0 violações), overflow horizontal mobile corrigido, `verificar-estrutura.js` 0 falhas, teste de interação exit 0.
+- Branches: apenas `main`. Stash@{0} com alterações pré-existentes (progress.js, simulator_security.js).
