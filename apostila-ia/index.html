@@ -287,20 +287,5 @@ montarSimulador('EthicsSimulator','etica-app');
 if('serviceWorker'in navigator&&location.protocol==='https:'){navigator.serviceWorker.register('service-worker.js').catch(function(){});}
 </script>
 
-<script>
-(function(){
-  function fix(){
-    var sels = ['.study-eyebrow','.study-workspace-heading p','.bus-badge','.bus-meta-tipo'];
-    sels.forEach(function(sel){
-      document.querySelectorAll(sel).forEach(function(el){ el.style.setProperty('color','#111827','important'); });
-    });
-    document.querySelectorAll('[data-id] span').forEach(function(el){ el.style.setProperty('color','#111827','important'); });
-  }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fix); else fix();
-  // Re-apply after dynamic content loads
-  var obs = new MutationObserver(function(){ fix(); });
-  obs.observe(document.body, { childList: true, subtree: true });
-})();
-</script>
 </body>
 </html>
