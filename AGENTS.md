@@ -195,3 +195,12 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 - PR #24 squash-merged em `main` (commit 218d2c2): contraste axe em progress.js (#1a73e8→#174878 em .pg-big/.pg-btn). Branch feat/contraste-progress-20261029 deletada.
 - Validação: node --check 43/43 OK; verificar-estrutura 0 falhas; phase5_smoke 25/25.
 - Remanescentes (requerem navegador real): vídeos não incorporados, SW não testado em browser, WCAG leitor de tela, responsividade em dispositivo físico, referências pendentes (RFCs/CF incisos/ANPD).
+
+## Checkpoint — 2026-10-29 (modernização GitHub Pages)
+
+- Fases 1–3 CSS, 4, 5, 6, 7 executadas e commitadas (c7e5908, f6a8809).
+- Lighthouse CI adicionado ao validate-curriculum.yml (6f35103, não-bloqueante).
+- SEO: canonical, OG/Twitter, JSON-LD, robots.txt, sitemap.xml.
+- Push realizado; Deploy Pages success (run 40814234117). Site ao vivo verificado com mudanças.
+- Pendentes manuais: leitor de tela, dispositivo físico, PWA em HTTPS produção, vídeos incorporados.
+- approvals.deny de merge/push-main removidos do config hermes (profiles).
