@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fatal1tybarucco.github.io/FCN/sitemap.xml
