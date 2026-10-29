@@ -27,6 +27,8 @@ const axeCore = require("axe-core");
     console.log('DEBUG study-eyebrow color:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-eyebrow')).color));
     console.log('DEBUG study-eyebrow bg:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-eyebrow')).backgroundColor));
     console.log('DEBUG study-workspace bg:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-workspace')).backgroundColor));
+    console.log('DEBUG surface var:', await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue('--surface').trim()));
+    console.log('DEBUG color-scheme:', await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme));
     console.log('DEBUG study-eyebrow contrast:', await page.evaluate(() => { var el=document.querySelector('.study-eyebrow'); var r=el.getBoundingClientRect(); return {w:r.width,h:r.height}; }));
     await page.waitForFunction(() =>
       window.apostilaDados &&
