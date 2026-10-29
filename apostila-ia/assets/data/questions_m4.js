@@ -74,7 +74,7 @@ const moduleQuestions4 = [
       { letra: "E", texto: "A informação é assinada digitalmente." }
     ],
     gabarito: "D",
-    justificativa: "Integridade garante que os dados são precisos e não foram modificados de maneira não autorizada. A disponibilidade é a característica de 'acesso quando necessário' (alternativa A incorreta); a criptografia e a assinatura digital são mecanismos que ajudam a preservar integridade, mas não a definam o princípio (alternativas C e E incorretas); a múltipla cópia (backup) protege contra perda, não garante integridade (alternativa D incorreta).",
+    justificativa: "Integridade garante que os dados são precisos e não foram modificados de maneira não autorizada. A disponibilidade é a característica de 'acesso quando necessário' (alternativa A incorreta); a criptografia e a assinatura digital são mecanismos que ajudam a preservar integridade, mas não a definam o princípio (alternativas C e E incorretas); a múltipla cópia (backup) protege contra perda, não garante integridade (alternativa B incorreta); a alternativa D está correta, pois integridade é a preservação da exatidão e da não alteração não autorizada.",
     analise: {
       A: "INCORRETA. Disponibilidade — o conceito que garante acesso quando necessário.",
       B: "INCORRETA. Backup protege contra perda de dados, não garante integridade.",
@@ -99,7 +99,7 @@ const moduleQuestions4 = [
       { letra: "E", texto: "Os usuários são autenticados corretamente." }
     ],
     gabarito: "B",
-    justificativa: "Disponibilidade significa que sistemas e dados estão acessíveis quando o usuário precisa utilizá-los. Confidencialidade restringe o acesso (alternativa A incorreta); integridade é a preservação da exatidão (alternativa C incorreta); cópias de backup protegem contra perda (alternativa D incorreta); autenticação é o processo de verificação de identidade (alternativa E incorreta).",
+    justificativa: "Disponibilidade significa que sistemas e dados estão acessíveis quando o usuário precisa utilizá-los. Confidencialidade restringe o acesso (alternativa A incorreta); integridade é a preservação da exatidão (alternativa C incorreta); cópias de backup protegem contra perda (alternativa D incorreta); autenticação é o processo de verificação de identidade alternativa B incorreta).",
     analise: {
       A: "INCORRETA. Confidencialidade — restrição de acesso a autorizados.",
       B: "CORRETA. Disponibilidade garante acesso quando o usuário precisa.",
@@ -121,7 +121,8 @@ const moduleQuestions4 = [
     trechoDeterminante: "A definição de controle corretivo está incorreta na afirmação.",
     justificativa: "Controles corretivos agem APÓS a ocorrência de um evento (ex: restauração de backup, remoção de malware). Controles preventivos agem ANTES (ex: firewall, política de senha). A afirmação inverte o funcionamento dos dois tipos, tornando-a falsa.",
     analise: {
-      item: "INCORRETA. Controles corretivos agem depois da ocorrência de um incidente (ex: remediação, recuperação), não antes. Controles preventivos agem antes (ex: firewall, criptografia), e controles detectivos identificam a ocorrência (ex: IDS, logs)."
+      item: "INCORRETA. Controles corretivos agem depois da ocorrência de um incidente (ex: remediação, recuperação), não antes. Controles preventivos agem antes (ex: firewall, criptografia), e controles detectivos identificam a ocorrência (ex: IDS, logs).",
+      "leituraIncorreta": "Controles corretivos agem APOS a ocorrencia; quem marca 'certo' confunde com preventivo.",
     },
     regra: "Controles: preventivos (antes), detectivos (durante), corretivos (depois), compensatórios (alternativos).",
     pegadinha: "Múltiplos controles na mesma frase podem confundir a ordem de atuação (antes/depois).",
@@ -140,7 +141,7 @@ const moduleQuestions4 = [
       { letra: "E", texto: "A MFA exige duas ou mais formas independentes de verificação." }
     ],
     gabarito: "E",
-    justificativa: "MFA exige duas ou mais formas independentes de verificação: saber (senha), possuir (dispositivo) ou ser (biometria). A MFA não elimina a senha — pode usá-la como um dos fatores (alternativa A incorreta); a MFA é amplamente aplicável a qualquer sistema crítico, não apenas sistemas operacionais (alternativa C incorreta); a MFA reduz significativamente o risco, mas não garante absolutamente impedir tudo (alternativa D incorreta); a criptografia é outra camada de segurança, não a definição de MFA (alternativa E incorreta).",
+    justificativa: "MFA exige duas ou mais formas independentes de verificação: saber (senha), possuir (dispositivo) ou ser (biometria). A MFA não elimina a senha — pode usá-la como um dos fatores (alternativa A incorreta); a MFA é amplamente aplicável a qualquer sistema crítico, não apenas sistemas operacionais (alternativa C incorreta); a MFA reduz significativamente o risco, mas não garante absolutamente impedir tudo (alternativa D incorreta); a criptografia é outra camada de segurança, não a definição de MFA (alternativa B incorreta).",
     analise: {
       A: "INCORRETA. A MFA não elimina a senha — pode integrar-se a ela como um dos fatores.",
       B: "INCORRETA. A MFA é um mecanismo de autenticação que comprova a identidade do usuário por dois ou mais fatores independentes; política de criptografia é controle distinto, que protege os dados em repouso e em trânsito.",
@@ -2100,3 +2101,4 @@ const moduleQuestions4 = [
 
 
 ];
+

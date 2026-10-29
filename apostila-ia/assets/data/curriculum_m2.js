@@ -1,8 +1,3 @@
-/* curriculum_m2.js — Módulo 2: Redes de Computadores
- * Conteúdo didático real para as 5 unidades do M2.
- * Cada subtópico tem: objetivoAprendizagem, conteudo, exemplos (3+), exercícios (2+).
- */
-
 const curriculumM2 = {
   "modulo-2": {
     "titulo": "REDES DE COMPUTADORES",
@@ -48,7 +43,8 @@ const curriculumM2 = {
                     "enunciado": "Qual a função principal de um servidor em uma rede? A) Acessar recursos de outros dispositivos; B) Fornecer recursos e serviços para outros dispositivos; C) Interconectar redes diferentes.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá rede de computadores e identificará nós, enlaces, clientes e servidores, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u1-t1-s2",
@@ -83,7 +79,8 @@ const curriculumM2 = {
                     "enunciado": "Qual tipo de rede cobre a maior área geográfica? A) LAN; B) MAN; C) WAN; D) PAN.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá LAN, WLAN, MAN, WAN, PAN e intranet/extranet, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u1-t1-s3",
@@ -118,7 +115,8 @@ const curriculumM2 = {
                     "enunciado": "Qual topologia oferece maior redundância? A) Estrela; B) Anel; C) Malha; D) Barra.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará topologias estrela, anel, barra (bus), malha e híbrida, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u1-t1-s4",
@@ -153,7 +151,8 @@ const curriculumM2 = {
                     "enunciado": "Qual a principal vantagem da comutação de pacotes sobre a de circuitos? A) Menor latência; B) Melhor aproveitamento de largura de banda; C) Mais simples de implementar.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará comutação de circuitos e comutação de pacotes, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -194,7 +193,8 @@ const curriculumM2 = {
                     "enunciado": "Qual tipo de comunicação um servidor DNS raiz (como 8.8.8.8) tipicamente usa? A) Unicast; B) Broadcast; C) Anycast; D) Multicast.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de alvo identificará os 4 tipos de comunicação em rede, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -235,7 +235,8 @@ const curriculumM2 = {
                     "enunciado": "Qual métrica é mais crítica para VoIP? A) Largura de banda; B) Throughput; C) Jitter; D) Perda de pacotes.",
                     "resposta": "C (jitter alto causa áudio interrompido; perda >1% também é problemática, mas jitter é o principal)"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá e distinguirá largura de banda, throughput, latência, jitter e perda de pacotes, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -276,7 +277,8 @@ const curriculumM2 = {
                     "enunciado": "Qual meio é imune a interferência eletromagnética? A) UTP; B) STP; C) Fibra óptica; D) Coaxial.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará os principais meios de transmissão e suas características, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -323,7 +325,8 @@ const curriculumM2 = {
                     "enunciado": "Qual PDU corresponde à camada de enlace? A) Bit; B) Quadro; C) Pacote; D) Segmento.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as sete camadas do modelo OSI em ordem, associará a cada uma sua função principal e identificará o tipo de PDU correspondente, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u2-t1-s2",
@@ -358,7 +361,8 @@ const curriculumM2 = {
                     "enunciado": "Qual camada adiciona o endereço MAC de origem e destino? A) Física; B) Enlace; C) Rede; D) Transporte.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o processo de encapsulamento ao enviar dados e de desencapsulamento ao receber, identificando os cabeçalhos adicionados em cada camada, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u2-t1-s3",
@@ -393,7 +397,8 @@ const curriculumM2 = {
                     "enunciado": "Qual dispositivo atua primariamente na camada de rede (3)? A) Hub; B) Switch L2; C) Roteador; D) Repetidor.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá comunicação vertical (entre camadas do mesmo host) e horizontal (entre camadas equivalentes de hosts diferentes), e identificará quais dispositivos operam em quais camadas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -434,7 +439,8 @@ const curriculumM2 = {
                     "enunciado": "Qual camada do TCP/IP corresponde às camadas 5, 6 e 7 do OSI? A) Transporte; B) Internet; C) Aplicação; D) Acesso à rede.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as quatro camadas do modelo TCP/IP e associará a cada uma protocolos típicos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u2-t2-s2",
@@ -469,7 +475,8 @@ const curriculumM2 = {
                     "enunciado": "Qual item identifica o processo dentro do host? A) Endereço IP; B) Endereço MAC; C) Porta; D) Protocolo.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno associará protocolos e serviços às camadas do TCP/IP e explicará a diferença entre protocolo e serviço, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u2-t2-s3",
@@ -504,7 +511,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo não se encaixa confortavelmente em uma única camada OSI? A) HTTP; B) IP; C) TLS; D) Ethernet.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno reconhecerá que a correspondência entre camadas OSI e TCP/IP é aproximada e identificará casos em que a equivalência não é direta, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -545,7 +553,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo resolve nomes de domínio em endereços IP? A) DHCP; B) DNS; C) ARP; D) ICMP.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá, camada por camada, o fluxo completo de uma requisição HTTP de um navegador a um servidor web, incluindo resolução DNS, estabelecimento TCP e encapsulamento, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u2-t3-s2",
@@ -580,7 +589,8 @@ const curriculumM2 = {
                     "enunciado": "Qual mensagem indica falha de resolução de nome? A) connection refused; B) ERR_NAME_NOT_RESOLVED; C) 404 Not Found; D) TTL expired.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará, em um fluxo completo, em qual etapa ocorre cada função e quais sintomas indicam falha em cada etapa, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u2-t3-s3",
@@ -615,7 +625,8 @@ const curriculumM2 = {
                     "enunciado": "Qual cabeçalho controla o tempo de vida do cache? A) ETag; B) Cache-Control; C) Content-Type; D) Connection.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará HTTP keep-alive, cache e compressão e seu impacto no desempenho, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -662,7 +673,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo substitui o ARP no IPv6? A) ICMPv6; B) NDP; C) DHCPv6; D) SLAAC.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno comparará IPv4 e IPv6 quanto a tamanho de endereço, formato, tipos e motivação da transição, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u3-t1-s2",
@@ -697,7 +709,8 @@ const curriculumM2 = {
                     "enunciado": "Qual mecanismo evita que o remetente sobrecarregue o receptor? A) Controle de congestionamento; B) Controle de fluxo; C) Retransmissão; D) Fragmentação.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará os mecanismos de confiabilidade do TCP: sequência, ACK, retransmissão, controle de fluxo e de congestionamento, e three-way handshake, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u3-t1-s3",
@@ -732,7 +745,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo é sem conexão? A) TCP; B) UDP; C) HTTP; D) FTP.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará as características do UDP, suas vantagens e limitações, e identificará aplicações típicas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -773,7 +787,8 @@ const curriculumM2 = {
                     "enunciado": "Qual código HTTP indica 'não encontrado'? A) 200; B) 301; C) 404; D) 500.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o funcionamento do HTTP e HTTPS, métodos, códigos de status e a diferença entre os dois, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u3-t2-s2",
@@ -808,7 +823,8 @@ const curriculumM2 = {
                     "enunciado": "Qual registro retorna um endereço IPv6? A) A; B) AAAA; C) CNAME; D) MX.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o funcionamento do DNS, tipos de registros, hierarquia e resolução recursiva/iterativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u3-t2-s3",
@@ -843,7 +859,8 @@ const curriculumM2 = {
                     "enunciado": "Quais portas UDP o DHCP usa? A) 53 e 53; B) 67 (servidor) e 68 (cliente); C) 80 e 443; D) 20 e 21.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o processo DORA do DHCP e as informações entregues além do IP, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -884,7 +901,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo de transferência roda sobre SSH (porta 22)? A) FTPS; B) SFTP; C) TFTP; D) SCP apenas.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará FTP, FTPS e SFTP quanto a protocolo base, portas, segurança e uso, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u3-t3-s2",
@@ -919,7 +937,8 @@ const curriculumM2 = {
                     "enunciado": "Qual porta padrão do SSH? A) 21; B) 22; C) 23; D) 25.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará as funções do SSH e do ICMP, suas portas/protocolos e usos de diagnóstico, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u3-t3-s3",
@@ -954,7 +973,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo resolve IP em MAC no IPv4? A) DNS; B) ARP; C) ICMP; D) DHCP.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará a função do ARP no IPv4 e do NDP no IPv6, e identificará riscos (ARP spoofing), evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -995,7 +1015,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo mantém o e-mail no servidor e sincroniza pastas? A) SMTP; B) POP3; C) IMAP; D) FTP.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará SMTP, POP3 e IMAP quanto a função, portas e segurança, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u3-t4-s2",
@@ -1030,7 +1051,8 @@ const curriculumM2 = {
                     "enunciado": "Qual função o certificado X.509 cumpre? A) Cifrar dados; B) Vincular chave pública a identidade; C) Gerar chaves simétricas; D) Comprimir tráfego.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará a função do TLS, handshake, certificados e a diferença entre TLS implícito e STARTTLS, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u3-t4-s3",
@@ -1065,7 +1087,8 @@ const curriculumM2 = {
                     "enunciado": "Qual componente fica em frente ao servidor para distribuir carga e ocultar a origem? A) Proxy forward; B) Proxy reverso; C) NAT estático; D) VPN site-to-site.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará NAT/PAT, proxy e VPN, suas funções, tipos e limitações, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -1112,7 +1135,8 @@ const curriculumM2 = {
                     "enunciado": "Qual faixa é link-local (APIPA)? A) 10.0.0.0/8; B) 172.16.0.0/12; C) 169.254.0.0/16; D) 192.168.0.0/16.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá a estrutura de 32 bits do IPv4, a divisão em octetos e a separação entre parte de rede e parte de host, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u4-t1-s2",
@@ -1147,7 +1171,8 @@ const curriculumM2 = {
                     "enunciado": "Qual endereço um host usa para falar consigo mesmo? A) 0.0.0.0; B) 127.0.0.1; C) 255.255.255.255; D) 169.254.0.1.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará endereços IPv4 em públicos/privados/loopback/link-local e explicará o uso de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u4-t1-s3",
@@ -1182,7 +1207,8 @@ const curriculumM2 = {
                     "enunciado": "Qual máscara corresponde a /30? A) 255.255.255.240; B) 255.255.255.252; C) 255.255.255.248; D) 255.255.255.224.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o papel da máscara e converterá entre notação decimal e prefixo CIDR, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1223,7 +1249,8 @@ const curriculumM2 = {
                     "enunciado": "Quantos hosts utilizáveis em /26? A) 64; B) 62; C) 30; D) 32.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno calculará endereço de rede e broadcast a partir de IP e prefixo, usando operação AND, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u4-t2-s2",
@@ -1258,7 +1285,8 @@ const curriculumM2 = {
                     "enunciado": "Quantos hosts utilizáveis em /27? A) 32; B) 30; C) 14; D) 62.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno calculará número de sub-redes e hosts a partir de um prefixo dado e de um prefixo original, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u4-t2-s3",
@@ -1293,7 +1321,8 @@ const curriculumM2 = {
                     "enunciado": "Qual é o broadcast de 172.16.5.0/23? A) 172.16.5.255; B) 172.16.6.255; C) 172.16.7.255; D) 172.16.4.255.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno determinará o intervalo de hosts válidos de uma sub-rede e validará se um IP pertence a ela, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1334,7 +1363,8 @@ const curriculumM2 = {
                     "enunciado": "Qual prefixo atende a 14 hosts com folga mínima? A) /28; B) /27; C) /26; D) /30.",
                     "resposta": "A (14 hosts cabem em /28 com 14 utilizáveis)"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará VLSM e aplicará divisão de sub-redes de tamanhos diferentes a partir de um bloco original, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u4-t3-s2",
@@ -1369,7 +1399,8 @@ const curriculumM2 = {
                     "enunciado": "Quantas rotas /24 cabem em um /20? A) 4; B) 8; C) 16; D) 32.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará sumarização de rotas e calculará uma rota agregada a partir de blocos contíguos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u4-t3-s3",
@@ -1404,7 +1435,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo NÃO suporta VLSM? A) OSPF; B) RIPv2; C) RIPv1; D) BGP.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará boas práticas de planejamento de endereçamento e a necessidade de roteamento classless para VLSM, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1445,7 +1477,8 @@ const curriculumM2 = {
                     "enunciado": "Qual é o endereço de loopback em IPv6? A) ::; B) ::1; C) fe80::1; D) ff02::1.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno representará e abreviará endereços IPv6 corretamente, aplicando as regras de compressão, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u4-t4-s2",
@@ -1480,7 +1513,8 @@ const curriculumM2 = {
                     "enunciado": "Qual prefixo identifica endereços global unicast? A) fe80::/10; B) fc00::/7; C) 2000::/3; D) ff00::/8.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará os principais tipos de endereço IPv6 (global unicast, link-local, unique local, multicast, loopback) e seus prefixos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u4-t4-s3",
@@ -1515,7 +1549,8 @@ const curriculumM2 = {
                     "enunciado": "Qual é a rede de 172.16.37.200/22? A) 172.16.36.0; B) 172.16.32.0; C) 172.16.0.0; D) 172.16.37.0.",
                     "resposta": "A"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno reconhecerá armadilhas comuns em questões de endereçamento e sub-redes, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -1562,7 +1597,8 @@ const curriculumM2 = {
                     "enunciado": "Qual protocolo o ping utiliza? A) TCP; B) UDP; C) ICMP; D) ARP.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará a função do ping, sua sintaxe básica e interpretará a saída (RTT, perda, TTL), evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u5-t1-s2",
@@ -1597,7 +1633,8 @@ const curriculumM2 = {
                     "enunciado": "O que '*' na saída do traceroute indica? A) Rota bloqueada definitivamente; B) Ausência de resposta ICMP; C) Sucesso; D) Timeout de DNS.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará como traceroute mapeia a rota e interpretará sua saída (saltos, *, latência), evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u5-t1-s3",
@@ -1632,7 +1669,8 @@ const curriculumM2 = {
                     "enunciado": "Qual ferramenta do Windows combina ping e traceroute com estatísticas? A) tracert; B) pathping; C) nslookup; D) netstat.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o uso de mtr, pathping e hping3 e quando utilizá-los, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1673,7 +1711,8 @@ const curriculumM2 = {
                     "enunciado": "Qual comando exibe o MAC (endereço físico) no Windows? A) ipconfig /all; B) ping; C) tracert; D) netstat.",
                     "resposta": "A"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará as funções de ipconfig (Windows) e ifconfig (Linux/macOS legado) e interpretará saídas típicas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u5-t2-s2",
@@ -1708,7 +1747,8 @@ const curriculumM2 = {
                     "enunciado": "Qual comando exibe a tabela de rotas no Linux moderno? A) route; B) ip route; C) netstat -r; D) todas as anteriores.",
                     "resposta": "D (route e netstat -r são legados; ip route é o moderno)"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o uso do comando 'ip' (Linux) e de netstat/ss para inspecionar conexões e portas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u5-t2-s3",
@@ -1743,7 +1783,8 @@ const curriculumM2 = {
                     "enunciado": "Qual comando exibe a tabela de rotas no Windows? A) ipconfig; B) route print; C) arp -a; D) netstat -r (também).",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno verificará tabela de rotas, cache ARP/NDP e estado de interfaces, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1784,7 +1825,8 @@ const curriculumM2 = {
                     "enunciado": "Qual comando especifica o servidor DNS a consultar? A) nslookup nome; B) nslookup nome servidor; C) ping nome; D) dig nome.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno usará nslookup para consultar registros DNS e interpretará a saída, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u5-t3-s2",
@@ -1819,7 +1861,8 @@ const curriculumM2 = {
                     "enunciado": "Qual status DNS indica 'nome não existe'? A) NOERROR; B) NXDOMAIN; C) SERVFAIL; D) REFUSED.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno usará dig para consultas DNS detalhadas e interpretará a saída (status, flags, TTL, seção answer), evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u5-t3-s3",
@@ -1854,7 +1897,8 @@ const curriculumM2 = {
                     "enunciado": "Qual comando limpa o cache DNS no Linux com systemd-resolved? A) ipconfig /flushdns; B) resolvectl flush-caches; C) dig +trace; D) nslookup.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará outras ferramentas de diagnóstico DNS e o papel do cache, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1895,7 +1939,8 @@ const curriculumM2 = {
                     "enunciado": "Ping ao gateway falha. Qual camada provavelmente afetada? A) Aplicação; B) Transporte; C) Rede/Enlace; D) Sessão.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará um método de diagnóstico por camadas, do físico à aplicação, para isolar falhas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u5-t4-s2",
@@ -1930,7 +1975,8 @@ const curriculumM2 = {
                     "enunciado": "Ping ao IP externo funciona, mas o nome não resolve. Falha de: A) conectividade; B) roteamento; C) DNS; D) aplicação.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá sintomas de falhas de DNS, conectividade, roteamento e aplicação, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m2-u5-t4-s3",
@@ -1965,7 +2011,8 @@ const curriculumM2 = {
                     "enunciado": "Qual mensagem indica problema de certificado TLS? A) ERR_NAME_NOT_RESOLVED; B) ERR_CERT_AUTHORITY_INVALID; C) Connection refused; D) 404 Not Found.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno interpretará mensagens de erro comuns e mapeará a causas prováveis, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }

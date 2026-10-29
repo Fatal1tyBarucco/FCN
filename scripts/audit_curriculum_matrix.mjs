@@ -19,6 +19,8 @@ const modules = [
   ["M8", "apostila-ia/assets/data/curriculum_m8.js"]
 ];
 
+const SUBTOPICOS_ESPERADOS = 307; // atualizado em 2026-10-28: CONT-01 adicionou 12 subtópicos ao M1
+
 const header = [
   "id_subtopico", "modulo", "arquivo_origem", "titulo_subtopico",
   "objetivo_presente", "conteudo_presente",
@@ -63,7 +65,7 @@ for (const [moduleName, relativePath] of modules) {
 
 const uniqueIds = new Set(rows.map(row => row[0]));
 if (uniqueIds.size !== rows.length) errors.push("Há IDs de subtópico duplicados: " + (rows.length - uniqueIds.size));
-if (rows.length !== 295) errors.push("Esperados 295 subtópicos; encontrados " + rows.length);
+if (rows.length !== SUBTOPICOS_ESPERADOS) errors.push("Esperados " + SUBTOPICOS_ESPERADOS + " subtópicos; encontrados " + rows.length);
 
 const outputPath = resolve(root, "docs/MATRIZ_COBERTURA.csv");
 writeFileSync(outputPath, [header, ...rows].map(row => row.map(csvCell).join(",")).join("\n") + "\n", "utf8");

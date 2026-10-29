@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apostila Web Interativa — Tecnologia da Informação, Dados e IA</title>
-<meta name="description" content="Apostila web interativa: 8 modulos, simuladores, flashcards, 399 questões, 460 flashcards, gráficos. Abra direto ou via localhost:8080">
+<meta name="description" content="Apostila web interativa: 8 modulos, simuladores, flashcards, 409 questões, 474 flashcards, gráficos. Abra direto ou via localhost:8080">
 <link rel="stylesheet" href="assets/css/styles.css">
 <meta name="theme-color" content="#1e2b40">
 <link rel="manifest" href="manifest.webmanifest">
@@ -12,7 +12,7 @@
 <style>
 :root {
   --bg: #0f172a; --surface: #1e293b; --border: #334155; --text: #f8fafc; --text-dim: #94a3b8;
-  --primary: #3b82f6; --success: #10b981; --error: #ef4444; --warning: #f59e0b; --accent: #8b5cf6;
+  --primary: #1d4ed8; --success: #10b981; --error: #ef4444; --warning: #f59e0b; --accent: #8b5cf6;
   --radius: 8px; --shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
 }
 [data-theme="light"] {
@@ -138,7 +138,7 @@ summary:hover{color:var(--accent)}
 <body>
 
 <!-- Main content: app.js SPA tab system -->
-<main id="main">
+<main id="main" tabindex="-1">
   <!-- Top bar header: progress, live search, TTS, theme toggle -->
   <header id="header">
     <div class="left">
@@ -147,11 +147,11 @@ summary:hover{color:var(--accent)}
       <span id="progress-text">0%</span>
     </div>
     <div class="right flex">
-      <input type="text" id="search-input" class="search-box" placeholder="🔍 Buscar em toda a apostila..." title="Buscar em toda a apostila">
+      <input type="text" id="search-input" class="search-box" placeholder="🔍 Buscar em toda a apostila..." title="Buscar em toda a apostila" aria-label="Buscar em toda a apostila">
       <div class="tts-controls">
         <button id="tts-play" title="Ouvir (Text-to-Speech)">🔊</button>
         <button id="tts-pause" title="Pausar leitura">⏸️</button>
-        <select id="tts-rate" title="Velocidade de leitura">
+        <select id="tts-rate" title="Velocidade de leitura" aria-label="Velocidade de leitura">
           <option value="0.8">0.8x</option>
           <option value="1" selected>1.0x</option>
           <option value="1.2">1.2x</option>
@@ -167,7 +167,7 @@ summary:hover{color:var(--accent)}
 </main>
 
 <!-- Simulator containers (off-screen; app.js moves them into tab content on demand) -->
-<div id="simulator-containers" style="position:absolute;left:-9999px;top:0;width:1200px;height:800px;overflow:visible;" aria-hidden="true">
+<div id="simulator-containers" style="position:absolute;left:0;top:0;width:1200px;height:800px;overflow:visible;">
   <div id="charts-app"></div>
   <div id="excel-app"></div>
   <div id="redes-app"></div>
@@ -185,7 +185,7 @@ summary:hover{color:var(--accent)}
 <div id="search-app" aria-label="Busca global"></div>
 <div id="audio-app" aria-label="Leitura em voz alta"></div>
 <div id="progress-app" aria-label="Painel de progresso"></div>
-<div id="accessibility-app" aria-label="Acessibilidade" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
+<div id="accessibility-app" role="region" aria-label="Acessibilidade" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
 
 <!-- Modal para Flashcards e Quiz -->
 <div id="modal" class="modal">
@@ -246,6 +246,7 @@ if(window.apostilaDados)window.apostilaDados.questoes=window.questoesBanco;
 <script src="assets/js/state.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/navigation.js"></script>
+<script src="assets/js/personalization.js"></script>
 <script src="assets/js/ui-shell.js"></script>
 <script src="assets/js/simulators.js"></script>
 <script src="assets/js/simulator_network.js"></script>

@@ -162,7 +162,7 @@
     + '.sim-prompts-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
     '.sim-prompts-bloco .sim-prompts-sub{color:#cbd5e1}' +
     '.sim-prompts-field{margin-bottom:10px}'
-    + '.sim-prompts-label{display:block;font-size:.78rem;color:#8b94a5;margin-bottom:2px}'
+    + '.sim-prompts-label{display:block;font-size:.78rem;color:#9ca3af;margin-bottom:2px}'
     + '.sim-prompts-input{width:100%;font-family:"Courier New",monospace;font-size:.82rem;background:#111318;color:#e3e9ff;border:1px solid #3a4252;border-radius:4px;padding:6px;resize:vertical}'
     + '.sim-prompts-input textarea{width:100%;min-height:60px}'
     + '.sim-prompts-in-sm{width:48%;font-size:.82rem;padding:4px}'

@@ -1,10 +1,3 @@
-/* curriculum_m7.js — Módulo 7: Fundamentos e Engenharia de Dados
- * Conteúdo didático real para o M7 (Escrita.txt, Seção 6 — MÓDULO 7).
- * Mesmo esquema de curriculum_m3.js: cada subtópico tem objetivoAprendizagem,
- * conteudo, exemplos (introducao/aplicacao/erro) e exercicios (certos_erro/multipla).
- * Nenhuma URL, estatística de incidência em concurso ou referência foi inventada.
- */
-
 const curriculumM7 = {
   "modulo-7": {
     "titulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
@@ -50,7 +43,8 @@ const curriculumM7 = {
                     "enunciado": "Em 'leitura de um sensor comparada ao limite de segurança do equipamento, gerando alerta ao técnico', o que a leitura se tornou? A) dado puro; B) informação; C) sabedoria; D) metadado.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá cada nível do modelo DIKW e construirá a passagem entre eles com um exemplo encadeado, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t1-s2",
@@ -85,7 +79,8 @@ const curriculumM7 = {
                     "enunciado": "Qual limitação do DIKW decorre da ausência de critério para medir ou auditar seus níveis? A) falta de definições operacionais; B) uso de computadores; C) existência de dados não estruturados; D) necessidade de metadados.",
                     "resposta": "A"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno apontará as limitações do modelo DIKW e identificará generalizações falsas sobre ele, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -126,7 +121,8 @@ const curriculumM7 = {
                     "enunciado": "Qual conjunto é NÃO estruturado? A) tabela de funcionários; B) planilha de orçamento com colunas fixas; C) gravação de áudio de reunião; D) arquivo JSON com registros de sensores.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará conjuntos de dados nos três formatos e justificará a classificação pelo grau de estrutura, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t2-s2",
@@ -161,7 +157,8 @@ const curriculumM7 = {
                     "enunciado": "Qual é quantitativo CONTÍNUO? A) cor do crachá; B) número de dependentes; C) tempo de trânsito; D) escolaridade em graus concluídos.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará dados qualitativos de quantitativos e detectará a armadilha da codificação numérica, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t2-s3",
@@ -196,7 +193,8 @@ const curriculumM7 = {
                     "enunciado": "Variável 'satisfação do cidadão: insatisfatório, satisfatório, muito satisfatório'. Qual nível e qual medida mais segura? A) nominal, média; B) ordinal, mediana; C) contínuo, desvio padrão; D) discreto, moda apenas.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno determinará o nível de mensuração de uma variável e indicará quais estatísticas são legítimas para ele, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -237,7 +235,8 @@ const curriculumM7 = {
                     "enunciado": "Qual metadado responde 'a quem pertence e o que significa este campo'? A) tipo da coluna; B) dono do dado e regra de negócio; C) horário do backup; D) nome do arquivo.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará metadados em técnicos, de negócio e de processo, e associará cada classe a um uso concreto, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t3-s2",
@@ -272,7 +271,8 @@ const curriculumM7 = {
                     "enunciado": "Para descobrir em qual etapa um indicador foi corrompido, o instrumento adequado é: A) catálogo; B) linhagem; C) gráfico de barras; D) termo de consentimento.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá linhagem de catálogo e usará cada um para responder a um problema concreto de auditoria, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t3-s3",
@@ -307,7 +307,8 @@ const curriculumM7 = {
                     "enunciado": "Qual fase exige definir finalidade e qualidade mínima na origem? A) arquivamento; B) coleta; C) descarte; D) compartilhamento.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá as fases do ciclo de vida e associará regras de retenção e descarte a cada fase, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -354,7 +355,8 @@ const curriculumM7 = {
                     "enunciado": "Em 100 registros, 6 têm o campo 'data de nascimento' vazio. A completude desse campo é: A) 6%; B) 94%; C) 100%; D) indeterminável sem saber se o campo é obrigatório.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará acurácia, completude e validade e calculará métricas simples de qualidade, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t1-s2",
@@ -389,7 +391,8 @@ const curriculumM7 = {
                     "enunciado": "O painel precisa do dado das 8h e só recebe às 18h. A dimensão violada é: A) acurácia; B) completude; C) tempestividade; D) validade.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno avaliará consistência, unicidade e tempestividade de uma base e explicará os conflitos entre dimensões, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -430,7 +433,8 @@ const curriculumM7 = {
                     "enunciado": "Qual estágio é responsável por resolver divergência entre duas fontes para o mesmo fato? A) coleta; B) integração; C) consumo; D) arquivamento.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá os cinco estágios do pipeline, indicando entradas, saídos e risco típico de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t2-s2",
@@ -465,7 +469,8 @@ const curriculumM7 = {
                     "enunciado": "Qual fluxo caracteriza ELT? A) extrair → transformar → carregar; B) extrair → carregar → transformar; C) transformar → extrair → carregar; D) carregar → extrair → transformar.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará ETL e ELT pela ordem das operações e justificará a escolha em cenários concretos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -506,7 +511,8 @@ const curriculumM7 = {
                     "enunciado": "Quando a ausência de resposta depende do próprio valor não respondido, o tratamento mais honesto é: A) imputar média; B) imputar mediana; C) declarar o viés e limitar a conclusão; D) excluir a coluna inteira.",
                     "resposta": "C"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará os tipos de ausência e escolherá estratégia de tratamento coerente com a causa, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t3-s2",
@@ -541,7 +547,8 @@ const curriculumM7 = {
                     "enunciado": "Duas unidades reportam '2,0 m' e '200 cm' para a mesma estante. O problema é: A) duplicidade; B) inconsistência por unidade incompatível; C) ausência de valor; D) erro de digitação obrigatório.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno detectará e tratará duplicidades, inconsistências e erros de tipo sem introduzir efeito colateral, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t3-s3",
@@ -576,7 +583,8 @@ const curriculumM7 = {
                     "enunciado": "Valor 85, média 70, desvio padrão 10. O z-score é: A) 0,7; B) 1,5; C) 15; D) 8,5.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará z-score e min-max a valores reais, interpretará o resultado e limitará o uso correto, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t3-s4",
@@ -611,7 +619,8 @@ const curriculumM7 = {
                     "enunciado": "'nome_cliente' repetido em todos os pedidos do mesmo cliente, devendo ser atualizado em cada linha. Qual problema e qual forma norma resolve? A) dependência transitória, 3FN; B) dependência parcial, 2FN; C) valor não atômico, 1FN; D) ausência de valor, nenhuma forma norma.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará 1FN, 2FN e 3FN a uma tabela e formulará a diferença entre os dois sentidos de normalização, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -652,7 +661,8 @@ const curriculumM7 = {
                     "enunciado": "Grupo 1: 20 registros, média 10. Grupo 2: 80 registros, média 20. A média global é: A) 15; B) 18; C) 12; D) 25.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno agregará dados por grupo calculando corretamente a média global e explicará por que médias de médias erram, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t4-s2",
@@ -687,7 +697,8 @@ const curriculumM7 = {
                     "enunciado": "Manter duas linhas para a mesma pessoa real é qual erro? A) falso positivo; B) falso negativo; C) violação de validade; D) erro de tipo.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá regra de identidade e fusão para deduplicar, justificando os dois tipos de erro possíveis, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -734,7 +745,8 @@ const curriculumM7 = {
                     "enunciado": "O que separa anonimização de pseudonimização? A) o tipo de banco usado; B) a existência de chave que permite reatribuir a identidade; C) a quantidade de registros; D) o uso de criptografia no trânsito.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará anonimização e pseudonimização pela capacidade de reatribuição da identidade, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u3-t1-s2",
@@ -769,7 +781,8 @@ const curriculumM7 = {
                     "enunciado": "Publicar base com recorte de 1 pessoa em 'município + cargo + faixa de idade' ilustra qual ataque? A) força bruta; B) recorte (mosaicismo); C) engenharia social; D) negação de serviço.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará quasi-identificadores e descreverá ataques de recorte e suas mitigações, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -810,7 +823,8 @@ const curriculumM7 = {
                     "enunciado": "Quem é o ponto focal de privacidade e diálogo com os titulares? A) steward; B) encarregado; C) arquiteto de dados; D) auditor financeiro.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá a governança de dados e atribuirá responsabilidades aos papéis envolvidos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u3-t2-s2",
@@ -845,7 +859,8 @@ const curriculumM7 = {
                     "enunciado": "Qual prática viola a minimização? A) coletar data de nascimento quando a análise usa apenas faixa etária; B) registrar auditoria de acesso; C) expirar perfil após o projeto; D) exigir autenticação forte.",
                     "resposta": "A"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará os princípios de menor privilégio e minimização a cenários de coleta e compartilhamento, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u3-t2-s3",
@@ -880,7 +895,8 @@ const curriculumM7 = {
                     "enunciado": "Quem decide sobre o tratamento dos dados, segundo a LGPD? A) titular; B) controlador; C) operador; D) encarregado.",
                     "resposta": "B"
                   }
-                ]
+                ],
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará princípios da LGPD a controles técnicos e organizacionais de proteção, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }

@@ -79,12 +79,12 @@
     if (document.querySelector('.a11y-skip-link')) return;
     var link = document.createElement('a');
     link.className = 'a11y-skip-link';
-    link.href = '#main-content';
+    link.href = '#main';
     link.textContent = 'Pular para o conteúdo principal';
     link.addEventListener('click', function (e) {
       // deixar o hash funcionar; garantir foco
       setTimeout(function () {
-        var target = document.getElementById('main-content');
+        var target = document.getElementById('main');
         if (target) {
           try { target.focus(); } catch (err) {}
           if (document.activeElement !== target) {

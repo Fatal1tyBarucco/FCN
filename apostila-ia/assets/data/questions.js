@@ -4034,6 +4034,310 @@ id: "q-m1-09",
     fonte: "Microsoft Support — Inserir um sumário automático no Word: https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents; usar quebras de seção para alterar layout ou formatação: https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document; criar PDFs acessíveis: https://support.microsoft.com/pt-br/accessibility/office-accessibility/create-accessible-pdfs"
   },
 
+  {
+    id: "q-m1-45",
+    modulo: 1,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-4-topico-1-sub-2",
+    assunto: "M1.4 PowerPoint — Design > Temas",
+    contexto: "Equipe corporativa de apresentação vai padronizar a identidade visual de uma apresentação composta por 20 slides.",
+    enunciado: "Sobre o uso do recurso Design > Temas em uma apresentação do PowerPoint, assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "O Design > Temas altera apenas o fundo da apresentação, sem controlar cores ou tipografias." },
+      { letra: "B", texto: "O Design > Temas aplica a identidade visual apenas ao layout atual, sem propagar para os slides vinculados ao Slide Mestre." },
+      { letra: "C", texto: "O Design > Temas centraliza a identidade visual da apresentação — cores, tipografias e aparência — sobre os layouts derivados do Slide Mestre, propagando-se aos slides vinculados." },
+      { letra: "D", texto: "O Design > Temas controla apenas a tipografia de títulos e não abrange cores nem aparência." },
+      { letra: "E", texto: "O Design > Temas permite salvar a personalização como arquivo .potx, mas não altera a identidade visual já aplicada." }
+    ],
+    gabarito: "C",
+    justificativa: "O Design > Temas centraliza a identidade visual (paleta de cores, tipografias de título e corpo, configurações de aparência) sobre os layouts derivados do Slide Mestre e a aplicação se propaga aos slides vinculados. A personalização é feita via Design > Cores e fontes > Personalizar cores e fontes e o tema pode ser salvo como .potx.",
+    analise: {
+      A: "INCORRETA. O tema abrange cores, tipografias e aparência, e a aplicação se propaga aos slides vinculados.",
+      B: "INCORRETA. O tema se aplica sobre os layouts do Slide Mestre e propaga para os slides vinculados.",
+      C: "CORRETA. O Design > Temas centraliza a identidade visual e a propagação ocorre sobre os layouts derivados do mestre.",
+      D: "INCORRETA. O tema controla cores, tipografia e aparência, não apenas tipografia.",
+      E: "INCORRETA. Salvar como .potx registra o tema; o tema aplicado continua centralizando a identidade visual."
+    },
+    regra: "Design > Temas aplica identidade visual (cores, tipografias e aparência) sobre os layouts derivados do Slide Mestre, com propagação aos slides vinculados.",
+    pegadinha: "Alterar cor ou fonte em um slide individual não altera o tema global; a centralização vem do tema, não da formatação pontual.",
+    fonte: "Microsoft Support — Design > Temas no PowerPoint: documentação oficial da Microsoft (https://support.microsoft.com / https://learn.microsoft.com); seção 'Design > Temas'."
+  },
+
+  {
+    id: "q-m1-46",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "modulo-1-unidade-4-topico-1-sub-3",
+    assunto: "M1.4 PowerPoint — Inserção de mídia, gráficos e objetos",
+    contexto: "Equipe de apresentação vai inserir imagem, vídeo e gráfico em slides e precisa distribuir o material.",
+    enunciado: "Sobre a inserção de mídia em slides do PowerPoint, assinale a alternativa correta.",
+    alternativas: [
+      { letra: "A", texto: "Vídeos online inseridos por URL exigem conexão com a internet durante a apresentação." },
+      { letra: "B", texto: "Vídeos online inseridos por URL não exigem conexão com a internet durante a apresentação." },
+      { letra: "C", texto: "A tabela inserida no slide se atualiza automaticamente se a fonte de dados do Excel mudar." },
+      { letra: "D", texto: "Imagens locais não precisam existir na máquina de destino para a apresentação funcionar." },
+      { letra: "E", texto: "O PowerPoint não permite inserir áudio em slides." }
+    ],
+    gabarito: "A",
+    justificativa: "A inserção de vídeo online (Inserir > Vídeo > Online Video) por URL exige conexão com a internet durante a apresentação; a mídia local deve existir na máquina de destino, e a tabela inserida no slide não se atualiza com a fonte de dados.",
+    analise: {
+      A: "CORRETA. Vídeo online por URL exige conexão durante a apresentação.",
+      B: "INCORRETA. A mídia online exige conexão com a internet durante a apresentação.",
+      C: "INCORRETA. A tabela inserida no slide é estática; não se atualiza com a fonte de dados.",
+      D: "INCORRETA. A mídia local deve existir na máquina de destino.",
+      E: "INCORRETA. O PowerPoint permite inserir áudio em slides."
+    },
+    regra: "Mídia online exige conexão durante a apresentação; mídia local deve existir na máquina de destino; tabela inserida no slide não se atualiza com a fonte de dados.",
+    pegadinha: "Vídeo online por URL não é salvo no arquivo: a conexão é necessária na apresentação.",
+    fonte: "Microsoft Support — PowerPoint (Inserção de mídia, gráficos e objetos): documentação oficial da Microsoft (https://support.microsoft.com / https://learn.microsoft.com); seção 'Inserção'."
+  },
+
+  {
+    id: "q-m1-47",
+    modulo: 1,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-4-topico-1-sub-4",
+    assunto: "M1.4 PowerPoint — Compatibilidade de fontes, mídia e formatos",
+    contexto: "Equipe de treinamento vai distribuir apresentação para equipes em outras cidades e máquinas.",
+    enunciado: "Ao distribuir uma apresentação do PowerPoint para outra máquina/projetor, qual procedimento está correto quanto a formatos, fontes e mídia?",
+    alternativas: [
+      { letra: "A", texto: "Salvar a apresentação no formato .ppt, pois é o formato universal aceito por todos os projetores." },
+      { letra: "B", texto: "Usar exclusivamente a fonte exclusiva do criador para garantir a mesma aparência em qualquer máquina." },
+      { letra: "C", texto: "Inserir a apresentação em um pen drive sem incluir fontes ou mídia, pois o PowerPoint embute automaticamente tudo." },
+      { letra: "D", texto: "Converter o .pptx para .ppt para garantir compatibilidade com versões antigas." },
+      { letra: "E", texto: "Salvar como .pptx, garantir que as fontes usadas existam na máquina de destino ou empacotar fontes vinculadas, e incluir a mídia necessária para apresentação offline." }
+    ],
+    gabarito: "E",
+    justificativa: "O formato recomendado é .pptx (Open XML, padrão desde 2007); o .ppt é legado com risco de conversão. A fonte deve existir na máquina de destino ou o arquivo deve empacotar fontes; a mídia local deve existir. Para apresentação offline, empacotar fontes e mídia.",
+    analise: {
+      A: "INCORRETA. O .ppt é legado e pode sofrer conversão; o .pptx é o formato recomendado.",
+      B: "INCORRETA. A fonte deve existir na máquina de destino ou o arquivo deve empacotar fontes.",
+      C: "INCORRETA. O PowerPoint não embute automaticamente fontes e mídia ao inserir em pen drive.",
+      D: "INCORRETA. Converter para .ppt aumenta risco de incompatibilidade; o .pptx é o formato recomendado.",
+      E: "CORRETA. Combina formato .pptx, verificação de fontes na máquina de destino (ou empacotamento) e inclusão de mídia."
+    },
+    regra: "Para distribuição, usar .pptx; verificar fontes na máquina de destino ou empacotar fontes; mídia local deve existir; vídeo online exige conexão.",
+    pegadinha: "A fonte exclusiva do criador não garante preservação; a máquina de destino deve possuir a fonte ou o arquivo deve empacotar fontes.",
+    fonte: "Microsoft Support — PowerPoint (Compatibilidade de fontes, mídia e formatos .ppt/.pptx): documentação oficial da Microsoft (https://support.microsoft.com / https://learn.microsoft.com); seção 'Compatibilidade'."
+  },
+
+  {
+    id: "q-m1-48",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "modulo-1-unidade-5-topico-1-sub-2",
+    assunto: "M1.5 OneDrive — Arquivos locais versus somente online (Files On-Demand)",
+    contexto: "Colaborador com arquivos grandes no OneDrive precisa decidir entre cópia local e acesso somente online.",
+    enunciado: "No contexto do OneDrive, assinale a alternativa correta sobre arquivos locais e somente online (Files On-Demand).",
+    alternativas: [
+      { letra: "A", texto: "Arquivos somente online exigem download manual de cada arquivo antes de qualquer acesso." },
+      { letra: "B", texto: "Com Files On-Demand, o arquivo permanece na nuvem e é acessado sob demanda, sem cópia local obrigatória." },
+      { letra: "C", texto: "Arquivos sincronizados não propagam alterações locais para a nuvem." },
+      { letra: "D", texto: "A sincronização automática só ocorre quando o arquivo está marcado como offline." },
+      { letra: "E", texto: "O estado de sincronização é exibido apenas no aplicativo de e-mail do Windows." }
+    ],
+    gabarito: "B",
+    justificativa: "Files On-Demand permite que o cliente mantenha o arquivo na nuvem e exponha disponibilidade offline via stub, sem baixar integralmente; o acesso ocorre sob demanda. Estados de sincronização são exibidos no painel/tray do cliente.",
+    analise: {
+      A: "INCORRETA. Com Files On-Demand o arquivo é acessado sob demanda; o download não é manual para edição.",
+      B: "CORRETA. O arquivo permanece na nuvem e é acessado sob demanda, sem cópia local obrigatória.",
+      C: "INCORRETA. Arquivos sincronizados propagam alterações em ambos os sentidos.",
+      D: "INCORRETA. A sincronização automática ocorre para pastas sincronizadas; o marcador offline é outro conceito.",
+      E: "INCORRETA. O estado de sincronização é exibido no painel/tray do cliente de sincronização."
+    },
+    regra: "Files On-Demand mantém arquivo online com disponibilidade offline via stub; sincronização propaga alterações; estados de sincronização no tray.",
+    pegadinha: "Somente online não significa indisponibilidade offline: Files On-Demand cobre a indisponibilidade.",
+    fonte: "Microsoft Learn — OneDrive for Business (Files On-Demand): https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description"
+  },
+
+  {
+    id: "q-m1-49",
+    modulo: 1,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-5-topico-1-sub-4",
+    assunto: "M1.5 OneDrive — Conflitos de sincronização do cliente",
+    contexto: "Dois colaboradores editam o mesmo arquivo offline em dispositivos diferentes e depois sincronizam.",
+    enunciado: "Ao finalizar a sincronização de duas cópias editadas divergentemente do mesmo arquivo no OneDrive, qual procedimento está correto?",
+    alternativas: [
+      { letra: "A", texto: "Aguardar que o sistema resolva automaticamente usando a primeira versão enviada." },
+      { letra: "B", texto: "Excluir a versão local para forçar a sincronização." },
+      { letra: "C", texto: "Manter as versões separadas sem qualquer intervenção." },
+      { letra: "D", texto: "Abrir a cópia de conflito, comparar as versões e manter a versão desejada." },
+      { letra: "E", texto: "Formatar o disco para limpar o conflito." }
+    ],
+    gabarito: "D",
+    justificativa: "O cliente sinaliza conflito no painel de sincronização e mantém versões separadas; a resolução é manual (abrir a cópia de conflito, comparar e manter a versão desejada) ou regra de última alteração na coautoria.",
+    analise: {
+      A: "INCORRETA. A resolução não é automática pelo primeiro enviado.",
+      B: "INCORRETA. Excluir versão local não é o procedimento de resolução.",
+      C: "INCORRETA. As versões permanecem separadas até resolução.",
+      D: "CORRETA. Abrir a cópia de conflito, comparar e manter a versão desejada.",
+      E: "INCORRETA. Formatar disco não resolve conflito de sincronização."
+    },
+    regra: "Conflito de sincronização: cliente sinaliza no tray; resolução manual (comparar versões) ou regra de última alteração na coautoria.",
+    pegadinha: "Em coautoria, a última alteração prevalece; sem coautoria, a resolução é manual.",
+    fonte: "Microsoft Learn — OneDrive for Business (conflitos de sincronização): https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description"
+  },
+
+  {
+    id: "q-m1-50",
+    modulo: 1,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-5-topico-1-sub-3",
+    assunto: "M1.5 OneDrive — Lixeira e restauração",
+    contexto: "Colaborador excluiu um arquivo relevante do OneDrive e a equipe precisa avaliar a possibilidade de recuperação.",
+    enunciado: "No OneDrive, a exclusão de um arquivo move o arquivo para a lixeira, na qual ele permanece para sempre.",
+    alternativas: null,
+    gabarito: "errado",
+    trechoDeterminante: "O trecho que torna o item FALSO é 'permanece para sempre': a exclusão move o arquivo para a lixeira e o arquivo permanece pelo período de retenção configurado pela organização/conta; a exclusão permanente ocorre após o término desse período.",
+    justificativa: "A exclusão move o arquivo para a lixeira; a restauração ocorre a partir da lixeira dentro do período de retenção configurado. O período exato deve ser verificado na documentação oficial do produto, pois varia conforme a configuração. A lixeira não é o único mecanismo: o histórico de versões pode conter estados anteriores.",
+    analise: {
+      item: "Item FALSO. A exclusão move o arquivo para a lixeira; o arquivo permanece pelo período de retenção configurado (verificar documentação oficial), e a exclusão permanente ocorre após o término desse período.",
+      leituraIncorreta: "Leitura que induz ao erro: considerar que a permanência na lixeira é ilimitada. Na verdade, o período de retenção é configurado pela organização/conta e a exclusão definitiva depende dele."
+    },
+    regra: "Exclusão no OneDrive move o arquivo para a lixeira com retenção conforme política; restauração via lixeira; período configurável; exclusão permanente após retenção.",
+    pegadinha: "A lixeira não é um backup ilimitado; o período de retenção é configurável e a exclusão definitiva decorre dele.",
+    fonte: "Microsoft Learn — OneDrive for Business (lixeira e retenção): https://learn.microsoft.com/pt-br/office365/servicedescriptions/onedrive-for-business-service-description"
+  },
+
+  {
+    id: "q-m1-51",
+    modulo: 1,
+    formato: "mc",
+    estilo: "fgv",
+    origem: "autoral",
+    nivel: "basico",
+    topico: "modulo-1-unidade-2-topico-5-sub-2",
+    assunto: "M1.2 Word — Notas de rodapé e notas de fim",
+    contexto: "Documento longo de relatório deve conter notas de rodapé e notas de fim com referências cruzadas.",
+    enunciado: "Sobre a inserção e referência de notas de rodapé e notas de fim no Word, qual alternativa está correta?",
+    alternativas: [
+      { letra: "A", texto: "A nota de rodapé é inserida com Inserir > Nota de Rodapé (ou Ctrl+Alt+Enter) e a referência cruzada deve ser criada via Inserir > Referência Cruzada com o tipo correto para atualizar automaticamente." },
+      { letra: "B", texto: "A nota de fim é criada com Inserir > Nota de Rodapé e a referência cruzada usa o tipo 'Nota de Fim'." },
+      { letra: "C", texto: "As notas de rodapé e de fim compartilham a mesma numeração sequencial." },
+      { letra: "D", texto: "A referência cruzada entre nota e texto não atualiza automaticamente quando a nota muda." },
+      { letra: "E", texto: "Para inserir nota de rodapé é preciso usar a ferramenta Referências." }
+    ],
+    gabarito: "A",
+    justificativa: "A nota de rodapé é inserida via Inserir > Nota de Rodapé (atalho Ctrl+Alt+Enter); a nota de fim via Inserir > Nota de Fim. A numeração é sequencial e independente entre tipos; a referência cruzada deve ser criada via Inserir > Referência Cruzada com o tipo correto e atualiza automaticamente.",
+    analise: {
+      A: "CORRETA. Inserção correta e referência cruzada com tipo adequado atualiza automaticamente.",
+      B: "INCORRETA. Nota de fim usa Inserir > Nota de Fim, não Rodapé.",
+      C: "INCORRETA. A numeração é independente entre tipos (rodapé e fim podem usar formatos distintos).",
+      D: "INCORRETA. A referência cruzada atualiza automaticamente quando a nota muda.",
+      E: "INCORRETA. Nota de rodapé usa Inserir > Nota de Rodapé, não a ferramenta Referências."
+    },
+    regra: "Notas de rodapé/fim são comentários editoriais fora do corpo; inserção via Inserir; numeração independente por tipo; referência cruzada via Inserir > Referência Cruzada com tipo correto.",
+    pegadinha: "Ctrl+Alt+Enter insere nota de rodapé; a referência cruzada deve apontar ao tipo correto (rodapé/fim).",
+    fonte: "Microsoft Support — Word (Notas de rodapé e notas de fim): documentação oficial da Microsoft (https://support.microsoft.com / https://learn.microsoft.com); seção 'Notas'."
+  },
+
+  {
+    id: "q-m1-52",
+    modulo: 1,
+    formato: "mc",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-2-topico-9-sub-2",
+    assunto: "M1.2 Word — Tabelas com imagens, formas e disposição de texto",
+    contexto: "Equipe insere imagem em tabela do Word e quer texto ao redor.",
+    enunciado: "Ao inserir imagem em tabela ou documento Word com o objetivo de texto ao redor, qual alternativa está correta?",
+    alternativas: [
+      { letra: "A", texto: "O texto flui naturalmente ao redor da imagem sem necessidade de configuração de envolvimento." },
+      { letra: "B", texto: "Colar como incorporado (Colar) mantém o vínculo com a fonte original para atualização automática." },
+      { letra: "C", texto: "O envolvimento (wrap) pode ser configurado apenas para formas, não para imagens." },
+      { letra: "D", texto: "A tabela não permite inserção de imagens em células." },
+      { letra: "E", texto: "A inserção de imagem em tabela pode ocorrer dentro da célula ou ao redor, com envolvimento (wrap) de texto adequado." }
+    ],
+    gabarito: "E",
+    justificativa: "Imagens em tabelas podem ser inseridas dentro da célula ou ao redor; o envolvimento (wrap) controla como o texto flui em torno do objeto (Layout > Envolver texto). Sem envolvimento adequado, o texto pode sobrepor a imagem.",
+    analise: {
+      A: "INCORRETA. O envolvimento (wrap) é necessário para texto ao redor.",
+      B: "INCORRETA. Colar como incorporado não mantém vínculo; Colar como linka (via Colar Especial) sim.",
+      C: "INCORRETA. O envolvimento pode ser aplicado a imagens e formas.",
+      D: "INCORRETA. A tabela permite inserir imagem em célula ou ao redor.",
+      E: "CORRETA. A inserção pode ocorrer dentro da célula ou ao redor com envolvimento adequado."
+    },
+    regra: "Imagens em tabelas: Inserar > Imagem dentro da célula ou ao redor; envolvimento (wrap) controla fluxo do texto; Colar vs Colar como linka.",
+    pegadinha: "Colar comum (incorporado) não atualiza quando a fonte muda; Colar como linka (vinculado) sim.",
+    fonte: "Microsoft Support — Word (Tabelas, imagens, formas e disposição de texto): documentação oficial da Microsoft (https://support.microsoft.com / https://learn.microsoft.com); seção 'Inserção'."
+  },
+
+  {
+    id: "q-m1-53",
+    modulo: 1,
+    formato: "mc",
+    estilo: "fcc",
+    origem: "autoral",
+    nivel: "intermediario",
+    topico: "modulo-1-unidade-3-topico-3-sub-2",
+    assunto: "M1.3 Excel — Funções textuais",
+    contexto: "Planilha com nomes de produtos; usuário quer concatenar, extrair substring e comparar texto.",
+    enunciado: "Em uma planilha do Excel, qual alternativa descreve corretamente o comportamento de uma função textual (por exemplo, CONCATENAR/CONCAT)?",
+    alternativas: [
+      { letra: "A", texto: "A função CONCATENAR (CONCAT) concatena as cadeias sem possibilidade de delimitador." },
+      { letra: "B", texto: "A função TEXTOJUNTAR (TEXTJOIN) concatena apenas duas strings fixas, sem aceitar intervalos." },
+      { letra: "C", texto: "A função ESQUERDA (LEFT) extrai caracteres a partir do final da string." },
+      { letra: "D", texto: "A função de data HOJE (TODAY) é uma função textual que concatena datas." },
+      { letra: "E", texto: "A função CONCATENAR (CONCAT) concatena duas ou mais cadeias com um delimitador informado." }
+    ],
+    gabarito: "E",
+    justificativa: "CONCATENAR (CONCAT) concatena duas ou mais cadeias com delimitador; TEXTOJUNTAR (TEXTJOIN) combina o texto de dois ou mais intervalos com delimitador; ESQUERDA (LEFT) extrai caracteres a partir do início; DIREITA (RIGHT) extrai a partir do final.",
+    analise: {
+      A: "INCORRETA. CONCATENAR aceita delimitador.",
+      B: "INCORRETA. TEXTOJUNTAR aceita intervalos como fonte.",
+      C: "INCORRETA. ESQUERDA extrai do início.",
+      D: "INCORRETA. HOJE é função de data, não textual.",
+      E: "CORRETA. CONCATENAR concatena cadeias com delimitador informado."
+    },
+    regra: "Funções textuais: CONCATENAR/CONCAT concatena cadeias com delimitador; TEXTOJUNTAR/TEXTJOIN combina texto de intervalos com delimitador; ESQUERDA/LEFT extrai do início; DIREITA/RIGHT extrai do final.",
+    pegadinha: "EXT.TEXTO (MID) extrai substring por posição/comprimento; não confundir com ESQUERDA.",
+    fonte: "Documentação oficial da Microsoft — Excel (Funções textuais e de data): https://support.microsoft.com; https://learn.microsoft.com (seção 'Funções')."
+  },
+
+  {
+    id: "q-m1-54",
+    modulo: 1,
+    formato: "ce",
+    estilo: "cespe",
+    origem: "autoral",
+    nivel: "avancado",
+    topico: "modulo-1-unidade-3-topico-3-sub-2",
+    assunto: "M1.3 Excel — Datas e funções de data/hora",
+    contexto: "Planilha com datas; usuário precisa compreender armazenamento interno e formatação.",
+    enunciado: "No Excel, datas são armazenadas internamente como números seriais e a formatação apenas altera a forma como o valor é exibido.",
+    alternativas: null,
+    gabarito: "certo",
+    trechoDeterminante: "O trecho determinante é 'datas são armazenadas internamente como números seriais e a formatação apenas altera a forma como o valor é exibido': a afirmação está correta.",
+    justificativa: "Datas no Excel são representadas como números seriais (ex.: 01/01/1900 = 1) e a formatação controla a exibição, não o valor; a aritmética com datas é possível por subtrações que retornam dias.",
+    analise: {
+      item: "Item VERDADEIRO. Datas são armazenadas como números seriais e a formatação apenas altera a exibição.",
+      leituraIncorreta: "Leitura que induz ao erro: tratar a alteração de formato como alteração do valor. A formatação é apenas apresentação."
+    },
+    regra: "Datas no Excel são números seriais; a formatação (número, data, hora) altera apenas a exibição.",
+    pegadinha: "Trocar o formato de data para Geral pode revelar o número serial armazenado.",
+    fonte: "Documentação oficial da Microsoft — Excel (Armazenamento de datas): https://support.microsoft.com; https://learn.microsoft.com (seção 'Datas')."
+  },
+
 ];
 
 /* ----------------------------------------------------------------------------

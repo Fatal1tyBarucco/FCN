@@ -21,7 +21,7 @@ if (typeof App === 'undefined') {
       if (typeof DB !== 'undefined' && typeof DB.init === 'function') { DB.init(); }
       this.cacheElements();
       this.bindEvents();
-      this.applyTheme((typeof State !== 'undefined' && State.theme) ? State.theme : 'dark');
+      this.applyTheme((typeof State !== 'undefined' && State.theme) ? State.theme : 'light');
       this.renderNav();
       this.switchModule((typeof State !== 'undefined' && State.currentModule && DB.modules.some(m=>m.id===State.currentModule)) ? State.currentModule : 'msoffice');
       this.updateGlobalProgress();
@@ -115,7 +115,7 @@ if (typeof App === 'undefined') {
       area.innerHTML =
         '<h1>' + (mod.icon || '') + ' ' + (mod.title || mod.label || moduleId) + '</h1>' +
         '<div class="card" style="background:linear-gradient(135deg,var(--primary),var(--accent));color:white;border:none;"><h3 style="color:white;margin-top:0;">🚀 Visão Geral Estratégica</h3><p style="color:white;">' + (mod.overview || '') + '</p></div>' +
-        '<div class="tabs" id="module-tabs">' + tabs.map(t => '<div class="tab ' + (t.id === this.activeTab ? 'active' : '') + '" data-tab="' + t.id + '">' + t.label + '</div>').join('') + '</div>' +
+        '<div class="tabs" id="module-tabs" role="region" aria-label="Abas do módulo" tabindex="0">' + tabs.map(t => '<div class="tab ' + (t.id === this.activeTab ? 'active' : '') + '" data-tab="' + t.id + '">' + t.label + '</div>').join('') + '</div>' +
         '<div class="tab-content ' + (this.activeTab === 'teoria' ? 'active' : '') + '" id="tab-teoria"><div id="teoria-host"></div></div>' +
         '<div class="tab-content ' + (this.activeTab === 'mapas' ? 'active' : '') + '" id="tab-mapas"><div class="card"><h3>Arquitetura e Fluxos</h3><div class="mermaid" id="mermaid-host"></div></div></div>' +
         '<div class="tab-content ' + (this.activeTab === 'simuladores' ? 'active' : '') + '" id="tab-simuladores"><div id="simuladores-host"></div></div>' +
@@ -166,7 +166,10 @@ if (typeof App === 'undefined') {
         if (Array.isArray(mod.videos) && mod.videos.length) {
           html += '<h3>🎥 Vídeos de Apoio</h3>';
           mod.videos.forEach(v => {
-            html += '<div class="card"><h4>' + (v.title || '') + '</h4><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/' + (v.id || '') + '" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>';
+            const tituloRaw = String(v.title || 'Vídeo de apoio').trim() || 'Vídeo de apoio';
+          const titulo = tituloRaw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+          const ariaLabel = tituloRaw.replace(/"/g, '&quot;');
+          html += '<div class="card"><h4>' + titulo + '</h4><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/' + (v.id || '') + '" title="' + titulo + '" aria-label="' + ariaLabel + '" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>';
           });
         }
       } else {
@@ -306,7 +309,7 @@ if (typeof App === 'undefined') {
 
     applyTheme(theme) {
       if (!document.documentElement) return;
-      document.documentElement.setAttribute('data-theme', theme || 'dark');
+      document.documentElement.setAttribute('data-theme', theme || 'light');
       if (this.els.themeBtn) this.els.themeBtn.textContent = (theme === 'light') ? '🌙 Dark' : '☀️ Light';
     },
 

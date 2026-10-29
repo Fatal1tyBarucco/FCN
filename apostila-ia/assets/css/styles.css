@@ -8,12 +8,12 @@
   --navy-700:#35475f;
   --ink-950:#182230;
   --ink-800:#344154;
-  --ink-600:#5d6878;
-  --ink-500:#748094;
+  --ink-600:#374151;
+  --ink-500:#4b5563;
   --line:#e4e9f0;
   --surface:#ffffff;
   --canvas:#f5f7fa;
-  --blue-700:#1e5fa8;
+  --blue-700:#174878;
   --blue-600:#2877c7;
   --blue-100:#eaf3ff;
   --green-700:#237a58;
@@ -174,7 +174,7 @@ footer{margin:2rem auto 0;padding:1.5rem 1rem;text-align:center;color:var(--ink-
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 @media(prefers-color-scheme:dark){
-  :root{color-scheme:dark;--ink-950:#edf2f8;--ink-800:#d2dce8;--ink-600:#b1bdcc;--ink-500:#9aa8ba;--line:#3a4658;--surface:#222d3e;--canvas:#151e2b;--blue-100:#203954;--green-100:#1d3c32;--amber-100:#433820;--red-100:#452b32;--shadow-card:0 8px 28px rgba(0,0,0,.12)}
+  :root{color-scheme:dark;--ink-950:#edf2f8;--ink-800:#d2dce8;--ink-600:#b1bdcc;--ink-500:#9aa8ba;--blue-700:#7ab3e8;--line:#3a4658;--surface:#222d3e;--canvas:#151e2b;--blue-100:#203954;--green-100:#1d3c32;--amber-100:#433820;--red-100:#452b32;--shadow-card:0 8px 28px rgba(0,0,0,.12)}
   body{background:var(--canvas);color:var(--ink-950)}
   body>header{background:linear-gradient(125deg,#111a28,#24364d)}
   section,.video-item,.fc-cartao,details{background:var(--surface);border-color:var(--line);color:var(--ink-950)}
@@ -319,3 +319,39 @@ footer{max-width:1100px}
 /* Evita que conteúdo intrinsecamente largo aumente a viewport do documento */
 .app-shell>main, .app-shell>main>section, .study-workspace, .inventory-details{min-width:0;max-width:100%}
 .app-shell>main pre, .app-shell>main table{max-width:100%}
+
+/* Sidebar nav items: texto claro sobre fundo escuro */
+.nav-item,.nav-item span,.nav-item *,.nav-item.active,.nav-item.active span { color: #ffffff !important; background-color: var(--navy-900) !important; }
+
+/* Tabs e código com contraste adequado */
+.tab { color: #1f2937 !important; background: transparent; }
+#search-app .bus-badge { color: #111827 !important; }
+code { color: #1f2937 !important; }
+pre code { color: inherit !important; }
+
+/* Contraste WCAG (correção axe) — força texto escuro por padrão (modo claro/no-preference) */
+.mark-complete,.fc-import,.aviso code,#search-app .bus-header h3,#search-app #bus-status,#audio-app .aud-header h3,#audio-app .aud-controle label,#audio-app #aud-vel-label,#audio-app #aud-ler-tela,.pg-card strong,.pg-tabela th,.fc-filtros label,.qz-filtros label,.bus-header h3,.bus-status,.aud-header h3,.aud-controle label,#aud-vel-label,#aud-ler-tela { color: #111827 !important; }
+/* Restaura contraste adequado no modo escuro */
+@media (prefers-color-scheme: dark) {
+  .mark-complete,.fc-import,.aviso code,#search-app .bus-header h3,#search-app #bus-status,#audio-app .aud-header h3,#audio-app .aud-controle label,#audio-app #aud-vel-label,#audio-app #aud-ler-tela,.pg-card strong,.pg-tabela th,.fc-filtros label,.qz-filtros label,.bus-header h3,.bus-status,.aud-header h3,.aud-controle label,#aud-vel-label,#aud-ler-tela { color: revert !important; }
+}
+
+/* Correções de contraste WCAG (axe) — modos claro */
+#charts-app .chart-card,#charts-app .chart-card *{color:#111827;background:#ffffff}
+#charts-app .chart-tabela th,#charts-app .chart-tabela td,#charts-app .chart-stats th,#charts-app .chart-stats td{background:#ffffff;color:#111827}
+#charts-app .chart-tabela th,#charts-app .chart-stats th{background:#1d4ed8;color:#ffffff}
+
+.app-sidebar,.app-sidebar *{color:#d5deea}
+.app-sidebar a{color:#a9ccff}
+.app-sidebar .nav-item,.app-sidebar .nav-item *{color:#ffffff !important;background-color:var(--navy-900) !important}
+
+.sim-excel-bloco p,.sim-redes-bloco p,.sim-seguranca-bloco p,.sim-prompts-bloco p,.sim-dados-bloco p,.sim-etica-bloco p{color:#e3e9ff}
+.sim-excel code,.sim-redes code,.sim-seguranca code,.sim-prompts code,.sim-dados code,.sim-etica code{color:#e3e9ff !important}
+.sim-redes-encap td,.sim-redes-encap th{background:#1f232c;color:#e3e9ff}
+.sim-excel-comparacao td{background:#1f232c;color:#e3e9ff}
+.app-sidebar strong{color:#ffffff !important}
+.app-sidebar code{color:#e3e9ff !important;background:transparent}
+#charts-app p,#charts-app strong,#charts-app code{color:#111827;background:#ffffff}
+.sidebar-brand-mark{color:var(--navy-900) !important}
+
+#simulator-containers{max-width:100vw !important;overflow:hidden !important;}
