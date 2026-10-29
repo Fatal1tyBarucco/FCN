@@ -23,6 +23,7 @@ const axeCore = require("axe-core");
       waitUntil: "load",
       timeout: 30000
     });
+    console.log('DEBUG colorScheme dark:', await page.evaluate(() => window.matchMedia('(prefers-color-scheme: dark)').matches));
     await page.waitForFunction(() =>
       window.apostilaDados &&
       document.querySelector("#excel-app [data-act='excel-console-calcular']") &&
