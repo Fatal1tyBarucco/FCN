@@ -29,7 +29,9 @@ const axeCore = require("axe-core");
     console.log('DEBUG study-workspace bg:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-workspace')).backgroundColor));
     console.log('DEBUG surface var:', await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue('--surface').trim()));
     console.log('DEBUG color-scheme:', await page.evaluate(() => getComputedStyle(document.documentElement).colorScheme));
-    console.log('DEBUG study-eyebrow contrast:', await page.evaluate(() => { var el=document.querySelector('.study-eyebrow'); var r=el.getBoundingClientRect(); return {w:r.width,h:r.height}; }));
+    console.log('DEBUG nav-item span color:', await page.evaluate(() => getComputedStyle(document.querySelector('[data-id="redes"] span')).color));
+    console.log('DEBUG nav-item span bg:', await page.evaluate(() => getComputedStyle(document.querySelector('[data-id="redes"] span')).backgroundColor));
+    console.log('DEBUG nav-item bg:', await page.evaluate(() => getComputedStyle(document.querySelector('[data-id="redes"]')).backgroundColor));
     await page.waitForFunction(() =>
       window.apostilaDados &&
       document.querySelector("#excel-app [data-act='excel-console-calcular']") &&
