@@ -320,7 +320,9 @@ footer{max-width:1100px}
 .app-shell>main, .app-shell>main>section, .study-workspace, .inventory-details{min-width:0;max-width:100%}
 .app-shell>main pre, .app-shell>main table{max-width:100%}
 
-/* Contraste WCAG (correção axe) — força texto escuro em elementos de interface clara (apenas modo claro) */
-@media (prefers-color-scheme: light) {
-  .study-eyebrow,.study-workspace-heading p,.mark-complete,.fc-import,.aviso code,.bus-header h3,#bus-status,.aud-header h3,.aud-controle label,#aud-vel-label,#aud-ler-tela,.pg-card strong,.pg-tabela th,[data-id] > span { color: #1f2937 !important; }
+/* Contraste WCAG (correção axe) — força texto escuro por padrão (modo claro/no-preference) */
+.study-eyebrow,.study-workspace-heading p,.mark-complete,.fc-import,.aviso code,.bus-header h3,#bus-status,.aud-header h3,.aud-controle label,#aud-vel-label,#aud-ler-tela,.pg-card strong,.pg-tabela th,[data-id] span { color: #1f2937 !important; }
+/* Restaura contraste adequado no modo escuro */
+@media (prefers-color-scheme: dark) {
+  .study-eyebrow,.study-workspace-heading p,.mark-complete,.fc-import,.aviso code,.bus-header h3,#bus-status,.aud-header h3,.aud-controle label,#aud-vel-label,#aud-ler-tela,.pg-card strong,.pg-tabela th,[data-id] span { color: revert !important; }
 }
