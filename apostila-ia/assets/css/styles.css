@@ -321,7 +321,7 @@ footer{max-width:1100px}
 .app-shell>main pre, .app-shell>main table{max-width:100%}
 
 /* Sidebar nav items: texto claro sobre fundo escuro */
-.nav-item,.nav-item span,.nav-item *,.nav-item.active,.nav-item.active span { color: #e2e8f0 !important; }
+.nav-item,.nav-item span,.nav-item *,.nav-item.active,.nav-item.active span { color: #ffffff !important; background-color: var(--navy-900) !important; }
 
 /* Tabs e código com contraste adequado */
 .tab { color: #1f2937 !important; background: transparent; }
