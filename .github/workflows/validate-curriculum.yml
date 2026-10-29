@@ -68,6 +68,22 @@ jobs:
       - name: Browser interaction regression tests in file URL mode
         run: node verificacao/test-browser-interactions.cjs
 
+      - name: Lighthouse audit (local static server)
+        continue-on-error: true
+        run: |
+          cd apostila-ia && python3 -m http.server 8080 >/tmp/lh-server.log 2>&1 &
+          SERVER_PID=$!
+          sleep 4
+          npx -y @lhci/cli@0.14.x autorun \
+            --collect.url=http://localhost:8080/ \
+            --collect.numberOfRuns=1 \
+            --assert.assertions.performance=0.9 \
+            --assert.assertions.accessibility=0.9 \
+            --assert.assertions.best-practices=0.9 \
+            --assert.assertions.seo=0.9 || true
+          kill $SERVER_PID 2>/dev/null || true
+          wait $SERVER_PID 2>/dev/null || true
+
       - name: Upload generated audit reports
         if: always()
         uses: actions/upload-artifact@v4
