@@ -316,8 +316,8 @@
     var css = [
       '#audio-app { font-family: var(--font-family, system-ui, sans-serif); font-size: 0.92rem; }',
       '#audio-app .aud-header { display: flex; align-items: center; gap: .5rem; margin-bottom: .8rem; }',
-      '#audio-app .aud-header h3 { margin: 0; font-size: 1.05rem; color: var(--primary-color, #1a73e8); }',
-      '#audio-app .aud-header svg { width: 1.1rem; height: 1.1rem; fill: var(--primary-color, #1a73e8); }',
+      '#audio-app .aud-header h3 { margin: 0; font-size: 1.05rem; color: var(--primary-color, #174878); }',
+      '#audio-app .aud-header svg { width: 1.1rem; height: 1.1rem; fill: var(--primary-color, #174878); }',
       '#audio-app .aud-aviso { background: #fff3cd; border: 1px solid #ffe082; border-radius: 8px; padding: .9rem 1rem; margin-bottom: .8rem; font-size: .9rem; color: #5a3a00; line-height: 1.4; }',
       '#audio-app .aud-erro { background: #fde8e8; border: 1px solid #f5c2c2; color: #600; }',
       '#audio-app .aud-controle { display: flex; flex-wrap: wrap; gap: .5rem; align-items: end; margin-bottom: .8rem; }',
@@ -326,10 +326,10 @@
       '#audio-app .aud-controle input[type=range] { width: 120px; cursor: pointer; }',
       '#audio-app #aud-texto { width: 100%; min-height: 90px; padding: .5rem .6rem; border: 1px solid #dde2e7; border-radius: 8px; font-family: inherit; font-size: .86rem; resize: vertical; }',
       '#audio-app .aud-acoes { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .6rem; }',
-      '#audio-app .aud-acoes button { padding: .4rem .8rem; border: 1px solid var(--primary-color, #1a73e8); background: var(--primary-color, #1a73e8); color: #fff; border-radius: 8px; cursor: pointer; font-size: .85rem; }',
+      '#audio-app .aud-acoes button { padding: .4rem .8rem; border: 1px solid var(--primary-color, #174878); background: var(--primary-color, #174878); color: #fff; border-radius: 8px; cursor: pointer; font-size: .85rem; }',
       '#audio-app .aud-acoes button:hover { background: #0d47a1; }',
       '#audio-app .aud-acoes button:disabled { background: #9aa0a6; border-color: #9aa0a6; cursor: default; }',
-      '#audio-app .aud-acoes button.sec { background: transparent; color: var(--primary-color, #1a73e8); }',
+      '#audio-app .aud-acoes button.sec { background: transparent; color: var(--primary-color, #174878); }',
       '#audio-app .aud-acoes button.sec:hover { background: rgba(26,115,232,.08); }',
       '#audio-app .aud-status { font-size: .82rem; color: #5f6368; min-height: 1.3em; margin-top: .4rem; }',
       '@media (prefers-color-scheme: dark) {',
@@ -385,7 +385,7 @@
       if (!ESTADO.vozesProntas || ESTADO.vozes.length === 0) {
         html += '<div class="aud-aviso">Detecção de voz: ainda sem vozes pt-BR carregadas. Aguarde alguns instantes; esta API não afirma universalidade de vozes entre dispositivos.</div>';
       } else {
-        html += '<div class="aud-aviso" style="background:#e8f0fe;border-color:#1a73e8;color:#156084;">Voz pt-BR detectada: ' + esc(ESTADO.vozSelecionada ? (ESTADO.vozSelecionada.name || ESTADO.vozSelecionada.lang) : '') + '. A qualidade depende do navegador/dispositivo.</div>';
+        html += '<div class="aud-aviso" style="background:#e8f0fe;color:#174878;color:#174878;">Voz pt-BR detectada: ' + esc(ESTADO.vozSelecionada ? (ESTADO.vozSelecionada.name || ESTADO.vozSelecionada.lang) : '') + '. A qualidade depende do navegador/dispositivo.</div>';
       }
       html += '<div class="aud-controle">';
       html += '<label>Voz: <select id="aud-voz">' + opcoesVoz() + '</select></label>';

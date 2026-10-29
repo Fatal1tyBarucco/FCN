@@ -167,7 +167,7 @@ summary:hover{color:var(--accent)}
 </main>
 
 <!-- Simulator containers (off-screen; app.js moves them into tab content on demand) -->
-<div id="simulator-containers" style="position:absolute;left:-9999px;top:0;width:1200px;height:800px;overflow:visible;" aria-hidden="true">
+<div id="simulator-containers" style="position:absolute;left:-9999px;top:0;width:1200px;height:800px;overflow:visible;">
   <div id="charts-app"></div>
   <div id="excel-app"></div>
   <div id="redes-app"></div>
@@ -185,7 +185,7 @@ summary:hover{color:var(--accent)}
 <div id="search-app" aria-label="Busca global"></div>
 <div id="audio-app" aria-label="Leitura em voz alta"></div>
 <div id="progress-app" aria-label="Painel de progresso"></div>
-<div id="accessibility-app" aria-label="Acessibilidade" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
+<div id="accessibility-app" role="region" aria-label="Acessibilidade" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
 
 <!-- Modal para Flashcards e Quiz -->
 <div id="modal" class="modal">
