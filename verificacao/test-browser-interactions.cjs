@@ -26,6 +26,8 @@ const axeCore = require("axe-core");
     console.log('DEBUG colorScheme dark:', await page.evaluate(() => window.matchMedia('(prefers-color-scheme: dark)').matches));
     console.log('DEBUG study-eyebrow color:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-eyebrow')).color));
     console.log('DEBUG study-eyebrow bg:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-eyebrow')).backgroundColor));
+    console.log('DEBUG study-workspace bg:', await page.evaluate(() => getComputedStyle(document.querySelector('.study-workspace')).backgroundColor));
+    console.log('DEBUG study-eyebrow contrast:', await page.evaluate(() => { var el=document.querySelector('.study-eyebrow'); var r=el.getBoundingClientRect(); return {w:r.width,h:r.height}; }));
     await page.waitForFunction(() =>
       window.apostilaDados &&
       document.querySelector("#excel-app [data-act='excel-console-calcular']") &&
