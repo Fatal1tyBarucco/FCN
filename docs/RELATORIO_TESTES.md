@@ -15,7 +15,7 @@ O relatório abaixo contém snapshots históricos e resultados de execuções an
 
 ---
 
-Data: 2026-10-23
+Data: 2026-10-23 — SNAPSHOT HISTÓRICO (não reflete o HEAD atual; contagens atuais: 474 flashcards, 409 questões)
 Ambiente: Termux/Android, Chromium 155 headless + CDP, Node.js
 
 ## Testes executados
@@ -30,8 +30,8 @@ Ambiente: Termux/Android, Chromium 155 headless + CDP, Node.js
 ## Contagens verificadas
 
 - Módulos: 8; Unidades: 37; Tópicos: 132; Subtópicos: 295.
-- Flashcards: 404; Questões: 365.
-- Exemplos: 885; Exercícios: 590.
+- Flashcards: 474 (histórico medido em 2026-10-23: 404); Questões: 409 (histórico medido em 2026-10-23: 365).
+- Exemplos: 924 (294 subtópicos × 3 + 1 subtópico × 6); Exercícios: 616.
 - Gráficos: 5; Simuladores: 5.
 
 ## Limitações documentadas
@@ -104,7 +104,7 @@ Veredito sobre FASE 3 — REFERÊNCIAS PENDENTES: PARCIAL / HONESTO. Marco Civil
 Veredito sobre FASE 3 — CÓDIGO: NENHUMA ALTERAÇÃO DE CÓDIGO FEITA AINDA (substituição registrada: delegate_task indisponível; execução direta). Nenhum arquivo .js do app modificado nesta sessão — apenas docs/ atualizados e evidências coletadas. Regra preservada: merge só via PR (fluxo branches+PR), nunca direto em main.
 Limitações honestas registradas (não ocultadas): nenhum simulador testado em navegador real (só node --check + smoke Node/vm); accessibility não testado com screen reader; manifest CORS bloqueado em file://; SW não registrado em file://; 0 vídeos validados; distribuição real de níveis (25,8/52,9/21,4) difere da sugerida 30/45/25 — intencional e documentado.
 
-Entrega do orquestrador: Fases 1–2 completas; Fase 3 iniciada (arquitetura confirmada, subagentes substituídos por passos isolados, revisão independente feita antes de qualquer alteração de código). Fase 4 concluída (2026-10-24, esta execução): conteúdo didático verificado diretamente nos arquivos `assets/data/*.js` (404 flashcards, 365 questões, 8 currículos, 439 nós). Nenhum arquivo `.js` do app alterado. Próximo passo (não executado ainda): corrigir referências pendentes e executar testes headless de busca/áudio/accessibility, sempre com evidência real antes de registrar como concluído.
+Entrega do orquestrador: Fases 1–2 completas; Fase 3 iniciada (arquitetura confirmada, subagentes substituídos por passos isolados, revisão independente feita antes de qualquer alteração de código). Fase 4 concluída (2026-10-24, esta execução): conteúdo didático verificado diretamente nos arquivos `assets/data/*.js` (404 flashcards e 365 questões medidos na época; valores atuais verificados: 474 flashcards e 409 questões, 8 currículos, 439 nós). Nenhum arquivo `.js` do app alterado. Próximo passo (não executado ainda): corrigir referências pendentes e executar testes headless de busca/áudio/accessibility, sempre com evidência real antes de registrar como concluído.
 
 - Revisão independente Fase 5 (perfil revisor, não autor): PASS — veredito em docs/REVISAO_INDEPENDENTE_FASE5.md (plugin advanced-delegation indisponível; substituído por revisão manual; nenhum defeito; nenhuma alteração em conteúdo; Fase 7 não necessária; pronto para Fase 6).
 
@@ -119,11 +119,11 @@ Entrega do orquestrador: Fases 1–2 completas; Fase 3 iniciada (arquitetura con
 
 Ambiente: Chromium 156 headless (Termux) controlado via Chrome DevTools Protocol (Python websockets), abrindo `file:///.../apostila-ia/index.html` (Modo A, abertura direta). Evidência real capturada em scripts locais em `/tmp` (não commitados): test_cdp2.py, test_interactions.py, test_search2.py.
 
-### T9 — Carregamento da página em file:// (CDP)
+### T9 — Carregamento da página em file:// (CDP) — evidência histórica (2026-10-24)
 - Título: "Apostila Web Interativa — Tecnologia da Informação, Dados e IA".
 - Módulos carregados: modulo-1..modulo-8 (8/8) — log navigation.js.
-- Flashcards inicializados: 404 cartões.
-- Quiz inicializado: 365 questões.
+- Flashcards inicializados: 404 cartões (medido em 2026-10-24; valor atual: 474).
+- Quiz inicializado: 365 questões (medido em 2026-10-24; valor atual: 409).
 - Charts inicializados: 5 gráficos.
 - Console: 10 mensagens, todas `log` informativas; 0 exceções (`Runtime.exceptionThrown` ausente), 0 erros de carregamento.
 - Resultado: PASS (carregamento real em file:// confirmado).

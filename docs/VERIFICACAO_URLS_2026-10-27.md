@@ -211,6 +211,14 @@ Nenhuma URL com 404/410 nem erro de rede comprovado.
 - `ref-word-table-of-contents` — https://support.microsoft.com/pt-br/word/training/insert-a-table-of-contents — HTTP 403 (recusa a cliente automatizado; retestar manualmente em navegador antes de presumir indisponibilidade)
 - `ref-word-section-breaks` — https://support.microsoft.com/pt-br/word/use-section-breaks-to-change-the-layout-or-formatting-in-one-section-of-your-word-document — HTTP 403 (recusa a cliente automatizado; retestar manualmente em navegador antes de presumir indisponibilidade)
 
+## Verificação de incorporação YouTube (P2-2) — 2026-10-29
+
+Escopo: 20 IDs de vídeo em `references.js` (formato `video`). Verificação via oEmbed (`youtube.com/oembed`) e HTTP GET no embed nocookie (`youtube-nocookie.com/embed/<ID>`).
+
+Resultado: 20/20 incorporáveis; 0 não incorporáveis. IDs listados no corpo da verificação P2-4 acima (linhas 21–26 do documento).
+
+Ressalva: disponibilidade regional e bloqueio de embed por autor do vídeo (frame-tested) não foram testados em navegador real; apenas HTTP/oEmbed.
+
 ## Observações gerais
 
 - 8 URLs sofreram redirecionamento (HTTP→HTTPS, barra final etc.) e terminaram em 2xx.

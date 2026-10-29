@@ -16,7 +16,7 @@ Ambiente: Termux/Android, Chromium 155 headless + CDP, Node.js
 
 - Módulos: 8; Unidades: 37; Tópicos: 132; Subtópicos: 295.
 - Flashcards: 404; Questões: 365.
-- Exemplos: 885; Exercícios: 590.
+- Exemplos: 924 (294 subtópicos × 3 + 1 subtópico × 6); Exercícios: 616.
 - Gráficos: 5; Simuladores: 5.
 
 ## Limitações documentadas

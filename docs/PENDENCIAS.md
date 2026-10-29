@@ -1,3 +1,24 @@
+# PENDÊNCIAS — Apostila Web Interativa FCN (podado 2026-10-29)
+
+> **Contagens reconciliadas (2026-10-29):** 307 subtópicos, 924 exemplos, 616 exercícios, 474 flashcards, 409 questões, 183 referências, 439 nós. Audit curricular: 0 erros; verify_urls: 0 quebradas (8 bloqueadas anti-bot); node --check: 43/43 OK; verificar-estrutura: 0 falhas.
+
+> O **backlog acionável e podado** está em `docs/BACKLOG_REAL_2026-10-27.md`. Este arquivo mantém histórico completo abaixo.
+
+## ABERTO REAL
+
+Apenas itens ainda pendentes, com evidência. Fonte: `docs/BACKLOG_REAL_2026-10-27.md`.
+
+- [ ] **P0-2** Sincronizar documentos de governança linkados pelo app; verificar no deploy que o site publicado mostra 460/399 (HEAD 321901e). Evidência: deploy-pages.yml.
+- [ ] **P0-3** Manter disciplina: nenhum "HEAD verde" sem commit.
+- [ ] **P1-2** Subtópico `curriculum.js:450` (`modulo-1-unidade-2-topico-14-sub-1`) com 6 exemplos (3 excedentes). Decidir manter 6 (corrigir total para 888 com nota) ou remover 3 (total 885). Registrado em `docs/DECISOES_ARQUITETURAIS.md`.
+- [ ] **P1-4** Reconciliar `docs/RELATORIO_TESTES.md` (ainda afirma 404/365 em seções históricas).
+- [x] **P2-1** axe-core: 89 nós SVG "incomplete" (contraste de texto SVG). Cálculo manual confirma conformidade (15,37:1 / 11,22:1 / 6,08:1 sobre #111318). Evidência: docs/P2-1_CONTRASTE_SVG.md. Inspeção visual/leitor de tela/teclado permanecem pendentes (não resolvidos por cálculo).
+- [ ] **P2-2** 20 iframes YouTube "frame-tested: incomplete" (conteúdo externo).
+- [ ] **P2-3** Leitor de tela, teclado manual, WCAG manual, dispositivos físicos, PWA via HTTP/HTTPS — não comprovados. Único teste de teclado é automatizado.
+- [ ] **P2-5** Testes de interação dos 6 simuladores (entradas inválidas, limites, consistência).
+
+## HISTÓRICO
+
 > **Contagens reconciliadas (2026-10-28):** 307 subtópicos, 924 exemplos, 616 exercícios, 474 flashcards (M1=80), 409 questões (M1=54), 183 referências, 439 nós. Audit curricular: 0 erros; verify_urls: 0 quebradas (8 bloqueadas anti-bot); node --check: 43/43 OK; verificar-estrutura: 0 falhas.
 
 # ⚠️ BACKLOG REAL MOVIDO
