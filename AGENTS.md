@@ -188,3 +188,10 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 - PR #23 squash-merged em `main` (commit b1a00b0); branch `feat/orquestracao-integral-2026-10-28` deletada.
 - Fix de CI incluído no merge: contraste axe zerado (130→0 violações), overflow horizontal mobile corrigido, `verificar-estrutura.js` 0 falhas, teste de interação exit 0.
 - Branches: apenas `main`. Stash@{0} com alterações pré-existentes (progress.js, simulator_security.js).
+
+
+## Checkpoint — 2026-10-29 (pós-merge PR #24)
+
+- PR #24 squash-merged em `main` (commit 218d2c2): contraste axe em progress.js (#1a73e8→#174878 em .pg-big/.pg-btn). Branch feat/contraste-progress-20261029 deletada.
+- Validação: node --check 43/43 OK; verificar-estrutura 0 falhas; phase5_smoke 25/25.
+- Remanescentes (requerem navegador real): vídeos não incorporados, SW não testado em browser, WCAG leitor de tela, responsividade em dispositivo físico, referências pendentes (RFCs/CF incisos/ANPD).
