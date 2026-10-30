@@ -50,3 +50,12 @@ apostila-ia/headless_*.html
 apostila-ia/test_simulators.js
 apostila-ia/tmp_dom.html
 apostila-ia/audit_quantitativo.txt
+
+# Evidencias de teste/screenshot (nao versionar por padrao)
+evidencia_*.png
+evidencia_*.html
+evidencia_interacao_*.png
+evidencia_interacao_*.html
+verificacao/evidencias/*.png
+verificacao/evidencias/*.json
+
