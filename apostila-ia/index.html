@@ -25,6 +25,9 @@
 </head>
 <body>
 
+<!-- Skip link para navegação acessível por teclado -->
+<a href="#main" class="a11y-skip-link">Ir para o conteúdo principal</a>
+
 <!-- Main content: app.js SPA tab system -->
 <main id="main" tabindex="-1">
   <h1 class="sr-only">Apostila Web Interativa FCN — TI, Dados e IA</h1>
@@ -47,7 +50,7 @@
           <option value="1.5">1.5x</option>
         </select>
       </div>
-      <button class="btn btn-sec" id="theme-toggle" title="Alternar tema escuro/claro">🌓 Tema</button>
+      <button class="btn btn-sec" id="theme-toggle" title="Alternar tema escuro/claro" aria-label="Alternar tema">🌓 Tema</button>
     </div>
   </header>
 
@@ -56,7 +59,7 @@
 </main>
 
 <!-- Simulator containers (off-screen; app.js moves them into tab content on demand) -->
-<div id="simulator-containers" style="position:absolute;left:0;top:0;width:1200px;height:800px;overflow:visible;">
+<div id="simulator-containers">
   <div id="charts-app"></div>
   <div id="excel-app"></div>
   <div id="redes-app"></div>
@@ -67,19 +70,25 @@
 </div>
 
 <!-- Old-system engine containers (outside #content-area so app.js tab renderer
-     never wipes them; ui-shell.js repositions #curriculum tree into the sidebar) -->
-<div id="curriculum" role="navigation" aria-label="Árvore curricular"></div>
+     never wipes them; ui-shell.js reposiciona #curriculum tree into the sidebar) -->
+<div id="navegacao-curriculo">
+  <div id="curriculum" role="tree" aria-label="Árvore curricular"></div>
+</div>
+<div id="painel-conteudo">
+  <div id="topic-panel" aria-live="polite"></div>
+</div>
 <div id="flashcards-app"></div>
 <div id="quiz-app"></div>
-<div id="search-app" aria-label="Busca global"></div>
+<div id="videos-app" role="region" aria-label="Vídeos educacionais"></div>
+<div id="search-app" role="region" aria-label="Busca global"></div>
 <div id="audio-app" aria-label="Leitura em voz alta"></div>
-<div id="progress-app" aria-label="Painel de progresso"></div>
+<div id="progress-app" role="region" aria-label="Painel de progresso"></div>
 <div id="accessibility-app" role="region" aria-label="Acessibilidade" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);"></div>
 
 <!-- Modal para Flashcards e Quiz -->
-<div id="modal" class="modal">
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-content">
-    <button class="modal-close" id="modal-close" aria-label="Fechar modal" onclick="App.closeModal()">✖</button>
+    <button class="modal-close" id="modal-close" aria-label="Fechar modal">✖</button>
     <div id="modal-body"></div>
   </div>
 </div>
@@ -176,7 +185,7 @@ montarSimulador('EthicsSimulator','etica-app');
 if('serviceWorker'in navigator&&location.protocol==='https:'){navigator.serviceWorker.register('service-worker.js').catch(function(){});}
 </script>
 
-<footer role="contentinfo" style="text-align:center;padding:1rem;color:var(--text-dim);font-size:.85rem;">Apostila Web Interativa FCN — conteúdo educacional. Modo offline parcial em file://.</footer>
+<footer role="contentinfo">Apostila Web Interativa FCN — conteúdo educacional. Modo offline parcial em file://.</footer>
 
 </body>
 </html>

@@ -41,6 +41,8 @@ if (typeof App === 'undefined') {
       this.els.themeBtn = document.getElementById('theme-toggle') || document.querySelector('.btn-theme');
       this.els.globalProgressBar = document.getElementById('global-progress');
       this.els.progressText = document.getElementById('progress-text');
+      this.els.modal = document.getElementById('modal');
+      this.els.modalClose = document.getElementById('modal-close');
     },
 
     bindEvents() {
@@ -56,6 +58,10 @@ if (typeof App === 'undefined') {
         if (typeof State !== 'undefined') { State.ttsRate = parseFloat((e.target || {}).value) || 1; State.save(); }
       });
       if (this.els.themeBtn) this.els.themeBtn.addEventListener('click', () => this.toggleTheme());
+      if (this.els.modalClose) this.els.modalClose.addEventListener('click', () => this.closeModal());
+      if (this.els.modal) this.els.modal.addEventListener('click', (e) => {
+        if (e.target === this.els.modal) this.closeModal();
+      });
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') this.closeModal();
         if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -114,7 +120,7 @@ if (typeof App === 'undefined') {
       }
       area.innerHTML =
         '<h1>' + (mod.icon || '') + ' ' + (mod.title || mod.label || moduleId) + '</h1>' +
-        '<div class="card" style="background:linear-gradient(135deg,var(--primary),var(--accent));color:white;border:none;"><h3 style="color:white;margin-top:0;">🚀 Visão Geral Estratégica</h3><p style="color:white;">' + (mod.overview || '') + '</p></div>' +
+        '<div class="card card-gradient"><h3>🚀 Visão Geral Estratégica</h3><p>' + (mod.overview || '') + '</p></div>' +
         '<div class="tabs" id="module-tabs" role="region" aria-label="Abas do módulo" tabindex="0">' + tabs.map(t => '<div class="tab ' + (t.id === this.activeTab ? 'active' : '') + '" data-tab="' + t.id + '">' + t.label + '</div>').join('') + '</div>' +
         '<div class="tab-content ' + (this.activeTab === 'teoria' ? 'active' : '') + '" id="tab-teoria"><div id="teoria-host"></div></div>' +
         '<div class="tab-content ' + (this.activeTab === 'mapas' ? 'active' : '') + '" id="tab-mapas"><div class="card"><h3>Arquitetura e Fluxos</h3><div class="mermaid" id="mermaid-host"></div></div></div>' +
@@ -122,10 +128,18 @@ if (typeof App === 'undefined') {
         '<div class="tab-content ' + (this.activeTab === 'flash' ? 'active' : '') + '" id="tab-flash"><div class="card" id="flash-host"></div></div>' +
         '<div class="tab-content ' + (this.activeTab === 'cards' ? 'active' : '') + '" id="tab-cards"><div class="card"><h3>🃏 Flashcards</h3><p>Clique no cartão.</p><div class="fc-deck" id="fc-deck"></div></div></div>' +
         '<div class="tab-content ' + (this.activeTab === 'quiz' ? 'active' : '') + '" id="tab-quiz"><div class="card"><h3>📝 Simulado</h3><p>Resolva e confira.</p><div id="quiz-host"></div></div></div>' +
-        '<button class="mark-complete ' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? 'completed' : '') + '" onclick="App.toggleComplete(\'' + moduleId + '\')">' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? '✅ Módulo Concluído' : 'Marcar como Concluído') + '</button>';
+        '<button class="mark-complete ' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? 'completed' : '') + '" id="mark-complete-' + moduleId + '" data-module="' + moduleId + '">' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? '✅ Módulo Concluído' : 'Marcar como Concluído') + '</button>';
 
       this.bindTabs();
+      this.bindCompleteButton(moduleId);
       this.loadTabContent(moduleId);
+    },
+
+    bindCompleteButton(moduleId) {
+      const btn = document.getElementById('mark-complete-' + moduleId);
+      if (btn) {
+        btn.addEventListener('click', () => this.toggleComplete(moduleId));
+      }
     },
 
     bindTabs() {
