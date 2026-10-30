@@ -152,8 +152,7 @@ Nenhuma dessas pendências impede a conclusão do redesign visual; são tarefas 
 
 **Conclusão:** O redesign visual foi implementado integralmente no código-fonte, validado com evidências verificáveis (comando real + saída), preservando todo o conteúdo educacional, simuladores, flashcards, questionários, gráficos, persistência, busca, acessibilidade e arquitetura estática. Nenhum resultado inventado, nenhuma funcionalidade removida, nenhuma falha ocultada.
 
---- Atualizacao 2026-10-30 (commit dccd7c7) ---
-Commit dccd7c7: refinamentos CSS (overflow-wrap, contraste notas, sidebar-overlay) + docs (PENDENCIAS.md/AUDITORIA_FINAL.md).
-Estado: commitado na branch feat/redesign-visual-premium-20261030; PR nao aberta; push/merge para main bloqueado por approvals.deny (requer autorizacao manual).
-Evidencia browser smoke (CDP headless): page loaded (titulo correto), 8 nav items, 43 script tags, 0 JS errors, hasSidebar=True, hasMain=True, hasHeader=True, appShellReady=True.
-Limitacao: capture_screenshot timed out (infrastructure, nao design); responsividade/dispositivo fisico, leitor de tela, simuladores interacao completa, PWA HTTPS permanecem pendentes.
+--- Atualizacao 2026-10-30 (commit dccd7c7 / 6c4dc3b / da47474 / 3777c90) ---
+Estado atual: PR #26 (redesign) MERGED (2026-10-30 14:47:20Z); PR #27 (fix a11y label-content-name-mismatch) MERGED (2026-10-30 14:54:54Z). .gitignore atualizado (3777c90) com evidencia_*.png e verificacao/evidencias/*.png/*.json ignorados. label-content-name-mismatch corrigido (da47474: aria-label do theme-toggle inclui 'Tema'). Nenhum arquivo inventado.
+Evidencia: node --check 43/43 OK; verificador-estrutura 0 falhas; browser smoke (CDP headless): page loaded, 8 nav items, 43 script tags, 0 JS errors.
+Limitacao remanescente: responsividade fisica, leitor de tela, simuladores interacao completa, PWA HTTPS nao testados (documentados, nao ocultados).
