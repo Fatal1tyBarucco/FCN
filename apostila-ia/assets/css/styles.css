@@ -33,6 +33,19 @@
   --font-mono: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', ui-monospace, SFMono-Regular, 'Courier New', monospace;
 }
 
+/* Limitação intencional de contraste — paleta preservada conforme referência visual
+   obrigatória `examples/index_example.html` (paleta idêntica: #0f172a, #1e293b,
+   #334155, #3b82f6, #8b5cf6, #f8fafc, #94a3b8). Evidência de cálculo real
+   (WCAG 2.2, luminância relativa sRGB linearizada):
+   - #f8fafc / #0f172a = 17,06:1  (AA/AAA: passa; ideal 21:1 — abaixo, mas passa rigor)
+   - #94a3b8 / #0f172a = 6,96:1  (AA: passa; AAA 7:1 — abaixo por 0,05; ideal 7,5:1)
+   - #3b82f6 / #0f172a = 4,85:1  (AA texto grande: passa; AAA 7:1 — abaixo; ideal 5,6:1)
+   Nenhum token alterado: identidade visual da referência preservada integralmente.
+   Se alteração de paleta for requerida, deve ser feita com substituição explícita
+   em `index_example.html` e registrada como mudança de identidade visual, não
+   como correção de contraste mínima.
+*/
+
 /* Tema claro via data-theme (State.save persiste em localStorage) */
 [data-theme="light"] {
   --bg: #f1f5f9;
@@ -106,13 +119,15 @@ h1 { font-size: var(--font-scale-h1); }
 h2 { font-size: var(--font-scale-h2); color: var(--primary); border-left: 4px solid var(--primary); padding-left: 1rem; margin-top: 2rem; }
 h3 { font-size: var(--font-scale-h3); color: var(--accent); margin-top: 1.5rem; }
 h4 { font-size: var(--font-scale-h4); color: var(--text); margin-top: 1.25rem; }
-p { margin-bottom: 1rem; line-height: 1.7; font-size: var(--font-scale-body); }
+p { margin-bottom: 1rem; line-height: 1.7; font-size: var(--font-scale-body); overflow-wrap: anywhere; word-break: break-word; }
+.aviso { overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
 a { color: var(--primary); text-decoration: none; font-weight: 500; }
 a:hover, a:focus { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; outline: 2px solid var(--primary); outline-offset: 2px; }
 code {
   background: rgba(59, 130, 246, 0.15); padding: 2px 6px; border-radius: var(--radius-sm);
   font-family: var(--font-mono); font-size: 0.875em; color: #fbbf24;
   border: 1px solid rgba(250, 250, 252, 0.1);
+  overflow-wrap: anywhere; word-break: break-word;
 }
 pre {
   background: rgba(15, 23, 42, 0.6); padding: 1.125rem; border-radius: var(--radius);
@@ -136,13 +151,18 @@ tr:last-child td { border-bottom: none; }
 .badge-yellow { background: #78350f; color: #fcd34d; }
 .badge-purple { background: #4c1d95; color: #c4b5fd; }
 
-/* --- Layout Premium --- */
+.sidebar-overlay {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5);
+  opacity: 0; visibility: hidden; transition: opacity 0.3s; z-index: 150;
+  border: none; padding: 0; margin: 0;
+}
+
 body.app-shell-ready {
-  display: flex; min-height: 100vh;
+  display: block; min-height: 100vh;
   background: linear-gradient(165deg, var(--bg) 0%, #1e293b 100%);
 }
 #app-shell {
-  display: flex; width: 100%; min-height: 100vh;
+  display: flex; width: 100%; min-height: 100vh; overflow-x: hidden;
   background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
               radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
 }
@@ -224,7 +244,7 @@ body.app-shell-ready {
 
 /* Main Content */
 #main {
-  flex: 1; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%;
+  flex: 1; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; min-width: 0;
 }
 
 /* Header Premium */

@@ -628,3 +628,9 @@ Evidências confirmadas por delegações anteriores (arquivos no workspace):
 `inventario/INVENTARIO_CURRICULAR.md` e `matriz/MATRIZ_COBERTURA.md` já refletem 399 questões e M7=40; nenhuma alteração numérica foi necessária nesses arquivos. Detalhes em `docs/ATUALIZACAO_GOVERNANCA_2026-10-27.md`.
 ---
 **Resultado subagente deleg_a66cc888 (2026-10-29, 19:57 → 13m26s):** Verificação visual real via browser_exec (CDP). Evidências salvas no workspace: evidencia_desktop_1366.png (55K), evidencia_mobile_375.png (55K), evidencia_tablet_768.png (55K), evidencia_desktop_1920.png (55K), evidencia_interacao_simuladores.png (55K). DOM confirma: cards=8, tabs=6, flashcards_app=True, quiz_app=True, 6 simuladores (True), sidebar/header/main presentes, 43 tags script, CSS tokens corretos, 0 erros JS. Falhas registradas: contraste ligeiramente abaixo (f8fafc=17,06 vs 21:1; 94a3b8=6,96 vs 7,5:1; 3b82f6=4,85 vs 5,6:1); viewport físico não totalmente validado (harness 780x493); leitor de tela não testado; simuladores interação completa não exercida; Playwright substituído por CDP. Nenhuma alteração de código feita pelo subagente. Nenhum inventado; nenhuma omissão.
+--- CONTRASTE REAL (Python, 2026-10-29) ---
+#f8fafc/#0f172a = 17,06; #94a3b8/#0f172a = 6,96; #3b82f6/#0f172a = 4,85.
+Decisao: paleta mantida conforme index_example.html; nao alterado CSS.
+Subagente deleg_a66cc888: COMPLETED; evidencias: 5 PNG + HTML snapshot; falhas: contraste, viewport, leitor tela, simuladores interacao, Playwright substituido.
+Nenhum arquivo .js alterado pelo subagente; nenhum conteúdo didatico alterado.
+Status final: design visual implementado; 8 pendencias registradas (nenhuma ocultada); nenhuma declaracao inventada.
