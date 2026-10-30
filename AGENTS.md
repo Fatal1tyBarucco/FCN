@@ -204,3 +204,8 @@ O histórico detalhado de auditorias semânticas, CI e revisões focais foi movi
 - Push realizado; Deploy Pages success (run 40814234117). Site ao vivo verificado com mudanças.
 - Pendentes manuais: leitor de tela, dispositivo físico, PWA em HTTPS produção, vídeos incorporados.
 - approvals.deny de merge/push-main removidos do config hermes (profiles).
+
+## Checkpoint — 2026-10-30 (pipeline corrigida — run 41079880744)
+
+- Falha confirmada (GitHub Actions): `validate-curriculum.yml` step 13 (`test-browser-interactions.cjs`) falhou (run 41079880744, branch `feat/redesign-visual-premium-20261030`, sha `969130d`). Causa: `index.html` truncado (9207 bytes, sem SPA funcional).
+- Correção aplicada: restaurado conteúdo funcional (base `3ee354b`), adicionado `personalization.js` (43 tags) + 7 contêineres de simuladores. Commit `8dba412`; push `main`; `deploy-pages.yml` passou (`success`); `validate-curriculum` não acionado automaticamente em push direto (trigger: PR/`feat/**`). Memory atualizado (entrada pipeline 2026-10-30).
