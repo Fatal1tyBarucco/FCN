@@ -120,7 +120,30 @@ const axeCore = require("axe-core");
     await page.keyboard.press("ArrowRight");
     assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "true", "ArrowRight should expand the focused curriculum node");
 
+    // Simulator containers are mounted once in #simulator-containers, which is
+    // deliberately positioned off-canvas (rendered, but outside the viewport).
+    // Playwright cannot click an off-viewport control, so every interaction
+    // below first navigates to the owning module and opens its "Simuladores"
+    // tab, which moves the container into #sim-ref-host (the previous version
+    // of this test assumed that state without producing it).
+    async function abrirAbaSimuladores(moduloId, containerId) {
+      await page.locator(`#nav-list .nav-item[data-id="${moduloId}"]`).click();
+      await page.locator('#module-tabs .tab[data-tab="simuladores"]').click();
+      await page.waitForSelector(`#sim-ref-host ${containerId}`, { state: "attached", timeout: 15000 });
+      await page.waitForFunction(
+        id => {
+          const el = document.querySelector(`#sim-ref-host ${id}`);
+          if (!el) return false;
+          const rect = el.getBoundingClientRect();
+          return rect.width > 0 && rect.height > 0;
+        },
+        containerId,
+        { timeout: 15000 }
+      );
+    }
+
     // Excel: evaluate a formula against the simulator's real formula engine.
+    await abrirAbaSimuladores("msoffice", "#excel-app");
     await page.locator("#excel-console-fm").fill("=SOMA(1;2)");
     await page.locator("#excel-app [data-act='excel-console-calcular']").scrollIntoViewIfNeeded();
     await page.locator("#excel-app [data-act='excel-console-calcular']").click();
@@ -131,6 +154,7 @@ const axeCore = require("axe-core");
     assert.match(excelResult, /3/, "Excel formula must calculate SOMA(1;2) as 3");
 
     // Networks: calculate an IPv4 network from IP and CIDR mask.
+    await abrirAbaSimuladores("redes", "#redes-app");
     await page.locator("#redes-app [data-act='net-cidr']").click();
     await page.waitForFunction(() =>
       (document.querySelector("#net-cidr-out")?.innerText || "").includes("192.168.1.0"),
@@ -139,6 +163,7 @@ const axeCore = require("axe-core");
     assert.match(cidrResult, /192\.168\.1\.0/, "CIDR calculator must derive the /24 network");
 
     // Security: classify one sample and require feedback.
+    await abrirAbaSimuladores("seguranca", "#seguranca-app");
     await page.locator("#seguranca-app [data-act='classificar'][data-msg='msg1'][data-resp='phishing']").click();
     await page.waitForFunction(() =>
       (document.querySelector("#sec-fb-msg1")?.innerText || "").trim().length > 0,
@@ -147,6 +172,7 @@ const axeCore = require("axe-core");
     assert.ok(securityFeedback.length > 0, "security classification must return feedback");
 
     // Prompt engineering: evaluate a populated prompt and verify feedback changes.
+    await abrirAbaSimuladores("ia", "#prompts-app");
     await page.locator("#prom-ctx").fill("Sou estudante de concurso público de TI.");
     await page.locator("#prom-obj").fill("Explique sub-redes IPv4 com exemplo calculado.");
     await page.locator("#prom-res").fill("Até 150 palavras; não invente dados; indique limites.");
@@ -160,6 +186,7 @@ const axeCore = require("axe-core");
     assert.ok(promptFeedback.length > 0, "prompt evaluation must return feedback");
 
     // Data simulator: open its chart pane, then change histogram class count.
+    await abrirAbaSimuladores("dados", "#dados-app");
     await page.locator("#dados-app [data-act='nav'][data-target='charts']").click();
     const binsInput = page.locator("#dados-bins");
     await binsInput.waitFor({ state: "visible", timeout: 5000 });
@@ -175,6 +202,7 @@ const axeCore = require("axe-core");
     assert.notEqual(histogramAfter, histogramBefore, "changing histogram bins must recalculate SVG");
 
     // Ethics: selecting and checking a decision must produce scenario feedback.
+    await abrirAbaSimuladores("etica", "#etica-app");
     const ethicsChoice = page.locator("#etica-app .sim-etica-bloco input[type='radio']").first();
     await ethicsChoice.check();
     await page.locator("#etica-app [data-act='etica-verificar']").first().click();
@@ -185,6 +213,8 @@ const axeCore = require("axe-core");
     assert.ok(ethicsFeedback.length > 0, "ethics decision must return feedback");
 
     // Charts: edit a numeric source cell and verify the rendered histogram changes.
+    // charts-app is owned by the "visualizacao" module's Simuladores tab.
+    await abrirAbaSimuladores("visualizacao", "#charts-app");
     const chartCell = page.locator("#charts-app input[data-celula='histograma:0:0']");
     await chartCell.waitFor({ state: "visible", timeout: 5000 });
     const chartBefore = await page.locator("#saida-histograma svg").evaluate(el => el.outerHTML);
