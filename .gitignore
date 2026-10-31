@@ -1,5 +1,8 @@
 # Ambiente de runtime do agente (não versionar no repo do projeto)
 .hermes/
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v4/
 
 # Arquivos de exemplo/artefatos de demonstração (não versionar)
 apostila-ia/examples/
