@@ -148,7 +148,7 @@
     for (var i = 0; i < 5; i++) {
       filled += i < val ? '\u25a0' : '\u25a1';
     }
-    var classe = val >= 4 ? 'sim-prom-ok' : val >= 2 ? 'sim-prom-aviso' : 'sim-prom-err';
+    var classe = val >= 4 ? 'sim-prompts-ok' : val >= 2 ? 'sim-prompts-aviso' : 'sim-prompts-err';
     return '<span class="' + esc(classe) + '">' + esc(label) + ': ' + filled + ' (' + val + '/5)</span>';
   }
 
@@ -156,26 +156,29 @@
    * CSS escopado (.sim-prompts)
    * ------------------------------------------------------------------ */
   var promptCss = '<style>'
-    + '.sim-prompts{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
-    + '.sim-prompts h3{margin:8px 0 2px}.sim-prompts h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-prompts-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-prompts-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
-    '.sim-prompts-bloco .sim-prompts-sub{color:#cbd5e1}' +
+    + '.sim-prompts{max-width:980px;margin:0 auto;font-family:var(--font-sans);color:var(--text)}'
+    + '.sim-prompts h3{margin:8px 0 2px}.sim-prompts h4{margin:16px 0 6px;color:var(--text);font-size:1rem}'
+    + '.sim-prompts-sub{color:var(--text-dim);font-size:.85rem;margin:0 0 12px}'
+    + '.sim-prompts-bloco{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin:12px 0}' +
+    '.sim-prompts-bloco .sim-prompts-sub{color:var(--text-dim)}' +
     '.sim-prompts-field{margin-bottom:10px}'
-    + '.sim-prompts-label{display:block;font-size:.78rem;color:#9ca3af;margin-bottom:2px}'
-    + '.sim-prompts-input{width:100%;font-family:"Courier New",monospace;font-size:.82rem;background:#111318;color:#e3e9ff;border:1px solid #3a4252;border-radius:4px;padding:6px;resize:vertical}'
+    + '.sim-prompts-label{display:block;font-size:.78rem;color:var(--text-dim);margin-bottom:2px}'
+    + '.sim-prompts-input{width:100%;font-family:var(--font-mono);font-size:.82rem;background:var(--surface-elev);color:var(--text);border:1px solid var(--border-dim);border-radius:var(--radius-sm);padding:6px;resize:vertical}'
     + '.sim-prompts-input textarea{width:100%;min-height:60px}'
     + '.sim-prompts-in-sm{width:48%;font-size:.82rem;padding:4px}'
-    + '.sim-prompts-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:6px 14px;font-size:.8rem;cursor:pointer;margin:4px 4px 4px 0}'
-    + '.sim-prompts-btn:hover{background:#4a5466}'
-    + '.sim-prompts-ok{color:#5ee0a0}.sim-prompts-err{color:#ff7b7b}.sim-prompts-aviso{color:#ffd57c}'
+    + '.sim-prompts-btn{background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:6px 14px;font-size:.8rem;cursor:pointer;margin:4px 4px 4px 0}'
+    + '.sim-prompts-btn:hover{background:var(--border)}'
+    + '.sim-prompts-btn:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}'
+    + '.sim-prompts-input:focus-visible{outline:2px solid var(--accent-text);outline-offset:1px}'
+    + '.sim-prompts-ok{color:var(--ok-text)}.sim-prompts-err{color:var(--err-text)}.sim-prompts-aviso{color:var(--warn-text)}'
     + '.sim-prompts-comparacao{display:grid;grid-template-columns:1fr 1fr;gap:12px}'
-    + '.sim-prompts-comparacao div{background:#161a21;border:1px solid #333947;border-radius:6px;padding:8px}'
-    + '.sim-prompts-sim{background:#1b1e24;border-left:3px solid #4a94d4;margin:8px 0;padding:8px;font-size:.82rem;color:#b9c0d4}'
+    + '.sim-prompts-comparacao div{background:var(--surface-elev);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px}'
+    + '.sim-prompts-sim{background:var(--surface-elev);border-left:3px solid var(--primary);margin:8px 0;padding:8px;font-size:.82rem;color:var(--text-dim)}'
     + '.sim-prompts-nota{font-size:1.1rem;font-weight:600}'
-    + '.sim-prompts-link{color:#174ea6;cursor:pointer;text-decoration:underline}'
-    + '.sim-prompts-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-prompts-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
-    + '.sim-prompts-nav-btn:hover{background:#3a4252}'
+    + '.sim-prompts-link{color:var(--text-link);cursor:pointer;text-decoration:underline}'
+    + '.sim-prompts-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-prompts-nav-btn{background:var(--surface-elev);color:var(--text);border:1px solid var(--border-dim);border-radius:var(--radius-sm);padding:4px 12px;font-size:.8rem;cursor:pointer}'
+    + '.sim-prompts-nav-btn:hover{background:var(--border)}'
+    + '.sim-prompts-nav-btn:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}'
     + '.sim-prompts-ponteiro{cursor:col-resize}'
     + '</style>';
 
@@ -195,7 +198,7 @@
     html += '<textarea id="prom-fmt" aria-label="Formato de saída do prompt" class="sim-prompts-input" placeholder="Ex.: Parágrafos curtos com exemplo numérico.">' + esc('') + '</textarea></div>';
     html += '<button type="button" class="sim-prompts-btn" data-act="prom-avaliar">Avaliar prompt</button>';
     html += '<button type="button" class="sim-prompts-btn" data-act="prom-simular">Simular saída (local)</button>';
-    html += '<button type="button" class="sim-prompts-btn" data-act="prom-reset">Nova avaliação</button>';
+    html += '<button type="button" class="sim-prompts-btn sim-prompts-btn-reset" data-act="prom-reset">Nova avaliação</button>';
     html += '<div id="prom-resultado" class="sim-prompts-aviso" style="margin-top:8px">Preencha os campos e clique em Avaliar.</div>';
     html += '</div>';
     return html;
@@ -209,9 +212,9 @@
       html += '<div style="margin-bottom:16px">';
       html += '<strong>' + esc(ex.titulo) + '</strong>';
       html += '<div class="sim-prompts-comparacao">';
-      html += '<div><h5 style="margin:4px 0;color:#ff7b7b">Prompt ruim (ambíguo)</h5><pre class="sim-prompts-input" tabindex="0">' + esc(ex.promptRuim) + '</pre>';
+      html += '<div><h5 style="margin:4px 0;color:var(--err-text)">Prompt ruim (ambíguo)</h5><pre class="sim-prompts-input" tabindex="0">' + esc(ex.promptRuim) + '</pre>';
       html += '<div style="margin-top:6px"><strong>Pontuação:</strong> ' + esc(promptScoreTotal(avaliarPrompt(ex.promptRuim))) + '%</div></div>';
-      html += '<div><h5 style="margin:4px 0;color:#5ee0a0">Prompt bom (engenharia aplicada)</h5><pre class="sim-prompts-input" tabindex="0">' + esc(ex.promptBom) + '</pre>';
+      html += '<div><h5 style="margin:4px 0;color:var(--ok-text)">Prompt bom (engenharia aplicada)</h5><pre class="sim-prompts-input" tabindex="0">' + esc(ex.promptBom) + '</pre>';
       html += '<div style="margin-top:6px"><strong>Pontuação:</strong> ' + esc(promptScoreTotal(avaliarPrompt(ex.promptBom))) + '%</div></div>';
       html += '</div>';
       html += '<button type="button" class="sim-prompts-btn" data-act="prom-mostrar-indicadores" data-ex="' + esc(ex.id) + '" style="margin:6px 0">Mostrar indicadores</button>';
@@ -283,7 +286,7 @@
     var fmt = containerEl.querySelector('#prom-fmt').value || '';
     var texto = [ctx, obj, res, fmt].filter(function (x) { return x.trim(); }).join('\n\n');
     if (!texto) {
-      promSetResult(containerEl, 'Preencha pelo menos um campo.', 'sim-prom-aviso');
+      promSetResult(containerEl, 'Preencha pelo menos um campo.', 'sim-prompts-aviso');
       return;
     }
     var scores = avaliarPrompt(texto);
@@ -302,7 +305,7 @@
     var ctx = containerEl.querySelector('#prom-ctx').value || '';
     var obj = containerEl.querySelector('#prom-obj').value || '';
     if (!obj.trim()) {
-      promSetResult(containerEl, 'Defina um objetivo antes de simular a saída.', 'sim-prom-aviso');
+      promSetResult(containerEl, 'Defina um objetivo antes de simular a saída.', 'sim-prompts-aviso');
       return;
     }
     var html = '<div class="sim-prompts-sim"><strong>Simulação local (sem API) — saída predefinida:</strong></div>';
@@ -319,6 +322,7 @@
     containerEl.querySelector('#prom-res').value = '';
     containerEl.querySelector('#prom-fmt').value = '';
     promSetResult(containerEl, 'Campos limpos. Preencha e clique em Avaliar.', 'sim-prompts-aviso');
+    containerEl.querySelector('#prom-ctx').focus();
   }
 
   function promOnMostrarIndicadores(e, containerEl) {

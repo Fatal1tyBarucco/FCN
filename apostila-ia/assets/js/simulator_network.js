@@ -174,19 +174,19 @@
   ];
 
   var netCss = '<style>' +
-    '.sim-redes{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}' +
-    '.sim-redes h3{margin:8px 0 2px}.sim-redes h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}' +
-    '.sim-redes-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}' +
-    '.sim-redes-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
-    '.sim-redes-bloco .sim-redes-sub{color:#cbd5e1}' +
-    '.sim-redes-in{width:140px;font-family:Courier New,monospace;font-size:.85rem;background:#1b1e24;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 6px;margin-right:6px}' +
+    '.sim-redes{max-width:980px;margin:0 auto;font-family:var(--font-sans);color:var(--text)}' +
+    '.sim-redes h3{margin:8px 0 2px}.sim-redes h4{margin:16px 0 6px;color:var(--text);font-size:1rem}' +
+    '.sim-redes-sub{color:var(--text-dim);font-size:.85rem;margin:0 0 12px}' +
+    '.sim-redes-bloco{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin:12px 0}' +
+    '.sim-redes-bloco .sim-redes-sub{color:var(--text-dim)}' +
+    '.sim-redes-in{width:140px;font-family:var(--font-mono);font-size:.85rem;background:var(--surface-elev);color:var(--text);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px 6px;margin-right:6px}' +
     '.sim-redes-in.small{width:70px}' +
-    '.sim-redes-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 10px;font-size:.8rem;cursor:pointer}' +
-    '.sim-redes-btn:hover{background:#4a5466}' +
-    '.sim-redes-out{width:100%;font-family:Courier New,monospace;font-size:.8rem;background:#111318;color:#e3e9ff;border:1px solid #333947;border-radius:4px;padding:6px;white-space:pre-wrap;overflow:auto;min-height:44px;margin-top:6px}' +
-    '.sim-redes-ok{color:#5ee0a0}.sim-redes-err{color:#ff7b7b}.sim-redes-aviso{color:#ffd57c;font-size:.8rem}' +
-    '.sim-redes-encap th,.sim-redes-encap td{border:1px solid #3a4252;padding:4px 8px;font-size:.82rem}' +
-    '.sim-redes-encap th{background:#2a2f3a;color:#cdd4de}.sim-redes-encap td{color:#cdd4de}' +
+    '.sim-redes-btn{background:var(--fill-primary);color:var(--on-primary);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px 10px;font-size:.8rem;cursor:pointer}' +
+    '.sim-redes-btn:hover{background:var(--fill-primary-hover)}' +
+    '.sim-redes-out{width:100%;font-family:var(--font-mono);font-size:.8rem;background:var(--term-bg);color:var(--term-fg);border:1px solid var(--term-border);border-radius:var(--radius-sm);padding:6px;white-space:pre-wrap;overflow:auto;min-height:44px;margin-top:6px}' +
+    '.sim-redes-ok{color:var(--ok-text)}.sim-redes-err{color:var(--err-text)}.sim-redes-aviso{color:var(--warn-text);font-size:.8rem}' +
+    '.sim-redes-encap th,.sim-redes-encap td{border:1px solid var(--border);padding:4px 8px;font-size:.82rem}' +
+    '.sim-redes-encap th{background:var(--surface-elev);color:var(--text)}.sim-redes-encap td{color:var(--text)}' +
     '</style>';
 
   function netSectionDNS() {
@@ -223,8 +223,9 @@
     var linhas = encapsulamento.map(function (e) {
       return '<tr><td>' + esc(e.camada) + '</td><td>' + esc(e.nome) + '</td><td>' + esc(e.protocolo) + '</td><td>' + esc(e.funcao) + '</td></tr>';
     }).join('');
+    var tabela = '<table class="sim-redes-encap"><thead><tr><th>Camada OSI</th><th>Nome</th><th>Protocolo/tipo</th><th>Função</th></tr></thead><tbody>' + linhas + '</tbody></table>';
     return '<div class="sim-redes-bloco"><h4>Encapsulamento (visualização didática)</h4><p>Como um pacote HTTP sobe pelas camadas ao sair do host e desce ao chegar ao destino:</p>' +
-      '<table class="sim-redes-encap"><thead><tr><th>Camada OSI</th><th>Nome</th><th>Protocolo/tipo</th><th>Função</th></tr></thead><tbody>' + linhas + '</tbody></table>' +
+      (typeof window !== 'undefined' && typeof window.wrapTabela === 'function' ? window.wrapTabela(tabela, 'Camadas OSI e encapsulamento', true) : tabela) +
       '<p class="sim-redes-aviso">De cima para baixo (envio): Aplicação→Transporte→Rede→Enlace→Física; de baixo para cima (recepção): física→enlace→rede→transporte→aplicação.</p></div>';
   }
   function netSectionRotas() {
@@ -246,6 +247,7 @@
     return '<div class="sim-redes">' +
       '<h3>Simulador de Redes (Seção 7.2)</h3>' +
       '<p class="sim-redes-sub">Cálculo REAL em CIDR (calcularCIDR); ping/traceroute/DNS são <strong>SIMULAÇÕES DIDÁTICAS</strong> — valores fictícios. Não executa comandos no sistema operacional.</p>' +
+      '<p><button type="button" class="sim-redes-btn sim-redes-btn-reset" data-act="net-reset">Reiniciar simulador</button></p>' +
       netSectionDNS() + netSectionCIDR() + netSectionPing() + netSectionTraceroute() + netSectionEncap() + netSectionRotas() + netBuildLimites() + '</div>';
   }
 
@@ -255,6 +257,12 @@
     var act = alvo.getAttribute('data-act');
     if (!act) return;
     var out;
+    if (act === 'net-reset') {
+      containerEl.innerHTML = netCss + netBuildUI();
+      var reiniciar = containerEl.querySelector('[data-act="net-reset"]');
+      if (reiniciar && reiniciar.focus) reiniciar.focus();
+      return;
+    }
     if (act === 'net-dns') {
       var h = containerEl.querySelector('#net-dns-host');
       out = containerEl.querySelector('#net-dns-out');

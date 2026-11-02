@@ -201,7 +201,7 @@
     return last >= maximo(ticks) ? last : maximo(ticks);
   }
   function svgInicio(aria) {
-    return '<svg class="chart-svg" viewBox="0 0 ' + DW + ' ' + DH + '" role="img" aria-label="' + esc(aria) + '" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#111318" aria-hidden="true" />';
+    return '<svg class="chart-svg" viewBox="0 0 ' + DW + ' ' + DH + '" role="img" aria-label="' + esc(aria) + '" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" style="fill:var(--surface-elev)" aria-hidden="true" />';
   }
   function svgTitulo(txt) {
     return '<text class="chart-svg-titulo" x="12" y="20">' + esc(txt) + '</text>';
@@ -290,7 +290,7 @@
       s += '<text class="chart-txt" x="' + num(xp) + '" y="' + num(q.y0 + 16) + '" text-anchor="middle">' + esc(disciplinas[i]) + '</text>';
     }
     /* uma linha por aluno */
-    var cores = ['#4a94d4', '#5ee0a0', '#ff7b7b', '#ffd57c', '#a0a0ff', '#f07c7c'];
+    var cores = ['var(--primary)', 'var(--success)', 'var(--error)', 'var(--warning)', 'var(--accent)', 'var(--text-link)'];
     for (var a = 0; a < dados.length; a++) {
       var notas = [dados[a].n1, dados[a].n2, dados[a].n3];
       var cor = cores[a % cores.length];
@@ -300,11 +300,11 @@
         var yp = yPix(notas[p]);
         path += (p === 0 ? 'M' : ' L') + num(xp) + ',' + num(yp);
       }
-      s += '<polyline points="' + esc(path.replace(/^[ML]/, '').replace(/[ML]/g, ' ').trim()) + '" fill="none" stroke="' + cor + '" stroke-width="2" data-aluno="' + esc(dados[a].nome) + '" />';
+      s += '<polyline points="' + esc(path.replace(/^[ML]/, '').replace(/[ML]/g, ' ').trim()) + '" fill="none" style="stroke:' + cor + ';stroke-width:2" data-aluno="' + esc(dados[a].nome) + '" />';
       for (var p2 = 0; p2 < notas.length; p2++) {
         var xp2 = xPix(p2);
         var yp2 = yPix(notas[p2]);
-        s += '<circle cx="' + num(xp2) + '" cy="' + num(yp2) + '" r="3" fill="' + cor + '"/>';
+        s += '<circle cx="' + num(xp2) + '" cy="' + num(yp2) + '" r="3" style="fill:' + cor + '"/>';
       }
     }
     s += '</svg>';
@@ -360,11 +360,11 @@
       }
     }
     s += '<text class="chart-txt chart-eixo-rotulo" x="' + num(q.x0 + q.larg / 2) + '" y="' + (DH - 14) + '" text-anchor="middle">Nota 1</text>';
-    var cores = ['#4a94d4', '#5ee0a0', '#ff7b7b', '#ffd57c', '#a0a0ff', '#f07c7c'];
+    var cores = ['var(--primary)', 'var(--success)', 'var(--error)', 'var(--warning)', 'var(--accent)', 'var(--text-link)'];
     for (var a = 0; a < dados.length; a++) {
       var xp = xPix(dados[a].n1);
       var yp = yPix(dados[a].n2);
-      s += '<circle cx="' + num(xp) + '" cy="' + num(yp) + '" r="4" fill="' + cores[a % cores.length] + '">'
+      s += '<circle cx="' + num(xp) + '" cy="' + num(yp) + '" r="4" style="fill:' + cores[a % cores.length] + '">'
         + '<title>' + esc(dados[a].nome) + ': N1=' + esc(fmt(dados[a].n1, 1)) + ', N2=' + esc(fmt(dados[a].n2, 1)) + '</title></circle>';
     }
     s += '</svg>';
@@ -384,7 +384,7 @@
     var out = '';
     for (var i = 0; i < vals.length; i++) {
       if (vals[i] < qt.q1 - 1.5 * (qt.q3 - qt.q1) || vals[i] > qt.q3 + 1.5 * (qt.q3 - qt.q1)) {
-        out += '<circle cx="' + num(q.x0 + q.larg / 2) + '" cy="' + num(yPix(vals[i])) + '" r="3" fill="#ff7b7b"/>';
+        out += '<circle cx="' + num(q.x0 + q.larg / 2) + '" cy="' + num(yPix(vals[i])) + '" r="3" style="fill:var(--err-text)"/>';
       }
     }
     var yQ1 = yPix(qt.q1), yQ3 = yPix(qt.q3), yMed = yPix(qt.mediana), yMin = yPix(min), yMax = yPix(max);
@@ -414,38 +414,41 @@
    * CSS escopado (.sim-dados)
    * ------------------------------------------------------------------ */
   var dataCss = '<style>'
-    + '.sim-dados{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
-    + '.sim-dados h3{margin:8px 0 2px}.sim-dados h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-dados-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-dados-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
-    '.sim-dados-bloco .sim-dados-sub{color:#cbd5e1}' +
+    + '.sim-dados{max-width:980px;margin:0 auto;font-family:var(--font-sans);color:var(--text)}'
+    + '.sim-dados h3{margin:8px 0 2px}.sim-dados h4{margin:16px 0 6px;color:var(--text);font-size:1rem}'
+    + '.sim-dados-sub{color:var(--text-dim);font-size:.85rem;margin:0 0 12px}'
+    + '.sim-dados-bloco{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin:12px 0}' +
+    '.sim-dados-bloco .sim-dados-sub{color:var(--text-dim)}' +
     '.sim-dados-tabela{border-collapse:collapse;width:100%;margin:8px 0}'
-    + '.sim-dados-tabela th,.sim-dados-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}'
-    + '.sim-dados-tabela th{background:#2a2f3a;color:#cdd4de}'
-    + '.sim-dados-cel{width:70px;font-family:"Courier New",monospace;font-size:.82rem;background:#111318;color:#e3e9ff;border:1px solid #4a5265;border-radius:3px;padding:2px 6px}'
+    + '.sim-dados-tabela th,.sim-dados-tabela td{border:1px solid var(--border-dim);padding:4px 6px;text-align:left;font-size:.85rem}'
+    + '.sim-dados-tabela th{background:var(--surface-elev);color:var(--text)}'
+    + '.sim-dados-cel{width:70px;font-family:var(--font-mono);font-size:.82rem;background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:2px 6px}'
     + '.sim-dados-cel-ro{width:90px}'
-    + '.sim-dados-cel-média{background:#1b1e24;color:#4a94d4;font-weight:600}'
-    + '.sim-dados-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 10px;font-size:.8rem;cursor:pointer;margin:2px}'
-    + '.sim-dados-btn:hover{background:#4a5466}'
-    + '.sim-dados-btn-ok{background:#1b4d30;border-color:#2e8b57;color:#a0f3c1}'
-    + '.sim-dados-ok{color:#5ee0a0}.sim-dados-err{color:#ff7b7b}.sim-dados-info{color:#4a94d4}'
+    + '.sim-dados-cel-média{background:var(--surface-elev);color:var(--text-link);font-weight:600}'
+    + '.sim-dados-cel.sim-dados-err{border-color:var(--error);color:var(--err-text)}'
+    + '.sim-dados-btn{background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:4px 10px;font-size:.8rem;cursor:pointer;margin:2px}'
+    + '.sim-dados-btn:hover{background:var(--border)}'
+    + '.sim-dados-btn:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}'
+    + '.sim-dados-btn-ok{background:var(--surface-elev);border-color:var(--success);color:var(--ok-text)}'
+    + '.sim-dados-ok{color:var(--ok-text)}.sim-dados-err{color:var(--err-text)}.sim-dados-info{color:var(--text-link)}'
     + '.sim-dados-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:.82rem}'
-    + '.sim-dados-stats div{background:#161a21;border:1px solid #333947;border-radius:4px;padding:4px 8px}'
-    + '.sim-dados-stats .sim-dados-stats-label{color:#9ca3af;font-size:.75rem}'
-    + '.sim-dados-selector,.sim-dados-input-sm{display:inline-block;font-size:.82rem;background:#1b1e24;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:2px 6px;margin:2px}'
-    + '.sim-dados-svg{display:block;margin:8px 0;background:#111318;border:1px solid #333947;border-radius:4px}'
-    + '.chart-svg{width:100%;height:auto;background-color:#111318}'
-    + '.chart-svg .chart-svg-titulo{font-size:12px;font-weight:600;fill:#e3e9ff}'
-    + '.chart-svg .chart-txt{font-size:9px;fill:#c5c9d4;pointer-events:none}'
-    + '.chart-svg .chart-eixo{stroke:#3a4252;stroke-width:1}'
-    + '.chart-svg .chart-grid{stroke:#2a2f3a;stroke-width:1}'
-    + '.chart-svg .chart-barra{fill:#4a94d4}'
-    + '.chart-svg .chart-barra-modada{fill:#5ee0a0}'
-    + '.chart-svg .chart-eixo-rotulo{font-size:10px;fill:#9ca3af}'
-    + '.sim-dados-link{color:#174ea6;cursor:pointer;text-decoration:underline}'
-    + '.sim-dados-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-dados-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
-    + '.sim-dados-nav-btn:hover{background:#3a4252}'
-    + '.sim-dados-explicacao{background:#161a21;border-left:3px solid #4a94d4;padding:10px;margin:8px 0;font-size:.82rem;color:#b9c0d4;border-radius:4px}'
+    + '.sim-dados-stats div{background:var(--surface-elev);border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px 8px}'
+    + '.sim-dados-stats .sim-dados-stats-label{color:var(--text-dim);font-size:.75rem}'
+    + '.sim-dados-selector,.sim-dados-input-sm{display:inline-block;font-size:.82rem;background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:2px 6px;margin:2px}'
+    + '.sim-dados-svg{display:block;margin:8px 0;background:var(--surface-elev);border:1px solid var(--border);border-radius:var(--radius-sm)}'
+    + '.chart-svg{width:100%;height:auto;background-color:var(--surface-elev)}'
+    + '.chart-svg .chart-svg-titulo{font-size:12px;font-weight:600;fill:var(--text)}'
+    + '.chart-svg .chart-txt{font-size:9px;fill:var(--text-dim);pointer-events:none}'
+    + '.chart-svg .chart-eixo{stroke:var(--border-dim);stroke-width:1}'
+    + '.chart-svg .chart-grid{stroke:var(--border);stroke-width:1}'
+    + '.chart-svg .chart-barra{fill:var(--primary)}'
+    + '.chart-svg .chart-barra-modada{fill:var(--success)}'
+    + '.chart-svg .chart-eixo-rotulo{font-size:10px;fill:var(--text-dim)}'
+    + '.sim-dados-link{color:var(--text-link);cursor:pointer;text-decoration:underline}'
+    + '.sim-dados-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-dados-nav-btn{background:var(--surface-elev);color:var(--text);border:1px solid var(--border-dim);border-radius:var(--radius-sm);padding:4px 12px;font-size:.8rem;cursor:pointer}'
+    + '.sim-dados-nav-btn:hover{background:var(--border)}'
+    + '.sim-dados-nav-btn:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}'
+    + '.sim-dados-explicacao{background:var(--surface-elev);border-left:3px solid var(--primary);padding:10px;margin:8px 0;font-size:.82rem;color:var(--text);border-radius:var(--radius-sm)}'
     + '</style>';
 
   /* ------------------------------------------------------------------
@@ -453,24 +456,27 @@
    * ------------------------------------------------------------------ */
   function dataBuildTable(dados) {
     var h = '<div class="sim-dados-bloco"><h4>Conjunto de dados editável</h4><p class="sim-dados-sub">Edite as notas (colunas Nota 1-3). A coluna Média é calculada automaticamente.</p>';
-    h += '<table class="sim-dados-tabela"><thead><tr>';
-    for (var c = 0; c < COLUNAS.length; c++) h += '<th>' + esc(COLUNAS[c]) + '</th>';
-    h += '</tr></thead><tbody>';
+    var tabela = '<table class="sim-dados-tabela"><thead><tr>';
+    for (var c = 0; c < COLUNAS.length; c++) tabela += '<th>' + esc(COLUNAS[c]) + '</th>';
+    tabela += '</tr></thead><tbody>';
     for (var i = 0; i < dados.length; i++) {
-      h += '<tr data-linha="' + i + '">';
-      h += '<td><input type="text" class="sim-dados-cel sim-dados-cel-ro" data-field="nome" data-linha="' + i + '" value="' + esc(dados[i].nome) + '" readonly aria-label="Nome da linha ' + (i + 1) + ': ' + esc(dados[i].nome) + ' (somente leitura)"/></td>';
+      tabela += '<tr data-linha="' + i + '">';
+      tabela += '<td><input type="text" class="sim-dados-cel sim-dados-cel-ro" data-field="nome" data-linha="' + i + '" value="' + esc(dados[i].nome) + '" readonly aria-label="Nome da linha ' + (i + 1) + ': ' + esc(dados[i].nome) + ' (somente leitura)"/></td>';
       for (var j = 1; j < COLUNAS.length; j++) {
         var field = ['nome', 'n1', 'n2', 'n3', 'media'][j];
         var readOnly = (field === 'media');
         var cls = field === 'media' ? 'sim-dados-cel sim-dados-cel-média' : 'sim-dados-cel';
         var val = field === 'media' ? fmt((dados[i].n1 + dados[i].n2 + dados[i].n3) / 3, 1) : fmt(dados[i][field], 1);
         var ro = readOnly ? ' readonly' : '';
-        h += '<td><input type="text" class="' + cls + '" data-field="' + field + '" data-linha="' + i + '" value="' + esc(val) + '"' + ro + ' aria-label="' + esc(field) + ' da linha ' + (i + 1) + '"/></td>';
+        tabela += '<td><input type="text" class="' + cls + '" data-field="' + field + '" data-linha="' + i + '" value="' + esc(val) + '"' + ro + ' aria-label="' + esc(field) + ' da linha ' + (i + 1) + '"/></td>';
       }
-      h += '</tr>';
+      tabela += '</tr>';
     }
-    h += '</tbody></table>';
-    h += '<button type="button" class="sim-dados-btn sim-dados-btn-ok" data-act="dados-reset">Restaurar valores iniciais</button>';
+    tabela += '</tbody></table>';
+    h += (typeof window !== 'undefined' && typeof window.wrapTabela === 'function')
+      ? window.wrapTabela(tabela, 'Notas por aluno — dados editáveis')
+      : tabela;
+    h += '<button type="button" class="sim-dados-btn sim-dados-btn-ok sim-dados-btn-reset" data-act="dados-reset">Restaurar valores iniciais</button>';
     h += '</div>';
     return h;
   }
@@ -633,12 +639,17 @@
     }
     state.bins = 5;
     state.colIdx = 1;
+    /* Reconstrói a tabela para refletir os valores restaurados nos inputs. */
+    var blocoTabela = containerEl.querySelector('#data-pane-table .sim-dados-bloco');
+    if (blocoTabela) blocoTabela.outerHTML = dataBuildTable(dados);
     /* Restaura o estado visual dos controles. */
     var sel = containerEl.querySelector('#dados-col-hist');
     if (sel) sel.value = String(state.colIdx);
     var binsInp = containerEl.querySelector('#dados-bins');
     if (binsInp) binsInp.value = String(state.bins);
     dataRefreshVisuals(containerEl, dados, state);
+    var reiniciar = containerEl.querySelector('[data-act="dados-reset"]');
+    if (reiniciar && reiniciar.focus) reiniciar.focus();
   }
 
   function dataOnChangeCol(e, containerEl, dados, state) {

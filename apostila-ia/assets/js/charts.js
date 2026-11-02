@@ -76,6 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(/'/g, '&#39;');
   }
 
+  /* Envolve a tabela em uma região rolável e focável por teclado.
+   * O helper vive em app.js (carregado antes de charts.js). */
+  function wrapTabela(html, rotulo, larga) {
+    if (typeof window !== 'undefined' && typeof window.wrapTabela === 'function') {
+      return window.wrapTabela(html, rotulo, larga);
+    }
+    return html;
+  }
+
   /* Atributos SVG/HTML exigem ponto decimal — nunca vírgula. */
   function num(v) {
     if (typeof v !== 'number' || !isFinite(v)) return '0';
@@ -835,7 +844,14 @@ document.addEventListener('DOMContentLoaded', () => {
       s += svgRotulosCategorias(q, res.pares.map((par) => par.categoria), xCentro, 'categorias', n > 4);
     }
     if (res.truncado) {
-      s += '<text class="chart-aviso-svg" x="' + num(W - 20) + '" y="20" text-anchor="end">⚠ eixo truncado: base em ' + esc(fmt(res.base, 1)) + ', não em 0</text>';
+      /* Ícone de aviso desenhado no próprio SVG (o glifo de triângulo de
+         alerta vira caixa vazia em sistemas sem fonte de símbolo) + rótulo
+         textual equivalente. */
+      s += '<g class="chart-aviso-icone" transform="translate(' + num(W - 232) + ',8)">' +
+        '<path d="M8 1 15.5 14H0.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>' +
+        '<path d="M8 5.6v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>' +
+        '<path d="M8 11.6v.1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></g>';
+      s += '<text class="chart-aviso-svg" x="' + num(W - 20) + '" y="20" text-anchor="end">Atenção: eixo truncado, base em ' + esc(fmt(res.base, 1)) + ', não em 0</text>';
     }
     s += '</svg>';
     return s;
@@ -947,17 +963,17 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ========================================================================
    * PAINÉIS HTML — estatísticas, explicação dinâmica e avisos
    * ====================================================================== */
-  function htmlTabelaStats(linhas) {
+  function htmlTabelaStats(linhas, id) {
     let h = '<table class="chart-stats"><tbody>';
     linhas.forEach((l) => {
       h += '<tr><th scope="row">' + esc(l[0]) + '</th><td>' + esc(String(l[1])) + '</td></tr>';
     });
     h += '</tbody></table>';
-    return h;
+    return wrapTabela(h, 'Resumo estatístico — ' + (NOMES[id] || id));
   }
 
   function htmlAviso(txt) {
-    return '<p class="chart-aviso" role="note">⚠ ' + esc(txt) + '</p>';
+    return '<p class="chart-aviso" role="note">' + (typeof window !== 'undefined' && typeof window.FCNIcon === 'function' ? window.FCNIcon('alerta') : '') + ' ' + esc(txt) + '</p>';
   }
 
   function htmlStats(id, res) {
@@ -967,7 +983,8 @@ document.addEventListener('DOMContentLoaded', () => {
         h += '<tr><td>' + esc(String(res.classes.indexOf(c) + 1)) + '</td><td>[' + esc(fmt(c.inf, 2)) + ' ; ' + esc(fmt(c.sup, 2)) + ')</td><td>' + c.freq +
           '</td><td>' + esc(fmtPct(c.freqRel)) + '</td><td>' + esc(fmt(c.densidade, 3)) + '</td></tr>';
       });
-      h += '</tbody></table>' +
+      h += '</tbody></table>';
+      return wrapTabela(h, 'Tabela de frequência por classe — ' + (NOMES[id] || id)) +
         htmlTabelaStats([
           ['Observações (n)', res.n],
           ['Mínimo / Máximo', fmt(res.min, 1) + ' / ' + fmt(res.max, 1)],
@@ -975,8 +992,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ['Nº de classes (largura)', res.nClasses + ' (' + fmt(res.largura, 2) + ')'],
           ['Média / Mediana', fmt(res.media, 2) + ' / ' + fmt(res.mediana, 2)],
           ['Sugestão de Sturges', 'k ≈ ' + res.kSturges + ' para n = ' + res.n]
-        ]);
-      return h;
+        ], id);
     }
     if (id === 'linhas') {
       return htmlTabelaStats([
@@ -987,7 +1003,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Maior / menor valor', res.melhor.rotulo + ' (' + fmt(res.melhor.valor, 1) + ') / ' + res.pior.rotulo + ' (' + fmt(res.pior.valor, 1) + ')'],
         ['Altas / quedas', res.altas + ' / ' + res.quedas],
         ['Tendência (mínimos quadrados)', res.tendencia.tipo + ' — declive ' + fmt(res.tendencia.declive, 2) + ' por período']
-      ]);
+      ], id);
     }
     if (id === 'barras') {
       return htmlTabelaStats([
@@ -997,7 +1013,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Maior valor', res.maior.categoria + ' (' + fmt(res.maior.valor, 1) + ')'],
         ['Menor valor', res.menor.categoria + ' (' + fmt(res.menor.valor, 1) + ')'],
         ['Razão maior ÷ menor', res.razaoMaiorMenor === null ? 'n/d' : fmt(res.razaoMaiorMenor, 2) + '×']
-      ]);
+      ], id);
     }
     if (id === 'dispersao') {
       return htmlTabelaStats([
@@ -1008,7 +1024,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Força da relação linear', res.r === null ? 'n/d' : res.forca + (res.r >= 0 ? ' positiva' : ' negativa')],
         ['Reta (mínimos quadrados)', res.reta ? 'y = ' + fmt(res.reta.intercepto, 2) + ' + ' + fmt(res.reta.slope, 2) + '·x' : 'desativada (parâmetro "mostrar reta")'],
         ['Outliers (|resíduo padronizado| > 2)', res.outliers.length ? res.outliers.map((o) => '(' + fmt(o.x, 1) + '; ' + fmt(o.y, 1) + ')').join(', ') : 'nenhum']
-      ]);
+      ], id);
     }
     let h = '';
     res.grupos.forEach((g) => {
@@ -1021,7 +1037,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Limites (' + fmt(res.multiplo, 1) + '×IIQ)', fmt(g.limiteInferior, 2) + ' e ' + fmt(g.limiteSuperior, 2)],
         ['Bigodes (extremos dentro dos limites)', fmt(g.bigodeInferior, 1) + ' e ' + fmt(g.bigodeSuperior, 1)],
         ['Outliers (fora dos limites)', g.outliers.length ? g.outliers.map((o) => fmt(o, 1)).join(', ') : 'nenhum']
-      ]);
+      ], id + ' — ' + g.nome);
     });
     return h;
   }
@@ -1145,7 +1161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       h += '</tr>';
     });
     h += '</tbody></table>';
-    return h;
+    return wrapTabela(h, 'Tabela de entrada — ' + (NOMES[id] || id) + ' (dados fictícios didáticos)', true);
   }
 
   function htmlControles(id) {
@@ -1183,7 +1199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '<option value="decrescente"' + (p.ordenacao === 'decrescente' ? ' selected' : '') + '>por valor decrescente</option></select></label> ' +
         '<label>Linha de base: <select data-param="' + esc(id + ':base') + '">' +
         '<option value="zero"' + (p.base === 'zero' ? ' selected' : '') + '>em zero (proporcional)</option>' +
-        '<option value="auto"' + (p.base === 'auto' ? ' selected' : '') + '>truncar no menor valor (⚠ escala enganosa)</option></select></label> ' +
+        '<option value="auto"' + (p.base === 'auto' ? ' selected' : '') + '>truncar no menor valor (atenção: escala enganosa)</option></select></label> ' +
         '<label>Rótulo do eixo Y: <input type="text" value="' + esc(String(p.unidadeY)) + '" data-param="' + esc(id + ':unidadeY') + '"></label>';
     } else if (id === 'dispersao') {
       h += '<label><input type="checkbox" data-param="' + esc(id + ':reta') + '"' + (p.reta ? ' checked' : '') + '> mostrar reta de tendência e outliers por resíduo</label> ' +

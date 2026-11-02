@@ -1427,20 +1427,21 @@
     { id: "ex3", titulo: "3. Código de erro real", formula: "=1/0", explicacao: "Divisão por zero produz #DIV/0!, um dos cinco códigos de erro do Excel ( #N/A #REF! #VAL! #DIV/0! #NUM! )." }
   ];
   var excelCss = '<style>' +
-    '.sim-excel{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}.sim-excel h3{margin:8px 0 2px}.sim-excel h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}' +
-    '.sim-excel-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}.sim-excel-tabela{border-collapse:collapse;width:100%;margin:8px 0}' +
-    '.sim-excel-tabela th,.sim-excel-tabela td{border:1px solid #3a4252;padding:4px 6px;text-align:left;font-size:.85rem}' +
-    '.sim-excel-tabela th{background:#2a2f3a;color:#cdd4de}.sim-excel-rownum{background:#22262e;color:#8b94a5;width:28px}' +
-    ".sim-excel-cel{width:90px;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:3px;padding:2px 4px}" +
-    '.sim-excel-res{margin-left:6px;color:#8a6100;font-weight:600;min-width:48px;display:inline-block}.sim-excel-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
-    '.sim-excel-bloco .sim-excel-sub{color:#cbd5e1}' +
-    '.sim-excel-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 10px;font-size:.8rem;cursor:pointer;margin-right:6px}.sim-excel-btn:hover{background:#4a5466}' +
-    ".sim-excel-console{width:100%;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3e9ff;border:1px solid #4a5265;border-radius:4px;padding:6px;resize:vertical}" +
-    '.sim-excel-resgrande{margin:8px 0 0;color:#ffd57c;font-family:"Courier New",monospace;font-size:.95rem;min-height:1.4em}' +
-    '.sim-excel-comparacao{width:100%;border-collapse:collapse;font-size:.85rem}.sim-excel-comparacao th,.sim-excel-comparacao td{border:1px solid #3a4252;padding:4px 8px;text-align:left}' +
-    '.sim-excel-comparacao th{background:#2a2f3a;color:#cdd4de}.sim-excel-exercicio{border-left:3px solid #4a5265;padding:6px 10px;margin:8px 0;background:#1b1e24}' +
-    ".sim-excel-exercicio input{width:100%;font-family:'Courier New',monospace;font-size:.85rem;background:#1b1e24;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:4px 6px;margin-bottom:6px}" +
-    '.sim-excel-fb{display:inline-block;font-size:.85rem}.sim-excel-ok{color:#5ee0a0}.sim-excel-err{color:#ff7b7b}.sim-excel-aviso{color:#8b94a5;font-size:.8rem;margin-top:4px}' +
+    '.sim-excel{max-width:980px;margin:0 auto;font-family:var(--font-sans);color:var(--text)}.sim-excel h3{margin:8px 0 2px}.sim-excel h4{margin:16px 0 6px;color:var(--text);font-size:1rem}' +
+    '.sim-excel-sub{color:var(--text-dim);font-size:.85rem;margin:0 0 12px}.sim-excel-tabela{border-collapse:collapse;width:100%;margin:8px 0}' +
+    '.sim-excel-tabela th,.sim-excel-tabela td{border:1px solid var(--border-dim);padding:4px 6px;text-align:left;font-size:.85rem}' +
+    '.sim-excel-tabela th{background:var(--surface-elev);color:var(--text)}.sim-excel-rownum{background:var(--surface-elev);color:var(--text-dim);width:28px}' +
+    ".sim-excel-cel{width:90px;font-family:var(--font-mono);font-size:.85rem;background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:2px 4px}" +
+    '.sim-excel-res{margin-left:6px;color:var(--text-link);font-weight:600;min-width:48px;display:inline-block}.sim-excel-bloco{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin:12px 0}' +
+    '.sim-excel-bloco .sim-excel-sub{color:var(--text-dim)}' +
+    '.sim-excel-btn{background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:4px 10px;font-size:.8rem;cursor:pointer;margin-right:6px}.sim-excel-btn:hover{background:var(--border)}' +
+    '.sim-excel-btn:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}' +
+    ".sim-excel-console{width:100%;font-family:var(--font-mono);font-size:.85rem;background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:6px;resize:vertical}" +
+    '.sim-excel-resgrande{margin:8px 0 0;color:var(--warn-text);font-family:var(--font-mono);font-size:.95rem;min-height:1.4em}' +
+    '.sim-excel-comparacao{width:100%;border-collapse:collapse;font-size:.85rem}.sim-excel-comparacao th,.sim-excel-comparacao td{border:1px solid var(--border-dim);padding:4px 8px;text-align:left}' +
+    '.sim-excel-comparacao th{background:var(--surface-elev);color:var(--text)}.sim-excel-exercicio{border-left:3px solid var(--border-control);padding:6px 10px;margin:8px 0;background:var(--surface-elev)}' +
+    ".sim-excel-exercicio input{width:100%;font-family:var(--font-mono);font-size:.85rem;background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:4px 6px;margin-bottom:6px}" +
+    '.sim-excel-fb{display:inline-block;font-size:.85rem}.sim-excel-ok{color:var(--ok-text)}.sim-excel-err{color:var(--err-text)}.sim-excel-aviso{color:var(--text-dim);font-size:.8rem;margin-top:4px}' +
     '</style>';
   var excelMontados = (typeof WeakSet !== "undefined") ? new WeakSet() : { has: function () { return false; }, add: function () { return true; }, "delete": function () { return true; } };
 
@@ -1482,19 +1483,23 @@
   }
 
   function excelBuildGrid(entradas) {
-    var h = '<div class="sim-excel-bloco"><h4>Tabela de dados — recálculo automático</h4><table class="sim-excel-tabela"><thead><tr><th>#</th>';
-    excelCols.forEach(function (c) { h += "<th>" + esc(c) + "</th>"; });
-    h += "</tr></thead><tbody>";
+    var h = '<div class="sim-excel-bloco"><h4>Tabela de dados — recálculo automático</h4>';
+    var tabela = '<table class="sim-excel-tabela"><thead><tr><th>#</th>';
+    excelCols.forEach(function (c) { tabela += "<th>" + esc(c) + "</th>"; });
+    tabela += "</tr></thead><tbody>";
     for (var i = 0; i < excelDefault.length; i++) {
-      h += "<tr><td class='sim-excel-rownum'>" + (i + 1) + "</td>";
+      tabela += "<tr><td class='sim-excel-rownum'>" + (i + 1) + "</td>";
       for (var j = 0; j < excelCols.length; j++) {
         var ref = excelCols[j] + (i + 1);
         var raw = (entradas[i] && entradas[i][j] != null) ? entradas[i][j] : "";
-        h += "<td><input type='text' class='sim-excel-cel' data-cell='" + esc(ref) + "' value='" + esc(raw) + "' aria-label='célula " + esc(ref) + "' /><span id='excel-res-" + esc(ref) + "' class='sim-excel-res'></span></td>";
+        tabela += "<td><input type='text' class='sim-excel-cel' data-cell='" + esc(ref) + "' value='" + esc(raw) + "' aria-label='célula " + esc(ref) + "' /><span id='excel-res-" + esc(ref) + "' class='sim-excel-res'></span></td>";
       }
-      h += "</tr>";
+      tabela += "</tr>";
     }
-    h += "</tbody></table>";
+    tabela += "</tbody></table>";
+    h += (typeof window !== 'undefined' && typeof window.wrapTabela === 'function')
+      ? window.wrapTabela(tabela, 'Dados da planilha — recálculo automático', true)
+      : tabela;
     h += "<p class='sim-excel-aviso'>Fórmulas iniciam com <code>=</code>. Células vazias não casam com critérios numéricos em CONT.SE/SOMASE — diferença declarada do Excel.</p>";
     h += "</div>";
     return h;
@@ -1520,13 +1525,18 @@
   ];
 
   function excelBuildComparacao(plan) {
-    var h = '<div class="sim-excel-bloco"><h4>Comparação entre funções — coluna Nota 1 (B2:B7)</h4><table class="sim-excel-comparacao"><thead><tr><th>Função</th><th>Fórmula</th><th>Resultado</th></tr></thead><tbody>';
+    var h = '<div class="sim-excel-bloco"><h4>Comparação entre funções — coluna Nota 1 (B2:B7)</h4>';
+    var tabela = '<table class="sim-excel-comparacao"><thead><tr><th>Função</th><th>Fórmula</th><th>Resultado</th></tr></thead><tbody>';
     for (var i = 0; i < excelComparacao.length; i++) {
       var f = excelComparacao[i];
       var r = ExcelSimulator.calcularFormula(f[1], plan);
-      h += "<tr><td>" + esc(f[0]) + "</td><td><code>" + esc(f[1]) + "</code></td><td class='sim-excel-res' id='" + f[2] + "'>" + esc(excelFmt(r)) + "</td></tr>";
+      tabela += "<tr><td>" + esc(f[0]) + "</td><td><code>" + esc(f[1]) + "</code></td><td class='sim-excel-res' id='" + f[2] + "'>" + esc(excelFmt(r)) + "</td></tr>";
     }
-    h += "</tbody></table></div>";
+    tabela += "</tbody></table>";
+    h += (typeof window !== 'undefined' && typeof window.wrapTabela === 'function')
+      ? window.wrapTabela(tabela, 'Comparação entre funções do Excel')
+      : tabela;
+    h += "</div>";
     return h;
   }
 

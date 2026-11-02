@@ -723,7 +723,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '<span>Questão <strong>' + (sessao.pos + 1) + '</strong> de ' + sessao.fila.length + '</span> · ' +
       '<span>Respondidas: <strong>' + respondidas + '</strong></span> · ' +
       '<span>Marcadas para revisão: <strong>' + Object.keys(sessao.marcadas).length + '</strong></span> · ' +
-      '<span>Tempo: <span id="qz-tempo">' + esc(formatarTempo(sessao.tempoLimiteMs != null ? tempoRestanteMs(sessao) : tempoDecorridoMs(sessao))) + '</span>' +
+      '<span>Tempo: <span id="qz-tempo" class="qz-tempo">' + esc(formatarTempo(sessao.tempoLimiteMs != null ? tempoRestanteMs(sessao) : tempoDecorridoMs(sessao))) + '</span>' +
       (sessao.tempoLimiteMs != null ? ' (restante)' : ' (decorrido)') + '</span>' +
       '</div>';
 
@@ -763,11 +763,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     html += '<div class="qz-nav">' +
-      '<button type="button" data-act="anterior"' + (sessao.pos === 0 ? ' disabled' : '') + '>← Anterior</button> ' +
-      '<button type="button" data-act="marcar">' + (marcada ? 'Desmarcar revisão' : 'Marcar para revisão') + '</button> ' +
-      '<button type="button" data-act="proxima"' + (sessao.pos >= sessao.fila.length - 1 ? ' disabled' : '') + '>Próxima →</button> ' +
-      '<button type="button" data-act="finalizar">Finalizar e corrigir</button> ' +
-      '<button type="button" data-act="abandonar">Abandonar</button>' +
+      '<button type="button" class="qz-btn" data-act="anterior"' + (sessao.pos === 0 ? ' disabled' : '') + '>← Anterior</button> ' +
+      '<button type="button" class="qz-btn" data-act="marcar">' + (marcada ? 'Desmarcar revisão' : 'Marcar para revisão') + '</button> ' +
+      '<button type="button" class="qz-btn" data-act="proxima"' + (sessao.pos >= sessao.fila.length - 1 ? ' disabled' : '') + '>Próxima →</button> ' +
+      '<button type="button" class="qz-btn" data-act="finalizar">Finalizar e corrigir</button> ' +
+      '<button type="button" class="qz-btn qz-btn--perigo" data-act="abandonar">Abandonar</button>' +
       '</div>';
     if (sessao.fila.length - respondidas > 0) {
       html += '<p class="qz-info">Ainda faltam <strong>' + (sessao.fila.length - respondidas) + '</strong> questão(ões) sem resposta — elas contarão como não respondidas na correção.</p>';
@@ -869,15 +869,16 @@ document.addEventListener('DOMContentLoaded', () => {
       html += '<p><em>Nenhuma tentativa registrada ainda. O histórico é salvo no localStorage (chave apostila-ia-progresso, namespace questoes).</em></p>';
       return html;
     }
-    html += '<table class="qz-tabela"><thead><tr>' +
+    let tabela = '<table class="qz-tabela"><thead><tr>' +
       '<th>Data</th><th>Escopo</th><th>Nível</th><th>Estilo</th><th>Q</th><th>Acertos</th><th>Erros</th><th>Não resp.</th><th>Nota</th><th>Taxa</th><th>Tempo</th>' +
       '</tr></thead><tbody>';
     tentativas.slice(0, 10).forEach((t) => {
-      html += '<tr><td>' + esc(formatarData(t.data)) + '</td><td>' + esc(t.escopo) + '</td><td>' + esc(t.nivel) + '</td><td>' + esc(t.estilo) + '</td>' +
+      tabela += '<tr><td>' + esc(formatarData(t.data)) + '</td><td>' + esc(t.escopo) + '</td><td>' + esc(t.nivel) + '</td><td>' + esc(t.estilo) + '</td>' +
         '<td>' + t.total + '</td><td>' + t.acertos + '</td><td>' + t.erros + '</td><td>' + t.naoRespondidas + '</td>' +
         '<td>' + formatarPct(t.nota) + '%</td><td>' + (t.taxaAcerto === null ? '—' : formatarPct(t.taxaAcerto) + '%') + '</td><td>' + esc(formatarTempo(t.tempoTotalMs)) + '</td></tr>';
     });
-    html += '</tbody></table>';
+    tabela += '</tbody></table>';
+    html += window.wrapTabela(tabela, 'Histórico de simulados', true);
     if (tentativas.length > 10) html += '<p class="qz-meta">Exibindo as 10 mais recentes; as demais permanecem salvas.</p>';
     html += '<p><button type="button" data-act="limpar-historico">Limpar histórico de tentativas</button></p>';
     return html;

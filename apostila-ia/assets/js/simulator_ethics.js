@@ -135,24 +135,25 @@
    * CSS escopado (.sim-etica)
    * ------------------------------------------------------------------ */
   var eticaCss = '<style>'
-    + '.sim-etica{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
-    + '.sim-etica h3{margin:8px 0 2px}.sim-etica h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-etica-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-etica-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
-    '.sim-etica-bloco .sim-etica-sub{color:#cbd5e1}' +
+    + '.sim-etica{max-width:980px;margin:0 auto;font-family:var(--font-sans);color:var(--text)}'
+    + '.sim-etica h3{margin:8px 0 2px}.sim-etica h4{margin:16px 0 6px;color:var(--text);font-size:1rem}'
+    + '.sim-etica-sub{color:var(--text-dim);font-size:.85rem;margin:0 0 12px}'
+    + '.sim-etica-bloco{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin:12px 0}' +
+    '.sim-etica-bloco .sim-etica-sub{color:var(--text-dim)}' +
     '.sim-etica-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}'
-    + '.sim-etica-link{color:#174ea6;cursor:pointer;text-decoration:underline;font-size:.85rem}'
+    + '.sim-etica-link{color:var(--text-link);cursor:pointer;text-decoration:underline;font-size:.85rem}'
     + '.sim-etica-opts label{display:block;margin:4px 0;font-size:.85rem}'
     + '.sim-etica-opts input{margin-right:8px}'
-    + '.sim-etica-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:6px 14px;font-size:.8rem;cursor:pointer}'
-    + '.sim-etica-btn:hover{background:#4a5466}'
-    + '.sim-etica-fb{padding:8px 10px;border-radius:4px;margin:6px 0;font-size:.85rem}'
-    + '.sim-etica-ok{background:#1b4d30;border-color:#2e8b57;color:#a0f3c1}'
-    + '.sim-etica-err{background:#4d1f1f;border-color:#b91c1c;color:#ffb3b3}'
-    + '.sim-etica-aviso{background:#3a3220;border-color:#b8860b;color:#ffd57c}'
-    + '.sim-etica-principio{background:#161a21;border:1px solid #3a4252;border-radius:4px;padding:6px 10px;margin:6px 0;font-size:.82rem;color:#cdd4de}'
-    + '.sim-etica-progress{height:6px;background:#2a2f3a;border-radius:3px;margin:8px 0;overflow:hidden}'
-    + '.sim-etica-progress-fill{height:100%;background:#4a94d4;width:0%;transition:width .3s}'
+    + '.sim-etica-btn{background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:6px 14px;font-size:.8rem;cursor:pointer}'
+    + '.sim-etica-btn:hover{background:var(--border)}'
+    + '.sim-etica-btn:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}'
+    + '.sim-etica-fb{padding:8px 10px;border-radius:var(--radius-sm);margin:6px 0;font-size:.85rem}'
+    + '.sim-etica-ok{background:var(--surface-elev);border-color:var(--success);color:var(--ok-text)}'
+    + '.sim-etica-err{background:var(--surface-elev);border-color:var(--error);color:var(--err-text)}'
+    + '.sim-etica-aviso{background:var(--surface-elev);border-color:var(--warning);color:var(--warn-text)}'
+    + '.sim-etica-principio{background:var(--surface-elev);border:1px solid var(--border-dim);border-radius:var(--radius-sm);padding:6px 10px;margin:6px 0;font-size:.82rem;color:var(--text-dim)}'
+    + '.sim-etica-progress{height:6px;background:var(--border);border-radius:3px;margin:8px 0;overflow:hidden}'
+    + '.sim-etica-progress-fill{height:100%;background:var(--primary);width:0%;transition:width .3s}'
     + '.sim-etica-pane{display:block}'
     + '</style>';
 
@@ -179,6 +180,7 @@
     var html = '<div class="sim-etica">';
     html += '<h3>Simulador de Ética e Responsabilidade Digital no Serviço Público (Seção 7.6)</h3>';
     html += '<p class="sim-etica-sub">Simulação didática e local — dados fictícios (Seção 4.3). Cenários de decisão ética com feedback justificado por princípio/dispositivo. NÃO é consultoria jurídica.</p>';
+    html += '<p><button type="button" class="sim-etica-btn sim-etica-btn-reset" data-act="etica-reset">Reiniciar simulador</button></p>';
     html += '<div class="sim-etica-progress"><div class="sim-etica-progress-fill" id="etica-progresso"></div></div>';
     for (var i = 0; i < cenarios.length; i++) {
       html += eticaBuildCenario(cenarios[i]);
@@ -236,7 +238,17 @@
     if (barra) barra.style.width = pct + '%';
   }
 
+  function eticaOnReset(e, containerEl) {
+    var alvo = e && e.target;
+    if (!alvo || !alvo.getAttribute) return;
+    if (alvo.getAttribute('data-act') !== 'etica-reset') return;
+    containerEl.innerHTML = eticaCss + eticaBuildUI();
+    var reiniciar = containerEl.querySelector('[data-act="etica-reset"]');
+    if (reiniciar && reiniciar.focus) reiniciar.focus();
+  }
+
   function eticaOnClick(e, containerEl) {
+    eticaOnReset(e, containerEl);
     eticaOnVerificar(e, containerEl);
   }
 

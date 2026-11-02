@@ -180,37 +180,38 @@
    * CSS escopado (.sim-seguranca)
    * ------------------------------------------------------------------ */
   var securityCss = '<style>'
-    + '.sim-seguranca{max-width:980px;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e3e9ff}'
-    + '.sim-seguranca h3{margin:8px 0 2px}.sim-seguranca h4{margin:16px 0 6px;color:#cdd4de;font-size:1rem}'
-    + '.sim-seguranca-sub{color:#4b5563;font-size:.85rem;margin:0 0 12px}'
-    + '.sim-seguranca-bloco{background:#1f232c;border:1px solid #333947;border-radius:8px;padding:12px;margin:12px 0}' +
-    '.sim-seguranca-bloco .sim-seguranca-sub{color:#cbd5e1}' +
-    '.sim-sgmt-msg{border:1px solid #3a4252;border-radius:6px;padding:10px;margin:8px 0;background:#161a21}'
-    + '.sim-sgmt-msg-header{display:flex;justify-content:space-between;align-items:center}'
-    + '.sim-sgmt-emit{font-size:.78rem;color:#9ca3af}'
-    + '.sim-sgmt-assunto{font-weight:600;color:#e3e9ff;margin:4px 0;font-size:.88rem}'
-    + '.sim-sgmt-corpo{font-size:.82rem;color:#b9c0d4;white-space:pre-wrap;margin:6px 0}'
-    + '.sim-sgmt-btns{display:flex;gap:8px;margin:8px 0}'
-    + '.sim-sec-btn{background:#3a4252;color:#e3efff;border:1px solid #4a5265;border-radius:4px;padding:6px 14px;font-size:.8rem;cursor:pointer}'
-    + '.sim-sec-btn:hover{background:#4a5466}'
-    + '.sim-sec-btn:hover{background:#4a5466}'
-    + '.sim-sec-ok{background:#1b4d30;border-color:#2e8b57;color:#a0f3c1}'
-    + '.sim-sec-err{background:#4d1f1f;border-color:#b91c1c;color:#ffb3b3}'
-    + '.sim-sec-aviso{background:#3a3220;border-color:#b8860b;color:#ffd57c}'
-    + '.sim-sec-fb{padding:8px 10px;border-radius:4px;margin:6px 0;font-size:.82rem}'
+    + '.sim-seguranca{max-width:980px;margin:0 auto;font-family:var(--font-sans);color:var(--text)}'
+    + '.sim-seguranca h3{margin:8px 0 2px}.sim-seguranca h4{margin:16px 0 6px;color:var(--text);font-size:1rem}'
+    + '.sim-seguranca-sub{color:var(--text-dim);font-size:.85rem;margin:0 0 12px}'
+    + '.sim-seguranca-bloco{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin:12px 0}' +
+    '.sim-seguranca-bloco .sim-seguranca-sub{color:var(--text-dim)}' +
+    '.sim-sgmt-msg{border:1px solid var(--border-dim);border-radius:var(--radius-sm);padding:10px;margin:8px 0;background:var(--surface-elev)}'
+    + '.sim-sgmt-msg-header{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}'
+    + '.sim-sgmt-emit{font-size:.78rem;color:var(--text-dim)}'
+    + '.sim-sgmt-assunto{font-weight:600;color:var(--text);margin:4px 0;font-size:.88rem}'
+    + '.sim-sgmt-corpo{font-size:.82rem;color:var(--text);white-space:pre-wrap;margin:6px 0}'
+    + '.sim-sgmt-btns{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap}'
+    + '.sim-sec-btn{background:var(--surface-elev);color:var(--text);border:1px solid var(--border-control);border-radius:var(--radius-sm);padding:6px 14px;font-size:.8rem;cursor:pointer}'
+    + '.sim-sec-btn:hover{background:var(--border)}'
+    + '.sim-sec-btn:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}'
+    + '.sim-sec-ok{background:var(--surface-elev);border-color:var(--success);color:var(--ok-text)}'
+    + '.sim-sec-err{background:var(--surface-elev);border-color:var(--error);color:var(--err-text)}'
+    + '.sim-sec-aviso{background:var(--surface-elev);border-color:var(--warning);color:var(--warn-text)}'
+    + '.sim-sec-fb{padding:8px 10px;border-radius:var(--radius-sm);margin:6px 0;font-size:.82rem}'
     + '.sim-sec-indicator{list-style:none;padding:0}'
-    + '.sim-sec-indicator li{margin:2px 0;font-size:.8rem;color:#c5c9d4}'
-    + '.sim-sec-indicator-ok{color:#5ee0a0}'
+    + '.sim-sec-indicator li{margin:2px 0;font-size:.8rem;color:var(--text-dim)}'
+    + '.sim-sec-indicator-ok{color:var(--ok-text)}'
     + '.sim-sec-opts label{display:block;margin:4px 0;font-size:.82rem}'
     + '.sim-sec-opts input{margin-right:8px}'
-    + '.sim-sec-barra-progresso{height:6px;background:#2a2f3a;border-radius:3px;margin:8px 0;overflow:hidden}'
-    + '.sim-sec-progress-fill{height:100%;background:#4a94d4;width:0%;transition:width .3s}'
-    + '.sim-sec-risco-alto{color:#ff7b7b;font-weight:600}'
-    + '.sim-sec-risco-medio{color:#ffd57c;font-weight:600}'
-    + '.sim-sec-risco-baixo{color:#5ee0a0;font-weight:600}'
-    + '.sim-sec-link{color:#174ea6;cursor:pointer;text-decoration:underline}'
-    + '.sim-sec-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-sec-nav-btn{background:#2a2f3a;color:#cdd4de;border:1px solid #3a4252;border-radius:4px;padding:4px 12px;font-size:.8rem;cursor:pointer}'
-    + '.sim-sec-nav-btn:hover{background:#3a4252}'
+    + '.sim-sec-barra-progresso{height:6px;background:var(--border);border-radius:3px;margin:8px 0;overflow:hidden}'
+    + '.sim-sec-progress-fill{height:100%;background:var(--primary);width:0%;transition:width .3s}'
+    + '.sim-sec-risco-alto{color:var(--err-text);font-weight:600}'
+    + '.sim-sec-risco-medio{color:var(--warn-text);font-weight:600}'
+    + '.sim-sec-risco-baixo{color:var(--ok-text);font-weight:600}'
+    + '.sim-sec-link{color:var(--text-link);cursor:pointer;text-decoration:underline}'
+    + '.sim-sec-nav{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.sim-sec-nav-btn{background:var(--surface-elev);color:var(--text);border:1px solid var(--border-dim);border-radius:var(--radius-sm);padding:4px 12px;font-size:.8rem;cursor:pointer}'
+    + '.sim-sec-nav-btn:hover{background:var(--border)}'
+    + '.sim-sec-nav-btn:focus-visible{outline:2px solid var(--accent-text);outline-offset:2px}'
     + '</style>';
 
   /* ------------------------------------------------------------------
@@ -258,7 +259,7 @@
     html += '</form>';
     html += '<button type="button" class="sim-sec-btn" data-act="backup-avaliar">Avaliar pol\u00edtica</button>';
     html += '<div id="sec-backup-fb" class="sim-sec-fb"></div>';
-    html += '<hr style="border-color:#333947;margin:10px 0">';
+    html += '<hr style="border-color:var(--border);margin:10px 0">';
     html += '<p>' + esc(backupRegra.explicacao) + '</p>';
     html += '</div>';
     return html;
@@ -269,7 +270,7 @@
     html += '<p class="sim-seguranca-sub">Responda aos exerc\u00edcios e receba feedback com justificativa.</p>';
     for (var i = 0; i < exerciciosAuthz.length; i++) {
       var ex = exerciciosAuthz[i];
-      html += '<div class="sim-sgmt-msg" style="background:#161a21">';
+      html += '<div class="sim-sgmt-msg" style="background:var(--surface-elev)">';
       html += '<div class="sim-sgmt-assunto">' + esc(ex.titulo) + '</div>';
       html += '<div class="sim-sgmt-corpo">' + esc(ex.pergunta) + '</div>';
       for (var j = 0; j < ex.opcoes.length; j++) {
@@ -294,6 +295,7 @@
     return '<div class="sim-seguranca">'
       + '<h3>Simulador de Seguran\u00e7a (Se\u00e7\u00e3o 7.3)</h3>'
       + '<p class="sim-seguranca-sub">Simula\u00e7\u00e3o did\u00e1tica e ambiente isolado \u2014 n\u00e3o executa ataques reais. Dados fict\u00edcios (Se\u00e7\u00e3o 4.3).</p>'
+      + '<p><button type="button" class="sim-sec-btn sim-sec-btn-reset" data-act="sec-reset">Reiniciar simulador</button></p>'
       + '<nav class="sim-sec-nav" aria-label="Navegação das seções do simulador de segurança">'
       + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="phishing">1. Triagem de phishing</button>'
       + '<button type="button" class="sim-sec-nav-btn" data-act="nav" data-target="backup">2. Política de backup</button>'
@@ -440,7 +442,17 @@
     fb.innerHTML = '<div class="sim-sec-fb ' + esc(classe) + '">' + esc(label) + ': ' + esc(ex.justificativa) + '</div>';
   }
 
+  function securityOnReset(e, containerEl) {
+    var alvo = e && e.target;
+    if (!alvo || !alvo.getAttribute) return;
+    if (alvo.getAttribute('data-act') !== 'sec-reset') return;
+    containerEl.innerHTML = securityCss + securityBuildUI();
+    var reiniciar = containerEl.querySelector('[data-act="sec-reset"]');
+    if (reiniciar && reiniciar.focus) reiniciar.focus();
+  }
+
   function securityOnClick(e, containerEl) {
+    securityOnReset(e, containerEl);
     securityOnNav(e, containerEl);
     securityOnClassificar(e, containerEl);
     securityOnMostrarIndicadores(e, containerEl);
