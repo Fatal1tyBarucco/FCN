@@ -202,11 +202,18 @@
   function modoFocoAtivo() { return document.body.classList.contains('modo-foco'); }
   function alternarModoFoco() {
     document.body.classList.toggle('modo-foco');
-    return modoFocoAtivo();
+    var ativo = modoFocoAtivo();
+    /* Expõe o estado para tecnologias assistivas (aria-pressed no botão). */
+    var btn = document.querySelector('.focus-toggle-btn');
+    if (btn) btn.setAttribute('aria-pressed', ativo ? 'true' : 'false');
+    return ativo;
   }
 
   /* ---------- UI mínima: injeção de controles no painel de conteúdo ---------- */
   function injetarControles() {
+    var icone = function (nome) {
+      return (typeof window !== 'undefined' && typeof window.FCNIcon === 'function') ? window.FCNIcon(nome) : '';
+    };
     // Toggle de tema (FIX-04: só injeta se NENHUM controle de tema já existir —
     // #theme-toggle (index.html/app.js), .btn-theme ou .theme-toggle-btn)
     var controleTemaExistente = document.querySelector('#theme-toggle, .btn-theme, .theme-toggle-btn');
@@ -215,8 +222,12 @@
       var btn = document.createElement('button');
       btn.className = 'theme-toggle-btn';
       btn.type = 'button';
-      btn.setAttribute('aria-label', 'Alternar tema claro/escuro');
-      btn.textContent = '🌓';
+      btn.setAttribute('aria-label', 'Tema');
+      btn.setAttribute('aria-pressed', (document.documentElement.getAttribute('data-theme') === 'dark') ? 'true' : 'false');
+      btn.title = 'Alternar tema claro/escuro';
+      /* Ícone SVG (sem texto visível): evita o conflito axe
+         label-content-name-mismatch entre o emoji e o aria-label. */
+      btn.innerHTML = icone('tema-escuro');
       btn.addEventListener('click', alternarTema);
       header.appendChild(btn);
     }
@@ -226,7 +237,11 @@
       fbtn.className = 'focus-toggle-btn';
       fbtn.type = 'button';
       fbtn.setAttribute('aria-label', 'Alternar modo de foco');
-      fbtn.textContent = '🎯';
+      fbtn.setAttribute('aria-pressed', modoFocoAtivo() ? 'true' : 'false');
+      fbtn.title = 'Alternar modo de foco';
+      /* Ícone SVG (sem texto visível): evita o conflito axe
+         label-content-name-mismatch entre o emoji e o aria-label. */
+      fbtn.innerHTML = icone('foco');
       fbtn.addEventListener('click', alternarModoFoco);
       header.appendChild(fbtn);
     }

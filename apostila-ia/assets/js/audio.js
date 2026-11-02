@@ -314,31 +314,24 @@
     if (typeof document === 'undefined' || !document || !document.createElement || !document.head) return;
     if (document.getElementById && document.getElementById(STYLE_ID)) return;
     var css = [
-      '#audio-app { font-family: var(--font-family, system-ui, sans-serif); font-size: 0.92rem; }',
+      '#audio-app { font-family: var(--font-sans); font-size: 0.92rem; color: var(--text); }',
       '#audio-app .aud-header { display: flex; align-items: center; gap: .5rem; margin-bottom: .8rem; }',
-      '#audio-app .aud-header h3 { margin: 0; font-size: 1.05rem; color: var(--primary-color, #174878); }',
-      '#audio-app .aud-header svg { width: 1.1rem; height: 1.1rem; fill: var(--primary-color, #174878); }',
-      '#audio-app .aud-aviso { background: #fff3cd; border: 1px solid #ffe082; border-radius: 8px; padding: .9rem 1rem; margin-bottom: .8rem; font-size: .9rem; color: #5a3a00; line-height: 1.4; }',
-      '#audio-app .aud-erro { background: #fde8e8; border: 1px solid #f5c2c2; color: #600; }',
+      '#audio-app .aud-header h3 { margin: 0; font-size: 1.05rem; color: var(--text-link); }',
+      '#audio-app .aud-header svg { width: 1.1rem; height: 1.1rem; fill: var(--text-link); }',
+      '#audio-app .aud-aviso { background: var(--surface-elev); border: 1px solid var(--warning); border-radius: var(--radius); padding: .9rem 1rem; margin-bottom: .8rem; font-size: .9rem; color: var(--warn-text); line-height: 1.4; }',
+      '#audio-app .aud-erro { background: var(--fill-error); border: 1px solid var(--border); color: var(--on-fill); }',
       '#audio-app .aud-controle { display: flex; flex-wrap: wrap; gap: .5rem; align-items: end; margin-bottom: .8rem; }',
-      '#audio-app .aud-controle label { font-size: .82rem; color: #374151; display: flex; flex-direction: column; gap: .2rem; }',
-      '#audio-app .aud-controle select { padding: .25rem .4rem; font-size: .85rem; border: 1px solid #dde2e7; border-radius: 6px; }',
+      '#audio-app .aud-controle label { font-size: .82rem; color: var(--text-dim); display: flex; flex-direction: column; gap: .2rem; }',
+      '#audio-app .aud-controle select { padding: .25rem .4rem; font-size: .85rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); }',
       '#audio-app .aud-controle input[type=range] { width: 120px; cursor: pointer; }',
-      '#audio-app #aud-texto { width: 100%; min-height: 90px; padding: .5rem .6rem; border: 1px solid #dde2e7; border-radius: 8px; font-family: inherit; font-size: .86rem; resize: vertical; }',
+      '#audio-app #aud-texto { width: 100%; min-height: 90px; padding: .5rem .6rem; border: 1px solid var(--border); border-radius: var(--radius); font-family: inherit; font-size: .86rem; resize: vertical; background: var(--surface); color: var(--text); }',
       '#audio-app .aud-acoes { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .6rem; }',
-      '#audio-app .aud-acoes button { padding: .4rem .8rem; border: 1px solid var(--primary-color, #174878); background: var(--primary-color, #174878); color: #fff; border-radius: 8px; cursor: pointer; font-size: .85rem; }',
-      '#audio-app .aud-acoes button:hover { background: #0d47a1; }',
-      '#audio-app .aud-acoes button:disabled { background: #9aa0a6; border-color: #9aa0a6; cursor: default; }',
-      '#audio-app .aud-acoes button.sec { background: transparent; color: var(--primary-color, #174878); }',
-      '#audio-app .aud-acoes button.sec:hover { background: rgba(26,115,232,.08); }',
-      '#audio-app .aud-status { font-size: .82rem; color: #374151; min-height: 1.3em; margin-top: .4rem; }',
-      '@media (prefers-color-scheme: dark) {',
-      '#audio-app .aud-aviso { background: #322a0f; border-color: #8a7000; color: #fff9c4; }',
-      '#audio-app .aud-erro { background: #4a2020; border-color: #a03c3c; color: #ffd6d6; }',
-      '#audio-app .aud-controle select { background: #3c4043; color: #e8eaed; border-color: #374151; }',
-      '#audio-app #aud-texto { background: #2c3034; color: #e8eaed; border-color: #374151; }',
-      '#audio-app .aud-status { color: #b3b7bc; }',
-      '}'
+      '#audio-app .aud-acoes button { padding: .4rem .8rem; border: 1px solid var(--fill-primary); background: var(--fill-primary); color: var(--on-primary); border-radius: var(--radius); cursor: pointer; font-size: .85rem; }',
+      '#audio-app .aud-acoes button:hover { background: var(--fill-primary-hover); }',
+      '#audio-app .aud-acoes button:disabled { background: var(--surface-elev); border-color: var(--border); color: var(--text-dim); cursor: default; }',
+      '#audio-app .aud-acoes button.sec { background: transparent; color: var(--text-link); }',
+      '#audio-app .aud-acoes button.sec:hover { background: var(--surface-elev); }',
+      '#audio-app .aud-status { font-size: .82rem; color: var(--text-dim); min-height: 1.3em; margin-top: .4rem; }'
     ].join('\n');
     var style = document.createElement('style');
     style.id = STYLE_ID;
@@ -396,15 +389,18 @@
 
     html += '<textarea id="aud-texto" aria-label="Texto para leitura em voz alta" placeholder="Digite ou cole aqui o texto a ser lido em voz alta (acentos e pontuação preservados).">' + esc(ESTADO.textoDigitado || '') + '</textarea>';
     html += '<div class="aud-acoes">';
+    var icone = function (nome) {
+      return (typeof window !== 'undefined' && typeof window.FCNIcon === 'function') ? window.FCNIcon(nome) : '';
+    };
     html += '<button type="button" id="aud-ler-tela" class="sec">Ler conteúdo da tela</button>';
     var playDisabled = (!api || !!ESTADO.falando);
-    html += '<button type="button" id="aud-play" ' + (playDisabled ? 'disabled' : '') + '>▶ Reproduzir</button>';
+    html += '<button type="button" id="aud-play" ' + (playDisabled ? 'disabled' : '') + '>' + icone('play') + ' Reproduzir</button>';
     var pauseDisabled = (!api || !ESTADO.falando);
-    html += '<button type="button" id="aud-pause" ' + (pauseDisabled ? 'disabled' : '') + '>⏸ Pausa</button>';
+    html += '<button type="button" id="aud-pause" ' + (pauseDisabled ? 'disabled' : '') + '>' + icone('pause') + ' Pausa</button>';
     var resumeDisabled = (!api || !ESTADO.pausado);
-    html += '<button type="button" id="aud-resume" ' + (resumeDisabled ? 'disabled' : '') + '>▷ Retomar</button>';
+    html += '<button type="button" id="aud-resume" ' + (resumeDisabled ? 'disabled' : '') + '>' + icone('play') + ' Retomar</button>';
     var stopDisabled = (!api || (!ESTADO.falando && !ESTADO.pausado));
-    html += '<button type="button" id="aud-stop" ' + (stopDisabled ? 'disabled' : '') + '>⏹ Interromper</button>';
+    html += '<button type="button" id="aud-stop" ' + (stopDisabled ? 'disabled' : '') + '>' + icone('stop') + ' Interromper</button>';
     html += '</div>';
     html += '<div class="aud-status" id="aud-status">' + esc(ESTADO.mensagem || '') + '</div>';
 

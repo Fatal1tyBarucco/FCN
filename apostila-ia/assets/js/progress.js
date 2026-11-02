@@ -279,36 +279,39 @@
 
     // Por módulo
     html += '<h3>Por módulo</h3>';
-    html += '<table class="pg-tabela"><thead><tr><th>Módulo</th><th>Título</th><th>Tópicos</th><th>Unidades</th><th>% tópicos</th></tr></thead><tbody>';
+    var tabelaModulos = '<table class="pg-tabela"><thead><tr><th>Módulo</th><th>Título</th><th>Tópicos</th><th>Unidades</th><th>% tópicos</th></tr></thead><tbody>';
     prog.porModulo.forEach(function (m) {
       var pct = m.topicosTotal > 0 ? (m.topicosVisitados / m.topicosTotal * 100) : 0;
-      html += '<tr><td>M' + m.numero + '</td><td>' + esc(m.titulo) + '</td><td>' + m.topicosVisitados + '/' + m.topicosTotal + '</td><td>' + m.unidadesConcluidas + '/' + m.unidadesTotal + '</td><td>' + formatarPct(pct) + '</td></tr>';
+      tabelaModulos += '<tr><td>M' + m.numero + '</td><td>' + esc(m.titulo) + '</td><td>' + m.topicosVisitados + '/' + m.topicosTotal + '</td><td>' + m.unidadesConcluidas + '/' + m.unidadesTotal + '</td><td>' + formatarPct(pct) + '</td></tr>';
     });
-    html += '</tbody></table>';
+    tabelaModulos += '</tbody></table>';
+    html += window.wrapTabela(tabelaModulos, 'Progresso por módulo', false);
 
     // Flashcards por módulo
     html += '<h3>Flashcards por módulo</h3>';
-    html += '<table class="pg-tabela"><thead><tr><th>Módulo</th><th>Total</th><th>Dominados</th><th>Vencidos</th><th>Em revisão</th><th>Pendentes</th></tr></thead><tbody>';
+    var tabelaFlashcards = '<table class="pg-tabela"><thead><tr><th>Módulo</th><th>Total</th><th>Dominados</th><th>Vencidos</th><th>Em revisão</th><th>Pendentes</th></tr></thead><tbody>';
     prog.flashcards.porModulo.forEach(function (m) {
-      html += '<tr><td>M' + (m.numero || '?') + '</td><td>' + m.total + '</td><td>' + m.dominado + '</td><td>' + m.vencido + '</td><td>' + m.revisao + '</td><td>' + m.pendente + '</td></tr>';
+      tabelaFlashcards += '<tr><td>M' + (m.numero || '?') + '</td><td>' + m.total + '</td><td>' + m.dominado + '</td><td>' + m.vencido + '</td><td>' + m.revisao + '</td><td>' + m.pendente + '</td></tr>';
     });
-    html += '</tbody></table>';
+    tabelaFlashcards += '</tbody></table>';
+    html += window.wrapTabela(tabelaFlashcards, 'Flashcards por módulo', false);
 
     // Histórico simulados
     html += '<h3>Histórico de simulados (últimas 10)</h3>';
     if (prog.simulados.tentativas.length === 0) {
       html += '<p><em>Nenhuma tentativa registrada.</em></p>';
     } else {
-      html += '<table class="pg-tabela"><thead><tr><th>Data</th><th>Nota</th><th>Taxa</th><th>Respondidas</th><th>Não resp.</th><th>Tempo</th></tr></thead><tbody>';
+      var tabelaHistorico = '<table class="pg-tabela"><thead><tr><th>Data</th><th>Nota</th><th>Taxa</th><th>Respondidas</th><th>Não resp.</th><th>Tempo</th></tr></thead><tbody>';
       prog.simulados.tentativas.forEach(function (t) {
-        html += '<tr><td>' + esc(formatarData(t.dataFim || t.dataInicio || t.data)) + '</td>' +
+        tabelaHistorico += '<tr><td>' + esc(formatarData(t.dataFim || t.dataInicio || t.data)) + '</td>' +
           '<td>' + (typeof t.nota === 'number' ? formatarPct(t.nota) : '—') + '</td>' +
           '<td>' + (typeof t.taxaAcerto === 'number' ? formatarPct(t.taxaAcerto) : '—') + '</td>' +
           '<td>' + (t.respondidas != null ? esc(t.respondidas) : '—') + '</td>' +
           '<td>' + (t.naoRespondidas != null ? esc(t.naoRespondidas) : '—') + '</td>' +
           '<td>' + (t.tempoTotalMs != null ? Math.round(Number(t.tempoTotalMs) / 1000) + 's' : '—') + '</td></tr>';
       });
-      html += '</tbody></table>';
+      tabelaHistorico += '</tbody></table>';
+      html += window.wrapTabela(tabelaHistorico, 'Histórico de simulados — progresso', true);
     }
 
     // Backup
@@ -375,19 +378,19 @@
     var style = document.createElement('style');
     style.id = 'pg-style';
     style.textContent = [
-      '.pg-aviso{background:#fce8e6;border:1px solid #f6bbb4;border-radius:8px;padding:.6rem .8rem;color:#a50e0e;}',
+      '.pg-aviso{background:var(--fill-error);border:1px solid var(--border);border-radius:var(--radius);padding:.6rem .8rem;color:var(--on-fill);}',
       '.pg-resumo{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0;}',
-      '.pg-card{flex:1 1 180px;border:1px solid #dde2e7;border-radius:8px;padding:.6rem .8rem;background:#fff;}',
-      '.pg-big{font-size:1.5rem;font-weight:700;color:#174878;}',
-      '.pg-sub{font-size:.82rem;color:#374151;}',
-      '.pg-tabela{width:100%;border-collapse:collapse;font-size:.88rem;margin:.4rem 0;}',
-      '.pg-tabela th,.pg-tabela td{border:1px solid #dde2e7;padding:.25rem .4rem;}',
-      '.pg-tabela thead th{background:#e8eaed;}',
-      '.pg-backup{margin-top:1rem;border-top:1px dashed #dde2e7;padding-top:.6rem;}',
-      '.pg-btn{border-radius:8px;padding:.4rem .7rem;border:1px solid #174878;background:#e8f0fe;color:#174ea6;cursor:pointer;font-size:.9rem;}',
+      '.pg-card{flex:1 1 180px;border:1px solid var(--border);border-radius:var(--radius);padding:.6rem .8rem;background:var(--surface);color:var(--text);}',
+      '.pg-big{font-size:1.5rem;font-weight:700;color:var(--text-link);}',
+      '.pg-sub{font-size:.82rem;color:var(--text-dim);}',
+      '.pg-tabela{width:100%;border-collapse:collapse;font-size:.88rem;margin:.4rem 0;color:var(--text);}',
+      '.pg-tabela th,.pg-tabela td{border:1px solid var(--border);padding:.25rem .4rem;}',
+      '.pg-tabela thead th{background:var(--surface-elev);color:var(--text);}',
+      '.pg-backup{margin-top:1rem;border-top:1px dashed var(--border);padding-top:.6rem;}',
+      '.pg-btn{border-radius:var(--radius);padding:.4rem .7rem;border:1px solid var(--fill-primary);background:var(--fill-primary);color:var(--on-primary);cursor:pointer;font-size:.9rem;}',
+      '.pg-btn:hover{background:var(--fill-primary-hover);}',
       '.pg-import{display:inline-block;}',
-      '.pg-status{margin-left:.6rem;font-size:.88rem;color:#374151;}',
-      '@media (prefers-color-scheme: dark){.pg-card{background:#202124;border-color:#374151;}.pg-tabela th,.pg-tabela td{border-color:#374151;}.pg-tabela thead th{background:#3c4043;}}'
+      '.pg-status{margin-left:.6rem;font-size:.88rem;color:var(--text-dim);}'
     ].join('');
     document.head.appendChild(style);
   }

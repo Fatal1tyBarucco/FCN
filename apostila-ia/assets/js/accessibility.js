@@ -32,9 +32,11 @@
       /* Skip link */
       '.a11y-skip-link{position:absolute;left:-9999px;top:0;z-index:1000;background:#0b1d36;color:#fff;padding:.5rem .8rem;border-radius:0 0 8px 0;font-weight:700;text-decoration:none;}',
       '.a11y-skip-link:focus{left:0;outline:3px solid #fdd663;}',
-      /* Focus visible */
-      ':focus-visible{outline:3px solid #1a73e8;outline-offset:2px;border-radius:4px;}',
-      'a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #1a73e8;outline-offset:2px;}',
+      /* Foco visível: o anel global é definido em assets/css/styles.css
+         (:focus-visible { outline: 2px solid var(--text-link) }). NADA é
+         injetado aqui — antes este arquivo sobrescrevia o anel do design
+         system com um azul fixo (#1a73e8), quebrando a consistência e o
+         contraste do indicador nos dois temas. */
       /* Reduced motion */
       '@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important;}}',
       /* Landmark helpers */

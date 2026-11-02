@@ -335,8 +335,11 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Personalização: favorito + anotações (Seção 11). */
     var fav = (window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.ehFavorito) ? window.ApostilaPersonalizacao.ehFavorito(topicoId) : false;
     html += '<div class="personalizacao-bar" style="margin-top:12px;padding-top:8px;border-top:1px solid var(--border,#e5e7eb);">';
-    html += '<button type="button" class="btn-favorito" data-topic="' + esc(topicoId) + '" aria-pressed="' + (fav ? 'true' : 'false') + '" style="margin-right:8px;">' + (fav ? '★ Favorito' : '☆ Favoritar') + '</button>';
-    html += '<button type="button" class="btn-anotacao" data-topic="' + esc(topicoId) + '" style="margin-right:8px;">📝 Anotações</button>';
+    var icone = function (nome) {
+      return (typeof window !== 'undefined' && typeof window.FCNIcon === 'function') ? window.FCNIcon(nome) : '';
+    };
+    html += '<button type="button" class="btn-favorito" data-topic="' + esc(topicoId) + '" aria-pressed="' + (fav ? 'true' : 'false') + '" style="margin-right:8px;">' + icone(fav ? 'estrela-cheia' : 'estrela') + ' ' + (fav ? 'Favorito' : 'Favoritar') + '</button>';
+    html += '<button type="button" class="btn-anotacao" data-topic="' + esc(topicoId) + '" style="margin-right:8px;">' + icone('nota') + ' Anotações</button>';
     html += '</div>';
     html += '<div class="anotacao-area" data-topic="' + esc(topicoId) + '" style="display:none;margin-top:8px;">';
     html += '<textarea class="anotacao-texto" rows="4" style="width:100%;" placeholder="Escreva sua anotação...">' + esc((window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.obterAnotacao) ? window.ApostilaPersonalizacao.obterAnotacao(topicoId) : '') + '</textarea>';
@@ -350,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnFav) btnFav.addEventListener('click', function () {
       if (!window.ApostilaPersonalizacao) return;
       var agoraFav = window.ApostilaPersonalizacao.alternarFavorito(topicoId);
-      btnFav.textContent = agoraFav ? '★ Favorito' : '☆ Favoritar';
+      btnFav.innerHTML = icone(agoraFav ? 'estrela-cheia' : 'estrela') + ' ' + (agoraFav ? 'Favorito' : 'Favoritar');
       btnFav.setAttribute('aria-pressed', agoraFav ? 'true' : 'false');
     });
     var btnAnot = painel.querySelector('.btn-anotacao');
@@ -360,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnSalvar) btnSalvar.addEventListener('click', function () {
       var ta = painel.querySelector('.anotacao-texto');
       if (window.ApostilaPersonalizacao && ta) window.ApostilaPersonalizacao.salvarAnotacao(topicoId, ta.value);
-      btnSalvar.textContent = 'Salvo ✓';
+      btnSalvar.innerHTML = icone('check') + ' Salvo';
       setTimeout(function () { btnSalvar.textContent = 'Salvar anotação'; }, 1500);
     });
   }
