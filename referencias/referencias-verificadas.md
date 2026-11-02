@@ -437,3 +437,64 @@ A correção das referências melhora o vínculo entre questão e dispositivo, m
 - Looker Studio Help: https://support.google.com/looker-studio/ — M8.
 
 Pendência: q-m3-45 (zoombombing/intrusão em reuniões) mantém fonte curricular — não foi localizada fonte primária verificada nos domínios permitidos (Zoom docs não verificadas). Registrar como pendente.
+
+---
+## Bloco 8 — RFCs complementares de rede (Módulo 2) — verificação 2026-11-02
+
+Verificação direta por HTTP (webfetch) ao rfc-editor.org em 2026-11-02. Todos os 5 RFCs abaixo foram acessados diretamente e confirmados como acessíveis, com título/organização correspondentes ao tema. Estes RFCs complementam os já verificados no Bloco 4 (2026-10-24) e Bloco 7/I4 (2026-10-24) e correspondem às referências pendentes listadas na AUDITORIA_FINAL.md linha 37.
+
+### RFC 2228 — FTP Security Extensions
+- RFC: RFC 2228, "FTP Security Extensions"
+- Autores: M. Horowitz, S. Lunt
+- Organização: IETF (RFC Editor)
+- Status: Proposed Standard, outubro de 1997 (atualiza RFC 959)
+- URL oficial verificada (acesso direto, 2026-11-02): https://www.rfc-editor.org/info/rfc2228/
+- Tópico: M2 — Redes de computadores (FTP segurança, extensões de autenticação/integridade/confidencialidade)
+- Data de verificação: 2026-11-02
+- Escopo: define extensões ao FTP (RFC 959) para autenticação forte, integridade e confidencialidade nos canais de controle e dados via novos comandos (AUTH, ADAT, PROT, PBSZ, CCC, MIC, CONF, ENC) e códigos de resposta protegidos (6yz). Complementa RFC 959 (FTP base) e RFC 4217 (FTPS/TLS) já verificados.
+
+### RFC 4217 — Securing FTP with TLS (FTPS)
+- RFC: RFC 4217, "Securing FTP with TLS"
+- Autor: P. Ford-Hutchinson
+- Organização: IETF (RFC Editor)
+- Status: Proposed Standard, outubro de 2005 (atualizado por RFC 8996)
+- URL oficial verificada (acesso direto, 2026-11-02): https://www.rfc-editor.org/info/rfc4217/
+- Tópico: M2 — Redes de computadores (FTPS, FTP sobre TLS)
+- Data de verificação: 2026-11-02
+- Escopo: especifica como combinar RFC 959 (FTP), RFC 2246 (TLS 1.0) e RFC 2228 (extensões de segurança FTP) para implementar FTPS de forma interoperável. Define uso dos comandos AUTH TLS, PBSZ, PROT, CCC para negociação de sessão protegida. Complementa RFC 2228 (extensões de segurança) e RFC 959 (FTP base) já verificados.
+
+### RFC 5322 — Internet Message Format
+- RFC: RFC 5322, "Internet Message Format"
+- Editor: P. Resnick
+- Organização: IETF (RFC Editor)
+- Status: Draft Standard, outubro de 2008 (obsoleta RFC 2822; atualizada por RFC 6854)
+- URL oficial verificada (acesso direto, 2026-11-02): https://www.rfc-editor.org/info/rfc5322/
+- Tópico: M3 — Comunicação digital (formato de mensagens de e-mail, sintaxe de cabeçalhos, endereçamento)
+- Data de verificação: 2026-11-02
+- Escopo: especifica a sintaxe do formato de mensagens de Internet (IMF) para e-mail, incluindo cabeçalhos (origem, destino, data, assunto, etc.), estrutura de endereços (addr-spec, mailbox, group), codificação de caracteres, dobra de linhas (folding) e sintaxe obsoleta para compatibilidade. Complementa RFC 5321 (SMTP, já verificado) que trata do envelope de transporte.
+
+### RFC 4026 — Provider Provisioned VPN Terminology
+- RFC: RFC 4026, "Provider Provisioned Virtual Private Network (VPN) Terminology"
+- Autores: L. Andersson, T. Madsen
+- Organização: IETF (RFC Editor)
+- Status: Informational, março de 2005
+- URL oficial verificada (acesso direto, 2026-11-02): https://www.rfc-editor.org/info/rfc4026/
+- Tópico: M2 — Redes de computadores (VPN, terminologia L2VPN/L3VPN, VPLS, VPWS, pseudo-wire)
+- Data de verificação: 2026-11-02
+- Escopo: estabelece terminologia unificada para VPNs providas por provedor (PPVPN), cobrindo serviços L2VPN (VPLS, VPWS, IPLS), L3VPN (BGP/MPLS IP VPN), pseudo-wires (PWE3), blocos de construção (CE, PE, P, AC, VRF, RT, RD, tunnel), classificação de VPNs e funções (signaling, MAC learning, flooding). Referência terminológica fundamental para o tema VPN no Módulo 2.
+
+### RFC 4364 — BGP/MPLS IP VPNs
+- RFC: RFC 4364, "BGP/MPLS IP Virtual Private Networks (VPNs)"
+- Autores: E. Rosen, Y. Rekhter
+- Organização: IETF (RFC Editor)
+- Status: Proposed Standard, fevereiro de 2006 (obsoleta RFC 2547; atualizada por RFCs 4577, 4684, 5462)
+- URL oficial verificada (acesso direto, 2026-11-02): https://www.rfc-editor.org/info/rfc4364/
+- Tópico: M2 — Redes de computadores (VPN IP sobre BGP/MPLS, arquitetura PE/CE, VRF, Route Distinguisher, Route Target)
+- Data de verificação: 2026-11-02
+- Escopo: especifica o modelo "peer" para VPNs IP usando backbone MPLS do provedor, com roteadores de borda do cliente (CE) e do provedor (PE), distribuição de rotas VPN via BGP com endereços VPN-IPv4 (RD + IPv4), controle de distribuição via Route Targets (RT), múltiplas tabelas de encaminhamento (VRFs) nos PEs, e encapsulamento MPLS para tunelamento no backbone. Especificação técnica de referência para L3VPN (BGP/MPLS IP VPN).
+
+## Rastreabilidade — Bloco 8
+- Fonte primária: rfc-editor.org (acesso direto por HTTP/webfetch em 2026-11-02).
+- Data de verificação: 2026-11-02.
+- Arquivo de referência: `apostila-ia/assets/data/references.js` (5 novas entradas; total passa a 188).
+- Nenhuma URL inventada; nenhuma citação de dispositivo inexistente.

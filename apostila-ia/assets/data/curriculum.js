@@ -1094,7 +1094,18 @@ const curriculum = {
                     "resposta": "Certo."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno compreenderá a estrutura de pasta de trabalho, planilhas, células e intervalos no Excel, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno compreenderá a estrutura de pasta de trabalho, planilhas, células e intervalos no Excel, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "ZVURQLXZtIc",
+                    "titulo": "Curso Excel #01 - Como surgiu o Excel?",
+                    "canal": "Curso em Vídeo",
+                    "urlOriginal": "https://www.youtube.com/watch?v=ZVURQLXZtIc",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/ZVURQLXZtIc",
+                    "descricao": "Vídeo introdutório sobre a história e origem do Microsoft Excel, explicando como surgiu a primeira planilha eletrônica (VisiCalc), a evolução para o Lotus 1-2-3 e o desenvolvimento do Excel pela Microsoft. Aborda os conceitos fundamentais de células, linhas, colunas e a revolução que as planilhas trouxeram para o processamento de dados em escritórios.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "modulo-1-unidade-3-topico-1-sub-2",
@@ -1286,7 +1297,18 @@ const curriculum = {
                     "resposta": "Errado. CONT.VALORES conta células não vazias (texto, número, lógico, erro); células vazias são ignoradas. Observação documentada: o simulador trata texto vazio como vazio (diferença pontual em relação ao Excel real, que conta texto vazio)."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno utilizará as funções essenciais do Excel: SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIA, MÉDIASE, MÁXIMO, MÍNIMO, CONT.VALORES, entre outras, incluindo funções textuais (CONCATENAR/CONCATENAR, TEXTOJUNTAR/TEXTJOIN, ESQUERDA/LEFT, DIREITA/RIGHT, EXT.TEXTO/EXT.TEXTO, PESQUISAR, LOCALIZAR, ARRUMAR, NUM.CARACT) e de data/hora (HOJE, AGORA, DATA, ANO, MÊS, DIA, DIAS, DIATRABALHOTOTAL, DATADIF), evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno utilizará as funções essenciais do Excel: SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIA, MÉDIASE, MÁXIMO, MÍNIMO, CONT.VALORES, entre outras, incluindo funções textuais (CONCATENAR/CONCATENAR, TEXTOJUNTAR/TEXTJOIN, ESQUERDA/LEFT, DIREITA/RIGHT, EXT.TEXTO/EXT.TEXTO, PESQUISAR, LOCALIZAR, ARRUMAR, NUM.CARACT) e de data/hora (HOJE, AGORA, DATA, ANO, MÊS, DIA, DIAS, DIATRABALHOTOTAL, DATADIF), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "boUzkJJNOPI",
+                    "titulo": "Curso Excel #10 - Funções do Excel (Parte 1)",
+                    "canal": "Curso em Vídeo",
+                    "urlOriginal": "https://www.youtube.com/watch?v=boUzkJJNOPI",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/boUzkJJNOPI",
+                    "descricao": "Vídeo didático sobre as principais funções do Excel, cobrindo funções matemáticas (SOMA, MÉDIA, MÁXIMO, MÍNIMO), estatísticas, lógicas (SE, E, OU), de contagem (CONT.SE, CONT.VALORES) e funções de texto. Explica a sintaxe, argumentos e exemplos práticos de uso de cada função, essenciais para provas de concursos e uso profissional.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               }
             ]
           },

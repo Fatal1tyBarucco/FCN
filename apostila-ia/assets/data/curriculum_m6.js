@@ -122,7 +122,18 @@ const curriculumM6 = {
                     "resposta": "D. Medida de infraestrutura não é requisito de legalidade; as demais compõem a trilha que permite reconstituir e justificar a decisão."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitará o que a automação de atos administrativos pode e não pode fazer, relacionará a digitalização de processos à base legal e à assinatura eletrônica e explicará por que automatizar não transfere nem cria competência, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitará o que a automação de atos administrativos pode e não pode fazer, relacionará a digitalização de processos à base legal e à assinatura eletrônica e explicará por que automatizar não transfere nem cria competência, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "As0A-w1WmPI",
+                    "titulo": "Sistemas de IA, IA no serviço público e em infraestruturas críticas",
+                    "canal": "Câmara dos Deputados",
+                    "urlOriginal": "https://www.youtube.com/watch?v=As0A-w1WmPI",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/As0A-w1WmPI",
+                    "descricao": "Videoaula institucional da Câmara dos Deputados sobre o uso de sistemas de inteligência artificial no serviço público e em infraestruturas críticas. Aborda os desafios éticos, legais e técnicos da automação de decisões administrativas, a necessidade de transparência algorítmica, explicabilidade, responsabilização humana, e os marcos normativos aplicáveis (Lei de Governo Digital, LGPD, Marco Legal da IA). Discute casos de uso em órgãos públicos e riscos de viés, discriminação algorítmica e concentração de poder decisório em sistemas opacos.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m6-u1-t2-s2",
@@ -158,7 +169,18 @@ const curriculumM6 = {
                     "resposta": "A, B e C. A medida D é de capacidade operacional e não constitui controle de impessoalidade."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diagnosticará violações de impessoalidade e moralidade em decisões automatizadas, distinguirá impessoalidade de indiferença e de uniformidade desnecessária, e explicará a relação entre critérios ocultos, explicabilidade e publicidade, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diagnosticará violações de impessoalidade e moralidade em decisões automatizadas, distinguirá impessoalidade de indiferença e de uniformidade desnecessária, e explicará a relação entre critérios ocultos, explicabilidade e publicidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "r7dYNidpM3k",
+                    "titulo": "Comunicação Descomplicada no Serviço Público: Linguagem Simples, Inteligência Artificial",
+                    "canal": "Governança com Inovação e Sustentabilidade",
+                    "urlOriginal": "https://www.youtube.com/watch?v=r7dYNidpM3k",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/r7dYNidpM3k",
+                    "descricao": "Videoaula sobre comunicação clara e linguagem simples no serviço público, com foco no uso de inteligência artificial para descomplicar textos oficiais. Aborda a Lei nº 14.129/2021 (art. 3º, VII - linguagem clara), técnicas de plain language, ferramentas de IA para simplificação e revisão de textos administrativos, acessibilidade comunicacional, e como a clareza fortalece a transparência, a impessoalidade e a eficiência na relação com o cidadão.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               }
             ]
           },
@@ -506,7 +528,18 @@ const curriculumM6 = {
                     "resposta": "B. O inciso XIII veda a exigência de prova de fato já comprovado pela apresentação de documento ou informação válida; o inciso XV trata da presunção de boa-fé do usuário e o inciso XII da imposição uma única vez das exigências."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as diretrizes do art. 3º da Lei nº 14.129/2021, relacionará os componentes essenciais do Governo Digital e identificará a finalidade de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as diretrizes do art. 3º da Lei nº 14.129/2021, relacionará os componentes essenciais do Governo Digital e identificará a finalidade de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "Zjv2mZJkakw",
+                    "titulo": "1 - Lei 14.129/2021 Governo Digital",
+                    "canal": "LexPlay",
+                    "urlOriginal": "https://www.youtube.com/watch?v=Zjv2mZJkakw",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/Zjv2mZJkakw",
+                    "descricao": "Videoaula introdutória sobre a Lei nº 14.129/2021 (Lei de Governo Digital). Explica os princípios, regras e instrumentos para o Governo Digital, as 26 diretrizes do art. 3º (desburocratização, plataforma única, linguagem clara, transparência, participação social, dados abertos, interoperabilidade, base nacional de serviços, domicílio eletrônico, assinatura eletrônica), os componentes (Base Nacional de Serviços Públicos, Cartas de Serviços, Gov.br, dados abertos), a relação com a LAI e LGPD, e a incidência nos entes federados. Essencial para concursos de carreiras administrativas e de TI no serviço público.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               }
             ]
           },
@@ -548,7 +581,18 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D é exatamente a divulgação irrestrita que o regime veda."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá publicidade administrativa de divulgação irrestrita de dados pessoais, identificará os limites que incidem sobre cada uma e dominará as exceções legais que conciliam transparência e proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá publicidade administrativa de divulgação irrestrita de dados pessoais, identificará os limites que incidem sobre cada uma e dominará as exceções legais que conciliam transparência e proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "75RqMrSbenM",
+                    "titulo": "Transparência e imparcialidade nos usos da inteligência artificial no âmbito do serviço público",
+                    "canal": "Thiago Nobrega | Direito Administrativo",
+                    "urlOriginal": "https://www.youtube.com/watch?v=75RqMrSbenM",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/75RqMrSbenM",
+                    "descricao": "Videoaula jurídica sobre transparência e imparcialidade no uso de inteligência artificial no serviço público. Aborda os princípios constitucionais da Administração Pública (legalidade, impessoalidade, moralidade, publicidade, eficiência) aplicados a sistemas algorítmicos, o dever de explicabilidade das decisões automatizadas, auditoria algorítmica, vieses em dados de treino, discriminação indireta, e a necessidade de supervisão humana e canais de contestação. Fundamenta-se na Lei nº 14.129/2021, LGPD e jurisprudência do TCU e STF sobre automação administrativa.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m6-u2-t3-s2",

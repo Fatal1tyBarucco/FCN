@@ -44,7 +44,18 @@ const curriculumM8 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará cada tarefa analítica ao tipo de gráfico capaz de executá-la, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará cada tarefa analítica ao tipo de gráfico capaz de executá-la, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "P6E_Kts9pxE",
+                    "titulo": "É o fim do Power BI? Criando Dashboard com Python em 15 minutos",
+                    "canal": "Asimov Academy",
+                    "urlOriginal": "https://www.youtube.com/watch?v=P6E_Kts9pxE",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/P6E_Kts9pxE",
+                    "descricao": "Videoaula prática de criação de dashboard interativo com Python usando Streamlit, Plotly e Pandas. Demonstra: carregamento e preparação de dados, criação de gráficos interativos (barras, linhas, dispersão, mapas), filtros dinâmicos (sidebar, selectbox, slider), layout em colunas, métricas (KPIs), deployment no Streamlit Community Cloud. Compara a abordagem código-first (Python) com ferramentas low-code (Power BI, Tableau), discutindo versionamento, reprodutibilidade, custo e flexibilidade. Inclui boas práticas de design visual e acessibilidade.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m8-u1-t1-s2",
