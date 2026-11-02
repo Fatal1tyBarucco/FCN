@@ -156,3 +156,34 @@ Nenhuma dessas pendências impede a conclusão do redesign visual; são tarefas 
 Estado atual: PR #26 (redesign) MERGED (2026-10-30 14:47:20Z); PR #27 (fix a11y label-content-name-mismatch) MERGED (2026-10-30 14:54:54Z). .gitignore atualizado (3777c90) com evidencia_*.png e verificacao/evidencias/*.png/*.json ignorados. label-content-name-mismatch corrigido (da47474: aria-label do theme-toggle inclui 'Tema'). Nenhum arquivo inventado.
 Evidencia: node --check 43/43 OK; verificador-estrutura 0 falhas; browser smoke (CDP headless): page loaded, 8 nav items, 43 script tags, 0 JS errors.
 Limitacao remanescente: responsividade fisica, leitor de tela, simuladores interacao completa, PWA HTTPS nao testados (documentados, nao ocultados).
+
+--- Atualizacao 2026-11-02 (entrega final da missão `prompts/prompt_redesign_visual_FCN.md` — commit desta sessão) ---
+Estado atual: entrega final do redesign visual na branch `feat/redesign-visual-premium` (HEAD local `5cb5668`, ahead do `origin/feat/redesign-visual-premium` `9887fcb`). Fases 1–7 executadas até o limite da verificação automatizada disponível.
+
+Refinamentos desta sessão (implementados no código-fonte, não em protótipo):
+1. **Cabeçalho (`apostila-ia/index.html` + `apostila-ia/assets/css/styles.css`):**
+   - Header reestruturado em zonas explícitas (`.header-zone--progress`, `--search`, `--actions`) com grid de áreas nomeadas (`brand | progress | search | actions | focus`).
+   - Reorganização por breakpoint: ≥901px uma linha; 901–1279px duas linhas; ≤900px três linhas (gaveta com toggle). Nenhum controle órfão.
+   - Barra de progresso global: 200×8px com gradiente primário→acento (referência) + rótulo oculto ≤1279px.
+   - Marca compactada (`--font-scale` ajustada, variantes `.brand-full`/`.brand-short`, subtítulo `.brand-subtitle` oculto ≤1599px); marca oculta ≥901px (identidade no sidebar — mesma convenção da referência).
+2. **Navegação lateral (`apostila-ia/assets/js/app.js` + `apostila-ia/assets/css/styles.css`):**
+   - `.nav-item` convertido de `<div>` para `<button type="button">` com `.nav-item-label`, foco visível `:focus-visible` e `aria-current`.
+   - Estado ativo: bloco azul sólido `--fill-primary` + filete âmbar à esquerda `--warning` + texto `--on-primary`.
+   - Trilha `.progress-mini` com largura total (`flex: 1 0 100%`) sob o rótulo.
+3. **Estado visual do estudo (`apostila-ia/assets/js/ui-shell.js` + `styles.css`):** `.study-workspace` com `display:none` / `.has-topic`; observer `MutationObserver` revela o painel e sincroniza título/desc.
+4. **Foco nos vídeos (`styles.css` + `ui-shell.js`):** wrapper recebe `.is-video-focus` (outline 3px `--text-link`, offset 2px) alternado por script; reconciliação via `document.activeElement` com `setTimeout(sync, 60)`.
+
+Testes finais desta sessão (comando real + saída):
+| Suíte | Resultado |
+|---|---|
+| `node --check` (sweep `apostila-ia/assets/**/*.js` + data) | OK (sem falhas) |
+| `verificar-estrutura.js` | TODAS AS VERIFICAÇÕES ESTRUTURAIS PASSARAM (0 falhas) |
+| `workspace/phase5_smoke.js` | FASE5 EVIDENCIAS: verificados=25 aprovados=25 |
+| `verificacao/test-browser-smoke.cjs` | modules=8, flashcards=474, questions=409, storageRoundTrip=true, pageErrors=[] |
+| `verificacao/test-visual-regression.cjs` | **RESUMO: 48/48 verificações visuais aprovadas** |
+| `verificacao/test-browser-interactions.cjs` | **result PASS** (59 passes, 0 violations, 0 blocking) |
+
+Incompletes aceitos (registrados como limitação, não mascarados): `color-contrast` (2 nós em `.card-gradient > h2/p` — gradiente sem fundo sólido resolúvel por axe) e `frame-tested` (2 iframes cross-origin).
+
+Limitacoes remanescentes (não ocultadas): responsividade fisica, leitor de tela real, interacao completa dos simuladores, PWA via HTTPS, validacao de contraste de gradiente com ferramenta dedicada.
+

@@ -23,6 +23,7 @@
     toggle.setAttribute('aria-controls', 'app-sidebar');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Abrir menu de navegação');
+    toggle.setAttribute('title', 'Abrir menu de navegação');
     toggle.innerHTML = '<span class="sidebar-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="sidebar-toggle-text">Menu</span>';
     header.insertBefore(toggle, header.firstChild);
 
@@ -36,18 +37,19 @@
     sidebar.className = 'app-sidebar';
     sidebar.id = 'app-sidebar';
     sidebar.setAttribute('aria-label', 'Menu principal e currículo');
+    const ic = (nome) => (typeof window !== 'undefined' && window.FCNIcon) ? window.FCNIcon(nome) : '';
     sidebar.innerHTML = [
       '<div class="sidebar-brand"><span class="sidebar-brand-mark" aria-hidden="true">TI</span><div><strong>Apostila TI &amp; Dados</strong><small>Central de aprendizagem</small></div></div>',
       '<p class="sidebar-section-label">MÓDULOS</p>',
       '<div id="nav-list" class="sidebar-nav-list"></div>',
       '<nav class="quick-navigation" aria-label="Seções da apostila"><p class="sidebar-section-label">NAVEGAÇÃO</p>',
-      '<a class="quick-link" href="#videos-app"><span aria-hidden="true">▶</span><span>Vídeos educacionais</span></a>',
-      '<a class="quick-link" href="#study-workspace"><span aria-hidden="true">▤</span><span>Área de aprendizagem</span></a>',
-      '<a class="quick-link" href="#flashcards"><span aria-hidden="true">▣</span><span>Flashcards</span></a>',
-      '<a class="quick-link" href="#questoes"><span aria-hidden="true">✓</span><span>Questões e simulados</span></a>',
-      '<a class="quick-link" href="#graficos"><span aria-hidden="true">▥</span><span>Visualização de dados</span></a>',
-      '<a class="quick-link" href="#search-app"><span aria-hidden="true">⌕</span><span>Buscar conteúdo</span></a>',
-      '<a class="quick-link" href="#progress-app"><span aria-hidden="true">◷</span><span>Meu progresso</span></a>',
+      '<a class="quick-link" href="#videos-app">' + ic('video') + '<span>Vídeos educacionais</span></a>',
+      '<a class="quick-link" href="#content-area">' + ic('area-aprendizagem') + '<span>Área de aprendizagem</span></a>',
+      '<a class="quick-link" href="#flashcards">' + ic('flashcard') + '<span>Flashcards</span></a>',
+      '<a class="quick-link" href="#questoes">' + ic('check') + '<span>Questões e simulados</span></a>',
+      '<a class="quick-link" href="#graficos">' + ic('modulo-visualizacao') + '<span>Visualização de dados</span></a>',
+      '<a class="quick-link" href="#search-app">' + ic('busca') + '<span>Buscar conteúdo</span></a>',
+      '<a class="quick-link" href="#progress-app">' + ic('progresso') + '<span>Meu progresso</span></a>',
       '</nav>',
       '<div class="sidebar-curriculum"><p class="sidebar-section-label">CURRÍCULO COMPLETO</p><p class="sidebar-help">Expanda os módulos para acessar unidades, tópicos e subtópicos.</p><div class="sidebar-tree-host" id="sidebar-tree-host"></div></div>',
       '<div class="sidebar-footer"><span class="sidebar-status-dot" aria-hidden="true"></span><span>Progresso salvo neste dispositivo</span></div>'
@@ -76,7 +78,7 @@
           workspace.className = 'study-workspace';
           workspace.id = 'study-workspace';
           workspace.setAttribute('aria-labelledby', 'study-workspace-title');
-          workspace.innerHTML = '<div class="study-workspace-heading"><span class="study-eyebrow">ÁREA DE APRENDIZAGEM</span><h2 id="study-workspace-title">Estude um tópico</h2><p>Escolha um módulo no menu lateral. O conteúdo, o objetivo de aprendizagem e os recursos complementares aparecerão aqui.</p></div>';
+          workspace.innerHTML = '<div class="study-workspace-heading"><span class="study-eyebrow">TÓPICO EM FOCO</span><h2 id="study-workspace-title">Estude um tópico</h2><p>Escolha um módulo no menu lateral. O conteúdo, o objetivo de aprendizagem e os recursos complementares aparecerão aqui.</p></div>';
           topicPanel.classList.add('topic-content-panel');
           workspace.appendChild(topicPanel);
           main.insertBefore(workspace, header.nextSibling);
@@ -111,6 +113,7 @@
     if (topicPanel) {
       const workspaceTitle = document.getElementById('study-workspace-title');
       const workspaceDescription = document.querySelector('.study-workspace-heading p');
+      const workspace = document.getElementById('study-workspace');
       const topicObserver = new MutationObserver(function () {
         const topicHeading = topicPanel.querySelector('h4');
         if (!topicHeading || !workspaceTitle) return;
@@ -119,6 +122,14 @@
           workspaceTitle.textContent = topicTitle;
           if (workspaceDescription) {
             workspaceDescription.textContent = 'Conteúdo do currículo, objetivo de aprendizagem, referências e ferramentas de personalização deste tópico.';
+          }
+          /* Revela a área de estudo apenas quando há um tópico de verdade:
+             antes disso ela era um estado vazio redundante com o módulo já
+             aberto logo abaixo. */
+          if (workspace && !workspace.classList.contains('has-topic')) {
+            workspace.classList.add('has-topic');
+            var suave = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+            try { workspace.scrollIntoView({ block: 'start', behavior: suave ? 'smooth' : 'auto' }); } catch (e) {}
           }
         }
       });
@@ -132,6 +143,7 @@
       body.classList.toggle('sidebar-open', drawerOpen);
       toggle.setAttribute('aria-expanded', String(drawerOpen));
       toggle.setAttribute('aria-label', drawerOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+      toggle.setAttribute('title', drawerOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
       toggle.querySelector('.sidebar-toggle-text').textContent = drawerOpen ? 'Fechar' : 'Menu';
       overlay.tabIndex = drawerOpen ? 0 : -1;
       overlay.setAttribute('aria-hidden', String(!drawerOpen));
@@ -153,6 +165,7 @@
         overlay.tabIndex = -1;
         toggle.setAttribute('aria-expanded', 'false');
         toggle.setAttribute('aria-label', 'Abrir menu de navegação');
+        toggle.setAttribute('title', 'Abrir menu de navegação');
         toggle.querySelector('.sidebar-toggle-text').textContent = 'Menu';
       } else {
         setSidebarOpen(body.classList.contains('sidebar-open'));
@@ -212,6 +225,40 @@
       }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
       sections.forEach(function (section) { observer.observe(section); });
     }
+
+    /* Indicador de foco nos vídeos: ao entrar no documento interno de um
+       iframe, o Chromium mantém o iframe como activeElement mas não
+       dispara focus/focusin no documento pai (cross-origin) — nem quando
+       o foco salta de um iframe para outro. Como o activeElement muda
+       silenciosamente, a detecção observa as ações que movem o foco
+       (teclado, ponteiro) e reconcilia o estado no tick seguinte. */
+    let videoFocusWrap = null;
+    function syncVideoFocus() {
+      const active = document.activeElement;
+      const wrap = (active && active.tagName === 'IFRAME' && active.closest)
+        ? active.closest('.video-wrapper, .video-embed-wrap')
+        : null;
+      if (wrap === videoFocusWrap) return;
+      if (videoFocusWrap) videoFocusWrap.classList.remove('is-video-focus');
+      if (wrap) wrap.classList.add('is-video-focus');
+      videoFocusWrap = wrap;
+    }
+    function scheduleVideoFocusSync() {
+      /* O activeElement só estabiliza depois que a troca de foco dentro do
+         iframe termina; por isso a reconciliação roda um instante depois
+         (o atraso é imperceptível e evita trocar a classe no meio da
+         transição). */
+      window.setTimeout(syncVideoFocus, 60);
+    }
+    document.addEventListener('focusout', scheduleVideoFocusSync, true);
+    document.addEventListener('focusin', scheduleVideoFocusSync, true);
+    document.addEventListener('keydown', scheduleVideoFocusSync, true);
+    document.addEventListener('pointerdown', scheduleVideoFocusSync, true);
+    /* Enquanto o foco está dentro do iframe, os eventos de teclado passam
+       para o documento interno dele: a única sinalização que sobra no
+       documento pai é o blur/focus da própria janela. */
+    window.addEventListener('blur', scheduleVideoFocusSync, true);
+    window.addEventListener('focus', scheduleVideoFocusSync, true);
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reducedMotion) {
