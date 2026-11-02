@@ -401,14 +401,14 @@ body.modo-foco .sidebar-toggle { display: none; }
   position: sticky;
   top: 0;
   z-index: var(--z-header);
-  background: color-mix(in oklab, var(--surface) 85%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: color-mix(in oklab, var(--surface) 90%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: var(--sp-3) var(--sp-4);
   margin: calc(-1 * var(--sp-3)) calc(-1 * var(--sp-4)) var(--sp-6);
   width: calc(100% + 2 * var(--sp-4));
-  min-height: 64px;
+  min-height: 68px;
 }
 @supports not (backdrop-filter: blur(10px)) {
   #header { background: var(--surface); }
@@ -781,10 +781,12 @@ body.sidebar-open .sidebar-overlay { opacity: 1; visibility: visible; transition
   padding: var(--sp-5);
   margin-bottom: var(--sp-5);
   box-shadow: var(--shadow-1);
+  transition: border-color var(--tr-fast), box-shadow var(--tr-fast);
 }
 .card > h3 { margin-top: 0; }
 .card > h4 { color: var(--text-link); margin-top: var(--sp-4); } /* texto em fill → usa --text-link */
 .card > h4:first-child { margin-top: 0; }
+.card:hover { border-color: var(--border-dim); box-shadow: var(--shadow-2); }
 
 .card-gradient {
   background: linear-gradient(135deg, var(--fill-primary), var(--fill-accent));
