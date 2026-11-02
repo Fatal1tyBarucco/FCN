@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apostila Definitiva de TI e Dados | MasterClass Concursos</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-box-and-violin-plot"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<style>
+:root {
+  --bg: #0f172a; --surface: #1e293b; --border: #334155; --text: #f8fafc; --text-dim: #94a3b8;
+  --primary: #3b82f6; --success: #10b981; --error: #ef4444; --warning: #f59e0b; --accent: #8b5cf6;
+  --radius: 8px; --shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
+}
+[data-theme="light"] {
+  --bg: #f1f5f9; --surface: #ffffff; --border: #cbd5e1; --text: #0f172a; --text-dim: #475569;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; display: flex; min-height: 100vh; overflow-x: hidden; }
+h1,h2,h3,h4 { color: var(--text); margin-bottom: 1rem; line-height: 1.2; }
+h1 { font-size: 2.2rem; border-bottom: 3px solid var(--primary); padding-bottom: 0.5rem; }
+h2 { font-size: 1.6rem; color: var(--primary); border-left: 4px solid var(--primary); padding-left: 1rem; margin-top: 2rem; }
+h3 { font-size: 1.3rem; margin-top: 1.5rem; color: var(--accent); }
+p { margin-bottom: 1rem; color: var(--text); }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { background: #00000040; padding: 2px 6px; border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 0.9em; color: #fbbf24; }
+pre { background: #00000080; padding: 1rem; border-radius: var(--radius); overflow-x: auto; margin: 1rem 0; border-left: 4px solid var(--accent); }
+pre code { background: none; padding: 0; color: #e2e8f0; }
+ul, ol { margin-left: 2rem; margin-bottom: 1rem; }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: var(--primary); color: white; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; }
+tr:nth-child(even) { background: #ffffff05; }
+.badge { display: inline-block; padding: 4px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+.badge-blue { background: #1e3a8a; color: #93c5fd; }
+.badge-green { background: #064e3b; color: #6ee7b7; }
+.badge-red { background: #7f1d1d; color: #fca5a5; }
+.badge-yellow { background: #78350f; color: #fcd34d; }
+.badge-purple { background: #4c1d95; color: #c4b5fd; }
+
+/* Layout */
+#sidebar { width: 280px; background: var(--surface); border-right: 1px solid var(--border); height: 100vh; position: sticky; top: 0; overflow-y: auto; padding: 1rem; flex-shrink: 0; z-index: 100; }
+#sidebar h2 { font-size: 1.2rem; text-align: center; border: none; padding: 0; margin-bottom: 1.5rem; color: var(--primary); }
+#sidebar .nav-item { display: block; padding: 12px; border-radius: var(--radius); margin-bottom: 8px; cursor: pointer; transition: 0.2s; color: var(--text-dim); border-left: 3px solid transparent; font-weight: 500; }
+#sidebar .nav-item:hover { background: #ffffff10; color: var(--text); }
+#sidebar .nav-item.active { background: var(--primary); color: white; border-left-color: var(--warning); }
+#sidebar .progress-mini { height: 4px; background: var(--border); border-radius: 2px; margin-top: 6px; overflow: hidden; }
+#sidebar .progress-mini-bar { height: 100%; background: var(--success); width: 0%; transition: width 0.3s; }
+
+#main { flex: 1; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+#header { position: sticky; top: 0; background: var(--surface); border-bottom: 1px solid var(--border); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 90; backdrop-filter: blur(10px); margin: -2rem -2rem 2rem -2rem; width: calc(100% + 4rem); }
+#header .left { display: flex; align-items: center; gap: 1rem; }
+#header .progress-global { width: 200px; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+#header .progress-global-bar { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); width: 0%; transition: width 0.5s; }
+#header .search-box { padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border); background: var(--bg); color: var(--text); width: 300px; }
+#header .btn { padding: 8px 16px; border-radius: var(--radius); border: none; background: var(--primary); color: white; cursor: pointer; font-weight: bold; transition: 0.2s; }
+#header .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+#header .btn-sec { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+
+/* Components */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: var(--shadow); }
+.card h3 { margin-top: 0; }
+.tabs { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; overflow-x: auto; }
+.tab { padding: 12px 24px; cursor: pointer; border-bottom: 3px solid transparent; font-weight: 600; color: var(--text-dim); white-space: nowrap; transition: 0.2s; }
+.tab:hover { color: var(--text); }
+.tab.active { border-bottom-color: var(--primary); color: var(--primary); }
+.tab-content { display: none; animation: fadeIn 0.3s; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+details { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; margin: 1rem 0; }
+summary { cursor: pointer; font-weight: bold; color: var(--primary); padding: 0.5rem; }
+summary:hover { color: var(--accent); }
+
+/* Flashcards */
+.fc-deck { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.fc-card { height: 200px; perspective: 1000px; cursor: pointer; }
+.fc-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
+.fc-card.flipped .fc-inner { transform: rotateY(180deg); }
+.fc-front, .fc-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: var(--shadow); overflow-y: auto; }
+.fc-front { background: var(--primary); color: white; font-weight: bold; font-size: 1.1rem; }
+.fc-back { background: var(--surface); color: var(--text); border: 2px solid var(--primary); transform: rotateY(180deg); font-size: 0.95rem; }
+.fc-actions { display: flex; gap: 0.5rem; margin-top: 1rem; width: 100%; }
+.fc-actions button { flex: 1; padding: 8px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; color: white; }
+.fc-btn-easy { background: var(--success); }
+.fc-btn-hard { background: var(--warning); }
+.fc-btn-wrong { background: var(--error); }
+
+/* Quiz */
+.quiz-q { background: var(--surface); border-left: 4px solid var(--accent); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: var(--radius); }
+.quiz-opts label { display: block; padding: 12px; border: 1px solid var(--border); border-radius: var(--radius); margin: 8px 0; cursor: pointer; transition: 0.2s; }
+.quiz-opts label:hover { background: #ffffff05; border-color: var(--primary); }
+.quiz-opts input { margin-right: 10px; }
+.quiz-opts label.correct { background: #10b98130; border-color: var(--success); }
+.quiz-opts label.wrong { background: #ef444430; border-color: var(--error); }
+.quiz-exp { display: none; background: #00000040; padding: 1rem; border-radius: var(--radius); margin-top: 1rem; border-left: 3px solid var(--warning); font-size: 0.9rem; }
+.quiz-exp.show { display: block; }
+
+/* Simulators */
+.sim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
+.sim-input textarea, .sim-input input { width: 100%; padding: 10px; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 1rem; font-family: inherit; }
+.sim-output { background: #000; color: #0f0; padding: 1rem; border-radius: var(--radius); font-family: monospace; min-height: 200px; white-space: pre-wrap; }
+.excel-grid { display: grid; grid-template-columns: 40px repeat(5, 1fr); gap: 2px; background: var(--border); padding: 2px; border-radius: 4px; margin-bottom: 1rem; }
+.excel-grid input { width: 100%; padding: 8px; border: none; background: var(--surface); color: var(--text); text-align: center; font-size: 0.9rem; }
+.excel-grid .hdr { background: var(--primary); color: white; font-weight: bold; padding: 8px; text-align: center; }
+.phish-email { border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem; background: var(--surface); }
+.phish-email .hdr { display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 0.5rem; font-size: 0.9rem; }
+.phish-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
+.phish-btn { flex: 1; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; color: white; }
+.phish-btn.safe { background: var(--success); }
+.phish-btn.danger { background: var(--error); }
+
+/* Charts */
+.chart-controls { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+.chart-controls select, .chart-controls button { padding: 8px 12px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 4px; cursor: pointer; }
+.chart-container { background: var(--surface); padding: 1.5rem; border-radius: var(--radius); height: 400px; position: relative; }
+
+/* Modal */
+.modal { display: none; position: fixed; inset: 0; background: #000000cc; z-index: 1000; justify-content: center; align-items: center; padding: 2rem; }
+.modal.show { display: flex; }
+.modal-content { background: var(--surface); border-radius: var(--radius); padding: 2rem; max-width: 800px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+.modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  body { flex-direction: column; }
+  #sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
+  #main { padding: 1rem; }
+  #header { flex-direction: column; gap: 1rem; width: 100%; margin: 0 0 1rem 0; padding: 1rem; width: 100%; }
+  #header .search-box { width: 100%; }
+  .sim-grid { grid-template-columns: 1fr; }
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 1rem; } .mb-1 { margin-bottom: 1rem; }
+.flex { display: flex; gap: 1rem; } .flex-1 { flex: 1; }
+.hidden { display: none !important; }
+.highlight { background: #f59e0b40; padding: 2px 4px; border-radius: 2px; }
+.tts-controls { display: flex; gap: 0.5rem; align-items: center; background: var(--surface); padding: 8px; border-radius: 20px; }
+.tts-controls button { background: none; border: none; color: var(--text); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; }
+.tts-controls select { background: var(--bg); color: var(--text); border: none; padding: 4px; border-radius: 4px; }
+
+/* Mermaid overrides */
+.mermaid { display: flex; justify-content: center; margin: 1rem 0; }
+.mermaid svg { max-width: 100%; height: auto; }
+
+/* Infographics CSS */
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; }
+.info-box { background: linear-gradient(135deg, var(--surface), #ffffff10); border: 1px solid var(--border); padding: 1.5rem; border-radius: var(--radius); text-align: center; transition: 0.3s; }
+.info-box:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 20px #00000040; }
+.info-box .icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.info-box h4 { color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+/* Video embed */
+.video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); margin: 1rem 0; border: 2px solid var(--border); }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.mark-complete { display: block; width: 100%; padding: 12px; background: var(--success); color: white; border: none; border-radius: var(--radius); font-weight: bold; font-size: 1.1rem; cursor: pointer; margin-top: 2rem; transition: 0.2s; }
+.mark-complete:hover { background: #059669; }
+.mark-complete.completed { background: var(--border); color: var(--text-dim); cursor: default; }
+</style>
+</head>
+<body>
+
+<aside id="sidebar">
+  <h2>📚 Apostila Master TI</h2>
+  <div id="nav-list"></div>
+</aside>
+
+<main id="main">
+  <div id="header">
+    <div class="left">
+      <strong>Progresso Global:</strong>
+      <div class="progress-global"><div class="progress-global-bar" id="global-progress"></div></div>
+      <span id="progress-text">0%</span>
+    </div>
+    <div class="right flex">
+      <input type="text" id="search-input" class="search-box" placeholder="🔍 Buscar em toda a apostila...">
+      <div class="tts-controls">
+        <button id="tts-play" title="Ouvir">🔊</button>
+        <button id="tts-pause" title="Pausar">⏸️</button>
+        <select id="tts-rate" title="Velocidade">
+          <option value="0.8">0.8x</option>
+          <option value="1" selected>1.0x</option>
+          <option value="1.2">1.2x</option>
+          <option value="1.5">1.5x</option>
+        </select>
+      </div>
+      <button class="btn btn-sec" onclick="App.toggleTheme()">🌓 Tema</button>
+    </div>
+  </div>
+
+  <div id="content-area"></div>
+</main>
+
+<!-- Modal para Flashcards e Quiz -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="App.closeModal()">✖</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// ==========================================
+// BANCO DE DADOS INTEGRAL DA APOSTILA
+// ==========================================
+const DB = {
+  modules: [
+    {
+      id: 'msoffice',
+      title: '1. MS Office 365',
+      icon: '📊',
+      overview: 'O ecossistema Microsoft 365 domina os editais. A banca exige conhecimento das diferenças entre versões Web e Desktop, domínio de fórmulas complexas do Excel (PROCX, SE aninhado) e governança de compartilhamento no OneDrive/SharePoint.',
+      theory: `
+        <h2>1. Word: Formatação Avançada e Colaboração</h2>
+        <p><strong>Iniciante:</strong> Estilos são a espinha dorsal de documentos profissionais. Nunca formate parágrafos manualmente; use "Normal", "Título 1", "Título 2". Isso permite gerar Sumários Automáticos com um clique.</p>
+        <p><strong>Intermediário:</strong> <em>Quebras de Seção</em> são vitais para misturar orientação de página (Paisagem/Retrato) ou numeração diferente no mesmo arquivo. O recurso "Controlar Alterações" registra cada edição para revisão colaborativa.</p>
+        <p><strong>Avançado (Pegadinha CESPE):</strong> A proteção de documento pode ser restrita a "Apenas Comentários" ou "Preenchimento de Formulários". A senha de proteção é fraca (hash simples) e fácil de remover; não confunda com criptografia do arquivo (AES-256).</p>
+
+        <h2>2. Excel: O Coração dos Concursos</h2>
+        <h3>Referências: Relativas vs Absolutas</h3>
+        <ul>
+          <li><code>A1</code> (Relativa): Muda ao copiar a fórmula.</li>
+          <li><code>$A$1</code> (Absoluta): Travada, não muda.</li>
+          <li><code>$A1</code> ou <code>A$1</code> (Mista): Trava só coluna ou só linha.</li>
+        </ul>
+        
+        <h3>Funções Críticas</h3>
+        <table>
+          <tr><th>Função</th><th>Uso</th><th>Observação de Banca</th></tr>
+          <tr><td><code>SE(teste; V; F)</code></td><td>Condicional lógica.</td><td>Pode ser aninhado até 64 níveis.</td></tr>
+          <tr><td><code>PROCV(valor; matriz; num_col; [proc]</code></td><td>Busca vertical na 1ª coluna.</td><td>O 4º parâmetro é crucial: 0/FALSO para exata. Se omitir, faz busca aproximada (erro clássico).</td></tr>
+          <tr><td><code>PROCX</code></td><td>Evolução do PROCV.</td><td>Busca em qualquer direção, não trava na 1ª coluna, retorna #N/D nativo se não achar.</td></tr>
+          <tr><td><code>ÍNDICE + CORRESP</code></td><td>Combo dinâmico.</td><td>CORRESP retorna a posição (número), ÍNDICE retorna o valor naquela posição. Mais flexível que PROCV.</td></tr>
+          <tr><td><code>CONT.SE / SOMASE</code></td><td>Agregação condicional.</td><td>Use <code>CONT.SES</code> para múltiplos critérios.</td></tr>
+        </table>
+
+        <h2>3. PowerPoint: Slide Master e Empacotamento</h2>
+        <p>O <strong>Slide Mestre (Slide Master)</strong> é o template global. Alterar o Slide Mestre afeta todos os slides do layout. É onde se insere logotipos corporativos em todas as páginas de uma vez. O recurso "Empacotar para CD/CD-ROM" (ou Pacote para Apresentação) salva as fontes incorporadas e links de mídia para evitar quebras em outros PCs.</p>
+
+        <h2>4. OneDrive e Governança</h2>
+        <p><strong>Versionamento:</strong> O OneDrive mantém histórico de versões. Se um arquivo for corrompido por ransomware, você pode restaurar uma versão de 24h atrás. <strong>Compartilhamento:</strong> Links podem ser "Qualquer pessoa" (público), "Pessoas na organização" ou "Pessoas específicas". A banca ama cobrar que "Qualquer pessoa com o link" tem acesso, mesmo sem conta Microsoft.</p>
+      `,
+      mermaid: `graph TD
+        A[Fórmula Excel] --> B{Tipo de Referência?}
+        B -->|A1| C[Relativa: Muda ao arrastar]
+        B -->|$A$1| D[Absoluta: Fixa em qualquer célula]
+        B -->|$A1 ou A$1| E[Mista: Fixa linha OU coluna]
+        C --> F[Cálculo Dinâmico]
+        D --> G[Constantes Globais ex: Taxa de Imposto]`,
+      videos: [{id: "dQw4w9WgXcQ", title: "Excel para Concursos (Simulação)"}],
+      lightning: [
+        'PROCV procura na PRIMEIRA coluna da matriz. PROCX não tem essa limitação.',
+        'Quebra de Página vs Quebra de Seção: Seção permite orientação de página diferente.',
+        'Slide Mestre altera o template global de uma só vez.',
+        'Referência Absoluta usa o cifrão ($). Ex: $A$1.',
+        'OneDrive permite versionamento para reverter ransomware.'
+      ],
+      flashcards: [
+        {q: "Qual a diferença entre PROCV e PROCX?", a: "PROCV busca apenas na 1ª coluna da direita para a esquerda. PROCX busca em qualquer coluna/direção e trata erros nativamente."},
+        {q: "O que o cifrão ($) faz no Excel?", a: "Trava a referência da célula (Absoluta ou Mista), impedindo que ela mude ao copiar a fórmula."},
+        {q: "Para que serve o Slide Mestre no PowerPoint?", a: "Para aplicar formatação, logotipos ou planos de fundo em TODOS os slides (ou layouts) de uma só vez."},
+        {q: "Qual a função da 'Quebra de Seção' no Word?", a: "Permite formatar partes do documento de forma independente (ex: orientação paisagem em uma página, numeração diferente)."},
+        {q: "O que é o 'Controlar Alterações' no Word?", a: "Recurso que registra inserções, exclusões e formatações para revisão colaborativa posterior."},
+        {q: "No OneDrive, o que significa um link de compartilhamento 'Qualquer pessoa'?", a: "É um link público. Qualquer pessoa com o link pode acessar, sem necessidade de login ou permissão explícita."},
+        {q: "Qual a diferença entre CONT.SE e CONT.SES?", a: "CONT.SE avalia apenas um critério. CONT.SES permite múltiplos critérios em colunas diferentes (E lógico)."},
+        {q: "O que a função CORRESP retorna?", a: "A POSIÇÃO RELATIVA (número) de um item em um intervalo, não o valor em si."},
+        {q: "Como o OneDrive protege contra Ransomware?", a: "Através do versionamento de arquivos, permitindo restaurar o OneDrive inteiro para um ponto no tempo (ex: 24h atrás)."},
+        {q: "O que é 'Empacotar Apresentação' no PPT?", a: "Recurso que salva o arquivo junto com fontes incorporadas e mídias vinculadas para garantir fidelidade em outros PCs."}
+      ],
+      quiz: [
+        {
+          q: "(CESPE) No Excel, a fórmula =$A1+B$1, quando copiada da célula C1 para a célula D2, resultará em =$A2+C$1.",
+          opts: ["Certo", "Errado"],
+          ans: 0,
+          exp: "Certo. A coluna A está travada ($A), então continua A. A linha 1 não está travada, então vira 2. Na segunda parte, a coluna B não está travada, vira C. A linha 1 está travada ($1), continua 1."
+        },
+        {
+          q: "(FGV) A função PROCX foi introduzida para substituir o PROCV. Qual das alternativas abaixo é uma vantagem EXCLUSIVA do PROCX?",
+          opts: ["Buscar valores em ordem alfabética", "Retornar valores à esquerda da coluna de busca", "Somar valores automaticamente", "Criar tabelas dinâmicas"],
+          ans: 1,
+          exp: "O PROCV só busca à direita da coluna de pesquisa. O PROCX elimina essa restrição, podendo buscar em qualquer direção."
+        },
+        {
+          q: "(FCC) Sobre o Word, a inserção de uma 'Quebra de Seção' do tipo 'Contínua' tem como principal objetivo:",
+          opts: ["Iniciar um novo capítulo", "Permitir formatações diferentes (ex: colunas) na mesma página", "Inserir uma nova página em branco", "Proteger o documento com senha"],
+          ans: 1,
+          exp: "A quebra contínua permite mudar formatação (como número de colunas de jornal) sem forçar uma nova página."
+        },
+        {
+          q: "(VUNESP) No PowerPoint, se um analista precisa inserir a logomarca do órgão em todos os 50 slides da apresentação no mesmo canto superior direito, a forma mais eficiente e técnica é:",
+          opts: ["Copiar e colar a imagem em cada slide", "Usar o Slide Mestre (Slide Master)", "Usar a guia Inserir > Imagem", "Aplicar uma animação de entrada"],
+          ans: 1,
+          exp: "O Slide Mestre é o template global. Alterações nele refletem em todos os slides associados ao layout."
+        }
+      ]
+    },
+    {
+      id: 'redes',
+      title: '2. Redes de Computadores',
+      icon: '🌐',
+      overview: 'Redes é o pilar da infraestrutura. O foco deve ser a decoreba das 7 camadas OSI, portas de protocolos (TCP/UDP), ferramentas de diagnóstico (ping, tracert) e a lógica de endereçamento IPv4/Sub-redes.',
+      theory: `
+        <h2>2.1 Modelos OSI e TCP/IP</h2>
+        <p>A <strong>OSI (Open Systems Interconnection)</strong> é um modelo teórico de 7 camadas. O <strong>TCP/IP</strong> é o modelo prático de 4 camadas usado na Internet.</p>
+        <table>
+          <tr><th>Camada OSI</th><th>Nome</th><th>Protocolos/Dispositivos</th><th>TCP/IP</th></tr>
+          <tr><td>7</td><td>Aplicação</td><td>HTTP, HTTPS, SMTP, FTP, DNS</td><td>Aplicação</td></tr>
+          <tr><td>6</td><td>Apresentação</td><td>SSL/TLS, JPEG, ASCII</td><td>Aplicação</td></tr>
+          <tr><td>5</td><td>Sessão</td><td>NetBIOS, RPC</td><td>Aplicação</td></tr>
+          <tr><td>4</td><td>Transporte</td><td>TCP (confiável), UDP (rápido)</td><td>Transporte</td></tr>
+          <tr><td>3</td><td>Rede</td><td>IP, ICMP, Roteadores</td><td>Internet</td></tr>
+          <tr><td>2</td><td>Enlace</td><td>Ethernet, MAC, Switches</td><td>Enlace</td></tr>
+          <tr><td>1</td><td>Física</td><td>Cabos, Hubs, Bits</td><td>Enlace</td></tr>
+        </table>
+
+        <h2>Portas e Protocolos Críticos (Decoreba)</h2>
+        <table>
+          <tr><th>Protocolo</th><th>Porta</th><th>Transporte</th><th>Função</th></tr>
+          <tr><td>FTP (Dados)</td><td>20</td><td>TCP</td><td>Transferência de arquivos</td></tr>
+          <tr><td>FTP (Controle)</td><td>21</td><td>TCP</td><td>Transferência de arquivos</td></tr>
+          <tr><td>SSH</td><td>22</td><td>TCP</td><td>Acesso remoto criptografado</td></tr>
+          <tr><td>Telnet</td><td>23</td><td>TCP</td><td>Acesso remoto em texto plano (inseguro)</td></tr>
+          <tr><td>SMTP</td><td>25 / 587</td><td>TCP</td><td>Envio de e-mails</td></tr>
+          <tr><td>DNS</td><td>53</td><td>TCP/UDP</td><td>Traduz nomes para IPs</td></tr>
+          <tr><td>DHCP</td><td>67/68</td><td>UDP</td><td>Atribui IPs automaticamente</td></tr>
+          <tr><td>HTTP</td><td>80</td><td>TCP</td><td>Web não segura</td></tr>
+          <tr><td>POP3</td><td>110</td><td>TCP</td><td>Receber e-mails (baixa e apaga)</td></tr>
+          <tr><td>IMAP</td><td>143</td><td>TCP</td><td>Receber e-mails (sincroniza)</td></tr>
+          <tr><td>HTTPS</td><td>443</td><td>TCP</td><td>Web segura (SSL/TLS)</td></tr>
+          <tr><td>RDP</td><td>3389</td><td>TCP</td><td>Área de Trabalho Remota</td></tr>
+        </table>
+
+        <h2>Ferramentas de Diagnóstico</h2>
+        <ul>
+          <li><code>ping</code>: Testa conectividade usando ICMP (ECHO REQUEST/REPLY). Mede latência e perda de pacotes.</li>
+          <li><code>traceroute / tracert</code>: Mostra os saltos (roteadores) até o destino. Usa TTL (Time To Live) para mapear a rota.</li>
+          <li><code>nslookup / dig</code>: Consulta servidores DNS para resolver nomes em IPs.</li>
+          <li><code>netstat</code>: Exibe conexões ativas, portas abertas e estatísticas de protocolo.</li>
+          <li><code>ipconfig / ifconfig</code>: Exibe a configuração de rede da interface (IP, Máscara, Gateway).</li>
+        </ul>
+
+        <h2>IPv4, Sub-redes e NAT</h2>
+        <p><strong>NAT (Network Address Translation):</strong> Permite que múltiplos dispositivos em uma rede privada (IPs não roteáveis como 192.168.x.x) acessem a internet usando um único IP público. O roteador traduz as portas de origem.</p>
+        <p><strong>Classes de IP (Classful):</strong> A (0-127, /8), B (128-191, /16), C (192-223, /24). Hoje usamos CIDR (ex: /24 = 255.255.255.0).</p>
+        <p><strong>IPv6:</strong> 128 bits, hexadecimal. Elimina a necessidade de NAT e broadcast (usa multicast/anycast).</p>
+
+        <h2>VPN e Extranet</h2>
+        <p><strong>VPN:</strong> Cria um túnel criptografado sobre uma rede pública. Protocolos: PPTP (obsoleto), L2TP/IPsec, OpenVPN, WireGuard. Garante confidencialidade e integridade.</p>
+        <p><strong>Extranet:</strong> Rede privada estendida para parceiros/fornecedores externos via autenticação segura. Diferente da Intranet (interna) e Internet (pública).</p>
+      `,
+      mermaid: `sequenceDiagram
+    participant User as Usuário
+    participant DNS as Servidor DNS
+    participant Server as Servidor Web
+    User->>DNS: 1. Consulta "site.gov.br" (Porta 53)
+    DNS-->>User: 2. Responde IP 200.131.20.10
+    User->>Server: 3. TCP Handshake (Porta 443)
+    User->>Server: 4. GET / HTTP/1.1 (Criptografado)
+    Server-->>User: 5. HTML/CSS/JS`,
+      videos: [{id: "dQw4w9WgXcQ", title: "Modelo OSI Explicado (Simulação)"}],
+      lightning: [
+        'OSI: "Please Do Not Throw Sausage Pizza Away" (Física ao Aplicação).',
+        'TCP é confiável (Handshake 3-way, ACK). UDP é rápido (Streaming, VoIP).',
+        'DNS usa porta 53. HTTP usa 80. HTTPS usa 443.',
+        'Ping usa protocolo ICMP, não TCP nem UDP.',
+        'NAT esconde IPs internos, economizando IPv4 público.',
+        'Máscara /24 = 255.255.255.0 (254 hosts úteis).',
+        'Tracert usa o campo TTL do IP para descobrir roteadores.'
+      ],
+      flashcards: [
+        {q: "Qual a porta padrão do HTTPS?", a: "443 (TCP)."},
+        {q: "Qual protocolo o PING utiliza?", a: "ICMP (Internet Control Message Protocol)."},
+        {q: "Qual a principal diferença entre TCP e UDP?", a: "TCP é orientado à conexão e confiável (garante entrega). UDP não é confiável, mas é mais rápido (sem handshake)."},
+        {q: "O que o NAT faz?", a: "Network Address Translation: Traduz IPs privados da rede interna para um IP público na saída para a internet."},
+        {q: "Qual a porta do DNS?", a: "53 (UDP para consultas normais, TCP para transferências de zona)."},
+        {q: "Quantas camadas tem o modelo OSI e quais são?", a: "7: Física, Enlace, Rede, Transporte, Sessão, Apresentação, Aplicação."},
+        {q: "Qual a função do Tracert/Traceroute?", a: "Mapear a rota (saltos) até um destino, medindo o tempo de cada roteador intermediário."},
+        {q: "Qual a porta do SSH?", a: "22 (TCP). Substitui o Telnet por ser criptografado."},
+        {q: "O que é uma Extranet?", a: "Uma extensão da Intranet que permite acesso controlado a parceiros externos (fornecedores, clientes)."},
+        {q: "Qual a principal vantagem do IPv6 sobre o IPv4?", a: "Espaço de endereçamento massivo (128 bits), eliminando a escassez e a necessidade de NAT."}
+      ],
+      quiz: [
+        {
+          q: "(CESPE) O protocolo TCP opera na camada de Transporte do modelo OSI e garante a entrega confiável dos pacotes através do mecanismo de handshake de três vias.",
+          opts: ["Certo", "Errado"],
+          ans: 0,
+          exp: "Certo. O TCP estabelece conexão (SYN, SYN-ACK, ACK) antes de transmitir dados e exige confirmação (ACK) de recebimento."
+        },
+        {
+          q: "(FGV) Um administrador precisa testar se o servidor web está respondendo e qual a latência da conexão. O comando mais adequado é:",
+          opts: ["nslookup", "tracert", "ping", "netstat"],
+          ans: 2,
+          exp: "O ping envia pacotes ICMP Echo Request e mede o tempo de resposta (latência) e perda de pacotes."
+        },
+        {
+          q: "(FCC) Sobre o DNS, é correto afirmar que:",
+          opts: ["Usa a porta 80", "Traduz nomes de domínio em endereços IP", "É um protocolo da camada de Transporte", "Só funciona em redes locais"],
+          ans: 1,
+          exp: "O DNS (Domain Name System) resolve nomes (ex: www.gov.br) para IPs (ex: 200.198.1.1). Opera na camada de Aplicação."
+        },
+        {
+          q: "(VUNESP) Uma máscara de sub-rede 255.255.255.0 equivale à notação CIDR:",
+          opts: ["/8", "/16", "/24", "/32"],
+          ans: 2,
+          exp: "255.255.255.0 em binário tem 24 bits '1' (11111111.11111111.11111111.00000000), logo /24."
+        }
+      ]
+    },
+    {
+      id: 'comunicacao',
+      title: '3. Comunicação e Colaboração',
+      icon: '📧',
+      overview: 'Foco nos protocolos de e-mail (SMTP, POP3, IMAP) e nas nuances de governança e segurança em plataformas modernas como Teams e Zoom.',
+      theory: `
+        <h2>Correio Eletrônico: A Tríade de Protocolos</h2>
+        <table>
+          <tr><th>Protocolo</th><th>Função</th><th>Portas (Não-Seguro / Seguro)</th><th>Característica Chave</th></tr>
+          <tr><td><strong>SMTP</strong></td><td>ENVIO (Outbound)</td><td>25 / 587 (STARTTLS) / 465 (SSL)</td><td>Usado para enviar do cliente ao servidor e entre servidores.</td></tr>
+          <tr><td><strong>POP3</strong></td><td>RECEBIMENTO</td><td>110 / 995 (SSL)</td><td>Baixa o e-mail para o PC e (por padrão) APAGA do servidor. Não sincroniza pastas.</td></tr>
+          <tr><td><strong>IMAP</strong></td><td>RECEBIMENTO</td><td>143 / 993 (SSL)</td><td>SINCRONIZA com o servidor. Pastas, status de lido e e-mails ficam espelhados em múltiplos dispositivos.</td></tr>
+        </table>
+        <p><strong>Pegadinha de Banca:</strong> Se você usa e-mail no celular e no PC simultaneamente e quer ver as mesmas pastas, <em>nunca</em> use POP3. Use IMAP.</p>
+
+        <h2>Ferramentas de Colaboração (Teams, Meet, Zoom)</h2>
+        <h3>Governança e Segurança</h3>
+        <ul>
+          <li><strong>Sala de Espera (Waiting Room):</strong> Impede que invasores entrem diretamente na reunião (evita "Zoombombing").</li>
+          <li><strong>Gravação e Conformidade:</strong> No setor público, gravações devem seguir a LGPD e a LAI. O consentimento dos participantes é obrigatório.</li>
+          <li><strong>Compartilhamento de Tela:</strong> Restringir para "Apenas Host" ou "Janela Específica" evita vazamento acidental de notificações ou áreas de trabalho sensíveis.</li>
+          <li><strong>Criptografia:</strong> A maioria usa TLS em trânsito. Criptografia E2E (Ponta a Ponta) real é rara em planos corporativos por questões de compliance (o provedor precisa gravar para auditoria).</li>
+        </ul>
+
+        <h2>Webmail vs Clientes Locais</h2>
+        <p><strong>Webmail:</strong> Acessado via navegador (HTTP/HTTPS). Não consome espaço local. Depende de internet.</p>
+        <p><strong>Cliente Local (Outlook, Thunderbird):</strong> Software instalado. Permite trabalho offline (se configurado para baixar e-mails) e integração profunda com o SO (calendário global, contatos).</p>
+      `,
+      mermaid: `graph LR
+    A[Cliente de E-mail] -- SMTP (Envio) --> B[Servidor de Saída]
+    B -- SMTP --> C[Servidor do Destinatário]
+    D[Cliente do Destinatário] -- IMAP/POP3 (Recebimento) --> C`,
+      videos: [],
+      lightning: [
+        'SMTP = Envio. POP3/IMAP = Recebimento.',
+        'POP3 baixa e apaga do servidor (offline). IMAP sincroniza (online).',
+        'Porta SMTP segura: 587 (STARTTLS) ou 465 (SSL).',
+        'Porta IMAP segura: 993. POP3 segura: 995.',
+        'Waiting Room protege contra invasões em videoconferências.',
+        'Webmail = Navegador. Cliente Local = Software (Outlook).'
+      ],
+      flashcards: [
+        {q: "Qual protocolo é usado EXCLUSIVAMENTE para envio de e-mails?", a: "SMTP (Simple Mail Transfer Protocol)."},
+        {q: "Qual a principal diferença entre POP3 e IMAP?", a: "POP3 baixa e remove do servidor (ideal para 1 dispositivo). IMAP sincroniza e mantém no servidor (ideal para múltiplos dispositivos)."},
+        {q: "Qual a porta padrão do SMTP seguro (SSL)?", a: "465 (ou 587 com STARTTLS)."},
+        {q: "Qual a porta do IMAP seguro?", a: "993 (SSL/TLS)."},
+        {q: "O que é 'Zoombombing' e como prevenir?", a: "Invasão de reuniões por terceiros. Previne-se com Sala de Espera e Senha na reunião."},
+        {q: "Qual a vantagem de um Cliente Local (Outlook) sobre o Webmail?", a: "Acesso offline, integração com SO e gerenciamento avançado de regras locais."},
+        {q: "O que é STARTTLS?", a: "Um comando que atualiza uma conexão de texto plano (ex: porta 587) para criptografada (TLS) dinamicamente."},
+        {q: "Por que o POP3 é ruim para quem usa e-mail no celular e no PC?", a: "Porque ele baixa o e-mail em um dispositivo e pode apagar do servidor, fazendo o outro dispositivo nunca receber a mensagem."}
+      ],
+      quiz: [
+        {
+          q: "(CESPE) O protocolo IMAP permite que o usuário acesse suas mensagens de e-mail em múltiplos dispositivos, mantendo o status de leitura e a estrutura de pastas sincronizados com o servidor.",
+          opts: ["Certo", "Errado"],
+          ans: 0,
+          exp: "Certo. Essa é a principal vantagem do IMAP sobre o POP3."
+        },
+        {
+          q: "(FGV) Para enviar um e-mail de forma segura utilizando criptografia SSL desde o início da conexão, a porta do servidor SMTP que deve ser configurada no cliente de e-mail é:",
+          opts: ["25", "110", "587", "465"],
+          ans: 3,
+          exp: "A porta 465 usa SMTPS (SMTP sobre SSL implícito). A 587 usa STARTTLS (explícito). A banca costuma cobrar 465 para SSL direto."
+        },
+        {
+          q: "(FCC) Em uma reunião no Microsoft Teams, o recurso que impede que participantes não autorizados entrem na sala antes do organizador é:",
+          opts: ["Sala de Espera (Lobby)", "Handshake", "Mute All", "Breakout Rooms"],
+          ans: 0,
+          exp: "A Sala de Espera (Lobby) retém os participantes até que o organizador os admita."
+        }
+      ]
+    },
+    {
+      id: 'seguranca',
+      title: '4. Segurança e Governança',
+      icon: '🔒',
+      overview: 'O tópico mais denso. Exige domínio da Tríade CIA, tipos de malware, backups, firewalls e a legislação (LGPD). Phishing e Ransomware são figurinhas carimbadas.',
+      theory: `
+        <h2>4.1 Princípios da Segurança da Informação</h2>
+        <div class="info-grid">
+          <div class="info-box"><div class="icon">🔒</div><h4>Confidencialidade</h4><p>Só acessa quem tem permissão. (Criptografia, Controle de Acesso).</p></div>
+          <div class="info-box"><div class="icon">🛡️</div><h4>Integridade</h4><p>O dado não foi alterado indevidamente. (Hash, Assinatura Digital).</p></div>
+          <div class="info-box"><div class="icon">✅</div><h4>Disponibilidade</h4><p>O dado está acessível quando necessário. (Backup, Redundância, Anti-DDoS).</p></div>
+          <div class="info-box"><div class="icon">✍️</div><h4>Autenticidade</h4><p>Garante a identidade do remetente. (Certificado Digital, ICP-Brasil).</p></div>
+          <div class="info-box"><div class="icon">⚖️</div><h4>Não-Repúdio</h4><p>O remetente não pode negar o envio. (Assinatura Digital).</p></div>
+        </div>
+
+        <h2>Malwares: O Zoológico Digital</h2>
+        <table>
+          <tr><th>Malware</th><th>Característica Principal</th><th>Propagação</th></tr>
+          <tr><td><strong>Vírus</strong></td><td>Parasita. Precisa de um arquivo hospedeiro.</td><td>Requer execução do hospedeiro pelo usuário.</td></tr>
+          <tr><td><strong>Worm</strong></td><td>Verme. Autônomo. Consome largura de banda.</td><td>Se auto-propaga pela rede sem ação humana.</td></tr>
+          <tr><td><strong>Trojan (Cavalo de Troia)</strong></td><td>Engana. Parecido legítimo, abre backdoor.</td><td>Não se replica. Depende de download/instalação.</td></tr>
+          <tr><td><strong>Ransomware</strong></td><td>Sequestra. Criptografa dados e pede resgate.</td><td>Phishing, exploits RDP. O mais crítico hoje.</td></tr>
+          <tr><td><strong>Spyware / Keylogger</strong></td><td>Espiona. Captura teclas e hábitos.</td><td>Frequentemente embutido em softwares grátis.</td></tr>
+          <tr><td><strong>Rootkit</strong></td><td>Invisível. Modifica o kernel do SO.</td><td>Acesso administrativo. Difícil de detectar.</td></tr>
+          <tr><td><strong>Botnet</strong></td><td>Exército Zumbi. Redes de PCs infectados.</td><td>Usado para DDoS e mineração de cripto.</td></tr>
+        </table>
+
+        <h2>Backup: A Regra 3-2-1</h2>
+        <p>A regra de ouro do backup para garantir disponibilidade:</p>
+        <ul>
+          <li><strong>3</strong> cópias dos dados (1 primária + 2 backups).</li>
+          <li><strong>2</strong> mídias diferentes (ex: HD externo + Nuvem).</li>
+          <li><strong>1</strong> cópia <em>off-site</em> (fora do local físico, para proteger contra incêndio/roubo).</li>
+        </ul>
+        <p><strong>Tipos:</strong> <em>Completo</em> (lento para fazer, rápido para restaurar). <em>Incremental</em> (copia só o que mudou desde o ÚLTIMO backup, de qualquer tipo). <em>Diferencial</em> (copia o que mudou desde o ÚLTIMO COMPLETO).</p>
+
+        <h2>4.2 Firewall, IDS e IPS</h2>
+        <ul>
+          <li><strong>Firewall de Pacotes:</strong> Filtra por IP e Porta (Camada 3 e 4). Rápido, mas cego ao conteúdo.</li>
+          <li><strong>Firewall de Aplicação (Proxy/WAF):</strong> Filtra o conteúdo (Camada 7). Entende HTTP, SQL Injection.</li>
+          <li><strong>Stateful Inspection:</strong> Lembra o estado das conexões. Sabe se um pacote é resposta de uma requisição legítima.</li>
+          <li><strong>IDS (Intrusion Detection):</strong> PASSIVO. Apenas alerta sobre ataques.</li>
+          <li><strong>IPS (Intrusion Prevention):</strong> ATIVO. Bloqueia o ataque em tempo real (fica em linha/inline).</li>
+        </ul>
+
+        <h2>4.3 Ameaças e Engenharia Social</h2>
+        <ul>
+          <li><strong>Phishing:</strong> Pesca genérica. E-mail falso "Seu CPF foi cancelado".</li>
+          <li><strong>Spear Phishing:</strong> Direcionado. Usa seu nome e cargo ("Prezado Diretor Renato...").</li>
+          <li><strong>Whaling:</strong> Pesca da baleia. Focado em CEOs e altos executivos.</li>
+          <li><strong>Pharming:</strong> Envenena o DNS ou o arquivo hosts. Você digita o site correto, mas é levado ao site falso.</li>
+        </ul>
+      `,
+      mermaid: `graph TD
+    A[Ataque Phishing] --> B{Usuário Clicou?}
+    B -->|Sim| C[Download de Malware]
+    C --> D{Tipo?}
+    D -->|Ransomware| E[Criptografa Dados]
+    D -->|Spyware| F[Rouba Credenciais]
+    B -->|Não| G[Descartado / Denunciado]`,
+      videos: [],
+      lightning: [
+        'Tríade CIA: Confidencialidade, Integridade, Disponibilidade.',
+        'Hash garante Integridade. Assinatura Digital garante Autenticidade e Não-Repúdio.',
+        'Worm se propaga sozinho. Vírus precisa de hospedeiro e ação humana.',
+        'Ransomware = Criptografia maliciosa + Resgate.',
+        'Backup Incremental: cópia desde o último backup (qualquer tipo).',
+        'Backup Diferencial: cópia desde o último backup COMPLETO.',
+        'Regra 3-2-1: 3 cópias, 2 mídias, 1 off-site.',
+        'Pharming corrompe a resolução de nomes (DNS/Hosts).',
+        'IPS bloqueia (ativo). IDS apenas alerta (passivo).'
+      ],
+      flashcards: [
+        {q: "Qual princípio da segurança é garantido por uma Função Hash?", a: "Integridade. Qualquer alteração no arquivo muda o hash gerado."},
+        {q: "Qual a diferença entre Vírus e Worm?", a: "Vírus precisa de arquivo hospedeiro e ação humana. Worm é autônomo e se propaga pela rede sozinho."},
+        {q: "O que é Ransomware?", a: "Malware que criptografa os dados da vítima e exige resgate (geralmente cripto) para devolver a chave."},
+        {q: "O que é um Rootkit?", a: "Malware que se instala no nível do Kernel (Ring 0) para se esconder do antivírus e do sistema operacional."},
+        {q: "Explique a regra de backup 3-2-1.", a: "3 cópias totais, em 2 tipos de mídia diferentes, com 1 cópia fora do local físico (off-site)."},
+        {q: "Qual a diferença entre Backup Incremental e Diferencial?", a: "Incremental copia o que mudou desde o ÚLTIMO backup. Diferencial copia o que mudou desde o ÚLTIMO COMPLETO."},
+        {q: "O que é Pharming?", a: "Ataque que corrompe o DNS ou o arquivo 'hosts' para redirecionar o usuário de um site legítimo para um falso."},
+        {q: "Qual a diferença entre IDS e IPS?", a: "IDS (Detecção) é passivo, apenas alerta. IPS (Prevenção) é ativo, bloqueia o tráfego malicioso em tempo real."},
+        {q: "O que garante a Assinatura Digital?", a: "Autenticidade (identidade do autor) e Não-Repúdio (não pode negar o envio) + Integridade."},
+        {q: "O que é Spear Phishing?", a: "Phishing altamente direcionado a um indivíduo ou organização específica, usando informações pessoais para enganar."}
+      ],
+      quiz: [
+        {
+          q: "(CESPE) O uso de função hash em um arquivo anexo de e-mail garante a confidencialidade da informação contida no documento.",
+          opts: ["Certo", "Errado"],
+          ans: 1,
+          exp: "Errado. Hash garante INTEGRIDADE (saber se o arquivo mudou). Confidencialidade exige Criptografia."
+        },
+        {
+          q: "(FGV) Um ataque que corrompe o cache do servidor DNS da empresa, fazendo com que funcionários que digitam 'banco.com.br' sejam redirecionados para um site falso, é classificado como:",
+          opts: ["Phishing", "Pharming", "DDoS", "Sniffing"],
+          ans: 1,
+          exp: "Pharming é o envenenamento do DNS ou do arquivo de hosts local para redirecionar tráfego legítimo."
+        },
+        {
+          q: "(FCC) Sobre backup, a estratégia que copia APENAS os arquivos alterados desde o último backup COMPLETO é a:",
+          opts: ["Incremental", "Diferencial", "Completa", "Espelhada"],
+          ans: 1,
+          exp: "Diferencial sempre usa como base o último backup Completo. A Incremental usa o último backup de qualquer tipo."
+        },
+        {
+          q: "(VUNESP) O malware que tem como característica principal a capacidade de se auto-replicar e propagar pela rede sem necessidade de interação do usuário é o:",
+          opts: ["Vírus", "Trojan", "Worm", "Ransomware"],
+          ans: 2,
+          exp: "Worms (vermes) são autônomos e exploram vulnerabilidades de rede para se espalhar sozinhos."
+        }
+      ]
+    },
+    {
+      id: 'ia',
+      title: '5. Inteligência Artificial',
+      icon: '🤖',
+      overview: 'O tema mais quente dos editais atuais. Foco em Engenharia de Prompts, tipos de aprendizado (Supervisionado vs Não Supervisionado) e a arquitetura de LLMs e IA Generativa.',
+      theory: `
+        <h2>5.1 Engenharia de Prompts</h2>
+        <p>A qualidade da saída de uma IA é diretamente proporcional à qualidade da entrada (Prompt). Um prompt estruturado contém:</p>
+        <table>
+          <tr><th>Componente</th><th>Função</th><th>Exemplo</th></tr>
+          <tr><td><strong>Persona</strong></td><td>Define o papel da IA.</td><td>"Atue como um Arquiteto de Software Sênior..."</td></tr>
+          <tr><td><strong>Contexto</strong></td><td>Dados de fundo.</td><td>"Estou preparando um edital para o tribunal..."</td></tr>
+          <tr><td><strong>Tarefa</strong></td><td>A ação específica.</td><td>"Crie 5 questões de múltipla escolha..."</td></tr>
+          <tr><td><strong>Restrições</strong></td><td>O que NÃO fazer.</td><td>"Não use jargões técnicos complexos."</td></tr>
+          <tr><td><strong>Formato</strong></td><td>Como entregar.</td><td>"Responda em formato JSON."</td></tr>
+        </table>
+        <p><strong>Técnicas Avançadas:</strong></p>
+        <ul>
+          <li><strong>Few-Shot Prompting:</strong> Dar 2 ou 3 exemplos de entrada/saída antes de pedir a tarefa real.</li>
+          <li><strong>Chain-of-Thought (CoT):</strong> Pedir para a IA "pensar passo a passo" antes de dar a resposta final. Melhora drasticamente o raciocínio lógico.</li>
+        </ul>
+
+        <h2>5.2 Tipos de Aprendizado de Máquina (ML)</h2>
+        <div class="info-grid">
+          <div class="info-box"><div class="icon">🏷️</div><h4>Supervisionado</h4><p>Dados com rótulo (X e Y). <strong>Classificação</strong> (ex: Spam/Não Spam) e <strong>Regressão</strong> (ex: Prever Preço).</p></div>
+          <div class="info-box"><div class="icon">📊</div><h4>Não Supervisionado</h4><p>Dados sem rótulo. <strong>Clusterização</strong> (agrupar clientes) e <strong>Redução de Dimensionalidade</strong> (PCA).</p></div>
+          <div class="info-box"><div class="icon">🎮</div><h4>Por Reforço</h4><p>Agente interage com ambiente e recebe <strong>Recompensas/Punições</strong>. Ex: Xadrez, Carros Autônomos.</p></div>
+        </div>
+
+        <h2>5.3 IA Generativa e LLMs</h2>
+        <p><strong>Transformers:</strong> A arquitetura por trás do ChatGPT. Usa o mecanismo de <em>Self-Attention</em> para entender o contexto de toda a frase simultaneamente, ao contrário de redes recorrentes antigas (RNNs).</p>
+        <p><strong>Modelos de Difusão:</strong> Usados para gerar imagens (Midjourney, DALL-E). Funcionam adicionando ruído a uma imagem e aprendendo a reverter o processo (denoising) para criar novas imagens a partir de texto.</p>
+        <p><strong>Alucinações:</strong> Fenômeno onde o LLM inventa fatos com total confiança. Acontece porque o modelo prevê a próxima palavra estatisticamente, não acessa um banco de dados de verdades.</p>
+      `,
+      mermaid: `graph TD
+    A[Input: Texto/Imagem] --> B[Tokenização]
+    B --> C[Camadas Transformer]
+    C --> D{Mecanismo}
+    D -->|Self-Attention| E[Pesa importância de cada palavra]
+    E --> F[Previsão Probabilística]
+    F --> G[Output: Próximo Token]`,
+      videos: [],
+      lightning: [
+        'Few-Shot = Dar exemplos no prompt. Zero-Shot = Sem exemplos.',
+        'Chain-of-Thought = "Pense passo a passo".',
+        'Supervisionado tem rótulo (gabarito). Não Supervisionado não tem.',
+        'Regressão prevê número contínuo. Classificação prevê categoria.',
+        'Transformers usam Self-Attention (atenção ao contexto global).',
+        'Difusão gera imagens revertendo ruído.',
+        'Alucinação = IA inventando fatos com confiança.'
+      ],
+      flashcards: [
+        {q: "O que é Few-Shot Prompting?", a: "Técnica de fornecer alguns exemplos (shots) de entrada e saída desejada dentro do prompt para guiar o modelo."},
+        {q: "Para que serve o Chain-of-Thought (CoT)?", a: "Instruir a IA a explicitar o raciocínio passo a passo antes da resposta final, melhorando a precisão em tarefas lógicas."},
+        {q: "Qual a diferença entre Classificação e Regressão?", a: "Classificação prevê categorias discretas (ex: Spam/Ham). Regressão prevê valores numéricos contínuos (ex: Preço de casa)."},
+        {q: "O que caracteriza o Aprendizado Não Supervisionado?", a: "O uso de dados sem rótulos (sem gabarito). O algoritmo busca padrões ocultos, como em clusterização."},
+        {q: "O que é um 'Agente' no Aprendizado por Reforço?", a: "A entidade que toma decisões e interage com o ambiente para maximizar recompensas cumulativas."},
+        {q: "Qual a principal inovação da arquitetura Transformer?", a: "O mecanismo de Self-Attention, que permite processar toda a sequência de dados em paralelo, capturando dependências de longa distância."},
+        {q: "O que são 'Alucinações' em LLMs?", a: "Quando o modelo gera informações incorretas, inexistentes ou sem sentido, mas apresentadas com alta confiança e fluência."},
+        {q: "Como funcionam os Modelos de Difusão para imagens?", a: "Aprendem a reverter um processo gradual de adição de ruído a uma imagem, gerando novas imagens a partir do ruído puro."}
+      ],
+      quiz: [
+        {
+          q: "(CESPE) Em aprendizado de máquina, a tarefa de prever o valor de um imóvel (em reais) com base em suas características é um exemplo de classificação.",
+          opts: ["Certo", "Errado"],
+          ans: 1,
+          exp: "Errado. Prever um valor numérico contínuo é REGRESSÃO. Classificação prevê categorias (ex: 'caro' ou 'barato')."
+        },
+        {
+          q: "(FGV) A técnica de 'Chain-of-Thought' em engenharia de prompts tem como objetivo:",
+          opts: ["Reduzir o custo da API", "Melhorar o raciocínio lógico pedindo passos intermediários", "Traduzir o prompt para inglês", "Gerar imagens a partir de texto"],
+          ans: 1,
+          exp: "CoT força o modelo a gerar a cadeia de raciocínio antes da conclusão, reduzindo erros em problemas complexos."
+        },
+        {
+          q: "(FCC) O mecanismo fundamental que permitiu a revolução dos LLMs modernos (como GPT) é:",
+          opts: ["Redes Neurais Convolucionais", "Self-Attention (Transformers)", "Algoritmos Genéticos", "Lógica Fuzzy"],
+          ans: 1,
+          exp: "A arquitetura Transformer, baseada em Self-Attention, superou as RNNs ao permitir processamento paralelo e melhor captura de contexto."
+        }
+      ]
+    },
+    {
+      id: 'etica',
+      title: '6. Ética e Gov. Digital',
+      icon: '⚖️',
+      overview: 'Conecta os princípios constitucionais (LIMPE) com a legislação digital (LAI, LGPD, Governo Digital). Essencial para provas de tribunais e carreiras de Estado.',
+      theory: `
+        <h2>Princípios LIMPE na Era Digital</h2>
+        <ul>
+          <li><strong>Legalidade:</strong> O agente público só pode fazer o que a lei autoriza. Uso de softwares não licenciados ou shadow IT é ilegal.</li>
+          <li><strong>Impessoalidade:</strong> Não usar canais oficiais para promoção pessoal. O perfil institucional não é o perfil pessoal do gestor.</li>
+          <li><strong>Moralidade:</strong> Ética além da lei. Vazar dados "por descuido" ou usar recursos de TI para fins particulares fere a moralidade.</li>
+          <li><strong>Publicidade:</strong> Transparência. Dados de gastos e contratos devem ser abertos (Portal da Transparência), exceto se sigilosos por lei.</li>
+          <li><strong>Eficiência:</strong> Fazer mais com menos. Adotar Governo Digital (SEI, Assinatura Eletrônica) para reduzir burocracia e papel.</li>
+        </ul>
+
+        <h2>Legislação Digital Chave</h2>
+        <h3>LAI - Lei de Acesso à Informação (Lei 12.527/2011)</h3>
+        <p>A regra é a <strong>PUBLICIDADE</strong>, o sigilo é a exceção. Todo cidadão pode pedir qualquer informação ao governo, sem precisar justificar o motivo. Prazo de resposta: 20 dias, prorrogáveis por mais 10.</p>
+        <p><strong>Exceções (Sigilo):</strong> Informações que coloquem em risco a segurança da sociedade/Estado, defesa nacional, ou intimidade/vida privada de terceiros.</p>
+
+        <h3>LGPD - Lei Geral de Proteção de Dados (Lei 13.709/2018)</h3>
+        <p>Protege dados de pessoas <em>naturais</em> (não protege PJ). O órgão público é "Controlador" dos dados dos cidadãos.</p>
+        <ul>
+          <li><strong>Bases Legais para tratar dados:</strong> Consentimento, Cumprimento de Lei, Execução de Políticas Públicas, Proteção da Vida.</li>
+          <li><strong>ANPD:</strong> Autoridade Nacional de Proteção de Dados. Fiscaliza e aplica sanções.</li>
+          <li><strong>Dados Sensíveis:</strong> Raça, religião, opinião política, saúde, vida sexual, biometria. Exigem proteção reforçada.</li>
+        </ul>
+
+        <h3>Lei de Governo Digital (Lei 14.129/2021)</h3>
+        <p>Estabelece a digitalização como padrão. Assinatura eletrônica (Gov.br) tem validade legal. Proíbe exigir documento físico se o dado já está em base do governo (princípio do "Diga-me uma vez só").</p>
+      `,
+      mermaid: `graph TD
+    A[Dado Público] --> B{É Pessoal?}
+    B -->|Não| C[LAI: Publicidade Total]
+    B -->|Sim| D[LGPD se aplica]
+    D --> E{É Sensível?}
+    E -->|Sim| F[Proteção Máxima / Bases Legais Restritas]
+    E -->|Não| G[Tratamento com Base Legal]`,
+      videos: [],
+      lightning: [
+        'LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência.',
+        'LAI: Publicidade é a REGRA, sigilo é a EXCEÇÃO.',
+        'LAI: Prazo de 20 dias (+10) para responder pedidos.',
+        'LGPD: Protege Pessoas Físicas. PJ não é titular de dados.',
+        'LGPD: Dados Sensíveis (Raça, Biometria, Saúde) têm proteção extra.',
+        'Gov Digital: Proíbe pedir dado que o governo já possui.',
+        'Assinatura Gov.br tem validade jurídica em todo território nacional.'
+      ],
+      flashcards: [
+        {q: "Qual o prazo padrão para resposta de um pedido via LAI?", a: "20 dias, prorrogáveis por mais 10 dias de forma justificada."},
+        {q: "A LGPD protege dados de Pessoas Jurídicas (empresas)?", a: "Não. A LGPD protege exclusivamente dados de pessoas NATURAIS (físicas)."},
+        {q: "O que são 'Dados Sensíveis' segundo a LGPD?", a: "Origem racial, religião, opinião política, saúde, vida sexual, dado genético ou biométrico."},
+        {q: "Qual o papel da ANPD?", a: "Autoridade Nacional de Proteção de Dados. Fiscaliza, orienta e aplica sanções administrativas."},
+        {q: "O que é o princípio 'Diga-me uma vez só' na Lei de Governo Digital?", a: "O cidadão não precisa fornecer ao governo dados que já constem em outras bases de dados do próprio governo."},
+        {q: "Um agente público pode usar o perfil oficial do órgão para postar opiniões políticas pessoais?", a: "Não. Fere o princípio da IMPESSOALIDADE e pode configurar improbidade."},
+        {q: "Na LAI, o sigilo de informações é a regra ou a exceção?", a: "A exceção. A publicidade é a regra geral da Administração Pública."}
+      ],
+      quiz: [
+        {
+          q: "(CESPE) A Lei de Acesso à Informação (LAI) exige que o cidadão justifique detalhadamente o motivo pelo qual solicita determinada informação pública.",
+          opts: ["Certo", "Errado"],
+          ans: 1,
+          exp: "Errado. A LAI proíbe a exigência de motivação para o pedido de acesso a informações públicas."
+        },
+        {
+          q: "(FGV) Segundo a LGPD, o dado biométrico (impressão digital) é classificado como:",
+          opts: ["Dado Público", "Dado Pessoal Sensível", "Dado Anonimizado", "Dado Cadastral Simples"],
+          ans: 1,
+          exp: "Dados biométricos e genéticos são considerados SENSÍVEIS, exigindo bases legais mais rigorosas para tratamento."
+        },
+        {
+          q: "(FCC) A Lei 14.129/2021 (Governo Digital) estabelece que a assinatura eletrônica:",
+          opts: ["Só tem validade se reconhecida em cartório", "Tem validade jurídica e dispensa o reconhecimento de firma em muitos casos", "Só pode ser usada por servidores públicos", "Substitui a biometria obrigatoriamente"],
+          ans: 1,
+          exp: "A lei confere validade jurídica à assinatura eletrônica (como a do Gov.br), equiparando-a à assinatura manuscrita para fins legais."
+        }
+      ]
+    },
+    {
+      id: 'dados',
+      title: '7. Dados e Engenharia',
+      icon: '🗃️',
+      overview: 'A base da Ciência de Dados. Pirâmide DIKW, atributos de qualidade de dados e técnicas de limpeza (missing values, normalização) são essenciais para provas de Analista de TI.',
+      theory: `
+        <h2>7.1 A Pirâmide DIKW</h2>
+        <p>A evolução do valor semântico dos ativos informacionais:</p>
+        <ul>
+          <li><strong>Dados:</strong> Fatos brutos, símbolos sem contexto (ex: "38", "SP").</li>
+          <li><strong>Informação:</strong> Dados processados com contexto (ex: "38°C em SP").</li>
+          <li><strong>Conhecimento:</strong> Informação aplicada, padrões (ex: "38°C indica onda de calor").</li>
+          <li><strong>Sabedoria:</strong> Julgamento ético e ação baseada no conhecimento (ex: "Devemos emitir alerta de saúde").</li>
+        </ul>
+
+        <h2>7.2 Qualidade de Dados (Dimensões)</h2>
+        <table>
+          <tr><th>Dimensão</th><th>Pergunta Chave</th><th>Exemplo de Falha</th></tr>
+          <tr><td><strong>Acurácia</strong></td><td>Reflete a realidade?</td><td>Idade cadastrada como 150 anos.</td></tr>
+          <tr><td><strong>Completude</strong></td><td>Faltam registros/campos?</td><td>CPF sem dígito verificador ou nulo.</td></tr>
+          <tr><td><strong>Consistência</strong></td><td>Os dados batem entre sistemas?</td><td>Endereço diferente no RH e no Financeiro.</td></tr>
+          <tr><td><strong>Tempestividade</strong></td><td>Estão atualizados no tempo certo?</td><td>Relatório de vendas de 2019 usado hoje.</td></tr>
+          <tr><td><strong>Unicidade</strong></td><td>Há duplicatas?</td><td>Mesmo cliente cadastrado 3 vezes.</td></tr>
+        </table>
+
+        <h2>7.3 Engenharia e Limpeza</h2>
+        <p><strong>Tratamento de Missing Values (Nulos):</strong></p>
+        <ul>
+          <li><em>Exclusão (Drop):</em> Apagar a linha. Perde informação, mas simples.</li>
+          <li><em>Imputação:</em> Substituir por Média, Mediana ou usar um modelo preditivo para preencher.</li>
+          <li><em>Flag:</em> Criar uma coluna "Era Nulo" para não perder o padrão do missing.</li>
+        </ul>
+        <p><strong>Normalização vs Padronização:</strong></p>
+        <ul>
+          <li><strong>Min-Max (Normalização):</strong> Escala os valores para [0, 1]. Fórmula: $(x - min) / (max - min)$.</li>
+          <li><strong>Z-Score (Padronização):</strong> Centraliza na média 0 e desvio padrão 1. Fórmula: $(x - \mu) / \sigma$.</li>
+        </ul>
+        <p><strong>Anonimização:</strong> Remover PII (Personally Identifiable Information). Técnicas: K-Anonimidade (garante que cada registro seja indistinguível de pelo menos K-1 outros) e Diferencial Privacy (adiciona ruído matemático para impedir reidentificação).</p>
+      `,
+      mermaid: `graph TD
+    A[Dado Bruto: 38] --> B[+ Contexto: Temp SP]
+    B --> C[Informação: 38C em SP]
+    C --> D[+ Padrão: Histórico]
+    D --> E[Conhecimento: Onda de Calor]
+    E --> F[+ Julgamento: Ação]
+    F --> G[Sabedoria: Alerta Saúde]`,
+      videos: [],
+      lightning: [
+        'DIKW: Dado -> Informação -> Conhecimento -> Sabedoria.',
+        'Acurácia = Verdade. Completude = Sem furos. Unicidade = Sem duplicatas.',
+        'Imputação por Média é sensível a Outliers. Mediana é mais robusta.',
+        'Min-Max coloca dados entre 0 e 1. Z-Score centraliza em 0.',
+        'K-Anonimidade: Indivíduo indistinguível em um grupo de K.',
+        'PII: Personally Identifiable Information (CPF, Nome, Foto).'
+      ],
+      flashcards: [
+        {q: "Na pirâmide DIKW, o que vem entre Informação e Sabedoria?", a: "Conhecimento. É a aplicação de padrões e regras à informação."},
+        {q: "Qual dimensão da qualidade de dados avalia se há registros duplicados?", a: "Unicidade."},
+        {q: "O que é Imputação de Dados?", a: "A técnica de preencher valores ausentes (missing values) usando média, mediana ou modelos preditivos."},
+        {q: "Por que a Média pode ser ruim para imputar dados?", a: "Porque é altamente sensível a Outliers (valores extremos), que distorcem o valor central."},
+        {q: "O que faz a Normalização Min-Max?", a: "Escala os dados para um intervalo fixo, geralmente entre 0 e 1."},
+        {q: "O que é K-Anonimidade?", a: "Técnica de anonimização onde cada registro em uma base é indistinguível de pelo menos K-1 outros registros."},
+        {q: "O que significa a sigla PII?", a: "Personally Identifiable Information (Informação Pessoal Identificável), como CPF, e-mail, rosto."},
+        {q: "Qual dimensão da qualidade avalia se o dado está disponível quando é necessário?", a: "Tempestividade (ou Atualidade)."}
+      ],
+      quiz: [
+        {
+          q: "(CESPE) A dimensão da qualidade de dados que verifica se os valores armazenados correspondem à realidade do mundo físico é a consistência.",
+          opts: ["Certo", "Errado"],
+          ans: 1,
+          exp: "Errado. Verificar se reflete a realidade é ACURÁCIA. Consistência verifica se os dados batem entre diferentes sistemas/tabelas."
+        },
+        {
+          q: "(FGV) Para tratar valores nulos em uma coluna de 'Salário', onde há poucos bilionários (outliers) na base, a técnica de imputação MAIS ROBUSTA é:",
+          opts: ["Média", "Mediana", "Moda", "Zero"],
+          ans: 1,
+          exp: "A Mediana é robusta a outliers, enquanto a Média seria puxada para cima pelos salários extremos."
+        },
+        {
+          q: "(FCC) A técnica de K-Anonimidade visa proteger a privacidade garantindo que:",
+          opts: ["Os dados sejam criptografados", "Um indivíduo seja indistinguível de outros K-1 indivíduos no dataset", "O acesso seja restrito por senha", "Os dados sejam apagados após 1 ano"],
+          ans: 1,
+          exp: "K-Anonimidade generaliza os dados para que cada combinação de atributos apareça pelo menos K vezes, impedindo reidentificação."
+        }
+      ]
+    },
+    {
+      id: 'visualizacao',
+      title: '8. Visualização de Dados',
+      icon: '📈',
+      overview: 'A arte de traduzir números em decisões. Foco em Gestalt, escolha do gráfico certo (Histograma vs Boxplot vs Dispersão), e ferramentas como Power BI (DAX) e Tableau.',
+      theory: `
+        <h2>8.1 Princípios e Gestalt</h2>
+        <p>A <strong>Teoria da Gestalt</strong> explica como o cérebro agrupa elementos visuais. Princípios aplicados:</p>
+        <ul>
+          <li><strong>Proximidade:</strong> Itens próximos são vistos como grupo. (Use para agrupar legendas próximas aos dados).</li>
+          <li><strong>Similaridade:</strong> Itens com mesma cor/forma são vistos como grupo. (Use cores consistentes para mesma categoria).</li>
+          <li><strong>Fechamento:</strong> O cérebro completa formas incompletas. (Gráficos de linha usam isso).</li>
+        </ul>
+        <p><strong>Chartjunk:</strong> Todo elemento visual que não carrega informação (ex: 3D desnecessário, texturas, sombras). <em>Elimine o chartjunk!</em> O gráfico deve ter a maior "Taxa de Tinta de Dados" (Data-Ink Ratio) possível.</p>
+
+        <h2>8.2 Tipos de Gráficos: Quando Usar</h2>
+        <table>
+          <tr><th>Gráfico</th><th>Melhor Para</th><th>Quando Evitar</th><th>Pegadinha</th></tr>
+          <tr><td><strong>Histograma</strong></td><td>Distribuição de 1 variável contínua.</td><td>Dados categóricos.</td><td>Não tem espaço entre barras (são intervalos contínuos).</td></tr>
+          <tr><td><strong>Linha</strong></td><td>Séries temporais (Tendência).</td><td>Dados sem ordem cronológica.</td><td>Escala do eixo Y pode enganar (zoom exagerado).</td></tr>
+          <tr><td><strong>Barras/Colunas</strong></td><td>Comparar categorias.</td><td>Muitas categorias (polui).</td><td>Eixo Y DEVE começar do zero, senão distorce.</td></tr>
+          <tr><td><strong>Dispersão (Scatter)</strong></td><td>Correlação entre 2 variáveis numéricas.</td><td>Causa e efeito (correlação não é causalidade!).</td><td>Outliers são visíveis e importantes.</td></tr>
+          <tr><td><strong>Box Plot</strong></td><td>Estatística descritiva e Outliers.</td><td>Audiência leiga (difícil de ler).</td><td>Mostra Mediana, Quartis (Q1, Q3) e IQR. Ponto fora da linha é outlier.</td></tr>
+        </table>
+
+        <h2>8.3 Ferramentas (Power BI vs Tableau)</h2>
+        <ul>
+          <li><strong>Power BI:</strong> Microsoft. Integração nativa com Excel/Azure. Usa <strong>DAX</strong> (Data Analysis Expressions) para cálculos e <strong>Power Query (Linguagem M)</strong> para ETL. Curva de aprendizado média.</li>
+          <li><strong>Tableau:</strong> Salesforce. Visualmente superior, drag-and-drop intuitivo. Curva de aprendizado baixa para viz, mas alto custo de licença.</li>
+          <li><strong>Looker Studio:</strong> Google. Gratuito, web-based, conecta bem ao Google Analytics/Ads. Limitado para modelagem complexa.</li>
+        </ul>
+
+        <h2>8.4 Storytelling com Dados</h2>
+        <p>Estrutura narrativa:</p>
+        <ol>
+          <li><strong>Contexto:</strong> "Nossas vendas caíram 10%."</li>
+          <li><strong>Conflito (Insight):</strong> "O gráfico de dispersão mostra que a queda é exclusiva da Região Sul após a mudança de preço."</li>
+          <li><strong>Resolução (Ação):</strong> "Recomenda-se reverter o preço no Sul e lançar campanha de recuperação."</li>
+        </ol>
+      `,
+      mermaid: `graph TD
+    A[Objetivo] --> B{Comparar?}
+    B -->|Sim| C[Barras]
+    B -->|Tendência?| D[Linha]
+    B -->|Distribuição?| E[Histograma / Boxplot]
+    B -->|Relação 2 Vars?| F[Dispersão]`,
+      videos: [],
+      lightning: [
+        'Gestalt: Proximidade e Similaridade agrupam elementos.',
+        'Chartjunk = Ruído visual inútil. Elimine!',
+        'Histograma: Barras coladas (dados contínuos).',
+        'Boxplot: Mostra Q1, Mediana, Q3 e Outliers.',
+        'Correlação NÃO implica Causalidade (Gráfico de Dispersão).',
+        'Eixo Y de gráfico de barras SEMPRE começa em zero.',
+        'DAX é a linguagem de fórmulas do Power BI. M é do Power Query.',
+        'Storytelling: Contexto -> Conflito -> Ação.'
+      ],
+      flashcards: [
+        {q: "O que é Chartjunk?", a: "Elementos visuais desnecessários (3D, texturas, cores excessivas) que poluem o gráfico sem adicionar informação."},
+        {q: "Qual gráfico é ideal para mostrar a DISTRIBUIÇÃO de idades de uma população?", a: "Histograma (mostra a frequência em intervalos contínuos)."},
+        {q: "O que um Box Plot (Diagrama de Caixa) exibe?", a: "Mediana, Quartis (25% e 75%), Intervalo Interquartil (IQR) e Outliers."},
+        {q: "Qual o erro clássico em gráficos de barras/colunas?", a: "Não iniciar o eixo Y em zero, o que distorce visualmente as diferenças."},
+        {q: "Gráfico de Dispersão prova causalidade?", a: "Não. Ele mostra apenas CORRELAÇÃO estatística entre duas variáveis."},
+        {q: "Qual a linguagem de fórmulas usada no Power BI?", a: "DAX (Data Analysis Expressions)."},
+        {q: "Qual a linguagem usada no Power Query (ETL) do Power BI?", a: "Linguagem M."},
+        {q: "Pelo princípio da Gestalt, itens próximos são percebidos como:", a: "Um grupo ou padrão (Princípio da Proximidade)."},
+        {q: "Qual a principal vantagem do Tableau sobre o Power BI?", a: "A qualidade visual nativa, flexibilidade de design e facilidade de uso drag-and-drop."},
+        {q: "Na estrutura de Storytelling com Dados, o que vem após o 'Conflito'?", a: "A Resolução ou Ação Recomendada baseada no insight."}
+      ],
+      quiz: [
+        {
+          q: "(CESPE) O uso de efeitos tridimensionais (3D) em gráficos de pizza é recomendado por especialistas em visualização, pois aumenta a taxa de tinta de dados (data-ink ratio).",
+          opts: ["Certo", "Errado"],
+          ans: 1,
+          exp: "Errado. 3D é chartjunk (ruído). Distorce a percepção de área e dificulta a leitura. O ideal é 2D e gráficos de barras para comparações."
+        },
+        {
+          q: "(FGV) Um analista precisa comparar a distribuição salarial de 5 departamentos diferentes, identificando medianas e outliers. O gráfico MAIS adequado é:",
+          opts: ["Gráfico de Pizza", "Gráfico de Linha", "Box Plot (Caixa)", "Gráfico de Área"],
+          ans: 2,
+          exp: "O Box Plot é perfeito para comparar distribuições estatísticas (quartis, mediana, outliers) entre múltiplas categorias lado a lado."
+        },
+        {
+          q: "(FCC) No ecossistema Power BI, a ferramenta responsável pela extração, transformação e carga (ETL) dos dados, utilizando a linguagem M, é o:",
+          opts: ["DAX Studio", "Power Query Editor", "Power Pivot", "Report View"],
+          ans: 1,
+          exp: "O Power Query Editor é o motor de ETL que usa a linguagem M para limpar e preparar os dados antes da modelagem."
+        }
+      ]
+    }
+  ]
+};
+
+// ==========================================
+// ESTADO E PERSISTÊNCIA
+// ==========================================
+const State = {
+  currentModule: 'msoffice',
+  progress: {},
+  flashcards: {},
+  quizScores: {},
+  ttsRate: 1,
+  theme: 'dark',
+  load() {
+    try {
+      const s = localStorage.getItem('apostila_ti_state_v3');
+      if (s) {
+        const d = JSON.parse(s);
+        this.progress = d.progress || {};
+        this.flashcards = d.flashcards || {};
+        this.quizScores = d.quizScores || {};
+        this.theme = d.theme || 'dark';
+      }
+    } catch(e) { console.error(e); }
+  },
+  save() {
+    try {
+      localStorage.setItem('apostila_ti_state_v3', JSON.stringify({
+        progress: this.progress,
+        flashcards: this.flashcards,
+        quizScores: this.quizScores,
+        theme: this.theme
+      }));
+    } catch(e) {}
+  }
+};
+
+// ==========================================
+// APLICATIVO E ROTEADOR
+// ==========================================
+const App = {
+  init() {
+    State.load();
+    document.documentElement.setAttribute('data-theme', State.theme);
+    this.renderNav();
+    this.renderModule(State.currentModule);
+    this.bindEvents();
+    this.updateGlobalProgress();
+    mermaid.initialize({ theme: 'dark', securityLevel: 'loose' });
+  },
+
+  renderNav() {
+    const nav = document.getElementById('nav-list');
+    nav.innerHTML = '';
+    DB.modules.forEach(mod => {
+      const p = State.progress[mod.id] || {};
+      const perc = p.completed ? 100 : 0;
+      nav.innerHTML += `
+        <div class="nav-item ${mod.id === State.currentModule ? 'active' : ''}" data-id="${mod.id}">
+          <span>${mod.icon} ${mod.title}</span>
+          <div class="progress-mini"><div class="progress-mini-bar" style="width: ${perc}%"></div></div>
+        </div>
+      `;
+    });
+    nav.querySelectorAll('.nav-item').forEach(el => {
+      el.addEventListener('click', () => {
+        State.currentModule = el.dataset.id;
+        this.renderNav();
+        this.renderModule(State.currentModule);
+        window.scrollTo(0,0);
+      });
+    });
+  },
+
+  renderModule(id) {
+    const mod = DB.modules.find(m => m.id === id);
+    if (!mod) return;
+
+    const html = `
+      <h1>${mod.icon} ${mod.title}</h1>
+      <div class="card" style="background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; border: none;">
+        <h3 style="color: white; margin-top:0;">🚀 Visão Geral Estratégica</h3>
+        <p style="color: white;">${mod.overview}</p>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="teoria">📖 Teoria</div>
+        <div class="tab" data-tab="mapas">🗺️ Mapas e Diagramas</div>
+        <div class="tab" data-tab="simuladores">🎮 Simuladores</div>
+        <div class="tab" data-tab="flash">⚡ Resumo Relâmpago</div>
+        <div class="tab" data-tab="cards">🃏 Flashcards</div>
+        <div class="tab" data-tab="quiz">📝 Simulado</div>
+      </div>
+
+      <div class="tab-content active" id="tab-teoria">
+        <div class="card">${mod.theory}</div>
+        ${mod.videos && mod.videos.length > 0 ? `<h3>🎥 Vídeos de Apoio</h3>
+        ${mod.videos.map(v => `
+          <div class="card">
+            <h4>${v.title}</h4>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube-nocookie.com/embed/${v.id}" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        `).join('')}
+        ` : ''}
+        <button class="mark-complete ${State.progress[mod.id]?.completed ? 'completed' : ''}" onclick="App.toggleComplete('${mod.id}')">
+          ${State.progress[mod.id]?.completed ? '✅ Módulo Concluído' : 'Marcar como Concluído'}
+        </button>
+      </div>
+
+      <div class="tab-content" id="tab-mapas">
+        <div class="card">
+          <h3>Arquitetura e Fluxos</h3>
+          <div class="mermaid">${mod.mermaid}</div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-simuladores">
+        ${this.renderSimulators(mod.id)}
+      </div>
+
+      <div class="tab-content" id="tab-flash">
+        <div class="card">
+          <h3>⚡ Resumo-Relâmpago (Revisão de Véspera)</h3>
+          <ul style="font-size: 1.1rem; line-height: 2;">
+            ${mod.lightning.map(l => `<li><strong>➤</strong> ${l}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-cards">
+        <div class="card">
+          <h3>🃏 Flashcards com Repetição Espaçada</h3>
+          <p>Clique no cartão para virar. Avalie seu desempenho para o algoritmo otimizar seus estudos.</p>
+          <div class="fc-deck" id="fc-deck-${mod.id}"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-quiz">
+        <div class="card">
+          <h3>📝 Banco de Exercícios Comentados</h3>
+          <p>Resolva e confira o gabarito comentado item a item.</p>
+          <div id="quiz-container-${mod.id}"></div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('content-area').innerHTML = html;
+
+    // Bind Tabs
+    document.querySelectorAll('.tab').forEach(t => {
+      t.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        document.getElementById('tab-' + t.dataset.tab).classList.add('active');
+        if (t.dataset.tab === 'mapas') mermaid.init();
+      });
+    });
+
+    this.renderFlashcards(mod.id);
+    this.renderQuiz(mod.id);
+  },
+
+  renderSimulators(modId) {
+    if (modId === 'msoffice') {
+      return `
+        <div class="card">
+          <h3>🧮 Simulador de Fórmulas Excel</h3>
+          <p>Edite os valores e teste fórmulas como <code>=SOMA(A1:A3)</code>, <code>=MEDIA(A1:A3)</code>, <code>=SE(A1>10;"OK";"Falha")</code>.</p>
+          <div class="sim-grid">
+            <div>
+              <h4>Planilha</h4>
+              <div class="excel-grid" id="excel-grid"></div>
+              <label>Fórmula:</label>
+              <input type="text" id="excel-formula" placeholder="=SOMA(A1:A3)">
+              <button class="btn" onclick="App.calcExcel()">Calcular</button>
+            </div>
+            <div>
+              <h4>Resultado:</h4>
+              <div class="sim-output" id="excel-output">Aguardando cálculo...</div>
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (modId === 'seguranca') {
+      return `
+        <div class="card">
+          <h3>🎣 Simulador de Triagem de Phishing</h3>
+          <p>Analise os e-mails abaixo. Identifique os golpes baseados em gatilhos de urgência, remetentes estranhos e links suspeitos.</p>
+          <div id="phish-container"></div>
+        </div>
+      `;
+    } else if (modId === 'ia') {
+      return `
+        <div class="card">
+          <h3>🧠 Playground de Engenharia de Prompts</h3>
+          <p>Digite um prompt e nossa IA simulada avaliará a estrutura baseada nos 5 pilares (Persona, Contexto, Tarefa, Restrição, Formato).</p>
+          <div class="sim-grid">
+            <div class="sim-input">
+              <textarea id="prompt-input" rows="10" placeholder="Ex: Atue como um arquiteto de software. Crie um código Apex..."></textarea>
+              <button class="btn" onclick="App.evalPrompt()">Avaliar Estrutura</button>
+            </div>
+            <div>
+              <h4>Diagnóstico da IA:</h4>
+              <div class="sim-output" id="prompt-output">Aguardando prompt...</div>
+            </div>
+          </div>
+        </div>
+      `;
+    } else if (modId === 'visualizacao') {
+      return `
+        <div class="card">
+          <h3>📊 Estúdio de Visualização de Dados</h3>
+          <p>Gere gráficos interativos. Manipule os dados para entender a diferença entre cada tipo.</p>
+          <div class="chart-controls">
+            <select id="chart-type">
+              <option value="bar">Barras (Comparação)</option>
+              <option value="line">Linha (Tendência)</option>
+              <option value="scatter">Dispersão (Correlação)</option>
+              <option value="histogram">Histograma (Distribuição)</option>
+              <option value="boxplot">Boxplot (Estatística)</option>
+            </select>
+            <button class="btn" onclick="App.genChart()">Gerar / Atualizar</button>
+          </div>
+          <div class="chart-container">
+            <canvas id="main-chart"></canvas>
+            <svg id="boxplot-svg" style="display:none; width:100%; height:100%;"></svg>
+          </div>
+          <div class="card mt-1" id="chart-insight"></div>
+        </div>
+      `;
+    } else {
+      return `<div class="card"><h3>Simuladores em breve...</h3><p>Para este módulo, utilize os Flashcards e o Quiz para fixação prática.</p></div>`;
+    }
+  },
+
+  renderFlashcards(modId) {
+    const mod = DB.modules.find(m => m.id === modId);
+    const deck = document.getElementById('fc-deck-' + modId);
+    if (!deck) return;
+    deck.innerHTML = '';
+    
+    if (!State.flashcards[modId]) State.flashcards[modId] = mod.flashcards.map((c, i) => ({...c, id: i, reps: 0, interval: 0, ease: 2.5}));
+    
+    State.flashcards[modId].forEach((card, idx) => {
+      deck.innerHTML += `
+        <div class="fc-card" data-idx="${idx}">
+          <div class="fc-inner">
+            <div class="fc-front">
+              <div>Pergunta ${idx+1}</div>
+              <div style="margin-top:1rem; font-size:1rem;">${card.q}</div>
+            </div>
+            <div class="fc-back">
+              <div>${card.a}</div>
+              <div class="fc-actions">
+                <button class="fc-btn-wrong" onclick="App.rateCard('${modId}', ${idx}, 1)">Errei</button>
+                <button class="fc-btn-hard" onclick="App.rateCard('${modId}', ${idx}, 3)">Difícil</button>
+                <button class="fc-btn-easy" onclick="App.rateCard('${modId}', ${idx}, 5)">Acertei</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    deck.querySelectorAll('.fc-card').forEach(c => {
+      c.addEventListener('click', (e) => {
+        if (!e.target.tagName === 'BUTTON') c.classList.toggle('flipped');
+      });
+    });
+  },
+
+  rateCard(modId, idx, quality) {
+    const card = State.flashcards[modId][idx];
+    if (quality < 3) { card.reps = 0; card.interval = 1; }
+    else if (quality === 3) { card.interval = Math.max(1, Math.round(card.interval * 1.2)); card.ease = Math.max(1.3, card.ease - 0.2); }
+    else {
+      card.reps++;
+      if (card.reps === 1) card.interval = 1;
+      else if (card.reps === 2) card.interval = 6;
+      else card.interval = Math.round(card.interval * card.ease);
+      card.ease += 0.1;
+    }
+    State.save();
+    alert(`Avaliado! Próxima revisão em ${card.interval} dia(s).`);
+  },
+
+  renderQuiz(modId) {
+    const mod = DB.modules.find(m => m.id === modId);
+    const cont = document.getElementById('quiz-container-' + modId);
+    if (!cont) return;
+    cont.innerHTML = '';
+
+    mod.quiz.forEach((q, i) => {
+      cont.innerHTML += `
+        <div class="quiz-q">
+          <h4>Questão ${i+1}</h4>
+          <p>${q.q}</p>
+          <div class="quiz-opts">
+            ${q.opts.map((opt, oi) => `
+              <label>
+                <input type="radio" name="q${modId}_${i}" value="${oi}">
+                ${opt}
+              </label>
+            `).join('')}
+          </div>
+          <button class="btn mt-1" onclick="App.checkQuiz('${modId}', ${i})">Verificar</button>
+          <div class="quiz-exp" id="exp-${modId}_${i}">
+            <strong>📚 Gabarito Comentado:</strong><br>
+            <strong>Resposta:</strong> ${q.opts[q.ans]}<br><br>
+            ${q.exp}
+          </div>
+        </div>
+      `;
+    });
+  },
+
+  checkQuiz(modId, qIdx) {
+    const mod = DB.modules.find(m => m.id === modId);
+    const q = mod.quiz[qIdx];
+    const radios = document.getElementsByName(`q${modId}_${qIdx}`);
+    let selected = -1;
+    radios.forEach(r => { if (r.checked) selected = parseInt(r.value); });
+    
+    if (selected === -1) { alert('Selecione uma alternativa.'); return; }
+
+    const labels = document.querySelectorAll(`[name="q${modId}_${qIdx}"]`);
+    labels.forEach((r, i) => {
+      const lbl = r.parentElement;
+      if (i === q.ans) lbl.classList.add('correct');
+      else if (i === selected) lbl.classList.add('wrong');
+    });
+    
+    document.getElementById(`exp-${modId}_${qIdx}`).classList.add('show');
+  },
+
+  bindEvents() {
+    document.getElementById('search-input').addEventListener('input', (e) => this.search(e.target.value));
+    document.getElementById('tts-rate').addEventListener('change', (e) => State.ttsRate = parseFloat(e.target.value));
+    document.getElementById('tts-play').addEventListener('click', () => this.ttsPlay());
+    document.getElementById('tts-pause').addEventListener('click', () => window.speechSynthesis.cancel());
+  },
+
+  search(q) {
+    if (q.length < 3) {
+      document.getElementById('content-area').querySelectorAll('.highlight').forEach(el => {
+        el.outerHTML = el.innerHTML;
+      });
+      return;
+    }
+    const activeTab = document.querySelector('.tab-content.active');
+    if (!activeTab) return;
+    
+    // Limpa highlights anteriores
+    activeTab.querySelectorAll('.highlight').forEach(el => el.outerHTML = el.innerHTML);
+    
+    // Aplica novo highlight
+    const regex = new RegExp(`(${q})`, 'gi');
+    const walker = document.createTreeWalker(activeTab, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    while(node = walker.nextNode()) {
+      if (node.nodeValue.toLowerCase().includes(q.toLowerCase())) {
+        const span = document.createElement('span');
+        span.innerHTML = node.nodeValue.replace(regex, '<mark class="highlight">$1</mark>');
+        node.parentNode.replaceChild(span, node);
+      }
+    }
+  },
+
+  ttsPlay() {
+    window.speechSynthesis.cancel();
+    const activeTab = document.querySelector('.tab-content.active');
+    if (!activeTab) return;
+    const text = activeTab.innerText.substring(0, 3000); // Limita para não travar
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'pt-BR';
+    utter.rate = State.ttsRate;
+    window.speechSynthesis.speak(utter);
+  },
+
+  toggleComplete(modId) {
+    if (!State.progress[modId]) State.progress[modId] = {};
+    State.progress[modId].completed = !State.progress[modId].completed;
+    State.save();
+    this.renderNav();
+    this.renderModule(modId);
+    this.updateGlobalProgress();
+  },
+
+  updateGlobalProgress() {
+    const total = DB.modules.length;
+    const done = DB.modules.filter(m => State.progress[m.id]?.completed).length;
+    const perc = Math.round((done / total) * 100);
+    document.getElementById('global-progress').style.width = perc + '%';
+    document.getElementById('progress-text').innerText = perc + '%';
+  },
+
+  toggleTheme() {
+    State.theme = State.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', State.theme);
+    State.save();
+  },
+
+  closeModal() {
+    document.getElementById('modal').classList.remove('show');
+  },
+
+  // ============== SIMULADORES ==============
+  initSimulators() {
+    setTimeout(() => {
+      if (State.currentModule === 'msoffice') this.initExcel();
+      if (State.currentModule === 'seguranca') this.initPhishing();
+      if (State.currentModule === 'ia') this.initPrompt();
+      if (State.currentModule === 'visualizacao') this.initChart();
+    }, 100);
+  },
+
+  initExcel() {
+    const grid = document.getElementById('excel-grid');
+    if (!grid) return;
+    grid.innerHTML = '<div class="hdr"></div><div class="hdr">A</div><div class="hdr">B</div><div class="hdr">C</div><div class="hdr">D</div><div class="hdr">E</div>';
+    const cols = ['A','B','C','D','E'];
+    for (let r = 1; r <= 5; r++) {
+      grid.innerHTML += `<div class="hdr">${r}</div>`;
+      for (let c = 0; c < 5; c++) {
+        grid.innerHTML += `<input type="number" id="cell-${cols[c]}${r}" value="${Math.floor(Math.random()*50)+1}">`;
+      }
+    }
+  },
+
+  calcExcel() {
+    const formula = document.getElementById('excel-formula').value.toUpperCase().trim();
+    const out = document.getElementById('excel-output');
+    if (!formula) { out.innerText = 'Digite uma fórmula.'; return; }
+    
+    const getVal = (ref) => {
+      const el = document.getElementById('cell-' + ref);
+      return el ? parseFloat(el.value) || 0 : 0;
+    };
+    
+    const getRange = (range) => {
+      const [start, end] = range.split(':');
+      const sCol = start[0], sRow = parseInt(start[1]);
+      const eCol = end[0], eRow = parseInt(end[1]);
+      let vals = [];
+      for (let c = sCol.charCodeAt(0); c <= eCol.charCodeAt(0); c++) {
+        for (let r = sRow; r <= eRow; r++) {
+          vals.push(getVal(String.fromCharCode(c) + r));
+        }
+      }
+      return vals;
+    };
+
+    try {
+      let result = 'Erro de sintaxe';
+      if (formula.startsWith('=')) {
+        const f = formula.substring(1);
+        if (f.startsWith('SOMA(')) {
+          const range = f.substring(5, f.length-1);
+          result = getRange(range).reduce((a,b) => a+b, 0);
+        } else if (f.startsWith('MEDIA(')) {
+          const range = f.substring(6, f.length-1);
+          const vals = getRange(range);
+          result = vals.reduce((a,b) => a+b, 0) / vals.length;
+        } else if (f.startsWith('SE(')) {
+          const parts = f.substring(3, f.length-1).split(';');
+          const cond = parts[0].replace(/([A-E]\d)/g, 'getVal("$1")');
+          const t = parts[1], fa = parts[2];
+          const r = eval(cond);
+          result = r ? t.replace(/"/g,'') : fa.replace(/"/g,'');
+        } else if (f.startsWith('CONT.SE(')) {
+          const parts = f.substring(8, f.length-1).split(';');
+          const vals = getRange(parts[0]);
+          const crit = parseFloat(parts[1]) || parts[1].replace(/"/g,'');
+          result = vals.filter(v => v == crit).length;
+        } else {
+          // Avaliação aritmética simples
+          const exp = f.replace(/([A-E]\d)/g, 'getVal("$1")');
+          result = eval(exp);
+        }
+      }
+      out.innerText = `> ${formula}\n\nRESULTADO: ${result}`;
+    } catch(e) {
+      out.innerText = `ERRO: ${e.message}`;
+    }
+  },
+
+  initPhishing() {
+    const cont = document.getElementById('phish-container');
+    if (!cont) return;
+    const emails = [
+      {
+        from: 'suporte@receita-federal-gov-br.com',
+        subj: 'URGENTE: Seu CPF será suspenso em 24h',
+        body: 'Prezado contribuinte, detectamos uma pendência grave. Clique no link abaixo para regularizar imediatamente, caso contrário seu CPF será suspenso.',
+        isPhish: true,
+        reason: '1. Domínio estranho (receita-federal-gov-br.com, não gov.br). 2. Senso de urgência extremo. 3. Ameaça de suspensão.'
+      },
+      {
+        from: 'rh@empresa.com.br',
+        subj: 'Convite: Reunião de Planejamento Q4',
+        body: 'Olá time, segue o link do Teams para nossa reunião de amanhã às 14h. Pauta: Metas 2024. Att, Diretoria.',
+        isPhish: false,
+        reason: 'Remetente interno, assunto corporativo padrão, sem links suspeitos ou pedidos de senha.'
+      },
+      {
+        from: 'admin@microsoft-support-alert.net',
+        subj: 'Acesso não autorizado à sua conta',
+        body: 'Detectamos login da Rússia. Se não foi você, clique aqui para bloquear sua conta e alterar sua senha agora.',
+        isPhish: true,
+        reason: '1. Domínio não-oficial (.net). 2. Apelo ao medo. 3. Pede clique para "alterar senha" (roubo de credencial).'
+      }
+    ];
+
+    cont.innerHTML = emails.map((e, i) => `
+      <div class="phish-email" id="phish-${i}">
+        <div class="hdr">
+          <strong>De:</strong> ${e.from} | <strong>Assunto:</strong> ${e.subj}
+        </div>
+        <p>${e.body}</p>
+        <div class="phish-actions">
+          <button class="phish-btn safe" onclick="App.judgePhish(${i}, false)">✅ Legítimo</button>
+          <button class="phish-btn danger" onclick="App.judgePhish(${i}, true)">🚨 É Phishing</button>
+        </div>
+        <div class="quiz-exp" id="phish-exp-${i}"><strong>Diagnóstico:</strong> ${e.reason}</div>
+      </div>
+    `).join('');
+    window._phishData = emails;
+  },
+
+  judgePhish(i, guessPhish) {
+    const email = window._phishData[i];
+    const exp = document.getElementById('phish-exp-' + i);
+    const correct = (guessPhish === email.isPhish);
+    exp.innerHTML = `<strong>${correct ? '✅ ACERTOU!' : '❌ ERROU!'} Diagnóstico:</strong> ${email.reason}`;
+    exp.classList.add('show');
+  },
+
+  initPrompt() {
+    // Apenas bind, o botão já chama evalPrompt
+  },
+
+  evalPrompt() {
+    const txt = document.getElementById('prompt-input').value;
+    const out = document.getElementById('prompt-output');
+    if (!txt.trim()) { out.innerText = 'Digite um prompt.'; return; }
+    
+    const checks = {
+      'Persona': /atue como|você é|aja como|papel|especialista/gi.test(txt),
+      'Contexto': /contexto|cenário|dado que|considerando|fundo/gi.test(txt),
+      'Tarefa': /crie|analise|escreva|gere|liste|resuma|explique/gi.test(txt),
+      'Restrição': /não|evite|limite|sem|proibido|jamais/gi.test(txt),
+      'Formato': /tabela|json|lista|markdown|bullet|formato|tom/gi.test(txt)
+    };
+
+    let score = 0;
+    let feedback = 'ANÁLISE ESTRUTURAL DO PROMPT\n=============================\n\n';
+    for (let k in checks) {
+      const icon = checks[k] ? '✅' : '❌';
+      feedback += `${icon} ${k}: ${checks[k] ? 'Detectado' : 'AUSENTE'}\n`;
+      if (checks[k]) score++;
+    }
+    
+    feedback += `\nPONTUAÇÃO: ${score}/5\n\n`;
+    if (score < 3) feedback += '⚠️ Prompt muito fraco. Adicione Persona, Restrições e Formato de saída para resultados profissionais.';
+    else if (score < 5) feedback += '💡 Bom prompt! Para excelência, adicione os componentes faltantes.';
+    else feedback += '🏆 PROMPT NÍVEL MASTER! Estrutura completa para LLMs de alta performance.';
+
+    out.innerText = feedback;
+  },
+
+  initChart() {
+    this.genChart();
+    document.getElementById('chart-type').addEventListener('change', () => this.genChart());
+  },
+
+  genChart() {
+    const type = document.getElementById('chart-type').value;
+    const canvas = document.getElementById('main-chart');
+    const svg = document.getElementById('boxplot-svg');
+    const insight = document.getElementById('chart-insight');
+    
+    if (window.myChart) window.myChart.destroy();
+    canvas.style.display = 'block';
+    svg.style.display = 'none';
+
+    let labels = [], data = [], insights = '';
+
+    if (type === 'bar') {
+      labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'];
+      data = labels.map(() => Math.floor(Math.random()*100)+20);
+      insights = '<strong>Gráfico de Barras:</strong> Ideal para comparar categorias discretas. Note que o eixo Y inicia em zero para não distorcer a percepção visual das diferenças.';
+    } else if (type === 'line') {
+      labels = ['2018', '2019', '2020', '2021', '2022', '2023', '2024'];
+      data = [10, 15, 12, 25, 30, 28, 45]; // Tendência de alta
+      insights = '<strong>Gráfico de Linha:</strong> Perfeito para séries temporais. A linha mostra a tendência de crescimento ao longo dos anos. Cuidado com a escala do eixo Y que pode exagerar pequenas variações.';
+    } else if (type === 'scatter') {
+      data = Array.from({length: 30}, () => ({
+        x: Math.random()*100,
+        y: (Math.random()*100) + (Math.random()*20) // Correlação positiva fraca
+      }));
+      insights = '<strong>Gráfico de Dispersão:</strong> Mostra a relação entre duas variáveis numéricas. Aqui vemos uma correlação positiva: à medida que X aumenta, Y tende a aumentar. LEMBRE-SE: Correlação NÃO implica Causalidade!';
+    } else if (type === 'histogram') {
+      // Gerar dados normais
+      const raw = Array.from({length: 500}, () => {
+        let u = 0, v = 0;
+        while(u === 0) u = Math.random();
+        while(v === 0) v = Math.random();
+        return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+      }).map(n => Math.round((n * 15) + 100)); // Média 100, DP 15 (QI)
+      
+      // Bin
+      labels = ['70-80', '80-90', '90-100', '100-110', '110-120', '120-130'];
+      data = [0,0,0,0,0,0];
+      raw.forEach(v => {
+        if (v<80) data[0]++;
+        else if (v<90) data[1]++;
+        else if (v<100) data[2]++;
+        else if (v<110) data[3]++;
+        else if (v<120) data[4]++;
+        else data[5]++;
+      });
+      insights = '<strong>Histograma:</strong> Mostra a DISTRIBUIÇÃO de uma variável contínua. Aqui temos uma Curva Normal (Sino) típica de QI. As barras são COLADAS pois representam intervalos contínuos, não categorias distintas.';
+    } else if (type === 'boxplot') {
+      canvas.style.display = 'none';
+      svg.style.display = 'block';
+      this.drawBoxplot(svg);
+      insight.innerHTML = '<strong>Box Plot (Diagrama de Caixa):</strong> Exibe a estatística descritiva de 4 grupos. A linha na caixa é a MEDIANA. As bordas da caixa são Q1 (25%) e Q3 (75%). Os "bigodes" (whiskers) vão até 1.5*IQR. Pontos fora são OUTLIERS.';
+      return;
+    }
+
+    const config = {
+      type: type === 'histogram' ? 'bar' : type,
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Dados Simulados',
+          data: data,
+          backgroundColor: type==='scatter' ? 'rgba(59, 130, 246, 0.5)' : 'rgba(59, 130, 246, 0.7)',
+          borderColor: '#3b82f6',
+          borderWidth: type==='scatter' ? 0 : 2,
+          pointRadius: type==='scatter' ? 5 : 0
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { labels: { color: '#f8fafc' } } },
+        scales: {
+          x: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
+          y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' }, beginAtZero: type==='bar' }
+        }
+      }
+    };
+    window.myChart = new Chart(canvas, config);
+    insight.innerHTML = insights;
+  },
+
+  drawBoxplot(svg) {
+    svg.innerHTML = '';
+    const w = svg.clientWidth || 800;
+    const h = 400;
+    const groups = ['Grupo A', 'Grupo B', 'Grupo C', 'Grupo D'];
+    const colors = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444'];
+    
+    groups.forEach((g, i) => {
+      // Dados aleatórios
+      let vals = Array.from({length: 50}, () => Math.random()*100 + i*10);
+      if (i===2) vals.push(180, 190); // Adiciona outliers
+      vals.sort((a,b) => a-b);
+      
+      const q1 = vals[Math.floor(vals.length * 0.25)];
+      const q3 = vals[Math.floor(vals.length * 0.75)];
+      const med = vals[Math.floor(vals.length * 0.5)];
+      const min = vals[0];
+      const max = vals[vals.length-1];
+      const iqr = q3 - q1;
+      const wLow = Math.max(min, q1 - 1.5*iqr);
+      const wHigh = Math.min(max, q3 + 1.5*iqr);
+      
+      const x = (w / 5) * (i + 1);
+      const boxW = 60;
+      const scaleY = (v) => h - 50 - (v/200 * (h-100));
+      
+      // Caixa
+      svg.innerHTML += `<rect x="${x-boxW/2}" y="${scaleY(q3)}" width="${boxW}" height="${scaleY(q1)-scaleY(q3)}" fill="${colors[i]}" opacity="0.6" stroke="white" />`;
+      // Mediana
+      svg.innerHTML += `<line x1="${x-boxW/2}" y1="${scaleY(med)}" x2="${x+boxW/2}" y2="${scaleY(med)}" stroke="white" stroke-width="3" />`;
+      // Whiskers
+      svg.innerHTML += `<line x1="${x}" y1="${scaleY(wLow)}" x2="${x}" y2="${scaleY(q1)}" stroke="white" stroke-dasharray="4" />`;
+      svg.innerHTML += `<line x1="${x}" y1="${scaleY(q3)}" x2="${x}" y2="${scaleY(wHigh)}" stroke="white" stroke-dasharray="4" />`;
+      svg.innerHTML += `<line x1="${x-20}" y1="${scaleY(wLow)}" x2="${x+20}" y2="${scaleY(wLow)}" stroke="white" />`;
+      svg.innerHTML += `<line x1="${x-20}" y1="${scaleY(wHigh)}" x2="${x+20}" y2="${scaleY(wHigh)}" stroke="white" />`;
+      // Outliers
+      vals.forEach(v => {
+        if (v < wLow || v > wHigh) {
+          svg.innerHTML += `<circle cx="${x}" cy="${scaleY(v)}" r="4" fill="red" stroke="white" />`;
+        }
+      });
+      // Label
+      svg.innerHTML += `<text x="${x}" y="${h-20}" text-anchor="middle" fill="white" font-weight="bold">${g}</text>`;
+    });
+  },
+
+  renderModuleHook() {
+    this.initSimulators();
+  }
+};
+
+// Override renderModule to init simulators
+const origRender = App.renderModule;
+App.renderModule = function(id) {
+  origRender.call(this, id);
+  this.initSimulators();
+};
+
+document.addEventListener('DOMContentLoaded', () => App.init());
+</script>
+</body>
+</html>
