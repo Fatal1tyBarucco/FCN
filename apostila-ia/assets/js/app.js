@@ -9,6 +9,29 @@
  * - Os 8 módulos são carregados de assets/data/ via tags <script>; nenhum fetch externo.
  */
 
+/* Helper compartilhado: envolve qualquer <table> em uma região rolável e
+ * focável por teclado. Definido UMA vez e reutilizado por quiz, progresso,
+ * gráficos e simuladores. */
+if (typeof window !== 'undefined' && typeof window.wrapTabela !== 'function') {
+  window.wrapTabela = function (html, rotulo, larga) {
+    var esc = function (s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    };
+    var cls = 'tabela-scroll' + (larga ? ' tabela-scroll--larga' : '');
+    return '<div class="' + cls + '" role="region" aria-label="' + esc(rotulo || 'Tabela — role para leitura por teclado') + '" tabindex="0">' + html + '</div>';
+  };
+}
+
+/* Helper de ícone: delega ao registro SVG único (db-modules.js). Retorna ''
+ * quando o runtime de ícones não está disponível — nunca um glifo quebrado. */
+if (typeof window !== 'undefined') {
+  window.icone = function (nome) {
+    return (typeof window.FCNIcon === 'function') ? window.FCNIcon(nome) : '';
+  };
+}
+
 // Defensiva: não sobrescrever o App se já definido por outro script
 if (typeof App === 'undefined') {
   const App = {
@@ -25,7 +48,6 @@ if (typeof App === 'undefined') {
       this.renderNav();
       this.switchModule((typeof State !== 'undefined' && State.currentModule && DB.modules.some(m=>m.id===State.currentModule)) ? State.currentModule : 'msoffice');
       this.updateGlobalProgress();
-      if (typeof mermaid !== 'undefined') mermaid.initialize({ theme: 'dark', securityLevel: 'loose' });
       window.App = this;
     },
 
@@ -77,10 +99,12 @@ if (typeof App === 'undefined') {
       DB.modules.forEach(m => {
         const p = (typeof State !== 'undefined' && State.progress) ? (State.progress[m.id] || {}) : {};
         const perc = p.completed ? 100 : (p.pct || 0);
-        const item = document.createElement('div');
+        const item = document.createElement('button');
+        item.type = 'button';
         item.className = 'nav-item' + (m.id === this.activeModuleId ? ' active' : '');
         item.dataset.id = m.id;
-        item.innerHTML = '<span>' + (m.icon || '') + ' ' + (m.title || m.label || m.id) + '</span>' +
+        item.setAttribute('aria-current', m.id === this.activeModuleId ? 'true' : 'false');
+        item.innerHTML = '<span class="nav-item-label">' + (m.icon || '') + ' ' + (m.title || m.label || m.id) + '</span>' +
           '<div class="progress-mini"><div class="progress-mini-bar" style="width:' + perc + '%"></div></div>';
         item.addEventListener('click', () => this.switchModule(m.id));
         this.els.navList.appendChild(item);
@@ -99,13 +123,14 @@ if (typeof App === 'undefined') {
     renderModuleView(moduleId) {
       const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
       if (!mod) return;
+      const ico = (nome) => (typeof window !== 'undefined' && window.icone) ? window.icone(nome) : '';
       const tabs = [
-        { id: 'teoria', label: '📖 Teoria' },
-        { id: 'mapas', label: '🗺️ Mapas e Diagramas' },
-        { id: 'simuladores', label: '🎮 Simuladores' },
-        { id: 'flash', label: '⚡ Resumo Relâmpago' },
-        { id: 'cards', label: '🃏 Flashcards' },
-        { id: 'quiz', label: '📝 Simulado' }
+        { id: 'teoria', label: ico('teoria') + ' Teoria' },
+        { id: 'mapas', label: ico('mapa') + ' Mapas e Diagramas' },
+        { id: 'simuladores', label: ico('simulador') + ' Simuladores' },
+        { id: 'flash', label: ico('resumo') + ' Resumo Relâmpago' },
+        { id: 'cards', label: ico('flashcard') + ' Flashcards' },
+        { id: 'quiz', label: ico('simulado') + ' Simulado' }
       ];
       const area = this.els.contentArea;
       if (!area) return;
@@ -120,15 +145,18 @@ if (typeof App === 'undefined') {
       }
       area.innerHTML =
         '<h1>' + (mod.icon || '') + ' ' + (mod.title || mod.label || moduleId) + '</h1>' +
-        '<div class="card card-gradient"><h2>🚀 Visão Geral Estratégica</h2><p>' + (mod.overview || '') + '</p></div>' +
-        '<div class="tabs" id="module-tabs" role="region" aria-label="Abas do módulo" tabindex="0">' + tabs.map(t => '<div class="tab ' + (t.id === this.activeTab ? 'active' : '') + '" data-tab="' + t.id + '">' + t.label + '</div>').join('') + '</div>' +
-        '<div class="tab-content ' + (this.activeTab === 'teoria' ? 'active' : '') + '" id="tab-teoria"><div id="teoria-host"></div></div>' +
-        '<div class="tab-content ' + (this.activeTab === 'mapas' ? 'active' : '') + '" id="tab-mapas"><div class="card"><h3>Arquitetura e Fluxos</h3><div class="mermaid" id="mermaid-host"></div></div></div>' +
-        '<div class="tab-content ' + (this.activeTab === 'simuladores' ? 'active' : '') + '" id="tab-simuladores"><div id="simuladores-host"></div></div>' +
-        '<div class="tab-content ' + (this.activeTab === 'flash' ? 'active' : '') + '" id="tab-flash"><div class="card" id="flash-host"></div></div>' +
-        '<div class="tab-content ' + (this.activeTab === 'cards' ? 'active' : '') + '" id="tab-cards"><div class="card"><h3>🃏 Flashcards</h3><p>Clique no cartão.</p><div class="fc-deck" id="fc-deck"></div></div></div>' +
-        '<div class="tab-content ' + (this.activeTab === 'quiz' ? 'active' : '') + '" id="tab-quiz"><div class="card"><h3>📝 Simulado</h3><p>Resolva e confira.</p><div id="quiz-host"></div></div></div>' +
-        '<button class="mark-complete ' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? 'completed' : '') + '" id="mark-complete-' + moduleId + '" data-module="' + moduleId + '">' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? '✅ Módulo Concluído' : 'Marcar como Concluído') + '</button>';
+        '<div class="card card-gradient"><h2>' + ico('visao-geral') + ' Visão Geral Estratégica</h2><p>' + (mod.overview || '') + '</p></div>' +
+        '<div class="tabs" id="module-tabs" role="tablist" aria-label="Abas do módulo">' + tabs.map(t => {
+          const ativo = t.id === this.activeTab;
+          return '<button type="button" class="tab' + (ativo ? ' active' : '') + '" role="tab" id="tabbtn-' + t.id + '" aria-controls="tab-' + t.id + '" aria-selected="' + (ativo ? 'true' : 'false') + '" tabindex="' + (ativo ? '0' : '-1') + '" data-tab="' + t.id + '">' + t.label + '</button>';
+        }).join('') + '</div>' +
+        '<div class="tab-content ' + (this.activeTab === 'teoria' ? 'active' : '') + '" id="tab-teoria" role="tabpanel" aria-labelledby="tabbtn-teoria"><div id="teoria-host"></div></div>' +
+        '<div class="tab-content ' + (this.activeTab === 'mapas' ? 'active' : '') + '" id="tab-mapas" role="tabpanel" aria-labelledby="tabbtn-mapas"><div class="card"><h3>Arquitetura e Fluxos</h3><div id="mapas-host"></div></div></div>' +
+        '<div class="tab-content ' + (this.activeTab === 'simuladores' ? 'active' : '') + '" id="tab-simuladores" role="tabpanel" aria-labelledby="tabbtn-simuladores"><div id="simuladores-host"></div></div>' +
+        '<div class="tab-content ' + (this.activeTab === 'flash' ? 'active' : '') + '" id="tab-flash" role="tabpanel" aria-labelledby="tabbtn-flash"><div class="card" id="flash-host"></div></div>' +
+        '<div class="tab-content ' + (this.activeTab === 'cards' ? 'active' : '') + '" id="tab-cards" role="tabpanel" aria-labelledby="tabbtn-cards"><div class="card"><h3>' + ico('flashcard') + ' Flashcards</h3><p>Clique no cartão.</p><div class="fc-deck" id="fc-deck"></div></div></div>' +
+        '<div class="tab-content ' + (this.activeTab === 'quiz' ? 'active' : '') + '" id="tab-quiz" role="tabpanel" aria-labelledby="tabbtn-quiz"><div class="card"><h3>' + ico('simulado') + ' Simulado</h3><p>Resolva e confira.</p><div id="quiz-host"></div></div></div>' +
+        '<button class="mark-complete ' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? 'completed' : '') + '" id="mark-complete-' + moduleId + '" data-module="' + moduleId + '" aria-pressed="' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? 'true' : 'false') + '">' + ((typeof State !== 'undefined' && State.progress && State.progress[moduleId] && State.progress[moduleId].completed) ? ico('concluido') + ' Módulo Concluído' : ico('check') + ' Marcar como Concluído') + '</button>';
 
       this.bindTabs();
       this.bindCompleteButton(moduleId);
@@ -142,18 +170,51 @@ if (typeof App === 'undefined') {
       }
     },
 
+    /* Mantém aria-selected, roving tabindex e painéis ativos em sincronia.
+     * Chamado pelo clique/teclado e disponível para troca programática. */
+    setActiveTab(tabId) {
+      this.activeTab = tabId;
+      const tabs = Array.from(document.querySelectorAll('#module-tabs .tab'));
+      tabs.forEach(t => {
+        const ativo = t.dataset.tab === tabId;
+        t.classList.toggle('active', ativo);
+        t.setAttribute('aria-selected', ativo ? 'true' : 'false');
+        t.setAttribute('tabindex', ativo ? '0' : '-1');
+      });
+      document.querySelectorAll('.tab-content').forEach(p => {
+        p.classList.toggle('active', p.id === 'tab-' + tabId);
+      });
+      return tabs.find(t => t.dataset.tab === tabId) || null;
+    },
+
     bindTabs() {
-      document.querySelectorAll('#module-tabs .tab').forEach(t => {
+      const bar = document.getElementById('module-tabs');
+      if (!bar) return;
+      const tabs = Array.from(bar.querySelectorAll('.tab'));
+      tabs.forEach(t => {
         t.addEventListener('click', () => {
-          this.activeTab = t.dataset.tab;
-          document.querySelectorAll('#module-tabs .tab').forEach(x => x.classList.remove('active'));
-          document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
-          t.classList.add('active');
-          const pane = document.getElementById('tab-' + t.dataset.tab);
-          if (pane) pane.classList.add('active');
+          this.setActiveTab(t.dataset.tab);
           this.loadTabContent(this.activeModuleId);
-          if (t.dataset.tab === 'mapas' && typeof mermaid !== 'undefined') {
-            try { mermaid.init(undefined, document.querySelectorAll('#mermaid-host')); } catch(e) {}
+        });
+        t.addEventListener('keydown', (e) => {
+          const idx = tabs.indexOf(t);
+          let nextIdx = -1;
+          if (e.key === 'ArrowRight') nextIdx = (idx + 1) % tabs.length;
+          else if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + tabs.length) % tabs.length;
+          else if (e.key === 'Home') nextIdx = 0;
+          else if (e.key === 'End') nextIdx = tabs.length - 1;
+          else if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.setActiveTab(t.dataset.tab);
+            this.loadTabContent(this.activeModuleId);
+            return;
+          }
+          if (nextIdx !== -1) {
+            e.preventDefault();
+            const destino = tabs[nextIdx];
+            const alvo = this.setActiveTab(destino.dataset.tab);
+            if (alvo) alvo.focus();
+            this.loadTabContent(this.activeModuleId);
           }
         });
       });
@@ -178,7 +239,7 @@ if (typeof App === 'undefined') {
       if (mod) {
         html += '<div class="card">' + (mod.theory || '') + '</div>';
         if (Array.isArray(mod.videos) && mod.videos.length) {
-          html += '<h3>🎥 Vídeos de Apoio</h3>';
+          html += '<h3>' + (typeof window !== 'undefined' && window.icone ? window.icone('video') : '') + ' Vídeos de Apoio</h3>';
           mod.videos.forEach(v => {
             const tituloRaw = String(v.title || 'Vídeo de apoio').trim() || 'Vídeo de apoio';
           const titulo = tituloRaw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -190,16 +251,153 @@ if (typeof App === 'undefined') {
         html = '<p>Módulo não encontrado.</p>';
       }
       host.innerHTML = html;
-      if (typeof mermaid !== 'undefined') { try { mermaid.init(undefined, host.querySelectorAll('.mermaid')); } catch(e){} }
+    },
+
+    /* Escapa texto para interpolação segura em HTML/SVG (mesma convenção de db-modules.js). */
+    escHtml(texto) {
+      return String(texto == null ? '' : texto)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    },
+
+    /* Interpreta o texto Mermaid real gerado por db-modules.js (graph TD + nós/arestas).
+     * Não depende do runtime Mermaid: serve apenas para recuperar títulos/estrutura.
+     * Retorna { root, units: [{ titulo, topicos: [] }] } ou null. */
+    parseMermaidMapa(codigo) {
+      if (typeof codigo !== 'string' || !codigo.trim()) return null;
+      const rotulos = {};
+      const filhos = {};
+      const pais = {};
+      codigo.split(/\r?\n/).forEach((linha) => {
+        const l = linha.trim();
+        if (!l || /^graph\b/i.test(l) || /^flowchart\b/i.test(l)) return;
+        const no = /^([A-Za-z0-9_]+)\s*\[\s*"(.*)"\s*\]\s*$/.exec(l);
+        if (no) { rotulos[no[1]] = no[2]; return; }
+        const aresta = /^([A-Za-z0-9_]+)\s*-->\s*([A-Za-z0-9_]+)\s*\[\s*"(.*)"\s*\]\s*$/.exec(l);
+        if (aresta) {
+          const de = aresta[1], para = aresta[2], rotulo = aresta[3];
+          rotulos[para] = rotulo;
+          filhos[de] = filhos[de] || [];
+          filhos[de].push(para);
+          pais[para] = de;
+        }
+      });
+      const raizId = Object.keys(filhos).find(id => !pais[id]) || (rotulos.ROOT ? 'ROOT' : null);
+      if (!raizId || !rotulos[raizId]) return null;
+      const units = (filhos[raizId] || []).map((uid) => ({
+        titulo: rotulos[uid] || '',
+        topicos: (filhos[uid] || []).map(tid => rotulos[tid] || '').filter(Boolean)
+      })).filter(u => u.titulo);
+      return { root: rotulos[raizId], units: units };
+    },
+
+    /* Normaliza a estrutura real exposta por db-modules.js. */
+    normalizeMapaUnits(unidades) {
+      if (!Array.isArray(unidades)) return [];
+      return unidades.map((u) => ({
+        titulo: String((u && u.titulo) || ''),
+        topicos: Array.isArray(u && u.topicos) ? u.topicos.map(t => String(t || '')).filter(Boolean) : []
+      })).filter(u => u.titulo);
+    },
+
+    /* Preferência pela estrutura real completa; o Mermaid é usado para recuperar
+     * a topologia quando ela não estiver disponível e para enriquecer tópicos. */
+    buildMapaDados(mod) {
+      const estruturado = this.normalizeMapaUnits(mod && mod.units);
+      const parseado = this.parseMermaidMapa(mod && mod.mermaid);
+      const raiz = (mod && (mod.title || mod.label)) || (parseado && parseado.root) || '';
+      if (parseado && parseado.units.length) {
+        const units = parseado.units.map((u) => {
+          const real = estruturado.find(x => x.titulo === u.titulo);
+          return {
+            titulo: u.titulo,
+            topicos: (real && real.topicos.length >= u.topicos.length) ? real.topicos : u.topicos
+          };
+        });
+        estruturado.forEach((u) => {
+          if (!units.some(x => x.titulo === u.titulo)) units.push(u);
+        });
+        return { root: raiz, units: units };
+      }
+      return { root: raiz, units: estruturado };
+    },
+
+    /* Renderiza um diagrama SVG local, determinístico e responsivo (sem Mermaid/CDN). */
+    renderMapa(mod) {
+      const dados = this.buildMapaDados(mod);
+      if (!dados.units.length) {
+        return '<p class="mapa-vazio">Este módulo ainda não possui mapa de conteúdo.</p>';
+      }
+      const esc = (s) => this.escHtml(s);
+      const truncar = (s, max) => {
+        const t = String(s || '').trim();
+        return t.length > max ? t.slice(0, max - 1).trimEnd() + '…' : t;
+      };
+      const largura = 980;
+      const raizX = 16, raizLarg = 210;
+      const unidadeX = 300, unidadeLarg = 270;
+      const topicoX = 650, topicoLarg = 314;
+      const linhaTopico = 34;
+      const vaoUnidade = 14;
+      let y = 18;
+      const blocos = dados.units.map((u) => {
+        const n = Math.max(1, u.topicos.length);
+        const inicio = y;
+        const altura = n * linhaTopico;
+        const centro = inicio + altura / 2;
+        const topicos = u.topicos.map((titulo, i) => ({
+          titulo: titulo,
+          centroY: inicio + i * linhaTopico + linhaTopico / 2
+        }));
+        y += altura + vaoUnidade;
+        return { unidade: u, inicio: inicio, altura: altura, centroY: centro, topicos: topicos };
+      });
+      const altura = Math.max(220, y + 10);
+      const raizY = (18 + (y - vaoUnidade)) / 2;
+      let svg = '<svg class="mapa-svg" role="img" aria-labelledby="mapa-titulo" viewBox="0 0 ' + largura + ' ' + altura + '" preserveAspectRatio="xMidYMid meet" focusable="false">';
+      svg += '<title>Mapa de conteúdo — ' + esc(dados.root) + '</title>';
+      blocos.forEach((b) => {
+        const uy = b.centroY;
+        svg += '<path d="M ' + (raizX + raizLarg) + ' ' + raizY + ' C ' + (raizX + raizLarg + 30) + ' ' + raizY + ', ' + (unidadeX - 30) + ' ' + uy + ', ' + unidadeX + ' ' + uy + '" style="fill:none;stroke:var(--border-dim);stroke-width:1.5"/>';
+        b.topicos.forEach((t) => {
+          svg += '<path d="M ' + (unidadeX + unidadeLarg) + ' ' + uy + ' C ' + (unidadeX + unidadeLarg + 24) + ' ' + uy + ', ' + (topicoX - 24) + ' ' + t.centroY + ', ' + topicoX + ' ' + t.centroY + '" style="fill:none;stroke:var(--border-dim);stroke-width:1.5"/>';
+        });
+      });
+      const retangulo = (x, cy, w, h, fundo, borda) =>
+        '<rect x="' + x + '" y="' + (cy - h / 2) + '" width="' + w + '" height="' + h + '" rx="8" style="fill:' + fundo + ';stroke:' + borda + ';stroke-width:1"/>';
+      svg += retangulo(raizX, raizY, raizLarg, 48, 'var(--fill-primary)', 'var(--border)');
+      svg += '<text x="' + (raizX + raizLarg / 2) + '" y="' + raizY + '" text-anchor="middle" dominant-baseline="middle" style="fill:var(--on-fill);font-family:var(--font-sans);font-size:13px;font-weight:700">' + esc(truncar(dados.root, 28)) + '</text>';
+      blocos.forEach((b) => {
+        svg += retangulo(unidadeX, b.centroY, unidadeLarg, 42, 'var(--surface-elev)', 'var(--border)');
+        svg += '<text x="' + (unidadeX + unidadeLarg / 2) + '" y="' + b.centroY + '" text-anchor="middle" dominant-baseline="middle" style="fill:var(--text);font-family:var(--font-sans);font-size:12px;font-weight:600">' + esc(truncar(b.unidade.titulo, 34)) + '<title>' + esc(b.unidade.titulo) + '</title></text>';
+        b.topicos.forEach((t) => {
+          svg += retangulo(topicoX, t.centroY, topicoLarg, 28, 'var(--surface)', 'var(--border-dim)');
+          svg += '<text x="' + (topicoX + 10) + '" y="' + t.centroY + '" dominant-baseline="middle" style="fill:var(--text-dim);font-family:var(--font-sans);font-size:11px">' + esc(truncar(t.titulo, 46)) + '<title>' + esc(t.titulo) + '</title></text>';
+        });
+      });
+      svg += '</svg>';
+
+      let lista = '<ul class="mapa-lista">';
+      dados.units.forEach((u) => {
+        lista += '<li><strong>' + esc(u.titulo) + '</strong>';
+        if (u.topicos.length) {
+          lista += '<ul>' + u.topicos.map(t => '<li>' + esc(t) + '</li>').join('') + '</ul>';
+        }
+        lista += '</li>';
+      });
+      lista += '</ul>';
+
+      return '<div class="mapa-diagrama">' +
+        '<h4 id="mapa-titulo">Mapa de conteúdo — ' + esc(dados.root) + '</h4>' +
+        svg + lista + '</div>';
     },
 
     loadMapas(moduleId) {
-      const host = document.getElementById('mermaid-host');
+      const host = document.getElementById('mapas-host');
       if (!host) return;
       const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
-      const code = (mod && mod.mermaid) ? mod.mermaid : 'graph TD\n  ROOT["Módulo"] --> A[Conteúdo]';
-      host.innerHTML = '<div class="mermaid">' + code + '</div>';
-      if (typeof mermaid !== 'undefined') { try { mermaid.init(undefined, host); } catch(e){} }
+      if (!mod) { host.innerHTML = '<p>Módulo não encontrado.</p>'; return; }
+      host.innerHTML = this.renderMapa(mod);
     },
 
     getModuleIndex(moduleId) {
@@ -235,8 +433,8 @@ if (typeof App === 'undefined') {
       if (!host) return;
       const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
       const bullets = (mod && Array.isArray(mod.lightning) && mod.lightning.length) ? mod.lightning : ['Resumo relâmpago será gerado a partir do conteúdo curricular real.'];
-      host.innerHTML = '<h3>⚡ Resumo-Relâmpago (Revisão de Véspera)</h3><ul style="font-size:1.1rem;line-height:2;">' +
-        bullets.map(b => '<li><strong>➤</strong> ' + (b || '') + '</li>').join('') + '</ul>';
+      host.innerHTML = '<h3>' + (typeof window !== 'undefined' && window.icone ? window.icone('resumo') : '') + ' Resumo-Relâmpago (Revisão de Véspera)</h3><ul style="font-size:1.1rem;line-height:2;">' +
+        bullets.map(b => '<li><strong aria-hidden="true">→</strong> ' + (b || '') + '</li>').join('') + '</ul>';
     },
 
     loadFlashcards(moduleId) {
@@ -281,7 +479,7 @@ if (typeof App === 'undefined') {
       host.innerHTML = arr.slice(0, 12).map((q, i) => '<div class="quiz-q"><h4>Questão ' + (i+1) + '</h4><p>' + (q.q || '') + '</p>' +
         '<div class="quiz-opts">' + (q.opts || []).map((opt, oi) => '<label><input type="radio" name="q_' + moduleId + '_' + i + '" value="' + oi + '">' + opt + '</label>').join('') + '</div>' +
         '<button class="btn mt-1" onclick="App.checkQuizFallback(\'' + moduleId + '\',' + i + ')">Verificar</button>' +
-        '<div class="quiz-exp" id="exp-' + moduleId + '_' + i + '"><strong>📚 Gabarito:</strong><br>' + (q.opts && q.opts[q.ans] ? q.opts[q.ans] : '') + '<br><br>' + (q.exp || '') + '</div></div>').join('');
+        '<div class="quiz-exp" id="exp-' + moduleId + '_' + i + '"><strong>' + (typeof window !== 'undefined' && window.icone ? window.icone('gabarito') : '') + ' Gabarito:</strong><br>' + (q.opts && q.opts[q.ans] ? q.opts[q.ans] : '') + '<br><br>' + (q.exp || '') + '</div></div>').join('');
       // store for checking
       if (!window._quizData) window._quizData = {};
       window._quizData[moduleId] = arr.slice(0, 12);
@@ -323,8 +521,20 @@ if (typeof App === 'undefined') {
 
     applyTheme(theme) {
       if (!document.documentElement) return;
-      document.documentElement.setAttribute('data-theme', theme || 'light');
-      if (this.els.themeBtn) this.els.themeBtn.textContent = (theme === 'light') ? '🌙 Dark' : '☀️ Light';
+      const tema = (theme === 'light') ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', tema);
+      if (this.els.themeBtn) {
+        const icone = (typeof window !== 'undefined' && window.icone)
+          ? window.icone(tema === 'light' ? 'tema-escuro' : 'tema-claro') : '';
+        /* Rótulo visível fixo em pt-BR + aria-label idêntico (axe
+           label-content-name-mismatch); o ícone mostra o tema de destino e
+           aria-pressed expõe o tema ativo. */
+        this.els.themeBtn.innerHTML = icone + '<span class="btn-label">Tema</span>';
+        this.els.themeBtn.setAttribute('aria-label', 'Tema');
+        this.els.themeBtn.setAttribute('aria-pressed', tema === 'dark' ? 'true' : 'false');
+        this.els.themeBtn.setAttribute('title', tema === 'light'
+          ? 'Alternar para tema escuro' : 'Alternar para tema claro');
+      }
     },
 
     toggleTheme() {

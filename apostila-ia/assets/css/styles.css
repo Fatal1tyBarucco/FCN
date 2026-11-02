@@ -5,7 +5,8 @@
    Organização: 1 Tokens · 2 Reset/Base · 3 Tipografia · 4 Layout/Shell ·
    5 Cabeçalho · 6 Navegação/Sidebar · 7 Componentes reutilizáveis ·
    8 Componentes educacionais · 9 Formulários · 10 Estados · 11 Responsivo ·
-   12 Acessibilidade · 13 Impressão
+   12 Acessibilidade · 13 Impressão · 13-a Painéis herdados ·
+   13-b Simuladores no tema claro · 13-c Alto contraste (forced-colors)
    ============================================================================= */
 
 /* =============================================================================
@@ -20,6 +21,7 @@
   --surface-elev: #273449;
   --border: #334155;
   --border-dim: #475569;
+  --border-control: #64748b;   /* 3,07:1 sobre --surface; 3,75:1 sobre --bg */
   --text: #f8fafc;
   --text-dim: #94a3b8;       /* 6,96:1 sobre --bg; 5,71:1 sobre --surface */
   --text-link: #60a5fa;      /* 7,02:1 sobre --bg; 5,75:1 sobre --surface */
@@ -48,6 +50,13 @@
   --fill-error-hover: #dc2626;
   --fill-accent: #6d28d9;
 
+  /* Contraste para elementos sobre gradiente */
+  --on-gradient: #ffffff;
+  /* Texto sobre preenchimentos primários (azul) */
+  --on-primary: #ffffff;
+  /* Sombra das bordas de rolagem horizontal */
+  --scroll-shadow: rgba(2, 6, 23, 0.55);
+
   /* Terminal/saída de simulador: par fixo legível em ambos os temas (10,25:1) */
   --term-bg: #0b1220;
   --term-fg: #4ade80;
@@ -71,14 +80,15 @@
   --sp-7: 3rem;
   --sp-8: 4rem;
 
-  /* Raios e sombras */
+  /* Raios e sombras — um único raio de 8px (referência); --radius-sm segue
+     para controles compactos. Sombras com profundidade editorial. */
   --radius-sm: 6px;
   --radius: 8px;
-  --radius-lg: 12px;
+  --radius-lg: 8px;
   --radius-pill: 99px;
-  --shadow-1: 0 1px 2px rgba(2, 6, 23, 0.45);
-  --shadow-2: 0 4px 10px -2px rgba(2, 6, 23, 0.45), 0 2px 4px -2px rgba(2, 6, 23, 0.4);
-  --shadow-3: 0 16px 32px -12px rgba(2, 6, 23, 0.6), 0 4px 12px -4px rgba(2, 6, 23, 0.5);
+  --shadow-1: 0 4px 6px -1px rgba(2, 6, 23, 0.45);
+  --shadow-2: 0 8px 16px -4px rgba(2, 6, 23, 0.5), 0 2px 4px -2px rgba(2, 6, 23, 0.4);
+  --shadow-3: 0 20px 40px -12px rgba(2, 6, 23, 0.65), 0 6px 16px -6px rgba(2, 6, 23, 0.5);
   --shadow: var(--shadow-2);        /* alias de compatibilidade */
   --shadow-sm: var(--shadow-1);
   --shadow-lg: var(--shadow-3);
@@ -110,6 +120,7 @@
   --surface-elev: #f8fafc;
   --border: #cbd5e1;
   --border-dim: #94a3b8;
+  --border-control: #64748b;   /* 4,76:1 sobre #fff; 4,34:1 sobre --bg */
   --text: #0f172a;
   --text-dim: #475569;             /* 7,58:1 sobre #fff */
   --text-link: #2563eb;            /* 5,17:1 sobre #fff; 4,72:1 sobre --bg */
@@ -118,14 +129,17 @@
   --err-text: #b91c1c;             /* 6,47:1 sobre #fff */
   --warn-text: #b45309;            /* 5,02:1 sobre #fff */
   --on-fill: #0f172a;
+  --on-gradient: #ffffff;
+  --on-primary: #ffffff;
+  --scroll-shadow: rgba(15, 23, 42, 0.2);
   --code-bg: rgba(37, 99, 235, 0.1);
   --code-fg: #92400e;
   --term-bg: #0b1220;
   --term-fg: #4ade80;
   --term-border: #14202f;
-  --shadow-1: 0 1px 2px rgba(15, 23, 42, 0.08);
-  --shadow-2: 0 4px 10px -2px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.08);
-  --shadow-3: 0 16px 32px -12px rgba(15, 23, 42, 0.16), 0 4px 12px -4px rgba(15, 23, 42, 0.12);
+  --shadow-1: 0 4px 6px -1px rgba(15, 23, 42, 0.12);
+  --shadow-2: 0 8px 16px -4px rgba(15, 23, 42, 0.16), 0 2px 4px -2px rgba(15, 23, 42, 0.1);
+  --shadow-3: 0 20px 40px -12px rgba(15, 23, 42, 0.22), 0 6px 16px -6px rgba(15, 23, 42, 0.14);
 }
 
 /* Fallback pela preferência do sistema quando ninguém fixa data-theme */
@@ -136,6 +150,7 @@
     --surface-elev: #f8fafc;
     --border: #cbd5e1;
     --border-dim: #94a3b8;
+    --border-control: #64748b;
     --text: #0f172a;
     --text-dim: #475569;
     --text-link: #2563eb;
@@ -143,11 +158,14 @@
     --ok-text: #047857;
     --err-text: #b91c1c;
     --warn-text: #b45309;
+    --on-gradient: #ffffff;
+    --on-primary: #ffffff;
+    --scroll-shadow: rgba(15, 23, 42, 0.2);
     --code-bg: rgba(37, 99, 235, 0.1);
     --code-fg: #92400e;
-    --shadow-1: 0 1px 2px rgba(15, 23, 42, 0.08);
-    --shadow-2: 0 4px 10px -2px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.08);
-    --shadow-3: 0 16px 32px -12px rgba(15, 23, 42, 0.16), 0 4px 12px -4px rgba(15, 23, 42, 0.12);
+    --shadow-1: 0 4px 6px -1px rgba(15, 23, 42, 0.12);
+    --shadow-2: 0 8px 16px -4px rgba(15, 23, 42, 0.16), 0 2px 4px -2px rgba(15, 23, 42, 0.1);
+    --shadow-3: 0 20px 40px -12px rgba(15, 23, 42, 0.22), 0 6px 16px -6px rgba(15, 23, 42, 0.14);
   }
 }
 
@@ -209,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
   overflow-wrap: break-word;
 }
-h1, .display-title {
+h1 {
   font-size: var(--font-scale-display);
   font-weight: 700;
   line-height: 1.15;
@@ -222,12 +240,14 @@ h2 {
   margin-top: var(--sp-6);
   border-left: 4px solid var(--primary);
   padding-left: var(--sp-3);
+  color: var(--text-link);           /* AA: 5,75:1 sobre --surface e 7,02:1 sobre --bg */
 }
 h3 { font-size: var(--font-scale-h3); font-weight: 600; color: var(--accent-text); margin-top: var(--sp-5); }
 h4 { font-size: 1rem; font-weight: 600; margin-top: var(--sp-4); }
 h5, h6 { font-size: 0.9375rem; font-weight: 600; }
 
 p { margin: 0 0 var(--sp-3); overflow-wrap: anywhere; }
+.prose { max-width: 72ch; }
 .prose p, .card p, .tab-content p, .study-workspace p { max-width: 70ch; }
 small, .text-support { font-size: 0.875rem; line-height: 1.6; color: var(--text-dim); }
 
@@ -300,6 +320,50 @@ caption {
   color: var(--text-dim);
 }
 
+/* Wrapper de tabelas largas (emitido pelo JS): rolagem horizontal contida no
+   bloco, sem estourar o documento. A região é focável para rolagem por teclado. */
+.tabela-scroll {
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--sp-3) 0;
+  border-radius: var(--radius);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-dim) transparent;
+  /* pistas visuais de borda (baratas, sem JS) */
+  box-shadow:
+    inset -12px 0 12px -12px var(--scroll-shadow),
+    inset 12px 0 12px -12px var(--scroll-shadow);
+}
+.tabela-scroll:focus-visible {
+  outline: 2px solid var(--text-link);
+  outline-offset: 2px;
+}
+.tabela-scroll > table {
+  width: 100%;
+  min-width: 640px;
+  max-width: none;
+  margin: 0;
+  overflow: visible;            /* não recorta a última coluna */
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border);
+}
+.tabela-scroll--larga > table { min-width: 900px; }
+/* separadores explícitos: o cabeçalho azul e a borda direita continuam
+   visíveis durante a rolagem horizontal */
+.tabela-scroll > table th,
+.tabela-scroll > table td { border-right: 1px solid var(--border); }
+.tabela-scroll > table th:last-child,
+.tabela-scroll > table td:last-child { border-right: 0; }
+.tabela-scroll > table thead th {
+  background: var(--fill-primary);
+  color: var(--on-primary);
+  border-bottom: 1px solid var(--border);
+}
+
 /* =============================================================================
    4) LAYOUT / SHELL
    ============================================================================= */
@@ -313,10 +377,11 @@ body.app-shell-ready { min-height: 100vh; }
 #app-shell > #app-sidebar { display: none; }   /* sem shell desktop, sem sidebar fixa */
 
 #main {
+  --main-pad: var(--sp-6);
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--sp-6);
+  padding: var(--main-pad);
   min-width: 0;
 }
 
@@ -354,8 +419,12 @@ body.app-shell-ready { min-height: 100vh; }
   padding: 0;
 }
 
-/* Área de estudo (ui-shell.js envolve o painel do tópico) */
+/* Área de estudo (ui-shell.js envolve o painel do tópico).
+   Fica oculta até haver um tópico escolhido na árvore curricular: sem
+   tópico, o painel era apenas um estado vazio contraditório (anunciava
+   "escolha um módulo" enquanto o módulo já estava aberto logo abaixo). */
 .study-workspace {
+  display: none;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -363,6 +432,7 @@ body.app-shell-ready { min-height: 100vh; }
   margin-bottom: var(--sp-5);
   box-shadow: var(--shadow-2);
 }
+.study-workspace.has-topic { display: block; }
 .study-workspace-heading .study-eyebrow {
   font-size: 0.75rem;
   font-weight: 600;
@@ -389,15 +459,17 @@ body.modo-foco .sidebar-toggle { display: none; }
 }
 
 /* =============================================================================
-/* =============================================================================
-   5) CABEÇALHO (corrigido)
+   5) CABEÇALHO
+   Grid de zonas explícitas (marca · progresso · busca · ações). A referência
+   index_example usa uma única linha no desktop; abaixo de 1280px as zonas
+   se reorganizam em linhas inteiras, nunca deixando controles órfãos.
    ============================================================================= */
 #header {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto minmax(8rem, 1fr) auto auto;
+  grid-template-areas: "brand progress search actions focus";
   align-items: center;
-  justify-content: space-between;
-  gap: var(--sp-3);
+  gap: var(--sp-3) var(--sp-4);
   position: sticky;
   top: 0;
   z-index: var(--z-header);
@@ -406,51 +478,92 @@ body.modo-foco .sidebar-toggle { display: none; }
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: var(--sp-3) var(--sp-4);
-  margin: calc(-1 * var(--sp-3)) calc(-1 * var(--sp-4)) var(--sp-6);
-  width: calc(100% + 2 * var(--sp-4));
+  /* Full-bleed: compensa EXATAMENTE o padding de #main no breakpoint atual */
+  margin: calc(-1 * var(--main-pad)) calc(-1 * var(--main-pad)) var(--sp-5);
+  width: calc(100% + 2 * var(--main-pad));
   min-height: 68px;
 }
 @supports not (backdrop-filter: blur(10px)) {
   #header { background: var(--surface); }
 }
 
+/* --- Zona: marca --- */
 .header-brand {
+  grid-area: brand;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  flex-shrink: 0;
-  gap: var(--sp-1);
+  flex-shrink: 1;
+  gap: 2px;
 }
 .header-brand strong {
-  font-size: var(--font-scale-h2);
+  /* Identidade compacta: o cabeçalho identifica o produto, mas não
+     disputa a hierarquia com o título do módulo (h1) nem esmaga a busca. */
+  font-size: 1.0625rem;
   font-weight: 700;
   color: var(--text);
-  line-height: 1.15;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* As variantes do nome herdam a escala do <strong> que as contém. */
+.header-brand strong span { font-size: inherit; color: inherit; }
+/* Nome curto para telas estreitas: evita o corte "Apostila Web Int…". */
+.brand-short { display: none; }
+.brand-subtitle {
+  font-size: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+  color: var(--text-dim);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .header-brand span {
   font-size: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
   color: var(--text-dim);
   line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.header-controls {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--sp-2);
-  flex: 1 1 40rem;
-  min-width: 0;
-}
+/* --- Zona: progresso global --- */
+.header-zone { min-width: 0; }
+.header-zone--progress { grid-area: progress; }
+.header-zone--search { grid-area: search; }
+.header-zone--actions { grid-area: actions; display: flex; align-items: center; gap: var(--sp-2); }
 
+/* personalization.js injeta .focus-toggle-btn como último filho do header:
+   é um botão de ícone, nunca deve esticar para a largura da coluna. */
+.focus-toggle-btn { grid-area: focus; justify-self: end; }
+
+/* --- Progresso --- */
 .progress-cluster {
   display: flex;
   align-items: center;
   gap: var(--sp-2);
   flex-shrink: 0;
+  min-width: 0;
+}
+.progress-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  white-space: nowrap;
 }
 .progress-global {
-  width: 140px;
-  height: 6px;
+  width: 200px;
+  height: 8px;
+  background: var(--border);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+/* alias de compatibilidade para trilhas de progresso alternativas */
+.progress-track {
+  width: 200px;
+  height: 8px;
   background: var(--border);
   border-radius: var(--radius-pill);
   overflow: hidden;
@@ -471,9 +584,11 @@ body.modo-foco .sidebar-toggle { display: none; }
   text-align: right;
 }
 
+/* --- Busca --- */
 .search-box {
-  flex: 1 1 12rem;
+  display: block;
   min-width: 0;
+  width: 100%;
   padding: var(--sp-2) var(--sp-3);
   border-radius: var(--radius-pill);
   border: 1px solid var(--border);
@@ -481,19 +596,17 @@ body.modo-foco .sidebar-toggle { display: none; }
   color: var(--text);
   font: inherit;
   font-size: 0.9rem;
-  width: 100%;
 }
 .search-box:focus {
-  outline: none;
-  border-color: var(--fill-primary);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fill-primary) 25%, transparent);
+  border-color: var(--text-link);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--text-link) 35%, transparent);
 }
 
 .tts-controls {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-1);
-  padding: var(--sp-1) var(--sp-2);
+  padding: 0 var(--sp-2);
   background: var(--surface);
   border-radius: var(--radius-pill);
   border: 1px solid var(--border);
@@ -503,8 +616,8 @@ body.modo-foco .sidebar-toggle { display: none; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: transparent;
   border: none;
   color: var(--text);
@@ -513,9 +626,8 @@ body.modo-foco .sidebar-toggle { display: none; }
   transition: background var(--tr-fast);
 }
 .tts-controls button:focus-visible {
-  outline: none;
   background: color-mix(in oklab, var(--fill-primary) 15%, transparent);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fill-primary) 35%, transparent);
+  box-shadow: 0 0 0 3px var(--text-link);
 }
 .tts-controls button:hover { background: color-mix(in oklab, var(--fill-primary) 10%, transparent); }
 .tts-controls select {
@@ -528,8 +640,7 @@ body.modo-foco .sidebar-toggle { display: none; }
   font-size: 0.8rem;
 }
 .tts-controls select:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--fill-primary);
+  box-shadow: 0 0 0 2px var(--text-link);
 }
 
 #theme-toggle {
@@ -550,17 +661,11 @@ body.modo-foco .sidebar-toggle { display: none; }
   transition: background var(--tr-fast), border-color var(--tr-fast);
 }
 #theme-toggle:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--fill-primary) 35%, transparent);
+  box-shadow: 0 0 0 3px var(--text-link);
 }
 #theme-toggle:hover { background: var(--surface-elev); }
 
-/* Mobile: hide brand strong below 480px */
-@media (max-width: 480px) {
-  .header-brand strong { display: none; }
-  .progress-cluster { display: none; }
-}
-
+/* =============================================================================
    6) NAVEGAÇÃO / SIDEBAR
    ============================================================================= */
 .app-sidebar {
@@ -616,6 +721,7 @@ body.sidebar-open .sidebar-overlay { opacity: 1; visibility: visible; transition
 
 .sidebar-toggle {
   display: none;
+  grid-area: toggle;
   align-items: center;
   gap: var(--sp-2);
   min-height: 44px;
@@ -647,7 +753,10 @@ body.sidebar-open .sidebar-overlay { opacity: 1; visibility: visible; transition
   width: 36px;
   height: 36px;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--fill-primary), var(--fill-accent));
+  /* Preenchimento sólido: além de ser mais discreto que o gradiente do
+     cabeçalho, permite a verificação automática de contraste (white sobre
+     #2563eb = 5,17:1, acima de AA). */
+  background-color: var(--fill-primary);
   color: #ffffff;
   font-weight: 700;
   font-size: 1.05rem;
@@ -673,33 +782,56 @@ body.sidebar-open .sidebar-overlay { opacity: 1; visibility: visible; transition
   display: flex;
   align-items: center;
   gap: var(--sp-3);
+  flex-wrap: wrap;
+  width: 100%;
   min-height: 44px;
   margin: 2px var(--sp-2);
   padding: var(--sp-2) var(--sp-3);
-  border-radius: var(--radius-sm);
+  border: 0;
   border-left: 3px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
   color: var(--text-dim);
+  font: inherit;
   font-size: 0.92rem;
   font-weight: 500;
+  text-align: left;
   cursor: pointer;
-  transition: background var(--tr-fast), color var(--tr-fast);
+  transition: background var(--tr-fast), color var(--tr-fast), border-color var(--tr-fast);
+}
+.nav-item-label { min-width: 0; }
+.nav-item:focus-visible {
+  outline: 2px solid var(--text-link);
+  outline-offset: 2px;
 }
 .nav-item:hover { background: color-mix(in srgb, var(--text) 6%, transparent); color: var(--text); }
+/* Referência index_example: item ativo = bloco azul sólido, texto branco e
+   filete âmbar à esquerda. O azul de preenchimento (--fill-primary) é o
+   equivalente acessível (5,17:1 com texto branco; --primary daria 3,68:1). */
 .nav-item.active {
-  background: color-mix(in srgb, var(--fill-primary) 18%, transparent);
-  border-left-color: var(--primary);
-  color: var(--text);
+  background: var(--fill-primary);
+  border-left-color: var(--warning);
+  color: var(--on-primary);
 }
-.nav-item-icon { font-size: 1.1rem; min-width: 24px; text-align: center; }
+.nav-item.active .nav-item-icon { color: var(--on-primary); }
+.nav-item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  min-width: 24px;
+  text-align: center;
+}
 
+/* Trilha de progresso do módulo: faixa completa sob o rótulo, como na
+   referência. Sem a faixa, o item ativo não se distingue dos demais. */
 .progress-mini {
+  flex: 1 0 100%;
   height: 4px;
-  min-width: 44px;
-  margin-left: auto;
+  margin: var(--sp-1) 0 0;
   border-radius: var(--radius-pill);
-  background: var(--border);
+  background: color-mix(in srgb, var(--border) 70%, transparent);
   overflow: hidden;
-  flex-shrink: 0;
 }
 .progress-mini-bar {
   height: 100%;
@@ -732,6 +864,19 @@ body.sidebar-open .sidebar-overlay { opacity: 1; visibility: visible; transition
   color: var(--text-link);
 }
 .quick-link span[aria-hidden="true"] { min-width: 20px; text-align: center; }
+
+.ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  line-height: 1;
+}
+.ico svg { width: 100%; height: 100%; display: block; }
+.ico-emoji { font-style: normal; font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif; }
+.quick-link .ico { width: 1.15em; height: 1.15em; }
 
 .sidebar-curriculum { margin-top: var(--sp-4); }
 .sidebar-tree-host { padding: 0 var(--sp-2) var(--sp-4); }
@@ -789,18 +934,22 @@ body.sidebar-open .sidebar-overlay { opacity: 1; visibility: visible; transition
 .card:hover { border-color: var(--border-dim); box-shadow: var(--shadow-2); }
 
 .card-gradient {
-  background: linear-gradient(135deg, var(--fill-primary), var(--fill-accent));
+  /* Base sólida + gradiente: fallback para navegadores sem suporte a
+     background-image e base verificável para o cálculo automático de
+     contraste (axe não resolve gradientes). */
+  background-color: var(--fill-primary);
+  background-image: linear-gradient(135deg, var(--fill-primary), var(--fill-accent));
   border: 0;
-  color: #ffffff;
+  color: var(--on-gradient);
   box-shadow: var(--shadow-2);
 }
 /* app.js usa <h2> neste card (corrige heading-order: h1 → h3 pulava nível).
    Neutraliza o estilo editorial do h2 (bordas/margens) mantendo o visual. */
 .card-gradient > h2,
-.card-gradient h3 { color: #ffffff; margin-top: 0; border-left: 0; padding-left: 0; }
+.card-gradient h3 { color: var(--on-gradient); margin-top: 0; border-left: 0; padding-left: 0; }
 .card-gradient p,
-.card-gradient li { color: rgba(255, 255, 255, 0.92); max-width: none; }
-.card-gradient a { color: #ffffff; text-decoration: underline; }
+.card-gradient li { color: color-mix(in srgb, var(--on-gradient) 92%, transparent); max-width: none; }
+.card-gradient a { color: var(--on-gradient); text-decoration: underline; }
 
 /* Suportes estáticos do novo HTML */
 .support-section { margin-top: var(--sp-6); }
@@ -823,9 +972,16 @@ body.sidebar-open .sidebar-overlay { opacity: 1; visibility: visible; transition
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+  scroll-padding-inline: var(--sp-2);
 }
 .tab {
-  padding: var(--sp-3) var(--sp-5);
+  /* Padding horizontal compacto: as 6 abas do módulo precisam caber na
+     coluna de conteúdo (viewport − sidebar 280px − padding do #main) sem
+     corte em notebooks de 1024–1366px. A faixa continua rolável em telas
+     estreitas, como na referência. */
+  padding: var(--sp-3) var(--sp-4);
+  flex: 0 0 auto;
   border: 0;
   border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
@@ -882,17 +1038,39 @@ details[open] > summary { color: var(--accent-text); }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  border: 1px solid transparent;
 }
-.badge-blue   { background: #1e3a8a; color: #93c5fd; } /* 5,74:1 */
-.badge-green  { background: #064e3b; color: #6ee7b7; } /* 6,38:1 */
-.badge-red    { background: #7f1d1d; color: #fca5a5; } /* 5,28:1 */
-.badge-yellow { background: #78350f; color: #fcd34d; } /* 6,29:1 */
-.badge-purple { background: #4c1d95; color: #c4b5fd; } /* 5,93:1 */
-[data-theme="light"] .badge-blue   { background: #dbeafe; color: #1e40af; }
-[data-theme="light"] .badge-green  { background: #d1fae5; color: #065f46; }
-[data-theme="light"] .badge-red    { background: #fee2e2; color: #991b1b; }
-[data-theme="light"] .badge-yellow { background: #fef3c7; color: #92400e; }
-[data-theme="light"] .badge-purple { background: #ede9fe; color: #5b21b6; }
+/* Modificadores de badge (linguagem visual única) */
+.badge--success {
+  color: var(--ok-text);
+  background: color-mix(in srgb, var(--success) 16%, var(--surface));
+  border-color: color-mix(in srgb, var(--success) 45%, transparent);
+}
+.badge--danger {
+  color: var(--err-text);
+  background: color-mix(in srgb, var(--error) 16%, var(--surface));
+  border-color: color-mix(in srgb, var(--error) 45%, transparent);
+}
+.badge--warn {
+  color: var(--warn-text);
+  background: color-mix(in srgb, var(--warning) 16%, var(--surface));
+  border-color: color-mix(in srgb, var(--warning) 45%, transparent);
+}
+.badge--info {
+  color: var(--text-link);
+  background: color-mix(in srgb, var(--fill-primary) 8%, var(--surface));
+  border-color: color-mix(in srgb, var(--fill-primary) 45%, transparent);
+}
+.badge--accent {
+  color: var(--accent-text);
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.badge--neutral {
+  color: var(--text-dim);
+  background: var(--surface-elev);
+  border-color: var(--border);
+}
 
 .label {
   display: inline-block;
@@ -1048,7 +1226,7 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
   display: flex;
   align-items: center;
   gap: var(--sp-2);
-  min-height: 40px;
+  min-height: 44px;
   padding: var(--sp-1) var(--sp-2);
   border-radius: var(--radius-sm);
   color: var(--text-dim);
@@ -1065,8 +1243,11 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
+  min-width: 44px;
+  min-height: 44px;
+  margin: -4px 0;
   flex-shrink: 0;
   color: var(--text-dim);
   transition: transform var(--tr-fast);
@@ -1249,6 +1430,9 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
   color: var(--text-link);
   background: var(--bg);
 }
+/* O motor emite <span id="qz-tempo"> (sem classe antes da conversão do JS):
+   garante a tipografia tabular mesmo sem .qz-tempo. */
+#qz-tempo { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text-link); }
 .qz-num { font-weight: 700; color: var(--text); }
 .qz-contexto { color: var(--text-dim); font-size: 0.875rem; margin-bottom: var(--sp-2); }
 .qz-enunciado { font-weight: 600; line-height: 1.5; margin-bottom: var(--sp-3); }
@@ -1256,21 +1440,75 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
 .qz-alt {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: var(--sp-2);
   min-height: 44px;
   padding: var(--sp-2) var(--sp-3);
-  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-control);
   border-radius: var(--radius-sm);
+  font-weight: 500;
+  text-align: left;
   cursor: pointer;
-  transition: border-color var(--tr-fast), background var(--tr-fast);
+  transition: border-color var(--tr-fast), background var(--tr-fast), box-shadow var(--tr-fast);
 }
-.qz-alt:hover { border-color: var(--primary); background: color-mix(in srgb, var(--fill-primary) 8%, transparent); }
-.qz-respondida { border-color: var(--primary); background: color-mix(in srgb, var(--fill-primary) 10%, transparent); }
-.qz-marcada { border-color: var(--accent); }
+.qz-alt:hover {
+  border-color: var(--text-link);
+  background: color-mix(in srgb, var(--fill-primary) 10%, var(--surface));
+  color: var(--text);
+}
+/* Grade de navegação: números em superfície, não em azul sólido */
+.qz-grade .qz-num {
+  background: var(--surface-elev);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-weight: 700;
+}
+.qz-grade .qz-num:hover { border-color: var(--border-dim); background: color-mix(in srgb, var(--text) 8%, var(--surface-elev)); }
+/* estados da grade (respondida/marcada) — mais específicos que .qz-num */
+.qz-grade .qz-respondida { border-color: var(--text-link); box-shadow: inset 0 -3px 0 var(--text-link); }
+.qz-grade .qz-marcada { border-color: var(--accent-text); }
+/* Questão atual: relevo por peso + marcador à esquerda + anel — não só cor */
+.qz-grade .qz-atual {
+  font-weight: 800;
+  color: var(--text-link);
+  border-color: var(--text-link);
+  box-shadow: inset 4px 0 0 var(--text-link), 0 0 0 2px var(--text-link);
+}
+.qz-respondida { border-color: var(--border-dim); background: var(--surface-elev); }
+.qz-marcada { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+/* Alternativa CERTO/ERRADO escolhida: borda + preenchimento sutil + glifo */
+.qz-escolhida {
+  position: relative;
+  padding-right: 2.2rem;
+  border-color: var(--text-link);
+  background: color-mix(in srgb, var(--fill-primary) 14%, var(--surface));
+  font-weight: 700;
+  box-shadow: inset 0 0 0 2px var(--text-link);
+}
+.qz-escolhida::after {
+  content: "\2713";
+  position: absolute;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-link);
+  font-weight: 800;
+  line-height: 1;
+}
 .qz-sit-certo { color: var(--ok-text); font-weight: 600; }
 .qz-sit-errado { color: var(--err-text); font-weight: 600; }
 .qz-sit-nao-respondida { color: var(--warn-text); font-weight: 600; }
-.qz-ce { color: var(--ok-text); font-weight: 600; }
+.qz-ce {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--text-dim);
+  font-weight: 600;
+}
+.qz-ce .qz-alt { flex: 0 0 auto; min-width: 120px; justify-content: center; }
 .qz-mensagem { margin: var(--sp-3) 0; color: var(--text-dim); font-size: 0.9rem; }
 .qz-resultado { margin-top: var(--sp-4); border-top: 1px solid var(--border); padding-top: var(--sp-4); }
 .qz-tabela { margin-top: var(--sp-3); }
@@ -1298,11 +1536,52 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
   font-size: 0.875rem;
 }
 .qz-nav { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-3); }
-.qz-nav .qz-btn { min-height: 44px; padding: var(--sp-2) var(--sp-4); border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--surface-elev); color: var(--text); font-weight: 600; cursor: pointer; }
-.qz-nav .qz-btn:hover { background: color-mix(in srgb, var(--text) 8%, var(--surface-elev)); }
-/* alternativas marcadas em gabarito */
-.qz-alt[data-correct="true"], .qz-respondida[data-correct="true"] { border-color: var(--success); background: color-mix(in srgb, var(--success) 12%, transparent); }
-.qz-respondida[data-correct="false"] { border-color: var(--error); background: color-mix(in srgb, var(--error) 12%, transparent); }
+.qz-nav .qz-btn {
+  min-height: 44px;
+  padding: var(--sp-2) var(--sp-4);
+  border: 1px solid var(--border-control);
+  border-radius: var(--radius-sm);
+  background: var(--surface-elev);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--tr-fast), border-color var(--tr-fast), color var(--tr-fast);
+}
+.qz-nav .qz-btn:hover {
+  background: color-mix(in srgb, var(--text) 8%, var(--surface-elev));
+  border-color: var(--border-dim);
+  color: var(--text);
+}
+.qz-nav .qz-btn:focus-visible {
+  outline: 2px solid var(--text-link);
+  outline-offset: 2px;
+}
+/* Ação destrutiva ("Abandonar"): texto de perigo sobre superfície neutra */
+.qz-nav .qz-btn--perigo {
+  background: transparent;
+  color: var(--err-text);
+  border-color: var(--err-text);
+}
+.qz-nav .qz-btn--perigo:hover {
+  background: color-mix(in srgb, var(--error) 12%, var(--surface));
+  border-color: var(--error);
+  color: var(--err-text);
+}
+.qz-nav .qz-btn:disabled,
+.qz-nav .qz-btn[disabled],
+.qz-nav .qz-btn[aria-disabled="true"] {
+  background: var(--surface);
+  color: var(--text-dim);
+  border-color: var(--border);
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+/* alternativas marcadas em gabarito — ganham sobre .qz-escolhida quando corretas/erradas */
+.qz-alt[data-correct="true"], .qz-respondida[data-correct="true"] { border-color: var(--ok-text); background: color-mix(in srgb, var(--success) 16%, var(--surface)); }
+.qz-respondida[data-correct="false"] { border-color: var(--err-text); background: color-mix(in srgb, var(--error) 16%, var(--surface)); }
 
 /* ---- Gráficos (charts.js, SVG próprio) ---- */
 .chart-card {
@@ -1371,7 +1650,7 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
 .chart-tabela { margin-top: var(--sp-3); }
 .chart-tabela input { width: 100%; min-height: 40px; padding: var(--sp-1) var(--sp-2); background: transparent; color: var(--text); border: 1px solid transparent; border-radius: var(--radius-sm); font: inherit; font-size: 0.875rem; text-align: right; }
 .chart-tabela input:hover { border-color: var(--border); }
-.chart-tabela input:focus { border-color: var(--primary); background: var(--bg); outline: none; }
+.chart-tabela input:focus { border-color: var(--text-link); background: var(--bg); }
 .chart-didatica { display: grid; grid-template-columns: max-content 1fr; gap: var(--sp-2) var(--sp-4); margin: var(--sp-3) 0; color: var(--text-dim); font-size: 0.9rem; }
 .chart-didatica dt { font-weight: 600; color: var(--text); }
 .chart-didatica dd { margin: 0; }
@@ -1387,6 +1666,7 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
   text-align: center;
   font-size: 0.9rem;
 }
+.search-highlight { display: inline; } /* wrapper emitido por app.js; o destaque fica no <mark> interno */
 .search-highlight-inner,
 .highlight {
   background: color-mix(in srgb, var(--warning) 32%, transparent);
@@ -1394,6 +1674,8 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
   padding: 0.05em 0.25em;
   border-radius: 3px;
 }
+/* utilitário emitido por app.js no botão legado "Verificar" */
+.mt-1 { margin-top: var(--sp-2); }
 
 /* Saída de terminal compartilhada (.sim-output) e console do Excel são
    estilizados pelos próprios simuladores; tokens evitam cores fixas aqui */
@@ -1408,6 +1690,33 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
   min-height: 140px;
   white-space: pre-wrap;
   overflow-x: auto;
+}
+
+/* Botões semânticos da triagem de segurança (simulator_security.js).
+   O <style> injetado pelo simulador define .sim-sec-btn com cores fixas e
+   ganha por ordem; o seletor ancorado em #seguranca-app restaura o tema. */
+.sim-sec-btn-ok,
+body #seguranca-app .sim-sec-btn-ok {
+  background: var(--fill-success);
+  color: var(--on-fill);
+  border: 1px solid var(--fill-success);
+  font-weight: 700;
+}
+.sim-sec-btn-ok:hover,
+body #seguranca-app .sim-sec-btn-ok:hover { background: var(--fill-success-hover); border-color: var(--fill-success-hover); color: var(--on-fill); }
+.sim-sec-btn-err,
+body #seguranca-app .sim-sec-btn-err {
+  background: var(--fill-error);
+  color: var(--on-fill);
+  border: 1px solid var(--fill-error);
+  font-weight: 700;
+}
+.sim-sec-btn-err:hover,
+body #seguranca-app .sim-sec-btn-err:hover { background: var(--fill-error); border-color: var(--err-text); color: var(--on-fill); }
+.sim-sec-btn-ok:focus-visible,
+.sim-sec-btn-err:focus-visible {
+  outline: 2px solid var(--text-link);
+  outline-offset: 2px;
 }
 
 /* ---- Vídeos ---- */
@@ -1427,6 +1736,29 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
   width: 100%;
   height: 100%;
   border: 0;
+}
+/* O iframe do vídeo recebe foco por teclado: precisa de indicador visível
+   (WCAG 2.4.7), senão o usuário não sabe onde está. Quando o foco entra no
+   documento interno do iframe, o Chromium mantém o iframe como activeElement
+   mas NÃO casa :focus/:focus-within no documento pai — por isso a classe
+   .is-video-focus é alternada por script (ui-shell.js). */
+.video-wrapper.is-video-focus,
+.video-embed-wrap.is-video-focus {
+  outline: 3px solid var(--text-link);
+  outline-offset: 2px;
+}
+.video-wrapper.is-video-focus iframe,
+.video-embed-wrap.is-video-focus iframe,
+.video-embed:focus {
+  outline: 3px solid var(--text-link);
+  outline-offset: -3px;
+}
+/* iframe emitido por navigation.js com classe própria */
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
 }
 .video-item { margin-bottom: var(--sp-3); }
 .videos-complementares { margin-top: var(--sp-4); }
@@ -1492,9 +1824,8 @@ input[type="password"], input[type="url"], select, textarea:not(.anotacao-texto)
 textarea { width: 100%; resize: vertical; }
 select { cursor: pointer; }
 input:focus, select:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 30%, transparent);
+  border-color: var(--text-link);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--text-link) 30%, transparent);
 }
 input[type="checkbox"], input[type="radio"] { accent-color: var(--fill-primary); width: 1.15rem; height: 1.15rem; }
 input[type="range"] { accent-color: var(--primary); min-height: 44px; }
@@ -1509,6 +1840,16 @@ label > input[type="checkbox"], label > input[type="radio"] { margin-right: var(
 table tr:hover tbody,
 tbody tr:hover { background: color-mix(in srgb, var(--text) 4%, transparent); }
 .card:hover { border-color: var(--border-dim); box-shadow: var(--shadow-2); }
+.info-box {
+  background: linear-gradient(135deg, var(--surface), var(--surface-elev));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-5);
+  text-align: center;
+  transition: transform var(--tr-med), border-color var(--tr-med), box-shadow var(--tr-med);
+}
+.info-box .icon { font-size: 2.5rem; margin-bottom: var(--sp-2); }
+.info-box h4 { color: var(--text-link); font-size: 1.1rem; margin-bottom: var(--sp-2); }
 .info-box:hover { transform: translateY(-3px); border-color: var(--primary); box-shadow: var(--shadow-2); }
 [role="status"], [aria-live="polite"] { line-height: 1.6; }
 /* estados legados vindos do quiz antigo (app.js marca labels com .correct/.wrong) */
@@ -1522,10 +1863,40 @@ tbody tr:hover { background: color-mix(in srgb, var(--text) 4%, transparent); }
   #header .search-box, #search-input { max-width: 100%; }
 }
 @media (max-width: 1024px) {
-  #main { padding: var(--sp-5); }
-  #header { margin: calc(-1 * var(--sp-5)) calc(-1 * var(--sp-5)) var(--sp-5); padding-inline: var(--sp-3); }
+  #main { --main-pad: var(--sp-5); padding: var(--main-pad); }
+  #header { padding-inline: var(--sp-3); }
   .progress-global, .progress-cluster .progress-track { width: 120px; }
   .qz-filtros select { flex: 1 1 auto; }
+}
+
+/* --- Cabeçalho: recomposição por largura -------------------------------
+   ≥1440px  uma linha (referência index_example)
+   1280–1439 uma linha, rótulo de progresso compacto
+   901–1279  duas linhas: marca+progresso / busca+ações
+   ≤900px    três linhas: menu+marca / busca+áudio / progresso+tema
+   As zonas são inteiras: nenhum controle fica órfão em uma linha sozinha.
+   ---------------------------------------------------------------------- */
+@media (max-width: 1279px) {
+  #header {
+    grid-template-columns: auto auto minmax(0, 1fr);
+    grid-template-areas:
+      "brand   progress focus"
+      "search  search   actions";
+    row-gap: var(--sp-2);
+  }
+  .header-zone--search { min-width: 0; }
+  .header-zone--actions { justify-content: flex-end; }
+}
+@media (max-width: 1279px) {
+  /* O rótulo do progresso é redundante com o "0%" e com o aria-label da
+     barra (role=progressbar). Só entra quando há largura de sobra. */
+  .progress-label { display: none; }
+}
+@media (min-width: 901px) {
+  /* No desktop a identidade já está na barra lateral fixa; repetir a
+     marca no cabeçalho só roubaria largura do campo de busca. A referência
+     index_example também concentra o nome do produto na barra lateral. */
+  .header-brand { display: none; }
 }
 /* ≤900px: gaveta (matchMedia de ui-shell.js usa exatamente max-width: 900px) */
 @media (max-width: 900px) {
@@ -1533,36 +1904,68 @@ tbody tr:hover { background: color-mix(in srgb, var(--text) 4%, transparent); }
   .sidebar-overlay { display: block; }
   body.sidebar-open { overflow: hidden; }
   .study-workspace { padding: var(--sp-4); }
-  /* controles ganham a própria linha e quebram internamente: nunca vazam */
-  .header-controls { flex: 1 1 100%; justify-content: flex-start; }
+  .header-brand { display: flex; }
+  #header {
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "toggle   brand    focus"
+      "search   search   tts"
+      "progress progress theme";
+    row-gap: var(--sp-2);
+  }
+  /* O botão de menu vira ícone: o texto "Menu" não caberia na coluna de
+     44px e transbordaria sobre a marca. O nome acessível permanece no
+     aria-label ("Abrir/Fechar menu de navegação"). */
+  .sidebar-toggle-text { display: none; }
+  .sidebar-toggle { padding: var(--sp-2); justify-content: center; }
+  /* A zona de ações se dissolve no grid para que áudio e tema ocupem
+     células próprias (div sem semântica própria: o papel dos filhos
+     — grupo de botões e botão — é preservado). */
+  .header-zone--actions { display: contents; }
+  .tts-controls { grid-area: tts; }
+  #theme-toggle { grid-area: theme; justify-self: start; }
 }
 @media (max-width: 640px) {
-  #main, body.app-shell-ready #main { padding: var(--sp-4); }
+  #main, body.app-shell-ready #main { --main-pad: var(--sp-4); padding: var(--main-pad); }
   #header {
-    margin: calc(-1 * var(--sp-4)) calc(-1 * var(--sp-4)) var(--sp-4);
     padding: var(--sp-2);
     gap: var(--sp-2);
-    flex-wrap: wrap;
   }
-  .progress-cluster { order: 3; width: 100%; }
-  .progress-global, .progress-cluster .progress-track { flex: 1; width: auto; }
-  /* marca completa em 2 linhas empilhadas (strong + span), sem display:none */
-  .header-brand { flex: 1 1 auto; }
+  .progress-global, .progress-cluster .progress-track { flex: 1; width: auto; min-width: 3rem; }
+  /* marca em duas linhas empilhadas (strong + span), sem corte */
+  .header-brand { min-width: 0; }
+  .brand-subtitle { display: none; }
+  .brand-full { display: none; }
+  .brand-short { display: inline; }
   .tab { padding: var(--sp-2) var(--sp-3); font-size: 0.85rem; }
   .fc-deck { grid-template-columns: 1fr; minmax(0, 1fr); }
   .card, .qz-cartao, .chart-card { padding: var(--sp-4); }
   .chart-didatica { grid-template-columns: 1fr; }
   .chart-didatica dt { margin-top: var(--sp-2); }
   .anotacao-area .btn-salvar-anotacao, .qz-nav .qz-btn, .fc-botoes .fc-btn { flex: 1 1 100%; }
-  .tts-controls select { display: none; } /* fórm/regulagem fica acessível só por botões em telas mínimas */
+  /* O seletor de velocidade sai do cabeçalho em telas mínimas para caber
+     junto do áudio: o painel "Leitura em voz alta" (#audio-app) mantém o
+     controle completo (voz + velocidade 0,5x–2,0x). */
+  .tts-controls select { display: none; }
+  /* Comparador de prompts: 2 colunas fixas do simulador → 1 coluna no mobile */
+  .sim-prompts-comparacao,
+  body #prompts-app .sim-prompts-comparacao { grid-template-columns: 1fr; }
+  .sim-prompts-in-sm,
+  body #prompts-app .sim-prompts-in-sm { width: 100%; }
+}
+@media (max-width: 1300px) and (min-width: 641px) {
+  /* Notebook (901–1300px): a coluna de conteúdo perde largura para a
+     sidebar; as 6 abas reduzem o entrelinha para caber sem corte. */
+  .tabs { gap: 0; }
+  .tab { padding-inline: var(--sp-3); }
 }
 @media (max-width: 480px) {
-  h1, .display-title { font-size: clamp(1.5rem, 6vw, 1.9rem); border-bottom-width: 2px; }
+  h1 { font-size: clamp(1.5rem, 6vw, 1.9rem); border-bottom-width: 2px; }
   h2 { font-size: 1.25rem; }
-  .tab { padding: var(--sp-2); font-size: 0.8rem; }
+  .tab { padding: var(--sp-2) var(--sp-3); font-size: 0.8rem; }
   .modal-content { padding: var(--sp-4); }
   .fc-card { height: 230px; }
-  .header-controls .btn-theme, .header-controls .theme-toggle-btn { min-width: 44px; padding-inline: var(--sp-2); }
+  #theme-toggle { min-width: 44px; padding-inline: var(--sp-2); }
 }
 @media (min-width: 1280px) {
   .fc-deck { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
@@ -1619,22 +2022,19 @@ tbody tr:hover { background: color-mix(in srgb, var(--text) 4%, transparent); }
 .hidden { display: none !important; }
 [hidden] { display: none; }
 [inert] { user-select: none; }
-:focus { outline: none; }
+:focus { outline: none; } /* fallback para mouse; teclado recebe :focus-visible */
 :focus-visible {
   outline: 2px solid var(--text-link);
   outline-offset: 2px;
   border-radius: 2px;
 }
-input:focus-visible, select:focus-visible, textarea:focus-visible { outline: none; }
-/* Textareas (anotações, TTS, prompts, console do Excel) não recebem
-   border/box-shadow da regra input:focus/select:focus — e o <style>
-   injetado em runtime (accessibility.js) pode perder a ordem da cascata.
-   Indicador garantido com !important: borda + anel. */
+/* Campos já trocam borda + anel no :focus; o outline global permanece para
+   navegação por teclado (não remover). */
 body textarea:focus-visible {
   outline: 2px solid var(--text-link) !important;
   outline-offset: 2px;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 30%, transparent);
+  border-color: var(--text-link);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--text-link) 30%, transparent);
 }
 /* alvo de toque global para controles interativos residualmente pequenos */
 details summary, [role="button"], .tree-toggle, .tree-toggle-placeholder { min-height: 44px; }
@@ -1655,22 +2055,81 @@ details summary, [role="button"], .tree-toggle, .tree-toggle-placeholder { min-h
 
 /* =============================================================================
    13) IMPRESSÃO
+   Imprime somente a aba ativa do módulo atual, em papel branco e texto preto.
    ============================================================================= */
+@page { margin: 15mm; }
+
 @media print {
+  /* chrome interativo e painéis de apoio não fazem parte da leitura impressa */
   #header, .app-sidebar, .sidebar-toggle, .sidebar-overlay, .modal,
   .mark-complete, .tts-controls, .a11y-skip-link, .simulator-containers,
-  #simulator-containers, .personalizacao-bar, .fc-actions, .qz-nav { display: none !important; }
+  #simulator-containers, .personalizacao-bar, .fc-actions, .qz-nav,
+  .tabs, .qz-grade, .qz-filtros, .fc-filtros, .support-section,
+  #search-app, #progress-app, #audio-app, #accessibility-app,
+  #curriculum, #videos-app, #flashcards-app, #questoes, #graficos,
+  #graficos-lead { display: none !important; }
+
+  html, body { background: #ffffff !important; color: #000000 !important; }
   #app-shell { display: block; }
   #app-shell > #main { max-width: none; padding: 0; }
-  body { background: #ffffff; color: #000000; }
-  .card, .study-workspace, table, details, .qz-cartao, .chart-card {
-    box-shadow: none;
-    border: 1px solid #94a3b8;
+
+  /* superfícies escuras → papel */
+  .card, .study-workspace, .qz-cartao, .chart-card, .fc-cartao,
+  .inventory-details, details, table, .tabela-scroll, .modal-content {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    border: 1px solid #94a3b8 !important;
     break-inside: avoid;
   }
-  .tab-content { display: block !important; }
-  a { color: #000000; }
+  .card-gradient {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #94a3b8 !important;
+    box-shadow: none !important;
+  }
+  .card-gradient h2, .card-gradient h3, .card-gradient p,
+  .card-gradient li, .card-gradient a { color: #000000 !important; }
+
+  th {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+  }
+  td { color: #000000 !important; }
+  tbody tr:nth-child(even) { background: #f5f5f5 !important; }
+
+  pre, code, kbd, samp {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #94a3b8 !important;
+  }
+  pre { border-left: 4px solid #000000 !important; }
+  .badge, .label, [class*="badge-"] {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #666666 !important;
+  }
+  a { color: #000000 !important; text-decoration: underline; }
+
+  /* alternativas e estados do simulado permanecem legíveis em P&B */
+  .qz-alt, .qz-escolhida, .qz-grade .qz-num, .qz-gab-item {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #666666 !important;
+    box-shadow: none !important;
+  }
+  .qz-escolhida::after { color: #000000 !important; }
+  .qz-sit-certo, .qz-sit-errado, .qz-sit-nao-respondida,
+  .qz-ce, .qz-meta, .qz-respondida { color: #000000 !important; }
+
+  /* SOMENTE a aba ativa */
+  .tab-content { display: none !important; }
+  .tab-content.active { display: block !important; }
+
   .video-wrapper, .video-embed-wrap { border: 0; }
+  /* cores dos gráficos são informação: preserva preenchimentos no papel */
+  .chart-svg { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }
 
 /* =============================================================================
@@ -1685,19 +2144,108 @@ details summary, [role="button"], .tree-toggle, .tree-toggle-placeholder { min-h
 
 /* --- Busca global (#search-app · search.js) --- */
 body #search-app .bus-header h3 { color: var(--text-link); }
+body #search-app .bus-header svg { fill: var(--text-link); }
+body #search-app .bus-filtros {
+  background: var(--surface-elev);
+  border-color: var(--border);
+}
+body #search-app .bus-filtros label { color: var(--text-dim); }
+body #search-app .bus-filtros select {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+body #search-app .bus-clear { color: var(--text-link); }
 body #search-app .bus-status    { color: var(--text-dim); }
-/* .bus-clear NÃO entra: fica dentro do chip claro .bus-filtros (#f8f9fa),
-   cuja combinação legada #374151/#f8f9fa cumpre AA nos dois temas. */
 body #search-app .bus-vazio     { color: var(--text-dim); }
+body #search-app .bus-result {
+  background: var(--surface);
+  border-color: var(--border);
+}
+body #search-app .bus-result.marked {
+  background: color-mix(in srgb, var(--warning) 12%, var(--surface));
+  border-color: color-mix(in srgb, var(--warning) 50%, transparent);
+}
+body #search-app .bus-result mark {
+  background: color-mix(in srgb, var(--warning) 38%, var(--surface));
+  color: var(--text);
+}
+body #search-app .bus-aviso {
+  background: color-mix(in srgb, var(--warning) 12%, var(--surface));
+  border-color: color-mix(in srgb, var(--warning) 45%, transparent);
+  color: var(--warn-text);
+}
+body #search-app .bus-badge {
+  background: var(--surface-elev);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+body #search-app .bus-badge-mod {
+  color: var(--text-link);
+  background: color-mix(in srgb, var(--fill-primary) 8%, var(--surface));
+  border-color: color-mix(in srgb, var(--fill-primary) 45%, transparent);
+}
+body #search-app .bus-badge-curriculum,
+body #search-app .bus-badge-subtopico,
+body #search-app .bus-badge-basico {
+  color: var(--ok-text);
+  background: color-mix(in srgb, var(--success) 16%, var(--surface));
+  border-color: color-mix(in srgb, var(--success) 45%, transparent);
+}
+body #search-app .bus-badge-flashcard,
+body #search-app .bus-badge-intermediario {
+  color: var(--warn-text);
+  background: color-mix(in srgb, var(--warning) 16%, var(--surface));
+  border-color: color-mix(in srgb, var(--warning) 45%, transparent);
+}
+body #search-app .bus-badge-questao,
+body #search-app .bus-badge-avancado {
+  color: var(--err-text);
+  background: color-mix(in srgb, var(--error) 16%, var(--surface));
+  border-color: color-mix(in srgb, var(--error) 45%, transparent);
+}
 
 /* --- Leitura em voz alta (#audio-app · audio.js) --- */
 body #audio-app .aud-header h3 { color: var(--text-link); }
+body #audio-app .aud-header svg { fill: var(--text-link); }
+body #audio-app .aud-aviso {
+  background: color-mix(in srgb, var(--warning) 12%, var(--surface));
+  border-color: color-mix(in srgb, var(--warning) 45%, transparent);
+  color: var(--warn-text);
+}
+/* um aviso do áudio carrega style inline legado (#e8f0fe/#174878); só
+   !important vence estilo inline — necessário para não manter ilha clara. */
+body #audio-app .aud-aviso[style] {
+  background: color-mix(in srgb, var(--fill-primary) 8%, var(--surface)) !important;
+  border-color: color-mix(in srgb, var(--fill-primary) 45%, transparent) !important;
+  color: var(--text-link) !important;
+}
 body #audio-app .aud-controle label,
 body #audio-app #aud-vel-label,
 body #audio-app .aud-status    { color: var(--text-dim); }
+body #audio-app .aud-controle select {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+body #audio-app .aud-acoes button {
+  background: var(--fill-primary);
+  border-color: var(--fill-primary);
+  color: var(--on-primary);
+}
+body #audio-app .aud-acoes button:hover { background: var(--fill-primary-hover); }
+body #audio-app .aud-acoes button:disabled {
+  background: var(--surface-elev);
+  border-color: var(--border);
+  color: var(--text-dim);
+}
 body #audio-app .aud-acoes button.sec {
+  background: transparent;
   color: var(--text-link);
-  border-color: var(--border-dim);
+  border-color: var(--border-control);
+}
+body #audio-app .aud-acoes button.sec:hover {
+  background: color-mix(in srgb, var(--fill-primary) 10%, transparent);
 }
 
 /* --- Painel de progresso (#progress-app · progress.js) --- */
@@ -1709,17 +2257,23 @@ body #progress-app .pg-card strong { color: var(--text); }
 body #progress-app .pg-big         { color: var(--text-link); }
 body #progress-app .pg-sub,
 body #progress-app .pg-status      { color: var(--text-dim); }
+body #progress-app .pg-aviso {
+  background: color-mix(in srgb, var(--error) 12%, var(--surface));
+  border-color: color-mix(in srgb, var(--error) 45%, transparent);
+  color: var(--err-text);
+}
 body #progress-app .pg-tabela thead th {
-  background: var(--surface-elev);
-  color: var(--text);
+  background: var(--fill-primary);
+  color: var(--on-primary);
 }
 body #progress-app .pg-tabela th,
 body #progress-app .pg-tabela td { border-color: var(--border); }
 body #progress-app .pg-btn {
   background: var(--fill-primary);
   border-color: var(--fill-primary);
-  color: #ffffff;
+  color: var(--on-primary);
 }
+body #progress-app .pg-btn:hover { background: var(--fill-primary-hover); border-color: var(--fill-primary-hover); }
 /* Tabelas do painel de progresso têm min-content ~520px (6 colunas);
    layout fixo + quebra de palavra mantêm 100% da largura no mobile. */
 body #progress-app .pg-tabela { table-layout: fixed; width: 100%; }
@@ -1913,3 +2467,74 @@ body #flashcards-app .fc-filtros label {
   flex: 1 1 12rem;
 }
 body #flashcards-app .fc-filtros select { width: 100%; max-width: 100%; min-width: 0; }
+
+/* =============================================================================
+   13-c) MODO ALTO CONTRASTE (forced-colors: active)
+   Restaura bordas e foco visíveis; não desativa forced-color-adjust.
+   ============================================================================= */
+@media (forced-colors: active) {
+  * { forced-color-adjust: auto; }
+  .card,
+  .study-workspace,
+  .qz-cartao,
+  .chart-card,
+  .fc-cartao,
+  .modal-content,
+  .sidebar-toggle,
+  button,
+  .btn,
+  .tab,
+  .nav-item,
+  .tree-node,
+  .quick-link,
+  .qz-alt,
+  .qz-nav .qz-btn,
+  .qz-num,
+  input,
+  select,
+  textarea,
+  table,
+  .tabela-scroll {
+    border: 1px solid ButtonBorder !important;
+    background: Canvas !important;
+    color: CanvasText !important;
+    box-shadow: none !important;
+  }
+  .card-gradient,
+  .fc-front {
+    background: Canvas !important;
+    color: CanvasText !important;
+    border: 1px solid ButtonBorder !important;
+  }
+  th {
+    background: Highlight !important;
+    color: HighlightText !important;
+    border-color: ButtonBorder !important;
+  }
+  .tab.active,
+  .nav-item.active,
+  .quick-link[aria-current="page"],
+  .quick-link[aria-current="location"],
+  .tree-node.active,
+  .qz-grade .qz-atual {
+    background: Highlight !important;
+    color: HighlightText !important;
+    border-color: ButtonBorder !important;
+    box-shadow: none !important;
+  }
+  :focus-visible {
+    outline: 2px solid Highlight !important;
+    outline-offset: 2px !important;
+  }
+  #theme-toggle:focus-visible {
+    box-shadow: none !important;
+    outline: 2px solid Highlight !important;
+  }
+  .mark-complete,
+  .sim-sec-btn-ok,
+  .sim-sec-btn-err {
+    background: Highlight !important;
+    color: HighlightText !important;
+    border-color: ButtonBorder !important;
+  }
+}

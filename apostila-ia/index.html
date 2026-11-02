@@ -28,20 +28,30 @@
 
   <!-- role="banner" REMOVIDO: <header> dentro de <main> não pode ser landmark
        de nível superior (axe landmark-banner-is-top-level). -->
+  <!-- Cabeçalho em zonas explícitas (marca · progresso · busca · ações),
+       para que o grid do CSS componha uma linha no desktop e reordene as
+       zonas de forma intencional nas larguras menores, sem controles órfãos.
+       IDs preservados: #global-progress, #progress-text, #search-input,
+       #tts-play, #tts-pause, #tts-rate, #theme-toggle. -->
   <header id="header">
     <div class="header-brand">
-      <strong>Apostila Web Interativa</strong>
-      <span>Tecnologia da Informação, Dados e IA</span>
+      <strong><span class="brand-full">Apostila Web Interativa</span><span class="brand-short">Apostila TI</span></strong>
+      <span class="brand-subtitle">Tecnologia da Informação, Dados e IA</span>
     </div>
-    <div class="header-controls">
+    <div class="header-zone header-zone--progress">
       <div class="progress-cluster">
+        <span class="progress-label">Progresso global</span>
         <div class="progress-global">
           <div class="progress-global-bar" id="global-progress" role="progressbar" aria-label="Progresso global da apostila" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
         </div>
         <span id="progress-text">0%</span>
       </div>
+    </div>
+    <div class="header-zone header-zone--search">
       <label class="sr-only" for="search-input">Buscar em toda a apostila</label>
       <input type="search" id="search-input" class="search-box" placeholder="Buscar em toda a apostila" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="header-zone header-zone--actions">
       <div class="tts-controls">
         <button type="button" id="tts-play" class="btn" aria-label="Ouvir o conteúdo da aba ativa">
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" focusable="false"><path d="M3 2l10 6-10 6z" fill="currentColor"/></svg>
@@ -57,7 +67,7 @@
           <option value="1.5">1.5x</option>
         </select>
       </div>
-      <button type="button" id="theme-toggle" class="btn btn-theme">Tema</button>
+      <button type="button" id="theme-toggle" class="btn btn-theme" aria-label="Tema" aria-pressed="false" title="Alternar tema claro/escuro">Tema</button>
     </div>
   </header>
 
@@ -89,10 +99,11 @@
   <p class="section-lead" id="graficos-lead">O laboratório interativo de gráficos é montado na aba <strong>Simuladores</strong> do módulo <strong>Visualização</strong>. Ele é criado uma única vez na página e movido para a aba quando você abre esse módulo.</p>
 
   <!-- Motores independentes, todos FORA de #content-area (que app.js apaga
-       nas trocas de módulo/aba). -->
-  <div id="search-app" aria-label="Busca global"></div>
-  <div id="progress-app" aria-label="Painel de progresso"></div>
-  <div id="audio-app" aria-label="Leitura em voz alta"></div>
+       nas trocas de módulo/aba). role="region" + aria-label: sem o papel
+       explícito, aria-label em <div> viola aria-prohibited-attr. -->
+  <div id="search-app" role="region" aria-label="Busca global"></div>
+  <div id="progress-app" role="region" aria-label="Painel de progresso"></div>
+  <div id="audio-app" role="region" aria-label="Leitura em voz alta"></div>
   <div id="accessibility-app" class="sr-only"></div>
   <div id="curriculum" aria-label="Inventário curricular resumido"></div>
 
