@@ -20,6 +20,7 @@ jobs:
   validate:
     name: Static validation and coverage audits
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -56,8 +57,14 @@ jobs:
       - name: Install Playwright and axe-core test dependencies
         run: npm install --no-save playwright axe-core
 
-      - name: Install Chromium for browser smoke test
-        run: npx playwright install --with-deps chromium
+      - name: Install Chromium with Playwright GitHub Action
+        uses: microsoft/playwright-github-action@v1
+        with:
+          browsers: chromium
+          install-deps: true
+
+      - name: Ensure evidence directory exists
+        run: mkdir -p verificacao/evidencias
 
       - name: Simulator regression suite
         run: node workspace/phase5_smoke.js
