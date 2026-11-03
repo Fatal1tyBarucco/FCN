@@ -72,6 +72,9 @@ jobs:
       - name: Browser interaction regression tests in file URL mode
         run: node verificacao/test-browser-interactions.cjs
 
+      - name: Visual and responsive regression test
+        run: node verificacao/test-visual-regression.cjs
+
       - name: Lighthouse audit (local static server)
         continue-on-error: true
         run: |
