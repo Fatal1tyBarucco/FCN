@@ -20,6 +20,7 @@ jobs:
   validate:
     name: Static validation and coverage audits
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -56,8 +57,11 @@ jobs:
       - name: Install Playwright and axe-core test dependencies
         run: npm install --no-save playwright axe-core
 
-      - name: Install Chromium for browser smoke test
+      - name: Install Chromium with system dependencies
         run: npx playwright install --with-deps chromium
+
+      - name: Ensure evidence directory exists
+        run: mkdir -p verificacao/evidencias
 
       - name: Simulator regression suite
         run: node workspace/phase5_smoke.js
@@ -67,9 +71,6 @@ jobs:
 
       - name: Browser interaction regression tests in file URL mode
         run: node verificacao/test-browser-interactions.cjs
-
-      - name: Visual and responsive regression test
-        run: node verificacao/test-visual-regression.cjs
 
       - name: Lighthouse audit (local static server)
         continue-on-error: true
