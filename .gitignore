@@ -3,6 +3,7 @@
 .aider.chat.history.md
 .aider.input.history
 .aider.tags.cache.v4/
+.opencode/
 
 # Arquivos de exemplo/artefatos de demonstração (não versionar)
 apostila-ia/examples/
@@ -55,6 +56,13 @@ apostila-ia/headless_*.html
 apostila-ia/test_simulators.js
 apostila-ia/tmp_dom.html
 apostila-ia/audit_quantitativo.txt
+
+# Scripts de verificacao/diagnostico one-off (verificacao/)
+verificacao/*.cjs
+verificacao/capturar-*.cjs
+verificacao/diagnostico-*.cjs
+verificacao/inspecionar-*.cjs
+verificacao/verificar-*.cjs
 
 # Evidencias de teste/screenshot (nao versionar por padrao)
 evidencia_*.png
