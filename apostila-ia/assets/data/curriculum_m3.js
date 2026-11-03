@@ -44,7 +44,18 @@ const curriculumM3 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno compreenderá o funcionamento do SMTP para envio de e-mails, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno compreenderá o funcionamento do SMTP para envio de e-mails, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "QtqbaEiwlyU",
+                    "titulo": "Funcionamento do protocolo SMTP",
+                    "canal": "Professor Sylvio Rodrigues - Informática Concursos",
+                    "urlOriginal": "https://www.youtube.com/watch?v=QtqbaEiwlyU",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/QtqbaEiwlyU",
+                    "descricao": "Videoaula explicativa sobre o protocolo SMTP (Simple Mail Transfer Protocol), abordando seu funcionamento para envio de e-mails, comandos principais (HELO/EHLO, MAIL FROM, RCPT TO, DATA, QUIT), portas padrão (25, 587, 465), diferenças entre SMTP, POP3 e IMAP, e a importância da autenticação e criptografia (STARTTLS, SMTPS) para segurança no envio.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m3-u1-t1-s2",

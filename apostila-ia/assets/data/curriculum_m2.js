@@ -326,7 +326,18 @@ const curriculumM2 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as sete camadas do modelo OSI em ordem, associará a cada uma sua função principal e identificará o tipo de PDU correspondente, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as sete camadas do modelo OSI em ordem, associará a cada uma sua função principal e identificará o tipo de PDU correspondente, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "WO1uGJRqrwI",
+                    "titulo": "Curso de Redes - Vídeo 03 - Modelo OSI",
+                    "canal": "Bóson Treinamentos",
+                    "urlOriginal": "https://www.youtube.com/watch?v=WO1uGJRqrwI",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/WO1uGJRqrwI",
+                    "descricao": "Videoaula explicativa sobre o modelo OSI (Open Systems Interconnection), detalhando as sete camadas (Física, Enlace, Rede, Transporte, Sessão, Apresentação, Aplicação), suas funções, PDUs (Protocol Data Units) e a relação com equipamentos de rede (hub, switch, roteador). Aborda encapsulamento, comunicação entre camadas e a importância do modelo como referência didática para redes.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m2-u2-t1-s2",
@@ -440,7 +451,18 @@ const curriculumM2 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as quatro camadas do modelo TCP/IP e associará a cada uma protocolos típicos, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as quatro camadas do modelo TCP/IP e associará a cada uma protocolos típicos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "bH29oltn8Cw",
+                    "titulo": "Curso de redes - Vídeo 04 - Introdução ao TCP/IP",
+                    "canal": "Bóson Treinamentos",
+                    "urlOriginal": "https://www.youtube.com/watch?v=bH29oltn8Cw",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/bH29oltn8Cw",
+                    "descricao": "Videoaula introdutória sobre o modelo TCP/IP, explicando as quatro camadas (Acesso à Rede, Internet, Transporte, Aplicação) e seus protocolos associados (Ethernet, IP, ICMP, ARP, TCP, UDP, HTTP, DNS, DHCP). Compara com o modelo OSI, aborda encapsulamento no TCP/IP e a correspondência aproximada entre as camadas dos dois modelos.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m2-u2-t2-s2",
@@ -1136,7 +1158,18 @@ const curriculumM2 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá a estrutura de 32 bits do IPv4, a divisão em octetos e a separação entre parte de rede e parte de host, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá a estrutura de 32 bits do IPv4, a divisão em octetos e a separação entre parte de rede e parte de host, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "XPWd08tLAuo",
+                    "titulo": "Curso de Redes - Vídeo 05 - Endereço IP",
+                    "canal": "Bóson Treinamentos",
+                    "urlOriginal": "https://www.youtube.com/watch?v=XPWd08tLAuo",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/XPWd08tLAuo",
+                    "descricao": "Videoaula detalhada sobre endereçamento IPv4, cobrindo a estrutura de 32 bits, notação decimal pontuada, classes de endereço (A, B, C, D, E), endereços privados (RFC 1918), loopback, link-local (APIPA), multicast e broadcast. Explica a máscara de sub-rede, CIDR, cálculo de rede e broadcast, e a distinção entre endereços públicos e privados para NAT.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m2-u4-t1-s2",

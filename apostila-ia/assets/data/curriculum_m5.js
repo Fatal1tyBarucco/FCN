@@ -44,7 +44,27 @@ const curriculumM5 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá sistemas baseados em regras, aprendizado de máquina e aprendizado profundo pela origem do conhecimento e pelos requisitos de dados, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá sistemas baseados em regras, aprendizado de máquina e aprendizado profundo pela origem do conhecimento e pelos requisitos de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "DNegkxwQJuY",
+                    "titulo": "Seu primeiro código de Machine Learning com Python!",
+                    "canal": "Didática Tech",
+                    "urlOriginal": "https://www.youtube.com/watch?v=DNegkxwQJuY",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/DNegkxwQJuY",
+                    "descricao": "Videoaula prática introdutória de Machine Learning usando Python e scikit-learn. Demonstra o fluxo completo: preparação de dados, divisão treino/teste, treinamento de modelo (regressão linear e árvore de decisão), avaliação com métricas (MAE, R²) e visualização de resultados. Explica conceitos de features, target, overfitting e generalização de forma acessível para iniciantes.",
+                    "dataValidacao": "2026-10-24"
+                  },
+                  {
+                    "id": "M8hoXE24PMo",
+                    "titulo": "Você sabe o que é Deep Learning?",
+                    "canal": "Curso em Vídeo",
+                    "urlOriginal": "https://www.youtube.com/watch?v=M8hoXE24PMo",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/M8hoXE24PMo",
+                    "descricao": "Videoaula explicativa sobre Deep Learning (aprendizado profundo), diferenciando-o de Machine Learning tradicional. Aborda redes neurais artificiais, camadas ocultas, função de ativação, backpropagation, tipos de arquiteturas (CNN para imagens, RNN/LSTM para sequências, Transformers para linguagem), requisitos de dados e hardware (GPU), e exemplos de aplicações (visão computacional, NLP, reconhecimento de fala).",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m5-u1-t1-s2",
@@ -242,7 +262,18 @@ const curriculumM5 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará quando o problema é de classificação ou de regressão e elegerá métrica compatível com a finalidade, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará quando o problema é de classificação ou de regressão e elegerá métrica compatível com a finalidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "JyGGMyR3x5I",
+                    "titulo": "Machine Learning: Tutorial prático usando apenas o navegador",
+                    "canal": "Filipe Deschamps",
+                    "urlOriginal": "https://www.youtube.com/watch?v=JyGGMyR3x5I",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/JyGGMyR3x5I",
+                    "descricao": "Videoaula prática de Machine Learning executada totalmente no navegador usando TensorFlow.js. Demonstra classificação de imagens (transfer learning com MobileNet), treinamento de modelo personalizado (teachable machine), e inferência em tempo real via webcam. Aborda conceitos de dataset, épocas, batch size, accuracy, loss, e como implantar modelos no frontend sem backend. Ideal para entender o ciclo completo de ML sem configurar ambiente local.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m5-u2-t1-s2",

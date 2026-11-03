@@ -1948,5 +1948,57 @@ const references = [
     status: "verificado",
     dispositivos: ["Looker Studio Help"]
   },
+
+  /* ---------- BLOCO 8 — RFCs complementares de rede (Módulo 2) — verificação 2026-11-02 ---------- */
+  {
+    id: "ref-rfc-2228-ftp-security",
+    titulo: "RFC 2228 — FTP Security Extensions",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc2228/",
+    topico: "M2 — Redes de computadores (FTP segurança, extensões de autenticação/integridade/confidencialidade)",
+    dataVerificacao: "2026-11-02",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-4217-ftps-tls",
+    titulo: "RFC 4217 — Securing FTP with TLS (FTPS)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4217/",
+    topico: "M2 — Redes de computadores (FTPS, FTP sobre TLS)",
+    dataVerificacao: "2026-11-02",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-5322-internet-message-format",
+    titulo: "RFC 5322 — Internet Message Format",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc5322/",
+    topico: "M3 — Comunicação digital (formato de mensagens de e-mail, sintaxe de cabeçalhos, endereçamento)",
+    dataVerificacao: "2026-11-02",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-4026-vpn-terminology",
+    titulo: "RFC 4026 — Provider Provisioned Virtual Private Network (VPN) Terminology",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4026/",
+    topico: "M2 — Redes de computadores (VPN, terminologia L2VPN/L3VPN, VPLS, VPWS, pseudo-wire)",
+    dataVerificacao: "2026-11-02",
+    status: "verificado",
+    dispositivos: null
+  },
+  {
+    id: "ref-rfc-4364-bgp-mpls-vpn",
+    titulo: "RFC 4364 — BGP/MPLS IP Virtual Private Networks (VPNs)",
+    organizacao: "IETF (RFC Editor)",
+    url: "https://www.rfc-editor.org/info/rfc4364/",
+    topico: "M2 — Redes de computadores (VPN IP sobre BGP/MPLS, arquitetura PE/CE, VRF, Route Distinguisher, Route Target)",
+    dataVerificacao: "2026-11-02",
+    status: "verificado",
+    dispositivos: null
+  },
 ];
 if (typeof window !== 'undefined') window.references = references;

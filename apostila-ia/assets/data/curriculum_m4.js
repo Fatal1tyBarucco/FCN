@@ -194,7 +194,18 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá autenticação, autorização e auditoria e aplicará o princípio do menor privilégio ao desenho de perfis de acesso, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá autenticação, autorização e auditoria e aplicará o princípio do menor privilégio ao desenho de perfis de acesso, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "wlaNFx73qh4",
+                    "titulo": "O que a TI tem a ver com a LGPD?!?",
+                    "canal": "ConexTI",
+                    "urlOriginal": "https://www.youtube.com/watch?v=wlaNFx73qh4",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/wlaNFx73qh4",
+                    "descricao": "Videoaula explicativa sobre a relação entre a área de TI e a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018). Aborda os papéis de controlador e operador, bases legais para tratamento (art. 7º), direitos do titular (art. 18), princípios da LGPD (art. 2º), medidas de segurança técnicas e organizacionais (art. 46), relatório de impacto (art. 38), encarregado/DPO (art. 41), e as responsabilidades da TI na implementação de controles de acesso, criptografia, logs de auditoria, minimização de dados e resposta a incidentes.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m4-u1-t2-s3",
@@ -272,7 +283,18 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o funcionamento da criptografia simétrica, identificará seu problema central e indicará usos adequados, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o funcionamento da criptografia simétrica, identificará seu problema central e indicará usos adequados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "cWld3rMD7Wk",
+                    "titulo": "Introdução à Criptografia: Conceitos, Algoritmos e Segurança de Dados",
+                    "canal": "Bóson Treinamentos",
+                    "urlOriginal": "https://www.youtube.com/watch?v=cWld3rMD7Wk",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/cWld3rMD7Wk",
+                    "descricao": "Videoaula introdutória sobre criptografia, cobrindo conceitos fundamentais (confidencialidade, integridade, autenticidade), criptografia simétrica (AES, ChaCha20, problema da distribuição de chaves), criptografia assimétrica (RSA, ECC, par de chaves pública/privada), assinaturas digitais, certificados X.509, PKI, funções de hash (SHA-256, resistência a colisão) e o funcionamento híbrido do TLS. Essencial para provas de concursos na área de segurança da informação.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m4-u1-t3-s2",
@@ -542,7 +564,18 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o mecanismo do trojan (falsificação de aparência legítima) e relacionará spyware e adware a violações de privacidade e de proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o mecanismo do trojan (falsificação de aparência legítima) e relacionará spyware e adware a violações de privacidade e de proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "qqgkhvsyL9Q",
+                    "titulo": "Como se proteger de golpes de engenharia social – Seu mundo digital mais seguro #Ep3",
+                    "canal": "TecMundo",
+                    "urlOriginal": "https://www.youtube.com/watch?v=qqgkhvsyL9Q",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/qqgkhvsyL9Q",
+                    "descricao": "Videoaula prática sobre engenharia social, explicando as principais técnicas de golpes (phishing, spear phishing, vishing, smishing, pretexting, baiting, tailgating), como identificá-las (urgência, autoridade falsa, links suspeitos, anexos inesperados), e medidas de proteção (verificação de remetente, não clicar em links suspeitos, autenticação de dois fatores, treinamento contínuo, políticas de segurança). Inclui exemplos reais de golpes comuns no Brasil e como reagir caso seja vítima.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m4-u2-t1-s3",
@@ -620,7 +653,18 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno lerá e escreverá regras de firewall de pacotes e explicará por que a política padrão é a negação, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno lerá e escreverá regras de firewall de pacotes e explicará por que a política padrão é a negação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "TbjhWIhLQDU",
+                    "titulo": "Segurança da informação - Firewalls",
+                    "canal": "UNIVESP",
+                    "urlOriginal": "https://www.youtube.com/watch?v=TbjhWIhLQDU",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/TbjhWIhLQDU",
+                    "descricao": "Videoaula acadêmica sobre firewalls, explicando os tipos (filtro de pacotes stateless, inspeção de estado stateful, firewall de aplicação/WAF), regras de bloqueio/permissão baseadas em IP, porta e protocolo, política de negação padrão (default deny), DMZ, NAT, e as limitações de cada tipo frente a tráfego cifrado e ataques de camada de aplicação. Inclui exemplos práticos de configuração e boas práticas de desenho de regras.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m4-u2-t2-s2",

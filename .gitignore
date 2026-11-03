@@ -22,6 +22,8 @@ desktop.ini
 node_modules/
 __pycache__/
 *.pyc
+package.json
+package-lock.json
 
 # Artefatos de build/gerados
 *.log

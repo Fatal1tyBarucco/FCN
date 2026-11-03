@@ -356,7 +356,18 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará acurácia, completude e validade e calculará métricas simples de qualidade, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará acurácia, completude e validade e calculará métricas simples de qualidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "LmhbPTMaJak",
+                    "titulo": "Excel Básico para Análise de Dados",
+                    "canal": "Universidade dos Dados",
+                    "urlOriginal": "https://www.youtube.com/watch?v=LmhbPTMaJak",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/LmhbPTMaJak",
+                    "descricao": "Videoaula prática de Excel para análise de dados, cobrindo importação de dados (CSV, TXT, bancos), limpeza básica (remover duplicatas, tratar nulos, padronizar formatos), tabelas dinâmicas (criação, campos, agregações SOMA/MÉDIA/CONTAGEM), segmentações de dados (slicers), gráficos recomendados, formatação condicional, e funções essenciais (SE, SEERRO, PROCV, PROCX, SOMASE, CONT.SE). Inclui exercícios práticos com bases de dados reais de órgãos públicos.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m7-u2-t1-s2",
@@ -512,7 +523,18 @@ const curriculumM7 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará os tipos de ausência e escolherá estratégia de tratamento coerente com a causa, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará os tipos de ausência e escolherá estratégia de tratamento coerente com a causa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "videos": [
+                  {
+                    "id": "1JpYOqvDJNU",
+                    "titulo": "Te ensino TUDO sobre Pandas para análise de dados com Python",
+                    "canal": "Asimov Academy",
+                    "urlOriginal": "https://www.youtube.com/watch?v=1JpYOqvDJNU",
+                    "embedUrl": "https://www.youtube-nocookie.com/embed/1JpYOqvDJNU",
+                    "descricao": "Videoaula abrangente sobre a biblioteca Pandas para análise de dados em Python. Cobre: Series e DataFrames (criação, indexação, seleção), leitura de arquivos (CSV, Excel, JSON, Parquet, SQL), limpeza de dados (valores ausentes isnull/notnull, fillna, dropna, duplicatas drop_duplicates), transformação (apply, map, replace, astype, to_datetime), agregação (groupby, agg, pivot_table), junção de dados (merge, join, concat), análise exploratória (describe, value_counts, corr), e exportação de resultados. Inclui boas práticas de performance e memory usage.",
+                    "dataValidacao": "2026-10-24"
+                  }
+                ]
               },
               {
                 "id": "m7-u2-t3-s2",
