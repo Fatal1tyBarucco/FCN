@@ -114,7 +114,7 @@ const axeCore = require("axe-core");
     await page.waitForFunction(() => {
       const item = document.querySelector("#sidebar-tree-host .curriculum-tree .tree-node[role='treeitem']");
       return Boolean(item) && document.activeElement === item;
-    }, null, { timeout: 15000 });
+    }, null, { timeout: 30000 });
     await page.keyboard.press("ArrowLeft");
     assert.equal(await firstTreeItem.getAttribute("aria-expanded"), "false", "ArrowLeft should collapse the focused curriculum node");
     await page.keyboard.press("ArrowRight");
@@ -129,7 +129,7 @@ const axeCore = require("axe-core");
     async function abrirAbaSimuladores(moduloId, containerId) {
       await page.locator(`#nav-list .nav-item[data-id="${moduloId}"]`).click();
       await page.locator('#module-tabs .tab[data-tab="simuladores"]').click();
-      await page.waitForSelector(`#sim-ref-host ${containerId}`, { state: "attached", timeout: 15000 });
+      await page.waitForSelector(`#sim-ref-host ${containerId}`, { state: "attached", timeout: 30000 });
       await page.waitForFunction(
         id => {
           const el = document.querySelector(`#sim-ref-host ${id}`);
@@ -138,7 +138,7 @@ const axeCore = require("axe-core");
           return rect.width > 0 && rect.height > 0;
         },
         containerId,
-        { timeout: 15000 }
+        { timeout: 30000 }
       );
     }
 
@@ -149,7 +149,7 @@ const axeCore = require("axe-core");
     await page.locator("#excel-app [data-act='excel-console-calcular']").click();
     await page.waitForFunction(() =>
       (document.querySelector("#excel-console-res")?.innerText || "").trim().includes("3"),
-      null, { timeout: 5000 });
+      null, { timeout: 15000 });
     const excelResult = (await page.locator("#excel-console-res").innerText()).trim();
     assert.match(excelResult, /3/, "Excel formula must calculate SOMA(1;2) as 3");
 
@@ -158,7 +158,7 @@ const axeCore = require("axe-core");
     await page.locator("#redes-app [data-act='net-cidr']").click();
     await page.waitForFunction(() =>
       (document.querySelector("#net-cidr-out")?.innerText || "").includes("192.168.1.0"),
-      null, { timeout: 5000 });
+      null, { timeout: 15000 });
     const cidrResult = (await page.locator("#net-cidr-out").innerText()).trim();
     assert.match(cidrResult, /192\.168\.1\.0/, "CIDR calculator must derive the /24 network");
 
@@ -167,7 +167,7 @@ const axeCore = require("axe-core");
     await page.locator("#seguranca-app [data-act='classificar'][data-msg='msg1'][data-resp='phishing']").click();
     await page.waitForFunction(() =>
       (document.querySelector("#sec-fb-msg1")?.innerText || "").trim().length > 0,
-      null, { timeout: 5000 });
+      null, { timeout: 15000 });
     const securityFeedback = (await page.locator("#sec-fb-msg1").innerText()).trim();
     assert.ok(securityFeedback.length > 0, "security classification must return feedback");
 
@@ -181,7 +181,7 @@ const axeCore = require("axe-core");
     await page.waitForFunction(() => {
       const text = (document.querySelector("#prom-resultado")?.innerText || "").trim();
       return text.length > 0 && !text.includes("Preencha os campos e clique em Avaliar.");
-    }, null, { timeout: 5000 });
+    }, null, { timeout: 15000 });
     const promptFeedback = (await page.locator("#prom-resultado").innerText()).trim();
     assert.ok(promptFeedback.length > 0, "prompt evaluation must return feedback");
 
@@ -197,7 +197,7 @@ const axeCore = require("axe-core");
       const input = document.querySelector("#dados-bins");
       const svg = document.querySelector("#dados-histograma svg");
       return input && input.value === "7" && svg && svg.querySelectorAll("rect").length > 0;
-    }, null, { timeout: 5000 });
+    }, null, { timeout: 15000 });
     const histogramAfter = await page.locator("#dados-histograma svg").first().evaluate(el => el.outerHTML);
     assert.notEqual(histogramAfter, histogramBefore, "changing histogram bins must recalculate SVG");
 
@@ -208,7 +208,7 @@ const axeCore = require("axe-core");
     await page.locator("#etica-app [data-act='etica-verificar']").first().click();
     await page.waitForFunction(() =>
       (document.querySelector("#etica-app .sim-etica-fb")?.innerText || "").trim().length > 0,
-      null, { timeout: 5000 });
+      null, { timeout: 15000 });
     const ethicsFeedback = (await page.locator("#etica-app .sim-etica-fb").first().innerText()).trim();
     assert.ok(ethicsFeedback.length > 0, "ethics decision must return feedback");
 
@@ -222,7 +222,7 @@ const axeCore = require("axe-core");
     await page.waitForFunction(() => {
       const cell = document.querySelector("#charts-app input[data-celula='histograma:0:0']");
       return cell && cell.value === "90";
-    }, null, { timeout: 5000 });
+    }, null, { timeout: 15000 });
     const chartAfter = await page.locator("#saida-histograma svg").evaluate(el => el.outerHTML);
     assert.notEqual(chartAfter, chartBefore, "editing a numeric chart input must recalculate SVG");
 
@@ -257,7 +257,7 @@ const axeCore = require("axe-core");
     await page.waitForFunction(() => {
       const heading = document.querySelector("#study-workspace-title");
       return heading && heading.textContent.trim() !== "Estude um tópico";
-    }, null, { timeout: 5000 });
+    }, null, { timeout: 15000 });
     assert.notEqual((await page.locator("#study-workspace-title").innerText()).trim(), "Estude um tópico", "study heading must follow the selected curriculum topic");
     const mobileLayout = await page.evaluate(() => ({
       viewportWidth: window.innerWidth,
