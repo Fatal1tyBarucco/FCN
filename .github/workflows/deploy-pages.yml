@@ -100,3 +100,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          # O GitHub Pages pode demorar mais que o padrão (10 min) para
+          # provisionar o build. Aumentamos para 30 min para evitar falsos
+          # timeouts em repositórios grandes (apostila-ia/ com centenas de
+          # arquivos JS + imagens + evidências).
+          timeout: 1800000
