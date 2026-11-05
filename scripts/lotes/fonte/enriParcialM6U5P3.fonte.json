@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 5,
+    "unidadeTitulo": "6.5 Acessibilidade e inclusão digital",
+    "parte": 3,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U5P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U5P3.js",
+    "idsCompletos": [
+      "m6-u5-t3-s2",
+      "m6-u5-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u5-t3-s2",
+      "titulo": "Comparações e pegadinhas da unidade",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-5-topico-3",
+      "unidadeTitulo": "6.5 Acessibilidade e inclusão digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno distinguirá acessibilidade de inclusão, formato aberto de acessibilidade, e identificará afirmações equivocadas frequentes sobre acessibilidade e digitalização.",
+      "conteudo": "COMPARAÇÕES CRÍTICAS — (1) ACESSIBILIDADE x INCLUSÃO DIGITAL: acessibilidade é propriedade do artefato; inclusão é condição social de acesso. Efeito no gabarito: um portal acessível sem canal alternativo pode ainda excluir quem não tem conexão; um serviço presencial não é acessível, mas é includente para quem não usa digital. (2) FORMATO ABERTO x ACESSIBILIDADE: formato aberto é condição de reutilização e transparência (art. 4º, IV e VI, da Lei nº 14.129/2021); acessibilidade é condição de percepção e operação. Efeito: CSV não é acessível por si só, e PDF acessível não é formato aberto. (3) AUTOSSERVIÇO x MEDIAÇÃO HUMANA: autosserviço é acesso sem mediação (art. 4º, II); a mediação humana permanece como canal alternativo. Efeito: o art. 3º, X, é diretriz de ampliação do autosserviço, não de supressão do atendimento. (4) LINGUAGEM CLARA x LINGUAGEM SIMPLIFICADA: linguagem clara é diretriz de comunicação institucional (art. 3º, VII); simplificação excessiva pode suprimir informação necessária. Efeito: não basta remover termos técnicos; é preciso explicar o conteúdo que o cidadão precisa decidir. (5) EXCEÇÃO DO ART. 6º x EXTINÇÃO DE CANAL: a exceção permite ato processual em meio físico em situações de inviabilidade, indisponibilidade ou risco relevante à celeridade; não autoriza eliminar o serviço presencial. PEGADINHAS — (a) «publicar em PDF garante acessibilidade»: errado, depende de estrutura, marcação e texto alternativo. (b) «a Lei nº 14.129/2021 proíbe o atendimento presencial»: errado, art. 3º, XVI, e art. 14. (c) «acessibilidade é responsabilidade apenas da equipe de comunicação»: errado, é responsabilidade de quem escreve conteúdo, quem desenha interface, quem formata documentos e quem define padrões de publicação. (d) «dados abertos são, por definição, acessíveis»: errado, sem dicionário de dados e sem equivalente legível, o dado aberto é inutilizável para o cidadão comum. (e) «a automação de teste substitui o teste com usuários»: errado, a automação detecta parte das barreiras; o teste com usuário é o que evidencia compreensão. (f) «o art. 6º da Lei nº 14.129/2021 autoriza digitalizar tudo»: errado, o art. 6º admite exceções ao processo eletrônico; e o art. 5º e o art. 11 admitem emissão digital de documentos com assinatura eletrônica.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O órgão publica relatório anual em PDF digitalizado de páginas escaneadas. Qual o problema e a solução?",
+          "resposta": "Problema de acessibilidade e de dados abertos: PDF de imagem escaneada não é legível por máquina, não é pesquisável, não tem estrutura semântica e não atende ao requisito de formatos abertos e legíveis por máquina do art. 8º, § 3º, II e III, da Lei nº 12.527/2011, nem ao art. 29, § 1º, II, da Lei nº 14.129/2021. Solução: gerar o relatório a partir da base de dados em formato estruturado (CSV ou formato equivalente legível por máquina), com dicionário de dados, e oferecer versão acessível em documento com títulos e tabelas marcadas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão quer medir se o portal é acessível. Como estruturar a verificação?",
+          "resposta": "(1) Definir os critérios adotados e os artefatos no escopo; (2) verificação automática com registro de data, ferramenta e resultado; (3) revisão manual do conteúdo, da linguagem e da estrutura; (4) teste com usuários, com registro de perfil, tarefa e barreira observada (art. 24, VIII); (5) plano de correção com responsável, prazo e reavaliação; (6) registro e publicação do resultado, incluindo os canais alternativos de atendimento. O relatório deve ser auditável por terceiro (art. 49 da Lei nº 14.129/2021)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como a diretriz de linguagem clara (art. 3º, VII, da Lei nº 14.129/2021) exige linguagem simples, o órgão pode resumir as etapas de um procedimento administrativo sem alterar seu conteúdo jurídico.'",
+          "correcao": "Errado. A diretriz de linguagem clara é de comunicação e de compreensão, não de supressão: resumir etapas pode eliminar formalidades exigidas por lei ou criar precondições inexistentes. A eliminação de exigência é admissível nos termos do art. 3º, XI, XII e XIII, e sempre com a rastreabilidade da base legal."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A diretriz do art. 3º, XVI, da Lei nº 14.129/2021 admite ajustar o atendimento presencial às características e ao público-alvo do serviço, mas não o extingue.",
+          "resposta": "Certo. A diretriz fala em permanência da possibilidade de atendimento presencial, e o art. 14 reforça a exigência de prestação digital por tecnologias de amplo acesso sem prejuízo do atendimento presencial."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São medidas que favorecem a inclusão digital: A) preenchimento automático a partir de bases existentes; B) possibilidade de salvar e retomar o formulário; C) canal de ouvidoria e atendimento humano; D) exigência de aplicativo exclusivo com versão mínima de sistema operacional recente.",
+          "resposta": "A, B e C. O item D cria barreira e contraria o art. 3º, III, e o art. 14 da Lei nº 14.129/2021."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir acessibilidade de inclusão, formato aberto de acessibilidade, e identificará afirmações equivocadas frequentes sobre acessibilidade e digitalização, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá acessibilidade de inclusão, formato aberto de acessibilidade, e identificará afirmações equivocadas frequentes sobre acessibilidade e digitalização"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "COMPARAÇÕES CRÍTICAS — (1) ACESSIBILIDADE x INCLUSÃO DIGITAL: acessibilidade é propriedade do artefato; inclusão é condição social de acesso. Efeito no gabarito: um portal acessível sem canal alternativo pode ainda excluir quem não tem conexão; um serviço presencial não é acessível, mas é includente para quem não usa digital. (2) FORMATO ABERTO x ACESSIBILIDADE: formato aberto é condição de reutilização e transparência (art. 4º, IV e VI, da Lei nº 14.129/2021); acessibilidade é condição de perce…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comparações e pegadinhas da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como a diretriz de linguagem clara (art. 3º, VII, da Lei nº 14.129/2021) exige linguagem simples, o órgão pode resumir as etapas de um procedimento administrativo sem alterar seu conteúdo jurídico.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A diretriz de linguagem clara é de comunicação e de compreensão, não de supressão: resumir etapas pode eliminar formalidades exigidas por lei ou criar precondições inexistentes. A eliminação de exigência é admissível nos termos do art. 3º, XI, XII e XIII, e sempre com a rastreabilidade da base legal."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O órgão publica relatório anual em PDF digitalizado de páginas escaneadas. Qual o problema e a solução?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Problema de acessibilidade e de dados abertos: PDF de imagem escaneada não é legível por máquina, não é pesquisável, não tem estrutura semântica e não atende ao requisito de formatos abertos e legíveis por máquina do art. 8º, § 3º, II e III, da Lei nº 12.527/2011, nem ao art. 29, § 1º, II, da Lei nº 14.129/2021. Solução: gerar o relatório a partir da base de dados em formato estruturado (CSV ou formato equivalente legível por máquina), com dicionário de dados, e oferecer versão acessível em documento com títulos e tabelas marcadas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão quer medir se o portal é acessível. Como estruturar a verificação?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) Definir os critérios adotados e os artefatos no escopo; (2) verificação automática com registro de data, ferramenta e resultado; (3) revisão manual do conteúdo, da linguagem e da estrutura; (4) teste com usuários, com registro de perfil, tarefa e barreira observada (art. 24, VIII); (5) plano de correção com responsável, prazo e reavaliação; (6) registro e publicação do resultado, incluindo os canais alternativos de atendimento. O relatório deve ser auditável por terceiro (art. 49 da Lei nº 14.129/2021).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como a diretriz de linguagem clara (art. 3º, VII, da Lei nº 14.129/2021) exige linguagem simples, o órgão pode resumir as etapas de um procedimento administrativo sem alterar seu conteúdo jurídico.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A diretriz de linguagem clara é de comunicação e de compreensão, não de supressão: resumir etapas pode eliminar formalidades exigidas por lei ou criar precondições inexistentes. A eliminação de exigência é admissível nos termos do art. 3º, XI, XII e XIII, e sempre com a rastreabilidade da base legal.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u5-t3-s3",
+      "titulo": "Resumo estruturado, checklist de domínio e verificação de aprendizagem",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-5-topico-3",
+      "unidadeTitulo": "6.5 Acessibilidade e inclusão digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno consolidará a unidade 6.5 por recuperação ativa, relacionando dispositivos de acessibilidade, medidas técnicas e indicadores de inclusão.",
+      "conteudo": "RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: acessibilidade (perceptível, operável, compreensível, robusto); inclusão digital; autosserviço; canal alternativo; linguagem clara; formato aberto; equivalência de dados; teste com usuário. REGRAS E DISPOSITIVOS: acessibilidade como princípio do Governo Digital (art. 3º, XIX, da Lei nº 14.129/2021); acessibilidade de conteúdo nos sítios oficiais (art. 8º, § 3º, VIII, da Lei nº 12.527/2011); linguagem clara (art. 3º, VII; art. 8º, § 3º, I); formatos abertos (art. 3º, XXV; art. 4º, VI); permanência do atendimento presencial (art. 3º, XVI; art. 14); exceção de ato processual (art. 6º); emissão digital de documentos (art. 5º, parágrafo único); autenticidade presumida de documento assinado eletronicamente (art. 26); protocolo e canal preferencial (art. 27, IV e V); ouvidoria (art. 21, XI); testes e pesquisas com usuários (art. 24, VIII); painel com três indicadores (art. 22). COMPARAÇÕES: acessibilidade x inclusão; formato aberto x acessibilidade; autosserviço x mediação; linguagem clara x simplificação; exceção do art. 6º x extinção de canal. FLUXO RESUMIDO DE PUBLICAÇÃO ACESSÍVEL: (1) produzir conteúdo estruturado e legível; (2) anexar dicionário de dados e nota metodológica; (3) oferecer formatos abertos e equivalente acessível; (4) revisar rótulos, foco, ordem e erros; (5) testar com usuário e registrar; (6) publicar e informar o canal alternativo. EXCEÇÕES E LIMITES: exceção de ato processual (art. 6º); dispensa de divulgação na internet em município pequeno (não afasta a acessibilidade do que for publicado); obrigação de manter canal presencial; dispensa de exigência de tecnologia por parte do cidadão não existe. PALAVRAS-CHAVE: acessibilidade, inclusão, autosserviço, linguagem clara, formato aberto, dicionário de dados, rótulo, foco, teste com usuário, canal alternativo. CHECKLIST DE DOMÍNIO: (1) Quais dispositivos tratam de acessibilidade? (2) Quais as quatro dimensões da acessibilidade de conteúdo? (3) Por que o atendimento presencial permanece obrigatório? (4) O que diferencia formato aberto de acessibilidade? (5) Como medir abandono digital? (6) O que é dicionário de dados e por que importa? (7) Quando a exceção do art. 6º incide? (8) O que o art. 24, VIII, autoriza e exige? VERIFICAÇÃO DE APRENDIZAGEM (recuperação ativa — 8 questões autorais): (Q1) Cite os dois dispositivos que tratam de acessibilidade nos sítios e serviços públicos. (Q2) Explique a diferença entre acessibilidade e inclusão digital com exemplo. (Q3) Por que o atendimento presencial não pode ser extinto? (Q4) Liste quatro medidas de acessibilidade operável. (Q5) Qual a função do dicionário de dados na publicação de dados abertos? (Q6) Quando incide a exceção do art. 6º da Lei nº 14.129/2021? (Q7) Quais indicadores revelam exclusão digital? (Q8) O que a diretriz de linguagem clara NÃO autoriza? CRITÉRIO DE DOMÍNIO: acerto integral em Q1, Q3, Q6 e Q8 e em ao menos 5 dos 8 itens.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Sem consultar o texto, diga por que o atendimento presencial não pode ser extinto.",
+          "resposta": "Porque a Lei nº 14.129/2021 mantém a permanência da possibilidade de atendimento presencial, conforme características, relevância e público-alvo do serviço (art. 3º, XVI), e exige que a prestação digital ocorra por tecnologias de amplo acesso, inclusive de baixa renda e de áreas rurais e isoladas, sem prejuízo do atendimento presencial (art. 14). O canal presencial é também o mecanismo de acessibilidade de quem não usa tecnologia."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Qual a função do dicionário de dados na publicação de dados abertos?",
+          "resposta": "Descrever cada campo, sua unidade, seu significado e sua origem, de modo que o conjunto seja compreensível e utilizável — o que atende ao art. 29, § 1º, III, da Lei nº 14.129/2021 (descrição das bases com informação suficiente sobre estrutura e semântica dos dados) e ao art. 8º, § 3º, IV, da Lei nº 12.527/2011 (divulgação dos formatos utilizados para estruturar a informação). Sem dicionário, o dado é publicado mas permanece inacessível ao cidadão comum."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A diretriz de linguagem clara permite resumir as etapas do procedimento, desde que o usuário final compreenda.'",
+          "correcao": "Errado. A diretriz de linguagem clara trata de comunicação e compreensão; a supressão de etapa ou de exigência depende do art. 3º, XI, XII e XIII, da Lei nº 14.129/2021 e da base legal da etapa. Compreensão do usuário final não saneia a supressão de formalidade legal."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O resumo estruturado da unidade 6.5 permite revisar dispositivos, medidas e indicadores sem reler a unidade.",
+          "resposta": "Certo para quem já compreendeu a unidade; o resumo organiza o conhecimento, não o constrói."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Na verificação de aprendizagem da unidade 6.5, exigem-se acerto integral: A) na citação dos dispositivos de acessibilidade; B) na razão da permanência do atendimento presencial; C) na hipótese de exceção do art. 6º; D) no limite da diretriz de linguagem clara.",
+          "resposta": "A, B, C e D."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de consolidar a unidade 6.5 por recuperação ativa, relacionando dispositivos de acessibilidade, medidas técnicas e indicadores de inclusão, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "consolidará a unidade 6.5 por recuperação ativa, relacionando dispositivos de acessibilidade, medidas técnicas e indicadores de inclusão"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: acessibilidade (perceptível, operável, compreensível, robusto); inclusão digital; autosserviço; canal alternativo; linguagem clara; formato aberto; equivalência de dados; teste com usuário. REGRAS E DISPOSITIVOS: acessibilidade como princípio do Governo Digital (art. 3º, XIX, da Lei nº 14.129/2021); acessibilidade de conteúdo nos sítios oficiais (art. 8º, § 3º, VIII, da Lei nº 12.527/2011); linguagem clara (art. 3º, VII; art. 8º, § 3º, I); formatos aber…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Resumo estruturado, checklist de domínio e verificação de aprendizagem",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A diretriz de linguagem clara permite resumir as etapas do procedimento, desde que o usuário final compreenda.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A diretriz de linguagem clara trata de comunicação e compreensão; a supressão de etapa ou de exigência depende do art. 3º, XI, XII e XIII, da Lei nº 14.129/2021 e da base legal da etapa. Compreensão do usuário final não saneia a supressão de formalidade legal."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Sem consultar o texto, diga por que o atendimento presencial não pode ser extinto.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque a Lei nº 14.129/2021 mantém a permanência da possibilidade de atendimento presencial, conforme características, relevância e público-alvo do serviço (art. 3º, XVI), e exige que a prestação digital ocorra por tecnologias de amplo acesso, inclusive de baixa renda e de áreas rurais e isoladas, sem prejuízo do atendimento presencial (art. 14). O canal presencial é também o mecanismo de acessibilidade de quem não usa tecnologia.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Qual a função do dicionário de dados na publicação de dados abertos?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Descrever cada campo, sua unidade, seu significado e sua origem, de modo que o conjunto seja compreensível e utilizável — o que atende ao art. 29, § 1º, III, da Lei nº 14.129/2021 (descrição das bases com informação suficiente sobre estrutura e semântica dos dados) e ao art. 8º, § 3º, IV, da Lei nº 12.527/2011 (divulgação dos formatos utilizados para estruturar a informação). Sem dicionário, o dado é publicado mas permanece inacessível ao cidadão comum.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A diretriz de linguagem clara permite resumir as etapas do procedimento, desde que o usuário final compreenda.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A diretriz de linguagem clara trata de comunicação e compreensão; a supressão de etapa ou de exigência depende do art. 3º, XI, XII e XIII, da Lei nº 14.129/2021 e da base legal da etapa. Compreensão do usuário final não saneia a supressão de formalidade legal.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

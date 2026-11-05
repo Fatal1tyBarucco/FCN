@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 4,
+    "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U4P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U4P2.js",
+    "idsCompletos": [
+      "m3-u4-t1-s3",
+      "m3-u4-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u4-t1-s3",
+      "titulo": "Autenticação e controle de acesso",
+      "topicoTitulo": "Controle de participantes e lobby",
+      "topicoId": "modulo-3-unidade-4-topico-1",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá mecanismos de autenticação em reuniões.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) mecanismos de autenticação em reuniões; (b) login obrigatório e domínio restrito; (c) senha e link com token; (d) boas práticas institucionais. POR QUE O CONHECIMENTO É IMPORTANTE: a autenticação restringe quem entra; a prova cobra as opções e seus efeitos. PRÉ-REQUISITOS: unidade 4.1 (lobby); noção de identidade digital. OBJETIVOS OBSERVÁVEIS: (1) citar mecanismos; (2) explicar login obrigatório; (3) restringir a domínio; (4) aplicar boas práticas. COMPETÊNCIAS DESENVOLVIDAS: controle de acesso; configuração segura de reunião. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (lobby); unidade 5.1 (intrusão); Módulo 4 (autenticação). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a autenticação verifica a identidade antes de conceder acesso. Em reuniões, os mecanismos típicos são: senha da reunião (segredo compartilhado); link com token (endereço exclusivo e difícil de adivinhar); login obrigatório (só entra quem está autenticado); restrição a determinado domínio (só contas da organização); e sala pessoal protegida por senha. Quanto mais forte a exigência, menor o risco de intrusão, mas maior a fricção para convidados externos. Boas práticas institucionais: exigir login para reuniões internas; restringir ao domínio organizacional quando não houver convidados externos; não publicar links em canais abertos; e rotacionar senhas de salas recorrentes. A disponibilidade de cada método varia por plataforma e plano, devendo ser confirmada na documentação oficial. A autenticação complementa (não substitui) o lobby e a moderação: em conjunto, formam camadas de defesa.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que a autenticação prova quem é o participante.\n- Nível intermediário: escolher o mecanismo conforme a presença de convidados externos.\n- Nível avançado: combinar domínio restrito, login e lobby.\n- Nível especialista: desenhar a política de acesso para diferentes tipos de reunião institucional.\nCOMPARAÇÕES CRÍTICAS:\n- link com token x senha: o link é único e perde-se ao ser compartilhado; a senha é reutilizável — muda o risco de vazamento.\n- login obrigatório x acesso livre: o primeiro vincula a identidade; o segundo permite anônimos — altera o controle.\n- domínio restrito x qualquer conta: o primeiro exclui externos; o segundo não — a escolha depende do convidado.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Link secreto dispensa autenticação.\" — Motivo: links vazam — Versão tecnicamente correta: combinar com login/lobby.\n- Afirmação errada: \"Reunião interna pode ser aberta a qualquer conta.\" — Motivo: expõe informação — Versão tecnicamente correta: restringir ao domínio.\n- Afirmação errada: \"Senha fixa de sala recorrente é segura.\" — Motivo: repetição facilita vazamento — Versão tecnicamente correta: rotacionar periodicamente.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: autenticação, senha, token, login, domínio restrito, sala pessoal.\n- Regras e fórmulas: mais exigência → menos intrusão e mais fricção.\n- Exceções: disponibilidade varia por plataforma/plano.\n- Palavras-chave: identidade, acesso, domínio, senha, token.\n- Checklist de domínio: (1) Cito mecanismos? (2) Explico login? (3) Restrinjo domínio? (4) Aplico boas práticas?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite três mecanismos. (2) O que o login obrigatório garante? (3) Quando restringir ao domínio? (4) Por que rotacionar senhas? (5) A autenticação substitui o lobby?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que exigir login para reuniões internas?",
+          "resposta": "Garante que apenas pessoas autenticadas da organização entrem, reduzindo acesso anônimo e intrusão."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma reunião com dados sensíveis deve ser protegida como?",
+          "resposta": "Login obrigatório, domínio restrito, lobby, senha, compartilhamento de tela restrito ao anfitrião e gravação controlada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Publicar link de reunião em rede social é seguro.'",
+          "correcao": "Errado. Publicar links abertamente permite acesso de qualquer pessoa; compartilhe por canais seguros e restritos."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Restringir reunião ao domínio organizacional aumenta a segurança.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual método NÃO é recomendado para reuniões sensíveis? A) Login obrigatório; B) Domínio restrito; C) Link público sem senha; D) Lobby.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender mecanismos de autenticação em reuniões, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá mecanismos de autenticação em reuniões"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Autenticação: senha da reunião; link com token; login obrigatório (apenas usuários autenticados da organização); domínio restrito; sala pessoal com senha. Boas práticas institucionais: exigir login para reuniões internas; restringir a domínio organizacional; não publicar links em canais abertos; rotacionar senhas de salas recorrentes. A disponibilidade de cada método varia por plataforma e plano.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Autenticação e controle de acesso",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Publicar link de reunião em rede social é seguro.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Publicar links abertamente permite acesso de qualquer pessoa; compartilhe por canais seguros e restritos."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que exigir login para reuniões internas?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Garante que apenas pessoas autenticadas da organização entrem, reduzindo acesso anônimo e intrusão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma reunião com dados sensíveis deve ser protegida como?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Login obrigatório, domínio restrito, lobby, senha, compartilhamento de tela restrito ao anfitrião e gravação controlada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Publicar link de reunião em rede social é seguro.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Publicar links abertamente permite acesso de qualquer pessoa; compartilhe por canais seguros e restritos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u4-t2-s1",
+      "titulo": "Compartilhamento de tela: riscos e controle",
+      "topicoTitulo": "Compartilhamento de tela e colaboração",
+      "topicoId": "modulo-3-unidade-4-topico-2",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá riscos e controles no compartilhamento de tela.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que o compartilhamento de tela expõe; (b) os riscos típicos; (c) os controles preventivos; (d) o papel do anfitrião. POR QUE O CONHECIMENTO É IMPORTANTE: a exposição acidental de tela é uma das causas mais comuns de vazamento; a prova cobra riscos e controles. PRÉ-REQUISITOS: noção de reunião online e de informação sensível. OBJETIVOS OBSERVÁVEIS: (1) identificar o que pode ser exposto; (2) explicar o risco da tela inteira; (3) aplicar controles (janela específica, não perturbe); (4) parar o compartilhamento ao fim. COMPETÊNCIAS DESENVOLVIDAS: condução segura de compartilhamento; prevenção de vazamento. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (exposição acidental); unidade 4.1 (moderação); Módulo 4 (DLP). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: compartilhar a tela exibe o conteúdo do dispositivo aos participantes. O risco não está apenas no que se pretende mostrar, mas em tudo o que aparece junto: notificações de mensagens, abas abertas, janelas sobrepostas, arquivos em segundo plano e barras de favoritos. Compartilhar a tela INTEIRA amplia esse risco; compartilhar apenas a janela ou o aplicativo específico reduz a superfície. Controles preventivos incluem: escolher compartilhar janela/aplicativo em vez de tela inteira; ativar o modo \"não perturbe\" ou desativar notificações; fechar abas e programas sensíveis antes; revisar o que está visível antes de iniciar; e parar o compartilhamento ao terminar. O anfitrião pode restringir quem tem permissão para compartilhar, o que concentra a ação em pessoas confiáveis. A combinação \"compartilhar a janela certa + silenciar notificações + encerrar o compartilhamento\" é a prática recomendada em reuniões com dados sensíveis.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que compartilhar tela mostra o que está visível.\n- Nível intermediário: distinguir tela inteira de janela/aplicativo.\n- Nível avançado: montar um procedimento pré-compartilhamento que elimine exposições.\n- Nível especialista: diante de um vazamento por tela, identificar o que falhou e propor controles.\nCOMPARAÇÕES CRÍTICAS:\n- tela inteira x janela específica: a primeira expõe tudo; a segunda limita — a escolha altera o risco.\n- notificações ativas x modo não perturbe: as notificações vazam conteúdo privado — o controle as elimina.\n- compartilhar x encerrar: esquecer de encerrar mantém a exposição após a discussão — o encerramento é parte do processo.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Compartilhar a tela inteira é mais prático e seguro.\" — Motivo: expõe conteúdo não intencional — Versão tecnicamente correta: compartilhar a janela específica.\n- Afirmação errada: \"Notificações não aparecem durante o compartilhamento.\" — Motivo: aparecem e vazam — Versão tecnicamente correta: ativar o modo não perturbe.\n- Afirmação errada: \"Ao terminar o assunto, o compartilhamento para sozinho.\" — Motivo: permanece ativo — Versão tecnicamente correta: encerrar explicitamente.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: compartilhamento de tela, janela específica, notificação, não perturbe, exposição.\n- Regras e fórmulas: janela específica + notificações silenciadas + encerrar = compartilhamento seguro.\n- Exceções: o anfitrião pode restringir quem compartilha.\n- Palavras-chave: vazamento, aba aberta, notificação, escopo, encerrar.\n- Checklist de domínio: (1) Identifico o que expõe? (2) Explico o risco da tela inteira? (3) Aplico controles? (4) Encerro o compartilhamento?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o compartilhamento expõe além do intencional? (2) Por que a tela inteira é arriscada? (3) Que controle silencia notificações? (4) O que fazer antes de compartilhar? (5) É preciso encerrar manualmente?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença entre compartilhar tela inteira e janela específica?",
+          "resposta": "Tela inteira expõe tudo (notificações, abas); janela específica expõe apenas o aplicativo escolhido, reduzindo risco."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Antes de compartilhar tela em reunião institucional, o que verificar?",
+          "resposta": "Fechar abas/arquivos sensíveis, desativar notificações, compartilhar apenas a janela necessária e confirmar com participantes o que será exibido."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Compartilhar tela inteira é sempre seguro.'",
+          "correcao": "Errado. Pode expor dados sensíveis; prefira compartilhamento de janela específica."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Desativar notificações reduz exposição acidental ao compartilhar tela.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática reduz risco ao compartilhar tela? A) Compartilhar tela inteira sempre; B) Compartilhar apenas janela específica; C) Deixar notificações ativas; D) Não verificar conteúdo antes.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender riscos e controles no compartilhamento de tela, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá riscos e controles no compartilhamento de tela"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Compartilhamento de tela: exibir conteúdo do dispositivo aos participantes. Riscos: exposição acidental de dados sensíveis (notificações, abas, arquivos), compartilhamento de tela inteira em vez de janela específica, esquecer de parar o compartilhamento. Controles: compartilhar apenas janela/aplicativo específico; desativar notificações; usar modo 'não perturbe'; verificar antes de compartilhar; parar ao terminar. Anfitrião pode restringir quem compartilha.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Compartilhamento de tela: riscos e controle",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Compartilhar tela inteira é sempre seguro.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Pode expor dados sensíveis; prefira compartilhamento de janela específica."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença entre compartilhar tela inteira e janela específica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Tela inteira expõe tudo (notificações, abas); janela específica expõe apenas o aplicativo escolhido, reduzindo risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Antes de compartilhar tela em reunião institucional, o que verificar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Fechar abas/arquivos sensíveis, desativar notificações, compartilhar apenas a janela necessária e confirmar com participantes o que será exibido.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Compartilhar tela inteira é sempre seguro.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Pode expor dados sensíveis; prefira compartilhamento de janela específica.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

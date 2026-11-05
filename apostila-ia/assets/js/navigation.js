@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(/"/g, '&quot;');
   }
 
-  /* Índice id → { titulo, objetivoAprendizagem, conteudo, modulo } para o painel. */
+    /* Índice id → { titulo, objetivoAprendizagem, conteudo, modulo, ehTopicoPai, exemplos, exercicios, criterioDominio } para o painel. */
   const indice = {};
   registro.forEach((item) => {
     const mod = item.dados;
@@ -170,7 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
           objetivoAprendizagem: topico.objetivoAprendizagem || null,
           conteudo: topico.conteudo || null,
           modulo: item.chave,
-          ehTopicoPai: Array.isArray(topico.subtopicos) && topico.subtopicos.length > 0
+          ehTopicoPai: Array.isArray(topico.subtopicos) && topico.subtopicos.length > 0,
+          exemplos: Array.isArray(topico.exemplos) ? topico.exemplos : [],
+          exercicios: Array.isArray(topico.exercicios) ? topico.exercicios : [],
+          criterioDominio: topico.criterioDominio || null
         };
         (topico.subtopicos || []).forEach((sub) => {
           indice[sub.id] = {
@@ -178,7 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
             objetivoAprendizagem: sub.objetivoAprendizagem || null,
             conteudo: sub.conteudo || null,
             modulo: item.chave,
-            ehTopicoPai: false
+            ehTopicoPai: false,
+            exemplos: Array.isArray(sub.exemplos) ? sub.exemplos : [],
+            exercicios: Array.isArray(sub.exercicios) ? sub.exercicios : [],
+            criterioDominio: sub.criterioDominio || null
           };
         });
       });
@@ -318,21 +324,102 @@ document.addEventListener('DOMContentLoaded', () => {
   function mostrarConteudo(topicoId) {
     const info = indice[topicoId];
     if (!info || !painel) return;
-    let html = '<h4>' + esc(info.titulo) + '</h4>';
-    html += '<p><span class="label label-ok">' + esc(info.modulo) + '</span></p>';
-    if (info.objetivoAprendizagem) {
-      html += '<p><strong>Objetivo de aprendizagem:</strong> ' + esc(info.objetivoAprendizagem) + '</p>';
+
+    // Se é um tópico pai (tem subtópicos), mostra mensagem orientando a selecionar subtópico
+    if (info.ehTopicoPai) {
+      let html = '<h4>' + esc(info.titulo) + '</h4>';
+      html += '<p><span class="label label-ok">' + esc(info.modulo) + '</span></p>';
+      if (info.objetivoAprendizagem) {
+        html += '<p><strong>Objetivo de aprendizagem:</strong> ' + esc(info.objetivoAprendizagem) + '</p>';
+      }
+      html += '<p><em>Este tópico agrupa subtópicos — selecione um dos subtópicos listados acima para ver o conteúdo completo.</em></p>';
+      html += videosComplementaresHtml(info.modulo);
+      /* Personalização: favorito + anotações (Seção 11). */
+      var fav = (window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.ehFavorito) ? window.ApostilaPersonalizacao.ehFavorito(topicoId) : false;
+      html += '<div class="personalizacao-bar" style="margin-top:12px;padding-top:8px;border-top:1px solid var(--border,#e5e7eb);">';
+      var icone = function (nome) {
+        return (typeof window !== 'undefined' && typeof window.FCNIcon === 'function') ? window.FCNIcon(nome) : '';
+      };
+      html += '<button type="button" class="btn-favorito" data-topic="' + esc(topicoId) + '" aria-pressed="' + (fav ? 'true' : 'false') + '" style="margin-right:8px;">' + icone(fav ? 'estrela-cheia' : 'estrela') + ' ' + (fav ? 'Favorito' : 'Favoritar') + '</button>';
+      html += '<button type="button" class="btn-anotacao" data-topic="' + esc(topicoId) + '" style="margin-right:8px;">' + icone('nota') + ' Anotações</button>';
+      html += '</div>';
+      html += '<div class="anotacao-area" data-topic="' + esc(topicoId) + '" style="display:none;margin-top:8px;">';
+      html += '<textarea class="anotacao-texto" rows="4" style="width:100%;" placeholder="Escreva sua anotação...">' + esc((window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.obterAnotacao) ? window.ApostilaPersonalizacao.obterAnotacao(topicoId) : '') + '</textarea>';
+      html += '<button type="button" class="btn-salvar-anotacao" data-topic="' + esc(topicoId) + '" style="margin-top:4px;">Salvar anotação</button>';
+      html += '</div>';
+      painel.innerHTML = html;
+      // handlers para favorito/anotações
+      var btnFav = painel.querySelector('.btn-favorito');
+      if (btnFav) btnFav.addEventListener('click', function () {
+        if (!window.ApostilaPersonalizacao) return;
+        var agoraFav = window.ApostilaPersonalizacao.alternarFavorito(topicoId);
+        btnFav.innerHTML = icone(agoraFav ? 'estrela-cheia' : 'estrela') + ' ' + (agoraFav ? 'Favorito' : 'Favoritar');
+        btnFav.setAttribute('aria-pressed', agoraFav ? 'true' : 'false');
+      });
+      var btnAnot = painel.querySelector('.btn-anotacao');
+      var area = painel.querySelector('.anotacao-area');
+      if (btnAnot && area) btnAnot.addEventListener('click', function () { area.style.display = (area.style.display === 'none' ? 'block' : 'none'); });
+      var btnSalvar = painel.querySelector('.btn-salvar-anotacao');
+      if (btnSalvar) btnSalvar.addEventListener('click', function () {
+        var ta = painel.querySelector('.anotacao-texto');
+        if (window.ApostilaPersonalizacao && ta) window.ApostilaPersonalizacao.salvarAnotacao(topicoId, ta.value);
+        btnSalvar.innerHTML = icone('check') + ' Salvo';
+        setTimeout(function () { btnSalvar.textContent = 'Salvar anotação'; }, 1500);
+      });
+      // registrar visita/retomada
+      if (window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.aoNavegar) window.ApostilaPersonalizacao.aoNavegar(topicoId);
+      registrarVisita(topicoId);
+      return;
     }
-    if (info.conteudo) {
-      html += '<p>' + esc(info.conteudo) + '</p>';
-    } else if (info.ehTopicoPai) {
-      html += '<p><em>Sem conteúdo textual próprio: este tópico agrupa subtópicos — selecione um dos subtópicos listados acima.</em></p>';
+
+    // Subtópico: usa o template didático completo (Seção 5).
+    // O template emite <h4> (título) + objetivo de aprendizagem; o consumidor
+    // NÃO repete nenhum dos dois — a emissão é única (ver unidade-template.js).
+    let html = '';
+    if (window.FCNTemplate && typeof window.FCNTemplate.renderizarUnidade === 'function') {
+      html = window.FCNTemplate.renderizarUnidade(info, topicoId);
     } else {
-      html += '<p><em>Conteúdo textual ainda não registrado para este item nos dados de assets/data/.</em></p>';
+      // Fallback: renderização legada se template não disponível
+      html = '<h4>' + esc(info.titulo) + '</h4>';
+      html += '<p><span class="label label-ok">' + esc(info.modulo) + '</span></p>';
+      if (info.objetivoAprendizagem) {
+        html += '<p><strong>Objetivo de aprendizagem:</strong> ' + esc(info.objetivoAprendizagem) + '</p>';
+      }
+      if (info.conteudo) {
+        html += '<p>' + esc(info.conteudo) + '</p>';
+      } else {
+        html += '<p><em>Conteúdo textual ainda não registrado para este item nos dados de assets/data/.</em></p>';
+      }
+      // Exemplos legados
+      if (Array.isArray(info.exemplos) && info.exemplos.length) {
+        html += '<p><strong>Exemplos:</strong></p><ul>';
+        info.exemplos.forEach(function(ex) {
+          var line = esc(ex.enunciado || '');
+          if (ex.resposta) line += ' → ' + esc(ex.resposta);
+          if (ex.correcao) line += ' (Correção: ' + esc(ex.correcao) + ')';
+          html += '<li><em>' + esc(ex.tipo || 'exemplo') + ':</em> ' + line + '</li>';
+        });
+        html += '</ul>';
+      }
+      // Exercícios legados
+      if (Array.isArray(info.exercicios) && info.exercicios.length) {
+        html += '<p><strong>Exercícios:</strong></p><ul>';
+        info.exercicios.forEach(function(ex) {
+          var line = esc(ex.enunciado || '');
+          if (ex.resposta) line += ' — ' + esc(ex.resposta);
+          html += '<li>' + line + '</li>';
+        });
+        html += '</ul>';
+      }
+      if (info.criterioDominio) {
+        html += '<p><em>Critério de domínio: ' + esc(info.criterioDominio) + '</em></p>';
+      }
     }
-    /* Vídeos complementares do módulo do tópico exibido (Seção 12.2). */
+
+    // Vídeos complementares
     html += videosComplementaresHtml(info.modulo);
-    /* Personalização: favorito + anotações (Seção 11). */
+
+    // Personalização: favorito + anotações
     var fav = (window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.ehFavorito) ? window.ApostilaPersonalizacao.ehFavorito(topicoId) : false;
     html += '<div class="personalizacao-bar" style="margin-top:12px;padding-top:8px;border-top:1px solid var(--border,#e5e7eb);">';
     var icone = function (nome) {
@@ -345,10 +432,14 @@ document.addEventListener('DOMContentLoaded', () => {
     html += '<textarea class="anotacao-texto" rows="4" style="width:100%;" placeholder="Escreva sua anotação...">' + esc((window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.obterAnotacao) ? window.ApostilaPersonalizacao.obterAnotacao(topicoId) : '') + '</textarea>';
     html += '<button type="button" class="btn-salvar-anotacao" data-topic="' + esc(topicoId) + '" style="margin-top:4px;">Salvar anotação</button>';
     html += '</div>';
+
     painel.innerHTML = html;
+
     // registrar visita/retomada
     if (window.ApostilaPersonalizacao && window.ApostilaPersonalizacao.aoNavegar) window.ApostilaPersonalizacao.aoNavegar(topicoId);
-    // handlers
+    registrarVisita(topicoId);
+
+    // handlers favorito/anotações
     var btnFav = painel.querySelector('.btn-favorito');
     if (btnFav) btnFav.addEventListener('click', function () {
       if (!window.ApostilaPersonalizacao) return;

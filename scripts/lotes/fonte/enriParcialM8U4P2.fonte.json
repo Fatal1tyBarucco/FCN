@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 4,
+    "unidadeTitulo": "8.4 Ferramentas de Análise e Business Intelligence",
+    "parte": 2,
+    "totalPartesUnidade": 2,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U4P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U4P2.js",
+    "idsCompletos": [
+      "m8-u4-t3-s1",
+      "m8-u4-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u4-t3-s1",
+      "titulo": "Esquema estrela, fatos, dimensões e medidas",
+      "topicoTitulo": "Modelagem analítica: dimensões, medidas, filtros e agregações",
+      "topicoId": "modulo-8-unidade-4-topico-3",
+      "unidadeTitulo": "8.4 Ferramentas de Análise e Business Intelligence",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno separará fatos de dimensões em um modelo e justificará o uso de medidas agregadas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) esquema estrela, fatos, dimensões e medidas; (b) modelagem analítica básica; (c) agregações e filtros. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre tabela fato e tabela dimensão; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de dados e de BI. OBJETIVOS OBSERVÁVEIS: (1) descrever esquema estrela; (2) distinguir fato de dimensão; (3) explicar medidas e agregações. COMPETÊNCIAS DESENVOLVIDAS: modelagem analítica; desenho de painel. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.4 (ferramentas); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: esquema estrela como modelo com uma tabela fato central (eventos mensuráveis) cercada por tabelas dimensão (contexto descritivo); tabela fato contém medidas (valores numéricos agregáveis) e chaves estrangeiras; tabela dimensão contém atributos descritivos (produto, região, data); medidas: soma, média, contagem; agregações: roll-up (agregar), drill-down (detalhar); filtros: restrição do conjunto analisado; a modelagem deve ser orientada à pergunta analítica. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender a separação entre fato e dimensão.\n- Nível intermediário: descrever esquema estrela e medidas.\n- Nível avançado: projetar modelo analítico.\n- Nível especialista: avaliar governança e desempenho.\nCOMPARAÇÕES CRÍTICAS:\n- fato x dimensão: fato contém eventos e medidas; dimensão contém contexto descritivo.\n- agregação x filtro: agregação resume; filtro restringe.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"tudo pode ser medida\" — Motivo: medidas devem ser numéricas e agregáveis — Versão tecnicamente correta: distinguir medida de atributo.\n- Afirmação errada: \"esquema estrela é o único modelo\" — Motivo: existem outros (floco de neve) — Versão tecnicamente correta: escolher conforme o caso.\n- Afirmação errada: \"dimensão não precisa de chave\" — Motivo: a chave liga fato e dimensão — Versão tecnicamente correta: usar chave estrangeira.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: esquema estrela, fato, dimensão, medida, agregação, filtro.\n- Regras e mecanismos: fato central com medidas; dimensões com contexto; agregações e filtros.\n- Exceções: modelos mais complexos (floco de neve) podem ser usados.\n- Palavras-chave: esquema estrela, fato, dimensão, medida, agregação, filtro.\n- Checklist de domínio: (1) Descrevo esquema estrela? (2) Distingo fato de dimensão? (3) Explico medidas e agregações? (4) Projeto modelo analítico?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um esquema estrela? (2) O que é uma tabela fato? (3) O que é uma tabela dimensão? (4) Qual a diferença entre medida e dimensão? (5) O que são agregações e filtros?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Em 'pagamento de benefício', quais são fato e dimensões?",
+          "resposta": "Fato: PAGAMENTO (um registro por pagamento; medidas: valor, quantidade de parcelas). Dimensões: TEMPO (data de pagamento), ÓRGÃO/UNIDADE, BENEFÍCIO (tipo), PESSOA (titular, com chave pseudonimizada quando for analisar). A granularidade declarada é 'um pagamento por linha'."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relatório mostra 1.500 'atendimentos' mas a base tem 1.500 linhas com 1.200 protocolos distintos. Diagnóstico.",
+          "resposta": "Contagem por linhas inflada por duplicidade (300 linhas repetidas). A medida correta é contagem distinta de protocolo (= 1.200). O caso mostra por que o modelo precisa de chave identificadora e de contagem distinta: número bruto de linhas não é número de eventos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Na estrela, os atributos descritivos devem ficar na tabela de fato.'",
+          "correcao": "Errado. Atributos descritivos pertencem às dimensões; a tabela de fato guarda chaves e medidas. Mover atributos para o fato duplica dados, aumenta volume e quebra a consistência dos filtros."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) 'Mês de referência' é atributo de dimensão Tempo, não medida de fato.",
+          "resposta": "Certo. É contexto de análise (dimensão); medida é numérica e agregável (valor, contagem)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para contar atendimentos únicos em base com linhas repetidas, a medida adequada é: A) soma das linhas; B) contagem distinta do protocolo; C) média por linha; D) máxima do protocolo.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de separar fatos de dimensões em um modelo e justificará o uso de medidas agregadas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "separará fatos de dimensões em um modelo e justificará o uso de medidas agregadas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) esquema estrela, fatos, dimensões e medidas; (b) modelagem analítica básica; (c) agregações e filtros. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre tabela fato e tabela dimensão; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de dados e de BI. OBJETIVOS OBSERVÁVEIS: (1) descrever esquema estrela; (2) distinguir fato de dimensão; (3) explicar medidas e agregações. COMPETÊNCIAS DESENVOLVIDAS: modelagem analítica; d…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Esquema estrela, fatos, dimensões e medidas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Na estrela, os atributos descritivos devem ficar na tabela de fato.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Atributos descritivos pertencem às dimensões; a tabela de fato guarda chaves e medidas. Mover atributos para o fato duplica dados, aumenta volume e quebra a consistência dos filtros."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Em 'pagamento de benefício', quais são fato e dimensões?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Fato: PAGAMENTO (um registro por pagamento; medidas: valor, quantidade de parcelas). Dimensões: TEMPO (data de pagamento), ÓRGÃO/UNIDADE, BENEFÍCIO (tipo), PESSOA (titular, com chave pseudonimizada quando for analisar). A granularidade declarada é 'um pagamento por linha'.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Relatório mostra 1.500 'atendimentos' mas a base tem 1.500 linhas com 1.200 protocolos distintos. Diagnóstico.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Contagem por linhas inflada por duplicidade (300 linhas repetidas). A medida correta é contagem distinta de protocolo (= 1.200). O caso mostra por que o modelo precisa de chave identificadora e de contagem distinta: número bruto de linhas não é número de eventos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Na estrela, os atributos descritivos devem ficar na tabela de fato.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Atributos descritivos pertencem às dimensões; a tabela de fato guarda chaves e medidas. Mover atributos para o fato duplica dados, aumenta volume e quebra a consistência dos filtros.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u4-t4-s1",
+      "titulo": "Critérios de comparação e cenários de uso",
+      "topicoTitulo": "Gratuitos, comerciais e dependentes de licença: escolha e cenários",
+      "topicoId": "modulo-8-unidade-4-topico-4",
+      "unidadeTitulo": "8.4 Ferramentas de Análise e Business Intelligence",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno comparará ferramentas por critérios explícitos e recomendará opção para um cenário dado.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) critérios de comparação de ferramentas de BI; (b) cenários de uso; (c) limitações e governança. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a escolha de ferramenta conforme o cenário; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de visualização e de BI. OBJETIVOS OBSERVÁVEIS: (1) comparar ferramentas por critérios; (2) escolher conforme cenário; (3) avaliar limitações e governança. COMPETÊNCIAS DESENVOLVIDAS: análise de ferramentas; decisão técnica. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.4 (ferramentas); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: critérios de comparação: custo/licenciamento, facilidade de uso, capacidade de visualização, preparação de dados, integração com fontes, governança (controle de acesso, versionamento), escalabilidade; cenários: uso individual (ferramenta gratuita), equipe (licença compartilhada), organização (governança e segurança); limitações: dependem do plano/versão; exemplos didáticos que não dependam de conta comercial: Tableau Public, Looker Studio, Power BI Desktop. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: conhecer os critérios de comparação.\n- Nível intermediário: comparar ferramentas por critérios.\n- Nível avançado: escolher conforme cenário.\n- Nível especialista: avaliar governança e integração.\nCOMPARAÇÕES CRÍTICAS:\n- custo x capacidade: ferramentas gratuitas têm limitações; comerciais oferecem mais recursos.\n- facilidade x governança: ferramentas simples podem ter menos controle.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"a melhor ferramenta é a mais cara\" — Motivo: depende do cenário — Versão tecnicamente correta: escolher conforme necessidade.\n- Afirmação errada: \"ferramentas gratuitas são suficientes para tudo\" — Motivo: limitações de governança e compartilhamento — Versão tecnicamente correta: avaliar o cenário.\n- Afirmação errada: \"licenciamento não afeta a escolha\" — Motivo: pode inviabilizar o uso — Versão tecnicamente correta: considerar custo e plano.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: critérios, cenário, limitação, governança, licenciamento.\n- Regras e mecanismos: comparar por custo, capacidade, integração e governança; escolher conforme cenário.\n- Exceções: limites dependem do plano/versão; conferir documentação oficial.\n- Palavras-chave: comparação, cenário, limitação, governança, licenciamento.\n- Checklist de domínio: (1) Comparo ferramentas por critérios? (2) Escolho conforme cenário? (3) Avalio limitações? (4) Considero governança?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais os critérios de comparação? (2) Como escolher conforme cenário? (3) Quais as limitações comuns? (4) O que é governança em BI? (5) Quais exemplos não dependem de conta comercial?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Comparar opções A (gratuita, publicação pública) e B (licenciada, publicação com controle) para painel com dados de saúde.",
+          "resposta": "B: dado de saúde é sensível e exige controle de acesso, registro e retenção — a publicação pública da opção A é incompatível. O custo da licença é o preço da conformidade, não um excesso."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Equipe de estudo quer praticar com dados fictícios, sem orçamento. Que critério prevalece?",
+          "resposta": "Custo zero de autoria e publicação com dados fictícios: ferramenta gratuita é adequada, desde que os dados sejam realmente fictícios e rotulados como tal. Nesse cenário, governança e auditoria pesam menos que acessibilidade e velocidade de aprendizado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Ferramenta gratuita é sempre a escolha correta para o serviço público, por economia.'",
+          "correcao": "Errado. Economia de licença não pode custar controle de acesso, auditoria e proteção de dados. Quando a ferramenta gratuita não sustenta governança exigida, a escolha correta é a licenciada — com justificativa registrada no processo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Antes de comparar ferramentas, é preciso declarar edição, versão e data da comparação.",
+          "resposta": "Certo. Recursos e planos mudam; comparação sem esse dado envelhece rápido e engana."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para painel institucional com dados sensíveis, o critério que deve prevalecer é: A) menor custo de licença; B) controle de acesso e auditoria; C) maior número de tipos de gráfico; D) animações do painel.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de comparar ferramentas por critérios explícitos e recomendará opção para um cenário dado, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "comparará ferramentas por critérios explícitos e recomendará opção para um cenário dado"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) critérios de comparação de ferramentas de BI; (b) cenários de uso; (c) limitações e governança. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a escolha de ferramenta conforme o cenário; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de visualização e de BI. OBJETIVOS OBSERVÁVEIS: (1) comparar ferramentas por critérios; (2) escolher conforme cenário; (3) avaliar limitações e governança. COMPETÊNCIAS DESENVOLVIDAS: análise de ferrame…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Critérios de comparação e cenários de uso",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Ferramenta gratuita é sempre a escolha correta para o serviço público, por economia.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Economia de licença não pode custar controle de acesso, auditoria e proteção de dados. Quando a ferramenta gratuita não sustenta governança exigida, a escolha correta é a licenciada — com justificativa registrada no processo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Comparar opções A (gratuita, publicação pública) e B (licenciada, publicação com controle) para painel com dados de saúde.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "B: dado de saúde é sensível e exige controle de acesso, registro e retenção — a publicação pública da opção A é incompatível. O custo da licença é o preço da conformidade, não um excesso.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Equipe de estudo quer praticar com dados fictícios, sem orçamento. Que critério prevalece?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Custo zero de autoria e publicação com dados fictícios: ferramenta gratuita é adequada, desde que os dados sejam realmente fictícios e rotulados como tal. Nesse cenário, governança e auditoria pesam menos que acessibilidade e velocidade de aprendizado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Ferramenta gratuita é sempre a escolha correta para o serviço público, por economia.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Economia de licença não pode custar controle de acesso, auditoria e proteção de dados. Quando a ferramenta gratuita não sustenta governança exigida, a escolha correta é a licenciada — com justificativa registrada no processo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

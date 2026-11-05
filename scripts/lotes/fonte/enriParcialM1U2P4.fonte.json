@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 4,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U2P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P4.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-5-sub-2",
+      "modulo-1-unidade-2-topico-6-sub-1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-5-sub-2",
+      "titulo": "Notas de rodapé e notas de fim",
+      "topicoTitulo": "Cabeçalhos, rodapés, notas e numeração de páginas",
+      "topicoId": "modulo-1-unidade-2-topico-5",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno inserirá notas de rodapé e notas de fim e criará referências cruzadas entre elas.",
+      "conteudo": "As notas de rodapé e as notas de fim são recursos de comentário editorial que mantêm informações fora do corpo principal do documento. Inserção: Inserir > Nota de Rodapé (ou Ctrl+Alt+Enter) cria nota de rodapé; Inserir > Nota de Fim cria nota de fim. Numeração: o número é gerado automaticamente e pode ser configurado (formato numérico, alfabético ou romano) nas configurações de notas do documento. Referência cruzada: Inserir > Referência Cruzada > Tipo: Nota de Rodapé ou Nota de Fim > inserir no texto; a referência atualiza conforme a nota. Referências cruzadas entre notas permitem que o autor cite notas em outras partes do documento com atualização automática. A numeração das notas de rodapé e de fim é sequencial e independente entre tipos, podendo ser configurada em letras ou números; a referência cruzada deve apontar ao tipo correto (rodapé ou fim) para exibir a numeração adequada.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um relatório de quarenta páginas cita seis normas técnicas no corpo do texto. O aluno deve registrar as referências completas e numerá-las sem digitar números, de modo que uma inclusão posterior renumere tudo sozinha.",
+          "resposta": "Seis notas de rodapé numeradas automaticamente e a bibliografia em nota de fim com numeração própria; ao inserir uma sétima citação no meio do texto, as seguintes são renumeradas e as referências cruzadas acompanham a mudança."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno recebe um texto com cinco notas de rodapé e precisa acrescentar uma nota de fim que cite a norma principal, mantendo intactas as numerações que já existem.",
+          "resposta": "Documento com cinco notas de rodapé e uma nota de fim, cada sequência numerada de forma independente e estável, sem necessidade de renumerar nada à mão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um estagiário afirma que, para garantir que o documento fique igual em qualquer computador, deve digitar o número da nota de rodapé no corpo do texto e repetir esse mesmo número na lista de notas ao final.",
+          "correcao": "A afirmação é incorreta. A numeração manual quebra na primeira inserção, enquanto a numeração gerada por comando se mantém coerente em qualquer computador, porque é campo do documento e não texto digitado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual comando insere nota de rodapé? A) Inserir > Nota de Rodapé; B) Inserir > Citação; C) Inserir > Comentário.",
+          "resposta": "A"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A referência cruzada entre nota e texto atualiza automaticamente.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de inserir notas de rodapé e notas de fim e criará referências cruzadas entre elas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "inserirá notas de rodapé e notas de fim e criará referências cruzadas entre elas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "As notas de rodapé e as notas de fim são recursos de comentário editorial que mantêm informações fora do corpo principal do documento. Inserção: Inserir > Nota de Rodapé (ou Ctrl+Alt+Enter) cria nota de rodapé; Inserir > Nota de Fim cria nota de fim. Numeração: o número é gerado automaticamente e pode ser configurado (formato numérico, alfabético ou romano) nas configurações de notas do documento. Referência cruzada: Inserir > Referência Cruzada > Tipo: Nota de Rodapé ou Nota de Fim > inserir no…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Notas de rodapé e notas de fim",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário insere referência cruzada manualmente escrevendo o texto da nota.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: a referência deve ser criada via Inserir > Referência Cruzada com o tipo correto, para atualização automática."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um relatório de quarenta páginas cita seis normas técnicas no corpo do texto. O aluno deve registrar as referências completas e numerá-las sem digitar números, de modo que uma inclusão posterior renumere tudo sozinha.",
+            "dados": "Documento de 40 páginas em .docx, seis citações no corpo do texto, numeração de notas exigida em algarismos arábicos e uma lista de bibliografia já existente ao final.",
+            "conceitos": [
+              "nota de rodapé: comentário impresso no pé da página em que aparece a chamada",
+              "nota de fim: comentário reunido ao final do documento ou da seção",
+              "campo automático: numeração gerada pelo editor, que se reorganiza quando a ordem das notas muda"
+            ],
+            "estrategia": "Separar o que é comentário de página do que é referência reunida ao final e inserir cada tipo pelo comando próprio do editor, para que a numeração seja campo e não texto digitado.",
+            "execucao": [
+              "Posicionar o cursor imediatamente após o termo citado, sem espaço antes da chamada.",
+              "Usar Inserir > Inserir Nota de Rodapé (atalho Ctrl+Alt+Enter) nas seis citações de página; a sequência 1 a 6 é criada pelo próprio editor.",
+              "Para a bibliografia, usar Inserir > Inserir Nota de Fim, que mantém sequência independente da numeração das notas de rodapé.",
+              "Se outro trecho precisar remeter à mesma nota, usar Inserir > Referência Cruzada com o tipo correto (Nota de Rodapé ou Nota de Fim), nunca digitar o número à mão."
+            ],
+            "resultado": "Seis notas de rodapé numeradas automaticamente e a bibliografia em nota de fim com numeração própria; ao inserir uma sétima citação no meio do texto, as seguintes são renumeradas e as referências cruzadas acompanham a mudança.",
+            "justificativa": "A numeração de notas é campo do documento, e não texto: por isso a inserção pelo comando preserva a sequência lógica. Notas de rodapé e de fim têm sequências independentes e formato configurável, de modo que apontar a referência cruzada para o tipo errado exibe um número que não corresponde à chamada.",
+            "errosFrequentes": [
+              "Digitar o número da nota manualmente: a sequência deixa de acompanhar inserções e exclusões.",
+              "Criar a referência cruzada apontando para nota de fim quando a chamada é de nota de rodapé.",
+              "Simular nota de rodapé com Enter e linha horizontal, o que quebra a paginação e não cria campo algum."
+            ],
+            "variacao": "A revisão editorial passa a exigir numeração de notas em algarismos romanos. Indique onde essa configuração é alterada no documento e explique por que ela não reescreve o texto das chamadas já inseridas."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno recebe um texto com cinco notas de rodapé e precisa acrescentar uma nota de fim que cite a norma principal, mantendo intactas as numerações que já existem.",
+            "dados": "Cinco notas de rodapé numeradas de 1 a 5, exigência de uma única nota de fim, seção de bibliografia já formatada e nenhuma referência cruzada existente.",
+            "conceitos": [
+              "sequência independente: cada tipo de nota tem numeração própria",
+              "formato de numeração: configuração que define se a nota usa números, letras ou algarismos romanos",
+              "chamada da nota: marca no corpo do texto que remete ao comentário"
+            ],
+            "estrategia": "Inserir a nota de fim pelo comando específico de nota de fim, aceitando que ela abra a sequência 1 em seu próprio tipo, em vez de tentar continuar a numeração das notas de rodapé.",
+            "execucao": [
+              "Colocar o cursor ao final do trecho que será comentado e escolher Inserir > Inserir Nota de Fim.",
+              "Escrever o texto da nota na área de notas de fim, ao final do documento.",
+              "Conferir que as notas de rodapé continuam numeradas de 1 a 5 e que a nota de fim aparece como 1 na sua própria sequência.",
+              "Ajustar o formato de numeração das notas de fim, se a norma interna exigir algarismos romanos, nas configurações de notas do documento."
+            ],
+            "resultado": "Documento com cinco notas de rodapé e uma nota de fim, cada sequência numerada de forma independente e estável, sem necessidade de renumerar nada à mão.",
+            "justificativa": "As duas famílias de notas são coleções distintas: a numeração de cada uma depende apenas da ordem dentro do seu tipo. Por isso a nota de fim recém-inserida recebe o número 1 mesmo existindo cinco notas de rodapé, e qualquer tentativa de forçar a continuação da sequência produziria numeração incorreta.",
+            "errosFrequentes": [
+              "Tentar continuar a numeração das notas de rodapé na nota de fim.",
+              "Converter todas as notas de rodapé em notas de fim para uniformizar a numeração, alterando o layout das páginas.",
+              "Escrever a nota de fim no corpo do texto, sem chamada associada."
+            ],
+            "variacao": "A norma interna passa a exigir que a nota de fim seja referenciada em três pontos diferentes do texto. Descreva como criar as remissões sem duplicar a nota e o que acontece com a numeração se a nota for reordenada."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um estagiário afirma que, para garantir que o documento fique igual em qualquer computador, deve digitar o número da nota de rodapé no corpo do texto e repetir esse mesmo número na lista de notas ao final.",
+            "dados": "Documento com doze notas, dois revisores trabalhando em cópias distintas, sumário automático já inserido e três referências cruzadas para notas existentes.",
+            "conceitos": [
+              "texto digitado x campo: conteúdo fixo x conteúdo recalculado pelo editor",
+              "renumeração: reorganização automática da sequência quando a ordem muda",
+              "referência cruzada: remissão que acompanha a numeração da nota referida"
+            ],
+            "estrategia": "Reproduzir a consequência da numeração manual em um cenário com inserção de nota no meio do texto e comparar com o comportamento do campo automático.",
+            "execucao": [
+              "Inserir uma nova nota entre a terceira e a quarta posições do documento numerado à mão.",
+              "Observar que todas as notas seguintes ficam com número errado, porque o texto digitado não se altera.",
+              "Observar que as três referências cruzadas também apontam para números que não correspondem mais à chamada.",
+              "Repetir o teste com notas inseridas por comando e verificar que a sequência e as remissões se ajustam sem intervenção."
+            ],
+            "resultado": "A afirmação é incorreta. A numeração manual quebra na primeira inserção, enquanto a numeração gerada por comando se mantém coerente em qualquer computador, porque é campo do documento e não texto digitado.",
+            "justificativa": "A estabilidade do documento não vem de o número estar escrito, mas de ele ser calculado a partir da ordem das notas. Texto digitado não é atualizado pelo editor, e é justamente em documentos com muitos revisores e inserções frequentes que a numeração manual gera divergência entre chamada, nota e referência cruzada.",
+            "errosFrequentes": [
+              "Confundir estabilidade de exibição com correção da numeração.",
+              "Corrigir a divergência renumerando tudo à mão a cada revisão.",
+              "Remover as referências cruzadas para evitar inconsistência, perdendo a remissão automática."
+            ],
+            "variacao": "O documento é consolidado a partir de duas cópias com notas inseridas em ordens diferentes. Explique por que a consolidação por texto digitado produz conflito de numeração e qual procedimento mantém as sequências corretas."
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-2-topico-6-sub-1",
+      "titulo": "Quebra de página vs. quebra de seção",
+      "topicoTitulo": "Quebras de página e de seção",
+      "topicoId": "modulo-1-unidade-2-topico-6",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno distinguirá quebra de página e quebra de seção.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) quebra de página: o que faz (avançar conteúdo para a próxima página) e o que não faz (nada muda de formatação); (b) quebra de seção: as variações de formatação que habilita (orientação, margens, colunas, numeração, cabeçalhos/rodapés) e seus tipos (Próxima Página, Contínua, Pares, Ímpares); (c) o critério de escolha entre as duas; (d) a visualização de marcas e a remoção segura. POR QUE O CONHECIMENTO É IMPORTANTE: é a distinção mais cobrada da unidade de paginação — questões oferecem cenários (\"começar capítulo em página nova\" versus \"virar a página para paisagem no meio do documento\") e a alternativa errada troca as quebras; escolher a errada muda o gabarito e quebra o documento real. PRÉ-REQUISITOS: parágrafos e paginação (tópico 3); cabeçalhos e rodapés (tópico 5). OBJETIVOS OBSERVÁVEIS: (1) distinguir as duas quebras por consequência; (2) escolher o tipo correto de quebra de seção para o cenário; (3) aplicar orientação e margens por seção. COMPETÊNCIAS DESENVOLVIDAS: diagramação avançada; correção de documentos quebrados. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: cabeçalhos/rodapés (tópico 5 — vínculo entre seções); orientação/margens por seção (tópico 7 da unidade); relatório integrado (tópico 14). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: quebra de página (Layout > Quebras > Página, ou Ctrl+Enter) insere uma marca que força o conteúdo seguinte a começar na página seguinte; a formatação da página (margens, orientação, colunas, numeração, cabeçalho/rodapé) permanece idêntica — é apenas um avanço físico. Quebra de seção (Layout > Quebras > Quebras de Seção) inicia uma nova seção — unidade administrativa do documento que carrega suas próprias configurações de página: orientação (retrato/paisagem), margens, número de colunas, formato e reinício de numeração, cabeçalhos/rodapés (com desvinculação). Tipos: Próxima Página (a seção começa na página seguinte), Contínua (a seção começa na mesma página — típico para mudar o número de colunas no meio da página), Pares e Ímpares (a seção começa na próxima página par/ímpar, para encadernação). Critério de decisão: só a posição importa → quebra de página; a formatação precisa mudar → quebra de seção. Propriedades operacionais: as marcas são visíveis com as marcas de formatação exibidas; apagar a marca de seção funde as seções — a seção que sobra aplica suas configurações ao texto unido (efeito análogo à marca de parágrafo, mas com escala de página); apagar quebra de página apenas junta o texto, sem efeito de formatação. Caso-limite de prova: página única em paisagem no meio de um documento retrato exige quebra de seção Próxima Página antes e depois da página alvo + mudança de orientação — quebra de página não resolve.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir as duas marcas na tela (com marcas de formatação ativadas) e inserir quebra de página para novo capítulo.\n- Nível intermediário: criar seção Contínua para duas colunas no meio de uma página; explicar por que a página não virou.\n- Nível avançado: montar página única em paisagem com seções antes/depois; ajustar numeração e cabeçalhos entre seções.\n- Nível especialista: diagnosticar documento \"possuído\" por formatação indevida (marca de seção apagada sem critério) e restaurar a estrutura.\n\nCOMPARAÇÕES CRÍTICAS:\n- Quebra de página x quebra de seção: a de página só muda a posição; a de seção habilita mudanças de formatação — em \"mudar orientação no meio do documento\", o gabarito é seção.\n- Próxima Página x Contínua: Próxima Página inicia a seção em página nova; Contínua inicia na mesma página (colunas) — trocar os tipos muda o layout do resultado.\n- Apagar marca de página x marca de seção: apagar a de página apenas junta texto; apagar a de seção funde configurações e pode reformatar páginas inteiras — a alternativa que trata as duas remoções como equivalentes está errada.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"usar quebra de página para mudar as margens de uma parte do documento\" — Motivo: atribui à quebra de página efeito que pertence à seção — Versão tecnicamente correta: mudança de margens (e orientação, colunas, numeração) exige quebra de seção.\n- Afirmação errada: \"a quebra de seção Contínua inicia a nova seção na página seguinte\" — Motivo: troca entre tipos — Versão tecnicamente correta: Contínua inicia a seção na mesma página (ex.: colunas); Próxima Página é que inicia em página nova.\n- Afirmação errada: \"apagar a marca de seção não afeta a formatação\" — Motivo: ignora o carrego das configurações — Versão tecnicamente correta: apagar a marca funde as seções e a seção remanescente aplica suas configurações ao texto unido.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: quebra de página, quebra de seção, Próxima Página, Contínua, Pares/Ímpares, orientação, margens, colunas, numeração por seção.\n- Regras e fórmulas: só pular página → Página (Ctrl+Enter); mudar formatação de página → Seção; colunas no meio da página → seção Contínua; paisagem isolada → seções antes/depois + orientação.\n- Exceções: apagar marca de seção funde configurações; a nova seção herda cabeçalhos até a desvinculação.\n- Palavras-chave: quebra de página, quebra de seção, contínua, próxima página, orientação, margens, colunas, seção.\n- Checklist de domínio: distingo as quebras; escolho o tipo de seção; aplico orientação/margens por seção; prevejo o efeito de remover marcas.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Que quebra permite mudar cabeçalho por parte do documento? (2) Qual atalho insere quebra de página? (3) Como ter uma única página em paisagem dentro de um documento retrato? (4) Para que serve a quebra de seção Contínua? (5) O que acontece com a formatação ao apagar uma marca de seção?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Forçar o início de um novo capítulo na página seguinte.",
+          "resposta": "Layout > Quebras > Página (ou Ctrl+Enter) — o conteúdo seguinte começa na nova página sem qualquer mudança de formatação; se o capítulo também precisasse de cabeçalho/numeração próprios, aí sim entraria a quebra de seção."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Anexo com tabela larga precisa ficar em orientação paisagem no meio de um documento em retrato.",
+          "resposta": "Inserir quebra de seção Próxima Página antes da página do anexo > Layout > Orientação > Paisagem (aplicada à seção atual) > inserir outra quebra de seção Próxima Página após o anexo > voltar orientação Retrato. Resultado: apenas a página do anexo em paisagem; o resto do documento permanece em retrato, com numeração contínua (ajustável por seção)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Boletim precisa de duas colunas de texto apenas num bloco do meio da página, voltando a uma coluna em seguida.",
+          "resposta": "Duas quebras de seção Contínua (antes e depois do bloco) > com o cursor no bloco, Layout > Colunas > Duas. A seção Contínua muda a formatação sem empurrar o texto para outra página — exatamente o caso em que a quebra de página seria o recurso errado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário usa quebra de página para tentar mudar as margens de uma parte do documento.",
+          "correcao": "Incorreto: quebra de página apenas avança o conteúdo para a próxima página; mudança de margens (como orientação e colunas) exige quebra de seção, que cria uma unidade administrativa com formatação de página própria."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual quebra permite mudar o cabeçalho por parte do documento? A) Quebra de página; B) Quebra de seção; C) Quebra de coluna.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A quebra de seção contínua inicia a nova seção na mesma página.",
+          "resposta": "Certo. Contínua muda a formatação sem virar a página (ex.: colunas); Próxima Página é que inicia a seção em página nova."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para uma única página em paisagem no meio de um documento retrato, usa-se: A) Duas quebras de seção Próxima Página + orientação paisagem na seção central; B) Uma quebra de página + Ctrl+P; C) Reduzir as margens manualmente em cada parágrafo.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir quebra de página de quebra de seção, escolher o tipo correto de seção para o cenário e aplicar orientação/margens/colunas por seção, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá quebra de página e quebra de seção"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Quebra de página (Page Break) força o início de novo conteúdo na página seguinte, sem alterar formatação. Quebra de seção permite mudar formatação entre partes do documento: orientação (retrato/paisagem), margens, número de colunas, formato de numeração, cabeçalhos/rodapés específicos. Tipos: Início de seção (Next Page) começa na página seguinte; Início de seção (Continuous) começa na mesma página (usado para colunas). A escolha depende se apenas a localização importa (quebra de página) ou se a …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Quebra de página vs. quebra de seção",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário usa quebra de página para mudar margens.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: mudança de margens exige quebra de seção."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Forçar início de novo capítulo na página seguinte.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Layout > Quebras > Página (Page Break).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Criar seção com orientação paisagem no meio do documento.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Layout > Quebras > Próxima Página (seção) > Layout > Orientação > Paisagem (apenas essa seção).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário usa quebra de página para mudar margens.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: mudança de margens exige quebra de seção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

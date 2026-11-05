@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 1,
+    "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+    "parte": 2,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U1P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U1P2.js",
+    "idsCompletos": [
+      "modulo-1-unidade-1-topico-1-sub-3",
+      "modulo-1-unidade-1-topico-1-sub-4"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-1-topico-1-sub-3",
+      "titulo": "Aplicações Web, desktop e mobile",
+      "topicoTitulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+      "topicoId": "modulo-1-unidade-1-topico-1",
+      "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno distingirá versões web, desktop e mobile das aplicações Microsoft 365.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as três modalidades das aplicações do Microsoft 365 — Web (navegador), desktop (instalação local) e mobile (aplicativos para iOS/Android); (b) como cada modalidade se instala, se atualiza e se comporta offline; (c) como escolher a modalidade por cenário (tela pequena, ausência de internet, necessidade de recursos completos); (d) a regra de prudência: o conjunto de recursos varia por modalidade e por plano/licença. POR QUE O CONHECIMENTO É IMPORTANTE: a prova apresenta cenários (editar em tablet, trabalhar em voo, abrir no navegador de um quiosque) e pede a modalidade correta; afirmar que a versão mobile tem os recursos da desktop, ou que a web funciona sem internet, muda o gabarito. PRÉ-REQUISITOS: subtópico 1 (formas de obter o Office). OBJETIVOS OBSERVÁVEIS: (1) distinguir as três modalidades por funcionamento e limitações; (2) selecionar a modalidade adequada a um cenário; (3) reconhecer que recursos variam por modalidade e plano. COMPETÊNCIAS DESENVOLVIDAS: decisão de ferramenta por restrição de ambiente. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópicos 4 e 6 da unidade 1.1 (armazenamento e coautoria); unidade 1.5 (OneDrive). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: as três modalidades atendem ao mesmo objetivo — criar e editar documentos — em contextos diferentes. Aplicação Web: roda no navegador, sem instalação; oferece funcionalidades básicas; é atualizada automaticamente pelo serviço (o usuário não gerencia versão); depende de conexão com a internet — em algumas interfaces o trabalho pode iniciar sem rede, mas os recursos completos exigem acesso; o conjunto de recursos varia por navegador e por plano, a conferir na documentação oficial. Aplicação desktop: instalação local no computador; oferece funcionalidades completas; atualizações distribuídas pelo canal de atualização (Microsoft Update/serviço de atualização do Microsoft 365), conforme a versão e o canal configurados; funciona offline para edição — porém o salvamento em OneDrive/SharePoint e a coautoria exigem conexão. Aplicação mobile: aplicativos para iOS e Android otimizados para tela pequena; visão e edição básicas; sincronização com a nuvem; alguns recursos avançados dependem de assinatura e do plano — não afirmar limite ou cota. Ponto-chave: a mesma conta (pessoal ou organizacional) serve às três modalidades; o que muda é o conjunto de recursos por modalidade e por plano. Caso-limite para a prova: coautoria em tempo real exige arquivo em nuvem — arquivo puramente local no desktop não colabora, mesmo com aplicativo completo.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: relacionar cada modalidade ao dispositivo típico: navegador, computador, celular/tablet.\n- Nível intermediário: explicar atualização (automática na web, por canal no desktop, por loja no mobile) e o comportamento offline de cada uma.\n- Nível avançado: resolver cenário misto — editar offline no desktop e depois sincronizar; coautoria exige arquivo na nuvem.\n- Nível especialista: avaliar por que um recurso presente no desktop pode faltar na web ou no mobile (escopo da modalidade e plano/licença) e comunicar essa limitação sem afirmar cota.\n\nCOMPARAÇÕES CRÍTICAS:\n- Web x desktop: a web não exige instalação e atualiza sozinha, mas tem funcionalidades básicas e depende de internet; o desktop tem recursos completos e funciona offline — para \"todas as funções sem internet\", o gabarito é desktop.\n- Desktop x mobile: o desktop edita com recursos completos em tela grande; o mobile otimiza visualização e edição básica — afirmar paridade entre eles torna a alternativa errada.\n- Web x mobile: ambas são leves e sincronizam com a nuvem; a web roda no navegador de qualquer dispositivo e a mobile é aplicativo específico por sistema operacional — a alternativa que troca uma pela outra em cenário de \"navegador sem instalação\" está errada.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"a versão mobile tem todas as funções da versão desktop\" — Motivo: generalização falsa — Versão tecnicamente correta: o mobile oferece funcionalidades simplificadas, voltadas a visualização e edição básica.\n- Afirmação errada: \"a versão web funciona normalmente sem internet\" — Motivo: confunde modalidade web com desktop — Versão tecnicamente correta: a web roda no navegador e depende de conexão para seus recursos; a modalidade offline plena é a desktop.\n- Afirmação errada: \"o desktop dispensa internet para qualquer função\" — Motivo: termo absoluto — Versão tecnicamente correta: a edição local funciona offline, mas salvamento em OneDrive/SharePoint, sincronização e coautoria exigem conexão.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: aplicações Web, desktop e mobile; atualização automática; funcionamento offline; sincronização com a nuvem.\n- Regras e fórmulas: sem instalação e tela qualquer → web; recursos completos e offline → desktop; tela pequena e mobilidade → mobile.\n- Exceções: recursos variam por modalidade, navegador e plano/licença; coautoria exige arquivo em nuvem e conexão.\n- Palavras-chave: Office on the web, Ribbon desktop, aplicativo mobile, offline, sincronização, plano/licença.\n- Checklist de domínio: distingo as três modalidades; escolho a correta por cenário; explico offline por modalidade; não generalizo recursos entre planos.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Usuário precisa editar um documento em tablet sem instalar nada: qual modalidade e qual exigência de rede? (2) Trabalhador em voo sem internet precisa de todas as funções do Excel: qual modalidade? (3) Como a versão web é atualizada e quem gerencia essa atualização? (4) Por que a coautoria não funciona num arquivo salvo apenas localmente? (5) Corrija: \"o aplicativo mobile equivale ao desktop em recursos\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Usuário precisa editar um documento em tablet, sem instalar aplicativos.",
+          "resposta": "Usar a aplicação Web (Office on the web) pelo navegador — funcionalidades básicas e necessidade de conexão com a internet."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Trabalhador embarca em voo de três horas e precisa terminar uma planilha com funções completas do Excel.",
+          "resposta": "Aplicação desktop instalada: funciona offline com recursos completos. Preparação correta: antes de perder a conexão, abrir o arquivo (se estiver no OneDrive com cópia local disponível, ele já está baixado) e, ao recuperar a internet, deixar o cliente sincronizar as alterações. Alternativa: trabalhar em arquivo local e consolidar depois — lembrando que arquivo puramente local não tem coautoria nem histórico em nuvem."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Servidora recebe planilha por e-mail durante atendimento externo e precisa apenas conferir números e ajustar um valor.",
+          "resposta": "Aplicativo mobile: visualização e edição básica atendem ao ajuste simples; a sincronização com a nuvem devolve o arquivo atualizado ao ambiente de trabalho. Se a conferir envolver funções avançadas (tabela dinâmica, validação), a edição completa deve ficar para o desktop — a modalidade mobile não equivale à desktop em recursos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a versão mobile tem todas as funções da versão desktop.",
+          "correcao": "Incorreto: o mobile oferece funcionalidades simplificadas, voltadas a visualização e edição básica; recursos avançados podem ainda depender de assinatura/plano — conferir na documentação oficial."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual modalidade funciona offline com funcionalidades completas? A) Web; B) Mobile; C) Desktop.",
+          "resposta": "C"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) As aplicações Web do Microsoft 365 são atualizadas automaticamente pelo serviço.",
+          "resposta": "Certo. Na modalidade web o usuário não gerencia versão: a atualização é automática, pois a aplicação roda no navegador a partir do serviço."
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A versão web das aplicações Microsoft 365 exige instalação local do Office.",
+          "resposta": "Errado. A versão web roda no navegador, sem instalação; o que ela exige é conexão com a internet."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir as modalidades Web, desktop e mobile e de escolher a modalidade correta para um cenário com restrição de dispositivo ou de conexão, justificando por funcionamento offline e recursos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distingirá versões web, desktop e mobile das aplicações Microsoft 365"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as três modalidades das aplicações do Microsoft 365 — Web (navegador), desktop (instalação local) e mobile (aplicativos para iOS/Android); (b) como cada modalidade se instala, se atualiza e se comporta offline; (c) como escolher a modalidade por cenário (tela pequena, ausência de internet, necessidade de recursos completos); (d) a regra de prudência: o conjunto de recursos varia por modalidade e por plano/licença. POR QUE O CONHECIMENTO É IMPORT…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Aplicações Web, desktop e mobile",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que a versão mobile tem todas as funções da versão desktop.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: o mobile oferece funcionalidades simplificadas, voltadas a visualização e edição básica; recursos avançados podem ainda depender de assinatura/plano — conferir na documentação oficial."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Usuário precisa editar um documento em tablet, sem instalar aplicativos.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Usar a aplicação Web (Office on the web) pelo navegador — funcionalidades básicas e necessidade de conexão com a internet.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Trabalhador embarca em voo de três horas e precisa terminar uma planilha com funções completas do Excel.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Aplicação desktop instalada: funciona offline com recursos completos. Preparação correta: antes de perder a conexão, abrir o arquivo (se estiver no OneDrive com cópia local disponível, ele já está baixado) e, ao recuperar a internet, deixar o cliente sincronizar as alterações. Alternativa: trabalhar em arquivo local e consolidar depois — lembrando que arquivo puramente local não tem coautoria nem histórico em nuvem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que a versão mobile tem todas as funções da versão desktop.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: o mobile oferece funcionalidades simplificadas, voltadas a visualização e edição básica; recursos avançados podem ainda depender de assinatura/plano — conferir na documentação oficial.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-1-topico-1-sub-4",
+      "titulo": "Armazenamento local e em nuvem",
+      "topicoTitulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+      "topicoId": "modulo-1-unidade-1-topico-1",
+      "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá opções de armazenamento do Microsoft 365.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os três ambientes de armazenamento do Microsoft 365: OneDrive (nuvem por usuário), SharePoint (nuvem de equipe) e armazenamento local do dispositivo; (b) o que muda entre eles: acesso remoto, sincronização, histórico de versões e recuperação; (c) a condição para sincronização: cliente configurado (OneDrive Sync); (d) a regra de prudência: cotas dependem do plano/licença. POR QUE O CONHECIMENTO É IMPORTANTE: a prova pede o serviço correto para cada finalidade (arquivo pessoal versus biblioteca de equipe) e cobra a distinção entre local, sincronizado e em nuvem; afirmar cota universal ou supor que pasta local sincroniza sozinha muda o gabarito. PRÉ-REQUISITOS: subtópicos 1 e 3 (planos e modalidades de aplicação). OBJETIVOS OBSERVÁVEIS: (1) associar cada destino de armazenamento ao seu papel; (2) explicar o que a sincronização adiciona ao arquivo local; (3) reconhecer que cotas variam por plano. COMPETÊNCIAS DESENVOLVIDAS: escolha de destino de armazenamento; avaliação de risco de perda de dados. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópicos 6 (salvamento automático e versões) e 8 (permissões); unidade 1.5 (OneDrive); Módulo 4 (backup e continuidade). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: o dado no Microsoft 365 pode residir em três lugares com propriedades distintas. Armazenamento local: arquivos no disco do dispositivo; acesso rápido e funcionamento sem rede, mas sem acesso remoto, sem histórico em nuvem e sujeitos a falha do disco — a recuperação depende de backup externo. OneDrive: armazenamento em nuvem por usuário, integrado ao Microsoft 365; oferece acesso de qualquer dispositivo conectado, histórico de versões e recuperação de arquivos; a cota de armazenamento varia conforme o plano/licença — planos Enterprise costumam oferecer cotas superiores às pessoais, mas o valor exato deve ser conferido na documentação oficial do plano. SharePoint: armazenamento de equipe/colaborativo (bibliotecas de documentos), com permissões geridas por administradores e integração com o trabalho em grupo. Sincronização: o cliente OneDrive (Sync) mantém cópia local alinhada à nuvem, em ambas as direções; sem cliente configurado, uma pasta local não sincroniza com nada — sincronização é comportamento do cliente, não do disco. Fluxo típico: arquivo criado numa pasta sincronizada é gravado localmente, o cliente envia à nuvem e outras máquinas conectadas recebem a atualização. Limitações: sincronização não é backup imutável (alterações se propagam; o tema de backup separado é tratado no Módulo 4); recursos e cotas variam por plano — conferir na documentação oficial.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir \"arquivo no meu computador\" de \"arquivo na nuvem\" e quem consegue ver cada um.\n- Nível intermediário: explicar o papel do cliente de sincronização e o que acontece com um arquivo numa pasta sincronizada após edição offline.\n- Nível avançado: escolher destino por cenário: arquivo pessoal (OneDrive), biblioteca compartilhada com permissões (SharePoint), dado sensível sem nuvem (local com backup externo).\n- Nível especialista: avaliar risco: por que sincronização não substitui backup (propagação de alterações e de ransomware) e como combinar camadas de proteção.\n\nCOMPARAÇÕES CRÍTICAS:\n- OneDrive x SharePoint: OneDrive é espaço por usuário; SharePoint é espaço de equipe com permissões administradas — para \"biblioteca compartilhada de documentos da equipe\", o gabarito é SharePoint.\n- Local x sincronizado: o local existe só no dispositivo; o sincronizado mantém cópia local e nuvem alinhadas — depois de perder o dispositivo, só a cópia sincronizada sobrevive.\n- Sincronização x backup: sincronização propaga alterações (inclusive indesejadas) em ambas as direções; backup é cópia independente — a alternativa que trata OneDrive como backup completo está errada.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"o armazenamento local sincroniza automaticamente com a nuvem\" — Motivo: atribui comportamento de cliente ao disco — Versão tecnicamente correta: sincronizar exige o cliente OneDrive configurado com a pasta; armazenamento puramente local não sincroniza.\n- Afirmação errada: \"a cota do OneDrive é a mesma em todos os planos\" — Motivo: termo absoluto — Versão tecnicamente correta: a cota varia conforme o plano/licença; planos Enterprise costumam ser superiores aos pessoais e o valor exato deve ser conferido na documentação oficial.\n- Afirmação errada: \"guardar no OneDrive dispensa qualquer backup\" — Motivo: confunde sincronização com cópia independente — Versão tecnicamente correta: o OneDrive oferece versões e recuperação, mas não substitui estratégia de backup separada (Módulo 4).\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: armazenamento local, OneDrive (por usuário), SharePoint (equipe), cliente de sincronização, histórico de versões, recuperação de arquivos.\n- Regras e fórmulas: arquivo pessoal e individual → OneDrive; biblioteca de equipe com permissões → SharePoint; sem rede → local (com risco).\n- Exceções: cotas variam por plano/licença; sincronização exige cliente configurado; sincronização não é backup.\n- Palavras-chave: OneDrive, SharePoint, sincronização, cota, plano/licença, histórico de versões, recuperação.\n- Checklist de domínio: atribuo cada destino ao seu papel; explico a condição de sincronização; não afirmo cota sem plano; distingo sincronização de backup.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual serviço oferece armazenamento de equipe com permissões geridas por administradores? (2) O que é preciso para que uma pasta local sincronize com o OneDrive? (3) Um usuário editou offline um arquivo de pasta sincronizada: o que acontece ao reconectar? (4) Por que não se pode afirmar uma cota universal para o OneDrive? (5) Corrija: \"armazenamento local sincroniza sozinho com a nuvem\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Empresa com 100 usuários precisa de armazenamento em nuvem por usuário, com escala organizacional.",
+          "resposta": "OneDrive no contexto organizacional (planos Enterprise): armazenamento por usuário com integração ao Microsoft 365; a cota por usuário varia conforme o plano/licença contratado — planos Enterprise costumam oferecer cotas superiores às pessoais, com o valor exato a confirmar na documentação oficial do plano."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Equipe de 12 pessoas precisa de biblioteca de documentos compartilhada, com permissões definidas pela administração.",
+          "resposta": "SharePoint (biblioteca de documentos de equipe), integrado ao Microsoft 365: as permissões de leitura/edição são geridas no contexto do site de equipe, e o acesso pode ser feito também pelo Teams. Regra prática: documento individual → OneDrive do autor; material de equipe com controle de acesso → SharePoint."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Analista editou durante a viagem um arquivo localizado numa pasta sincronizada com o OneDrive, sem internet.",
+          "resposta": "A edição foi gravada na cópia local; ao reconectar, o cliente OneDrive comparou as versões e enviou as alterações à nuvem, e outros dispositivos conectados receberam a atualização. Precaução: se o dispositivo tivesse sido perdido na viagem, só sobreviveria a última versão sincronizada — daí o valor do histórico de versões e de backup separado para dados críticos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que o armazenamento local sincroniza automaticamente com a nuvem.",
+          "correcao": "Incorreto: a sincronização exige o cliente OneDrive (Sync) configurado apontando para a pasta; armazenamento puramente local não sincroniza — nem faz parte do histórico de versões em nuvem."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual serviço oferece armazenamento de equipe no Microsoft 365? A) OneDrive pessoal; B) SharePoint; C) Conversa do Teams.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A cota de armazenamento do OneDrive é a mesma em todos os planos.",
+          "resposta": "Errado. A cota varia conforme o plano/licença; planos Enterprise podem ter cotas superiores às pessoais e o valor exato deve ser conferido na documentação oficial do plano."
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Uma pasta local em qualquer computador sincroniza com o OneDrive apenas por estar conectada à internet.",
+          "resposta": "Errado. Conexão não basta: a pasta precisa estar sob a gestão do cliente de sincronização (OneDrive Sync) configurado; pasta local fora do cliente não sincroniza."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de associar OneDrive, SharePoint e armazenamento local aos seus papéis, explicar a condição do cliente de sincronização e reconhecer que cotas variam por plano, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá opções de armazenamento do Microsoft 365"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "OneDrive (armazenamento em nuvem por usuário, com cota conforme o plano — planos Enterprise oferecem cotas superiores aos planos pessoais; valor exato depende do plano contratado e deve ser conferido na documentação oficial), SharePoint (armazenamento de equipe/colaborativo), armazenamento local. Integração: sincronização automática, acesso remoto, histórico de versões, recuperação de arquivos.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Armazenamento local e em nuvem",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que armazenamento local sincroniza automaticamente com a nuvem.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: sincronização exige cliente (OneDrive Sync) configurado; armazenamento puramente local não sincroniza."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Empresa com 100 usuários precisa de armazenamento em nuvem por usuário adequado à escala da organização.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "OneDrive for Business (plano Enterprise) — a cota de armazenamento por usuário varia conforme o plano/licença contratado; planos Enterprise costumam oferecer cotas superiores ao plano pessoal, com o valor exato a confirmar na documentação oficial do plano.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Equipe precisa de biblioteca compartilhada de documentos.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "SharePoint (armazenamento de equipe) integrado ao M365.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que armazenamento local sincroniza automaticamente com a nuvem.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: sincronização exige cliente (OneDrive Sync) configurado; armazenamento puramente local não sincroniza.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

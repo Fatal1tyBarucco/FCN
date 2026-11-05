@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 4,
+    "unidadeTitulo": "8.4 Ferramentas de Análise e Business Intelligence",
+    "parte": 1,
+    "totalPartesUnidade": 2,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U4P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U4P1.js",
+    "idsCompletos": [
+      "m8-u4-t1-s1",
+      "m8-u4-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u4-t1-s1",
+      "titulo": "Power BI, Power Query e DAX em nível conceitual",
+      "topicoTitulo": "Power BI, Power Query e fundamentos de DAX",
+      "topicoId": "modulo-8-unidade-4-topico-1",
+      "unidadeTitulo": "8.4 Ferramentas de Análise e Business Intelligence",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno descreverá o papel de cada componente e construirá uma medida conceitual em linguagem de BI.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) Power BI, Power Query e fundamentos de DAX; (b) modelagem analítica básica; (c) dimensões, medidas, filtros e agregações; (d) diferenças entre recursos gratuitos e comerciais. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre Power BI Desktop (gratuito) e serviço em nuvem (licença), e os conceitos de dimensão e medida; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de dados e de visualização. OBJETIVOS OBSERVÁVEIS: (1) descrever Power BI, Power Query e DAX em nível conceitual; (2) explicar modelagem analítica; (3) distinguir dimensão de medida; (4) diferenciar recursos gratuitos e comerciais. COMPETÊNCIAS DESENVOLVIDAS: análise de ferramentas de BI; desenho de modelo analítico. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.4 (comparação); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: Power BI como plataforma de análise e visualização, com Power BI Desktop (gratuito, para criação) e serviço em nuvem (publicação e compartilhamento, sujeito a licença); Power Query como ferramenta de extração, transformação e carga (ETL) com interface visual; DAX (Data Analysis Expressions) como linguagem de fórmulas para medidas e colunas calculadas; modelagem analítica básica: tabela fato (medidas) e tabelas dimensão (contexto); dimensão como atributo descritivo (produto, região, data); medida como valor numérico agregável (vendas, quantidade); filtros e agregações (soma, média, contagem); diferença entre recursos gratuitos e comerciais: o Desktop é gratuito para uso individual; a publicação e o compartilhamento em nuvem dependem de licença (depende do plano/versão; conferir na documentação oficial). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender o fluxo dados → modelo → painel.\n- Nível intermediário: distinguir dimensão de medida e explicar DAX.\n- Nível avançado: modelar esquema estrela.\n- Nível especialista: avaliar limitações e governança.\nCOMPARAÇÕES CRÍTICAS:\n- Power BI Desktop x serviço em nuvem: Desktop gratuito para criação; nuvem para publicação e compartilhamento, sujeito a licença.\n- dimensão x medida: dimensão descreve; medida quantifica.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Power BI é totalmente gratuito\" — Motivo: publicação e compartilhamento dependem de licença — Versão tecnicamente correta: Desktop gratuito; nuvem sujeita a licença.\n- Afirmação errada: \"DAX é igual a fórmulas do Excel\" — Motivo: DAX opera em colunas e tabelas, com contexto de filtro — Versão tecnicamente correta: linguagem própria de modelagem.\n- Afirmação errada: \"medida e coluna calculada são a mesma coisa\" — Motivo: medida é avaliada no contexto de filtro; coluna calculada é por linha — Versão tecnicamente correta: conceitos distintos.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Power BI, Power Query, DAX, modelo, dimensão, medida, filtro, agregação.\n- Regras e mecanismos: Desktop gratuito; nuvem sujeita a licença; DAX para medidas e colunas calculadas.\n- Exceções: limites dependem do plano/versão; conferir documentação oficial.\n- Palavras-chave: Power BI, Power Query, DAX, dimensão, medida, filtro, agregação.\n- Checklist de domínio: (1) Descrevo Power BI/Power Query/DAX? (2) Explico modelagem analítica? (3) Distingo dimensão de medida? (4) Diferencio recursos gratuitos e comerciais?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é Power BI Desktop? (2) O que é Power Query? (3) O que é DAX? (4) Qual a diferença entre dimensão e medida? (5) Quais recursos dependem de licença?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Em que momento o Power Query roda em relação ao carregamento dos dados?",
+          "resposta": "Os passos de transformação são definidos antes/atualização e executados quando a consulta é atualizada — em geral o fluxo é extrair e transformar no editor, carregando o resultado para o modelo. A ordem exata de execução e as opções de carga dependem da configuração e da versão: declare-a ao descrever o fluxo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Escrever o conceito de uma medida 'Ticket médio' sobre faturamento e quantidade.",
+          "resposta": "TicketMedio = Soma(Faturamento) ÷ Soma(Quantidade) — a agregação correta é somar ANTES de dividir; dividir a soma pela contagem de linhas erraria quando cada linha tem quantidade diferente de 1. A medida se recalcula por recorte (por loja, por mês) graças ao contexto de filtro."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Em DAX, a média de uma coluna calculada por linha é sempre igual à média do agregado.'",
+          "correcao": "Errado. Média linha a linha (por exemplo, Faturamento ÷ Quantidade em cada linha) e média agregada (Soma(Faturamento) ÷ Soma(Quantidade)) diferem quando as quantidades variam — é a mesma armadilha da média de médias vista em agregação."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O Power Query registra os passos de transformação, permitindo reexecutar o processo a cada atualização.",
+          "resposta": "Certo. A consulta é um script declarativo de passos, não um ajuste manual descartável."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Em linguagem de BI, o recorte aplicado pelos filtros do relatório que afeta o cálculo de medidas é: A) contexto de linha; B) contexto de filtro; C) contexto de segurança; D) contexto de exportação.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever o papel de cada componente e construirá uma medida conceitual em linguagem de BI, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá o papel de cada componente e construirá uma medida conceitual em linguagem de BI"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) Power BI, Power Query e fundamentos de DAX; (b) modelagem analítica básica; (c) dimensões, medidas, filtros e agregações; (d) diferenças entre recursos gratuitos e comerciais. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre Power BI Desktop (gratuito) e serviço em nuvem (licença), e os conceitos de dimensão e medida; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de dados e de visualização. OBJETIVOS OBSERVÁVEIS: (1…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Power BI, Power Query e DAX em nível conceitual",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Em DAX, a média de uma coluna calculada por linha é sempre igual à média do agregado.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Média linha a linha (por exemplo, Faturamento ÷ Quantidade em cada linha) e média agregada (Soma(Faturamento) ÷ Soma(Quantidade)) diferem quando as quantidades variam — é a mesma armadilha da média de médias vista em agregação."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Em que momento o Power Query roda em relação ao carregamento dos dados?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Os passos de transformação são definidos antes/atualização e executados quando a consulta é atualizada — em geral o fluxo é extrair e transformar no editor, carregando o resultado para o modelo. A ordem exata de execução e as opções de carga dependem da configuração e da versão: declare-a ao descrever o fluxo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Escrever o conceito de uma medida 'Ticket médio' sobre faturamento e quantidade.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "TicketMedio = Soma(Faturamento) ÷ Soma(Quantidade) — a agregação correta é somar ANTES de dividir; dividir a soma pela contagem de linhas erraria quando cada linha tem quantidade diferente de 1. A medida se recalcula por recorte (por loja, por mês) graças ao contexto de filtro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Em DAX, a média de uma coluna calculada por linha é sempre igual à média do agregado.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Média linha a linha (por exemplo, Faturamento ÷ Quantidade em cada linha) e média agregada (Soma(Faturamento) ÷ Soma(Quantidade)) diferem quando as quantidades variam — é a mesma armadilha da média de médias vista em agregação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u4-t2-s1",
+      "titulo": "Tableau (Desktop, Public, Prep) e Looker Studio",
+      "topicoTitulo": "Tableau e Looker Studio",
+      "topicoId": "modulo-8-unidade-4-topico-2",
+      "unidadeTitulo": "8.4 Ferramentas de Análise e Business Intelligence",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno comparará ferramentas de visualização por modelo de acesso, preparação de dados e publicação.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) Tableau (Desktop, Public, Prep) e Looker Studio; (b) comparação de recursos, limitações, integração, governança; (c) diferença entre recursos gratuitos e comerciais; (d) exemplos que não dependam de conta comercial. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre edições gratuitas e comerciais e os cenários de uso; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de visualização e de BI. OBJETIVOS OBSERVÁVEIS: (1) descrever Tableau e Looker Studio; (2) comparar recursos e limitações; (3) diferenciar gratuitos e comerciais. COMPETÊNCIAS DESENVOLVIDAS: análise de ferramentas; escolha de ferramenta. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.4 (comparação); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: Tableau Desktop (comercial, para criação), Tableau Public (gratuito, com publicação pública), Tableau Prep (preparação de dados); Looker Studio (gratuito, baseado em web, integração com fontes Google e outras); comparação: Tableau tem forte visualização interativa e preparação de dados; Looker Studio é gratuito e integrado a fontes web; limitações: Tableau Desktop requer licença; Tableau Public publica dados publicamente; Looker Studio depende de conectores e pode ter limites de atualização; integração e governança: controle de acesso, versionamento, compartilhamento; exemplos didáticos: usar Tableau Public ou Looker Studio para não depender de conta comercial. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: conhecer as ferramentas e suas edições.\n- Nível intermediário: comparar recursos e limitações.\n- Nível avançado: escolher ferramenta conforme cenário.\n- Nível especialista: avaliar governança e integração.\nCOMPARAÇÕES CRÍTICAS:\n- Tableau Desktop x Tableau Public: Desktop comercial com publicação controlada; Public gratuito com publicação pública.\n- Tableau x Looker Studio: Tableau com visualização interativa avançada; Looker Studio gratuito e baseado em web.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Tableau é gratuito\" — Motivo: Desktop requer licença; apenas Public é gratuito — Versão tecnicamente correta: distinguir edições.\n- Afirmação errada: \"Looker Studio requer licença paga\" — Motivo: é gratuito — Versão tecnicamente correta: gratuito, com limites de conectores.\n- Afirmação errada: \"qualquer ferramenta serve para qualquer cenário\" — Motivo: limitações e governança diferem — Versão tecnicamente correta: escolher conforme cenário.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Tableau Desktop, Tableau Public, Tableau Prep, Looker Studio, licença, governança.\n- Regras e mecanismos: Desktop comercial; Public gratuito com publicação pública; Looker Studio gratuito.\n- Exceções: limites dependem do plano/versão; conferir documentação oficial.\n- Palavras-chave: Tableau, Looker Studio, licença, governança, integração.\n- Checklist de domínio: (1) Descrevo Tableau e Looker Studio? (2) Comparo recursos? (3) Diferencio gratuitos e comerciais? (4) Escolho conforme cenário?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais as edições do Tableau? (2) O que é Tableau Public? (3) O que é Looker Studio? (4) Quais recursos dependem de licença? (5) Como escolher a ferramenta?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Cenário: analista quer publicar painel com dados de servidores (dados pessoais). Tableau Public ou Desktop?",
+          "resposta": "Nem Tableau Public: a publicação pública exporia dado pessoal. O caminho é ferramenta com publicação controlada (Desktop para autoria local, ou painel no serviço da organização com controle de acesso), alinhado às regras de proteção do M7."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Escola quer painel simples ligado a planilha, sem instalação e sem custo inicial. Qual caminho conceitual?",
+          "resposta": "Ferramenta de painel em navegador com conector de planilha (Looker Studio é o exemplo deste perfil). Cuidados: confirmar quem terá acesso, proteger a planilha de origem e lembrar que a dependência de conexão/compartilhamento segue as regras da conta usada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A edição gratuita de qualquer ferramenta de BI atende igualmente uma prefeitura com dados sensíveis.'",
+          "correcao": "Errado. Edições gratuitas frequentemente limitam publicação, controle de acesso, auditoria ou exigem área pública. Para dado sensível, o critério é governança e controle de acesso — nem sempre disponíveis na edição gratuita; por isso a dependência de licença deve ser declarada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Tableau Public publica em área acessível publicamente, o que a torna inadequada para dados sensíveis.",
+          "resposta": "Certo. É a característica que define a edição gratuita e condiciona o uso."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual característica associa-se ao perfil do Looker Studio? A) instalação obrigatória no servidor; B) painel em navegador com conectores a fontes; C) licença exclusiva por servidor; D) ausência total de conectores.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de comparar ferramentas de visualização por modelo de acesso, preparação de dados e publicação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "comparará ferramentas de visualização por modelo de acesso, preparação de dados e publicação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) Tableau (Desktop, Public, Prep) e Looker Studio; (b) comparação de recursos, limitações, integração, governança; (c) diferença entre recursos gratuitos e comerciais; (d) exemplos que não dependam de conta comercial. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre edições gratuitas e comerciais e os cenários de uso; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de visualização e de BI. OBJETIVOS OBSERVÁVEIS: (1) des…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Tableau (Desktop, Public, Prep) e Looker Studio",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A edição gratuita de qualquer ferramenta de BI atende igualmente uma prefeitura com dados sensíveis.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Edições gratuitas frequentemente limitam publicação, controle de acesso, auditoria ou exigem área pública. Para dado sensível, o critério é governança e controle de acesso — nem sempre disponíveis na edição gratuita; por isso a dependência de licença deve ser declarada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Cenário: analista quer publicar painel com dados de servidores (dados pessoais). Tableau Public ou Desktop?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Nem Tableau Public: a publicação pública exporia dado pessoal. O caminho é ferramenta com publicação controlada (Desktop para autoria local, ou painel no serviço da organização com controle de acesso), alinhado às regras de proteção do M7.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Escola quer painel simples ligado a planilha, sem instalação e sem custo inicial. Qual caminho conceitual?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ferramenta de painel em navegador com conector de planilha (Looker Studio é o exemplo deste perfil). Cuidados: confirmar quem terá acesso, proteger a planilha de origem e lembrar que a dependência de conexão/compartilhamento segue as regras da conta usada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A edição gratuita de qualquer ferramenta de BI atende igualmente uma prefeitura com dados sensíveis.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Edições gratuitas frequentemente limitam publicação, controle de acesso, auditoria ou exigem área pública. Para dado sensível, o critério é governança e controle de acesso — nem sempre disponíveis na edição gratuita; por isso a dependência de licença deve ser declarada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

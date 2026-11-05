@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 2,
+    "unidadeTitulo": "5.2 Aprendizado de máquina",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U2P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U2P3.js",
+    "idsCompletos": [
+      "m5-u2-t2-s2",
+      "m5-u2-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u2-t2-s2",
+      "titulo": "Separação treino/validação/teste e vazamento de dados",
+      "topicoTitulo": "Preparação de dados: atributos, separação e desbalanceamento",
+      "topicoId": "modulo-5-unidade-2-topico-2",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno detectará vazamento de dados em cenários concretos e corrigirá a separação dos conjuntos.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a separação treino/validação/teste no contexto de ML supervisionado; (b) o vazamento de dados (data leakage) e suas fontes; (c) a validação cruzada; (d) a ordem correta das operações. POR QUE O CONHECIMENTO É IMPORTANTE: a avaliação inválida é a causa mais comum de modelo que funciona na prova e falha em produção; a prova cobra a distinção entre conjuntos e o vazamento. PRÉ-REQUISITOS: conceitos de modelo e erro. OBJETIVOS OBSERVÁVEIS: (1) descrever o papel de treino, validação e teste; (2) explicar vazamento; (3) aplicar validação cruzada; (4) ordenar operações. COMPETÊNCIAS DESENVOLVIDAS: desenho de experimento; auditoria de pipeline. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (generalização); unidade 5.2 (métricas); Módulo 7 (qualidade). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: treino ajusta parâmetros; validação seleciona modelo e hiperparâmetros; teste estima a generalização final, usado uma única vez; vazamento de dados como uso de informação indisponível no momento da previsão, inflando a métrica; fontes: alvo como atributo, pré-processamento ajustado em todo o conjunto, seleção de atributos antes da divisão, dados futuros; validação cruzada (k-fold) para estimativa mais estável; ordem correta: dividir primeiro, ajustar pré-processamento apenas no treino, aplicar aos demais; teste intocado até o fim. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender por que se separa os dados.\n- Nível intermediário: explicar o papel de cada conjunto e a validação cruzada.\n- Nível avançado: identificar vazamento em um pipeline.\n- Nível especialista: auditar um experimento completo.\nCOMPARAÇÕES CRÍTICAS:\n- validação x teste: validação guia decisões; teste estima o resultado final.\n- vazamento x overfitting: vazamento infla métrica por informação indevida; overfitting memoriza ruído.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"usar o teste para escolher modelo é aceitável\" — Motivo: invalida a estimativa final — Versão tecnicamente correta: teste usado uma única vez.\n- Afirmação errada: \"pré-processamento pode ser ajustado em todos os dados\" — Motivo: causa vazamento — Versão tecnicamente correta: ajustar apenas no treino.\n- Afirmação errada: \"validação cruzada substitui o conjunto de teste\" — Motivo: a validação cruzada avalia modelos, mas uma avaliação final independente ainda é necessária — Versão tecnicamente correta: manter teste separado.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: treino, validação, teste, vazamento, validação cruzada, pipeline.\n- Regras e fórmulas: dividir antes de qualquer ajuste; teste intocado até o fim.\n- Exceções: em bases muito pequenas, validação cruzada aninhada pode substituir, com custo.\n- Palavras-chave: treino, validação, teste, vazamento, validação cruzada.\n- Checklist de domínio: (1) Descrevo o papel de cada conjunto? (2) Identifico vazamento? (3) Aplico validação cruzada? (4) Ordeno operações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual o papel de treino, validação e teste? (2) O que é vazamento e suas fontes? (3) Por que o teste deve ser usado uma única vez? (4) Como a validação cruzada estima desempenho? (5) Em que ordem se divide e se pré-processa?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Acurácia de 99,9% em teste e 70% em produção. Quais hipóteses investigar?",
+          "resposta": "Vazamento (atributo do futuro, ajuste prévio no conjunto inteiro, duplicatas), não apenas overfitting. Auditar linhagem: o que o modelo usa e quando aquela informação passa a existir."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Equipe padronizou atributos com média e desvio calculados em TODA a base, depois dividiu em treino/teste. Correção?",
+          "resposta": "Dividir PRIMEIRO e ajustar o padronizador apenas no treinamento, aplicando-o em seguida ao teste (pipeline de pré-processamento dentro da validação) — a estatística do teste não pode informar o treino."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Vazamento é o mesmo que overfitting.'",
+          "correcao": "Errado. Overfitting: modelo decora o treino (correção: regularizar/simplificar). Vazamento: informação proibida entra nos dados (correção: remover a fonte e refazer o fluxo). Métricas vazadas exigem reavaliação do zero."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Estatísticas de padronização devem ser calculadas apenas no conjunto de treinamento.",
+          "resposta": "Certo. Calcular no conjunto inteiro é vazamento: informação do teste influencia o treino e infla a métrica."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Vazar informação do futuro para o modelo é chamado de: A) underfitting; B) vazamento de dados (leakage); C) drift; D) regressão.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de detectar vazamento de dados em cenários concretos e corrigirá a separação dos conjuntos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "detectará vazamento de dados em cenários concretos e corrigirá a separação dos conjuntos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a separação treino/validação/teste no contexto de ML supervisionado; (b) o vazamento de dados (data leakage) e suas fontes; (c) a validação cruzada; (d) a ordem correta das operações. POR QUE O CONHECIMENTO É IMPORTANTE: a avaliação inválida é a causa mais comum de modelo que funciona na prova e falha em produção; a prova cobra a distinção entre conjuntos e o vazamento. PRÉ-REQUISITOS: conceitos de modelo e erro. OBJETIVOS OBSERVÁVEIS: (1) descr…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Separação treino/validação/teste e vazamento de dados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Vazamento é o mesmo que overfitting.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Overfitting: modelo decora o treino (correção: regularizar/simplificar). Vazamento: informação proibida entra nos dados (correção: remover a fonte e refazer o fluxo). Métricas vazadas exigem reavaliação do zero."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Acurácia de 99,9% em teste e 70% em produção. Quais hipóteses investigar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Vazamento (atributo do futuro, ajuste prévio no conjunto inteiro, duplicatas), não apenas overfitting. Auditar linhagem: o que o modelo usa e quando aquela informação passa a existir.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Equipe padronizou atributos com média e desvio calculados em TODA a base, depois dividiu em treino/teste. Correção?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dividir PRIMEIRO e ajustar o padronizador apenas no treinamento, aplicando-o em seguida ao teste (pipeline de pré-processamento dentro da validação) — a estatística do teste não pode informar o treino.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Vazamento é o mesmo que overfitting.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Overfitting: modelo decora o treino (correção: regularizar/simplificar). Vazamento: informação proibida entra nos dados (correção: remover a fonte e refazer o fluxo). Métricas vazadas exigem reavaliação do zero.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u2-t2-s3",
+      "titulo": "Desbalanceamento de classes",
+      "topicoTitulo": "Preparação de dados: atributos, separação e desbalanceamento",
+      "topicoId": "modulo-5-unidade-2-topico-2",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno diagnosticará desbalanceamento, avaliará acurácia enganosa e comparará técnicas de tratamento com seus efeitos colaterais.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o problema do desbalanceamento de classes; (b) métricas adequadas (precisão, recall, F1, AUC-PR); (c) técnicas de reamostragem (oversampling, undersampling, SMOTE); (d) ajuste de limiar; (e) custo de erro assimétrico. POR QUE O CONHECIMENTO É IMPORTANTE: em fraudes, doenças raras e triagem, a classe minoritária é a que importa, e a acurácia global esconde o fracasso; a prova cobra a escolha de métrica e técnica. PRÉ-REQUISITOS: matriz de confusão e métricas de classificação. OBJETIVOS OBSERVÁVEIS: (1) identificar desbalanceamento; (2) escolher métrica adequada; (3) selecionar técnica de reamostragem; (4) ajustar limiar conforme custo. COMPETÊNCIAS DESENVOLVIDAS: análise de problema desbalanceado; decisão de política de erro. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.2 (métricas); Módulo 7 (qualidade de dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: definição de desbalanceamento como distribuição muito desigual entre classes; por que a acurácia global é enganosa (modelo que sempre prevê a classe majoritária tem acurácia alta); métricas adequadas: precisão, recall, F1, especificidade, AUC-PR (área sob a curva precisão-recall); técnicas de reamostragem: oversampling da minoritária (com risco de overfitting), undersampling da majoritária (perda de informação), SMOTE (geração sintética de exemplos minoritários); ajuste de limiar de decisão (mover o corte para favorecer recall ou precisão); custo de erro assimétrico (falso negativo versus falso positivo) e sua relação com a política do órgão. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: perceber que acurácia alta pode esconder fracasso.\n- Nível intermediário: escolher métrica e técnica de reamostragem.\n- Nível avançado: ajustar limiar conforme custo de erro.\n- Nível especialista: integrar desbalanceamento, custo e governança.\nCOMPARAÇÕES CRÍTICAS:\n- oversampling x undersampling: o primeiro preserva dados mas pode overfitar; o segundo equilibra mas perde informação.\n- acurácia x F1: a acurácia global esconde a classe minoritária; o F1 foca na classe de interesse.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"acurácia alta resolve desbalanceamento\" — Motivo: não considera a classe minoritária — Versão tecnicamente correta: usar métricas por classe.\n- Afirmação errada: \"SMOTE sempre melhora\" — Motivo: pode criar exemplos irreais e overfitting — Versão tecnicamente correta: validar em dados reais.\n- Afirmação errada: \"ajustar limiar é manipulação\" — Motivo: é decisão de política de erro — Versão tecnicamente correta: limiar deve refletir custo real.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: desbalanceamento, acurácia enganosa, precisão, recall, F1, AUC-PR, oversampling, undersampling, SMOTE, limiar.\n- Regras e fórmulas: F1 = 2·P·R/(P+R); recall = TP/(TP+FN); precisão = TP/(TP+FP).\n- Exceções: em casos extremos, coletar mais dados da minoritária pode ser a única solução.\n- Palavras-chave: desbalanceamento, minoritária, acurácia, precisão, recall, F1, SMOTE, limiar.\n- Checklist de domínio: (1) Identifico desbalanceamento? (2) Escolho métrica adequada? (3) Seleciono técnica de reamostragem? (4) Ajusto limiar conforme custo?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Por que a acurácia global é enganosa em desbalanceamento? (2) Quais métricas usar? (3) Compare oversampling e undersampling. (4) Como o limiar reflete custo de erro? (5) Quando usar SMOTE?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Detector com 97% de acurácia nunca sinaliza anomalia (ocorre em 3%). Avalie.",
+          "resposta": "Acurácia enganosa: recall da classe rara é zero — o modelo é inútil para a finalidade. Avaliar com matriz de confusão, precisão, recall e F1 da minoritária."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Falsa acusação de irregularidade gera dano grave à reputação do cidadão. Onde priorizar?",
+          "resposta": "Priorizar precisão da classe positiva (reduzir falsos positivos), aceitando menor recall, com revisão humana dos casos sinalizados — a métrica acompanha o custo do erro."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Basta duplicar os exemplos da classe minoritária para equilibrar.'",
+          "correcao": "Insuficiente e arriscado: duplicação exata não traz informação nova e favorece memorização; prefira reamostragem inteligente, pesos de classe ou coleta adicional, sempre validando em teste desbalanceado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O conjunto de teste deve refletir a distribuição real esperada em produção.",
+          "resposta": "Certo. Balancear o teste esconde o problema real: a avaliação precisa espelhar a operação (inclusive desbalanceada)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Com 1% de positivos, métrica mais inadequada como única: A) recall; B) precisão; C) acurácia global; D) F1.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diagnosticar desbalanceamento, avaliará acurácia enganosa e comparará técnicas de tratamento com seus efeitos colaterais, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diagnosticará desbalanceamento, avaliará acurácia enganosa e comparará técnicas de tratamento com seus efeitos colaterais"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o problema do desbalanceamento de classes; (b) métricas adequadas (precisão, recall, F1, AUC-PR); (c) técnicas de reamostragem (oversampling, undersampling, SMOTE); (d) ajuste de limiar; (e) custo de erro assimétrico. POR QUE O CONHECIMENTO É IMPORTANTE: em fraudes, doenças raras e triagem, a classe minoritária é a que importa, e a acurácia global esconde o fracasso; a prova cobra a escolha de métrica e técnica. PRÉ-REQUISITOS: matriz de confusã…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Desbalanceamento de classes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Basta duplicar os exemplos da classe minoritária para equilibrar.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Insuficiente e arriscado: duplicação exata não traz informação nova e favorece memorização; prefira reamostragem inteligente, pesos de classe ou coleta adicional, sempre validando em teste desbalanceado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Detector com 97% de acurácia nunca sinaliza anomalia (ocorre em 3%). Avalie.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Acurácia enganosa: recall da classe rara é zero — o modelo é inútil para a finalidade. Avaliar com matriz de confusão, precisão, recall e F1 da minoritária.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Falsa acusação de irregularidade gera dano grave à reputação do cidadão. Onde priorizar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Priorizar precisão da classe positiva (reduzir falsos positivos), aceitando menor recall, com revisão humana dos casos sinalizados — a métrica acompanha o custo do erro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Basta duplicar os exemplos da classe minoritária para equilibrar.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Insuficiente e arriscado: duplicação exata não traz informação nova e favorece memorização; prefira reamostragem inteligente, pesos de classe ou coleta adicional, sempre validando em teste desbalanceado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

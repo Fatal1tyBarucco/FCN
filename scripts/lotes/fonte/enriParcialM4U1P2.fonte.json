@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 1,
+    "unidadeTitulo": "4.1 Fundamentos de segurança",
+    "parte": 2,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U1P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U1P2.js",
+    "idsCompletos": [
+      "m4-u1-t1-s3",
+      "m4-u1-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u1-t1-s3",
+      "titulo": "Ativos, ameaças, vulnerabilidades, risco e impacto",
+      "topicoTitulo": "Confidencialidade, integridade, disponibilidade e responsabilização",
+      "topicoId": "modulo-4-unidade-1-topico-1",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno construirá a cadeia conceitual ativo-ameaça-vulnerabilidade-risco-impacto e classificará tratamentos de risco em situações concretas.",
+      "conteudo": "Ativo é tudo aquilo que tem valor para o órgão: dados (inclusive dados pessoais), hardware e software, instalações, serviços, tempo de equipe, informação não documentada e reputação. Ameaça é um evento ou agente capaz de provocar dano a um ativo — pode ser humana intencional (atacante), humana involuntária (erro operacional) ou ambiental (incêndio, inundação). Vulnerabilidade é a fraqueza explorável: portas abertas por padrão, software sem correção, senha padrão de fábrica, ausência de controle de acesso, falha de processo humano. Risco combina a probabilidade de a ameaça explorar a vulnerabilidade com o impacto que daí resulta; modelos gerenciais frequentemente expressam risco como probabilidade × impacto, tratando-se de escala qualitativa (baixa/média/alta), não de cálculo financeiro exato. Impacto é a consequência materializada: multa, paralisação, vazamento de dados pessoais, perda de confiança. Importante: risco residual é o que permanece após o tratamento — ele nunca é zero, apenas aceito formalmente. Tratamentos possíveis: evitar (não realizar a atividade de risco), mitigar (reduzir probabilidade ou impacto), transferir (seguro, contratos) e aceitar (decisão consciente registrada).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identifique ativo, ameaça, vulnerabilidade e risco no cenário: 'a página do órgão usa a senha padrão de fábrica do fabricante do roteador'.",
+          "resposta": "Ativo: a rede e as informações acessíveis por ela. Ameaça: agente externo ou interno que tenta acesso indevido. Vulnerabilidade: credencial padrão conhecida publicamente. Risco: probabilidade de exploração multiplicada pelo impacto do acesso à rede interna, que tende a ser alto pela extensão do dano."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Após implantar MFA e treinamento, o risco de fraude por roubo de senha caiu, mas não desapareceu (ex.: engenharia social dirigida ao suporte). Que tipo de risco restou e qual tratamento cabe?",
+          "resposta": "Risco residual. Cabe tratamento de mitigação adicional (procedimento de verificação de identidade no suporte, bloqueio de alteração de cadastro por canal não autenticado) e aceite formal documentado do que restar, com responsável e data — aceite implícito não é gestão de risco."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Depois de todos os controles implantados, o risco do sistema ficou zero.'",
+          "correcao": "Errado. Controles reduzem risco a um patamar residual; eliminação total é inatingível porque novas ameaças e vulnerabilidades surgem continuamente. O correto é declarar o risco residual aceito formalmente e revisá-lo periodicamente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Backup é um controle que reduz risco de indisponibilidade.",
+          "resposta": "Certo. Backup é controle corretivo: ele sustenta a restauração do estado desejado após a perda e reduz o impacto do incidente — sem ele, a perda de dados torna-se potencialmente irreversível."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Um órgão contrata seguro contra fraude para transferir parte do risco financeiro. Tratamento utilizado: A) evitar; B) mitigar; C) transferir; D) aceitar.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de construir a cadeia conceitual ativo-ameaça-vulnerabilidade-risco-impacto e classificará tratamentos de risco em situações concretas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "construirá a cadeia conceitual ativo-ameaça-vulnerabilidade-risco-impacto e classificará tratamentos de risco em situações concretas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Ativo é tudo aquilo que tem valor para o órgão: dados (inclusive dados pessoais), hardware e software, instalações, serviços, tempo de equipe, informação não documentada e reputação. Ameaça é um evento ou agente capaz de provocar dano a um ativo — pode ser humana intencional (atacante), humana involuntária (erro operacional) ou ambiental (incêndio, inundação). Vulnerabilidade é a fraqueza explorável: portas abertas por padrão, software sem correção, senha padrão de fábrica, ausência de controle …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Ativos, ameaças, vulnerabilidades, risco e impacto",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Depois de todos os controles implantados, o risco do sistema ficou zero.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Controles reduzem risco a um patamar residual; eliminação total é inatingível porque novas ameaças e vulnerabilidades surgem continuamente. O correto é declarar o risco residual aceito formalmente e revisá-lo periodicamente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identifique ativo, ameaça, vulnerabilidade e risco no cenário: 'a página do órgão usa a senha padrão de fábrica do fabricante do roteador'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ativo: a rede e as informações acessíveis por ela. Ameaça: agente externo ou interno que tenta acesso indevido. Vulnerabilidade: credencial padrão conhecida publicamente. Risco: probabilidade de exploração multiplicada pelo impacto do acesso à rede interna, que tende a ser alto pela extensão do dano.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Após implantar MFA e treinamento, o risco de fraude por roubo de senha caiu, mas não desapareceu (ex.: engenharia social dirigida ao suporte). Que tipo de risco restou e qual tratamento cabe?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Risco residual. Cabe tratamento de mitigação adicional (procedimento de verificação de identidade no suporte, bloqueio de alteração de cadastro por canal não autenticado) e aceite formal documentado do que restar, com responsável e data — aceite implícito não é gestão de risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Depois de todos os controles implantados, o risco do sistema ficou zero.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Controles reduzem risco a um patamar residual; eliminação total é inatingível porque novas ameaças e vulnerabilidades surgem continuamente. O correto é declarar o risco residual aceito formalmente e revisá-lo periodicamente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u1-t2-s1",
+      "titulo": "Controles preventivos, detectivos, corretivos e compensatórios",
+      "topicoTitulo": "Controles de segurança e gestão de acesso",
+      "topicoId": "modulo-4-unidade-1-topico-2",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno classificará controles de segurança por sua natureza e justificará o uso de controles compensatórios temporários.",
+      "conteudo": "Controles preventivos evitam que o incidente ocorra: firewall com política de negação padrão, exigência de MFA, controle de acesso físico, bloqueio de macros em documentos recebidos. Controles detectivos identificam que o incidente ocorreu ou está ocorrendo: alertas de login fora do padrão, IDS, varreduras de vulnerabilidade, revisão periódica de registros de auditoria. Controles corretivos eliminam a causa ou restauram o estado desejado após o dano: restauração de backup, revogação de credencial comprometida, remoção de malware, correção de configuração. Controles compensatórios são medidas alternativas temporárias adotadas quando o controle principal não pode ser aplicado no momento — por exemplo, bloqueio manual de acesso enquanto a MFA é implantada no sistema legado, ou revisão humana diária enquanto a automação de validação não existe. Regra de gestão: todo controle compensatório deve ter prazo, responsável e data de substituição pelo controle principal; sem isso, vira solução permanente silenciosa. A combinação dos quatro tipos é o que sustenta a defesa em profundidade: um controle preventivo falha, um detectivo avisa, um corretivo restaura e um compensatório cobre a janela de exposição.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classifique: 'antivírus com atualização de assinaturas', 'alerta de tentativa de login recusada' e 'restauração de arquivos a partir de cópia de segurança'.",
+          "resposta": "Antivírus atua de forma preventiva (bloqueia código malicioso conhecido) e, quando identifica após a execução, de forma corretiva ao remover. Alerta de login recusada é detectivo. Restauração a partir de backup é corretivo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O sistema legado do órgão não suporta MFA e a substituição levará 12 meses. Que controle compensatório é proporcional e como ele deve ser governado?",
+          "resposta": "Controle compensatório: acesso restrito a rede interna e lista de endereços permitidos, verificação de identidade por canal registrado no atendimento ao usuário e revisão diária dos registros de acesso daquele perfil. Governança: registrar prazo de 12 meses (ou menos), responsável nomeado e critério objetivo de substituição, com revisão mensal até a migração para MFA."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Controles compensatórios podem ser mantidos indefinidamente, desde que funcionem.'",
+          "correcao": "Errado. Compensatório é exceção temporária: sem prazo e substituição pelo controle principal, a exceção se normaliza, acumula risco e impede a correção da vulnerabilidade original."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um alerta disparado pelo IDS é um exemplo de controle corretivo.",
+          "resposta": "Errado. O alerta é controle detectivo: ele informa que algo ocorreu, mas não corrige nada por si só; a correção depende de resposta (controle corretivo)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Bloquear o acesso à lista de permitidos enquanto a MFA ainda não foi implantada é: A) preventivo; B) detectivo; C) corretivo; D) compensatório.",
+          "resposta": "D"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar controles de segurança por sua natureza e justificará o uso de controles compensatórios temporários, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará controles de segurança por sua natureza e justificará o uso de controles compensatórios temporários"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Controles preventivos evitam que o incidente ocorra: firewall com política de negação padrão, exigência de MFA, controle de acesso físico, bloqueio de macros em documentos recebidos. Controles detectivos identificam que o incidente ocorreu ou está ocorrendo: alertas de login fora do padrão, IDS, varreduras de vulnerabilidade, revisão periódica de registros de auditoria. Controles corretivos eliminam a causa ou restauram o estado desejado após o dano: restauração de backup, revogação de credencia…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Controles preventivos, detectivos, corretivos e compensatórios",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Controles compensatórios podem ser mantidos indefinidamente, desde que funcionem.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Compensatório é exceção temporária: sem prazo e substituição pelo controle principal, a exceção se normaliza, acumula risco e impede a correção da vulnerabilidade original."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classifique: 'antivírus com atualização de assinaturas', 'alerta de tentativa de login recusada' e 'restauração de arquivos a partir de cópia de segurança'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Antivírus atua de forma preventiva (bloqueia código malicioso conhecido) e, quando identifica após a execução, de forma corretiva ao remover. Alerta de login recusada é detectivo. Restauração a partir de backup é corretivo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O sistema legado do órgão não suporta MFA e a substituição levará 12 meses. Que controle compensatório é proporcional e como ele deve ser governado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Controle compensatório: acesso restrito a rede interna e lista de endereços permitidos, verificação de identidade por canal registrado no atendimento ao usuário e revisão diária dos registros de acesso daquele perfil. Governança: registrar prazo de 12 meses (ou menos), responsável nomeado e critério objetivo de substituição, com revisão mensal até a migração para MFA.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Controles compensatórios podem ser mantidos indefinidamente, desde que funcionem.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Compensatório é exceção temporária: sem prazo e substituição pelo controle principal, a exceção se normaliza, acumula risco e impede a correção da vulnerabilidade original.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

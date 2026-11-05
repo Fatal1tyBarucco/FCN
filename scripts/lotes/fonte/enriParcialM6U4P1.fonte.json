@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 4,
+    "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+    "parte": 1,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U4P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U4P1.js",
+    "idsCompletos": [
+      "m6-u4-t1-s1",
+      "m6-u4-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u4-t1-s1",
+      "titulo": "Orientação estratégica da unidade",
+      "topicoTitulo": "Uso institucional de redes sociais e comunicação digital do órgão",
+      "topicoId": "modulo-6-unidade-4-topico-1",
+      "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno delimitara o escopo da unidade 6.4, relacionará o uso institucional de redes sociais, o conflito de interesse, a conduta e a netiqueta à governança digital do órgão, e declarará pré-requisitos e competências.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como se diferencia o uso INSTITUCIONAL de redes sociais (perfil do órgão, com gestão formal, publicação institucional e guarda de registro) do uso PESSOAL do servidor (que não vincula o órgão, mas impõe dever de conduta); (b) quais são os requisitos de governança de um canal institucional: titularidade do perfil, gestão de acesso com conta institucional e MFA, política editorial, registro de publicações, rotina de correção de erros, escalonamento de temas sensíveis e de denúncias; (c) o que é conflito de interesse, como se manifesta no serviço público digital e como é tratado (declaração, transparência, afastamento, remessa ao controle); (d) a conduta e a netiqueta institucionais, com os limites do que pode e do que não pode ser publicado por um servidor em nome do órgão. POR QUE O CONHECIMENTO É IMPORTANTE: a presença digital do órgão é hoje um dos seus principais canais de comunicação e de prestação de serviços; e, por isso, é também o principal vetor de exposição de dados e de condutas impróprias. O erro de uma publicação institucional não é um erro de «post»: é publicação oficial, com efeitos sobre a credibilidade do órgão e sobre os direitos dos cidadãos. A mesma ferramenta, usada por servidor em sua conta pessoal, desloca o enquadramento para o direito disciplinar e para o dever de reserva. PRÉ-REQUISITOS: unidades 6.1 a 6.3 (princípios, transparência, dados pessoais e sigilo). OBJETIVOS OBSERVÁVEIS: (1) distinguir perfil institucional de uso pessoal; (2) listar os controles mínimos de um canal institucional; (3) identificar três situações típicas de conflito de interesse e o tratamento adequado a cada uma; (4) classificar uma publicação como institucional, pessoal-imprópria ou indevida. COMPETÊNCIAS DESENVOLVIDAS: desenho de política editorial; análise de risco reputacional e de proteção de dados; aplicação de procedimento de remessa ao controle interno. GRAU DE DIFICULDADE: intermediário na distinção entre perfis e na tipologia do conflito; avançado na aplicação, porque quase todo caso real é ambíguo (é institucional ou pessoal? é opinião pessoal ou posição do órgão?). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta. É uma estimativa pedagógica de adequação ao conteúdo programático, e não uma frequência estatística de incidência em provas.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença jurídica entre o perfil institucional do órgão no Twitter e a conta pessoal do servidor?",
+          "resposta": "O perfil institucional é um canal de comunicação do órgão: as publicações nele são comunicações institucionais, sujeitas à publicidade (art. 8º da Lei nº 12.527/2011), à Lei de Governo Digital e ao regime de dados pessoais. A conta pessoal do servidor é uso particular, regido pelo dever de conduta do servidor e pela reserva institucional; o servidor não pode usar o nome do órgão nem vincular o órgão a posicionamentos pessoais. O mesmo conteúdo, no canal errado, muda o enquadramento e o responsável."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um servidor do setor de obras publica no perfil institucional do órgão uma foto de obra atrasada com legenda crítica sobre a administração municipal. Como tratar?",
+          "resposta": "Tratar como erro editorial com possível conteúdo de opinião. A publicação em canal institucional deve expressar a posição do órgão, com base em ato ou informação oficial, não a opinião do servidor. Procedimento: (1) registrar a publicação (data, hora, conta que postou, texto integral e mídia); (2) retirar ou corrigir o conteúdo conforme a política editorial, com nota de correção se o erro for de fato; (3) apurar internamente a autoria e a motivação; (4) avaliar se houve exposição de dado pessoal de terceiros ou uso indevido de bem público; (5) registrar o incidente e a ação corretiva."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como as redes sociais são o canal oficial do órgão, qualquer servidor pode falar em nome do órgão desde que use a hashtag oficial.'",
+          "correcao": "Errado. A gestão de acesso ao perfil institucional é o que define quem fala pelo órgão — e ela deve ser formal, com conta institucional, autenticação forte, perfis por função e registro. Hashtag, logotipo ou identidade visual não criam vinculação institucional. Item que confunde identidade visual com competência para falar em nome do órgão é armadilha comum."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A distinção entre uso institucional e uso pessoal de redes sociais pelo servidor é relevante porque muda o responsável pela publicação, o regime jurídico aplicável e o procedimento de apuração.",
+          "resposta": "Certo. São regimes distintos: comunicação institucional (com dever de publicidade e governança do canal) e conduta do servidor (com dever de reserva, eventual responsabilização disciplinar e, se houver dado de terceiro exposto, responsabilização civil e funcional nos termos do art. 34 da Lei nº 12.527/2011)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São controles mínimos de um canal institucional: A) conta institucional com autenticação multifator; B) perfis de acesso por função; C) registro de publicações; D) liberação de senha do perfil a todos os servidores do setor.",
+          "resposta": "A, B e C. O item D destrói a responsabilização e a rastreabilidade, além de ampliar o risco de publicação indevida."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de delimitar o escopo da unidade 6.4, relacionará o uso institucional de redes sociais, o conflito de interesse, a conduta e a netiqueta à governança digital do órgão, e declarará pré-requisitos e competências, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "delimitara o escopo da unidade 6.4, relacionará o uso institucional de redes sociais, o conflito de interesse, a conduta e a netiqueta à governança digital do órgão, e declarará pré-requisitos e competências"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como se diferencia o uso INSTITUCIONAL de redes sociais (perfil do órgão, com gestão formal, publicação institucional e guarda de registro) do uso PESSOAL do servidor (que não vincula o órgão, mas impõe dever de conduta); (b) quais são os requisitos de governança de um canal institucional: titularidade do perfil, gestão de acesso com conta institucional e MFA, política editorial, registro de publicações, rotina de correção de erros, escalonament…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Orientação estratégica da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como as redes sociais são o canal oficial do órgão, qualquer servidor pode falar em nome do órgão desde que use a hashtag oficial.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A gestão de acesso ao perfil institucional é o que define quem fala pelo órgão — e ela deve ser formal, com conta institucional, autenticação forte, perfis por função e registro. Hashtag, logotipo ou identidade visual não criam vinculação institucional. Item que confunde identidade visual com competência para falar em nome do órgão é armadilha comum."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença jurídica entre o perfil institucional do órgão no Twitter e a conta pessoal do servidor?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O perfil institucional é um canal de comunicação do órgão: as publicações nele são comunicações institucionais, sujeitas à publicidade (art. 8º da Lei nº 12.527/2011), à Lei de Governo Digital e ao regime de dados pessoais. A conta pessoal do servidor é uso particular, regido pelo dever de conduta do servidor e pela reserva institucional; o servidor não pode usar o nome do órgão nem vincular o órgão a posicionamentos pessoais. O mesmo conteúdo, no canal errado, muda o enquadramento e o responsável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um servidor do setor de obras publica no perfil institucional do órgão uma foto de obra atrasada com legenda crítica sobre a administração municipal. Como tratar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Tratar como erro editorial com possível conteúdo de opinião. A publicação em canal institucional deve expressar a posição do órgão, com base em ato ou informação oficial, não a opinião do servidor. Procedimento: (1) registrar a publicação (data, hora, conta que postou, texto integral e mídia); (2) retirar ou corrigir o conteúdo conforme a política editorial, com nota de correção se o erro for de fato; (3) apurar internamente a autoria e a motivação; (4) avaliar se houve exposição de dado pessoal de terceiros ou uso indevido de bem público; (5) registrar o incidente e a ação corretiva.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como as redes sociais são o canal oficial do órgão, qualquer servidor pode falar em nome do órgão desde que use a hashtag oficial.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A gestão de acesso ao perfil institucional é o que define quem fala pelo órgão — e ela deve ser formal, com conta institucional, autenticação forte, perfis por função e registro. Hashtag, logotipo ou identidade visual não criam vinculação institucional. Item que confunde identidade visual com competência para falar em nome do órgão é armadilha comum.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u4-t1-s2",
+      "titulo": "Governança do canal institucional: titularidade, acesso, editorial, registro e correção",
+      "topicoTitulo": "Uso institucional de redes sociais e comunicação digital do órgão",
+      "topicoId": "modulo-6-unidade-4-topico-1",
+      "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno desenhara o conjunto mínimo de controles de governança de um perfil institucional e explicará a política editorial, o registro de publicações, a rotina de correção de erros e o uso de ferramentas de IA na produção de conteúdo.",
+      "conteudo": "TITULARIDADE E CONTROLE DE ACESSO: o perfil institucional deve pertencer ao ÓRGÃO, e não a servidor ou a prestador; a gestão de acesso deve ser por conta institucional com autenticação multifator, perfis por função (publicador, editor, aprovador), registro de atividade e desligamento imediato na saída do servidor. Publicações feitas por conta pessoal de servidor em nome do órgão violam a governança do canal e produzem prova de autoria deficiente. DEVER DE PUBLICIDADE E CANAL: o art. 8º da Lei nº 12.527/2011 impõe divulgação de interesse coletivo ou geral em local de fácil acesso e, no § 2º, torna obrigatória a divulgação em sítios oficiais; a uso de redes sociais é, por isso, COMPLEMENTAR e não substitutivo — o canal oficial do órgão (site e portal de transparência) é onde a informação oficial deve residir. O art. 3º, VII, da Lei nº 14.129/2021 exige linguagem clara e compreensível a qualquer cidadão; o art. 8º, § 3º, I, da Lei nº 12.527/2011 exige ferramenta de pesquisa com acesso objetivo, transparente, claro e em linguagem fácil — o mesmo padrão vale para o conteúdo publicado em redes. POLÍTICA EDITORIAL: deve definir (1) o que se publica e o que não se publica (campanha institucional, serviço, orientação, divulgação legal, horários, emergência); (2) quem autoriza cada tipo de publicação; (3) o tom da linguagem e a proibição de opinião pessoal; (4) o tratamento de comentários e de reportes (moderação, escalonamento e prazo de resposta); (5) a política de correção de erros e de apoio ao cidadão; (6) a proibição de divulgação de dados pessoais de terceiros e de conteúdo que exponha informações protegidas (art. 31 da Lei nº 12.527/2011; art. 5º, II, da LGPD — verificado em 2026-10-20). REGISTRO E RASTREABILIDADE: toda publicação deve ser arquivada com data, hora, autor lógico, texto, mídia, versão e aprovador; o registro é o que permite responder a pergunta «quem publicou, quando e com que base?» e o que sustenta o dever de auditoria (art. 43, IV, da Lei nº 14.129/2021) e a responsabilização (art. 34 da Lei nº 12.527/2011). CORREÇÃO DE ERROS: a correção é parte do dever de publicidade — publicar informação incorreta e mantê-la é compatível com a condição de obscuridade. O procedimento correto é: corrigir, sinalizar a correção, preservar o registro do conteúdo original e comunicar o erro quando ele tiver alcançado o cidadão de forma relevante. PUBLICAÇÃO DE DADOS PESSOAIS: é vedada a publicação de dados identificáveis de terceiros, salvo base legal (art. 31, § 1º, II, e § 3º, da Lei nº 12.527/2011) ou dado anonimizado; fotos de pessoas em atos públicos exigem avaliação: a presença da pessoa em local público não autoriza a publicação de sua imagem ou de dado correlato em campanha institucional. USO DE FERRAMENTAS DE IA NA PRODUÇÃO DE CONTEÚDO: a geração de texto ou de imagem por IA é admitida apenas como apoio de REDAÇÃO, com revisão humana obrigatória antes da publicação; é vedado publicar saída de IA sem revisão e sem checagem de fato; e é vedado inserir dados pessoais, dados sigilosos ou informação sensível na ferramenta. O produto publicado é de responsabilidade do órgão, e a rastreabilidade da versão usada (modelo, prompt, data, revisor) deve ser registrada. ACESSIBILIDADE E INCLUSÃO DO CONTEÚDO: legendas em vídeos, texto alternativo em imagens, linguagem acessível e formatos abertos devem ser padrão (art. 3º, VII e XIX, da Lei nº 14.129/2021). RESPOSTA A CRÍTICA E A CONTENÇÃO: o órgão deve ter rotina de apuração de crítica e de correção, com prazo definido, e canal de ouvidoria (art. 21, XI, da Lei nº 14.129/2021, que exige implementação de sistema de ouvidoria nas Plataformas de Governo Digital).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença entre publicar um resultado de serviço no perfil institucional e no sítio oficial?",
+          "resposta": "O sítio oficial é o canal onde a informação oficial deve residir: é ali que incide o dever de divulgação de interesse coletivo ou geral e os requisitos de busca, formatos abertos, atualização, acessibilidade e autenticidade (art. 8º, § 1º, § 2º e § 3º, da Lei nº 12.527/2011). O perfil institucional é canal complementar, de alcance e velocidade. Divergência de conteúdo entre os dois (por exemplo, prazo de atendimento diverso) é incoerência de publicidade e deve ser corrigida."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma servidora usa IA para redigir o texto de um comunicado sobre o início de uma campanha de vacinação e publica sem revisão. Qual a providência correta?",
+          "resposta": "Revisão humana obrigatória antes da publicação, com verificação dos fatos (datas, locais, público elegível, cadastro existente), adequação da linguagem (art. 3º, VII, da Lei nº 14.129/2021) e verificação de ausência de dado pessoal (deve-se conferir se o texto não reproduz dados de pessoas já cadastradas). Registro da versão: modelo utilizado, prompt, data e nome do revisor. Se houver publicação incorreta, aplica-se a rotina de correção com sinalização ao público."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se a foto de um cidadão foi tirada em área pública e publicada pela conta do servidor, é lícita, porque o fato é público.'",
+          "correcao": "Errado. O requisito do art. 31, § 1º, II, da Lei nº 12.527/2011, é previsão legal ou consentimento expresso; o acesso público ao local não equivale a consentimento para difusão de imagem e de dado correlato. Além disso, a publicação em nome do órgão constitui uso institucional de dado de terceiro, o que exige a mesma base legal do art. 31 e a observância da LGPD (art. 5º, I). A CIRCULAÇÃO de imagem em rede social amplia a exposição e o dano, o que reforça a exigência de avaliação prévia."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Um perfil institucional de rede social pode substituir o sítio oficial do órgão para fins de cumprimento do dever de divulgação de interesse coletivo ou geral previsto no art. 8º da Lei nº 12.527/2011.",
+          "resposta": "Errado. O art. 8º, § 2º, torna obrigatória a divulgação em sítios oficiais da internet e impõe o uso de todos os meios e instrumentos legítimos de que o órgão dispuser; a rede social é meio complementar. Os requisitos do § 3º (busca, formatos abertos, atualização, acessibilidade, autenticidade) são estruturados para o sítio oficial."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São elementos de uma política editorial institucional: A) tipos de publicação e autoridade que a aprova; B) procedimento de correção de erros; C) regra de moderação de comentários e escalonamento; D) liberação de acesso ao perfil mediante pedido no chat do aplicativo.",
+          "resposta": "A, B e C. O item D não pertence à política editorial e configuraria falha de governança de acesso."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de desenhar o conjunto mínimo de controles de governança de um perfil institucional e explicará a política editorial, o registro de publicações, a rotina de correção de erros e o uso de ferramentas de IA na produção de conteúdo, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "desenhara o conjunto mínimo de controles de governança de um perfil institucional e explicará a política editorial, o registro de publicações, a rotina de correção de erros e o uso de ferramentas de IA na produção de conteúdo"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "TITULARIDADE E CONTROLE DE ACESSO: o perfil institucional deve pertencer ao ÓRGÃO, e não a servidor ou a prestador; a gestão de acesso deve ser por conta institucional com autenticação multifator, perfis por função (publicador, editor, aprovador), registro de atividade e desligamento imediato na saída do servidor. Publicações feitas por conta pessoal de servidor em nome do órgão violam a governança do canal e produzem prova de autoria deficiente. DEVER DE PUBLICIDADE E CANAL: o art. 8º da Lei nº…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Governança do canal institucional: titularidade, acesso, editorial, registro e correção",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se a foto de um cidadão foi tirada em área pública e publicada pela conta do servidor, é lícita, porque o fato é público.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O requisito do art. 31, § 1º, II, da Lei nº 12.527/2011, é previsão legal ou consentimento expresso; o acesso público ao local não equivale a consentimento para difusão de imagem e de dado correlato. Além disso, a publicação em nome do órgão constitui uso institucional de dado de terceiro, o que exige a mesma base legal do art. 31 e a observância da LGPD (art. 5º, I). A CIRCULAÇÃO de imagem em rede social amplia a exposição e o dano, o que reforça a exigência de avaliação prévia."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença entre publicar um resultado de serviço no perfil institucional e no sítio oficial?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O sítio oficial é o canal onde a informação oficial deve residir: é ali que incide o dever de divulgação de interesse coletivo ou geral e os requisitos de busca, formatos abertos, atualização, acessibilidade e autenticidade (art. 8º, § 1º, § 2º e § 3º, da Lei nº 12.527/2011). O perfil institucional é canal complementar, de alcance e velocidade. Divergência de conteúdo entre os dois (por exemplo, prazo de atendimento diverso) é incoerência de publicidade e deve ser corrigida.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma servidora usa IA para redigir o texto de um comunicado sobre o início de uma campanha de vacinação e publica sem revisão. Qual a providência correta?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Revisão humana obrigatória antes da publicação, com verificação dos fatos (datas, locais, público elegível, cadastro existente), adequação da linguagem (art. 3º, VII, da Lei nº 14.129/2021) e verificação de ausência de dado pessoal (deve-se conferir se o texto não reproduz dados de pessoas já cadastradas). Registro da versão: modelo utilizado, prompt, data e nome do revisor. Se houver publicação incorreta, aplica-se a rotina de correção com sinalização ao público.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se a foto de um cidadão foi tirada em área pública e publicada pela conta do servidor, é lícita, porque o fato é público.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O requisito do art. 31, § 1º, II, da Lei nº 12.527/2011, é previsão legal ou consentimento expresso; o acesso público ao local não equivale a consentimento para difusão de imagem e de dado correlato. Além disso, a publicação em nome do órgão constitui uso institucional de dado de terceiro, o que exige a mesma base legal do art. 31 e a observância da LGPD (art. 5º, I). A CIRCULAÇÃO de imagem em rede social amplia a exposição e o dano, o que reforça a exigência de avaliação prévia.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

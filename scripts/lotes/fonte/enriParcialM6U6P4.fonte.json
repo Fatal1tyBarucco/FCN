@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 6,
+    "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+    "parte": 4,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U6P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U6P4.js",
+    "idsCompletos": [
+      "m6-u6-t3-s2",
+      "m6-u6-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u6-t3-s2",
+      "titulo": "Questões autorais comentadas (bloco 2) e síntese da unidade",
+      "topicoTitulo": "Resolução de questões com análise de princípios e dispositivos",
+      "topicoId": "modulo-6-unidade-6-topico-3",
+      "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno resolverá itens autorais sobre estudos de caso e automação, aplicando o método de sete passos, e consolidará a unidade 6.6 por recuperação ativa.",
+      "conteudo": "QUESTÕES AUTORAIS COMENTADAS (BLOCO 2) — todas de autoria deste projeto, sem atribuição a banca real. Q6 (autoral, múltipla escolha). Em um sistema que nega automaticamente requerimentos, a revisão humana ocorre apenas quando o cidadão protocola reclamação. A prática é: A) compatível, porque existe revisão; B) compatível, se a taxa de reclamação for baixa; C) inadequada, porque a revisão por reclamação depende da capacidade de reclamar e pode mascarar erro concentrado em subgrupos, devendo ser complementada por amostragem estratificada e gatilhos de risco; D) inadequada, porque a revisão humana é vedada pela digitalização. GABARITO: C. Fundamentação: desenho de supervisão (unidade 6.6) e art. 48, II, da Lei nº 14.129/2021 (controles proporcionais aos riscos); o item D é errado porque a digitalização não veda revisão. Q7 (autoral, certo ou errado). Afirmação: «A automatização integral de decisão que nega benefício é admissível quando o modelo apresenta alta acurácia global». GABARITO: errado. Fundamentação: acurácia global não mede erro por subgrupo e não substitui motivação, contestação e revisão; a conformidade exige base normativa, critérios publicados, registro e canal de revisão (unidades 6.1 e 6.6). Q8 (autoral, múltipla escolha). Diante de incidente com exposição de dados pessoais, a conduta correta do órgão inclui: A) conter e preservar a evidência antes de alterar o ambiente; B) decidir e documentar a comunicação ao titular conforme a avaliação de risco; C) comunicar internamente ao encarregado e à autoridade competente; D) destruir registros de acesso para reduzir a exposição. GABARITO: A, B e C. Fundamentação: art. 46 da LGPD; art. 34 da Lei nº 12.527/2011; art. 32, II, da mesma lei (destruir ou ocultar informação). Q9 (autoral, múltipla escolha). Quanto ao uso de ferramenta de IA para redigir resposta oficial, é CORRETO: A) é proibido em qualquer hipótese; B) é admissível como apoio, com revisão humana obrigatória, vedação de inserção de dados pessoais ou sigilosos e registro do conteúdo publicado; C) é admissível sem revisão, se o servidor assinar a resposta; D) é admissível, desde que a ferramenta seja de órgão público. GABARITO: B. Fundamentação: art. 5º da Lei nº 12.527/2011 (informação verdadeira, clara e em linguagem fácil); art. 34 (responsabilização); art. 5º, I, e art. 46 da LGPD; art. 49 da Lei nº 14.129/2021 (auditoria). RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: níveis de automação (N0 a N5); requisitos comuns de ato decisório automatizado; alçada, gatilho e amostragem na supervisão; revisão prévia, posterior integral, amostral e por reclamação; quatro registros; estudos de caso integrados. REGRAS E DISPOSITIVOS: base normativa e critério versionado; registro e rastreabilidade; motivação comunicável (art. 3º, VII, da Lei nº 14.129/2021); canal de contestação (art. 7º, § 3º, da Lei nº 12.527/2011); segurança (art. 46 da LGPD); controle interno proporcional (art. 48) e auditoria interna baseada em risco (art. 49); dever de publicidade (art. 8º e art. 29, § 1º, VI, da Lei nº 14.129/2021). COMPARAÇÕES CRÍTICAS: decisão automatizada x assistida x manual; revisão prévia x posterior x amostral x por reclamação; controle de entrada x de saída; indicador global x por subgrupo; erro de sistema x erro do revisor. FLUXO RESUMIDO (governança de decisão automatizada): (1) classificar o nível; (2) definir base, critério e versão; (3) implementar registro e log; (4) definir alçada, gatilhos e amostragem; (5) definir canal de contestação e prazo de resposta; (6) monitorar indicadores, por subgrupo; (7) reavaliar a regra e o nível de automação periodicamente. EXCEÇÕES E LIMITES: o nível de automação não transfere responsabilidade; revisão por reclamação não é amostragem; alta acurácia global não é conformidade; portal publicado parcialmente não cumpre o dever; conteúdo gerado por IA exige conferência com a base oficial. PALAVRAS-CHAVE: enquadramento, nível de automação, alçada, escalonamento, gatilho, amostragem estratificada, reversão, subgrupo, motivação, contestação, registro, conferência, transparência ativa. CHECKLIST DE DOMÍNIO: (1) Quais são os requisitos comuns de um ato decisório automatizado? (2) Qual a diferença entre revisão por reclamação e amostragem estratificada? (3) Quando a revisão deve ser integral? (4) O que a revisão de reversão por subgrupo revela? (5) Por que a alta acurácia global não basta? (6) Qual a providência imediata diante de incidente com exposição de dados? (7) O que o art. 8º, § 3º, exige dos sítios oficiais? (8) Quais os sete passos do método de resolução de itens? VERIFICAÇÃO DE APRENDIZAGEM (recuperação ativa — 8 questões autorais): (Q1) Classifique um sistema que nega automaticamente e escala acima de um limite de valor. (Q2) Escreva seis requisitos de conformidade de decisão automatizada. (Q3) Explique por que revisão por reclamação é enviesada. (Q4) Dê dois indicadores de supervisão e o que cada um revela. (Q5) Enumere as providências imediatas em incidente com exposição de dados. (Q6) Enquadre juridicamente a publicação de lista nominada de beneficiários. (Q7) O que distingue uso legítimo de IA em redação oficial? (Q8) Escreva os sete passos do método de resolução de itens. CRITÉRIO DE DOMÍNIO: acerto integral em Q1, Q3, Q5 e Q8 e em ao menos 5 dos 8 itens.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Sem consultar o texto, escreva as providências imediatas diante de incidente com exposição de dados pessoais.",
+          "resposta": "(1) CONTER — revogar credenciais, isolar o vetor e interromper o fluxo; (2) PRESERVAR A EVIDÊNCIA antes de qualquer rotação de credencial, limpeza de log ou alteração de configuração; (3) AVALIAR a extensão real (quais registros, quais campos, por quanto tempo, houve uso posterior); (4) COMUNICAR internamente ao encarregado, à autoridade competente e à gestão, com registro da decisão; (5) AVALIAR E DOCUMENTAR a comunicação ao titular, conforme o risco ao titular (identificação, fraude, discriminação, estigmatização); (6) ANALISAR o desenho do controle que falhou (art. 46 da LGPD; art. 48 da Lei nº 14.129/2021); (7) CORRIGIR e verificar (art. 49 — auditoria interna com abordagem baseada em risco); (8) REGISTRAR o incidente e as decisões no sistema de riscos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Qual a diferença entre o indicador de acurácia global e o de reversão de decisões por subgrupo?",
+          "resposta": "A acurácia global resume o desempenho da amostra inteira e pode ser alta mesmo com erro concentrado em um público específico (Módulo 5). O indicador de reversão por subgrupo mede a distribuição das correções humanas: se as reversões se concentram em determinada região, faixa etária, condição de saúde ou tipo de benefício, há indício de viés de dados, de critério mal calibrado ou de efeito de exclusão digital — diagnóstico que a acurácia global não produz. É o indicador que dispara revisão integral por gatilho de risco."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O método de resolução de item deve começar pela alternativa que parece mais completa, e só depois buscar o dispositivo.'",
+          "correcao": "Errado. O método correto começa pelo enunciado e pelo regime aplicável, para só então avaliar as alternativas: começar pela alternativa inversa o viés de leitura — o candidato reconhece o tema, projeta a resposta e erra justamente o que o item queria testar (a identidade do regime, o número do dispositivo ou o alcance da norma). Erros por viés de alternativa são os mais evitáveis de todo o capítulo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) As questões Q1 a Q9 desta unidade são de autoria do projeto, usadas para treino de método, e não reproduzem itens de banca alguma.",
+          "resposta": "Certo. Todas as questões autorais desta apostila são identificadas como autorais, justamente para evitar a associação indevida a bancas reais e para manter a rastreabilidade do conteúdo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Na verificação de aprendizagem da unidade 6.6, exigem-se acerto integral: A) na classificação do nível de automação; B) no caráter enviesado da revisão por reclamação; C) nas providências imediatas em incidente; D) nos sete passos do método de resolução.",
+          "resposta": "A, B, C e D."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver itens autorais sobre estudos de caso e automação, aplicando o método de sete passos, e consolidará a unidade 6.6 por recuperação ativa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolverá itens autorais sobre estudos de caso e automação, aplicando o método de sete passos, e consolidará a unidade 6.6 por recuperação ativa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "QUESTÕES AUTORAIS COMENTADAS (BLOCO 2) — todas de autoria deste projeto, sem atribuição a banca real. Q6 (autoral, múltipla escolha). Em um sistema que nega automaticamente requerimentos, a revisão humana ocorre apenas quando o cidadão protocola reclamação. A prática é: A) compatível, porque existe revisão; B) compatível, se a taxa de reclamação for baixa; C) inadequada, porque a revisão por reclamação depende da capacidade de reclamar e pode mascarar erro concentrado em subgrupos, devendo ser c…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Questões autorais comentadas (bloco 2) e síntese da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O método de resolução de item deve começar pela alternativa que parece mais completa, e só depois buscar o dispositivo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O método correto começa pelo enunciado e pelo regime aplicável, para só então avaliar as alternativas: começar pela alternativa inversa o viés de leitura — o candidato reconhece o tema, projeta a resposta e erra justamente o que o item queria testar (a identidade do regime, o número do dispositivo ou o alcance da norma). Erros por viés de alternativa são os mais evitáveis de todo o capítulo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Sem consultar o texto, escreva as providências imediatas diante de incidente com exposição de dados pessoais.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) CONTER — revogar credenciais, isolar o vetor e interromper o fluxo; (2) PRESERVAR A EVIDÊNCIA antes de qualquer rotação de credencial, limpeza de log ou alteração de configuração; (3) AVALIAR a extensão real (quais registros, quais campos, por quanto tempo, houve uso posterior); (4) COMUNICAR internamente ao encarregado, à autoridade competente e à gestão, com registro da decisão; (5) AVALIAR E DOCUMENTAR a comunicação ao titular, conforme o risco ao titular (identificação, fraude, discriminação, estigmatização); (6) ANALISAR o desenho do controle que falhou (art. 46 da LGPD; art. 48 da Lei nº 14.129/2021); (7) CORRIGIR e verificar (art. 49 — auditoria interna com abordagem baseada em risco); (8) REGISTRAR o incidente e as decisões no sistema de riscos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Qual a diferença entre o indicador de acurácia global e o de reversão de decisões por subgrupo?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A acurácia global resume o desempenho da amostra inteira e pode ser alta mesmo com erro concentrado em um público específico (Módulo 5). O indicador de reversão por subgrupo mede a distribuição das correções humanas: se as reversões se concentram em determinada região, faixa etária, condição de saúde ou tipo de benefício, há indício de viés de dados, de critério mal calibrado ou de efeito de exclusão digital — diagnóstico que a acurácia global não produz. É o indicador que dispara revisão integral por gatilho de risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O método de resolução de item deve começar pela alternativa que parece mais completa, e só depois buscar o dispositivo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O método correto começa pelo enunciado e pelo regime aplicável, para só então avaliar as alternativas: começar pela alternativa inversa o viés de leitura — o candidato reconhece o tema, projeta a resposta e erra justamente o que o item queria testar (a identidade do regime, o número do dispositivo ou o alcance da norma). Erros por viés de alternativa são os mais evitáveis de todo o capítulo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u6-t3-s3",
+      "titulo": "Exemplos resolvidos da unidade (três casos completos)",
+      "topicoTitulo": "Resolução de questões com análise de princípios e dispositivos",
+      "topicoId": "modulo-6-unidade-6-topico-3",
+      "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno resolverá, com o template de nove itens, três casos de automação de decisões, supervisão humana e uso de ferramenta de IA, identificando o regime, o princípio violado e a providência de governança.",
+      "conteudo": "Exemplos de governança digital aplicados a serviços públicos, com casos estruturais do setor e template de nove itens.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "EXEMPLO 1 (INTRODUÇÃO) — O órgão implantou negação automática de requerimentos de benefício de pequeno valor; a revisão humana ocorre apenas quando o cidadão reclama, e o único indicador acompanhado é a taxa de reversão global. Como o órgão deve corrigir o desenho?",
+          "resposta": "Problema: supervisão humana sem desenho verificável, com viés de detecção e ausência de análise por subgrupo. Dados disponíveis: 12.000 casos no fluxo; revisão acionada apenas por reclamação; um único indicador global de reversão; histórico anterior de decisões do tipo; nenhum registro do critério de priorização publicado. Conceitos aplicáveis: níveis de automação (N3 com revisão reativa em vez de amostragem estratificada); desenho da supervisão (alçada, gatilho, amostragem, registro, indicadores); impessoalidade e avaliação por subgrupo (unidades 6.1 e Módulo 5); transparência do critério (art. 7º, V, da Lei nº 12.527/2011); controles proporcionais ao risco (art. 48, II, da Lei nº 14.129/2021). Estratégia: redesenhar o controle de supervisão antes de discutir a qualidade do modelo, porque com esse desenho nenhuma medida de desempenho é confiável. Passo a passo: (1) PUBLICAR o critério de indeferimento e a sua versão, que hoje não é auditável; (2) SUBSTITUIR a revisão por reclamação por um desenho de três vias — amostragem aleatória estratificada (por território e por faixa do benefício), gatilhos objetivos (erro histórico, reclamação, subgrupo com desempenho pior) e revisão integral dos casos de maior impacto; (3) MEDIR por subgrupo a taxa de reversão, porque a reversão concentrada em um público é indício de viés de dados; (4) REGISTRAR, para cada caso, os parâmetros usados, a versão da regra e o resultado da revisão; (5) REPORTAR o resultado ao gestor com painel de indicadores por subgrupo; (6) REAVALIAR o nível de automação: se a evidência sustentar, manter em modo de apoio; se não, reduzir a autonomia. Resultado: desenho de supervisão auditável, com critério publicado e indicadores segmentados, e decisão informada sobre o nível de automação. Justificativa técnica: a revisão por reclamação depende de informação e capacidade de ação do cidadão, o que enviesa a detecção de erro; e o indicador global esconde erro concentrado. A governança de automação começa pelo controle, não pelo modelo. Erros frequentes: (a) manter o indicador global; (b) ampliar a amostra sem estratificar; (c) publicar o resultado da fila e não o critério; (d) tratar a reclamação como amostragem. Variação para transferência: se o fluxo for de alto impacto em termos de direito, o desenho passa a exigir revisão integral antes do efeito (N2), com alçada e prazo — a amostragem fica reservada aos casos de baixo impacto."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "EXEMPLO 2 (APLICAÇÃO) — Uma servidora usa ferramenta de IA generativa para redigir a resposta a um cidadão que reclama de atraso, insere no prompt o texto integral da reclamação (com nome e CPF) e publica a resposta no canal oficial sem revisão. Como o órgão deve tratar e o que deve ser implantado?",
+          "resposta": "Problema: publicação oficial sem verificação, com tratamento de dado pessoal sem base legal avaliada e com conteúdo de baixa confiabilidade. Dados disponíveis: reclamação com nome e CPF; texto publicado em canal oficial, com promessa de prazo; nenhum registro de revisão; nenhum termo que indique origem do texto; o cidadão não foi consultado; o texto disponível no sistema indica prazo diferente do publicado. Conceitos aplicáveis: dever de veracidade e de linguagem clara da comunicação oficial (art. 5º da Lei nº 12.527/2011; art. 3º, VII, da Lei nº 14.129/2021); tratamento de dado pessoal (art. 5º, I, e art. 4º, da LGPD — verificado em 2026-10-20); alucinação e ancoragem em fonte (unidade 5.3); responsabilização do órgão (art. 34 da Lei nº 12.527/2011); dever de segurança (art. 46 da LGPD). Estratégia: corrigir o caso e, em seguida, o desenho; e distinguir o problema do meio (IA) do problema de processo (sem revisão, com dado pessoal, sem fonte). Passo a passo: (1) CONTER e CORRIGIR: verificar o prazo no sistema, republicar a resposta correta e comunicar ao cidadão o erro, o prazo correto e a justificativa — a correção de erro integra o dever de publicidade; (2) PRESERVAR o registro da publicação original (data, hora, conta, texto, mídia), para apuração e accountability; (3) APURAR o uso de dado de terceiro inserido na ferramenta sem base legal avaliada e a publicação sem verificação; (4) INSTITUIR política de uso de IA: revisão humana obrigatória antes da publicação, lista de usos proibidos (dado pessoal, dado sensível, informação sigilosa, credencial), exigência de ancoragem em fonte oficial e conferência de prazo, valor e nome de norma, registro do prompt, da ferramenta e do revisor; (5) DEFINIR o que a IA pode fazer (rascunho) e o que não pode (publicar, decidir, calcular, responder a dado sensível) e exigir que o servidor assuma a autoria da resposta; (6) INTEGRAR a política ao sistema de riscos (art. 48 da Lei nº 14.129/2021) e à auditoria interna (art. 49), com verificação amostral de fidelidade ao texto oficial; (7) FORNECER canal de atendimento humano, que a ferramenta não substitui. Resultado: erro corrigido e comunicado, apuração aberta e política de uso implantada com verificação obrigatória de fonte. Justificativa técnica: a saída de IA é rascunho, não fonte; e o canal oficial confere ao texto o peso de comunicação do órgão — por isso a responsabilidade é do servidor e do órgão, e não da ferramenta (art. 34). A correção de processo é o que impede a repetição; a sanção isolada não corrige o desenho. Erros frequentes: (a) culpar a ferramenta e encerrar o caso; (b) proibir IA sem definir o que substitui a revisão; (c) não comunicar a correção ao cidadão; (d) não registrar o uso da ferramenta. Variação para transferência: se a resposta ao cidadão for por canal automatizado e não humano, o caso desloca-se para a disciplina de transparência ativa e de revisão amostral do canal, e a decisão sobre o formato e o canal: o conteúdo continua sendo do órgão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Após incidente de publicação indevida, o órgão editou a política de redes sociais para proibir a publicação de conteúdo gerado por IA, alegando que «os modelos alucinam». A política resolve o problema? Avalie.",
+          "correcao": "Problema: remediação sintomática, que confunde o meio com a causa e deixa de fora o vetor principal do incidente. Dados disponíveis: o incidente anterior foi de publicação de dado pessoal de terceiro em post institucional; a nova vedação é sobre conteúdo gerado por IA; o processo de verificação de dados pessoais antes da publicação não foi alterado; a checagem de fatos de conteúdo institucional permanece informal; a revisão de posts por reclamação continua sendo o único gatilho. Conceitos aplicáveis: análise de causa raiz; controle preventivo x detectivo; defesa em camadas; alucinação como modo de funcionamento e não como defeito isolado; art. 31 da Lei nº 12.527/2011 e art. 5º, I, da LGPD como fundamentos do incidente original. Estratégia: tratar como correção de remediação e reavaliar a causa raiz com método (o que, quem, por que, o que deveria ter impedido). Passo a passo: (1) IDENTIFICAR a causa raiz do incidente anterior: ausência de verificação de dado pessoal antes da publicação, ou seja, falha de controle preventivo de processo, e não falha de ferramenta; (2) CONSTATAR que a vedação nova é coerente como camada adicional (revisão obrigatória de conteúdo gerado por IA), mas é insuficiente como remediação, porque não toca o vetor do incidente; (3) IMPLEMENTAR o controle preventivo que faltava: checklist obrigatório de verificação de dados pessoais, de imagem e de citação antes da publicação, com aprovação registrada por função; (4) REFORÇAR o controle detectivo: gatilhos de revisão por risco (perfil de conta, horário, tema sensível, denúncia) e rotina de auditoria mensal de publicações; (5) DEFINIR o tratamento do conteúdo gerado por IA com camada de verificação de fato (conferência de prazo, valor e nome de norma contra a fonte oficial), com registro da versão do prompt e do revisor; (6) ATRIBUIR responsáveis e prazos e registrar o tratamento no sistema de riscos (art. 48 da Lei nº 14.129/2021); (7) AUDITAR a eficácia após o ciclo. Resultado: remediação em duas frentes (vedação de IA como camada adicional e controle preventivo de dado pessoal), com causa raiz corrigida e evidência de eficácia. Justificativa técnica: quando o incidente é de dado pessoal em post, a causa é a ausência de verificação prévia e a exposição de canal; a vedação de IA não altera nenhuma das duas. E a afirmação de que «os modelos alucinam» é, em si, uma generalização imprecisa: a alucinação é modo de funcionamento do modelo, o que exige verificação permanente, e não uma ocorrência ocasional que se resolve com proibição. Erros frequentes: (a) tratar a nova vedação como solução; (b) não registrar o incidente no sistema de riscos; (c) deixar o checklist de dados pessoais sem aprovação registrada; (d) concluir que a auditoria de publicações é desnecessária porque agora há política. Variação para transferência: se o incidente ocorrer em resposta a comentário de cidadão e não em post institucional, o regime muda de accountability editorial para accountability do cidadão, e a revisão — a mesma camada de verificação — passa a proteger o cidadão, e não o órgão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Vedar a publicação de conteúdo gerado por IA, isoladamente, corrige o incidente de publicação de dado pessoal de terceiro.",
+          "resposta": "Errado. A causa raiz do incidente foi a ausência de verificação de dados pessoais antes da publicação; a vedação de IA não toca esse vetor. A remediação completa combina camada adicional e controle preventivo de processo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Elementos de um desenho efetivo de remediação após publicação indevida: A) causa raiz identificada por método; B) controle preventivo com aprovação registrada; C) rotina de auditoria e gatilhos de revisão; D) registro do incidente e das ações no sistema de riscos.",
+          "resposta": "A, B, C e D."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de automação de decisões, supervisão humana e uso de ferramenta de IA, identificando o regime, o princípio violado e a providência de governança, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolverá, com o template de nove itens, três casos de automação de decisões, supervisão humana e uso de ferramenta de IA, identificando o regime, o princípio violado e a providência de governança"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Exemplos de governança digital aplicados a serviços públicos, com casos estruturais do setor e template de nove itens.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exemplos resolvidos da unidade (três casos completos)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Após incidente de publicação indevida, o órgão editou a política de redes sociais para proibir a publicação de conteúdo gerado por IA, alegando que «os modelos alucinam». A política resolve o problema? Avalie.",
+            "porqueErrada": "",
+            "versaoCorreta": "Problema: remediação sintomática, que confunde o meio com a causa e deixa de fora o vetor principal do incidente. Dados disponíveis: o incidente anterior foi de publicação de dado pessoal de terceiro em post institucional; a nova vedação é sobre conteúdo gerado por IA; o processo de verificação de dados pessoais antes da publicação não foi alterado; a checagem de fatos de conteúdo institucional permanece informal; a revisão de posts por reclamação continua sendo o único gatilho. Conceitos aplicáveis: análise de causa raiz; controle preventivo x detectivo; defesa em camadas; alucinação como modo de funcionamento e não como defeito isolado; art. 31 da Lei nº 12.527/2011 e art. 5º, I, da LGPD como fundamentos do incidente original. Estratégia: tratar como correção de remediação e reavaliar a causa raiz com método (o que, quem, por que, o que deveria ter impedido). Passo a passo: (1) IDENTIFICAR a causa raiz do incidente anterior: ausência de verificação de dado pessoal antes da publicação, ou seja, falha de controle preventivo de processo, e não falha de ferramenta; (2) CONSTATAR que a vedação nova é coerente como camada adicional (revisão obrigatória de conteúdo gerado por IA), mas é insuficiente como remediação, porque não toca o vetor do incidente; (3) IMPLEMENTAR o controle preventivo que faltava: checklist obrigatório de verificação de dados pessoais, de imagem e de citação antes da publicação, com aprovação registrada por função; (4) REFORÇAR o controle detectivo: gatilhos de revisão por risco (perfil de conta, horário, tema sensível, denúncia) e rotina de auditoria mensal de publicações; (5) DEFINIR o tratamento do conteúdo gerado por IA com camada de verificação de fato (conferência de prazo, valor e nome de norma contra a fonte oficial), com registro da versão do prompt e do revisor; (6) ATRIBUIR responsáveis e prazos e registrar o tratamento no sistema de riscos (art. 48 da Lei nº 14.129/2021); (7) AUDITAR a eficácia após o ciclo. Resultado: remediação em duas frentes (vedação de IA como camada adicional e controle preventivo de dado pessoal), com causa raiz corrigida e evidência de eficácia. Justificativa técnica: quando o incidente é de dado pessoal em post, a causa é a ausência de verificação prévia e a exposição de canal; a vedação de IA não altera nenhuma das duas. E a afirmação de que «os modelos alucinam» é, em si, uma generalização imprecisa: a alucinação é modo de funcionamento do modelo, o que exige verificação permanente, e não uma ocorrência ocasional que se resolve com proibição. Erros frequentes: (a) tratar a nova vedação como solução; (b) não registrar o incidente no sistema de riscos; (c) deixar o checklist de dados pessoais sem aprovação registrada; (d) concluir que a auditoria de publicações é desnecessária porque agora há política. Variação para transferência: se o incidente ocorrer em resposta a comentário de cidadão e não em post institucional, o regime muda de accountability editorial para accountability do cidadão, e a revisão — a mesma camada de verificação — passa a proteger o cidadão, e não o órgão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O órgão implantou negação automática de requerimentos de benefício de pequeno valor; a revisão humana ocorre apenas quando o cidadão reclama, e o único indicador acompanhado é a taxa de reversão global. Como o órgão deve corrigir o desenho?",
+            "dados": "12.000 casos no fluxo; revisão acionada apenas por reclamação; um único indicador global de reversão; histórico anterior de decisões do tipo; nenhum registro do critério de priorização publicado.",
+            "conceitos": [
+              "Níveis de automação (N3 com revisão reativa em vez de amostragem estratificada)",
+              "Desenho da supervisão (alçada, gatilho, amostragem, registro, indicadores)",
+              "Impessoalidade e avaliação por subgrupo (unidades 6.1 e Módulo 5)",
+              "Transparência do critério (art. 7º, V, da Lei nº 12.527/2011)",
+              "Controles proporcionais ao risco (art. 48, II, da Lei nº 14.129/2021)"
+            ],
+            "estrategia": "Redesenhar o controle de supervisão antes de discutir a qualidade do modelo, porque com esse desenho nenhuma medida de desempenho é confiável.",
+            "execucao": [
+              "1) PUBLICAR o critério de indeferimento e a sua versão, que hoje não é auditável",
+              "2) SUBSTITUIR a revisão por reclamação por um desenho de três vias — amostragem aleatória estratificada (por território e por faixa do benefício), gatilhos objetivos (erro histórico, reclamação, subgrupo com desempenho pior) e revisão integral dos casos de maior impacto",
+              "3) MEDIR por subgrupo a taxa de reversão, porque a reversão concentrada em um público é indício de viés de dados",
+              "4) REGISTRAR, para cada caso, os parâmetros usados, a versão da regra e o resultado da revisão",
+              "5) REPORTAR o resultado ao gestor com painel de indicadores por subgrupo",
+              "6) REAVALIAR o nível de automação: se a evidência sustentar, manter em modo de apoio; se não, reduzir a autonomia."
+            ],
+            "resultado": "Desenho de supervisão auditável, com critério publicado e indicadores segmentados, e decisão informada sobre o nível de automação.",
+            "justificativa": "A revisão por reclamação depende de informação e capacidade de ação do cidadão, o que enviesa a detecção de erro; e o indicador global esconde erro concentrado. A governança de automação começa pelo controle, não pelo modelo.",
+            "errosFrequentes": [
+              "a) Manter o indicador global",
+              "b) Ampliar a amostra sem estratificar",
+              "c) Publicar o resultado da fila e não o critério",
+              "d) Tratar a reclamação como amostragem."
+            ],
+            "variacao": "Se o fluxo for de alto impacto em termos de direito, o desenho passa a exigir revisão integral antes do efeito (N2), com alçada e prazo — a amostragem fica reservada aos casos de baixo impacto."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma servidora usa ferramenta de IA generativa para redigir a resposta a um cidadão que reclama de atraso, insere no prompt o texto integral da reclamação (com nome e CPF) e publica a resposta no canal oficial sem revisão. Como o órgão deve tratar e o que deve ser implantado?",
+            "dados": "Reclamação com nome e CPF; texto publicado em canal oficial, com promessa de prazo; nenhum registro de revisão; nenhum termo que indique origem do texto; o cidadão não foi consultado; o texto disponível no sistema indica prazo diferente do publicado.",
+            "conceitos": [
+              "Dever de veracidade e de linguagem clara da comunicação oficial (art. 5º da Lei nº 12.527/2011",
+              "Art. 3º, VII, da Lei nº 14.129/2021)",
+              "Tratamento de dado pessoal (art. 5º, I, e art. 4º, da LGPD — verificado em 2026-10-20)",
+              "Alucinação e ancoragem em fonte (unidade 5.3)",
+              "Responsabilização do órgão (art. 34 da Lei nº 12.527/2011)",
+              "Dever de segurança (art. 46 da LGPD)"
+            ],
+            "estrategia": "Corrigir o caso e, em seguida, o desenho; e distinguir o problema do meio (IA) do problema de processo (sem revisão, com dado pessoal, sem fonte).",
+            "execucao": [
+              "1) CONTER e CORRIGIR: verificar o prazo no sistema, republicar a resposta correta e comunicar ao cidadão o erro, o prazo correto e a justificativa — a correção de erro integra o dever de publicidade",
+              "2) PRESERVAR o registro da publicação original (data, hora, conta, texto, mídia), para apuração e accountability",
+              "3) APURAR o uso de dado de terceiro inserido na ferramenta sem base legal avaliada e a publicação sem verificação",
+              "4) INSTITUIR política de uso de IA: revisão humana obrigatória antes da publicação, lista de usos proibidos (dado pessoal, dado sensível, informação sigilosa, credencial), exigência de ancoragem em fonte oficial e conferência de prazo, valor e nome de norma, registro do prompt, da ferramenta e do revisor",
+              "5) DEFINIR o que a IA pode fazer (rascunho) e o que não pode (publicar, decidir, calcular, responder a dado sensível) e exigir que o servidor assuma a autoria da resposta",
+              "6) INTEGRAR a política ao sistema de riscos (art. 48 da Lei nº 14.129/2021) e à auditoria interna (art. 49), com verificação amostral de fidelidade ao texto oficial",
+              "7) FORNECER canal de atendimento humano, que a ferramenta não substitui."
+            ],
+            "resultado": "Erro corrigido e comunicado, apuração aberta e política de uso implantada com verificação obrigatória de fonte.",
+            "justificativa": "A saída de IA é rascunho, não fonte; e o canal oficial confere ao texto o peso de comunicação do órgão — por isso a responsabilidade é do servidor e do órgão, e não da ferramenta (art. 34). A correção de processo é o que impede a repetição; a sanção isolada não corrige o desenho.",
+            "errosFrequentes": [
+              "a) Culpar a ferramenta e encerrar o caso",
+              "b) Proibir IA sem definir o que substitui a revisão",
+              "c) Não comunicar a correção ao cidadão",
+              "d) Não registrar o uso da ferramenta."
+            ],
+            "variacao": "Se a resposta ao cidadão for por canal automatizado e não humano, o caso desloca-se para a disciplina de transparência ativa e de revisão amostral do canal, e a decisão sobre o formato e o canal: o conteúdo continua sendo do órgão."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Após incidente de publicação indevida, o órgão editou a política de redes sociais para proibir a publicação de conteúdo gerado por IA, alegando que «os modelos alucinam». A política resolve o problema? Avalie.",
+            "dados": "O incidente anterior foi de publicação de dado pessoal de terceiro em post institucional; a nova vedação é sobre conteúdo gerado por IA; o processo de verificação de dados pessoais antes da publicação não foi alterado; a checagem de fatos de conteúdo institucional permanece informal; a revisão de posts por reclamação continua sendo o único gatilho.",
+            "conceitos": [
+              "Análise de causa raiz",
+              "Controle preventivo x detectivo",
+              "Defesa em camadas",
+              "Alucinação como modo de funcionamento e não como defeito isolado",
+              "Art. 31 da Lei nº 12.527/2011 e art. 5º, I, da LGPD como fundamentos do incidente original"
+            ],
+            "estrategia": "Tratar como correção de remediação e reavaliar a causa raiz com método (o que, quem, por que, o que deveria ter impedido).",
+            "execucao": [
+              "1) IDENTIFICAR a causa raiz do incidente anterior: ausência de verificação de dado pessoal antes da publicação, ou seja, falha de controle preventivo de processo, e não falha de ferramenta",
+              "2) CONSTATAR que a vedação nova é coerente como camada adicional (revisão obrigatória de conteúdo gerado por IA), mas é insuficiente como remediação, porque não toca o vetor do incidente",
+              "3) IMPLEMENTAR o controle preventivo que faltava: checklist obrigatório de verificação de dados pessoais, de imagem e de citação antes da publicação, com aprovação registrada por função",
+              "4) REFORÇAR o controle detectivo: gatilhos de revisão por risco (perfil de conta, horário, tema sensível, denúncia) e rotina de auditoria mensal de publicações",
+              "5) DEFINIR o tratamento do conteúdo gerado por IA com camada de verificação de fato (conferência de prazo, valor e nome de norma contra a fonte oficial), com registro da versão do prompt e do revisor",
+              "6) ATRIBUIR responsáveis e prazos e registrar o tratamento no sistema de riscos (art. 48 da Lei nº 14.129/2021)",
+              "7) AUDITAR a eficácia após o ciclo."
+            ],
+            "resultado": "Remediação em duas frentes (vedação de IA como camada adicional e controle preventivo de dado pessoal), com causa raiz corrigida e evidência de eficácia.",
+            "justificativa": "Quando o incidente é de dado pessoal em post, a causa é a ausência de verificação prévia e a exposição de canal; a vedação de IA não altera nenhuma das duas. E a afirmação de que «os modelos alucinam» é, em si, uma generalização imprecisa: a alucinação é modo de funcionamento do modelo, o que exige verificação permanente, e não uma ocorrência ocasional que se resolve com proibição.",
+            "errosFrequentes": [
+              "a) Tratar a nova vedação como solução",
+              "b) Não registrar o incidente no sistema de riscos",
+              "c) Deixar o checklist de dados pessoais sem aprovação registrada",
+              "d) Concluir que a auditoria de publicações é desnecessária porque agora há política."
+            ],
+            "variacao": "Se o incidente ocorrer em resposta a comentário de cidadão e não em post institucional, o regime muda de accountability editorial para accountability do cidadão, e a revisão — a mesma camada de verificação — passa a proteger o cidadão, e não o órgão."
+          }
+        ]
+      }
+    }
+  ]
+}

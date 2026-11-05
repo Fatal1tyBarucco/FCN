@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 3,
+    "unidadeTitulo": "7.3 Governança, Anonimização e Proteção de Dados",
+    "parte": 3,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM7U3P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U3P3.js",
+    "idsCompletos": [
+      "m7-u3-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u3-t2-s3",
+      "titulo": "Proteção de dados e a LGPD",
+      "topicoTitulo": "Governança, acesso, minimização e proteção de dados",
+      "topicoId": "modulo-7-unidade-3-topico-2",
+      "unidadeTitulo": "7.3 Governança, Anonimização e Proteção de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno relacionará princípios da LGPD a controles técnicos e organizacionais de proteção.",
+      "conteudo": "A LGPD — Lei nº 13.709/2018, verificada neste projeto na fonte oficial do Planalto (referências/referencias-verificadas.md) — regula o tratamento de dados pessoais no Brasil. Conceitos centrais: dado pessoal (relacionado a pessoa natural identificada ou identificável, art. 5º), titular (a pessoa a quem os dados se referem), controlador (decide sobre o tratamento) e operador (trata em nome do controlador), além das finalidades e bases legais para o tratamento (arts. 2º a 4º). O art. 46 determina que o controlador e o operador adotem medidas de segurança e técnicas aptas a proteger os dados, e a LGPD prevê ainda sanções administrativas. CONTROLES TÉCNICOS E ORGANIZACIONAIS que materializam essa exigência: criptografia em repouso e em trânsito, controle de acesso por perfil, pseudonimização de bases de análise, segregação de ambientes (produção x teste sem dados reais), backup e recuperação, gestão de vulnerabilidades, trilha de auditoria, plano de resposta a incidentes (comunicação e registro) e cláusulas contratuais com terceiros. CONTROLES ORGANIZACIONAIS: políticas, treinamento, inventário de tratamentos, encarregado atuando de fato, prazos de retenção. LIMITE DESTE TEXTO: a lei não é reproduzida integralmente; para citar artigos em prova ou projeto, consulte o texto verificado — este curso não substitui a leitura legal nem orientação jurídica.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Como o princípio de segurança (art. 46 da LGPD) se materializa tecnicamente?",
+          "resposta": "Medidas aptas e proporcionais ao risco: criptografia dos dados em repouso e em trânsito, controle de acesso por perfil com menor privilégio, segregação de ambientes (sem dados pessoais reais em testes), trilha de auditoria, backup testado e plano de resposta a incidentes com registro e comunicação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Área de TI propõe usar base de produção (com dados pessoais) em ambiente de homologação. Avalie.",
+          "resposta": "Prática incompatível com proteção proporcional: ambientes de teste têm mais gente com acesso, menos monitoramento e cópias frequentes não rastreadas. A alternativa correta é usar dados sintéticos ou pseudonimizados, com controle de acesso e registro — mantendo a utilidade do teste sem expor titulares."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Sob a LGPD, qualquer vazamento pode ser resolvido com pedido de desculpas — não há consequência formal.'",
+          "correcao": "Errado. A LGPD prevê sanções administrativas e o art. 46 impõe dever de adotar medidas de segurança; incidentes exigem registro, avaliação de impacto e comunicação. Desculpas não substituem controles nem evidência de que existiam."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Segundo a LGPD (art. 46), controlador e operador devem adotar medidas de segurança e técnicas aptas a proteger os dados pessoais.",
+          "resposta": "Certo. Conteúdo conferido na fonte oficial verificada do projeto (Lei nº 13.709/2018)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quem decide sobre o tratamento dos dados, segundo a LGPD? A) titular; B) controlador; C) operador; D) encarregado.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de relacionar princípios da LGPD a controles técnicos e organizacionais de proteção, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "relacionará princípios da LGPD a controles técnicos e organizacionais de proteção"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A LGPD — Lei nº 13.709/2018, verificada neste projeto na fonte oficial do Planalto (referências/referencias-verificadas.md) — regula o tratamento de dados pessoais no Brasil. Conceitos centrais: dado pessoal (relacionado a pessoa natural identificada ou identificável, art. 5º), titular (a pessoa a quem os dados se referem), controlador (decide sobre o tratamento) e operador (trata em nome do controlador), além das finalidades e bases legais para o tratamento (arts. 2º a 4º). O art. 46 determina …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Proteção de dados e a LGPD",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Sob a LGPD, qualquer vazamento pode ser resolvido com pedido de desculpas — não há consequência formal.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A LGPD prevê sanções administrativas e o art. 46 impõe dever de adotar medidas de segurança; incidentes exigem registro, avaliação de impacto e comunicação. Desculpas não substituem controles nem evidência de que existiam."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Como o princípio de segurança (art. 46 da LGPD) se materializa tecnicamente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Medidas aptas e proporcionais ao risco: criptografia dos dados em repouso e em trânsito, controle de acesso por perfil com menor privilégio, segregação de ambientes (sem dados pessoais reais em testes), trilha de auditoria, backup testado e plano de resposta a incidentes com registro e comunicação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Área de TI propõe usar base de produção (com dados pessoais) em ambiente de homologação. Avalie.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Prática incompatível com proteção proporcional: ambientes de teste têm mais gente com acesso, menos monitoramento e cópias frequentes não rastreadas. A alternativa correta é usar dados sintéticos ou pseudonimizados, com controle de acesso e registro — mantendo a utilidade do teste sem expor titulares.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Sob a LGPD, qualquer vazamento pode ser resolvido com pedido de desculpas — não há consequência formal.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A LGPD prevê sanções administrativas e o art. 46 impõe dever de adotar medidas de segurança; incidentes exigem registro, avaliação de impacto e comunicação. Desculpas não substituem controles nem evidência de que existiam.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

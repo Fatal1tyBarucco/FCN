@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 3,
+    "unidadeTitulo": "2.3 Protocolos",
+    "parte": 2,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U3P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U3P2.js",
+    "idsCompletos": [
+      "m2-u3-t1-s3",
+      "m2-u3-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u3-t1-s3",
+      "titulo": "UDP: datagramas sem conexão",
+      "topicoTitulo": "IPv4, IPv6, TCP e UDP",
+      "topicoId": "modulo-2-unidade-3-topico-1",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará as características do UDP, suas vantagens e limitações, e identificará aplicações típicas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as características do UDP; (b) seu cabeçalho mínimo; (c) vantagens e limitações; (d) aplicações típicas. POR QUE O CONHECIMENTO É IMPORTANTE: saber quando o UDP é preferível ao TCP é decisão recorrente; a prova cobra a comparação e os exemplos. PRÉ-REQUISITOS: camada de transporte. OBJETIVOS OBSERVÁVEIS: (1) definir o UDP; (2) citar vantagens; (3) reconhecer limitações; (4) associar aplicações. COMPETÊNCIAS DESENVOLVIDAS: escolha de protocolo de transporte. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (TCP); unidade 3.2 (DNS/DHCP); unidade 1.2 (comutação). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o UDP (User Datagram Protocol) é um protocolo de transporte sem conexão e não confiável: envia datagramas independentes, sem handshake, sem confirmação (ACK), sem retransmissão, sem controle de fluxo/congestionamento e sem garantia de ordem. Seu cabeçalho é mínimo, com 8 bytes: portas de origem e destino, comprimento e checksum. Isso traz vantagens: baixa latência, overhead reduzido e suporte a broadcast e multicast (que o TCP não oferece). As limitações decorrem da ausência de garantias — datagramas podem perder-se, duplicar-se ou chegar fora de ordem, e a aplicação precisa tratar isso se a confiabilidade for necessária. O UDP é usado por DNS (consultas), DHCP, VoIP, streaming, jogos online e pelo QUIC, que reimplementa a confiabilidade sobre UDP. A escolha entre TCP e UDP deriva do requisito: confiabilidade e ordem pedem TCP; latência mínima, overhead baixo ou broadcast/multicast pedem UDP. Não há protocolo \"melhor\" em absoluto — há adequação ao problema.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o UDP \"dispara\" sem confirmar.\n- Nível intermediário: comparar overhead e latência com o TCP.\n- Nível avançado: explicar por que a confiabilidade fica na aplicação (ex.: QUIC).\n- Nível especialista: decidir o transporte para um serviço em tempo real justificando tecnicamente.\nCOMPARAÇÕES CRÍTICAS:\n- TCP x UDP: confiável e ordenado x rápido e sem garantias — muda a escolha por aplicação.\n- header TCP x header UDP: o UDP tem cabeçalho mínimo (8 bytes); o TCP, maior.\n- UDP x QUIC: o QUIC fornece confiabilidade e segurança SOBRE o UDP.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O UDP é pior que o TCP.\" — Motivo: depende do requisito — Versão tecnicamente correta: para tempo real, o UDP é preferível.\n- Afirmação errada: \"O UDP garante ordem.\" — Motivo: não há ordenação — Versão tecnicamente correta: a aplicação deve reordenar se precisar.\n- Afirmação errada: \"DNS usa TCP.\" — Motivo: consultas usam UDP (TCP em transferências/zone e respostas grandes) — Versão tecnicamente correta: o padrão das consultas é UDP.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: UDP, datagrama, sem conexão, cabeçalho de 8 bytes, broadcast/multicast, QUIC.\n- Regras e fórmulas: UDP = sem handshake, sem ACK, sem retransmissão.\n- Exceções: o DNS usa TCP em casos específicos (transferência de zona, respostas grandes).\n- Palavras-chave: latência, overhead, ordenação, streaming, tempo real.\n- Checklist de domínio: (1) Defino o UDP? (2) Cito vantagens? (3) Reconheço limitações? (4) Associo aplicações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O UDP é confiável? (2) Qual o tamanho mínimo do seu cabeçalho? (3) Cite duas vantagens. (4) Cite três aplicações. (5) Quando escolher UDP em vez de TCP?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que o DNS usa UDP na porta 53 para consultas simples?",
+          "resposta": "Porque a consulta é pequena e única; UDP tem menor latência e overhead. Se a resposta exceder 512 bytes (ou EDNS), usa TCP."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um jogo online de ação precisa enviar posição do jogador 20 vezes por segundo. TCP ou UDP?",
+          "resposta": "UDP — perda ocasional de um pacote de posição é preferível a esperar retransmissão (que causaria lag). A aplicação interpola posições."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'UDP é inútil porque não garante entrega.'",
+          "correcao": "Errado. UDP é essencial onde latência importa mais que confiabilidade (VoIP, DNS, streaming, jogos). A confiabilidade pode ser implementada na aplicação quando necessário."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O cabeçalho UDP tem 8 bytes e não inclui número de sequência.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo é sem conexão? A) TCP; B) UDP; C) HTTP; D) FTP.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar as características do UDP, suas vantagens e limitações, e identificará aplicações típicas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará as características do UDP, suas vantagens e limitações, e identificará aplicações típicas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "UDP (User Datagram Protocol) é sem conexão e não confiável: envia datagramas independentes, sem handshake, sem ACK, sem retransmissão, sem controle de fluxo/congestionamento, sem ordenação. Cabeçalho mínimo (8 bytes: portas origem/destino, comprimento, checksum). Vantagens: baixa latência, overhead mínimo, suporta broadcast/multicast. Limitações: pode perder, duplicar ou reordenar pacotes; a aplicação deve tratar confiabilidade se necessário. Usado por DNS, DHCP, VoIP, streaming, jogos online, Q…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a UDP: datagramas sem conexão",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'UDP é inútil porque não garante entrega.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. UDP é essencial onde latência importa mais que confiabilidade (VoIP, DNS, streaming, jogos). A confiabilidade pode ser implementada na aplicação quando necessário."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que o DNS usa UDP na porta 53 para consultas simples?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque a consulta é pequena e única; UDP tem menor latência e overhead. Se a resposta exceder 512 bytes (ou EDNS), usa TCP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um jogo online de ação precisa enviar posição do jogador 20 vezes por segundo. TCP ou UDP?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "UDP — perda ocasional de um pacote de posição é preferível a esperar retransmissão (que causaria lag). A aplicação interpola posições.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'UDP é inútil porque não garante entrega.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. UDP é essencial onde latência importa mais que confiabilidade (VoIP, DNS, streaming, jogos). A confiabilidade pode ser implementada na aplicação quando necessário.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u3-t2-s1",
+      "titulo": "HTTP e HTTPS: finalidade, fluxo e portas",
+      "topicoTitulo": "HTTP, HTTPS, DNS e DHCP",
+      "topicoId": "modulo-2-unidade-3-topico-2",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará o funcionamento do HTTP e HTTPS, métodos, códigos de status e a diferença entre os dois.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) HTTP: métodos e códigos de status; (b) o que significa stateless; (c) HTTPS e o papel do TLS; (d) portas e versões. POR QUE O CONHECIMENTO É IMPORTANTE: HTTP é o protocolo da web e base de quase todo conteúdo; a prova cobra métodos, códigos e a diferença HTTP x HTTPS. PRÉ-REQUISITOS: TCP, TLS (noções). OBJETIVOS OBSERVÁVEIS: (1) listar métodos; (2) interpretar códigos de status; (3) diferenciar HTTP de HTTPS; (4) indicar portas. COMPETÊNCIAS DESENVOLVIDAS: leitura de tráfego web; interpretação de códigos. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.3 (fluxo HTTP); unidade 3.4 (TLS). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o HTTP (HyperText Transfer Protocol) é um protocolo de aplicação sem estado (stateless), baseado em requisição-resposta: cada requisição é independente, e o estado de sessão é mantido por mecanismos como cookies e tokens. Os métodos definem a intenção: GET (obter), POST (enviar dados), PUT (atualizar/substituir), DELETE (remover), PATCH (atualizar parcialmente), HEAD (só cabeçalhos) e OPTIONS (capacidades). Os códigos de status resumem o resultado: 1xx informativo, 2xx sucesso (200 OK), 3xx redirecionamento (301, 302), 4xx erro do cliente (400, 401, 403, 404), 5xx erro do servidor (500, 502, 503). O HTTP usa TCP na porta 80; o HTTPS é HTTP sobre TLS, cifrando o conteúdo e autenticando o servidor por certificado, usando TCP na porta 443. Quanto às versões, o HTTP/2 multiplexa fluxos e comprime cabeçalhos, e o HTTP/3 roda sobre QUIC (UDP). Stateless não significa \"sem sessão\": significa que o protocolo não guarda estado entre requisições — quem guarda é a aplicação (via cookies/tokens).\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir GET de POST.\n- Nível intermediário: interpretar a classe dos códigos de status.\n- Nível avançado: explicar o que o HTTPS adiciona ao HTTP.\n- Nível especialista: diagnosticar um problema pela combinação método/status/porta.\nCOMPARAÇÕES CRÍTICAS:\n- HTTP x HTTPS: o segundo adiciona TLS (confidencialidade, integridade e autenticação) — muda portas e segurança.\n- 4xx x 5xx: o primeiro é erro do cliente; o segundo, do servidor.\n- GET x POST: o primeiro obtém; o segundo envia dados no corpo — muda o efeito e o cache.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"HTTPS é um protocolo diferente do HTTP.\" — Motivo: é o HTTP sobre TLS — Versão tecnicamente correta: o protocolo de aplicação continua sendo HTTP.\n- Afirmação errada: \"Stateless significa que não há login.\" — Motivo: o estado é mantido pela aplicação — Versão tecnicamente correta: cookies/tokens preservam a sessão.\n- Afirmação errada: \"404 indica erro do servidor.\" — Motivo: é erro do cliente (recurso não encontrado) — Versão tecnicamente correta: 404 pertence à classe 4xx.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: HTTP, stateless, métodos, códigos de status, HTTPS, TLS, portas 80/443.\n- Regras e fórmulas: 2xx sucesso; 3xx redirecionamento; 4xx cliente; 5xx servidor.\n- Exceções: HTTP/3 usa UDP (QUIC).\n- Palavras-chave: requisição-resposta, método, status, certificado, sessão.\n- Checklist de domínio: (1) Listo métodos? (2) Interpreto códigos? (3) Diferencio HTTP/HTTPS? (4) Indico portas?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que significa stateless? (2) Diferença entre GET e POST? (3) O que é 503? (4) Qual porta o HTTPS usa? (5) O que o HTTPS adiciona?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Diferenciar uma requisição GET de uma POST.",
+          "resposta": "GET solicita um recurso (parâmetros na URL, cacheável, idempotente). POST envia dados ao servidor (corpo da requisição, não cacheável por padrão). Usar GET para alterar estado é erro de design."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um site retorna 301 ao acessar http://exemplo.com. O que isso significa?",
+          "resposta": "Redirecionamento permanente para outra URL (provavelmente https://exemplo.com). O cliente deve atualizar favoritos e links; buscadores transferem ranking."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'HTTPS garante que o servidor seja quem diz ser e que ninguém leia os dados, mas não impede alteração.'",
+          "correcao": "Errado. HTTPS (via TLS) também garante integridade: qualquer alteração no trânsito invalida a verificação de MAC, e a conexão é encerrada. Confidencialidade + integridade + autenticidade do servidor."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) HTTP é stateless: o servidor não mantém estado entre requisições por padrão.",
+          "resposta": "Certo — sessões usam cookies/tokens."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual código HTTP indica 'não encontrado'? A) 200; B) 301; C) 404; D) 500.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o funcionamento do HTTP e HTTPS, métodos, códigos de status e a diferença entre os dois, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o funcionamento do HTTP e HTTPS, métodos, códigos de status e a diferença entre os dois"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "HTTP (HyperText Transfer Protocol) é um protocolo de aplicação stateless (sem estado) baseado em requisição-resposta. Métodos: GET (obter), POST (enviar dados), PUT (atualizar), DELETE (remover), PATCH, HEAD, OPTIONS. Códigos de status: 1xx informativo, 2xx sucesso (200 OK), 3xx redirecionamento (301, 302), 4xx erro do cliente (400, 401, 403, 404), 5xx erro do servidor (500, 502, 503). HTTP usa TCP porta 80. HTTPS é HTTP sobre TLS: cifra o conteúdo e autentica o servidor via certificado, usando …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a HTTP e HTTPS: finalidade, fluxo e portas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'HTTPS garante que o servidor seja quem diz ser e que ninguém leia os dados, mas não impede alteração.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. HTTPS (via TLS) também garante integridade: qualquer alteração no trânsito invalida a verificação de MAC, e a conexão é encerrada. Confidencialidade + integridade + autenticidade do servidor."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Diferenciar uma requisição GET de uma POST.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "GET solicita um recurso (parâmetros na URL, cacheável, idempotente). POST envia dados ao servidor (corpo da requisição, não cacheável por padrão). Usar GET para alterar estado é erro de design.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um site retorna 301 ao acessar http://exemplo.com. O que isso significa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Redirecionamento permanente para outra URL (provavelmente https://exemplo.com). O cliente deve atualizar favoritos e links; buscadores transferem ranking.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'HTTPS garante que o servidor seja quem diz ser e que ninguém leia os dados, mas não impede alteração.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. HTTPS (via TLS) também garante integridade: qualquer alteração no trânsito invalida a verificação de MAC, e a conexão é encerrada. Confidencialidade + integridade + autenticidade do servidor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

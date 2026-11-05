@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 1,
+    "unidadeTitulo": "3.1 Correio Eletrônico",
+    "parte": 1,
+    "totalPartesUnidade": 2,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U1P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U1P1.js",
+    "idsCompletos": [
+      "m3-u1-t1-s1",
+      "m3-u1-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u1-t1-s1",
+      "titulo": "SMTP — Simple Mail Transfer Protocol",
+      "topicoTitulo": "SMTP, POP3 e IMAP",
+      "topicoId": "modulo-3-unidade-1-topico-1",
+      "unidadeTitulo": "3.1 Correio Eletrônico",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá o funcionamento do SMTP para envio de e-mails.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é o SMTP e qual problema ele resolve (envio e transporte de mensagens); (b) as portas usuais 25, 587 e 465 e o papel distinto de cada uma; (c) os comandos textuais do protocolo; (d) a diferença entre submissão do cliente e relay entre servidores; (e) como o STARTTLS e o SMTPS protegem o envio. POR QUE O CONHECIMENTO É IMPORTANTE: o correio eletrônico é a espinha dorsal da comunicação institucional; entender o SMTP permite diagnosticar falhas de envio, reconhecer riscos de fraude e compreender por que a segurança depende de TLS. PRÉ-REQUISITOS: noção de cliente e servidor, de camada de aplicação e de TCP. OBJETIVOS OBSERVÁVEIS: (1) descrever o fluxo de envio em etapas; (2) associar cada porta ao seu uso; (3) diferenciar submissão de relay; (4) explicar a função do STARTTLS. COMPETÊNCIAS DESENVOLVIDAS: leitura de fluxo de protocolo; configuração de cliente de e-mail; diagnóstico de falha de envio. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: Módulo 2 (TCP, portas, TLS); subtópico POP3 x IMAP; unidade 3.3 (comunicação profissional). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o SMTP (Simple Mail Transfer Protocol) é o protocolo de aplicação responsável por ENVIAR e TRANSPORTAR mensagens de correio; ele opera sobre TCP e usa comandos textuais: HELO/EHLO (abertura da sessão, com EHLO anunciando as extensões), MAIL FROM (remetente), RCPT TO (destinatário), DATA (corpo da mensagem) e QUIT (encerramento). Existem três situações de porta: a 25 é usada para relay entre servidores de e-mail; a 587 é a porta de submissão autenticada do cliente, tipicamente com STARTTLS; a 465 usa TLS implícito (SMTPS). O STARTTLS começa a conexão em texto claro e depois a eleva para TLS; o TLS implícito já inicia cifrado. O servidor do remetente encaminha a mensagem ao servidor do destinatário, que a armazena na caixa postal; o recebimento em si é feito por POP3 ou IMAP, não pelo SMTP. O protocolo não criptografa por padrão: sem TLS, o conteúdo trafega exposto.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: analogia do correio físico — o SMTP é o carteiro que coleta e entrega a carta; a caixa postal do destinatário é lida por outro protocolo.\n- Nível intermediário: ordenar os comandos de uma sessão e associar HELO/EHLO, MAIL FROM, RCPT TO e DATA às suas funções.\n- Nível avançado: distinguir submissão (587, autenticada) de relay (25) e justificar o bloqueio da porta 25 para clientes externos como medida antifraude.\n- Nível especialista: diante de um e-mail legítimo marcado como spam, avaliar se o problema é autenticação (SPF/DKIM/DMARC), criptografia ou reputação do IP remetente.\nCOMPARAÇÕES CRÍTICAS:\n- SMTP x POP3/IMAP: o SMTP envia e transporta; POP3 e IMAP recebem e permitem a leitura — confundir isso muda o gabarito.\n- STARTTLS x SMTPS: STARTTLS eleva uma conexão inicialmente sem cifra; SMTPS inicia a conexão já cifrada (porta 465).\n- porta 25 x porta 587: 25 serve ao relay entre servidores; 587 serve à submissão autenticada do usuário.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"SMTP é usado para receber e-mails.\" — Motivo: confunde envio com recebimento — Versão tecnicamente correta: SMTP envia/transporta; POP3 e IMAP recebem.\n- Afirmação errada: \"SMTP sempre criptografa as mensagens.\" — Motivo: a criptografia depende de TLS configurado — Versão tecnicamente correta: sem STARTTLS/SMTPS o tráfego é em texto claro.\n- Afirmação errada: \"A porta 25 é a recomendada para o cliente enviar e-mail.\" — Motivo: a 25 é para relay entre servidores — Versão tecnicamente correta: o cliente usa 587 (submissão) ou 465.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: SMTP, comandos HELO/EHLO, MAIL FROM, RCPT TO, DATA, QUIT, submissão, relay, STARTTLS, SMTPS.\n- Regras e fórmulas: portas 25 (relay), 587 (submissão com STARTTLS), 465 (TLS implícito).\n- Exceções: o protocolo não cifra por padrão; a cifra depende de TLS.\n- Palavras-chave: envio, transporte, relay, submissão, comandos textuais, TLS.\n- Checklist de domínio: (1) Descrevo o fluxo de envio? (2) Associo cada porta ao uso? (3) Diferencio submissão de relay? (4) Explico STARTTLS x TLS implícito?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual protocolo envia e qual recebe e-mail? (2) Para que serve a porta 587? (3) Qual a diferença entre STARTTLS e TLS implícito? (4) Em que etapa entra o servidor do destinatário? (5) Por que bloquear a porta 25 para clientes externos?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Descreva o fluxo básico de envio de um e-mail usando SMTP.",
+          "resposta": "1) Cliente autentica no servidor SMTP do remetente. 2) Cliente envia MAIL FROM (remetente). 3) Cliente envia RCPT TO (destinatário). 4) Cliente envia DATA (corpo do e-mail). 5) Servidor do remetente encaminha para o servidor do destinatário. 6) Servidor do destinatário armazena na caixa de entrada do destinatário."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Qual porta SMTP deve ser usada para envio seguro de e-mail?",
+          "resposta": "Porta 587 com STARTTLS (submissão) ou porta 465 com SSL/TLS implícito (SMTPS). A porta 25 é usada para relay entre servidores de e-mail e deve ser bloqueada para clientes externos para evitar spam."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'SMTP é usado para receber e-mails.'",
+          "correcao": "Errado. SMTP é usado para ENVIAR e-mails. POP3 e IMAP são usados para RECEBER e-mails."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) SMTP opera na camada de transporte do modelo OSI.",
+          "resposta": "Errado. SMTP opera na camada de aplicação (camada 7). Usa TCP na camada de transporte (camada 4)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual porta SMTP é recomendada para envio seguro? A) 25; B) 110; C) 587; D) 143.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender o funcionamento do SMTP para envio de e-mails, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "QtqbaEiwlyU",
+          "titulo": "Funcionamento do protocolo SMTP",
+          "canal": "Marco Antoni",
+          "urlOriginal": "https://www.youtube.com/watch?v=QtqbaEiwlyU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/QtqbaEiwlyU",
+          "descricao": "Videoaula explicativa sobre o protocolo SMTP (Simple Mail Transfer Protocol), abordando seu funcionamento para envio de e-mails, comandos principais (HELO/EHLO, MAIL FROM, RCPT TO, DATA, QUIT), portas padrão (25, 587, 465), diferenças entre SMTP, POP3 e IMAP, e a importância da autenticação e criptografia (STARTTLS, SMTPS) para segurança no envio.",
+          "dataValidacao": "2026-11-03"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá o funcionamento do SMTP para envio de e-mails"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "SMTP (Simple Mail Transfer Protocol) é o protocolo padrão para envio de e-mails. Opera na camada de aplicação (modelo OSI camada 7 / TCP/IP aplicação). Porta padrão: 25 (sem criptografia), 587 (submissão com STARTTLS), 465 (SMTPS com SSL/TLS implícito). O SMTP envia o e-mail do cliente para o servidor de e-mail do remetente, que então encaminha para o servidor do destinatário. O protocolo usa comandos textuais: HELO/EHLO, MAIL FROM, RCPT TO, DATA, QUIT. O SMTP não criptografa por padrão — a segu…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a SMTP — Simple Mail Transfer Protocol",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'SMTP é usado para receber e-mails.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. SMTP é usado para ENVIAR e-mails. POP3 e IMAP são usados para RECEBER e-mails."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Descreva o fluxo básico de envio de um e-mail usando SMTP.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) Cliente autentica no servidor SMTP do remetente. 2) Cliente envia MAIL FROM (remetente). 3) Cliente envia RCPT TO (destinatário). 4) Cliente envia DATA (corpo do e-mail). 5) Servidor do remetente encaminha para o servidor do destinatário. 6) Servidor do destinatário armazena na caixa de entrada do destinatário.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Qual porta SMTP deve ser usada para envio seguro de e-mail?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porta 587 com STARTTLS (submissão) ou porta 465 com SSL/TLS implícito (SMTPS). A porta 25 é usada para relay entre servidores de e-mail e deve ser bloqueada para clientes externos para evitar spam.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'SMTP é usado para receber e-mails.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. SMTP é usado para ENVIAR e-mails. POP3 e IMAP são usados para RECEBER e-mails.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u1-t1-s2",
+      "titulo": "POP3 vs IMAP",
+      "topicoTitulo": "SMTP, POP3 e IMAP",
+      "topicoId": "modulo-3-unidade-1-topico-1",
+      "unidadeTitulo": "3.1 Correio Eletrônico",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno diferenciará POP3 e IMAP para recebimento de e-mails.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que POP3 e IMAP fazem no recebimento; (b) como cada um trata a cópia no servidor; (c) as portas usuais e as versões seguras; (d) quando escolher cada protocolo. POR QUE O CONHECIMENTO É IMPORTANTE: a escolha errada de protocolo faz o usuário perder mensagens entre dispositivos; a prova cobra a diferença entre baixar e sincronizar. PRÉ-REQUISITOS: noção de cliente/servidor e do funcionamento básico de caixa postal. OBJETIVOS OBSERVÁVEIS: (1) descrever o comportamento de POP3; (2) descrever o comportamento de IMAP; (3) indicar as portas usuais; (4) escolher o protocolo conforme o cenário. COMPETÊNCIAS DESENVOLVIDAS: configuração de cliente de correio; decisão técnica de multiplataforma. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópico SMTP; unidade 3.1 (fluxo de mensagem); Módulo 2 (portas e TLS). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: POP3 (Post Office Protocol versão 3) foi projetado para acesso offline em um único dispositivo: o cliente baixa as mensagens e, por padrão, remove-as do servidor; as portas usuais são 110 (sem cifra) e 995 (SSL/TLS). IMAP (Internet Message Access Protocol) mantém as mensagens no servidor e as sincroniza entre dispositivos, permitindo organizar pastas remotamente, marcar lidas e buscar sem baixar tudo; as portas usuais são 143 (sem cifra) e 993 (SSL/TLS). O IMAP é do tipo \"cópia única no servidor, várias vistas\"; o POP3 é \"baixar e, tipicamente, esvaziar a caixa\". A escolha depende do cenário: um computador dedicado e conexão instável favorecem POP3; múltiplos dispositivos, celular e webmail favorecem IMAP. Ambos pressupõem autenticação e podem usar STARTTLS ou TLS implícito.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: analogia da caixa de correio — o IMAP lê as cartas no próprio correio; o POP3 leva as cartas para casa e esvazia a caixa.\n- Nível intermediário: associar portas 110/995 (POP3) e 143/993 (IMAP) e explicar o efeito de cada modo no servidor.\n- Nível avançado: analisar o impacto da sincronização em cenários de uso móvel, cotas de servidor e backup.\n- Nível especialista: diagnosticar por que uma mensagem aparece em um dispositivo e não em outro, atribuindo a causa ao protocolo adotado.\nCOMPARAÇÕES CRÍTICAS:\n- POP3 x IMAP: POP3 baixa e tende a apagar do servidor; IMAP mantém cópia central e sincroniza — isso altera diretamente o gabarito sobre multi-dispositivo.\n- porta sem cifra x porta segura: 110/143 trafegam sem cifra por padrão; 995/993 usam TLS.\n- acesso offline x sincronizado: POP3 é naturalmente offline; IMAP depende do servidor.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"IMAP apaga as mensagens do servidor após o download.\" — Motivo: inverte o comportamento — Versão tecnicamente correta: IMAP mantém no servidor; POP3 tende a remover.\n- Afirmação errada: \"POP3 é o protocolo mais indicado para vários dispositivos.\" — Motivo: confunde conforto offline com sincronização — Versão tecnicamente correta: IMAP atende múltiplos dispositivos.\n- Afirmação errada: \"Esses protocolos enviaram e receberam mensagens.\" — Motivo: atribui envio a quem só recebe — Versão tecnicamente correta: POP3 e IMAP só recebem/leem; o envio é do SMTP.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: POP3, IMAP, download, sincronização, caixa postal, TLS.\n- Regras e fórmulas: portas 110/995 (POP3) e 143/993 (IMAP).\n- Exceções: o POP3 pode ser configurado para manter cópia, mas o padrão é remover.\n- Palavras-chave: baixar, sincronizar, servidor, multi-dispositivo, offline.\n- Checklist de domínio: (1) Explico cada comportamento? (2) Informo as portas? (3) Escolho conforme o cenário? (4) Evito confundir com SMTP?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o POP3 faz com a mensagem após o download? (2) Por que o IMAP é preferível em celular e computador? (3) Quais as portas seguras de cada protocolo? (4) Em que situação o POP3 é adequado? (5) Quem faz o envio?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual protocolo é mais adequado para acessar e-mails de múltiplos dispositivos?",
+          "resposta": "IMAP — mantém os e-mails no servidor e sincroniza com todos os dispositivos. POP3 baixa e apaga do servidor, fazendo com que os e-mails não estejam disponíveis em outros dispositivos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um funcionário precisa acessar e-mails de celular e computador simultaneamente. POP3 ou IMAP?",
+          "resposta": "IMAP. Com POP3, os e-mails baixados para um dispositivo são apagados do servidor e não estarão disponíveis no outro dispositivo."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'IMAP apaga os e-mails do servidor após o download.'",
+          "correcao": "Errado. IMAP mantém os e-mails no servidor. POP3, por padrão, apaga após o download (embora haja opção de manter cópia)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) POP3 é mais adequado para uso em múltiplos dispositivos.",
+          "resposta": "Errado. IMAP é mais adequado para múltiplos dispositivos. POP3 é melhor para uso em um único dispositivo com acesso offline."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual porta IMAP com SSL/TLS? A) 143; B) 110; C) 993; D) 995.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar POP3 e IMAP para recebimento de e-mails, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará POP3 e IMAP para recebimento de e-mails"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "POP3 (Post Office Protocol versão 3): baixa e-mails do servidor para o dispositivo local e, por padrão, apaga do servidor. Porta 110 (sem criptografia) ou 995 (SSL/TLS). Ideal para acesso offline em um único dispositivo. IMAP (Internet Message Access Protocol): mantém e-mails sincronizados no servidor e no cliente. Porta 143 (sem criptografia) ou 993 (SSL/TLS). Ideal para multi-dispositivo (celular, tablet, computador). IMAP permite criar pastas no servidor, buscar mensagens sem baixar, e manter…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a POP3 vs IMAP",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'IMAP apaga os e-mails do servidor após o download.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. IMAP mantém os e-mails no servidor. POP3, por padrão, apaga após o download (embora haja opção de manter cópia)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual protocolo é mais adequado para acessar e-mails de múltiplos dispositivos?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "IMAP — mantém os e-mails no servidor e sincroniza com todos os dispositivos. POP3 baixa e apaga do servidor, fazendo com que os e-mails não estejam disponíveis em outros dispositivos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um funcionário precisa acessar e-mails de celular e computador simultaneamente. POP3 ou IMAP?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "IMAP. Com POP3, os e-mails baixados para um dispositivo são apagados do servidor e não estarão disponíveis no outro dispositivo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'IMAP apaga os e-mails do servidor após o download.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. IMAP mantém os e-mails no servidor. POP3, por padrão, apaga após o download (embora haja opção de manter cópia).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

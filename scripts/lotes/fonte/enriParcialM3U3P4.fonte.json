@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 3,
+    "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+    "parte": 4,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U3P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U3P4.js",
+    "idsCompletos": [
+      "m3-u3-t3-s1",
+      "m3-u3-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u3-t3-s1",
+      "titulo": "Padrões de comunicação institucional",
+      "topicoTitulo": "Comunicação profissional e institucional",
+      "topicoId": "modulo-3-unidade-3-topico-3",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno conhecerá padrões de comunicação institucional.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é comunicação institucional; (b) seus objetivos; (c) a distinção entre interna e externa; (d) o marco legal aplicável no serviço público. POR QUE O CONHECIMENTO É IMPORTANTE: a comunicação representa a instituição e deve ser consistente e transparente; a prova cobra padrões e normas. PRÉ-REQUISITOS: noção de comunicação profissional e de administração pública. OBJETIVOS OBSERVÁVEIS: (1) definir comunicação institucional; (2) listar seus objetivos; (3) distinguir interna de externa; (4) citar LAI e Lei de Governo Digital. COMPETÊNCIAS DESENVOLVIDAS: alinhamento à identidade institucional; conformidade com transparência. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (tom e clareza); unidade 3.3 (canais); Módulo 6 (transparência). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: comunicação institucional é o conjunto de práticas padronizadas pelas quais uma organização se comunica: canais definidos, identidade visual, tom de voz, modelos de documentos e mensagens, assinatura institucional e protocolos de resposta. Seus objetivos são clareza, consistência, transparência e rastreabilidade, evitando mensagens contraditórias e retrabalho. Distingue-se a comunicação interna (voltada a colaboradores) da externa (voltada a cidadãos, parceiros e imprensa). No serviço público, somam-se deveres legais: a Lei de Acesso à Informação (Lei nº 12.527/2011) orienta a transparência e o acesso a informações, e a Lei de Governo Digital (Lei nº 14.129/2021) trata de canais e serviços digitais — ambas já verificadas nas referências do projeto. Isso não significa divulgar dados pessoais: transparência administrativa e proteção de dados convivem, e a publicidade deve observar os limites legais (Módulo 6). Padronizar a comunicação reduz ruído e fortalece a confiança do cidadão.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer que a forma da mensagem representa a instituição.\n- Nível intermediário: aplicar tom, identidade e modelos padronizados.\n- Nível avançado: conciliar transparência com proteção de dados pessoais.\n- Nível especialista: revisar o plano de comunicação de um órgão e apontar inconsistências.\nCOMPARAÇÕES CRÍTICAS:\n- interna x externa: mudam o público, o registro e os canais — confundir altera o padrão exigido.\n- transparência x proteção de dados: divulgar o administrativo não autoriza expor o pessoal — o limite muda o gabarito.\n- identidade visual x conteúdo: a forma padroniza, mas não substitui a clareza do conteúdo.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Transparência significa divulgar tudo.\" — Motivo: há dados protegidos — Versão tecnicamente correta: publicar o administrativo, protegendo dados pessoais.\n- Afirmação errada: \"Cada setor pode adotar seu próprio formato.\" — Motivo: fragmenta a comunicação — Versão tecnicamente correta: seguir padrões institucionais.\n- Afirmação errada: \"LAI e Governo Digital dispensam boa prática de comunicação.\" — Motivo: a lei é piso, não teto — Versão tecnicamente correta: aliar conformidade e clareza.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: comunicação institucional, identidade, tom, interna, externa, LAI, Governo Digital.\n- Regras e fórmulas: clareza + consistência + transparência + rastreabilidade.\n- Exceções: transparência não afasta a proteção de dados pessoais.\n- Palavras-chave: padrão, canal, cidadão, transparência, conformidade.\n- Checklist de domínio: (1) Defino o conceito? (2) Listo objetivos? (3) Distingo interna/externa? (4) Cito o marco legal?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é comunicação institucional? (2) Cite dois objetivos. (3) Qual a diferença entre interna e externa? (4) Que leis se aplicam no setor público? (5) Transparência permite expor dados pessoais?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que padronizar assinaturas de e-mail institucional?",
+          "resposta": "Garante identidade visual, facilita identificação do remetente e transmite profissionalismo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como definir tom de voz institucional?",
+          "resposta": "Criar guia de estilo com vocabulário, formalidade, tratamento (você/senhora), e exemplos de mensagens padrão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Comunicação institucional pode ser informal como a pessoal.'",
+          "correcao": "Errado. Deve seguir padrões institucionais de clareza, respeito e rastreabilidade; informalidade excessiva pode gerar ambiguidade e risco."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) LAI orienta transparência ativa e passiva na comunicação pública.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual lei trata de governo digital? A) Lei 13.709/2018; B) Lei 12.527/2011; C) Lei 14.129/2021; D) Lei 12.965/2014.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de conhecer padrões de comunicação institucional, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "conhecerá padrões de comunicação institucional"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Comunicação institucional: padronização de canais, identidade visual, tom de voz, templates de documentos e mensagens, assinatura institucional, protocolos de resposta. Objetivos: clareza, consistência, transparência, rastreabilidade. Distinguir comunicação interna (colaboradores) de externa (cidadãos, parceiros). Em órgãos públicos, observar LAI (Lei 12.527/2011) e Lei de Governo Digital (Lei 14.129/2021) quanto a transparência e canais digitais.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Padrões de comunicação institucional",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Comunicação institucional pode ser informal como a pessoal.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Deve seguir padrões institucionais de clareza, respeito e rastreabilidade; informalidade excessiva pode gerar ambiguidade e risco."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que padronizar assinaturas de e-mail institucional?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Garante identidade visual, facilita identificação do remetente e transmite profissionalismo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como definir tom de voz institucional?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Criar guia de estilo com vocabulário, formalidade, tratamento (você/senhora), e exemplos de mensagens padrão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Comunicação institucional pode ser informal como a pessoal.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Deve seguir padrões institucionais de clareza, respeito e rastreabilidade; informalidade excessiva pode gerar ambiguidade e risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u3-t3-s2",
+      "titulo": "Escolha de canais e rastreabilidade",
+      "topicoTitulo": "Comunicação profissional e institucional",
+      "topicoId": "modulo-3-unidade-3-topico-3",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno escolherá canais adequados e garantirá rastreabilidade.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os principais canais e seus usos; (b) o que é rastreabilidade; (c) riscos de canais efêmeros; (d) registro de decisões no serviço público. POR QUE O CONHECIMENTO É IMPORTANTE: escolher o canal certo e registrar decisões evita perda de informação e retrabalho; a prova cobra adequação e rastreabilidade. PRÉ-REQUISITOS: unidade 3.1 (síncrono x assíncrono); noção de protocolo administrativo. OBJETIVOS OBSERVÁVEIS: (1) associar canal e finalidade; (2) definir rastreabilidade; (3) identificar decisões que exigem registro; (4) evitar decisões só em chat. COMPETÊNCIAS DESENVOLVIDAS: escolha de canal; gestão documental. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (síncrono); unidade 3.3 (equipes distribuídas); Módulo 6 (gestão documental). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: cada canal tem vocação: o e-mail é formal e rastreável; o chat é rápido e menos formal; o telefone atende urgências; a videoconferência trata assuntos complexos; o documento colaborativo apoia a coautoria; e o sistema de protocolo confere oficialidade e autuação. Rastreabilidade é a capacidade de reconstruir o histórico de uma decisão — quem decidiu, quando, com base em quê e onde está registrado. Ela se sustenta em atas de reunião, versionamento de documentos, registros de acesso (logs) e arquivamento conforme normas de gestão documental. Decisões relevantes não devem existir apenas em canais efêmeros, como mensagens que se perdem ou que não têm valor probatório. No serviço público, a documentação e o arquivamento seguem regras próprias, e a decisão precisa ser recuperável para auditoria e transparência. A escolha do canal, portanto, não é apenas conveniência: é parte da conformidade.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer a vocação de cada canal.\n- Nível intermediário: decidir qual canal registra melhor determinada decisão.\n- Nível avançado: montar um fluxo em que a decisão nasce informal e é formalizada com registro.\n- Nível especialista: auditar uma decisão e recompor seu histórico a partir dos registros existentes.\nCOMPARAÇÕES CRÍTICAS:\n- chat x e-mail: o chat é ágil e pouco rastreável; o e-mail é formal e registrado — a escolha altera a proteção da decisão.\n- ata x gravação: a ata resume e é buscável; a gravação é fiel, mas volumosa e sensível.\n- documento colaborativo x protocolo: o primeiro apoia a construção; o segundo confere oficialidade.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Decidir no chat basta.\" — Motivo: canais efêmeros não garantem registro — Versão tecnicamente correta: formalizar em ata, e-mail ou protocolo.\n- Afirmação errada: \"Rastreabilidade é só guardar tudo.\" — Motivo: é reconstruir decisões — Versão tecnicamente correta: registrar quem, quando, o quê e com base em quê.\n- Afirmação errada: \"Qualquer canal serve para qualquer decisão.\" — Motivo: formalidade depende do ato — Versão tecnicamente correta: adequar o canal à natureza da decisão.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: canal, rastreabilidade, ata, versionamento, log, protocolo.\n- Regras e fórmulas: decisão relevante exige registro recuperável.\n- Exceções: conversas exploratórias podem ocorrer em canais informais, com formalização posterior.\n- Palavras-chave: e-mail, chat, ata, protocolo, auditoria.\n- Checklist de domínio: (1) Associo canal e finalidade? (2) Defino rastreabilidade? (3) Identifico decisões que exigem registro? (4) Evito depender de chat?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual canal é mais formal? (2) O que é rastreabilidade? (3) Por que o chat é frágil para decisões? (4) O que uma ata registra? (5) Como formalizar uma decisão nascida no chat?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que decisões importantes não devem ficar apenas no chat?",
+          "resposta": "Chat é efêmero e de difícil recuperação; falta rastreabilidade e formalidade para auditoria e prestação de contas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como registrar uma decisão tomada em reunião?",
+          "resposta": "Elaborar ata com participantes, pauta, decisões, responsáveis e prazos; compartilhar e arquivar em repositório institucional."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Chat institucional é suficiente para decisões formais.'",
+          "correcao": "Errado. Chat não substitui registro formal; decisões formais exigem ata/documento arquivado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Atas de reunião contribuem para rastreabilidade institucional.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual canal é mais adequado para decisão formal? A) Chat; B) Telefone; C) E-mail/ata arquivada; D) Mensagem de voz.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de escolher canais adequados e garantirá rastreabilidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "escolherá canais adequados e garantirá rastreabilidade"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Canais: e-mail (formal, rastreável), chat (rápido, menos formal), telefone (urgente), videoconferência (complexo), documento colaborativo (coautoria), sistema de protocolo (oficial). Rastreabilidade: registro de decisões, atas de reunião, versionamento de documentos, logs de acesso. Evitar decisões importantes apenas em canais efêmeros (chat) sem registro. Em serviço público, decisões devem ser documentadas e arquivadas conforme normas de gestão documental.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Escolha de canais e rastreabilidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Chat institucional é suficiente para decisões formais.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Chat não substitui registro formal; decisões formais exigem ata/documento arquivado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que decisões importantes não devem ficar apenas no chat?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Chat é efêmero e de difícil recuperação; falta rastreabilidade e formalidade para auditoria e prestação de contas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como registrar uma decisão tomada em reunião?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Elaborar ata com participantes, pauta, decisões, responsáveis e prazos; compartilhar e arquivar em repositório institucional.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Chat institucional é suficiente para decisões formais.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Chat não substitui registro formal; decisões formais exigem ata/documento arquivado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

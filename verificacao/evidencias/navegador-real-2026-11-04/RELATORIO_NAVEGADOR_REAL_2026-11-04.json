@@ -1,0 +1,2218 @@
+{
+  "data": "2026-11-04",
+  "geradoEm": "2026-11-04T13:31:18.444Z",
+  "node": "v22.14.0",
+  "playwright": "1.64.1",
+  "referencias": {
+    "total": 188,
+    "videosVerificados": 20,
+    "ids": [
+      "ZVURQLXZtIc",
+      "boUzkJJNOPI",
+      "WO1uGJRqrwI",
+      "bH29oltn8Cw",
+      "XPWd08tLAuo",
+      "QtqbaEiwlyU",
+      "cWld3rMD7Wk",
+      "TbjhWIhLQDU",
+      "wlaNFx73qh4",
+      "qqgkhvsyL9Q",
+      "DNegkxwQJuY",
+      "M8hoXE24PMo",
+      "JyGGMyR3x5I",
+      "As0A-w1WmPI",
+      "r7dYNidpM3k",
+      "75RqMrSbenM",
+      "Zjv2mZJkakw",
+      "LmhbPTMaJak",
+      "1JpYOqvDJNU",
+      "P6E_Kts9pxE"
+    ]
+  },
+  "modos": [
+    "file",
+    "http",
+    "https"
+  ],
+  "resultados": [
+    {
+      "modo": "file",
+      "url": "file:///root/projetos/FCN/apostila-ia/index.html",
+      "inicio": "2026-11-04T13:28:04.956Z",
+      "erros": [
+        {
+          "tipo": "console",
+          "origem": "instrumentacao-teste",
+          "mensagem": "Access to XMLHttpRequest at 'file:///root/projetos/FCN/apostila-ia/assets/css/styles.css' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https."
+        },
+        {
+          "tipo": "console",
+          "origem": "instrumentacao-teste",
+          "mensagem": "Failed to load resource: net::ERR_FAILED"
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        },
+        {
+          "tipo": "console",
+          "origem": "externo-iframe",
+          "mensagem": "Permissions policy violation: compute-pressure is not allowed in this document."
+        }
+      ],
+      "app": {
+        "modo": "file",
+        "modulos": 8,
+        "abas": [
+          "teoria",
+          "mapas",
+          "simuladores",
+          "flash",
+          "cards",
+          "quiz"
+        ],
+        "simuladores": {
+          "excel": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 1352
+          },
+          "redes": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 1885
+          },
+          "seguranca": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 2098
+          },
+          "prompts": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 653
+          },
+          "dados": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 476
+          },
+          "etica": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 5018
+          },
+          "charts": {
+            "existe": true,
+            "filhos": 6,
+            "texto": 20033
+          }
+        },
+        "flashcards": 474,
+        "questoes": 409,
+        "problemas": [],
+        "focoArvore": {
+          "focavel": false,
+          "tag": "body",
+          "tabindex": "-1"
+        }
+      },
+      "serviceWorker": {
+        "modo": "file",
+        "apiDisponivel": true,
+        "registrations": 0,
+        "scopes": [],
+        "controller": null,
+        "activeState": null,
+        "caches": [],
+        "cachePrecache": [
+          {
+            "recurso": "index.html",
+            "presente": false
+          },
+          {
+            "recurso": "assets/css/styles.css",
+            "presente": false
+          },
+          {
+            "recurso": "manifest.webmanifest",
+            "presente": false
+          }
+        ],
+        "cacheTotal": 0,
+        "manifest": {
+          "origem": "arquivo local (fetch não funciona em file://)",
+          "httpStatus": null,
+          "erroParse": null,
+          "json": {
+            "name": "Apostila Web Interativa FCN",
+            "short_name": "Apostila FCN",
+            "description": "Apostila interativa de TI, Dados e IA para concursos públicos: 8 módulos (Microsoft 365, Redes, Comunicação, Segurança, IA, Ética, Dados, Visualização), flashcards (474) e 409 questões autorais carregadas. SPA estática sem build — funciona em file:// sem service worker; PWA opcional (SW registrado apenas em https).",
+            "start_url": "./index.html",
+            "display": "standalone",
+            "background_color": "#f8f9fa",
+            "theme_color": "#1a73e8",
+            "lang": "pt-BR",
+            "dir": "ltr",
+            "scope": "./",
+            "icons": [
+              {
+                "src": "assets/icons/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png",
+                "purpose": "any"
+              },
+              {
+                "src": "assets/icons/icon-512.png",
+                "sizes": "512x512",
+                "type": "image/png",
+                "purpose": "any"
+              },
+              {
+                "src": "assets/icons/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png",
+                "purpose": "maskable"
+              },
+              {
+                "src": "assets/icons/icon-512.png",
+                "sizes": "512x512",
+                "type": "image/png",
+                "purpose": "maskable"
+              }
+            ]
+          },
+          "valido": true
+        },
+        "observacoes": [
+          "getRegistrations() não se aplica neste contexto: page.evaluate: InvalidStateError: Failed to get ServiceWorkerRegistration objects: The document is in an invalid state."
+        ]
+      },
+      "acessibilidade": {
+        "modo": "file",
+        "detalhes": {
+          "appExiste": true,
+          "montado": true,
+          "skipLink": {
+            "tag": "a",
+            "classe": "a11y-skip-link",
+            "href": "#main",
+            "texto": "Pular para o conteúdo principal",
+            "ehPrimeiroFilho": true
+          },
+          "styleInjetado": true,
+          "styleNoHead": true,
+          "styleTamanho": 618,
+          "main": {
+            "tag": "main",
+            "role": "main",
+            "tabindex": "-1"
+          },
+          "navs": [
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Seções da apostila"
+            },
+            {
+              "tag": "div",
+              "role": "navigation",
+              "label": "Árvore curricular e navegação"
+            },
+            {
+              "tag": "div",
+              "role": "navigation",
+              "label": "Inventário curricular resumido"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de segurança"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de prompts"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de dados"
+            }
+          ],
+          "regioesComAriaLive": [
+            {
+              "id": "painel-conteudo",
+              "role": "region",
+              "ariaLive": "polite",
+              "label": "Conteúdo do tópico selecionado"
+            },
+            {
+              "id": "",
+              "role": "status",
+              "ariaLive": "polite",
+              "label": ""
+            }
+          ],
+          "containerAcessibilidade": {
+            "existe": true,
+            "role": null,
+            "ariaLive": null,
+            "largura": "1px",
+            "altura": "1px",
+            "vazio": true
+          }
+        },
+        "teclado": {
+          "primeiroFoco": {
+            "tag": "a",
+            "classe": "a11y-skip-link",
+            "href": "#main",
+            "texto": "Pular para o conteúdo principal"
+          },
+          "skipLinkFocado": true,
+          "focoAposEnter": {
+            "id": "main",
+            "tag": "main",
+            "hash": "#main"
+          },
+          "focoFoiParaMain": true,
+          "ordemFoco": [
+            {
+              "tag": "input",
+              "id": "search-input",
+              "classe": "search-box",
+              "rotulo": "",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tts-play",
+              "classe": "btn",
+              "rotulo": "Ouvir o conteúdo da aba ativa",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tts-pause",
+              "classe": "btn",
+              "rotulo": "Parar a leitura em voz alta",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "tts-rate",
+              "classe": "",
+              "rotulo": "Velocidade da leitura em voz alta",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "theme-toggle",
+              "classe": "btn btn-theme",
+              "rotulo": "Tema",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "",
+              "classe": "focus-toggle-btn",
+              "rotulo": "Alternar modo de foco",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tabbtn-teoria",
+              "classe": "tab active",
+              "rotulo": "Teoria",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Comparação de p",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Licenciamento p",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Aplicações Web,",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Armazenamento l",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Integração entr",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Salvamento auto",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Contas pessoais",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Permissões, com",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Interface do Wo",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Formatos de doc",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Formatação dire",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Parágrafos e re",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Listas bullet e",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Cabeçalhos e ro",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Notas de rodapé",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Quebra de págin",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Gerando sumário",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Referências cru",
+              "focoVisivel": true
+            }
+          ],
+          "elementosFocados": 25,
+          "comFocoVisivel": 25
+        },
+        "axe": {
+          "passes": 59,
+          "incomplete": 2,
+          "violations": [
+            {
+              "id": "heading-order",
+              "impact": "moderate",
+              "description": "Ensure the order of headings is semantically correct",
+              "targets": [
+                "#modulo-1-unidade-1-topico-1-sub-1-titulo",
+                "#modulo-1-unidade-2-topico-1-sub-1-titulo",
+                "#modulo-1-unidade-3-topico-1-sub-1-titulo",
+                "#modulo-1-unidade-4-topico-1-sub-1-titulo",
+                "#modulo-1-unidade-5-topico-1-sub-1-titulo"
+              ]
+            },
+            {
+              "id": "landmark-unique",
+              "impact": "moderate",
+              "description": "Ensure landmarks are unique",
+              "targets": [
+                ".template-section:nth-child(4)",
+                ".template-section:nth-child(5)",
+                ".template-section:nth-child(6)",
+                ".template-section:nth-child(7)",
+                ".template-section:nth-child(8)"
+              ]
+            }
+          ],
+          "criticas": 0
+        },
+        "problemas": []
+      },
+      "videos": {
+        "modo": "file",
+        "idsVerificados": 20,
+        "porModulo": {
+          "M1": {
+            "modulo": 1,
+            "titulo": "Microsoft 365 e aplicações de escrita",
+            "iframes": 4,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI"
+            ],
+            "esperados": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI"
+            ],
+            "todosValidos": true
+          },
+          "M2": {
+            "modulo": 2,
+            "titulo": "Redes de computadores",
+            "iframes": 5,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "WO1uGJRqrwI",
+              "bH29oltn8Cw",
+              "XPWd08tLAuo"
+            ],
+            "esperados": [
+              "WO1uGJRqrwI",
+              "bH29oltn8Cw",
+              "XPWd08tLAuo"
+            ],
+            "todosValidos": true
+          },
+          "M3": {
+            "modulo": 3,
+            "titulo": "Comunicação e colaboração",
+            "iframes": 3,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "QtqbaEiwlyU"
+            ],
+            "esperados": [
+              "QtqbaEiwlyU"
+            ],
+            "todosValidos": true
+          },
+          "M4": {
+            "modulo": 4,
+            "titulo": "Segurança da informação e governança",
+            "iframes": 6,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "cWld3rMD7Wk",
+              "TbjhWIhLQDU",
+              "wlaNFx73qh4",
+              "qqgkhvsyL9Q"
+            ],
+            "esperados": [
+              "cWld3rMD7Wk",
+              "TbjhWIhLQDU",
+              "wlaNFx73qh4",
+              "qqgkhvsyL9Q"
+            ],
+            "todosValidos": true
+          },
+          "M5": {
+            "modulo": 5,
+            "titulo": "Inteligência artificial",
+            "iframes": 5,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "DNegkxwQJuY",
+              "M8hoXE24PMo",
+              "JyGGMyR3x5I"
+            ],
+            "esperados": [
+              "DNegkxwQJuY",
+              "M8hoXE24PMo",
+              "JyGGMyR3x5I"
+            ],
+            "todosValidos": true
+          },
+          "M6": {
+            "modulo": 6,
+            "titulo": "Ética e responsabilidade digital",
+            "iframes": 6,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "As0A-w1WmPI",
+              "r7dYNidpM3k",
+              "75RqMrSbenM",
+              "Zjv2mZJkakw"
+            ],
+            "esperados": [
+              "As0A-w1WmPI",
+              "r7dYNidpM3k",
+              "75RqMrSbenM",
+              "Zjv2mZJkakw"
+            ],
+            "todosValidos": true
+          },
+          "M7": {
+            "modulo": 7,
+            "titulo": "Fundamentos e engenharia de dados",
+            "iframes": 4,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "LmhbPTMaJak",
+              "1JpYOqvDJNU"
+            ],
+            "esperados": [
+              "LmhbPTMaJak",
+              "1JpYOqvDJNU"
+            ],
+            "todosValidos": true
+          },
+          "M8": {
+            "modulo": 8,
+            "titulo": "Visualização, análise e storytelling",
+            "iframes": 3,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "P6E_Kts9pxE"
+            ],
+            "esperados": [
+              "P6E_Kts9pxE"
+            ],
+            "todosValidos": true
+          }
+        },
+        "totalIframes": 36,
+        "invalidos": [],
+        "capturas": [
+          "2026-11-04-file-modulo-1-msoffice.png",
+          "2026-11-04-file-modulo-2-redes.png",
+          "2026-11-04-file-modulo-3-comunicacao.png",
+          "2026-11-04-file-modulo-4-seguranca.png",
+          "2026-11-04-file-modulo-5-ia.png",
+          "2026-11-04-file-modulo-6-etica.png",
+          "2026-11-04-file-modulo-7-dados.png",
+          "2026-11-04-file-modulo-8-visualizacao.png"
+        ],
+        "naoRenderizados": []
+      },
+      "errosApp": [],
+      "errosExternos": 15,
+      "errosInstrumentacao": 2,
+      "fim": "2026-11-04T13:29:08.778Z"
+    },
+    {
+      "modo": "http",
+      "url": "http://localhost:8099/index.html",
+      "inicio": "2026-11-04T13:29:09.541Z",
+      "erros": [],
+      "app": {
+        "modo": "http",
+        "modulos": 8,
+        "abas": [
+          "teoria",
+          "mapas",
+          "simuladores",
+          "flash",
+          "cards",
+          "quiz"
+        ],
+        "simuladores": {
+          "excel": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 1352
+          },
+          "redes": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 1885
+          },
+          "seguranca": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 2098
+          },
+          "prompts": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 653
+          },
+          "dados": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 476
+          },
+          "etica": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 5018
+          },
+          "charts": {
+            "existe": true,
+            "filhos": 6,
+            "texto": 20033
+          }
+        },
+        "flashcards": 474,
+        "questoes": 409,
+        "problemas": [],
+        "focoArvore": {
+          "focavel": false,
+          "tag": "body",
+          "tabindex": "-1"
+        }
+      },
+      "serviceWorker": {
+        "modo": "http",
+        "apiDisponivel": true,
+        "registrations": 0,
+        "scopes": [],
+        "controller": null,
+        "activeState": null,
+        "caches": [],
+        "cachePrecache": [
+          {
+            "recurso": "index.html",
+            "presente": false
+          },
+          {
+            "recurso": "assets/css/styles.css",
+            "presente": false
+          },
+          {
+            "recurso": "manifest.webmanifest",
+            "presente": false
+          }
+        ],
+        "cacheTotal": 0,
+        "manifest": {
+          "httpStatus": 200,
+          "contentType": "application/manifest+json",
+          "erroParse": null,
+          "json": {
+            "name": "Apostila Web Interativa FCN",
+            "short_name": "Apostila FCN",
+            "description": "Apostila interativa de TI, Dados e IA para concursos públicos: 8 módulos (Microsoft 365, Redes, Comunicação, Segurança, IA, Ética, Dados, Visualização), flashcards (474) e 409 questões autorais carregadas. SPA estática sem build — funciona em file:// sem service worker; PWA opcional (SW registrado apenas em https).",
+            "start_url": "./index.html",
+            "display": "standalone",
+            "background_color": "#f8f9fa",
+            "theme_color": "#1a73e8",
+            "lang": "pt-BR",
+            "dir": "ltr",
+            "scope": "./",
+            "icons": [
+              {
+                "src": "assets/icons/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png",
+                "purpose": "any"
+              },
+              {
+                "src": "assets/icons/icon-512.png",
+                "sizes": "512x512",
+                "type": "image/png",
+                "purpose": "any"
+              },
+              {
+                "src": "assets/icons/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png",
+                "purpose": "maskable"
+              },
+              {
+                "src": "assets/icons/icon-512.png",
+                "sizes": "512x512",
+                "type": "image/png",
+                "purpose": "maskable"
+              }
+            ]
+          },
+          "valido": true
+        },
+        "observacoes": [
+          "Protocolo http: o registro é feito apenas em https:, portanto não há service worker em http://localhost (comportamento intencional e documentado)."
+        ]
+      },
+      "acessibilidade": {
+        "modo": "http",
+        "detalhes": {
+          "appExiste": true,
+          "montado": true,
+          "skipLink": {
+            "tag": "a",
+            "classe": "a11y-skip-link",
+            "href": "#main",
+            "texto": "Pular para o conteúdo principal",
+            "ehPrimeiroFilho": true
+          },
+          "styleInjetado": true,
+          "styleNoHead": true,
+          "styleTamanho": 618,
+          "main": {
+            "tag": "main",
+            "role": "main",
+            "tabindex": "-1"
+          },
+          "navs": [
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Seções da apostila"
+            },
+            {
+              "tag": "div",
+              "role": "navigation",
+              "label": "Árvore curricular e navegação"
+            },
+            {
+              "tag": "div",
+              "role": "navigation",
+              "label": "Inventário curricular resumido"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de segurança"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de prompts"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de dados"
+            }
+          ],
+          "regioesComAriaLive": [
+            {
+              "id": "painel-conteudo",
+              "role": "region",
+              "ariaLive": "polite",
+              "label": "Conteúdo do tópico selecionado"
+            },
+            {
+              "id": "",
+              "role": "status",
+              "ariaLive": "polite",
+              "label": ""
+            }
+          ],
+          "containerAcessibilidade": {
+            "existe": true,
+            "role": null,
+            "ariaLive": null,
+            "largura": "1px",
+            "altura": "1px",
+            "vazio": true
+          }
+        },
+        "teclado": {
+          "primeiroFoco": {
+            "tag": "a",
+            "classe": "a11y-skip-link",
+            "href": "#main",
+            "texto": "Pular para o conteúdo principal"
+          },
+          "skipLinkFocado": true,
+          "focoAposEnter": {
+            "id": "main",
+            "tag": "main",
+            "hash": "#main"
+          },
+          "focoFoiParaMain": true,
+          "ordemFoco": [
+            {
+              "tag": "input",
+              "id": "search-input",
+              "classe": "search-box",
+              "rotulo": "",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tts-play",
+              "classe": "btn",
+              "rotulo": "Ouvir o conteúdo da aba ativa",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tts-pause",
+              "classe": "btn",
+              "rotulo": "Parar a leitura em voz alta",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "tts-rate",
+              "classe": "",
+              "rotulo": "Velocidade da leitura em voz alta",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "theme-toggle",
+              "classe": "btn btn-theme",
+              "rotulo": "Tema",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "",
+              "classe": "focus-toggle-btn",
+              "rotulo": "Alternar modo de foco",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tabbtn-teoria",
+              "classe": "tab active",
+              "rotulo": "Teoria",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Comparação de p",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Licenciamento p",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Aplicações Web,",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Armazenamento l",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Integração entr",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Salvamento auto",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Contas pessoais",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Permissões, com",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Interface do Wo",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Formatos de doc",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Formatação dire",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Parágrafos e re",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Listas bullet e",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Cabeçalhos e ro",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Notas de rodapé",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Quebra de págin",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Gerando sumário",
+              "focoVisivel": true
+            },
+            {
+              "tag": "div",
+              "id": "",
+              "classe": "table-wrapper",
+              "rotulo": "Comparação relacionada a Referências cru",
+              "focoVisivel": true
+            }
+          ],
+          "elementosFocados": 25,
+          "comFocoVisivel": 25
+        },
+        "axe": {
+          "passes": 59,
+          "incomplete": 2,
+          "violations": [
+            {
+              "id": "heading-order",
+              "impact": "moderate",
+              "description": "Ensure the order of headings is semantically correct",
+              "targets": [
+                "#modulo-1-unidade-1-topico-1-sub-1-titulo",
+                "#modulo-1-unidade-2-topico-1-sub-1-titulo",
+                "#modulo-1-unidade-3-topico-1-sub-1-titulo",
+                "#modulo-1-unidade-4-topico-1-sub-1-titulo",
+                "#modulo-1-unidade-5-topico-1-sub-1-titulo"
+              ]
+            },
+            {
+              "id": "landmark-unique",
+              "impact": "moderate",
+              "description": "Ensure landmarks are unique",
+              "targets": [
+                ".template-section:nth-child(4)",
+                ".template-section:nth-child(5)",
+                ".template-section:nth-child(6)",
+                ".template-section:nth-child(7)",
+                ".template-section:nth-child(8)"
+              ]
+            }
+          ],
+          "criticas": 0
+        },
+        "problemas": []
+      },
+      "videos": {
+        "modo": "http",
+        "idsVerificados": 20,
+        "porModulo": {
+          "M1": {
+            "modulo": 1,
+            "titulo": "Microsoft 365 e aplicações de escrita",
+            "iframes": 4,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI"
+            ],
+            "esperados": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI"
+            ],
+            "todosValidos": true
+          },
+          "M2": {
+            "modulo": 2,
+            "titulo": "Redes de computadores",
+            "iframes": 5,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "WO1uGJRqrwI",
+              "bH29oltn8Cw",
+              "XPWd08tLAuo"
+            ],
+            "esperados": [
+              "WO1uGJRqrwI",
+              "bH29oltn8Cw",
+              "XPWd08tLAuo"
+            ],
+            "todosValidos": true
+          },
+          "M3": {
+            "modulo": 3,
+            "titulo": "Comunicação e colaboração",
+            "iframes": 3,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "QtqbaEiwlyU"
+            ],
+            "esperados": [
+              "QtqbaEiwlyU"
+            ],
+            "todosValidos": true
+          },
+          "M4": {
+            "modulo": 4,
+            "titulo": "Segurança da informação e governança",
+            "iframes": 6,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "cWld3rMD7Wk",
+              "TbjhWIhLQDU",
+              "wlaNFx73qh4",
+              "qqgkhvsyL9Q"
+            ],
+            "esperados": [
+              "cWld3rMD7Wk",
+              "TbjhWIhLQDU",
+              "wlaNFx73qh4",
+              "qqgkhvsyL9Q"
+            ],
+            "todosValidos": true
+          },
+          "M5": {
+            "modulo": 5,
+            "titulo": "Inteligência artificial",
+            "iframes": 5,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "DNegkxwQJuY",
+              "M8hoXE24PMo",
+              "JyGGMyR3x5I"
+            ],
+            "esperados": [
+              "DNegkxwQJuY",
+              "M8hoXE24PMo",
+              "JyGGMyR3x5I"
+            ],
+            "todosValidos": true
+          },
+          "M6": {
+            "modulo": 6,
+            "titulo": "Ética e responsabilidade digital",
+            "iframes": 6,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "As0A-w1WmPI",
+              "r7dYNidpM3k",
+              "75RqMrSbenM",
+              "Zjv2mZJkakw"
+            ],
+            "esperados": [
+              "As0A-w1WmPI",
+              "r7dYNidpM3k",
+              "75RqMrSbenM",
+              "Zjv2mZJkakw"
+            ],
+            "todosValidos": true
+          },
+          "M7": {
+            "modulo": 7,
+            "titulo": "Fundamentos e engenharia de dados",
+            "iframes": 4,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "LmhbPTMaJak",
+              "1JpYOqvDJNU"
+            ],
+            "esperados": [
+              "LmhbPTMaJak",
+              "1JpYOqvDJNU"
+            ],
+            "todosValidos": true
+          },
+          "M8": {
+            "modulo": 8,
+            "titulo": "Visualização, análise e storytelling",
+            "iframes": 3,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "P6E_Kts9pxE"
+            ],
+            "esperados": [
+              "P6E_Kts9pxE"
+            ],
+            "todosValidos": true
+          }
+        },
+        "totalIframes": 36,
+        "invalidos": [],
+        "capturas": [
+          "2026-11-04-http-modulo-1-msoffice.png",
+          "2026-11-04-http-modulo-2-redes.png",
+          "2026-11-04-http-modulo-3-comunicacao.png",
+          "2026-11-04-http-modulo-4-seguranca.png",
+          "2026-11-04-http-modulo-5-ia.png",
+          "2026-11-04-http-modulo-6-etica.png",
+          "2026-11-04-http-modulo-7-dados.png",
+          "2026-11-04-http-modulo-8-visualizacao.png"
+        ],
+        "naoRenderizados": []
+      },
+      "errosApp": [],
+      "errosExternos": 0,
+      "errosInstrumentacao": 0,
+      "fim": "2026-11-04T13:30:16.164Z"
+    },
+    {
+      "modo": "https",
+      "url": "https://fatal1tybarucco.github.io/FCN/",
+      "inicio": "2026-11-04T13:30:17.388Z",
+      "erros": [],
+      "app": {
+        "modo": "https",
+        "modulos": 8,
+        "abas": [
+          "teoria",
+          "mapas",
+          "simuladores",
+          "flash",
+          "cards",
+          "quiz"
+        ],
+        "simuladores": {
+          "excel": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 1352
+          },
+          "redes": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 1885
+          },
+          "seguranca": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 2098
+          },
+          "prompts": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 653
+          },
+          "dados": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 476
+          },
+          "etica": {
+            "existe": true,
+            "filhos": 2,
+            "texto": 5018
+          },
+          "charts": {
+            "existe": true,
+            "filhos": 6,
+            "texto": 20033
+          }
+        },
+        "flashcards": 474,
+        "questoes": 409,
+        "problemas": [],
+        "focoArvore": {
+          "focavel": false,
+          "tag": "body",
+          "tabindex": "-1"
+        }
+      },
+      "serviceWorker": {
+        "modo": "https",
+        "apiDisponivel": true,
+        "registrations": 1,
+        "scopes": [
+          "https://fatal1tybarucco.github.io/FCN/"
+        ],
+        "controller": "https://fatal1tybarucco.github.io/FCN/service-worker.js",
+        "activeState": "activated",
+        "caches": [
+          "apostila-ia-pwa-v1"
+        ],
+        "cachePrecache": [
+          {
+            "recurso": "index.html",
+            "presente": true
+          },
+          {
+            "recurso": "assets/css/styles.css",
+            "presente": true
+          },
+          {
+            "recurso": "manifest.webmanifest",
+            "presente": true
+          }
+        ],
+        "cacheTotal": 3,
+        "manifest": {
+          "httpStatus": 200,
+          "contentType": "application/manifest+json; charset=utf-8",
+          "erroParse": null,
+          "json": {
+            "name": "Apostila Web Interativa FCN",
+            "short_name": "Apostila FCN",
+            "description": "Apostila interativa de TI, Dados e IA para concursos públicos: 8 módulos (Microsoft 365, Redes, Comunicação, Segurança, IA, Ética, Dados, Visualização), flashcards (460) e 399 questões autorais carregadas. SPA estática sem build — funciona em file:// sem service worker; PWA opcional (SW registrado apenas em http/https).",
+            "start_url": "./index.html",
+            "display": "standalone",
+            "background_color": "#f8f9fa",
+            "theme_color": "#1a73e8",
+            "lang": "pt-BR",
+            "dir": "ltr",
+            "scope": "./",
+            "icons": [
+              {
+                "src": "assets/icons/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png",
+                "purpose": "any"
+              },
+              {
+                "src": "assets/icons/icon-512.png",
+                "sizes": "512x512",
+                "type": "image/png",
+                "purpose": "any"
+              },
+              {
+                "src": "assets/icons/icon-192.png",
+                "sizes": "192x192",
+                "type": "image/png",
+                "purpose": "maskable"
+              },
+              {
+                "src": "assets/icons/icon-512.png",
+                "sizes": "512x512",
+                "type": "image/png",
+                "purpose": "maskable"
+              }
+            ]
+          },
+          "valido": true
+        },
+        "observacoes": []
+      },
+      "acessibilidade": {
+        "modo": "https",
+        "detalhes": {
+          "appExiste": true,
+          "montado": true,
+          "skipLink": {
+            "tag": "a",
+            "classe": "a11y-skip-link",
+            "href": "#main",
+            "texto": "Pular para o conteúdo principal",
+            "ehPrimeiroFilho": true
+          },
+          "styleInjetado": true,
+          "styleNoHead": true,
+          "styleTamanho": 618,
+          "main": {
+            "tag": "main",
+            "role": "main",
+            "tabindex": "-1"
+          },
+          "navs": [
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Seções da apostila"
+            },
+            {
+              "tag": "div",
+              "role": "navigation",
+              "label": "Árvore curricular e navegação"
+            },
+            {
+              "tag": "div",
+              "role": "navigation",
+              "label": "Inventário curricular resumido"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de segurança"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de prompts"
+            },
+            {
+              "tag": "nav",
+              "role": null,
+              "label": "Navegação das seções do simulador de dados"
+            }
+          ],
+          "regioesComAriaLive": [
+            {
+              "id": "painel-conteudo",
+              "role": "region",
+              "ariaLive": "polite",
+              "label": "Conteúdo do tópico selecionado"
+            },
+            {
+              "id": "",
+              "role": "status",
+              "ariaLive": "polite",
+              "label": ""
+            }
+          ],
+          "containerAcessibilidade": {
+            "existe": true,
+            "role": null,
+            "ariaLive": null,
+            "largura": "1px",
+            "altura": "1px",
+            "vazio": true
+          }
+        },
+        "teclado": {
+          "primeiroFoco": {
+            "tag": "a",
+            "classe": "a11y-skip-link",
+            "href": "#main",
+            "texto": "Pular para o conteúdo principal"
+          },
+          "skipLinkFocado": true,
+          "focoAposEnter": {
+            "id": "main",
+            "tag": "main",
+            "hash": "#main"
+          },
+          "focoFoiParaMain": true,
+          "ordemFoco": [
+            {
+              "tag": "input",
+              "id": "search-input",
+              "classe": "search-box",
+              "rotulo": "",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tts-play",
+              "classe": "btn",
+              "rotulo": "Ouvir o conteúdo da aba ativa",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tts-pause",
+              "classe": "btn",
+              "rotulo": "Parar a leitura em voz alta",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "tts-rate",
+              "classe": "",
+              "rotulo": "Velocidade da leitura em voz alta",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "theme-toggle",
+              "classe": "btn btn-theme",
+              "rotulo": "Tema",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "",
+              "classe": "focus-toggle-btn",
+              "rotulo": "Alternar modo de foco",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "tabbtn-teoria",
+              "classe": "tab active",
+              "rotulo": "Teoria",
+              "focoVisivel": true
+            },
+            {
+              "tag": "iframe",
+              "id": "",
+              "classe": "",
+              "rotulo": "Curso Excel #01 - Como surgiu o Excel?",
+              "focoVisivel": true
+            },
+            {
+              "tag": "iframe",
+              "id": "",
+              "classe": "",
+              "rotulo": "Curso Excel #10 - Funções do Excel (Part",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "mark-complete-msoffice",
+              "classe": "mark-complete ",
+              "rotulo": "Marcar como Concluído",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "Todos os módulos12345678",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "Todos os níveisbasicointermediarioavanca",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "Estudar todosApenas vencidosApenas errad",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "",
+              "classe": "",
+              "rotulo": "Iniciar estudo",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "",
+              "classe": "",
+              "rotulo": "Exportar backup (JSON)",
+              "focoVisivel": true
+            },
+            {
+              "tag": "input",
+              "id": "fc-import-input",
+              "classe": "",
+              "rotulo": "",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "Módulo 1 — Microsoft 365Módulo 2 — Redes",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "Todos os níveisBásicoIntermediárioAvança",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "Todos os estilosCESPE/CEBRASPE (itens Ce",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "Ambos os formatosMúltipla escolhaCerto o",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "10 questões20 questõesTodas as disponíve",
+              "focoVisivel": true
+            },
+            {
+              "tag": "select",
+              "id": "",
+              "classe": "",
+              "rotulo": "Sem temporizador10 minutos20 minutos40 m",
+              "focoVisivel": true
+            },
+            {
+              "tag": "input",
+              "id": "",
+              "classe": "",
+              "rotulo": "",
+              "focoVisivel": true
+            },
+            {
+              "tag": "button",
+              "id": "",
+              "classe": "",
+              "rotulo": "Iniciar simulado",
+              "focoVisivel": true
+            },
+            {
+              "tag": "input",
+              "id": "bus-input",
+              "classe": "",
+              "rotulo": "Buscar conteúdo na apostila",
+              "focoVisivel": true
+            }
+          ],
+          "elementosFocados": 25,
+          "comFocoVisivel": 25
+        },
+        "axe": {
+          "passes": 59,
+          "incomplete": 2,
+          "violations": [],
+          "criticas": 0
+        },
+        "problemas": []
+      },
+      "videos": {
+        "modo": "https",
+        "idsVerificados": 20,
+        "porModulo": {
+          "M1": {
+            "modulo": 1,
+            "titulo": "Microsoft 365 e aplicações de escrita",
+            "iframes": 4,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI"
+            ],
+            "esperados": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI"
+            ],
+            "todosValidos": false
+          },
+          "M2": {
+            "modulo": 2,
+            "titulo": "Redes de computadores",
+            "iframes": 5,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "WO1uGJRqrwI",
+              "bH29oltn8Cw",
+              "XPWd08tLAuo"
+            ],
+            "esperados": [
+              "WO1uGJRqrwI",
+              "bH29oltn8Cw",
+              "XPWd08tLAuo"
+            ],
+            "todosValidos": false
+          },
+          "M3": {
+            "modulo": 3,
+            "titulo": "Comunicação e colaboração",
+            "iframes": 3,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "QtqbaEiwlyU"
+            ],
+            "esperados": [
+              "QtqbaEiwlyU"
+            ],
+            "todosValidos": false
+          },
+          "M4": {
+            "modulo": 4,
+            "titulo": "Segurança da informação e governança",
+            "iframes": 6,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "cWld3rMD7Wk",
+              "TbjhWIhLQDU",
+              "wlaNFx73qh4",
+              "qqgkhvsyL9Q"
+            ],
+            "esperados": [
+              "cWld3rMD7Wk",
+              "TbjhWIhLQDU",
+              "wlaNFx73qh4",
+              "qqgkhvsyL9Q"
+            ],
+            "todosValidos": false
+          },
+          "M5": {
+            "modulo": 5,
+            "titulo": "Inteligência artificial",
+            "iframes": 5,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "DNegkxwQJuY",
+              "M8hoXE24PMo",
+              "JyGGMyR3x5I"
+            ],
+            "esperados": [
+              "DNegkxwQJuY",
+              "M8hoXE24PMo",
+              "JyGGMyR3x5I"
+            ],
+            "todosValidos": false
+          },
+          "M6": {
+            "modulo": 6,
+            "titulo": "Ética e responsabilidade digital",
+            "iframes": 6,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "As0A-w1WmPI",
+              "r7dYNidpM3k",
+              "75RqMrSbenM",
+              "Zjv2mZJkakw"
+            ],
+            "esperados": [
+              "As0A-w1WmPI",
+              "r7dYNidpM3k",
+              "75RqMrSbenM",
+              "Zjv2mZJkakw"
+            ],
+            "todosValidos": false
+          },
+          "M7": {
+            "modulo": 7,
+            "titulo": "Fundamentos e engenharia de dados",
+            "iframes": 4,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "LmhbPTMaJak",
+              "1JpYOqvDJNU"
+            ],
+            "esperados": [
+              "LmhbPTMaJak",
+              "1JpYOqvDJNU"
+            ],
+            "todosValidos": false
+          },
+          "M8": {
+            "modulo": 8,
+            "titulo": "Visualização, análise e storytelling",
+            "iframes": 3,
+            "ids": [
+              "ZVURQLXZtIc",
+              "boUzkJJNOPI",
+              "P6E_Kts9pxE"
+            ],
+            "esperados": [
+              "P6E_Kts9pxE"
+            ],
+            "todosValidos": false
+          }
+        },
+        "totalIframes": 36,
+        "invalidos": [
+          {
+            "modulo": 1,
+            "id": "ZVURQLXZtIc",
+            "src": "https://www.youtube-nocookie.com/embed/ZVURQLXZtIc",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Curso Excel #01 - Como surgiu o Excel?",
+            "ariaLabel": "Curso Excel #01 - Como surgiu o Excel?",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 1,
+            "id": "boUzkJJNOPI",
+            "src": "https://www.youtube-nocookie.com/embed/boUzkJJNOPI",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Curso Excel #10 - Funções do Excel (Parte 1)",
+            "ariaLabel": "Curso Excel #10 - Funções do Excel (Parte 1)",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 2,
+            "id": "WO1uGJRqrwI",
+            "src": "https://www.youtube-nocookie.com/embed/WO1uGJRqrwI",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Curso de Redes - Vídeo 03 - Modelo OSI",
+            "ariaLabel": "Curso de Redes - Vídeo 03 - Modelo OSI",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 2,
+            "id": "bH29oltn8Cw",
+            "src": "https://www.youtube-nocookie.com/embed/bH29oltn8Cw",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Curso de redes - Vídeo 04 - Introdução ao TCP/IP",
+            "ariaLabel": "Curso de redes - Vídeo 04 - Introdução ao TCP/IP",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 2,
+            "id": "XPWd08tLAuo",
+            "src": "https://www.youtube-nocookie.com/embed/XPWd08tLAuo",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Curso de Redes - Vídeo 05 - Endereço IP",
+            "ariaLabel": "Curso de Redes - Vídeo 05 - Endereço IP",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 3,
+            "id": "QtqbaEiwlyU",
+            "src": "https://www.youtube-nocookie.com/embed/QtqbaEiwlyU",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Funcionamento do protocolo SMTP",
+            "ariaLabel": "Funcionamento do protocolo SMTP",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 4,
+            "id": "cWld3rMD7Wk",
+            "src": "https://www.youtube-nocookie.com/embed/cWld3rMD7Wk",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Introdução à Criptografia: Conceitos, Algoritmos e Segurança de Dados",
+            "ariaLabel": "Introdução à Criptografia: Conceitos, Algoritmos e Segurança de Dados",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 4,
+            "id": "TbjhWIhLQDU",
+            "src": "https://www.youtube-nocookie.com/embed/TbjhWIhLQDU",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Segurança da informação - Firewalls",
+            "ariaLabel": "Segurança da informação - Firewalls",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 4,
+            "id": "wlaNFx73qh4",
+            "src": "https://www.youtube-nocookie.com/embed/wlaNFx73qh4",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "O que a TI tem a ver com a LGPD?!?",
+            "ariaLabel": "O que a TI tem a ver com a LGPD?!?",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 4,
+            "id": "qqgkhvsyL9Q",
+            "src": "https://www.youtube-nocookie.com/embed/qqgkhvsyL9Q",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Como se proteger de golpes de engenharia social – Seu mundo digital mais seguro #Ep3",
+            "ariaLabel": "Como se proteger de golpes de engenharia social – Seu mundo digital mais seguro #Ep3",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 5,
+            "id": "DNegkxwQJuY",
+            "src": "https://www.youtube-nocookie.com/embed/DNegkxwQJuY",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Seu primeiro código de Machine Learning com Python!",
+            "ariaLabel": "Seu primeiro código de Machine Learning com Python!",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 5,
+            "id": "M8hoXE24PMo",
+            "src": "https://www.youtube-nocookie.com/embed/M8hoXE24PMo",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Você sabe o que é Deep Learning?",
+            "ariaLabel": "Você sabe o que é Deep Learning?",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 5,
+            "id": "JyGGMyR3x5I",
+            "src": "https://www.youtube-nocookie.com/embed/JyGGMyR3x5I",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Machine Learning: Tutorial prático usando apenas o navegador",
+            "ariaLabel": "Machine Learning: Tutorial prático usando apenas o navegador",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 6,
+            "id": "As0A-w1WmPI",
+            "src": "https://www.youtube-nocookie.com/embed/As0A-w1WmPI",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Sistemas de IA, IA no serviço público e em infraestruturas críticas",
+            "ariaLabel": "Sistemas de IA, IA no serviço público e em infraestruturas críticas",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 6,
+            "id": "r7dYNidpM3k",
+            "src": "https://www.youtube-nocookie.com/embed/r7dYNidpM3k",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Comunicação Descomplicada no Serviço Público: Linguagem Simples, Inteligência Artificial",
+            "ariaLabel": "Comunicação Descomplicada no Serviço Público: Linguagem Simples, Inteligência Artificial",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 6,
+            "id": "75RqMrSbenM",
+            "src": "https://www.youtube-nocookie.com/embed/75RqMrSbenM",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Transparência e imparcialidade nos usos da inteligência artificial no âmbito do serviço público",
+            "ariaLabel": "Transparência e imparcialidade nos usos da inteligência artificial no âmbito do serviço público",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 6,
+            "id": "Zjv2mZJkakw",
+            "src": "https://www.youtube-nocookie.com/embed/Zjv2mZJkakw",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "1 - Lei 14.129/2021 Governo Digital",
+            "ariaLabel": "1 - Lei 14.129/2021 Governo Digital",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 7,
+            "id": "LmhbPTMaJak",
+            "src": "https://www.youtube-nocookie.com/embed/LmhbPTMaJak",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Excel Básico para Análise de Dados",
+            "ariaLabel": "Excel Básico para Análise de Dados",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 7,
+            "id": "1JpYOqvDJNU",
+            "src": "https://www.youtube-nocookie.com/embed/1JpYOqvDJNU",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "Te ensino TUDO sobre Pandas para análise de dados com Python",
+            "ariaLabel": "Te ensino TUDO sobre Pandas para análise de dados com Python",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          },
+          {
+            "modulo": 8,
+            "id": "P6E_Kts9pxE",
+            "src": "https://www.youtube-nocookie.com/embed/P6E_Kts9pxE",
+            "loading": "lazy",
+            "referrerpolicy": null,
+            "allowfullscreen": true,
+            "title": "É o fim do Power BI? Criando Dashboard com Python em 15 minutos",
+            "ariaLabel": "É o fim do Power BI? Criando Dashboard com Python em 15 minutos",
+            "origem": "modulo-videos",
+            "problemas": [
+              "referrerpolicy=null (esperado \"strict-origin-when-cross-origin\")"
+            ]
+          }
+        ],
+        "capturas": [
+          "2026-11-04-https-modulo-1-msoffice.png",
+          "2026-11-04-https-modulo-2-redes.png",
+          "2026-11-04-https-modulo-3-comunicacao.png",
+          "2026-11-04-https-modulo-4-seguranca.png",
+          "2026-11-04-https-modulo-5-ia.png",
+          "2026-11-04-https-modulo-6-etica.png",
+          "2026-11-04-https-modulo-7-dados.png",
+          "2026-11-04-https-modulo-8-visualizacao.png"
+        ],
+        "naoRenderizados": []
+      },
+      "errosApp": [],
+      "errosExternos": 0,
+      "errosInstrumentacao": 0,
+      "fim": "2026-11-04T13:31:17.257Z"
+    }
+  ],
+  "conclusao": {
+    "sw": [
+      {
+        "modo": "file",
+        "registrations": 0,
+        "active": null,
+        "precacheOk": false,
+        "manifestValido": true
+      },
+      {
+        "modo": "http",
+        "registrations": 0,
+        "active": null,
+        "precacheOk": false,
+        "manifestValido": true
+      },
+      {
+        "modo": "https",
+        "registrations": 1,
+        "active": "activated",
+        "precacheOk": true,
+        "manifestValido": true
+      }
+    ],
+    "a11y": [
+      {
+        "modo": "file",
+        "problemas": 0
+      },
+      {
+        "modo": "http",
+        "problemas": 0
+      },
+      {
+        "modo": "https",
+        "problemas": 0
+      }
+    ],
+    "videos": [
+      {
+        "modo": "file",
+        "invalidos": 0,
+        "naoRenderizados": 0
+      },
+      {
+        "modo": "http",
+        "invalidos": 0,
+        "naoRenderizados": 0
+      },
+      {
+        "modo": "https",
+        "invalidos": 20,
+        "naoRenderizados": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 2,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U2P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P2.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-2-sub-1",
+      "modulo-1-unidade-2-topico-3-sub-1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-2-sub-1",
+      "titulo": "Formatação direta vs. estilos",
+      "topicoTitulo": "Formatação direta versus estilos",
+      "topicoId": "modulo-1-unidade-2-topico-2",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno distinguirá formatação direta de estilos e usará estilos para consistência.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a diferença entre formatação direta (atributos aplicados ao trecho selecionado) e estilos (conjuntos nomeados e reutilizáveis de formatação); (b) as consequências de cada abordagem para manutenção, sumários, navegação e acessibilidade; (c) como criar, modificar e salvar estilos em modelos; (d) a regra prática: estrutura por estilos, detalhe pontual por formatação direta. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra que modificar um estilo atualiza todas as ocorrências, que o sumário se alimenta dos estilos de título e que formatação direta não cria estrutura; inverter esses pontos muda o gabarito. PRÉ-REQUISITOS: interface (tópico 1, sub-1). OBJETIVOS OBSERVÁVEIS: (1) distinguir as duas abordagens; (2) criar e modificar um estilo; (3) prever o efeito global da modificação de um estilo; (4) decidir quando cada abordagem é adequada. COMPETÊNCIAS DESENVOLVIDAS: padronização de documentos; manutenção eficiente. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: sumários (tópico 7); acessibilidade (tópico 12); relatório integrado (tópico 14); Slide Mestre no PowerPoint (unidade 1.4 — analogia). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: formatação direta aplica atributos (fonte, tamanho, cor, negrito) diretamente ao texto selecionado, sem nome nem relação com outros trechos — cada ocorrência é independente; alterar a \"regra\" exige editar trecho por trecho. Estilo é um conjunto nomeado de formatações (parágrafo e/ou caractere) registrado no documento ou modelo: Início > Estilos > aplicar com um clique; Criar um Estilo registra o conjunto atual; Modificar altera a definição e o Word propaga a mudança a todo o texto que usa o estilo — essa propagação é a propriedade que muda o gabarito nas questões. Estilos predefinidos: Normal (corpo), Título 1, Título 2... (estrutura), entre outros; podem ser personalizados e salvos no modelo (.dotx) para padronizar novos documentos. Consequências práticas: sumário automático, painel de navegação e leitores de tela dependem dos estilos de título — formatação direta não gera estrutura; a consistência visual de documentos longos é mantida por estilos (mudar a regra uma vez) e não por formatação direta repetida (mudança N vezes com risco de divergência). Caso-limite: herança — o estilo pode se basear em outro (Normal), e a formatação direta aplicada sobre um estilo prevalece localmente sobre o estilo, mascarando a regra; remover a formatação direta (Limpar Formatação) restaura o comportamento do estilo.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: aplicar negrito a uma palavra (direta) e aplicar o estilo Título 1 a um capítulo — observar a diferença no painel de estilos.\n- Nível intermediário: criar um estilo próprio (Destaque), aplicá-lo em vários trechos e modificá-lo uma vez, observando a atualização global.\n- Nível avançado: limpar formatação direta que mascara estilos; salvar estilos no modelo (.dotx) para padronizar novos documentos.\n- Nível especialista: auditar documento que não gera sumário nem navegação (títulos em formatação direta) e migrar para estilos sem perder o visual.\n\nCOMPARAÇÕES CRÍTICAS:\n- Formatação direta x estilos: a direta afeta só o trecho; o estilo nomeia a regra e a propaga — em \"modificou o estilo, o que acontece com o texto que o usa?\", o gabarito é atualização de todas as ocorrências.\n- Estilo de parágrafo x estilo de caractere: o de parágrafo rege o parágrafo inteiro (recuos, espaçamento, fonte); o de caractere rege só o trecho selecionado — confundir os escopos inverte a resposta.\n- Formatação direta sobre estilo: o atributo direto prevalece localmente sobre o estilo e mascara a regra — a pegadinha que diz que o estilo sempre vence sobre o que foi aplicado depois está errada.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"títulos formatados com negrito direto alimentam o sumário automático\" — Motivo: confunde aparência com estrutura — Versão tecnicamente correta: o sumário se gera dos estilos de título (Título 1, Título 2); formatação direta não cria estrutura reconhecível.\n- Afirmação errada: \"modificar um estilo altera apenas a próxima ocorrência\" — Motivo: minimiza a propagação — Versão tecnicamente correta: modificar o estilo atualiza todo o texto já formatado com ele no documento (e em documentos baseados no mesmo modelo, conforme o escopo).\n- Afirmação errada: \"estilos só servem para economia de tempo, sem efeito técnico\" — Motivo: ignora os mecanismos que dependem deles — Versão tecnicamente correta: sumário, painel de navegação, referências cruzadas de títulos e acessibilidade (leitores de tela) dependem dos estilos.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: formatação direta, estilo, estilo de parágrafo, estilo de caractere, estilos predefinidos (Normal, Título 1/2), modelo .dotx, Limpar Formatação.\n- Regras e fórmulas: regra repetida → estilo; detalhe único → formatação direta; modificar estilo → atualização global; sumário/navegação → estilos de título.\n- Exceções: formatação direta prevalece localmente sobre o estilo; estilos podem herdar de outros (base Normal).\n- Palavras-chave: estilo, formatação direta, Título 1, Normal, propagação, modelo, limpar formatação.\n- Checklist de domínio: distingo as abordagens; crio/modifico estilos; prevejo o efeito global; explico por que o sumário depende de estilos; resolvo máscara de formatação direta.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual a diferença essencial entre aplicar negrito diretamente e criar um estilo? (2) O que acontece com o texto existente quando um estilo é modificado? (3) Por que um sumário automático pode sair vazio num documento \"bem formatado\"? (4) Qual estilo rege o parágrafo inteiro e qual rege apenas o trecho? (5) Um trecho \"não obedece\" ao estilo: que mecanismo suspeitar e como corrigir?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Aplicar negrito a uma palavra específica.",
+          "resposta": "Formatação direta: selecionar a palavra > Ctrl+B (ou botão Negrito). Não cria nem altera estilo — o atributo fica preso ao trecho."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um manual usa uma formatação de destaque repetida 60 vezes; a norma mudou e o destaque deve ficar azul.",
+          "resposta": "Se o destaque é estilo (ex.: Destaque): Início > Estilos > clicar com o botão direito em Destaque > Modificar > cor azul > OK — todas as 60 ocorrências atualizam de uma vez. Se o destaque foi aplicado como formatação direta, cada trecho precisa ser editado individualmente (ou selecionar tudo e Limpar Formatação, reapplicando o estilo) — o custo e o risco de divergência são o argumento técnico para estilos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "A instituição quer que todo novo documento já traga os estilos corporativos (fontes, títulos, parágrafo).",
+          "resposta": "Ajustar os estilos num documento padrão (ou modificar os existentes) e salvar como modelo: Arquivo > Salvar como > .dotx. Documentos criados a partir do modelo herdam os estilos; mudanças futuras na norma podem ser feitas modificando o modelo, propagando para novos documentos (não para os já criados — estes precisam de atualização manual ou de modelo anexado)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário formata todos os títulos com negrito direto e espera que o sumário automático os reconheça.",
+          "correcao": "Incorreto: o sumário automático se gera dos estilos de título (Título 1, Título 2); formatação direta não cria estrutura. Correção: aplicar os estilos de título aos capítulos e reinserir/atualizar o sumário."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso atualiza todo o texto formatado quando sua definição é alterada? A) Formatação direta; B) Estilos; C) Copiar/colar formatação.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Modificar um estilo atualiza todas as ocorrências de texto que o utilizam.",
+          "resposta": "Certo. A definição é única: o Word propaga a mudança a todo o texto que usa o estilo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Um trecho formatado com o estilo Título 2 recebeu cor vermelha aplicada diretamente. O resultado é: A) O estilo impede a cor; B) A formatação direta prevalece localmente sobre o estilo; C) O estilo Título 2 é redefinido.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir formatação direta de estilos, criar e modificar estilos prevendo a atualização global e explicar por que sumário e navegação dependem dos estilos de título, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá formatação direta de estilos e usará estilos para consistência"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Formatação direta aplica atributos (fonte, tamanho, cor) diretamente ao texto selecionado, sem relação com outros textos. Estilos são conjuntos nomeados de formatação que podem ser aplicados globalmente: modificar um estilo atualiza todo o texto formatado com ele. O uso de estilos é essencial para consistência visual, criação automática de sumários, navegação estrutural e acessibilidade. O Word oferece estilos pré-definidos (Normal, Título 1, Título 2, etc.) que podem ser personalizados e salvos…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Formatação direta vs. estilos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário formata todos os títulos com negrito direto e espera sumário automático.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: sumário usa estilos (Título 1), não formatação direta."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Aplicar negrito a uma palavra específica.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Formatação direta: selecionar palavra > Ctrl+B (não cria estilo).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Criar estilo 'Destaque' reutilizável.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Início > Estilos > Criar um Estilo > definir formatação; aplicar a vários trechos; modificar estilo atualiza todos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário formata todos os títulos com negrito direto e espera sumário automático.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: sumário usa estilos (Título 1), não formatação direta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-2-topico-3-sub-1",
+      "titulo": "Parágrafos e recuos",
+      "topicoTitulo": "Parágrafos, recuos, tabulações, espaçamento e paginação",
+      "topicoId": "modulo-1-unidade-2-topico-3",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno ajustará parágrafos, recuos e tabulações corretamente.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é um parágrafo no Word e como se marca seu fim; (b) a diferença entre quebra de parágrafo (Enter) e quebra de linha (Shift+Enter); (c) recuos: de primeira linha, à esquerda e à direita, com régua e caixa de diálogo; (d) tabulações: tipos (esquerda, centrada, direita, decimal) e definição de posições; (e) espaçamento: entre linhas, antes e depois do parágrafo. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a diferença Enter x Shift+Enter, o uso correto de recuos e tabulações em vez de espaços, e o significado de cada tipo de tabulador; trocar Enter por Shift+Enter altera o comportamento de todo o parágrafo e muda o gabarito. PRÉ-REQUISITOS: interface do Word (unidade 1.2, tópico 1). OBJETIVOS OBSERVÁVEIS: (1) distinguir quebra de parágrafo de quebra de linha; (2) configurar recuos por régua e por caixa de diálogo; (3) definir tabulações por tipo e posição; (4) escolher espaçamento adequado. COMPETÊNCIAS DESENVOLVIDAS: diagramação de texto técnico; correção de documentos mal formatados. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: formatação direta versus estilos (tópico 2); quebras de página e de seção (tópico 6); listas (tópico 4). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: parágrafo é a unidade estrutural do Word: termina na marca de quebra de parágrafo (inserida por Enter) e carrega formatação própria (recuos, espaçamento, alinhamento) guardada na própria marca — por isso apagar a marca funde o parágrafo com o seguinte e aplica a ela a formatação do último. Quebra de linha manual (Shift+Enter) insere a marca de quebra de linha: o texto passa para a linha seguinte sem encerrar o parágrafo — recuos e espaçamentos continuam valendo para o conjunto, e o estilo permanece o mesmo. Recuos deslocam o texto em relação às margens: recuo de primeira linha (só a primeira linha do parágrafo), recuo à esquerda e recuo à direita (todo o bloco), ajustáveis pela régua (marcadores superior, médio e inferior) ou por Início > Parágrafo > caixa de diálogo (inclusive recuo especial). Tabulações avançam o cursor até posições pré-definidas: tabulador à esquerda, centrado, à direita e decimal (alinha números pelo ponto decimal) — definidas em Parágrafo > Tabulações ou clicando na régua; são o mecanismo correto para colunas alinhadas, no lugar de cadeias de espaços. Espaçamento: entre linhas (simples, 1,5, duplo, conforme unidade configurável) e antes/depois do parágrafo (distância entre blocos), configuráveis no mesmo diálogo. Invariante: alinhamento estrutural deve usar recuos e tabulações — espaços repetidos não alinham de forma consistente entre fontes e tamanhos.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir as duas marcas na tela (parágrafo e linha) com exibição de marcas de formatação ativada.\n- Nível intermediário: configurar recuo de primeira linha pela régua e pelo diálogo; criar tabulação decimal para valores monetários.\n- Nível avançado: diagnosticar documento \"alinhado com espaços\" e substituir por tabulações; controlar espaçamento antes/depois em vez de linhas vazias.\n- Nível especialista: explicar por que apagar a marca de parágrafo altera a formatação do texto fundido e como preservar o estilo pretendido ao unir parágrafos.\n\nCOMPARAÇÕES CRÍTICAS:\n- Enter x Shift+Enter: Enter encerra o parágrafo (nova marca, nova formatação possível); Shift+Enter só quebra a linha dentro do mesmo parágrafo — em questão sobre \"criar nova linha sem novo parágrafo\", o gabarito é Shift+Enter.\n- Recuo x espaçamento: recuo desloca o bloco em relação à margem; espaçamento define distância entre linhas e entre parágrafos — confundir os dois inverte a resposta sobre identação.\n- Tabulação decimal x tabulação à esquerda: a decimal alinha números pelo ponto (para valores monetários); a à esquerda alinha o início do texto — usar a errada desalinha a coluna de valores.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Shift+Enter cria um novo parágrafo\" — Motivo: troca entre as duas marcas — Versão tecnicamente correta: Shift+Enter cria nova linha dentro do mesmo parágrafo; o novo parágrafo é criado por Enter.\n- Afirmação errada: \"é correto usar espaços para alinhar colunas de texto\" — Motivo: prática instável — Versão tecnicamente correta: alinhamento estrutural usa tabulações e recuos; espaços desalinham quando muda a fonte ou o tamanho.\n- Afirmação errada: \"o recuo de primeira linha vale para todo o parágrafo\" — Motivo: confunde recuo especial com recuo do bloco — Versão tecnicamente correta: o recuo de primeira linha afeta apenas a primeira linha; o recuo à esquerda/direita afeta todo o bloco.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: parágrafo, marca de parágrafo, quebra de linha, recuos, tabulações, espaçamento entre linhas e entre parágrafos.\n- Regras e fórmulas: nova linha sem novo parágrafo → Shift+Enter; primeira linha deslocada → recuo especial; coluna de valores → tabulação decimal; separação entre blocos → espaçamento antes/depois, não linhas vazias.\n- Exceções: a formatação do parágrafo reside na marca final — apagá-la funde parágrafos e altera a formatação herdada.\n- Palavras-chave: parágrafo, quebra de linha, recuo, tabulação, tabulador decimal, espaçamento, régua.\n- Checklist de domínio: distingo as duas marcas; configuro recuos pela régua e pelo diálogo; defino tabulações por tipo; evito espaços para alinhar; controlo espaçamento sem linhas vazias.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual tecla cria nova linha dentro do mesmo parágrafo? (2) Como deslocar apenas a primeira linha de cada parágrafo? (3) Que tipo de tabulador alinha valores monetários pelo ponto decimal? (4) Por que espaços não são aceitáveis para alinhar colunas? (5) O que acontece com a formatação quando duas marcas de parágrafo são removidas, unindo os parágrafos?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Recuar a primeira linha de um parágrafo.",
+          "resposta": "Régua > marcador de recuo de primeira linha (ou Início > Parágrafo > Recuo especial: Primeira linha, com o valor desejado). Afeta somente a primeira linha do parágrafo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Numa relação de produtos, a coluna de preços precisa ficar alinhada pelo ponto decimal.",
+          "resposta": "Definir tabulação decimal: Início > Parágrafo > Tabulações > posição (ex.: 8 cm) > alinhamento Decimal > OK; digitar Tab antes de cada valor. O ponto decimal de todos os valores fica alinhado verticalmente; se a fonte mudar, o alinhamento se mantém — o que não ocorreria com espaços."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Documento com parágrafos separados por duas linhas vazias ficou irregular; como padronizar?",
+          "resposta": "Remover as linhas vazias e usar espaçamento entre parágrafos: Início > Parágrafo > Espaçamento > Depois (ex.: 12 pt), além do espaçamento entre linhas (ex.: 1,5). Vantagem: a distância fica uniforme, o estilo pode ser salvo no estilo do parágrafo e a diagramação não quebra quando o texto é editado — linhas vazias criam buracos variáveis conforme a paginação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário usa espaços para alinhar texto em colunas.",
+          "correcao": "Incorreto: espaços não alinham de forma consistente entre fontes e tamanhos; o mecanismo correto é tabulações (por tipo e posição) e recuos — estruturas que mantêm o alinhamento independente da fonte."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual tecla insere quebra de linha dentro do mesmo parágrafo? A) Enter; B) Shift+Enter; C) Ctrl+Enter.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Shift+Enter cria um novo parágrafo.",
+          "resposta": "Errado. Shift+Enter cria uma nova linha no mesmo parágrafo; o parágrafo novo é criado por Enter (marca de quebra de parágrafo)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para alinhar valores monetários pelo ponto decimal numa coluna, utiliza-se: A) Espaços repetidos; B) Tabulação com alinhamento decimal; C) Recuo à direita de cada parágrafo.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir quebra de parágrafo de quebra de linha, configurar recuos e tabulações por tipo/posição e substituir alinhamento por espaços por tabulações, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "ajustará parágrafos, recuos e tabulações corretamente"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Parágrafos são unidades de texto separadas por quebras de parágrafo (Enter) ou linha (Shift+Enter). Recuos deslocam o texto da margem esquerda (recuo inicial, recuo de parágrafo). Tabulações avançam o cursor para posições pré-definidas (tabulador simples, centrado, decimal, direita). Espaçamento pode ser definido antes e depois do parágrafo, entre linhas (1.0, 1.5, duplo) e dentro do parágrafo.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Parágrafos e recuos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário usa espaços para alinhar texto.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: usar tabulações/recuos; espaços não alinham de forma consistente entre fontes."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Recuar a primeira linha de um parágrafo.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Régua > marcador de recuo de primeira linha (ou Parágrafo > Recuo especial: Primeira linha).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Criar lista com tabulação decimal.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Parágrafo > Tabulações > definir posição e alinhamento decimal; pressionar Tab para alinhar números.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário usa espaços para alinhar texto.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: usar tabulações/recuos; espaços não alinham de forma consistente entre fontes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

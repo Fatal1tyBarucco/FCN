@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 2,
+    "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+    "parte": 4,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U2P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U2P4.js",
+    "idsCompletos": [
+      "m7-u2-t3-s3",
+      "m7-u2-t3-s4"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u2-t3-s3",
+      "titulo": "Normalização ESTATÍSTICA: padronização (z-score) e redimensionamento (min-max)",
+      "topicoTitulo": "Limpeza, padronização e normalização — os dois sentidos da palavra",
+      "topicoId": "modulo-7-unidade-2-topico-3",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno aplicará z-score e min-max a valores reais, interpretará o resultado e limitará o uso correto.",
+      "conteudo": "PRIMEIRO SENTIDO DA PALAVRA. Normalização estatística = transformar os VALORES de uma variável para que fiquem em uma escala comum, mantendo a ordem relativa. PADRONIZAÇÃO (z-score): z = (x − média) ÷ desvio padrão. O resultado é medido em 'desvios-padrão da média', permite comparar variáveis com unidades diferentes e é insensível a mudança de unidade. REDIMENSIONAMENTO (min-max): x' = (x − mínimo) ÷ (máximo − mínimo), levando tudo para a faixa [0; 1] — útil quando a faixa absoluta importa ou quando algoritmos exigem entradas entre 0 e 1. PARA QUÊ: combinar variáveis em um índice (idade e renda em escores comparáveis), comparar distribuições de unidades distintas, preparar dados para técnicas sensíveis à escala. LIMITAÇÕES E ARMADILHAS: (a) os parâmetros dependem da amostra — min e max extremos esmagam todo o resto em min-max; (b) normalizar NÃO torna a distribuição normal, apenas muda a régua; (c) o dado normalizado perde a unidade original — guarde média, desvio, mínimo e máximo para reverter; (d) outliers contaminam média, desvio, mínimo e máximo — decida antes se eles ficam. REGRA MNEMÔNICA: normalização estatística mexe nos números, nunca na estrutura das tabelas.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular o z-score de uma nota 85 em prova com média 70 e desvio padrão 10, e interpretar.",
+          "resposta": "z = (85 − 70) ÷ 10 = 1,5. Interpretação: a nota está 1,5 desvio-padrão acima da média. Comparando com outra prova (média 60, desvio 5) e nota 70: z = (70 − 60) ÷ 5 = 2,0 — a segunda nota é relativamente melhor, ainda que em valor absoluto menor."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Redimensionar por min-max o valor 85 de uma variável cujo mínimo é 60 e máximo 100; depois, o valor 60.",
+          "resposta": "Para 85: (85 − 60) ÷ (100 − 60) = 25 ÷ 40 = 0,625. Para 60: (60 − 60) ÷ 40 = 0 — o mínimo vira 0 e o máximo vira 1, definindo a régua. Um novo valor fora da faixa (ex.: 110) produziria 1,25, sinal de que a escala foi rompida — típico quando se aplica a fórmula a dados não vistos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Aplicar z-score torna os dados com distribuição normal.'",
+          "correcao": "Errado. O z-score apenas recentraliza em zero e mede em unidades de desvio-padrão; a forma da distribuição permanece a mesma (a transformação é linear e mantém a assimetria). Tornar a distribuição normal exigiria transformação não linear, que é outra coisa."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A transformação min-max leva os valores para a faixa de 0 a 1, definindo mínimo e máximo como extremos da régua.",
+          "resposta": "Certo. É a definição: x' = (x − min) ÷ (max − min), com x' = 0 no mínimo e 1 no máximo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Valor 85, média 70, desvio padrão 10. O z-score é: A) 0,7; B) 1,5; C) 15; D) 8,5.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar z-score e min-max a valores reais, interpretará o resultado e limitará o uso correto, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará z-score e min-max a valores reais, interpretará o resultado e limitará o uso correto"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "PRIMEIRO SENTIDO DA PALAVRA. Normalização estatística = transformar os VALORES de uma variável para que fiquem em uma escala comum, mantendo a ordem relativa. PADRONIZAÇÃO (z-score): z = (x − média) ÷ desvio padrão. O resultado é medido em 'desvios-padrão da média', permite comparar variáveis com unidades diferentes e é insensível a mudança de unidade. REDIMENSIONAMENTO (min-max): x' = (x − mínimo) ÷ (máximo − mínimo), levando tudo para a faixa [0; 1] — útil quando a faixa absoluta importa ou qu…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Normalização ESTATÍSTICA: padronização (z-score) e redimensionamento (min-max)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Aplicar z-score torna os dados com distribuição normal.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O z-score apenas recentraliza em zero e mede em unidades de desvio-padrão; a forma da distribuição permanece a mesma (a transformação é linear e mantém a assimetria). Tornar a distribuição normal exigiria transformação não linear, que é outra coisa."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Calcular o z-score de uma nota 85 em prova com média 70 e desvio padrão 10, e interpretar.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "z = (85 − 70) ÷ 10 = 1,5. Interpretação: a nota está 1,5 desvio-padrão acima da média. Comparando com outra prova (média 60, desvio 5) e nota 70: z = (70 − 60) ÷ 5 = 2,0 — a segunda nota é relativamente melhor, ainda que em valor absoluto menor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Redimensionar por min-max o valor 85 de uma variável cujo mínimo é 60 e máximo 100; depois, o valor 60.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Para 85: (85 − 60) ÷ (100 − 60) = 25 ÷ 40 = 0,625. Para 60: (60 − 60) ÷ 40 = 0 — o mínimo vira 0 e o máximo vira 1, definindo a régua. Um novo valor fora da faixa (ex.: 110) produziria 1,25, sinal de que a escala foi rompida — típico quando se aplica a fórmula a dados não vistos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Aplicar z-score torna os dados com distribuição normal.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O z-score apenas recentraliza em zero e mede em unidades de desvio-padrão; a forma da distribuição permanece a mesma (a transformação é linear e mantém a assimetria). Tornar a distribuição normal exigiria transformação não linear, que é outra coisa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u2-t3-s4",
+      "titulo": "Normalização de BANCOS DE DADOS: formas normais e contraste com a estatística",
+      "topicoTitulo": "Limpeza, padronização e normalização — os dois sentidos da palavra",
+      "topicoId": "modulo-7-unidade-2-topico-3",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno aplicará 1FN, 2FN e 3FN a uma tabela e formulará a diferença entre os dois sentidos de normalização.",
+      "conteudo": "SEGUNDO SENTIDO DA PALAVRA. Normalização de banco de dados = reorganizar a ESTRUTURA das tabelas para eliminar redundância e dependências indesejadas, garantindo que cada fato seja registrado uma única vez. 1FN (primeira forma normal): valores atômicos — nenhuma célula com lista ou repetição; exemplo: coluna 'telefones' com '99999-0001, 3333-0002' viola 1FN; a correção é uma tabela TELEFONES ligada ao cliente. 2FN: nenhuma dependência PARCIAL — colunas que dependem de apenas parte de uma chave composta; exemplo: em PEDIDO_PRODUTO(id_pedido, id_produto, nome_cliente, preço), nome_cliente depende só do pedido, não do par (pedido, produto) — sai para outra tabela. 3FN: nenhuma dependência TRANSITÓRIA — coluna dependente de outra não-chave; exemplo: no mesmo PEDIDO, 'nome_cliente' e 'estado_cliente' — estado depende do cliente, não do pedido; separar em CLIENTE. GANHO: consistência (atualiza-se o cliente em um lugar só) e eliminação de anomalias de inserção, atualização e exclusão. CUSTO: leitura frequentemente exige junção — por isso ambientes analíticos DENORMALIZAM de propósito, com justificativa de desempenho e risco controlado. CONTRASTE EXPLICITAMENTE: normalização ESTATÍSTICA muda a ESCALA dos valores de uma variável (z-score, min-max); normalização de BANCOS muda a ORGANIZAÇÃO das tabelas (formas normais). Um domínio fala de valores, o outro de esquema. A pergunta da prova revela o sentido: 'z-score/min-max' é estatística; '1FN/2FN/3FN, redundância, dependência parcial' é banco de dados.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Tabela MATRICULA(aluno, disciplina, nota, nome_aluno, curso_do_aluno). Aplicar 3FN.",
+          "resposta": "nome_aluno depende de aluno e curso_do_aluno depende de aluno — ambos dependem transitivamente da chave (aluno, disciplina). Correção: ALUNO(aluno, nome_aluno, curso) e MATRICULA(aluno, disciplina, nota). Agora, mudar o curso de um aluno exige atualizar um registro, e não todas as suas matrículas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Por que atualizar o endereço de um cliente em uma tabela não normalizada pode criar inconsistência?",
+          "resposta": "Porque o endereço está repetido em N linhas (uma por pedido, por exemplo). Se a atualização alcançar apenas parte delas, o mesmo cliente aparece com dois endereços — inconsistência gerada pela redundância. Em 3FN, o endereço mora uma vez em CLIENTE e é referenciado por chave."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Normalizar significa transformar os valores das colunas para a faixa de 0 a 1.'",
+          "correcao": "Errado: isso é normalização/escalonamento ESTATÍSTICO. No contexto de bancos de dados, normalizar significa reduzir redundância dividindo tabelas conforme as formas normais — nenhum valor é alterado; o que muda é a estrutura."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em 2FN, proíbe-se dependência de coluna que dependa somente de parte da chave composta.",
+          "resposta": "Certo. Dependência parcial é exatamente o que a 2FN elimina."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "'nome_cliente' repetido em todos os pedidos do mesmo cliente, devendo ser atualizado em cada linha. Qual problema e qual forma norma resolve? A) dependência transitória, 3FN; B) dependência parcial, 2FN; C) valor não atômico, 1FN; D) ausência de valor, nenhuma forma norma.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar 1FN, 2FN e 3FN a uma tabela e formulará a diferença entre os dois sentidos de normalização, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará 1FN, 2FN e 3FN a uma tabela e formulará a diferença entre os dois sentidos de normalização"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "SEGUNDO SENTIDO DA PALAVRA. Normalização de banco de dados = reorganizar a ESTRUTURA das tabelas para eliminar redundância e dependências indesejadas, garantindo que cada fato seja registrado uma única vez. 1FN (primeira forma normal): valores atômicos — nenhuma célula com lista ou repetição; exemplo: coluna 'telefones' com '99999-0001, 3333-0002' viola 1FN; a correção é uma tabela TELEFONES ligada ao cliente. 2FN: nenhuma dependência PARCIAL — colunas que dependem de apenas parte de uma chave c…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Normalização de BANCOS DE DADOS: formas normais e contraste com a estatística",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Normalizar significa transformar os valores das colunas para a faixa de 0 a 1.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado: isso é normalização/escalonamento ESTATÍSTICO. No contexto de bancos de dados, normalizar significa reduzir redundância dividindo tabelas conforme as formas normais — nenhum valor é alterado; o que muda é a estrutura."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Tabela MATRICULA(aluno, disciplina, nota, nome_aluno, curso_do_aluno). Aplicar 3FN.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "nome_aluno depende de aluno e curso_do_aluno depende de aluno — ambos dependem transitivamente da chave (aluno, disciplina). Correção: ALUNO(aluno, nome_aluno, curso) e MATRICULA(aluno, disciplina, nota). Agora, mudar o curso de um aluno exige atualizar um registro, e não todas as suas matrículas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Por que atualizar o endereço de um cliente em uma tabela não normalizada pode criar inconsistência?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque o endereço está repetido em N linhas (uma por pedido, por exemplo). Se a atualização alcançar apenas parte delas, o mesmo cliente aparece com dois endereços — inconsistência gerada pela redundância. Em 3FN, o endereço mora uma vez em CLIENTE e é referenciado por chave.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Normalizar significa transformar os valores das colunas para a faixa de 0 a 1.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado: isso é normalização/escalonamento ESTATÍSTICO. No contexto de bancos de dados, normalizar significa reduzir redundância dividindo tabelas conforme as formas normais — nenhum valor é alterado; o que muda é a estrutura.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

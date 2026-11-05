@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 5,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U2P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P5.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-7-sub-1",
+      "modulo-1-unidade-2-topico-8-sub-1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-7-sub-1",
+      "titulo": "Gerando sumários automáticos",
+      "topicoTitulo": "Sumários automáticos, estilos de títulos e atualização de campos",
+      "topicoId": "modulo-1-unidade-2-topico-7",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno gerará e atualizará sumários automáticos baseados em estilos de títulos.",
+      "conteudo": "O Word pode gerar sumários automaticamente baseando-se nos estilos de títulos aplicados (Título 1, Título 2, etc.). Processo: aplicar estilos de títulos aos tópicos, posicionar cursor onde o sumário será inserido, usar 'Referências > Sumário' e escolher o formato. O sumário é inserido como um campo que pode ser atualizado ('Atualizar campo') sempre que estilos ou estrutura mudarem. Campos podem incluir números de capítulo (ex: '2.3 Visão geral') quando usados heading levels apropriados. É possível personalizar excluindo certos níveis ou adicionando texto personalizado.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Produzir o sumário de uma apostila com três níveis de título, sabendo que capítulos ainda serão inseridos, sem que o sumário precise ser reescrito a cada mudança.",
+          "resposta": "Sumário com doze entradas de nível 1, suas seções e subseções e os números de página corretos; ao inserir um capítulo novo, basta atualizar o campo para que a lista e a paginação sejam recalculadas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa publicar a versão final de um manual cujo sumário foi gerado antes de dois capítulos serem fundidos e de um terceiro ser renomeado.",
+          "resposta": "Sumário com dezessete entradas na nova ordem, título renomeado atualizado e paginação coerente com o corpo do manual, sem edição manual da lista."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um revisor afirma que o sumário ficou vazio porque o recurso está com defeito e que a solução é digitar as entradas manualmente, já que os capítulos aparecem corretamente formatados na tela.",
+          "correcao": "A afirmação é incorreta: o sumário não estava defeituoso, e sim sem títulos estilizados para coletar. Com estilos aplicados, a lista é gerada e passa a se manter atualizada; a digitação manual apenas mascara o problema."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "O sumário automático baseia-se em: A) Formatação direta; B) Estilos de título; C) Marcadores manuais.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O sumário é um campo atualizável.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de gerar e atualizará sumários automáticos baseados em estilos de títulos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "gerará e atualizará sumários automáticos baseados em estilos de títulos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O Word pode gerar sumários automaticamente baseando-se nos estilos de títulos aplicados (Título 1, Título 2, etc.). Processo: aplicar estilos de títulos aos tópicos, posicionar cursor onde o sumário será inserido, usar 'Referências > Sumário' e escolher o formato. O sumário é inserido como um campo que pode ser atualizado ('Atualizar campo') sempre que estilos ou estrutura mudarem. Campos podem incluir números de capítulo (ex: '2.3 Visão geral') quando usados heading levels apropriados. É possív…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Gerando sumários automáticos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Sumário vazio após atualização.",
+            "porqueErrada": "",
+            "versaoCorreta": "Verificar se capítulos têm estilo Título 1 aplicado (não apenas formatação direta); reinserir sumário."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Produzir o sumário de uma apostila com três níveis de título, sabendo que capítulos ainda serão inseridos, sem que o sumário precise ser reescrito a cada mudança.",
+            "dados": "Documento com doze capítulos de nível 1, seções de nível 2 e subseções de nível 3, sendo que os capítulos foram formatados com negrito e fonte maior aplicados manualmente.",
+            "conceitos": [
+              "estilo de título: formatação nomeada que registra a hierarquia do documento",
+              "campo de sumário: bloco gerado a partir dos estilos e atualizável sob demanda",
+              "profundidade do sumário: quantidade de níveis de título incluída na lista"
+            ],
+            "estrategia": "Substituir a formatação manual por estilos de título e inserir o sumário como campo, porque o sumário é montado a partir de estilos, não da aparência visual do texto.",
+            "execucao": [
+              "Aplicar Título 1, Título 2 e Título 3 aos capítulos, seções e subseções, no lugar de aumentar fonte e aplicar negrito.",
+              "Posicionar o cursor na página dois e usar Referências > Sumário > Sumário Automático.",
+              "Ajustar a profundidade em Referências > Sumário > Sumário Personalizado, limitando a três níveis.",
+              "Depois de inserir ou remover capítulos, clicar no sumário e usar Atualizar Campo > Atualizar o índice inteiro."
+            ],
+            "resultado": "Sumário com doze entradas de nível 1, suas seções e subseções e os números de página corretos; ao inserir um capítulo novo, basta atualizar o campo para que a lista e a paginação sejam recalculadas.",
+            "justificativa": "O sumário automático é um campo alimentado pelos estilos de título, e a hierarquia vem do nível do estilo, não do tamanho da fonte. Por isso texto apenas grande e em negrito não aparece na lista, e a atualização do campo é o passo que sincroniza entradas e paginação depois de qualquer mudança estrutural.",
+            "errosFrequentes": [
+              "Formatar títulos manualmente e concluir que o sumário automático não funciona.",
+              "Atualizar apenas os números de página quando entradas foram inseridas ou removidas.",
+              "Digitar o sumário à mão, o que faz a lista divergir do corpo na primeira edição."
+            ],
+            "variacao": "O sumário deve excluir o nível 3 e manter apenas capítulos e seções. Indique como limitar a profundidade e explique por que essa alteração não modifica os estilos aplicados no corpo do documento."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa publicar a versão final de um manual cujo sumário foi gerado antes de dois capítulos serem fundidos e de um terceiro ser renomeado.",
+            "dados": "Sumário automático com dezoito entradas, dois capítulos fundidos em um, um capítulo renomeado e três seções movidas de posição.",
+            "conceitos": [
+              "desatualização de campo: diferença entre o estado exibido e o estado atual do documento",
+              "atualização de índice inteiro: recálculo que relê todos os títulos do documento",
+              "paginação: números de página que dependem do fluxo do texto"
+            ],
+            "estrategia": "Atualizar o índice inteiro, e não apenas a paginação, porque a operação alterou entradas e não somente a posição das páginas.",
+            "execucao": [
+              "Clicar dentro do sumário para posicionar o cursor no campo.",
+              "Escolher Atualizar Campo e selecionar a opção de atualizar o índice inteiro.",
+              "Conferir se o capítulo renomeado aparece com o novo título e se os capítulos fundidos geraram uma única entrada.",
+              "Verificar se as três seções movidas aparecem na nova ordem hierárquica e se os números de página correspondem ao corpo."
+            ],
+            "resultado": "Sumário com dezessete entradas na nova ordem, título renomeado atualizado e paginação coerente com o corpo do manual, sem edição manual da lista.",
+            "justificativa": "A atualização de paginação apenas reposiciona os números de página das entradas existentes; ela não relê os títulos. Como o cenário envolveu fusão e renomeação, somente a atualização do índice inteiro reflete a nova estrutura, e é isso que mantém a lista fiel ao documento.",
+            "errosFrequentes": [
+              "Atualizar apenas os números de página e manter o título antigo na lista.",
+              "Apagar o sumário e reinseri-lo para forçar atualização, perdendo a formatação aplicada.",
+              "Editar a entrada do sumário diretamente, criando divergência entre lista e título real."
+            ],
+            "variacao": "Um dos capítulos é movido para um anexo que não deve constar do sumário. Explique como retirar essa entrada sem apagar o título do corpo e por que digitar sobre a entrada do sumário não é solução."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um revisor afirma que o sumário ficou vazio porque o recurso está com defeito e que a solução é digitar as entradas manualmente, já que os capítulos aparecem corretamente formatados na tela.",
+            "dados": "Sumário inserido corretamente, doze capítulos visíveis em negrito com fonte maior, nenhum estilo de título aplicado e atualização de campo sem efeito.",
+            "conceitos": [
+              "aparência x estrutura: formatação visível x marcação semântica de nível",
+              "estilo de parágrafo: conjunto nomeado de regras aplicado ao parágrafo inteiro",
+              "critério de coleta do sumário: regra interna que lê apenas parágrafos com estilo de título"
+            ],
+            "estrategia": "Diagnosticar a causa antes de trocar a solução: verificar se os títulos têm estilo aplicado, porque o sumário coleta estilos, e não texto que apenas parece título.",
+            "execucao": [
+              "Posicionar o cursor em um capítulo e observar, na galeria de estilos, qual estilo está aplicado.",
+              "Constatar que o capítulo está em Normal com formatação direta de negrito e tamanho.",
+              "Aplicar Título 1 nos capítulos e Título 2 nas seções, ajustando a aparência do estilo uma única vez.",
+              "Atualizar o índice inteiro e verificar que as entradas passam a ser geradas."
+            ],
+            "resultado": "A afirmação é incorreta: o sumário não estava defeituoso, e sim sem títulos estilizados para coletar. Com estilos aplicados, a lista é gerada e passa a se manter atualizada; a digitação manual apenas mascara o problema.",
+            "justificativa": "O sumário automático é um campo que varre o documento em busca de estilos de título. Formatação direta não cria nível semântico, logo não há o que coletar. Digitar as entradas manualmente resolve a aparência por um momento e reintroduz o problema na primeira alteração estrutural.",
+            "errosFrequentes": [
+              "Concluir que o recurso está com defeito sem verificar o estilo aplicado ao título.",
+              "Manter a formatação manual e acrescentar estilo por cima, acumulando regras conflitantes.",
+              "Substituir o sumário automático por lista digitada em documento que ainda será revisado."
+            ],
+            "variacao": "O documento tem títulos em estilo Título 1 e subtítulos que precisam entrar no sumário com recuo. Explique o que deve ser aplicado para que o recuo apareça na lista e por que alterar apenas o recuo do texto no corpo não produz esse efeito."
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-2-topico-8-sub-1",
+      "titulo": "Referências cruzadas e legendas automáticas",
+      "topicoTitulo": "Referências cruzadas, legendas, índices e citações",
+      "topicoId": "modulo-1-unidade-2-topico-8",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno inserirá referências cruzadas e legendas automáticas para figuras e tabelas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) referências cruzadas: vínculos que apontam para elementos do documento (figuras, tabelas, títulos, notas) e se atualizam; (b) legendas automáticas: rotulação numerada de figuras/tabelas/equações e sua ligação com as referências; (c) índice remissivo: geração a partir de marcas de entrada; (d) citações e bibliografia: gestão de fontes com estilos acadêmicos (APA, entre outros) e geração automática. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve documentos que renumeram figuras (inserir figura nova no meio) e pergunta se a menção \"Figura 3\" no texto acompanha; digitar a menção manualmente versus usar referência cruzada é exatamente a pegadinha que muda o gabarito. PRÉ-REQUISITOS: estilos (tópico 2); sumários (tópico 7). OBJETIVOS OBSERVÁVEIS: (1) inserir legenda automática e referência cruzada corretas; (2) gerar e atualizar índice remissivo; (3) gerenciar fontes e gerar bibliografia. COMPETÊNCIAS DESENVOLVIDAS: rigor documental; manutenção de integridade referencial. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: sumários (tópico 7 — mesmo princípio de campo); notas de rodapé (tópico 5, sub-2); relatório integrado (tópico 14). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média a alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: referência cruzada é um campo que aponta para um elemento rotulado do documento (Referências > Referência Cruzada, com tipo e conteúdo do que exibir — ex.: \"Somente número da figura\"); o mecanismo é o mesmo dos sumários: campo que exige atualização (F9/Atualizar campo) após reestruturação. Legenda automática (Referências > Inserir Legenda) rotula a figura/tabela/equação com rótulo (Figura, Tabela), número sequencial e descrição; o número é gerado automaticamente e renumera com inserções/exclusões quando as legendas e referências são atualizadas. Índice remissivo: marca-se cada termo relevante (Referências > Marcar Entrada) e, ao final, o índice é gerado (Referências > Inserir Índice) a partir das marcas; a atualização recompila as entradas. Citações e bibliografia: as fontes são cadastradas (Referências > Gerenciar Fontes) com autor, título, ano etc.; a citação é inserida no texto pelo nome da fonte (campo) e a bibliografia é gerada ao final, podendo alternar o estilo acadêmico (APA e outros); trocar o estilo reformata todas as citações de uma vez. Propriedade integradora: legenda (rotula) + referência cruzada (cita) + atualização de campos = integridade referencial; qualquer menção digitada manualmente (\"Figura 3\") fica órfã quando a figura muda de número. Limitações: os mecanismos exigem que os elementos tenham sido criados pelos recursos automáticos — legenda digitada à mão não alimenta referência cruzada.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: inserir legenda automática numa figura e ver o número gerado.\n- Nível intermediário: referenciar a figura no texto via Referência Cruzada; inserir figura nova no meio e atualizar campos, conferindo a renumeração.\n- Nível avançado: marcar termos e gerar índice remissivo; cadastrar fontes e gerar bibliografia em estilo APA.\n- Nível especialista: auditar documento com menções manuais órfãs e migrar para o sistema legenda + referência cruzada + atualização de campos.\n\nCOMPARAÇÕES CRÍTICAS:\n- Referência cruzada x texto digitado: a cruzada é campo que acompanha a renumeração; o texto digitado fica órfão — em \"inseriu figura nova; as menções atualizam?\", o gabarito exige cruzada + atualização de campos.\n- Legenda automática x legenda digitada: a automática gera número sequencial e alimenta referências; a digitada é texto estático — confundir as duas inverte a resposta sobre renumeração.\n- Sumário x índice remissivo: sumário lista títulos (dos estilos); índice lista termos marcados com as páginas onde ocorrem — trocar os dois mecanismos é erro de gabarito.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"digitar 'Figura 1' no texto é equivalente a usar referência cruzada\" — Motivo: confunde texto com campo — Versão tecnicamente correta: a referência cruzada é campo que se atualiza quando as legendas renumeram; o texto digitado não acompanha.\n- Afirmação errada: \"o índice remissivo é gerado a partir dos estilos de título\" — Motivo: troca entre índice e sumário — Versão tecnicamente correta: o índice remissivo é gerado a partir das marcas de entrada marcadas no texto; o sumário é que se gera dos estilos.\n- Afirmação errada: \"trocar o estilo da bibliografia exige reeditar todas as citações\" — Motivo: minimiza o mecanismo de fonte centralizada — Versão tecnicamente correta: alternar o estilo bibliográfico reformata as citações e a bibliografia geradas de uma vez, pois as fontes estão cadastradas.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: referência cruzada, legenda automática, rótulo, campo, índice remissivo, marca de entrada, citação, bibliografia, estilo APA.\n- Regras e fórmulas: rotular com legenda → citar com referência cruzada → atualizar campos após mudanças; índice = marcas de entrada; bibliografia = fontes cadastradas.\n- Exceções: menções manuais ficam órfãs; legendas digitadas não alimentam referências; campos exigem atualização explícita.\n- Palavras-chave: referência cruzada, legenda, índice, marca de entrada, citação, bibliografia, APA, campo.\n- Checklist de domínio: rotulo com legenda; cito com cruzada; atualizo campos; gero índice por marcas; gerencio fontes e bibliografia.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como rotular uma tabela para que o número seja automático? (2) Inseriu-se uma figura nova antes da Figura 3: o que acontece com as referências cruzadas após atualizar os campos? (3) De que se alimenta o índice remissivo? (4) Como gerar a bibliografia em APA sem redigir à mão? (5) Corrija: \"menções digitadas manualmente acompanham a renumeração\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Inserir referência cruzada para a Figura 1.",
+          "resposta": "Referências > Referência Cruzada > Tipo de referência: Figura > escolher \"Somente rótulo e número\" ou variante > Inserir. A menção entra como campo e atualiza quando a figura muda de número (com Atualizar campo)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Documento técnico com 12 figuras: a diretoria pediu uma nova figura entre as atuais 4 e 5.",
+          "resposta": "Inserir a imagem > Referências > Inserir Legenda (rótulo Figura) — a nova recebe o número 5 e as seguintes deslocam. Em seguida, atualizar os campos: selecionar tudo (Ctrl+A) > F9 — as referências cruzadas do texto passam a apontar os números renumerados. Menções digitadas manualmente (\"Figura 5\") não atualizam: ficam apontando a figura errada — razão pela qual a referência cruzada é obrigatória em documentos com figuras renumeráveis."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Artigo exige citações no estilo APA e bibliografia final coerente.",
+          "resposta": "Referências > Gerenciar Fontes > cadastrar cada fonte (autor, título, ano) > inserir citações pelo nome da fonte (Inserir Citação) > ao final, Referências > Bibliografia > escolher o estilo APA no menu de estilo; alternar o estilo reformata citações e bibliografia de uma vez. A bibliografia gerada é campo: atualiza ao incluir novas fontes."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário digita \"Figura 1\" manualmente no texto.",
+          "correcao": "Incorreto: a menção manual não atualiza quando as legendas renumeram — fica apontando a figura errada; o mecanismo correto é a referência cruzada (Referências > Referência Cruzada), que é campo atualizável."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso gera a bibliografia com estilo APA a partir de fontes cadastradas? A) Referência cruzada; B) Citações e bibliografia (Referências); C) Legenda.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O índice remissivo é gerado a partir de marcas de entrada marcadas ao longo do texto.",
+          "resposta": "Certo. O índice lista os termos marcados (Referências > Marcar Entrada) e as páginas onde ocorrem; o sumário é que se gera dos estilos de título."
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Após inserir uma figura nova no meio do documento, as referências cruzadas existentes se ajustam automaticamente, sem qualquer ação do usuário.",
+          "resposta": "Errado. As referências cruzadas são campos: a renumeração das legendas acontece automaticamente, mas exibir os novos números exige atualizar os campos (ex.: Ctrl+A + F9 ou Atualizar campo)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de rotular elementos com legendas automáticas, inserir referências cruzadas atualizáveis e gerar índice remissivo e bibliografia a partir de marcas e fontes, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "inserirá referências cruzadas e legendas automáticas para figuras e tabelas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Referências cruzadas criam links que saltam para locais específicos (ex: 'Veja a Figura 1') que atualizam automatic quando a figura é movida. Legendas automáticas geradas para figuras, tabelas e equações baseadas em textos de legenda inseridos. Índice gerado a partir de marcas de entrada de índice marcando termos ao longo do documento. Citações bibliográficas gerenciadas usando o recurso 'Referências' com fontes de bibliografia, estilos APA/MLA/Chicago e inserção automática no texto e geração de…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Referências cruzadas e legendas automáticas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário digita 'Figura 1' manualmente.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: referência manual não atualiza; usar referência cruzada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Inserir referência cruzada para 'Figura 1'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Referências > Referência Cruzada > Tipo: Figura > inserir; atualiza se a figura for movida.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Gerar legenda automática para tabela.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Referências > Inserir Legenda > selecionar rótulo (Tabela) > posição; Word numera automaticamente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário digita 'Figura 1' manualmente.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: referência manual não atualiza; usar referência cruzada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

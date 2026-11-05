@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 2,
+    "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+    "parte": 1,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U2P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U2P1.js",
+    "idsCompletos": [
+      "m2-u2-t1-s1",
+      "m2-u2-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u2-t1-s1",
+      "titulo": "As sete camadas do modelo OSI e suas funções",
+      "topicoTitulo": "Modelo OSI: camadas, funções, PDU e encapsulamento",
+      "topicoId": "modulo-2-unidade-2-topico-1",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno enumerará as sete camadas do modelo OSI em ordem, associará a cada uma sua função principal e identificará o tipo de PDU correspondente.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as sete camadas do modelo OSI e suas funções; (b) a ordem das camadas; (c) a PDU de cada camada; (d) por que dividir em camadas. POR QUE O CONHECIMENTO É IMPORTANTE: o modelo OSI é referência para localizar funções e diagnosticar falhas; a prova cobra ordem, função e PDU. PRÉ-REQUISITOS: vocabulário de redes (nó, enlace, endereço). OBJETIVOS OBSERVÁVEIS: (1) enumerar as sete camadas; (2) associar função a cada uma; (3) indicar a PDU; (4) explicar o princípio da divisão em camadas. COMPETÊNCIAS DESENVOLVIDAS: organização mental do funcionamento de rede; localização de funções. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.1 (encapsulamento); unidade 2.2 (TCP/IP); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o modelo OSI (Open Systems Interconnection), padronizado pela ISO, organiza a comunicação em sete camadas, da mais baixa (física) à mais alta (aplicação). Camada 1 — Física: transmite bits pelo meio, definindo tensões, taxas e características elétricas/ópticas; PDU: bit. Camada 2 — Enlace de dados: entrega nó a nó dentro do mesmo segmento, com endereçamento físico (MAC), detecção de erros e controle de acesso ao meio; PDU: quadro. Camada 3 — Rede: entrega fim a fim entre redes distintas, com roteamento e endereçamento lógico (IP); PDU: pacote. Camada 4 — Transporte: entrega processo a processo, com confiabilidade (TCP) ou não (UDP), controle de fluxo e de congestionamento; PDU: segmento (TCP) ou datagrama (UDP). Camada 5 — Sessão: estabelece, mantém e encerra diálogos entre aplicações. Camada 6 — Apresentação: trata formato, tradução, compressão e criptografia. Camada 7 — Aplicação: interface com o usuário e serviços de rede (HTTP, SMTP, DNS, FTP). Nas camadas 5 a 7 a PDU costuma ser chamada de dados. O modelo permite que cada camada resolva um problema específico e que implementações diferentes interoperem, isolando responsabilidades.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: memorizar a ordem com mnemônicos.\n- Nível intermediário: associar função e PDU a cada camada.\n- Nível avançado: situar protocolos como TLS e ICMP no modelo.\n- Nível especialista: localizar, em um sintoma, a camada mais provável de falha.\nCOMPARAÇÕES CRÍTICAS:\n- enlace x rede: o enlace entrega no mesmo segmento (MAC); a rede entrega entre redes (IP) — muda o endereço usado.\n- transporte x sessão: o transporte garante a entrega fim a fim; a sessão gerencia o diálogo — funções distintas.\n- rede x aplicação: a rede encaminha pacotes; a aplicação interpreta o conteúdo (HTTP, DNS).\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"A camada de transporte endereça hosts.\" — Motivo: ela endereça processos por portas — Versão tecnicamente correta: o endereçamento de host é da camada de rede.\n- Afirmação errada: \"A PDU da camada 3 é o quadro.\" — Motivo: confunde camadas — Versão tecnicamente correta: camada 3 = pacote; camada 2 = quadro.\n- Afirmação errada: \"OSI é um protocolo.\" — Motivo: é um modelo de referência — Versão tecnicamente correta: descreve camadas; protocolos são implementações.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: OSI, sete camadas, PDU, bit, quadro, pacote, segmento.\n- Regras e fórmulas: ordem 1 Física → 7 Aplicação; PDU por camada.\n- Exceções: sessão e apresentação raramente existem como camadas separadas na prática.\n- Palavras-chave: camada, função, PDU, ISO, identificação.\n- Checklist de domínio: (1) Enumero as camadas? (2) Associo funções? (3) Indico PDUs? (4) Explico a divisão?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais as camadas 1, 2 e 3? (2) Qual a PDU da camada 4? (3) O que a camada 6 trata? (4) Por que dividir em camadas? (5) Onde atua o IP?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Em qual camada do modelo OSI atua um roteador ao decidir para onde enviar um pacote IP?",
+          "resposta": "Camada 3 (Rede) — o roteador examina o endereço IP de destino e consulta sua tabela de rotas para encaminhar o pacote para a próxima interface."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um switch de camada 2 (switch convencional) comuta tráfego dentro de uma VLAN. Em qual camada ele opera e qual PDU manipula?",
+          "resposta": "Camada 2 (Enlace) — manipula quadros Ethernet e toma decisão com base no endereço MAC de destino. Não examina o IP."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O modelo OSI é o protocolo usado pela Internet.'",
+          "correcao": "Errado. O modelo OSI é um modelo de referência conceitual. A Internet utiliza o modelo TCP/IP (quatro camadas) e seus protocolos (IP, TCP, UDP, HTTP etc.). O OSI serve para descrever e comparar funções, não é implementado como um todo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A camada de transporte do modelo OSI é responsável pelo roteamento entre redes.",
+          "resposta": "Errado. Roteamento entre redes é função da camada 3 (Rede). A camada 4 (Transporte) entrega processo-a-processo e controla confiabilidade/fluxo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual PDU corresponde à camada de enlace? A) Bit; B) Quadro; C) Pacote; D) Segmento.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de enumerar as sete camadas do modelo OSI em ordem, associará a cada uma sua função principal e identificará o tipo de PDU correspondente, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "WO1uGJRqrwI",
+          "titulo": "Curso de Redes - Vídeo 03 - Modelo OSI",
+          "canal": "Bóson Treinamentos",
+          "urlOriginal": "https://www.youtube.com/watch?v=WO1uGJRqrwI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/WO1uGJRqrwI",
+          "descricao": "Videoaula explicativa sobre o modelo OSI (Open Systems Interconnection), detalhando as sete camadas (Física, Enlace, Rede, Transporte, Sessão, Apresentação, Aplicação), suas funções, PDUs (Protocol Data Units) e a relação com equipamentos de rede (hub, switch, roteador). Aborda encapsulamento, comunicação entre camadas e a importância do modelo como referência didática para redes.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "enumerará as sete camadas do modelo OSI em ordem, associará a cada uma sua função principal e identificará o tipo de PDU correspondente"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O modelo OSI (Open Systems Interconnection), padronizado pela ISO, divide a comunicação em rede em sete camadas, da mais baixa (física) à mais alta (aplicação). Camada 1 - Física: transmissão de bits pelo meio (cabos, fibra, rádio), tensões, taxas, topologia física. PDU: bit. Camada 2 - Enlace de dados: entrega nó-a-nó no mesmo segmento, endereçamento físico (MAC), detecção de erros, controle de acesso ao meio (CSMA/CD, CSMA/CA). PDU: quadro (frame). Camada 3 - Rede: entrega fim-a-fim entre rede…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a As sete camadas do modelo OSI e suas funções",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O modelo OSI é o protocolo usado pela Internet.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O modelo OSI é um modelo de referência conceitual. A Internet utiliza o modelo TCP/IP (quatro camadas) e seus protocolos (IP, TCP, UDP, HTTP etc.). O OSI serve para descrever e comparar funções, não é implementado como um todo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Em qual camada do modelo OSI atua um roteador ao decidir para onde enviar um pacote IP?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Camada 3 (Rede) — o roteador examina o endereço IP de destino e consulta sua tabela de rotas para encaminhar o pacote para a próxima interface.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um switch de camada 2 (switch convencional) comuta tráfego dentro de uma VLAN. Em qual camada ele opera e qual PDU manipula?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Camada 2 (Enlace) — manipula quadros Ethernet e toma decisão com base no endereço MAC de destino. Não examina o IP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O modelo OSI é o protocolo usado pela Internet.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O modelo OSI é um modelo de referência conceitual. A Internet utiliza o modelo TCP/IP (quatro camadas) e seus protocolos (IP, TCP, UDP, HTTP etc.). O OSI serve para descrever e comparar funções, não é implementado como um todo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u2-t1-s2",
+      "titulo": "Encapsulamento e desencapsulamento",
+      "topicoTitulo": "Modelo OSI: camadas, funções, PDU e encapsulamento",
+      "topicoId": "modulo-2-unidade-2-topico-1",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará o processo de encapsulamento ao enviar dados e de desencapsulamento ao receber, identificando os cabeçalhos adicionados em cada camada.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é encapsulamento; (b) os cabeçalhos adicionados em cada camada; (c) o desencapsulamento; (d) a analogia do envelope. POR QUE O CONHECIMENTO É IMPORTANTE: encapsulamento explica como dados atravessam camadas e onde residem endereços e portas; a prova cobra a ordem e o conteúdo de cada cabeçalho. PRÉ-REQUISITOS: as sete camadas do OSI. OBJETIVOS OBSERVÁVEIS: (1) definir encapsulamento; (2) ordenar a adição de cabeçalhos; (3) descrever o desencapsulamento; (4) localizar portas, IP e MAC. COMPETÊNCIAS DESENVOLVIDAS: leitura de diagramas de pacote; compreensão do fluxo de dados. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.1 (camadas OSI); unidade 2.3 (fluxo HTTP). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: encapsulamento é o processo pelo qual, ao ENVIAR, cada camada acrescenta seu próprio cabeçalho (e, às vezes, um trailer) à unidade de dados recebida da camada superior, formando a PDU daquela camada. A ordem de envio é descendente: a aplicação gera os dados; a camada de transporte acrescenta portas e números de sequência, formando o segmento; a camada de rede acrescenta os endereços IP, formando o pacote; a camada de enlace acrescenta os endereços MAC e um código de verificação (FCS), formando o quadro; e a camada física converte tudo em bits no meio. O desencapsulamento é o processo inverso, na recepção: cada camada remove e interpreta SEU cabeçalho e entrega o conteúdo (payload) à camada superior, até a aplicação. A analogia do envelope ajuda: os dados são a carta; cada camada coloca a carta em um novo envelope com seu próprio endereçamento. O encapsulamento é a base da interoperabilidade: cada camada trata apenas da sua parte e ignora os detalhes das demais. Assim, portas identificam processos, IPs identificam hosts e MACs identificam interfaces no enlace.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender a ideia de \"envelope dentro de envelope\".\n- Nível intermediário: ordenar cabeçalhos da aplicação à física.\n- Nível avançado: localizar portas, IP e MAC em uma PDU representada.\n- Nível especialista: analisar uma captura e identificar as camadas de cada campo.\nCOMPARAÇÕES CRÍTICAS:\n- cabeçalho de transporte x de rede: o primeiro traz portas; o segundo, IPs — muda o que se identifica.\n- encapsulamento x desencapsulamento: o primeiro adiciona; o segundo remove — a ordem inversa importa.\n- trailer x cabeçalho: o trailer (como o FCS) vai ao fim do quadro; o cabeçalho ao início.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O endereço MAC identifica o processo.\" — Motivo: MAC identifica a interface no enlace — Versão tecnicamente correta: o processo é identificado pela porta.\n- Afirmação errada: \"Cada camada reescreve os dados da anterior.\" — Motivo: ela os encapsula sem alterar — Versão tecnicamente correta: adiciona cabeçalho e preserva o payload.\n- Afirmação errada: \"Desencapsulamento ocorre no emissor.\" — Motivo: ocorre na recepção — Versão tecnicamente correta: o emissor encapsula; o receptor desencapsula.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: encapsulamento, desencapsulamento, cabeçalho, trailer, payload, PDU.\n- Regras e fórmulas: aplicação → transporte (portas) → rede (IPs) → enlace (MACs) → física (bits).\n- Exceções: alguns protocolos (ex.: TLS) se posicionam entre camadas.\n- Palavras-chave: envelope, porta, IP, MAC, FCS.\n- Checklist de domínio: (1) Defino encapsulamento? (2) Ordeno cabeçalhos? (3) Descrevo o inverso? (4) Localizo porta/IP/MAC?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que cada camada adiciona? (2) Onde ficam as portas? (3) E os endereços IP? (4) E os MACs? (5) O que é desencapsulamento?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Descrever, em ordem, os cabeçalhos adicionados a uma mensagem HTTP ao ser enviada por Ethernet.",
+          "resposta": "Dados HTTP -> cabeçalho TCP (porta 80/443, sequência) -> cabeçalho IP (IP origem/destino) -> cabeçalho+trailer Ethernet (MAC origem/destino, FCS) -> bits no meio físico."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um analista de rede captura um quadro Ethernet e vê dentro dele um pacote IP, dentro do qual há um segmento TCP, dentro do qual há uma requisição HTTP. Como isso é possível?",
+          "resposta": "É o encapsulamento em ação: cada camada empacota a PDU da camada superior. A captura mostra o quadro completo; ao desencapsular camada por camada, recuperam-se IP, TCP e HTTP."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Encapsulamento significa comprimir os dados para economizar banda.'",
+          "correcao": "Errado. Encapsulamento é adicionar cabeçalhos de controle, não comprimir. Compressão é função da camada de apresentação (opcional) e não é o mesmo conceito."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) No desencapsulamento, a camada física entrega bits à camada de enlace, que remove o cabeçalho Ethernet e entrega o pacote IP à camada de rede.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual camada adiciona o endereço MAC de origem e destino? A) Física; B) Enlace; C) Rede; D) Transporte.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o processo de encapsulamento ao enviar dados e de desencapsulamento ao receber, identificando os cabeçalhos adicionados em cada camada, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o processo de encapsulamento ao enviar dados e de desencapsulamento ao receber, identificando os cabeçalhos adicionados em cada camada"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Encapsulamento é o processo pelo qual, ao enviar dados, cada camada adiciona seu próprio cabeçalho (e às vezes trailer) à unidade de dados recebida da camada superior, criando a PDU da camada. Ordem de envio (de cima para baixo): a aplicação gera os dados; a camada de apresentação/sessão os passa; a camada de transporte adiciona cabeçalho com portas e número de sequência (segmento); a camada de rede adiciona cabeçalho com endereços IP (pacote); a camada de enlace adiciona cabeçalho e trailer com…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Encapsulamento e desencapsulamento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Encapsulamento significa comprimir os dados para economizar banda.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Encapsulamento é adicionar cabeçalhos de controle, não comprimir. Compressão é função da camada de apresentação (opcional) e não é o mesmo conceito."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Descrever, em ordem, os cabeçalhos adicionados a uma mensagem HTTP ao ser enviada por Ethernet.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dados HTTP -> cabeçalho TCP (porta 80/443, sequência) -> cabeçalho IP (IP origem/destino) -> cabeçalho+trailer Ethernet (MAC origem/destino, FCS) -> bits no meio físico.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um analista de rede captura um quadro Ethernet e vê dentro dele um pacote IP, dentro do qual há um segmento TCP, dentro do qual há uma requisição HTTP. Como isso é possível?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "É o encapsulamento em ação: cada camada empacota a PDU da camada superior. A captura mostra o quadro completo; ao desencapsular camada por camada, recuperam-se IP, TCP e HTTP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Encapsulamento significa comprimir os dados para economizar banda.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Encapsulamento é adicionar cabeçalhos de controle, não comprimir. Compressão é função da camada de apresentação (opcional) e não é o mesmo conceito.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

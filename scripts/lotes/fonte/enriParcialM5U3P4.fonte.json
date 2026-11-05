@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 3,
+    "unidadeTitulo": "5.3 IA generativa e LLMs",
+    "parte": 4,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U3P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U3P4.js",
+    "idsCompletos": [
+      "m5-u3-t3-s1",
+      "m5-u3-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u3-t3-s1",
+      "titulo": "Privacidade, segurança, direitos autorais e avaliação de resultados",
+      "topicoTitulo": "Aplicação, avaliação de resultados e riscos",
+      "topicoId": "modulo-5-unidade-3-topico-3",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno relacionará o uso de IA generativa aos riscos de privacidade, segurança e direitos autorais, e construirá um conjunto de critérios de avaliação de resultados aplicável a uso institucional.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Privacidade, segurança, direitos autorais e avaliação de resultados\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Privacidade, segurança, direitos autorais e avaliação de resultados\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Privacidade, segurança, direitos autorais e avaliação de resultados\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: PRIVACIDADE: o uso de serviço de IA generativa externo implica TRANSFERÊNCIA de conteúdo para o fornecedor — e o conteúdo costuma conter dado pessoal ou informação protegida. Regras de uso derivadas: (a) não inserir dado pessoal, dado sensível, informação sigilosa ou credencial em ferramenta sem base legal e sem avaliação de risco prévia; (b) preferir anonimização ou pseudonimização do conteúdo antes do envio; (c) verificar os termos do fornecedor quanto a retenção, uso para treinamento e subcontratação; (d) registrar o que foi enviado, por quem e por qual base. SEGURANÇA: os riscos típicos são (i) INJEÇÃO DE PROMPT — conteúdo trazido de fonte externa instrui o modelo a agir de forma indevida (usado para expor dados ou contornar restrições); (ii) FUGA DE DADOS por contexto — o modelo pode reproduzir dado de outro atendimento presente no histórico; (iii) ENVENENAMENTO DE DADOS — documentos maliciosos alteram o comportamento do sistema; (iv) DEPENDÊNCIA de serviço externo, com risco de indisponibilidade e de mudança de comportamento sem aviso. DIREITOS AUTORAIS: o modelo gera texto a partir de padrão estatístico — não copia tipicamente, mas pode reproduzir trechos; há três camadas a considerar: (a) titularidade e licença da SAÍDA, definida pelos termos do serviço; (b) licitude dos DADOS de TREINAMENTO, que o usuário não controla; (c) eventual Similaridade com obra protegida, que deve ser verificada antes de uso comercial ou editorial ampliado. Critério operacional: para uso institucional, vale a regra da REVISÃO DE ORIGINALIDADE e da ATRIBUIÇÃO, além da proibição de usar saída de IA como se fosse produção autoral do servidor sem revisão. AVALIAÇÃO DE RESULTADOS: um conjunto mínimo de critérios, aplicável a qualquer uso: (1) FIDELIDADE — a saída é sustentada pela fonte? (mede alucinação); (2) COMPLETUDE — a saída cobre o que foi perguntado? (3) CONFORMIDADE DE FORMATO — segue o esquema especificado (JSON, campos obrigatórios, tipos)? (4) RELEVÂNCIA — responde ao pedido, sem desvio; (5) CLAREZA — é compreensível pelo destinatário (linguagem clara, público-alvo); (6) SEGURANÇA — não há dado proibido na saída (seção de validação); (7) REPRODUTIBILIDADE — com prompt, parâmetros, versão do modelo e fonte, dá para reconstruir; (8) IMPACTO — a decisão humana posterior melhora com o apoio? (métrica de utilidade). AVALIAÇÃO DE PROCESSO: além da qualidade da saída, audita-se o PROCESSO: houve revisão humana, registro, base legal para os dados usados, e o resultado foi validado pelo servidor responsável. É essa última camada que separa uma ferramenta útil de uma decisão automática não autorizada. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Privacidade, segurança, direitos autorais e avaliação de resultados\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Privacidade, segurança, direitos autorais e avaliação de resultados\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Privacidade, segurança, direitos autorais e avaliação de resultados\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Privacidade, segurança, direitos autorais e avaliação de resultados basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Privacidade, segurança, direitos autorais e avaliação de resultados e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Privacidade, segurança, direitos autorais e avaliação de resultados\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: privacidade, segurança, direitos autorais e avaliação de resultados, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Privacidade, segurança, direitos autorais e avaliação de resultados com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Privacidade, segurança, direitos autorais e avaliação de resultados\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um servidor cola no chat da ferramenta o texto de uma reclamação completa, com nome, CPF e endereço do cidadão, para pedir uma minuta de resposta. Qual o problema e a alternativa?",
+          "resposta": "O problema é TRANSFERÊNCIA de dado pessoal e de informação identificável a terceiro sem base legal para esse uso, além de ampliar a exposição por retenção indefinida no histórico da ferramenta. A alternativa: (1) avaliar se há base legal e necessidade para esse tratamento, considerando o art. 31 da Lei nº 12.527/2011 e o regime de dados pessoais; (2) minimizar o contexto — usar apenas o necessário, suprimindo identificadores e substituindo por marcadores; (3) usar versão corporativa com contrato de tratamento e ausência de retenção para treinamento; (4) registrar o envio; (5) nunca inserir dados sensíveis, credenciais ou informação sigilosa. O rascunho pode ser obtido com o texto já anonimizado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Monte o conjunto de critérios de avaliação de uma minuta gerada para resposta a cidadão.",
+          "resposta": "FIDELIDADE: toda afirmação factual existe no trecho de origem (conferência automática de números, prazos, nomes de ato e citações; bloqueio se não houver trecho); COMPLETUDE: todos os pontos da pergunta foram respondidos; CONFORMIDADE DE FORMATO: campos obrigatórios e tipos válidos; RELEVÂNCIA e CLAREZA: resposta direta, em linguagem adequada ao cidadão (art. 3º, VII, da Lei nº 14.129/2021); SEGURANÇA: nenhum identificador do requerente ou de terceiro na minuta além do necessário, nenhum segredo de sistema; REPRODUTIBILIDADE: prompt, parâmetros, versão do modelo e trecho registrados; IMPACTO: comparação entre a minuta e a resposta final do servidor, para medir o ganho real de tempo e o índice de correção. Cada critério vira um item de checklist e um indicador monitorado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o modelo não copia obras protegidas, não há questão de direito autoral no uso de saída de IA em documento institucional.'",
+          "correcao": "Errado. A questão é tripartite: titularidade e licença da saída conforme os termos do serviço (que o usuário deve ler e aceitar), licitude dos dados de treinamento (que o usuário não controla) e risco de similaridade com obra protegida (que exige verificação antes de uso). A ausência de cópia literal não afasta a discussão de licença e de titularidade."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O uso de IA generativa exige avaliação do PROCESSO (revisão, registro, base legal), e não apenas da qualidade da saída.",
+          "resposta": "Certo. É a camada que separa o apoio à decisão do ato administrativo automatizado sem Responsa."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Critérios de avaliação de resultado de IA generativa: A) fidelidade à fonte; B) reprodutibilidade com prompt, parâmetros e versão do modelo; C) ausência de dado proibido na saída; D) linguagem complexa para parecer técnico.",
+          "resposta": "A, B e C. O item D inverte o critério de clareza, que exige linguagem compreensível ao destinatário."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de relacionar o uso de IA generativa aos riscos de privacidade, segurança e direitos autorais, e construirá um conjunto de critérios de avaliação de resultados aplicável a uso institucional, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "relacionará o uso de IA generativa aos riscos de privacidade, segurança e direitos autorais, e construirá um conjunto de critérios de avaliação de resultados aplicável a uso institucional"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Privacidade, segurança, direitos autorais e avaliação de resultados\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Privacidade, segurança, direitos autorais e avaliação de resultados\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço pú…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Privacidade, segurança, direitos autorais e avaliação de resultados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o modelo não copia obras protegidas, não há questão de direito autoral no uso de saída de IA em documento institucional.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A questão é tripartite: titularidade e licença da saída conforme os termos do serviço (que o usuário deve ler e aceitar), licitude dos dados de treinamento (que o usuário não controla) e risco de similaridade com obra protegida (que exige verificação antes de uso). A ausência de cópia literal não afasta a discussão de licença e de titularidade."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um servidor cola no chat da ferramenta o texto de uma reclamação completa, com nome, CPF e endereço do cidadão, para pedir uma minuta de resposta. Qual o problema e a alternativa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O problema é TRANSFERÊNCIA de dado pessoal e de informação identificável a terceiro sem base legal para esse uso, além de ampliar a exposição por retenção indefinida no histórico da ferramenta. A alternativa: (1) avaliar se há base legal e necessidade para esse tratamento, considerando o art. 31 da Lei nº 12.527/2011 e o regime de dados pessoais; (2) minimizar o contexto — usar apenas o necessário, suprimindo identificadores e substituindo por marcadores; (3) usar versão corporativa com contrato de tratamento e ausência de retenção para treinamento; (4) registrar o envio; (5) nunca inserir dados sensíveis, credenciais ou informação sigilosa. O rascunho pode ser obtido com o texto já anonimizado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Monte o conjunto de critérios de avaliação de uma minuta gerada para resposta a cidadão.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "FIDELIDADE: toda afirmação factual existe no trecho de origem (conferência automática de números, prazos, nomes de ato e citações; bloqueio se não houver trecho); COMPLETUDE: todos os pontos da pergunta foram respondidos; CONFORMIDADE DE FORMATO: campos obrigatórios e tipos válidos; RELEVÂNCIA e CLAREZA: resposta direta, em linguagem adequada ao cidadão (art. 3º, VII, da Lei nº 14.129/2021); SEGURANÇA: nenhum identificador do requerente ou de terceiro na minuta além do necessário, nenhum segredo de sistema; REPRODUTIBILIDADE: prompt, parâmetros, versão do modelo e trecho registrados; IMPACTO: comparação entre a minuta e a resposta final do servidor, para medir o ganho real de tempo e o índice de correção. Cada critério vira um item de checklist e um indicador monitorado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o modelo não copia obras protegidas, não há questão de direito autoral no uso de saída de IA em documento institucional.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A questão é tripartite: titularidade e licença da saída conforme os termos do serviço (que o usuário deve ler e aceitar), licitude dos dados de treinamento (que o usuário não controla) e risco de similaridade com obra protegida (que exige verificação antes de uso). A ausência de cópia literal não afasta a discussão de licença e de titularidade.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u3-t3-s2",
+      "titulo": "Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas",
+      "topicoTitulo": "Aplicação, avaliação de resultados e riscos",
+      "topicoId": "modulo-5-unidade-3-topico-3",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno distinguirá uso de IA generativa já observado em operação de hipóteses ilustrativas de projeto, e relacionará cada uso ao requisito de governança que o acompanha.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: REGRA METODOLÓGICA (obrigatória neste material): este subtópico separa (i) EXEMPLOS COMPROVADOS, isto é, padrões de uso largamente observados e documentáveis em atenção a serviço e que podem ser descritos sem afirmar dados específicos de produto, ferramenta ou índice; e (ii) HIPÓTESES ILUSTRATIVAS, isto é, aplicações plausíveis mas ainda não observadas em operação no recorte analisado, apresentadas como hipótese de projeto e nunca como fato. O QUE É EXEMPLO COMPROVADO (padrão de uso): (a) REDAÇÃO DE RASCUNHOS — apoio à elaboração de minutas de resposta, ofício, comunicado e e-mail institucional, com revisão humana obrigatória; (b) CLASSIFICAÇÃO E TRIAGEM — apoio à triagem de chamados e requerimentos por assunto e prioridade, com critério definido e revisão amostral; (c) PESQUISA E SÍNTESE DOCUMENTAL — resposta a pergunta com base em corpus interno, com exibição dos trechos; (d) APOIO À ELABORAÇÃO DE TEXTOS DE SERVIÇO — FAQ, guias e orientações, com padrão de linguagem clara e revisão editorial; (e) TRANSCRIÇÃO E RESUMO — apoio a atas, entrevistas e sessões; (f) APOIO AO ATENDIMENTO — respostas a perguntas frequentes com encaminhamento ao atendimento humano. O QUE É HIPÓTESE ILUSTRATIVA (projeto, não fato): (g) PREVISÃO DE DEMANDA DE ATENDIMENTO por série histórica, com decisão de dimensionamento de equipe; (h) PRIORIZAÇÃO AUTOMÁTICA DE FILAS por escore de risco, com revisão; (i) VERIFICAÇÃO AUTOMÁTICA DE FORMALIDADES de requerimento por visão computacional de documentos; (j) GERAÇÃO DE RASCUNHO DE MINUTA DE ATO ADMINISTRATIVO, sempre com revisão e assinatura humana; (k) LEITURA ASSISTIDA DE DADOS NÃO ESTRUTURADOS (ofícios antigos, fichas) para o consentimento de migração. REQUISITOS DE GOVERNANÇA POR TIPO DE USO (independente de ser exemplo ou hipótese): toda aplicação tem responsável nomeado, base legal para os dados usados, política de uso de ferramenta, revisão humana definida por impacto, registro de uso, avaliação de qualidade e caminho de revisão e recurso pelo cidadão. O ERRO METODOLÓGICO MAIS GRAVE NESTE TEMA: apresentar hipótese como caso confirmado, ou afirmar capacidade específica de ferramenta comercial («resolve X em Y minutos», «tem acurácia de Z%», «está homologado no órgão A») sem verificação. Item de prova que contenha número ou nome de produto específico deve ser analisado com o mesmo cuidado: a resposta correta costuma ser a que RECUSA a afirmação absoluta ou a que exige fonte. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Como redigir, em prova, uma afirmação sobre uso de IA generativa sem inventar capacidade de ferramenta?",
+          "resposta": "Descreva o PADRÃO DE USO e o REQUISITO DE GOVERNANÇA, não a ferramenta: «sistemas de IA generativa podem ser usados como apoio à redação de minutas, desde que haja revisão humana, registro e uso apenas de dados com base legal». Se o item oferecer alternativa com número, prazo ou nome de produto sem fonte, a escolha correta será a que evita a afirmação específica. Esse é o padrão de resposta honesta e, em itens de prova, é também a tecnicamente defensável."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão quer publicar um guia de trâmite de um benefício usando IA. Como o projeto deve ser conduzido para não ser apenas uma hipótese apresentada como fato?",
+          "resposta": "(1) TRATAR COMO HIPÓTESE DE PROJETO no documento interno, com responsável, prazo e marco de validação; (2) delimitar escopo: um benefício, um canal, um conjunto de perguntas; (3) montar base de conhecimento a partir das fontes oficiais e indexá-la; (4) definir critérios de avaliação (fidelidade, completude, clareza, reprodutibilidade) com conjunto de testes; (5) pilotar com servidor, com revisão humana obrigatória e medição de temporal de ganho e de índice de correção; (6) só publicar o guia após validação e aprovação editorial; (7) registrar a versão do modelo, do prompt e da base. Até a etapa 6, o projeto é hipótese; a partir dela, é uso verificado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A automação integral do atendimento pelo chat do órgão é prática comum em toda a administração pública brasileira, com alto índice de satisfação.'",
+          "correcao": "Errado, e o erro é duplo: primeiro, generaliza sem fonte (a prática não é uniforme e não há indicador validado neste material); segundo, afirma estatística («alto índice de satisfação») sem verificação. Item que contenha afirmação de alcance ou de número sem fonte deve ser tratado com ceticismo — a versão tecnicamente correta é: «há usos de IA generativa em apoio a atendimento e redação, com supervisão humana obrigatória e avaliação de qualidade»."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Ao descrever uso de IA generativa no serviço público, é tecnicamente correto afirmar padrões de uso e requisitos de governança, sem afirmar capacidade específica de produto comercial não verificada.",
+          "resposta": "Certo. A regra de honestidade normativa e factual vale também para o desempenho de ferramenta."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São padrões de uso de IA generativa amplamente observados e passíveis de descrição sem dados de produto: A) redação de minutas com revisão; B) triagem de chamados por assunto; C) síntese de corpus interno com exibição de trechos; D) substituição automática integral do atendimento humano.",
+          "resposta": "A, B e C. O item D não é padrão comprovado de uso e, quando implementado, exige supervisão e canal humano — não se apresenta como prática consolidada."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir uso de IA generativa já observado em operação de hipóteses ilustrativas de projeto, e relacionará cada uso ao requisito de governança que o acompanha, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá uso de IA generativa já observado em operação de hipóteses ilustrativas de projeto, e relacionará cada uso ao requisito de governança que o acompanha"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas\" é necessário para responder com segurança a itens de prova e para aplicar o conheciment…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Aplicações no setor público e privado: exemplos comprovados e hipóteses ilustrativas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A automação integral do atendimento pelo chat do órgão é prática comum em toda a administração pública brasileira, com alto índice de satisfação.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado, e o erro é duplo: primeiro, generaliza sem fonte (a prática não é uniforme e não há indicador validado neste material); segundo, afirma estatística («alto índice de satisfação») sem verificação. Item que contenha afirmação de alcance ou de número sem fonte deve ser tratado com ceticismo — a versão tecnicamente correta é: «há usos de IA generativa em apoio a atendimento e redação, com supervisão humana obrigatória e avaliação de qualidade»."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Como redigir, em prova, uma afirmação sobre uso de IA generativa sem inventar capacidade de ferramenta?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Descreva o PADRÃO DE USO e o REQUISITO DE GOVERNANÇA, não a ferramenta: «sistemas de IA generativa podem ser usados como apoio à redação de minutas, desde que haja revisão humana, registro e uso apenas de dados com base legal». Se o item oferecer alternativa com número, prazo ou nome de produto sem fonte, a escolha correta será a que evita a afirmação específica. Esse é o padrão de resposta honesta e, em itens de prova, é também a tecnicamente defensável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão quer publicar um guia de trâmite de um benefício usando IA. Como o projeto deve ser conduzido para não ser apenas uma hipótese apresentada como fato?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) TRATAR COMO HIPÓTESE DE PROJETO no documento interno, com responsável, prazo e marco de validação; (2) delimitar escopo: um benefício, um canal, um conjunto de perguntas; (3) montar base de conhecimento a partir das fontes oficiais e indexá-la; (4) definir critérios de avaliação (fidelidade, completude, clareza, reprodutibilidade) com conjunto de testes; (5) pilotar com servidor, com revisão humana obrigatória e medição de temporal de ganho e de índice de correção; (6) só publicar o guia após validação e aprovação editorial; (7) registrar a versão do modelo, do prompt e da base. Até a etapa 6, o projeto é hipótese; a partir dela, é uso verificado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A automação integral do atendimento pelo chat do órgão é prática comum em toda a administração pública brasileira, com alto índice de satisfação.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado, e o erro é duplo: primeiro, generaliza sem fonte (a prática não é uniforme e não há indicador validado neste material); segundo, afirma estatística («alto índice de satisfação») sem verificação. Item que contenha afirmação de alcance ou de número sem fonte deve ser tratado com ceticismo — a versão tecnicamente correta é: «há usos de IA generativa em apoio a atendimento e redação, com supervisão humana obrigatória e avaliação de qualidade».",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

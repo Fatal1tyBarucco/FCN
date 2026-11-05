@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 3,
+    "unidadeTitulo": "1.3 Microsoft Excel",
+    "parte": 5,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U3P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U3P5.js",
+    "idsCompletos": [
+      "modulo-1-unidade-3-topico-5-sub-1",
+      "modulo-1-unidade-3-topico-5-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-3-topico-5-sub-1",
+      "titulo": "Classificação, filtros, validação de dados e formatação condicional",
+      "topicoTitulo": "Classificação, filtros, validação, formatação condicional e visualização",
+      "topicoId": "modulo-1-unidade-3-topico-5",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno aplicará classificação, filtros, validação de dados e formatação condicional.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) classificação (Ordenar): níveis, critério e risco de intervalo parcial; (b) filtros: AutoFiltro e sua função de exibição (não de exclusão); (c) validação de dados: tipos de restrição, mensagens e o limite real (colar ignora validação); (d) formatação condicional: regras, escalas e o princípio de que altera aparência, não valor. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve cenários (restringir entrada a lista; destacar valores acima de limite; ordenar por duas colunas) e cobra a diferença entre validação (entrada) e formatação condicional (exibição), e o caráter de exibição dos filtros; confundir esses mecanismos muda o gabarito. PRÉ-REQUISITOS: estrutura de intervalos (tópico 1). OBJETIVOS OBSERVÁVEIS: (1) ordenar por múltiplos níveis sem fragmentar o intervalo; (2) aplicar filtro e explicar o que acontece com as linhas ocultas; (3) configurar validação com alerta de erro; (4) criar regra de formatação condicional por valor. COMPETÊNCIAS DESENVOLVIDAS: organização de dados; controle de qualidade de entrada. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: tabelas estruturadas (tópico 1, sub-2); tipos de dados (tópico 3); tabelas dinâmicas (tópico 5, sub-2). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: são quatro recursos de organização e controle, com papéis distintos. Classificação (Ordenar): reordena fisicamente as linhas por critério — crescente/decrescente, com múltiplos níveis (ex.: por Região e, dentro dela, por Valor); exige que o intervalo selecionado seja completo (ou o Excel detecte a região circundante), pois ordenar coluna isolada desalinha os registros — erro de integridade clássico. Filtro (AutoFiltro): Dados > Filtro insere setas no cabeçalho; escolher critérios oculta linhas que não casam — os dados continuam lá, apenas fora da exibição, e cálculos com SOMA/MÉDIA continuam considerando as linhas ocultas (funções SUBTOTAL/AGREGAR existem para respeitar o filtro, no Excel real; fora do escopo do simulador). Validação de dados (Dados > Validação de Dados): restringe a digitação — lista de valores, número com intervalo, data, tamanho de texto ou fórmula personalizada — com mensagens de entrada e alerta de erro (estilos Parar/Aviso/Informação); parâmetro essencial: o alerta estilo Parar bloqueia digitação inválida, porém colar um valor sobre a célula pode contornar a validação — a camada definitiva de bloqueio seria proteção/formatação e governança, não apenas validação. Formatação condicional (Início > Formatação Condicional): aplica aparência (preenchimento, cor de fonte, ícones, barras, escalas de cores) conforme regra sobre os valores (ex.: Maior que 7 → verde; escala de 3 cores; fórmula); avalia dinamicamente — muda o valor, muda o formato — sem alterar o valor em si. Relação entre os quatro: validação controla o que entra; classificação e filtro organizam a leitura; formatação condicional comunica padrões visualmente. O simulador Excel deste projeto não executa esses recursos de interface (limitação declarada): são conteúdo teórico para provas; o simulador cobre o cálculo de funções documentadas no tópico 6.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: aplicar filtro por valor e observar linhas ocultas; ordenar uma coluna com o intervalo completo.\n- Nível intermediário: ordenar por dois níveis; criar validação por lista suspensa com alerta de erro estilo Parar; destacar valores com Maior que.\n- Nível avançado: explicar por que SOMA continua contando linhas filtradas (exibição x dados) e por que colar contorna a validação; usar escala de cores para mapa de calor.\n- Nível especialista: desenhar política de qualidade de entrada (validação + proteção + conferência) e diagnosticar intervalo desalinhado por ordenação parcial.\n\nCOMPARAÇÕES CRÍTICAS:\n- Validar x formatar condicionalmente: validação restringe a entrada; formatação condicional muda a aparência sem restringir nada — em \"recurso que impede digitar valor fora da lista\", o gabarito é validação.\n- Filtro x exclusão: o filtro oculta linhas na exibição; os dados permanecem e somas comuns continuam contando-os — a alternativa que diz que o filtro apaga dados está errada.\n- Ordenar intervalo completo x coluna única: ordenar só a coluna desalinha registros; a ordenação deve abranger a região inteira — a pegadinha da integridade de dados.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"a formatação condicional altera o valor da célula\" — Motivo: confunde aparência com conteúdo — Versão tecnicamente correta: a formatação condicional altera apenas a aparência (cor, ícone, barra); o valor permanece.\n- Afirmação errada: \"a validação de dados impede qualquer valor inválido na célula, em qualquer circunstância\" — Motivo: termo absoluto — Versão tecnicamente correta: a validação controla a digitação (com alerta de erro configurável, ex.: estilo Parar), mas colar um valor pode contorná-la; bloqueio definitivo exige proteção/governança adicional.\n- Afirmação errada: \"aplicar filtro exclui as linhas que não casam\" — Motivo: confunde exibição com exclusão — Versão tecnicamente correta: o filtro oculta as linhas; os dados permanecem e são incluídos em cálculos comuns como SOMA.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: classificação, múltiplos níveis, AutoFiltro, ocultação, validação de dados, lista suspensa, alerta de erro, formatação condicional, escala de cores.\n- Regras e fórmulas: entrada controlada → validação; leitura parcial → filtro; padrão visual → formatação condicional; reordenação → ordenar região completa por níveis.\n- Exceções: colar contorna validação; filtro não exclui; formatação condicional não muda valor; simulador não executa esses recursos.\n- Palavras-chave: ordenar, filtro, validação, lista suspensa, alerta de erro, formatação condicional, escala de cores.\n- Checklist de domínio: ordeno por níveis sem desalinhamento; aplico filtro explicando ocultação; configuro validação com alerta Parar; crio regras de formatação condicional.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual recurso restringe a entrada de dados numa célula e onde se configura? (2) A coluna filtrada esconde 30 linhas: o que =SOMA(intervalo) retorna? (3) Por que ordenar apenas uma coluna é perigoso? (4) Que recurso destaca em verde os valores acima de 7 e o que ele altera na célula? (5) Colar um valor inválido num campo validado: o que acontece?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Validar a coluna Status com lista suspensa de valores.",
+          "resposta": "Dados > Validação de Dados > Permitir: Lista > Fonte: Aprovado;Reprovado;Pendente > OK. A célula passa a oferecer lista suspensa; na guia Alerta de Erro, o estilo Parar bloqueia digitações fora da lista."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Tabela de notas: destacar em verde as notas acima de 7 e em vermelho as abaixo de 5, sem alterar valores.",
+          "resposta": "Selecionar o intervalo de notas > Início > Formatação Condicional > Regras de Realce de Células > Maior que > 7 > preenchimento verde > OK; repetir com Menor que > 5 > vermelho. As regras avaliam dinamicamente: corrigida uma nota, a cor acompanha. O valor da célula permanece o mesmo — formatação condicional é camada visual."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relação de 500 registros precisa ser ordenada por Região (A-Z) e, dentro de cada região, por Valor (decrescente).",
+          "resposta": "Selecionar a região completa (todas as colunas do registro) > Dados > Classificar > nível 1: Região, crescente > Adicionar Nível: Valor, decrescente > OK. Ponto crítico: selecionar o registro inteiro evita o desalinhamento que ocorreria ao ordenar apenas a coluna Valor (nomes sairiam dos seus valores)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a validação de dados impede a digitação de valores inválidos sempre.",
+          "correcao": "Incorreto: a validação controla a digitação e o alerta de erro (ex.: estilo Parar) bloqueia a entrada manual inválida, porém colar um valor sobre a célula pode contornar a validação; bloqueio definitivo exige proteção de planilha/governança adicional."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso restringe a entrada de dados em uma célula? A) Filtro; B) Validação de dados; C) Formatação condicional.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A formatação condicional altera o valor da célula.",
+          "resposta": "Errado. Altera apenas a aparência (cor, ícone, barra); o valor armazenado permanece."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Após aplicar filtro que oculta 30 das 80 linhas, =SOMA(A1:A80) retorna: A) A soma das 50 visíveis; B) A soma das 80 linhas, pois o filtro oculta apenas na exibição; C) Erro.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de ordenar por múltiplos níveis sem fragmentar registros, aplicar filtros explicando a ocultação, configurar validação com alerta de erro e criar formatação condicional sem alterar valores, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará classificação, filtros, validação de dados e formatação condicional"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Classificação (Ordenar) reorganiza linhas por critério (crescente/decrescente, múltiplos níveis). Filtros (AutoFiltro) exibem subconjunto de linhas conforme critério. Validação de dados restringe entrada (lista, número, data, texto, fórmula) e exibe mensagem de erro. Formatação condicional aplica formato (cor, ícone, barra) conforme regra (escala de cores, conjunto de ícones, fórmula). Esses recursos são interface do Excel; o simulador documentado não os executa (limitação declarada), mas o cont…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Classificação, filtros, validação de dados e formatação condicional",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que a validação de dados impede a digitação de valores inválidos sempre.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: a validação padrão pode ser ignorada (colar valor, importar). Para bloquear de fato, marcar 'Mostrar alerta de erro' com estilo 'Parar' e validar também no nível de proteção de planilha."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Validar entrada de 'Status' com lista suspensa.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dados > Validação de Dados > Permitir: Lista > Fonte: Aprovado;Reprovado;Pendente > OK; célula exibe lista suspensa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Formatar condicionalmente células > 7 em verde.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Selecionar intervalo > Formatação Condicional > Regra de Realce de Células > Maior que > 7 > formato verde.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que a validação de dados impede a digitação de valores inválidos sempre.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: a validação padrão pode ser ignorada (colar valor, importar). Para bloquear de fato, marcar 'Mostrar alerta de erro' com estilo 'Parar' e validar também no nível de proteção de planilha.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-3-topico-5-sub-2",
+      "titulo": "Gráficos, tabelas dinâmicas, campos, agregações e segmentações",
+      "topicoTitulo": "Classificação, filtros, validação, formatação condicional e visualização",
+      "topicoId": "modulo-1-unidade-3-topico-5",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá gráficos, tabelas dinâmicas, campos, agregações e segmentações no Excel.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que gráficos do Excel representam e como escolher o tipo básico; (b) tabela dinâmica (PivotTable): campos de linhas, colunas, valores e filtros; (c) agregações (soma, média, contagem) e campos calculados; (d) segmentação de dados (Slicer) como filtro visual; (e) a atualização da tabela dinâmica frente a mudanças na fonte; (f) o escopo do simulador deste projeto, que não executa esses recursos. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra o papel de cada área de campo da tabela dinâmica e a exigência de atualização manual após alterar a fonte; confundir tabela dinâmica com gráfico, ou prometer atualização automática, muda o gabarito. PRÉ-REQUISITOS: estrutura de dados do Excel (tópico 1); funções de agregação (tópico 3). OBJETIVOS OBSERVÁVEIS: (1) montar uma tabela dinâmica com campos corretos; (2) escolher a agregação adequada; (3) usar segmentação de dados; (4) explicar o comportamento de atualização. COMPETÊNCIAS DESENVOLVIDAS: resumo analítico de dados; leitura de painéis. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: tabelas estruturadas (tópico 1); Módulo 8 (visualização — escolha de gráfico e integridade); simulador Excel (tópico 6). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média a alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: gráfico é a representação visual dos dados: no Excel, Inserir > Gráfico oferece colunas, linhas, pizza, dispersão, entre outros; a escolha depende do objetivo analítico (comparação, evolução temporal, composição, relação) — aprofundado no Módulo 8. Tabela dinâmica é o mecanismo de resumo interativo: a partir de uma fonte de dados (intervalo ou tabela estruturada), monta-se uma matriz reorganizável arrastando campos para quatro áreas — Linhas (categorias verticais), Colunas (categorias horizontais), Valores (agregações numéricas: SOMA, MÉDIA, CONTAGEM, entre outras) e Filtros (restrição global). Campos calculados permitem fórmulas sobre os campos resumidos (ex.: valor médio por pedido = Valor/Contagem). Segmentação de dados (Slicer): painel de botões que filtra a tabela dinâmica (e, em versões recentes, tabelas estruturadas) com um clique — cada botão corresponde a um valor do campo. Propriedade operacional decisiva: a tabela dinâmica é um resumo materializado — ao alterar a fonte de dados, ela não se atualiza sozinha; é preciso executar Atualizar (ou Atualizar Tudo) para recalcular a partir da fonte. O simulador Excel documentado neste projeto não executa gráficos, tabelas dinâmicas nem segmentações (limitação declarada): esses recursos são conteúdo teórico para provas; o simulador cobre funções de cálculo documentadas no tópico 6.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: criar tabela dinâmica simples: Região em Linhas, Valor em Valores (soma).\n- Nível intermediário: trocar a agregação de soma para média/contagem; adicionar campo em Colunas e Filtro; inserir segmentação.\n- Nível avançado: criar campo calculado; diagnosticar tabela dinâmica \"desatualizada\" após mudança na fonte e executar Atualizar Tudo.\n- Nível especialista: escolher entre gráfico direto e gráfico alimentado por tabela dinâmica; explicar por que resumo materializado exige disciplina de atualização em relatórios recorrentes.\n\nCOMPARAÇÕES CRÍTICAS:\n- Gráfico x tabela dinâmica: o gráfico visualiza valores; a tabela dinâmica resume e reorganiza dados por campos — para \"vendas por região e por mês com filtros\", o gabarito é a tabela dinâmica (que pode alimentar o gráfico).\n- Soma x contagem como agregação: soma acumula valores; contagem conta registros — para \"quantos pedidos por região\", a alternativa com soma está errada.\n- Atualização manual x automática: a tabela dinâmica não reflete a fonte até receber Atualizar; fórmulas comuns recalculam automaticamente — confundir os dois comportamentos inverte a resposta sobre consistência do relatório.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"a tabela dinâmica atualiza automaticamente ao mudar a fonte de dados\" — Motivo: generaliza o recálculo de fórmulas — Versão tecnicamente correta: a tabela dinâmica é um resumo materializado; é necessário executar Atualizar (ou Atualizar Tudo) para refletir as alterações da fonte.\n- Afirmação errada: \"a segmentação de dados funciona apenas em tabelas dinâmicas\" — Motivo: termo absoluto — Versão tecnicamente correta: em versões recentes do Excel a segmentação também filtra tabelas estruturadas; o escopo exato depende da versão.\n- Afirmação errada: \"o simulador Excel do projeto cria tabelas dinâmicas para praticar agregações\" — Motivo: promessa fora do escopo documentado — Versão tecnicamente correta: o simulador documentado executa funções de cálculo (ver tópico 6) e não executa gráficos, tabelas dinâmicas nem segmentações.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: gráfico, tabela dinâmica, campos (linhas/colunas/valores/filtros), agregações, campo calculado, segmentação de dados.\n- Regras e fórmulas: mudou a fonte → Atualizar Tudo; contagem de registros → agregação contagem; filtro visual por valor de campo → segmentação.\n- Exceções: tabela dinâmica não recalcula sozinha; segmentação também alcança tabelas estruturadas em versões recentes; simulador não executa esses recursos.\n- Palavras-chave: PivotTable, campo, agregação, soma, média, contagem, Slicer, campo calculado, atualizar.\n- Checklist de domínio: monto tabela dinâmica com as quatro áreas; escolho agregação adequada; uso segmentação; explico a atualização; declaro o limite do simulador.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual área da tabela dinâmica recebe o campo numérico a ser somado? (2) Como exibir \"quantidade de pedidos por região\" e não \"soma dos valores por região\"? (3) A fonte da tabela dinâmica mudou e o resumo ficou antigo: qual ação corrige? (4) O que é a segmentação de dados e em que objetos ela atua? (5) Corrija: \"a tabela dinâmica recalcula automaticamente como uma fórmula\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Criar uma tabela dinâmica de vendas por região.",
+          "resposta": "Selecionar os dados > Inserir > Tabela Dinâmica > arrastar Região para Linhas e Valor para Valores (agregação SOMA) > OK. A matriz resultante exibe o total de vendas por região e permite reorganizar arrastando campos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Diretoria quer filtrar o resumo de vendas por Ano com um clique, sem editar filtros de campo.",
+          "resposta": "Selecionar a tabela dinâmica > Inserir Segmentação de Dados > marcar o campo Ano > OK. Os botões da segmentação filtram a tabela dinâmica (e, em versões recentes, também tabelas estruturadas); clicar em um ano restringe todas as áreas do resumo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O relatório mensal usa tabela dinâmica; a equipe digitou as vendas de novembro na fonte e o resumo não mudou.",
+          "resposta": "Diagnóstico: tabela dinâmica é resumo materializado — não recalcula sozinha. Correção: clicar na tabela dinâmica > Atualizar (ou Dados > Atualizar Tudo, quando há várias). Prevenção: rotina operacional de atualizar o resumo após qualquer digitação na fonte; incluir a checagem no checklist do relatório."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a tabela dinâmica atualiza automaticamente ao mudar a fonte de dados.",
+          "correcao": "Incorreto: é necessário atualizar (Atualizar Tudo ou Atualizar) para refletir as alterações na fonte; o recálculo automático é propriedade das fórmulas, não do resumo materializado da tabela dinâmica."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso resume dados por campos com agregações como soma, média e contagem? A) Gráfico; B) Tabela dinâmica; C) Filtro automático.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A segmentação de dados funciona apenas em tabelas dinâmicas.",
+          "resposta": "Errado. Em versões recentes do Excel, a segmentação também filtra tabelas estruturadas; o escopo exato depende da versão."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para exibir \"quantidade de pedidos por região\" numa tabela dinâmica, a agregação do campo Valor deve ser: A) SOMA; B) CONTAGEM; C) MÉDIA.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de montar uma tabela dinâmica atribuindo campos às quatro áreas, escolher a agregação adequada e explicar a necessidade de atualização manual após alterar a fonte, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá gráficos, tabelas dinâmicas, campos, agregações e segmentações no Excel"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Gráficos (Inserir > Gráfico) visualizam dados (colunas, linhas, pizza, dispersão). Tabela dinâmica (PivotTable) resume dados por campos (linhas, colunas, valores, filtros) com agregações (SOMA, MÉDIA, CONTAGEM). Segmentação de dados (Slicer) filtra tabelas dinâmicas por botões. Campos calculados permitem fórmulas dentro da tabela dinâmica. Esses recursos são interface do Excel; o simulador documentado não os executa (limitação declarada).",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Gráficos, tabelas dinâmicas, campos, agregações e segmentações",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que tabela dinâmica atualiza automaticamente ao mudar a fonte de dados.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: é necessário atualizar (Atualizar Tudo ou Atualizar) para refletir alterações na fonte de dados."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Criar tabela dinâmica de vendas por região.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Selecionar dados > Inserir > Tabela Dinâmica > arrastar 'Região' para Linhas e 'Valor' para Valores (agregação SOMA) > OK.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Adicionar segmentação por 'Ano'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Selecionar tabela dinâmica > Inserir Segmentação de Dados > marcar 'Ano' > OK; botões filtram a tabela dinâmica.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que tabela dinâmica atualiza automaticamente ao mudar a fonte de dados.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: é necessário atualizar (Atualizar Tudo ou Atualizar) para refletir alterações na fonte de dados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 1,
+    "unidadeTitulo": "5.1 Fundamentos de IA",
+    "parte": 2,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U1P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U1P2.js",
+    "idsCompletos": [
+      "m5-u1-t2-s1",
+      "m5-u1-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u1-t2-s1",
+      "titulo": "Treinamento, validação e teste",
+      "topicoTitulo": "Treinamento, validação, teste, generalização e limitações",
+      "topicoId": "modulo-5-unidade-1-topico-2",
+      "unidadeTitulo": "5.1 Fundamentos de IA",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno justificará a separação em três conjuntos e atribuirá a cada conjunto um papel correto no ciclo de desenvolvimento.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a divisão dos dados em treino, validação e teste; (b) o papel de cada conjunto; (c) o vazamento de dados e como evitá-lo; (d) a validação cruzada; (e) a ordem correta das operações (pré-processamento, seleção de atributos) para evitar vazamento. POR QUE O CONHECIMENTO É IMPORTANTE: a avaliação inválida é a causa mais comum de modelo que \"funciona na prova e falha em produção\"; a prova cobra a distinção entre os conjuntos e o vazamento. PRÉ-REQUISITOS: conceitos de modelo, parâmetro e erro. OBJETIVOS OBSERVÁVEIS: (1) descrever o papel de treino, validação e teste; (2) explicar vazamento de dados; (3) aplicar validação cruzada; (4) ordenar operações para evitar vazamento. COMPETÊNCIAS DESENVOLVIDAS: desenho de experimento; auditoria de pipeline. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (generalização); unidade 5.2 (métricas); Módulo 7 (qualidade de dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: definição de conjunto de treino (ajuste de parâmetros), validação (seleção de modelo e hiperparâmetros) e teste (estimativa final de generalização, usado uma única vez); vazamento de dados como uso de informação que não estaria disponível no momento da previsão, inflando a métrica artificialmente; fontes de vazamento (alvo como atributo, pré-processamento ajustado em todo o conjunto, seleção de atributos antes da divisão, dados futuros); validação cruzada (k-fold) para estimar desempenho com mais estabilidade; ordem correta: dividir primeiro, ajustar pré-processamento apenas no treino, aplicar ao validação/teste; conjunto de teste intocado até o fim. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender por que se separa os dados.\n- Nível intermediário: explicar o papel de cada conjunto e a validação cruzada.\n- Nível avançado: identificar vazamento em um pipeline.\n- Nível especialista: auditar um experimento completo e propor correção.\nCOMPARAÇÕES CRÍTICAS:\n- validação x teste: validação guia decisões; teste estima o resultado final e não deve guiar.\n- vazamento x overfitting: vazamento infla métrica por informação indevida; overfitting memoriza ruído; podem coexistir.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"usar o teste para escolher modelo é aceitável\" — Motivo: invalida a estimativa final — Versão tecnicamente correta: teste usado uma única vez.\n- Afirmação errada: \"pré-processamento pode ser ajustado em todos os dados\" — Motivo: causa vazamento — Versão tecnicamente correta: ajustar apenas no treino.\n- Afirmação errada: \"validação cruzada substitui o conjunto de teste\" — Motivo: a validação cruzada avalia modelos, mas uma avaliação final independente ainda é necessária — Versão tecnicamente correta: manter conjunto de teste separado.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: treino, validação, teste, vazamento, validação cruzada, pipeline.\n- Regras e fórmulas: dividir antes de qualquer ajuste; teste intocado até o fim; métrica final em teste.\n- Exceções: em bases muito pequenas, validação cruzada aninhada pode substituir, com custo.\n- Palavras-chave: treino, validação, teste, vazamento, validação cruzada, pipeline.\n- Checklist de domínio: (1) Descrevo o papel de cada conjunto? (2) Identifico vazamento? (3) Aplico validação cruzada? (4) Ordeno operações corretamente?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual o papel de treino, validação e teste? (2) O que é vazamento de dados e quais suas fontes? (3) Por que o teste deve ser usado uma única vez? (4) Como a validação cruzada estima desempenho? (5) Em que ordem se divide e se pré-processa?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que medir o desempenho no próprio conjunto de treinamento é enganoso?",
+          "resposta": "O modelo já viu aqueles exemplos: o erro medido subestima o erro real, porque inclui memória dos dados. O desempenho que interessa é em dados nunca vistos (validação/teste)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Previsão de demanda mensal: como separar os dados corretamente?",
+          "resposta": "Separação temporal: treinar com meses anteriores, validar com meses seguintes e testar com o período mais recente ainda não usado. Emular o futuro com dados passados é o único modo honesto de avaliação para séries temporais."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Basta dividir 80/20 para obter avaliação confiável.'",
+          "correcao": "Errado como garantia: depende da independência dos registros e da representatividade; com dados agrupados ou temporais, divisão aleatória simples vaza informação e infla a métrica."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O conjunto de teste pode ser consultado várias vezes durante o ajuste de hiperparâmetros.",
+          "resposta": "Errado. Consulta repetida transforma o teste em validação e contamina a avaliação; o teste fica vedado até a decisão final."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Conjunto de validação serve para: A) ajustar pesos; B) comparar variantes e escolher hiperparâmetros; C) publicar resultado oficial; D) coletar novos dados.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de justificar a separação em três conjuntos e atribuirá a cada conjunto um papel correto no ciclo de desenvolvimento, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "justificará a separação em três conjuntos e atribuirá a cada conjunto um papel correto no ciclo de desenvolvimento"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a divisão dos dados em treino, validação e teste; (b) o papel de cada conjunto; (c) o vazamento de dados e como evitá-lo; (d) a validação cruzada; (e) a ordem correta das operações (pré-processamento, seleção de atributos) para evitar vazamento. POR QUE O CONHECIMENTO É IMPORTANTE: a avaliação inválida é a causa mais comum de modelo que \"funciona na prova e falha em produção\"; a prova cobra a distinção entre os conjuntos e o vazamento. PRÉ-REQUI…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Treinamento, validação e teste",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Basta dividir 80/20 para obter avaliação confiável.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado como garantia: depende da independência dos registros e da representatividade; com dados agrupados ou temporais, divisão aleatória simples vaza informação e infla a métrica."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que medir o desempenho no próprio conjunto de treinamento é enganoso?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O modelo já viu aqueles exemplos: o erro medido subestima o erro real, porque inclui memória dos dados. O desempenho que interessa é em dados nunca vistos (validação/teste).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Previsão de demanda mensal: como separar os dados corretamente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Separação temporal: treinar com meses anteriores, validar com meses seguintes e testar com o período mais recente ainda não usado. Emular o futuro com dados passados é o único modo honesto de avaliação para séries temporais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Basta dividir 80/20 para obter avaliação confiável.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado como garantia: depende da independência dos registros e da representatividade; com dados agrupados ou temporais, divisão aleatória simples vaza informação e infla a métrica.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u1-t2-s2",
+      "titulo": "Generalização, overfitting e underfitting",
+      "topicoTitulo": "Treinamento, validação, teste, generalização e limitações",
+      "topicoId": "modulo-5-unidade-1-topico-2",
+      "unidadeTitulo": "5.1 Fundamentos de IA",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno diagnosticará overfitting e underfitting a partir de curvas de desempenho e indicará correções adequadas a cada caso.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o conceito de generalização como capacidade de desempenho em dados não vistos; (b) overfitting como ajuste excessivo aos dados de treino; (c) underfitting como modelo simples demais; (d) a relação viés-variância; (e) técnicas de controle (regularização, validação cruzada, early stopping, mais dados); (f) a diferença entre erro de treino e erro de generalização. POR QUE O CONHECIMENTO É IMPORTANTE: a maioria dos fracassos de IA em produção não é por modelo \"fraco\", mas por modelo que memorizou o treino e falha em dados novos; a prova cobra a distinção entre desempenho em treino e em teste. PRÉ-REQUISITOS: unidade 5.1 (treino/validação/teste) e noções de função de perda. OBJETIVOS OBSERVÁVEIS: (1) definir generalização, overfitting e underfitting; (2) explicar viés e variância; (3) listar técnicas de controle e quando usar; (4) interpretar curvas de aprendizado. COMPETÊNCIAS DESENVOLVIDAS: diagnóstico de modelo; leitura de curva de aprendizado; decisão de complexidade. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (separação de dados); unidade 5.2 (métricas e validação); Módulo 7 (qualidade de dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: definição de generalização como capacidade de manter desempenho em dados não vistos, que é o objetivo real do aprendizado; overfitting como ajuste excessivo aos dados de treino, capturando ruído como se fosse sinal, com erro de treino baixo e erro de validação alto; underfitting como modelo simples demais, com erro alto em ambos; viés como erro sistemático por simplificação excessiva (underfitting); variância como sensibilidade a pequenas mudanças no treino (overfitting); relação viés-variância como trade-off; técnicas de controle: regularização (L1, L2), validação cruzada, early stopping, aumento de dados, simplificação de modelo, ensemble; curvas de aprendizado (erro de treino e de validação em função do tamanho do treino ou da complexidade). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir memorização de aprendizado com analogia.\n- Nível intermediário: explicar viés e variância e ler curvas de aprendizado.\n- Nível avançado: escolher técnica de controle conforme o diagnóstico.\n- Nível especialista: integrar qualidade de dados, complexidade e validação.\nCOMPARAÇÕES CRÍTICAS:\n- overfitting x underfitting: o primeiro erra por excesso de complexidade; o segundo por falta; muda o gabarito ao indicar a direção da correção.\n- erro de treino x erro de generalização: o primeiro mede ajuste; o segundo mede utilidade real.\n- regularização L1 x L2: L1 zera coeficientes (seleção de atributos); L2 encolhe (estabilidade), o que muda a interpretação.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"acurácia alta em treino garante bom modelo\" — Motivo: pode ser overfitting — Versão tecnicamente correta: avaliar em validação/teste.\n- Afirmação errada: \"mais complexidade sempre melhora\" — Motivo: aumenta variância — Versão tecnicamente correta: complexidade ótima por validação.\n- Afirmação errada: \"regularização sempre melhora\" — Motivo: excesso causa underfitting — Versão tecnicamente correta: ajustar força por validação cruzada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: generalização, overfitting, underfitting, viés, variância, regularização, validação cruzada, early stopping, curvas de aprendizado.\n- Regras e fórmulas: erro de generalização estimado em conjunto de teste independente; complexidade ótima minimiza erro de validação.\n- Exceções: mais dados nem sempre resolvem se o viés for estrutural.\n- Palavras-chave: generalização, overfitting, underfitting, viés, variância, regularização, validação cruzada, early stopping.\n- Checklist de domínio: (1) Defino generalização? (2) Diagnostico overfitting/underfitting? (3) Escolho técnica de controle? (4) Leio curvas de aprendizado?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é generalização e por que é o objetivo real? (2) Como distinguir overfitting de underfitting por curvas de erro? (3) O que é o trade-off viés-variância? (4) Quais técnicas controlam cada problema? (5) Por que acurácia de treino não basta?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Treino com 2% de erro e validação com 31% de erro. Diagnóstico?",
+          "resposta": "Overfitting típico: o modelo decorou o treinamento e não generaliza. Ações: regularizar, reduzir complexidade ou obter mais dados — não adianta treinar mais."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Modelo de triagem tem treino 28% e validação 29%. O que isso indica e o próximo passo?",
+          "resposta": "Underfitting: falta de capacidade ou de atributos úteis. Próximo passo: usar modelo mais expressivo ou enriquecer atributos (ex.: histórico do requerente, completude documental), reavaliando em validação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Erro de treinamento baixo prova que o modelo está bom.'",
+          "correcao": "Errado. Baixo erro de treino pode ser overfitting; a prova de qualidade é desempenho em validação/teste, representativos do uso real."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Aumentar a complexidade do modelo é correção adequada para underfitting.",
+          "resposta": "Certo. Underfitting indica insuficiência de capacidade ou de atributos; mais expressividade ajuda — desde que validada para não migrar a overfitting."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Sinal de overfitting: A) treino e validação altos e próximos; B) treino muito menor que validação; C) validação menor que treino; D) erro constante em ambos.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diagnosticar overfitting e underfitting a partir de curvas de desempenho e indicará correções adequadas a cada caso, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diagnosticará overfitting e underfitting a partir de curvas de desempenho e indicará correções adequadas a cada caso"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o conceito de generalização como capacidade de desempenho em dados não vistos; (b) overfitting como ajuste excessivo aos dados de treino; (c) underfitting como modelo simples demais; (d) a relação viés-variância; (e) técnicas de controle (regularização, validação cruzada, early stopping, mais dados); (f) a diferença entre erro de treino e erro de generalização. POR QUE O CONHECIMENTO É IMPORTANTE: a maioria dos fracassos de IA em produção não é …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Generalização, overfitting e underfitting",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Erro de treinamento baixo prova que o modelo está bom.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Baixo erro de treino pode ser overfitting; a prova de qualidade é desempenho em validação/teste, representativos do uso real."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Treino com 2% de erro e validação com 31% de erro. Diagnóstico?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Overfitting típico: o modelo decorou o treinamento e não generaliza. Ações: regularizar, reduzir complexidade ou obter mais dados — não adianta treinar mais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Modelo de triagem tem treino 28% e validação 29%. O que isso indica e o próximo passo?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Underfitting: falta de capacidade ou de atributos úteis. Próximo passo: usar modelo mais expressivo ou enriquecer atributos (ex.: histórico do requerente, completude documental), reavaliando em validação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Erro de treinamento baixo prova que o modelo está bom.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Baixo erro de treino pode ser overfitting; a prova de qualidade é desempenho em validação/teste, representativos do uso real.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

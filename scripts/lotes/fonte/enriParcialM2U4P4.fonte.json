@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 4,
+    "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+    "parte": 4,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U4P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U4P4.js",
+    "idsCompletos": [
+      "m2-u4-t3-s1",
+      "m2-u4-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u4-t3-s1",
+      "titulo": "VLSM: máscara de comprimento variável",
+      "topicoTitulo": "VLSM e sumarização de rotas",
+      "topicoId": "modulo-2-unidade-4-topico-3",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará VLSM e aplicará divisão de sub-redes de tamanhos diferentes a partir de um bloco original.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é VLSM; (b) a estratégia de alocação; (c) um exemplo de divisão; (d) o requisito de roteamento classless. POR QUE O CONHECIMENTO É IMPORTANTE: o VLSM evita desperdício de endereços; a prova cobra a ordem de alocação e o cálculo. PRÉ-REQUISITOS: sub-redes e hosts; CIDR. OBJETIVOS OBSERVÁVEIS: (1) definir VLSM; (2) ordenar a alocação (maior primeiro); (3) calcular prefixos por necessidade; (4) explicar o requisito classless. COMPETÊNCIAS DESENVOLVIDAS: planejamento eficiente de endereçamento. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.2 (sub-redes/hosts); unidade 4.3 (sumarização). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o VLSM (Variable Length Subnet Mask) permite dividir uma rede em sub-redes de TAMANHOS DIFERENTES, ajustando o prefixo a cada necessidade e reduzindo o desperdício. A estratégia é alocar primeiro as sub-redes que precisam de MAIS hosts e depois as menores, escolhendo o prefixo cujo número de hosts atenda com folga mínima. Exemplo: bloco 192.168.10.0/24, com necessidades de uma LAN de 50 hosts, uma de 25 hosts e um link entre roteadores. Cálculo: a LAN de 50 hosts precisa de 2^(bits de host) − 2 ≥ 50; 2^6 − 2 = 62 ≥ 50, então prefixo /26 (bits de host = 6). A de 25 hosts: 2^5 − 2 = 30 ≥ 25, então /27. O link ponto a ponto: 2 hosts, então /30. Alocação em ordem decrescente: LAN A = 192.168.10.0/26 (endereços .0 a .63); LAN B = 192.168.10.64/27 (.64 a .95); WAN = 192.168.10.96/30 (.96 a .99); o restante fica livre. O VLSM exige roteamento CLASSLESS (que carrega a máscara junto ao prefixo), como RIPv2, OSPF, EIGRP e BGP; protocolos classful antigos (como RIPv1) não o suportam, pois assumem a máscara pela classe.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que sub-redes podem ter tamanhos diferentes.\n- Nível intermediário: escolher o prefixo para uma quantidade de hosts.\n- Nível avançado: alocar blocos em ordem decrescente sem sobreposição.\n- Nível especialista: planejar o endereçamento completo de um site com necessidades mistas.\nCOMPARAÇÕES CRÍTICAS:\n- FLSM x VLSM: no FLSM todas as sub-redes têm o mesmo tamanho (desperdício); no VLSM os tamanhos variam — muda a eficiência.\n- ordem crescente x decrescente: alocar as menores primeiro fragmenta e pode inviabilizar as maiores.\n- classful x classless: o primeiro não suporta VLSM; o segundo, sim.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Deve-se alocar as sub-redes menores primeiro.\" — Motivo: a fragmentação dificulta as maiores — Versão tecnicamente correta: alocar as maiores primeiro.\n- Afirmação errada: \"RIPv1 suporta VLSM.\" — Motivo: é classful — Versão tecnicamente correta: exige protocolo classless.\n- Afirmação errada: \"Um link ponto a ponto precisa de /24.\" — Motivo: desperdiça endereços — Versão tecnicamente correta: usa /30 (ou /31).\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: VLSM, prefixo por necessidade, ordem decrescente, classless.\n- Regras e fórmulas: escolher /n tal que 2^(32−n) − 2 ≥ hosts necessários.\n- Exceções: links ponto a ponto podem usar /31.\n- Palavras-chave: tamanho variável, alocação, desperdício, sobreposição, máscara.\n- Checklist de domínio: (1) Defino VLSM? (2) Ordeno a alocação? (3) Calculo prefixos? (4) Explico o requisito classless?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é VLSM? (2) Por que alocar as maiores primeiro? (3) Que prefixo atende 50 hosts? (4) E um link ponto a ponto? (5) O que é roteamento classless?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que VLSM é melhor que divisão em sub-redes de tamanho fixo?",
+          "resposta": "Porque evita desperdício: uma sub-rede /24 fixa para um link ponto-a-ponto desperdiça 252 endereços; /30 usa apenas 4."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "A partir de 10.0.0.0/24, alocar sub-redes para: site A (100 hosts), site B (50 hosts), link (2 hosts).",
+          "resposta": "Site A: /25 (126 hosts) -> 10.0.0.0/25. Site B: /26 (62 hosts) -> 10.0.0.128/26. Link: /30 -> 10.0.0.192/30. (Verificar alinhamento dos blocos.)"
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'VLSM pode ser usado com RIPv1.'",
+          "correcao": "Errado. RIPv1 é classful e não carrega máscara; VLSM exige protocolos classless (RIPv2, OSPF, EIGRP, BGP) ou rotas estáticas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em VLSM, deve-se alocar primeiro as sub-redes maiores.",
+          "resposta": "Certo — evita fragmentação e sobreposição."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prefixo atende a 14 hosts com folga mínima? A) /28; B) /27; C) /26; D) /30.",
+          "resposta": "A (14 hosts cabem em /28 com 14 utilizáveis)"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar VLSM e aplicará divisão de sub-redes de tamanhos diferentes a partir de um bloco original, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará VLSM e aplicará divisão de sub-redes de tamanhos diferentes a partir de um bloco original"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "VLSM (Variable Length Subnet Mask) permite dividir uma rede em sub-redes de tamanhos diferentes, otimizando o uso de endereços. Estratégia: alocar primeiro as sub-redes maiores (mais hosts), depois as menores; usar prefixos adequados a cada necessidade (ex.: /30 para links ponto-a-ponto, /26 para LAN de 60 hosts). Exemplo: bloco 192.168.10.0/24. Necessidades: LAN A 50 hosts -> /26 (62 hosts); LAN B 25 hosts -> /27 (30 hosts); link WAN -> /30 (2 hosts). Alocar LAN A: 192.168.10.0/26 (0-63). LAN B…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a VLSM: máscara de comprimento variável",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'VLSM pode ser usado com RIPv1.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. RIPv1 é classful e não carrega máscara; VLSM exige protocolos classless (RIPv2, OSPF, EIGRP, BGP) ou rotas estáticas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que VLSM é melhor que divisão em sub-redes de tamanho fixo?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque evita desperdício: uma sub-rede /24 fixa para um link ponto-a-ponto desperdiça 252 endereços; /30 usa apenas 4.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "A partir de 10.0.0.0/24, alocar sub-redes para: site A (100 hosts), site B (50 hosts), link (2 hosts).",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Site A: /25 (126 hosts) -> 10.0.0.0/25. Site B: /26 (62 hosts) -> 10.0.0.128/26. Link: /30 -> 10.0.0.192/30. (Verificar alinhamento dos blocos.)",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'VLSM pode ser usado com RIPv1.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. RIPv1 é classful e não carrega máscara; VLSM exige protocolos classless (RIPv2, OSPF, EIGRP, BGP) ou rotas estáticas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u4-t3-s2",
+      "titulo": "Sumarização de rotas (agregação)",
+      "topicoTitulo": "VLSM e sumarização de rotas",
+      "topicoId": "modulo-2-unidade-4-topico-3",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará sumarização de rotas e calculará uma rota agregada a partir de blocos contíguos.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é sumarização de rotas; (b) o requisito de contiguidade/alinhamento; (c) como calcular uma rota agregada; (d) riscos. POR QUE O CONHECIMENTO É IMPORTANTE: a agregação reduz tabelas de roteamento e melhora a estabilidade; a prova cobra o cálculo do prefixo agregado. PRÉ-REQUISITOS: CIDR; sub-redes. OBJETIVOS OBSERVÁVEIS: (1) definir sumarização; (2) verificar contiguidade; (3) calcular o prefixo agregado; (4) citar riscos. COMPETÊNCIAS DESENVOLVIDAS: agregação de rotas; análise de tabela. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.3 (VLSM); unidade 4.3 (planejamento). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a sumarização (ou agregação de rotas, supernetting) combina várias rotas contíguas em uma única rota com prefixo MENOR, reduzindo o tamanho da tabela de roteamento e a frequência de atualizações. O requisito é que os blocos sejam CONTÍGUOS e ALINHADOS em uma fronteira comum. Para calcular o prefixo agregado, identificam-se os bits COMUNS ao início de todos os blocos: o número desses bits é o prefixo da rota agregada. Exemplo: as rotas 192.168.0.0/24 até 192.168.7.0/24 (oito redes /24) compartilham os primeiros 21 bits, pois 8 = 2^3, o que \"encurta\" o prefixo de 24 para 24 − 3 = 21; a rota agregada é 192.168.0.0/21. Cálculo: 2^3 = 8 blocos; 32 − 21 = 11 bits de host; a faixa agregada cobre 192.168.0.0 a 192.168.7.255. A agregação só é VÁLIDA se todos os blocos pertencerem ao agregado e estiverem efetivamente alocados; anunciar um agregado que inclua blocos não alocados cria um \"buraco negro\" (black hole), em que o tráfego é descartado. Os benefícios são tabelas menores, menos processamento e maior estabilidade; o risco é justamente a agregação excessiva.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que várias rotas viram uma.\n- Nível intermediário: verificar se os blocos são contíguos.\n- Nível avançado: calcular o prefixo agregado pelos bits comuns.\n- Nível especialista: avaliar o risco de black hole ao agregar.\nCOMPARAÇÕES CRÍTICAS:\n- sumarização x rotas individuais: a primeira reduz a tabela; as segundas dão granularidade — a escolha afeta a estabilidade.\n- prefixo maior x menor: agregar reduz o prefixo (ex.: /24 → /21).\n- agregado válido x inválido: o válido cobre apenas blocos alocados; o inválido anuncia endereços inexistentes.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Qualquer conjunto de rotas pode ser sumarizado.\" — Motivo: exige contiguidade/alinhamento — Versão tecnicamente correta: blocos fora do agregado invalidam a soma.\n- Afirmação errada: \"Agregar aumenta o prefixo.\" — Motivo: reduz — Versão tecnicamente correta: /24 → /21.\n- Afirmação errada: \"Agregação excessiva é inofensiva.\" — Motivo: cria black hole — Versão tecnicamente correta: só agregar o que existe.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: sumarização, supernetting, contiguidade, alinhamento, prefixo agregado, black hole.\n- Regras e fórmulas: prefixo agregado = bits comuns; 8 blocos /24 → /21.\n- Exceções: blocos não alocados não podem ser incluídos.\n- Palavras-chave: agregação, tabela de rotas, estabilidade, fronteira, buraco negro.\n- Checklist de domínio: (1) Defino sumarização? (2) Verifico contiguidade? (3) Calculo o agregado? (4) Cito riscos?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é sumarização? (2) Qual o requisito dos blocos? (3) Qual o agregado de 8 rotas /24? (4) O que é black hole? (5) Como se calcula o prefixo agregado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Agregue as redes 172.16.0.0/24 a 172.16.3.0/24.",
+          "resposta": "172.16.0.0/22 (4 sub-redes /24; prefixo 22)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um roteador tem 16 rotas /24 contíguas (10.10.0.0/24 ... 10.10.15.0/24). Qual rota agregada?",
+          "resposta": "10.10.0.0/20 (16 sub-redes /24 = 2^4, prefixo 24-4=20)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Qualquer conjunto de rotas pode ser agregado.'",
+          "correcao": "Errado. A agregação exige contiguidade e alinhamento ao boundary do prefixo agregado. Rotas não contíguas não agregam sem perda/overlap."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Sumarização reduz o tamanho da tabela de rotas.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quantas rotas /24 cabem em um /20? A) 4; B) 8; C) 16; D) 32.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar sumarização de rotas e calculará uma rota agregada a partir de blocos contíguos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará sumarização de rotas e calculará uma rota agregada a partir de blocos contíguos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Sumarização (route aggregation/supernetting) combina múltiplas rotas contíguas em uma rota mais curta (prefixo menor), reduzindo tabelas de roteamento. Requer blocos contíguos alinhados (boundary). Exemplo: rotas 192.168.0.0/24, 192.168.1.0/24, ..., 192.168.7.0/24 agregam em 192.168.0.0/21 (8 sub-redes /24). A agregação só é válida se todos os blocos pertencerem ao agregado e estiverem alocados. Benefícios: tabelas menores, menos atualizações, estabilidade. Risco: agregação excessiva pode anunci…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Sumarização de rotas (agregação)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Qualquer conjunto de rotas pode ser agregado.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A agregação exige contiguidade e alinhamento ao boundary do prefixo agregado. Rotas não contíguas não agregam sem perda/overlap."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Agregue as redes 172.16.0.0/24 a 172.16.3.0/24.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "172.16.0.0/22 (4 sub-redes /24; prefixo 22).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um roteador tem 16 rotas /24 contíguas (10.10.0.0/24 ... 10.10.15.0/24). Qual rota agregada?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "10.10.0.0/20 (16 sub-redes /24 = 2^4, prefixo 24-4=20).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Qualquer conjunto de rotas pode ser agregado.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A agregação exige contiguidade e alinhamento ao boundary do prefixo agregado. Rotas não contíguas não agregam sem perda/overlap.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

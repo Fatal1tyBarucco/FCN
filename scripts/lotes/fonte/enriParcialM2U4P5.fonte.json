@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 4,
+    "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+    "parte": 5,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U4P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U4P5.js",
+    "idsCompletos": [
+      "m2-u4-t3-s3",
+      "m2-u4-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u4-t3-s3",
+      "titulo": "Planejamento de endereçamento e roteamento classless",
+      "topicoTitulo": "VLSM e sumarização de rotas",
+      "topicoId": "modulo-2-unidade-4-topico-3",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará boas práticas de planejamento de endereçamento e a necessidade de roteamento classless para VLSM.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) boas práticas de planejamento de endereçamento; (b) roteamento classless x classful; (c) uso de /30, /31 e /64; (d) limitações do planejamento ruim. POR QUE O CONHECIMENTO É IMPORTANTE: o planejamento evita renumeração custosa e facilita a agregação; a prova cobra as boas práticas e o requisito classless. PRÉ-REQUISITOS: VLSM; sumarização. OBJETIVOS OBSERVÁVEIS: (1) listar boas práticas; (2) distinguir classless de classful; (3) indicar prefixos típicos; (4) apontar limitações. COMPETÊNCIAS DESENVOLVIDAS: planejamento de rede; documentação. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.3 (VLSM/sumarização); unidade 4.4 (IPv6). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: planejar o endereçamento é decidir, de forma documentada, quais blocos serão usados por site, função ou tipo de dispositivo, reservando espaço para crescimento e mantendo a sumarização nas bordas. Boas práticas: documentar os blocos e suas finalidades; alocar blocos CONTÍGUOS para facilitar a agregação; evitar sobreposição; reservar blocos específicos para links ponto a ponto (com /30 ou /31); e, no IPv6, usar /64 por sub-rede (o tamanho esperado pelo SLAAC). O roteamento pode ser classless (CIDR), que carrega a máscara junto ao prefixo e suporta VLSM e sumarização — exemplos: RIPv2, OSPF, EIGRP, BGP e IS-IS; ou classful, que assume a máscara pela classe e NÃO suporta VLSM nem sumarização — exemplos: RIPv1 e IGRP. As limitações de um planejamento ruim são sérias: renumerar uma rede em produção é custoso e arriscado; a falta de contiguidade impede a agregação; e a agregação excessiva pode anunciar blocos não alocados. O planejamento deve ser feito ANTES da implantação, com folga para o crescimento e coerência com a topologia.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender por que planejar antes de configurar.\n- Nível intermediário: listar boas práticas e distinguir classless de classful.\n- Nível avançado: desenhar um esquema de endereçamento com blocos contíguos.\n- Nível especialista: revisar um plano existente e corrigir riscos de renumeração e agregação.\nCOMPARAÇÕES CRÍTICAS:\n- classless x classful: o primeiro suporta VLSM/sumarização; o segundo não — muda o que se pode projetar.\n- /30 x /31 x /64: /30 e /31 para links IPv4; /64 para sub-redes IPv6.\n- planejar x improvisar: o primeiro evita renumeração; o segundo gera custo futuro.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"RIPv1 suporta VLSM.\" — Motivo: é classful — Versão tecnicamente correta: requer protocolo classless.\n- Afirmação errada: \"IPv6 pode usar qualquer prefixo por sub-rede.\" — Motivo: o SLAAC espera /64 — Versão tecnicamente correta: usar /64 por sub-rede.\n- Afirmação errada: \"Renumeração é trivial.\" — Motivo: afeta muitos dispositivos e serviços — Versão tecnicamente correta: é custosa e deve ser evitada por planejamento.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: planejamento, documentação, contiguidade, classless/classful, /30, /31, /64.\n- Regras e fórmulas: blocos contíguos → agregação; classless → VLSM/sumarização.\n- Exceções: o IPv6 padroniza /64 por sub-rede.\n- Palavras-chave: renumeração, crescimento, sobreposição, agregação, protocolo.\n- Checklist de domínio: (1) Listo boas práticas? (2) Distingo classless/classful? (3) Indico prefixos típicos? (4) Aponto limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite três boas práticas. (2) O que distingue classless de classful? (3) Que prefixo usar em link ponto a ponto? (4) Que prefixo usar por sub-rede IPv6? (5) Por que evitar renumeração?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que documentar o plano de endereçamento é importante?",
+          "resposta": "Para evitar sobreposição, facilitar sumarização e permitir crescimento sem renumeração."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma empresa com 3 filiais (50, 30 e 10 hosts) e 2 links WAN. Como planejar a partir de 10.0.0.0/22?",
+          "resposta": "Filiais: /26 (62 hosts) para 50, /27 (30) para 30, /28 (14) para 10; links: /30 cada. Alocar em ordem decrescente para evitar fragmentação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'RIPv1 suporta VLSM porque é um protocolo de roteamento.'",
+          "correcao": "Errado. RIPv1 é classful e não carrega máscara; não suporta VLSM nem sumarização. Usar RIPv2 ou OSPF."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Roteamento classless é necessário para VLSM.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo NÃO suporta VLSM? A) OSPF; B) RIPv2; C) RIPv1; D) BGP.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar boas práticas de planejamento de endereçamento e a necessidade de roteamento classless para VLSM, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará boas práticas de planejamento de endereçamento e a necessidade de roteamento classless para VLSM"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Planejamento de endereçamento: documentar blocos por site/função, reservar espaço para crescimento, usar VLSM para otimizar, manter sumarização nas bordas. Roteamento classless (CIDR): protocolos que carregam a máscara junto com o prefixo (RIPv2, OSPF, EIGRP, BGP, IS-IS) — necessários para VLSM e sumarização. Roteamento classful (RIPv1, IGRP) assume máscara pela classe e não suporta VLSM/sumarização. Boas práticas: alocar blocos contíguos para facilitar agregação; evitar sobreposição; reservar b…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Planejamento de endereçamento e roteamento classless",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'RIPv1 suporta VLSM porque é um protocolo de roteamento.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. RIPv1 é classful e não carrega máscara; não suporta VLSM nem sumarização. Usar RIPv2 ou OSPF."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que documentar o plano de endereçamento é importante?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Para evitar sobreposição, facilitar sumarização e permitir crescimento sem renumeração.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma empresa com 3 filiais (50, 30 e 10 hosts) e 2 links WAN. Como planejar a partir de 10.0.0.0/22?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Filiais: /26 (62 hosts) para 50, /27 (30) para 30, /28 (14) para 10; links: /30 cada. Alocar em ordem decrescente para evitar fragmentação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'RIPv1 suporta VLSM porque é um protocolo de roteamento.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. RIPv1 é classful e não carrega máscara; não suporta VLSM nem sumarização. Usar RIPv2 ou OSPF.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u4-t4-s1",
+      "titulo": "Representação e abreviação de endereços IPv6",
+      "topicoTitulo": "IPv6: representação, abreviação e tipos",
+      "topicoId": "modulo-2-unidade-4-topico-4",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno representará e abreviará endereços IPv6 corretamente, aplicando as regras de compressão.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a representação de 128 bits do IPv6; (b) as regras de abreviação; (c) o uso de \"::\"; (d) endereços especiais. POR QUE O CONHECIMENTO É IMPORTANTE: abreviar e desabreviar corretamente é exigência frequente; a prova cobra as regras de compressão. PRÉ-REQUISITOS: noção de hexadecimal e de binário. OBJETIVOS OBSERVÁVEIS: (1) representar um endereço; (2) abreviar corretamente; (3) expandir um endereço abreviado; (4) citar endereços especiais. COMPETÊNCIAS DESENVOLVIDAS: manipulação de endereços IPv6. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.4 (prefixos/tipos); unidade 3.1 (IPv4 x IPv6). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: um endereço IPv6 tem 128 bits, escritos como oito grupos de 16 bits em hexadecimal, separados por dois-pontos (por exemplo, 2001:0db8:0000:0000:0000:ff00:0042:8329). Há duas regras de abreviação. A primeira: omitir zeros à ESQUERDA de cada grupo (0db8 → db8; 0042 → 42). A segunda: substituir UM único bloco de grupos consecutivos totalmente zeros por \"::\", podendo usar \"::\" apenas UMA vez por endereço, sob pena de ambiguidade. O exemplo acima abrevia-se para 2001:db8::ff00:42:8329. Endereços especiais: o loopback é ::1 e o endereço não especificado é :: (todos os bits em zero). A expansão exige cuidado: ao ver \"::\", deve-se preencher com grupos de zeros até completar oito. Por exemplo, 2001:db8::1 expande para 2001:0db8:0000:0000:0000:0000:0000:0001. A tentação de usar \"::\" duas vezes gera endereços inválidos, pois não se sabe quantos zeros cada ocorrência representa. Interpretar e reescrever endereços IPv6 é uma habilidade prática para configuração e diagnóstico.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer os oito grupos e o separador.\n- Nível intermediário: aplicar as duas regras de abreviação.\n- Nível avançado: expandir um endereço abreviado com \"::\".\n- Nível especialista: detectar um endereço IPv6 malformado (dois \"::\" ou grupos a mais).\nCOMPARAÇÕES CRÍTICAS:\n- zEROS à esquerda x bloco de zeros: a primeira abreviação de cada grupo é sempre possível; a segunda, só para um bloco contíguo.\n- \"::\" x \":\" — \"::\" representa um ou mais grupos de zeros; \":\" é o separador.\n- IPv4 x IPv6: decimal pontuado x hexadecimal com dois-pontos.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Pode-se usar :: duas vezes no mesmo endereço.\" — Motivo: gera ambiguidade — Versão tecnicamente correta: no máximo uma vez.\n- Afirmação errada: \"2001:db8::1 tem 4 grupos.\" — Motivo: \"::\" representa grupos omitidos — Versão tecnicamente correta: expanDe para 8 grupos.\n- Afirmação errada: \"Zeros à esquerda são obrigatórios.\" — Motivo: podem ser omitidos — Versão tecnicamente correta: sua omissão é permitida.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: 128 bits, 8 grupos, hexadecimal, abreviação, \"::\", loopback ::1, ::.\n- Regras e fórmulas: omitir zeros à esquerda; usar \"::\" uma vez; completar para 8 grupos.\n- Exceções: \"::\" não pode ser usado duas vezes.\n- Palavras-chave: representação, compressão, ambiguidade, expansão.\n- Checklist de domínio: (1) Represento um endereço? (2) Abrevio? (3) ExpanDo? (4) Cito especiais?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quantos bits tem um IPv6? (2) Quantos grupos? (3) Quantas vezes se usa \"::\"? (4) O que é ::1? (5) Expanda 2001:db8::1.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Abreviar 2001:0db8:0000:0000:0000:0000:0000:0001.",
+          "resposta": "2001:db8::1 (zeros à esquerda removidos e bloco de zeros comprimido com ::)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Expandir ::1 para a forma completa.",
+          "resposta": "0000:0000:0000:0000:0000:0000:0000:0001 (loopback)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Pode-se usar :: mais de uma vez no mesmo endereço para comprimir múltiplos blocos de zeros.'",
+          "correcao": "Errado. :: pode ser usado apenas uma vez por endereço; caso contrário, o endereço seria ambíguo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) 2001:db8::1 e 2001:0db8:0000:...:0001 representam o mesmo endereço.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual é o endereço de loopback em IPv6? A) ::; B) ::1; C) fe80::1; D) ff02::1.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de representar e abreviará endereços IPv6 corretamente, aplicando as regras de compressão, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "representará e abreviará endereços IPv6 corretamente, aplicando as regras de compressão"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "IPv6: 128 bits = 8 grupos de 16 bits em hexadecimal, separados por dois-pontos (ex.: 2001:0db8:0000:0000:0000:ff00:0042:8329). Regras de abreviação: (1) omitir zeros à esquerda em cada grupo (0db8 -> db8, 0042 -> 42); (2) substituir um único bloco de grupos consecutivos todos zero por :: (apenas uma vez por endereço). Exemplo abreviado: 2001:db8::ff00:42:8329. :: não pode ser usado mais de uma vez (ambiguidade). Endereço loopback: ::1. Endereço não especificado: ::.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Representação e abreviação de endereços IPv6",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Pode-se usar :: mais de uma vez no mesmo endereço para comprimir múltiplos blocos de zeros.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. :: pode ser usado apenas uma vez por endereço; caso contrário, o endereço seria ambíguo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Abreviar 2001:0db8:0000:0000:0000:0000:0000:0001.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "2001:db8::1 (zeros à esquerda removidos e bloco de zeros comprimido com ::).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Expandir ::1 para a forma completa.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "0000:0000:0000:0000:0000:0000:0000:0001 (loopback).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Pode-se usar :: mais de uma vez no mesmo endereço para comprimir múltiplos blocos de zeros.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. :: pode ser usado apenas uma vez por endereço; caso contrário, o endereço seria ambíguo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

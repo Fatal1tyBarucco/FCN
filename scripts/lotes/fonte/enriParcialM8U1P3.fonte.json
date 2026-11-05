@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 1,
+    "unidadeTitulo": "8.1 Fundamentos Visuais",
+    "parte": 3,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U1P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U1P3.js",
+    "idsCompletos": [
+      "m8-u1-t3-s1",
+      "m8-u1-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u1-t3-s1",
+      "titulo": "Ruído visual, chartjunk e integridade gráfica",
+      "topicoTitulo": "Integridade gráfica e elementos de composição",
+      "topicoId": "modulo-8-unidade-1-topico-3",
+      "unidadeTitulo": "8.1 Fundamentos Visuais",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno eliminará elementos decorativos e detectará distorções que violam a integridade gráfica.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) ruído visual e chartjunk; (b) integridade gráfica; (c) princípios de limpeza visual. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a identificação de chartjunk e de violações de integridade gráfica; um gráfico com ruído leva a conclusão errada. PRÉ-REQUISITOS: conceitos básicos de visualização. OBJETIVOS OBSERVÁVEIS: (1) definir ruído visual e chartjunk; (2) identificar violações de integridade; (3) propor correção. COMPETÊNCIAS DESENVOLVIDAS: auditoria visual; desenho limpo. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (fundamentos); unidade 8.2 (gráficos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: ruído visual como elementos que não transmitem informação (3D, gradientes, sombras, ícones decorativos); chartjunk como \"lixo gráfico\" que compete com os dados; integridade gráfica como proporção fiel entre valores e representação (linha de base em zero em barras, escala adequada); princípios de limpeza: remover o não essencial, destacar o dado, usar grade discreta. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: identificar elementos decorativos inúteis.\n- Nível intermediário: avaliar integridade gráfica.\n- Nível avançado: propor correção e redesenho.\n- Nível especialista: auditar um painel completo.\nCOMPARAÇÕES CRÍTICAS:\n- decoração x informação: decoração não transmite dado; informação sim.\n- 3D x 2D: 3D distorce proporções e dificulta leitura.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"efeitos 3D melhoram a visualização\" — Motivo: distorcem proporções — Versão tecnicamente correta: usar 2D.\n- Afirmação errada: \"mais elementos aumentam a credibilidade\" — Motivo: ruído prejudica — Versão tecnicamente correta: simplicidade.\n- Afirmação errada: \"grade forte ajuda a leitura\" — Motivo: compete com os dados — Versão tecnicamente correta: grade discreta.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: ruído visual, chartjunk, integridade gráfica, limpeza.\n- Regras e mecanismos: remover o não essencial; manter proporção e linha de base.\n- Exceções: anotações podem ser úteis se destacarem achados.\n- Palavras-chave: ruído, chartjunk, integridade, limpeza, proporção.\n- Checklist de domínio: (1) Identifico ruído visual? (2) Avalio integridade gráfica? (3) Proponho correção? (4) Redesenho com simplicidade?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é chartjunk? (2) O que é integridade gráfica? (3) Por que evitar 3D? (4) O que é limpeza visual? (5) Como avaliar um gráfico quanto a ruído?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Listar três elementos de chartjunk em um painel: grade a cada 10 unidades, sombra nas barras, moldura tripla ao redor.",
+          "resposta": "Grade densa (compete com as barras), sombra (decoação que altera a percepção de contorno) e moldura tripla (enquadramento sem informação). Remover os três preserva a leitura e reduz esforço — nenhum dado se perde."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Valores 70 e 80 comparados em barras com eixo iniciado em 60: qual a distorção e a correção?",
+          "resposta": "Com base em 60, as barras têm alturas 10 e 20 — parece que o segundo valor é o DOBRO do primeiro, quando 80/70 = 1,14 (apenas 14% maior). A correção é iniciar o eixo de magnitude em 0; se houver motivo legítimo para truncar, aviso explícito e valor numérico junto às barras."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Eixo truncado é sempre proibido.'",
+          "correcao": "Exagero. Em gráficos de BARRAS a comparação é de área/comprimento e o truncamento destrói a proporcionalidade — aí ele é enganoso. Em séries TEMPORAIS de valores altos e variação pequena, truncar o eixo é aceitável para revelar variação, desde que a base cortada seja sinalizada claramente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Adicionar profundidade tridimensional a barras bidimensionais pode alterar a percepção de altura e esconder valores.",
+          "resposta": "Certo. A perspectiva distorce comprimento/área e pode ocultar barras atrás de outras."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Barra A = 70 e barra B = 80 com eixo y de 60 a 90. A leitura visual sugere que B é: A) 14% maior; B) o dobro de A; C) igual a A; D) 30% menor.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de eliminar elementos decorativos e detectará distorções que violam a integridade gráfica, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "eliminará elementos decorativos e detectará distorções que violam a integridade gráfica"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) ruído visual e chartjunk; (b) integridade gráfica; (c) princípios de limpeza visual. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a identificação de chartjunk e de violações de integridade gráfica; um gráfico com ruído leva a conclusão errada. PRÉ-REQUISITOS: conceitos básicos de visualização. OBJETIVOS OBSERVÁVEIS: (1) definir ruído visual e chartjunk; (2) identificar violações de integridade; (3) propor correção. COMPETÊNCIAS DESENVOLVID…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Ruído visual, chartjunk e integridade gráfica",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Eixo truncado é sempre proibido.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Exagero. Em gráficos de BARRAS a comparação é de área/comprimento e o truncamento destrói a proporcionalidade — aí ele é enganoso. Em séries TEMPORAIS de valores altos e variação pequena, truncar o eixo é aceitável para revelar variação, desde que a base cortada seja sinalizada claramente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Listar três elementos de chartjunk em um painel: grade a cada 10 unidades, sombra nas barras, moldura tripla ao redor.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Grade densa (compete com as barras), sombra (decoação que altera a percepção de contorno) e moldura tripla (enquadramento sem informação). Remover os três preserva a leitura e reduz esforço — nenhum dado se perde.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Valores 70 e 80 comparados em barras com eixo iniciado em 60: qual a distorção e a correção?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Com base em 60, as barras têm alturas 10 e 20 — parece que o segundo valor é o DOBRO do primeiro, quando 80/70 = 1,14 (apenas 14% maior). A correção é iniciar o eixo de magnitude em 0; se houver motivo legítimo para truncar, aviso explícito e valor numérico junto às barras.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Eixo truncado é sempre proibido.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Exagero. Em gráficos de BARRAS a comparação é de área/comprimento e o truncamento destrói a proporcionalidade — aí ele é enganoso. Em séries TEMPORAIS de valores altos e variação pequena, truncar o eixo é aceitável para revelar variação, desde que a base cortada seja sinalizada claramente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u1-t3-s2",
+      "titulo": "Eixos, rótulos, unidades, legendas e fontes",
+      "topicoTitulo": "Integridade gráfica e elementos de composição",
+      "topicoId": "modulo-8-unidade-1-topico-3",
+      "unidadeTitulo": "8.1 Fundamentos Visuais",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno completará um gráfico com todos os elementos de composição exigidos para leitura autônoma.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) eixos, rótulos, unidades, legendas e fontes; (b) a função de cada elemento; (c) boas práticas de composição. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a identificação de elementos ausentes ou inadequados em gráficos; um gráfico sem unidade ou fonte é ambíguo. PRÉ-REQUISITOS: conceitos básicos de visualização. OBJETIVOS OBSERVÁVEIS: (1) identificar a função de eixos, rótulos, unidades, legendas e fontes; (2) avaliar a composição de um gráfico. COMPETÊNCIAS DESENVOLVIDAS: auditoria visual; desenho de gráficos autossuficientes. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (fundamentos); unidade 8.2 (gráficos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: eixo identifica a grandeza e sua unidade; rótulo de dado mostra o valor; legenda identifica séries; fonte indica a origem dos dados e o período; composição autossuficiente: título que anuncia a mensagem, eixos com nome e unidade, rótulos quando poucos pontos, legenda próxima (ou rótulo direto), fonte e data de atualização; legenda e rótulo de eixo têm funções diferentes. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer a ausência de elementos essenciais.\n- Nível intermediário: descrever a função de cada elemento.\n- Nível avançado: avaliar a composição de um gráfico real.\n- Nível especialista: auditar um painel quanto à completude.\nCOMPARAÇÕES CRÍTICAS:\n- legenda x rótulo de eixo: legenda identifica séries; rótulo de eixo identifica a grandeza e sua unidade.\n- rótulo de dado x legenda: rótulo de dado mostra valor; legenda identifica série.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"gráfico sem fonte é aceitável\" — Motivo: sem fonte não há verificabilidade — Versão tecnicamente correta: sempre incluir fonte.\n- Afirmação errada: \"legenda substitui rótulo de eixo\" — Motivo: funções distintas — Versão tecnicamente correta: usar ambos.\n- Afirmação errada: \"rótulos longos rotacionados são legíveis\" — Motivo: dificultam leitura — Versão tecnicamente correta: usar barras horizontais.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: eixo, rótulo, unidade, legenda, fonte, composição.\n- Regras e mecanismos: gráfico autossuficiente tem título, eixos com unidade, rótulos, legenda, fonte.\n- Exceções: em painéis dinâmicos, a fonte pode estar em nota de rodapé.\n- Palavras-chave: eixo, rótulo, unidade, legenda, fonte, composição.\n- Checklist de domínio: (1) Identifico função de cada elemento? (2) Avalio composição? (3) Proponho correção? (4) Garanto autossuficiência?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual a função do eixo? (2) Qual a diferença entre legenda e rótulo de eixo? (3) Por que a fonte é essencial? (4) O que torna um gráfico autossuficiente? (5) Como resolver rótulos longos?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Reescrever o título 'Receita 2026' com mensagem.",
+          "resposta": "'Receita cresceu 8% no 1º trimestre de 2026, concentrada em duas unidades' (exemplo didático). A mensagem orienta a leitura; a variável já está no eixo. O título informativo reduz o salto cognitivo entre olhar e concluir."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Painel mostra linha com duas séries, sem legenda e sem unidade. Diagnóstico e correção mínima.",
+          "resposta": "Diagnóstico: leitura impossível de atribuir séries e de interpretar a grandeza. Correção mínima: rótulo direto ao fim de cada linha (melhor que legenda distante), nome do eixo com unidade e período de referência; acrescentar fonte da base e data de atualização."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A legenda no canto superior resolve a ausência de rótulo de eixo.'",
+          "correcao": "Errado. A legenda identifica SÉRIES; o rótulo de eixo identifica a GRANDEZA e sua unidade. Funções diferentes: uma linha com legenda e sem unidade continua ambígua ('subiu 30%' — 30% de quê, em que unidade?)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Todo gráfico deve indicar a fonte dos dados e o período de referência.",
+          "resposta": "Certo. Sem fonte e período, o dado não é auditável nem datável."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual título é informativo? A) 'Vendas'; B) 'Indicadores'; C) 'Vendas caíram 12% no 2º trimestre'; D) 'Gráfico de barras'.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de completar um gráfico com todos os elementos de composição exigidos para leitura autônoma, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "completará um gráfico com todos os elementos de composição exigidos para leitura autônoma"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) eixos, rótulos, unidades, legendas e fontes; (b) a função de cada elemento; (c) boas práticas de composição. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a identificação de elementos ausentes ou inadequados em gráficos; um gráfico sem unidade ou fonte é ambíguo. PRÉ-REQUISITOS: conceitos básicos de visualização. OBJETIVOS OBSERVÁVEIS: (1) identificar a função de eixos, rótulos, unidades, legendas e fontes; (2) avaliar a composição de um gr…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Eixos, rótulos, unidades, legendas e fontes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A legenda no canto superior resolve a ausência de rótulo de eixo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A legenda identifica SÉRIES; o rótulo de eixo identifica a GRANDEZA e sua unidade. Funções diferentes: uma linha com legenda e sem unidade continua ambígua ('subiu 30%' — 30% de quê, em que unidade?)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Reescrever o título 'Receita 2026' com mensagem.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "'Receita cresceu 8% no 1º trimestre de 2026, concentrada em duas unidades' (exemplo didático). A mensagem orienta a leitura; a variável já está no eixo. O título informativo reduz o salto cognitivo entre olhar e concluir.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Painel mostra linha com duas séries, sem legenda e sem unidade. Diagnóstico e correção mínima.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Diagnóstico: leitura impossível de atribuir séries e de interpretar a grandeza. Correção mínima: rótulo direto ao fim de cada linha (melhor que legenda distante), nome do eixo com unidade e período de referência; acrescentar fonte da base e data de atualização.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A legenda no canto superior resolve a ausência de rótulo de eixo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A legenda identifica SÉRIES; o rótulo de eixo identifica a GRANDEZA e sua unidade. Funções diferentes: uma linha com legenda e sem unidade continua ambígua ('subiu 30%' — 30% de quê, em que unidade?).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

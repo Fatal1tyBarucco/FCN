@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 3,
+    "unidadeTitulo": "6.3 Proteção de dados pessoais, informações legalmente protegidas, segurança, rastreabilidade e responsabilização",
+    "parte": 3,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U3P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U3P3.js",
+    "idsCompletos": [
+      "m6-u3-t3-s1",
+      "m6-u3-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u3-t3-s1",
+      "titulo": "Segurança, rastreabilidade e responsabilização no serviço público digital",
+      "topicoTitulo": "Segurança, rastreabilidade e responsabilização: exemplos, comparações, pegadinhas e síntese",
+      "topicoId": "modulo-6-unidade-3-topico-3",
+      "unidadeTitulo": "6.3 Proteção de dados pessoais, informações legalmente protegidas, segurança, rastreabilidade e responsabilização",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno relacionará os deveres de segurança, a rastreabilidade e a responsabilização do órgão e do servidor, desenhando o conjunto mínimo de controles e evidências aplicável a um sistema de atendimento.",
+      "conteudo": "SEGURANÇA é o conjunto de medidas técnicas e administrativas que protegem a informação e o serviço contra acessos não autorizados e situações acidentais ou ilícitas (art. 46 da LGPD — verificado em 2026-10-20). No serviço público, a segurança tem três destinatários simultâneos: o titular dos dados, o órgão e o controle interno — e uma falha em qualquer um dos três é falha de segurança do serviço. A adequação é medida ao risco: o art. 48, II, da Lei nº 14.129/2021 exige controles internos proporcionais aos riscos, observadas as causas, fontes, consequências e impactos e a relação custo-benefício, além de integração da gestão de riscos ao planejamento e aos processos (inciso I) e de proteção das liberdades civis e dos direitos fundamentais (inciso IV). AUDITORIA INTERNA (art. 49 da Lei nº 14.129/2021): abordagem sistemática e disciplinada para avaliar e melhorar a eficiência dos processos de governança, de gestão de riscos e de controle, com (I) trabalhos de avaliação e consultoria realizados de forma independente, conforme padrões de auditoria e de ética profissional reconhecidos internacionalmente; (II) abordagem baseada em risco para planejamento e definição de escopo, natureza, época e extensão dos procedimentos; (III) promoção da prevenção, da detecção e da investigação de fraudes praticadas por agentes públicos ou privados na utilização de recursos públicos federais. RASTREABILIDADE é a capacidade de reconstruir a cadeia de eventos: quem fez o quê, quando, em que sistema, com que autorização e sobre qual versão da regra. No plano jurídico, ela é pressuposto da responsabilização (art. 34 da Lei nº 12.527/2011) e do dever de auditoria (art. 43, IV, da Lei nº 14.129/2021); no plano técnico, é o que permite apurar dolo ou culpa — sem trilha de auditoria, a apuração é apenas narrativa. Componentes mínimos de uma trilha útil: identificador do usuário (conta individual, nunca compartilhada), data e hora com fuso, ação executada, objeto afetado, resultado, versão da regra ou do modelo aplicado e o identificador da sessão ou do protocolo. RESPONSABILIZAÇÃO (art. 34 da Lei nº 12.527/2011): os órgãos e entidades públicos respondem diretamente pelos danos causados em CONSEQUÊNCIA da divulgação não autorizada ou da utilização indevida de informações sigilosas ou pessoais, cabendo apuração de responsabilidade funcional nos casos de dolo ou culpa, assegurado o direito de regresso; o parágrafo único estende o dispositivo a pessoa física ou entidade privada que, por vínculo de qualquer natureza com o poder público, tenha acesso a informação sigilosa ou pessoal e a submeta a tratamento indevido. O art. 32 da LAI tipifica condutas ilícitas que ensejam responsabilidade do agente público ou militar — recusar-se a fornecer informação, retardar deliberadamente o fornecimento ou fornecê-la de forma incorreta, incompleta ou imprecisa; utilizar indevidamente, subtrair, destruir, inutilizar, desfigurar, alterar ou ocultar informação sob guarda; agir com dolo ou culpa na análise das solicitações; divulgar ou permitir divulgação ou acesso indevido a informação sigilosa ou pessoal; impor sigilo para obter proveito pessoal ou de terceiro ou para ocultar ato ilegal; ocultar da revisão de autoridade superior informação sigilosa para beneficiar a si ou a outrem; e destruir ou subtrair documentos concernentes a possíveis violações de direitos humanos por agentes do Estado. O § 2º do art. 32 registra que, pelas condutas descritas, o agente público pode responder por improbidade administrativa. O QUE A RASTREABILIDADE NÃO É: ela não é, por si, prova de culpa; é prova de fato. A imputação exige a trilha, além do contexto normativo e o exame de dolo ou culpa; e a ausência de registro, quando a obrigação de registrar existia, pode falar por si — mas é o sistema de controle interno que apresenta esse ônus. PROPOSTA DE CONTROLE MÍNIMO PARA UM SISTEMA DE ATENDIMENTO PÚBLICO: (1) autenticação individual com segundo fator para acessos privilegiados; (2) autorização por perfil e por necessidade de conhecimento; (3) registro imutável de acessos e alterações, com retenção definida; (4) criptografia em trânsito e em repouso, com gestão de chaves; (5) controle de alteração de dados pessoais com justificativa; (6) inventário de bases e catálogo de dados com finalidade e origem (art. 25, § 1º, I, da Lei nº 14.129/2021); (7) plano de resposta a incidente com prazo e comunicação ao titular e ao encarregado; (8) revisão periódica de acessos e de permissões, com formalização de aprovação do responsável; (9) relatório anual com estatísticas de pedidos e relação de informações classificadas (art. 30 da LAI); (10) teste documentado de restauração e de continuidade.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que diferencia uma trilha de auditoria útil de um arquivo de log comum?",
+          "resposta": "Um log comum registra eventos técnicos; a trilha útil é evidência de ato administrativo, e por isso precisa identificar o sujeito (identificador do usuário, não IP nem conta compartilhada), a ação, o objeto afetado, o resultado, a data e hora com fuso, a versão da regra aplicada e o identificador do protocolo. É essa completude que permite reconstituir o caso, apurar dolo ou culpa e sustentar o art. 34 da Lei nº 12.527/2011; e é o que sustenta o dever de auditoria do art. 43, IV, da Lei nº 14.129/2021."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um relatório com dados de usuários foi enviado a um destinatário externo por erro de preenchimento de campo. Quais são as ações de contenção e responsabilização?",
+          "resposta": "Contenção: suspender o fluxo, notificar o destinatário para que elimine ou devolva o arquivo e não o divulgue (registro de tudo o que foi feito), preservar a evidência (registros de envio, com identificador, data/hora, conta e destinatário), avaliar a exposição e comunicar o encarregado e a autoridade competente conforme a política de incidente e o plano de resposta, verificando a Resolução interna e as obrigações de comunicação ao titular. Responsabilização: apurar dolo ou culpa com base na trilha (art. 34 da LAI); avaliar se as medidas de segurança do art. 46 da LGPD eram aptas para o risco real (por exemplo, ausência de avaliação preventiva para destinatário externo, ou falha de revisão na etapa de preenchimento) — a falha de processo é parte da análise de segurança, não um detalhe."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o sistema registra todas as operações, a responsabilidade do servidor fica automaticamente demonstrada; o log substitui a apuração.'",
+          "correcao": "Errado. A trilha é prova de FATO, não imputação de culpa. O registro mostra o que ocorreu e quem executou; a responsabilização exige exame de dolo ou culpa e o enquadramento normativo (art. 34 da LAI). Do mesmo modo, a ausência de log não prova a inexistência da conduta — mas, quando o registro era obrigatório, integra o sistema de controle interno e pode ser avaliada como falha organizacional (art. 48 da Lei nº 14.129/2021)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Pelos órgãos e entidades públicos responde diretamente pelos danos causados em decorrência da divulgação não autorizada ou da utilização indevida de informações sigilosas ou pessoais, cabendo apuração de responsabilidade funcional nos casos de dolo ou culpa, com direito de regresso.",
+          "resposta": "Certo. É o conteúdo do art. 34 da Lei nº 12.527/2011, verificado em 2026-10-21."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Elementos que compõem uma trilha de auditoria útil à responsabilização: A) identificador individual do usuário; B) data e hora com fuso; C) versão da regra aplicada; D) endereço de rede do posto de trabalho como único identificador.",
+          "resposta": "A, B e C. O endereço de rede é dado de contexto e não substitui a identificação do sujeito, sobretudo em redes institucionais compartilhadas e acessadas remotamente."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de relacionar os deveres de segurança, a rastreabilidade e a responsabilização do órgão e do servidor, desenhando o conjunto mínimo de controles e evidências aplicável a um sistema de atendimento, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "relacionará os deveres de segurança, a rastreabilidade e a responsabilização do órgão e do servidor, desenhando o conjunto mínimo de controles e evidências aplicável a um sistema de atendimento"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "SEGURANÇA é o conjunto de medidas técnicas e administrativas que protegem a informação e o serviço contra acessos não autorizados e situações acidentais ou ilícitas (art. 46 da LGPD — verificado em 2026-10-20). No serviço público, a segurança tem três destinatários simultâneos: o titular dos dados, o órgão e o controle interno — e uma falha em qualquer um dos três é falha de segurança do serviço. A adequação é medida ao risco: o art. 48, II, da Lei nº 14.129/2021 exige controles internos proporc…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Segurança, rastreabilidade e responsabilização no serviço público digital",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o sistema registra todas as operações, a responsabilidade do servidor fica automaticamente demonstrada; o log substitui a apuração.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A trilha é prova de FATO, não imputação de culpa. O registro mostra o que ocorreu e quem executou; a responsabilização exige exame de dolo ou culpa e o enquadramento normativo (art. 34 da LAI). Do mesmo modo, a ausência de log não prova a inexistência da conduta — mas, quando o registro era obrigatório, integra o sistema de controle interno e pode ser avaliada como falha organizacional (art. 48 da Lei nº 14.129/2021)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que diferencia uma trilha de auditoria útil de um arquivo de log comum?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Um log comum registra eventos técnicos; a trilha útil é evidência de ato administrativo, e por isso precisa identificar o sujeito (identificador do usuário, não IP nem conta compartilhada), a ação, o objeto afetado, o resultado, a data e hora com fuso, a versão da regra aplicada e o identificador do protocolo. É essa completude que permite reconstituir o caso, apurar dolo ou culpa e sustentar o art. 34 da Lei nº 12.527/2011; e é o que sustenta o dever de auditoria do art. 43, IV, da Lei nº 14.129/2021.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um relatório com dados de usuários foi enviado a um destinatário externo por erro de preenchimento de campo. Quais são as ações de contenção e responsabilização?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Contenção: suspender o fluxo, notificar o destinatário para que elimine ou devolva o arquivo e não o divulgue (registro de tudo o que foi feito), preservar a evidência (registros de envio, com identificador, data/hora, conta e destinatário), avaliar a exposição e comunicar o encarregado e a autoridade competente conforme a política de incidente e o plano de resposta, verificando a Resolução interna e as obrigações de comunicação ao titular. Responsabilização: apurar dolo ou culpa com base na trilha (art. 34 da LAI); avaliar se as medidas de segurança do art. 46 da LGPD eram aptas para o risco real (por exemplo, ausência de avaliação preventiva para destinatário externo, ou falha de revisão na etapa de preenchimento) — a falha de processo é parte da análise de segurança, não um detalhe.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o sistema registra todas as operações, a responsabilidade do servidor fica automaticamente demonstrada; o log substitui a apuração.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A trilha é prova de FATO, não imputação de culpa. O registro mostra o que ocorreu e quem executou; a responsabilização exige exame de dolo ou culpa e o enquadramento normativo (art. 34 da LAI). Do mesmo modo, a ausência de log não prova a inexistência da conduta — mas, quando o registro era obrigatório, integra o sistema de controle interno e pode ser avaliada como falha organizacional (art. 48 da Lei nº 14.129/2021).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u3-t3-s2",
+      "titulo": "Exemplos resolvidos da unidade (três casos completos)",
+      "topicoTitulo": "Segurança, rastreabilidade e responsabilização: exemplos, comparações, pegadinhas e síntese",
+      "topicoId": "modulo-6-unidade-3-topico-3",
+      "unidadeTitulo": "6.3 Proteção de dados pessoais, informações legalmente protegidas, segurança, rastreabilidade e responsabilização",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno resolverá, com o template de nove itens, três casos de proteção de dados, sigilo e responsabilização no serviço público digital.",
+      "conteudo": "Os exemplos abaixo são hipóteses didáticas construídas para ensino, sem correspondência com caso real de órgão, empresa ou pessoa determinada. Todos seguem os nove itens exigidos para exemplos resolvidos.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "EXEMPLO 1 (INTRODUÇÃO) — O órgão recebeu pedido de acesso a uma planilha interna de licitações, contendo nomes, cargos e valores pagos a fornecedores. Parte dos fornecedores são pessoas físicas com CPF no cadastro. Como o órgão deve agir?",
+          "resposta": "Problema: pedido de acesso a informação que combina informação pública (dados de licitação e contrato) e informação pessoal (dados de fornecedor pessoa física). Dados disponíveis: pedido protocolado, com identificação do requerente e especificação da base pedida; a base contém colunas de identificação de pessoas físicas; a Lei nº 12.527/2011 exige o dever de divulgar editais, resultados e contratos (art. 8º, § 1º, IV) e, no mesmo regime, protege a informação pessoal (art. 31); o art. 30, § 6º, da Lei nº 14.129/2021 trata da abertura de bases. Conceitos aplicáveis: acesso parcial (art. 7º, § 2º, da LAI); proteção da informação pessoal (art. 31); compatibilidade entre publicidade e privacidade; agregação e pseudonimização como técnicas de conciliação. Estratégia: separar a base em camada pública (objeto, valor, contrato, fornecedor) e camada pessoal (CPF, endereço, dados bancários, dados de saúde) e entregar o máximo possível com ocultação apenas do que for necessário. Passo a passo: (1) verificar a identidade e a especificação do pedido (art. 10); (2) identificar as colunas com dados pessoais; (3) aplicar ocultação ou agregação nas colunas pessoais — por exemplo, substituir o CPF por identificador de fornecedor, mantendo a conferência possível apenas por quem tem função específica; (4) gerar o extrato com certificação de conformidade, se a manipulação puder prejudicar a integridade do documento (art. 13); (5) comunicar a data, o local e o modo de consulta ou reprodução (art. 11, § 1º, I); (6) registrar a ocorrência, os campos ocultados e o método. Resultado: entrega da planilha em formato útil e compatível com o dever de transparência, com a camada pessoal minimizada e motivada. Justificativa técnica: o art. 7º, § 2º, da LAI assegura o acesso à parte não sigilosa por cópia com ocultação da parte sob sigilo; e a minimização preserva o interesse público do art. 8º sem descuidar do art. 31. Erros frequentes: (a) negar o pedido inteiro por conter CPF; (b) entregar o CPF «sem problema, porque é pessoa jurídica» — esquecendo a checagem de pessoa física; (c) gerar relatório novo sem avisar que é versão tratada e não o original; (d) não registrar o método de ocultação. Variação para transferência: se o requerente for o próprio fornecedor pessoa física, o regime muda: incide o direito de acesso do titular (art. 18 da LGPD) e a resposta é individualizada, com correção e anonimização quando cabíveis."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "EXEMPLO 2 (APLICAÇÃO) — Um servidor público publica em sua conta pessoal de rede social a foto de um cidadão atendido, com o nome completo no texto, sem consentimento. Como a unidade 6.3 enquadra o caso?",
+          "resposta": "Problema: uso de perfil pessoal para armazenamento de informação pessoal de terceiros obtida em atendimento. Dados disponíveis: o servidor é agente público; a pessoa retratada é paciente/cidadão, dados da foto e do nome são pessoais; o atendimento é serviço público; não há consentimento registrado; a informação diz respeito a pessoa identificável. Conceitos aplicáveis: art. 31 da Lei nº 12.527/2011 (proteção da informação pessoal, com responsabilização pelo uso indevido no § 2º); art. 32, IV, da LAI (conduta de divulgar ou permitir a divulgação ou acessar indevidamente informação pessoal); art. 5º, I e II, e art. 46 da LGPD (dado pessoal, dado sensível de saúde e dever de segurança); princípios da moralidade e da publicidade (unidade 6.1). Estratégia: agir em três frentes — contenção imediata, apuração administrativa e correção do efeito da propagação. Passo a passo: (1) remover o conteúdo ou torná-lo privado de imediato e preservar registro do que foi publicado (a evidência é a própria publicação); (2) preservar a prova (captura, data/hora, conta), pois a apuração depende da trilha; (3) comunicar ao titular e avaliar a necessidade de apoio, conforme política de incidente; (4) abrir apuração com enquadramento nos arts. 32, IV, e 32, I, da LAI (recusa ou fornecimento incorreto) e, se houver uso indevido de dados de saúde, no art. 5º, II, da LGPD; (5) apurar responsabilidade funcional por dolo ou culpa (art. 34 da LAI) e eventual improbidade (art. 32, § 2º); (6) registrar a ocorrência e as medidas em ata e no sistema de gestão de riscos. Resultado: conteúdo retirado, titular comunicado, apuração formal aberta e risco de uso indevido de sistemas e redes registrado como evento crítico. Justificativa técnica: o regime da informação pessoal protege o cidadão independentemente do canal usado pelo servidor; o perfil pessoal não é extensão do órgão, e o princípio da moralidade proíbe a exposição de dado de atendimento para fins alheios ao serviço. Erros frequentes: (a) tratar como «questão disciplinar genérica», sem o enquadramento nos arts. 31 e 32 da LAI; (b) pedir ao cidadão que «apague a postagem» como solução; (c) não preservar a prova antes de apagar; (d) concluir que, por não haver sigilo de Estado, o fato é irrelevante. Variação para transferência: se o servidor agiu em campanha institucional do órgão, usando a conta institucional e com autorização de comunicação social, o enquadramento muda (publicidade institucional e uso institucional de redes sociais, unidade 6.4), mas permanece a vedação de expor dados de terceiros além do necessário."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Um órgão revelou que o sistema de triagem de benefícios foi invadido, e o invasor exportou a base completa (nome, CPF, diagnóstico) de 4.000 pessoas. A comunicação interna optou por «não comunicar o titular para evitar pânico». Avalie a decisão e o que a unidade 6.3 exige.",
+          "correcao": "Problema: incidente de segurança com exposição de dado pessoal sensível em escala, com decisão de comunicação contrária à proteção do titular. Dados disponíveis: 4.000 registros com nome, CPF e diagnóstico (dado pessoal sensível, art. 5º, II, da LGPD — verificado em 2026-10-20);Sinais de invasão com autenticação indevida; há registro de auditoria e logs de acesso; a equipe de segurança identificou a falha técnica; o plano de resposta a incidentes do órgão prevê comunicação ao encarregado. Conceitos aplicáveis: art. 46 da LGPD (medidas de segurança aptas); art. 25 da Lei nº 14.129/2021 (transparência e controle do tratamento); art. 34 da Lei nº 12.527/2011 (responsabilidade por danos por divulgação não autorizada); art. 32, IV, da LAI (conduta de divulgar ou permitir acesso indevido a informação pessoal); art. 48 da Lei nº 14.129/2021 (gestão de riscos e controle interno proporcionais) e art. 49 (auditoria interna com abordagem baseada em risco). Estratégia: não decidir a comunicação «para evitar pânico» com base em avaliação subjetiva de comunicação, e sim com base no dever legal de proteção, na avaliação de risco ao titular (dano potencial pela combinação de diagnóstico com CPF — risco de estigmatização, fraude e discriminação) e nos procedimentos internos. Passo a passo: (1) conter: revogar credenciais, isolar o vetor, preservar logs e imagens forenses, e preservar a prova sem alterar a base; (2) avaliar a extensão real do vazamento (quantos registros, quais campos, por quanto tempo, houve acesso posterior pelos dados expostos); (3) verificar as medidas de segurança existentes à luz do art. 46 e do art. 48 — se a exposição decorreu de falha controlável (por exemplo, credencial padrão, ausência de MFA, endpoint sem criptografia, saída de dados aberta, permissão excessiva), o caso é também um achado de controle interno; (4) comunicar ao encarregado e à autoridade competente e avaliar a comunicação aos titulares, com linguagem clara sobre o que foi exposto, o que o titular pode fazer e a linha de contato, porque a omissão agrava o dano e a alegação de «pânico» não constitui fundamento legal para ocultar; (5) comunicar às autoridades de proteção de dados e de segurança, quando cabível, conforme as regras aplicáveis; (6) abrir plano de correção com prazo, responsável e revisão pela auditoria interna; (7) registrar tudo no sistema de gestão de riscos. Resultado: contenção e apuração do incidente, comunicação efetiva aos afetados e apuração administrativa e técnica do servidor que deu causa, com registro formal das decisões de comunicação. Justificativa técnica: o dever de segurança é o de proteger o titular; o titular tem direito de saber do que o órgão tem conhecimento oficial sobre seus dados, e a omissão de comunicação agrava o risco de dano (fraude com diagnóstico, discriminação). A renúncia à comunicação é decisão de risco da instituição, não do servidor isoladamente. Erros frequentes: (a) tratar comunicação ao titular como discussão jurídica e não como decisão de gestão de risco documentada; (b) destruir ou rotacionar logs antes da preservação forense; (c) comunicar apenas quando houver «confirmação» de uso indevido, confundindo exposição com uso; (d) não comunicar o incidente ao encarregado e à autoridade competente. Variação para transferência: se o vazamento tiver ocorrido por ação de servidor com acesso legítimo e registro íntegro de downloads, o caso desloca-se da vulnerabilidade técnica para a responsabilização funcional (art. 34 da LAI) e para a apuração de uso indevido de dados (art. 32, IV), exigindo análise do caso individual e do processo, e não uma resposta coletiva e automática."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A ausência de registro de auditoria em um sistema obrigatório de rastreabilidade pode ser analisada como falha do sistema de controle interno, sem que isso presuma culpa de servidor.",
+          "resposta": "Certo. A ausência de registro é falha organizacional avaliável no sistema de controle interno (art. 48 da Lei nº 14.129/2021); a imputação de culpa exige exame do caso individual. Presumir culpa a partir da falha de controle seria o mesmo erro de fundo que tratar a trilha como prova automática de culpa."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Diante de incidente com exposição de dados pessoais, são ações tecnicamente corretas: A) conter e preservar logs e evidências; B) preservar a prova antes de alterar a configuração; C) destruir registros de acesso rotineiros para reduzir exposição; D) avaliar o risco residual aos titulares.",
+          "resposta": "A, B e D. O item C destrói evidência e agrava a apuração (art. 32, II, da Lei nº 12.527/2011)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de proteção de dados, sigilo e responsabilização no serviço público digital, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolverá, com o template de nove itens, três casos de proteção de dados, sigilo e responsabilização no serviço público digital"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Os exemplos abaixo são hipóteses didáticas construídas para ensino, sem correspondência com caso real de órgão, empresa ou pessoa determinada. Todos seguem os nove itens exigidos para exemplos resolvidos.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exemplos resolvidos da unidade (três casos completos)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Um órgão revelou que o sistema de triagem de benefícios foi invadido, e o invasor exportou a base completa (nome, CPF, diagnóstico) de 4.000 pessoas. A comunicação interna optou por «não comunicar o titular para evitar pânico». Avalie a decisão e o que a unidade 6.3 exige.",
+            "porqueErrada": "",
+            "versaoCorreta": "Problema: incidente de segurança com exposição de dado pessoal sensível em escala, com decisão de comunicação contrária à proteção do titular. Dados disponíveis: 4.000 registros com nome, CPF e diagnóstico (dado pessoal sensível, art. 5º, II, da LGPD — verificado em 2026-10-20);Sinais de invasão com autenticação indevida; há registro de auditoria e logs de acesso; a equipe de segurança identificou a falha técnica; o plano de resposta a incidentes do órgão prevê comunicação ao encarregado. Conceitos aplicáveis: art. 46 da LGPD (medidas de segurança aptas); art. 25 da Lei nº 14.129/2021 (transparência e controle do tratamento); art. 34 da Lei nº 12.527/2011 (responsabilidade por danos por divulgação não autorizada); art. 32, IV, da LAI (conduta de divulgar ou permitir acesso indevido a informação pessoal); art. 48 da Lei nº 14.129/2021 (gestão de riscos e controle interno proporcionais) e art. 49 (auditoria interna com abordagem baseada em risco). Estratégia: não decidir a comunicação «para evitar pânico» com base em avaliação subjetiva de comunicação, e sim com base no dever legal de proteção, na avaliação de risco ao titular (dano potencial pela combinação de diagnóstico com CPF — risco de estigmatização, fraude e discriminação) e nos procedimentos internos. Passo a passo: (1) conter: revogar credenciais, isolar o vetor, preservar logs e imagens forenses, e preservar a prova sem alterar a base; (2) avaliar a extensão real do vazamento (quantos registros, quais campos, por quanto tempo, houve acesso posterior pelos dados expostos); (3) verificar as medidas de segurança existentes à luz do art. 46 e do art. 48 — se a exposição decorreu de falha controlável (por exemplo, credencial padrão, ausência de MFA, endpoint sem criptografia, saída de dados aberta, permissão excessiva), o caso é também um achado de controle interno; (4) comunicar ao encarregado e à autoridade competente e avaliar a comunicação aos titulares, com linguagem clara sobre o que foi exposto, o que o titular pode fazer e a linha de contato, porque a omissão agrava o dano e a alegação de «pânico» não constitui fundamento legal para ocultar; (5) comunicar às autoridades de proteção de dados e de segurança, quando cabível, conforme as regras aplicáveis; (6) abrir plano de correção com prazo, responsável e revisão pela auditoria interna; (7) registrar tudo no sistema de gestão de riscos. Resultado: contenção e apuração do incidente, comunicação efetiva aos afetados e apuração administrativa e técnica do servidor que deu causa, com registro formal das decisões de comunicação. Justificativa técnica: o dever de segurança é o de proteger o titular; o titular tem direito de saber do que o órgão tem conhecimento oficial sobre seus dados, e a omissão de comunicação agrava o risco de dano (fraude com diagnóstico, discriminação). A renúncia à comunicação é decisão de risco da instituição, não do servidor isoladamente. Erros frequentes: (a) tratar comunicação ao titular como discussão jurídica e não como decisão de gestão de risco documentada; (b) destruir ou rotacionar logs antes da preservação forense; (c) comunicar apenas quando houver «confirmação» de uso indevido, confundindo exposição com uso; (d) não comunicar o incidente ao encarregado e à autoridade competente. Variação para transferência: se o vazamento tiver ocorrido por ação de servidor com acesso legítimo e registro íntegro de downloads, o caso desloca-se da vulnerabilidade técnica para a responsabilização funcional (art. 34 da LAI) e para a apuração de uso indevido de dados (art. 32, IV), exigindo análise do caso individual e do processo, e não uma resposta coletiva e automática."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O órgão recebeu pedido de acesso a uma planilha interna de licitações, contendo nomes, cargos e valores pagos a fornecedores. Parte dos fornecedores são pessoas físicas com CPF no cadastro. Como o órgão deve agir?",
+            "dados": "Pedido protocolado, com identificação do requerente e especificação da base pedida; a base contém colunas de identificação de pessoas físicas; a Lei nº 12.527/2011 exige o dever de divulgar editais, resultados e contratos (art. 8º, § 1º, IV) e, no mesmo regime, protege a informação pessoal (art. 31); o art. 30, § 6º, da Lei nº 14.129/2021 trata da abertura de bases.",
+            "conceitos": [
+              "Acesso parcial (art. 7º, § 2º, da LAI)",
+              "Proteção da informação pessoal (art. 31)",
+              "Compatibilidade entre publicidade e privacidade",
+              "Agregação e pseudonimização como técnicas de conciliação"
+            ],
+            "estrategia": "Separar a base em camada pública (objeto, valor, contrato, fornecedor) e camada pessoal (CPF, endereço, dados bancários, dados de saúde) e entregar o máximo possível com ocultação apenas do que for necessário.",
+            "execucao": [
+              "1) Verificar a identidade e a especificação do pedido (art. 10)",
+              "2) Identificar as colunas com dados pessoais",
+              "3) Aplicar ocultação ou agregação nas colunas pessoais — por exemplo, substituir o CPF por identificador de fornecedor, mantendo a conferência possível apenas por quem tem função específica",
+              "4) Gerar o extrato com certificação de conformidade, se a manipulação puder prejudicar a integridade do documento (art. 13)",
+              "5) Comunicar a data, o local e o modo de consulta ou reprodução (art. 11, § 1º, I)",
+              "6) Registrar a ocorrência, os campos ocultados e o método."
+            ],
+            "resultado": "Entrega da planilha em formato útil e compatível com o dever de transparência, com a camada pessoal minimizada e motivada.",
+            "justificativa": "O art. 7º, § 2º, da LAI assegura o acesso à parte não sigilosa por cópia com ocultação da parte sob sigilo; e a minimização preserva o interesse público do art. 8º sem descuidar do art. 31.",
+            "errosFrequentes": [
+              "a) Negar o pedido inteiro por conter CPF",
+              "b) Entregar o CPF «sem problema, porque é pessoa jurídica» — esquecendo a checagem de pessoa física",
+              "c) Gerar relatório novo sem avisar que é versão tratada e não o original",
+              "d) Não registrar o método de ocultação."
+            ],
+            "variacao": "Se o requerente for o próprio fornecedor pessoa física, o regime muda: incide o direito de acesso do titular (art. 18 da LGPD) e a resposta é individualizada, com correção e anonimização quando cabíveis."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um servidor público publica em sua conta pessoal de rede social a foto de um cidadão atendido, com o nome completo no texto, sem consentimento. Como a unidade 6.3 enquadra o caso?",
+            "dados": "O servidor é agente público; a pessoa retratada é paciente/cidadão, dados da foto e do nome são pessoais; o atendimento é serviço público; não há consentimento registrado; a informação diz respeito a pessoa identificável.",
+            "conceitos": [
+              "Art. 31 da Lei nº 12.527/2011 (proteção da informação pessoal, com responsabilização pelo uso indevido no § 2º)",
+              "Art. 32, IV, da LAI (conduta de divulgar ou permitir a divulgação ou acessar indevidamente informação pessoal)",
+              "Art. 5º, I e II, e art. 46 da LGPD (dado pessoal, dado sensível de saúde e dever de segurança)",
+              "Princípios da moralidade e da publicidade (unidade 6.1)"
+            ],
+            "estrategia": "Agir em três frentes — contenção imediata, apuração administrativa e correção do efeito da propagação.",
+            "execucao": [
+              "1) Remover o conteúdo ou torná-lo privado de imediato e preservar registro do que foi publicado (a evidência é a própria publicação)",
+              "2) Preservar a prova (captura, data/hora, conta), pois a apuração depende da trilha",
+              "3) Comunicar ao titular e avaliar a necessidade de apoio, conforme política de incidente",
+              "4) Abrir apuração com enquadramento nos arts. 32, IV, e 32, I, da LAI (recusa ou fornecimento incorreto) e, se houver uso indevido de dados de saúde, no art. 5º, II, da LGPD",
+              "5) Apurar responsabilidade funcional por dolo ou culpa (art. 34 da LAI) e eventual improbidade (art. 32, § 2º)",
+              "6) Registrar a ocorrência e as medidas em ata e no sistema de gestão de riscos."
+            ],
+            "resultado": "Conteúdo retirado, titular comunicado, apuração formal aberta e risco de uso indevido de sistemas e redes registrado como evento crítico.",
+            "justificativa": "O regime da informação pessoal protege o cidadão independentemente do canal usado pelo servidor; o perfil pessoal não é extensão do órgão, e o princípio da moralidade proíbe a exposição de dado de atendimento para fins alheios ao serviço.",
+            "errosFrequentes": [
+              "a) Tratar como «questão disciplinar genérica», sem o enquadramento nos arts. 31 e 32 da LAI",
+              "b) Pedir ao cidadão que «apague a postagem» como solução",
+              "c) Não preservar a prova antes de apagar",
+              "d) Concluir que, por não haver sigilo de Estado, o fato é irrelevante."
+            ],
+            "variacao": "Se o servidor agiu em campanha institucional do órgão, usando a conta institucional e com autorização de comunicação social, o enquadramento muda (publicidade institucional e uso institucional de redes sociais, unidade 6.4), mas permanece a vedação de expor dados de terceiros além do necessário."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um órgão revelou que o sistema de triagem de benefícios foi invadido, e o invasor exportou a base completa (nome, CPF, diagnóstico) de 4.000 pessoas. A comunicação interna optou por «não comunicar o titular para evitar pânico». Avalie a decisão e o que a unidade 6.3 exige.",
+            "dados": "4.000 registros com nome, CPF e diagnóstico (dado pessoal sensível, art. 5º, II, da LGPD — verificado em 2026-10-20);Sinais de invasão com autenticação indevida; há registro de auditoria e logs de acesso; a equipe de segurança identificou a falha técnica; o plano de resposta a incidentes do órgão prevê comunicação ao encarregado.",
+            "conceitos": [
+              "Art. 46 da LGPD (medidas de segurança aptas)",
+              "Art. 25 da Lei nº 14.129/2021 (transparência e controle do tratamento)",
+              "Art. 34 da Lei nº 12.527/2011 (responsabilidade por danos por divulgação não autorizada)",
+              "Art. 32, IV, da LAI (conduta de divulgar ou permitir acesso indevido a informação pessoal)",
+              "Art. 48 da Lei nº 14.129/2021 (gestão de riscos e controle interno proporcionais) e art. 49 (auditoria interna com abordagem baseada em risco)"
+            ],
+            "estrategia": "Não decidir a comunicação «para evitar pânico» com base em avaliação subjetiva de comunicação, e sim com base no dever legal de proteção, na avaliação de risco ao titular (dano potencial pela combinação de diagnóstico com CPF — risco de estigmatização, fraude e discriminação) e nos procedimentos internos.",
+            "execucao": [
+              "1) Conter: revogar credenciais, isolar o vetor, preservar logs e imagens forenses, e preservar a prova sem alterar a base",
+              "2) Avaliar a extensão real do vazamento (quantos registros, quais campos, por quanto tempo, houve acesso posterior pelos dados expostos)",
+              "3) Verificar as medidas de segurança existentes à luz do art. 46 e do art. 48 — se a exposição decorreu de falha controlável (por exemplo, credencial padrão, ausência de MFA, endpoint sem criptografia, saída de dados aberta, permissão excessiva), o caso é também um achado de controle interno",
+              "4) Comunicar ao encarregado e à autoridade competente e avaliar a comunicação aos titulares, com linguagem clara sobre o que foi exposto, o que o titular pode fazer e a linha de contato, porque a omissão agrava o dano e a alegação de «pânico» não constitui fundamento legal para ocultar",
+              "5) Comunicar às autoridades de proteção de dados e de segurança, quando cabível, conforme as regras aplicáveis",
+              "6) Abrir plano de correção com prazo, responsável e revisão pela auditoria interna",
+              "7) Registrar tudo no sistema de gestão de riscos."
+            ],
+            "resultado": "Contenção e apuração do incidente, comunicação efetiva aos afetados e apuração administrativa e técnica do servidor que deu causa, com registro formal das decisões de comunicação.",
+            "justificativa": "O dever de segurança é o de proteger o titular; o titular tem direito de saber do que o órgão tem conhecimento oficial sobre seus dados, e a omissão de comunicação agrava o risco de dano (fraude com diagnóstico, discriminação). A renúncia à comunicação é decisão de risco da instituição, não do servidor isoladamente.",
+            "errosFrequentes": [
+              "a) Tratar comunicação ao titular como discussão jurídica e não como decisão de gestão de risco documentada",
+              "b) Destruir ou rotacionar logs antes da preservação forense",
+              "c) Comunicar apenas quando houver «confirmação» de uso indevido, confundindo exposição com uso",
+              "d) Não comunicar o incidente ao encarregado e à autoridade competente."
+            ],
+            "variacao": "Se o vazamento tiver ocorrido por ação de servidor com acesso legítimo e registro íntegro de downloads, o caso desloca-se da vulnerabilidade técnica para a responsabilização funcional (art. 34 da LAI) e para a apuração de uso indevido de dados (art. 32, IV), exigindo análise do caso individual e do processo, e não uma resposta coletiva e automática."
+          }
+        ]
+      }
+    }
+  ]
+}

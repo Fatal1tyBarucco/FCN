@@ -44,7 +44,7 @@ const curriculumM4 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá as três propriedades da tríade de segurança da informação, diferenciará cenários de violação de cada uma e relacionará cada propriedade a controles concretos, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de definir as três propriedades da tríade de segurança da informação, diferenciará cenários de violação de cada uma e relacionará cada propriedade a controles concretos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u1-t1-s2",
@@ -80,7 +80,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará autenticidade, responsabilização (accountability) e não repúdio, e indicará os mecanismos que sustentam cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar autenticidade, responsabilização (accountability) e não repúdio, e indicará os mecanismos que sustentam cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u1-t1-s3",
@@ -116,7 +116,7 @@ const curriculumM4 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno construirá a cadeia conceitual ativo-ameaça-vulnerabilidade-risco-impacto e classificará tratamentos de risco em situações concretas, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de construir a cadeia conceitual ativo-ameaça-vulnerabilidade-risco-impacto e classificará tratamentos de risco em situações concretas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -158,7 +158,7 @@ const curriculumM4 = {
                     "resposta": "D"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará controles de segurança por sua natureza e justificará o uso de controles compensatórios temporários, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar controles de segurança por sua natureza e justificará o uso de controles compensatórios temporários, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u1-t2-s2",
@@ -194,7 +194,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá autenticação, autorização e auditoria e aplicará o princípio do menor privilégio ao desenho de perfis de acesso, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de distinguir autenticação, autorização e auditoria e aplicará o princípio do menor privilégio ao desenho de perfis de acesso, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "wlaNFx73qh4",
@@ -241,7 +241,7 @@ const curriculumM4 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno comparará fatores de autenticação, avaliará a força de diferentes mecanismos MFA e indicará alternativas resistentes a phishing, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de comparar fatores de autenticação, avaliará a força de diferentes mecanismos MFA e indicará alternativas resistentes a phishing, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -283,7 +283,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o funcionamento da criptografia simétrica, identificará seu problema central e indicará usos adequados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de explicar o funcionamento da criptografia simétrica, identificará seu problema central e indicará usos adequados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "cWld3rMD7Wk",
@@ -330,7 +330,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá o par de chaves, relacionará usos (confidencialidade x assinatura), explicará certificados e a cadeia de confiança e detalhará o funcionamento híbrido do TLS, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de descrever o par de chaves, relacionará usos (confidencialidade x assinatura), explicará certificados e a cadeia de confiança e detalhará o funcionamento híbrido do TLS, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u1-t3-s3",
@@ -366,7 +366,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as propriedades de uma função de hash, distinguirá hash de criptografia e explicará como a assinatura combina hash e chave privada, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de enumerar as propriedades de uma função de hash, distinguirá hash de criptografia e explicará como a assinatura combina hash e chave privada, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -408,7 +408,7 @@ const curriculumM4 = {
                     "resposta": "A"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno calculará custo de restauração dos três tipos de backup em uma sequência semanal e escolherá a estratégia adequada a uma janela de tempo disponível, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de calcular custo de restauração dos três tipos de backup em uma sequência semanal e escolherá a estratégia adequada a uma janela de tempo disponível, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u1-t4-s2",
@@ -444,7 +444,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará a regra 3-2-1 a um cenário de órgão público e justificará cópias imutáveis e testes de restauração como defesa contra ransomware, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aplicar a regra 3-2-1 a um cenário de órgão público e justificará cópias imutáveis e testes de restauração como defesa contra ransomware, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u1-t4-s3",
@@ -480,7 +480,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará continuidade de negócios de recuperação de desastres, calculará a frequência de backup exigida por um RPO e traduzirá um RTO em requisito de infraestrutura, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar continuidade de negócios de recuperação de desastres, calculará a frequência de backup exigida por um RPO e traduzirá um RTO em requisito de infraestrutura, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -528,7 +528,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará vírus de worm pelos critérios hospedeiro e propagação autônoma, e identificará seus vetores de infecção, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar vírus de worm pelos critérios hospedeiro e propagação autônoma, e identificará seus vetores de infecção, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u2-t1-s2",
@@ -564,7 +564,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o mecanismo do trojan (falsificação de aparência legítima) e relacionará spyware e adware a violações de privacidade e de proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de explicar o mecanismo do trojan (falsificação de aparência legítima) e relacionará spyware e adware a violações de privacidade e de proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "qqgkhvsyL9Q",
@@ -611,7 +611,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá o ciclo de ataque do ransomware, o mecanismo de ocultação de rootkits e o funcionamento de botnets, e relacionará cada um a controles de defesa específicos, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de descrever o ciclo de ataque do ransomware, o mecanismo de ocultação de rootkits e o funcionamento de botnets, e relacionará cada um a controles de defesa específicos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -653,7 +653,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno lerá e escreverá regras de firewall de pacotes e explicará por que a política padrão é a negação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de ler e escreverá regras de firewall de pacotes e explicará por que a política padrão é a negação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "TbjhWIhLQDU",
@@ -700,7 +700,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará como a tabela de estados simplifica regras e introduz o ciclo de vida de conexão TCP como critério de filtragem, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de explicar como a tabela de estados simplifica regras e introduz o ciclo de vida de conexão TCP como critério de filtragem, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u2-t2-s3",
@@ -736,7 +736,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará firewall de aplicação de firewall de pacotes e explicará o papel do WAF na proteção de aplicações web, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar firewall de aplicação de firewall de pacotes e explicará o papel do WAF na proteção de aplicações web, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -778,7 +778,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará IDS e IPS por atuação (alerta x bloqueio) e colocação na rede, e comparará detecção por assinatura e por anomalia, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar IDS e IPS por atuação (alerta x bloqueio) e colocação na rede, e comparará detecção por assinatura e por anomalia, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u2-t3-s2",
@@ -814,7 +814,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno elencará o que registrar, como proteger os registros e descreverá as fases da resposta a incidentes na ordem correta, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de elencar o que registrar, como proteger os registros e descreverá as fases da resposta a incidentes na ordem correta, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u2-t3-s3",
@@ -850,7 +850,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno comparará antivírus por assinatura e solução EDR, indicando requisitos operacionais de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de comparar antivírus por assinatura e solução EDR, indicando requisitos operacionais de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -892,7 +892,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno projetará segmentação de rede para conter movimentação lateral e enumerará ações de hardening de um servidor exposto, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de projetar segmentação de rede para conter movimentação lateral e enumerará ações de hardening de um servidor exposto, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u2-t4-s2",
@@ -928,7 +928,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá o ciclo inventário–varredura–priorização–correção–verificação e priorizará vulnerabilidades combinando severidade e exposição, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de descrever o ciclo inventário–varredura–priorização–correção–verificação e priorizará vulnerabilidades combinando severidade e exposição, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u2-t4-s3",
@@ -964,7 +964,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno argumentará pela sobreposição de camadas de controle e demonstrará como uma falha isolada não compromete o todo, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de argumentar pela sobreposição de camadas de controle e demonstrará como uma falha isolada não compromete o todo, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -1012,7 +1012,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará phishing, spear phishing e whaling pelos critérios de alvo e grau de personalização, e enumerará indicadores verificáveis de tentativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar phishing, spear phishing e whaling pelos critérios de alvo e grau de personalização, e enumerará indicadores verificáveis de tentativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u3-t1-s2",
@@ -1048,7 +1048,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará pharming de phishing pelo vetor (redirecionamento x persuasão) e identificará formas de spoofing relevantes para o serviço público, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar pharming de phishing pelo vetor (redirecionamento x persuasão) e identificará formas de spoofing relevantes para o serviço público, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u3-t1-s3",
@@ -1084,7 +1084,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno reconhecerá pretexting e baiting, relacionará os princípios psicológicos explorados e desenhará treinamento defensivo com simulação, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de reconhecer pretexting e baiting, relacionará os princípios psicológicos explorados e desenhará treinamento defensivo com simulação, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1126,7 +1126,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará os três ataques pela distribuição de tentativas e indicará defesas específicas para cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar os três ataques pela distribuição de tentativas e indicará defesas específicas para cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u3-t2-s2",
@@ -1162,7 +1162,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará DoS de DDoS pela origem do tráfego, descreverá as camadas de esgotamento e enumerará contramedidas defensivas, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar DoS de DDoS pela origem do tráfego, descreverá as camadas de esgotamento e enumerará contramedidas defensivas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u3-t2-s3",
@@ -1198,7 +1198,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o mecanismo do ataque de intermediário (MITM) e relacionará cada técnica a uma contramedida específica, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de explicar o mecanismo do ataque de intermediário (MITM) e relacionará cada técnica a uma contramedida específica, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1240,7 +1240,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá a cadeia vazamento → reutilização → comprometimento de conta e enumerará as primeiras ações de contenção e os deveres de transparência do órgão, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de descrever a cadeia vazamento → reutilização → comprometimento de conta e enumerará as primeiras ações de contenção e os deveres de transparência do órgão, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u3-t3-s2",
@@ -1276,7 +1276,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará indicadores de comprometimento por tipo, explicará a diferença entre indicador e evidência e discutirá os limites da detecção baseada em listas, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar indicadores de comprometimento por tipo, explicará a diferença entre indicador e evidência e discutirá os limites da detecção baseada em listas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u3-t3-s3",
@@ -1312,7 +1312,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno executará procedimento de triagem de mensagem suspeita sem se expor ao risco e justificará cada passo, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de executar procedimento de triagem de mensagem suspeita sem se expor ao risco e justificará cada passo, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -1360,7 +1360,7 @@ const curriculumM4 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará os arts. 1º, 3º, 4º e 5º da LGPD (verificados) para classificar sujeitos e situações de tratamento em cenários do serviço público, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aplicar os arts. 1º, 3º, 4º e 5º da LGPD (verificados) para classificar sujeitos e situações de tratamento em cenários do serviço público, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u4-t1-s2",
@@ -1396,7 +1396,7 @@ const curriculumM4 = {
                     "resposta": "D"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará os fundamentos e os direitos do titular (arts. 2º, 17 e 18 — verificados) e descreverá como um órgão público atende cada direito na prática, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de enumerar os fundamentos e os direitos do titular (arts. 2º, 17 e 18 — verificados) e descreverá como um órgão público atende cada direito na prática, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u4-t1-s3",
@@ -1432,7 +1432,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará o art. 46 da LGPD às medidas técnicas e administrativas de um órgão e distinguirá o que a lei exige do que é boa prática recomendável, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de relacionar o art. 46 da LGPD às medidas técnicas e administrativas de um órgão e distinguirá o que a lei exige do que é boa prática recomendável, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1474,7 +1474,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno situará o Marco Civil no ordenamento de direitos digitais e distinguirá seu objeto do objeto da LGPD, com marcação explícita do grau de verificação, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de situar o Marco Civil no ordenamento de direitos digitais e distinguirá seu objeto do objeto da LGPD, com marcação explícita do grau de verificação, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u4-t2-s2",
@@ -1510,7 +1510,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno resolverá conflitos aparentes entre transparência e proteção de dados usando a distinção entre informação pública e dado pessoal, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de resolver conflitos aparentes entre transparência e proteção de dados usando a distinção entre informação pública e dado pessoal, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m4-u4-t2-s3",
@@ -1546,7 +1546,7 @@ const curriculumM4 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará afirmações normativas por grau de obrigatoriedade e corrigirá generalizações típicas de provas e de políticas internas, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar afirmações normativas por grau de obrigatoriedade e corrigirá generalizações típicas de provas e de políticas internas, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }

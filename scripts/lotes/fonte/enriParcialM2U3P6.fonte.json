@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 3,
+    "unidadeTitulo": "2.3 Protocolos",
+    "parte": 6,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U3P6",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U3P6.js",
+    "idsCompletos": [
+      "m2-u3-t4-s2",
+      "m2-u3-t4-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u3-t4-s2",
+      "titulo": "TLS: segurança na camada de transporte",
+      "topicoTitulo": "SMTP, POP3, IMAP, TLS, NAT/PAT, proxy e VPN",
+      "topicoId": "modulo-2-unidade-3-topico-4",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará a função do TLS, handshake, certificados e a diferença entre TLS implícito e STARTTLS.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que o TLS garante; (b) o handshake; (c) certificados; (d) TLS implícito x STARTTLS; (e) limitações. POR QUE O CONHECIMENTO É IMPORTANTE: o TLS protege quase todo tráfego moderno; a prova cobra o que ele garante e o que não garante. PRÉ-REQUISITOS: TCP; criptografia básica (chave pública). OBJETIVOS OBSERVÁVEIS: (1) definir o TLS; (2) descrever o handshake; (3) explicar certificados e CA; (4) diferenciar implícito de STARTTLS. COMPETÊNCIAS DESENVOLVIDAS: análise de segurança de transporte. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (HTTPS); unidade 3.4 (correio); Módulo 4 (criptografia). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o TLS (Transport Layer Security) fornece confidencialidade, integridade e autenticidade sobre o TCP; autentica o servidor (e, opcionalmente, o cliente). No handshake, o cliente envia um ClientHello com versões e suítes de cifra suportadas; o servidor responde com ServerHello, seu certificado e a mensagem Finished; o cliente verifica o certificado, deriva as chaves de sessão e confirma. Os certificados X.509 vinculam uma chave pública a uma identidade e são emitidos por uma Autoridade Certificadora (CA) confiável. Há duas formas de proteger um serviço: o TLS implícito, em que a conexão já começa cifrada na porta segura (por exemplo, 443, 993, 995 e 465), e o STARTTLS, em que a conexão começa em texto claro na porta padrão e faz upgrade para TLS por um comando, como nas portas 587, 143, 110 e 25. As limitações são importantes: o TLS protege o TRANSPORTE, não o endpoint — se o servidor ou o cliente está comprometido, o TLS não ajuda; um certificado expirado ou inválido gera alerta; e um atacante com uma CA comprometida poderia, em tese, interceptar. Ainda assim, o TLS é a base da segurança na web e no correio modernos.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o TLS cifra e autentica o servidor.\n- Nível intermediário: descrever o handshake e o papel do certificado.\n- Nível avançado: diferenciar TLS implícito de STARTTLS.\n- Nível especialista: analisar um alerta de certificado e decidir a conduta segura.\nCOMPARAÇÕES CRÍTICAS:\n- TLS implícito x STARTTLS: o primeiro inicia cifrado; o segundo eleva — muda a porta e o fluxo.\n- confidencialidade x autenticidade: o TLS provê ambas; a autenticidade depende dos certificados.\n- TLS x IPsec: o TLS protege a aplicação sobre TCP; o IPsec protege na camada de rede.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O TLS protege o servidor contra invasão.\" — Motivo: protege o transporte — Versão tecnicamente correta: um endpoint comprometido não é salvo pelo TLS.\n- Afirmação errada: \"STARTTLS e TLS implícito são idênticos.\" — Motivo: diferem no início da cifra — Versão tecnicamente correta: um começa na porta padrão e eleva; o outro já inicia cifrado.\n- Afirmação errada: \"Certificado válido garante que o site é honesto.\" — Motivo: garante a identidade do domínio — Versão tecnicamente correta: não atesta a intenção do conteúdo.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: TLS, handshake, ClientHello/ServerHello, certificado X.509, CA, TLS implícito, STARTTLS.\n- Regras e fórmulas: confidencialidade + integridade + autenticidade sobre TCP.\n- Exceções: o TLS não protege os endpoints.\n- Palavras-chave: criptografia, certificado, upgrade, porta segura, transporte.\n- Checklist de domínio: (1) Defino o TLS? (2) Descrevo o handshake? (3) Explico certificados? (4) Diferencio implícito de STARTTLS?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o TLS garante? (2) O que ocorre no handshake? (3) O que um certificado vincula? (4) O que é STARTTLS? (5) O que o TLS não protege?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Diferenciar TLS implícito de STARTTLS.",
+          "resposta": "TLS implícito: porta dedicada já cifrada (443). STARTTLS: porta padrão em texto, upgrade via comando (587 com STARTTLS). Ambos resultam em canal cifrado, mas a negociação difere."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um servidor SMTP na porta 587 anuncia STARTTLS. O que o cliente deve fazer?",
+          "resposta": "Enviar comando STARTTLS, verificar o certificado do servidor e, se válido, negociar TLS. Se falhar, não enviar credenciais em texto."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'TLS garante segurança fim-a-fim incluindo o servidor e o cliente.'",
+          "correcao": "Errado. TLS protege o canal entre cliente e servidor; não protege o endpoint (se o servidor for comprometido, os dados são legíveis lá). Autenticação de cliente é opcional e rara."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) TLS 1.3 reduz o número de round-trips no handshake em relação ao TLS 1.2.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual função o certificado X.509 cumpre? A) Cifrar dados; B) Vincular chave pública a identidade; C) Gerar chaves simétricas; D) Comprimir tráfego.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar a função do TLS, handshake, certificados e a diferença entre TLS implícito e STARTTLS, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará a função do TLS, handshake, certificados e a diferença entre TLS implícito e STARTTLS"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "TLS (Transport Layer Security) fornece confidencialidade, integridade e autenticidade (do servidor, e opcionalmente do cliente) sobre TCP. Handshake TLS 1.3: ClientHello (versões, cipher suites, key share), ServerHello + certificado + Finished, cliente verifica certificado e envia Finished, chaves de sessão derivadas. Certificados X.509 vinculam chave pública a identidade, emitidos por CA (Certificate Authority) confiável. TLS implícito: a conexão já começa cifrada na porta segura (443, 993, 995…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a TLS: segurança na camada de transporte",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'TLS garante segurança fim-a-fim incluindo o servidor e o cliente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. TLS protege o canal entre cliente e servidor; não protege o endpoint (se o servidor for comprometido, os dados são legíveis lá). Autenticação de cliente é opcional e rara."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Diferenciar TLS implícito de STARTTLS.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "TLS implícito: porta dedicada já cifrada (443). STARTTLS: porta padrão em texto, upgrade via comando (587 com STARTTLS). Ambos resultam em canal cifrado, mas a negociação difere.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um servidor SMTP na porta 587 anuncia STARTTLS. O que o cliente deve fazer?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Enviar comando STARTTLS, verificar o certificado do servidor e, se válido, negociar TLS. Se falhar, não enviar credenciais em texto.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'TLS garante segurança fim-a-fim incluindo o servidor e o cliente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. TLS protege o canal entre cliente e servidor; não protege o endpoint (se o servidor for comprometido, os dados são legíveis lá). Autenticação de cliente é opcional e rara.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u3-t4-s3",
+      "titulo": "NAT, PAT, proxy e VPN",
+      "topicoTitulo": "SMTP, POP3, IMAP, TLS, NAT/PAT, proxy e VPN",
+      "topicoId": "modulo-2-unidade-3-topico-4",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará NAT/PAT, proxy e VPN, suas funções, tipos e limitações.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) NAT e PAT; (b) proxy (direto e reverso); (c) VPN (tipos e protocolos); (d) finalidades e limitações. POR QUE O CONHECIMENTO É IMPORTANTE: NAT, proxy e VPN resolvem endereçamento, intermediação e privacidade de comunicação — temas frequentes. PRÉ-REQUISITOS: endereçamento IP; TCP/UDP; noções de criptografia. OBJETIVOS OBSERVÁVEIS: (1) explicar NAT/PAT; (2) distinguir proxy direto de reverso; (3) descrever a VPN; (4) citar limitações. COMPETÊNCIAS DESENVOLVIDAS: análise de arquitetura de borda; decisão de segurança. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (endereços privados); unidade 3.4 (TLS); Módulo 4 (segurança). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o NAT (Network Address Translation) traduz endereços IP privados em públicos (e vice-versa) no roteador de borda, permitindo que vários hosts internos compartilhem um ou poucos IPs públicos. O PAT (Port Address Translation, ou NAT overload) traduz também as PORTAS, de modo que muitas conexões simultâneas compartilhem um único IP público — é o NAT típico das redes domésticas. Os tipos incluem estático (1:1), dinâmico (pool) e PAT (muitos:1). As limitações são relevantes: o NAT quebra o princípio fim a fim, dificultando servidores internos, aplicações P2P e VoIP; complica protocolos que embutem IP no payload; e consome a tabela de estados do equipamento. O proxy é um intermediário que faz requisições em nome do cliente; pode ser transparente (sem configuração no cliente) ou explícito, e oferece cache, filtragem, controle de acesso e registro. O proxy reverso fica à frente dos SERVIDORES, distribuindo carga e protegendo a origem. A VPN (Virtual Private Network) cria um túnel cifrado sobre uma rede pública, estendendo uma rede privada: pode ser site a site (conecta redes) ou de acesso remoto (um cliente); usa protocolos como IPsec, OpenVPN, WireGuard e SSL VPN. Suas limitações incluem overhead, latência adicional, possível ponto único de falha e a necessidade de gestão de chaves.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o NAT reaproveita um IP público.\n- Nível intermediário: distinguir NAT de PAT e proxy direto de reverso.\n- Nível avançado: explicar as limitações do NAT no fim a fim.\n- Nível especialista: escolher entre proxy reverso e VPN para um requisito de publicação e acesso seguros.\nCOMPARAÇÕES CRÍTICAS:\n- NAT x PAT: o NAT traduz endereços; o PAT traduz também portas — o PAT permite muitos:1.\n- proxy direto x reverso: o direto representa o CLIENTE; o reverso representa o SERVIDOR.\n- VPN x proxy: a VPN cria um túnel cifrado de rede; o proxy intermedeia a aplicação — mudam o escopo da proteção.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"NAT é uma medida de segurança forte.\" — Motivo: é, sobretudo, de endereçamento — Versão tecnicamente correta: pode dificultar certos acessos, mas não substitui firewall.\n- Afirmação errada: \"Proxy e VPN são equivalentes.\" — Motivo: atuam em camadas e escopos diferentes — Versão tecnicamente correta: um intermedeia aplicação; a outra cifra o tráfego de rede.\n- Afirmação errada: \"PAT permite um único acesso por vez.\" — Motivo: o PAT multiplexa por portas — Versão tecnicamente correta: suporta muitas conexões simultâneas.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: NAT, PAT, NAT estático/dinâmico/overload, proxy direto, proxy reverso, VPN, IPsec, WireGuard.\n- Regras e fórmulas: NAT traduz IP; PAT traduz IP+porta; VPN = túnel cifrado.\n- Exceções: o NAT dificulta, mas não impede, comunicações de entrada (requer encaminhamento de porta).\n- Palavras-chave: tradução, intermediação, túnel, fim a fim, carga.\n- Checklist de domínio: (1) Explico NAT/PAT? (2) Distingo proxy direto/reverso? (3) Descrevo VPN? (4) Cito limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o NAT traduz? (2) O que o PAT acrescenta? (3) Proxy direto x reverso? (4) O que a VPN cria? (5) Cite uma limitação do NAT.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Uma residência com 10 dispositivos acessa a Internet com um único IP público. Como é possível?",
+          "resposta": "PAT (NAT overload): o roteador traduz IP:porta internos para IP público:porta única, mantendo tabela de estado para demultiplexar respostas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma empresa quer que funcionários remotos acessem sistemas internos com segurança. Qual solução?",
+          "resposta": "VPN de acesso remoto (IPsec/SSL/WireGuard) com autenticação forte (MFA), túnel cifrado e split tunneling conforme política."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'NAT aumenta a segurança como um firewall.'",
+          "correcao": "Parcial. NAT oculta IPs internos (segurança por obscuridade) mas não filtra tráfego por política. Não substitui firewall; NAT + firewall é a combinação típica."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) PAT permite que múltiplos hosts internos compartilhem um único IP público usando portas distintas.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual componente fica em frente ao servidor para distribuir carga e ocultar a origem? A) Proxy forward; B) Proxy reverso; C) NAT estático; D) VPN site-to-site.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar NAT/PAT, proxy e VPN, suas funções, tipos e limitações, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará NAT/PAT, proxy e VPN, suas funções, tipos e limitações"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "NAT (Network Address Translation): traduz endereços IP privados em públicos (e vice-versa) no roteador de borda, permitindo que muitos hosts internos compartilhem um (ou poucos) IPs públicos. PAT (Port Address Translation / NAT overload): traduz também portas, permitindo múltiplas conexões simultâneas com um único IP público — é o NAT típico de redes domésticas. Tipos: estático (1:1), dinâmico (pool), PAT (muitos:1). Limitações: quebra o fim-a-fim (dificulta servidores internos, P2P, VoIP), comp…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a NAT, PAT, proxy e VPN",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'NAT aumenta a segurança como um firewall.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Parcial. NAT oculta IPs internos (segurança por obscuridade) mas não filtra tráfego por política. Não substitui firewall; NAT + firewall é a combinação típica."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Uma residência com 10 dispositivos acessa a Internet com um único IP público. Como é possível?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "PAT (NAT overload): o roteador traduz IP:porta internos para IP público:porta única, mantendo tabela de estado para demultiplexar respostas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma empresa quer que funcionários remotos acessem sistemas internos com segurança. Qual solução?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "VPN de acesso remoto (IPsec/SSL/WireGuard) com autenticação forte (MFA), túnel cifrado e split tunneling conforme política.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'NAT aumenta a segurança como um firewall.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Parcial. NAT oculta IPs internos (segurança por obscuridade) mas não filtra tráfego por política. Não substitui firewall; NAT + firewall é a combinação típica.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

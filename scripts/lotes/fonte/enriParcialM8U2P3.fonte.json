@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 2,
+    "unidadeTitulo": "8.2 Gráficos Estatísticos",
+    "parte": 3,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U2P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U2P3.js",
+    "idsCompletos": [
+      "m8-u2-t4-s1",
+      "m8-u2-t5-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u2-t4-s1",
+      "titulo": "Dispersão: associação, correlação e outliers",
+      "topicoTitulo": "Gráfico de dispersão",
+      "topicoId": "modulo-8-unidade-2-topico-4",
+      "unidadeTitulo": "8.2 Gráficos Estatísticos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno lerá dispersão calculando r de Pearson e reta de regressão, e distinguirá correlação de causalidade.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) gráfico de dispersão: definição, objetivo, dado adequado; (b) associação, correlação, outliers; (c) variáveis ocultas; (d) diferença entre correlação e causalidade; (e) vantagens, limitações, erros, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a interpretação de associação e a distinção entre correlação e causalidade; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de duas variáveis numéricas. OBJETIVOS OBSERVÁVEIS: (1) construir gráfico de dispersão; (2) interpretar associação; (3) distinguir correlação de causalidade. COMPETÊNCIAS DESENVOLVIDAS: análise bivariada; leitura crítica. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.3 (correlação); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: definição de gráfico de dispersão como representação de pares de valores de duas variáveis numéricas, com pontos no plano cartesiano; objetivo: revelar associação (linear, não linear, ausente), outliers e agrupamentos; dado adequado: duas variáveis numéricas; associação: direção (positiva/negativa) e força; correlação: medida numérica da associação linear (Pearson); outliers: pontos que se afastam do padrão, que podem ser erros ou casos legítimos; variáveis ocultas (confundidores): uma terceira variável pode explicar a associação aparente; correlação não implica causalidade: associação não prova causa-efeito. Exemplo numérico: variável X (horas de estudo) e Y (nota): pontos (2,5),(4,6),(6,7),(8,8),(10,9). Associação positiva forte; correlação de Pearson alta; mas uma variável oculta (motivação) pode influenciar ambas. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que dispersão mostra relação entre duas variáveis.\n- Nível intermediário: interpretar direção e força da associação.\n- Nível avançado: identificar outliers e variáveis ocultas.\n- Nível especialista: distinguir correlação de causalidade e auditar conclusões.\nCOMPARAÇÕES CRÍTICAS:\n- correlação x causalidade: correlação mede associação; causalidade exige desenho experimental ou evidência.\n- outlier legítimo x erro: outlier pode ser caso real ou erro de medição.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"correlação alta prova causalidade\" — Motivo: associação não é causalidade — Versão tecnicamente correta: distinguir os dois.\n- Afirmação errada: \"outlier deve sempre ser removido\" — Motivo: pode ser caso legítimo — Versão tecnicamente correta: investigar antes de remover.\n- Afirmação errada: \"dispersão só serve para variáveis lineares\" — Motivo: revela padrões não lineares também — Versão tecnicamente correta: usar para explorar qualquer relação.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: dispersão, associação, correlação, outlier, variável oculta, causalidade.\n- Regras e mecanismos: pontos no plano cartesiano; correlação mede associação linear.\n- Exceções: associação não linear exige outras medidas (Spearman).\n- Palavras-chave: dispersão, associação, correlação, outlier, confundidor, causalidade.\n- Checklist de domínio: (1) Construo dispersão? (2) Interpreto associação? (3) Identifico outliers? (4) Distingo correlação de causalidade?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um gráfico de dispersão? (2) Como interpretar associação? (3) O que é correlação? (4) O que são variáveis ocultas? (5) Por que correlação não implica causalidade?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular r para Σ(x−x̄)(y−ȳ) = 15, Σ(x−x̄)² = 10, Σ(y−ȳ)² = 22,8.",
+          "resposta": "r = 15 ÷ √(10 × 22,8) = 15 ÷ √228 ≈ 15 ÷ 15,10 ≈ 0,993. Interpretação: associação linear positiva muito forte — os cinco pontos estão quase sobre a reta ŷ = 0,3 + 1,5x."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Estudo mostra r = 0,8 entre horas de estudo e pontuação. Afirmação: 'cada hora extra causa +80 pontos'. Corrija.",
+          "resposta": "A afirmação troca associação por causalidade e ainda inventa unidade de efeito: r não informa causalidade nem quanto de Y muda por unidade de X. O que se pode dizer: há associação positiva forte; para estimar efeito, usar a inclinação da reta (com suas unidades), discutir variáveis confundentes (disciplina, renda, saúde) e lembrar que predição não é intervenção."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'r = 0,95 significa que X explica 95% de Y.'",
+          "correcao": "Errado. r = 0,95 mede a FORÇA da associação linear. O coeficiente de determinação (r²) é 0,9025, ou seja, cerca de 90% da variabilidade de Y está linearmente associada a X — e ainda assim sem implicar causalidade nem garantir predição fora da amostra."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Correlação forte entre duas variáveis demonstra que uma causa a outra.",
+          "resposta": "Errado. Correlação é associação; causalidade exige delineamento (experimento, controle de confundentes) e argumento."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Uma variável oculta (temperatura) explica consumo de sorvete e afogamentos. O caso ilustra: A) causalidade direta; B) correlação com confundimento; C) multicolinearidade perfeita; D) erro de tipo.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de ler dispersão calculando r de Pearson e reta de regressão, e distinguirá correlação de causalidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "lerá dispersão calculando r de Pearson e reta de regressão, e distinguirá correlação de causalidade"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) gráfico de dispersão: definição, objetivo, dado adequado; (b) associação, correlação, outliers; (c) variáveis ocultas; (d) diferença entre correlação e causalidade; (e) vantagens, limitações, erros, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a interpretação de associação e a distinção entre correlação e causalidade; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de duas variáveis numéricas. OBJETIVOS OBSERVÁVEIS: (1)…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Dispersão: associação, correlação e outliers",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'r = 0,95 significa que X explica 95% de Y.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. r = 0,95 mede a FORÇA da associação linear. O coeficiente de determinação (r²) é 0,9025, ou seja, cerca de 90% da variabilidade de Y está linearmente associada a X — e ainda assim sem implicar causalidade nem garantir predição fora da amostra."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Calcular r para Σ(x−x̄)(y−ȳ) = 15, Σ(x−x̄)² = 10, Σ(y−ȳ)² = 22,8.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "r = 15 ÷ √(10 × 22,8) = 15 ÷ √228 ≈ 15 ÷ 15,10 ≈ 0,993. Interpretação: associação linear positiva muito forte — os cinco pontos estão quase sobre a reta ŷ = 0,3 + 1,5x.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Estudo mostra r = 0,8 entre horas de estudo e pontuação. Afirmação: 'cada hora extra causa +80 pontos'. Corrija.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A afirmação troca associação por causalidade e ainda inventa unidade de efeito: r não informa causalidade nem quanto de Y muda por unidade de X. O que se pode dizer: há associação positiva forte; para estimar efeito, usar a inclinação da reta (com suas unidades), discutir variáveis confundentes (disciplina, renda, saúde) e lembrar que predição não é intervenção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'r = 0,95 significa que X explica 95% de Y.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. r = 0,95 mede a FORÇA da associação linear. O coeficiente de determinação (r²) é 0,9025, ou seja, cerca de 90% da variabilidade de Y está linearmente associada a X — e ainda assim sem implicar causalidade nem garantir predição fora da amostra.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u2-t5-s1",
+      "titulo": "Box plot: quartis, intervalo interquartílico, bigodes e outliers",
+      "topicoTitulo": "Box plot",
+      "topicoId": "modulo-8-unidade-2-topico-5",
+      "unidadeTitulo": "8.2 Gráficos Estatísticos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno calculará o box plot de um conjunto, identificando quartis, IIQ, bigodes e outliers pela convenção de Tukey.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) box plot: mediana, quartis, IQR, bigodes, outliers; (b) convenções de outliers; (c) diferenças entre implementações; (d) vantagens, limitações, erros, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra o cálculo de Q1, mediana, Q3, IQR e bigodes; confundir convenções muda o gabarito. PRÉ-REQUISITOS: conceitos de quartis e mediana. OBJETIVOS OBSERVÁVEIS: (1) calcular Q1, mediana, Q3, IQR e bigodes; (2) identificar outliers; (3) explicar diferenças entre implementações. COMPETÊNCIAS DESENVOLVIDAS: análise de distribuição; leitura de box plot. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.3 (quartis); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: box plot (diagrama de caixa) resume a distribuição por cinco números: mínimo, Q1, mediana, Q3, máximo (ou bigodes); mediana como valor central; quartis Q1 (25%) e Q3 (75%); IQR = Q3 - Q1; bigodes: geralmente até 1,5·IQR a partir dos quartis; outliers: pontos fora dos bigodes; convenções: Tukey (1,5·IQR), outros usam 3·IQR ou percentis; diferenças entre implementações (Excel, R, Python) nos métodos de cálculo de quartis (interpolação linear, método exclusivo/inclusivo). Exemplo numérico: dados ordenados: 2,4,5,7,8,10,12,14,15,18,20,22,25,30,100. n=15. Mediana = 8º valor = 14. Q1 = mediana da metade inferior (2,4,5,7,8,10,12) = 7. Q3 = mediana da metade superior (15,18,20,22,25,30,100) = 22. IQR = 22-7 = 15. Bigode inferior = max(2, 7-1,5·15) = max(2, -15,5) = 2 (ou 7-22,5=-15,5, então mínimo não outlier é 2). Bigode superior = min(100, 22+22,5) = 30 (100 é outlier). Outlier: 100. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender os cinco números.\n- Nível intermediário: calcular Q1, mediana, Q3, IQR e bigodes.\n- Nível avançado: identificar outliers e explicar convenções.\n- Nível especialista: comparar implementações e auditar.\nCOMPARAÇÕES CRÍTICAS:\n- box plot x histograma: box plot resume em quartis; histograma mostra a forma completa.\n- média x mediana: a mediana é robusta a outliers; a média não.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"outliers são sempre erros\" — Motivo: podem ser casos legítimos — Versão tecnicamente correta: investigar.\n- Afirmação errada: \"todos os softwares calculam quartis igual\" — Motivo: métodos diferem — Versão tecnicamente correta: verificar a implementação.\n- Afirmação errada: \"box plot mostra a média\" — Motivo: mostra a mediana — Versão tecnicamente correta: mediana, não média.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: mediana, Q1, Q3, IQR, bigode, outlier, convenção.\n- Regras e fórmulas: IQR = Q3 - Q1; bigodes = Q1 - 1,5·IQR e Q3 + 1,5·IQR (Tukey).\n- Exceções: implementações diferem no cálculo de quartis.\n- Palavras-chave: box plot, mediana, quartil, IQR, bigode, outlier.\n- Checklist de domínio: (1) Calculo Q1, mediana, Q3, IQR? (2) Determino bigodes e outliers? (3) Explico convenções? (4) Comparo implementações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um box plot? (2) Como se calcula o IQR? (3) Como se determinam os bigodes? (4) O que é um outlier? (5) Por que implementações diferem?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Confirmar o cálculo dos quartis de 2, 4, 6, 8, 10, 12, 50 por interpolação linear.",
+          "resposta": "Com n = 7, a posição de Q1 em percentil 25 é (7−1)×0,25 + 1 = 2,5 → Q1 = 4 + 0,5×(6−4) = 5. Mediana: posição 4 → 8. Q3: (7−1)×0,75 + 1 = 5,5 → Q3 = 10 + 0,5×(12−10) = 11. IIQ = 6; limites −4 e 20; outlier 50."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Dois grupos com mesma mediana (80) e IIQs 10 e 40. O que isso comunica?",
+          "resposta": "A tendência central é igual, mas a dispersão central difere quatro vezes: no grupo 2, metade dos dados está espalhada em um intervalo muito maior (40 unidades contra 10). Quem lê só a mediana ignora essa diferença — por isso o box plot é informativo em comparações de grupos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Todos os softwares calculam os mesmos quartis para o mesmo conjunto.'",
+          "correcao": "Errado. Os métodos de posicionamento de percentis diferem (interpolação tipo 7, tipo 6, arredondamento), e as convenções de bigode também. Conjuntos pequenos amplificam as diferenças. Boas práticas: declarar método e convenção ao divulgar o gráfico."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O intervalo interquartílico corresponde a Q3 − Q1 e mede a dispersão da metade central dos dados.",
+          "resposta": "Certo. É a definição de IIQ — e não a amplitude total (máximo − mínimo)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Conjunto 2, 4, 6, 8, 10, 12, 50 (IIQ = 6, convenção 1,5×IIQ). O outlier é: A) 12; B) 50; C) 20; D) nenhum.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular o box plot de um conjunto, identificando quartis, IIQ, bigodes e outliers pela convenção de Tukey, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "calculará o box plot de um conjunto, identificando quartis, IIQ, bigodes e outliers pela convenção de Tukey"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) box plot: mediana, quartis, IQR, bigodes, outliers; (b) convenções de outliers; (c) diferenças entre implementações; (d) vantagens, limitações, erros, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra o cálculo de Q1, mediana, Q3, IQR e bigodes; confundir convenções muda o gabarito. PRÉ-REQUISITOS: conceitos de quartis e mediana. OBJETIVOS OBSERVÁVEIS: (1) calcular Q1, mediana, Q3, IQR e bigodes; (2) identificar outliers; (3) explic…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Box plot: quartis, intervalo interquartílico, bigodes e outliers",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Todos os softwares calculam os mesmos quartis para o mesmo conjunto.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Os métodos de posicionamento de percentis diferem (interpolação tipo 7, tipo 6, arredondamento), e as convenções de bigode também. Conjuntos pequenos amplificam as diferenças. Boas práticas: declarar método e convenção ao divulgar o gráfico."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Confirmar o cálculo dos quartis de 2, 4, 6, 8, 10, 12, 50 por interpolação linear.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Com n = 7, a posição de Q1 em percentil 25 é (7−1)×0,25 + 1 = 2,5 → Q1 = 4 + 0,5×(6−4) = 5. Mediana: posição 4 → 8. Q3: (7−1)×0,75 + 1 = 5,5 → Q3 = 10 + 0,5×(12−10) = 11. IIQ = 6; limites −4 e 20; outlier 50.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Dois grupos com mesma mediana (80) e IIQs 10 e 40. O que isso comunica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A tendência central é igual, mas a dispersão central difere quatro vezes: no grupo 2, metade dos dados está espalhada em um intervalo muito maior (40 unidades contra 10). Quem lê só a mediana ignora essa diferença — por isso o box plot é informativo em comparações de grupos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Todos os softwares calculam os mesmos quartis para o mesmo conjunto.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Os métodos de posicionamento de percentis diferem (interpolação tipo 7, tipo 6, arredondamento), e as convenções de bigode também. Conjuntos pequenos amplificam as diferenças. Boas práticas: declarar método e convenção ao divulgar o gráfico.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

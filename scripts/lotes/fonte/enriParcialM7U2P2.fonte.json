@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 2,
+    "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U2P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U2P2.js",
+    "idsCompletos": [
+      "m7-u2-t2-s1",
+      "m7-u2-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u2-t2-s1",
+      "titulo": "Estágios do pipeline de dados",
+      "topicoTitulo": "Pipeline de dados: coleta, integração, armazenamento, transformação e consumo",
+      "topicoId": "modulo-7-unidade-2-topico-2",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno descreverá os cinco estágios do pipeline, indicando entradas, saídos e risco típico de cada um.",
+      "conteudo": "Pipeline é o caminho percorrido pelo dado da fonte até o uso. 1) COLETA: captação nas fontes — sistemas transacionais, planilhas, formulários, aquisição externa, sensores. Risco típico: coletar sem direito de usar ou sem regra de qualidade; entrar com dado ruim contamina tudo a jusante ('lixo entra, lixo sai'). 2) INTEGRAÇÃO: junção das fontes em um conjunto coerente — chaves de ligação, reconciliação de conflitos (qual fonte prevalece quando divergem), resolução de granularidade (detalhe diário contra total mensal). Risco típico: chave mal padronizada gerando casamento errado ou linhas órfãs. 3) ARMAZENAMENTO: guarda com estrutura adequada ao uso — banco transacional para operação; repositório analítico (data warehouse/lake, em termos conceituais) para consulta histórica e agregação. Risco típico: guardar sem metadados, sem backup e sem controle de acesso. 4) TRANSFORMAÇÃO: limpeza, padronização, conversão de tipo, derivar campos, normalizar e agregar. Risco típico: regra não versionada — ninguém sabe mais como o número foi produzido. 5) CONSUMO: relatórios, painéis, análises, APIs e decisões. Risco típico: consumo sem definição de indicador, gerando números iguais com sentidos diferentes. GOVERNANÇA atravessa todos os estágios: finalidade, acesso, retenção e responsáveis.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Mapear os cinco estágios para apuração de indicadores de saúde a partir de notificações em planilhas de unidades.",
+          "resposta": "Coleta: envio das planilhas pelas unidades. Integração: consolidar as planilhas em base única, com chave de unidade e data, resolvendo formatos distintos. Armazenamento: repositório com histórico e metadados. Transformação: padronizar nomes de unidade, converter datas, deduplicar notificações repetidas. Consumo: painel de vigilância e relatório gerencial, com definição documentada de cada indicador."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Após carga, o total por unidade não fecha com o detalhe. Em qual estágio está a falha e o que verificar?",
+          "resposta": "Estágio de integração (reconciliação) — verificar chaves (unidade com nome abreviado divergente, por exemplo), granularidade (detalhe diário versus total mensal) e regra de prevalência entre fontes. A verificação é de consistência: soma dos filhos deve igualar o total; a diferença revela linha órfã ou duplicada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se o consumo (painel) está correto, os estágios anteriores estão corretos.'",
+          "correcao": "Errado. O consumo só mostra o efeito: erro de origem pode ser mascarado por ajuste manual no relatório, e erro de transformação pode coincidir com o total errado. Validar exige conferência em cada estágio — entrada, transformação e saída — e não apenas o resultado final."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Regras de transformação devem ser versionadas e documentadas para permitir reprodução do resultado.",
+          "resposta": "Certo. Sem versão e documentação, o número não é reproduzível e nem auditável."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual estágio é responsável por resolver divergência entre duas fontes para o mesmo fato? A) coleta; B) integração; C) consumo; D) arquivamento.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever os cinco estágios do pipeline, indicando entradas, saídos e risco típico de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá os cinco estágios do pipeline, indicando entradas, saídos e risco típico de cada um"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Pipeline é o caminho percorrido pelo dado da fonte até o uso. 1) COLETA: captação nas fontes — sistemas transacionais, planilhas, formulários, aquisição externa, sensores. Risco típico: coletar sem direito de usar ou sem regra de qualidade; entrar com dado ruim contamina tudo a jusante ('lixo entra, lixo sai'). 2) INTEGRAÇÃO: junção das fontes em um conjunto coerente — chaves de ligação, reconciliação de conflitos (qual fonte prevalece quando divergem), resolução de granularidade (detalhe diário…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Estágios do pipeline de dados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se o consumo (painel) está correto, os estágios anteriores estão corretos.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O consumo só mostra o efeito: erro de origem pode ser mascarado por ajuste manual no relatório, e erro de transformação pode coincidir com o total errado. Validar exige conferência em cada estágio — entrada, transformação e saída — e não apenas o resultado final."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Mapear os cinco estágios para apuração de indicadores de saúde a partir de notificações em planilhas de unidades.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Coleta: envio das planilhas pelas unidades. Integração: consolidar as planilhas em base única, com chave de unidade e data, resolvendo formatos distintos. Armazenamento: repositório com histórico e metadados. Transformação: padronizar nomes de unidade, converter datas, deduplicar notificações repetidas. Consumo: painel de vigilância e relatório gerencial, com definição documentada de cada indicador.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Após carga, o total por unidade não fecha com o detalhe. Em qual estágio está a falha e o que verificar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Estágio de integração (reconciliação) — verificar chaves (unidade com nome abreviado divergente, por exemplo), granularidade (detalhe diário versus total mensal) e regra de prevalência entre fontes. A verificação é de consistência: soma dos filhos deve igualar o total; a diferença revela linha órfã ou duplicada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se o consumo (painel) está correto, os estágios anteriores estão corretos.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O consumo só mostra o efeito: erro de origem pode ser mascarado por ajuste manual no relatório, e erro de transformação pode coincidir com o total errado. Validar exige conferência em cada estágio — entrada, transformação e saída — e não apenas o resultado final.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u2-t2-s2",
+      "titulo": "ETL e ELT: diferenças e quando aplicar cada um",
+      "topicoTitulo": "Pipeline de dados: coleta, integração, armazenamento, transformação e consumo",
+      "topicoId": "modulo-7-unidade-2-topico-2",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno diferenciará ETL e ELT pela ordem das operações e justificará a escolha em cenários concretos.",
+      "conteudo": "ETL = Extrair → Transformar → Carregar: os dados são tratados FORA do destino e só entram prontos. ELT = Extrair → Carregar → Transformar: os dados brutos entram primeiro no destino e são transformados LÁ, usando a capacidade de armazenamento e processamento do próprio destino. DIFERENÇA QUE MUDA O GABARITO: a ordem entre transformação e carga. Consequências: (a) ETL — controle do que entra, menor volume carregado, adequado quando o destino não deve receber bruto (por sensibilidade, custo ou regra de negócio) ou quando a origem exige tratamento antes de qualquer coisa; reprocessar com nova regra exige voltar à origem. (b) ELT — bruto disponível para reprocessar quantas vezes for preciso e evoluir regras sem reextrair; exige capacidade no destino e disciplina extra de governança, porque dado sensível fica guardado antes do tratamento. NÃO vale a generalização 'ETL é ultrapassado e ELT é moderno': a escolha depende de volume, capacidade do destino, exigência de auditoria, sensibilidade dos dados e custo de processamento. Nos dois casos o resultado final é dado tratado e pronto para consumo — a diferença é onde e em que ordem o trabalho acontece.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Descrever ETL e ELT com uma frase cada e apontar a diferença central.",
+          "resposta": "ETL: extrai da fonte, transforma em etapa intermediária e carrega pronto no destino. ELT: extrai e carrega bruto no destino e transforma lá dentro. Diferença central: a posição da transformação em relação à carga — ETL transforma antes; ELT transforma depois."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Cenário: dados sensíveis devem ser tratados antes de qualquer armazenamento em ambiente analítico compartilhado. ETL ou ELT?",
+          "resposta": "ETL — porque a transformação (neste caso, anonimização/tratamento) acontece antes da carga, evitando que dado sensível chegue bruto ao destino compartilhado. É o critério de privacidade e de regra de negócio prevalecendo sobre a capacidade técnica do destino."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Em ELT não há transformação: os dados são usados brutos.'",
+          "correcao": "Errado. ELT apenas inverte a ordem: a transformação acontece dentro do destino, depois da carga. O dado consumido é igualmente tratado; o que muda é o local e o momento do processamento."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em ETL, a transformação ocorre antes do carregamento no destino final.",
+          "resposta": "Certo. Essa é a definição literal: Extrair, Transformar, Carregar."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual fluxo caracteriza ELT? A) extrair → transformar → carregar; B) extrair → carregar → transformar; C) transformar → extrair → carregar; D) carregar → extrair → transformar.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar ETL e ELT pela ordem das operações e justificará a escolha em cenários concretos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará ETL e ELT pela ordem das operações e justificará a escolha em cenários concretos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ETL = Extrair → Transformar → Carregar: os dados são tratados FORA do destino e só entram prontos. ELT = Extrair → Carregar → Transformar: os dados brutos entram primeiro no destino e são transformados LÁ, usando a capacidade de armazenamento e processamento do próprio destino. DIFERENÇA QUE MUDA O GABARITO: a ordem entre transformação e carga. Consequências: (a) ETL — controle do que entra, menor volume carregado, adequado quando o destino não deve receber bruto (por sensibilidade, custo ou reg…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a ETL e ELT: diferenças e quando aplicar cada um",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Em ELT não há transformação: os dados são usados brutos.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. ELT apenas inverte a ordem: a transformação acontece dentro do destino, depois da carga. O dado consumido é igualmente tratado; o que muda é o local e o momento do processamento."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Descrever ETL e ELT com uma frase cada e apontar a diferença central.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "ETL: extrai da fonte, transforma em etapa intermediária e carrega pronto no destino. ELT: extrai e carrega bruto no destino e transforma lá dentro. Diferença central: a posição da transformação em relação à carga — ETL transforma antes; ELT transforma depois.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Cenário: dados sensíveis devem ser tratados antes de qualquer armazenamento em ambiente analítico compartilhado. ETL ou ELT?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "ETL — porque a transformação (neste caso, anonimização/tratamento) acontece antes da carga, evitando que dado sensível chegue bruto ao destino compartilhado. É o critério de privacidade e de regra de negócio prevalecendo sobre a capacidade técnica do destino.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Em ELT não há transformação: os dados são usados brutos.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. ELT apenas inverte a ordem: a transformação acontece dentro do destino, depois da carga. O dado consumido é igualmente tratado; o que muda é o local e o momento do processamento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

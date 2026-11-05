@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 5,
+    "unidadeTitulo": "1.5 OneDrive e Colaboração",
+    "parte": 3,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U5P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U5P3.js",
+    "idsCompletos": [
+      "modulo-1-unidade-5-topico-1-sub-5",
+      "modulo-1-unidade-5-topico-1-sub-6"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-5-topico-1-sub-5",
+      "titulo": "Estudo de caso: perda de acesso, exclusão e recuperação",
+      "topicoTitulo": "Sincronização, versionamento, compartilhamento e segurança",
+      "topicoId": "modulo-1-unidade-5-topico-1",
+      "unidadeTitulo": "1.5 OneDrive e Colaboração",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno aplicar estudos de caso de perda de acesso e recuperação no OneDrive.",
+      "conteudo": "Estudo de caso: colaborador com conta desativada ou licença expirada perde acesso aos arquivos; a equipe deve considerar retenção, eDiscovery (administradores Enterprise) e backup. Estudo de caso: exclusão de arquivo relevante → lixeira → restauração conforme política; ou perda sem exclusão → versões anteriores. A recomendação de backup separado (3-2-1) permanece. O estudo de caso deve mapear causas da perda de acesso (conta, licença, colaborador) e definir responsabilidades de recuperação e retenção. O estudo deve também simular a recuperação em cadeia: exclusão, retenção, versão anterior e backup externo, avaliando tempo de recuperação e responsabilidades. O caso deve definir gatilhos de perda (inativação, expiração, desligamento) e o fluxo de retenção e recuperação associado. A avaliação deve incluir teste de restauração e critérios de sucesso mensuráveis.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Planejar a recuperação dos arquivos de um colaborador desligado cuja conta será removida, garantindo que a equipe continue com os documentos do setor.",
+          "resposta": "Documentos do setor preservados em conta ativa, com registro de quem transferiu e para onde, e a conta desligada pode ser removida sem perda de conteúdo necessário."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa recuperar arquivos de um projeto cujo proprietário perdeu a licença, sem que a equipe tenha cópia local dos documentos.",
+          "resposta": "Arquivos do projeto sob titularidade de conta ativa, acessíveis aos três integrantes, com registro da operação e sem dependência da licença do antigo proprietário."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um gestor afirma que a sincronização em nuvem já garante a recuperação dos arquivos do setor em caso de exclusão em massa e que, por isso, não é necessário manter cópia separada nem plano de recuperação.",
+          "correcao": "A afirmação é incorreta: a sincronização propaga a exclusão, e a recuperação fica limitada às janelas de retenção do serviço; itens fora delas exigem cópia independente, que não existia."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Em perda de acesso por conta desativada, qual recurso ajuda administradores Enterprise? A) eDiscovery; B) Power BI; C) Forms.",
+          "resposta": "A"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A lixeira do OneDrive mantém arquivos para sempre.",
+          "resposta": "Errado. O período de retenção varia conforme a configuração da organização/conta."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar estudos de caso de perda de acesso e recuperação no OneDrive, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicar estudos de caso de perda de acesso e recuperação no OneDrive"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Estudo de caso: colaborador com conta desativada ou licença expirada perde acesso aos arquivos; a equipe deve considerar retenção, eDiscovery (administradores Enterprise) e backup. Estudo de caso: exclusão de arquivo relevante → lixeira → restauração conforme política; ou perda sem exclusão → versões anteriores. A recomendação de backup separado (3-2-1) permanece. O estudo de caso deve mapear causas da perda de acesso (conta, licença, colaborador) e definir responsabilidades de recuperação e ret…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Estudo de caso: perda de acesso, exclusão e recuperação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário confunde backup do OneDrive com backup imutável.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: OneDrive é sincronização, não backup imutável."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Planejar a recuperação dos arquivos de um colaborador desligado cuja conta será removida, garantindo que a equipe continue com os documentos do setor.",
+            "dados": "Colaborador desligado, conta com 30 GB armazenados, arquivos compartilhados com a equipe, prazo de retenção definido pela política e processo de desligamento em andamento.",
+            "conceitos": [
+              "perda de acesso: interrupção do acesso por conta, licença ou permissão",
+              "transferência de propriedade: repasse dos arquivos a outra conta",
+              "retenção: manutenção temporária de dados após o desligamento"
+            ],
+            "estrategia": "Tratar a perda de acesso como evento planejado: antes de remover a conta, transferir o que precisa ser mantido e registrar a decisão.",
+            "execucao": [
+              "Levantar os arquivos e pastas compartilhados que o setor precisa manter.",
+              "Transferir a propriedade ou copiar os itens para a conta da equipe antes da remoção da conta.",
+              "Registrar a transferência, o destino, a data e o responsável, para rastreabilidade.",
+              "Após a remoção, validar o acesso da equipe e conferir se a cópia independente cobre o que a política exige reter."
+            ],
+            "resultado": "Documentos do setor preservados em conta ativa, com registro de quem transferiu e para onde, e a conta desligada pode ser removida sem perda de conteúdo necessário.",
+            "justificativa": "O acesso ao serviço depende de identidade e licença ativas: encerrada a conta, o conteúdo deixa de estar acessível ao usuário, ainda que permaneça por prazo de retenção administrativa. Por isso a recuperação se faz por transferência planejada e registro, e não pela tentativa de reabrir a conta após o desligamento.",
+            "errosFrequentes": [
+              "Remover a conta antes de mapear o conteúdo compartilhado.",
+              "Supor que o arquivo compartilhado por link continua acessível após a exclusão do proprietário.",
+              "Deixar a transferência sem registro, impedindo a rastreabilidade exigida em auditoria."
+            ],
+            "variacao": "O colaborador sai em licença prolongada, sem desligamento. Indique o que muda no plano de recuperação e qual precaução evita bloqueio de acesso durante a ausência."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa recuperar arquivos de um projeto cujo proprietário perdeu a licença, sem que a equipe tenha cópia local dos documentos.",
+            "dados": "Projeto com 60 arquivos, proprietário sem licença ativa, três integrantes sem cópia local, prazo de retenção administrativa ainda vigente e política de retenção definida.",
+            "conceitos": [
+              "licença: direito de uso que habilita o acesso ao serviço",
+              "recuperação administrativa: ação de administrador fora do alcance do usuário comum",
+              "transferência de propriedade: mudança do responsável pelos arquivos"
+            ],
+            "estrategia": "Acionar a recuperação administrativa dentro do prazo de retenção e transferir a propriedade para uma conta ativa, em vez de tentar restaurar a licença do antigo proprietário.",
+            "execucao": [
+              "Confirmar com o administrador se o prazo de retenção administrativa ainda está vigente.",
+              "Solicitar a transferência da propriedade dos 60 arquivos para a conta de um integrante ativo.",
+              "Após a transferência, validar o acesso dos três integrantes e conferir a integridade dos arquivos.",
+              "Registrar a operação com data e responsável e incluir o caso na rotina de revisão de acessos."
+            ],
+            "resultado": "Arquivos do projeto sob titularidade de conta ativa, acessíveis aos três integrantes, com registro da operação e sem dependência da licença do antigo proprietário.",
+            "justificativa": "A licença habilita o acesso e não é transferível por conveniência operacional; o caminho correto é administrativo e depende do prazo de retenção vigente. A transferência de propriedade resolve o acesso sem recriar a conta original e mantém a rastreabilidade do processo.",
+            "errosFrequentes": [
+              "Reativar a licença do antigo proprietário para liberar o acesso, mantendo a dependência.",
+              "Esperar o prazo de retenção expirar para acionar a recuperação.",
+              "Compartilhar por link como solução definitiva, sem proprietário ativo."
+            ],
+            "variacao": "O prazo de retenção administrativa já expirou. Explique quais camadas ainda podem responder e por que a cópia independente se torna a única alternativa confiável."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um gestor afirma que a sincronização em nuvem já garante a recuperação dos arquivos do setor em caso de exclusão em massa e que, por isso, não é necessário manter cópia separada nem plano de recuperação.",
+            "dados": "Setor com 200 GB sincronizados, exclusão acidental de uma pasta com 40 GB, histórico de versões com prazo limitado e nenhuma cópia fora do serviço.",
+            "conceitos": [
+              "exclusão em massa: remoção de muitos itens em uma única operação",
+              "propagação: replicação da exclusão para todos os dispositivos sincronizados",
+              "plano de recuperação: procedimento documentado com camadas e responsáveis"
+            ],
+            "estrategia": "Reconstruir o cenário e verificar até onde as camadas do serviço respondem, comparando com o que uma cópia independente permitiria recuperar.",
+            "execucao": [
+              "Verificar o estado dos três dispositivos sincronizados após a exclusão da pasta.",
+              "Constatar que a exclusão se propagou e que a recuperação depende da lixeira e do histórico.",
+              "Testar a recuperação dentro do prazo e identificar os itens que já saíram da janela de retenção.",
+              "Concluir quais itens ficaram irrecuperáveis e qual camada teria coberto essa lacuna."
+            ],
+            "resultado": "A afirmação é incorreta: a sincronização propaga a exclusão, e a recuperação fica limitada às janelas de retenção do serviço; itens fora delas exigem cópia independente, que não existia.",
+            "justificativa": "Sincronizar mantém as réplicas iguais, inclusive quando o estado replicado é uma exclusão. As camadas de retenção do serviço cobrem apenas um intervalo, e o plano de recuperação é o que garante uma camada adicional fora do ambiente afetado, com responsáveis e prazos definidos.",
+            "errosFrequentes": [
+              "Presumir que a nuvem impede a propagação de exclusões.",
+              "Não documentar o prazo de retenção e descobrir o limite durante o incidente.",
+              "Tratar a recuperação como tarefa improvisada, sem responsável definido."
+            ],
+            "variacao": "A pasta excluída continha arquivos com prazo legal de guarda. Explique o que muda na avaliação do incidente e qual registro deve ser produzido."
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-5-topico-1-sub-6",
+      "titulo": "Segurança de arquivos organizacionais",
+      "topicoTitulo": "Sincronização, versionamento, compartilhamento e segurança",
+      "topicoId": "modulo-1-unidade-5-topico-1",
+      "unidadeTitulo": "1.5 OneDrive e Colaboração",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno aplicar segurança de arquivos (rotulagem, DLP, controle de dispositivo) no contexto organizacional.",
+      "conteudo": "Arquivos organizacionais podem receber rotulagem de confidencialidade (taxonomia de sensível/confidencial/Interno — vocabulário varia), controle via Microsoft Purview (DLP — Data Loss Prevention) e controle de dispositivo (Intune). Essas medidas dependem do plano/licença contratado; em planos sem o recurso, a organização deve adotar outras salvaguardas. A segurança de arquivos organizacionais complementa permissões e compartilhamento. A implementação depende de controle centralizado (Microsoft 365 admin) e deve estar atrelada a políticas de retenção e auditoria. A avaliação da eficácia deve considerar periodicidade de revisão, testes de recuperação e conformidade com a legislação aplicável. A segurança deve ser avaliada em conjunto com os controles de acesso e a rotulagem vigente, com registro de evidências para auditoria. A periodicidade de revisão e os testes de recuperação devem ser registrados em plano de ação.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Definir como impedir que uma planilha com dados de titulares seja enviada por e-mail para fora da organização, sem depender apenas de orientação verbal à equipe.",
+          "resposta": "Tentativa de envio externo da planilha bloqueada pela política, com aviso ao usuário e registro em log, mantendo o acesso aos quarenta colaboradores autorizados."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa adequar uma pasta departamental para que documentos com dados pessoais recebam classificação e restrição de compartilhamento externo por padrão.",
+          "resposta": "Biblioteca com classificação padrão, acervo revisado, compartilhamento externo bloqueado para o conteúdo classificado e registro do teste de verificação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um analista afirma que a política de prevenção à perda de dados está disponível em qualquer plano do serviço e que, portanto, basta ligá-la para que todos os arquivos da organização fiquem protegidos.",
+          "correcao": "A afirmação é incorreta em dois pontos: a disponibilidade depende da licença e a eficácia depende de classificação e política configuradas; ligar o recurso sem esses elementos não protege o acervo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "A segurança de arquivos organizacionais (rotulagem/DLP/controle de dispositivo) depende de: A) sempre do plano; B) apenas do usuário; C) nunca do plano.",
+          "resposta": "A"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O controle de dispositivo para arquivos organizacionais é independente do plano.",
+          "resposta": "Errado. Depende do plano/licença contratado."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar segurança de arquivos (rotulagem, DLP, controle de dispositivo) no contexto organizacional, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicar segurança de arquivos (rotulagem, DLP, controle de dispositivo) no contexto organizacional"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Arquivos organizacionais podem receber rotulagem de confidencialidade (taxonomia de sensível/confidencial/Interno — vocabulário varia), controle via Microsoft Purview (DLP — Data Loss Prevention) e controle de dispositivo (Intune). Essas medidas dependem do plano/licença contratado; em planos sem o recurso, a organização deve adotar outras salvaguardas. A segurança de arquivos organizacionais complementa permissões e compartilhamento. A implementação depende de controle centralizado (Microsoft 3…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Segurança de arquivos organizacionais",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que DLP se aplica a qualquer plano.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: depende do plano/licença; verificar na documentação oficial."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Definir como impedir que uma planilha com dados de titulares seja enviada por e-mail para fora da organização, sem depender apenas de orientação verbal à equipe.",
+            "dados": "Planilha com dados pessoais, quarenta colaboradores com acesso à pasta, recursos de rótulo de confidencialidade e de prevenção à perda de dados disponíveis no plano contratado.",
+            "conceitos": [
+              "rótulo de confidencialidade: classificação aplicada ao arquivo, que o acompanha",
+              "prevenção à perda de dados: política que detecta e bloqueia o envio de conteúdo classificado",
+              "controle de dispositivo: restrição de cópia para mídia removível, quando disponível"
+            ],
+            "estrategia": "Combinar classificação e política: o rótulo identifica o conteúdo e a política aplica a regra de bloqueio sobre o que foi classificado.",
+            "execucao": [
+              "Aplicar o rótulo de confidencialidade à planilha conforme a taxonomia vigente na organização.",
+              "Configurar a política de prevenção para reconhecer o rótulo e o tipo de dado e bloquear o envio externo, com aviso ao usuário.",
+              "Testar o envio para um destino externo controlado, verificando o bloqueio e a mensagem de orientação exibida.",
+              "Registrar a política e o teste, e revisar a eficácia periodicamente."
+            ],
+            "resultado": "Tentativa de envio externo da planilha bloqueada pela política, com aviso ao usuário e registro em log, mantendo o acesso aos quarenta colaboradores autorizados.",
+            "justificativa": "A proteção depende de duas camadas complementares: o rótulo descreve a sensibilidade e acompanha o arquivo, e a política transforma a classificação em ação de bloqueio. Sem rótulo, a política não tem o que reconhecer; sem política, o rótulo é apenas uma marca.",
+            "errosFrequentes": [
+              "Tratar a prevenção à perda de dados como recurso presente em qualquer plano: a disponibilidade depende da licença.",
+              "Classificar o arquivo sem configurar política e esperar bloqueio automático.",
+              "Bloquear sem mensagem de orientação, o que leva o usuário a procurar caminhos alternativos."
+            ],
+            "variacao": "A mesma planilha precisa ser enviada para um parceiro autorizado. Descreva como a política pode permitir a exceção sem liberar o envio para qualquer destino."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa adequar uma pasta departamental para que documentos com dados pessoais recebam classificação e restrição de compartilhamento externo por padrão.",
+            "dados": "Pasta com 1.200 arquivos, parte com dados pessoais, compartilhamento externo habilitado, plano com recursos de classificação e política de proteção de dados vigente.",
+            "conceitos": [
+              "classificação padrão: rótulo aplicado automaticamente a novos arquivos",
+              "herança de rótulo: propagação da classificação da pasta para os itens",
+              "restrição de compartilhamento: bloqueio de link externo para conteúdo classificado"
+            ],
+            "estrategia": "Definir o rótulo padrão na biblioteca e verificar quais arquivos já existentes precisam de reclassificação, porque a herança cobre novos itens, mas não substitui a revisão do acervo.",
+            "execucao": [
+              "Aplicar o rótulo padrão na biblioteca, com herança para novos arquivos.",
+              "Identificar, por relatório de conteúdo, os arquivos existentes com dados pessoais que precisam de reclassificação.",
+              "Reclassificar os arquivos apontados e revisar as concessões de compartilhamento externo existentes.",
+              "Testar um compartilhamento externo em arquivo classificado para confirmar o bloqueio e registrar a verificação."
+            ],
+            "resultado": "Biblioteca com classificação padrão, acervo revisado, compartilhamento externo bloqueado para o conteúdo classificado e registro do teste de verificação.",
+            "justificativa": "A herança garante consistência para o que for criado, mas não corrige retroativamente todo o acervo. Por isso a revisão por relatório é necessária, e a conferência da concessão de compartilhamento evita que um link antigo mantenha acesso externo ao conteúdo já classificado.",
+            "errosFrequentes": [
+              "Aplicar o rótulo padrão e considerar o acervo existente já classificado.",
+              "Manter links externos criados antes da classificação.",
+              "Classificar sem testar o efeito prático do bloqueio."
+            ],
+            "variacao": "Um setor precisa compartilhar externamente relatórios que não contêm dados pessoais. Explique como a classificação pode distinguir esse caso e qual registro comprova a decisão."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um analista afirma que a política de prevenção à perda de dados está disponível em qualquer plano do serviço e que, portanto, basta ligá-la para que todos os arquivos da organização fiquem protegidos.",
+            "dados": "Organização com plano básico, 1.200 arquivos sem classificação, política não configurada e expectativa de bloqueio imediato de envios externos.",
+            "conceitos": [
+              "disponibilidade por licença: recurso presente apenas em determinados planos",
+              "condição de eficácia: necessidade de classificação e de política configurada",
+              "cobertura: proporção do acervo efetivamente sujeita à regra"
+            ],
+            "estrategia": "Verificar a disponibilidade do recurso na licença contratada e, se disponível, se há classificação e política configuradas, porque sem esses elementos não existe cobertura efetiva.",
+            "execucao": [
+              "Conferir na documentação do plano contratado se o recurso de prevenção está incluído.",
+              "Constatar a ausência de classificação nos 1.200 arquivos.",
+              "Verificar se existe política configurada e a qual escopo ela se aplica.",
+              "Concluir o que precisa ser implantado antes de esperar bloqueio e registrar a limitação do plano, se for o caso."
+            ],
+            "resultado": "A afirmação é incorreta em dois pontos: a disponibilidade depende da licença e a eficácia depende de classificação e política configuradas; ligar o recurso sem esses elementos não protege o acervo.",
+            "justificativa": "A prevenção à perda de dados é um recurso licenciado que aplica políticas sobre conteúdo reconhecido. A cadeia depende de três elos — licença, classificação e política —, e a ausência de qualquer um deles deixa os arquivos fora do escopo da regra, ainda que a interface apresente a funcionalidade.",
+            "errosFrequentes": [
+              "Presumir que todo plano inclui o recurso.",
+              "Configurar a política e não classificar o conteúdo que ela deve proteger.",
+              "Comunicar proteção total sem testar o bloqueio em um envio real."
+            ],
+            "variacao": "O plano é atualizado para uma licença que inclui o recurso. Explique a ordem de implantação e o teste mínimo que comprova eficácia antes de comunicar a proteção à organização."
+          }
+        ]
+      }
+    }
+  ]
+}

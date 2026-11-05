@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 3,
+    "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM3U3P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U3P5.js",
+    "idsCompletos": [
+      "m3-u3-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u3-t3-s3",
+      "titulo": "Comunicação profissional em equipes distribuídas",
+      "topicoTitulo": "Comunicação profissional e institucional",
+      "topicoId": "modulo-3-unidade-3-topico-3",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno aplicará boas práticas de comunicação em equipes distribuídas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os desafios de equipes distribuídas; (b) boas práticas de comunicação; (c) acordos de resposta (SLA); (d) inclusão de quem não está síncrono. POR QUE O CONHECIMENTO É IMPORTANTE: o trabalho remoto amplia fusos e culturas; comunicar bem evita exclusão e atraso. PRÉ-REQUISITOS: unidade 3.1 (síncrono x assíncrono); unidade 3.3 (canais). OBJETIVOS OBSERVÁVEIS: (1) listar desafios de fuso, idioma e cultura; (2) aplicar comunicação assíncrona com prazos claros; (3) documentar decisões; (4) definir acordos de resposta. COMPETÊNCIAS DESENVOLVIDAS: colaboração intercultural; gestão de equipes remotas. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (modos); unidade 3.3 (canais); unidade 2.1 (calendários). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: equipes distribuídas enfrentam fusos horários, idiomas e diferenças culturais de comunicação. As boas práticas incluem: definir janelas de sobreposição em que todos estão disponíveis; preferir comunicação assíncrona com prazos explícitos; documentar decisões para quem não participou; evitar marcar reuniões fora do horário de trabalho alheio; respeitar feriados locais; usar ferramentas colaborativas compartilhadas; e estabelecer acordos de nível de serviço (SLA) — prazos esperados de resposta para cada tipo de mensagem. A inclusão exige cuidado para não excluir quem não pode estar presente ao vivo: decisões tomadas em reunião síncrona devem ser registradas e comunicadas, e materiais devem ficar disponíveis. A clareza redobrada compensa a ausência de contexto presencial: mensagens explícitas reduzem interpretações divergentes entre culturas. A rotatividade de horário das reuniões recorrentes favorece a equidade entre fusos.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer que fuso e idioma afetam a comunicação.\n- Nível intermediário: aplicar prazos claros e documentar decisões.\n- Nível avançado: definir acordos de resposta (SLA) adequados à equipe.\n- Nível especialista: reorganizar o fluxo de uma equipe multinacional reduzindo exclusão e retrabalho.\nCOMPARAÇÕES CRÍTICAS:\n- assíncrono x síncrono em equipes distribuídas: o assíncrono promove inclusão de fusos; o síncrono deve ser reservado — a escolha afeta a equidade.\n- prazo explícito x expectativa implícita: o explícito evita atraso; o implícito gera conflito — muda o resultado.\n- documento compartilhado x mensagem solta: o primeiro é durável; a segunda se perde.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Reunião fora do horário de alguém é aceitável se for importante.\" — Motivo: ignora limites e fusos — Versão tecnicamente correta: respeitar horários e alternar para equidade.\n- Afirmação errada: \"Assíncrono dispensa prazos.\" — Motivo: sem prazo, atrasa — Versão tecnicamente correta: definir SLA de resposta.\n- Afirmação errada: \"Todos entendem o mesmo contexto.\" — Motivo: culturas diferem — Versão tecnicamente correta: explicitar contexto e decisões.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: fuso, idioma, cultura, sobreposição, SLA, assíncrono, documentação.\n- Regras e fórmulas: janela de sobreposição + prazos + documentação = colaboração distribuída saudável.\n- Exceções: decisões síncronas precisam ser registradas para quem faltou.\n- Palavras-chave: distribuída, fuso, SLA, inclusão, documentação.\n- Checklist de domínio: (1) Listo desafios? (2) Aplico assíncrono com prazo? (3) Documento decisões? (4) Incluo quem não está síncrono?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite dois desafios de equipes distribuídas. (2) O que é SLA de resposta? (3) Por que documentar decisões? (4) Como incluir quem não pode ao vivo? (5) Por que alternar horários de reunião?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Como lidar com fusos horários diferentes?",
+          "resposta": "Definir janela de sobreposição, usar rotação de horários para reuniões e preferir assíncrono quando possível."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma equipe global precisa decidir sobre um bug crítico. Como proceder?",
+          "resposta": "Comunicação assíncrona urgente (e-mail/mensagem com prazo curto) + reunião síncrona apenas se necessário, com gravação para ausentes."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Reuniões sempre devem ser no horário do escritório sede.'",
+          "correcao": "Errado. Isso exclui participantes de outros fusos; rotacionar horários e usar assíncrono é mais inclusivo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Documentar decisões ajuda equipes distribuídas.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática favorece inclusão em equipes globais? A) Reuniões sempre no horário da sede; B) Rotação de horários; C) Excluir ausentes da decisão; D) Apenas chat síncrono.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar boas práticas de comunicação em equipes distribuídas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará boas práticas de comunicação em equipes distribuídas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Equipes distribuídas: fusos horários, idiomas, culturas. Boas práticas: definir horários de sobreposição; usar comunicação assíncrona com prazos claros; documentar decisões; evitar reuniões fora do horário de trabalho; respeitar feriados locais; usar ferramentas colaborativas; estabelecer acordos de nível de serviço (SLA) de resposta. Atenção a inclusão: não excluir quem não pode estar síncrono.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comunicação profissional em equipes distribuídas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Reuniões sempre devem ser no horário do escritório sede.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Isso exclui participantes de outros fusos; rotacionar horários e usar assíncrono é mais inclusivo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Como lidar com fusos horários diferentes?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Definir janela de sobreposição, usar rotação de horários para reuniões e preferir assíncrono quando possível.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma equipe global precisa decidir sobre um bug crítico. Como proceder?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Comunicação assíncrona urgente (e-mail/mensagem com prazo curto) + reunião síncrona apenas se necessário, com gravação para ausentes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Reuniões sempre devem ser no horário do escritório sede.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Isso exclui participantes de outros fusos; rotacionar horários e usar assíncrono é mais inclusivo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

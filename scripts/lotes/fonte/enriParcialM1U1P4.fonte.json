@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 1,
+    "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+    "parte": 4,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U1P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U1P4.js",
+    "idsCompletos": [
+      "modulo-1-unidade-1-topico-1-sub-7",
+      "modulo-1-unidade-1-topico-1-sub-8"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-1-topico-1-sub-7",
+      "titulo": "Contas pessoais e organizacionais",
+      "topicoTitulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+      "topicoId": "modulo-1-unidade-1-topico-1",
+      "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno diferenciara contas pessoais e organizacionais no Microsoft 365.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a diferença entre contas pessoais e contas organizacionais no ecossistema Microsoft 365; (b) o que cada escopo oferece: gestão centralizada, domínio próprio, políticas de segurança, eDiscovery e gerenciamento de dispositivos no lado organizacional; limite de usuários e foco doméstico no lado pessoal; (c) as consequências práticas da escolha para administração, segurança e conformidade; (d) a regra de prudência: a disponibilidade de recursos específicos depende do plano/licença. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve cenários (família em casa; empresa com 500 funcionários que precisa de eDiscovery) e pede o tipo de conta; atribuir recurso de conformidade a conta pessoal muda o gabarito. PRÉ-REQUISITOS: subtópico 1 (planos e produtos). OBJETIVOS OBSERVÁVEIS: (1) distinguir os dois escopos de conta; (2) associar cada recurso característico ao escopo correto; (3) justificar a escolha por cenário. COMPETÊNCIAS DESENVOLVIDAS: leitura de requisitos de governança; escolha de ambiente de conta. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópicos 2 (licenciamento) e 8 (permissões e compartilhamento); Módulo 4 (segurança e conformidade); Módulo 6 (responsabilização no serviço público). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média a alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: conta pessoal é a identidade individual de uso doméstico (planos do tipo Personal/Family): as licenças cobrem um conjunto limitado de usuários, a administração é do próprio usuário e os recursos concentram-se no uso doméstico — sem centro de administração organizacional. Conta organizacional é a identidade fornecida pela instituição (planos Business/Enterprise) dentro de um locatário (tenant): há gestão centralizada (administrador define políticas para todos), domínios personalizados (endereço institucional em vez de conta de consumidor), políticas de segurança avançadas (autenticação, acesso condicional, conforme o plano), eDiscovery (busca e preservação de conteúdo para fins legais e de auditoria), gerenciamento de dispositivos e recursos de conformidade (retenção, auditoria, rotulagem — disponibilidade conforme o plano/licença). Diferenças estruturais: escopo de administração (individual versus centralizada), modelo de licença (usuários da família versus licenças atribuídas por usuário na organização) e conjunto de recursos de segurança e conformidade. Consequência prática: o mesmo arquivo, num ambiente organizacional, fica sujeito a políticas de retenção e permissões definidas pelo administrador — o usuário individual não decide sozinho. A lista exata de recursos de cada plano varia: conferir sempre na documentação oficial.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir \"conta de casa\" de \"conta do trabalho\" e quem administra cada uma.\n- Nível intermediário: associar recursos (domínio personalizado, eDiscovery, gestão de dispositivos) ao escopo organizacional.\n- Nível avançado: explicar como a conta organizacional muda o comportamento de compartilhamento e retenção (políticas do locatário prevalecem).\n- Nível especialista: analisar risco de usar conta pessoal para dados institucionais (perda de controle administrativo, ausência de eDiscovery e de políticas) e propor a correção.\n\nCOMPARAÇÕES CRÍTICAS:\n- Conta pessoal x organizacional: a pessoal tem limite de usuários e administração individual; a organizacional tem gestão centralizada, domínio próprio e conformidade — em questão com \"eDiscovery\" ou \"políticas de segurança avançadas\", o gabarito é conta organizacional.\n- Administrador x usuário final: na organizacional, políticas de compartilhamento e retenção são definidas pelo administrador do locatário; na pessoal, o próprio usuário decide — confundir os papéis inverte a resposta sobre quem define a política.\n- Plano Business x Enterprise: ambos são organizacionais, mas o conjunto de recursos de conformidade e gestão varia por plano — afirmar que qualquer plano organizacional inclui todos os recursos é alternativa errada.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"contas pessoais têm eDiscovery\" — Motivo: atribuição de recurso organizacional a escopo doméstico — Versão tecnicamente correta: eDiscovery é recurso de contas organizacionais, com disponibilidade conforme o plano/licença.\n- Afirmação errada: \"no ambiente organizacional, cada usuário define as políticas de retenção dos seus arquivos\" — Motivo: confunde escopo pessoal com centralizado — Versão tecnicamente correta: as políticas de retenção e as permissões são definidas pelo administrador do locatário, dentro dos limites do plano.\n- Afirmação errada: \"conta organizacional é apenas uma conta pessoal com mais espaço\" — Motivo: reduz governança a armazenamento — Versão tecnicamente correta: a diferença estrutural é administrativa e de conformidade (domínio, políticas, auditoria, eDiscovery), não apenas cota.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: conta pessoal, conta organizacional, locatário, gestão centralizada, domínio personalizado, eDiscovery, gerenciamento de dispositivos.\n- Regras e fórmulas: família/usuário único → pessoal; instituição com políticas, domínio e conformidade → organizacional.\n- Exceções: a disponibilidade de cada recurso organizacional depende do plano/licença — conferir na documentação oficial.\n- Palavras-chave: conta pessoal, conta organizacional, tenant, eDiscovery, compliance, domínio personalizado.\n- Checklist de domínio: distingo os dois escopos; atribuo recursos ao escopo certo; explico quem define políticas em cada caso; reconheço variação por plano.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Uma família compartilha Office em casa: qual tipo de conta e qual limite típico? (2) Empresa com 500 funcionários precisa de eDiscovery e gestão de dispositivos: qual escopo? (3) Quem define as políticas de retenção num locatário organizacional? (4) Por que usar conta pessoal para dados institucionais é risco de governança? (5) Corrija: \"eDiscovery está disponível em qualquer conta Microsoft\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Família que compartilha o Office em casa entre poucos usuários.",
+          "resposta": "Conta pessoal (plano do tipo Family) — cobre um número limitado de usuários, com foco doméstico e administração feita pelo próprio usuário; não há centro de administração organizacional nem políticas institucionais."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Empresa com 500 funcionários precisa de eDiscovery e de gerenciamento de dispositivos.",
+          "resposta": "Ambiente organizacional (Enterprise, conforme o plano): locatário com gestão centralizada, domínio próprio, políticas de segurança, eDiscovery para busca e preservação de conteúdo e gerenciamento de dispositivos. A composição exata de recursos depende do plano/licença contratado — a contratação deve ser conferida na documentação oficial."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Servidor criou pasta de trabalho institucional na conta pessoal e a saiu da instituição; a equipe perdeu o controle do material.",
+          "resposta": "Diagnóstico: dados institucionais em escopo pessoal ficam fora das políticas do locatário — sem administração central, sem retenção e sem eDiscovery para auditoria. Correção: migrar o material para o OneDrive/SharePoint organizacional, definir permissões e aplicar a política de retenção do locatário; o caso ilustra por que a escolha do escopo de conta é decisão de governança, não apenas de preferência."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que contas pessoais têm eDiscovery.",
+          "correcao": "Incorreto: eDiscovery é recurso de contas organizacionais (Business/Enterprise), com disponibilidade conforme o plano/licença; contas pessoais não possuem centro de administração com ferramentas de conformidade."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual tipo de conta permite domínio personalizado e políticas de segurança avançadas? A) Pessoal; B) Organizacional; C) Ambas.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Contas pessoais e organizacionais têm o mesmo escopo de administração.",
+          "resposta": "Errado. A conta pessoal é administrada pelo próprio usuário, com foco doméstico; a organizacional tem gestão centralizada pelo administrador do locatário, com políticas de segurança e conformidade conforme o plano."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Num locatário organizacional, as políticas de retenção e de compartilhamento de arquivos são definidas por: A) Cada usuário individualmente; B) O administrador do locatário, conforme o plano; C) O aplicativo Word automaticamente.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar contas pessoais e organizacionais e de atribuir cada recurso característico (gestão centralizada, domínio, eDiscovery, gestão de dispositivos) ao escopo correto, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciara contas pessoais e organizacionais no Microsoft 365"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Contas pessoais (Personal/Family): limite de usuários, recursos focados doméstico. Contas organizacionais (Business/Enterprise): gestão centralizada, domínios personalizados, políticas de segurança avançadas, eDiscovery, gerenciamento de dispositivos, compliance features. Diferenças: escopo de administração, licenças por usuário vs. familiar, recursos de segurança e conformidade.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Contas pessoais e organizacionais",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que contas pessoais têm eDiscovery.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: eDiscovery é recurso de contas organizacionais (Enterprise)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Família compartilhando Office em casa.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Conta pessoal (Family) — limite de usuários, foco doméstico.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Empresa com 500 funcionários precisa de eDiscovery e gestão de dispositivos.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Conta organizacional (Enterprise) — recursos de segurança/compliance.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que contas pessoais têm eDiscovery.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: eDiscovery é recurso de contas organizacionais (Enterprise).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-1-topico-1-sub-8",
+      "titulo": "Permissões, compartilhamento, privacidade e recuperação de arquivos",
+      "topicoTitulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+      "topicoId": "modulo-1-unidade-1-topico-1",
+      "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá modelo de permissões do Microsoft 365.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o modelo de permissões sobre arquivos no Microsoft 365: visualizar, editar, comentar e controlar; (b) formas de compartilhamento: link (com opções de expiração e proteção, conforme o plano) e pessoas específicas; (c) privacidade: configurações do locatário e rotulagem de dados, com disponibilidade conforme o plano; (d) recuperação: lixeira com retenção conforme a configuração, versões anteriores e eDiscovery para administradores. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve cenários de compartilhamento (enviar só leitura, link com prazo) e de recuperação (arquivo excluído) e pede o mecanismo correto; afirmar prazo universal de lixeira ou que o link nunca expira muda o gabarito. PRÉ-REQUISITOS: subtópicos 4 (armazenamento) e 7 (contas). OBJETIVOS OBSERVÁVEIS: (1) aplicar permissões por nível; (2) escolher a forma de compartilhamento adequada; (3) descrever a cadeia de recuperação de um arquivo excluído. COMPETÊNCIAS DESENVOLVIDAS: controle de acesso a documentos; prática de recuperação. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópicos 4 (armazenamento) e 6 (coautoria); unidade 1.5 (OneDrive — compartilhamento e lixeira); Módulo 4 (segurança). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: permissão é o direito concedido sobre um arquivo ou pasta. Níveis típicos: visualizar (abrir e ler, sem alterar), comentar (acrescentar anotações sem editar o conteúdo), editar (alterar o conteúdo) e controlar (gerenciar permissões do item). Compartilhamento por link gera um endereço de acesso cujo comportamento — quem pode abrir, se pode editar, se há expiração e proteção — depende das políticas do locatário e das opções escolhidas no ato do compartilhamento (algumas opções, como expiração e senha no link, dependem do plano/licença); compartilhamento com pessoas específicas restringe o acesso às contas indicadas, que precisam autenticar-se. Privacidade: no ambiente organizacional, as configurações do locatário (definidas pelo administrador) delimitam o que pode ser compartilhado externamente; a rotulagem de dados classifica o documento por sensibilidade, com disponibilidade conforme o plano. Recuperação: a lixeira do serviço guarda itens excluídos pelo período de retenção configurado pela organização/conta — o valor exato varia e deve ser verificado na documentação oficial do produto; dentro do período, o item é restaurado à pasta original; esgotada a lixeira, restam o histórico de versões (para conteúdo alterado) e, no ambiente Enterprise, o eDiscovery conduzido pelo administrador. Princípio prático: compartilhe o menor nível de permissão que atende à finalidade e confirme a retenção vigente antes de confiar só na lixeira.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir visualizar de editar e identificar quem tem acesso a um arquivo.\n- Nível intermediário: compartilhar por link com expiração e por pessoas específicas; restaurar item da lixeira.\n- Nível avançado: explicar como políticas do locatário restringem compartilhamento externo e como a rotulagem interage com permissões (quando disponível no plano).\n- Nível especialista: planejar a cadeia de recuperação completa (lixeira → versões → eDiscovery) e definir prática de backup para o caso de falha em todas as camadas.\n\nCOMPARAÇÕES CRÍTICAS:\n- Link x pessoas específicas: o link depende das políticas do locatário e pode ser transmitido adiante (conforme a opção); pessoas específicas exige autenticação das contas indicadas — para dado sensível, o gabarito é compartilhamento restrito, não link aberto.\n- Visualizar x comentar: comentar permite anotações sem alterar o corpo; visualizar não permite nem comentário — a alternativa que promete comentário num link \"somente leitura\" sem o nível adequado está errada.\n- Lixeira x histórico de versões: a lixeira recupera itens excluídos dentro da retenção; versões recupera conteúdo anterior de arquivos que continuam existindo — confundir os mecanismos inverte a resposta sobre o que se recupera em cada caso.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"um link de compartilhamento nunca expira por padrão\" — Motivo: termo absoluto sobre configuração variável — Versão tecnicamente correta: políticas do locatário podem definir expiração e a opção pode ser configurada ao compartilhar, conforme o plano — conferir na documentação oficial.\n- Afirmação errada: \"os itens ficam na lixeira para sempre\" — Motivo: prazo absoluto sem base — Versão tecnicamente correta: a lixeira mantém itens pelo período de retenção configurado pela organização/conta, que varia — verificar na documentação oficial do produto.\n- Afirmação errada: \"qualquer usuário pode restaurar itens de outros pela lixeira\" — Motivo: generalização de escopo — Versão tecnicamente correta: cada usuário gerencia itens que excluiu; recuperações além disso (ou além da lixeira) dependem do administrador e, no ambiente Enterprise, do eDiscovery conforme o plano.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: níveis de permissão, link de compartilhamento, pessoas específicas, expiração, rotulagem, lixeira, histórico de versões, eDiscovery.\n- Regras e fórmulas: menor privilégio → nível mínimo de permissão; dado sensível → pessoas específicas; arquivo excluído → lixeira dentro da retenção.\n- Exceções: expiração, senha em link e rotulagem dependem do plano; período de lixeira varia conforme a configuração — conferir na documentação oficial.\n- Palavras-chave: permissão, link, expiração, rotulagem, lixeira, retenção, eDiscovery, menor privilégio.\n- Checklist de domínio: aplico níveis de permissão; escolho link versus pessoas específicas; descrevo a cadeia de recuperação; não afirmo prazos sem conferir.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como compartilhar um arquivo para leitura, com prazo de validade do acesso? (2) Qual a diferença entre permissão de comentar e de editar? (3) Um arquivo foi excluído há poucos dias: descreva a cadeia de recuperação. (4) Quem define, no ambiente organizacional, o que pode ser compartilhado externamente? (5) Corrija: \"itens permanecem na lixeira indefinidamente\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Compartilhar um arquivo com permissão de visualização e com expiração de acesso.",
+          "resposta": "Compartilhar > escolher pessoas específicas (ou link, conforme a política) > nível Visualizar > definir expiração quando a opção estiver disponível no plano > enviar. O destinatário abre para leitura e o acesso cessa no prazo configurado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Arquivo relevante foi excluído há 5 dias por engano; como recuperá-lo?",
+          "resposta": "Passo 1: abrir a lixeira do serviço (OneDrive/SharePoint) > localizar o item > Restaurar — o arquivo volta à pasta original. Passo 2: se o item não estiver mais na lixeira, verificar o histórico de versões do caminho/pasta e, no ambiente Enterprise, acionar o administrador para eDiscovery conforme o plano. Prevenção: confirmar o período de retenção vigente (varia conforme a configuração — conferir na documentação oficial) e manter backup de itens críticos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Setor precisa distribuir um relatório com dado sensível para auditoria externa, sem permitir edição nem repasse indevido.",
+          "resposta": "Compartilhamento com pessoas específicas (contas autenticadas), nível Visualizar ou Comentar conforme a necessidade; desativar permissão de download quando a opção estiver disponível no plano; registrar o compartilhamento. Regra aplicada: menor privilégio + autenticação explícita em vez de link amplo — e rotulagem de sensibilidade quando o recurso estiver disponível no plano/licença."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que um link de compartilhamento nunca expira por padrão.",
+          "correcao": "Incorreto: políticas do locatário podem definir expiração para links e a opção pode ser configurada no ato do compartilhamento, conforme o plano/licença — conferir na documentação oficial do produto."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "A lixeira do serviço de armazenamento em nuvem mantém arquivos excluídos por um período de retenção (conferir o valor na documentação oficial do produto). Qual prática é correta ao excluir um arquivo importante? A) Confiar apenas na lixeira; B) Verificar a retenção e manter backup independente; C) Desativar a lixeira para economizar espaço.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) As permissões sobre arquivos incluem níveis como visualizar, editar, comentar e controlar.",
+          "resposta": "Certo. Esses níveis definem o que o destinatário pode fazer: ler, anotar, alterar o conteúdo ou gerenciar permissões."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para distribuir documento sensível a pessoas determinadas, sem link amplo, o compartilhamento adequado é: A) Link para qualquer pessoa com o endereço; B) Pessoas específicas, exigindo autenticação das contas indicadas; C) Publicar no site público do órgão.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar níveis de permissão e formas de compartilhamento a um cenário e de descrever a cadeia de recuperação de arquivo excluído (lixeira, versões, eDiscovery), reconhecendo que prazos e recursos variam, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá modelo de permissões do Microsoft 365"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Permissões granulares (visualizar, editar, comentar, controlar). Compartilhamento por link (com expiração, senha protegido, permissões de download). Privacidade via configurações de locatário e rotulagem de dados. Recuperação: lixeira (retenção conforme a configuração da organização/conta — verificar na documentação oficial do produto), versões anteriores, eDiscovery para administradores Enterprise.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Permissões, compartilhamento, privacidade e recuperação de arquivos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que link de compartilhamento nunca expira por padrão.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: políticas de locatário podem definir expiração; opção de expiração disponível ao compartilhar."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Compartilhar arquivo com permissão de visualização e expiração em 7 dias.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Compartilhar > Pessoas específicas > Visualizar > Definir expiração > Enviar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Recuperar arquivo excluído há 5 dias.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Lixeira (período de retenção conforme o serviço — conferir na documentação oficial) → Restaurar; se além do período, versões anteriores/eDiscovery (admin).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que link de compartilhamento nunca expira por padrão.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: políticas de locatário podem definir expiração; opção de expiração disponível ao compartilhar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

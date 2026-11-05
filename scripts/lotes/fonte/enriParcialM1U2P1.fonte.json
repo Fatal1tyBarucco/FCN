@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 1,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U2P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P1.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-1-sub-1",
+      "modulo-1-unidade-2-topico-1-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-1-sub-1",
+      "titulo": "Interface do Word e navegação",
+      "topicoTitulo": "Interface, documentos, modelos e formatos",
+      "topicoId": "modulo-1-unidade-2-topico-1",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno identificará os elementos da interface do Word moderno (Ribbon).",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a organização da interface do Word em guias e grupos (faixa de opções/Ribbon); (b) a guia Arquivo como área de gerenciamento (não de edição); (c) a barra de ferramentas de acesso rápido e sua personalização; (d) modos de exibição (impressão, leitura) e a limitação de edição do Modo de Leitura; (e) a régua e o painel de navegação como auxiliares de diagramação e estrutura. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve comandos e pede a guia correta (Inserir, Layout, Referências, Revisão, Exibir); localizar o comando errado na guia errada é erro direto de gabarito — e a pegadinha clássica é atribuir edição ao Modo de Leitura. PRÉ-REQUISITOS: nenhum além do uso básico de computador. OBJETIVOS OBSERVÁVEIS: (1) localizar comandos pelas guias; (2) personalizar a barra de acesso rápido; (3) distinguir modos de exibição e suas finalidades. COMPETÊNCIAS DESENVOLVIDAS: navegação eficiente; localização de recursos. GRAU DE DIFICULDADE: básico. RELAÇÃO COM OUTROS TÓPICOS: todos os tópicos da unidade 1.2 dependem desta organização; interface do Excel/PowerPoint segue o mesmo padrão de guias. RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: a faixa de opções (Ribbon) é a estrutura de comando do Word moderno: funcionalidades agrupadas em guias — Arquivo (abre a área de gerenciamento: salvar, exportar, informações, opções), Início (formatação corrente), Inserir (tabelas, imagens, cabeçalhos, números de página, símbolos), Desenho, Layout (margens, orientação, quebras), Referências (sumário, legendas, citações), Correios (malas diretas), Revisão (ortografia, comentários, controle de alterações) e Exibir (modos de exibição, régua, painel de navegação). Dentro de cada guia, os comandos formam grupos (ex.: grupo Parágrafo na guia Início). Barra de ferramentas de acesso rápido (Quick Access Toolbar): faixa fina acima/abaixo da faixa, personalizável com comandos frequentes (Salvar, Desfazer, Impressão rápida) via seta > Mais Comandos; permanece visível independentemente da guia ativa. Modos de exibição: Exibição de Impressão (edição com paginação), Modo de Leitura (otimiza leitura em tela — reformata o texto e não é destinado à edição; voltar a editar exige retornar ao modo de edição), Layout da Web e Estrutura. Régua (guia Exibir): ajusta recuos, margens e tabulações visualmente. Painel de navegação: lista títulos por estilos, permitindo saltar entre seções — ponte direta com o tópico de estilos e sumários. Observação de escopo: nomes e disposição de comandos podem variar entre versões — confira na versão instalada quando a questão depender de detalhe visual.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: localizar três comandos cotidianos (negrito, tabela, número de página) e nomear as guias.\n- Nível intermediário: personalizar a barra de acesso rápido; alternar modos de exibição e explicar para que serve cada um.\n- Nível avançado: usar régua e painel de navegação para revisar estrutura; justificar por que Arquivo não é guia de edição.\n- Nível especialista: diagnosticar \"comando desaparecido\" (guia errada, faixa recolhida, modo de leitura ativo) e resolver rapidamente em prova prática.\n\nCOMPARAÇÕES CRÍTICAS:\n- Guia Inserir x guia Layout: Inserir coloca objetos (tabela, imagem, número de página); Layout ajusta a página (margens, orientação, quebras) — para \"inserir número de página\" o gabarito é Inserir; para \"mudar orientação\" é Layout.\n- Guia Arquivo x guias de comando: Arquivo gerencia o documento (salvar, exportar, proteger); não traz formatação — alternativa que coloca formatação em Arquivo está errada.\n- Modo de Leitura x Exibição de Impressão: leitura otimiza visualização e não destina-se a editar; impressão edita com paginação — a pegadinha que promete edição no Modo de Leitura é falsa.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"o Modo de Leitura permite editar o documento normalmente\" — Motivo: confunde modos de exibição — Versão tecnicamente correta: o Modo de Leitura otimiza a visualização; para editar, retorna-se ao modo de edição (Exibição de Impressão).\n- Afirmação errada: \"a barra de acesso rápido não pode ser personalizada\" — Motivo: afirmação de impossibilidade falsa — Versão tecnicamente correta: ela é personalizável (seta > Mais Comandos) e mantém os comandos visíveis em qualquer guia.\n- Afirmação errada: \"a guia Referências contém a inserção de tabelas\" — Motivo: troca entre guias — Versão tecnicamente correta: tabelas ficam na guia Inserir; Referências concentra sumário, legendas, citações e índices.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: faixa de opções, guias, grupos, barra de acesso rápido, modos de exibição, régua, painel de navegação.\n- Regras e fórmulas: objeto → Inserir; página → Layout; revisão → Revisão; referências documentais → Referências; modos → Exibir; gerenciamento → Arquivo.\n- Exceções: nomes e disposição variam entre versões; Modo de Leitura não é para edição; faixa pode estar recolhida.\n- Palavras-chave: Ribbon, guia, grupo, acesso rápido, Modo de Leitura, Exibição de Impressão, régua, painel de navegação.\n- Checklist de domínio: mapeio comando à guia; personalizo a barra de acesso rápido; distingo modos de exibição; uso régua e painel de navegação.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Em qual guia está a inserção de tabela e em qual a alteração de margens? (2) O que a guia Arquivo oferece e por que não é guia de edição? (3) Como personalizar a barra de acesso rápido? (4) Qual a finalidade do Modo de Leitura e qual sua limitação? (5) Que recurso lista os títulos do documento para navegação rápida e de que ele depende?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Localizar o comando de verificação ortográfica.",
+          "resposta": "Guia Revisão > Verificação Ortográfica (ou a tecla F7, atalho direto). A guia Revisão concentra ortografia, comentários e controle de alterações."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Secretária usa diariamente os comandos Salvar, Impressão rápida e Ortografia e quer acessá-los sem trocar de guia.",
+          "resposta": "Personalizar a barra de ferramentas de acesso rápido: clicar na seta da barra > Mais Comandos > selecionar cada comando > Adicionar > OK. A barra permanece visível em qualquer guia, reduzindo o tempo de acesso; também aceita comandos pouco visíveis na faixa."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Revisor precisa navegar por um relatório de 80 páginas saltando entre seções sem rolar.",
+          "resposta": "Ativar o painel de navegação (guia Exibir > Painel de Navegação): ele lista os títulos do documento — o que pressupõe estilos de título aplicados (Título 1, Título 2). Clicar no título salta para a seção; arrastar títulos reorganiza seções inteiras. Se o painel ficar vazio, o documento usa formatação direta em vez de estilos (ver tópico 2)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que o Modo de Leitura permite edição.",
+          "correcao": "Incorreto: o Modo de Leitura otimiza a visualização (reformata o texto para leitura); para editar o documento, retorna-se ao modo de edição — Exibição de Impressão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual guia contém o comando de inserir tabela? A) Início; B) Inserir; C) Layout.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A faixa de opções organiza os comandos em guias e, dentro delas, em grupos.",
+          "resposta": "Certo. Cada guia reúne grupos de comandos relacionados (ex.: grupo Parágrafo na guia Início)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para ajustar margens e orientação da página, utiliza-se a guia: A) Inserir; B) Exibir; C) Layout.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de localizar comandos nas guias corretas da faixa de opções, personalizar a barra de acesso rápido e distinguir os modos de exibição e suas finalidades, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará os elementos da interface do Word moderno (Ribbon)"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A interface do Word modernizado (Ribbon interface) organiza funcionalidades em guias (Arquivo, Início, Inserir, Desenho, Layout, Referências, Correios, Revisão, Exibir). Cada tab contém grupos de comandos relacionados. A barra de acesso rápido (Quick Access Toolbar) pode ser personalizada com comandos de uso frequente. O modo de leitura otimiza a visualização em dispositivos com tela menor, e a visão de seleção permite editar o documento como uma lista de objetos.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Interface do Word e navegação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que o Modo de Leitura permite edição.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: Modo de Leitura otimiza visualização; edição exige modo de Edição/Exibição de Impressão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Localizar o comando 'Verificar Ortografia'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Guia Revisão > Verificar Ortografia (ou F7).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Personalizar a Barra de Acesso Rápido com 'Salvar'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Clicar na seta da QAT > Mais Comandos > selecionar 'Salvar' > Adicionar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que o Modo de Leitura permite edição.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: Modo de Leitura otimiza visualização; edição exige modo de Edição/Exibição de Impressão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-2-topico-1-sub-2",
+      "titulo": "Formatos de documento (.docx, .doc, .pdf, .rtf, .txt)",
+      "topicoTitulo": "Interface, documentos, modelos e formatos",
+      "topicoId": "modulo-1-unidade-2-topico-1",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá as diferenças entre os formatos de arquivo do Word e quando usar cada um.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os formatos de documento do Word: .docx (Open XML), .doc (legado binário), .pdf, .rtf e .txt, além dos derivados .docm (macros) e .dotx/.dotm (modelos); (b) o que cada formato preserva e perde; (c) o critério de escolha por finalidade: edição colaborativa, distribuição de leitura, compatibilidade antiga, texto puro; (d) a relação entre formato e macros. POR QUE O CONHECIMENTO É IMPORTANTE: a prova pede o formato correto para cada finalidade (distribuição imutável → PDF; arquivo com macros → .docm; texto sem formatação → .txt) e cobra as propriedades de cada formato; afirmar que .txt preserva formatação ou confundir .doc com .docx muda o gabarito. PRÉ-REQUISITOS: interface do Word (sub-1). OBJETIVOS OBSERVÁVEIS: (1) caracterizar cada formato; (2) escolher o formato por finalidade; (3) explicar o papel dos derivados (.docm, .dotx). COMPETÊNCIAS DESENVOLVIDAS: decisão de formato; proteção de integridade de layout na distribuição. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: compatibilidade .doc x .docx (tópico 13); exportação PDF com acessibilidade (tópico 12); PowerPoint (.ppt x .pptx, unidade 1.4). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: formato é a organização interna do arquivo; determina o que o software pode preservar. .docx: padrão Open XML adotado desde o Office 2007 — conteúdo estruturado em XML comprimido, formato padrão de edição do Word moderno; preserva formatação, estilos, campos e estrutura; suporta macros apenas no derivado .docm (docx com macros habilitadas). .doc: formato binário legado (Word 2003 e anteriores); abre em modo de compatibilidade nas versões recentes, com restrições de recursos novos (detalhado no tópico 13). .pdf: formato portátil voltado à distribuição — preserva layout, fontes e paginação na leitura em qualquer plataforma; não é destinado a edição (alterar exige ferramentas específicas) e, quando exportado com as opções de estrutura, carrega tags de acessibilidade (ver tópico 12). .rtf: Rich Text Format — formato de interoperabilidade entre processadores de texto distintos; preserva formatação básica com maior compatibilidade, perdendo recursos avançados. .txt: texto puro — carrega apenas caracteres, sem qualquer formatação (sem negrito, sem estilos, sem imagens). Critério de escolha: editar/colaborar → .docx; distribuir para leitura com layout intacto → .pdf; trocar com software antigo → .rtf ou .doc; dados brutos → .txt; modelo reutilizável → .dotx (ou .dotm com macros). Invariante: a distribuição final para leitura usa um formato que não altere o layout — por isso o PDF é a recomendação de fechamento de documentos oficiais.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: relacionar finalidade e formato: editar (.docx), distribuir (.pdf), texto puro (.txt).\n- Nível intermediário: explicar por que .doc abre em modo de compatibilidade; identificar que macros exigem .docm (não .docx).\n- Nível avançado: escolher .rtf quando processadores diferentes precisam trocar formatação básica; decidir entre PDF e .docx no fluxo de tramitação de documento oficial.\n- Nível especialista: avaliar perdas por conversão (docx → rtf perde recursos avançados; docx → pdf perde editabilidade) e o risco de macros em .docm na política de segurança (Módulo 4).\n\nCOMPARAÇÕES CRÍTICAS:\n- .docx x .doc: Open XML desde 2007 x binário legado — abrir .doc nas versões recentes ativa modo de compatibilidade; a alternativa que diz que são equivalentes está errada.\n- .docx x .docm: mesmíssima estrutura XML, mas macros só rodam/gravam em .docm — um arquivo com macro salvo como .docx perde a macro.\n- .pdf x .docx na distribuição: PDF congela layout para leitura universal; .docx mantém editabilidade — para \"distribuição somente leitura\", o gabarito é PDF.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \".txt preserva a formatação do documento\" — Motivo: atribui propriedade que o formato não tem — Versão tecnicamente correta: .txt é texto puro, sem formatação de qualquer natureza (fonte, estilos, imagens).\n- Afirmação errada: \".docx e .doc são o mesmo formato com extensão diferente\" — Motivo: troca entre padrões — Versão tecnicamente correta: .docx é Open XML (padrão desde o Office 2007); .doc é formato binário legado, que abre em modo de compatibilidade.\n- Afirmação errada: \"macros funcionam em qualquer formato do Word\" — Motivo: generalização — Versão tecnicamente correta: macros requerem o derivado com macros (.docm; .doc legado também as comportava, mas o .docx não).\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: .docx, .doc, .docm, .dotx/.dotm, .rtf, .txt, .pdf, Open XML, modo de compatibilidade.\n- Regras e fórmulas: editar → .docx; macros → .docm; distribuir → .pdf; interoperabilidade básica → .rtf; texto cru → .txt.\n- Exceções: .docx não carrega macros; .pdf não é destinado a edição; conversões podem perder recursos.\n- Palavras-chave: Open XML, binário, PDF, RTF, texto puro, macros, modelo, compatibilidade.\n- Checklist de domínio: caracterizo os cinco formatos; escolho por finalidade; posiciono .docm e .dotx; explico perdas de conversão.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual formato usar para distribuir documento cujo layout não pode mudar? (2) Onde se gravam macros num arquivo moderno do Word? (3) O que .txt carrega e o que perde? (4) Qual o padrão Open XML desde o Office 2007? (5) Corrija: \".doc e .docx são equivalentes\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Salvar um documento para distribuição em leitura, com layout preservado.",
+          "resposta": "Arquivo > Exportar > Criar PDF/XPS — o PDF preserva layout, fontes e paginação para leitura em qualquer plataforma; mantenha o .docx como arquivo-fonte para edições futuras."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "A equipe recebeu um formulário .doc antigo e precisa continuar editando com todos os recursos do Word 365.",
+          "resposta": "Abrir o .doc (entra em modo de compatibilidade, com recursos novos limitados) > Arquivo > Informações > Converter (ou Salvar como .docx). Depois de converter, todos os recursos modernos ficam disponíveis; conferir elementos críticos após a conversão, pois a conversão preserva o conteúdo mas pode reformular detalhes de formatação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Departamento de TI criou uma rotina em macro para preenchimento de ofícios; como distribuí-la sem perder a macro?",
+          "resposta": "Salvar como .docm (docx com macros) — o .docx padrão não executa/gravar macros; a conversão para .docx descartaria a rotina. Complemento de segurança (Módulo 4): a distribuição de .docm deve seguir a política institucional sobre macros, pois elas executam código."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que .txt preserva formatação.",
+          "correcao": "Incorreto: .txt é texto puro — carrega apenas caracteres, sem formatação (sem fontes, estilos, negrito, imagens ou estrutura). Para formatação básica entre processadores distintos, o formato de interoperabilidade é o .rtf."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual formato é o padrão Open XML desde o Office 2007? A) .doc; B) .docx; C) .rtf.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) .docm é .docx com macros.",
+          "resposta": "Certo. A mesma estrutura Open XML, com a habilitação de macros; o .docx padrão não carrega macros."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Documento oficial pronto para tramitação, cujo layout não pode ser alterado, deve ser distribuído como: A) .txt; B) .pdf; C) .rtf.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de caracterizar os formatos .docx, .doc, .docm, .rtf, .txt e .pdf e de escolher o formato adequado a cada finalidade (edição, macros, distribuição, interoperabilidade, texto puro), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá as diferenças entre os formatos de arquivo do Word e quando usar cada um"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": ".docx (padrão Open XML, compatível com versões recentes, suporta macros via .docm). .doc (formato legado, binário, compatibilidade com Word 2003 e anteriores). .pdf (portátil, preserva layout, não editável sem ferramentas específicas). .rtf (Rich Text Format, compatibilidade intermediária entre processadores de texto). .txt (texto puro, sem formatação). A escolha do formato depende do objetivo: edição colaborativa (.docx), distribuição leitura-only (.pdf), compatibilidade antiga (.doc).",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Formatos de documento (.docx, .doc, .pdf, .rtf, .txt)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que .txt preserva formatação.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: .txt é texto puro, sem formatação."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Salvar documento para distribuição leitura-only.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Arquivo > Exportar > Criar PDF/XPS — preserva layout.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Abrir documento .doc antigo no Word 365.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Abre em Modo de Compatibilidade, limitando funcionalidades novas; converter para .docx se necessário.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que .txt preserva formatação.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: .txt é texto puro, sem formatação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

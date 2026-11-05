@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 4,
+    "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+    "parte": 4,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U4P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U4P4.js",
+    "idsCompletos": [
+      "m3-u4-t3-s1",
+      "m3-u4-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u4-t3-s1",
+      "titulo": "Políticas de gravação institucional",
+      "topicoTitulo": "Gravação, consentimento, retenção e proteção",
+      "topicoId": "modulo-3-unidade-4-topico-3",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá políticas de gravação em contexto institucional.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que uma política institucional de gravação deve definir; (b) por que gravar apenas quando necessário; (c) o que a gravação captura; (d) alinhamento com gestão documental e LGPD. POR QUE O CONHECIMENTO É IMPORTANTE: gravar sem política é fonte de vazamento e de responsabilização; a prova cobra os elementos da política. PRÉ-REQUISITOS: unidade 2.3 (políticas de gravação); noção de informação sensível. OBJETIVOS OBSERVÁVEIS: (1) definir os itens da política; (2) justificar a finalidade; (3) enumerar o que é capturado; (4) indicar retenção e acesso. COMPETÊNCIAS DESENVOLVIDAS: elaboração e aplicação de política de gravação. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.3 (consentimento); unidade 4.3 (consentimento e LGPD); unidade 5.3 (resposta a incidentes). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: uma política de gravação institucional define quando gravar (finalidade legítima), quem pode gravar, o armazenamento, o acesso, a retenção e a exclusão. Gravar apenas quando necessário é a aplicação do princípio de minimização: a reunião padrão não precisa ser registrada em vídeo. É preciso ter clareza de que a gravação pode conter vídeo, áudio, chat e transcrição — cada elemento amplia o volume de dados e o risco. O acesso deve ser restrito a autorizados, as gravações sensíveis devem ser protegidas (criptografia, controle de acesso), e a retenção deve seguir normas de gestão documental e a LGPD (Lei nº 13.709/2018, verificada nas referências do projeto). A política também precisa prever o que fazer em caso de pedido de acesso (transparência) e de incidente (vazamento). Sem política clara, decisões improvisadas geram inconsistência e exposição.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que gravar é uma decisão com finalidade.\n- Nível intermediário: redigir os itens da política e definir retenção.\n- Nível avançado: conciliar acesso, transparência e proteção de dados.\n- Nível especialista: auditar a política vigente e propor melhoria nos pontos frágeis.\nCOMPARAÇÕES CRÍTICAS:\n- gravar tudo x gravar o necessário: a primeira maximiza risco e armazenamento; a segunda aplica minimização.\n- política formal x prática improvisada: a primeira garante consistência e rastreabilidade; a segunda varia por pessoa.\n- transcrição x vídeo: a transcrição é mais leve e buscável; o vídeo é mais completo e mais sensível.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Se a plataforma permite gravar, não há política a definir.\" — Motivo: permitir não é autorizar — Versão tecnicamente correta: definir finalidade, acesso e retenção.\n- Afirmação errada: \"Gravação é sempre benéfica para o registro.\" — Motivo: amplia dados e risco — Versão tecnicamente correta: gravar apenas quando necessário.\n- Afirmação errada: \"Retenção indefinida preserva a informação.\" — Motivo: contraria a minimização — Versão tecnicamente correta: definir prazo e descarte.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: política, finalidade, acesso, retenção, exclusão, minimização, LGPD.\n- Regras e fórmulas: quando/quem/onde/quem acessa/por quanto tempo/como descartar.\n- Exceções: a política deve prever pedidos de acesso e incidentes.\n- Palavras-chave: gravação, finalidade, retenção, acesso, gestão documental.\n- Checklist de domínio: (1) Defino os itens? (2) Justifico a finalidade? (3) Enumer o que é capturado? (4) Indico retenção e acesso?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais itens compõem a política? (2) Por que gravar só quando necessário? (3) O que a gravação pode capturar? (4) A que normas a retenção se alinha? (5) Permitir gravar equivale a autorizar?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quais elementos uma política de gravação deve conter?",
+          "resposta": "Finalidade, autorização, armazenamento, acesso, retenção, exclusão e proteção (criptografia)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma reunião gravada contém dados pessoais. O que fazer?",
+          "resposta": "Obter consentimento/base legal, definir finalidade e prazo, proteger armazenamento e garantir direitos dos titulares (acesso/exclusão)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Gravações podem ser compartilhadas livremente.'",
+          "correcao": "Errado. Gravações podem conter dados pessoais e informações sensíveis; compartilhamento deve seguir política."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Política de gravação deve definir prazo de retenção.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual elemento NÃO é essencial em política de gravação? A) Prazo de retenção; B) Criptografia; C) Número de participantes; D) Consentimento.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender políticas de gravação em contexto institucional, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá políticas de gravação em contexto institucional"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Política de gravação: definir quando gravar, quem pode gravar, finalidade, armazenamento, acesso, retenção e exclusão. Boas práticas: gravar apenas quando necessário; informar participantes; restringir acesso a autorizados; criptografar; definir prazo de retenção conforme normas de gestão documental e LGPD. A gravação pode incluir vídeo, áudio, chat e transcrição.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Políticas de gravação institucional",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Gravações podem ser compartilhadas livremente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Gravações podem conter dados pessoais e informações sensíveis; compartilhamento deve seguir política."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quais elementos uma política de gravação deve conter?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Finalidade, autorização, armazenamento, acesso, retenção, exclusão e proteção (criptografia).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma reunião gravada contém dados pessoais. O que fazer?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Obter consentimento/base legal, definir finalidade e prazo, proteger armazenamento e garantir direitos dos titulares (acesso/exclusão).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Gravações podem ser compartilhadas livremente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Gravações podem conter dados pessoais e informações sensíveis; compartilhamento deve seguir política.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u4-t3-s2",
+      "titulo": "Consentimento e bases legais (LGPD)",
+      "topicoTitulo": "Gravação, consentimento, retenção e proteção",
+      "topicoId": "modulo-3-unidade-4-topico-3",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá consentimento e bases legais para gravação.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que a LGPD exige ao tratar dados pessoais; (b) o que é base legal; (c) consentimento livre, informado e inequívoco; (d) limites entre lei e prática. POR QUE O CONHECIMENTO É IMPORTANTE: gravar reuniões é tratamento de dados; sem base legal, há irregularidade. PRÉ-REQUISITOS: unidade 4.3 (política de gravação); noção de proteção de dados. OBJETIVOS OBSERVÁVEIS: (1) explicar que o tratamento exige base legal; (2) citar bases legais; (3) definir consentimento; (4) situar a LGPD no contexto público. COMPETÊNCIAS DESENVOLVIDAS: análise de conformidade; proteção de dados. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.3 (retenção); unidade 5.3 (incidentes); Módulo 4 (LGPD). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a LGPD (Lei nº 13.709/2018, verificada nas referências do projeto) estabelece que o tratamento de dados pessoais exige uma base legal. Entre as bases estão o consentimento, a execução de contrato, o cumprimento de obrigação legal, a proteção da vida, o exercício regular de direitos e o legítimo interesse (com os limites próprios). Gravar uma reunião que contenha dados pessoais configura tratamento: é preciso finalidade, base legal e informação ao titular. O consentimento, quando adotado, deve ser livre, informado e inequívoco — o titular precisa saber o que será gravado, para quê e por quanto tempo. No serviço público, somam-se as normas de gestão documental e a lógica de transparência (Lei nº 12.527/2011), mas transparência não autoriza expor dados pessoais indiscriminadamente. A análise é casuística: a mesma reunião pode exigir bases diferentes conforme o conteúdo. Não se deve inventar dispositivos: cita-se a lei e seus conceitos, conferindo-se a redação vigente em fonte oficial.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que dados pessoais só se tratam com base legal.\n- Nível intermediário: identificar a base legal aplicável a uma gravação concreta.\n- Nível avançado: distinguir consentimento das demais bases e seus efeitos.\n- Nível especialista: analisar um caso controvertido conciliando finalidade, necessidade e direitos do titular.\nCOMPARAÇÕES CRÍTICAS:\n- consentimento x obrigação legal: no primeiro, o titular pode revogar; na segunda, a base prescinde do consentimento — a distinção altera a análise.\n- LGPD x LAI: uma protege dados pessoais; a outra garante acesso à informação pública — precisam ser conciliadas, não opostas.\n- dado pessoal x dado anonimizado: o anonimizado, quando de fato irreversível, sai do escopo; pseudonimizado ainda é pessoal.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Basta avisar que está gravando para estar em conformidade.\" — Motivo: o aviso informa, mas é preciso base legal — Versão tecnicamente correta: definir e documentar a base legal.\n- Afirmação errada: \"Consentimento é a única base legal.\" — Motivo: há outras bases — Versão tecnicamente correta: identificar a base aplicável ao caso.\n- Afirmação errada: \"Transparência obriga a divulgar toda gravação.\" — Motivo: protege-se dados pessoais — Versão tecnicamente correta: conciliar LAI e LGPD.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: LGPD, base legal, consentimento, finalidade, titular, anonimização.\n- Regras e fórmulas: tratamento de dado pessoal exige base legal + finalidade.\n- Exceções: transparência não afasta a proteção de dados.\n- Palavras-chave: LGPD, base legal, consentimento, finalidade, LAI.\n- Checklist de domínio: (1) Explico a exigência de base legal? (2) Cito bases? (3) Defino consentimento? (4) Situo a LGPD no público?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que a LGPD exige para tratar dados? (2) Cite três bases legais. (3) O que é consentimento inequívoco? (4) Como conciliar LAI e LGPD? (5) Por que o aviso não basta?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que é base legal na LGPD?",
+          "resposta": "Fundamento jurídico que autoriza o tratamento de dados pessoais (ex.: consentimento, execução de contrato, obrigação legal)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como obter consentimento para gravação?",
+          "resposta": "Informar claramente sobre gravação, finalidade e uso; obter manifestação livre e inequívoca (ex.: aceite explícito); registrar."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Gravação sempre exige consentimento explícito.'",
+          "correcao": "Depende da base legal aplicável; em alguns casos a obrigação legal ou execução de contrato pode fundamentar. Verificar caso a caso."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A LGPD exige base legal para tratamento de dados pessoais.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual lei trata de proteção de dados pessoais no Brasil? A) Lei 12.527/2011; B) Lei 13.709/2018; C) Lei 14.129/2021; D) Lei 12.965/2014.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender consentimento e bases legais para gravação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá consentimento e bases legais para gravação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "LGPD (Lei 13.709/2018): tratamento de dados pessoais exige base legal (consentimento, execução de contrato, obrigação legal, etc.). Gravação de reunião com dados pessoais: informar participantes, obter consentimento quando aplicável, definir finalidade e prazo. Consentimento deve ser livre, informado e inequívoco. Em serviço público, observar também normas de gestão documental e transparência (LAI). Não inventar dispositivos; verificar redação atual em fonte oficial.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Consentimento e bases legais (LGPD)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Gravação sempre exige consentimento explícito.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Depende da base legal aplicável; em alguns casos a obrigação legal ou execução de contrato pode fundamentar. Verificar caso a caso."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que é base legal na LGPD?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Fundamento jurídico que autoriza o tratamento de dados pessoais (ex.: consentimento, execução de contrato, obrigação legal).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como obter consentimento para gravação?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Informar claramente sobre gravação, finalidade e uso; obter manifestação livre e inequívoca (ex.: aceite explícito); registrar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Gravação sempre exige consentimento explícito.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Depende da base legal aplicável; em alguns casos a obrigação legal ou execução de contrato pode fundamentar. Verificar caso a caso.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

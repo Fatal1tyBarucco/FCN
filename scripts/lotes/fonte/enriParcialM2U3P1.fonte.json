@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 3,
+    "unidadeTitulo": "2.3 Protocolos",
+    "parte": 1,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U3P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U3P1.js",
+    "idsCompletos": [
+      "m2-u3-t1-s1",
+      "m2-u3-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u3-t1-s1",
+      "titulo": "IPv4 e IPv6: finalidade e características",
+      "topicoTitulo": "IPv4, IPv6, TCP e UDP",
+      "topicoId": "modulo-2-unidade-3-topico-1",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno comparará IPv4 e IPv6 quanto a tamanho de endereço, formato, tipos e motivação da transição.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) características do IPv4; (b) características do IPv6; (c) a motivação da transição; (d) os mecanismos de migração. POR QUE O CONHECIMENTO É IMPORTANTE: a transição IPv4→IPv6 é tema recorrente; a prova compara tamanho, formato e recursos. PRÉ-REQUISITOS: camada de rede; endereçamento básico. OBJETIVOS OBSERVÁVEIS: (1) comparar tamanho e notação; (2) explicar o esgotamento do IPv4; (3) citar recursos do IPv6; (4) descrever dual stack, túneis e tradução. COMPETÊNCIAS DESENVOLVIDAS: comparação de protocolos; análise de transição tecnológica. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.4 (IPv6); unidade 3.3 (ARP/NDP); unidade 4.1 (estrutura IPv4). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o IPv4 usa endereços de 32 bits, escritos em notação decimal pontuada (por exemplo, 192.168.1.10), o que totaliza cerca de 4,3 bilhões de endereços; esse número se esgotou, motivando a transição. Seu cabeçalho tem tamanho mínimo de 20 bytes e inclui campos como TTL, protocolo, checksum e fragmentação. O IPv6 usa 128 bits, escritos em notação hexadecimal separada por dois-pontos (por exemplo, 2001:db8::1), com espaço de endereçamento praticamente inesgotável. Seu cabeçalho é fixo em 40 bytes, sem checksum (delegado a camadas superiores) e sem fragmentação pelos roteadores (apenas pela origem), com extensões opcionais. O IPv6 incorpora o IPsec de forma nativa (com uso opcional), substitui o ARP pelo Neighbor Discovery (NDP) e oferece autoconfiguração sem estado (SLAAC). A migração ocorre por três estratégias: pilha dupla (dual stack), em que o dispositivo suporta ambos os protocolos; túneis (transportar IPv6 sobre IPv4 ou vice-versa); e tradução (converter entre eles, como NAT64/DNS64). A coexistência é, na prática, o cenário predominante.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: comparar 32 x 128 bits e as notações.\n- Nível intermediário: associar recursos do IPv6 (NDP, SLAAC, cabeçalho simplificado).\n- Nível avançado: explicar os mecanismos de transição e quando usar cada um.\n- Nível especialista: analisar os impactos de escolher tradução em vez de pilha dupla.\nCOMPARAÇÕES CRÍTICAS:\n- IPv4 x IPv6: 32 x 128 bits; decimal x hexadecimal; com x sem checksum de cabeçalho — muda formato e cálculo.\n- ARP x NDP: o IPv6 substitui ARP por Neighbor Discovery sobre ICMPv6.\n- dual stack x tradução: a primeira preserva o fim a fim; a segunda introduz conversão e possíveis perdas de função.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"IPv6 é o IPv4 com mais bits, sem outras mudanças.\" — Motivo: mudam cabeçalho, descoberta e autoconfiguração — Versão tecnicamente correta: há diferenças estruturais.\n- Afirmação errada: \"IPv6 usa ARP.\" — Motivo: ARP é do IPv4 — Versão tecnicamente correta: usa NDP sobre ICMPv6.\n- Afirmação errada: \"A transição exigiu desligar o IPv4.\" — Motivo: a coexistência é possível — Versão tecnicamente correta: usa-se pilha dupla, túneis e tradução.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: IPv4 (32 bits), IPv6 (128 bits), dual stack, túnel, NAT64/DNS64, NDP, SLAAC.\n- Regras e fórmulas: 2^32 x 2^128 endereços; cabeçalho IPv6 fixo em 40 bytes.\n- Exceções: o IPsec é nativo no IPv6, mas seu uso é opcional.\n- Palavras-chave: esgotamento, hexadecimal, cabeçalho, transição, coexistência.\n- Checklist de domínio: (1) Comparo tamanho? (2) Explico o esgotamento? (3) Cito recursos? (4) Descrevo a transição?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quantos bits tem cada endereço? (2) Por que o IPv4 se esgotou? (3) O que substitui o ARP no IPv6? (4) Cite dois mecanismos de transição. (5) O IPv6 tem checksum de cabeçalho?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quantos endereços IPv4 e IPv6 existem aproximadamente?",
+          "resposta": "IPv4: 2^32 ≈ 4,3 bilhões. IPv6: 2^128 ≈ 3,4×10^38. A diferença de escala é a motivação central da transição."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um roteador de borda precisa suportar IPv4 e IPv6 simultaneamente. Qual estratégia usar?",
+          "resposta": "Pilha dupla (dual stack): o roteador processa ambos os protocolos em paralelo, com tabelas de rotas e interfaces separadas. É a estratégia preferida quando possível."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'IPv6 elimina a necessidade de NAT porque cada dispositivo terá IP público.'",
+          "correcao": "Parcialmente incorreto. IPv6 fornece endereços suficientes para endereçamento fim-a-fim, mas NAT pode ainda existir por política (ULA, NAT66) ou transição. A eliminação do NAT não é automática nem obrigatória."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O cabeçalho IPv6 tem tamanho fixo de 40 bytes e não inclui checksum.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo substitui o ARP no IPv6? A) ICMPv6; B) NDP; C) DHCPv6; D) SLAAC.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de comparar IPv4 e IPv6 quanto a tamanho de endereço, formato, tipos e motivação da transição, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "comparará IPv4 e IPv6 quanto a tamanho de endereço, formato, tipos e motivação da transição"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "IPv4: endereços de 32 bits, notação decimal pontuada (ex.: 192.168.1.10), ~4,3 bilhões de endereços, esgotamento motivou a transição. Cabeçalho de tamanho fixo (20 bytes mínimo), com campos de fragmentação, TTL, protocolo, checksum. IPv6: endereços de 128 bits, notação hexadecimal com dois-pontos (ex.: 2001:db8::1), espaço praticamente inesgotável, cabeçalho simplificado (40 bytes fixo) sem fragmentação intermediária (apenas origem), sem checksum de cabeçalho (delegado a camadas superiores), com…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a IPv4 e IPv6: finalidade e características",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'IPv6 elimina a necessidade de NAT porque cada dispositivo terá IP público.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Parcialmente incorreto. IPv6 fornece endereços suficientes para endereçamento fim-a-fim, mas NAT pode ainda existir por política (ULA, NAT66) ou transição. A eliminação do NAT não é automática nem obrigatória."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quantos endereços IPv4 e IPv6 existem aproximadamente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "IPv4: 2^32 ≈ 4,3 bilhões. IPv6: 2^128 ≈ 3,4×10^38. A diferença de escala é a motivação central da transição.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um roteador de borda precisa suportar IPv4 e IPv6 simultaneamente. Qual estratégia usar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pilha dupla (dual stack): o roteador processa ambos os protocolos em paralelo, com tabelas de rotas e interfaces separadas. É a estratégia preferida quando possível.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'IPv6 elimina a necessidade de NAT porque cada dispositivo terá IP público.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Parcialmente incorreto. IPv6 fornece endereços suficientes para endereçamento fim-a-fim, mas NAT pode ainda existir por política (ULA, NAT66) ou transição. A eliminação do NAT não é automática nem obrigatória.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u3-t1-s2",
+      "titulo": "TCP: confiabilidade, fluxo e congestionamento",
+      "topicoTitulo": "IPv4, IPv6, TCP e UDP",
+      "topicoId": "modulo-2-unidade-3-topico-1",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará os mecanismos de confiabilidade do TCP: sequência, ACK, retransmissão, controle de fluxo e de congestionamento, e three-way handshake.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que torna o TCP confiável; (b) o three-way handshake; (c) controle de fluxo e de congestionamento; (d) encerramento da conexão. POR QUE O CONHECIMENTO É IMPORTANTE: a confiabilidade do TCP sustenta HTTP, e-mail e transferências; a prova cobra os mecanismos e o handshake. PRÉ-REQUISITOS: camada de transporte; conceito de pacote. OBJETIVOS OBSERVÁVEIS: (1) descrever o handshake; (2) explicar sequência e ACK; (3) diferenciar fluxo de congestionamento; (4) descrever o encerramento. COMPETÊNCIAS DESENVOLVIDAS: análise de protocolo; leitura de diagramas de conexão. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (UDP); unidade 3.2 (HTTP); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o TCP (Transmission Control Protocol) é orientado à conexão e confiável, garantindo entrega ordenada e sem duplicação. Seus mecanismos incluem: (a) three-way handshake — o cliente envia SYN, o servidor responde SYN-ACK e o cliente confirma com ACK, sincronizando os números de sequência; (b) números de sequência e ACK — cada byte é numerado e o receptor confirma o próximo byte esperado; (c) retransmissão — se o ACK não chega dentro do tempo (RTO), o segmento é reenviado; (d) controle de fluxo — o receptor anuncia uma janela (rwnd) para não ser sobrecarregado; (e) controle de congestionamento — o emissor ajusta a janela de congestionamento (cwnd) com algoritmos como slow start e congestion avoidance, reagindo a perdas; (f) encerramento — via FIN/ACK ou RST. O TCP é usado por HTTP, HTTPS, SMTP, FTP e SSH. O custo da confiabilidade é o overhead (cabeçalho maior) e a latência adicional dos handshakes e retransmissões; por isso aplicações sensíveis a atraso podem preferir UDP. A escolha do protocolo de transporte é uma decisão de projeto baseada no requisito.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o TCP confirma o que chega.\n- Nível intermediário: descrever sequência/ACK e retransmissão.\n- Nível avançado: distinguir controle de fluxo de controle de congestionamento.\n- Nível especialista: explicar como o TCP reage a perdas e por que isso afeta o desempenho.\nCOMPARAÇÕES CRÍTICAS:\n- fluxo x congestionamento: o fluxo protege o RECEPTOR (rwnd); o congestionamento protege a REDE (cwnd) — confundir inverte o gabarito.\n- handshake de abertura x encerramento: SYN/SYN-ACK/ACK abre; FIN/ACK fecha.\n- confiabilidade x atraso: mais confiabilidade costuma custar mais latência.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O TCP garante que os dados cheguem sem atraso.\" — Motivo: garante entrega, não prazo — Versão tecnicamente correta: a entrega é garantida, mas o tempo não.\n- Afirmação errada: \"Controle de fluxo e de congestionamento são o mesmo.\" — Motivo: um protege o receptor; o outro, a rede.\n- Afirmação errada: \"O TCP não retransmite.\" — Motivo: a retransmissão é central — Versão tecnicamente correta: reenvia segmentos não confirmados.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: TCP, three-way handshake, sequência, ACK, retransmissão, rwnd, cwnd, FIN.\n- Regras e fórmulas: SYN → SYN-ACK → ACK; entrega ordenada e sem duplicação.\n- Exceções: aplicações sensíveis a atraso podem preferir UDP.\n- Palavras-chave: conexão, confiabilidade, janela, congestionamento, retransmissão.\n- Checklist de domínio: (1) Descrevo o handshake? (2) Explico sequência/ACK? (3) Diferencio fluxo de congestionamento? (4) Descrevo o encerramento?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais mensagens formam o handshake? (2) O que o ACK confirma? (3) O que é rwnd? (4) E cwnd? (5) Cite protocolos que usam TCP.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Descrever o three-way handshake TCP entre cliente e servidor.",
+          "resposta": "Cliente envia SYN com ISN (Initial Sequence Number). Servidor responde SYN-ACK com seu ISN e ACK do ISN+1 do cliente. Cliente envia ACK confirmando ISN do servidor+1. Conexão estabelecida."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um download TCP está lento em uma rede congestionada. Quais mecanismos do TCP reagem?",
+          "resposta": "Controle de congestionamento: reduz cwnd (janela de congestionamento), entra em slow start ou congestion avoidance, e pode usar fast recovery. O throughput cai até a rede se recuperar."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'TCP garante entrega em tempo real sem perda.'",
+          "correcao": "Errado. TCP garante entrega confiável e ordenada, mas não em tempo real — retransmissões e controle de congestionamento introduzem latência variável. Para tempo real, usa-se UDP com tolerância a perdas (VoIP, streaming)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O three-way handshake do TCP usa as flags SYN, SYN-ACK e ACK.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual mecanismo evita que o remetente sobrecarregue o receptor? A) Controle de congestionamento; B) Controle de fluxo; C) Retransmissão; D) Fragmentação.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar os mecanismos de confiabilidade do TCP: sequência, ACK, retransmissão, controle de fluxo e de congestionamento, e three-way handshake, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará os mecanismos de confiabilidade do TCP: sequência, ACK, retransmissão, controle de fluxo e de congestionamento, e three-way handshake"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "TCP (Transmission Control Protocol) é orientado à conexão e confiável. Mecanismos: (a) Three-way handshake: SYN (cliente), SYN-ACK (servidor), ACK (cliente) — estabelece conexão e sincroniza números de sequência. (b) Números de sequência e ACK: cada byte tem número; o receptor confirma o próximo byte esperado. (c) Retransmissão: se ACK não chega em tempo (RTO), retransmite. (d) Controle de fluxo: janela deslizante (rwnd) anunciada pelo receptor para não sobrecarregar. (e) Controle de congestiona…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a TCP: confiabilidade, fluxo e congestionamento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'TCP garante entrega em tempo real sem perda.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. TCP garante entrega confiável e ordenada, mas não em tempo real — retransmissões e controle de congestionamento introduzem latência variável. Para tempo real, usa-se UDP com tolerância a perdas (VoIP, streaming)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Descrever o three-way handshake TCP entre cliente e servidor.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Cliente envia SYN com ISN (Initial Sequence Number). Servidor responde SYN-ACK com seu ISN e ACK do ISN+1 do cliente. Cliente envia ACK confirmando ISN do servidor+1. Conexão estabelecida.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um download TCP está lento em uma rede congestionada. Quais mecanismos do TCP reagem?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Controle de congestionamento: reduz cwnd (janela de congestionamento), entra em slow start ou congestion avoidance, e pode usar fast recovery. O throughput cai até a rede se recuperar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'TCP garante entrega em tempo real sem perda.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. TCP garante entrega confiável e ordenada, mas não em tempo real — retransmissões e controle de congestionamento introduzem latência variável. Para tempo real, usa-se UDP com tolerância a perdas (VoIP, streaming).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

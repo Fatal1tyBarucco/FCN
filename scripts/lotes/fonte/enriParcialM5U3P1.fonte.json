@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 3,
+    "unidadeTitulo": "5.3 IA generativa e LLMs",
+    "parte": 1,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U3P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U3P1.js",
+    "idsCompletos": [
+      "m5-u3-t1-s1",
+      "m5-u3-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u3-t1-s1",
+      "titulo": "Modelos generativos x discriminativos, tokens, embeddings e janela de contexto",
+      "topicoTitulo": "Modelos generativos, mecanismo de geração e arquitetura",
+      "topicoId": "modulo-5-unidade-3-topico-1",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno distinguirá modelos generativos de modelos discriminativos, explicará o funcionamento de tokenização e embeddings, relacionará a janela de contexto aos limites de uso e saberá reconhecer em que tipo de tarefa cada família de modelo é adequada.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a diferença estrutural entre modelos DISCRIMINATIVOS e modelos GENERATIVOS; (b) o funcionamento de tokenização, representações vetoriais (embeddings) e janela de contexto; (c) a geração probabilística e o seu corolário prático, a alucinação; (d) a arquitetura Transformer, o mecanismo de atenção e a previsão de tokens; (e) as fases de treinamento, ajuste fino, alinhamento e inferência; (f) os modelos de difusão para geração de imagens; (g) RAG, bases vetoriais e agentes com supervisão; (h) os riscos de privacidade, segurança e direitos autorais e os critérios de avaliação de resultados; (i) aplicações no setor público e privado, distinguindo exemplos comprovados de hipóteses ilustrativas. POR QUE O CONHECIMENTO É IMPORTANTE: a IA generativa entrou no serviço público como ferramenta de apoio a tarefas de linguagem, e a diferença entre uso adequado e uso inadequado quase sempre está em três conceitos que a prova cobra: o que o modelo FAZ (gera), o que ele NÃO SABE (não consulta base, não garante fato) e o que depende de CONTEXTO (janela finita, memória artificial). Conhecer o mecanismo é o que permite escrever a política de uso. PRÉ-REQUISITOS: unidade 5.2 (dados, avaliação, generalização) e Módulo 4 (segurança da informação). OBJETIVOS OBSERVÁVEIS: (1) explicar por que um LLM produz alucinações, em termos de mecanismo; (2) relacionar janela de contexto a qualidade da resposta e a custo; (3) descrever o papel do embeddings e da base vetorial em RAG; (4) distinguir fase de treinamento, de ajuste fino e de inferência; (5) aplicar três critérios de avaliação a uma saída de modelo. COMPETÊNCIAS DESENVOLVIDAS: leitura crítica de saída de modelo; desenho de fluxo com RAG; formulação de política de uso institucional. GRAU DE DIFICULDADE: intermediário na conceituação e avançado na aplicação. RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta, por ser o tema de maior atualidade do módulo; trata-se de uma estimativa pedagógica de adequação ao conteúdo programático, e não de uma frequência estatística de incidência em provas. MODELO DISCRIMINATIVO: estima a probabilidade de um rótulo ou valor a partir de uma entrada (classificação, regressão, detecção de anomalias). É a família usada nas unidades 5.1 e 5.2: ela aprende a SEPARAR classes, não a produzir sequências, e sua saída é sempre um rótulo ou um número dentro de um conjunto definido pelo treinamento. MODELO GENERATIVO: aprende a distribuição de sequências (texto, imagem, áudio, código) e produz conteúdo NOVO a partir de um pedido. A diferença prática para o gestor: o modelo generativo produz VARIÁVEL LIVRE, o que multiplica possibilidades de erro (forma não prevista, informação inventada, formato incompatível) e, por isso, exige verificação posterior, avaliação de qualidade e trilha de uso. TOKENIZAÇÃO é o processo de segmentar o texto em unidades (tokens), que são as entidades mínimas que o modelo manipula; a tokenização depende do vocabulário (ou encoder) do modelo e é aproximadamente, mas não exatamente, por espaços ou palavras. CONSEQUÊNCIA PRÁTICA: contagem de tokens é a unidade de custo e de limite; um documento extenso consome mais tokens e pode não caber na janela de contexto. EMBEDDINGS são representações vetoriais (listas de números) que posicionam textos (ou imagens) em um espaço de significado, de modo que textos semanticamente próximos ficam próximos no espaço; essa propriedade é o que permite busca semântica, agrupamento e RAG. JANELA DE CONTEXTO é o limite de tokens que o modelo processa em uma dada passagem (prompt de entrada mais saída esperada); o que está fora da janela não é visto pelo modelo, a menos que seja retomado por mecanismo externo (recuperação, memória artificial, nova chamada). O MODELO NÃO TEM MEMÓRIA ENTRE CHAMADAS por padrão: cada chamada é stateless do ponto de vista do usuário. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Modelos generativos x discriminativos, tokens, embeddings e janela de contexto basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Modelos generativos x discriminativos, tokens, embeddings e janela de contexto e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: modelos generativos x discriminativos, tokens, embeddings e janela de contexto, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Modelos generativos x discriminativos, tokens, embeddings e janela de contexto com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classifique: (a) classificador de e-mails em spam e não spam; (b) modelo que redige resposta a uma pergunta de atendimento; (c) modelo que estima o tempo de análise de um requerimento.",
+          "resposta": "(a) e (c) são discriminativos: a saída é um rótulo ou um valor dentro de um conjunto definido no treinamento. (b) é generativo: a saída é texto novo, variável e livre, o que exige verificação posterior — a mesma razão pela qual o item (c), embora preveja valor, é tratada por métrica de regressão e não por revisão textual."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um órgão tem 40.000 perguntas frequentes respondidas. Quando compensa usar RAG em vez de vetorizar o modelo com esse material?",
+          "resposta": "Quando o volume excede o que cabe na janela de contexto ou quando a resposta precisa ser atualizada com frequência, sem retreinar o modelo. O RAG indexa os documentos em embeddings, busca os trechos semanticamente mais próximos a cada pergunta e os insere no prompt. Compensa porque mantém o modelo estável (sem novo treinamento), permite atualizar o conhecimento apenas reindexando a base e torna a resposta verificável, pois a fonte pode ser exibida. Não compensa quando a resposta exige raciocínio numérico extenso ou quando a base é pequena e estável — aí a parametrização direta é mais simples."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o modelo foi treinado com a internet, ele conhece o documento interno do órgão, desde que este esteja disponível na rede interna.'",
+          "correcao": "Errado. O conhecimento do modelo é fixado no treinamento; ele não consulta a rede interna nem a base do órgão por conta própria. Para usar documento interno, é preciso recuperá-lo explicitamente (RAG ou envio no prompt) dentro do limite da janela de contexto. Item que confunde conhecimento paramétrico com acesso a base é a armadilha mais comum do tema."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Um LLM não conserva, por padrão, memória de conversas anteriores: cada chamada processa apenas o conteúdo enviado na janela de contexto.",
+          "resposta": "Certo. A memória entre sessões, quando existe, é implementada externamente pelo aplicativo (histórico, resumo ou base vetorial), não pelo modelo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São propriedades de um modelo generativo em comparação com um discriminativo: A) produz saída livre a partir de uma distribuição aprendida; B) exige verificação posterior com mais frequência; C) tem como saída típica um rótulo entre classes; D) pode alucinar.",
+          "resposta": "A, B e D. O item C descreve o modelo discriminativo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir modelos generativos de modelos discriminativos, explicará o funcionamento de tokenização e embeddings, relacionará a janela de contexto aos limites de uso e saberá reconhecer em que tipo de tarefa cada família de modelo é adequada, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá modelos generativos de modelos discriminativos, explicará o funcionamento de tokenização e embeddings, relacionará a janela de contexto aos limites de uso e saberá reconhecer em que tipo de tarefa cada família de modelo é adequada"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Modelos generativos x discriminativos, tokens, embeddings e janela de contexto\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situaçõ…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Modelos generativos x discriminativos, tokens, embeddings e janela de contexto",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o modelo foi treinado com a internet, ele conhece o documento interno do órgão, desde que este esteja disponível na rede interna.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O conhecimento do modelo é fixado no treinamento; ele não consulta a rede interna nem a base do órgão por conta própria. Para usar documento interno, é preciso recuperá-lo explicitamente (RAG ou envio no prompt) dentro do limite da janela de contexto. Item que confunde conhecimento paramétrico com acesso a base é a armadilha mais comum do tema."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classifique: (a) classificador de e-mails em spam e não spam; (b) modelo que redige resposta a uma pergunta de atendimento; (c) modelo que estima o tempo de análise de um requerimento.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(a) e (c) são discriminativos: a saída é um rótulo ou um valor dentro de um conjunto definido no treinamento. (b) é generativo: a saída é texto novo, variável e livre, o que exige verificação posterior — a mesma razão pela qual o item (c), embora preveja valor, é tratada por métrica de regressão e não por revisão textual.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um órgão tem 40.000 perguntas frequentes respondidas. Quando compensa usar RAG em vez de vetorizar o modelo com esse material?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Quando o volume excede o que cabe na janela de contexto ou quando a resposta precisa ser atualizada com frequência, sem retreinar o modelo. O RAG indexa os documentos em embeddings, busca os trechos semanticamente mais próximos a cada pergunta e os insere no prompt. Compensa porque mantém o modelo estável (sem novo treinamento), permite atualizar o conhecimento apenas reindexando a base e torna a resposta verificável, pois a fonte pode ser exibida. Não compensa quando a resposta exige raciocínio numérico extenso ou quando a base é pequena e estável — aí a parametrização direta é mais simples.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o modelo foi treinado com a internet, ele conhece o documento interno do órgão, desde que este esteja disponível na rede interna.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O conhecimento do modelo é fixado no treinamento; ele não consulta a rede interna nem a base do órgão por conta própria. Para usar documento interno, é preciso recuperá-lo explicitamente (RAG ou envio no prompt) dentro do limite da janela de contexto. Item que confunde conhecimento paramétrico com acesso a base é a armadilha mais comum do tema.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u3-t1-s2",
+      "titulo": "Geração probabilística, Transformer, atenção e fases de construção do modelo",
+      "topicoTitulo": "Modelos generativos, mecanismo de geração e arquitetura",
+      "topicoId": "modulo-5-unidade-3-topico-1",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno explicará a geração token a token, o mecanismo de atenção da arquitetura Transformer, o papel da posição e da máscara, e distinguirá treinamento, ajuste fino, alinhamento e inferência.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Geração probabilística, Transformer, atenção e fases de construção do modelo\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Geração probabilística, Transformer, atenção e fases de construção do modelo\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Geração probabilística, Transformer, atenção e fases de construção do modelo\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: Geração PROBABILÍSTICA: em cada passo, o modelo calcula a distribuição de probabilidade do próximo token a partir do contexto recebido e escolhe um token (o mais provável, ou um amostra conforme o parâmetro de temperatura/aleatoriedade); repete-se o processo até o fim ou o limite de saída. TRÊS CONSEQUÊNCIAS PRÁTICAS: (1) a MESMA PERGUNTA PODE PRODUZIR RESPOSTAS DIFERENTES, porque a escolha é amostrada de uma distribuição e não é determinística; (2) o CONTEXTO ANTERIOR IMPORTA — tokens já gerados condicionam os próximos, de modo que uma frase inicial errada orienta todo o restante; (3) a MODELAGEM DA INCERTEZA É IMPLÍCITA — o modelo não expõe uma probabilidade calibrada de acerto, o que impede tratá-lo como fonte de verdade. ARQUITETURA TRANSFORMER (introduzida em 2017): processa sequências em paralelo, sem processar token a token de forma recorrente, o que viabilizou o treinamento em grande escala. SEUS COMPONENTES: (a) EMBEDDING DE TOKENS — representação vetorial de cada token; (b) EMBEDDING POSICIONAL — injeta a informação de ordem, ausente da atenção pura; (c) BLOCOS DE ATENÇÃO MULTICABEÇAL — cada cabeça aprende um tipo de relação entre posições (por exemplo, dependências de longo alcance); (d) NORMALIZAÇÃO, REDES DE AVANÇO (feed-forward) e conexões residuais — que estabilizam o treinamento; (e) CAMADA DE SAÍDA (logits) — que produz a distribuição sobre o vocabulário. MECANISMO DE ATENÇÃO, EM TERMOS CONCRETOS: para cada token, o modelo calcula uma PONTA DE CONSULTA (query) e as chaves (keys) dos demais tokens, calcula a similaridade entre a consulta e cada chave, normaliza esses escores em pesos (soma 1) e forma a saída como combinação ponderada dos valores (values). É uma forma de busca de informação contextual: para cada token, decide de onde buscar e quanto pesar. A MÁSCARA CAUSAL (em modelos de geração de texto) impede que um token veja os seguintes, o que torna o treinamento compatível com a geração sequencial. TREINAMENTO: ajuste dos parâmetros (pesos) para reduzir a perda na previsão de tokens, em escala, sobre grandes corpora. AVALIAÇÃO: medição em dados não vistos, com atenção à generalização e ao viés. AJUSTE FINO (fine-tuning): novo treinamento, em escala menor, sobre conjunto específico, para adaptar o comportamento a um domínio ou a um estilo; pode ser feito com pouco volume de exemplos, mas exige cuidado com overfitting e com o desvio do comportamento original. ALINHAMENTO: etapa que orienta o comportamento do modelo para objetivos e preferências definidos por pessoas (instruções, segurança, utilidade); é implementação de preferência humana, com o valor e os riscos próprios — o alinhamento reduz comportamentos indesejáveis, mas não elimina a possibilidade de saída inadequada. INFERÊNCIA: a aplicação do modelo a um caso novo, gerando a resposta. A separação conceitual que a prova cobra: TREINAMENTO (produz o modelo), AJUSTE FINO (produz uma adaptação de domínio), ALINHAMENTO (produz comportamento orientado a preferências), INFERÊNCIA (produz a resposta). UM MODELO NÃO «APRENDE» EM PRODUÇÃO: o que muda em produção é o contexto fornecido, eventual memória externa e, se houver, o mecanismo de feedback — não os pesos do modelo. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Geração probabilística, Transformer, atenção e fases de construção do modelo\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Geração probabilística, Transformer, atenção e fases de construção do modelo\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Geração probabilística, Transformer, atenção e fases de construção do modelo\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Geração probabilística, Transformer, atenção e fases de construção do modelo basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Geração probabilística, Transformer, atenção e fases de construção do modelo e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Geração probabilística, Transformer, atenção e fases de construção do modelo\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: geração probabilística, transformer, atenção e fases de construção do modelo, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Geração probabilística, Transformer, atenção e fases de construção do modelo com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Geração probabilística, Transformer, atenção e fases de construção do modelo\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que o mesmo prompt pode gerar respostas diferentes em duas execuções?",
+          "resposta": "Porque a geração é probabilística: em cada passo, o token seguinte é amostrado de uma distribuição condicionada ao contexto. Parâmetros que alteram o grau de aleatoriedade (como a temperatura) ampliam ou reduzem a dispersão. Consequência de governança: para tarefas que exigem reprodutibilidade, é preciso fixar parâmetros, registrar a versão do modelo, o prompt e a saída, ou usar mecanismo determinístico de cache — a reprodutibilidade não vem do modelo, vem do processo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um órgão quer que o modelo use o vocabulário do seu regimento interno. Ajuste fino ou RAG?",
+          "resposta": "Se o objetivo é que o modelo ADOTE o estilo e o vocabulário e aplique o regimento em casos novos, o ajuste fino é o caminho (adaptação do comportamento por exemplos). Se o objetivo é que o modelo CITE o regimento quando perguntado, o RAG é mais eficiente, mais barato e mais fácil de atualizar quando o regimento muda. Regra prática: base que muda com frequência → recuperação; comportamento que muda → ajuste fino; as duas coisas juntas são cumuláveis."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O ajuste fino do modelo é a etapa em que ele aprende com os erros apontados pelos usuários em produção.'",
+          "correcao": "Errado. A produção gera dados de feedback, mas o modelo não se altera ali: ajuste fino é treinamento adicional, executado fora da linha, com dados selecionados. O que muda em produção é o contexto e, eventualmente, o mecanismo de coleta de feedback para um futuro ciclo de treinamento. Item que confunde ciclo de feedback com aprendizado do modelo é armadilha clássica."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O mecanismo de atenção permite que cada token construa sua representação pesando outros tokens do contexto conforme a relevância contextual.",
+          "resposta": "Certo. É a função central da atenção: calcular pesos entre posições e combinar as representações proporcionalmente a eles."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São fases distintas da construção e uso de um modelo: A) treinamento; B) ajuste fino; C) alinhamento; D) inferência.",
+          "resposta": "A, B, C e D. As quatro se distinguem por objetivo, dados utilizados e momento de execução."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar a geração token a token, o mecanismo de atenção da arquitetura Transformer, o papel da posição e da máscara, e distinguirá treinamento, ajuste fino, alinhamento e inferência, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará a geração token a token, o mecanismo de atenção da arquitetura Transformer, o papel da posição e da máscara, e distinguirá treinamento, ajuste fino, alinhamento e inferência"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Geração probabilística, Transformer, atenção e fases de construção do modelo\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Geração probabilística, Transformer, atenção e fases de construção do modelo\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações r…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Geração probabilística, Transformer, atenção e fases de construção do modelo",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O ajuste fino do modelo é a etapa em que ele aprende com os erros apontados pelos usuários em produção.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A produção gera dados de feedback, mas o modelo não se altera ali: ajuste fino é treinamento adicional, executado fora da linha, com dados selecionados. O que muda em produção é o contexto e, eventualmente, o mecanismo de coleta de feedback para um futuro ciclo de treinamento. Item que confunde ciclo de feedback com aprendizado do modelo é armadilha clássica."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que o mesmo prompt pode gerar respostas diferentes em duas execuções?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque a geração é probabilística: em cada passo, o token seguinte é amostrado de uma distribuição condicionada ao contexto. Parâmetros que alteram o grau de aleatoriedade (como a temperatura) ampliam ou reduzem a dispersão. Consequência de governança: para tarefas que exigem reprodutibilidade, é preciso fixar parâmetros, registrar a versão do modelo, o prompt e a saída, ou usar mecanismo determinístico de cache — a reprodutibilidade não vem do modelo, vem do processo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um órgão quer que o modelo use o vocabulário do seu regimento interno. Ajuste fino ou RAG?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Se o objetivo é que o modelo ADOTE o estilo e o vocabulário e aplique o regimento em casos novos, o ajuste fino é o caminho (adaptação do comportamento por exemplos). Se o objetivo é que o modelo CITE o regimento quando perguntado, o RAG é mais eficiente, mais barato e mais fácil de atualizar quando o regimento muda. Regra prática: base que muda com frequência → recuperação; comportamento que muda → ajuste fino; as duas coisas juntas são cumuláveis.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O ajuste fino do modelo é a etapa em que ele aprende com os erros apontados pelos usuários em produção.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A produção gera dados de feedback, mas o modelo não se altera ali: ajuste fino é treinamento adicional, executado fora da linha, com dados selecionados. O que muda em produção é o contexto e, eventualmente, o mecanismo de coleta de feedback para um futuro ciclo de treinamento. Item que confunde ciclo de feedback com aprendizado do modelo é armadilha clássica.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

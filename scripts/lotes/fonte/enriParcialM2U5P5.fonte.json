@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 5,
+    "unidadeTitulo": "2.5 Diagnóstico de redes",
+    "parte": 5,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U5P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U5P5.js",
+    "idsCompletos": [
+      "m2-u5-t3-s3",
+      "m2-u5-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u5-t3-s3",
+      "titulo": "Ferramentas complementares e cache DNS",
+      "topicoTitulo": "nslookup e dig",
+      "topicoId": "modulo-2-unidade-5-topico-3",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará outras ferramentas de diagnóstico DNS e o papel do cache.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) ferramentas complementares de DNS (host, getent, resolvectl); (b) o papel do cache DNS; (c) comandos para limpar o cache; (d) o arquivo hosts. POR QUE O CONHECIMENTO É IMPORTANTE: muitas falhas de resolução decorrem de cache desatualizado ou de override local; a prova cobra os comandos e o fluxo. PRÉ-REQUISITOS: DNS; nslookup/dig. OBJETIVOS OBSERVÁVEIS: (1) usar host/getent/resolvectl; (2) explicar o cache; (3) limpar o cache; (4) explicar o arquivo hosts. COMPETÊNCIAS DESENVOLVIDAS: resolução de problemas de cache; verificação de nomes. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (DNS); unidade 5.3 (nslookup/dig); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa baixa a média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: além do nslookup e do dig, há ferramentas complementares: o host faz consultas simples com saída concisa; o getent hosts consulta o resolvedor do SISTEMA (incluindo primeiro o arquivo /etc/hosts e, depois, o DNS), o que o torna útil para verificar como o próprio sistema resolve um nome; e o resolvectl (do systemd-resolved) permite consultar estatísticas e cache, com subcomandos como \"query\" e \"flush-caches\". O cache DNS é o mecanismo que acelera consultas: o sistema operacional, os aplicativos e os navegadores guardam respostas durante o TTL. Isso explica um problema clássico: o DNS do domínio muda, mas o cliente ainda usa o endereço antigo até o cache expirar; limpar o cache resolve. No Windows, usa-se \"ipconfig /flushdns\"; no Linux com systemd-resolved, \"resolvectl flush-caches\". Além do cache, o arquivo /etc/hosts (no Linux/macOS) e C:\\Windows\\System32\\drivers\\etc\\hosts (no Windows) soBRESCREVeM o DNS para nomes específicos, mapeando nome→IP antes da consulta externa — útil para testes, mas também uma fonte de confusão quando esquecido. A verificação de DNSSEC pode ser feita com \"dig +dnssec\". Compreender cache, hosts e ferramentas complementares fecha o ciclo do diagnóstico de nomes. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: usar host para uma consulta rápida.\n- Nível intermediário: distinguir a consulta do sistema (getent) da consulta direta.\n- Nível avançado: explicar por que o cache mantém uma resposta antiga e como limpá-lo.\n- Nível especialista: diagnosticar um nome que resolve errado por causa do arquivo hosts.\nCOMPARAÇÕES CRÍTICAS:\n- cache x servidor: o cache acelera e pode ficar desatualizado; o servidor é a fonte.\n- /etc/hosts x DNS: o arquivo local tem precedência sobre a consulta externa.\n- getent x dig: o primeiro respeita hosts e a configuração do sistema; o segundo fala direto com o DNS.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Mudar o DNS propaga na hora.\" — Motivo: o TTL do cache mantém a resposta antiga — Versão tecnicamente correta: aguardar o TTL ou limpar o cache.\n- Afirmação errada: \"O arquivo hosts é consultado depois do DNS.\" — Motivo: tem precedência — Versão tecnicamente correta: entra antes da consulta externa.\n- Afirmação errada: \"getent ignora o /etc/hosts.\" — Motivo: ele o considera — Versão tecnicamente correta: mostra como o sistema resolve.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: host, getent, resolvectl, cache DNS, TTL, /etc/hosts, ipconfig /flushdns, resolvectl flush-caches.\n- Regras e fórmulas: cache válido durante o TTL; hosts precede o DNS.\n- Exceções: aplicativos podem manter cache próprio além do sistema.\n- Palavras-chave: cache, propagação, precedência, flush, diagnóstico.\n- Checklist de domínio: (1) Uso host/getent/resolvectl? (2) Explico o cache? (3) Limpo o cache? (4) Explico o arquivo hosts?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Para que serve o getent? (2) O que é o cache DNS? (3) Como limpar o cache no Windows? (4) E no Linux com systemd-resolved? (5) O que o arquivo hosts faz?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que é o arquivo hosts e como afeta a resolução?",
+          "resposta": "Mapeia nomes para IPs localmente, sobrescrevendo DNS. Útil para testes; risco de sequestro se alterado maliciosamente."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "DNS foi alterado no servidor, mas o cliente ainda resolve o IP antigo. Causa e correção?",
+          "resposta": "Cache DNS local. Limpar cache (ipconfig /flushdns ou resolvectl flush-caches) e testar novamente."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'flushdns resolve problemas de roteamento.'",
+          "correcao": "Errado. flushdns limpa apenas o cache DNS; não afeta roteamento, ARP ou conectividade IP."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O arquivo hosts tem prioridade sobre o DNS para nomes listados nele.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual comando limpa o cache DNS no Linux com systemd-resolved? A) ipconfig /flushdns; B) resolvectl flush-caches; C) dig +trace; D) nslookup.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar outras ferramentas de diagnóstico DNS e o papel do cache, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará outras ferramentas de diagnóstico DNS e o papel do cache"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "host: comando simples de consulta DNS (Linux/macOS), saída concisa. getent hosts: consulta o resolvedor do sistema (inclui /etc/hosts e DNS). resolvectl (systemd-resolved): status, flush-caches, query. Cache DNS: sistemas operacionais e navegadores mantêm cache local; 'ipconfig /flushdns' (Windows) ou 'resolvectl flush-caches' (Linux) limpa. Problemas de cache: DNS alterado mas cliente ainda usa IP antigo; limpar cache resolve. /etc/hosts e C:\\Windows\\System32\\drivers\\etc\\hosts sobrescrevem DNS …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Ferramentas complementares e cache DNS",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'flushdns resolve problemas de roteamento.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. flushdns limpa apenas o cache DNS; não afeta roteamento, ARP ou conectividade IP."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que é o arquivo hosts e como afeta a resolução?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Mapeia nomes para IPs localmente, sobrescrevendo DNS. Útil para testes; risco de sequestro se alterado maliciosamente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "DNS foi alterado no servidor, mas o cliente ainda resolve o IP antigo. Causa e correção?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Cache DNS local. Limpar cache (ipconfig /flushdns ou resolvectl flush-caches) e testar novamente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'flushdns resolve problemas de roteamento.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. flushdns limpa apenas o cache DNS; não afeta roteamento, ARP ou conectividade IP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u5-t4-s1",
+      "titulo": "Diagnóstico estruturado por camadas",
+      "topicoTitulo": "Diagnóstico por camadas e cenários simulados",
+      "topicoId": "modulo-2-unidade-5-topico-4",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno aplicará um método de diagnóstico por camadas, do físico à aplicação, para isolar falhas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o método de diagnóstico por camadas; (b) a abordagem bottom-up; (c) a abordagem top-down; (d) a documentação dos testes. POR QUE O CONHECIMENTO É IMPORTANTE: um método estruturado evita \"chutes\" e isola a causa rapidamente; a prova cobra a ordem das verificações. PRÉ-REQUISITOS: camadas; comandos de diagnóstico. OBJETIVOS OBSERVÁVEIS: (1) aplicar o bottom-up; (2) aplicar o top-down; (3) escolher pela pista; (4) documentar os testes. COMPETÊNCIAS DESENVOLVIDAS: diagnóstico estruturado; raciocínio por camadas. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1/5.2/5.3 (ferramentas); unidade 2 (camadas). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o diagnóstico por camadas organiza as verificações de baixo para cima (bottom-up) ou de cima para baixo (top-down). No bottom-up: (1) Físico/Enlace — o cabo está conectado? A interface está UP (ip link)? Há luz de link? O endereço é válido? (2) Rede — o IP é válido? O ping ao GATEWAY funciona? A rota padrão existe (ip route)? (3) Transporte — a porta está em escuta (ss)? Há firewall bloqueando? (4) Aplicação — o serviço responde? O HTTP retorna 200? (5) Nome — o DNS resolve? Vale testar com o IP direto para separar nome de conectividade. O top-down é preferível quando o sintoma já indica a camada (por exemplo, um código 500 aponta para a aplicação), descendo até encontrar a causa. A chave é ISOLAR a camada que falha antes de culpar a aplicação, e DOCUMENTAR cada teste e seu resultado, o que evita repetir passos e permite escalar o problema com informação precisa. O método transforma um problema difuso (\"a Internet não funciona\") em uma sequência de hipóteses verificáveis. Um princípio importante: sempre que possível, testar por um caminho alternativo (IP direto, outro resolvedor, outra máquina) para confirmar a origem. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: começar pelo básico (cabo, interface, gateway).\n- Nível intermediário: ordenar as verificações por camada.\n- Nível avançado: escolher bottom-up ou top-down conforme a pista.\n- Nível especialista: documentar e escalar um incidente com evidências.\nCOMPARAÇÕES CRÍTICAS:\n- bottom-up x top-down: o primeiro parte do físico; o segundo, da aplicação — a pista define qual usar.\n- isolar x adivinhar: o método substitui o palpite por verificação.\n- testar por IP x por nome: separa falha de conectividade de falha de DNS.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Convém começar reinstalando a aplicação.\" — Motivo: pode ser falha de enlace — Versão tecnicamente correta: começar pelas camadas inferiores (bottom-up).\n- Afirmação errada: \"Uma única ferramenta resolve todo o diagnóstico.\" — Motivo: cada camada tem sua ferramenta — Versão tecnicamente correta: combinar ping, ss, dig etc.\n- Afirmação errada: \"Documentar é perda de tempo.\" — Motivo: evita repetição e permite escalar — Versão tecnicamente correta: registrar os testes.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: bottom-up, top-down, isolar camada, testar por IP, documentar.\n- Regras e fórmulas: enlace → rede → transporte → aplicação → nome.\n- Exceções: a pista do sintoma pode justificar começar pela camada alta.\n- Palavras-chave: método, hipótese, evidência, camada, escalonamento.\n- Checklist de domínio: (1) Aplico bottom-up? (2) Aplico top-down? (3) Escolho pela pista? (4) Documento os testes?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que verificar primeiro no bottom-up? (2) E depois? (3) Quando usar top-down? (4) Por que testar por IP direto? (5) Por que documentar?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Site não carrega. Qual a primeira verificação bottom-up?",
+          "resposta": "Camada física/enlace: cabo/Wi-Fi conectado, link ativo, IP atribuído (ipconfig/ip addr). Sem IP, parar e corrigir DHCP/cabo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Ping ao IP funciona, mas o site não carrega. Próximos passos?",
+          "resposta": "Testar DNS (nslookup/dig do nome), testar porta 443 (ss/curl), verificar certificado TLS, verificar HTTP (curl -I). Isolar DNS vs TLS vs HTTP."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Diagnóstico por camadas é desnecessário; basta reiniciar o roteador.'",
+          "correcao": "Errado. Reiniciar pode mascarar o problema. Diagnóstico por camadas identifica a causa raiz e evita recorrência."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O método bottom-up começa pela camada física.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Ping ao gateway falha. Qual camada provavelmente afetada? A) Aplicação; B) Transporte; C) Rede/Enlace; D) Sessão.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar um método de diagnóstico por camadas, do físico à aplicação, para isolar falhas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará um método de diagnóstico por camadas, do físico à aplicação, para isolar falhas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Método bottom-up: (1) Físico/Enlace: cabo conectado? Link light? ip addr mostra UP? (2) Rede: IP válido? Ping ao gateway funciona? Rota padrão presente (ip route)? (3) Transporte: porta escutando (ss)? Firewall bloqueando? (4) Aplicação: serviço responde? HTTP 200? DNS resolve? (5) Nome: DNS ok? Testar com IP direto. Também top-down (da aplicação para baixo) quando o sintoma é claro. Isolar a camada que falha evita 'chutes'. Documentar cada teste. Os laboratórios desta apostila são simulações di…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Diagnóstico estruturado por camadas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Diagnóstico por camadas é desnecessário; basta reiniciar o roteador.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Reiniciar pode mascarar o problema. Diagnóstico por camadas identifica a causa raiz e evita recorrência."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Site não carrega. Qual a primeira verificação bottom-up?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Camada física/enlace: cabo/Wi-Fi conectado, link ativo, IP atribuído (ipconfig/ip addr). Sem IP, parar e corrigir DHCP/cabo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Ping ao IP funciona, mas o site não carrega. Próximos passos?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Testar DNS (nslookup/dig do nome), testar porta 443 (ss/curl), verificar certificado TLS, verificar HTTP (curl -I). Isolar DNS vs TLS vs HTTP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Diagnóstico por camadas é desnecessário; basta reiniciar o roteador.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Reiniciar pode mascarar o problema. Diagnóstico por camadas identifica a causa raiz e evita recorrência.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

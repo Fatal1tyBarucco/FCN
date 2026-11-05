@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 4,
+    "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+    "parte": 4,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM6U4P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U4P4.js",
+    "idsCompletos": [
+      "m6-u4-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u4-t3-s3",
+      "titulo": "Resumo estruturado, checklist de domínio e verificação de aprendizagem",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-4-topico-3",
+      "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno consolidará a unidade 6.4 por recuperação ativa, identificando limites de uso institucional e pessoal, tratamento de conflito e padrões de conduta.",
+      "conteudo": "RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: perfil institucional x conta pessoal; titularidade do canal; política editorial; registro de publicações; correção de erro; conflito real, potencial e aparente; declaração e afastamento; segregação de funções; dever de reserva; netiqueta como convivência digital regulada. REGRAS: publicação oficial reside no sítio oficial (art. 8º, § 2º, da LAI); aprovação por função com MFA e perfis (art. 43, I, da Lei nº 14.129/2021); retenção de registro de envio e recebimento por 5 anos (art. 43, V); consentimento expresso ou previsão legal para divulgação de informação pessoal (art. 31, § 1º, II, da LAI); dados funcionais do servidor como publicidade institucional (art. 29, § 2º, VII, da Lei nº 14.129/2021); sistema de ouvidoria (art. 21, XI). COMPARAÇÕES: institucional x pessoal; real x potencial x aparente; dado pessoal x dado funcional; netiqueta x dever de publicidade. FLUXO RESUMIDO DE PUBLICAÇÃO INSTITUCIONAL: (1) classificar o conteúdo (institucional, dado pessoal, protegido); (2) verificar base legal e necessidade; (3) sanitizar (imagem, texto, metadados); (4) aprovar segundo a política editorial; (5) publicar; (6) registrar (data, hora, autor, versão, aprovador); (7) monitorar e corrigir, escalando o que for sensível. FLUXO RESUMIDO DE CONFLITO: (1) identificar; (2) declarar e registrar; (3) afastar ou recusar o ato; (4) substituir por servidor sem conflito; (5) revisar decisões do período; (6) remeter ao controle se houver indício; (7) corrigir o desenho. EXCEÇÕES E LIMITES: o servidor pode expressar opinião pessoal, desde que sem vincular o órgão e sem usar informação do cargo; o limite é esse. PALAVRAS-CHAVE: institucional, reserva, conflito de interesse, segregação de funções, editorial, correção, escalonamento, ouvidoria, accountability. CHECKLIST DE DOMÍNIO: (1) Quais os controles mínimos de um canal institucional? (2) O que distingue conflito real de potencial? (3) Qual o tratamento do conflito aparente? (4) Quando a opinião do servidor é lícita? (5) Qual dispositivo exige canal de ouvidoria nas plataformas? (6) O que se faz quando há dado pessoal em post institucional? (7) Por que a segregação de funções trata conflito? (8) Qual a relação entre netiqueta e publicidade? VERIFICAÇÃO DE APRENDIZAGEM (recuperação ativa — 8 questões autorais): (Q1) Liste seis controles de governança de perfil institucional. (Q2) Explique por que o aceite de foto para arquivo não autoriza publicação em rede social com dado correlato. (Q3) Classifique três cenários de conflito e diga o tratamento de cada um. (Q4) Cite três condutas vedadas em canal institucional. (Q5) Em que hipótese o uso pessoal de rede social pelo servidor pode gerar responsabilização? (Q6) Qual o papel da segregação de funções no tratamento de conflito? (Q7) O que deve ocorrer quando um post institucional contém dado identificável de terceiro? (Q8) Qual a relação entre a correção de erro e o dever de publicidade? CRITÉRIO DE DOMÍNIO: acerto integral em Q1, Q3, Q4 e Q7 e em ao menos 5 dos 8 itens.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Sem consultar o texto, liste seis controles mínimos de governança de um perfil institucional.",
+          "resposta": "(1) Titularidade do perfil no órgão; (2) conta institucional com autenticação multifator; (3) perfis de acesso por função, com menor privilégio; (4) política editorial aprovada; (5) registro de publicações com autor, data, hora, versão e aprovador; (6) rotina de correção de erros e de escalonamento; (7) canal de ouvidoria; (8) plano de resposta a incidente com preservação de evidência."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como tratar um post institucional que contém dado identificável de terceiro?",
+          "resposta": "Remover ou sanitizar (recortar identificadores), preservando o registro da publicação original; avaliar alcance e dano; comunicar o cidadão quando o risco de dano for relevante; apurar a publicação (autor, aprovação, verificação prévia); corrigir o processo, com verificação obrigatória de dados pessoais antes da publicação; registrar o incidente e a ação corretiva."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O uso de conta pessoal do servidor é livre, porque a Lei nº 12.527/2011 disciplina apenas o acesso a informações custodiadas por órgãos públicos e o servidor não é órgão público.'",
+          "correcao": "Errado, e o raciocínio é o próprio erro. A Lei nº 12.527/2011 reacha o servidor como agente público: o art. 32 tipifica condutas que ensejam responsabilidade do agente público ou militar, entre elas utilizar indevidamente, subtrair, destruir, inutilizar, desfigurar, alterar ou ocultar informação sob sua guarda (inciso II) e divulgar ou permitir acesso indevido a informação sigilosa ou pessoal (inciso IV); o art. 34 responsabiliza o órgão e o servidor pelos danos. Além disso, a LGPD (art. 5º, I) protege o dado pessoal do cidadão, e o dever de reserva é preço da função."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A política editorial de um canal institucional deve definir tipos de publicação, autoridade aprovadora, tratamento de comentários, rotina de correção e proibição de divulgação de dados pessoais de terceiros.",
+          "resposta": "Certo. São os elementos mínimos de um governança editorial que pode ser auditada e que sustenta o dever de publicidade e a proteção de dados."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Na verificação de aprendizagem da unidade 6.4, exigem-se acerto integral: A) nos controles de governança do canal; B) na classificação dos tipos de conflito; C) nas condutas vedadas em canal institucional; D) no procedimento diante de post com dado identificável de terceiro.",
+          "resposta": "A, B, C e D."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de consolidar a unidade 6.4 por recuperação ativa, identificando limites de uso institucional e pessoal, tratamento de conflito e padrões de conduta, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "consolidará a unidade 6.4 por recuperação ativa, identificando limites de uso institucional e pessoal, tratamento de conflito e padrões de conduta"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: perfil institucional x conta pessoal; titularidade do canal; política editorial; registro de publicações; correção de erro; conflito real, potencial e aparente; declaração e afastamento; segregação de funções; dever de reserva; netiqueta como convivência digital regulada. REGRAS: publicação oficial reside no sítio oficial (art. 8º, § 2º, da LAI); aprovação por função com MFA e perfis (art. 43, I, da Lei nº 14.129/2021); retenção de registro de envio e r…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Resumo estruturado, checklist de domínio e verificação de aprendizagem",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O uso de conta pessoal do servidor é livre, porque a Lei nº 12.527/2011 disciplina apenas o acesso a informações custodiadas por órgãos públicos e o servidor não é órgão público.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado, e o raciocínio é o próprio erro. A Lei nº 12.527/2011 reacha o servidor como agente público: o art. 32 tipifica condutas que ensejam responsabilidade do agente público ou militar, entre elas utilizar indevidamente, subtrair, destruir, inutilizar, desfigurar, alterar ou ocultar informação sob sua guarda (inciso II) e divulgar ou permitir acesso indevido a informação sigilosa ou pessoal (inciso IV); o art. 34 responsabiliza o órgão e o servidor pelos danos. Além disso, a LGPD (art. 5º, I) protege o dado pessoal do cidadão, e o dever de reserva é preço da função."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Sem consultar o texto, liste seis controles mínimos de governança de um perfil institucional.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) Titularidade do perfil no órgão; (2) conta institucional com autenticação multifator; (3) perfis de acesso por função, com menor privilégio; (4) política editorial aprovada; (5) registro de publicações com autor, data, hora, versão e aprovador; (6) rotina de correção de erros e de escalonamento; (7) canal de ouvidoria; (8) plano de resposta a incidente com preservação de evidência.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como tratar um post institucional que contém dado identificável de terceiro?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Remover ou sanitizar (recortar identificadores), preservando o registro da publicação original; avaliar alcance e dano; comunicar o cidadão quando o risco de dano for relevante; apurar a publicação (autor, aprovação, verificação prévia); corrigir o processo, com verificação obrigatória de dados pessoais antes da publicação; registrar o incidente e a ação corretiva.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O uso de conta pessoal do servidor é livre, porque a Lei nº 12.527/2011 disciplina apenas o acesso a informações custodiadas por órgãos públicos e o servidor não é órgão público.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado, e o raciocínio é o próprio erro. A Lei nº 12.527/2011 reacha o servidor como agente público: o art. 32 tipifica condutas que ensejam responsabilidade do agente público ou militar, entre elas utilizar indevidamente, subtrair, destruir, inutilizar, desfigurar, alterar ou ocultar informação sob sua guarda (inciso II) e divulgar ou permitir acesso indevido a informação sigilosa ou pessoal (inciso IV); o art. 34 responsabiliza o órgão e o servidor pelos danos. Além disso, a LGPD (art. 5º, I) protege o dado pessoal do cidadão, e o dever de reserva é preço da função.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

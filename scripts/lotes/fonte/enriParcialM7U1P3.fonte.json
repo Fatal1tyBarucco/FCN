@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 1,
+    "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+    "parte": 3,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U1P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U1P3.js",
+    "idsCompletos": [
+      "m7-u1-t2-s3",
+      "m7-u1-t3-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u1-t2-s3",
+      "titulo": "Escalas nominal, ordinal, discreta e contínua (níveis de mensuração)",
+      "topicoTitulo": "Tipos e níveis de mensuração de dados",
+      "topicoId": "modulo-7-unidade-1-topico-2",
+      "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno determinará o nível de mensuração de uma variável e indicará quais estatísticas são legítimas para ele.",
+      "conteudo": "NÍVEL NOMINAL: categorias sem ordem — UF, gênero informado, espécie de trâmite. Operações válidas: contagem, frequência, moda. NÃO vale ordenar nem calcular média. NÍVEL ORDINAL: há ordem, mas as distâncias entre graus não são comparáveis — satisfação (ruim<regular<bom), escolaridade por grau, faixa de pontuação. Valem contagem, moda e MEDIANA; a média exige suposição adicional que a escala não garante. NÍVEL DISCRETO: contagem com ordem e distâncias iguais (diferença de 1 atendimento significa o mesmo em qualquer ponto) — valem média, mediana, desvio padrão. NÍVEL CONTÍNUO: medição em intervalo com zero real ou arbitrário — valem toda a estatística descritiva; atenção ao zero: zero em escala de razão (peso) é ausência de quantidade, já zero em escala de intervalo (temperatura em Celsius) é ponto de convenção, o que proíbe dizer '20 °C é o dobro de 10 °C'. DECISÃO EM CONCURSO: pergunte-se o que a diferença entre dois valores significa — se ela não significa o mesmo em toda a escala, você está em ordinal ou abaixo.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Determinar o nível de mensuração e as estatísticas legítimas para: (a) classificação de serviço (A/B/C); (b) tempo de resposta em minutos; (c) porte do órgão (pequeno/médio/grande).",
+          "resposta": "(a) nominal: valem contagem e moda; ordenar A>B>C só se houver regra documentada de precedência. (b) contínuo: valem média, mediana, desvio padrão, quartis. (c) ordinal: valem contagem, moda e mediana; média não é natural porque a distância entre pequeno e médio pode não igualar a entre médio e grande."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Temperaturas registradas: 10 °C e 20 °C. Alguém afirma que '20 °C é o dobro de 10 °C'. Corrija.",
+          "resposta": "Erro de escala: Celsius é escala de INTERVALO, com zero de convenção — não é ausência de calor. Razões (dobro, metade) não têm significado; só diferenças (20 − 10 = 10 °C de diferença) são válidas. Para falar em proporção seria necessário um zero absoluto (escala Kelvin)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Média, mediana e moda são sempre válidas, independentemente do nível de mensuração.'",
+          "correcao": "Errado. Em nominal, só moda (e contagens). Em ordinal, mediana e moda são seguras; média é discutível. Média e desvio padrão pressupõem escala de intervalo ou razão. Aplicar estatística acima do nível da variável produz número sem interpretação."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em escala ordinal, a mediana é uma medida de tendência central legitimamente aplicável.",
+          "resposta": "Certo. A mediana só usa ordem, e a ordem existe na escala ordinal."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Variável 'satisfação do cidadão: insatisfatório, satisfatório, muito satisfatório'. Qual nível e qual medida mais segura? A) nominal, média; B) ordinal, mediana; C) contínuo, desvio padrão; D) discreto, moda apenas.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de determinar o nível de mensuração de uma variável e indicará quais estatísticas são legítimas para ele, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "determinará o nível de mensuração de uma variável e indicará quais estatísticas são legítimas para ele"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "NÍVEL NOMINAL: categorias sem ordem — UF, gênero informado, espécie de trâmite. Operações válidas: contagem, frequência, moda. NÃO vale ordenar nem calcular média. NÍVEL ORDINAL: há ordem, mas as distâncias entre graus não são comparáveis — satisfação (ruim<regular<bom), escolaridade por grau, faixa de pontuação. Valem contagem, moda e MEDIANA; a média exige suposição adicional que a escala não garante. NÍVEL DISCRETO: contagem com ordem e distâncias iguais (diferença de 1 atendimento significa …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Escalas nominal, ordinal, discreta e contínua (níveis de mensuração)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Média, mediana e moda são sempre válidas, independentemente do nível de mensuração.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Em nominal, só moda (e contagens). Em ordinal, mediana e moda são seguras; média é discutível. Média e desvio padrão pressupõem escala de intervalo ou razão. Aplicar estatística acima do nível da variável produz número sem interpretação."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Determinar o nível de mensuração e as estatísticas legítimas para: (a) classificação de serviço (A/B/C); (b) tempo de resposta em minutos; (c) porte do órgão (pequeno/médio/grande).",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(a) nominal: valem contagem e moda; ordenar A>B>C só se houver regra documentada de precedência. (b) contínuo: valem média, mediana, desvio padrão, quartis. (c) ordinal: valem contagem, moda e mediana; média não é natural porque a distância entre pequeno e médio pode não igualar a entre médio e grande.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Temperaturas registradas: 10 °C e 20 °C. Alguém afirma que '20 °C é o dobro de 10 °C'. Corrija.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Erro de escala: Celsius é escala de INTERVALO, com zero de convenção — não é ausência de calor. Razões (dobro, metade) não têm significado; só diferenças (20 − 10 = 10 °C de diferença) são válidas. Para falar em proporção seria necessário um zero absoluto (escala Kelvin).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Média, mediana e moda são sempre válidas, independentemente do nível de mensuração.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Em nominal, só moda (e contagens). Em ordinal, mediana e moda são seguras; média é discutível. Média e desvio padrão pressupõem escala de intervalo ou razão. Aplicar estatística acima do nível da variável produz número sem interpretação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u1-t3-s1",
+      "titulo": "Metadados: o que são e para que servem",
+      "topicoTitulo": "Metadados, linhagem, catálogo e ciclo de vida",
+      "topicoId": "modulo-7-unidade-1-topico-3",
+      "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno classificará metadados em técnicos, de negócio e de processo, e associará cada classe a um uso concreto.",
+      "conteudo": "Metadado é dado sobre dado: descreve, contextualiza ou administra outro dado sem ser o conteúdo em si. TRÊS classes práticas. METADADOS TÉCNICOS (estruturais): nome da tabela e da coluna, tipo (inteiro, data, texto), tamanho, formato do arquivo, chave primária, partição, codificação — respondem 'como está armazenado'. METADADOS DE NEGÓCIO (descritivos): significado do campo ('prazo' é dias corridos ou úteis?), dono responsável, unidade de medida, regra de cálculo, classificação de sensibilidade — respondem 'o que significa e a quem pertence'. METADADOS DE PROCESSO/USO (operacionais): data e hora da extração, versão do job, quem consultou, de qual sistema veio — respondem 'como chegou e quem mexeu'. Utilidade: descoberta (localizar o dado), interpretação (entender sem chamar o autor), qualidade (validar tipo e domínio), governança (classificar e controlar acesso) e automação (alimentar catálogos e rotinas). Metadado ruim — ausente, desatualizado ou contraditório — degrada tudo: um dicionário de dados com versão antiga é pior que nenhum, porque gera confiança indevida.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classifique como técnico, de negócio ou de processo: 'coluna valor_venda, tipo DECIMAL(12,2)'; 'prazo é contado em dias úteis'; 'extração executada em 2026-10-20 às 03h00'.",
+          "resposta": "Tipo de coluna: técnico. Regra de prazo em dias úteis: de negócio. Data/hora da extração: de processo. Os três coexistem para o mesmo dado e atendem a públicos diferentes (banco de dados, usuário do relatório e auditor de operação)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um relatório mostra 'tempo médio de espera = 0,04'. Interpretar sem metadados de negócio produz erro? Justifique.",
+          "resposta": "Sim. Sem unidade (dias? horas? fração de dia?) e sem regra de cálculo (média ponderada por posto?), 0,04 é ambíguo: pode ser 0,04 dia (≈58 minutos) ou 0,04 hora (≈2,4 minutos). O metadado de negócio resolve a ambiguidade; sem ele, a leitura correta do número é impossível."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Metadado é a descrição escrita que alguém faz do relatório em um manual em PDF.'",
+          "correcao": "Parcialmente errado. Essa é uma forma de metadado descritivo, mas há também metadado técnico (esquema, tipos) e operacional (carimbo de execução), frequentemente gerados automaticamente pelo próprio sistema. Reduzir metadado a 'manual' ignora a parte que permite validação e rastreio automático."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Tipo de dado, tamanho de coluna e chave primária são exemplos de metadados técnicos.",
+          "resposta": "Certo. Descrevem a estrutura de armazenamento."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual metadado responde 'a quem pertence e o que significa este campo'? A) tipo da coluna; B) dono do dado e regra de negócio; C) horário do backup; D) nome do arquivo.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar metadados em técnicos, de negócio e de processo, e associará cada classe a um uso concreto, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará metadados em técnicos, de negócio e de processo, e associará cada classe a um uso concreto"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Metadado é dado sobre dado: descreve, contextualiza ou administra outro dado sem ser o conteúdo em si. TRÊS classes práticas. METADADOS TÉCNICOS (estruturais): nome da tabela e da coluna, tipo (inteiro, data, texto), tamanho, formato do arquivo, chave primária, partição, codificação — respondem 'como está armazenado'. METADADOS DE NEGÓCIO (descritivos): significado do campo ('prazo' é dias corridos ou úteis?), dono responsável, unidade de medida, regra de cálculo, classificação de sensibilidade …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Metadados: o que são e para que servem",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Metadado é a descrição escrita que alguém faz do relatório em um manual em PDF.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Parcialmente errado. Essa é uma forma de metadado descritivo, mas há também metadado técnico (esquema, tipos) e operacional (carimbo de execução), frequentemente gerados automaticamente pelo próprio sistema. Reduzir metadado a 'manual' ignora a parte que permite validação e rastreio automático."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classifique como técnico, de negócio ou de processo: 'coluna valor_venda, tipo DECIMAL(12,2)'; 'prazo é contado em dias úteis'; 'extração executada em 2026-10-20 às 03h00'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Tipo de coluna: técnico. Regra de prazo em dias úteis: de negócio. Data/hora da extração: de processo. Os três coexistem para o mesmo dado e atendem a públicos diferentes (banco de dados, usuário do relatório e auditor de operação).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um relatório mostra 'tempo médio de espera = 0,04'. Interpretar sem metadados de negócio produz erro? Justifique.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Sim. Sem unidade (dias? horas? fração de dia?) e sem regra de cálculo (média ponderada por posto?), 0,04 é ambíguo: pode ser 0,04 dia (≈58 minutos) ou 0,04 hora (≈2,4 minutos). O metadado de negócio resolve a ambiguidade; sem ele, a leitura correta do número é impossível.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Metadado é a descrição escrita que alguém faz do relatório em um manual em PDF.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Parcialmente errado. Essa é uma forma de metadado descritivo, mas há também metadado técnico (esquema, tipos) e operacional (carimbo de execução), frequentemente gerados automaticamente pelo próprio sistema. Reduzir metadado a 'manual' ignora a parte que permite validação e rastreio automático.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

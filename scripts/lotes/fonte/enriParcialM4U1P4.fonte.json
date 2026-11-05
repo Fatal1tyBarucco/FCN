@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 1,
+    "unidadeTitulo": "4.1 Fundamentos de segurança",
+    "parte": 4,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U1P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U1P4.js",
+    "idsCompletos": [
+      "m4-u1-t3-s1",
+      "m4-u1-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u1-t3-s1",
+      "titulo": "Criptografia simétrica",
+      "topicoTitulo": "Criptografia, hashes, assinaturas e certificados",
+      "topicoId": "modulo-4-unidade-1-topico-3",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno explicará o funcionamento da criptografia simétrica, identificará seu problema central e indicará usos adequados.",
+      "conteudo": "Na criptografia simétrica, a mesma chave cifra e decifra. Como o custo computacional é baixo em relação à assimétrica, é a escolha para proteger grandes volumes: cifragem de disco, proteção de backup e o canal de dados de uma sessão TLS (após a negociação inicial). O problema central é a distribuição da chave: para que duas partes cifrem entre si sem já terem canal seguro, a chave precisa chegar a elas sem ser interceptada — e quando há muitos pares, o número de chaves a gerenciar cresce rapidamente (n pares exigem n(n−1)/2 chaves em comunicações plenas). Por isso, na prática a criptografia simétrica é quase sempre precedida por um acordo de chave por meio assimétrico. Pontos operacionais: o algoritmo é público e a segurança depende da chave, não do segredo do algoritmo; chaves precisam de ciclo de vida (geração, armazenamento, rotação, revogação) e não devem ser reutilizadas de maneira previsível para conteúdos distintos. Algoritmos amplamente citados em material técnico: AES (padrão de referência) e ChaCha20, entre outros.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que o mesmo processo que cifra um arquivo de 2 TB usa criptografia simétrica e não assimétrica?",
+          "resposta": "Desempenho: a criptografia simétrica consome muito menos processamento por byte; a assimétrica é reservada, nesse cenário, para proteger a chave simétrica envolvida, e não o conteúdo inteiro."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Duas agências precisam trocar arquivos diários criptografados. Descreva o fluxo completo de chaves.",
+          "resposta": "1) As agências estabelecem uma chave simétrica de sessão protegida por troca assimétrica (cada uma cifra a chave com a chave pública da outra). 2) Os arquivos são cifrados com a chave simétrica. 3) Ao fim, a chave é destruída ou rotacionada. Assim, resolve-se o problema de distribuição mantendo o desempenho simétrico no conteúdo."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Em criptografia simétrica, a chave secreta é enviada junto ao arquivo cifrado para o destinatário.'",
+          "correcao": "Errado. Enviar a chave com o conteúdo anula a proteção: quem intercepta cifra e decifra. A chave deve ser distribuída por canal seguro ou por acordo com chave pública, sempre separada do dado cifrado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A segurança da criptografia simétrica depende de manter o algoritmo em segredo.",
+          "resposta": "Errado. Depende da chave: algoritmos são públicos e amplamente auditados; algoritmo secreto (segredo de Kerckhoffs) é considerado pratica frágil."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual é o problema central da criptografia simétrica? A) Custo computacional alto; B) Distribuição segura da chave; C) Saída de tamanho variável; D) Impossibilidade de usar em disco.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o funcionamento da criptografia simétrica, identificará seu problema central e indicará usos adequados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "cWld3rMD7Wk",
+          "titulo": "Introdução à Criptografia: Conceitos, Algoritmos e Segurança de Dados",
+          "canal": "Bóson Treinamentos",
+          "urlOriginal": "https://www.youtube.com/watch?v=cWld3rMD7Wk",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/cWld3rMD7Wk",
+          "descricao": "Videoaula introdutória sobre criptografia, cobrindo conceitos fundamentais (confidencialidade, integridade, autenticidade), criptografia simétrica (AES, ChaCha20, problema da distribuição de chaves), criptografia assimétrica (RSA, ECC, par de chaves pública/privada), assinaturas digitais, certificados X.509, PKI, funções de hash (SHA-256, resistência a colisão) e o funcionamento híbrido do TLS. Essencial para provas de concursos na área de segurança da informação.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o funcionamento da criptografia simétrica, identificará seu problema central e indicará usos adequados"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Na criptografia simétrica, a mesma chave cifra e decifra. Como o custo computacional é baixo em relação à assimétrica, é a escolha para proteger grandes volumes: cifragem de disco, proteção de backup e o canal de dados de uma sessão TLS (após a negociação inicial). O problema central é a distribuição da chave: para que duas partes cifrem entre si sem já terem canal seguro, a chave precisa chegar a elas sem ser interceptada — e quando há muitos pares, o número de chaves a gerenciar cresce rapidam…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Criptografia simétrica",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Em criptografia simétrica, a chave secreta é enviada junto ao arquivo cifrado para o destinatário.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Enviar a chave com o conteúdo anula a proteção: quem intercepta cifra e decifra. A chave deve ser distribuída por canal seguro ou por acordo com chave pública, sempre separada do dado cifrado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que o mesmo processo que cifra um arquivo de 2 TB usa criptografia simétrica e não assimétrica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Desempenho: a criptografia simétrica consome muito menos processamento por byte; a assimétrica é reservada, nesse cenário, para proteger a chave simétrica envolvida, e não o conteúdo inteiro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Duas agências precisam trocar arquivos diários criptografados. Descreva o fluxo completo de chaves.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) As agências estabelecem uma chave simétrica de sessão protegida por troca assimétrica (cada uma cifra a chave com a chave pública da outra). 2) Os arquivos são cifrados com a chave simétrica. 3) Ao fim, a chave é destruída ou rotacionada. Assim, resolve-se o problema de distribuição mantendo o desempenho simétrico no conteúdo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Em criptografia simétrica, a chave secreta é enviada junto ao arquivo cifrado para o destinatário.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Enviar a chave com o conteúdo anula a proteção: quem intercepta cifra e decifra. A chave deve ser distribuída por canal seguro ou por acordo com chave pública, sempre separada do dado cifrado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u1-t3-s2",
+      "titulo": "Criptografia assimétrica, certificados e PKI",
+      "topicoTitulo": "Criptografia, hashes, assinaturas e certificados",
+      "topicoId": "modulo-4-unidade-1-topico-3",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno descreverá o par de chaves, relacionará usos (confidencialidade x assinatura), explicará certificados e a cadeia de confiança e detalhará o funcionamento híbrido do TLS.",
+      "conteudo": "A criptografia assimétrica usa um par matematicamente relacionado: chave pública (divulgável) e chave privada (sigilosa). Cifrar com a chave pública e decifrar com a privada garante confidencialidade a qualquer remetente; assinar com a privada e verificar com a pública sustenta autenticidade, integridade e não repúdio. O custo computacional é maior, por isso se combina ao simétrico: no TLS, o cliente e o servidor usam assimétrico (ou troca efêmera de curva elíptica) para concordar uma chave simétrica de sessão, e todo o tráfego seguinte usa a simétrica. Certificado digital é o documento que vincula uma identidade a uma chave pública, emitido e assinado por uma autoridade de certificação (AC) confiável; a cadeia de confiança vai do certificado final até uma raiz de confiança pré-instalada no navegador ou no sistema, e cada elo é verificado por assinatura. Vida útil: certificado expira (isso é intencional, limita o dano de chave comprometida) e pode ser revogado antes do prazo — os mecanismos de consulta de revogação (listas e consultas online de status) existem justamente para isso. PKI (infraestrutura de chaves públicas) é o conjunto de políticas, processos, ACs, registros e softwares que sustentam essa cadeia.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Numa navegação HTTPS, em que momento a criptografia assimétrica é usada e o que ela protege?",
+          "resposta": "No início da conexão: durante a negociação TLS, as partes combinam a chave simétrica de sessão usando o par de chaves e o certificado do servidor. Depois, os dados trafegam cifrados com a chave simétrica; o certificado prova a identidade do servidor."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O navegador acusa que um certificado expirou. Explique por que expirar é desenho e não defeito.",
+          "resposta": "Expiração limita no tempo o poder de uma chave pública: se a privada for comprometida, o período de abuso é restrito ao prazo do certificado; além disso, força a renovação com práticas atualizadas. O alerta é correto — o site pode ser legítimo, mas a garantia vencida exige renovar (ou validar a configuração do servidor)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Cifrar com a chave privada protege a confidencialidade da mensagem.'",
+          "correcao": "Errado. Como a chave pública é de todos, todos conseguem decifrar — não há confidencialidade. Cifrar com a chave privada é, na prática, ato de assinatura/verificação; para confidencialidade, cifra-se com a chave pública do destinatário."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um certificado digital pode ser revogado antes do vencimento.",
+          "resposta": "Certo. Revogação antecipada existe para casos de comprometimento de chave privada, mudança de titularidade ou erro de emissão."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "No TLS, a criptografia assimétrica é usada principalmente para: A) cifrar todo o tráfego; B) concordar a chave simétrica de sessão; C) comprimir o conteúdo; D) autenticar o usuário final.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever o par de chaves, relacionará usos (confidencialidade x assinatura), explicará certificados e a cadeia de confiança e detalhará o funcionamento híbrido do TLS, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá o par de chaves, relacionará usos (confidencialidade x assinatura), explicará certificados e a cadeia de confiança e detalhará o funcionamento híbrido do TLS"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A criptografia assimétrica usa um par matematicamente relacionado: chave pública (divulgável) e chave privada (sigilosa). Cifrar com a chave pública e decifrar com a privada garante confidencialidade a qualquer remetente; assinar com a privada e verificar com a pública sustenta autenticidade, integridade e não repúdio. O custo computacional é maior, por isso se combina ao simétrico: no TLS, o cliente e o servidor usam assimétrico (ou troca efêmera de curva elíptica) para concordar uma chave simé…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Criptografia assimétrica, certificados e PKI",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Cifrar com a chave privada protege a confidencialidade da mensagem.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Como a chave pública é de todos, todos conseguem decifrar — não há confidencialidade. Cifrar com a chave privada é, na prática, ato de assinatura/verificação; para confidencialidade, cifra-se com a chave pública do destinatário."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Numa navegação HTTPS, em que momento a criptografia assimétrica é usada e o que ela protege?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "No início da conexão: durante a negociação TLS, as partes combinam a chave simétrica de sessão usando o par de chaves e o certificado do servidor. Depois, os dados trafegam cifrados com a chave simétrica; o certificado prova a identidade do servidor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O navegador acusa que um certificado expirou. Explique por que expirar é desenho e não defeito.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Expiração limita no tempo o poder de uma chave pública: se a privada for comprometida, o período de abuso é restrito ao prazo do certificado; além disso, força a renovação com práticas atualizadas. O alerta é correto — o site pode ser legítimo, mas a garantia vencida exige renovar (ou validar a configuração do servidor).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Cifrar com a chave privada protege a confidencialidade da mensagem.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Como a chave pública é de todos, todos conseguem decifrar — não há confidencialidade. Cifrar com a chave privada é, na prática, ato de assinatura/verificação; para confidencialidade, cifra-se com a chave pública do destinatário.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

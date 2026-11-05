@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 2,
+    "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+    "parte": 3,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U2P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U2P3.js",
+    "idsCompletos": [
+      "m4-u2-t2-s2",
+      "m4-u2-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u2-t2-s2",
+      "titulo": "Inspeção de estado (stateful inspection)",
+      "topicoTitulo": "Firewalls e filtragem de tráfego",
+      "topicoId": "modulo-4-unidade-2-topico-2",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno explicará como a tabela de estados simplifica regras e introduz o ciclo de vida de conexão TCP como critério de filtragem.",
+      "conteudo": "A inspeção de estado mantém uma tabela com as conexões em andamento: origem, destino, porta, estado (por exemplo, conexão em abertura, estabelecida, encerrando) e timeout. Com ela, o administrador escreve uma regra no sentido entrada (permitir novas conexões de saída para a Internet) e o firewall automaticamente permite o retorno correspondente, sabendo que aquele pacote pertence a uma conexão que ele mesmo autorizou — o retorno não precisa de regra explícita. Ganho prático: menos regras, menos erros de configuração e rejeição de pacotes soltos que fingem ser resposta de conexão que nunca existiu. Exemplo de engano que o stateful bloqueia: pacote TCP com flag de confirmação (ACK) vindo de fora sem conexão anterior registrado — em firewall stateless mal configurado, ele seria aceito pela regra genérica de retorno. Limitações: não inspeciona o payload aplicacional; o consumo de memória cresce com o número de conexões (é vetor de esgotamento); tráfego cifrado continua opaco quanto ao conteúdo. Mecanismo análogo em hosts: a tabela de conexões permite que a filtragem de pacotes local seja dirigida por estado também.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Descreva o que acontece quando um usuário abre um site pela primeira vez em firewall stateful.",
+          "resposta": "1) O pacote de SYN de saída passa pela regra de novas conexões; 2) o firewall cria registro na tabela de estados (origem, destino, porta, estado SYN_SENT → ESTABLISHED); 3) os pacotes de resposta são reconhecidos como parte daquela conexão e liberados sem regra extra; 4) ao encerrar, o registro expira por timeout."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Por que um ataque de injeção de pacotes com ACK vindo da Internet falha em firewall stateful bem configurado?",
+          "resposta": "Porque não existe conexão correspondente na tabela de estados: o pacote ACK não casa com nenhuma sessão autorizada, logo é descartado como pacote órfão — mesmo que exista regra permissiva genérica de rede."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Inspeção de estado substitui completamente a necessidade de regras de permissão.'",
+          "correcao": "Errado. O estado automatiza apenas o retorno de conexões que o próprio firewall autorizou; cada nova conexão de entrada ou saída continua dependendo de regra explícita. Estado reduz regras, não elimina política."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A tabela de estados do firewall é esgotável e pode ser alvo de ataque por volume de conexões.",
+          "resposta": "Certo. Cada conexão consome memória e entradas; rajadas de conexões podem estourar a tabela, derrubando o firewall ou forçando timeouts — daí limites de taxa e dimensionamento."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Principal ganho da inspeção de estado: A) criptografia do tráfego; B) retorno automático de conexões autorizadas, com menos regras; C) detecção de vírus; D) filtro de conteúdo de e-mail.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar como a tabela de estados simplifica regras e introduz o ciclo de vida de conexão TCP como critério de filtragem, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará como a tabela de estados simplifica regras e introduz o ciclo de vida de conexão TCP como critério de filtragem"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A inspeção de estado mantém uma tabela com as conexões em andamento: origem, destino, porta, estado (por exemplo, conexão em abertura, estabelecida, encerrando) e timeout. Com ela, o administrador escreve uma regra no sentido entrada (permitir novas conexões de saída para a Internet) e o firewall automaticamente permite o retorno correspondente, sabendo que aquele pacote pertence a uma conexão que ele mesmo autorizou — o retorno não precisa de regra explícita. Ganho prático: menos regras, menos …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Inspeção de estado (stateful inspection)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Inspeção de estado substitui completamente a necessidade de regras de permissão.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O estado automatiza apenas o retorno de conexões que o próprio firewall autorizou; cada nova conexão de entrada ou saída continua dependendo de regra explícita. Estado reduz regras, não elimina política."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Descreva o que acontece quando um usuário abre um site pela primeira vez em firewall stateful.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) O pacote de SYN de saída passa pela regra de novas conexões; 2) o firewall cria registro na tabela de estados (origem, destino, porta, estado SYN_SENT → ESTABLISHED); 3) os pacotes de resposta são reconhecidos como parte daquela conexão e liberados sem regra extra; 4) ao encerrar, o registro expira por timeout.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Por que um ataque de injeção de pacotes com ACK vindo da Internet falha em firewall stateful bem configurado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque não existe conexão correspondente na tabela de estados: o pacote ACK não casa com nenhuma sessão autorizada, logo é descartado como pacote órfão — mesmo que exista regra permissiva genérica de rede.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Inspeção de estado substitui completamente a necessidade de regras de permissão.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O estado automatiza apenas o retorno de conexões que o próprio firewall autorizou; cada nova conexão de entrada ou saída continua dependendo de regra explícita. Estado reduz regras, não elimina política.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u2-t2-s3",
+      "titulo": "Firewall de aplicação e WAF",
+      "topicoTitulo": "Firewalls e filtragem de tráfego",
+      "topicoId": "modulo-4-unidade-2-topico-2",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará firewall de aplicação de firewall de pacotes e explicará o papel do WAF na proteção de aplicações web.",
+      "conteudo": "Firewall de aplicação (firewall de camada de aplicação ou proxy de aplicação) entende o protocolo da aplicação: HTTP, FTP, SMTP etc. Ele valida se o tráfego obedece à gramática do protocolo e aplica políticas por conteúdo — por exemplo, permitir apenas o método HTTP GET/POST, rejeitar requisições com corpo malformado ou parâmetros suspeitos. WAF (Web Application Firewall) é a especialização para aplicações web: fica em frente ao site (proxy reverso), inspeciona requisições e respostas HTTP(S) e bloqueia padrões de ataque de camada aplicacional, como injeção de SQL, scripts entre usuários (XSS) e exploração de falhas de autenticação. Posicionamento típico: entre o usuário e o servidor web, com política baseada em regras e, quando disponível, em conjunto de regras de referência de ataques web. Responsabilidades e limites: WAF melhora a higiene do perímetro web, mas não corrige falhas de código — é controle que compra tempo enquanto a aplicação é corrigida; exige sintonia para reduzir falsos positivos; não protege contra fraudes feitas por usuário autenticado em app legítimo. Confira sempre a documentação do produto: capacidades variam entre fabricantes e versões, e generalizar recurso de um produto é erro comum de prova.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um formulário público recebe parâmetro que vira consulta direta ao banco. Que ferramenta intercepta o padrão de ataque e qual corrige a causa?",
+          "resposta": "O WAF pode bloquear a sintaxe típica de injeção de SQL inspecionando a requisição HTTP. A causa raiz é corrigida no código: uso de consulta parametrizada, validação de entrada e permissão mínima do banco — WAF não substitui correção."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O portal de transparência do órgão passa a exibir erro 500 em formulários após ativar WAF em modo bloqueio estrito. Como proceder?",
+          "resposta": "Verificar logs do WAF para identificar regras que casam com tráfego legítimo (falsos positivos), passar a modo de observação para ajustar, excluir falsos positivos documentados, reativar bloqueio e manter revisão periódica de política — sem desativar a proteção inteira como atalho."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Com WAF, a aplicação fica imune a falhas de desenvolvimento.'",
+          "correcao": "Errado. WAF é controle externo e baseado em padrões; falha lógica nova ou padrão desconhecido pode passar. Segurança de aplicação exige revisão de código, validação de entrada e gestão de dependências — o WAF complementa, não corrige."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) WAF inspeciona conteúdo HTTP(S) das requisições, ao contrário do firewall de pacotes.",
+          "resposta": "Certo. É exatamente essa a diferença de camada: WAF atua no conteúdo aplicacional; firewall de pacotes decide por endereços e portas."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual ataque é típico alvo de WAF? A) SYN flood volumétrico; B) Injeção de SQL via parâmetro de formulário; C) SIM swap; D) Engenharia social por telefone.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar firewall de aplicação de firewall de pacotes e explicará o papel do WAF na proteção de aplicações web, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará firewall de aplicação de firewall de pacotes e explicará o papel do WAF na proteção de aplicações web"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Firewall de aplicação (firewall de camada de aplicação ou proxy de aplicação) entende o protocolo da aplicação: HTTP, FTP, SMTP etc. Ele valida se o tráfego obedece à gramática do protocolo e aplica políticas por conteúdo — por exemplo, permitir apenas o método HTTP GET/POST, rejeitar requisições com corpo malformado ou parâmetros suspeitos. WAF (Web Application Firewall) é a especialização para aplicações web: fica em frente ao site (proxy reverso), inspeciona requisições e respostas HTTP(S) e …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Firewall de aplicação e WAF",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Com WAF, a aplicação fica imune a falhas de desenvolvimento.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. WAF é controle externo e baseado em padrões; falha lógica nova ou padrão desconhecido pode passar. Segurança de aplicação exige revisão de código, validação de entrada e gestão de dependências — o WAF complementa, não corrige."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um formulário público recebe parâmetro que vira consulta direta ao banco. Que ferramenta intercepta o padrão de ataque e qual corrige a causa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O WAF pode bloquear a sintaxe típica de injeção de SQL inspecionando a requisição HTTP. A causa raiz é corrigida no código: uso de consulta parametrizada, validação de entrada e permissão mínima do banco — WAF não substitui correção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O portal de transparência do órgão passa a exibir erro 500 em formulários após ativar WAF em modo bloqueio estrito. Como proceder?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Verificar logs do WAF para identificar regras que casam com tráfego legítimo (falsos positivos), passar a modo de observação para ajustar, excluir falsos positivos documentados, reativar bloqueio e manter revisão periódica de política — sem desativar a proteção inteira como atalho.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Com WAF, a aplicação fica imune a falhas de desenvolvimento.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. WAF é controle externo e baseado em padrões; falha lógica nova ou padrão desconhecido pode passar. Segurança de aplicação exige revisão de código, validação de entrada e gestão de dependências — o WAF complementa, não corrige.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

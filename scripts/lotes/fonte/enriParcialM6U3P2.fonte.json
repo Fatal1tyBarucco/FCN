@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 3,
+    "unidadeTitulo": "6.3 Proteção de dados pessoais, informações legalmente protegidas, segurança, rastreabilidade e responsabilização",
+    "parte": 2,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U3P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U3P2.js",
+    "idsCompletos": [
+      "m6-u3-t2-s1",
+      "m6-u3-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u3-t2-s1",
+      "titulo": "Sigilo legal: hipóteses, graus, prazos, competência e formalização da classificação",
+      "topicoTitulo": "Informações legalmente protegidas: sigilo, informação pessoal e seus limites",
+      "topicoId": "modulo-6-unidade-3-topico-2",
+      "unidadeTitulo": "6.3 Proteção de dados pessoais, informações legalmente protegidas, segurança, rastreabilidade e responsabilização",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno enumerará as hipóteses de sigilo, os graus e seus prazos, a autoridade competente para classificar e os elementos obrigatórios da decisão de classificação, e indicará o procedimento de reavaliação.",
+      "conteudo": "HIPÓTESES DE SIGILO (art. 23 da Lei nº 12.527/2011 — verificado em 2026-10-21): são consideradas imprescindíveis à segurança da sociedade ou do Estado, e portanto passíveis de classificação, as informações cuja divulgação ou acesso irrestrito possam: (I) pôr em risco a defesa e a soberania nacionais ou a integridade do território nacional; (II) prejudicar ou pôr em risco a condução de negociações ou as relações internacionais, ou as que tenham sido fornecidas em caráter sigiloso por outros Estados e organismos internacionais; (III) pôr em risco a vida, a segurança ou a saúde da população; (IV) oferecer elevado risco à estabilidade financeira, econômica ou monetária; (V) prejudicar ou causar risco a planos ou operações estratégicas das Forças Armadas; (VI) prejudicar ou causar risco a projetos de pesquisa e desenvolvimento científicos ou tecnológicos, assim como a sistemas, bens, instalações ou áreas de interesse estratégico nacional; (VII) pôr em risco a segurança de instituições ou de altas autoridades nacionais ou estrangeiras e de seus familiares; ou (VIII) comprometer atividades de inteligência, bem como de investigação ou fiscalização em andamento, relacionadas à prevenção ou repressão de infrações. Note-se a fórmula legal: o risco não precisa ser atual, basta SER POSSÍVEL — e o rol é taxativo quanto às hipóteses. GRAUS E PRAZOS (art. 24): as informações podem ser classificadas como ULTRASSECRETA, SECRETA ou RESERVADA; os prazos máximos de restrição de acesso, contados da data de produção, são (I) ultrassecreta: 25 anos; (II) secreta: 15 anos; (III) reservada: 5 anos. O § 2º do art. 24 trata das informações que puderem colocar em risco a segurança do Presidente e Vice-Presidente da República e respectivos cônjuges e filhos, classificáveis como reservadas e sob sigilo até o término do mandato. O § 3º admite, alternativamente, termo final pela ocorrência de determinado evento, desde que ocorra antes do transcurso do prazo máximo. O § 4º é regra de AUTOMATICIDADE: «transcorrido o prazo de classificação ou consumado o evento que defina o seu termo final, a informação tornar-se-á, automaticamente, de acesso público.» O § 5º impõe dois critérios: observar o interesse público da informação e utilizar o CRITÉRIO MENOS RESTRITIVO POSSÍVEL, considerados a gravidade do risco ou dano à segurança da sociedade e do Estado e o prazo máximo de classificação. COMPETÊNCIA (art. 27): no âmbito da Administração Pública federal, a classificação no grau de ultrassecreto compete a autoridades de altíssimo escalão (Presidente e Vice-Presidente da República, Ministros de Estado e autoridades com as mesmas prerrogativas, Comandantes das Forças Armadas e Chefes de Missões Diplomáticas e Consulares); no grau de secreto, a essas autoridades acrescidas dos titulares de autarquias, fundações e empresas públicas e sociedades de economia mista; no grau de reservado, também às autoridades que exerçam funções de direção, comando ou chefia de nível equivalente, de acordo com regulamentação específica de cada órgão. A delegação é permitida, mas a subdelegação é vedada (art. 27, § 1º). ELEMENTOS DA DECISÃO DE CLASSIFICAÇÃO (art. 28): (I) assunto sobre o qual versa a informação; (II) FUNDAMENTO da classificação, observados os critérios do art. 23; (III) indicação do PRAZO de sigilo, contado em anos, meses ou dias, ou do evento que defina o termo final, conforme os limites do art. 24; (IV) IDENTIFICAÇÃO DA AUTORIDADE QUE A CLASSIFICOU. O parágrafo único do art. 28 exige que a decisão de classificação seja mantida no mesmo grau de sigilo da informação classificada. REAVALIAÇÃO (art. 29): a classificação será reavaliada pela autoridade classificadora ou por autoridade hierarquicamente superior, de ofício ou por provocação, com vistas à desclassificação ou à redução do prazo, devendo o regulamento considerar as peculiaridades das informações produzidas no exterior; na reavaliação, examinam-se a permanência dos motivos do sigilo e a possibilidade de danos decorrentes do acesso ou divulgação; havendo redução do prazo, o novo prazo mantém como termo inicial a data da produção. PUBLICAÇÃO ANUAL (art. 30): a autoridade máxima de cada órgão ou entidade publica anualmente, em sítio destinado à veiculação de dados e informações administrativas: (I) rol das informações desclassificadas nos últimos 12 meses; (II) rol de documentos classificados em cada grau de sigilo, com identificação para referência futura; (III) relatório estatístico com a quantidade de pedidos de informação recebidos, atendidos e indeferidos, e informações genéricas sobre os solicitantes. DEMAIS REGRAS: o art. 25 impõe ao Estado controlar o acesso e a divulgação de informações sigilosas, restringindo-o a pessoas que tenham necessidade de conhecê-la e devidamente credenciadas; o acesso cria a obrigação de resguardar o sigilo; e o art. 26 exige que as autoridades adotem providências para que o pessoal conheça as normas e observe as medidas de tratamento de informação sigilosa — inclusive as pessoas privadas que, por qualquer vínculo, tratem esse tipo de informação. O art. 38 remete à Lei nº 9.507/1997 quanto a informações de pessoa natural ou jurídica constantes de registro ou banco de dados de entidades governamentais ou de caráter público.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença de tratamento entre uma informação classificada como secreta (prazo de 15 anos) e uma que não foi classificada?",
+          "resposta": "A informação classificada tem restrição de acesso formal, com fundamento no art. 23, ato de classificação com os elementos do art. 28, prazo certo (15 anos, conforme art. 24, § 1º, II) e reavaliação periódica. A informação não classificada permanece pública, com o dever de divulgação do art. 8º da LAI e o regime de dados pessoais do art. 31. O passar do tempo não reclassifica: o que se extingue é o prazo do art. 24, com a abertura automática nos termos do § 4º."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um documento foi classificado como reservado há 4 anos. O que se pode afirmar sobre ele?",
+          "resposta": "Que a restrição pode vigorar até completar 5 anos (art. 24, § 1º, III), salvo se reavaliado para desclassificação ou redução de prazo (art. 29), e que ao fim do prazo a informação se torna automaticamente de acesso público (art. 24, § 4º). Também é possível que o documento contenha dados pessoais, caso em que incide adicionalmente o art. 31 da LAI, com prazo próprio de 100 anos para as informações relativas à intimidade, vida privada, honra e imagem."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O gestor pode classificar como reservado qualquer documento interno que considere sensível, porque o sigilo é exceção à publicidade.'",
+          "correcao": "Errado. A classificação exige hipótese do art. 23, decisão formal com os elementos do art. 28 e competência da autoridade do art. 27, além do critério menos restritivo possível (art. 24, § 5º). A sensação de «sensibilidade» interna não é hipótese legal; e a classificação feita sem formalização é nula e pode configurar a conduta do art. 32, IV, da LAI."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Transcorrido o prazo máximo de classificação, a informação torna-se automaticamente de acesso público, nos termos do art. 24, § 4º, da Lei nº 12.527/2011.",
+          "resposta": "Certo. É regra de automaticidade da abertura; a reavaliação (art. 29) pode antecipá-la, mas não a postergar além do prazo máximo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Elementos obrigatórios da decisão de classificação (art. 28 da Lei nº 12.527/2011): A) assunto; B) fundamento da classificação; C) prazo de sigilo ou evento que defina o termo final; D) nome do servidor que acessará a informação.",
+          "resposta": "A, B e C. O item D não consta do rol; a competência para acesso decorre da necessidade de conhecimento e do credenciamento (art. 25)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de enumerar as hipóteses de sigilo, os graus e seus prazos, a autoridade competente para classificar e os elementos obrigatórios da decisão de classificação, e indicará o procedimento de reavaliação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "enumerará as hipóteses de sigilo, os graus e seus prazos, a autoridade competente para classificar e os elementos obrigatórios da decisão de classificação, e indicará o procedimento de reavaliação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "HIPÓTESES DE SIGILO (art. 23 da Lei nº 12.527/2011 — verificado em 2026-10-21): são consideradas imprescindíveis à segurança da sociedade ou do Estado, e portanto passíveis de classificação, as informações cuja divulgação ou acesso irrestrito possam: (I) pôr em risco a defesa e a soberania nacionais ou a integridade do território nacional; (II) prejudicar ou pôr em risco a condução de negociações ou as relações internacionais, ou as que tenham sido fornecidas em caráter sigiloso por outros Estad…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Sigilo legal: hipóteses, graus, prazos, competência e formalização da classificação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O gestor pode classificar como reservado qualquer documento interno que considere sensível, porque o sigilo é exceção à publicidade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A classificação exige hipótese do art. 23, decisão formal com os elementos do art. 28 e competência da autoridade do art. 27, além do critério menos restritivo possível (art. 24, § 5º). A sensação de «sensibilidade» interna não é hipótese legal; e a classificação feita sem formalização é nula e pode configurar a conduta do art. 32, IV, da LAI."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença de tratamento entre uma informação classificada como secreta (prazo de 15 anos) e uma que não foi classificada?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A informação classificada tem restrição de acesso formal, com fundamento no art. 23, ato de classificação com os elementos do art. 28, prazo certo (15 anos, conforme art. 24, § 1º, II) e reavaliação periódica. A informação não classificada permanece pública, com o dever de divulgação do art. 8º da LAI e o regime de dados pessoais do art. 31. O passar do tempo não reclassifica: o que se extingue é o prazo do art. 24, com a abertura automática nos termos do § 4º.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um documento foi classificado como reservado há 4 anos. O que se pode afirmar sobre ele?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Que a restrição pode vigorar até completar 5 anos (art. 24, § 1º, III), salvo se reavaliado para desclassificação ou redução de prazo (art. 29), e que ao fim do prazo a informação se torna automaticamente de acesso público (art. 24, § 4º). Também é possível que o documento contenha dados pessoais, caso em que incide adicionalmente o art. 31 da LAI, com prazo próprio de 100 anos para as informações relativas à intimidade, vida privada, honra e imagem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O gestor pode classificar como reservado qualquer documento interno que considere sensível, porque o sigilo é exceção à publicidade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A classificação exige hipótese do art. 23, decisão formal com os elementos do art. 28 e competência da autoridade do art. 27, além do critério menos restritivo possível (art. 24, § 5º). A sensação de «sensibilidade» interna não é hipótese legal; e a classificação feita sem formalização é nula e pode configurar a conduta do art. 32, IV, da LAI.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u3-t2-s2",
+      "titulo": "Informação pessoal na Lei de Acesso à Informação: proteção, limites e exceções",
+      "topicoTitulo": "Informações legalmente protegidas: sigilo, informação pessoal e seus limites",
+      "topicoId": "modulo-6-unidade-3-topico-2",
+      "unidadeTitulo": "6.3 Proteção de dados pessoais, informações legalmente protegidas, segurança, rastreabilidade e responsabilização",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno aplicará o regime do art. 31 da Lei nº 12.527/2011 à informação pessoal, relacionando-o às hipóteses de dispensa de consentimento, à tutela de direitos fundamentais e ao acesso parcial.",
+      "conteudo": "O art. 31 da Lei nº 12.527/2011 (verificado em 2026-10-21) estabelece regime autônomo para a informação pessoal, que NÃO se resolve pela classificação de sigilo: «O tratamento das informações pessoais deve ser feito de forma transparente e com respeito à intimidade, vida privada, honra e imagem das pessoas, bem como às liberdades e garantias individuais». O § 1º, I, do art. 31 determina que as informações pessoais relativas à intimidade, vida privada, honra e imagem terão o acesso restrito, INDEPENDENTEMENTE DE CLASSIFICAÇÃO DE SIGILO e pelo prazo máximo de 100 (cem) ANOS a contar da sua data de produção, a agentes públicos legalmente autorizados e à pessoa a que se referem. O § 1º, II admite que as informações sejam divulgadas ou acessadas por terceiros DIANTE DE PREVISÃO LEGAL OU CONSENTIMENTO EXPRESSO da pessoa a que se referem. O § 2º responsabiliza quem obtiver acesso pelo uso indevido. O § 3º dispensa o consentimento quando as informações forem necessárias: (I) à prevenção e diagnóstico médico, quando a pessoa for física ou legalmente incapaz e para utilização única e exclusivamente para o tratamento médico; (II) à realização de estatísticas e pesquisas científicas de evidente interesse público ou geral, previstos em lei, sendo vedada a identificação da pessoa a que as informações se referem; (III) ao cumprimento de ordem judicial; (IV) à defesa de direitos humanos; ou (V) à proteção do interesse público e geral preponderante. O § 4º é uma salvaguarda de ACCOUNTABILITY: a restrição de acesso a informação relativa à vida privada, honra e imagem NÃO pode ser invocada com o intuito de PREJUDICAR PROCESSO DE APURAÇÃO DE IRREGULARIDADES em que o titular das informações estiver envolvido, bem como em ações voltadas para a recuperação de fatos históricos de maior relevância. O § 5º remete ao regulamento o procedimento de tratamento de informação pessoal. OUTROS DISPOSITIVOS COMPLEMENTARES: o art. 21 da LAI veda negar acesso a informação necessária à tutela judicial ou administrativa de direitos fundamentais, e seu parágrafo único veda restrição a informações sobre condutas que impliquem violação de direitos humanos por agentes públicos ou a mando de autoridades públicas; o art. 7º, § 2º assegura o acesso à parte não sigilosa; o art. 7º, § 3º assegura o acesso, por meio da edição do ato decisório, aos documentos ou informações usados como fundamento do ato administrativo; o art. 22 preserva as demais hipóteses legais de sigilo, de segredo de justiça e de segredo industrial; o art. 6º, III, impõe ao órgão proteger a informação sigilosa e a informação pessoal, observadas disponibilidade, autenticidade, integridade e eventual restrição de acesso. INTERPRETAÇÃO PRÁTICA: o art. 31 cria um REGIME DE DUPLA PROTEÇÃO — o sigilo protege o interesse público (segurança da sociedade e do Estado), enquanto a proteção da informação pessoal protege a pessoa; e o § 4º impede que a primeira seja invocada para enfraquecer a accountability sobre a segunda. APLICAÇÃO AO SERVIÇO DIGITAL: cadastro de beneficiários, prontuário, ficha funcional e registros de atendimento são bancos de dados pessoais (art. 5º, IV, da LGPD) e exigem, além de segurança (art. 46 da LGPD), minimização, finalidade declarada e controle de acesso individual — com trilha de auditoria que registre quem acessou o quê (art. 6º, III, da LAI, e art. 43 da Lei nº 14.129/2021 quanto à comprovação de autoria e auditoria).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um servidor pede acesso, para fins de apuração de irregularidade em que ele próprio está envolvido, a ficha funcional completa de um colega, incluindo endereço residencial e registro de licença médica.",
+          "resposta": "O art. 31, § 4º, da Lei nº 12.527/2011 veda invocar a restrição de acesso à informação relativa à vida privada, honra e imagem para prejudicar processo de apuração de irregularidades em que o titular esteja envolvido. A proteção da pessoa não pode ser usada como escudo contra a apuração de má-fé do próprio servidor. A resposta correta é a do art. 31, § 4º: a restrição não pode ser invocada para prejudicar a apuração; o acesso deve ser concedido, com as cautelas de necessidade e de registro, e a apuração prossegue sobre as condutas apuradas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma pesquisa acadêmica solicita prontuários de um serviço de saúde para estudo de qualidade do atendimento. Como se aplica o art. 31?",
+          "resposta": "O art. 31, § 3º, II, admite o tratamento para realização de estatísticas e pesquisas científicas de evidente interesse público ou geral, PREVISTAS EM LEI, sendo vedada a identificação da pessoa. Na prática: (1) verificar se a pesquisa se enquadra na hipótese legal e se há interesse público ou geral; (2) anonimizar os registros antes do uso, vedando a identificação (também art. 36 da Lei nº 14.129/2021); (3) registrar a metodologia de anonimização; (4) se houver retenção de dados identificáveis para rastreabilidade da pesquisa, delimitá-la com fundamento próprio e acesso restrito. Entregar prontuário com nome e diagnóstico é vedação de divulgação irrestrita de dados pessoais."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se o documento não foi classificado como sigiloso, os dados pessoais nele contidos podem ser liberados integralmente ao requerente.'",
+          "correcao": "Errado. A classificação de sigilo e a proteção da informação pessoal são regimes autônomos: o art. 31, § 1º, I, da Lei nº 12.527/2011 restringe o acesso às informações pessoais relativas à intimidade, vida privada, honra e imagem, independentemente de classificação de sigilo, e a LGPD (art. 5º, I) caracteriza o dado pessoal e impõe o regime de proteção correspondente. A ausência de sigilo não converte dado pessoal em informação publicável."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A restrição de acesso a informação relativa à vida privada, honra e imagem pode ser invocada para prejudicar apuração de irregularidades em que o titular das informações esteja envolvido.",
+          "resposta": "Errado. O art. 31, § 4º, da Lei nº 12.527/2011 veda exatamente essa invocação, igualmente em ações de recuperação de fatos históricos de maior relevância."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Hipóteses de dispensa de consentimento para tratamento de informação pessoal (art. 31, § 3º, da Lei nº 12.527/2011): A) cumprimento de ordem judicial; B) defesa de direitos humanos; C) proteção do interesse público e geral preponderante; D) interesse pessoal do servidor solicitante.",
+          "resposta": "A, B e C. O item D não consta do rol e é precisamente o uso indevido que o § 2º do art. 31 responsabiliza."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar o regime do art. 31 da Lei nº 12.527/2011 à informação pessoal, relacionando-o às hipóteses de dispensa de consentimento, à tutela de direitos fundamentais e ao acesso parcial, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará o regime do art. 31 da Lei nº 12.527/2011 à informação pessoal, relacionando-o às hipóteses de dispensa de consentimento, à tutela de direitos fundamentais e ao acesso parcial"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O art. 31 da Lei nº 12.527/2011 (verificado em 2026-10-21) estabelece regime autônomo para a informação pessoal, que NÃO se resolve pela classificação de sigilo: «O tratamento das informações pessoais deve ser feito de forma transparente e com respeito à intimidade, vida privada, honra e imagem das pessoas, bem como às liberdades e garantias individuais». O § 1º, I, do art. 31 determina que as informações pessoais relativas à intimidade, vida privada, honra e imagem terão o acesso restrito, INDE…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Informação pessoal na Lei de Acesso à Informação: proteção, limites e exceções",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se o documento não foi classificado como sigiloso, os dados pessoais nele contidos podem ser liberados integralmente ao requerente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A classificação de sigilo e a proteção da informação pessoal são regimes autônomos: o art. 31, § 1º, I, da Lei nº 12.527/2011 restringe o acesso às informações pessoais relativas à intimidade, vida privada, honra e imagem, independentemente de classificação de sigilo, e a LGPD (art. 5º, I) caracteriza o dado pessoal e impõe o regime de proteção correspondente. A ausência de sigilo não converte dado pessoal em informação publicável."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um servidor pede acesso, para fins de apuração de irregularidade em que ele próprio está envolvido, a ficha funcional completa de um colega, incluindo endereço residencial e registro de licença médica.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O art. 31, § 4º, da Lei nº 12.527/2011 veda invocar a restrição de acesso à informação relativa à vida privada, honra e imagem para prejudicar processo de apuração de irregularidades em que o titular esteja envolvido. A proteção da pessoa não pode ser usada como escudo contra a apuração de má-fé do próprio servidor. A resposta correta é a do art. 31, § 4º: a restrição não pode ser invocada para prejudicar a apuração; o acesso deve ser concedido, com as cautelas de necessidade e de registro, e a apuração prossegue sobre as condutas apuradas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma pesquisa acadêmica solicita prontuários de um serviço de saúde para estudo de qualidade do atendimento. Como se aplica o art. 31?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O art. 31, § 3º, II, admite o tratamento para realização de estatísticas e pesquisas científicas de evidente interesse público ou geral, PREVISTAS EM LEI, sendo vedada a identificação da pessoa. Na prática: (1) verificar se a pesquisa se enquadra na hipótese legal e se há interesse público ou geral; (2) anonimizar os registros antes do uso, vedando a identificação (também art. 36 da Lei nº 14.129/2021); (3) registrar a metodologia de anonimização; (4) se houver retenção de dados identificáveis para rastreabilidade da pesquisa, delimitá-la com fundamento próprio e acesso restrito. Entregar prontuário com nome e diagnóstico é vedação de divulgação irrestrita de dados pessoais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se o documento não foi classificado como sigiloso, os dados pessoais nele contidos podem ser liberados integralmente ao requerente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A classificação de sigilo e a proteção da informação pessoal são regimes autônomos: o art. 31, § 1º, I, da Lei nº 12.527/2011 restringe o acesso às informações pessoais relativas à intimidade, vida privada, honra e imagem, independentemente de classificação de sigilo, e a LGPD (art. 5º, I) caracteriza o dado pessoal e impõe o regime de proteção correspondente. A ausência de sigilo não converte dado pessoal em informação publicável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

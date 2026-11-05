@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 1,
+    "unidadeTitulo": "3.1 Correio Eletrônico",
+    "parte": 2,
+    "totalPartesUnidade": 2,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U1P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U1P2.js",
+    "idsCompletos": [
+      "m3-u1-t1-s3",
+      "m3-u1-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u1-t1-s3",
+      "titulo": "Cabeçalhos, destinatários, anexos, CC e BCC",
+      "topicoTitulo": "SMTP, POP3 e IMAP",
+      "topicoId": "modulo-3-unidade-1-topico-1",
+      "unidadeTitulo": "3.1 Correio Eletrônico",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno identificará os campos de um e-mail e suas funções.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os principais cabeçalhos de uma mensagem; (b) a diferença entre To, Cc e Bcc; (c) como funcionam anexos e codificação; (d) cuidados de privacidade no uso dos campos. POR QUE O CONHECIMENTO É IMPORTANTE: erro no campo de destinatários expõe dados pessoais e gera incidente; a prova cobra a função de cada campo e o efeito do Bcc. PRÉ-REQUISITOS: noção de mensagem de correio e do formato MIME. OBJETIVOS OBSERVÁVEIS: (1) identificar From, To, Cc, Bcc, Reply-To e Message-ID; (2) explicar a diferença entre Cc e Bcc; (3) usar Bcc para proteger listas; (4) reconhecer que anexos usam codificação. COMPETÊNCIAS DESENVOLVIDAS: redação de mensagens; proteção de dados em listas de destinatários. GRAU DE DIFICULDADE: básico. RELAÇÃO COM OUTROS TÓPICOS: subtópico de spam/phishing; unidade 5.2 (exposição por e-mail); Módulo 6 (proteção de dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o cabeçalho de uma mensagem reúne metadados de roteamento e apresentação. From indica o remetente exibido; To traz os destinatários principais; Cc (Carbon Copy, cópia carbono) inclui destinatários secundários que VEEM todos os demais; Bcc (Blind Carbon Copy, cópia oculta) inclui destinatários que NÃO são visíveis uns aos outros nem para os do To/Cc; Reply-To define para onde vão as respostas, podendo divergir do From; Subject é o assunto; Message-ID é um identificador único da mensagem; Date registra a data. O padrão MIME permite anexos: o arquivo é codificado (historicamente em base64) e transportado junto ao corpo, sendo decodificado pelo cliente. O Bcc é a ferramenta correta para enviar a listas sem revelar endereços, protegendo dados pessoais; remover o Bcc ao responder (\"Responder a todos\") é uma falha comum que reexpõe a lista.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: analogia de um envelope — To é o destinatário, Cc são os \"em cópia\" visíveis e Bcc são cópias secretas.\n- Nível intermediário: explicar o efeito prático do Bcc na privacidade de uma lista.\n- Nível avançado: analisar como o Reply-To e o \"Responder a todos\" podem vazar endereços e conteúdo.\n- Nível especialista: diante de um incidente de exposição de lista, identificar o campo mal utilizado e propor a correção.\nCOMPARAÇÕES CRÍTICAS:\n- To x Cc x Bcc: To e Cc são visíveis a todos; Bcc oculta — usar To/Cc para listas expõe endereços e muda a avaliação de privacidade.\n- From x Reply-To: o primeiro é o remetente exibido; o segundo é o destino das respostas; podem divergir legitimamente.\n- corpo x anexo: o corpo é texto direto; o anexo é codificado e adicionado pela estrutura MIME.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Cc e Bcc são equivalentes.\" — Motivo: Bcc oculta os endereços — Versão tecnicamente correta: Cc é visível; Bcc é oculto.\n- Afirmação errada: \"O endereço que responde é sempre o From.\" — Motivo: o Reply-To pode redirecionar — Versão tecnicamente correta: as respostas seguem o Reply-To quando presente.\n- Afirmação errada: \"Anexos são enviados em texto puro.\" — Motivo: usa-se codificação de transporte — Versão tecnicamente correta: o anexo é codificado pelo padrão MIME.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: From, To, Cc, Bcc, Reply-To, Subject, Message-ID, MIME, base64.\n- Regras e fórmulas: listas de destinatários devem usar Bcc para preservar privacidade.\n- Exceções: o Reply-To pode diferir legitimamente do From.\n- Palavras-chave: cabeçalho, cópia oculta, anexo, privacidade, MIME.\n- Checklist de domínio: (1) Identifico cada campo? (2) Explico Cc x Bcc? (3) Uso Bcc em listas? (4) Sei que anexos são codificados?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual campo oculta os destinatários? (2) Qual a função do Reply-To? (3) Como o anexo é transportado? (4) O que expõe um \"Responder a todos\" mal usado? (5) Qual campo é o identificador único?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença entre Cc e Bcc?",
+          "resposta": "Cc (Carbon Copy): todos os destinatários veem quem está em Cc. Bcc (Blind Carbon Copy): destinatários ocultos; ninguém mais vê quem está em Bcc. Bcc é útil para proteger a privacidade de destinatários em e-mails para listas grandes."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma empresa envia um e-mail para 500 clientes sem expor os endereços uns aos outros. Qual campo usar?",
+          "resposta": "Bcc — cada destinatário recebe o e-mail sem ver os demais endereços. Isso protege a privacidade dos clientes e evita respostas em cadeia."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Cc e Bcc têm a mesma funcionalidade.'",
+          "correcao": "Errado. Cc mostra os destinatários uns aos outros. Bcc oculta os destinatários."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Bcc oculta os destinatários de todos os demais.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual campo oculta os destinatários? A) To; B) Cc; C) Bcc; D) From.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar os campos de um e-mail e suas funções, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará os campos de um e-mail e suas funções"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Cabeçalhos de e-mail: From (remetente), To (destinatário principal), Cc (Carbon Copy — destinatários secundários que veem os demais destinatários), Bcc (Blind Carbon Copy — destinatários ocultos; os demais não veem). Assunto (Subject) é o título do e-mail. Anexos são arquivos codificados em base64 e incluídos no corpo MIME. O cabeçalho 'Reply-To' define o endereço de resposta (pode ser diferente do remetente). O cabeçalho 'Message-ID' é um identificador único do e-mail.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Cabeçalhos, destinatários, anexos, CC e BCC",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Cc e Bcc têm a mesma funcionalidade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Cc mostra os destinatários uns aos outros. Bcc oculta os destinatários."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença entre Cc e Bcc?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Cc (Carbon Copy): todos os destinatários veem quem está em Cc. Bcc (Blind Carbon Copy): destinatários ocultos; ninguém mais vê quem está em Bcc. Bcc é útil para proteger a privacidade de destinatários em e-mails para listas grandes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma empresa envia um e-mail para 500 clientes sem expor os endereços uns aos outros. Qual campo usar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Bcc — cada destinatário recebe o e-mail sem ver os demais endereços. Isso protege a privacidade dos clientes e evita respostas em cadeia.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Cc e Bcc têm a mesma funcionalidade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Cc mostra os destinatários uns aos outros. Bcc oculta os destinatários.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u1-t2-s1",
+      "titulo": "Spam, phishing e spoofing",
+      "topicoTitulo": "Spam, phishing e falsificação de remetente",
+      "topicoId": "modulo-3-unidade-1-topico-2",
+      "unidadeTitulo": "3.1 Correio Eletrônico",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno identificará spam, phishing e falsificação de remetente.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que são spam, phishing e spoofing; (b) os sinais de uma mensagem fraudulenta; (c) o papel de SPF, DKIM e DMARC; (d) por que autenticação reduz, mas não elimina, o risco. POR QUE O CONHECIMENTO É IMPORTANTE: fraude por e-mail é vetor central de incidentes; a prova cobra a distinção entre os termos e a função dos mecanismos de autenticação. PRÉ-REQUISITOS: conceito de remetente, cabeçalho e domínio de e-mail. OBJETIVOS OBSERVÁVEIS: (1) definir spam, phishing, spear phishing e spoofing; (2) reconhecer sinais de fraude; (3) explicar SPF, DKIM e DMARC; (4) indicar conduta segura diante de suspeita. COMPETÊNCIAS DESENVOLVIDAS: triagem defensiva de mensagens; conscientização de segurança. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópico de cabeçalhos; unidade 5.3 (phishing e spoofing); Módulo 4 (segurança). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: spam é a mensagem não solicitada, em massa, de conteúdo comercial ou malicioso. Phishing é a fraude que se passa por entidade confiável (banco, órgão, colega) para obter credenciais, dados ou pagamento; o spear phishing é a versão direcionada a uma pessoa ou grupo, personalizada com nomes e cargos; o whaling mira alvos de alta hierarquia. Spoofing é a falsificação do endereço exibido como remetente, fazendo a mensagem parecer legítima. Para combater a falsificação existem mecanismos de autenticação de domínio: o SPF (Sender Policy Framework) lista os servidores autorizados a enviar em nome do domínio; o DKIM (DomainKeys Identified Mail) assina criptograficamente a mensagem; o DMARC (Domain-based Message Authentication, Reporting & Conformance) define a política a aplicar quando SPF/DKIM falham e produz relatórios. Esses mecanismos reduzem o spoofing direto, mas não eliminam o risco: domínios visualmente parecidos, contas comprometidas e engenharia social contornam a autenticação.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir lixo eletrônico (spam) de fraude direcionada (phishing).\n- Nível intermediário: reconhecer sinais de fraude (urgência, link divergente, erro de idioma, anexo inesperado).\n- Nível avançado: explicar o encadeamento SPF → DKIM → DMARC e o que cada falha significa.\n- Nível especialista: diante de um e-mail aparentemente legítimo, avaliar autenticação, contexto e canal alternativo antes de agir.\nCOMPARAÇÕES CRÍTICAS:\n- phishing x spam: spam é massa; phishing é fraude com intenção de enganar — o enquadramento muda a resposta ao incidente.\n- spoofing x conta comprometida: no spoofing o remetente é forjado; na conta comprometida o envio parte de credencial válida roubada — o DMARC só resolve o primeiro.\n- SPF x DKIM x DMARC: SPF valida a origem do envio; DKIM valida a integridade/assinatura; DMARC define a política — são complementares, não substitutos.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"SPF, DKIM e DMARC tornam o phishing impossível.\" — Motivo: só autenticam o domínio — Versão tecnicamente correta: reduzem spoofing; domínios parecidos e contas comprometidas escapam.\n- Afirmação errada: \"Phishing e spam são sinônimos.\" — Motivo: um é envio em massa; o outro é fraude — Versão tecnicamente correta: phishing busca enganar; spam é não solicitado.\n- Afirmação errada: \"O nome exibido do remetente comprova a origem.\" — Motivo: o nome exibido é falsificável — Versão tecnicamente correta: verifica-se o domínio real e o resultado da autenticação.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: spam, phishing, spear phishing, whaling, spoofing, SPF, DKIM, DMARC.\n- Regras e fórmulas: SPF (quem pode enviar) + DKIM (assinatura) + DMARC (política) reduzem spoofing.\n- Exceções: autenticação não cobre conta comprometida nem domínios parecidos.\n- Palavras-chave: fraude, urgência, autenticação, remetente forjado, relatório.\n- Checklist de domínio: (1) Distingo os termos? (2) Reconheço sinais? (3) Explico SPF/DKIM/DMARC? (4) Sei que a autenticação não é garantia total?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que diferencia spam de phishing? (2) O que é spear phishing? (3) Para que serve o DKIM? (4) Por que a autenticação não elimina o phishing? (5) Qual a conduta diante de suspeita?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Diferencie spam de phishing.",
+          "resposta": "Spam: e-mail não solicitado, geralmente comercial, sem necessariamente ter intenção maliciosa. Phishing: e-mail fraudulento com intenção de roubar dados ou credenciais, se passando por entidade confiável."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como SPF, DKIM e DMARC protegem contra falsificação de remetente?",
+          "resposta": "SPF: define quais servidores podem enviar e-mails para o domínio. DKIM: assina digitalmente o e-mail para garantir autenticidade. DMARC: define política para falhas de SPF/DKIM (rejeitar, quarentenar, aceitar)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Spam é um tipo de phishing.'",
+          "correcao": "Errado. Spam é e-mail não solicitado; phishing é fraude para roubar dados. Todo phishing pode ser spam, mas nem todo spam é phishing."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) DKIM usa criptografia assimétrica para assinar e-mails.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo define política para falhas de autenticação? A) SPF; B) DKIM; C) DMARC; D) TLS.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar spam, phishing e falsificação de remetente, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará spam, phishing e falsificação de remetente"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Spam: e-mails não solicitados, geralmente comerciais ou maliciosos. Phishing: e-mails fraudulentos que se passam por entidades confiáveis (bancos, empresas) para roubar credenciais ou dados. Spear phishing: phishing direcionado a uma pessoa ou organização específica. Spoofing de remetente: falsificação do endereço 'From' para fazer o e-mail parecer legítimo. Técnicas de autenticação: SPF (Sender Policy Framework), DKIM (DomainKeys Identified Mail), DMARC (Domain-based Message Authentication, Rep…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Spam, phishing e spoofing",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Spam é um tipo de phishing.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Spam é e-mail não solicitado; phishing é fraude para roubar dados. Todo phishing pode ser spam, mas nem todo spam é phishing."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Diferencie spam de phishing.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Spam: e-mail não solicitado, geralmente comercial, sem necessariamente ter intenção maliciosa. Phishing: e-mail fraudulento com intenção de roubar dados ou credenciais, se passando por entidade confiável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como SPF, DKIM e DMARC protegem contra falsificação de remetente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "SPF: define quais servidores podem enviar e-mails para o domínio. DKIM: assina digitalmente o e-mail para garantir autenticidade. DMARC: define política para falhas de SPF/DKIM (rejeitar, quarentenar, aceitar).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Spam é um tipo de phishing.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Spam é e-mail não solicitado; phishing é fraude para roubar dados. Todo phishing pode ser spam, mas nem todo spam é phishing.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

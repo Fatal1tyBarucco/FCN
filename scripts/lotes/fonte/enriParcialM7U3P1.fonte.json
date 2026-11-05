@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 3,
+    "unidadeTitulo": "7.3 Governança, Anonimização e Proteção de Dados",
+    "parte": 1,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U3P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U3P1.js",
+    "idsCompletos": [
+      "m7-u3-t1-s1",
+      "m7-u3-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u3-t1-s1",
+      "titulo": "Anonimização x pseudonimização",
+      "topicoTitulo": "Anonimização, pseudonimização e riscos de reidentificação",
+      "topicoId": "modulo-7-unidade-3-topico-1",
+      "unidadeTitulo": "7.3 Governança, Anonimização e Proteção de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno diferenciará anonimização e pseudonimização pela capacidade de reatribuição da identidade.",
+      "conteudo": "ANONIMIZAÇÃO: transformação que elimina a possibilidade de reconstruir a identidade do titular a partir do conjunto publicado — remove identificadores diretos e reduz o poder discriminante dos atributos restantes (supressão de campo, generalização em faixas, agregação, troca por valor sintético). O resultado efetivamente anônimo deixa de ser dado pessoal, porque ninguém consegue voltar ao titular. PSEUDONIMIZAÇÃO: substituir o identificador direto por um código (pseudônimo, token), mantendo a tabela de reatribuição separada, protegida e controlada. O dado continua sendo DADO PESSOAL, pois a identificação permanece possível para quem detém a chave. REGRA QUE DECIDE GABARITO: 'anonimizar mantendo a chave em um cofre' é pseudonimização, não anonimização — a chave é o que separa os dois conceitos. Pseudonimização é medida de SEGURANÇA (reduz exposição, permite analysis com reidentificação controlada e trilha de auditoria); anonimização é descaracterização (diferente: não há mais como reatribuir). A escolha é de finalidade: dado para pesquisa agregada pede anonimização; dado para operação com controle de acesso pede pseudonimização. Atenção prática: anonimização mal feita (mantendo quase-identificadores granulares) é pseudonimização disfarçada.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Base de saúde: substituir CPF por id_token e guardar a tabela id_token↔CPF em cofre acessível ao encarregado. O que foi feito?",
+          "resposta": "Pseudonimização. O identificador direto saiu da base de análise, mas a reatribuição é possível pela chave guardada. Por isso a base continua sendo de dados pessoais e exige as mesmas salvaguardas de acesso, registro e finalidade — com a vantagem de menos pessoas terem contato com a identificação direta."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma prefeitura quer publicar base de gastos por servidor para transparência. Que transformações aproximam de anonimização?",
+          "resposta": "Suprimir identificadores diretos (nome, CPF, matrícula) e reduzir a granularidade dos quasi-identificadores (cargo genérico em vez de lotação exata, faixa salarial em vez de valor exato, sem data de pagamento no dia exato), além de suprimir combinações raras. Publicar por agregados (por cargo, unidade e mês) é mais seguro do que publicar linha a linha — e atende a finalidade de transparência."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se removermos o nome e o CPF, os dados já são anonimizados.'",
+          "correcao": "Errado. A reidentificação costuma ocorrer pela COMBINAÇÃO de atributos remanescentes (idade, CEP, cargo, data) — os chamados quasi-identificadores. Remover apenas identificadores diretos é o primeiro passo, não a conclusão; sem redução de granularidade e avaliação de risco, o dado continua identificável."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Pseudonimização descaracteriza o dado, de modo que ele deixa de ser dado pessoal.",
+          "resposta": "Errado. Enquanto houver chave de reatribuição, o dado continua sendo pessoal; a pseudonimização é medida de segurança, não descaracterização."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "O que separa anonimização de pseudonimização? A) o tipo de banco usado; B) a existência de chave que permite reatribuir a identidade; C) a quantidade de registros; D) o uso de criptografia no trânsito.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar anonimização e pseudonimização pela capacidade de reatribuição da identidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará anonimização e pseudonimização pela capacidade de reatribuição da identidade"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ANONIMIZAÇÃO: transformação que elimina a possibilidade de reconstruir a identidade do titular a partir do conjunto publicado — remove identificadores diretos e reduz o poder discriminante dos atributos restantes (supressão de campo, generalização em faixas, agregação, troca por valor sintético). O resultado efetivamente anônimo deixa de ser dado pessoal, porque ninguém consegue voltar ao titular. PSEUDONIMIZAÇÃO: substituir o identificador direto por um código (pseudônimo, token), mantendo a ta…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Anonimização x pseudonimização",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se removermos o nome e o CPF, os dados já são anonimizados.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A reidentificação costuma ocorrer pela COMBINAÇÃO de atributos remanescentes (idade, CEP, cargo, data) — os chamados quasi-identificadores. Remover apenas identificadores diretos é o primeiro passo, não a conclusão; sem redução de granularidade e avaliação de risco, o dado continua identificável."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Base de saúde: substituir CPF por id_token e guardar a tabela id_token↔CPF em cofre acessível ao encarregado. O que foi feito?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pseudonimização. O identificador direto saiu da base de análise, mas a reatribuição é possível pela chave guardada. Por isso a base continua sendo de dados pessoais e exige as mesmas salvaguardas de acesso, registro e finalidade — com a vantagem de menos pessoas terem contato com a identificação direta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma prefeitura quer publicar base de gastos por servidor para transparência. Que transformações aproximam de anonimização?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Suprimir identificadores diretos (nome, CPF, matrícula) e reduzir a granularidade dos quasi-identificadores (cargo genérico em vez de lotação exata, faixa salarial em vez de valor exato, sem data de pagamento no dia exato), além de suprimir combinações raras. Publicar por agregados (por cargo, unidade e mês) é mais seguro do que publicar linha a linha — e atende a finalidade de transparência.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se removermos o nome e o CPF, os dados já são anonimizados.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A reidentificação costuma ocorrer pela COMBINAÇÃO de atributos remanescentes (idade, CEP, cargo, data) — os chamados quasi-identificadores. Remover apenas identificadores diretos é o primeiro passo, não a conclusão; sem redução de granularidade e avaliação de risco, o dado continua identificável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u3-t1-s2",
+      "titulo": "Riscos de reidentificação",
+      "topicoTitulo": "Anonimização, pseudonimização e riscos de reidentificação",
+      "topicoId": "modulo-7-unidade-3-topico-1",
+      "unidadeTitulo": "7.3 Governança, Anonimização e Proteção de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno identificará quasi-identificadores e descreverá ataques de recorte e suas mitigações.",
+      "conteudo": "REIDENTIFICAÇÃO é o processo de voltar a identificar titulares em bases que se supunham anônimas, usando QUASI-IDENTIFICADORES: atributos que, isoladamente, não identificam, mas em combinação restringem o espaço até uma pessoa — idade, sexo, CEP, data de nascimento, cargo, lotação, data de atendimento. MECANISMO CLÁSSICO (ataque de recorte / mosaicismo): o publicador filtra a base; quando o recorte restante contém 1 ou 2 pessoas, a identidade é trivial (ex.: 'servidor do setor X, no município Y, com 34 anos' em base de três pessoas). SITUAÇÕES DE ALTO RISCO: bases públicas com granularidade individual, cruzamento com bases livres (listas de eleitores, cadastros, redes), atributos raros (cargos incomuns, endereços específicos) e sequências de tempo/localização finas. MITIGAÇÕES CONCEITUAIS: agregar (faixa etária, faixa de CEP, mensal em vez de diário), suprimir atributos raros, exigir que cada recorte de quasi-identificadores tenha no mínimo k indivíduos (k-anonimato, noção de projeto) e que os atributos sensíveis variem dentro do recorte (noção de diversidade), testar reidentificação antes de publicar e PREFERIR AGREGADOS POR PADRÃO. Princípio prático: quanto mais fina a granularidade publicada, maior o risco — transparência e privacidade se reconciliam no nível agregado.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Tabela publicada com colunas idade, CEP e cargo. Por que ainda é identificável?",
+          "resposta": "Porque a tripla (idade, CEP, cargo) é um quasi-identificador de alta capacidade de recorte: combinada com qualquer lista pública que contenha esses atributos, o espaço de pessoas compatíveis frequentemente cai a um único indivíduo. Sem agregação de faixas, a remoção do nome não protege nada."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Antes de publicar microdados de atendimentos, que verificação prática reduziria o risco?",
+          "resposta": "Simular o ataque: agrupar por combinações de quasi-identificadores (sexo + faixa etária + bairro + tipo de atendimento) e verificar o tamanho de cada grupo; recortes com um único indivíduo são auto-reveladores. Mitigar com faixas mais amplas, supressão de combinações raras e, quando necessário, publicar apenas agregados — registrando a decisão e sua justificativa."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Base anônima não pode ser reidentificada, de modo que o risco de publicação é nulo.'",
+          "correcao": "Errado. Anonimização é medida de risco, não garantia absoluta: depende do contexto, das bases disponíveis para cruzamento e da granularidade. Publicação exige avaliação de risco contemporânea — o que era seguro ontem pode deixar de ser quando uma nova base vira pública."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Idade, CEP e cargo são exemplos de quasi-identificadores.",
+          "resposta": "Certo. Isoladamente não identificam; combinados, restringem o recorte até a pessoa."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Publicar base com recorte de 1 pessoa em 'município + cargo + faixa de idade' ilustra qual ataque? A) força bruta; B) recorte (mosaicismo); C) engenharia social; D) negação de serviço.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar quasi-identificadores e descreverá ataques de recorte e suas mitigações, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará quasi-identificadores e descreverá ataques de recorte e suas mitigações"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "REIDENTIFICAÇÃO é o processo de voltar a identificar titulares em bases que se supunham anônimas, usando QUASI-IDENTIFICADORES: atributos que, isoladamente, não identificam, mas em combinação restringem o espaço até uma pessoa — idade, sexo, CEP, data de nascimento, cargo, lotação, data de atendimento. MECANISMO CLÁSSICO (ataque de recorte / mosaicismo): o publicador filtra a base; quando o recorte restante contém 1 ou 2 pessoas, a identidade é trivial (ex.: 'servidor do setor X, no município Y,…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Riscos de reidentificação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Base anônima não pode ser reidentificada, de modo que o risco de publicação é nulo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Anonimização é medida de risco, não garantia absoluta: depende do contexto, das bases disponíveis para cruzamento e da granularidade. Publicação exige avaliação de risco contemporânea — o que era seguro ontem pode deixar de ser quando uma nova base vira pública."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Tabela publicada com colunas idade, CEP e cargo. Por que ainda é identificável?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque a tripla (idade, CEP, cargo) é um quasi-identificador de alta capacidade de recorte: combinada com qualquer lista pública que contenha esses atributos, o espaço de pessoas compatíveis frequentemente cai a um único indivíduo. Sem agregação de faixas, a remoção do nome não protege nada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Antes de publicar microdados de atendimentos, que verificação prática reduziria o risco?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Simular o ataque: agrupar por combinações de quasi-identificadores (sexo + faixa etária + bairro + tipo de atendimento) e verificar o tamanho de cada grupo; recortes com um único indivíduo são auto-reveladores. Mitigar com faixas mais amplas, supressão de combinações raras e, quando necessário, publicar apenas agregados — registrando a decisão e sua justificativa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Base anônima não pode ser reidentificada, de modo que o risco de publicação é nulo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Anonimização é medida de risco, não garantia absoluta: depende do contexto, das bases disponíveis para cruzamento e da granularidade. Publicação exige avaliação de risco contemporânea — o que era seguro ontem pode deixar de ser quando uma nova base vira pública.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

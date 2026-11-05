@@ -140,3 +140,55 @@ Ambiente: Chromium 156 headless (Termux) controlado via Chrome DevTools Protocol
 - Vídeos: 0 validados (decisão intencional).
 - Acessibilidade WCAG completa: não verificada com leitor de tela.
 - Responsividade: CSS presente; não verificado em dispositivo físico.
+
+### Fechamento 2026-11-05 — Seção 5 (template didático), navegador real e governança
+
+**Ambiente:** Node 22.14.0 (local, via `/opt/node22/bin/node`), Playwright 1.64.1 + Chromium 1248 (headless), Linux x86_64.
+
+#### T15 — Auditoria da Seção 5 (307 registros)
+- Comando: `node scripts/auditar-template-didatico.mjs`
+- Resultado: **0 falhas, 0 avisos** em 307/307 subtópicos (schema, contagens mínimas, comprimentos,
+  placeholders, duplicação literal de frases >= 120 chars, ausência de boilerplate entre registros
+  distintos, resolução do overlay como script clássico e renderização com escape HTML).
+- Autoria: 160 lotes parciais em `scripts/lotes/`, validados um a um por
+  `node scripts/validar-lote.mjs` (`FALHAS: 0` por lote) e mesclados por
+  `node scripts/mesclar-lotes.mjs --verificar` (`VALIDATION SUCCESSFUL.`, 0 IDs órfãos, 0 IDs faltantes).
+
+#### T16 — Qualidade de prosa do corpus autoral (307 registros)
+| Detector | Comando | Resultado |
+|---|---|---|
+| Artefatos de geração | `node scripts/lib/artefatos-texto.mjs scripts/lotes` | **0** campos (era 125) |
+| Quase-duplicatas (Jaccard de trigramas >= 0,82) | `node scripts/listar-quase-duplicatas.mjs` | **0** pares (era 56) |
+| Qualidade de prosa (sopa de palavras, fragmento, anglicismo) | `node scripts/qualidade-texto.mjs --resumo` | **0** campos (era 291) |
+| Frases truncadas (frase que para no meio) | detector ad-hoc sobre campos de frase | **0** (era 23) |
+| Registros prontos | `node scripts/status-lotes.mjs` | **307/307** (160/160 lotes) |
+
+#### T17 — Navegador real nos 3 modos (file://, http://localhost, https://Pages)
+- Comando: `node verificacao/validar-navegador-real.cjs --modos file,http,https`
+- Evidências: `verificacao/evidencias/navegador-real-2026-11-04/` (JSON + 27 PNG + 2 HAR).
+
+| Modo | Service Worker | Acessibilidade | Vídeos (iframe) | Erros JS |
+|---|---|---|---|---|
+| `file://` | 0 registros (API existe, protocolo não permitido) — conforme esperado | `AccessibilityApp._estado.montado = true`, skip-link como 1º filho do `<body>`, `main`/`navigation`/`region` presentes, `#a11y-style` injetado, 0 problemas | 36 iframes, 0 inválidos | 17 (2 da instrumentação do teste: CORS ao ler o CSS local; 15 `Permissions-Policy: compute-pressure` emitidos pelos iframes externos do YouTube — 0 exceções da aplicação) |
+| `http://localhost:8099` | 0 registros (registro bloqueado por protocolo, conforme decisão de código) | idem, 0 problemas | 36 iframes, 0 inválidos | 0 |
+| `https://fatal1tybarucco.github.io/FCN/` | **1 registro, `activated`, escopo da raiz, cache `apostila-ia-pwa-v1` com 3/3 entradas de precache**; manifest HTTP 200 com 4 ícones | idem, 0 problemas | 20 iframes marcados como não conformes **na versão publicada** (falta `referrerpolicy`); a correção já está no branch (36/36 conformes em file:// e http) | 0 |
+
+#### T18 — Smoke de navegador (regressão)
+- `node verificacao/test-browser-smoke.cjs` (Node 22) -> **`"result": "PASS"`**, `pageErrors: []`;
+  inventário de acessibilidade: 809 controles, 0 sem nome, 0 imagens sem `alt`, skip-link presente,
+  1 landmark `main`; roundtrip de `localStorage` OK.
+- `node verificacao/test-browser-interactions.cjs` (Node 22) -> **`"result": "PASS"`**, `pageErrors: []`.
+
+#### T19 — Governança de inventário/matriz (espelhos)
+- Comando: `node scripts/sincronizar-governanca.mjs` (e `--verificar` para auditoria)
+- Resultado: matriz estrutural regenerada a partir de `curriculum*.js` (307 subtópicos),
+  canônica em `apostila-ia/`, espelhos em `matriz/` e `docs/` com SHA-256 idêntico (6/6 pares),
+  relatório com SHA/mtime/diff em `docs/RECONCILIACAO_INVENTARIO_2026-11-05.md`.
+
+#### T20 — Regressão estrutural e de simuladores
+- `node verificacao/verificar-estrutura.js` -> **0 falhas** (questões 409; distribuição M1 54 / M2 54 /
+  M3 47 / M4 85 / M5 42 / M6 47 / M7 40 / M8 40; níveis 94/228/87; formatos 332 mc + 77 ce).
+- `node workspace/phase5_smoke.js` -> todos os asserts **PASS** (5 simuladores + regrasRegionais).
+- `node --check` em todos os `apostila-ia/assets/**/*.js` (52 arquivos) -> **0 erros de sintaxe**.
+
+---

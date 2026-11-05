@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 9,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM1U2P9",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P9.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-14-sub-1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-14-sub-1",
+      "titulo": "Criação de relatório técnico integrado",
+      "topicoTitulo": "Exemplos resolvidos de criação e correção de documentos complexos",
+      "topicoId": "modulo-1-unidade-2-topico-14",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno criará um relatório técnico integrando sumário, tabelas, figuras, cabeçalhos diferenciados e exportação para PDF com acessibilidade.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a sequência de construção de um relatório técnico completo no Word: estilos de título, sumário, tabelas com fórmulas, figuras com legendas, seções com cabeçalhos/rodapés distintos, revisão com controle de alterações e exportação para PDF com acessibilidade; (b) como os tópicos da unidade se encaixam num único produto; (c) os pontos de verificação de cada etapa; (d) o papel da validação final em leitor de tela. POR QUE O CONHECIMENTO É IMPORTANTE: questões de integração pedem a ordem correta das etapas e identificam erros de sequência (sumário antes dos estilos, PDF sem tags); montar a ordem errada muda o gabarito. PRÉ-REQUISITOS: estilos, tabelas, cabeçalhos/rodapés, quebras de seção, sumário, revisão e acessibilidade (todos os tópicos anteriores da unidade 1.2). OBJETIVOS OBSERVÁVEIS: (1) ordenar as etapas de produção; (2) executar cada etapa com seu ponto de verificação; (3) diagnosticar relatório com defeito de integração (sumário vazio, numeração inconsistente, PDF sem estrutura). COMPETÊNCIAS DESENVOLVIDAS: gestão de documento complexo; garantia de qualidade e acessibilidade. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: todos os tópicos da unidade 1.2; unidade 1.5 (armazenamento e compartilhamento do produto final); Módulo 6 (transparência e acessibilidade no serviço público). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média a alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: relatório técnico é o produto que integra recursos da unidade 1.2 numa ordem logicamente dependente. Etapa 1 — estilos de título: aplicar Título 1/Título 2 aos capítulos e seções (a base de tudo: sumário, navegação e acessibilidade derivam dos estilos). Etapa 2 — sumário: Referências > Sumário (campo gerado dos estilos; atualizável). Etapa 3 — tabelas: criar tabelas com formatação e fórmulas integradas onde bastam (=SUM(ABOVE)), migrando cálculos complexos ao Excel. Etapa 4 — figuras: inserir imagens/gráficos com legendas automáticas (Referências > Inserir Legenda), que alimentam referências cruzadas. Etapa 5 — seções: quebras de seção para separar preliminares (numeração romana) do corpo (arábica), desvinculando cabeçalhos/rodapés entre seções. Etapa 6 — revisão: ativar controle de alterações durante a revisão, resolver comentários, aceitar/rejeitar e, se preciso, comparar versões. Etapa 7 — exportação: Arquivo > Exportar > Criar PDF/XPS, com opções que preservam estrutura (tags de acessibilidade) quando disponíveis na versão. Etapa 8 — validação: abrir o PDF em leitor de tela/verificador para confirmar texto alternativo, estrutura de títulos e ordem de leitura. Invariantes: o sumário e as referências cruzadas são campos — exigem atualização após qualquer alteração de títulos ou posições; a acessibilidade começa nos estilos, não na exportação; a numeração por seção exige vínculo/desvínculo corretos. Ordem reversa (PDF antes de revisão, sumário antes de estilos) gera retrabalho ou produto defeituoso.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reproduzir o fluxo simples: estilos > sumário > tabela > legenda > PDF.\n- Nível intermediário: configurar duas seções com numerações distintas (romana/arábica) e cabeçalhos diferentes; atualizar todos os campos antes da exportação.\n- Nível avançado: conduzir ciclo de revisão com controle de alterações e comparação de versões, mantendo campos íntegros.\n- Nível especialista: auditar relatório pronto (sumário vazio, figuras sem texto alternativo, numeração reiniciada indevidamente) e prescrever a correção na ordem certa.\n\nCOMPARAÇÕES CRÍTICAS:\n- Estilos antes do sumário x sumário antes dos estilos: o sumário se alimenta dos estilos de título — aplicar o sumário primeiro produz lista vazia; a ordem correta é estilos, depois sumário.\n- PDF com tags x PDF sem tags: exportar com as opções de estrutura preserva títulos e alternativos para leitores de tela; sem elas, o PDF perde a semântica — em questão de acessibilidade, a alternativa sem tags está errada.\n- Quebra de página x quebra de seção na montagem: trocar página não permite numeração/cabeçalho distintos; a separação preliminares/corpo exige seção — o erro de sequência quebra a numeração romana/arábica.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"basta formatar títulos com negrito e tamanho para o sumário reconhecê-los\" — Motivo: confunde formatação direta com estilos — Versão tecnicamente correta: o sumário se gera dos estilos de título (Título 1, Título 2); formatação direta não alimenta campos.\n- Afirmação errada: \"exportar para PDF já garante acessibilidade\" — Motivo: generalização — Versão tecnicamente correta: a acessibilidade depende de estilos e textos alternativos no documento e de exportar com as opções que preservam a estrutura (quando disponíveis na versão); a validação final é abrir o PDF em leitor de tela/verificador.\n- Afirmação errada: \"os campos do sumário se atualizam sozinhos ao editar títulos\" — Motivo: termo absoluto — Versão tecnicamente correta: os campos exigem atualização (Atualizar campo, incluindo toda a estrutura) após alterações de títulos ou posições antes da versão final.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: estilos de título, sumário (campo), legenda automática, quebra de seção, cabeçalho por seção, controle de alterações, PDF com estrutura, validação em leitor de tela.\n- Regras e fórmulas: ordem: estilos → sumário → tabelas/figuras → seções → revisão → PDF → validação; campo alterado → atualizar campo; mudança de página/rodapé por parte → quebra de seção.\n- Exceções: cálculos complexos saem da tabela do Word para o Excel; a validação de acessibilidade é etapa final obrigatória, não opcional.\n- Palavras-chave: sumário automático, legenda, seção, controle de alterações, PDF acessível, atualizar campo, leitor de tela.\n- Checklist de domínio: ordeno as etapas; executo cada verificação; diagnostico sumário vazio; garanto numeração por seção; valido o PDF final.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual a primeira etapa estrutural de um relatório que terá sumário automático e por quê? (2) Como ter numeração romana nas preliminares e arábica no corpo? (3) Depois de renomear capítulos, o que falta antes de distribuir o relatório? (4) Quais cuidados a exportação para PDF exige para preservar acessibilidade? (5) Diagnostique: sumário exibindo apenas \"Nenhum item de sumário encontrado\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Criar relatório com sumário e tabelas simples.",
+          "resposta": "Aplicar estilos Título 1/Título 2 aos capítulos > Referências > Sumário > Sumário Automático > inserir tabela (Inserir > Tabela) com fórmula integrada quando =SUM(ABOVE) bastar > inserir figuras com legendas automáticas > Arquivo > Exportar > Criar PDF/XPS."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relatório com preliminares (folha de rosto e resumo) numeradas em romanos e corpo numerado em arábicos, com cabeçalhos diferentes.",
+          "resposta": "Inserir quebra de seção (Próxima Página) após as preliminares > nas preliminares, rodapé com Número de Página em formato i, ii, iii > no início do corpo, desvincular do anterior (Vincular ao Anterior desmarcado) e definir formato 1, 2, 3, reiniciando em 1 > editar o cabeçalho de cada seção. A quebra de seção é o que permite formatos por parte; a desvinculação evita que a seção corpo herde o rodapé das preliminares."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relatório pronto passou por revisão com controle de alterações; antes de distribuir, quais fechamentos executar?",
+          "resposta": "Passo 1: aceitar/rejeitar alterações e resolver comentários (Revisão). Passo 2: atualizar todos os campos — selecionar tudo (Ctrl+A) > F9 ou clicar no sumário > Atualizar campo > atualizar todo o sumário; conferir referências cruzadas e legendas. Passo 3: exportar PDF com as opções de estrutura (tags de acessibilidade) da versão. Passo 4: validar em leitor de tela/verificador (texto alternativo, títulos, ordem de leitura) antes da distribuição."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um relatório exportado em PDF exibe sumário vazio após a atualização do campo.",
+          "correcao": "Diagnóstico em duas frentes: (1) os capítulos não têm estilo Título 1 aplicado (apenas formatação direta) — aplicar os estilos; (2) o \"sumário\" pode ser texto estático digitado, não campo — excluir e reinserir via Referências > Sumário. Após corrigir, atualizar o campo e reexportar o PDF."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual sequência é correta para um relatório acessível? A) Escrever texto > exportar PDF; B) Aplicar estilos > sumário > tabelas/figuras com legendas > revisar > exportar PDF com estrutura > validar; C) Formatação direta nos títulos > PDF.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A formatação direta (negrito + tamanho maior) é suficiente para o sumário automático reconhecer os capítulos.",
+          "resposta": "Errado. O sumário se alimenta dos estilos de título (Título 1, Título 2); formatação direta não gera estrutura de campo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Na montagem do relatório, para ter cabeçalhos e numeração distintos entre preliminares e corpo, usa-se: A) Quebra de página simples; B) Quebra de seção com desvinculação de cabeçalho/rodapé; C) Dois arquivos separados, obrigatoriamente.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de ordenar e executar as etapas de construção de um relatório técnico integrado (estilos, sumário, tabelas, legendas, seções, revisão, PDF acessível) e de diagnosticar defeitos de integração, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "criará um relatório técnico integrando sumário, tabelas, figuras, cabeçalhos diferenciados e exportação para PDF com acessibilidade"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Exemplo integrado: 1) Aplicar estilos Título 1/2 aos capítulos/seções. 2) Inserir sumário no início. 3) Criar tabela com fórmulas e funções. 4) Inserir figuras com legendas automáticas. 5) Configurar quebras de seção e cabeçalhos/rodapés diferentes para seções preliminares e corpo. 6) Durante revisão, ativar rastreamento de alterações. 7) Exportar para PDF verificando texto alternativo e estruturas de heading. 8) Abrir PDF em leitor de tela para validação de acessibilidade.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Criação de relatório técnico integrado",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Relatório com sumário vazio após atualização.",
+            "porqueErrada": "",
+            "versaoCorreta": "Verificar estilos Título 1 aplicados; excluir sumário antigo e reinserir via Referências."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Criar relatório com sumário e tabelas.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Aplicar estilos Título 1/2 → inserir sumário → criar tabela com fórmulas → legendas automáticas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Configurar cabeçalhos diferentes por seção.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Quebra de Seção (Next Page) → desvincular cabeçalho → editar por seção → numerar páginas por seção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Relatório com sumário vazio após atualização.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Verificar estilos Título 1 aplicados; excluir sumário antigo e reinserir via Referências.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

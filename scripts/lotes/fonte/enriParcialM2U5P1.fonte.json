@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 5,
+    "unidadeTitulo": "2.5 Diagnóstico de redes",
+    "parte": 1,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U5P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U5P1.js",
+    "idsCompletos": [
+      "m2-u5-t1-s1",
+      "m2-u5-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u5-t1-s1",
+      "titulo": "ping: finalidade, sintaxe e interpretação",
+      "topicoTitulo": "ping e traceroute/tracert",
+      "topicoId": "modulo-2-unidade-5-topico-1",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará a função do ping, sua sintaxe básica e interpretará a saída (RTT, perda, TTL).",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a finalidade do ping; (b) a sintaxe básica; (c) a interpretação da saída (RTT, perda, TTL); (d) limitações. POR QUE O CONHECIMENTO É IMPORTANTE: o ping é o primeiro teste de conectividade; a prova cobra como interpretar seus resultados e suas limitações. PRÉ-REQUISITOS: ICMP; noção de RTT. OBJETIVOS OBSERVÁVEIS: (1) explicar a finalidade; (2) usar a sintaxe; (3) interpretar RTT e perda; (4) reconhecer limitações. COMPETÊNCIAS DESENVOLVIDAS: diagnóstico inicial; leitura de saída. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.3 (métricas); unidade 5.2 (ip/rotas); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o ping envia uma mensagem ICMP echo request e espera um echo reply, medindo o RTT (tempo de ida e volta) e a perda de pacotes. A sintaxe é \"ping <host>\": no Linux e no macOS o comando continua até ser interrompido; no Windows, envia 4 pacotes por padrão. Opções úteis: limitar a quantidade (‑c no Linux, ‑n no Windows), definir TTL (‑t) e intervalo (‑i). Interpretação: RTT baixo e estável indica boa conectividade; RTT alto sugere latência ou congestionamento; perda de pacotes aponta problemas de enlace, roteamento ou bloqueio; \"Destination Host Unreachable\" indica problema de roteamento/ARP; \"Request timed out\" indica ausência de resposta (firewall, host desligado ou perda). A principal LIMITAÇÃO é que o ping usa ICMP, que pode ser BLOQUEADO por firewalls mesmo com TCP/UDP funcionando: ausência de resposta ao ping NÃO prova que o serviço está fora. Além disso, o ping testa conectividade de camada 3, não a aplicação — se o alvo bloqueia ICMP, é preciso testar a porta específica. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: usar ping a um gateway para testar conectividade.\n- Nível intermediário: interpretar RTT, perda e TTL.\n- Nível avançado: distinguir \"timed out\" de \"unreachable\" pelas causas.\n- Nível especialista: concluir corretamente mesmo quando o ICMP está bloqueado.\nCOMPARAÇÕES CRÍTICAS:\n- timed out x unreachable: o primeiro é ausência de resposta; o segundo indica falha de roteamento/ARP.\n- RTT alto x perda: o primeiro é atraso; a segunda é descarte — sintomas distintos.\n- ping x teste de porta: o ping testa a camada 3; o teste de porta avalia o serviço.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Se o ping falha, o serviço está fora.\" — Motivo: o ICMP pode ser bloqueado — Versão tecnicamente correta: testar a porta específica.\n- Afirmação errada: \"O ping mede a velocidade da conexão.\" — Motivo: mede o RTT — Versão tecnicamente correta: o RTT é latência, não banda.\n- Afirmação errada: \"O TTL mede o tempo de vida em segundos.\" — Motivo: conta saltos — Versão tecnicamente correta: o TTL limita o número de roteadores.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: ping, ICMP echo, RTT, perda, TTL, timed out, unreachable.\n- Regras e fórmulas: ping <host>; ‑c/‑n para quantidade; sinais lidos a partir do RTT e da perda.\n- Exceções: firewalls podem bloquear o ICMP, mascarando o estado real.\n- Palavras-chave: conectividade, latência, perda, bloqueio, simulação.\n- Checklist de domínio: (1) Explico a finalidade? (2) Uso a sintaxe? (3) Interpreto RTT/perda? (4) Reconheço limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Que mensagens o ping usa? (2) O que o RTT mede? (3) O que \"Request timed out\" indica? (4) E \"Destination Host Unreachable\"? (5) Por que a falha do ping não prova queda do serviço?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Saída do ping mostra '64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=12.3 ms'. O que indica?",
+          "resposta": "Resposta recebida com sucesso; RTT 12,3 ms; TTL 117 (passou por ~11 roteadores, se TTL inicial 128). Conectividade IP ok."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "ping ao gateway (192.168.1.1) funciona, mas ping a 8.8.8.8 falha. Onde está o problema?",
+          "resposta": "Conectividade local ok; problema de roteamento/NAT/ISP além do gateway. Verificar rota padrão, NAT, modem/ISP."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se o ping falha, a rede está totalmente inoperante.'",
+          "correcao": "Errado. Firewall pode bloquear ICMP enquanto HTTP/HTTPS funcionam. Ping é indicador, não prova absoluta."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) ping mede latência de ida e volta (RTT).",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo o ping utiliza? A) TCP; B) UDP; C) ICMP; D) ARP.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar a função do ping, sua sintaxe básica e interpretará a saída (RTT, perda, TTL), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará a função do ping, sua sintaxe básica e interpretará a saída (RTT, perda, TTL)"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ping envia ICMP echo request e espera echo reply, medindo RTT (round-trip time) e perda de pacotes. Sintaxe: ping <host> (Linux/macOS contínuo; Windows envia 4 por padrão). Opções: -c (quantidade, Linux), -n (quantidade, Windows), -t (TTL), -i (intervalo). Interpretação: RTT baixo e estável = boa conectividade; RTT alto = latência/congestionamento; perda = problema de enlace/roteamento/firewall; 'Destination Host Unreachable' = roteamento; 'Request timed out' = sem resposta (firewall, host desli…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a ping: finalidade, sintaxe e interpretação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se o ping falha, a rede está totalmente inoperante.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Firewall pode bloquear ICMP enquanto HTTP/HTTPS funcionam. Ping é indicador, não prova absoluta."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Saída do ping mostra '64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=12.3 ms'. O que indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Resposta recebida com sucesso; RTT 12,3 ms; TTL 117 (passou por ~11 roteadores, se TTL inicial 128). Conectividade IP ok.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "ping ao gateway (192.168.1.1) funciona, mas ping a 8.8.8.8 falha. Onde está o problema?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Conectividade local ok; problema de roteamento/NAT/ISP além do gateway. Verificar rota padrão, NAT, modem/ISP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se o ping falha, a rede está totalmente inoperante.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Firewall pode bloquear ICMP enquanto HTTP/HTTPS funcionam. Ping é indicador, não prova absoluta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u5-t1-s2",
+      "titulo": "traceroute/tracert: finalidade, sintaxe e interpretação",
+      "topicoTitulo": "ping e traceroute/tracert",
+      "topicoId": "modulo-2-unidade-5-topico-1",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará como traceroute mapeia a rota e interpretará sua saída (saltos, *, latência).",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como o traceroute mapeia a rota; (b) a sintaxe; (c) a interpretação da saída; (d) limitações. POR QUE O CONHECIMENTO É IMPORTANTE: o traceroute localiza em que salto está o problema; a prova cobra o mecanismo (TTL crescente) e a leitura dos \"*\". PRÉ-REQUISITOS: ICMP; TTL; roteamento. OBJETIVOS OBSERVÁVEIS: (1) explicar o mecanismo; (2) usar a sintaxe; (3) interpretar saltos e \"*\"; (4) reconhecer limitações. COMPETÊNCIAS DESENVOLVIDAS: diagnóstico de rota; interpretação de saída. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (ping); unidade 3.3 (ICMP); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o traceroute (Linux/macOS) e o tracert (Windows) mapeiam a rota até um destino enviando pacotes com TTL (Time To Live) CRESCENTE. Como cada roteador decrementa o TTL e, ao chegar a zero, descarta o pacote e devolve uma mensagem ICMP \"time exceeded\", o comando descobre sucessivamente cada salto. A sintaxe é \"traceroute <host>\" no Linux (que usa UDP por padrão, ou ICMP com ‑I) e \"tracert <host>\" no Windows (que usa ICMP). A saída lista os saltos, com endereço IP (e, se houver, nome) e os RTTs medidos; cada salto costuma exibir três tempos. O símbolo \"*\" indica ausência de resposta daquele salto — o roteador pode não responder ICMP, pode haver perda ou bloqueio por firewall. As limitações são relevantes: roteadores podem não responder; as rotas podem ser ASSIMÉTRICAS (ida diferente da volta); o NAT pode interferir; o balanceamento de carga faz um mesmo destino usar caminhos variados, tornando os saltos inconstantes; e o comando não mede a rota de retorno. Por isso, o traceroute deve ser interpretado como indicativo, não como verdade absoluta. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o comando lista os saltos.\n- Nível intermediário: explicar o truque do TTL crescente.\n- Nível avançado: interpretar os \"*\" e a assimetria de rotas.\n- Nível especialista: concluir qual salto provavelmente concentra a falha.\nCOMPARAÇÕES CRÍTICAS:\n- traceroute x tracert: nomes diferentes por sistema (Linux/macOS x Windows).\n- \"*\" x salto com RTT: o primeiro é ausência de resposta; o segundo, salto que respondeu.\n- rota de ida x de volta: podem diferir (assimetria) — o comando mostra a ida.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Um '*' significa que o salto está quebrado.\" — Motivo: pode ser só bloqueio de ICMP — Versão tecnicamente correta: indica ausência de resposta, não necessariamente falha.\n- Afirmação errada: \"O traceroute mostra a rota de volta.\" — Motivo: mostra o caminho de ida — Versão tecnicamente correta: a volta pode ser diferente.\n- Afirmação errada: \"Os saltos são sempre os mesmos.\" — Motivo: há balanceamento de carga — Versão tecnicamente correta: podem variar entre execuções.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: traceroute, tracert, TTL crescente, time exceeded, salto, \"*\", assimetria.\n- Regras e fórmulas: TTL incrementado a cada tentativa; cada roteador devolve \"time exceeded\".\n- Exceções: roteadores podem não responder ICMP.\n- Palavras-chave: rota, salto, RTT, bloqueio, balanceamento.\n- Checklist de domínio: (1) Explico o mecanismo? (2) Uso a sintaxe? (3) Interpreto saltos/\"*\"? (4) Reconheço limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como o traceroute descobre os saltos? (2) Qual a diferença entre traceroute e tracert? (3) O que \"*\" indica? (4) Por que a rota pode variar? (5) O comando mostra a rota de retorno?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Saída do traceroute mostra 3 saltos até o destino com RTTs 1ms, 5ms, 12ms. O que isso significa?",
+          "resposta": "O pacote passou por 3 roteadores; latência acumulada ~12 ms no destino. Rota curta, sem perda."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "traceroute mostra saltos 1-5 normais, depois '*' até o fim. O que indica?",
+          "resposta": "Roteadores intermediários não respondem ICMP (firewall) ou há perda; não prova falha de rota. Complementar com ping e teste de aplicação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'traceroute mostra a rota exata e simétrica de ida e volta.'",
+          "correcao": "Errado. Mostra a rota de ida (com base em TTL). A rota de volta pode ser diferente (roteamento assimétrico)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) traceroute usa TTL crescente para descobrir cada salto.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "O que '*' na saída do traceroute indica? A) Rota bloqueada definitivamente; B) Ausência de resposta ICMP; C) Sucesso; D) Timeout de DNS.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar como traceroute mapeia a rota e interpretará sua saída (saltos, *, latência), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará como traceroute mapeia a rota e interpretará sua saída (saltos, *, latência)"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "traceroute (Linux/macOS) / tracert (Windows) mapeia a rota (saltos) até o destino, enviando pacotes com TTL crescente e capturando ICMP 'time exceeded' de cada roteador. Sintaxe: traceroute <host> (Linux, UDP por padrão ou ICMP com -I), tracert <host> (Windows, ICMP). Saída: lista de saltos com IP/nome e RTT de cada um. '*' indica ausência de resposta (roteador não responde ICMP, perda ou firewall). Limitações: roteadores podem não responder; rotas assimétricas; NAT; load balancing causa saltos …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a traceroute/tracert: finalidade, sintaxe e interpretação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'traceroute mostra a rota exata e simétrica de ida e volta.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Mostra a rota de ida (com base em TTL). A rota de volta pode ser diferente (roteamento assimétrico)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Saída do traceroute mostra 3 saltos até o destino com RTTs 1ms, 5ms, 12ms. O que isso significa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O pacote passou por 3 roteadores; latência acumulada ~12 ms no destino. Rota curta, sem perda.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "traceroute mostra saltos 1-5 normais, depois '*' até o fim. O que indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Roteadores intermediários não respondem ICMP (firewall) ou há perda; não prova falha de rota. Complementar com ping e teste de aplicação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'traceroute mostra a rota exata e simétrica de ida e volta.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Mostra a rota de ida (com base em TTL). A rota de volta pode ser diferente (roteamento assimétrico).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 4,
+    "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+    "parte": 2,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U4P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U4P2.js",
+    "idsCompletos": [
+      "m6-u4-t2-s1",
+      "m6-u4-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u4-t2-s1",
+      "titulo": "Conflito de interesse: conceito, tipologia, exemplos e tratamento",
+      "topicoTitulo": "Conflito de interesse, conduta e netiqueta",
+      "topicoId": "modulo-6-unidade-4-topico-2",
+      "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno definirá conflito de interesse, diferenciará conflito real, potencial e aparente, reconhecerá suas manifestações típicas no serviço público digital e indicará o tratamento adequado (declaração, transparência, afastamento e remessa ao controle).",
+      "conteudo": "CONFLITO DE INTERESSE é a situação em que o interesse pessoal do agente ou servidor público pode influenciar, ou pode razoavelmente parecer influenciar, o exercício de atribuição funcional, comprometendo a imparcialidade ou a impessoalidade. A definição operacional em três elementos: (a) UM INTERESSE PESSOAL (patrimônio, relação, participação societária, vínculo familiar, vínculo de emprego anterior, nome ou reputação profissional); (b) UMA ATRIBUIÇÃO ou ato que pode ser influenciado; (c) UMA CAPACIDADE REAL OU APARENTE de influência. TIPOLOGIA: (1) CONFLITO REAL — a influência ocorre; (2) CONFLITO POTENCIAL — a capacidade de influência existe, mas não se exerceu; (3) CONFLITO APARENTE — o observador razoável pode suspeitar de influência, ainda que inexistente. A distinção não é acadêmica: ela define o tratamento. O conflito real e o potencial demandam, em regra, afastamento ou recusa do ato; o aparente pode ser tratado com transparência, declaração e, conforme o risco, o mesmo afastamento. MANIFESTAÇÕES NO SERVIÇO PÚBLICO DIGITAL: (i) contratação ou fiscalização de fornecedor com o qual o servidor ou familiar tenha vínculo; (ii) uso de sistema ou de dados do órgão em proveito próprio; (iii) direcionamento de fila, prioridade de atendimento ou agendamento em favor de pessoas ligadas ao servidor; (iv) participação na elaboração ou na aprovação de ato em que a pessoa tenha interesse; (v) uso de informação obtida no cargo para atividade privada; (vi) relação contratual entre o órgão e o prestador contratado — a contratação que gera; (vii) indicação de pessoa em processo seletivo; (viii) exploração de conflito entre as funções exercidas (desenho de sistema que crie conflito entre quem cadastra e quem aprova). TRATAMENTO (protocolo): (1) IDENTIFICAÇÃO E DECLARAÇÃO — o servidor deve declarar previamente a situação; (2) REGISTRO — a declaração deve ser formalizada e arquivada, e não verbal; (3) AFASTAMENTO ou RECUSA do ato específico, com substituição por servidor sem conflito (separação de funções); (4) TRANSPARÊNCIA — em conflitos de menor impacto, a situação pode ser registrada e comunicada; (5) REMESSA ao controle e apuração quando houver indício de uso indevido; (6) REVISÃO das decisões tomadas no período de conflito — as saídas de um ato contaminado podem precisar de reanálise ou de revisão. ENQUADRAMENTO JURÍDICO COM CUIDADO DE RIGOR: o art. 32, § 2º, da Lei nº 12.527/2011 registra que, pelas condutas descritas no caput, o militar ou agente público pode responder por improbidade administrativa, conforme o disposto nas Leis nº 1.079/1950 e nº 8.429/1992 (dispositivo verificado em 2026-10-21). A Lei nº 8.429/1992 não foi verificada nesta sessão e sua estrutura de casos de improbidade NÃO é detalhada aqui: este material opta por descrever o conflito de interesse em termos funcionais e de governança, sem enumerar hipóteses de improbidade que não foram conferidas. O que se pode afirmar com base em fonte verificada: (a) o dever de impessoalidade consta do art. 37 da Constituição; (b) o art. 3º, I, da Lei nº 12.527/2011 exige a observância da publicidade como preceito geral; (c) a Lei nº 14.129/2021, art. 3º, IV e VI, exige transparência na execução dos serviços e o dever do gestor de prestar contas diretamente à população; e (d) o art. 32 da Lei nº 12.527/2011 tipifica condutas que ensejam responsabilidade do agente público, entre elas ocultar da revisão de autoridade superior informação sigilosa para beneficiar a si ou a outrem (inciso VI) e divulgar ou permitir acesso indevido a informação pessoal (inciso IV). DESENHO DE SISTEMAS QUE PREVINE O CONFLITO: segregação de funções (quem cadastra não aprova, quem executa não concilia); alçadas de aprovação proporcionais ao impacto; registro de aprovações; decisões automatizadas com critério publicado (reduz a espaço de influência pessoal); e checklists de verificação de conflito antes da assinatura de ato de alto impacto. A FERRAMENTA MAIS EFICAZ CONTRA O CONFLITO É A IMPERSONALIDADE DO PROCESSO: quando o ato é regido por critério publicado e auditável, a influência pessoal perde espaço, ainda que ocorra.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classifique: (a) servidor que assina contrato com empresa da qual é sócio; (b) servidor que pode escolher fornecedor, mas não escolheu a empresa de seu cunhado; (c) servidor cuja empresa concorre ao processo e ele não participa de nenhuma etapa dele.",
+          "resposta": "(a) conflito real — o interesse e o ato coincidem; (b) conflito potencial — há capacidade de influência sem exercício; (c) conflito aparente ou inexistente, conforme o grau de proximidade e de visibilidade — em qualquer caso, o controle de acesso e a segregação de funções reduzem a exposição. O item que trata (a) e (b) como equivalentes está errado: o tratamento difere (afastamento e recusa do ato no conflito real; afastamento ou declaração e transparência no potencial)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O servidor responsável por ordenar a fila de atendimento é sócio de uma empresa de manutenção que atende o órgão. Como o desenho do sistema deve tratar isso?",
+          "resposta": "Três medidas complementares: (1) DECLARAÇÃO formal de vínculo, registrada e arquivada; (2) SEGREGAÇÃO: outro servidor, sem vínculo, passa a operar a ordenação nesse caso, ou a fila é ordenada por regra automatizada publicada (o que, além de resolver o caso concreto, reduz o espaço de influência); (3) REVISÃO das decisões tomadas no período pelo servidor com vínculo, para verificar se houve tratamento diferenciado. Se houver indício de direcionamento, o caso é remetido ao controle para apuração, nos termos do art. 32 da Lei nº 12.527/2011."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O conflito de interesse é problema do servidor, e o órgão não tem responsabilidade alguma enquanto ele não confessar.'",
+          "correcao": "Errado. O órgão responde pelo desenho do processo: se a alçada de aprovação permite que quem tem interesse decide, a falha é de controle interno (art. 48 da Lei nº 14.129/2021) e de governança, ainda que não haja prova de má-fé individual. O dever de declarar é do servidor; o dever de previr, detectar e corrigir o desenho que permite o conflito é do órgão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A segregação de funções, em que quem cadastra não aprova, é medida de prevenção de conflito de interesse e de integridade do processo.",
+          "resposta": "Certo. A segregação de funções reduz a possibilidade de um único agente controlar o ciclo inteiro de um processo, o que limita tanto o conflito de interesse quanto a fraude e o erro (Módulo 4, menor privilégio)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Etapas adequadas de tratamento de conflito de interesse: A) declaração formal e arquivada; B) afastamento ou recusa do ato; C) remessa ao controle quando houver indício; D) divulgação do nome do servidor e do vínculo na internet, sem necessidade de processo administrativo.",
+          "resposta": "A, B e C. O item D não é etapa de tratamento: a publicidade de dados funcionais é regulada pelo art. 29, § 2º, VII, da Lei nº 14.129/2021, e a divulgação de vínculo de interesse pessoal deve observar finalidade, necessidade e proteção da pessoa."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de definir conflito de interesse, diferenciará conflito real, potencial e aparente, reconhecerá suas manifestações típicas no serviço público digital e indicará o tratamento adequado (declaração, transparência, afastamento e remessa ao controle), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "definirá conflito de interesse, diferenciará conflito real, potencial e aparente, reconhecerá suas manifestações típicas no serviço público digital e indicará o tratamento adequado (declaração, transparência, afastamento e remessa ao controle)"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "CONFLITO DE INTERESSE é a situação em que o interesse pessoal do agente ou servidor público pode influenciar, ou pode razoavelmente parecer influenciar, o exercício de atribuição funcional, comprometendo a imparcialidade ou a impessoalidade. A definição operacional em três elementos: (a) UM INTERESSE PESSOAL (patrimônio, relação, participação societária, vínculo familiar, vínculo de emprego anterior, nome ou reputação profissional); (b) UMA ATRIBUIÇÃO ou ato que pode ser influenciado; (c) UMA CA…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Conflito de interesse: conceito, tipologia, exemplos e tratamento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O conflito de interesse é problema do servidor, e o órgão não tem responsabilidade alguma enquanto ele não confessar.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O órgão responde pelo desenho do processo: se a alçada de aprovação permite que quem tem interesse decide, a falha é de controle interno (art. 48 da Lei nº 14.129/2021) e de governança, ainda que não haja prova de má-fé individual. O dever de declarar é do servidor; o dever de previr, detectar e corrigir o desenho que permite o conflito é do órgão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classifique: (a) servidor que assina contrato com empresa da qual é sócio; (b) servidor que pode escolher fornecedor, mas não escolheu a empresa de seu cunhado; (c) servidor cuja empresa concorre ao processo e ele não participa de nenhuma etapa dele.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(a) conflito real — o interesse e o ato coincidem; (b) conflito potencial — há capacidade de influência sem exercício; (c) conflito aparente ou inexistente, conforme o grau de proximidade e de visibilidade — em qualquer caso, o controle de acesso e a segregação de funções reduzem a exposição. O item que trata (a) e (b) como equivalentes está errado: o tratamento difere (afastamento e recusa do ato no conflito real; afastamento ou declaração e transparência no potencial).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O servidor responsável por ordenar a fila de atendimento é sócio de uma empresa de manutenção que atende o órgão. Como o desenho do sistema deve tratar isso?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Três medidas complementares: (1) DECLARAÇÃO formal de vínculo, registrada e arquivada; (2) SEGREGAÇÃO: outro servidor, sem vínculo, passa a operar a ordenação nesse caso, ou a fila é ordenada por regra automatizada publicada (o que, além de resolver o caso concreto, reduz o espaço de influência); (3) REVISÃO das decisões tomadas no período pelo servidor com vínculo, para verificar se houve tratamento diferenciado. Se houver indício de direcionamento, o caso é remetido ao controle para apuração, nos termos do art. 32 da Lei nº 12.527/2011.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O conflito de interesse é problema do servidor, e o órgão não tem responsabilidade alguma enquanto ele não confessar.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O órgão responde pelo desenho do processo: se a alçada de aprovação permite que quem tem interesse decide, a falha é de controle interno (art. 48 da Lei nº 14.129/2021) e de governança, ainda que não haja prova de má-fé individual. O dever de declarar é do servidor; o dever de previr, detectar e corrigir o desenho que permite o conflito é do órgão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u4-t2-s2",
+      "titulo": "Conduta e netiqueta institucionais: limites do que o servidor pode publicar",
+      "topicoTitulo": "Conflito de interesse, conduta e netiqueta",
+      "topicoId": "modulo-6-unidade-4-topico-2",
+      "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno classificará condutas de servidores em canal institucional e em canal pessoal, delimitando o que é vedado, o que é permitido com cautela e o que exige providência de correção e apuração.",
+      "conteudo": "CONDUTA INSTITUCIONAL é o padrão de comportamento que se exige de quem age em nome do órgão; NETIQUETA é o conjunto de convenções de convivência digital que orientam a interação nos canais. No serviço público, a netiqueta tem duas funções: reduzir ruído e conflito na relação com o cidadão e evitar que a conversa digital se converta em espaço de desrespeito, discriminação ou exposição de dado. DISTINÇÃO OPERACIONAL: o que é POSTADO, POR QUEM, EM QUE CANAL e COM QUE BASE define o regime. Regras de conduta com exemplos de aplicação: (1) PROIBIDO publicar, em nome do órgão, opinião pessoal, crítica política ou posição individual de servidor; o canal institucional expressa a posição institucional, que exige ato ou pronunciamento autorizado (art. 3º, VI, da Lei nº 14.129/2021 — dever de prestar contas à população; art. 3º, VII — linguagem clara). (2) PROIBIDO expor dado pessoal de terceiros (citados em quase todo caso de atendimento, em hashtag de campanha, em foto ou em resposta pública) — art. 31 da Lei nº 12.527/2011 e art. 5º, I, da LGPD. (3) PROIBIDO usar o nome, o logotipo ou o perfil para divulgação de interesse pessoal, comercial ou de terceiro — hipótese de uso indevido de bem e de imagem institucional. (4) PROIBIDO emitir opinião em assunto em curso de apuração, em procedimento administrativo ou em litígio, sob pena de perda de imparcialidade e de comprometimento da apuração. (5) PROIBIDO criar perfis ou campanhas não autorizados, ou publicar em grupos ou mesmo não-oficiais sem ciência e registro. (6) EXIGIDO responder a solicitações do cidadão com conteúdo oficial e remeter ao canal adequado, sem criar expectativa de resposta individual em serviço de massa. (7) OBRIGATÓRIO o escalonamento de temas sensíveis: ameaças, relatos de irregularidade, conteúdo que envolva dados de crianças ou de pessoas em situação de vulnerabilidade, e relatos de má-fé devem ser encaminhados ao canal formal, com registro. CONDUTA EM CANAL PESSOAL: o servidor pode usar suas contas pessoais, mas está sujeito ao dever de reserva e de neutralidade institucional; o ponto-chave é a IMPOSSIBILIDADE DE VINCULAR O ÓRGÃO — a menção ao órgão em contexto de discussão política, ou a publicação de foto interna com dado de terceiro, pode configurar uso indevido de bem público ou exposição indevida de informação, mesmo em conta pessoal. O DEVER DE RESERVA e a NEUTRALIDADE institucional não são proibições de opinião pessoal: o servidor pode ter posição política e expressá-la, mas sem vincular o órgão e sem usar informação obtida no cargo. CORREÇÃO E MODERAÇÃO: a política editorial deve prever rotina de correção, escalonamento e resposta a críticas, com prazo definido e registro das decisões; e o órgão deve dispor de canal de ouvidoria (art. 21, XI, da Lei nº 14.129/2021). ACESSIBILIDADE DO CONTEÚDO DIGITAL: legendas, texto alternativo, linguagem acessível e formatos abertos são padrão (art. 3º, VII e XIX, da Lei nº 14.129/2021), e o conteúdo publicado em redes também é submetido à exigência de clareza do art. 8º, § 3º, I, da Lei nº 12.527/2011 no que toca à relação do órgão com o cidadão.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Servidor do órgão posta em sua conta pessoal foto do próprio crachá com o número do SIAPE parcialmente visível, LEGENDADO «sou servidor público e o sistema funciona mal». Isso caracteriza uso indevido?",
+          "resposta": "Pode configurar uso indevido de bem ou imagem institucional e exposição de informação funcional, ainda que em conta pessoal: o vínculo com o órgão é identificável, e a crítica expressa-se em espacio que pode ser lido como posição institucional. A conduta pessoal é lícita; o modo de expressá-la — usando elemento institucional — é que desloca o enquadramento. O mesmo servidor, em post sem identificação institucional, não tem o mesmo problema."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma publicação no perfil institucional mostra a foto de um cidadão reclamando na recepção. Qual a providência?",
+          "resposta": "Remoção do dado identificável do cidadão (a imagem é dado pessoal, art. 5º, I, da LGPD; art. 31 da Lei nº 12.527/2011), com registro da publicação e da ação; e análise de se a postagem tinha função institucional — em regra, o atendimento de reclamação não se faz por foto de reclamante, e sim pelo canal de ouvidoria (art. 21, XI, da Lei nº 14.129/2021), que registra, responde e protege o cidadão. Se o post for mantido, a imagem deve ser tratada para impedir a identificação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O servidor pode publicar em sua conta pessoal tudo o que quiser, porque a Internet é livre e o servidor é pessoa física.'",
+          "correcao": "Errado. A liberdade de expressão do servidor não afasta o dever de reserva, a vedação de uso indevido de bem e de informação do órgão, a exposição de dado pessoal de terceiros (inclusive de colegas e de cidadãos) e o dever de não vincular o órgão. O exercício da liberdade de expressão também não alcança o uso de dados do órgão por terceiros: o acesso a dados de terceiros exige base legal (art. 31, § 1º, II, da Lei nº 12.527/2011)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O dever de reserva permite ao servidor divulgar, em sua conta pessoal, documento interno do órgão relacionado ao desempenho de uma equipe, desde que sem dados pessoais.",
+          "resposta": "Errado. Documento interno pode estar protegido por sigilo administrativo (art. 23 da Lei nº 12.527/2011) ou, quando não sigiloso, ser objeto de uso indevido de informação sob guarda do servidor (art. 32, II, da Lei nº 12.527/2011). A ausência de dado pessoal não elimina a proteção do conteúdo nem o dever de reserva."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Condutas vedadas em canal institucional: A) publicar opinião pessoal em nome do órgão; B) expor dado pessoal de terceiro sem base legal; C) responder à mensagem do cidadão com conteúdo oficial; D) usar o perfil institucional para divulgar interesse comercial.",
+          "resposta": "A, B e D. O item C é a conduta correta: o canal institucional existe para responder ao cidadão com conteúdo oficial."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar condutas de servidores em canal institucional e em canal pessoal, delimitando o que é vedado, o que é permitido com cautela e o que exige providência de correção e apuração, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará condutas de servidores em canal institucional e em canal pessoal, delimitando o que é vedado, o que é permitido com cautela e o que exige providência de correção e apuração"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "CONDUTA INSTITUCIONAL é o padrão de comportamento que se exige de quem age em nome do órgão; NETIQUETA é o conjunto de convenções de convivência digital que orientam a interação nos canais. No serviço público, a netiqueta tem duas funções: reduzir ruído e conflito na relação com o cidadão e evitar que a conversa digital se converta em espaço de desrespeito, discriminação ou exposição de dado. DISTINÇÃO OPERACIONAL: o que é POSTADO, POR QUEM, EM QUE CANAL e COM QUE BASE define o regime. Regras de…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Conduta e netiqueta institucionais: limites do que o servidor pode publicar",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O servidor pode publicar em sua conta pessoal tudo o que quiser, porque a Internet é livre e o servidor é pessoa física.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A liberdade de expressão do servidor não afasta o dever de reserva, a vedação de uso indevido de bem e de informação do órgão, a exposição de dado pessoal de terceiros (inclusive de colegas e de cidadãos) e o dever de não vincular o órgão. O exercício da liberdade de expressão também não alcança o uso de dados do órgão por terceiros: o acesso a dados de terceiros exige base legal (art. 31, § 1º, II, da Lei nº 12.527/2011)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Servidor do órgão posta em sua conta pessoal foto do próprio crachá com o número do SIAPE parcialmente visível, LEGENDADO «sou servidor público e o sistema funciona mal». Isso caracteriza uso indevido?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pode configurar uso indevido de bem ou imagem institucional e exposição de informação funcional, ainda que em conta pessoal: o vínculo com o órgão é identificável, e a crítica expressa-se em espacio que pode ser lido como posição institucional. A conduta pessoal é lícita; o modo de expressá-la — usando elemento institucional — é que desloca o enquadramento. O mesmo servidor, em post sem identificação institucional, não tem o mesmo problema.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma publicação no perfil institucional mostra a foto de um cidadão reclamando na recepção. Qual a providência?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Remoção do dado identificável do cidadão (a imagem é dado pessoal, art. 5º, I, da LGPD; art. 31 da Lei nº 12.527/2011), com registro da publicação e da ação; e análise de se a postagem tinha função institucional — em regra, o atendimento de reclamação não se faz por foto de reclamante, e sim pelo canal de ouvidoria (art. 21, XI, da Lei nº 14.129/2021), que registra, responde e protege o cidadão. Se o post for mantido, a imagem deve ser tratada para impedir a identificação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O servidor pode publicar em sua conta pessoal tudo o que quiser, porque a Internet é livre e o servidor é pessoa física.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A liberdade de expressão do servidor não afasta o dever de reserva, a vedação de uso indevido de bem e de informação do órgão, a exposição de dado pessoal de terceiros (inclusive de colegas e de cidadãos) e o dever de não vincular o órgão. O exercício da liberdade de expressão também não alcança o uso de dados do órgão por terceiros: o acesso a dados de terceiros exige base legal (art. 31, § 1º, II, da Lei nº 12.527/2011).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

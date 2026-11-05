@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 4,
+    "unidadeTitulo": "4.4 Legislação e conformidade",
+    "parte": 3,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U4P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U4P3.js",
+    "idsCompletos": [
+      "m4-u4-t2-s2",
+      "m4-u4-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u4-t2-s2",
+      "titulo": "Articulação entre LGPD, Marco Civil e LAI",
+      "topicoTitulo": "Marco Civil, articulação normativa e limites das afirmações",
+      "topicoId": "modulo-4-unidade-4-topico-2",
+      "unidadeTitulo": "4.4 Legislação e conformidade",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno resolverá conflitos aparentes entre transparência e proteção de dados usando a distinção entre informação pública e dado pessoal.",
+      "conteudo": "Três leis convivem no mesmo ato administrativo digital. A LAI (Lei nº 12.527/2011) disciplina o acesso a informações públicas — enquadramento geral verificado no planalto.gov.br em 2026-10-21 (Bloco 2 de referencias-verificadas.md), com os dispositivos conferidos para o Módulo 6 — arts. 1º, 2º, 3º, 4º, 5º, 6º, 7º, 8º, 8º-A, 8º-B, 10, 11, 12, 13, 14, 15, 16, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34 e 38; os demais artigos fora do Bloco 2 continuam a exigir conferência em fonte oficial. A LGPD protege dados pessoais no tratamento (dispositivos verificados: arts. 1º, 2º, 3º, 4º, 5º, 17, 18, 46). O Marco Civil trata do uso da Internet (verificado em 2026-10-23 — Bloco 3; arts. 2º, 3º, 7º, 9º §3º, 15 e 19). A articulação se resolve pela natureza da informação: publicar lista de servidores com nome e matrícula é publicidade administrativa de dados que identificam; publicar dados de saúde ou de conta bancária é expor dado pessoal — sensível no caso da saúde (art. 5º, II, verificado). O art. 23 da LGPD menciona expressamente a LAI (relação verificada), sinalizando que transparência pública e proteção de dados devem ser lidas em conjunto, não como antagonistas. Exceção relevante e verificada: o art. 4º, III, da LGPD afasta a aplicação para finalidades exclusivas de segurança pública, defesa nacional, segurança do Estado e investigação/repressão de infrações penais, com ressalvas dos §§ 1º e 2º — não confundir exceção com permissão geral. Método prático de decisão: 1) qual a natureza da informação (pública x dado pessoal x sensível)? 2) qual a finalidade e base legal? 3) há informação protegida por sigilo? 4) o que a política interna e a assessoria jurídica determinam?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Transparência ativa publica valor de contratos e nomes de fornecedores pessoa jurídica. Dado pessoal?",
+          "resposta": "Valor e contratante pessoa jurídica são informação pública de gestão; se o fornecedor for pessoa física, o nome é dado pessoal, mas a publicidade decorre da própria execução contratual — avaliar minimização do que excede a finalidade de transparência."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Pedido de acesso solicita 'todos os dados do servidor X'. Como responder tecnicamente?",
+          "resposta": "Conceder a informação pública pertinente à finalidade (matrícula, lotação, atos e remuneração conforme política de transparência), esclarecendo que dados pessoais que excedam a finalidade exigem fundamentação; não confundir transparência com divulgação irrestrita de tudo — a resposta deve ser motivada e registrada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Pela LGPD, o órgão não pode publicar nomes de servidores em nenhuma hipótese.'",
+          "correcao": "Errado. A LGPD convive com deveres de transparência (o art. 23 menciona a LAI — verificado); a análise é de finalidade, necessidade e proporcionalidade, não proibição absoluta. Generalizações absolutas são armadilha clássica de prova."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A LGPD e a LAI devem ser lidas em conjunto, conforme articulação presente no próprio texto verificado da LGPD.",
+          "resposta": "Certo. O art. 23 da LGPD menciona expressamente a Lei nº 12.527/2011 (LAI) — relação confirmada no texto oficial."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Dado sensível (art. 5º, II, verificado) inclui: A) endereço residencial; B) dado sobre saúde; C) número de matrícula funcional; D) endereço de e-mail corporativo.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver conflitos aparentes entre transparência e proteção de dados usando a distinção entre informação pública e dado pessoal, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolverá conflitos aparentes entre transparência e proteção de dados usando a distinção entre informação pública e dado pessoal"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Três leis convivem no mesmo ato administrativo digital. A LAI (Lei nº 12.527/2011) disciplina o acesso a informações públicas — enquadramento geral verificado no planalto.gov.br em 2026-10-21 (Bloco 2 de referencias-verificadas.md), com os dispositivos conferidos para o Módulo 6 — arts. 1º, 2º, 3º, 4º, 5º, 6º, 7º, 8º, 8º-A, 8º-B, 10, 11, 12, 13, 14, 15, 16, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34 e 38; os demais artigos fora do Bloco 2 continuam a exigir conferência em fonte oficial. …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Articulação entre LGPD, Marco Civil e LAI",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Pela LGPD, o órgão não pode publicar nomes de servidores em nenhuma hipótese.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A LGPD convive com deveres de transparência (o art. 23 menciona a LAI — verificado); a análise é de finalidade, necessidade e proporcionalidade, não proibição absoluta. Generalizações absolutas são armadilha clássica de prova."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Transparência ativa publica valor de contratos e nomes de fornecedores pessoa jurídica. Dado pessoal?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Valor e contratante pessoa jurídica são informação pública de gestão; se o fornecedor for pessoa física, o nome é dado pessoal, mas a publicidade decorre da própria execução contratual — avaliar minimização do que excede a finalidade de transparência.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Pedido de acesso solicita 'todos os dados do servidor X'. Como responder tecnicamente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Conceder a informação pública pertinente à finalidade (matrícula, lotação, atos e remuneração conforme política de transparência), esclarecendo que dados pessoais que excedam a finalidade exigem fundamentação; não confundir transparência com divulgação irrestrita de tudo — a resposta deve ser motivada e registrada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Pela LGPD, o órgão não pode publicar nomes de servidores em nenhuma hipótese.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A LGPD convive com deveres de transparência (o art. 23 menciona a LAI — verificado); a análise é de finalidade, necessidade e proporcionalidade, não proibição absoluta. Generalizações absolutas são armadilha clássica de prova.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u4-t2-s3",
+      "titulo": "Obrigação legal, norma técnica e boa prática",
+      "topicoTitulo": "Marco Civil, articulação normativa e limites das afirmações",
+      "topicoId": "modulo-4-unidade-4-topico-2",
+      "unidadeTitulo": "4.4 Legislação e conformidade",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno classificará afirmações normativas por grau de obrigatoriedade e corrigirá generalizações típicas de provas e de políticas internas.",
+      "conteudo": "Classificação hierárquica útil para a prática e para concursos: 1) Constituição e leis (obrigatórias; exemplo verificado: LGPD, arts. 1º a 46 citados neste material); 2) regulamentos e atos da autoridade competente (obrigatórios no âmbito delegado — conferir vigência); 3) normas técnicas e padrões (obrigatórios quando incorporados por contrato, política interna ou referência normativa — caso contrário, orientam); 4) orientações e boas práticas de mercado (recomendadas; adotá-las pode virar parâmetro de cuidado esperado, mas não é 'lei'). Erros clássicos: tratar recomendação de framework como exigência legal; citar prazo ou sanção decorado sem conferir; confundir norma com política interna do órgão (que obriga servidores, mas não é lei). Método de verificação antes de afirmar: identificar a fonte (lei, regulamento, norma, política), confirmar a redação atual em fonte oficial, registrar a data de verificação e escrever a afirmação com o grau correto ('a lei determina', 'a norma recomenda', 'a política interna obriga'). A honestidade normativa é também proteção profissional: afirmação inventada em documento oficial gera responsabilização.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Cláusula de edital diz 'o órgão adotará as melhores práticas de mercado'. Isso é obrigação legal determinada?",
+          "resposta": "Não. É compromisso genérico a ser detalhado; sem critérios verificáveis, não é exigência normativa autoexecutável. O correto é especificar norma ou política aplicável e responsáveis."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relatório interno afirma: 'A LGPD obriga backup diário.' Como corrigir?",
+          "resposta": "A LGPD exige medidas de segurança aptas (art. 46 — verificado), mas backup diário é medida técnica específica — não descrita no dispositivo. A correção: 'A política interna do órgão determina backup diário como medida técnica que atende ao art. 46'. Assim separa lei de política."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Norma técnica brasileira tem sempre força de lei.'",
+          "correcao": "Errado. Norma técnica vincula quando é incorporada por referência em lei, edital, contrato ou política; por si só, orienta. Tratá-la como lei é generalização falsa — armadilha recorrente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Política interna de segurança do órgão obriga os servidores, mas não pode criar obrigação para terceiros sem base contratual ou legal.",
+          "resposta": "Certo. A política tem eficácia no âmbito interno; extensão a terceiros depende de contrato ou dispositivo legal."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Fonte correta para afirmar 'a LGPD determina X': A) blog; B) texto oficial da lei verificado com data; C) post em rede social; D) apostila sem referência.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar afirmações normativas por grau de obrigatoriedade e corrigirá generalizações típicas de provas e de políticas internas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará afirmações normativas por grau de obrigatoriedade e corrigirá generalizações típicas de provas e de políticas internas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Classificação hierárquica útil para a prática e para concursos: 1) Constituição e leis (obrigatórias; exemplo verificado: LGPD, arts. 1º a 46 citados neste material); 2) regulamentos e atos da autoridade competente (obrigatórios no âmbito delegado — conferir vigência); 3) normas técnicas e padrões (obrigatórios quando incorporados por contrato, política interna ou referência normativa — caso contrário, orientam); 4) orientações e boas práticas de mercado (recomendadas; adotá-las pode virar parâm…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Obrigação legal, norma técnica e boa prática",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Norma técnica brasileira tem sempre força de lei.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Norma técnica vincula quando é incorporada por referência em lei, edital, contrato ou política; por si só, orienta. Tratá-la como lei é generalização falsa — armadilha recorrente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Cláusula de edital diz 'o órgão adotará as melhores práticas de mercado'. Isso é obrigação legal determinada?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não. É compromisso genérico a ser detalhado; sem critérios verificáveis, não é exigência normativa autoexecutável. O correto é especificar norma ou política aplicável e responsáveis.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Relatório interno afirma: 'A LGPD obriga backup diário.' Como corrigir?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A LGPD exige medidas de segurança aptas (art. 46 — verificado), mas backup diário é medida técnica específica — não descrita no dispositivo. A correção: 'A política interna do órgão determina backup diário como medida técnica que atende ao art. 46'. Assim separa lei de política.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Norma técnica brasileira tem sempre força de lei.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Norma técnica vincula quando é incorporada por referência em lei, edital, contrato ou política; por si só, orienta. Tratá-la como lei é generalização falsa — armadilha recorrente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

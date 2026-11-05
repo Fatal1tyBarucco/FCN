@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 2,
+    "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U2P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U2P3.js",
+    "idsCompletos": [
+      "m7-u2-t3-s1",
+      "m7-u2-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u2-t3-s1",
+      "titulo": "Valores ausentes e estratégias de tratamento",
+      "topicoTitulo": "Limpeza, padronização e normalização — os dois sentidos da palavra",
+      "topicoId": "modulo-7-unidade-2-topico-3",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno classificará os tipos de ausência e escolherá estratégia de tratamento coerente com a causa.",
+      "conteudo": "Valor ausente não é um só fenômeno. Formas de ausência: nulo explícito, string vazia, marcador textual ('N/A', '-'), zero substituto (o pior: mascara ausência com aparência de medida) e ausência lógica (campo que só deveria existir se outra condição fosse verdadeira — estado civil casado exige nome do cônjuge). ESTRATÉGIAS: (1) exclusão da linha — simples, mas perde informação e enviesa quando a ausência não é aleatória; (2) exclusão da coluna — razoável quando o campo está majoritariamente ausente ou sem uso declarado; (3) imputação por valor fixo (média, mediana ou moda) — mantém a quantidade de registros, porém reduz a variabilidade e atenua diferenças reais; (4) imputação por vizinho, modelo ou série temporal — mais fiel quando há informação preditora, mais cara e mais fácil de justificar mal; (5) indicador de ausência (coluna 'valor_faltou') — preserva o fato de que faltou, permitindo análise própria. CRITÉRIO DECISIVO: antes de imputar, classifique a CAUSA. Se a ausência é aleatória (não depende de nada observado ou não observado), a imputação é relativamente segura; se depende de valores observados, use-os na imputação; se depende do valor ausente em si (ex.: pessoas com maior renda omitem renda), qualquer imputação cega introduz viés silencioso — declare a limitação. Ausência pode ser INFORMAÇÃO: 'profissão' vazio para menor de idade é sinal, não falha.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Base de 200 salários com 10 ausentes, distribuídos aleatoriamente. Qual tratamento adequado?",
+          "resposta": "Imputação por mediana (ou exclusão, com registro do total perdido) é aceitável, pois a ausência não segue padrão observável: 10/200 = 5% de perda. Deve-se documentar a taxa de ausência e a regra usada — e conferir se a conclusão muda com os dois tratamentos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Em pesquisa de satisfação, respondeu apenas quem ficou insatisfeito (80% dos questionários). O que imputar?",
+          "resposta": "Nada: imputar mascararia o problema. A ausência é seletiva (depende da insatisfação — causa não observada naqueles que não responderam), logo a amostra é enviesada. A conduta correta é declarar o viés de não-resposta, buscar nova coleta ou limitar a conclusão ao que os dados suportam."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Campo com ausência deve receber sempre a média — é a regra padrão de limpeza.'",
+          "correcao": "Errado. Imputar média é uma opção entre várias e só é defensável quando a ausência não é seletiva e a média é representativa. Para variáveis com outliers, a mediana costuma ser mais robusta; para variáveis categóricas, a moda; para ausência informativa, o indicador de ausência. Repetir 'sempre média' transforma viés em número arredondado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Substituir valores ausentes por zero é uma boa prática universal de limpeza.",
+          "resposta": "Errado. Zero é um valor legítimo em muitas variáveis; substituir ausência por zero confunde 'não medido' com 'medido e igual a zero' e distorce médias e somas."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quando a ausência de resposta depende do próprio valor não respondido, o tratamento mais honesto é: A) imputar média; B) imputar mediana; C) declarar o viés e limitar a conclusão; D) excluir a coluna inteira.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar os tipos de ausência e escolherá estratégia de tratamento coerente com a causa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "1JpYOqvDJNU",
+          "titulo": "Te ensino TUDO sobre Pandas para análise de dados com Python",
+          "canal": "Asimov Academy",
+          "urlOriginal": "https://www.youtube.com/watch?v=1JpYOqvDJNU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/1JpYOqvDJNU",
+          "descricao": "Videoaula abrangente sobre a biblioteca Pandas para análise de dados em Python. Cobre: Series e DataFrames (criação, indexação, seleção), leitura de arquivos (CSV, Excel, JSON, Parquet, SQL), limpeza de dados (valores ausentes isnull/notnull, fillna, dropna, duplicatas drop_duplicates), transformação (apply, map, replace, astype, to_datetime), agregação (groupby, agg, pivot_table), junção de dados (merge, join, concat), análise exploratória (describe, value_counts, corr), e exportação de resultados. Inclui boas práticas de performance e memory usage.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará os tipos de ausência e escolherá estratégia de tratamento coerente com a causa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Valor ausente não é um só fenômeno. Formas de ausência: nulo explícito, string vazia, marcador textual ('N/A', '-'), zero substituto (o pior: mascara ausência com aparência de medida) e ausência lógica (campo que só deveria existir se outra condição fosse verdadeira — estado civil casado exige nome do cônjuge). ESTRATÉGIAS: (1) exclusão da linha — simples, mas perde informação e enviesa quando a ausência não é aleatória; (2) exclusão da coluna — razoável quando o campo está majoritariamente ause…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Valores ausentes e estratégias de tratamento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Campo com ausência deve receber sempre a média — é a regra padrão de limpeza.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Imputar média é uma opção entre várias e só é defensável quando a ausência não é seletiva e a média é representativa. Para variáveis com outliers, a mediana costuma ser mais robusta; para variáveis categóricas, a moda; para ausência informativa, o indicador de ausência. Repetir 'sempre média' transforma viés em número arredondado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Base de 200 salários com 10 ausentes, distribuídos aleatoriamente. Qual tratamento adequado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Imputação por mediana (ou exclusão, com registro do total perdido) é aceitável, pois a ausência não segue padrão observável: 10/200 = 5% de perda. Deve-se documentar a taxa de ausência e a regra usada — e conferir se a conclusão muda com os dois tratamentos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Em pesquisa de satisfação, respondeu apenas quem ficou insatisfeito (80% dos questionários). O que imputar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Nada: imputar mascararia o problema. A ausência é seletiva (depende da insatisfação — causa não observada naqueles que não responderam), logo a amostra é enviesada. A conduta correta é declarar o viés de não-resposta, buscar nova coleta ou limitar a conclusão ao que os dados suportam.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Campo com ausência deve receber sempre a média — é a regra padrão de limpeza.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Imputar média é uma opção entre várias e só é defensável quando a ausência não é seletiva e a média é representativa. Para variáveis com outliers, a mediana costuma ser mais robusta; para variáveis categóricas, a moda; para ausência informativa, o indicador de ausência. Repetir 'sempre média' transforma viés em número arredondado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u2-t3-s2",
+      "titulo": "Duplicidades, inconsistências e erros de tipo",
+      "topicoTitulo": "Limpeza, padronização e normalização — os dois sentidos da palavra",
+      "topicoId": "modulo-7-unidade-2-topico-3",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno detectará e tratará duplicidades, inconsistências e erros de tipo sem introduzir efeito colateral.",
+      "conteudo": "DUPLICIDADES: causas típicas — reenvio de formulário, carga executada duas vezes, cadastro paralelo em duas unidades. Detecção em três graus: chave exata (mesmo CPF ou mesmo ID), chave normalizada (removendo espaços, caixa, acentos e pontuação — 'Maria Silva' = 'MARIA  SILVA ') e similaridade (aproximada, com limiar declarado). Tratamento: manter a versão mais completa ou mais recente, fundir campos complementares, ou manter ambas com marcador e regra de prevalência. INCONSISTÊNCIAS: regras violadas dentro do registro (data_fim anterior a data_inicio; soma dos itens diferente do total) ou entre sistemas (unidades incompatíveis: 2,0 m contra 200 cm; mesma pessoa com nome divergente). Tratamento: regra de reconciliação documentada e, quando não houver autoridade, escalonar para o dono do dado — inventar o valor 'para fechar' é fabricar dado. ERROS DE TIPO: número guardado como texto ('R$ 1.234,56', '1,5' em campo decimal), data como texto com formato variado, decimal com vírgula em destino que espera ponto. Consequências SILENCIOSAS: soma que ignora linhas não numéricas, comparação lexicográfica ('10' vem antes de '9' em ordem de texto), filtro que não encontra o que existe. Tratamento: conversão explícita com relatório de falhas — nunca coerção automática sem registro. PADRONIZAÇÃO: unificar caixa e espaçamento, datas no padrão internacional ISO 8601 (AAAA-MM-DD), unidades no SI, telefones com código do país quando houver envio internacional.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Uma coluna de valores tem as entradas: '1.234,56', 'R$ 200', '300', 'abc'. Que regra de conversão é segura?",
+          "resposta": "Regra explícita: remover símbolo de moeda, converter o separador de milhar e o decimal conforme convenção declarada (aqui, ponto = milhar e vírgula = decimal) e reportar as linhas que não convertem. A entrada 'abc' não pode virar 0 nem ser descartada em silêncio: deve ser listada para correção na origem."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Na ordenação de texto, os valores '9' e '10' aparecem como 10 antes de 9. Explicar a causa e corrigir.",
+          "resposta": "Causa: a coluna é texto; ordenação lexicográfica compara caracteres, e '1' < '9'. Correção: converter para tipo numérico (int) e ordenar por valor — após a conversão, 9 < 10. O caso ilustra por que erro de tipo passa despercebido: o sistema não avisa, apenas ordena 'errado'."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Para eliminar duplicidades, basta remover linhas com CPF repetido mantendo a primeira.'",
+          "correcao": "Errado por duas razões: a primeira linha pode ser a menos completa ou mais antiga, e fundir pode descartar informação complementar (endereço novo, telefone atualizado). A condução correta é definir chave, regra de prevalência (mais recente/mais completo/fonte autoritativa) e registrar a fusão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em coluna de texto, '10' ordena antes de '9', porque a comparação é feita caractere a caractere.",
+          "resposta": "Certo. É o efeito clássico de erro de tipo: ordem lexicográfica, não numérica."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Duas unidades reportam '2,0 m' e '200 cm' para a mesma estante. O problema é: A) duplicidade; B) inconsistência por unidade incompatível; C) ausência de valor; D) erro de digitação obrigatório.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de detectar e tratará duplicidades, inconsistências e erros de tipo sem introduzir efeito colateral, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "detectará e tratará duplicidades, inconsistências e erros de tipo sem introduzir efeito colateral"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "DUPLICIDADES: causas típicas — reenvio de formulário, carga executada duas vezes, cadastro paralelo em duas unidades. Detecção em três graus: chave exata (mesmo CPF ou mesmo ID), chave normalizada (removendo espaços, caixa, acentos e pontuação — 'Maria Silva' = 'MARIA  SILVA ') e similaridade (aproximada, com limiar declarado). Tratamento: manter a versão mais completa ou mais recente, fundir campos complementares, ou manter ambas com marcador e regra de prevalência. INCONSISTÊNCIAS: regras viol…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Duplicidades, inconsistências e erros de tipo",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Para eliminar duplicidades, basta remover linhas com CPF repetido mantendo a primeira.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado por duas razões: a primeira linha pode ser a menos completa ou mais antiga, e fundir pode descartar informação complementar (endereço novo, telefone atualizado). A condução correta é definir chave, regra de prevalência (mais recente/mais completo/fonte autoritativa) e registrar a fusão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Uma coluna de valores tem as entradas: '1.234,56', 'R$ 200', '300', 'abc'. Que regra de conversão é segura?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Regra explícita: remover símbolo de moeda, converter o separador de milhar e o decimal conforme convenção declarada (aqui, ponto = milhar e vírgula = decimal) e reportar as linhas que não convertem. A entrada 'abc' não pode virar 0 nem ser descartada em silêncio: deve ser listada para correção na origem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Na ordenação de texto, os valores '9' e '10' aparecem como 10 antes de 9. Explicar a causa e corrigir.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Causa: a coluna é texto; ordenação lexicográfica compara caracteres, e '1' < '9'. Correção: converter para tipo numérico (int) e ordenar por valor — após a conversão, 9 < 10. O caso ilustra por que erro de tipo passa despercebido: o sistema não avisa, apenas ordena 'errado'.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Para eliminar duplicidades, basta remover linhas com CPF repetido mantendo a primeira.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado por duas razões: a primeira linha pode ser a menos completa ou mais antiga, e fundir pode descartar informação complementar (endereço novo, telefone atualizado). A condução correta é definir chave, regra de prevalência (mais recente/mais completo/fonte autoritativa) e registrar a fusão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

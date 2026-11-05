@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 2,
+    "unidadeTitulo": "5.2 Aprendizado de máquina",
+    "parte": 4,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U2P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U2P4.js",
+    "idsCompletos": [
+      "m5-u2-t3-s1",
+      "m5-u2-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u2-t3-s1",
+      "titulo": "Matriz de confusão, precisão e recall",
+      "topicoTitulo": "Métricas de avaliação",
+      "topicoId": "modulo-5-unidade-2-topico-3",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno montará matriz de confusão a partir de um exemplo numérico e calculará precisão e recall com interpretação.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Matriz de confusão, precisão e recall\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Matriz de confusão, precisão e recall\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Matriz de confusão, precisão e recall\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: Matriz de confusão cruza previsão e realidade em quatro células: verdadeiros positivos (VP), falsos positivos (FP), verdadeiros negativos (VN), falsos negativos (FN). Precisão = VP / (VP + FP): entre os que o modelo acusou, quantos eram mesmo positivos — mede o custo de falsa acusação. Recall (sensibilidade) = VP / (VP + FN): entre os realmente positivos, quantos o modelo achou — mede a capacidade de não perder casos. Exemplo numérico: de 1.000 requerimentos, 50 irregulares; modelo sinaliza 80, dos quais 40 são realmente irregulares. VP = 40, FP = 40, FN = 10, VN = 910. Precisão = 40/80 = 0,50 (metade das acusações é falsa). Recall = 40/50 = 0,80 (achou 80% das irregulares). Interpretação: o modelo perde 20% dos irregulares e incomoda 40 servidores inocentes — decisão de uso depende desses custos. Falso negativo é frequentemente o erro mais grave em triagem de risco (caso perdido); falso positivo é o mais sensível em acusação (dano reputacional). Erro clássico de prova: trocar denominadores — precisão usa a linha da previsão positiva; recall, a coluna do real positivo. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Matriz de confusão, precisão e recall\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Matriz de confusão, precisão e recall\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Matriz de confusão, precisão e recall\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Matriz de confusão, precisão e recall basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Matriz de confusão, precisão e recall e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Matriz de confusão, precisão e recall\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: matriz de confusão, precisão e recall, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Matriz de confusão, precisão e recall com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Matriz de confusão, precisão e recall\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "VP = 30, FP = 10, FN = 5. Calcule precisão e recall.",
+          "resposta": "Precisão = 30/(30+10) = 0,75. Recall = 30/(30+5) ≈ 0,857. Entre as acusações, 75% eram corretas; entre os positivos reais, ~86% foram capturados."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Triagem de indício de fraude com custo alto de acusação indevida. Como equilibrar?",
+          "resposta": "Escolher limiar que eleve a precisão (ex.: exigir evidência mínima para sinalizar), aceitando recall menor e complementando com análise humana dos casos não sinalizados por amostragem."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Precisão e recall são a mesma medida vistas por ângulos diferentes.'",
+          "correcao": "Errado como sinônimo: medem coisas distintas — precisão governa falsos positivos; recall, falsos negativos. Uma pode subir enquanto a outra cai; por isso existe F1 (média harmônica) para resumir o equilíbrio."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Recall alto com precisão baixa significa que o modelo sinaliza demais, incluindo muitos inocentes.",
+          "resposta": "Certo. Alto recall poupa falsos negativos; baixa precisão acumula falsos positivos — perfil típico de triagem sensível com limiar baixo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Fórmula da precisão: A) VP/(VP+FN); B) VP/(VP+FP); C) (VP+VN)/total; D) FP/(FP+VN).",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de montar matriz de confusão a partir de um exemplo numérico e calculará precisão e recall com interpretação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "montará matriz de confusão a partir de um exemplo numérico e calculará precisão e recall com interpretação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Matriz de confusão, precisão e recall\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Matriz de confusão, precisão e recall\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteri…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Matriz de confusão, precisão e recall",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Precisão e recall são a mesma medida vistas por ângulos diferentes.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado como sinônimo: medem coisas distintas — precisão governa falsos positivos; recall, falsos negativos. Uma pode subir enquanto a outra cai; por isso existe F1 (média harmônica) para resumir o equilíbrio."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "VP = 30, FP = 10, FN = 5. Calcule precisão e recall.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Precisão = 30/(30+10) = 0,75. Recall = 30/(30+5) ≈ 0,857. Entre as acusações, 75% eram corretas; entre os positivos reais, ~86% foram capturados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Triagem de indício de fraude com custo alto de acusação indevida. Como equilibrar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Escolher limiar que eleve a precisão (ex.: exigir evidência mínima para sinalizar), aceitando recall menor e complementando com análise humana dos casos não sinalizados por amostragem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Precisão e recall são a mesma medida vistas por ângulos diferentes.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado como sinônimo: medem coisas distintas — precisão governa falsos positivos; recall, falsos negativos. Uma pode subir enquanto a outra cai; por isso existe F1 (média harmônica) para resumir o equilíbrio.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u2-t3-s2",
+      "titulo": "Especificidade, F1 e limiar de decisão",
+      "topicoTitulo": "Métricas de avaliação",
+      "topicoId": "modulo-5-unidade-2-topico-3",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno calculará especificidade e F1, e defenderá a escolha do limiar de decisão em função dos custos dos erros.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) matriz de confusão (TP, FP, FN, TN); (b) precisão e recall; (c) especificidade; (d) F1; (e) limiar de decisão; (f) trade-off entre precisão e recall. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra cálculo de métricas a partir de uma matriz de confusão; confundir precisão com acurácia ou com especificidade muda o gabarito. PRÉ-REQUISITOS: classificação binária. OBJETIVOS OBSERVÁVEIS: (1) montar matriz de confusão; (2) calcular precisão, recall, especificidade e F1; (3) explicar o limiar e o trade-off. COMPETÊNCIAS DESENVOLVIDAS: avaliação de classificador; leitura de matriz. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.2 (desbalanceamento); Módulo 8 (estatística). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: matriz de confusão 2x2 com TP (verdadeiro positivo), FP (falso positivo), FN (falso negativo) e TN (verdadeiro negativo); precisão = TP/(TP+FP) (dos previstos positivos, quantos são positivos reais); recall (sensibilidade) = TP/(TP+FN) (dos positivos reais, quantos foram detectados); especificidade = TN/(TN+FP) (dos negativos reais, quantos foram corretamente negados); F1 = 2·P·R/(P+R) (média harmônica, útil em desbalanceamento); limiar de decisão (corte de probabilidade que define a classe prevista); trade-off precisão-recall (baixar o limiar aumenta recall e diminui precisão). Exemplo numérico: TP=80, FP=20, FN=20, TN=80 (total 200); precisão = 80/100 = 0,80; recall = 80/100 = 0,80; especificidade = 80/100 = 0,80; F1 = 0,80. Se limiar baixar: TP=90, FP=30, FN=10, TN=70; precisão = 90/120 = 0,75; recall = 90/100 = 0,90. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: montar a matriz a partir de previsões.\n- Nível intermediário: calcular as quatro métricas.\n- Nível avançado: ajustar limiar conforme custo de erro.\n- Nível especialista: integrar métricas, custo e governança.\nCOMPARAÇÕES CRÍTICAS:\n- precisão x recall: precisão mede pureza dos positivos previstos; recall mede cobertura dos positivos reais; muda o gabarito ao definir a prioridade.\n- F1 x acurácia: F1 foca na classe de interesse em desbalanceamento; acurácia global pode esconder falhas.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"precisão e acurácia são a mesma coisa\" — Motivo: precisão é sobre positivos previstos; acurácia é sobre todos — Versão tecnicamente correta: métricas distintas.\n- Afirmação errada: \"recall alto garante modelo bom\" — Motivo: pode vir com muitos falsos positivos — Versão tecnicamente correta: avaliar precisão também.\n- Afirmação errada: \"F1 é a média aritmética\" — Motivo: é a média harmônica — Versão tecnicamente correta: F1 = 2PR/(P+R).\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: TP, FP, FN, TN, precisão, recall, especificidade, F1, limiar, trade-off.\n- Regras e fórmulas: P=TP/(TP+FP); R=TP/(TP+FN); E=TN/(TN+FP); F1=2PR/(P+R).\n- Exceções: em desbalanceamento extremo, usar AUC-PR.\n- Palavras-chave: matriz de confusão, precisão, recall, especificidade, F1, limiar.\n- Checklist de domínio: (1) Monto a matriz? (2) Calculo P, R, E, F1? (3) Explico o limiar? (4) Interpreto o trade-off?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é precisão e como se calcula? (2) O que é recall? (3) O que é especificidade? (4) Como o limiar afeta precisão e recall? (5) Quando usar F1?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "VN = 850, FP = 50. Calcule a especificidade.",
+          "resposta": "Especificidade = 850/(850+50) ≈ 0,944: 94,4% dos negativos reais foram corretamente classificados."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Precisão 0,4 e recall 0,9. Qual F1 e qual perfil?",
+          "resposta": "F1 = 2×(0,4×0,9)/(0,4+0,9) ≈ 0,554. Perfil de varredura sensível: quase todos os positivos são achados, mas 60% das acusações são falsas — bom para triagem inicial com revisão humana, ruim para acusação direta."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O limiar ideal é sempre 0,5.'",
+          "correcao": "Errado. 0,5 é convenção de classificador calibrado sem custos assimétricos; com custos distintos, o limiar é definido pela política de erro, validado em dados de teste."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) F1 é adequada quando se quer equilíbrio entre precisão e recall em classe rara.",
+          "resposta": "Certo. Por ser média harmônica, só é alta com as duas altas — evita o 'falso conforto' de uma métrica isolada."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Subir o limiar de decisão tende a: A) aumentar recall e precisão; B) reduzir falsos positivos e aumentar falsos negativos; C) não afetar erros; D) equilibrar classes.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular especificidade e F1, e defenderá a escolha do limiar de decisão em função dos custos dos erros, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "calculará especificidade e F1, e defenderá a escolha do limiar de decisão em função dos custos dos erros"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) matriz de confusão (TP, FP, FN, TN); (b) precisão e recall; (c) especificidade; (d) F1; (e) limiar de decisão; (f) trade-off entre precisão e recall. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra cálculo de métricas a partir de uma matriz de confusão; confundir precisão com acurácia ou com especificidade muda o gabarito. PRÉ-REQUISITOS: classificação binária. OBJETIVOS OBSERVÁVEIS: (1) montar matriz de confusão; (2) calcular precisão, recal…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Especificidade, F1 e limiar de decisão",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O limiar ideal é sempre 0,5.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. 0,5 é convenção de classificador calibrado sem custos assimétricos; com custos distintos, o limiar é definido pela política de erro, validado em dados de teste."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "VN = 850, FP = 50. Calcule a especificidade.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Especificidade = 850/(850+50) ≈ 0,944: 94,4% dos negativos reais foram corretamente classificados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Precisão 0,4 e recall 0,9. Qual F1 e qual perfil?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "F1 = 2×(0,4×0,9)/(0,4+0,9) ≈ 0,554. Perfil de varredura sensível: quase todos os positivos são achados, mas 60% das acusações são falsas — bom para triagem inicial com revisão humana, ruim para acusação direta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O limiar ideal é sempre 0,5.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. 0,5 é convenção de classificador calibrado sem custos assimétricos; com custos distintos, o limiar é definido pela política de erro, validado em dados de teste.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

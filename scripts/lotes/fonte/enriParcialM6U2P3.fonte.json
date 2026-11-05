@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 2,
+    "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U2P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U2P3.js",
+    "idsCompletos": [
+      "m6-u2-t2-s3",
+      "m6-u2-t3-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u2-t2-s3",
+      "titulo": "Princípios e diretrizes do art. 3º e componentes do Governo Digital",
+      "topicoTitulo": "Transparência ativa, transparência passiva e abertura de dados",
+      "topicoId": "modulo-6-unidade-2-topico-2",
+      "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno enumerará as diretrizes do art. 3º da Lei nº 14.129/2021, relacionará os componentes essenciais do Governo Digital e identificará a finalidade de cada um.",
+      "conteudo": "A LEI nº 14.129, DE 29 DE MARÇO DE 2021 (Lei de Governo Digital) foi verificada no texto oficial do planalto.gov.br em 2026-10-21. Ementa: «Dispõe sobre princípios, regras e instrumentos para o Governo Digital e para o aumento da eficiência pública e altera a Lei nº 7.116, de 29 de agosto de 1983, a Lei nº 12.527, de 18 de novembro de 2011 (Lei de Acesso à Informação), a Lei nº 12.682, de 9 de julho de 2012, e a Lei nº 13.460, de 26 de junho de 2017». O art. 1º define o objeto: princípios, regras e instrumentos para o aumento da eficiência da Administração Pública, especialmente por meio da desburocratização, da inovação, da transformação digital e da participação do cidadão; o parágrafo único IMPÕE observar a LAI, a Lei nº 13.460/2017, a LGPD, o Código Tributário Nacional e a Lei Complementar nº 105/2001. O art. 2º delimita a incidência: administração direta federal (Executivo, Judiciário, Legislativo, Tribunal de Contas da União e Ministério Público), administração indireta federal que preste serviço público e os demais entes federados «desde que adotem os comandos desta Lei por meio de atos normativos próprios» (§ 2º); o § 1º exclui empresas públicas e sociedades de economia mista que não prestem serviço público. DIRETRIZES DO ART. 3º (26 incisos — os mais determinantes para a TI): I — desburocratização e serviços digitais acessíveis inclusive por dispositivos móveis; II — plataforma única de acesso a informações e serviços, observadas as restrições legais e sem prejuízo do atendimento presencial; III — possibilidade de demandar serviços por meio digital sem necessidade de solicitação presencial; IV — transparência na execução dos serviços e monitoramento da qualidade; V — incentivo à participação social no controle e na fiscalização; VI — dever do gestor de prestar contas diretamente à população; VII — uso de LINGUAGEM CLARA E COMPREENSÍVEL a qualquer cidadão; VIII — uso da tecnologia para otimizar processos; IX — atuação integrada e compartilhamento de dados pessoais em ambiente seguro quando indispensável, nos termos da LGPD, e transferência de sigilo quando couber; X — simplificação de procedimentos, com foco em universalização e autosserviço; XI — eliminação de formalidades e exigências cujo custo econômico ou social seja SUPERIOR AO RISCO ENVOLVIDO; XII — IMPOSIÇÃO IMEDIATA E DE UMA ÚNICA VEZ das exigências necessárias, com exigência posterior justificada apenas em caso de dúvida superveniente; XIII — VEDAÇÃO DE EXIGÊNCIA DE PROVA DE FATO JÁ COMPROVADO pela apresentação de documento ou informação válida; XIV — interoperabilidade de sistemas e promoção de dados abertos; XV — PRESUNÇÃO DE BOA-FÉ do usuário dos serviços públicos; XVI — permanência da possibilidade de atendimento presencial, conforme características, relevância e público-alvo; XVII — proteção de dados pessoais, nos termos da LGPD; XVIII — cumprimento de compromissos e padrões de qualidade divulgados na Carta de Serviços ao Usuário; XIX — acessibilidade da pessoa com deficiência ou com mobilidade reduzida, nos termos da Lei nº 13.146/2015; XX — estímulo a ações educativas para qualificação de servidores e inclusão digital da população; XXI — apoio técnico aos entes federados; XXII — estímulo ao uso de ASSINATURAS ELETRÔNICAS nas interações entre órgãos e entre estes e os cidadãos; XXIII — implementação do GOVERNO COMO PLATAFORMA e promoção do uso de dados, preferencialmente ANONIMIZADOS, por pessoas físicas e jurídicas de diferentes setores, resguardados os arts. 7º e 11 da LGPD, para formulação de políticas públicas, pesquisas científicas, geração de negócios e controle social; XXIV — tratamento adequado a idosos, nos termos da Lei nº 10.741/2003; XXV — adoção preferencial, na internet e em suas aplicações, de tecnologias, padrões e formatos ABERTOS E LIVRES, conforme o inciso V do art. 24 e o art. 25 da Lei nº 12.965/2014 (Marco Civil da Internet); XXVI — promoção do desenvolvimento tecnológico e da inovação no setor público. COMPONENTES ESSENCIAIS (art. 18): (I) a BASE NACIONAL DE SERVIÇOS PÚBLICOS — base de dados com as informações necessárias sobre a oferta de serviços de todos os prestadores; (II) as CARTAS DE SERVIÇOS AO USUÁRIO, da Lei nº 13.460/2017; (III) as PLATAFORMAS DE GOVERNO DIGITAL — ferramentas e serviços comuns aos órgãos, normalmente ofertados de forma centralizada e compartilhada. O art. 20 exige das Plataformas, no mínimo: (I) ferramenta digital de solicitação de atendimento e acompanhamento da entrega dos serviços; (II) painel de monitoramento do desempenho dos serviços, acessível por portal, aplicativo ou outro canal digital ÚNICO E OFICIAL. O art. 21 detalha a ferramenta digital (identificação do serviço e etapas; solicitação digital; agendamento digital quando couber; acompanhamento por etapas; avaliação continuada da satisfação; gestão de perfil do usuário quando necessária; notificação; pagamento digital quando necessário; nível de segurança compatível com a criticidade e com os dados utilizados; funcionalidade para solicitar acesso a informações sobre o tratamento de dados pessoais; sistema de ouvidoria). O art. 22 define o conteúdo mínimo do painel: (I) quantidade de solicitações em andamento e concluídas anualmente; (II) tempo médio de atendimento; (III) grau de satisfação dos usuários, com interoperabilidade e padronização mínima para permitir comparação entre entes. O art. 5º determina o uso de soluções digitais para a gestão de políticas finalísticas e administrativas e para o trâmite de processos administrativos eletrônicos; o art. 6º trata das exceções; o art. 7º da assinatura eletrônica; o art. 10 remete o regime de sigilo e de restrição de acesso à LAI. O art. 27 assegura ao usuário da prestação digital: gratuidade no acesso às Plataformas de Governo Digital; atendimento nos termos da Carta de Serviços; padronização de formulários e guias; recebimento de protocolo físico ou digital; e indicação de canal preferencial de comunicação para notificações e mensagens. O art. 28 estabelece o CPF ou o CNPJ como NÚMERO SUFICIENTE para identificação nos bancos de dados de serviços públicos, com gratuidade de inscrição e alterações. O art. 42 e o art. 43 tratam do DOMICÍLIO ELETRÔNICO: o administrado pode optar pelo meio eletrônico e, a qualquer momento, independentemente de fundamentação, pelo fim das comunicações; as ferramentas devem comprovar autoria, comprovação de emissão e recebimento, passar por auditoria e conservar os dados de envio e recebimento por pelo menos 5 ANOS.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que distingue a Base Nacional de Serviços Públicos das Cartas de Serviços ao Usuário?",
+          "resposta": "São componentes DISTINTOS (art. 18, I e II). A Base Nacional é a base de dados que reúne as informações necessárias sobre a oferta de serviços públicos de TODOS os prestadores, em padrão comum e interoperável (art. 19, parágrafo único). A Carta de Serviço ao Usuário é o documento que descreve o serviço prestado por um determinado órgão (regida pela Lei nº 13.460/2017). Uma é o catálogo nacional do que existe; a outra é a ficha do serviço de um órgão."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão exige que o cidadão apresente uma segunda via de documento que o próprio sistema já tem. Como a Lei nº 14.129/2021 enquadra isso?",
+          "resposta": "Como vedação de exigência de prova de fato já comprovado (art. 3º, XIII) e eliminação de exigência desnecessária (art. 24, IV, que manda eliminar, inclusive por interoperabilidade, as exigências desnecessárias ao usuário). Ao mesmo tempo, incide o art. 3º, XII, que impõe imposição imediata e de uma única vez das exigências necessárias, e o art. 3º, XV, que prescreve a presunção de boa-fé do usuário."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A Lei nº 14.129/2021 se aplica de imediato a todos os Estados, Municípios e Distrito Federal.'",
+          "correcao": "Errado. Pelo art. 2º, III, a aplicação aos demais entes federados depende da adoção dos comandos da Lei por meio de ATOS NORMATIVOS PRÓPRIOS, e o § 2º do mesmo artigo condiciona as referências a Estados, Municípios e DF à hipótese de cumprimento desse requisito. Interpretação oposta — a incidência plena e imediata em todos os entes — é apegadinha mais comum do item."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) As ferramentas de domicílio eletrônico previstas no art. 43 da Lei nº 14.129/2021 devem ser passíveis de auditoria e conservar os dados de envio e recebimento por pelo menos 5 anos.",
+          "resposta": "Certo. O art. 43, IV e V, da Lei nº 14.129/2021 (verificado em 2026-10-21) preveem, respectivamente, a passibilidade de auditoria e a conservação dos dados por, no mínimo, 5 anos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Qual diretriz do art. 3º da Lei nº 14.129/2021 veda exigir do usuário documento que comprove fato já demonstrado? A) inciso XII; B) inciso XIII; C) inciso XV; D) inciso XXV.",
+          "resposta": "B. O inciso XIII veda a exigência de prova de fato já comprovado pela apresentação de documento ou informação válida; o inciso XV trata da presunção de boa-fé do usuário e o inciso XII da imposição uma única vez das exigências."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de enumerar as diretrizes do art. 3º da Lei nº 14.129/2021, relacionará os componentes essenciais do Governo Digital e identificará a finalidade de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "Zjv2mZJkakw",
+          "titulo": "1 - Lei 14.129/2021 Governo Digital",
+          "canal": "LexPlay",
+          "urlOriginal": "https://www.youtube.com/watch?v=Zjv2mZJkakw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Zjv2mZJkakw",
+          "descricao": "Videoaula introdutória sobre a Lei nº 14.129/2021 (Lei de Governo Digital). Explica os princípios, regras e instrumentos para o Governo Digital, as 26 diretrizes do art. 3º (desburocratização, plataforma única, linguagem clara, transparência, participação social, dados abertos, interoperabilidade, base nacional de serviços, domicílio eletrônico, assinatura eletrônica), os componentes (Base Nacional de Serviços Públicos, Cartas de Serviços, Gov.br, dados abertos), a relação com a LAI e LGPD, e a incidência nos entes federados. Essencial para concursos de carreiras administrativas e de TI no serviço público.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "enumerará as diretrizes do art. 3º da Lei nº 14.129/2021, relacionará os componentes essenciais do Governo Digital e identificará a finalidade de cada um"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A LEI nº 14.129, DE 29 DE MARÇO DE 2021 (Lei de Governo Digital) foi verificada no texto oficial do planalto.gov.br em 2026-10-21. Ementa: «Dispõe sobre princípios, regras e instrumentos para o Governo Digital e para o aumento da eficiência pública e altera a Lei nº 7.116, de 29 de agosto de 1983, a Lei nº 12.527, de 18 de novembro de 2011 (Lei de Acesso à Informação), a Lei nº 12.682, de 9 de julho de 2012, e a Lei nº 13.460, de 26 de junho de 2017». O art. 1º define o objeto: princípios, regra…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Princípios e diretrizes do art. 3º e componentes do Governo Digital",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A Lei nº 14.129/2021 se aplica de imediato a todos os Estados, Municípios e Distrito Federal.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Pelo art. 2º, III, a aplicação aos demais entes federados depende da adoção dos comandos da Lei por meio de ATOS NORMATIVOS PRÓPRIOS, e o § 2º do mesmo artigo condiciona as referências a Estados, Municípios e DF à hipótese de cumprimento desse requisito. Interpretação oposta — a incidência plena e imediata em todos os entes — é apegadinha mais comum do item."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que distingue a Base Nacional de Serviços Públicos das Cartas de Serviços ao Usuário?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "São componentes DISTINTOS (art. 18, I e II). A Base Nacional é a base de dados que reúne as informações necessárias sobre a oferta de serviços públicos de TODOS os prestadores, em padrão comum e interoperável (art. 19, parágrafo único). A Carta de Serviço ao Usuário é o documento que descreve o serviço prestado por um determinado órgão (regida pela Lei nº 13.460/2017). Uma é o catálogo nacional do que existe; a outra é a ficha do serviço de um órgão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão exige que o cidadão apresente uma segunda via de documento que o próprio sistema já tem. Como a Lei nº 14.129/2021 enquadra isso?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Como vedação de exigência de prova de fato já comprovado (art. 3º, XIII) e eliminação de exigência desnecessária (art. 24, IV, que manda eliminar, inclusive por interoperabilidade, as exigências desnecessárias ao usuário). Ao mesmo tempo, incide o art. 3º, XII, que impõe imposição imediata e de uma única vez das exigências necessárias, e o art. 3º, XV, que prescreve a presunção de boa-fé do usuário.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A Lei nº 14.129/2021 se aplica de imediato a todos os Estados, Municípios e Distrito Federal.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Pelo art. 2º, III, a aplicação aos demais entes federados depende da adoção dos comandos da Lei por meio de ATOS NORMATIVOS PRÓPRIOS, e o § 2º do mesmo artigo condiciona as referências a Estados, Municípios e DF à hipótese de cumprimento desse requisito. Interpretação oposta — a incidência plena e imediata em todos os entes — é apegadinha mais comum do item.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u2-t3-s1",
+      "titulo": "A distinção obrigatória: publicidade administrativa e divulgação irrestrita de dados pessoais, com limites e exceções",
+      "topicoTitulo": "Publicidade administrativa x divulgação irrestrita de dados pessoais, comparações e síntese",
+      "topicoId": "modulo-6-unidade-2-topico-3",
+      "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno distinguirá publicidade administrativa de divulgação irrestrita de dados pessoais, identificará os limites que incidem sobre cada uma e dominará as exceções legais que conciliam transparência e proteção de dados.",
+      "conteudo": "ESTA É A DISTINÇÃO CENTRAL DA UNIDADE. PUBLICIDADE ADMINISTRATIVA é a divulgação oficial, pelo próprio órgão, de informações públicas, por meio dos canais oficiais (sítio do órgão, portal de transparência, diário oficial), com finalidade de informar o cidadão e permitir o controle social. Fundamentos: art. 5º, XXXIII, da Constituição (verificado em 2026-10-21); art. 3º, I e II, e art. 8º da Lei nº 12.527/2011; art. 29 da Lei nº 14.129/2021. Características: é dever de ofício, o conteúdo é o que é público por natureza (competências, despesas, licitações, contratos, programas, indicadores), e a rigor é o sigilo que se protege, não a pessoa. DIVULGAÇÃO IRRESTRITA DE DADOS PESSOAIS é a disponibilização ampla, indiscriminada e sem ponderação de dados que identificam ou permitam identificar pessoas, sem base legal para o tratamento, sem finalidade definida, sem minimização e sem proteção — como a publicação de uma lista com nome, CPF, endereço e diagnóstico de beneficiários, ou a difusão de cadastro de usuários em post de rede social. Ela é VEDADA, e a vedação decorre de um conjunto de dispositivos, não de uma fórmula única: (a) art. 31 da Lei nº 12.527/2011 — o tratamento das informações pessoais deve ser feito de forma transparente e com respeito à intimidade, vida privada, honra e imagem, bem como às liberdades e garantias individuais; o § 1º, I, limita o acesso às informações relativas à intimidade, vida privada, honra e imagem a agentes públicos legalmente autorizados e à própria pessoa, pelo prazo máximo de 100 ANOS a contar da data de produção, INDEPENDENTEMENTE DE CLASSIFICAÇÃO DE SIGILO; o § 1º, II, admite divulgação ou acesso por terceiros DIANTE DE PREVISÃO LEGAL OU CONSENTIMENTO EXPRESSO da pessoa; o § 2º responsabiliza quem obtiver acesso pelo uso indevido; o § 4º veda invocar a restrição de acesso a informação relativa à vida privada, honra e imagem para PREJUDICAR PROCESSO DE APURAÇÃO DE IRREGULARIDADES em que o titular esteja envolvido, bem como em ações de recuperação de fatos históricos relevantes. (b) LGPD (Lei nº 13.709/2018, verificada em 2026-10-20 quanto aos arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46): art. 5º, I — dado pessoal é o relativo a pessoa natural identificada ou identificável; art. 5º, II — dado pessoal sensível inclui os relativos à origem racial ou étnica, convicção religiosa, opinião política, filiação sindical e dado sobre saúde; art. 5º, III — dado anonimizado é aquele que, por meio de técnicas de anonimização razoavelmente disponíveis, não pode ser associado a uma pessoa, considerando os meios técnicos e os custos para tanto; art. 4º — requisitos de tratamento; art. 46 — medidas de segurança técnicas e administrativas aptas. (c) Lei nº 14.129/2021: art. 1º, parágrafo único, e art. 29, § 1º, VIII — respeito à privacidade dos dados pessoais e sensíveis, mesmo na transparência ativa; art. 30, § 6º — só são automaticamente passíveis de abertura as bases que NÃO contenham informações protegidas por lei. (d) art. 23 da Lei nº 12.527/2011 — hipóteses de sigilo legal (imprescindibilidade para a segurança da sociedade e do Estado). LIMITES E EXCEÇÕES QUE CONCILIAM OS DOIS REGIMES (o que a prova e a prática exigem saber): (1) ANONIMIZAÇÃO E AGREGAÇÃO — o art. 36 da Lei nº 14.129/2021 autoriza disponibilizar, em transparência ativa, dados de pessoas físicas e jurídicas para fins de PESQUISA ACADÊMICA e de MONITORAMENTO E AVALIAÇÃO DE POLÍTICAS PÚBLICAS, DESDE QUE ANONIMIZADOS antes da disponibilização os dados protegidos por sigilo ou com restrição de acesso; o art. 31, § 3º, II, da LAI admite a realização de estatísticas e pesquisas científicas de evidente interesse público ou geral, previsto em lei, SENDO VEDADA A IDENTIFICAÇÃO da pessoa; a LGPD (art. 5º, III) define o dado anonimizado e trata de forma diferente do dado pseudonimizado. (2) CONSENTIMENTO OU PREVISÃO LEGAL — art. 31, § 1º, II, da LAI; e as hipóteses de dispensa de consentimento do art. 31, § 3º, da LAI: (I) prevenção e diagnóstico médico, quando a pessoa for física ou legalmente incapaz e para uso único e exclusivamente médico; (II) estatísticas e pesquisas científicas de evidente interesse público ou geral, previsto em lei, vedada a identificação; (III) cumprimento de ordem judicial; (IV) defesa de direitos humanos; (V) proteção do interesse público e geral preponderante. (3) ACESSO PARCIAL — o art. 7º, § 2º, da LAI assegura o acesso à parte não sigilosa por certidão, extrato ou cópia com ocultação da parte sob sigilo; o art. 7º, § 3º, assegura o acesso ao fundamento do ato decisório. (4) NÃO BARREIRA A TUTELA DE DIREITOS FUNDAMENTAIS — o art. 21 da LAI proíbe negar acesso a informação necessária à tutela judicial ou administrativa de direitos fundamentais, e seu parágrafo único veda restrição a informações sobre condutas que impliquem violação de direitos humanos por agentes públicos ou a mando de autoridades públicas. (5) DADOS FUNCIONAIS DO SERVIDOR — a publicidade institucional dos dados funcionais (nome, cargo, remuneração, vínculos) é exercício do princípio da publicidade e está prevista no art. 29, § 2º, VII, da Lei nº 14.129/2021; não se confunde com a divulgação irrestrita de dados pessoais de cidadãos. (6) DADOS AGREGADOS E INDICADORES — o art. 29, § 1º, V, da Lei nº 14.129/2021 exige que as bases sejam disponibilizadas na forma primária com o maior grau de granularidade possível OU referenciando bases primárias quando agregadas — a agregação é a técnica que permite granularidade sem identificação. REGRA DE DECISÃO (protocolo de 5 perguntas antes de publicar): (1) o dado é pessoal? (2) há base legal ou consentimento? (3) há finalidade de interesse público? (4) a identificação é necessária? (5) a anonimização/agregação resolve? Se (1) for sim e (2) for não, não há publicação; se (2) for sim, verificar se a finalidade é compatível e se o dado sensível exige hipótese própria. RESUMO DA DISTINÇÃO EM UMA FRASE: publicidade administrativa divulga o que é público do órgão (dever de transparência); divulgação irrestrita de dados pessoais expõe o que é da pessoa (proteção de dados pessoais), e só se legitima por base legal, finalidade, necessidade e, quando se abre base, anonimização.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O órgão publica em seu portal a relação de servidores com nome, cargo, remuneração e vínculos. Isso é publicidade administrativa ou divulgação irrestrita de dados pessoais?",
+          "resposta": "Publicidade administrativa. São dados funcionais de agentes públicos, cuja divulgação é prevista no art. 29, § 2º, VII, da Lei nº 14.129/2021, e integra o regime de publicidade do art. 8º da Lei nº 12.527/2011. Não há, nisso, divulgação de dados pessoais de cidadãos: o alvo da divulgação é a estrutura remuneratória e de pessoal do órgão, e o fundamento é o dever de transparência e de controle social."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Pesquisador pede acesso à base do projeto de apoio social com nome, CPF, valor e condições do grupo familiar. Como o órgão deve agir?",
+          "resposta": "A base contém dados pessoais (nome e CPF). O caminho é o art. 36 da Lei nº 14.129/2021 (dados anonimizados para pesquisa acadêmica e monitoramento e avaliação de políticas públicas) combinado com o art. 31, § 3º, II, da Lei nº 12.527/2011 (estatísticas e pesquisas científicas de evidente interesse público ou geral, com vedação de identificação). O órgão deve: (1) verificar se a pesquisa é de interesse público ou geral e se o pedido é legítimo; (2) produzir versão anonimizada ou agregada, com método e registro da supressão; (3) entregar a versão compatível e, se houver retenção, motivar a retenção com base legal específica, informar o teor integral da negativa (art. 14) e o caminho recursal (art. 11, § 4º). Entregar a base com CPF e nome é divulgação irrestrita de dados pessoais."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como a publicidade é preceito geral, o órgão deve publicar a lista completa de beneficiários de benefício social, para fins de transparência.'",
+          "correcao": "Errado, e é a confusão mais importante desta unidade. A publicidade é preceito geral QUANTO AO QUE É PÚBLICO; o que é pessoal exige base legal e proteção (art. 31 da Lei nº 12.527/2011; LGPD, art. 5º, I e II, verificada em 2026-10-20). A versão tecnicamente correta é: «o órgão divulga indicadores agregados e, para pesquisa, versões anonimizadas (art. 36 da Lei nº 14.129/2021); a base identificável só sai com previsão legal ou consentimento (art. 31, § 1º, II, da LAI) e, nas hipóteses do art. 31, § 3º, com as vedações ali contidas»."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O art. 31, § 1º, I, da Lei nº 12.527/2011 limita o acesso às informações pessoais relativas à intimidade, vida privada, honra e imagem, independentemente de classificação de sigilo.",
+          "resposta": "Certo. A informação pessoal tem regime próprio, que não se resolve pela classificação de sigilo: o acesso fica restrito a agentes públicos legalmente autorizados e à pessoa a que se refere, pelo prazo máximo de 100 anos a contar da data de produção."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São mecanismos que conciliam transparência e proteção de dados pessoais: A) anonimização antes da disponibilização (art. 36 da Lei nº 14.129/2021); B) acesso parcial com ocultação da parte sob sigilo (art. 7º, § 2º, da LAI); C) consentimento expresso ou previsão legal (art. 31, § 1º, II, da LAI); D) publicação da base completa em formato CSV.",
+          "resposta": "A, B e C. O item D é exatamente a divulgação irrestrita que o regime veda."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir publicidade administrativa de divulgação irrestrita de dados pessoais, identificará os limites que incidem sobre cada uma e dominará as exceções legais que conciliam transparência e proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "75RqMrSbenM",
+          "titulo": "Transparência e imparcialidade nos usos da inteligência artificial no âmbito do serviço público",
+          "canal": "Thiago Nobrega | Direito Administrativo",
+          "urlOriginal": "https://www.youtube.com/watch?v=75RqMrSbenM",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/75RqMrSbenM",
+          "descricao": "Videoaula jurídica sobre transparência e imparcialidade no uso de inteligência artificial no serviço público. Aborda os princípios constitucionais da Administração Pública (legalidade, impessoalidade, moralidade, publicidade, eficiência) aplicados a sistemas algorítmicos, o dever de explicabilidade das decisões automatizadas, auditoria algorítmica, vieses em dados de treino, discriminação indireta, e a necessidade de supervisão humana e canais de contestação. Fundamenta-se na Lei nº 14.129/2021, LGPD e jurisprudência do TCU e STF sobre automação administrativa.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá publicidade administrativa de divulgação irrestrita de dados pessoais, identificará os limites que incidem sobre cada uma e dominará as exceções legais que conciliam transparência e proteção de dados"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ESTA É A DISTINÇÃO CENTRAL DA UNIDADE. PUBLICIDADE ADMINISTRATIVA é a divulgação oficial, pelo próprio órgão, de informações públicas, por meio dos canais oficiais (sítio do órgão, portal de transparência, diário oficial), com finalidade de informar o cidadão e permitir o controle social. Fundamentos: art. 5º, XXXIII, da Constituição (verificado em 2026-10-21); art. 3º, I e II, e art. 8º da Lei nº 12.527/2011; art. 29 da Lei nº 14.129/2021. Características: é dever de ofício, o conteúdo é o que …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a A distinção obrigatória: publicidade administrativa e divulgação irrestrita de dados pessoais, com limites e exceções",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como a publicidade é preceito geral, o órgão deve publicar a lista completa de beneficiários de benefício social, para fins de transparência.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado, e é a confusão mais importante desta unidade. A publicidade é preceito geral QUANTO AO QUE É PÚBLICO; o que é pessoal exige base legal e proteção (art. 31 da Lei nº 12.527/2011; LGPD, art. 5º, I e II, verificada em 2026-10-20). A versão tecnicamente correta é: «o órgão divulga indicadores agregados e, para pesquisa, versões anonimizadas (art. 36 da Lei nº 14.129/2021); a base identificável só sai com previsão legal ou consentimento (art. 31, § 1º, II, da LAI) e, nas hipóteses do art. 31, § 3º, com as vedações ali contidas»."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O órgão publica em seu portal a relação de servidores com nome, cargo, remuneração e vínculos. Isso é publicidade administrativa ou divulgação irrestrita de dados pessoais?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Publicidade administrativa. São dados funcionais de agentes públicos, cuja divulgação é prevista no art. 29, § 2º, VII, da Lei nº 14.129/2021, e integra o regime de publicidade do art. 8º da Lei nº 12.527/2011. Não há, nisso, divulgação de dados pessoais de cidadãos: o alvo da divulgação é a estrutura remuneratória e de pessoal do órgão, e o fundamento é o dever de transparência e de controle social.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Pesquisador pede acesso à base do projeto de apoio social com nome, CPF, valor e condições do grupo familiar. Como o órgão deve agir?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A base contém dados pessoais (nome e CPF). O caminho é o art. 36 da Lei nº 14.129/2021 (dados anonimizados para pesquisa acadêmica e monitoramento e avaliação de políticas públicas) combinado com o art. 31, § 3º, II, da Lei nº 12.527/2011 (estatísticas e pesquisas científicas de evidente interesse público ou geral, com vedação de identificação). O órgão deve: (1) verificar se a pesquisa é de interesse público ou geral e se o pedido é legítimo; (2) produzir versão anonimizada ou agregada, com método e registro da supressão; (3) entregar a versão compatível e, se houver retenção, motivar a retenção com base legal específica, informar o teor integral da negativa (art. 14) e o caminho recursal (art. 11, § 4º). Entregar a base com CPF e nome é divulgação irrestrita de dados pessoais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como a publicidade é preceito geral, o órgão deve publicar a lista completa de beneficiários de benefício social, para fins de transparência.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado, e é a confusão mais importante desta unidade. A publicidade é preceito geral QUANTO AO QUE É PÚBLICO; o que é pessoal exige base legal e proteção (art. 31 da Lei nº 12.527/2011; LGPD, art. 5º, I e II, verificada em 2026-10-20). A versão tecnicamente correta é: «o órgão divulga indicadores agregados e, para pesquisa, versões anonimizadas (art. 36 da Lei nº 14.129/2021); a base identificável só sai com previsão legal ou consentimento (art. 31, § 1º, II, da LAI) e, nas hipóteses do art. 31, § 3º, com as vedações ali contidas».",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

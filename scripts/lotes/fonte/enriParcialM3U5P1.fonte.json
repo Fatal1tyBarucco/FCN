@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 5,
+    "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+    "parte": 1,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U5P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U5P1.js",
+    "idsCompletos": [
+      "m3-u5-t1-s1",
+      "m3-u5-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u5-t1-s1",
+      "titulo": "Zoombombing e intrusão em reuniões",
+      "topicoTitulo": "Reuniões inseguras: casos e vetores de risco",
+      "topicoId": "modulo-3-unidade-5-topico-1",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno analisará casos de intrusão em reuniões online.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é intrusão em reuniões (zoombombing); (b) os vetores de entrada; (c) as mitigações; (d) como responder a um incidente. POR QUE O CONHECIMENTO É IMPORTANTE: reuniões invadidas causam dano à imagem e vazamento; a prova cobra causas e controles. PRÉ-REQUISITOS: unidade 4.1 (lobby, moderação e autenticação). OBJETIVOS OBSERVÁVEIS: (1) definir intrusão em reunião; (2) citar vetores; (3) aplicar mitigações; (4) executar contenção. COMPETÊNCIAS DESENVOLVIDAS: prevenção e resposta a incidentes de reunião. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (controles); unidade 5.3 (resposta a incidentes); Módulo 4 (segurança). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: zoombombing é a entrada de pessoas não autorizadas em uma reunião online para exibir conteúdo ofensivo, interromper ou coletar informação. Os vetores típicos são: link da reunião publicado em redes sociais ou canais abertos; ausência de senha; lobby desativado; configurações permissivas (qualquer um compartilha tela, entra antes do anfitrião); e reuniões recorrentes com endereço fixo e divulgado. As mitigações combinam: senha; lobby (sala de espera); login obrigatório; restrição do compartilhamento de tela ao anfitrião; impedir que participantes entrem antes do anfitrião; bloqueio da reunião após o início; e monitoramento ativo por coanfitriões. Diante de uma intrusão, a contenção envolve remover o intruso, bloquear novas entradas, eventualmente encerrar e recriar a reunião com link novo, e registrar o ocorrido. Em contexto institucional, o incidente deve ser documentado e, se houver vazamento de dados, comunicado conforme a política e a LGPD. Caso ilustrativo hipotético: reunião pública sem senha e sem lobby foi invadida por desconhecidos que compartilharam conteúdo ofensivo; a causa foi o link divulgado sem controles de acesso.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender por que reuniões abertas são alvo.\n- Nível intermediário: associar vetor e mitigação correspondente.\n- Nível avançado: configurar uma reunião resiliente a link divulgado.\n- Nível especialista: conduzir a contenção e o registro de um incidente de intrusão.\nCOMPARAÇÕES CRÍTICAS:\n- reunião aberta x reunião com lobby: a primeira aceita qualquer pessoa com o link; a segunda exige aprovação — muda o risco.\n- compartilhar para todos x restrito ao anfitrião: a primeira permite abuso da tela; a segunda o bloqueia.\n- prevenir x remediar: a prevenção reduz a chance; a remediação limita o dano — ambas são necessárias.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Só reuniões públicas são invadidas.\" — Motivo: links internos também vazam — Versão tecnicamente correta: aplicar controles em todas.\n- Afirmação errada: \"Expulsar o intruso encerra o incidente.\" — Motivo: pode haver registro/coleta — Versão tecnicamente correta: documentar e avaliar impacto.\n- Afirmação errada: \"A senha sozinha impede a invasão.\" — Motivo: a senha vaza com o link — Versão tecnicamente correta: combinar senha e lobby.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: zoombombing, vetor, senha, lobby, login, contenção, registro.\n- Regras e fórmulas: link divulgado sem controle = risco; senha + lobby + restrição de tela = mitigação.\n- Exceções: reuniões internas também podem ser alvo.\n- Palavras-chave: intrusão, link, lobby, remoção, incidente.\n- Checklist de domínio: (1) Defino intrusão? (2) Cito vetores? (3) Aplico mitigações? (4) Executo contenção?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é zoombombing? (2) Cite dois vetores. (3) Cite três mitigações. (4) O que fazer diante de uma invasão? (5) Por que registrar o incidente?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que é zoombombing?",
+          "resposta": "Intrusão não autorizada em reunião online, geralmente para compartilhar conteúdo ofensivo ou perturbar."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como prevenir zoombombing?",
+          "resposta": "Não publicar links publicamente; usar senha e lobby; exigir login; restringir compartilhamento de tela; monitorar participantes."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Reuniões internas não precisam de senha.'",
+          "correcao": "Depende do risco e da política; reuniões com dados sensíveis devem ter controles mesmo internas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Publicar link de reunião em rede social aumenta risco de intrusão.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual controle mitiga zoombombing? A) Link público; B) Lobby + senha; C) Chat aberto; D) Compartilhamento livre.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar casos de intrusão em reuniões online, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará casos de intrusão em reuniões online"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Zoombombing: intrusos entram em reuniões públicas e compartilham conteúdo ofensivo ou roubam informações. Vetores: links publicados em redes sociais, ausência de senha/lobby, configurações permissivas. Mitigações: senha, lobby, login obrigatório, restrição de compartilhamento de tela, desativar entrada após início, monitoramento ativo. Caso ilustrativo (hipotético): reunião pública sem senha invadida por intrusos que compartilharam conteúdo ofensivo; causa: link divulgado publicamente e ausência…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Zoombombing e intrusão em reuniões",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Reuniões internas não precisam de senha.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Depende do risco e da política; reuniões com dados sensíveis devem ter controles mesmo internas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que é zoombombing?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Intrusão não autorizada em reunião online, geralmente para compartilhar conteúdo ofensivo ou perturbar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como prevenir zoombombing?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não publicar links publicamente; usar senha e lobby; exigir login; restringir compartilhamento de tela; monitorar participantes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Reuniões internas não precisam de senha.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Depende do risco e da política; reuniões com dados sensíveis devem ter controles mesmo internas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u5-t1-s2",
+      "titulo": "Compartilhamento acidental de tela",
+      "topicoTitulo": "Reuniões inseguras: casos e vetores de risco",
+      "topicoId": "modulo-3-unidade-5-topico-1",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno analisará casos de exposição acidental via compartilhamento de tela.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como a tela expõe dados sem intenção; (b) os casos típicos; (c) as mitigações; (d) o padrão de prevenção. POR QUE O CONHECIMENTO É IMPORTANTE: exposição acidental é causa frequente de incidente; a prova cobra causas e prevenção. PRÉ-REQUISITOS: unidade 4.2 (compartilhamento de tela). OBJETIVOS OBSERVÁVEIS: (1) explicar como a exposição ocorre; (2) citar casos; (3) aplicar mitigações; (4) adotar rotina de prevenção. COMPETÊNCIAS DESENVOLVIDAS: prevenção de vazamento; condução segura. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.2 (controles); unidade 5.1 (gravação); Módulo 4 (DLP). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a exposição acidental ocorre quando o compartilhamento de tela revela informação que não se pretendia mostrar. Casos típicos: compartilhar a tela inteira e uma notificação de mensagem exibir dado pessoal; manter abas com documentos confidenciais visíveis; mostrar uma janela de planilha com dados de terceiros; revelar o histórico de navegação ou a área de trabalho com arquivos sensíveis. A causa raiz costuma ser a combinação de notificações ativas com o compartilhamento de tela inteira. As mitigações são procedimentais e simples: compartilhar apenas a janela ou o aplicativo específico; ativar o modo \"não perturbe\" ou desativar notificações; fechar abas e programas sensíveis antes; revisar o que está visível; e encerrar o compartilhamento ao terminar. Em ambiente institucional, separar contas (uma de trabalho, usada nas reuniões) reduz a chance de aparecer conteúdo pessoal. Caso ilustrativo hipotético: durante a reunião, uma notificação exibiu mensagem com dado de cliente; a causa foi o compartilhamento de tela inteira com notificações ativas.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: perceber que a tela mostra mais do que se pretende.\n- Nível intermediário: identificar as causas da exposição acidental.\n- Nível avançado: estabelecer uma rotina pré-compartilhamento.\n- Nível especialista: revisar um incidente e propor controles técnicos e procedimentais.\nCOMPARAÇÕES CRÍTICAS:\n- exposição intencional x acidental: a primeira é deliberada; a segunda decorre de falta de controle — a prevenção difere.\n- compartilhar aplicativo x tela inteira: o primeiro reduz a superfície; a segunda a amplia.\n- notificações x modo não perturbe: as notificações são a causa; o modo as elimina.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Compartilhar só a tela do aplicativo em uso é o mais seguro.\" — Motivo: ainda pode exibir janelas sobrepostas — Versão tecnicamente correta: compartilhar a janela específica.\n- Afirmação errada: \"Fechar a aba sensível resolve tudo.\" — Motivo: notificações e outros programas podem vazar — Versão tecnicamente correta: silenciar notificações e revisar a tela.\n- Afirmação errada: \"O vazamento acidental não tem consequência.\" — Motivo: pode configurar incidente de dados pessoais — Versão tecnicamente correta: tratar e registrar conforme a política.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: exposição acidental, notificação, tela inteira, janela específica, não perturbe.\n- Regras e fórmulas: janela específica + notificações off + revisão = prevenção.\n- Exceções: contas separadas reduzem exposição pessoal.\n- Palavras-chave: vazamento, notificação, aba, tela, revisão.\n- Checklist de domínio: (1) Explico como ocorre? (2) Cito casos? (3) Aplico mitigações? (4) Adoto rotina?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como ocorre a exposição acidental? (2) Qual a causa raiz típica? (3) Cite três mitigações. (4) Por que separar contas? (5) Exposição acidental tem consequência?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Como ocorre exposição acidental por notificação?",
+          "resposta": "Ao compartilhar tela inteira, notificações pop-up exibem conteúdo para todos os participantes."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Quais passos antes de compartilhar tela?",
+          "resposta": "Fechar abas sensíveis, desativar notificações, compartilhar apenas janela necessária, verificar com participantes."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Notificações não aparecem para quem vê a tela compartilhada.'",
+          "correcao": "Errado. Notificações aparecem na tela compartilhada se estiverem ativas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Compartilhar janela específica reduz exposição acidental.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática reduz risco de exposição por notificação? A) Deixar notificações ativas; B) Modo 'não perturbe'; C) Compartilhar tela inteira; D) Não verificar abas.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar casos de exposição acidental via compartilhamento de tela, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará casos de exposição acidental via compartilhamento de tela"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Caso ilustrativo (hipotético): anfitrião compartilha tela inteira e notificação exibe mensagem com dado pessoal de cliente; causa: notificações ativas e compartilhamento de tela inteira. Mitigações: compartilhar janela específica; modo 'não perturbe'; revisar antes; usar conta de trabalho separada. Outro caso: abas com documentos confidenciais visíveis; mitigação: fechar abas sensíveis antes.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Compartilhamento acidental de tela",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Notificações não aparecem para quem vê a tela compartilhada.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Notificações aparecem na tela compartilhada se estiverem ativas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Como ocorre exposição acidental por notificação?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ao compartilhar tela inteira, notificações pop-up exibem conteúdo para todos os participantes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Quais passos antes de compartilhar tela?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Fechar abas sensíveis, desativar notificações, compartilhar apenas janela necessária, verificar com participantes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Notificações não aparecem para quem vê a tela compartilhada.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Notificações aparecem na tela compartilhada se estiverem ativas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

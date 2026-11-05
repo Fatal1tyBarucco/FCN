@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 1,
+    "unidadeTitulo": "8.1 Fundamentos Visuais",
+    "parte": 2,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U1P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U1P2.js",
+    "idsCompletos": [
+      "m8-u1-t2-s1",
+      "m8-u1-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u1-t2-s1",
+      "titulo": "Cores, contraste e hierarquia visual",
+      "topicoTitulo": "Cor, hierarquia e acessibilidade",
+      "topicoId": "modulo-8-unidade-1-topico-2",
+      "unidadeTitulo": "8.1 Fundamentos Visuais",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno selecionará paleta conforme o tipo de variável e construirá hierarquia por contraste.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) uso de cores em visualização; (b) contraste; (c) hierarquia visual; (d) acessibilidade de cores. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra o uso adequado de cores e contraste; confundir estética com acessibilidade muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de visualização. OBJETIVOS OBSERVÁVEIS: (1) escolher paleta adequada; (2) garantir contraste suficiente; (3) estabelecer hierarquia visual. COMPETÊNCIAS DESENVOLVIDAS: desenho de visualização acessível. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (Gestalt); Módulo 4 (acessibilidade). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: cores devem ter função (diferenciar séries, destacar, indicar valor); paletas categóricas, sequenciais e divergentes; contraste suficiente entre texto e fundo e entre séries; hierarquia visual por tamanho, cor e posição; acessibilidade: nunca depender apenas de cor (usar redundância), evitar vermelho/verde como única distinção, testar em escala de cinza. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: usar cores com propósito e contraste suficiente.\n- Nível intermediário: escolher paleta conforme o tipo de dado.\n- Nível avançado: garantir acessibilidade (redundância, escala de cinza).\n- Nível especialista: auditar um painel quanto a cores e contraste.\nCOMPARAÇÕES CRÍTICAS:\n- paleta categórica x sequencial: a primeira diferencia categorias; a segunda mostra magnitude.\n- cor como único canal x redundância: depender só de cor exclui pessoas com deficiência de visão de cores.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"vermelho/verde é a melhor combinação\" — Motivo: é a mais problemática para daltonismo — Versão tecnicamente correta: usar redundância.\n- Afirmação errada: \"mais cores melhoram a leitura\" — Motivo: ruído visual — Versão tecnicamente correta: mínimo necessário.\n- Afirmação errada: \"contraste alto sempre é suficiente\" — Motivo: contraste resolve luminosidade, não dependência de matiz — Versão tecnicamente correta: combinar cor com rótulo/forma.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: cor, contraste, hierarquia, paleta, acessibilidade, redundância.\n- Regras e mecanismos: cor com função; contraste suficiente; nunca depender apenas de cor.\n- Exceções: em impressão preto-e-branco, usar padrões.\n- Palavras-chave: cor, contraste, hierarquia, paleta, acessibilidade, redundância.\n- Checklist de domínio: (1) Escolho paleta adequada? (2) Garanto contraste? (3) Estabeleço hierarquia? (4) Garanto acessibilidade?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual a função da cor em visualização? (2) O que é contraste suficiente? (3) Como estabelecer hierarquia visual? (4) Por que nunca depender apenas de cor? (5) Como testar acessibilidade de cores?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Variável: número de atendimentos por bairro, de 5 a 120. Que tipo de paleta usar?",
+          "resposta": "Sequencial (uma cor em degradê de luminosidade): a magnitude é contínua e ordenada, e a percepção de mais-ou-menos acompanha o escurecimento. Usar cores categóricas distintas para cada faixa de valor destruiria a ordem perceptiva e complicaria a leitura."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Mapa de desempenho contra meta: 3 unidades acima, 7 abaixo, 2 na meta. Que paleta?",
+          "resposta": "Divergente com ponto neutro na meta: uma cor para acima, outra para abaixo e neutro (cinza claro) para 'na meta'. O ponto neutro carrega a informação de referência, que é exatamente o que o leitor precisa localizar primeiro."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Paleta arco-íris é a melhor porque aproveita todas as cores disponíveis.'",
+          "correcao": "Errado. Muitas cores fortes simultâneas nivelam a hierarquia, dificultam distinguir séries parecidas e cansam a leitura. A paleta deve ser dimensionada pelo número de categorias relevantes e pela tarefa — normalmente poucas cores, bem escolhidas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em valores que cruzam uma referência central (meta), a paleta divergente é adequada.",
+          "resposta": "Certo. Duas cores em torno de um neutro comunicam o sinal em relação à referência."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para magnitudes contínuas ordenadas, a paleta indicada é: A) categórica; B) sequencial; C) arco-íris decorativa; D) apenas preto e branco.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de selecionar paleta conforme o tipo de variável e construirá hierarquia por contraste, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "selecionará paleta conforme o tipo de variável e construirá hierarquia por contraste"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) uso de cores em visualização; (b) contraste; (c) hierarquia visual; (d) acessibilidade de cores. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra o uso adequado de cores e contraste; confundir estética com acessibilidade muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de visualização. OBJETIVOS OBSERVÁVEIS: (1) escolher paleta adequada; (2) garantir contraste suficiente; (3) estabelecer hierarquia visual. COMPETÊNCIAS DESENVOLVIDAS: desenho…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Cores, contraste e hierarquia visual",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Paleta arco-íris é a melhor porque aproveita todas as cores disponíveis.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Muitas cores fortes simultâneas nivelam a hierarquia, dificultam distinguir séries parecidas e cansam a leitura. A paleta deve ser dimensionada pelo número de categorias relevantes e pela tarefa — normalmente poucas cores, bem escolhidas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Variável: número de atendimentos por bairro, de 5 a 120. Que tipo de paleta usar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Sequencial (uma cor em degradê de luminosidade): a magnitude é contínua e ordenada, e a percepção de mais-ou-menos acompanha o escurecimento. Usar cores categóricas distintas para cada faixa de valor destruiria a ordem perceptiva e complicaria a leitura.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Mapa de desempenho contra meta: 3 unidades acima, 7 abaixo, 2 na meta. Que paleta?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Divergente com ponto neutro na meta: uma cor para acima, outra para abaixo e neutro (cinza claro) para 'na meta'. O ponto neutro carrega a informação de referência, que é exatamente o que o leitor precisa localizar primeiro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Paleta arco-íris é a melhor porque aproveita todas as cores disponíveis.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Muitas cores fortes simultâneas nivelam a hierarquia, dificultam distinguir séries parecidas e cansam a leitura. A paleta deve ser dimensionada pelo número de categorias relevantes e pela tarefa — normalmente poucas cores, bem escolhidas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u1-t2-s2",
+      "titulo": "Acessibilidade em visualizações",
+      "topicoTitulo": "Cor, hierarquia e acessibilidade",
+      "topicoId": "modulo-8-unidade-1-topico-2",
+      "unidadeTitulo": "8.1 Fundamentos Visuais",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno produzirá gráficos legíveis por pessoas com deficiência visual e por leitores de tela.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) acessibilidade em visualizações (texto alternativo, tabela equivalente, fonte legível, navegação por teclado); (b) inclusão digital; (c) testes de acessibilidade. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra acessibilidade como requisito de visualização pública; um gráfico inacessível é informação negada. PRÉ-REQUISITOS: conceitos de acessibilidade (Módulo 4/Módulo 6). OBJETIVOS OBSERVÁVEIS: (1) listar requisitos de acessibilidade de visualização; (2) descrever texto alternativo e tabela equivalente; (3) planejar teste de acessibilidade. COMPETÊNCIAS DESENVOLVIDAS: desenho de visualização inclusiva. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (fundamentos); Módulo 6 (acessibilidade legal). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: acessibilidade como condição de que a informação chegue a todo o público; requisitos: texto alternativo (descrição com quem, o quê, quando, unidade, mensagem principal), tabela equivalente com os dados subjacentes, fonte legível sem rotação de rótulos longos, contraste suficiente, navegação por teclado, ausência de animação obrigatória, respeito a preferências de movimento; inclusão digital (conexão, equipamento, habilidade); testes: escala de cinza, leitor de tela, navegação por teclado. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer a necessidade de texto alternativo.\n- Nível intermediário: descrever os requisitos de acessibilidade de visualização.\n- Nível avançado: planejar teste de acessibilidade.\n- Nível especialista: auditar um painel quanto à acessibilidade.\nCOMPARAÇÕES CRÍTICAS:\n- acessibilidade x estética: acessibilidade é condição de uso; estética é preferência.\n- texto alternativo x tabela equivalente: o primeiro descreve; a segunda fornece os dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"acessibilidade é opcional em visualização\" — Motivo: é condição de uso — Versão tecnicamente correta: obrigatória.\n- Afirmação errada: \"texto alternativo genérico basta\" — Motivo: deve descrever a mensagem — Versão tecnicamente correta: descrição específica.\n- Afirmação errada: \"teste automatizado é suficiente\" — Motivo: não avalia clareza e usabilidade — Versão tecnicamente correta: combinar automático, manual e usuário.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: acessibilidade, texto alternativo, tabela equivalente, inclusão digital, teste.\n- Regras e mecanismos: todo gráfico deve ter descrição e dados subjacentes; contraste e fonte legíveis.\n- Exceções: gráficos decorativos podem ter descrição simplificada.\n- Palavras-chave: acessibilidade, texto alternativo, tabela equivalente, inclusão, teste.\n- Checklist de domínio: (1) Forneço texto alternativo? (2) Forneço tabela equivalente? (3) Garanto contraste e fonte? (4) Testo acessibilidade?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é texto alternativo em gráfico? (2) O que é tabela equivalente? (3) Quais os requisitos de acessibilidade? (4) Como testar? (5) O que é inclusão digital?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Gráfico usa vermelho = quedas e verde = altas, sem rótulos. Como tornar acessível?",
+          "resposta": "Adicionar redundância: rótulo de texto ('alta'/'queda'), seta ou padrão de preenchimento distinto, além da cor; e descrever no texto alternativo o critério. Assim, quem não distingue as matizes lê a informação pela forma ou pelo rótulo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Redigir texto alternativo para gráfico de linhas 'Atendimentos mensais da Central 1 e da Central 2, jan–jun/2026, escala de 0 a 4 mil atendimentos, com Central 1 ascendente e Central 2 estável'.",
+          "resposta": "O texto alternativo acima já é adequado: identifica o quê (atendimentos), quem (Central 1 e 2), período (jan–jun/2026), unidade (atendimentos), escala e a mensagem principal (ascensão de uma, estabilidade da outra). Acessível é isso: compreensão sem depender da visão do gráfico."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se as cores têm bom contraste, o gráfico é acessível.'",
+          "correcao": "Errado. Contraste ajuda, mas acessibilidade exige mais: redundância além da cor, texto alternativo, dados subjacentes, legibilidade de fonte e ausência de dependência de animação. Contraste resolve luminosidade, não dependência de matiz."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Testar o gráfico convertido em escala de cinza é forma simples de detectar dependência excessiva da cor.",
+          "resposta": "Certo. Se categorias diferentes se tornam indistinguíveis em cinza, a informação não está redundante."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "O texto alternativo de um gráfico deve conter, no mínimo: A) apenas o nome do autor; B) quem, o quê, quando, unidade e mensagem principal; C) o código-fonte do painel; D) a paleta de cores usada.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de produzir gráficos legíveis por pessoas com deficiência visual e por leitores de tela, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "produzirá gráficos legíveis por pessoas com deficiência visual e por leitores de tela"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) acessibilidade em visualizações (texto alternativo, tabela equivalente, fonte legível, navegação por teclado); (b) inclusão digital; (c) testes de acessibilidade. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra acessibilidade como requisito de visualização pública; um gráfico inacessível é informação negada. PRÉ-REQUISITOS: conceitos de acessibilidade (Módulo 4/Módulo 6). OBJETIVOS OBSERVÁVEIS: (1) listar requisitos de acessibilidade de visua…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Acessibilidade em visualizações",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se as cores têm bom contraste, o gráfico é acessível.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Contraste ajuda, mas acessibilidade exige mais: redundância além da cor, texto alternativo, dados subjacentes, legibilidade de fonte e ausência de dependência de animação. Contraste resolve luminosidade, não dependência de matiz."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Gráfico usa vermelho = quedas e verde = altas, sem rótulos. Como tornar acessível?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Adicionar redundância: rótulo de texto ('alta'/'queda'), seta ou padrão de preenchimento distinto, além da cor; e descrever no texto alternativo o critério. Assim, quem não distingue as matizes lê a informação pela forma ou pelo rótulo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Redigir texto alternativo para gráfico de linhas 'Atendimentos mensais da Central 1 e da Central 2, jan–jun/2026, escala de 0 a 4 mil atendimentos, com Central 1 ascendente e Central 2 estável'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O texto alternativo acima já é adequado: identifica o quê (atendimentos), quem (Central 1 e 2), período (jan–jun/2026), unidade (atendimentos), escala e a mensagem principal (ascensão de uma, estabilidade da outra). Acessível é isso: compreensão sem depender da visão do gráfico.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se as cores têm bom contraste, o gráfico é acessível.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Contraste ajuda, mas acessibilidade exige mais: redundância além da cor, texto alternativo, dados subjacentes, legibilidade de fonte e ausência de dependência de animação. Contraste resolve luminosidade, não dependência de matiz.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

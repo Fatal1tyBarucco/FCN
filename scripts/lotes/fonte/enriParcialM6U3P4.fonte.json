@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 3,
+    "unidadeTitulo": "6.3 Proteção de dados pessoais, informações legalmente protegidas, segurança, rastreabilidade e responsabilização",
+    "parte": 4,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM6U3P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U3P4.js",
+    "idsCompletos": [
+      "m6-u3-t3-s4"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u3-t3-s4",
+      "titulo": "Comparações, pegadinhas, resumo estruturado e verificação de aprendizagem",
+      "topicoTitulo": "Segurança, rastreabilidade e responsabilização: exemplos, comparações, pegadinhas e síntese",
+      "topicoId": "modulo-6-unidade-3-topico-3",
+      "unidadeTitulo": "6.3 Proteção de dados pessoais, informações legalmente protegidas, segurança, rastreabilidade e responsabilização",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno distinguirá sigilo e proteção de dados pessoais, pseudonimização e anonimização, e segurança e responsabilização; identificará afirmações equivocadas frequentes e consolidará a unidade por recuperação ativa.",
+      "conteudo": "COMPARAÇÕES CRÍTICAS — (1) SIGILO x PROTEÇÃO DE DADOS PESSOAIS: o sigilo protege o interesse público (segurança da sociedade e do Estado) e se baseia nas hipóteses do art. 23 da LAI, com grau, prazo e ato formal; a proteção de dados pessoais protege o cidadão e incide sobre toda informação relativa a pessoa natural, independentemente de classificação (art. 31, § 1º, I). Consequência que muda o gabarito: dado pessoal não sigiloso continua protegido; sigilo não significa dispensa de proteção de dados. (2) ANONIMIZAÇÃO x PSEUDONIMIZAÇÃO: a primeira impede a associação razoável (art. 5º, III, da LGPD); a segunda permite associação por meios adicionais e mantém o status de dado pessoal. Consequência: só a anonimização autoriza abertura de base (art. 36 da Lei nº 14.129/2021). (3) SEGURANÇA x RESPONSABILIZAÇÃO: a segurança é o conjunto de medidas preventivas, detectivas, corretivas e compensatórias (Módulo 4); a responsabilização é o regime jurídico de imputação e de reparação (art. 34 da LAI). Consequência: o sucesso da segurança não exaure a responsabilização — um vazamento por negligência de processo gera responsabilidade mesmo com tecnologia adequada. (4) EVIDÊNCIA x IMPUTAÇÃO: a trilha comprova o fato; a imputação exige dolo ou culpa e enquadramento normativo. (5) CONTROLE PREVENTIVO x RASTREABILIDADE: o primeiro evita o evento; a segunda permite sabê-lo depois — a accountability depende da segunda, mesmo quando o primeiro falhou. PEGADINHAS — (a) «dado pessoal é o mesmo que sigiloso»: errado, são regimes autônomos (arts. 23 e 31 da LAI). (b) «anonimizar é trocar o nome por um código»: errado, é pseudonimização; a LGPD exige técnicas que comprometam a identificação razoavelmente (art. 5º, III). (c) «o art. 46 da LGPD exige criptografia»: errado, exige medidas técnicas E administrativas aptas. (d) «classificar é ato do gestor»: errado, exige competência do art. 27 e formalização do art. 28, com subdelegação vedada (art. 27, § 1º). (e) «o prazo de sigilo é o prazo do servidor»: errado, o prazo é do dado (art. 24, § 1º) e a reavaliação pode reduzi-lo. (f) «o sigilo da LAI substitui o segredo de justiça»: errado, o art. 22 preserva as demais hipóteses legais. (g) «a LGPD proíbe todo o tratamento de dados pessoais»: errado, o art. 4º da LGPD delimita a aplicação e o art. 18 assegura direitos; a vedação é de condutas abusivas específicas, não de todo uso legítimo. (h) «havendo incidente com dados, o órgão responde objetivamente»: impreciso — o art. 34 da LAI prevê responsabilidade do órgão pelos danos, com apuração de responsabilidade funcional nos casos de dolo ou culpa e direito de regresso. RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: dado pessoal, dado sensível, dado anonimizado, dado pseudonimizado, informação sigilosa, informação pessoal, sigilo administrativo, accountability. REGRAS: prazos de sigilo 25/15/5 anos e abertura automática (art. 24); prazo de 100 anos para informação pessoal de intimidade, vida privada, honra e imagem (art. 31, § 1º, I); tipos de decisão automatizada vedados em direito; dever de medidas técnicas e administrativas (art. 46 da LGPD); controles proporcionais ao risco (art. 48 da Lei nº 14.129/2021); conservação de dados de envio e recebimento por 5 anos (art. 43, V). FLUXO RESUMIDO DE RESPOSTA A INCIDENTE: conter; preservar evidência; avaliar extensão e risco aos titulares; comunicar internamente (encarregado e autoridade competente); decidir e documentar comunicação aos titulares e às autoridades; corrigir a causa; auditar; registrar no sistema de riscos. EXCEÇÕES E LIMITAÇÕES: exclusões de aplicação da LGPD (art. 4º); hipóteses de dispensa de consentimento (art. 31, § 3º, da LAI); vedação de uso da restrição para prejudicar apuração de irregularidades (art. 31, § 4º); não barreira à tutela de direitos fundamentais (art. 21); subdelegação vedada (art. 27, § 1º). PALAVRAS-CHAVE: minimização, finalidade, anonimização, pseudonimização, sigilo, classificação, prazo, trilha de auditoria, dolo, culpa, regresso, incidente, contenção, comunicação. CHECKLIST DE DOMÍNIO: (1) Quais os fundamentos da LGPD? (2) O que distingue dado anonimizado de pseudonimizado? (3) Quais os graus e prazos de sigilo? (4) O que o art. 31, § 4º, impede? (5) Quais os direitos do titular do art. 18? (6) O que o art. 46 exige e por que não basta criptografia? (7) Quais os elementos de uma trilha útil? (8) Qual a diferença entre prova de fato e imputação de culpa? VERIFICAÇÃO DE APRENDIZAGEM (recuperação ativa — 8 questões autorais): (Q1) Enumere os graus de sigilo e seus prazos. (Q2) Explique por que dado pessoal não sigiloso permanece protegido. (Q3) Dê um exemplo de pseudonimização e diga por que ele não autoriza abertura de base. (Q4) O que o art. 31, § 4º, da LAI veda? (Q5) Liste cinco direitos do art. 18 da LGPD. (Q6) Por que o art. 46 exige medidas administrativas além das técnicas? (Q7) Escreva seis elementos de uma trilha de auditoria que sustente apuração de dolo ou culpa. (Q8) Enumere as etapas de resposta a incidente com exposição de dados pessoais. CRITÉRIO DE DOMÍNIO: acerto integral em Q1, Q2, Q4 e Q6 e em ao menos 5 dos 8 itens.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Sem consultar o texto, escreva os graus de sigilo e os prazos correspondentes.",
+          "resposta": "Ultrassecreta: 25 anos. Secreta: 15 anos. Reservada: 5 anos. Os prazos contam da data de produção (art. 24, § 1º, da Lei nº 12.527/2011) e, transcorrido o prazo ou consumado o evento que defina o termo final, a informação torna-se automaticamente de acesso público (art. 24, § 4º)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Explique por que a pseudonimização não autoriza a abertura de base de dados.",
+          "resposta": "Porque a pseudonimização apenas substitui o identificador direto, mantendo a possibilidade de associação por meios adicionais — o dado permanece dado pessoal (art. 5º, I, da LGPD) e, por isso, a abertura depende de base legal específica. A abertura de base com dados pessoais exige anonimização efetiva (art. 5º, III, da LGPD; art. 36 da Lei nº 14.129/2021) ou hipótese legal de acesso (art. 31, § 1º, II, e § 3º, da LAI)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Por serem as medidas do art. 46 da LGPD técnicas e administrativas, a auditoria interna não pode cobrar o órgão por falhas de processo, apenas por falhas de tecnologia.'",
+          "correcao": "Errado. A auditoria interna (art. 49 da Lei nº 14.129/2021) avalia processos de governança, gestão de riscos e controle com abordagem baseada em risco — o que inclui processos administrativos, desenho de permissões, segregação de funções e desenho do fluxo de aprovação. Falha de processo é falha de segurança, não detalhe fora do escopo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O prazo de 100 anos do art. 31, § 1º, I, da Lei nº 12.527/2011 aplica-se às informações pessoais relativas à intimidade, vida privada, honra e imagem.",
+          "resposta": "Certo. E a aplicação é independente de classificação de sigilo, exatamente como o dispositivo enuncia."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Na verificação de aprendizagem da unidade 6.3, exigem-se acerto integral: A) nos graus e prazos de sigilo; B) na razão de dado pessoal não sigiloso continuar protegido; C) na vedação do art. 31, § 4º; D) na exigência de medidas administrativas além das técnicas no art. 46 da LGPD.",
+          "resposta": "A, B, C e D."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir sigilo e proteção de dados pessoais, pseudonimização e anonimização, e segurança e responsabilização; identificará afirmações equivocadas frequentes e consolidará a unidade por recuperação ativa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá sigilo e proteção de dados pessoais, pseudonimização e anonimização, e segurança e responsabilização; identificará afirmações equivocadas frequentes e consolidará a unidade por recuperação ativa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "COMPARAÇÕES CRÍTICAS — (1) SIGILO x PROTEÇÃO DE DADOS PESSOAIS: o sigilo protege o interesse público (segurança da sociedade e do Estado) e se baseia nas hipóteses do art. 23 da LAI, com grau, prazo e ato formal; a proteção de dados pessoais protege o cidadão e incide sobre toda informação relativa a pessoa natural, independentemente de classificação (art. 31, § 1º, I). Consequência que muda o gabarito: dado pessoal não sigiloso continua protegido; sigilo não significa dispensa de proteção de da…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comparações, pegadinhas, resumo estruturado e verificação de aprendizagem",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Por serem as medidas do art. 46 da LGPD técnicas e administrativas, a auditoria interna não pode cobrar o órgão por falhas de processo, apenas por falhas de tecnologia.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A auditoria interna (art. 49 da Lei nº 14.129/2021) avalia processos de governança, gestão de riscos e controle com abordagem baseada em risco — o que inclui processos administrativos, desenho de permissões, segregação de funções e desenho do fluxo de aprovação. Falha de processo é falha de segurança, não detalhe fora do escopo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Sem consultar o texto, escreva os graus de sigilo e os prazos correspondentes.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ultrassecreta: 25 anos. Secreta: 15 anos. Reservada: 5 anos. Os prazos contam da data de produção (art. 24, § 1º, da Lei nº 12.527/2011) e, transcorrido o prazo ou consumado o evento que defina o termo final, a informação torna-se automaticamente de acesso público (art. 24, § 4º).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Explique por que a pseudonimização não autoriza a abertura de base de dados.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque a pseudonimização apenas substitui o identificador direto, mantendo a possibilidade de associação por meios adicionais — o dado permanece dado pessoal (art. 5º, I, da LGPD) e, por isso, a abertura depende de base legal específica. A abertura de base com dados pessoais exige anonimização efetiva (art. 5º, III, da LGPD; art. 36 da Lei nº 14.129/2021) ou hipótese legal de acesso (art. 31, § 1º, II, e § 3º, da LAI).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Por serem as medidas do art. 46 da LGPD técnicas e administrativas, a auditoria interna não pode cobrar o órgão por falhas de processo, apenas por falhas de tecnologia.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A auditoria interna (art. 49 da Lei nº 14.129/2021) avalia processos de governança, gestão de riscos e controle com abordagem baseada em risco — o que inclui processos administrativos, desenho de permissões, segregação de funções e desenho do fluxo de aprovação. Falha de processo é falha de segurança, não detalhe fora do escopo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

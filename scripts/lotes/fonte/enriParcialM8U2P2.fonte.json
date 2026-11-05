@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 2,
+    "unidadeTitulo": "8.2 Gráficos Estatísticos",
+    "parte": 2,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U2P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U2P2.js",
+    "idsCompletos": [
+      "m8-u2-t2-s1",
+      "m8-u2-t3-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u2-t2-s1",
+      "titulo": "Linhas: ordenação temporal, continuidade e tendências",
+      "topicoTitulo": "Gráfico de linhas",
+      "topicoId": "modulo-8-unidade-2-topico-2",
+      "unidadeTitulo": "8.2 Gráficos Estatísticos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno construirá e interpretará série temporal, calculando variações absolutas e percentuais.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) gráfico de linhas: definição, objetivo, dado adequado; (b) ordenação temporal e continuidade; (c) interpretação de tendências; (d) vantagens, limitações, erros frequentes, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a interpretação de tendência e a distinção entre linha e barra; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de séries temporais. OBJETIVOS OBSERVÁVEIS: (1) construir um gráfico de linhas; (2) interpretar tendência e sazonalidade; (3) identificar erros comuns. COMPETÊNCIAS DESENVOLVIDAS: análise temporal; leitura de tendência. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (fundamentos); unidade 8.3 (estatística). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: definição de gráfico de linhas como representação de valores ordenados ao longo de um eixo contínuo (geralmente tempo), com pontos conectados por segmentos; objetivo: mostrar evolução, tendência e sazonalidade; dado adequado: variável numérica ao longo de tempo (ou de outra variável ordenada); ordenação temporal: o eixo X deve estar ordenado cronologicamente; continuidade: a linha implica continuidade entre pontos, o que pode ser enganoso se houver lacunas; interpretação: tendência (crescimento/decrescimento), sazonalidade (padrão repetitivo), ruptura (mudança abrupta). Exemplo numérico: atendimentos mensais de janeiro a junho: 120,135,128,142,150,160. A tendência é de crescimento; há leve queda em março. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que linha mostra evolução temporal.\n- Nível intermediário: ordenar e interpretar tendência.\n- Nível avançado: identificar sazonalidade e rupturas.\n- Nível especialista: auditar um gráfico de linhas quanto a continuidade e escala.\nCOMPARAÇÕES CRÍTICAS:\n- linhas x barras: linhas para evolução contínua; barras para comparação de categorias discretas.\n- tendência x causalidade: tendência descreve; não prova causa.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"linhas servem para qualquer categoria\" — Motivo: exigem ordem natural — Versão tecnicamente correta: usar barras para categorias sem ordem.\n- Afirmação errada: \"lacuna nos dados pode ser ignorada\" — Motivo: a linha implica continuidade — Versão tecnicamente correta: marcar ou interromper a linha.\n- Afirmação errada: \"tendência garante previsão\" — Motivo: não considera mudanças de contexto — Versão tecnicamente correta: tendência é descritiva.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: linha, tendência, sazonalidade, ruptura, continuidade, ordenação.\n- Regras e mecanismos: eixo X ordenado; linha implica continuidade; anotar lacunas.\n- Exceções: múltiplas séries exigem legenda clara e poucas linhas.\n- Palavras-chave: linha, tendência, sazonalidade, ruptura, continuidade.\n- Checklist de domínio: (1) Construo gráfico de linhas? (2) Interpreto tendência? (3) Identifico sazonalidade? (4) Avalio continuidade?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um gráfico de linhas? (2) Quando usar linhas em vez de barras? (3) O que é tendência? (4) O que é sazonalidade? (5) Como lidar com lacunas nos dados?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular a variação percentual de março para abril na série 120, 132, 115, 140.",
+          "resposta": "(140 − 115) ÷ 115 × 100 = 25 ÷ 115 × 100 ≈ +21,74%. Atenção ao denominador: a variação percentual é sempre referida ao valor ANTERIOR; usar 140 como base daria outro número (17,86%) e não responde à pergunta."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Série trimestral tem lacuna em 2024T2 (sem coleta). Como representar?",
+          "resposta": "Quebrar a linha (não conectar diretamente) e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. Alternativa legítima: exibir 'sem dado' e, se útil, mostrar a série com e sem estimativa, identificando o que é estimativa."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A reta de tendência demonstra o crescimento futuro do indicador.'",
+          "correcao": "Errado. A reta resume a direção passada dos pontos (ajuste de mínimos quadrados); projetá-la é extrapolação, válida apenas sob suposição de que o padrão continua — suposição raramente garantida e que deve ser declarada como cenário, não como previsão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Antes de plotar linhas, os dados devem ser ordenados pelo eixo temporal, e não pelo valor.",
+          "resposta": "Certo. Ordenar por valor destrói a dimensão temporal e fabrica tendência."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Série 120 → 132. A variação percentual é: A) 12%; B) 10%; C) 90,9%; D) 132%.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de construir e interpretará série temporal, calculando variações absolutas e percentuais, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "construirá e interpretará série temporal, calculando variações absolutas e percentuais"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) gráfico de linhas: definição, objetivo, dado adequado; (b) ordenação temporal e continuidade; (c) interpretação de tendências; (d) vantagens, limitações, erros frequentes, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a interpretação de tendência e a distinção entre linha e barra; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de séries temporais. OBJETIVOS OBSERVÁVEIS: (1) construir um gráfico de linhas; (2) interpreta…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Linhas: ordenação temporal, continuidade e tendências",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A reta de tendência demonstra o crescimento futuro do indicador.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A reta resume a direção passada dos pontos (ajuste de mínimos quadrados); projetá-la é extrapolação, válida apenas sob suposição de que o padrão continua — suposição raramente garantida e que deve ser declarada como cenário, não como previsão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Calcular a variação percentual de março para abril na série 120, 132, 115, 140.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(140 − 115) ÷ 115 × 100 = 25 ÷ 115 × 100 ≈ +21,74%. Atenção ao denominador: a variação percentual é sempre referida ao valor ANTERIOR; usar 140 como base daria outro número (17,86%) e não responde à pergunta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Série trimestral tem lacuna em 2024T2 (sem coleta). Como representar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Quebrar a linha (não conectar diretamente) e sinalizar a lacuna — conectar criaria a ilusão de continuidade e de valores intermediários inexistentes. Alternativa legítima: exibir 'sem dado' e, se útil, mostrar a série com e sem estimativa, identificando o que é estimativa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A reta de tendência demonstra o crescimento futuro do indicador.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A reta resume a direção passada dos pontos (ajuste de mínimos quadrados); projetá-la é extrapolação, válida apenas sob suposição de que o padrão continua — suposição raramente garantida e que deve ser declarada como cenário, não como previsão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u2-t3-s1",
+      "titulo": "Barras e colunas: ordenação, comparação e linha de base",
+      "topicoTitulo": "Barras e colunas",
+      "topicoId": "modulo-8-unidade-2-topico-3",
+      "unidadeTitulo": "8.2 Gráficos Estatísticos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno construirá barras ordenadas com linha de base correta e detectará escalas enganosas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) gráfico de barras/colunas: definição, objetivo, dado adequado; (b) ordenação, comparação, linha de base; (c) risco de escalas enganosas; (d) vantagens, limitações, erros, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra linha de base em zero e ordenação; um eixo truncado em barras distorce a conclusão. PRÉ-REQUISITOS: conceitos de categorias e de proporção. OBJETIVOS OBSERVÁVEIS: (1) construir gráfico de barras; (2) ordenar adequadamente; (3) avaliar linha de base e escala. COMPETÊNCIAS DESENVOLVIDAS: análise comparativa; auditoria visual. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (fundamentos); unidade 8.3 (estatística). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: definição de gráfico de barras/colunas como comparação de valores por categoria, com comprimento (barra horizontal) ou altura (coluna vertical) proporcional ao valor; objetivo: comparar categorias; dado adequado: variável categórica com valor numérico; ordenação: decrescente para ranking, respeitando ordem própria quando existir (tempo, escala); linha de base em zero, porque a comparação é de comprimento/área e só é proporcional a partir da origem; risco de escalas enganosas: truncar o eixo em barras exagera diferenças. Exemplo numérico: atendimentos por canal: presencial 320, telefone 280, chat 210, e-mail 150. Barras ordenadas decrescentemente evidenciam o ranking; se o eixo começar em 100, a diferença aparente entre presencial e telefone será exagerada. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que comprimento representa valor.\n- Nível intermediário: ordenar e avaliar linha de base.\n- Nível avançado: detectar escala enganosa.\n- Nível especialista: auditar um painel de barras.\nCOMPARAÇÕES CRÍTICAS:\n- barras x colunas: barras horizontais para rótulos longos; colunas verticais para séries temporais curtas.\n- barras x pizza: barras para muitas categorias; pizza apenas para poucas.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"barras podem começar em valor diferente de zero\" — Motivo: distorce proporção — Versão tecnicamente correta: linha de base em zero.\n- Afirmação errada: \"ordenação não afeta a leitura\" — Motivo: afeta a percepção de ranking — Versão tecnicamente correta: ordenar conforme o objetivo.\n- Afirmação errada: \"pizza é sempre melhor para composição\" — Motivo: muitas fatias são ilegíveis — Versão tecnicamente correta: usar barras empilhadas ou 100% quando apropriado.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: barra, coluna, ordenação, linha de base, escala, ranking.\n- Regras e mecanismos: linha de base em zero; ordenação decrescente para ranking.\n- Exceções: barras horizontais para rótulos longos.\n- Palavras-chave: barra, coluna, ordenação, linha de base, escala, ranking.\n- Checklist de domínio: (1) Construo gráfico de barras? (2) Ordeno adequadamente? (3) Avalio linha de base? (4) Detecto escala enganosa?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Por que barras devem começar em zero? (2) Como ordenar barras? (3) Quando usar barras horizontais? (4) O que é escala enganosa? (5) Quando evitar pizza?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Verificar a soma das participações: 36,3% + 25,8% + 22,6% + 15,3%.",
+          "resposta": "Soma = 100,0% — coerente, porque todas as participações usam o mesmo denominador (1.240). Se cada percentual fosse calculado contra o total da própria unidade (100% para todas), a soma não significaria nada."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Comparar 40 e 80 com barras partindo de 70. Qual leitura visual e qual correção?",
+          "resposta": "Com base 70, as alturas são 0 e 10: a segunda barra parece 'infinitamente' maior, enquanto a razão real é 80 ÷ 40 = 2 (dobro). Correção: base em 0. Caso o eixo precise ser cortado por legítima necessidade de detalhe, isso só é aceitável em linhas; em barras, a alternativa honesta é rótulo de dado e destaque de variação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Barras empilhadas são ideais para comparar a evolução de seis séries ao longo de doze meses.'",
+          "correcao": "Errado. Empilhar seis séries obriga o leitor a comparar faixas do meio sem linha de base comum — a comparação fica impossível. Para muitas séries, pequenos múltiplos (uma linha/coluna por série) ou linhas são superiores."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em gráfico de barras, o eixo de valores deve começar em zero para preservar a proporcionalidade visual.",
+          "resposta": "Certo. A leitura é de comprimento/área comparados a uma linha de base comum."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Unidade A = 450 e unidade D = 190. A razão correta A/D é aproximadamente: A) 2,4; B) 0,42; C) 260; D) 1,4.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de construir barras ordenadas com linha de base correta e detectará escalas enganosas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "construirá barras ordenadas com linha de base correta e detectará escalas enganosas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) gráfico de barras/colunas: definição, objetivo, dado adequado; (b) ordenação, comparação, linha de base; (c) risco de escalas enganosas; (d) vantagens, limitações, erros, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra linha de base em zero e ordenação; um eixo truncado em barras distorce a conclusão. PRÉ-REQUISITOS: conceitos de categorias e de proporção. OBJETIVOS OBSERVÁVEIS: (1) construir gráfico de barras; (2) ordenar adequad…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Barras e colunas: ordenação, comparação e linha de base",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Barras empilhadas são ideais para comparar a evolução de seis séries ao longo de doze meses.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Empilhar seis séries obriga o leitor a comparar faixas do meio sem linha de base comum — a comparação fica impossível. Para muitas séries, pequenos múltiplos (uma linha/coluna por série) ou linhas são superiores."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Verificar a soma das participações: 36,3% + 25,8% + 22,6% + 15,3%.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Soma = 100,0% — coerente, porque todas as participações usam o mesmo denominador (1.240). Se cada percentual fosse calculado contra o total da própria unidade (100% para todas), a soma não significaria nada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Comparar 40 e 80 com barras partindo de 70. Qual leitura visual e qual correção?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Com base 70, as alturas são 0 e 10: a segunda barra parece 'infinitamente' maior, enquanto a razão real é 80 ÷ 40 = 2 (dobro). Correção: base em 0. Caso o eixo precise ser cortado por legítima necessidade de detalhe, isso só é aceitável em linhas; em barras, a alternativa honesta é rótulo de dado e destaque de variação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Barras empilhadas são ideais para comparar a evolução de seis séries ao longo de doze meses.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Empilhar seis séries obriga o leitor a comparar faixas do meio sem linha de base comum — a comparação fica impossível. Para muitas séries, pequenos múltiplos (uma linha/coluna por série) ou linhas são superiores.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

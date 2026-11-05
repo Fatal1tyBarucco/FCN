@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 2,
+    "unidadeTitulo": "5.2 Aprendizado de máquina",
+    "parte": 1,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U2P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U2P1.js",
+    "idsCompletos": [
+      "m5-u2-t1-s1",
+      "m5-u2-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u2-t1-s1",
+      "titulo": "Aprendizado supervisionado: classificação e regressão",
+      "topicoTitulo": "Paradigmas de aprendizado",
+      "topicoId": "modulo-5-unidade-2-topico-1",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno identificará quando o problema é de classificação ou de regressão e elegerá métrica compatível com a finalidade.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) aprendizado supervisionado (classificação e regressão); (b) aprendizado não supervisionado (agrupamento e redução de dimensionalidade); (c) aprendizado por reforço (visão geral); (d) a escolha do paradigma conforme o sinal disponível. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre os paradigmas pelo tipo de sinal disponível (rótulo, estrutura, recompensa); confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de dados e de modelo. OBJETIVOS OBSERVÁVEIS: (1) classificar um problema em supervisionado, não supervisionado ou reforço; (2) distinguir classificação de regressão; (3) citar exemplos de agrupamento e redução de dimensionalidade. COMPETÊNCIAS DESENVOLVIDAS: classificação de problema; escolha de abordagem. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (fundamentos); unidade 5.2 (métricas); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: aprendizado supervisionado como aprendizado a partir de pares (entrada, saída desejada), exigindo rótulos; classificação (saída categórica: aprovar/não aprovar, tipo de requerimento) versus regressão (saída contínua: quantidade esperada de demanda, tempo de análise); exemplos de algoritmos: regressão logística e árvores para classificação; regressão linear e árvores de regressão para regressão; aprendizado não supervisionado como descoberta de estrutura sem rótulos: agrupamento (k-means, hierárquico) e redução de dimensionalidade (PCA); aprendizado por reforço (visão geral): agente, ambiente, recompensa; escolha do paradigma conforme o sinal disponível (rótulo, estrutura, recompensa). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender a diferença entre ter rótulo e não ter.\n- Nível intermediário: distinguir classificação de regressão e citar algoritmos.\n- Nível avançado: escolher paradigma e técnica conforme o problema.\n- Nível especialista: integrar paradigma, dados e governança.\nCOMPARAÇÕES CRÍTICAS:\n- classificação x regressão: a primeira prevê categoria; a segunda, valor contínuo; muda a métrica e o algoritmo.\n- supervisionado x não supervisionado: o primeiro exige rótulos; o segundo descobre estrutura.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"agrupamento é supervisionado\" — Motivo: opera sem alvo rotulado — Versão tecnicamente correta: não supervisionado.\n- Afirmação errada: \"regressão é classificação com números\" — Motivo: a natureza da saída e da métrica diferem — Versão tecnicamente correta: tarefas distintas.\n- Afirmação errada: \"reforço é supervisionado com recompensa\" — Motivo: o sinal é atrasado e sequencial — Versão tecnicamente correta: paradigma distinto.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: supervisionado, não supervisionado, reforço, classificação, regressão, agrupamento, redução de dimensionalidade.\n- Regras e fórmulas: a escolha do paradigma depende do sinal disponível; a métrica acompanha o tipo de tarefa.\n- Exceções: variáveis numéricas discretizadas podem ser tratadas como classes, alterando a pergunta.\n- Palavras-chave: supervisionado, não supervisionado, reforço, classificação, regressão, agrupamento, PCA.\n- Checklist de domínio: (1) Classifico o problema em paradigma? (2) Distingo classificação de regressão? (3) Cito exemplos de não supervisionado? (4) Escolho métrica conforme tarefa?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual a diferença entre supervisionado e não supervisionado? (2) Quando usar classificação e quando regressão? (3) O que é agrupamento? (4) O que é redução de dimensionalidade? (5) Como escolher o paradigma?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Prever se um requerimento será protocolado como 'pendente' ou 'deferido' é classificação ou regressão?",
+          "resposta": "Classificação: a saída é categórica (pendente/deferido). Se o alvo fosse 'dias até a decisão', seria regressão."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Modelo de regressão prevê dias úteis de análise; a operação quer 'sim/não cabe no prazo de 10 dias'. Como converter?",
+          "resposta": "Aplicar limiar sobre a previsão contínua (≤ 10 dias = sim), declarando explicitamente a escolha do limiar e medindo impacto de classificações erradas dos dois tipos — a conversão é decisão de política, não detalhe técnico."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Para problema binário, basta um modelo de regressão com corte em 0,5.'",
+          "correcao": "Reduz a rigor: é possível, mas 0,5 é convenção, não necessidade; o corte deve ser definido pelo custo dos erros e pela distribuição das previsões — e classificadores próprios (logística, árvores) costumam calibrar melhor as probabilidades."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Prever o valor de um imóvel é problema de regressão.",
+          "resposta": "Certo. A saída é numérica contínua; métricas adequadas são MAE, RMSE e R²."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual alvo define problema de classificação? A) dias até conclusão; B) valor em reais; C) categoria de assunto; D) percentual de ocupação.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar quando o problema é de classificação ou de regressão e elegerá métrica compatível com a finalidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "JyGGMyR3x5I",
+          "titulo": "Machine Learning: Tutorial prático usando apenas o navegador",
+          "canal": "Filipe Deschamps",
+          "urlOriginal": "https://www.youtube.com/watch?v=JyGGMyR3x5I",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/JyGGMyR3x5I",
+          "descricao": "Videoaula prática de Machine Learning executada totalmente no navegador usando TensorFlow.js. Demonstra classificação de imagens (transfer learning com MobileNet), treinamento de modelo personalizado (teachable machine), e inferência em tempo real via webcam. Aborda conceitos de dataset, épocas, batch size, accuracy, loss, e como implantar modelos no frontend sem backend. Ideal para entender o ciclo completo de ML sem configurar ambiente local.",
+          "dataValidacao": "2026-11-03"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará quando o problema é de classificação ou de regressão e elegerá métrica compatível com a finalidade"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) aprendizado supervisionado (classificação e regressão); (b) aprendizado não supervisionado (agrupamento e redução de dimensionalidade); (c) aprendizado por reforço (visão geral); (d) a escolha do paradigma conforme o sinal disponível. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre os paradigmas pelo tipo de sinal disponível (rótulo, estrutura, recompensa); confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de dados e d…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Aprendizado supervisionado: classificação e regressão",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Para problema binário, basta um modelo de regressão com corte em 0,5.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Reduz a rigor: é possível, mas 0,5 é convenção, não necessidade; o corte deve ser definido pelo custo dos erros e pela distribuição das previsões — e classificadores próprios (logística, árvores) costumam calibrar melhor as probabilidades."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Prever se um requerimento será protocolado como 'pendente' ou 'deferido' é classificação ou regressão?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Classificação: a saída é categórica (pendente/deferido). Se o alvo fosse 'dias até a decisão', seria regressão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Modelo de regressão prevê dias úteis de análise; a operação quer 'sim/não cabe no prazo de 10 dias'. Como converter?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Aplicar limiar sobre a previsão contínua (≤ 10 dias = sim), declarando explicitamente a escolha do limiar e medindo impacto de classificações erradas dos dois tipos — a conversão é decisão de política, não detalhe técnico.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Para problema binário, basta um modelo de regressão com corte em 0,5.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Reduz a rigor: é possível, mas 0,5 é convenção, não necessidade; o corte deve ser definido pelo custo dos erros e pela distribuição das previsões — e classificadores próprios (logística, árvores) costumam calibrar melhor as probabilidades.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u2-t1-s2",
+      "titulo": "Aprendizado não supervisionado: agrupamento e redução de dimensionalidade",
+      "topicoTitulo": "Paradigmas de aprendizado",
+      "topicoId": "modulo-5-unidade-2-topico-1",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno distinguirá agrupamento de redução de dimensionalidade e avaliará criticamente a validade dos grupos encontrados.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) aprendizado não supervisionado: agrupamento e redução de dimensionalidade; (b) algoritmos (k-means, hierárquico, PCA); (c) interpretação e limitações; (d) avaliação sem rótulos. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre agrupamento e classificação e o papel da redução de dimensionalidade; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de dados e de distância. OBJETIVOS OBSERVÁVEIS: (1) definir agrupamento e redução de dimensionalidade; (2) citar algoritmos; (3) explicar avaliação sem rótulos. COMPETÊNCIAS DESENVOLVIDAS: análise exploratória; visualização de dados. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.2 (supervisionado); Módulo 8 (visualização). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média. FUNDAMENTAÇÃO CONCEITUAL: aprendizado não supervisionado como descoberta de estrutura em dados sem rótulos; agrupamento (clustering) como partição de exemplos em grupos por similaridade (k-means por centróides, hierárquico por dendrograma); redução de dimensionalidade como projeção em menos variáveis preservando informação (PCA por variância, t-SNE/UMAP para visualização); avaliação sem rótulos (silhouette, inércia, estabilidade); limitações (escolha de k, escala dos dados, interpretação subjetiva dos grupos). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o algoritmo busca padrões sem rótulo.\n- Nível intermediário: distinguir agrupamento de redução de dimensionalidade e citar algoritmos.\n- Nível avançado: avaliar qualidade de grupos e escolher k.\n- Nível especialista: integrar análise não supervisionada com decisão de negócio.\nCOMPARAÇÕES CRÍTICAS:\n- agrupamento x classificação: agrupamento descobre grupos; classificação atribui classe conhecida.\n- PCA x t-SNE: PCA preserva variância global e é linear; t-SNE preserva vizinhança local para visualização.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"agrupamento exige rótulos\" — Motivo: opera sem alvo — Versão tecnicamente correta: não supervisionado.\n- Afirmação errada: \"PCA cria novas informações\" — Motivo: projeta, não cria — Versão tecnicamente correta: reduz dimensão preservando variância.\n- Afirmação errada: \"o número de grupos é sempre óbvio\" — Motivo: depende de critério e de negócio — Versão tecnicamente correta: validar com métricas e contexto.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: agrupamento, k-means, hierárquico, PCA, t-SNE, silhouette, inércia.\n- Regras e fórmulas: k-means minimiza a inércia (soma de distâncias ao centróide); PCA maximiza variância explicada.\n- Exceções: escala dos dados afeta distâncias e, portanto, os grupos.\n- Palavras-chave: agrupamento, k-means, PCA, silhouette, inércia, dimensionalidade.\n- Checklist de domínio: (1) Defino agrupamento? (2) Cito algoritmos? (3) Explico redução de dimensionalidade? (4) Avalio grupos sem rótulos?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é agrupamento? (2) Qual a diferença entre k-means e hierárquico? (3) Para que serve PCA? (4) Como avaliar grupos sem rótulos? (5) Quais as limitações do agrupamento?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Milhares de chamados de atendimento sem categorias definidas. Que tarefa não supervisionada é natural?",
+          "resposta": "Agrupamento por conteúdo do chamado, para descobrir temas recorrentes; os grupos servem para propor taxonomia e dimensionar filas — a validação é com especialistas do atendimento."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Dataset com 80 atributos de desempenho de equipes. Qual papel da redução de dimensionalidade?",
+          "resposta": "Comprimir para 2-3 dimensões para visualização e remoção de ruído/redundância (atributos correlacionados), facilitando análise — mantendo clareza de que os eixos sintéticos não são atributos originais interpretáveis."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O algoritmo encontrou 5 grupos, logo existem 5 perfis reais de usuário.'",
+          "correcao": "Errado. O agrupamento é uma hipótese dependente de parâmetros e escala; exige validação externa (sentido operacional, estabilidade em nova amostra) antes de virar decisão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Agrupamento exige dados rotulados para treinar.",
+          "resposta": "Errado. Agrupamento é não supervisionado: opera sem alvo rotulado; rótulos só entram na avaliação externa, se disponíveis."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Coesão alta e separação baixa indicam: A) grupos bem definidos; B) grupos sobrepostos/fracos; C) vazamento de dados; D) overfitting de classificador.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir agrupamento de redução de dimensionalidade e avaliará criticamente a validade dos grupos encontrados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá agrupamento de redução de dimensionalidade e avaliará criticamente a validade dos grupos encontrados"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) aprendizado não supervisionado: agrupamento e redução de dimensionalidade; (b) algoritmos (k-means, hierárquico, PCA); (c) interpretação e limitações; (d) avaliação sem rótulos. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre agrupamento e classificação e o papel da redução de dimensionalidade; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de dados e de distância. OBJETIVOS OBSERVÁVEIS: (1) definir agrupamento e re…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Aprendizado não supervisionado: agrupamento e redução de dimensionalidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O algoritmo encontrou 5 grupos, logo existem 5 perfis reais de usuário.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O agrupamento é uma hipótese dependente de parâmetros e escala; exige validação externa (sentido operacional, estabilidade em nova amostra) antes de virar decisão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Milhares de chamados de atendimento sem categorias definidas. Que tarefa não supervisionada é natural?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Agrupamento por conteúdo do chamado, para descobrir temas recorrentes; os grupos servem para propor taxonomia e dimensionar filas — a validação é com especialistas do atendimento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Dataset com 80 atributos de desempenho de equipes. Qual papel da redução de dimensionalidade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Comprimir para 2-3 dimensões para visualização e remoção de ruído/redundância (atributos correlacionados), facilitando análise — mantendo clareza de que os eixos sintéticos não são atributos originais interpretáveis.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O algoritmo encontrou 5 grupos, logo existem 5 perfis reais de usuário.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O agrupamento é uma hipótese dependente de parâmetros e escala; exige validação externa (sentido operacional, estabilidade em nova amostra) antes de virar decisão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

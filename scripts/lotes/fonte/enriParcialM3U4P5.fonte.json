@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 4,
+    "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM3U4P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U4P5.js",
+    "idsCompletos": [
+      "m3-u4-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u4-t3-s3",
+      "titulo": "Retenção, descarte e proteção de gravações",
+      "topicoTitulo": "Gravação, consentimento, retenção e proteção",
+      "topicoId": "modulo-3-unidade-4-topico-3",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá retenção e descarte de gravações.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é retenção de gravações; (b) o que é descarte seguro; (c) como proteger gravações; (d) alinhamento com gestão documental. POR QUE O CONHECIMENTO É IMPORTANTE: guardar demais ou descartar mal gera risco jurídico e de vazamento; a prova cobra os princípios de retenção e proteção. PRÉ-REQUISITOS: unidade 4.3 (consentimento e LGPD). OBJETIVOS OBSERVÁVEIS: (1) definir retenção; (2) explicar descarte seguro; (3) citar medidas de proteção; (4) relacionar com tabela de temporalidade. COMPETÊNCIAS DESENVOLVIDAS: gestão do ciclo de vida da informação; proteção de dados. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.3 (política); Módulo 4 (backup e segurança). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: retenção é o período durante o qual uma gravação é mantida, definido por norma de gestão documental e pela LGPD (Lei nº 13.709/2018, verificada). O princípio da minimização orienta a não manter além do necessário; entretanto, obrigações de guarda podem exigir certo prazo. Descarte seguro significa eliminar a gravação de forma que não seja recuperável — não basta apagar a referência ou mover para a lixeira. Proteção inclui criptografia em repouso e em trânsito, controle de acesso por perfil, registro de auditoria (logs) de quem acessou e backups seguros. Em serviço público, a retenção deve observar a tabela de temporalidade documental, que define prazos de guarda e destinação. As características específicas de armazenamento (criptografia, retenção automática, marca d'água) dependem da plataforma e do plano, devendo ser conferidas na documentação oficial. Sem ciclo de vida definido, a informação se acumula indefinidamente, ampliando a superfície de vazamento.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que a gravação tem prazo de vida.\n- Nível intermediário: distinguir retenção de descarte e aplicar criptografia.\n- Nível avançado: alinhar a retenção à tabela de temporalidade.\n- Nível especialista: desenhar o ciclo de vida completo (criação, uso, retenção, descarte) de gravações institucionais.\nCOMPARAÇÕES CRÍTICAS:\n- retenção x descarte: reter preserva; descartar elimina — ambos precisam de regra, não de improviso.\n- apagar a referência x descarte seguro: o primeiro é reversível; o segundo é irreversível — muda a proteção.\n- logs x conteúdo: os logs registram acesso; o conteúdo é o dado — ambos se protegem.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Mover para a lixeira é descarte seguro.\" — Motivo: permanece recuperável — Versão tecnicamente correta: aplicar eliminação segura.\n- Afirmação errada: \"Quanto mais tempo guardar, melhor.\" — Motivo: contraria a minimização — Versão tecnicamente correta: seguir o prazo definido.\n- Afirmação errada: \"Criptografia resolve todo o risco.\" — Motivo: acesso e chaves também importam — Versão tecnicamente correta: combinar criptografia, acesso e auditoria.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: retenção, descarte seguro, criptografia, controle de acesso, auditoria, temporalidade.\n- Regras e fórmulas: criação → uso → retenção (prazo) → descarte seguro.\n- Exceções: obrigação de guarda pode exigir retenção maior.\n- Palavras-chave: ciclo de vida, retenção, descarte, criptografia, log.\n- Checklist de domínio: (1) Defino retenção? (2) Explico descarte seguro? (3) Cito proteção? (4) Relaciono com temporalidade?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é retenção? (2) Por que apagar a referência não é seguro? (3) Cite duas medidas de proteção. (4) A que instrumento a retenção pública se alinha? (5) O que é minimização?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que definir prazo de retenção?",
+          "resposta": "Evita manter dados além do necessário, reduz risco e custo, e atende LGPD e normas de gestão documental."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como descartar uma gravação com dados pessoais?",
+          "resposta": "Exclusão segura (sobrescrita/cripto-shredding), registro de descarte e verificação de backups."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Apagar o link da gravação é suficiente.'",
+          "correcao": "Errado. É necessário excluir o arquivo e verificar backups; caso contrário os dados permanecem."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Criptografia protege gravações em repouso.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática é inadequada? A) Definir prazo de retenção; B) Criptografar gravações; C) Manter gravações indefinidamente; D) Controlar acesso.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender retenção e descarte de gravações, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá retenção e descarte de gravações"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Retenção: prazo de guarda conforme normas de gestão documental e LGPD (não manter além do necessário). Descarte: exclusão segura (não apenas apagar referência). Proteção: criptografia em repouso e em trânsito, controle de acesso, logs de auditoria, backup seguro. Em serviço público, observar tabela de temporalidade documental. Características específicas de armazenamento dependem da plataforma e do plano; verificar documentação oficial.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Retenção, descarte e proteção de gravações",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Apagar o link da gravação é suficiente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. É necessário excluir o arquivo e verificar backups; caso contrário os dados permanecem."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que definir prazo de retenção?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Evita manter dados além do necessário, reduz risco e custo, e atende LGPD e normas de gestão documental.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como descartar uma gravação com dados pessoais?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Exclusão segura (sobrescrita/cripto-shredding), registro de descarte e verificação de backups.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Apagar o link da gravação é suficiente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. É necessário excluir o arquivo e verificar backups; caso contrário os dados permanecem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 3,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U2P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P3.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-4-sub-1",
+      "modulo-1-unidade-2-topico-5-sub-1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-4-sub-1",
+      "titulo": "Listas bullet e numeradas",
+      "topicoTitulo": "Listas, listas multinível e numeração automática",
+      "topicoId": "modulo-1-unidade-2-topico-4",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno criará e gerenciará listas bullet e numeradas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a diferença entre listas com marcadores (bullets) e listas numeradas; (b) o critério de escolha: ordem importa ou não; (c) o funcionamento da numeração automática e sua atualização ao inserir/excluir itens; (d) variações de formato (símbolos, numerais, letras) e a ponte para listas multinível. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve documentos (passo a passo, inventário, requisitos) e pede o tipo de lista correto; além disso, cobra o princípio da numeração automática frente à numeração digitada à mão — errar essa distinção muda o gabarito. PRÉ-REQUISITOS: parágrafos e recuos (tópico 3). OBJETIVOS OBSERVÁVEIS: (1) escolher bullet versus numeração por critério de ordem; (2) aplicar e personalizar os formatos; (3) explicar por que numeração manual é falha técnica. COMPETÊNCIAS DESENVOLVIDAS: estruturação de documentos; correção de numeração instável. GRAU DE DIFICULDADE: básico. RELAÇÃO COM OUTROS TÓPICOS: listas multinível (mesmo tópico); estilos (tópico 2); sumários (tópico 7). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: lista é um parágrafo (ou sequência de parágrafos) com marcador ou numeração aplicado por recurso automático do Word. Lista com marcadores (bullets): cada item recebe um símbolo (ponto, círculo, seta — escolhível em Início > Marcadores); indica itens de mesma natureza sem ordem — uma lista de materiais não tem primeiro nem último. Lista numerada: cada item recebe número, letra ou numeral romano sequencial (Início > Numeração, com formatos personalizáveis); indica sequência — instruções de procedimento têm ordem essencial. Mecanismo da numeração automática: os números não são texto digitado; são campos lógicos gerados pelo Word — inserir um item no meio renumera os seguintes, e excluir um item reorganiza a sequência sem intervenção. Propriedade operacional: pressionar Enter encerra um item e começa o próximo; Enter duplo (ou a tecla de finalização) encerra a lista. Limitações: numeração digitada manualmente (\"1.\", \"2.\") é texto comum — não renumera, desalinha ao inserir itens e desgasta a manutenção do documento; a lista automática depende do recurso de lista (não de espaços ou tabs digitados). Caso-limite: reiniciar numeração ou continuar de lista anterior — configuração disponível no menu de contexto da numeração (Reiniciar em 1 / Continuar numeração).\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: criar lista de marcadores e lista numerada; sair da lista com Enter duplo.\n- Nível intermediário: trocar formato de marcador/numeração; inserir item no meio de lista numerada e observar a renumeração automática.\n- Nível avançado: corrigir documento com numeração manual (substituindo por lista automática); controlar reinício e continuação entre listas separadas.\n- Nível especialista: decidir a hierarquia entre listas multinível (bullet + numeração combinados por nível) e justificar por que listas manuais quebram em documentos longos com revisões.\n\nCOMPARAÇÕES CRÍTICAS:\n- Bullet x numerada: bullet para conjuntos sem ordem; numerada para sequências — em \"passos de um procedimento\", a alternativa com bullet está errada.\n- Numeração automática x manual: a automática renumera ao inserir/excluir itens; a manual é texto fixo que desorganiza o documento — a questão que pede \"numeração que se atualiza\" exige o recurso automático.\n- Lista x tabela: lista ordena itens em sequência vertical; tabela cruza atributos em linhas e colunas — para \"itens com valores por mês\", o gabarito é tabela, não lista.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"a ordem dos itens não importa, então qualquer lista serve\" — Motivo: ignora o critério de escolha — Versão tecnicamente correta: quando a ordem importa (procedimentos, classificações), a lista deve ser numerada; sem ordem, marcadores bastam.\n- Afirmação errada: \"digitar 1., 2., 3. manualmente é equivalente à numeração automática\" — Motivo: confunde texto com recurso — Versão tecnicamente correta: a numeração manual não se atualiza ao inserir/excluir itens; apenas a numeração automática reorganiza a sequência.\n- Afirmação errada: \"listas automação não podem combinar símbolos e números\" — Motivo: afirmação de impossibilidade falsa — Versão tecnicamente correta: listas multinível permitem definir, por nível, marcador ou numeração (formato e símbolo) distintos.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: marcadores, numeração automática, formato personalizado, renumeração, reinício/continuação, lista multinível.\n- Regras e fórmulas: ordem importa → numerada; ordem indiferente → bullet; inserir/excluir itens → numeração automática ajusta sozinha.\n- Exceções: numeração digitada manualmente não renumera; reinício e continuação são configurações no menu de contexto da numeração.\n- Palavras-chave: bullet, marcadores, numeração automática, multinível, renumeração, formato de numeração.\n- Checklist de domínio: escolho o tipo por critério de ordem; aplico e personalizo formatos; explico a renumeração automática; substituo numeração manual por automática.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Um documento traz 6 etapas sequenciais de um procedimento: que tipo de lista usar e por quê? (2) O que acontece com uma lista numerada automática quando um item é inserido no meio? (3) Por que digitar \"1.\" manualmente é falha técnica? (4) Como encerrar uma lista e voltar ao parágrafo normal? (5) Listas multinível podem combinar bullets e numeração? Justifique.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Criar uma lista de compras com marcadores.",
+          "resposta": "Início > Marcadores > escolher o símbolo; digitar cada item seguido de Enter; Enter duplo (ou tecla de finalização) para sair da lista e voltar ao parágrafo normal."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Manual de procedimento com 8 etapas; a fiscalização exige que, ao inserir uma nova etapa 3, as demais renumem automaticamente.",
+          "resposta": "Aplicar numeração automática: Início > Numeração > escolher formato. Ao inserir a nova etapa 3, o Word renumera as etapas seguintes (4, 5, 6...) sem edição manual — propriedade que a numeração digitada à mão não tem, pois seria texto fixo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Documento herdado usa \"1.\", \"2.\", \"3.\" digitados à mão e ficou desordenado após revisões (dois itens \"3\", saltos de número).",
+          "resposta": "Diagnóstico: numeração manual é texto comum e não se reorganiza. Correção: selecionar os parágrafos, remover os números digitados e aplicar numeração automática; ajustar reinício/continuação pelo menu de contexto da numeração quando houver listas separadas. Resultado: inserções e exclusões futuras renumeram sozinhas."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário digita \"1.\" manualmente em vez de usar numeração automática.",
+          "correcao": "Incorreto: ao inserir ou excluir itens, a numeração manual não se ajusta e o documento desorganiza; o mecanismo correto é a numeração automática, que gera e reorganiza os números como recurso do Word."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual tipo de lista é adequado quando a ordem dos itens importa? A) Bullet; B) Numerada; C) Ambas, indiferentemente.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Listas multinível podem combinar marcadores e numeração em níveis diferentes.",
+          "resposta": "Certo. Em uma lista multinível, cada nível pode ter seu formato próprio — símbolo (bullet) ou numeração (números, letras, romanos)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Em uma lista numerada automática com 5 itens, ao excluir o item 2, os demais: A) Mantêm os números originais; B) Renumera-se automaticamente (1, 2, 3, 4); C) Ficam sem número.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de escolher entre listas com marcadores e numeradas pelo critério de ordem e de explicar a renumeração automática frente a inserções e exclusões, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "criará e gerenciará listas bullet e numeradas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Listas do tipo bullet (pontos, círculos, setas) para itens onde a ordem não é crítica. Listas numeradas (numbered) usam números ou letras sequenciais automáticas, ideais quando a sequência importa (passos, argumentos). O Word oferece variações de símbolos para bullet e formatos personalizados para numeração (numerais romanos, letras, algarismos). Listas podem estar dentro de tabelas, dentro de células ou flutuantes ao lado de imagens.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Listas bullet e numeradas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário digita '1.' manualmente em vez de usar numeração automática.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: ao excluir/inserir itens a numeração manual não se ajusta; usar recurso automático."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Criar lista de compras com bullets.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Início > Marcadores > escolher símbolo; Enter para novo item; Enter duplo para sair.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Criar lista numerada de passos.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Início > Numeração > escolher formato; a numeração atualiza automaticamente ao inserir/excluir itens.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário digita '1.' manualmente em vez de usar numeração automática.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: ao excluir/inserir itens a numeração manual não se ajusta; usar recurso automático.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-2-topico-5-sub-1",
+      "titulo": "Cabeçalhos e rodapés",
+      "topicoTitulo": "Cabeçalhos, rodapés, notas e numeração de páginas",
+      "topicoId": "modulo-1-unidade-2-topico-5",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno inserirá e gerenciará cabeçalhos e rodapés em documentos.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que são cabeçalhos e rodapés e o que normalmente contêm; (b) as variações por seção e por página (primeira página diferente, páginas pares e ímpares); (c) a numeração de páginas: formatos (arábico, romano, alfabético), posições e reinício em valor diferente de 1; (d) o vínculo entre seções (Vincular ao Anterior) e o papel da quebra de seção; (e) campos dinâmicos dentro do cabeçalho/rodapé. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve documentos com preliminares numeradas em romano e corpo em arábico, cabeçalho diferente na primeira página e roda o gabarito por quebra de seção e desvinculação; trocar quebra de página por quebra de seção, ou afirmar que o cabeçalho é único e imutável, muda a resposta. PRÉ-REQUISITOS: parágrafos e paginação (tópico 3). OBJETIVOS OBSERVÁVEIS: (1) inserir e editar cabeçalho/rodapé com campo de número de página; (2) configurar variações por seção e por página; (3) reiniciar numeração em seção específica. COMPETÊNCIAS DESENVOLVIDAS: diagramação de documentos formais. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: quebras de página e de seção (tópico 6); relatório integrado (tópico 14). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: cabeçalho é a área no topo de cada página e rodapé a área na base; ambos pertencem a seções do documento e podem conter texto fixo e campos dinâmicos (número de página, número de páginas, data, nome do arquivo). Inserção: Inserir > Cabeçalho/Rodapé (ou número de página com posição: superior/inferior, alinhamento). Numeração de páginas: Inserir > Número de Página escolhe posição; o formato (arábico 1, 2, 3; romano i, ii, iii; alfabético A, B, C) e o reinício (Iniciar em...) são definidos no diálogo de Formatar Números de Página — configurações por seção. Variações: Primeira Página Diferente (omite ou troca o cabeçalho da capa) e Pares e Ímpares Diferentes (espelhamento para encadernação) são propriedades da seção. Vínculo entre seções: cada seção nova, por padrão, herda o cabeçalho/rodapé da anterior (Vincular ao Anterior ativado); para conteúdo distinto por seção, desmarcar o vínculo na seção destino e editar — é o mecanismo que acompanha a quebra de seção (tópico 6). Propriedade essencial: o número de página é campo dinâmico — ao inserir/remover páginas, o número se recalcula sozinho; digitar números manualmente no rodapé é erro técnico que desorganiza o documento. Caso-limite de prova: preliminares em romano e corpo em arábico reiniciando em 1 — exige quebra de seção + desvinculação + formatação/reinício na seção do corpo.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: inserir número de página no rodapé (posição inferior/centro) e reconhecer o campo dinâmico.\n- Nível intermediário: ativar Primeira Página Diferente; formatar numeração romana e reiniciar em 1 numa seção.\n- Nível avançado: desvincular cabeçalho/rodapé entre seções e manter campos distintos; incluir campo de nome do arquivo ou data.\n- Nível especialista: diagnosticar documento em que o corpo herdou o rodapé das preliminares (vínculo não desfeito) e prescrever a correção completa.\n\nCOMPARAÇÕES CRÍTICAS:\n- Cabeçalho x rodapé: posição na página (topo/base); ambos pertencem à seção e aceitam campos — a alternativa que nega campos no rodapé está errada.\n- Quebra de página x quebra de seção para cabeçalhos: quebra de página não permite cabeçalho/rodapé distinto; a quebra de seção sim — em questão sobre \"cabeçalho diferente por parte do documento\", o gabarito é seção.\n- Vincular ao Anterior x seção independente: com vínculo, a seção herda o cabeçalho anterior; desvinculada, edita-se com autonomia — esquecer a desvinculação é o erro que mantém o rodapé duplicado.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"o mesmo cabeçalho vale para todas as seções, obrigatoriamente\" — Motivo: termo absoluto que ignora o vínculo — Versão tecnicamente correta: quebras de seção permitem cabeçalhos/rodapés diferentes por seção, desde que o vínculo (Vincular ao Anterior) seja desmarcado.\n- Afirmação errada: \"é aceitável digitar manualmente os números de página em cada rodapé\" — Motivo: substitui campo dinâmico por texto — Versão tecnicamente correta: o número de página deve ser inserido como campo (Inserir > Número de Página), que se recalcula ao alterar o documento.\n- Afirmação errada: \"a numeração romana nas preliminares exige editar cada página à mão\" — Motivo: ignora formatação por seção — Versão tecnicamente correta: a formatação do número (romano) e o reinício são configurações por seção (Formatar Números de Página).\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: cabeçalho, rodapé, campo de número de página, formatos de numeração, Primeira Página Diferente, Vincular ao Anterior, seção.\n- Regras e fórmulas: número em todas as páginas → campo; parte com formato próprio → quebra de seção + desvinculação + Formatar Números de Página; capa sem cabeçalho → Primeira Página Diferente.\n- Exceções: o campo recalcula sozinho; a seção nova herda o cabeçalho anterior por padrão.\n- Palavras-chave: cabeçalho, rodapé, número de página, romano, arábico, vincular ao anterior, primeira página diferente.\n- Checklist de domínio: insiro campos; configuro formato e reinício por seção; desvinculo seções; uso primeira página diferente; jamais digito número à mão.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como inserir o número de página no rodapé central? (2) Que combinação de recursos permite preliminares em i, ii e corpo em 1, 2? (3) O que é Vincular ao Anterior e quando desmarcá-lo? (4) Como deixar a capa sem cabeçalho? (5) Por que digitar \"12\" no rodapé da página 12 é erro técnico?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Inserir número de página no rodapé, centralizado.",
+          "resposta": "Inserir > Número de Página > Inferior da Página > Central. O número entra como campo dinâmico, recalculando automaticamente ao crescer o documento."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relatório com folha de rosto e resumo (preliminares) e corpo: preliminares numeradas em romano e corpo em arábico reiniciando em 1.",
+          "resposta": "Inserir quebra de seção (Próxima Página) após as preliminares > com o cursor nas preliminares, Inserir > Número de Página > Formatar Números de Página > formato i, ii, iii > no corpo, desmarcar Vincular ao Anterior no rodapé > Formatar Números de Página > formato 1, 2, 3 > Iniciar em 1. A quebra de seção é o requisito: sem ela, o formato seria único para todo o documento."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Documento institucional exige o logotipo no cabeçalho de todas as páginas, exceto a capa.",
+          "resposta": "Inserir o logotipo no cabeçalho (Inserir > Cabeçalho > Editar) e ativar Primeira Página Diferente (Design do Cabeçalho e Rodapé > marcar a opção); a primeira página passa a ter cabeçalho próprio (vazio), e as demais mantêm o logotipo. Se a capa precisasse de conteúdo próprio, bastaria editá-la no cabeçalho da primeira página."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que o mesmo cabeçalho vale para todas as seções.",
+          "correcao": "Incorreto: quebras de seção permitem cabeçalhos/rodapés diferentes por seção — basta desmarcar Vincular ao Anterior na seção destino e editar o conteúdo; por padrão a seção nova herda o anterior, mas o vínculo é configurável."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Como ter numeração romana nas páginas preliminares e arábica no corpo? A) Alterar o formato por seção, com quebra de seção; B) Editar manualmente cada rodapé; C) Não é possível no Word.",
+          "resposta": "A"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O número de página inserido pelo comando adequado é um campo dinâmico que se recalcula ao alterar o documento.",
+          "resposta": "Certo. O campo recalcula sozinho; digitar o número manualmente no rodapé não acompanha inserções e exclusões de páginas."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para que a capa fique sem cabeçalho e as demais páginas o mantenham, ativa-se: A) Pares e Ímpares Diferentes; B) Primeira Página Diferente; C) Vincular ao Anterior.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de inserir cabeçalho/rodapé com campos de numeração, configurar formatos e reinícios por seção e controlar o vínculo entre seções, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "inserirá e gerenciará cabeçalhos e rodapés em documentos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Cabeçalhos aparecem no topo de cada página e podem conter título do documento, nome do autor, data, etc. Rodapés aparecem no fim de cada página e frequentemente contém números de página, informações de arquivo ou rodapés corporativos. Pode-se ter diferentes cabeçalhos/rodapés para seções diferentes usando quebras de seção. A numeração de páginas pode ser personalizada: formato arábico (1, 2, 3), romano (i, ii, iii), alfabético (A, B, C), posição (centro, direita, esquerda), e início em número di…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Cabeçalhos e rodapés",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que o mesmo cabeçalho vale para todas as seções.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: quebras de seção permitem cabeçalhos/rodapés diferentes por seção (desvincular do anterior)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Inserir número de página no rodapé.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Inserir > Número de Página > posição (ex.: Inferior/Centro).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Cabeçalho diferente na primeira página.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Duplo clique no cabeçalho > marcar 'Primeira Página Diferente' > editar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que o mesmo cabeçalho vale para todas as seções.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: quebras de seção permitem cabeçalhos/rodapés diferentes por seção (desvincular do anterior).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

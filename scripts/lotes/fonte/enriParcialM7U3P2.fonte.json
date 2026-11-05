@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 3,
+    "unidadeTitulo": "7.3 Governança, Anonimização e Proteção de Dados",
+    "parte": 2,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U3P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U3P2.js",
+    "idsCompletos": [
+      "m7-u3-t2-s1",
+      "m7-u3-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u3-t2-s1",
+      "titulo": "Governança de dados: papéis, políticas e padrões",
+      "topicoTitulo": "Governança, acesso, minimização e proteção de dados",
+      "topicoId": "modulo-7-unidade-3-topico-2",
+      "unidadeTitulo": "7.3 Governança, Anonimização e Proteção de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno descreverá a governança de dados e atribuirá responsabilidades aos papéis envolvidos.",
+      "conteudo": "Governança de dados é o conjunto de POLÍTICAS, PAPEIS, PADRÕES e PROCESSOS que decidem como o dado é gerenciado — quem responde, com que regras e com que controles — do acesso ao descarte. Objetivos: valor (dado confiável e descobrível para decidir), conformidade (tratamento compatível com a lei e com a política interna) e risco (controle de vazamento, uso indevido e perda). PAPÉIS: DONO DO DADO (accountable pelo conteúdo, pelas regras de negócio e pela qualidade de seu domínio); STEWARD (executa: mantém metadados, dicionário, qualidade e resolve dúvidas de significado); ENCARREGADO (ponto focal de privacidade e de diálogo com titulares — figura exigida pela LGPD); ARQUITETO/ENGENHEIRO (modela, transforma e documenta); COMITÊ DE GOVERNANÇA (resolve conflitos e prioriza). INSTRUMENTOS: política de dados, dicionário e catálogo, padrões de nomenclatura e de codificação, classificação da informação (público, interno, confidencial, sensível), SLA e indicadores de qualidade, trilha de auditoria. SINTOMA DE AUSENCIA: cada área calcula o mesmo indicador de um jeito e o debate vira discussão de números em vez de discussão de decisão. Governança não é comitê eterno: é conjunto de decisões registradas e executadas.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Indicador de 'atendimento médio' diverge entre duas áreas. O que a governança prevê?",
+          "resposta": "O dono do dado do domínio define a regra (o que conta como atendimento, qual período, qual unidade de medida), o steward registra no dicionário/catálogo e as duas áreas passam a consumir a mesma definição. Sem isso, a divergência se repete a cada fechamento."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma secretaria quer criar 'base mestre de cidadãos'. Que papéis devem ser definidos antes da tecnologia?",
+          "resposta": "Dono do dado (que responde pela correção e pelas regras de atualização), steward (que mantém metadados e qualidade), encarregado (que responde por privacidade e acesso), além de regras de prevalência entre fontes e critério de classificação da sensibilidade. Definir ferramenta sem papéis produz base órfã, que ninguém corrige."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Governança de dados é sinônimo de implantação de catálogo.'",
+          "correcao": "Errado. Catálogo é um instrumento; governança é o sistema de decisões, papéis e políticas que o torna útil e mantido. Catálogo sem dono definido e sem processo de atualização vira retrato do passado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O dono do dado responde pelo significado, pelas regras de negócio e pela qualidade do seu domínio.",
+          "resposta": "Certo. É a definição de trabalho do papel: accountability sobre o conteúdo, não apenas operação."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quem é o ponto focal de privacidade e diálogo com os titulares? A) steward; B) encarregado; C) arquiteto de dados; D) auditor financeiro.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever a governança de dados e atribuirá responsabilidades aos papéis envolvidos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá a governança de dados e atribuirá responsabilidades aos papéis envolvidos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Governança de dados é o conjunto de POLÍTICAS, PAPEIS, PADRÕES e PROCESSOS que decidem como o dado é gerenciado — quem responde, com que regras e com que controles — do acesso ao descarte. Objetivos: valor (dado confiável e descobrível para decidir), conformidade (tratamento compatível com a lei e com a política interna) e risco (controle de vazamento, uso indevido e perda). PAPÉIS: DONO DO DADO (accountable pelo conteúdo, pelas regras de negócio e pela qualidade de seu domínio); STEWARD (execut…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Governança de dados: papéis, políticas e padrões",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Governança de dados é sinônimo de implantação de catálogo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Catálogo é um instrumento; governança é o sistema de decisões, papéis e políticas que o torna útil e mantido. Catálogo sem dono definido e sem processo de atualização vira retrato do passado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Indicador de 'atendimento médio' diverge entre duas áreas. O que a governança prevê?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O dono do dado do domínio define a regra (o que conta como atendimento, qual período, qual unidade de medida), o steward registra no dicionário/catálogo e as duas áreas passam a consumir a mesma definição. Sem isso, a divergência se repete a cada fechamento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma secretaria quer criar 'base mestre de cidadãos'. Que papéis devem ser definidos antes da tecnologia?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dono do dado (que responde pela correção e pelas regras de atualização), steward (que mantém metadados e qualidade), encarregado (que responde por privacidade e acesso), além de regras de prevalência entre fontes e critério de classificação da sensibilidade. Definir ferramenta sem papéis produz base órfã, que ninguém corrige.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Governança de dados é sinônimo de implantação de catálogo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Catálogo é um instrumento; governança é o sistema de decisões, papéis e políticas que o torna útil e mantido. Catálogo sem dono definido e sem processo de atualização vira retrato do passado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u3-t2-s2",
+      "titulo": "Controle de acesso e minimização de dados",
+      "topicoTitulo": "Governança, acesso, minimização e proteção de dados",
+      "topicoId": "modulo-7-unidade-3-topico-2",
+      "unidadeTitulo": "7.3 Governança, Anonimização e Proteção de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno aplicará os princípios de menor privilégio e minimização a cenários de coleta e compartilhamento.",
+      "conteudo": "ACESSO: conceder somente o necessário, pelo menor tempo e com registro. Instrumentos: perfis por função (segregação entre quem coleta, quem aprova e quem audita), princípio do menor privilégio (nenhum usuário com mais permissão que a exigida pela tarefa), autenticação forte, expiração de acesso, trilha de auditoria (quem acessou o quê, quando e por qual finalidade) e revisão periódica de permissões. MINIMIZAÇÃO: coletar e manter apenas o necessário à finalidade declarada — coleta proporcional (campo obrigatório só quando essencial), retenção limitada (não manter 'por precaução'), granularidade mínima (precisa de faixa etária? não colete data de nascimento) e descarte ao fim da finalidade. Os dois princípios convergem: menos dado coletado e menos gente com acesso significa menos superfície de vazamento. Atenção às práticas habituais: formulários com dezenas de campos 'para o futuro' (coleta especulativa), acesso permanente concedido em urgência e nunca revogado, e compartilhamento por planilha em pasta aberta — são as portas mais comuns de incidente, e nenhuma delas exige ataque sofisticado.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Formulário de inscrição tem 25 campos; a análise usa 8. O que a minimização recomenda?",
+          "resposta": "Reduzir a coleta aos 8 campos essenciais à finalidade (e aos que a norma do programa exige) e justificar documentadamente qualquer campo remanescente. Cada campo não usado é custo de proteção, risco de vazamento e obstáculo ao preenchimento — coletar 'por via das dúvidas' viola a minimização."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Analista precisa consultar dados pessoais por duas semanas para um estudo pontual. Como estruturar o acesso?",
+          "resposta": "Conceder perfil restrito ao domínio necessário, com vigência de duas semanas e registro em trilha de auditoria; pseudonimizar quando possível; revisar e revogar ao término. Combinar finalidade declarada, prazo e registro mantém o acesso proporcional e auditável."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Minimização significa apagar o máximo possível o mais rápido possível.'",
+          "correcao": "Errado. Minimização é proporcionalidade: guardar o NECESSÁRIO à finalidade e ao prazo de obrigação. Eliminar cedo demais destrói evidência necessária a auditoria e a responsabilização; guardar demais viola a proteção. A régua é a finalidade declarada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Permissão concedida em situação de urgência deve ser revogada quando a urgência terminar.",
+          "resposta": "Certo. Acessos temporários que não expiram viram privilégio permanente — falha clássica de controle de acesso."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática viola a minimização? A) coletar data de nascimento quando a análise usa apenas faixa etária; B) registrar auditoria de acesso; C) expirar perfil após o projeto; D) exigir autenticação forte.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar os princípios de menor privilégio e minimização a cenários de coleta e compartilhamento, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará os princípios de menor privilégio e minimização a cenários de coleta e compartilhamento"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ACESSO: conceder somente o necessário, pelo menor tempo e com registro. Instrumentos: perfis por função (segregação entre quem coleta, quem aprova e quem audita), princípio do menor privilégio (nenhum usuário com mais permissão que a exigida pela tarefa), autenticação forte, expiração de acesso, trilha de auditoria (quem acessou o quê, quando e por qual finalidade) e revisão periódica de permissões. MINIMIZAÇÃO: coletar e manter apenas o necessário à finalidade declarada — coleta proporcional (c…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Controle de acesso e minimização de dados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Minimização significa apagar o máximo possível o mais rápido possível.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Minimização é proporcionalidade: guardar o NECESSÁRIO à finalidade e ao prazo de obrigação. Eliminar cedo demais destrói evidência necessária a auditoria e a responsabilização; guardar demais viola a proteção. A régua é a finalidade declarada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Formulário de inscrição tem 25 campos; a análise usa 8. O que a minimização recomenda?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Reduzir a coleta aos 8 campos essenciais à finalidade (e aos que a norma do programa exige) e justificar documentadamente qualquer campo remanescente. Cada campo não usado é custo de proteção, risco de vazamento e obstáculo ao preenchimento — coletar 'por via das dúvidas' viola a minimização.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Analista precisa consultar dados pessoais por duas semanas para um estudo pontual. Como estruturar o acesso?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Conceder perfil restrito ao domínio necessário, com vigência de duas semanas e registro em trilha de auditoria; pseudonimizar quando possível; revisar e revogar ao término. Combinar finalidade declarada, prazo e registro mantém o acesso proporcional e auditável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Minimização significa apagar o máximo possível o mais rápido possível.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Minimização é proporcionalidade: guardar o NECESSÁRIO à finalidade e ao prazo de obrigação. Eliminar cedo demais destrói evidência necessária a auditoria e a responsabilização; guardar demais viola a proteção. A régua é a finalidade declarada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

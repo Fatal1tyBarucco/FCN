@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 6,
+    "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+    "parte": 3,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U6P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U6P3.js",
+    "idsCompletos": [
+      "m6-u6-t2-s2",
+      "m6-u6-t3-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u6-t2-s2",
+      "titulo": "Estudos de caso 3 e 4: uso de ferramenta de IA e transparência administrativa",
+      "topicoTitulo": "Estudos de caso integrados",
+      "topicoId": "modulo-6-unidade-6-topico-2",
+      "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno analisará dois casos integrados de uso de ferramenta de IA e de falha de transparência administrativa, identificando princípios violados, dispositivos aplicáveis e providências.",
+      "conteudo": "CASO 3 — USO DE FERRAMENTA DE IA. Um servidor do órgão usa uma ferramenta de IA generativa para redigir a resposta a um cidadão que reclamou de atraso em benefício, e publica a resposta na íntegra, sem revisão, em canal oficial de atendimento. O texto atribuído ao cidadão, sem consentimento, foi usado como contexto, e a resposta contém um prazo de pagamento que não consta de base oficial. ANÁLISE: (a) QUALIDADE E VERACIDADE: o art. 5º da Lei nº 12.527/2011 impõe que a informação seja franqueada de forma verdadeira; e a Lei nº 14.129/2021, art. 3º, VI, impõe ao gestor o dever de prestar contas à população e o art. 3º, VII, exige linguagem clara — mas o problema central é a disponibilização de conteúdo NÃO VERIFICADO como se fosse oficial. (b) DADOS PESSOAIS: o uso do texto do cidadão como contexto é tratamento de dado pessoal, que exige base legal e finalidade compatíveis (art. 5º, I, e art. 4º, da LGPD — verificado em 2026-10-20); a inserção de dado de terceiro em ferramenta externa deve ser vedada por política interna. (c) IMPUTAÇÃO E RESPONSABILIZAÇÃO: a assinatura do servidor e a publicação no canal oficial são de responsabilidade do órgão; o servidor responde por ato praticado no serviço e, se houver erro com dano, incidem o art. 34 da Lei nº 12.527/2011 e o regime disciplinar. (d) PROVIDÊNCIAS: corrigir a resposta e comunicar o cidadão o erro sobre o prazo (a correção de erro é parte do dever de publicidade); apurar o uso de dado de terceiro sem base; instituir política de uso de IA com revisão humana obrigatória, lista de usos proibidos (dado pessoal, dado sigiloso, informação sensível), registro de versão do prompt e do modelo, e trilha de conferência com a base oficial; integrar a política ao sistema de riscos (art. 48) e à auditoria interna (art. 49). (e) OBSERVAÇÃO DE MÉTODO: o uso de IA como apoio de redação com revisão é legítimo; o que não é legítimo é publicar saída não verificada como comunicação oficial. CASO 4 — TRANSPARÊNCIA ADMINISTRATIVA. O órgão mantém portal de transparência com a página inicial e a estrutura organizacional, mas a área de licitações não publica os resultados dos preços e os contratos celebrados no exercício corrente, e o portal de dados abertos não é atualizado há dezoito meses. ANÁLISE: (a) DEVER DE PUBLICIDADE: o art. 8º, § 1º, IV, da Lei nº 12.527/2011 exige a divulgação de informações concernentes a procedimentos licitatórios, inclusive editais e resultados, e a todos os contratos celebrados; o item D da mesma lista exige dados gerais para acompanhamento de programas e obras. O descumprimento é direto do dever. (b) ATUALIZAÇÃO: o art. 8º, § 3º, VI, exige manter atualizadas as informações disponíveis para acesso; e o art. 29, § 1º, VI, da Lei nº 14.129/2021 exige atualização periódica, mantido o histórico, para garantir a perenidade dos dados. (c) COMPETÊNCIA: a omissão não se sana com a existência do portal — e o art. 11, § 1º, III, da Lei nº 12.527/2011 admite, no pedido de acesso, a comunicação de que o órgão não possui a informação e a remessa ao órgão detentor: a ausência de publicação agrava a posição do órgão. (d) CONSEQUÊNCIAS: além do descumprimento formal, há perda de controle social — a finalidade da transparência é permitir a fiscalização (art. 3º, V, da LAI) e a prestação de contas (art. 3º, VI, da Lei nº 14.129/2021). (e) PROVIDÊNCIAS: plano de regularização com prazo; nomeação de responsável pela publicação e pela atualização; verificação de completude contra o rol do art. 8º, § 1º, e do art. 29, § 2º, da Lei nº 14.129/2021; registro do achado na auditoria interna (art. 49); desenho de controle de atualização (data de última atualização por conjunto, alerta de vencimento) e de verificação periódica por terceiro. (f) PRINCÍPIOS: publicidade (em primeiro plano), legalidade (dever de divulgar o que a lei impõe) e eficiência (o portal desatualizado induz o cidadão a requerer informação por pedido, sobrecarregando o atendimento — a ineficiência derivada do descumprimento da publicidade).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "No caso 3, o problema principal é a IA ou a ausência de revisão?",
+          "resposta": "A ausência de revisão e de verificação é o núcleo do problema; o uso de IA é o meio. O que a lei exige não é a proibição da ferramenta, mas a qualidade e a veracidade da comunicação oficial, a compatibilidade de finalidade no tratamento do dado do cidadão e a responsabilização por aquilo que é publicado no canal do órgão. Enquadrar o caso como «uso de IA é proibido» seria um erro de leitura, tão grave quanto publicá-la sem conferência."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "No caso 4, como o órgão deve agir para que a regularização seja efetiva e não apenas pontual?",
+          "resposta": "(1) plano de regularização com inventário do que falta publicar, responsável e prazo; (2) nomeação de responsável por conjunto de dados, com data de última atualização visível no portal; (3) verificação de completude contra o rol mínimo do art. 8º, § 1º, e contra o art. 29, § 2º, da Lei nº 14.129/2021, como lista de verificação operacional; (4) controle automatizado de atualização, com alerta de vencimento; (5) verificação periódica independente (auditoria interna, art. 49); (6) registro do achado e das ações no sistema de riscos; e (7) comunicação ao cidadão sobre a regularização, porque a transparência inclui admitir a falha e informar a correção."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'No caso 4, a existência de página institucional e de estrutura organizacional no portal basta para cumprir o dever de publicidade do art. 8º da Lei nº 12.527/2011.'",
+          "correcao": "Errado. O art. 8º, § 1º, define um mínimo de conteúdos a divulgar — competências e estrutura, repasses, despesas, licitações e contratos, dados de programas e obras e perguntas frequentes — e o § 3º exige manutenção atualizada. Publicar parte não cumpre o dever; e o descumprimento é agravado pela desatualização, que impede o controle social (art. 3º, V, da LAI)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) No caso 3, a revisão humana obrigatória e a conferência com a base oficial são providências que decorrem do dever de veracidade da comunicação oficial e de responsabilização do órgão.",
+          "resposta": "Certo. A Lei nº 12.527/2011, art. 5º, exige informação franqueada de forma transparente, clara e em linguagem fácil, e o art. 34 responsabiliza o órgão e o servidor pelo conteúdo indevidamente divulgado."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Elementos de uma política institucional de uso de IA: A) revisão humana obrigatória antes da publicação; B) vedação de inserção de dados pessoais ou sigilosos na ferramenta; C) registro do prompt, do modelo e do revisor; D) liberação de uso livre pela equipe, sem registro, desde que o texto final seja revisado.",
+          "resposta": "A, B e C. O item D elimina justamente o registro que permitiria rastrear o conteúdo publicado."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar dois casos integrados de uso de ferramenta de IA e de falha de transparência administrativa, identificando princípios violados, dispositivos aplicáveis e providências, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará dois casos integrados de uso de ferramenta de IA e de falha de transparência administrativa, identificando princípios violados, dispositivos aplicáveis e providências"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "CASO 3 — USO DE FERRAMENTA DE IA. Um servidor do órgão usa uma ferramenta de IA generativa para redigir a resposta a um cidadão que reclamou de atraso em benefício, e publica a resposta na íntegra, sem revisão, em canal oficial de atendimento. O texto atribuído ao cidadão, sem consentimento, foi usado como contexto, e a resposta contém um prazo de pagamento que não consta de base oficial. ANÁLISE: (a) QUALIDADE E VERACIDADE: o art. 5º da Lei nº 12.527/2011 impõe que a informação seja franqueada …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Estudos de caso 3 e 4: uso de ferramenta de IA e transparência administrativa",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'No caso 4, a existência de página institucional e de estrutura organizacional no portal basta para cumprir o dever de publicidade do art. 8º da Lei nº 12.527/2011.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O art. 8º, § 1º, define um mínimo de conteúdos a divulgar — competências e estrutura, repasses, despesas, licitações e contratos, dados de programas e obras e perguntas frequentes — e o § 3º exige manutenção atualizada. Publicar parte não cumpre o dever; e o descumprimento é agravado pela desatualização, que impede o controle social (art. 3º, V, da LAI)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "No caso 3, o problema principal é a IA ou a ausência de revisão?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A ausência de revisão e de verificação é o núcleo do problema; o uso de IA é o meio. O que a lei exige não é a proibição da ferramenta, mas a qualidade e a veracidade da comunicação oficial, a compatibilidade de finalidade no tratamento do dado do cidadão e a responsabilização por aquilo que é publicado no canal do órgão. Enquadrar o caso como «uso de IA é proibido» seria um erro de leitura, tão grave quanto publicá-la sem conferência.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "No caso 4, como o órgão deve agir para que a regularização seja efetiva e não apenas pontual?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) plano de regularização com inventário do que falta publicar, responsável e prazo; (2) nomeação de responsável por conjunto de dados, com data de última atualização visível no portal; (3) verificação de completude contra o rol mínimo do art. 8º, § 1º, e contra o art. 29, § 2º, da Lei nº 14.129/2021, como lista de verificação operacional; (4) controle automatizado de atualização, com alerta de vencimento; (5) verificação periódica independente (auditoria interna, art. 49); (6) registro do achado e das ações no sistema de riscos; e (7) comunicação ao cidadão sobre a regularização, porque a transparência inclui admitir a falha e informar a correção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'No caso 4, a existência de página institucional e de estrutura organizacional no portal basta para cumprir o dever de publicidade do art. 8º da Lei nº 12.527/2011.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O art. 8º, § 1º, define um mínimo de conteúdos a divulgar — competências e estrutura, repasses, despesas, licitações e contratos, dados de programas e obras e perguntas frequentes — e o § 3º exige manutenção atualizada. Publicar parte não cumpre o dever; e o descumprimento é agravado pela desatualização, que impede o controle social (art. 3º, V, da LAI).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u6-t3-s1",
+      "titulo": "Método de análise de itens de prova e questões autorais comentadas (bloco 1)",
+      "topicoTitulo": "Resolução de questões com análise de princípios e dispositivos",
+      "topicoId": "modulo-6-unidade-6-topico-3",
+      "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno aplicará um método de sete passos para resolver itens de prova sobre ética e responsabilidade digital, identificando o princípio e o dispositivo antes de marcar a alternativa.",
+      "conteudo": "MÉTODO DE RESOLUÇÃO EM SETE PASSOS: (1) LEIA O ENUNCIADO ATÉ O FIM e identifique o SUJEITO (quem age) e a CONDUTA (o que foi feito) — erros frequentes decorrem de parar na primeira leitura e atribuir a conduta ao sujeito errado; (2) IDENTIFIQUE O REGIME: é questão de acesso à informação, de proteção de dados, de sigilo, de uso de canal, de conduta ou de automatização? Cada regime tem lei e dispositivo próprios; (3) IDENTIFIQUE O PRINCÍPIO em jogo (legalidade, impessoalidade, moralidade, publicidade, eficiência) — a pergunta «qual princípio foi violado?» é o padrão mais frequente de item; (4) LOCALIZE O DISPOSITIVO e cite número e parágrafo, conferindo o regime do passo 2; (5) VERIFIQUE O QUE O ITEM AFIRMA: procure o termo absoluto (sempre, nunca, todo, qualquer, exclusivamente, é proibido), a generalização e a mistura de regimes; (6) TESTE A ALTERNATIVA contra o dispositivo: a alternativa é verdadeira se, e somente se, puder ser sustentada pelo texto; (7) DESCARTE as alternativas que apenas PARECEM corretas — as que trocam um termo do regime (por exemplo, «sigilo» no lugar de «informação pessoal») ou que ampliam o alcance da norma. QUATRO ARMADILHAS DE LEITURA: (a) O ENUNCIADO TRUNCADO — o item descreve uma conduta e omite o contexto que a salva (ex.: «o servidor publicou o documento no canal oficial», mas o documento era público); (b) A CONDUTA NÃO É O ILÍCITO — a pergunta é sobre o regime aplicável, e não sobre a intenção; (c) O REGIME MISTO — quando há duas condutas, cada uma tem regime próprio, e o item costuma pedir a conduta ERRADA ou a CORRETA; (d) O PRAZO E O DISPOSITIVO — item que trata de prazo exige o número exato. QUESTÕES AUTORAIS COMENTADAS (BLOCO 1) — todas de autoria deste projeto, sem atribuição a banca real. Q1 (autoral, múltipla escolha). Um órgão mantém portal de transparência atualizado, mas recusa pedido de acesso a documento interno, alegando «que a matéria já consta no portal». A conduta está correta? A) Sim, porque a transparência ativa é dever de ofício. B) Sim, se o documento for equivalente ao publicado. C) Não, porque a recusa exige motivação, e a desoneração do atendimento depende das hipóteses do art. 8º, § 6º, da Lei nº 12.527/2011. D) Não, porque todo pedido deve ser deferido. GABARITO: C. Fundamentação: a transparência ativa é dever (art. 8º), mas não supre o direito de pedir; a desoneração do atendimento exige que a informação esteja disponível em formato de acesso universal e que o requerente não declare não dispor de meios para realizar os procedimentos (art. 8º, § 6º), e a negativa precisa ser fundamentada (art. 11, § 1º, II). Q2 (autoral, múltipla escolha). Sobre a publicação de dados de beneficiários em portal de transparência, é CORRETO: A) é permitida, porque o órgão é o controlador dos dados. B) é permitida, se o fim for o controle social. C) depende de previsão legal ou consentimento, ou de forma agregada ou anonimizada. D) é permitida, desde que o portal seja o sítio oficial. GABARITO: C. Fundamentação: art. 31, § 1º, II, e § 3º, da Lei nº 12.527/2011; art. 29, § 1º, VIII, da Lei nº 14.129/2021; art. 36 da Lei nº 14.129/2021; art. 5º, I e III, da LGPD. Q3 (autoral, certo ou errado). Afirmação: «A classificação de um documento como reservado pelo gestor, com registro em ata, é ato válido, ainda que não exista hipótese do art. 23 da Lei nº 12.527/2011». GABARITO: errado. Fundamentação: a classificação exige hipótese legal (art. 23), competência da autoridade do art. 27 e os elementos do art. 28, além do critério menos restritivo (art. 24, § 5º); a classificação feita sem fundamento legal é inválida. Q4 (autoral, certo ou errado). Afirmação: «A Lei nº 14.129/2021 permite aos Estados, Municípios e Distrito Federal a aplicação imediata de todas as suas disposições, dispensada a adoção por ato normativo próprio». GABARITO: errado. Fundamentação: art. 2º, III, e § 2º da Lei nº 14.129/2021 (verificado em 2026-10-21). Q5 (autoral, múltipla escolha). A extinção do atendimento presencial de um serviço público, com a digitalização integral, é: A) admissível, porque o princípio da eficiência autoriza; B) admissível, se o serviço for acessível; C) vedada, porque a Lei nº 14.129/2021 assegura a permanência do atendimento presencial e o art. 6º admite apenas exceções a atos processuais; D) vedada somente para serviços de saúde. GABARITO: C. Fundamentação: art. 3º, XVI, e art. 14 da Lei nº 14.129/2021.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a primeira providência ao resolver item sobre conduta digital no serviço público?",
+          "resposta": "Identificar o sujeito e a conduta até o fim do enunciado, antes de pensar na alternativa. Grande parte dos erros em itens de ética digital decorre de atribuir ao servidor uma conduta que é do fornecedor do sistema, ou do Sistema uma conduta que é do servidor — e o item cobra justamente a identificação correta do responsável."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um item afirma que «o órgão não pode cobrar o ressarcimento de reprodução de documento, porque o serviço de busca e fornecimento de informação é gratuito». O que a lei diz?",
+          "resposta": "O art. 12 da Lei nº 12.527/2011, na redação dada pelo art. 52 da Lei nº 14.129/2021, diz que o serviço é gratuito e que o órgão PODE cobrar exclusivamente o valor necessário ao ressarcimento dos custos dos serviços e dos materiais utilizados QUANDO O ATENDIMENTO EXIGIR REPRODUÇÃO DE DOCUMENTOS, com isenção para quem não puder pagar sem prejuízo do sustento. A alternativa do item está errada por absolutizar a gratuidade e ignorar a hipótese de ressarcimento."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Para marcar a alternativa correta de item sobre acesso à informação, basta saber se a conduta foi correta ou incorreta.'",
+          "correcao": "Errado. A conduta pode ser juridicamente correta e, ainda assim, descrita de modo que a alternativa correta seja sobre o regime, o prazo, o dispositivo ou a competência. O método de sete passos exige localizar o regime e o dispositivo, e verificar os termos absolutos da alternativa — passo que decide a maioria dos itens de certo/errado sobre lei."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) No método de resolução, a busca de termos absolutos na alternativa (sempre, nunca, todo, exclusivamente) é um passo de verificação, e não um indício de erro automático.",
+          "resposta": "Certo. Termo absoluto é indício de que a alternativa amplia o alcance da norma; a verificação é necessária, mas o erro se confirma pela confrontação com o dispositivo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Constituem armadilhas de leitura de item: A) enunciado truncado; B) mistura de regimes; C) troca de termo do regime; D) presença de prazo no item.",
+          "resposta": "A, B, C e D. Todas as quatro alteram a resposta pretendida pelo item."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar um método de sete passos para resolver itens de prova sobre ética e responsabilidade digital, identificando o princípio e o dispositivo antes de marcar a alternativa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará um método de sete passos para resolver itens de prova sobre ética e responsabilidade digital, identificando o princípio e o dispositivo antes de marcar a alternativa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "MÉTODO DE RESOLUÇÃO EM SETE PASSOS: (1) LEIA O ENUNCIADO ATÉ O FIM e identifique o SUJEITO (quem age) e a CONDUTA (o que foi feito) — erros frequentes decorrem de parar na primeira leitura e atribuir a conduta ao sujeito errado; (2) IDENTIFIQUE O REGIME: é questão de acesso à informação, de proteção de dados, de sigilo, de uso de canal, de conduta ou de automatização? Cada regime tem lei e dispositivo próprios; (3) IDENTIFIQUE O PRINCÍPIO em jogo (legalidade, impessoalidade, moralidade, publicid…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Método de análise de itens de prova e questões autorais comentadas (bloco 1)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Para marcar a alternativa correta de item sobre acesso à informação, basta saber se a conduta foi correta ou incorreta.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A conduta pode ser juridicamente correta e, ainda assim, descrita de modo que a alternativa correta seja sobre o regime, o prazo, o dispositivo ou a competência. O método de sete passos exige localizar o regime e o dispositivo, e verificar os termos absolutos da alternativa — passo que decide a maioria dos itens de certo/errado sobre lei."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a primeira providência ao resolver item sobre conduta digital no serviço público?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Identificar o sujeito e a conduta até o fim do enunciado, antes de pensar na alternativa. Grande parte dos erros em itens de ética digital decorre de atribuir ao servidor uma conduta que é do fornecedor do sistema, ou do Sistema uma conduta que é do servidor — e o item cobra justamente a identificação correta do responsável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um item afirma que «o órgão não pode cobrar o ressarcimento de reprodução de documento, porque o serviço de busca e fornecimento de informação é gratuito». O que a lei diz?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O art. 12 da Lei nº 12.527/2011, na redação dada pelo art. 52 da Lei nº 14.129/2021, diz que o serviço é gratuito e que o órgão PODE cobrar exclusivamente o valor necessário ao ressarcimento dos custos dos serviços e dos materiais utilizados QUANDO O ATENDIMENTO EXIGIR REPRODUÇÃO DE DOCUMENTOS, com isenção para quem não puder pagar sem prejuízo do sustento. A alternativa do item está errada por absolutizar a gratuidade e ignorar a hipótese de ressarcimento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Para marcar a alternativa correta de item sobre acesso à informação, basta saber se a conduta foi correta ou incorreta.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A conduta pode ser juridicamente correta e, ainda assim, descrita de modo que a alternativa correta seja sobre o regime, o prazo, o dispositivo ou a competência. O método de sete passos exige localizar o regime e o dispositivo, e verificar os termos absolutos da alternativa — passo que decide a maioria dos itens de certo/errado sobre lei.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}
