@@ -1257,7 +1257,10 @@ button:disabled, .btn:disabled, .btn[disabled], [aria-disabled="true"] {
 .tree-toggle-placeholder { visibility: hidden; }
 .tree-link { color: inherit; }
 .tree-link:hover { color: var(--text-link); }
-.tree-label { color: var(--text-dim); font-weight: 500; }
+.tree-label { color: var(--text-dim); font-weight: 500;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 .tree-node.active .tree-label,
 .tree-link:focus-visible + .tree-label { color: var(--text-link); }
 .tree-label.tree-modulo-label { color: var(--text); font-weight: 700; font-size: 0.95rem; }
