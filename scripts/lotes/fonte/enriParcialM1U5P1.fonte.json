@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 5,
+    "unidadeTitulo": "1.5 OneDrive e Colaboração",
+    "parte": 1,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U5P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U5P1.js",
+    "idsCompletos": [
+      "modulo-1-unidade-5-topico-1-sub-1",
+      "modulo-1-unidade-5-topico-1-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-5-topico-1-sub-1",
+      "titulo": "OneDrive: sincronização, coautoria, histórico de versões, compartilhamento e permissões",
+      "topicoTitulo": "Sincronização, versionamento, compartilhamento e segurança",
+      "topicoId": "modulo-1-unidade-5-topico-1",
+      "unidadeTitulo": "1.5 OneDrive e Colaboração",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá sincronização, coautoria, histórico de versões, compartilhamento e permissões no OneDrive.",
+      "conteudo": "OneDrive é o serviço de armazenamento em nuvem integrado ao M365. Sincronização (Sync): cliente OneDrive baixa cópia local dos arquivos e mantém sincronização bidirecional; alterações locais propagam para a nuvem e vice-versa. Coautoria: múltiplos usuários editam o mesmo arquivo (Word, Excel, PowerPoint) simultaneamente com indicações de presença (nome, cursor colorido) e resolução de conflitos (última alteração prevalece quando offline). Histórico de versões: cada arquivo armazena versões anteriores (período padrão e quantidade máxima conforme o plano/serviço — conferir na documentação oficial do produto); restauração não exclui versão atual — cria cópia restaurada. Compartilhamento: link com permissões (visualizar, editar, revisar, comentar); opções de expiração de link e bloqueio de download; compartilhamento externo requer cuidado com LGPD (ver Módulo 4.1, referência oficial verificada: Lei 13.709/2018 art. 46 — medidas de segurança). Permissões de arquivo/pasta: proprietário, coautor, revisor, visualizador; alteração de permissões é registrada no log de atividades (Audit Log no M365 Admin Center — não implementado neste simulador). Backup: OneDrive NÃO substitui backup corporativo completo; é sincronização, não backup imutável (ransomware pode propagar alterações maliciosas para nuvem). A recomendação oficial (sem inventar estatísticas) é manter backup separado (3-2-1: 3 cópias, 2 mídias, 1 offsite) conforme boas práticas de segurança, sem citar porcentagem não verificada.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Explicar a um colega por que uma planilha compartilhada em serviço de nuvem não cumpre o papel de backup do setor, ainda que apareça como salva na nuvem.",
+          "resposta": "A planilha continua colaborativa e sincronizada, e o setor passa a manter uma cópia independente fora do ambiente sincronizado, com teste periódico de restauração registrado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa dar acesso de edição a um documento apenas a dois colegas e acesso de leitura a uma equipe inteira, sem que o link de leitura permita alterações.",
+          "resposta": "Dois usuários com edição e doze com leitura restrita à organização; o link não permite alteração e não concede acesso a pessoas de fora, conforme a política."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um colaborador afirma que, como o serviço mantém histórico de versões, qualquer arquivo excluído ou alterado pode ser recuperado integralmente a qualquer momento.",
+          "correcao": "A afirmação é incorreta: a recuperação funciona dentro da janela de retenção configurada, e itens fora dela exigem outra camada, como cópia administrativa ou backup independente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) OneDrive é um backup imutável e protege automaticamente contra ransomware.",
+          "resposta": "Errado. OneDrive sincroniza; alterações (inclusive maliciosas) propagam. Backup imutável separado é necessário."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual a diferença entre sincronização e backup? A) Nenhuma; B) Sincronização = propagação bidirecional; backup = cópia independente e imutável; C) Sincronização é apenas download.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender sincronização, coautoria, histórico de versões, compartilhamento e permissões no OneDrive, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá sincronização, coautoria, histórico de versões, compartilhamento e permissões no OneDrive"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "OneDrive é o serviço de armazenamento em nuvem integrado ao M365. Sincronização (Sync): cliente OneDrive baixa cópia local dos arquivos e mantém sincronização bidirecional; alterações locais propagam para a nuvem e vice-versa. Coautoria: múltiplos usuários editam o mesmo arquivo (Word, Excel, PowerPoint) simultaneamente com indicações de presença (nome, cursor colorido) e resolução de conflitos (última alteração prevalece quando offline). Histórico de versões: cada arquivo armazena versões anter…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a OneDrive: sincronização, coautoria, histórico de versões, compartilhamento e permissões",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que o OneDrive é um backup completo e protege contra ransomware automaticamente.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: OneDrive sincroniza; alterações (inclusive maliciosas) propagam. A proteção real exige backup imutável separado (offsite, não sincronizado) + medidas de segurança (ver LGPD art. 46, referência verificada no arquivo `referencias/referencias-verificadas.md`). Nenhuma estatística de eficácia inventada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Explicar a um colega por que uma planilha compartilhada em serviço de nuvem não cumpre o papel de backup do setor, ainda que apareça como salva na nuvem.",
+            "dados": "Pasta de 4 GB com a planilha orçamentária sincronizada em três notebooks, uma estação com o arquivo aberto há dois dias, histórico de versões ativo e nenhuma cópia fora do serviço.",
+            "conceitos": [
+              "sincronização: replicação bidirecional entre cópia local e nuvem",
+              "histórico de versões: registro de estados anteriores do mesmo arquivo",
+              "backup: cópia independente e separada do ambiente de produção"
+            ],
+            "estrategia": "Distinguir replicação de proteção: a sincronização copia o estado atual, inclusive alterações indevidas, enquanto o backup preserva um estado anterior independente da origem.",
+            "execucao": [
+              "Descrever o que a sincronização faz: toda alteração local sobe e desce para as outras estações.",
+              "Verificar o alcance do histórico de versões, que recupera estados do mesmo arquivo dentro do período retido pelo serviço.",
+              "Concluir que, sem cópia separada, um dano propagado para todas as réplicas não é recuperável pelo próprio serviço.",
+              "Propor a camada ausente: cópia fora do ambiente sincronizado, com retenção própria e teste de restauração."
+            ],
+            "resultado": "A planilha continua colaborativa e sincronizada, e o setor passa a manter uma cópia independente fora do ambiente sincronizado, com teste periódico de restauração registrado.",
+            "justificativa": "Sincronização e backup resolvem problemas diferentes: a primeira mantém consistência entre dispositivos, o segundo permite voltar a um estado anterior quando o estado atual foi comprometido. Como a sincronização replica alterações, inclusive criptografia por código malicioso ou exclusão em massa, ela não substitui uma cópia independente.",
+            "errosFrequentes": [
+              "Chamar de backup qualquer arquivo que esteja armazenado na nuvem.",
+              "Confiar apenas no histórico de versões, cuja retenção é limitada pela política do serviço.",
+              "Guardar a cópia de segurança dentro da mesma pasta sincronizada, que a torna alcançável pelo mesmo incidente."
+            ],
+            "variacao": "O setor perde acesso à conta de um colaborador desligado e precisa recuperar os arquivos dele. Indique quais recursos do serviço podem ser acionados e em que ponto a cópia independente se torna indispensável."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa dar acesso de edição a um documento apenas a dois colegas e acesso de leitura a uma equipe inteira, sem que o link de leitura permita alterações.",
+            "dados": "Documento em pasta compartilhada, dois colegas que devem editar, doze pessoas que devem apenas ler, compartilhamento externo proibido pela política da organização.",
+            "conceitos": [
+              "link de compartilhamento: endereço que concede acesso conforme a permissão associada",
+              "permissão por pessoa: autorização concedida a um usuário específico",
+              "menor privilégio: conceder apenas o acesso necessário à tarefa"
+            ],
+            "estrategia": "Separar quem edita de quem lê usando permissões por pessoa para a edição e um link de leitura restrito à organização, verificando o resultado pela visão de cada perfil.",
+            "execucao": [
+              "Conceder permissão de edição diretamente aos dois colegas, identificando-os por conta.",
+              "Criar um link com permissão de leitura e restringir o alcance à organização, impedindo acesso externo.",
+              "Enviar o link de leitura à equipe e conferir, com uma das doze pessoas, se a edição está bloqueada.",
+              "Revisar a lista de permissões para eliminar concessões anteriores que ampliem o acesso além do necessário."
+            ],
+            "resultado": "Dois usuários com edição e doze com leitura restrita à organização; o link não permite alteração e não concede acesso a pessoas de fora, conforme a política.",
+            "justificativa": "A permissão efetiva de cada pessoa é a mais ampla entre as concessões que a alcançam. Por isso um link de leitura enviado a um grupo não impede que alguém desse grupo já tenha edição por concessão anterior, e a revisão da lista de permissões é parte do controle, não uma etapa opcional.",
+            "errosFrequentes": [
+              "Compartilhar por link de edição e pedir que a equipe não altere nada.",
+              "Deixar permissões antigas ativas e ampliar o acesso sem perceber.",
+              "Conceder acesso externo por conveniência, contrariando a política da organização."
+            ],
+            "variacao": "Um dos dois colegas sai de férias e outro assume a edição por trinta dias. Descreva como ajustar as permissões e qual conferência garante que o acesso temporário não permaneça após o período."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um colaborador afirma que, como o serviço mantém histórico de versões, qualquer arquivo excluído ou alterado pode ser recuperado integralmente a qualquer momento.",
+            "dados": "Pasta com 300 arquivos, exclusão de 40 arquivos há cinco meses, retenção definida pela política da organização e histórico de versões consultado apenas nos últimos trinta dias.",
+            "conceitos": [
+              "janela de retenção: período durante o qual o estado anterior permanece recuperável",
+              "exclusão permanente: remoção após o prazo ou por ação administrativa",
+              "camada de recuperação: recurso distinto acionado conforme a natureza da perda"
+            ],
+            "estrategia": "Testar a recuperação nos limites do prazo, comparando exclusão recente com exclusão antiga, para mostrar que a disponibilidade do histórico é temporal e não permanente.",
+            "execucao": [
+              "Tentar recuperar um arquivo excluído dois dias antes e confirmar o sucesso pelo histórico.",
+              "Tentar recuperar um dos quarenta arquivos excluídos há cinco meses e observar a indisponibilidade.",
+              "Identificar quais camadas restam para o caso antigo, conforme a política da organização.",
+              "Registrar a conclusão de que a recuperação depende do prazo e da camada acionada."
+            ],
+            "resultado": "A afirmação é incorreta: a recuperação funciona dentro da janela de retenção configurada, e itens fora dela exigem outra camada, como cópia administrativa ou backup independente.",
+            "justificativa": "O histórico de versões e a lixeira são mecanismos de retenção temporária, cujo prazo é definido pela configuração do serviço. Fora desse intervalo, o item deixa de ser recuperável por essas vias, e a existência de uma cópia independente passa a ser o único caminho — razão pela qual o prazo precisa estar documentado.",
+            "errosFrequentes": [
+              "Presumir retenção ilimitada por o recurso existir.",
+              "Descobrir o limite do prazo apenas no momento da perda.",
+              "Tratar histórico de versões e backup independente como equivalentes."
+            ],
+            "variacao": "A organização reduz o prazo de retenção por política interna. Explique o efeito prático dessa mudança e qual medida compensa a redução."
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-5-topico-1-sub-2",
+      "titulo": "Arquivos locais versus somente online (Files On-Demand)",
+      "topicoTitulo": "Sincronização, versionamento, compartilhamento e segurança",
+      "topicoId": "modulo-1-unidade-5-topico-1",
+      "unidadeTitulo": "1.5 OneDrive e Colaboração",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno diferenciar estados de arquivos locais, online e sob demanda no OneDrive.",
+      "conteudo": "No OneDrive, os arquivos podem estar em diferentes estados: sincronizado (cópia local presente e em dia), somente online (arquivo presente na nuvem, acessível sob demanda sem cópia local — conceito de Files On-Demand) e não sincronizado. O conceito Files On-Demand permite que o cliente mantenha arquivos na nuvem e exponha disponibilidade offline via stub, sem baixar o arquivo integralmente; o acesso ocorre sob demanda. Estados de sincronização são exibidos no painel (tray) do cliente: atualização em andamento, erro, conflito. A configuração de pastas locais versus online é feita em OneDrive > Configurações > Conta > Escolher pastas. Em ambientes organizacionais, políticas podem restringir a disponibilidade. A escolha entre local, online e sob demanda orienta o gerenciamento de espaço e a sincronização; a política de sincronização (por exemplo, permitir somente online) pode ser definida pelo administrador.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um notebook com 256 GB de disco precisa acessar uma biblioteca de 400 GB na nuvem sem esgotar o armazenamento local.",
+          "resposta": "Disco local ocupado por uma fração da biblioteca, com as pastas frequentes disponíveis offline e o restante acessível por download sob demanda."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa liberar espaço em uma estação de trabalho sem perder acesso aos arquivos do projeto e sem interromper a sincronização das pastas de uso diário.",
+          "resposta": "Estação com espaço recuperado, pasta de uso diário íntegra localmente e pasta de projetos acessível por download sob demanda, sem perda de conteúdo."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que um arquivo marcado como somente online precisa ser baixado manualmente antes de ser aberto e editado, e que, por isso, o recurso serve apenas para arquivamento.",
+          "correcao": "A afirmação é incorreta: a abertura dispara a obtenção do conteúdo automaticamente, e a edição gera cópia local sincronizada, sem necessidade de download manual."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual estado representa arquivo presente na nuvem sem cópia local, acessível sob demanda? A) Sincronizado; B) Somente online (Files On-Demand); C) Não sincronizado.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O estado de sincronização é exibido apenas no aplicativo de arquivos local.",
+          "resposta": "Errado. O estado é exibido no painel/tray do cliente de sincronização."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar estados de arquivos locais, online e sob demanda no OneDrive, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciar estados de arquivos locais, online e sob demanda no OneDrive"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "No OneDrive, os arquivos podem estar em diferentes estados: sincronizado (cópia local presente e em dia), somente online (arquivo presente na nuvem, acessível sob demanda sem cópia local — conceito de Files On-Demand) e não sincronizado. O conceito Files On-Demand permite que o cliente mantenha arquivos na nuvem e exponha disponibilidade offline via stub, sem baixar o arquivo integralmente; o acesso ocorre sob demanda. Estados de sincronização são exibidos no painel (tray) do cliente: atualizaçã…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Arquivos locais versus somente online (Files On-Demand)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que arquivo somente online exige download manual para editar.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: com Files On-Demand o arquivo é acessível sob demanda; a edição cria cópia sincronizada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um notebook com 256 GB de disco precisa acessar uma biblioteca de 400 GB na nuvem sem esgotar o armazenamento local.",
+            "dados": "Biblioteca de 400 GB, 60 GB livres no disco, três pastas de uso frequente e conexão de rede estável no escritório.",
+            "conceitos": [
+              "arquivo sob demanda: conteúdo permanece na nuvem e é baixado quando aberto",
+              "estado sincronizado: cópia local completa e atualizada",
+              "estado somente online: marcador local sem conteúdo armazenado"
+            ],
+            "estrategia": "Manter local apenas o conjunto de uso frequente e deixar o restante somente online, aceitando que o acesso ao conteúdo passa a depender de conexão.",
+            "execucao": [
+              "Abrir as configurações do cliente de sincronização e a opção de escolha de pastas.",
+              "Marcar para manter sempre neste dispositivo apenas as três pastas de uso frequente.",
+              "Deixar as demais pastas no estado somente online e conferir o estado pelos ícones na lista de arquivos.",
+              "Abrir um arquivo somente online para confirmar que o download sob demanda funciona e medir o tempo de espera."
+            ],
+            "resultado": "Disco local ocupado por uma fração da biblioteca, com as pastas frequentes disponíveis offline e o restante acessível por download sob demanda.",
+            "justificativa": "O recurso troca espaço em disco por dependência de rede: o arquivo somente online mantém apenas o marcador, e o conteúdo é baixado na abertura. Isso resolve o dimensionamento do disco, mas cria um limite operacional que precisa ser previsto no planejamento de trabalho offline.",
+            "errosFrequentes": [
+              "Marcar todas as pastas como sempre disponíveis e retornar ao problema de espaço.",
+              "Planejar trabalho offline em pastas que estão somente online.",
+              "Interpretar o marcador de estado como erro de sincronização."
+            ],
+            "variacao": "O colaborador precisa editar, em viagem sem internet, três arquivos que hoje estão somente online. Descreva o preparo necessário antes da viagem e o que acontece com quem tentar abrir um arquivo não preparado."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa liberar espaço em uma estação de trabalho sem perder acesso aos arquivos do projeto e sem interromper a sincronização das pastas de uso diário.",
+            "dados": "Estação com 12 GB livres, pasta de projetos com 90 GB acessada uma vez por mês e pasta de uso diário com 8 GB aberta todos os dias.",
+            "conceitos": [
+              "política de armazenamento local: regra que define o que permanece no dispositivo",
+              "esvaziar espaço: liberação de cópias locais sem excluir o conteúdo da nuvem",
+              "sincronização seletiva: escolha das pastas que o cliente mantém no dispositivo"
+            ],
+            "estrategia": "Priorizar a pasta de uso diário para permanecer local e converter a pasta de projetos em somente online, conferindo antes que o conteúdo está íntegro na nuvem.",
+            "execucao": [
+              "Confirmar que a pasta de projetos está sincronizada e sem pendências de envio.",
+              "Converter a pasta de projetos para somente online pelas opções do cliente.",
+              "Liberar o espaço das cópias locais e conferir o espaço recuperado no disco.",
+              "Testar a abertura de um arquivo da pasta de projetos para confirmar o acesso sob demanda."
+            ],
+            "resultado": "Estação com espaço recuperado, pasta de uso diário íntegra localmente e pasta de projetos acessível por download sob demanda, sem perda de conteúdo.",
+            "justificativa": "Converter para somente online remove a cópia local e mantém o conteúdo na nuvem, de modo que o espaço é recuperado sem exclusão. A conferência prévia das pendências de envio evita que uma alteração ainda não sincronizada seja descartada junto com a cópia local.",
+            "errosFrequentes": [
+              "Excluir a pasta local para liberar espaço, interrompendo a sincronização.",
+              "Converter para somente online com envios pendentes e perder alterações recentes.",
+              "Converter a pasta de uso diário e passar a depender de rede para o trabalho rotineiro."
+            ],
+            "variacao": "A política da organização passa a exigir que arquivos com dados pessoais não permaneçam em disco local. Explique como essa regra altera a escolha das pastas e qual impacto ela tem no uso offline."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que um arquivo marcado como somente online precisa ser baixado manualmente antes de ser aberto e editado, e que, por isso, o recurso serve apenas para arquivamento.",
+            "dados": "Arquivo de 40 MB em pasta somente online, conexão estável, edição feita duas vezes na mesma semana, estado do arquivo observado antes e depois da edição.",
+            "conceitos": [
+              "download sob demanda: obtenção automática do conteúdo na abertura",
+              "cópia local temporária: conteúdo baixado para permitir a edição",
+              "estado do arquivo: indicação exibida pelo cliente após a edição"
+            ],
+            "estrategia": "Observar o comportamento real do arquivo ao abrir e editar, comparando o estado antes e depois para verificar se houve intervenção manual.",
+            "execucao": [
+              "Abrir o arquivo somente online com duplo clique e observar o tempo de obtenção do conteúdo.",
+              "Editar o documento e salvar, sem acionar nenhuma opção de download.",
+              "Verificar o estado do arquivo após o salvamento e a sincronização das alterações.",
+              "Concluir se o procedimento exigiu intervenção manual."
+            ],
+            "resultado": "A afirmação é incorreta: a abertura dispara a obtenção do conteúdo automaticamente, e a edição gera cópia local sincronizada, sem necessidade de download manual.",
+            "justificativa": "O marcador somente online indica ausência de cópia local, não indisponibilidade. O cliente obtém o conteúdo quando o arquivo é aberto e mantém a cópia resultante conforme a política de espaço, de modo que o recurso atende tanto ao arquivamento quanto ao trabalho corrente.",
+            "errosFrequentes": [
+              "Baixar manualmente todos os arquivos antes de abrir, anulando o ganho de espaço.",
+              "Concluir que o arquivo está corrompido por demorar a abrir em conexão lenta.",
+              "Tratar o estado somente online como falha de sincronização."
+            ],
+            "variacao": "O mesmo arquivo é aberto em um notebook sem conexão. Explique o que ocorre e qual preparo teria evitado a indisponibilidade."
+          }
+        ]
+      }
+    }
+  ]
+}

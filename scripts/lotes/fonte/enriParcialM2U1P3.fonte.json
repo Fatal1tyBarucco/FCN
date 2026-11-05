@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 1,
+    "unidadeTitulo": "2.1 Fundamentos de Redes",
+    "parte": 3,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U1P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U1P3.js",
+    "idsCompletos": [
+      "m2-u1-t2-s1",
+      "m2-u1-t3-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u1-t2-s1",
+      "titulo": "Unicast, broadcast, multicast, anycast",
+      "topicoTitulo": "Comunicação: unicast, broadcast, multicast e anycast",
+      "topicoId": "modulo-2-unidade-1-topico-2",
+      "unidadeTitulo": "2.1 Fundamentos de Redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Alvo identificará os 4 tipos de comunicação em rede.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os quatro modos de endereçamento (unicast, broadcast, multicast, anycast); (b) exemplos de cada; (c) o alcance de cada um; (d) protocolos associados. POR QUE O CONHECIMENTO É IMPORTANTE: o modo de endereçamento define como uma mensagem atinge destinatários e afeta protocolos como ARP, DHCP e DNS; a prova cobra a distinção. PRÉ-REQUISITOS: conceito de nó e de endereço. OBJETIVOS OBSERVÁVEIS: (1) definir cada modo; (2) dar exemplo; (3) explicar o alcance do broadcast; (4) associar IGMP ao multicast. COMPETÊNCIAS DESENVOLVIDAS: análise de destinatários; leitura de tráfego de rede. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.3 (ARP/NDP); unidade 3.2 (DNS/DHCP); unidade 1.3 (métricas). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: unicast é a comunicação um-para-um: um emissor envia a um destinatário específico — é o que ocorre ao acessar um site. Broadcast é um-para-todos dentro do mesmo domínio de broadcast: a mensagem alcança todos os nós da mesma rede, como na descoberta do DHCP (o cliente ainda não conhece o servidor) e em algumas consultas ARP. Multicast é um-para-muitos dirigido: a mensagem vai a um grupo de nós que se inscreveu para recebê-la, como em transmissões de vídeo; a associação ao grupo costuma ser gerenciada pelo protocolo IGMP. Anycast é um-para-o-mais-próximo: o mesmo endereço é atribuído a vários servidores e o roteamento entrega ao mais próximo segundo a métrica da rede — é usado por servidores-raiz de DNS e por redes de distribuição de conteúdo. Um ponto decisivo: o broadcast NÃO atravessa roteadores (fica restrito à sub-rede); o multicast pode ser roteado quando há suporte; o anycast é um conceito de roteamento, não um novo tipo de endereço. Em IPv6 não existe broadcast: suas funções são cobertas por multicast específicos.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir \"um\" de \"todos\" e de \"grupo\".\n- Nível intermediário: associar cada modo a um protocolo (DHCP, ARP, IGMP, DNS).\n- Nível avançado: explicar por que o broadcast não cruza sub-redes e como o anycast escolhe o destino.\n- Nível especialista: escolher o modo adequado para distribuir conteúdo a muitos clientes com eficiência.\nCOMPARAÇÕES CRÍTICAS:\n- unicast x multicast: o primeiro atinge um; o segundo, um grupo inscrito — muda a eficiência de transmissões em massa.\n- broadcast x multicast: o primeiro atinge todos da sub-rede; o segundo, só quem se inscreveu — o alcance muda o comportamento.\n- multicast x anycast: o multicast entrega a MUITOS; o anycast entrega ao MAIS PRÓXIMO de um grupo de servidores.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Broadcast atravessa roteadores.\" — Motivo: fica no domínio de broadcast — Versão tecnicamente correta: roteadores o bloqueiam por padrão.\n- Afirmação errada: \"Anycast é um endereço especial como o multicast.\" — Motivo: é um modo de roteamento — Versão tecnicamente correta: usa endereços unicast replicados e entrega ao mais próximo.\n- Afirmação errada: \"IPv6 tem broadcast.\" — Motivo: o broadcast foi eliminado — Versão tecnicamente correta: funções equivalentes usam multicast.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: unicast, broadcast, multicast, anycast, IGMP, domínio de broadcast.\n- Regras e fórmulas: um-para-um / um-para-todos / um-para-grupo / um-para-o-mais-próximo.\n- Exceções: IPv6 elimina o broadcast; o alcance do broadcast é a sub-rede.\n- Palavras-chave: destinatário, grupo, inscrição, raiz DNS, CDN.\n- Checklist de domínio: (1) Defino os quatro? (2) Dou exemplos? (3) Explico o alcance? (4) Associo IGMP?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é unicast? (2) Onde o broadcast fica restrito? (3) Como o multicast identifica o grupo? (4) O que caracteriza o anycast? (5) IPv6 tem broadcast?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar o tipo de comunicação quando um computador acessa um site.",
+          "resposta": "Unicast — comunicação um-para-um entre o navegador (cliente) e o servidor web."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma empresa faz streaming de treinamento para 50 funcionários simultaneamente. Unicast ou multicast é mais eficiente?",
+          "resposta": "Multicast — o servidor envia um fluxo único que é replicado pela rede apenas nos pontos de ramificação. Unicast exigiria 50 fluxos separados, consumindo 50x a largura de banda."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Broadcast atravessa roteadores e chega a toda a Internet.'",
+          "correcao": "Errado. Broadcast é limitado ao domínio de broadcast (sub-rede local). Roteadores não encaminham broadcasts (255.255.255.255) para evitar tempestades de broadcast."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Multicast exige que o receptor se inscreva em um grupo.",
+          "resposta": "Certo. O receptor envia IGMP join para receber tráfego multicast."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual tipo de comunicação um servidor DNS raiz (como 8.8.8.8) tipicamente usa? A) Unicast; B) Broadcast; C) Anycast; D) Multicast.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de alvo identificará os 4 tipos de comunicação em rede, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "Alvo identificará os 4 tipos de comunicação em rede"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Unicast: comunicação um-para-um (ex: acessar um site). Broadcast: um-para-todos na mesma rede/domínio de broadcast (ex: ARP, DHCP discovery). Multicast: um-para-muitos (grupo específico que se inscreveu) — ex: streaming de vídeo IPTV. Anycast: um-para-o-mais-próximo (ex: DNS root servers, CDN). Broadcast é limitado por roteadores (não atravessa sub-redes); multicast usa IGMP para gerenciamento de grupo.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Unicast, broadcast, multicast, anycast",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Broadcast atravessa roteadores e chega a toda a Internet.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Broadcast é limitado ao domínio de broadcast (sub-rede local). Roteadores não encaminham broadcasts (255.255.255.255) para evitar tempestades de broadcast."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar o tipo de comunicação quando um computador acessa um site.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Unicast — comunicação um-para-um entre o navegador (cliente) e o servidor web.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma empresa faz streaming de treinamento para 50 funcionários simultaneamente. Unicast ou multicast é mais eficiente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Multicast — o servidor envia um fluxo único que é replicado pela rede apenas nos pontos de ramificação. Unicast exigiria 50 fluxos separados, consumindo 50x a largura de banda.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Broadcast atravessa roteadores e chega a toda a Internet.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Broadcast é limitado ao domínio de broadcast (sub-rede local). Roteadores não encaminham broadcasts (255.255.255.255) para evitar tempestades de broadcast.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u1-t3-s1",
+      "titulo": "Métricas de desempenho de rede",
+      "topicoTitulo": "Largura de banda, throughput, latência, jitter e perda de pacotes",
+      "topicoId": "modulo-2-unidade-1-topico-3",
+      "unidadeTitulo": "2.1 Fundamentos de Redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno definirá e distinguirá largura de banda, throughput, latência, jitter e perda de pacotes.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) largura de banda; (b) throughput; (c) latência; (d) jitter; (e) perda de pacotes; (f) cálculo do tempo de transferência. POR QUE O CONHECIMENTO É IMPORTANTE: essas métricas caracterizam o desempenho e explicam problemas percebidos pelo usuário; a prova cobra a diferença entre capacidade e taxa real. PRÉ-REQUISITOS: conceito de rede e de unidades de dados (bit, byte). OBJETIVOS OBSERVÁVEIS: (1) definir cada métrica; (2) distinguir largura de banda de throughput; (3) calcular tempo de transferência; (4) relacionar jitter e perda a aplicações. COMPETÊNCIAS DESENVOLVIDAS: medição de desempenho; cálculo com unidades. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.2 (comutação); unidade 5.1 (ping); unidade 3 (protocolos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: largura de banda (bandwidth) é a capacidade MÁXIMA teórica do enlace, medida em bits por segundo (bps, kbps, Mbps, Gbps). Throughput é a taxa REAL obtida na prática, sempre menor ou igual à largura de banda, por causa de sobrecarga de protocolo, congestionamento e perdas. Latência é o tempo de trânsito de um pacote, composto por atraso de propagação (distância/velocidade), de transmissão (tamanho/banda), de fila (congestionamento) e de processamento; costuma-se medir o RTT (tempo de ida e volta). Jitter é a VARIAÇÃO da latência entre pacotes consecutivos e é crítico para voz e vídeo em tempo real. Perda de pacotes é a fração que não chega ao destino e pode indicar congestionamento, erro de transmissão ou bloqueio por firewall. Cálculo de tempo de transferência: tempo ≈ tamanho / throughput. Exemplo: transferir 100 MB (100 × 8 = 800 Mb) a 100 Mbps resulta em 800/100 = 8 s em condições ideais; com overhead e throughput real de 80 Mbps, o tempo sobe para 10 s. Variação do problema: a mesma transferência a 1 Gbps cairia para 0,8 s teóricos. Unidades importam: 1 byte = 8 bits.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que banda é capacidade e throughput é o que se obtém.\n- Nível intermediário: calcular tempo de transferência convertendo unidades.\n- Nível avançado: decompor a latência em seus componentes e relacionar jitter a aplicações.\n- Nível especialista: diagnosticar uma chamada de voz ruim distinguindo latência, jitter e perda.\nCOMPARAÇÕES CRÍTICAS:\n- largura de banda x throughput: capacidade teórica x taxa real — confundir as duas muda o cálculo e o gabarito.\n- latência x jitter: latência é o atraso; jitter é a variação do atraso — aplicações de tempo real sofrem mais com jitter.\n- perda x latência alta: a primeira descarta pacotes; a segunda apenas atrasa.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Throughput pode superar a largura de banda.\" — Motivo: a taxa real não excede a capacidade — Versão tecnicamente correta: throughput ≤ largura de banda.\n- Afirmação errada: \"100 MB a 100 Mbps leva 1 s.\" — Motivo: confunde bytes com bits — Versão tecnicamente correta: 800 Mb / 100 Mbps = 8 s.\n- Afirmação errada: \"Jitter e latência são a mesma coisa.\" — Motivo: um é variação, o outro é atraso — Versão tecnicamente correta: o jitter é a variação da latência.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: largura de banda, throughput, latência, RTT, jitter, perda de pacotes.\n- Regras e fórmulas: tempo ≈ tamanho / throughput; 1 byte = 8 bits.\n- Exceções: o throughput real é limitado pelo gargalo do caminho, não só pelo enlace local.\n- Palavras-chave: bps, capacidade, taxa real, atraso, variação.\n- Checklist de domínio: (1) Defino as métricas? (2) Distingo banda de throughput? (3) Calculo tempo? (4) Relaciono jitter e perda?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é largura de banda? (2) E throughput? (3) Quanto tempo levam 10 MB a 10 Mbps? (4) O que é jitter? (5) O que a perda de pacotes pode indicar?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um link de 100 Mbps tem throughput de 85 Mbps. Explique a diferença.",
+          "resposta": "Largura de banda = 100 Mbps (capacidade teórica). Throughput = 85 Mbps (real). A diferença se deve a overhead de protocolo (cabeçalhos TCP/IP), colisões, congestionamento e qualidade do sinal."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma chamada VoIP está com áudio interrompido. O ping está estável (30 ms) mas o jitter é alto (50 ms). Qual a causa provável?",
+          "resposta": "Jitter alto — variação na latência. Solução: habilitar QoS (Quality of Service) para priorizar tráfego de voz, ou usar buffer de jitter no receptor."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Largura de banda e throughput são sinônimos.'",
+          "correcao": "Errado. Largura de banda é a capacidade teórica do canal; throughput é a taxa real medida. Throughput nunca excede largura de banda."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Jitter é a variação na latência entre pacotes consecutivos.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual métrica é mais crítica para VoIP? A) Largura de banda; B) Throughput; C) Jitter; D) Perda de pacotes.",
+          "resposta": "C (jitter alto causa áudio interrompido; perda >1% também é problemática, mas jitter é o principal)"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de definir e distinguirá largura de banda, throughput, latência, jitter e perda de pacotes, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "definirá e distinguirá largura de banda, throughput, latência, jitter e perda de pacotes"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Largura de banda (bandwidth): capacidade máxima teórica do canal de comunicação (ex: 1 Gbps). Throughput: taxa real de transferência alcançada (sempre menor que a largura de banda). Latência (ping): tempo de ida (ou ida e volta) de um pacote — inclui propagação, transmissão, fila e processamento. Jitter: variação na latência entre pacotes consecutivos — crítico para VoIP e streaming. Perda de pacotes: porcentagem de pacotes que não chegam ao destino — pode indicar congestionamento, erro de trans…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Métricas de desempenho de rede",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Largura de banda e throughput são sinônimos.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Largura de banda é a capacidade teórica do canal; throughput é a taxa real medida. Throughput nunca excede largura de banda."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um link de 100 Mbps tem throughput de 85 Mbps. Explique a diferença.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Largura de banda = 100 Mbps (capacidade teórica). Throughput = 85 Mbps (real). A diferença se deve a overhead de protocolo (cabeçalhos TCP/IP), colisões, congestionamento e qualidade do sinal.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma chamada VoIP está com áudio interrompido. O ping está estável (30 ms) mas o jitter é alto (50 ms). Qual a causa provável?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Jitter alto — variação na latência. Solução: habilitar QoS (Quality of Service) para priorizar tráfego de voz, ou usar buffer de jitter no receptor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Largura de banda e throughput são sinônimos.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Largura de banda é a capacidade teórica do canal; throughput é a taxa real medida. Throughput nunca excede largura de banda.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

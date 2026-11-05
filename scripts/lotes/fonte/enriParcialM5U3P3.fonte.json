@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 3,
+    "unidadeTitulo": "5.3 IA generativa e LLMs",
+    "parte": 3,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U3P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U3P3.js",
+    "idsCompletos": [
+      "m5-u3-t2-s2",
+      "m5-u3-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u3-t2-s2",
+      "titulo": "RAG, embeddings e bases vetoriais",
+      "topicoTitulo": "Limites, recuperação aumentada e agentes com supervisão",
+      "topicoId": "modulo-5-unidade-3-topico-2",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno descreverá a arquitetura de um fluxo RAG, relacionará embeddings e bases vetoriais ao mecanismo de busca semântica e explicará os limites e os riscos do RAG.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"RAG, embeddings e bases vetoriais\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"RAG, embeddings e bases vetoriais\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"RAG, embeddings e bases vetoriais\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: RAG (RECUPERAÇÃO AUMENTADA POR GERAÇÃO) é o padrão que combina busca em base de conhecimento com geração de texto: em vez de depender apenas do conhecimento paramétrico do modelo, o sistema recupera TRECHOS RELEVANTES de uma base e os insere no prompt, para que a resposta seja fundamentada no material da organização. FLUXO EM CINCO PASSOS: (1) INDEXAÇÃO — os documentos são divididos em TRECHOS (chunking), que recebem embeddings e são gravados na base vetorial, com metadados (origem, data, versão, permissões); (2) CONSULTA — a pergunta do usuário é transformada em embedding; (3) BUSCA — a base vetorial calcula a similaridade entre o embedding da consulta e os dos trechos, devolvendo os mais próximos; (4) COMPOSIÇÃO DO PROMPT — os trechos recuperados entram no prompt, com instrução de responder apenas com base no material fornecido e citar a fonte; (5) GERAÇÃO E VERIFICAÇÃO — o modelo redige a resposta e a aplicação (não o modelo) confere se a resposta é sustentada pelos trechos, exibindo as fontes. EMBEDDINGS E BUSCA SEMÂNTICA: a busca vetorial não compara palavras, mas SIGNIFICADO — a similaridade entre vetores é alta quando os textos são equivalentes mesmo sem termos em comum, o que resolve o problema de sinônimos e de formulação diferente. BASE VETORIAL é o armazenamento dos embeddings com seus metadados, indexado para busca por vizinhança aproximada; não é o mesmo que banco relacional (que busca por valores exatos e junções). REQUISITOS DE QUALIDADE DO RAG: (a) QUALIDADE DO CHUNKING — trechos curtos demais perdem contexto; longos demais diluem a semântica e gastam janela; (b) QUALIDADE DO EMBEDDING — um modelo de embedding medíocre degrada a busca; (c) METADADOS E FILTROS — para que a base não devolva trecho de outro órgão, de outra competência ou de outra classificação de sigilo; (d) AVALIAÇÃO DA BUSCA — medir se o trecho correto aparece entre os recuperados (taxa de acerto de recuperação) antes de avaliar a resposta; (e) ATUALIZAÇÃO E VERSIONAMENTO — base desatualizada produz resposta desatualizada com aparência de fundamento. LIMITES E RISCOS DO RAG: (1) o modelo ainda pode alucinar sobre o conteúdo recuperado; (2) a recuperação pode devolver trecho irrelevante e a resposta sair distorcida; (3) o RAG NÃO SUBSTITUI controle de acesso — o filtro por permissões precisa existir na indexação ou na busca, porque o modelo obedecerá ao que receber; (4) RAG com base sem classificação de sigilo é (vetor de risco) — o artigo 30, § 6º, da Lei nº 14.129/2021 só torna automaticamente passíveis de abertura as bases que NÃO contenham informações protegidas por lei, e a proteção de dado pessoal rege o uso interno (arts. 4º e 31 da Lei nº 12.527/2011); (5) custo e latência crescem com base grande; (6) a avaliação de qualidade exige conjunto de perguntas com resposta esperada. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"RAG, embeddings e bases vetoriais\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"RAG, embeddings e bases vetoriais\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"RAG, embeddings e bases vetoriais\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de RAG, embeddings e bases vetoriais basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: RAG, embeddings e bases vetoriais e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"RAG, embeddings e bases vetoriais\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: rag, embeddings e bases vetoriais, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino RAG, embeddings e bases vetoriais com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"RAG, embeddings e bases vetoriais\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que o RAG não elimina a alucinação?",
+          "resposta": "Porque o RAG melhora a DISPONIBILIDADE de material relevante, não a verdade da geração: o modelo continua podendo afirmar algo que o trecho não diz, e pode resumir de modo distorcido. O que o RAG torna possível é a VERIFICAÇÃO — se a resposta cita o trecho, o revisor pode confrontá-la. Por isso, RAG sem exibição de fonte e sem verificação automática continua sujeito ao mesmo risco."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um RAG institucional passa a responder perguntas sobre documentos de outro órgão, porque o índice reúne tudo o que o servidor poderia acessar. Qual o defeito?",
+          "resposta": "O defeito é de SEGREGAÇÃO DE ACESSO e de METADADOS: a base indexou material além do escopo da consulta. A correção é a indexação com metadados de classificação e de competência, com filtro obrigatório na busca, teste de vazamento entre bases e revisão da indexação existente. O risco é duplo: exposição de informação protegida e de dado pessoal, além da produção de resposta sem base para o cidadão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O RAG dispensa a avaliação de qualidade, porque a resposta é sempre ancorada na base.'",
+          "correcao": "Errado. O RAG introduz dois níveis de avaliação: (1) recuperação — o trecho correto foi recuperado?; (2) geração — a resposta é sustentada pelo trecho recuperado? Sem o primeiro nível, a resposta falha por falha de busca; sem o segundo, por alucinação ou distorção. A avaliação exige conjunto de perguntas com resposta esperada e comparação — a mesma lógica de avaliação de modelo da unidade 5.2."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A base vetorial de um RAG deve ser indexada com metadados que permitam filtrar por competência e por classificação de sigilo.",
+          "resposta": "Certo. Sem esses metadados, a busca pode devolver material que o consultante não pode ver, e a proteção do art. 31 da Lei nº 12.527/2011 é quebrada na própria base."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Etapas de um fluxo RAG: A) indexação dos trechos com embeddings e metadados; B) busca por similaridade; C) composição do prompt com os trechos recuperados; D) treinamento do modelo com os documentos.",
+          "resposta": "A, B e C. O item D descreve ajuste fino ou novo treinamento, que não é necessário no RAG — e é justamente a vantagem do padrão: não exige retreinar."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever a arquitetura de um fluxo RAG, relacionará embeddings e bases vetoriais ao mecanismo de busca semântica e explicará os limites e os riscos do RAG, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá a arquitetura de um fluxo RAG, relacionará embeddings e bases vetoriais ao mecanismo de busca semântica e explicará os limites e os riscos do RAG"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"RAG, embeddings e bases vetoriais\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"RAG, embeddings e bases vetoriais\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a RAG, embeddings e bases vetoriais",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O RAG dispensa a avaliação de qualidade, porque a resposta é sempre ancorada na base.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O RAG introduz dois níveis de avaliação: (1) recuperação — o trecho correto foi recuperado?; (2) geração — a resposta é sustentada pelo trecho recuperado? Sem o primeiro nível, a resposta falha por falha de busca; sem o segundo, por alucinação ou distorção. A avaliação exige conjunto de perguntas com resposta esperada e comparação — a mesma lógica de avaliação de modelo da unidade 5.2."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que o RAG não elimina a alucinação?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque o RAG melhora a DISPONIBILIDADE de material relevante, não a verdade da geração: o modelo continua podendo afirmar algo que o trecho não diz, e pode resumir de modo distorcido. O que o RAG torna possível é a VERIFICAÇÃO — se a resposta cita o trecho, o revisor pode confrontá-la. Por isso, RAG sem exibição de fonte e sem verificação automática continua sujeito ao mesmo risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um RAG institucional passa a responder perguntas sobre documentos de outro órgão, porque o índice reúne tudo o que o servidor poderia acessar. Qual o defeito?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O defeito é de SEGREGAÇÃO DE ACESSO e de METADADOS: a base indexou material além do escopo da consulta. A correção é a indexação com metadados de classificação e de competência, com filtro obrigatório na busca, teste de vazamento entre bases e revisão da indexação existente. O risco é duplo: exposição de informação protegida e de dado pessoal, além da produção de resposta sem base para o cidadão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O RAG dispensa a avaliação de qualidade, porque a resposta é sempre ancorada na base.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O RAG introduz dois níveis de avaliação: (1) recuperação — o trecho correto foi recuperado?; (2) geração — a resposta é sustentada pelo trecho recuperado? Sem o primeiro nível, a resposta falha por falha de busca; sem o segundo, por alucinação ou distorção. A avaliação exige conjunto de perguntas com resposta esperada e comparação — a mesma lógica de avaliação de modelo da unidade 5.2.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u3-t2-s3",
+      "titulo": "Agentes, ferramentas e fluxos com supervisão",
+      "topicoTitulo": "Limites, recuperação aumentada e agentes com supervisão",
+      "topicoId": "modulo-5-unidade-3-topico-2",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno explicará o que distingue um agente de um fluxo determinístico, relacionará o uso de ferramentas e fluxos multietapa ao risco de decisões autônomas sobre direitos, e desenhará o modelo de supervisão aplicável.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Agentes, ferramentas e fluxos com supervisão\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Agentes, ferramentas e fluxos com supervisão\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Agentes, ferramentas e fluxos com supervisão\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: FLUXO DETERMINÍSTICO (CADEIA DE PASSOS) executa uma sequência previamente definida, com encadeamento previsível e saída auditável em cada etapa; um AGENTE é um sistema que, diante de um objetivo, decide QUAL AÇÃO executar, seleciona FERRAMENTAS, observa o resultado e itera até considerar a tarefa concluída. A diferença é quem decide o próximo passo: o programa (fluxo) ou o modelo (agente). O AGENTE, ao executar uma ação, combina quatro elementos: (1) PLANEJAMENTO (decomposição do objetivo em subtarefas); (2) FERRAMENTAS (funções que o agente pode invocar: buscar em base, consultar sistema, enviar mensagem, executar cálculo); (3) MEMÓRIA de curto prazo (histórico da tarefa) e eventualmente externa (base); (4) LAÇO DE CONTROLE que decide continuar, parar ou pedir intervenção. RISCOS E DEVIDAS DE GOVERNANÇA: (1) AMPLITUDE DE AÇÃO — um agente com permissão para escrita em sistema produz efeito no mundo; (2) CASCATA DE ERROS — um passo errado se propaga; (3) ALUCINAÇÃO DE FERRAMENTA — o agente pode chamar função com argumentos errados ou inexistentes; (4) DEPENDÊNCIA DE ALUCINAÇÃO DE OBJETIVO — se o objetivo inicial é ambíguo, o agente o completa por suposição; (5) CUSTO E LATÊNCIA — laços iterativos multiplicam chamadas; (6) DIFICULDADE DE AUDITORIA — é mais difícil reconstruir por que o agente agiu. MODELO DE SUPERVISÃO APLICÁVEL (proposto, didático): (a) LIMITAR O ESPAÇO DE AÇÃO — o agente só acessa ferramentas previamente autorizadas, e apenas em modo de leitura quando o efeito for irreversível; (b) SEPARAR PROPOSTA E EXECUÇÃO — o agente propõe, o humano executa ou aprova; (c) ALÇADAS — valores, registros e destinatários acima de limiar escalam; (d) LOG COMPLETO — cada chamada de ferramenta, com argumentos, resultado e custo; (e) ORÇAMENTO DE EXECUÇÃO — limite de passos e de tempo, com encerramento seguro; (f) VALIDAÇÃO DE SAÍDA — checagem de schema, de faixa e de consistência com a base; (g) INTERRUPÇÃO HUMANA — botão de parada e canal de escalonamento; (h) AVALIAÇÃO PERIÓDICA — conjunto de tarefas de teste e comparação com o desempenho humano de referência; (i) USO EM TAREFAS REVERSÍVEIS — começar por tarefas de baixo impacto e reversíveis, expandindo o escopo apenas com evidência. O QUE NÃO É RECOMENDÁVEL: agente com acesso a dado sensível sem base legal; agente que decide sobre direito do cidadão sem revisão; agente que envia comunicação externa sem aprovação. A REGRA DE OURO: quanto maior a irreversibilidade e o impacto sobre terceiros, maior a necessidade de supervisão humana e menor a autonomia. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Agentes, ferramentas e fluxos com supervisão\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Agentes, ferramentas e fluxos com supervisão\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Agentes, ferramentas e fluxos com supervisão\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Agentes, ferramentas e fluxos com supervisão basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Agentes, ferramentas e fluxos com supervisão e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Agentes, ferramentas e fluxos com supervisão\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: agentes, ferramentas e fluxos com supervisão, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Agentes, ferramentas e fluxos com supervisão com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Agentes, ferramentas e fluxos com supervisão\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença operacional entre um fluxo com RAG e um agente que usa RAG?",
+          "resposta": "O fluxo tem os passos escritos: recuperar, compor, gerar, revisar — e segue essa sequência sempre. O agente recebe o objetivo e decide quando recuperar, quando perguntar, quando chamar outra ferramenta e quando parar; com a mesma base, o agente pode ser mais flexível e muito mais difícil de auditar. Para um serviço público, a recomendação é começar pelo fluxo determinístico, que é previsível, testável e auditável, e só evoluir para o agente em tarefas de baixo impacto, com alçadas e registro."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Desenhe o desenho de supervisão de um agente que redige minutas de resposta a cidadãos.",
+          "resposta": "(1) PERMISSÕES: apenas leitura nas bases e apenas escrita na fila de minutas; (2) SEPARAÇÃO: o agente produz minuta; a publicação exige servidor identificado, com nome e matrícula; (3) ALÇADA: temas sensíveis (reclamação com indício de irregularidade, menção a dado de saúde, risco jurídico) escalam automaticamente a um humano; (4) LOG: prompt, trechos recuperados, minuta, ferramentas chamadas, tokens e custo; (5) ORÇAMENTO: limite de passos e de tempo por tarefa, com encerramento e passagem ao humano; (6) VALIDAÇÃO: conferência automática de números, prazos e citações contra a fonte, e bloqueio de saída sem trecho válido; (7) MÉTRICAS: taxa de aproveitamento da minuta, taxa de correção por tipo de erro, incidência de alucinação; (8) AVALIAÇÃO PERIÓDICA com casos de teste e comparação com a produção humana; (9) SUSPENSÃO AUTOMÁTICA se a taxa de correção por alucinação ultrapassar o limite definido."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o agente usa modelo de linguagem, ele não é determinístico e por isso não pode ser usado em serviço público.'",
+          "correcao": "Errado. A não determinismo não impede uso; o que exige é GOVERNANÇA DO PROCESSO — registro, alçadas, validação e supervisão. Não determinismo é, ao contrário, argumento a favor de mais registro, porque o mesmo objetivo pode gerar caminhos diferentes e a auditoria precisa de reconstituir o caminho efetivamente percorrido."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Quanto maior a irreversibilidade da ação e o impacto sobre terceiros, maior a necessidade de supervisão humana e menor a autonomia delegável.",
+          "resposta": "Certo. É a regra de proporcionalidade aplicada a agentes, alinhada à exigência de controles proporcionais ao risco (art. 48, II, da Lei nº 14.129/2021)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Elementos obrigatórios de um desenho de governança de agente: A) registro de chamadas de ferramenta; B) orçamento de execução; C) validação de saída; D) permissão de escrita irrestrita em bases de terceiros.",
+          "resposta": "A, B e C. O item D elimina a própria função de alçada e a rastreabilidade de autorização."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o que distingue um agente de um fluxo determinístico, relacionará o uso de ferramentas e fluxos multietapa ao risco de decisões autônomas sobre direitos, e desenhará o modelo de supervisão aplicável, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o que distingue um agente de um fluxo determinístico, relacionará o uso de ferramentas e fluxos multietapa ao risco de decisões autônomas sobre direitos, e desenhará o modelo de supervisão aplicável"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Agentes, ferramentas e fluxos com supervisão\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Agentes, ferramentas e fluxos com supervisão\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das u…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Agentes, ferramentas e fluxos com supervisão",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o agente usa modelo de linguagem, ele não é determinístico e por isso não pode ser usado em serviço público.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A não determinismo não impede uso; o que exige é GOVERNANÇA DO PROCESSO — registro, alçadas, validação e supervisão. Não determinismo é, ao contrário, argumento a favor de mais registro, porque o mesmo objetivo pode gerar caminhos diferentes e a auditoria precisa de reconstituir o caminho efetivamente percorrido."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença operacional entre um fluxo com RAG e um agente que usa RAG?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O fluxo tem os passos escritos: recuperar, compor, gerar, revisar — e segue essa sequência sempre. O agente recebe o objetivo e decide quando recuperar, quando perguntar, quando chamar outra ferramenta e quando parar; com a mesma base, o agente pode ser mais flexível e muito mais difícil de auditar. Para um serviço público, a recomendação é começar pelo fluxo determinístico, que é previsível, testável e auditável, e só evoluir para o agente em tarefas de baixo impacto, com alçadas e registro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Desenhe o desenho de supervisão de um agente que redige minutas de resposta a cidadãos.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) PERMISSÕES: apenas leitura nas bases e apenas escrita na fila de minutas; (2) SEPARAÇÃO: o agente produz minuta; a publicação exige servidor identificado, com nome e matrícula; (3) ALÇADA: temas sensíveis (reclamação com indício de irregularidade, menção a dado de saúde, risco jurídico) escalam automaticamente a um humano; (4) LOG: prompt, trechos recuperados, minuta, ferramentas chamadas, tokens e custo; (5) ORÇAMENTO: limite de passos e de tempo por tarefa, com encerramento e passagem ao humano; (6) VALIDAÇÃO: conferência automática de números, prazos e citações contra a fonte, e bloqueio de saída sem trecho válido; (7) MÉTRICAS: taxa de aproveitamento da minuta, taxa de correção por tipo de erro, incidência de alucinação; (8) AVALIAÇÃO PERIÓDICA com casos de teste e comparação com a produção humana; (9) SUSPENSÃO AUTOMÁTICA se a taxa de correção por alucinação ultrapassar o limite definido.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o agente usa modelo de linguagem, ele não é determinístico e por isso não pode ser usado em serviço público.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A não determinismo não impede uso; o que exige é GOVERNANÇA DO PROCESSO — registro, alçadas, validação e supervisão. Não determinismo é, ao contrário, argumento a favor de mais registro, porque o mesmo objetivo pode gerar caminhos diferentes e a auditoria precisa de reconstituir o caminho efetivamente percorrido.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

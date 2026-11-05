@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 2,
+    "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+    "parte": 4,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U2P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U2P4.js",
+    "idsCompletos": [
+      "m6-u2-t3-s2",
+      "m6-u2-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u2-t3-s2",
+      "titulo": "Comparações e distinções críticas da unidade",
+      "topicoTitulo": "Publicidade administrativa x divulgação irrestrita de dados pessoais, comparações e síntese",
+      "topicoId": "modulo-6-unidade-2-topico-3",
+      "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno distinguirá transparência ativa e passiva, dado aberto e dado acessível ao público, sigilo legal e segredo de justiça, e informação sigilosa e informação pessoal, explicando por que cada distinção altera o gabarito.",
+      "conteudo": "COMPARAÇÃO 1 — TRANSPARÊNCIA ATIVA x TRANSPARÊNCIA PASSIVA. Definição: ativa = disponibilização de dados independentemente de solicitações (art. 4º, XI, da Lei nº 14.129/2021; dever do art. 8º da LAI); passiva = procedimento de pedido individual (arts. 10 a 16 da LAI). Finalidade e funcionamento: a ativa é contínua e de ofício; a passiva é reagente e individualizada. Requisitos: a ativa exige atualização, formato legível por máquina, acessibilidade e autenticidade (art. 8º, § 3º, da LAI; art. 29 da Lei nº 14.129/2021); a passiva exige prazo de 20 dias, prorrogável por 10 com justificativa expressa (art. 11). Vantagens e limitações: a ativa é boa para dado agregado e indicador; a passiva é indispensável para documento específico. Erro comum e efeito no gabarito: dizer que a passiva é «mais intensa» ou que o portal «dispensa» o atendimento de pedidos. COMPARAÇÃO 2 — DADO ABERTO x DADO ACESSÍVEL AO PÚBLICO. Definição (art. 4º, IV e V, da Lei nº 14.129/2021): dado aberto é estruturado, em meio digital, processável por máquina, referenciado na internet e disponibilizado sob licença aberta que permita livre utilização; dado acessível ao público é qualquer dado gerado ou acumulado pelos entes públicos que não esteja sob sigilo ou restrição de acesso nos termos da LAI. Diferença que muda o gabarito: «acessível ao público» é conceito AMPLO (inclui documentos em PDF e dados pessoais cuja divulgação seja legal); «dado aberto» exige formato, licença e referência — logo, nem tudo que é acessível é aberto, e a abertura de base (art. 30) pressupõe formato aberto. COMPARAÇÃO 3 — SIGILO LEGAL x SEGREDO DE JUSTIÇA x SEGREDO INDUSTRIAL. Definição: sigilo legal é o regime de restrição de acesso administrativo previsto na LAI, por imprescindibilidade para a segurança da sociedade e do Estado (art. 23), com graus e prazos (art. 24); segredo de justiça é regime processual, com regulação própria; segredo industrial decorre da exploração direta de atividade econômica (art. 22 da LAI, que preserva as demais hipóteses legais de sigilo e de segredo de justiça). Diferença que muda o gabarito: o art. 22 da LAI NÃO exclui as demais hipóteses de sigilo e de segredo de justiça, o que impede a interpretação de que a LAI esgotaria todos os regimes de restrição; e o sigilo da LAI é de COMPETÊNCIA DA AUTORIDADE ADMINISTRATIVA, não do juiz. COMPARAÇÃO 4 — INFORMAÇÃO SIGILOSA x INFORMAÇÃO PESSOAL. Definição (art. 4º, III e IV, da LAI): sigilosa é a submetida temporariamente a restrição de acesso público por imprescindibilidade para a segurança da sociedade e do Estado; pessoal é a relacionada a pessoa natural identificada ou identificável. Consequência que muda o gabarito: são regimes AUTÔNOMOS e cumuláveis — a informação pessoal tem prazo máximo de 100 anos (art. 31, § 1º, I) mesmo sem classificação; e o art. 7º, § 2º, da LAI assegura acesso parcial quando a informação é apenas PARCIALMENTE sigilosa. COMPARAÇÃO 5 — DADO ANONIMIZADO x DADO PSEUDONIMIZADO x DADO PESSOAL. Definição: o dado anonimizado é o que não pode ser associado a uma pessoa pelos meios técnicos e razoavelmente disponíveis (LGPD, art. 5º, III); o pseudonimizado é o que pode ser associado por meios adicionais, permanecendo dado pessoal; o dado pessoal é o relativo a pessoa natural identificada ou identificável (art. 5º, I). Diferença que muda o gabarito: só a anonimização retira o dado do regime de identificação; pseudonimização NÃO basta para abrir base com dados pessoais. COMPARAÇÃO 6 — GRATUIDADE x RESSARCIMENTO. Definição: o serviço de busca e fornecimento de informação é gratuito (art. 12 da LAI na redação do art. 52 da Lei nº 14.129/2021); pode ser cobrado exclusivamente o ressarcimento de custos e materiais quando o atendimento exigir REPRODUÇÃO de documentos; é isento quem não puder pagar sem prejuízo do sustento. Diferença que muda o gabarito: o ressarcimento não é «taxa» nem «preço» e não incide sobre a busca, mas apenas sobre a reprodução.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um órgão publica planilhas de despesa em formato PDF e publica as mesmas planilhas em CSV com dicionário de dados. Qual está em conformidade com o padrão de dado aberto?",
+          "resposta": "As planilhas em CSV, acompanhadas de dicionário de dados e referência estável, atendem ao conceito de dado aberto (art. 4º, IV, da Lei nº 14.129/2021: estruturado, legível por máquina, referenciado na internet, sob licença aberta). Os PDFs podem ser «acessíveis ao público» (art. 4º, V), mas não são dados abertos por si só, porque não são estruturados nem processáveis por máquina."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um documento com duas partes: um parecer técnico sem restrição e um anexo com dados de saúde de servidor. Como tratar no pedido de acesso?",
+          "resposta": "Aplicar o art. 7º, § 2º, da Lei nº 12.527/2011: «não sendo autorizado acesso integral à informação por ser ela parcialmente sigilosa, é assegurado o acesso à parte não sigilosa por meio de certidão, extrato ou cópia com ocultação da parte sob sigilo». No caso, entrega-se o parecer e omite-se (ou anonimiza-se) o anexo, com motivação da retenção, teor integral da negativa (art. 14) e indicação de recurso (art. 11, § 4º). Recusar o todo seria violar o direito de acesso parcial."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Pseudonimizar os dados (substituir o nome por um código) basta para que a base possa ser publicada como dado aberto.'",
+          "correcao": "Errado. Pseudonimização mantém a associação recuperável, de modo que o dado continua sendo dado pessoal (art. 5º, I, da LGPD — verificado em 2026-10-20) e o acesso depende de base legal. Para abertura de base, exige-se anonimização efetiva (art. 5º, III, da LGPD; art. 36 da Lei nº 14.129/2021). Item que confunde as duas técnicas é armadilha frequente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O art. 22 da Lei nº 12.527/2011 exclui as demais hipóteses legais de sigilo e de segredo de justiça.",
+          "resposta": "Certo. O art. 22 diz que o disposto na LAI NÃO exclui as demais hipóteses legais de sigilo e de segredo de justiça nem as hipóteses de segredo industrial decorrentes da exploração direta de atividade econômica pelo Estado ou por pessoa física ou entidade privada com vínculo com o poder público."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Sobre o art. 12 da Lei nº 12.527/2011, na redação dada pelo art. 52 da Lei nº 14.129/2021, é CORRETO: A) o serviço de busca e fornecimento de informação é gratuito; B) pode ser cobrado o ressarcimento de custos quando o atendimento exigir reprodução de documentos; C) existe isenção para quem não pode arcar sem prejuízo do sustento; D) a cobrança pode transcender o custo de materiais e serviços.",
+          "resposta": "A, B e C. O item D é errado: o valor cobrado é EXCLUSIVAMENTE o necessário ao ressarcimento dos custos dos serviços e dos materiais utilizados, o que exclui qualquer finalidade lucrativa."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir transparência ativa e passiva, dado aberto e dado acessível ao público, sigilo legal e segredo de justiça, e informação sigilosa e informação pessoal, explicando por que cada distinção altera o gabarito, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá transparência ativa e passiva, dado aberto e dado acessível ao público, sigilo legal e segredo de justiça, e informação sigilosa e informação pessoal, explicando por que cada distinção altera o gabarito"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "COMPARAÇÃO 1 — TRANSPARÊNCIA ATIVA x TRANSPARÊNCIA PASSIVA. Definição: ativa = disponibilização de dados independentemente de solicitações (art. 4º, XI, da Lei nº 14.129/2021; dever do art. 8º da LAI); passiva = procedimento de pedido individual (arts. 10 a 16 da LAI). Finalidade e funcionamento: a ativa é contínua e de ofício; a passiva é reagente e individualizada. Requisitos: a ativa exige atualização, formato legível por máquina, acessibilidade e autenticidade (art. 8º, § 3º, da LAI; art. 29…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comparações e distinções críticas da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Pseudonimizar os dados (substituir o nome por um código) basta para que a base possa ser publicada como dado aberto.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Pseudonimização mantém a associação recuperável, de modo que o dado continua sendo dado pessoal (art. 5º, I, da LGPD — verificado em 2026-10-20) e o acesso depende de base legal. Para abertura de base, exige-se anonimização efetiva (art. 5º, III, da LGPD; art. 36 da Lei nº 14.129/2021). Item que confunde as duas técnicas é armadilha frequente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um órgão publica planilhas de despesa em formato PDF e publica as mesmas planilhas em CSV com dicionário de dados. Qual está em conformidade com o padrão de dado aberto?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "As planilhas em CSV, acompanhadas de dicionário de dados e referência estável, atendem ao conceito de dado aberto (art. 4º, IV, da Lei nº 14.129/2021: estruturado, legível por máquina, referenciado na internet, sob licença aberta). Os PDFs podem ser «acessíveis ao público» (art. 4º, V), mas não são dados abertos por si só, porque não são estruturados nem processáveis por máquina.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um documento com duas partes: um parecer técnico sem restrição e um anexo com dados de saúde de servidor. Como tratar no pedido de acesso?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Aplicar o art. 7º, § 2º, da Lei nº 12.527/2011: «não sendo autorizado acesso integral à informação por ser ela parcialmente sigilosa, é assegurado o acesso à parte não sigilosa por meio de certidão, extrato ou cópia com ocultação da parte sob sigilo». No caso, entrega-se o parecer e omite-se (ou anonimiza-se) o anexo, com motivação da retenção, teor integral da negativa (art. 14) e indicação de recurso (art. 11, § 4º). Recusar o todo seria violar o direito de acesso parcial.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Pseudonimizar os dados (substituir o nome por um código) basta para que a base possa ser publicada como dado aberto.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Pseudonimização mantém a associação recuperável, de modo que o dado continua sendo dado pessoal (art. 5º, I, da LGPD — verificado em 2026-10-20) e o acesso depende de base legal. Para abertura de base, exige-se anonimização efetiva (art. 5º, III, da LGPD; art. 36 da Lei nº 14.129/2021). Item que confunde as duas técnicas é armadilha frequente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u2-t3-s3",
+      "titulo": "Erros, exceções e pegadinhas de prova da unidade",
+      "topicoTitulo": "Publicidade administrativa x divulgação irrestrita de dados pessoais, comparações e síntese",
+      "topicoId": "modulo-6-unidade-2-topico-3",
+      "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno rejeitará afirmações equivocadas frequentes sobre transparência e acesso à informação, substituindo-as por versões tecnicamente corretas ancoradas em dispositivo.",
+      "conteudo": "PEGADINHA 1 — TRANSPARÊNCIA COMO DEVER SEM EXCEÇÕES. Afirmação errada: «a Administração deve divulgar tudo o que possui». Por que está errada: o objeto do dever são as informações de interesse coletivo ou geral (art. 8º da LAI) e a abertura de bases pressupõe ausência de informação protegida por lei (art. 30, § 6º, da Lei nº 14.129/2021). Versão correta: «a publicidade é preceito geral; o sigilo é exceção fundamentada». PEGADINHA 2 — PORTAL COMO SUBSTITUTO DO ATENDIMENTO. Afirmação errada: «com o portal de transparência, o órgão pode recusar pedidos». Por que está errada: os mecanismos são complementares; o art. 10 assegura o direito de qualquer interessado, e o art. 8º, § 6º, da LAI só desonera o órgão quando a informação já estiver disponível em formato de acesso universal E o requerente não declarar não dispor de meios para realizar os procedimentos. Versão correta: «o portal desonera o atendimento apenas nas hipóteses do art. 8º, § 6º». PEGADINHA 3 — PRAZO COMO PRINCÍPIO. Afirmação errada: «os 20 dias da LAI são regra vinculante e por isso podem ser alongados». Por que está errada: prazo é regra; a prorrogação de 10 dias existe, mas exige justificativa expressa e ciência do requerente (art. 11, § 2º). Versão correta: «prazo é regra vinculante, com hipótese e condição de prorrogação». PEGADINHA 4 — MOTIVO DO PEDIDO. Afirmação errada: «o órgão pode exigir a justificativa do pedido para decidir». Por que está errada: o art. 10, § 3º, veda exigências relativas aos motivos, e o art. 10, § 1º, veda exigências que inviabilizem o pedido de interesse público. Versão correta: «exigência válida: identificação do requerente e especificação da informação». PEGADINHA 5 — CUSTO COMO TAXA. Afirmação errada: «a Lei nº 12.527/2011 autoriza cobrar taxa por consulta». Por que está errada: o serviço é gratuito (art. 12 na redação do art. 52 da Lei nº 14.129/2021); o ressarcimento é restrito ao custo de reprodução e há isenção social. Versão correta: «gratuidade como regra; ressarcimento de custo de reprodução como exceção; isenção por impossibilidade econômica». PEGADINHA 6 — PUBLICIDADE COMO LIBERDADE IRRESTRITA DE DADOS. Afirmação errada: «a transparência exige publicar dados de cidadãos». Por que está errada: art. 31 da LAI e art. 29, § 1º, VIII, da Lei nº 14.129/2021 (verificados). Versão correta: «transparência exige dados agregados, anonimizados ou legalmente divulgáveis». PEGADINHA 7 — MUNICÍPIO PEQUENO SEM TRANSPARÊNCIA. Afirmação errada: «município com menos de 10.000 habitantes está dispensado da transparência». Por que está errada: o art. 8º, § 4º, dispensa apenas da divulgação obrigatória NA INTERNET, mantendo a exigência de informações orçamentárias e financeiras em tempo real. Versão correta: «a dispensa é de canal, não de substância». PEGADINHA 8 — CONFUSÃO ENTRE ABERTURA DE BASE E DADO ABERTO. Afirmação errada: «toda base de dados é dado aberto». Por que está errada: bases podem conter dados pessoais e sigilosos; o pedido de abertura (art. 30) gera procedimento, e o dado aberto exige formato e licença (art. 4º, IV). Versão correta: «base é conteúdo; dado aberto é forma e licença». PEGADINHA 9 — ESCOPO DA LEI DE GOVERNO DIGITAL NOS ENTES SUBNACIONAIS. Afirmação errada: «a Lei nº 14.129/2021 se aplica automaticamente a todos os Municípios». Por que está errada: art. 2º, III, e § 2º. Versão correta: «a incidência nos demais entes depende de ato normativo próprio». PEGADINHA 10 — RECUSA GLOBAL DE DADO PESSOAL. Afirmação errada: «base com CPF é automaticamente inacessível». Por que está errada: o regime admite hipóteses de acesso (art. 31, § 1º, II, e § 3º, da LAI) e entrega parcial (art. 7º, § 2º); a recusa binária sem análise por camada viola o dever de fundamentação. Versão correta: «analisar por camada, entregar o máximo possível e fundamentar a retenção».",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um item afirma que «a Lei nº 12.527/2011 assegura ao requerente o acesso a qualquer documento, ainda que contenha dados pessoais, desde que o pedido esteja formalizado». Avalie.",
+          "resposta": "Errado. A formalização do pedido não supera os limites do art. 31 da Lei nº 12.527/2011 (proteção das informações pessoais), do art. 23 (hipóteses de sigilo) e da LGPD. O que o art. 7º, § 2º, assegura é o ACESSO PARCIAL à parte não sigilosa; e a entrega integral depende de hipótese legal (previsão legal ou consentimento, art. 31, § 1º, II, ou hipóteses do § 3º)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como o órgão deve atender o pedido de «todos os contratos celebrados nos últimos cinco anos»?",
+          "resposta": "Não há recusa automática: contratos são informações públicas por natureza e constam do mínimo de divulgação (art. 8º, § 1º, IV, da LAI). O caminho é: identificar a base disponível; entregar em formato legível por máquina e em relatório com formatos abertos (art. 8º, § 3º, II e III); se a base incluir dados pessoais de fornecedores pessoa física ou de representantes legais, aplicar ocultação ou agregação com motivação; informar o teor integral de eventual negativa e o caminho recursal (arts. 14 e 11, § 4º)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O órgão não pode cobrar nada pelo atendimento de pedido de acesso, nem pela reprodução de documentos.'",
+          "correcao": "Reduzido. O serviço de busca e fornecimento da informação é gratuito (art. 12 na redação do art. 52 da Lei nº 14.129/2021), mas o órgão pode cobrar exclusivamente o valor necessário ao ressarcimento dos custos dos serviços e dos materiais UTILIZADOS quando o atendimento exigir REPRODUÇÃO DE DOCUMENTOS, e é isento de ressarcimento quem não puder pagar sem prejuízo do sustento próprio ou da família."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O art. 8º, § 3º, da Lei nº 12.527/2011 exige que o sítio oficial garanta autenticidade e integridade das informações disponíveis para acesso.",
+          "resposta": "Certo. O inciso V do § 3º exige exatamente isso, ao lado da manutenção de informações atualizadas (inciso VI) e do acesso automatizado em formatos abertos (inciso III)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) NÃO é vedado pela Lei nº 12.527/2011: A) exigir que o requerente justifique o motivo do pedido; B) exigir identificação do requerente em pedido de interesse público com exigências inviabilizantes; C) aplicar os prazos da LAI ao pedido de abertura de base de dados; D) indeferir pedido sem fundamentação.",
+          "resposta": "C. O art. 30, § 2º, da Lei nº 14.129/2021 remete expressamente aos procedimentos e prazos previstos nos arts. 10 e 11 da LAI para as solicitações de abertura de bases de dados."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de rejeitar afirmações equivocadas frequentes sobre transparência e acesso à informação, substituindo-as por versões tecnicamente corretas ancoradas em dispositivo, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "rejeitará afirmações equivocadas frequentes sobre transparência e acesso à informação, substituindo-as por versões tecnicamente corretas ancoradas em dispositivo"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "PEGADINHA 1 — TRANSPARÊNCIA COMO DEVER SEM EXCEÇÕES. Afirmação errada: «a Administração deve divulgar tudo o que possui». Por que está errada: o objeto do dever são as informações de interesse coletivo ou geral (art. 8º da LAI) e a abertura de bases pressupõe ausência de informação protegida por lei (art. 30, § 6º, da Lei nº 14.129/2021). Versão correta: «a publicidade é preceito geral; o sigilo é exceção fundamentada». PEGADINHA 2 — PORTAL COMO SUBSTITUTO DO ATENDIMENTO. Afirmação errada: «com …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Erros, exceções e pegadinhas de prova da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O órgão não pode cobrar nada pelo atendimento de pedido de acesso, nem pela reprodução de documentos.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Reduzido. O serviço de busca e fornecimento da informação é gratuito (art. 12 na redação do art. 52 da Lei nº 14.129/2021), mas o órgão pode cobrar exclusivamente o valor necessário ao ressarcimento dos custos dos serviços e dos materiais UTILIZADOS quando o atendimento exigir REPRODUÇÃO DE DOCUMENTOS, e é isento de ressarcimento quem não puder pagar sem prejuízo do sustento próprio ou da família."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um item afirma que «a Lei nº 12.527/2011 assegura ao requerente o acesso a qualquer documento, ainda que contenha dados pessoais, desde que o pedido esteja formalizado». Avalie.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A formalização do pedido não supera os limites do art. 31 da Lei nº 12.527/2011 (proteção das informações pessoais), do art. 23 (hipóteses de sigilo) e da LGPD. O que o art. 7º, § 2º, assegura é o ACESSO PARCIAL à parte não sigilosa; e a entrega integral depende de hipótese legal (previsão legal ou consentimento, art. 31, § 1º, II, ou hipóteses do § 3º).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como o órgão deve atender o pedido de «todos os contratos celebrados nos últimos cinco anos»?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não há recusa automática: contratos são informações públicas por natureza e constam do mínimo de divulgação (art. 8º, § 1º, IV, da LAI). O caminho é: identificar a base disponível; entregar em formato legível por máquina e em relatório com formatos abertos (art. 8º, § 3º, II e III); se a base incluir dados pessoais de fornecedores pessoa física ou de representantes legais, aplicar ocultação ou agregação com motivação; informar o teor integral de eventual negativa e o caminho recursal (arts. 14 e 11, § 4º).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O órgão não pode cobrar nada pelo atendimento de pedido de acesso, nem pela reprodução de documentos.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Reduzido. O serviço de busca e fornecimento da informação é gratuito (art. 12 na redação do art. 52 da Lei nº 14.129/2021), mas o órgão pode cobrar exclusivamente o valor necessário ao ressarcimento dos custos dos serviços e dos materiais UTILIZADOS quando o atendimento exigir REPRODUÇÃO DE DOCUMENTOS, e é isento de ressarcimento quem não puder pagar sem prejuízo do sustento próprio ou da família.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

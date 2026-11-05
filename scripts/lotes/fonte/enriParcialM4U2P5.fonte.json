@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 2,
+    "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+    "parte": 5,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U2P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U2P5.js",
+    "idsCompletos": [
+      "m4-u2-t3-s3",
+      "m4-u2-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u2-t3-s3",
+      "titulo": "Antivírus, EDR e proteção de endpoints",
+      "topicoTitulo": "Detecção, resposta e proteção de endpoints",
+      "topicoId": "modulo-4-unidade-2-topico-3",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno comparará antivírus por assinatura e solução EDR, indicando requisitos operacionais de cada um.",
+      "conteudo": "Antivírus clássico compara amostras com base de assinaturas de malware conhecido; é leve e eficiente contra o conhecido, mas não enxerga ataque inédito. Soluções modernas de proteção de endpoints adicionam análise comportamental (heurística, aprendizado de máquina): observam ações suspeitas — processo escrevendo em muitos arquivos, tentativa de desabilitar proteção, injeção de código — e podem bloquear em tempo real. EDR (Endpoint Detection and Response) vai além: mantém telemetria contínua do endpoint (processos, conexões, alterações), permite investigação retroativa do que aconteceu e auxilia na resposta (isolamento remoto do host, matar processo, coletar evidências). Requisito operacional crítico: EDR gera dado, não decisão — sem equipe ou serviço de análise para triar alertas, o órgão paga licença e acumula alertas ignorados. Boas práticas: cobertura mínima declarada (inventário x instalação), atualização de mecanismos, políticas de exclusão mínimas e justificadas, integração com central de monitoramento e teste periódico de bloqueio. EDR não substitui correção de vulnerabilidades nem MFA: é camada, não base.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um arquivo nunca visto começa a criptografar unidades de rede. Qual mecanismo provavelmente interrompe e por quê?",
+          "resposta": "Proteção comportamental/EDR: sem assinatura correspondente, a decisão é por comportamento anômalo (escrita em massa, alteração de extensões), justamente o que mecanismos baseados só em assinatura não detectam."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão adquire EDR, instala em 40% das estações e não dimensiona triagem de alertas. Avalie o risco residual.",
+          "resposta": "Cobertura parcial deixa 60% das estações sem telemetria — o atacante usa o lado fraco como entrada. Sem triagem, alertas de alto risco podem passar despercebidos. Ações: metas de cobertura com inventário confiável, responsável pela triagem, SLA interno de atendimento a alertas e teste de resposta."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'EDR detecta qualquer ataque, independentemente de operação humana.'",
+          "correcao": "Errado. EDR é ferramenta de detecção e apoio à resposta; sua eficácia depende de implantação ampla, qualidade das regras e análise humana de alertas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Proteção baseada apenas em assinaturas é suficiente contra ataque inédito (zero-day).",
+          "resposta": "Errado. Assinatura descreve o já conhecido; contra inédito, a defesa depende de mecanismos comportamentais, correção preventiva e defesa em profundidade."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Recurso típico de EDR (e não de antivírus clássico): A) atualização de assinaturas; B) investigação retroativa de eventos do endpoint; C) varredura por assinatura; D) bloqueio por lista branca simples.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de comparar antivírus por assinatura e solução EDR, indicando requisitos operacionais de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "comparará antivírus por assinatura e solução EDR, indicando requisitos operacionais de cada um"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Antivírus clássico compara amostras com base de assinaturas de malware conhecido; é leve e eficiente contra o conhecido, mas não enxerga ataque inédito. Soluções modernas de proteção de endpoints adicionam análise comportamental (heurística, aprendizado de máquina): observam ações suspeitas — processo escrevendo em muitos arquivos, tentativa de desabilitar proteção, injeção de código — e podem bloquear em tempo real. EDR (Endpoint Detection and Response) vai além: mantém telemetria contínua do e…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Antivírus, EDR e proteção de endpoints",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'EDR detecta qualquer ataque, independentemente de operação humana.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. EDR é ferramenta de detecção e apoio à resposta; sua eficácia depende de implantação ampla, qualidade das regras e análise humana de alertas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um arquivo nunca visto começa a criptografar unidades de rede. Qual mecanismo provavelmente interrompe e por quê?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Proteção comportamental/EDR: sem assinatura correspondente, a decisão é por comportamento anômalo (escrita em massa, alteração de extensões), justamente o que mecanismos baseados só em assinatura não detectam.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão adquire EDR, instala em 40% das estações e não dimensiona triagem de alertas. Avalie o risco residual.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Cobertura parcial deixa 60% das estações sem telemetria — o atacante usa o lado fraco como entrada. Sem triagem, alertas de alto risco podem passar despercebidos. Ações: metas de cobertura com inventário confiável, responsável pela triagem, SLA interno de atendimento a alertas e teste de resposta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'EDR detecta qualquer ataque, independentemente de operação humana.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. EDR é ferramenta de detecção e apoio à resposta; sua eficácia depende de implantação ampla, qualidade das regras e análise humana de alertas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u2-t4-s1",
+      "titulo": "Segmentação de rede e hardening",
+      "topicoTitulo": "Arquitetura de defesa: segmentação, hardening, vulnerabilidades e defesa em profundidade",
+      "topicoId": "modulo-4-unidade-2-topico-4",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno projetará segmentação de rede para conter movimentação lateral e enumerará ações de hardening de um servidor exposto.",
+      "conteudo": "Segmentação de rede divide a rede em zonas com políticas distintas (por exemplo, estações, servidores de aplicação, banco de dados, convidados, dispositivos de voz), de modo que o comprometimento de uma zona não alcance automaticamente as demais — o ganho é redução do alcance do dano (blast radius) e da movimentação lateral. Mecanismos usuais: VLANs com ACLs, firewalls entre zonas (leste-oeste), microsegmentação quando o ambiente suporta. Hardening é reduzir a superfície de ataque de um ativo: desabilitar serviços, portas e contas não necessários; trocar credenciais padrão de fábrica; aplicar correções; restringir privilégios; remover software supérfluo; ativar registro de eventos; definir permissões mínimas de arquivos. Sequência prática de hardening de servidor web exposto: 1) inventário de serviços; 2) desativar tudo que não é requisito; 3) correções de sistema e aplicativo; 4) credenciais fortes e contas individuais; 5) filtro de acesso à gestão (apenas rede administrativa); 6) registro e backup da configuração; 7) varredura de verificação. Regra gerencial: hardening sem inventário e sem padrão documentado vira prática dependente de cada profissional.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Estação infectada alcança automaticamente todos os servidores da rede. Que falha arquitetural permitiu e como corrigir?",
+          "resposta": "Ausência de segmentação: a rede plana faz da estação porta de entrada para tudo. Corrigir com zonas (estações X servidores) e ACL/firewall entre elas, permitindo apenas o tráfego necessário — por exemplo, estação fala com servidor web na porta 443, nunca com a porta de gestão do banco."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um dispositivo IoT de vídeo deve ficar na rede do órgão. Como segmentá-lo?",
+          "resposta": "Zona própria (VLAN de dispositivos) com acesso somente ao servidor de gravação e à Internet se indispensável, negado para estações e servidores; credencial padrão trocada; firmware atualizado; gestão restrita à rede administrativa. Assim, comprometimento do câmera não abre caminho para a zona de dados."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Segmentar a rede significa criar VLANs e nada mais.'",
+          "correcao": "Errado. VLAN sem políticas entre zonas apenas agrupa; segmentação efetiva exige controle de tráfego entre as zonas (ACLs/firewall), monitoramento e revisão de regras."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Trocar a senha padrão de fábrica é elemento de hardening.",
+          "resposta": "Certo. Credencial padrão é vulnerabilidade conhecida e explorável em massa; a troca é um dos passos básicos de redução de superfície de ataque."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Objetivo primário da segmentação de rede: A) aumentar velocidade; B) reduzir o alcance do dano em caso de comprometimento; C) substituir backup; D) eliminar a necessidade de MFA.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de projetar segmentação de rede para conter movimentação lateral e enumerará ações de hardening de um servidor exposto, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "projetará segmentação de rede para conter movimentação lateral e enumerará ações de hardening de um servidor exposto"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Segmentação de rede divide a rede em zonas com políticas distintas (por exemplo, estações, servidores de aplicação, banco de dados, convidados, dispositivos de voz), de modo que o comprometimento de uma zona não alcance automaticamente as demais — o ganho é redução do alcance do dano (blast radius) e da movimentação lateral. Mecanismos usuais: VLANs com ACLs, firewalls entre zonas (leste-oeste), microsegmentação quando o ambiente suporta. Hardening é reduzir a superfície de ataque de um ativo: d…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Segmentação de rede e hardening",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Segmentar a rede significa criar VLANs e nada mais.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. VLAN sem políticas entre zonas apenas agrupa; segmentação efetiva exige controle de tráfego entre as zonas (ACLs/firewall), monitoramento e revisão de regras."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Estação infectada alcança automaticamente todos os servidores da rede. Que falha arquitetural permitiu e como corrigir?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ausência de segmentação: a rede plana faz da estação porta de entrada para tudo. Corrigir com zonas (estações X servidores) e ACL/firewall entre elas, permitindo apenas o tráfego necessário — por exemplo, estação fala com servidor web na porta 443, nunca com a porta de gestão do banco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um dispositivo IoT de vídeo deve ficar na rede do órgão. Como segmentá-lo?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Zona própria (VLAN de dispositivos) com acesso somente ao servidor de gravação e à Internet se indispensável, negado para estações e servidores; credencial padrão trocada; firmware atualizado; gestão restrita à rede administrativa. Assim, comprometimento do câmera não abre caminho para a zona de dados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Segmentar a rede significa criar VLANs e nada mais.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. VLAN sem políticas entre zonas apenas agrupa; segmentação efetiva exige controle de tráfego entre as zonas (ACLs/firewall), monitoramento e revisão de regras.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

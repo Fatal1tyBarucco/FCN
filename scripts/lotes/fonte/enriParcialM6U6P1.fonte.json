@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 6,
+    "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+    "parte": 1,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U6P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U6P1.js",
+    "idsCompletos": [
+      "m6-u6-t1-s1",
+      "m6-u6-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u6-t1-s1",
+      "titulo": "Orientação estratégica da unidade",
+      "topicoTitulo": "Automação de decisões administrativas e supervisão humana",
+      "topicoId": "modulo-6-unidade-6-topico-1",
+      "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno delimitará o escopo da unidade 6.6, relacionará automação de decisões, supervisão humana, estudos de caso e resolução de questões aos princípios e dispositivos das unidades anteriores, e declarará competências.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os níveis de automação de decisão administrativa e os requisitos que incidem sobre cada um; (b) como se desenha a supervisão humana, com alçadas, critérios, registro e escalonamento; (c) quatro estudos de caso integrados, que combinam os conceitos das unidades 6.1 a 6.5 (publicação indevida, vazamento de dados, uso de ferramenta de IA e transparência administrativa); (d) um método de resolução de itens de prova que obrigue a identificar o princípio e o dispositivo aplicáveis antes de escolher a alternativa. POR QUE O CONHECIMENTO É IMPORTANTE: a prova de concurso sobre TI em órgão público exige raciocínio de ENQUADRAMENTO, não de decoreba de tecnologia. Um item típico descreve uma conduta digital e pergunta qual princípio foi violado ou qual dispositivo incide; o candidato que conhece a norma resolve, enquanto o que conhece apenas a ferramenta erra. Esta unidade treina a passagem do enunciado ao enquadramento. PRÉ-REQUISITOS: unidades 6.1 a 6.5; Módulos 4 e 5. OBJETIVOS OBSERVÁVEIS: (1) classificar o nível de automação de um sistema; (2) listar os requisitos mínimos de um ato decisório automatizado; (3) desenhar uma política de supervisão humana com registro e escalonamento; (4) resolver item de enunciado ambíguo identificando o princípio e o dispositivo; (5) redigir justificativa de resposta ancorada em norma. COMPETÊNCIAS DESENVOLVIDAS: análise de caso; argumentação normativa aplicada; leitura de item de prova com método. GRAU DE DIFICULDADE: avançado e especialista — exige integrar conceitos e qualificar o conflito entre regras. RELEVÂNCIA PARA CONCURSOS: classificação qualitativa de alta. É estimativa pedagógica de adequação ao conteúdo programático e ao estilo de item de prova, não frequência estatística de incidência em provas, que este material não possui.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a principal vantagem formativa do estudo de caso neste módulo?",
+          "resposta": "O estudo de caso obriga o candidato a percorrer a cadeia completa: identificar o fato, classificar o regime jurídico aplicável, localizar o princípio e o dispositivo, qualificar o conflito entre regras e, só então, concluir. É exatamente a sequência que o item de prova exige e que a memorização isolada não produz."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como a supervisão humana evita que se torne formalidade?",
+          "resposta": "Com desenho verificável: (1) alçada definida com critérios de escalonamento objetivo, não discricionário; (2) volume de revisão suficiente para ser representativo do fluxo; (3) registro de cada decisão revisada, com o que mudou e por quê; (4) MAIS VALOR TEMPO — o revisor precisa de acesso à informação e de autoridade para rever; (5) retroalimentação ao desenho (a revisão de casos alimenta a atualização da regra); e (6) indicador de concordância entre a decisão automatizada e a decisão revisada. Supervisão sem alçada, sem registro e sem indicadores é teatro de governança."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como existe revisão humana prevista em toda decisão automatizada, a automação é automaticamente conforme.'",
+          "correcao": "Errado. A supervisão humana é uma das condições de conformidade, não atestado dela. Uma revisão genérica, sem alçada, sem registro e sem autoridade para rever produz aparência de controle sem controle efetivo — e, em auditoria (art. 49 da Lei nº 14.129/2021, abordagem baseada em risco), é lido como controle inexistente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A supervisão humana de decisões automatizadas deve ser desenhada com alçadas objetivas, registro das decisões revisadas e indicador de concordância.",
+          "resposta": "Certo. São os elementos que distinguem controle efetivo de formalidade e que produzem evidência auditável."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São requisitos de conformidade de um ato decisório automatizado: A) base normativa da competência; B) critérios escritos e versionados; C) registro dos parâmetros usados; D) dispensa de motivação em decisões de risco baixo.",
+          "resposta": "A, B e C. O item D é errado: a motivação é conteúdo do ato e não é dispensada pela forma eletrônica."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de delimitar o escopo da unidade 6.6, relacionará automação de decisões, supervisão humana, estudos de caso e resolução de questões aos princípios e dispositivos das unidades anteriores, e declarará competências, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "delimitará o escopo da unidade 6.6, relacionará automação de decisões, supervisão humana, estudos de caso e resolução de questões aos princípios e dispositivos das unidades anteriores, e declarará competências"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os níveis de automação de decisão administrativa e os requisitos que incidem sobre cada um; (b) como se desenha a supervisão humana, com alçadas, critérios, registro e escalonamento; (c) quatro estudos de caso integrados, que combinam os conceitos das unidades 6.1 a 6.5 (publicação indevida, vazamento de dados, uso de ferramenta de IA e transparência administrativa); (d) um método de resolução de itens de prova que obrigue a identificar o princí…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Orientação estratégica da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como existe revisão humana prevista em toda decisão automatizada, a automação é automaticamente conforme.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A supervisão humana é uma das condições de conformidade, não atestado dela. Uma revisão genérica, sem alçada, sem registro e sem autoridade para rever produz aparência de controle sem controle efetivo — e, em auditoria (art. 49 da Lei nº 14.129/2021, abordagem baseada em risco), é lido como controle inexistente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a principal vantagem formativa do estudo de caso neste módulo?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O estudo de caso obriga o candidato a percorrer a cadeia completa: identificar o fato, classificar o regime jurídico aplicável, localizar o princípio e o dispositivo, qualificar o conflito entre regras e, só então, concluir. É exatamente a sequência que o item de prova exige e que a memorização isolada não produz.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como a supervisão humana evita que se torne formalidade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Com desenho verificável: (1) alçada definida com critérios de escalonamento objetivo, não discricionário; (2) volume de revisão suficiente para ser representativo do fluxo; (3) registro de cada decisão revisada, com o que mudou e por quê; (4) MAIS VALOR TEMPO — o revisor precisa de acesso à informação e de autoridade para rever; (5) retroalimentação ao desenho (a revisão de casos alimenta a atualização da regra); e (6) indicador de concordância entre a decisão automatizada e a decisão revisada. Supervisão sem alçada, sem registro e sem indicadores é teatro de governança.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como existe revisão humana prevista em toda decisão automatizada, a automação é automaticamente conforme.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A supervisão humana é uma das condições de conformidade, não atestado dela. Uma revisão genérica, sem alçada, sem registro e sem autoridade para rever produz aparência de controle sem controle efetivo — e, em auditoria (art. 49 da Lei nº 14.129/2021, abordagem baseada em risco), é lido como controle inexistente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u6-t1-s2",
+      "titulo": "Níveis de automação de decisão e requisitos de conformidade",
+      "topicoTitulo": "Automação de decisões administrativas e supervisão humana",
+      "topicoId": "modulo-6-unidade-6-topico-1",
+      "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno classificará o nível de automação de um sistema decisório, enumerará os requisitos de conformidade de cada nível e explicará por que a automação total de decisão sobre direitos exige mais do que a automação de apoio.",
+      "conteudo": "NÍVEIS DE AUTOMAÇÃO (classificação didática, alinhada à distinção entre decisão automatizada e decisão assistida): (N0) DECISÃO MANUAL PURA — o servidor decide com apoio de consulta documental; (N1) APOIO À DECISÃO — o sistema calcula, classifica ou estima escore, e o servidor decide; (N2) DECISÃO AUTOMATIZADA COM REVISÃO PRÉVIA — o sistema decide, mas a decisão só produz efeito após revisão humana; (N3) DECISÃO AUTOMATIZADA COM REVISÃO POSTERIOR OU AMOSTRAL — o sistema decide e produz efeito imediato, com revisão posterior de amostra ou por gatilho de risco; (N4) DECISÃO AUTOMATIZADA COM AUTORIZAÇÃO PRÉVIA EM ALÇADA — o sistema decide dentro de limites e escalona automaticamente os casos fora da faixa; (N5) AUTOMAÇÃO PLENA — o sistema decide e o ato se forma sem intervenção. A classificação não é legal: é ferramenta de governança. REGRA DE GOVERNANÇA QUE SE EXTRAI DELA: quanto maior o nível, maior o conjunto de salvaguardas exigidas, e a DIRETA PROPORCIONALIDADE AO DIREITO AFETADO (art. 48, II, da Lei nº 14.129/2021 — controles internos proporcionais aos riscos, observadas as causas, fontes, consequências e impactos e a relação custo-benefício). REQUISITOS COMUNS A TODOS OS NÍVEIS: (1) BASE NORMATIVA — competência e critério definido em norma; (2) CRITÉRIO ESCRITO E VERSIONADO, com data de vigência (art. 28 da Lei nº 12.527/2011 é a referência de formalização de ato classificatório; para regras de decisão, a exigência é de governança, com o mesmo padrão de formalidade); (3) REGISTRO DA DECISÃO — identificador do caso, parâmetros usados, versão da regra ou do modelo, data e hora, autor lógico do ato; (4) MOTIVAÇÃO COMUNICÁVEL — o fundamento e o critério efetivamente aplicado, em linguagem clara (art. 3º, VII, da Lei nº 14.129/2021); (5) RASTREABILIDADE E NÃO REPÚDIO (Módulo 4; art. 43, I e IV, da Lei nº 14.129/2021; art. 34 da Lei nº 12.527/2011); (6) SEGURANÇA E PROTEÇÃO DE DADOS (art. 46 da LGPD — verificado em 2026-10-20); (7) CANAL DE CONTESTAÇÃO E RECURSO — com o direito de acesso ao fundamento do ato (art. 7º, § 3º, da Lei nº 12.527/2011); (8) MONITORAMENTO E REVISÃO PERIÓDICA da regra, com reavaliação de impacto por subgrupo (Módulo 5). EXIGÊNCIAS ADICIONAIS SEGUNDO O NÍVEL: no N2, a revisão é condição de eficácia do ato, com alçada, prazo e registro; no N3, a amostragem deve ser dimensionada e estatisticamente defensável, com gatilhos de risco (revisão integral em casos de maior impacto, de erro histórico, de reclamação ou de subgrupo com desempenho pior); no N4, o sistema apenas EXECUTA o que a alçada autoriza, e o escalonamento é regra publicada; no N5, a conformidade depende de se tratar de ato de baixo impacto ou de ato que admita revisão posterior por lei — e, em se tratando de decisão sobre direito, a revisão humana permanece requisito material. A CENTRALIDADE DA MOTIVAÇÃO: em qualquer nível, o cidadão tem direito de saber o critério; e, se a decisão for individual e automatizada, a motivação deve ser individualizada, com possibilidade de impugnação. LIMITES: o nível de automação não transfere a responsabilidade ao fornecedor (o órgão responde pelo ato — art. 34 da Lei nº 12.527/2011); e o escalonamento automático não supre a alçada definida — um sistema que escala para «alguém» sem definir quem, com que critério e em que prazo, não tem governança.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classifique o nível de automação: (a) sistema que calcula a pontuação de um requerimento e o servidor decide; (b) sistema que nega requerimentos automaticamente e o servidor só é acionado se o cidadão reclamar; (c) sistema que nega automaticamente e escala ao supervisor quando o valor do benefício ultrapassar o limite.",
+          "resposta": "(a) N1, apoio à decisão; (b) N3, decisão automatizada com revisão posterior ou amostral — ponto crítico, porque a revisão por reclamação é enviesada: ela revisa apenas o que reclamou, e a reclamação depende de informação e capacidade de ação do cidadão; (c) N4, decisão automatizada com alçada, em que o escalonamento é regra publicada. O item que classifica (b) e (c) no mesmo nível erra justamente sobre a diferença entre revisão reativa e alçada estruturada."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão implantou Negação automática para indeferimentos de requerimento de benefício de valor baixo. Quais os três requisitos mais críticos a observar?",
+          "resposta": "(1) MOTIVAÇÃO E COMUNICAÇÃO do indeferimento com o critério e o fundamento (art. 7º, § 3º, da Lei nº 12.527/2011 — acesso ao fundamento do ato; art. 3º, VII, da Lei nº 14.129/2021 — linguagem clara); (2) CANAL DE REVISÃO com alçada, prazo e registro, e indicador de reversão de decisões; (3) CONTROLE DE IMPESSOALIDADE E DE IMPACTO por subgrupo — o valor baixo do benefício não elimina o risco de erro assimétrico sobre públicos específicos, que exige avaliação por subgrupo e gatilho de revisão integral. Complementarmente: registrar os parâmetros usados em cada indeferimento (rastreabilidade) e monitorar a taxa de reversão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A revisão por amostra é suficiente para todos os casos, porque é proporcional ao volume.'",
+          "correcao": "Errado. A amostragem é técnica de controle estatístico, e sua justificativa depende do risco: se o erro tem impacto assimétrico sobre um subgrupo, se há histórico de erro naquele fluxo ou se a reclamação é o único gatilho, a amostragem mascara o erro justamente onde ele se concentra. A revisão por gatilho de risco, com revisão integral dos casos de maior impacto, é o desenho adequado — e sua parametrização deve ser documentada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O nível de automação de um sistema decisório não transfere ao fornecedor a responsabilidade pelo ato administrativo praticado.",
+          "resposta": "Certo. O órgão responde pelos danos decorrentes de divulgação não autorizada ou uso indevido de informações (art. 34 da Lei nº 12.527/2011) e responde pelo ato administrativo que o sistema produziu em seu nome; o contrato com o fornecedor é relação de direito privado, não transferência de poder público."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São requisitos comuns a todo ato decisório automatizado: A) base normativa da competência; B) registro dos parâmetros usados; C) canal de contestação; D) dispensa de registro quando a decisão é reversível.",
+          "resposta": "A, B e C. A reversibilidade não afasta o dever de registrar: o registro é o que permite apurar dolo ou culpa e é o que sustenta o art. 34 da Lei nº 12.527/2011."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar o nível de automação de um sistema decisório, enumerará os requisitos de conformidade de cada nível e explicará por que a automação total de decisão sobre direitos exige mais do que a automação de apoio, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará o nível de automação de um sistema decisório, enumerará os requisitos de conformidade de cada nível e explicará por que a automação total de decisão sobre direitos exige mais do que a automação de apoio"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "NÍVEIS DE AUTOMAÇÃO (classificação didática, alinhada à distinção entre decisão automatizada e decisão assistida): (N0) DECISÃO MANUAL PURA — o servidor decide com apoio de consulta documental; (N1) APOIO À DECISÃO — o sistema calcula, classifica ou estima escore, e o servidor decide; (N2) DECISÃO AUTOMATIZADA COM REVISÃO PRÉVIA — o sistema decide, mas a decisão só produz efeito após revisão humana; (N3) DECISÃO AUTOMATIZADA COM REVISÃO POSTERIOR OU AMOSTRAL — o sistema decide e produz efeito im…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Níveis de automação de decisão e requisitos de conformidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A revisão por amostra é suficiente para todos os casos, porque é proporcional ao volume.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A amostragem é técnica de controle estatístico, e sua justificativa depende do risco: se o erro tem impacto assimétrico sobre um subgrupo, se há histórico de erro naquele fluxo ou se a reclamação é o único gatilho, a amostragem mascara o erro justamente onde ele se concentra. A revisão por gatilho de risco, com revisão integral dos casos de maior impacto, é o desenho adequado — e sua parametrização deve ser documentada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classifique o nível de automação: (a) sistema que calcula a pontuação de um requerimento e o servidor decide; (b) sistema que nega requerimentos automaticamente e o servidor só é acionado se o cidadão reclamar; (c) sistema que nega automaticamente e escala ao supervisor quando o valor do benefício ultrapassar o limite.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(a) N1, apoio à decisão; (b) N3, decisão automatizada com revisão posterior ou amostral — ponto crítico, porque a revisão por reclamação é enviesada: ela revisa apenas o que reclamou, e a reclamação depende de informação e capacidade de ação do cidadão; (c) N4, decisão automatizada com alçada, em que o escalonamento é regra publicada. O item que classifica (b) e (c) no mesmo nível erra justamente sobre a diferença entre revisão reativa e alçada estruturada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão implantou Negação automática para indeferimentos de requerimento de benefício de valor baixo. Quais os três requisitos mais críticos a observar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) MOTIVAÇÃO E COMUNICAÇÃO do indeferimento com o critério e o fundamento (art. 7º, § 3º, da Lei nº 12.527/2011 — acesso ao fundamento do ato; art. 3º, VII, da Lei nº 14.129/2021 — linguagem clara); (2) CANAL DE REVISÃO com alçada, prazo e registro, e indicador de reversão de decisões; (3) CONTROLE DE IMPESSOALIDADE E DE IMPACTO por subgrupo — o valor baixo do benefício não elimina o risco de erro assimétrico sobre públicos específicos, que exige avaliação por subgrupo e gatilho de revisão integral. Complementarmente: registrar os parâmetros usados em cada indeferimento (rastreabilidade) e monitorar a taxa de reversão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A revisão por amostra é suficiente para todos os casos, porque é proporcional ao volume.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A amostragem é técnica de controle estatístico, e sua justificativa depende do risco: se o erro tem impacto assimétrico sobre um subgrupo, se há histórico de erro naquele fluxo ou se a reclamação é o único gatilho, a amostragem mascara o erro justamente onde ele se concentra. A revisão por gatilho de risco, com revisão integral dos casos de maior impacto, é o desenho adequado — e sua parametrização deve ser documentada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

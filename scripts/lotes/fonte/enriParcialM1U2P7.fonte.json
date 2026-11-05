@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 7,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U2P7",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P7.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-10-sub-1",
+      "modulo-1-unidade-2-topico-11-sub-1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-10-sub-1",
+      "titulo": "Rastreamento de alterações e comentários",
+      "topicoTitulo": "Revisão, comentários, controle de alterações e comparação de documentos",
+      "topicoId": "modulo-1-unidade-2-topico-10",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno utilizará rastreamento de alterações e comentários para revisão colaborativa.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) controle de alterações: o que marca (inserções, exclusões, formatação) e para que serve; (b) comentários: anotações vinculadas a trechos, com resolução e remoção — e o fato de não alterarem o texto; (c) comparação de documentos: gerar o conjunto de diferenças entre duas versões; (d) combinação (mesclar): reunir alterações de múltiplas versões num documento resultante; (e) o fluxo de revisão completo (revisar, aceitar/rejeitar, finalizar). POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve fluxos colaborativos e cobra a diferença entre comentário (anotação) e alteração rastreada (mudança no texto), e entre comparar (duas versões) e combinar (múltiplas versões); trocar esses pares muda o gabarito. PRÉ-REQUISITOS: interface (tópico 1). OBJETIVOS OBSERVÁVEIS: (1) ativar/desativar o controle de alterações e interpretar as marcações; (2) gerenciar comentários (inserir, responder, resolver); (3) executar comparar e combinar e escolher o adequado ao cenário. COMPETÊNCIAS DESENVOLVIDAS: revisão colaborativa; auditoria de mudanças. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: proteção e restrições (tópico 11); relatório integrado (tópico 14); coautoria no Microsoft 365 (unidade 1.1, sub-6). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: controle de alterações (Track Changes) é o modo de revisão em que toda edição é registrada como marcação — inserções aparecem destacadas (sublinhado/cor), exclusões permanecem visíveis riscadas (ou na margem, conforme a exibição), e mudanças de formatação são anotadas — com identificação do autor, se disponível; o texto não muda até que alguém aceite ou rejeite cada marcação (Revisão > Aceitar/Rejeitar). Comentários são anotações ancoradas a trechos (Revisão > Novo Comentário): convivem com o texto sem alterá-lo, podem ser respondidos, resolvidos e excluídos; servem para diálogo entre revisores. Comparação de documentos (Revisão > Comparar): recebe o documento original e o revisado e produz um documento resultante legal que exibe as diferenças como marcações — usado quando a revisão não foi rastreada ou as versões circularam fora de controle. Combinação (mesclar): reúne alterações de múltiplos revisores (várias versões) num documento resultante consolidado, permitindo examinar quem mudou o quê. Diferença conceitual: comparar trabalha com um par de versões; combinar trabalha com várias; controle de alterações é regime de edição ativo, enquanto comentário é camada de diálogo. Fluxo de fechamento do ciclo: aceitar/rejeitar tudo, remover comentários resolvidos e finalizar (a versão limpa é a que segue para assinatura/distribuição). Limitação: as marcações (incluindo autor e datas) fazem parte do arquivo até serem aceitas/removidas — distribuir documento com histórico de revisão expõe informações; a prática correta é aceitar tudo e remover comentários antes da versão final.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: ativar o controle de alterações, fazer uma edição e interpretar a marcação.\n- Nível intermediário: inserir/resolver comentários; aceitar e rejeitar alterações seletivamente.\n- Nível avançado: comparar duas versões sem rastreamento; combinar três versões de revisores distintos.\n- Nível especialista: estabelecer rotina institucional de revisão (rastrear desde o início, consolidar por combinação, finalizar sem marcações) e explicar o risco de distribuir documento com histórico embutido.\n\nCOMPARAÇÕES CRÍTICAS:\n- Controle de alterações x comentário: a marcação altera o texto ao ser aceita; o comentário é anotação que nunca altera o corpo — em \"recurso que não modifica o texto\", o gabarito é comentário.\n- Comparar x combinar: comparar recebe duas versões; combinar reúne múltiplas versões — trocar os termos é o distrator padrão.\n- Aceitar x ignorar: a alteração rastreada só sai do documento por aceitação (incorpora) ou rejeição (descarta); nenhum caminho é neutro — a alternativa \"deixar a marcação no arquivo final\" é o erro de higiene documental.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"os comentários alteram o texto do documento\" — Motivo: confunde anotação com edição — Versão tecnicamente correta: comentários são anotações vinculadas a trechos; o corpo do texto só muda por alterações rastreadas aceitas.\n- Afirmação errada: \"comparar e combinar são o mesmo recurso\" — Motivo: troca entre mecanismos com aridades distintas — Versão tecnicamente correta: comparar difunde um par (original x revisado); combinar consolida alterações de múltiplas versões.\n- Afirmação errada: \"marcações de revisão desaparecem sozinhas ao salvar\" — Motivo: termo absoluto — Versão tecnicamente correta: as marcações permanecem no arquivo até serem aceitas/rejeitadas e os comentários removidos; distribuir sem esse fechamento expõe o histórico.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: controle de alterações, marcação, aceitar/rejeitar, comentário, resolução, comparar documentos, combinar versões, documento resultante.\n- Regras e fórmulas: revisão controlada → rastrear ativo; diálogo sem editar → comentário; reconstruir diferenças → comparar (2 versões); consolidar equipe → combinar (n versões).\n- Exceções: marcações e comentários integram o arquivo até a limpeza final; a exibição das marcações é configurável sem alterar o conteúdo.\n- Palavras-chave: Track Changes, aceitar, rejeitar, comentário, comparar, combinar, versão, revisão.\n- Checklist de domínio: rastreio e interpreto marcações; gerencio comentários; escolho comparar x combinar; fecho o ciclo antes de distribuir.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual recurso registra quem incluiu ou excluiu cada trecho e como o texto fica até a decisão? (2) Comentários alteram o texto? O que eles fazem? (3) Duas versões circularam sem rastreamento: que recurso reconstrói as diferenças? (4) Três revisores devolveram versões distintas: comparar ou combinar? (5) Quais fechamentos são obrigatórios antes da versão final e por quê?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Ativar o rastreamento de alterações num documento em revisão.",
+          "resposta": "Revisão > Controlar Alterações > ativar. A partir daí, inserções aparecem destacadas, exclusões ficam riscadas/na margem e mudanças de formatação são anotadas — cada marcação aguarda aceitar/rejeitar."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Três técnicos revisaram cópias distintas do mesmo relatório; a coordenação quer um único documento com todas as contribuições identificadas.",
+          "resposta": "Revisão > Comparar > Combinar: indicar o documento base e as três versões revisadas — o Word produz um documento resultante consolidado, com as alterações de cada revisor como marcações. Em seguida, a coordenação aceita/rejeita marcação por marcação. Se fosse apenas um par de versões (original x revisado), o correto seria Comparar (não Combinar)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Jurídico sinalizou que a versão circulada expunha quem sugeriu cada trecho, com datas.",
+          "resposta": "Diagnóstico: o arquivo distribuído ainda continha as marcações e o histórico de revisão. Rotina correta antes de distribuir: Revisão > aceitar todas as alterações > excluir todos os comentários > conferir que não há marcação pendente (exibir como Final/Sem marcações não remove conteúdo de revisão — a aceitação/remoção é que limpa) > salvar e distribuir. Higiene documental protege autores e evita exposição de rascunhos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que comentários alteram o texto do documento.",
+          "correcao": "Incorreto: comentários são anotações vinculadas a trechos — servem ao diálogo entre revisores e podem ser respondidos/resolvidos; o texto do corpo só muda por alterações rastreadas que forem aceitas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso mescla alterações de múltiplas versões num documento resultante? A) Comparar; B) Combinar; C) Controlar alterações.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Comentários podem ser resolvidos pelos revisores.",
+          "resposta": "Certo. Comentários podem ser respondidos, resolvidos e removidos — sem alterar o corpo do texto."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Uma alteração rastreada deixa de constar do documento quando o revisor: A) Salva o arquivo; B) A aceita (incorpora) ou a rejeita (descarta); C) Fecha o Word.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de ativar e interpretar o controle de alterações, gerenciar comentários e escolher corretamente entre comparar (duas versões) e combinar (múltiplas versões), fechando o ciclo de revisão antes da distribuição, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "utilizará rastreamento de alterações e comentários para revisão colaborativa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Rastreamento de alterações (Track Changes) marca todas as modificações (inserções, exclusões, formatação) em cores diferentes, permitindo que revisores vejam o que foi alterado. Comentários podem ser adicionados a trechos específicos, resolvidos ou removidos. Comparar documentos ('Comparar e Mesclar') identifica diferenças entre duas versões e gera um documento resultante destacando alterações. O recurso 'Combinar' mescla alterações de múltiplas versões. Essenciais para revisão colaborativa, con…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Rastreamento de alterações e comentários",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que comentários alteram o texto.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: comentários são anotações vinculadas a trechos; não alteram o texto."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Ativar rastreamento de alterações.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Revisão > Controlar Alterações > Ativar (inserções/exclusões marcadas em cores).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Comparar duas versões de um documento.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Revisão > Comparar > selecionar original e revisado > gerar documento com diferenças destacadas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que comentários alteram o texto.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: comentários são anotações vinculadas a trechos; não alteram o texto.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-2-topico-11-sub-1",
+      "titulo": "Restrições de edição e senhas",
+      "topicoTitulo": "Proteção, restrições de edição e permissões",
+      "topicoId": "modulo-1-unidade-2-topico-11",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno aplicará restrições de edição e senhas de proteção.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os mecanismos de proteção do Word: restrições de edição (Revisão > Restringir Edição), senha para abrir (criptografia) e senha para modificar; (b) a diferença decisiva entre senha de abertura e senha de modificação; (c) marcas d'água e seu papel sinalizador; (d) permissões em SharePoint/OneDrive como camada complementar, com expiração de link quando disponível no plano; (e) o que a proteção do Word não garante. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve cenários (permitir só comentários; bloquear leitura sem senha; permitir abrir mas não editar) e pede o mecanismo correto; trocar senha de abertura por senha de modificação muda o gabarito. PRÉ-REQUISITOS: subtópicos de interface e formatos (tópico 1). OBJETIVOS OBSERVÁVEIS: (1) aplicar restrição de edição por nível; (2) escolher entre senha de abertura e de modificação; (3) reconhecer a camada de permissões em nuvem e suas condições; (4) avaliar limites da proteção local. COMPETÊNCIAS DESENVOLVIDAS: controle de acesso a documentos; triagem de requisitos de proteção. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.1 sub-8 (permissões e compartilhamento); Módulo 4 (confidencialidade e criptografia); unidade 1.5 (OneDrive). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média a alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: a proteção no Word opera em duas camadas locais. Camada de edição: Revisão > Restringir Edição permite limitar o que o destinatário pode fazer — somente leitura, comentários, preenchimento de formulários ou edição sem restrições em exceções marcadas — ativando a proteção (com senha opcional para liberar); sem senha, a restrição é cooperativa (o usuário pode desativá-la), com senha ela impõe barreira. Camada de conteúdo: Arquivo > Informações > Proteger Documento > Criptografar com Senha define a senha para abrir — sem ela, o arquivo não abre e o conteúdo permanece ilegível (o documento é criptografado); a senha para modificar (salvar como, opções de ferramentas/geral, conforme a versão) permite abrir e ler, mas impede salvar alterações sobre o arquivo original sem a senha. Marca d'água (Design > Marca d'água, como rascunho ou confidencial) é sinalização visual, não bloqueio de ação. Camada de nuvem: permissões do SharePoint/OneDrive controlam quem pode visualizar/editar e podem incluir expiração de link e proteção por senha para links — opções dependentes do plano/licença. Limitações: senha perdida de criptografia implica perda de acesso ao conteúdo; a proteção local não impede capturas de tela nem o repasse do arquivo após liberado, e a rigidez criptográfica real depende da versão e da implementação — para exigências institucionais, conferir as políticas oficiais.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir \"não pode editar\" (restrição) de \"não pode abrir\" (criptografia).\n- Nível intermediário: aplicar restrição de edição por nível (somente comentários) com ativação de proteção; definir senha para abrir.\n- Nível avançado: explicar a senha para modificar (abre e lê, não salva sobre o original) e decidir qual camada atende ao requisito.\n- Nível especialista: compor defesa em camadas (restrição + criptografia + permissões em nuvem), declarar o que a proteção não cobre (capturas, repasse) e o risco de perda por senha esquecida.\n\nCOMPARAÇÕES CRÍTICAS:\n- Senha para abrir x senha para modificar: abrir bloqueia o acesso sem senha; modificar permite leitura e impede salvar alterações — em \"documento pode ser lido por todos, mas não alterado\", o gabarito é senha de modificação (ou restrição de edição).\n- Restrição com senha x sem senha: sem senha, o usuário pode desativar a restrição (cooperativa); com senha, há barreira efetiva — a alternativa que trata restrição sem senha como blindagem está errada.\n- Marca d'água x restrição: marca d'água sinaliza (ex.: RASCUNHO); não impede edição — confundir sinalização com bloqueio inverte a resposta.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"a senha de modificação impede a leitura do documento\" — Motivo: troca entre os dois tipos de senha — Versão tecnicamente correta: a senha para modificar permite abrir e ler, mas impede salvar alterações sem a senha; quem impede a abertura é a criptografia com senha (senha para abrir).\n- Afirmação errada: \"restringir a edição sem senha torna o documento imutável\" — Motivo: ignora o caráter cooperativo — Versão tecnicamente correta: sem a senha de proteção, o próprio usuário pode desativar a restrição; com senha, há barreira real.\n- Afirmação errada: \"a marca d'água impede que o documento seja copiado\" — Motivo: confunde sinalização com controle de acesso — Versão tecnicamente correta: a marca d'água é recurso visual de sinalização; o controle de cópia/edição vem da restrição, da criptografia e das permissões.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: restrição de edição, senha para abrir (criptografia), senha para modificar, marca d'água, permissões em nuvem, expiração de link.\n- Regras e fórmulas: não pode abrir → Criptografar com Senha; abre e não edita → senha para modificar ou Restringir Edição; só anotações → Restringir Edição (nível comentários).\n- Exceções: opções de link (expiração, senha) dependem do plano; senha de criptografia perdida = perda de acesso; marca d'água não bloqueia.\n- Palavras-chave: restringir edição, criptografar com senha, senha de modificação, marca d'água, proteção, permissões.\n- Checklist de domínio: aplico restrição por nível; distingo os dois tipos de senha; posiciono a marca d'água; combino camadas; declaro limites da proteção local.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como permitir que revisores apenas comentem, sem editar o texto? (2) Qual proteção impede a abertura do arquivo sem senha e onde se configura? (3) Qual a diferença entre senha para abrir e senha para modificar? (4) A restrição de edição ativada sem senha pode ser desativada pelo usuário? (5) Corrija: \"a marca d'água impede edição\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Restringir a edição do documento para que os revisores apenas comentem.",
+          "resposta": "Revisão > Restringir Edição > selecionar o nível (comentários) > Ativar Proteção (senha opcional). Sem senha, a restrição é cooperativa (pode ser desativada pelo usuário); com senha, há barreira efetiva."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Documento com dados sigilosos precisa ser enviado a um único destinatário que não deve abrir sem autorização.",
+          "resposta": "Arquivo > Informações > Proteger Documento > Criptografar com Senha: define a senha para abrir; sem ela, o conteúdo permanece ilegível. Transmitir a senha por canal distinto do arquivo. Complemento: se o envio for por SharePoint/OneDrive, restringir o compartilhamento a pessoas específicas — a criptografia local e as permissões em nuvem são camadas complementares."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Modelo de termo deve ser consultado por toda a equipe, mas não pode ser alterado sobre o original.",
+          "resposta": "Combinar camadas conforme o requisito: Restringir Edição (somente leitura) para desencorajar alterações e senha para modificar para impedir que a versão original seja sobrescrita — a leitura permanece livre. Registrando o limite técnico: cópias podem ser salvas como novo arquivo; o controle de circulação pertence às permissões do ambiente em nuvem (quando disponível no plano)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a senha de modificação impede a leitura.",
+          "correcao": "Incorreto: a senha para modificar permite abrir e ler o documento, mas impede salvar alterações sobre o original sem a senha; quem impede a abertura é a senha de criptografia (para abrir)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual proteção exige senha para abrir o arquivo? A) Restrição de edição; B) Criptografia com senha (senha para abrir); C) Marca d'água.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) As permissões do SharePoint/OneDrive controlam visualização e edição, podendo incluir expiração de link.",
+          "resposta": "Certo. Essas opções são a camada de proteção em nuvem; a disponibilidade de expiração e proteção por senha nos links depende do plano/licença."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Restringir Edição ativada SEM senha de proteção significa que: A) Ninguém jamais pode editar; B) O próprio usuário pode desativar a restrição (caráter cooperativo); C) O documento fica criptografado.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar restrições de edição por nível e de escolher corretamente entre senha de abertura, senha de modificação e permissões em nuvem conforme o requisito do cenário, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará restrições de edição e senhas de proteção"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Proteção inclui: restrições de edição (limitar quem pode editar, comentar, somente visualizar), senhas de abertura e modificação, marcas d'água. 'Restrição de Edição' (Review > Restrict Editing) define áreas permitidas e níveis de acesso. Senhas: 'Password to open' (para abrir) e 'Password to modify' (para modificar). Permissões no SharePoint/OneDrive controlam edição, comentário ou visualização com opções de expiração de link e proteção por senha para links compartilhados.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Restrições de edição e senhas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que senha de modificação impede leitura.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: 'Password to modify' permite abrir (leitura) mas impede edição sem senha."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Restringir edição a comentários.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Revisão > Restringir Edição > permitir apenas comentários > Ativar proteção (senha opcional).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Definir senha para abrir documento.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Arquivo > Informações > Proteger Documento > Criptografar com Senha.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que senha de modificação impede leitura.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: 'Password to modify' permite abrir (leitura) mas impede edição sem senha.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

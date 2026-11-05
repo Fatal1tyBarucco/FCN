@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 5,
+    "unidadeTitulo": "1.5 OneDrive e Colaboração",
+    "parte": 2,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U5P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U5P2.js",
+    "idsCompletos": [
+      "modulo-1-unidade-5-topico-1-sub-3",
+      "modulo-1-unidade-5-topico-1-sub-4"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-5-topico-1-sub-3",
+      "titulo": "Lixeira e restauração no OneDrive",
+      "topicoTitulo": "Sincronização, versionamento, compartilhamento e segurança",
+      "topicoId": "modulo-1-unidade-5-topico-1",
+      "unidadeTitulo": "1.5 OneDrive e Colaboração",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno aplicar exclusão e restauração de arquivos na lixeira do OneDrive.",
+      "conteudo": "A exclusão de arquivo no OneDrive (cliente ou web) move o arquivo para a lixeira associada ao serviço. A restauração de um arquivo excluído ocorre a partir da lixeira, na qual o arquivo permanece pelo período de retenção configurado pela organização/conta; o período exato deve ser verificado na documentação oficial do produto, pois varia conforme a configuração. Em ambientes corporativos, o SharePoint/OneDrive podem ter políticas de retenção. A lixeira não é o único mecanismo de recuperação: versões anteriores do arquivo podem existir no histórico de versões. A exclusão permanente ocorre após o término do período de retenção, conforme a política. A recuperação deve considerar o histórico de versões como camada adicional; a restauração de versão não equivale à exclusão definitiva enquanto houver retenção ativa.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Recuperar um contrato excluído por engano há dois dias, sabendo que o arquivo também existe em uma pasta compartilhada com a equipe.",
+          "resposta": "Contrato restaurado na pasta de origem, com acesso da equipe restabelecido e o registro da exclusão e da restauração preservado no histórico de atividades."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa recuperar a versão de ontem de um arquivo que foi sobrescrito com conteúdo errado, sem perder a versão atual que também contém trabalho válido.",
+          "resposta": "Arquivo com a base íntegra de ontem e os dois trechos válidos de hoje, com todas as versões anteriores ainda disponíveis no histórico."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a lixeira do serviço mantém os arquivos para sempre e que, por isso, pode excluir itens antigos sem qualquer consequência.",
+          "correcao": "A afirmação é incorreta: a lixeira retém itens pelo prazo configurado, e o que está fora desse intervalo só pode ser recuperado por outras camadas, quando existirem."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Onde o usuário pode restaurar um arquivo excluído no OneDrive? A) Lixeira do serviço; B) Papel de parede; C) Cache do navegador.",
+          "resposta": "A"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A exclusão de arquivo no OneDrive apaga o arquivo imediatamente do serviço.",
+          "resposta": "Errado. A exclusão move o arquivo para a lixeira, com retenção conforme a política."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar exclusão e restauração de arquivos na lixeira do OneDrive, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicar exclusão e restauração de arquivos na lixeira do OneDrive"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A exclusão de arquivo no OneDrive (cliente ou web) move o arquivo para a lixeira associada ao serviço. A restauração de um arquivo excluído ocorre a partir da lixeira, na qual o arquivo permanece pelo período de retenção configurado pela organização/conta; o período exato deve ser verificado na documentação oficial do produto, pois varia conforme a configuração. Em ambientes corporativos, o SharePoint/OneDrive podem ter políticas de retenção. A lixeira não é o único mecanismo de recuperação: ver…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Lixeira e restauração no OneDrive",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que a lixeira mantém arquivos para sempre.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: o período de retenção varia conforme a configuração da organização/conta (verificar na documentação oficial)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Recuperar um contrato excluído por engano há dois dias, sabendo que o arquivo também existe em uma pasta compartilhada com a equipe.",
+            "dados": "Arquivo excluído há dois dias por um colaborador, retenção da lixeira definida pela organização, pasta compartilhada com quatro pessoas e histórico de versões ativo.",
+            "conceitos": [
+              "lixeira do serviço: área de retenção de itens excluídos",
+              "período de retenção: prazo em que o item pode ser restaurado",
+              "exclusão permanente: remoção após o prazo ou por ação administrativa"
+            ],
+            "estrategia": "Restaurar pela lixeira enquanto o prazo estiver vigente e verificar o destino da restauração, porque o item retorna ao local de origem e o compartilhamento pode ou não ser preservado.",
+            "execucao": [
+              "Abrir a lixeira na interface web e localizar o arquivo pelo nome e pela data de exclusão.",
+              "Selecionar o item e escolher restaurar, conferindo o caminho de destino exibido.",
+              "Confirmar se o arquivo voltou para a pasta compartilhada e se os participantes mantêm acesso.",
+              "Se o prazo já tivesse expirado, avaliar o histórico de versões e a recuperação administrativa prevista na política."
+            ],
+            "resultado": "Contrato restaurado na pasta de origem, com acesso da equipe restabelecido e o registro da exclusão e da restauração preservado no histórico de atividades.",
+            "justificativa": "A lixeira é uma camada de retenção temporária: enquanto o prazo configurado pela organização estiver vigente, a restauração devolve o item sem depender de backup. Passado o prazo, a exclusão se torna permanente e a recuperação depende de outras camadas, como versões anteriores ou cópia administrativa.",
+            "errosFrequentes": [
+              "Concluir que a exclusão é definitiva sem verificar a lixeira.",
+              "Restaurar sem conferir o destino e duplicar o item em outra pasta.",
+              "Presumir prazo universal de retenção, que é definido pela configuração da organização."
+            ],
+            "variacao": "O mesmo contrato é excluído da lixeira por um administrador. Explique por que a recuperação muda de natureza e qual camada passa a ser necessária."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa recuperar a versão de ontem de um arquivo que foi sobrescrito com conteúdo errado, sem perder a versão atual que também contém trabalho válido.",
+            "dados": "Arquivo com versão atual corrompida em parte, versão de ontem íntegra, histórico de versões ativo e necessidade de preservar dois trechos escritos hoje.",
+            "conceitos": [
+              "versão anterior: estado registrado do arquivo em um momento passado",
+              "restauração de versão: retorno a um estado anterior sem apagar o histórico",
+              "consolidação: combinação manual de trechos de versões diferentes"
+            ],
+            "estrategia": "Recuperar a versão íntegra e reintroduzir os trechos válidos, porque restaurar uma versão não elimina o histórico e permite comparação posterior.",
+            "execucao": [
+              "Abrir o histórico de versões e comparar a versão de ontem com a atual.",
+              "Copiar para um arquivo auxiliar os dois trechos válidos escritos hoje.",
+              "Restaurar a versão de ontem, observando que o serviço mantém a versão atual no histórico.",
+              "Colar os trechos preservados no arquivo restaurado e salvar, registrando a operação."
+            ],
+            "resultado": "Arquivo com a base íntegra de ontem e os dois trechos válidos de hoje, com todas as versões anteriores ainda disponíveis no histórico.",
+            "justificativa": "A restauração cria um novo estado a partir de um estado antigo e preserva o histórico, o que permite voltar atrás se a consolidação falhar. Fazer a cópia dos trechos antes da restauração evita depender de memória ou de nova navegação no histórico.",
+            "errosFrequentes": [
+              "Sobrescrever a versão atual antes de copiar os trechos válidos.",
+              "Excluir o arquivo para recomeçar do zero, descartando o histórico.",
+              "Concluir que a restauração apaga as versões posteriores."
+            ],
+            "variacao": "Duas pessoas editaram o arquivo no mesmo dia. Explique como o histórico ajuda a identificar a origem de cada trecho e qual cuidado evita atribuir a autoria errada."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que a lixeira do serviço mantém os arquivos para sempre e que, por isso, pode excluir itens antigos sem qualquer consequência.",
+            "dados": "Conta com arquivos excluídos em datas distintas, política de retenção configurada pela organização e um item excluído há mais tempo que o prazo vigente.",
+            "conceitos": [
+              "prazo de retenção: limite temporal da recuperação pela lixeira",
+              "política da organização: configuração que define o prazo aplicável",
+              "recuperação administrativa: via alternativa fora do alcance do usuário"
+            ],
+            "estrategia": "Comparar a recuperação de itens dentro e fora do prazo para demonstrar que a disponibilidade é limitada pela configuração, e não permanente.",
+            "execucao": [
+              "Verificar o prazo de retenção vigente na política da organização.",
+              "Tentar restaurar um item excluído dentro do prazo e confirmar o sucesso.",
+              "Tentar restaurar o item excluído antes do início do prazo e observar a indisponibilidade.",
+              "Concluir qual via resta para o caso antigo e registrar a limitação."
+            ],
+            "resultado": "A afirmação é incorreta: a lixeira retém itens pelo prazo configurado, e o que está fora desse intervalo só pode ser recuperado por outras camadas, quando existirem.",
+            "justificativa": "A lixeira é um mecanismo de retenção temporária, dimensionado pela política da organização. Fora do prazo, o item é eliminado de forma permanente para o usuário, e a existência de backup independente passa a ser o fator que determina a possibilidade de recuperação.",
+            "errosFrequentes": [
+              "Tratar a lixeira como arquivo permanente.",
+              "Excluir em massa sem conferir o prazo de retenção vigente.",
+              "Supor que a recuperação administrativa está sempre disponível para qualquer plano."
+            ],
+            "variacao": "A organização amplia o prazo de retenção da lixeira. Explique o efeito sobre o espaço disponível e sobre a proteção contra exclusões acidentais."
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-5-topico-1-sub-4",
+      "titulo": "Conflitos de sincronização do cliente",
+      "topicoTitulo": "Sincronização, versionamento, compartilhamento e segurança",
+      "topicoId": "modulo-1-unidade-5-topico-1",
+      "unidadeTitulo": "1.5 OneDrive e Colaboração",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno resolver conflitos de sincronização gerados pelo cliente OneDrive.",
+      "conteudo": "Quando duas cópias editadas divergentemente (por exemplo, em dispositivos diferentes) precisam sincronizar, o cliente de sincronização pode gerar conflito, sinalizado no painel de sincronização (tray). O cliente cria uma cópia de arquivo em conflito (marcada) e mantém as versões separadas até resolução. A resolução pode ocorrer: abrindo a cópia de conflito, comparando as versões e mantendo a desejada; ou removendo a cópia conflito. Em ambientes com coautoria, a resolução preferida é a última alteração (regra do OneDrive). A prevenção: evitar edição simultânea sem coautoria; usar histórico de versões. A identificação do conflito pode ocorrer pelo painel de sincronização antes da resolução; a comparação entre versões deve considerar a origem (dispositivo) e a sequência temporal. A etapa de resolução deve registrar a versão mantida para fins de auditoria.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Resolver um conflito de sincronização gerado quando o mesmo arquivo foi editado em um notebook offline e em um computador do escritório.",
+          "resposta": "Versão consolidada única, sem cópia de conflito pendente, com os trechos escolhidos preservados e o histórico de versões registrando as duas edições."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa impedir que a equipe volte a gerar conflitos em um relatório editado por três pessoas ao longo do dia, sem proibir o trabalho offline.",
+          "resposta": "Relatório com seções atribuídas, edições offline restritas a trechos exclusivos e nenhum conflito pendente ao final do dia."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que o conflito de sincronização se resolve sozinho, com a versão mais recente prevalecendo, e que não é necessário comparar as cópias.",
+          "correcao": "A afirmação é incorreta: fora da coautoria, o cliente sinaliza e preserva as duas versões, e o descarte sem comparação elimina trabalho sem aviso."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual o mecanismo para resolver conflito de sincronização? A) Ignorar automaticamente; B) Abrir/editar a cópia de conflito; C) Formatar o disco.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O painel de sincronização permite identificar arquivos em conflito.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver conflitos de sincronização gerados pelo cliente OneDrive, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolver conflitos de sincronização gerados pelo cliente OneDrive"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Quando duas cópias editadas divergentemente (por exemplo, em dispositivos diferentes) precisam sincronizar, o cliente de sincronização pode gerar conflito, sinalizado no painel de sincronização (tray). O cliente cria uma cópia de arquivo em conflito (marcada) e mantém as versões separadas até resolução. A resolução pode ocorrer: abrindo a cópia de conflito, comparando as versões e mantendo a desejada; ou removendo a cópia conflito. Em ambientes com coautoria, a resolução preferida é a última alt…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Conflitos de sincronização do cliente",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que o conflito se resolve automaticamente sem intervenção.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: o cliente sinaliza conflito; a resolução é manual (ou regra de última alteração na coautoria)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Resolver um conflito de sincronização gerado quando o mesmo arquivo foi editado em um notebook offline e em um computador do escritório.",
+            "dados": "Arquivo de texto editado em duas máquinas, notebook sem conexão por seis horas, painel de sincronização indicando conflito e trechos diferentes em cada versão.",
+            "conceitos": [
+              "conflito de sincronização: duas alterações divergentes sobre a mesma base",
+              "cópia de conflito: arquivo separado criado pelo cliente com a versão divergente",
+              "coautoria: edição simultânea com combinação automática em serviço que a suporta"
+            ],
+            "estrategia": "Comparar as duas versões antes de decidir, porque o cliente preserva ambas, e consolidar o conteúdo em um único arquivo registrando a decisão.",
+            "execucao": [
+              "Abrir o painel de sincronização e identificar o arquivo marcado com conflito.",
+              "Localizar a cópia de conflito criada pelo cliente e comparar os trechos com a versão principal.",
+              "Consolidar o conteúdo desejado em um arquivo único, salvando-o, e eliminar a cópia de conflito.",
+              "Confirmar no painel que o item voltou ao estado sincronizado."
+            ],
+            "resultado": "Versão consolidada única, sem cópia de conflito pendente, com os trechos escolhidos preservados e o histórico de versões registrando as duas edições.",
+            "justificativa": "O cliente não decide conteúdo: ele preserva as duas versões e sinaliza o conflito, porque sobrescrever silenciosamente perderia trabalho. A resolução exige comparação e consolidação; a coautoria evita a maior parte desses casos, mas não substitui a conferência quando houve edição offline.",
+            "errosFrequentes": [
+              "Apagar a cópia de conflito sem comparar, perdendo a edição feita offline.",
+              "Sobrescrever a versão principal supondo que ela é sempre a mais recente.",
+              "Editar offline por rotina um arquivo de trabalho coletivo."
+            ],
+            "variacao": "O conflito ocorre em uma planilha com fórmulas. Explique o que deve ser comparado além do texto e por que a consolidação manual é mais arriscada nesse tipo de arquivo."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa impedir que a equipe volte a gerar conflitos em um relatório editado por três pessoas ao longo do dia, sem proibir o trabalho offline.",
+            "dados": "Relatório editado por três pessoas, duas em rede estável e uma em campo com conexão intermitente, histórico de versões ativo e prazo diário de fechamento.",
+            "conceitos": [
+              "coautoria em tempo real: edição simultânea com atualização contínua",
+              "edição offline: alteração feita sem conexão, sincronizada depois",
+              "janela de sincronização: intervalo entre a edição e o envio ao serviço"
+            ],
+            "estrategia": "Separar os trechos do relatório por responsável e reservar a edição offline para partes exclusivas, reduzindo a chance de duas alterações incidirem sobre o mesmo conteúdo.",
+            "execucao": [
+              "Verificar que o arquivo está em serviço que suporta coautoria e que o histórico está ativo.",
+              "Dividir o relatório em seções com responsável definido, evitando edição concorrente do mesmo trecho.",
+              "Orientar a pessoa em campo a editar apenas a sua seção quando estiver offline e a sincronizar antes de qualquer troca de seção.",
+              "Acompanhar o painel de sincronização no fim do dia e conferir se há conflito pendente antes do fechamento."
+            ],
+            "resultado": "Relatório com seções atribuídas, edições offline restritas a trechos exclusivos e nenhum conflito pendente ao final do dia.",
+            "justificativa": "Conflito surge quando duas alterações divergentes incidem sobre a mesma base sem combinação automática. Restringir a edição offline a trechos exclusivos reduz a interseção entre alterações, e a coautoria cobre o restante; a checagem no fim do dia garante que nenhuma pendência chegue ao fechamento.",
+            "errosFrequentes": [
+              "Manter todos editando o mesmo trecho e contar com a sincronização para resolver.",
+              "Deixar a sincronização para o fim do prazo, quando não há tempo hábil para consolidar.",
+              "Desativar a coautoria para simplificar, aumentando a chance de conflito."
+            ],
+            "variacao": "A pessoa em campo passará cinco dias sem conexão. Explique como organizar o trabalho para evitar conflito na volta e o que deve ser combinado com os demais editores."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que o conflito de sincronização se resolve sozinho, com a versão mais recente prevalecendo, e que não é necessário comparar as cópias.",
+            "dados": "Duas versões do mesmo arquivo com trechos distintos, uma delas editada offline, painel indicando conflito e nenhuma verificação de conteúdo feita.",
+            "conceitos": [
+              "resolução automática: regra aplicada apenas em contextos específicos, como coautoria",
+              "cópia divergente: versão preservada pelo cliente para comparação",
+              "perda silenciosa: descarte de trabalho sem aviso ao usuário"
+            ],
+            "estrategia": "Verificar o que o cliente faz na prática com as duas versões e o que se perde quando a comparação é dispensada.",
+            "execucao": [
+              "Observar o estado do arquivo no painel de sincronização após a reconexão.",
+              "Constatar a existência da cópia de conflito, o que indica que não houve combinação automática.",
+              "Simular o descarte da cópia e verificar a perda do trecho editado offline.",
+              "Repetir com comparação e consolidação, confirmando a preservação dos dois trechos."
+            ],
+            "resultado": "A afirmação é incorreta: fora da coautoria, o cliente sinaliza e preserva as duas versões, e o descarte sem comparação elimina trabalho sem aviso.",
+            "justificativa": "A combinação automática depende de um serviço que acompanha as edições em tempo real. Quando uma das edições ocorreu offline, não há base comum para combinar, e a única conduta segura é comparar e consolidar; presumir prevalência automática descarta conteúdo de forma silenciosa.",
+            "errosFrequentes": [
+              "Descartar a cópia de conflito por supor que a principal é a mais recente.",
+              "Desativar o aviso de conflito para reduzir interrupções.",
+              "Atribuir a perda de trecho a defeito do serviço, quando decorreu do descarte."
+            ],
+            "variacao": "O arquivo em conflito é uma apresentação com imagens e notas do orador. Explique o que precisa ser comparado além do texto e por que a consolidação exige conferência visual."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1282 @@
+[
+  {
+    "modulo": 1,
+    "unidade": 1,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM1U1P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U1P1.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 1,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM1U1P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U1P2.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 1,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM1U1P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U1P3.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 1,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM1U1P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U1P4.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM1U2P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P1.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM1U2P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P2.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM1U2P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P3.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM1U2P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P4.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM1U2P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P5.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 6,
+    "n": 2,
+    "const": "enriParcialM1U2P6",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P6.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 7,
+    "n": 2,
+    "const": "enriParcialM1U2P7",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P7.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 8,
+    "n": 2,
+    "const": "enriParcialM1U2P8",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P8.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 2,
+    "parte": 9,
+    "n": 1,
+    "const": "enriParcialM1U2P9",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U2P9.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 3,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM1U3P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U3P1.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 3,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM1U3P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U3P2.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 3,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM1U3P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U3P3.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 3,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM1U3P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U3P4.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 3,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM1U3P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U3P5.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 3,
+    "parte": 6,
+    "n": 2,
+    "const": "enriParcialM1U3P6",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U3P6.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 4,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM1U4P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U4P1.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 4,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM1U4P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U4P2.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 4,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM1U4P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U4P3.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 5,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM1U5P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U5P1.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 5,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM1U5P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U5P2.fonte.json"
+  },
+  {
+    "modulo": 1,
+    "unidade": 5,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM1U5P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM1U5P3.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 1,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM2U1P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U1P1.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 1,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM2U1P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U1P2.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 1,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM2U1P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U1P3.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 1,
+    "parte": 4,
+    "n": 1,
+    "const": "enriParcialM2U1P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U1P4.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 2,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM2U2P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U2P1.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 2,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM2U2P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U2P2.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 2,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM2U2P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U2P3.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 2,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM2U2P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U2P4.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 2,
+    "parte": 5,
+    "n": 1,
+    "const": "enriParcialM2U2P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U2P5.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 3,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM2U3P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U3P1.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 3,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM2U3P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U3P2.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 3,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM2U3P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U3P3.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 3,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM2U3P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U3P4.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 3,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM2U3P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U3P5.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 3,
+    "parte": 6,
+    "n": 2,
+    "const": "enriParcialM2U3P6",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U3P6.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 4,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM2U4P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U4P1.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 4,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM2U4P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U4P2.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 4,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM2U4P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U4P3.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 4,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM2U4P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U4P4.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 4,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM2U4P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U4P5.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 4,
+    "parte": 6,
+    "n": 2,
+    "const": "enriParcialM2U4P6",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U4P6.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 5,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM2U5P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U5P1.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 5,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM2U5P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U5P2.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 5,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM2U5P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U5P3.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 5,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM2U5P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U5P4.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 5,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM2U5P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U5P5.fonte.json"
+  },
+  {
+    "modulo": 2,
+    "unidade": 5,
+    "parte": 6,
+    "n": 2,
+    "const": "enriParcialM2U5P6",
+    "fonte": "scripts/lotes/fonte/enriParcialM2U5P6.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 1,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM3U1P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U1P1.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 1,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM3U1P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U1P2.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 2,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM3U2P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U2P1.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 2,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM3U2P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U2P2.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 3,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM3U3P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U3P1.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 3,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM3U3P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U3P2.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 3,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM3U3P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U3P3.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 3,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM3U3P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U3P4.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 3,
+    "parte": 5,
+    "n": 1,
+    "const": "enriParcialM3U3P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U3P5.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 4,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM3U4P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U4P1.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 4,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM3U4P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U4P2.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 4,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM3U4P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U4P3.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 4,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM3U4P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U4P4.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 4,
+    "parte": 5,
+    "n": 1,
+    "const": "enriParcialM3U4P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U4P5.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 5,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM3U5P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U5P1.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 5,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM3U5P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U5P2.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 5,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM3U5P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U5P3.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 5,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM3U5P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U5P4.fonte.json"
+  },
+  {
+    "modulo": 3,
+    "unidade": 5,
+    "parte": 5,
+    "n": 1,
+    "const": "enriParcialM3U5P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM3U5P5.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 1,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM4U1P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U1P1.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 1,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM4U1P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U1P2.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 1,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM4U1P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U1P3.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 1,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM4U1P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U1P4.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 1,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM4U1P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U1P5.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 1,
+    "parte": 6,
+    "n": 2,
+    "const": "enriParcialM4U1P6",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U1P6.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 2,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM4U2P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U2P1.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 2,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM4U2P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U2P2.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 2,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM4U2P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U2P3.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 2,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM4U2P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U2P4.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 2,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM4U2P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U2P5.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 2,
+    "parte": 6,
+    "n": 2,
+    "const": "enriParcialM4U2P6",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U2P6.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 3,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM4U3P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U3P1.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 3,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM4U3P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U3P2.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 3,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM4U3P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U3P3.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 3,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM4U3P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U3P4.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 3,
+    "parte": 5,
+    "n": 1,
+    "const": "enriParcialM4U3P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U3P5.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 4,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM4U4P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U4P1.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 4,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM4U4P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U4P2.fonte.json"
+  },
+  {
+    "modulo": 4,
+    "unidade": 4,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM4U4P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM4U4P3.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 1,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM5U1P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U1P1.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 1,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM5U1P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U1P2.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 1,
+    "parte": 3,
+    "n": 1,
+    "const": "enriParcialM5U1P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U1P3.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 2,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM5U2P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U2P1.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 2,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM5U2P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U2P2.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 2,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM5U2P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U2P3.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 2,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM5U2P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U2P4.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 2,
+    "parte": 5,
+    "n": 1,
+    "const": "enriParcialM5U2P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U2P5.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 3,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM5U3P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U3P1.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 3,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM5U3P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U3P2.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 3,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM5U3P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U3P3.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 3,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM5U3P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U3P4.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 3,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM5U3P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U3P5.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 3,
+    "parte": 6,
+    "n": 1,
+    "const": "enriParcialM5U3P6",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U3P6.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 4,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM5U4P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U4P1.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 4,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM5U4P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U4P2.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 4,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM5U4P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U4P3.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 4,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM5U4P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U4P4.fonte.json"
+  },
+  {
+    "modulo": 5,
+    "unidade": 4,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM5U4P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM5U4P5.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 1,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM6U1P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U1P1.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 1,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM6U1P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U1P2.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 1,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM6U1P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U1P3.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 1,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM6U1P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U1P4.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 2,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM6U2P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U2P1.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 2,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM6U2P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U2P2.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 2,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM6U2P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U2P3.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 2,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM6U2P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U2P4.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 2,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM6U2P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U2P5.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 3,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM6U3P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U3P1.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 3,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM6U3P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U3P2.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 3,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM6U3P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U3P3.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 3,
+    "parte": 4,
+    "n": 1,
+    "const": "enriParcialM6U3P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U3P4.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 4,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM6U4P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U4P1.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 4,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM6U4P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U4P2.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 4,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM6U4P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U4P3.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 4,
+    "parte": 4,
+    "n": 1,
+    "const": "enriParcialM6U4P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U4P4.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 5,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM6U5P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U5P1.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 5,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM6U5P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U5P2.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 5,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM6U5P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U5P3.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 6,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM6U6P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U6P1.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 6,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM6U6P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U6P2.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 6,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM6U6P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U6P3.fonte.json"
+  },
+  {
+    "modulo": 6,
+    "unidade": 6,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM6U6P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM6U6P4.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 1,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM7U1P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U1P1.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 1,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM7U1P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U1P2.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 1,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM7U1P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U1P3.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 1,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM7U1P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U1P4.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 2,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM7U2P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U2P1.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 2,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM7U2P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U2P2.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 2,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM7U2P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U2P3.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 2,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM7U2P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U2P4.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 2,
+    "parte": 5,
+    "n": 2,
+    "const": "enriParcialM7U2P5",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U2P5.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 3,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM7U3P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U3P1.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 3,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM7U3P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U3P2.fonte.json"
+  },
+  {
+    "modulo": 7,
+    "unidade": 3,
+    "parte": 3,
+    "n": 1,
+    "const": "enriParcialM7U3P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM7U3P3.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 1,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM8U1P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U1P1.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 1,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM8U1P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U1P2.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 1,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM8U1P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U1P3.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 1,
+    "parte": 4,
+    "n": 2,
+    "const": "enriParcialM8U1P4",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U1P4.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 2,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM8U2P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U2P1.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 2,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM8U2P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U2P2.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 2,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM8U2P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U2P3.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 3,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM8U3P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U3P1.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 3,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM8U3P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U3P2.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 3,
+    "parte": 3,
+    "n": 2,
+    "const": "enriParcialM8U3P3",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U3P3.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 4,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM8U4P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U4P1.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 4,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM8U4P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U4P2.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 5,
+    "parte": 1,
+    "n": 2,
+    "const": "enriParcialM8U5P1",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U5P1.fonte.json"
+  },
+  {
+    "modulo": 8,
+    "unidade": 5,
+    "parte": 2,
+    "n": 2,
+    "const": "enriParcialM8U5P2",
+    "fonte": "scripts/lotes/fonte/enriParcialM8U5P2.fonte.json"
+  }
+]

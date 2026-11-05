@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 3,
+    "unidadeTitulo": "5.3 IA generativa e LLMs",
+    "parte": 5,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U3P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U3P5.js",
+    "idsCompletos": [
+      "m5-u3-t4-s1",
+      "m5-u3-t4-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u3-t4-s1",
+      "titulo": "Exemplos resolvidos da unidade (três casos completos)",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-5-unidade-3-topico-4",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno resolverá, com o template de nove itens, três casos de IA generativa aplicados a serviço público, distinguindo mecanismo, risco e providência de governança.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a diferença estrutural entre modelos discriminativos e generativos; (b) o funcionamento de tokenização, representações vetoriais (embeddings) e janela de contexto; (c) a geração probabilística e seu corolário prático, a alucinação; (d) a arquitetura Transformer, o mecanismo de atenção e a previsão de tokens; (e) as fases de treinamento, ajuste fino, alinhamento e inferência; (f) os modelos de difusão para geração de imagens; (g) RAG, bases vetoriais e agentes com supervisão; (h) os riscos de privacidade, segurança e direitos autorais e os critérios de avaliação de resultados; (i) aplicações no setor público e privado, distinguindo exemplos comprovados de hipóteses ilustrativas. POR QUE O CONHECIMENTO É IMPORTANTE: a IA generativa entrou no serviço público como ferramenta de apoio a tarefas de linguagem, e a diferença entre uso adequado e inadequado quase sempre está em três conceitos que a prova cobra: o que o modelo FAZ (gera), o que ele NÃO SABE (não consulta base, não garante fato) e o que depende de CONTEXTO (janela finita, memória artificial). Conhecer o mecanismo é o que permite escrever a política de uso. PRÉ-REQUISITOS: unidade 5.2 (dados, avaliação, generalização) e Módulo 4 (segurança da informação). OBJETIVOS OBSERVÁVEIS: (1) explicar por que um LLM produz alucinações, em termos de mecanismo; (2) relacionar janela de contexto a qualidade da resposta e a custo; (3) descrever o papel dos embeddings e da base vetorial em RAG; (4) distinguir fase de treinamento, de ajuste fino e de inferência; (5) aplicar três critérios de avaliação a uma saída de modelo. COMPETÊNCIAS DESENVOLVIDAS: leitura crítica de saída de modelo; desenho de fluxo com RAG; formulação de política de uso institucional. GRAU DE DIFICULDADE: intermediário na conceituação e avançado na aplicação. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 fornece a base (dados, avaliação, viés); unidade 5.4 fornece a interface (prompts); Módulo 4 fornece a base de segurança; Módulo 6 fornece a base normativa. RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: definição de modelo discriminativo (estima P(y|x), classifica ou prediz) versus generativo (modela a distribuição dos dados e pode gerar novos exemplos); tokenização (divisão do texto em unidades, frequentemente subpalavras); embeddings (representação vetorial densa que captura similaridade semântica); janela de contexto (limite de tokens que o modelo considera de uma vez); geração probabilística (previsão do próximo token por distribuição de probabilidade, com amostragem); arquitetura Transformer (blocos de atenção e rede feed-forward); mecanismo de atenção (ponderação de tokens por relevância contextual, com queries, keys e values); previsão de tokens (objetivo de treinamento: prever o próximo token); fases de treinamento (pré-treinamento em grande volume, não supervisionado), ajuste fino (adaptação a tarefa ou domínio) e alinhamento (adequação a preferências humanas, como RLHF); inferência (execução do modelo treinado para gerar saída); modelos de difusão (geração de imagens por remoção progressiva de ruído); alucinação (saída plausível mas não ancorada em fato, consequência da geração probabilística); RAG (recuperação de material externo e injeção no contexto); base vetorial (armazenamento de embeddings para busca por similaridade); agentes (modelo que decide ações e usa ferramentas, com supervisão); riscos de privacidade, segurança e direitos autorais; avaliação de resultados (correção, completude, fidelidade, segurança). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: explicar a diferença entre discriminativo e generativo com analogia.\n- Nível intermediário: descrever token, embedding, contexto e geração probabilística.\n- Nível avançado: distinguir treinamento, ajuste fino, alinhamento e inferência, e explicar alucinação por mecanismo.\n- Nível especialista: desenhar fluxo com RAG e supervisão, aplicando critérios de avaliação.\nCOMPARAÇÕES CRÍTICAS:\n- discriminativo x generativo: o primeiro classifica ou prediz; o segundo gera novos dados; muda o gabarito ao escolher a abordagem para uma tarefa.\n- ajuste fino x RAG: ajuste fino altera os parâmetros do modelo; RAG mantém o modelo e injeta contexto, o que muda custo, atualização e auditabilidade.\n- alucinação x erro de fato: alucinação é saída plausível sem fundamento; erro de fato é saída ancorada em fonte incorreta.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"o modelo consulta a internet para responder\" — Motivo: ele não consulta fontes por conta própria, a menos que o sistema integre busca (RAG ou ferramenta) — Versão tecnicamente correta: a geração é condicionada ao contexto fornecido.\n- Afirmação errada: \"com mais tokens de entrada, a resposta é sempre melhor\" — Motivo: o excesso de contexto dilui a informação relevante e aumenta custo e latência — Versão tecnicamente correta: contexto relevante e conciso.\n- Afirmação errada: \"alucinação é defeito raro e corrigível\" — Motivo: é modo de funcionamento da geração probabilística — Versão tecnicamente correta: a mitigação é de processo (RAG, validação, supervisão).\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: token, embedding, janela de contexto, geração probabilística, Transformer, atenção, alucinação, RAG, base vetorial, agente, ferramenta, alinhamento, ajuste fino, difusão.\n- Regras e mecanismos: a saída é token a token, condicionada pelo contexto; a atenção pondera tokens por relevância contextual; a posição entra por embedding posicional; a máscara causal impede ver o futuro; a alucinação decorre da plausibilidade, não da veracidade.\n- Exceções: RAG melhora a disponibilidade de material e a verificabilidade, mas não elimina a alucinação sobre o material recuperado.\n- Palavras-chave: token, embedding, contexto, Transformer, atenção, alucinação, RAG, base vetorial, agente, alinhamento, ajuste fino, difusão.\n- Checklist de domínio: (1) Explico por que um LLM alucina? (2) Relaciono janela de contexto a qualidade e custo? (3) Distingo treinamento, ajuste fino e inferência? (4) Descrevo o papel de RAG e base vetorial?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Por que um LLM pode produzir uma resposta plausível mas falsa? (2) Qual a diferença entre ajuste fino e RAG, e quando usar cada um? (3) O que a janela de contexto limita e como isso afeta custo e qualidade? (4) Como se avalia uma saída de modelo em um fluxo institucional? (5) Dê um exemplo comprovado e uma hipótese ilustrativa de aplicação de IA generativa no setor público.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "EXEMPLO 1 (INTRODUÇÃO) — Um órgão implantou um chat que responde a perguntas sobre o prazo de análise de requerimentos. Em 10% das conversas, o chat informa prazo sem que exista ato normativo que o estabeleça. Como classificar o problema e propor a correção?",
+          "resposta": "Problema: alucinação com efeito operacional sobre o cidadão. Dados disponíveis: taxa de erro de 10% medida por amostragem de conversas; os prazos são afirmados sem fonte; não há trecho normativo no contexto; o chat é o canal oficial de primeira resposta. Conceitos aplicáveis: geração probabilística e otimização para plausibilidade (não para verdade); alucinação; limites de contexto; RAG como mecanismo de ancoragem; dever de publicidade e veracidade da comunicação oficial (art. 5º da Lei nº 12.527/2011). Estratégia: não desativar o serviço de imediato, mas ancorar as respostas em fonte e medir o efeito da correção. Passo a passo: (1) identificar a causa — ausência de base de conhecimento e de exigência de citação; (2) indexar os atos normativos e configurar a recuperação (RAG) com metadados de vigência; (3) exigir que a resposta seja ancorada em trecho recuperado e que a ausência de trecho produza «a base não contém essa informação, encaminhe ao setor responsável», com encaminhamento real; (4) validar automaticamente números e datas contra a fonte e bloquear a saída sem correspondência; (5) revisar manualmente amostra e medir o indicador de fidelidade; (6) registrar prompt, trecho e resposta para auditoria; (7) reavaliar em ciclo, com meta de redução do erro e critério de interrupção do serviço se o limite não for atingido. Resultado: taxa de fidelidade medida e corrigida, com fonte exibida ao cidadão e canal humano mantido. Justificativa técnica: o modelo não é fonte; a correção é de processo (fonte obrigatória e resposta verificável), não de prompt. Erros frequentes: (a) concluir que «a IA não serve» e desativar sem medir nem corrigir; (b) adicionar «não invente» ao prompt e considerar resolvido; (c) esconder o erro do cidadão; (d) deixar o chat responder sem canal de encaminhamento. Variação para transferência: se a pergunta for sobre a composição de uma comissão interna (não previsto em ato), o fluxo correto é reconhecer a ausência, informar o setor competente e oferecer o encaminhamento — exatamente como no caso do prazo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "EXEMPLO 2 (APLICAÇÃO) — O órgão quer usar um LLM para priorizar uma fila de 12.000 requerimentos, ordenando por «risco social». Como conduzir o desenho e a validação?",
+          "resposta": "Problema: decisão automatizada sobre direito, com variável de risco social mal definida e potencial uso de dado sensível. Dados disponíveis: histórico de 12.000 casos; a métrica de risco social foi definida como «risco de abandono», o que inclui variável socioeconômica e, em parte dos casos, informação de saúde; não há registro de decisão; o quadro normativo do órgão prevê a triagem por critério objetivo e revisão. Conceitos aplicáveis: modelos discriminativos são mais adequados a TRIAGEM do que um modelo generativo; viés de dados e avaliação por subgrupo (Módulo 5); explicabilidade e registro; supervisão humana com alçada; art. 48 da Lei nº 14.129/2021 (controles proporcionais ao risco) e art. 4º da LGPD quanto a dado sensível (verificado em 2026-10-20). Estratégia: usar abordagem discriminativa com critério escrito e publicado, e reservar o modelo generativo, se usado, para apoio textual. Passo a passo: (1) definir e PUBLICAR o critério de triagem, com suas variáveis e pesos, revisado juridicamente; (2) verificar se alguma variável é dado sensível e se há base legal específica; se houver, ou retirar a variável ou tratar a decisão como automatizada de alto impacto, com revisão integral; (3) treinar e validar com partição temporal (o passado não prevê o presente), evitando vazamento; (4) avaliar por subgrupo, além da métrica global, e investigar concentração de erro em públicos específicos; (5) registrar, para cada caso, os parâmetros usados e o escore (rastreabilidade); (6) lançar em modo de apoio, com revisão humana, medindo taxa de reversão por subgrupo; (7) só automatizar a ordenação definitiva se a evidência sustentar, mantendo revisão por gatilho; (8) registrar a decisão automatizada e o procedimento de revisão e recurso para o cidadão. Resultado: triagem com critério publicado, auditável e supervisionada, com avaliação por subgrupo e canal de contestação. Justificativa técnica: a justificativa do critério (a definição de risco social) é o que dá legalidade, impessoalidade e auditabilidade; o modelo é a implementação, não o fundamento. Erros frequentes: (a) usar LLM para tarefa que o modelo discriminativo resolve melhor; (b) não publicar o critério; (c) medir só a acurácia global; (d) concluir que a alta acurácia dispensa revisão. Variação para transferência: se a priorização passar a decidir indeferimento — e não apenas ordem de fila —, exige-se a todos os efeitos de ato administrativo individual: motivação, comunicação e revisão (art. 7º, § 3º, da Lei nº 12.527/2011)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Um fornecedor propõe ao órgão um «copilot» que, segundo o material do fornecedor, «automatiza 80% do atendimento» com «acurácia de 95%». O edital exige produto com auditoria. Como o órgão deve proceder?",
+          "correcao": "Problema: alegação de desempenho não verificada, com métricas sem definição (acerto em quê? qual base? quais condições?), usada como critério de contratação. Dados disponíveis: material comercial do fornecedor; nenhuma das métricas está acompanhada de metodologia, base de teste ou verificação independente; o edital exige auditoria e rastreabilidade; o serviço lida com dados pessoais de cidadãos. Conceitos aplicáveis: a regra de honestidade factual (não afirmar desempenho não verificado); métricas precisam de definição e de base (Módulo 5); requisitos de auditoria, log e rastreabilidade; art. 48 da Lei nº 14.129/2021 (proporcionalidade do controle ao risco); art. 49 (auditoria interna baseada em risco). Estratégia: não discutir o número; discutir O QUE DEVE SER VERIFICÁVEL e COMO. Passo a passo: (1) transformar a alegação em requisito verificável: «percentual de casos em que a resposta final do servidor não exigiu correção substancial», «percentual de respostas ancoradas em fonte», «tempo médio de atendimento»; (2) exigir do fornecedor a metodologia de medição, a base utilizada e a possibilidade de auditoria independente, com acesso aos logs (art. 43, IV, da Lei nº 14.129/2021); (3) pilotar com base real do órgão, medindo os mesmos indicadores, incluindo por subgrupo e com verificação de fidelidade às fontes; (4) exigir trilha completa (usuário, ação, parâmetros, fonte, versão do modelo) e registro de conteúdo publicado; (5) definir critérios de aceite, gatilhos de suspensão e revisão periódica da qualidade; (6) registrar que o desempenho alegado é material publicitário não verificado e que a decisão de contratação se apoia em medição própria. Resultado: contrato com métricas definidas e auditáveis, fundado em medição do próprio órgão, e não em número não verificado. Justificativa técnica: alegação comercial não verificada não é requisito técnico; transformar número em indicador com definição, base e método é o que torna o contrato verificável — e é também o que protege o órgão da frustração de expectativa. Erros frequentes: (a) aceitar o número no edital; (b) recusar a proposta por desconfiança genérica, sem pedir metodologia; (c) medir apenas acurácia global; (d) não exigir logs nem acesso para auditoria. Variação para transferência: se o fornecedor alegar que o modelo «não é usado para treinamento com dados do cliente», exigir a previsão contratual expressa, com sanção para o descumprimento — a afirmação de política pública não substitui cláusula auditável."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Uma alegação de desempenho comercial sem metodologia, base de teste ou verificação independente não pode servir, sozinha, como requisito técnico de contratação.",
+          "resposta": "Certo. O número precisa ser convertido em indicador definido, medido e auditável — caso contrário, o contrato incorpora uma expectativa não verificada."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Ao escolher um modelo generativo para prioridade de fila, o desenho adequado inclui: A) critério publicado; B) avaliação por subgrupo; C) registro dos parâmetros por caso; D) dispensa de revisão por se tratar de ordenação, e não de indeferimento.",
+          "resposta": "A, B e C. O item D é errado: a ordenação que produz efeito sobre o cidadão exige, no mínimo, canal de revisão e contestação."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de IA generativa aplicados a serviço público, distinguindo mecanismo, risco e providência de governança, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolverá, com o template de nove itens, três casos de IA generativa aplicados a serviço público, distinguindo mecanismo, risco e providência de governança"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a diferença estrutural entre modelos discriminativos e generativos; (b) o funcionamento de tokenização, representações vetoriais (embeddings) e janela de contexto; (c) a geração probabilística e seu corolário prático, a alucinação; (d) a arquitetura Transformer, o mecanismo de atenção e a previsão de tokens; (e) as fases de treinamento, ajuste fino, alinhamento e inferência; (f) os modelos de difusão para geração de imagens; (g) RAG, bases vetor…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exemplos resolvidos da unidade (três casos completos)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Um fornecedor propõe ao órgão um «copilot» que, segundo o material do fornecedor, «automatiza 80% do atendimento» com «acurácia de 95%». O edital exige produto com auditoria. Como o órgão deve proceder?",
+            "porqueErrada": "",
+            "versaoCorreta": "Problema: alegação de desempenho não verificada, com métricas sem definição (acerto em quê? qual base? quais condições?), usada como critério de contratação. Dados disponíveis: material comercial do fornecedor; nenhuma das métricas está acompanhada de metodologia, base de teste ou verificação independente; o edital exige auditoria e rastreabilidade; o serviço lida com dados pessoais de cidadãos. Conceitos aplicáveis: a regra de honestidade factual (não afirmar desempenho não verificado); métricas precisam de definição e de base (Módulo 5); requisitos de auditoria, log e rastreabilidade; art. 48 da Lei nº 14.129/2021 (proporcionalidade do controle ao risco); art. 49 (auditoria interna baseada em risco). Estratégia: não discutir o número; discutir O QUE DEVE SER VERIFICÁVEL e COMO. Passo a passo: (1) transformar a alegação em requisito verificável: «percentual de casos em que a resposta final do servidor não exigiu correção substancial», «percentual de respostas ancoradas em fonte», «tempo médio de atendimento»; (2) exigir do fornecedor a metodologia de medição, a base utilizada e a possibilidade de auditoria independente, com acesso aos logs (art. 43, IV, da Lei nº 14.129/2021); (3) pilotar com base real do órgão, medindo os mesmos indicadores, incluindo por subgrupo e com verificação de fidelidade às fontes; (4) exigir trilha completa (usuário, ação, parâmetros, fonte, versão do modelo) e registro de conteúdo publicado; (5) definir critérios de aceite, gatilhos de suspensão e revisão periódica da qualidade; (6) registrar que o desempenho alegado é material publicitário não verificado e que a decisão de contratação se apoia em medição própria. Resultado: contrato com métricas definidas e auditáveis, fundado em medição do próprio órgão, e não em número não verificado. Justificativa técnica: alegação comercial não verificada não é requisito técnico; transformar número em indicador com definição, base e método é o que torna o contrato verificável — e é também o que protege o órgão da frustração de expectativa. Erros frequentes: (a) aceitar o número no edital; (b) recusar a proposta por desconfiança genérica, sem pedir metodologia; (c) medir apenas acurácia global; (d) não exigir logs nem acesso para auditoria. Variação para transferência: se o fornecedor alegar que o modelo «não é usado para treinamento com dados do cliente», exigir a previsão contratual expressa, com sanção para o descumprimento — a afirmação de política pública não substitui cláusula auditável."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um órgão implantou um chat que responde a perguntas sobre o prazo de análise de requerimentos. Em 10% das conversas, o chat informa prazo sem que exista ato normativo que o estabeleça. Como classificar o problema e propor a correção?",
+            "dados": "Taxa de erro de 10% medida por amostragem de conversas; os prazos são afirmados sem fonte; não há trecho normativo no contexto; o chat é o canal oficial de primeira resposta.",
+            "conceitos": [
+              "Geração probabilística e otimização para plausibilidade (não para verdade)",
+              "Alucinação",
+              "Limites de contexto",
+              "RAG como mecanismo de ancoragem",
+              "Dever de publicidade e veracidade da comunicação oficial (art. 5º da Lei nº 12.527/2011)"
+            ],
+            "estrategia": "Não desativar o serviço de imediato, mas ancorar as respostas em fonte e medir o efeito da correção.",
+            "execucao": [
+              "1) Identificar a causa — ausência de base de conhecimento e de exigência de citação",
+              "2) Indexar os atos normativos e configurar a recuperação (RAG) com metadados de vigência",
+              "3) Exigir que a resposta seja ancorada em trecho recuperado e que a ausência de trecho produza «a base não contém essa informação, encaminhe ao setor responsável», com encaminhamento real",
+              "4) Validar automaticamente números e datas contra a fonte e bloquear a saída sem correspondência",
+              "5) Revisar manualmente amostra e medir o indicador de fidelidade",
+              "6) Registrar prompt, trecho e resposta para auditoria",
+              "7) Reavaliar em ciclo, com meta de redução do erro e critério de interrupção do serviço se o limite não for atingido."
+            ],
+            "resultado": "Taxa de fidelidade medida e corrigida, com fonte exibida ao cidadão e canal humano mantido.",
+            "justificativa": "O modelo não é fonte; a correção é de processo (fonte obrigatória e resposta verificável), não de prompt.",
+            "errosFrequentes": [
+              "a) Concluir que «a IA não serve» e desativar sem medir nem corrigir",
+              "b) Adicionar «não invente» ao prompt e considerar resolvido",
+              "c) Esconder o erro do cidadão",
+              "d) Deixar o chat responder sem canal de encaminhamento."
+            ],
+            "variacao": "Se a pergunta for sobre a composição de uma comissão interna (não previsto em ato), o fluxo correto é reconhecer a ausência, informar o setor competente e oferecer o encaminhamento — exatamente como no caso do prazo."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão quer usar um LLM para priorizar uma fila de 12.000 requerimentos, ordenando por «risco social». Como conduzir o desenho e a validação?",
+            "dados": "Histórico de 12.000 casos; a métrica de risco social foi definida como «risco de abandono», o que inclui variável socioeconômica e, em parte dos casos, informação de saúde; não há registro de decisão; o quadro normativo do órgão prevê a triagem por critério objetivo e revisão.",
+            "conceitos": [
+              "Modelos discriminativos são mais adequados a TRIAGEM do que um modelo generativo",
+              "Viés de dados e avaliação por subgrupo (Módulo 5)",
+              "Explicabilidade e registro",
+              "Supervisão humana com alçada",
+              "Art. 48 da Lei nº 14.129/2021 (controles proporcionais ao risco) e art. 4º da LGPD quanto a dado sensível (verificado em 2026-10-20)"
+            ],
+            "estrategia": "Usar abordagem discriminativa com critério escrito e publicado, e reservar o modelo generativo, se usado, para apoio textual.",
+            "execucao": [
+              "1) Definir e PUBLICAR o critério de triagem, com suas variáveis e pesos, revisado juridicamente",
+              "2) Verificar se alguma variável é dado sensível e se há base legal específica; se houver, ou retirar a variável ou tratar a decisão como automatizada de alto impacto, com revisão integral",
+              "3) Treinar e validar com partição temporal (o passado não prevê o presente), evitando vazamento",
+              "4) Avaliar por subgrupo, além da métrica global, e investigar concentração de erro em públicos específicos",
+              "5) Registrar, para cada caso, os parâmetros usados e o escore (rastreabilidade)",
+              "6) Lançar em modo de apoio, com revisão humana, medindo taxa de reversão por subgrupo",
+              "7) Só automatizar a ordenação definitiva se a evidência sustentar, mantendo revisão por gatilho",
+              "8) Registrar a decisão automatizada e o procedimento de revisão e recurso para o cidadão."
+            ],
+            "resultado": "Triagem com critério publicado, auditável e supervisionada, com avaliação por subgrupo e canal de contestação.",
+            "justificativa": "A justificativa do critério (a definição de risco social) é o que dá legalidade, impessoalidade e auditabilidade; o modelo é a implementação, não o fundamento.",
+            "errosFrequentes": [
+              "a) Usar LLM para tarefa que o modelo discriminativo resolve melhor",
+              "b) Não publicar o critério",
+              "c) Medir só a acurácia global",
+              "d) Concluir que a alta acurácia dispensa revisão."
+            ],
+            "variacao": "Se a priorização passar a decidir indeferimento — e não apenas ordem de fila —, exige-se a todos os efeitos de ato administrativo individual: motivação, comunicação e revisão (art. 7º, § 3º, da Lei nº 12.527/2011)."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um fornecedor propõe ao órgão um «copilot» que, segundo o material do fornecedor, «automatiza 80% do atendimento» com «acurácia de 95%». O edital exige produto com auditoria. Como o órgão deve proceder?",
+            "dados": "Material comercial do fornecedor; nenhuma das métricas está acompanhada de metodologia, base de teste ou verificação independente; o edital exige auditoria e rastreabilidade; o serviço lida com dados pessoais de cidadãos.",
+            "conceitos": [
+              "A regra de honestidade factual (não afirmar desempenho não verificado)",
+              "Métricas precisam de definição e de base (Módulo 5)",
+              "Requisitos de auditoria, log e rastreabilidade",
+              "Art. 48 da Lei nº 14.129/2021 (proporcionalidade do controle ao risco)",
+              "Art. 49 (auditoria interna baseada em risco)"
+            ],
+            "estrategia": "Não discutir o número; discutir O QUE DEVE SER VERIFICÁVEL e COMO. Trata-se de converter a alegação comercial em indicador com definição, base, método e possibilidade de auditoria independente, decidindo pela medição própria do órgão.",
+            "execucao": [
+              "1) Transformar a alegação em requisito verificável: «percentual de casos em que a resposta final do servidor não exigiu correção substancial», «percentual de respostas ancoradas em fonte», «tempo médio de atendimento»",
+              "2) Exigir do fornecedor a metodologia de medição, a base utilizada e a possibilidade de auditoria independente, com acesso aos logs (art. 43, IV, da Lei nº 14.129/2021)",
+              "3) Pilotar com base real do órgão, medindo os mesmos indicadores, incluindo por subgrupo e com verificação de fidelidade às fontes",
+              "4) Exigir trilha completa (usuário, ação, parâmetros, fonte, versão do modelo) e registro de conteúdo publicado",
+              "5) Definir critérios de aceite, gatilhos de suspensão e revisão periódica da qualidade",
+              "6) Registrar que o desempenho alegado é material publicitário não verificado e que a decisão de contratação se apoia em medição própria."
+            ],
+            "resultado": "Contrato com métricas definidas e auditáveis, fundado em medição do próprio órgão, e não em número não verificado.",
+            "justificativa": "Alegação comercial não verificada não é requisito técnico; transformar número em indicador com definição, base e método é o que torna o contrato verificável — e é também o que protege o órgão da frustração de expectativa.",
+            "errosFrequentes": [
+              "a) Aceitar o número no edital",
+              "b) Recusar a proposta por desconfiança genérica, sem pedir metodologia",
+              "c) Medir apenas acurácia global",
+              "d) Não exigir logs nem acesso para auditoria."
+            ],
+            "variacao": "Se o fornecedor alegar que o modelo «não é usado para treinamento com dados do cliente», exigir a previsão contratual expressa, com sanção para o descumprimento — a afirmação de política pública não substitui cláusula auditável."
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u3-t4-s2",
+      "titulo": "Comparações e distinções críticas da unidade",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-5-unidade-3-topico-4",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno distinguirá generativo e discriminativo, RAG e ajuste fino, alucinação e erro de lógica, determinismo e amostragem, e embeddings e busca textual.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Comparações e distinções críticas da unidade\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Comparações e distinções críticas da unidade\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Comparações e distinções críticas da unidade\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: COMPARAÇÃO 1 — GENERATIVO x DISCRIMINATIVO: o generativo aprende a distribuição de sequências e produz conteúdo novo, com saída livre e variável; o discriminativo estima uma probabilidade de rótulo ou valor a partir de entrada, com saída fechada. Consequência que muda o gabarito: a tarefa de TRIAGEM e de PRIORIZAÇÃO é, em regra, discriminativa (classificação), e item que apresenta LLM para essa tarefa deve ser analisado quanto à adequação, não quanto ao acerto. COMPARAÇÃO 2 — RAG x AJUSTE FINO: o RAG recupera trechos de uma base e os fornece no contexto, atualizando o conhecimento sem retreinar; o ajuste fino altera os parâmetros do modelo para adaptar comportamento ou domínio. Consequência: base que muda com frequência e exige citação → RAG; comportamento ou estilo a adaptar → ajuste fino. COMPARAÇÃO 3 — ALUCINAÇÃO x ERRO DE LÓGICA OU DE DADO: alucinação é afirmação falsa produzida com coerência verbal e sem lastro na fonte; erro de lógica é dedução incorreta a partir de premissas corretas; erro de dado é problema da base, não da geração. Consequência: a correção difere — ancoragem e citação na alucinação, revisão de premissa no erro de lógica, saneamento da base no erro de dado. COMPARAÇÃO 4 — EMBEDDING x BUSCA TEXTUAL (palavra-chave): a busca textual casa forma; o embedding casa sentido, tolerando paráfrase e sinônimo. Consequência: para perguntas em linguagem natural e base heterogênea, a busca semântica tende a recuperar melhor; para busca de códigos, números exatos ou termos técnicos raros, a busca textual continua útil — e sistemas maduros combinam as duas (busca híbrida). COMPARAÇÃO 5 — MODELO DETERMINÍSTICO x AMOSTRAGEM PROBABILÍSTICA: a geração textual padrão é amostragem de uma distribuição, de modo que o mesmo prompt pode produzir saídas diferentes; o determinismo é atributo do processo (fixação de parâmetros, cache, seed, registro), não do modelo. Consequência: reprodutibilidade de uma resposta é responsabilidade do processo de registro. COMPARAÇÃO 6 — JANELA DE CONTEXTO x MEMÓRIA DO MODELO: a janela é o limite de tokens de uma passagem; o modelo não conserva memória entre chamadas sem mecanismo externo. Consequência: «lembrar» exige construir memória (histórico, resumo, base). COMPARAÇÃO 7 — AGENTE x FLUXO DETERMINÍSTICO: o fluxo segue passos escritos; o agente escolhe ação e ferramenta a cada passo. Consequência de governança: previsibilidade e auditabilidade a favor do fluxo; flexibilidade a favor do agente. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Comparações e distinções críticas da unidade\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Comparações e distinções críticas da unidade\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Comparações e distinções críticas da unidade\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Comparações e distinções críticas da unidade basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Comparações e distinções críticas da unidade e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Comparações e distinções críticas da unidade\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: comparações e distinções críticas da unidade, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Comparações e distinções críticas da unidade com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Comparações e distinções críticas da unidade\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença prática entre «o modelo errou o prazo» e «o índice estava desatualizado»?",
+          "resposta": "No primeiro, o modelo gerou afirmação sem lastro na fonte (alucinação) — a correção é de ancoragem e verificação. No segundo, a base estava desatualizada e o modelo foi fiel a ela (erro de dado) — a correção é de governança da base, com versionamento e atualização. Confundir os dois leva a equipe a otimizar o prompt quando o problema era a base."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Por que a busca textual ainda é útil em um sistema de RAG institucional?",
+          "resposta": "Porque há consultas por códigos, números de norma, identificadores de processo e termos técnicos exatos, em que a correspondência literal é a esperada e o embedding pode falhar. Sistemas maduros usam busca híbrida (semântica e literal combinadas com pontuação), o que reduz as omissões de um lado e as irrelevâncias do outro."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o modelo de linguagem é amostrado, não é possível garantir reprodutibilidade de uma resposta administrativa no sistema do órgão.'",
+          "correcao": "Errado. A reprodutibilidade é do PROCESSO: fixação de parâmetros, registro do prompt, da versão do modelo, dos parâmetros e das fontes, e eventual cache determinístico. O que não se sustenta é a expectativa de que o modelo, isoladamente, produza a mesma saída."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Para base que muda com frequência e exige citação de fonte, o RAG é a abordagem adequada; para adaptar comportamento ou estilo, o ajuste fino é a abordagem adequada.",
+          "resposta": "Certo. As duas abordagens resolvem problemas diferentes e são cumuláveis."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Características do RAG: A) não exige retreinamento do modelo; B) permite exibir a fonte da resposta; C) dispensa controle de acesso na base; D) exige avaliação da recuperação e da geração separadamente.",
+          "resposta": "A, B e D. O item C é errado: o filtro por permissões precisa existir na indexação ou na busca."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir generativo e discriminativo, RAG e ajuste fino, alucinação e erro de lógica, determinismo e amostragem, e embeddings e busca textual, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá generativo e discriminativo, RAG e ajuste fino, alucinação e erro de lógica, determinismo e amostragem, e embeddings e busca textual"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Comparações e distinções críticas da unidade\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Comparações e distinções críticas da unidade\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das u…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comparações e distinções críticas da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o modelo de linguagem é amostrado, não é possível garantir reprodutibilidade de uma resposta administrativa no sistema do órgão.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A reprodutibilidade é do PROCESSO: fixação de parâmetros, registro do prompt, da versão do modelo, dos parâmetros e das fontes, e eventual cache determinístico. O que não se sustenta é a expectativa de que o modelo, isoladamente, produza a mesma saída."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença prática entre «o modelo errou o prazo» e «o índice estava desatualizado»?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "No primeiro, o modelo gerou afirmação sem lastro na fonte (alucinação) — a correção é de ancoragem e verificação. No segundo, a base estava desatualizada e o modelo foi fiel a ela (erro de dado) — a correção é de governança da base, com versionamento e atualização. Confundir os dois leva a equipe a otimizar o prompt quando o problema era a base.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Por que a busca textual ainda é útil em um sistema de RAG institucional?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque há consultas por códigos, números de norma, identificadores de processo e termos técnicos exatos, em que a correspondência literal é a esperada e o embedding pode falhar. Sistemas maduros usam busca híbrida (semântica e literal combinadas com pontuação), o que reduz as omissões de um lado e as irrelevâncias do outro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o modelo de linguagem é amostrado, não é possível garantir reprodutibilidade de uma resposta administrativa no sistema do órgão.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A reprodutibilidade é do PROCESSO: fixação de parâmetros, registro do prompt, da versão do modelo, dos parâmetros e das fontes, e eventual cache determinístico. O que não se sustenta é a expectativa de que o modelo, isoladamente, produza a mesma saída.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

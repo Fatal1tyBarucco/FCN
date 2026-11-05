@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 4,
+    "unidadeTitulo": "5.4 Engenharia de prompts",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U4P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U4P5.js",
+    "idsCompletos": [
+      "m5-u4-t4-s2",
+      "m5-u4-t4-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u4-t4-s2",
+      "titulo": "Comparações e distinções críticas da unidade",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-5-unidade-4-topico-4",
+      "unidadeTitulo": "5.4 Engenharia de prompts",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno distinguirá zero-shot e few-shot, delimitação e concatenação, prompt e ajuste fino, validação de esquema e validação semântica, e não confundirá persona com instrução de escopo.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Comparações e distinções críticas da unidade\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Comparações e distinções críticas da unidade\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Comparações e distinções críticas da unidade\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: COMPARAÇÃO 1 — ZERO-SHOT x FEW-SHOT: o zero-shot fornece apenas instrução e esquema; o few-shot acrescenta exemplos de entrada e saída. Consequência que muda o gabarito: o few-shot é mais proveitoso para critérios de fronteira e pode ser PREJUDICIAL quando os exemplos enviesam as categorias — item que diz «few-shot sempre melhora» está errado. COMPARAÇÃO 2 — DELIMITAÇÃO x CONCATENAÇÃO SIMPLES: a concatenação justapõe instrução e dados, sem marcação de fronteira; a delimitação marca explicitamente as regiões. Consequência: a concatenação deixa a fronteira ambígua e aumenta a superfície de injeção. COMPARAÇÃO 3 — PROMPT x AJUSTE FINO: o prompt orienta o comportamento em tempo de chamada, sem alterar o modelo; o ajuste fino altera os parâmetros do modelo em treinamento. Consequência: o prompt é reversível, barato e auditável caso a caso; o ajuste fino exige ciclo de treinamento, controle de versão do modelo e reavaliação completa. COMPARAÇÃO 4 — VALIDAÇÃO DE ESQUEMA x VALIDAÇÃO SEMÂNTICA: a de esquema verifica forma, tipos e campos obrigatórios; a semântica verifica se o conteúdo é verdadeiro e coerente com a fonte. Consequência: um sistema pode passar integralmente na primeira e falhar na segunda — e a segunda é a que protege o cidadão de informação falsa. COMPARAÇÃO 5 — PERSONA x INSTRUÇÃO DE ESCOPO: a persona define papel e voz; a instrução de escopo define o que fazer e o que não fazer, com o documento e a tarefa. Consequência: persona substitutiva é erro comum — «Você é um advogado» não define tarefa, fonte, formato nem limite de escopo. COMPARAÇÃO 6 — SEGMENTAÇÃO DE ENTRADA x SEGMENTAÇÃO DE SAÍDA: a primeira trata o texto recebido; a segunda, o texto produzido. Consequência: as duas precisam de delimitação própria, e a validação de saída é a que impede vazamento. COMPARAÇÃO 7 — PROMPT COMO ARTEFATO x PROMPT COMO CONVERSA: no primeiro há versão, responsável, conjunto de teste, avaliação e registro; no segundo há texto solto. Consequência: só o primeiro é auditável e transferível entre pessoas e modelos. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Comparações e distinções críticas da unidade\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Comparações e distinções críticas da unidade\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Comparações e distinções críticas da unidade\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Comparações e distinções críticas da unidade basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Comparações e distinções críticas da unidade e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Comparações e distinções críticas da unidade\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: comparações e distinções críticas da unidade, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Comparações e distinções críticas da unidade com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Comparações e distinções críticas da unidade\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença operacional entre «pedir JSON» e «usar saída estruturada nativa»?",
+          "resposta": "Pedir JSON por instrução orienta o modelo a produzir texto em formato JSON, sem garantia de conformidade — o texto pode vir com cercas, comentários, campos a mais ou truncado, e a validação terá de reprocessar. A saída estruturada nativa do modelo usa um esquema como restrição de decodificação, o que eleva substancialmente a taxa de conformidade e dispensa analisadores (parsers) tolerantes. A segunda é preferível; a primeira é último recurso, sempre com validação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Por que validar apenas o esquema não basta em um assistente que responde a perguntas de servidores?",
+          "resposta": "Porque o esquema garante a forma, não a veracidade: um campo «norma_aplicavel» preenchido com o nome de uma norma que não existe no contexto passa despercebido pela validação de esquema. A validação semântica — conferir se o trecho citado existe no documento recuperado e se a resposta decorre dele — é a que impede a chegada de informação falsa ao servidor. As duas camadas são necessárias."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Usar exemplos no prompt (few-shot) sempre melhora o desempenho, porque o modelo aprende com eles.'",
+          "correcao": "Errado. Os exemplos funcionam como demonstração do padrão e podem enviesar as fronteiras das categorias, e a ordem dos exemplos influencia o resultado. É preciso medir o efeito no conjunto de teste, por categoria, com atenção à regressão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A validação de esquema e a validação semântica respondem a perguntas diferentes e são cumulativas.",
+          "resposta": "Certo. Forma e veracidade são dimensões distintas de defeito, com mecanismos distintos de detecção e correção."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Características do prompt como artefato auditável: A) versão e responsável; B) conjunto de teste e avaliação; C) registro da decisão de promoção; D) texto solto em conversa com o servidor.",
+          "resposta": "A, B e C. O item D descreve a prática oposta."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir zero-shot e few-shot, delimitação e concatenação, prompt e ajuste fino, validação de esquema e validação semântica, e não confundirá persona com instrução de escopo, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá zero-shot e few-shot, delimitação e concatenação, prompt e ajuste fino, validação de esquema e validação semântica, e não confundirá persona com instrução de escopo"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Comparações e distinções críticas da unidade\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Comparações e distinções críticas da unidade\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das u…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comparações e distinções críticas da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Usar exemplos no prompt (few-shot) sempre melhora o desempenho, porque o modelo aprende com eles.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Os exemplos funcionam como demonstração do padrão e podem enviesar as fronteiras das categorias, e a ordem dos exemplos influencia o resultado. É preciso medir o efeito no conjunto de teste, por categoria, com atenção à regressão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença operacional entre «pedir JSON» e «usar saída estruturada nativa»?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pedir JSON por instrução orienta o modelo a produzir texto em formato JSON, sem garantia de conformidade — o texto pode vir com cercas, comentários, campos a mais ou truncado, e a validação terá de reprocessar. A saída estruturada nativa do modelo usa um esquema como restrição de decodificação, o que eleva substancialmente a taxa de conformidade e dispensa analisadores (parsers) tolerantes. A segunda é preferível; a primeira é último recurso, sempre com validação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Por que validar apenas o esquema não basta em um assistente que responde a perguntas de servidores?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque o esquema garante a forma, não a veracidade: um campo «norma_aplicavel» preenchido com o nome de uma norma que não existe no contexto passa despercebido pela validação de esquema. A validação semântica — conferir se o trecho citado existe no documento recuperado e se a resposta decorre dele — é a que impede a chegada de informação falsa ao servidor. As duas camadas são necessárias.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Usar exemplos no prompt (few-shot) sempre melhora o desempenho, porque o modelo aprende com eles.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Os exemplos funcionam como demonstração do padrão e podem enviesar as fronteiras das categorias, e a ordem dos exemplos influencia o resultado. É preciso medir o efeito no conjunto de teste, por categoria, com atenção à regressão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u4-t4-s3",
+      "titulo": "Erros, exceções, pegadinhas e resumo estruturado da unidade",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-5-unidade-4-topico-4",
+      "unidadeTitulo": "5.4 Engenharia de prompts",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno rejeitará afirmações equivocadas frequentes sobre engenharia de prompts e consolidará a unidade 5.4 por recuperação ativa.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Erros, exceções, pegadinhas e resumo estruturado da unidade\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4, 6 e 7. RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica. FUNDAMENTAÇÃO CONCEITUAL: PEGADINHAS — (a) «prompt melhor resolve tudo»: errado, o prompt não adiciona conhecimento, não cria conformidade legal e não substitui fonte, esquema e validação. (b) «instruir o modelo a mostrar o raciocínio é boa prática de auditoria»: errado; a diretriz é pedir justificativa verificável, passos de cálculo e evidência de saída, sem exposição de cadeia privada de raciocínio. (c) «few-shot sempre melhora»: errado, pode enviesar categorias, e a ordem importa. (d) «a persona substitui a instrução de escopo»: errado. (e) «peça JSON e dispense validação»: errado, a forma não garante a veracidade. (f) «blindar o modelo com o texto do sistema»: errado, aumenta a exposição. (g) «delimitar entrada elimina injeção»: errado, é uma camada entre várias. (h) «o prompt é do departamento de comunicação, a política é do jurídico»: errado, o prompt é artefato de governança e deve ter revisão jurídica quando expressa regra; (i) «o modelo não guarda memória, logo o sistema não pode»: errado, memória externa é solução padrão; (j) «ajustar o prompt até ficar bom»: errado, ajuste por sensação não é método. RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: persona, contexto, tarefa, restrições, formato, exemplos; delimitação; zero-shot e few-shot; decomposição; raciocínio estruturado; validação de esquema e semântica; avaliação e iteração; laboratório; injeção; contexto não confiável. REGRAS: nunca inserir segredo no prompt; instrução de formato ao final; declarar esquema e valor ausente; usar saída estruturada nativa quando disponível; few-shot com exemplos sintéticos ou anonimizados e com casos de fronteira; registrar prompt, casos, parâmetros, modelo e resultados. FLUXO RESUMIDO (ciclo de engenharia de prompt): (1) definir tarefa e critério de sucesso; (2) montar o conjunto de teste; (3) redigir v1 com os seis componentes; (4) implementar validação de esquema e de fidelidade; (5) medir por tipo de erro; (6) formular hipótese e alterar um elemento por vez; (7) remedir e verificar regressão; (8) registrar e promover; (9) repetir o laboratório em mudança de modelo, de fonte ou após incidente. EXCEÇÕES E LIMITES: prompt não cria conhecimento nem conformidade; delimitação não elimina injeção; few-shot pode enviesar; persona não define escopo; validação de esquema não prova veracidade; memória é externa. PALAVRAS-CHAVE: persona, contexto, tarefa, restrição, esquema, delimitação, few-shot, decomposição, justificativa verificável, fidelidade, iteração, laboratório, injeção, contexto não confiável, versionamento. CHECKLIST DE DOMÍNIO: (1) Quais os seis componentes do prompt? (2) Por que o formato de saída vai ao final? (3) Quando usar few-shot? (4) O que é raciocínio estruturado neste material? (5) Quais as duas validações e o que cada uma detecta? (6) Quais os tipos de caso do conjunto de teste? (7) Quais as camadas de defesa contra injeção? (8) Por que não inserir segredo no prompt? VERIFICAÇÃO DE APRENDIZAGEM (recuperação ativa — 8 questões autorais): (Q1) Escreva os seis componentes de um prompt estruturado. (Q2) Explique a diferença entre zero-shot e few-shot e quando usar cada um. (Q3) Explique por que pedir justificativa verificável é melhor do que pedir raciocínio passo a passo. (Q4) Quais as duas camadas de validação de saída e o que cada uma detecta? (Q5) Liste cinco tipos de casos do conjunto de teste. (Q6) Enumere cinco camadas de defesa contra injeção de prompt. (Q7) Por que o contexto do prompt deve ser mínimo? (Q8) Descreva as etapas de um ciclo de iteração de prompt. CRITÉRIO DE DOMÍNIO: acerto integral em Q1, Q3, Q4 e Q6 e em ao menos 5 dos 8 itens. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\" com linguagem acessível.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados.\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Erros, exceções, pegadinhas e resumo estruturado da unidade\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Erros, exceções, pegadinhas e resumo estruturado da unidade basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Erros, exceções, pegadinhas e resumo estruturado da unidade e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: erros, exceções, pegadinhas e resumo estruturado da unidade, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Erros, exceções, pegadinhas e resumo estruturado da unidade com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Sem consultar o texto, liste os seis componentes de um prompt estruturado.",
+          "resposta": "(1) Persona — papel e vocabulário; (2) Contexto — fatos, base e escopo do que deve ser considerado; (3) Tarefa — verbo observável e objetivo declarado; (4) Restrições — o que não fazer, com instrução de declarar incerteza; (5) Formato de saída — esquema, ordem, tamanho e tom, e o que fazer quando a informação não consta; (6) Exemplos — quando houver, indicando o padrão desejado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Qual a diferença entre validação de esquema e validação semântica, e o que cada uma detecta?",
+          "resposta": "A validação de ESQUEMA verifica a forma: JSON válido, tipos corretos, campos obrigatórios presentes, limites respeitados. A validação de SEMÂNTICA verifica o conteúdo: a afirmação consta da fonte? o trecho citado existe no documento recuperado? o cálculo fecha? os valores são coerentes entre si? Um resultado pode passar na primeira e falhar na segunda — e é a segunda que impede a chegada de informação falsa ao cidadão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Otimizar o prompt é a forma mais econômica de resolver um erro de qualidade, porque não exige alteração de processo.'",
+          "correcao": "Errado. Quando o erro decorre de fonte desatualizada, de ausência de validação ou de permissão indevida, a correção é de processo, e a alteração do prompt apenas desloca o problema. Otimizar o prompt é a camada mais barata — e por isso mesmo a que não resolve a causa raiz quando a causa está fora dele."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O prompt é um artefato versionado, com responsável e avaliação registrada, e não um texto solto em conversa.",
+          "resposta": "Certo. É o que torna a engenharia de prompts auditável e transferível."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Na verificação de aprendizagem da unidade 5.4, exigem-se acerto integral: A) nos seis componentes do prompt; B) na diretriz de raciocínio estruturado; C) nas duas camadas de validação; D) nas camadas de defesa contra injeção.",
+          "resposta": "A, B, C e D."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de rejeitar afirmações equivocadas frequentes sobre engenharia de prompts e consolidará a unidade 5.4 por recuperação ativa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "rejeitará afirmações equivocadas frequentes sobre engenharia de prompts e consolidará a unidade 5.4 por recuperação ativa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Erros, exceções, pegadinhas e resumo estruturado da unidade\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais. PRÉ-REQUISITOS: leitura das …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Erros, exceções, pegadinhas e resumo estruturado da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Otimizar o prompt é a forma mais econômica de resolver um erro de qualidade, porque não exige alteração de processo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Quando o erro decorre de fonte desatualizada, de ausência de validação ou de permissão indevida, a correção é de processo, e a alteração do prompt apenas desloca o problema. Otimizar o prompt é a camada mais barata — e por isso mesmo a que não resolve a causa raiz quando a causa está fora dele."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Sem consultar o texto, liste os seis componentes de um prompt estruturado.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) Persona — papel e vocabulário; (2) Contexto — fatos, base e escopo do que deve ser considerado; (3) Tarefa — verbo observável e objetivo declarado; (4) Restrições — o que não fazer, com instrução de declarar incerteza; (5) Formato de saída — esquema, ordem, tamanho e tom, e o que fazer quando a informação não consta; (6) Exemplos — quando houver, indicando o padrão desejado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Qual a diferença entre validação de esquema e validação semântica, e o que cada uma detecta?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A validação de ESQUEMA verifica a forma: JSON válido, tipos corretos, campos obrigatórios presentes, limites respeitados. A validação de SEMÂNTICA verifica o conteúdo: a afirmação consta da fonte? o trecho citado existe no documento recuperado? o cálculo fecha? os valores são coerentes entre si? Um resultado pode passar na primeira e falhar na segunda — e é a segunda que impede a chegada de informação falsa ao cidadão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Otimizar o prompt é a forma mais econômica de resolver um erro de qualidade, porque não exige alteração de processo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Quando o erro decorre de fonte desatualizada, de ausência de validação ou de permissão indevida, a correção é de processo, e a alteração do prompt apenas desloca o problema. Otimizar o prompt é a camada mais barata — e por isso mesmo a que não resolve a causa raiz quando a causa está fora dele.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

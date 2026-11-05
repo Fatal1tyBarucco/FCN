@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 6,
+    "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+    "parte": 2,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U6P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U6P2.js",
+    "idsCompletos": [
+      "m6-u6-t1-s3",
+      "m6-u6-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u6-t1-s3",
+      "titulo": "Desenho da supervisão humana: alçadas, critérios, registro e escalonamento",
+      "topicoTitulo": "Automação de decisões administrativas e supervisão humana",
+      "topicoId": "modulo-6-unidade-6-topico-1",
+      "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno desenhar uma política de supervisão humana sobre decisões automatizadas, definindo alçadas, critérios de escalonamento, registro, indicadores e retroalimentação ao desenho.",
+      "conteudo": "SUPERVISÃO HUMANA é a intervenção de pessoa responsável por aprovar, deferir, revogar ou corrigir decisões tomadas por sistema, com poder de efeito. Ela é elemento material de conformidade quando a decisão afeta direitos, e medida de governança em todos os casos. SEIS ELEMENTOS DE DESENHO: (1) PAPEL E AUTORIDADE — quem revisa, com que competência e com acesso à informação necessária; supervisor sem acesso aos dados não pode revisar; supervisor sem autoridade para rever revisa apenas sugere. (2) ALÇADA DE REVISÃO — a definição de quais casos vão a revisão: por impacto (faixa de valor, de complexidade, de vulnerabilidade do titular), por gatilho (reclamação, erro histórico, subgrupo com desempenho pior, mudança de regra) e por amostragem aleatória (para aferição de desempenho). (3) CRITÉRIO DE ESCALONAMENTO — objetivo e publicado: o que dispara a escalada, para quem ela vai, em que prazo e com que prioridade. (4) REGISTRO DA REVISÃO — o revisor, o caso, o que a decisão automatizada decidiu, o que o revisor mudou ou manteve, o fundamento e a data; sem isso, não há accountability nem aprendizado. (5) INDICADORES — taxa de reversão, concordância entre decisão automatizada e decisão revisada, tempo médio de revisão, volume por alçada, e distribuição de reversões por subgrupo (a reversão concentrada em um público é sinal de viés de dados). (6) RETROALIMENTAÇÃO — o resultado da revisão deve alterar o desenho: ajuste de regra, correção de dado de treino, mudança de alçada ou desativação do automatismo. MODELOS DE REVISÃO: (a) REVISÃO PRÉVIA — o ato só existe após aprovação; máxima segurança, menor eficiência; indicada para decisões de alto impacto. (b) REVISÃO POSTERIOR INTEGRAL — todos os casos revisados depois do efeito; indicada para impacto intermediário com reversão possível. (c) REVISÃO POSTERIOR AMOSTRAL — amostra aleatória e estratificada; indicada para baixo impacto, desde que o gatilho de risco esteja implementado. (d) REVISÃO POR RECLAMAÇÃO — não é controle de qualidade: é detecção do caso relatado — e, por isso, só vale como complemento. DOCUMENTAÇÃO OBRIGATÓRIA DA POLÍTICA: objetivo e escopo; níveis de automação vigentes por processo; alçadas e critérios; matriz de escalonamento; responsabilidades; registro e retenção; indicadores e periodicidade de revisão; relação com a política de proteção de dados e com o plano de incidente. ENQUADRAMENTO: a supervisão humana também é meio de dar concretização à moralidade e à impessoalidade — o revisor é o ponto em que o julgamento humano reaparece sobre o resultado estatístico; e, se o supervisor decide por preferência pessoal, o sistema reintroduziu o problema que a impessoalidade pretendia resolver. Por isso a revisão também precisa de critério escrito.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O órgão revisa 5% dos indeferimentos automáticos, escolhidos por sorteio, e o gatilho de revisão é a reclamação do cidadão. O que está errado?",
+          "resposta": "Dois desvios: (1) a amostragem é aleatória e, portanto, pode não atingir o subgrupo onde o erro se concentra — o controle estatístico simples não corrige viés de dados; (2) o gatilho principal é a reclamação, o que torna a revisão dependente de informação, acesso e capacidade de ação do cidadão — isto é, o erro de sistema aparece justamente onde há mais capacidade de reclamar, e desaparece onde há menos. O desenho correto combina amostra estratificada (com estratos de risco e de subgrupo) com revisão integral por gatilhos objetivos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Escreva a matriz de escalonamento de um sistema de análise de risco ambiental.",
+          "resposta": "Faixa A (risco baixo, fora de área sensível): decisão automatizada, revisão amostral de 10% com estratificação por município e por tipo de atividade; gatilho: reclamação e erro histórico. Faixa B (risco médio): decisão automatizada, revisão posterior integral em até 10 dias úteis; escalonamento ao supervisor técnico quando o impacto estimado ultrapassar o limite da faixa; gatilho: erro no ano anterior. Faixa C (risco alto, área sensível, dúvida jurídica): decisão automatizada apenas como parecer; decisão por técnico formalmente designado, com motivação e assinatura; escalonamento à autoridade competente; revisão integral. Em todas as faixas: registro da decisão e dos parâmetros, relatório de reversões por subgrupo e revisão trimestral da regra."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A supervisão humana é dispensável quando o modelo tem acurácia alta, pois o erro é estatisticamente irrelevante.'",
+          "correcao": "Errado. Acurácia global não mede erro concentrado em subgrupo (Módulo 5) e não substitui o dever de motivação, de contestação e de responsabilização. Além disso, decisão que afeta direitos exige canal de revisão, ainda que o volume de revisão seja pequeno — o que muda é a INTENSIDADE da revisão, não a sua existência."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Revisão por reclamação do cidadão não substitui amostragem estratificada, porque depende de informação e capacidade de ação do titular.",
+          "resposta": "Certo. É detecção reativa e enviesada pela capacidade de reclamar; serve como gatilho complementar, não como método de aferição de desempenho."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Elementos de desenho da supervisão humana: A) alçada com critérios objetivos; B) registro das decisões revisadas; C) indicador de reversão por subgrupo; D) dispensa de documentar a política de supervisão por ser técnica interna.",
+          "resposta": "A, B e C. O item D é errado: sem documentação, não há como auditar a existência nem a eficácia do controle (art. 49 da Lei nº 14.129/2021)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de desenhar uma política de supervisão humana sobre decisões automatizadas, definindo alçadas, critérios de escalonamento, registro, indicadores e retroalimentação ao desenho, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "desenhar uma política de supervisão humana sobre decisões automatizadas, definindo alçadas, critérios de escalonamento, registro, indicadores e retroalimentação ao desenho"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "SUPERVISÃO HUMANA é a intervenção de pessoa responsável por aprovar, deferir, revogar ou corrigir decisões tomadas por sistema, com poder de efeito. Ela é elemento material de conformidade quando a decisão afeta direitos, e medida de governança em todos os casos. SEIS ELEMENTOS DE DESENHO: (1) PAPEL E AUTORIDADE — quem revisa, com que competência e com acesso à informação necessária; supervisor sem acesso aos dados não pode revisar; supervisor sem autoridade para rever revisa apenas sugere. (2) …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Desenho da supervisão humana: alçadas, critérios, registro e escalonamento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A supervisão humana é dispensável quando o modelo tem acurácia alta, pois o erro é estatisticamente irrelevante.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Acurácia global não mede erro concentrado em subgrupo (Módulo 5) e não substitui o dever de motivação, de contestação e de responsabilização. Além disso, decisão que afeta direitos exige canal de revisão, ainda que o volume de revisão seja pequeno — o que muda é a INTENSIDADE da revisão, não a sua existência."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O órgão revisa 5% dos indeferimentos automáticos, escolhidos por sorteio, e o gatilho de revisão é a reclamação do cidadão. O que está errado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dois desvios: (1) a amostragem é aleatória e, portanto, pode não atingir o subgrupo onde o erro se concentra — o controle estatístico simples não corrige viés de dados; (2) o gatilho principal é a reclamação, o que torna a revisão dependente de informação, acesso e capacidade de ação do cidadão — isto é, o erro de sistema aparece justamente onde há mais capacidade de reclamar, e desaparece onde há menos. O desenho correto combina amostra estratificada (com estratos de risco e de subgrupo) com revisão integral por gatilhos objetivos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Escreva a matriz de escalonamento de um sistema de análise de risco ambiental.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Faixa A (risco baixo, fora de área sensível): decisão automatizada, revisão amostral de 10% com estratificação por município e por tipo de atividade; gatilho: reclamação e erro histórico. Faixa B (risco médio): decisão automatizada, revisão posterior integral em até 10 dias úteis; escalonamento ao supervisor técnico quando o impacto estimado ultrapassar o limite da faixa; gatilho: erro no ano anterior. Faixa C (risco alto, área sensível, dúvida jurídica): decisão automatizada apenas como parecer; decisão por técnico formalmente designado, com motivação e assinatura; escalonamento à autoridade competente; revisão integral. Em todas as faixas: registro da decisão e dos parâmetros, relatório de reversões por subgrupo e revisão trimestral da regra.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A supervisão humana é dispensável quando o modelo tem acurácia alta, pois o erro é estatisticamente irrelevante.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Acurácia global não mede erro concentrado em subgrupo (Módulo 5) e não substitui o dever de motivação, de contestação e de responsabilização. Além disso, decisão que afeta direitos exige canal de revisão, ainda que o volume de revisão seja pequeno — o que muda é a INTENSIDADE da revisão, não a sua existência.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u6-t2-s1",
+      "titulo": "Estudos de caso 1 e 2: publicação indevida e vazamento de dados",
+      "topicoTitulo": "Estudos de caso integrados",
+      "topicoId": "modulo-6-unidade-6-topico-2",
+      "unidadeTitulo": "6.6 Automação de decisões, supervisão humana, estudos de caso e resolução de questões",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno analisará dois casos integrados de publicação indevida e de vazamento de dados, identificando princípios violados, dispositivos aplicáveis e providências.",
+      "conteudo": "CASO 1 — PUBLICAÇÃO INDEVIDA. Um órgão municipal divulga, em seu portal de transparência e em post do perfil institucional, a lista dos nomes de beneficiários de benefício social de um bairro, invocando o art. 8º da Lei nº 12.527/2011 como fundamento. ANÁLISE: (a) O DEVER DE PUBLICIDADE incide sobre informações de interesse coletivo ou geral; a lista nominada de beneficiários é informação pessoal (art. 4º, IV, da Lei nº 12.527/2011) e dado pessoal (art. 5º, I, da LGPD); a divulgação de informação pessoal por terceiros exige previsão legal ou consentimento expresso (art. 31, § 1º, II, da LAI), admitindo-se as hipóteses de dispensa do art. 31, § 3º, das quais nenhuma se ajusta ao caso. (b) A VIA ERRADA: invocar o art. 8º como fundamento de divulgação nominativa ignora que o dever de publicidade é complementado por limites, e que o art. 29, § 1º, VIII, da Lei nº 14.129/2021 exige respeito à privacidade dos dados pessoais e sensíveis mesmo na transparência ativa. (c) O QUE DEVE SER FEITO: remover o conteúdo e preservar o registro; substituir por dado agregado (quantidade de beneficiários por bairro, faixa de renda ou faixa etária), conforme o art. 8º, § 1º, V, da LAI e o art. 29, § 1º, VI, da Lei nº 14.129/2021; se houver finalidade de pesquisa ou monitoramento de política, aplicar anonimização (art. 31, § 3º, II, da LAI; art. 36 da Lei nº 14.129/2021); apurar a publicação e corrigir o processo de publicação; registrar a correção. (d) PRINCÍPIOS: publicidade, impessoalidade (a lista nominada pode ser lida como tratamento desigual), moralidade (uso de dado de terceiro para finalidade diversa) e legalidade. (e) RISCO ADICIONAL: a publicação em rede social amplia o alcance e dificulta a reversão, o que agrava o dano e torna a checagem prévia indispensável. CASO 2 — VAZAMENTO DE DADOS. Um sistema de cadastramento de posto de combustível, com acesso de fornecedores e de consultores externos, sofre incidente: um consultor exporta a base completa, incluindo CPF, endereço e valores de benefício social dos usuários, usando credencial legítima e sem registro da exportação no módulo de auditoria. ANÁLISE: (a) RESPONSABILIZAÇÃO: o art. 34 da Lei nº 12.527/2011 responsabiliza o órgão pelos danos por divulgação não autorizada ou uso indevido de informação pessoal, com apuração de responsabilidade funcional nos casos de dolo ou culpa e direito de regresso; o art. 32, IV, da Lei nº 12.527/2011, tipifica divulgar ou permitir acesso indevido a informação pessoal. (b) SEGURANÇA: o art. 46 da LGPD exige medidas técnicas e administrativas aptas; o incidente expõe falha de desenho, porque o acesso de consulta permitia exportação massiva sem registro. (c) INTEROPERABILIDADE SEM GOVERNANÇA: a Lei nº 14.129/2021, art. 3º, IX, prevê o compartilhamento de dados pessoais em ambiente seguro quando indispensável e nos termos da LGPD, e o art. 38 exige gestão das ferramentas digitais considerando a interoperabilidade e a proteção de dados; compartilhar sem controle de exportação e sem trilha é falha de governança, não de ferramenta. (d) PROVIDÊNCIAS: contenção (revogação de acesso, isolamento, preservação de logs e da prova), preservação da evidência antes de qualquer rotação de credenciais, apuração do individual (dolo ou culpa), correção do desenho (controle de exportação, registro de leitura e de download, segregação de funções, principio do menor privilégio — Módulo 4), comunicação ao titular conforme avaliação de risco, revisão do contrato com o fornecedor e do acesso de terceiros, e atualização do sistema de riscos (art. 48 da Lei nº 14.129/2021). (e) PRINCÍPIOS: legalidade (finalidade e base do compartilhamento), moralidade (uso de dado além da finalidade), publicidade (o incidente é, também, um problema de comunicação institucional e de credibilidade do serviço) e eficiência (a rapidez da contenção integra a qualidade do serviço).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "No caso 1, qual é a diferença entre negar a lista de beneficiários e publicar a contagem por bairro?",
+          "resposta": "A lista nominada é dado pessoal e a sua divulgação depende de previsão legal ou consentimento (art. 31, § 1º, II, da Lei nº 12.527/2011) — publicá-la sem base é o caso de publicação indevida. A contagem por bairro é dado agregado: atende ao dever de divulgar informações de interesse coletivo (art. 8º, § 1º, V, da LAI) sem expor pessoa. A diferença entre as duas saídas é exatamente o objeto da linha 565 da especificação do projeto: publicidade administrativa divulga o que é público do órgão; divulgação irrestrita de dados pessoais expõe o que é da pessoa."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "No caso 2, por que a credencial legítima do consultor não afasta a responsabilidade do órgão?",
+          "resposta": "Porque o acesso legítimo não autoriza a finalidade praticada. O incidente é uso indevido de informação pessoal (art. 32, IV, da Lei nº 12.527/2011) e, pelo art. 34, o órgão responde diretamente pelos danos, com apuração de responsabilidade funcional por dolo ou culpa e direito de regresso contra quem agiu ilicitamente. O órgão responde porque também responde pelo DEVER DE SEGURANÇA (art. 46 da LGPD) e pelo desenho do controle de acesso que permitiu a exportação massiva sem registro — a autorização de acesso não afasta o dever de desenho."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'No caso 1, como a lista de beneficiários é informação que o órgão possui e administra, a sua divulgação é ato de transparência e não pode configurar irregularidade.'",
+          "correcao": "Errado. A posse e a custódia pelo órgão não convertem dado pessoal em informação publicável. O art. 31 da Lei nº 12.527/2011 impõe regime próprio à informação pessoal, e o art. 29, § 1º, VIII, da Lei nº 14.129/2021 exige respeito à privacidade mesmo na transparência ativa. A versão correta é: «a lista nominada só pode ser divulgada com previsão legal ou consentimento, ou em forma agregada ou anonimizada»."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A substituição de lista nominada de beneficiários por contagem agregada por bairro é providência que concilia o dever de publicidade e a proteção da informação pessoal.",
+          "resposta": "Certo. É a aplicação do art. 8º, § 1º, V, da Lei nº 12.527/2011 e do art. 29 da Lei nº 14.129/2021, com agregação que impede a identificação."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Diante do vazamento descrito no caso 2, são providências corretas: A) conter e preservar logs antes de rotacionar credenciais; B) apurar a responsabilidade do consultor com exame de dolo ou culpa; C) corrigir o controle de exportação e registrar leitura e download; D) destruir a trilha de auditoria para reduzir a exposição do incidente.",
+          "resposta": "A, B e C. O item D destrói prova e agrava a apuração (art. 32, II, da Lei nº 12.527/2011)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar dois casos integrados de publicação indevida e de vazamento de dados, identificando princípios violados, dispositivos aplicáveis e providências, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará dois casos integrados de publicação indevida e de vazamento de dados, identificando princípios violados, dispositivos aplicáveis e providências"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "CASO 1 — PUBLICAÇÃO INDEVIDA. Um órgão municipal divulga, em seu portal de transparência e em post do perfil institucional, a lista dos nomes de beneficiários de benefício social de um bairro, invocando o art. 8º da Lei nº 12.527/2011 como fundamento. ANÁLISE: (a) O DEVER DE PUBLICIDADE incide sobre informações de interesse coletivo ou geral; a lista nominada de beneficiários é informação pessoal (art. 4º, IV, da Lei nº 12.527/2011) e dado pessoal (art. 5º, I, da LGPD); a divulgação de informaçã…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Estudos de caso 1 e 2: publicação indevida e vazamento de dados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'No caso 1, como a lista de beneficiários é informação que o órgão possui e administra, a sua divulgação é ato de transparência e não pode configurar irregularidade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A posse e a custódia pelo órgão não convertem dado pessoal em informação publicável. O art. 31 da Lei nº 12.527/2011 impõe regime próprio à informação pessoal, e o art. 29, § 1º, VIII, da Lei nº 14.129/2021 exige respeito à privacidade mesmo na transparência ativa. A versão correta é: «a lista nominada só pode ser divulgada com previsão legal ou consentimento, ou em forma agregada ou anonimizada»."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "No caso 1, qual é a diferença entre negar a lista de beneficiários e publicar a contagem por bairro?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A lista nominada é dado pessoal e a sua divulgação depende de previsão legal ou consentimento (art. 31, § 1º, II, da Lei nº 12.527/2011) — publicá-la sem base é o caso de publicação indevida. A contagem por bairro é dado agregado: atende ao dever de divulgar informações de interesse coletivo (art. 8º, § 1º, V, da LAI) sem expor pessoa. A diferença entre as duas saídas é exatamente o objeto da linha 565 da especificação do projeto: publicidade administrativa divulga o que é público do órgão; divulgação irrestrita de dados pessoais expõe o que é da pessoa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "No caso 2, por que a credencial legítima do consultor não afasta a responsabilidade do órgão?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque o acesso legítimo não autoriza a finalidade praticada. O incidente é uso indevido de informação pessoal (art. 32, IV, da Lei nº 12.527/2011) e, pelo art. 34, o órgão responde diretamente pelos danos, com apuração de responsabilidade funcional por dolo ou culpa e direito de regresso contra quem agiu ilicitamente. O órgão responde porque também responde pelo DEVER DE SEGURANÇA (art. 46 da LGPD) e pelo desenho do controle de acesso que permitiu a exportação massiva sem registro — a autorização de acesso não afasta o dever de desenho.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'No caso 1, como a lista de beneficiários é informação que o órgão possui e administra, a sua divulgação é ato de transparência e não pode configurar irregularidade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A posse e a custódia pelo órgão não convertem dado pessoal em informação publicável. O art. 31 da Lei nº 12.527/2011 impõe regime próprio à informação pessoal, e o art. 29, § 1º, VIII, da Lei nº 14.129/2021 exige respeito à privacidade mesmo na transparência ativa. A versão correta é: «a lista nominada só pode ser divulgada com previsão legal ou consentimento, ou em forma agregada ou anonimizada».",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

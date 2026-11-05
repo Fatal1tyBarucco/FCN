@@ -1,0 +1,331 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 5,
+    "unidadeTitulo": "6.5 Acessibilidade e inclusão digital",
+    "parte": 2,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U5P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U5P2.js",
+    "idsCompletos": [
+      "m6-u5-t2-s1",
+      "m6-u5-t3-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u5-t2-s1",
+      "titulo": "Inclusão digital: preservar o atendimento presencial, ampliar o autosserviço e atender quem está fora",
+      "topicoTitulo": "Inclusão digital: canal alternativo, linguagem e desenho de serviço",
+      "topicoId": "modulo-6-unidade-5-topico-2",
+      "unidadeTitulo": "6.5 Acessibilidade e inclusão digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno relacionará inclusão digital à preservação do atendimento presencial, ao autosserviço e à desenho de serviço acessível, e indicará como medir quem fica de fora.",
+      "conteudo": "INCLUSÃO DIGITAL é o conjunto de condições para que o serviço público digital seja efetivamente alcançável por toda a população, considerando conexão, equipamento, habilidade, alfabetização digital, idade, deficiência, línguas e situação socioeconômica. O problema central não é o de quem não tem tecnologia, mas o de quem tem tecnologia sem condições de uso: internet de baixa qualidade, aparelho antigo, dados móveis caros, analfabetismo funcional, idioma não dominado, ou falta de confiança para com o serviço digital. OBRIGAÇÕES DO REGIME (verificadas em 2026-10-21): (1) ART. 3º, III — possibilidade de demandar e acessar serviços públicos por meio digital, sem necessidade de solicitação presencial; (2) ART. 3º, X — simplificação dos procedimentos com foco na universalização do acesso e no AUTOSSERVIÇO (art. 4º, II: acesso pelo cidadão a serviço público prestado por meio digital, sem necessidade de mediação humana); (3) ART. 3º, XVI e ART. 14 — PERMANÊNCIA DO ATENDIMENTO PRESENCIAL, conforme características, relevância e público-alvo do serviço, e prestação digital por tecnologias de amplo acesso, inclusive de baixa renda e de áreas rurais e isoladas; (4) ART. 6º — exceções ao processo eletrônico, entre elas a inviabilidade do procedimento no meio eletrônico; (5) ART. 3º, XX — estímulo a ações educativas para qualificação de servidores e para a inclusão digital da população; (6) ART. 24, VIII — testes e pesquisas com os usuários para subsidiar a oferta de serviços simples, intuitivos, acessíveis e personalizados; (7) ART. 3º, XXIV — tratamento adequado a idosos, nos termos da Lei nº 10.741/2003. LEITURA CRÍTICA: a conservação do atendimento presencial não é um resíduo do modelo antigo, é a garantia de que a digitalização não converta-se em exclusão — e a sua endereço é proporcional: a lei permite ajustar o formato presencial ao público-alvo do serviço (art. 3º, XVI), o que significa, por exemplo, manter balcão de maior volume e horário estendido onde há demanda, sem manter estrutura ociosa onde não há. MEDIÇÃO DA INCLUSÃO: um painel de inclusão deve acompanhar (1) volume de atendimentos por canal (digital e presencial), para verificar se o digital está absorvendo a demanda ou empurrando o cidadão para o balcão; (2) taxa de abandono digital por etapa do formulário; (3) tempo médio de atendimento nos dois canais (art. 22); (4) grau de satisfação por canal (art. 22); (5) perfil de quem usa cada canal. DESENHO DE SERVIÇO INCLUSIVO: (a) linguagem clara em toda a interface e nos documentos (art. 3º, VII); (b) poucos campos, com preenchimento automático a partir de bases existentes e sem duplicidade de dados (art. 3º, XII e XIII; art. 24, IV); (c) possibilidade de salvar e retomar o preenchimento; (d) comprovação por meio digital com alternativa (art. 26 da Lei nº 14.129/2021 presume-se a autenticidade de documentos apresentados por usuários de serviços digitais, desde que o envio seja assinado eletronicamente); (e) confirmação de recebimento e protocolo (art. 27, IV, e art. 8º da Lei nº 14.129/2021); (f) canal de atendimento humano e ouvidoria (art. 21, XI); (g) formatos abertos para baixar e imprimir (art. 3º, XXV); (h) ponto de apoio físico em territórios sem conectividade. ACESSIBILIDADE COMO INCLUSÃO: acessibilidade do conteúdo, linguagem clara e atendimento presencial formam o tripé que evita que o serviço digital vire filtro de acesso em vez de canal de acesso.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que o art. 6º da Lei nº 14.129/2021 prevê a exceção de atos processuais em meio físico «diante de risco de dano relevante à celeridade do processo»?",
+          "resposta": "A exceção revela a lógica do regime: a digitalização é a regra, mas não pode gerar dano. Em processos em que a insistência no meio digital inviabilizaria o cidadão (por exemplo, quando a sessão presencial é a única forma de verificar identidade ou de obter documento), admitir o físico preserva a ninguém. A exceção, portanto, é instrumento de inclusão e de realização do princípio da eficiência sem prejuízo dos demais."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O painel do art. 22 da Lei nº 14.129/2021 mostra queda de 40% no atendimento presencial e aumento do digital. O que investigar?",
+          "resposta": "Investigar se a queda é consequência de desvio de demanda (bom sinal) ou de barreira (sinal grave). Cruzamentos: taxa de abandono por etapa no digital (indica barreira de processo); crescimento de filas em horários de pico (indica transferência de custo para o balcão); perfil dos usuários por canal; e pesquisa com usuários (art. 24, VIII). Se o balcão está sobrecarregado, há risco de exclusão de quem não tem alternativa digital, o que exige reequilíbrio de capacidade, e não retirada de balcão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o art. 3º, III, da Lei nº 14.129/2021 assegura o acesso digital sem necessidade de solicitação presencial, o atendimento presencial pode ser extinto em todo serviço público.'",
+          "correcao": "Errado. O art. 3º, XVI e o art. 14 da mesma lei preservam o atendimento presencial, ajustado às características e ao público-alvo do serviço. O art. 3º, III assegura a via digital; não revoga a via presencial. Item que apaga a ressalva do XVI é a armadilha mais comum sobre a Lei de Governo Digital."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A autosserviço digital é definido no art. 4º, II, da Lei nº 14.129/2021 como acesso do cidadão a serviço público prestado por meio digital, sem necessidade de mediação humana.",
+          "resposta": "Certo. A definição é literal no art. 4º, II (verificado em 2026-10-21), e o autosserviço aparece como diretriz de simplificação e universalização no art. 3º, X."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Indicadores úteis para aferir inclusão digital: A) volume de atendimentos por canal; B) taxa de abandono por etapa do formulário digital; C) tempo médio de atendimento nos dois canais; D) número de seguidores do perfil institucional.",
+          "resposta": "A, B e C. O item D não informa inclusão digital; o painel institucional do art. 22 da Lei nº 14.129/2021 traz solicitações em andamento e concluídas, tempo médio e satisfação."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de relacionar inclusão digital à preservação do atendimento presencial, ao autosserviço e à desenho de serviço acessível, e indicará como medir quem fica de fora, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "relacionará inclusão digital à preservação do atendimento presencial, ao autosserviço e à desenho de serviço acessível, e indicará como medir quem fica de fora"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "INCLUSÃO DIGITAL é o conjunto de condições para que o serviço público digital seja efetivamente alcançável por toda a população, considerando conexão, equipamento, habilidade, alfabetização digital, idade, deficiência, línguas e situação socioeconômica. O problema central não é o de quem não tem tecnologia, mas o de quem tem tecnologia sem condições de uso: internet de baixa qualidade, aparelho antigo, dados móveis caros, analfabetismo funcional, idioma não dominado, ou falta de confiança para c…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Inclusão digital: preservar o atendimento presencial, ampliar o autosserviço e atender quem está fora",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o art. 3º, III, da Lei nº 14.129/2021 assegura o acesso digital sem necessidade de solicitação presencial, o atendimento presencial pode ser extinto em todo serviço público.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O art. 3º, XVI e o art. 14 da mesma lei preservam o atendimento presencial, ajustado às características e ao público-alvo do serviço. O art. 3º, III assegura a via digital; não revoga a via presencial. Item que apaga a ressalva do XVI é a armadilha mais comum sobre a Lei de Governo Digital."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que o art. 6º da Lei nº 14.129/2021 prevê a exceção de atos processuais em meio físico «diante de risco de dano relevante à celeridade do processo»?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A exceção revela a lógica do regime: a digitalização é a regra, mas não pode gerar dano. Em processos em que a insistência no meio digital inviabilizaria o cidadão (por exemplo, quando a sessão presencial é a única forma de verificar identidade ou de obter documento), admitir o físico preserva a ninguém. A exceção, portanto, é instrumento de inclusão e de realização do princípio da eficiência sem prejuízo dos demais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O painel do art. 22 da Lei nº 14.129/2021 mostra queda de 40% no atendimento presencial e aumento do digital. O que investigar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Investigar se a queda é consequência de desvio de demanda (bom sinal) ou de barreira (sinal grave). Cruzamentos: taxa de abandono por etapa no digital (indica barreira de processo); crescimento de filas em horários de pico (indica transferência de custo para o balcão); perfil dos usuários por canal; e pesquisa com usuários (art. 24, VIII). Se o balcão está sobrecarregado, há risco de exclusão de quem não tem alternativa digital, o que exige reequilíbrio de capacidade, e não retirada de balcão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o art. 3º, III, da Lei nº 14.129/2021 assegura o acesso digital sem necessidade de solicitação presencial, o atendimento presencial pode ser extinto em todo serviço público.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O art. 3º, XVI e o art. 14 da mesma lei preservam o atendimento presencial, ajustado às características e ao público-alvo do serviço. O art. 3º, III assegura a via digital; não revoga a via presencial. Item que apaga a ressalva do XVI é a armadilha mais comum sobre a Lei de Governo Digital.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u5-t3-s1",
+      "titulo": "Exemplos resolvidos da unidade (três casos completos)",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-5-topico-3",
+      "unidadeTitulo": "6.5 Acessibilidade e inclusão digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno resolverá, com o template de nove itens, três casos de acessibilidade e inclusão digital em serviços públicos.",
+      "conteudo": "Todos os exemplos da unidade seguem o template de nove itens exigido pela especificação didática.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "EXEMPLO 1 (INTRODUÇÃO) — O portal do órgão tem pesquisa por palavra-chave, mas o único caminho para solicitar o serviço é um formulário com 27 campos, sem opção de salvar e retomar. Como o órgão deve agir?",
+          "resposta": "Problema: barreira de processo que viola inclusão digital e provavelmente os princípios da eficiência e da simplicidade. Dados disponíveis: 27 campos, sem progresso salvo; o serviço é de requerimento genérico de segunda via; o art. 3º, X, da Lei nº 14.129/2021 exige simplificação com foco em universalização e autosserviço; o art. 3º, XII, impõe imposição imediata e de uma única vez das exigências; o art. 3º, XIII, veda exigir prova de fato já comprovado; o art. 24, IV, manda eliminar exigências desnecessárias. Conceitos aplicáveis: inclusão digital; acessibilidade operável (o volume de campos sem salva é barreira para pessoa com deficiência, para pessoa com dificuldade motora e para quem usa conexão instável); minimização de dados; interoperabilidade. Estratégia: redesenhar o formulário a partir dos dados que o órgão já possui, e medir a taxa de abandono antes e depois. Passo a passo: (1) mapear quais campos o órgão já tem em bases próprias e quais são realmente necessários; (2) eliminar exigência de documento já comprovado e passar a usar dado existente, com registro da origem; (3) reduzir o número de etapas e salvar o rascunho com recuperação por código ou protocolo; (4) conferir a acessibilidade do formulário (rótulos, ordem de tabulação, erros, foco, contraste); (5) publicar o serviço em formato acessível e permitir download de modelo em formato aberto (art. 3º, XXV); (6) instrumentar a taxa de abandono por etapa e o tempo médio (art. 22) e reavaliar. Resultado: processo mais curto, com uso de dados existentes, e medição de abandono como indicador de inclusão. Justificativa técnica: exigência desnecessária é custo social sem contrapartida de qualidade — exatamente o que o art. 3º, XI, manda eliminar. Erros frequentes: (a) proteger a interface com CAPTCHA agressivo e bloqueio por IP sem alternativa equivalente (barreira nova); (b) exigir documento digitalizado de tudo; (c) medir apenas o volume de atendimentos e concluir sucesso; (d) desconsiderar a conexão instável e o acesso por celular antigo. Variação para transferência: se o serviço for de alta complexidade (por exemplo, licenciamento ambiental), a simplificação atua sobre etapas e campos, e não sobre o conteúdo técnico da análise; e a revisão humana especializada permanece obrigatória."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "EXEMPLO 2 (APLICAÇÃO) — O órgão constata que 70% dos atendimentos de um serviço social saem do canal digital para o presencial, com fila média de duas horas. A área de negócio propõe fechar o balcão. Avalie.",
+          "resposta": "Problema: hipótese de exclusão digital mascarada por ganho de eficiência contábil. Dados disponíveis: 70% de saída do digital para o presencial; fila média de duas horas; público com baixa escolaridade e baixa conectividade; o art. 3º, XVI, e o art. 14 da Lei nº 14.129/2021 preservam o atendimento presencial; o art. 24, VIII, prevê testes e pesquisas com os usuários; o art. 22 prevê indicadores de desempenho. Conceitos aplicáveis: inclusão digital; eficiência como qualidade e não como redução de despesa; art. 3º, XI (eliminar exigência cujo custo social exceda o risco) — aqui o custo social é o da exclusão. Estratégia: tratar como problema de desenho do serviço digital, não como caso de balcão excedente; medir a causa da saída antes de decidir. Passo a passo: (1) instrumentar a saída por etapa do fluxo digital, identificando o ponto em que o usuário desiste (é preciso? é técnica? é de confiança?); (2) entrevistar usuários que usaram o balcão após tentativa digital, com pesquisa prevista no art. 24, VIII; (3) corrigir as barreiras encontradas — campos redundantes, etapa de autenticação inviável, erro de validação, indisponibilidade em horários de pico; (4) reavaliar a fila com base em dados, mantendo o canal presencial dimensionado à demanda real (art. 3º, XVI: conforme características, relevância e público-alvo); (5) só então discutir eventual redimensionamento do balcão, com estudo de impacto que demonstre que a demanda atendida não será perdida; (6) monitorar o painel (art. 22). Resultado: causa da migração identificada e corrigida; balcão mantido em dimensionamento compatível com a demanda, com decisão de redimensionamento apenas após evidência. Justificativa técnica: fechar o balcão com base no dado agregado erra o objeto — o dado mede o fracão que não conseguiu usar o digital, não o excedente de capacidade. A decisão de eficiência precisa considerar o custo social do serviço não prestado. Erros frequentes: (a) decidir pela métrica de fila sem cruzar com taxa de conclusão do digital; (b) usar a exceção do art. 6º para justificar a extinção do balcão (a exceção é de ato processual, não de canal); (c) criar barreira digital (exigência de conta, senha forte, aplicativo) que aumente a saída; (d) desconsiderar o público idoso (art. 3º, XXIV). Variação para transferência: se o serviço for de emissão de documentos, cuja emissão é admitida em meio digital assinada eletronicamente (art. 5º, parágrafo único, da Lei nº 14.129/2021), a digitalização pode reduzir a demanda de balcão, e aí a decisão de redimensionamento é legítima — desde que mantida a via presencial para quem não consegue usar o digital."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — A auditoria interna apontou que o portal do órgão tem contraste insuficiente, ausência de texto alternativo em gráficos de execução orçamentária e rótulos de formulário gerados apenas por placeholder. O órgão contesta: «o site usa tecnologia moderna». Avalie a contestação.",
+          "correcao": "Problema: confusão entre tecnologia moderna e acessibilidade; e carência de evidência de conformidade. Dados disponíveis: contraste insuficiente; gráficos sem texto alternativo (informação transmitida apenas por imagem); rótulos apenas por placeholder (que desaparece ao digitar, quebrando a identificação do campo e a conexão entre rótulo e controle — dimensão COMPREENSÍVEL e ROBUSTO); o art. 8º, § 3º, VIII, da Lei nº 12.527/2011 exige medidas de acessibilidade de conteúdo nos sítios oficiais; o art. 3º, XIX, da Lei nº 14.129/2021 trata a acessibilidade como princípio. Conceitos aplicáveis: perceptível, operável, compreensível e robusto; dever de publicidade (o cidadão tem direito a informação acessível) e dever de eficiência com qualidade. Estratégia: responder ao achado com plano de correção com prazo e responsável, e não com argumento genérico de tecnologia. Passo a passo: (1) reconhecer o achado — a tecnologia do servidor de aplicação não é o critério; o critério é o conteúdo percebido e operável; (2) identificar o quadro de problemas: contraste (perceptível), texto alternativo com descrição do dado do gráfico e, se o gráfico for a única forma de ler um número, tabela equivalente (perceptível e compreensível), rótulos permanentes associados programaticamente (compreensível e robusto); (3) definir a correção: ajuste de paleta com contraste verificado, inserção de descrições e de tabela de dados, e rótulos visíveis e associados; (4) validar com verificador automático, revisão manual e teste com usuário em tecnologia assistiva (evidência exigida pela auditoria); (5) registrar a evidência de verificação e o plano com prazo (art. 49 da Lei nº 14.129/2021 — auditoria interna com abordagem baseada em risco); (6) avaliar se outros artefatos (formulários, vídeos, planilhas) têm o mesmo defeito, aplicando a correção de forma sistemática e não pontual. Resultado: plano de correção com evidência de verificação e generalização do padrão a todo o portfólio de páginas e documentos. Justificativa técnica: acessibilidade é propriedade do conteúdo, medida por resultado percebido e operável; e a divergência entre «moderno» e «acessível» é justamente a razão de existir o art. 8º, § 3º, VIII, da Lei nº 12.527/2011, que fixa requisitos mínimos de conteúdo. Erros frequentes: (a) responder ao achado com a alegação de que o portal tem certificado de segurança; (b) corrigir apenas a página auditada; (c) substituir o gráfico por imagem maior; (d) pedir aos usuários com deficiência que reportem dificuldade, em vez de testar preventivamente. Variação para transferência: se o conteúdo acessível for um DASHBOARD com indicadores de desempenho (art. 22 da Lei nº 14.129/2021), a descrição alternativa deve permitir a leitura do valor e do período — sem o dado, a descrição é insuficiente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Um portal pode ser tecnicamente moderno e, ainda assim, descumprir a exigência de acessibilidade de conteúdo do art. 8º, § 3º, VIII, da Lei nº 12.527/2011.",
+          "resposta": "Certo. A exigência incide sobre o conteúdo percebido e operável (contraste, texto alternativo, rótulos), e não sobre a tecnologia empregada no servidor ou na aplicação."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São medidas de acessibilidade operável: A) navegação completa por teclado com foco visível; B) rótulos de campo explícitos e associados; C) texto alternativo para imagens informativas; D) instruções antes da tarefa e mensagens de erro indicativas.",
+          "resposta": "A, B e D. O item C pertence à dimensão perceptível."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de acessibilidade e inclusão digital em serviços públicos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolverá, com o template de nove itens, três casos de acessibilidade e inclusão digital em serviços públicos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Todos os exemplos da unidade seguem o template de nove itens exigido pela especificação didática.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exemplos resolvidos da unidade (três casos completos)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — A auditoria interna apontou que o portal do órgão tem contraste insuficiente, ausência de texto alternativo em gráficos de execução orçamentária e rótulos de formulário gerados apenas por placeholder. O órgão contesta: «o site usa tecnologia moderna». Avalie a contestação.",
+            "porqueErrada": "",
+            "versaoCorreta": "Problema: confusão entre tecnologia moderna e acessibilidade; e carência de evidência de conformidade. Dados disponíveis: contraste insuficiente; gráficos sem texto alternativo (informação transmitida apenas por imagem); rótulos apenas por placeholder (que desaparece ao digitar, quebrando a identificação do campo e a conexão entre rótulo e controle — dimensão COMPREENSÍVEL e ROBUSTO); o art. 8º, § 3º, VIII, da Lei nº 12.527/2011 exige medidas de acessibilidade de conteúdo nos sítios oficiais; o art. 3º, XIX, da Lei nº 14.129/2021 trata a acessibilidade como princípio. Conceitos aplicáveis: perceptível, operável, compreensível e robusto; dever de publicidade (o cidadão tem direito a informação acessível) e dever de eficiência com qualidade. Estratégia: responder ao achado com plano de correção com prazo e responsável, e não com argumento genérico de tecnologia. Passo a passo: (1) reconhecer o achado — a tecnologia do servidor de aplicação não é o critério; o critério é o conteúdo percebido e operável; (2) identificar o quadro de problemas: contraste (perceptível), texto alternativo com descrição do dado do gráfico e, se o gráfico for a única forma de ler um número, tabela equivalente (perceptível e compreensível), rótulos permanentes associados programaticamente (compreensível e robusto); (3) definir a correção: ajuste de paleta com contraste verificado, inserção de descrições e de tabela de dados, e rótulos visíveis e associados; (4) validar com verificador automático, revisão manual e teste com usuário em tecnologia assistiva (evidência exigida pela auditoria); (5) registrar a evidência de verificação e o plano com prazo (art. 49 da Lei nº 14.129/2021 — auditoria interna com abordagem baseada em risco); (6) avaliar se outros artefatos (formulários, vídeos, planilhas) têm o mesmo defeito, aplicando a correção de forma sistemática e não pontual. Resultado: plano de correção com evidência de verificação e generalização do padrão a todo o portfólio de páginas e documentos. Justificativa técnica: acessibilidade é propriedade do conteúdo, medida por resultado percebido e operável; e a divergência entre «moderno» e «acessível» é justamente a razão de existir o art. 8º, § 3º, VIII, da Lei nº 12.527/2011, que fixa requisitos mínimos de conteúdo. Erros frequentes: (a) responder ao achado com a alegação de que o portal tem certificado de segurança; (b) corrigir apenas a página auditada; (c) substituir o gráfico por imagem maior; (d) pedir aos usuários com deficiência que reportem dificuldade, em vez de testar preventivamente. Variação para transferência: se o conteúdo acessível for um DASHBOARD com indicadores de desempenho (art. 22 da Lei nº 14.129/2021), a descrição alternativa deve permitir a leitura do valor e do período — sem o dado, a descrição é insuficiente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O portal do órgão tem pesquisa por palavra-chave, mas o único caminho para solicitar o serviço é um formulário com 27 campos, sem opção de salvar e retomar. Como o órgão deve agir?",
+            "dados": "27 campos, sem progresso salvo; o serviço é de requerimento genérico de segunda via; o art. 3º, X, da Lei nº 14.129/2021 exige simplificação com foco em universalização e autosserviço; o art. 3º, XII, impõe imposição imediata e de uma única vez das exigências; o art. 3º, XIII, veda exigir prova de fato já comprovado; o art. 24, IV, manda eliminar exigências desnecessárias.",
+            "conceitos": [
+              "Inclusão digital",
+              "Acessibilidade operável (o volume de campos sem salva é barreira para pessoa com deficiência, para pessoa com dificuldade motora e para quem usa conexão instável)",
+              "Minimização de dados",
+              "Interoperabilidade"
+            ],
+            "estrategia": "Redesenhar o formulário a partir dos dados que o órgão já possui, e medir a taxa de abandono antes e depois.",
+            "execucao": [
+              "1) Mapear quais campos o órgão já tem em bases próprias e quais são realmente necessários",
+              "2) Eliminar exigência de documento já comprovado e passar a usar dado existente, com registro da origem",
+              "3) Reduzir o número de etapas e salvar o rascunho com recuperação por código ou protocolo",
+              "4) Conferir a acessibilidade do formulário (rótulos, ordem de tabulação, erros, foco, contraste)",
+              "5) Publicar o serviço em formato acessível e permitir download de modelo em formato aberto (art. 3º, XXV)",
+              "6) Instrumentar a taxa de abandono por etapa e o tempo médio (art. 22) e reavaliar."
+            ],
+            "resultado": "Processo mais curto, com uso de dados existentes, e medição de abandono como indicador de inclusão.",
+            "justificativa": "Exigência desnecessária é custo social sem contrapartida de qualidade — exatamente o que o art. 3º, XI, manda eliminar.",
+            "errosFrequentes": [
+              "a) Proteger a interface com CAPTCHA agressivo e bloqueio por IP sem alternativa equivalente (barreira nova)",
+              "b) Exigir documento digitalizado de tudo",
+              "c) Medir apenas o volume de atendimentos e concluir sucesso",
+              "d) Desconsiderar a conexão instável e o acesso por celular antigo."
+            ],
+            "variacao": "Se o serviço for de alta complexidade (por exemplo, licenciamento ambiental), a simplificação atua sobre etapas e campos, e não sobre o conteúdo técnico da análise; e a revisão humana especializada permanece obrigatória."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão constata que 70% dos atendimentos de um serviço social saem do canal digital para o presencial, com fila média de duas horas. A área de negócio propõe fechar o balcão. Avalie.",
+            "dados": "70% de saída do digital para o presencial; fila média de duas horas; público com baixa escolaridade e baixa conectividade; o art. 3º, XVI, e o art. 14 da Lei nº 14.129/2021 preservam o atendimento presencial; o art. 24, VIII, prevê testes e pesquisas com os usuários; o art. 22 prevê indicadores de desempenho.",
+            "conceitos": [
+              "Inclusão digital",
+              "Eficiência como qualidade e não como redução de despesa",
+              "Art. 3º, XI (eliminar exigência cujo custo social exceda o risco) — aqui o custo social é o da exclusão"
+            ],
+            "estrategia": "Tratar como problema de desenho do serviço digital, não como caso de balcão excedente; medir a causa da saída antes de decidir.",
+            "execucao": [
+              "1) Instrumentar a saída por etapa do fluxo digital, identificando o ponto em que o usuário desiste (é preciso? é técnica? é de confiança?)",
+              "2) Entrevistar usuários que usaram o balcão após tentativa digital, com pesquisa prevista no art. 24, VIII",
+              "3) Corrigir as barreiras encontradas — campos redundantes, etapa de autenticação inviável, erro de validação, indisponibilidade em horários de pico",
+              "4) Reavaliar a fila com base em dados, mantendo o canal presencial dimensionado à demanda real (art. 3º, XVI: conforme características, relevância e público-alvo)",
+              "5) Só então discutir eventual redimensionamento do balcão, com estudo de impacto que demonstre que a demanda atendida não será perdida",
+              "6) Monitorar o painel (art. 22)."
+            ],
+            "resultado": "Causa da migração identificada e corrigida; balcão mantido em dimensionamento compatível com a demanda, com decisão de redimensionamento apenas após evidência.",
+            "justificativa": "Fechar o balcão com base no dado agregado erra o objeto — o dado mede o fracão que não conseguiu usar o digital, não o excedente de capacidade. A decisão de eficiência precisa considerar o custo social do serviço não prestado.",
+            "errosFrequentes": [
+              "a) Decidir pela métrica de fila sem cruzar com taxa de conclusão do digital",
+              "b) Usar a exceção do art. 6º para justificar a extinção do balcão (a exceção é de ato processual, não de canal)",
+              "c) Criar barreira digital (exigência de conta, senha forte, aplicativo) que aumente a saída",
+              "d) Desconsiderar o público idoso (art. 3º, XXIV)."
+            ],
+            "variacao": "Se o serviço for de emissão de documentos, cuja emissão é admitida em meio digital assinada eletronicamente (art. 5º, parágrafo único, da Lei nº 14.129/2021), a digitalização pode reduzir a demanda de balcão, e aí a decisão de redimensionamento é legítima — desde que mantida a via presencial para quem não consegue usar o digital."
+          },
+          {
+            "tipo": "erro",
+            "problema": "A auditoria interna apontou que o portal do órgão tem contraste insuficiente, ausência de texto alternativo em gráficos de execução orçamentária e rótulos de formulário gerados apenas por placeholder. O órgão contesta: «o site usa tecnologia moderna». Avalie a contestação.",
+            "dados": "Contraste insuficiente; gráficos sem texto alternativo (informação transmitida apenas por imagem); rótulos apenas por placeholder (que desaparece ao digitar, quebrando a identificação do campo e a conexão entre rótulo e controle — dimensão COMPREENSÍVEL e ROBUSTO); o art. 8º, § 3º, VIII, da Lei nº 12.527/2011 exige medidas de acessibilidade de conteúdo nos sítios oficiais; o art. 3º, XIX, da Lei nº 14.129/2021 trata a acessibilidade como princípio.",
+            "conceitos": [
+              "Perceptível, operável, compreensível e robusto",
+              "Dever de publicidade (o cidadão tem direito a informação acessível) e dever de eficiência com qualidade"
+            ],
+            "estrategia": "Responder ao achado com plano de correção com prazo e responsável, e não com argumento genérico de tecnologia.",
+            "execucao": [
+              "1) Reconhecer o achado — a tecnologia do servidor de aplicação não é o critério; o critério é o conteúdo percebido e operável",
+              "2) Identificar o quadro de problemas: contraste (perceptível), texto alternativo com descrição do dado do gráfico e, se o gráfico for a única forma de ler um número, tabela equivalente (perceptível e compreensível), rótulos permanentes associados programaticamente (compreensível e robusto)",
+              "3) Definir a correção: ajuste de paleta com contraste verificado, inserção de descrições e de tabela de dados, e rótulos visíveis e associados",
+              "4) Validar com verificador automático, revisão manual e teste com usuário em tecnologia assistiva (evidência exigida pela auditoria)",
+              "5) Registrar a evidência de verificação e o plano com prazo (art. 49 da Lei nº 14.129/2021 — auditoria interna com abordagem baseada em risco)",
+              "6) Avaliar se outros artefatos (formulários, vídeos, planilhas) têm o mesmo defeito, aplicando a correção de forma sistemática e não pontual."
+            ],
+            "resultado": "Plano de correção com evidência de verificação e generalização do padrão a todo o portfólio de páginas e documentos.",
+            "justificativa": "Acessibilidade é propriedade do conteúdo, medida por resultado percebido e operável; e a divergência entre «moderno» e «acessível» é justamente a razão de existir o art. 8º, § 3º, VIII, da Lei nº 12.527/2011, que fixa requisitos mínimos de conteúdo.",
+            "errosFrequentes": [
+              "a) Responder ao achado com a alegação de que o portal tem certificado de segurança",
+              "b) Corrigir apenas a página auditada",
+              "c) Substituir o gráfico por imagem maior",
+              "d) Pedir aos usuários com deficiência que reportem dificuldade, em vez de testar preventivamente."
+            ],
+            "variacao": "Se o conteúdo acessível for um DASHBOARD com indicadores de desempenho (art. 22 da Lei nº 14.129/2021), a descrição alternativa deve permitir a leitura do valor e do período — sem o dado, a descrição é insuficiente."
+          }
+        ]
+      }
+    }
+  ]
+}

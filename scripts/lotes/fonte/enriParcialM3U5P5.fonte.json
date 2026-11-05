@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 5,
+    "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM3U5P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U5P5.js",
+    "idsCompletos": [
+      "m3-u5-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u5-t3-s3",
+      "titulo": "Boas práticas e resposta a incidentes de comunicação",
+      "topicoTitulo": "Spam, phishing e falsificação de remetente em contexto de comunicação institucional",
+      "topicoId": "modulo-3-unidade-5-topico-3",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno conhecerá boas práticas e resposta a incidentes de comunicação.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) boas práticas preventivas; (b) o que fazer diante de um incidente de comunicação; (c) obrigações institucionais; (d) limites do conhecimento. POR QUE O CONHECIMENTO É IMPORTANTE: saber responder a um incidente reduz o dano; a prova cobra a sequência de resposta e as boas práticas. PRÉ-REQUISITOS: unidade 5.3 (phishing, spoofing); unidade 5.1 (intrusão). OBJETIVOS OBSERVÁVEIS: (1) listar boas práticas; (2) descrever a resposta a incidente; (3) situar obrigações; (4) evitar inventar prazos. COMPETÊNCIAS DESENVOLVIDAS: prevenção e resposta a incidentes de comunicação. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.3 (autenticação); Módulo 4 (segurança e LGPD); Módulo 6 (responsabilização). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: as boas práticas de comunicação segura incluem: treinamento periódico dos usuários; simulações defensivas de phishing; uso de autenticação multifator (MFA); verificação de links e anexos antes de clicar ou abrir; reporte rápido de mensagens suspeitas; backup de comunicações críticas; e uma política de uso aceitável dos recursos. Diante de um incidente (conta comprometida, mensagem fraudulenta enviada, dado exposto), a resposta segue uma sequência: isolar a conta afetada (bloquear, encerrar sessões); alterar as credenciais; notificar as partes competentes; registrar e preservar evidências; avaliar o impacto (quais dados foram expostos); e revisar os controles para evitar recorrência. Em serviço público, somam-se deveres de proteção de dados (a LGPD trata de comunicação de incidentes) e normas de segurança da informação. Não se devem inventar prazos nem dispositivos: cita-se a lei e o conceito, conferindo-se a redação vigente e o procedimento interno aplicável. A prevenção reduz a frequência; a resposta bem executada reduz a gravidade.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer que existem boas práticas e resposta.\n- Nível intermediário: ordenar as ações de resposta a um incidente.\n- Nível avançado: avaliar o impacto e comunicar afetados conforme a política.\n- Nível especialista: conduzir a resposta completa e propor melhorias de controle.\nCOMPARAÇÕES CRÍTICAS:\n- prevenção x resposta: a primeira reduz a chance; a segunda reduz o dano — ambas são necessárias.\n- isolar x deletar: isolar preserva evidências; deletar as apaga — a ordem correta importa.\n- treinamento x ferramenta: o treinamento forma o usuário; a ferramenta apoia — não se substituem.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Ao suspeitar, apague tudo imediatamente.\" — Motivo: apaga evidências — Versão tecnicamente correta: isolar e preservar o registro.\n- Afirmação errada: \"Um filtro de spam dispensa treinamento.\" — Motivo: a fraude evolui — Versão tecnicamente correta: combinar ferramenta e conscientização.\n- Afirmação errada: \"Há um prazo único e conhecido para comunicar incidentes.\" — Motivo: depende da norma e do procedimento — Versão tecnicamente correta: seguir a política e a redação vigente, sem inventar prazos.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: treinamento, simulação, MFA, reporte, isolamento, comunicação de incidente.\n- Regras e fórmulas: isolar → alterar credenciais → notificar → registrar → avaliar → corrigir.\n- Exceções: prazos e dispositivos dependem da norma vigente e do procedimento interno.\n- Palavras-chave: prevenção, resposta, evidência, notificação, LGPD.\n- Checklist de domínio: (1) Listo boas práticas? (2) Descrevo a resposta? (3) Situo obrigações? (4) Evito inventar prazos?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite três boas práticas. (2) Qual a primeira ação diante de conta comprometida? (3) Por que não apagar evidências? (4) Que lei rege dados pessoais? (5) Por que não afirmar prazo único?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que fazer ao suspeitar de conta comprometida?",
+          "resposta": "Alterar senha, revogar sessões, notificar equipe de segurança, verificar atividades recentes."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como preparar equipe contra phishing?",
+          "resposta": "Treinamento periódico, simulações defensivas, política clara de reporte e MFA obrigatório."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Treinamento único é suficiente.'",
+          "correcao": "Errado. Ameaças evoluem; treinamento deve ser contínuo e atualizado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) MFA reduz risco de comprometimento de conta por phishing.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual ação inicial em incidente de comunicação? A) Ignorar; B) Isolar conta e alterar credenciais; C) Compartilhar senha; D) Apagar logs.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de conhecer boas práticas e resposta a incidentes de comunicação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "conhecerá boas práticas e resposta a incidentes de comunicação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Boas práticas: treinamento periódico, simulações de phishing (defensivas), MFA, verificação de links/anexos, reporte rápido, backup de comunicações críticas, política de uso aceitável. Resposta a incidente: isolar conta comprometida, alterar credenciais, notificar afetados, registrar, revisar controles. Em serviço público, observar LGPD (comunicação de incidente) e normas de segurança. Não inventar prazos; verificar dispositivos aplicáveis.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Boas práticas e resposta a incidentes de comunicação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Treinamento único é suficiente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ameaças evoluem; treinamento deve ser contínuo e atualizado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que fazer ao suspeitar de conta comprometida?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Alterar senha, revogar sessões, notificar equipe de segurança, verificar atividades recentes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como preparar equipe contra phishing?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Treinamento periódico, simulações defensivas, política clara de reporte e MFA obrigatório.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Treinamento único é suficiente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ameaças evoluem; treinamento deve ser contínuo e atualizado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

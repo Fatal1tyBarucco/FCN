@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 6,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U2P6",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P6.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-9-sub-1",
+      "modulo-1-unidade-2-topico-9-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-9-sub-1",
+      "titulo": "Tabelas no Word",
+      "topicoTitulo": "Tabelas, imagens, formas e disposição de texto",
+      "topicoId": "modulo-1-unidade-2-topico-9",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno criará e formatará tabelas com fórmulas e propriedades avançadas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) criação e estrutura de tabelas no Word (linhas, colunas, células); (b) formatação de tabelas: bordas, sombreamento, estilos, alinhamento e autoajuste; (c) fórmulas integradas de tabela (como =SUM(ABOVE)) e seus limites; (d) propriedades operacionais: repetir linha de cabeçalho, conversão tabela-texto, classificação; (e) por que a tabela do Word não substitui o Excel. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra propriedades específicas (repetir cabeçalho em várias páginas, fórmula =SUM(ABOVE), conversão em texto) e a distinção entre os recursos de tabela do Word e os do Excel; generalizar funções do Excel para o Word muda o gabarito. PRÉ-REQUISITOS: interface do Word (unidade 1.2, tópico 1). OBJETIVOS OBSERVÁVEIS: (1) criar e formatar uma tabela com estilos e propriedades; (2) aplicar fórmula integrada e identificar seu alcance; (3) decidir quando a tarefa exige tabela do Word ou planilha do Excel. COMPETÊNCIAS DESENVOLVIDAS: organização tabular de dados em documento; escolha de ferramenta por capacidade. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópico 2 (objetos e disposição de texto); unidade 1.3 (Excel); unidade 1.2 tópico 14 (relatório integrado). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: a tabela é o recurso do Word para organizar dados em grade de linhas e colunas, em que cada interseção é uma célula. Criação: Inserir > Tabela (seleção da grade, caixa de diálogo com número de linhas e colunas, ou desenho manual). Formatação: estilos de tabela predefinidos (paletas com bordas e sombreamento), cores de fundo por célula/linha, bordas personalizadas, alinhamento do conteúdo, autoajuste de colunas (ao conteúdo, à janela, fixo) e sombreamento de linhas alternadas para leitura. Fórmulas integradas: no contexto de tabela, o comando Fórmula (guia Layout da tabela) aceita funções limitadas — como =SUM(ABOVE), que soma as células acima da célula atual, ou médias — sem a biblioteca completa do Excel; para cálculo complexo, a resposta técnica é usar uma planilha do Excel e inserir/vincular no Word. Propriedades operacionais: repetir como linha de cabeçalho (a primeira linha reaparece em cada página quando a tabela atravessa páginas), permitir quebra de linha entre páginas, converter tabela em texto (e texto em tabela) usando separadores (tabulação, vírgula), classificar linhas por coluna. Limitação conceitual: a tabela do Word é recurso de apresentação com aritmética mínima; a tabela do Excel é motor de cálculo com funções, gráficos e tabelas dinâmicas — a escolha errada da ferramenta é o erro de gabarito clássico.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: criar tabela 3x3 pela grade e preencher células; reconhecer célula, linha e coluna.\n- Nível intermediário: aplicar estilo, sombreamento alternado e a fórmula =SUM(ABOVE); configurar repetir cabeçalho em tabela longa.\n- Nível avançado: converter texto separado por tabulações em tabela e vice-versa; classificar linhas por coluna; explicar quando a fórmula do Word não basta.\n- Nível especialista: diagnosticar documento com tabela atravessando páginas (cabeçalho ausente na página 2) e decidir entre propriedade de repetição, quebra controlada ou migração da parte calculável para o Excel.\n\nCOMPARAÇÕES CRÍTICAS:\n- Tabela do Word x planilha do Excel: a tabela do Word formata e organiza com fórmulas limitadas (=SUM(ABOVE)); o Excel calcula com a biblioteca completa de funções — para \"somar coluna com critério\", o gabarito é Excel, não tabela do Word.\n- Fórmula integrada do Word x função do Excel: =SUM(ABOVE) referencia posição (células acima) dentro da tabela; =SOMA(A1:A10) referencia células por endereço com qualquer função — confundir as sintaxes muda a resposta.\n- Repetir cabeçalho x mesclar células na primeira linha: repetir cabeçalho reproduz a linha em cada página quando a tabela quebra; mesclar não reproduz nada — a alternativa que confunde os dois recursos está errada.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"as tabelas do Word têm todas as funções do Excel\" — Motivo: generalização falsa — Versão tecnicamente correta: as fórmulas integradas de tabela do Word são limitadas (soma, média etc. por posição); cálculos complexos exigem o Excel.\n- Afirmação errada: \"o cabeçalho da tabela aparece automaticamente em todas as páginas\" — Motivo: confunde comportamento padrão com configuração opcional — Versão tecnicamente correta: é preciso ativar a propriedade repetir como linha de cabeçalho na primeira linha da tabela.\n- Afirmação errada: \"não é possível converter uma tabela do Word em texto simples\" — Motivo: afirmação de impossibilidade falsa — Versão tecnicamente correta: a conversão existe, com separador escolhido (tabulação, vírgula, entre outros), e o caminho inverso (texto em tabela) também.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: grade, célula, estilo de tabela, autoajuste, fórmula integrada, repetir cabeçalho, conversão tabela-texto.\n- Regras e fórmulas: =SUM(ABOVE) soma as células acima da atual; cabeçalho em todas as páginas → propriedade repetir como linha de cabeçalho; tabela longa com cálculo complexo → Excel.\n- Exceções: fórmulas do Word são posicionais e limitadas; classificação e filtros do Word são menos completos que os do Excel.\n- Palavras-chave: tabela, célula, estilo de tabela, =SUM(ABOVE), repetir cabeçalho, converter em texto, classificar.\n- Checklist de domínio: crio e formato tabela; aplico =SUM(ABOVE); configuro repetição de cabeçalho; converto tabela em texto; decido Word versus Excel para cálculo.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como fazer a primeira linha de uma tabela reaparecer em cada página? (2) O que faz =SUM(ABOVE) e de que tipo de fórmula ela é exemplo? (3) Uma tabela precisa de SOMASE sobre centenas de linhas: qual ferramenta usar e por quê? (4) Como converter uma tabela em texto separado por tabulações? (5) Corrija: \"a tabela do Word executa qualquer função do Excel\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Criar uma tabela 3x3 num documento.",
+          "resposta": "Inserir > Tabela > selecionar a grade 3x3 (ou usar a caixa de diálogo/desenho); preencher as células; aplicar um estilo de tabela na guia Design da tabela para bordas e sombreamento."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Tabela de despesas com 40 linhas que atravessa duas páginas; a coluna Valor precisa de total.",
+          "resposta": "Total: posicionar o cursor na célula abaixo da coluna Valor > guia Layout da tabela > Fórmula > =SUM(ABOVE) > OK (fórmula integrada posicional). Cabeçalho: selecionar a primeira linha > Layout > Repetir Linhas de Cabeçalho, para que reapareça na página 2. Observação de limite: se fosse preciso somar só as despesas de um tipo (critério), a fórmula do Word não cobre — a parte de cálculo migraria para o Excel."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relatório recebeu lista de 200 itens separados por tabulação e precisa virar tabela ordenada por valor.",
+          "resposta": "Selecionar o texto > Inserir > Tabela > Converter Texto em Tabela > separador tabulação. Depois, com o cursor na tabela, Layout > Classificar > coluna Valor, decrescente. Se a classificação com múltiplos níveis ou a soma por categoria for necessária, exportar a tabela para o Excel — a tabela do Word classifica, mas o cálculo condicional fica fora do seu escopo."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que as tabelas do Word têm todas as funções do Excel.",
+          "correcao": "Incorreto: as fórmulas integradas de tabela do Word são limitadas e posicionais (como =SUM(ABOVE) para somar células acima); funções com critérios, gráficos e tabelas dinâmicas exigem o Excel, que pode ser vinculado ao documento."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual propriedade repete a linha de cabeçalho em cada página de uma tabela longa? A) Autoajuste; B) Repetir como linha de cabeçalho; C) Sombreamento de linhas alternadas.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Tabelas do Word podem ser convertidas em texto.",
+          "resposta": "Certo. A conversão tabela-texto existe nos dois sentidos, com escolha do separador (tabulação, vírgula, entre outros)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para somar as células acima da célula atual numa tabela do Word, usa-se: A) =SOMA(A1:A10) com endereços de planilha; B) =SUM(ABOVE), fórmula integrada posicional; C) Não é possível somar no Word.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de criar e formatar uma tabela do Word, aplicar a fórmula integrada =SUM(ABOVE), configurar a repetição do cabeçalho entre páginas e decidir corretamente entre tabela do Word e planilha do Excel para um cálculo, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "criará e formatará tabelas com fórmulas e propriedades avançadas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Tabelas organizam dados em linhas e colunas com formatação (cores de fundo, bordas, sombreamento), fórmulas integradas (SUM, AVERAGE, etc.), classificação e filtros. Podem ser convertidas em texto e vice-versa. Propriedades de tabela incluem alinhamento, autoajuste de colunas, repetir como cabeçalho linha e sombreamento de linhas alternadas.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Tabelas no Word",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que tabelas do Word têm todas as funções do Excel.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: fórmulas integradas são limitadas (SUM, AVERAGE etc.); para cálculos complexos usar Excel."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Criar tabela 3x3.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Inserir > Tabela > selecionar grade 3x3 (ou desenhar).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Somar coluna em tabela do Word.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Layout da Tabela > Fórmula > =SUM(ABOVE) > OK (fórmula integrada).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que tabelas do Word têm todas as funções do Excel.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: fórmulas integradas são limitadas (SUM, AVERAGE etc.); para cálculos complexos usar Excel.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-2-topico-9-sub-2",
+      "titulo": "Tabelas com imagens, formas, objetos e disposição de texto",
+      "topicoTitulo": "Tabelas, imagens, formas e disposição de texto",
+      "topicoId": "modulo-1-unidade-2-topico-9",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno inserirá imagens, formas e objetos em tabelas e controlará disposição de texto.",
+      "conteudo": "A título do tópico 9 (Tabelas, imagens, formas, objetos e disposição de texto), o conteúdo atual trata apenas de tabelas. A inserção de imagens e formas em tabelas, a manipulação de objetos (envoltório/wrap, ordem atrás/em frente, agrupamento) e a vinculação/incorporação de objetos complementam a prática. Imagens em tabelas: Inserir > Imagem dentro da célula ou ao redor; a imagem pode ser envolvida por texto (Layout > Envolver texto). Formas: Inserir > Forma dentro da célula ou sobreposta; agrupar (selecionar objetos > Grupo) une imagem/forma a elementos. Objeto vinculado/incorporado: Colar (incorporado) vs Colar como linka (vinculado) via Colar Especial. Envolvimento (wrap): o texto flui em torno do objeto conforme o tipo de envolvimento (Enquadrar, Barrar, etc.). Ordem (atrás/em frente): selecionar > Enviar para trás/Colar à frente. Disposição de texto: ajustar alinhamento, espaçamento e posicionamento dentro da célula/tabela.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Montar uma ficha técnica em que cada linha da tabela traga a descrição do equipamento e uma foto, mantendo a imagem dentro da célula e o texto legível na coluna vizinha.",
+          "resposta": "Ficha com oito imagens dentro das células, texto da coluna vizinha intacto e imagens ancoradas às suas linhas, de modo que a tabela se desloca como um bloco."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa agrupar uma imagem e uma seta sobre ela para movimentar o conjunto como uma única unidade dentro de um fluxograma feito no editor de texto.",
+          "resposta": "Imagem e seta movidas como uma unidade, sem desalinhamento, e o restante do fluxograma intacto; o conjunto mantém a posição relativa em qualquer movimentação posterior."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que o objeto vinculado se atualiza automaticamente quando o arquivo de origem muda e que, por isso, convém sempre usar vínculo em relatórios que serão enviados por e-mail.",
+          "correcao": "A afirmação é parcialmente incorreta: o objeto vinculado realmente busca a origem, mas deixa de exibir o conteúdo correto quando o arquivo referenciado não está acessível, e o envio por e-mail não transporta o vínculo funcional."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual o mecanismo para vincular objeto do Excel em Word com atualização? A) Colar comum; B) Colar como linka (Colar Especial); C) Exportar PDF.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O envolvimento de texto (wrap) pode ser configurado para imagem/forma.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de inserir imagens, formas e objetos em tabelas e controlará disposição de texto, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "inserirá imagens, formas e objetos em tabelas e controlará disposição de texto"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A título do tópico 9 (Tabelas, imagens, formas, objetos e disposição de texto), o conteúdo atual trata apenas de tabelas. A inserção de imagens e formas em tabelas, a manipulação de objetos (envoltório/wrap, ordem atrás/em frente, agrupamento) e a vinculação/incorporação de objetos complementam a prática. Imagens em tabelas: Inserir > Imagem dentro da célula ou ao redor; a imagem pode ser envolvida por texto (Layout > Envolver texto). Formas: Inserir > Forma dentro da célula ou sobreposta; agrup…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Tabelas com imagens, formas, objetos e disposição de texto",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que o objeto vinculado se atualiza automaticamente quando a fonte muda.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: objeto vinculado (Colar como linka) referencia a fonte; incorporado não."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Montar uma ficha técnica em que cada linha da tabela traga a descrição do equipamento e uma foto, mantendo a imagem dentro da célula e o texto legível na coluna vizinha.",
+            "dados": "Tabela de duas colunas por oito linhas, oito imagens em .png já redimensionadas, coluna de descrição com cerca de três linhas de texto por célula.",
+            "conceitos": [
+              "envolvimento de texto: regra que define como o texto flui em torno do objeto",
+              "ancoragem: parágrafo ao qual o objeto pertence e que ele acompanha",
+              "ordem de camadas: posição do objeto à frente ou atrás de outros elementos"
+            ],
+            "estrategia": "Inserir a imagem na célula e ajustar o envolvimento para que ela permaneça no fluxo do parágrafo, evitando que o objeto flutue e escape da tabela ao redimensionar colunas.",
+            "execucao": [
+              "Clicar na célula da coluna de imagem e usar Inserir > Imagens > Este Dispositivo.",
+              "Com a imagem selecionada, escolher Layout > Quebra de Texto Automática > Alinhado com o Texto, de modo que ela ocupe a célula sem flutuar.",
+              "Redimensionar pelas alças mantendo a proporção e centralizar o alinhamento do parágrafo da célula.",
+              "Repetir nas oito linhas e conferir o deslocamento da tabela para uma página seguinte, observando se as imagens acompanham as linhas."
+            ],
+            "resultado": "Ficha com oito imagens dentro das células, texto da coluna vizinha intacto e imagens ancoradas às suas linhas, de modo que a tabela se desloca como um bloco.",
+            "justificativa": "O envolvimento define se o objeto participa do fluxo do texto ou flutua sobre ele. Alinhado com o Texto mantém o objeto no parágrafo e preserva a estrutura da célula; envolvimentos flutuantes permitem sobreposição e podem deslocar conteúdo quando a largura da tabela muda. A ancoragem garante que a imagem acompanhe a linha a que pertence.",
+            "errosFrequentes": [
+              "Usar envolvimento flutuante dentro da célula e ver a imagem escapar ao redimensionar colunas.",
+              "Redimensionar arrastando pelos cantos sem manter a proporção, distorcendo a imagem.",
+              "Deixar a imagem ancorada em parágrafo fora da tabela, de modo que ela não acompanhe a linha."
+            ],
+            "variacao": "As fotos passam a ser substituídas todo mês por arquivos de mesmo nome em uma pasta de rede. Indique se convém inserir de forma incorporada ou vinculada e qual risco de compatibilidade a escolha introduz ao compartilhar o arquivo."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa agrupar uma imagem e uma seta sobre ela para movimentar o conjunto como uma única unidade dentro de um fluxograma feito no editor de texto.",
+            "dados": "Fluxograma com cinco caixas de texto, quatro setas e uma imagem de fundo, todos posicionados sobre o mesmo trecho do documento.",
+            "conceitos": [
+              "agrupamento: união de objetos que passam a se mover e redimensionar juntos",
+              "objeto vinculado: referência a arquivo externo, atualizada pela origem",
+              "objeto incorporado: cópia armazenada dentro do documento"
+            ],
+            "estrategia": "Selecionar os objetos corretos com apoio do painel de seleção e agrupar, o que preserva a posição relativa entre imagem e seta durante qualquer movimentação.",
+            "execucao": [
+              "Abrir o painel de seleção para enxergar todos os objetos sobrepostos e escolher a imagem e a seta.",
+              "Manter as duas selecionadas e usar Formato > Agrupar.",
+              "Mover o grupo e conferir que imagem e seta mantêm a posição relativa.",
+              "Desagrupar apenas quando for necessário editar a seta isoladamente, reagrupando em seguida."
+            ],
+            "resultado": "Imagem e seta movidas como uma unidade, sem desalinhamento, e o restante do fluxograma intacto; o conjunto mantém a posição relativa em qualquer movimentação posterior.",
+            "justificativa": "O agrupamento cria uma relação entre os objetos selecionados, de modo que transformações aplicadas ao grupo valem para todos. Sem agrupar, cada objeto mantém ancoragem própria e o deslocamento de um deles separa a seta da imagem, alterando o significado do diagrama.",
+            "errosFrequentes": [
+              "Selecionar objetos sobrepostos com clique simples e mover apenas o que estava à frente.",
+              "Copiar e colar os objetos em outro parágrafo e perder a posição relativa do conjunto.",
+              "Vincular a imagem a um arquivo externo e quebrar o vínculo ao abrir o documento em outro computador."
+            ],
+            "variacao": "O fluxograma precisa ser reaproveitado em outro documento, com a imagem substituída. Explique como o agrupamento e a forma de inserção influenciam o transporte do conjunto e o que deve ser conferido após a colagem."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que o objeto vinculado se atualiza automaticamente quando o arquivo de origem muda e que, por isso, convém sempre usar vínculo em relatórios que serão enviados por e-mail.",
+            "dados": "Relatório com três planilhas inseridas como objeto, arquivos de origem em pasta local, documento a ser enviado por e-mail para cinco destinatários externos.",
+            "conceitos": [
+              "vínculo: referência ao arquivo de origem, que pode ser atualizada",
+              "incorporação: cópia completa do objeto dentro do documento",
+              "portabilidade: capacidade de o documento manter o conteúdo fora do ambiente de origem"
+            ],
+            "estrategia": "Distinguir os dois comportamentos e testar o efeito do vínculo fora do ambiente de origem, porque a atualização depende de o arquivo referenciado estar acessível.",
+            "execucao": [
+              "Verificar o comportamento do objeto vinculado após alterar o arquivo de origem na mesma máquina.",
+              "Salvar o documento, abri-lo em outra máquina e conferir o que acontece com a referência.",
+              "Repetir o teste com o objeto incorporado, que carrega cópia própria do conteúdo.",
+              "Decidir pela incorporação quando o documento precisa ser portátil e pela vinculação apenas em cenários controlados de atualização."
+            ],
+            "resultado": "A afirmação é parcialmente incorreta: o objeto vinculado realmente busca a origem, mas deixa de exibir o conteúdo correto quando o arquivo referenciado não está acessível, e o envio por e-mail não transporta o vínculo funcional.",
+            "justificativa": "Vínculo e incorporação trocam atualidade por portabilidade. O vínculo aponta para um arquivo externo e depende dele para exibir o conteúdo atualizado; a incorporação guarda o objeto no documento, com o estado do momento da inserção. Em documento distribuído, a dependência externa é o fator que decide o resultado.",
+            "errosFrequentes": [
+              "Usar vínculo em documento que será enviado a terceiros.",
+              "Concluir que o objeto vinculado funciona sempre, sem testar fora da máquina de origem.",
+              "Incorporar sem atualizar o objeto e publicar uma versão desatualizada."
+            ],
+            "variacao": "O relatório precisa ser reenviado mensalmente com dados atualizados a partir da mesma planilha. Descreva qual estratégia concilia atualização e distribuição e qual conferência evita publicar conteúdo antigo."
+          }
+        ]
+      }
+    }
+  ]
+}

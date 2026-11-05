@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 1,
+    "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+    "parte": 4,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U1P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U1P4.js",
+    "idsCompletos": [
+      "m6-u1-t3-s3",
+      "m6-u1-t3-s4"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u1-t3-s3",
+      "titulo": "Erros, exceções e pegadinhas de prova da unidade",
+      "topicoTitulo": "Exemplos resolvidos, comparações críticas, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-1-topico-3",
+      "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno identificará afirmações equivocadas frequentes sobre os princípios da Administração Pública e as substituirá por versões tecnicamente corretas, distinguindo generalização falsa de exceção legítima.",
+      "conteudo": "PEGADINHA 1 — ABSOLUTIZAÇÃO. Afirmação errada: «a publicidade é o princípio mais importante da Administração Pública e por isso pode afastar os demais». Por que está errada: não há hierarquia absoluta entre os princípios do art. 37; a publicidade tem como limite a proteção de dados pessoais e o sigilo legalmente justificado (art. 3º, I, e art. 31 da Lei nº 12.527/2011 — verificados), e a Lei nº 14.129/2021 manda respeitar a privacidade mesmo na transparência ativa (art. 29, § 1º, VIII). Versão correta: «a publicidade é preceito geral, mas o sigilo é exceção justificada e a divulgação irrestrita de dados pessoais é vedada». PEGADINHA 2 — TRANSFERÊNCIA DE CARÁTER. Afirmação errada: «o princípio da eficiência, por ser o mais recente, é o que orienta a minha decisão quando há dúvida». Por que está errada: a eficiência não é critério de prevalência; é princípio de fim, e sua aplicação não autoriza afastar legalidade, impessoalidade, moralidade ou publicidade. Versão correta: «em caso de dúvida, o gestor deve aplicar os cinco princípios de forma harmônica, verificando se a solução mais eficiente também é legal, impessoal, moral e transparente». PEGADINHA 3 — EQUIPARAÇÃO ENTRE AUTOMAÇÃO E IMPESSOALIDADE. Afirmação errada: «sistema automatizado é impessoal por definição». Por que está errada: o automatismo é meio; o que sustenta a impessoalidade é o critério objetivo, escrito, vigente, comunicável e auditável — e um modelo estatístico pode reproduzir desvios. Versão correta: «a impessoalidade de um sistema se verifica pelo critério que ele aplica, não pelo fato de ser automático». PEGADINHA 4 — EFICIÊNCIA COMO RENÚNCIA. Afirmação errada: «digitalizar o serviço permite extinguir o atendimento presencial». Por que está errada: art. 3º, XVI, e art. 14 da Lei nº 14.129/2021 preservam o atendimento presencial; o art. 6º admite exceções ao processo eletrônico, não a extinção do serviço. Versão correta: «a digitalização deve ampliar o acesso, mantendo canal presencial conforme o perfil do usuário». PEGADINHA 5 — CONFUSÃO ENTRE BASE NORMATIVA E BOA PRÁTICA. Afirmação errada: «a Lei nº 14.129/2021 exige a adoção de um modelo específico de governança digital». Por que está errada: a lei estabelece princípios, diretrizes e componentes (arts. 1º, 3º, 4º, 18), não produtos ou modelos prontos; a adoção de ferramenta é escolha técnica do órgão, condicionada aos princípios. Versão correta: «a lei define princípios e componentes obrigatórios; a ferramenta é meio, e sua adequação se julga pela conformidade». PEGADINHA 6 — GENERALIZAÇÃO SOBRE OBRIGAÇÃO DE DIVULGAÇÃO. Afirmação errada: «todo órgão deve divulgar na internet tudo o que produz». Por que está errada: a obrigação é de divulgação de informações de interesse coletivo ou geral, em local de fácil acesso, com requisitos definidos, e há dispensa específica no art. 8º, § 4º, da Lei nº 12.527/2011 para municípios com menos de 10.000 habitantes quanto à divulgação na internet — mantida a exigência de informações orçamentárias e financeiras em tempo real. Versão correta: «a transparência ativa é regra, com limites e exceções expressos na lei». PEGADINHA 7 — ATRIBUIÇÃO DE EFEITO JURÍDICO À TECNOLOGIA. Afirmação errada: «a assinatura eletrônica substitui a motivação do ato». Por que está errada: a assinatura eletrônica assegura autenticidade, integridade e segurança do documento (art. 7º da Lei nº 14.129/2021); a motivação é conteúdo do ato e não é dispensada pela forma eletrônica. Versão correta: «o ato digital permanece ato administrativo, com motivação e com possibilidade de impugnar». PEGADINHA 8 — CONFUSÃO ENTRE PUBLICIDADE E PUBLICIDADE PRÓPRIA. Afirmação errada: «o órgão pode divulgar, em campanha institucional, dados de cidadãos para dar exemplo de atendimento». Por que está errada: o uso promocional de dados pessoais de cidadãos é tratamento com finalidade diversa da atender e da informar, sem base legal; a publicidade institucional do órgão não se confunde com publicidade de terceiros nem autoriza exposição de dados pessoais. Versão correta: «campanha institucional usa dados institucionais e, quando usar dados de cidadãos, observa finalidade, base legal e anonimização». PEGADINHA 9 — INTERPRETAÇÃO DE REGRA COMO PRINCÍPIO. Afirmação errada: «os 20 dias da LAI são um princípio e por isso podem ser adaptados». Por que está errada: prazo é regra com conteúdo determinado; a prorrogação de 10 dias existe, mas exige justificativa expressa (art. 11, § 1º e § 2º da Lei nº 12.527/2011 — verificados). Versão correta: «prazo é regra vinculante, com hipótese e condição expressas de prorrogação».",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um item afirma que «o princípio da eficiência, por ser de exercícios recente, prevalece sobre a legalidade em caso de conveniência do gestor». Qual o defeito e a correção?",
+          "resposta": "Dois defeitos: não existe hierarquia absoluta entre os princípios do art. 37, e a legalidade não cede à conveniência do gestor — ela exige competência e procedimento. Correção: «os princípios devem ser aplicados de forma harmônica; a eficiência orienta o COMO fazer, mas não afasta a legalidade, a impessoalidade, a moralidade e a publicidade»."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um item afirma que «a transparência ativa é facultativa e, se o órgão mantiver portal de pedidos, está dispensado de divulgar dados de interesse coletivo». Avalie.",
+          "resposta": "Errado nos dois pontos. A divulgação de ofício é dever (art. 8º da Lei nº 12.527/2011: «é dever dos órgãos e entidades públicos promover, independentemente de requerimentos, a divulgação...»); e o atendimento de pedidos é outro mecanismo (transparência passiva), que não substitui o dever. A relação entre os dois é de complementariedade, não de alternativa."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como a Lei nº 14.129/2021 fala em interoperabilidade e dados abertos, qualquer base de dados do órgão pode ser publicada na internet.'",
+          "correcao": "Errado. A abertura de bases depende de não conter informação protegida por lei: o art. 30, § 6º, da Lei nº 14.129/2021 diz que são automaticamente passíveis de abertura as bases que não contenham informações protegidas por lei; o art. 29, § 1º, VIII, exige respeito à privacidade dos dados pessoais e sensíveis; e a LGPD permanece aplicável (art. 1º, parágrafo único, da Lei nº 14.129/2021). O dever de abertura tem, portanto, portões legalidade."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A prescrição de que a publicidade dos atos é regra e o sigilo é exceção significa que a informação classificada como sigilosa pode ser liberada por decisão do gestor, desde que motivada.",
+          "resposta": "Errado. A classificação é ato formal, com requisitos do art. 28 da Lei nº 12.527/2011 (assunto, fundamento, prazo e autoridade classificadora), compete a autoridade competente (art. 27) e observa o critério menos restritivo possível (art. 24, § 5º) e a reavaliação periódica (art. 29). A motivação não substitui a formalização nem a competência."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) NÃO é exemplo de generalização falsa: A) «o sistema automatizado é impessoal»; B) «a eficiência autoriza dispensar o atendimento presencial»; C) «a Lei nº 12.527/2011 estabelece regras com prazos determinados, como os 20 dias do art. 11»; D) «a transparência passiva é direito de pedido».",
+          "resposta": "C. É afirmação correta e rastreável: a Lei nº 12.527/2011 foi verificada em 2026-10-21, e o art. 11, § 1º, fixa prazo de 20 dias, prorrogável por mais 10 com justificativa expressa (art. 11, § 2º)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar afirmações equivocadas frequentes sobre os princípios da Administração Pública e as substituirá por versões tecnicamente corretas, distinguindo generalização falsa de exceção legítima, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará afirmações equivocadas frequentes sobre os princípios da Administração Pública e as substituirá por versões tecnicamente corretas, distinguindo generalização falsa de exceção legítima"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "PEGADINHA 1 — ABSOLUTIZAÇÃO. Afirmação errada: «a publicidade é o princípio mais importante da Administração Pública e por isso pode afastar os demais». Por que está errada: não há hierarquia absoluta entre os princípios do art. 37; a publicidade tem como limite a proteção de dados pessoais e o sigilo legalmente justificado (art. 3º, I, e art. 31 da Lei nº 12.527/2011 — verificados), e a Lei nº 14.129/2021 manda respeitar a privacidade mesmo na transparência ativa (art. 29, § 1º, VIII). Versão c…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Erros, exceções e pegadinhas de prova da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como a Lei nº 14.129/2021 fala em interoperabilidade e dados abertos, qualquer base de dados do órgão pode ser publicada na internet.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A abertura de bases depende de não conter informação protegida por lei: o art. 30, § 6º, da Lei nº 14.129/2021 diz que são automaticamente passíveis de abertura as bases que não contenham informações protegidas por lei; o art. 29, § 1º, VIII, exige respeito à privacidade dos dados pessoais e sensíveis; e a LGPD permanece aplicável (art. 1º, parágrafo único, da Lei nº 14.129/2021). O dever de abertura tem, portanto, portões legalidade."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um item afirma que «o princípio da eficiência, por ser de exercícios recente, prevalece sobre a legalidade em caso de conveniência do gestor». Qual o defeito e a correção?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dois defeitos: não existe hierarquia absoluta entre os princípios do art. 37, e a legalidade não cede à conveniência do gestor — ela exige competência e procedimento. Correção: «os princípios devem ser aplicados de forma harmônica; a eficiência orienta o COMO fazer, mas não afasta a legalidade, a impessoalidade, a moralidade e a publicidade».",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um item afirma que «a transparência ativa é facultativa e, se o órgão mantiver portal de pedidos, está dispensado de divulgar dados de interesse coletivo». Avalie.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado nos dois pontos. A divulgação de ofício é dever (art. 8º da Lei nº 12.527/2011: «é dever dos órgãos e entidades públicos promover, independentemente de requerimentos, a divulgação...»); e o atendimento de pedidos é outro mecanismo (transparência passiva), que não substitui o dever. A relação entre os dois é de complementariedade, não de alternativa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como a Lei nº 14.129/2021 fala em interoperabilidade e dados abertos, qualquer base de dados do órgão pode ser publicada na internet.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A abertura de bases depende de não conter informação protegida por lei: o art. 30, § 6º, da Lei nº 14.129/2021 diz que são automaticamente passíveis de abertura as bases que não contenham informações protegidas por lei; o art. 29, § 1º, VIII, exige respeito à privacidade dos dados pessoais e sensíveis; e a LGPD permanece aplicável (art. 1º, parágrafo único, da Lei nº 14.129/2021). O dever de abertura tem, portanto, portões legalidade.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u1-t3-s4",
+      "titulo": "Resumo estruturado, checklist de domínio e verificação de aprendizagem",
+      "topicoTitulo": "Exemplos resolvidos, comparações críticas, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-1-topico-3",
+      "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno consolidará a unidade por recuperação ativa, revisando conceitos essenciais, regras, comparações, exceções e palavras-chave, e responderá a itens de verificação sem consultar o texto.",
+      "conteudo": "RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: princípios do art. 37 da CF (legalidade, impessoalidade, moralidade, publicidade, eficiência) como normas de conduta a concretizar; art. 5º, XXXIII, como direito à informação com ressalva do sigilo previsto na lei; princípio x regra (regra vincula de forma exaustiva; princípio orienta e limita). REGRAS E FÓRMULAS: prazo de 20 dias para resposta a pedido de acesso, prorrogável por 10 com justificativa expressa (art. 11, § 1º e § 2º da Lei nº 12.527/2011); gratuidade do serviço de busca e fornecimento da informação, com ressarcimento apenas em caso de reprodução e isenção para quem não pode pagar (art. 12 na redação da Lei nº 14.129/2021); painel com três indicadores mínimos: solicitações em andamento e concluídas, tempo médio de atendimento e grau de satisfação (art. 22 da Lei nº 14.129/2021); ato processual eletrônico considerado realizado no recebimento pelo sistema, com recibo de protocolo e tempestividade até 23h59 no horário de Brasília (art. 8º e § 1º da Lei nº 14.129/2021). COMPARAÇÕES CRÍTICAS: publicidade x transparência ativa x passiva; eficiência x economicidade; impessoalidade x imparcialidade x uniformidade; legalidade x moralidade; decisão automatizada x assistida x manual; dado aberto x dado pessoal x informação pessoal. FLUXOS RESUMIDOS (fase de desenho de sistema decisório): (1) identificar competência e base normativa; (2) definir e versionar o critério; (3) definir quais dados entram, com finalidade e base; (4) registrar logs de inferência e trilha de auditoria; (5) publicar o critério em linguagem clara; (6) definir canal de revisão e contestação; (7) avaliar impacto por subgrupo; (8) monitorar e revisar em ciclo. EXCEÇÕES E LIMITAÇÕES: dispensa do art. 8º, § 4º, da Lei nº 12.527/2011 para municípios com menos de 10.000 habitantes quanto à divulgação na internet (mantida a exigência orçamentária e financeira em tempo real); exceção do art. 6º da Lei nº 14.129/2021 ao processo eletrônico (inviabilidade, indisponibilidade, risco relevante à celeridade, ou pedido do usuário); preservação do atendimento presencial (art. 3º, XVI, e art. 14); dados pessoais e sensíveis como limite da transparência ativa (art. 29, § 1º, VIII). PALAVRAS-CHAVE: legalidade, impessoalidade, moralidade, publicidade, eficiência, transparência ativa, transparência passiva, automação, versionamento de regras, trilha de auditoria, critérios auditáveis, revisão humana, linguagem clara, accountability digital. CHECKLIST DE DOMÍNIO (o aluno sabe responder): (1) Qual dispositivo reúne os cinco princípios e o que diz, literalmente? (2) Qual a diferença operacional entre princípio e regra? (3) Quais são os quatro requisitos mínimos de um sistema decisório para estar conforme em legalidade? (4) Por que a automação não cria competência? (5) O que distingue impessoalidade de uniformidade? (6) Quais os três indicadores mínimos do painel do art. 22? (7) Quando o atendimento presencial pode ser afetado? (8) Qual é a pegadinha de tratar transparência passiva como mais intensa que a ativa? VERIFICAÇÃO DE APRENDIZAGEM (recuperação ativa — 8 questões autorais): (Q1) Cite o dispositivo e transcreva o caput que reúne os cinco princípios. (Q2) Explique, com exemplo de sistema, por que «sistema automatizado» não equivale a «sistema impessoal». (Q3) Um portal divulga o resultado da fila, mas não o critério: quais dois princípios ficam em risco e por quê? (Q4) O art. 11, § 1º, da Lei nº 12.527/2011 fixa prazo de 20 dias. Trate-o como princípio ou como regra e justifique. (Q5) O órgão quer desligar o guichê presencial em município com baixa conectividade. Qual dispositivo impede a medida e qual é a alternativa correta? (Q6) Quais três informações o painel de monitoramento do art. 22 da Lei nº 14.129/2021 deve conter? (Q7) A decisão automatizada negando benefício: o que o cidadão tem direito de saber e de pedir? (Q8) Formule, em uma frase, o teste de conformidade de um sistema decisório com a legalidade. CRITÉRIO DE DOMÍNIO: acerto integral em Q1, Q4, Q5 e Q8 (base normativa e frase de teste) e em ao menos 5 dos 8 itens, sem confundir nada em Q2 e Q3.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Feche o checklist escrevendo, sem consultar o texto, o teste de conformidade de um sistema decisório com a legalidade.",
+          "resposta": "Teste: (1) há norma que atribui ao órgão a competência e que define o critério aplicável; (2) o critério está escrito, versionado e vigente na data do fato; (3) os parâmetros usados em cada decisão estão registrados; (4) a decisão pode ser reconstituída e motivada; (5) o cidadão sabe o critério e pode contestar; (6) existe revisão humana nos casos de maior impacto; (7) há registro de versão de regras, do modelo e dos dados; (8) existe procedimento para indisponibilidade do sistema."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Sem consultar o texto, liste os três indicadores mínimos do painel do art. 22 e explique o que cada um mede.",
+          "resposta": "(1) Quantidade de solicitações em andamento e concluídas anualmente — volume e gargalo; (2) tempo médio de atendimento — eficiência temporal do fluxo; (3) grau de satisfação dos usuários — qualidade percebida. Os três juntos impedem que o órgão se otimize em um único indicador (a armadilha do indicador único discutido no Módulo 5). Fonte: art. 22 da Lei nº 14.129/2021, verificado em 2026-10-21."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A eficiência do serviço público é medida exclusivamente pelo tempo médio de atendimento.'",
+          "correcao": "Errado. O painel do art. 22 da Lei nº 14.129/2021 prevê três indicadores: solicitações em andamento e concluídas, tempo médio de atendimento e grau de satisfação. Medir apenas tempo incentiva apressar indevidamente, com perda de qualidade — o mesmo alerta do Módulo 5 sobre Otimização de métrica proxy."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O resumo estruturado da unidade substitui a leitura completa para a revisão de prova.",
+          "resposta": "Errado. O resumo permite revisão rápida, mas não substitui a leitura: ele organiza o que já foi compreendido e não produz a compreensão. A troca do resumo pela fundamentação elimina justamente o que a prova avalia — a aplicação do conceito a caso concreto."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Na verificação de aprendizagem da unidade 6.1, exigem-se acerto integral: A) na citação do dispositivo dos princípios; B) na classificação de prazo como regra; C) na identificação do dispositivo que preserva o atendimento presencial; D) na redação do teste de conformidade.",
+          "resposta": "A, B, C e D. São os quatro itens de base normativa e de método; os demais admitem erro pontual sem comprometer o domínio de conjunto."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de consolidar a unidade por recuperação ativa, revisando conceitos essenciais, regras, comparações, exceções e palavras-chave, e responderá a itens de verificação sem consultar o texto, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "consolidará a unidade por recuperação ativa, revisando conceitos essenciais, regras, comparações, exceções e palavras-chave, e responderá a itens de verificação sem consultar o texto"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: princípios do art. 37 da CF (legalidade, impessoalidade, moralidade, publicidade, eficiência) como normas de conduta a concretizar; art. 5º, XXXIII, como direito à informação com ressalva do sigilo previsto na lei; princípio x regra (regra vincula de forma exaustiva; princípio orienta e limita). REGRAS E FÓRMULAS: prazo de 20 dias para resposta a pedido de acesso, prorrogável por 10 com justificativa expressa (art. 11, § 1º e § 2º da Lei nº 12.527/2011)…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Resumo estruturado, checklist de domínio e verificação de aprendizagem",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A eficiência do serviço público é medida exclusivamente pelo tempo médio de atendimento.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O painel do art. 22 da Lei nº 14.129/2021 prevê três indicadores: solicitações em andamento e concluídas, tempo médio de atendimento e grau de satisfação. Medir apenas tempo incentiva apressar indevidamente, com perda de qualidade — o mesmo alerta do Módulo 5 sobre Otimização de métrica proxy."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Feche o checklist escrevendo, sem consultar o texto, o teste de conformidade de um sistema decisório com a legalidade.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Teste: (1) há norma que atribui ao órgão a competência e que define o critério aplicável; (2) o critério está escrito, versionado e vigente na data do fato; (3) os parâmetros usados em cada decisão estão registrados; (4) a decisão pode ser reconstituída e motivada; (5) o cidadão sabe o critério e pode contestar; (6) existe revisão humana nos casos de maior impacto; (7) há registro de versão de regras, do modelo e dos dados; (8) existe procedimento para indisponibilidade do sistema.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Sem consultar o texto, liste os três indicadores mínimos do painel do art. 22 e explique o que cada um mede.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) Quantidade de solicitações em andamento e concluídas anualmente — volume e gargalo; (2) tempo médio de atendimento — eficiência temporal do fluxo; (3) grau de satisfação dos usuários — qualidade percebida. Os três juntos impedem que o órgão se otimize em um único indicador (a armadilha do indicador único discutido no Módulo 5). Fonte: art. 22 da Lei nº 14.129/2021, verificado em 2026-10-21.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A eficiência do serviço público é medida exclusivamente pelo tempo médio de atendimento.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O painel do art. 22 da Lei nº 14.129/2021 prevê três indicadores: solicitações em andamento e concluídas, tempo médio de atendimento e grau de satisfação. Medir apenas tempo incentiva apressar indevidamente, com perda de qualidade — o mesmo alerta do Módulo 5 sobre Otimização de métrica proxy.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

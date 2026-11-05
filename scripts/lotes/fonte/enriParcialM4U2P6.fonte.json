@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 2,
+    "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+    "parte": 6,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U2P6",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U2P6.js",
+    "idsCompletos": [
+      "m4-u2-t4-s2",
+      "m4-u2-t4-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u2-t4-s2",
+      "titulo": "Gestão de vulnerabilidades e correções",
+      "topicoTitulo": "Arquitetura de defesa: segmentação, hardening, vulnerabilidades e defesa em profundidade",
+      "topicoId": "modulo-4-unidade-2-topico-4",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno descreverá o ciclo inventário–varredura–priorização–correção–verificação e priorizará vulnerabilidades combinando severidade e exposição.",
+      "conteudo": "Gestão de vulnerabilidades é processo contínuo: 1) inventário de ativos (o que existe, quem é dono, onde roda); 2) varredura periódica (scanner de vulnerabilidade, atualizado) e, para aplicações, avaliação específica; 3) priorização; 4) correção (patch, mitigação ou aceite formal); 5) verificação de que a correção funcionou. Priorização não é só severidade técnica: combina severidade (impacto potencial) com exposição (o ativo está na Internet? dados sensíveis?) e com explorabilidade (existe exploração conhecida e facilitada?). Classificações públicas de vulnerabilidade (como os identificadores CVE) padronizam a referência, mas não substituem o contexto do órgão. Realidade operacional: nem todo patch entra imediatamente — correção pode quebrar aplicação legítima; por isso existem janelas de manutenção, testes em ambiente equivalente e, quando o risco de não corrigir supera o risco de corrigir, correção de emergência com acompanhamento. Mitigação alternativa quando o patch não existe ou não pode ser aplicado: desativar função afetada, restringir acesso, compensar com controle. Toda decisão (corrigir, mitigar, aceitar) deve ser registrada com responsável e prazo.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Vulnerabilidade crítica foi encontrada em servidor de aplicação exposto à Internet com dados pessoais. Como priorizar frente a outras da mesma semana?",
+          "resposta": "Prioridade máxima: severidade alta + exposição externa + dados sensíveis + exploração facilitada. O critério de priorização documentado deve refletir essa combinação, e não apenas a nota do scanner."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O patch disponível quebra módulo legado sem substituição prevista. Qual o caminho correto?",
+          "resposta": "Testar em ambiente de homologação; se quebrar, aplicar mitigação (restringir acesso ao componente, desativar função afetada), registrar risco aceito formalmente com responsável e prazo, planejar substituição do legado e monitorar indicadores de exploração. Registro é obrigatório: aceite implícito não é gestão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Aplicar todos os patches no dia da publicação é sempre a conduta correta.'",
+          "correcao": "Errado como regra absoluta. Patches podem quebrar aplicações; a conduta é priorizar por risco, testar quando possível e registrar decisões — incluindo correção emergencial justificada quando a exposição é iminente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Mitigação é aceitável temporariamente quando o patch não pode ser aplicado, desde que documentada com prazo.",
+          "resposta": "Certo. Mitigação reduz o risco na janela até a correção definitiva; o registro com prazo e responsável impede que a exceção vire permanência."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual fator, além da severidade técnica, deve entrar na priorização? A) Cor da interface; B) Exposição do ativo e sensibilidade dos dados; C) Nome do fabricante; D) Data de compra do equipamento.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever o ciclo inventário–varredura–priorização–correção–verificação e priorizará vulnerabilidades combinando severidade e exposição, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá o ciclo inventário–varredura–priorização–correção–verificação e priorizará vulnerabilidades combinando severidade e exposição"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Gestão de vulnerabilidades é processo contínuo: 1) inventário de ativos (o que existe, quem é dono, onde roda); 2) varredura periódica (scanner de vulnerabilidade, atualizado) e, para aplicações, avaliação específica; 3) priorização; 4) correção (patch, mitigação ou aceite formal); 5) verificação de que a correção funcionou. Priorização não é só severidade técnica: combina severidade (impacto potencial) com exposição (o ativo está na Internet? dados sensíveis?) e com explorabilidade (existe expl…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Gestão de vulnerabilidades e correções",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Aplicar todos os patches no dia da publicação é sempre a conduta correta.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado como regra absoluta. Patches podem quebrar aplicações; a conduta é priorizar por risco, testar quando possível e registrar decisões — incluindo correção emergencial justificada quando a exposição é iminente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Vulnerabilidade crítica foi encontrada em servidor de aplicação exposto à Internet com dados pessoais. Como priorizar frente a outras da mesma semana?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Prioridade máxima: severidade alta + exposição externa + dados sensíveis + exploração facilitada. O critério de priorização documentado deve refletir essa combinação, e não apenas a nota do scanner.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O patch disponível quebra módulo legado sem substituição prevista. Qual o caminho correto?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Testar em ambiente de homologação; se quebrar, aplicar mitigação (restringir acesso ao componente, desativar função afetada), registrar risco aceito formalmente com responsável e prazo, planejar substituição do legado e monitorar indicadores de exploração. Registro é obrigatório: aceite implícito não é gestão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Aplicar todos os patches no dia da publicação é sempre a conduta correta.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado como regra absoluta. Patches podem quebrar aplicações; a conduta é priorizar por risco, testar quando possível e registrar decisões — incluindo correção emergencial justificada quando a exposição é iminente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u2-t4-s3",
+      "titulo": "Defesa em profundidade",
+      "topicoTitulo": "Arquitetura de defesa: segmentação, hardening, vulnerabilidades e defesa em profundidade",
+      "topicoId": "modulo-4-unidade-2-topico-4",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno argumentará pela sobreposição de camadas de controle e demonstrará como uma falha isolada não compromete o todo.",
+      "conteudo": "Defesa em profundidade é o princípio de empregar múltiplas camadas independentes de controle, de modo que a falha de uma camada seja coberta por outra. Não se trata de duplicar o mesmo controle, mas de combinar controles de naturezas diferentes ao longo do caminho do ataque: perímetro (firewall, WAF), rede (segmentação, IDS/IPS), endpoint (EDR, correções), aplicação (validação de entrada, autenticação), dados (criptografia, backup imutável) e pessoas (treinamento, procedimentos). Exemplo de caminhos cobertos: phishing que escapa do filtro de e-mail esbarra em MFA; credencial vazada que autentica é limitada por menor privilégio e segmentação; movimentação lateral é vista pelo IDS e pelo monitoramento de registros; cifragem por ransomware é neutralizada por backup imutável fora do alcance. Custo-benefício: cada camada tem preço (licença, operação, desempenho), então a escolha das camadas deve seguir o risco mapeado — profundidade uniforme sem análise de risco desperdiça recursos; profundidade só no perímetro cria a casca dura com miolo mole. Princípio complementar: defesa supõe que intrusão ocorrerá — por isso detecção e resposta são parte da profundidade, não opcional.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Liste três camadas independentes que impedem o roubo de senha de um servidor público.",
+          "resposta": "1) Filtro de e-mail e treinamento (reduzem phishing). 2) MFA resistente a phishing (impede uso da senha roubada sozinha). 3) Restrição de origem e monitoramento de login anômalo (contêm tentativa residual). Camadas de naturezas diferentes: pessoas, autenticação e rede."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "A gestão pede concentrar orçamento em um único controle 'que resolva o problema'. Como argumentar tecnicamente?",
+          "resposta": "Apresentar o mapa de caminhos de ataque: nenhum controle único cobre todos os caminhos. Propor pacote mínimo com MFA, correção priorizada, segmentação básica, backup imutável testado e monitoramento — combinando prevenção, detecção e recuperação —, com justificativa de risco para cada camada e metas mensuráveis."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Defesa em profundidade significa ter dois firewalls iguais em série.'",
+          "correcao": "Errado. Repetir o mesmo controle não cria camada nova: a mesma falha ou ataque que atravessa um atravessa o outro. Profundidade exige controles de naturezas distintas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Backup imutável é uma camada de defesa em profundidade para ataques de ransomware.",
+          "resposta": "Certo. É a camada de recuperação: quando prevenção e detecção falham, ela mantém a alternativa de restauração sem depender do atacante."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual conjunto representa defesa em profundidade correta? A) Firewall + firewall; B) MFA + segmentação + backup testado + monitoramento; C) Antivírus em duas estações; D) Senha longa apenas.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de argumentar pela sobreposição de camadas de controle e demonstrará como uma falha isolada não compromete o todo, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "argumentará pela sobreposição de camadas de controle e demonstrará como uma falha isolada não compromete o todo"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Defesa em profundidade é o princípio de empregar múltiplas camadas independentes de controle, de modo que a falha de uma camada seja coberta por outra. Não se trata de duplicar o mesmo controle, mas de combinar controles de naturezas diferentes ao longo do caminho do ataque: perímetro (firewall, WAF), rede (segmentação, IDS/IPS), endpoint (EDR, correções), aplicação (validação de entrada, autenticação), dados (criptografia, backup imutável) e pessoas (treinamento, procedimentos). Exemplo de cami…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Defesa em profundidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Defesa em profundidade significa ter dois firewalls iguais em série.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Repetir o mesmo controle não cria camada nova: a mesma falha ou ataque que atravessa um atravessa o outro. Profundidade exige controles de naturezas distintas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Liste três camadas independentes que impedem o roubo de senha de um servidor público.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) Filtro de e-mail e treinamento (reduzem phishing). 2) MFA resistente a phishing (impede uso da senha roubada sozinha). 3) Restrição de origem e monitoramento de login anômalo (contêm tentativa residual). Camadas de naturezas diferentes: pessoas, autenticação e rede.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "A gestão pede concentrar orçamento em um único controle 'que resolva o problema'. Como argumentar tecnicamente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Apresentar o mapa de caminhos de ataque: nenhum controle único cobre todos os caminhos. Propor pacote mínimo com MFA, correção priorizada, segmentação básica, backup imutável testado e monitoramento — combinando prevenção, detecção e recuperação —, com justificativa de risco para cada camada e metas mensuráveis.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Defesa em profundidade significa ter dois firewalls iguais em série.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Repetir o mesmo controle não cria camada nova: a mesma falha ou ataque que atravessa um atravessa o outro. Profundidade exige controles de naturezas distintas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

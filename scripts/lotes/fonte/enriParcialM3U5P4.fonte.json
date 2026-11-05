@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 5,
+    "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+    "parte": 4,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U5P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U5P4.js",
+    "idsCompletos": [
+      "m3-u5-t3-s1",
+      "m3-u5-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u5-t3-s1",
+      "titulo": "Phishing direcionado a comunicação institucional",
+      "topicoTitulo": "Spam, phishing e falsificação de remetente em contexto de comunicação institucional",
+      "topicoId": "modulo-3-unidade-5-topico-3",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno analisará phishing no contexto de comunicação institucional.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é phishing direcionado à comunicação institucional; (b) seus sinais; (c) as mitigações; (d) a conduta do usuário. POR QUE O CONHECIMENTO É IMPORTANTE: e-mails que se passam por sistemas de reunião, TI ou liderança iludem o usuário; a prova cobra identificação e resposta. PRÉ-REQUISITOS: unidade 1.2 (spam, phishing e spoofing). OBJETIVOS OBSERVÁVEIS: (1) reconhecer o phishing institucional; (2) citar sinais; (3) aplicar mitigações; (4) orientar a conduta. COMPETÊNCIAS DESENVOLVIDAS: triagem defensiva; conscientização de segurança. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.2 (autenticação de e-mail); unidade 5.3 (resposta); Módulo 4 (ameaças). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o phishing direcionado à comunicação institucional explora a confiança em ferramentas do dia a dia: mensagens que se passam por sistemas de reunião ou calendário (por exemplo, \"sua reunião foi cancelada, clique para reagendar\"), por suporte de TI (redefinição de senha) ou por liderança (pedido urgente). O spear phishing é a versão personalizada, com nomes, cargos e contexto reais, tornando a mensagem verossímil. Sinais de alerta: senso de urgência; links cujo domínio real difere do exibido; anexos inesperados; erros de idioma ou de formatação; remetente incompatível com o conteúdo; e pedido de credenciais ou de ação fora do fluxo habitual. As mitigações: verificar o remetente e o domínio real (apoiando-se em SPF, DKIM e DMARC quando disponíveis); não clicar em links nem abrir anexos suspeitos; confirmar por canal alternativo antes de agir; reportar a mensagem; e usar autenticação multifator (MFA), que reduz o impacto mesmo se a credencial for exposta. Caso ilustrativo hipotético: uma mensagem falsa de \"cancelamento de reunião\" levou o usuário a uma página que imitava o login institucional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: desconfiar de urgência e de link desconhecido.\n- Nível intermediário: identificar sinais objetivos de fraude.\n- Nível avançado: verificar domínio e autenticação e confirmar por canal alternativo.\n- Nível especialista: analisar um caso com múltiplos indícios e decidir com segurança.\nCOMPARAÇÕES CRÍTICAS:\n- phishing genérico x spear phishing: o primeiro é massificado; o segundo é personalizado — este é mais difícil de detectar.\n- urgência real x urgência fabricada: a fabricada pressiona a agir sem verificar — sinal clássico de fraude.\n- MFA x senha isolada: o MFA limita o dano do vazamento — muda o impacto do incidente.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Se o nome exibido é de dentro da instituição, é confiável.\" — Motivo: o nome é falsificável — Versão tecnicamente correta: verificar o domínio real e a autenticação.\n- Afirmação errada: \"Basta ler o texto para decidir.\" — Motivo: a fraude é verossímil — Versão tecnicamente correta: confirmar por canal alternativo.\n- Afirmação errada: \"Reportar não muda nada.\" — Motivo: protege outros usuários — Versão tecnicamente correta: reportar e alertar.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: phishing institucional, spear phishing, urgência, domínio real, MFA, reporte.\n- Regras e fórmulas: desconfiar + verificar domínio + confirmar por outro canal = defesa.\n- Exceções: nenhum indício isolado é prova; avaliar o conjunto.\n- Palavras-chave: fraude, urgência, link, anexo, MFA.\n- Checklist de domínio: (1) Reconheço o phishing institucional? (2) Cito sinais? (3) Aplico mitigações? (4) Oriento a conduta?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que caracteriza o phishing institucional? (2) O que é spear phishing? (3) Cite três sinais. (4) Como confirmar antes de agir? (5) Por que o MFA ajuda?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Como identificar e-mail de phishing sobre reunião?",
+          "resposta": "Verificar remetente real, links (domínio), urgência artificial, solicitação de credenciais, anexos inesperados."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Recebeu e-mail 'sua conta será desativada, clique aqui'. O que fazer?",
+          "resposta": "Não clicar; verificar por canal oficial; reportar à equipe de segurança; alterar senha se suspeitar de comprometimento."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'E-mails de reunião são sempre seguros.'",
+          "correcao": "Errado. Phishing pode imitar convites de reunião; sempre verificar remetente e link."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Urgência artificial é sinal comum de phishing.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática mitiga phishing? A) Clicar em links para verificar; B) Verificar remetente e domínio; C) Responder com credenciais; D) Abrir anexos inesperados.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar phishing no contexto de comunicação institucional, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará phishing no contexto de comunicação institucional"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Phishing institucional: e-mails que se passam por sistemas de reunião/calendário (ex.: 'sua reunião foi cancelada, clique para reagendar'), por TI (redefinição de senha) ou por liderança. Spear phishing: personalizado com nomes/cargos. Sinais: urgência, links suspeitos, anexos inesperados, remetente falsificado. Mitigações: verificar remetente (SPF/DKIM/DMARC), não clicar em links suspeitos, reportar, treinamento, MFA. Caso ilustrativo (hipotético).",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Phishing direcionado a comunicação institucional",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'E-mails de reunião são sempre seguros.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Phishing pode imitar convites de reunião; sempre verificar remetente e link."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Como identificar e-mail de phishing sobre reunião?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Verificar remetente real, links (domínio), urgência artificial, solicitação de credenciais, anexos inesperados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Recebeu e-mail 'sua conta será desativada, clique aqui'. O que fazer?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não clicar; verificar por canal oficial; reportar à equipe de segurança; alterar senha se suspeitar de comprometimento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'E-mails de reunião são sempre seguros.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Phishing pode imitar convites de reunião; sempre verificar remetente e link.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u5-t3-s2",
+      "titulo": "Falsificação de remetente (spoofing) e autenticação de e-mail",
+      "topicoTitulo": "Spam, phishing e falsificação de remetente em contexto de comunicação institucional",
+      "topicoId": "modulo-3-unidade-5-topico-3",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá spoofing e mecanismos de autenticação.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é spoofing; (b) o que fazem SPF, DKIM e DMARC; (c) os limites desses mecanismos; (d) como decidir diante de mensagem suspeita. POR QUE O CONHECIMENTO É IMPORTANTE: entender a autenticação de e-mail evita confiar no nome exibido; a prova cobra a função de cada mecanismo. PRÉ-REQUISITOS: unidade 1.2 (spam, phishing e spoofing). OBJETIVOS OBSERVÁVEIS: (1) definir spoofing; (2) explicar SPF, DKIM e DMARC; (3) reconhecer que não eliminam o phishing; (4) adotar verificação de contexto. COMPETÊNCIAS DESENVOLVIDAS: análise de autenticidade de mensagem; triagem defensiva. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.2 (phishing); unidade 5.3 (resposta); Módulo 2 (protocolos de correio). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: spoofing de remetente é a falsificação do campo From, fazendo a mensagem parecer vir de um remetente legítimo mesmo partindo de outra origem. Para combatê-lo há mecanismos de autenticação de domínio: o SPF publica quais servidores estão autorizados a enviar em nome do domínio; o DKIM assina criptograficamente a mensagem, permitindo verificar integridade e origem; o DMARC define a política a ser aplicada quando SPF/DKIM falham e gera relatórios. Esses mecanismos reduzem o spoofing direto, mas não eliminam o phishing: um atacante pode registrar domínios visualmente parecidos (typosquatting), comprometer uma conta legítima (que então passa na autenticação) ou usar texto e contexto convincentes. Por isso, a decisão segura combina a verificação técnica (o domínio real e o resultado da autenticação) com o bom senso (contexto, urgência, canal alternativo). No caso de uma conta comprometida, a mensagem é autenticada legitimamente e só a análise de contexto a distingue de um envio normal.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o remetente exibido pode ser falso.\n- Nível intermediário: explicar o papel de SPF, DKIM e DMARC.\n- Nível avançado: reconhecer cenários que escapam à autenticação (domínio parecido, conta comprometida).\n- Nível especialista: analisar um e-mail autenticado, mas suspeito, e decidir a conduta.\nCOMPARAÇÕES CRÍTICAS:\n- SPF x DKIM x DMARC: SPF valida a origem; DKIM valida a assinatura; DMARC define a política — são camadas distintas.\n- spoofing x conta comprometida: no primeiro o domínio é forjado; na segunda é legítimo — o DMARC só cobre o primeiro.\n- domínio exibido x domínio real: podem divergir; verifica-se o real.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Com DMARC, não há mais phishing.\" — Motivo: cobre spoofing direto — Versão tecnicamente correta: domínios parecidos e contas comprometidas escapam.\n- Afirmação errada: \"E-mail autenticado é sempre confiável.\" — Motivo: a conta pode estar comprometida — Versão tecnicamente correta: avaliar contexto e canal alternativo.\n- Afirmação errada: \"O nome exibido comprova a autenticação.\" — Motivo: o nome é falsificável — Versão tecnicamente correta: verificar o domínio real.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: spoofing, SPF, DKIM, DMARC, typosquatting, conta comprometida.\n- Regras e fórmulas: verificação técnica + análise de contexto = decisão segura.\n- Exceções: autenticação não cobre conta comprometida nem domínio parecido.\n- Palavras-chave: remetente, assinatura, política, domínio, contexto.\n- Checklist de domínio: (1) Defino spoofing? (2) Explico os três mecanismos? (3) Reconheço limites? (4) Verifico o contexto?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é spoofing? (2) Para que serve o SPF? (3) O que o DMARC decide? (4) Por que o phishing persiste? (5) Como reconhecer conta comprometida?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que é spoofing de remetente?",
+          "resposta": "Falsificação do endereço 'From' para fazer o e-mail parecer de uma fonte confiável."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como SPF/DKIM/DMARC ajudam?",
+          "resposta": "SPF define servidores autorizados; DKIM assina o e-mail; DMARC define política para falhas e gera relatórios."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'DMARC elimina todo phishing.'",
+          "correcao": "Errado. DMARC reduz spoofing de domínio, mas phishing pode usar domínios parecidos ou contas comprometidas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) DKIM usa assinatura digital para autenticar e-mails.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual mecanismo define política para falhas de autenticação? A) SPF; B) DKIM; C) DMARC; D) TLS.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender spoofing e mecanismos de autenticação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá spoofing e mecanismos de autenticação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Spoofing de remetente: falsificação do campo 'From' para parecer legítimo. Autenticação: SPF (servidores autorizados a enviar pelo domínio), DKIM (assinatura digital do e-mail), DMARC (política para falhas e relatórios). Esses mecanismos reduzem spoofing mas não eliminam phishing (domínios parecidos, comprometimento de conta). Sempre verificar contexto e não confiar apenas no nome do remetente.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Falsificação de remetente (spoofing) e autenticação de e-mail",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'DMARC elimina todo phishing.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. DMARC reduz spoofing de domínio, mas phishing pode usar domínios parecidos ou contas comprometidas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que é spoofing de remetente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Falsificação do endereço 'From' para fazer o e-mail parecer de uma fonte confiável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como SPF/DKIM/DMARC ajudam?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "SPF define servidores autorizados; DKIM assina o e-mail; DMARC define política para falhas e gera relatórios.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'DMARC elimina todo phishing.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. DMARC reduz spoofing de domínio, mas phishing pode usar domínios parecidos ou contas comprometidas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

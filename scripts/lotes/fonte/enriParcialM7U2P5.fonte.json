@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 2,
+    "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U2P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U2P5.js",
+    "idsCompletos": [
+      "m7-u2-t4-s1",
+      "m7-u2-t4-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u2-t4-s1",
+      "titulo": "Agregação e agrupamento (e o erro da média de médias)",
+      "topicoTitulo": "Agregação, agrupamento e deduplicação",
+      "topicoId": "modulo-7-unidade-2-topico-4",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno agregará dados por grupo calculando corretamente a média global e explicará por que médias de médias erram.",
+      "conteudo": "AGREGAÇÃO é reduzir granularidade com uma função de resumo: soma, contagem, média, mediana, mínimo, máximo, percentil, razão. AGRUPAMENTO é particionar os registros por uma chave (unidade, mês, faixa, categoria) antes de agregar. A granularidade escolhida define a pergunta possível: agregar por mês responde sobre tendência, por unidade responde sobre desempenho — e agregar demais pode esconder o problema (agregar municípios no estado apaga a pior região). O ERRO CLÁSSICO DE CONCURSO: média de médias. Somar médias de grupos e dividir pelo número de grupos só está certo se todos os grupos tiverem o mesmo tamanho; caso contrário, a média correta é PONDERADA pelo tamanho de cada grupo. Exemplo verificado: turma A com 10 alunos e média 5; turma B com 30 alunos e média 7. Média simples das médias = (5 + 7) ÷ 2 = 6,0 — ERRADA. Média global ponderada = (10×5 + 30×7) ÷ 40 = (50 + 210) ÷ 40 = 260 ÷ 40 = 6,5 — CORRETA. O mesmo vale para variação percentual (média de percentuais sem ponderar distorce o total) e para razões (somar percentuais de participação não dá 100% se os denominadores diferem). Mediana e percentis NÃO são agregáveis por soma nem por média: a mediana de medianas não é a mediana do todo.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Três postos: 4 atendimentos, 6 atendimentos e 10 atendimentos. Tempo médio de espera: 20, 30 e 40 minutos. Média global de espera?",
+          "resposta": "Ponderada: (4×20 + 6×30 + 10×40) ÷ (4 + 6 + 10) = (80 + 180 + 400) ÷ 20 = 660 ÷ 20 = 33 minutos. A média simples das três médias daria (20 + 30 + 40) ÷ 3 = 30 minutos — subestimaria o tempo real, porque o posto mais lento atendeu mais gente."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um relatório soma os percentuais de participação de cinco unidades (22% + 25% + 18% + 20% + 15%) e obtém 100%. Isso prova consistência?",
+          "resposta": "Não. A soma fecha por construção quando os cinco percentuais usam o MESMO denominador (total geral). Se cada percentual foi calculado sobre o total da própria unidade, a soma não significa nada — antes de somar percentuais, confirme o denominador de cada um."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A média geral de um conjunto é a média aritmética simples das médias dos grupos.'",
+          "correcao": "Errado, salvo quando os grupos têm exatamente o mesmo tamanho. Com tamanhos diferentes, é preciso ponderar pela frequência de cada grupo — do contrário, um grupo pequeno pesa tanto quanto um grande, e o resultado é um número arredondado sem correspondência com o todo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A mediana global pode ser obtida calculando a média das medianas dos grupos.",
+          "resposta": "Errado. Mediana não é agregável por média de medianas; é preciso recomputar a mediana sobre os dados individuais do conjunto (ou usar método formal de agregação de medianas, que não é simplesmente a média)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Grupo 1: 20 registros, média 10. Grupo 2: 80 registros, média 20. A média global é: A) 15; B) 18; C) 12; D) 25.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de agregar dados por grupo calculando corretamente a média global e explicará por que médias de médias erram, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "agregará dados por grupo calculando corretamente a média global e explicará por que médias de médias erram"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "AGREGAÇÃO é reduzir granularidade com uma função de resumo: soma, contagem, média, mediana, mínimo, máximo, percentil, razão. AGRUPAMENTO é particionar os registros por uma chave (unidade, mês, faixa, categoria) antes de agregar. A granularidade escolhida define a pergunta possível: agregar por mês responde sobre tendência, por unidade responde sobre desempenho — e agregar demais pode esconder o problema (agregar municípios no estado apaga a pior região). O ERRO CLÁSSICO DE CONCURSO: média de mé…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Agregação e agrupamento (e o erro da média de médias)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A média geral de um conjunto é a média aritmética simples das médias dos grupos.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado, salvo quando os grupos têm exatamente o mesmo tamanho. Com tamanhos diferentes, é preciso ponderar pela frequência de cada grupo — do contrário, um grupo pequeno pesa tanto quanto um grande, e o resultado é um número arredondado sem correspondência com o todo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Três postos: 4 atendimentos, 6 atendimentos e 10 atendimentos. Tempo médio de espera: 20, 30 e 40 minutos. Média global de espera?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ponderada: (4×20 + 6×30 + 10×40) ÷ (4 + 6 + 10) = (80 + 180 + 400) ÷ 20 = 660 ÷ 20 = 33 minutos. A média simples das três médias daria (20 + 30 + 40) ÷ 3 = 30 minutos — subestimaria o tempo real, porque o posto mais lento atendeu mais gente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um relatório soma os percentuais de participação de cinco unidades (22% + 25% + 18% + 20% + 15%) e obtém 100%. Isso prova consistência?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não. A soma fecha por construção quando os cinco percentuais usam o MESMO denominador (total geral). Se cada percentual foi calculado sobre o total da própria unidade, a soma não significa nada — antes de somar percentuais, confirme o denominador de cada um.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A média geral de um conjunto é a média aritmética simples das médias dos grupos.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado, salvo quando os grupos têm exatamente o mesmo tamanho. Com tamanhos diferentes, é preciso ponderar pela frequência de cada grupo — do contrário, um grupo pequeno pesa tanto quanto um grande, e o resultado é um número arredondado sem correspondência com o todo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u2-t4-s2",
+      "titulo": "Deduplicação: chaves de identidade, fusão e riscos",
+      "topicoTitulo": "Agregação, agrupamento e deduplicação",
+      "topicoId": "modulo-7-unidade-2-topico-4",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno definirá regra de identidade e fusão para deduplicar, justificando os dois tipos de erro possíveis.",
+      "conteudo": "DEDUPLICAÇÃO é identificar registros que representam a mesma entidade real e tratá-los segundo regra documentada. CHAVES DE IDENTIDADE, em grau crescente de risco: (1) identificador exato e confiável (CPF/CNPJ com dígito verificador, matrícula, protocolo) — o mais seguro; (2) composição de campos normalizados (nome sem acento e caixa + data de nascimento + CPF parcial); (3) similaridade (distância de edição, correspondência de e-mail) — exige limiar declarado e sempre produz incerteza. FUSÃO (merge): decidir qual registro sobrevive e como combinar — prevalência por fonte autoritativa (o cadastro oficial prevalece sobre a planilha), por completude ou por recência, unindo campos complementares. OS DOIS ERROS FUNDAMENTAIS: falso positivo (fundir duas pessoas diferentes — homônimos, gêmeos, pessoas com dados iguais por acaso) e falso negativo (deixar a mesma pessoa duplicada por diferença de grafia). Ambos têm custo, e o limiar é uma DECISÃO DE RISCO, não um número universal. HIGIENE DO PROCESSO: manter cópia dos registros originais, registrar qual registro sobreviveu e por quê, e reexecutar de forma controlável — deduplicação irreversível sem trilha impede auditoria e correção.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Dois registros: CPF idêntico, nomes 'João P. Silva' e 'JOAO PAULO SILVA', endereços diferentes (antigo e atual). Tratamento?",
+          "resposta": "Mesma entidade (CPF confiável) com atributos divergentes: fundir por prevalência de recência/endereço mais atualizado, preservando histórico. Registrar a decisão e manter os originais. Não basta apagar uma linha: a fusão precisa justificar o que sobreviveu."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Base de pacientes sem CPF, com apenas nome e data de nascimento. Deduplicar apenas por similaridade de nome traz qual risco principal?",
+          "resposta": "Falso positivo: fundir pacientes diferentes que são homônimos — em base de saúde, o efeito é clínico, não só estatístico. A mitigação é elevar a exigência (combinar nome + data + unidade de cadastro), marcar a incerteza dos casos difíceis e preferir revisão humana nos pares de baixa margem."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Deduplicação é uma rotina técnica sem decisão de negócio — a ferramenta decide sozinha.'",
+          "correcao": "Errado. Chave de identidade, limiar de similaridade e regra de prevalência são decisões de negócio e de risco: definem quem é o mesmo e quem prevalece. Ferramenta executa a regra; ela não pode inventá-la sem que alguém responda pelas consequências."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Deduplicar com regra baseada apenas em nome aumenta o risco de fundir pessoas diferentes (falso positivo).",
+          "resposta": "Certo. Nome é atributo de baixa especificidade; sem identificador confiável, a fusão é uma aposta."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Manter duas linhas para a mesma pessoa real é qual erro? A) falso positivo; B) falso negativo; C) violação de validade; D) erro de tipo.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de definir regra de identidade e fusão para deduplicar, justificando os dois tipos de erro possíveis, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "definirá regra de identidade e fusão para deduplicar, justificando os dois tipos de erro possíveis"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "DEDUPLICAÇÃO é identificar registros que representam a mesma entidade real e tratá-los segundo regra documentada. CHAVES DE IDENTIDADE, em grau crescente de risco: (1) identificador exato e confiável (CPF/CNPJ com dígito verificador, matrícula, protocolo) — o mais seguro; (2) composição de campos normalizados (nome sem acento e caixa + data de nascimento + CPF parcial); (3) similaridade (distância de edição, correspondência de e-mail) — exige limiar declarado e sempre produz incerteza. FUSÃO (me…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Deduplicação: chaves de identidade, fusão e riscos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Deduplicação é uma rotina técnica sem decisão de negócio — a ferramenta decide sozinha.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Chave de identidade, limiar de similaridade e regra de prevalência são decisões de negócio e de risco: definem quem é o mesmo e quem prevalece. Ferramenta executa a regra; ela não pode inventá-la sem que alguém responda pelas consequências."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Dois registros: CPF idêntico, nomes 'João P. Silva' e 'JOAO PAULO SILVA', endereços diferentes (antigo e atual). Tratamento?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Mesma entidade (CPF confiável) com atributos divergentes: fundir por prevalência de recência/endereço mais atualizado, preservando histórico. Registrar a decisão e manter os originais. Não basta apagar uma linha: a fusão precisa justificar o que sobreviveu.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Base de pacientes sem CPF, com apenas nome e data de nascimento. Deduplicar apenas por similaridade de nome traz qual risco principal?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Falso positivo: fundir pacientes diferentes que são homônimos — em base de saúde, o efeito é clínico, não só estatístico. A mitigação é elevar a exigência (combinar nome + data + unidade de cadastro), marcar a incerteza dos casos difíceis e preferir revisão humana nos pares de baixa margem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Deduplicação é uma rotina técnica sem decisão de negócio — a ferramenta decide sozinha.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Chave de identidade, limiar de similaridade e regra de prevalência são decisões de negócio e de risco: definem quem é o mesmo e quem prevalece. Ferramenta executa a regra; ela não pode inventá-la sem que alguém responda pelas consequências.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

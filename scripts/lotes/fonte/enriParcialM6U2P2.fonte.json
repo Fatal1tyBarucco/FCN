@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 2,
+    "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U2P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U2P2.js",
+    "idsCompletos": [
+      "m6-u2-t2-s1",
+      "m6-u2-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u2-t2-s1",
+      "titulo": "Transparência ativa: o dever de divulgar de ofício e os requisitos dos sítios oficiais",
+      "topicoTitulo": "Transparência ativa, transparência passiva e abertura de dados",
+      "topicoId": "modulo-6-unidade-2-topico-2",
+      "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno relacionará o art. 8º da LAI e o art. 29 da Lei nº 14.129/2021 aos artefatos técnicos de transparência, relacionando o dever legal a requisitos verificáveis de publicação.",
+      "conteudo": "TRANSPARÊNCIA ATIVA é a disponibilização de dados pela Administração independentemente de solicitações (definição do art. 4º, XI, da Lei nº 14.129/2021 — verificado em 2026-10-21). Na LAI, o art. 8º estabelece: «é dever dos órgãos e entidades públicos promover, independentemente de requerimentos, a divulgação em local de fácil acesso, no âmbito de suas competências, de informações de interesse coletivo ou geral por eles produzidas ou custodiadas». O § 1º do art. 8º define o mínimo a divulgar: (I) registro das competências e estrutura organizacional, endereços e telefones das unidades e horários de atendimento; (II) registros de repasses ou transferências de recursos financeiros; (III) registros das despesas; (IV) informações concernentes a procedimentos licitatórios, inclusive editais e resultados, e a todos os contratos celebrados; (V) dados gerais para acompanhamento de programas, ações, projetos e obras, com metas e indicadores; (VI) respostas a perguntas mais frequentes da sociedade. O § 2º do art. 8º impõe usar «todos os meios e instrumentos legítimos de que dispuserem», sendo OBRIGATÓRIA a divulgação em sítios oficiais da rede mundial de computadores. O § 3º do art. 8º fixa os requisitos do sítio: (I) ferramenta de pesquisa de conteúdo que permita acesso objetivo, transparente, claro e em linguagem de fácil compreensão; (II) gravação de relatórios em diversos formatos eletrônicos, inclusive abertos e não proprietários (planilhas e texto), para facilitar a análise; (III) acesso automatizado por sistemas externos em formatos abertos, estruturados e legíveis por máquina; (IV) divulgação em detalhes dos formatos utilizados para estruturar a informação; (V) garantia de autenticidade e integridade das informações; (VI) manutenção atualizada; (VII) indicação de local e instruções para comunicação eletrônica ou telefônica; (VIII) adoção de medidas para garantir a acessibilidade de conteúdo para pessoas com deficiência, nos termos do art. 17 da Lei nº 10.098/2000 e do art. 9º da Convenção sobre os Direitos das Pessoas com Deficiência. O § 4º do art. 8º dispensa os MUNICÍPIOS COM POPULAÇÃO ATÉ 10.000 HABITANTES da divulgação obrigatória na INTERNET, mantida a obrigatoriedade de divulgação, EM TEMPO REAL, de informações relativas à execução orçamentária e financeira, nos critérios e prazos do art. 73-B da Lei Complementar nº 101/2000 (LRF). O art. 29 da Lei nº 14.129/2021 (transparência ativa, capítulo do Governo como Plataforma) amplia e detalha o regime: § 1º, I — PUBLICIDADE DAS BASES NÃO PESSOAIS COMO PRECEITO GERAL E SIGILO COMO EXCEÇÃO; II — acesso irrestrito aos dados, legíveis por máquina e em formato aberto, respeitadas a LAI e a LGPD; III — descrição das bases com informação suficiente sobre estrutura e semântica, inclusive quanto a qualidade e integridade; IV — permissão irrestrita de uso das bases publicadas em formato aberto; V — completude das bases, disponibilizadas em forma primária, com o maior grau de granularidade possível, ou referenciando bases primárias quando agregadas; VI — atualização periódica com histórico, garantindo perenidade, padronização e atendimento às necessidades dos usuários; VIII — RESPEITO À PRIVACIDADE DOS DADOS PESSOAIS E SENSÍVEIS, sem prejuízo dos demais requisitos; IX — intercâmbio de dados entre órgãos, respeitado o art. 26 da LGPD; X — fomento a novas tecnologias de gestão participativa. O § 2º do art. 29 lista o que o órgão e as entidades da Lei devem divulgar na internet, entre eles: orçamento anual de despesas e receitas; execução das despesas e receitas (arts. 48 e 48-A da LRF); repasses aos Estados, Municípios e DF; convênios e operações de desconcentração de recursos; licitações e contratações; notas fiscais eletrônicas; informações sobre servidores e empregados públicos federais, incluídos nome, vínculos profissionais e remuneração; viagens a serviço custeadas pelo Poder; sanções administrativas aplicadas a pessoas, empresas, organizações da sociedade civil e servidores; currículos dos ocupantes de cargos de chefia e direção; inventário de bases de dados e catálogo de dados abertos; e concessões de recursos e renúncias de receitas, com dados dos beneficiários no caso de renúncias individualizadas. LAI E GOVERNO DIGITAL: os regimes se complementam — a LAI dá o dever e o procedimento; a Lei nº 14.129/2021 dá a camada de dados abertos, interoperabilidade e governança (arts. 38 a 40). REGRA PRÁTICA DE QUALIDADE: um portal que publica o PDF do contrato, sem metadados, sem formato legível por máquina e sem histórico de versões, cumpre apenas parte do § 3º do art. 8º e do art. 29 da Lei nº 14.129/2021 — a transparência do século XXI é estruturada, versionada e automatizável.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um município de 8 mil habitantes deixou de publicar o relatório de despesas no site, argumentando que a transparência ativa lhe é facultativa. O argumento procede?",
+          "resposta": "Não. O art. 8º, § 4º, da Lei nº 12.527/2011 dispensa os municípios com população até 10.000 habitantes apenas da DIVULGAÇÃO OBRIGATÓRIA NA INTERNET, e mantém a obrigatoriedade de divulgação, em tempo real, de informações relativas à execução orçamentária e financeira, nos critérios e prazos do art. 73-B da LRF. Argumento correto seria apenas sobre o canal (internet), nunca sobre a substância do dever."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Qual é o checklist técnico mínimo de um portal de transparência para atender ao art. 8º, § 3º, da LAI?",
+          "resposta": "(1) ferramenta de pesquisa que localize conteúdo; (2) relatórios exportáveis em formatos abertos (CSV, texto, planilha); (3) acesso automatizado por sistemas externos em formatos estruturados e legíveis por máquina (API ou padrão equivalente); (4) documentação dos formatos e do dicionário de dados; (5) garantia de autenticidade e integridade (publicação com assinatura/hash e registro de versão); (6) atualização permanente com histórico; (7) canal de contato e telefone; (8) acessibilidade do conteúdo para pessoas com deficiência. A ausência de (3) e (5) é justamente o que impede a abertura de dados em termos previstos no art. 29 da Lei nº 14.129/2021."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o art. 29 da Lei nº 14.129/2021 exige acesso irrestrito às bases, o órgão deve publicar a base de atendimento a todos os registros de servidores com CPF e dados de saúde.'",
+          "correcao": "Errado. O § 1º, VIII, do mesmo art. 29 exige respeito à privacidade dos dados pessoais e dos dados sensíveis, e o art. 1º, parágrafo único, da Lei nº 14.129/2021 impõe observar a LGPD; o art. 30, § 6º, da mesma lei só torna automaticamente passíveis de abertura as bases que NÃO contenham informações protegidas por lei. Publicar base com dados sensíveis de cidadãos é justamente a divulgação irrestrita que o regime veda."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A divulgação de dados de despesa em tempo real por município com menos de 10.000 habitantes permanece obrigatória segundo o art. 8º, § 4º, da Lei nº 12.527/2011.",
+          "resposta": "Certo. A dispensa do § 4º alcança a divulgação obrigatória na internet, não a publicidade das informações orçamentárias e financeiras em tempo real, que permanece obrigatória nos critérios e prazos do art. 73-B da LRF."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Entre os requisitos do art. 8º, § 3º, da Lei nº 12.527/2011, estão: A) ferramenta de pesquisa de conteúdo; B) acesso automatizado por sistemas externos em formatos abertos; C) divulgação dos formatos de estruturação da informação; D) publicação do algoritmo do modelo de decisão.",
+          "resposta": "A, B e C. O item D não consta do rol legal; a publicidade do critério de decisão é consequência do princípio da publicidade e da exigibilidade de motivação, não do rol do § 3º."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de relacionar o art. 8º da LAI e o art. 29 da Lei nº 14.129/2021 aos artefatos técnicos de transparência, relacionando o dever legal a requisitos verificáveis de publicação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "relacionará o art. 8º da LAI e o art. 29 da Lei nº 14.129/2021 aos artefatos técnicos de transparência, relacionando o dever legal a requisitos verificáveis de publicação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "TRANSPARÊNCIA ATIVA é a disponibilização de dados pela Administração independentemente de solicitações (definição do art. 4º, XI, da Lei nº 14.129/2021 — verificado em 2026-10-21). Na LAI, o art. 8º estabelece: «é dever dos órgãos e entidades públicos promover, independentemente de requerimentos, a divulgação em local de fácil acesso, no âmbito de suas competências, de informações de interesse coletivo ou geral por eles produzidas ou custodiadas». O § 1º do art. 8º define o mínimo a divulgar: (I…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Transparência ativa: o dever de divulgar de ofício e os requisitos dos sítios oficiais",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o art. 29 da Lei nº 14.129/2021 exige acesso irrestrito às bases, o órgão deve publicar a base de atendimento a todos os registros de servidores com CPF e dados de saúde.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O § 1º, VIII, do mesmo art. 29 exige respeito à privacidade dos dados pessoais e dos dados sensíveis, e o art. 1º, parágrafo único, da Lei nº 14.129/2021 impõe observar a LGPD; o art. 30, § 6º, da mesma lei só torna automaticamente passíveis de abertura as bases que NÃO contenham informações protegidas por lei. Publicar base com dados sensíveis de cidadãos é justamente a divulgação irrestrita que o regime veda."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um município de 8 mil habitantes deixou de publicar o relatório de despesas no site, argumentando que a transparência ativa lhe é facultativa. O argumento procede?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não. O art. 8º, § 4º, da Lei nº 12.527/2011 dispensa os municípios com população até 10.000 habitantes apenas da DIVULGAÇÃO OBRIGATÓRIA NA INTERNET, e mantém a obrigatoriedade de divulgação, em tempo real, de informações relativas à execução orçamentária e financeira, nos critérios e prazos do art. 73-B da LRF. Argumento correto seria apenas sobre o canal (internet), nunca sobre a substância do dever.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Qual é o checklist técnico mínimo de um portal de transparência para atender ao art. 8º, § 3º, da LAI?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) ferramenta de pesquisa que localize conteúdo; (2) relatórios exportáveis em formatos abertos (CSV, texto, planilha); (3) acesso automatizado por sistemas externos em formatos estruturados e legíveis por máquina (API ou padrão equivalente); (4) documentação dos formatos e do dicionário de dados; (5) garantia de autenticidade e integridade (publicação com assinatura/hash e registro de versão); (6) atualização permanente com histórico; (7) canal de contato e telefone; (8) acessibilidade do conteúdo para pessoas com deficiência. A ausência de (3) e (5) é justamente o que impede a abertura de dados em termos previstos no art. 29 da Lei nº 14.129/2021.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o art. 29 da Lei nº 14.129/2021 exige acesso irrestrito às bases, o órgão deve publicar a base de atendimento a todos os registros de servidores com CPF e dados de saúde.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O § 1º, VIII, do mesmo art. 29 exige respeito à privacidade dos dados pessoais e dos dados sensíveis, e o art. 1º, parágrafo único, da Lei nº 14.129/2021 impõe observar a LGPD; o art. 30, § 6º, da mesma lei só torna automaticamente passíveis de abertura as bases que NÃO contenham informações protegidas por lei. Publicar base com dados sensíveis de cidadãos é justamente a divulgação irrestrita que o regime veda.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u2-t2-s2",
+      "titulo": "Transparência passiva: pedido de acesso, prazos, negativas fundamentadas e recursos",
+      "topicoTitulo": "Transparência ativa, transparência passiva e abertura de dados",
+      "topicoId": "modulo-6-unidade-2-topico-2",
+      "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno conduzirá um pedido de acesso à informação de ponta a ponta, indicando dispositivo, prazo, forma de resposta, conteúdo da negativa e via recursal, e explicará as consequências da negativa infundamentada.",
+      "conteudo": "PEDIDO (art. 10 da Lei nº 12.527/2011 — verificado em 2026-10-21): qualquer interessado pode apresentar pedido de acesso aos órgãos e entidades do art. 1º, por qualquer meio legítimo, devendo o pedido conter a IDENTIFICAÇÃO DO REQUERENTE e a ESPECIFICAÇÃO DA INFORMAÇÃO REQUERIDA. O § 1º proíbe que a identificação do requerente contenha exigências que inviabilizem a solicitação de informação de interesse público; o § 2º exige viabilizar a alternativa de encaminhamento de pedidos pelos sítios oficiais na internet; o § 3º VEDA EXIGÊNCIAS RELATIVAS AOS MOTIVOS determinantes da solicitação — a famosa vedação de justificar o pedido. RESPOSTA (art. 11): o órgão deve AUTORIZAR OU CONCEDER O ACESSO IMEDIATO à informação disponível. Não sendo possível, no prazo não superior a 20 DIAS (art. 11, § 1º), deverá: (I) comunicar data, local e modo para consulta, reprodução ou certidão; (II) indicar as RAZÕES DE FATO OU DE DIREITO DA RECUSA, total ou parcial; ou (III) comunicar que não possui a informação, indicar o órgão que a detém ou remeter o pedido, cientificando o interessado. O § 2º permite prorrogação por mais 10 DIAS, mediante JUSTIFICATIVA EXPRESSA, da qual o requerente é cientificado. O § 4º determina informar ao requerente a possibilidade de recurso, prazos e condições, indicando a autoridade competente. O § 5º prevê que a informação armazenada em formato digital seja fornecida nesse formato, caso haja anuência do requerente. O § 6º permite desonerar o órgão quando a informação já esteja disponível em formato de acesso universal, desde que o requerente não declare não dispor de meios para realizar os procedimentos. CUSTO (art. 12 na redação dada pelo art. 52 da Lei nº 14.129/2021): o serviço de busca e de fornecimento de informação é gratuito; o órgão pode cobrar exclusivamente o valor necessário ao ressarcimento dos custos de serviços e materiais quando o atendimento exigir REPRODUÇÃO DE DOCUMENTOS; é isento de ressarcimento quem não puder fazê-lo sem prejuízo do sustento próprio ou da família. DOCUMENTO DE INTEGRIDADE (art. 13): quando a manipulação puder prejudicar a integridade, deve ser oferecida consulta de cópia com certificação de conformidade com o original. TEOR DA NEGATIVA (art. 14): é direito do requerente obter o INTEIRO TEOR da decisão de negativa, por certidão ou cópia. RECURSO (art. 15): em caso de indeferimento ou de razões de negativa, cabe recurso no prazo de 10 DIAS a contar da ciência, dirigido à AUTORIDADE HIERARQUICAMENTE SUPERIOR à que exarou a decisão, que deve se manifestar no prazo de 5 DIAS. Contra a negativa do Poder Executivo Federal cabe recurso à Controladoria-Geral da União (art. 16), observada a exigência de submissão prévia à autoridade hierarquicamente superior. SANÇÕES (art. 32): constituem condutas ilícitas que ensejam responsabilidade do agente público ou militar (I) recusar-se a fornecer a informação requerida nos termos da Lei, retardar deliberadamente o fornecimento ou fornecê-la intencionalmente de forma incorreta, incompleta ou imprecisa; (II) utilizar indevidamente, subtrair, destruir, inutilizar, desfigurar, alterar ou ocultar informação sob sua guarda; (III) agir com dolo ou culpa na análise das solicitações; (IV) divulgar ou permitir a divulgação ou acessar ou permitir acesso indevido a informação sigilosa ou informação pessoal; (V) impor sigilo para obter proveito pessoal ou de terceiro ou para ocultar ato ilegal; (VI) ocultar da revisão de autoridade superior informação sigilosa para beneficiar a si ou a outrem; (VII) destruir ou subtrair documentos concernentes a possíveis violações de direitos humanos por agentes do Estado. O § 4º do art. 7º agrava a negativa infundamentada, sujeitando o responsável a medidas disciplinares. RESPONSABILIDADE POR DANOS (art. 34): os órgãos respondem diretamente pelos danos causados em decorrência da divulgação não autorizada ou da utilização indevida de informações sigilosas ou pessoais, cabendo apuração de responsabilidade funcional nos casos de dolo ou culpa, assegurado o direito de regresso. DADOS ABERTOS E PEDIDO DE BASE (art. 30 da Lei nº 14.129/2021): qualquer interessado pode pedir a abertura de bases de dados da Administração, com dados de contato e especificação; o § 1º admite pedir preservação da identidade quando a identificação prejudicar o princípio da impessoalidade, desde que o canal responsável resguarde os dados sem repassá-los ao setor responsável pela resposta; o § 2º remete aos procedimentos e prazos da LAI; o § 4º veda exigências relativas aos motivos; o § 5º exige que os pedidos e as respostas componham base de dados aberta de livre consulta; o § 6º torna automaticamente passíveis de abertura as bases que não contenham informações protegidas por lei.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a consequência jurídica de o órgão responder «não localizamos a informação» sem indicar o órgão detentor?",
+          "resposta": "Resposta incompleta, mas prevista: o art. 11, § 1º, III, da Lei nº 12.527/2011 prevê a comunicação de que o órgão não possui a informação, a indicação do órgão ou entidade que a detém (quando do seu conhecimento) ou a remessa do requerimento com ciência ao interessado. A negativa só se torna válida se vier acompanhada da razão e do encaminhamento; a omissão caracteristicamente configura descumprimento do dever de resposta (art. 32, I)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um pedido foi protocolado em segunda-feira; o órgão informa que «o prazo vencerá na sexta-feira». O cálculo está correto? Há problema?",
+          "resposta": "Depende da data de referência e do marco inicial, que a lei define como o recebimento pelo órgão. O prazo é de 20 dias (art. 11, § 1º), prorrogável por mais 10 com justificativa expressa (art. 11, § 2º). O problema típico é a omissão do marco inicial (data de protocolo) e da contagem em dias úteis ou corridos conforme a regulamentação interna do procedimento — o enunciado do item não autoriza dizer que o prazo está errado sem conhecer a data do protocolo. A boa prática é sempre indicar: «requerimento protocolado em X; prazo de 20 dias a partir do recebimento; prorrogação de 10 dias apenas com justificativa expressa e ciência»."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O requerente deve justificar por que quer a informação, sob pena de indeferimento.'",
+          "correcao": "Errado. O art. 10, § 3º, da Lei nº 12.527/2011 VEDA QUAISQUER EXIGÊNCIAS RELATIVAS AOS MOTIVOS determinantes da solicitação, e o art. 10, § 1º, veda exigências que inviabilizem o pedido de interesse público. Exigir motivação é prática proibida; a única exigência é identificação do requerente e especificação da informação. A negativa por esse motivo é nula."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A negativa de acesso pode ser comunicada por meio de e-mail, desde que contenha a razão e o teor integral da decisão.",
+          "resposta": "Certo quanto ao teor; quanto ao meio, a lei não impõe forma específica para a comunicação, mas o direito ao inteiro teor da decisão (art. 14) e a indicação de recurso, prazos e autoridade competente (art. 11, § 4º) devem estar presentes. A forma que o comunicando adota é a que melhor permite o cumprimento efetivo desses direitos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) O prazo para resposta a pedido de acesso e a possibilidade de prorrogação são: A) 10 dias, prorrogável por 10; B) 20 dias, prorrogável por mais 10 com justificativa expressa; C) 30 dias, prorrogável por 30; D) 20 dias, sem prorrogação possível.",
+          "resposta": "B. Art. 11, § 1º e § 2º da Lei nº 12.527/2011 (verificado em 2026-10-21)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de conduzir um pedido de acesso à informação de ponta a ponta, indicando dispositivo, prazo, forma de resposta, conteúdo da negativa e via recursal, e explicará as consequências da negativa infundamentada, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "conduzirá um pedido de acesso à informação de ponta a ponta, indicando dispositivo, prazo, forma de resposta, conteúdo da negativa e via recursal, e explicará as consequências da negativa infundamentada"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "PEDIDO (art. 10 da Lei nº 12.527/2011 — verificado em 2026-10-21): qualquer interessado pode apresentar pedido de acesso aos órgãos e entidades do art. 1º, por qualquer meio legítimo, devendo o pedido conter a IDENTIFICAÇÃO DO REQUERENTE e a ESPECIFICAÇÃO DA INFORMAÇÃO REQUERIDA. O § 1º proíbe que a identificação do requerente contenha exigências que inviabilizem a solicitação de informação de interesse público; o § 2º exige viabilizar a alternativa de encaminhamento de pedidos pelos sítios ofic…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Transparência passiva: pedido de acesso, prazos, negativas fundamentadas e recursos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O requerente deve justificar por que quer a informação, sob pena de indeferimento.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O art. 10, § 3º, da Lei nº 12.527/2011 VEDA QUAISQUER EXIGÊNCIAS RELATIVAS AOS MOTIVOS determinantes da solicitação, e o art. 10, § 1º, veda exigências que inviabilizem o pedido de interesse público. Exigir motivação é prática proibida; a única exigência é identificação do requerente e especificação da informação. A negativa por esse motivo é nula."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a consequência jurídica de o órgão responder «não localizamos a informação» sem indicar o órgão detentor?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Resposta incompleta, mas prevista: o art. 11, § 1º, III, da Lei nº 12.527/2011 prevê a comunicação de que o órgão não possui a informação, a indicação do órgão ou entidade que a detém (quando do seu conhecimento) ou a remessa do requerimento com ciência ao interessado. A negativa só se torna válida se vier acompanhada da razão e do encaminhamento; a omissão caracteristicamente configura descumprimento do dever de resposta (art. 32, I).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um pedido foi protocolado em segunda-feira; o órgão informa que «o prazo vencerá na sexta-feira». O cálculo está correto? Há problema?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Depende da data de referência e do marco inicial, que a lei define como o recebimento pelo órgão. O prazo é de 20 dias (art. 11, § 1º), prorrogável por mais 10 com justificativa expressa (art. 11, § 2º). O problema típico é a omissão do marco inicial (data de protocolo) e da contagem em dias úteis ou corridos conforme a regulamentação interna do procedimento — o enunciado do item não autoriza dizer que o prazo está errado sem conhecer a data do protocolo. A boa prática é sempre indicar: «requerimento protocolado em X; prazo de 20 dias a partir do recebimento; prorrogação de 10 dias apenas com justificativa expressa e ciência».",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O requerente deve justificar por que quer a informação, sob pena de indeferimento.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O art. 10, § 3º, da Lei nº 12.527/2011 VEDA QUAISQUER EXIGÊNCIAS RELATIVAS AOS MOTIVOS determinantes da solicitação, e o art. 10, § 1º, veda exigências que inviabilizem o pedido de interesse público. Exigir motivação é prática proibida; a única exigência é identificação do requerente e especificação da informação. A negativa por esse motivo é nula.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 2,
+    "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+    "parte": 4,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U2P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U2P4.js",
+    "idsCompletos": [
+      "m4-u2-t3-s1",
+      "m4-u2-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u2-t3-s1",
+      "titulo": "IDS e IPS",
+      "topicoTitulo": "Detecção, resposta e proteção de endpoints",
+      "topicoId": "modulo-4-unidade-2-topico-3",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará IDS e IPS por atuação (alerta x bloqueio) e colocação na rede, e comparará detecção por assinatura e por anomalia.",
+      "conteudo": "IDS (Intrusion Detection System) observa o tráfego e EMITE ALERTAS quando encontra padrões de ataque; é dispositivo passivo — sua implantação típica liga-se a um ponto de espelho (span/mirror) de switch ou a um TAP, de modo que não participa do caminho do tráfego e não consegue bloquear nada sozinho. IPS (Intrusion Prevention System) atua no caminho (inline) e BLOQUEIA ou saneia o tráfego malicioso conforme política; por isso tem risco operacional próprio: falha ou falso positivo do IPS interrompe tráfego legítimo, o que exige teste em modo de observação antes do bloqueio. Mecanismos de detecção: por assinatura (base de padrões conhecidos — precisa de atualização constante, só vê o conhecido) e por anomalia/heurística (compara com comportamento esperado — pega o inédito, mas produz mais falsos positivos). Existem variantes por localização: HIDS/HIPS atuam no host (arquivos, configurações, processos). IDS/IPS não substitui firewall: firewalls aplicam política de acesso; IDS/IPS detectam exploração dentro do que foi permitido.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um dispositivo alerta sobre tentativa de exploração de vulnerabilidade conhecida, mas o tráfego chegou ao servidor. Que ferramenta é e o que isso indica?",
+          "resposta": "IDS (detecção passiva). Indica que houve tentativa e que o alerta depende de operador para resposta; se bloqueio automático fosse exigido, a arquitetura precisaria de IPS inline."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "A equipe quer implantar bloqueio automático, mas teme parar sistema crítico por falso positivo. Descreva a implantação prudente.",
+          "resposta": "Fase 1: IPS em modo somente alerta (monitoração) por período representativo, coletando falsos positivos. Fase 2: ajuste de política, exclusão de exceções documentadas, testes em janela de manutenção. Fase 3: bloqueio ativado por categoria de ataque de alto impacto, com monitoramento 24×7 e procedimento de reversão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'IDS inline bloqueia pacotes maliciosos automaticamente.'",
+          "correcao": "Errado: inline e bloqueio automático são características de IPS. IDS, por definição, detecta e alerta; sua posição típica é fora do caminho do tráfego."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Detecção por assinatura consegue identificar ataque nunca antes visto.",
+          "resposta": "Errado. Assinatura descreve ataque conhecido; o inédito só é captado por detecção comportamental/anomalia, com mais falsos positivos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Diferença operacional decisiva entre IPS e IDS: A) preço; B) IPS bloqueia, IDS alerta; C) IPS atua só em Wi-Fi; D) IDS não usa assinaturas.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar IDS e IPS por atuação (alerta x bloqueio) e colocação na rede, e comparará detecção por assinatura e por anomalia, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará IDS e IPS por atuação (alerta x bloqueio) e colocação na rede, e comparará detecção por assinatura e por anomalia"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "IDS (Intrusion Detection System) observa o tráfego e EMITE ALERTAS quando encontra padrões de ataque; é dispositivo passivo — sua implantação típica liga-se a um ponto de espelho (span/mirror) de switch ou a um TAP, de modo que não participa do caminho do tráfego e não consegue bloquear nada sozinho. IPS (Intrusion Prevention System) atua no caminho (inline) e BLOQUEIA ou saneia o tráfego malicioso conforme política; por isso tem risco operacional próprio: falha ou falso positivo do IPS interrom…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a IDS e IPS",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'IDS inline bloqueia pacotes maliciosos automaticamente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado: inline e bloqueio automático são características de IPS. IDS, por definição, detecta e alerta; sua posição típica é fora do caminho do tráfego."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um dispositivo alerta sobre tentativa de exploração de vulnerabilidade conhecida, mas o tráfego chegou ao servidor. Que ferramenta é e o que isso indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "IDS (detecção passiva). Indica que houve tentativa e que o alerta depende de operador para resposta; se bloqueio automático fosse exigido, a arquitetura precisaria de IPS inline.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "A equipe quer implantar bloqueio automático, mas teme parar sistema crítico por falso positivo. Descreva a implantação prudente.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Fase 1: IPS em modo somente alerta (monitoração) por período representativo, coletando falsos positivos. Fase 2: ajuste de política, exclusão de exceções documentadas, testes em janela de manutenção. Fase 3: bloqueio ativado por categoria de ataque de alto impacto, com monitoramento 24×7 e procedimento de reversão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'IDS inline bloqueia pacotes maliciosos automaticamente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado: inline e bloqueio automático são características de IPS. IDS, por definição, detecta e alerta; sua posição típica é fora do caminho do tráfego.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u2-t3-s2",
+      "titulo": "Monitoramento, registros e resposta a incidentes",
+      "topicoTitulo": "Detecção, resposta e proteção de endpoints",
+      "topicoId": "modulo-4-unidade-2-topico-3",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno elencará o que registrar, como proteger os registros e descreverá as fases da resposta a incidentes na ordem correta.",
+      "conteudo": "Monitoramento contínuo é a condição de descobrir incidente antes do usuário reclamar. O que registrar: autenticações (sucesso e falha), autorizações negadas, alterações de configuração, acessos a dados sensíveis, eventos de sistema e de aplicação, com identificador, data/hora sincronizada e resultado. Boas práticas de registros: centralização (servidor dedicado), proteção contra edição/exclusão (somente leitura, cadeia de custódia), retenção compatível com obrigações, sincronização de hora e capacidade de análise — log que ninguém lê não detecta nada. Resposta a incidentes segue fases lógicas: 1) identificação (detecção e confirmação); 2) contenção (isolar sistemas, bloquear contas, preservar evidências, limitar o dano); 3) erradicação (remover causa: malware, backdoor, credencial comprometida, vulnerabilidade explorada); 4) recuperação (restaurar com verificação, monitorar com atenção redobrada); 5) lições aprendidas (relatório com causa, cronologia, melhorias e prazos). Ordem importa: erradicar sem conter espalha o dano; recuperar sem erradicar traz o incidente de volta. Evidências devem ser preservadas com registro de cadeia de custódia para eventual responsabilização.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Alerta indica login anômalo às 3h. Qual a sequência correta de primeira hora?",
+          "resposta": "Confirmar o alerta (identificação), bloquear a sessão e revogar/rotacionar a credencial e sessões ativas (contenção), verificar lateral movement e persistências (preparação para erradicação), preservando registros — antes de qualquer reinstalação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Confirmou-se vazamento de planilha com dados pessoais de servidores. O que a equipe de segurança faz e o que o órgão precisa considerar?",
+          "resposta": "Segurança: contenção (restringir acesso ao arquivo, revogar links, apagar cópias acessíveis), erradicação (corrigir permissão que permitiu o compartilhamento), recuperação e relatório. Órgão: registrar o incidente, avaliar comunicação a autoridade e aos titulares conforme dispositivo aplicável da LGPD (art. 46, verificado; a redação exata do dispositivo que trata da comunicação não foi verificada nesta sessão — confirmar em fonte oficial) e implementar as melhorias apontadas."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Basta reinstalar o sistema comprometido para encerrar o incidente.'",
+          "correcao": "Errado. Sem contenção e erradicação de causa (credenciais, backdoors, vulnerabilidade explorada), a reinicialização devolve o sistema ao atacante; além disso, descaracteriza evidências."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Registros de auditoria devem permitir edição pelo administrador para correção de erros de digitação.",
+          "resposta": "Errado. Registros íntegros não devem ser editáveis; correções são feitas por novo registro (entrada de ajuste) — edição destrói a rastreabilidade e o não repúdio."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual fase isola sistemas e bloqueia contas para limitar o dano? A) Identificação; B) Contenção; C) Recuperação; D) Lições aprendidas.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de elencar o que registrar, como proteger os registros e descreverá as fases da resposta a incidentes na ordem correta, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "elencará o que registrar, como proteger os registros e descreverá as fases da resposta a incidentes na ordem correta"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Monitoramento contínuo é a condição de descobrir incidente antes do usuário reclamar. O que registrar: autenticações (sucesso e falha), autorizações negadas, alterações de configuração, acessos a dados sensíveis, eventos de sistema e de aplicação, com identificador, data/hora sincronizada e resultado. Boas práticas de registros: centralização (servidor dedicado), proteção contra edição/exclusão (somente leitura, cadeia de custódia), retenção compatível com obrigações, sincronização de hora e cap…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Monitoramento, registros e resposta a incidentes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Basta reinstalar o sistema comprometido para encerrar o incidente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Sem contenção e erradicação de causa (credenciais, backdoors, vulnerabilidade explorada), a reinicialização devolve o sistema ao atacante; além disso, descaracteriza evidências."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Alerta indica login anômalo às 3h. Qual a sequência correta de primeira hora?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Confirmar o alerta (identificação), bloquear a sessão e revogar/rotacionar a credencial e sessões ativas (contenção), verificar lateral movement e persistências (preparação para erradicação), preservando registros — antes de qualquer reinstalação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Confirmou-se vazamento de planilha com dados pessoais de servidores. O que a equipe de segurança faz e o que o órgão precisa considerar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Segurança: contenção (restringir acesso ao arquivo, revogar links, apagar cópias acessíveis), erradicação (corrigir permissão que permitiu o compartilhamento), recuperação e relatório. Órgão: registrar o incidente, avaliar comunicação a autoridade e aos titulares conforme dispositivo aplicável da LGPD (art. 46, verificado; a redação exata do dispositivo que trata da comunicação não foi verificada nesta sessão — confirmar em fonte oficial) e implementar as melhorias apontadas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Basta reinstalar o sistema comprometido para encerrar o incidente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Sem contenção e erradicação de causa (credenciais, backdoors, vulnerabilidade explorada), a reinicialização devolve o sistema ao atacante; além disso, descaracteriza evidências.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

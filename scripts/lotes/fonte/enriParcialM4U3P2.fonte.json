@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 3,
+    "unidadeTitulo": "4.3 Ameaças e ataques",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U3P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U3P2.js",
+    "idsCompletos": [
+      "m4-u3-t1-s3",
+      "m4-u3-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u3-t1-s3",
+      "titulo": "Pretexting, baiting e princípios de manipulação",
+      "topicoTitulo": "Engenharia social e fraudes de identidade",
+      "topicoId": "modulo-4-unidade-3-topico-1",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno reconhecerá pretexting e baiting, relacionará os princípios psicológicos explorados e desenhará treinamento defensivo com simulação.",
+      "conteudo": "Engenharia social explora características humanas, não falhas de máquina. Pretexting: o atacante constrói um cenário fictício crível (pesquisa, auditoria, novo colega do TI, urgência do gestor) e conduz a vítima a cumprir o roteiro — é a base das fraudes de pedidos urgentes em nome do gestor e dos golpes de suporte técnico por telefone. Baiting: oferta física ou digital irresistível que induz à curiosidade — pen drive abandonado na recepção, 'brinde' com programa malicioso, cabo USB com logotipo do órgão; a vítima inicia a ação por conta própria. Princípios psicológicos explorados: autoridade (pedido vem de cima), urgência (decidir sem checar), confiança/aparência de rotina, reciprocidade (favor prévio), medo de consequência (multa, suspensão). Defesa prática: procedimentos escritos que obriguem verificação por canal independente para ações sensíveis, canal oficial de denúncia de tentativas, simulações defensivas periódicas com feedback (sem punição, para que relato seja a norma), e autorização explícita para o servidor dizer 'não' a pedido fora do procedimento. Nota de escopo: este material não ensina a executar ataques; o objetivo é reconhecimento, prevenção e resposta.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Ligação de alguém que se apresenta do 'suporte interno', pedindo senha para 'concluir migração'. Identifique a técnica e o princípio explorado.",
+          "resposta": "Pretexting (cenário fictício de suporte) explorando autoridade e urgência. Defesa: suporte legítimo nunca pede senha; confirmação deve ser feita por canal oficial conhecido pelo funcionário."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão quer medir a eficácia do treinamento. Desenhe uma campanha defensiva ética.",
+          "resposta": "Simulação com mensagem fictícia inofensiva (sem coleta de senha real, sem malware), registro de cliques por setor, feedback imediato explicando indicadores, rodada de reforço para quem caiu — sem identificar publicamente — e relatório gerencial com evolução temporal. Objetivo: mudança de comportamento, não vergonha."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Funcionário que cai em golpe deve ser punido publicamente para servir de exemplo.'",
+          "correcao": "Errado do ponto de vista de segurança: punição pública reduz o relato de incidentes, que é a matéria-prima da defesa. A conduta correta é feedback privado, treinamento e melhoria de processos."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Pen drive abandonado na recepção que instala código malicioso é vetor de baiting.",
+          "resposta": "Certo. O 'isca' (bait) induz a vítima a conectar o dispositivo por curiosidade ou conveniência."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Atacante finge ser colega recém-transferido e pede acesso 'provisório'. Técnica: A) baiting; B) pretexting; C) DDoS; D) tailgating físico apenas.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de reconhecer pretexting e baiting, relacionará os princípios psicológicos explorados e desenhará treinamento defensivo com simulação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "reconhecerá pretexting e baiting, relacionará os princípios psicológicos explorados e desenhará treinamento defensivo com simulação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Engenharia social explora características humanas, não falhas de máquina. Pretexting: o atacante constrói um cenário fictício crível (pesquisa, auditoria, novo colega do TI, urgência do gestor) e conduz a vítima a cumprir o roteiro — é a base das fraudes de pedidos urgentes em nome do gestor e dos golpes de suporte técnico por telefone. Baiting: oferta física ou digital irresistível que induz à curiosidade — pen drive abandonado na recepção, 'brinde' com programa malicioso, cabo USB com logotipo…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Pretexting, baiting e princípios de manipulação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Funcionário que cai em golpe deve ser punido publicamente para servir de exemplo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado do ponto de vista de segurança: punição pública reduz o relato de incidentes, que é a matéria-prima da defesa. A conduta correta é feedback privado, treinamento e melhoria de processos."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Ligação de alguém que se apresenta do 'suporte interno', pedindo senha para 'concluir migração'. Identifique a técnica e o princípio explorado.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pretexting (cenário fictício de suporte) explorando autoridade e urgência. Defesa: suporte legítimo nunca pede senha; confirmação deve ser feita por canal oficial conhecido pelo funcionário.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão quer medir a eficácia do treinamento. Desenhe uma campanha defensiva ética.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Simulação com mensagem fictícia inofensiva (sem coleta de senha real, sem malware), registro de cliques por setor, feedback imediato explicando indicadores, rodada de reforço para quem caiu — sem identificar publicamente — e relatório gerencial com evolução temporal. Objetivo: mudança de comportamento, não vergonha.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Funcionário que cai em golpe deve ser punido publicamente para servir de exemplo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado do ponto de vista de segurança: punição pública reduz o relato de incidentes, que é a matéria-prima da defesa. A conduta correta é feedback privado, treinamento e melhoria de processos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u3-t2-s1",
+      "titulo": "Força bruta, password spraying e credential stuffing",
+      "topicoTitulo": "Ataques a credenciais, à disponibilidade e à comunicação",
+      "topicoId": "modulo-4-unidade-3-topico-2",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará os três ataques pela distribuição de tentativas e indicará defesas específicas para cada um.",
+      "conteudo": "Força bruta testa muitas senhas contra UMA conta, automatizadamente, até acertar; exige tempo e gera volume de falhas visível naquela conta. Password spraying ('borrifado') testa poucas senhas comuns (uma ou duas) contra MUITAS contas, evitando bloqueios por tentativas falhas — já que faz apenas poucas tentativas em cada conta; é silencioso se a política só conta falhas por conta. Credential stuffing usa pares usuário-senha vazados em outros serviços e a reutilização de senhas pelo usuário: não é quebra de senha, é exploração de hábito — funciona porque as credenciais são reais. Defesas por ataque: contra força bruta — limite de tentativas com bloqueio progressivo e alerta; contra spraying — monitoramento de volume de falhas por origem e por conjunto de contas, janelas de bloqueio curtas por origem; contra stuffing — MFA (impede uso da senha roubada), senhas únicas por serviço (gerenciador), verificação de exposição de credenciais, alerta de login de local incompatível. Ponto crítico: MFA é a defesa mais efetiva contra stuffing; senha única é a defesa mais efetiva contra propagação do dano quando há vazamento.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Milhares de falhas de login em contas distintas, 2 tentativas por conta, vindas de poucos endereços. Que ataque é esse?",
+          "resposta": "Password spraying: volume baixo por conta (evita bloqueio), volume alto entre contas, origem concentrada. O monitoramento por origem e por contas-alvo é o que o revela."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Vazamento externo expôs senhas de colaboradores que reutilizaram a senha do portal. Qual defesa teria barrado o acesso e qual reduz o dano?",
+          "resposta": "Barraria o acesso: MFA, pois a senha roubada sozinha não autentica. Reduz o dano: senha única por serviço (gerenciador), impedindo que o vazamento de um serviço valide outro."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Credential stuffing é o mesmo que força bruta.'",
+          "correcao": "Errado. Força bruta gera tentativas contra uma conta; credential stuffing usa credenciais reais vazadas em massa, sem quebrar nada — por isso sem MFA e com reutilização de senhas ela funciona escala."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Bloquear a conta após 5 falhas consecutivas é defesa eficaz contra password spraying.",
+          "resposta": "Errado como defesa isolada: o spraying faz poucas tentativas por conta justamente para não disparar bloqueio; é preciso monitorar o padrão agregado por origem e por conjunto de contas."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual ataque NÃO depende de descobrir senha nova, e sim de testar senhas já vazadas? A) Força bruta; B) Credential stuffing; C) Phishing; D) DoS.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar os três ataques pela distribuição de tentativas e indicará defesas específicas para cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará os três ataques pela distribuição de tentativas e indicará defesas específicas para cada um"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Força bruta testa muitas senhas contra UMA conta, automatizadamente, até acertar; exige tempo e gera volume de falhas visível naquela conta. Password spraying ('borrifado') testa poucas senhas comuns (uma ou duas) contra MUITAS contas, evitando bloqueios por tentativas falhas — já que faz apenas poucas tentativas em cada conta; é silencioso se a política só conta falhas por conta. Credential stuffing usa pares usuário-senha vazados em outros serviços e a reutilização de senhas pelo usuário: não …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Força bruta, password spraying e credential stuffing",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Credential stuffing é o mesmo que força bruta.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Força bruta gera tentativas contra uma conta; credential stuffing usa credenciais reais vazadas em massa, sem quebrar nada — por isso sem MFA e com reutilização de senhas ela funciona escala."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Milhares de falhas de login em contas distintas, 2 tentativas por conta, vindas de poucos endereços. Que ataque é esse?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Password spraying: volume baixo por conta (evita bloqueio), volume alto entre contas, origem concentrada. O monitoramento por origem e por contas-alvo é o que o revela.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Vazamento externo expôs senhas de colaboradores que reutilizaram a senha do portal. Qual defesa teria barrado o acesso e qual reduz o dano?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Barraria o acesso: MFA, pois a senha roubada sozinha não autentica. Reduz o dano: senha única por serviço (gerenciador), impedindo que o vazamento de um serviço valide outro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Credential stuffing é o mesmo que força bruta.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Força bruta gera tentativas contra uma conta; credential stuffing usa credenciais reais vazadas em massa, sem quebrar nada — por isso sem MFA e com reutilização de senhas ela funciona escala.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

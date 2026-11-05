@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 1,
+    "unidadeTitulo": "4.1 Fundamentos de segurança",
+    "parte": 3,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U1P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U1P3.js",
+    "idsCompletos": [
+      "m4-u1-t2-s2",
+      "m4-u1-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u1-t2-s2",
+      "titulo": "Autenticação, autorização, auditoria e menor privilégio",
+      "topicoTitulo": "Controles de segurança e gestão de acesso",
+      "topicoId": "modulo-4-unidade-1-topico-2",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno distinguirá autenticação, autorização e auditoria e aplicará o princípio do menor privilégio ao desenho de perfis de acesso.",
+      "conteudo": "As três funções formam o ciclo clássico de controle de acesso. Autenticação responde 'quem é você?': verificação de credenciais (senha, token, biometria, certificado). Autorização responde 'o que você pode fazer?': mapeamento identidade → perfil → permissões (arquivos, telas, comandos). Auditoria responde 'o que você fez?': registro das ações com identificador, data/hora e resultado, protegido contra alteração. Menor privilégio: conceder somente o mínimo necessário para a função — nem mais, nem menos; complementado pelo need-to-know (necessitar saber) e pela separação de funções (quem aprova não executa; quem cadastra não paga). Erro clássico: dar perfil de administrador ao usuário final 'para facilitar'; o efeito é que qualquer falha ou comprometimento dessa conta atinge toda a máquina. Menor privilégio também se aplica a serviços: conta de serviço de aplicação deve ter acesso apenas ao banco de dados que usa, e nunca deve fazer login como administrador do domínio. Autorização deve ser avaliada a cada requisição, não apenas na entrada do sistema — autenticado não significa autorizado.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um servidor autentica corretamente o usuário, mas ele tenta abrir a pasta de outro setor. Em que etapa do ciclo a falha está?",
+          "resposta": "Na autorização: a identidade foi confirmada (autenticação), mas a permissão solicitada não corresponde ao perfil. A ação deve ser negada e registrada para auditoria."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Desenhe perfis para a seção de licitações: equipe que digita, analista que aprova e auditoria externa.",
+          "resposta": "Menor privilégio + separação de funções: equipe de digitação cria e edita registros próprios, sem aprovação; analista aprova e edita campos de conformidade, sem excluir o histórico; auditoria tem acesso somente leitura a registros e logs, sem permissão de escrita. Todos com conta individual e registro de auditoria."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Usuário autenticado pode acessar qualquer recurso do sistema.'",
+          "correcao": "Errado. Autenticação identifica; autorização delimita. O acesso depende do perfil, avaliado a cada operação — a regra padrão é negar o que não foi explicitamente permitido."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Separar quem aprova de quem executa é uma aplicação do princípio do menor privilégio.",
+          "resposta": "Certo. É a separação de funções, decorrente da mesma lógica: reduzir poderes acumulados em uma só identidade reduz o impacto de erro ou fraude."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual ação o sistema deve registrar para atender à auditoria? A) Somente senhas incorretas; B) Identificador, data/hora, ação realizada e resultado; C) Apenas o nome do usuário no primeiro acesso; D) Somente alterações de cadastro.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir autenticação, autorização e auditoria e aplicará o princípio do menor privilégio ao desenho de perfis de acesso, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "wlaNFx73qh4",
+          "titulo": "O que a TI tem a ver com a LGPD?!?",
+          "canal": "ConexTI",
+          "urlOriginal": "https://www.youtube.com/watch?v=wlaNFx73qh4",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/wlaNFx73qh4",
+          "descricao": "Videoaula explicativa sobre a relação entre a área de TI e a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018). Aborda os papéis de controlador e operador, bases legais para tratamento (art. 7º), direitos do titular (art. 18), princípios da LGPD (art. 2º), medidas de segurança técnicas e organizacionais (art. 46), relatório de impacto (art. 38), encarregado/DPO (art. 41), e as responsabilidades da TI na implementação de controles de acesso, criptografia, logs de auditoria, minimização de dados e resposta a incidentes.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá autenticação, autorização e auditoria e aplicará o princípio do menor privilégio ao desenho de perfis de acesso"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "As três funções formam o ciclo clássico de controle de acesso. Autenticação responde 'quem é você?': verificação de credenciais (senha, token, biometria, certificado). Autorização responde 'o que você pode fazer?': mapeamento identidade → perfil → permissões (arquivos, telas, comandos). Auditoria responde 'o que você fez?': registro das ações com identificador, data/hora e resultado, protegido contra alteração. Menor privilégio: conceder somente o mínimo necessário para a função — nem mais, nem …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Autenticação, autorização, auditoria e menor privilégio",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Usuário autenticado pode acessar qualquer recurso do sistema.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Autenticação identifica; autorização delimita. O acesso depende do perfil, avaliado a cada operação — a regra padrão é negar o que não foi explicitamente permitido."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um servidor autentica corretamente o usuário, mas ele tenta abrir a pasta de outro setor. Em que etapa do ciclo a falha está?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Na autorização: a identidade foi confirmada (autenticação), mas a permissão solicitada não corresponde ao perfil. A ação deve ser negada e registrada para auditoria.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Desenhe perfis para a seção de licitações: equipe que digita, analista que aprova e auditoria externa.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Menor privilégio + separação de funções: equipe de digitação cria e edita registros próprios, sem aprovação; analista aprova e edita campos de conformidade, sem excluir o histórico; auditoria tem acesso somente leitura a registros e logs, sem permissão de escrita. Todos com conta individual e registro de auditoria.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Usuário autenticado pode acessar qualquer recurso do sistema.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Autenticação identifica; autorização delimita. O acesso depende do perfil, avaliado a cada operação — a regra padrão é negar o que não foi explicitamente permitido.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u1-t2-s3",
+      "titulo": "MFA, senhas, gerenciadores e autenticação resistente a phishing",
+      "topicoTitulo": "Controles de segurança e gestão de acesso",
+      "topicoId": "modulo-4-unidade-1-topico-2",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno comparará fatores de autenticação, avaliará a força de diferentes mecanismos MFA e indicará alternativas resistentes a phishing.",
+      "conteudo": "Autenticação fatorada usa categorias independentes: algo que sabe (senha, PIN), algo que tem (aplicativo autenticador, cartão, token), algo que é (biometria) e, em algumas taxonomias, algo que corresponde a contexto (localização). MFA (autenticação multifator) exige ao menos dois fatores de categorias distintas; 2FA é o caso particular com exatamente dois. Senhas: o problema real é reutilização e previsibilidade — senhas longas e únicas por serviço, guardadas em gerenciador de senhas, superam políticas que exigem troca periódica forçada, que tendem a produzir variantes previsíveis. Limitações por fator: SMS e chamada podem ser afetados por fraude de troca de chip (SIM swap); códigos de uso único (TOTP) podem ser capturados por sites falsos. Autenticação resistente a phishing (baseada em padrões como WebAuthn/FIDO2 e passkeys) vincula o fator ao domínio legítimo: o navegador só conclui a autenticação no endereço correto, o que anula o site clonado. MFA não substitui senhas fracas nem protege contra fraude de engenharia social dirigida ao suporte — por isso autenticação de recuperação de conta também precisa de fatores.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um sistema pede senha e código enviado por SMS. Essa é MFA? Justifique.",
+          "resposta": "Sim, é 2FA (caso de MFA): combina algo que sabe (senha) com algo que tem (receptor do SMS). Os dois fatores são de categorias distintas, embora o segundo apresente vulnerabilidade a fraude de troca de chip."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um servidor público de alta exposição exige autenticação que resista a site clonado. Que tipo de fator você recomenda e por quê?",
+          "resposta": "Fator criptográfico vinculado ao domínio (passkey/WebAuthn): a chave privada só é usada pelo navegador para o domínio registrado, então o código não é digitaível em site falso. Complementar: segundo fator independente e procedimento de recuperação de conta com verificação humana documentada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'MFA elimina o risco de roubo de credenciais.'",
+          "correcao": "Errado. MFA reduz muito o risco de autenticação indevida, mas há vetores residuais: fraude de engenharia social no suporte, interceptação de códigos em tempo real (SIM swap, aplicativo clonado) e contaminação do próprio dispositivo. MFA é controle forte, não absoluto."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Senha + código de uso único exibido por aplicativo autenticador constituem dois fatores de categorias distintas.",
+          "resposta": "Certo: algo que sabe (senha) e algo que tem (dispositivo com o aplicativo autenticador)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual autenticação é intrinsecamente resistente a site clonado? A) Senha + SMS; B) Senha + TOTP; C) Passkey vinculada ao domínio; D) Pergunta de segurança.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de comparar fatores de autenticação, avaliará a força de diferentes mecanismos MFA e indicará alternativas resistentes a phishing, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "comparará fatores de autenticação, avaliará a força de diferentes mecanismos MFA e indicará alternativas resistentes a phishing"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Autenticação fatorada usa categorias independentes: algo que sabe (senha, PIN), algo que tem (aplicativo autenticador, cartão, token), algo que é (biometria) e, em algumas taxonomias, algo que corresponde a contexto (localização). MFA (autenticação multifator) exige ao menos dois fatores de categorias distintas; 2FA é o caso particular com exatamente dois. Senhas: o problema real é reutilização e previsibilidade — senhas longas e únicas por serviço, guardadas em gerenciador de senhas, superam po…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a MFA, senhas, gerenciadores e autenticação resistente a phishing",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'MFA elimina o risco de roubo de credenciais.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. MFA reduz muito o risco de autenticação indevida, mas há vetores residuais: fraude de engenharia social no suporte, interceptação de códigos em tempo real (SIM swap, aplicativo clonado) e contaminação do próprio dispositivo. MFA é controle forte, não absoluto."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um sistema pede senha e código enviado por SMS. Essa é MFA? Justifique.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Sim, é 2FA (caso de MFA): combina algo que sabe (senha) com algo que tem (receptor do SMS). Os dois fatores são de categorias distintas, embora o segundo apresente vulnerabilidade a fraude de troca de chip.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um servidor público de alta exposição exige autenticação que resista a site clonado. Que tipo de fator você recomenda e por quê?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Fator criptográfico vinculado ao domínio (passkey/WebAuthn): a chave privada só é usada pelo navegador para o domínio registrado, então o código não é digitaível em site falso. Complementar: segundo fator independente e procedimento de recuperação de conta com verificação humana documentada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'MFA elimina o risco de roubo de credenciais.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. MFA reduz muito o risco de autenticação indevida, mas há vetores residuais: fraude de engenharia social no suporte, interceptação de códigos em tempo real (SIM swap, aplicativo clonado) e contaminação do próprio dispositivo. MFA é controle forte, não absoluto.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

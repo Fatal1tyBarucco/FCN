@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 1,
+    "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+    "parte": 4,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U1P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U1P4.js",
+    "idsCompletos": [
+      "m7-u1-t3-s2",
+      "m7-u1-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u1-t3-s2",
+      "titulo": "Linhagem (lineage) e catálogo de dados",
+      "topicoTitulo": "Metadados, linhagem, catálogo e ciclo de vida",
+      "topicoId": "modulo-7-unidade-1-topico-3",
+      "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno distinguirá linhagem de catálogo e usará cada um para responder a um problema concreto de auditoria.",
+      "conteudo": "LINHAGEM (data lineage) é a trajetória do dado: da fonte de origem, pelas transformações, até o relatório final — quais campos alimentaram quais outros, em qual rotina, com qual frequência e em que versão. Responde 'DE ONDE VEIO ESTE NÚMERO e o que já passou por ele'. É o que permite rastrear um valor incorreto até a causa, medir impacto de uma mudança e atender auditoria. CATÁLOGO (data catalog) é o inventário pesquisável do acervo, com metadados de negócio e técnicos: descrição, dono, localização, classificação de sensibilidade, indicadores de qualidade, exemplos de uso. Responde 'O QUE EXISTE, O QUE SIGNIFICA e COMO ACHAR'. Relação: o catálogo registra a última linha da linhagem; a linhagem explica como a linha chegou lá. DIFERENÇA QUE COBRA GABARITO: catálogo é índice (estado); linhagem é histórico (fluxo). Ausência dos dois produz o sintoma clássico — ninguém confia no número porque ninguém consegue explicá-lo. Linhagem completa exige instrumentação nas etapas de transformação; registrar apenas 'fonte: sistema X' não é linhagem, é declaração de origem parcial.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O número de um painel não bate com a base de origem. Qual recurso é consultado primeiro: catálogo ou linhagem?",
+          "resposta": "Linhagem — para percorrer as etapas (extração → transformação → carga → agregação do painel) e localizar em qual passo o valor divergiu. O catálogo é consultado em seguida para confirmar a definição do indicador, o dono responsável e a regra de cálculo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma nova coluna será adicionada à tabela de pagamentos. O que a linhagem permite avaliar antes?",
+          "resposta": "O impacto: quais relatórios, integrações e agregações consomem aquela tabela (e quais consomem apenas colunas vizinhas, permanecendo estáveis), quais rotinas precisam de reprocessamento e quem deve ser notificado. Sem linhagem, a mudança vira experimento: o efeito só aparece quando o relatório do gestor quebra."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Ter um catálogo de dados significa que a organização já tem linhagem completa.'",
+          "correcao": "Errado. O catálogo descreve o estado atual dos ativos; a linhagem registra a trajetória e as transformações. Pode haver catálogo bem preenchido sem qualquer registro de transformação — nesse caso, sabe-se o que existe, mas não se sabe como o número foi calculado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Linhagem responde 'como este valor chegou até aqui'; catálogo responde 'o que existe e o que significa'.",
+          "resposta": "Certo. Fluxo histórico versus índice de ativos — essa é a distinção cobrada em provas."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para descobrir em qual etapa um indicador foi corrompido, o instrumento adequado é: A) catálogo; B) linhagem; C) gráfico de barras; D) termo de consentimento.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir linhagem de catálogo e usará cada um para responder a um problema concreto de auditoria, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá linhagem de catálogo e usará cada um para responder a um problema concreto de auditoria"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "LINHAGEM (data lineage) é a trajetória do dado: da fonte de origem, pelas transformações, até o relatório final — quais campos alimentaram quais outros, em qual rotina, com qual frequência e em que versão. Responde 'DE ONDE VEIO ESTE NÚMERO e o que já passou por ele'. É o que permite rastrear um valor incorreto até a causa, medir impacto de uma mudança e atender auditoria. CATÁLOGO (data catalog) é o inventário pesquisável do acervo, com metadados de negócio e técnicos: descrição, dono, localiza…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Linhagem (lineage) e catálogo de dados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Ter um catálogo de dados significa que a organização já tem linhagem completa.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O catálogo descreve o estado atual dos ativos; a linhagem registra a trajetória e as transformações. Pode haver catálogo bem preenchido sem qualquer registro de transformação — nesse caso, sabe-se o que existe, mas não se sabe como o número foi calculado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O número de um painel não bate com a base de origem. Qual recurso é consultado primeiro: catálogo ou linhagem?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Linhagem — para percorrer as etapas (extração → transformação → carga → agregação do painel) e localizar em qual passo o valor divergiu. O catálogo é consultado em seguida para confirmar a definição do indicador, o dono responsável e a regra de cálculo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma nova coluna será adicionada à tabela de pagamentos. O que a linhagem permite avaliar antes?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O impacto: quais relatórios, integrações e agregações consomem aquela tabela (e quais consomem apenas colunas vizinhas, permanecendo estáveis), quais rotinas precisam de reprocessamento e quem deve ser notificado. Sem linhagem, a mudança vira experimento: o efeito só aparece quando o relatório do gestor quebra.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Ter um catálogo de dados significa que a organização já tem linhagem completa.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O catálogo descreve o estado atual dos ativos; a linhagem registra a trajetória e as transformações. Pode haver catálogo bem preenchido sem qualquer registro de transformação — nesse caso, sabe-se o que existe, mas não se sabe como o número foi calculado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u1-t3-s3",
+      "titulo": "Ciclo de vida dos dados",
+      "topicoTitulo": "Metadados, linhagem, catálogo e ciclo de vida",
+      "topicoId": "modulo-7-unidade-1-topico-3",
+      "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno descreverá as fases do ciclo de vida e associará regras de retenção e descarte a cada fase.",
+      "conteudo": "O ciclo de vida descreve as fases por que passa o dado, e cada fase exige controles próprios. 1) CRIAÇÃO/COLETA: definir finalidade, base de coleta, consentimento quando aplicável e qualidade mínima na origem (coletar o que será usado). 2) ARMAZENAMENTO/INTEGRAÇÃO: guardar com estrutura, metadados, backup e controle de acesso — dado integrado multiplica valor e também risco. 3) USO/COMPARTILHAMENTO: consulta, análise, publicação e envio a terceiros, sempre restritos à finalidade declarada. 4) ARQUIVAMENTO: guarda por obrigação legal ou auditável, com custo controlado e acesso mais restrito (dados frios). 5) DESCARTE/ELIMINAÇÃO: exclusão ou anonimização ao término da finalidade ou do prazo de retenção. REGRA DE OURO: retenção tem dois limites — mínimo (manter enquanto houver finalidade ou obrigação) e máximo (não manter indefinidamente 'por precaução'); manter além do necessário aumenta custo e exposição sem benefício. O ciclo é governado por metadados: sem registro de criação, dono e prazo, o descarte vira arbitrário — e a eliminação de dado que deveria ser arquivado é tão grave quanto o excesso de guarda.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Listar as cinco fases do ciclo de vida para um registro de ocorrência atendido por uma secretaria.",
+          "resposta": "1) Criação/coleta: registro no atendimento, com finalidade definida. 2) Armazenamento: base com backup, metadados e controle de acesso. 3) Uso: análise de demanda e resposta ao cidadão. 4) Arquivamento: guarda pelo prazo de accountability/auditabilidade. 5) Descarte: eliminação após o prazo, com registro da operação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma área pede para manter 'indefinidamente, por precaução' a base de candidatos não aprovados em processo seletivo.",
+          "resposta": "Pedido incompatível com o ciclo de vida: a finalidade termina com o processo; manter além prorroga custo de armazenamento, risco de vazamento e obrigações de segurança. A conduta correta é definir prazo de retenção justificado (inclusive por eventual contencioso), restringir o acesso durante esse prazo e eliminar ou anonimizar ao término."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'No ciclo de vida dos dados, descarte significa apenas apagar o arquivo principal.'",
+          "correcao": "Errado. O descarte efetivo envolve cópias, backups, caches, exportações e extrações em ferramentas de análise. Apagar a base original mantendo cópias distribuídas não encerra o ciclo nem reduz o risco."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Conforme o ciclo de vida, dado deve ser eliminado quando encerrada a finalidade ou expirado o prazo de retenção.",
+          "resposta": "Certo. A guarda indefinida não é precaução: é custo e risco sem finalidade."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual fase exige definir finalidade e qualidade mínima na origem? A) arquivamento; B) coleta; C) descarte; D) compartilhamento.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever as fases do ciclo de vida e associará regras de retenção e descarte a cada fase, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá as fases do ciclo de vida e associará regras de retenção e descarte a cada fase"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O ciclo de vida descreve as fases por que passa o dado, e cada fase exige controles próprios. 1) CRIAÇÃO/COLETA: definir finalidade, base de coleta, consentimento quando aplicável e qualidade mínima na origem (coletar o que será usado). 2) ARMAZENAMENTO/INTEGRAÇÃO: guardar com estrutura, metadados, backup e controle de acesso — dado integrado multiplica valor e também risco. 3) USO/COMPARTILHAMENTO: consulta, análise, publicação e envio a terceiros, sempre restritos à finalidade declarada. 4) AR…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Ciclo de vida dos dados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'No ciclo de vida dos dados, descarte significa apenas apagar o arquivo principal.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O descarte efetivo envolve cópias, backups, caches, exportações e extrações em ferramentas de análise. Apagar a base original mantendo cópias distribuídas não encerra o ciclo nem reduz o risco."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Listar as cinco fases do ciclo de vida para um registro de ocorrência atendido por uma secretaria.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) Criação/coleta: registro no atendimento, com finalidade definida. 2) Armazenamento: base com backup, metadados e controle de acesso. 3) Uso: análise de demanda e resposta ao cidadão. 4) Arquivamento: guarda pelo prazo de accountability/auditabilidade. 5) Descarte: eliminação após o prazo, com registro da operação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma área pede para manter 'indefinidamente, por precaução' a base de candidatos não aprovados em processo seletivo.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pedido incompatível com o ciclo de vida: a finalidade termina com o processo; manter além prorroga custo de armazenamento, risco de vazamento e obrigações de segurança. A conduta correta é definir prazo de retenção justificado (inclusive por eventual contencioso), restringir o acesso durante esse prazo e eliminar ou anonimizar ao término.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'No ciclo de vida dos dados, descarte significa apenas apagar o arquivo principal.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O descarte efetivo envolve cópias, backups, caches, exportações e extrações em ferramentas de análise. Apagar a base original mantendo cópias distribuídas não encerra o ciclo nem reduz o risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

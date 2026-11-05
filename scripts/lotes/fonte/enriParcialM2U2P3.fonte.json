@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 2,
+    "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U2P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U2P3.js",
+    "idsCompletos": [
+      "m2-u2-t2-s2",
+      "m2-u2-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u2-t2-s2",
+      "titulo": "Protocolos e serviços associados a cada camada",
+      "topicoTitulo": "Modelo TCP/IP: camadas e protocolos associados",
+      "topicoId": "modulo-2-unidade-2-topico-2",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno associará protocolos e serviços às camadas do TCP/IP e explicará a diferença entre protocolo e serviço.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a diferença entre protocolo, serviço, porta e aplicação; (b) o que é uma porta e sua faixa; (c) a relação entre camadas; (d) exemplos de associação. POR QUE O CONHECIMENTO É IMPORTANTE: a prova distingue com frequência esses quatro conceitos próximos; confundi-los altera a resposta. PRÉ-REQUISITOS: camadas TCP/IP. OBJETIVOS OBSERVÁVEIS: (1) definir protocolo; (2) definir serviço; (3) definir porta; (4) definir aplicação e relacioná-los. COMPETÊNCIAS DESENVOLVIDAS: precisão conceitual; leitura de configuração de serviços. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.1 (camadas); unidade 3 (protocolos e portas). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: protocolo é o conjunto de REGRAS que define formato, sequência de mensagens e ações da comunicação (HTTP, TCP, IP). Serviço é a CAPACIDADE que uma camada oferece à superior — por exemplo, o transporte oferece à aplicação uma entrega confiável e ordenada (através do TCP). Porta é um NÚMERO de 16 bits (0 a 65535) que identifica o processo/aplicação dentro de um host, permitindo que várias aplicações compartilhem o mesmo endereço IP; as portas bem conhecidas (0 a 1023) são atribuídas a serviços padronizados, como 80 (HTTP), 443 (HTTPS), 53 (DNS), 25/587 (SMTP), 22 (SSH). Aplicação é o PROGRAMA que usa a rede — navegador, servidor web, cliente de e-mail. A relação é hierárquica: uma camada PRESTA serviço à superior e USA o serviço da inferior. Exemplo completo: o serviço de transferência de hipertexto é implementado pelo protocolo HTTP, que usa a porta 80 (ou 443 quando sob TLS) e é consumido por uma aplicação (navegador ou servidor web). Guardar essas quatro noções separadas é decisivo em prova.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir \"regra\" (protocolo) de \"programa\" (aplicação).\n- Nível intermediário: associar protocolo, porta e serviço em exemplos.\n- Nível avançado: explicar por que a porta identifica o processo e não o host.\n- Nível especialista: diagnosticar conflito de portas e serviços em um servidor.\nCOMPARAÇÕES CRÍTICAS:\n- protocolo x serviço: regras x capacidade oferecida à camada superior — trocar os termos inverte o gabarito.\n- porta x endereço IP: a porta identifica o processo; o IP identifica o host.\n- porta bem conhecida x efêmera: a primeira é padronizada (ex.: 80); a efêmera é escolhida pelo cliente para a conexão.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"HTTP é uma porta.\" — Motivo: HTTP é protocolo; a porta é 80 — Versão tecnicamente correta: o protocolo usa a porta.\n- Afirmação errada: \"A porta identifica o computador.\" — Motivo: identifica o processo — Versão tecnicamente correta: o IP identifica o host.\n- Afirmação errada: \"Dentro de um host, dois serviços podem usar a mesma porta TCP ao mesmo tempo.\" — Motivo: haveria conflito — Versão tecnicamente correta: a mesma porta não pode ser usada por dois serviços no mesmo protocolo.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: protocolo, serviço, porta, aplicação, porta bem conhecida, porta efêmera.\n- Regras e fórmulas: protocolo = regras; serviço = capacidade; porta = identificador de processo (0–65535).\n- Exceções: serviços podem usar portas não padrão, se configurados.\n- Palavras-chave: regra, capacidade, identificador, programa, camada.\n- Checklist de domínio: (1) Defino protocolo? (2) Defino serviço? (3) Defino porta? (4) Relaciono com a aplicação?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é protocolo? (2) O que é serviço? (3) O que uma porta identifica? (4) Qual a faixa de portas? (5) Qual porta o HTTP usa por padrão?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Diferenciar protocolo, serviço, porta e aplicação no caso do e-mail.",
+          "resposta": "Aplicação: cliente de e-mail (Thunderbird). Protocolo: SMTP/IMAP. Serviço: entrega de mensagens / acesso a caixa. Porta: 25/587 (SMTP), 143/993 (IMAP)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Por que o mesmo servidor pode hospedar site (HTTP) e e-mail (SMTP) simultaneamente?",
+          "resposta": "Porque portas diferentes identificam serviços diferentes no mesmo IP: 80/443 para web, 25/587/110/143 para e-mail. O sistema operacional demultiplexa pelo número da porta."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Porta 443 é um protocolo.'",
+          "correcao": "Errado. 443 é um número de porta associado ao protocolo HTTPS. Protocolo é o conjunto de regras (HTTPS/TLS sobre HTTP); porta é o ponto de acesso."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um mesmo protocolo pode usar portas diferentes em contextos diferentes.",
+          "resposta": "Certo — HTTP usa 80, HTTPS 443; DNS usa 53 UDP/TCP."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual item identifica o processo dentro do host? A) Endereço IP; B) Endereço MAC; C) Porta; D) Protocolo.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de associar protocolos e serviços às camadas do TCP/IP e explicará a diferença entre protocolo e serviço, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "associará protocolos e serviços às camadas do TCP/IP e explicará a diferença entre protocolo e serviço"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Protocolo é um conjunto de regras que define formato, sequência e ações na comunicação (ex.: HTTP, TCP, IP). Serviço é a capacidade oferecida por uma camada à camada superior (ex.: serviço de entrega confiável do TCP à aplicação). Uma camada presta serviços à superior e usa serviços da inferior. Porta é um número (0-65535) que identifica o processo/aplicação dentro de um host (ex.: 80 para HTTP, 443 para HTTPS). Aplicação é o programa que usa a rede (navegador, servidor web). A distinção é cobra…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Protocolos e serviços associados a cada camada",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Porta 443 é um protocolo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. 443 é um número de porta associado ao protocolo HTTPS. Protocolo é o conjunto de regras (HTTPS/TLS sobre HTTP); porta é o ponto de acesso."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Diferenciar protocolo, serviço, porta e aplicação no caso do e-mail.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Aplicação: cliente de e-mail (Thunderbird). Protocolo: SMTP/IMAP. Serviço: entrega de mensagens / acesso a caixa. Porta: 25/587 (SMTP), 143/993 (IMAP).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Por que o mesmo servidor pode hospedar site (HTTP) e e-mail (SMTP) simultaneamente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque portas diferentes identificam serviços diferentes no mesmo IP: 80/443 para web, 25/587/110/143 para e-mail. O sistema operacional demultiplexa pelo número da porta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Porta 443 é um protocolo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. 443 é um número de porta associado ao protocolo HTTPS. Protocolo é o conjunto de regras (HTTPS/TLS sobre HTTP); porta é o ponto de acesso.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u2-t2-s3",
+      "titulo": "Limitações da correspondência entre camadas OSI e TCP/IP",
+      "topicoTitulo": "Modelo TCP/IP: camadas e protocolos associados",
+      "topicoId": "modulo-2-unidade-2-topico-2",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno reconhecerá que a correspondência entre camadas OSI e TCP/IP é aproximada e identificará casos em que a equivalência não é direta.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) por que a correspondência OSI↔TCP/IP é aproximada; (b) casos em que a equivalência não é direta; (c) como usar a correspondência sem errar na classificação. POR QUE O CONHECIMENTO É IMPORTANTE: a prova pode cobrar a função de um protocolo, não sua camada exata; assumir correspondência rígida gera erro. PRÉ-REQUISITOS: modelos OSI e TCP/IP. OBJETIVOS OBSERVÁVEIS: (1) explicar que a correspondência é didática; (2) citar protocolos que \"atravessam\" camadas; (3) evitar classificações rígidas; (4) priorizar a função. COMPETÊNCIAS DESENVOLVIDAS: análise crítica de modelos; precisão de classificação. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.1/2.2 (modelos); unidade 3.4 (TLS); unidade 3.3 (ARP). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a correspondência entre OSI e TCP/IP é uma simplificação didática, não uma equivalência biunívoca. Primeiro, a contagem difere: o OSI tem sete camadas e o TCP/IP quatro, de modo que sessão, apresentação e aplicação do OSI colapsam na camada de aplicação do TCP/IP. Segundo, alguns protocolos não se encaixam em uma única camada: o ARP opera entre o enlace e a rede (resolve IP em MAC); o ICMP é integrado ao IP, embora transporte mensagens de controle; e o TLS funciona entre o transporte e a aplicação, protegendo protocolos como HTTP. Terceiro, o TCP incorpora mecanismos (como o controle de congestionamento) que o modelo OSI não detalha na camada de transporte, e o IP real depende de funções auxiliares. Quarto, algumas tecnologias operam deliberadamente \"entre\" camadas (por exemplo, MPLS e certos túneis de VPN). Por isso, a postura correta é usar a correspondência como ferramenta de organização e, em prova, priorizar a FUNÇÃO do protocolo e o problema que ele resolve, em vez de decorar uma camada exata que pode variar com a convenção adotada.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer que os modelos têm contagens diferentes.\n- Nível intermediário: apontar protocolos que não se encaixam limpidamente.\n- Nível avançado: explicar por que TLS e ICMP resistem a uma classificação rígida.\n- Nível especialista: argumentar, em uma questão, pela função do protocolo em vez de sua camada.\nCOMPARAÇÕES CRÍTICAS:\n- correspondência exata x aproximada: tratá-la como exata gera erro de classificação.\n- função x camada: a primeira é estável; a segunda varia com a convenção — em prova, a função é mais segura.\n- protocolo de camada única x transversal: TLS e ARP não se encaixam em uma só.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Cada protocolo pertence a exatamente uma camada.\" — Motivo: vários atravessam fronteiras — Versão tecnicamente correta: a classificação é aproximada.\n- Afirmação errada: \"TLS é camada de transporte.\" — Motivo: atua entre transporte e aplicação — Versão tecnicamente correta: protege a aplicação sobre o transporte.\n- Afirmação errada: \"ARP é puramente camada 3.\" — Motivo: resolve endereços de enlace — Versão tecnicamente correta: opera entre enlace e rede.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: correspondência aproximada, sessão/apresentação colapsadas, protocolos transversais (TLS, ARP, ICMP).\n- Regras e fórmulas: 5+6+7 (OSI) → Aplicação (TCP/IP); classificação é didática.\n- Exceções: MPLS e túneis operam \"entre\" camadas.\n- Palavras-chave: modelo, camada, função, transversal, convenção.\n- Checklist de domínio: (1) Explico que é aproximada? (2) Cito protocolos transversais? (3) Evito classificação rígida? (4) Priorizo a função?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Por que a correspondência é aproximada? (2) O que ocorre com sessão e apresentação? (3) Dê um exemplo de protocolo transversal. (4) Onde o TLS atua? (5) Em prova, o que priorizar?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Em qual camada 'encaixar' o protocolo TLS?",
+          "resposta": "Não há encaixe único: TLS opera acima do TCP (transporte) e abaixo da aplicação (HTTP). Muitos textos o colocam como 'camada de apresentação' (OSI 6) ou 'segurança na aplicação' — a função importa mais que a camada."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma questão de concurso afirma que 'ARP é um protocolo da camada de rede'. Está correta?",
+          "resposta": "Depende da referência: no TCP/IP, ARP é associado à camada de acesso à rede/Internet; no OSI, costuma-se colocar na camada 2 (enlace) ou 3. A resposta correta depende do modelo adotado pela banca — leia o enunciado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Todo protocolo pode ser classificado sem ambiguidade em uma única camada OSI.'",
+          "correcao": "Errado. Protocolos modernos (TLS, QUIC, MPLS) atravessam ou não se encaixam bem nas sete camadas. A classificação é ferramenta didática, não lei física."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A correspondência entre as camadas OSI e TCP/IP é exata e biunívoca.",
+          "resposta": "Errado — é aproximada e didática."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo não se encaixa confortavelmente em uma única camada OSI? A) HTTP; B) IP; C) TLS; D) Ethernet.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de reconhecer que a correspondência entre camadas OSI e TCP/IP é aproximada e identificará casos em que a equivalência não é direta, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "reconhecerá que a correspondência entre camadas OSI e TCP/IP é aproximada e identificará casos em que a equivalência não é direta"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A correspondência OSI↔TCP/IP é didática e aproximada, não biunívoca. Pontos de atrito: (a) OSI tem 7 camadas, TCP/IP 4; as camadas 5, 6 e 7 do OSI colapsam na Aplicação do TCP/IP. (b) O protocolo IP não é 'puro' camada 3: ele depende de ARP (camada 2/3) e de ICMP (integrado ao IP). (c) TCP e UDP não correspondem exatamente à camada 4 do OSI em todos os aspectos (ex.: TCP inclui controle de congestionamento não previsto no OSI). (d) Protocolos como TLS (que protege HTTP) não têm camada OSI única:…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Limitações da correspondência entre camadas OSI e TCP/IP",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Todo protocolo pode ser classificado sem ambiguidade em uma única camada OSI.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Protocolos modernos (TLS, QUIC, MPLS) atravessam ou não se encaixam bem nas sete camadas. A classificação é ferramenta didática, não lei física."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Em qual camada 'encaixar' o protocolo TLS?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não há encaixe único: TLS opera acima do TCP (transporte) e abaixo da aplicação (HTTP). Muitos textos o colocam como 'camada de apresentação' (OSI 6) ou 'segurança na aplicação' — a função importa mais que a camada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma questão de concurso afirma que 'ARP é um protocolo da camada de rede'. Está correta?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Depende da referência: no TCP/IP, ARP é associado à camada de acesso à rede/Internet; no OSI, costuma-se colocar na camada 2 (enlace) ou 3. A resposta correta depende do modelo adotado pela banca — leia o enunciado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Todo protocolo pode ser classificado sem ambiguidade em uma única camada OSI.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Protocolos modernos (TLS, QUIC, MPLS) atravessam ou não se encaixam bem nas sete camadas. A classificação é ferramenta didática, não lei física.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

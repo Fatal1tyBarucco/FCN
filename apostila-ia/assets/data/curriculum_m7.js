@@ -44,7 +44,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá cada nível do modelo DIKW e construirá a passagem entre eles com um exemplo encadeado, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de definir cada nível do modelo DIKW e construirá a passagem entre eles com um exemplo encadeado, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t1-s2",
@@ -80,7 +80,7 @@ const curriculumM7 = {
                     "resposta": "A"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno apontará as limitações do modelo DIKW e identificará generalizações falsas sobre ele, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de apontar as limitações do modelo DIKW e identificará generalizações falsas sobre ele, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -122,7 +122,7 @@ const curriculumM7 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará conjuntos de dados nos três formatos e justificará a classificação pelo grau de estrutura, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar conjuntos de dados nos três formatos e justificará a classificação pelo grau de estrutura, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t2-s2",
@@ -158,7 +158,7 @@ const curriculumM7 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará dados qualitativos de quantitativos e detectará a armadilha da codificação numérica, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar dados qualitativos de quantitativos e detectará a armadilha da codificação numérica, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t2-s3",
@@ -194,7 +194,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno determinará o nível de mensuração de uma variável e indicará quais estatísticas são legítimas para ele, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de determinar o nível de mensuração de uma variável e indicará quais estatísticas são legítimas para ele, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -236,7 +236,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará metadados em técnicos, de negócio e de processo, e associará cada classe a um uso concreto, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar metadados em técnicos, de negócio e de processo, e associará cada classe a um uso concreto, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t3-s2",
@@ -272,7 +272,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá linhagem de catálogo e usará cada um para responder a um problema concreto de auditoria, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de distinguir linhagem de catálogo e usará cada um para responder a um problema concreto de auditoria, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u1-t3-s3",
@@ -308,7 +308,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá as fases do ciclo de vida e associará regras de retenção e descarte a cada fase, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de descrever as fases do ciclo de vida e associará regras de retenção e descarte a cada fase, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -356,7 +356,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará acurácia, completude e validade e calculará métricas simples de qualidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar acurácia, completude e validade e calculará métricas simples de qualidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "LmhbPTMaJak",
@@ -403,7 +403,7 @@ const curriculumM7 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno avaliará consistência, unicidade e tempestividade de uma base e explicará os conflitos entre dimensões, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de avaliar consistência, unicidade e tempestividade de uma base e explicará os conflitos entre dimensões, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -445,7 +445,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá os cinco estágios do pipeline, indicando entradas, saídos e risco típico de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de descrever os cinco estágios do pipeline, indicando entradas, saídos e risco típico de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t2-s2",
@@ -481,7 +481,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará ETL e ELT pela ordem das operações e justificará a escolha em cenários concretos, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar ETL e ELT pela ordem das operações e justificará a escolha em cenários concretos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -523,7 +523,7 @@ const curriculumM7 = {
                     "resposta": "C"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará os tipos de ausência e escolherá estratégia de tratamento coerente com a causa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar os tipos de ausência e escolherá estratégia de tratamento coerente com a causa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "1JpYOqvDJNU",
@@ -570,7 +570,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno detectará e tratará duplicidades, inconsistências e erros de tipo sem introduzir efeito colateral, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de detectar e tratará duplicidades, inconsistências e erros de tipo sem introduzir efeito colateral, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t3-s3",
@@ -606,7 +606,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará z-score e min-max a valores reais, interpretará o resultado e limitará o uso correto, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aplicar z-score e min-max a valores reais, interpretará o resultado e limitará o uso correto, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t3-s4",
@@ -642,7 +642,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará 1FN, 2FN e 3FN a uma tabela e formulará a diferença entre os dois sentidos de normalização, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aplicar 1FN, 2FN e 3FN a uma tabela e formulará a diferença entre os dois sentidos de normalização, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -684,7 +684,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno agregará dados por grupo calculando corretamente a média global e explicará por que médias de médias erram, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de agregar dados por grupo calculando corretamente a média global e explicará por que médias de médias erram, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u2-t4-s2",
@@ -720,7 +720,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá regra de identidade e fusão para deduplicar, justificando os dois tipos de erro possíveis, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de definir regra de identidade e fusão para deduplicar, justificando os dois tipos de erro possíveis, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -768,7 +768,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diferenciará anonimização e pseudonimização pela capacidade de reatribuição da identidade, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de diferenciar anonimização e pseudonimização pela capacidade de reatribuição da identidade, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u3-t1-s2",
@@ -804,7 +804,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará quasi-identificadores e descreverá ataques de recorte e suas mitigações, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de identificar quasi-identificadores e descreverá ataques de recorte e suas mitigações, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -846,7 +846,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá a governança de dados e atribuirá responsabilidades aos papéis envolvidos, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de descrever a governança de dados e atribuirá responsabilidades aos papéis envolvidos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u3-t2-s2",
@@ -882,7 +882,7 @@ const curriculumM7 = {
                     "resposta": "A"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará os princípios de menor privilégio e minimização a cenários de coleta e compartilhamento, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aplicar os princípios de menor privilégio e minimização a cenários de coleta e compartilhamento, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m7-u3-t2-s3",
@@ -918,7 +918,7 @@ const curriculumM7 = {
                     "resposta": "B"
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará princípios da LGPD a controles técnicos e organizacionais de proteção, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de relacionar princípios da LGPD a controles técnicos e organizacionais de proteção, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }

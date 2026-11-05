@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 3,
+    "unidadeTitulo": "1.3 Microsoft Excel",
+    "parte": 2,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U3P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U3P2.js",
+    "idsCompletos": [
+      "modulo-1-unidade-3-topico-2-sub-1",
+      "modulo-1-unidade-3-topico-2-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-3-topico-2-sub-1",
+      "titulo": "Referências relativas, absolutas e mistas",
+      "topicoTitulo": "Referências relativas, absolutas e mistas; operadores",
+      "topicoId": "modulo-1-unidade-3-topico-2",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno diferenciará referências relativas, absolutas e mistas no Excel.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as três classes de referência de célula no Excel — relativa, absoluta e mista; (b) a notação com cifrão ($ travando coluna, linha ou ambos); (c) o comportamento de cada classe quando a fórmula é copiada de uma origem para um destino; (d) o método de previsão em três passos (delta, aplicação nos eixos, resultado); (e) o suporte do simulador Excel deste projeto ao ajuste real de fórmulas. POR QUE O CONHECIMENTO É IMPORTANTE: a questão clássica mostra =A1+B1 em B2 e pede o resultado após copiar para C3; errar o eixo travado pelo $ inverte o gabarito; também é a base para tabelas de cálculo com fator fixo (alíquota, taxa). PRÉ-REQUISITOS: subtópico 1 da unidade 1.3 (células, intervalos e referências). OBJETIVOS OBSERVÁVEIS: (1) classificar uma referência pela notação; (2) prever a fórmula resultante após cópia entre origem e destino dados; (3) escolher a classe adequada para cada cenário de tabela. COMPETÊNCIAS DESENVOLVIDAS: raciocínio com coordenadas; análise de dependência entre células. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópico 2 (operadores e precedência); unidade 1.3 (funções de pesquisa); Módulo 8 (leitura de resultados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: referência é a forma de apontar uma célula ou intervalo dentro de uma fórmula. Referência relativa (A1): ao copiar a fórmula, a referência desloca-se na mesma medida em que a fórmula se move — se a fórmula andar uma coluna e uma linha, a referência anda uma coluna e uma linha. Referência absoluta ($A$1): o cifrão trava a coluna e a linha; a referência permanece idêntica em qualquer destino. Referência mista ($A1 ou A$1): trava apenas um eixo — $A1 mantém a coluna A fixa e deixa a linha relativa; A$1 mantém a linha 1 fixa e deixa a coluna relativa. Motivação: reuso de fórmula num intervalo com um fator fixo (taxa de desconto em uma única célula usada por todas as linhas). Método de previsão ao copiar: (1) calcular o delta de colunas e de linhas entre origem e destino; (2) aplicar o delta apenas aos eixos relativos, mantendo os eixos travados pelo $; (3) escrever a fórmula resultante. Propriedades: o $ não altera o valor calculado na célula de origem — $A$1 e A1 valem o mesmo na origem; a diferença aparece somente ao copiar. O simulador Excel deste projeto aplica essas regras reais ao copiar fórmulas (ExcelSimulator.ajustarFormulaAoCopiar): o $ é preservado e eixos mistos ajustam apenas o eixo relativo. Limitação declarada: o simulador não suporta nomes definidos nem referências estruturadas.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que relativa \"acompanha\" a cópia e absoluta \"fica parada\", com a analogia do endereço completo (com CEP) versus \"a casa ao lado\".\n- Nível intermediário: prever resultado de cópia com mistas: aplicar delta só no eixo livre, com dois exercícios de coordenadas.\n- Nível avançado: montar tabela com fator fixo ($D$1) copiada para dezenas de linhas e diagnosticar por que usar A1 solto corrompe o cálculo.\n- Nível especialista: resolver questão que combina cópia com funções (ex.: =PROCV(A2; $F$1:$G$10; 2; FALSO) copiada para baixo) e justificar por que o intervalo de busca deve ser absoluto.\n\nCOMPARAÇÕES CRÍTICAS:\n- Relativa x absoluta: a relativa desloca com a cópia; a absoluta permanece — em questão com taxa fixa, esquecer o $ muda o resultado e o gabarito.\n- Mista $A1 x A$1: $A1 trava a coluna; A$1 trava a linha — inverter os eixos travados é o erro de pegadinha mais cobrado.\n- Absoluta x intervalo nomeado: um nome definido também \"fixa\" um intervalo na prática, mas o simulador deste projeto não suporta nomes (limitação declarada) — para exercícios no simulador, use $.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"A$1 trava a coluna A\" — Motivo: troca dos eixos da notação — Versão tecnicamente correta: A$1 trava a linha 1 e deixa a coluna relativa; $A1 é que trava a coluna.\n- Afirmação errada: \"trocar A1 por $A$1 muda o resultado da fórmula na própria célula\" — Motivo: confunde comportamento na origem com comportamento ao copiar — Versão tecnicamente correta: na origem o valor é idêntico; o $ só altera o ajuste quando a fórmula é copiada.\n- Afirmação errada: \"copiar para cima não altera referências relativas\" — Motivo: supõe que só cópia para baixo/direita desloca — Versão tecnicamente correta: o delta pode ser negativo; copiar =A3 de B3 para B1 produz =A1 (duas linhas para cima).\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: referência relativa, absoluta e mista; eixo travado pelo $; delta de cópia; fator fixo de tabela.\n- Regras e fórmulas: destino = origem + delta nos eixos relativos; $ antes da letra trava coluna; $ antes do número trava linha; $A$1 trava ambos.\n- Exceções: o $ não muda o valor na célula de origem; cópia para cima/esquerda usa delta negativo; nomes definidos não funcionam no simulador.\n- Palavras-chave: relativa, absoluta, mista, cifrão, delta, cópia de fórmula, fator fixo.\n- Checklist de domínio: classifico pela notação; prevo o resultado de uma cópia dada origem e destino; escolho a classe certa para fator fixo; sei o que o simulador suporta.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Copiar =A1+B1 de B2 para C3: qual a fórmula resultante? (2) Qual notação trava apenas a linha? (3) Numa tabela com a taxa em D1 usada por todas as linhas, como referenciar D1 e por quê? (4) Copiar =A$1+B1 de B2 para C2: resultado? (5) Corrija: \"$A1 trava coluna e linha ao mesmo tempo\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Copiar a fórmula =A1+B1 da célula B2 para a célula C3.",
+          "resposta": "=B2+C2 — a cópia desloca uma coluna e uma linha; ambas as referências são relativas e deslocam na mesma medida (delta +1 coluna, +1 linha)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Tabela de 20 produtos: a taxa de desconto está em D1 e a fórmula de preço final =B2*(1-C2*D1) será copiada para baixo nas linhas 3 a 21. Como referenciar D1?",
+          "resposta": "Como $D$1 (absoluta). Ao copiar para baixo, B2 vira B3, B4... e C2 vira C3, C4... (relativas corretas), enquanto $D$1 permanece apontando a taxa única. Sem o $, D1 viria D2, D3... e cada linha usaria uma célula errada como taxa — o cálculo corrompe a partir da segunda linha."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Prever o resultado de copiar =A$1+B1 de B2 para C2.",
+          "resposta": "Delta: +1 coluna, 0 linhas. A$1: coluna relativa (A → B) e linha travada ($1) → B$1. B1: totalmente relativa → C1. Resultado: =B$1+C1."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário copia =A$1+B1 esperando que A$1 não ajuste linha e que B1 não ajuste coluna.",
+          "correcao": "Incorreto: A$1 trava apenas a linha 1 (a coluna A é relativa) e B1 é totalmente relativa. Copiando de B2 para C2 (delta +1 coluna, 0 linhas) o resultado é =B$1+C1; a coluna de A$1 desloca e B1 desloca coluna (a linha de B1 não muda porque o delta de linhas é zero)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual referência trava apenas a coluna A? A) $A1; B) A$1; C) $A$1.",
+          "resposta": "A"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A referência mista $A1 trava coluna e linha.",
+          "resposta": "Errado. $A1 trava apenas a coluna; a linha 1 é relativa e desloca quando a fórmula é copiada verticalmente."
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Ao copiar a fórmula =A3 de B3 para B1, a referência ajusta para A1.",
+          "resposta": "Certo. O delta é de −2 linhas; eixos relativos deslocam na mesma medida: A3 → A1 (a coluna não muda porque o delta de colunas é zero)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar referências relativas, absolutas e mistas pela notação e de prever a fórmula resultante após uma cópia entre origem e destino informados, aplicando o delta apenas aos eixos relativos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará referências relativas, absolutas e mistas no Excel"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as três classes de referência de célula no Excel — relativa, absoluta e mista; (b) a notação com cifrão ($ travando coluna, linha ou ambos); (c) o comportamento de cada classe quando a fórmula é copiada de uma origem para um destino; (d) o método de previsão em três passos (delta, aplicação nos eixos, resultado); (e) o suporte do simulador Excel deste projeto ao ajuste real de fórmulas. POR QUE O CONHECIMENTO É IMPORTANTE: a questão clássica mos…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Referências relativas, absolutas e mistas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário copia =A$1+B1 esperando que A$1 não ajuste linha e que B1 não ajuste coluna.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: A$1 trava apenas a linha 1 (a coluna A é relativa) e B1 é totalmente relativa. Copiando de B2 para C2 (delta +1 coluna, 0 linhas) o resultado é =B$1+C1; a coluna de A$1 desloca e B1 desloca coluna (a linha de B1 não muda porque o delta de linhas é zero)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Copiar a fórmula =A1+B1 da célula B2 para a célula C3.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=B2+C2 — a cópia desloca uma coluna e uma linha; ambas as referências são relativas e deslocam na mesma medida (delta +1 coluna, +1 linha).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Tabela de 20 produtos: a taxa de desconto está em D1 e a fórmula de preço final =B2*(1-C2*D1) será copiada para baixo nas linhas 3 a 21. Como referenciar D1?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Como $D$1 (absoluta). Ao copiar para baixo, B2 vira B3, B4... e C2 vira C3, C4... (relativas corretas), enquanto $D$1 permanece apontando a taxa única. Sem o $, D1 viria D2, D3... e cada linha usaria uma célula errada como taxa — o cálculo corrompe a partir da segunda linha.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário copia =A$1+B1 esperando que A$1 não ajuste linha e que B1 não ajuste coluna.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: A$1 trava apenas a linha 1 (a coluna A é relativa) e B1 é totalmente relativa. Copiando de B2 para C2 (delta +1 coluna, 0 linhas) o resultado é =B$1+C1; a coluna de A$1 desloca e B1 desloca coluna (a linha de B1 não muda porque o delta de linhas é zero).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-3-topico-2-sub-2",
+      "titulo": "Operadores aritméticos, relacionais, lógicos e de texto; precedência",
+      "topicoTitulo": "Referências relativas, absolutas e mistas; operadores",
+      "topicoId": "modulo-1-unidade-3-topico-2",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno identificará operadores do Excel e sua precedência.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os operadores do Excel por classe: aritméticos (+, -, *, /, ^, %), relacionais (=, <>, <, >, <=, >=), lógicos (funções E, OU, NÃO — não símbolos) e de texto (&); (b) a precedência completa e o papel dos parênteses; (c) os comportamentos não intuitivos: potência associativa à direita, percentual como operador, comparações encadeadas; (d) as diferenças declaradas entre o simulador deste projeto e o Excel real. POR QUE O CONHECIMENTO É IMPORTANTE: a questão típica pede o resultado de expressões como -2^2 ou 2^3^2; errar a precedência ou a associatividade muda o gabarito; e confundir operador lógico (função E) com símbolo é erro clássico. PRÉ-REQUISITOS: subtópico 1 (referências). OBJETIVOS OBSERVÁVEIS: (1) classificar operadores por classe; (2) ordenar a avaliação por precedência; (3) calcular expressões com potência, percentual e concatenação; (4) declarar as diferenças do simulador. COMPETÊNCIAS DESENVOLVIDAS: cálculo manual de expressões; previsão de resultados. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: funções lógicas (tópico 3); tratamento de erros (tópico 4); Módulo 8 (leitura de resultados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: operador é o símbolo que define a operação entre operandos numa fórmula. Aritméticos: soma (+), subtração (-), multiplicação (*), divisão (/), potência (^) e percentual (%) — o % opera sobre o número à sua esquerda, dividindo-o por 100 (5+10% é 5 + 0,1 = 5,1, não 5,5). Relacionais: igual (=), diferente (<>), menor/maior e variantes com igualdade (<=, >=) — retornam VERDADEIRO ou FALSO. Lógicos: no Excel em português, E, OU e NÃO são funções (E(cond1;cond2)), não símbolos — a prova usa essa característica como pegadinha. Texto: & concatena cadeias (=A1&\" \"&B1 une nome e sobrenome com espaço). Precedência (da maior para a menor): percentual (%), potência (^), multiplicação e divisão (* e /), soma e subtração (+ e -), concatenação (&) e, por fim, comparações (=, <>, <, >, <=, >=). Parênteses elevam qualquer operação à frente da ordem natural. Propriedades não intuitivas: a potência é associativa à direita — 2^3^2 é avaliado como 2^(3^2) = 2^9 = 512, não (2^3)^2 = 64; o unário menos na frente da potência obedece à implementação do Excel: -2^2 é avaliado como (-2)^2 = 4; comparações encadeadas são avaliadas da esquerda para a direita no simulador deste projeto (1=1=1 → VERDADEIRO=1 → VERDADEIRO), enquanto o Excel real rejeita a sintaxe — diferença declarada. O simulador segue a precedência do Excel e rejeita entradas inválidas com mensagem de erro útil.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir classes de operadores e aplicar a ordem simples (* e / antes de + e -).\n- Nível intermediário: calcular com percentual (5+10%) e com parênteses alterando a ordem; concatenar com &.\n- Nível avançado: resolver -2^2 e 2^3^2 explicando associatividade e o unário; prever resultado de comparação retornada em célula (VERDADEIRO/FALSO).\n- Nível especialista: auditar fórmula sem parênteses e reescrever com parênteses explícitos sem alterar o resultado; explicar a diferença documentada do simulador nas comparações encadeadas.\n\nCOMPARAÇÕES CRÍTICAS:\n- Operador lógico x função lógica: não existem símbolos E/OU/NÃO como operadores no Excel; são funções (E(a;b)) — a alternativa que usa \"&&\" como E no Excel está errada.\n- % como operador x formato percentual: % numa fórmula divide o valor por 100 na expressão; o formato percentual só muda a exibição — confundir os dois inverte a resposta.\n- Potência associativa à direita x à esquerda: 2^3^2 = 512 (direita), não 64 (esquerda) — a alternativa que aplica associatividade à esquerda é o distrator padrão.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"o operador & é aritmético\" — Motivo: troca entre classes — Versão tecnicamente correta: & é operador de texto (concatenação); os aritméticos são +, -, *, /, ^ e %.\n- Afirmação errada: \"2^3^2 resulta 64\" — Motivo: aplica associatividade à esquerda — Versão tecnicamente correta: a potência é associativa à direita: 2^(3^2) = 2^9 = 512.\n- Afirmação errada: \"5+10% resulta 5,5\" — Motivo: lê o % como \"10 por cento de 5\" — Versão tecnicamente correta: o operador % divide o próprio operando por 100: 5 + (10/100) = 5,1.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: classes de operadores, precedência, parênteses, associatividade da potência, percentual operador, concatenação.\n- Regras e fórmulas: ordem %, ^, */, +-, &, comparações; potência avalia da direita; -2^2 = 4 no Excel.\n- Exceções: E/OU/NÃO são funções; comparações encadeadas diferem entre simulador (esquerda-para-direita) e Excel real (sintaxe rejeitada).\n- Palavras-chave: operador, precedência, associatividade, potência, percentual, concatenação, relacional.\n- Checklist de domínio: classifico operadores; ordeno a avaliação; calculo -2^2, 2^3^2 e 5+10%; concateno com &; declaro a diferença do simulador.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Liste as classes de operadores do Excel e um exemplo de cada. (2) Qual o resultado de -2^2 no Excel e por quê? (3) Qual o resultado de 2^3^2? (4) Como unir nome e sobrenome de A1 e B1 com espaço entre eles? (5) Onde as funções E, OU e NÃO se classificam — operadores ou funções?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular =5+10%.",
+          "resposta": "5,1. O operador % divide o operando à sua esquerda por 100 antes da soma: 5 + (10/100) = 5 + 0,1 = 5,1 — não 5,5."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Montar o nome completo em C1 a partir de nome (A1) e sobrenome (B1), com espaço entre eles.",
+          "resposta": "=A1&\" \"&B1 — o operador & concatena textos; a cadeia de espaço entre aspas duplas garante a separação. Ex.: A1=\"Maria\", B1=\"Silva\" → \"Maria Silva\". Para converter número concatenado em texto com formato, no Excel real usa-se a função TEXTO (fora do escopo do simulador)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Prever o resultado de =-2^2 e de =2^3^2 no Excel e no simulador deste projeto.",
+          "resposta": "=-2^2: o unário aplica antes da potência nessa implementação: (-2)^2 = 4. =2^3^2: potência é associativa à direita: 2^(3^2) = 2^9 = 512 — e não (2^3)^2 = 64. O simulador deste projeto reproduz esses comportamentos (precedência do Excel), e trata comparações encadeadas da esquerda para a direita, diferença declarada em relação ao Excel real, que rejeita a sintaxe."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário espera que 2^3^2 resulte 64 (associatividade à esquerda).",
+          "correcao": "Incorreto: a potência é associativa à direita no Excel e no simulador: 2^(3^2) = 2^9 = 512. Para obter 64, seriam necessários parênteses explícitos: (2^3)^2."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual operador tem maior precedência? A) + ; B) * ; C) ^.",
+          "resposta": "C"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O operador & é um operador aritmético.",
+          "resposta": "Errado. & é operador de texto (concatenação); os aritméticos são +, -, *, /, ^ e %."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "O resultado de =5+10% é: A) 5,5; B) 5,1; C) 0,5.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar operadores por classe, ordenar a avaliação pela precedência e calcular expressões com potência, percentual e concatenação, incluindo os casos -2^2 e 2^3^2, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará operadores do Excel e sua precedência"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Operadores aritméticos: +, -, *, /, ^ (potência), % (porcentagem). Relacionais: =, <>, <, >, <=, >=. Lógicos: E, OU, NÃO (funções, não símbolos). Texto: & (concatenação). Precedência (do Excel): %, ^, * e /, + e -, &, = <> < > <= >=. O simulador segue a precedência do Excel (ex.: -2^2 = 4; 2^3^2 = 512; 5+10% = 5,1). Parênteses alteram a ordem. Diferença declarada: comparações encadeadas (1=1=1) são avaliadas da esquerda para a direita no simulador; o Excel rejeita a sintaxe.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Operadores aritméticos, relacionais, lógicos e de texto; precedência",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário espera que 2^3^2 resulte 64 (associatividade à esquerda).",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: a potência é associativa à direita no Excel e no simulador: 2^(3^2) = 2^9 = 512."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Calcular 5 + 10%.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=5+10% = 5,1 (o % divide 10 por 100 antes da soma).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Concatenar nome e sobrenome com espaço.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=A1&\" \"&B1 — operador & une textos; aspas duplas delimitam literais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário espera que 2^3^2 resulte 64 (associatividade à esquerda).",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: a potência é associativa à direita no Excel e no simulador: 2^(3^2) = 2^9 = 512.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

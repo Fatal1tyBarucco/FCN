@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 1,
+    "unidadeTitulo": "8.1 Fundamentos Visuais",
+    "parte": 1,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U1P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U1P1.js",
+    "idsCompletos": [
+      "m8-u1-t1-s1",
+      "m8-u1-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u1-t1-s1",
+      "titulo": "O que a visualização de dados deve realizar",
+      "topicoTitulo": "Propósito da visualização e percepção visual",
+      "topicoId": "modulo-8-unidade-1-topico-1",
+      "unidadeTitulo": "8.1 Fundamentos Visuais",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno relacionará cada tarefa analítica ao tipo de gráfico capaz de executá-la.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o propósito da visualização de dados; (b) a diferença entre visualização exploratória e explicativa; (c) a relação entre pergunta analítica e escolha de gráfico; (d) a integridade gráfica. POR QUE O CONHECIMENTO É IMPORTANTE: a visualização é o último elo entre a análise e a decisão; um gráfico errado leva a decisão errada, e a prova cobra a escolha do gráfico conforme o objetivo. PRÉ-REQUISITOS: conceitos básicos de dados e de estatística descritiva. OBJETIVOS OBSERVÁVEIS: (1) definir visualização e seus propósitos; (2) distinguir exploratória de explicativa; (3) escolher gráfico conforme o objetivo analítico. COMPETÊNCIAS DESENVOLVIDAS: análise visual; comunicação de dados. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.2 (gráficos); unidade 8.5 (storytelling); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: definição de visualização como representação gráfica de dados para ampliar a cognição humana; propósitos: explorar (descobrir padrões), explicar (comunicar achados), monitorar (acompanhar indicadores), persuadir (apoiar decisão); a visualização deve responder a uma pergunta analítica; princípios de integridade gráfica (proporção, linha de base, escala); a escolha do gráfico depende do tipo de dado e do objetivo (comparar, distribuir, relacionar, compor, evoluir). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que gráfico serve a uma pergunta, não decoração.\n- Nível intermediário: distinguir visualização exploratória de explicativa.\n- Nível avançado: escolher gráfico conforme objetivo e tipo de dado.\n- Nível especialista: auditar um painel quanto à integridade gráfica.\nCOMPARAÇÕES CRÍTICAS:\n- exploratória x explicativa: a primeira busca padrões; a segunda comunica achados; muda a escolha de gráfico e de anotação.\n- tabela x gráfico: tabela é precisa para consulta; gráfico é melhor para padrão e tendência.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"qualquer gráfico serve para qualquer dado\" — Motivo: cada gráfico tem tipo de dado adequado — Versão tecnicamente correta: escolher conforme o dado e o objetivo.\n- Afirmação errada: \"mais cores e efeitos melhoram a visualização\" — Motivo: ruído visual prejudica — Versão tecnicamente correta: simplicidade e integridade.\n- Afirmação errada: \"gráfico substitui a análise\" — Motivo: visualização apoia, não substitui — Versão tecnicamente correta: complementar com números e contexto.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: visualização, propósito, exploratória, explicativa, integridade gráfica, escolha de gráfico.\n- Regras e fórmulas: gráfico deve responder a pergunta analítica; manter proporção e linha de base.\n- Exceções: em casos de muitas categorias, tabela pode ser melhor.\n- Palavras-chave: visualização, propósito, exploratória, explicativa, integridade, escolha.\n- Checklist de domínio: (1) Defino visualização e propósitos? (2) Distingo exploratória de explicativa? (3) Escolho gráfico conforme objetivo? (4) Avalio integridade gráfica?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual o propósito da visualização? (2) Diferença entre exploratória e explicativa? (3) Como escolher o gráfico? (4) O que é integridade gráfica? (5) Quando tabela é melhor que gráfico?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Pergunta: 'Qual unidade atendeu mais em cada mês do semestre?' Qual gráfico?",
+          "resposta": "Barras agrupadas por mês (uma barra por unidade) ou linhas com uma série por unidade, se o foco for a evolução de cada unidade ao longo do tempo. A pergunta tem duas tarefas — comparação entre unidades e evolução mensal — e a escolha prioriza uma delas; o título deve anunciar qual."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Gestor pede 'um gráfico bonito' para 12 categorias com valores muito próximos entre si. O que entregar?",
+          "resposta": "Tabela ordenada decrescentemente com rótulos de destaque para os três maiores, e não gráfico de pizza: 12 fatias com valores próximos são ilegíveis (ângulos e áreas quase iguais). O gráfico adequado seria de barras ordenadas; a tabela é melhor quando o leitor vai consultar valores específicos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Gráfico tridimensional transmite mais informação porque mostra três dimensões.'",
+          "correcao": "Errado. O 3D aplicado a dados bidimensionais adiciona perspectiva decorativa: distorce áreas, esconde barras atrás de outras e obriga o leitor a corrigir a distorção visual. Informação a mais exigiria uma terceira variável real (por exemplo, tamanho ou cor codificando um valor)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A escolha do gráfico deve começar pela pergunta de negócio, e não pelo tipo disponível na ferramenta.",
+          "resposta": "Certo. A tarefa analítica define o gráfico; a ferramenta é meio, não critério."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para distribuição de idades de 500 servidores, o gráfico mais indicado é: A) linhas; B) histograma; C) pizza; D) dispersão.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de relacionar cada tarefa analítica ao tipo de gráfico capaz de executá-la, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "P6E_Kts9pxE",
+          "titulo": "É o fim do Power BI? Criando Dashboard com Python em 15 minutos",
+          "canal": "Asimov Academy",
+          "urlOriginal": "https://www.youtube.com/watch?v=P6E_Kts9pxE",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/P6E_Kts9pxE",
+          "descricao": "Videoaula prática de criação de dashboard interativo com Python usando Streamlit, Plotly e Pandas. Demonstra: carregamento e preparação de dados, criação de gráficos interativos (barras, linhas, dispersão, mapas), filtros dinâmicos (sidebar, selectbox, slider), layout em colunas, métricas (KPIs), deployment no Streamlit Community Cloud. Compara a abordagem código-first (Python) com ferramentas low-code (Power BI, Tableau), discutindo versionamento, reprodutibilidade, custo e flexibilidade. Inclui boas práticas de design visual e acessibilidade.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "relacionará cada tarefa analítica ao tipo de gráfico capaz de executá-la"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o propósito da visualização de dados; (b) a diferença entre visualização exploratória e explicativa; (c) a relação entre pergunta analítica e escolha de gráfico; (d) a integridade gráfica. POR QUE O CONHECIMENTO É IMPORTANTE: a visualização é o último elo entre a análise e a decisão; um gráfico errado leva a decisão errada, e a prova cobra a escolha do gráfico conforme o objetivo. PRÉ-REQUISITOS: conceitos básicos de dados e de estatística descr…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a O que a visualização de dados deve realizar",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Gráfico tridimensional transmite mais informação porque mostra três dimensões.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O 3D aplicado a dados bidimensionais adiciona perspectiva decorativa: distorce áreas, esconde barras atrás de outras e obriga o leitor a corrigir a distorção visual. Informação a mais exigiria uma terceira variável real (por exemplo, tamanho ou cor codificando um valor)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Pergunta: 'Qual unidade atendeu mais em cada mês do semestre?' Qual gráfico?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Barras agrupadas por mês (uma barra por unidade) ou linhas com uma série por unidade, se o foco for a evolução de cada unidade ao longo do tempo. A pergunta tem duas tarefas — comparação entre unidades e evolução mensal — e a escolha prioriza uma delas; o título deve anunciar qual.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Gestor pede 'um gráfico bonito' para 12 categorias com valores muito próximos entre si. O que entregar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Tabela ordenada decrescentemente com rótulos de destaque para os três maiores, e não gráfico de pizza: 12 fatias com valores próximos são ilegíveis (ângulos e áreas quase iguais). O gráfico adequado seria de barras ordenadas; a tabela é melhor quando o leitor vai consultar valores específicos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Gráfico tridimensional transmite mais informação porque mostra três dimensões.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O 3D aplicado a dados bidimensionais adiciona perspectiva decorativa: distorce áreas, esconde barras atrás de outras e obriga o leitor a corrigir a distorção visual. Informação a mais exigiria uma terceira variável real (por exemplo, tamanho ou cor codificando um valor).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u1-t1-s2",
+      "titulo": "Princípios da Gestalt aplicados a gráficos",
+      "topicoTitulo": "Propósito da visualização e percepção visual",
+      "topicoId": "modulo-8-unidade-1-topico-1",
+      "unidadeTitulo": "8.1 Fundamentos Visuais",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno aplicará proximidade, similaridade, continuidade, fechamento e figura-fundo ao desenho de um gráfico.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) princípios da Gestalt aplicados a gráficos: proximidade, similaridade, continuidade, fechamento, figura-fundo; (b) como eles guiam a percepção visual; (c) implicações para o desenho de gráficos. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a aplicação dos princípios da Gestalt na leitura de gráficos; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de visualização. OBJETIVOS OBSERVÁVEIS: (1) definir os cinco princípios; (2) aplicá-los a gráficos; (3) identificar violações. COMPETÊNCIAS DESENVOLVIDAS: análise visual; desenho de gráficos. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (fundamentos); unidade 8.2 (gráficos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: Gestalt como teoria da percepção que descreve como o cérebro agrupa elementos visuais; proximidade (elementos próximos são percebidos como grupo); similaridade (elementos semelhantes em cor/forma/tamanho são agrupados); continuidade (percepção de linhas contínuas); fechamento (completar formas incompletas); figura-fundo (separação entre objeto e fundo); aplicação: agrupar séries por cor, ordenar por proximidade, evitar confusão figura-fundo. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer os princípios em exemplos simples.\n- Nível intermediário: aplicar a gráficos reais.\n- Nível avançado: identificar violações e propor correção.\n- Nível especialista: auditar um painel quanto aos princípios.\nCOMPARAÇÕES CRÍTICAS:\n- proximidade x similaridade: proximidade agrupa por posição; similaridade por aparência; podem conflitar.\n- figura-fundo x continuidade: figura-fundo separa; continuidade conecta.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"cores aleatórias não afetam a leitura\" — Motivo: similaridade por cor guia o agrupamento — Versão tecnicamente correta: usar cor com propósito.\n- Afirmação errada: \"grade forte melhora a leitura\" — Motivo: compete com os dados (figura-fundo) — Versão tecnicamente correta: grade discreta.\n- Afirmação errada: \"agrupar por proximidade sempre é suficiente\" — Motivo: pode conflitar com similaridade — Versão tecnicamente correta: combinar princípios.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: proximidade, similaridade, continuidade, fechamento, figura-fundo.\n- Regras e mecanismos: a percepção agrupa por proximidade e similaridade; a continuidade conecta; o fechamento completa; figura-fundo separa.\n- Exceções: princípios podem conflitar, exigindo hierarquia visual.\n- Palavras-chave: Gestalt, proximidade, similaridade, continuidade, fechamento, figura-fundo.\n- Checklist de domínio: (1) Defino os cinco princípios? (2) Aplico a gráficos? (3) Identifico violações? (4) Proponho correção?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é proximidade? (2) O que é similaridade? (3) O que é continuidade? (4) O que é fechamento? (5) O que é figura-fundo?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Gráfico de barras mostra quatro grupos de três barras, todos colados. Como aplicar proximidade?",
+          "resposta": "Aumentar a folga ENTRE grupos e reduzir a folga DENTRO de cada grupo: o olho passa a enxergar quatro blocos (três unidades) em vez de doze barras soltas. O princípio da proximidade faz o agrupamento sem nenhuma linha adicional."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Painel mensal usa 'azul' para receita em janeiro e 'verde' para receita em março. Avalie.",
+          "resposta": "Viola a similaridade: a mesma série mudou de cor, então o leitor supõe categoria nova. A regra é cor fixa por série durante todo o painel; variação de cor deve codificar variação de significado (por exemplo, acima/abaixo da meta), nunca apenas passagem de tempo."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Na Gestalt, cores diferentes no mesmo gráfico sempre indicam grupos diferentes.'",
+          "correcao": "Errado: cores diferentes sugerem grupos diferentes APENAS quando a mudança de cor é usada como codificação. Se a ferramenta alterna cores automaticamente a cada mês ou a cada fatia sem mudança de categoria, a percepção é enganada — a cor passa a ser ruído decorativo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O princípio da continuidade explica por que séries temporais são lidas como trajetórias que o olho completa.",
+          "resposta": "Certo. A percepção segue linhas contínuas, o que dá ao gráfico de linhas sua força de leitura de tendência."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Separar categorias usando espaço (e não molduras) aplica qual princípio da Gestalt? A) fechamento; B) proximidade; C) figura-fundo; D) contraste.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar proximidade, similaridade, continuidade, fechamento e figura-fundo ao desenho de um gráfico, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará proximidade, similaridade, continuidade, fechamento e figura-fundo ao desenho de um gráfico"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) princípios da Gestalt aplicados a gráficos: proximidade, similaridade, continuidade, fechamento, figura-fundo; (b) como eles guiam a percepção visual; (c) implicações para o desenho de gráficos. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a aplicação dos princípios da Gestalt na leitura de gráficos; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de visualização. OBJETIVOS OBSERVÁVEIS: (1) definir os cinco princípios; (2) …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Princípios da Gestalt aplicados a gráficos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Na Gestalt, cores diferentes no mesmo gráfico sempre indicam grupos diferentes.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado: cores diferentes sugerem grupos diferentes APENAS quando a mudança de cor é usada como codificação. Se a ferramenta alterna cores automaticamente a cada mês ou a cada fatia sem mudança de categoria, a percepção é enganada — a cor passa a ser ruído decorativo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Gráfico de barras mostra quatro grupos de três barras, todos colados. Como aplicar proximidade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Aumentar a folga ENTRE grupos e reduzir a folga DENTRO de cada grupo: o olho passa a enxergar quatro blocos (três unidades) em vez de doze barras soltas. O princípio da proximidade faz o agrupamento sem nenhuma linha adicional.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Painel mensal usa 'azul' para receita em janeiro e 'verde' para receita em março. Avalie.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Viola a similaridade: a mesma série mudou de cor, então o leitor supõe categoria nova. A regra é cor fixa por série durante todo o painel; variação de cor deve codificar variação de significado (por exemplo, acima/abaixo da meta), nunca apenas passagem de tempo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Na Gestalt, cores diferentes no mesmo gráfico sempre indicam grupos diferentes.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado: cores diferentes sugerem grupos diferentes APENAS quando a mudança de cor é usada como codificação. Se a ferramenta alterna cores automaticamente a cada mês ou a cada fatia sem mudança de categoria, a percepção é enganada — a cor passa a ser ruído decorativo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

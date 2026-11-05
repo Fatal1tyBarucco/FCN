@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 5,
+    "unidadeTitulo": "8.5 Storytelling com Dados",
+    "parte": 1,
+    "totalPartesUnidade": 2,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U5P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U5P1.js",
+    "idsCompletos": [
+      "m8-u5-t1-s1",
+      "m8-u5-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u5-t1-s1",
+      "titulo": "Contexto, conflito, descoberta e recomendação",
+      "topicoTitulo": "Arco narrativo: contexto, conflito, descoberta e recomendação",
+      "topicoId": "modulo-8-unidade-5-topico-1",
+      "unidadeTitulo": "8.5 Storytelling com Dados",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno estruturará uma apresentação de dados em quatro movimentos e testará a narrativa em uma frase.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) storytelling com dados: contexto, conflito, descoberta, recomendação; (b) estrutura narrativa; (c) aplicação em painéis. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a estrutura narrativa e a integridade; um storytelling sem integridade é propaganda. PRÉ-REQUISITOS: conceitos de visualização. OBJETIVOS OBSERVÁVEIS: (1) descrever a estrutura narrativa; (2) aplicar em um caso; (3) manter integridade. COMPETÊNCIAS DESENVOLVIDAS: comunicação de dados; narrativa analítica. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.5 (público, métricas, incerteza); Módulo 6 (ética). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: storytelling com dados como estrutura narrativa para comunicar achados analíticos: contexto (situação inicial), conflito (problema ou oportunidade), descoberta (achado analítico), recomendação (ação sugerida); a narrativa deve ser ancorada em dados e manter integridade (não distorcer, não omitir contexto desfavorável); aplicação em painéis: guiar o leitor da visão geral ao detalhe. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: identificar os quatro elementos da narrativa.\n- Nível intermediário: construir uma narrativa a partir de dados.\n- Nível avançado: aplicar em painéis e manter integridade.\n- Nível especialista: auditar um storytelling quanto à integridade.\nCOMPARAÇÕES CRÍTICAS:\n- narrativa x relatório: narrativa guia; relatório lista.\n- descoberta x recomendação: descoberta é o achado; recomendação é a ação.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"storytelling pode omitir dados desfavoráveis\" — Motivo: viola integridade — Versão tecnicamente correta: comunicar incertezas e limitações.\n- Afirmação errada: \"narrativa substitui a análise\" — Motivo: storytelling apoia, não substitui — Versão tecnicamente correta: ancorar em dados.\n- Afirmação errada: \"qualquer gráfico serve para contar a história\" — Motivo: deve ser adequado ao dado e ao objetivo — Versão tecnicamente correta: escolher conforme o objetivo.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: contexto, conflito, descoberta, recomendação, integridade, narrativa.\n- Regras e mecanismos: estrutura em quatro atos; ancorar em dados; comunicar incertezas.\n- Exceções: em painéis de monitoramento, a narrativa pode ser mais leve.\n- Palavras-chave: storytelling, contexto, conflito, descoberta, recomendação, integridade.\n- Checklist de domínio: (1) Descrevo a estrutura narrativa? (2) Aplico em caso? (3) Mantenho integridade? (4) Comunico incertezas?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais os quatro elementos do storytelling? (2) O que é contexto? (3) O que é conflito? (4) O que é descoberta? (5) O que é recomendação?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Estruturar os quatro movimentos para: espera média de um serviço subiu de 12 para 21 minutos.",
+          "resposta": "Contexto: meta operacional de espera ≤ 15 minutos, série mensal. Conflito: a espera média subiu 75% [(21 − 12) ÷ 12] e rompeu a meta. Descoberta: box plot revela cauda longa concentrada em um tipo de procedimento; barras mostram concentração em uma unidade. Recomendação: redimensionar a esteira do procedimento X na unidade Y, com revisão em 60 dias."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Diretor pede 2 minutos. Como abrir?",
+          "resposta": "Pela recomendação e pelo conflito: 'A espera subiu 75% e rompeu a meta; proponho X até Z'. Em seguida, um único gráfico de suporte e os números-chave. Detalhes metodológicos em anexo, para quem perguntar."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A apresentação deve seguir a ordem em que os dados foram coletados.'",
+          "correcao": "Errado. A ordem da investigação não é a da narrativa de decisão: apresente conclusão e ação primeiro, evidência depois. Relatar o processo ('primeiro limpei a base, depois...') é assunto de anexo metodológico, não do slide de abertura."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A recomendação deve indicar ação, responsável, prazo e o custo de não agir.",
+          "resposta": "Certo. Recomendação sem esses elementos é constatação — não apoia decisão."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "O movimento que apresenta a tensão exigindo decisão é: A) contexto; B) conflito; C) coleta; D) apêndice.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de estruturar uma apresentação de dados em quatro movimentos e testará a narrativa em uma frase, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "estruturará uma apresentação de dados em quatro movimentos e testará a narrativa em uma frase"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) storytelling com dados: contexto, conflito, descoberta, recomendação; (b) estrutura narrativa; (c) aplicação em painéis. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a estrutura narrativa e a integridade; um storytelling sem integridade é propaganda. PRÉ-REQUISITOS: conceitos de visualização. OBJETIVOS OBSERVÁVEIS: (1) descrever a estrutura narrativa; (2) aplicar em um caso; (3) manter integridade. COMPETÊNCIAS DESENVOLVIDAS: comunicação d…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Contexto, conflito, descoberta e recomendação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A apresentação deve seguir a ordem em que os dados foram coletados.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A ordem da investigação não é a da narrativa de decisão: apresente conclusão e ação primeiro, evidência depois. Relatar o processo ('primeiro limpei a base, depois...') é assunto de anexo metodológico, não do slide de abertura."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Estruturar os quatro movimentos para: espera média de um serviço subiu de 12 para 21 minutos.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Contexto: meta operacional de espera ≤ 15 minutos, série mensal. Conflito: a espera média subiu 75% [(21 − 12) ÷ 12] e rompeu a meta. Descoberta: box plot revela cauda longa concentrada em um tipo de procedimento; barras mostram concentração em uma unidade. Recomendação: redimensionar a esteira do procedimento X na unidade Y, com revisão em 60 dias.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Diretor pede 2 minutos. Como abrir?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pela recomendação e pelo conflito: 'A espera subiu 75% e rompeu a meta; proponho X até Z'. Em seguida, um único gráfico de suporte e os números-chave. Detalhes metodológicos em anexo, para quem perguntar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A apresentação deve seguir a ordem em que os dados foram coletados.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A ordem da investigação não é a da narrativa de decisão: apresente conclusão e ação primeiro, evidência depois. Relatar o processo ('primeiro limpei a base, depois...') é assunto de anexo metodológico, não do slide de abertura.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u5-t2-s1",
+      "titulo": "Público, decisão a apoiar e métricas relevantes",
+      "topicoTitulo": "Público, decisão e seleção de métricas",
+      "topicoId": "modulo-8-unidade-5-topico-2",
+      "unidadeTitulo": "8.5 Storytelling com Dados",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno definirá público e decisão de uma comunicação e justificará a seleção de cada métrica.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) público e decisão a apoiar; (b) seleção de métricas relevantes; (c) alinhamento entre dados e decisão. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a definição do público e da decisão antes da escolha de métricas; métricas irrelevantes levam a decisões erradas. PRÉ-REQUISITOS: conceitos de visualização e de storytelling. OBJETIVOS OBSERVÁVEIS: (1) definir o público e a decisão; (2) selecionar métricas relevantes; (3) alinhar dados à decisão. COMPETÊNCIAS DESENVOLVIDAS: análise de necessidade; comunicação de dados. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.5 (storytelling); unidade 8.4 (BI). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: público como quem toma a decisão (gestor, técnico, cidadão); decisão como ação a apoiar (alocar recurso, mudar processo, comunicar); métricas relevantes como indicadores que informam a decisão (não apenas os disponíveis); alinhamento: a métrica deve ser acionável, compreensível e tempestiva; evitar vanity metrics (métricas vaidosas) que não informam decisão. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: identificar o público e a decisão.\n- Nível intermediário: selecionar métricas relevantes.\n- Nível avançado: alinhar dados à decisão e evitar vanity metrics.\n- Nível especialista: auditar um painel quanto à relevância das métricas.\nCOMPARAÇÕES CRÍTICAS:\n- métrica relevante x vanity metric: a primeira informa decisão; a segunda apenas impressiona.\n- público técnico x gestor: o técnico quer detalhe; o gestor quer síntese.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"mostrar todos os dados é melhor\" — Motivo: informação irrelevante dilui a mensagem — Versão tecnicamente correta: selecionar métricas relevantes.\n- Afirmação errada: \"a mesma métrica serve para todo público\" — Motivo: públicos têm necessidades diferentes — Versão tecnicamente correta: adaptar ao público.\n- Afirmação errada: \"métrica disponível é métrica relevante\" — Motivo: disponibilidade não implica relevância — Versão tecnicamente correta: avaliar a decisão a apoiar.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: público, decisão, métrica, relevância, vanity metric, alinhamento.\n- Regras e mecanismos: definir público e decisão antes de escolher métricas.\n- Exceções: em painéis de monitoramento, pode-se incluir métricas de contexto.\n- Palavras-chave: público, decisão, métrica, relevância, alinhamento.\n- Checklist de domínio: (1) Defino público e decisão? (2) Seleciono métricas relevantes? (3) Evito vanity metrics? (4) Alinho dados à decisão?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como definir o público? (2) Como definir a decisão? (3) O que é uma métrica relevante? (4) O que é uma vanity metric? (5) Como alinhar dados à decisão?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Mesmo relatório para equipe técnica e para diretoria: o que muda?",
+          "resposta": "Técnica: distribuição completa, box plot, método e limitações, mais números. Diretoria: mediana, pico, comparação com meta, custo estimado e a recomendação — com o método em anexo. Os dados são os mesmos; a profundidade e o vocabulário mudam com o público e a decisão."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Painel de atendimento com 12 métricas. Como reduzir?",
+          "resposta": "Listar as decisões que o painel apoia; para cada métrica, perguntar o que se faria se ela mudasse; eliminar as que não mudam ação (vanidade), consolidar as redundantes (três métricas de volume viram uma com segmentação) e manter as essenciais com meta e tendência. Resultado esperado: painel com poucas métricas, cada uma ligada a uma decisão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Métrica de processo é dispensável, pois o que importa é o resultado final.'",
+          "correcao": "Errado. Resultado consolida o passado; métrica de processo (fila, prazo de resposta) permite corrigir ANTES de o resultado piorar. Painel só de resultados reage tarde."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Métricas de um painel devem ter definição formal (fórmula, período e unidade) para evitar disputa de números.",
+          "resposta": "Certo. 'Atendimento médio' sem definição gera contas diferentes e discussão de processo em vez de decisão."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual é métrica de processo (leading)? A) receita realizada no mês; B) prazo médio de resposta na fila; C) total de atendimentos concluídos no trimestre; D) saldo orçamentário.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de definir público e decisão de uma comunicação e justificará a seleção de cada métrica, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "definirá público e decisão de uma comunicação e justificará a seleção de cada métrica"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) público e decisão a apoiar; (b) seleção de métricas relevantes; (c) alinhamento entre dados e decisão. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a definição do público e da decisão antes da escolha de métricas; métricas irrelevantes levam a decisões erradas. PRÉ-REQUISITOS: conceitos de visualização e de storytelling. OBJETIVOS OBSERVÁVEIS: (1) definir o público e a decisão; (2) selecionar métricas relevantes; (3) alinhar dados à decisã…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Público, decisão a apoiar e métricas relevantes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Métrica de processo é dispensável, pois o que importa é o resultado final.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Resultado consolida o passado; métrica de processo (fila, prazo de resposta) permite corrigir ANTES de o resultado piorar. Painel só de resultados reage tarde."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Mesmo relatório para equipe técnica e para diretoria: o que muda?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Técnica: distribuição completa, box plot, método e limitações, mais números. Diretoria: mediana, pico, comparação com meta, custo estimado e a recomendação — com o método em anexo. Os dados são os mesmos; a profundidade e o vocabulário mudam com o público e a decisão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Painel de atendimento com 12 métricas. Como reduzir?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Listar as decisões que o painel apoia; para cada métrica, perguntar o que se faria se ela mudasse; eliminar as que não mudam ação (vanidade), consolidar as redundantes (três métricas de volume viram uma com segmentação) e manter as essenciais com meta e tendência. Resultado esperado: painel com poucas métricas, cada uma ligada a uma decisão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Métrica de processo é dispensável, pois o que importa é o resultado final.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Resultado consolida o passado; métrica de processo (fila, prazo de resposta) permite corrigir ANTES de o resultado piorar. Painel só de resultados reage tarde.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

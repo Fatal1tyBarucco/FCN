@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 2,
+    "unidadeTitulo": "3.2 Calendários e Reuniões",
+    "parte": 2,
+    "totalPartesUnidade": 2,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U2P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U2P2.js",
+    "idsCompletos": [
+      "m3-u2-t2-s2",
+      "m3-u2-t3-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u2-t2-s2",
+      "titulo": "Controle de participantes, lobby e gravação",
+      "topicoTitulo": "Microsoft Teams, Google Meet e Zoom",
+      "topicoId": "modulo-3-unidade-2-topico-2",
+      "unidadeTitulo": "3.2 Calendários e Reuniões",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Alvo compreenderá recursos de segurança em reuniões online.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) recursos de controle de participantes; (b) o papel do lobby/sala de espera; (c) controles de áudio, vídeo e compartilhamento; (d) gravação e senha; (e) limites condicionais ao plano. POR QUE O CONHECIMENTO É IMPORTANTE: reuniões mal controladas sofrem intrusão e vazamento; a prova cobra a função de cada recurso de moderação. PRÉ-REQUISITOS: noção de reunião online e de papéis (anfitrião/coanfitrião). OBJETIVOS OBSERVÁVEIS: (1) explicar lobby e senha; (2) descrever a moderação de participantes; (3) indicar controles de compartilhamento e mute; (4) reconhecer que os nomes e a disponibilidade variam por plataforma. COMPETÊNCIAS DESENVOLVIDAS: condução segura de reuniões; aplicação de controles de acesso. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (lobby e autenticação); unidade 5.1 (intrusão); unidade 2.3 (consentimento de gravação). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o anfitrião (host) e seus coanfitriões coordenam a reunião. O lobby (sala de espera) retém os participantes até a aprovação, reduzindo intrusão; a senha da reunião protege o acesso; o login obrigatório restringe a usuários autenticados. Entre os controles de moderação: remover participante, silenciar todos, desativar o microfone ou a câmera de alguém, bloquear ou restringir o compartilhamento de tela, e impedir que participantes entrem antes do anfitrião. A gravação (vídeo, áudio, chat e, conforme a plataforma, transcrição) é um recurso que depende de plano/permissão. O chat permite troca textual persistente e pode ser gravado junto. A disponibilidade e a nomenclatura desses controles variam por plataforma, plano e versão, devendo ser confirmadas na documentação oficial; o que é estável é o princípio: quanto mais sensível a reunião, mais restritiva deve ser a configuração.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer para que servem lobby, senha e \"silenciar todos\".\n- Nível intermediário: ordenar controles conforme o risco (reunião aberta, interna, sensível).\n- Nível avançado: combinar lobby, autenticação e restrição de compartilhamento para conter intrusão.\n- Nível especialista: diante de uma intrusão, executar a sequência de contenção (remover, bloquear entrada, travar reunião) e registrar o incidente.\nCOMPARAÇÕES CRÍTICAS:\n- lobby x senha: o lobby exige aprovação caso a caso; a senha apenas exige conhecimento do segredo — o lobby é mais forte contra link divulgado.\n- anfitrião x participante: só papéis elevados moderam; afirmar que qualquer um remove gera erro.\n- gravação x privacidade: gravar amplia o registro e o risco; exige consentimento e política.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Com senha, o lobby é desnecessário.\" — Motivo: a senha vaza junto com o link — Versão tecnicamente correta: o lobby contém quem tem o link sem autorização.\n- Afirmação errada: \"Qualquer participante pode remover outro.\" — Motivo: moderação é de papéis elevados — Versão tecnicamente correta: apenas anfitrião/coanfitrião moderam.\n- Afirmação errada: \"Todos os planos permitem gravar em nuvem.\" — Motivo: depende do plano — Versão tecnicamente correta: conferir a licença e a documentação.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: anfitrião, coanfitrião, lobby, senha, mute, gravação, compartilhamento.\n- Regras e fórmulas: reunião mais sensível → configuração mais restritiva.\n- Exceções: nomes e disponibilidade de recursos variam por plataforma/plano.\n- Palavras-chave: moderação, sala de espera, controle de acesso, gravação.\n- Checklist de domínio: (1) Explico lobby e senha? (2) Descrevo a moderação? (3) Indico controles? (4) Ressalvo o condicional ao plano?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o lobby faz? (2) Quem pode remover participantes? (3) O que a senha protege? (4) Por que a disponibilidade varia? (5) Que controles restringem o compartilhamento?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Realizar uma reunião com fornecedor externo sobre assunto sensível, reduzindo o risco de entrada de pessoa não convidada e de exposição acidental de tela.",
+          "resposta": "Reunião com entrada controlada, apresentação restrita a dois papéis, áudio organizado e gravação iniciada somente após o aviso e a concordância dos participantes."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa conduzir uma reunião de conselho com votação nominal, garantindo que apenas membros votem e que o resultado seja registrado sem ambiguidade.",
+          "resposta": "Deliberações com votação nominal registrada apenas por membros, ouvintes sem direito a voto, presença comprovada e gravação arquivada com os registros da sessão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a gravação de reunião dispensa consentimento porque a sessão é interna e que, além disso, o recurso está disponível em qualquer plano contratado.",
+          "correcao": "A afirmação é incorreta nos dois pontos: reunião interna não dispensa base legal nem informação prévia, e a gravação depende da licença contratada, com retenção definida."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O lobby permite ao anfitrião aprovar ou rejeitar participantes antes de entrar.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quem pode remover um participante de uma reunião? A) Qualquer participante; B) O anfitrião; C) O primeiro a entrar; D) Ninguém.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de alvo compreenderá recursos de segurança em reuniões online, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "Alvo compreenderá recursos de segurança em reuniões online"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Lobby (sala de espera): participantes aguardam aprovação do anfitrião antes de entrar. Remover participante: anfitrião pode expulsar participantes. Bloquear vídeo/microfone: anfitrião pode desativar dispositivos de participantes. Gravação: anfitrião pode gravar a reunião (vídeo, áudio, chat). Compartilhamento de tela: controle de quem pode compartilhar. Chat: mensagens durante a reunião. Senha da reunião: proteção por senha para acesso. Espera: participantes entram em ordem de aprovação.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Controle de participantes, lobby e gravação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A gravação de reuniões não requer consentimento.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Depende da legislação. No Brasil, a LGPD e o Marco Civil podem exigir consentimento para gravação de comunicações. Sempre informar os participantes e obter consentimento quando aplicável."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Realizar uma reunião com fornecedor externo sobre assunto sensível, reduzindo o risco de entrada de pessoa não convidada e de exposição acidental de tela.",
+            "dados": "Reunião de quarenta e cinco minutos com quatro participantes internos e dois externos, link divulgado por correio eletrônico, apresentação com dados de clientes e gravação prevista.",
+            "conceitos": [
+              "lobby: retenção de participantes até a aprovação do anfitrião",
+              "coanfitrião: papel que auxilia a moderação",
+              "compartilhamento restrito: permissão que limita a apresentação de tela a papéis definidos"
+            ],
+            "estrategia": "Aplicar os controles na ordem do risco: quem entra, quem apresenta e o que é gravado, informando os participantes antes de iniciar.",
+            "execucao": [
+              "Ativar o lobby e conferir a lista de convidados antes de admitir cada participante.",
+              "Restringir o compartilhamento de tela ao anfitrião e ao apresentador designado.",
+              "Silenciar os participantes na entrada e liberar o microfone apenas para quem for falar.",
+              "Informar sobre a gravação antes de iniciá-la e confirmar a concordância dos presentes."
+            ],
+            "resultado": "Reunião com entrada controlada, apresentação restrita a dois papéis, áudio organizado e gravação iniciada somente após o aviso e a concordância dos participantes.",
+            "justificativa": "Cada controle fecha uma via distinta de exposição: o lobby limita quem entra, a restrição de compartilhamento impede que um participante exponha conteúdo não previsto e o aviso de gravação trata o registro de dados pessoais. A combinação é mais eficaz que qualquer controle isolado, porque a configuração disponível varia por plataforma e plano.",
+            "errosFrequentes": [
+              "Confiar apenas na senha da reunião e deixar o link disponível para reenvio.",
+              "Permitir compartilhamento livre e depender de pedido verbal para não exibir dados.",
+              "Iniciar a gravação antes de informar os participantes."
+            ],
+            "variacao": "Um participante entra com nome de convidado e tenta compartilhar a tela sem autorização. Descreva a sequência de ações do anfitrião e o ajuste de configuração que evita a repetição."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa conduzir uma reunião de conselho com votação nominal, garantindo que apenas membros votem e que o resultado seja registrado sem ambiguidade.",
+            "dados": "Doze membros com direito a voto, cinco ouvintes, pauta com três deliberações, gravação obrigatória por norma interna e integrantes externos sem conta institucional.",
+            "conceitos": [
+              "papel na reunião: conjunto de permissões atribuídas a cada participante",
+              "votação nominal: registro individual da manifestação de cada membro",
+              "registro de presença: lista que comprova quem participou"
+            ],
+            "estrategia": "Separar membros e ouvintes por papel antes da sessão e registrar a votação de forma nominal, para que o resultado seja auditável e o direito de voto não se estenda a quem não o possui.",
+            "execucao": [
+              "Atribuir papel de membro aos doze votantes e de ouvinte aos cinco demais, restringindo microfone e voto aos membros.",
+              "Admitir externos pelo lobby, conferindo identidade antes de cada admissão.",
+              "Registrar presença no início e conduzir a votação nominal de cada deliberação.",
+              "Anexar a lista de presença e o registro da votação ao arquivo da reunião, junto com a gravação."
+            ],
+            "resultado": "Deliberações com votação nominal registrada apenas por membros, ouvintes sem direito a voto, presença comprovada e gravação arquivada com os registros da sessão.",
+            "justificativa": "A atribuição de papéis é o que garante que o direito de voto corresponda ao regimento, e o registro nominal torna o resultado verificável depois da sessão. Sem essa separação, o controle depende de disciplina dos participantes, e a ata perde rastreabilidade.",
+            "errosFrequentes": [
+              "Deixar todos com o mesmo papel e conduzir a votação por contagem informal.",
+              "Admitir externos sem conferir identidade no lobby.",
+              "Arquivar apenas a gravação, sem a lista de presença e o registro da votação."
+            ],
+            "variacao": "Um membro perde a conexão durante a votação de um item. Explique como registrar a ocorrência e por que a ata precisa refletir a interrupção."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que a gravação de reunião dispensa consentimento porque a sessão é interna e que, além disso, o recurso está disponível em qualquer plano contratado.",
+            "dados": "Reunião interna com participantes de dois setores, gravação iniciada sem aviso, plano contratado sem confirmação de inclusão do recurso e gravação disponibilizada por link.",
+            "conceitos": [
+              "base legal: fundamento que autoriza o tratamento de dados pessoais",
+              "aviso prévio: informação ao participante antes do início da captura",
+              "disponibilidade por licença: recurso presente apenas em determinados planos"
+            ],
+            "estrategia": "Separar as duas afirmações e verificar cada uma: a natureza interna da reunião não elimina a necessidade de base legal e de informação, e a disponibilidade do recurso depende da licença.",
+            "execucao": [
+              "Verificar se a gravação estava prevista na pauta e se houve aviso antes do início.",
+              "Identificar a base legal aplicável ao tratamento e o que a norma interna da organização exige.",
+              "Conferir na licença contratada se o recurso de gravação está incluído e qual retenção se aplica.",
+              "Corrigir o procedimento e registrar a decisão sobre o uso e o compartilhamento do arquivo."
+            ],
+            "resultado": "A afirmação é incorreta nos dois pontos: reunião interna não dispensa base legal nem informação prévia, e a gravação depende da licença contratada, com retenção definida.",
+            "justificativa": "A finalidade interna reduz o escopo do tratamento, mas não elimina a exigência de fundamento legal e de transparência com os participantes, cujas vozes e imagens são dados pessoais. A disponibilidade técnica do recurso, por sua vez, é questão de licenciamento e não altera a obrigação de informar e de restringir o acesso ao arquivo.",
+            "errosFrequentes": [
+              "Presumir que reunião interna dispensa consentimento ou aviso.",
+              "Iniciar a gravação por padrão e informar depois.",
+              "Compartilhar o link da gravação sem avaliar conteúdo e permissões."
+            ],
+            "variacao": "A organização precisa comprovar que informou os participantes. Explique quais registros sustentam essa comprovação e onde eles devem ser mantidos."
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u2-t3-s1",
+      "titulo": "Políticas de gravação e consentimento",
+      "topicoTitulo": "Políticas de gravação, consentimento e proteção de informações",
+      "topicoId": "modulo-3-unidade-2-topico-3",
+      "unidadeTitulo": "3.2 Calendários e Reuniões",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá políticas de gravação e proteção de informações em reuniões.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que uma política de gravação deve definir; (b) por que o consentimento importa; (c) retenção, acesso e proteção; (d) o que a LGPD exige ao gravar dados pessoais. POR QUE O CONHECIMENTO É IMPORTANTE: gravar sem política gera vazamento e responsabilização; a prova cobra os elementos de uma política e a exigência de consentimento. PRÉ-REQUISITOS: noção de reunião online e de proteção de dados. OBJETIVOS OBSERVÁVEIS: (1) enumerar os itens de uma política de gravação; (2) explicar consentimento livre, informado e inequívoco; (3) definir retenção e acesso; (4) citar a LGPD como referência. COMPETÊNCIAS DESENVOLVIDAS: elaboração de política de gravação; proteção de informação. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.3 (gravação institucional); unidade 5.1 (vazamento); Módulo 4 (LGPD). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: gravar uma reunião cria um registro permanente que pode conter dados pessoais e informação sensível. Uma política de gravação deve responder: quando gravar (finalidade legítima), quem pode gravar, o que é capturado (vídeo, áudio, chat, transcrição), onde armazenar, quem acessa, por quanto tempo manter e como descartar. O consentimento, quando é a base legal aplicável, deve ser livre, informado e inequívoco: o participante precisa saber que está sendo gravado e concordar; gravar silenciosamente compromete o consentimento. A LGPD (Lei nº 13.709/2018, já verificada nas referências do projeto) rege o tratamento de dados pessoais e exige base legal; em reuniões com dados pessoais, a finalidade e a necessidade orientam a decisão de gravar. Em serviço público, somam-se as normas de gestão documental e a lógica de transparência. Gravação não é obrigatória: muitas reuniões não precisam ser gravadas e a minimização recomenda não captar mais do que o necessário.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender que gravar exige finalidade e aviso.\n- Nível intermediário: redigir uma política com os campos quando/quem/onde/retenção/acesso.\n- Nível avançado: avaliar se determinada reunião deve ou não ser gravada, à luz da LGPD.\n- Nível especialista: revisar a política de uma instituição e apontar lacunas de consentimento, retenção e descarte.\nCOMPARAÇÕES CRÍTICAS:\n- gravar x não gravar: gravar amplia o registro e o risco; não gravar preserva a privacidade, mas perde memória — a decisão é por finalidade.\n- consentimento x obrigação legal: quando há base legal distinta do consentimento, a análise muda; não tratar consentimento como única base.\n- retenção x descarte: guardar além do necessário contraria a minimização; descartar cedo demais pode violar obrigação de guarda.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Se todos são da casa, não é preciso consentimento.\" — Motivo: dados pessoais exigem base legal independentemente do vínculo — Versão tecnicamente correta: observar a LGPD e a política institucional.\n- Afirmação errada: \"Gravar é sempre a prática recomendada.\" — Motivo: minimização recomenda captar o necessário — Versão tecnicamente correta: gravar apenas quando houver finalidade.\n- Afirmação errada: \"O aviso na descrição do convite substitui o consentimento.\" — Motivo: o consentimento deve ser inequívoco — Versão tecnicamente correta: informar no momento e obter concordância quando aplicável.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: política de gravação, finalidade, consentimento, retenção, acesso, descarte, LGPD.\n- Regras e fórmulas: quando/quem/o quê/onde/retenção/acesso/descarte.\n- Exceções: existem outras bases legais além do consentimento.\n- Palavras-chave: gravação, consentimento, minimização, retenção, LGPD.\n- Checklist de domínio: (1) Enumero a política? (2) Explico consentimento? (3) Defino retenção? (4) Cito a LGPD?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais itens compõem a política? (2) O que é consentimento inequívoco? (3) Por que minimizar a captura? (4) Que lei rege os dados pessoais? (5) Quando não se deve gravar?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Definir a política de gravação para as reuniões de um órgão, considerando que algumas sessões tratam de dados pessoais de cidadãos.",
+          "resposta": "Política que distingue reuniões gravadas das não gravadas, com aviso prévio, acesso restrito, prazo de retenção definido e rotina de descarte registrada."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa atender a um pedido de titular que solicita acesso ao conteúdo de uma reunião gravada da qual participou, sem expor dados de terceiros.",
+          "resposta": "Solicitante recebe o conteúdo que lhe diz respeito, sem dados de terceiros, com registro do atendimento e do critério de recorte aplicado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um servidor afirma que, como a gravação é feita em plataforma institucional, ela pode ser compartilhada livremente com qualquer setor, inclusive por link aberto, porque o conteúdo é público por natureza.",
+          "correcao": "A afirmação é incorreta: reunião interna não é conteúdo público, e o compartilhamento precisa observar finalidade e restrição de acesso, com registro da base utilizada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A LGPD exige consentimento para gravação de comunicações com dados pessoais.",
+          "resposta": "Certo (com ressalvas — depende da base legal aplicável)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual elemento NÃO é essencial em uma política de gravação? A) Prazo de retenção; B) Proteção por criptografia; C) Número máximo de participantes; D) Consentimento dos participantes.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender políticas de gravação e proteção de informações em reuniões, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá políticas de gravação e proteção de informações em reuniões"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Políticas de gravação: definir quando e como gravar, quem pode gravar, onde armazenar, quanto tempo manter. Consentimento: informar participantes sobre gravação e obter consentimento (especialmente exigido por LGPD para dados pessoais). Retenção: definir prazo de retenção de gravações. Acesso: restringir acesso a gravações autorizadas. Compartilhamento: regras para distribuir gravações. Proteção: criptografar gravações sensíveis.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Políticas de gravação e consentimento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Gravações de reuniões podem ser compartilhadas livremente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Gravações podem conter dados pessoais e informações sensíveis. O compartilhamento deve seguir políticas de segurança e proteção de dados."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Definir a política de gravação para as reuniões de um órgão, considerando que algumas sessões tratam de dados pessoais de cidadãos.",
+            "dados": "Reuniões semanais de equipe, sessões de atendimento com dados de titulares, recurso de gravação disponível na plataforma e exigência de transparência e de gestão documental.",
+            "conceitos": [
+              "política de gravação: regras de quando gravar, quem acessa e por quanto tempo",
+              "consentimento: manifestação livre, informada e inequívoca do titular",
+              "retenção: prazo de manutenção do registro antes do descarte"
+            ],
+            "estrategia": "Decidir primeiro se a gravação é necessária para a finalidade e só então definir captura, acesso, retenção e descarte, porque gravar sem finalidade cria risco sem contrapartida.",
+            "execucao": [
+              "Classificar as reuniões: as de rotina interna podem não exigir gravação; as que geram decisão registrada podem exigir.",
+              "Definir quem pode iniciar a gravação e como o aviso é dado antes do início.",
+              "Estabelecer onde o arquivo é armazenado, quem acessa e por quanto tempo é retido.",
+              "Prever o descarte ao fim do prazo e o procedimento de atendimento a pedidos de acesso ou eliminação."
+            ],
+            "resultado": "Política que distingue reuniões gravadas das não gravadas, com aviso prévio, acesso restrito, prazo de retenção definido e rotina de descarte registrada.",
+            "justificativa": "A gravação cria registro permanente que pode conter dados pessoais, por isso a decisão começa pela finalidade e pela necessidade, não pela disponibilidade do botão. O consentimento, quando é a base aplicável, exige que o participante saiba e concorde, e a gravação silenciosa compromete essa base e a própria finalidade declarada.",
+            "errosFrequentes": [
+              "Gravar todas as reuniões por padrão, sem finalidade definida.",
+              "Guardar a gravação indefinidamente por falta de rotina de descarte.",
+              "Divulgar o link da gravação para toda a organização sem avaliar o conteúdo."
+            ],
+            "variacao": "A plataforma passa a gerar transcrição automática além do vídeo. Explique por que a política precisa ser revista e qual item novo ela deve cobrir."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa atender a um pedido de titular que solicita acesso ao conteúdo de uma reunião gravada da qual participou, sem expor dados de terceiros.",
+            "dados": "Gravação de sessenta minutos com seis participantes, um deles solicitante, trechos com dados de clientes e prazo interno de resposta definido pela organização.",
+            "conceitos": [
+              "direito de acesso: faculdade do titular de conhecer o tratamento de seus dados",
+              "minimização: fornecimento apenas do que se refere ao solicitante",
+              "dados de terceiros: informações de outras pessoas que não podem ser expostas"
+            ],
+            "estrategia": "Atender ao pedido fornecendo o conteúdo que se refere ao solicitante e suprimindo dados de terceiros, registrando o procedimento adotado.",
+            "execucao": [
+              "Identificar os trechos da gravação em que o solicitante aparece ou é mencionado.",
+              "Verificar quais passagens contêm dados de outros participantes ou de clientes.",
+              "Preparar o recorte ou o resumo que atende ao pedido sem expor terceiros.",
+              "Registrar o atendimento, a data e o critério aplicado, dentro do prazo interno definido."
+            ],
+            "resultado": "Solicitante recebe o conteúdo que lhe diz respeito, sem dados de terceiros, com registro do atendimento e do critério de recorte aplicado.",
+            "justificativa": "O direito de acesso alcança os dados do próprio titular e não autoriza expor informação de outras pessoas. A minimização é o critério que concilia o atendimento ao pedido com a proteção dos demais participantes, e o registro comprova o procedimento adotado em caso de questionamento.",
+            "errosFrequentes": [
+              "Enviar a gravação integral e expor dados de terceiros.",
+              "Negar o pedido por conter informações de outros participantes.",
+              "Atender sem registrar o critério, dificultando a comprovação posterior."
+            ],
+            "variacao": "O pedido é de eliminação de um trecho da gravação. Explique quais verificações precedem a decisão e por que a eliminação pode não ser imediata em contexto de guarda documental."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um servidor afirma que, como a gravação é feita em plataforma institucional, ela pode ser compartilhada livremente com qualquer setor, inclusive por link aberto, porque o conteúdo é público por natureza.",
+            "dados": "Gravação de reunião com dados de atendimento, link criado sem restrição de acesso, dois setores interessados e ausência de registro sobre a finalidade do compartilhamento.",
+            "conceitos": [
+              "princípio da finalidade: uso compatível com a razão pela qual o dado foi coletado",
+              "controle de acesso: restrição a quem realmente precisa do conteúdo",
+              "transparência: dever de informar, que não se confunde com divulgação irrestrita"
+            ],
+            "estrategia": "Distinguir transparência de divulgação e verificar se o compartilhamento guarda compatibilidade com a finalidade da gravação e com o número de pessoas que realmente precisa do conteúdo.",
+            "execucao": [
+              "Identificar a finalidade registrada para a gravação.",
+              "Verificar quais setores precisam do conteúdo e para qual tarefa.",
+              "Substituir o link aberto por acesso restrito às pessoas identificadas.",
+              "Registrar a base do compartilhamento e revisar os acessos concedidos."
+            ],
+            "resultado": "A afirmação é incorreta: reunião interna não é conteúdo público, e o compartilhamento precisa observar finalidade e restrição de acesso, com registro da base utilizada.",
+            "justificativa": "Transparência é dever de informar o titular e a sociedade sobre o tratamento, e não autorização para divulgação irrestrita. A gravação de atendimento contém dados pessoais, cujo uso por outro setor exige compatibilidade com a finalidade original e acesso limitado a quem efetivamente precisa.",
+            "errosFrequentes": [
+              "Tratar transparência como sinônimo de publicação.",
+              "Criar link aberto por conveniência de compartilhamento.",
+              "Ampliar o acesso sem registrar a finalidade do novo uso."
+            ],
+            "variacao": "Um órgão de controle solicita a gravação. Explique o que muda no procedimento e por que o atendimento ao pedido não se confunde com publicação aberta."
+          }
+        ]
+      }
+    }
+  ]
+}

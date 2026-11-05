@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 2,
+    "unidadeTitulo": "8.2 Gráficos Estatísticos",
+    "parte": 1,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U2P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U2P1.js",
+    "idsCompletos": [
+      "m8-u2-t1-s1",
+      "m8-u2-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u2-t1-s1",
+      "titulo": "Histograma: construção, classes e frequências",
+      "topicoTitulo": "Histograma",
+      "topicoId": "modulo-8-unidade-2-topico-1",
+      "unidadeTitulo": "8.2 Gráficos Estatísticos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno construirá histograma de um conjunto real, interpretando forma, classe modal e assimetria.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) histograma: definição, objetivo, dado adequado; (b) construção (classes, intervalos, frequências, densidade); (c) interpretação (centro, dispersão, assimetria, outliers); (d) efeito da escolha dos intervalos; (e) vantagens, limitações, quando usar/evitar, erros frequentes, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: o histograma é o gráfico de distribuição por excelência; a prova cobra classes, intervalos, frequências e densidade, além do efeito da escolha dos intervalos. PRÉ-REQUISITOS: conceitos de variável numérica e de distribuição. OBJETIVOS OBSERVÁVEIS: (1) construir um histograma a partir de dados; (2) interpretar centro, dispersão e assimetria; (3) explicar o efeito da escolha dos intervalos. COMPETÊNCIAS DESENVOLVIDAS: análise de distribuição; leitura crítica de gráfico. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.2 (densidade); unidade 8.3 (estatística); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: definição de histograma como representação gráfica da distribuição de uma variável numérica contínua (ou discreta com muitos valores), com barras adjacentes representando classes (intervalos); objetivo: mostrar a forma da distribuição (centro, dispersão, assimetria, multimodalidade); dado adequado: variável numérica; construção: definir número e largura das classes, contar frequências (absolutas ou relativas), desenhar barras adjacentes (sem espaços); densidade: frequência dividida pela largura da classe, de modo que a área represente a proporção; efeito da escolha dos intervalos: classes muito largas escondem detalhes; muito estreitas criam ruído; a regra de Sturges (k ≈ 1 + 3,322 log10 n) é uma referência, não uma lei. Exemplo numérico: dados de tempo de atendimento (minutos): 12,15,18,20,22,25,28,30,32,35,38,40,42,45,48,50,52,55,58,60 (n=20). Classes de 10 min: 10-20 (3), 20-30 (4), 30-40 (4), 40-50 (4), 50-60 (5). Frequências: 3,4,4,4,5. Densidade na classe 10-20: 3/10 = 0,3. A distribuição é levemente assimétrica à direita. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que histograma mostra distribuição de numérico.\n- Nível intermediário: construir classes e contar frequências.\n- Nível avançado: interpretar forma e efeito dos intervalos.\n- Nível especialista: auditar um histograma quanto à escolha de classes.\nCOMPARAÇÕES CRÍTICAS:\n- histograma x gráfico de barras: histograma tem barras adjacentes para numérico contínuo; barras têm espaços para categórico.\n- histograma x box plot: histograma mostra a forma completa; box plot resume em quartis.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"histograma e gráfico de barras são iguais\" — Motivo: diferem no tipo de dado e no espaçamento — Versão tecnicamente correta: histograma para numérico contínuo, barras adjacentes.\n- Afirmação errada: \"classes podem ser escolhidas arbitrariamente sem efeito\" — Motivo: afetam a percepção — Versão tecnicamente correta: justificar a escolha.\n- Afirmação errada: \"frequência absoluta sempre é a melhor\" — Motivo: densidade é necessária para classes de larguras diferentes — Versão tecnicamente correta: usar densidade quando as classes têm larguras diferentes.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: classe, intervalo, frequência, densidade, assimetria, Sturges.\n- Regras e fórmulas: densidade = frequência/largura da classe; área = proporção; Sturges: k ≈ 1 + 3,322 log10 n.\n- Exceções: em distribuições multimodais, classes mais estreitas podem revelar picos.\n- Palavras-chave: histograma, classe, intervalo, frequência, densidade, assimetria.\n- Checklist de domínio: (1) Construo histograma? (2) Interpreto forma? (3) Explico efeito dos intervalos? (4) Distingo de barras?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um histograma? (2) Como se definem as classes? (3) O que é densidade? (4) Como a escolha dos intervalos afeta a interpretação? (5) Diferença entre histograma e gráfico de barras?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Com os 25 salários acima, quantas classes sugeriria Sturges e o que mudaria com 10 classes?",
+          "resposta": "k ≈ 1 + 3,322 × log10(25) ≈ 1 + 3,322 × 1,398 ≈ 5,6 — arredondando para baixo, 5 classes (a divisão usada no exemplo). Com 10 classes (largura R$ 250), a cauda direita se fatia em barras de altura 1 e 2 e a forma parece mais espiculada: o número de classes altera a aparência da mesma distribuição — por isso o parâmetro deve ser declarado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Dois grupos de 30 e 300 indivíduos, mesma variável. Como comparar suas distribuições em histograma?",
+          "resposta": "Usar frequência relativa (ou densidade) e a MESMA largura de classe nos dois. Com frequência absoluta, o grupo de 300 dominaria a escala vertical e as formas ficariam incomparáveis; com larguras diferentes, as áreas deixam de representar a mesma grandeza."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'No histograma, a altura da barra mostra a frequência da classe — portanto, classes mais largas têm mais representatividade.'",
+          "correcao": "Com larguras IGUAIS, a altura basta. Com larguras DIFERENTES, o que representa a frequência é a ÁREA (altura = densidade = frequência ÷ largura). Ignorar isso faz classes largas parecerem mais frequentes sem o serem."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) As barras de um histograma devem ser encostadas, ao contrário do gráfico de barras categórico.",
+          "resposta": "Certo. As classes são contíguas; a folga indicaria categorias discretas e sem ordem."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Com Σfi = 25 e classes de R$ 500, a densidade da classe com fi = 9 é: A) 0,36; B) 0,018; C) 9; D) 450.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de construir histograma de um conjunto real, interpretando forma, classe modal e assimetria, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "construirá histograma de um conjunto real, interpretando forma, classe modal e assimetria"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) histograma: definição, objetivo, dado adequado; (b) construção (classes, intervalos, frequências, densidade); (c) interpretação (centro, dispersão, assimetria, outliers); (d) efeito da escolha dos intervalos; (e) vantagens, limitações, quando usar/evitar, erros frequentes, pegadinhas. POR QUE O CONHECIMENTO É IMPORTANTE: o histograma é o gráfico de distribuição por excelência; a prova cobra classes, intervalos, frequências e densidade, além do e…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Histograma: construção, classes e frequências",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'No histograma, a altura da barra mostra a frequência da classe — portanto, classes mais largas têm mais representatividade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Com larguras IGUAIS, a altura basta. Com larguras DIFERENTES, o que representa a frequência é a ÁREA (altura = densidade = frequência ÷ largura). Ignorar isso faz classes largas parecerem mais frequentes sem o serem."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Com os 25 salários acima, quantas classes sugeriria Sturges e o que mudaria com 10 classes?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "k ≈ 1 + 3,322 × log10(25) ≈ 1 + 3,322 × 1,398 ≈ 5,6 — arredondando para baixo, 5 classes (a divisão usada no exemplo). Com 10 classes (largura R$ 250), a cauda direita se fatia em barras de altura 1 e 2 e a forma parece mais espiculada: o número de classes altera a aparência da mesma distribuição — por isso o parâmetro deve ser declarado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Dois grupos de 30 e 300 indivíduos, mesma variável. Como comparar suas distribuições em histograma?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Usar frequência relativa (ou densidade) e a MESMA largura de classe nos dois. Com frequência absoluta, o grupo de 300 dominaria a escala vertical e as formas ficariam incomparáveis; com larguras diferentes, as áreas deixam de representar a mesma grandeza.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'No histograma, a altura da barra mostra a frequência da classe — portanto, classes mais largas têm mais representatividade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Com larguras IGUAIS, a altura basta. Com larguras DIFERENTES, o que representa a frequência é a ÁREA (altura = densidade = frequência ÷ largura). Ignorar isso faz classes largas parecerem mais frequentes sem o serem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u2-t1-s2",
+      "titulo": "Densidade e o efeito da escolha dos intervalos",
+      "topicoTitulo": "Histograma",
+      "topicoId": "modulo-8-unidade-2-topico-1",
+      "unidadeTitulo": "8.2 Gráficos Estatísticos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno calculará densidades e explicará como o número e os limites das classes alteram a leitura.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) densidade e o efeito da escolha dos intervalos; (b) histograma de densidade; (c) comparação com a curva de densidade (KDE); (d) interpretação. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a diferença entre frequência e densidade e o efeito dos intervalos; confundi-los muda o gabarito. PRÉ-REQUISITOS: histograma e distribuição. OBJETIVOS OBSERVÁVEIS: (1) explicar densidade; (2) comparar frequência e densidade; (3) avaliar o efeito dos intervalos. COMPETÊNCIAS DESENVOLVIDAS: leitura crítica de histograma. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.2 (histograma); unidade 8.3 (estatística). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média. FUNDAMENTAÇÃO CONCEITUAL: densidade como frequência relativa dividida pela largura da classe, de modo que a área da barra represente a proporção; quando as classes têm larguras iguais, frequência e densidade são proporcionais; quando as larguras diferem, apenas a densidade permite comparação correta; efeito dos intervalos: classes largas suavizam e podem esconder multimodalidade; classes estreitas revelam detalhe mas podem criar ruído; KDE (estimativa de densidade por kernel) como alternativa suavizada, com parâmetro de largura de banda (bandwidth) que controla o suavizamento. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que a área representa a proporção.\n- Nível intermediário: calcular densidade e comparar com frequência.\n- Nível avançado: avaliar o efeito dos intervalos e do bandwidth.\n- Nível especialista: escolher entre histograma e KDE.\nCOMPARAÇÕES CRÍTICAS:\n- frequência x densidade: frequência conta; densidade normaliza pela largura, permitindo classes de tamanhos diferentes.\n- histograma x KDE: histograma é discreto e depende das classes; KDE é suavizado e depende do bandwidth.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"densidade e frequência são a mesma coisa\" — Motivo: diferem quando as classes têm larguras diferentes — Versão tecnicamente correta: densidade normaliza.\n- Afirmação errada: \"KDE elimina a necessidade de escolher intervalos\" — Motivo: substitui por escolha de bandwidth — Versão tecnicamente correta: ambos exigem decisão.\n- Afirmação errada: \"classes estreitas sempre são melhores\" — Motivo: podem criar ruído — Versão tecnicamente correta: equilibrar detalhe e suavidade.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: densidade, frequência, classe, largura, KDE, bandwidth.\n- Regras e fórmulas: densidade = (frequência relativa)/largura; área = proporção.\n- Exceções: com classes de largura igual, frequência e densidade são proporcionais.\n- Palavras-chave: densidade, frequência, classe, largura, KDE, bandwidth.\n- Checklist de domínio: (1) Explico densidade? (2) Comparo com frequência? (3) Avalio efeito dos intervalos? (4) Comparo com KDE?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é densidade em um histograma? (2) Quando frequência e densidade diferem? (3) Como os intervalos afetam a interpretação? (4) O que é KDE? (5) Como escolher entre histograma e KDE?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Verificar a propriedade de área do exemplo: Σ(altura × largura).",
+          "resposta": "Alturas: 0,012 + 0,018 + 0,010 + 0,006 + 0,004 = 0,050. Multiplicando pela largura: 0,050 × 500 = 25 — igual a n = 25 registros. A propriedade confirma que as densidades foram calculadas corretamente."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Mudando de 5 para 12 classes, a distribuição passou a 'parecer' três picos. O que concluir?",
+          "resposta": "Nada definitivo sobre picos: com 12 classes de largura menor, flutuações de amostragem ganham barra própria e simulam modas. Conclusão responsável: testar estabilidade — se os picos persistem em intervalações razoáveis e fazem sentido de negócio, há indício; se desaparecem, era ruído de intervalação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Existem as classes corretas, independentes do analista.'",
+          "correcao": "Errado. Não existe intervalação única: o parâmetro é uma escolha (com regras de apoio como Sturges) e ela afet a leitura. Por isso boas práticas exigem declarar número, largura e limites das classes — e permitir ao leitor julgar a escolha."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em histograma de densidade, a soma das áreas dos retângulos equivale ao total de observações.",
+          "resposta": "Certo (densidade absoluta). Com densidade relativa, a soma das áreas equivale a 1."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Com larguras de classe diferentes, a altura correta de cada retângulo é: A) frequência absoluta; B) frequência relativa; C) densidade (frequência ÷ largura); D) média da classe.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular densidades e explicará como o número e os limites das classes alteram a leitura, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "calculará densidades e explicará como o número e os limites das classes alteram a leitura"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) densidade e o efeito da escolha dos intervalos; (b) histograma de densidade; (c) comparação com a curva de densidade (KDE); (d) interpretação. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a diferença entre frequência e densidade e o efeito dos intervalos; confundi-los muda o gabarito. PRÉ-REQUISITOS: histograma e distribuição. OBJETIVOS OBSERVÁVEIS: (1) explicar densidade; (2) comparar frequência e densidade; (3) avaliar o efeito dos inter…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Densidade e o efeito da escolha dos intervalos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Existem as classes corretas, independentes do analista.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Não existe intervalação única: o parâmetro é uma escolha (com regras de apoio como Sturges) e ela afet a leitura. Por isso boas práticas exigem declarar número, largura e limites das classes — e permitir ao leitor julgar a escolha."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Verificar a propriedade de área do exemplo: Σ(altura × largura).",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Alturas: 0,012 + 0,018 + 0,010 + 0,006 + 0,004 = 0,050. Multiplicando pela largura: 0,050 × 500 = 25 — igual a n = 25 registros. A propriedade confirma que as densidades foram calculadas corretamente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Mudando de 5 para 12 classes, a distribuição passou a 'parecer' três picos. O que concluir?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Nada definitivo sobre picos: com 12 classes de largura menor, flutuações de amostragem ganham barra própria e simulam modas. Conclusão responsável: testar estabilidade — se os picos persistem em intervalações razoáveis e fazem sentido de negócio, há indício; se desaparecem, era ruído de intervalação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Existem as classes corretas, independentes do analista.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Não existe intervalação única: o parâmetro é uma escolha (com regras de apoio como Sturges) e ela afet a leitura. Por isso boas práticas exigem declarar número, largura e limites das classes — e permitir ao leitor julgar a escolha.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

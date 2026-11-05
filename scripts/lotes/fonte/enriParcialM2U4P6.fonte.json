@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 4,
+    "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+    "parte": 6,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U4P6",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U4P6.js",
+    "idsCompletos": [
+      "m2-u4-t4-s2",
+      "m2-u4-t4-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u4-t4-s2",
+      "titulo": "Prefixos e tipos de endereço IPv6",
+      "topicoTitulo": "IPv6: representação, abreviação e tipos",
+      "topicoId": "modulo-2-unidade-4-topico-4",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno identificará os principais tipos de endereço IPv6 (global unicast, link-local, unique local, multicast, loopback) e seus prefixos.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) global unicast; (b) unique local; (c) link-local; (d) multicast; (e) loopback e prefixos comuns. POR QUE O CONHECIMENTO É IMPORTANTE: reconhecer o tipo de endereço IPv6 pelo prefixo é cobrado com frequência; a prova explora os prefixos. PRÉ-REQUISITOS: representação IPv6. OBJETIVOS OBSERVÁVEIS: (1) identificar os tipos pelo prefixo; (2) explicar cada tipo; (3) associar prefixos comuns; (4) classificar um endereço. COMPETÊNCIAS DESENVOLVIDAS: classificação de endereços IPv6. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.4 (representação); unidade 3.3 (NDP/SLAAC); unidade 4.1 (tipos IPv4). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: os tipos de endereço IPv6 são reconhecidos pelo prefixo. O Global Unicast Address (GUA) está em 2000::/3 e é roteável globalmente, equivalente ao endereço público do IPv4. O Unique Local Address (ULA) está em fc00::/7 (na prática, fd00::/8) e é privado, não roteável na Internet — análogo às faixas privadas do IPv4. O Link-Local está em fe80::/10 e serve à comunicação no mesmo enlace; é autoconfigurado e obrigatório em toda interface IPv6. O Multicast está em ff00::/8 e endereça grupos, substituindo o broadcast (que NÃO existe no IPv6). O loopback é ::1/128 e o endereço não especificado é ::/128. O anycast não tem prefixo próprio: usa um endereço global unicast atribuído a vários nós, sendo entregue ao mais próximo. Quanto ao tamanho dos prefixos, /64 é o padrão para sub-redes (o SLAAC assume /64), /128 identifica um único host e /48 ou /56 são comuns para uma organização. Classificar um endereço pelo prefixo é uma habilidade prática: fe80:: é link-local; fd00:: é ULA; 2001:db8:: (documentação) pertence ao GUA. Não confundir o link-local IPv6 (fe80::/10) com o link-local IPv4 (169.254.0.0/16).\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer fe80:: e 2000::/3.\n- Nível intermediário: associar cada prefixo ao tipo.\n- Nível avançado: explicar por que não há broadcast e como o multicast o substitui.\n- Nível especialista: planejar o uso de /64 por sub-rede e /48 por organização.\nCOMPARAÇÕES CRÍTICAS:\n- GUA x ULA: o primeiro é roteável; o segundo é privado — análogo a público x privado no IPv4.\n- link-local x global: o primeiro vale no enlace; o segundo, globalmente.\n- multicast x broadcast: o IPv6 elimina o broadcast e usa multicast.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"IPv6 tem broadcast.\" — Motivo: foi eliminado — Versão tecnicamente correta: funções equivalentes usam multicast.\n- Afirmação errada: \"fe80:: é um endereço global.\" — Motivo: é link-local — Versão tecnicamente correta: fe80::/10 é local ao enlace.\n- Afirmação errada: \"ULA é roteável na Internet.\" — Motivo: é privado — Versão tecnicamente correta: fc00::/7 não roteia globalmente.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: GUA (2000::/3), ULA (fc00::/7), link-local (fe80::/10), multicast (ff00::/8), ::1, ::, anycast, /64.\n- Regras e fórmulas: tipo pelo prefixo; /64 por sub-rede; /128 por host.\n- Exceções: o anycast usa endereço GUA replicado.\n- Palavras-chave: prefixo, roteável, privado, enlace, grupo.\n- Checklist de domínio: (1) Identifico pelo prefixo? (2) Explico cada tipo? (3) Associo prefixos? (4) Classifico endereços?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual o prefixo do GUA? (2) E do ULA? (3) E do link-local? (4) O IPv6 tem broadcast? (5) Que prefixo se usa por sub-rede?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classificar fe80::1, 2001:db8::1, fd00::1 e ff02::1.",
+          "resposta": "fe80::1 link-local; 2001:db8::1 global unicast (documentação); fd00::1 unique local; ff02::1 multicast (all-nodes)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Por que não existe broadcast em IPv6?",
+          "resposta": "IPv6 usa multicast para funções que o broadcast fazia (ex.: ff02::1 all-nodes, ff02::2 all-routers). Isso reduz processamento em hosts que não participam."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'fe80::/10 é roteável na Internet.'",
+          "correcao": "Errado. Link-local (fe80::/10) não é roteável além do link local; é usado para NDP, autoconfiguração e comunicação local."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) IPv6 não possui endereço de broadcast.",
+          "resposta": "Certo — usa multicast."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prefixo identifica endereços global unicast? A) fe80::/10; B) fc00::/7; C) 2000::/3; D) ff00::/8.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar os principais tipos de endereço IPv6 (global unicast, link-local, unique local, multicast, loopback) e seus prefixos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará os principais tipos de endereço IPv6 (global unicast, link-local, unique local, multicast, loopback) e seus prefixos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Tipos: Global Unicast (GUA): 2000::/3 (prefixo 2000-3fff) — roteável globalmente, equivalente a IP público. Unique Local Address (ULA): fc00::/7 (tipicamente fd00::/8) — privado, não roteável na Internet (equivalente a RFC 1918). Link-Local: fe80::/10 — comunicação no mesmo link, autoconfigurado (obrigatório em toda interface). Multicast: ff00::/8 — um-para-muitos (substitui broadcast, que não existe em IPv6). Loopback: ::1/128. Não especificado: ::/128. Anycast: mesmo endereço atribuído a múlti…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Prefixos e tipos de endereço IPv6",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'fe80::/10 é roteável na Internet.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Link-local (fe80::/10) não é roteável além do link local; é usado para NDP, autoconfiguração e comunicação local."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classificar fe80::1, 2001:db8::1, fd00::1 e ff02::1.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "fe80::1 link-local; 2001:db8::1 global unicast (documentação); fd00::1 unique local; ff02::1 multicast (all-nodes).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Por que não existe broadcast em IPv6?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "IPv6 usa multicast para funções que o broadcast fazia (ex.: ff02::1 all-nodes, ff02::2 all-routers). Isso reduz processamento em hosts que não participam.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'fe80::/10 é roteável na Internet.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Link-local (fe80::/10) não é roteável além do link local; é usado para NDP, autoconfiguração e comunicação local.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u4-t4-s3",
+      "titulo": "Pegadinhas de endereçamento",
+      "topicoTitulo": "IPv6: representação, abreviação e tipos",
+      "topicoId": "modulo-2-unidade-4-topico-4",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno reconhecerá armadilhas comuns em questões de endereçamento e sub-redes.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as armadilhas mais comuns de endereçamento e sub-redes; (b) o método seguro de calcular; (c) casos de IPv4 e IPv6; (d) boas práticas de verificação. POR QUE O CONHECIMENTO É IMPORTANTE: a maioria dos erros em questões de endereçamento decorre de armadilhas previsíveis; reconhecê-las evita perder pontos. PRÉ-REQUISITOS: todo o tópico 4.4 e 4.2. OBJETIVOS OBSERVÁVEIS: (1) listar armadilhas; (2) aplicar o recálculo; (3) evitar confusões IPv4/IPv6; (4) validar resultados. COMPETÊNCIAS DESENVOLVIDAS: autoverificação; precisão de cálculo. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.2 (CIDR/sub-redes); unidade 4.4 (IPv6). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: as armadilhas mais comuns em endereçamento são: (1) confundir o prefixo /n com o número de hosts — /24 tem 256 endereços e 254 hosts; (2) esquecer de subtrair os endereços de rede e broadcast; (3) supor que o último octeto 255 é sempre broadcast — depende da máscara; (4) confundir máscara decimal com prefixo; (5) não verificar o ALINHAMENTO do bloco — 192.168.1.130/25 pertence à rede .128, enquanto 192.168.1.100/25 pertence à rede .0; (6) no VLSM, alocar sub-redes pequenas primeiro e fragmentar o espaço; (7) classificar um endereço como público/privado pela aparência — 172.32.x.x é público, embora pareça privado; (8) no IPv6, usar \"::\" mais de uma vez; (9) confundir link-local IPv4 (169.254) com IPv6 (fe80); (10) usar 2^(bits) sem o \"−2\" para hosts. O método seguro é sempre recalcular o endereço de rede com E lógico (AND) e derivar broadcast e intervalo a partir dele, em vez de confiar na aparência. Exercício ilustrativo: para 10.20.30.40/26, a máscara é 255.255.255.192; o AND do último octeto (40 = 00101000) com 192 (11000000) resulta em 0, logo a rede é 10.20.30.0/26, o broadcast é 10.20.30.63 e os hosts vão de .1 a .62 (62 hosts). Variação: 10.20.30.200/26 tem AND igual a 192, então pertence à rede 10.20.30.192/26.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: lembrar de subtrair 2 para hosts.\n- Nível intermediário: aplicar o recálculo por AND.\n- Nível avançado: detectar alinhamento e classificação incorretos.\n- Nível especialista: auditar uma lista de endereços e apontar todas as armadilhas.\nCOMPARAÇÕES CRÍTICAS:\n- prefixo x hosts: /n é o prefixo; hosts = 2^(32−n) − 2.\n- aparência x cálculo: a classificação e o pertencimento exigem cálculo.\n- IPv4 x IPv6: 169.254 (IPv4) x fe80 (IPv6) são link-local distintos.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"192.168.1.100/25 está na rede .128.\" — Motivo: AND dá .0 — Versão tecnicamente correta: pertence à rede .0.\n- Afirmação errada: \"172.32.5.3 é privado.\" — Motivo: a faixa privada termina em 172.31 — Versão tecnicamente correta: é público.\n- Afirmação errada: \"Basta olhar o último octeto para achar o broadcast.\" — Motivo: depende da máscara — Versão tecnicamente correta: calcular com bits de host em 1.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: prefixo x hosts, subtração de 2, alinhamento, AND, VLSM, link-local.\n- Regras e fórmulas: rede = IP AND máscara; hosts = 2^(32−n) − 2.\n- Exceções: 172.32.x.x é público; /31 dispensa rede/broadcast.\n- Palavras-chave: armadilha, recálculo, alinhamento, classificação.\n- Checklist de domínio: (1) Listo armadilhas? (2) Aplico o recálculo? (3) Evito confusões IPv4/IPv6? (4) Valido resultados?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quantos hosts tem uma /26? (2) 192.168.1.100/25 pertence a qual rede? (3) 172.32.5.3 é privado? (4) 169.254 e fe80 são o quê? (5) Qual o broadcast de 10.20.30.40/26?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual o erro em '192.168.1.128/25 tem 128 hosts'?",
+          "resposta": "128 é o número de endereços; hosts utilizáveis = 126 (subtrai rede e broadcast)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um IP 10.0.0.65/26 pertence a qual rede: 10.0.0.0/26 ou 10.0.0.64/26?",
+          "resposta": "10.0.0.64/26 (65 AND 192 = 64). A rede 10.0.0.0/26 cobre 0-63, então 65 está na próxima."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Em qualquer /24, o endereço .0 é sempre a rede e .255 sempre o broadcast.'",
+          "correcao": "Só se a sub-rede for /24 alinhada. Em /23, o broadcast de 192.168.0.0/23 é 192.168.1.255, e 192.168.1.0 é um host válido."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em /23, o endereço x.x.x.255 pode ser um host válido.",
+          "resposta": "Certo (se não for o broadcast da sub-rede)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual é a rede de 172.16.37.200/22? A) 172.16.36.0; B) 172.16.32.0; C) 172.16.0.0; D) 172.16.37.0.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de reconhecer armadilhas comuns em questões de endereçamento e sub-redes, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "reconhecerá armadilhas comuns em questões de endereçamento e sub-redes"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Armadilhas frequentes: (1) Confundir /n com número de hosts (ex.: /24 tem 256 endereços, 254 hosts). (2) Esquecer de subtrair rede e broadcast. (3) Assumir que IP com último octeto 255 é sempre broadcast (depende da máscara). (4) Confundir máscara decimal com prefixo. (5) Não verificar alinhamento do bloco (ex.: 192.168.1.130/25 é válido, mas 192.168.1.100/25 pertence à rede .0, não .128). (6) VLSM: alocar sub-redes pequenas primeiro causa fragmentação. (7) Confundir IP privado com IP público po…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Pegadinhas de endereçamento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Em qualquer /24, o endereço .0 é sempre a rede e .255 sempre o broadcast.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Só se a sub-rede for /24 alinhada. Em /23, o broadcast de 192.168.0.0/23 é 192.168.1.255, e 192.168.1.0 é um host válido."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual o erro em '192.168.1.128/25 tem 128 hosts'?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "128 é o número de endereços; hosts utilizáveis = 126 (subtrai rede e broadcast).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um IP 10.0.0.65/26 pertence a qual rede: 10.0.0.0/26 ou 10.0.0.64/26?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "10.0.0.64/26 (65 AND 192 = 64). A rede 10.0.0.0/26 cobre 0-63, então 65 está na próxima.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Em qualquer /24, o endereço .0 é sempre a rede e .255 sempre o broadcast.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Só se a sub-rede for /24 alinhada. Em /23, o broadcast de 192.168.0.0/23 é 192.168.1.255, e 192.168.1.0 é um host válido.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

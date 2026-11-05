@@ -44,7 +44,7 @@ const curriculumM6 = {
                     "resposta": "B. Critério de ordenação oculto e não auditável impede demonstrar tratamento igualitário (impessoalidade) e impede publicizar como a ordem é definida (publicidade). Eficiência pode até estar otimizada; moralidade só se violada em desdobramento."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitará o que será aprendido na unidade 6.1, relacionará os princípios constitucionais da Administração Pública às atividades de TI em órgãos públicos e declarará pré-requisitos, competências e o grau de dificuldade esperado, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de delimitar o que será aprendido na unidade 6.1, relacionará os princípios constitucionais da Administração Pública às atividades de TI em órgãos públicos e declarará pré-requisitos, competências e o grau de dificuldade esperado, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u1-t1-s2",
@@ -80,7 +80,7 @@ const curriculumM6 = {
                     "resposta": "B. Impessoalidade exige tratamento desvinculado do arbítrio, com critérios definidos previamente e igualmente aplicáveis. A) é errada porque a publicidade não afasta os limites de dados pessoais; C) é errada porque os princípios não se hierarquizam de forma absoluta, e a eficiência não autoriza renúncia a direito; D) é errada porque a moralidade orienta a conduta também dentro da lei, e não só na lacuna legal."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará a diferença entre princípio e regra, enumerará os cinco princípios constitucionais com sua base normativa e descreverá o conteúdo operativo de cada um, com exemplos e contraexemplos, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de explicar a diferença entre princípio e regra, enumerará os cinco princípios constitucionais com sua base normativa e descreverá o conteúdo operativo de cada um, com exemplos e contraexemplos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -122,7 +122,7 @@ const curriculumM6 = {
                     "resposta": "D. Medida de infraestrutura não é requisito de legalidade; as demais compõem a trilha que permite reconstituir e justificar a decisão."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitará o que a automação de atos administrativos pode e não pode fazer, relacionará a digitalização de processos à base legal e à assinatura eletrônica e explicará por que automatizar não transfere nem cria competência, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de delimitar o que a automação de atos administrativos pode e não pode fazer, relacionará a digitalização de processos à base legal e à assinatura eletrônica e explicará por que automatizar não transfere nem cria competência, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "As0A-w1WmPI",
@@ -131,7 +131,7 @@ const curriculumM6 = {
                     "urlOriginal": "https://www.youtube.com/watch?v=As0A-w1WmPI",
                     "embedUrl": "https://www.youtube-nocookie.com/embed/As0A-w1WmPI",
                     "descricao": "Videoaula institucional da Câmara dos Deputados sobre o uso de sistemas de inteligência artificial no serviço público e em infraestruturas críticas. Aborda os desafios éticos, legais e técnicos da automação de decisões administrativas, a necessidade de transparência algorítmica, explicabilidade, responsabilização humana, e os marcos normativos aplicáveis (Lei de Governo Digital, LGPD, Marco Legal da IA). Discute casos de uso em órgãos públicos e riscos de viés, discriminação algorítmica e concentração de poder decisório em sistemas opacos.",
-                    "dataValidacao": "2026-10-24"
+                    "dataValidacao": "2026-11-03"
                   }
                 ]
               },
@@ -169,7 +169,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. A medida D é de capacidade operacional e não constitui controle de impessoalidade."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno diagnosticará violações de impessoalidade e moralidade em decisões automatizadas, distinguirá impessoalidade de indiferença e de uniformidade desnecessária, e explicará a relação entre critérios ocultos, explicabilidade e publicidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de diagnosticar violações de impessoalidade e moralidade em decisões automatizadas, distinguirá impessoalidade de indiferença e de uniformidade desnecessária, e explicará a relação entre critérios ocultos, explicabilidade e publicidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "r7dYNidpM3k",
@@ -222,7 +222,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. A evidência de impessoalidade é a reconstituibilidade do tratamento; D é métrica de comunicação, não de impessoalidade."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará o template de nove itens de um exemplo resolvido — problema, dados, conceitos aplicáveis, estratégia, passo a passo, resultado, justificativa técnica, erros frequentes e variação para transferência — a três casos concretos de ética em TI, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aplicar o template de nove itens de um exemplo resolvido — problema, dados, conceitos aplicáveis, estratégia, passo a passo, resultado, justificativa técnica, erros frequentes e variação para transferência — a três casos concretos de ética em TI, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u1-t3-s2",
@@ -258,7 +258,7 @@ const curriculumM6 = {
                     "resposta": "C. Dados abertos podem conter dados pessoais desde que anonimizados ou em PUBLICIDADE legal com base; o que a abertura exige é formato, licença e referência, não a ausência de pessoas."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá conceitos próximos que costumam ser trocados em prova — legalidade e legalidade social, eficiência e economicidade, impessoalidade e imparcialidade, publicidade e transparência ativa — e explicará por que cada distinção altera o gabarito, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de distinguir conceitos próximos que costumam ser trocados em prova — legalidade e legalidade social, eficiência e economicidade, impessoalidade e imparcialidade, publicidade e transparência ativa — e explicará por que cada distinção altera o gabarito, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u1-t3-s3",
@@ -294,7 +294,7 @@ const curriculumM6 = {
                     "resposta": "C. É afirmação correta e rastreável: a Lei nº 12.527/2011 foi verificada em 2026-10-21, e o art. 11, § 1º, fixa prazo de 20 dias, prorrogável por mais 10 com justificativa expressa (art. 11, § 2º)."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno identificará afirmações equivocadas frequentes sobre os princípios da Administração Pública e as substituirá por versões tecnicamente corretas, distinguindo generalização falsa de exceção legítima, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de identificar afirmações equivocadas frequentes sobre os princípios da Administração Pública e as substituirá por versões tecnicamente corretas, distinguindo generalização falsa de exceção legítima, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u1-t3-s4",
@@ -330,7 +330,7 @@ const curriculumM6 = {
                     "resposta": "A, B, C e D. São os quatro itens de base normativa e de método; os demais admitem erro pontual sem comprometer o domínio de conjunto."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno consolidará a unidade por recuperação ativa, revisando conceitos essenciais, regras, comparações, exceções e palavras-chave, e responderá a itens de verificação sem consultar o texto, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de consolidar a unidade por recuperação ativa, revisando conceitos essenciais, regras, comparações, exceções e palavras-chave, e responderá a itens de verificação sem consultar o texto, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -378,7 +378,7 @@ const curriculumM6 = {
                     "resposta": "A. A definição literal de transparência ativa consta do art. 4º, XI, da Lei nº 14.129/2021; o art. 8º da LAI consagra o dever de divulgar de ofício, e os demais tratam de pedido e de informação pessoal."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitará o escopo da unidade 6.2, relacionará a Lei de Acesso à Informação e a Lei de Governo Digital e declarará pré-requisitos, competências e o grau de dificuldade esperado, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de delimitar o escopo da unidade 6.2, relacionará a Lei de Acesso à Informação e a Lei de Governo Digital e declarará pré-requisitos, competências e o grau de dificuldade esperado, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u2-t1-s2",
@@ -414,7 +414,7 @@ const curriculumM6 = {
                     "resposta": "C. O conceito do art. 4º é «tratamento da informação» (conjunto de ações sobre a informação), e não «tratamento de dados pessoais», expressão da LGPD (art. 5º, VII). Item que troca os regimes jurídico-conceptuais é armadilha recorrente."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno descreverá o escopo subjetivo e material da LAI, reproduzirá suas diretrizes e definirá os conceitos legais de informação, documento, informação sigilosa, informação pessoal, tratamento, disponibilidade, autenticidade, integridade e primariedade, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de descrever o escopo subjetivo e material da LAI, reproduzirá suas diretrizes e definirá os conceitos legais de informação, documento, informação sigilosa, informação pessoal, tratamento, disponibilidade, autenticidade, integridade e primariedade, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -456,7 +456,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D não consta do rol legal; a publicidade do critério de decisão é consequência do princípio da publicidade e da exigibilidade de motivação, não do rol do § 3º."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará o art. 8º da LAI e o art. 29 da Lei nº 14.129/2021 aos artefatos técnicos de transparência, relacionando o dever legal a requisitos verificáveis de publicação, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de relacionar o art. 8º da LAI e o art. 29 da Lei nº 14.129/2021 aos artefatos técnicos de transparência, relacionando o dever legal a requisitos verificáveis de publicação, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u2-t2-s2",
@@ -492,7 +492,7 @@ const curriculumM6 = {
                     "resposta": "B. Art. 11, § 1º e § 2º da Lei nº 12.527/2011 (verificado em 2026-10-21)."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno conduzirá um pedido de acesso à informação de ponta a ponta, indicando dispositivo, prazo, forma de resposta, conteúdo da negativa e via recursal, e explicará as consequências da negativa infundamentada, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de conduzir um pedido de acesso à informação de ponta a ponta, indicando dispositivo, prazo, forma de resposta, conteúdo da negativa e via recursal, e explicará as consequências da negativa infundamentada, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u2-t2-s3",
@@ -528,7 +528,7 @@ const curriculumM6 = {
                     "resposta": "B. O inciso XIII veda a exigência de prova de fato já comprovado pela apresentação de documento ou informação válida; o inciso XV trata da presunção de boa-fé do usuário e o inciso XII da imposição uma única vez das exigências."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as diretrizes do art. 3º da Lei nº 14.129/2021, relacionará os componentes essenciais do Governo Digital e identificará a finalidade de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de enumerar as diretrizes do art. 3º da Lei nº 14.129/2021, relacionará os componentes essenciais do Governo Digital e identificará a finalidade de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "Zjv2mZJkakw",
@@ -581,7 +581,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D é exatamente a divulgação irrestrita que o regime veda."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá publicidade administrativa de divulgação irrestrita de dados pessoais, identificará os limites que incidem sobre cada uma e dominará as exceções legais que conciliam transparência e proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+                "criterioDominio": "PoC (A): o aluno é capaz de distinguir publicidade administrativa de divulgação irrestrita de dados pessoais, identificará os limites que incidem sobre cada uma e dominará as exceções legais que conciliam transparência e proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
                 "videos": [
                   {
                     "id": "75RqMrSbenM",
@@ -628,7 +628,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D é errado: o valor cobrado é EXCLUSIVAMENTE o necessário ao ressarcimento dos custos dos serviços e dos materiais utilizados, o que exclui qualquer finalidade lucrativa."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá transparência ativa e passiva, dado aberto e dado acessível ao público, sigilo legal e segredo de justiça, e informação sigilosa e informação pessoal, explicando por que cada distinção altera o gabarito, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de distinguir transparência ativa e passiva, dado aberto e dado acessível ao público, sigilo legal e segredo de justiça, e informação sigilosa e informação pessoal, explicando por que cada distinção altera o gabarito, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u2-t3-s3",
@@ -664,7 +664,7 @@ const curriculumM6 = {
                     "resposta": "C. O art. 30, § 2º, da Lei nº 14.129/2021 remete expressamente aos procedimentos e prazos previstos nos arts. 10 e 11 da LAI para as solicitações de abertura de bases de dados."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno rejeitará afirmações equivocadas frequentes sobre transparência e acesso à informação, substituindo-as por versões tecnicamente corretas ancoradas em dispositivo, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de rejeitar afirmações equivocadas frequentes sobre transparência e acesso à informação, substituindo-as por versões tecnicamente corretas ancoradas em dispositivo, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u2-t3-s4",
@@ -700,7 +700,7 @@ const curriculumM6 = {
                     "resposta": "A, B, C e D. São os itens de base normativa e de aplicação do regime; os demais admitem erro pontual."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno consolidará a unidade 6.2 por recuperação ativa, organizando conceitos, prazos, exceções e o protocolo de decisão entre publicidade e dados pessoais, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de consolidar a unidade 6.2 por recuperação ativa, organizando conceitos, prazos, exceções e o protocolo de decisão entre publicidade e dados pessoais, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u2-t3-s5",
@@ -736,7 +736,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D contraria o art. 7º, § 2º, da Lei nº 12.527/2011."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno resolverá, com o template de nove itens, três casos de transparência administrativa (transparência ativa incompleta, pedido de acesso parcialmente sigiloso e recusa por existência de portal), identificando regime, dispositivo e providência, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de transparência administrativa (transparência ativa incompleta, pedido de acesso parcialmente sigiloso e recusa por existência de portal), identificando regime, dispositivo e providência, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -784,7 +784,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D não consta do rol do art. 2º."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitará o escopo da unidade 6.3, relacionará a proteção de dados pessoais, o sigilo legal e a responsabilização no serviço público digital, e declarará pré-requisitos, competências e grau de dificuldade, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de delimitar o escopo da unidade 6.3, relacionará a proteção de dados pessoais, o sigilo legal e a responsabilização no serviço público digital, e declarará pré-requisitos, competências e grau de dificuldade, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u3-t1-s2",
@@ -820,7 +820,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D é direito de acesso a documento administrativo (Lei nº 12.527/2011, art. 7º), não direito do titular segundo a LGPD."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno explicará o objeto e os fundamentos da LGPD, distinguirá aplicação de exclusão, enumerará os direitos do titular e o dever de segurança, aplicando-os a situações de serviço público digital, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de explicar o objeto e os fundamentos da LGPD, distinguirá aplicação de exclusão, enumerará os direitos do titular e o dever de segurança, aplicando-os a situações de serviço público digital, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -862,7 +862,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D não consta do rol; a competência para acesso decorre da necessidade de conhecimento e do credenciamento (art. 25)."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno enumerará as hipóteses de sigilo, os graus e seus prazos, a autoridade competente para classificar e os elementos obrigatórios da decisão de classificação, e indicará o procedimento de reavaliação, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de enumerar as hipóteses de sigilo, os graus e seus prazos, a autoridade competente para classificar e os elementos obrigatórios da decisão de classificação, e indicará o procedimento de reavaliação, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u3-t2-s2",
@@ -898,7 +898,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D não consta do rol e é precisamente o uso indevido que o § 2º do art. 31 responsabiliza."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará o regime do art. 31 da Lei nº 12.527/2011 à informação pessoal, relacionando-o às hipóteses de dispensa de consentimento, à tutela de direitos fundamentais e ao acesso parcial, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aplicar o regime do art. 31 da Lei nº 12.527/2011 à informação pessoal, relacionando-o às hipóteses de dispensa de consentimento, à tutela de direitos fundamentais e ao acesso parcial, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -940,7 +940,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O endereço de rede é dado de contexto e não substitui a identificação do sujeito, sobretudo em redes institucionais compartilhadas e acessadas remotamente."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará os deveres de segurança, a rastreabilidade e a responsabilização do órgão e do servidor, desenhando o conjunto mínimo de controles e evidências aplicável a um sistema de atendimento, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de relacionar os deveres de segurança, a rastreabilidade e a responsabilização do órgão e do servidor, desenhando o conjunto mínimo de controles e evidências aplicável a um sistema de atendimento, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u3-t3-s2",
@@ -976,7 +976,7 @@ const curriculumM6 = {
                     "resposta": "A, B e D. O item C destrói evidência e agrava a apuração (art. 32, II, da Lei nº 12.527/2011)."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno resolverá, com o template de nove itens, três casos de proteção de dados, sigilo e responsabilização no serviço público digital, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de proteção de dados, sigilo e responsabilização no serviço público digital, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u3-t3-s4",
@@ -1012,7 +1012,7 @@ const curriculumM6 = {
                     "resposta": "A, B, C e D."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá sigilo e proteção de dados pessoais, pseudonimização e anonimização, e segurança e responsabilização; identificará afirmações equivocadas frequentes e consolidará a unidade por recuperação ativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de distinguir sigilo e proteção de dados pessoais, pseudonimização e anonimização, e segurança e responsabilização; identificará afirmações equivocadas frequentes e consolidará a unidade por recuperação ativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -1060,7 +1060,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D destrói a responsabilização e a rastreabilidade, além de ampliar o risco de publicação indevida."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitara o escopo da unidade 6.4, relacionará o uso institucional de redes sociais, o conflito de interesse, a conduta e a netiqueta à governança digital do órgão, e declarará pré-requisitos e competências, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de delimitar o escopo da unidade 6.4, relacionará o uso institucional de redes sociais, o conflito de interesse, a conduta e a netiqueta à governança digital do órgão, e declarará pré-requisitos e competências, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u4-t1-s2",
@@ -1096,7 +1096,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D não pertence à política editorial e configuraria falha de governança de acesso."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno desenhara o conjunto mínimo de controles de governança de um perfil institucional e explicará a política editorial, o registro de publicações, a rotina de correção de erros e o uso de ferramentas de IA na produção de conteúdo, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de desenhar o conjunto mínimo de controles de governança de um perfil institucional e explicará a política editorial, o registro de publicações, a rotina de correção de erros e o uso de ferramentas de IA na produção de conteúdo, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1138,7 +1138,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D não é etapa de tratamento: a publicidade de dados funcionais é regulada pelo art. 29, § 2º, VII, da Lei nº 14.129/2021, e a divulgação de vínculo de interesse pessoal deve observar finalidade, necessidade e proteção da pessoa."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno definirá conflito de interesse, diferenciará conflito real, potencial e aparente, reconhecerá suas manifestações típicas no serviço público digital e indicará o tratamento adequado (declaração, transparência, afastamento e remessa ao controle), evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de definir conflito de interesse, diferenciará conflito real, potencial e aparente, reconhecerá suas manifestações típicas no serviço público digital e indicará o tratamento adequado (declaração, transparência, afastamento e remessa ao controle), evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u4-t2-s2",
@@ -1174,7 +1174,7 @@ const curriculumM6 = {
                     "resposta": "A, B e D. O item C é a conduta correta: o canal institucional existe para responder ao cidadão com conteúdo oficial."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará condutas de servidores em canal institucional e em canal pessoal, delimitando o que é vedado, o que é permitido com cautela e o que exige providência de correção e apuração, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar condutas de servidores em canal institucional e em canal pessoal, delimitando o que é vedado, o que é permitido com cautela e o que exige providência de correção e apuração, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1216,7 +1216,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D mantém dado identificável e viola a minimização."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno resolverá, com o template de nove itens, três casos de uso institucional de redes sociais, conflito de interesse e conduta, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de uso institucional de redes sociais, conflito de interesse e conduta, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u4-t3-s2",
@@ -1252,7 +1252,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D é medida de atendimento e não trata de conflito de interesse."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá uso institucional e uso pessoal, conflito real, potencial e aparente, e identificará afirmações equivocadas frequentes sobre conduta e redes sociais, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de distinguir uso institucional e uso pessoal, conflito real, potencial e aparente, e identificará afirmações equivocadas frequentes sobre conduta e redes sociais, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u4-t3-s3",
@@ -1288,7 +1288,7 @@ const curriculumM6 = {
                     "resposta": "A, B, C e D."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno consolidará a unidade 6.4 por recuperação ativa, identificando limites de uso institucional e pessoal, tratamento de conflito e padrões de conduta, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de consolidar a unidade 6.4 por recuperação ativa, identificando limites de uso institucional e pessoal, tratamento de conflito e padrões de conduta, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -1336,7 +1336,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D contradiz os art. 3º, XVI, e art. 14 da Lei nº 14.129/2021."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitará o escopo da unidade 6.5, relacionará acessibilidade e inclusão digital aos deveres do Estado e à operação de serviços digitais, e declarará pré-requisitos e competências, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de delimitar o escopo da unidade 6.5, relacionará acessibilidade e inclusão digital aos deveres do Estado e à operação de serviços digitais, e declarará pré-requisitos e competências, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u5-t1-s2",
@@ -1372,7 +1372,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D restringe indevidamente o conceito: a acessibilidade atende a pessoas com deficiência de qualquer natureza e a pessoas com limitações temporárias ou situacionais."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará os dispositivos de acessibilidade do serviço público às medidas técnicas de conteúdo digital e organizará um plano de verificação com evidência, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de relacionar os dispositivos de acessibilidade do serviço público às medidas técnicas de conteúdo digital e organizará um plano de verificação com evidência, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1414,7 +1414,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D não informa inclusão digital; o painel institucional do art. 22 da Lei nº 14.129/2021 traz solicitações em andamento e concluídas, tempo médio e satisfação."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno relacionará inclusão digital à preservação do atendimento presencial, ao autosserviço e à desenho de serviço acessível, e indicará como medir quem fica de fora, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de relacionar inclusão digital à preservação do atendimento presencial, ao autosserviço e à desenho de serviço acessível, e indicará como medir quem fica de fora, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1456,7 +1456,7 @@ const curriculumM6 = {
                     "resposta": "A, B e D. O item C pertence à dimensão perceptível."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno resolverá, com o template de nove itens, três casos de acessibilidade e inclusão digital em serviços públicos, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de acessibilidade e inclusão digital em serviços públicos, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u5-t3-s2",
@@ -1492,7 +1492,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D cria barreira e contraria o art. 3º, III, e o art. 14 da Lei nº 14.129/2021."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno distinguirá acessibilidade de inclusão, formato aberto de acessibilidade, e identificará afirmações equivocadas frequentes sobre acessibilidade e digitalização, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de distinguir acessibilidade de inclusão, formato aberto de acessibilidade, e identificará afirmações equivocadas frequentes sobre acessibilidade e digitalização, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u5-t3-s3",
@@ -1528,7 +1528,7 @@ const curriculumM6 = {
                     "resposta": "A, B, C e D."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno consolidará a unidade 6.5 por recuperação ativa, relacionando dispositivos de acessibilidade, medidas técnicas e indicadores de inclusão, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de consolidar a unidade 6.5 por recuperação ativa, relacionando dispositivos de acessibilidade, medidas técnicas e indicadores de inclusão, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }
@@ -1576,7 +1576,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D é errado: a motivação é conteúdo do ato e não é dispensada pela forma eletrônica."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno delimitará o escopo da unidade 6.6, relacionará automação de decisões, supervisão humana, estudos de caso e resolução de questões aos princípios e dispositivos das unidades anteriores, e declarará competências, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de delimitar o escopo da unidade 6.6, relacionará automação de decisões, supervisão humana, estudos de caso e resolução de questões aos princípios e dispositivos das unidades anteriores, e declarará competências, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u6-t1-s2",
@@ -1612,7 +1612,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. A reversibilidade não afasta o dever de registrar: o registro é o que permite apurar dolo ou culpa e é o que sustenta o art. 34 da Lei nº 12.527/2011."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno classificará o nível de automação de um sistema decisório, enumerará os requisitos de conformidade de cada nível e explicará por que a automação total de decisão sobre direitos exige mais do que a automação de apoio, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de classificar o nível de automação de um sistema decisório, enumerará os requisitos de conformidade de cada nível e explicará por que a automação total de decisão sobre direitos exige mais do que a automação de apoio, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u6-t1-s3",
@@ -1648,7 +1648,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D é errado: sem documentação, não há como auditar a existência nem a eficácia do controle (art. 49 da Lei nº 14.129/2021)."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno desenhar uma política de supervisão humana sobre decisões automatizadas, definindo alçadas, critérios de escalonamento, registro, indicadores e retroalimentação ao desenho, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de desenhar uma política de supervisão humana sobre decisões automatizadas, definindo alçadas, critérios de escalonamento, registro, indicadores e retroalimentação ao desenho, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1690,7 +1690,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D destrói prova e agrava a apuração (art. 32, II, da Lei nº 12.527/2011)."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno analisará dois casos integrados de publicação indevida e de vazamento de dados, identificando princípios violados, dispositivos aplicáveis e providências, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de analisar dois casos integrados de publicação indevida e de vazamento de dados, identificando princípios violados, dispositivos aplicáveis e providências, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u6-t2-s2",
@@ -1726,7 +1726,7 @@ const curriculumM6 = {
                     "resposta": "A, B e C. O item D elimina justamente o registro que permitiria rastrear o conteúdo publicado."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno analisará dois casos integrados de uso de ferramenta de IA e de falha de transparência administrativa, identificando princípios violados, dispositivos aplicáveis e providências, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de analisar dois casos integrados de uso de ferramenta de IA e de falha de transparência administrativa, identificando princípios violados, dispositivos aplicáveis e providências, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           },
@@ -1768,7 +1768,7 @@ const curriculumM6 = {
                     "resposta": "A, B, C e D. Todas as quatro alteram a resposta pretendida pelo item."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno aplicará um método de sete passos para resolver itens de prova sobre ética e responsabilidade digital, identificando o princípio e o dispositivo antes de marcar a alternativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de aplicar um método de sete passos para resolver itens de prova sobre ética e responsabilidade digital, identificando o princípio e o dispositivo antes de marcar a alternativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u6-t3-s2",
@@ -1804,7 +1804,7 @@ const curriculumM6 = {
                     "resposta": "A, B, C e D."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno resolverá itens autorais sobre estudos de caso e automação, aplicando o método de sete passos, e consolidará a unidade 6.6 por recuperação ativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de resolver itens autorais sobre estudos de caso e automação, aplicando o método de sete passos, e consolidará a unidade 6.6 por recuperação ativa, evidenciado por resposta correta a item de verificação associado ao subtópico."
               },
               {
                 "id": "m6-u6-t3-s3",
@@ -1840,7 +1840,7 @@ const curriculumM6 = {
                     "resposta": "A, B, C e D."
                   }
                 ],
-                "criterioDominio": "PoC (A): o aluno é capaz de aluno resolverá, com o template de nove itens, três casos de automação de decisões, supervisão humana e uso de ferramenta de IA, identificando o regime, o princípio violado e a providência de governança, evidenciado por resposta correta a item de verificação associado ao subtópico."
+                "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de automação de decisões, supervisão humana e uso de ferramenta de IA, identificando o regime, o princípio violado e a providência de governança, evidenciado por resposta correta a item de verificação associado ao subtópico."
               }
             ]
           }

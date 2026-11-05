@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 4,
+    "unidadeTitulo": "4.4 Legislação e conformidade",
+    "parte": 2,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U4P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U4P2.js",
+    "idsCompletos": [
+      "m4-u4-t1-s3",
+      "m4-u4-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u4-t1-s3",
+      "titulo": "Segurança, incidentes e a LGPD no dia a dia do órgão",
+      "topicoTitulo": "LGPD — Lei nº 13.709/2018",
+      "topicoId": "modulo-4-unidade-4-topico-1",
+      "unidadeTitulo": "4.4 Legislação e conformidade",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno relacionará o art. 46 da LGPD às medidas técnicas e administrativas de um órgão e distinguirá o que a lei exige do que é boa prática recomendável.",
+      "conteudo": "O art. 46 da LGPD (verificado) determina que os agentes de tratamento adotem medidas de segurança, técnicas e administrativas, aptas a proteger os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas — destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito. Transposição prática: técnicas (autenticação forte, criptografia em repouso e em trânsito, controle de acesso por perfil, registro de auditoria, backup imutável) e administrativas (política de acesso, contratos com operadores, treinamento, procedimento de resposta a incidentes, gestão de licenças e saídas). A LGPD também trata da comunicação de incidentes à autoridade e aos titulares em dispositivo próprio — a redação exata e o prazo desse dispositivo NÃO foram verificados nesta sessão (a verificação disponível cobre os arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46); antes de citar número de artigo ou prazo, confirme em fonte oficial (planalto.gov.br) e registre a data. Distinção essencial para concursos: 'a lei exige' só pode ser afirmado com o dispositivo verificado; 'boa prática recomenda' é outra categoria. Relação com a LAI: o art. 23 da LGPD menciona expressamente a Lei nº 12.527/2011 (LAI) — confirmado no texto oficial —, articulando acesso a informação pública e proteção de dados pessoais.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Que categorias de medidas o art. 46 exige?",
+          "resposta": "Medidas técnicas E administrativas aptas a proteger dados de acessos não autorizados e de situações acidentais ou ilícitas (redação verificada). Ambas as categorias são exigidas; uma sem a outra atende parcialmente."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Após confirmar vazamento de dados pessoais, o que fazer em relação à LGPD?",
+          "resposta": "Conter, erradicar e registrar o incidente; consultar o dispositivo da LGPD que trata da comunicação (não verificado nesta sessão — confirmar em fonte oficial) para prazo e destinatários; comunicar fatos confirmados; documentar medidas adotadas. Em paralelo, aplicar o art. 46 como parâmetro de adequação das medidas que faltavam."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A LGPD determina comunicação de incidente em até 3 dias úteis.'",
+          "correcao": "Afirmativa não verificável nesta sessão: o dispositivo específico da LGPD sobre comunicação de incidentes e seu prazo NÃO constam do arquivo de referências verificadas (que cobre arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46). Não repita prazo decorado de memória sem conferir a redação atual em fonte oficial."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O art. 46, verificado, impõe medidas de segurança técnicas e administrativas aos agentes de tratamento.",
+          "resposta": "Certo — redação confirmada no texto oficial em 2026-10-20 (referencias/referencias-verificadas.md)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Medida administrativa de proteção de dados (art. 46): A) criptografia de disco; B) política de acesso e treinamento; C) firewall de pacotes; D) IDS.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de relacionar o art. 46 da LGPD às medidas técnicas e administrativas de um órgão e distinguirá o que a lei exige do que é boa prática recomendável, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "relacionará o art. 46 da LGPD às medidas técnicas e administrativas de um órgão e distinguirá o que a lei exige do que é boa prática recomendável"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O art. 46 da LGPD (verificado) determina que os agentes de tratamento adotem medidas de segurança, técnicas e administrativas, aptas a proteger os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas — destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito. Transposição prática: técnicas (autenticação forte, criptografia em repouso e em trânsito, controle de acesso por perfil, registro de auditoria, backup imutável) e administra…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Segurança, incidentes e a LGPD no dia a dia do órgão",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A LGPD determina comunicação de incidente em até 3 dias úteis.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Afirmativa não verificável nesta sessão: o dispositivo específico da LGPD sobre comunicação de incidentes e seu prazo NÃO constam do arquivo de referências verificadas (que cobre arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46). Não repita prazo decorado de memória sem conferir a redação atual em fonte oficial."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Que categorias de medidas o art. 46 exige?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Medidas técnicas E administrativas aptas a proteger dados de acessos não autorizados e de situações acidentais ou ilícitas (redação verificada). Ambas as categorias são exigidas; uma sem a outra atende parcialmente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Após confirmar vazamento de dados pessoais, o que fazer em relação à LGPD?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Conter, erradicar e registrar o incidente; consultar o dispositivo da LGPD que trata da comunicação (não verificado nesta sessão — confirmar em fonte oficial) para prazo e destinatários; comunicar fatos confirmados; documentar medidas adotadas. Em paralelo, aplicar o art. 46 como parâmetro de adequação das medidas que faltavam.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A LGPD determina comunicação de incidente em até 3 dias úteis.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Afirmativa não verificável nesta sessão: o dispositivo específico da LGPD sobre comunicação de incidentes e seu prazo NÃO constam do arquivo de referências verificadas (que cobre arts. 1º, 2º, 3º, 4º, 5º, 17, 18 e 46). Não repita prazo decorado de memória sem conferir a redação atual em fonte oficial.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u4-t2-s1",
+      "titulo": "Marco Civil da Internet — Lei nº 12.965/2014",
+      "topicoTitulo": "Marco Civil, articulação normativa e limites das afirmações",
+      "topicoId": "modulo-4-unidade-4-topico-2",
+      "unidadeTitulo": "4.4 Legislação e conformidade",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno situará o Marco Civil no ordenamento de direitos digitais e distinguirá seu objeto do objeto da LGPD, com marcação explícita do grau de verificação.",
+      "conteudo": "O Marco Civil da Internet é a Lei nº 12.965/2014, que estabelece princípios, garantias, direitos e deveres para o uso da Internet no Brasil — enquadramento geral verificado no texto oficial do planalto.gov.br em 2026-10-23 (Bloco 3 de referencias-verificadas.md) — arts. 2º (fundamentos), 3º (princípios), 7º (direitos do usuário), 9º, § 3º (vedação de bloquear, monitorar, filtrar ou analisar o conteúdo dos pacotes de dados, ressalvado o disposto no artigo), 15 (guarda de registros de acesso a aplicações por 6 meses) e 19 (responsabilização por conteúdo de terceiros após ordem judicial); os demais artigos não integram esta verificação e não devem ser citados literalmente sem nova conferência. Importância para a segurança e a governança: o Marco Civil é a lei-marco do uso da Internet no país e dialoga com a LGPD — o texto oficial da LGPD indica alterações no Marco Civil (relação confirmada no preâmbulo do texto oficial da LGPD, presente em referencias-verificadas.md como relação verificada). Uso didático responsável: nas provas, cite a lei pelo número e ano (dado identificador), evite artigos que não tenha conferido, e saiba que o objeto do Marco Civil (uso da Internet, direitos e deveres dos usuários, regulação de serviços) é mais amplo do que o da LGPD (tratamento de dados pessoais). Distinção clássica de cobrança: Marco Civil trata do ambiente e das relações de uso da Internet; LGPD trata do dado pessoal e dos sujeitos do tratamento; LAI trata do acesso às informações públicas. Três leis, três objetos — mas com zonas de articulação (por exemplo, dados de conexão e registros de acesso tratados em ambas as lógicas).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual lei trataria de: (a) regras gerais de uso da Internet; (b) base legal para tratar nome de cidadão em cadastro?",
+          "resposta": "(a) Marco Civil (Lei nº 12.965/2014) — verificada em 2026-10-23 (arts. 2º, 3º, 7º, 9º §3º, 15 e 19); demais dispositivos, confirmar em fonte oficial. (b) LGPD (Lei nº 13.709/2018), art. 1º e art. 5º, I (verificados)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Projeto menciona 'obrigação do art. 15 do Marco Civil' sem conferir a fonte. Como o material didático deve tratar isso?",
+          "resposta": "O art. 15 do Marco Civil foi verificado em 2026-10-23 e trata da guarda de registros de acesso a aplicações de internet pelo provedor por 6 meses — parte verificada (caput). As regras de disponibilização desses registros aos requerentes não integram a lista de dispositivos verificados (Bloco 3) e devem ser conferidas em fonte oficial antes de qualquer citação. O material deve afirmar apenas o que a verificação cobre e indicar que os demais dispositivos devem ser conferidos em fonte oficial antes de qualquer citação — prática de honestidade intelectual exigida pelas regras de entrega do projeto."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Marco Civil e LGPD são a mesma lei em versões diferentes.'",
+          "correcao": "Errado. São leis distintas, de anos distintos, com objetos diferentes; a LGPD inclusive alterou disposições do Marco Civil (relação verificada no preâmbulo do texto oficial da LGPD)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O número e o ano do Marco Civil (Lei nº 12.965/2014) podem ser citados; dos dispositivos, os arts. 2º, 3º, 7º, 9º §3º, 15 e 19 foram verificados e os demais exigem conferência em fonte oficial.",
+          "resposta": "Certo — é exatamente o tratamento adotado neste material: identificador da lei citado a partir do prompt mestre do projeto; dos dispositivos, os arts. 2º, 3º, 7º, 9º §3º, 15 e 19 foram verificados em 2026-10-23; os demais seguem marcados como não verificados."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Objeto da LGPD: A) uso da Internet no Brasil; B) tratamento de dados pessoais; C) acesso a informações públicas; D) regulação de telecomunicações.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de situar o Marco Civil no ordenamento de direitos digitais e distinguirá seu objeto do objeto da LGPD, com marcação explícita do grau de verificação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "situará o Marco Civil no ordenamento de direitos digitais e distinguirá seu objeto do objeto da LGPD, com marcação explícita do grau de verificação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O Marco Civil da Internet é a Lei nº 12.965/2014, que estabelece princípios, garantias, direitos e deveres para o uso da Internet no Brasil — enquadramento geral verificado no texto oficial do planalto.gov.br em 2026-10-23 (Bloco 3 de referencias-verificadas.md) — arts. 2º (fundamentos), 3º (princípios), 7º (direitos do usuário), 9º, § 3º (vedação de bloquear, monitorar, filtrar ou analisar o conteúdo dos pacotes de dados, ressalvado o disposto no artigo), 15 (guarda de registros de acesso a apl…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Marco Civil da Internet — Lei nº 12.965/2014",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Marco Civil e LGPD são a mesma lei em versões diferentes.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. São leis distintas, de anos distintos, com objetos diferentes; a LGPD inclusive alterou disposições do Marco Civil (relação verificada no preâmbulo do texto oficial da LGPD)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual lei trataria de: (a) regras gerais de uso da Internet; (b) base legal para tratar nome de cidadão em cadastro?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(a) Marco Civil (Lei nº 12.965/2014) — verificada em 2026-10-23 (arts. 2º, 3º, 7º, 9º §3º, 15 e 19); demais dispositivos, confirmar em fonte oficial. (b) LGPD (Lei nº 13.709/2018), art. 1º e art. 5º, I (verificados).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Projeto menciona 'obrigação do art. 15 do Marco Civil' sem conferir a fonte. Como o material didático deve tratar isso?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O art. 15 do Marco Civil foi verificado em 2026-10-23 e trata da guarda de registros de acesso a aplicações de internet pelo provedor por 6 meses — parte verificada (caput). As regras de disponibilização desses registros aos requerentes não integram a lista de dispositivos verificados (Bloco 3) e devem ser conferidas em fonte oficial antes de qualquer citação. O material deve afirmar apenas o que a verificação cobre e indicar que os demais dispositivos devem ser conferidos em fonte oficial antes de qualquer citação — prática de honestidade intelectual exigida pelas regras de entrega do projeto.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Marco Civil e LGPD são a mesma lei em versões diferentes.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. São leis distintas, de anos distintos, com objetos diferentes; a LGPD inclusive alterou disposições do Marco Civil (relação verificada no preâmbulo do texto oficial da LGPD).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

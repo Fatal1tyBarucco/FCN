@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 2,
+    "unidadeTitulo": "3.2 Calendários e Reuniões",
+    "parte": 1,
+    "totalPartesUnidade": 2,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U2P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U2P1.js",
+    "idsCompletos": [
+      "m3-u2-t1-s1",
+      "m3-u2-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u2-t1-s1",
+      "titulo": "Calendários e convites de reunião",
+      "topicoTitulo": "Calendários, convites e permissões",
+      "topicoId": "modulo-3-unidade-2-topico-1",
+      "unidadeTitulo": "3.2 Calendários e Reuniões",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá o funcionamento de calendários e convites de reunião.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que um calendário digital gerencia; (b) os campos de um convite de reunião; (c) os níveis de permissão de compartilhamento; (d) recorrência e lembretes; (e) cuidados de privacidade. POR QUE O CONHECIMENTO É IMPORTANTE: calendários coordenam equipes e, mal configurados, expõem agenda e dados; a prova cobra a função dos convites e das permissões. PRÉ-REQUISITOS: uso básico de conta institucional e de correio eletrônico. OBJETIVOS OBSERVÁVEIS: (1) listar os componentes de um evento; (2) diferenciar participante obrigatório de opcional; (3) explicar os níveis de permissão; (4) configurar recorrência e lembretes. COMPETÊNCIAS DESENVOLVIDAS: organização de agenda; coordenação de reuniões; proteção de informação em convites. GRAU DE DIFICULDADE: básico. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (comunicação assíncrona); unidade 5.2 (exposição em calendários); unidade 4.1 (controle de acesso). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: um calendário digital é um repositório de eventos com data, hora, duração, local, participantes e descrição; ele sincroniza entre dispositivos e suporta convites que geram respostas de aceitação, recusa ou provisório. Participantes obrigatórios precisam comparecer; opcionais são informados sem exigência de presença. Recorrência cria séries (diária, semanal, mensal) com a possibilidade de editar apenas uma ocorrência ou toda a série. Lembretes disparam notificações antes do evento. O compartilhamento segue níveis de permissão: proprietário (controle total), editor (altera eventos), comentar e somente leitura; o calendário pode ainda ser privado, compartilhado com pessoas específicas ou, indevidamente, público. Em serviços públicos, a descrição e os anexos do convite podem conter dados pessoais, e o link de reunião incluído no corpo é um vetor de acesso indevido se o evento for público.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer os campos essenciais de um evento (título, quando, onde, quem).\n- Nível intermediário: distinguir recorrência de evento único e o efeito de editar uma ocorrência.\n- Nível avançado: avaliar o risco de compartilhar o calendário com permissão de edição ou de torná-lo público.\n- Nível especialista: montar um convite seguro para reunião sensível, minimizando dados e restringindo o link.\nCOMPARAÇÕES CRÍTICAS:\n- obrigatório x opcional: o primeiro exige presença; o segundo apenas informa — a lista correta altera a ata e a responsabilidade.\n- editor x somente leitura: editor altera o evento (inclusive cancela); leitura apenas consulta — a permissão excessiva é falha de segurança.\n- evento único x recorrente: editar uma ocorrência não altera a série, salvo escolha explícita.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Convidar todos como editor é conveniente e inofensivo.\" — Motivo: permite alterar ou cancelar o evento — Versão tecnicamente correta: conceder o menor privilégio necessário.\n- Afirmação errada: \"Um calendário público não expõe nada relevante.\" — Motivo: descrição e participantes podem conter dados — Versão tecnicamente correta: tratar o calendário conforme a sensibilidade do conteúdo.\n- Afirmação errada: \"Editar um evento recorrente sempre altera toda a série.\" — Motivo: há escolha entre ocorrência e série — Versão tecnicamente correta: selecionar explicitamente o alcance da edição.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: evento, convite, obrigatório, opcional, recorrência, lembrete, permissões.\n- Regras e fórmulas: aplicar o princípio do menor privilégio ao compartilhar o calendário.\n- Exceções: a recorrência admite edição de ocorrência isolada.\n- Palavras-chave: agenda, convite, permissão, privacidade, lembrete.\n- Checklist de domínio: (1) Listo os campos do evento? (2) Distingo obrigatório de opcional? (3) Explico as permissões? (4) Aplico menor privilégio?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais campos compõem um convite? (2) O que significa permissão de editor? (3) Como a recorrência trata uma ocorrência? (4) Que risco há em calendário público? (5) O que um lembrete faz?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Montar um convite de reunião para participantes de três cidades, com pauta, documento de apoio e horário que não seja ambíguo para nenhum deles.",
+          "resposta": "Convite com pauta, link e documento, participantes obrigatórios e opcionais distinguidos e horário correto nos três fusos; o calendário registra aceite, recusa ou resposta provisória de cada convidado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa reorganizar uma reunião que será remarcada duas vezes em uma semana, sem que os participantes percam o histórico de mensagens e a pauta já enviada.",
+          "resposta": "Evento único com a data correta, pauta preservada, respostas atualizadas e a nova participante presente apenas na data prevista, sem eventos duplicados nas agendas."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que calendários compartilhados não permitem permissões diferentes por pessoa e que, por isso, compartilhar a agenda com a equipe necessariamente expõe todos os compromissos.",
+          "correcao": "A afirmação é incorreta: a agenda fica compartilhada com níveis distintos por pessoa, exibindo apenas disponibilidade para a equipe e detalhes para quem precisa deles."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Convites de reunião podem ter participantes obrigatórios e opcionais.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual permissão permite modificar um evento? A) Proprietário; B) Editor; C) Comentar; D) Visualização.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender o funcionamento de calendários e convites de reunião, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá o funcionamento de calendários e convites de reunião"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Calendários digitais (Google Calendar, Outlook Calendar) permitem agendar eventos, convidar participantes e definir permissões. Convites de reunião incluem: título, data/hora, local (físico ou virtual), participantes (obrigatórios, opcionais), descrição, anexos. Tipos de permissão: proprietário (controle total), editor (pode modificar), comentar, somente visualização. Recorrência: eventos diários, semanais, mensais. Lembretes: notificações automáticas antes do evento.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Calendários e convites de reunião",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Calendários não permitem definir permissões diferentes para cada participante.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Calendários permitem definir permissões: proprietário, editor, comentar, somente visualização."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Montar um convite de reunião para participantes de três cidades, com pauta, documento de apoio e horário que não seja ambíguo para nenhum deles.",
+            "dados": "Participantes em três fusos distintos, reunião de cinquenta minutos, documento de apoio de duas páginas e duas pessoas que participam apenas como ouvintes.",
+            "conceitos": [
+              "convite de reunião: evento de calendário com participantes e respostas",
+              "participante obrigatório e opcional: exigência de presença e participação informativa",
+              "fuso horário do evento: referência usada para calcular o horário local de cada participante"
+            ],
+            "estrategia": "Preencher o evento com os campos de que o convidado precisa para decidir e comparecer, e fixar o fuso na criação, para que a conversão seja feita pelo calendário.",
+            "execucao": [
+              "Criar o evento com título objetivo, data, hora de início, duração e fuso horário definido na criação.",
+              "Incluir local ou link da reunião e a pauta na descrição, anexando o documento de apoio quando necessário.",
+              "Adicionar os participantes obrigatórios e marcar os dois ouvintes como opcionais.",
+              "Enviar o convite e conferir, na resposta de cada participante, o horário exibido no fuso local."
+            ],
+            "resultado": "Convite com pauta, link e documento, participantes obrigatórios e opcionais distinguidos e horário correto nos três fusos; o calendário registra aceite, recusa ou resposta provisória de cada convidado.",
+            "justificativa": "O calendário converte o horário a partir do fuso definido no evento, e não do fuso de quem lê, por isso fixar o fuso na criação evita erro de uma hora em períodos de horário de verão. A distinção entre obrigatório e opcional informa a expectativa de presença e organiza a lista de respostas.",
+            "errosFrequentes": [
+              "Escrever o fuso apenas na descrição e deixar o campo do evento no fuso padrão.",
+              "Marcar todos como obrigatórios e distorcer a expectativa de presença.",
+              "Anexar o documento ao convite sem verificar o acesso dos convidados externos."
+            ],
+            "variacao": "A reunião passa a ser semanal por três meses. Explique como criar a série e como alterar apenas uma ocorrência sem afetar as demais."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa reorganizar uma reunião que será remarcada duas vezes em uma semana, sem que os participantes percam o histórico de mensagens e a pauta já enviada.",
+            "dados": "Evento com nove participantes, pauta com cinco itens, duas remarcações previstas e uma pessoa que entrará apenas na segunda data.",
+            "conceitos": [
+              "atualização de evento: alteração que reenvia o convite aos participantes",
+              "série recorrente: conjunto de ocorrências que compartilham a mesma definição",
+              "resposta do participante: estado de aceite associado ao evento"
+            ],
+            "estrategia": "Atualizar o evento existente em vez de criar outro, preservando pauta e respostas, e incluir a nova pessoa na data em que ela participará.",
+            "execucao": [
+              "Abrir o evento existente e alterar data e hora, mantendo a pauta e o documento anexado.",
+              "Enviar a atualização aos participantes e conferir quais respostas foram redefinidas.",
+              "Incluir a nova participante apenas na ocorrência correspondente, sem convertê-la em convidada da primeira data.",
+              "Confirmar na agenda de cada participante que restou apenas a data vigente."
+            ],
+            "resultado": "Evento único com a data correta, pauta preservada, respostas atualizadas e a nova participante presente apenas na data prevista, sem eventos duplicados nas agendas.",
+            "justificativa": "Criar um segundo evento duplicaria o compromisso e dividiria as respostas, dificultando saber quem comparecerá. A atualização mantém o vínculo entre convite, pauta e respostas, e a inclusão pontual da nova participante evita que ela receba um convite para uma data em que não deve estar presente.",
+            "errosFrequentes": [
+              "Criar um evento novo e deixar o antigo ativo nas agendas.",
+              "Alterar a série inteira quando apenas uma ocorrência mudou.",
+              "Incluir a nova participante na série e gerar convites para todas as datas."
+            ],
+            "variacao": "A reunião passa a ter duas ocorrências na mesma semana, com públicos distintos. Explique como estruturar os eventos para não misturar respostas e listas de presença."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que calendários compartilhados não permitem permissões diferentes por pessoa e que, por isso, compartilhar a agenda com a equipe necessariamente expõe todos os compromissos.",
+            "dados": "Agenda com compromissos pessoais e profissionais, equipe de oito pessoas, necessidade de mostrar apenas disponibilidade e um caso em que se deseja mostrar detalhes.",
+            "conceitos": [
+              "nível de permissão: define o que o outro pode ver ou alterar",
+              "disponibilidade: exibição de horários ocupados sem detalhes do evento",
+              "agenda privada: configuração que restringe o acesso ao proprietário"
+            ],
+            "estrategia": "Verificar os níveis de compartilhamento disponíveis e configurar por pessoa, usando o nível que mostra apenas disponibilidade para a equipe e detalhes para o caso específico.",
+            "execucao": [
+              "Abrir as configurações de compartilhamento da agenda e listar os níveis disponíveis.",
+              "Conceder à equipe o nível que exibe apenas disponibilidade, sem títulos nem participantes.",
+              "Conceder ao segundo caso o nível com detalhes, conforme a necessidade declarada.",
+              "Conferir, com uma pessoa de cada grupo, o que cada uma consegue ver."
+            ],
+            "resultado": "A afirmação é incorreta: a agenda fica compartilhada com níveis distintos por pessoa, exibindo apenas disponibilidade para a equipe e detalhes para quem precisa deles.",
+            "justificativa": "O compartilhamento de calendário é granular: cada concessão define o que o destinatário vê, e o nível de disponibilidade oculta títulos e participantes. Por isso a exposição de compromissos pessoais decorre de configuração inadequada, e não de limitação da ferramenta.",
+            "errosFrequentes": [
+              "Compartilhar a agenda no nível mais amplo por desconhecer as opções.",
+              "Tornar a agenda pública em vez de compartilhar com pessoas específicas.",
+              "Conferir a configuração apenas na própria visão, sem testar com outro usuário."
+            ],
+            "variacao": "Um dos integrantes precisa apenas propor horários, sem ver detalhes dos compromissos. Explique qual nível atende a esse caso e por que conceder edição seria excesso de permissão."
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u2-t2-s1",
+      "titulo": "Teams, Meet e Zoom — comparação",
+      "topicoTitulo": "Microsoft Teams, Google Meet e Zoom",
+      "topicoId": "modulo-3-unidade-2-topico-2",
+      "unidadeTitulo": "3.2 Calendários e Reuniões",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno comparará Teams, Google Meet e Zoom.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o posicionamento de Microsoft Teams, Google Meet e Zoom; (b) capacidades que são condicionais ao plano/versão; (c) como comparar sem generalizar; (d) critérios de escolha. POR QUE O CONHECIMENTO É IMPORTANTE: a prova pede comparação de plataformas; generalizar recursos entre planos gera erro, pois muitos dependem de licença ou edição. PRÉ-REQUISITOS: uso básico de videoconferência; noção de licenciamento/plano. OBJETIVOS OBSERVÁVEIS: (1) situar cada plataforma no seu ecossistema; (2) citar capacidades comuns; (3) indicar que recursos específicos dependem de plano; (4) escolher conforme o cenário. COMPETÊNCIAS DESENVOLVIDAS: avaliação comparativa de ferramentas; decisão de adoção com base em requisitos. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4 (controle de reunião); unidade 5.2 (exposição em plataformas); Módulo 1 (Microsoft 365). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: as três plataformas resolvem o mesmo problema — reunião e colaboração a distância — mas diferem na integração e no modelo de licenciamento. Microsoft Teams é integrado ao ecossistema Microsoft 365, com forte ênfase em canais, chat persistente, edição colaborativa de arquivos e reuniões; Google Meet integra-se ao Google Workspace, com uso pelo navegador e integração com Agenda e Documentos; Zoom é amplamente usado em reuniões com participantes externos e oferece recursos de webinars e salas simultâneas. Capacidades frequentemente presentes nas três: compartilhamento de tela, chat, levantar mão, reações, gravação e salas de espera. Entretanto, limites de duração, número de participantes, gravação em nuvem, transcrição, legendas ao vivo e webinars dependem do plano, da edição ou da versão — não devendo ser generalizados entre plataformas. Decisão técnica: priorizar integração com o ecossistema já adotado, requisitos de segurança/governança e integração com calendário e armazenamento.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: identificar a qual ecossistema cada plataforma pertence.\n- Nível intermediário: listar capacidades comuns e sinalizar as condicionais ao plano.\n- Nível avançado: escolher uma plataforma considerando segurança, governança e integração.\n- Nível especialista: avaliar migração entre plataformas considerando custo, interoperabilidade e soberania dos dados.\nCOMPARAÇÕES CRÍTICAS:\n- Teams/Meet x Zoom: as duas primeiras privilegiam integração com o respectivo ecossistema (M365/Workspace); o Zoom é independente do ecossistema — isso muda o critério de escolha.\n- capacidade base x capacidade condicional: muitas funções (gravação em nuvem, transcrição, webinars) dependem do plano — afirmar como universais gera erro.\n- navegador x aplicativo instalado: alguns recursos variam conforme o modo de acesso.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Todas as plataformas oferecem gravação e transcrição idênticas.\" — Motivo: depende do plano/versão — Versão tecnicamente correta: verificar a documentação oficial do produto.\n- Afirmação errada: \"O Zoom é integrado ao Microsoft 365 como o Teams.\" — Motivo: são ecossistemas distintos — Versão tecnicamente correta: o Zoom é uma plataforma independente com integrações opcionais.\n- Afirmação errada: \"O número de participantes é igual em qualquer plano.\" — Motivo: é limitado pela licença — Versão tecnicamente correta: conferir o limite do plano contratado.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Teams, Google Meet, Zoom, integração, plano, licenciamento.\n- Regras e fórmulas: capacidades comuns existem, mas recursos avançados são condicionais ao plano.\n- Exceções: limites de tempo, participantes e gravação variam por licença.\n- Palavras-chave: videoconferência, ecossistema, webinar, sala simultânea, transcrição.\n- Checklist de domínio: (1) Situo cada plataforma? (2) Cito capacidades comuns? (3) Sinalizo o condicional ao plano? (4) Escolho por requisitos?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) A qual ecossistema pertence o Teams? (2) Quais recursos são comuns às três? (3) Por que não generalizar recursos entre planos? (4) Que critérios orientam a escolha? (5) O que é webinar?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Escolher a plataforma para uma organização que já usa um pacote de produtividade corporativo e precisa de reuniões internas com acesso aos arquivos no mesmo ambiente.",
+          "resposta": "Plataforma do pacote adotada para as reuniões internas, com arquivos acessados no próprio ambiente e ingresso de externos validado por teste; os limites do plano ficam documentados."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa comparar duas plataformas para uma aula remota com alunos de uma instituição que usa ambiente de ensino próprio e exige gravação das sessões.",
+          "resposta": "Plataforma escolhida com base no requisito de gravação confirmado na licença institucional, com integração ao ambiente de ensino e acesso dos alunos sem cadastro adicional."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que uma das plataformas exige instalação de programa em todos os casos e que, por isso, não pode ser usada por participantes externos que não podem instalar software.",
+          "correcao": "A afirmação é incorreta: o acesso pelo navegador dispensa instalação, ainda que alguns recursos possam ser limitados; a conclusão correta é verificar quais requisitos a reunião exige."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Zoom suporta salas simultâneas (breakout rooms).",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual plataforma é integrada ao Google Workspace? A) Teams; B) Meet; C) Zoom; D) Slack.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de comparar Teams, Google Meet e Zoom, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "comparará Teams, Google Meet e Zoom"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Microsoft Teams: integrado ao Microsoft 365, ideal para organizações que já usam M365. Recursos: canais, chat, reuniões, colaboração em documentos. Google Meet: integrado ao Google Workspace, simplicidade, não requer instalação (navegador). Zoom: popular para reuniões externas, recursos avançados de webinars, salas simultâneas (breakout rooms). Todos oferecem: compartilhamento de tela, gravação, chat, levantar mão, reações. Teams destaca-se em colaboração contínua; Meet em simplicidade; Zoom em …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Teams, Meet e Zoom — comparação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Google Meet requer instalação de software.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Google Meet funciona no navegador sem instalação."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Escolher a plataforma para uma organização que já usa um pacote de produtividade corporativo e precisa de reuniões internas com acesso aos arquivos no mesmo ambiente.",
+            "dados": "Organização com pacote corporativo contratado, reuniões internas de até trinta pessoas, necessidade de editar documentos durante a reunião e convidados externos ocasionais.",
+            "conceitos": [
+              "ecossistema: conjunto de serviços integrados da mesma plataforma",
+              "recurso condicionado ao plano: capacidade que depende de licença ou edição",
+              "convidado externo: participante sem conta na organização"
+            ],
+            "estrategia": "Partir do requisito de integração com o ambiente já contratado e verificar, antes de decidir, quais capacidades dependem do plano em uso.",
+            "execucao": [
+              "Listar os requisitos: reunião interna, edição de documentos durante a sessão e convidados externos ocasionais.",
+              "Verificar que a plataforma do próprio pacote integra reunião, conversa e arquivos no mesmo ambiente.",
+              "Conferir no plano contratado os limites aplicáveis a participantes, gravação e transcrição.",
+              "Testar o ingresso de um convidado externo antes de padronizar a ferramenta para toda a organização."
+            ],
+            "resultado": "Plataforma do pacote adotada para as reuniões internas, com arquivos acessados no próprio ambiente e ingresso de externos validado por teste; os limites do plano ficam documentados.",
+            "justificativa": "As três plataformas resolvem reunião a distância e compartilham recursos básicos, mas diferem na integração com o ambiente de arquivos e colaboração. Quando a organização já opera no pacote corporativo, a plataforma integrada reduz etapas porque reunião, conversa e documento estão no mesmo serviço, e a verificação do plano evita prometer capacidade que a licença não cobre.",
+            "errosFrequentes": [
+              "Generalizar recursos entre plataformas e planos, prometendo gravação ou limites iguais em todos.",
+              "Escolher pela familiaridade do usuário sem verificar a integração com o ambiente de arquivos.",
+              "Testar apenas com contas internas e descobrir o problema de acesso externo no dia da reunião."
+            ],
+            "variacao": "A mesma organização precisa realizar um evento aberto para quinhentos participantes externos, com moderação. Indique o que muda na escolha e por que o recurso de evento ampliado não pode ser presumido em qualquer plano."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa comparar duas plataformas para uma aula remota com alunos de uma instituição que usa ambiente de ensino próprio e exige gravação das sessões.",
+            "dados": "Turma de quarenta alunos, ambiente de ensino institucional já adotado, gravação obrigatória de todas as aulas, recursos disponíveis dependentes da licença educacional.",
+            "conceitos": [
+              "integração com ambiente de ensino: ligação entre a plataforma de reunião e o repositório de conteúdo",
+              "gravação como recurso de plano: disponibilidade sujeita à licença",
+              "critério de escolha: requisito obrigatório que elimina alternativas"
+            ],
+            "estrategia": "Tratar a gravação obrigatória como requisito eliminatório e verificar, em cada plataforma e licença, se a capacidade está incluída antes de comparar recursos secundários.",
+            "execucao": [
+              "Listar os requisitos e marcar a gravação obrigatória como eliminatória.",
+              "Verificar, na licença institucional de cada plataforma, se a gravação está incluída e por quanto tempo é retida.",
+              "Comparar a integração com o ambiente de ensino já adotado, que reduz etapas para os alunos.",
+              "Registrar a comparação e indicar a plataforma que atende ao requisito eliminatório com menor atrito de acesso."
+            ],
+            "resultado": "Plataforma escolhida com base no requisito de gravação confirmado na licença institucional, com integração ao ambiente de ensino e acesso dos alunos sem cadastro adicional.",
+            "justificativa": "Quando um requisito é eliminatório, a comparação precisa começar por ele, porque um recurso atraente que dependa de licença não contratada não resolve o problema. A integração com o ambiente já adotado é critério secundário, que desempata entre alternativas igualmente viáveis.",
+            "errosFrequentes": [
+              "Comparar recursos sem verificar a licença efetivamente contratada.",
+              "Escolher pela interface e descobrir a limitação de gravação depois da primeira aula.",
+              "Prometer retenção de gravação sem conhecer a política aplicável."
+            ],
+            "variacao": "A instituição decide manter a gravação por apenas trinta dias. Explique o que muda na comparação e qual requisito novo passa a pesar na escolha."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que uma das plataformas exige instalação de programa em todos os casos e que, por isso, não pode ser usada por participantes externos que não podem instalar software.",
+            "dados": "Participante externo com acesso apenas ao navegador, reunião de uma hora, computador corporativo sem permissão de instalação e conexão estável.",
+            "conceitos": [
+              "acesso pelo navegador: uso sem instalação local, sujeito a recursos do navegador",
+              "aplicativo dedicado: programa instalado, com recursos adicionais",
+              "requisito do participante: restrição que define a viabilidade da ferramenta"
+            ],
+            "estrategia": "Verificar o modo de acesso disponível na plataforma e testar com um participante sem permissão de instalação, em vez de concluir pela via de aplicativo.",
+            "execucao": [
+              "Verificar na plataforma se existe acesso por navegador para participantes.",
+              "Testar o ingresso com uma conta sem permissão de instalação.",
+              "Comparar os recursos disponíveis no navegador com os do aplicativo dedicado.",
+              "Registrar o que o participante consegue fazer no modo de navegador e o que exigiria instalação."
+            ],
+            "resultado": "A afirmação é incorreta: o acesso pelo navegador dispensa instalação, ainda que alguns recursos possam ser limitados; a conclusão correta é verificar quais requisitos a reunião exige.",
+            "justificativa": "A existência de aplicativo dedicado não elimina o modo de navegador. O que decide a viabilidade é o conjunto de recursos exigidos pela reunião em confronto com os disponíveis no modo de acesso permitido ao participante, e a conclusão precisa vir de teste, não de suposição.",
+            "errosFrequentes": [
+              "Concluir a limitação de acesso sem testar o modo de navegador.",
+              "Generalizar a exigência de instalação para todos os participantes.",
+              "Escolher a plataforma pela experiência do anfitrião e ignorar a restrição dos convidados."
+            ],
+            "variacao": "O participante externo também não pode criar conta. Explique o que muda na análise e qual teste comprova o ingresso sem cadastro."
+          }
+        ]
+      }
+    }
+  ]
+}

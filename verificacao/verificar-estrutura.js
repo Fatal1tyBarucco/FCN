@@ -17,19 +17,19 @@
  * ----------------------------------------------------------------------------
  * O QUE ESTE SCRIPT VERIFICA
  * ----------------------------------------------------------------------------
- * 1) Fusão questions.js + questions_m4..m8 por id → total === 399; distribuição
- *    por módulo {1:44, 2:54, 3:47, 4:85, 5:42, 6:47, 7:40, 8:40}; 0 ids
+ * 1) Fusão questions.js + questions_m4..m8 por id → total === 409; distribuição
+ *    por módulo {1:54, 2:54, 3:47, 4:85, 5:42, 6:47, 7:40, 8:40}; 0 ids
  *    duplicados.
  * 2) Aplica o validarQuestao REAL do quiz-engine.js (carregado em contexto vm
  *    com stubs mínimos de DOM, listeners de DOMContentLoaded disparados;
  *    window.QuizApp exposto) e espera 0 reprovadas.
  * 3) Contagem de flashcards (flashcards_m1..m8) → total 474 + mapa exato por
- *    módulo {1:66, 2:56, 3:68, 4:54, 5:66, 6:50, 7:50, 8:50}.
+ *    módulo {1:80, 2:56, 3:68, 4:54, 5:66, 6:50, 7:50, 8:50}.
  * 4) Cada tag <script src> do index.html resolve para arquivo existente em
  *    disco, e a contagem total de tags é 43 (23 de dados + 20 de JS) — 2 novos
  *    scripts (state.js, db-modules.js) adicionados pela refatoracao SPA e
  *    personalization.js carregado a partir do incremento FIX-02 (2026-10-28).
- * 5) manifest.webmanifest é JSON válido e a description menciona "399".
+ * 5) manifest.webmanifest é JSON válido e a description menciona "409".
  * 6) Imprime níveis / formatos / estilos (contagens reais) para conferência.
  * 7) q-m4-32: id/formato/gabarito + CONTEÚDO — alternativa B cita os princípios
  *    reais do art. 3º (neutralidade, privacidade, dados pessoais; sem
@@ -91,12 +91,14 @@ const ctx = vm.createContext({
 });
 ctx.window = ctx; // window === global do contexto (padrão navegador)
 
-/* Ordem de carga: dados primeiro (questões + flashcards), depois o motor. */
+/* Ordem de carga: dados primeiro (questões + flashcards + enriquecimento), depois o motor. */
 const arquivosDados = [
   'questions.js', 'questions_m4.js', 'questions_m5.js',
   'questions_m6.js', 'questions_m7.js', 'questions_m8.js',
   'flashcards_m1.js', 'flashcards_m2.js', 'flashcards_m3.js', 'flashcards_m4.js',
-  'flashcards_m5.js', 'flashcards_m6.js', 'flashcards_m7.js', 'flashcards_m8.js'
+  'flashcards_m5.js', 'flashcards_m6.js', 'flashcards_m7.js', 'flashcards_m8.js',
+  'enriquecimento_m1.js', 'enriquecimento_m2.js', 'enriquecimento_m3.js', 'enriquecimento_m4.js',
+  'enriquecimento_m5.js', 'enriquecimento_m6.js', 'enriquecimento_m7.js', 'enriquecimento_m8.js'
 ];
 secao('1. CARGA DOS DADOS (vm.runInContext, contexto isolado)');
 for (const f of arquivosDados) {
@@ -107,6 +109,86 @@ for (const f of arquivosDados) {
     check(f + ' carregado', false, e.message);
   }
 }
+
+/* Validação dos enriquecimentos: 8 arquivos, JS válido, cobrem 307 ids */
+secao('1b. VALIDAÇÃO DOS ENRIQUECIMENTOS (overlay Seção 5)');
+const enriquecimentoVars = [
+  'enriquecimentoM1', 'enriquecimentoM2', 'enriquecimentoM3', 'enriquecimentoM4',
+  'enriquecimentoM5', 'enriquecimentoM6', 'enriquecimentoM7', 'enriquecimentoM8'
+];
+let totalEnriquecimentoIds = 0;
+for (const varName of enriquecimentoVars) {
+  try {
+    const obj = vm.runInContext(varName, ctx);
+    if (obj && typeof obj === 'object') {
+      const count = Object.keys(obj).length;
+      totalEnriquecimentoIds += count;
+      check(varName + ' existe e é objeto (' + count + ' ids)', true);
+    } else {
+      check(varName + ' existe e é objeto', false, 'não é objeto válido');
+    }
+  } catch (e) {
+    check(varName + ' existe e é objeto', false, e.message);
+  }
+}
+check('total de ids nos enriquecimentos === 307', totalEnriquecimentoIds === 307,
+  'real=' + totalEnriquecimentoIds + ', esperado=307');
+
+/* Verifica IDs órfãos (no enriquecimento mas não no currículo) e ausentes (no currículo mas não no enriquecimento) */
+const curriculumIds = new Set();
+const curriculumFiles = {
+  1: { file: 'curriculum.js', varName: 'curriculum' },
+  2: { file: 'curriculum_m2.js', varName: 'curriculumM2' },
+  3: { file: 'curriculum_m3.js', varName: 'curriculumM3' },
+  4: { file: 'curriculum_m4.js', varName: 'curriculumM4' },
+  5: { file: 'curriculum_m5.js', varName: 'curriculumM5' },
+  6: { file: 'curriculum_m6.js', varName: 'curriculumM6' },
+  7: { file: 'curriculum_m7.js', varName: 'curriculumM7' },
+  8: { file: 'curriculum_m8.js', varName: 'curriculumM8' }
+};
+for (let m = 1; m <= 8; m++) {
+  const cf = curriculumFiles[m];
+  try {
+    const code = fs.readFileSync(path.join(DATA, cf.file), 'utf8');
+    const wrapped = '(function(){ ' + code + '; return ' + cf.varName + '; })()';
+    const cur = vm.runInContext(wrapped, ctx, { filename: cf.file });
+    if (cur && cur['modulo-' + m] && cur['modulo-' + m].unidades) {
+      cur['modulo-' + m].unidades.forEach(u => {
+        (u.topicos || []).forEach(t => {
+          (t.subtopicos || []).forEach(st => { curriculumIds.add(st.id); });
+          if (!t.subtopicos || t.subtopicos.length === 0) {
+            curriculumIds.add(t.id);
+          }
+        });
+      });
+    }
+  } catch (e) {
+    console.warn('Erro ao extrair IDs do currículo M' + m + ':', e.message);
+  }
+}
+let orfaosTotal = 0, ausentesTotal = 0;
+for (const varName of enriquecimentoVars) {
+  try {
+    const obj = vm.runInContext(varName, ctx);
+    if (obj) {
+      for (const id of Object.keys(obj)) {
+        if (!curriculumIds.has(id)) orfaosTotal++;
+      }
+    }
+  } catch (e) {}
+}
+for (const id of curriculumIds) {
+  let found = false;
+  for (const varName of enriquecimentoVars) {
+    try {
+      const obj = vm.runInContext(varName, ctx);
+      if (obj && obj[id]) { found = true; break; }
+    } catch (e) {}
+  }
+  if (!found) ausentesTotal++;
+}
+check('IDs órfãos no enriquecimento (não estão no currículo) === 0', orfaosTotal === 0, 'encontrados: ' + orfaosTotal);
+check('IDs do currículo ausentes no enriquecimento === 0', ausentesTotal === 0, 'ausentes: ' + ausentesTotal);
 
 /* Carrega o motor de simulados e dispara DOMContentLoaded. */
 secao('2. CARGA DO MOTOR (quiz-engine.js) + DOMContentLoaded');
@@ -272,7 +354,7 @@ if (r && r.q44) {
   check('q-m4-44 presente', false, 'não encontrada no banco fundido');
 }
 
-/* ------------------------------------------------------------ flashcards 460 */
+/* ------------------------------------------------------------ flashcards 474 */
 secao('5. FLASHCARDS (flashcards_m1..m8 → total 474)');
 /* No vm, `const` em topo de script é binding léxico do contexto (não é
  * propriedade de window). Para contar sem eval, avaliamos uma expressão
@@ -313,8 +395,8 @@ const scriptSrcs = [];
 const reSrc = /<script[^>]*\ssrc\s*=\s*["']([^"']+)["'][^>]*>/gi;
 let mm;
 while ((mm = reSrc.exec(idxHtml)) !== null) scriptSrcs.push(mm[1]);
-check('tags <script src> do index.html === 43', scriptSrcs.length === 43,
-  'real=' + scriptSrcs.length + ', esperado=43');
+check('tags <script src> do index.html === 52', scriptSrcs.length === 52,
+  'real=' + scriptSrcs.length + ', esperado=52 (43 originais + 8 enriquecimento + 1 unidade-template)');
 let externas = 0, locais = 0, ausentes = [];
 for (const src of scriptSrcs) {
   if (/^(https?:)?\/\//i.test(src) || /^(data|blob):/i.test(src)) { externas++; continue; }
@@ -325,8 +407,8 @@ for (const src of scriptSrcs) {
 check('todas as tags locais resolvem p/ arquivo em disco (' + locais + ' locais, ' + externas + ' externas)',
   ausentes.length === 0, ausentes.length ? ('ausentes: ' + ausentes.join(', ')) : 'nenhum 404');
 
-/* ---------------------------------------------------- manifest: JSON + "399" */
-secao('7. manifest.webmanifest → JSON VÁLIDO + description com "399"');
+/* ---------------------------------------------------- manifest: JSON + "409" */
+secao('7. manifest.webmanifest → JSON VÁLIDO + description com "409"');
 let manifest = null;
 try {
   manifest = JSON.parse(fs.readFileSync(path.join(APP, 'manifest.webmanifest'), 'utf8'));
@@ -336,8 +418,8 @@ try {
 }
 if (manifest) {
   const desc = typeof manifest.description === 'string' ? manifest.description : '';
-  check('description menciona "399"', desc.includes('399'), 'description contém 399=' + desc.includes('399'));
-  check('description contém a contagem de questões 399 e não a contagem anterior 389 questões', desc.includes('399 questões') && !desc.includes('389 questões'), '');
+  check('description menciona "409"', desc.includes('409'), 'description contém 409=' + desc.includes('409'));
+  check('description contém a contagem de questões 409 e não a contagem anterior 399 questões', desc.includes('409 questões') && !desc.includes('399 questões'), '');
 }
 
 /* ------------------------------------------- níveis / formatos / estilos (info) */

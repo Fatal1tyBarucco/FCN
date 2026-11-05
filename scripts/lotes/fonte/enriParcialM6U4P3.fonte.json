@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 4,
+    "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+    "parte": 3,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U4P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U4P3.js",
+    "idsCompletos": [
+      "m6-u4-t3-s1",
+      "m6-u4-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u4-t3-s1",
+      "titulo": "Exemplos resolvidos da unidade (três casos completos)",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-4-topico-3",
+      "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno resolverá, com o template de nove itens, três casos de uso institucional de redes sociais, conflito de interesse e conduta.",
+      "conteudo": "Todos os exemplos da unidade seguem o template de nove itens exigido pela especificação didática.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "EXEMPLO 1 (INTRODUÇÃO) — O perfil institucional do órgão é administrado por cinco servidores com senha compartilhada. O que está errado e o que fazer?",
+          "resposta": "Problema: falha de governança de canal institucional com credencial compartilhada. Dados disponíveis: cinco servidores acessam o perfil com a mesma senha; há duas contas de publicação no período; um post sobre campanha foi publicado às 23h por servidor fora do expediente; não há registro de autoria; não há registro de aprovação de conteúdo. Conceitos aplicáveis: responsabilização e não repúdio (Módulo 4); dever de auditoria e comprovação de autoria (art. 43, I e IV, da Lei nº 14.129/2021); dever de publicidade (art. 8º da Lei nº 12.527/2011); accountability digital (art. 34 da mesma lei). Estratégia: tratar como falha de controle, não como caso isolado de servidor; sanear o canal e reconstruir a história do que foi publicado. Passo a passo: (1) trocar a senha e eliminar o acesso compartilhado, migrando para conta institucional com autenticação multifator; (2) criar perfis por função (publicador, editor, aprovador) com mínimo privilégio (Módulo 4); (3) revisar o histórico recente de publicações e identificar o que foi publicado fora da política editorial; (4) registrar a correção ou o que for necessário e comunicar o cidadão se houve erro relevante; (5) registrar o incidente como falha de controle interno (art. 48 da Lei nº 14.129/2021) e definir ação corretiva com responsável e prazo; (6) registrar a partir de hoje o registro de publicações (data, hora, autor lógico, texto, mídia, aprovador). Resultado: canal institucional com acesso individualizado, rastreável e com política de aprovação vigente; responsabilização preservada a partir da regularização. Justificativa técnica: sem autoria individual não há responsabilização possível (Módulo 4) e não há como responder ao princípio da publicidade, que exige divulgação da verdade e accountability. Erros frequentes: (a) tratar como falha do servidor que postou; (b) criar um novo perfil sem revisar o histórico; (c) preservar o acesso compartilhado «só no plantão»; (d) desabilitar o perfil em vez de corrigir o desenho. Variação para transferência: se o perfil for de uma unidade menor, com poucos servidores, a solução não muda o princípio: o que muda é a escala do risco e a simplificação do processo de aprovação, jamais a identidade do acesso."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "EXEMPLO 2 (APLICAÇÃO) — O servidor que ordena a fila de atendimento de um hospital público é irmão do responsável técnico da empresa que fornece o sistema. A ordenação é manual e sem registro. Como o órgão deve agir?",
+          "resposta": "Problema: conflito de interesse real ou potencial com ausência de segregação de funções e ausência de rastreabilidade. Dados disponíveis: vínculo familiar entre servidor e fornecedor; o fornecedor é contratado para manter o sistema de fila; a ordenação é manual e não gera registro; não há política de declaração de conflito no setor; o contrato é de fornecedor do sistema, comissionamento contínuo. Conceitos aplicáveis: impessoalidade (art. 37 da CF); tipologia do conflito (real, potencial, aparente) e tratamento; art. 32, IV, da Lei nº 12.527/2011 (conduta de uso indevido); art. 30, § 1º, da Lei nº 14.129/2021 (o requerente pode pedir a preservação da identidade para não prejudicar a impessoalidade — princípio análogo aplicável à gestão de conflito); art. 48 da Lei nº 14.129/2021 (controles proporcionais). Estratégia: separar três medidas — afastamento imediato do ato, desenho de controle impessoal e apuração do período anterior. Passo a passo: (1) AFASTAR o servidor da ordenação imediatamente e designar substituto sem vínculo; (2) REGISTRAR formalmente a declaração de conflito (por escrito, com data e assinatura), mesmo após o afastamento, para o histórico de governança; (3) VERIFICAR se o vínculo com o fornecedor cria risco técnico adicional — se o fornecedor mantém acesso ao ambiente de produção ou aos dados de pacientes, abrir verificação específica de segregação de acesso (Módulo 4: menor privilégio e segregação de funções); (4) REVISAR as decisões de ordenação do período em que o servidor operou, para verificar tratamento diferenciado — se houver indício, remeter ao controle para apuração; (5) IMPLEMENTAR correções de desenho: ordenação por regra automatizada e publicada (o que remove a influência pessoal do ato), registro obrigatório de cada ordenação com autor e critério, e trilha de auditoria; (6) registrar o achado no sistema de riscos e no plano de auditoria interna (art. 49 da Lei nº 14.129/2021). Resultado: conflito afastado e documentado, decisões anteriores submetidas a revisão, desenho alterado para tornar a situação menos provável e mais detectável. Justificativa técnica: o conflito não se resolve apenas com boa-fé do servidor; o tratamento eficaz combina afastamento, desenho impessoal e detecção. A impessoalidade do processo é a medida estrutural, porque substitui a influência pessoal por critério publicado. Erros frequentes: (a) esperar que o servidor se declare; (b) manter o servidor na equipe «para não constranger»; (c) apenas declarar o conflito sem afastar; (d) não revisar as decisões anteriores. Variação para transferência: se o servidor for apenas o responsável técnico do fornecedor e não tiver qualquer função no órgão, não há conflito de interesse no sentido funcional — mas o caso passa a ser de RISCO DE CONFLITO DE INTERESSE do fornecedor, que exige controle de acesso do fornecedor ao ambiente, e não apuração disciplinar do servidor — a distinção entre as situações é o teste."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Em campanha institucional de início de vacinação, o perfil do órgão publicou foto de um cidadão vacinado com o nome completo e o número do cartão de SUS legíveis. A janela de campanha é de duas semanas e o conteúdo «está nas» redes. Como o órgão deve agir?",
+          "correcao": "Problema: publicação institucional de dado pessoal identificável de terceiro sem base legal nem consentimento. Dados disponíveis: foto e texto com nome e número de cartão de SUS de cidadão; o cidadão não foi informado nem consentiu; o canal é institucional; o conteúdo recebeu grande alcance; a campanha é legítima e a foto foi aceita pelo próprio cidadão na ocasião em que a foto foi tirada (aceite de foto para arquivo não equivale a consentimento para difusão em rede social com dados correlatos). Conceitos aplicáveis: art. 31, § 1º, II, da Lei nº 12.527/2011 (divulgação de informação pessoal por terceiros somente com previsão legal ou consentimento expresso); art. 5º, I, da LGPD (dado pessoal) e art. 46 (segurança); art. 3º, VI, da Lei nº 14.129/2021 (dever de prestar contas à população); dever de correção de erro e de publicidade. Estratégia: decidir sobre a base legal ANTES de publicar; como ela não existe, o conteúdo deve ser retirado e o cidadão protegido. Passo a passo: (1) CONTER: remover a publicação ou sanitizar a imagem (recortar nome e número do cartão), avaliando a necessidade de comunicação de erro; (2) PRESERVAR o registro da publicação original (data, hora, autor, conteúdo) para apuração e para o dever de accountability; (3) AVALIAR o alcance e o dano — o número de compartilhamentos e a existência de cópias; (4) COMUNICAR ao cidadão, se o risco de dano for relevante, com orientação sobre a exposição do número do cartão e sobre providências cabíveis; (5) APURAR a publicação: quem autorizou, se houve verificação prévia, se a política editorial foi seguida; (6) CORRIGIR O PROCESSO: incluir na política editorial regra de verificação de dados pessoais em imagens e textos (lista de verificação antes da publicação) e tornar essa verificação campo obrigatório do fluxo de aprovação; (7) REGISTRAR o incidente e a ação corretiva. Resultado: conteúdo protegido, cidadão comunicado, processo corrigido com verificação obrigatória de dados pessoais antes da publicação. Justificativa técnica: o aceite da foto para um fim (arquivo de campanha institucional restrito) não se transfere para outro fim (divulgar em rede social com identificador completo); é a lógica de finalidade e minimização. O alcance elevado agrava o dano e reforça a necessidade de avaliação prévia, não a dispensação dela. Erros frequentes: (a) «a pessoa apareceu na foto, logo autorizou»; (b) «corrigimos depois»; (c) «o conteúdo é institucional, então o cidadão não tem privacidade»; (d) substituir o nome por «pessoa vacinada» mas manter o número do cartão na imagem. Variação para transferência: se o conteúdo for útil em campanha e os dados forem disponibilizados agregados (número de doses, faixa etária, unidade) com o art. 29, § 1º, VI, da Lei nº 14.129/2021 (atualização periódica e perenidade) e o art. 8º, § 1º, V, da Lei nº 12.527/2011 (dados gerais para acompanhamento de programas), o mesmo objetivo comunicativo é atingido sem exposição de pessoa."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O aceite de um cidadão de que sua foto fosse usada em arquivo de campanha institucional equivale a consentimento para divulgar, em rede social, a foto acompanhada de dado identificador correlato.",
+          "resposta": "Errado. O art. 31, § 1º, II, da Lei nº 12.527/2011 exige consentimento expresso para a divulgação de informação pessoal por terceiros, e a finalidade do consentimento é delimitada. Trocar «arquivo restrito» por «rede social com número de cartão» é desvio de finalidade."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Em caso de publicação institucional com dado identificável de terceiro, são providências corretas: A) remover ou sanitizar o conteúdo; B) preservar o registro da publicação; C) comunicar o cidadão quando o risco de dano for relevante; D) substituir o nome por apelido e manter o número do cartão.",
+          "resposta": "A, B e C. O item D mantém dado identificável e viola a minimização."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de uso institucional de redes sociais, conflito de interesse e conduta, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolverá, com o template de nove itens, três casos de uso institucional de redes sociais, conflito de interesse e conduta"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Todos os exemplos da unidade seguem o template de nove itens exigido pela especificação didática.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exemplos resolvidos da unidade (três casos completos)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Em campanha institucional de início de vacinação, o perfil do órgão publicou foto de um cidadão vacinado com o nome completo e o número do cartão de SUS legíveis. A janela de campanha é de duas semanas e o conteúdo «está nas» redes. Como o órgão deve agir?",
+            "porqueErrada": "",
+            "versaoCorreta": "Problema: publicação institucional de dado pessoal identificável de terceiro sem base legal nem consentimento. Dados disponíveis: foto e texto com nome e número de cartão de SUS de cidadão; o cidadão não foi informado nem consentiu; o canal é institucional; o conteúdo recebeu grande alcance; a campanha é legítima e a foto foi aceita pelo próprio cidadão na ocasião em que a foto foi tirada (aceite de foto para arquivo não equivale a consentimento para difusão em rede social com dados correlatos). Conceitos aplicáveis: art. 31, § 1º, II, da Lei nº 12.527/2011 (divulgação de informação pessoal por terceiros somente com previsão legal ou consentimento expresso); art. 5º, I, da LGPD (dado pessoal) e art. 46 (segurança); art. 3º, VI, da Lei nº 14.129/2021 (dever de prestar contas à população); dever de correção de erro e de publicidade. Estratégia: decidir sobre a base legal ANTES de publicar; como ela não existe, o conteúdo deve ser retirado e o cidadão protegido. Passo a passo: (1) CONTER: remover a publicação ou sanitizar a imagem (recortar nome e número do cartão), avaliando a necessidade de comunicação de erro; (2) PRESERVAR o registro da publicação original (data, hora, autor, conteúdo) para apuração e para o dever de accountability; (3) AVALIAR o alcance e o dano — o número de compartilhamentos e a existência de cópias; (4) COMUNICAR ao cidadão, se o risco de dano for relevante, com orientação sobre a exposição do número do cartão e sobre providências cabíveis; (5) APURAR a publicação: quem autorizou, se houve verificação prévia, se a política editorial foi seguida; (6) CORRIGIR O PROCESSO: incluir na política editorial regra de verificação de dados pessoais em imagens e textos (lista de verificação antes da publicação) e tornar essa verificação campo obrigatório do fluxo de aprovação; (7) REGISTRAR o incidente e a ação corretiva. Resultado: conteúdo protegido, cidadão comunicado, processo corrigido com verificação obrigatória de dados pessoais antes da publicação. Justificativa técnica: o aceite da foto para um fim (arquivo de campanha institucional restrito) não se transfere para outro fim (divulgar em rede social com identificador completo); é a lógica de finalidade e minimização. O alcance elevado agrava o dano e reforça a necessidade de avaliação prévia, não a dispensação dela. Erros frequentes: (a) «a pessoa apareceu na foto, logo autorizou»; (b) «corrigimos depois»; (c) «o conteúdo é institucional, então o cidadão não tem privacidade»; (d) substituir o nome por «pessoa vacinada» mas manter o número do cartão na imagem. Variação para transferência: se o conteúdo for útil em campanha e os dados forem disponibilizados agregados (número de doses, faixa etária, unidade) com o art. 29, § 1º, VI, da Lei nº 14.129/2021 (atualização periódica e perenidade) e o art. 8º, § 1º, V, da Lei nº 12.527/2011 (dados gerais para acompanhamento de programas), o mesmo objetivo comunicativo é atingido sem exposição de pessoa."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O perfil institucional do órgão é administrado por cinco servidores com senha compartilhada. O que está errado e o que fazer?",
+            "dados": "Cinco servidores acessam o perfil com a mesma senha; há duas contas de publicação no período; um post sobre campanha foi publicado às 23h por servidor fora do expediente; não há registro de autoria; não há registro de aprovação de conteúdo.",
+            "conceitos": [
+              "Responsabilização e não repúdio (Módulo 4)",
+              "Dever de auditoria e comprovação de autoria (art. 43, I e IV, da Lei nº 14.129/2021)",
+              "Dever de publicidade (art. 8º da Lei nº 12.527/2011)",
+              "Accountability digital (art. 34 da mesma lei)"
+            ],
+            "estrategia": "Tratar como falha de controle, não como caso isolado de servidor; sanear o canal e reconstruir a história do que foi publicado.",
+            "execucao": [
+              "1) Trocar a senha e eliminar o acesso compartilhado, migrando para conta institucional com autenticação multifator",
+              "2) Criar perfis por função (publicador, editor, aprovador) com mínimo privilégio (Módulo 4)",
+              "3) Revisar o histórico recente de publicações e identificar o que foi publicado fora da política editorial",
+              "4) Registrar a correção ou o que for necessário e comunicar o cidadão se houve erro relevante",
+              "5) Registrar o incidente como falha de controle interno (art. 48 da Lei nº 14.129/2021) e definir ação corretiva com responsável e prazo",
+              "6) Registrar a partir de hoje o registro de publicações (data, hora, autor lógico, texto, mídia, aprovador)."
+            ],
+            "resultado": "Canal institucional com acesso individualizado, rastreável e com política de aprovação vigente; responsabilização preservada a partir da regularização.",
+            "justificativa": "Sem autoria individual não há responsabilização possível (Módulo 4) e não há como responder ao princípio da publicidade, que exige divulgação da verdade e accountability.",
+            "errosFrequentes": [
+              "a) Tratar como falha do servidor que postou",
+              "b) Criar um novo perfil sem revisar o histórico",
+              "c) Preservar o acesso compartilhado «só no plantão»",
+              "d) Desabilitar o perfil em vez de corrigir o desenho."
+            ],
+            "variacao": "Se o perfil for de uma unidade menor, com poucos servidores, a solução não muda o princípio: o que muda é a escala do risco e a simplificação do processo de aprovação, jamais a identidade do acesso."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O servidor que ordena a fila de atendimento de um hospital público é irmão do responsável técnico da empresa que fornece o sistema. A ordenação é manual e sem registro. Como o órgão deve agir?",
+            "dados": "Vínculo familiar entre servidor e fornecedor; o fornecedor é contratado para manter o sistema de fila; a ordenação é manual e não gera registro; não há política de declaração de conflito no setor; o contrato é de fornecedor do sistema, comissionamento contínuo.",
+            "conceitos": [
+              "Impessoalidade (art. 37 da CF)",
+              "Tipologia do conflito (real, potencial, aparente) e tratamento",
+              "Art. 32, IV, da Lei nº 12.527/2011 (conduta de uso indevido)",
+              "Art. 30, § 1º, da Lei nº 14.129/2021 (o requerente pode pedir a preservação da identidade para não prejudicar a impessoalidade — princípio análogo aplicável à gestão de conflito)",
+              "Art. 48 da Lei nº 14.129/2021 (controles proporcionais)"
+            ],
+            "estrategia": "Separar três medidas — afastamento imediato do ato, desenho de controle impessoal e apuração do período anterior.",
+            "execucao": [
+              "1) AFASTAR o servidor da ordenação imediatamente e designar substituto sem vínculo",
+              "2) REGISTRAR formalmente a declaração de conflito (por escrito, com data e assinatura), mesmo após o afastamento, para o histórico de governança",
+              "3) VERIFICAR se o vínculo com o fornecedor cria risco técnico adicional — se o fornecedor mantém acesso ao ambiente de produção ou aos dados de pacientes, abrir verificação específica de segregação de acesso (Módulo 4: menor privilégio e segregação de funções)",
+              "4) REVISAR as decisões de ordenação do período em que o servidor operou, para verificar tratamento diferenciado — se houver indício, remeter ao controle para apuração",
+              "5) IMPLEMENTAR correções de desenho: ordenação por regra automatizada e publicada (o que remove a influência pessoal do ato), registro obrigatório de cada ordenação com autor e critério, e trilha de auditoria",
+              "6) Registrar o achado no sistema de riscos e no plano de auditoria interna (art. 49 da Lei nº 14.129/2021)."
+            ],
+            "resultado": "Conflito afastado e documentado, decisões anteriores submetidas a revisão, desenho alterado para tornar a situação menos provável e mais detectável.",
+            "justificativa": "O conflito não se resolve apenas com boa-fé do servidor; o tratamento eficaz combina afastamento, desenho impessoal e detecção. A impessoalidade do processo é a medida estrutural, porque substitui a influência pessoal por critério publicado.",
+            "errosFrequentes": [
+              "a) Esperar que o servidor se declare",
+              "b) Manter o servidor na equipe «para não constranger»",
+              "c) Apenas declarar o conflito sem afastar",
+              "d) Não revisar as decisões anteriores."
+            ],
+            "variacao": "Se o servidor for apenas o responsável técnico do fornecedor e não tiver qualquer função no órgão, não há conflito de interesse no sentido funcional — mas o caso passa a ser de RISCO DE CONFLITO DE INTERESSE do fornecedor, que exige controle de acesso do fornecedor ao ambiente, e não apuração disciplinar do servidor — a distinção entre as situações é o teste."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Em campanha institucional de início de vacinação, o perfil do órgão publicou foto de um cidadão vacinado com o nome completo e o número do cartão de SUS legíveis. A janela de campanha é de duas semanas e o conteúdo «está nas» redes. Como o órgão deve agir?",
+            "dados": "Foto e texto com nome e número de cartão de SUS de cidadão; o cidadão não foi informado nem consentiu; o canal é institucional; o conteúdo recebeu grande alcance; a campanha é legítima e a foto foi aceita pelo próprio cidadão na ocasião em que a foto foi tirada (aceite de foto para arquivo não equivale a consentimento para difusão em rede social com dados correlatos).",
+            "conceitos": [
+              "Art. 31, § 1º, II, da Lei nº 12.527/2011 (divulgação de informação pessoal por terceiros somente com previsão legal ou consentimento expresso)",
+              "Art. 5º, I, da LGPD (dado pessoal) e art. 46 (segurança)",
+              "Art. 3º, VI, da Lei nº 14.129/2021 (dever de prestar contas à população)",
+              "Dever de correção de erro e de publicidade"
+            ],
+            "estrategia": "Decidir sobre a base legal ANTES de publicar; como ela não existe, o conteúdo deve ser retirado e o cidadão protegido.",
+            "execucao": [
+              "1) CONTER: remover a publicação ou sanitizar a imagem (recortar nome e número do cartão), avaliando a necessidade de comunicação de erro",
+              "2) PRESERVAR o registro da publicação original (data, hora, autor, conteúdo) para apuração e para o dever de accountability",
+              "3) AVALIAR o alcance e o dano — o número de compartilhamentos e a existência de cópias",
+              "4) COMUNICAR ao cidadão, se o risco de dano for relevante, com orientação sobre a exposição do número do cartão e sobre providências cabíveis",
+              "5) APURAR a publicação: quem autorizou, se houve verificação prévia, se a política editorial foi seguida",
+              "6) CORRIGIR O PROCESSO: incluir na política editorial regra de verificação de dados pessoais em imagens e textos (lista de verificação antes da publicação) e tornar essa verificação campo obrigatório do fluxo de aprovação",
+              "7) REGISTRAR o incidente e a ação corretiva."
+            ],
+            "resultado": "Conteúdo protegido, cidadão comunicado, processo corrigido com verificação obrigatória de dados pessoais antes da publicação.",
+            "justificativa": "O aceite da foto para um fim (arquivo de campanha institucional restrito) não se transfere para outro fim (divulgar em rede social com identificador completo); é a lógica de finalidade e minimização. O alcance elevado agrava o dano e reforça a necessidade de avaliação prévia, não a dispensação dela.",
+            "errosFrequentes": [
+              "a) «a pessoa apareceu na foto, logo autorizou»",
+              "b) «corrigimos depois»",
+              "c) «o conteúdo é institucional, então o cidadão não tem privacidade»",
+              "d) Substituir o nome por «pessoa vacinada» mas manter o número do cartão na imagem."
+            ],
+            "variacao": "Se o conteúdo for útil em campanha e os dados forem disponibilizados agregados (número de doses, faixa etária, unidade) com o art. 29, § 1º, VI, da Lei nº 14.129/2021 (atualização periódica e perenidade) e o art. 8º, § 1º, V, da Lei nº 12.527/2011 (dados gerais para acompanhamento de programas), o mesmo objetivo comunicativo é atingido sem exposição de pessoa."
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u4-t3-s2",
+      "titulo": "Comparações e pegadinhas da unidade",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-4-topico-3",
+      "unidadeTitulo": "6.4 Uso institucional de redes sociais, conflitos de interesse, conduta e netiqueta",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno distinguirá uso institucional e uso pessoal, conflito real, potencial e aparente, e identificará afirmações equivocadas frequentes sobre conduta e redes sociais.",
+      "conteudo": "COMPARAÇÕES CRÍTICAS — (1) USO INSTITUCIONAL x USO PESSOAL: o primeiro é canal do órgão, com titularidade, governança de acesso, política editorial e registro; o segundo é exercício individual, sujeito ao dever de reserva e de não vinculação. Efeito no gabarito: o regime e o responsável mudam, e não apenas o tom da publicação. (2) PUBLICIDADE INSTITUCIONAL x PUBLICIDADE DE TERCEIROS: a primeira é comunicação do órgão sobre sua atuação; a segunda é publicidade comercial, vedada em canal institucional, além de depender de segmento definido em lei. (3) CONFLITO REAL x POTENCIAL x APARENTE: real é a influência consumada; potencial é a capacidade de influência não exercida; aparente é a percepção razoável de influência. Efeito: o tratamento vai de afastamento e apuração (real) a declaração e desenho de controle (potencial e aparente). (4) DADO PESSOAL x DADO FUNCIONAL: o primeiro é do cidadão; o segundo é do servidor e do órgão (nome, cargo, remuneração, vínculos), cuja divulgação é publicidade institucional (art. 29, § 2º, VII, da Lei nº 14.129/2021). Efeito: a proteção do art. 31 da LAI incide sobre o primeiro, não sobre o segundo. (5) NETIQUETA x DEVER DE PUBLICIDADE: a netiqueta regula a convivência digital (tom, moderação, correção); o dever de publicidade exige que a informação oficial seja verdadeira, clara, completa e acessível. Uma pode existir sem a outra: um canal cordial que omite dados obrigatórios continua em desconformidade. PEGADINHAS — (a) «post no perfil institucional vincula o servidor»: errado; é o contrário — o canal institucional é do órgão e a gestão de acesso deve individualizar a autoria. (b) «a confidencialidade do servidor permitiria qualquer post»: errado; o dever de reserva veda o uso de informação do cargo e o uso indevido de bem e de imagem institucional. (c) «aprovar o caso resolve o conflito»: errado, é por isso que se trata do conflito. (d) «divulgar dado funcional do servidor é violação de privacidade»: errado, é publicidade institucional. (e) «comentário do cidadão no post é moderado livremente»: errado, a moderação precisa de critério publicado, registro e garantia de canal de ouvidoria. (f) «a IA pode redigir a publicação final»: errado, a publicação é do órgão e exige revisão humana e checagem de fato. (g) «rede social substitui o sítio oficial»: errado, o art. 8º, § 2º, da Lei nº 12.527/2011 torna obrigatória a divulgação em sítios oficiais. (h) «divergência entre a informação do post e a do portal é problema de marketing»: errado, é incoerência de publicidade.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classifique: (a) servidor publica em conta pessoal foto de relatório interno; (b) órgão publica em seu perfil institucional o número de doses aplicadas no mês; (c) servidor comenta, em conta pessoal, política pública, sem citar o órgão.",
+          "resposta": "(a) uso indevido potencial de informação sob guarda (art. 32, II, da Lei nº 12.527/2011), com dever de reserva; (b) publicidade institucional legítima — dado geral de acompanhamento de programa (art. 8º, § 1º, V, da LAI); (c) opinião pessoal lícita, desde que sem uso de informação do cargo e sem vinculação institucional indevida."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão recebeu crítica pública sobre a fila de atendimento em rede social. Qual a sequência correta de providências?",
+          "resposta": "(1) Registrar a publicação e a crítica; (2) verificar se há dado pessoal de terceiro ou informação protegida no conteúdo; (3) responder de modo institucional, com conteúdo oficial e linguagem clara (art. 3º, VII, da Lei nº 14.129/2021), sem opinião pessoal; (4) encaminhar a crítica para o canal formal de ouvidoria (art. 21, XI), criando o registro; (5) se houver falha no serviço, comunicar a providência e o prazo, com acompanhamento pelo painel de desempenho (art. 22); (6) registrar o atendimento no histórico, para análise de recorrência."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A moderação de comentários em página institucional é ato discricionário do servidor de plantão, sem necessidade de critério publicado nem de registro.'",
+          "correcao": "Errado. A moderação que pode gerar restrição de participação do cidadão exige critério definido, proporcionalidade e registro, sob o dever de transparência (art. 3º, IV, da Lei nº 14.129/2021) e de accountability (art. 34 da Lei nº 12.527/2011). Ademais, a Lei nº 12.527/2011 assegura a todo o acesso à informação, o que implica canal de ouvidoria e, em caso de restrição, possibilidade de revisão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A divulgação de nome, cargo e remuneração de servidor público é publicidade institucional e não se confunde com a divulgação irrestrita de dados pessoais de cidadãos.",
+          "resposta": "Certo. O art. 29, § 2º, VII, da Lei nº 14.129/2021 prevê a divulgação de informações sobre servidores e empregados públicos, incluídos nome e detalhamento dos vínculos profissionais e de remuneração."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São efeitos do conflito de interesse: A) afastamento do ato; B) declaração formal e arquivada; C) revisão de decisões tomadas durante o conflito; D) aumento do prazo de resposta ao cidadão robusto.",
+          "resposta": "A, B e C. O item D é medida de atendimento e não trata de conflito de interesse."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir uso institucional e uso pessoal, conflito real, potencial e aparente, e identificará afirmações equivocadas frequentes sobre conduta e redes sociais, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá uso institucional e uso pessoal, conflito real, potencial e aparente, e identificará afirmações equivocadas frequentes sobre conduta e redes sociais"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "COMPARAÇÕES CRÍTICAS — (1) USO INSTITUCIONAL x USO PESSOAL: o primeiro é canal do órgão, com titularidade, governança de acesso, política editorial e registro; o segundo é exercício individual, sujeito ao dever de reserva e de não vinculação. Efeito no gabarito: o regime e o responsável mudam, e não apenas o tom da publicação. (2) PUBLICIDADE INSTITUCIONAL x PUBLICIDADE DE TERCEIROS: a primeira é comunicação do órgão sobre sua atuação; a segunda é publicidade comercial, vedada em canal instituci…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comparações e pegadinhas da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A moderação de comentários em página institucional é ato discricionário do servidor de plantão, sem necessidade de critério publicado nem de registro.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A moderação que pode gerar restrição de participação do cidadão exige critério definido, proporcionalidade e registro, sob o dever de transparência (art. 3º, IV, da Lei nº 14.129/2021) e de accountability (art. 34 da Lei nº 12.527/2011). Ademais, a Lei nº 12.527/2011 assegura a todo o acesso à informação, o que implica canal de ouvidoria e, em caso de restrição, possibilidade de revisão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classifique: (a) servidor publica em conta pessoal foto de relatório interno; (b) órgão publica em seu perfil institucional o número de doses aplicadas no mês; (c) servidor comenta, em conta pessoal, política pública, sem citar o órgão.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(a) uso indevido potencial de informação sob guarda (art. 32, II, da Lei nº 12.527/2011), com dever de reserva; (b) publicidade institucional legítima — dado geral de acompanhamento de programa (art. 8º, § 1º, V, da LAI); (c) opinião pessoal lícita, desde que sem uso de informação do cargo e sem vinculação institucional indevida.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão recebeu crítica pública sobre a fila de atendimento em rede social. Qual a sequência correta de providências?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) Registrar a publicação e a crítica; (2) verificar se há dado pessoal de terceiro ou informação protegida no conteúdo; (3) responder de modo institucional, com conteúdo oficial e linguagem clara (art. 3º, VII, da Lei nº 14.129/2021), sem opinião pessoal; (4) encaminhar a crítica para o canal formal de ouvidoria (art. 21, XI), criando o registro; (5) se houver falha no serviço, comunicar a providência e o prazo, com acompanhamento pelo painel de desempenho (art. 22); (6) registrar o atendimento no histórico, para análise de recorrência.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A moderação de comentários em página institucional é ato discricionário do servidor de plantão, sem necessidade de critério publicado nem de registro.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A moderação que pode gerar restrição de participação do cidadão exige critério definido, proporcionalidade e registro, sob o dever de transparência (art. 3º, IV, da Lei nº 14.129/2021) e de accountability (art. 34 da Lei nº 12.527/2011). Ademais, a Lei nº 12.527/2011 assegura a todo o acesso à informação, o que implica canal de ouvidoria e, em caso de restrição, possibilidade de revisão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

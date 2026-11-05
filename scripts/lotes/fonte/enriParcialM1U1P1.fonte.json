@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 1,
+    "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+    "parte": 1,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U1P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U1P1.js",
+    "idsCompletos": [
+      "modulo-1-unidade-1-topico-1-sub-1",
+      "modulo-1-unidade-1-topico-1-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-1-topico-1-sub-1",
+      "titulo": "Comparação de planos e recursos disponíveis",
+      "topicoTitulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+      "topicoId": "modulo-1-unidade-1-topico-1",
+      "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno diferenciará Microsoft 365, Office LTSC e versões perpétuas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as três formas de obter as aplicações Office — assinatura Microsoft 365, Office LTSC e versões perpétuas de varejo; (b) os critérios que separam os produtos: modelo de pagamento, serviços em nuvem (Teams, OneDrive), política de atualização e público-alvo; (c) a regra de prudência: o conjunto de recursos varia por plano, região e versão. POR QUE O CONHECIMENTO É IMPORTANTE: a questão típica descreve um cenário (precisa de Teams e coautoria; precisa de apps estáveis offline; uso doméstico simples) e pede o produto correto; atribuir a versão perpétua serviços de nuvem, ou prometer novos recursos ao LTSC, muda o gabarito. PRÉ-REQUISITOS: nenhuma além de noções básicas de licenciamento. OBJETIVOS OBSERVÁVEIS: (1) classificar um produto Microsoft a partir de características declaradas; (2) justificar a escolha para um cenário; (3) reconhecer que recursos dependem do plano/licença. COMPETÊNCIAS DESENVOLVIDAS: leitura de requisitos e escolha de produto; prudência técnica ao afirmar disponibilidade de recurso. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópicos 2 (licenciamento por volume) e 4 (armazenamento) da unidade 1.1; Módulo 4 (segurança e conformidade). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: o Office pode ser obtido por três caminhos com lógicas distintas. Microsoft 365: serviço por assinatura que reúne as aplicações Office nas modalidades desktop, web e mobile, serviços em nuvem (OneDrive para armazenamento e Teams para colaboração) e atualizações contínuas de recursos enquanto a assinatura estiver ativa; o conjunto exato de aplicações, serviços e cotas depende do plano (pessoal, familiar, Business, Enterprise) e da região — conferir na documentação oficial antes de afirmar qualquer recurso. Office LTSC (canal de manutenção de longo prazo): licença perpétua (compra única) com aplicações selecionadas, sem Teams e sem OneDrive em nuvem integrados, recebendo atualizações de segurança — sem entrega contínua de novas funcionalidades; destina-se a ambientes que exigem estabilidade e controle de mudança. Versões perpétuas de varejo: compra única com conjunto limitado de aplicações (Word, Excel, PowerPoint), sem serviços de nuvem integrados e sem garantia de atualização de funcionalidades novas; voltadas ao uso doméstico simples. Invariante conceitual: assinatura troca pagamento recorrente por atualização contínua e serviços; compra única troca preço fixo por congelamento de recursos. Critério de decisão: colaboração em nuvem e coautoria → assinatura; apps estáveis offline sem nuvem → LTSC; uso doméstico básico → perpétua de varejo.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir compra única de assinatura com a analogia do livro comprado versus revista assinada (o conteúdo novo só chega na assinatura).\n- Nível intermediário: classificar cenários: quais serviços (Teams, OneDrive) e qual política de atualização acompanham cada produto.\n- Nível avançado: propor divisão de parque (LTSC para back-office estático, assinatura para equipes colaborativas) justificando custo e necessidade.\n- Nível especialista: apontar por que afirmar \"o plano X inclui cota Y\" sem conferir a documentação oficial é erro técnico — recursos e cotas variam por plano, região e período.\n\nCOMPARAÇÕES CRÍTICAS:\n- Assinatura Microsoft 365 x versão perpétua: a assinatura é paga periodicamente e inclui atualizações contínuas de recursos e serviços em nuvem; a perpétua é compra única com recursos congelados — quando a questão pede \"atualizações contínuas\", o gabarito é assinatura.\n- Office LTSC x versão perpétua de varejo: ambos são compra única, mas o LTSC é canal organizacional com apps selecionados e atualizações de segurança, e o de varejo é doméstico com pacote básico — trocar os canais inverte a resposta sobre público-alvo.\n- Assinatura pessoal x organizacional: ambas são Microsoft 365, mas a organizacional traz gestão centralizada e recursos de conformidade; a disponibilidade de recursos específicos depende do plano — a alternativa que promete o mesmo conjunto em todos os planos está errada.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"a versão perpétua inclui Teams e armazenamento em nuvem com cota do plano\" — Motivo: atribui serviços de assinatura a produto de compra única — Versão tecnicamente correta: Teams e OneDrive em nuvem integrados caracterizam o Microsoft 365; a versão perpétua não os inclui.\n- Afirmação errada: \"o Office LTSC recebe novas funcionalidades continuamente\" — Motivo: inverte a política de atualização do canal — Versão tecnicamente correta: o LTSC recebe atualizações de segurança; a entrega contínua de recursos é da assinatura.\n- Afirmação errada: \"todos os planos do Microsoft 365 oferecem exatamente as mesmas aplicações e cotas\" — Motivo: termo absoluto — Versão tecnicamente correta: aplicações, serviços e cotas variam por plano, região e versão; confira na documentação oficial.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: assinatura, licença perpétua, Office LTSC, atualizações contínuas, serviços em nuvem, canal organizacional.\n- Regras e fórmulas: precisa de Teams/OneDrive/coautoria → Microsoft 365; precisa de apps estáveis offline → LTSC; uso doméstico simples → perpétua de varejo.\n- Exceções: conjunto de aplicações, serviços e cotas varia por plano, região e versão — nunca afirmar cota ou recurso sem conferir a documentação oficial.\n- Palavras-chave: Microsoft 365, Office LTSC, versão perpétua, assinatura, atualizações de segurança, coautoria.\n- Checklist de domínio: classifico produto por características; justifico a escolha por cenário; reconheço que cotas e recursos variam por plano; distingo LTSC de perpétua de varejo.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Organização precisa de Teams, armazenamento em nuvem e atualizações contínuas: qual produto e por quê? (2) Qual produto recebe apenas atualizações de segurança e é comprado uma única vez? (3) Um pacote doméstico com Word, Excel e PowerPoint, sem nuvem, é qual categoria? (4) Por que não se pode afirmar uma cota de armazenamento universal para o Microsoft 365? (5) Corrija: \"o LTSC inclui Teams e recebe novos recursos\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar o produto adequado a uma organização que precisa de Teams, de armazenamento em nuvem com cota adequada ao plano e de atualizações contínuas.",
+          "resposta": "Microsoft 365 (assinatura, plano Business/Enterprise): inclui os serviços de nuvem e as atualizações contínuas; o Office LTSC não inclui Teams nem OneDrive em nuvem integrados, e a versão perpétua não oferece assinatura nem atualizações de recursos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Empresa com 50 estações precisa de Word, Excel e PowerPoint sem colaboração em nuvem e com atualizações apenas de segurança.",
+          "resposta": "Office LTSC (via licenciamento por volume) — preço único, sem Teams e sem OneDrive em nuvem integrados, com atualizações apenas de segurança. Se mais tarde algumas equipes precisarem de coautoria, a prática é combinar o LTSC existente com assinatura apenas para essas equipes, em vez de substituir todo o parque."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Órgão com dois perfis: setor de arquivo (sem internet, apps fixos) e equipe de projetos (coautoria em tempo real). Como distribuir os produtos?",
+          "resposta": "Divisão por perfil: o setor de arquivo usa Office LTSC (estabilidade, apps selecionados, sem nuvem); a equipe de projetos usa Microsoft 365 (assinatura) para ter Teams, OneDrive e coautoria. A justificativa técnica: cada perfil recebe a política de atualização e os serviços que efetivamente usa, evitando custo de assinatura onde não há colaboração e evitando LTSC onde a coautoria é requisito."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um colaborador afirma que a versão perpétua inclui Teams e armazenamento em nuvem com cota definida pelo plano.",
+          "correcao": "Incorreto: a versão perpétua (pacote doméstico) não inclui Teams nem armazenamento em nuvem integrado; essas características pertencem ao Microsoft 365 por assinatura — e a cota exata, quando existente, depende do plano e deve ser conferida na documentação oficial."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O Office LTSC inclui Teams e recebe atualizações de funcionalidades continuamente.",
+          "resposta": "Errado. O LTSC tem apenas as aplicações selecionadas, recebe atualizações de segurança e não inclui Teams nem OneDrive em nuvem integrados; atualizações contínuas de recursos são características da assinatura."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual é a diferença principal entre Microsoft 365 e versão perpétua? A) Preço; B) Modelo de assinatura com atualizações contínuas versus compra única sem garantia de recursos novos; C) Apenas interface.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual característica é exclusiva do modelo de assinatura entre os três produtos? A) Compra única; B) Atualizações contínuas de funcionalidades enquanto a assinatura estiver ativa; C) Funcionar offline.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar um produto Microsoft (Microsoft 365, Office LTSC, versão perpétua) a partir de requisitos de colaboração, atualização e licenciamento e de justificar a escolha, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará Microsoft 365, Office LTSC e versões perpétuas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as três formas de obter as aplicações Office — assinatura Microsoft 365, Office LTSC e versões perpétuas de varejo; (b) os critérios que separam os produtos: modelo de pagamento, serviços em nuvem (Teams, OneDrive), política de atualização e público-alvo; (c) a regra de prudência: o conjunto de recursos varia por plano, região e versão. POR QUE O CONHECIMENTO É IMPORTANTE: a questão típica descreve um cenário (precisa de Teams e coautoria; preci…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comparação de planos e recursos disponíveis",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um colaborador afirma que a versão perpétua inclui Teams e armazenamento em nuvem com cota definida pelo plano.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: a versão perpétua (pacote doméstico) não inclui Teams nem armazenamento em nuvem integrado; essas características pertencem ao Microsoft 365 por assinatura — e a cota exata, quando existente, depende do plano e deve ser conferida na documentação oficial."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar o produto adequado a uma organização que precisa de Teams, de armazenamento em nuvem com cota adequada ao plano e de atualizações contínuas.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Microsoft 365 (assinatura, plano Business/Enterprise): inclui os serviços de nuvem e as atualizações contínuas; o Office LTSC não inclui Teams nem OneDrive em nuvem integrados, e a versão perpétua não oferece assinatura nem atualizações de recursos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Empresa com 50 estações precisa de Word, Excel e PowerPoint sem colaboração em nuvem e com atualizações apenas de segurança.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Office LTSC (via licenciamento por volume) — preço único, sem Teams e sem OneDrive em nuvem integrados, com atualizações apenas de segurança. Se mais tarde algumas equipes precisarem de coautoria, a prática é combinar o LTSC existente com assinatura apenas para essas equipes, em vez de substituir todo o parque.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um colaborador afirma que a versão perpétua inclui Teams e armazenamento em nuvem com cota definida pelo plano.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: a versão perpétua (pacote doméstico) não inclui Teams nem armazenamento em nuvem integrado; essas características pertencem ao Microsoft 365 por assinatura — e a cota exata, quando existente, depende do plano e deve ser conferida na documentação oficial.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-1-topico-1-sub-2",
+      "titulo": "Licenciamento por volume e benefícios organizacionais",
+      "topicoTitulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+      "topicoId": "modulo-1-unidade-1-topico-1",
+      "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá modelos de licenciamento por volume.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é licenciamento por volume (Volume Licensing) e para qual perfil de organização ele se destina; (b) os benefícios organizacionais típicos: preços descontados, implantação centralizada, direitos de transferência e programas de upgrade; (c) os modelos citados nesta apostila: Open License, Open Value e Enterprise Agreement; (d) a regra de prudência: condições variam por programa, região e período, e devem ser conferidas na documentação oficial. POR QUE O CONHECIMENTO É IMPORTANTE: questões apresentam cenários organizacionais (escolas, órgãos, empresas com centenas de estações) e exigem distinguir compra no varejo de licenciamento por volume e identificar o programa adequado ao perfil; confundir varejo com volume ou assumir uma forma de pagamento universal muda o gabarito. PRÉ-REQUISITOS: subtópico 1 (Microsoft 365, Office LTSC e versões perpétuas). OBJETIVOS OBSERVÁVEIS: (1) definir licenciamento por volume; (2) associar cada modelo citado a um cenário organizacional compatível; (3) justificar a escolha com base em benefícios e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise de cenários de contratação; leitura de requisitos de licenciamento. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópico 1 (comparação de planos); Módulo 4 (controles e conformidade); Módulo 6 (uso institucional e responsabilização). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média a alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: licenciamento por volume é a modalidade de contratação em que a organização adquire múltiplas licenças por programas voltados a grande quantidade de estações ou usuários, em vez de comprar unidades individuais no varejo. O problema que resolve: sem volume, a organização pagaria preço unitário cheio, manteria chaves espalhadas e não conseguiria padronizar instalações; com volume, obtém preços descontados, implantação centralizada (padronização de instalação e configuração em muitas máquinas), direitos de transferência de licença entre dispositivos e programas de upgrade, sempre conforme os termos do programa contratado. Modelos citados nesta apostila: Open License, Open Value e Enterprise Agreement; eles diferem em porte típico e forma de pagamento — o material registra que Open License corresponde a compra única, enquanto o Enterprise Agreement pode ter pagamento anual, e a escolha depende do programa. O Office LTSC é distribuído a organizações pelo canal de licenciamento por volume, não pelo varejo. Limitações: nomes, requisitos mínimos e condições comerciais variam por programa, região e período; esta apostila não afirma cotas, descontos numéricos ou prazos — confira a documentação oficial do programa vigente antes de decidir.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que volume não é varejo: trata-se de compra organizacional de muitas licenças, com gestão centralizada.\n- Nível intermediário: associar Open License, Open Value e Enterprise Agreement a perfis de organização e à forma de pagamento de cada um.\n- Nível avançado: analisar cenário misto (ex.: Office LTSC para estações sem colaboração em nuvem combinado com assinatura para equipes que precisam de Teams e OneDrive) e justificar a divisão de custos.\n- Nível especialista: diagnosticar erro de contratação (ex.: comprar no varejo em larga escala, ou contratar programa de grande porte sem atender aos requisitos) e listar os benefícios organizacionais perdidos em cada erro.\n\nCOMPARAÇÕES CRÍTICAS:\n- Varejo (retail) x licenciamento por volume: varejo é licença individual, com preço cheio e gestão manual; volume traz desconto e implantação centralizada — em questão sobre organização com muitas estações, a alternativa de compra no varejo está errada.\n- Open License x Enterprise Agreement: compra única x acordo que pode ter pagamento anual, conforme o programa; a forma de pagamento é o traço que decide o gabarito quando a questão contrasta os dois.\n- Licença por volume de apps perpétuos x assinatura Microsoft 365: o volume pode licenciar apps perpétuos (LTSC) sem serviços em nuvem; a assinatura inclui serviços (Teams, OneDrive) e atualizações contínuas de recursos; confundir os modelos leva a errar a disponibilidade de Teams e OneDrive.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"licenciamento por volume sempre exige pagamento mensal por usuário\" — Motivo: generalização falsa; o formato de pagamento depende do programa — Versão tecnicamente correta: Open License é compra única; Enterprise Agreement pode ser anual; não existe regra única para todos os programas.\n- Afirmação errada: \"os direitos de transferência de licença valem sem restrição\" — Motivo: termo absoluto — Versão tecnicamente correta: a transferência entre dispositivos é permitida conforme os termos do programa contratado, que podem impor condições.\n- Afirmação errada: \"qualquer consumidor final pode contratar Enterprise Agreement\" — Motivo: troca de conceitos entre canais de venda — Versão tecnicamente correta: os programas de volume são voltados a organizações; os requisitos de adesão variam por programa e devem ser conferidos na documentação oficial.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Volume Licensing, implantação centralizada, direitos de transferência, programas de upgrade, canal de licenciamento por volume.\n- Regras e fórmulas: regra prática — organização com muitas estações busca programas de volume; estação isolada usa varejo; LTSC organizações via volume.\n- Exceções: condições, requisitos e preços variam por programa, região e período; nunca afirmar valor numérico sem conferir a documentação oficial.\n- Palavras-chave: Volume Licensing, Open License, Open Value, Enterprise Agreement, Office LTSC, implantação centralizada, transferência de licença.\n- Checklist de domínio: defino licenciamento por volume; distingo os três modelos citados; justifico a escolha para um cenário dado; reconheço que as condições variam por programa.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Uma prefeitura com 200 estações quer desconto e implantação centralizada: qual canal usar e por quê? (2) Qual modelo citado corresponde a compra única e qual pode ter pagamento anual? (3) Cite dois benefícios do licenciamento por volume além do preço. (4) Por qual canal o Office LTSC é distribuído a organizações? (5) Corrija a afirmação \"a transferência de licença entre dispositivos vale sem restrição\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Organização com 200 estações precisa comprar Office com desconto e implantação centralizada.",
+          "resposta": "Open Value ou Enterprise Agreement (licenciamento por volume) — preços descontados e gestão centralizada das instalações. A forma de pagamento depende do programa escolhido: Open License é compra única; Enterprise Agreement pode ser anual."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Escola com 50 computadores precisa de Word, Excel e PowerPoint, sem Teams nem colaboração em nuvem.",
+          "resposta": "Office LTSC via licenciamento por volume — compra única, atualizações apenas de segurança, sem Teams e sem OneDrive em nuvem integrados. Se depois uma equipe precisar de colaboração, a organização pode combinar o LTSC com assinatura apenas para esses usuários, em vez de trocar todo o parque."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Órgão substitui 300 estações antigas e quer reaproveitar as licenças nas máquinas novas.",
+          "resposta": "Passo 1: verificar se o programa contratado prevê direitos de transferência de licença entre dispositivos (benefício típico do licenciamento por volume). Passo 2: desinstalar nas máquinas antigas e ativar nas novas conforme o procedimento do programa. Passo 3: se os termos não ampararem o caso, adquirir licenças adicionais. Decisão final sempre na documentação oficial vigente do programa, pois as condições variam."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um gestor afirma que licenciamento por volume exige pagamento mensal por usuário.",
+          "correcao": "Incorreto: o formato de pagamento depende do programa escolhido — Open License é compra única; Enterprise Agreement pode ser anual. Não existe regra de pagamento única para todos os programas de volume."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual programa de licenciamento por volume é voltado a grandes organizações? A) Open License; B) Enterprise Agreement; C) Retail.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Volume Licensing permite transferência de licenças entre dispositivos.",
+          "resposta": "Certo, conforme os termos do programa contratado — a transferência é um benefício típico, sujeita às condições de cada programa."
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Open License e Enterprise Agreement têm a mesma forma de pagamento.",
+          "resposta": "Errado. O material registra Open License como compra única e Enterprise Agreement com possibilidade de pagamento anual; a forma de pagamento depende do programa escolhido."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de selecionar o modelo de licenciamento por volume adequado a um cenário organizacional, justificando a escolha com benefícios (desconto, implantação centralizada, transferência) e reconhecendo que as condições variam por programa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá modelos de licenciamento por volume"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é licenciamento por volume (Volume Licensing) e para qual perfil de organização ele se destina; (b) os benefícios organizacionais típicos: preços descontados, implantação centralizada, direitos de transferência e programas de upgrade; (c) os modelos citados nesta apostila: Open License, Open Value e Enterprise Agreement; (d) a regra de prudência: condições variam por programa, região e período, e devem ser conferidas na documentação oficia…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Licenciamento por volume e benefícios organizacionais",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um gestor afirma que licenciamento por volume exige pagamento mensal por usuário.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: o formato de pagamento depende do programa escolhido — Open License é compra única; Enterprise Agreement pode ser anual. Não existe regra de pagamento única para todos os programas de volume."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Organização com 200 estações precisa comprar Office com desconto e implantação centralizada.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Open Value ou Enterprise Agreement (licenciamento por volume) — preços descontados e gestão centralizada das instalações. A forma de pagamento depende do programa escolhido: Open License é compra única; Enterprise Agreement pode ser anual.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Escola com 50 computadores precisa de Word, Excel e PowerPoint, sem Teams nem colaboração em nuvem.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Office LTSC via licenciamento por volume — compra única, atualizações apenas de segurança, sem Teams e sem OneDrive em nuvem integrados. Se depois uma equipe precisar de colaboração, a organização pode combinar o LTSC com assinatura apenas para esses usuários, em vez de trocar todo o parque.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um gestor afirma que licenciamento por volume exige pagamento mensal por usuário.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: o formato de pagamento depende do programa escolhido — Open License é compra única; Enterprise Agreement pode ser anual. Não existe regra de pagamento única para todos os programas de volume.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 1,
+    "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+    "parte": 3,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U1P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U1P3.js",
+    "idsCompletos": [
+      "modulo-1-unidade-1-topico-1-sub-5",
+      "modulo-1-unidade-1-topico-1-sub-6"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-1-topico-1-sub-5",
+      "titulo": "Integração entre aplicações",
+      "topicoTitulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+      "topicoId": "modulo-1-unidade-1-topico-1",
+      "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno identificará integrações entre aplicações Microsoft 365.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os mecanismos de integração entre as aplicações do Microsoft 365: vinculação e incorporação de objetos (OLE), copiar especial com vínculo, gráficos ligados ao Excel, Teams como centro de colaboração, Power Automate para automação e APIs REST do Microsoft Graph; (b) a diferença decisiva entre dado estático, objeto incorporado e objeto vinculado; (c) as limitações do vínculo (dependência de acesso ao arquivo-fonte). POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra qual mecanismo mantém o dado atualizado no documento de destino; confundir copiar/colar comum com colar especial vinculado, ou incorporação com vinculação, muda o gabarito. PRÉ-REQUISITOS: noções básicas de Word, Excel e PowerPoint. OBJETIVOS OBSERVÁVEIS: (1) distinguir incorporação de vinculação; (2) escolher o mecanismo adequado a cada cenário; (3) reconhecer as limitações do vínculo. COMPETÊNCIAS DESENVOLVIDAS: montagem de documentos e apresentações com dados vivos; automação de fluxo entre aplicações. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópicos de armazenamento e de coautoria da unidade 1.1; unidade 1.3 (Excel); Módulo 3 (colaboração). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média a alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: integração é o compartilhamento de dados entre aplicações sem redigitação. Os mecanismos formam uma escala de acoplamento. Primeiro, o copiar/colar comum transfere uma cópia estática: o texto ou a tabela no destino não acompanha mudanças na fonte. Segundo, a vinculação e incorporação de objetos (OLE — Object Linking and Embedding) cria um objeto no documento de destino com duas variantes: incorporado, que carrega uma cópia dos dados dentro do próprio documento (não atualiza com a fonte), e vinculado, que mantém uma referência ao arquivo-fonte e reflete as alterações quando o vínculo é atualizado — no Word, por meio de Colar especial > Vincular. Terceiro, o PowerPoint aceita gráfico inserido diretamente (dados de planilha editáveis no próprio PowerPoint) ou gráfico vinculado ao Excel, que atualiza quando a planilha-fonte é recalculada. Quarto, o Teams atua como centro de colaboração: reúne conversas, arquivos das aplicações e serviços num único contexto de equipe. Quinto, o Power Automate automatiza fluxos entre aplicações (por exemplo, registrar em planilha o resultado de um formulário), com disponibilidade conforme o plano/licença. Sexto, as APIs REST do Microsoft Graph permitem integração programática para desenvolvedores. Limitações do vínculo: se o arquivo-fonte for movido, renomeado ou ficar inacessível, o vínculo não resolve e precisa ser reparado; colaboração em tempo real (coautoria) é mecanismo distinto do vínculo e não o substitui.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que copiar/colar comum cria cópia estática, sem relação posterior com a fonte.\n- Nível intermediário: distinguir objeto incorporado de objeto vinculado e executar Colar especial > Vincular no Word.\n- Nível avançado: montar fluxo com Power Automate entre aplicações e avaliar quando a disponibilidade depende do plano/licença.\n- Nível especialista: diagnosticar vínculo quebrado (fonte movida ou inacessível) e escolher entre reparar o vínculo, reincorporar o objeto ou substituir por coautoria no arquivo único.\n\nCOMPARAÇÕES CRÍTICAS:\n- Objeto incorporado x objeto vinculado: incorporado embute uma cópia (não atualiza com a fonte); vinculado mantém referência (atualiza, mas exige acesso à fonte) — quando a questão diz \"alterações no Excel refletem no Word\", o gabarito exige vínculo.\n- Copiar/colar comum x Colar especial vinculado: o primeiro não cria relação; o segundo cria vínculo OLE — trocar um pelo outro inverte a resposta sobre atualização automática.\n- Integração manual (OLE) x automação (Power Automate/Microsoft Graph): OLE resolve documento a documento na interface; automação encadeia aplicações em fluxos e pode exigir plano/licença específico — a alternativa que promete automação via OLE está errada.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"a integração entre as aplicações exige programação\" — Motivo: generalização falsa — Versão tecnicamente correta: a integração básica (colar especial vinculado, gráfico vinculado) é nativa da interface; APIs como o Microsoft Graph servem à automação avançada e ao desenvolvimento.\n- Afirmação errada: \"objeto incorporado se atualiza quando a fonte muda\" — Motivo: troca entre incorporação e vinculação — Versão tecnicamente correta: somente o objeto vinculado reflete mudanças da fonte; o incorporado é uma cópia dentro do documento.\n- Afirmação errada: \"o vínculo continua funcionando mesmo se o arquivo-fonte for movido para outra pasta\" — Motivo: termo absoluto sobre mecanismo dependente de caminho — Versão tecnicamente correta: mover, renomear ou tornar inacessível a fonte rompe o vínculo, que precisa ser reparado.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: OLE, incorporação, vinculação, Colar especial, gráfico vinculado, Teams como centro, Power Automate, Microsoft Graph.\n- Regras e fórmulas: precisa de atualização automática → vínculo (Colar especial > Vincular / gráfico vinculado); precisa de cópia fixa → colar comum ou incorporar.\n- Exceções: vínculo depende de a fonte permanecer acessível; automação e alguns serviços dependem do plano/licença — conferir na documentação oficial.\n- Palavras-chave: OLE, vinculado, incorporado, Colar especial, Power Automate, Microsoft Graph, hub.\n- Checklist de domínio: distingo estático, incorporado e vinculado; escolho o mecanismo por cenário; explico por que um vínculo quebra; sei o papel de Teams e Power Automate.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual mecanismo mantém uma tabela do Excel atualizada dentro de um documento Word? (2) Qual a diferença entre objeto incorporado e vinculado? (3) Um gráfico no PowerPoint precisa refletir a planilha de vendas a cada recálculo: como inserir? (4) Um vínculo parou de atualizar após a movimentação da planilha-fonte: o que ocorreu e como resolver? (5) Qual serviço automatiza fluxos entre aplicações do Microsoft 365 e o que determina sua disponibilidade?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Inserir tabela do Excel em documento Word com atualização automática quando a planilha mudar.",
+          "resposta": "Copiar a tabela no Excel > no Word, Colar especial > Vincular (OLE) — o objeto fica vinculado à fonte e as alterações no Excel refletem no Word quando o vínculo é atualizado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relatório mensal em Word deve exibir a tabela de indicadores mantida numa planilha Excel que muda toda semana.",
+          "resposta": "Usar Colar especial > Vincular: a tabela do relatório permanece conectada à planilha-fonte. Rotina mensal: atualizar a planilha, abrir o Word e atualizar o vínculo. Cuidado registrado nas limitações: se a planilha for movida de pasta ou renomeada, o vínculo quebra e precisa ser reparado antes da distribuição do relatório."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Equipe distribui apresentação PowerPoint com o gráfico de orçamento que o setor financeiro recalcula no Excel.",
+          "resposta": "Inserir o gráfico como vinculado ao Excel (Inserir > Gráfico vinculado ou copiar/colar vinculado): quando o financeiro recalcula a planilha, o gráfico da apresentação reflete os novos valores ao ser atualizado. Se a apresentação for enviada para fora e os valores precisarem congelar, é preferível colar como imagem ou incorporar — decisão conforme a finalidade (dado vivo versus dado estático)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a integração entre as aplicações do Microsoft 365 exige programação.",
+          "correcao": "Incorreto: a integração básica (OLE, Colar especial vinculado, gráfico vinculado) é nativa da interface; APIs (Microsoft Graph) são para automação avançada e desenvolvimento, e a disponibilidade de serviços como Power Automate depende do plano/licença."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual mecanismo vincula tabela do Excel em Word com atualização? A) Copiar/colar comum; B) OLE vinculado (Colar especial > Vincular); C) Exportar PDF.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Teams pode atuar como centro de colaboração integrando as aplicações do Microsoft 365.",
+          "resposta": "Certo. O Teams reúne conversas, arquivos e serviços das aplicações num único contexto de equipe, funcionando como hub de colaboração."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Um documento Word exibe tabela que NÃO reflete alterações recentes feitas na planilha Excel de origem. Causa mais provável? A) A tabela foi colada com copiar/colar comum, como cópia estática; B) O histórico de versões está ativo; C) Falta uma fonte de texto no sistema.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir objeto estático, incorporado e vinculado e de escolher o mecanismo de integração adequado a um cenário, justificando a dependência do vínculo em relação ao arquivo-fonte, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará integrações entre aplicações Microsoft 365"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os mecanismos de integração entre as aplicações do Microsoft 365: vinculação e incorporação de objetos (OLE), copiar especial com vínculo, gráficos ligados ao Excel, Teams como centro de colaboração, Power Automate para automação e APIs REST do Microsoft Graph; (b) a diferença decisiva entre dado estático, objeto incorporado e objeto vinculado; (c) as limitações do vínculo (dependência de acesso ao arquivo-fonte). POR QUE O CONHECIMENTO É IMPORT…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Integração entre aplicações",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que a integração entre as aplicações do Microsoft 365 exige programação.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: a integração básica (OLE, Colar especial vinculado, gráfico vinculado) é nativa da interface; APIs (Microsoft Graph) são para automação avançada e desenvolvimento, e a disponibilidade de serviços como Power Automate depende do plano/licença."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Inserir tabela do Excel em documento Word com atualização automática quando a planilha mudar.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Copiar a tabela no Excel > no Word, Colar especial > Vincular (OLE) — o objeto fica vinculado à fonte e as alterações no Excel refletem no Word quando o vínculo é atualizado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Relatório mensal em Word deve exibir a tabela de indicadores mantida numa planilha Excel que muda toda semana.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Usar Colar especial > Vincular: a tabela do relatório permanece conectada à planilha-fonte. Rotina mensal: atualizar a planilha, abrir o Word e atualizar o vínculo. Cuidado registrado nas limitações: se a planilha for movida de pasta ou renomeada, o vínculo quebra e precisa ser reparado antes da distribuição do relatório.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que a integração entre as aplicações do Microsoft 365 exige programação.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: a integração básica (OLE, Colar especial vinculado, gráfico vinculado) é nativa da interface; APIs (Microsoft Graph) são para automação avançada e desenvolvimento, e a disponibilidade de serviços como Power Automate depende do plano/licença.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-1-topico-1-sub-6",
+      "titulo": "Salvamento automático, sincronização, colaboração simultânea e histórico de versões",
+      "topicoTitulo": "Diferenças entre Microsoft 365, Office LTSC e versões perpétuas",
+      "topicoId": "modulo-1-unidade-1-topico-1",
+      "unidadeTitulo": "1.1 Ecossistema Microsoft 365",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá mecanismos de salvamento automático e colaboração em tempo real.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o salvamento automático (autosave) e sua condição: arquivo em OneDrive/SharePoint; (b) sincronização e coautoria: edição simultânea com indicadores de presença; (c) histórico de versões: o que guarda, quando restaurar e a regra de prudência sobre períodos; (d) políticas de retenção definidas por administrador. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve cenários de trabalho colaborativo (dois editores no mesmo documento, restauração de versão) e cobra a condição do autosave e o caráter configurável da retenção; afirmar prazo fixo ou negar coautoria muda o gabarito. PRÉ-REQUISITOS: subtópicos 3 (modalidades) e 4 (armazenamento). OBJETIVOS OBSERVÁVEIS: (1) reconhecer quando o salvamento automático está ativo; (2) descrever o mecanismo de coautoria e seus indicadores; (3) restaurar versão anterior e explicar o que acontece com a atual. COMPETÊNCIAS DESENVOLVIDAS: trabalho colaborativo seguro; recuperação de estado anterior. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópicos 4 (armazenamento) e 8 (permissões); unidade 1.5 (OneDrive); Módulo 4 (continuidade). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: salvamento automático (autosave) é o modo em que o aplicativo grava as alterações continuamente no serviço, com indicador de estado (ativado/desativado) no canto superior esquerdo da janela; a condição essencial é o arquivo estar hospedado em OneDrive/SharePoint — arquivo puramente local não tem autosave contínuo, apenas gravações manuais (Ctrl+S) ou de recuperação automática do aplicativo. Sincronização: o cliente transporta as alterações entre a cópia local e a nuvem. Coautoria: quando o arquivo está na nuvem, múltiplos usuários editam simultaneamente o mesmo documento, com indicadores de presença (nome e cursor colorido de cada autor) e alterações visíveis em tempo real; não é preciso fechar o arquivo para o próximo editor entrar. Histórico de versões: o serviço registra versões anteriores do arquivo, acessíveis pela interface web (ou pelo painel do aplicativo, conforme o produto), permitindo visualizar e restaurar; restaurar uma versão anterior não exclui a atual — ela passa a ser também uma versão no histórico, o que torna a operação reversível. O período padrão e a quantidade máxima de versões dependem do plano/serviço e são configuráveis pelo administrador — conferir na documentação oficial do produto; esta apostila não afirma número de versões nem prazo. Caso-limite: edição feita offline num arquivo local sincronizado depois — na coautoria ativa, o conflito entre alterações offline é resolvido pelo mecanismo de sincronização (regra de última alteração prevalece quando não há coautoria em tempo real).\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: identificar o indicador de salvamento automático e diferenciar arquivo na nuvem de arquivo local.\n- Nível intermediário: explicar a coautoria com presença e cursor; restaurar uma versão anterior pelo histórico.\n- Nível avançado: explicar a reversibilidade da restauração (a versão atual é preservada) e o efeito de políticas de retenção definidas pelo administrador.\n- Nível especialista: diagnosticar perda de trabalho (autosave desativado, arquivo local) e desenhar a rotina correta para documento colaborativo (nuvem + coautoria + histórico).\n\nCOMPARAÇÕES CRÍTICAS:\n- Autosave ativo x arquivo local: o autosave contínuo exige arquivo em OneDrive/SharePoint; no arquivo local, gravação é manual/recuperação automática — em questão sobre \"onde o autosave funciona\", o gabarito é nuvem.\n- Coautoria x edição alternada: a coautoria permite edição simultânea com presença visível; não é necessário fechar o arquivo — a alternativa que exige exclusividade de acesso está errada.\n- Restauração x exclusão: restaurar versão não apaga a versão atual do histórico; a operação é reversível — confundir com exclusão definitiva inverte a resposta.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"o histórico de versões guarda apenas a última versão\" — Motivo: minimiza o mecanismo — Versão tecnicamente correta: o histórico mantém múltiplas versões; o período padrão e a quantidade máxima dependem do plano/serviço e são configuráveis pelo administrador (conferir na documentação oficial).\n- Afirmação errada: \"para outro usuário editar, é preciso fechar o arquivo\" — Motivo: transporta mentalidade de arquivo local — Versão tecnicamente correta: com o arquivo na nuvem, a coautoria permite edição simultânea com indicadores de presença.\n- Afirmação errada: \"restaurar uma versão anterior destrói a versão atual\" — Motivo: confunde restauração com substituição definitiva — Versão tecnicamente correta: a versão atual é preservada no histórico; a restauração pode ser revertida.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: salvamento automático, sincronização, coautoria, presença, cursor colorido, histórico de versões, restauração, retenção configurável.\n- Regras e fórmulas: autosave contínuo → arquivo em nuvem; edição simultânea → coautoria com presença; erro grave → histórico > restaurar versão.\n- Exceções: períodos e quantidades de versão variam por plano/serviço e são administráveis — conferir na documentação oficial; arquivo local não tem coautoria nem autosave contínuo.\n- Palavras-chave: autosave, coautoria, presença, histórico de versões, restauração, retenção, sincronização.\n- Checklist de domínio: identifico a condição do autosave; explico a coautoria; restauro versão sem perder a atual; não afirmo prazos fixos de retenção.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Em que condição o salvamento automático funciona continuamente? (2) Dois usuários editam o mesmo Word na nuvem: o que aparece na tela de cada um? (3) Como restaurar a versão de três dias atrás sem perder a atual? (4) Quem pode configurar políticas de retenção de versões no ambiente organizacional? (5) Corrija: \"para um segundo usuário editar o arquivo, o primeiro precisa fechá-lo\".",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar se um documento está sendo salvo automaticamente.",
+          "resposta": "Verificar o indicador de salvamento automático no canto superior esquerdo da janela: se ativado, o arquivo está em OneDrive/SharePoint e cada alteração é gravada no serviço; se desativado (ou ausente), o arquivo é local e a gravação é manual (Ctrl+S)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Dois técnicos editam o mesmo documento de especificação ao mesmo tempo, hospedado no OneDrive.",
+          "resposta": "Coautoria em tempo real: cada um vê o nome e o cursor colorido do outro, e as alterações aparecem à medida que são digitadas; não é preciso alternar o acesso. Recomendações operacionais: manter o autosave ativado e, em caso de erro coletivo, usar o histórico de versões para restaurar o estado anterior — a versão corrompida permanece registrada, permitindo reversão."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um relatório foi sobrescrito com conteúdo errado há duas horas; como recuperar o texto correto?",
+          "resposta": "Abrir o arquivo no serviço (web ou painel do aplicativo) > Histórico de versões > visualizar a versão anterior correta > Restaurar. A versão atual (errada) não é destruída: entra no histórico, e a operação pode ser revertida. O período de disponibilidade das versões depende do plano/serviço e da configuração do administrador — conferir na documentação oficial."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que o histórico de versões guarda apenas 1 versão.",
+          "correcao": "Incorreto: o histórico mantém múltiplas versões; o período padrão e a quantidade máxima dependem do plano/serviço e são configuráveis pelo administrador (conferir na documentação oficial do produto)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "O período de retenção do histórico de versões de um arquivo em nuvem é: A) Definido pelo usuário a cada salvamento; B) Variável conforme o plano/serviço em uso, com possibilidade de configuração pelo administrador, devendo ser confirmado na documentação oficial; C) Ilimitado.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A edição simultânea exige fechar o arquivo para outro usuário editar.",
+          "resposta": "Errado. Com o arquivo na nuvem, a coautoria permite edição simultânea, com indicadores de presença e alterações visíveis em tempo real."
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Restaurar uma versão anterior apaga definitivamente a versão atual do histórico.",
+          "resposta": "Errado. A versão atual é preservada no histórico; a restauração é reversível."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar a condição do salvamento automático, explicar a coautoria com indicadores de presença e descrever a restauração de versões como operação reversível, reconhecendo que a retenção depende do plano, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá mecanismos de salvamento automático e colaboração em tempo real"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Salvamento automático (auto-save) com indicador no canto superior esquerdo. Sincronização via OneDrive/SharePoint, edição simultânea de múltiplos usuários com alterações visíveis em tempo real, indicadores de presença e cursor de posição. Histórico de versões: cópias de recuperação por período padrão conforme o serviço (conferir na documentação oficial do produto), restauração de versões anteriores. Políticas de retenção configuráveis por administrador.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Salvamento automático, sincronização, colaboração simultânea e histórico de versões",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que o histórico de versões guarda apenas 1 versão.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: o período padrão e a quantidade máxima de versões dependem do plano/serviço (conferir na documentação oficial); a configuração é administrável."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar se o documento está sendo salvo automaticamente.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Indicador 'Salvamento automático' no canto superior esquerdo (arquivos no OneDrive/SharePoint).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Dois usuários editam o mesmo Word simultaneamente.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Presença (nome/cursor colorido) visível; alterações em tempo real; conflitos resolvidos (última alteração prevalece offline).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que o histórico de versões guarda apenas 1 versão.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: o período padrão e a quantidade máxima de versões dependem do plano/serviço (conferir na documentação oficial); a configuração é administrável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

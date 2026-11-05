@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 3,
+    "unidadeTitulo": "4.3 Ameaças e ataques",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM4U3P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U3P5.js",
+    "idsCompletos": [
+      "m4-u3-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u3-t3-s3",
+      "titulo": "Análise segura de mensagens, links e anexos",
+      "topicoTitulo": "Comprometimento, indicadores e resposta",
+      "topicoId": "modulo-4-unidade-3-topico-3",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno executará procedimento de triagem de mensagem suspeita sem se expor ao risco e justificará cada passo.",
+      "conteudo": "Procedimento defensivo de triagem (executar apenas em ambiente controlado; nenhum passo visa explorar terceiros): 1) Identificação do remetente: conferir domínio real, não o nome exibido; verificar autenticação do e-mail quando disponível. 2) Análise do conteúdo: pedido urgente, sigilo, ação fora do procedimento, discrepância de endereço bancário. 3) Links: passar o cursor e ler o endereço real sem clicar; conferir se o domínio imita o oficial (troca de letras, subdomínios extras); digitá-lo manualmente se houver necessidade legítima de acesso. 4) Anexos: não abrir em máquina de produção; extensões executáveis disfarçadas (dupla extensão) são suspeitas; documentos com instrução de habilitar macro não devem ter macro habilitada. 5) Encaminhamento: usar o canal oficial de denúncia do órgão, sem repassar a colegas. 6) Se clicou ou abriu: isolar, informar TI imediatamente, trocar credenciais a partir de outro dispositivo. Análise técnica profunda (abrir em máquina virtual, extrair hash) é papel de equipe treinada com ambiente isolado — usuário comum não faz isso.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "E-mail traz anexo 'Relatorio.pdf.exe' com aviso de 'documento bloqueado'. Decisão correta?",
+          "resposta": "Não abrir: a dupla extensão indica executável disfarçado. Encaminhar ao canal oficial de denúncia do órgão e informar colegas do setor sem repassar o anexo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Servidor recebe e-mail com link para 'atualizar cadastro'. Descreva a triagem sem risco.",
+          "resposta": "Conferir domínio do remetente; passar cursor sobre o botão e comparar o domínio real com o oficial; não digitar dados; acessar o portal digitando o endereço conhecido; se já digitou dados, reportar imediatamente para bloqueio e troca de senha. Nunca usar o link da mensagem."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Para saber se é vírus, posso abrir o anexo no computador do setor e fechar se parecer estranho.'",
+          "correcao": "Errado. A execução já ocorre ao abrir; fechar a janela não desfaz infecção. Anexos suspeitos são reportados, não executados — a análise é feita em ambiente isolado por equipe treinada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Passar o cursor sobre um link (sem clicar) para ler o endereço real é medida segura de triagem.",
+          "resposta": "Certo. Revela o domínio verdadeiro de destino; ainda assim, a ação correta para acesso legítimo é digitar o endereço oficial manualmente."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "E-mail do 'banco' com link. Qual ação é a mais segura para verificar a legitimidade? A) Clicar e ver se o site parece bom; B) Digitar o endereço oficial do banco no navegador; C) Responder pedindo confirmação; D) Encaminhar ao colega para opinião.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de executar procedimento de triagem de mensagem suspeita sem se expor ao risco e justificará cada passo, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "executará procedimento de triagem de mensagem suspeita sem se expor ao risco e justificará cada passo"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Procedimento defensivo de triagem (executar apenas em ambiente controlado; nenhum passo visa explorar terceiros): 1) Identificação do remetente: conferir domínio real, não o nome exibido; verificar autenticação do e-mail quando disponível. 2) Análise do conteúdo: pedido urgente, sigilo, ação fora do procedimento, discrepância de endereço bancário. 3) Links: passar o cursor e ler o endereço real sem clicar; conferir se o domínio imita o oficial (troca de letras, subdomínios extras); digitá-lo man…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Análise segura de mensagens, links e anexos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Para saber se é vírus, posso abrir o anexo no computador do setor e fechar se parecer estranho.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A execução já ocorre ao abrir; fechar a janela não desfaz infecção. Anexos suspeitos são reportados, não executados — a análise é feita em ambiente isolado por equipe treinada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "E-mail traz anexo 'Relatorio.pdf.exe' com aviso de 'documento bloqueado'. Decisão correta?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não abrir: a dupla extensão indica executável disfarçado. Encaminhar ao canal oficial de denúncia do órgão e informar colegas do setor sem repassar o anexo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Servidor recebe e-mail com link para 'atualizar cadastro'. Descreva a triagem sem risco.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Conferir domínio do remetente; passar cursor sobre o botão e comparar o domínio real com o oficial; não digitar dados; acessar o portal digitando o endereço conhecido; se já digitou dados, reportar imediatamente para bloqueio e troca de senha. Nunca usar o link da mensagem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Para saber se é vírus, posso abrir o anexo no computador do setor e fechar se parecer estranho.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A execução já ocorre ao abrir; fechar a janela não desfaz infecção. Anexos suspeitos são reportados, não executados — a análise é feita em ambiente isolado por equipe treinada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

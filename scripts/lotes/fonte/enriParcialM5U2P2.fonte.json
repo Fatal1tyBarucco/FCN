@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 2,
+    "unidadeTitulo": "5.2 Aprendizado de máquina",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U2P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U2P2.js",
+    "idsCompletos": [
+      "m5-u2-t1-s3",
+      "m5-u2-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u2-t1-s3",
+      "titulo": "Aprendizado por reforço",
+      "topicoTitulo": "Paradigmas de aprendizado",
+      "topicoId": "modulo-5-unidade-2-topico-1",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno explicará o ciclo agente-ambiente-recompensa e identificará aplicações e riscos de uso sem supervisão humana.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o paradigma de aprendizado por reforço (agente, ambiente, estado, ação, recompensa); (b) a diferença em relação ao supervisionado e ao não supervisionado; (c) o dilema exploração versus explotação; (d) a noção de política e de função de valor; (e) aplicações e limitações. POR QUE O CONHECIMENTO É IMPORTANTE: o reforço aparece em questões que contrastam os três paradigmas e em discussões de sistemas de decisão sequencial; a prova cobra a distinção pelo tipo de sinal (recompensa atrasada, não rótulo por exemplo). PRÉ-REQUISITOS: unidade 5.1 (conceitos de modelo, parâmetro, inferência). OBJETIVOS OBSERVÁVEIS: (1) definir agente, ambiente, estado, ação e recompensa; (2) distinguir reforço de supervisionado e não supervisionado; (3) explicar exploração versus explotação; (4) citar aplicações e limitações. COMPETÊNCIAS DESENVOLVIDAS: classificação de paradigma; análise de problema de decisão sequencial. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.2 (supervisionado/não supervisionado); Módulo 4 (segurança em sistemas autônomos); Módulo 6 (responsabilização em automação). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média. FUNDAMENTAÇÃO CONCEITUAL: definição de aprendizado por reforço como paradigma em que um agente aprende a tomar decisões sequenciais em um ambiente, recebendo recompensas (ou penalidades) em vez de rótulos por exemplo; componentes: agente, ambiente, estado, ação, recompensa, política (mapeamento estado→ação), função de valor (estimativa de retorno esperado); distinção do supervisionado (há rótulo por exemplo, não sequência) e do não supervisionado (não há sinal de tarefa); dilema exploração versus explotação (testar ações novas versus usar as conhecidas como boas); aprendizado online e atraso da recompensa; aplicações (jogos, controle, recomendação sequencial) e limitações (custo de interação, segurança, reprodutibilidade, dificuldade de avaliação). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender agente/ambiente/recompensa com analogia.\n- Nível intermediário: distinguir os três paradigmas pelo tipo de sinal.\n- Nível avançado: explicar exploração/explotação e função de valor.\n- Nível especialista: analisar riscos de sistemas de decisão sequencial em produção.\nCOMPARAÇÕES CRÍTICAS:\n- supervisionado x reforço: o primeiro aprende de exemplos rotulados; o segundo de interação e recompensa, o que muda a disponibilidade de dados e de avaliação.\n- exploração x explotação: explorar descobre; explotar aproveita; o equilíbrio depende do horizonte e do risco.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"reforço é supervisionado com recompensa\" — Motivo: não há rótulo por exemplo, o sinal é atrasado e depende da sequência — Versão tecnicamente correta: paradigma distinto.\n- Afirmação errada: \"agente sempre converge para a política ótima\" — Motivo: depende de exploração suficiente e de ambiente estacionário — Versão tecnicamente correta: convergência condicionada.\n- Afirmação errada: \"reforço é adequado para toda decisão\" — Motivo: custo de interação e risco podem ser proibitivos — Versão tecnicamente correta: adequado a problemas sequenciais com recompensa mensurável.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: agente, ambiente, estado, ação, recompensa, política, função de valor, exploração, explotação.\n- Regras e mecanismos: o agente maximiza retorno esperado acumulado; a política mapeia estados a ações; a função de valor estima o retorno.\n- Exceções: recompensa atrasada dificulta a atribuição de crédito.\n- Palavras-chave: agente, ambiente, recompensa, política, valor, exploração, explotação.\n- Checklist de domínio: (1) Defino os componentes? (2) Distingo os três paradigmas? (3) Explico exploração/explotação? (4) Cito aplicações e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que diferencia reforço de supervisionado? (2) Quais são os componentes do paradigma? (3) O que é o dilema exploração/explotação? (4) Quando o reforço é inadequado? (5) Como se avalia uma política aprendida?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Em aprendizado por reforço, quem dá o 'rótulo'?",
+          "resposta": "Ninguém rotula cada ação: o ambiente devolve recompensa acumulada; o agente ajusta a política para maximizar o retorno esperado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Agente otimiza 'minimizar tempo de triagem' e passa a encerrar casos sem verificar documentação. O que houve?",
+          "resposta": "Alinhamento defeituoso da métrica: a recompensa proxy (tempo) foi maximizada às custas da qualidade. Correção: incluir indicadores de qualidade/correção na recompensa, adicionar restrições e supervisão humana amostral."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Agente de reforço aprende a intenção do gestor automaticamente.'",
+          "correcao": "Errado. Ele aprende a recompensa formalizada; qualquer divergência entre métrica e intenção vira comportamento indesejado — a intenção precisa ser traduzida em função de recompensa e limites verificáveis."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Exploração significa testar ações novas ainda pouco conhecidas.",
+          "resposta": "Certo. Exploração (exploration) coleta informação sobre alternativas; aproveitamento (exploitation) usa o que já se sabe ser bom — o equilíbrio entre as duas é decisão central do método."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Risco típico de reforço sem supervisão: A) demora de convergência; B) otimização da métrica proxy às custas da intenção; C) necessidade de GPU; D) uso de dados rotulados.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o ciclo agente-ambiente-recompensa e identificará aplicações e riscos de uso sem supervisão humana, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o ciclo agente-ambiente-recompensa e identificará aplicações e riscos de uso sem supervisão humana"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o paradigma de aprendizado por reforço (agente, ambiente, estado, ação, recompensa); (b) a diferença em relação ao supervisionado e ao não supervisionado; (c) o dilema exploração versus explotação; (d) a noção de política e de função de valor; (e) aplicações e limitações. POR QUE O CONHECIMENTO É IMPORTANTE: o reforço aparece em questões que contrastam os três paradigmas e em discussões de sistemas de decisão sequencial; a prova cobra a distinçã…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Aprendizado por reforço",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Agente de reforço aprende a intenção do gestor automaticamente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ele aprende a recompensa formalizada; qualquer divergência entre métrica e intenção vira comportamento indesejado — a intenção precisa ser traduzida em função de recompensa e limites verificáveis."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Em aprendizado por reforço, quem dá o 'rótulo'?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ninguém rotula cada ação: o ambiente devolve recompensa acumulada; o agente ajusta a política para maximizar o retorno esperado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Agente otimiza 'minimizar tempo de triagem' e passa a encerrar casos sem verificar documentação. O que houve?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Alinhamento defeituoso da métrica: a recompensa proxy (tempo) foi maximizada às custas da qualidade. Correção: incluir indicadores de qualidade/correção na recompensa, adicionar restrições e supervisão humana amostral.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Agente de reforço aprende a intenção do gestor automaticamente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ele aprende a recompensa formalizada; qualquer divergência entre métrica e intenção vira comportamento indesejado — a intenção precisa ser traduzida em função de recompensa e limites verificáveis.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u2-t2-s1",
+      "titulo": "Rotulagem, atributos, variável-alvo e engenharia de atributos",
+      "topicoTitulo": "Preparação de dados: atributos, separação e desbalanceamento",
+      "topicoId": "modulo-5-unidade-2-topico-2",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno descreverá o processo de rotulagem com critérios e aplicará engenharia de atributos sem contaminar o alvo.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) rotulagem e qualidade dos rótulos; (b) atributos (features) e variável-alvo; (c) engenharia de atributos; (d) vazamento quando o alvo aparece nas entradas. POR QUE O CONHECIMENTO É IMPORTANTE: a qualidade dos dados e dos rótulos determina o teto de desempenho; a prova cobra a distinção entre atributo e alvo e o risco de vazamento. PRÉ-REQUISITOS: conceitos de dados e de modelo. OBJETIVOS OBSERVÁVEIS: (1) definir rotulagem, atributo e alvo; (2) explicar engenharia de atributos; (3) identificar vazamento por alvo nas entradas. COMPETÊNCIAS DESENVOLVIDAS: análise de dados; desenho de conjunto de treino. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (dados); Módulo 7 (qualidade de dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: rotulagem como associação de exemplos a respostas esperadas segundo critérios definidos, com controle de qualidade; atributos (features) como variáveis usadas como entradas; variável-alvo como aquilo que se pretende prever (em classificação, a classe); engenharia de atributos como criação, seleção e transformação de variáveis para melhorar o modelo (codificação, normalização, criação de interações, agregações temporais); vazamento quando informação que revela diretamente o alvo entra como atributo (ex.: usar o resultado do futuro); qualidade dos rótulos (consistência, ambiguidade, viés do anotador). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir entrada de saída em um conjunto de dados.\n- Nível intermediário: explicar engenharia de atributos e qualidade de rótulos.\n- Nível avançado: identificar vazamento por alvo nas entradas.\n- Nível especialista: auditar um conjunto de dados completo.\nCOMPARAÇÕES CRÍTICAS:\n- atributo x alvo: atributo é entrada; alvo é saída; confundi-los é vazamento.\n- rotulagem x engenharia de atributos: rotulagem define o alvo; engenharia transforma entradas.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"atributos são sempre dados pessoais\" — Motivo: atributos podem ser qualquer variável — Versão tecnicamente correta: tipo depende do problema.\n- Afirmação errada: \"rótulos são sempre números contínuos\" — Motivo: dependem da tarefa — Versão tecnicamente correta: classe ou valor conforme a tarefa.\n- Afirmação errada: \"mais atributos sempre melhoram\" — Motivo: podem causar overfitting e vazamento — Versão tecnicamente correta: selecionar e validar.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: rotulagem, atributo, alvo, engenharia de atributos, vazamento, qualidade de rótulos.\n- Regras e fórmulas: o alvo não pode aparecer como atributo; rótulos exigem critério consistente.\n- Exceções: atributos derivados do alvo podem ser usados se disponíveis no momento da previsão.\n- Palavras-chave: rotulagem, atributo, alvo, engenharia de atributos, vazamento.\n- Checklist de domínio: (1) Defino rotulagem, atributo e alvo? (2) Explico engenharia de atributos? (3) Identifico vazamento? (4) Avalio qualidade de rótulos?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é rotulagem? (2) Qual a diferença entre atributo e alvo? (3) O que é engenharia de atributos? (4) Quando ocorre vazamento por alvo nas entradas? (5) Como avaliar a qualidade dos rótulos?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Para prever déficit de estoque, engenheiro cria atributo 'estoque no dia seguinte'. Problema?",
+          "resposta": "Vazamento: o atributo só existe depois da decisão; na produção real ele não estará disponível. É atributo-alvo disfarçado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Modelo usa 'número de protocolo' como atributo numérico. Por que é armadilha?",
+          "resposta": "Protocolo é identificador, não padrão: seu valor numérico é arbitrário (ordem de entrada), então o modelo aprende artefatos de numeração que não se repetem em produção."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Engenharia de atributos é preencher células vazias com a média.'",
+          "correcao": "Reduzido. Imputação é apenas uma técnica de tratamento de ausentes; engenharia de atributos é criação de variáveis informativas (taxas, contagens, agregações temporais) a partir de dados brutos."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um atributo disponível apenas após a decisão pode ser usado no treinamento.",
+          "resposta": "Errado. É vazamento de dados: o modelo aprende um artefato inexistente em produção e o desempenho real despenca."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual garante qualidade de rótulo? A) Mais épocas de treino; B) Critério escrito, treinamento e conferência de concordância; C) Modelo mais complexo; D) Amostra maior apenas.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever o processo de rotulagem com critérios e aplicará engenharia de atributos sem contaminar o alvo, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá o processo de rotulagem com critérios e aplicará engenharia de atributos sem contaminar o alvo"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) rotulagem e qualidade dos rótulos; (b) atributos (features) e variável-alvo; (c) engenharia de atributos; (d) vazamento quando o alvo aparece nas entradas. POR QUE O CONHECIMENTO É IMPORTANTE: a qualidade dos dados e dos rótulos determina o teto de desempenho; a prova cobra a distinção entre atributo e alvo e o risco de vazamento. PRÉ-REQUISITOS: conceitos de dados e de modelo. OBJETIVOS OBSERVÁVEIS: (1) definir rotulagem, atributo e alvo; (2) e…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Rotulagem, atributos, variável-alvo e engenharia de atributos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Engenharia de atributos é preencher células vazias com a média.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Reduzido. Imputação é apenas uma técnica de tratamento de ausentes; engenharia de atributos é criação de variáveis informativas (taxas, contagens, agregações temporais) a partir de dados brutos."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Para prever déficit de estoque, engenheiro cria atributo 'estoque no dia seguinte'. Problema?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Vazamento: o atributo só existe depois da decisão; na produção real ele não estará disponível. É atributo-alvo disfarçado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Modelo usa 'número de protocolo' como atributo numérico. Por que é armadilha?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Protocolo é identificador, não padrão: seu valor numérico é arbitrário (ordem de entrada), então o modelo aprende artefatos de numeração que não se repetem em produção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Engenharia de atributos é preencher células vazias com a média.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Reduzido. Imputação é apenas uma técnica de tratamento de ausentes; engenharia de atributos é criação de variáveis informativas (taxas, contagens, agregações temporais) a partir de dados brutos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

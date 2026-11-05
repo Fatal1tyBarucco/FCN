@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 1,
+    "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+    "parte": 1,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U1P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U1P1.js",
+    "idsCompletos": [
+      "m6-u1-t1-s1",
+      "m6-u1-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u1-t1-s1",
+      "titulo": "Orientação estratégica da unidade",
+      "topicoTitulo": "Orientação estratégica e fundamentação conceitual dos princípios",
+      "topicoId": "modulo-6-unidade-1-topico-1",
+      "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno delimitará o que será aprendido na unidade 6.1, relacionará os princípios constitucionais da Administração Pública às atividades de TI em órgãos públicos e declarará pré-requisitos, competências e o grau de dificuldade esperado.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a natureza jurídica e o conteúdo dos cinco princípios constitucionais da Administração Pública (legalidade, impessoalidade, moralidade, publicidade e eficiência) e a base constitucional que os reúne em um único dispositivo; (b) como cada princípio se traduz em requisitos concretos de desenho, operação e auditoria de sistemas e serviços digitais; (c) como construir um teste de conformidade que permita verificar, item a item, se um sistema digital respeita cada princípio. POR QUE O CONHECIMENTO É IMPORTANTE: quase todo produto de TI no serviço público é, na prática, instrumento de exercício de competência administrativa. Um sistema que decide quem recebe um benefício, um portal que informa sobre um programa e um painel que informa o desempenho da gestão não são apenas tecnologia: são atos administrativos ou comunicações administrativas em suporte digital. Um erro de desenho que viole a legalidade, a impessoalidade ou a publicidade não é apenas um defeito técnico; é vício do ato, com reflexos na responsabilização do servidor, do gestor e do próprio órgão. Para quem prepara ou executa concursos de TI em órgãos públicos, a diferença entre «instalar sistema» e «administrar tecnicamente com responsabilidade» está, quase sempre, no vocabulário jurídico aplicado à operação. PRÉ-REQUISITOS: noções de organização administrativa e de separação de poderes; leitura da parte inicial do Módulo 4 (tríade CIA, responsabilização, não repúdio, classificação de risco) e do Módulo 5 (viés, explicabilidade, avaliação de modelos); noções de LGPD já estudadas no Módulo 4. OBJETIVOS OBSERVÁVEIS: (1) enumerar os cinco princípios e citar a base constitucional que os reúne; (2) dado um sistema digital hipotético, apontar qual princípio pode estar em jogo e por quê; (3) construir um teste de conformidade para cada princípio, com evidência documental; (4) redigir justificativa técnica de não conformidade ancorada em norma. COMPETÊNCIAS DESENVOLVIDAS: leitura de norma com efeito operacional; argumentação técnica dirigida a auditoria e a controle interno; desenho de controles proporcionais ao risco; comunicação de risco a gestores não técnicos. GRAU DE DIFICULDADE: baixo na conceituação (a memorização da lista é trivial) e alto na aplicação — o examinador não pede a lista, pede o enquadramento do caso, e casos ambíguos exigem saber qual princípio prevalece e por quê. RELAÇÃO COM OUTROS TÓPICOS: a unidade 6.2 detalha o princípio da publicidade (LAI e Lei de Governo Digital); a unidade 6.3 detalha os limites do princípio da publicidade (dados pessoais e sigilo legal); a unidade 6.4 conecta moralidade e impessoalidade a conduta, conflitos de interesse e uso de redes sociais; a unidade 6.6 aplica os cinco princípios à automação de decisões e a estudos de caso. RELEVÂNCIA PARA CONCURSOS: classificação qualitativa de alta. Trata-se de uma estimativa pedagógica de adequação ao conteúdo programático e ao perfil de cargo de TI em órgão público — não é uma frequência estatística de incidência em provas, que este material não possui e não inventa.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença de trabalho que separa o técnico que instala um sistema de triagem de benefícios daquele que o administra com responsabilidade?",
+          "resposta": "O primeiro verifica se o sistema funciona (disponibilidade, desempenho, compatibilidade). O segundo verifica, além disso, se o sistema decide de forma legal (há competência e base normativa?), se trata com impessoalidade (os critérios são definidos, iguais e auditáveis?), se não viola a moralidade (os dados e a finalidade são adequados?), se dá publicidade ao que é público e se entrega eficiência (tempo médio, satisfação, sem barreira digital). É a segunda camada que responde pela validade do ato."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um técnico vai iniciar a auditoria de um portal de serviços. Em que ordem ele deve produzir as evidências?",
+          "resposta": "Ordem de risco, não de vício fácil: (1) legalidade — competência do órgão e base normativa de cada serviço publicado e de cada dado exibido; (2) impessoalidade — critérios de ordenação e de exibição da fila, com registro de versão; (3) moralidade — finalidade declarada de cada campo e de cada integração; (4) publicidade — completude da transparência ativa e correção dos requisitos do art. 8º da LAI; (5) eficiência — indicadores do painel (art. 22 da Lei nº 14.129/2021). Cada achado é registrado com norma, evidência e risco, para que o gestor decida com base em fato documentado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como os princípios constitucionais são normas abstratas, não geram obrigação técnica verificável no setor de TI.'",
+          "correcao": "Errado. Princípio é norma de conduta que exige concretização; no serviço público digital, a concretização é técnica e o descumprimento é verificável por evidência (configuração, log, versão de regra). O que não é correto é o extremo oposto — tratar princípio como se fosse regra com prazo e valor exatos, quando a lei é que traz esses elementos (ex.: os 20 dias do art. 11, § 1º, da Lei nº 12.527/2011)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A existência de uma base legal para o tratamento de dados é requisito de legalidade aplicável ao desenho de sistemas de atendimento do órgão.",
+          "resposta": "Certo. Legalidade exige competência e base normativa antes da operação; a ausência de base legal para coletar, usar e decidir configura não conformidade de legalidade, e não apenas uma fragilidade técnica de segurança."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Um sistema ordena a fila de atendimento por um escore não documentado nem auditável. O problema mais direto é: A) violação do princípio da eficiência; B) violação do princípio da impessoalidade e da publicidade; C) violação apenas do princípio da moralidade; D) descumprimento da Lei de Governo Digital por ausência de painel.",
+          "resposta": "B. Critério de ordenação oculto e não auditável impede demonstrar tratamento igualitário (impessoalidade) e impede publicizar como a ordem é definida (publicidade). Eficiência pode até estar otimizada; moralidade só se violada em desdobramento."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de delimitar o que será aprendido na unidade 6.1, relacionará os princípios constitucionais da Administração Pública às atividades de TI em órgãos públicos e declarará pré-requisitos, competências e o grau de dificuldade esperado, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "delimitará o que será aprendido na unidade 6.1, relacionará os princípios constitucionais da Administração Pública às atividades de TI em órgãos públicos e declarará pré-requisitos, competências e o grau de dificuldade esperado"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a natureza jurídica e o conteúdo dos cinco princípios constitucionais da Administração Pública (legalidade, impessoalidade, moralidade, publicidade e eficiência) e a base constitucional que os reúne em um único dispositivo; (b) como cada princípio se traduz em requisitos concretos de desenho, operação e auditoria de sistemas e serviços digitais; (c) como construir um teste de conformidade que permita verificar, item a item, se um sistema digital…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Orientação estratégica da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como os princípios constitucionais são normas abstratas, não geram obrigação técnica verificável no setor de TI.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Princípio é norma de conduta que exige concretização; no serviço público digital, a concretização é técnica e o descumprimento é verificável por evidência (configuração, log, versão de regra). O que não é correto é o extremo oposto — tratar princípio como se fosse regra com prazo e valor exatos, quando a lei é que traz esses elementos (ex.: os 20 dias do art. 11, § 1º, da Lei nº 12.527/2011)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença de trabalho que separa o técnico que instala um sistema de triagem de benefícios daquele que o administra com responsabilidade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O primeiro verifica se o sistema funciona (disponibilidade, desempenho, compatibilidade). O segundo verifica, além disso, se o sistema decide de forma legal (há competência e base normativa?), se trata com impessoalidade (os critérios são definidos, iguais e auditáveis?), se não viola a moralidade (os dados e a finalidade são adequados?), se dá publicidade ao que é público e se entrega eficiência (tempo médio, satisfação, sem barreira digital). É a segunda camada que responde pela validade do ato.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um técnico vai iniciar a auditoria de um portal de serviços. Em que ordem ele deve produzir as evidências?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ordem de risco, não de vício fácil: (1) legalidade — competência do órgão e base normativa de cada serviço publicado e de cada dado exibido; (2) impessoalidade — critérios de ordenação e de exibição da fila, com registro de versão; (3) moralidade — finalidade declarada de cada campo e de cada integração; (4) publicidade — completude da transparência ativa e correção dos requisitos do art. 8º da LAI; (5) eficiência — indicadores do painel (art. 22 da Lei nº 14.129/2021). Cada achado é registrado com norma, evidência e risco, para que o gestor decida com base em fato documentado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como os princípios constitucionais são normas abstratas, não geram obrigação técnica verificável no setor de TI.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Princípio é norma de conduta que exige concretização; no serviço público digital, a concretização é técnica e o descumprimento é verificável por evidência (configuração, log, versão de regra). O que não é correto é o extremo oposto — tratar princípio como se fosse regra com prazo e valor exatos, quando a lei é que traz esses elementos (ex.: os 20 dias do art. 11, § 1º, da Lei nº 12.527/2011).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u1-t1-s2",
+      "titulo": "Fundamentação conceitual: natureza dos princípios e conteúdo de cada um",
+      "topicoTitulo": "Orientação estratégica e fundamentação conceitual dos princípios",
+      "topicoId": "modulo-6-unidade-1-topico-1",
+      "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno explicará a diferença entre princípio e regra, enumerará os cinco princípios constitucionais com sua base normativa e descreverá o conteúdo operativo de cada um, com exemplos e contraexemplos.",
+      "conteudo": "PRINCÍPIO, NA TÉCNICA LEGISLATIVA, é uma norma de conduta de textura aberta e abstrata que orienta e limita a atuação administrativa e que, por isso, exige concretização em regras operacionais. A distinção técnica entre princípio e regra é útil e muda o gabarito de prova: a REGRA vincula o agente de forma direta e exaustiva (exemplo verificado: o prazo de 20 dias para responder a pedido de acesso, art. 11, § 1º, da Lei nº 12.527/2011); o PRINCÍPIO exige ponderação e concretização — e é justamente por isso que ele vira problema para a área de TI, já que a tecnicização do serviço público é o espaço em que a concretização acontece. BASE CONSTITUCIONAL: o caput do art. 37 da Constituição Federal (redação vigente conferida no texto oficial do planalto.gov.br em 2026-10-21) determina que «A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência». O art. 5º, XXXIII, da mesma Constituição (verificado na mesma data) assegura a todos o direito de receber dos órgãos públicos informações de seu interesse particular ou de interesse coletivo ou geral, ressalvadas aquelas cujo sigilo seja imprescindível à segurança da sociedade e do Estado — o que demonstra que publicidade e sigilo não são inimigos, e sim um sistema de regras de convivência. LEGALIDADE: a Administração só faz o que a lei autoriza e como a lei autoriza; nas matérias tributária e sancionadora é quase absoluta; no direito administrativo, exige-se observância da competência e do procedimento, com espaço de discricionariedade dentro da lei. Aplicação digital: (i) base normativa para coletar, tratar e decidir; (ii) competência do sistema e dos agentes; (iii) previsão de quem responde pelo resultado do algoritmo; (iv) integração do sistema ao procedimento formal (protocolo, decisão, notificação, recurso). IMPESSOALIDADE: tratamento desvinculado do arbítrio do servidor, sem favorecimento nem perseguição, com critérios previamente definidos e igualmente aplicáveis a casos iguais; incide sobre a relação com o cidadão e sobre a relação interna do órgão (o servidor não pode usar o sistema para atender interesse pessoal). MORALIDADE: retidão, honestidade, ética e boa-fé; opera na zona não coberta por lei e COMPLEMENTA a legalidade, não a substitui — a legalidade sem moralidade admitiria a prática de uma técnica cruel dentro da letra da lei. Aplicação digital: finalidade declarada e compatível com a coleta; vedação ao uso de dados de terceiros para finalidade diversa; proibição de enriquecimento de dados sem base; honestidade no uso de automação e de conteúdo gerado por IA; respeito à neutralidade institucional. PUBLICIDADE: preceito geral de divulgação do que é público, com o sigilo como exceção (art. 3º, I, da Lei nº 12.527/2011 — verificado); no ambiente digital o meio oficial é o sítio do órgão, e o instrumento técnico-jurídico é a transparência ativa (art. 4º, XI, da Lei nº 14.129/2021 — verificado). EFICIÊNCIA: qualidade do serviço prestado com uso racional dos recursos; no digital, aparece como qualidade de atendimento (o painel de monitoramento deve indicar solicitações em andamento e concluídas, tempo médio de atendimento e grau de satisfação — art. 22 da Lei nº 14.129/2021), simplicidade, interoperabilidade, eliminação de formalidades cujo custo social exceda o risco (art. 3º, XI) e imposição uma única vez das exigências necessárias (art. 3º, XII). Eficiência NÃO autoriza renúncia a direitos, nem entrega acelerada sem qualidade. PROGRESSÃO DE DIFICULDADE: iniciante — saber nomear e distinguir os cinco princípios; intermediário — conseguir enquadrar um sistema digital concreto em cada princípio; avançado — identificar qual princípio está em jogo em caso ambíguo e explicar por que a solução evidente é errada; especialista — desenhar o teste de conformidade, a evidência exigida e a trilha de auditoria correspondente.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O sistema de triagem de benefícios ordena as filas por um escore. Qual princípio é imediatamente afetado e por que a resposta não é simples?",
+          "resposta": "Impessoalidade: o escore precisa ser um critério previamente definido, objetivo e igualmente aplicável a casos iguais, auditável e compreensível. Não basta que o sistema seja automático — um modelo estatisticamente apurado pode reproduzir desvios presentes nos dados de treino e, ainda assim, tratar desigualmente pessoas em situação análoga. Também se toca a publicidade: se o critério não é divulgado, o cidadão não pode saber por que está atrás na fila."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um portal de transparência publica a relação de servidores com nome, cargo e remuneração. Isso viola o princípio da publicidade?",
+          "resposta": "Não. Publicar dados funcionais de servidores é exemplo de transparência funcional e exercício da publicidade institucional, não divulgação irrestrita de dados pessoais de cidadãos. O contraste está no art. 29, § 2º, VII, da Lei nº 14.129/2021, que prevê a divulgação de informações sobre servidores e empregados públicos, incluídos nome e detalhamento dos vínculos profissionais e de remuneração. O que é vedado é a difusão irrestrita de dados pessoais de cidadãos sem base legal, finalidade e proteção."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A eficiência justifica a digitalização integral de um serviço, ainda que prive o cidadão sem conexão do atendimento presencial.'",
+          "correcao": "Errado. A Lei nº 14.129/2021 (verificada em 2026-10-21) preserva o atendimento presencial: art. 3º, XVI, veda a supressão do atendimento presencial; art. 14 exige prestá-lo por tecnologias de amplo acesso, sem prejuízo do direito do cidadão ao atendimento presencial; e o art. 3º, XI, manda eliminar formalidades cujo custo social exceda o risco, o que inclui a barreira digital imposta a quem não tem conexão. Eficiência é qualidade com racionalidade de recursos, não renúncia a direito."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Os princípios do art. 37 admitem ponderação, o que não ocorre com o prazo legal de resposta a pedido de acesso previsto na Lei nº 12.527/2011.",
+          "resposta": "Certo. O princípio é norma de conduta que precisa ser concretizada e ponderada; o prazo do art. 11, § 1º, é regra com prazo certo (20 dias, prorrogável por mais 10 com justificativa expressa, conforme art. 11, § 2º), o que torna a resposta a um item de prova diferente do tratamento do princípio."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Sobre os princípios do art. 37, é CORRETO afirmar: A) a publicidade admite a divulgação de dados pessoais de cidadãos desde que haja interesse público; B) a impessoalidade exige identidade de tratamento e critérios divulgados; C) a eficiência prevalece sobre os demais quando reduz custos; D) a moralidade é cláusula de fechamento que só opera quando a lei é silente.",
+          "resposta": "B. Impessoalidade exige tratamento desvinculado do arbítrio, com critérios definidos previamente e igualmente aplicáveis. A) é errada porque a publicidade não afasta os limites de dados pessoais; C) é errada porque os princípios não se hierarquizam de forma absoluta, e a eficiência não autoriza renúncia a direito; D) é errada porque a moralidade orienta a conduta também dentro da lei, e não só na lacuna legal."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar a diferença entre princípio e regra, enumerará os cinco princípios constitucionais com sua base normativa e descreverá o conteúdo operativo de cada um, com exemplos e contraexemplos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará a diferença entre princípio e regra, enumerará os cinco princípios constitucionais com sua base normativa e descreverá o conteúdo operativo de cada um, com exemplos e contraexemplos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "PRINCÍPIO, NA TÉCNICA LEGISLATIVA, é uma norma de conduta de textura aberta e abstrata que orienta e limita a atuação administrativa e que, por isso, exige concretização em regras operacionais. A distinção técnica entre princípio e regra é útil e muda o gabarito de prova: a REGRA vincula o agente de forma direta e exaustiva (exemplo verificado: o prazo de 20 dias para responder a pedido de acesso, art. 11, § 1º, da Lei nº 12.527/2011); o PRINCÍPIO exige ponderação e concretização — e é justament…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Fundamentação conceitual: natureza dos princípios e conteúdo de cada um",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A eficiência justifica a digitalização integral de um serviço, ainda que prive o cidadão sem conexão do atendimento presencial.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A Lei nº 14.129/2021 (verificada em 2026-10-21) preserva o atendimento presencial: art. 3º, XVI, veda a supressão do atendimento presencial; art. 14 exige prestá-lo por tecnologias de amplo acesso, sem prejuízo do direito do cidadão ao atendimento presencial; e o art. 3º, XI, manda eliminar formalidades cujo custo social exceda o risco, o que inclui a barreira digital imposta a quem não tem conexão. Eficiência é qualidade com racionalidade de recursos, não renúncia a direito."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O sistema de triagem de benefícios ordena as filas por um escore. Qual princípio é imediatamente afetado e por que a resposta não é simples?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Impessoalidade: o escore precisa ser um critério previamente definido, objetivo e igualmente aplicável a casos iguais, auditável e compreensível. Não basta que o sistema seja automático — um modelo estatisticamente apurado pode reproduzir desvios presentes nos dados de treino e, ainda assim, tratar desigualmente pessoas em situação análoga. Também se toca a publicidade: se o critério não é divulgado, o cidadão não pode saber por que está atrás na fila.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um portal de transparência publica a relação de servidores com nome, cargo e remuneração. Isso viola o princípio da publicidade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não. Publicar dados funcionais de servidores é exemplo de transparência funcional e exercício da publicidade institucional, não divulgação irrestrita de dados pessoais de cidadãos. O contraste está no art. 29, § 2º, VII, da Lei nº 14.129/2021, que prevê a divulgação de informações sobre servidores e empregados públicos, incluídos nome e detalhamento dos vínculos profissionais e de remuneração. O que é vedado é a difusão irrestrita de dados pessoais de cidadãos sem base legal, finalidade e proteção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A eficiência justifica a digitalização integral de um serviço, ainda que prive o cidadão sem conexão do atendimento presencial.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A Lei nº 14.129/2021 (verificada em 2026-10-21) preserva o atendimento presencial: art. 3º, XVI, veda a supressão do atendimento presencial; art. 14 exige prestá-lo por tecnologias de amplo acesso, sem prejuízo do direito do cidadão ao atendimento presencial; e o art. 3º, XI, manda eliminar formalidades cujo custo social exceda o risco, o que inclui a barreira digital imposta a quem não tem conexão. Eficiência é qualidade com racionalidade de recursos, não renúncia a direito.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

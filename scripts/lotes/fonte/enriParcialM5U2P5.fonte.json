@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 2,
+    "unidadeTitulo": "5.2 Aprendizado de máquina",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM5U2P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U2P5.js",
+    "idsCompletos": [
+      "m5-u2-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u2-t3-s3",
+      "titulo": "Métricas de regressão e interpretação numérica",
+      "topicoTitulo": "Métricas de avaliação",
+      "topicoId": "modulo-5-unidade-2-topico-3",
+      "unidadeTitulo": "5.2 Aprendizado de máquina",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno calculará MAE e RMSE em exemplo pequeno e explicará por que o RMSE pune erros grandes e o que o R² mede (e o que não mede).",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) métricas de regressão (MAE, MSE, RMSE, R²); (b) interpretação numérica e unidades; (c) comparação entre modelos; (d) limitações. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra cálculo e interpretação de erro em problemas contínuos; confundir métricas leva a escolha errada. PRÉ-REQUISITOS: conceitos de regressão e erro. OBJETIVOS OBSERVÁVEIS: (1) calcular MAE, MSE, RMSE e R²; (2) interpretar em unidades do problema; (3) comparar modelos. COMPETÊNCIAS DESENVOLVIDAS: avaliação de modelo de regressão; leitura de erro. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.2 (classificação); Módulo 8 (estatística). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média. FUNDAMENTAÇÃO CONCEITUAL: MAE (erro médio absoluto) = média de |y-ŷ|, em unidades do alvo; MSE (erro quadrático médio) = média de (y-ŷ)², penaliza grandes erros; RMSE = raiz do MSE, volta às unidades do alvo; R² (coeficiente de determinação) = proporção da variância explicada, de 0 a 1 (pode ser negativo em modelos ruins); interpretação: MAE robusto a outliers, RMSE sensível a outliers, R² não indica erro absoluto; comparação entre modelos deve usar a mesma métrica e o mesmo conjunto de teste. Exemplo numérico: alvos [10,20,30], previsões [12,18,33]; erros [-2,2,-3]; MAE = (2+2+3)/3 = 7/3 ≈ 2,33; MSE = (4+4+9)/3 = 17/3 ≈ 5,67; RMSE ≈ 2,38; R² depende da variância do alvo. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender erro como diferença entre previsto e real.\n- Nível intermediário: calcular MAE, MSE, RMSE e R².\n- Nível avançado: escolher métrica conforme sensibilidade a outliers.\n- Nível especialista: comparar modelos e diagnosticar.\nCOMPARAÇÕES CRÍTICAS:\n- MAE x RMSE: MAE é robusto; RMSE penaliza grandes erros, o que muda a escolha conforme a tolerância.\n- R² x erro absoluto: R² mede variância explicada, não magnitude do erro.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"R² alto garante previsão precisa\" — Motivo: R² não mede erro absoluto — Versão tecnicamente correta: avaliar MAE/RMSE também.\n- Afirmação errada: \"MSE e RMSE são equivalentes em interpretação\" — Motivo: unidades diferem — Versão tecnicamente correta: RMSE nas unidades do alvo.\n- Afirmação errada: \"MAE sempre preferível\" — Motivo: ignora grandes erros — Versão tecnicamente correta: depende do custo do erro.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: MAE, MSE, RMSE, R², outlier, variância.\n- Regras e fórmulas: MAE = (1/n)Σ|y-ŷ|; MSE = (1/n)Σ(y-ŷ)²; RMSE = √MSE; R² = 1 - SS_res/SS_tot.\n- Exceções: R² pode ser negativo em modelos piores que a média.\n- Palavras-chave: MAE, MSE, RMSE, R², erro, outlier, variância.\n- Checklist de domínio: (1) Calculo MAE, MSE, RMSE, R²? (2) Interpreto em unidades? (3) Comparo modelos? (4) Escolho métrica conforme custo?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como se calcula MAE e RMSE? (2) O que o R² mede e o que não mede? (3) Quando MAE é preferível a RMSE? (4) Interprete um RMSE de 2,38 em um problema de tempo em horas. (5) Por que comparar modelos exige mesma métrica e mesmo teste?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Previsões 10, 20, 30 vs. reais 12, 18, 34. MAE?",
+          "resposta": "Erros absolutos: 2, 2, 4 → MAE = 8/3 ≈ 2,67 unidades do alvo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "MAE 1,9 e RMSE 6,4. O que a distância indica e o que fazer?",
+          "resposta": "RMSE bem acima do MAE indica poucos erros muito grandes; investigar casos extremos (outliers, sazonalidade mal capturada) — a média esconde problema concentrado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'R² de 0,9 prova que o modelo é adequado para decisão.'",
+          "correcao": "Errado. R² mede explicação de variância, não exatidão em termos úteis nem equidade por segmento; a adequação depende do tamanho do erro na unidade do alvo e da análise por subgrupo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) RMSE é sempre maior ou igual ao MAE.",
+          "resposta": "Certo. A penalização quadrática dá mais peso a erros grandes; a igualdade só ocorre quando todos os erros têm o mesmo módulo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "R² negativo significa: A) modelo perfeito; B) modelo pior que prever sempre a média; C) dados desbalanceados; D) vazamento.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular MAE e RMSE em exemplo pequeno e explicará por que o RMSE pune erros grandes e o que o R² mede (e o que não mede), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "calculará MAE e RMSE em exemplo pequeno e explicará por que o RMSE pune erros grandes e o que o R² mede (e o que não mede)"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) métricas de regressão (MAE, MSE, RMSE, R²); (b) interpretação numérica e unidades; (c) comparação entre modelos; (d) limitações. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra cálculo e interpretação de erro em problemas contínuos; confundir métricas leva a escolha errada. PRÉ-REQUISITOS: conceitos de regressão e erro. OBJETIVOS OBSERVÁVEIS: (1) calcular MAE, MSE, RMSE e R²; (2) interpretar em unidades do problema; (3) comparar modelos. COMP…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Métricas de regressão e interpretação numérica",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'R² de 0,9 prova que o modelo é adequado para decisão.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. R² mede explicação de variância, não exatidão em termos úteis nem equidade por segmento; a adequação depende do tamanho do erro na unidade do alvo e da análise por subgrupo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Previsões 10, 20, 30 vs. reais 12, 18, 34. MAE?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Erros absolutos: 2, 2, 4 → MAE = 8/3 ≈ 2,67 unidades do alvo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "MAE 1,9 e RMSE 6,4. O que a distância indica e o que fazer?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "RMSE bem acima do MAE indica poucos erros muito grandes; investigar casos extremos (outliers, sazonalidade mal capturada) — a média esconde problema concentrado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'R² de 0,9 prova que o modelo é adequado para decisão.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. R² mede explicação de variância, não exatidão em termos úteis nem equidade por segmento; a adequação depende do tamanho do erro na unidade do alvo e da análise por subgrupo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

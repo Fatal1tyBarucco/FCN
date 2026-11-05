@@ -4300,17 +4300,17 @@ id: "q-m1-09",
       { letra: "D", texto: "A função de data HOJE (TODAY) é uma função textual que concatena datas." },
       { letra: "E", texto: "A função CONCATENAR (CONCAT) concatena duas ou mais cadeias com um delimitador informado." }
     ],
-    gabarito: "E",
-    justificativa: "CONCATENAR (CONCAT) concatena duas ou mais cadeias com delimitador; TEXTOJUNTAR (TEXTJOIN) combina o texto de dois ou mais intervalos com delimitador; ESQUERDA (LEFT) extrai caracteres a partir do início; DIREITA (RIGHT) extrai a partir do final.",
+    gabarito: "A",
+    justificativa: "CONCATENAR (CONCAT) justapõe cadeias e intervalos SEM delimitador; TEXTOJUNTAR (TEXTJOIN) combina texto de intervalos ou cadeias informando um delimitador, com a opção de ignorar células vazias; ESQUERDA (LEFT) extrai caracteres a partir do início; DIREITA (RIGHT) extrai a partir do final; HOJE (TODAY) é função de data, não textual.",
     analise: {
-      A: "INCORRETA. CONCATENAR aceita delimitador.",
-      B: "INCORRETA. TEXTOJUNTAR aceita intervalos como fonte.",
-      C: "INCORRETA. ESQUERDA extrai do início.",
-      D: "INCORRETA. HOJE é função de data, não textual.",
-      E: "CORRETA. CONCATENAR concatena cadeias com delimitador informado."
+      A: "CORRETA. CONCATENAR (CONCAT) justapõe as cadeias informadas (e, no caso de CONCAT, também intervalos) sem nenhum delimitador entre elas.",
+      B: "INCORRETA. TEXTOJUNTAR (TEXTJOIN) aceita intervalos como argumento (ex.: A1:A10), além de cadeias soltas; não se limita a duas strings fixas.",
+      C: "INCORRETA. ESQUERDA (LEFT) extrai caracteres a partir do INÍCIO da cadeia; quem extrai do final é DIREITA (RIGHT).",
+      D: "INCORRETA. HOJE (TODAY) é função de data (retorna a data atual), não função textual e não concatena datas.",
+      E: "INCORRETA. CONCATENAR (CONCAT) NÃO aceita delimitador; quem insere delimitador é TEXTOJUNTAR (TEXTJOIN)."
     },
-    regra: "Funções textuais: CONCATENAR/CONCAT concatena cadeias com delimitador; TEXTOJUNTAR/TEXTJOIN combina texto de intervalos com delimitador; ESQUERDA/LEFT extrai do início; DIREITA/RIGHT extrai do final.",
-    pegadinha: "EXT.TEXTO (MID) extrai substring por posição/comprimento; não confundir com ESQUERDA.",
+    regra: "Funções textuais: CONCATENAR/CONCAT justapõe cadeias e intervalos SEM delimitador; TEXTOJUNTAR/TEXTJOIN combina texto com delimitador (e pode ignorar vazios); ESQUERDA/LEFT extrai do início; DIREITA/RIGHT extrai do final.",
+    pegadinha: "EXT.TEXTO (MID) extrai substring por posição/comprimento; não confundir com ESQUERDA. E atenção: só TEXTJOIN/TEXTOJUNTAR aceita delimitador — CONCATENAR/CONCAT não.",
     fonte: "Documentação oficial da Microsoft — Excel (Funções textuais e de data): https://support.microsoft.com; https://learn.microsoft.com (seção 'Funções')."
   },
 

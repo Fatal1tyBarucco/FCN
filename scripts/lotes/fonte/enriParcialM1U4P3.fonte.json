@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 4,
+    "unidadeTitulo": "1.4 Microsoft PowerPoint",
+    "parte": 3,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U4P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U4P3.js",
+    "idsCompletos": [
+      "modulo-1-unidade-4-topico-1-sub-5",
+      "modulo-1-unidade-4-topico-1-sub-6"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-4-topico-1-sub-5",
+      "titulo": "Erros comuns de organização e legibilidade",
+      "topicoTitulo": "Apresentações, layouts, animações e apresentação",
+      "topicoId": "modulo-1-unidade-4-topico-1",
+      "unidadeTitulo": "1.4 Microsoft PowerPoint",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno identificar e corrigir erros de excesso de texto, poluição visual, contraste e hierarquia.",
+      "conteudo": "Erros comuns de organização: excesso de texto (slides sobrecarregados; usar uma ideia por slide, bullets curtos; dividir conteúdo excessivo); poluição visual (excesso de elementos decorativos, clip arts, cores e gráficos irrelevantes); contraste insuficiente em projetor (projetor projeta em ambiente escuro; texto claro sobre fundo claro; fonte pequena; aumentar tamanho e contraste); hierarquia fraca (todos os slides com mesmo formato; ausência de títulos claros; ausência de subtítulos). Correções: aplicar layout adequado, limpar elementos, reforçar contraste (fundo escuro + texto claro ou vice-versa), usar títulos/subtítulos consistentes. Esses erros degradam a legibilidade e a transmissão do conteúdo. A organização do conteúdo segue princípios de foco: uma mensagem principal por slide, suporte visual com elementos secundários. O diagnóstico desses erros é parte da preparação de apresentação técnica.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar excesso de texto em um slide.",
+          "resposta": "Contar ideias por slide: se houver mais de uma ideia principal ou bullets longos, o slide está sobrecarregado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Corrigir contraste insuficiente em apresentação preparada para projeção.",
+          "resposta": "Aplicar fundo escuro + texto claro (ou contrário), aumentar fonte e conferir contraste (WCAG AA) antes da projeção."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que hierarquia fraca se resolve com formatação direta de negrito.",
+          "correcao": "Incorreto: hierarquia exige uso consistente de estilos/títulos e subtítulos, não apenas negrito."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual ação reduz excesso de texto em um slide? A) Aumentar fonte; B) Dividir o conteúdo em mais slides; C) Centralizar o texto.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O contraste insuficiente em projetor pode ser resolvido com texto claro sobre fundo claro.",
+          "resposta": "Errado. Deve-se usar contraste adequado (fundo escuro + texto claro ou vice-versa)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar e corrigir erros de excesso de texto, poluição visual, contraste e hierarquia, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificar e corrigir erros de excesso de texto, poluição visual, contraste e hierarquia"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Erros comuns de organização: excesso de texto (slides sobrecarregados; usar uma ideia por slide, bullets curtos; dividir conteúdo excessivo); poluição visual (excesso de elementos decorativos, clip arts, cores e gráficos irrelevantes); contraste insuficiente em projetor (projetor projeta em ambiente escuro; texto claro sobre fundo claro; fonte pequena; aumentar tamanho e contraste); hierarquia fraca (todos os slides com mesmo formato; ausência de títulos claros; ausência de subtítulos). Correçõe…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Erros comuns de organização e legibilidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que hierarquia fraca se resolve com formatação direta de negrito.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: hierarquia exige uso consistente de estilos/títulos e subtítulos, não apenas negrito."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar excesso de texto em um slide.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Contar ideias por slide: se houver mais de uma ideia principal ou bullets longos, o slide está sobrecarregado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Corrigir contraste insuficiente em apresentação preparada para projeção.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Aplicar fundo escuro + texto claro (ou contrário), aumentar fonte e conferir contraste (WCAG AA) antes da projeção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que hierarquia fraca se resolve com formatação direta de negrito.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: hierarquia exige uso consistente de estilos/títulos e subtítulos, não apenas negrito.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-4-topico-1-sub-6",
+      "titulo": "Tipografia, alinhamento e composição visual",
+      "topicoTitulo": "Apresentações, layouts, animações e apresentação",
+      "topicoId": "modulo-1-unidade-4-topico-1",
+      "unidadeTitulo": "1.4 Microsoft PowerPoint",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno aplicar tipografia, alinhamento e composição adequados em slides.",
+      "conteudo": "A tipografia define a hierarquia visual: títulos (fonte grande, negrito), subtítulos e corpo (fonte menor). O tamanho mínimo para legibilidade em projeção costuma ser maior que em tela (títulos ~32-40 pontos; corpo ~18-24 pontos). O espaçamento (line spacing, antes/depois) evita sobrecarga. O alinhamento (esquerda, centralizado, justificado) organiza o texto; o justificado excessivo pode gerar linhas muito irregulares. A composição usa espaços em branco, grid e não polui o slide. A legibilidade à distância depende de tamanho, contraste e simplificação. Ajustes no Slide Mestre padronizam esses atributos; a composição deve priorizar clareza sobre ornamentação. A hierarquia tipográfica deve guiar o olhar do público desde o título até a conclusão. O alinhamento consistente entre slides evita dispersão visual. O espaçamento entre elementos e o uso de espaços em branco sustentam a clareza.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar a hierarquia tipográfica em um slide.",
+          "resposta": "Títulos > subtítulos > corpo com tamanhos progressivos (ex.: 36, 26, 18 pontos)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Aplicar espaçamento e alinhamento consistentes em todos os slides.",
+          "resposta": "Ajustar line spacing e alinhamento via aparência de texto e layout do Slide Mestre para uniformidade."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que caixa alta em todo o texto é a melhor prática para hierarquia.",
+          "correcao": "Incorreto: caixa alta não define hierarquia; usar tamanhos e estilos distintos."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual o tamanho mínimo indicado para legibilidade de títulos em projeção? A) 18 pontos; B) 24-32 pontos; C) 8 pontos.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O justificado excessivo de parágrafos em slides não afeta a legibilidade.",
+          "resposta": "Errado. O justificado excessivo pode gerar linhas irregulares e prejudicar a leitura."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar tipografia, alinhamento e composição adequados em slides, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicar tipografia, alinhamento e composição adequados em slides"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A tipografia define a hierarquia visual: títulos (fonte grande, negrito), subtítulos e corpo (fonte menor). O tamanho mínimo para legibilidade em projeção costuma ser maior que em tela (títulos ~32-40 pontos; corpo ~18-24 pontos). O espaçamento (line spacing, antes/depois) evita sobrecarga. O alinhamento (esquerda, centralizado, justificado) organiza o texto; o justificado excessivo pode gerar linhas muito irregulares. A composição usa espaços em branco, grid e não polui o slide. A legibilidade …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Tipografia, alinhamento e composição visual",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que caixa alta em todo o texto é a melhor prática para hierarquia.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: caixa alta não define hierarquia; usar tamanhos e estilos distintos."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar a hierarquia tipográfica em um slide.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Títulos > subtítulos > corpo com tamanhos progressivos (ex.: 36, 26, 18 pontos).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Aplicar espaçamento e alinhamento consistentes em todos os slides.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ajustar line spacing e alinhamento via aparência de texto e layout do Slide Mestre para uniformidade.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que caixa alta em todo o texto é a melhor prática para hierarquia.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: caixa alta não define hierarquia; usar tamanhos e estilos distintos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

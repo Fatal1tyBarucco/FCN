@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 5,
+    "unidadeTitulo": "2.5 Diagnóstico de redes",
+    "parte": 4,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U5P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U5P4.js",
+    "idsCompletos": [
+      "m2-u5-t3-s1",
+      "m2-u5-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u5-t3-s1",
+      "titulo": "nslookup: consulta DNS",
+      "topicoTitulo": "nslookup e dig",
+      "topicoId": "modulo-2-unidade-5-topico-3",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno usará nslookup para consultar registros DNS e interpretará a saída.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a finalidade do nslookup; (b) sua sintaxe; (c) a interpretação da saída; (d) limitações frente ao dig. POR QUE O CONHECIMENTO É IMPORTANTE: consultar o DNS manualmente confirma ou descarta falhas de resolução; a prova cobra a sintaxe e a leitura. PRÉ-REQUISITOS: DNS; registros. OBJETIVOS OBSERVÁVEIS: (1) consultar um nome; (2) consultar um tipo de registro; (3) indicar um servidor; (4) interpretar a saída. COMPETÊNCIAS DESENVOLVIDAS: verificação de resolução DNS. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (DNS); unidade 5.3 (dig); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o nslookup consulta servidores DNS e exibe o resultado. A sintaxe básica é \"nslookup <nome>\", que busca registros A/AAAA por padrão; pode-se pedir um tipo específico com \"nslookup -type=MX exemplo.com\" (útil para verificar servidores de correio) e indicar o servidor DNS a consultar com \"nslookup exemplo.com 8.8.8.8\". A saída típica mostra o resolvedor utilizado (Server), o nome consultado (Name) e os endereços retornados (Address). A interpretação é direta: se o nome resolve, a resolução funciona para aquele resolvedor; se falha com \"NXDOMAIN\" (domínio inexistente), o nome não existe ou há erro de digitação; se retorna \"SERVFAIL\", o servidor encontrou um problema (por exemplo, falha de DNSSEC ou de delegação). Limitações: a saída é menos detalhada que a do dig (não mostra TTL nem flags com clareza), o comportamento varia entre sistemas e, em alguns, o comando é considerado legado em favor de dig/host. Ainda assim, é útil para testes rápidos. Um bom uso no diagnóstico é comparar o resultado com o de outro resolvedor: se um resolve e o outro não, o problema pode estar no cache ou no resolvedor configurado. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: consultar um nome simples.\n- Nível intermediário: consultar um tipo específico e indicar o servidor.\n- Nível avançado: interpretar NXDOMAIN e SERVFAIL.\n- Nível especialista: comparar resolvedores para isolar a causa.\nCOMPARAÇÕES CRÍTICAS:\n- nslookup x dig: o dig é mais detalhado (TTL, flags, seções); o nslookup é mais simples.\n- A x MX: o A resolve para IP; o MX aponta servidores de correio.\n- NXDOMAIN x SERVFAIL: o primeiro é \"não existe\"; o segundo é \"falha ao resolver\".\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"nslookup mostra o TTL com destaque.\" — Motivo: isso é característico do dig — Versão tecnicamente correta: o nslookup é menos detalhado.\n- Afirmação errada: \"Se um resolvedor falha, o domínio não existe.\" — Motivo: pode ser cache/delegação — Versão tecnicamente correta: testar outro resolvedor.\n- Afirmação errada: \"nslookup consulta apenas registros A.\" — Motivo: aceita tipos — Versão tecnicamente correta: pode consultar MX, NS, TXT etc.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: nslookup, -type, servidor DNS, A/AAAA, MX, NXDOMAIN, SERVFAIL, Server/Name/Address.\n- Regras e fórmulas: nslookup <nome> [tipo] [@servidor].\n- Exceções: comportamento varia entre sistemas; pode estar legado.\n- Palavras-chave: consulta, resolução, tipo de registro, resposta.\n- Checklist de domínio: (1) Consulto um nome? (2) Consulto um tipo? (3) Indico o servidor? (4) Interpreto a saída?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Para que serve o nslookup? (2) Como pedir um registro MX? (3) Como indicar o servidor? (4) O que é NXDOMAIN? (5) O que o dig oferece a mais?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "nslookup www.exemplo.com retorna 'Address: 93.184.216.34'. O que isso indica?",
+          "resposta": "O nome foi resolvido para o IP 93.184.216.34 pelo resolvedor padrão. DNS ok."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Consultar o registro MX de um domínio com nslookup.",
+          "resposta": "nslookup -type=MX exemplo.com — retorna os servidores de e-mail e prioridades."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'nslookup sempre usa o DNS configurado no sistema.'",
+          "correcao": "Errado. É possível especificar outro servidor: nslookup nome 8.8.8.8. Útil para isolar problemas de resolvedor."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) nslookup pode consultar tipos específicos de registro (MX, NS, TXT).",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual comando especifica o servidor DNS a consultar? A) nslookup nome; B) nslookup nome servidor; C) ping nome; D) dig nome.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de usar nslookup para consultar registros DNS e interpretará a saída, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "usará nslookup para consultar registros DNS e interpretará a saída"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "nslookup consulta servidores DNS. Sintaxe: nslookup <nome> (consulta A/AAAA padrão) ou nslookup -type=MX exemplo.com. Pode especificar servidor: nslookup exemplo.com 8.8.8.8. Saída: Server (resolvedor usado), Name, Address(es). Limitações: saída menos detalhada que dig; comportamento varia entre sistemas; em alguns sistemas está deprecated em favor de dig/host. Útil para testes rápidos. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a nslookup: consulta DNS",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'nslookup sempre usa o DNS configurado no sistema.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. É possível especificar outro servidor: nslookup nome 8.8.8.8. Útil para isolar problemas de resolvedor."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "nslookup www.exemplo.com retorna 'Address: 93.184.216.34'. O que isso indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O nome foi resolvido para o IP 93.184.216.34 pelo resolvedor padrão. DNS ok.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Consultar o registro MX de um domínio com nslookup.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "nslookup -type=MX exemplo.com — retorna os servidores de e-mail e prioridades.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'nslookup sempre usa o DNS configurado no sistema.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. É possível especificar outro servidor: nslookup nome 8.8.8.8. Útil para isolar problemas de resolvedor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u5-t3-s2",
+      "titulo": "dig: consulta DNS avançada",
+      "topicoTitulo": "nslookup e dig",
+      "topicoId": "modulo-2-unidade-5-topico-3",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno usará dig para consultas DNS detalhadas e interpretará a saída (status, flags, TTL, seção answer).",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a finalidade do dig; (b) a sintaxe e as opções; (c) a interpretação das seções; (d) usos avançados. POR QUE O CONHECIMENTO É IMPORTANTE: o dig é a ferramenta de referência para depurar DNS; a prova cobra a leitura do status, das flags e do TTL. PRÉ-REQUISITOS: DNS; registros. OBJETIVOS OBSERVÁVEIS: (1) consultar com dig; (2) interpretar status e flags; (3) usar +short e +trace; (4) usar consulta reversa. COMPETÊNCIAS DESENVOLVIDAS: depuração de DNS; leitura de resposta detalhada. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (DNS); unidade 5.3 (nslookup); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o dig (Domain Information Groper) é uma ferramenta avançada de consulta DNS, disponível no Linux e no macOS (e no Windows com o pacote BIND). A sintaxe é \"dig <nome> [tipo] [@servidor]\". A saída é organizada em seções: o cabeçalho traz o status (NOERROR quando houve resposta, NXDOMAIN quando o nome não existe, SERVFAIL quando há falha na resolução), as flags (por exemplo, autoridade e recursão) e o tempo de consulta; a seção QUESTION repete a pergunta; a ANSWER apresenta os registros com seus TTL; seguem as seções AUTHORITY e ADDITIONAL. Opções úteis: \"+short\" mostra apenas a resposta, \"+trace\" rastreia a resolução desde a raiz (útil para verificar delegação), e \"-x\" faz a consulta reversa (de IP para nome, usando registros PTR). O dig é mais detalhado que o nslookup e permite verificar o TTL dos registros e o suporte a DNSSEC (com \"+dnssec\"). No diagnóstico, ele responde a perguntas como: \"o registro existe?\", \"qual o TTL e, portanto, quanto tempo o cache mantém a resposta?\", \"a delegação a partir da raiz está correta?\". Interpretar corretamente o status e as seções é a habilidade central. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: obter a resposta de um nome.\n- Nível intermediário: ler status, seção ANSWER e TTL.\n- Nível avançado: usar +trace e -x e interpretar a delegação.\n- Nível especialista: usar o dig para investigar falhas de DNSSEC e cache.\nCOMPARAÇÕES CRÍTICAS:\n- dig x nslookup: o dig mostra status, flags e TTL com clareza.\n- +short x resposta completa: o primeiro resume; o segundo traz todas as seções.\n- consulta direta x reversa (-x): a primeira vai de nome a IP; a segunda, de IP a nome.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"NXDOMAIN é um erro de servidor.\" — Motivo: significa que o nome não existe — Versão tecnicamente correta: NXDOMAIN é resposta válida de \"não existe\".\n- Afirmação errada: \"O dig não mostra o TTL.\" — Motivo: mostra — Versão tecnicamente correta: o TTL aparece na seção ANSWER.\n- Afirmação errada: \"+trace usa só o cache local.\" — Motivo: ele percorre a hierarquia desde a raiz — Versão tecnicamente correta: rastreia a delegação.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: dig, status (NOERROR/NXDOMAIN/SERVFAIL), flags, seções, TTL, +short, +trace, -x, PTR, DNSSEC.\n- Regras e fórmulas: dig <nome> [tipo] [@servidor]; +short resume; -x faz reversa.\n- Exceções: o dig pode não estar instalado por padrão no Windows.\n- Palavras-chave: depuração, delegação, cache, reversa, assinatura.\n- Checklist de domínio: (1) Consulto com dig? (2) Interpreto status/flags? (3) Uso +short e +trace? (4) Uso reversa?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o dig mostra a mais que o nslookup? (2) O que significa NXDOMAIN? (3) O que +short faz? (4) E +trace? (5) O que -x consulta?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "dig www.exemplo.com retorna status NOERROR e seção ANSWER com A 93.184.216.34 TTL 3600. O que indica?",
+          "resposta": "Resolução bem-sucedida; IP 93.184.216.34; registro em cache por até 3600 s."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "dig exemplo.com MX +short retorna dois servidores. Como interpretar?",
+          "resposta": "Lista de servidores de e-mail com prioridade (menor número = maior prioridade). Verificar se apontam para IPs válidos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'dig +trace consulta apenas o resolvedor local.'",
+          "correcao": "Errado. +trace faz resolução iterativa desde os servidores raiz, ignorando o cache do resolvedor local — útil para diagnosticar delegação."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) dig +short exibe apenas a resposta, sem metadados.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual status DNS indica 'nome não existe'? A) NOERROR; B) NXDOMAIN; C) SERVFAIL; D) REFUSED.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de usar dig para consultas DNS detalhadas e interpretará a saída (status, flags, TTL, seção answer), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "usará dig para consultas DNS detalhadas e interpretará a saída (status, flags, TTL, seção answer)"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "dig (Domain Information Groper) é ferramenta avançada de consulta DNS (Linux/macOS; disponível no Windows via BIND). Sintaxe: dig <nome> [tipo] [@servidor]. Saída: cabeçalho (status: NOERROR/NXDOMAIN/SERVFAIL, flags, QUERY TIME), seção QUESTION, ANSWER (registros com TTL), AUTHORITY, ADDITIONAL. Opções: +short (só resposta), +trace (rastreia resolução desde a raiz), -x (reverso). Mais detalhado que nslookup. Útil para depurar DNS, verificar TTL, DNSSEC. Os laboratórios desta apostila são simulaç…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a dig: consulta DNS avançada",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'dig +trace consulta apenas o resolvedor local.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. +trace faz resolução iterativa desde os servidores raiz, ignorando o cache do resolvedor local — útil para diagnosticar delegação."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "dig www.exemplo.com retorna status NOERROR e seção ANSWER com A 93.184.216.34 TTL 3600. O que indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Resolução bem-sucedida; IP 93.184.216.34; registro em cache por até 3600 s.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "dig exemplo.com MX +short retorna dois servidores. Como interpretar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Lista de servidores de e-mail com prioridade (menor número = maior prioridade). Verificar se apontam para IPs válidos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'dig +trace consulta apenas o resolvedor local.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. +trace faz resolução iterativa desde os servidores raiz, ignorando o cache do resolvedor local — útil para diagnosticar delegação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

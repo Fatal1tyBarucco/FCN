@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 1,
+    "unidadeTitulo": "4.1 Fundamentos de segurança",
+    "parte": 6,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U1P6",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U1P6.js",
+    "idsCompletos": [
+      "m4-u1-t4-s2",
+      "m4-u1-t4-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u1-t4-s2",
+      "titulo": "Estratégia 3-2-1, cópias imutáveis e testes de restauração",
+      "topicoTitulo": "Backup, continuidade, RPO e RTO",
+      "topicoId": "modulo-4-unidade-1-topico-4",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno aplicará a regra 3-2-1 a um cenário de órgão público e justificará cópias imutáveis e testes de restauração como defesa contra ransomware.",
+      "conteudo": "Regra 3-2-1: manter 3 cópias dos dados (a original + 2 backups), em 2 meios distintos (por exemplo, disco de rede e fita/nuvem), com pelo menos 1 cópia fora do local ou em ambiente separado (outro site, nuvem com política de retenção, ou imune à mesma falha). Objetivo: sobreviver a falha simultânea de mídia, incêndio, roubo e cifragem por ransomware. Cópia imutável é aquela que não pode ser alterada ou excluída por um período definido — nem pelo administrador comum nem por um atacante que roube credenciais; na prática, significa controle de objetos só-leitura com retenção (WORM) e credenciais de escrita separadas. Sem imutabilidade, o ransomware criptografa ou apaga os backups junto com o sistema. Teste de restauração: só há backup comprovado quando a restauração foi executada, mediida e conferida (arquivos abrem, checksums batem, aplicativo inicia); o teste deve ser periódico e registrado, com responsável e resultado. Três elementos juntos formam a defesa real: redundância (3), diversidade de meio (2) e isolamento/imutabilidade (1).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um órgão mantém a pasta de arquivos e seu backup no mesmo servidor de arquivos. Quantas cópias efetivas existem na regra 3-2-1?",
+          "resposta": "Uma cópia física: se o servidor falhar ou for cifrado, arquivos e backup vão juntos. Faltam diversidade de meio e cópia isolada — a política 3-2-1 não é atendida."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Proponha uma configuração 3-2-1 com imutabilidade para uma secretaria com dados pessoais.",
+          "resposta": "1) Arquivos originais no servidor de arquivos. 2) Backup diário no storage de rede com retenção de 90 dias em objetos só-leitura (WORM) e credenciais de escrita exclusivas do serviço de backup. 3) Backup semanal criptografado para serviço de nuvem com política de versionamento e restauração por conta separada. Teste de restauração amostral mensal, registrado com data e resultado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Backup na nuvem já garante 3-2-1, porque a nuvem fica fora do local.'",
+          "correcao": "Errado. A nuvem atende apenas à cópia isolada; se a única cópia na nuvem for sincronizada e mutável, um ransomware com credenciais válidas pode destruí-la. Ainda faltam 3 cópias e 2 meios distintos, além de imutabilidade e teste."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Backup imutável impede que um atacante com credenciais de leitura apague as cópias.",
+          "resposta": "Certo. Imutabilidade/retenção impede exclusão e alteração durante o período definido; por isso credenciais de escrita devem ser separadas e protegidas."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quantas cópias, meios distintos e cópias isoladas a regra 3-2-1 exige, respectivamente? A) 2-2-1; B) 3-2-1; C) 3-3-3; D) 1-1-3.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar a regra 3-2-1 a um cenário de órgão público e justificará cópias imutáveis e testes de restauração como defesa contra ransomware, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará a regra 3-2-1 a um cenário de órgão público e justificará cópias imutáveis e testes de restauração como defesa contra ransomware"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Regra 3-2-1: manter 3 cópias dos dados (a original + 2 backups), em 2 meios distintos (por exemplo, disco de rede e fita/nuvem), com pelo menos 1 cópia fora do local ou em ambiente separado (outro site, nuvem com política de retenção, ou imune à mesma falha). Objetivo: sobreviver a falha simultânea de mídia, incêndio, roubo e cifragem por ransomware. Cópia imutável é aquela que não pode ser alterada ou excluída por um período definido — nem pelo administrador comum nem por um atacante que roube …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Estratégia 3-2-1, cópias imutáveis e testes de restauração",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Backup na nuvem já garante 3-2-1, porque a nuvem fica fora do local.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A nuvem atende apenas à cópia isolada; se a única cópia na nuvem for sincronizada e mutável, um ransomware com credenciais válidas pode destruí-la. Ainda faltam 3 cópias e 2 meios distintos, além de imutabilidade e teste."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um órgão mantém a pasta de arquivos e seu backup no mesmo servidor de arquivos. Quantas cópias efetivas existem na regra 3-2-1?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Uma cópia física: se o servidor falhar ou for cifrado, arquivos e backup vão juntos. Faltam diversidade de meio e cópia isolada — a política 3-2-1 não é atendida.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Proponha uma configuração 3-2-1 com imutabilidade para uma secretaria com dados pessoais.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) Arquivos originais no servidor de arquivos. 2) Backup diário no storage de rede com retenção de 90 dias em objetos só-leitura (WORM) e credenciais de escrita exclusivas do serviço de backup. 3) Backup semanal criptografado para serviço de nuvem com política de versionamento e restauração por conta separada. Teste de restauração amostral mensal, registrado com data e resultado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Backup na nuvem já garante 3-2-1, porque a nuvem fica fora do local.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A nuvem atende apenas à cópia isolada; se a única cópia na nuvem for sincronizada e mutável, um ransomware com credenciais válidas pode destruí-la. Ainda faltam 3 cópias e 2 meios distintos, além de imutabilidade e teste.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u1-t4-s3",
+      "titulo": "Continuidade de negócios, recuperação de desastres, RPO e RTO",
+      "topicoTitulo": "Backup, continuidade, RPO e RTO",
+      "topicoId": "modulo-4-unidade-1-topico-4",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará continuidade de negócios de recuperação de desastres, calculará a frequência de backup exigida por um RPO e traduzirá um RTO em requisito de infraestrutura.",
+      "conteudo": "Continuidade de negócios (BC) trata de manter as atividades críticas em operação durante e após uma interrupção — processos, pessoas, comunicação, alternativas manuais. Recuperação de desastres (DR) trata de restaurar a infraestrutura e os sistemas depois da falha. Análise de impacto no negócio (BIA) identifica as atividades críticas e quantifica o dano por tempo de parada, e dela derivam dois indicadores: RPO (Recovery Point Objective) = maior perda de dados aceitável, medida em TEMPO → define a frequência máxima de backup (RPO de 4 horas exige ponto de restauração a cada 4 horas, no pior caso); RTO (Recovery Time Objective) = maior tempo de indisponibilidade aceitável → define a infraestrutura de retomada (se RTO é 30 minutos, não dá para instalar do zero: é preciso ambiente quente ou alternativa já pronta). Pegadinha clássica: RPO mede dados, RTO mede tempo de parada; trocá-los na prova é erro garantido. Ambos custam dinheiro: quanto menores, maior a redundância e a frequência exigidas. Metas devem ser documentadas, aprovadas e validadas por teste — meta sem teste é intenção, não capacidade.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O órgão declara RPO de 6 horas. Qual a consequência direta para a rotina de backup?",
+          "resposta": "Os backups devem ocorrer, no mínimo, a cada 6 horas — ou haver replicação contínua equivalente —, de modo que, em um desastre, no máximo 6 horas de registros sejam perdidas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Sistema de triagem de urgência com RTO de 20 minutos e RPO de 1 hora. Desenhe a solução.",
+          "resposta": "RPO 1 h → replicação de dados no máximo a cada hora (ideal contínua) para local alternativo. RTO 20 min → ambiente secundário pré-configurado (quente/frio controlado) com teste documentado de comutação dentro de 20 minutos, monitoramento 24×7 e procedimento escrito com responsáveis — sem os quais a meta é inatingível."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'RTO de 2 horas significa que podemos perder até 2 horas de dados.'",
+          "correcao": "Errado. RTO é tempo aceitável de indisponibilidade (retomada); a perda de dados aceitável é o RPO. Os dois conceitos são independentes e podem ter valores diferentes no mesmo serviço."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Reduzir o RPO de 24 h para 1 h exige aumentar a frequência de cópias ou adotar replicação mais frequente.",
+          "resposta": "Certo. RPO define a janela máxima de perda; menor janela exige mais cópias por unidade de tempo (ou replicação contínua)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Meta de sistema indisponível no máximo 30 minutos corresponde a: A) RPO; B) RTO; C) BIA; D) SLA de backup.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar continuidade de negócios de recuperação de desastres, calculará a frequência de backup exigida por um RPO e traduzirá um RTO em requisito de infraestrutura, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará continuidade de negócios de recuperação de desastres, calculará a frequência de backup exigida por um RPO e traduzirá um RTO em requisito de infraestrutura"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Continuidade de negócios (BC) trata de manter as atividades críticas em operação durante e após uma interrupção — processos, pessoas, comunicação, alternativas manuais. Recuperação de desastres (DR) trata de restaurar a infraestrutura e os sistemas depois da falha. Análise de impacto no negócio (BIA) identifica as atividades críticas e quantifica o dano por tempo de parada, e dela derivam dois indicadores: RPO (Recovery Point Objective) = maior perda de dados aceitável, medida em TEMPO → define …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Continuidade de negócios, recuperação de desastres, RPO e RTO",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'RTO de 2 horas significa que podemos perder até 2 horas de dados.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. RTO é tempo aceitável de indisponibilidade (retomada); a perda de dados aceitável é o RPO. Os dois conceitos são independentes e podem ter valores diferentes no mesmo serviço."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O órgão declara RPO de 6 horas. Qual a consequência direta para a rotina de backup?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Os backups devem ocorrer, no mínimo, a cada 6 horas — ou haver replicação contínua equivalente —, de modo que, em um desastre, no máximo 6 horas de registros sejam perdidas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Sistema de triagem de urgência com RTO de 20 minutos e RPO de 1 hora. Desenhe a solução.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "RPO 1 h → replicação de dados no máximo a cada hora (ideal contínua) para local alternativo. RTO 20 min → ambiente secundário pré-configurado (quente/frio controlado) com teste documentado de comutação dentro de 20 minutos, monitoramento 24×7 e procedimento escrito com responsáveis — sem os quais a meta é inatingível.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'RTO de 2 horas significa que podemos perder até 2 horas de dados.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. RTO é tempo aceitável de indisponibilidade (retomada); a perda de dados aceitável é o RPO. Os dois conceitos são independentes e podem ter valores diferentes no mesmo serviço.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

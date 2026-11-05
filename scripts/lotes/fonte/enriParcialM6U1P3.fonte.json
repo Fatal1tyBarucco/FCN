@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 1,
+    "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+    "parte": 3,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U1P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U1P3.js",
+    "idsCompletos": [
+      "m6-u1-t3-s1",
+      "m6-u1-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u1-t3-s1",
+      "titulo": "Exemplos resolvidos da unidade (três casos completos)",
+      "topicoTitulo": "Exemplos resolvidos, comparações críticas, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-1-topico-3",
+      "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno aplicará o template de nove itens de um exemplo resolvido — problema, dados, conceitos aplicáveis, estratégia, passo a passo, resultado, justificativa técnica, erros frequentes e variação para transferência — a três casos concretos de ética em TI.",
+      "conteudo": "Os três exemplos a seguir seguem o template de nove itens exigido para unidades do projeto (Escrita.txt, Seção 5.4). São hipóteses didáticas construídas para ensino, sem correspondência com caso real de órgão, empresa ou pessoa determinada.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "EXEMPLO 1 (INTRODUÇÃO) — Um portal municipal oferece serviço de agendamento de consulta pela internet, mas o atendimento presencial foi desligado em todo o município. Classifique o problema e proponha a solução.",
+          "resposta": "Problema: supressão do atendimento presencial em serviço público digitalizado. Dados disponíveis: a plataforma funciona com autenticação e protocolo; o município não atende presencialmente há seis meses; não há dispensa nem legislação municipal autorizando a medida; a presença de internet de boa qualidade é limitada em bairros periféricos. Conceitos aplicáveis: princípio da eficiência (art. 3º, XI e XVI, da Lei nº 14.129/2021) e art. 14 da mesma lei (prestação digital por tecnologias de amplo acesso, inclusive de baixa renda e de áreas rurais e isoladas, sem prejuízo do atendimento presencial); art. 6º (exceções ao processo eletrônico, entre elas a inviabilidade do meio eletrônico para o usuário). Estratégia: comparar a medida com o texto legal (não com a prática pretérita do órgão), identificar o direito afetado (acesso ao serviço sem barreira digital), e propor solução que preserve a dualidade de canais. Passo a passo: (1) verificar se existe ato normativo local que discipline a matéria — não existe; (2) mapear a exceção legal: o art. 14 e o art. 3º, XVI mantêm o atendimento presencial como regra; (3) medir a barreira: quais localidades sem conexão efetiva; (4) propor agendamento presencial com quota mínima e atendimento preferencial, mantendo o canal digital; (5) registrar a decisão com base legal e métrica de acompanhamento (tempo médio e satisfação, art. 22). Resultado: manutenção do canal digital com reativação do presencial, sem prejuízo dos ganhos de eficiência. Justificativa técnica: eficiência, no sentido do art. 3º, XI, XII e XVI, é otimização do processo com eliminação de custos e formalidades desnecessárias, não supressão de canal; o princípio da publicidade (art. 3º, da Lei nº 12.527/2011) exige que a oferta real do serviço seja retratada de forma verdadeira nos sites oficiais. Erros frequentes: (a) chamar a medida de «modernização» e encerrar o assunto; (b) ignorar o art. 14 e o art. 3º, XVI; (c) propor solução apenas digital (ex.: e-mail ou aplicativo) para quem não tem acesso à internet; (d) tratar a exceção do art. 6º como se autorizasse a supressão. Variação para transferência: se o município for de pequeno porte e o art. 8º, § 4º, da Lei nº 12.527/2011 dispensar parte da divulgação na internet, a dispensa é apenas sobre a divulgação de determinadas informações na internet — ela não autoriza a supressão do atendimento presencial nem do direito de pedir informação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "EXEMPLO 2 (APLICAÇÃO) — Um órgão estadual quer usar um modelo de priorização para ordenar pedidos de análise de benefício. O órgão pretende priorizar «casos de maior risco social», sem definir o critério, e quer publicar apenas o resultado. Elabore a análise de conformidade e a providência.",
+          "resposta": "Problema: desenho de decisão automatizada sobre direito do cidadão sem critério definido, publicado ou auditável. Dados disponíveis: o órgão tem competência para priorizar filas (ato normativo interno); existe base com histórico de atendimento; o texto do modelo propõe «risco social» como variável; o Portal ainda não publica critérios; não há registro de auditoria das decisões; o contrato de fornecedor não prevê logs de inferência. Conceitos aplicáveis: legalidade (competência e base do critério); impessoalidade (critério objetivo, igual para casos iguais, auditável); publicidade (o critério integra a informação pública sobre a atividade do órgão — art. 3º, V, e art. 7º, V, da Lei nº 12.527/2011; art. 29, § 1º, III, da Lei nº 14.129/2021, exige descrição suficiente da estrutura e da semântica dos dados); moralidade (uso de dado sensível, quando o «risco social» se ancora em variáveis de saúde ou situação socioeconômica, exige base legal específica na LGPD e, em qualquer caso, transparência e finalidade — LGPD verificada em 2026-10-20 quanto aos arts. 1º a 5º e 46). Estratégia: não produzir parecer de homologação; produzir parecer de não conformidade com plano de correção, porque o silêncio sobre o critério é incompatível com impessoalidade auditável e com publicidade. Passo a passo: (1) mapear a base legal da competência; (2) exigir definição escrita do «risco social», com variáveis, pesos e vigência; (3) exigir logs de inferência versionados no contrato (dado, versão do modelo, escore, resultado, data); (4) exigir avaliação de impacto por subgrupo antes da operação real (Módulo 5) e definir o critério de avaliação amostral; (5) publicar o critério em linguagem clara (art. 3º, VII, da Lei nº 14.129/2021) e prover canal de revisão e contestação; (6) registrar o conjunto como risco priorizado no sistema de gestão de riscos (art. 48). Resultado: plano de correção com prazo, responsável e evidência; recomendação de operação apenas em modo de apoio à decisão (sugestão de ordenação) até que a trilha e a publicação existam. Justificativa técnica: a impessoalidade só é demonstrável se o critério puder ser reconstituído e explicado caso a caso; sem logs de inferência, nem o órgão nem o cidadão podem verificar a igualdade de tratamento, e o controle interno proporcional ao risco (art. 48) fica comprometido. Erros frequentes: (a) confundir «risco social» com variável legitimamente disponível e dispensar a análise de dados sensíveis; (b) aceitar o modelo porque «usa aprendizado de máquina»; (c) publicar o resultado da fila e não o critério; (d) achar que o canal de revisão é dispensável porque o modelo «acerta 92%». Variação para transferência: se o órgão pretender usar o mesmo modelo para sugerir indeferimento — e não apenas ordenação —, a exigência se agrava: a decisão passa a ser ato administrativo individual, com motivação, comunicação ao cidadão e possibilidade de revisão (art. 7º, § 3º, da Lei nº 12.527/2011, assegura o acesso aos documentos usados como fundamento do ato decisório)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Um órgão recebeu um pedido de acesso que requisita a relação completa dos titulares de benefício assistencial — incluindo CPF, endereço e diagnóstico — para subsidiar estudo sobre focalização de políticas. O órgão responde com negativa integral, alegando que o pedido «contém dados pessoais». Avalie a resposta.",
+          "correcao": "Problema: resposta genérica a pedido de acesso, que pode ser simultaneamente protetora e inválida. Dados disponíveis: pedido apresentado com identificação do requerente e especificação da base pedida (art. 10 da Lei nº 12.527/2011); a base contém dados pessoais e possivelmente dados sensíveis de saúde (LGPD, art. 5º, II — verificado em 2026-10-20); o art. 31, § 3º, II, da Lei nº 12.527/2011 admite a realização de estatísticas e pesquisas científicas de evidente interesse público ou geral, previsto em lei, sendo vedada a identificação da pessoa; o art. 36 da Lei nº 14.129/2021 admite disponibilizar em transparência ativa dados de pessoas físicas e jurídicas para pesquisa acadêmica e monitoramento e avaliação de políticas públicas, desde que anonimizados antes da disponibilização os dados protegidos por sigilo ou com restrição de acesso. Conceitos aplicáveis: publicidade como preceito geral (art. 3º, I, da Lei nº 12.527/2011); proteção de informação pessoal (art. 31 da mesma lei); anonimização (art. 4º, III, da LGPD); acesso parcial (art. 7º, § 2º, da Lei nº 12.527/2011 — «assegurado o acesso à parte não sigilosa por meio de certidão, extrato ou cópia com ocultação da parte sob sigilo»); dever de fundamentar a negativa (art. 11, § 1º, II, e art. 14 — inteiro teor da decisão de negativa). Estratégia: responder com fundamentação, e não com recusa binária: analisar o pedido por camada (dado pessoal identificável, dado anonimizado, dado agregável), aplicar o critério menos restritivo possível e entregar o que puder ser entregue, motivando exatamente o que não puder. Passo a passo: (1) verificar se o pedido de abertura de base se enquadra no art. 30 da Lei nº 14.129/2021 — os prazos e vedação de motivos do art. 10 da LAI são aplicáveis por remissão (art. 30, § 2º); (2) verificar se há base legal de tratamento dos dados para a finalidade de pesquisa (LGPD — aqui o texto legal específico permanece pendente de verificação e é referido de forma genérica); (3) produzir versão anonimizada/agregada, com vedação de identificação (art. 31, § 3º, II, da LAI; art. 36 da Lei nº 14.129/2021); (4) responder com a versão entregável e com a motivação específica da parte retida, indicando a autoridade, os dispositivos e o caminho recursal (art. 11, § 4º, e art. 15); (5) registrar a decisão e a anonimização aplicada (variáveis suprimidas, método, data), permitindo reprocessamento posterior. Resultado: entrega parcial em formato anonimizado com negativa parcial fundamentada, em vez de negativa integral genérica. Justificativa técnica: a negativa genérica descumpre o dever de fundamentação e o princípio do menor restritivo; a anonimização, quando efetiva e irreversível, retira o dado pessoal do regime de identificação e permite a finalidade de pesquisa e controle social, que é a razão de ser da transparência ativa. Erros frequentes: (a) negar tudo por «contém dados pessoais», sem analisar camada por camada; (b) entregar a base com CPF e diagnóstico, o que é divulgação irrestrita de dados pessoais e sensíveis; (c) citar a LGPD como se autorizasse a abertura, quando o fundamento é a hipótese legal de pesquisa com vedação de identificação e a anonimização prévia; (d) deixar de informar o teor integral da negativa (art. 14). Variação para transferência: se o requerente for o próprio titular dos dados e busca o acesso aos próprios registros, o regime muda: incide o direito de acesso do titular (art. 18 da LGPD — verificado em 2026-10-20) e a resposta deve ser individualizada, com correção e anonimização quando cabíveis, e não a entrega da base agregada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Responder «negado» a pedido de acesso que mistura dados anonimizáveis e dados identificáveis, sem entregar a parte entregue, é resposta conforme o art. 11 da Lei nº 12.527/2011.",
+          "resposta": "Errado. A negativa precisa ser fundamentada por dispositivo (art. 11, § 1º, II), o requerente tem direito ao inteiro teor da decisão de negativa (art. 14) e o art. 7º, § 2º, assegura o acesso à parte não sigilosa. Negativa genérica e binária não é conforme."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Em um sistema que decide a ordenação de filas, a evidência mínima para demonstrar conformidade com a impessoalidade inclui: A) versão e vigência da regra; B) registros de inferência com data e parâmetros; C) relatório de erro por subgrupo; D) número de seguidores do perfil institucional no Twitter.",
+          "resposta": "A, B e C. A evidência de impessoalidade é a reconstituibilidade do tratamento; D é métrica de comunicação, não de impessoalidade."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar o template de nove itens de um exemplo resolvido — problema, dados, conceitos aplicáveis, estratégia, passo a passo, resultado, justificativa técnica, erros frequentes e variação para transferência — a três casos concretos de ética em TI, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará o template de nove itens de um exemplo resolvido — problema, dados, conceitos aplicáveis, estratégia, passo a passo, resultado, justificativa técnica, erros frequentes e variação para transferência — a três casos concretos de ética em TI"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Os três exemplos a seguir seguem o template de nove itens exigido para unidades do projeto (Escrita.txt, Seção 5.4). São hipóteses didáticas construídas para ensino, sem correspondência com caso real de órgão, empresa ou pessoa determinada.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exemplos resolvidos da unidade (três casos completos)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — Um órgão recebeu um pedido de acesso que requisita a relação completa dos titulares de benefício assistencial — incluindo CPF, endereço e diagnóstico — para subsidiar estudo sobre focalização de políticas. O órgão responde com negativa integral, alegando que o pedido «contém dados pessoais». Avalie a resposta.",
+            "porqueErrada": "",
+            "versaoCorreta": "Problema: resposta genérica a pedido de acesso, que pode ser simultaneamente protetora e inválida. Dados disponíveis: pedido apresentado com identificação do requerente e especificação da base pedida (art. 10 da Lei nº 12.527/2011); a base contém dados pessoais e possivelmente dados sensíveis de saúde (LGPD, art. 5º, II — verificado em 2026-10-20); o art. 31, § 3º, II, da Lei nº 12.527/2011 admite a realização de estatísticas e pesquisas científicas de evidente interesse público ou geral, previsto em lei, sendo vedada a identificação da pessoa; o art. 36 da Lei nº 14.129/2021 admite disponibilizar em transparência ativa dados de pessoas físicas e jurídicas para pesquisa acadêmica e monitoramento e avaliação de políticas públicas, desde que anonimizados antes da disponibilização os dados protegidos por sigilo ou com restrição de acesso. Conceitos aplicáveis: publicidade como preceito geral (art. 3º, I, da Lei nº 12.527/2011); proteção de informação pessoal (art. 31 da mesma lei); anonimização (art. 4º, III, da LGPD); acesso parcial (art. 7º, § 2º, da Lei nº 12.527/2011 — «assegurado o acesso à parte não sigilosa por meio de certidão, extrato ou cópia com ocultação da parte sob sigilo»); dever de fundamentar a negativa (art. 11, § 1º, II, e art. 14 — inteiro teor da decisão de negativa). Estratégia: responder com fundamentação, e não com recusa binária: analisar o pedido por camada (dado pessoal identificável, dado anonimizado, dado agregável), aplicar o critério menos restritivo possível e entregar o que puder ser entregue, motivando exatamente o que não puder. Passo a passo: (1) verificar se o pedido de abertura de base se enquadra no art. 30 da Lei nº 14.129/2021 — os prazos e vedação de motivos do art. 10 da LAI são aplicáveis por remissão (art. 30, § 2º); (2) verificar se há base legal de tratamento dos dados para a finalidade de pesquisa (LGPD — aqui o texto legal específico permanece pendente de verificação e é referido de forma genérica); (3) produzir versão anonimizada/agregada, com vedação de identificação (art. 31, § 3º, II, da LAI; art. 36 da Lei nº 14.129/2021); (4) responder com a versão entregável e com a motivação específica da parte retida, indicando a autoridade, os dispositivos e o caminho recursal (art. 11, § 4º, e art. 15); (5) registrar a decisão e a anonimização aplicada (variáveis suprimidas, método, data), permitindo reprocessamento posterior. Resultado: entrega parcial em formato anonimizado com negativa parcial fundamentada, em vez de negativa integral genérica. Justificativa técnica: a negativa genérica descumpre o dever de fundamentação e o princípio do menor restritivo; a anonimização, quando efetiva e irreversível, retira o dado pessoal do regime de identificação e permite a finalidade de pesquisa e controle social, que é a razão de ser da transparência ativa. Erros frequentes: (a) negar tudo por «contém dados pessoais», sem analisar camada por camada; (b) entregar a base com CPF e diagnóstico, o que é divulgação irrestrita de dados pessoais e sensíveis; (c) citar a LGPD como se autorizasse a abertura, quando o fundamento é a hipótese legal de pesquisa com vedação de identificação e a anonimização prévia; (d) deixar de informar o teor integral da negativa (art. 14). Variação para transferência: se o requerente for o próprio titular dos dados e busca o acesso aos próprios registros, o regime muda: incide o direito de acesso do titular (art. 18 da LGPD — verificado em 2026-10-20) e a resposta deve ser individualizada, com correção e anonimização quando cabíveis, e não a entrega da base agregada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um portal municipal oferece serviço de agendamento de consulta pela internet, mas o atendimento presencial foi desligado em todo o município. Classifique o problema e proponha a solução.",
+            "dados": "A plataforma funciona com autenticação e protocolo; o município não atende presencialmente há seis meses; não há dispensa nem legislação municipal autorizando a medida; a presença de internet de boa qualidade é limitada em bairros periféricos.",
+            "conceitos": [
+              "Princípio da eficiência (art. 3º, XI e XVI, da Lei nº 14.129/2021) e art. 14 da mesma lei (prestação digital por tecnologias de amplo acesso, inclusive de baixa renda e de áreas rurais e isoladas, sem prejuízo do atendimento presencial)",
+              "Art. 6º (exceções ao processo eletrônico, entre elas a inviabilidade do meio eletrônico para o usuário)"
+            ],
+            "estrategia": "Comparar a medida com o texto legal (não com a prática pretérita do órgão), identificar o direito afetado (acesso ao serviço sem barreira digital), e propor solução que preserve a dualidade de canais.",
+            "execucao": [
+              "1) Verificar se existe ato normativo local que discipline a matéria — não existe",
+              "2) Mapear a exceção legal: o art. 14 e o art. 3º, XVI mantêm o atendimento presencial como regra",
+              "3) Medir a barreira: quais localidades sem conexão efetiva",
+              "4) Propor agendamento presencial com quota mínima e atendimento preferencial, mantendo o canal digital",
+              "5) Registrar a decisão com base legal e métrica de acompanhamento (tempo médio e satisfação, art. 22)."
+            ],
+            "resultado": "Manutenção do canal digital com reativação do presencial, sem prejuízo dos ganhos de eficiência.",
+            "justificativa": "Eficiência, no sentido do art. 3º, XI, XII e XVI, é otimização do processo com eliminação de custos e formalidades desnecessárias, não supressão de canal; o princípio da publicidade (art. 3º, da Lei nº 12.527/2011) exige que a oferta real do serviço seja retratada de forma verdadeira nos sites oficiais.",
+            "errosFrequentes": [
+              "a) Chamar a medida de «modernização» e encerrar o assunto",
+              "b) Ignorar o art. 14 e o art. 3º, XVI",
+              "c) Propor solução apenas digital (ex.: e-mail ou aplicativo) para quem não tem acesso à internet",
+              "d) Tratar a exceção do art. 6º como se autorizasse a supressão."
+            ],
+            "variacao": "Se o município for de pequeno porte e o art. 8º, § 4º, da Lei nº 12.527/2011 dispensar parte da divulgação na internet, a dispensa é apenas sobre a divulgação de determinadas informações na internet — ela não autoriza a supressão do atendimento presencial nem do direito de pedir informação."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um órgão estadual quer usar um modelo de priorização para ordenar pedidos de análise de benefício. O órgão pretende priorizar «casos de maior risco social», sem definir o critério, e quer publicar apenas o resultado. Elabore a análise de conformidade e a providência.",
+            "dados": "O órgão tem competência para priorizar filas (ato normativo interno); existe base com histórico de atendimento; o texto do modelo propõe «risco social» como variável; o Portal ainda não publica critérios; não há registro de auditoria das decisões; o contrato de fornecedor não prevê logs de inferência.",
+            "conceitos": [
+              "Legalidade (competência e base do critério)",
+              "Impessoalidade (critério objetivo, igual para casos iguais, auditável)",
+              "Publicidade (o critério integra a informação pública sobre a atividade do órgão — art. 3º, V, e art. 7º, V, da Lei nº 12.527/2011",
+              "Art. 29, § 1º, III, da Lei nº 14.129/2021, exige descrição suficiente da estrutura e da semântica dos dados)",
+              "Moralidade (uso de dado sensível, quando o «risco social» se ancora em variáveis de saúde ou situação socioeconômica, exige base legal específica na LGPD e, em qualquer caso, transparência e finalidade — LGPD verificada em 2026-10-20 quanto aos arts. 1º a 5º e 46)"
+            ],
+            "estrategia": "Não produzir parecer de homologação; produzir parecer de não conformidade com plano de correção, porque o silêncio sobre o critério é incompatível com impessoalidade auditável e com publicidade.",
+            "execucao": [
+              "1) Mapear a base legal da competência",
+              "2) Exigir definição escrita do «risco social», com variáveis, pesos e vigência",
+              "3) Exigir logs de inferência versionados no contrato (dado, versão do modelo, escore, resultado, data)",
+              "4) Exigir avaliação de impacto por subgrupo antes da operação real (Módulo 5) e definir o critério de avaliação amostral",
+              "5) Publicar o critério em linguagem clara (art. 3º, VII, da Lei nº 14.129/2021) e prover canal de revisão e contestação",
+              "6) Registrar o conjunto como risco priorizado no sistema de gestão de riscos (art. 48)."
+            ],
+            "resultado": "Plano de correção com prazo, responsável e evidência; recomendação de operação apenas em modo de apoio à decisão (sugestão de ordenação) até que a trilha e a publicação existam.",
+            "justificativa": "A impessoalidade só é demonstrável se o critério puder ser reconstituído e explicado caso a caso; sem logs de inferência, nem o órgão nem o cidadão podem verificar a igualdade de tratamento, e o controle interno proporcional ao risco (art. 48) fica comprometido.",
+            "errosFrequentes": [
+              "a) Confundir «risco social» com variável legitimamente disponível e dispensar a análise de dados sensíveis",
+              "b) Aceitar o modelo porque «usa aprendizado de máquina»",
+              "c) Publicar o resultado da fila e não o critério",
+              "d) Achar que o canal de revisão é dispensável porque o modelo «acerta 92%»."
+            ],
+            "variacao": "Se o órgão pretender usar o mesmo modelo para sugerir indeferimento — e não apenas ordenação —, a exigência se agrava: a decisão passa a ser ato administrativo individual, com motivação, comunicação ao cidadão e possibilidade de revisão (art. 7º, § 3º, da Lei nº 12.527/2011, assegura o acesso aos documentos usados como fundamento do ato decisório)."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um órgão recebeu um pedido de acesso que requisita a relação completa dos titulares de benefício assistencial — incluindo CPF, endereço e diagnóstico — para subsidiar estudo sobre focalização de políticas. O órgão responde com negativa integral, alegando que o pedido «contém dados pessoais». Avalie a resposta.",
+            "dados": "Pedido apresentado com identificação do requerente e especificação da base pedida (art. 10 da Lei nº 12.527/2011); a base contém dados pessoais e possivelmente dados sensíveis de saúde (LGPD, art. 5º, II — verificado em 2026-10-20); o art. 31, § 3º, II, da Lei nº 12.527/2011 admite a realização de estatísticas e pesquisas científicas de evidente interesse público ou geral, previsto em lei, sendo vedada a identificação da pessoa; o art. 36 da Lei nº 14.129/2021 admite disponibilizar em transparência ativa dados de pessoas físicas e jurídicas para pesquisa acadêmica e monitoramento e avaliação de políticas públicas, desde que anonimizados antes da disponibilização os dados protegidos por sigilo ou com restrição de acesso.",
+            "conceitos": [
+              "Publicidade como preceito geral (art. 3º, I, da Lei nº 12.527/2011)",
+              "Proteção de informação pessoal (art. 31 da mesma lei)",
+              "Anonimização (art. 4º, III, da LGPD)",
+              "Acesso parcial (art. 7º, § 2º, da Lei nº 12.527/2011 — «assegurado o acesso à parte não sigilosa por meio de certidão, extrato ou cópia com ocultação da parte sob sigilo»)",
+              "Dever de fundamentar a negativa (art. 11, § 1º, II, e art. 14 — inteiro teor da decisão de negativa)"
+            ],
+            "estrategia": "Responder com fundamentação, e não com recusa binária: analisar o pedido por camada (dado pessoal identificável, dado anonimizado, dado agregável), aplicar o critério menos restritivo possível e entregar o que puder ser entregue, motivando exatamente o que não puder.",
+            "execucao": [
+              "1) Verificar se o pedido de abertura de base se enquadra no art. 30 da Lei nº 14.129/2021 — os prazos e vedação de motivos do art. 10 da LAI são aplicáveis por remissão (art. 30, § 2º)",
+              "2) Verificar se há base legal de tratamento dos dados para a finalidade de pesquisa (LGPD — aqui o texto legal específico permanece pendente de verificação e é referido de forma genérica)",
+              "3) Produzir versão anonimizada/agregada, com vedação de identificação (art. 31, § 3º, II, da LAI; art. 36 da Lei nº 14.129/2021)",
+              "4) Responder com a versão entregável e com a motivação específica da parte retida, indicando a autoridade, os dispositivos e o caminho recursal (art. 11, § 4º, e art. 15)",
+              "5) Registrar a decisão e a anonimização aplicada (variáveis suprimidas, método, data), permitindo reprocessamento posterior."
+            ],
+            "resultado": "Entrega parcial em formato anonimizado com negativa parcial fundamentada, em vez de negativa integral genérica.",
+            "justificativa": "A negativa genérica descumpre o dever de fundamentação e o princípio do menor restritivo; a anonimização, quando efetiva e irreversível, retira o dado pessoal do regime de identificação e permite a finalidade de pesquisa e controle social, que é a razão de ser da transparência ativa.",
+            "errosFrequentes": [
+              "a) Negar tudo por «contém dados pessoais», sem analisar camada por camada",
+              "b) Entregar a base com CPF e diagnóstico, o que é divulgação irrestrita de dados pessoais e sensíveis",
+              "c) Citar a LGPD como se autorizasse a abertura, quando o fundamento é a hipótese legal de pesquisa com vedação de identificação e a anonimização prévia",
+              "d) Deixar de informar o teor integral da negativa (art. 14)."
+            ],
+            "variacao": "Se o requerente for o próprio titular dos dados e busca o acesso aos próprios registros, o regime muda: incide o direito de acesso do titular (art. 18 da LGPD — verificado em 2026-10-20) e a resposta deve ser individualizada, com correção e anonimização quando cabíveis, e não a entrega da base agregada."
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u1-t3-s2",
+      "titulo": "Comparações e distinções críticas da unidade",
+      "topicoTitulo": "Exemplos resolvidos, comparações críticas, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-6-unidade-1-topico-3",
+      "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno distinguirá conceitos próximos que costumam ser trocados em prova — legalidade e legalidade social, eficiência e economicidade, impessoalidade e imparcialidade, publicidade e transparência ativa — e explicará por que cada distinção altera o gabarito.",
+      "conteudo": "COMPARAÇÃO 1 — PUBLICIDADE (princípio constitucional) x TRANSPARÊNCIA ATIVA (instrumento legal) x TRANSPARÊNCIA PASSIVA (procedimento de solicitação). Definição: publicidade é o preceito constitucional de divulgação do que é público (art. 37 da CF; art. 3º, I, da Lei nº 12.527/2011 — verificados); transparência ativa é a disponibilização de dados independentemente de solicitações (art. 4º, XI, e art. 29 da Lei nº 14.129/2021 — verificados); transparência passiva é o procedimento de pedido individual do requerente (arts. 10 a 16 da Lei nº 12.527/2011). Finalidade: a publicidade é o dever; a ativa é o mecanismo de ofício; a passiva é o mecanismo por demanda. Funcionamento: a ativa nasce de dever contínuo; a passiva nasce de ato do interessado. Consequência que muda o gabarito: a transparência ativa é OBRIGATÓRIA mesmo sem pedido (art. 8º da LAI: «é dever dos órgãos e entidades públicos promover, independentemente de requerimentos, a divulgação...»); a passiva decorre de pedido. Situação de uso: dados agregados e de interesse coletivo → ativa; documento específico de interesse particular → passiva. COMPARAÇÃO 2 — EFICIÊNCIA x ECONOMICIDADE. Definição: eficiência é qualidade do serviço com uso racional de recursos (não há, no art. 37, texto que a defina; a Lei nº 14.129/2021 a operacionaliza em termos de qualidade do atendimento e do painel de monitoramento, art. 22); economicidade é o critério de custo mínimo na contratação pública. Diferença que muda o gabarito: a eficiência é princípio de FIM (qualidade e resultado para o cidadão); a economicidade é critério de MEIO (relação custo-benefício na contratação); não são sinônimos, e uma contratação economicamente vantajosa que produza serviço inacessível ou lento não realiza eficiência. COMPARAÇÃO 3 — IMPESSOALIDADE x PARCIALIDADE (imparcialidade) x UNIFORMIDADE. Definição: impessoalidade é vedação do arbítrio e do interesse pessoal (art. 37); imparcialidade é não tomar partido em controvérsia ou disputa; uniformidade é tratar todos exatamente igual. Diferença que muda o gabarito: a impessoalidade exige IGUALDADE DE CRITÉRIO, não igualdade de resultado; e a lei pode exigir tratamento diferenciado (o que seria «imparcialidade», não impessoalidade, se retirar servidor da decisão). COMPARAÇÃO 4 — LEGALIDADE x MORALIDADE x LEGALIDADE SOCIAL. Definição: legalidade é conformidade com a lei; moralidade é retidão e boa-fé; legalidade social é a constitucionalização de valores e diretivas constitucionais, valores e diretivas constitucionais (o que, no Brasil, não é técnica de recepção da CF, embora o termo seja usado em outros ordenamentos — não confundir com o direito positivo brasileiro). Diferença que muda o gabarito: no Brasil, o fundamento dos princípios do art. 37 é o TEXTO CONSTITUCIONAL, e não uma técnica de ponderação de valores estranha ao ordenamento; questão que troque «legalidade social» por «legalidade» está errada. COMPARAÇÃO 5 — DECISÃO AUTOMATIZADA x DECISÃO ASSISTIDA x DECISÃO MANUAL. Definição: automatizada é a decisão tomada por sistema com base em regra ou modelo e sem intervenção humana no caso; assistida é a decisão humana que incorpora sugestão de sistema; manual é a decisão humana sem automação. Diferença que muda o gabarito: a decisão automatizada concentra as exigências de legalidade, impessoalidade, rastreabilidade e revisão; a assistida transfere o peso para a motivação e a checagem humana. COMPARAÇÃO 6 — DADO ABERTO x DADO ACESSÍVEL AO PÚBLICO x DADO PESSOAL x INFORMAÇÃO PESSOAL. Definições (art. 4º, IV e V, da Lei nº 14.129/2021 e art. 4º, IV, da Lei nº 12.527/2011 — verificados): dado aberto é estruturado, legível por máquina, em formato aberto, referenciado na internet e sob licença aberta; dado acessível ao público é dado não protegido por sigilo ou restrição; dado pessoal é o que se refere a pessoa natural identificada ou identificável (LGPD, art. 5º, I); informação pessoal é a que se relaciona a pessoa natural identificada ou identificável (LAI, art. 4º, IV). Diferença que muda o gabarito: dado PESSOAL pode ser dado aberto quando anonimizado e sem restrição; dado aberto não é sinônimo de «livre de dados pessoais».",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O portal do órgão divulga semanalmente o número de requerimentos, o tempo médio de análise e o índice de satisfação. Isso é transparência ativa, passiva ou publicidade?",
+          "resposta": "Transparência ativa (e, por isso, publicidade em sentido constitucional): a disponibilização ocorre independentemente de solicitação, o que é precisamente a definição do art. 4º, XI, da Lei nº 14.129/2021 e o dever do art. 8º da Lei nº 12.527/2011. O mesmo conteúdo, se publicado apenas em resposta a pedido de cidadão, seria transparência passiva."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um pregão foi declarado economicamente vantajoso, mas o serviço entregue tem índice de satisfação baixo e filas longas. O princípio da eficiência foi realizado?",
+          "resposta": "Não. A economicidade do contrato é só o meio; a eficiência é o fim (qualidade do serviço com uso racional de recursos). O painel de monitoramento do art. 22 da Lei nº 14.129/2021 existe precisamente para medir essa diferença: solicitações em andamento e concluídas, tempo médio de atendimento e grau de satisfação. Um contrato barato que entrega serviço ruim pode ser economicamente vantajoso e socialmente ineficiente."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A transparência passiva é a modalidade mais intensa de transparência, pois entrega o documento integral ao requerente.'",
+          "correcao": "Errado. A intensidade da entrega depende do regime jurídico da informação (pública, sigilosa, pessoal), não do canal. A transparência passiva é o direito de pedir; a ativa é o dever de divulgar. Um documento sigiloso não é entregue nem em transparência ativa nem passiva (arts. 23 e 24 da Lei nº 12.527/2011 — verificados); e dado pessoal não é entregue irrestritamente em nenhum dos dois regimes."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Transparência ativa e passiva são complementares: a primeira é dever de ofício, a segunda é direito de pedido, e o descumprimento de uma não sana o outro.",
+          "resposta": "Certo. São mecanismos distintos (art. 8º e arts. 10 e 11 da Lei nº 12.527/2011; art. 4º, XI, da Lei nº 14.129/2021) e independentes entre si: a existência de portal de transparência não elimina o direito de pedir; a existência de atendimento de pedidos não supre a divulgação de ofício."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Dizer que um conjunto de dados é «aberto» NÃO significa necessariamente: A) que esteja em formato legível por máquina; B) que possa ser reutilizado livremente; C) que não contenha dado pessoal; D) que esteja referenciado na internet.",
+          "resposta": "C. Dados abertos podem conter dados pessoais desde que anonimizados ou em PUBLICIDADE legal com base; o que a abertura exige é formato, licença e referência, não a ausência de pessoas."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir conceitos próximos que costumam ser trocados em prova — legalidade e legalidade social, eficiência e economicidade, impessoalidade e imparcialidade, publicidade e transparência ativa — e explicará por que cada distinção altera o gabarito, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá conceitos próximos que costumam ser trocados em prova — legalidade e legalidade social, eficiência e economicidade, impessoalidade e imparcialidade, publicidade e transparência ativa — e explicará por que cada distinção altera o gabarito"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "COMPARAÇÃO 1 — PUBLICIDADE (princípio constitucional) x TRANSPARÊNCIA ATIVA (instrumento legal) x TRANSPARÊNCIA PASSIVA (procedimento de solicitação). Definição: publicidade é o preceito constitucional de divulgação do que é público (art. 37 da CF; art. 3º, I, da Lei nº 12.527/2011 — verificados); transparência ativa é a disponibilização de dados independentemente de solicitações (art. 4º, XI, e art. 29 da Lei nº 14.129/2021 — verificados); transparência passiva é o procedimento de pedido indivi…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comparações e distinções críticas da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A transparência passiva é a modalidade mais intensa de transparência, pois entrega o documento integral ao requerente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A intensidade da entrega depende do regime jurídico da informação (pública, sigilosa, pessoal), não do canal. A transparência passiva é o direito de pedir; a ativa é o dever de divulgar. Um documento sigiloso não é entregue nem em transparência ativa nem passiva (arts. 23 e 24 da Lei nº 12.527/2011 — verificados); e dado pessoal não é entregue irrestritamente em nenhum dos dois regimes."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O portal do órgão divulga semanalmente o número de requerimentos, o tempo médio de análise e o índice de satisfação. Isso é transparência ativa, passiva ou publicidade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Transparência ativa (e, por isso, publicidade em sentido constitucional): a disponibilização ocorre independentemente de solicitação, o que é precisamente a definição do art. 4º, XI, da Lei nº 14.129/2021 e o dever do art. 8º da Lei nº 12.527/2011. O mesmo conteúdo, se publicado apenas em resposta a pedido de cidadão, seria transparência passiva.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um pregão foi declarado economicamente vantajoso, mas o serviço entregue tem índice de satisfação baixo e filas longas. O princípio da eficiência foi realizado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não. A economicidade do contrato é só o meio; a eficiência é o fim (qualidade do serviço com uso racional de recursos). O painel de monitoramento do art. 22 da Lei nº 14.129/2021 existe precisamente para medir essa diferença: solicitações em andamento e concluídas, tempo médio de atendimento e grau de satisfação. Um contrato barato que entrega serviço ruim pode ser economicamente vantajoso e socialmente ineficiente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A transparência passiva é a modalidade mais intensa de transparência, pois entrega o documento integral ao requerente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A intensidade da entrega depende do regime jurídico da informação (pública, sigilosa, pessoal), não do canal. A transparência passiva é o direito de pedir; a ativa é o dever de divulgar. Um documento sigiloso não é entregue nem em transparência ativa nem passiva (arts. 23 e 24 da Lei nº 12.527/2011 — verificados); e dado pessoal não é entregue irrestritamente em nenhum dos dois regimes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

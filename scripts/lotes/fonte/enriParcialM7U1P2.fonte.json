@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 1,
+    "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+    "parte": 2,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U1P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U1P2.js",
+    "idsCompletos": [
+      "m7-u1-t2-s1",
+      "m7-u1-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u1-t2-s1",
+      "titulo": "Dados estruturados, semiestruturados e não estruturados",
+      "topicoTitulo": "Tipos e níveis de mensuração de dados",
+      "topicoId": "modulo-7-unidade-1-topico-2",
+      "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno classificará conjuntos de dados nos três formatos e justificará a classificação pelo grau de estrutura.",
+      "conteudo": "ESTRUTURADOS: organizados em schema rígido — linhas e colunas com tipo, regra e domínio definidos de antemão (planilhas, tabelas de banco relacional). Permitem validação automática, consulta SQL e integração por chave. SEMIESTRUTURADOS: não há schema fixo imposto de fora, mas há marcadores internos que descrevem a estrutura — JSON, XML, CSV com cabeçalho livre, arquivos de log, páginas HTML. O marcador permite parsing e extração por ferramenta, ainda que campos apareçam ou faltem conforme o registro. NÃO ESTRUTURADOS: sem formato computável de campos — texto livre, PDF digitalizado, imagens, áudio, vídeo, e-mails (o corpo é texto livre; cabeçalhos, porém, são estruturados). Duas observações importantes: primeiro, o mesmo fato pode existir nos três formatos (um endereço em coluna de tabela, dentro de um JSON ou escrito em texto livre); segundo, a classificação trata da FORMA, não do valor — dado não estruturado não é 'dado pior', exige apenas técnicas distintas de extração (neste curso, sem prometer reconhecimento automático que não foi verificado).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classifique: tabela de servidores com colunas; arquivo JSON de sensores; gravação em vídeo de uma audiência.",
+          "resposta": "Tabela de servidores: estruturado (schema rígido). JSON de sensores: semiestruturado (pares chave-valor, mas a presença de campos pode variar por registro). Vídeo: não estruturado (sem campos; exigiria transcrição ou extração para virar dado computável)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma secretaria recebe 500 formulários em PDF digitalizado e, em paralelo, o extrato das mesmas solicitações em tabela. Qual caminho exige menos transformação para apuração mensal?",
+          "resposta": "A tabela: é estruturado, permite soma e filtro imediatos. O PDF digitalizado é não estruturado e precisa de captura (digitação, leitura assistida ou extração) antes de qualquer apuração — etapa que introduz erro e demanda conferência. A decisão correta é registrar a etapa de conversão como risco de qualidade, não ignorá-la."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Arquivos JSON e XML são dados estruturados, pois sempre têm formato fixo.'",
+          "correcao": "Errado. São semiestruturados: os marcadores descrevem cada registro, mas não existe um schema único imposto sobre todos — campos podem faltar, mudar de nome ou de ordem. O estruturado exige schema fixo e validação de domínio (como tabela de banco relacional)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um arquivo de log de servidor é considerado semiestruturado porque contém marcadores que permitem sua leitura programática.",
+          "resposta": "Certo. O log tem padrão reconhecível (data, nível, mensagem), mas não é tabela com schema rígido — por isso é semiestruturado."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual conjunto é NÃO estruturado? A) tabela de funcionários; B) planilha de orçamento com colunas fixas; C) gravação de áudio de reunião; D) arquivo JSON com registros de sensores.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar conjuntos de dados nos três formatos e justificará a classificação pelo grau de estrutura, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará conjuntos de dados nos três formatos e justificará a classificação pelo grau de estrutura"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ESTRUTURADOS: organizados em schema rígido — linhas e colunas com tipo, regra e domínio definidos de antemão (planilhas, tabelas de banco relacional). Permitem validação automática, consulta SQL e integração por chave. SEMIESTRUTURADOS: não há schema fixo imposto de fora, mas há marcadores internos que descrevem a estrutura — JSON, XML, CSV com cabeçalho livre, arquivos de log, páginas HTML. O marcador permite parsing e extração por ferramenta, ainda que campos apareçam ou faltem conforme o regi…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Dados estruturados, semiestruturados e não estruturados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Arquivos JSON e XML são dados estruturados, pois sempre têm formato fixo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. São semiestruturados: os marcadores descrevem cada registro, mas não existe um schema único imposto sobre todos — campos podem faltar, mudar de nome ou de ordem. O estruturado exige schema fixo e validação de domínio (como tabela de banco relacional)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classifique: tabela de servidores com colunas; arquivo JSON de sensores; gravação em vídeo de uma audiência.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Tabela de servidores: estruturado (schema rígido). JSON de sensores: semiestruturado (pares chave-valor, mas a presença de campos pode variar por registro). Vídeo: não estruturado (sem campos; exigiria transcrição ou extração para virar dado computável).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma secretaria recebe 500 formulários em PDF digitalizado e, em paralelo, o extrato das mesmas solicitações em tabela. Qual caminho exige menos transformação para apuração mensal?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A tabela: é estruturado, permite soma e filtro imediatos. O PDF digitalizado é não estruturado e precisa de captura (digitação, leitura assistida ou extração) antes de qualquer apuração — etapa que introduz erro e demanda conferência. A decisão correta é registrar a etapa de conversão como risco de qualidade, não ignorá-la.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Arquivos JSON e XML são dados estruturados, pois sempre têm formato fixo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. São semiestruturados: os marcadores descrevem cada registro, mas não existe um schema único imposto sobre todos — campos podem faltar, mudar de nome ou de ordem. O estruturado exige schema fixo e validação de domínio (como tabela de banco relacional).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u1-t2-s2",
+      "titulo": "Dados qualitativos e quantitativos",
+      "topicoTitulo": "Tipos e níveis de mensuração de dados",
+      "topicoId": "modulo-7-unidade-1-topico-2",
+      "unidadeTitulo": "7.1 Fundamentos Conceituais de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno diferenciará dados qualitativos de quantitativos e detectará a armadilha da codificação numérica.",
+      "conteudo": "QUALITATIVOS (categóricos): descrevem atributos, qualidades ou categorias — cor da via, tipo de serviço prestado, satisfação relatada, bairro. Podem ser descritivos ou numéricos apenas por código. QUANTITATIVOS: valores numéricos sobre os quais aritmética é válida — quantificações e medidas. Subdivisão essencial: DISCRETO (contagem; valores separados; entre dois valores sempre há um impossível: número de atendimentos, de servidores, de reclamações — só existem valores inteiros) e CONTÍNUO (medição em intervalo; qualquer valor intermediário é possível em princípio: tempo de espera, temperatura, salário, peso — a resolução depende do instrumento). REGRA QUE DECIDE QUESTÃO DE PROVA: número escrito não significa dado quantitativo. Matrícula 20260012, CEP e telefone são códigos qualitativos (nominais): a média de matrículas não significa nada, e ordenar e subtrair CEP não produz distância geográfica. O critério é a validade da operação aritmética, não a presença de dígitos.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classifique: número de reclamações por mês; tempo médio de espera; bairro do reclamante; satisfação (ruim/regular/bom).",
+          "resposta": "Reclamações por mês: quantitativo discreto (contagem). Tempo médio de espera: quantitativo contínuo (medição de duração). Bairro: qualitativo nominal. Satisfação em três graus: qualitativo ordinal (há ordem, mas as distâncias não são medíveis)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "A equipe calculou a média das matrículas dos alunos admitidos e obteve 20260431. O que isso informa?",
+          "resposta": "Nada. Matrícula é identificador (qualitativo nominal codificado): média é uma operação aritmética sem sentido para códigos. O valor 20260431 não corresponde a nenhuma matrícula real e não deve ser usado em relatório. Informações úteis seriam contagem de admitidos, data de admissão (quantitativa) e curso (categórica)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o número de atendimentos está registrado como texto na planilha, ele é um dado qualitativo.'",
+          "correcao": "Errado. A classificação depende do SIGNIFICADO, não do tipo de armazenamento. '3 atendimentos' é contagem: quantitativo discreto, mesmo que digitado como texto. Tratar corretamente exige converter o tipo (limpeza de dados), não reclassificar o dado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O número de servidores em uma lotação é um dado quantitativo discreto.",
+          "resposta": "Certo. É contagem: só existem valores inteiros e valores intermediários não ocorrem."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual é quantitativo CONTÍNUO? A) cor do crachá; B) número de dependentes; C) tempo de trânsito; D) escolaridade em graus concluídos.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar dados qualitativos de quantitativos e detectará a armadilha da codificação numérica, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará dados qualitativos de quantitativos e detectará a armadilha da codificação numérica"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "QUALITATIVOS (categóricos): descrevem atributos, qualidades ou categorias — cor da via, tipo de serviço prestado, satisfação relatada, bairro. Podem ser descritivos ou numéricos apenas por código. QUANTITATIVOS: valores numéricos sobre os quais aritmética é válida — quantificações e medidas. Subdivisão essencial: DISCRETO (contagem; valores separados; entre dois valores sempre há um impossível: número de atendimentos, de servidores, de reclamações — só existem valores inteiros) e CONTÍNUO (mediç…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Dados qualitativos e quantitativos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o número de atendimentos está registrado como texto na planilha, ele é um dado qualitativo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A classificação depende do SIGNIFICADO, não do tipo de armazenamento. '3 atendimentos' é contagem: quantitativo discreto, mesmo que digitado como texto. Tratar corretamente exige converter o tipo (limpeza de dados), não reclassificar o dado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classifique: número de reclamações por mês; tempo médio de espera; bairro do reclamante; satisfação (ruim/regular/bom).",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Reclamações por mês: quantitativo discreto (contagem). Tempo médio de espera: quantitativo contínuo (medição de duração). Bairro: qualitativo nominal. Satisfação em três graus: qualitativo ordinal (há ordem, mas as distâncias não são medíveis).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "A equipe calculou a média das matrículas dos alunos admitidos e obteve 20260431. O que isso informa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Nada. Matrícula é identificador (qualitativo nominal codificado): média é uma operação aritmética sem sentido para códigos. O valor 20260431 não corresponde a nenhuma matrícula real e não deve ser usado em relatório. Informações úteis seriam contagem de admitidos, data de admissão (quantitativa) e curso (categórica).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o número de atendimentos está registrado como texto na planilha, ele é um dado qualitativo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A classificação depende do SIGNIFICADO, não do tipo de armazenamento. '3 atendimentos' é contagem: quantitativo discreto, mesmo que digitado como texto. Tratar corretamente exige converter o tipo (limpeza de dados), não reclassificar o dado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 7,
+    "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+    "unidade": 2,
+    "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+    "parte": 1,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM7U2P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM7U2P1.js",
+    "idsCompletos": [
+      "m7-u2-t1-s1",
+      "m7-u2-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m7-u2-t1-s1",
+      "titulo": "Acurácia, completude e validade",
+      "topicoTitulo": "Dimensões da qualidade de dados",
+      "topicoId": "modulo-7-unidade-2-topico-1",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno diferenciará acurácia, completude e validade e calculará métricas simples de qualidade.",
+      "conteudo": "ACURÁCIA: o valor registrado corresponde à realidade que ele representa — o nome do processo existe mesmo, o CPF pertence à pessoa dita, o valor do pagamento bate com o comprovante. Mede-se contra uma REFERÊNCIA EXTERNA (cadastro oficial, conferência manual, leitura física), o que a torna a dimensão mais cara de verificar. COMPLETUDE: os campos necessários estão preenchidos — mede-se pela fração de registros (ou de campo obrigatório) sem valor ausente. ATENÇÃO: completude é relativa à regra: telefone pode ser opcional e CPF obrigatório; contar nulos sem saber a regra não é medir qualidade. VALIDADE: o valor obedece ao formato, ao domínio e às regras definidas — data dentro do intervalo permitido, UF com dois dígitos válidos, valor não negativo, código presente na tabela de referência. A TRINCA COBRA GABARITO: valor válido (formato correto) pode ser falso (não acurado) e estar completo; validade se confere pela REGRA, acurácia pela REALIDADE e completude pela PRESENÇA. Métricas típicas: percentual de registros conformes por dimensão, calculado sobre a população relevante e documentando a regra usada.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Em uma base de 10 cadastros: 9 têm e-mail preenchido; 1 campo obrigatório vazio; 1 UF registrada como 'XX'. Calcular completude do e-mail e validade de UF.",
+          "resposta": "Completude do e-mail = 9/10 = 90%. Validade de UF = 9/10 = 90% (a linha com 'XX' viola o domínio de valores aceitos). Note que são métricas de campos diferentes: cada uma exige sua própria regra e seu próprio denominador."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Sistema mostra CPF 12345678900 com todos os dígitos preenchidos e formato correto, mas o titular real é outro. Qual dimensão está violada?",
+          "resposta": "Acurácia. A completude está ok (campo preenchido) e a validade também (formato e dígitos verificadores passam). A violação é de correspondência com a realidade, que só se detecta confrontando com referência — por isso a acurácia exige conferência ou fonte autoritativa."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se todos os campos estão preenchidos e no formato certo, a base é acurada.'",
+          "correcao": "Errado. Preenchimento (completude) e conformidade de formato (validade) não garantem correspondência com a realidade (acurácia). Formulários obrigatórios ampliam exatamente o risco de preenchimento inventado — é comum encontrar base 100% completa com erro de acurácia."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A validade de um dado é verificada confrontando-o com uma fonte autoritativa da realidade.",
+          "resposta": "Errado. Isso é acurácia. Validade é a aderência à regra/formato/domínio definido, verificável internamente."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Em 100 registros, 6 têm o campo 'data de nascimento' vazio. A completude desse campo é: A) 6%; B) 94%; C) 100%; D) indeterminável sem saber se o campo é obrigatório.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar acurácia, completude e validade e calculará métricas simples de qualidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "LmhbPTMaJak",
+          "titulo": "Excel Básico para Análise de Dados",
+          "canal": "Universidade dos Dados",
+          "urlOriginal": "https://www.youtube.com/watch?v=LmhbPTMaJak",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/LmhbPTMaJak",
+          "descricao": "Videoaula prática de Excel para análise de dados, cobrindo importação de dados (CSV, TXT, bancos), limpeza básica (remover duplicatas, tratar nulos, padronizar formatos), tabelas dinâmicas (criação, campos, agregações SOMA/MÉDIA/CONTAGEM), segmentações de dados (slicers), gráficos recomendados, formatação condicional, e funções essenciais (SE, SEERRO, PROCV, PROCX, SOMASE, CONT.SE). Inclui exercícios práticos com bases de dados reais de órgãos públicos.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará acurácia, completude e validade e calculará métricas simples de qualidade"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ACURÁCIA: o valor registrado corresponde à realidade que ele representa — o nome do processo existe mesmo, o CPF pertence à pessoa dita, o valor do pagamento bate com o comprovante. Mede-se contra uma REFERÊNCIA EXTERNA (cadastro oficial, conferência manual, leitura física), o que a torna a dimensão mais cara de verificar. COMPLETUDE: os campos necessários estão preenchidos — mede-se pela fração de registros (ou de campo obrigatório) sem valor ausente. ATENÇÃO: completude é relativa à regra: tel…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Acurácia, completude e validade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se todos os campos estão preenchidos e no formato certo, a base é acurada.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Preenchimento (completude) e conformidade de formato (validade) não garantem correspondência com a realidade (acurácia). Formulários obrigatórios ampliam exatamente o risco de preenchimento inventado — é comum encontrar base 100% completa com erro de acurácia."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Em uma base de 10 cadastros: 9 têm e-mail preenchido; 1 campo obrigatório vazio; 1 UF registrada como 'XX'. Calcular completude do e-mail e validade de UF.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Completude do e-mail = 9/10 = 90%. Validade de UF = 9/10 = 90% (a linha com 'XX' viola o domínio de valores aceitos). Note que são métricas de campos diferentes: cada uma exige sua própria regra e seu próprio denominador.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Sistema mostra CPF 12345678900 com todos os dígitos preenchidos e formato correto, mas o titular real é outro. Qual dimensão está violada?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Acurácia. A completude está ok (campo preenchido) e a validade também (formato e dígitos verificadores passam). A violação é de correspondência com a realidade, que só se detecta confrontando com referência — por isso a acurácia exige conferência ou fonte autoritativa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se todos os campos estão preenchidos e no formato certo, a base é acurada.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Preenchimento (completude) e conformidade de formato (validade) não garantem correspondência com a realidade (acurácia). Formulários obrigatórios ampliam exatamente o risco de preenchimento inventado — é comum encontrar base 100% completa com erro de acurácia.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m7-u2-t1-s2",
+      "titulo": "Consistência, unicidade e tempestividade",
+      "topicoTitulo": "Dimensões da qualidade de dados",
+      "topicoId": "modulo-7-unidade-2-topico-1",
+      "unidadeTitulo": "7.2 Qualidade, Integração e Transformação de Dados",
+      "moduloTitulo": "FUNDAMENTOS E ENGENHARIA DE DADOS",
+      "objetivoAprendizagem": "Aluno avaliará consistência, unicidade e tempestividade de uma base e explicará os conflitos entre dimensões.",
+      "conteudo": "CONSISTÊNCIA: o mesmo fato é representado de forma compatível — dentro do registro (soma dos itens = total) e entre sistemas (saldo igual nos dois módulos; mesma pessoa com o mesmo nome na filial e na matriz). Mede-se por divergências em regras de reconciliação. Unicidade: cada entidade real aparece uma única vez — mede-se pela taxa de duplicatas (registros idênticos ou quase idênticos por erro de carga, reenvio ou cadastro duplo). TEMPESTIVIDADE: o dado está disponível no momento necessário e com latência aceitável — mede-se por data/hora da última atualização e pelo intervalo entre o fato e sua disponibilidade. Dado antigo pode ser acurado e completo e ainda assim inútil para decidir. CONFLITOS QUE ENRIQUECEM A QUESTÃO: deduplicar para ganhar unicidade pode reduzir completude se a regra de fusão descartar histórico; coletar tudo por precaução melhora completude e piora a minimização (guardar só o necessário) e a tempestividade (processar muito atrasa); exigir validação rígida na entrada reduz erro mas rejeita registros legítimos com formato incomum. Qualidade é gestão de trade-offs com métrica declarada — não um estado absoluto.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar a dimensão violada: (a) filial registra 2,0 m de estante e a matriz, 200 cm, em bases separadas sem conversão; (b) três linhas idênticas do mesmo atendimento; (c) painel atualizado ontem, fato de hoje.",
+          "resposta": "(a) inconsistência (o mesmo fato, unidades incompatíveis — regra de conversão ausente). (b) violação de unicidade (duplicidade). (c) violação de tempestividade (latência inaceitável para a decisão apoiada)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Base com 10 registros: 2 duplicatas exatas; 1 registro com data do fato posterior à data de atualização. Calcular taxa de duplicidade e apontar o outro problema.",
+          "resposta": "Taxa de duplicidade = 2/10 = 20% (unicidade = 80% dos registros sem duplicidade). O segundo caso viola consistência temporal: a data de atualização não pode ser anterior ao próprio fato — regra de integridade temporal que a conferência de unicidade não captura."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Uma base atualizada há um minuto e com formato perfeito é uma base de qualidade.'",
+          "correcao": "Errado. Apenas tempestividade e validade foram satisfeitas. A base pode estar incompleta, inconsistente com a filial, duplicada e imprecisa — qualidade exige avaliação conjunta das seis dimensões, com regras e denominadores declarados."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Duplicidade de registros é medida pela dimensão da unicidade.",
+          "resposta": "Certo. Unicidade quer uma linha por entidade real; duplicidade é a violação direta dessa expectativa."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "O painel precisa do dado das 8h e só recebe às 18h. A dimensão violada é: A) acurácia; B) completude; C) tempestividade; D) validade.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de avaliar consistência, unicidade e tempestividade de uma base e explicará os conflitos entre dimensões, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "avaliará consistência, unicidade e tempestividade de uma base e explicará os conflitos entre dimensões"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "CONSISTÊNCIA: o mesmo fato é representado de forma compatível — dentro do registro (soma dos itens = total) e entre sistemas (saldo igual nos dois módulos; mesma pessoa com o mesmo nome na filial e na matriz). Mede-se por divergências em regras de reconciliação. Unicidade: cada entidade real aparece uma única vez — mede-se pela taxa de duplicatas (registros idênticos ou quase idênticos por erro de carga, reenvio ou cadastro duplo). TEMPESTIVIDADE: o dado está disponível no momento necessário e c…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Consistência, unicidade e tempestividade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Uma base atualizada há um minuto e com formato perfeito é uma base de qualidade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Apenas tempestividade e validade foram satisfeitas. A base pode estar incompleta, inconsistente com a filial, duplicada e imprecisa — qualidade exige avaliação conjunta das seis dimensões, com regras e denominadores declarados."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar a dimensão violada: (a) filial registra 2,0 m de estante e a matriz, 200 cm, em bases separadas sem conversão; (b) três linhas idênticas do mesmo atendimento; (c) painel atualizado ontem, fato de hoje.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(a) inconsistência (o mesmo fato, unidades incompatíveis — regra de conversão ausente). (b) violação de unicidade (duplicidade). (c) violação de tempestividade (latência inaceitável para a decisão apoiada).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Base com 10 registros: 2 duplicatas exatas; 1 registro com data do fato posterior à data de atualização. Calcular taxa de duplicidade e apontar o outro problema.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Taxa de duplicidade = 2/10 = 20% (unicidade = 80% dos registros sem duplicidade). O segundo caso viola consistência temporal: a data de atualização não pode ser anterior ao próprio fato — regra de integridade temporal que a conferência de unicidade não captura.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Uma base atualizada há um minuto e com formato perfeito é uma base de qualidade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Apenas tempestividade e validade foram satisfeitas. A base pode estar incompleta, inconsistente com a filial, duplicada e imprecisa — qualidade exige avaliação conjunta das seis dimensões, com regras e denominadores declarados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

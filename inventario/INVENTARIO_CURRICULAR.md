@@ -1,61 +1,272 @@
-# INVENTÁRIO CURRICULAR — Etapa 1 (conforme Escrita.txt / Seção 4)
+# INVENTÁRIO CURRICULAR — FCN (Apostila Web Interativa)
 
-Estrutura: Disciplina → Módulo → Unidade → Tópico → Subtópico → ID → Objetivo → Conteúdo → Exemplos → Exercícios → Fontes → Estado
+Fonte de requisitos: `Escrita.txt` (prompt mestre), seções 1–4 e 6.
+Fonte de verdade do estado atual: código em `apostila-ia/assets/data/*.js`; contagens curriculares recontadas em 2026-11-04 (recontagem automatizada por `scripts/audit_curriculum_matrix.mjs` + varredura direta dos arquivos de dados).
+Data de verificação do inventário: 2026-11-04.
+Estado estrutural representado pela matriz atual: **8 módulos carregados, 132 tópicos + 307 subtópicos = 439 nós**, 949 exemplos e 642 exercícios detectados pelo gerador estrutural; **474 flashcards e 409 questões autorais** nos arquivos de dados. Todas as 409 questões possuem fontes verificáveis com URL (correção aplicada em 2026-10-27: 20 fontes normalizadas - 15 M5 + 4 M6 + 1 M1). As contagens de exemplos/exercícios refletem a lógica textual do script e não uma avaliação semântica. Testes automatizados de UI, validação em navegador real e limitações estão documentados em `docs/RELATORIO_TESTES.md` e em `verificacao/evidencias/navegador-real-2026-11-04/`.
 
-Fonte: Escrita.txt, seções 6 (conteúdo programático obrigatório) e 4 (inventário).
-Data de verificação: 2026-10-22
-Revisão P1-D (2026-10-22): reposicionamento do estado para a branch `feat/p1d-banco-simuladores-busca` com o código em execução no Chromium Headless (0 erros JS) e contagens reais de arquivo/disco.
+---
 
-## REVISÕES RELEVANTES
-- P1-C (2026-10-21): integração do M6, conclusão do M5 (5.3/5.4), 404 flashcards conectados, 15 escopos do simulado; currículo completo M1–M8 (100 tópicos + 209 subtópicos = 309 nós).
-- P1-D (2026-10-22, branch em andamento): implementação de busca (`search.js`) e áudio (`audio.js`) com UI no HTML; manifest + service-worker (PWA); 3 simuladores novos carregados (`simulator_prompts`, `simulator_security`, `simulator_data`) — **com UI montada no `index.html`** (`#prompts-app`, `#seguranca-app`, `#dados-app`; montagem com guardas); banco de questões reposicionado e expandido para **365** questões autorais; verificação em navegador real.
-- P1-E (2026-10-23): M1 expandido para 5 unidades/23 tópicos/37 subtópicos; M2 expandido para 5 unidades/19 tópicos/52 subtópicos; `storage.js` e `references.js` criados e carregados no `index.html`.
+## 1. PAPEL, RESPONSABILIDADE E MISSÃO
 
-## CORDAS DE CONTEO (evidência real)
-- Currículo: **132 tópicos + 295 subtópicos = 427 nós** (M1 23/37, M2 19/52, M3 14/35, M4 13/39, M5 13/35, M6 18/46, M7 9/23, M8 23/28) — contado em Node/vm e no DOM headless.
-- Flashcards: **404** no disco / 404 conectados ao app (m1=50, m2=50, m3=50, m4=54, m5=50, m6=50, m7=50, m8=50) — piso de 400 **atingido em quantidade**. (Fase 7: D1 corrigido — 18 flashcards M1 remapeados para m1-u1-t1.)
-- Questões: **365** autorais (piso 320 atingido; ≥40 por módulo): M1=40, M2=40, M3=40, M4=85, M5=40, M6=40, M7=40, M8=40. Todos com gabarito + justificativa + nível. Estilos: cespe, fgv, fcc, vunesp (formato, não banca). Distribuição REAL medida em Node/vm (2026-10-22, deduplicada por `id`): níveis — 94 básica (25,8%) / 193 intermediária (52,9%) / 78 avançada (21,4%); formatos — 290 múltipla escolha + 75 Certo/Errado; estilos de cobrança — CESPE 216 / FGV 58 / FCC 52 / VUNESP 39 (formato de cobrança, não banca real; todas autorais, `origem: autoral`). **Decisão documentada**: essa proporção real difere da sugerida 30/45/25 (Seção 10) — o desvio é intencional e justificado, pois a Seção 10 admite ajuste de distribuição quando justificado.
-- Gráficos: 5/5 implementados e carregados (SVG próprio, sem biblioteca externa). DOM headless renderiza 8 chart-card + 71 chart-svg.
-- Simuladores: **5/5 com UI montada no `index.html`** (P1-D, 2026-10-22) nos contêineres `#excel-app`, `#redes-app`, `#seguranca-app`, `#prompts-app` e `#dados-app` — Excel (`simulators.js`, 23 funções, busca real PROCV/PROCH/PROCX), Redes (`simulator_network.js`, ping/traceroute simulados e CIDR com cálculo real), Segurança (`simulator_security.js`, triagem defensiva de phishing), Prompts (`simulator_prompts.js`, engenharia de prompts) e Dados (`simulator_data.js`, dados/estatística). Montagem inline com guardas triplas (contêiner presente, global presente, `mount()` não lança) — não quebra se faltar contêiner/global. Todos são **simulações didáticas locais** (sem comandos reais no SO, sem ataques reais, sem IA real); verificação: `node --check` + smoke test em Node/vm; **nenhum testado em navegador real**.
-- Busca (`window.SearchApp`) e áudio (`window.AudioApp`) implementados, carregados e conectados no HTML.
-- Manifest + service-worker (PWA) existentes e referenciados.
-- Persistência (`assets/js/storage.js`) e referências (`assets/data/references.js`) implementados e carregados no `index.html` (P1-E).
-- Referências: LGPD (13.709/2018), LAI (12.527/2011), Lei de Governo Digital (14.129/2021) verificadas com URL+data; Marco Civil (12.965/2014) verificada em 2026-10-23 — https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm (arts. 2º, 3º, 7º, 9º § 3º, 15 e 19); CF art. 37 caput (princípios da administração) e art. 5º XXXIII (acesso à informação) verificados em planalto.gov.br (2026-10-23). Pendentes: Microsoft Learn, RFCs/IETF, CERT.br, demais incisos do CF. Vídeos: 0 validados.
+Atuação simultânea como arquiteto frontend sênior, desenvolvedor fullstack SPA, designer instrucional sênior, professor de TI/redes/segurança/produtividade/IA/engenharia/visualização de dados, especialista em concursos públicos brasileiros (CESPE/CEBRASPE, FGV, FCC, VUNESP), revisor técnico (precisão conceitual, atualização normativa, rastreabilidade) e engenheiro de qualidade (testes funcionais, acessibilidade, compatibilidade, persistência, integridade de dados).
 
-## MÓDULO 1 (parcial)
-- 1.1 Ecossistema M365 — IMPLEMENTADO, renderiza.
-- 1.2 Word — parcial; complemento de exemplos em const `curriculumWord12Supplement` não renderiza (sem script).
-- 1.3 Excel — simulador com escopo declarado e busca real; UI montada no `index.html` (`#excel-app`, P1-D).
-- 1.4 PowerPoint e 1.5 OneDrive — MIGRADOS e renderizam (1 subtópico cada, 3 exemplos + 2 exercícios); consts antigas comentadas como migradas.
+Missão: projetar, implementar, testar e entregar uma Apostila Web Interativa Definitiva de TI e Dados, com profundidade de livro-texto, clareza didática profissional e rigor de preparação para concursos. O produto final funciona como ambiente autossuficiente de estudos; referências externas verificam informação, mas o conteúdo essencial está incorporado ao projeto.
 
-## MÓDULO 2 (parcial)
-- 2.1 Fundamentos — IMPLEMENTADO. 2.2–2.5 IMPLEMENTADOS e renderizam (5 unidades, 19 tópicos, 52 subtópicos).
+Regra de não-invenção: referências, artigos de lei, IDs de vídeo, URLs e resultados de teste só são declarados "verificados" com evidência real (URL + data). Funcionalidade não é apresentada como operacional sem teste real.
 
-## MÓDULO 3 (parcial)
-- 3.1–3.5 implementados (5 unidades, 14 tópicos, 35 subtópicos) — renderizam.
+---
 
-## MÓDULO 4 (conteúdo carregado e renderizado; sem questões antigas)
-- 4.1 Fundamentos / 4.2 Malwares / 4.3 Ameaças / 4.4 Legislação — IMPLEMENTADOS, renderizam.
-- Simulador defensivo de phishing (`simulator_security.js`): UI montada no `index.html` (`#seguranca-app`, P1-D) — triagem didática local, sem ataques reais.
+## 2. PRINCÍPIO FUNDAMENTAL: APRENDIZAGEM COMPLETA
 
-## MÓDULO 5 (IA) — completo em currículo (5.1–5.4) e conectado ao app
-- 5.1–5.4 IMPLEMENTADOS. FlashCards 50 conectados. Laboratório interativo de prompts com UI montada no P1-D (`#prompts-app`, Seção 7.4; simulação local, sem IA real) — 5.4 segue didático.
+A simples menção de um conceito não significa que foi ensinado. Um assunto só é considerado estudado quando o aluno consegue: definir com precisão; explicar origem/motivação; compreender fundamentos e mecanismos; identificar componentes, etapas, propriedades e dependências; diferenciar conceitos semelhantes; reconhecer vantagens, limitações, exceções e riscos; executar procedimentos/resolver problemas; interpretar exemplos, tabelas, fórmulas, comandos, diagramas e resultados; identificar erros comuns e armadilhas de provas; aplicar em situações novas; justificar tecnicamente; demonstrar domínio em exercícios de diferentes níveis.
 
-## MÓDULO 6 (Ética) — completo em currículo (6.1–6.6), carregado e renderizado
-- 50 flashcards conectados. 40 questões autorais conectadas (questions_m6.js, P1-D).
+Regra de completude: nenhum tópico é concluído apenas por possuir título, parágrafo introdutório, imagem, tabela ou questão de memorização. O conteúdo avança da compreensão inicial até aplicação e análise crítica. Frases genéricas ("existem outros métodos", "consulte a documentação", etc.) não substituem conteúdo. Cobertura integral de disciplina exige inventário curricular verificável (esta seção).
 
-## MÓDULO 7 (Dados)
-- 3 unidades 7.1–7.3, renderizam. FlashCards 50 conectados. Sem simulador próprio (ver simulador de dados P1-D).
+---
 
-## MÓDULO 8 (Visualização) — completo em currículo (8.1–8.5)
-- Gráficos 5/5 carregados e funcionais (SVG próprio). 40 questões autorais conectadas (questions_m8.js, P1-D).
+## 3. ARQUITETURA (estado real)
 
-## TOTAL SUBTÓPICOS COM CONTEÚDO — CARREGADO E RENDERIZADO (P1-E)
-Todos os 8 módulos. **132 tópicos + 295 subtópicos = 427 nós**. Flashcards **404/404** conectados. Questões **365/320** (piso de quantidade atingido em todos os módulos). Gráficos 5/5. Persistência (`assets/js/storage.js`) e referências (`assets/data/references.js`) implementados e carregados no `index.html` (P1-E). Referências: Marco Civil (12.965/2014) verificada em 2026-10-23 (URL+dispositivos em `referencias/referencias-verificadas.md`); mais pendentes: Microsoft Learn, RFCs/IETF, CERT.br. Vídeos: nenhum validado.
+- SPA estática em vanilla HTML/CSS/JS. Sem build, sem framework, sem `package.json`. Há CI (`.github/workflows/validate-curriculum.yml` e `deploy-pages.yml`) e suíte de testes em `verificacao/`. App em `apostila-ia/` (`index.html` não está na raiz).
+- Execução: Modo A abertura direta de `index.html` (requisito principal); Modo B servidor estático opcional.
+- Arquivos JS: `app.js`, `navigation.js`, `simulators.js`, `simulator_network.js`, `simulator_security.js`, `simulator_prompts.js`, `simulator_data.js`, `simulator_ethics.js`, `flashcards.js`, `quiz-engine.js`, `charts.js`, `search.js` (defer), `audio.js` (defer), `storage.js`, `progress.js`, `accessibility.js`, `unidade-template.js` (renderizador do template didático da Seção 5).
+- Dados: `curriculum.js` (M1) + `curriculum_m2.js`…`curriculum_m8.js`, `flashcards_m1.js`…`flashcards_m8.js`, `questions.js` + `questions_m4.js`…`questions_m8.js`, `references.js`, `enriquecimento_m1.js`…`enriquecimento_m8.js` (overlay estruturado da Seção 5). Todos carregados no `index.html`.
+- Navegação: `navigation.js` é dono único; descobre módulos dinamicamente (varredura `typeof` 1–8, sem `eval`), renderiza árvore de M1–M8 em `#curriculum`, exibe objetivo/conteúdo em painel, grava progresso em `localStorage` chave `apostila-ia-progresso`.
+- Esquema de chaves unificado: `modulo-N` com hífen (`modulo-1`…`modulo-8`).
+- Persistência: `localStorage` (`apostila-ia-progresso`); IndexedDB não utilizado. Service Worker + manifest (PWA) condicionais: **validados em navegador real em 2026-11-04** (registro ativo e cache `apostila-ia-pwa-v1` com 3 entradas de precache em `https://fatal1tybarucco.github.io/FCN/`; ausência de registro em `file://` e em `http://localhost`, por decisão de protocolo).
+- Estilos: variáveis CSS em `:root`; tema escuro via `prefers-color-scheme`.
+- Dados curriculares: objetos JS literais (sem `eval`, sem fetch externo).
+- Deploy: GitHub Pages via `.github/workflows/deploy-pages.yml` (`node --check` em todos `assets/**/*.js`, publica `apostila-ia/` como raiz); cópia de `inventario/` e `matriz/` para dentro do app antes do upload.
 
-## O QUE FALTA PARA OS CRITERIOS DE ACEITE (Secao 18)
-1. UI dos simuladores: **montada para os 5** (`#excel-app`, `#redes-app`, `#seguranca-app`, `#prompts-app`, `#dados-app`; P1-D, 2026-10-22) — resta verificar em navegador real (hoje: `node --check` + smoke Node/vm; nenhum testado em navegador real).
-2. Verificação headless de busca, áudio e quiz (motor de simulados).
-3. Referências restantes (Microsoft Learn, RFCs/IETF, CERT.br — a Marco Civil foi verificada em 2026-10-23) e vídeos validados.
-4. Testes finais de acessibilidade e persistence com evidências.
-5. Relatório final de conformidade.
+---
+
+## 4. INVENTÁRIO CURRICULAR (legível por máquina)
+
+Estrutura: Disciplina → Módulo → Unidade → Tópico → Subtópico → ID → Objetivo → Conteúdo → Exemplos → Exercícios → Fontes → Estado.
+
+Identificadores: estáveis e únicos (427/427 sem duplicata). Dois formatos coexistem no código (ambos estáveis):
+- Formato longo: `modulo-X-unidade-Y-topico-Z` (tópicos em todos os módulos) e `modulo-X-unidade-Y-topico-Z-sub-W` (subtópicos do M1).
+- Formato compacto: `mX-uY-tZ-sW` (subtópicos de M2–M8).
+
+Verificação automatizada (Node/vm, 2026-10-23): 427 IDs, 427 únicos, 0 duplicatas.
+
+### 4.1 Contagens por módulo (verificadas por node)
+
+| Módulo | Título | Unidades | Tópicos | Subtópicos | Nós (t+s) | Exemplos | Exercícios | Flashcards | Questões | Estado |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| M1 | Microsoft 365 e Aplicações de Escritório | 5 | 23 | 49 | 72 | 175 | 126 | 80 | 54 | Completo |
+| M2 | Redes de Computadores | 5 | 19 | 52 | 71 | 156 | 104 | 56 | 54 | Completo |
+| M3 | Comunicação e Colaboração | 5 | 14 | 35 | 49 | 105 | 70 | 68 | 47 | Completo |
+| M4 | Segurança da Informação e Governança Digital | 4 | 13 | 39 | 52 | 117 | 78 | 54 | 85 | Completo |
+| M5 | Inteligência Artificial | 4 | 13 | 35 | 48 | 105 | 70 | 66 | 42 | Completo |
+| M6 | Ética e Responsabilidade Digital no Serviço Público | 6 | 18 | 46 | 64 | 138 | 92 | 50 | 47 | Completo |
+| M7 | Fundamentos e Engenharia de Dados | 3 | 9 | 23 | 32 | 69 | 46 | 50 | 40 | Completo |
+| M8 | Visualização, Análise e Storytelling com Dados | 5 | 23 | 28 | 51 | 84 | 56 | 50 | 40 | Completo |
+| **Total** | — | **37** | **132** | **307** | **439** | **949** | **642** | **474** | **409** | — |
+
+### 4.2 Escopo por módulo (conforme Escrita.txt Seção 6)
+
+- **M1 — Microsoft 365 e Aplicações de Escritório (completo)**: 1.1 Ecossistema M365 (8 subtópicos), 1.2 Word (14 tópicos, 17 subtópicos + simuladores de parágrafo/estilos/quebras), 1.3 Excel (6 tópicos, 12 subtópicos + simulador com busca real PROCV/PROCH/PROCX), 1.4 PowerPoint (6 subtópicos, 3 exemplos + 2 exercícios por subtópico), 1.5 OneDrive (6 subtópicos, 3 exemplos + 2 exercícios por subtópico). Flashcards 80. Questões 54. **Decisão 2026-11-04 sobre `curriculumWord12Supplement`:** a const órfã foi eliminada pela reestruturação do currículo — os exemplos complementares de 1.2 passaram a residir nos subtópicos do próprio tópico (14 tópicos, 17 subtópicos); não há mais código órfão a remover nem suplemento a incorporar.
+- **M2 — Redes (completo)**: 2.1 Fundamentos (4 tópicos), 2.2 Modelos OSI/TCP-IP, 2.3 Protocolos, 2.4 Endereçamento/sub-redes, 2.5 Diagnóstico (5 unidades, 19 tópicos, 52 subtópicos). Simulador de redes (ping/traceroute simulados, CIDR com cálculo real). Flashcards 56. Questões 54.
+- **M3 — Comunicação e Colaboração (completo)**: 3.1–3.5 (5 unidades, 14 tópicos, 35 subtópicos). Flashcards 68. Questões 47.
+- **M4 — Segurança (completo)**: 4.1 Fundamentos, 4.2 Malwares/ferramentas defensivas, 4.3 Ameaças/ataques, 4.4 Legislação/conformidade (4 unidades, 13 tópicos, 39 subtópicos). Simulador defensivo de phishing (triagem didática local). Flashcards 54. Questões 85.
+- **M5 — IA (completo)**: 5.1 Fundamentos, 5.2 ML, 5.3 IA generativa/LLMs, 5.4 Engenharia de prompts (4 unidades, 13 tópicos, 35 subtópicos). Laboratório de prompts (simulação local, sem IA real). Flashcards 66. Questões 42.
+- **M6 — Ética (completo, integrado no P1-C)**: 6.1–6.6 (6 unidades, 18 tópicos, 46 subtópicos). Flashcards 50. Questões 47 (conectadas no P1-D).
+- **M7 — Dados (completo)**: 7.1–7.3 (3 unidades, 9 tópicos, 23 subtópicos). Flashcards 50. Questões 40. (Simulador de dados compartilhado do P1-D.) **Delimitação de escopo (2026-11-04):** o prompt mestre, em seu §6, define o Módulo 7 apenas como "FUNDAMENTOS E ENGENHARIA DE DADOS" (DIKW, tipos e qualidade de dados, metadados/linhagem/ciclo de vida, ETL/ELT, limpeza, valores ausentes, duplicidades, normalização, agregação, anonimização/pseudonimização, governança e exemplos). A numeração "7.1–7.6" que aparece em documentos internos é **histórica e não corresponde a unidades do prompt mestre**: existem exatamente **3 unidades (7.1, 7.2, 7.3)**, e **7.4–7.6 não existem nem são requeridas** — os laboratórios 7.4 (prompts/IA) e 7.5 (dados e visualização) do §7 do prompt mestre são simuladores da Seção 7, não unidades curriculares do Módulo 7.
+- **M8 — Visualização (completo)**: 8.1 Fundamentos visuais, 8.2 Gráficos estatísticos, 8.3 Estatística aplicada, 8.4 Ferramentas, 8.5 Storytelling (5 unidades, 23 tópicos, 28 subtópicos). 5 gráficos SVG. Flashcards 50. Questões 40.
+
+### 4.3 Recursos funcionais (estado real)
+
+- Simuladores com UI montada (6/6): Excel (`#excel-app`), Redes (`#redes-app`), Segurança (`#seguranca-app`), Prompts (`#prompts-app`), Dados (`#dados-app`) e Ética (`#etica-app`) — montagem inline com guardas triplas.
+- Gráficos (5/5): histograma, linha, barras, dispersão, boxplot (SVG próprio, `#charts-app`).
+- Flashcards: 474/474 IDs presentes nos arquivos de dados, repetição espaçada SM-2 simplificado.
+- Questões: **409/320** (piso quantitativo atingido), 15 escopos de simulado (m1..m8 + cum-2..cum-8). A distribuição de níveis, formatos e estilos registrada nos snapshots antigos corresponde a uma versão anterior do banco e precisa ser recalculada antes de ser tratada como atual.
+- Vídeos educacionais: **20 verificados** (IDs conferidos contra `references.js` com `status: "verificado"`), embarcados via `youtube-nocookie.com` com `loading="lazy"`, `referrerpolicy="strict-origin-when-cross-origin"`, `allowfullscreen` e rótulos `title`/`aria-label`; validados em navegador real em 2026-11-04 (M1–M8).
+- Busca (`window.SearchApp`) e áudio (`window.AudioApp`) implementados e conectados.
+- Persistência (`storage.js`) e referências (`references.js`) implementados e carregados.
+
+### 4.4 Referências (verificadas com URL + data)
+
+- LGPD (Lei 13.709/2018): planalto.gov.br, 2026-10-20 (arts. 1°, 2°, 3°, 4°, 5°, 17, 18, 46).
+- LAI (Lei 12.527/2011) e Lei de Governo Digital (Lei 14.129/2021): planalto.gov.br, 2026-10-21.
+- CF art. 37 caput e art. 5º XXXIII: conferidos, 2026-10-21.
+- Marco Civil (Lei 12.965/2014): https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm, verificada 2026-10-23 (arts. 2º, 3º, 7º, 9º §3º, 15, 19; destaque art. 9º §3º).
+- Verificação direta por HTTP (webfetch) em 2026-10-24: Microsoft Learn (https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide), RFCs/IETF (RFC 791, 793, 1034, 1035, 2131, 7230, 7231, 8446) e CERT.br (https://cert.br/) confirmados como acessíveis com título/organização correspondentes — **verificados** (data de verificação 2026-10-24). Registrados em `referencias/referencias-verificadas.md` (Bloco 4) e `apostila-ia/assets/data/references.js`.
+- Verificações adicionais de 2026-10-24 (Bloco 7 de `referencias/referencias-verificadas.md`): RFC 9110 (https://www.rfc-editor.org/info/rfc9110) — acessível; ANPD (https://www.gov.br/anpd/pt-br) + Resolução CD/ANPD nº 2/2022 e nº 4/2023 — acessíveis; CF art. 37 (texto integral conferido, incisos II, III, XXI, § 1º, § 3º II, § 4º, § 6º) e art. 5º (incisos X, XII, XIV, XXXIII, LXXIX) — conferidos; dispositivos remissivos do M6 — Lei 8.429/1992, Lei 1.079/1950, Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017, Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001 e LGPD art. 7º — todos acessíveis no planalto.gov.br (Lei 10.741 localizada via busca oficial em https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm). Total de referências verificadas passa de 32 para 72 (32 → 72 itens no `references.js`) (Bloco 7); pendentes restantes: demais resoluções da ANPD, demais RFCs (FTP, SMTP, ICMP, ARP, NAT, VPN etc.), demais incisos do art. 37 e do art. 5º não listados acima.
+
+### 4.5 Limitações remanescentes (declaradas, não ocultas)
+
+- Vídeos educacionais: **20 validados** (2026-10-24 por oembed, reconfirmados em navegador real em 2026-11-04). A disponibilidade regional e a incorporação dependem do YouTube; cada módulo tem alternativa textual completa na apostila, de modo que nenhum conteúdo essencial depende do vídeo.
+- Testes em navegador real: **realizados em 2026-11-04** (`verificacao/validar-navegador-real.cjs`): `file://` (app completo, sem service worker), `http://localhost:8099` (sem registro de SW por protocolo) e `https://fatal1tybarucco.github.io/FCN/` (SW ativo, cache `apostila-ia-pwa-v1` com 3/3 entradas de precache, manifest válido). Evidências em `verificacao/evidencias/navegador-real-2026-11-04/` (JSON, PNG, HAR). Leitor de tela real e dispositivo físico continuam **não** testados (limitação de ambiente).
+- Simuladores: simulações didáticas locais (sem comandos reais no SO, sem ataques reais, sem IA real).
+- Referências pendentes (após Bloco 7, 2026-10-24): demais resoluções da ANPD (além da nº 2/2022 e nº 4/2023); demais RFCs não verificadas individualmente (FTP, SMTP, ICMP, ARP, NAT, VPN etc.); demais incisos/parágrafos do art. 37 e do art. 5º da CF não listados no Bloco 7. Microsoft Learn, RFCs/IETF (RFC 791, 793, 1034, 1035, 2131, 7230, 7231, 8446, 9110), CERT.br, ANPD (órgão + 2 resoluções), CF art. 37/5º (incisos listados) e dispositivos remissivos do M6 (Lei 8.429/1992, Lei 1.079/1950, Lei 13.146/2015, Lei 10.098/2000, Lei 10.741/2003, Lei 13.460/2017, Lei 12.682/2012, Lei 14.063/2020, LC 101/2000, LC 105/2001, LGPD art. 7º) verificados em 2026-10-24.
+- M1 1.2: a const órfã `curriculumWord12Supplement` **não existe mais** no currículo (reestruturação de 1.2 em 14 tópicos/17 subtópicos); nada fica sem renderizar. 1.4 e 1.5 têm 6 subtópicos cada.
+- IDs não uniformes entre M1 (formato longo) e M2–M8 (subtópicos em formato compacto) — ambos estáveis e únicos.
+
+---
+
+Relatório de contagens verificáveis por node: `inventario/RELATORIO_CONTAGENS_NODE.md`.
+
+
+## Revalidação de proveniência — 2026-10-25
+
+As contagens acima são as declaradas no inventário anterior, com data de referência 2026-10-23. Na inspeção remota da Fase 1 de 2026-10-25, elas foram consultadas, mas **não foram recalculadas a partir de todos os arquivos de dados**. Não as tratar como resultados novos desta execução.
+
+A matriz em `docs/MATRIZ_COBERTURA.csv` contém somente agregados por módulo; ainda não representa a rastreabilidade individual dos 439 nós. A auditoria atual e as lacunas identificadas estão em `docs/FASE1_AUDITORIA_2026-10-25.md`. A geração da matriz detalhada e a reprodução automatizada das contagens são tarefas explícitas da Fase 2.
+
+
+## Revalidação estrutural remota — 2026-10-25 (execução atual)
+
+A matriz docs/MATRIZ_COBERTURA.csv foi expandida para uma linha por subtópico detectado nos oito arquivos curriculares. O processamento remoto identificou 307 IDs de subtópicos, distribuídos em M1=49, M2=52, M3=35, M4=39, M5=35, M6=46, M7=23 e M8=28. A contagem textual detectou 924 exemplos e 616 exercícios. A inspeção dos arquivos de flashcards encontrou 474 IDs, todos únicos dentro do conjunto; a inspeção dos arquivos de questões encontrou 409 IDs, todos únicos dentro do conjunto.
+
+Esses números descrevem uma auditoria estrutural dos arquivos remotos. Não comprovam originalidade, correção técnica, qualidade didática, análise completa dos distratores, validade atual de fontes nem funcionamento de interface. O script reprodutível scripts/audit_curriculum_matrix.mjs foi adicionado ao repositório, mas **ainda não foi executado localmente nesta execução**; sua execução e comparação do resultado permanecem pendentes.
+
+
+---
+
+## Snapshot estrutural revalidado — 2026-10-27
+
+Este bloco substitui as contagens anteriores apenas para o estado corrente do branch; as anotações históricas acima permanecem como registros da inspeção anterior.
+
+- 8 módulos, 37 unidades, 132 tópicos, 307 subtópicos e 439 nós curriculares.
+- 924 exemplos e 616 exercícios detectados estruturalmente nos arquivos curriculares; a contagem não equivale à revisão pedagógica.
+- 474 flashcards e 409 questões autorais.
+- 6 simuladores com UI e 5 gráficos SVG.
+- Auditoria de rastreabilidade histórica: 365/365 questões e 460/474 flashcards com referência a tópicos existentes; 0 referências somente à unidade; 0 referências desconhecidas.
+- **Todas as 409 questões agora possess fontes verificáveis com URL** (correção aplicada em 2026-10-27: 20 fontes normalizadas - 15 M5 + 4 M6 + 1 M1).
+- Evidência de validação técnica: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247446902.
+- Estado pedagógico: revisão semântica independente e revisão integral de gabaritos/fontes ainda pendentes.
+
+
+## Atualização de conteúdo legal e referências — 2026-10-26
+
+- A definição legal de encarregado e de agentes de tratamento no Módulo 6 foi alinhada à redação vigente da LGPD após a Lei nº 15.352/2026.
+- A lista de direitos do art. 18 foi corrigida para preservar a numeração vigente e distinguir eliminação de dados tratados com consentimento (inciso VI) da revogação do consentimento (inciso IX).
+- As exceções do art. 4º não são descritas como autorização para tratar dados em desconformidade: o texto registra a exigência de legislação específica, proporcionalidade, devido processo, princípios gerais e direitos do titular no § 1º.
+- A Lei nº 15.352/2026 foi incluída no catálogo de referências visível da aplicação.
+- Evidência da validação técnica do lote anterior: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247679289.
+
+
+## Correção de rastreabilidade M1–M3 — 2026-10-26
+
+- q-m1-33 a q-m1-35 foram alinhadas a subtópicos de Excel, deixando de apontar para um tópico de formatos do Word.
+- q-m2-34 foi alinhada a métricas de desempenho; q-m2-38 a q-m2-40 foram alinhadas ao tópico de cálculo CIDR.
+- q-m3-20 a q-m3-22 e q-m3-37 a q-m3-40 foram alinhadas aos tópicos de lobby, controle de participantes e gravações de reuniões.
+- Snapshot histórico da auditoria estrutural: 365 questões, 474 flashcards, 0 referências unit-only e 0 referências desconhecidas; reexecutar a rastreabilidade para as 409 questões atuais. Ainda existem 24 tópicos substantivos sem questão diretamente associada.
+- Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40247942802.
+
+
+## Snapshot após expansão do banco de questões — 2026-10-26
+
+- Currículo: 8 módulos, 37 unidades, 132 tópicos, 307 subtópicos e 439 nós.
+- Flashcards: 460. Questões autorais: **389** (M1=43, M2=54, M3=47, M4=85, M5–M8=40 cada).
+- Referências no catálogo da aplicação: 74, incluindo a Lei nº 15.352/2026 e a WCAG 2.2 do W3C verificadas em fonte primária.
+- Rastreabilidade estrutural: 389/389 questões e 460/474 flashcards referenciam tópicos existentes; 0 referências somente à unidade e 0 referências desconhecidas.
+- Sete nós de síntese/revisão não têm questão exclusiva; não restam tópicos substantivos sem questão direta.
+- Evidência: https://github.com/Fatal1tyBarucco/FCN/actions/runs/40248707126.
+- Pendente: revisão semântica integral e auditoria independente de acessibilidade/interações.
+
+
+---
+
+## 5. Registro de orquestração — Fase 1 (2026-10-25)
+
+**Fonte normativa lida:** `Escrita.txt` no branch `main`, blob SHA `a7da4ad0c8905e2f7ece405dfe4a3b95518cbb76`. O prompt define oito módulos curriculares e critérios de aceite técnicos, pedagógicos e quantitativos. A árvore estrutural e as contagens abaixo são evidências de inventário, não aprovação semântica de todo o material.
+
+**Nota de reconciliação:** este bloco preservava um snapshot documental inconsistente (885 exemplos, 590 exercícios e 396 questões). A matriz presente na branch contém 307 linhas e soma 924 exemplos/616 exercícios segundo os contadores textuais do gerador; os arquivos de questões listados na seção 4.1 totalizam 409 (M1=54, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40, M8=40). Os snapshots de 404 flashcards/365 questões e 389/396 questões são históricos. A contagem estrutural não substitui revisão semântica nem reexecução dos testes no HEAD atual.
+
+**Módulos obrigatórios:**
+1. Microsoft 365 e aplicações de escritório (Word, Excel, PowerPoint, OneDrive).
+2. Redes de computadores.
+3. Comunicação e colaboração.
+4. Segurança da informação e governança digital.
+5. Inteligência artificial.
+6. Ética e responsabilidade digital no serviço público.
+7. Fundamentos e engenharia de dados.
+8. Visualização, análise e storytelling com dados.
+
+**Regra de aceite curricular:** presença de objetivo/conteúdo/exemplos/exercícios na matriz não comprova profundidade, correção ou suficiência didática. A validação semântica e a revisão independente continuam sendo critérios separados.
+
+**Identificadores:** há formatos longos e compactos legados documentados na seção 4. Não renumerar IDs existentes em lote; qualquer normalização exige auditoria de referências cruzadas em questões, flashcards, progresso e navegação.
+
+
+## Reconciliação de contagens — 2026-10-27
+
+Os arquivos de dados atuais foram recontados por identificadores únicos `q-mN-NN` em todos os bancos de questões: M1=54, M2=54, M3=47, M4=85, M5=42, M6=47, M7=40 e M8=40, totalizando **409 questões**. Todas as 409 questões agora possuem fontes verificáveis com URL (correção aplicada em 2026-10-27). Os arquivos de flashcards contêm **474 itens** distribuídos em M1=80, M2=56, M3=68, M4=54, M5=66, M6=50, M7=50 e M8=50. Essa contagem verifica IDs/itens presentes, não qualidade semântica, ausência de duplicidade conceitual ou rastreabilidade correta de cada item. O relatório de rastreabilidade precisa ser reexecutado no mesmo HEAD para validar as associações dos 396 itens de questão.
+
+## Registro de continuidade — 2026-10-27
+
+A Fase 1 foi retomada mediante leitura do prompt mestre completo disponível no repositório e das instruções de `AGENTS.md`. Este documento e a matriz existente foram reutilizados como artefatos-base; não foram recriados do zero. O inventário estrutural documenta 8 módulos e 439 nós curriculares (132 tópicos + 307 subtópicos). A auditoria estrutural é distinta da validação semântica: cada subtópico ainda precisa ser verificado quanto à profundidade didática, exemplos não redundantes, exercícios, flashcards, questões e fontes pertinentes.
+
+**Regra de contagem:** os documentos desta branch registram snapshots em commits diferentes (incluindo 396/409 questões em momentos distintos). Não consolidar números de snapshots como se fossem uma única execução. Antes de atualizar métricas, executar os scripts de auditoria no HEAD exato e registrar SHA, comando, saída e data.
+
+
+## Reconciliação 2026-10-27
+
+- P0-1 (fontes): concluído — 101/102 já tinham fonte; 1 adicionada (q-m3-45). Evidência: docs/REVISAO_SEMANTICA_2026-10-27.md.
+- P0-4 (revisão semântica): concluído — 399/399 IDs revisados. Evidência: docs/REVISAO_SEMANTICA_2026-10-27.md.
+- P1-1 (gabaritos): 5 gabaritos objetivamente errados corrigidos (q-m7-01/04/05/07/11). Evidência: docs/DISTRIBUICAO_GABARITOS_2026-10-27.md.
+- P2-4 (URLs): 183 URLs verificadas (182 acessíveis; 1 login). Evidência: docs/VERIFICACAO_URLS_2026-10-27.md.
+- P2-6 (persistência): auditoria concluída. Evidência: docs/AUDITORIA_PERSISTENCIA_2026-10-27.md.
+- Contagens atuais: 409 questões, 474 flashcards, 183 referências, 924 exemplos, 616 exercícios, 439 nós.
+- Pendentes mantidos: P2-1, P2-2, P2-3, P1-2, P1-3, P1-4.
+
+---
+
+## Snapshot de fechamento — 2026-11-04
+
+Este bloco registra o estado recontado no HEAD da branch `feat/auditoria-maestro-2026-11-02`, com
+comandos reproduzíveis. Ele **substitui** os números dos snapshots anteriores (mantidos acima
+como registro histórico) e é o referencial corrente.
+
+### Contagens recontadas (comandos no HEAD)
+
+| Métrica | Valor | Comando |
+|---|---:|---|
+| Módulos / unidades / tópicos / subtópicos | 8 / 37 / 132 / 307 | `node scripts/audit_curriculum_matrix.mjs` |
+| Nós curriculares (tópicos + subtópicos) | 439 | idem |
+| Exemplos detectados | 949 | idem |
+| Exercícios detectados | 642 | idem |
+| Flashcards | 474 (M1=80) | varredura de `assets/data/flashcards_m*.js` |
+| Questões autorais | 409 (M1=54 … M8=40) | `window.questoesBanco` em runtime + leitura dos arquivos |
+| Vídeos verificados | 20 (M1=2, M2=3, M3=1, M4=4, M5=3, M6=4, M7=2, M8=1) | `references.js` (`status: "verificado"`) |
+
+### Decisões de escopo e de conteúdo
+
+1. **M1 1.2 Word — suplemento órfão:** resolvido pela reestruturação. A const
+   `curriculumWord12Supplement` não existe mais em `assets/data/curriculum.js`; os exemplos
+   complementares de 1.2 passaram a integrar os 17 subtópicos dos 14 tópicos da unidade. Não há
+   código órfão pendente, e nenhuma referência a eliminar nos documentos.
+2. **M7 — inexistência de 7.4–7.6:** registrada explicitamente. O prompt mestre (§6) define o
+   Módulo 7 com **três** unidades (7.1, 7.2, 7.3). As referências a "7.4–7.6" em documentos
+   internos são herança de numeração antiga e **não correspondem a unidades requeridas**. Os
+   laboratórios 7.4 (prompts/IA) e 7.5 (dados e visualização) são da Seção 7 do prompt mestre
+   (simuladores), não unidades curriculares.
+3. **Exemplos de natureza distinta (§5.4):** o overlay `enriquecimento_m*.js` passa a ser a
+   forma estruturada e auditável dos exemplos. Cada um dos 307 subtópicos tem **exatamente três
+   exemplos detalhados** (`introducao`, `aplicacao`, `erro`) com problema, dados, conceitos,
+   estratégia, execução, resultado, justificativa, erros frequentes e variação — auditoria
+   automatizada em `scripts/auditar-template-didatico.mjs` e validação por lote em
+   `scripts/validar-lote.mjs`.
+4. **Governança de inventário e matriz:** `apostila-ia/inventario/` e `apostila-ia/matriz/` são a
+   fonte de verdade; `inventario/` e `matriz/` da raiz são espelhos com SHA-256 idêntico,
+   verificados por `scripts/sincronizar-governanca.mjs` antes de cada publicação. Relatório:
+   `docs/RECONCILIACAO_INVENTARIO_2026-11-03.md`.
+
+### Evidências de navegador real (2026-11-04)
+
+- `file://`: 8 módulos, 6 simuladores montados, 474 flashcards e 409 questões carregados,
+  **nenhum** registro de service worker, 0 erro JS do aplicativo.
+- `http://localhost:8099`: registro de service worker **bloqueado pelo protocolo** (registro só
+  ocorre em `https:`), 0 erro JS, acessibilidade e vídeos conformes.
+- `https://fatal1tybarucco.github.io/FCN/`: service worker **ativo**, cache
+  `apostila-ia-pwa-v1` com **3/3** entradas de precache (`index.html`,
+  `assets/css/styles.css`, `manifest.webmanifest`), manifest válido (HTTP 200, 4 ícones).
+- Acessibilidade: `window.AccessibilityApp._estado.montado === true`, skip-link como primeiro
+  filho de `<body>`, landmarks `main`/`navigation`/`region` com `aria-live`, `#a11y-style`
+  injetado em `<head>`, `Tab` alcança o skip-link e `Enter` move o foco para `#main`; axe-core
+  sem violações críticas/serious.
+- Vídeos: 36 iframes renderizados em M1–M8, **0 inválidos** no código local, IDs coincidentes
+  com `references.js` (`status: "verificado"`), `loading="lazy"`,
+  `referrerpolicy="strict-origin-when-cross-origin"`, `allowfullscreen` e `title`/`aria-label`
+  preenchidos.

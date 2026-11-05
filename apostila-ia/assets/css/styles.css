@@ -1719,6 +1719,172 @@ body #seguranca-app .sim-sec-btn-err:hover { background: var(--fill-error); bord
   outline-offset: 2px;
 }
 
+/* ---- Template didático Seção 5 (unidade-template.js) ---- */
+/* Seções do template: bloco de superfície com divisória sutil e título h5.
+   Não é .card (bloco grande): são oito seções por unidade, e aninhar cards
+   dentro de cards estouraria o espaçamento vertical no mobile. */
+.template-section {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: var(--sp-4) var(--sp-5);
+  margin: var(--sp-4) 0;
+}
+.template-section > h5 {
+  margin: 0 0 var(--sp-3);
+  color: var(--accent-text);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+.template-section > h5:first-child { margin-top: 0; }
+.template-section h6 {
+  margin: var(--sp-3) 0 var(--sp-2);
+  color: var(--text-link);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+/* Título do subtópico emitido pelo template (h4) — hierarquia coerente com
+   o h2 da unidade emitido pelos consumidores. */
+.unidade-titulo { color: var(--text); }
+.unidade-objetivo {
+  color: var(--text-dim);
+  margin: 0 0 var(--sp-3);
+  max-width: 70ch;
+}
+.template-section p:last-child,
+.template-section ul:last-child,
+.template-section ol:last-child { margin-bottom: 0; }
+
+/* Exemplo resolvido (nove partes) dentro da seção 4 */
+.exemplo-detalhado {
+  background: var(--surface-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+  margin: var(--sp-3) 0;
+}
+.exemplo-detalhado:last-child { margin-bottom: 0; }
+.exemplo-detalhado > h6 {
+  margin: 0 0 var(--sp-2);
+  color: var(--text-link);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.exemplo-detalhado p:last-child,
+.exemplo-detalhado ul:last-child,
+.exemplo-detalhado ol:last-child { margin-bottom: 0; }
+
+/* Pegadinha (seção 6): afirmação errada → por quê → versão correta */
+.pegadinha-item {
+  background: var(--surface-elev);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--warning);
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+  margin: var(--sp-3) 0;
+}
+.pegadinha-item:last-child { margin-bottom: 0; }
+.pegadinha-item > h6 {
+  margin: 0 0 var(--sp-2);
+  color: var(--warn-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Diferença que altera o gabarito (seção 5) — destaque decisório */
+.diferenca-gabarito {
+  background: color-mix(in srgb, var(--warning) 12%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--warning) 45%, transparent);
+  border-left-width: 4px;
+  border-radius: var(--radius);
+  padding: var(--sp-2) var(--sp-3);
+  margin: var(--sp-3) 0 var(--sp-4);
+  max-width: none;
+}
+
+/* Tabela comparativa: rolagem horizontal contida em telas pequenas.
+   O wrapper é focável (tabindex="0") — foco visível obrigatório (WCAG 2.4.7). */
+.table-wrapper {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: var(--sp-3) 0;
+  border-radius: var(--radius);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-dim) transparent;
+}
+.table-wrapper:focus-visible {
+  outline: 2px solid var(--text-link);
+  outline-offset: 2px;
+}
+.table-wrapper > table {
+  min-width: 480px;            /* três colunas legíveis antes de rolar */
+  margin: 0;
+}
+.table-wrapper > table th[scope='row'] {
+  background: var(--surface-elev);
+  color: var(--text-dim);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+}
+
+/* Checklist de domínio (seção 7) — estado persistido em localStorage */
+.checklist { list-style: none; margin: var(--sp-2) 0 var(--sp-3); padding: 0; }
+.checklist li { margin: 0; }
+.checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  min-height: 44px;
+  padding: var(--sp-2) var(--sp-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 500;
+  transition: border-color var(--tr-fast), background var(--tr-fast);
+}
+.checklist label:hover {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--fill-primary) 8%, transparent);
+}
+/* Alvo de toque do checkbox: 20px (área útil), sem achatar o rótulo */
+.checklist input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  margin: 0.3rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--fill-primary);
+  cursor: pointer;
+}
+.checklist input[type='checkbox']:focus-visible {
+  outline: 2px solid var(--text-link);
+  outline-offset: 2px;
+}
+.checklist input[type='checkbox']:checked + span {
+  color: var(--text-dim);
+  text-decoration: line-through;
+  text-decoration-color: color-mix(in srgb, var(--text-dim) 60%, transparent);
+}
+
+/* Rótulos informativos (seções 1 e 5) — equivalentes aos .label-* existentes */
+.label-info {
+  color: var(--text-link);
+  border-color: color-mix(in srgb, var(--fill-primary) 55%, transparent);
+  background: color-mix(in srgb, var(--fill-primary) 12%, transparent);
+}
+.label-aviso {
+  color: var(--warn-text);
+  border-color: color-mix(in srgb, var(--warning) 55%, transparent);
+  background: color-mix(in srgb, var(--warning) 12%, transparent);
+}
+
 /* ---- Vídeos ---- */
 .video-wrapper, .video-embed-wrap {
   position: relative;
@@ -1991,6 +2157,15 @@ tbody tr:hover { background: color-mix(in srgb, var(--text) 4%, transparent); }
 [data-theme="light"] .label-ok   { color: #004d26; border-color: color-mix(in srgb, #047857 70%, transparent); background: color-mix(in srgb, #047857 25%, transparent); }
 [data-theme="light"] .label-parc { color: #92400e; border-color: color-mix(in srgb, #f59e0b 55%, transparent); background: color-mix(in srgb, #f59e0b 12%, transparent); }
 [data-theme="light"] .label-pend { color: #b91c1c; border-color: color-mix(in srgb, #ef4444 55%, transparent); background: color-mix(in srgb, #ef4444 12%, transparent); }
+/* Template didático (Seção 5) no tema claro: rótulos informativos e de aviso
+   com texto escurecido para AA sobre superfície branca. */
+[data-theme="light"] .label-info { color: #1d4ed8; border-color: color-mix(in srgb, #2563eb 55%, transparent); background: color-mix(in srgb, #2563eb 10%, transparent); }
+[data-theme="light"] .label-aviso { color: #92400e; border-color: color-mix(in srgb, #b45309 55%, transparent); background: color-mix(in srgb, #f59e0b 12%, transparent); }
+[data-theme="light"] .template-section { background: var(--surface); }
+[data-theme="light"] .exemplo-detalhado,
+[data-theme="light"] .pegadinha-item { background: var(--surface-elev); }
+[data-theme="light"] .table-wrapper > table th[scope='row'] { background: var(--surface-elev); color: var(--text-dim); }
+[data-theme="light"] .diferenca-gabarito { color: var(--text); }
 
 /* =============================================================================
    12) ACESSIBILIDADE

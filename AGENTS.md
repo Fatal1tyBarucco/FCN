@@ -22,11 +22,25 @@ Não há etapa de build nem dependências a instalar.
 
 ## Estrutura essencial
 
-- `apostila-ia/index.html` — entrada; 43 `<script src>` (23 de dados em `assets/data/` + 20 de JS em `assets/js/`). **Ordem de carregamento importa:** dados primeiro, depois `app.js`, `navigation.js`, `personalization.js` (logo após `navigation.js`), `ui-shell.js`, simuladores, `flashcards.js`, `quiz-engine.js`, `charts.js`, `search.js`/`audio.js` (defer).
-- `apostila-ia/assets/data/` — objetos JS literais: `curriculum*.js` (M1–M8), `flashcards_m*.js`, `questions.js` + `questions_m4..m8.js`, `references.js`. Sem `eval`, sem fetch externo.
-- `apostila-ia/assets/js/` — motores: `app.js` (SPA/abas), `navigation.js` (árvore + progresso), `state.js`, `storage.js`, `db-modules.js`, `ui-shell.js`, `simulators.js` + `simulator_*.js`, `flashcards.js`, `quiz-engine.js`, `charts.js`, `progress.js`, `search.js`, `audio.js`, `accessibility.js`.
+- `apostila-ia/index.html` — entrada; 52 `<script src>` (31 de dados em `assets/data/` + 21 de JS em `assets/js/`). **Ordem de carregamento importa:** dados primeiro (curriculum*, flashcards*, questions*, references*, enriquecimento_m*), depois `unidade-template.js`, `accessibility.js`, `storage.js`, `db-modules.js`, `state.js`, `app.js`, `navigation.js`, `personalization.js`, `ui-shell.js`, simuladores, `flashcards.js`, `quiz-engine.js`, `charts.js`, `progress.js`, `search.js`/`audio.js` (defer).
+- `apostila-ia/assets/data/` — objetos JS literais: `curriculum*.js` (M1–M8), `flashcards_m*.js`, `questions.js` + `questions_m4..m8.js`, `references.js`, `enriquecimento_m*.js` (overlay Seção 5, M1–M8). Sem `eval`, sem fetch externo.
+- `apostila-ia/assets/js/` — motores: `app.js` (SPA/abas), `navigation.js` (árvore + progresso + template Seção 5), `state.js`, `storage.js`, `db-modules.js`, `ui-shell.js`, `simulators.js` + `simulator_*.js`, `flashcards.js`, `quiz-engine.js`, `charts.js`, `progress.js`, `search.js`, `audio.js`, `accessibility.js`, `unidade-template.js` (renderizador template didático).
 - `apostila-ia/assets/css/styles.css` — folha de estilos canônica (variáveis `:root` + `[data-theme="light"]`). Não há bloco CSS inline em `index.html`.
-- `inventario/`, `matriz/` (raiz do repo) — governança; copiados para `apostila-ia/` no deploy do Pages para que links relativos funcionem também em `file://`.
+- `scripts/` — utilitários de geração e auditoria: `gerar-esqueleto-enriquecimento.mjs`, `gerar-lotes-fonte.mjs`, `mesclar-lotes.mjs`, `validar-lote.mjs`, `status-lotes.mjs`, `auditar-template-didatico.mjs`, `sincronizar-governanca.mjs`.
+- `inventario/`, `matriz/` (raiz do repo) — **espelhos** de `apostila-ia/inventario/` e `apostila-ia/matriz/` (ver Regra de Governança); copiados para `apostila-ia/` no deploy do Pages para que links relativos funcionem também em `file://`.
+
+## Regra de Governança — inventário e matriz são espelhos (obrigatória)
+
+- **Fonte de verdade:** `apostila-ia/inventario/INVENTARIO_CURRICULAR.md` e `apostila-ia/matriz/` (matriz CSV + relatório MD).
+- **Espelhos:** `inventario/INVENTARIO_CURRICULAR.md`, `matriz/MATRIZ_COBERTURA.csv`, `matriz/MATRIZ_COBERTURA.md` (raiz) e as cópias em `docs/`.
+- **Antes de cada publicação** (deploy no GitHub Pages) e a cada alteração do currículo/matriz, executar:
+
+```bash
+node scripts/sincronizar-governanca.mjs              # sincroniza + gera relatório de reconciliação
+node scripts/sincronizar-governanca.mjs --verificar  # só audita (exit 1 se houver divergência)
+```
+
+O script regenera a matriz estrutural a partir de `apostila-ia/assets/data/curriculum*.js`, promove o resultado à fonte canônica, espelha em `matriz/` e `docs/`, confere o SHA-256 de cada par canônico↔espelho e grava `docs/RECONCILIACAO_INVENTARIO_<data>.md` (SHA, mtime e diff). **Nunca publicar com pares divergentes**: o link do rodapé (`inventario/…`, `matriz/…`) precisa resolver dentro de `apostila-ia/` em `file://` e no Pages.
 
 ## Regras de implementação
 

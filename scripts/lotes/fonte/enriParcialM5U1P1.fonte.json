@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 1,
+    "unidadeTitulo": "5.1 Fundamentos de IA",
+    "parte": 1,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U1P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U1P1.js",
+    "idsCompletos": [
+      "m5-u1-t1-s1",
+      "m5-u1-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u1-t1-s1",
+      "titulo": "Abordagens de inteligência artificial: regras, aprendizado de máquina e deep learning",
+      "topicoTitulo": "IA, sistemas baseados em regras, aprendizado de máquina e aprendizado profundo",
+      "topicoId": "modulo-5-unidade-1-topico-1",
+      "unidadeTitulo": "5.1 Fundamentos de IA",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno distinguirá sistemas baseados em regras, aprendizado de máquina e aprendizado profundo pela origem do conhecimento e pelos requisitos de dados.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as três abordagens de IA: sistemas baseados em regras, aprendizado de máquina e aprendizado profundo; (b) quando usar cada uma; (c) vantagens e limitações; (d) a relação com dados e com explicabilidade. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre regras explícitas, ML e deep learning, e a escolha da abordagem conforme o problema; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de algoritmo e de dados. OBJETIVOS OBSERVÁVEIS: (1) distinguir as três abordagens; (2) justificar a escolha conforme o problema; (3) citar vantagens e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise de problema; escolha de abordagem de IA. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (dados, modelos); unidade 5.2 (ML); Módulo 6 (responsabilização). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: sistemas baseados em regras (IA simbólica) como conjuntos de regras explícitas definidas por especialistas, com alta explicabilidade e baixa adaptabilidade; aprendizado de máquina como indução de padrões a partir de dados, com adaptabilidade e dependência de dados de qualidade; aprendizado profundo como subárea do ML com redes neurais profundas, adequado a dados não estruturados (texto, imagem, áudio) e com alta capacidade de representação, mas com maior custo computacional e menor explicabilidade; escolha conforme o problema: regras quando o conhecimento é explícito e estável; ML quando há dados rotulados e padrão complexo; deep learning quando os dados são não estruturados e o volume é grande. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir \"programado\" de \"aprendido\".\n- Nível intermediário: comparar as três abordagens por explicabilidade e dados.\n- Nível avançado: escolher a abordagem conforme restrições de governança.\n- Nível especialista: integrar abordagem, custo e responsabilização.\nCOMPARAÇÕES CRÍTICAS:\n- regras x ML: regras são explícitas e auditáveis; ML se adapta a dados mas depende deles.\n- ML x deep learning: ML clássico é mais interpretável e exige menos dados; deep learning lida com não estruturado mas custa mais.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"deep learning substitui todo ML\" — Motivo: depende do problema e dos dados — Versão tecnicamente correta: escolher conforme o caso.\n- Afirmação errada: \"regras são obsoletas\" — Motivo: são auditáveis e estáveis — Versão tecnicamente correta: usadas quando o conhecimento é explícito.\n- Afirmação errada: \"ML não precisa de dados de qualidade\" — Motivo: a qualidade dos dados determina o teto — Versão tecnicamente correta: dados de qualidade são pré-requisito.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: IA simbólica, ML, deep learning, explicabilidade, dados.\n- Regras e mecanismos: a escolha depende do conhecimento disponível, dos dados e da necessidade de explicabilidade.\n- Exceções: abordagens híbridas combinam regras e ML.\n- Palavras-chave: regras, ML, deep learning, explicabilidade, dados, não estruturado.\n- Checklist de domínio: (1) Distingo as três abordagens? (2) Justifico a escolha? (3) Cito vantagens e limitações? (4) Relaciono com dados e explicabilidade?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um sistema baseado em regras? (2) O que é aprendizado de máquina? (3) O que é aprendizado profundo? (4) Quando usar cada abordagem? (5) Quais as limitações de cada uma?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Sistema de folha de ponto que rejeita registro sem aprovação do chefe: qual abordagem?",
+          "resposta": "Sistema baseado em regras: a regra ('sem aprovação, rejeitar') é conhecida, estável e deve ser auditável — não faz sentido treinar modelo estatístico para isso."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão quer classificar e-mails de atendimento em assuntos sem padrão fixo. Qual abordagem e por quê?",
+          "resposta": "Aprendizado de máquina supervisionado: os padrões são variáveis e há exemplos históricos rotulados; regras manuais cobririam poucos casos e quebrariam com o tempo. Requisito: conjunto de treinamento representativo e reavaliação periódica."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Todo sistema de inteligência artificial aprende dos dados.'",
+          "correcao": "Errado. Sistemas baseados em regras não aprendem: o conhecimento é escrito e versionado por humanos; só os modelos de aprendizado de máquina extraem conhecimento dos dados."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Deep learning é um subcampo do aprendizado de máquina.",
+          "resposta": "Certo. Deep learning usa redes neurais profundas dentro do campo do aprendizado de máquina, que por sua vez está dentro da inteligência artificial."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quando um sistema de regras é preferível a um modelo aprendido? A) Quando há milhões de exemplos rotulados; B) Quando a regra é conhecida, estável e exige auditoria; C) Quando o padrão é invisível a olho nu; D) Quando falta processamento.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir sistemas baseados em regras, aprendizado de máquina e aprendizado profundo pela origem do conhecimento e pelos requisitos de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "DNegkxwQJuY",
+          "titulo": "Seu primeiro código de Machine Learning com Python!",
+          "canal": "Didática Tech",
+          "urlOriginal": "https://www.youtube.com/watch?v=DNegkxwQJuY",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/DNegkxwQJuY",
+          "descricao": "Videoaula prática introdutória de Machine Learning usando Python e scikit-learn. Demonstra o fluxo completo: preparação de dados, divisão treino/teste, treinamento de modelo (regressão linear e árvore de decisão), avaliação com métricas (MAE, R²) e visualização de resultados. Explica conceitos de features, target, overfitting e generalização de forma acessível para iniciantes.",
+          "dataValidacao": "2026-10-24"
+        },
+        {
+          "id": "M8hoXE24PMo",
+          "titulo": "Você sabe o que é Deep Learning?",
+          "canal": "Curso em Vídeo",
+          "urlOriginal": "https://www.youtube.com/watch?v=M8hoXE24PMo",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/M8hoXE24PMo",
+          "descricao": "Videoaula explicativa sobre Deep Learning (aprendizado profundo), diferenciando-o de Machine Learning tradicional. Aborda redes neurais artificiais, camadas ocultas, função de ativação, backpropagation, tipos de arquiteturas (CNN para imagens, RNN/LSTM para sequências, Transformers para linguagem), requisitos de dados e hardware (GPU), e exemplos de aplicações (visão computacional, NLP, reconhecimento de fala).",
+          "dataValidacao": "2026-11-03"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá sistemas baseados em regras, aprendizado de máquina e aprendizado profundo pela origem do conhecimento e pelos requisitos de dados"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as três abordagens de IA: sistemas baseados em regras, aprendizado de máquina e aprendizado profundo; (b) quando usar cada uma; (c) vantagens e limitações; (d) a relação com dados e com explicabilidade. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre regras explícitas, ML e deep learning, e a escolha da abordagem conforme o problema; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de algoritmo e de dados. OBJ…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Abordagens de inteligência artificial: regras, aprendizado de máquina e deep learning",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Todo sistema de inteligência artificial aprende dos dados.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Sistemas baseados em regras não aprendem: o conhecimento é escrito e versionado por humanos; só os modelos de aprendizado de máquina extraem conhecimento dos dados."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Sistema de folha de ponto que rejeita registro sem aprovação do chefe: qual abordagem?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Sistema baseado em regras: a regra ('sem aprovação, rejeitar') é conhecida, estável e deve ser auditável — não faz sentido treinar modelo estatístico para isso.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão quer classificar e-mails de atendimento em assuntos sem padrão fixo. Qual abordagem e por quê?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Aprendizado de máquina supervisionado: os padrões são variáveis e há exemplos históricos rotulados; regras manuais cobririam poucos casos e quebrariam com o tempo. Requisito: conjunto de treinamento representativo e reavaliação periódica.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Todo sistema de inteligência artificial aprende dos dados.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Sistemas baseados em regras não aprendem: o conhecimento é escrito e versionado por humanos; só os modelos de aprendizado de máquina extraem conhecimento dos dados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u1-t1-s2",
+      "titulo": "Dados, atributos, modelos, parâmetros e inferência",
+      "topicoTitulo": "IA, sistemas baseados em regras, aprendizado de máquina e aprendizado profundo",
+      "topicoId": "modulo-5-unidade-1-topico-1",
+      "unidadeTitulo": "5.1 Fundamentos de IA",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno mapeará o vocabulário do ciclo do aprendizado (dados, atributos, alvo, modelo, parâmetros, inferência) para uma situação concreta.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) dados, atributos e sua qualidade; (b) modelos e parâmetros; (c) inferência; (d) a relação entre dados, modelo e resultado. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre dado, atributo, modelo, parâmetro e inferência; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de algoritmo. OBJETIVOS OBSERVÁVEIS: (1) definir dado, atributo, modelo, parâmetro e inferência; (2) explicar a relação entre eles; (3) citar a importância da qualidade dos dados. COMPETÊNCIAS DESENVOLVIDAS: leitura de pipeline de ML; análise de dados. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (abordagens); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: dado como registro observado do mundo; atributo (feature) como variável mensurável usada como entrada; modelo como função que mapeia entradas a saídas, com estrutura e parâmetros; parâmetros como valores ajustados durante o treinamento (pesos, coeficientes); inferência como aplicação do modelo treinado a novos dados para produzir previsão; a qualidade dos dados determina o teto de desempenho (garbage in, garbage out); a separação entre treino e inferência. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que modelo é uma função aprendida dos dados.\n- Nível intermediário: distinguir dado, atributo, modelo, parâmetro e inferência.\n- Nível avançado: analisar a qualidade dos dados e seu impacto.\n- Nível especialista: auditar um pipeline de dados a inferência.\nCOMPARAÇÕES CRÍTICAS:\n- parâmetro x hiperparâmetro: parâmetro é aprendido; hiperparâmetro é configurado antes do treino.\n- treino x inferência: treino ajusta parâmetros; inferência aplica o modelo.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"modelo aprende sozinho sem dados\" — Motivo: depende de dados — Versão tecnicamente correta: dados são insumo essencial.\n- Afirmação errada: \"parâmetro e atributo são a mesma coisa\" — Motivo: atributo é entrada; parâmetro é peso aprendido — Versão tecnicamente correta: conceitos distintos.\n- Afirmação errada: \"inferência é treinamento\" — Motivo: inferência usa modelo já treinado — Versão tecnicamente correta: fases distintas.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: dado, atributo, modelo, parâmetro, inferência, qualidade de dados.\n- Regras e mecanismos: modelo = função (entrada → saída) com parâmetros ajustados no treino; inferência aplica a função a novos dados.\n- Exceções: modelos pré-treinados permitem inferência com pouco ajuste (transfer learning).\n- Palavras-chave: dado, atributo, modelo, parâmetro, inferência, qualidade.\n- Checklist de domínio: (1) Defino dado, atributo, modelo, parâmetro e inferência? (2) Explico a relação entre eles? (3) Cito a importância da qualidade dos dados? (4) Distingo treino de inferência?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um atributo (feature)? (2) O que é um parâmetro do modelo? (3) O que é inferência? (4) Qual a relação entre dados e modelo? (5) Por que a qualidade dos dados importa?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Numa planilha de 10 mil linhas (uma por requerimento) com 12 colunas, quais são dados, atributos e alvo?",
+          "resposta": "Dados: as 10 mil observações. Atributos: as 11 colunas descritivas (tipo, área, anexos etc.). Alvo: a coluna que se quer prever (ex.: 'analisado em até 5 dias' — sim/não)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Equipe ajusta 'épocas de treinamento' e 'taxa de aprendizado'. Esses são parâmetros ou hiperparâmetros?",
+          "resposta": "Hiperparâmetros: controlam o processo de aprendizado e são definidos fora do loop de ajuste (por busca e validação). Os parâmetros (pesos) são ajustados automaticamente pelo otimizador."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Modelo com mais parâmetros é sempre melhor previsor.'",
+          "correcao": "Errado. Mais parâmetros aumentam a capacidade de memorizar o ruído do treinamento (overfitting); desempenho real é medido em dados nunca vistos."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Hiperparâmetros são aprendidos automaticamente durante o treinamento junto com os pesos.",
+          "resposta": "Errado. Hiperparâmetros (taxa de aprendizado, profundidade, tamanho do lote) são definidos externamente e ajustados por validação; os pesos é que são aprendidos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Aplicar modelo treinado a um caso novo para obter previsão é: A) treinamento; B) inferência; C) rotulagem; D) segmentação.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de mapear o vocabulário do ciclo do aprendizado (dados, atributos, alvo, modelo, parâmetros, inferência) para uma situação concreta, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "mapeará o vocabulário do ciclo do aprendizado (dados, atributos, alvo, modelo, parâmetros, inferência) para uma situação concreta"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) dados, atributos e sua qualidade; (b) modelos e parâmetros; (c) inferência; (d) a relação entre dados, modelo e resultado. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre dado, atributo, modelo, parâmetro e inferência; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de algoritmo. OBJETIVOS OBSERVÁVEIS: (1) definir dado, atributo, modelo, parâmetro e inferência; (2) explicar a relação entre eles; (3) citar a i…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Dados, atributos, modelos, parâmetros e inferência",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Modelo com mais parâmetros é sempre melhor previsor.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Mais parâmetros aumentam a capacidade de memorizar o ruído do treinamento (overfitting); desempenho real é medido em dados nunca vistos."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Numa planilha de 10 mil linhas (uma por requerimento) com 12 colunas, quais são dados, atributos e alvo?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dados: as 10 mil observações. Atributos: as 11 colunas descritivas (tipo, área, anexos etc.). Alvo: a coluna que se quer prever (ex.: 'analisado em até 5 dias' — sim/não).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Equipe ajusta 'épocas de treinamento' e 'taxa de aprendizado'. Esses são parâmetros ou hiperparâmetros?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Hiperparâmetros: controlam o processo de aprendizado e são definidos fora do loop de ajuste (por busca e validação). Os parâmetros (pesos) são ajustados automaticamente pelo otimizador.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Modelo com mais parâmetros é sempre melhor previsor.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Mais parâmetros aumentam a capacidade de memorizar o ruído do treinamento (overfitting); desempenho real é medido em dados nunca vistos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

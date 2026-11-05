@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 3,
+    "unidadeTitulo": "1.3 Microsoft Excel",
+    "parte": 4,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U3P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U3P4.js",
+    "idsCompletos": [
+      "modulo-1-unidade-3-topico-4-sub-1",
+      "modulo-1-unidade-3-topico-4-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-3-topico-4-sub-1",
+      "titulo": "PROCV, PROCH, PROCX, ÍNDICE e CORRESP; correspondência exata vs aproximada",
+      "topicoTitulo": "Pesquisa e referência; erros e fórmulas aninhadas",
+      "topicoId": "modulo-1-unidade-3-topico-4",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno utilizará funções de pesquisa e referência e distinguirá correspondência exata de aproximada.",
+      "conteudo": "PROCV (busca vertical), PROCH (busca horizontal), PROCX (busca moderna, exata por padrão, com argumento se_não_encontrado), ÍNDICE (retorna valor por linha/coluna), CORRESP (retorna posição). Correspondência exata: valor procurado deve ser igual. Aproximada: último valor <= alvo (crescente) ou primeiro >= alvo (decrescente) — exige ordenação; sem ordenação o resultado é imprevisível (limitação declarada). O simulador implementa busca real para essas funções. Erros: #N/A (não encontrado), #REF! (índice fora do intervalo), #VAL! (tipo incompatível).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Buscar preço do produto 'Caneta' em tabela (PROCV exato).",
+          "resposta": "=PROCV(\"Caneta\"; A1:B10; 2; FALSO) retorna o valor da 2ª coluna da linha onde a 1ª coluna = 'Caneta'; FALSO = correspondência exata."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Usar PROCX com valor não encontrado customizado.",
+          "resposta": "=PROCX(20; A1:A3; B1:B3; \"não há\") retorna B correspondente a 20 ou \"não há\" se não existir."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário usa PROCV aproximado (VERDADEIRO) em tabela não ordenada.",
+          "correcao": "Incorreto/impredizível: correspondência aproximada exige 1ª coluna numérica em ordem crescente. Em tabela desordenada o resultado pode ser qualquer valor <= alvo. Use FALSO para exata ou ordene a tabela."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual argumento do PROCV ativa correspondência exata? A) VERDADEIRO; B) FALSO; C) 0.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) ÍNDICE retorna a posição de um valor.",
+          "resposta": "Errado. ÍNDICE retorna o valor; CORRESP retorna a posição."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de utilizar funções de pesquisa e referência e distinguirá correspondência exata de aproximada, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "utilizará funções de pesquisa e referência e distinguirá correspondência exata de aproximada"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "PROCV (busca vertical), PROCH (busca horizontal), PROCX (busca moderna, exata por padrão, com argumento se_não_encontrado), ÍNDICE (retorna valor por linha/coluna), CORRESP (retorna posição). Correspondência exata: valor procurado deve ser igual. Aproximada: último valor <= alvo (crescente) ou primeiro >= alvo (decrescente) — exige ordenação; sem ordenação o resultado é imprevisível (limitação declarada). O simulador implementa busca real para essas funções. Erros: #N/A (não encontrado), #REF! (…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a PROCV, PROCH, PROCX, ÍNDICE e CORRESP; correspondência exata vs aproximada",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário usa PROCV aproximado (VERDADEIRO) em tabela não ordenada.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto/impredizível: correspondência aproximada exige 1ª coluna numérica em ordem crescente. Em tabela desordenada o resultado pode ser qualquer valor <= alvo. Use FALSO para exata ou ordene a tabela."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Buscar preço do produto 'Caneta' em tabela (PROCV exato).",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=PROCV(\"Caneta\"; A1:B10; 2; FALSO) retorna o valor da 2ª coluna da linha onde a 1ª coluna = 'Caneta'; FALSO = correspondência exata.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Usar PROCX com valor não encontrado customizado.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=PROCX(20; A1:A3; B1:B3; \"não há\") retorna B correspondente a 20 ou \"não há\" se não existir.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário usa PROCV aproximado (VERDADEIRO) em tabela não ordenada.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto/impredizível: correspondência aproximada exige 1ª coluna numérica em ordem crescente. Em tabela desordenada o resultado pode ser qualquer valor <= alvo. Use FALSO para exata ou ordene a tabela.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-3-topico-4-sub-2",
+      "titulo": "Células vazias, erros e fórmulas aninhadas",
+      "topicoTitulo": "Pesquisa e referência; erros e fórmulas aninhadas",
+      "topicoId": "modulo-1-unidade-3-topico-4",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno tratará células vazias, erros e fórmulas aninhadas no Excel.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o comportamento de células vazias em critérios, aritmética e concatenação; (b) os códigos de erro do Excel e o papel do SEERRO; (c) fórmulas aninhadas: ordem de avaliação de dentro para fora; (d) a avaliação preguiçosa de SE/SEERRO no simulador deste projeto e suas implicações; (e) o padrão SEERRO(PROCV(...); alternativa) como receita de robustez. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra diagnóstico de erros (#N/A, #DIV/0!, #VAL!) e previsão de resultados de fórmulas aninhadas; atribuir causa errada a um erro ou avaliar na ordem errada muda o gabarito. PRÉ-REQUISITOS: tipos de dados (tópico 3, sub-1); funções (tópico 3, sub-2). OBJETIVOS OBSERVÁVEIS: (1) prever o efeito de célula vazia por contexto; (2) associar erro à causa e neutralizá-lo com SEERRO; (3) avaliar fórmula aninhada passo a passo. COMPETÊNCIAS DESENVOLVIDAS: depuração de fórmulas; robustez de planilhas. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: funções de pesquisa (tópico 4, sub-1); desempenho e depuração (tópico 6, sub-2). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: célula vazia assume significados distintos por contexto — o coração das pegadinhas. Em aritmética, vazio vale zero (=A1+B1 com B1 vazia soma 0); em concatenação, vazio vale cadeia vazia (A1&\"x\" com A1 vazia resulta \"x\"); em critérios de funções condicionais (CONT.SE e irmãs), o vazio não casa com critérios numéricos no simulador deste projeto — diferença declarada em relação ao Excel real, no qual vazio pode casar com critério igual a zero; não se generalize de uma implementação para a outra. Erros são valores de tipo erro: #N/A (não encontrado — típico de PROCV/CORRESP), #DIV/0! (divisão por zero ou por vazio), #VAL! (tipo incompatível), #REF! (referência inválida), #NUM! (número inválido). SEERRO(valor; valor_se_erro) avalia o primeiro argumento; se resultar erro, retorna o segundo — a receita canônica =SEERRO(PROCV(\"X\";A1:B10;2;FALSO);\"não encontrado\") transforma #N/A em mensagem legível. Fórmula aninhada é função dentro de função; a avaliação procede de dentro para fora: em =SE(MÉDIA(A1:A5)>=7;\"aprovado\";\"reprovado\"), primeiro MÉDIA, depois a comparação, depois o SE. O simulador deste projeto avalia aninhamentos recursivamente e implementa SE/SEERRO com avaliação preguiçosa — só o ramo realmente usado é executado: num SE, apenas o ramo escolhido pela condição; num SEERRO, se o primeiro argumento não erra, o segundo nem é avaliado. Consequência prática: efeitos esperados de um ramo não avaliado não ocorrem (e erros nele não emergem); por outro lado, erro em argumento avaliado antes (ex.: MÉDIA de texto dentro do SE) é capturado por um SEERRO externo. Erros de entrada (sintaxe inválida detectada antes da execução) não são capturáveis por SEERRO — são rejeitados com mensagem de entrada.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer que vazio soma como zero e que #DIV/0! nasce de divisor zero/vazio.\n- Nível intermediário: encapsular PROCV em SEERRO; avaliar fórmula aninhada escrevendo o valor intermediário de cada camada.\n- Nível avançado: explicar a avaliação preguiçosa e prever quando um erro de um ramo não avaliado NÃO aparece; distinguir erro de execução de erro de entrada.\n- Nível especialista: desenhar política de robustez (SEERRO com mensagens informativas, checagem de vazios antes de divisões) e diagnosticar fórmula aninhada em cascata.\n\nCOMPARAÇÕES CRÍTICAS:\n- Vazio em aritmética x em critérios: vazio soma como 0, mas (no simulador) não casa com critérios numéricos — a alternativa que generaliza \"vazio é sempre zero\" está errada.\n- Erro de execução x erro de entrada: #N/A/#DIV/0! emergem durante o cálculo e são capturáveis por SEERRO; sintaxe inválida é rejeitada antes, com mensagem de entrada — confundir os níveis inverte a resposta sobre o que o SEERRO captura.\n- SE x SEERRO: SE desvia por condição lógica; SEERRO desvia por ocorrência de erro — usar SE para tratar erro exige SEERRO ou detecção prévia (funções de verificação do Excel real, fora do simulador).\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"SEERRO captura qualquer problema, inclusive fórmula mal escrita\" — Motivo: confunde erro de execução com erro de entrada — Versão tecnicamente correta: SEERRO captura erros de execução (#N/A, #DIV/0!...); sintaxe inválida é rejeitada antes da execução com mensagem de entrada.\n- Afirmação errada: \"num SE aninhado, os dois ramos são sempre calculados\" — Motivo: assume avaliação completa — Versão tecnicamente correta: no simulador, SE/SEERRO são preguiçosos — só o ramo escolhido é avaliado; erros no ramo não avaliado não emergem.\n- Afirmação errada: \"célula vazia casa com critério =0 nas funções condicionais\" — Motivo: transporta comportamento do Excel real ao simulador sem restrição — Versão tecnicamente correta: no simulador deste projeto, vazio nunca casa com critérios numéricos (limitação declarada); no Excel real o comportamento difere — não generalizar.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: célula vazia por contexto, códigos de erro, SEERRO, aninhamento, avaliação de dentro para fora, avaliação preguiçosa.\n- Regras e fórmulas: robustez → =SEERRO(PROCV(...);\"mensagem\"); divisão segura → checar divisor antes; diagnóstico → valores intermediários da camada mais interna.\n- Exceções: SEERRO não captura erro de entrada; ramos não avaliados não executam; comportamento de vazio em critérios difere entre simulador e Excel real.\n- Palavras-chave: vazio, #N/A, #DIV/0!, #VAL!, #REF!, SEERRO, aninhamento, preguiçoso, entrada inválida.\n- Checklist de domínio: prevejo vazio por contexto; associo erro à causa; neutralizo com SEERRO; avalio aninhado de dentro para fora; declaro os limites do simulador.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que resulta =A1&\"-fim\" quando A1 está vazia? (2) Qual função transforma #N/A de um PROCV numa mensagem legível e como se escreve? (3) Em =SE(MÉDIA(A1:A5)>=7;\"aprovado\";\"reprovado\"), qual camada avalia primeiro? (4) Um SEERRO externo captura erro de sintaxe? Explique. (5) No simulador, célula vazia casa com critério \">0\"? Justifique com o escopo documentado.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Evitar o #N/A de um PROCV quando o produto não existe na tabela.",
+          "resposta": "=SEERRO(PROCV(\"X\";A1:B10;2;FALSO);\"não encontrado\") — se o PROCV retornar #N/A, o SEERRO devolve a mensagem; se o PROCV encontra, retorna o valor normal. Padrão de robustez para pesquisas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Prever o resultado de =SE(MÉDIA(A1:A5)>=7;\"aprovado\";\"reprovado\") com A1:A5 = 8;7;9;6;8.",
+          "resposta": "Avaliação de dentro para fora: MÉDIA(8;7;9;6;8) = 7,6 → 7,6>=7 é VERDADEIRO → o SE escolhe o ramo \"aprovado\" e NÃO avalia \"reprovado\" (avaliação preguiçosa do simulador). Resultado: aprovado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Coluna de médias mensais exibe #DIV/0! nos meses sem lançamentos. Como tornar a coluna legível?",
+          "resposta": "Causa: divisor zero/vazio (célula vazia vale 0 na aritmética). Correção: encapsular =SEERRO(MÉDIA(A2:A10);\"sem lançamentos\") — quando não houver valores, a célula exibe a mensagem em vez do erro. Observação de escopo: para checagem explícita de vazio/contagem antes de dividir, o Excel real oferece funções de verificação; no simulador deste projeto, o padrão SEERRO é o recurso documentado para neutralizar erros de execução."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário espera que SEERRO capture #VAL! de texto não numérico e também fórmulas escritas com parêntese faltando.",
+          "correcao": "Parcialmente incorreto: SEERRO captura erros de execução — incluindo #VAL! gerado durante o cálculo (ex.: MÉDIA sobre texto avaliado antes). Mas fórmula com sintaxe inválida (parêntese faltando) é erro de entrada, rejeitado antes da execução com mensagem útil — o SEERRO não chega a ser avaliado nesse caso."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual função captura erros de execução e retorna um valor alternativo? A) SE; B) SEERRO; C) NÃO.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em critérios do simulador deste projeto, célula vazia casa com critério numérico 0.",
+          "resposta": "Errado. Limitação declarada: no simulador, vazio nunca casa com critérios numéricos; o comportamento do Excel real difere — não se generaliza entre implementações."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Em =SEERRO(PROCV(...);\"ausente\"), se o PROCV encontrar o valor, o texto \"ausente\": A) Também é avaliado e descartado; B) Não é avaliado (avaliação preguiçosa); C) Substitui o valor encontrado.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de prever o comportamento de células vazias por contexto, associar códigos de erro às causas, neutralizar erros com SEERRO e avaliar fórmulas aninhadas de dentro para fora considerando a avaliação preguiçosa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "tratará células vazias, erros e fórmulas aninhadas no Excel"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Células vazias: em critérios (CONT.SE etc.) nunca casam com critérios numéricos (vazio conta como 0 em '='0 no Excel real — diferença declarada); em operações aritméticas vazio vale 0; em concatenação vazio vale \"\". Erros: #N/A, #REF!, #VAL!, #DIV/0!, #NUM!. SEERRO captura erros e retorna valor alternativo. Fórmulas aninhadas: funções dentro de funções (ex.: =SEERRO(PROCV(...); \"não encontrado\")); avaliação passo a passo de dentro para fora. O simulador avalia fórmulas aninhadas recursivamente e…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Células vazias, erros e fórmulas aninhadas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário espera que SEERRO capture #VAL! de texto não numérico.",
+            "porqueErrada": "",
+            "versaoCorreta": "Certo no simulador: SEERRO captura qualquer erro (incluindo #VAL!). Mas se o erro ocorrer em argumento avaliado antes (ex.: MÉDIA de texto), SEERRO ao redor captura. Atenção: SEERRO não captura erros de entrada ('ERRO DE ENTRADA') levantados antes da execução."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Evitar #N/A em PROCV.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=SEERRO(PROCV(\"X\"; A1:B10; 2; FALSO); \"não encontrado\") — se PROCV retornar #N/A, SEERRO retorna o texto.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Fórmula aninhada: SE com MÉDIA.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=SE(MÉDIA(A1:A5)>=7; \"aprovado\"; \"reprovado\") — MÉDIA avaliada primeiro, depois SE.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário espera que SEERRO capture #VAL! de texto não numérico.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Certo no simulador: SEERRO captura qualquer erro (incluindo #VAL!). Mas se o erro ocorrer em argumento avaliado antes (ex.: MÉDIA de texto), SEERRO ao redor captura. Atenção: SEERRO não captura erros de entrada ('ERRO DE ENTRADA') levantados antes da execução.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

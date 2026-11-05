@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 3,
+    "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+    "parte": 1,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U3P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U3P1.js",
+    "idsCompletos": [
+      "m3-u3-t1-s1",
+      "m3-u3-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u3-t1-s1",
+      "titulo": "Princípios de netiqueta",
+      "topicoTitulo": "Etiqueta digital (netiqueta) em ambientes profissionais",
+      "topicoId": "modulo-3-unidade-3-topico-1",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno conhecerá princípios de etiqueta digital aplicáveis a ambientes profissionais.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é netiqueta; (b) princípios aplicáveis ao ambiente profissional; (c) erros comuns de forma e destinatários; (d) relação com a comunicação institucional. POR QUE O CONHECIMENTO É IMPORTANTE: a forma da mensagem afeta a interpretação e a imagem institucional; a prova cobra regras de convivência digital. PRÉ-REQUISITOS: uso de e-mail e mensagens instantâneas. OBJETIVOS OBSERVÁVEIS: (1) definir netiqueta; (2) aplicar princípios de clareza e respeito; (3) evitar erros como CAIXA ALTA e \"responder a todos\"; (4) adequar a forma ao contexto. COMPETÊNCIAS DESENVOLVIDAS: comunicação escrita profissional; autocontrole digital. GRAU DE DIFICULDADE: básico. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (tom e clareza); unidade 3.3 (padrões institucionais); unidade 5.2 (exposição por e-mail). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: netiqueta é o conjunto de convenções de cortesia e eficiência na comunicação mediada por tecnologia. No ambiente profissional, ela se traduz em: usar assunto descritivo e específico; ser claro e conciso; evitar CAIXA ALTA (que, na leitura escrita, equivale a gritar); moderar exclamações; responder em prazo razoável; manter a linha de assunto coerente para preservar o histórico (thread); citar apenas o trecho necessário ao responder; não acionar \"responder a todos\" sem necessidade; não enviar anexos pesados sem aviso; e manter respeito mesmo em discordância. A netiqueta difere da etiqueta presencial porque a ausência de tom de voz e de expressão facial aumenta a ambiguidade: ironia e sarcasmo são frequentemente mal interpretados por escrito. A forma da mensagem também tem efeito institucional — em órgãos públicos, a comunicação representa a instituição e deve observar impessoalidade e clareza.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer o efeito da CAIXA ALTA e do assunto vago.\n- Nível intermediário: reescrever uma mensagem aplicando clareza, concisão e respeito.\n- Nível avançado: decidir quando usar \"responder a todos\" e como citar histórico sem expor dados.\n- Nível especialista: revisar um fluxo de comunicação de equipe e propor acordos de netiqueta.\nCOMPARAÇÕES CRÍTICAS:\n- comunicação presencial x escrita: a escrita perde tom e expressão; por isso exige mais cuidado com ambiguidade.\n- \"responder\" x \"responder a todos\": o segundo inclui toda a lista e pode expor ou poluir — muda o efeito da mensagem.\n- informalidade x profissionalismo: o registro informal cabe no chat interno, mas não na comunicação externa.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"CAIXA ALTA apenas dá ênfase, é neutra.\" — Motivo: por convenção, equivale a gritar — Versão tecnicamente correta: use negrito ou reformulação para ênfase.\n- Afirmação errada: \"Responder a todos demonstra atenção.\" — Motivo: sobrecarrega e expõe contatos — Versão tecnicamente correta: usar apenas os destinatários pertinentes.\n- Afirmação errada: \"Ironia é aceitável por escrito.\" — Motivo: perde-se o tom — Versão tecnicamente correta: evitar ironia e sarcasmo na comunicação profissional.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: netiqueta, clareza, concisão, assunto descritivo, thread, respeito.\n- Regras e fórmulas: mensagem eficaz = destinatário certo + assunto claro + ação explícita.\n- Exceções: o registro varia conforme o canal e o público.\n- Palavras-chave: cortesia, CAIXA ALTA, responder a todos, ambiguidade, tom.\n- Checklist de domínio: (1) Defino netiqueta? (2) Aplico clareza? (3) Evito erros comuns? (4) Adequo a forma ao contexto?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é netiqueta? (2) Por que CAIXA ALTA é inadequada? (3) Quando usar \"responder a todos\"? (4) Por que a escrita amplia a ambiguidade? (5) Como dar ênfase sem CAIXA ALTA?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que evitar CAIXA ALTA em e-mails profissionais?",
+          "resposta": "CAIXA ALTA é interpretada como grito/agressividade. Use apenas para ênfase pontual ou siglas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um colega enviou e-mail com assunto 'URGENTE!!!'. Como responder adequadamente?",
+          "resposta": "Responder com calma, avaliar urgência real, evitar ecoar o tom agressivo e, se necessário, sugerir canal síncrono (telefone/reunião) para questões urgentes."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Responder a todos é sempre a prática correta.'",
+          "correcao": "Errado. Responder a todos (Reply All) quando apenas o remetente precisa da resposta gera ruído e pode expor informações a quem não deveria recebê-las."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Netiqueta inclui evitar o uso excessivo de CAIXA ALTA.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática NÃO é recomendada em e-mail profissional? A) Assunto descritivo; B) Responder a todos sempre; C) Citar apenas o necessário; D) Evitar anexos pesados sem aviso.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de conhecer princípios de etiqueta digital aplicáveis a ambientes profissionais, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "conhecerá princípios de etiqueta digital aplicáveis a ambientes profissionais"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Netiqueta (etiqueta da rede) são regras de cortesia e profissionalismo na comunicação digital. Princípios: ser claro e conciso; usar assunto descritivo; evitar CAIXA ALTA (equivale a gritar); não abusar de exclamações; responder em prazo razoável; manter thread (não alterar assunto indevidamente); citar apenas o necessário; não enviar anexos pesados sem aviso; evitar responder a todos quando não necessário; ser respeitoso mesmo em discordâncias.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Princípios de netiqueta",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Responder a todos é sempre a prática correta.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Responder a todos (Reply All) quando apenas o remetente precisa da resposta gera ruído e pode expor informações a quem não deveria recebê-las."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que evitar CAIXA ALTA em e-mails profissionais?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "CAIXA ALTA é interpretada como grito/agressividade. Use apenas para ênfase pontual ou siglas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um colega enviou e-mail com assunto 'URGENTE!!!'. Como responder adequadamente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Responder com calma, avaliar urgência real, evitar ecoar o tom agressivo e, se necessário, sugerir canal síncrono (telefone/reunião) para questões urgentes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Responder a todos é sempre a prática correta.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Responder a todos (Reply All) quando apenas o remetente precisa da resposta gera ruído e pode expor informações a quem não deveria recebê-las.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u3-t1-s2",
+      "titulo": "Comunicação síncrona versus assíncrona",
+      "topicoTitulo": "Etiqueta digital (netiqueta) em ambientes profissionais",
+      "topicoId": "modulo-3-unidade-3-topico-1",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno distinguirá comunicação síncrona e assíncrona e escolherá o canal adequado.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que distingue comunicação síncrona de assíncrona; (b) vantagens e custos de cada modo; (c) critérios de escolha do canal; (d) riscos como fadiga de reuniões e atraso de decisões. POR QUE O CONHECIMENTO É IMPORTANTE: escolher o modo errado gera retrabalho e perda de registro; a prova cobra a distinção e a adequação ao cenário. PRÉ-REQUISITOS: conhecimento dos canais (e-mail, chat, reunião). OBJETIVOS OBSERVÁVEIS: (1) definir síncrono e assíncrono; (2) indicar quando cada modo é preferível; (3) relacionar com fuso horário e registro; (4) reconhecer riscos de excesso. COMPETÊNCIAS DESENVOLVIDAS: escolha de canal; gestão de tempo e de colaboração. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (netiqueta); unidade 3.3 (escolha de canais); unidade 2.1 (calendários). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: comunicação síncrona ocorre em tempo real — reunião, chamada, chat ao vivo — e exige disponibilidade simultânea; é adequada para decisões complexas que se beneficiam de debate imediato e para urgências. Comunicação assíncrona ocorre com defasagem — e-mail, mensagem gravada, documento colaborativo — e permite reflexão, registro durável e participação em fusos diferentes. A escolha do canal deve considerar urgência, complexidade, necessidade de registro e disponibilidade dos participantes. O excesso de reuniões síncronas produz fadiga e reduz o tempo de trabalho focado; o excesso de mensagens assíncronas pode atrasar decisões e gerar interpretações divergentes. A prática recomendada é reservar o síncrono para o que realmente exige debate e usar o assíncrono para informar, documentar e decidir com registro. O registro durável é vantagem central do assíncrono em contexto institucional e de auditoria.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir tempo real de defasado.\n- Nível intermediário: escolher o modo conforme urgência, complexidade e registro.\n- Nível avançado: desenhar o fluxo (assíncrono prepara, síncrono decide, assíncrono documenta).\n- Nível especialista: redesenhar a rotina de uma equipe distribuída reduzindo reuniões sem perder decisão.\nCOMPARAÇÕES CRÍTICAS:\n- síncrono x assíncrono: síncrono é imediato e exige presença; assíncrono é refletido e registrado — a escolha muda o registro e a inclusão.\n- reunião x documento: a reunião decide rápido, mas não deixa registro automático; o documento registra, mas demora mais.\n- urgência x complexidade: urgente costuma pedir síncrono; complexo pode exigir preparação assíncrona prévia.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Sempre que possível, deve-se reunir.\" — Motivo: gera fadiga e custo — Versão tecnicamente correta: reunir quando há necessidade de debate.\n- Afirmação errada: \"Assíncrono é sempre mais lento.\" — Motivo: ganha em inclusão e registro — Versão tecnicamente correta: o tempo depende do fluxo desenhado.\n- Afirmação errada: \"Chat ao vivo é assíncrono por ser escrito.\" — Motivo: o critério é o tempo, não o meio — Versão tecnicamente correta: chat ao vivo é síncrono.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: síncrono, assíncrono, canal, registro, fuso, fadiga de reuniões.\n- Regras e fórmulas: urgência+complexidade+registro+disponibilidade definem o canal.\n- Exceções: o meio não determina o modo; o critério é a simultaneidade.\n- Palavras-chave: tempo real, defasagem, registro, inclusão, decisão.\n- Checklist de domínio: (1) Defino os modos? (2) Escolho por critérios? (3) Reconheço riscos? (4) Desenho o fluxo?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que define o modo síncrono? (2) Quando o assíncrono é preferível? (3) Que risco o excesso de reuniões gera? (4) Chat por escrito é sempre assíncrono? (5) Cite um critério de escolha.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quando usar comunicação síncrona?",
+          "resposta": "Para decisões complexas, negociações, feedback sensível, emergências e situações que exigem troca rápida de informações."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma equipe distribuída em 3 fusos horários precisa aprovar um relatório. Qual canal?",
+          "resposta": "Assíncrono (documento colaborativo com comentários + e-mail de fechamento) para permitir participação de todos sem exigir horário comum; reservar síncrono apenas para pontos de impasse."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Toda decisão deve ser tomada em reunião síncrona.'",
+          "correcao": "Errado. Muitas decisões podem ser assíncronas, com registro e rastreabilidade; reuniões devem ser reservadas para casos que exigem interação em tempo real."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Comunicação assíncrona favorece participantes em diferentes fusos horários.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual canal é assíncrono? A) Videoconferência; B) Telefone; C) E-mail; D) Chat ao vivo.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir comunicação síncrona e assíncrona e escolherá o canal adequado, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá comunicação síncrona e assíncrona e escolherá o canal adequado"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Síncrona: ocorre em tempo real (reunião, chat ao vivo, telefone) — exige disponibilidade simultânea, adequada para decisões complexas e emergências. Assíncrona: ocorre com defasagem (e-mail, mensagem gravada, documento colaborativo) — permite reflexão, registro e fuso horário diferente. Escolha do canal: urgência, complexidade, necessidade de registro, disponibilidade dos participantes. Excesso de reuniões síncronas gera fadiga; excesso de e-mails assíncronos pode atrasar decisões.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comunicação síncrona versus assíncrona",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Toda decisão deve ser tomada em reunião síncrona.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Muitas decisões podem ser assíncronas, com registro e rastreabilidade; reuniões devem ser reservadas para casos que exigem interação em tempo real."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quando usar comunicação síncrona?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Para decisões complexas, negociações, feedback sensível, emergências e situações que exigem troca rápida de informações.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma equipe distribuída em 3 fusos horários precisa aprovar um relatório. Qual canal?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Assíncrono (documento colaborativo com comentários + e-mail de fechamento) para permitir participação de todos sem exigir horário comum; reservar síncrono apenas para pontos de impasse.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Toda decisão deve ser tomada em reunião síncrona.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Muitas decisões podem ser assíncronas, com registro e rastreabilidade; reuniões devem ser reservadas para casos que exigem interação em tempo real.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

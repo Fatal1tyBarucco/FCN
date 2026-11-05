@@ -231,20 +231,38 @@ if (typeof App === 'undefined') {
       }
     },
 
+    /* Teoria: DB.modules[].theory já é montado via FCNTemplate.renderizarUnidade
+       (db-modules.js). Quando o módulo existe mas o theory veio vazio — ausência
+       de dados curriculares carregados — reconstrói aqui pelo template para que
+       nenhuma superfície de conteúdo fique sem renderização. */
     loadTeoria(moduleId) {
       const host = document.getElementById('teoria-host');
       if (!host) return;
       const mod = (typeof DB !== 'undefined' && DB.modules) ? DB.modules.find(m => m.id === moduleId) : null;
       let html = '';
       if (mod) {
-        html += '<div class="card">' + (mod.theory || '') + '</div>';
+        let theory = mod.theory;
+        if ((!theory || !String(theory).trim()) && window.FCNTemplate && typeof window.FCNTemplate.renderizarUnidade === 'function') {
+          theory = this.teoriaViaTemplate(mod);
+        }
+        if (!theory || !String(theory).trim()) theory = '<p>Conteúdo curricular real não disponível para este módulo nos dados carregados.</p>';
+        html += '<div class="card teoria-conteudo">' + theory + '</div>';
         if (Array.isArray(mod.videos) && mod.videos.length) {
           html += '<h3>' + (typeof window !== 'undefined' && window.icone ? window.icone('video') : '') + ' Vídeos de Apoio</h3>';
           mod.videos.forEach(v => {
             const tituloRaw = String(v.title || 'Vídeo de apoio').trim() || 'Vídeo de apoio';
-          const titulo = tituloRaw.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-          const ariaLabel = tituloRaw.replace(/"/g, '&quot;');
-          html += '<div class="card"><h4>' + titulo + '</h4><div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/' + (v.id || '') + '" title="' + titulo + '" aria-label="' + ariaLabel + '" frameborder="0" allowfullscreen loading="lazy"></iframe></div></div>';
+            const titulo = this.escHtml(tituloRaw);
+            const videoId = String(v.id || '').replace(/[^A-Za-z0-9_-]/g, '');
+            /* Atributos obrigatórios do embed (Seção 12.2 do prompt mestre):
+               dominio youtube-nocookie.com, loading="lazy", referrerpolicy
+               "strict-origin-when-cross-origin", allowfullscreen e rotulos
+               title/aria-label preenchidos. */
+            html += '<div class="card"><h4>' + titulo + '</h4><div class="video-wrapper">' +
+              '<iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/' + videoId + '"' +
+              ' title="' + titulo + '" aria-label="' + titulo + '"' +
+              ' loading="lazy" referrerpolicy="strict-origin-when-cross-origin"' +
+              ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"' +
+              ' allowfullscreen></iframe></div></div>';
           });
         }
       } else {
@@ -258,6 +276,51 @@ if (typeof App === 'undefined') {
       return String(texto == null ? '' : texto)
         .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    },
+
+    /* Renderiza a teoria do módulo direto pelo template didático (Seção 5),
+     * a partir de window.apostilaDados.curriculum. Cada tópico/subtópico é
+     * emitido UMA vez pelo template, que também emite <h4> (título) e o
+     * objetivo de aprendizagem. Usado apenas quando DB.modules[].theory
+     * está vazio (módulo sem dados). Sem eval, sem conteúdo inventado. */
+    teoriaViaTemplate(mod) {
+      const chave = (mod && mod.key) || null;
+      const dados = (typeof window !== 'undefined' && window.apostilaDados && window.apostilaDados.curriculum)
+        ? window.apostilaDados.curriculum : null;
+      const modulo = (chave && dados && dados[chave]) ? dados[chave] : null;
+      if (!modulo || !Array.isArray(modulo.unidades)) return '';
+      let html = '';
+      modulo.unidades.forEach((u) => {
+        html += '<h2>' + this.escHtml(u.titulo || '') + '</h2>';
+        const topicos = Array.isArray(u.topicos) ? u.topicos : [];
+        topicos.forEach((t) => {
+          const subs = Array.isArray(t.subtopicos) ? t.subtopicos : [];
+          if (subs.length === 0) {
+            const subObj = {
+              titulo: t.titulo || '',
+              objetivoAprendizagem: t.objetivoAprendizagem || null,
+              conteudo: t.conteudo || null,
+              exemplos: Array.isArray(t.exemplos) ? t.exemplos : [],
+              exercicios: Array.isArray(t.exercicios) ? t.exercicios : [],
+              criterioDominio: t.criterioDominio || null
+            };
+            html += window.FCNTemplate.renderizarUnidade(subObj, t.id || ('modulo-' + t.id));
+          } else {
+            subs.forEach((st) => {
+              const subObj = {
+                titulo: st.titulo || '',
+                objetivoAprendizagem: st.objetivoAprendizagem || null,
+                conteudo: st.conteudo || null,
+                exemplos: Array.isArray(st.exemplos) ? st.exemplos : [],
+                exercicios: Array.isArray(st.exercicios) ? st.exercicios : [],
+                criterioDominio: st.criterioDominio || null
+              };
+              html += window.FCNTemplate.renderizarUnidade(subObj, st.id);
+            });
+          }
+        });
+      });
+      return html;
     },
 
     /* Interpreta o texto Mermaid real gerado por db-modules.js (graph TD + nós/arestas).
@@ -424,7 +487,7 @@ if (typeof App === 'undefined') {
           orig.style.display = '';
         }
       } else {
-        host.innerHTML = '<div class="card"><h3>Simulador em breve</h3><p>Simulador interativo ainda não implementado para este módulo.</p></div>';
+        host.innerHTML = '<div class="card"><h3>Simulador dedicado</h3><p>Este módulo não possui simulador dedicado na Seção 7. Use as abas de conteúdo, questões e flashcards para praticar.</p></div>';
       }
     },
 

@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 3,
+    "unidadeTitulo": "1.3 Microsoft Excel",
+    "parte": 1,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U3P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U3P1.js",
+    "idsCompletos": [
+      "modulo-1-unidade-3-topico-1-sub-1",
+      "modulo-1-unidade-3-topico-1-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-3-topico-1-sub-1",
+      "titulo": "Células, intervalos e referências de intervalo",
+      "topicoTitulo": "Pasta de trabalho, planilhas, células, intervalos e tabelas",
+      "topicoId": "modulo-1-unidade-3-topico-1",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá a estrutura de pasta de trabalho, planilhas, células e intervalos no Excel.",
+      "conteudo": "Pasta de trabalho (workbook) é o arquivo .xlsx que contém uma ou mais planilhas (worksheets). Cada planilha é uma grade de células identificadas por coluna (letra) e linha (número), ex.: A1, B10. Intervalo é um conjunto contínuo de células (A1:B5, A1:A10). Referência de intervalo pode ser usada em fórmulas (SOMA(A1:A10)). O simulador Excel documentado neste projeto (assets/js/simulators.js) suporta referências A1, absolutas ($A$1), mistas ($A1, A$1) e intervalos A1:B5, com recálculo automático; tabelas estruturadas (Tabela1[Coluna]) e nomes definidos não são suportados (limitação declarada).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar a célula na coluna C, linha 5.",
+          "resposta": "C5 (coluna C, linha 5). Intervalo C5:C5 é a própria célula; intervalo C1:C5 inclui C5."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Somar os valores de A1 a A5.",
+          "resposta": "=SOMA(A1:A5) — referência de intervalo contínuo; equivalente a =SOMA(A1;A2;A3;A4;A5) em sintaxe pt-BR."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário escreve =SOMA(A1;B5) esperando somar A1 até B5.",
+          "correcao": "Incorreto: ';' separa argumentos, não define intervalo. Para intervalo contínuo use ':' (=SOMA(A1:B5)). =SOMA(A1;B5) soma apenas A1 e B5."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual referência define um intervalo contínuo de A1 a D10? A) A1;D10; B) A1:D10; C) A1..D10.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Uma pasta de trabalho pode conter várias planilhas.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender a estrutura de pasta de trabalho, planilhas, células e intervalos no Excel, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "ZVURQLXZtIc",
+          "titulo": "Curso Excel #01 - Como surgiu o Excel?",
+          "canal": "Curso em Vídeo",
+          "urlOriginal": "https://www.youtube.com/watch?v=ZVURQLXZtIc",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ZVURQLXZtIc",
+          "descricao": "Vídeo introdutório sobre a história e origem do Microsoft Excel, explicando como surgiu a primeira planilha eletrônica (VisiCalc), a evolução para o Lotus 1-2-3 e o desenvolvimento do Excel pela Microsoft. Aborda os conceitos fundamentais de células, linhas, colunas e a revolução que as planilhas trouxeram para o processamento de dados em escritórios.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá a estrutura de pasta de trabalho, planilhas, células e intervalos no Excel"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Pasta de trabalho (workbook) é o arquivo .xlsx que contém uma ou mais planilhas (worksheets). Cada planilha é uma grade de células identificadas por coluna (letra) e linha (número), ex.: A1, B10. Intervalo é um conjunto contínuo de células (A1:B5, A1:A10). Referência de intervalo pode ser usada em fórmulas (SOMA(A1:A10)). O simulador Excel documentado neste projeto (assets/js/simulators.js) suporta referências A1, absolutas ($A$1), mistas ($A1, A$1) e intervalos A1:B5, com recálculo automático; …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Células, intervalos e referências de intervalo",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário escreve =SOMA(A1;B5) esperando somar A1 até B5.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: ';' separa argumentos, não define intervalo. Para intervalo contínuo use ':' (=SOMA(A1:B5)). =SOMA(A1;B5) soma apenas A1 e B5."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar a célula na coluna C, linha 5.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "C5 (coluna C, linha 5). Intervalo C5:C5 é a própria célula; intervalo C1:C5 inclui C5.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Somar os valores de A1 a A5.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=SOMA(A1:A5) — referência de intervalo contínuo; equivalente a =SOMA(A1;A2;A3;A4;A5) em sintaxe pt-BR.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário escreve =SOMA(A1;B5) esperando somar A1 até B5.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: ';' separa argumentos, não define intervalo. Para intervalo contínuo use ':' (=SOMA(A1:B5)). =SOMA(A1;B5) soma apenas A1 e B5.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-3-topico-1-sub-2",
+      "titulo": "Tabelas estruturadas e referências estruturadas",
+      "topicoTitulo": "Pasta de trabalho, planilhas, células, intervalos e tabelas",
+      "topicoId": "modulo-1-unidade-3-topico-1",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá tabelas estruturadas (ListObjects) e suas referências estruturadas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é uma tabela estruturada no Excel (conversão de intervalo em tabela com cabeçalho e filtros); (b) o que são referências estruturadas e como diferem das referências A1; (c) o benefício central: fórmulas que acompanham a expansão da tabela; (d) o escopo do simulador Excel deste projeto, que não executa referências estruturadas. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a sintaxe Tabela[Coluna] e o comportamento de expansão automática; confundir referência estruturada com referência de intervalo, ou prometer suporte inexistente no simulador, muda o gabarito. PRÉ-REQUISITOS: subtópico 1 (células, intervalos e referências). OBJETIVOS OBSERVÁVEIS: (1) converter um intervalo em tabela estruturada; (2) escrever e ler uma referência estruturada; (3) explicar o ganho de manutenção; (4) declarar corretamente a limitação do simulador. COMPETÊNCIAS DESENVOLVIDAS: modelagem de dados tabulares; comunicação honesta de limitações de ferramenta. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: subtópico 1 (intervalos A1); unidade 1.3 tópico 5 (tabelas dinâmicas); unidade 1.3 tópico 6 (simulador e escopo). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: tabela estruturada é um intervalo de dados convertido em objeto de tabela (Inserir > Tabela ou Ctrl+T, marcando que a tabela tem cabeçalhos). A conversão traz: cabeçalhos de coluna fixados, filtros automáticos, formatação consistente e expansão automática — ao digitar na linha imediatamente abaixo, a tabela incorpora a linha, e fórmulas que a referenciam acompanham o crescimento. Referência estruturada é a sintaxe que nomeia a tabela e a coluna em vez de endereços: Tabela1[Quantidade] refere a coluna Quantidade inteira; Tabela1[#Cabeçalhos] e Tabela1[#Totais] são exemplos de partes especiais da tabela. Motivação: fórmulas legíveis e autoreparáveis — =SOMA(Vendas[Quantidade]) continua correta quando a tabela ganha linhas, enquanto =SOMA(A2:A100) exigiria ajuste manual. Propriedade essencial: a referência estruturada aponta ao dado lógico (coluna), não à posição física; mover a tabela não quebra a fórmula. Limitações e condições de validade: o simulador Excel documentado neste projeto suporta referências A1 (relativas, absolutas, mistas) e intervalos, e não suporta tabelas estruturadas nem nomes definidos (limitação declarada em assets/js/simulators.js) — o conteúdo aqui é didático para provas teóricas, e o simulador rejeita essas sintaxes com mensagem de erro.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: converter um intervalo com cabeçalho em tabela (Ctrl+T) e observar os filtros.\n- Nível intermediário: escrever =SOMA(Vendas[Quantidade]) e comparar com =SOMA(A2:A100); adicionar uma linha e verificar qual fórmula acompanhou.\n- Nível avançado: usar partes especiais da tabela e explicar por que a referência estruturada sobrevive a movimentações da tabela.\n- Nível especialista: diagnosticar fórmula que \"perde linhas novas\" (intervalo fixo versus referência estruturada) e decidir quando adotar tabela estruturada como padrão de projeto de planilha.\n\nCOMPARAÇÕES CRÍTICAS:\n- Referência A1 x referência estruturada: A1 aponta posição física (A2:A100) e não acompanha inserções fora do intervalo; a estruturada aponta coluna lógica (Vendas[Quantidade]) e expande junto — em questão sobre fórmula que continua correta após inserção de linhas, o gabarito é a estruturada.\n- Intervalo comum x tabela estruturada: intervalo comum não tem filtros automáticos nem expansão; a tabela traz ambos por construção — trocar os conceitos inverte a resposta sobre comportamento ao adicionar dados.\n- Conceito real x simulador: no Excel real a sintaxe estruturada funciona; no simulador deste projeto ela não é suportada (limitação declarada) — prometer que o simulador executa Tabela1[Coluna] é erro factual.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"as tabelas estruturadas expandem automaticamente em qualquer digitação ao redor\" — Motivo: generalização — Versão tecnicamente correta: a expansão automática ocorre ao digitar na linha/coluna imediatamente adjacente ao corpo da tabela; edições distantes não alteram a tabela.\n- Afirmação errada: \"referência estruturada é o mesmo que intervalo nomeado\" — Motivo: troca de conceitos semelhantes — Versão tecnicamente correta: nome definido aponta um intervalo fixo escolhido pelo usuário; a referência estruturada pertence à tabela e acompanha suas colunas e expansão.\n- Afirmação errada: \"o simulador Excel do projeto calcula =SOMA(Vendas[Quantidade])\" — Motivo: promessa fora do escopo documentado — Versão tecnicamente correta: o simulador suporta referências A1 e intervalos; tabelas estruturadas estão fora do escopo documentado e geram erro de entrada.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: tabela estruturada, cabeçalhos, filtros automáticos, expansão automática, referência estruturada, coluna lógica.\n- Regras e fórmulas: Inserir > Tabela (Ctrl+T); sintaxe Tabela[Coluna]; fórmulas sobre colunas acompanham a expansão.\n- Exceções: expansão ocorre na adjacência imediata; simulador do projeto não suporta tabelas estruturadas nem nomes definidos.\n- Palavras-chave: tabela estruturada, ListObject, referência estruturada, Tabela[Coluna], Ctrl+T, expansão automática.\n- Checklist de domínio: converto intervalo em tabela; escrevo referência estruturada; explico o ganho de manutenção; declaro a limitação do simulador corretamente.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como converter A1:D100 em tabela estruturada e o que muda na planilha? (2) Escreva a fórmula que soma a coluna Quantidade da tabela Vendas. (3) Por que a referência estruturada continua correta após inserir 10 linhas na tabela? (4) Qual a diferença entre nome definido e referência estruturada? (5) O simulador deste projeto executa referências estruturadas? Justifique com o escopo documentado.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Converter o intervalo A1:D100 (com cabeçalhos na linha 1) em tabela estruturada.",
+          "resposta": "Selecionar A1:D100 > Inserir > Tabela (ou Ctrl+T) > confirmar que a tabela tem cabeçalhos > OK. A partir daí a região ganha filtros automáticos, formatação de tabela e passa a aceitar referências estruturadas pelo nome da tabela e das colunas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Planilha de vendas: a tabela chama-se Vendas e recebe 15 novas linhas por mês; o total precisa continuar correto sem manutenção.",
+          "resposta": "Fórmula: =SOMA(Vendas[Quantidade]). Por ser referência estruturada, ela abrange a coluna lógica inteira: quando as 15 linhas forem adicionadas (dentro/adjacentes à tabela), o total atualiza sem editar a fórmula. Com =SOMA(A2:A100), as linhas 101 em diante ficariam fora do intervalo — o total subestimaria as vendas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Auditoria constatou fórmulas de total que \"esquecem\" as linhas novas adicionadas todo mês. Diagnóstico e correção.",
+          "resposta": "Diagnóstico: os totais usam intervalos fixos em A1 (=SOMA(A2:A100)), que não acompanham inserções além da linha 100. Correção: converter o intervalo em tabela estruturada (Ctrl+T) e substituir por =SOMA(Vendas[Quantidade]); a referência à coluna lógica expande junto com a tabela, eliminando a manutenção mensal e o risco de total subestimado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que referências estruturadas funcionam no simulador Excel deste projeto.",
+          "correcao": "Incorreto: o simulador suporta apenas referências A1 (relativas, absolutas e mistas) e intervalos; tabelas estruturadas e nomes definidos estão fora do escopo documentado (limitação declarada em assets/js/simulators.js) e produzem erro de entrada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Tabelas estruturadas expandem automaticamente ao adicionar linhas na região imediatamente adjacente à tabela.",
+          "resposta": "Certo. A expansão automática cobre digitações na linha/coluna imediatamente abaixo/ao lado do corpo da tabela; edições distantes não incorporam a tabela."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual sintaxe é de referência estruturada? A) A1:B10; B) Vendas[Quantidade]; C) $A$1.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Após converter o intervalo em tabela \"Vendas\", a fórmula que permanece correta mesmo com 20 linhas novas é: A) =SOMA(A2:A120); B) =SOMA(Vendas[Quantidade]); C) =SOMA($A$2:$A$100).",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de converter um intervalo em tabela estruturada, escrever referências estruturadas no formato Tabela[Coluna] e explicar o ganho de manutenção frente a intervalos fixos, declarando corretamente a limitação do simulador, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá tabelas estruturadas (ListObjects) e suas referências estruturadas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Tabela estruturada (Inserir > Tabela) converte um intervalo em tabela com cabeçalho, filtros automáticos e formatação. Referências estruturadas usam o nome da tabela e coluna (ex.: Vendas[Quantidade]) em vez de A1:B10, facilitando fórmulas que se expandem com novas linhas. O simulador documentado não suporta referências estruturadas (limitação declarada); o conteúdo didático abrange o conceito para provas teóricas.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Tabelas estruturadas e referências estruturadas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que referências estruturadas funcionam no simulador Excel deste projeto.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: o simulador suporta apenas referências A1 (relativas/absolutas/mistas) e intervalos; tabelas estruturadas estão fora do escopo documentado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Converter A1:D100 em tabela estruturada.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Selecionar A1:D100 > Inserir > Tabela (ou Ctrl+T) > marcar 'A tabela tem cabeçalhos' > OK; Excel passa a filtrar e formatar automaticamente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Somar a coluna 'Quantidade' da tabela 'Vendas'.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=SOMA(Vendas[Quantidade]) — referência estruturada; a fórmula acompanha a tabela ao adicionar linhas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que referências estruturadas funcionam no simulador Excel deste projeto.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: o simulador suporta apenas referências A1 (relativas/absolutas/mistas) e intervalos; tabelas estruturadas estão fora do escopo documentado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

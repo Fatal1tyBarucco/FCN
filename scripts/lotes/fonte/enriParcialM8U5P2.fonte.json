@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 5,
+    "unidadeTitulo": "8.5 Storytelling com Dados",
+    "parte": 2,
+    "totalPartesUnidade": 2,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U5P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U5P2.js",
+    "idsCompletos": [
+      "m8-u5-t3-s1",
+      "m8-u5-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u5-t3-s1",
+      "titulo": "Incerteza, limitações e transparência",
+      "topicoTitulo": "Comunicação de incerteza e integridade",
+      "topicoId": "modulo-8-unidade-5-topico-3",
+      "unidadeTitulo": "8.5 Storytelling com Dados",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno comunicará incerteza e limitações sem enfraquecer a recomendação.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) incerteza, limitações e transparência em storytelling; (b) comunicação de incerteza; (c) integridade e transparência. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a comunicação de incerteza e a integridade; omitir limitações é desonestidade analítica. PRÉ-REQUISITOS: conceitos de visualização e de storytelling. OBJETIVOS OBSERVÁVEIS: (1) comunicar incerteza; (2) declarar limitações; (3) manter transparência. COMPETÊNCIAS DESENVOLVIDAS: comunicação honesta de dados; análise crítica. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.5 (storytelling); Módulo 6 (ética). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: incerteza como variabilidade e limitação dos dados e do modelo; comunicação de incerteza por intervalos, cenários e sensibilidade; limitações: qualidade dos dados, escopo, causalidade não comprovada; transparência: declarar fonte, método, suposições e limitações; integridade: não distorcer nem omitir contexto desfavorável. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer a necessidade de comunicar incerteza.\n- Nível intermediário: descrever métodos de comunicação de incerteza.\n- Nível avançado: declarar limitações e manter transparência.\n- Nível especialista: auditar um storytelling quanto à integridade.\nCOMPARAÇÕES CRÍTICAS:\n- certeza aparente x incerteza real: omitir incerteza cria falsa certeza.\n- transparência x simplicidade: transparência pode complexificar, mas é obrigatória.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"comunicar incerteza enfraquece a mensagem\" — Motivo: aumenta a credibilidade — Versão tecnicamente correta: comunicar incerteza fortalece.\n- Afirmação errada: \"limitações podem ser omitidas\" — Motivo: viola transparência — Versão tecnicamente correta: declarar limitações.\n- Afirmação errada: \"intervalos de confiança são opcionais\" — Motivo: comunicam incerteza — Versão tecnicamente correta: usar quando apropriado.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: incerteza, limitação, transparência, integridade, intervalo, cenário.\n- Regras e mecanismos: comunicar incerteza por intervalos, cenários e sensibilidade; declarar fonte, método e limitações.\n- Exceções: em comunicação executiva, simplificar sem omitir.\n- Palavras-chave: incerteza, limitação, transparência, integridade, intervalo.\n- Checklist de domínio: (1) Comunico incerteza? (2) Declaro limitações? (3) Mantenho transparência? (4) Evito distorção?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é incerteza em dados? (2) Como comunicar incerteza? (3) O que são limitações? (4) O que é transparência? (5) Por que omitir limitações é desonestidade analítica?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Projeção de demanda: 1.200 atendimentos no próximo trimestre. Como comunicar?",
+          "resposta": "'Projeção de 1.050 a 1.300 atendimentos no próximo trimestre (cenário central 1.200), com base na tendência dos 12 meses e considerando variação histórica de ±X%. Estimativa, não meta.' As premissas ficam explícitas e a recomendação de capacidade usa a faixa."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Gráfico mostra crescimento forte nos últimos 3 meses após 12 meses de queda. Avaliar integridade.",
+          "resposta": "Risco de cherry-picking de período: destacar só os 3 meses favoráveis pode inverter a leitura do ano. Correção: exibir a série completa, destacar os 3 meses COM destaque explícito ('recuperação recente após queda acumulada') e reportar o resultado do período longo."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Comunicar incerteza confunde o público e por isso deve ser evitada.'",
+          "correcao": "Errado. Ocultar incerteza produz confiança indevida e decisões frágeis; além disso, quando a incerteza emerge depois, destrói a credibilidade do material. A alternativa é comunicar incerteza de forma simples: faixa, rótulo e premissa."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Selecionar apenas o período em que o indicador melhora, omitindo a série completa, compromete a integridade gráfica.",
+          "resposta": "Certo. É cherry-picking de período: a leitura viesada decorre da seleção, não dos dados."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática NÃO compromete a integridade? A) truncar eixo de barras sem aviso; B) declarar faixa de projeção com premissas; C) trocar a definição de métrica no meio do relato; D) ocultar fonte dos dados.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de comunicar incerteza e limitações sem enfraquecer a recomendação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "comunicará incerteza e limitações sem enfraquecer a recomendação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) incerteza, limitações e transparência em storytelling; (b) comunicação de incerteza; (c) integridade e transparência. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a comunicação de incerteza e a integridade; omitir limitações é desonestidade analítica. PRÉ-REQUISITOS: conceitos de visualização e de storytelling. OBJETIVOS OBSERVÁVEIS: (1) comunicar incerteza; (2) declarar limitações; (3) manter transparência. COMPETÊNCIAS DESENVOLVIDAS: com…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Incerteza, limitações e transparência",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Comunicar incerteza confunde o público e por isso deve ser evitada.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ocultar incerteza produz confiança indevida e decisões frágeis; além disso, quando a incerteza emerge depois, destrói a credibilidade do material. A alternativa é comunicar incerteza de forma simples: faixa, rótulo e premissa."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Projeção de demanda: 1.200 atendimentos no próximo trimestre. Como comunicar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "'Projeção de 1.050 a 1.300 atendimentos no próximo trimestre (cenário central 1.200), com base na tendência dos 12 meses e considerando variação histórica de ±X%. Estimativa, não meta.' As premissas ficam explícitas e a recomendação de capacidade usa a faixa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Gráfico mostra crescimento forte nos últimos 3 meses após 12 meses de queda. Avaliar integridade.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Risco de cherry-picking de período: destacar só os 3 meses favoráveis pode inverter a leitura do ano. Correção: exibir a série completa, destacar os 3 meses COM destaque explícito ('recuperação recente após queda acumulada') e reportar o resultado do período longo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Comunicar incerteza confunde o público e por isso deve ser evitada.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ocultar incerteza produz confiança indevida e decisões frágeis; além disso, quando a incerteza emerge depois, destrói a credibilidade do material. A alternativa é comunicar incerteza de forma simples: faixa, rótulo e premissa.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u5-t4-s1",
+      "titulo": "Painéis de gestão e estudo de caso integrador",
+      "topicoTitulo": "Painéis para gestão pública e privada e estudo de caso",
+      "topicoId": "modulo-8-unidade-5-topico-4",
+      "unidadeTitulo": "8.5 Storytelling com Dados",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno desenhará painel para um cenário de gestão e resolverá estudo de caso com os cinco gráficos obrigatórios.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) painéis de gestão; (b) estudo de caso integrador com dados fictícios; (c) análise, gráficos e recomendação fundamentada. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a integração de análise, gráfico e recomendação; um painel sem narrativa não apoia decisão. PRÉ-REQUISITOS: conceitos de visualização e de storytelling. OBJETIVOS OBSERVÁVEIS: (1) desenhar um painel de gestão; (2) conduzir um estudo de caso com dados fictícios; (3) formular recomendação fundamentada. COMPETÊNCIAS DESENVOLVIDAS: análise integrada; comunicação de dados; tomada de decisão. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.5 (storytelling); unidade 8.4 (BI). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: painel de gestão como conjunto de indicadores e gráficos para apoiar decisão; estudo de caso com dados fictícios (rótulo explícito): cenário de atendimento público, com dados de tempo médio, volume por canal e satisfação; análise: identificar gargalos, tendências e outliers; gráficos: série temporal de volume, barras por canal, box plot de tempo de atendimento; recomendação fundamentada: ação específica com justificativa e métrica de acompanhamento; integridade: declarar que os dados são fictícios para fins didáticos. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender a estrutura de um painel.\n- Nível intermediário: analisar dados e escolher gráficos.\n- Nível avançado: formular recomendação fundamentada.\n- Nível especialista: auditar um painel e um estudo de caso.\nCOMPARAÇÕES CRÍTICAS:\n- painel de monitoramento x painel de análise: monitoramento acompanha; análise investiga.\n- dados reais x dados fictícios: fictícios para didática; reais para decisão.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"painel sem narrativa é suficiente\" — Motivo: não apoia decisão — Versão tecnicamente correta: incluir contexto e recomendação.\n- Afirmação errada: \"dados fictícios podem ser apresentados como reais\" — Motivo: viola integridade — Versão tecnicamente correta: rotular explicitamente.\n- Afirmação errada: \"recomendação não precisa de métrica de acompanhamento\" — Motivo: não permite avaliar o resultado — Versão tecnicamente correta: incluir métrica de acompanhamento.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: painel, gestão, estudo de caso, dados fictícios, análise, gráfico, recomendação.\n- Regras e mecanismos: painel com indicadores e gráficos; estudo de caso com dados fictícios rotulados; recomendação com justificativa e métrica.\n- Exceções: painéis de monitoramento podem ter narrativa mais leve.\n- Palavras-chave: painel, gestão, estudo de caso, dados fictícios, análise, recomendação.\n- Checklist de domínio: (1) Desenho painel de gestão? (2) Conduzo estudo de caso? (3) Formulo recomendação? (4) Rotulo dados fictícios?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um painel de gestão? (2) Por que rotular dados fictícios? (3) Como analisar um estudo de caso? (4) Como formular recomendação? (5) Qual a diferença entre painel de monitoramento e de análise?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Que gráfico comunica melhor a cauda extrema das esperas para a gestão?",
+          "resposta": "O box plot (mostra mediana 8, IIQ 6 e o outlier 50 isolado) e o histograma (mostra a forma da cauda). Para diretoria, um box plot com a frase 'metade dos atendimentos até 8 minutos; casos extremos acima de 20' resolve."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Secretaria pede 'prova' de que a unidade A é o problema. O que os dados sustentam?",
+          "resposta": "Os dados sustentam concentração de VOLUME (36,3% do total) e razão A/D ≈ 2,37 — não, sozinhos, que a unidade A cause maior espera (isso exigiria espera por unidade e controle de confundentes). A recomendação honesta: investigar A primeiro por materialidade, sem afirmar causalidade não demonstrada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Painel de gestão deve exibir todos os indicadores disponíveis para dar visão completa.'",
+          "correcao": "Errado. Visão completa produz paralisia: painel de gestão destaca poucos indicadores ligados a decisões, com exceções em destaque. Todo o resto pertence a relatório analítico ou drill-down, não à tela principal."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Dados fictícios usados em exercício didático devem ser rotulados como fictícios no material apresentado.",
+          "resposta": "Certo. Apresentar dado fictício como estatística real é fraude de comunicação — a rotulagem explícita preserva a honestidade do exercício."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Em atendimentos 120, 132, 115, 140, a variação de março (115) para abril (140) é: A) +17,86%; B) +21,74%; C) +25%; D) +10%.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de desenhar painel para um cenário de gestão e resolverá estudo de caso com os cinco gráficos obrigatórios, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "desenhará painel para um cenário de gestão e resolverá estudo de caso com os cinco gráficos obrigatórios"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) painéis de gestão; (b) estudo de caso integrador com dados fictícios; (c) análise, gráficos e recomendação fundamentada. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a integração de análise, gráfico e recomendação; um painel sem narrativa não apoia decisão. PRÉ-REQUISITOS: conceitos de visualização e de storytelling. OBJETIVOS OBSERVÁVEIS: (1) desenhar um painel de gestão; (2) conduzir um estudo de caso com dados fictícios; (3) formular re…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Painéis de gestão e estudo de caso integrador",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Painel de gestão deve exibir todos os indicadores disponíveis para dar visão completa.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Visão completa produz paralisia: painel de gestão destaca poucos indicadores ligados a decisões, com exceções em destaque. Todo o resto pertence a relatório analítico ou drill-down, não à tela principal."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Que gráfico comunica melhor a cauda extrema das esperas para a gestão?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O box plot (mostra mediana 8, IIQ 6 e o outlier 50 isolado) e o histograma (mostra a forma da cauda). Para diretoria, um box plot com a frase 'metade dos atendimentos até 8 minutos; casos extremos acima de 20' resolve.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Secretaria pede 'prova' de que a unidade A é o problema. O que os dados sustentam?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Os dados sustentam concentração de VOLUME (36,3% do total) e razão A/D ≈ 2,37 — não, sozinhos, que a unidade A cause maior espera (isso exigiria espera por unidade e controle de confundentes). A recomendação honesta: investigar A primeiro por materialidade, sem afirmar causalidade não demonstrada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Painel de gestão deve exibir todos os indicadores disponíveis para dar visão completa.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Visão completa produz paralisia: painel de gestão destaca poucos indicadores ligados a decisões, com exceções em destaque. Todo o resto pertence a relatório analítico ou drill-down, não à tela principal.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

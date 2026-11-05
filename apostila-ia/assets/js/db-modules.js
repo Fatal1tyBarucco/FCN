@@ -150,42 +150,99 @@ const DB = {
       let overview = m.label;
       if (modData && modData.titulo) overview = modData.titulo;
 
-      // theory HTML from real curriculum
+      // theory HTML from real curriculum — usa template didático (Seção 5) quando disponível
       let theory = '';
       if (modData && Array.isArray(modData.unidades)) {
         modData.unidades.forEach((u) => {
           theory += '<h2>' + esc(u.titulo || '') + '</h2>';
           const topicos = Array.isArray(u.topicos) ? u.topicos : [];
           topicos.forEach((t) => {
-            theory += '<h3>' + esc(t.titulo || '') + '</h3>';
-            if (t.objetivoAprendizagem) theory += '<p><strong>Objetivo de aprendizagem:</strong> ' + esc(t.objetivoAprendizagem) + '</p>';
-            if (t.conteudo) theory += '<p>' + esc(t.conteudo) + '</p>';
             const subs = Array.isArray(t.subtopicos) ? t.subtopicos : [];
-            subs.forEach((st) => {
-              theory += '<h4>' + esc(st.titulo || '') + '</h4>';
-              if (st.objetivoAprendizagem) theory += '<p><strong>Objetivo:</strong> ' + esc(st.objetivoAprendizagem) + '</p>';
-              if (st.conteudo) theory += '<p>' + esc(st.conteudo) + '</p>';
-              if (Array.isArray(st.exemplos) && st.exemplos.length) {
-                theory += '<p><strong>Exemplos:</strong></p><ul>';
-                st.exemplos.forEach((ex) => {
-                  let line = esc(ex.enunciado || '');
-                  if (ex.resposta) line += ' → ' + esc(ex.resposta);
-                  if (ex.correcao) line += ' (Correção: ' + esc(ex.correcao) + ')';
-                  theory += '<li><em>' + esc(ex.tipo || 'exemplo') + ':</em> ' + line + '</li>';
-                });
-                theory += '</ul>';
+            if (subs.length === 0) {
+              // Tópico sem subtópicos: renderiza como unidade única
+              const fakeId = t.id || 'modulo-' + m.n + '-topico-sem-id';
+              const subObj = {
+                titulo: t.titulo || '',
+                objetivoAprendizagem: t.objetivoAprendizagem || null,
+                conteudo: t.conteudo || null,
+                exemplos: Array.isArray(t.exemplos) ? t.exemplos : [],
+                exercicios: Array.isArray(t.exercicios) ? t.exercicios : [],
+                criterioDominio: t.criterioDominio || null
+              };
+              // O template emite <h4> (título do tópico) + objetivo de aprendizagem.
+              // NÃO repetir nenhum dos dois aqui: emissão única (ver unidade-template.js).
+              if (window.FCNTemplate && typeof window.FCNTemplate.renderizarUnidade === 'function') {
+                theory += window.FCNTemplate.renderizarUnidade(subObj, fakeId);
+              } else {
+                // Fallback legada
+                theory += '<h3>' + esc(t.titulo || '') + '</h3>';
+                if (t.objetivoAprendizagem) theory += '<p><strong>Objetivo de aprendizagem:</strong> ' + esc(t.objetivoAprendizagem) + '</p>';
+                if (t.conteudo) theory += '<p>' + esc(t.conteudo) + '</p>';
+                if (Array.isArray(t.exemplos) && t.exemplos.length) {
+                  theory += '<p><strong>Exemplos:</strong></p><ul>';
+                  t.exemplos.forEach((ex) => {
+                    let line = esc(ex.enunciado || '');
+                    if (ex.resposta) line += ' → ' + esc(ex.resposta);
+                    if (ex.correcao) line += ' (Correção: ' + esc(ex.correcao) + ')';
+                    theory += '<li><em>' + esc(ex.tipo || 'exemplo') + ':</em> ' + line + '</li>';
+                  });
+                  theory += '</ul>';
+                }
+                if (Array.isArray(t.exercicios) && t.exercicios.length) {
+                  theory += '<p><strong>Exercícios:</strong></p><ul>';
+                  t.exercicios.forEach((ex) => {
+                    let line = esc(ex.enunciado || '');
+                    if (ex.resposta) line += ' — ' + esc(ex.resposta);
+                    theory += '<li>' + line + '</li>';
+                  });
+                  theory += '</ul>';
+                }
+                if (t.criterioDominio) theory += '<p><em>Critério de domínio: ' + esc(t.criterioDominio) + '</em></p>';
               }
-              if (Array.isArray(st.exercicios) && st.exercicios.length) {
-                theory += '<p><strong>Exercícios:</strong></p><ul>';
-                st.exercicios.forEach((ex) => {
-                  let line = esc(ex.enunciado || '');
-                  if (ex.resposta) line += ' — ' + esc(ex.resposta);
-                  theory += '<li>' + line + '</li>';
-                });
-                theory += '</ul>';
-              }
-              if (st.criterioDominio) theory += '<p><em>Critério de domínio: ' + esc(st.criterioDominio) + '</em></p>';
-            });
+            } else {
+              // Tem subtópicos: renderiza cada subtópico
+              subs.forEach((st) => {
+                const subId = st.id;
+                const subObj = {
+                  titulo: st.titulo || '',
+                  objetivoAprendizagem: st.objetivoAprendizagem || null,
+                  conteudo: st.conteudo || null,
+                  exemplos: Array.isArray(st.exemplos) ? st.exemplos : [],
+                  exercicios: Array.isArray(st.exercicios) ? st.exercicios : [],
+                  criterioDominio: st.criterioDominio || null
+                };
+                // O template emite <h4> (título do subtópico) + objetivo de aprendizagem.
+                // NÃO repetir nenhum dos dois aqui: emissão única (ver unidade-template.js).
+                if (window.FCNTemplate && typeof window.FCNTemplate.renderizarUnidade === 'function') {
+                  theory += window.FCNTemplate.renderizarUnidade(subObj, subId);
+                } else {
+                  // Fallback legada
+                  theory += '<h4>' + esc(st.titulo || '') + '</h4>';
+                  if (st.objetivoAprendizagem) theory += '<p><strong>Objetivo:</strong> ' + esc(st.objetivoAprendizagem) + '</p>';
+                  if (st.conteudo) theory += '<p>' + esc(st.conteudo) + '</p>';
+                  if (Array.isArray(st.exemplos) && st.exemplos.length) {
+                    theory += '<p><strong>Exemplos:</strong></p><ul>';
+                    st.exemplos.forEach((ex) => {
+                      let line = esc(ex.enunciado || '');
+                      if (ex.resposta) line += ' → ' + esc(ex.resposta);
+                      if (ex.correcao) line += ' (Correção: ' + esc(ex.correcao) + ')';
+                      theory += '<li><em>' + esc(ex.tipo || 'exemplo') + ':</em> ' + line + '</li>';
+                    });
+                    theory += '</ul>';
+                  }
+                  if (Array.isArray(st.exercicios) && st.exercicios.length) {
+                    theory += '<p><strong>Exercícios:</strong></p><ul>';
+                    st.exercicios.forEach((ex) => {
+                      let line = esc(ex.enunciado || '');
+                      if (ex.resposta) line += ' — ' + esc(ex.resposta);
+                      theory += '<li>' + line + '</li>';
+                    });
+                    theory += '</ul>';
+                  }
+                  if (st.criterioDominio) theory += '<p><em>Critério de domínio: ' + esc(st.criterioDominio) + '</em></p>';
+                }
+              });
+            }
           });
         });
       }
@@ -263,6 +320,10 @@ const DB = {
         title: m.label,
         icon: m.icon,
         index: m.n,
+        /* Chave do módulo no namespace de dados ("modulo-N", com hífen).
+           Exposta para que app.js possa reconstruir a teoria pelo template
+           didático quando DB.modules[].theory vier vazio. */
+        key: 'modulo-' + m.n,
         overview: overview,
         theory: theory,
         mermaid: mermaidCode,

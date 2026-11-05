@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 2,
+    "unidadeTitulo": "1.2 Microsoft Word",
+    "parte": 8,
+    "totalPartesUnidade": 9,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U2P8",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U2P8.js",
+    "idsCompletos": [
+      "modulo-1-unidade-2-topico-12-sub-1",
+      "modulo-1-unidade-2-topico-13-sub-1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-2-topico-12-sub-1",
+      "titulo": "Acessibilidade e exportação PDF",
+      "topicoTitulo": "Acessibilidade, verificação ortográfica e exportação para PDF",
+      "topicoId": "modulo-1-unidade-2-topico-12",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno garantirá acessibilidade e exportará documentos para PDF preservando estruturas.",
+      "conteudo": "Verificar Acessibilidade (Review > Verificar Acessibilidade) identifica problemas como texto alternativo faltando, uso de estilos de título, contraste, navegação por teclado. Verificação ortográfica (Revisão > Verificação Ortográfica) detecta palavras escritas incorretamente. Exportação para PDF (Arquivo > Exportar > Criar PDF/XPS) preserva layout, com opções para marcas d'água, otimizar tamanho, preservar cametas de acessibilidade (texto alternativo, estruturas de heading) para leitores de tela. Verificar PDF resultante para garantir preservação de elementos essenciais.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Preparar um edital em editor de texto para publicação em PDF que possa ser lido por leitor de tela, identificando o que impede a leitura antes da exportação.",
+          "resposta": "PDF com estrutura de títulos navegável e texto alternativo preservado, permitindo que o leitor de tela anuncie a hierarquia; a verificação no documento de origem não aponta pendências graves."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno recebe a tarefa de revisar um PDF já publicado que foi reprovado em teste com leitor de tela, sem permissão para alterar o conteúdo, apenas o arquivo de origem.",
+          "resposta": "PDF reexportado com navegação por títulos, descrições presentes e tabelas anunciadas com seus cabeçalhos; o teste com leitor de tela percorre o documento na ordem prevista."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um servidor afirma que o PDF sempre preserva a estrutura de títulos do documento e que, portanto, basta salvar como PDF para cumprir o requisito de acessibilidade.",
+          "correcao": "A afirmação é incorreta: o PDF preserva a estrutura somente quando a geração inclui etiquetagem, e a impressão virtual produz páginas sem marcação semântica, ainda que a aparência seja idêntica."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual verificação identifica texto alternativo faltando? A) Ortografia; B) Acessibilidade; C) Contagem de palavras.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Exportação para PDF preserva layout.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de garantir acessibilidade e exportará documentos para PDF preservando estruturas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "garantirá acessibilidade e exportará documentos para PDF preservando estruturas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Verificar Acessibilidade (Review > Verificar Acessibilidade) identifica problemas como texto alternativo faltando, uso de estilos de título, contraste, navegação por teclado. Verificação ortográfica (Revisão > Verificação Ortográfica) detecta palavras escritas incorretamente. Exportação para PDF (Arquivo > Exportar > Criar PDF/XPS) preserva layout, com opções para marcas d'água, otimizar tamanho, preservar cametas de acessibilidade (texto alternativo, estruturas de heading) para leitores de tela…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Acessibilidade e exportação PDF",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que PDF sempre preserva estrutura de headings.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: é necessário marcar a opção de tags de acessibilidade na exportação."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Preparar um edital em editor de texto para publicação em PDF que possa ser lido por leitor de tela, identificando o que impede a leitura antes da exportação.",
+            "dados": "Documento de 30 páginas com cinco imagens, duas delas sem descrição, títulos parcialmente formatados de modo manual, três tabelas e exportação prevista para PDF.",
+            "conceitos": [
+              "texto alternativo: descrição textual de uma imagem, lida por tecnologia assistiva",
+              "estrutura de títulos: hierarquia semântica que permite navegação no documento",
+              "etiquetas de estrutura no PDF: marcação que transporta títulos e descrições para o arquivo exportado"
+            ],
+            "estrategia": "Corrigir a origem antes de exportar, porque a acessibilidade do PDF depende do que existe no documento de texto; em seguida marcar a opção que preserva a estrutura na exportação.",
+            "execucao": [
+              "Executar Revisão > Verificar Acessibilidade e tratar cada item apontado.",
+              "Escrever texto alternativo nas duas imagens sem descrição e aplicar estilos de título onde havia apenas formatação manual.",
+              "Conferir contraste e ordem de leitura dos elementos posicionados sobre o texto.",
+              "Exportar com Arquivo > Exportar > Criar PDF/XPS e, em Opções, marcar a geração de etiquetas de estrutura para acessibilidade, conferindo o resultado no PDF gerado."
+            ],
+            "resultado": "PDF com estrutura de títulos navegável e texto alternativo preservado, permitindo que o leitor de tela anuncie a hierarquia; a verificação no documento de origem não aponta pendências graves.",
+            "justificativa": "A exportação não cria acessibilidade: ela transporta a estrutura existente quando a opção de etiquetas é marcada. Imagem sem texto alternativo continua sem descrição no PDF e título formatado apenas com fonte maior não gera marcador de navegação, de modo que a correção precisa ocorrer na origem e ser conferida no arquivo final.",
+            "errosFrequentes": [
+              "Exportar primeiro e tentar corrigir acessibilidade no PDF, que é derivado e não corrige a origem.",
+              "Presumir que toda exportação preserva títulos e descrições, sem marcar as etiquetas de estrutura.",
+              "Descrever a imagem com o nome do arquivo, que não informa conteúdo ao leitor de tela."
+            ],
+            "variacao": "O mesmo edital precisa ser publicado também em HTML acessível. Indique quais verificações feitas no documento de texto continuam válidas e qual informação a versão HTML exige que o PDF não exigia."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno recebe a tarefa de revisar um PDF já publicado que foi reprovado em teste com leitor de tela, sem permissão para alterar o conteúdo, apenas o arquivo de origem.",
+            "dados": "PDF com 42 páginas, títulos sem navegação, quatro imagens sem descrição e tabelas que o leitor de tela anuncia como bloco único.",
+            "conceitos": [
+              "ordem de leitura: sequência em que a tecnologia assistiva percorre o conteúdo",
+              "marcador de tabela: estrutura que associa células a linhas e colunas",
+              "arquivo de origem: documento editável que gera o PDF"
+            ],
+            "estrategia": "Tratar a origem e reexportar com etiquetas, porque corrigir marcação dentro do PDF é limitado e não sobrevive a uma nova geração do arquivo.",
+            "execucao": [
+              "Abrir a origem e aplicar estilos de título nos capítulos e seções que estavam apenas em negrito.",
+              "Preencher o texto alternativo das quatro imagens, descrevendo a informação que cada uma transmite.",
+              "Demarcar as tabelas com cabeçalho de linha e de coluna para que o leitor de tela associe as células.",
+              "Reexportar com etiquetas de estrutura e testar a navegação por títulos e a leitura de uma tabela no PDF resultante."
+            ],
+            "resultado": "PDF reexportado com navegação por títulos, descrições presentes e tabelas anunciadas com seus cabeçalhos; o teste com leitor de tela percorre o documento na ordem prevista.",
+            "justificativa": "A qualidade do PDF é consequência da marcação do documento de origem, e cada deficiência apontada corresponde a uma ausência específica: estilo de título, texto alternativo e demarcação de cabeçalhos de tabela. Reexportar a partir da origem preserva a correção em futuras publicações, o que não ocorre ao editar a marcação do PDF.",
+            "errosFrequentes": [
+              "Corrigir a marcação apenas no PDF e gerar nova versão a partir da origem não corrigida.",
+              "Demarcar a tabela como imagem para preservar a aparência, perdendo a leitura célula a célula.",
+              "Testar a acessibilidade apenas com verificação automática, sem percorrer o documento com leitor de tela."
+            ],
+            "variacao": "A publicação passa a ser trimestral, sempre a partir do mesmo modelo. Explique o que deve ser corrigido no modelo para que as próximas gerações já saiam acessíveis e por que isso reduz o retrabalho."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um servidor afirma que o PDF sempre preserva a estrutura de títulos do documento e que, portanto, basta salvar como PDF para cumprir o requisito de acessibilidade.",
+            "dados": "Documento com doze títulos estilizados, exportação feita pela opção de impressão virtual, nenhuma etiqueta de estrutura no arquivo gerado.",
+            "conceitos": [
+              "etiquetagem: marcação que preserva a semântica no PDF",
+              "impressão virtual: geração de PDF que reproduz páginas sem transportar estrutura",
+              "verificação pós-exportação: conferência da navegação e das descrições no arquivo final"
+            ],
+            "estrategia": "Comparar dois caminhos de geração do PDF e verificar, no arquivo resultante, se a navegação por títulos sobreviveu.",
+            "execucao": [
+              "Gerar um PDF pela opção de impressão virtual e verificar a ausência de marcadores de título.",
+              "Gerar outro pela exportação com etiquetas de estrutura marcada.",
+              "Comparar a navegação por títulos nos dois arquivos.",
+              "Concluir que a preservação depende do caminho de exportação e conferir sempre o resultado."
+            ],
+            "resultado": "A afirmação é incorreta: o PDF preserva a estrutura somente quando a geração inclui etiquetagem, e a impressão virtual produz páginas sem marcação semântica, ainda que a aparência seja idêntica.",
+            "justificativa": "PDF é um formato de apresentação de páginas e pode ou não carregar marcação semântica. A exportação com etiquetas traduz estilos e descrições do documento de origem; a impressão virtual reproduz apenas o resultado visual. Como a aparência é a mesma nos dois casos, a conferência precisa ser feita por navegação e não por inspeção visual.",
+            "errosFrequentes": [
+              "Julgar a acessibilidade pela aparência do PDF.",
+              "Usar impressão virtual em documento que precisa de navegação por leitor de tela.",
+              "Exportar com etiquetas e não conferir se os títulos chegaram ao arquivo final."
+            ],
+            "variacao": "O mesmo documento precisa atender a um requisito de arquivamento de longo prazo, além da acessibilidade. Indique o que deve ser verificado no arquivo gerado e por que a conferência visual não é suficiente."
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-2-topico-13-sub-1",
+      "titulo": "Formatos .doc vs .docx e compatibilidade",
+      "topicoTitulo": "Compatibilidade de formatos e problemas de formatação",
+      "topicoId": "modulo-1-unidade-2-topico-13",
+      "unidadeTitulo": "1.2 Microsoft Word",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá questões de compatibilidade entre versões do Word.",
+      "conteudo": "Formatos: .doc (legado, binário, Office 2003 e anteriores), .docx (Open XML, padrão desde Office 2007), .docm (docx com macros), .dotx (modelo), .dotm (modelo com macros). Compatibilidade: abrir .doc no Word 365 ativa Modo de Compatibilidade, limitando funcionalidades novas. Converter .doc para .docx geralmente preserva conteúdo mas pode reformatar elementos. Para máxima compatibilidade, recomenda-se salvar em .pdf para distribuição. O Modo de Compatibilidade desabilita funcionalidades introduzidas após 2007 para preservar integridade do conteúdo original.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Receber um modelo antigo em .doc e decidir se convém editá-lo no formato original ou convertê-lo para .docx antes de produzir um contrato novo.",
+          "resposta": "Documento no formato atual, sem modo de compatibilidade, com sumário e campos atualizados e coautoria disponível; o .doc original permanece guardado como referência do estado anterior."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O aluno precisa padronizar quarenta documentos legados de um acervo, todos em formato binário, para que passem a abrir sem restrição de compatibilidade e possam ser editados em conjunto.",
+          "resposta": "Acervo convertido com dois arquivos mantidos no formato com macro, sumários atualizados nos vinte arquivos que os possuíam e tabelas complexas revisadas; os originais permanecem disponíveis como referência."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um colega afirma que .doc e .docx são apenas duas extensões do mesmo formato e que trocar a extensão do arquivo basta para atualizá-lo.",
+          "correcao": "A afirmação é incorreta: a extensão apenas rotula o arquivo, e renomeá-la não altera a estrutura interna. A conversão pelo editor é o procedimento que transforma o formato e preserva os elementos revisados."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual formato suporta macros? A) .docx; B) .docm; C) .doc.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Para distribuição, recomenda-se PDF.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender questões de compatibilidade entre versões do Word, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá questões de compatibilidade entre versões do Word"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Formatos: .doc (legado, binário, Office 2003 e anteriores), .docx (Open XML, padrão desde Office 2007), .docm (docx com macros), .dotx (modelo), .dotm (modelo com macros). Compatibilidade: abrir .doc no Word 365 ativa Modo de Compatibilidade, limitando funcionalidades novas. Converter .doc para .docx geralmente preserva conteúdo mas pode reformatar elementos. Para máxima compatibilidade, recomenda-se salvar em .pdf para distribuição. O Modo de Compatibilidade desabilita funcionalidades introduzi…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Formatos .doc vs .docx e compatibilidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que .doc e .docx são idênticos.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: .doc é binário (legado); .docx é Open XML (padrão desde 2007)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Receber um modelo antigo em .doc e decidir se convém editá-lo no formato original ou convertê-lo para .docx antes de produzir um contrato novo.",
+            "dados": "Arquivo de 2003 em .doc com macros, quinze páginas, sumário automático e campos de formulário, editor atual disponível e necessidade de coautoria.",
+            "conceitos": [
+              ".doc: formato binário legado, anterior ao padrão aberto",
+              ".docx: formato baseado em XML aberto, adotado a partir do pacote de 2007",
+              "modo de compatibilidade: estado que restringe recursos para preservar o formato antigo"
+            ],
+            "estrategia": "Comparar o que o arquivo precisa fazer com o que o formato antigo suporta e converter preservando o original como cópia de referência.",
+            "execucao": [
+              "Salvar uma cópia do .doc original antes de qualquer conversão.",
+              "Abrir o arquivo e observar o aviso de modo de compatibilidade.",
+              "Usar Arquivo > Informações > Converter, ou Salvar Como com o tipo de documento atual.",
+              "Revisar sumário, campos e macros após a conversão, atualizando os campos e conferindo se o arquivo convertido abre com os recursos esperados."
+            ],
+            "resultado": "Documento no formato atual, sem modo de compatibilidade, com sumário e campos atualizados e coautoria disponível; o .doc original permanece guardado como referência do estado anterior.",
+            "justificativa": "O formato define o conjunto de recursos disponíveis: o binário legado é aberto em modo de compatibilidade, que restringe recursos posteriores, enquanto o formato aberto é aquele em que os recursos atuais e a coautoria funcionam plenamente. A conversão preserva o conteúdo, mas exige revisão de elementos cuja representação mudou.",
+            "errosFrequentes": [
+              "Converter sem guardar o original e perder a referência do estado anterior.",
+              "Presumir que a conversão é neutra e não revisar sumário, tabelas e campos.",
+              "Enviar o formato antigo a quem usa versão atual e supor que verá os mesmos recursos."
+            ],
+            "variacao": "O contrato precisa ser distribuído para assinatura e leitura em qualquer dispositivo, sem edição pelo destinatário. Indique o formato de distribuição adequado e explique o que se perde ao optar por ele em relação ao formato editável."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O aluno precisa padronizar quarenta documentos legados de um acervo, todos em formato binário, para que passem a abrir sem restrição de compatibilidade e possam ser editados em conjunto.",
+            "dados": "Quarenta arquivos em .doc, dois deles com macros, sumários automáticos em vinte arquivos, três com tabelas complexas e nenhum backup do acervo.",
+            "conceitos": [
+              "lote: conjunto de arquivos tratados pelo mesmo procedimento",
+              "macro: código armazenado no documento, que exige formato compatível",
+              "revisão pós-conversão: conferência dos elementos que podem mudar de representação"
+            ],
+            "estrategia": "Separar os arquivos com macro dos demais, porque o formato de destino com suporte a macro é diferente, e converter em lotes com verificação por amostragem antes de tratar o acervo inteiro.",
+            "execucao": [
+              "Copiar o acervo para uma pasta de trabalho, preservando os originais.",
+              "Separar os dois arquivos com macro e tratá-los no formato correspondente com suporte a macro.",
+              "Converter os demais para o formato atual e revisar, por amostragem, sumários, tabelas e campos.",
+              "Registrar quais arquivos exigiram ajuste manual e repetir a revisão nos casos semelhantes."
+            ],
+            "resultado": "Acervo convertido com dois arquivos mantidos no formato com macro, sumários atualizados nos vinte arquivos que os possuíam e tabelas complexas revisadas; os originais permanecem disponíveis como referência.",
+            "justificativa": "A conversão em lote reduz esforço, mas não dispensa a revisão, porque elementos como sumário e tabelas dependem de representação que pode mudar entre formatos. Separar arquivos com macro é obrigatório, já que o formato de destino sem suporte a macro descartaria o código.",
+            "errosFrequentes": [
+              "Converter todo o acervo para o formato sem macro e perder o código dos dois arquivos.",
+              "Tratar os quarenta arquivos sem cópia de segurança.",
+              "Considerar a conversão concluída sem revisar sumários e tabelas."
+            ],
+            "variacao": "O acervo precisa ser arquivado por vinte anos, com garantia de legibilidade. Explique por que o formato de edição não é necessariamente o de arquivamento e qual conferência deve acompanhar a escolha."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um colega afirma que .doc e .docx são apenas duas extensões do mesmo formato e que trocar a extensão do arquivo basta para atualizá-lo.",
+            "dados": "Arquivo em .doc de 180 páginas com campos de formulário, tentativa de renomear a extensão para .docx, abertura do arquivo resultante em dois editores distintos.",
+            "conceitos": [
+              "extensão: indicação do formato, que não converte o conteúdo",
+              "formato binário x formato aberto: estruturas internas distintas",
+              "verificação de integridade: conferência de que o arquivo abre e mantém os elementos"
+            ],
+            "estrategia": "Reproduzir a troca de extensão e verificar o comportamento do arquivo, comparando com a conversão feita pelo próprio editor.",
+            "execucao": [
+              "Renomear a extensão do arquivo e tentar abri-lo.",
+              "Observar o aviso de formato divergente e o risco de conteúdo perdido.",
+              "Repetir o procedimento com a conversão pelo editor e comparar a integridade dos campos de formulário.",
+              "Concluir qual caminho preserva o documento e manter o original intacto."
+            ],
+            "resultado": "A afirmação é incorreta: a extensão apenas rotula o arquivo, e renomeá-la não altera a estrutura interna. A conversão pelo editor é o procedimento que transforma o formato e preserva os elementos revisados.",
+            "justificativa": "O formato é determinado pela estrutura interna do arquivo, não pelo nome. Renomear a extensão cria um arquivo cujo rótulo não corresponde ao conteúdo, o que provoca avisos de reparo e pode descartar campos; a conversão feita pelo editor reescreve a estrutura e permite revisar o que mudou.",
+            "errosFrequentes": [
+              "Renomear a extensão e considerar o arquivo convertido.",
+              "Ignorar o aviso de formato divergente e salvar por cima do original.",
+              "Concluir que a perda de campos é defeito do editor, quando decorre do procedimento adotado."
+            ],
+            "variacao": "O arquivo precisa ser aberto por um editor antigo que não entende o formato atual. Descreva o procedimento correto e o que deve ser conferido no arquivo entregue."
+          }
+        ]
+      }
+    }
+  ]
+}

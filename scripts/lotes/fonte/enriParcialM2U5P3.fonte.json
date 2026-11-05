@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 5,
+    "unidadeTitulo": "2.5 Diagnóstico de redes",
+    "parte": 3,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U5P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U5P3.js",
+    "idsCompletos": [
+      "m2-u5-t2-s2",
+      "m2-u5-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u5-t2-s2",
+      "titulo": "comando ip e netstat/ss",
+      "topicoTitulo": "ipconfig/ifconfig, ip, netstat/ss",
+      "topicoId": "modulo-2-unidade-5-topico-2",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará o uso do comando 'ip' (Linux) e de netstat/ss para inspecionar conexões e portas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o comando ip do Linux; (b) o netstat e o ss; (c) a interpretação de conexões e portas; (d) o uso no diagnóstico. POR QUE O CONHECIMENTO É IMPORTANTE: inspecionar portas e conexões revela se um serviço está ativo e quem está conectado; a prova cobra as opções e a leitura. PRÉ-REQUISITOS: TCP/UDP; portas. OBJETIVOS OBSERVÁVEIS: (1) usar o comando ip; (2) usar netstat/ss; (3) ler portas em escuta; (4) detectar conexões suspeitas. COMPETÊNCIAS DESENVOLVIDAS: inspeção de sockets; análise de segurança. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.2 (rotas/ARP); unidade 3 (portas); Módulo 4 (detecção). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o comando \"ip\" (do pacote iproute2, Linux) inspeciona e configura a rede: \"ip addr\" exibe os endereços das interfaces, \"ip link\" mostra o estado dos enlaces, \"ip route\" apresenta a tabela de rotas e \"ip neigh\" o cache de vizinhos (ARP/NDP). Ele substitui os antigos ifconfig, route e arp. O netstat (legado) exibe conexões ativas, portas em escuta, tabela de roteamento e estatísticas; o ss (socket statistics) é o sucessor moderno, mais rápido, com as mesmas finalidades. As opções mais úteis de netstat/ss são: ‑t (TCP), ‑u (UDP), ‑l (listening/escuta), ‑n (numérico, sem resolver nomes) e ‑p (mostra o processo). Um exemplo clássico é \"ss -tlnp\", que lista as portas TCP em escuta com o processo responsável. No diagnóstico, essas ferramentas respondem a perguntas como: \"o serviço está escutando na porta esperada?\", \"há conexões estabelecidas suspeitas?\", \"alguma porta inesperada está aberta?\". A interpretação exige atenção: uma porta em escuta em 0.0.0.0 aceita conexões de qualquer origem, enquanto 127.0.0.1 restringe ao próprio host. Detectar uma porta desconhecida em escuta é um sinal que merece investigação, especialmente em servidores. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: listar portas em escuta.\n- Nível intermediário: filtrar por protocolo e mostrar o processo.\n- Nível avançado: distinguir escuta local de global e avaliar o risco.\n- Nível especialista: usar essas ferramentas para investigar um indicador de comprometimento.\nCOMPARAÇÕES CRÍTICAS:\n- netstat x ss: o ss é mais rápido e moderno; o netstat é legado — a sintaxe difere.\n- -l x sem -l: ‑l mostra só escuta; sem ele, todas as conexões.\n- 0.0.0.0 x 127.0.0.1: o primeiro aceita qualquer origem; o segundo, só o host.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"ifconfig é o comando atual do Linux.\" — Motivo: foi substituído — Versão tecnicamente correta: usa-se \"ip\".\n- Afirmação errada: \"ss e netstat são sinônimos exatos.\" — Motivo: o ss é o sucessor com opções próprias — Versão tecnicamente correta: finalidade semelhante, sintaxe distinta.\n- Afirmação errada: \"Uma porta em escuta é sempre segura.\" — Motivo: depende do serviço e da origem que aceita — Versão tecnicamente correta: avaliar o serviço e o endereço de escuta.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: ip addr/link/route/neigh, netstat, ss, ‑t/‑u/‑l/‑n/‑p, escuta.\n- Regras e fórmulas: ss -tlnp lista portas TCP em escuta com processo.\n- Exceções: escutar em 0.0.0.0 amplia o alcance das conexões aceitas.\n- Palavras-chave: socket, porta, conexão, processo, diagnóstico.\n- Checklist de domínio: (1) Uso o comando ip? (2) Uso netstat/ss? (3) Leio portas em escuta? (4) Detecto conexões suspeitas?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que \"ip route\" mostra? (2) E \"ip neigh\"? (3) Qual comando lista portas em escuta? (4) O que a opção ‑p mostra? (5) 0.0.0.0 x 127.0.0.1 diferem em quê?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Como verificar se o servidor web está escutando na porta 80?",
+          "resposta": "ss -tlnp | grep :80 ou netstat -tlnp | grep :80. Deve mostrar LISTEN na porta 80."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um serviço não responde na porta 8080. netstat não mostra nada na 8080. O que isso indica?",
+          "resposta": "O serviço não está rodando ou não está escutando naquela porta. Verificar processo, configuração e firewall."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'netstat e ss mostram apenas conexões TCP.'",
+          "correcao": "Errado. Ambos suportam TCP e UDP (opção -u), além de outros protocolos e sockets Unix."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) 'ss' é o substituto moderno de 'netstat' no Linux.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual comando exibe a tabela de rotas no Linux moderno? A) route; B) ip route; C) netstat -r; D) todas as anteriores.",
+          "resposta": "D (route e netstat -r são legados; ip route é o moderno)"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o uso do comando 'ip' (Linux) e de netstat/ss para inspecionar conexões e portas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o uso do comando 'ip' (Linux) e de netstat/ss para inspecionar conexões e portas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Comando ip (iproute2, Linux): ip addr (endereços de interfaces), ip link (estado de interfaces), ip route (tabela de rotas), ip neigh (cache ARP/NDP). Substitui ifconfig/route/arp. netstat (legado): exibe conexões ativas, portas em escuta, tabela de roteamento, estatísticas. ss (socket statistics, moderno): mais rápido, substitui netstat. Opções: -t (TCP), -u (UDP), -l (listening), -n (numérico), -p (processo). Uso típico: verificar se um serviço está escutando na porta esperada; identificar con…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a comando ip e netstat/ss",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'netstat e ss mostram apenas conexões TCP.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ambos suportam TCP e UDP (opção -u), além de outros protocolos e sockets Unix."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Como verificar se o servidor web está escutando na porta 80?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "ss -tlnp | grep :80 ou netstat -tlnp | grep :80. Deve mostrar LISTEN na porta 80.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um serviço não responde na porta 8080. netstat não mostra nada na 8080. O que isso indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O serviço não está rodando ou não está escutando naquela porta. Verificar processo, configuração e firewall.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'netstat e ss mostram apenas conexões TCP.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ambos suportam TCP e UDP (opção -u), além de outros protocolos e sockets Unix.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u5-t2-s3",
+      "titulo": "Verificação de rotas, ARP e vizinhos",
+      "topicoTitulo": "ipconfig/ifconfig, ip, netstat/ss",
+      "topicoId": "modulo-2-unidade-5-topico-2",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno verificará tabela de rotas, cache ARP/NDP e estado de interfaces.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como verificar a tabela de rotas; (b) como inspecionar o cache ARP/NDP; (c) como checar o estado das interfaces; (d) o teste de MTU. POR QUE O CONHECIMENTO É IMPORTANTE: verificar rota, gateway e vizinhos isola rapidamente falhas de enlace e roteamento; a prova cobra os comandos e a interpretação. PRÉ-REQUISITOS: rotas; ARP/NDP; interfaces. OBJETIVOS OBSERVÁVEIS: (1) listar rotas; (2) inspecionar ARP/NDP; (3) verificar interfaces; (4) testar MTU. COMPETÊNCIAS DESENVOLVIDAS: verificação de conectividade; diagnóstico de enlace. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.2 (ip/ss); unidade 3.3 (ARP/NDP); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a tabela de rotas é exibida por \"ip route\" (Linux) ou \"route print\" (Windows) e mostra as rotas conhecidas, o gateway padrão e as métricas. O cache de vizinhos (ARP no IPv4, NDP no IPv6) aparece em \"ip neigh\" (Linux) ou \"arp -a\" (Windows) e mostra os pares IP-MAC resolvidos. O estado das interfaces é visto com \"ip link\", que indica se estão UP (ativa) ou DOWN. Verificações úteis em sequência: a rota padrão está presente (\"default via X\")? O gateway é alcançável? O ARP do gateway está resolvido (há entrada para ele)? A interface está UP com um IP válido? Se o gateway não tem entrada ARP, o problema tende a ser de enlace (cabo/Wi-Fi); se a rota padrão aponta para um endereço inexistente, o problema é de configuração; se a interface está DOWN, nada acima funcionará. Quanto à MTU, pode-se testar o tamanho máximo do pacote que atravessa o caminho; no Linux, \"ping -M do -s 1472 <host>\" testa um payload de 1472 bytes (que, somado aos cabeçalhos, equivale a uma MTU de 1500). Fragmentação indevida ou PMTU mal descoberta causa sintomas como páginas que não carregam inteiramente. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: listar as rotas e identificar o gateway padrão.\n- Nível intermediário: inspecionar o cache ARP/NDP e o estado da interface.\n- Nível avançado: relacionar ausência de ARP do gateway a falha de enlace.\n- Nível especialista: testar MTU/PMTU e interpretar o efeito da fragmentação.\nCOMPARAÇÕES CRÍTICAS:\n- rota presente x gateway alcançável: ter a rota não garante que o gateway responda.\n- entrada ARP presente x ausente: a ausência sugere falha de camada 2.\n- MTU x MSS: a MTU limita o pacote; o MSS limita o segmento TCP.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Se há rota padrão, a Internet funciona.\" — Motivo: o gateway pode estar inacessível — Versão tecnicamente correta: verificar também o enlace e o ARP.\n- Afirmação errada: \"'ip neigh' mostra rotas.\" — Motivo: mostra vizinhos (IP-MAC) — Versão tecnicamente correta: rotas ficam em \"ip route\".\n- Afirmação errada: \"MTU e MSS são o mesmo.\" — Motivo: um é do pacote; o outro, do segmento.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: ip route, route print, ip neigh, arp -a, ip link, gateway, MTU, MSS.\n- Regras e fórmulas: ping -M do -s 1472 testa MTU 1500 no Linux.\n- Exceções: protocolos com encapsulamento reduzem a MTU efetiva.\n- Palavras-chave: rota, vizinho, interface, enlace, fragmentação.\n- Checklist de domínio: (1) Listo rotas? (2) Inspeciono ARP/NDP? (3) Verifico interfaces? (4) Testo MTU?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual comando mostra as rotas? (2) E o cache ARP? (3) O que \"ip link\" indica? (4) O que a ausência de ARP do gateway sugere? (5) O que o teste -s 1472 verifica?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Como verificar se existe rota padrão no Linux?",
+          "resposta": "ip route show default — deve exibir 'default via <gateway> dev <interface>'."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "'arp -a' não mostra o gateway. O que isso indica?",
+          "resposta": "ARP não foi resolvido — problema de enlace (cabo/Wi-Fi) ou gateway desligado/inacessível na camada 2."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se a tabela de rotas está correta, a conectividade está garantida.'",
+          "correcao": "Errado. Rota correta é necessária, mas não suficiente: firewall, NAT, DNS e aplicação também podem falhar."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) 'ip neigh' exibe o cache ARP/NDP no Linux.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual comando exibe a tabela de rotas no Windows? A) ipconfig; B) route print; C) arp -a; D) netstat -r (também).",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de verificar tabela de rotas, cache ARP/NDP e estado de interfaces, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "verificará tabela de rotas, cache ARP/NDP e estado de interfaces"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Tabela de rotas: 'ip route' (Linux) ou 'route print' (Windows) mostra rotas, gateway padrão e métricas. Cache ARP/NDP: 'ip neigh' (Linux) ou 'arp -a' (Windows) mostra pares IP-MAC. Verificações úteis: rota padrão presente (default via X); gateway alcançável; ARP resolvido para o gateway; interface UP com IP válido. Se o gateway não tem entrada ARP, problema de enlace. Se a rota padrão aponta para IP inexistente, problema de configuração. MTU e fragmentação: 'ping -M do -s 1472' (Linux) testa PMT…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Verificação de rotas, ARP e vizinhos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se a tabela de rotas está correta, a conectividade está garantida.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Rota correta é necessária, mas não suficiente: firewall, NAT, DNS e aplicação também podem falhar."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Como verificar se existe rota padrão no Linux?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "ip route show default — deve exibir 'default via <gateway> dev <interface>'.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "'arp -a' não mostra o gateway. O que isso indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "ARP não foi resolvido — problema de enlace (cabo/Wi-Fi) ou gateway desligado/inacessível na camada 2.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se a tabela de rotas está correta, a conectividade está garantida.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Rota correta é necessária, mas não suficiente: firewall, NAT, DNS e aplicação também podem falhar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

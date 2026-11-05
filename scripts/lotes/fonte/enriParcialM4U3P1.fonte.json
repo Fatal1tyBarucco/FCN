@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 3,
+    "unidadeTitulo": "4.3 Ameaças e ataques",
+    "parte": 1,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U3P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U3P1.js",
+    "idsCompletos": [
+      "m4-u3-t1-s1",
+      "m4-u3-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u3-t1-s1",
+      "titulo": "Phishing, spear phishing e whaling",
+      "topicoTitulo": "Engenharia social e fraudes de identidade",
+      "topicoId": "modulo-4-unidade-3-topico-1",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará phishing, spear phishing e whaling pelos critérios de alvo e grau de personalização, e enumerará indicadores verificáveis de tentativa.",
+      "conteudo": "Phishing é fraude em que o atacante se passa por entidade confiável para induzir a vítima a revelar credenciais, dados ou a executar ação (pagamento, habilitação de macro, instalação). Caracteriza-se por imitação de aparência, apelo emocional e urgência, e canal de grande volume (e-mail em massa, SMS, mensagens). Spear phishing é a versão direcionada: o atacante pesquisa o alvo (site do órgão, lista de servidores, redes sociais) e personaliza a mensagem — remetente plausível, referência a processo real, anexo com nome corriqueiro. Whaling é o spear phishing dirigido a autoridades e altas lideranças (caça baleias), onde o ganho e o impacto institucional são maiores e o disfarce usa agendas, decisões e ritos do alto escalão. Indicadores verificáveis: remetente que não corresponde ao domínio real, urgência artificial, pedido fora de procedimento, link cujo texto diverge do endereço real, anexo inesperado, erros de português (menos frequente em ataques sofisticados), pedido de sigilo. Defesa combinada: filtro, MFA, treinamento com simulações defensivas, procedimento de dupla verificação para pagamentos e mudanças de cadastro.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Mensagem genérica a 50 mil endereços imitando o banco; e-mail personalizado ao diretor citando processo licitatório real. Classifique os dois.",
+          "resposta": "Primeiro: phishing em massa. Segundo: spear phishing (personalizado com informação real do alvo). Se o alvo fosse a autoridade máxima do órgão, whaling."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O setor recebe e-mail do 'contabil' pedindo troca urgente de dados bancários para pagamento de fornecedor. Que verificações independentes impedem a fraude?",
+          "resposta": "1) Confirmar por canal conhecido e diferente do e-mail (telefone cadastrado, presencial). 2) Conferir o domínio real do remetente, não o nome exibido. 3) Aplicar regra de procedimento: troca bancária exige dupla autorização e cadastro com verificação. Nenhuma verificação usa o canal do atacante."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se a mensagem não tem erros de ortografia, é legítima.'",
+          "correcao": "Errado. Texto fluente não é evidência de autenticidade; ataques sofisticados são redigidos com cuidado (e até com auxílio de tecnologia). A autenticidade verifica-se por canal e por domínio, não por qualidade do texto."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Whaling é phishing dirigido a alvos de alto escalão.",
+          "resposta": "Certo. O nome vem da 'caça às baleias': alvos são autoridades e lideranças, com personalização alta."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Diferença decisiva entre phishing e spear phishing: A) o canal (e-mail); B) o grau de personalização e direcionamento ao alvo; C) a exigência de pagamento; D) o uso de marca imitada.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar phishing, spear phishing e whaling pelos critérios de alvo e grau de personalização, e enumerará indicadores verificáveis de tentativa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará phishing, spear phishing e whaling pelos critérios de alvo e grau de personalização, e enumerará indicadores verificáveis de tentativa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Phishing é fraude em que o atacante se passa por entidade confiável para induzir a vítima a revelar credenciais, dados ou a executar ação (pagamento, habilitação de macro, instalação). Caracteriza-se por imitação de aparência, apelo emocional e urgência, e canal de grande volume (e-mail em massa, SMS, mensagens). Spear phishing é a versão direcionada: o atacante pesquisa o alvo (site do órgão, lista de servidores, redes sociais) e personaliza a mensagem — remetente plausível, referência a proces…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Phishing, spear phishing e whaling",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se a mensagem não tem erros de ortografia, é legítima.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Texto fluente não é evidência de autenticidade; ataques sofisticados são redigidos com cuidado (e até com auxílio de tecnologia). A autenticidade verifica-se por canal e por domínio, não por qualidade do texto."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Mensagem genérica a 50 mil endereços imitando o banco; e-mail personalizado ao diretor citando processo licitatório real. Classifique os dois.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Primeiro: phishing em massa. Segundo: spear phishing (personalizado com informação real do alvo). Se o alvo fosse a autoridade máxima do órgão, whaling.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O setor recebe e-mail do 'contabil' pedindo troca urgente de dados bancários para pagamento de fornecedor. Que verificações independentes impedem a fraude?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) Confirmar por canal conhecido e diferente do e-mail (telefone cadastrado, presencial). 2) Conferir o domínio real do remetente, não o nome exibido. 3) Aplicar regra de procedimento: troca bancária exige dupla autorização e cadastro com verificação. Nenhuma verificação usa o canal do atacante.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se a mensagem não tem erros de ortografia, é legítima.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Texto fluente não é evidência de autenticidade; ataques sofisticados são redigidos com cuidado (e até com auxílio de tecnologia). A autenticidade verifica-se por canal e por domínio, não por qualidade do texto.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u3-t1-s2",
+      "titulo": "Pharming, spoofing e fraude por impersonação",
+      "topicoTitulo": "Engenharia social e fraudes de identidade",
+      "topicoId": "modulo-4-unidade-3-topico-1",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará pharming de phishing pelo vetor (redirecionamento x persuasão) e identificará formas de spoofing relevantes para o serviço público.",
+      "conteudo": "Pharming redireciona o usuário ao site falso sem que ele perceba: o endereço digitado é legítimo, mas a resolução é corrompida (envenenamento de cache DNS, alteração de arquivo de hosts, roubo de roteador, malware local). A vítima 'visita' o site certo e entrega a senha no site errado — por isso pharming dispensa a persuasão da vítima. Spoofing é a falsificação de um identificador: endereço de e-mail (nome exibido e até domínio, quando não autenticado), endereço de origem de pacotes, número de telefone em chamadas, identificação de aparelho. Impersonação (roubo de persona) é a falsificação de pessoa: atacante se passa por gestor, colega ou fornecedor para obter ação (liberação de pagamento, envio de dados, credenciais). Conexões importantes: e-mail sem SPF/DKIM/DMARC é vulnerável a spoofing (mecanismos tratados no Módulo 3); ligações com identificação falsa exploram confiança em autoridade. Defesa: autenticação de domínio no e-mail, verificação por canal independente para ações sensíveis, MFA e treinamento focado em pedidos fora do fluxo.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O usuário digita o endereço correto do portal e chega a uma cópia idêntica que pede login. Phishing ou pharming?",
+          "resposta": "Pharming: o vetor é o redirecionamento da resolução (DNS/envenenamento local), não a persuasão por mensagem. O indício é o endereço exibido estar correto ou levemente alterado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Autorização por e-mail pede pagamento urgente assinada pelo gestor. Como blindar o processo contra impersonation?",
+          "resposta": "1) Autenticação do domínio remetente (SPF/DKIM/DMARC com política rígida). 2) Regra institucional: pedidos de pagamento seguem sistema de fluxo com autenticação forte, nunca só e-mail. 3) Confirmação por canal previamente cadastrado. 4) Registro de tudo para auditoria."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Mostrar o nome correto do órgão no e-mail prova que a mensagem veio dele.'",
+          "correcao": "Errado. O nome exibido é texto livre, falsificável; a autenticidade depende de verificação de domínio (SPF/DKIM/DMARC) e, para ações sensíveis, de confirmação por canal independente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Pharming exige que o usuário clique em link de mensagem fraudulenta.",
+          "resposta": "Errado. Pharming ataca a resolução/redirecionamento; o usuário digita o endereço correto e ainda assim é levado ao site falso."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Falsificar o número de telefone que aparece na chamada é exemplo de: A) pharming; B) spoofing; C) watering hole; D) typosquatting.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar pharming de phishing pelo vetor (redirecionamento x persuasão) e identificará formas de spoofing relevantes para o serviço público, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará pharming de phishing pelo vetor (redirecionamento x persuasão) e identificará formas de spoofing relevantes para o serviço público"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Pharming redireciona o usuário ao site falso sem que ele perceba: o endereço digitado é legítimo, mas a resolução é corrompida (envenenamento de cache DNS, alteração de arquivo de hosts, roubo de roteador, malware local). A vítima 'visita' o site certo e entrega a senha no site errado — por isso pharming dispensa a persuasão da vítima. Spoofing é a falsificação de um identificador: endereço de e-mail (nome exibido e até domínio, quando não autenticado), endereço de origem de pacotes, número de t…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Pharming, spoofing e fraude por impersonação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Mostrar o nome correto do órgão no e-mail prova que a mensagem veio dele.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O nome exibido é texto livre, falsificável; a autenticidade depende de verificação de domínio (SPF/DKIM/DMARC) e, para ações sensíveis, de confirmação por canal independente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O usuário digita o endereço correto do portal e chega a uma cópia idêntica que pede login. Phishing ou pharming?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pharming: o vetor é o redirecionamento da resolução (DNS/envenenamento local), não a persuasão por mensagem. O indício é o endereço exibido estar correto ou levemente alterado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Autorização por e-mail pede pagamento urgente assinada pelo gestor. Como blindar o processo contra impersonation?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) Autenticação do domínio remetente (SPF/DKIM/DMARC com política rígida). 2) Regra institucional: pedidos de pagamento seguem sistema de fluxo com autenticação forte, nunca só e-mail. 3) Confirmação por canal previamente cadastrado. 4) Registro de tudo para auditoria.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Mostrar o nome correto do órgão no e-mail prova que a mensagem veio dele.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O nome exibido é texto livre, falsificável; a autenticidade depende de verificação de domínio (SPF/DKIM/DMARC) e, para ações sensíveis, de confirmação por canal independente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

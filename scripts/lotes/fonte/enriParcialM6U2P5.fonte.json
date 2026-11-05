@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 2,
+    "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U2P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U2P5.js",
+    "idsCompletos": [
+      "m6-u2-t3-s4",
+      "m6-u2-t3-s5"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u2-t3-s4",
+      "titulo": "Resumo estruturado, checklist de domínio e verificação de aprendizagem",
+      "topicoTitulo": "Publicidade administrativa x divulgação irrestrita de dados pessoais, comparações e síntese",
+      "topicoId": "modulo-6-unidade-2-topico-3",
+      "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno consolidará a unidade 6.2 por recuperação ativa, organizando conceitos, prazos, exceções e o protocolo de decisão entre publicidade e dados pessoais.",
+      "conteudo": "RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: publicidade como preceito geral e sigilo como exceção (art. 3º, I, da LAI); transparência ativa (dever de ofício) e passiva (direito de pedido); dado aberto (forma e licença) x dado acessível ao público (ausência de restrição); informação sigilosa x informação pessoal (regimes autônomos e cumuláveis); dado anonimizado x pseudonimizado. REGRAS E PRAZOS (todos verificados em 2026-10-21): pedido por qualquer meio legítimo, com identificação e especificação, vedadas exigências de motivo (art. 10, § 3º); resposta em 20 dias, prorrogáveis por 10 com justificativa expressa (art. 11, § 1º e § 2º); gratuidade do serviço, ressarcimento apenas por reprodução, isenção social (art. 12 na redação do art. 52 da Lei nº 14.129/2021); recurso em 10 dias à autoridade hierarquicamente superior, que se manifesta em 5 dias (art. 15); inteiro teor da negativa (art. 14); painel com três indicadores (art. 22 da Lei nº 14.129/2021); ordem do processo eletrônico e tempestividade até 23h59 no horário de Brasília (art. 8º e § 1º da Lei nº 14.129/2021); dados de envio e recebimento preservados por 5 anos (art. 43, V). COMPARAÇÕES CRÍTICAS: ativa x passiva; aberto x acessível; sigilo da LAI x segredo de justiça x segredo industrial; sigilosa x pessoal; anonimizado x pseudonimizado; gratuidade x ressarcimento. FLUXO RESUMIDO (decisão de publicação de dado pessoal): (1) o dado é pessoal? (2) há base legal ou consentimento? (3) a finalidade é de interesse público? (4) a identificação é necessária? (5) anonimização/agregação resolve? (6) registrar versão, método e data da anonimização; (7) publicar, ou negar com motivação específica e recursal. EXCEÇÕES E LIMITES: dispensa de divulgação na internet para municípios com até 10.000 habitantes, mantida a publicidade orçamentária e financeira em tempo real (art. 8º, § 4º); acesso parcial com ocultação (art. 7º, § 2º); dispensa de consentimento nas hipóteses do art. 31, § 3º; não barreira à tutela de direitos fundamentais (art. 21);Bases com informação protegida não são automaticamente passíveis de abertura (art. 30, § 6º, da Lei nº 14.129/2021); privacidade preservada mesmo na transparência ativa (art. 29, § 1º, VIII). PALAVRAS-CHAVE: preceito geral, exceção justificada, transparência ativa, transparência passiva, dado aberto, formato legível por máquina, anonimização, acesso parcial, motivação da negativa, recurso. CHECKLIST DE DOMÍNIO: (1) Qual diretriz da LAI formula a relação publicidade/sigilo? (2) Qual o prazo de resposta e sua condição de prorrogação? (3) O que o requerente precisa apresentar? (4) Quando o órgão pode cobrar? (5) Quais os três indicadores do painel? (6) Quais as duas hipóteses de divulgação de dado de servidor? (7) Quando a base pode ser publicada? (8) Qual a resposta correta ao pedido que mistura dados anonimizáveis e identificáveis? VERIFICAÇÃO DE APRENDIZAGEM (recuperação ativa — 8 questões autorais): (Q1) Transcreva a diretriz do art. 3º, I, da LAI. (Q2) Distinga transparência ativa de passiva, indicando um dispositivo de cada. (Q3) Explique por que a recusa de um pedido que contém dados anonimizáveis e identificáveis pode ser ilegal. (Q4) Quando o órgão pode cobrar algo em resposta a pedido? (Q5) O que diz o art. 8º, § 4º, da LAI e o que ele NÃO dispensa? (Q6) Qual o conteúdo mínimo do painel do art. 22 da Lei nº 14.129/2021? (Q7) Diferencie dado anonimizado de dado pseudonimizado e diga qual autoriza abertura de base. (Q8) Aponte a hipótese de dispensa de consentimento do art. 31, § 3º, da LAI que mais se aproxima de pesquisa com dados de cidadãos e explique a vedação que a acompanha. CRITÉRIO DE DOMÍNIO: acerto integral em Q1, Q2, Q5 e Q8 e em ao menos 5 dos 8 itens, com Q3 e Q7 sem confusão de regimes.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Sem consultar o texto, liste as três condições que tornam lícita a divulgação de dado pessoal em Transparência ativa.",
+          "resposta": "(1) Base legal ou consentimento (art. 31, § 1º, II, da LAI; hipóteses de dispensa do art. 31, § 3º); (2) Finalidade de interesse público, com compatibilidade de finalidade e minimização; (3) Quando se trata de abertura de base, anonimização prévia (art. 36 da Lei nº 14.129/2021; LGPD, art. 5º, III) ou agregação com vedação de identificação (art. 31, § 3º, II, da LAI). Sem qualquer uma dessas três, não há publicação de dado identificável."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Qual a resposta correta ao pedido que mistura dados anonimizáveis e identificáveis?",
+          "resposta": "Análise por camada e entrega do máximo possível: produzir versão anonimizada ou agregada e entregá-la; se houver retenção, motivar com dispositivo específico, informar o teor integral da negativa (art. 14 da LAI) e o caminho recursal (art. 11, § 4º); registrar o método e a data da anonimização. Recusa binária e genérica descumpre o dever de fundamentação e o direito de acesso parcial (art. 7º, § 2º)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A abertura de base de dados é um direito subjetivo público irrestrito, e a recusa só pode ocorrer por informação sigilosa classificada formalmente.'",
+          "correcao": "Errado. A abertura depende de ausência de informação protegida por lei (art. 30, § 6º, da Lei nº 14.129/2021), o que inclui dados pessoais sob o regime do art. 31 da LAI; e o § 1º do art. 30 admite que o requerente peça a preservação de sua identidade quando a identificação prejudicar o princípio da impessoalidade. O pedido é instrumento de transparência com regime próprio, não direito irrestrito de cópia integral."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O resumo estruturado da unidade 6.2 permite revisar prazos, exceções e o protocolo de decisão entre publicidade e dados pessoais sem reler a unidade.",
+          "resposta": "Certo, para quem já compreendeu a unidade: o resumo organiza conceitos essenciais, regras, comparações, fluxo, exceções, palavras-chave e checklist. Ele não produz a compreensão de quem não leu, e por isso não substitui a leitura completa."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Na verificação de aprendizagem da unidade 6.2, exige-se acerto integral: A) na citação da diretriz de publicidade/sigilo; B) na distinção entre transparência ativa e passiva; C) no conteúdo do art. 8º, § 4º, da LAI; D) na identificação da hipótese de dispensa de consentimento aplicável a pesquisa com dados de cidadãos.",
+          "resposta": "A, B, C e D. São os itens de base normativa e de aplicação do regime; os demais admitem erro pontual."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de consolidar a unidade 6.2 por recuperação ativa, organizando conceitos, prazos, exceções e o protocolo de decisão entre publicidade e dados pessoais, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "consolidará a unidade 6.2 por recuperação ativa, organizando conceitos, prazos, exceções e o protocolo de decisão entre publicidade e dados pessoais"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: publicidade como preceito geral e sigilo como exceção (art. 3º, I, da LAI); transparência ativa (dever de ofício) e passiva (direito de pedido); dado aberto (forma e licença) x dado acessível ao público (ausência de restrição); informação sigilosa x informação pessoal (regimes autônomos e cumuláveis); dado anonimizado x pseudonimizado. REGRAS E PRAZOS (todos verificados em 2026-10-21): pedido por qualquer meio legítimo, com identificação e especificação…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Resumo estruturado, checklist de domínio e verificação de aprendizagem",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A abertura de base de dados é um direito subjetivo público irrestrito, e a recusa só pode ocorrer por informação sigilosa classificada formalmente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A abertura depende de ausência de informação protegida por lei (art. 30, § 6º, da Lei nº 14.129/2021), o que inclui dados pessoais sob o regime do art. 31 da LAI; e o § 1º do art. 30 admite que o requerente peça a preservação de sua identidade quando a identificação prejudicar o princípio da impessoalidade. O pedido é instrumento de transparência com regime próprio, não direito irrestrito de cópia integral."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Sem consultar o texto, liste as três condições que tornam lícita a divulgação de dado pessoal em Transparência ativa.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) Base legal ou consentimento (art. 31, § 1º, II, da LAI; hipóteses de dispensa do art. 31, § 3º); (2) Finalidade de interesse público, com compatibilidade de finalidade e minimização; (3) Quando se trata de abertura de base, anonimização prévia (art. 36 da Lei nº 14.129/2021; LGPD, art. 5º, III) ou agregação com vedação de identificação (art. 31, § 3º, II, da LAI). Sem qualquer uma dessas três, não há publicação de dado identificável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Qual a resposta correta ao pedido que mistura dados anonimizáveis e identificáveis?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Análise por camada e entrega do máximo possível: produzir versão anonimizada ou agregada e entregá-la; se houver retenção, motivar com dispositivo específico, informar o teor integral da negativa (art. 14 da LAI) e o caminho recursal (art. 11, § 4º); registrar o método e a data da anonimização. Recusa binária e genérica descumpre o dever de fundamentação e o direito de acesso parcial (art. 7º, § 2º).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A abertura de base de dados é um direito subjetivo público irrestrito, e a recusa só pode ocorrer por informação sigilosa classificada formalmente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A abertura depende de ausência de informação protegida por lei (art. 30, § 6º, da Lei nº 14.129/2021), o que inclui dados pessoais sob o regime do art. 31 da LAI; e o § 1º do art. 30 admite que o requerente peça a preservação de sua identidade quando a identificação prejudicar o princípio da impessoalidade. O pedido é instrumento de transparência com regime próprio, não direito irrestrito de cópia integral.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u2-t3-s5",
+      "titulo": "Exemplos resolvidos da unidade (três casos completos)",
+      "topicoTitulo": "Publicidade administrativa x divulgação irrestrita de dados pessoais, comparações e síntese",
+      "topicoId": "modulo-6-unidade-2-topico-3",
+      "unidadeTitulo": "6.2 Transparência: Lei de Acesso à Informação e Lei de Governo Digital",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno resolverá, com o template de nove itens, três casos de transparência administrativa (transparência ativa incompleta, pedido de acesso parcialmente sigiloso e recusa por existência de portal), identificando regime, dispositivo e providência.",
+      "conteudo": "Exemplos didáticos construídos para ensino, sem correspondência com caso real de órgão, empresa ou pessoa determinada. Todos seguem os nove itens exigidos.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "EXEMPLO 1 (INTRODUÇÃO) — O portal de transparência do órgão divulga a estrutura organizacional e os repasses, mas a área de licitações não publica os resultados nem os contratos do exercício corrente, e a base de dados abertos não é atualizada há dezoito meses. Como o órgão deve tratar o caso?",
+          "resposta": "Problema: descumprimento parcial do dever de publicidade (transparência ativa), com omissão de conteúdo obrigatório e desatualização. Dados disponíveis: página inicial e estrutura organizacional publicadas; licitações e contratos do exercício corrente ausentes; dados abertos sem atualização há dezoito meses; nenhuma notificação de indisponibilidade. Conceitos aplicáveis: dever de divulgação de ofício (art. 8º da Lei nº 12.527/2011); conteúdo mínimo (art. 8º, § 1º, IV e V); requisitos do sítio oficial (art. 8º, § 3º, V e VI); abertura de dados (art. 29 da Lei nº 14.129/2021); atualização periódica com histórico (art. 29, § 1º, VI); finalidade de controle social (art. 3º, V, da LAI) e dever de prestação de contas (art. 3º, VI, da Lei nº 14.129/2021). Estratégia: tratar como não conformidade de publicidade com plano de regularização, e não como tarefa de marketing institucional. Passo a passo: (1) verificar a completude contra o rol do art. 8º, § 1º, e contra o art. 29, § 2º, da Lei nº 14.129/2021, produzindo inventário do que falta; (2) identificar a causa da desatualização (falha de processo, de integração ou de responsável indefinido); (3) nomear responsável por conjunto de dados, com data de última atualização visível no portal; (4) publicar a regularização com data de referência e manter histórico de versões; (5) implementar controle de atualização com alerta de vencimento e verificação periódica independente (art. 49 da Lei nº 14.129/2021 — auditoria interna com abordagem baseada em risco); (6) registrar o achado e as ações no sistema de gestão de riscos (art. 48); (7) comunicar a regularização ao cidadão, porque a transparência inclui admitir a falha e informar a correção. Resultado: portal completo e atualizado, com responsável nomeado e controle de atualização vigente, e achado registrado para auditoria. Justificativa técnica: a publicidade não se cumpre pela existência de um portal, e sim pela publicação do conteúdo mínimo em versão atual, autêntica e íntegra (art. 8º, § 3º, V e VI). A desatualização converte o portal em fonte de informação errada, o que é pior do que a ausência de portal. Erros frequentes: (a) atualizar sem registrar histórico; (b) nomear responsável apenas para a página inicial; (c) tratar a omissão como falha de texto; (d) não comunicar a regularização. Variação para transferência: se a omissão decorrer de informação classificada (hipótese do art. 23 da Lei nº 12.527/2011), o caminho muda: publica-se a parte não sigilosa, com a devida classificação formal (art. 28) e motivação, e a omissão deixa de ser falha — o que prova que a análise deve começar pela natureza da informação, não pela ausência no portal."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "EXEMPLO 2 (APLICAÇÃO) — Um cidadão pede o inteiro teor de um processo administrativo em que há parecer técnico sem restrição e anexo com dados de saúde do reclamante. Como o órgão deve responder?",
+          "resposta": "Problema: pedido parcialmente atendível, que exige acesso parcial e motivação da retenção. Dados disponíveis: pedido protocolado com identificação do requerente e especificação (art. 10 da Lei nº 12.527/2011); o processo contém parecer técnico público e anexo com dado pessoal sensível (art. 5º, II, da LGPD — verificado em 2026-10-20); não há consentimento registrado; há prazo em curso. Conceitos aplicáveis: acesso parcial com ocultação (art. 7º, § 2º, da LAI); proteção da informação pessoal (art. 31, § 1º, I, da LAI); acesso ao fundamento do ato decisório (art. 7º, § 3º, da LAI); dever de fundamentar a negativa (art. 11, § 1º, II); inteiro teor da decisão de negativa (art. 14) e indicação de recurso, prazos e autoridade competente (art. 11, § 4º). Estratégia: aplicar o critério menos restritivo possível — entregar a parte livre, suprimir ou anonimizar a parte protegida e comunicar a retenção com fundamento, e não recusar o conjunto. Passo a passo: (1) verificar a regularidade do pedido (art. 10, caput e § 1º); (2) separar o processo em camada pública e camada protegida, com base no art. 31 da LAI e, se houver, no art. 23; (3) entregar o parecer e os documentos não sensíveis, preferencialmente em formato digital (art. 11, § 5º) e com certificação de conformidade se a manipulação puder prejudicar a integridade (art. 13); (4) suprimir ou anonimizar o anexo, registrando o método; (5) comunicar a retenção com dispositivo, com o teor integral da decisão de negativa (art. 14) e a via recursal (art. 11, § 4º, e art. 15); (6) registrar o atendimento no sistema de estatísticas de pedidos (art. 30, III, da LAI). Resultado: entrega parcial motivada, com canal de revisão e estatísticas. Justificativa técnica: o art. 7º, § 2º, da Lei nº 12.527/2011 assegura o acesso à parte não sigilosa por certidão, extrato ou cópia com ocultação da parte sob sigilo — recusar o todo violaria o direito de acesso parcial; e a motivação da retenção é o que permite ao requerente entender a decisão e recorrer (art. 15). Erros frequentes: (a) indeferir tudo com base no dado sensível; (b) entregar tudo por ser o requerente o titular do dado; aqui; (c) omitir o teor integral da negativa; (d) não registrar a entrega parcial. Variação para transferência: se o requerente for o próprio titular do anexo sanitário, incide o direito de acesso do titular (art. 18 da LGPD) e a resposta é individualizada, com correção e anonimização quando cabíveis — o regime muda, ainda que o pedido seja o mesmo documento."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — O órgão recusa um pedido de acesso a uma relação de obras afirmando que «a informação já consta do portal de transparência, cujo prazo de atualização é de quarenta e cinco dias». Avalie a resposta.",
+          "correcao": "Problema: recusa BINÁRIA sem análise do regime, com desoneração indevida do atendimento. Dados disponíveis: pedido protocolado e especificado; a informação pedida é de interesse público e consta de área de publicação com ciclo de atualização de 45 dias; o pedido foi feito em dia anterior à atualização do ciclo; não há justificativa expressa de prazo nem referência à hipótese legal de desoneração; o requerente declarou não dispor de meio de consultar a informação no modo universal. Conceitos aplicáveis: art. 8º, § 6º, da Lei nº 12.527/2011 (hipótese de desoneração do atendimento); art. 10 (direito de pedir); art. 11, § 1º, I e II, e § 2º (comunicação do modo de consulta ou indicação das razões da recusa; prazo); art. 11, § 6º (desoneração se a informação estiver disponível em formato de acesso universal e o requerente não declarar não dispor de meios para realizar os procedimentos); art. 14 e art. 15. Estratégia: responder em vez de recusar, e conferir se a desoneração é possível. Passo a passo: (1) verificar a regularidade do pedido; (2) verificar se a informação está efetivamente disponível em formato de acesso universal para o requerente e se ele declarou não ter meios de realizar os procedimentos — sem essa declaração, a desoneração do art. 8º, § 6º, não se configura; (3) como a desoneração não se aplica, GARANTIR acesso imediato se disponível ou responder dentro do prazo de 20 dias, comunicando data, local e modo de consulta ou reprodução (art. 11, § 1º, I), com prorrogação de 10 dias apenas se houver justificativa expressa e ciência (art. 11, § 2º); (4) entregar o resultado em formato legível por máquina, se disponível (art. 11, § 5º), e orientar sobre o ciclo de atualização do portal, que é informação útil e não substitui o atendimento; (5) registrar o atendimento e o tempo de resposta. Resultado: atendimento efetuado (ou prazo de resposta corretamente aberto com justificativa), sem recusa binária. Justificativa técnica: a existência da informação no portal não converte o pedido em redundância — a desoneração do art. 8º, § 6º, exige um conjunto de condições (disponibilidade universal e declaração do requerente), e o art. 11, § 6º, pressupõe que o requerente tenha meio de realizar por si mesmo a consulta. Item que generaliza a desoneração é a armadilha mais comum sobre a transparência passiva. Erros frequentes: (a) recusar por «já estar no portal»; (b) adiar o atendimento invocando o ciclo de atualização; (c) não verificar a declaração sobre meios do requerente; (d) omitir o teor integral da negativa e o caminho recursal. Variação para transferência: se o requerente declarar expressamente não dispor de meios para realizar a consulta, a desoneração do art. 8º, § 6º, opera e o órgão informa o local e a forma de consulta (art. 11, § 6º) — a resposta muda, o que mostra que a desoneração é hipótese dependente de fatos do caso."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A existência da informação no portal de transparência não torna o pedido de acesso automaticamente improcedente.",
+          "resposta": "Certo. A desoneração do atendimento depende das hipóteses do art. 8º, § 6º, da Lei nº 12.527/2011 e do art. 11, § 6º, inclusive da declaração do requerente sobre os meios de que dispõe."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Diante de pedido parcialmente atendível, o órgão deve: A) entregar a parte livre; B) suprimir ou anonimizar a parte protegida; C) informar o teor integral da negativa e a via recursal; D) indeferir o pedido inteiro para preservar a simplicidade do atendimento.",
+          "resposta": "A, B e C. O item D contraria o art. 7º, § 2º, da Lei nº 12.527/2011."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de resolver, com o template de nove itens, três casos de transparência administrativa (transparência ativa incompleta, pedido de acesso parcialmente sigiloso e recusa por existência de portal), identificando regime, dispositivo e providência, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "resolverá, com o template de nove itens, três casos de transparência administrativa (transparência ativa incompleta, pedido de acesso parcialmente sigiloso e recusa por existência de portal), identificando regime, dispositivo e providência"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Exemplos didáticos construídos para ensino, sem correspondência com caso real de órgão, empresa ou pessoa determinada. Todos seguem os nove itens exigidos.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exemplos resolvidos da unidade (três casos completos)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "EXEMPLO 3 (INTERPRETAÇÃO DE ERRO — NÍVEL AVANÇADO) — O órgão recusa um pedido de acesso a uma relação de obras afirmando que «a informação já consta do portal de transparência, cujo prazo de atualização é de quarenta e cinco dias». Avalie a resposta.",
+            "porqueErrada": "",
+            "versaoCorreta": "Problema: recusa BINÁRIA sem análise do regime, com desoneração indevida do atendimento. Dados disponíveis: pedido protocolado e especificado; a informação pedida é de interesse público e consta de área de publicação com ciclo de atualização de 45 dias; o pedido foi feito em dia anterior à atualização do ciclo; não há justificativa expressa de prazo nem referência à hipótese legal de desoneração; o requerente declarou não dispor de meio de consultar a informação no modo universal. Conceitos aplicáveis: art. 8º, § 6º, da Lei nº 12.527/2011 (hipótese de desoneração do atendimento); art. 10 (direito de pedir); art. 11, § 1º, I e II, e § 2º (comunicação do modo de consulta ou indicação das razões da recusa; prazo); art. 11, § 6º (desoneração se a informação estiver disponível em formato de acesso universal e o requerente não declarar não dispor de meios para realizar os procedimentos); art. 14 e art. 15. Estratégia: responder em vez de recusar, e conferir se a desoneração é possível. Passo a passo: (1) verificar a regularidade do pedido; (2) verificar se a informação está efetivamente disponível em formato de acesso universal para o requerente e se ele declarou não ter meios de realizar os procedimentos — sem essa declaração, a desoneração do art. 8º, § 6º, não se configura; (3) como a desoneração não se aplica, GARANTIR acesso imediato se disponível ou responder dentro do prazo de 20 dias, comunicando data, local e modo de consulta ou reprodução (art. 11, § 1º, I), com prorrogação de 10 dias apenas se houver justificativa expressa e ciência (art. 11, § 2º); (4) entregar o resultado em formato legível por máquina, se disponível (art. 11, § 5º), e orientar sobre o ciclo de atualização do portal, que é informação útil e não substitui o atendimento; (5) registrar o atendimento e o tempo de resposta. Resultado: atendimento efetuado (ou prazo de resposta corretamente aberto com justificativa), sem recusa binária. Justificativa técnica: a existência da informação no portal não converte o pedido em redundância — a desoneração do art. 8º, § 6º, exige um conjunto de condições (disponibilidade universal e declaração do requerente), e o art. 11, § 6º, pressupõe que o requerente tenha meio de realizar por si mesmo a consulta. Item que generaliza a desoneração é a armadilha mais comum sobre a transparência passiva. Erros frequentes: (a) recusar por «já estar no portal»; (b) adiar o atendimento invocando o ciclo de atualização; (c) não verificar a declaração sobre meios do requerente; (d) omitir o teor integral da negativa e o caminho recursal. Variação para transferência: se o requerente declarar expressamente não dispor de meios para realizar a consulta, a desoneração do art. 8º, § 6º, opera e o órgão informa o local e a forma de consulta (art. 11, § 6º) — a resposta muda, o que mostra que a desoneração é hipótese dependente de fatos do caso."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O portal de transparência do órgão divulga a estrutura organizacional e os repasses, mas a área de licitações não publica os resultados nem os contratos do exercício corrente, e a base de dados abertos não é atualizada há dezoito meses. Como o órgão deve tratar o caso?",
+            "dados": "Página inicial e estrutura organizacional publicadas; licitações e contratos do exercício corrente ausentes; dados abertos sem atualização há dezoito meses; nenhuma notificação de indisponibilidade.",
+            "conceitos": [
+              "Dever de divulgação de ofício (art. 8º da Lei nº 12.527/2011)",
+              "Conteúdo mínimo (art. 8º, § 1º, IV e V)",
+              "Requisitos do sítio oficial (art. 8º, § 3º, V e VI)",
+              "Abertura de dados (art. 29 da Lei nº 14.129/2021)",
+              "Atualização periódica com histórico (art. 29, § 1º, VI)",
+              "Finalidade de controle social (art. 3º, V, da LAI) e dever de prestação de contas (art. 3º, VI, da Lei nº 14.129/2021)"
+            ],
+            "estrategia": "Tratar como não conformidade de publicidade com plano de regularização, e não como tarefa de marketing institucional.",
+            "execucao": [
+              "1) Verificar a completude contra o rol do art. 8º, § 1º, e contra o art. 29, § 2º, da Lei nº 14.129/2021, produzindo inventário do que falta",
+              "2) Identificar a causa da desatualização (falha de processo, de integração ou de responsável indefinido)",
+              "3) Nomear responsável por conjunto de dados, com data de última atualização visível no portal",
+              "4) Publicar a regularização com data de referência e manter histórico de versões",
+              "5) Implementar controle de atualização com alerta de vencimento e verificação periódica independente (art. 49 da Lei nº 14.129/2021 — auditoria interna com abordagem baseada em risco)",
+              "6) Registrar o achado e as ações no sistema de gestão de riscos (art. 48)",
+              "7) Comunicar a regularização ao cidadão, porque a transparência inclui admitir a falha e informar a correção."
+            ],
+            "resultado": "Portal completo e atualizado, com responsável nomeado e controle de atualização vigente, e achado registrado para auditoria.",
+            "justificativa": "A publicidade não se cumpre pela existência de um portal, e sim pela publicação do conteúdo mínimo em versão atual, autêntica e íntegra (art. 8º, § 3º, V e VI). A desatualização converte o portal em fonte de informação errada, o que é pior do que a ausência de portal.",
+            "errosFrequentes": [
+              "a) Atualizar sem registrar histórico",
+              "b) Nomear responsável apenas para a página inicial",
+              "c) Tratar a omissão como falha de texto",
+              "d) Não comunicar a regularização."
+            ],
+            "variacao": "Se a omissão decorrer de informação classificada (hipótese do art. 23 da Lei nº 12.527/2011), o caminho muda: publica-se a parte não sigilosa, com a devida classificação formal (art. 28) e motivação, e a omissão deixa de ser falha — o que prova que a análise deve começar pela natureza da informação, não pela ausência no portal."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um cidadão pede o inteiro teor de um processo administrativo em que há parecer técnico sem restrição e anexo com dados de saúde do reclamante. Como o órgão deve responder?",
+            "dados": "Pedido protocolado com identificação do requerente e especificação (art. 10 da Lei nº 12.527/2011); o processo contém parecer técnico público e anexo com dado pessoal sensível (art. 5º, II, da LGPD — verificado em 2026-10-20); não há consentimento registrado; há prazo em curso.",
+            "conceitos": [
+              "Acesso parcial com ocultação (art. 7º, § 2º, da LAI)",
+              "Proteção da informação pessoal (art. 31, § 1º, I, da LAI)",
+              "Acesso ao fundamento do ato decisório (art. 7º, § 3º, da LAI)",
+              "Dever de fundamentar a negativa (art. 11, § 1º, II)",
+              "Inteiro teor da decisão de negativa (art. 14) e indicação de recurso, prazos e autoridade competente (art. 11, § 4º)"
+            ],
+            "estrategia": "Aplicar o critério menos restritivo possível — entregar a parte livre, suprimir ou anonimizar a parte protegida e comunicar a retenção com fundamento, e não recusar o conjunto.",
+            "execucao": [
+              "1) Verificar a regularidade do pedido (art. 10, caput e § 1º)",
+              "2) Separar o processo em camada pública e camada protegida, com base no art. 31 da LAI e, se houver, no art. 23",
+              "3) Entregar o parecer e os documentos não sensíveis, preferencialmente em formato digital (art. 11, § 5º) e com certificação de conformidade se a manipulação puder prejudicar a integridade (art. 13)",
+              "4) Suprimir ou anonimizar o anexo, registrando o método",
+              "5) Comunicar a retenção com dispositivo, com o teor integral da decisão de negativa (art. 14) e a via recursal (art. 11, § 4º, e art. 15)",
+              "6) Registrar o atendimento no sistema de estatísticas de pedidos (art. 30, III, da LAI)."
+            ],
+            "resultado": "Entrega parcial motivada, com canal de revisão e estatísticas.",
+            "justificativa": "O art. 7º, § 2º, da Lei nº 12.527/2011 assegura o acesso à parte não sigilosa por certidão, extrato ou cópia com ocultação da parte sob sigilo — recusar o todo violaria o direito de acesso parcial; e a motivação da retenção é o que permite ao requerente entender a decisão e recorrer (art. 15).",
+            "errosFrequentes": [
+              "a) Indeferir tudo com base no dado sensível",
+              "b) Entregar tudo por ser o requerente o titular do dado; aqui",
+              "c) Omitir o teor integral da negativa",
+              "d) Não registrar a entrega parcial."
+            ],
+            "variacao": "Se o requerente for o próprio titular do anexo sanitário, incide o direito de acesso do titular (art. 18 da LGPD) e a resposta é individualizada, com correção e anonimização quando cabíveis — o regime muda, ainda que o pedido seja o mesmo documento."
+          },
+          {
+            "tipo": "erro",
+            "problema": "O órgão recusa um pedido de acesso a uma relação de obras afirmando que «a informação já consta do portal de transparência, cujo prazo de atualização é de quarenta e cinco dias». Avalie a resposta.",
+            "dados": "Pedido protocolado e especificado; a informação pedida é de interesse público e consta de área de publicação com ciclo de atualização de 45 dias; o pedido foi feito em dia anterior à atualização do ciclo; não há justificativa expressa de prazo nem referência à hipótese legal de desoneração; o requerente declarou não dispor de meio de consultar a informação no modo universal.",
+            "conceitos": [
+              "Art. 8º, § 6º, da Lei nº 12.527/2011 (hipótese de desoneração do atendimento)",
+              "Art. 10 (direito de pedir)",
+              "Art. 11, § 1º, I e II, e § 2º (comunicação do modo de consulta ou indicação das razões da recusa",
+              "Prazo)",
+              "Art. 11, § 6º (desoneração se a informação estiver disponível em formato de acesso universal e o requerente não declarar não dispor de meios para realizar os procedimentos)",
+              "Art. 14 e art. 15"
+            ],
+            "estrategia": "Responder em vez de recusar, e conferir se a desoneração é possível. Verificar se a informação está disponível em formato de acesso universal e se o requerente declarou não dispor de meios; não configurada a hipótese, atender no prazo e indicar data, local e modo de consulta.",
+            "execucao": [
+              "1) Verificar a regularidade do pedido",
+              "2) Verificar se a informação está efetivamente disponível em formato de acesso universal para o requerente e se ele declarou não ter meios de realizar os procedimentos — sem essa declaração, a desoneração do art. 8º, § 6º, não se configura",
+              "3) Como a desoneração não se aplica, GARANTIR acesso imediato se disponível ou responder dentro do prazo de 20 dias, comunicando data, local e modo de consulta ou reprodução (art. 11, § 1º, I), com prorrogação de 10 dias apenas se houver justificativa expressa e ciência (art. 11, § 2º)",
+              "4) Entregar o resultado em formato legível por máquina, se disponível (art. 11, § 5º), e orientar sobre o ciclo de atualização do portal, que é informação útil e não substitui o atendimento",
+              "5) Registrar o atendimento e o tempo de resposta."
+            ],
+            "resultado": "Atendimento efetuado (ou prazo de resposta corretamente aberto com justificativa), sem recusa binária.",
+            "justificativa": "A existência da informação no portal não converte o pedido em redundância — a desoneração do art. 8º, § 6º, exige um conjunto de condições (disponibilidade universal e declaração do requerente), e o art. 11, § 6º, pressupõe que o requerente tenha meio de realizar por si mesmo a consulta. Item que generaliza a desoneração é a armadilha mais comum sobre a transparência passiva.",
+            "errosFrequentes": [
+              "a) Recusar por «já estar no portal»",
+              "b) Adiar o atendimento invocando o ciclo de atualização",
+              "c) Não verificar a declaração sobre meios do requerente",
+              "d) Omitir o teor integral da negativa e o caminho recursal."
+            ],
+            "variacao": "Se o requerente declarar expressamente não dispor de meios para realizar a consulta, a desoneração do art. 8º, § 6º, opera e o órgão informa o local e a forma de consulta (art. 11, § 6º) — a resposta muda, o que mostra que a desoneração é hipótese dependente de fatos do caso."
+          }
+        ]
+      }
+    }
+  ]
+}

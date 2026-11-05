@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 3,
+    "unidadeTitulo": "5.3 IA generativa e LLMs",
+    "parte": 2,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U3P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U3P2.js",
+    "idsCompletos": [
+      "m5-u3-t1-s3",
+      "m5-u3-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u3-t1-s3",
+      "titulo": "Modelos de difusão para geração de imagens",
+      "topicoTitulo": "Modelos generativos, mecanismo de geração e arquitetura",
+      "topicoId": "modulo-5-unidade-3-topico-1",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno explicará, em nível conceitual, o funcionamento dos modelos de difusão para geração de imagens, comparando-o com a geração textual e apontando as implicações de controle e de rastreabilidade.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Modelos de difusão para geração de imagens\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Modelos de difusão para geração de imagens\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Modelos de difusão para geração de imagens\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: MODELOS DE DIFUSÃO são a família dominante na geração de imagens. PRINCÍPIO: o TREINAMENTO consiste em aprender a adicionar ruído progressivamente (processo direto de difusão) a uma imagem real, em uma sequência de pequenas etapas, até transformá-la em ruído puro; e a aprender o processo inverso, que progressivamente remove o ruído. NA GERAÇÃO, parte-se do ruído e remove-se o ruído passo a passo, guiado pela descrição textual (CONDICIONAMENTO), até obter uma imagem coerente com o pedido. TRÊS COMPONENTES CONCEITUAIS: (a) O PROCESSO DE RUÍDO, que define o espaço de trabalho; (b) O DENOISER (a rede que estima o ruído a remover), que é o que efetivamente é treinado; (c) O CONDICIONAMENTO TEXTUAL, que orienta a remoção do ruído na direção do conteúdo pedido. COMPARAÇÃO COM A GERAÇÃO TEXTUAL: na geração textual, o token é escolhido sucessivamente de uma distribuição; na difusão, a imagem é construída por refinamento de uma versão ruidosa. Em ambos os casos, o resultado depende de parâmetros (número de passos, escala de orientação, semente) e a repetibilidade exige registrar esses parâmetros. CONSEQUÊNCIAS DE GOVERNANÇA: (1) IDENTIFICABILIDADE — a partir de uma imagem gerada, em geral, não é possível inferir o registro de treino que a originou, o que torna impossível garantir que a imagem não reproduza material protegido; por isso, a verificação de origem e a política de uso de material de terceiros são obrigatórias; (2) DIREITO AUTORAL E LICENÇA — os termos de uso do serviço e a titularidade da saída são cláusulas que devem ser lidas antes do uso institucional; (3) FALSIFICAÇÃO — a geração de imagens de pessoas reais, de documentos ou de cenas que pareçam documento oficial cria risco de fraude e de dano reputacional, e exige vedação expressa em política interna; (4) METADADOS E REGISTRO — registrar prompt, semente, modelo, data e responsável pela publicação. LIMITAÇÕES: custo computacional superior ao de um texto; variabilidade de qualidade com poucos passos; dificuldade de edição local consistente. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Modelos de difusão para geração de imagens\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Modelos de difusão para geração de imagens\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Modelos de difusão para geração de imagens\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Modelos de difusão para geração de imagens basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Modelos de difusão para geração de imagens e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Modelos de difusão para geração de imagens\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: modelos de difusão para geração de imagens, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Modelos de difusão para geração de imagens com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Modelos de difusão para geração de imagens\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que a difusão é mais sensível à parametrização do que a geração textual em aplicações de conteúdo institucional?",
+          "resposta": "Porque na difusão a construção da imagem depende de um número de passos, de uma escala de guidance e de uma semente: a mesma semente com parâmetros diferentes produz imagens distintas, e a repetição exige registrar os três. Em conteúdo institucional, a reprodutibilidade é requisito (para auditoria e para revisão de versão), então o registro desses parâmetros é obrigatório no fluxo de produção."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão quer gerar imagens ilustrativas para material de campanha. Quais regras devem constar da política interna?",
+          "resposta": "(1) vedação de geração de imagens de pessoas reais sem autorização expressa e documentada; (2) vedação de qualquer elemento que possa parecer documento oficial, crachá, certidão ou assinatura; (3) exigência de marcação de conteúdo sintético quando a publicação puder induzir o cidadão a crer que se trata de registro real; (4) revisão humana antes da publicação; (5) registro de prompt, semente, modelo, data e responsável; (6) verificação da licença de uso do material de referência; (7) respeito à política de imagem de servidor público e de símbolos nacionais."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como a imagem foi gerada por modelo, ela é original e não pode violar direito autoral de terceiros.'",
+          "correcao": "Errado. A origem sintética não afasta o risco de reprodução de padrão protegido, de logotipo, de personagem ou de obra; e os termos de uso do serviço definem a licença da saída, que precisa ser lida e aceita pelo órgão. Item que supõe imunidade autoral por origem artificial é erro frequente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A geração de imagens por difusão é reprodutível apenas se os parâmetros relevantes forem registrados.",
+          "resposta": "Certo. Semente, número de passos, escala de guidance e versão do modelo formam o conjunto mínimo para reconstruir a saída."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Riscos do uso institucional de imagens geradas: A) falsificação de documento oficial; B) geração de imagem de pessoa real sem autorização; C) uso de material de terceiro protegido; D) impossibilidade técnica de gerar imagens sem equipamento dedicado.",
+          "resposta": "A, B e C. O item D é incorreto quanto à natureza do risco e não é uma razão para dispensar a política de uso."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar, em nível conceitual, o funcionamento dos modelos de difusão para geração de imagens, comparando-o com a geração textual e apontando as implicações de controle e de rastreabilidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará, em nível conceitual, o funcionamento dos modelos de difusão para geração de imagens, comparando-o com a geração textual e apontando as implicações de controle e de rastreabilidade"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Modelos de difusão para geração de imagens\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Modelos de difusão para geração de imagens\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unida…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Modelos de difusão para geração de imagens",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como a imagem foi gerada por modelo, ela é original e não pode violar direito autoral de terceiros.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A origem sintética não afasta o risco de reprodução de padrão protegido, de logotipo, de personagem ou de obra; e os termos de uso do serviço definem a licença da saída, que precisa ser lida e aceita pelo órgão. Item que supõe imunidade autoral por origem artificial é erro frequente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que a difusão é mais sensível à parametrização do que a geração textual em aplicações de conteúdo institucional?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque na difusão a construção da imagem depende de um número de passos, de uma escala de guidance e de uma semente: a mesma semente com parâmetros diferentes produz imagens distintas, e a repetição exige registrar os três. Em conteúdo institucional, a reprodutibilidade é requisito (para auditoria e para revisão de versão), então o registro desses parâmetros é obrigatório no fluxo de produção.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão quer gerar imagens ilustrativas para material de campanha. Quais regras devem constar da política interna?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) vedação de geração de imagens de pessoas reais sem autorização expressa e documentada; (2) vedação de qualquer elemento que possa parecer documento oficial, crachá, certidão ou assinatura; (3) exigência de marcação de conteúdo sintético quando a publicação puder induzir o cidadão a crer que se trata de registro real; (4) revisão humana antes da publicação; (5) registro de prompt, semente, modelo, data e responsável; (6) verificação da licença de uso do material de referência; (7) respeito à política de imagem de servidor público e de símbolos nacionais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como a imagem foi gerada por modelo, ela é original e não pode violar direito autoral de terceiros.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A origem sintética não afasta o risco de reprodução de padrão protegido, de logotipo, de personagem ou de obra; e os termos de uso do serviço definem a licença da saída, que precisa ser lida e aceita pelo órgão. Item que supõe imunidade autoral por origem artificial é erro frequente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u3-t2-s1",
+      "titulo": "Alucinações, limites de contexto e incerteza",
+      "topicoTitulo": "Limites, recuperação aumentada e agentes com supervisão",
+      "topicoId": "modulo-5-unidade-3-topico-2",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno explicará por que modelos generativos produzem alucinações, relacionará o fenômeno a limites de contexto e à amostragem probabilística, e indicará as técnicas de verificação e o regime de uso admissível.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Alucinações, limites de contexto e incerteza\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Alucinações, limites de contexto e incerteza\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Alucinações, limites de contexto e incerteza\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: ALUCINAÇÃO é a produção de afirmação factualmente falsa, mas linguisticamente coerente, com a mesma confiança aparente de uma afirmação verdadeira. CAUSA MECÂNICA: o modelo foi otimizado para produzir texto PLAUSÍVEL, não texto VERDADEIRO; ele não consulta fontes durante a geração e não possui mecanismo interno de verificação de fato. COMBINAÇÕES QUE AGRAVAM: (a) perguntas sobre eventos recentes ou específicos (o modelo não tem conhecimento paramétrico deles); (b) perguntas que exigem dado que o solicitante não forneceu (o modelo pode preencher a lacuna com invenção); (c) perguntas com premissa falsa (o modelo tende a aceitar a premissa); (d) contexto muito longo, em que informações relevantes se perdem ou ficam diluídas; (e) números, datas e identificadores, que não são memorizados de forma confiável. CONSEQUÊNCIA DE GOVERNANÇA: o modelo não é FONTE; ele é GERADOR DE TEXTO. A alucinação não é defeito ocasional, é modo de funcionamento; logo, a verificação é requisito, não tarefa opcional. LIMITE DE CONTEXTO: a janela é finita e tudo o que está fora dela é invisível ao modelo — daí três consequências: (1) o modelo não «lembra» de conversas anteriores, salvo memória externa implementada pelo aplicativo; (2) documentos longos precisam de ser recortados, resumidos ou recuperados; (3) em contexto muito cheio, o desempenho na recuperação de informação relevante tende a cair (o modelo não é um banco de dados com busca perfeita). INCERTEZA: o modelo não expõe de forma calibrada a probabilidade de acerto; manifesta confiança no estilo, não na evidência. A mitigação é de processo: pedir fontes e citá-las, usar recuperação com trecho exibido, permitir que a resposta declare «não consta na fonte», e trilha de verificação. O USO ADMISSÍVEL DE SAÍDA DE MODELO EM SERVIÇO PÚBLICO: (1) como rascunho para servidor que revisa e assina; (2) como apoio a classificação ou priorização com critério definido; (3) como gerador de texto padrão, desde que a fonte documental esteja anexada; (4) como interface de busca sobre base própria, com trecho e fonte exibidos; e NUNCA como (5) fonte de fato não verificado em decisão sobre direito; (6) base para cálculo que envolva dado sensível sem base legal; (7) fonte de dado que não pode ser revelado (senha, token, chave). SINAIS DE ALERTA NA SAÍDA: número muito específico sem fonte; citação de documento que não consta da base; afirmação de fato local sem referência; resposta que «completa» dado faltante com suposição. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Alucinações, limites de contexto e incerteza\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Alucinações, limites de contexto e incerteza\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Alucinações, limites de contexto e incerteza\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Alucinações, limites de contexto e incerteza basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Alucinações, limites de contexto e incerteza e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Alucinações, limites de contexto e incerteza\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: alucinações, limites de contexto e incerteza, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Alucinações, limites de contexto e incerteza com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Alucinações, limites de contexto e incerteza\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um servidor pede ao modelo o prazo de análise de um requerimento. O modelo responde «15 dias úteis», com segurança. Qual o problema?",
+          "resposta": "Dois: (1) alucinação — o número não tem fonte no contexto fornecido e o modelo não consulta a base, portanto é estatisticamente plausível e factualmente vazio; (2) inadequação de uso — prazo que afeta o cidadão precisa vir do ato normativo, não de geração. A conduta correta é fornecer o trecho normativo (ou recuperá-lo via RAG) e exigir que a resposta cite a fonte; a resposta do servidor ao cidadão só pode usar o prazo confirmado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como reduzir alucinações em um assistente interno que responde sobre a legislação do órgão?",
+          "resposta": "(1) BASAR A RESPOSTA EM RECUPERAÇÃO: indexar os atos normativos em embeddings e buscar os trechos antes de responder (RAG); (2) EXIGIR CITAÇÃO da fonte no formato definido e bloquear a resposta quando a base não trouxer trecho relevante; (3) PERMITIR RESPOSTA NEGATIVA («a base não contém o trecho»), evitando que o modelo preencha a lacuna; (4) RESTRINGIR o escopo a fontes aprovadas; (5) VERIFICAR NUMEROS, DATAS E IDENTIFICADORES por confronto automático com a fonte; (6) REVISAR AMOSTRALMENTE as respostas, com indicador de conformidade com a fonte; (7) registrar prompt, resposta e fonte para auditoria."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A alucinação é um defeito corrigível com um prompt melhor.'",
+          "correcao": "Errado. Prompts melhorados reduzem a frequência de alucinação, mas não a eliminam, porque a causa é estrutural: otimização para plausibilidade e ausência de verificação de fato. A redução confiável vem de processo: fonte obrigatória, resposta verificável, saída que admite «não consta» e revisão humana nos casos que afetam direito."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Responder «não consta na fonte consultada» é comportamento desejável em um assistente institucional apoiado em recuperação.",
+          "resposta": "Certo. É o oposto da alucinação: a ausência de resposta fundamentada é preferível à resposta inventada, sobretudo quando afeta direitos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Sinais de alerta de alucinação em uma saída: A) número específico sem fonte; B) citação de documento ausente da base; C) resposta com base em trecho recuperado e citado; D) afirmação sobre fato local sem referência.",
+          "resposta": "A, B e D. O item C é justamente o padrão desejável de resposta verificável."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar por que modelos generativos produzem alucinações, relacionará o fenômeno a limites de contexto e à amostragem probabilística, e indicará as técnicas de verificação e o regime de uso admissível, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará por que modelos generativos produzem alucinações, relacionará o fenômeno a limites de contexto e à amostragem probabilística, e indicará as técnicas de verificação e o regime de uso admissível"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Alucinações, limites de contexto e incerteza\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Alucinações, limites de contexto e incerteza\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das u…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Alucinações, limites de contexto e incerteza",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A alucinação é um defeito corrigível com um prompt melhor.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Prompts melhorados reduzem a frequência de alucinação, mas não a eliminam, porque a causa é estrutural: otimização para plausibilidade e ausência de verificação de fato. A redução confiável vem de processo: fonte obrigatória, resposta verificável, saída que admite «não consta» e revisão humana nos casos que afetam direito."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um servidor pede ao modelo o prazo de análise de um requerimento. O modelo responde «15 dias úteis», com segurança. Qual o problema?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dois: (1) alucinação — o número não tem fonte no contexto fornecido e o modelo não consulta a base, portanto é estatisticamente plausível e factualmente vazio; (2) inadequação de uso — prazo que afeta o cidadão precisa vir do ato normativo, não de geração. A conduta correta é fornecer o trecho normativo (ou recuperá-lo via RAG) e exigir que a resposta cite a fonte; a resposta do servidor ao cidadão só pode usar o prazo confirmado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como reduzir alucinações em um assistente interno que responde sobre a legislação do órgão?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) BASAR A RESPOSTA EM RECUPERAÇÃO: indexar os atos normativos em embeddings e buscar os trechos antes de responder (RAG); (2) EXIGIR CITAÇÃO da fonte no formato definido e bloquear a resposta quando a base não trouxer trecho relevante; (3) PERMITIR RESPOSTA NEGATIVA («a base não contém o trecho»), evitando que o modelo preencha a lacuna; (4) RESTRINGIR o escopo a fontes aprovadas; (5) VERIFICAR NUMEROS, DATAS E IDENTIFICADORES por confronto automático com a fonte; (6) REVISAR AMOSTRALMENTE as respostas, com indicador de conformidade com a fonte; (7) registrar prompt, resposta e fonte para auditoria.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A alucinação é um defeito corrigível com um prompt melhor.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Prompts melhorados reduzem a frequência de alucinação, mas não a eliminam, porque a causa é estrutural: otimização para plausibilidade e ausência de verificação de fato. A redução confiável vem de processo: fonte obrigatória, resposta verificável, saída que admite «não consta» e revisão humana nos casos que afetam direito.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

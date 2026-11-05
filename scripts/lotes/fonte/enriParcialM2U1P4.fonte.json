@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 1,
+    "unidadeTitulo": "2.1 Fundamentos de Redes",
+    "parte": 4,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM2U1P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U1P4.js",
+    "idsCompletos": [
+      "m2-u1-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u1-t4-s1",
+      "titulo": "Cabos UTP, STP, fibra óptica, coaxial, Wi-Fi, rádio",
+      "topicoTitulo": "Meios de transmissão: cabeados e sem fio",
+      "topicoId": "modulo-2-unidade-1-topico-4",
+      "unidadeTitulo": "2.1 Fundamentos de Redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno identificará os principais meios de transmissão e suas características.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os meios guiados (par trançado UTP/STP, fibra óptica, coaxial); (b) os meios não guiados (Wi-Fi, rádio); (c) características, vantagens e limitações de cada um. POR QUE O CONHECIMENTO É IMPORTANTE: o meio determina banda, alcance, imunidade a interferência e custo; a prova associa meio, categoria e cenário. PRÉ-REQUISITOS: conceito de enlace. OBJETIVOS OBSERVÁVEIS: (1) classificar meios em guiados e não guiados; (2) citar características de cada; (3) associar categorias de par trançado a taxas; (4) escolher o meio para um cenário. COMPETÊNCIAS DESENVOLVIDAS: seleção de meio de transmissão; leitura de especificações. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.1 (enlace); unidade 2.1 (camada física). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: meios guiados conduzem o sinal por um caminho físico. O par trançado UTP (Unshielded Twisted Pair) é barato e fácil de instalar, mas suscetível a interferência; categorias comuns incluem Cat5e (1 Gbps) e Cat6/Cat6a (até 10 Gbps, com limitações de distância). O STP (Shielded Twisted Pair) acrescenta blindagem e é usado em ambientes com alta interferência. A fibra óptica transmite luz e é imune à interferência eletromagnética, com alta banda e longo alcance; o modo monomodo usa laser para longas distâncias e o multimodo usa LED para curtas distâncias. O cabo coaxial foi muito usado em redes antigas e na TV a cabo. Meios não guiados propagam o sinal pelo ar: o Wi-Fi (IEEE 802.11) opera em faixas como 2,4 GHz (maior alcance, mais interferência) e 5 GHz (menor alcance, maior taxa); enlaces de rádio ponto a ponto, micro-ondas e satélite atendem longas distâncias. A escolha equilibra banda, distância, imunidade a interferência, mobilidade e custo.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir meio guiado de não guiado.\n- Nível intermediário: associar categoria/meio a taxa e alcance aproximados.\n- Nível avançado: escolher o meio conforme interferência, distância e mobilidade.\n- Nível especialista: projetar o cabeamento de um campus combinando fibra, par trançado e Wi-Fi.\nCOMPARAÇÕES CRÍTICAS:\n- fibra x par trançado: a fibra tem alta banda e imunidade, mas custo maior; o par trançado é barato e fácil — muda o custo do projeto.\n- UTP x STP: a blindagem do STP reduz interferência em ambientes ruidosos.\n- 2,4 GHz x 5 GHz: o primeiro alcança mais e sofre mais interferência; o segundo é mais rápido e de menor alcance.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Fibra óptica sofre interferência eletromagnética.\" — Motivo: transmite luz — Versão tecnicamente correta: é imune a interferência eletromagnética.\n- Afirmação errada: \"Wi-Fi e rádio são a mesma coisa.\" — Motivo: Wi-Fi é um padrão (802.11) sobre radiofrequência — Versão tecnicamente correta: o rádio é o meio; o Wi-Fi é a tecnologia.\n- Afirmação errada: \"Cat6 sempre entrega 10 Gbps a qualquer distância.\" — Motivo: há limite de distância — Versão tecnicamente correta: a taxa depende do comprimento do cabo.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: UTP, STP, fibra monomodo/multimodo, coaxial, Wi-Fi, rádio.\n- Regras e fórmulas: guiado conduz o sinal; não guiado o irradia.\n- Exceções: a taxa nominal depende da distância e do ambiente.\n- Palavras-chave: par trançado, luz, interferência, alcance, mobilidade.\n- Checklist de domínio: (1) Classifico os meios? (2) Cito características? (3) Associo categorias a taxas? (4) Escolho para um cenário?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é meio guiado? (2) Por que a fibra é imune a interferência? (3) O que diferencia 2,4 GHz de 5 GHz? (4) Quando usar STP? (5) O que limita a taxa do Cat6?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual meio de transmissão usar para conectar dois prédios a 500m de distância?",
+          "resposta": "Fibra óptica monomodo — imune a interferência eletromagnética (raios), suporta 500m sem repetidor. UTP Cat6 limita-se a 100m."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma fábrica com máquinas elétricas de alta potência precisa de rede cabeada. UTP ou STP?",
+          "resposta": "STP — blindagem reduz interferência eletromagnética. Em casos extremos, fibra óptica é a solução definitiva (imune a EMI)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Fibra óptica é mais lenta que UTP porque a luz é mais lenta que eletricidade.'",
+          "correcao": "Errado. A velocidade da luz na fibra (~200.000 km/s) é comparável à velocidade do sinal elétrico no cobre. A vantagem da fibra é a largura de banda (múltiplas frequências de luz) e imunidade a interferência, não a velocidade do sinal."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) UTP Cat6 suporta 10 Gbps até 100 metros.",
+          "resposta": "Errado. Cat6 suporta 10 Gbps até 55m; Cat6a suporta 10 Gbps até 100m."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual meio é imune a interferência eletromagnética? A) UTP; B) STP; C) Fibra óptica; D) Coaxial.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar os principais meios de transmissão e suas características, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará os principais meios de transmissão e suas características"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "UTP (Unshielded Twisted Pair): par trançado sem blindagem — Cat5e (1 Gbps), Cat6 (10 Gbps até 55m), Cat6a (10 Gbps até 100m). Barato, fácil de instalar, suscetível a interferência. STP (Shielded Twisted Pair): com blindagem — usado em ambientes com alta interferência. Fibra óptica: transmissão por luz — monomodo (longa distância, laser) e multimodo (curta distância, LED). Alta largura de banda, imune a interferência eletromagnética, custo maior. Coaxial: usado em TV a cabo e redes antigas (10BAS…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Cabos UTP, STP, fibra óptica, coaxial, Wi-Fi, rádio",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Fibra óptica é mais lenta que UTP porque a luz é mais lenta que eletricidade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A velocidade da luz na fibra (~200.000 km/s) é comparável à velocidade do sinal elétrico no cobre. A vantagem da fibra é a largura de banda (múltiplas frequências de luz) e imunidade a interferência, não a velocidade do sinal."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual meio de transmissão usar para conectar dois prédios a 500m de distância?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Fibra óptica monomodo — imune a interferência eletromagnética (raios), suporta 500m sem repetidor. UTP Cat6 limita-se a 100m.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma fábrica com máquinas elétricas de alta potência precisa de rede cabeada. UTP ou STP?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "STP — blindagem reduz interferência eletromagnética. Em casos extremos, fibra óptica é a solução definitiva (imune a EMI).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Fibra óptica é mais lenta que UTP porque a luz é mais lenta que eletricidade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A velocidade da luz na fibra (~200.000 km/s) é comparável à velocidade do sinal elétrico no cobre. A vantagem da fibra é a largura de banda (múltiplas frequências de luz) e imunidade a interferência, não a velocidade do sinal.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 4,
+    "unidadeTitulo": "5.4 Engenharia de prompts",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U4P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U4P3.js",
+    "idsCompletos": [
+      "m5-u4-t3-s1",
+      "m5-u4-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u4-t3-s1",
+      "titulo": "Critérios de avaliação e ciclo de iteração de prompts",
+      "topicoTitulo": "Avaliação, iteração, laboratório comparativo e segurança",
+      "topicoId": "modulo-5-unidade-4-topico-3",
+      "unidadeTitulo": "5.4 Engenharia de prompts",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno definirá um conjunto de critérios de avaliação de saída e de prompt, e conduzirá um ciclo de iteração com teste, medição e registro de versão.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Critérios de avaliação e ciclo de iteração de prompts\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Critérios de avaliação e ciclo de iteração de prompts\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Critérios de avaliação e ciclo de iteração de prompts\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: AVALIAÇÃO DE PROMPT é a prática de medir a qualidade das saídas de um prompt sobre um conjunto de casos fixo, para poder compará-lo com outros e justificar a escolha. SEM CONJUNTO DE TESTE, QUALQUER COMPARAÇÃO É ANECDÓTICA: uma impressão de «pareceu melhor» não é base para decisão nem para contrato. CONJUNTO DE TESTE mínimo: (1) CASOS REPRESENTATIVOS — distribuição semelhante à do uso real; (2) CASOS DE FRONTEIRA — onde o critério é ambíguo; (3) CASOS NEGATIVOS — entrada fora do escopo, que o sistema deve recusar ou encaminhar; (4) CASOS ADVERSARIAIS — entradas que tentam injeção; (5) CASOS DE DADOS INCOMPLETOS — que testam o tratamento da ausência. CRITÉRIOS DE AVALIAÇÃO (com métrica associada): (1) CORREÇÃO — a afirmação consta da fonte? (medida por conferência humana ou por verificação automática de citação); (2) COMPLETUDE — todos os campos exigidos foram preenchidos?; (3) CONFORMIDADE DE FORMATO — esquema válido?; (4) RELEVÂNCIA — a resposta responde ao pedido, sem desvio?; (5) CLAREZA — compreensível pelo destinatário?; (6) CONCORDÂNCIA — consistência interna e com a fonte; (7) SEGURANÇA — nenhum dado proibido exposto, nenhuma injeção bem-sucedida nos casos adversariais; (8) EFICIÊNCIA — tokens, latência e custo por caso. CICLO DE ITERAÇÃO: (1) definir o prompt e a versão v1; (2) montar o conjunto de teste e a régua de avaliação; (3) MEDIR a v1; (4) DIAGNOSTICAR por tipo de erro (não só a média — o erro se concentra em casos); (5) ALTERAR UMA COISA POR VEZ (isolar a causa); (6) remedir e comparar; (7) registrar versão, alteração e resultado; (8) promover a versão vencedora e arquivar a anterior. REGRAS DE HIPÓTESE: toda alteração de prompt deve ter hipótese explícita («a instrução de formato no fim do prompt reduz truncamento») e métrica que a confirme ou refute. O QUE NÃO É ITERAÇÃO: editar o prompt «até ficar bom» sem teste, sem métrica e sem registro — é ajuste por sensação, e não sobrevive à auditoria nem à troca de modelo ou de equipe. INDICADOR DE QUALIDADE DE PROCESSO: além do resultado, mede-se a consistência entre versões (quantas mudanças de prompt alteram a saída de um caso) e a taxa de regressão (quantos casos que passavam passaram a falhar). REGRAS DE PUBLICAÇÃO: prompt é artefato versionado, com responsável, propósito, restrições embutidas, conjunto de teste e resultados; é versionado como código de política, não como texto solto em chat. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Critérios de avaliação e ciclo de iteração de prompts\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Critérios de avaliação e ciclo de iteração de prompts\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Critérios de avaliação e ciclo de iteração de prompts\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Critérios de avaliação e ciclo de iteração de prompts basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Critérios de avaliação e ciclo de iteração de prompts e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Critérios de avaliação e ciclo de iteração de prompts\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: critérios de avaliação e ciclo de iteração de prompts, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Critérios de avaliação e ciclo de iteração de prompts com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Critérios de avaliação e ciclo de iteração de prompts\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que medir a média da qualidade e não apenas o percentual de acerto?",
+          "resposta": "Porque o erro tende a se CONCENTRAR em um subconjunto de casos (entradas ambíguas, documentos incompletos, categorias raras), e a média dilui essa concentração. Diagnosticar por tipo de erro é o que orienta a próxima alteração do prompt. É a mesma lógica de avaliação por subgrupo da unidade 5.2, aplicada ao prompt."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Descreva um ciclo de iteração para o prompt de classificação de despesas.",
+          "resposta": "(1) v1 com instrução, esquema de saída e 12 categorias definidas; (2) conjunto com 60 casos (40 representativos, 10 de fronteira, 5 fora de escopo, 5 adversariais); (3) régua: acerto por categoria, taxa de recusa correta fora de escopo, percentual de casos adversariais bem-sucedidos; (4) medição da v1; (5) diagnóstico: duas categorias concentram 70% dos erros, por confusão de fronteiras; (6) hipótese: exemplos few-shot das duas categorias ambíguas reduzem a confusão; (7) v2 com 4 exemplos sintéticos; (8) remedição e comparação, com atenção à REGRESSÃO nas outras categorias; (9) registro de v1, v2, hipótese e resultados; (10) promoção da v2, se houver ganho sem regressão."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Ajustar o prompt até «ficar bom» é método válido de engenharia de prompts.'",
+          "correcao": "Errado. Ajuste por sensação não é método: não é reproduzível, não detecta regressão, não sustenta decisão nem contrato, e desaparece quando muda o modelo, a equipe ou o volume de casos. O que se ajusta é uma HIPÓTESE, e o que se mede é um conjunto de teste versionado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) Sem conjunto de teste versionado, a comparação entre duas versões de prompt é anedótica.",
+          "resposta": "Certo. É a razão pela qual a iteração baseada em hipótese e métrica é parte do método."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Tipos de casos que um conjunto de teste de prompt deve conter: A) representativos; B) de fronteira; C) adversariais; D) somente casos em que o modelo já acerta.",
+          "resposta": "A, B e C. O item D vija o propósito do teste, que é justamente detectar onde o sistema falha."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de definir um conjunto de critérios de avaliação de saída e de prompt, e conduzirá um ciclo de iteração com teste, medição e registro de versão, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "definirá um conjunto de critérios de avaliação de saída e de prompt, e conduzirá um ciclo de iteração com teste, medição e registro de versão"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Critérios de avaliação e ciclo de iteração de prompts\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Critérios de avaliação e ciclo de iteração de prompts\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISI…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Critérios de avaliação e ciclo de iteração de prompts",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Ajustar o prompt até «ficar bom» é método válido de engenharia de prompts.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ajuste por sensação não é método: não é reproduzível, não detecta regressão, não sustenta decisão nem contrato, e desaparece quando muda o modelo, a equipe ou o volume de casos. O que se ajusta é uma HIPÓTESE, e o que se mede é um conjunto de teste versionado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que medir a média da qualidade e não apenas o percentual de acerto?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque o erro tende a se CONCENTRAR em um subconjunto de casos (entradas ambíguas, documentos incompletos, categorias raras), e a média dilui essa concentração. Diagnosticar por tipo de erro é o que orienta a próxima alteração do prompt. É a mesma lógica de avaliação por subgrupo da unidade 5.2, aplicada ao prompt.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Descreva um ciclo de iteração para o prompt de classificação de despesas.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) v1 com instrução, esquema de saída e 12 categorias definidas; (2) conjunto com 60 casos (40 representativos, 10 de fronteira, 5 fora de escopo, 5 adversariais); (3) régua: acerto por categoria, taxa de recusa correta fora de escopo, percentual de casos adversariais bem-sucedidos; (4) medição da v1; (5) diagnóstico: duas categorias concentram 70% dos erros, por confusão de fronteiras; (6) hipótese: exemplos few-shot das duas categorias ambíguas reduzem a confusão; (7) v2 com 4 exemplos sintéticos; (8) remedição e comparação, com atenção à REGRESSÃO nas outras categorias; (9) registro de v1, v2, hipótese e resultados; (10) promoção da v2, se houver ganho sem regressão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Ajustar o prompt até «ficar bom» é método válido de engenharia de prompts.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ajuste por sensação não é método: não é reproduzível, não detecta regressão, não sustenta decisão nem contrato, e desaparece quando muda o modelo, a equipe ou o volume de casos. O que se ajusta é uma HIPÓTESE, e o que se mede é um conjunto de teste versionado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u4-t3-s2",
+      "titulo": "Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível",
+      "topicoTitulo": "Avaliação, iteração, laboratório comparativo e segurança",
+      "topicoId": "modulo-5-unidade-4-topico-3",
+      "unidadeTitulo": "5.4 Engenharia de prompts",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno conduzirá um laboratório comparativo entre duas versões de prompt, com critérios explícitos, escala definida, feedback reproduzível e registro de decisão.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: O LABORATÓRIO é o espaço de experimentação controlada em que se comparam versões de prompt sob os mesmos casos e os mesmos critérios. REGRA DE REPRODUTIBILIDADE: para que o feedback seja reproduzível, o laboratório deve fixar (a) o CONJUNTO DE CASOS (entradas completas, incluiu os documentos de referência); (b) os PARÂMETROS DE GERAÇÃO (temperatura e semente, quando disponíveis; caso contrário, N execuções por caso, com registro individual — e é por isso que a medição de consistência entre execuções é um indicador do laboratório); (c) o MODELO E A VERSÃO (que, com a evolução do serviço, mudam e invalidam comparações antigas); (d) os CRITÉRIOS e a ESCALA; (e) o REGISTRO DAS SAÍDAS. ESTRUTURA DE UM LABORATÓRIO DE DUAS VERSÕES: (1) HIPÓTESE — «a v2, com formato de saída no final do prompt e campo de incerteza explícito, reduz truncamento e invenção de valor»; (2) CONJUNTO — 30 casos, com 5 categorias de erro monitoradas: truncamento, invenção de valor, omissão de campo, formato inválido, desvio de escopo; (3) VERSÃO A e VERSÃO B — descritas integralmente, incluindo a instrução de delimitação; (4) EXECUÇÃO — mesma entrada, mesmo modelo, mesmos parâmetros, N execuções por caso (recomenda-se no mínimo 3, para medir variabilidade); (5) AVALIAÇÃO — por caso e por tipo de erro, com a régua: (i) fidelidade à fonte (sim/não); (ii) completude dos campos obrigatórios (sim/não); (iii) conformidade de esquema (sim/não); (iv) invenção detectada (sim/não); (v) desvio de escopo (sim/não); (vi) comprimento da saída e legibilidade; (vii) conformidade com a instrução de formato. A RÉGUA DE PONTUAÇÃO deve ser MECÂNICA E REPRODUZÍVEL — é preciso instruir o avaliador a classificar cada item por critérios verificáveis (o trecho citado existe no documento? o número confere com a fonte?), e não por impressão global; para evitar o avaliador que «sabe» a resposta de memória, o material de avaliação deve ser apresentado em condições equivalentes às da execução. (6) FEEDBACK REPRODUZÍVEL — o resultado é o conjunto: prompt usado (texto integral), casos (entradas e saídas registradas), parâmetros, modelo e versão, critérios e escala, tabela de resultados por caso e por tipo de erro, contagem de erros, e a decisão com justificativa. (7) DECISÃO — promover a versão vencedora, registrar a decisão e arquivar a outra, com a ressalva de que a comparação vale para o modelo e a versão testados. (8) REVISÃO PERIÓDICA — repetir o laboratório quando o modelo for atualizado, quando as fontes mudarem ou quando surgir incidente. A UTILIDADE DIDÁTICA DO LABORATÓRIO: ele é a materialização da «comparação entre versões, critérios explícitos e feedback reproduzível» exigida pela especificação, e é a forma de tornar o engenharia de prompts AUDITÁVEL — quem decidir por um prompt registra a evidência da decisão. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que o laboratório precisa de múltiplas execuções por caso?",
+          "resposta": "Porque a geração é probabilística: uma execução isolada pode ser atípica e levar a uma decisão errada — tanto para melhor (promover versão por acaso) quanto para pior (descartar versão por acaso). Com execuções repetidas sob parâmetros fixos, mede-se a consistência do comportamento, que é um indicador do prompt, e a variabilidade passa a ser quantificada em vez de suposta."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Monte o quadro de resultados do laboratório para duas versões em 30 casos, com 3 execuções por caso (90 execuções por versão).",
+          "resposta": "Para cada versão: (a) taxa de fidelidade = casos com saída ancorada na fonte ÷ total de execuções; (b) taxa de completude = execuções com todos os campos obrigatórios preenchidos ÷ total; (c) taxa de conformidade de esquema; (d) taxa de invenção por tipo (valor inventado, citação inexistente); (e) taxa de desvio de escopo; (f) comprimento médio e percentual de saídas truncadas; (g) consistência = percentual de casos em que as 3 execuções coincidem no resultado estruturado. Tabela por caso com a marcação de cada critério e a contagem de erros por tipo. Decisão: promover a versão com menor taxa de invenção e de desvio, sem regressão relevante nas demais métricas, e registrar a limitação (modelo e versão testados)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O feedback do laboratório é reprodutível quando o avaliador registra sua impressão sobre cada resposta.'",
+          "correcao": "Errado. Impressão é pessoal e não verificável por terceiro. O feedback reproduzível exige a régua mecânica e verificável (o trecho citado existe? o número confere?), o registro integral dos casos e das saídas, os parâmetros, o modelo e a versão — de modo que outra pessoa possa repetir a medição e chegar ao mesmo resultado."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) O laboratório de prompts deve fixar modelo, versão, parâmetros e casos para que o feedback seja reproduzível.",
+          "resposta": "Certo. Sem esses elementos, a comparação entre versões não é auditável e se invalida quando o serviço muda."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Elementos do registro de um laboratório: A) texto integral das versões comparadas; B) casos e saídas registradas; C) critérios e escala; D) conversa informal de aprovação sem registro técnico.",
+          "resposta": "A, B e C. O item D não constitui feedback reproduzível."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de conduzir um laboratório comparativo entre duas versões de prompt, com critérios explícitos, escala definida, feedback reproduzível e registro de decisão, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "conduzirá um laboratório comparativo entre duas versões de prompt, com critérios explícitos, escala definida, feedback reproduzível e registro de decisão"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível\" é necessário para responder com seguran…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Laboratório interativo de prompts: comparação entre versões com critérios explícitos e feedback reproduzível",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O feedback do laboratório é reprodutível quando o avaliador registra sua impressão sobre cada resposta.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Impressão é pessoal e não verificável por terceiro. O feedback reproduzível exige a régua mecânica e verificável (o trecho citado existe? o número confere?), o registro integral dos casos e das saídas, os parâmetros, o modelo e a versão — de modo que outra pessoa possa repetir a medição e chegar ao mesmo resultado."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que o laboratório precisa de múltiplas execuções por caso?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque a geração é probabilística: uma execução isolada pode ser atípica e levar a uma decisão errada — tanto para melhor (promover versão por acaso) quanto para pior (descartar versão por acaso). Com execuções repetidas sob parâmetros fixos, mede-se a consistência do comportamento, que é um indicador do prompt, e a variabilidade passa a ser quantificada em vez de suposta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Monte o quadro de resultados do laboratório para duas versões em 30 casos, com 3 execuções por caso (90 execuções por versão).",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Para cada versão: (a) taxa de fidelidade = casos com saída ancorada na fonte ÷ total de execuções; (b) taxa de completude = execuções com todos os campos obrigatórios preenchidos ÷ total; (c) taxa de conformidade de esquema; (d) taxa de invenção por tipo (valor inventado, citação inexistente); (e) taxa de desvio de escopo; (f) comprimento médio e percentual de saídas truncadas; (g) consistência = percentual de casos em que as 3 execuções coincidem no resultado estruturado. Tabela por caso com a marcação de cada critério e a contagem de erros por tipo. Decisão: promover a versão com menor taxa de invenção e de desvio, sem regressão relevante nas demais métricas, e registrar a limitação (modelo e versão testados).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O feedback do laboratório é reprodutível quando o avaliador registra sua impressão sobre cada resposta.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Impressão é pessoal e não verificável por terceiro. O feedback reproduzível exige a régua mecânica e verificável (o trecho citado existe? o número confere?), o registro integral dos casos e das saídas, os parâmetros, o modelo e a versão — de modo que outra pessoa possa repetir a medição e chegar ao mesmo resultado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 5,
+    "unidadeTitulo": "2.5 Diagnóstico de redes",
+    "parte": 6,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U5P6",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U5P6.js",
+    "idsCompletos": [
+      "m2-u5-t4-s2",
+      "m2-u5-t4-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u5-t4-s2",
+      "titulo": "Diferenças entre falha de DNS, conectividade, roteamento e aplicação",
+      "topicoTitulo": "Diagnóstico por camadas e cenários simulados",
+      "topicoId": "modulo-2-unidade-5-topico-4",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno distinguirá sintomas de falhas de DNS, conectividade, roteamento e aplicação.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) sintomas de falha de DNS; (b) de conectividade; (c) de roteamento; (d) de aplicação; (e) como distinguir cada uma. POR QUE O CONHECIMENTO É IMPORTANTE: atribuir o sintoma à causa correta orienta a correção; a prova explora a distinção entre as falhas. PRÉ-REQUISITOS: diagnóstico por camadas; ferramentas. OBJETIVOS OBSERVÁVEIS: (1) reconhecer cada sintoma; (2) distinguir as causas; (3) indicar a correção; (4) usar testes diferenciais. COMPETÊNCIAS DESENVOLVIDAS: diagnóstico diferencial; decisão de correção. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.4 (método); unidade 5.3 (DNS); unidade 2.3 (pontos de falha). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: cada tipo de falha tem sintomas e testes diferenciais. Falha de DNS: aparece como erro de resolução (por exemplo, nome não resolvido), mas o acesso por IP direto funciona — teste: comparar nome x IP e consultar com nslookup/dig. Falha de conectividade (enlace/físico): a interface não tem IP válido, o link está DOWN ou o ping ao gateway falha — teste: verificar a interface e o gateway. Falha de roteamento: o ping ao gateway funciona, mas o ping a um IP EXTERNO falha, com mensagens como \"destination net unreachable\", e o traceroute para no gateway — teste: pingar além da rede local. Falha de aplicação: o ping e o DNS funcionam, mas o serviço falha (erros 4xx/5xx, timeout na porta, certificado inválido) — teste: verificar a porta e o serviço. A distinção orienta a CORREÇÃO: DNS → verificar resolvedor, cache e delegação; conectividade → cabo/Wi-Fi/DHCP; roteamento → rota padrão, NAT e provedor; aplicação → serviço, porta, certificado e código. O raciocínio-chave é eliminar hipóteses na ordem: se a resolução falha, não adianta investigar a aplicação; se o ping a IP externo falha mas o gateway responde, o problema é de roteamento, não de enlace. Testes diferenciais são a base para não corrigir a coisa errada.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer a falha de DNS por nome não resolvido.\n- Nível intermediário: diferenciar conectividade de roteamento pelo teste do gateway.\n- Nível avançado: separar falha de aplicação de falha de rede.\n- Nível especialista: conduzir o diagnóstico diferencial completo e propor a correção.\nCOMPARAÇÕES CRÍTICAS:\n- DNS x conectividade: no DNS, o IP funciona e o nome não; na conectividade, nem o gateway responde.\n- roteamento x enlace: o gateway responde, mas o destino externo não.\n- aplicação x rede: ping e DNS funcionam, mas o serviço falha.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Se o site não abre, é problema de Internet.\" — Motivo: pode ser DNS ou aplicação — Versão tecnicamente correta: aplicar testes diferenciais.\n- Afirmação errada: \"Ping ao gateway funcionando garante Internet.\" — Motivo: o roteamento externo pode falhar — Versão tecnicamente correta: testar um IP externo.\n- Afirmação errada: \"Erro 500 é falha de rede.\" — Motivo: é resposta da aplicação — Versão tecnicamente correta: a rede funcionou; o servidor falhou.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: falha de DNS, conectividade, roteamento, aplicação, testes diferenciais.\n- Regras e fórmulas: nome+IP (DNS); gateway (enlace); IP externo (roteamento); porta/serviço (aplicação).\n- Exceções: ICMP bloqueado pode mascarar o teste de ping.\n- Palavras-chave: sintoma, causa, correção, hipótese, diferencial.\n- Checklist de domínio: (1) Reconheço cada sintoma? (2) Distingo as causas? (3) Indico a correção? (4) Uso testes diferenciais?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como identificar falha de DNS? (2) E de conectividade? (3) E de roteamento? (4) E de aplicação? (5) O que um erro 500 indica?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um site não abre, mas ping ao IP (93.184.216.34) funciona. Qual é a suspeita?",
+          "resposta": "Falha de DNS (se o nome não resolve) ou de aplicação/TLS (se o IP direto também falhar no navegador). Testar nslookup e acesso por IP."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Ping ao gateway (192.168.1.1) funciona, mas ping a 8.8.8.8 retorna 'destination net unreachable'. Diagnóstico?",
+          "resposta": "Roteamento: rota padrão ausente ou NAT não configurado. Verificar ip route e configuração do roteador."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se o DNS falha, a rede física está com defeito.'",
+          "correcao": "Errado. DNS é camada de aplicação; a física pode estar perfeita. Causas de falha de DNS: resolvedor, cache, delegação, firewall na porta 53."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) 'Destination net unreachable' indica problema de roteamento.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Ping ao IP externo funciona, mas o nome não resolve. Falha de: A) conectividade; B) roteamento; C) DNS; D) aplicação.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir sintomas de falhas de DNS, conectividade, roteamento e aplicação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá sintomas de falhas de DNS, conectividade, roteamento e aplicação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "DNS: 'ERR_NAME_NOT_RESOLVED', nslookup falha, mas IP direto funciona. Conectividade (enlace/físico): sem IP, sem link, ping ao gateway falha. Roteamento: ping ao gateway ok, mas ping a IP externo falha, 'destination net unreachable', traceroute para no gateway. Aplicação: ping e DNS ok, mas HTTP falha (4xx/5xx, timeout na porta), certificado inválido. A distinção orienta a correção: DNS -> verificar resolvedor/cache/delegação; conectividade -> cabo/Wi-Fi/DHCP; roteamento -> rota padrão/NAT/ISP; …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Diferenças entre falha de DNS, conectividade, roteamento e aplicação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se o DNS falha, a rede física está com defeito.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. DNS é camada de aplicação; a física pode estar perfeita. Causas de falha de DNS: resolvedor, cache, delegação, firewall na porta 53."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um site não abre, mas ping ao IP (93.184.216.34) funciona. Qual é a suspeita?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Falha de DNS (se o nome não resolve) ou de aplicação/TLS (se o IP direto também falhar no navegador). Testar nslookup e acesso por IP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Ping ao gateway (192.168.1.1) funciona, mas ping a 8.8.8.8 retorna 'destination net unreachable'. Diagnóstico?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Roteamento: rota padrão ausente ou NAT não configurado. Verificar ip route e configuração do roteador.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se o DNS falha, a rede física está com defeito.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. DNS é camada de aplicação; a física pode estar perfeita. Causas de falha de DNS: resolvedor, cache, delegação, firewall na porta 53.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u5-t4-s3",
+      "titulo": "Cenários simulados de falhas e mensagens de erro",
+      "topicoTitulo": "Diagnóstico por camadas e cenários simulados",
+      "topicoId": "modulo-2-unidade-5-topico-4",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno interpretará mensagens de erro comuns e mapeará a causas prováveis.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) mensagens de erro comuns; (b) a causa provável de cada uma; (c) a camada associada; (d) a conduta de diagnóstico. POR QUE O CONHECIMENTO É IMPORTANTE: interpretar mensagens corretamente acelera a solução; a prova cobra a associação mensagem-causa-camada. PRÉ-REQUISITOS: ferramentas de diagnóstico; camadas. OBJETIVOS OBSERVÁVEIS: (1) reconhecer mensagens; (2) mapear causas; (3) situar a camada; (4) escolher o teste seguinte. COMPETÊNCIAS DESENVOLVIDAS: interpretação de erros; diagnóstico. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1/5.2/5.3 (ferramentas); unidade 2.3 (pontos de falha). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: interpretar mensagens de erro exige associá-las à camada e à causa. Exemplos comuns: \"Request timed out\" (ping) — host desligado, firewall bloqueando ICMP ou perda; \"Destination Host Unreachable\" — falha de ARP ou rota ausente; \"TTL expired in transit\" — laço de roteamento ou TTL muito baixo; \"Connection refused\" — porta fechada (serviço parado ou firewall com REJECT); \"Connection timed out\" — pacote descartado (firewall com DROP ou host inacessível); \"NXDOMAIN\"/nome não resolvido — falha de DNS; certificado inválido — problema de TLS/certificado; \"502 Bad Gateway\" — o proxy reverso não alcançou o backend; \"503 Service Unavailable\" — sobrecarga ou manutenção; \"404 Not Found\" — recurso inexistente; \"403 Forbidden\" — permissão; \"401 Unauthorized\" — autenticação. A leitura correta considera a camada: erros de rede (unreachable, TTL), de transporte (refused, timed out) e de aplicação (4xx/5xx). A conduta é sempre o próximo teste que confirma ou descarta a hipótese: diante de \"connection refused\", verificar se o serviço está em escuta; diante de \"timed out\", verificar firewall e rota; diante de NXDOMAIN, testar a resolução. Mensagens são pistas, não diagnósticos finais. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer as mensagens mais comuns.\n- Nível intermediário: associar cada mensagem a uma causa e a uma camada.\n- Nível avançado: distinguir refused de timed out quanto ao comportamento do firewall.\n- Nível especialista: conduzir um caso com várias mensagens e determinar a causa raiz.\nCOMPARAÇÕES CRÍTICAS:\n- refused x timed out: o primeiro indica porta fechada (resposta); o segundo, descarte sem resposta.\n- unreachable x timed out: o primeiro é falha de roteamento/ARP; o segundo, ausência de resposta.\n- 4xx x 5xx: o primeiro é erro do cliente; o segundo, do servidor.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Connection refused indica queda da rede.\" — Motivo: houve resposta da máquina — Versão tecnicamente correta: o serviço/porta não aceita conexões.\n- Afirmação errada: \"NXDOMAIN é problema de servidor web.\" — Motivo: é resposta do DNS — Versão tecnicamente correta: o nome não existe ou não resolve.\n- Afirmação errada: \"502 Bad Gateway é erro do navegador.\" — Motivo: é do servidor/proxy — Versão tecnicamente correta: o proxy não alcançou o backend.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: timed out, unreachable, TTL expired, refused, NXDOMAIN, 4xx/5xx, 502, certificado.\n- Regras e fórmulas: mensagem → camada → causa → próximo teste.\n- Exceções: firewall com DROP gera \"timed out\"; com REJECT, \"refused\".\n- Palavras-chave: mensagem, causa, camada, hipótese, diagnóstico.\n- Checklist de domínio: (1) Reconheço mensagens? (2) Mapeio causas? (3) Situo a camada? (4) Escolho o próximo teste?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que \"Connection refused\" indica? (2) E \"Destination Host Unreachable\"? (3) O que é NXDOMAIN? (4) O que é 502? (5) Como distinguir DROP de REJECT?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Interpretar 'Connection refused' ao tentar SSH na porta 22.",
+          "resposta": "O host respondeu (rede ok) mas a porta 22 está fechada (serviço SSH parado ou firewall REJECT). Verificar serviço e configuração."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um navegador exibe 'ERR_CERT_DATE_INVALID'. Qual a causa e correção?",
+          "resposta": "Certificado do servidor expirado ou relógio do cliente errado. Corrigir data/hora do cliente e renovar certificado no servidor."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Timeout sempre significa que o host está desligado.'",
+          "correcao": "Errado. Timeout pode ser firewall descartando (DROP), perda de pacotes, congestionamento ou rota ausente. 'Connection refused' é que indica host ativo com porta fechada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) 'Connection refused' indica que o host está ativo mas a porta está fechada.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual mensagem indica problema de certificado TLS? A) ERR_NAME_NOT_RESOLVED; B) ERR_CERT_AUTHORITY_INVALID; C) Connection refused; D) 404 Not Found.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de interpretar mensagens de erro comuns e mapeará a causas prováveis, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "interpretará mensagens de erro comuns e mapeará a causas prováveis"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Mensagens e causas: 'Request timed out' (ping) — host desligado, firewall bloqueando ICMP, perda. 'Destination Host Unreachable' — ARP falhou ou rota ausente. 'TTL expired in transit' — loop de roteamento ou TTL muito baixo. 'Connection refused' — porta fechada (serviço parado/firewall REJECT). 'Connection timed out' — pacote descartado (firewall DROP, host inacessível). 'ERR_NAME_NOT_RESOLVED' / 'NXDOMAIN' — DNS. 'ERR_CERT_AUTHORITY_INVALID' — certificado não confiável. '502 Bad Gateway' — prox…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Cenários simulados de falhas e mensagens de erro",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Timeout sempre significa que o host está desligado.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Timeout pode ser firewall descartando (DROP), perda de pacotes, congestionamento ou rota ausente. 'Connection refused' é que indica host ativo com porta fechada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Interpretar 'Connection refused' ao tentar SSH na porta 22.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O host respondeu (rede ok) mas a porta 22 está fechada (serviço SSH parado ou firewall REJECT). Verificar serviço e configuração.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um navegador exibe 'ERR_CERT_DATE_INVALID'. Qual a causa e correção?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Certificado do servidor expirado ou relógio do cliente errado. Corrigir data/hora do cliente e renovar certificado no servidor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Timeout sempre significa que o host está desligado.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Timeout pode ser firewall descartando (DROP), perda de pacotes, congestionamento ou rota ausente. 'Connection refused' é que indica host ativo com porta fechada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

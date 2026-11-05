@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 4,
+    "unidadeTitulo": "1.4 Microsoft PowerPoint",
+    "parte": 1,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U4P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U4P1.js",
+    "idsCompletos": [
+      "modulo-1-unidade-4-topico-1-sub-1",
+      "modulo-1-unidade-4-topico-1-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-4-topico-1-sub-1",
+      "titulo": "Slide Mestre, layouts, animações, transições e apresentação",
+      "topicoTitulo": "Apresentações, layouts, animações e apresentação",
+      "topicoId": "modulo-1-unidade-4-topico-1",
+      "unidadeTitulo": "1.4 Microsoft PowerPoint",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá Slide Mestre, layouts, animações, transições e modos de apresentação no PowerPoint.",
+      "conteudo": "PowerPoint organiza conteúdo em slides com hierarquia de layouts baseados no Slide Mestre (Slide Master). Slide Mestre define tipografia, cores, logotipos e layouts filhos; alterar o mestre propaga para todos os slides vinculados. Layouts (Título, Título e Conteúdo, Comparação, Em branco) determinam a disposição dos placeholders. Tipografia requer contraste adequado (ex.: fundo claro + texto escuro; evitar combinações de baixo contraste como amarelo/claro). Animações aplicam efeitos a objetos individuais (entrada, ênfase, saída) com ordem, duração e gatilhos configuráveis. Transições são efeitos entre slides (fade, push, wipe). Modo de apresentação (Slide Show) inclui exibição do apresentador com notas, cronômetro e navegação; notas não são visíveis ao público por padrão. Acessibilidade exige ordem de leitura lógica (via Painel de Seleção), texto alternativo para imagens, contraste adequado e fontes legíveis. Exportação para PDF preserva layout; para apresentação offline, usar 'Empacotar Apresentação para CD' (Package Presentation) incluindo fontes vinculadas e mídia.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Configurar um Slide Mestre com logotipo, fonte e cor corporativos.",
+          "resposta": "Exibir > Slide Mestre → editar o mestre principal (layout pai) com logotipo, fontes (título: Arial 28pt; corpo: Arial 16pt) e cores; todos os layouts filhos herdam essas propriedades."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Aplicar animação sequencial a uma lista de 4 itens com atraso progressivo.",
+          "resposta": "Selecionar cada item → Animações → Adicionar animação (ex: Aparecer) → Painel de Animação → configurar ordem, duração (0,5s) e atraso progressivo (0,2s entre itens) → gatilho: ao clicar."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que animações e transições são o mesmo conceito.",
+          "correcao": "Incorreto: animações = efeitos dentro de um slide (objetos); transições = efeitos entre slides. Confundir os dois leva a apresentações com ritmo inadequado (excesso de efeitos entre slides quando o objetivo é destacar conteúdo interno)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A alteração do Slide Mestre afeta apenas o slide atual.",
+          "resposta": "Errado. O Slide Mestre afeta todos os slides vinculados ao mestre e seus layouts filhos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual diferença entre animação e transição? A) Nenhuma; B) Animação = dentro do slide, transição = entre slides; C) Transição = dentro do slide.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender Slide Mestre, layouts, animações, transições e modos de apresentação no PowerPoint, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá Slide Mestre, layouts, animações, transições e modos de apresentação no PowerPoint"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "PowerPoint organiza conteúdo em slides com hierarquia de layouts baseados no Slide Mestre (Slide Master). Slide Mestre define tipografia, cores, logotipos e layouts filhos; alterar o mestre propaga para todos os slides vinculados. Layouts (Título, Título e Conteúdo, Comparação, Em branco) determinam a disposição dos placeholders. Tipografia requer contraste adequado (ex.: fundo claro + texto escuro; evitar combinações de baixo contraste como amarelo/claro). Animações aplicam efeitos a objetos in…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Slide Mestre, layouts, animações, transições e apresentação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que animações e transições são o mesmo conceito.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: animações = efeitos dentro de um slide (objetos); transições = efeitos entre slides. Confundir os dois leva a apresentações com ritmo inadequado (excesso de efeitos entre slides quando o objetivo é destacar conteúdo interno)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Configurar um Slide Mestre com logotipo, fonte e cor corporativos.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Exibir > Slide Mestre → editar o mestre principal (layout pai) com logotipo, fontes (título: Arial 28pt; corpo: Arial 16pt) e cores; todos os layouts filhos herdam essas propriedades.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Aplicar animação sequencial a uma lista de 4 itens com atraso progressivo.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Selecionar cada item → Animações → Adicionar animação (ex: Aparecer) → Painel de Animação → configurar ordem, duração (0,5s) e atraso progressivo (0,2s entre itens) → gatilho: ao clicar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que animações e transições são o mesmo conceito.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: animações = efeitos dentro de um slide (objetos); transições = efeitos entre slides. Confundir os dois leva a apresentações com ritmo inadequado (excesso de efeitos entre slides quando o objetivo é destacar conteúdo interno).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-4-topico-1-sub-2",
+      "titulo": "Temas e variações visuais (Design > Temas)",
+      "topicoTitulo": "Apresentações, layouts, animações e apresentação",
+      "topicoId": "modulo-1-unidade-4-topico-1",
+      "unidadeTitulo": "1.4 Microsoft PowerPoint",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno aplicar e customizar temas em apresentações do PowerPoint.",
+      "conteudo": "O comando Design > Temas aplica a um conjunto de slides um tema que centraliza a identidade visual da apresentação: paleta de cores (cores principais, secundárias e de acento), tipografias (fonte de título e fonte de corpo) e configurações de aparência (fonte de fundo, fonte de texto). O tema pode ser da galeria do PowerPoint, corporativo ou personalizado. A aplicação ocorre sobre os layouts derivados do Slide Mestre; a alteração se propaga para os slides vinculados. A personalização é feita por Design > Cores e fontes > Personalizar cores e fontes e o tema pode ser salvo como arquivo .potx. A consistência visual decorre da aplicação de um único tema em toda a apresentação. A variante de tema escuro/claro altera o fundo e exige novo contraste entre elementos. Em apresentações corporativas, a padronização por tema reduz retrabalho e garante uniformidade.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar o que o recurso Design > Temas controla em uma apresentação.",
+          "resposta": "Controla a paleta de cores, as tipografias (título e corpo) e as configurações de aparência (fundo e texto) aplicadas a todos os slides vinculados ao tema."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Aplicar o tema corporativo ao conjunto de 15 slides da empresa.",
+          "resposta": "Design > Temas > selecionar o tema corporativo > Aplicar — o tema se propaga aos layouts filhos do Slide Mestre."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que alterar a cor de um slide individual redefine a identidade visual da apresentação.",
+          "correcao": "Incorreto: cores, tipografia e aparência são propriedades do tema; alterar slide individual não altera o tema global. Para mudança pontual, aplicar outro tema ou ajustar o slide manualmente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso aplica a mesma paleta de cores e tipografia a todos os slides de uma apresentação? A) Formatação direta; B) Design > Temas; C) Inserir > Design.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um único tema aplicado à apresentação garante consistência visual entre slides.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar e customizar temas em apresentações do PowerPoint, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicar e customizar temas em apresentações do PowerPoint"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O comando Design > Temas aplica a um conjunto de slides um tema que centraliza a identidade visual da apresentação: paleta de cores (cores principais, secundárias e de acento), tipografias (fonte de título e fonte de corpo) e configurações de aparência (fonte de fundo, fonte de texto). O tema pode ser da galeria do PowerPoint, corporativo ou personalizado. A aplicação ocorre sobre os layouts derivados do Slide Mestre; a alteração se propaga para os slides vinculados. A personalização é feita por…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Temas e variações visuais (Design > Temas)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que alterar a cor de um slide individual redefine a identidade visual da apresentação.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: cores, tipografia e aparência são propriedades do tema; alterar slide individual não altera o tema global. Para mudança pontual, aplicar outro tema ou ajustar o slide manualmente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar o que o recurso Design > Temas controla em uma apresentação.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Controla a paleta de cores, as tipografias (título e corpo) e as configurações de aparência (fundo e texto) aplicadas a todos os slides vinculados ao tema.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Aplicar o tema corporativo ao conjunto de 15 slides da empresa.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Design > Temas > selecionar o tema corporativo > Aplicar — o tema se propaga aos layouts filhos do Slide Mestre.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que alterar a cor de um slide individual redefine a identidade visual da apresentação.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: cores, tipografia e aparência são propriedades do tema; alterar slide individual não altera o tema global. Para mudança pontual, aplicar outro tema ou ajustar o slide manualmente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

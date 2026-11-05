@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 2,
+    "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+    "parte": 2,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U2P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U2P2.js",
+    "idsCompletos": [
+      "m4-u2-t1-s3",
+      "m4-u2-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u2-t1-s3",
+      "titulo": "Ransomware, rootkits e botnets",
+      "topicoTitulo": "Malwares: vetores de infecção, propagação e impacto",
+      "topicoId": "modulo-4-unidade-2-topico-1",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno descreverá o ciclo de ataque do ransomware, o mecanismo de ocultação de rootkits e o funcionamento de botnets, e relacionará cada um a controles de defesa específicos.",
+      "conteudo": "Ransomware cifra os arquivos acessíveis pela conta comprometida e exige pagamento pela chave; variantes modernas também ameaçam publicar dados vazados (dupla extorsão). O ciclo típico: exploração de acesso exposto ou fraude de credenciais, elevação de privilégio, movimentação lateral, desativação de defesas e cópias de sombra, cifragem em massa e nota de resgate. A defesa comprovada inclui segmentação (limita o alcance), MFA (bloqueia o ponto de entrada), correção de vulnerabilidades exploradas e backups imutáveis e testados — sem cópia íntegra, a única alternativa vira o pagamento. Rootkit é conjunto que oculta a presença de malware do usuário e das ferramentas de inspeção: pode operar em nível de aplicativo, driver ou núcleo (kernel), alterando listas de processos e arquivos vistos; por isso a detecção confiável muitas vezes exige inspeção fora do sistema comprometido (arranque limpo ou varredura offline). Botnet é rede de dispositivos comprometidos (zumbis) controlados por canal de comando e controle (C&C): serve para enviar spam, mineração forçada e ataques de negação de serviço distribuída — a botnet é a fonte de tráfego do DDoS.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Após um clique em anexo, arquivos ganham extensão nova e não abrem; há instrução de pagamento. Identifique o tipo de malware e o primeiro ciclo de resposta.",
+          "resposta": "Ransomware. Primeiro ciclo: isolar a máquina da rede, preservar evidências, identificar a variante por assinatura ou hash do arquivo, iniciar contenção das demais estações e acionar o plano de recuperação usando backup imutável verificado."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um órgão pagou resgate e mesmo assim os arquivos voltaram lentamente a ficar inacessíveis semanas depois. Explique tecnicamente.",
+          "resposta": "Sinais de persistência: o atacante manteve acesso (backdoor, credencial não revogada) ou o rootkit/componente residual continuou ativo. Erradicação completa exige reconstrução de sistemas, rotação de todas as credenciais e revogação de certificados — pagamento não erradica a causa raiz."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Pagar o resgate garante a recuperação dos arquivos.'",
+          "correcao": "Errado. Pagamento não garante entrega da chave, não revogar acesso do atacante e não remove persistências; além disso, financia a atividade. A alternativa comprovada é backup imutável testado e reconstrução."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A cópia de sombra do sistema pode ser destruída pelo ransomware antes da cifragem.",
+          "resposta": "Certo. É prática comum do ataque apagar ou criptografar as cópias locais; por isso a defesa exige cópias fora do alcance da conta comprometida (imutáveis, fora do local)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "O que caracteriza uma botnet? A) Um único atacante usando força bruta; B) Múltiplos dispositivos comprometidos sob comando e controle; C) Um vírus de arquivo; D) Um firewall em modo promíscuo.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever o ciclo de ataque do ransomware, o mecanismo de ocultação de rootkits e o funcionamento de botnets, e relacionará cada um a controles de defesa específicos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá o ciclo de ataque do ransomware, o mecanismo de ocultação de rootkits e o funcionamento de botnets, e relacionará cada um a controles de defesa específicos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Ransomware cifra os arquivos acessíveis pela conta comprometida e exige pagamento pela chave; variantes modernas também ameaçam publicar dados vazados (dupla extorsão). O ciclo típico: exploração de acesso exposto ou fraude de credenciais, elevação de privilégio, movimentação lateral, desativação de defesas e cópias de sombra, cifragem em massa e nota de resgate. A defesa comprovada inclui segmentação (limita o alcance), MFA (bloqueia o ponto de entrada), correção de vulnerabilidades exploradas …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Ransomware, rootkits e botnets",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Pagar o resgate garante a recuperação dos arquivos.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Pagamento não garante entrega da chave, não revogar acesso do atacante e não remove persistências; além disso, financia a atividade. A alternativa comprovada é backup imutável testado e reconstrução."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Após um clique em anexo, arquivos ganham extensão nova e não abrem; há instrução de pagamento. Identifique o tipo de malware e o primeiro ciclo de resposta.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ransomware. Primeiro ciclo: isolar a máquina da rede, preservar evidências, identificar a variante por assinatura ou hash do arquivo, iniciar contenção das demais estações e acionar o plano de recuperação usando backup imutável verificado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um órgão pagou resgate e mesmo assim os arquivos voltaram lentamente a ficar inacessíveis semanas depois. Explique tecnicamente.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Sinais de persistência: o atacante manteve acesso (backdoor, credencial não revogada) ou o rootkit/componente residual continuou ativo. Erradicação completa exige reconstrução de sistemas, rotação de todas as credenciais e revogação de certificados — pagamento não erradica a causa raiz.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Pagar o resgate garante a recuperação dos arquivos.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Pagamento não garante entrega da chave, não revogar acesso do atacante e não remove persistências; além disso, financia a atividade. A alternativa comprovada é backup imutável testado e reconstrução.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u2-t2-s1",
+      "titulo": "Firewall de pacotes",
+      "topicoTitulo": "Firewalls e filtragem de tráfego",
+      "topicoId": "modulo-4-unidade-2-topico-2",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno lerá e escreverá regras de firewall de pacotes e explicará por que a política padrão é a negação.",
+      "conteudo": "Firewall de pacotes filtra tráfego com base em informações do cabeçalho dos pacotes: endereço IP de origem e destino, protocolo (TCP, UDP, ICMP) e portas de origem/destino. É stateless: avalia pacote a pacote, sem memória de conexões — por isso, para permitir o retorno de uma conexão, é preciso regra explícita para o sentido oposto, o que aumenta o número de regras e o risco de erro. Boas práticas de desenho: política de negação padrão (default deny) com permissões explícitas (allowlist) — tudo que não é permitido é negado; regras ordenadas do mais específico para o mais geral; documentação de cada regra (finalidade, responsável, data); revisão periódica para remover regras mortas. Exemplo de regra: permitir TCP destino 443 de qualquer origem para o servidor web 203.0.113.10 — não permite SSH, não permite UDP, não permite outro destino. Limitações estruturais: não inspeciona o conteúdo da aplicação nem o payload criptografado; tráfego cifrado passa como caixa-preta para ele.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Escreva o conjunto mínimo de regras para um servidor DNS interno (UDP 53) acessível apenas pela rede 192.168.10.0/24.",
+          "resposta": "1) Permitir UDP destino 53 origem 192.168.10.0/24 destino 192.168.1.53. 2) Negar qualquer origem para UDP/TCP 53 destino 192.168.1.53. 3) Negar padrão tudo mais. Regras específicas antes da negação geral, com documentação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O servidor web fica atrás de firewall de pacotes com uma única regra 'permitir TCP 443'. Um atacante usa o mesmo túnel TLS para tráfego de comando e controle. Por que passou?",
+          "resposta": "Porque o firewall de pacotes enxerga apenas cabeçalho: TCP, porta 443, IPs — regra satisfeita. Ele não distingue TLS legítimo de tráfego malicioso cifrado; é preciso inspeção de aplicação (WAF/proxy com capacidade adequada) ou monitoramento comportamental."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Firewall de pacotes analisa o conteúdo das mensagens aplicacionais.'",
+          "correcao": "Errado. Ele decide com base em endereços, protocolos e portas. Análise de conteúdo aplicacional é papel de firewall de aplicação (WAF), proxy ou IDS/IPS com inspeção profunda."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Na política de negação padrão, uma nova porta aberta permanece disponível até que exista regra explícita negando-a.",
+          "resposta": "Errado. Na negação padrão, tudo que não foi explicitamente permitido já é negado; a nova porta só passa se alguém criar regra de permissão."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Firewall de pacotes stateless decide com base em: A) estado da conexão e histórico; B) IP, protocolo e porta do pacote; C) conteúdo do e-mail; D) assinatura do executável.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de ler e escreverá regras de firewall de pacotes e explicará por que a política padrão é a negação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "TbjhWIhLQDU",
+          "titulo": "Segurança da informação - Firewalls",
+          "canal": "UNIVESP",
+          "urlOriginal": "https://www.youtube.com/watch?v=TbjhWIhLQDU",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/TbjhWIhLQDU",
+          "descricao": "Videoaula acadêmica sobre firewalls, explicando os tipos (filtro de pacotes stateless, inspeção de estado stateful, firewall de aplicação/WAF), regras de bloqueio/permissão baseadas em IP, porta e protocolo, política de negação padrão (default deny), DMZ, NAT, e as limitações de cada tipo frente a tráfego cifrado e ataques de camada de aplicação. Inclui exemplos práticos de configuração e boas práticas de desenho de regras.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "lerá e escreverá regras de firewall de pacotes e explicará por que a política padrão é a negação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Firewall de pacotes filtra tráfego com base em informações do cabeçalho dos pacotes: endereço IP de origem e destino, protocolo (TCP, UDP, ICMP) e portas de origem/destino. É stateless: avalia pacote a pacote, sem memória de conexões — por isso, para permitir o retorno de uma conexão, é preciso regra explícita para o sentido oposto, o que aumenta o número de regras e o risco de erro. Boas práticas de desenho: política de negação padrão (default deny) com permissões explícitas (allowlist) — tudo …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Firewall de pacotes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Firewall de pacotes analisa o conteúdo das mensagens aplicacionais.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ele decide com base em endereços, protocolos e portas. Análise de conteúdo aplicacional é papel de firewall de aplicação (WAF), proxy ou IDS/IPS com inspeção profunda."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Escreva o conjunto mínimo de regras para um servidor DNS interno (UDP 53) acessível apenas pela rede 192.168.10.0/24.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "1) Permitir UDP destino 53 origem 192.168.10.0/24 destino 192.168.1.53. 2) Negar qualquer origem para UDP/TCP 53 destino 192.168.1.53. 3) Negar padrão tudo mais. Regras específicas antes da negação geral, com documentação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O servidor web fica atrás de firewall de pacotes com uma única regra 'permitir TCP 443'. Um atacante usa o mesmo túnel TLS para tráfego de comando e controle. Por que passou?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque o firewall de pacotes enxerga apenas cabeçalho: TCP, porta 443, IPs — regra satisfeita. Ele não distingue TLS legítimo de tráfego malicioso cifrado; é preciso inspeção de aplicação (WAF/proxy com capacidade adequada) ou monitoramento comportamental.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Firewall de pacotes analisa o conteúdo das mensagens aplicacionais.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ele decide com base em endereços, protocolos e portas. Análise de conteúdo aplicacional é papel de firewall de aplicação (WAF), proxy ou IDS/IPS com inspeção profunda.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

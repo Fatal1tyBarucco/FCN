@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 5,
+    "unidadeTitulo": "2.5 Diagnóstico de redes",
+    "parte": 2,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U5P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U5P2.js",
+    "idsCompletos": [
+      "m2-u5-t1-s3",
+      "m2-u5-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u5-t1-s3",
+      "titulo": "Ferramentas complementares: mtr, pathping, hping3",
+      "topicoTitulo": "ping e traceroute/tracert",
+      "topicoId": "modulo-2-unidade-5-topico-1",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará o uso de mtr, pathping e hping3 e quando utilizá-los.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o mtr; (b) o pathping; (c) o hping3; (d) quando usar cada ferramenta. POR QUE O CONHECIMENTO É IMPORTANTE: ferramentas contínuas e de injeção de pacotes vão além do ping/traceroute; a prova cobra sua finalidade e uso ético. PRÉ-REQUISITOS: ping; traceroute; TCP/UDP/ICMP. OBJETIVOS OBSERVÁVEIS: (1) explicar o mtr; (2) explicar o pathping; (3) explicar o hping3; (4) escolher a ferramenta por objetivo. COMPETÊNCIAS DESENVOLVIDAS: seleção de ferramenta; diagnóstico avançado. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (ping/traceroute); unidade 5.2 (ip/ss); Módulo 4 (uso ético). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa baixa a média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o mtr (My Traceroute) combina ping e traceroute de forma CONTÍNUA, exibindo, para cada salto, a perda e a latência ao longo do tempo — é útil para identificar um salto com perda intermitente. O pathping (Windows) faz algo semelhante: envia pacotes por um período e calcula estatísticas por salto, revelando onde a perda se concentra. O hping3 permite CONSTRUIR pacotes TCP, UDP ou ICMP sob medida, servindo para testar regras de firewall, descobrir a MTU do caminho e sondar portas; geralmente exige privilégios administrativos. O uso em diagnóstico: mtr/pathping localizam o salto problemático com visão estatística; hping3 testa hipóteses específicas (uma regra de firewall, o tamanho máximo de pacote). As limitações incluem bloqueio de ICMP, variação de resultados conforme a carga e o fato de que o hping3 pode ser usado de forma maliciosa — portanto, deve ser aplicado apenas em redes próprias ou com autorização explícita. Ferramentas de injeção de pacotes exigem responsabilidade e observância das normas de segurança. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que são ferramentas além do ping.\n- Nível intermediário: associar cada ferramenta ao seu objetivo.\n- Nível avançado: interpretar estatísticas por salto para localizar perda.\n- Nível especialista: escolher a ferramenta e justificar a abordagem em um cenário.\nCOMPARAÇÕES CRÍTICAS:\n- mtr x traceroute: o primeiro é contínuo e estatístico; o segundo é uma fotografia da rota.\n- mtr/pathping x hping3: os primeiros medem latência/perda; o hping3 injeta pacotes sob medida.\n- uso legítimo x abusivo: o hping3 pode ser ofensivo se mal usado — a autorização é condição.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"mtr e traceroute são idênticos.\" — Motivo: o mtr é contínuo e estatístico — Versão tecnicamente correta: o mtr acompanha ao longo do tempo.\n- Afirmação errada: \"hping3 é apenas um ping melhorado.\" — Motivo: ele constrói pacotes arbitrários — Versão tecnicamente correta: serve para testar firewalls e MTU.\n- Afirmação errada: \"Qualquer um pode usar hping3 em qualquer rede.\" — Motivo: exige autorização — Versão tecnicamente correta: usar apenas em redes próprias/autorizadas.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: mtr, pathping, hping3, pacote forjado, MTU, firewall, autorização.\n- Regras e fórmulas: mtr/pathping = latência/perda por salto; hping3 = pacotes sob medida.\n- Exceções: bloqueio de ICMP distorce resultados.\n- Palavras-chave: contínuo, estatística, injeção, ética, diagnóstico.\n- Checklist de domínio: (1) Explico o mtr? (2) Explico o pathping? (3) Explico o hping3? (4) Escolho por objetivo?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o mtr acrescenta ao traceroute? (2) Para que serve o pathping? (3) O que o hping3 permite fazer? (4) Que autorização é exigida? (5) Quando usar cada um?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quando usar mtr em vez de ping/traceroute?",
+          "resposta": "Para monitorar continuamente a rota e identificar salto com perda intermitente que ping pontual não captura."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "pathping mostra 5% de perda no salto 3. O que isso indica?",
+          "resposta": "Possível congestionamento ou problema no roteador do salto 3; verificar se a perda se propaga aos saltos seguintes (perda real) ou é apenas não-resposta ICMP."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'mtr executa comandos reais no sistema operacional desta apostila.'",
+          "correcao": "Errado. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no SO."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) mtr combina ping e traceroute em tempo real.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual ferramenta do Windows combina ping e traceroute com estatísticas? A) tracert; B) pathping; C) nslookup; D) netstat.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o uso de mtr, pathping e hping3 e quando utilizá-los, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o uso de mtr, pathping e hping3 e quando utilizá-los"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "mtr (My Traceroute): combina ping e traceroute em tempo real, mostrando perda e latência por salto de forma contínua. Útil para identificar salto com perda intermitente. pathping (Windows): similar ao mtr, envia pacotes por um período e calcula estatísticas por salto. hping3: ferramenta de crafting de pacotes (TCP/UDP/ICMP) para testar firewalls, MTU, portas; requer privilégios. Uso em diagnóstico: mtr/pathping para localizar salto problemático; hping3 para testar regras de firewall ou PMTU. Lim…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Ferramentas complementares: mtr, pathping, hping3",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'mtr executa comandos reais no sistema operacional desta apostila.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no SO."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quando usar mtr em vez de ping/traceroute?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Para monitorar continuamente a rota e identificar salto com perda intermitente que ping pontual não captura.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "pathping mostra 5% de perda no salto 3. O que isso indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Possível congestionamento ou problema no roteador do salto 3; verificar se a perda se propaga aos saltos seguintes (perda real) ou é apenas não-resposta ICMP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'mtr executa comandos reais no sistema operacional desta apostila.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no SO.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u5-t2-s1",
+      "titulo": "ipconfig e ifconfig: configuração de interface",
+      "topicoTitulo": "ipconfig/ifconfig, ip, netstat/ss",
+      "topicoId": "modulo-2-unidade-5-topico-2",
+      "unidadeTitulo": "2.5 Diagnóstico de redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará as funções de ipconfig (Windows) e ifconfig (Linux/macOS legado) e interpretará saídas típicas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as funções do ipconfig; (b) as funções do ifconfig; (c) a interpretação das saídas; (d) o comando moderno \"ip\". POR QUE O CONHECIMENTO É IMPORTANTE: verificar a configuração de interface é o primeiro passo de muitos diagnósticos; a prova cobra opções e saídas. PRÉ-REQUISITOS: endereçamento; DHCP. OBJETIVOS OBSERVÁVEIS: (1) usar ipconfig e opções; (2) usar ifconfig; (3) interpretar a saída; (4) renovar DHCP e limpar cache DNS. COMPETÊNCIAS DESENVOLVIDAS: inspeção de configuração; renovação de concessão. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (DHCP); unidade 5.2 (ip/ss); unidade 5.3 (cache DNS). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o ipconfig (Windows) exibe a configuração das interfaces: endereço IP, máscara, gateway e DNS. Opções úteis: /all (detalhado, incluindo MAC, DHCP e servidores), /release (libera o IP obtido por DHCP), /renew (renova a concessão), /flushdns (limpa o cache DNS) e /displaydns (mostra o cache). O ifconfig (Linux/macOS, legado) exibe e altera a configuração das interfaces: inet (endereço IPv4), netmask, broadcast, ether (MAC) e o estado UP/DOWN. Hoje, no Linux, ele foi substituído pelo comando \"ip\". O uso típico é verificar qual IP foi obtido, identificar a interface ativa, renovar a concessão DHCP e limpar o cache DNS quando um nome resolve para um endereço antigo. A interpretação correta da saída evita conclusões apressadas: se a interface aparece sem IP ou com um endereço link-local 169.254.x.x, provavelmente o DHCP falhou. Se o gateway esperado não aparece, a rota padrão pode estar ausente. Comparar \"ipconfig\" (Windows) com \"ifconfig\" (Linux/macOS) é ponto frequente de prova, junto com a transição para o comando \"ip\". Os laboratórios desta apostila são simulações didáticas e não executam comandos reais no sistema operacional.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: exibir a configuração da interface.\n- Nível intermediário: usar /all e interpretar MAC, DHCP e DNS.\n- Nível avançado: renovar DHCP e limpar cache DNS como parte do diagnóstico.\n- Nível especialista: distinguir falha de DHCP de falha de rota pela saída.\nCOMPARAÇÕES CRÍTICAS:\n- ipconfig x ifconfig: o primeiro é do Windows; o segundo, do Linux/macOS (legado).\n- release x renew: o primeiro libera o IP; o segundo solicita um novo.\n- ifconfig x ip: o ifconfig é legado; o \"ip\" é o comando atual do Linux.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"ipconfig é do Linux.\" — Motivo: é do Windows — Versão tecnicamente correta: no Linux usa-se \"ip\" (ou \"ifconfig\" legado).\n- Afirmação errada: \"169.254.x.x é um IP normal.\" — Motivo: é link-local/APIPA — Versão tecnicamente correta: indica falha na obtenção por DHCP.\n- Afirmação errada: \"/flushdns mostra o cache.\" — Motivo: ele limpa — Versão tecnicamente correta: /displaydns mostra; /flushdns limpa.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: ipconfig, ifconfig, \"ip\", /all, /release, /renew, /flushdns, UP/DOWN.\n- Regras e fórmulas: ipconfig (Windows) x ifconfig/ip (Linux/macOS).\n- Exceções: 169.254 indica ausência de DHCP.\n- Palavras-chave: interface, concessão, gateway, MAC, cache.\n- Checklist de domínio: (1) Uso ipconfig? (2) Uso ifconfig? (3) Interpreto a saída? (4) Renovo DHCP e limpo cache?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que ipconfig exibe? (2) O que faz /renew? (3) E /flushdns? (4) O que ifconfig mostra? (5) O que 169.254.x.x sugere?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "ipconfig mostra 'IPv4 Address: 169.254.x.x'. O que isso indica?",
+          "resposta": "APIPA — falha de DHCP. A interface autoatribuiu link-local. Verificar servidor DHCP, cabo/Wi-Fi."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um site não resolve após mudança de DNS. Qual comando limpa o cache no Windows?",
+          "resposta": "ipconfig /flushdns — limpa o cache do resolvedor local. Em seguida testar nslookup/dig."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'ipconfig /renew força um novo IP diferente do anterior.'",
+          "correcao": "Errado. /renew solicita renovação ao servidor DHCP; geralmente retorna o mesmo IP (se o lease ainda for válido). Para forçar IP diferente, /release + /renew, sem garantia."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) ipconfig /flushdns limpa o cache DNS local no Windows.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual comando exibe o MAC (endereço físico) no Windows? A) ipconfig /all; B) ping; C) tracert; D) netstat.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar as funções de ipconfig (Windows) e ifconfig (Linux/macOS legado) e interpretará saídas típicas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará as funções de ipconfig (Windows) e ifconfig (Linux/macOS legado) e interpretará saídas típicas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ipconfig (Windows): exibe configuração de interfaces (IP, máscara, gateway, DNS). Opções: /all (detalhado, inclui MAC, DHCP, DNS), /release (libera IP DHCP), /renew (renova), /flushdns (limpa cache DNS), /displaydns. ifconfig (Linux/macOS, legado): exibe/altera configuração de interfaces (inet, netmask, broadcast, ether/MAC, status UP/DOWN). Hoje substituído por 'ip'. Uso típico: verificar IP obtido, identificar interface, renovar DHCP, limpar cache DNS. Os laboratórios desta apostila são simula…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a ipconfig e ifconfig: configuração de interface",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'ipconfig /renew força um novo IP diferente do anterior.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. /renew solicita renovação ao servidor DHCP; geralmente retorna o mesmo IP (se o lease ainda for válido). Para forçar IP diferente, /release + /renew, sem garantia."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "ipconfig mostra 'IPv4 Address: 169.254.x.x'. O que isso indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "APIPA — falha de DHCP. A interface autoatribuiu link-local. Verificar servidor DHCP, cabo/Wi-Fi.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um site não resolve após mudança de DNS. Qual comando limpa o cache no Windows?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "ipconfig /flushdns — limpa o cache do resolvedor local. Em seguida testar nslookup/dig.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'ipconfig /renew força um novo IP diferente do anterior.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. /renew solicita renovação ao servidor DHCP; geralmente retorna o mesmo IP (se o lease ainda for válido). Para forçar IP diferente, /release + /renew, sem garantia.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

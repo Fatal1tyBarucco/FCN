@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 3,
+    "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+    "parte": 3,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U3P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U3P3.js",
+    "idsCompletos": [
+      "m8-u3-t5-s1",
+      "m8-u3-t6-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u3-t5-s1",
+      "titulo": "Correlação, causalidade e conclusões indevidas",
+      "topicoTitulo": "Correlação e causalidade",
+      "topicoId": "modulo-8-unidade-3-topico-5",
+      "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno separará associação de causalidade e enumerará explicações alternativas para uma correlação observada.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) correlação (Pearson, Spearman); (b) causalidade; (c) conclusões indevidas; (d) variáveis de confusão. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre correlação e causalidade; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de dispersão e de associação. OBJETIVOS OBSERVÁVEIS: (1) calcular e interpretar correlação; (2) distinguir correlação de causalidade; (3) identificar conclusões indevidas. COMPETÊNCIAS DESENVOLVIDAS: análise bivariada; leitura crítica. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.2 (dispersão); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: correlação de Pearson como medida de associação linear entre duas variáveis numéricas, variando de -1 a 1; Spearman como correlação de postos, adequada a relações monotônicas não lineares; causalidade como relação de causa-efeito, que exige desenho experimental, controle de confundidores e evidência além da associação; conclusões indevidas: inferir causalidade de correlação, ignorar variáveis de confusão, extrapolar além do domínio dos dados; variáveis de confusão (confundidores) como terceira variável que influencia ambas. Exemplo numérico: correlação entre número de sorvetes vendidos e casos de afogamento é alta, mas a variável de confusão (temperatura) explica ambas; não há causalidade. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que correlação mede associação.\n- Nível intermediário: calcular Pearson e Spearman e interpretar.\n- Nível avançado: identificar confundidores e conclusões indevidas.\n- Nível especialista: auditar uma análise quanto à causalidade.\nCOMPARAÇÕES CRÍTICAS:\n- Pearson x Spearman: Pearson para linear; Spearman para monotônica (postos).\n- correlação x causalidade: correlação é associação; causalidade exige evidência adicional.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"correlação alta prova causalidade\" — Motivo: associação não é causalidade — Versão tecnicamente correta: distinguir os dois.\n- Afirmação errada: \"Pearson serve para qualquer relação\" — Motivo: mede apenas linear — Versão tecnicamente correta: usar Spearman para não linear.\n- Afirmação errada: \"correlação zero significa independência\" — Motivo: pode haver relação não linear — Versão tecnicamente correta: avaliar também visualmente.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Pearson, Spearman, causalidade, confundidor, conclusão indevida.\n- Regras e fórmulas: Pearson = cov(X,Y)/(σ_X σ_Y); varia de -1 a 1.\n- Exceções: correlação zero não implica independência.\n- Palavras-chave: correlação, Pearson, Spearman, causalidade, confundidor.\n- Checklist de domínio: (1) Calculo Pearson e Spearman? (2) Interpreto? (3) Distingo de causalidade? (4) Identifico confundidores?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é correlação de Pearson? (2) Quando usar Spearman? (3) O que é causalidade? (4) Por que correlação não implica causalidade? (5) O que é um confundidor?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "r = 0,9 entre horas de estudo e pontuação. Que frases são sustentadas e qual não é?",
+          "resposta": "Sustentadas: 'houve associação positiva forte na amostra'; 'estudar mais acompanhou pontuações mais altas'. Não sustentada: 'cada hora extra CAUSA tanta pontuação a mais' — falta controle de confundentes (disciplina, renda, sono) e delineamento que isole o fator."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Painel mostra que municípios com mais equipes de saúde têm mais casos registrados. Causalidade?",
+          "resposta": "Provavelmente confundimento/detecção: mais equipes significam MAIS VIGILÂNCIA, logo mais casos identificados e registrados. A variável oculta é a capacidade de detecção; afirmar que equipes 'aumentam a doença' inverte causa e efeito de medição."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'r = 0 significa que as variáveis não têm nenhuma relação.'",
+          "correcao": "Errado. r ≈ 0 descarta apenas associação LINEAR; relações em U, em V ou por grupos misturados podem existir com r nulo. Antes de concluir 'sem relação', examine o gráfico de dispersão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Para sustentar causalidade, é necessário que a causa antecede o efeito no tempo.",
+          "resposta": "Certo. A temporalidade é condição básica — e ainda assim insuficiente sem controle de confundentes."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Temperatura explica consumo de sorvete e afogamentos. Esse caso é: A) causalidade reversa; B) confundimento por variável oculta; C) causalidade direta; D) multicolinearidade.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de separar associação de causalidade e enumerará explicações alternativas para uma correlação observada, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "separará associação de causalidade e enumerará explicações alternativas para uma correlação observada"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) correlação (Pearson, Spearman); (b) causalidade; (c) conclusões indevidas; (d) variáveis de confusão. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre correlação e causalidade; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos de dispersão e de associação. OBJETIVOS OBSERVÁVEIS: (1) calcular e interpretar correlação; (2) distinguir correlação de causalidade; (3) identificar conclusões indevidas. COMPETÊNCIAS DESENVOLVID…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Correlação, causalidade e conclusões indevidas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'r = 0 significa que as variáveis não têm nenhuma relação.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. r ≈ 0 descarta apenas associação LINEAR; relações em U, em V ou por grupos misturados podem existir com r nulo. Antes de concluir 'sem relação', examine o gráfico de dispersão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "r = 0,9 entre horas de estudo e pontuação. Que frases são sustentadas e qual não é?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Sustentadas: 'houve associação positiva forte na amostra'; 'estudar mais acompanhou pontuações mais altas'. Não sustentada: 'cada hora extra CAUSA tanta pontuação a mais' — falta controle de confundentes (disciplina, renda, sono) e delineamento que isole o fator.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Painel mostra que municípios com mais equipes de saúde têm mais casos registrados. Causalidade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Provavelmente confundimento/detecção: mais equipes significam MAIS VIGILÂNCIA, logo mais casos identificados e registrados. A variável oculta é a capacidade de detecção; afirmar que equipes 'aumentam a doença' inverte causa e efeito de medição.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'r = 0 significa que as variáveis não têm nenhuma relação.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. r ≈ 0 descarta apenas associação LINEAR; relações em U, em V ou por grupos misturados podem existir com r nulo. Antes de concluir 'sem relação', examine o gráfico de dispersão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u3-t6-s1",
+      "titulo": "Métodos de amostragem, erro de amostragem e vieses",
+      "topicoTitulo": "Amostragem e vieses",
+      "topicoId": "modulo-8-unidade-3-topico-6",
+      "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno distinguirá erro de amostragem de viés e escolherá método de amostragem coerente com o objetivo.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) métodos de amostragem (aleatória simples, estratificada, sistemática, por conglomerados); (b) erro de amostragem; (c) vieses de amostragem. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre métodos de amostragem e vieses; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de população e amostra. OBJETIVOS OBSERVÁVEIS: (1) distinguir métodos de amostragem; (2) explicar erro de amostragem; (3) identificar vieses. COMPETÊNCIAS DESENVOLVIDAS: análise de dados; avaliação de qualidade de amostra. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.3 (estatística); Módulo 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: amostragem aleatória simples: cada elemento tem probabilidade igual de seleção; estratificada: divide a população em estratos e amostra de cada um; sistemática: seleciona a cada k-ésimo elemento; por conglomerados: seleciona grupos e estuda todos os elementos dos grupos selecionados; erro de amostragem: diferença entre estatística amostral e parâmetro populacional devido ao acaso; vieses: de seleção (amostra não representativa), de não resposta (quem não responde difere), de cobertura (população-alvo ≠ população amostrada), de resposta (respostas distorcidas). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender a diferença entre população e amostra.\n- Nível intermediário: distinguir métodos de amostragem.\n- Nível avançado: identificar vieses e seu impacto.\n- Nível especialista: auditar um estudo quanto à amostragem.\nCOMPARAÇÕES CRÍTICAS:\n- aleatória simples x estratificada: estratificada garante representação de subgrupos.\n- erro de amostragem x viés: erro é aleatório e reduz com n; viés é sistemático e não reduz com n.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"aumentar n elimina viés\" — Motivo: viés é sistemático — Versão tecnicamente correta: corrigir o desenho.\n- Afirmação errada: \"amostragem por conveniência é aceitável\" — Motivo: gera viés de seleção — Versão tecnicamente correta: usar métodos probabilísticos.\n- Afirmação errada: \"erro de amostragem é erro de medição\" — Motivo: são fontes distintas — Versão tecnicamente correta: distinguir.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: amostra, população, aleatória, estratificada, sistemática, conglomerados, erro, viés.\n- Regras e mecanismos: métodos probabilísticos garantem representatividade; vieses são sistemáticos.\n- Exceções: em populações homogêneas, amostragem simples pode bastar.\n- Palavras-chave: amostragem, erro, viés, seleção, estratificação.\n- Checklist de domínio: (1) Distingo métodos de amostragem? (2) Explico erro de amostragem? (3) Identifico vieses? (4) Avalio qualidade da amostra?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é amostragem aleatória simples? (2) Quando usar estratificada? (3) O que é erro de amostragem? (4) O que é viés de seleção? (5) Como reduzir vieses?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular n para proporção com z = 1,96, p = 0,5 e margem e = 0,05.",
+          "resposta": "n = (1,96)² × 0,5 × 0,5 ÷ (0,05)² = 3,8416 × 0,25 ÷ 0,0025 = 0,9604 ÷ 0,0025 = 384,16 → 385 indivíduos (arredondamento para cima). Esse é o tamanho típico citado para proporções com esses parâmetros."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Pesquisa por link enviada a mailing: 8% responderam e 70% aprovaram a política. O que declarar?",
+          "resposta": "O viés de seleção e de não-resposta: quem clica em pesquisa de e-mail tende a ter opinião formada — os 70% não são generalizáveis para a população. Correto: declarar a forma de coleta, a taxa de resposta (8%), limitar a conclusão à amostra e, para afirmar sobre a população, usar amostragem probabilística com margem declarada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Com 10 mil respostas, o resultado é representativo — o tamanho da amostra elimina o viés.'",
+          "correcao": "Errado. O tamanho reduz o ERRO DE AMOSTRAGEM, não o VIÉS. Uma amostra enviesada de 10 mil permanece enviesada; a direção do desvio é sistemática e só se corrige mudando o desenho da coleta."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Amostragem estratificada garante representação dos subgrupos relevantes definidos previamente.",
+          "resposta": "Certo. É o objetivo dos estratos: assegurar a presença proporcional (ou ponderada) de cada subgrupo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Pesquisa com z = 1,96, p = 0,5, margem de 5 p.p.: n mínimo é: A) 96; B) 385; C) 1.000; D) 64.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir erro de amostragem de viés e escolherá método de amostragem coerente com o objetivo, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá erro de amostragem de viés e escolherá método de amostragem coerente com o objetivo"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) métodos de amostragem (aleatória simples, estratificada, sistemática, por conglomerados); (b) erro de amostragem; (c) vieses de amostragem. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre métodos de amostragem e vieses; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de população e amostra. OBJETIVOS OBSERVÁVEIS: (1) distinguir métodos de amostragem; (2) explicar erro de amostragem; (3) identificar vieses. COMPETÊNCI…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Métodos de amostragem, erro de amostragem e vieses",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Com 10 mil respostas, o resultado é representativo — o tamanho da amostra elimina o viés.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O tamanho reduz o ERRO DE AMOSTRAGEM, não o VIÉS. Uma amostra enviesada de 10 mil permanece enviesada; a direção do desvio é sistemática e só se corrige mudando o desenho da coleta."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Calcular n para proporção com z = 1,96, p = 0,5 e margem e = 0,05.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "n = (1,96)² × 0,5 × 0,5 ÷ (0,05)² = 3,8416 × 0,25 ÷ 0,0025 = 0,9604 ÷ 0,0025 = 384,16 → 385 indivíduos (arredondamento para cima). Esse é o tamanho típico citado para proporções com esses parâmetros.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Pesquisa por link enviada a mailing: 8% responderam e 70% aprovaram a política. O que declarar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "O viés de seleção e de não-resposta: quem clica em pesquisa de e-mail tende a ter opinião formada — os 70% não são generalizáveis para a população. Correto: declarar a forma de coleta, a taxa de resposta (8%), limitar a conclusão à amostra e, para afirmar sobre a população, usar amostragem probabilística com margem declarada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Com 10 mil respostas, o resultado é representativo — o tamanho da amostra elimina o viés.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O tamanho reduz o ERRO DE AMOSTRAGEM, não o VIÉS. Uma amostra enviesada de 10 mil permanece enviesada; a direção do desvio é sistemática e só se corrige mudando o desenho da coleta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

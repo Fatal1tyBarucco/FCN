@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 2,
+    "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+    "parte": 1,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U2P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U2P1.js",
+    "idsCompletos": [
+      "m4-u2-t1-s1",
+      "m4-u2-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u2-t1-s1",
+      "titulo": "Vírus e worms",
+      "topicoTitulo": "Malwares: vetores de infecção, propagação e impacto",
+      "topicoId": "modulo-4-unidade-2-topico-1",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará vírus de worm pelos critérios hospedeiro e propagação autônoma, e identificará seus vetores de infecção.",
+      "conteudo": "Malware é qualquer software projetado para prejudicar, explorar ou comprometer sistemas. Vírus é código que se adere a um arquivo hospedeiro e depende de duas condições para se propagar: ação humana (abrir o arquivo, executar o macro, plugar a mídia) e existência de um arquivo ao qual se agarrar. Worm é código autônomo: não precisa de hospedeiro nem de ação do usuário; explora serviços de rede expostos ou falhas de segmentação para copiar-se sozinho entre máquinas. Consequência prática da diferença: o vírus tende a se limitar a estações onde o arquivo circulou (e-mail, pen drive, anexo); o worm causa surtos em rede em minutos, saturando enlaces e explorando vulnerabilidades de propagação lateral. Vetores comuns de ambos: anexos de e-mail, macros em documentos, downloads de sites não confiáveis, mídias removíveis, instalações de software de procedência duvidosa e exploração de vulnerabilidades em serviços expostos à Internet. Impacto típico: degradação de desempenho, corrupção de arquivos, roubo de credenciais e ponto de entrada para ataque maior.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um funcionário abre um anexo de e-mail e o código se espalha pelos computadores da rede por conta própria. É vírus ou worm?",
+          "resposta": "Worm: a propagação autônoma, sem depender de nova ação humana ou de hospedeiro, é a marca do worm. Se dependesse de cada usuário abrir o anexo encaminhado, seria vírus."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um setor do órgão ainda usa macros de planilha para rotinas diárias. Que controles reduzem o risco de infecção por vírus de macro?",
+          "resposta": "Bloqueio ou restrição de macros vindo da Internet, configuração de proteção da área de trabalho (Protected View), treinamento para não habilitar macro em documento inesperado, antivírus com inspeção de conteúdo e correção do aplicativo. Em paralelo, migrar a rotina para processos que não exijam macro é a correção de causa raiz."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Vírus e worm são sinônimos; a diferença é apenas a época de criação.'",
+          "correcao": "Errado. A diferença é operacional: vírus depende de hospedeiro e ação humana; worm é autônomo e se propaga pela rede. Confundir os dois leva a dimensionar mal a resposta (isolamento de estações x bloqueio de tráfego de rede)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um worm pode se propagar sem que o usuário clique em qualquer coisa.",
+          "resposta": "Certo. É a definição operacional do worm: propagação autônoma, tipicamente explorando serviços de rede ou falhas de segmentação."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual malware depende de arquivo hospedeiro e ação do usuário? A) Worm; B) Vírus; C) Botnet; D) Rootkit.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar vírus de worm pelos critérios hospedeiro e propagação autônoma, e identificará seus vetores de infecção, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará vírus de worm pelos critérios hospedeiro e propagação autônoma, e identificará seus vetores de infecção"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Malware é qualquer software projetado para prejudicar, explorar ou comprometer sistemas. Vírus é código que se adere a um arquivo hospedeiro e depende de duas condições para se propagar: ação humana (abrir o arquivo, executar o macro, plugar a mídia) e existência de um arquivo ao qual se agarrar. Worm é código autônomo: não precisa de hospedeiro nem de ação do usuário; explora serviços de rede expostos ou falhas de segmentação para copiar-se sozinho entre máquinas. Consequência prática da difere…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Vírus e worms",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Vírus e worm são sinônimos; a diferença é apenas a época de criação.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A diferença é operacional: vírus depende de hospedeiro e ação humana; worm é autônomo e se propaga pela rede. Confundir os dois leva a dimensionar mal a resposta (isolamento de estações x bloqueio de tráfego de rede)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um funcionário abre um anexo de e-mail e o código se espalha pelos computadores da rede por conta própria. É vírus ou worm?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Worm: a propagação autônoma, sem depender de nova ação humana ou de hospedeiro, é a marca do worm. Se dependesse de cada usuário abrir o anexo encaminhado, seria vírus.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um setor do órgão ainda usa macros de planilha para rotinas diárias. Que controles reduzem o risco de infecção por vírus de macro?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Bloqueio ou restrição de macros vindo da Internet, configuração de proteção da área de trabalho (Protected View), treinamento para não habilitar macro em documento inesperado, antivírus com inspeção de conteúdo e correção do aplicativo. Em paralelo, migrar a rotina para processos que não exijam macro é a correção de causa raiz.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Vírus e worm são sinônimos; a diferença é apenas a época de criação.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A diferença é operacional: vírus depende de hospedeiro e ação humana; worm é autônomo e se propaga pela rede. Confundir os dois leva a dimensionar mal a resposta (isolamento de estações x bloqueio de tráfego de rede).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u2-t1-s2",
+      "titulo": "Trojans, spyware e adware",
+      "topicoTitulo": "Malwares: vetores de infecção, propagação e impacto",
+      "topicoId": "modulo-4-unidade-2-topico-1",
+      "unidadeTitulo": "4.2 Malwares e ferramentas defensivas",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno explicará o mecanismo do trojan (falsificação de aparência legítima) e relacionará spyware e adware a violações de privacidade e de proteção de dados.",
+      "conteudo": "Trojan (cavalo de Troia) é software que aparenta ser útil ou legítimo e executa função oculta maliciosa. Ele não se propaga sozinho: sua distribuição depende de engenharia social (instalador de programa pirata, atualizador falso, anexo), o que o aproxima conceitualmente da fraude, não da epidemia. Capacidades típicas: abrir porta dos fundos para acesso remoto, roubar credenciais gravadas, baixar outros componentes. Spyware é software que coleta informações do usuário sem consentimento — histórico de navegação, teclas digitadas, capturas de tela — e as envia a terceiros; quando grava teclas, recebe o nome específico de keylogger. Adware exibe publicidade não solicitada e frequentemente acompanha adware-like componentes que redirecionam buscas e anúncios. Conexão legal relevante: a coleta não consentida de dados que identifiquem pessoa é tratamento de dados pessoais — a LGPD exige base legal e transparência para tratamento (fundamentos do art. 2º e direitos do art. 18, verificados em referencias-verificadas.md), o que torna spyware em máquina corporativa também questão de conformidade, não só de segurança.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um 'instalador de utilitários otimizadores' distribuído em fóruns pede privilégios de administrador e instala também um módulo que envia histórico de navegação. Classifique.",
+          "resposta": "Trojan (finge ser utilitário e executa função oculta) com módulo spyware (coleta e envio de dados de navegação). A distribuição em fórum é engenharia social aplicada à propagação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O setor de TI detecta que estações instalam automaticamente extensões de navegador que exibem anexos publicitários e alteram a busca padrão. Que tipo de malware é provável e qual a primeira ação?",
+          "resposta": "Provável adware com alteração de configuração do navegador. Primeira ação: isolar a causa (extensão ou instalador), remover extensões e componentes não autorizados, restaurar configurações, revogar sessões se houve captura de credenciais e corrigir o canal de distribuição que permitiu a instalação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Trojan propaga-se automaticamente entre máquinas da rede.'",
+          "correcao": "Errado. Propagação autônoma é característica do worm. O trojan depende de distribuição enganosa e instalação — por isso controles de engenharia social e de software são tão importantes contra ele."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Spyware coleta dados do usuário sem consentimento, o que pode configurar tratamento ilícito de dados pessoais.",
+          "resposta": "Certo. Sob a LGPD, coleta e transmissão de dados identificáveis exigem base legal e transparência; spyware, por definição, não as atende (arts. 2º e 18 da LGPD — verificados)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual malware grava as teclas digitadas pelo usuário? A) Adware; B) Keylogger (spyware); C) Firewall; D) Worm.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o mecanismo do trojan (falsificação de aparência legítima) e relacionará spyware e adware a violações de privacidade e de proteção de dados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "qqgkhvsyL9Q",
+          "titulo": "Como se proteger de golpes de engenharia social – Seu mundo digital mais seguro #Ep3",
+          "canal": "TecMundo",
+          "urlOriginal": "https://www.youtube.com/watch?v=qqgkhvsyL9Q",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/qqgkhvsyL9Q",
+          "descricao": "Videoaula prática sobre engenharia social, explicando as principais técnicas de golpes (phishing, spear phishing, vishing, smishing, pretexting, baiting, tailgating), como identificá-las (urgência, autoridade falsa, links suspeitos, anexos inesperados), e medidas de proteção (verificação de remetente, não clicar em links suspeitos, autenticação de dois fatores, treinamento contínuo, políticas de segurança). Inclui exemplos reais de golpes comuns no Brasil e como reagir caso seja vítima.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o mecanismo do trojan (falsificação de aparência legítima) e relacionará spyware e adware a violações de privacidade e de proteção de dados"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Trojan (cavalo de Troia) é software que aparenta ser útil ou legítimo e executa função oculta maliciosa. Ele não se propaga sozinho: sua distribuição depende de engenharia social (instalador de programa pirata, atualizador falso, anexo), o que o aproxima conceitualmente da fraude, não da epidemia. Capacidades típicas: abrir porta dos fundos para acesso remoto, roubar credenciais gravadas, baixar outros componentes. Spyware é software que coleta informações do usuário sem consentimento — históric…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Trojans, spyware e adware",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Trojan propaga-se automaticamente entre máquinas da rede.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Propagação autônoma é característica do worm. O trojan depende de distribuição enganosa e instalação — por isso controles de engenharia social e de software são tão importantes contra ele."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um 'instalador de utilitários otimizadores' distribuído em fóruns pede privilégios de administrador e instala também um módulo que envia histórico de navegação. Classifique.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Trojan (finge ser utilitário e executa função oculta) com módulo spyware (coleta e envio de dados de navegação). A distribuição em fórum é engenharia social aplicada à propagação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O setor de TI detecta que estações instalam automaticamente extensões de navegador que exibem anexos publicitários e alteram a busca padrão. Que tipo de malware é provável e qual a primeira ação?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Provável adware com alteração de configuração do navegador. Primeira ação: isolar a causa (extensão ou instalador), remover extensões e componentes não autorizados, restaurar configurações, revogar sessões se houve captura de credenciais e corrigir o canal de distribuição que permitiu a instalação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Trojan propaga-se automaticamente entre máquinas da rede.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Propagação autônoma é característica do worm. O trojan depende de distribuição enganosa e instalação — por isso controles de engenharia social e de software são tão importantes contra ele.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

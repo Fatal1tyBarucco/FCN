@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 3,
+    "unidadeTitulo": "5.3 IA generativa e LLMs",
+    "parte": 6,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM5U3P6",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U3P6.js",
+    "idsCompletos": [
+      "m5-u3-t4-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u3-t4-s3",
+      "titulo": "Erros, exceções, pegadinhas e resumo estruturado da unidade",
+      "topicoTitulo": "Exemplos resolvidos, comparações, pegadinhas e síntese da unidade",
+      "topicoId": "modulo-5-unidade-3-topico-4",
+      "unidadeTitulo": "5.3 IA generativa e LLMs",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno rejeitará afirmações equivocadas frequentes sobre IA generativa e consolidará a unidade 5.3 por recuperação ativa.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Erros, exceções, pegadinhas e resumo estruturado da unidade\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4, 6 e 7. RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica. FUNDAMENTAÇÃO CONCEITUAL: PEGADINHAS — (a) «O modelo consulta a internet para responder»: errado; ele não consulta fontes por conta própria, a menos que o próprio sistema integre busca (RAG ou ferramenta). (b) «Com mais tokens de entrada, a resposta é sempre melhor»: errado; o excesso de contexto dilui a informação relevante e aumenta custo e latência. (c) «O ajuste fino é a fase em que o modelo aprende com erros de produção»: errado; ajuste fino é novo treinamento, executado fora da linha. (d) «Alucinação é defeito raro e corrigível»: errado; é modo de funcionamento, e a mitigação é de processo. (e) «LLM é a escolha natural para priorizar uma fila»: errado; priorização é tarefa de classificação, em que abordagem discriminativa é mais adequada e auditável. (f) «Com RAG, a resposta sempre está ancorada»: errado; o RAG melhora a disponibilidade de material e a verificabilidade, não elimina a alucinação sobre o material recuperado. (g) «Saída de IA é obra original e livre de direito autoral»: errado; há três camadas — licença da saída (termos do serviço), licitude dos dados de treinamento e risco de similaridade. (h) «O modelo não guarda memória entre conversas»: errado se a afirmação for sobre a ferramenta; o modelo não guarda, mas a aplicação pode guardar histórico — é a memória EXTERNA que produz a impressão de memória. (i) «Agente é sinônimo de automação de ponta a ponta»: errado; automação de ponta a ponta é desenho determinístico; agente implica decisão do modelo sobre o próximo passo. (j) «Alta acurácia global dispensa análise por subgrupo»: errado (unidade 5.2). RESUMO ESTRUTURADO — CONCEITOS ESSENCIAIS: token, embedding, janela de contexto, geração probabilística, Transformer, atenção, alucinação, RAG, base vetorial, agente, ferramenta, alinhamento, ajuste fino, difusão. REGRAS E MECANISMOS: a saída é token a token, condicionada pelo contexto; a atenção pondera tokens por relevância contextual; a posição entra por embedding posicional; a máscara causal impede ver o futuro; o RAG indexa trechos e recupera por similaridade; a difusão remove ruído progressivamente. AVALIAÇÃO: fidelidade, completude, conformidade de formato, relevância, clareza, segurança, reprodutibilidade, impacto — e, no processo, revisão, registro e base legal. FLUXO RESUMIDO (uso institucional seguro): (1) definir uso e escopo; (2) verificar base legal dos dados; (3) preparar base de conhecimento com metadados de vigência e classificação; (4) ancorar em fonte e exigir citação; (5) validar números, datas e identificadores; (6) revisão humana por impacto; (7) registrar prompt, parâmetros, versão, fontes e saída; (8) medir indicadores e reavaliar em ciclo. EXCEÇÕES E LIMITES: o modelo não é fonte; janela é finita e sem memória própria; alucinação é estrutural; RAG não é controle de acesso; licença da saída depende dos termos do serviço. PALAVRAS-CHAVE: token, embedding, janela, atenção, Transformer, alucinação, RAG, vetor, chunking, ferramenta, alçada, âncora, fidelidade, reprodutibilidade. CHECKLIST DE DOMÍNIO: (1) Qual a diferença entre generativo e discriminativo? (2) O que é tokenização e por que importa para custo e limite? (3) O que faz o mecanismo de atenção? (4) Por que há alucinação? (5) Quais as cinco etapas do RAG? (6) Quando preferir ajuste fino a RAG? (7) Quais os oito critérios de avaliação? (8) Qual a diferença entre fluxo e agente? VERIFICAÇÃO DE APRENDIZAGEM (recuperação ativa — 8 questões autorais): (Q1) Explique por que o modelo produz afirmações falsas com confiança. (Q2) Relacione janela de contexto e memória do modelo. (Q3) Descreva o mecanismo de atenção em uma frase. (Q4) Liste as etapas de um RAG. (Q5) Diga quando o ajuste fino é preferível ao RAG. (Q6) Explique por que RAG não substitui controle de acesso. (Q7) Liste seis critérios de avaliação de saída. (Q8) Explique a diferença entre alucinação e erro de dado. CRITÉRIO DE DOMÍNIO: acerto integral em Q1, Q2, Q4 e Q8 e em ao menos 5 dos 8 itens. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\" com linguagem acessível.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados.\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Erros, exceções, pegadinhas e resumo estruturado da unidade\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Erros, exceções, pegadinhas e resumo estruturado da unidade basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Erros, exceções, pegadinhas e resumo estruturado da unidade e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: erros, exceções, pegadinhas e resumo estruturado da unidade, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Erros, exceções, pegadinhas e resumo estruturado da unidade com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Sem consultar o texto, liste as cinco etapas de um RAG.",
+          "resposta": "(1) Indexação: divisão em trechos, geração de embeddings e gravação com metadados; (2) Codificação da consulta em embedding; (3) Busca por similaridade na base vetorial, com filtros de permissão; (4) Composição do prompt com os trechos recuperados e instrução de citar a fonte; (5) Geração da resposta e verificação de que ela é sustentada pelos trechos, com exibição das fontes."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Explique por que RAG não substitui controle de acesso.",
+          "resposta": "Porque o RAG recupera e entrega material ao modelo; o modelo obedecerá ao que receber. Se a indexação não separar material por competência, classificação de sigilo ou permissão, a base pode devolver ao consultante o que ele não pode ver — e o efeito é imediato no prompt e, portanto, na resposta. A proteção precisa existir na indexação ou na busca, com metadados e filtros testados."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Quanto maior o número de tokens no prompt, melhor a resposta, porque o modelo tem mais contexto.'",
+          "correcao": "Errado. O excesso de contexto dilui a informação relevante, aumenta custo e latência e pode piorar a recuperação do que importa. A prática do RAG existe justamente para selecionar o trecho relevante, não para despejar a base inteira no prompt."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A memória entre conversas, quando existe em um produto, é implementada externamente pela aplicação, e não pelo modelo.",
+          "resposta": "Certo. O modelo processa, por chamada, apenas o conteúdo presente na janela de contexto."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Na verificação de aprendizagem da unidade 5.3, exigem-se acerto integral: A) na causa da alucinação; B) na relação entre janela e memória; C) nas etapas do RAG; D) na distinção entre alucinação e erro de dado.",
+          "resposta": "A, B, C e D."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de rejeitar afirmações equivocadas frequentes sobre IA generativa e consolidará a unidade 5.3 por recuperação ativa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "rejeitará afirmações equivocadas frequentes sobre IA generativa e consolidará a unidade 5.3 por recuperação ativa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Erros, exceções, pegadinhas e resumo estruturado da unidade\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Erros, exceções, pegadinhas e resumo estruturado da unidade\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais. PRÉ-REQUISITOS: leitura das …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Erros, exceções, pegadinhas e resumo estruturado da unidade",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Quanto maior o número de tokens no prompt, melhor a resposta, porque o modelo tem mais contexto.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O excesso de contexto dilui a informação relevante, aumenta custo e latência e pode piorar a recuperação do que importa. A prática do RAG existe justamente para selecionar o trecho relevante, não para despejar a base inteira no prompt."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Sem consultar o texto, liste as cinco etapas de um RAG.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(1) Indexação: divisão em trechos, geração de embeddings e gravação com metadados; (2) Codificação da consulta em embedding; (3) Busca por similaridade na base vetorial, com filtros de permissão; (4) Composição do prompt com os trechos recuperados e instrução de citar a fonte; (5) Geração da resposta e verificação de que ela é sustentada pelos trechos, com exibição das fontes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Explique por que RAG não substitui controle de acesso.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque o RAG recupera e entrega material ao modelo; o modelo obedecerá ao que receber. Se a indexação não separar material por competência, classificação de sigilo ou permissão, a base pode devolver ao consultante o que ele não pode ver — e o efeito é imediato no prompt e, portanto, na resposta. A proteção precisa existir na indexação ou na busca, com metadados e filtros testados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Quanto maior o número de tokens no prompt, melhor a resposta, porque o modelo tem mais contexto.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O excesso de contexto dilui a informação relevante, aumenta custo e latência e pode piorar a recuperação do que importa. A prática do RAG existe justamente para selecionar o trecho relevante, não para despejar a base inteira no prompt.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

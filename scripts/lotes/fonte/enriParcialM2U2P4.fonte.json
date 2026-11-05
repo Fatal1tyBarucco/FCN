@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 2,
+    "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+    "parte": 4,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U2P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U2P4.js",
+    "idsCompletos": [
+      "m2-u2-t3-s1",
+      "m2-u2-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u2-t3-s1",
+      "titulo": "Exemplo de requisição HTTP completa",
+      "topicoTitulo": "Comunicação completa cliente-servidor",
+      "topicoId": "modulo-2-unidade-2-topico-3",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno descreverá, camada por camada, o fluxo completo de uma requisição HTTP de um navegador a um servidor web, incluindo resolução DNS, estabelecimento TCP e encapsulamento.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o fluxo completo de uma requisição HTTP, do nome à resposta; (b) o papel do DNS, do TCP e do TLS; (c) o encapsulamento em cada etapa. POR QUE O CONHECIMENTO É IMPORTANTE: integrar DNS, TCP, TLS e HTTP em um fluxo é a aplicação prática dos modelos; a prova cobra a ordem das etapas. PRÉ-REQUISITOS: camadas, encapsulamento, DNS, TCP, TLS, HTTP. OBJETIVOS OBSERVÁVEIS: (1) ordenar as etapas; (2) associar cada etapa a uma camada/protocolo; (3) descrever o handshake TCP; (4) explicar o encapsulamento. COMPETÊNCIAS DESENVOLVIDAS: raciocínio integrado; leitura de fluxo de rede. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.2 (modelos); unidade 3.2 (DNS/HTTP); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o fluxo simplificado de uma requisição HTTPS é: (1) o usuário digita um nome; (2) o navegador consulta o cache DNS local e, se não houver resposta, envia uma consulta ao resolvedor configurado, obtendo o endereço IP; (3) abre-se uma conexão TCP na porta 443, com o three-way handshake (SYN, SYN-ACK, ACK); (4) ocorre a negociação TLS, com verificação do certificado e acordo de chaves; (5) o navegador envia a requisição HTTP GET pelo túnel cifrado; (6) cada camada encapsula os dados — HTTP sobre TLS sobre TCP (segmento com as portas) sobre IP (pacote com os IPs) sobre Ethernet (quadro com os MACs) até os bits; (7) na rede, roteadores encaminham pelo IP e switches pelo MAC; (8) o servidor desencapsula até a aplicação, processa e responde; (9) a resposta percorre o caminho inverso; (10) a conexão é encerrada ou mantida para reutilização. Esse único fluxo exercita DNS, TCP, TLS, HTTP e o modelo de camadas — por isso é um excelente exercício de integração. A ordem importa: sem resolver o nome não há IP; sem conexão TCP não há TLS; sem TLS não há HTTPS.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: narrar as etapas em linguagem simples.\n- Nível intermediário: associar cada etapa a um protocolo e a uma camada.\n- Nível avançado: situar o TLS antes do HTTP e explicar o three-way handshake.\n- Nível especialista: identificar, dado um sintoma, em qual etapa o fluxo travou.\nCOMPARAÇÕES CRÍTICAS:\n- HTTP x HTTPS: o segundo acrescenta a etapa TLS — muda portas (80 x 443) e segurança.\n- handshake TCP x handshake TLS: o primeiro estabelece a conexão; o segundo, o canal cifrado.\n- DNS x conexão: o DNS resolve o nome antes de haver qualquer conexão TCP.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O TLS vem antes do TCP.\" — Motivo: o TLS roda sobre o TCP — Versão tecnicamente correta: primeiro TCP, depois TLS, depois HTTP.\n- Afirmação errada: \"O DNS usa o mesmo handshake do TCP.\" — Motivo: o DNS costuma usar UDP (consultas) — Versão tecnicamente correta: não há three-way handshake de TCP por padrão no DNS.\n- Afirmação errada: \"A ordem das etapas não afeta o resultado.\" — Motivo: cada etapa depende da anterior — Versão tecnicamente correta: a sequência é determinante.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: resolução DNS, three-way handshake, handshake TLS, GET, encapsulamento, keep-alive.\n- Regras e fórmulas: nome → IP → TCP → TLS → HTTP → dados → resposta.\n- Exceções: cache DNS e keep-alive podem encurtar etapas.\n- Palavras-chave: fluxo, porta 443, certificado, SYN/ACK, camada.\n- Checklist de domínio: (1) Ordeno as etapas? (2) Associo protocolos? (3) Descrevo handshakes? (4) Explico o encapsulamento?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual a primeira etapa? (2) Em que porta a conexão é aberta no HTTPS? (3) O que o three-way handshake estabelece? (4) Quando o TLS entra? (5) Como cada camada encapsula?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Listar as etapas de uma visita a https://www.exemplo.com desde a digitação até o recebimento da página.",
+          "resposta": "DNS (resolver IP) -> TCP handshake (porta 443) -> TLS handshake -> HTTP GET -> resposta HTTP -> renderização. Cada etapa pode falhar de forma independente."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um usuário acessa um site pelo IP diretamente (ex.: https://192.0.2.10). Qual etapa é eliminada e qual problema pode surgir?",
+          "resposta": "Elimina a resolução DNS. Problema: o certificado TLS é emitido para o nome de domínio, não para o IP; o navegador exibirá erro de certificado (hostname mismatch)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'HTTPS dispensa a resolução DNS porque a conexão é cifrada.'",
+          "correcao": "Errado. HTTPS cifra o conteúdo, mas ainda precisa resolver o nome para IP antes de estabelecer a conexão TCP/TLS. DNS ocorre antes e, sem DNSSEC, pode ser manipulado (DNS spoofing)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) No HTTPS, a negociação TLS ocorre após o estabelecimento da conexão TCP.",
+          "resposta": "Certo — TLS roda sobre TCP (exceto QUIC, que roda sobre UDP)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo resolve nomes de domínio em endereços IP? A) DHCP; B) DNS; C) ARP; D) ICMP.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever, camada por camada, o fluxo completo de uma requisição HTTP de um navegador a um servidor web, incluindo resolução DNS, estabelecimento TCP e encapsulamento, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá, camada por camada, o fluxo completo de uma requisição HTTP de um navegador a um servidor web, incluindo resolução DNS, estabelecimento TCP e encapsulamento"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Fluxo completo (simplificado): (1) O usuário digita www.exemplo.com no navegador. (2) O navegador consulta o cache DNS local; se não houver, envia consulta DNS (UDP 53) ao resolvedor configurado, que resolve para um IP (ex.: 192.0.2.10). (3) O navegador abre conexão TCP com o IP na porta 443 (HTTPS): three-way handshake (SYN, SYN-ACK, ACK). (4) Negociação TLS: troca de certificado, acordo de chaves, estabelecimento de canal cifrado. (5) O navegador envia a requisição HTTP GET / dentro do túnel T…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exemplo de requisição HTTP completa",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'HTTPS dispensa a resolução DNS porque a conexão é cifrada.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. HTTPS cifra o conteúdo, mas ainda precisa resolver o nome para IP antes de estabelecer a conexão TCP/TLS. DNS ocorre antes e, sem DNSSEC, pode ser manipulado (DNS spoofing)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Listar as etapas de uma visita a https://www.exemplo.com desde a digitação até o recebimento da página.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "DNS (resolver IP) -> TCP handshake (porta 443) -> TLS handshake -> HTTP GET -> resposta HTTP -> renderização. Cada etapa pode falhar de forma independente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um usuário acessa um site pelo IP diretamente (ex.: https://192.0.2.10). Qual etapa é eliminada e qual problema pode surgir?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Elimina a resolução DNS. Problema: o certificado TLS é emitido para o nome de domínio, não para o IP; o navegador exibirá erro de certificado (hostname mismatch).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'HTTPS dispensa a resolução DNS porque a conexão é cifrada.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. HTTPS cifra o conteúdo, mas ainda precisa resolver o nome para IP antes de estabelecer a conexão TCP/TLS. DNS ocorre antes e, sem DNSSEC, pode ser manipulado (DNS spoofing).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u2-t3-s2",
+      "titulo": "Etapas e pontos de falha",
+      "topicoTitulo": "Comunicação completa cliente-servidor",
+      "topicoId": "modulo-2-unidade-2-topico-3",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno identificará, em um fluxo completo, em qual etapa ocorre cada função e quais sintomas indicam falha em cada etapa.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) quais funções ocorrem em cada etapa do fluxo; (b) os sintomas de falha em cada etapa; (c) como isolar a etapa problemática. POR QUE O CONHECIMENTO É IMPORTANTE: identificar a etapa correta evita \"chutes\" no diagnóstico; a prova cobra a associação sintoma-etapa. PRÉ-REQUISITOS: fluxo da requisição HTTP. OBJETIVOS OBSERVÁVEIS: (1) associar função e etapa; (2) reconhecer mensagens de erro; (3) isolar a etapa falha; (4) ordenar o diagnóstico. COMPETÊNCIAS DESENVOLVIDAS: diagnóstico estruturado; leitura de mensagens de erro. GRAU DE DIFICULDADE: avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.3 (fluxo HTTP); unidade 5.4 (diagnóstico). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: cada etapa do fluxo tem funções e falhas características. DNS: converte nome em IP; falhas aparecem como \"não foi possível resolver o nome do host\" ou \"NXDOMAIN\". TCP: estabelece a conexão e garante entrega; falhas aparecem como \"connection timed out\" (sem resposta) ou \"connection refused\" (porta fechada). TLS: cifra e autentica; falhas aparecem como certificado inválido ou expirado. HTTP: processa a requisição; erros aparecem como códigos de status (404 recurso inexistente, 500 erro do servidor, 503 serviço indisponível). Roteamento: entrega os pacotes entre redes; falhas aparecem como \"destination net unreachable\" ou \"TTL expired\". Enlace/físico: transporta bits; a falha é a ausência de link. A competência central é ISOLAR a etapa que falhou ANTES de culpar a aplicação: se o ping ao IP funciona mas o nome não resolve, o problema é DNS; se o nome resolve mas a conexão é recusada, o problema é a porta/serviço; se a conexão se estabelece mas o HTTP retorna 500, o problema é a aplicação. Essa sequência é a base do diagnóstico por camadas (unidade 5.4).\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer a mensagem de falha de DNS.\n- Nível intermediário: associar cada mensagem à etapa correspondente.\n- Nível avançado: ordenar os testes para isolar a etapa rapidamente.\n- Nível especialista: distinguir \"connection refused\" de \"connection timed out\" quanto à causa.\nCOMPARAÇÕES CRÍTICAS:\n- conexão recusada x expirada: a primeira indica porta fechada; a segunda, ausência de resposta (firewall DROP, host inacessível).\n- falha de DNS x falha de roteamento: a primeira ocorre antes de qualquer conexão; a segunda, na entrega dos pacotes.\n- erro 4xx x 5xx: o primeiro é do cliente; o segundo, do servidor — muda a responsabilidade.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Connection refused significa que a rede caiu.\" — Motivo: o pacote chegou e foi recusado — Versão tecnicamente correta: o serviço/porta não está aceitando conexões.\n- Afirmação errada: \"404 é erro de rede.\" — Motivo: é resposta da aplicação — Versão tecnicamente correta: o servidor respondeu que o recurso não existe.\n- Afirmação errada: \"Se o ping falha, o site está fora.\" — Motivo: o ICMP pode estar bloqueado — Versão tecnicamente correta: testar por outro caminho antes de concluir.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: etapa, função, sintoma, NXDOMAIN, connection refused, timed out, 4xx/5xx.\n- Regras e fórmulas: isolar a etapa antes de culpar a aplicação.\n- Exceções: ICMP bloqueado faz o ping falhar mesmo com TCP/UDP funcionando.\n- Palavras-chave: DNS, TCP, TLS, HTTP, roteamento, enlace.\n- Checklist de domínio: (1) Associo função e etapa? (2) Reconheço mensagens? (3) Isolo a etapa? (4) Ordeno o diagnóstico?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual mensagem indica falha de DNS? (2) O que significa connection refused? (3) E connection timed out? (4) Qual código é erro do servidor? (5) Como isolar a etapa?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um site não carrega e o navegador mostra 'ERR_NAME_NOT_RESOLVED'. Qual etapa falhou?",
+          "resposta": "Resolução DNS — o nome não foi resolvido em IP. Verificar DNS, cache, conectividade e configuração de resolvedor."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O ping ao IP do servidor funciona, mas o navegador mostra 'connection refused' na porta 443. O que isso indica?",
+          "resposta": "Conectividade IP ok, mas não há serviço escutando na porta 443 (servidor web parado, firewall bloqueando ou porta diferente). Problema na camada de transporte/aplicação, não de rede."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se o ping funciona, o site deveria carregar normalmente.'",
+          "correcao": "Errado. Ping testa ICMP (camada de rede), não a aplicação. O servidor pode responder a ping mas ter HTTP parado, certificado expirado ou firewall bloqueando 80/443."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um erro HTTP 500 indica problema na camada de rede.",
+          "resposta": "Errado — 5xx é erro do servidor (aplicação), não de rede."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual mensagem indica falha de resolução de nome? A) connection refused; B) ERR_NAME_NOT_RESOLVED; C) 404 Not Found; D) TTL expired.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar, em um fluxo completo, em qual etapa ocorre cada função e quais sintomas indicam falha em cada etapa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará, em um fluxo completo, em qual etapa ocorre cada função e quais sintomas indicam falha em cada etapa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Pontos de falha e sintomas: (DNS) 'não foi possível resolver o nome do host' / 'DNS_PROBE_FINISHED_NXDOMAIN' — falha de resolução. (TCP) 'connection timed out' / 'connection refused' — host inacessível ou porta fechada. (TLS) 'certificado inválido/expirado' / 'ERR_CERT_AUTHORITY_INVALID' — problema de certificado ou MITM. (HTTP) '404 Not Found', '500 Internal Server Error', '503 Service Unavailable' — aplicação/servidor. (Rede) 'destination net unreachable', 'TTL expired' — roteamento. (Enlace) …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Etapas e pontos de falha",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se o ping funciona, o site deveria carregar normalmente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ping testa ICMP (camada de rede), não a aplicação. O servidor pode responder a ping mas ter HTTP parado, certificado expirado ou firewall bloqueando 80/443."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um site não carrega e o navegador mostra 'ERR_NAME_NOT_RESOLVED'. Qual etapa falhou?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Resolução DNS — o nome não foi resolvido em IP. Verificar DNS, cache, conectividade e configuração de resolvedor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O ping ao IP do servidor funciona, mas o navegador mostra 'connection refused' na porta 443. O que isso indica?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Conectividade IP ok, mas não há serviço escutando na porta 443 (servidor web parado, firewall bloqueando ou porta diferente). Problema na camada de transporte/aplicação, não de rede.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se o ping funciona, o site deveria carregar normalmente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ping testa ICMP (camada de rede), não a aplicação. O servidor pode responder a ping mas ter HTTP parado, certificado expirado ou firewall bloqueando 80/443.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 3,
+    "unidadeTitulo": "4.3 Ameaças e ataques",
+    "parte": 4,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U3P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U3P4.js",
+    "idsCompletos": [
+      "m4-u3-t3-s1",
+      "m4-u3-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u3-t3-s1",
+      "titulo": "Vazamento de dados, roubo de identidade e comprometimento de contas",
+      "topicoTitulo": "Comprometimento, indicadores e resposta",
+      "topicoId": "modulo-4-unidade-3-topico-3",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno descreverá a cadeia vazamento → reutilização → comprometimento de conta e enumerará as primeiras ações de contenção e os deveres de transparência do órgão.",
+      "conteudo": "Vazamento de dados é a divulgação não autorizada de informação (bases, planilhas, configurações expostas, backup público). Roubo de identidade usa dados pessoais vazados para se passar por alguém (abrir conta, obter serviço, solicitar benefício); no serviço público, o dano inclui desvio de benefícios e fraude cadastral. Comprometimento de conta é o controle indevido de uma conta real (por reutilização, phishing, malware ou interceptação) e costuma ser a porta para movimentação lateral e abuso de confiança (envio de ordens em nome do servidor). Cadeia típica: vazamento → credenciais testadas em massa (stuffing) → conta tomada → abuso de permissão. Primeiras ações pelo órgão: bloquear/rotacionar credenciais e sessões afetadas, restringir acesso ao dado exposto, preservar registros, identificar o escopo (quem, o quê, quantos), registrar o incidente e avaliar comunicação à autoridade e aos titulares conforme os dispositivos aplicáveis da LGPD — o art. 46 (verificado) impõe medidas de segurança; o dispositivo específico que trata da comunicação de incidente deve ser conferido na fonte oficial, pois não foi verificado nesta sessão. Transparência sem pânico: comunicar fatos confirmados, riscos e medidas — não especulações.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Planilha com dados de servidores foi publicada em pasta de compartilhamento público por 3 dias. Classifique e liste o escopo a apurar.",
+          "resposta": "Vazamento por exposição indevida de acesso. Escopo: quais dados (pessoais? sensíveis?), quantos titulares, quem acessou (registros), período de exposição, causa raiz (permissão ampla demais) e medidas de contenção imediata."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Credenciais de dezenas de servidores apareceram em lista pública. O que fazer nas primeiras horas?",
+          "resposta": "Forçar troca de senhas, revogar sessões, exigir MFA nas contas afetadas, bloquear acessos fora do padrão, monitorar ações recentes dessas contas, registrar o incidente e notificar responsáveis — sem esperar que 'alguém use', pois o teste automatizado pode ocorrer minutos após a publicação."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Vazamento só gera risco de privacidade; sem fraude concreta, não há nada a fazer.'",
+          "correcao": "Errado. Vazamento cria risco imediato de reutilização de credenciais e de identidade; além disso, gera deveres de resposta e transparência. Inação transforma risco em incidente."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Revogar sessões ativas é parte da contenção de comprometimento de conta.",
+          "resposta": "Certo. Trocar senha sem revogar sessões deixa o atacante autenticado; a revogação encerra o que já estava aberto."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Cadeia correta: A) comprometimento → vazamento → identidade; B) vazamento → reutilização de credenciais → comprometimento de conta; C) phishing → ransomware obrigatoriamente; D) roubo de identidade → vazamento.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever a cadeia vazamento → reutilização → comprometimento de conta e enumerará as primeiras ações de contenção e os deveres de transparência do órgão, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá a cadeia vazamento → reutilização → comprometimento de conta e enumerará as primeiras ações de contenção e os deveres de transparência do órgão"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Vazamento de dados é a divulgação não autorizada de informação (bases, planilhas, configurações expostas, backup público). Roubo de identidade usa dados pessoais vazados para se passar por alguém (abrir conta, obter serviço, solicitar benefício); no serviço público, o dano inclui desvio de benefícios e fraude cadastral. Comprometimento de conta é o controle indevido de uma conta real (por reutilização, phishing, malware ou interceptação) e costuma ser a porta para movimentação lateral e abuso de…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Vazamento de dados, roubo de identidade e comprometimento de contas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Vazamento só gera risco de privacidade; sem fraude concreta, não há nada a fazer.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Vazamento cria risco imediato de reutilização de credenciais e de identidade; além disso, gera deveres de resposta e transparência. Inação transforma risco em incidente."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Planilha com dados de servidores foi publicada em pasta de compartilhamento público por 3 dias. Classifique e liste o escopo a apurar.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Vazamento por exposição indevida de acesso. Escopo: quais dados (pessoais? sensíveis?), quantos titulares, quem acessou (registros), período de exposição, causa raiz (permissão ampla demais) e medidas de contenção imediata.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Credenciais de dezenas de servidores apareceram em lista pública. O que fazer nas primeiras horas?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Forçar troca de senhas, revogar sessões, exigir MFA nas contas afetadas, bloquear acessos fora do padrão, monitorar ações recentes dessas contas, registrar o incidente e notificar responsáveis — sem esperar que 'alguém use', pois o teste automatizado pode ocorrer minutos após a publicação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Vazamento só gera risco de privacidade; sem fraude concreta, não há nada a fazer.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Vazamento cria risco imediato de reutilização de credenciais e de identidade; além disso, gera deveres de resposta e transparência. Inação transforma risco em incidente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u3-t3-s2",
+      "titulo": "Indicadores de comprometimento (IoC)",
+      "topicoTitulo": "Comprometimento, indicadores e resposta",
+      "topicoId": "modulo-4-unidade-3-topico-3",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno classificará indicadores de comprometimento por tipo, explicará a diferença entre indicador e evidência e discutirá os limites da detecção baseada em listas.",
+      "conteudo": "Indicadores de comprometimento (IoCs) são artefatos observáveis associados a ataque: hash de arquivo malicioso, domínio ou endereço de comando e controle, endereço IP de atacante, nome de arquivo suspeito, chave de registro alterada, sequência de eventos (login fora do padrão + elevação de privilégio + acesso a pasta sensível). Uso prático: lista de verificação (blocklist) em filtros, EDR e IDS; correlação em central de monitoramento; apoio à triagem do analista. Limites essenciais: 1) IoC é majoritariamente retroativo — só é conhecido depois que o ataque foi observado; 2) IPs e domínios legítimos podem ser reutilizados, gerando falsos positivos; 3) atacante que muda de ferramenta 'some' das listas — por isso a detecção avançada trabalha com padrões de comportamento (TTPs: táticas, técnicas e procedimentos), que são mais difíceis de mudar. Distinção conceitual para prova: indicador é pista; evidência é pista preservada e autenticada, apta a sustentar responsabilização. IoC sem contexto não prova comprometimento; contexto temporal + múltiplos indicadores sustentam a hipótese e orientam a resposta.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Lista de bloqueio contém domínio usado por malware ontem. Se o tráfego hoje for bloqueado, isso prova infecção local?",
+          "resposta": "Não. Prova apenas tentativa/contato com domínio listado; a confirmação de comprometimento exige correlação com processos, arquivos e comportamento do host — múltiplos indicadores em contexto."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Logs mostram: login legítimo às 14h, novo acesso 14h07 de outro estado, criação de conta e envio em massa de e-mails. Interprete.",
+          "resposta": "Sequência suspeira de comprometimento: acesso tomado + movimentação + abuso de função (conta de e-mail como ferramenta de ataque). Ações: bloquear conta, coletar indicadores (origem, hashes de anexos enviados), varrer sessões similares e propagar detecção a toda a base."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se o antivírus não alertou, não houve comprometimento.'",
+          "correcao": "Errado. Ausência de alerta não é prova negativa: ataque pode ser inédito, ferramenta desativada ou vetor não coberto. A avaliação usa registros, comportamento e múltiplas fontes — não apenas assinatura."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Padrão de comportamento (TTP) é mais estável que IP de atacante para detecção de longo prazo.",
+          "resposta": "Certo. IP/domínio mudam com facilidade; a forma de atuar (técnicas e sequências) muda menos e sustenta detecção comportamental."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Melhor descrição de IoC: A) prova judicial do crime; B) artefato observável usado como pista de detecção; C) relatório final de auditoria; D) política de segurança.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar indicadores de comprometimento por tipo, explicará a diferença entre indicador e evidência e discutirá os limites da detecção baseada em listas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará indicadores de comprometimento por tipo, explicará a diferença entre indicador e evidência e discutirá os limites da detecção baseada em listas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Indicadores de comprometimento (IoCs) são artefatos observáveis associados a ataque: hash de arquivo malicioso, domínio ou endereço de comando e controle, endereço IP de atacante, nome de arquivo suspeito, chave de registro alterada, sequência de eventos (login fora do padrão + elevação de privilégio + acesso a pasta sensível). Uso prático: lista de verificação (blocklist) em filtros, EDR e IDS; correlação em central de monitoramento; apoio à triagem do analista. Limites essenciais: 1) IoC é maj…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Indicadores de comprometimento (IoC)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se o antivírus não alertou, não houve comprometimento.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ausência de alerta não é prova negativa: ataque pode ser inédito, ferramenta desativada ou vetor não coberto. A avaliação usa registros, comportamento e múltiplas fontes — não apenas assinatura."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Lista de bloqueio contém domínio usado por malware ontem. Se o tráfego hoje for bloqueado, isso prova infecção local?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não. Prova apenas tentativa/contato com domínio listado; a confirmação de comprometimento exige correlação com processos, arquivos e comportamento do host — múltiplos indicadores em contexto.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Logs mostram: login legítimo às 14h, novo acesso 14h07 de outro estado, criação de conta e envio em massa de e-mails. Interprete.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Sequência suspeira de comprometimento: acesso tomado + movimentação + abuso de função (conta de e-mail como ferramenta de ataque). Ações: bloquear conta, coletar indicadores (origem, hashes de anexos enviados), varrer sessões similares e propagar detecção a toda a base.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se o antivírus não alertou, não houve comprometimento.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ausência de alerta não é prova negativa: ataque pode ser inédito, ferramenta desativada ou vetor não coberto. A avaliação usa registros, comportamento e múltiplas fontes — não apenas assinatura.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

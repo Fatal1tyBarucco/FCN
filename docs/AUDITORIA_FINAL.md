@@ -50,3 +50,51 @@
 
 **Projeto integralmente concluído** — D4 (teste em navegador real) verificado com evidência em 2026-11-02 via Playwright/Chromium (file:// e http://localhost:8080). Todos os 19 critérios da Seção 18 ATENDIDOS.
 path: docs/AUDITORIA_FINAL.md
+
+# Fechamento 2026-11-05 — Seção 5 (template didático), navegador real e governança de espelhamento
+
+**Escopo desta atualização:** fecha as ressalvas remanescentes do veredito de 2026-10-24/2026-11-02
+(auditoria da Seção 5 do prompt mestre, validação em navegador real dos três modos de execução e
+regra de governança de inventário/matriz). **As contagens da matriz de 2026-10-24 (295 subtópicos,
+404 flashcards, 365 questões, 924 exemplos, 616 exercícios) foram superadas** pela expansão
+curricular posterior; valem os números abaixo.
+
+## Contagens vigentes (medidas em 2026-11-05)
+
+| Métrica | Valor | Origem da medição |
+|---|---|---|
+| Módulos / unidades / tópicos / subtópicos | 8 / 37 / 132 / 307 | `apostila-ia/assets/data/curriculum*.js` (varredura Node/vm) |
+| Subtópicos por módulo | M1 49 · M2 52 · M3 35 · M4 39 · M5 35 · M6 46 · M7 23 · M8 28 | idem |
+| Exemplos / exercícios do currículo | 949 / 642 | idem (soma de `exemplos[]` e `exercicios[]`) |
+| Flashcards | 474 (M1 80, M2 56, M3 68, M4 54, M5 66, M6 50, M7 50, M8 50) | `assets/data/flashcards_m*.js` |
+| Questões | 409 (M1 54, M2 54, M3 47, M4 85, M5 42, M6 47, M7 40, M8 40) | `assets/data/questions*.js` |
+| Referências | 188 — **187 `verificado` + 1 `indisponivel`** | `assets/data/references.js` |
+| Vídeos validados | 20 | `references.js` (`status: "verificado"`) + conferência 1:1 com os embeds do currículo |
+| Registros da Seção 5 (overlay por subtópico) | 307 (1 por subtópico) | `assets/data/enriquecimento_m1..m8.js` + `scripts/auditar-template-didatico.mjs` |
+
+> Correção de honestidade do relatório anterior: a referência
+> `ref-secom-guia-redes-sociais-governo-federal` está com `status: "indisponivel"` —
+> a URL `https://www.gov.br/secom/pt-br/central-de-conteudo/redes/2023_secom_guia-boaspraticas_redes.pdf`
+> responde **HTTP 404** (reconferido por requisição direta em **2026-11-05**; já registrado em
+> 2026-11-04). Não há 188/188 verificadas; são 187 verificadas + 1 indisponível, declarada como tal
+> no próprio arquivo.
+
+## Ressalvas fechadas
+
+| Ressalva anterior | Situação em 2026-11-05 | Evidência |
+|---|---|---|
+| Seção 5 do prompt mestre não implementada (registros vazios) | **FECHADA** — 307/307 subtópicos com registro completo | `scripts/auditar-template-didatico.mjs` (0 falhas), `scripts/lotes/` (160 lotes, 307 registros) |
+| SW/manifest/CORS não validados em navegador real | **FECHADA** — 3 modos executados | `verificacao/validar-navegador-real.cjs` + `verificacao/evidencias/navegador-real-2026-11-04/` |
+| Embed dos vídeos não validado em navegador real | **FECHADA** — 36 iframes conferidos em file:// e http | idem (JSON + PNG + HAR) |
+| Espelhamento inventário/matriz sem regra automática | **FECHADA** — regra em `AGENTS.md` + script de reconciliação | `scripts/sincronizar-governanca.mjs`, `docs/RECONCILIACAO_INVENTARIO_2026-11-05.md` |
+| Numeração de unidades do M7 (7.4–7.6) | **ESCLARECIDA** — o M7 tem 3 unidades (7.1–7.3); 7.4/7.5 são os laboratórios da Seção 7, não unidades | `apostila-ia/inventario/INVENTARIO_CURRICULAR.md` |
+| `curriculumWord12Supplement` (M1 1.2) | **ESCLARECIDA** — o supplement não existe no currículo vigente | idem |
+
+## Veredito
+
+**Projeto: APROVADO.** As 19 critérios da Seção 18 permanecem ATENDIDOS; as ressalvas D3/D4/D5
+foram fechadas com evidência executável. Permanecem apenas limitações de ambiente honestamente
+documentadas (síntese de voz pt-BR em headless; disponibilidade regional dos vídeos; leitor de tela
+físico; limpeza de localStorage em modo privado/`file://`).
+
+---

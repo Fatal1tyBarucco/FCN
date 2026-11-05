@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 1,
+    "unidadeTitulo": "4.1 Fundamentos de segurança",
+    "parte": 1,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U1P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U1P1.js",
+    "idsCompletos": [
+      "m4-u1-t1-s1",
+      "m4-u1-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u1-t1-s1",
+      "titulo": "Confidencialidade, integridade e disponibilidade (tríade CIA)",
+      "topicoTitulo": "Confidencialidade, integridade, disponibilidade e responsabilização",
+      "topicoId": "modulo-4-unidade-1-topico-1",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno definirá as três propriedades da tríade de segurança da informação, diferenciará cenários de violação de cada uma e relacionará cada propriedade a controles concretos.",
+      "conteudo": "Confidencialidade, integridade e disponibilidade (CIA) são as três propriedades clássicas que a segurança da informação procura preservar. Confidencialidade: a informação é acessível apenas a quem tem autorização — controles típicos são criptografia em repouso e em trânsito, controle de acesso baseado em perfis, classificação da informação e dever de sigilo. Integridade: a informação permanece exata e completa, e toda alteração legítima é rastreável — controles: verificação por hash, assinatura digital, controle de versões, permissão de escrita restrita e registros de auditoria. Disponibilidade: a informação e o serviço estão acessíveis no momento em que são necessários — controles: backup testado, redundância de equipamentos e energia, balanceamento de carga, plano de continuidade e proteção contra ataques de negação de serviço. As propriedades entram em tensão prática: restringir acessos com múltiplas aprovações aumenta a confidencialidade e reduz a agilidade (disponibilidade operacional); cifrar grandes volumes com chaves fortes protege a confidencialidade, mas exige desempenho e gestão de chaves. Uma única falha frequentemente atinge mais de uma propriedade — o ransomware cifra os arquivos (perda de disponibilidade), pode alterá-los (integridade) e ameaça publicá-los (confidencialidade).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um servidor de e-mail do setor de recursos humanos fica fora do ar por seis horas no dia de folga pagamento de subsídio. Qual propriedade da tríade foi violada?",
+          "resposta": "Disponibilidade: o serviço não estava acessível quando necessário. Não houve necessariamente violação de confidencialidade (ninguém indevido leu os dados) nem de integridade (nenhuma alteração indevida foi comprovada)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um cartório digital pede a definição de controles para consultas de registros. Quais controles protegem cada propriedade da tríade?",
+          "resposta": "Confidencialidade: autenticação forte, perfis de acesso por serviço em atendimento, criptografia dos dados em repouso. Integridade: registros de auditoria de cada consulta e alteração, verificação de hash dos arquivos de carga, controle de versões dos formulários. Disponibilidade: backup diário testado com restauração periódica, serviço redundante e plano de continuidade com procedimento escrito de retomada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se os dados estão criptografados, a segurança da informação está garantida.'",
+          "correcao": "Errado. A criptografia sustenta principalmente a confidencialidade. Ela não garante integridade (um arquivo cifrado pode ser substituído por outra versão cifrada) nem disponibilidade (perda da chave, exclusão do backup ou cifragem pelo próprio ransomware deixam o dado inacessível). Segurança exige controles combinados para as três propriedades."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um backup criptografado, mas nunca restaurado, garante a disponibilidade da informação.",
+          "resposta": "Errado. Criptografar protege a confidencialidade do backup, mas disponibilidade só é comprovada por restauração efetivamente testada; cópia nunca testada pode estar corrompida ou incompleta."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Um servidor deixa de responder a todos os usuários durante a abertura de inscrições de concurso. Propriedade violada: A) confidencialidade; B) integridade; C) disponibilidade; D) autenticidade.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de definir as três propriedades da tríade de segurança da informação, diferenciará cenários de violação de cada uma e relacionará cada propriedade a controles concretos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "definirá as três propriedades da tríade de segurança da informação, diferenciará cenários de violação de cada uma e relacionará cada propriedade a controles concretos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Confidencialidade, integridade e disponibilidade (CIA) são as três propriedades clássicas que a segurança da informação procura preservar. Confidencialidade: a informação é acessível apenas a quem tem autorização — controles típicos são criptografia em repouso e em trânsito, controle de acesso baseado em perfis, classificação da informação e dever de sigilo. Integridade: a informação permanece exata e completa, e toda alteração legítima é rastreável — controles: verificação por hash, assinatura …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Confidencialidade, integridade e disponibilidade (tríade CIA)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se os dados estão criptografados, a segurança da informação está garantida.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A criptografia sustenta principalmente a confidencialidade. Ela não garante integridade (um arquivo cifrado pode ser substituído por outra versão cifrada) nem disponibilidade (perda da chave, exclusão do backup ou cifragem pelo próprio ransomware deixam o dado inacessível). Segurança exige controles combinados para as três propriedades."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um servidor de e-mail do setor de recursos humanos fica fora do ar por seis horas no dia de folga pagamento de subsídio. Qual propriedade da tríade foi violada?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Disponibilidade: o serviço não estava acessível quando necessário. Não houve necessariamente violação de confidencialidade (ninguém indevido leu os dados) nem de integridade (nenhuma alteração indevida foi comprovada).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um cartório digital pede a definição de controles para consultas de registros. Quais controles protegem cada propriedade da tríade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Confidencialidade: autenticação forte, perfis de acesso por serviço em atendimento, criptografia dos dados em repouso. Integridade: registros de auditoria de cada consulta e alteração, verificação de hash dos arquivos de carga, controle de versões dos formulários. Disponibilidade: backup diário testado com restauração periódica, serviço redundante e plano de continuidade com procedimento escrito de retomada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se os dados estão criptografados, a segurança da informação está garantida.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A criptografia sustenta principalmente a confidencialidade. Ela não garante integridade (um arquivo cifrado pode ser substituído por outra versão cifrada) nem disponibilidade (perda da chave, exclusão do backup ou cifragem pelo próprio ransomware deixam o dado inacessível). Segurança exige controles combinados para as três propriedades.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u1-t1-s2",
+      "titulo": "Autenticidade, responsabilização e não repúdio",
+      "topicoTitulo": "Confidencialidade, integridade, disponibilidade e responsabilização",
+      "topicoId": "modulo-4-unidade-1-topico-1",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará autenticidade, responsabilização (accountability) e não repúdio, e indicará os mecanismos que sustentam cada um.",
+      "conteudo": "Autenticidade é a garantia de que a identidade do emissor ou do acessante corresponde à declarada: a senha correta prova que quem se autenticou conhece o segredo; um certificado digital prova que a chave pública pertence a quem diz ser. Responsabilização (accountability) é a capacidade de atribuir cada ação a um sujeito identificável e de prestar contas por ela — depende de identificação individual (nunca de contas compartilhadas), de registros de auditoria completos e de proteção contra adulteração desses registros. Não repúdio é a impossibilidade prática de o agente negar com credibilidade sua participação: é sustentado por evidências que sobrevivem ao ato, como assinatura digital sobre certificado confiável e trilhas de registro horadadas e protegidas. As três coisas se apoiam, mas não se confundem: autenticar-se no momento do acesso não prova, por si só, o que foi feito depois; sem registros íntegros, a responsabilização falha; sem evidência assinada ou registro protegido, não há não repúdio. Contas compartilhadas destroem responsabilização e não repúdio, mesmo que a autenticação esteja correta.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual propriedade está em jogo quando um relatório é assinado digitalmente e qualquer pessoa pode verificar a assinatura?",
+          "resposta": "Autenticidade (a assinatura vincula o documento ao signatário), integridade (qualquer alteração invalida a verificação) e não repúdio (o signatário não consegue negar ter assinado, desde que a chave privada esteja sob seu controle)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um sistema de despacho registra alterações feitas por três operadores em uma conta funcional única. Que falha de segurança isso representa e como corrigir?",
+          "resposta": "Falha de responsabilização e de não repúdio: as ações não são atribuíveis a um indivíduo, pois todos usam a mesma credencial. Correção: conta individual para cada operador com menor privilégio, autenticação forte, registro de auditoria com identificador, data/hora e ação, e proteção dos registros contra exclusão ou edição."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o sistema exige senha na entrada, ele comprova o não repúdio das ações.'",
+          "correcao": "Errado. A senha prova autenticação no instante do acesso; não repúdio exige evidência do ato em si (assinatura digital ou registro íntegro e não repudiável). Se a senha for compartilhada ou divulgada, a negativa posterior fica facilitada, não afastada."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O uso de contas compartilhadas é compatível com a responsabilização de ações.",
+          "resposta": "Errado. Com conta compartilhada, não há como identificar o autor real da ação; responsabilidade e não repúdio ficam comprometidos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual mecanismo sustenta melhor o não repúdio de um documento eletrônico? A) Senha trocada a cada 30 dias; B) Assinatura digital baseada em certificado confiável; C) Endereço IP do computador; D) Nome de usuário no formulário.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar autenticidade, responsabilização (accountability) e não repúdio, e indicará os mecanismos que sustentam cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará autenticidade, responsabilização (accountability) e não repúdio, e indicará os mecanismos que sustentam cada um"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Autenticidade é a garantia de que a identidade do emissor ou do acessante corresponde à declarada: a senha correta prova que quem se autenticou conhece o segredo; um certificado digital prova que a chave pública pertence a quem diz ser. Responsabilização (accountability) é a capacidade de atribuir cada ação a um sujeito identificável e de prestar contas por ela — depende de identificação individual (nunca de contas compartilhadas), de registros de auditoria completos e de proteção contra adulter…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Autenticidade, responsabilização e não repúdio",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o sistema exige senha na entrada, ele comprova o não repúdio das ações.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A senha prova autenticação no instante do acesso; não repúdio exige evidência do ato em si (assinatura digital ou registro íntegro e não repudiável). Se a senha for compartilhada ou divulgada, a negativa posterior fica facilitada, não afastada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual propriedade está em jogo quando um relatório é assinado digitalmente e qualquer pessoa pode verificar a assinatura?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Autenticidade (a assinatura vincula o documento ao signatário), integridade (qualquer alteração invalida a verificação) e não repúdio (o signatário não consegue negar ter assinado, desde que a chave privada esteja sob seu controle).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um sistema de despacho registra alterações feitas por três operadores em uma conta funcional única. Que falha de segurança isso representa e como corrigir?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Falha de responsabilização e de não repúdio: as ações não são atribuíveis a um indivíduo, pois todos usam a mesma credencial. Correção: conta individual para cada operador com menor privilégio, autenticação forte, registro de auditoria com identificador, data/hora e ação, e proteção dos registros contra exclusão ou edição.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o sistema exige senha na entrada, ele comprova o não repúdio das ações.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A senha prova autenticação no instante do acesso; não repúdio exige evidência do ato em si (assinatura digital ou registro íntegro e não repudiável). Se a senha for compartilhada ou divulgada, a negativa posterior fica facilitada, não afastada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

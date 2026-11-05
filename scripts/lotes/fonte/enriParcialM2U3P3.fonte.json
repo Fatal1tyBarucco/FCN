@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 3,
+    "unidadeTitulo": "2.3 Protocolos",
+    "parte": 3,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U3P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U3P3.js",
+    "idsCompletos": [
+      "m2-u3-t2-s2",
+      "m2-u3-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u3-t2-s2",
+      "titulo": "DNS: resolução de nomes",
+      "topicoTitulo": "HTTP, HTTPS, DNS e DHCP",
+      "topicoId": "modulo-2-unidade-3-topico-2",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará o funcionamento do DNS, tipos de registros, hierarquia e resolução recursiva/iterativa.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que o DNS faz; (b) a hierarquia e os tipos de servidores; (c) resolução recursiva e iterativa; (d) tipos de registro; (e) segurança (DNSSEC, DoH, DoT). POR QUE O CONHECIMENTO É IMPORTANTE: sem DNS, a Internet por nomes não funciona; a prova cobra a hierarquia, os registros e o fluxo de resolução. PRÉ-REQUISITOS: UDP/TCP; conceito de endereço IP. OBJETIVOS OBSERVÁVEIS: (1) definir o DNS; (2) descrever a hierarquia; (3) diferenciar recursão de iteração; (4) listar registros e explicar o cache. COMPETÊNCIAS DESENVOLVIDAS: compreensão da resolução de nomes; leitura de registros. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.3 (nslookup/dig); unidade 2.3 (fluxo HTTP); unidade 1.2 (unicast/anycast). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o DNS (Domain Name System) traduz nomes de domínio em endereços IP, funcionando como a \"agenda telefônica\" da Internet. Sua estrutura é hierárquica: a raiz (.), os domínios de topo (TLD, como .com e .br), os domínios de segundo nível (exemplo.com) e os subdomínios (www). Existem servidores-raiz (implementados com anycast), servidores de TLD e servidores autoritativos, que detêm a informação do domínio. Na resolução, o cliente consulta um resolvedor (recursivo), que percorre a hierarquia — consultando raiz, TLD e autoritativo — e devolve o IP; diz-se que a consulta do cliente é recursiva e as consultas do resolvedor aos servidores são iterativas. Os registros incluem: A (IPv4), AAAA (IPv6), CNAME (alias), MX (servidores de correio), NS (servidores de nomes), TXT (texto, usado também por SPF/DKIM), SOA (autoridade da zona) e PTR (resolução reversa). As respostas são armazenadas em cache durante o TTL (tempo de vida), acelerando consultas repetidas. Por segurança, existem o DNSSEC (assinatura dos registros), o DoH (DNS sobre HTTPS) e o DoT (DNS sobre TLS). As consultas usam UDP na porta 53; transferências de zona e respostas grandes usam TCP na 53.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o DNS troca nome por IP.\n- Nível intermediário: percorrer a hierarquia raiz → TLD → autoritativo.\n- Nível avançado: distinguir resolução recursiva (cliente) de iterativa (resolvedor) e explicar o cache/TTL.\n- Nível especialista: diagnosticar falha de DNS distinguindo cache, delegação e DNSSEC.\nCOMPARAÇÕES CRÍTICAS:\n- recursiva x iterativa: o cliente pede a resposta final (recursiva); o resolvedor consulta servidores passo a passo (iterativa) — trocar os termos erra o gabarito.\n- registro A x AAAA: o primeiro resolve IPv4; o segundo, IPv6.\n- CNAME x A: o CNAME aponta para outro nome; o A aponta para um IP.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O DNS só usa UDP.\" — Motivo: transferências de zona e respostas grandes usam TCP — Versão tecnicamente correta: usa UDP (53) e TCP (53) conforme o caso.\n- Afirmação errada: \"Resolver o nome garante que o serviço responde.\" — Motivo: o DNS só mapeia nome→IP — Versão tecnicamente correta: a disponibilidade do serviço é outra verificação.\n- Afirmação errada: \"O TTL não influencia a propagação.\" — Motivo: ele define quanto o cache mantém a resposta — Versão tecnicamente correta: mudanças demoram até o TTL expirar.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: DNS, hierarquia, raiz, TLD, autoritativo, recursiva/iterativa, A, AAAA, CNAME, MX, NS, TXT, SOA, PTR, TTL, DNSSEC, DoH, DoT.\n- Regras e fórmulas: nome → IP; cache pelo TTL; UDP/TCP porta 53.\n- Exceções: DNSSEC/DoH/DoT acrescentam segurança ao DNS clássico.\n- Palavras-chave: resolução, zona, autoridade, cache, registro.\n- Checklist de domínio: (1) Defino o DNS? (2) Descrevo a hierarquia? (3) Diferencio recursão de iteração? (4) Listo registros?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o DNS faz? (2) Qual a diferença entre consulta recursiva e iterativa? (3) Para que serve o registro MX? (4) O que o TTL controla? (5) Que portas o DNS usa?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Resolver www.exemplo.com.br: quais servidores são consultados?",
+          "resposta": "Resolvedor recursivo -> servidor raiz -> servidor TLD (.br) -> servidor autoritativo de exemplo.com.br -> resposta com IP. O resolvedor cacheia conforme TTL."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma empresa quer apontar mail.exemplo.com para o servidor de e-mail. Qual registro criar?",
+          "resposta": "Registro A (ou AAAA) para mail.exemplo.com apontando para o IP do servidor de e-mail, mais registro MX no domínio exemplo.com apontando para mail.exemplo.com com prioridade."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'DNS é um protocolo de transporte.'",
+          "correcao": "Errado. DNS é protocolo de aplicação que usa transporte (UDP/TCP 53). Ele traduz nomes em IPs; não transporta dados de aplicação."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O registro MX indica o servidor de e-mail responsável por um domínio.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual registro retorna um endereço IPv6? A) A; B) AAAA; C) CNAME; D) MX.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o funcionamento do DNS, tipos de registros, hierarquia e resolução recursiva/iterativa, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o funcionamento do DNS, tipos de registros, hierarquia e resolução recursiva/iterativa"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "DNS (Domain Name System) traduz nomes de domínio (www.exemplo.com) em endereços IP. Hierarquia: raiz (.), TLD (.com, .br), domínio de segundo nível (exemplo.com), subdomínios (www). Servidores: raiz (13 lógicos, anycast), TLD, autoritativo. Resolução recursiva: o resolvedor recursivo (do ISP ou público como 8.8.8.8) consulta iterativamente raiz->TLD->autoritativo e retorna o IP ao cliente. Registros: A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), NS (servidor de nomes), TXT (texto/SPF/DKIM), S…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a DNS: resolução de nomes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'DNS é um protocolo de transporte.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. DNS é protocolo de aplicação que usa transporte (UDP/TCP 53). Ele traduz nomes em IPs; não transporta dados de aplicação."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Resolver www.exemplo.com.br: quais servidores são consultados?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Resolvedor recursivo -> servidor raiz -> servidor TLD (.br) -> servidor autoritativo de exemplo.com.br -> resposta com IP. O resolvedor cacheia conforme TTL.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma empresa quer apontar mail.exemplo.com para o servidor de e-mail. Qual registro criar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Registro A (ou AAAA) para mail.exemplo.com apontando para o IP do servidor de e-mail, mais registro MX no domínio exemplo.com apontando para mail.exemplo.com com prioridade.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'DNS é um protocolo de transporte.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. DNS é protocolo de aplicação que usa transporte (UDP/TCP 53). Ele traduz nomes em IPs; não transporta dados de aplicação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u3-t2-s3",
+      "titulo": "DHCP: atribuição dinâmica de endereços",
+      "topicoTitulo": "HTTP, HTTPS, DNS e DHCP",
+      "topicoId": "modulo-2-unidade-3-topico-2",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará o processo DORA do DHCP e as informações entregues além do IP.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que o DHCP faz; (b) o processo DORA; (c) o que ele entrega além do IP; (d) lease, renovação e riscos. POR QUE O CONHECIMENTO É IMPORTANTE: a configuração automática é o que permite ligar um dispositivo e usar a rede; a prova cobra as mensagens do DORA e os riscos. PRÉ-REQUISITOS: endereçamento IPv4; broadcast. OBJETIVOS OBSERVÁVEIS: (1) definir o DHCP; (2) descrever o DORA; (3) listar o que é entregue; (4) explicar lease/renovação e o rogue DHCP. COMPETÊNCIAS DESENVOLVIDAS: configuração de rede; análise de risco de serviço. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (endereçamento); unidade 1.2 (broadcast); Módulo 4 (segurança). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o DHCP (Dynamic Host Configuration Protocol) atribui configuração de rede automaticamente. O processo tem quatro mensagens, conhecido pelo acrônimo DORA: Discover (o cliente, ainda sem IP, faz um broadcast procurando servidores), Offer (o servidor oferece um endereço), Request (o cliente solicita formalmente a oferta escolhida) e Acknowledge (o servidor confirma a concessão). Além do endereço IP, o DHCP entrega a máscara de sub-rede, o gateway padrão, os servidores DNS, o domínio de busca e o tempo de concessão (lease). O DHCP usa UDP: porta 67 no servidor e 68 no cliente. O lease tem prazo de validade; o cliente renova tipicamente na metade do prazo (T1) e, se falhar, em 87,5% (T2). Existe também o DHCPv6 para IPv6, mas o IPv6 frequentemente usa a autoconfiguração sem estado (SLAAC), que dispensa servidor DHCP. Há riscos de segurança: um servidor DHCP não autorizado (rogue DHCP) pode distribuir configuração maliciosa (por exemplo, um DNS falso), e a mitigação usual é o DHCP snooping nos switches. O broadcast inicial é justamente o que permite ao cliente encontrar o servidor sem conhecer a rede.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o dispositivo recebe IP automaticamente.\n- Nível intermediário: nomear as quatro mensagens do DORA e o que é entregue.\n- Nível avançado: explicar lease, renovação e o risco de rogue DHCP.\n- Nível especialista: comparar DHCP com SLAAC em IPv6 e decidir quando usar cada um.\nCOMPARAÇÕES CRÍTICAS:\n- DHCP x configuração manual: o primeiro escala e evita conflitos; o segundo dá controle, mas é suscetível a erro.\n- Discover (broadcast) x Request (com destino): o primeiro é para todos; o segundo já direcionado ao servidor escolhido.\n- DHCP x SLAAC: o primeiro centraliza e entrega opções; o segundo autoconfigura no IPv6 sem servidor.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O DHCP entrega apenas o endereço IP.\" — Motivo: entrega máscara, gateway, DNS e mais — Versão tecnicamente correta: fornece a configuração completa.\n- Afirmação errada: \"O DORA tem três mensagens.\" — Motivo: são quatro — Versão tecnicamente correta: Discover, Offer, Request, Acknowledge.\n- Afirmação errada: \"Todo IPv6 exige DHCPv6.\" — Motivo: SLAAC dispensa servidor — Versão tecnicamente correta: o IPv6 pode autoconfigurar-se.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: DHCP, DORA, lease, T1/T2, gateway, DNS, porta 67/68, rogue DHCP, DHCP snooping.\n- Regras e fórmulas: Discover → Offer → Request → Acknowledge; UDP 67/68.\n- Exceções: IPv6 pode usar SLAAC em vez de DHCPv6.\n- Palavras-chave: configuração automática, concessão, renovação, broadcast, segurança.\n- Checklist de domínio: (1) Defino o DHCP? (2) Descrevo o DORA? (3) Listo o que entrega? (4) Explico lease e risco?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Que mensagens formam o DORA? (2) O que o DHCP entrega além do IP? (3) Quais portas UDP ele usa? (4) O que é lease? (5) O que é rogue DHCP?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um notebook conecta ao Wi-Fi e recebe IP automaticamente. Descrever o DORA.",
+          "resposta": "Discover (broadcast UDP 67): 'preciso de IP'. Offer: servidor propõe 192.168.1.50. Request: cliente aceita. ACK: servidor confirma com máscara, gateway, DNS e lease."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um IP fixo (reserva DHCP) é necessário para uma impressora de rede. Como configurar?",
+          "resposta": "Criar reserva no servidor DHCP vinculando o MAC da impressora a um IP fixo. A impressora continua usando DHCP, mas sempre recebe o mesmo IP."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'DHCP atribui apenas o endereço IP.'",
+          "correcao": "Errado. DHCP entrega IP, máscara, gateway, DNS, domínio e lease, entre outros parâmetros (opções DHCP)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) DORA significa Discover, Offer, Request, Acknowledge.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quais portas UDP o DHCP usa? A) 53 e 53; B) 67 (servidor) e 68 (cliente); C) 80 e 443; D) 20 e 21.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o processo DORA do DHCP e as informações entregues além do IP, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o processo DORA do DHCP e as informações entregues além do IP"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "DHCP (Dynamic Host Configuration Protocol) atribui automaticamente configuração de rede a hosts. Processo DORA: Discover (cliente broadcast), Offer (servidor oferece IP), Request (cliente solicita), Acknowledge (servidor confirma). Além do IP, entrega máscara, gateway padrão, DNS, domínio, tempo de concessão (lease). DHCP usa UDP: cliente 68, servidor 67. O lease tem tempo de vida; o cliente renova em T1 (50% do lease) e T2 (87,5%). DHCPv6 existe para IPv6; SLAAC (autoconfiguração stateless) é a…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a DHCP: atribuição dinâmica de endereços",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'DHCP atribui apenas o endereço IP.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. DHCP entrega IP, máscara, gateway, DNS, domínio e lease, entre outros parâmetros (opções DHCP)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um notebook conecta ao Wi-Fi e recebe IP automaticamente. Descrever o DORA.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Discover (broadcast UDP 67): 'preciso de IP'. Offer: servidor propõe 192.168.1.50. Request: cliente aceita. ACK: servidor confirma com máscara, gateway, DNS e lease.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um IP fixo (reserva DHCP) é necessário para uma impressora de rede. Como configurar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Criar reserva no servidor DHCP vinculando o MAC da impressora a um IP fixo. A impressora continua usando DHCP, mas sempre recebe o mesmo IP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'DHCP atribui apenas o endereço IP.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. DHCP entrega IP, máscara, gateway, DNS, domínio e lease, entre outros parâmetros (opções DHCP).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

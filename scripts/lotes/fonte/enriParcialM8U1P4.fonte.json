@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 1,
+    "unidadeTitulo": "8.1 Fundamentos Visuais",
+    "parte": 4,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U1P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U1P4.js",
+    "idsCompletos": [
+      "m8-u1-t3-s3",
+      "m8-u1-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u1-t3-s3",
+      "titulo": "Escalas linear, logarítmica e eixos truncados",
+      "topicoTitulo": "Integridade gráfica e elementos de composição",
+      "topicoId": "modulo-8-unidade-1-topico-3",
+      "unidadeTitulo": "8.1 Fundamentos Visuais",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno escolherá e lerá escalas corretamente e justificará o uso de escala logarítmica ou eixo cortado.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) escalas linear, logarítmica e eixos truncados; (b) efeito da escolha da escala na interpretação; (c) detecção de manipulação. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a identificação de eixo truncado e de escala inadequada; uma escala errada pode inverter a conclusão. PRÉ-REQUISITOS: conceitos de gráficos e de escalas. OBJETIVOS OBSERVÁVEIS: (1) distinguir escala linear de logarítmica; (2) identificar eixo truncado; (3) avaliar o efeito da escala. COMPETÊNCIAS DESENVOLVIDAS: auditoria de gráficos; leitura crítica. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (fundamentos); unidade 8.2 (gráficos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: escala linear com intervalos iguais, adequada a variações absolutas; escala logarítmica com intervalos proporcionais, adequada a variações relativas e a dados com grande amplitude (crescimento exponencial); eixo truncado (não começando em zero) em barras distorce proporções e pode exagerar diferenças; em linhas, truncar pode ser aceitável se anotado; detecção de manipulação: verificar linha de base, escala e proporção. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer eixo truncado em barras.\n- Nível intermediário: distinguir escala linear de logarítmica.\n- Nível avançado: avaliar o efeito da escala na conclusão.\n- Nível especialista: auditar um gráfico quanto a manipulação.\nCOMPARAÇÕES CRÍTICAS:\n- escala linear x logarítmica: linear mostra variação absoluta; logarítmica mostra variação relativa.\n- eixo truncado em barras x em linhas: em barras distorce proporção; em linhas pode ser aceitável com anotação.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"truncar eixo em barras é sempre aceitável\" — Motivo: distorce proporção — Versão tecnicamente correta: barras devem começar em zero.\n- Afirmação errada: \"escala logarítmica é sempre melhor\" — Motivo: dificulta leitura de variações absolutas — Versão tecnicamente correta: escolher conforme o objetivo.\n- Afirmação errada: \"escala não afeta a conclusão\" — Motivo: pode inverter a percepção — Versão tecnicamente correta: verificar a escala antes de concluir.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: escala linear, logarítmica, eixo truncado, linha de base, proporção.\n- Regras e mecanismos: barras começam em zero; log para variações relativas; anotar truncamento.\n- Exceções: em linhas, truncar pode ser aceitável com anotação.\n- Palavras-chave: escala, linear, logarítmica, truncado, linha de base, proporção.\n- Checklist de domínio: (1) Distingo escalas? (2) Identifico eixo truncado? (3) Avalio o efeito? (4) Detecto manipulação?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quando usar escala logarítmica? (2) Por que barras devem começar em zero? (3) O que é eixo truncado? (4) Como a escala afeta a conclusão? (5) Como detectar manipulação?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Série: 10, 30, 100, 300, 1.000. Por que a escala logarítmica é mais informativa que a linear?",
+          "resposta": "Os valores cobrem duas ordens de grandeza: em linear, os três primeiros pontos ficam espremidos perto do zero e parecem 'planos', enquanto o último domina o gráfico. Em log, cada passo (multiplicação por ~3 ou por 10) aparece como distância comparável, revelando a taxa de crescimento."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Gráfico de barras 'Tempo de resposta (min)': valores 70 e 80, eixo de 60 a 90. Corrigir a leitura enganosa.",
+          "resposta": "Reiniciar o eixo em 0: a razão visual volta a ser 1,14 (= 80 ÷ 70). Se a intenção é mostrar a variação de 10 minutos, alternativa honesta é exibir o rótulo de dado (70 e 80) e o delta (+10 min) — e não alterar a base para inflar a diferença."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Em escala logarítmica, subidas de mesma altura indicam o mesmo acréscimo absoluto de valores.'",
+          "correcao": "Errado. Em escala logarítmica, altura igual significa o mesmo FATOR multiplicativo (mesmo percentual aproximado) — é exatamente isso que a escala ressalta. Acréscimo absoluto igual é lido em escala linear. O erro clássico é interpretar um gráfico log como se fosse linear e afirmar 'a diferença foi a mesma'."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Eixo truncado em gráfico de barras distorce a razão visual entre os valores.",
+          "resposta": "Certo. Por isso o eixo de magnitude em barras deve começar em zero."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Em escala logarítmica, subida visual igual corresponde a: A) mesmo acréscimo absoluto; B) mesmo fator multiplicativo; C) mesmo valor final; D) mesma mediana.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de escolher e lerá escalas corretamente e justificará o uso de escala logarítmica ou eixo cortado, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "escolherá e lerá escalas corretamente e justificará o uso de escala logarítmica ou eixo cortado"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) escalas linear, logarítmica e eixos truncados; (b) efeito da escolha da escala na interpretação; (c) detecção de manipulação. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a identificação de eixo truncado e de escala inadequada; uma escala errada pode inverter a conclusão. PRÉ-REQUISITOS: conceitos de gráficos e de escalas. OBJETIVOS OBSERVÁVEIS: (1) distinguir escala linear de logarítmica; (2) identificar eixo truncado; (3) avaliar o efeit…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Escalas linear, logarítmica e eixos truncados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Em escala logarítmica, subidas de mesma altura indicam o mesmo acréscimo absoluto de valores.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Em escala logarítmica, altura igual significa o mesmo FATOR multiplicativo (mesmo percentual aproximado) — é exatamente isso que a escala ressalta. Acréscimo absoluto igual é lido em escala linear. O erro clássico é interpretar um gráfico log como se fosse linear e afirmar 'a diferença foi a mesma'."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Série: 10, 30, 100, 300, 1.000. Por que a escala logarítmica é mais informativa que a linear?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Os valores cobrem duas ordens de grandeza: em linear, os três primeiros pontos ficam espremidos perto do zero e parecem 'planos', enquanto o último domina o gráfico. Em log, cada passo (multiplicação por ~3 ou por 10) aparece como distância comparável, revelando a taxa de crescimento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Gráfico de barras 'Tempo de resposta (min)': valores 70 e 80, eixo de 60 a 90. Corrigir a leitura enganosa.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Reiniciar o eixo em 0: a razão visual volta a ser 1,14 (= 80 ÷ 70). Se a intenção é mostrar a variação de 10 minutos, alternativa honesta é exibir o rótulo de dado (70 e 80) e o delta (+10 min) — e não alterar a base para inflar a diferença.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Em escala logarítmica, subidas de mesma altura indicam o mesmo acréscimo absoluto de valores.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Em escala logarítmica, altura igual significa o mesmo FATOR multiplicativo (mesmo percentual aproximado) — é exatamente isso que a escala ressalta. Acréscimo absoluto igual é lido em escala linear. O erro clássico é interpretar um gráfico log como se fosse linear e afirmar 'a diferença foi a mesma'.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u1-t4-s1",
+      "titulo": "Matriz de decisão: comparar, evoluir, distribuir, relacionar, compor",
+      "topicoTitulo": "Escolha do gráfico conforme o objetivo analítico",
+      "topicoId": "modulo-8-unidade-1-topico-4",
+      "unidadeTitulo": "8.1 Fundamentos Visuais",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno decidirá o tipo de gráfico a partir da tarefa analítica e justificará a recusa de gráficos inadequados.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) matriz de decisão para escolha de gráfico (comparar, evoluir, distribuir, relacionar, compor); (b) a relação entre objetivo analítico e tipo de gráfico. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a escolha do gráfico conforme o objetivo; usar o gráfico errado muda a conclusão. PRÉ-REQUISITOS: conceitos de visualização e de tipos de dado. OBJETIVOS OBSERVÁVEIS: (1) mapear objetivo a tipo de gráfico; (2) justificar a escolha. COMPETÊNCIAS DESENVOLVIDAS: escolha de visualização; análise crítica. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.1 (fundamentos); unidade 8.2 (gráficos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: matriz de decisão: comparar (barras/colunas), evoluir (linhas), distribuir (histograma/box plot), relacionar (dispersão), compor (barras empilhadas, com cautela); a escolha depende do tipo de dado (categórico, numérico, temporal) e do objetivo; evitar gráficos inadequados (pizza com muitas categorias, 3D). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: associar objetivo a tipo de gráfico.\n- Nível intermediário: justificar a escolha com tipo de dado.\n- Nível avançado: avaliar alternativas e trade-offs.\n- Nível especialista: auditar um painel quanto à adequação.\nCOMPARAÇÕES CRÍTICAS:\n- barras x linhas: barras comparam categorias; linhas mostram evolução temporal.\n- histograma x barras: histograma mostra distribuição de numérico; barras comparam categorias.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"pizza é sempre adequada para composição\" — Motivo: muitas fatias são ilegíveis — Versão tecnicamente correta: usar barras quando há muitas categorias.\n- Afirmação errada: \"dispersão prova causalidade\" — Motivo: associação não é causalidade — Versão tecnicamente correta: distinguir correlação de causalidade.\n- Afirmação errada: \"qualquer gráfico serve para qualquer objetivo\" — Motivo: cada tipo tem propósito — Versão tecnicamente correta: escolher conforme objetivo e dado.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: comparar, evoluir, distribuir, relacionar, compor; matriz de decisão.\n- Regras e mecanismos: mapear objetivo e tipo de dado ao gráfico adequado.\n- Exceções: em casos de poucas categorias, pizza pode ser aceitável.\n- Palavras-chave: comparar, evoluir, distribuir, relacionar, compor, matriz.\n- Checklist de domínio: (1) Mapeio objetivo a gráfico? (2) Justifico a escolha? (3) Avalio alternativas? (4) Evito gráficos inadequados?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual gráfico para comparar categorias? (2) Qual para evolução temporal? (3) Qual para distribuição? (4) Qual para relação entre duas variáveis? (5) Quando evitar pizza?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Decidir gráficos: (a) reclamações por tipo; (b) série diária de chamados em 90 dias; (c) idade de 1.000 servidores; (d) renda x escolaridade.",
+          "resposta": "(a) barras por tipo (ordenadas decrescentemente). (b) linhas (evolução diária). (c) histograma (distribuição). (d) dispersão (duas variáveis quantitativas). Cada escolha executa a tarefa analítica da pergunta."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Equipe quer mostrar que 'o número de chamados oscilou pouco'. Série: 120, 132, 115, 140 (atendimentos/mês). Que cuidado de eixo evitar?",
+          "resposta": "Evitar eixo truncado que amplifique as oscilações e contradiga o enunciado: com base em 0, a variação máxima é de 140/115 ≈ 1,22 (22% acima do menor), o que mostra oscilação moderada. Cortar a base em 110 faria as mesmas oscilações parecerem explosivas — distorção a favor da tese."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Gráfico de linhas é adequado para comparar cinco regiões do país.'",
+          "correcao": "Errado, a menos que haja ordem natural entre as regiões (não há). Linhas implicam continuidade e trajetória; para categorias sem ordem, barras agrupadas ou pequenos múltiplos. Se a intenção for comparar magnitudes, ordenar as barras resolve melhor."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Dados categóricos sem ordem natural não devem ser plotados como gráfico de linhas.",
+          "resposta": "Certo. A linha sugeriria continuidade e tendência onde só existem categorias."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para comparar a distribuição de um variável contínua entre três grupos, o mais indicado é: A) pizza; B) linhas; C) box plot (ou histogramas por grupo); D) área empilhada.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de decidir o tipo de gráfico a partir da tarefa analítica e justificará a recusa de gráficos inadequados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "decidirá o tipo de gráfico a partir da tarefa analítica e justificará a recusa de gráficos inadequados"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) matriz de decisão para escolha de gráfico (comparar, evoluir, distribuir, relacionar, compor); (b) a relação entre objetivo analítico e tipo de gráfico. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a escolha do gráfico conforme o objetivo; usar o gráfico errado muda a conclusão. PRÉ-REQUISITOS: conceitos de visualização e de tipos de dado. OBJETIVOS OBSERVÁVEIS: (1) mapear objetivo a tipo de gráfico; (2) justificar a escolha. COMPETÊNCIAS …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Matriz de decisão: comparar, evoluir, distribuir, relacionar, compor",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Gráfico de linhas é adequado para comparar cinco regiões do país.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado, a menos que haja ordem natural entre as regiões (não há). Linhas implicam continuidade e trajetória; para categorias sem ordem, barras agrupadas ou pequenos múltiplos. Se a intenção for comparar magnitudes, ordenar as barras resolve melhor."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Decidir gráficos: (a) reclamações por tipo; (b) série diária de chamados em 90 dias; (c) idade de 1.000 servidores; (d) renda x escolaridade.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "(a) barras por tipo (ordenadas decrescentemente). (b) linhas (evolução diária). (c) histograma (distribuição). (d) dispersão (duas variáveis quantitativas). Cada escolha executa a tarefa analítica da pergunta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Equipe quer mostrar que 'o número de chamados oscilou pouco'. Série: 120, 132, 115, 140 (atendimentos/mês). Que cuidado de eixo evitar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Evitar eixo truncado que amplifique as oscilações e contradiga o enunciado: com base em 0, a variação máxima é de 140/115 ≈ 1,22 (22% acima do menor), o que mostra oscilação moderada. Cortar a base em 110 faria as mesmas oscilações parecerem explosivas — distorção a favor da tese.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Gráfico de linhas é adequado para comparar cinco regiões do país.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado, a menos que haja ordem natural entre as regiões (não há). Linhas implicam continuidade e trajetória; para categorias sem ordem, barras agrupadas ou pequenos múltiplos. Se a intenção for comparar magnitudes, ordenar as barras resolve melhor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

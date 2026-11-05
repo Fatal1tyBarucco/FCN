@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 4,
+    "unidadeTitulo": "5.4 Engenharia de prompts",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM5U4P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U4P2.js",
+    "idsCompletos": [
+      "m5-u4-t2-s1",
+      "m5-u4-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u4-t2-s1",
+      "titulo": "Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio",
+      "topicoTitulo": "Decomposição de tarefas, raciocínio estruturado e formatos estruturados",
+      "topicoId": "modulo-5-unidade-4-topico-2",
+      "unidadeTitulo": "5.4 Engenharia de prompts",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno decomporá tarefas complexas em subtarefas verificáveis, aplicando a diretriz de raciocínio estruturado — justificativa verificável, passos de cálculo e evidência de saída — sem exigir a exposição de cadeias privadas de raciocínio.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: DECOMPOSIÇÃO DE TAREFA é a técnica de dividir um pedido complexo em subtarefas menores, com entradas e saídas bem definidas, de modo que cada etapa possa ser verificada isoladamente. QUANDO DECOMPOR: quando o pedido tem MÚLTIPLOS OBJETIVOS, quando o texto de entrada é longo, quando há etapas de extração e depois de raciocínio, ou quando a tarefa exige formatar a saída depois de analisá-la. QUANDO NÃO DECOMPOR: quando a tarefa é atômica e curta, ou quando o ganho de dividir for menor que o custo de coordenação. PADRÃO DE DECOMPOSIÇÃO (didático): (1) EXTRAIR — isolar os fatos necessários da fonte, em campos estruturados; (2) VALIDAR — checar se os campos obrigatórios existem e são consistentes; (3) ANALISAR — aplicar o critério definido aos campos validados; (4) REDIGIR — produzir a saída no formato exigido; (5) VERIFICAR — conferir a saída contra a fonte e contra o esquema. A VANTAGEM DECISIVA: no modelo monolítico, um erro na extração contamina silenciosamente toda a análise; na decomposição, a etapa 2 é um ponto de inspeção e o erro é detectado antes de virar conclusão. DIRETRIZ DE RACIOCÍNIO ESTRUTURADO (a aplicar integralmente): explicar raciocínio estruturado e decomposição de tarefas SEM EXIGIR A EXPOSIÇÃO DE CADEIAS PRIVADAS DE RACIOCÍNIO. Concretamente: (a) NUNCA se pede ao modelo, nem se exige do usuário, a exposição do seu «raciocínio interno» passo a passo; (b) EM VEZ DISSO, pede-se JUSTIFICATIVA VERIFICÁVEL — a razão que sustenta a conclusão, em forma de evidência observável (campo do documento, cláusula citada, cálculo); (c) PASSOS DE CÁLCULO — quando há aritmética, pede-se a fórmula, os valores usados e o resultado, para conferência independente; (d) EVIDÊNCIA DE SAÍDA — a saída carrega os campos que permitem conferir a conclusão (por exemplo: total, memória de cálculo, fonte por item). A diretriz tem fundamento operacional e o uso apenas de raciocínio estruturado; e ela é CONSISTENTE com a prática institucional, que registra a FUNDAMENTAÇÃO VERIFICÁVEL do ato, e não uma narrativa mental. OBSERVAÇÃO IMPORTANTE: a justificativa verificável é MAIS ÚTIL que a cadeia de raciocínio — ela é auditável, comparável entre casos e serve de insumo para revisão e para contestação; a cadeia de raciocínio é longa, não verificável e variável entre execuções. VERIFICAÇÃO DE RESULTADOS: conjunto de checagens automáticas (esquema, tipos, campos obrigatórios, valores dentro de faixa, coerência interna) e de checagens semânticas (a afirmação consta da fonte? o cálculo fecha? o total bate com os itens?) e de checagens humanas nos casos de maior impacto. TRÊS ERROS DE ENGENHARIA QUE A DECOMPOSIÇÃO EVITA: PROMPT MONOLÍTICO LONGÍSSIMO (contexto diluído, instruções esquecidas no meio); CADEIA DE DEPENDÊNCIAS SEM PONTO DE INSPEÇÃO; e VALIDAÇÃO APENAS DE FORMATO, que aprova uma resposta sintaticamente correta e factualmente errada. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a diferença operacional entre pedir «mostre seu raciocínio passo a passo» e pedir «justifique sua conclusão com as cláusulas do contrato e apresente o cálculo dos valores»?",
+          "resposta": "A primeira pede a exposição de raciocínio privado, que é variável entre execuções, não é comparável e não é auditável. A segunda pede JUSTIFICATIVA VERIFICÁVEL: as cláusulas usadas e o cálculo, que podem ser conferidos contra o documento por terceiro, passam a fazer parte do registro do caso e sustentam a revisão. Em uso institucional, a segunda forma é a correta, porque o que precisa ser comprovado é a fundamento da conclusão, não o percurso mental que a produziu."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Desenhe a decomposição de um prompt que resume um contrato e verifica se as obrigações listadas constam do documento.",
+          "resposta": "Etapa 1 (EXTRAÇÃO): «liste as obrigações em campos: responsável, obrigação, prazo, cláusula»; Etapa 2 (VALIDAÇÃO): «descartar itens sem cláusula identificada ou com campo obrigatório vazio»; Etapa 3 (VERIFICAÇÃO): «para cada item, copie o trecho da cláusula correspondente; se não houver trecho, marque «não localizado»; Etapa 4 (CONFERÊNCIA DE COERÊNCIA): «verifique se os valores citados existem no documento; se algum não existir, remova o item»; Etapa 5 (SAÍDA): «apresente tabela com os campos e o trecho; ao final, informe quantos itens foram descartados e por quê». O ponto de inspeção está nas etapas 2 e 4, e o relatório de descartes torna o processo auditável."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Exigir que o modelo exiba seu raciocínio passo a passo é boa prática de auditoria, porque permite reconstruir a decisão.'",
+          "correcao": "Errado. O que permite reconstruir e auditar a decisão é a JUSTIFICATIVA VERIFICÁVEL, os passos de cálculo e a evidência de saída — não a narrativa interna, que é instável e não conferível. Além disso, exigir raciocínio estendido aumenta o custo, polui o contexto e, em contextos de decisão sobre direito, é tecnicamente inadequado registrar um material que não é auditável."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A diretriz de raciocínio estruturado exige justificativa verificável, passos de cálculo e evidência de saída, e não a exposição de cadeias privadas de raciocínio.",
+          "resposta": "Certo. É a formulação da linha 546 da especificação do projeto e o padrão de registro de fundamento em ato administrativo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Vantagens da decomposição de tarefas: A) cria pontos de inspeção intermediários; B) permite detectar erro de extração antes da análise; C) dispensa a validação de esquema; D) reduz o contexto desnecessário.",
+          "resposta": "A, B e D. O item C é errado: a validação de formato continua obrigatória na saída final."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de decompor tarefas complexas em subtarefas verificáveis, aplicando a diretriz de raciocínio estruturado — justificativa verificável, passos de cálculo e evidência de saída — sem exigir a exposição de cadeias privadas de raciocínio, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "decomporá tarefas complexas em subtarefas verificáveis, aplicando a diretriz de raciocínio estruturado — justificativa verificável, passos de cálculo e evidência de saída — sem exigir a exposição de cadeias privadas de raciocínio"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio\" é necessário para responder com segurança a i…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Decomposição de tarefas, verificação de resultados e a diretriz de não expor cadeia privada de raciocínio",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Exigir que o modelo exiba seu raciocínio passo a passo é boa prática de auditoria, porque permite reconstruir a decisão.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O que permite reconstruir e auditar a decisão é a JUSTIFICATIVA VERIFICÁVEL, os passos de cálculo e a evidência de saída — não a narrativa interna, que é instável e não conferível. Além disso, exigir raciocínio estendido aumenta o custo, polui o contexto e, em contextos de decisão sobre direito, é tecnicamente inadequado registrar um material que não é auditável."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a diferença operacional entre pedir «mostre seu raciocínio passo a passo» e pedir «justifique sua conclusão com as cláusulas do contrato e apresente o cálculo dos valores»?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A primeira pede a exposição de raciocínio privado, que é variável entre execuções, não é comparável e não é auditável. A segunda pede JUSTIFICATIVA VERIFICÁVEL: as cláusulas usadas e o cálculo, que podem ser conferidos contra o documento por terceiro, passam a fazer parte do registro do caso e sustentam a revisão. Em uso institucional, a segunda forma é a correta, porque o que precisa ser comprovado é a fundamento da conclusão, não o percurso mental que a produziu.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Desenhe a decomposição de um prompt que resume um contrato e verifica se as obrigações listadas constam do documento.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Etapa 1 (EXTRAÇÃO): «liste as obrigações em campos: responsável, obrigação, prazo, cláusula»; Etapa 2 (VALIDAÇÃO): «descartar itens sem cláusula identificada ou com campo obrigatório vazio»; Etapa 3 (VERIFICAÇÃO): «para cada item, copie o trecho da cláusula correspondente; se não houver trecho, marque «não localizado»; Etapa 4 (CONFERÊNCIA DE COERÊNCIA): «verifique se os valores citados existem no documento; se algum não existir, remova o item»; Etapa 5 (SAÍDA): «apresente tabela com os campos e o trecho; ao final, informe quantos itens foram descartados e por quê». O ponto de inspeção está nas etapas 2 e 4, e o relatório de descartes torna o processo auditável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Exigir que o modelo exiba seu raciocínio passo a passo é boa prática de auditoria, porque permite reconstruir a decisão.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O que permite reconstruir e auditar a decisão é a JUSTIFICATIVA VERIFICÁVEL, os passos de cálculo e a evidência de saída — não a narrativa interna, que é instável e não conferível. Além disso, exigir raciocínio estendido aumenta o custo, polui o contexto e, em contextos de decisão sobre direito, é tecnicamente inadequado registrar um material que não é auditável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m5-u4-t2-s2",
+      "titulo": "Formatos estruturados de saída e validação",
+      "topicoTitulo": "Decomposição de tarefas, raciocínio estruturado e formatos estruturados",
+      "topicoId": "modulo-5-unidade-4-topico-2",
+      "unidadeTitulo": "5.4 Engenharia de prompts",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno definirá formato estruturado de saída, justificará seu uso em automação e em auditoria, e construirá um esquema de saída com validação de esquema, tipos e valores.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Formatos estruturados de saída e validação\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Formatos estruturados de saída e validação\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unidades anteriores do Módulo 5 e dos Módulos 4 e 7, quando aplicável. OBJETIVOS OBSERVÁVEIS: (1) definir com precisão os conceitos centrais de \"Formatos estruturados de saída e validação\"; (2) explicar seus mecanismos e etapas; (3) aplicar o conhecimento em casos práticos; (4) identificar erros comuns e limitações. COMPETÊNCIAS DESENVOLVIDAS: análise técnica; leitura crítica de saída e de resultados; tomada de decisão fundamentada. GRAU DE DIFICULDADE: intermediário a avançado, conforme a profundidade do subtópico. RELAÇÃO COM OUTROS TÓPICOS: integra-se aos demais subtópicos do Módulo 5 e aos Módulos 4 (segurança), 6 (ética) e 7 (dados). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média-alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística. FUNDAMENTAÇÃO CONCEITUAL: FORMATO ESTRUTURADO DE SAÍDA é a exigência de que a resposta do modelo siga um esquema predefinido — JSON com campos nomeados e tipos, tabela com colunas fixas, lista com quantidade e ordem definidas. POR QUE IMPORTA NO SERVIÇO PÚBLICO: (1) É VERIFICÁVEL DE FORMA AUTOMÁTICA — esquema, tipos, campos obrigatórios, faixas de valores e coerência interna podem ser testados sem intervenção humana; (2) É COMPARÁVEL E AGREGÁVEL — permite painel e estatística, em vez de texto livre; (3) É AUDITÁVEL — o registro tem forma estável, o que serve à responsabilização e ao tratamento de contestações (o cidadão contesta um campo, não uma prosa); (4) É MAIS SEGURA — quando o consumo é automático, texto livre é vetor de erro silencioso: um campo que deveria ser um número e vem como texto quebra o processamento sem erro visível; (5) É MAIS BARATA — a validação automática substitui revisão manual em volume. BOAS PRÁTICAS: (a) declarar o esquema no prompt (campo, tipo, obrigatoriedade, valor aceito quando ausente); (b) usar o suporte nativo de saída estruturada do modelo, quando disponível, em vez de pedir «resposta em JSON» por instrução (o primeiro valida; o segundo só orienta); (c) validar em duas camadas — esquema e semântica (a afirmação consta da fonte?); (d) PREENCHER O CAMPO DE INCERTEZA de forma explícita (campo «não consta», «não aplicável», «não identificado»), para que a ausência seja distinguível de zero ou de vazio; (e) nunca usar sentinelas ambíguas (por exemplo, «-1» para «não informado»); (f) registrar a versão do esquema junto com a resposta, para reprodutibilidade e para interpretá-la corretamente depois. ARMADILHA CLÁSSICA: pedir JSON sem definir o que fazer com campo ausente — o modelo então inventa, e a validação de esquema não detecta a invenção porque o campo está preenchido. A segunda armadilha é o TRUNCAMENTO: campo longo excede o limite de saída e o texto fica cortado, o que passa a validação de esquema se o tipo não for verificado com rigor; por isso, limites de tamanho devem ser explícitos e testados. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: compreender os conceitos básicos de \"Formatos estruturados de saída e validação\" com linguagem acessível e exemplos simples.\n- Nível intermediário: aplicar mecanismos, procedimentos e cálculos relacionados a \"Formatos estruturados de saída e validação\".\n- Nível avançado: analisar exceções, casos-limite e implicações de segurança e governança.\n- Nível especialista: resolver questões integradoras e diagnosticar erros em cenários complexos.\nCOMPARAÇÕES CRÍTICAS:\n- \"Formatos estruturados de saída e validação\" x conceitos correlatos: a diferença está na definição, no mecanismo e na aplicação prática; em prova, a troca de termos altera o gabarito.\n- abordagem teórica x aplicação prática: a teoria define o conceito; a prática exige adaptação ao contexto e aos dados.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"conhecer o nome de Formatos estruturados de saída e validação basta para dominar o assunto\" — Motivo: o domínio exige compreensão de mecanismo e aplicação — Versão tecnicamente correta: estudar definição, mecanismo, exemplo e limitação.\n- Afirmação errada: \"o conceito se aplica de forma idêntica em todo contexto\" — Motivo: há condições de validade e exceções — Versão tecnicamente correta: verificar o contexto e as limitações.\n- Afirmação errada: \"a métrica ou o resultado isolado prova a qualidade\" — Motivo: é preciso avaliar por subgrupo e em dados não vistos — Versão tecnicamente correta: avaliação completa e contextualizada.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Formatos estruturados de saída e validação e seus componentes, mecanismos e relações com outros temas do Módulo 5.\n- Regras e fórmulas: aplicar os procedimentos e cálculos pertinentes a \"Formatos estruturados de saída e validação\" conforme o contexto.\n- Exceções: verificar condições de validade e casos-limite antes de generalizar.\n- Palavras-chave: formatos estruturados de saída e validação, conceito, mecanismo, aplicação, limitação, avaliação.\n- Checklist de domínio: (1) Defino Formatos estruturados de saída e validação com precisão? (2) Explico seu mecanismo? (3) Aplico em caso prático? (4) Identifico erros e limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são os conceitos centrais de \"Formatos estruturados de saída e validação\"? (2) Como o mecanismo funciona? (3) Em que situação a aplicação muda? (4) Quais são as limitações? (5) Como se avalia o resultado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que um campo «valor_total» numérico com sentinela «N/A» é problema?",
+          "resposta": "Porque «N/A» e 0 passam a ter o mesmo efeito prático em agregações e validações, e o pipeline pode somar, ordenar ou comparar o campo sem perceber a ambiguidade. O correto é tipar o campo corretamente (número ou nulo), declarar «null» explicitamente quando o dado não consta e, se necessário, usar um campo separado de status («valor_calculado», «valor_status» com valores «calculado», «não_aplicavel», «dados_insuficientes»). A distinção entre ausente, zero e não aplicável é requisito de qualidade de dado (Módulo 7) e de segurança de processamento."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Escreva a especificação de saída para extração de dados de um Termo de Responsabilidade.",
+          "resposta": "Formato: JSON com esquema fixo. Campos: «orgao_contratante» (texto, obrigatório), «contratante» (texto, obrigatório), «objeto» (texto, obrigatório), «vigencia_inicio» (data ISO, obrigatório), «vigencia_fim» (data ISO, opcional, null quando indeterminada), «valor_total» (número, obrigatório; null quando não constar), «multa_pct» (número, opcional; null quando não constar), «garantias» (lista de texto), «clausulas_relevantes» (lista de objetos com «identificador» e «trecho»), «lacunas» (lista de texto com as informações não encontradas). Regras: não inferir valores ausentes; usar null e registrar a ausência em «lacunas»; não converter percentual escrito em extenso; não inferir data a partir de referência («60 dias após a assinatura» não vira data). Validação: esquema e tipos obrigatórios; coerência (vigencia_fim maior que a inicial, quando ambas existem); conferência amostral de fidelidade dos trechos ao documento."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se eu peço a resposta em JSON, não preciso validar, porque o modelo entrega JSON válido.'",
+          "correcao": "Errado. O JSON garante a FORMA, não a CORREÇÃO dos valores nem a completude: o modelo pode preencher campo obrigatório com valor inventado (que a validação de esquema não detecta) ou truncá-lo em texto longo (que o parser detecta, mas a correção exige teste de limite). A validação é obrigatória em camada de esquema E em camada de fidelidade à fonte."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A saída estruturada é condição para validação automática e para tratamento de contestação do cidadão campo a campo.",
+          "resposta": "Certo. São as duas propriedades que justificam o formato estruturado em uso institucional."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Boas práticas de formato estruturado: A) declarar esquema no prompt; B) usar suporte nativo de saída estruturada quando disponível; C) preencher campo ausente com zero; D) registrar a versão do esquema junto da resposta.",
+          "resposta": "A, B e D. O item C é errado: zero e ausência são estados distintos e a confusão corrompe agregações."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de definir formato estruturado de saída, justificará seu uso em automação e em auditoria, e construirá um esquema de saída com validação de esquema, tipos e valores, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "definirá formato estruturado de saída, justificará seu uso em automação e em auditoria, e construirá um esquema de saída com validação de esquema, tipos e valores"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: estudo aprofundado do subtópico \"Formatos estruturados de saída e validação\", incluindo seus conceitos, mecanismos, aplicações e limitações, conforme o conteúdo programático do Módulo 5. POR QUE O CONHECIMENTO É IMPORTANTE: o domínio de \"Formatos estruturados de saída e validação\" é necessário para responder com segurança a itens de prova e para aplicar o conhecimento em situações reais de serviço público e privado. PRÉ-REQUISITOS: leitura das unida…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Formatos estruturados de saída e validação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se eu peço a resposta em JSON, não preciso validar, porque o modelo entrega JSON válido.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O JSON garante a FORMA, não a CORREÇÃO dos valores nem a completude: o modelo pode preencher campo obrigatório com valor inventado (que a validação de esquema não detecta) ou truncá-lo em texto longo (que o parser detecta, mas a correção exige teste de limite). A validação é obrigatória em camada de esquema E em camada de fidelidade à fonte."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que um campo «valor_total» numérico com sentinela «N/A» é problema?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque «N/A» e 0 passam a ter o mesmo efeito prático em agregações e validações, e o pipeline pode somar, ordenar ou comparar o campo sem perceber a ambiguidade. O correto é tipar o campo corretamente (número ou nulo), declarar «null» explicitamente quando o dado não consta e, se necessário, usar um campo separado de status («valor_calculado», «valor_status» com valores «calculado», «não_aplicavel», «dados_insuficientes»). A distinção entre ausente, zero e não aplicável é requisito de qualidade de dado (Módulo 7) e de segurança de processamento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Escreva a especificação de saída para extração de dados de um Termo de Responsabilidade.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Formato: JSON com esquema fixo. Campos: «orgao_contratante» (texto, obrigatório), «contratante» (texto, obrigatório), «objeto» (texto, obrigatório), «vigencia_inicio» (data ISO, obrigatório), «vigencia_fim» (data ISO, opcional, null quando indeterminada), «valor_total» (número, obrigatório; null quando não constar), «multa_pct» (número, opcional; null quando não constar), «garantias» (lista de texto), «clausulas_relevantes» (lista de objetos com «identificador» e «trecho»), «lacunas» (lista de texto com as informações não encontradas). Regras: não inferir valores ausentes; usar null e registrar a ausência em «lacunas»; não converter percentual escrito em extenso; não inferir data a partir de referência («60 dias após a assinatura» não vira data). Validação: esquema e tipos obrigatórios; coerência (vigencia_fim maior que a inicial, quando ambas existem); conferência amostral de fidelidade dos trechos ao documento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se eu peço a resposta em JSON, não preciso validar, porque o modelo entrega JSON válido.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O JSON garante a FORMA, não a CORREÇÃO dos valores nem a completude: o modelo pode preencher campo obrigatório com valor inventado (que a validação de esquema não detecta) ou truncá-lo em texto longo (que o parser detecta, mas a correção exige teste de limite). A validação é obrigatória em camada de esquema E em camada de fidelidade à fonte.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

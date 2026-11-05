@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 3,
+    "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U3P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U3P2.js",
+    "idsCompletos": [
+      "m3-u3-t1-s3",
+      "m3-u3-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u3-t1-s3",
+      "titulo": "Tom, clareza e estrutura de mensagens profissionais",
+      "topicoTitulo": "Etiqueta digital (netiqueta) em ambientes profissionais",
+      "topicoId": "modulo-3-unidade-3-topico-1",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno estruturará mensagens profissionais claras e adequadas ao contexto.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a estrutura recomendada de uma mensagem profissional; (b) clareza e concisão; (c) adequação de tom; (d) revisão antes do envio. POR QUE O CONHECIMENTO É IMPORTANTE: mensagens mal estruturadas geram retrabalho e erro; a prova cobra elementos de uma comunicação eficaz. PRÉ-REQUISITOS: netiqueta e noção de comunicação assíncrona. OBJETIVOS OBSERVÁVEIS: (1) estruturar saudação, contexto, pedido, prazo e fechamento; (2) aplicar uma ideia principal por mensagem; (3) adequar o tom ao público; (4) revisar destinatários, anexos e texto. COMPETÊNCIAS DESENVOLVIDAS: redação profissional; clareza e objetividade. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.1 (netiqueta); unidade 3.3 (padrões institucionais); unidade 1.1 (cabeçalhos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: uma mensagem profissional eficaz segue um esqueleto: saudação adequada à relação e ao cargo; contexto breve que situa o assunto; pedido ou ação explícita; prazo quando houver; e fechamento cordial com assinatura. A clareza exige uma ideia principal por mensagem e o uso de listas numeradas quando há várias ações, reduzindo ambiguidade. O tom varia do formal (comunicação externa, autoridades) ao cordial (equipe interna); ironia e sarcasmo devem ser evitados por escrito. A assinatura identifica nome, cargo, unidade e contato, reforçando a rastreabilidade. A revisão final verifica destinatários corretos, anexos efetivamente incluídos e ausência de erros de digitação. Em serviço público, a mensagem representa a instituição e deve observar impessoalidade, clareza e registro adequado (Módulo 6). Mensagens longas e sem estrutura aumentam a chance de o interlocutor não identificar a ação solicitada.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: identificar as partes de um pedido claro.\n- Nível intermediário: reescrever uma mensagem estruturada com ação e prazo.\n- Nível avançado: ajustar o tom de acordo com o destinatário e a sensibilidade do assunto.\n- Nível especialista: consolidar um pedido complexo em mensagem única sem ambiguidade.\nCOMPARAÇÕES CRÍTICAS:\n- mensagem direta x prolixa: a direta preserva a ação; a prolixa dilui — a estrutura muda a compreensão.\n- tom formal x cordial: muda conforme público e relação; escolher o registro errado altera a leitura institucional.\n- pedido x informação: o pedido exige resposta; a informação apenas comunica — misturá-los confunde o interlocutor.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Quanto mais texto, mais claro.\" — Motivo: excesso dilui a ação — Versão tecnicamente correta: uma ideia principal e ação explícita.\n- Afirmação errada: \"O assunto pode ficar vago; o corpo explica.\" — Motivo: o assunto facilita a busca e o encaminhamento — Versão tecnicamente correta: assunto descritivo e específico.\n- Afirmação errada: \"Não é necessário revisar se o anexo foi incluído.\" — Motivo: esquecer anexo é erro frequente — Versão tecnicamente correta: revisar destinatários e anexos antes do envio.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: saudação, contexto, pedido, prazo, fechamento, assinatura, revisão.\n- Regras e fórmulas: estrutura = saudação + contexto + ação + prazo + fechamento.\n- Exceções: comunicação informal cabe em canais internos.\n- Palavras-chave: clareza, concisão, tom, assinatura, revisão.\n- Checklist de domínio: (1) Estruturo a mensagem? (2) Aplico uma ideia por mensagem? (3) Adequo o tom? (4) Reviso antes do envio?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais partes compõem a estrutura? (2) Por que uma ideia principal por mensagem? (3) Como o tom varia? (4) O que revisar antes do envio? (5) Por que evitar ironia?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual a estrutura mínima de um e-mail profissional?",
+          "resposta": "Saudação + contexto + pedido/ação + prazo + fechamento + assinatura."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Escreva um e-mail solicitando aprovação de um relatório com prazo.",
+          "resposta": "'Prezado(a) [nome], segue em anexo o relatório [X] para análise. Solicito aprovação até [data]. Disponível para esclarecimentos. Atenciosamente, [assinatura]'."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Ironia em e-mail profissional é inofensiva.'",
+          "correcao": "Errado. Ironia/sarcasmo por escrito frequentemente é mal interpretada; evite em comunicação institucional."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Incluir prazo claro no e-mail reduz idas e vindas.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual elemento ajuda a evitar erros de envio? A) Assinatura; B) Revisão de destinatários/anexos; C) Saudação; D) Tom formal.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de estruturar mensagens profissionais claras e adequadas ao contexto, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "estruturará mensagens profissionais claras e adequadas ao contexto"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Estrutura recomendada: saudação adequada ao cargo/relação; contexto breve; pedido/ação clara; prazo; fechamento profissional. Clareza: uma ideia principal por mensagem; listas numeradas para ações; evitar ambiguidades. Tom: formal para institucional, cordial para interno; evitar ironia/sarcasmo (mal interpretados por escrito). Assinatura: nome, cargo, unidade, contato. Revisão antes do envio: destinatários, anexos, erros de digitação.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Tom, clareza e estrutura de mensagens profissionais",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Ironia em e-mail profissional é inofensiva.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Ironia/sarcasmo por escrito frequentemente é mal interpretada; evite em comunicação institucional."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual a estrutura mínima de um e-mail profissional?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Saudação + contexto + pedido/ação + prazo + fechamento + assinatura.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Escreva um e-mail solicitando aprovação de um relatório com prazo.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "'Prezado(a) [nome], segue em anexo o relatório [X] para análise. Solicito aprovação até [data]. Disponível para esclarecimentos. Atenciosamente, [assinatura]'.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Ironia em e-mail profissional é inofensiva.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Ironia/sarcasmo por escrito frequentemente é mal interpretada; evite em comunicação institucional.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u3-t2-s1",
+      "titulo": "Princípios de acessibilidade em comunicação",
+      "topicoTitulo": "Acessibilidade digital na comunicação",
+      "topicoId": "modulo-3-unidade-3-topico-2",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá princípios de acessibilidade aplicáveis a comunicação digital.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é acessibilidade digital; (b) os quatro princípios da WCAG; (c) aplicações práticas (texto alternativo, legendas, contraste, estrutura); (d) por que acessibilidade é requisito, e não favor. POR QUE O CONHECIMENTO É IMPORTANTE: a comunicação institucional deve alcançar todas as pessoas; a prova cobra princípios e sua aplicação. PRÉ-REQUISITOS: noção de comunicação digital e de público diverso. OBJETIVOS OBSERVÁVEIS: (1) definir acessibilidade; (2) listar os princípios perceptível, operável, compreensível e robusto; (3) aplicar exemplos práticos; (4) reconhecer o caráter inclusivo. COMPETÊNCIAS DESENVOLVIDAS: comunicação inclusiva; aplicação de boas práticas de acessibilidade. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (recursos de plataformas); unidade 3.3 (comunicação profissional); Módulo 6 (inclusão digital). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: acessibilidade digital é a característica que permite a pessoas com deficiência (visual, auditiva, motora, cognitiva) perceber, operar, compreender e contribuir com o conteúdo. As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) organizam boas práticas em quatro princípios: perceptível (a informação deve ser percebida — texto alternativo, legendas, contraste); operável (a interface deve ser usável por teclado e leitor de tela); compreensível (linguagem clara, comportamento previsível); e robusto (compatibilidade com tecnologias assistivas). Aplicações: textos alternativos em imagens, legendas e transcrições para vídeos e áudios, contraste adequado, evitar depender apenas da cor para transmitir informação, usar estrutura semântica (títulos e listas reais) e empregar linguagem clara. A acessibilidade não é apenas técnica: é também inclusão, permitindo participação efetiva e atendendo ao interesse público.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que acessibilidade amplia o alcance da comunicação.\n- Nível intermediário: aplicar os quatro princípios a exemplos concretos.\n- Nível avançado: detectar barreiras em uma peça de comunicação e propor correções.\n- Nível especialista: revisar um fluxo institucional garantindo acessibilidade de ponta a ponta.\nCOMPARAÇÕES CRÍTICAS:\n- alt text x legenda de imagem: o alt text descreve para leitores de tela; a legenda é visível a todos — não se substituem.\n- cor como informação x cor como reforço: depender só da cor exclui; a cor deve reforçar — isso altera a avaliação de acessibilidade.\n- acessibilidade x usabilidade: a primeira foca grupos com deficiência; a segunda, o uso geral — são complementares.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Acessibilidade é opcional.\" — Motivo: é requisito de inclusão — Versão tecnicamente correta: deve ser considerada no design.\n- Afirmação errada: \"Legenda automática dispensa revisão.\" — Motivo: a automática erra — Versão tecnicamente correta: revisar legendas críticas.\n- Afirmação errada: \"Só cor é suficiente para indicar status.\" — Motivo: exclui daltônicos e leitores de tela — Versão tecnicamente correta: usar rótulos e ícones além da cor.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: acessibilidade, WCAG, perceptível, operável, compreensível, robusto, tecnologia assistiva.\n- Regras e fórmulas: quatro princípios orientam toda checagem de acessibilidade.\n- Exceções: recursos automáticos exigem revisão humana.\n- Palavras-chave: alt text, legenda, contraste, semântica, inclusão.\n- Checklist de domínio: (1) Defino acessibilidade? (2) Listo os princípios? (3) Aplico exemplos? (4) Reconheço o caráter inclusivo?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é acessibilidade? (2) Cite os quatro princípios. (3) Para que serve o alt text? (4) Por que não depender só da cor? (5) O que torna a comunicação robusta?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que é alt text e por que é importante?",
+          "resposta": "Texto alternativo que descreve uma imagem para leitores de tela; essencial para pessoas com deficiência visual e também para indexação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como tornar um vídeo de reunião acessível?",
+          "resposta": "Adicionar legendas (closed captions), fornecer transcrição, descrever visualmente conteúdo importante e garantir player acessível."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Acessibilidade é responsabilidade apenas da área de TI.'",
+          "correcao": "Errado. Acessibilidade é responsabilidade de todos que produzem comunicação; a Lei Brasileira de Inclusão (Lei 13.146/2015) e normas de acessibilidade digital (eMAG) orientam o setor público."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Legendas em vídeos beneficiam pessoas surdas e com deficiência auditiva.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual princípio WCAG trata de garantir que o conteúdo seja percebido? A) Operável; B) Perceptível; C) Compreensível; D) Robusto.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender princípios de acessibilidade aplicáveis a comunicação digital, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá princípios de acessibilidade aplicáveis a comunicação digital"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Acessibilidade digital: garantir que pessoas com deficiência (visual, auditiva, motora, cognitiva) possam perceber, operar e compreender a comunicação. Princípios (WCAG): perceptível, operável, compreensível, robusto. Aplicação: textos alternativos (alt text) em imagens; legendas/transcrições em vídeos e áudios; contraste adequado; evitar depender apenas de cor; estrutura semântica (títulos, listas); linguagem clara.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Princípios de acessibilidade em comunicação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Acessibilidade é responsabilidade apenas da área de TI.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Acessibilidade é responsabilidade de todos que produzem comunicação; a Lei Brasileira de Inclusão (Lei 13.146/2015) e normas de acessibilidade digital (eMAG) orientam o setor público."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que é alt text e por que é importante?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Texto alternativo que descreve uma imagem para leitores de tela; essencial para pessoas com deficiência visual e também para indexação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como tornar um vídeo de reunião acessível?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Adicionar legendas (closed captions), fornecer transcrição, descrever visualmente conteúdo importante e garantir player acessível.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Acessibilidade é responsabilidade apenas da área de TI.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Acessibilidade é responsabilidade de todos que produzem comunicação; a Lei Brasileira de Inclusão (Lei 13.146/2015) e normas de acessibilidade digital (eMAG) orientam o setor público.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

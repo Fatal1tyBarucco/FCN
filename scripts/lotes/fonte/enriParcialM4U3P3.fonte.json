@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 3,
+    "unidadeTitulo": "4.3 Ameaças e ataques",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U3P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U3P3.js",
+    "idsCompletos": [
+      "m4-u3-t2-s2",
+      "m4-u3-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u3-t2-s2",
+      "titulo": "DoS e DDoS",
+      "topicoTitulo": "Ataques a credenciais, à disponibilidade e à comunicação",
+      "topicoId": "modulo-4-unidade-3-topico-2",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno diferenciará DoS de DDoS pela origem do tráfego, descreverá as camadas de esgotamento e enumerará contramedidas defensivas.",
+      "conteudo": "DoS (Denial of Service) busca tornar o serviço indisponível esgotando um recurso: banda, conexões simultâneas, memória, tempo de processamento. DDoS (Distribuito) faz o mesmo a partir de muitas origens coordenadas — tipicamente uma botnet ou serviços de reflexão/amplificação —, o que dilui o tráfego e torna o bloqueio por origem ineficaz. Taxonomia por camada: volumétrico (saturar banda, ex.: UDP amplification); de protocolo (esgotar tabelas de estado/firewall, ex.: SYN flood); de aplicação (consumir servidor web com requisições caras, ex.: many requests that demand database lookup). Defesa em camadas: 1) redundância e escala (absorver picos); 2) filtros e rate limiting no perímetro; 3) serviço de mitigação/scrubbing com anúncio de prefixo; 4) aplicação resistente (limites de requisição, cache, limitação de custo por operação); 5) monitoramento com planos de acionamento. Nota de integridade profissional: simulações didáticas usam ambientes isolados e dados fictícios; jamais se executa ataque real contra sistemas de terceiros — inclusive por curiosidade acadêmica, o que é conduta sujeita a responsabilização.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O site do órgão cai com tráfego vindo de milhares de IPs. DoS ou DDoS? Por quê?",
+          "resposta": "DDoS: a multiplicidade de origens coordenadas é a característica; bloquear um IP é inútil e a resposta exige filtragem no provedor ou serviço de mitigação."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Durante abertura de inscrições, o formulário é bombeado com requisições pesadas que sobrecarregam o banco. Que camada de ataque e que defesa?",
+          "resposta": "Ataque de camada de aplicação (7): consome CPU/banco com requisições individualmente válidas. Defesa: limitação de taxa por sessão e origem, cache de páginas públicas, fila com capacidade declarada, verificação de automatização e limitação do custo de cada consulta no projeto do formulário."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Bloquear o IP de origem resolve um DDoS.'",
+          "correcao": "Errado. Em DDoS as origens são dispersas (e frequentemente de máquinas inocentes); a mitigação depende de filtragem distribuída, capacidade extra e mitigação no provedor."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um ataque SYN flood é classificado como ataque de camada de protocolo/transporte.",
+          "resposta": "Certo. Ele esgota o estado de conexões (tabela do firewall/servidor) no handshake TCP, sem completar a abertura."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "O que distingue DDoS de DoS? A) O alvo ser servidor web; B) Múltiplas origens coordenadas; C) O uso de criptografia; D) A duração superior a uma hora.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar DoS de DDoS pela origem do tráfego, descreverá as camadas de esgotamento e enumerará contramedidas defensivas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará DoS de DDoS pela origem do tráfego, descreverá as camadas de esgotamento e enumerará contramedidas defensivas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "DoS (Denial of Service) busca tornar o serviço indisponível esgotando um recurso: banda, conexões simultâneas, memória, tempo de processamento. DDoS (Distribuito) faz o mesmo a partir de muitas origens coordenadas — tipicamente uma botnet ou serviços de reflexão/amplificação —, o que dilui o tráfego e torna o bloqueio por origem ineficaz. Taxonomia por camada: volumétrico (saturar banda, ex.: UDP amplification); de protocolo (esgotar tabelas de estado/firewall, ex.: SYN flood); de aplicação (con…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a DoS e DDoS",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Bloquear o IP de origem resolve um DDoS.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Em DDoS as origens são dispersas (e frequentemente de máquinas inocentes); a mitigação depende de filtragem distribuída, capacidade extra e mitigação no provedor."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O site do órgão cai com tráfego vindo de milhares de IPs. DoS ou DDoS? Por quê?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "DDoS: a multiplicidade de origens coordenadas é a característica; bloquear um IP é inútil e a resposta exige filtragem no provedor ou serviço de mitigação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Durante abertura de inscrições, o formulário é bombeado com requisições pesadas que sobrecarregam o banco. Que camada de ataque e que defesa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ataque de camada de aplicação (7): consome CPU/banco com requisições individualmente válidas. Defesa: limitação de taxa por sessão e origem, cache de páginas públicas, fila com capacidade declarada, verificação de automatização e limitação do custo de cada consulta no projeto do formulário.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Bloquear o IP de origem resolve um DDoS.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Em DDoS as origens são dispersas (e frequentemente de máquinas inocentes); a mitigação depende de filtragem distribuída, capacidade extra e mitigação no provedor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u3-t2-s3",
+      "titulo": "Ataques de intermediário e interceptação",
+      "topicoTitulo": "Ataques a credenciais, à disponibilidade e à comunicação",
+      "topicoId": "modulo-4-unidade-3-topico-2",
+      "unidadeTitulo": "4.3 Ameaças e ataques",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno explicará o mecanismo do ataque de intermediário (MITM) e relacionará cada técnica a uma contramedida específica.",
+      "conteudo": "Em um ataque de intermediário (Man-in-the-Middle, MITM), o atacante fica no caminho entre vítima e destino e passa a ler, modificar ou retardar o tráfego, muitas vezes sem que as pontas percebam. Técnicas comuns: envenenamento ARP (o atacante anuncia ser o gateway para a vítima); ponto de acesso sem fio falsificado (evil twin) com nome atraente; spoofing de DNS ou envenenamento de cache; proxy malicioso; downgrading de segurança (sslstrip) forçando a versão sem criptografia. Efeito: credenciais e sessões podem ser capturadas, e conteúdo pode ser alterado em trânsito (por exemplo, troca de número de conta em formulário). Contramedidas por vetor: TLS correto e verificado (cadeia de certificados íntegra, sem ignorar avisos); HSTS para evitar downgrade; autenticação de Wi-Fi do órgão e recusa de redes abertas para trabalho; proteção de ARP/segmentação; VPN para acesso remoto. Diagnóstico útil: certificado aviso em site legítimo pode indicar interceptação ativa — e não deve ser ignorado; ignorar aviso de certificado é entregar a chave da porta ao intermediário.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "No wi-fi público, usuário acessa o portal do órgão e vê aviso de certificado, que decide ignorar. O que está acontecendo e o que ele fez?",
+          "resposta": "Provável interceptação ativa (MITM com certificado próprio, aceito pelo usuário). Ao ignorar o aviso, ele validou o certificado do atacante e entregou credenciais/sessão. Conduta correta: abortar, não confiar e usar canal criptografado confiável (VPN)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Relatórios indicam que contas estão sendo vistas por terceiros sem login suspeito. Que hipótese MITM verificar?",
+          "resposta": "Verificar: sessões roubadas por interceptação (HTTP sem TLS, downgrade), envenenamento ARP na rede local, proxy instalado no cliente, extensão/malware no navegador. Correções: exigir TLS ponta a ponta, corrigir HSTS, remover malware, educar sobre avisos de certificado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'MITM e phishing são a mesma técnica.'",
+          "correcao": "Errado. Phishing induz a vítima a entregar dados em um canal falso; MITM ocupa o caminho legítimo entre as pontas. Podem ser combinados, mas o mecanismo difere — e as defesas também."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Aceitar o aviso de certificado inválido em site do órgão pode viabilizar ataque de intermediário.",
+          "resposta": "Certo. O aviso indica que a cadeia de confiança não fecha; aceitá-lo equivale a confiar no certificado apresentado, que pode ser do atacante."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual técnica MITM ataca a resolução de nomes, redirecionando o usuário sem alterar o navegador? A) Envenenamento ARP; B) Envenenamento/spoofing de DNS; C) SYN flood; D) Credential stuffing.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o mecanismo do ataque de intermediário (MITM) e relacionará cada técnica a uma contramedida específica, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o mecanismo do ataque de intermediário (MITM) e relacionará cada técnica a uma contramedida específica"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Em um ataque de intermediário (Man-in-the-Middle, MITM), o atacante fica no caminho entre vítima e destino e passa a ler, modificar ou retardar o tráfego, muitas vezes sem que as pontas percebam. Técnicas comuns: envenenamento ARP (o atacante anuncia ser o gateway para a vítima); ponto de acesso sem fio falsificado (evil twin) com nome atraente; spoofing de DNS ou envenenamento de cache; proxy malicioso; downgrading de segurança (sslstrip) forçando a versão sem criptografia. Efeito: credenciais …",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Ataques de intermediário e interceptação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'MITM e phishing são a mesma técnica.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Phishing induz a vítima a entregar dados em um canal falso; MITM ocupa o caminho legítimo entre as pontas. Podem ser combinados, mas o mecanismo difere — e as defesas também."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "No wi-fi público, usuário acessa o portal do órgão e vê aviso de certificado, que decide ignorar. O que está acontecendo e o que ele fez?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Provável interceptação ativa (MITM com certificado próprio, aceito pelo usuário). Ao ignorar o aviso, ele validou o certificado do atacante e entregou credenciais/sessão. Conduta correta: abortar, não confiar e usar canal criptografado confiável (VPN).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Relatórios indicam que contas estão sendo vistas por terceiros sem login suspeito. Que hipótese MITM verificar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Verificar: sessões roubadas por interceptação (HTTP sem TLS, downgrade), envenenamento ARP na rede local, proxy instalado no cliente, extensão/malware no navegador. Correções: exigir TLS ponta a ponta, corrigir HSTS, remover malware, educar sobre avisos de certificado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'MITM e phishing são a mesma técnica.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Phishing induz a vítima a entregar dados em um canal falso; MITM ocupa o caminho legítimo entre as pontas. Podem ser combinados, mas o mecanismo difere — e as defesas também.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

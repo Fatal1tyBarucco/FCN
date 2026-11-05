@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 4,
+    "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U4P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U4P3.js",
+    "idsCompletos": [
+      "m3-u4-t2-s2",
+      "m3-u4-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u4-t2-s2",
+      "titulo": "Coautoria e documentos compartilhados em reunião",
+      "topicoTitulo": "Compartilhamento de tela e colaboração",
+      "topicoId": "modulo-3-unidade-4-topico-2",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá colaboração em documentos durante reuniões.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é coautoria em tempo real; (b) seus benefícios; (c) riscos de versão e de exposição; (d) boas práticas. POR QUE O CONHECIMENTO É IMPORTANTE: editar documentos durante a reunião agiliza decisões, mas sem controle gera versões inconsistentes e vazamentos. PRÉ-REQUISITOS: noção de documento compartilhado e de permissões. OBJETIVOS OBSERVÁVEIS: (1) definir coautoria; (2) citar benefícios; (3) reconhecer riscos; (4) aplicar boas práticas. COMPETÊNCIAS DESENVOLVIDAS: colaboração em documentos; controle de versão. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.2 (exposição em plataformas); Módulo 1 (OneDrive/colaboração); unidade 3.3 (rastreabilidade). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a coautoria em tempo real permite que vários participantes editem o mesmo documento simultaneamente, com as alterações aparecendo instantaneamente; é comum em suítes de escritório integradas. Benefícios: decisões registradas no próprio documento, menos troca de versões por e-mail e maior transparência do trabalho. Riscos: edições não revisadas que introduzem erro, perda do controle de versão quando não há histórico, exposição de dados a participantes que não deveriam ver o conteúdo e conflitos de edição. Boas práticas incluem: definir um editor responsável pela versão final; usar controle de versão e comentários; salvar a versão validada; e restringir permissões — concedendo edição apenas a quem precisa e mantendo o restante em modo de visualização. Em reuniões sensíveis, compartilhar o documento apenas com os participantes autorizados e revisar as permissões ao final. O histórico de versões é o recurso que permite reverter alterações indevidas.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que todos podem editar ao mesmo tempo.\n- Nível intermediário: distinguir edição de visualização e usar comentários.\n- Nível avançado: gerenciar conflitos e restabelecer uma versão válida.\n- Nível especialista: definir o modelo de permissões e o fluxo de revisão para documentos sensíveis.\nCOMPARAÇÕES CRÍTICAS:\n- editar x visualizar: a edição altera o documento; a visualização apenas consulta — a permissão errada expõe ou corrompe.\n- coautoria x envio por anexo: a primeira concentra a versão; o segundo cria cópias divergentes.\n- edição ao vivo x revisão posterior: editar ao vivo acelera, mas exige revisão para evitar erro.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Se todos editam, não há risco de versão.\" — Motivo: sem histórico, conflitos persistem — Versão tecnicamente correta: usar controle de versão.\n- Afirmação errada: \"Compartilhar com edição para todos é inofensivo.\" — Motivo: permite alteração indevida — Versão tecnicamente correta: aplicar o menor privilégio.\n- Afirmação errada: \"O documento ao vivo dispensa versão final.\" — Motivo: a versão validada é o registro — Versão tecnicamente correta: salvar e comunicar a versão final.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: coautoria, edição simultânea, controle de versão, comentário, permissão.\n- Regras e fórmulas: edição apenas para quem precisa + versão final validada.\n- Exceções: o histórico permite reverter alterações.\n- Palavras-chave: documento compartilhado, versão, permissão, revisão.\n- Checklist de domínio: (1) Defino coautoria? (2) Cito benefícios? (3) Reconheço riscos? (4) Aplico boas práticas?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é coautoria em tempo real? (2) Cite dois benefícios. (3) Que risco a edição ampla traz? (4) Como controlar versões? (5) Que permissão dar a quem só consulta?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quais benefícios da coautoria em reunião?",
+          "resposta": "Registro imediato de decisões, redução de versões paralelas e alinhamento em tempo real."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como evitar edição descontrolada em documento compartilhado?",
+          "resposta": "Definir um editor responsável, usar comentários/sugestões, restringir permissões e salvar versão final após a reunião."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Coautoria não exige controle de permissões.'",
+          "correcao": "Errado. Sem controle, qualquer participante pode alterar ou excluir conteúdo; defina permissões adequadas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Restringir permissões de edição melhora o controle em coautoria.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática é recomendada em coautoria? A) Todos editam sem restrição; B) Editor responsável + comentários; C) Sem versionamento; D) Sem salvamento final.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender colaboração em documentos durante reuniões, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá colaboração em documentos durante reuniões"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Coautoria em tempo real: múltiplos participantes editam o mesmo documento (Word/Google Docs) durante a reunião. Benefícios: decisões registradas, menos versões. Riscos: edições não revisadas, perda de controle de versão, exposição de dados. Boas práticas: definir editor responsável, usar controle de versão/comentários, salvar versão final, restringir permissões (edição vs visualização).",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Coautoria e documentos compartilhados em reunião",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Coautoria não exige controle de permissões.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Sem controle, qualquer participante pode alterar ou excluir conteúdo; defina permissões adequadas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quais benefícios da coautoria em reunião?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Registro imediato de decisões, redução de versões paralelas e alinhamento em tempo real.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como evitar edição descontrolada em documento compartilhado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Definir um editor responsável, usar comentários/sugestões, restringir permissões e salvar versão final após a reunião.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Coautoria não exige controle de permissões.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Sem controle, qualquer participante pode alterar ou excluir conteúdo; defina permissões adequadas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u4-t2-s3",
+      "titulo": "Chat, reações e recursos auxiliares",
+      "topicoTitulo": "Compartilhamento de tela e colaboração",
+      "topicoId": "modulo-3-unidade-4-topico-2",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno conhecerá recursos auxiliares de reuniões e seus cuidados.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os recursos auxiliares de reunião; (b) cuidados com dados; (c) relação com gravação; (d) boas práticas. POR QUE O CONHECIMENTO É IMPORTANTE: recursos como chat e enquetes coletam e registram informação; usá-los sem cuidado expõe dados. PRÉ-REQUISITOS: noção de reunião online. OBJETIVOS OBSERVÁVEIS: (1) listar recursos auxiliares; (2) reconhecer riscos de registro; (3) relacionar chat e gravação; (4) aplicar boas práticas. COMPETÊNCIAS DESENVOLVIDAS: uso responsável de recursos; proteção de informação. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.3 (gravação); unidade 5.1 (exposição); Módulo 4 (dados pessoais). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: reuniões oferecem recursos auxiliares além do áudio e vídeo: o chat (mensagens de texto), as reações (emojis), o \"levantar mão\", as enquetes (polls), o quadro branco (whiteboard) e as salas simultâneas (breakout rooms). Cada um tem efeitos sobre a informação: o chat produz registro textual que pode ser gravado; as enquetes coletam respostas e, por vezes, dados pessoais; o quadro branco acumula conteúdo colaborativo; as salas simultâneas dividem grupos e podem escapar ao monitoramento central. Boas práticas: definir previamente se o chat será gravado ou salvo; evitar inserir dados sensíveis no chat; informar os participantes quando uma enquete coleta dados; baixar e tratar o resultado das enquetes conforme a finalidade; e encerrar ou limpar o quadro branco quando contiver informação sensível. A disponibilidade e os nomes exatos desses recursos variam por plataforma e plano. O princípio é tratar cada recurso como um canal que pode registrar informação e, portanto, exigir tratamento adequado.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer os recursos disponíveis.\n- Nível intermediário: identificar o que cada recurso registra.\n- Nível avançado: decidir se o chat participa da gravação e como tratar enquetes.\n- Nível especialista: desenhar o uso de recursos em reunião sensível sem criar exposição.\nCOMPARAÇÕES CRÍTICAS:\n- chat x fala: o chat deixa registro textual facilmente copiável; a fala depende de gravação — a exposição difere.\n- enquete x votação formal: a enquete é indicativa e pode coletar dados; a votação formal tem regras próprias.\n- sala simultânea x plenária: a primeira escapa ao monitoramento; a segunda é visível ao anfitrião.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O chat nunca é gravado.\" — Motivo: pode integrar a gravação — Versão tecnicamente correta: verificar a configuração e avisar.\n- Afirmação errada: \"Enquetes são anônimas por definição.\" — Motivo: depende da configuração — Versão tecnicamente correta: informar a coleta e a finalidade.\n- Afirmação errada: \"Sala simultânea é tão monitorada quanto a plenária.\" — Motivo: o anfitrião pode não ver tudo — Versão tecnicamente correta: prever coanfitriões por sala.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: chat, reações, levantar mão, enquete, quadro branco, sala simultânea.\n- Regras e fórmulas: todo recurso que registra informação exige tratamento e aviso.\n- Exceções: nomes e disponibilidade variam por plataforma/plano.\n- Palavras-chave: registro, enquete, breakout room, quadro branco, dados.\n- Checklist de domínio: (1) Listo recursos? (2) Reconheço riscos? (3) Relaciono chat e gravação? (4) Aplico boas práticas?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite três recursos auxiliares. (2) Por que o chat é sensível? (3) Enquete é sempre anônima? (4) Que cuidado ter com o quadro branco? (5) Sala simultânea é monitorada?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O chat de reunião é gravado?",
+          "resposta": "Depende da plataforma e configuração; em muitos casos a gravação inclui chat. Verificar antes de enviar informações sensíveis."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como usar enquetes de forma adequada?",
+          "resposta": "Informar finalidade, evitar coleta de dados pessoais desnecessários, anonimizar quando possível e respeitar LGPD."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Chat de reunião é efêmero e não fica registrado.'",
+          "correcao": "Errado. Chat pode ser gravado e arquivado; trate como comunicação formal."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Enquetes podem coletar dados pessoais e exigem cuidado com LGPD.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso organiza a fala em grandes reuniões? A) Chat livre; B) Levantar mão; C) Microfone sempre aberto; D) Reações aleatórias.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de conhecer recursos auxiliares de reuniões e seus cuidados, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "conhecerá recursos auxiliares de reuniões e seus cuidados"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Recursos auxiliares: chat (mensagens de texto), reações (emojis), levantar mão, enquetes (polls), quadro branco (whiteboard), salas simultâneas (breakout rooms). Cuidados: chat pode registrar informações sensíveis; enquetes podem coletar dados pessoais; gravação pode incluir chat. Boas práticas: definir se chat será gravado, evitar dados sensíveis no chat, informar sobre coleta em enquetes.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Chat, reações e recursos auxiliares",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Chat de reunião é efêmero e não fica registrado.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Chat pode ser gravado e arquivado; trate como comunicação formal."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O chat de reunião é gravado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Depende da plataforma e configuração; em muitos casos a gravação inclui chat. Verificar antes de enviar informações sensíveis.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como usar enquetes de forma adequada?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Informar finalidade, evitar coleta de dados pessoais desnecessários, anonimizar quando possível e respeitar LGPD.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Chat de reunião é efêmero e não fica registrado.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Chat pode ser gravado e arquivado; trate como comunicação formal.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

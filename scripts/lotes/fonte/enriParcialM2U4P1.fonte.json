@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 4,
+    "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+    "parte": 1,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U4P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U4P1.js",
+    "idsCompletos": [
+      "m2-u4-t1-s1",
+      "m2-u4-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u4-t1-s1",
+      "titulo": "Estrutura de um endereço IPv4",
+      "topicoTitulo": "Estrutura IPv4 e tipos de endereço",
+      "topicoId": "modulo-2-unidade-4-topico-1",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno descreverá a estrutura de 32 bits do IPv4, a divisão em octetos e a separação entre parte de rede e parte de host.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a estrutura de 32 bits do IPv4; (b) a divisão em quatro octetos; (c) a separação entre parte de rede e parte de host; (d) as classes históricas e endereços especiais. POR QUE O CONHECIMENTO É IMPORTANTE: entender a estrutura é pré-requisito para máscaras, sub-redes e CIDR; a prova cobra octetos e endereços especiais. PRÉ-REQUISITOS: camada de rede; binário básico. OBJETIVOS OBSERVÁVEIS: (1) descrever o endereço de 32 bits; (2) converter octeto para decimal e vice-versa; (3) separar rede e host; (4) citar endereços especiais. COMPETÊNCIAS DESENVOLVIDAS: representação binária; leitura de endereços. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (máscaras); unidade 4.2 (CIDR). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: um endereço IPv4 tem 32 bits, escritos como quatro octetos decimais separados por ponto (por exemplo, 192.168.1.10); cada octeto vai de 0 a 255, pois representa 8 bits (2^8 = 256 valores). A máscara de sub-rede divide o endereço em parte de REDE (prefixo) e parte de HOST. Historicamente, as classes definiam o tamanho: Classe A (/8), Classe B (/16) e Classe C (/24); hoje usa-se o roteamento sem classes (CIDR), que trata o prefixo de forma explícita. Existem endereços de uso especial: 0.0.0.0 (rota padrão/origem indefinida), 255.255.255.255 (broadcast limitado), 127.0.0.0/8 (loopback), 169.254.0.0/16 (link-local/APIPA), 224.0.0.0/4 (multicast) e 240.0.0.0/4 (reservado). Conversão prática: o octeto 192 em binário é 11000000 (128+64); o octeto 255 é 11111111. Cálculo ilustrativo: quantos endereços há em uma rede /24? O número de bits de host é 32 − 24 = 8, então 2^8 = 256 endereços, dos quais 254 são hosts (excluídos rede e broadcast). Variação: em /25, os bits de host são 7 → 2^7 = 128 endereços e 126 hosts. Unidades e interpretação importam para não confundir endereços totais com hosts utilizáveis.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: ler e escrever endereços em quatro octetos.\n- Nível intermediário: separar rede e host e converter octeto em binário.\n- Nível avançado: relacionar prefixo ao número de endereços/hosts.\n- Nível especialista: reconhecer endereços especiais e sua implicação em uma configuração.\nCOMPARAÇÕES CRÍTICAS:\n- parte de rede x parte de host: a primeira identifica a rede; a segunda, o dispositivo — a máscara define o limite.\n- endereços totais x hosts utilizáveis: uma /24 tem 256 endereços e 254 hosts — confundir muda a conta.\n- classes x CIDR: as classes são históricas; o CIDR usa prefixo explícito.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Cada octeto pode ir até 512.\" — Motivo: 8 bits vão até 255 — Versão tecnicamente correta: cada octeto é 0–255.\n- Afirmação errada: \"127.0.0.1 é um endereço público.\" — Motivo: é loopback — Versão tecnicamente correta: 127.0.0.0/8 é loopback.\n- Afirmação errada: \"Uma /24 tem 256 hosts.\" — Motivo: dois endereços são reservados — Versão tecnicamente correta: tem 254 hosts utilizáveis.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: IPv4, 32 bits, octeto, máscara, prefixo, classes, endereços especiais.\n- Regras e fórmulas: 2^(bits de host) endereços; −2 para hosts utilizáveis (rede e broadcast).\n- Exceções: /31 e /32 têm tratamentos especiais para links ponto a ponto.\n- Palavras-chave: binário, octeto, rede, host, CIDR.\n- Checklist de domínio: (1) Descrevo os 32 bits? (2) Converto octetos? (3) Separo rede e host? (4) Cito especiais?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quantos bits tem um IPv4? (2) Qual o valor máximo de um octeto? (3) O que é a máscara? (4) Quantos hosts tem uma /24? (5) O que é 127.0.0.0/8?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quantos bits tem um endereço IPv4 e como se representa?",
+          "resposta": "32 bits, em 4 octetos decimais (0-255), ex.: 10.0.0.1."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Dado o IP 172.16.5.20 com máscara 255.255.0.0, qual a parte de rede?",
+          "resposta": "Rede: 172.16.0.0 (primeiros 16 bits). Host: 5.20 (últimos 16 bits). Prefixo /16."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Endereços de classe A são sempre públicos.'",
+          "correcao": "Errado. A classe define tamanho do prefixo, não publicidade. 10.0.0.0/8 é classe A e é privado (RFC 1918)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) 127.0.0.1 é um endereço de loopback.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual faixa é link-local (APIPA)? A) 10.0.0.0/8; B) 172.16.0.0/12; C) 169.254.0.0/16; D) 192.168.0.0/16.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de descrever a estrutura de 32 bits do IPv4, a divisão em octetos e a separação entre parte de rede e parte de host, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "XPWd08tLAuo",
+          "titulo": "Curso de Redes - Vídeo 05 - Endereço IP",
+          "canal": "Bóson Treinamentos",
+          "urlOriginal": "https://www.youtube.com/watch?v=XPWd08tLAuo",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/XPWd08tLAuo",
+          "descricao": "Videoaula detalhada sobre endereçamento IPv4, cobrindo a estrutura de 32 bits, notação decimal pontuada, classes de endereço (A, B, C, D, E), endereços privados (RFC 1918), loopback, link-local (APIPA), multicast e broadcast. Explica a máscara de sub-rede, CIDR, cálculo de rede e broadcast, e a distinção entre endereços públicos e privados para NAT.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "descreverá a estrutura de 32 bits do IPv4, a divisão em octetos e a separação entre parte de rede e parte de host"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Um endereço IPv4 tem 32 bits, representados como quatro octetos decimais separados por ponto (ex.: 192.168.1.10). Cada octeto vai de 0 a 255. A máscara de sub-rede divide o endereço em parte de rede (prefixo) e parte de host. A classe (histórica) determinava o tamanho: Classe A (/8), B (/16), C (/24). Hoje usa-se CIDR (sem classes). Endereços especiais: 0.0.0.0 (rota padrão/origem), 255.255.255.255 (broadcast limitado), 127.0.0.0/8 (loopback), 169.254.0.0/16 (link-local/APIPA), 224.0.0.0/4 (mult…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Estrutura de um endereço IPv4",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Endereços de classe A são sempre públicos.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A classe define tamanho do prefixo, não publicidade. 10.0.0.0/8 é classe A e é privado (RFC 1918)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quantos bits tem um endereço IPv4 e como se representa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "32 bits, em 4 octetos decimais (0-255), ex.: 10.0.0.1.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Dado o IP 172.16.5.20 com máscara 255.255.0.0, qual a parte de rede?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Rede: 172.16.0.0 (primeiros 16 bits). Host: 5.20 (últimos 16 bits). Prefixo /16.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Endereços de classe A são sempre públicos.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A classe define tamanho do prefixo, não publicidade. 10.0.0.0/8 é classe A e é privado (RFC 1918).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u4-t1-s2",
+      "titulo": "Endereços públicos, privados, loopback e link-local",
+      "topicoTitulo": "Estrutura IPv4 e tipos de endereço",
+      "topicoId": "modulo-2-unidade-4-topico-1",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno classificará endereços IPv4 em públicos/privados/loopback/link-local e explicará o uso de cada um.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) endereços privados (RFC 1918); (b) loopback; (c) link-local (APIPA); (d) públicos; (e) multicast e broadcast. POR QUE O CONHECIMENTO É IMPORTANTE: classificar um endereço como público ou privado é decisão frequente e ponto de pegadinha; a prova cobra as faixas. PRÉ-REQUISITOS: estrutura IPv4; máscaras. OBJETIVOS OBSERVÁVEIS: (1) listar as faixas privadas; (2) explicar loopback; (3) explicar link-local; (4) classificar endereços. COMPETÊNCIAS DESENVOLVIDAS: classificação de endereços; análise de roteabilidade. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (estrutura); unidade 3.4 (NAT); unidade 4.4 (IPv6). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: os endereços privados, definidos na RFC 1918, são 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16; eles NÃO são roteáveis na Internet pública e são usados em redes locais, sendo traduzidos para um IP público pelo NAT na borda. O loopback (127.0.0.0/8, tipicamente 127.0.0.1) designa o próprio host: o tráfego não sai da máquina e serve para testes locais. O link-local (169.254.0.0/16) é autoatribuído quando não há DHCP disponível (mecanismo APIPA), permitindo comunicação apenas no próprio link — é um sinal clássico de falha na obtenção de IP. Os endereços públicos são todos os demais e são roteáveis na Internet. Existem ainda o multicast (224.0.0.0/4), que endereça grupos, e o broadcast, que corresponde ao endereço com todos os bits de host em 1 na sub-rede, além do broadcast limitado 255.255.255.255. A classificação é funcional: um endereço privado só se comunica com a Internet por meio de NAT. Exemplo: 192.168.1.10 é privado (prefixo 192.168.0.0/16) e 8.8.8.8 é público. Variação: 172.20.5.3 é privado (dentro de 172.16.0.0/12), mas 172.32.5.3 é público (fora dessa faixa) — detalhe que a prova explora.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer 192.168.x.x como privado.\n- Nível intermediário: aplicar as três faixas privadas e explicar loopback e link-local.\n- Nível avançado: classificar endereços na fronteira das faixas (ex.: 172.16–172.31).\n- Nível especialista: analisar a roteabilidade de um endereço e a necessidade de NAT.\nCOMPARAÇÕES CRÍTICAS:\n- privado x público: o primeiro só alcança a Internet via NAT; o segundo é roteável — muda a configuração.\n- loopback x link-local: o primeiro é o próprio host; o segundo é autoatribuído no link.\n- multicast x broadcast: o primeiro endereça um grupo; o segundo, todos da sub-rede.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Todo 172.x.x.x é privado.\" — Motivo: a faixa privada é 172.16–172.31 — Versão tecnicamente correta: 172.32.x.x é público.\n- Afirmação errada: \"169.254.x.x é um IP válido de Internet.\" — Motivo: é link-local/APIPA — Versão tecnicamente correta: indica ausência de DHCP.\n- Afirmação errada: \"127.0.0.1 alcança outros hosts.\" — Motivo: é o próprio host — Versão tecnicamente correta: fica na máquina.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: RFC 1918, 10/8, 172.16/12, 192.168/16, loopback, link-local, público, multicast, broadcast.\n- Regras e fórmulas: privados não são roteáveis; NAT faz a tradução.\n- Exceções: 172.32.x.x já é público.\n- Palavras-chave: roteável, tradução, APIPA, grupo, sub-rede.\n- Checklist de domínio: (1) Listo as faixas privadas? (2) Explico loopback? (3) Explico link-local? (4) Classifico endereços?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais são as três faixas privadas? (2) O que é 127.0.0.1? (3) O que 169.254 indica? (4) 172.32.5.3 é privado? (5) O que o multicast endereça?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classificar 8.8.8.8, 192.168.0.1, 127.0.0.1 e 169.254.1.5.",
+          "resposta": "8.8.8.8 público; 192.168.0.1 privado; 127.0.0.1 loopback; 169.254.1.5 link-local."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um notebook não obtém IP do DHCP e autoatribui 169.254.x.x. Consegue acessar a Internet?",
+          "resposta": "Não — link-local não é roteável. Indica falha de DHCP. Verificar cabo/Wi-Fi, servidor DHCP e configuração."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Endereços 172.16.0.0/12 são públicos porque começam com 172.'",
+          "correcao": "Errado. 172.16.0.0/12 (172.16.0.0 a 172.31.255.255) é privado. Apenas parte dessa faixa é privada; o resto é público."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) 10.0.0.0/8, 172.16.0.0/12 e 192.168.0.0/16 são faixas privadas.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual endereço um host usa para falar consigo mesmo? A) 0.0.0.0; B) 127.0.0.1; C) 255.255.255.255; D) 169.254.0.1.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar endereços IPv4 em públicos/privados/loopback/link-local e explicará o uso de cada um, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará endereços IPv4 em públicos/privados/loopback/link-local e explicará o uso de cada um"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Privados (RFC 1918): 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 — não roteáveis na Internet pública; usados em LANs e traduzidos por NAT. Loopback (127.0.0.0/8, tipicamente 127.0.0.1): comunicação interna ao próprio host, não sai da máquina. Link-local (169.254.0.0/16): autoatribuído quando não há DHCP (APIPA); comunicação apenas no link local. Públicos: todos os demais (roteáveis na Internet). Multicast (224.0.0.0/4): comunicação um-para-muitos. Broadcast: endereço de broadcast da sub-rede (todo…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Endereços públicos, privados, loopback e link-local",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Endereços 172.16.0.0/12 são públicos porque começam com 172.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. 172.16.0.0/12 (172.16.0.0 a 172.31.255.255) é privado. Apenas parte dessa faixa é privada; o resto é público."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classificar 8.8.8.8, 192.168.0.1, 127.0.0.1 e 169.254.1.5.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "8.8.8.8 público; 192.168.0.1 privado; 127.0.0.1 loopback; 169.254.1.5 link-local.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um notebook não obtém IP do DHCP e autoatribui 169.254.x.x. Consegue acessar a Internet?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Não — link-local não é roteável. Indica falha de DHCP. Verificar cabo/Wi-Fi, servidor DHCP e configuração.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Endereços 172.16.0.0/12 são públicos porque começam com 172.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. 172.16.0.0/12 (172.16.0.0 a 172.31.255.255) é privado. Apenas parte dessa faixa é privada; o resto é público.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

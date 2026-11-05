@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 4,
+    "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+    "unidade": 1,
+    "unidadeTitulo": "4.1 Fundamentos de segurança",
+    "parte": 5,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM4U1P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM4U1P5.js",
+    "idsCompletos": [
+      "m4-u1-t3-s3",
+      "m4-u1-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m4-u1-t3-s3",
+      "titulo": "Hashes e assinaturas digitais",
+      "topicoTitulo": "Criptografia, hashes, assinaturas e certificados",
+      "topicoId": "modulo-4-unidade-1-topico-3",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno enumerará as propriedades de uma função de hash, distinguirá hash de criptografia e explicará como a assinatura combina hash e chave privada.",
+      "conteudo": "Função de hash mapeia entrada de tamanho qualquer para resumo de tamanho fixo, de forma determinística, com efeito avalanche (pequena mudança no texto altera completamente o resumo) e resistência a três ataques: pré-imagem (dado o resumo, achar a entrada), segundo pré-imagem (achar outra entrada com o mesmo resumo) e colisão (achar duas entradas quaisquer com o mesmo resumo). Usos: verificar integridade de arquivos e downloads, indexar, e armazenar senhas — senhas devem ser guardadas com hash lento e com sal individual (famílias projetadas para serem lentas, como bcrypt e Argon2), nunca em texto puro nem com hash rápido puro. Diferença decisiva para provas: hash é de mão única (não há chave e não se 'decifra'), enquanto criptografia é reversível com a chave. Assinatura digital funciona assim: 1) calcula-se o hash do documento; 2) cifra-se o hash com a chave privada do signatário; 3) o verificador recalcula o hash com a chave pública e compara. Altera o documento, o hash diverge e a verificação falha. A assinatura garante integridade, autenticidade e não repúdio — mas não confidencialidade: o conteúdo segue legível.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Você baixa um arquivo e o distribuidor publica o resumo SHA-256. Como o resumo é usado?",
+          "resposta": "Recalcula-se o hash do arquivo baixado e compara-se com o publicado: igual → integridade preservada desde a publicação; diferente → arquivo alterado (ou corrompido na transmissão). O resumo não protege contra ataque se o canal de publicação também estiver comprometido."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um contrato é assinado digitalmente e depois um dos anexos é trocado. O que acontece na verificação?",
+          "resposta": "A assinatura cobre o hash do documento original; com o anexo trocado, o hash recalculado diverge e a verificação falha — evidência de adulteração. Por isso a assinatura deve cobrir todos os elementos do ato, inclusive anexos."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Cifrar a senha do usuário com AES é a forma correta de armazená-la.'",
+          "correcao": "Errado em dois pontos: senhas devem ser armazenadas com hash de propósito lento com sal (não cifradas), pois o servidor não precisa recuperar o texto original; e se a cifragem for usada, o atacante que obtenha a chave recupera todas as senhas de uma vez."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Assinatura digital confere confidencialidade ao documento assinado.",
+          "resposta": "Errado. Assinatura confere integridade, autenticidade e não repúdio; a confidencialidade depende de cifragem com chave do destinatário, que é outro mecanismo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Uma função de hash com resistência a colisão garante que: A) ninguém recupera o texto original; B) é impraticável encontrar duas entradas com o mesmo resumo; C) o resumo tem tamanho igual à entrada; D) o resumo depende de chave secreta.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de enumerar as propriedades de uma função de hash, distinguirá hash de criptografia e explicará como a assinatura combina hash e chave privada, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "enumerará as propriedades de uma função de hash, distinguirá hash de criptografia e explicará como a assinatura combina hash e chave privada"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Função de hash mapeia entrada de tamanho qualquer para resumo de tamanho fixo, de forma determinística, com efeito avalanche (pequena mudança no texto altera completamente o resumo) e resistência a três ataques: pré-imagem (dado o resumo, achar a entrada), segundo pré-imagem (achar outra entrada com o mesmo resumo) e colisão (achar duas entradas quaisquer com o mesmo resumo). Usos: verificar integridade de arquivos e downloads, indexar, e armazenar senhas — senhas devem ser guardadas com hash le…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Hashes e assinaturas digitais",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Cifrar a senha do usuário com AES é a forma correta de armazená-la.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado em dois pontos: senhas devem ser armazenadas com hash de propósito lento com sal (não cifradas), pois o servidor não precisa recuperar o texto original; e se a cifragem for usada, o atacante que obtenha a chave recupera todas as senhas de uma vez."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Você baixa um arquivo e o distribuidor publica o resumo SHA-256. Como o resumo é usado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Recalcula-se o hash do arquivo baixado e compara-se com o publicado: igual → integridade preservada desde a publicação; diferente → arquivo alterado (ou corrompido na transmissão). O resumo não protege contra ataque se o canal de publicação também estiver comprometido.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um contrato é assinado digitalmente e depois um dos anexos é trocado. O que acontece na verificação?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A assinatura cobre o hash do documento original; com o anexo trocado, o hash recalculado diverge e a verificação falha — evidência de adulteração. Por isso a assinatura deve cobrir todos os elementos do ato, inclusive anexos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Cifrar a senha do usuário com AES é a forma correta de armazená-la.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado em dois pontos: senhas devem ser armazenadas com hash de propósito lento com sal (não cifradas), pois o servidor não precisa recuperar o texto original; e se a cifragem for usada, o atacante que obtenha a chave recupera todas as senhas de uma vez.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m4-u1-t4-s1",
+      "titulo": "Backup completo, incremental e diferencial",
+      "topicoTitulo": "Backup, continuidade, RPO e RTO",
+      "topicoId": "modulo-4-unidade-1-topico-4",
+      "unidadeTitulo": "4.1 Fundamentos de segurança",
+      "moduloTitulo": "SEGURANÇA DA INFORMAÇÃO E GOVERNANÇA DIGITAL",
+      "objetivoAprendizagem": "Aluno calculará custo de restauração dos três tipos de backup em uma sequência semanal e escolherá a estratégia adequada a uma janela de tempo disponível.",
+      "conteudo": "Backup completo copia todos os dados selecionados na execução: maior consumo de tempo e espaço, mas restauração mais simples (uma única mídia). Incremental copia o que mudou desde o ÚLTIMO backup (completo ou incremental): execuções rápidas, mas a restauração exige o completo + todas as incrementais seguintes em ordem — perder uma delas inviabiliza a cadeia. Diferencial copia o que mudou desde o ÚLTIMO COMPLETO: execuções crescem ao longo da semana, mas a restauração precisa apenas do completo + a última diferencial. Exemplo canônico (semana, com 100 GB e 10 GB alterados por dia): domingo — completo (100 GB); segunda — incremental, pega os 10 GB desde domingo; terça — incremental, só os 10 GB desde segunda; quarta — diferencial, os 20 GB acumulados desde domingo. Restaurar quarta-feira: completo + única diferencial (incremental exigiria completo + segunda + terça). Escolha prática: janela de backup curta → incremental; prioridade de restauração rápida e simples → completo periódico + diferencial; regra sempre combinada com teste de restauração e verificação de checksum da cópia.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Na sequência 'domingo completo, segunda incremental, terça incremental', quantas mídias são necessárias para restaurar na terça?",
+          "resposta": "Três: o completo de domingo, a incremental de segunda e a incremental de terça, nesta ordem. Se qualquer uma faltar ou estiver corrompida, o conjunto pode ficar inutilizável."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "O órgão tem janela de 1 hora à noite e meta de restauração em 2 horas. Que combinação é coerente?",
+          "resposta": "Incrementais diários (execução curta) com um completo semanal e um diferencial intermediário se a janela permitir; além disso, RTO de 2 horas exige restauração treinada com medição real de tempo — estratégia que só funciona se o teste de restauração comprovar o prazo."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Backup diferencial pega as alterações desde o último backup de qualquer tipo.'",
+          "correcao": "Errado: é o incremental que copia desde o último backup de qualquer tipo; o diferencial copia sempre desde o último COMPLETO."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um backup diferencial de sexta-feira substitui todas as incrementais da semana na restauração.",
+          "resposta": "Certo, para restauração: completo de domingo + diferencial de sexta já contêm tudo. Exige apenas que o diferencial tenha sido gerado desde aquele completo e esteja íntegro."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Se a incremental de quarta-feira está perdida, o que se pode restaurar com segurança? A) Até terça com a cadeia anterior; B) Nada; C) Somente o completo; D) Somente arquivos de quinta.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular custo de restauração dos três tipos de backup em uma sequência semanal e escolherá a estratégia adequada a uma janela de tempo disponível, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "calculará custo de restauração dos três tipos de backup em uma sequência semanal e escolherá a estratégia adequada a uma janela de tempo disponível"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Backup completo copia todos os dados selecionados na execução: maior consumo de tempo e espaço, mas restauração mais simples (uma única mídia). Incremental copia o que mudou desde o ÚLTIMO backup (completo ou incremental): execuções rápidas, mas a restauração exige o completo + todas as incrementais seguintes em ordem — perder uma delas inviabiliza a cadeia. Diferencial copia o que mudou desde o ÚLTIMO COMPLETO: execuções crescem ao longo da semana, mas a restauração precisa apenas do completo +…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Backup completo, incremental e diferencial",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Backup diferencial pega as alterações desde o último backup de qualquer tipo.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado: é o incremental que copia desde o último backup de qualquer tipo; o diferencial copia sempre desde o último COMPLETO."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Na sequência 'domingo completo, segunda incremental, terça incremental', quantas mídias são necessárias para restaurar na terça?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Três: o completo de domingo, a incremental de segunda e a incremental de terça, nesta ordem. Se qualquer uma faltar ou estiver corrompida, o conjunto pode ficar inutilizável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "O órgão tem janela de 1 hora à noite e meta de restauração em 2 horas. Que combinação é coerente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incrementais diários (execução curta) com um completo semanal e um diferencial intermediário se a janela permitir; além disso, RTO de 2 horas exige restauração treinada com medição real de tempo — estratégia que só funciona se o teste de restauração comprovar o prazo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Backup diferencial pega as alterações desde o último backup de qualquer tipo.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado: é o incremental que copia desde o último backup de qualquer tipo; o diferencial copia sempre desde o último COMPLETO.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

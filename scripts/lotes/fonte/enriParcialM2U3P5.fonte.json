@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 3,
+    "unidadeTitulo": "2.3 Protocolos",
+    "parte": 5,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U3P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U3P5.js",
+    "idsCompletos": [
+      "m2-u3-t3-s3",
+      "m2-u3-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u3-t3-s3",
+      "titulo": "ARP e Neighbor Discovery",
+      "topicoTitulo": "FTP, FTPS, SFTP, SSH e ICMP",
+      "topicoId": "modulo-2-unidade-3-topico-3",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará a função do ARP no IPv4 e do NDP no IPv6, e identificará riscos (ARP spoofing).",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que o ARP faz no IPv4; (b) o que é o NDP no IPv6; (c) o risco de ARP/NDP spoofing; (d) mitigações. POR QUE O CONHECIMENTO É IMPORTANTE: sem resolver IP em MAC não há comunicação no enlace; o ARP é, ao mesmo tempo, essencial e vulnerável. PRÉ-REQUISITOS: endereçamento; camada de enlace; broadcast/multicast. OBJETIVOS OBSERVÁVEIS: (1) explicar o ARP; (2) descrever o NDP; (3) reconhecer o spoofing; (4) citar mitigações. COMPETÊNCIAS DESENVOLVIDAS: análise de protocolo de enlace; análise de risco. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (IPv4); unidade 4.4 (IPv6); unidade 5.2 (ARP cache). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o ARP (Address Resolution Protocol) resolve um endereço IP em um endereço MAC DENTRO da mesma rede. Quando um host quer enviar a outro na mesma sub-rede, ele faz um ARP request em broadcast (\"quem tem o IP X?\"); o dono responde com ARP reply em unicast, informando seu MAC. O resultado é guardado no cache ARP por um tempo. O ARP é stateless e não autenticado: nada impede que um host mal-intencionado responda falsamente a um pedido, associando seu próprio MAC a um IP de terceiro. Isso é o ARP spoofing/poisoning, usado para interceptar tráfego e realizar ataques de intermediário (MITM). As mitigações incluem o Dynamic ARP Inspection (DAI), a segmentação por VLANs e o monitoramento. No IPv6, o ARP é substituído pelo NDP (Neighbor Discovery Protocol), que usa ICMPv6: Neighbor Solicitation (em multicast, equivalente ao \"quem tem\") e Neighbor Advertisement (resposta). O NDP também faz descoberta de roteadores (Router Solicitation/Advertisement) e apoia a autoconfiguração (SLAAC). Ele usa multicast em vez de broadcast e admite a extensão de segurança SEND, mas também pode sofrer NDP spoofing. A resolução de endereços é, portanto, um ponto sensível de segurança no enlace.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o ARP descobre o MAC a partir do IP.\n- Nível intermediário: descrever request (broadcast) e reply (unicast) e o cache.\n- Nível avançado: explicar o ARP spoofing e as mitigações.\n- Nível especialista: comparar as funções do ARP e do NDP e seus riscos.\nCOMPARAÇÕES CRÍTICAS:\n- ARP x NDP: o primeiro é IPv4 e usa broadcast; o segundo é IPv6 e usa multicast via ICMPv6 — muda o mecanismo.\n- request x reply: o primeiro é broadcast; o segundo, unicast.\n- IP x MAC: o IP é lógico e roteável entre redes; o MAC é físico e local ao enlace.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O ARP funciona entre redes diferentes.\" — Motivo: ele resolve na mesma sub-rede — Versão tecnicamente correta: é local ao enlace; entre redes atua o IP/roteador.\n- Afirmação errada: \"O ARP é autenticado e seguro.\" — Motivo: não há autenticação — Versão tecnicamente correta: é vulnerável a spoofing.\n- Afirmação errada: \"O IPv6 usa ARP.\" — Motivo: usa NDP — Versão tecnicamente correta: o NDP substitui o ARP.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: ARP, ARP request/reply, cache ARP, ARP spoofing, DAI, NDP, NS/NA, SLAAC, SEND.\n- Regras e fórmulas: IP → MAC na mesma sub-rede; IPv4 usa ARP; IPv6 usa NDP.\n- Exceções: entre redes, o destino é o MAC do roteador (gateway).\n- Palavras-chave: resolução, broadcast, multicast, spoofing, MITM.\n- Checklist de domínio: (1) Explico o ARP? (2) Descrevo o NDP? (3) Reconheço o spoofing? (4) Cito mitigações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o ARP resolve? (2) O request é broadcast ou unicast? (3) O que é ARP spoofing? (4) O que substitui o ARP no IPv6? (5) Cite uma mitigação.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um PC precisa enviar pacote para 192.168.1.5 na mesma LAN. Como obtém o MAC?",
+          "resposta": "Envia ARP request broadcast: 'quem tem 192.168.1.5?'. O host com esse IP responde com seu MAC. O PC cacheia o par IP-MAC."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um atacante envia ARP reply falsos associando o IP do gateway ao seu MAC. Qual ataque e qual impacto?",
+          "resposta": "ARP spoofing/poisoning — tráfego destinado ao gateway é desviado ao atacante (MITM). Mitigar com DAI, segmentação e monitoramento de ARP."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'ARP funciona entre redes diferentes.'",
+          "correcao": "Errado. ARP resolve apenas na mesma rede (broadcast domain). Para alcançar outra rede, o host envia ao gateway padrão (cujo MAC é obtido por ARP)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) No IPv6, o ARP é substituído pelo NDP.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo resolve IP em MAC no IPv4? A) DNS; B) ARP; C) ICMP; D) DHCP.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar a função do ARP no IPv4 e do NDP no IPv6, e identificará riscos (ARP spoofing), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará a função do ARP no IPv4 e do NDP no IPv6, e identificará riscos (ARP spoofing)"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ARP (Address Resolution Protocol): resolve endereço IP em endereço MAC na mesma rede. O host envia ARP request (broadcast) 'quem tem o IP X?'; o dono responde com ARP reply (unicast) contendo seu MAC. O resultado é cacheado (ARP cache) com TTL. ARP é stateless e não autenticado — vulnerável a ARP spoofing/poisoning (atacante responde falsamente para interceptar tráfego / MITM). Mitigações: Dynamic ARP Inspection (DAI), VLANs, monitoramento. No IPv6, ARP é substituído pelo NDP (Neighbor Discovery…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a ARP e Neighbor Discovery",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'ARP funciona entre redes diferentes.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. ARP resolve apenas na mesma rede (broadcast domain). Para alcançar outra rede, o host envia ao gateway padrão (cujo MAC é obtido por ARP)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um PC precisa enviar pacote para 192.168.1.5 na mesma LAN. Como obtém o MAC?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Envia ARP request broadcast: 'quem tem 192.168.1.5?'. O host com esse IP responde com seu MAC. O PC cacheia o par IP-MAC.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um atacante envia ARP reply falsos associando o IP do gateway ao seu MAC. Qual ataque e qual impacto?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "ARP spoofing/poisoning — tráfego destinado ao gateway é desviado ao atacante (MITM). Mitigar com DAI, segmentação e monitoramento de ARP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'ARP funciona entre redes diferentes.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. ARP resolve apenas na mesma rede (broadcast domain). Para alcançar outra rede, o host envia ao gateway padrão (cujo MAC é obtido por ARP).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u3-t4-s1",
+      "titulo": "SMTP, POP3 e IMAP no contexto de redes",
+      "topicoTitulo": "SMTP, POP3, IMAP, TLS, NAT/PAT, proxy e VPN",
+      "topicoId": "modulo-2-unidade-3-topico-4",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno diferenciará SMTP, POP3 e IMAP quanto a função, portas e segurança.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) SMTP, POP3 e IMAP no contexto de redes; (b) portas e segurança de cada um; (c) push x pull; (d) autenticação de domínio. POR QUE O CONHECIMENTO É IMPORTANTE: o correio é um dos serviços mais cobrados; a prova associa protocolo, função e porta. PRÉ-REQUISITOS: TCP; modelos de camadas. OBJETIVOS OBSERVÁVEIS: (1) associar protocolo e função; (2) indicar portas; (3) diferenciar push de pull; (4) citar TLS e SPF/DKIM/DMARC. COMPETÊNCIAS DESENVOLVIDAS: análise de fluxo de correio; configuração segura. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: Módulo 3 (correio); unidade 3.4 (TLS); unidade 1.2 (unicast). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o SMTP (Simple Mail Transfer Protocol) envia e retransmite mensagens entre clientes e servidores; é um protocolo de \"empurrar\" (push). Suas portas usuais são 25 (relay entre servidores), 587 (submissão autenticada pelo cliente, tipicamente com STARTTLS) e 465 (SMTPS, com TLS implícito). O POP3 (Post Office Protocol v3) \"puxa\" (pull) as mensagens do servidor para o cliente e, por padrão, as remove do servidor; usa as portas 110 (sem cifra) e 995 (com TLS). O IMAP (Internet Message Access Protocol) também \"puxa\", mas mantém as mensagens no servidor e as sincroniza entre dispositivos, com suporte a pastas; usa as portas 143 (sem cifra) e 993 (com TLS). A segurança do correio apoia-se no TLS, seja de forma implícita (porta segura, conexão já cifrada) ou via STARTTLS (upgrade a partir da porta padrão). Além disso, SPF, DKIM e DMARC ajudam a autenticar o domínio remetente e a reduzir a falsificação. Um ponto que a prova explora: SMTP envia; POP3 e IMAP recebem.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: lembrar que SMTP envia e POP3/IMAP recebem.\n- Nível intermediário: associar cada protocolo à sua porta.\n- Nível avançado: distinguir TLS implícito de STARTTLS e citar a autenticação de domínio.\n- Nível especialista: diagnosticar falha de envio x falha de recebimento pelo protocolo envolvido.\nCOMPARAÇÕES CRÍTICAS:\n- SMTP x POP3/IMAP: push x pull — invertê-los erra a função.\n- POP3 x IMAP: o POP3 tende a remover do servidor; o IMAP sincroniza — muda o multi-dispositivo.\n- TLS implícito x STARTTLS: o primeiro inicia cifrado; o segundo eleva a conexão.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"SMTP recebe e-mail.\" — Motivo: ele envia/transporta — Versão tecnicamente correta: quem recebe é POP3/IMAP.\n- Afirmação errada: \"IMAP apaga as mensagens do servidor.\" — Motivo: ele mantém — Versão tecnicamente correta: o POP3 é que tende a remover.\n- Afirmação errada: \"SPF/DKIM/DMARC garantem que o conteúdo é legítimo.\" — Motivo: autenticam o domínio, não o conteúdo — Versão tecnicamente correta: reduzem o spoofing, não o phishing.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: SMTP (25/587/465), POP3 (110/995), IMAP (143/993), push/pull, TLS, SPF/DKIM/DMARC.\n- Regras e fórmulas: SMTP envia; POP3/IMAP recebem; STARTTLS x TLS implícito.\n- Exceções: o POP3 pode manter cópia, mas o padrão é remover.\n- Palavras-chave: envio, recebimento, submissão, relay, autenticação.\n- Checklist de domínio: (1) Associo protocolo e função? (2) Indico portas? (3) Diferencio push de pull? (4) Cito TLS e autenticação?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual protocolo envia? (2) Quais recebem? (3) Qual porta é a de submissão? (4) POP3 x IMAP quanto ao servidor? (5) O que SPF/DKIM/DMARC autenticam?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um usuário quer acessar o mesmo e-mail no celular e no desktop. POP3 ou IMAP?",
+          "resposta": "IMAP — mantém cópia no servidor e sincroniza estado (lido/não lido, pastas) entre clientes. POP3 baixaria e removeria, causando inconsistência."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Qual porta usar para envio autenticado de e-mail por um cliente?",
+          "resposta": "587 (SMTP submission com STARTTLS) — preferida. 465 (SMTPS) também usado. Evitar 25 para clientes (bloqueado por muitos ISPs)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'POP3S na porta 995 e IMAPS na porta 993 são a mesma coisa.'",
+          "correcao": "Errado. São protocolos diferentes (POP3 vs IMAP) com comportamentos distintos (download vs sincronização), apenas compartilham o uso de TLS implícito."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) SMTP usa a porta 25 para relé entre servidores e 587 para submissão autenticada.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo mantém o e-mail no servidor e sincroniza pastas? A) SMTP; B) POP3; C) IMAP; D) FTP.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar SMTP, POP3 e IMAP quanto a função, portas e segurança, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará SMTP, POP3 e IMAP quanto a função, portas e segurança"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "SMTP (Simple Mail Transfer Protocol): envia e retransmite e-mail entre servidores/clientes. Portas: 25 (relé entre servidores), 587 (submissão autenticada pelo cliente — preferido), 465 (SMTPS, TLS implícito, legado mas usado). POP3 (Post Office Protocol v3): baixa e-mail do servidor para o cliente, geralmente removendo do servidor. Portas: 110 (texto), 995 (POP3S/TLS). IMAP (Internet Message Access Protocol): sincroniza e-mail entre cliente e servidor, mantendo cópia no servidor, suporta pastas…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a SMTP, POP3 e IMAP no contexto de redes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'POP3S na porta 995 e IMAPS na porta 993 são a mesma coisa.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. São protocolos diferentes (POP3 vs IMAP) com comportamentos distintos (download vs sincronização), apenas compartilham o uso de TLS implícito."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um usuário quer acessar o mesmo e-mail no celular e no desktop. POP3 ou IMAP?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "IMAP — mantém cópia no servidor e sincroniza estado (lido/não lido, pastas) entre clientes. POP3 baixaria e removeria, causando inconsistência.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Qual porta usar para envio autenticado de e-mail por um cliente?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "587 (SMTP submission com STARTTLS) — preferida. 465 (SMTPS) também usado. Evitar 25 para clientes (bloqueado por muitos ISPs).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'POP3S na porta 995 e IMAPS na porta 993 são a mesma coisa.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. São protocolos diferentes (POP3 vs IMAP) com comportamentos distintos (download vs sincronização), apenas compartilham o uso de TLS implícito.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

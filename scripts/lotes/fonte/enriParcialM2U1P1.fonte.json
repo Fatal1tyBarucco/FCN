@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 1,
+    "unidadeTitulo": "2.1 Fundamentos de Redes",
+    "parte": 1,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U1P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U1P1.js",
+    "idsCompletos": [
+      "m2-u1-t1-s1",
+      "m2-u1-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u1-t1-s1",
+      "titulo": "Definição de rede e componentes básicos",
+      "topicoTitulo": "Conceitos fundamentais: nós, enlaces, clientes e servidores",
+      "topicoId": "modulo-2-unidade-1-topico-1",
+      "unidadeTitulo": "2.1 Fundamentos de Redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno definirá rede de computadores e identificará nós, enlaces, clientes e servidores.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é uma rede de computadores; (b) os conceitos de nó e enlace; (c) os papéis de cliente e servidor; (d) o modelo requisição-resposta; (e) por que compartilhar recursos motiva a existência da rede. POR QUE O CONHECIMENTO É IMPORTANTE: esses termos fundamentam todo o restante do módulo; sem eles não se compreendem protocolos, camadas nem diagnóstico. PRÉ-REQUISITOS: nenhum além de noções gerais de computação. OBJETIVOS OBSERVÁVEIS: (1) definir rede; (2) distinguir nó de enlace; (3) diferenciar cliente de servidor; (4) descrever o fluxo requisição-resposta. COMPETÊNCIAS DESENVOLVIDAS: vocabulário de redes; leitura de topologias simples. GRAU DE DIFICULDADE: básico. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.1 (classificação e topologias); unidade 2.1 (camadas). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: rede de computadores é um conjunto de dispositivos autônomos interconectados que compartilham recursos e trocam informação. Nó (node) é cada dispositivo conectado — computador, servidor, impressora, roteador, switch — e classifica-se em nó final (origem/destino do tráfego) ou intermediário (que apenas encaminha). Enlace (link) é o canal de comunicação entre nós, seja físico (cabo de par trançado, fibra, coaxial) ou sem fio (rádio). Cliente é o dispositivo que SOLICITA um recurso ou serviço; servidor é o que FORNECE. A interação segue o modelo requisição-resposta: o cliente envia um pedido, o servidor processa e devolve uma resposta. Essa assimetria de papéis é lógica, não física: um mesmo computador pode ser cliente em uma interação e servidor em outra. Compartilhar recursos (arquivos, impressoras, acesso à Internet) e permitir comunicação são as motivações centrais das redes, e é sobre essa base que se constroem protocolos e camadas.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: analogia de uma sala com pessoas — os nós são as pessoas, os enlaces são as conversas que as ligam.\n- Nível intermediário: distinguir nó final de intermediário em um diagrama simples.\n- Nível avançado: reconhecer que o papel de cliente/servidor depende da interação, não do equipamento.\n- Nível especialista: identificar gargalos ao analisar quais enlaces concentram o tráfego entre clientes e servidores.\nCOMPARAÇÕES CRÍTICAS:\n- nó final x nó intermediário: o primeiro gera/consome dados; o segundo só encaminha — a classificação muda a interpretação do diagrama.\n- cliente x servidor: papéis definidos pela interação, não pelo hardware — confundir isso gera erro.\n- enlace físico x enlace lógico: o primeiro é o meio; o segundo é a ligação estabelecida entre camadas/protocolos.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Servidor é sempre um computador grande e dedicado.\" — Motivo: o papel é definido pela função — Versão tecnicamente correta: qualquer dispositivo que fornece um serviço é servidor naquela interação.\n- Afirmação errada: \"Switch e roteador são nós finais.\" — Motivo: são intermediários — Versão tecnicamente correta: encaminham tráfego em nome de outros.\n- Afirmação errada: \"Rede exige cabo.\" — Motivo: há enlaces sem fio — Versão tecnicamente correta: o enlace pode ser físico ou sem fio.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: rede, nó, enlace, cliente, servidor, requisição-resposta.\n- Regras e fórmulas: cliente solicita; servidor responde.\n- Exceções: papéis podem se inverter entre interações.\n- Palavras-chave: dispositivo, canal, serviço, comunicação, compartilhamento.\n- Checklist de domínio: (1) Defino rede? (2) Distingo nó de enlace? (3) Diferencio cliente de servidor? (4) Descrevo o fluxo?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um nó? (2) O que é um enlace? (3) Qual a diferença entre cliente e servidor? (4) Como funciona o modelo requisição-resposta? (5) Um mesmo computador pode ser ambos?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar os componentes de uma rede doméstica simples com um roteador e 3 computadores.",
+          "resposta": "Nós: roteador + 3 computadores (4 nós). Enlaces: cabos Ethernet ou Wi-Fi. Clientes: computadores ao acessarem páginas web. Servidor: o roteador como servidor DNS/DHCP, e servidores remotos (ex: Google DNS 8.8.8.8)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma empresa tem 20 estações de trabalho, 1 servidor de arquivos e 1 impressora de rede. Mapear clientes e servidores.",
+          "resposta": "Servidores: servidor de arquivos (fornece arquivos) e servidor de impressão (gerencia impressora). Clientes: as 20 estações ao acessarem arquivos ou enviarem impressões. Nós: todos os dispositivos. Enlaces: cabos Cat6 ou Wi-Fi."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Em uma rede P2P (peer-to-peer), não há distinção entre cliente e servidor.'",
+          "correcao": "Parcialmente incorreto. Em P2P cada nó pode ser cliente E servidor simultaneamente (ex: BitTorrent), mas isso não elimina os papéis — apenas os torna dinâmicos. Um nó pode solicitar (cliente) e fornecer (servidor) ao mesmo tempo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em uma rede cliente-servidor, o servidor nunca assume o papel de cliente.",
+          "resposta": "Errado. Servidores podem ser clientes de outros servidores (ex: um servidor web que consulta um servidor de banco de dados)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual a função principal de um servidor em uma rede? A) Acessar recursos de outros dispositivos; B) Fornecer recursos e serviços para outros dispositivos; C) Interconectar redes diferentes.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de definir rede de computadores e identificará nós, enlaces, clientes e servidores, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "definirá rede de computadores e identificará nós, enlaces, clientes e servidores"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Rede de computadores é um conjunto de dispositivos interconectados que compartilham recursos e informações. Nós (nodes) são os dispositivos finais ou intermediários (computadores, servidores, roteadores, switches). Enlaces (links) são os canais de comunicação (cabos, fibra, rádio). Clientes são dispositivos que solicitam recursos; servidores são dispositivos que fornecem recursos. A comunicação entre cliente e servidor segue o modelo requisição-resposta, onde o cliente inicia o pedido e o servid…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Definição de rede e componentes básicos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Em uma rede P2P (peer-to-peer), não há distinção entre cliente e servidor.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Parcialmente incorreto. Em P2P cada nó pode ser cliente E servidor simultaneamente (ex: BitTorrent), mas isso não elimina os papéis — apenas os torna dinâmicos. Um nó pode solicitar (cliente) e fornecer (servidor) ao mesmo tempo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar os componentes de uma rede doméstica simples com um roteador e 3 computadores.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Nós: roteador + 3 computadores (4 nós). Enlaces: cabos Ethernet ou Wi-Fi. Clientes: computadores ao acessarem páginas web. Servidor: o roteador como servidor DNS/DHCP, e servidores remotos (ex: Google DNS 8.8.8.8).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma empresa tem 20 estações de trabalho, 1 servidor de arquivos e 1 impressora de rede. Mapear clientes e servidores.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Servidores: servidor de arquivos (fornece arquivos) e servidor de impressão (gerencia impressora). Clientes: as 20 estações ao acessarem arquivos ou enviarem impressões. Nós: todos os dispositivos. Enlaces: cabos Cat6 ou Wi-Fi.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Em uma rede P2P (peer-to-peer), não há distinção entre cliente e servidor.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Parcialmente incorreto. Em P2P cada nó pode ser cliente E servidor simultaneamente (ex: BitTorrent), mas isso não elimina os papéis — apenas os torna dinâmicos. Um nó pode solicitar (cliente) e fornecer (servidor) ao mesmo tempo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u1-t1-s2",
+      "titulo": "Classificação de redes: LAN, WLAN, MAN, WAN, PAN",
+      "topicoTitulo": "Conceitos fundamentais: nós, enlaces, clientes e servidores",
+      "topicoId": "modulo-2-unidade-1-topico-1",
+      "unidadeTitulo": "2.1 Fundamentos de Redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno distinguirá LAN, WLAN, MAN, WAN, PAN e intranet/extranet.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as classificações por abrangência geográfica (PAN, LAN, WLAN, MAN, WAN); (b) intranet e extranet; (c) critérios para distinguir esses tipos. POR QUE O CONHECIMENTO É IMPORTANTE: questões classificam redes pela abrangência e pelo escopo organizacional; a confusão entre intranet e extranet é frequente. PRÉ-REQUISITOS: conceito de rede, nó e enlace. OBJETIVOS OBSERVÁVEIS: (1) definir cada classificação; (2) dar exemplo de cada; (3) distinguir intranet de extranet; (4) relacionar alcance e uso. COMPETÊNCIAS DESENVOLVIDAS: classificação de redes; leitura de cenários organizacionais. GRAU DE DIFICULDADE: básico. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.1 (componentes); unidade 1.4 (meios); Módulo 4 (segurança de perímetro). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: as redes classificam-se por abrangência: a PAN (Personal Area Network) cobre poucos metros, tipicamente ligando dispositivos pessoais (celular e fone por Bluetooth); a LAN (Local Area Network) cobre um ambiente, edifício ou campus; a WLAN (Wireless LAN) é uma LAN cujos enlaces são sem fio, como o Wi-Fi; a MAN (Metropolitan Area Network) cobre uma cidade ou região metropolitana; e a WAN (Wide Area Network) cobre longas distâncias, países ou continentes — a Internet é o exemplo maior. Intranet é a rede interna de uma organização, privada, que usa as mesmas tecnologias da Internet (protocolos TCP/IP) para serviços internos; extranet é a extensão controlada da intranet para parceiros, fornecedores ou clientes externos, mediante autenticação e regras de acesso. Assim, LAN/WAN/MAN descrevem alcance físico-geográfico, enquanto intranet/extranet descrevem o ESCOPO de acesso (quem pode entrar). Os critérios são independentes: uma intranet pode apoiar-se em LANs e WANs.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: ordenar as classificações por alcance (PAN < LAN < MAN < WAN).\n- Nível intermediário: associar cada tipo a um exemplo concreto.\n- Nível avançado: distinguir alcance geográfico de escopo de acesso.\n- Nível especialista: analisar a arquitetura de uma rede organizacional combinando LAN, WAN, intranet e extranet.\nCOMPARAÇÕES CRÍTICAS:\n- LAN x WLAN: a WLAN é uma LAN sem fio — a diferença é o meio, não o alcance.\n- intranet x extranet: a intranet é interna; a extranet estende o acesso a terceiros controlados — muda quem entra.\n- MAN x WAN: a MAN cobre a cidade; a WAN cobre distâncias maiores.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Intranet e Internet são a mesma coisa.\" — Motivo: a intranet é privada e restrita — Versão tecnicamente correta: usa tecnologias semelhantes, mas acesso controlado.\n- Afirmação errada: \"WLAN e LAN se opõem.\" — Motivo: WLAN é um tipo de LAN — Versão tecnicamente correta: difere apenas por usar enlace sem fio.\n- Afirmação errada: \"Extranet é aberta a qualquer um.\" — Motivo: o acesso é controlado — Versão tecnicamente correta: restrita a parceiros autorizados.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: PAN, LAN, WLAN, MAN, WAN, intranet, extranet.\n- Regras e fórmulas: alcance geográfico (PAN→WAN) x escopo de acesso (intranet/extranet).\n- Exceções: a Internet é uma WAN pública que interliga redes menores.\n- Palavras-chave: abrangência, Wi-Fi, privada, parceiros, TCP/IP.\n- Checklist de domínio: (1) Defino cada tipo? (2) Dou exemplos? (3) Distingo intranet de extranet? (4) Relaciono alcance e uso?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é uma LAN? (2) O que diferencia WLAN de LAN? (3) O que é uma MAN? (4) Intranet e extranet diferem em quê? (5) A Internet se enquadra em qual classificação?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Classificar a rede de uma universidade com 5 campi distribuídos por uma cidade.",
+          "resposta": "Cada campus tem uma LAN (ou WLAN). A interconexão entre campi é uma MAN (se a cidade for pequena) ou WAN (se os campi estiverem em cidades diferentes). A rede interna da universidade é uma intranet."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma empresa com matriz em São Paulo e filial em Rio de Janeiro precisa conectar suas redes. Que tipo de rede usar?",
+          "resposta": "WAN — interconexão entre redes geograficamente distantes. Pode ser via Internet (com VPN para segurança) ou via circuito dedicado (MPLS, fibra alugada)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Intranet e Internet são a mesma coisa, só muda o nome.'",
+          "correcao": "Errado. Intranet é uma rede privada interna de uma organização, não acessível publicamente. Internet é a rede pública global. A intranet usa protocolos TCP/IP iguais, mas com acesso restrito."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Uma WLAN é um tipo de LAN que usa comunicação sem fio.",
+          "resposta": "Certo. WLAN = Wireless LAN (ex: Wi-Fi)."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual tipo de rede cobre a maior área geográfica? A) LAN; B) MAN; C) WAN; D) PAN.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir LAN, WLAN, MAN, WAN, PAN e intranet/extranet, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá LAN, WLAN, MAN, WAN, PAN e intranet/extranet"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "LAN (Local Area Network): rede local, limitada a um edifício ou campus (ex: rede doméstica, WLAN (Wireless LAN): LAN sem fio (ex: Wi-Fi). MAN (Metropolitan Area Network): rede metropolitana, cobre uma cidade (ex: rede de uma prefeitura). WAN (Wide Area Network): rede de longa distância, cobre países/continentes (ex: Internet). PAN (Personal Area Network): rede pessoal, curto alcance (ex: Bluetooth entre celular e fone). Intranet: rede interna de uma organização, privada, usando protocolos TCP/IP…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Classificação de redes: LAN, WLAN, MAN, WAN, PAN",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Intranet e Internet são a mesma coisa, só muda o nome.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Intranet é uma rede privada interna de uma organização, não acessível publicamente. Internet é a rede pública global. A intranet usa protocolos TCP/IP iguais, mas com acesso restrito."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Classificar a rede de uma universidade com 5 campi distribuídos por uma cidade.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Cada campus tem uma LAN (ou WLAN). A interconexão entre campi é uma MAN (se a cidade for pequena) ou WAN (se os campi estiverem em cidades diferentes). A rede interna da universidade é uma intranet.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma empresa com matriz em São Paulo e filial em Rio de Janeiro precisa conectar suas redes. Que tipo de rede usar?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "WAN — interconexão entre redes geograficamente distantes. Pode ser via Internet (com VPN para segurança) ou via circuito dedicado (MPLS, fibra alugada).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Intranet e Internet são a mesma coisa, só muda o nome.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Intranet é uma rede privada interna de uma organização, não acessível publicamente. Internet é a rede pública global. A intranet usa protocolos TCP/IP iguais, mas com acesso restrito.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

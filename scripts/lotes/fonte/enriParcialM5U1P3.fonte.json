@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 5,
+    "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+    "unidade": 1,
+    "unidadeTitulo": "5.1 Fundamentos de IA",
+    "parte": 3,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM5U1P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM5U1P3.js",
+    "idsCompletos": [
+      "m5-u1-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m5-u1-t2-s3",
+      "titulo": "Viés, variância, explicabilidade e limitações",
+      "topicoTitulo": "Treinamento, validação, teste, generalização e limitações",
+      "topicoId": "modulo-5-unidade-1-topico-2",
+      "unidadeTitulo": "5.1 Fundamentos de IA",
+      "moduloTitulo": "INTELIGÊNCIA ARTIFICIAL",
+      "objetivoAprendizagem": "Aluno identificará fontes de viés em dados, relacionará explicabilidade a exigências de auditoria e apontará limites inerentes de modelos estatísticos.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) viés (bias) como erro sistemático por simplificação; (b) variância como sensibilidade aos dados de treino; (c) explicabilidade (interpretabilidade) e sua relação com governança; (d) limitações de modelos de ML (dados, escopo, causalidade, deriva). POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre viés estatístico e viés social, e o papel da explicabilidade em decisões automatizadas no serviço público. PRÉ-REQUISITOS: unidade 5.1 (generalização, overfitting). OBJETIVOS OBSERVÁVEIS: (1) definir viés e variância; (2) explicar explicabilidade; (3) listar limitações e riscos. COMPETÊNCIAS DESENVOLVIDAS: análise crítica de modelo; comunicação de risco a gestores. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 5.1 (generalização); Módulo 4 (segurança); Módulo 6 (responsabilização). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: viés como erro sistemático devido à simplificação excessiva do modelo (underfitting) ou a desvios nos dados (viés social/algorítmico); variância como sensibilidade a pequenas mudanças no conjunto de treino (overfitting); explicabilidade como capacidade de justificar a decisão do modelo em termos compreensíveis (modelos intrinsecamente interpretáveis versus pós-hoc); limitações: dependência da qualidade e do escopo dos dados, incapacidade de inferir causalidade, deriva de conceito e de dados ao longo do tempo, risco de reproduzir desigualdades presentes nos dados, falta de garantia de robustez fora do domínio de treino. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender viés como \"erro de sistema\" e variância como \"instabilidade\".\n- Nível intermediário: explicar explicabilidade e sua importância em decisões públicas.\n- Nível avançado: identificar viés algorítmico e deriva em produção.\n- Nível especialista: integrar explicabilidade, auditoria e governança.\nCOMPARAÇÕES CRÍTICAS:\n- viés estatístico x viés social: o primeiro é erro de modelo; o segundo é desvio nos dados que o modelo reproduz.\n- explicabilidade x desempenho: modelos mais complexos podem ter melhor desempenho e menor explicabilidade; muda o gabarito ao definir a prioridade.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"modelo sem viés é possível\" — Motivo: todo modelo simplifica — Versão tecnicamente correta: gerenciar e medir o viés.\n- Afirmação errada: \"explicabilidade é o mesmo que transparência\" — Motivo: explicabilidade é sobre a decisão; transparência é sobre o processo — Versão tecnicamente correta: conceitos complementares.\n- Afirmação errada: \"alta acurácia elimina viés\" — Motivo: acurácia global pode esconder desvios por subgrupo — Versão tecnicamente correta: avaliar por subgrupo.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: viés, variância, explicabilidade, deriva, causalidade, subgrupo.\n- Regras e mecanismos: viés + variância = erro total; explicabilidade exige evidência verificável.\n- Exceções: modelos complexos podem ser explicados por métodos pós-hoc, com limitações.\n- Palavras-chave: viés, variância, explicabilidade, deriva, causalidade, subgrupo.\n- Checklist de domínio: (1) Defino viés e variância? (2) Explico explicabilidade? (3) Listo limitações? (4) Avalio por subgrupo?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é viés e como se manifesta? (2) O que é variância? (3) Por que explicabilidade importa no serviço público? (4) Quais as limitações de um modelo de ML? (5) Como detectar deriva?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Modelo de priorização treinado com dados de uma região rica avalia mal na periférica. Que tipo de viés?",
+          "resposta": "Viés de dados (amostra não representativa da população atendida). A correção exige dados das subpopulações e avaliação por subgrupo — não apenas média global."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Decisão automatizada negou benefício. Que trilha o órgão deve manter para permitir revisão?",
+          "resposta": "Versão do modelo, data, atributos de entrada usados, saída/ranking, fatores principais da decisão, limite aplicado e registro de intervenção humana — permitindo reprocessar e justificar, e atendendo ao dever de segurança e responsabilização (art. 46 da LGPD — verificado)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Se a acurácia global é alta, o modelo não precisa de análise por subgrupos.'",
+          "correcao": "Errado. Métrica global mascara erros concentrados em subgrupos (ex.: um segmento de cidadãos); quando a decisão afeta pessoas, o erro deve ser examinado por subgrupo."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Modelo aprende causalidade sempre que o volume de dados é grande.",
+          "resposta": "Errado. Volume grande não converte correlação em causalidade; identificação causal exige desenho experimental ou métodos específicos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Distorção porque a amostra não representa a população é: A) viés de dados; B) overfitting; C) drift conceitual; D) ruído aleatório.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar fontes de viés em dados, relacionará explicabilidade a exigências de auditoria e apontará limites inerentes de modelos estatísticos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará fontes de viés em dados, relacionará explicabilidade a exigências de auditoria e apontará limites inerentes de modelos estatísticos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) viés (bias) como erro sistemático por simplificação; (b) variância como sensibilidade aos dados de treino; (c) explicabilidade (interpretabilidade) e sua relação com governança; (d) limitações de modelos de ML (dados, escopo, causalidade, deriva). POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a distinção entre viés estatístico e viés social, e o papel da explicabilidade em decisões automatizadas no serviço público. PRÉ-REQUISITOS: unidade 5…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Viés, variância, explicabilidade e limitações",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Se a acurácia global é alta, o modelo não precisa de análise por subgrupos.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Métrica global mascara erros concentrados em subgrupos (ex.: um segmento de cidadãos); quando a decisão afeta pessoas, o erro deve ser examinado por subgrupo."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Modelo de priorização treinado com dados de uma região rica avalia mal na periférica. Que tipo de viés?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Viés de dados (amostra não representativa da população atendida). A correção exige dados das subpopulações e avaliação por subgrupo — não apenas média global.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Decisão automatizada negou benefício. Que trilha o órgão deve manter para permitir revisão?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Versão do modelo, data, atributos de entrada usados, saída/ranking, fatores principais da decisão, limite aplicado e registro de intervenção humana — permitindo reprocessar e justificar, e atendendo ao dever de segurança e responsabilização (art. 46 da LGPD — verificado).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Se a acurácia global é alta, o modelo não precisa de análise por subgrupos.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Métrica global mascara erros concentrados em subgrupos (ex.: um segmento de cidadãos); quando a decisão afeta pessoas, o erro deve ser examinado por subgrupo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 2,
+    "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+    "parte": 5,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 1,
+    "constNome": "enriParcialM2U2P5",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U2P5.js",
+    "idsCompletos": [
+      "m2-u2-t3-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u2-t3-s3",
+      "titulo": "Conexões persistentes, cache e otimização",
+      "topicoTitulo": "Comunicação completa cliente-servidor",
+      "topicoId": "modulo-2-unidade-2-topico-3",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará HTTP keep-alive, cache e compressão e seu impacto no desempenho.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é keep-alive; (b) como funciona o cache HTTP; (c) o papel da compressão; (d) HTTP/2 e HTTP/3; (e) limitações. POR QUE O CONHECIMENTO É IMPORTANTE: essas técnicas explicam por que a web é rápida e quando o cache causa problemas; a prova cobra seus efeitos. PRÉ-REQUISITOS: HTTP/HTTPS e TCP. OBJETIVOS OBSERVÁVEIS: (1) explicar conexões persistentes; (2) descrever o cache e seus cabeçalhos; (3) citar compressão; (4) reconhecer limitações. COMPETÊNCIAS DESENVOLVIDAS: análise de desempenho web; configuração de cache. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (HTTP); unidade 1.3 (métricas). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o HTTP/1.0 abria uma conexão TCP nova para cada recurso, repetindo o handshake. O HTTP/1.1 introduziu conexões persistentes (keep-alive), reutilizando a mesma conexão TCP para várias requisições, o que reduz a latência. O cache HTTP armazena respostas no cliente ou em proxies intermediários, controlado por cabeçalhos como Cache-Control, ETag, Last-Modified e Expires: se o recurso está válido no cache, evita-se ir ao servidor, reduzindo latência e carga. A compressão (por exemplo, gzip ou brotli) reduz o tamanho do corpo transferido. Já o HTTP/2 multiplexa vários fluxos sobre uma única conexão, e o HTTP/3 baseia-se em QUIC (sobre UDP) para reduzir o tempo de estabelecimento. As limitações são reais: cache mal configurado serve conteúdo desatualizado; o keep-alive consome recursos do servidor; compactar conteúdo já compactado (imagens) desperdiça processamento; e versões mais novas exigem suporte de ambos os lados. O desempenho resulta da combinação equilibrada dessas técnicas, não de uma isolada.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender por que reutilizar conexão é mais rápido.\n- Nível intermediário: explicar cache e seus cabeçalhos.\n- Nível avançado: relacionar HTTP/2 (multiplexação) e HTTP/3 (QUIC).\n- Nível especialista: decidir a política de cache adequada a conteúdos dinâmicos x estáticos.\nCOMPARAÇÕES CRÍTICAS:\n- HTTP/1.0 x 1.1: sem e com keep-alive — muda o overhead de handshake.\n- cache x ausência de cache: o cache acelera, mas pode servir conteúdo velho — a política decide.\n- HTTP/2 x HTTP/3: o segundo usa QUIC/UDP e reduz o estabelecimento.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Cache é sempre benéfico.\" — Motivo: pode servir conteúdo desatualizado — Versão tecnicamente correta: depende da política de validade.\n- Afirmação errada: \"Compressão ajuda em qualquer arquivo.\" — Motivo: conteúdo já comprimido não reduz — Versão tecnicamente correta: comprimir apenas quando há ganho.\n- Afirmação errada: \"O keep-alive elimina a necessidade de TCP.\" — Motivo: apenas reutiliza a conexão — Versão tecnicamente correta: o TCP continua sendo a base.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: keep-alive, cache, Cache-Control, ETag, compressão, HTTP/2, HTTP/3, QUIC.\n- Regras e fórmulas: menos handshakes + cache válido + compressão = menor latência.\n- Exceções: cache mal configurado prejudica.\n- Palavras-chave: persistência, validade, multiplexação, UDP, desempenho.\n- Checklist de domínio: (1) Explico keep-alive? (2) Descrevo cache? (3) Cito compressão? (4) Reconheço limitações?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que o keep-alive evita? (2) Que cabeçalho controla o cache? (3) O que a compressão reduz? (4) O que caracteriza HTTP/3? (5) Qual o risco de cache mal configurado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que HTTP/1.1 é mais rápido que HTTP/1.0 para páginas com muitos recursos?",
+          "resposta": "Por causa do keep-alive: reutiliza a conexão TCP, evitando múltiplos handshakes e slow starts."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um navegador recebe Cache-Control: max-age=3600. O que isso significa?",
+          "resposta": "A resposta pode ser reutilizada do cache por 3600 segundos sem revalidar no servidor."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Cache HTTP sempre serve o conteúdo mais recente.'",
+          "correcao": "Errado. Cache serve conteúdo dentro do TTL; se o servidor atualizou, o cliente pode ver versão antiga até expirar ou revalidar (ETag/Last-Modified)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) HTTP keep-alive reutiliza a conexão TCP para múltiplas requisições.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual cabeçalho controla o tempo de vida do cache? A) ETag; B) Cache-Control; C) Content-Type; D) Connection.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar HTTP keep-alive, cache e compressão e seu impacto no desempenho, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará HTTP keep-alive, cache e compressão e seu impacto no desempenho"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "HTTP/1.0 abria uma conexão TCP por requisição; HTTP/1.1 introduziu conexões persistentes (keep-alive) reutilizando a mesma conexão TCP para múltiplas requisições, reduzindo overhead de handshake. Cache HTTP: respostas armazenadas no cliente ou em proxies intermediários, controladas por cabeçalhos (Cache-Control, ETag, Last-Modified, Expires), reduzindo latência e carga no servidor. Compressão (gzip, brotli) reduz tamanho do payload. HTTP/2 multiplexa múltiplos streams em uma conexão; HTTP/3 (QUI…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Conexões persistentes, cache e otimização",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Cache HTTP sempre serve o conteúdo mais recente.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Cache serve conteúdo dentro do TTL; se o servidor atualizou, o cliente pode ver versão antiga até expirar ou revalidar (ETag/Last-Modified)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que HTTP/1.1 é mais rápido que HTTP/1.0 para páginas com muitos recursos?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Por causa do keep-alive: reutiliza a conexão TCP, evitando múltiplos handshakes e slow starts.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um navegador recebe Cache-Control: max-age=3600. O que isso significa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A resposta pode ser reutilizada do cache por 3600 segundos sem revalidar no servidor.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Cache HTTP sempre serve o conteúdo mais recente.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Cache serve conteúdo dentro do TTL; se o servidor atualizou, o cliente pode ver versão antiga até expirar ou revalidar (ETag/Last-Modified).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

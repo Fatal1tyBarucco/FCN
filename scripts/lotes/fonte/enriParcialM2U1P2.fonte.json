@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 1,
+    "unidadeTitulo": "2.1 Fundamentos de Redes",
+    "parte": 2,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U1P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U1P2.js",
+    "idsCompletos": [
+      "m2-u1-t1-s3",
+      "m2-u1-t1-s4"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u1-t1-s3",
+      "titulo": "Topologias físicas e lógicas",
+      "topicoTitulo": "Conceitos fundamentais: nós, enlaces, clientes e servidores",
+      "topicoId": "modulo-2-unidade-1-topico-1",
+      "unidadeTitulo": "2.1 Fundamentos de Redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno identificará topologias estrela, anel, barra (bus), malha e híbrida.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é topologia física e lógica; (b) as topologias estrela, anel, barra, malha e híbrida; (c) vantagens e fragilidades de cada uma. POR QUE O CONHECIMENTO É IMPORTANTE: a topologia determina custo, tolerância a falhas e desempenho; a prova cobra a diferença entre a disposição física e o fluxo lógico. PRÉ-REQUISITOS: conceito de nó e enlace. OBJETIVOS OBSERVÁVEIS: (1) definir topologia física; (2) definir topologia lógica; (3) descrever estrela, anel, barra e malha; (4) identificar a fragilidade central de cada uma. COMPETÊNCIAS DESENVOLVIDAS: leitura de topologias; avaliação de tolerância a falhas. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.1 (componentes e classificações); unidade 1.2 (comutação). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: topologia física é a disposição real dos dispositivos e cabos; topologia lógica é a forma como os dados efetivamente circulam. Na estrela, todos os nós se ligam a um ponto central (switch ou hub): a falha de um nó não afeta os demais, mas a falha do central derruba a rede. No anel, os nós se conectam em círculo e os dados percorrem uma direção; a falha de um nó pode romper o anel, dependendo da implementação (anel duplo ou token passa a contornar). Na barra (bus), todos compartilham o mesmo cabo: a instalação é simples, porém há colisões frequentes e a ruptura do cabo derruba o segmento. Na malha, cada nó se conecta a vários outros (malha completa = todos com todos): alta redundância e tolerância a falhas, com custo elevado. A topologia híbrida combina duas ou mais. O ponto clássico: o Ethernet moderno tem topologia física em estrela (ligado ao switch), mas topologia lógica em barramento (o meio é compartilhado logicamente). Física e lógica, portanto, não coincidem necessariamente.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: associar cada nome a um desenho.\n- Nível intermediário: indicar pontos únicos de falha de cada topologia.\n- Nível avançado: explicar por que Ethernet físico em estrela tem lógica de barramento.\n- Nível especialista: recomendar topologia para um cenário considerando custo, redundância e desempenho.\nCOMPARAÇÕES CRÍTICAS:\n- topologia física x lógica: podem divergir (estrela física com barramento lógico) — a distinção altera o gabarito.\n- estrela x malha: estrela tem ponto único de falha (o central); malha tem redundância — muda a tolerância.\n- barra x estrela: barra usa meio compartilhado e sofre colisões; estrela isola cada enlace.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Topologia física e lógica são sempre iguais.\" — Motivo: Ethernet clássico as separa — Versão tecnicamente correta: física em estrela e lógica em barramento.\n- Afirmação errada: \"Na estrela, a falha de qualquer nó derruba a rede.\" — Motivo: o isolamento é a vantagem — Versão tecnicamente correta: só o nó central é ponto único de falha.\n- Afirmação errada: \"Malha é sempre a melhor escolha.\" — Motivo: custo elevado — Versão tecnicamente correta: depende do requisito de redundância e orçamento.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: topologia física, topologia lógica, estrela, anel, barra, malha, híbrida.\n- Regras e fórmulas: estrela = ponto central; malha = redundância; barra = meio compartilhado.\n- Exceções: uma topologia física pode esconder outra lógica.\n- Palavras-chave: disposição, fluxo, ponto de falha, colisão, redundância.\n- Checklist de domínio: (1) Defino física e lógica? (2) Descrevo as topologias? (3) Aponto o ponto de falha? (4) Reconheço a divergência?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é topologia física? (2) E lógica? (3) Qual o ponto único de falha da estrela? (4) Por que a malha é mais tolerante? (5) Que combinação física/lógica o Ethernet usa?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar a topologia de uma rede onde todos os computadores conectam a um switch central.",
+          "resposta": "Topologia estrela. O switch é o ponto central. Se um cabo falha, só aquele computador é afetado; se o switch falha, toda a rede cai."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma rede industrial precisa de alta disponibilidade e tolerância a falhas. Qual topologia é mais adequada?",
+          "resposta": "Malha — cada nó tem múltiplos caminhos. Se um enlace falha, o tráfego é redirecionado. O custo é maior, mas a justificativa é a disponibilidade crítica."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Na topologia em estrela, se um computador falha, toda a rede para.'",
+          "correcao": "Errado. Na estrela, a falha de um nó afeta apenas esse nó. A falha do dispositivo central (switch/hub) é o que derruba toda a rede."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Na topologia em barra (bus), a falha do cabo principal derruba toda a rede.",
+          "resposta": "Certo. O cabo backbone é ponto único de falha na topologia bus."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual topologia oferece maior redundância? A) Estrela; B) Anel; C) Malha; D) Barra.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar topologias estrela, anel, barra (bus), malha e híbrida, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará topologias estrela, anel, barra (bus), malha e híbrida"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Topologia física: disposição cabada dos dispositivos. Estrela: todos conectados a um switch/hub central — falha em um nó não afeta os demais; falha no switch derruba tudo. Anel: dispositivos conectados em círculo — dados viajam em uma direção; falha em um nó pode quebrar o anel (token ring). Barra (bus): todos conectam ao mesmo cabo coaxial — simples mas colisões frequentes e falha no cabo derruba tudo. Malha: cada nó conectado a todos os outros — alta redundância, mas custo elevado. Híbrida: co…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Topologias físicas e lógicas",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Na topologia em estrela, se um computador falha, toda a rede para.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Na estrela, a falha de um nó afeta apenas esse nó. A falha do dispositivo central (switch/hub) é o que derruba toda a rede."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar a topologia de uma rede onde todos os computadores conectam a um switch central.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Topologia estrela. O switch é o ponto central. Se um cabo falha, só aquele computador é afetado; se o switch falha, toda a rede cai.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma rede industrial precisa de alta disponibilidade e tolerância a falhas. Qual topologia é mais adequada?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Malha — cada nó tem múltiplos caminhos. Se um enlace falha, o tráfego é redirecionado. O custo é maior, mas a justificativa é a disponibilidade crítica.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Na topologia em estrela, se um computador falha, toda a rede para.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Na estrela, a falha de um nó afeta apenas esse nó. A falha do dispositivo central (switch/hub) é o que derruba toda a rede.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u1-t1-s4",
+      "titulo": "Comutação de circuitos vs. comutação de pacotes",
+      "topicoTitulo": "Conceitos fundamentais: nós, enlaces, clientes e servidores",
+      "topicoId": "modulo-2-unidade-1-topico-1",
+      "unidadeTitulo": "2.1 Fundamentos de Redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno diferenciará comutação de circuitos e comutação de pacotes.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como funciona a comutação de circuitos; (b) como funciona a comutação de pacotes; (c) vantagens e desvantagens de cada uma; (d) por que a Internet adota pacotes. POR QUE O CONHECIMENTO É IMPORTANTE: a escolha do modelo de comutação explica latência, jitter e tolerância a falhas; a prova compara os dois. PRÉ-REQUISITOS: conceito de rede e de enlace. OBJETIVOS OBSERVÁVEIS: (1) descrever circuitos; (2) descrever pacotes; (3) comparar custo e desempenho; (4) justificar o modelo da Internet. COMPETÊNCIAS DESENVOLVIDAS: análise comparativa de modelos de comutação. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.3 (métricas de desempenho); unidade 2 (protocolos e camadas). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: na comutação de circuitos, um caminho dedicado é reservado entre origem e destino antes de a comunicação começar, e permanece reservado durante toda a conversa — é o modelo da telefonia tradicional. Suas vantagens são latência previsível e largura de banda garantida; suas desvantagens são o desperdício de recursos quando o circuito fica ocioso e o tempo de estabelecimento. Na comutação de pacotes, os dados são divididos em pacotes que caminham independentemente, cada um com seu endereçamento, e podem seguir rotas diferentes. As vantagens são a eficiência (o meio é compartilhado, aproveitando janelas de ociosidade) e a tolerância a falhas (se um caminho cai, os pacotes podem ser reencaminhados); as desvantagens são a latência variável (jitter), a possibilidade de perda e a necessidade de reordenação e de retransmissão. A Internet adota comutação de pacotes; a telefonia tradicional usava circuitos. A escolha determina o comportamento sob congestionamento e a capacidade de multiplexar vários fluxos no mesmo enlace.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: analogia da estrada — circuito é uma faixa reservada; pacotes são carros que compartilham a via.\n- Nível intermediário: comparar garantia de banda e uso de recursos.\n- Nível avançado: relacionar comutação de pacotes a jitter, perda e reordenação.\n- Nível especialista: decidir o modelo adequado para um serviço sensível a atraso, justificando tecnicamente.\nCOMPARAÇÕES CRÍTICAS:\n- circuitos x pacotes: o primeiro garante recursos e previsibilidade; o segundo ganha em eficiência e resiliência — muda custo e comportamento sob carga.\n- banda garantida x banda compartilhada: circuitos reservam; pacotes disputam.\n- latência estável x variável: circuitos reduzem jitter; pacotes o introduzem.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Circuitos são sempre obsoletos.\" — Motivo: ainda há cenários sensíveis a atraso — Versão tecnicamente correta: o modelo se adequa conforme o requisito.\n- Afirmação errada: \"Pacotes viajam sempre pelo mesmo caminho.\" — Motivo: podem seguir rotas distintas — Versão tecnicamente correta: cada pacote é roteado independentemente.\n- Afirmação errada: \"Comutação de pacotes desperdiça banda.\" — Motivo: ela a compartilha — Versão tecnicamente correta: o desperdício é característico de circuitos ociosos.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: comutação de circuitos, comutação de pacotes, circuito dedicado, pacote, jitter.\n- Regras e fórmulas: circuitos = recurso reservado; pacotes = recurso compartilhado.\n- Exceções: redes híbridas combinam características conforme o serviço.\n- Palavras-chave: caminho dedicado, multiplexação, reordenação, resiliência, latência.\n- Checklist de domínio: (1) Descrevo circuitos? (2) Descrevo pacotes? (3) Comparo vantagens? (4) Justifico a Internet?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que caracteriza a comutação de circuitos? (2) E a de pacotes? (3) Cite uma vantagem de cada. (4) O que é jitter e a qual modelo se associa? (5) Por que a Internet usa pacotes?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Comparar uma ligação telefônica tradicional (PSTN) com uma chamada VoIP.",
+          "resposta": "PSTN: comutação de circuitos — caminho dedicado estabelecido pela duração da chamada, banda fixa. VoIP: comutação de pacotes — voz dividida em pacotes que competem com outros tráfegos, latência variável."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma empresa precisa transmitir dados entre duas filiais com garantia de banda. Qual tecnologia escolher?",
+          "resposta": "Comutação de circuitos ou circuito virtual (MPLS) — garante banda e latência previsível. Se a rede for pacote puro (Internet), contratar circuito dedicado (E1/T1)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Na comutação de pacotes, os pacotes sempre seguem o mesmo caminho.'",
+          "correcao": "Errado. Na comutação de pacotes (como na Internet), cada pacote é roteado independentemente e pode seguir caminhos diferentes. Na comutação de circuitos virtuais (Frame Relay, MPLS), há um caminho lógico predefinido."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A Internet utiliza comutação de pacotes.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual a principal vantagem da comutação de pacotes sobre a de circuitos? A) Menor latência; B) Melhor aproveitamento de largura de banda; C) Mais simples de implementar.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar comutação de circuitos e comutação de pacotes, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará comutação de circuitos e comutação de pacotes"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Comutação de circuitos: estabelece um caminho dedicado (circuito) entre origem e destino antes da comunicação (ex: telefonia tradicional). Vantagens: latência previsível, banda garantida. Desvantagens: desperdício de recursos quando ocioso, setup lento. Comutação de pacotes: dados divididos em pacotes que caminham independentemente pela rede (ex: Internet). Vantagens: eficiência (compartilha largura de banda), tolerância a falhas. Desvantagens: latência variável (jitter), perda de pacotes, neces…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comutação de circuitos vs. comutação de pacotes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Na comutação de pacotes, os pacotes sempre seguem o mesmo caminho.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Na comutação de pacotes (como na Internet), cada pacote é roteado independentemente e pode seguir caminhos diferentes. Na comutação de circuitos virtuais (Frame Relay, MPLS), há um caminho lógico predefinido."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Comparar uma ligação telefônica tradicional (PSTN) com uma chamada VoIP.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "PSTN: comutação de circuitos — caminho dedicado estabelecido pela duração da chamada, banda fixa. VoIP: comutação de pacotes — voz dividida em pacotes que competem com outros tráfegos, latência variável.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma empresa precisa transmitir dados entre duas filiais com garantia de banda. Qual tecnologia escolher?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Comutação de circuitos ou circuito virtual (MPLS) — garante banda e latência previsível. Se a rede for pacote puro (Internet), contratar circuito dedicado (E1/T1).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Na comutação de pacotes, os pacotes sempre seguem o mesmo caminho.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Na comutação de pacotes (como na Internet), cada pacote é roteado independentemente e pode seguir caminhos diferentes. Na comutação de circuitos virtuais (Frame Relay, MPLS), há um caminho lógico predefinido.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

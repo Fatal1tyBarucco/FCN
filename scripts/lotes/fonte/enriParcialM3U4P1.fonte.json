@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 4,
+    "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+    "parte": 1,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U4P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U4P1.js",
+    "idsCompletos": [
+      "m3-u4-t1-s1",
+      "m3-u4-t1-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u4-t1-s1",
+      "titulo": "Lobby e sala de espera",
+      "topicoTitulo": "Controle de participantes e lobby",
+      "topicoId": "modulo-3-unidade-4-topico-1",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá o uso de lobby para controlar acesso a reuniões.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é lobby/sala de espera; (b) seus benefícios; (c) as configurações típicas; (d) seu papel institucional. POR QUE O CONHECIMENTO É IMPORTANTE: o lobby é o controle de acesso mais eficaz contra intrusão; a prova cobra sua função. PRÉ-REQUISITOS: noção de reunião online e de papéis de anfitrião. OBJETIVOS OBSERVÁVEIS: (1) definir lobby; (2) explicar como ele reduz intrusão; (3) distinguir configurações; (4) aplicar em reuniões sensíveis. COMPETÊNCIAS DESENVOLVIDAS: controle de acesso em reuniões; condução segura. GRAU DE DIFICULDADE: básico. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (autenticação); unidade 5.1 (zoombombing); unidade 2.2 (controle de participantes). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o lobby (sala de espera) é o recurso que retém os participantes até que o anfitrião os admita. Ele resolve o problema do link divulgado: mesmo que um desconhecido obtenha o endereço da reunião, não entra sem aprovação. As configurações típicas variam: lobby sempre ativo (todos aguardam), lobby apenas para convidados externos (membros da organização entram direto) e lobby desativado. A forma de identificação de quem espera (nome exibido, conta autenticada) ajuda o anfitrião a decidir. Boa prática institucional: ativar o lobby por padrão em reuniões que tratam dados sensíveis, verificar a identidade antes de admitir e designar coanfitriões para monitorar a fila. Os nomes e a disponibilidade exata das opções dependem da plataforma e do plano, devendo ser confirmados na documentação oficial; o princípio estável é que o lobby transfere ao anfitrião a decisão de entrada, reduzindo a superfície de ataque.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o lobby é uma \"porta com porteiro\".\n- Nível intermediário: escolher a configuração de lobby conforme o tipo de reunião.\n- Nível avançado: combinar lobby, autenticação e verificação de identidade.\n- Nível especialista: projetar o fluxo de uma reunião pública minimizando risco de intrusão.\nCOMPARAÇÕES CRÍTICAS:\n- lobby x senha: o lobby decide caso a caso; a senha só exige o segredo — o lobby contém quem tem o link.\n- lobby sempre x lobby só para externos: o primeiro é mais restritivo; o segundo equilibra conveniência — muda o risco.\n- identificar x apenas admitir: verificar quem entra é mais seguro que admitir em massa.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Com senha, o lobby é dispensável.\" — Motivo: a senha vaza com o link — Versão tecnicamente correta: o lobby contém acessos não autorizados.\n- Afirmação errada: \"O lobby bloqueia automaticamente quem é da casa.\" — Motivo: depende da configuração — Versão tecnicamente correta: pode-se admitir membros direto, se desejado.\n- Afirmação errada: \"O lobby elimina a necessidade de monitorar.\" — Motivo: alguém precisa admitir — Versão tecnicamente correta: designar anfitrião/coanfitrião para a fila.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: lobby, sala de espera, anfitrião, coanfitrião, configuração.\n- Regras e fórmulas: reunião sensível → lobby ativo.\n- Exceções: a nomenclatura varia por plataforma.\n- Palavras-chave: controle de acesso, fila, admissão, intrusão.\n- Checklist de domínio: (1) Defino lobby? (2) Explico o benefício? (3) Distingo configurações? (4) Aplico em reuniões sensíveis?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é o lobby? (2) Como ele reduz intrusão? (3) Cite duas configurações. (4) Por que verificar identidade? (5) Substitui a senha?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Em reuniões com lobby ativo, qual o principal risco de zoombombing e como minimizá-lo?",
+          "resposta": "Intrusão não autorizada (facilitada por lista aberta e ausência de senha). Mitigação: lobby sempre ativo, senha obrigatória, login dos participantes, restrição de compartilhamento de tela e desativação de entrada após início."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como reduzir risco de intrusão em reunião pública?",
+          "resposta": "Ativar lobby, exigir senha, restringir compartilhamento de tela ao anfitrião e desativar entrada após início."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Lobby é desnecessário em reuniões internas.'",
+          "correcao": "Depende do risco. Reuniões com dados sensíveis devem usar lobby mesmo internas; verificar política institucional."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Lobby permite aprovar/rejeitar participantes antes da entrada.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso reduz intrusão não autorizada? A) Chat público; B) Lobby; C) Compartilhamento livre; D) Sem senha.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender o uso de lobby para controlar acesso a reuniões, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá o uso de lobby para controlar acesso a reuniões"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Lobby (sala de espera): participantes aguardam aprovação do anfitrião antes de entrar. Benefícios: controle de quem entra, redução de intrusos (zoombombing), verificação de identidade. Configurações: lobby sempre ativo; lobby para convidados externos; lobby para todos. Boa prática institucional: ativar lobby por padrão em reuniões com dados sensíveis. As opções exatas dependem da plataforma e do plano; verificar documentação oficial.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Lobby e sala de espera",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Lobby é desnecessário em reuniões internas.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Depende do risco. Reuniões com dados sensíveis devem usar lobby mesmo internas; verificar política institucional."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Em reuniões com lobby ativo, qual o principal risco de zoombombing e como minimizá-lo?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Intrusão não autorizada (facilitada por lista aberta e ausência de senha). Mitigação: lobby sempre ativo, senha obrigatória, login dos participantes, restrição de compartilhamento de tela e desativação de entrada após início.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como reduzir risco de intrusão em reunião pública?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Ativar lobby, exigir senha, restringir compartilhamento de tela ao anfitrião e desativar entrada após início.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Lobby é desnecessário em reuniões internas.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Depende do risco. Reuniões com dados sensíveis devem usar lobby mesmo internas; verificar política institucional.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u4-t1-s2",
+      "titulo": "Remoção e moderação de participantes",
+      "topicoTitulo": "Controle de participantes e lobby",
+      "topicoId": "modulo-3-unidade-4-topico-1",
+      "unidadeTitulo": "3.4 Uso institucional de plataformas de videoconferência",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno compreenderá recursos de moderação de participantes.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que a moderação permite fazer; (b) boas práticas de condução; (c) registro de ocorrências; (d) limites e condicionalidade dos recursos. POR QUE O CONHECIMENTO É IMPORTANTE: saber moderar mantém a reunião segura e produtiva; a prova cobra as ações do anfitrião. PRÉ-REQUISITOS: papéis de anfitrião e coanfitrião. OBJETIVOS OBSERVÁVEIS: (1) listar ações de moderação; (2) definir coanfitriões; (3) aplicar comunicação de regras; (4) registrar incidentes. COMPETÊNCIAS DESENVOLVIDAS: moderação de reuniões; gestão de incidentes. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (lobby); unidade 5.1 (intrusão); unidade 3.1 (netiqueta). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a moderação reúne as ações disponíveis ao anfitrião e aos coanfitriões para conduzir e proteger a reunião: remover participantes, desativar o microfone ou a câmera de alguém, silenciar todos, bloquear ou restringir o compartilhamento de tela e designar outros coanfitriões. Boas práticas incluem designar coanfitriões em reuniões grandes (um conduz, outro monitora), comunicar as regras no início, usar o recurso \"levantar mão\" para organizar a fala e registrar ocorrências relevantes. A remoção de um participante deve ter justificativa; em serviço público, um incidente (intrusão, conteúdo ofensivo, compartilhamento indevido) deve ser documentado e, conforme o caso, comunicado. A disponibilidade e a nomenclatura exata das ações variam por plataforma e plano, devendo ser confirmadas na documentação oficial; o princípio estável é que a moderação concentra no anfitrião o poder de manter a ordem e a segurança.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: saber que o anfitrião pode silenciar e remover.\n- Nível intermediário: aplicar coanfitriões e regras de fala.\n- Nível avançado: conter uma perturbação sem interromper toda a reunião.\n- Nível especialista: documentar um incidente e propor controles preventivos.\nCOMPARAÇÕES CRÍTICAS:\n- silenciar x remover: silenciar reduz ruído de forma reversível; remover exclui — a gravidade define a escolha.\n- anfitrião x coanfitrião: ambos moderam; o coanfitrião amplia a capacidade de monitoramento.\n- moderar x cercear: a moderação visa a ordem e a segurança, não a censura indevida.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Qualquer participante pode remover outro.\" — Motivo: é ação de papéis elevados — Versão tecnicamente correta: só anfitrião/coanfitrião moderam.\n- Afirmação errada: \"Remover resolve, não precisa registrar.\" — Motivo: incidente relevante exige registro — Versão tecnicamente correta: documentar em contexto institucional.\n- Afirmação errada: \"Silenciar e remover são a mesma coisa.\" — Motivo: diferem em reversibilidade e gravidade — Versão tecnicamente correta: escolher conforme o caso.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: moderação, anfitrião, coanfitrião, silenciar, remover, registro.\n- Regras e fórmulas: reunião maior → mais coanfitriões e regras explícitas.\n- Exceções: nomes e disponibilidade variam por plataforma/plano.\n- Palavras-chave: ordem, remoção, mute, incidente, registro.\n- Checklist de domínio: (1) Listo ações? (2) Defino coanfitriões? (3) Comunico regras? (4) Registro incidentes?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quem pode moderar? (2) Diferença entre silenciar e remover? (3) Por que designar coanfitriões? (4) Quando registrar um incidente? (5) O que \"levantar mão\" organiza?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quem pode remover participantes?",
+          "resposta": "Anfitrião e coanfitriões (conforme plataforma/plano). Participantes comuns não podem."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Em reunião com 100 participantes, como manter ordem?",
+          "resposta": "Designar coanfitriões, desativar microfones por padrão, usar 'levantar mão', liberar fala por vez, compartilhar tela apenas pelo anfitrião."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Qualquer participante pode remover outro.'",
+          "correcao": "Errado. Apenas anfitrião/coanfitrião tem essa permissão."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Coanfitriões auxiliam na moderação de grandes reuniões.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso organiza a fala em reuniões grandes? A) Chat livre; B) Levantar mão; C) Microfone sempre aberto; D) Compartilhamento de tela livre.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender recursos de moderação de participantes, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá recursos de moderação de participantes"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Moderação: anfitrião/coanfitrião pode remover participantes, desativar microfone/vídeo, bloquear compartilhamento de tela, silenciar todos, designar coanfitriões. Boas práticas: definir coanfitriões para grandes reuniões; comunicar regras no início; usar 'levantar mão' para ordem; registrar ocorrências. Remoção deve ser justificada e, em serviço público, documentada se houver incidente.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Remoção e moderação de participantes",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Qualquer participante pode remover outro.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Apenas anfitrião/coanfitrião tem essa permissão."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quem pode remover participantes?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Anfitrião e coanfitriões (conforme plataforma/plano). Participantes comuns não podem.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Em reunião com 100 participantes, como manter ordem?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Designar coanfitriões, desativar microfones por padrão, usar 'levantar mão', liberar fala por vez, compartilhar tela apenas pelo anfitrião.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Qualquer participante pode remover outro.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Apenas anfitrião/coanfitrião tem essa permissão.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

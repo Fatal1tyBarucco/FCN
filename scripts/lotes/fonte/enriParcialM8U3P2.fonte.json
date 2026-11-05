@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 3,
+    "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+    "parte": 2,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U3P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U3P2.js",
+    "idsCompletos": [
+      "m8-u3-t3-s1",
+      "m8-u3-t4-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u3-t3-s1",
+      "titulo": "Quartis, percentis e o método de posicionamento",
+      "topicoTitulo": "Quartis e percentis",
+      "topicoId": "modulo-8-unidade-3-topico-3",
+      "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno calculará percentis por interpolação linear e interpretará cortes percentílicos corretamente.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) quartis e percentis; (b) método de posicionamento; (c) cálculo e interpretação. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra o cálculo de quartis e percentis; diferentes métodos de posicionamento podem mudar o resultado. PRÉ-REQUISITOS: conceitos de ordenação e de mediana. OBJETIVOS OBSERVÁVEIS: (1) calcular quartis e percentis; (2) explicar o método de posicionamento; (3) interpretar. COMPETÊNCIAS DESENVOLVIDAS: análise de posição; leitura de distribuição. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.2 (box plot); unidade 8.3 (média). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: quartis como valores que dividem a série ordenada em quatro partes iguais (Q1=25%, Q2=50%=mediana, Q3=75%); percentis como generalização (P_k = k%); método de posicionamento: calcular a posição i = k·(n+1)/100 (ou k·n/100) e interpolar linearmente entre os valores adjacentes; diferenças entre métodos (exclusivo/inclusivo, interpolação) podem produzir resultados ligeiramente diferentes; interpretação: Q1 é o valor abaixo do qual estão 25% dos dados. Exemplo numérico: série ordenada de 9 valores: 2,4,6,8,10,12,14,16,18. Mediana (Q2) = 5º valor = 10. Q1: posição = 0,25·(9+1) = 2,5 → entre 2º (4) e 3º (6): 4 + 0,5·(6-4) = 5. Q3: posição = 0,75·10 = 7,5 → entre 7º (14) e 8º (16): 14 + 0,5·(16-14) = 15. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender quartis como divisão em quatro partes.\n- Nível intermediário: calcular Q1, Q2, Q3 por posicionamento.\n- Nível avançado: calcular percentis e interpolar.\n- Nível especialista: comparar métodos e auditar resultados.\nCOMPARAÇÕES CRÍTICAS:\n- quartis x percentis: quartis são casos especiais de percentis (25, 50, 75).\n- método exclusivo x inclusivo: diferem no tratamento da mediana na divisão.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"quartis são sempre os valores da série\" — Motivo: podem exigir interpolação — Versão tecnicamente correta: usar o método de posicionamento.\n- Afirmação errada: \"todos os softwares calculam quartis igual\" — Motivo: métodos diferem — Versão tecnicamente correta: verificar a implementação.\n- Afirmação errada: \"percentil 50 é diferente da mediana\" — Motivo: são o mesmo valor — Versão tecnicamente correta: P50 = mediana.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: quartil, percentil, posicionamento, interpolação, Q1, Q2, Q3.\n- Regras e fórmulas: posição = k·(n+1)/100; interpolação linear entre adjacentes.\n- Exceções: métodos diferem (exclusivo/inclusivo).\n- Palavras-chave: quartil, percentil, posicionamento, interpolação.\n- Checklist de domínio: (1) Calculo quartis? (2) Calculo percentis? (3) Explico posicionamento? (4) Comparo métodos?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é um quartil? (2) Como se calcula Q1? (3) O que é um percentil? (4) Como funciona a interpolação? (5) Por que métodos diferem?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular a mediana de 12, 18, 21, 25, 27, 30, 33, 38, 44, 60.",
+          "resposta": "n = 10 (par): a mediana é a média dos dois centrais ordenados (5º e 6º): (27 + 30) ÷ 2 = 28,5 — igual ao P50 obtido por interpolação (posição 5,5)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Interpretar Q1 = 22 e Q3 = 36,75 do conjunto acima.",
+          "resposta": "Um quarto dos valores está até 22; três quartis até 36,75; portanto a metade central ocupa 22–36,75, com IIQ de 14,75. Metade dos dados está concentrada nesse intervalo de 14,75 unidades — leitura que a média sozinha não daria."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'P90 = 45,6 significa que 90% dos indivíduos valem 45,6.'",
+          "correcao": "Errado. Percentil é CORTE, não valor frequente: 90% dos valores estão ABAIXO (ou até) 45,6, e os 10% restantes estão acima. Confundir corte percentílico com valor da maioria é erro clássico de interpretação."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O IIQ corresponde a Q3 − Q1 e mede a dispersão da metade central dos dados.",
+          "resposta": "Certo: 36,75 − 22 = 14,75 no exemplo trabalhado."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Nos dados 12, 18, 21, 25, 27, 30, 33, 38, 44, 60 (interpolação linear), Q1 é: A) 18; B) 21; C) 22; D) 25.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular percentis por interpolação linear e interpretará cortes percentílicos corretamente, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "calculará percentis por interpolação linear e interpretará cortes percentílicos corretamente"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) quartis e percentis; (b) método de posicionamento; (c) cálculo e interpretação. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra o cálculo de quartis e percentis; diferentes métodos de posicionamento podem mudar o resultado. PRÉ-REQUISITOS: conceitos de ordenação e de mediana. OBJETIVOS OBSERVÁVEIS: (1) calcular quartis e percentis; (2) explicar o método de posicionamento; (3) interpretar. COMPETÊNCIAS DESENVOLVIDAS: análise de posição; leitur…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Quartis, percentis e o método de posicionamento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'P90 = 45,6 significa que 90% dos indivíduos valem 45,6.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Percentil é CORTE, não valor frequente: 90% dos valores estão ABAIXO (ou até) 45,6, e os 10% restantes estão acima. Confundir corte percentílico com valor da maioria é erro clássico de interpretação."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Calcular a mediana de 12, 18, 21, 25, 27, 30, 33, 38, 44, 60.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "n = 10 (par): a mediana é a média dos dois centrais ordenados (5º e 6º): (27 + 30) ÷ 2 = 28,5 — igual ao P50 obtido por interpolação (posição 5,5).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Interpretar Q1 = 22 e Q3 = 36,75 do conjunto acima.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Um quarto dos valores está até 22; três quartis até 36,75; portanto a metade central ocupa 22–36,75, com IIQ de 14,75. Metade dos dados está concentrada nesse intervalo de 14,75 unidades — leitura que a média sozinha não daria.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'P90 = 45,6 significa que 90% dos indivíduos valem 45,6.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Percentil é CORTE, não valor frequente: 90% dos valores estão ABAIXO (ou até) 45,6, e os 10% restantes estão acima. Confundir corte percentílico com valor da maioria é erro clássico de interpretação.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u3-t4-s1",
+      "titulo": "Formas de distribuição, assimetria e tratamento de extremos",
+      "topicoTitulo": "Distribuições, assimetria e valores extremos",
+      "topicoId": "modulo-8-unidade-3-topico-4",
+      "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno classificará a forma de uma distribuição e decidirá o tratamento de valores extremos.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) formas de distribuição; (b) assimetria e seu efeito na média e mediana; (c) tratamento de extremos (outliers). POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a identificação de assimetria e o tratamento de extremos; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de média, mediana e dispersão. OBJETIVOS OBSERVÁVEIS: (1) classificar a assimetria; (2) explicar seu efeito na média e mediana; (3) descrever tratamento de extremos. COMPETÊNCIAS DESENVOLVIDAS: análise de distribuição; tratamento de dados. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.3 (média); unidade 8.2 (box plot). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: distribuições: simétrica (normal), assimétrica à direita (cauda longa à direita, média > mediana), assimétrica à esquerda (cauda longa à esquerda, média < mediana); assimetria afeta a escolha da medida de tendência central; extremos (outliers) podem ser erros de medição ou casos legítimos; tratamento: investigar, corrigir se erro, manter se legítimo, usar medidas robustas (mediana, IQR), transformação (log) quando apropriado. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer assimetria visualmente.\n- Nível intermediário: classificar assimetria e seu efeito.\n- Nível avançado: tratar extremos com justificativa.\n- Nível especialista: auditar um conjunto quanto a distribuição e extremos.\nCOMPARAÇÕES CRÍTICAS:\n- assimetria positiva x negativa: positiva tem cauda à direita e média > mediana; negativa tem cauda à esquerda e média < mediana.\n- remover outlier x manter: remover se erro; manter se legítimo e usar medidas robustas.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"assimetria não afeta a análise\" — Motivo: afeta a escolha da medida — Versão tecnicamente correta: avaliar a distribuição.\n- Afirmação errada: \"outliers devem sempre ser removidos\" — Motivo: podem ser casos legítimos — Versão tecnicamente correta: investigar antes.\n- Afirmação errada: \"transformação log sempre resolve assimetria\" — Motivo: depende da distribuição — Versão tecnicamente correta: testar e justificar.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: distribuição, assimetria, cauda, extremo, outlier, transformação.\n- Regras e mecanismos: assimetria positiva: média > mediana; negativa: média < mediana.\n- Exceções: extremos legítimos exigem medidas robustas.\n- Palavras-chave: distribuição, assimetria, cauda, extremo, outlier, transformação.\n- Checklist de domínio: (1) Classifico assimetria? (2) Explico efeito na média/mediana? (3) Trato extremos? (4) Justifico transformação?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é assimetria? (2) Como a assimetria afeta média e mediana? (3) O que são extremos? (4) Como tratar outliers? (5) Quando usar transformação log?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Distribuição com moda 8, mediana 8 e média ≈ 13,14 (dados 2, 4, 6, 8, 10, 12, 50). Que forma é essa?",
+          "resposta": "Assimétrica à direita: a média está bem acima da mediana porque a cauda estica para valores altos, puxada pelo 50. A leitura correta é reportar mediana (8) e IIQ, com nota sobre o extremo."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um posto registra média de espera 30 min com mediana 12 min. O gestor deve agir sobre o quê?",
+          "resposta": "Sobre as duas coisas, com diagnóstico antes: a mediana diz que a metade dos atendimentos é ágil; a média elevada indica cauda longa (alguns casos muito demorados). A ação proporcional é investigar os casos de cauda (ex.: serviços sem esteira) — atacar a mediana com medida geral desperdiça esforço."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Todo valor fora de 1,5 × IIQ é erro de dados e deve ser removido.'",
+          "correcao": "Errado. A regra identifica pontos ATÍPICOS, não incorretos. Remover sem investigar apaga informação real (fraudes, gargalos, casos raros) e melhora artificialmente os indicadores — operação de mascaramento, não de limpeza."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em distribuição assimétrica à direita, a média costuma ser maior que a mediana.",
+          "resposta": "Certo. A cauda à direita eleva a média, que é sensível a extremos; a mediana resiste."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Duas filas misturadas (picos em 5 e 25 minutos) produzem distribuição: A) simétrica; B) bimodal; C) uniforme; D) leptocúrtica.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar a forma de uma distribuição e decidirá o tratamento de valores extremos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "classificará a forma de uma distribuição e decidirá o tratamento de valores extremos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) formas de distribuição; (b) assimetria e seu efeito na média e mediana; (c) tratamento de extremos (outliers). POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a identificação de assimetria e o tratamento de extremos; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de média, mediana e dispersão. OBJETIVOS OBSERVÁVEIS: (1) classificar a assimetria; (2) explicar seu efeito na média e mediana; (3) descrever tratamento de extremos. COMPETÊ…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Formas de distribuição, assimetria e tratamento de extremos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Todo valor fora de 1,5 × IIQ é erro de dados e deve ser removido.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. A regra identifica pontos ATÍPICOS, não incorretos. Remover sem investigar apaga informação real (fraudes, gargalos, casos raros) e melhora artificialmente os indicadores — operação de mascaramento, não de limpeza."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Distribuição com moda 8, mediana 8 e média ≈ 13,14 (dados 2, 4, 6, 8, 10, 12, 50). Que forma é essa?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Assimétrica à direita: a média está bem acima da mediana porque a cauda estica para valores altos, puxada pelo 50. A leitura correta é reportar mediana (8) e IIQ, com nota sobre o extremo.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um posto registra média de espera 30 min com mediana 12 min. O gestor deve agir sobre o quê?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Sobre as duas coisas, com diagnóstico antes: a mediana diz que a metade dos atendimentos é ágil; a média elevada indica cauda longa (alguns casos muito demorados). A ação proporcional é investigar os casos de cauda (ex.: serviços sem esteira) — atacar a mediana com medida geral desperdiça esforço.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Todo valor fora de 1,5 × IIQ é erro de dados e deve ser removido.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. A regra identifica pontos ATÍPICOS, não incorretos. Remover sem investigar apaga informação real (fraudes, gargalos, casos raros) e melhora artificialmente os indicadores — operação de mascaramento, não de limpeza.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

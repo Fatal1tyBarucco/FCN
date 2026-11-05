@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 5,
+    "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U5P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U5P3.js",
+    "idsCompletos": [
+      "m3-u5-t2-s2",
+      "m3-u5-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u5-t2-s2",
+      "titulo": "Exposição em calendários e convites",
+      "topicoTitulo": "Exposição acidental de dados em comunicação",
+      "topicoId": "modulo-3-unidade-5-topico-2",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno analisará casos de exposição acidental em calendários.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como calendários e convites expõem dados; (b) os casos típicos; (c) as mitigações; (d) o princípio do menor privilégio. POR QUE O CONHECIMENTO É IMPORTANTE: convites frequentemente carregam dados e links sensíveis; a prova cobra a exposição em calendário. PRÉ-REQUISITOS: unidade 2.1 (calendários e convites). OBJETIVOS OBSERVÁVEIS: (1) citar formas de exposição; (2) explicar permissões excessivas; (3) aplicar mitigações; (4) minimizar dados no convite. COMPETÊNCIAS DESENVOLVIDAS: configuração segura de calendário; proteção de informação. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.1 (convites); unidade 5.1 (intrusão); Módulo 4 (menor privilégio). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: calendários e convites podem expor informação de diversas formas: detalhes sensíveis na descrição do evento visíveis a todos os convidados; compartilhamento público do calendário; convite contendo link de reunião aberto; e permissões excessivas, como conceder edição a todos. As mitigações: minimizar dados sensíveis na descrição (evitar incluir dados pessoais, senhas ou informação estratégica); restringir as permissões ao necessário; manter calendários sensíveis como privados ou compartilhados apenas com pessoas específicas; revisar a lista de convidados; e nunca incluir senhas no corpo do convite. O link de reunião no convite é um vetor: se o evento for público ou o convite for encaminhado, o link circula — por isso o controle de acesso da reunião (lobby, senha, login) importa. Em contexto institucional, um calendário público que revela agendas individuais pode ferir a privacidade; a prática é tratar a agenda conforme a sensibilidade do conteúdo e observar a proteção de dados.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: perceber que o evento pode ser visto por quem não se pretende.\n- Nível intermediário: aplicar permissões mínimas e revisar convidados.\n- Nível avançado: conciliar utilidade do calendário compartilhado com privacidade.\n- Nível especialista: revisar a configuração de agendas de uma equipe e eliminar exposições.\nCOMPARAÇÕES CRÍTICAS:\n- calendário público x privado: o primeiro expõe título, horário e descrição; o segundo restringe — muda a privacidade.\n- editor x somente leitura: o editor altera/cancela; a leitura só consulta — a permissão excessiva é risco.\n- link no convite x link controlado: o primeiro circula com o convite; o segundo é protegido por lobby/senha.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Descrição do evento é invisível aos convidados.\" — Motivo: é visível — Versão tecnicamente correta: minimizar dados sensíveis.\n- Afirmação errada: \"Compartilhar o calendário com edição facilita e não custa nada.\" — Motivo: permite alteração indevida — Versão tecnicamente correta: conceder o mínimo necessário.\n- Afirmação errada: \"Convite é canal seguro para enviar senha.\" — Motivo: o convite circula — Versão tecnicamente correta: não incluir senhas.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: calendário, convite, descrição, permissão, link, privacidade.\n- Regras e fórmulas: minimizar dados + permissão mínima + revisar convidados.\n- Exceções: agendas públicas exigem análise de sensibilidade.\n- Palavras-chave: evento, descrição, permissão, link, privacidade.\n- Checklist de domínio: (1) Cito formas de exposição? (2) Explico permissões? (3) Aplico mitigações? (4) Minimizo dados?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite três formas de exposição em calendário. (2) Por que a descrição importa? (3) Como o link do convite vira risco? (4) Que permissão conceder? (5) Por que não incluir senha?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quais dados evitar em descrição de evento?",
+          "resposta": "Senhas, dados pessoais, informações confidenciais; use referência a documento seguro."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como compartilhar calendário com segurança?",
+          "resposta": "Restringir permissões (visualização), evitar compartilhamento público, revisar convidados."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Calendário público não expõe informações.'",
+          "correcao": "Errado. Calendário público pode expor agenda, participantes e detalhes; evite em contextos sensíveis."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Incluir senha de reunião no convite é arriscado.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática é inadequada em convites? A) Minimizar dados sensíveis; B) Restringir permissões; C) Incluir senha no convite; D) Revisar convidados.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar casos de exposição acidental em calendários, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará casos de exposição acidental em calendários"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Casos: detalhes sensíveis na descrição do evento visíveis a todos os convidados; compartilhamento público de calendário; convite com link de reunião aberto; permissões excessivas (editor para todos). Mitigações: minimizar dados sensíveis na descrição; restringir permissões; usar calendários privados; revisar lista de convidados; não incluir senhas no convite.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exposição em calendários e convites",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Calendário público não expõe informações.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Calendário público pode expor agenda, participantes e detalhes; evite em contextos sensíveis."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quais dados evitar em descrição de evento?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Senhas, dados pessoais, informações confidenciais; use referência a documento seguro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como compartilhar calendário com segurança?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Restringir permissões (visualização), evitar compartilhamento público, revisar convidados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Calendário público não expõe informações.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Calendário público pode expor agenda, participantes e detalhes; evite em contextos sensíveis.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u5-t2-s3",
+      "titulo": "Exposição em plataformas de colaboração",
+      "topicoTitulo": "Exposição acidental de dados em comunicação",
+      "topicoId": "modulo-3-unidade-5-topico-2",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno analisará casos de exposição em plataformas de colaboração.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como plataformas de colaboração expõem dados; (b) os casos típicos; (c) as mitigações; (d) a condicionalidade das configurações. POR QUE O CONHECIMENTO É IMPORTANTE: links permissivos e canais abertos são vetores comuns de vazamento; a prova cobra causas e controles. PRÉ-REQUISITOS: unidade 4.2 (coautoria); noção de permissão de documento. OBJETIVOS OBSERVÁVEIS: (1) citar formas de exposição; (2) explicar links permissivos; (3) aplicar mitigações; (4) revisar acessos de ex-colaboradores. COMPETÊNCIAS DESENVOLVIDAS: gestão de permissões; prevenção de vazamento. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.2 (documentos); unidade 5.2 (e-mail); Módulo 4 (controle de acesso). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: plataformas de colaboração — repositórios de arquivos, wikis, canais de equipe — expõem dados quando as permissões são amplas demais ou o compartilhamento externo está liberado. Casos típicos: compartilhar um documento com \"qualquer pessoa com o link pode editar\"; manter um canal público com dados sensíveis; gerar notificação de conteúdo sensível em canal aberto; e deixar o histórico acessível a ex-colaboradores que deveriam ter o acesso revogado. As mitigações: revisar permissões periodicamente; usar grupos e equipes restritos em vez de canais abertos; remover o acesso de ex-colaboradores; desativar o compartilhamento externo quando não for necessário; e empregar recursos de prevenção de perda de dados quando disponíveis. As características específicas (tipos de link, escopo de compartilhamento, retenção de histórico) variam por plataforma e plano, devendo ser confirmadas na documentação oficial. O princípio estável é o do menor privilégio: conceder o acesso mínimo necessário e revogá-lo quando deixar de ser necessário.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: perceber que \"qualquer pessoa com o link\" amplia o acesso.\n- Nível intermediário: distinguir canal público de restrito e revisar permissões.\n- Nível avançado: revogar acessos e desativar compartilhamento externo.\n- Nível especialista: auditar o compartilhamento de uma organização e corrigir exposições.\nCOMPARAÇÕES CRÍTICAS:\n- link público x acesso restrito: o primeiro dispensa autenticação; o segundo exige — muda o risco.\n- canal público x equipe restrita: o primeiro é visível a muitos; a segunda limita o público.\n- permissão ativa x acesso residual: revogar o acesso ao sair é tão importante quanto conceder.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Compartilhar por link é conveniente e seguro.\" — Motivo: o link pode vazar — Versão tecnicamente correta: restringir a pessoas ou grupos.\n- Afirmação errada: \"Ex-colaborador perde o acesso automaticamente.\" — Motivo: nem sempre — Versão tecnicamente correta: revogar explicitamente.\n- Afirmação errada: \"Canal privado é impossível de vazar.\" — Motivo: membros podem copiar/compartilhar — Versão tecnicamente correta: combinar controle e conscientização.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: permissão, link público, canal, compartilhamento externo, revogação, menor privilégio.\n- Regras e fórmulas: acesso mínimo + revisão periódica + revogação = controle.\n- Exceções: nomes e escopos variam por plataforma/plano.\n- Palavras-chave: link, permissão, canal, ex-colaborador, DLP.\n- Checklist de domínio: (1) Cito formas de exposição? (2) Explico links permissivos? (3) Aplico mitigações? (4) Reviso acessos?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite três formas de exposição em plataformas. (2) Por que \"qualquer pessoa com o link\" é risco? (3) O que revisar periodicamente? (4) Por que revogar acesso de ex-colaborador? (5) O que é menor privilégio?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual risco de 'qualquer pessoa com o link pode editar'?",
+          "resposta": "Qualquer pessoa com o link (inclusive externos) pode editar/excluir conteúdo, sem controle de identidade."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como proteger documento colaborativo sensível?",
+          "resposta": "Restringir a usuários autenticados da organização, definir permissões de visualização/edição, desativar compartilhamento externo, revisar acessos periodicamente."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Compartilhamento por link é sempre seguro.'",
+          "correcao": "Errado. Depende das permissões associadas ao link; 'qualquer pessoa com o link' é de alto risco."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Revisar permissões periodicamente reduz exposição.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual permissão é mais arriscada para documento sensível? A) Somente visualização para usuários autenticados; B) Edição para usuários autenticados; C) Qualquer pessoa com link pode editar; D) Sem compartilhamento.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar casos de exposição em plataformas de colaboração, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará casos de exposição em plataformas de colaboração"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Casos: compartilhar link de documento com permissão 'qualquer pessoa com o link pode editar'; canal público com dados sensíveis; notificações em canal aberto; histórico acessível a ex-colaboradores. Mitigações: revisar permissões, usar grupos/teams restritos, remover acesso de ex-colaboradores, desativar compartilhamento externo quando não necessário, usar DLP. Características específicas variam por plataforma e plano.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exposição em plataformas de colaboração",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Compartilhamento por link é sempre seguro.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Depende das permissões associadas ao link; 'qualquer pessoa com o link' é de alto risco."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual risco de 'qualquer pessoa com o link pode editar'?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Qualquer pessoa com o link (inclusive externos) pode editar/excluir conteúdo, sem controle de identidade.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como proteger documento colaborativo sensível?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Restringir a usuários autenticados da organização, definir permissões de visualização/edição, desativar compartilhamento externo, revisar acessos periodicamente.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Compartilhamento por link é sempre seguro.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Depende das permissões associadas ao link; 'qualquer pessoa com o link' é de alto risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

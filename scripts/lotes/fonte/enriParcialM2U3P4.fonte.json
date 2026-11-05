@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 3,
+    "unidadeTitulo": "2.3 Protocolos",
+    "parte": 4,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U3P4",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U3P4.js",
+    "idsCompletos": [
+      "m2-u3-t3-s1",
+      "m2-u3-t3-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u3-t3-s1",
+      "titulo": "FTP, FTPS e SFTP",
+      "topicoTitulo": "FTP, FTPS, SFTP, SSH e ICMP",
+      "topicoId": "modulo-2-unidade-3-topico-3",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno diferenciará FTP, FTPS e SFTP quanto a protocolo base, portas, segurança e uso.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) FTP, FTPS e SFTP; (b) portas e modos do FTP; (c) a diferença entre FTPS e SFTP; (d) escolha segura. POR QUE O CONHECIMENTO É IMPORTANTE: transferência de arquivos é tarefa comum e alvo de ataques quando feita sem cifra; a prova distingue os protocolos. PRÉ-REQUISITOS: TCP; TLS; SSH. OBJETIVOS OBSERVÁVEIS: (1) descrever o FTP e suas conexões; (2) explicar mode ativo/passivo; (3) diferenciar FTPS de SFTP; (4) recomendar a opção segura. COMPETÊNCIAS DESENVOLVIDAS: escolha de protocolo seguro; leitura de configuração. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.4 (TLS); unidade 3.3 (SSH). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o FTP (File Transfer Protocol) transfere arquivos e usa DUAS conexões TCP: uma de controle (porta 21) e outra de dados (porta 20 no modo ativo, ou uma porta efêmera no modo passivo). No modo ativo, o servidor abre a conexão de dados de volta para o cliente, o que costuma falhar atrás de NAT/firewall; no modo passivo, é o cliente que se conecta ao servidor, sendo o preferido em redes atuais. O FTP não cifra credenciais nem dados, o que o torna inseguro em redes não confiáveis. O FTPS (FTP sobre SSL/TLS) acrescenta TLS às conexões (tipicamente mantendo a porta 21 para o controle e cifrando o canal de dados), autenticando o servidor e cifrando o conteúdo. Já o SFTP (SSH File Transfer Protocol) é um protocolo DIFERENTE, que roda sobre o SSH (porta 22), cifrando toda a sessão e permitindo autenticação por chave ou senha. O erro clássico de prova é confundir FTPS (FTP + TLS) com SFTP (SSH + transferência). Hoje, o SFTP é o mais recomendado por ser um único canal cifrado; o FTPS persiste por compatibilidade.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o FTP clássico não cifra.\n- Nível intermediário: explicar as duas conexões e os modos ativo/passivo.\n- Nível avançado: distinguir FTPS de SFTP quanto ao protocolo-base e à porta.\n- Nível especialista: escolher o protocolo conforme requisitos de segurança e infraestrutura.\nCOMPARAÇÕES CRÍTICAS:\n- FTPS x SFTP: o FTPS é FTP com TLS; o SFTP é SSH — mudam protocolo-base, porta e arquitetura.\n- modo ativo x passivo: no ativo o servidor conecta ao cliente (problemas com firewall); no passivo, o inverso.\n- FTP x SFTP: o primeiro é texto claro; o segundo é cifrado.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"SFTP e FTPS são a mesma coisa.\" — Motivo: derivam de protocolos distintos — Versão tecnicamente correta: FTPS = FTP+TLS; SFTP = sobre SSH.\n- Afirmação errada: \"O FTP usa uma só conexão.\" — Motivo: usa controle e dados — Versão tecnicamente correta: duas conexões TCP.\n- Afirmação errada: \"O modo ativo é o preferido hoje.\" — Motivo: falha com NAT/firewall — Versão tecnicamente correta: o modo passivo é preferido.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: FTP, FTPS, SFTP, porta 21, porta 20, modo ativo/passivo, TLS, SSH.\n- Regras e fórmulas: FTP = controle + dados; SFTP = SSH porta 22.\n- Exceções: portas de dados no modo passivo são negociadas dinamicamente.\n- Palavras-chave: transferência, cifra, canal, autenticação, compatibilidade.\n- Checklist de domínio: (1) Descrevo o FTP? (2) Explico os modos? (3) Diferencio FTPS de SFTP? (4) Recomendo o seguro?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quantas conexões o FTP usa? (2) Qual a diferença entre modo ativo e passivo? (3) O que é FTPS? (4) E SFTP? (5) Qual é o mais recomendado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que o FTP é considerado inseguro?",
+          "resposta": "Porque envia usuário, senha e dados em texto claro. Qualquer pessoa na rede pode capturar credenciais (sniffing)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um firewall bloqueia o modo ativo do FTP. Qual modo usar e por quê?",
+          "resposta": "Modo passivo — o cliente inicia a conexão de dados ao servidor, compatível com NAT/firewall que bloqueia conexões entrantes."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'FTPS e SFTP são o mesmo protocolo com nomes diferentes.'",
+          "correcao": "Errado. FTPS é FTP encapsulado em TLS (portas 21/20). SFTP é um subsistema do SSH (porta 22) com protocolo próprio. São implementações distintas."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O FTP usa duas conexões TCP: controle (21) e dados (20/passivo).",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual protocolo de transferência roda sobre SSH (porta 22)? A) FTPS; B) SFTP; C) TFTP; D) SCP apenas.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diferenciar FTP, FTPS e SFTP quanto a protocolo base, portas, segurança e uso, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diferenciará FTP, FTPS e SFTP quanto a protocolo base, portas, segurança e uso"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "FTP (File Transfer Protocol): protocolo de aplicação para transferência de arquivos, usa duas conexões TCP: controle (porta 21) e dados (porta 20 em modo ativo, ou porta efêmera em modo passivo). Não cifra credenciais nem dados — inseguro em redes não confiáveis. Modo ativo: servidor conecta de volta ao cliente (problema com NAT/firewall); modo passivo: cliente conecta ao servidor (preferido). FTPS (FTP over SSL/TLS): FTP com TLS sobre as mesmas portas (21 controle, dados em canal cifrado) — aut…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a FTP, FTPS e SFTP",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'FTPS e SFTP são o mesmo protocolo com nomes diferentes.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. FTPS é FTP encapsulado em TLS (portas 21/20). SFTP é um subsistema do SSH (porta 22) com protocolo próprio. São implementações distintas."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que o FTP é considerado inseguro?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque envia usuário, senha e dados em texto claro. Qualquer pessoa na rede pode capturar credenciais (sniffing).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um firewall bloqueia o modo ativo do FTP. Qual modo usar e por quê?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Modo passivo — o cliente inicia a conexão de dados ao servidor, compatível com NAT/firewall que bloqueia conexões entrantes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'FTPS e SFTP são o mesmo protocolo com nomes diferentes.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. FTPS é FTP encapsulado em TLS (portas 21/20). SFTP é um subsistema do SSH (porta 22) com protocolo próprio. São implementações distintas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u3-t3-s2",
+      "titulo": "SSH e ICMP",
+      "topicoTitulo": "FTP, FTPS, SFTP, SSH e ICMP",
+      "topicoId": "modulo-2-unidade-3-topico-3",
+      "unidadeTitulo": "2.3 Protocolos",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará as funções do SSH e do ICMP, suas portas/protocolos e usos de diagnóstico.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é o SSH e como protege o acesso remoto; (b) o que é o ICMP e suas funções; (c) portas e camadas; (d) usos de diagnóstico. POR QUE O CONHECIMENTO É IMPORTANTE: SSH substituiu o Telnet inseguro e o ICMP sustenta ping e traceroute; a prova cobra suas funções e diferenças. PRÉ-REQUISITOS: TCP; camada de rede; noção de diagnóstico. OBJETIVOS OBSERVÁVEIS: (1) explicar o SSH; (2) citar recursos (túneis, chaves); (3) descrever o ICMP; (4) associar ICMP a ping/traceroute. COMPETÊNCIAS DESENVOLVIDAS: acesso remoto seguro; interpretação de mensagens de controle. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.3 (SFTP); unidade 5.1 (ping/traceroute); unidade 3.3 (ARP/NDP). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o SSH (Secure Shell) é um protocolo de aplicação para acesso remoto seguro, execução de comandos e criação de túneis; usa TCP na porta 22. Ele autentica o servidor por uma chave de host e o cliente por senha ou chave pública, e cifra toda a sessão. Substituiu o Telnet (porta 23), que transmitia tudo em texto claro, inclusive a senha. Além do terminal remoto, o SSH oferece encaminhamento de portas (túneis) e é a base do SFTP e do SCP. O ICMP (Internet Control Message Protocol) é um protocolo da camada de REDE, auxiliar do IP, usado para mensagens de controle e erro: echo request/reply (base do ping), destination unreachable, time exceeded (base do traceroute) e redirect. O ICMP não transporta dados de aplicação e não possui portas. Embora seja essencial ao diagnóstico, pode ser bloqueado por firewalls, o que faz o ping falhar mesmo com TCP/UDP operantes — por isso o resultado do ping deve ser interpretado com cautela. No IPv6, o ICMPv6 integra o Neighbor Discovery (NDP). Distinguir o SSH (aplicação, porta 22) do ICMP (rede, sem porta) é ponto frequente de prova.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o SSH cifra e o Telnet não.\n- Nível intermediário: explicar autenticação por chave e túneis.\n- Nível avançado: situar o ICMP na camada de rede e relacionar a ping/traceroute.\n- Nível especialista: interpretar a ausência de resposta ao ICMP sem concluir queda de serviço.\nCOMPARAÇÕES CRÍTICAS:\n- SSH x Telnet: o primeiro cifra; o segundo é texto claro — muda a segurança.\n- ICMP x TCP/UDP: o ICMP é da camada de rede e não tem portas; TCP/UDP têm portas.\n- SSH x SFTP: o segundo roda SOBRE o SSH — um é acesso, o outro é transferência.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O ICMP tem portas.\" — Motivo: portas são do transporte — Versão tecnicamente correta: o ICMP não usa portas.\n- Afirmação errada: \"Ping falhar prova que o serviço caiu.\" — Motivo: o ICMP pode ser bloqueado — Versão tecnicamente correta: confirmar por outro protocolo.\n- Afirmação errada: \"Telnet é seguro como o SSH.\" — Motivo: o Telnet não cifra — Versão tecnicamente correta: o SSH é o substituto seguro.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: SSH, porta 22, chave de host, túnel, Telnet, ICMP, echo, time exceeded, ICMPv6/NDP.\n- Regras e fórmulas: SSH = aplicação (TCP 22); ICMP = rede, sem porta.\n- Exceções: firewalls podem bloquear o ICMP, afetando ping/traceroute.\n- Palavras-chave: acesso remoto, cifra, controle, erro, diagnóstico.\n- Checklist de domínio: (1) Explico o SSH? (2) Cito recursos? (3) Descrevo o ICMP? (4) Associo a ping/traceroute?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual porta o SSH usa? (2) O que ele substituiu? (3) O ICMP pertence a qual camada? (4) Que mensagens servem ao ping e ao traceroute? (5) O ICMP tem portas?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que SSH substituiu Telnet?",
+          "resposta": "Porque Telnet envia tudo em texto claro (credenciais capturáveis). SSH cifra a sessão e autentica o servidor, prevenindo MITM."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um administrador precisa acessar um servidor remoto de forma segura e transferir arquivos. Qual solução?",
+          "resposta": "SSH para acesso remoto (porta 22) e SFTP/SCP para transferência — tudo cifrado, autenticação por chave pública recomendada."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'ICMP é um protocolo de transporte como TCP e UDP.'",
+          "correcao": "Errado. ICMP é protocolo de controle da camada de rede (IP), sem portas e sem entrega de dados de aplicação. TCP/UDP são transporte."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) ICMP não possui números de porta.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual porta padrão do SSH? A) 21; B) 22; C) 23; D) 25.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar as funções do SSH e do ICMP, suas portas/protocolos e usos de diagnóstico, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará as funções do SSH e do ICMP, suas portas/protocolos e usos de diagnóstico"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "SSH (Secure Shell): protocolo de aplicação para acesso remoto seguro a sistemas, execução de comandos e túneis. Usa TCP porta 22. Autentica servidor (host key) e cliente (senha ou chave pública). Cifra toda a sessão. Substituiu Telnet (porta 23, texto claro). Permite port forwarding (túneis) e SFTP/SCP. ICMP (Internet Control Message Protocol): protocolo da camada de rede (não de transporte) para mensagens de controle e erro: echo request/reply (ping), destination unreachable, time exceeded (tra…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a SSH e ICMP",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'ICMP é um protocolo de transporte como TCP e UDP.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. ICMP é protocolo de controle da camada de rede (IP), sem portas e sem entrega de dados de aplicação. TCP/UDP são transporte."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que SSH substituiu Telnet?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Porque Telnet envia tudo em texto claro (credenciais capturáveis). SSH cifra a sessão e autentica o servidor, prevenindo MITM.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um administrador precisa acessar um servidor remoto de forma segura e transferir arquivos. Qual solução?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "SSH para acesso remoto (porta 22) e SFTP/SCP para transferência — tudo cifrado, autenticação por chave pública recomendada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'ICMP é um protocolo de transporte como TCP e UDP.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. ICMP é protocolo de controle da camada de rede (IP), sem portas e sem entrega de dados de aplicação. TCP/UDP são transporte.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

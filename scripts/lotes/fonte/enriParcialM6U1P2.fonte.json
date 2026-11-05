@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 6,
+    "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+    "unidade": 1,
+    "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+    "parte": 2,
+    "totalPartesUnidade": 4,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM6U1P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM6U1P2.js",
+    "idsCompletos": [
+      "m6-u1-t2-s1",
+      "m6-u1-t2-s2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m6-u1-t2-s1",
+      "titulo": "Legalidade e automação de atos administrativos: onde termina a automação",
+      "topicoTitulo": "Aplicação dos princípios ao desenho e à operação de sistemas e serviços digitais",
+      "topicoId": "modulo-6-unidade-1-topico-2",
+      "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno delimitará o que a automação de atos administrativos pode e não pode fazer, relacionará a digitalização de processos à base legal e à assinatura eletrônica e explicará por que automatizar não transfere nem cria competência.",
+      "conteudo": "AUTOMAÇÃO DE ATOS é o modo pelo qual a Administração pratica atos administrativos por meio de sistemas informatizados, com ou sem participação humana na decisão. O ponto de partida legal é a Lei nº 14.129/2021 (verificada em 2026-10-21): o art. 5º determina o uso de soluções digitais para a gestão de políticas finalísticas e administrativas e para o trâmite de processos administrativos eletrônicos; o art. 6º determina a prática dos atos processuais em meio eletrônico, com exceções expressas (solicitação do usuário, inviabilidade do procedimento, indisponibilidade do meio eletrônico ou risco de dano relevante à celeridade do processo) e, nas exceções, admite a prática posterior conforme as regras do processo em papel, desde que o documento-base seja digitalizado; o art. 7º exige assinatura eletrônica para a validade dos documentos e atos em meio digital, com observância de parâmetros de autenticidade, integridade e segurança adequados ao nível de risco em relação à criticidade da decisão, da informação ou do serviço; o art. 8º considera o ato processual realizado no dia e na hora do recebimento pelo sistema informatizado, que deve fornecer recibo eletrônico de protocolo, e fixa, no § 1º, o marco temporal de tempestividade até as 23h59 do último dia do prazo, no horário de Brasília; o art. 11 considera os documentos nativos digitais assinados eletronicamente originais para todos os efeitos legais. O QUE A AUTOMAÇÃO NÃO FAZ: (a) não cria competência — o sistema não pode decidir sobre o que o órgão não tem competência para decidir, ainda que o parâmetro esteja cadastrado; (b) não substitui a motivação — a decisão automatizada continua sendo ato administrativo e, por isso, precisa ser motivada (fatos, fundamentos, critério aplicado); (c) não afasta a publicidade e o contraditório — quem é afetado pelo resultado precisa poder saber a regra e contestá-la; (d) não neutraliza a responsabilidade — a assinatura eletrônica e os logs definem AUTOR, não eliminam dever de controle. REQUISITOS DE CONFORMIDADE COM A LEGALIDADE EM SISTEMAS DECISÓRIOS: (1) identificação da norma que atribui a competência e que define o critério; (2) critérios escritos, versionados e vigentes na data do fato; (3) registro do valor dos parâmetros usados na decisão (para reconstituição do caso); (4) trilha de auditoria que permita reconstruir a decisão; (5) canal de revisão humana para os casos de maior impacto; (6) trilha de gestão de risco e controle interno — a Lei nº 14.129/2021 exige sistema de gestão de riscos e de controle interno com controles internos proporcionais aos riscos, observada a relação custo-benefício (art. 48). PERGUNTAS DE AUDITORIA QUE RESOLVEM CASOS: qual norma autoriza? qual critério foi aplicado? quem configurou o critério e quando? o cidadão consegue saber e contestar? se o sistema estiver fora do ar, quem decide? A ausência de resposta para qualquer uma dessas perguntas é, ela própria, um achado de legalidade.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O órgão automatizou o deferimento automático de requerimentos de natureza simples. O que a legalidade exige que esteja documentado?",
+          "resposta": "A norma que atribui a competência e define o critério de deferimento; a versão do critério vigente na data; os registros de configuração (valores, regra, responsável pela alteração); a trilha de auditoria que reconstrói cada deferimento; a possibilidade de revisão e contestação; e o procedimento alternativo para indisponibilidade do sistema. A automatização acelera o atendimento (eficiência), mas não transfere a responsabilidade e não cria competência nova."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Uma rotina decide indeferimentos de requerimentos de benefício com base em regra cadastrada há dois anos, nunca revisada. Qual o problema e a providência?",
+          "resposta": "Dois problemas articulados. Primeiro, legalidade: a regra aplicada pode não corresponder mais à norma vigente (a lei muda; o parâmetro fica). Segundo, impessoalidade e moralidade: regras antigas podem espelhar critérios superados ou discriminatórios. Providência: versionamento obrigatório de regras com data de vigência, revisão periódica obrigatória (revisão do art. 29 da LAI para classificação de sigilo e, por analogia de governança, das regras de decisão), responsável nomeado e registro de alterações; além disso, reprocessamento ou revisão dos casos decididos sob a regra revista."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como a decisão foi tomada por sistema informatizado, o ato é impessoal e, por isso, não há necessidade de motivação nem de responsável.'",
+          "correcao": "Errado, e o erro tem duas partes. A automação não torna o ato impessoal por si só: a impessoalidade decorre do critério objetivo, definido previamente e auditável. E a motivação continua exigida: é ela que demonstra ao cidadão (e ao controle) o fundamento e o critério efetivamente aplicados. A assinatura eletrônica define autoria do ato (art. 7º da Lei nº 14.129/2021), mas o dever de resposta do órgão permanece (art. 34 da Lei nº 12.527/2011, quanto aos danos por divulgação ou uso indevido)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A automatização de um ato administrativo pode criar competência antes inexistente no ordenamento, desde que o ato seja sistematicamente mais eficiente.",
+          "resposta": "Errado. Automação é técnica de execução, não fonte de competência. A competência administrativa decorre da lei e do ato que a atribui; eficiência não é fundamento de competência. A conectividade do sistema é condição de execução, não requisito de validade da atribuição."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) Entre as medidas abaixo, a que NÃO é requisito de conformidade com a legalidade em sistema que decide sobre direitos do cidadão: A) identificação da norma que atribui a competência; B) versionamento do critério aplicado; C) registro do valor dos parâmetros usados na decisão; D) aumento da base instalada do parque de servidores.",
+          "resposta": "D. Medida de infraestrutura não é requisito de legalidade; as demais compõem a trilha que permite reconstituir e justificar a decisão."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de delimitar o que a automação de atos administrativos pode e não pode fazer, relacionará a digitalização de processos à base legal e à assinatura eletrônica e explicará por que automatizar não transfere nem cria competência, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "As0A-w1WmPI",
+          "titulo": "Sistemas de IA, IA no serviço público e em infraestruturas críticas",
+          "canal": "Câmara dos Deputados",
+          "urlOriginal": "https://www.youtube.com/watch?v=As0A-w1WmPI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/As0A-w1WmPI",
+          "descricao": "Videoaula institucional da Câmara dos Deputados sobre o uso de sistemas de inteligência artificial no serviço público e em infraestruturas críticas. Aborda os desafios éticos, legais e técnicos da automação de decisões administrativas, a necessidade de transparência algorítmica, explicabilidade, responsabilização humana, e os marcos normativos aplicáveis (Lei de Governo Digital, LGPD, Marco Legal da IA). Discute casos de uso em órgãos públicos e riscos de viés, discriminação algorítmica e concentração de poder decisório em sistemas opacos.",
+          "dataValidacao": "2026-11-03"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "delimitará o que a automação de atos administrativos pode e não pode fazer, relacionará a digitalização de processos à base legal e à assinatura eletrônica e explicará por que automatizar não transfere nem cria competência"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "AUTOMAÇÃO DE ATOS é o modo pelo qual a Administração pratica atos administrativos por meio de sistemas informatizados, com ou sem participação humana na decisão. O ponto de partida legal é a Lei nº 14.129/2021 (verificada em 2026-10-21): o art. 5º determina o uso de soluções digitais para a gestão de políticas finalísticas e administrativas e para o trâmite de processos administrativos eletrônicos; o art. 6º determina a prática dos atos processuais em meio eletrônico, com exceções expressas (sol…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Legalidade e automação de atos administrativos: onde termina a automação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como a decisão foi tomada por sistema informatizado, o ato é impessoal e, por isso, não há necessidade de motivação nem de responsável.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado, e o erro tem duas partes. A automação não torna o ato impessoal por si só: a impessoalidade decorre do critério objetivo, definido previamente e auditável. E a motivação continua exigida: é ela que demonstra ao cidadão (e ao controle) o fundamento e o critério efetivamente aplicados. A assinatura eletrônica define autoria do ato (art. 7º da Lei nº 14.129/2021), mas o dever de resposta do órgão permanece (art. 34 da Lei nº 12.527/2011, quanto aos danos por divulgação ou uso indevido)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O órgão automatizou o deferimento automático de requerimentos de natureza simples. O que a legalidade exige que esteja documentado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A norma que atribui a competência e define o critério de deferimento; a versão do critério vigente na data; os registros de configuração (valores, regra, responsável pela alteração); a trilha de auditoria que reconstrói cada deferimento; a possibilidade de revisão e contestação; e o procedimento alternativo para indisponibilidade do sistema. A automatização acelera o atendimento (eficiência), mas não transfere a responsabilidade e não cria competência nova.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Uma rotina decide indeferimentos de requerimentos de benefício com base em regra cadastrada há dois anos, nunca revisada. Qual o problema e a providência?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dois problemas articulados. Primeiro, legalidade: a regra aplicada pode não corresponder mais à norma vigente (a lei muda; o parâmetro fica). Segundo, impessoalidade e moralidade: regras antigas podem espelhar critérios superados ou discriminatórios. Providência: versionamento obrigatório de regras com data de vigência, revisão periódica obrigatória (revisão do art. 29 da LAI para classificação de sigilo e, por analogia de governança, das regras de decisão), responsável nomeado e registro de alterações; além disso, reprocessamento ou revisão dos casos decididos sob a regra revista.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como a decisão foi tomada por sistema informatizado, o ato é impessoal e, por isso, não há necessidade de motivação nem de responsável.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado, e o erro tem duas partes. A automação não torna o ato impessoal por si só: a impessoalidade decorre do critério objetivo, definido previamente e auditável. E a motivação continua exigida: é ela que demonstra ao cidadão (e ao controle) o fundamento e o critério efetivamente aplicados. A assinatura eletrônica define autoria do ato (art. 7º da Lei nº 14.129/2021), mas o dever de resposta do órgão permanece (art. 34 da Lei nº 12.527/2011, quanto aos danos por divulgação ou uso indevido).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m6-u1-t2-s2",
+      "titulo": "Impessoalidade, moralidade e publicidade: critérios de tratamento, explicabilidade e controle",
+      "topicoTitulo": "Aplicação dos princípios ao desenho e à operação de sistemas e serviços digitais",
+      "topicoId": "modulo-6-unidade-1-topico-2",
+      "unidadeTitulo": "6.1 Princípios constitucionais da Administração Pública e aplicação a sistemas e serviços digitais",
+      "moduloTitulo": "ÉTICA E RESPONSABILIDADE DIGITAL NO SERVIÇO PÚBLICO",
+      "objetivoAprendizagem": "Aluno diagnosticará violações de impessoalidade e moralidade em decisões automatizadas, distinguirá impessoalidade de indiferença e de uniformidade desnecessária, e explicará a relação entre critérios ocultos, explicabilidade e publicidade.",
+      "conteudo": "IMPESSOALIDADE NO SERVIÇO DIGITAL significa que o resultado do sistema independe da preferência, do interesse ou da relação pessoal de quem o opera ou de quem é por ele afetado, e que casos iguais recebem tratamento igual. Consequência prática: os critérios de ordenação, de pontuação, de aprovação, de exibição e de priorização precisam ser (i) definidos previamente, (ii) escritos, (iii) comunicáveis ao cidadão e (iv) auditáveis. Critério oculto é, simultaneamente, violação de impessoalidade (não se pode demonstrar igualdade de tratamento) e de publicidade (não se pode publicizar como se decide). DISTINÇÕES IMPORTANTES: impessoalidade NÃO é indiferença nem ausência de contexto — a lei pode determinar tratamento diferenciado (ex.: art. 31, § 4º, da Lei nº 12.527/2011 veda invocar a restrição de acesso de dado pessoal para prejudicar apuração de irregularidades; a LGPD admite hipóteses específicas de tratamento, art. 4º, verificado em 2026-10-20); o que não pode é o critério ser definido por preferência pessoal, por interesse de cliente ou por identificador de cliente sem ancoragem normativa. Impessoalidade formal (regra escrita) e impessoalidade material (resultado efetivamente igual) podem divergir: um sistema pode aplicar a mesma regra e ainda assim tratar desigualmente se o dado de entrada reflete desigualdade estrutural — daí a necessidade de análise por subgrupo (Módulo 5) e de avaliação de impacto. MORALIDADE NO SERVIÇO DIGITAL: (i) compatibilidade entre a finalidade declarada e a finalidade real do tratamento (recolher dados de saúde para «melhorar o atendimento» e usá-los para ranking é desvio de finalidade); (ii) vedação ao uso oportunista de dado de terceiro (deixar o cidadão «aceitar» termos irrelevantes para obter dado de geolocalização); (iii) honestidade na comunicação do serviço (não prometer atendimento digital que, na prática, não existe em área sem cobertura); (iv) integridade na representação institucional (não atribuir ao órgão opinião de terceiros ou conteúdo gerado por IA sem revisão); (v) neutralidade e não discriminação no desenho de critérios de conteúdo; (vi) respeito à vedação do uso de dados de terceiros para finalidade diversa. PUBLICIDADE COMO TESTE DE IMPESSOALIDADE: o critério de decisão é parte da informação pública sobre a atividade do órgão (art. 3º, V, e art. 7º, V, da Lei nº 12.527/2011 — verificados), e a transparência ativa exige descrição suficiente da estrutura e da semântica dos dados (art. 29, § 1º, III, da Lei nº 14.129/2021 — verificado). EXPLICABILIDADE E REVISÃO: um sistema que nega benefício precisa permitir que o servidor ou o cidadão identifique o motivo aplicável (critério, valor, regra vigente), e um canal de revisão humana para casos de maior impacto; explicabilidade aqui não é o mesmo que «explicação interna do modelo»: é a capacidade de reconstruir o motivo do caso concreto a partir de registro. DOCUMENTAÇÃO EXIGÍVEL: manual de regras de decisão (com vigência), catálogo de dados com finalidade e origem (art. 25, § 1º, I, da Lei nº 14.129/2021), registro de incidentes de tratamento e de decisões contestadas, e plano de correção. ERROS QUE AVALIAM O SERVIÇO: «o algoritmo é neutro porque é matemático» (falso — o modelo aprende com dados humanos e com critérios humanos); «impessoalidade exige o mesmo resultado para todos» (falso — exige o mesmo critério, não o mesmo resultado, e a lei pode exigir diferenciação); «publicar o critério pode inviabilizar a operação» (falso — a LAI e a Lei de Governo Digital exigem publicização e os riscos são administrados por controle de acesso, não por opacidade do critério).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O portal de fila exibe «sua posição na fila» sem informar os critérios. Qual a violação mais evidente e por que não basta corrigir apenas a impessoalidade?",
+          "resposta": "Publicidade: o cidadão não tem como saber como sua posição foi determinada, o que impede controlar a atividade do órgão e alimenta o uso de critério oculto. A impessoalidade está em risco no mesmo ato, porque sem critério escrito e comunicável não se demonstra tratamento igualitário. Corrigir só a impessoalidade (escrever o critério) sem publicar (divulgar o critério e a versão vigente) deixa metade do problema."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um modelo de priorização foi treinado com dados históricos de uma região com equipe subdimensionada e erra sistematicamente em outra. O sistema é legal? É impessoal?",
+          "resposta": "Pode ser legal (há norma e competência) e, ainda assim, materialmente impessoal: a mesma regra produziu tratamento desigual para pessoas em situação análoga, por defasagem de dados de treino (viés de dados, Módulo 5). Moralidade está em debate: manter o modelo ciente da defasagem e sem correção, sabendo que ele penaliza certo território. Providência: avaliação de impacto por subgrupo, ciclo de retreinamento, e revisão humana dos casos nas regiões com erro concentrado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Como o sistema aplica a mesma regra para todos, está automaticamente em conformidade com o princípio da impessoalidade.'",
+          "correcao": "Errado. Impessoalidade material exige igualdade de tratamento para casos iguais; aplicar uniformemente uma regra treinada com dados enviesados pode produzir desvio desigual de forma sistemática, o que é o oposto do princípio. Além disso, a impessoalidade exige critério definido previamente, escrito e auditável — o que a simples constância de execução não prova."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(questão autoral — C/E) A impessoalidade permite que o critério de decisão seja definido com base no interesse do servidor público responsável pelo atendimento, desde que a decisão não prejudique o cidadão.",
+          "resposta": "Errado. Impessoalidade exige desvinculação do arbítrio e do interesse pessoal; critério pessoal é precisamente a violação. E a ausência de prejuízo individual visível não sana o vício: o princípio é estrutural, e a forma devida de introduzir uma qualificação é a norma, não a preferência do agente."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "(questão autoral) São medidas que efetivamente protegem a impessoalidade em sistema de triagem: A) registro da versão e dos parâmetros da regra; B) canal de revisão humana; C) teste de impacto por subgrupo; D) aumento do número de servidores na central.",
+          "resposta": "A, B e C. A medida D é de capacidade operacional e não constitui controle de impessoalidade."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de diagnosticar violações de impessoalidade e moralidade em decisões automatizadas, distinguirá impessoalidade de indiferença e de uniformidade desnecessária, e explicará a relação entre critérios ocultos, explicabilidade e publicidade, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "r7dYNidpM3k",
+          "titulo": "Comunicação Descomplicada no Serviço Público: Linguagem Simples, Inteligência Artificial",
+          "canal": "Governança com Inovação e Sustentabilidade",
+          "urlOriginal": "https://www.youtube.com/watch?v=r7dYNidpM3k",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/r7dYNidpM3k",
+          "descricao": "Videoaula sobre comunicação clara e linguagem simples no serviço público, com foco no uso de inteligência artificial para descomplicar textos oficiais. Aborda a Lei nº 14.129/2021 (art. 3º, VII - linguagem clara), técnicas de plain language, ferramentas de IA para simplificação e revisão de textos administrativos, acessibilidade comunicacional, e como a clareza fortalece a transparência, a impessoalidade e a eficiência na relação com o cidadão.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "diagnosticará violações de impessoalidade e moralidade em decisões automatizadas, distinguirá impessoalidade de indiferença e de uniformidade desnecessária, e explicará a relação entre critérios ocultos, explicabilidade e publicidade"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "IMPESSOALIDADE NO SERVIÇO DIGITAL significa que o resultado do sistema independe da preferência, do interesse ou da relação pessoal de quem o opera ou de quem é por ele afetado, e que casos iguais recebem tratamento igual. Consequência prática: os critérios de ordenação, de pontuação, de aprovação, de exibição e de priorização precisam ser (i) definidos previamente, (ii) escritos, (iii) comunicáveis ao cidadão e (iv) auditáveis. Critério oculto é, simultaneamente, violação de impessoalidade (não…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Impessoalidade, moralidade e publicidade: critérios de tratamento, explicabilidade e controle",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Como o sistema aplica a mesma regra para todos, está automaticamente em conformidade com o princípio da impessoalidade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Impessoalidade material exige igualdade de tratamento para casos iguais; aplicar uniformemente uma regra treinada com dados enviesados pode produzir desvio desigual de forma sistemática, o que é o oposto do princípio. Além disso, a impessoalidade exige critério definido previamente, escrito e auditável — o que a simples constância de execução não prova."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O portal de fila exibe «sua posição na fila» sem informar os critérios. Qual a violação mais evidente e por que não basta corrigir apenas a impessoalidade?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Publicidade: o cidadão não tem como saber como sua posição foi determinada, o que impede controlar a atividade do órgão e alimenta o uso de critério oculto. A impessoalidade está em risco no mesmo ato, porque sem critério escrito e comunicável não se demonstra tratamento igualitário. Corrigir só a impessoalidade (escrever o critério) sem publicar (divulgar o critério e a versão vigente) deixa metade do problema.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um modelo de priorização foi treinado com dados históricos de uma região com equipe subdimensionada e erra sistematicamente em outra. O sistema é legal? É impessoal?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Pode ser legal (há norma e competência) e, ainda assim, materialmente impessoal: a mesma regra produziu tratamento desigual para pessoas em situação análoga, por defasagem de dados de treino (viés de dados, Módulo 5). Moralidade está em debate: manter o modelo ciente da defasagem e sem correção, sabendo que ele penaliza certo território. Providência: avaliação de impacto por subgrupo, ciclo de retreinamento, e revisão humana dos casos nas regiões com erro concentrado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Como o sistema aplica a mesma regra para todos, está automaticamente em conformidade com o princípio da impessoalidade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Impessoalidade material exige igualdade de tratamento para casos iguais; aplicar uniformemente uma regra treinada com dados enviesados pode produzir desvio desigual de forma sistemática, o que é o oposto do princípio. Além disso, a impessoalidade exige critério definido previamente, escrito e auditável — o que a simples constância de execução não prova.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

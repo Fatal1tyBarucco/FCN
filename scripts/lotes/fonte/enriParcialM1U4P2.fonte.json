@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 4,
+    "unidadeTitulo": "1.4 Microsoft PowerPoint",
+    "parte": 2,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U4P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U4P2.js",
+    "idsCompletos": [
+      "modulo-1-unidade-4-topico-1-sub-3",
+      "modulo-1-unidade-4-topico-1-sub-4"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-4-topico-1-sub-3",
+      "titulo": "Inserção de mídia, gráficos e objetos em slides",
+      "topicoTitulo": "Apresentações, layouts, animações e apresentação",
+      "topicoId": "modulo-1-unidade-4-topico-1",
+      "unidadeTitulo": "1.4 Microsoft PowerPoint",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno inserirá mídia, gráficos e objetos em slides e encadeará texto ao redor.",
+      "conteudo": "O PowerPoint permite inserir mídia (imagem, vídeo, áudio), tabelas, gráficos e objetos (formas, texto, gráficos do Excel) em slides. Inserção de imagem: Inserir > Imagem > Local ou Online; a imagem entra como objeto com dimensionamento via manipuladores. Inserção de vídeo: Inserir > Vídeo > Local ou Online (YouTube por URL); mídia online exige conexão durante a apresentação. Inserção de áudio: Inserir > Áudio. Tabela: Inserir > Tabela (grade ou desenho manual). Gráfico: Inserir > Gráfico; para manter conexão com dados, usar gráfico vinculado ao Excel. Formas: Inserir > Formas (retângulos, setas, figuras) com texto associado. Encadear texto: selecionar o objeto e usar Layout > Encadear (Enquadrar, Barrar, etc.) ou clicar na borda do objeto. Agrupar: selecionar objetos e aplicar Grupo para movimentar/editar como unidade. Agrupamento e encadear alteram a interação de edição.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Inserir uma imagem local em um slide.",
+          "resposta": "Inserir > Imagem > Localizar imagem; a imagem é inserida como objeto e pode ser dimensionada via manipuladores de borda."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Inserir vídeo do YouTube em um slide a partir de URL.",
+          "resposta": "Inserir > Vídeo > Online Video; colar a URL; o slide passa a exibir o vídeo (exige conexão na apresentação)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a tabela inserida no slide se atualiza automaticamente se a fonte de dados do Excel mudar.",
+          "correcao": "Incorreto: tabela/gráfico inserido de forma estática não se atualiza; para atualização de dados use gráfico vinculado ao Excel."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual comando insere vídeo online em um slide? A) Inserir > Imagem; B) Inserir > Áudio; C) Inserir > Vídeo > Online Video.",
+          "resposta": "C"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O encadear texto (wrap) pode ser aplicado a qualquer objeto de slide.",
+          "resposta": "Certo."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de inserir mídia, gráficos e objetos em slides e encadeará texto ao redor, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "inserirá mídia, gráficos e objetos em slides e encadeará texto ao redor"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O PowerPoint permite inserir mídia (imagem, vídeo, áudio), tabelas, gráficos e objetos (formas, texto, gráficos do Excel) em slides. Inserção de imagem: Inserir > Imagem > Local ou Online; a imagem entra como objeto com dimensionamento via manipuladores. Inserção de vídeo: Inserir > Vídeo > Local ou Online (YouTube por URL); mídia online exige conexão durante a apresentação. Inserção de áudio: Inserir > Áudio. Tabela: Inserir > Tabela (grade ou desenho manual). Gráfico: Inserir > Gráfico; para m…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Inserção de mídia, gráficos e objetos em slides",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que a tabela inserida no slide se atualiza automaticamente se a fonte de dados do Excel mudar.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: tabela/gráfico inserido de forma estática não se atualiza; para atualização de dados use gráfico vinculado ao Excel."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Inserir uma imagem local em um slide.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Inserir > Imagem > Localizar imagem; a imagem é inserida como objeto e pode ser dimensionada via manipuladores de borda.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Inserir vídeo do YouTube em um slide a partir de URL.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Inserir > Vídeo > Online Video; colar a URL; o slide passa a exibir o vídeo (exige conexão na apresentação).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que a tabela inserida no slide se atualiza automaticamente se a fonte de dados do Excel mudar.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: tabela/gráfico inserido de forma estática não se atualiza; para atualização de dados use gráfico vinculado ao Excel.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-4-topico-1-sub-4",
+      "titulo": "Compatibilidade de fontes, mídia e formatos (.ppt vs .pptx)",
+      "topicoTitulo": "Apresentações, layouts, animações e apresentação",
+      "topicoId": "modulo-1-unidade-4-topico-1",
+      "unidadeTitulo": "1.4 Microsoft PowerPoint",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno avaliar e garantir compatibilidade de apresentações entre máquinas e versões.",
+      "conteudo": "A apresentação deve funcionar em máquinas e versões diferentes. Formato .ppt (binário, PowerPoint 97-2003) e .pptx (Open XML, padrão desde 2007): ao abrir .ppt em versões modernas o arquivo pode ser convertido; a prática recomendada é salvar como .pptx. Fontes: a fonte usada nos slides deve existir na máquina de destino (projetor, outro computador); caso não exista, o PowerPoint aplica fonte substituta, o que pode alterar a aparência. Fontes padrão (Calibri, Arial) reduzem risco de substituição. Mídia: arquivos locais inseridos (imagem, vídeo) devem existir na máquina de destino; mídia online exige conexão. Mídia quebrada: referências podem falhar ao mover o arquivo; testar em máquina de destino. Para apresentação offline: Empacotar Apresentação para CD (Package Presentation) com fontes vinculadas e mídia. Exportação para PDF preserva layout. A compatibilidade também abrange a versão: recursos como animações podem não existir em versões antigas; ao distribuir, registrar a versão mínima exigida.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Identificar o formato recomendado para distribuição de apresentação.",
+          "resposta": ".pptx (Open XML) é o formato padrão desde 2007; o .ppt é binário e legado, com risco de conversão ao abrir em versões modernas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Preparar apresentação para projeção offline em equipamento sem internet.",
+          "resposta": "Empacotar Apresentação para CD (Package Presentation) com fontes vinculadas e mídia; verificar fontes na máquina de destino."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que a fonte de título aplicada em um slide será mantida em qualquer máquina de destino.",
+          "correcao": "Incorreto: a fonte deve existir na máquina de destino ou o PowerPoint aplicará substituta; usar fontes padrão para evitar risco."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Ao distribuir uma apresentação para outra máquina, o que deve ser verificado quanto a fontes? A) Que a fonte seja exclusiva do criador; B) Que a fonte usada exista na máquina de destino ou seja substituída de forma previsível; C) Que a fonte seja sempre embutida no arquivo .pptx.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Um arquivo .ppt aberto em versões modernas não pode apresentar incompatibilidades de formato.",
+          "resposta": "Errado. O .ppt pode ser convertido/aberto com limitações em versões modernas; o .pptx é o formato recomendado."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de avaliar e garantir compatibilidade de apresentações entre máquinas e versões, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "avaliar e garantir compatibilidade de apresentações entre máquinas e versões"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A apresentação deve funcionar em máquinas e versões diferentes. Formato .ppt (binário, PowerPoint 97-2003) e .pptx (Open XML, padrão desde 2007): ao abrir .ppt em versões modernas o arquivo pode ser convertido; a prática recomendada é salvar como .pptx. Fontes: a fonte usada nos slides deve existir na máquina de destino (projetor, outro computador); caso não exista, o PowerPoint aplica fonte substituta, o que pode alterar a aparência. Fontes padrão (Calibri, Arial) reduzem risco de substituição.…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Compatibilidade de fontes, mídia e formatos (.ppt vs .pptx)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que a fonte de título aplicada em um slide será mantida em qualquer máquina de destino.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: a fonte deve existir na máquina de destino ou o PowerPoint aplicará substituta; usar fontes padrão para evitar risco."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Identificar o formato recomendado para distribuição de apresentação.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": ".pptx (Open XML) é o formato padrão desde 2007; o .ppt é binário e legado, com risco de conversão ao abrir em versões modernas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Preparar apresentação para projeção offline em equipamento sem internet.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Empacotar Apresentação para CD (Package Presentation) com fontes vinculadas e mídia; verificar fontes na máquina de destino.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que a fonte de título aplicada em um slide será mantida em qualquer máquina de destino.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: a fonte deve existir na máquina de destino ou o PowerPoint aplicará substituta; usar fontes padrão para evitar risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

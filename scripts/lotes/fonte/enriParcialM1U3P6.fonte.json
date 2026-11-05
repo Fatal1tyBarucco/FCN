@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 3,
+    "unidadeTitulo": "1.3 Microsoft Excel",
+    "parte": 6,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U3P6",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U3P6.js",
+    "idsCompletos": [
+      "modulo-1-unidade-3-topico-6-sub-1",
+      "modulo-1-unidade-3-topico-6-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-3-topico-6-sub-1",
+      "titulo": "Power Query: importação, limpeza e transformação de dados",
+      "topicoTitulo": "Importação, proteção, desempenho e compatibilidade",
+      "topicoId": "modulo-1-unidade-3-topico-6",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá a importação, limpeza e transformação de dados com Power Query.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o que é o Power Query e o problema que resolve (importação e transformação repetível de dados externos); (b) as fontes de importação típicas (CSV, web, banco de dados, pasta); (c) as transformações básicas (remover colunas, filtrar, mesclar, acrescentar, definir tipo, coluna personalizada); (d) o modelo de etapas gravadas e a atualização; (e) a relação com ETL e a linguagem M. POR QUE O CONHECIMENTO É IMPORTANTE: a prova descreve cenários de importação e limpeza e pede a ferramenta e o comportamento corretos; afirmar atualização automática ao mudar o arquivo-fonte, ou trocar Power Query por Power Pivot, muda o gabarito. PRÉ-REQUISITOS: estrutura de dados do Excel (tópico 1). OBJETIVOS OBSERVÁVEIS: (1) importar uma fonte e iniciar a transformação; (2) aplicar transformações básicas; (3) explicar o modelo de etapas e a atualização; (4) posicionar o Power Query no fluxo ETL. COMPETÊNCIAS DESENVOLVIDAS: preparação de dados; automação de rotina de importação. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: tabelas estruturadas (tópico 1); Módulo 7 (limpeza e transformação de dados); Módulo 8 (ferramentas — Power Query/Power BI). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média a alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: Power Query é a tecnologia do Excel (e do ecossistema de BI) para obter e transformar dados — no Excel, acessível por Dados > Obter Dados. Fontes típicas: arquivo de texto/CSV, dados da web, banco de dados, pasta com vários arquivos. Fluxo de trabalho: conectar à fonte > Transformar Dados (abre o editor do Power Query) > aplicar transformações > Fechar e Carregar (entrega o resultado numa planilha ou na Tabela Dinâmica do modelo de dados). Transformações básicas: remover colunas, filtrar linhas, alterar tipo de dados (texto, número, data — a definição de tipo é etapa obrigatória para cálculo correto), dividir/renomear colunas, mesclar consultas (junção de duas consultas por coluna-chave, com tipo de junção) e acrescentar consultas (empilhar linhas de fontes iguais). Modelo de etapas: cada transformação é gravada como etapa da consulta; as etapas são reaplicadas, em ordem, sempre que os dados são atualizados — por isso a preparação é repetível: novo arquivo com a mesma estrutura recebe automaticamente as mesmas limpezas ao executar Atualizar. Linguagem M: a linguagem de fórmulas que descreve as etapas por trás da interface gráfica; o usuário comum opera pelas caixas de diálogo, e a edição avançada usa o M. Relação com ETL: o Power Query realiza extração, transformação e carregamento dentro do Excel (visão introdutória de ETL aprofundada no Módulo 7). Limitações: a atualização não é automática ao mudar o arquivo-fonte — é preciso executar Atualizar; a disponibilidade e os conectores dependem da versão/plano. O simulador Excel deste projeto não executa Power Query (limitação declarada): o conteúdo é teórico para provas.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: importar um CSV e carregá-lo numa planilha sem transformar nada.\n- Nível intermediário: remover colunas, filtrar linhas e definir tipos; carregar o resultado; executar Atualizar após trocar o CSV.\n- Nível avançado: mesclar duas consultas por chave e acrescentar consultas iguais; entender as etapas gravadas no editor.\n- Nível especialista: desenhar rotina mensal de importação (pasta de arquivos padronizada) e explicar por que a preparação gravada elimina retrabalho manual; diagnosticar erro de tipo de dado que quebra cálculos.\n\nCOMPARAÇÕES CRÍTICAS:\n- Power Query x Power Pivot: Power Query importa e transforma (ETL de entrada); Power Pivot modela e calcula em modelo de dados — para \"limpar e estruturar CSV recebido mensalmente\", o gabarito é Power Query.\n- Transformação gravada x edição manual: transformação manual na planilha não se repete no próximo arquivo; a consulta do Power Query reaplica as etapas — em questão sobre rotina repetível, o gabarito é a consulta.\n- Atualizar x atualização automática: a consulta reflete o arquivo-fonte apenas ao executar Atualizar — prometer reflexo automático é a pegadinha clássica.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"o Power Query atualiza automaticamente os dados quando o arquivo-fonte muda\" — Motivo: generaliza o recálculo de fórmulas — Versão tecnicamente correta: as etapas gravadas são reaplicadas ao executar Atualizar; sem essa ação, a carga permanece no estado anterior.\n- Afirmação errada: \"Power Query e Power Pivot são a mesma ferramenta\" — Motivo: troca entre ferramentas do ecossistema — Versão tecnicamente correta: Power Query obtém e transforma dados; Power Pivot modela e calcula sobre o modelo de dados.\n- Afirmação errada: \"as transformações do Power Query alteram o arquivo-fonte\" — Motivo: confunde leitura com edição — Versão tecnicamente correta: as transformações ocorrem na cópia em memória da consulta; o arquivo-fonte permanece intacto.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Obter Dados, editor do Power Query, etapas gravadas, tipos de dados, mesclar/acrescentar consultas, Fechar e Carregar, linguagem M.\n- Regras e fórmulas: rotina repetível = consulta gravada + Atualizar; junção por chave = mesclar; empilhar fontes iguais = acrescentar.\n- Exceções: atualização não é automática; conectores e disponibilidade dependem de versão/plano; simulador não executa Power Query.\n- Palavras-chave: Power Query, Obter Dados, ETL, linguagem M, mesclar, acrescentar, tipo de dado, Atualizar.\n- Checklist de domínio: importo fonte; aplico transformações básicas; explico etapas gravadas e atualização; distingo Query de Pivot; não prometo atualização automática.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Qual ferramenta do Excel importa e transforma dados de fontes externas? (2) A planilha carregada não reflete o novo CSV entregue hoje: qual ação executa? (3) O que acontece com o arquivo-fonte ao aplicar transformações? (4) Qual a função da linguagem M? (5) Como uma consulta torna a limpeza mensal repetível?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Importar um arquivo CSV e remover colunas vazias.",
+          "resposta": "Dados > Obter Dados > De Arquivo > De Texto/CSV > selecionar o arquivo > Transformar Dados > no editor, selecionar as colunas vazias > Remover Colunas > Fechar e Carregar. O resultado chega à planilha como tabela, e a consulta guarda as etapas aplicadas."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Todo mês chega um CSV de execuções com colunas extras e datas em texto; a análise precisa só de Data, Valor e Status, com Data como tipo data.",
+          "resposta": "Criar a consulta uma vez: Obter Dados > De Texto/CSV > Transformar Dados > remover as colunas desnecessárias > selecionar Data > Alterar Tipo > Data > (Status e Valor, conferir tipos) > Fechar e Carregar. No mês seguinte, substituir o arquivo pela nova versão e executar Atualizar: as etapas gravadas reaplicam sozinhas a remoção e a conversão de tipo — sem retrabalho manual."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Duas planilhas (contratos e pagamentos) precisam ser cruzadas pelo número do processo.",
+          "resposta": "Carregar as duas como consultas > no editor, Página Inicial > Mesclar Consultas > escolher a consulta principal, a secundária e a coluna-chave (número do processo) > selecionar o tipo de junção (interna para casamentos, esquerda para preservar todos os contratos) > expandir as colunas desejadas > Fechar e Carregar. Mesclar junta por chave; Acrescentar empilharia linhas de fontes com a mesma estrutura."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que o Power Query atualiza automaticamente ao mudar o arquivo-fonte.",
+          "correcao": "Incorreto: as etapas gravadas são reaplicadas apenas ao executar Atualizar (Dados > Atualizar Tudo); sem a ação, a carga permanece com os dados anteriores. O arquivo-fonte, por sua vez, nunca é alterado pelas transformações."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual ferramenta do Excel importa e transforma dados de fontes externas? A) Power Pivot; B) Power Query; C) Power View.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) O Power Query usa a linguagem M para descrever as transformações.",
+          "resposta": "Certo. As etapas aplicadas na interface são descritas pela linguagem M, visível na barra de fórmulas do editor de consultas."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Para unir duas consultas por uma coluna-chave, escolhendo manter todos os registros da primeira, usa-se: A) Acrescentar consultas; B) Mesclar consultas com junção à esquerda; C) Agrupar por coluna.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de importar uma fonte com Power Query, aplicar transformações básicas com definição de tipo e explicar o modelo de etapas gravadas e a necessidade de atualização manual, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá a importação, limpeza e transformação de dados com Power Query"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Power Query (Obter Dados) importa de fontes (CSV, web, banco de dados, pasta) e permite transformações (remover colunas, filtrar, mesclar, acrescentar, tipo de dados, coluna personalizada) com interface gráfica e linguagem M. As transformações são reaplicadas ao atualizar. Diferença de ETL/ELT: Power Query faz ETL (extrair, transformar, carregar) no Excel. O conteúdo didático abrange o conceito para provas; o simulador não executa Power Query (limitação declarada).",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Power Query: importação, limpeza e transformação de dados",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que Power Query atualiza automaticamente ao mudar o arquivo-fonte.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: é necessário atualizar (Atualizar Tudo) para reaplicar as etapas e recarregar os dados."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Importar CSV e remover colunas vazias.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Dados > Obter Dados > De Arquivo > De Texto/CSV > selecionar arquivo > Transformar Dados > remover colunas > Fechar e Carregar.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Mesclar duas tabelas por chave.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Power Query > Mesclar Consultas > selecionar tabelas e coluna-chave > tipo de junção (interna, esquerda) > Expandir colunas desejadas.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que Power Query atualiza automaticamente ao mudar o arquivo-fonte.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: é necessário atualizar (Atualizar Tudo) para reaplicar as etapas e recarregar os dados.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-3-topico-6-sub-2",
+      "titulo": "Proteção, desempenho, depuração e compatibilidade; simulador Excel",
+      "topicoTitulo": "Importação, proteção, desempenho e compatibilidade",
+      "topicoId": "modulo-1-unidade-3-topico-6",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá proteção de planilhas, desempenho, depuração e compatibilidade, além do escopo do simulador Excel.",
+      "conteudo": "Proteção: proteger planilha (impedir edição de células bloqueadas) e proteger pasta de trabalho (impedir alteração de estrutura). Desempenho: evitar fórmulas voláteis excessivas (AGORA, ALEATÓRIO), usar tabelas estruturadas, limitar intervalos inteiros (A:A). Depuração: Rastrear Precedentes/Dependentes, Avaliar Fórmula, verificação de erros. Compatibilidade: funções de diferentes versões (PROCX disponível em versões recentes; PROCV em todas). Simulador Excel documentado (assets/js/simulators.js): suporta SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES, SE, SES (alias de E), E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE, PROCV, PROCH, PROCX, CORRESP, ÍNDICE, HOJE, operadores aritméticos/relacionais/lógicos/texto, referências A1 relativas/absolutas/mistas e intervalos, com busca/cálculo reais e rejeição de entradas inválidas. Não suporta: tabelas estruturadas, nomes definidos, R1C1, matrizes dinâmicas, spilling, LET/LAMBDA, formatação de célula, arquivos externos. Não testado em navegador real (verificado com node --check e smoke test em Node/vm).",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Depurar uma fórmula que retorna #REF!.",
+          "resposta": "Fórmulas > Rastrear Erro > Rastrear Precedentes; identificar célula com referência inválida; corrigir."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Proteger planilha permitindo edição apenas de B2:B10.",
+          "resposta": "Selecionar B2:B10 > Formatar Células > Proteção > desmarcar 'Bloqueada' > Revisar > Proteger Planilha (senha opcional)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário afirma que o simulador Excel executa tabelas estruturadas.",
+          "correcao": "Incorreto: o simulador suporta apenas referências A1 e intervalos; tabelas estruturadas estão fora do escopo documentado (limitação declarada em assets/js/simulators.js)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual função é volátil e recalcula a cada alteração? A) SOMA; B) AGORA; C) MÁXIMO.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) PROCX está disponível em todas as versões do Excel.",
+          "resposta": "Errado. PROCX foi introduzido em versões recentes (Microsoft 365/Excel 2021+)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de compreender proteção de planilhas, desempenho, depuração e compatibilidade, além do escopo do simulador Excel, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá proteção de planilhas, desempenho, depuração e compatibilidade, além do escopo do simulador Excel"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Proteção: proteger planilha (impedir edição de células bloqueadas) e proteger pasta de trabalho (impedir alteração de estrutura). Desempenho: evitar fórmulas voláteis excessivas (AGORA, ALEATÓRIO), usar tabelas estruturadas, limitar intervalos inteiros (A:A). Depuração: Rastrear Precedentes/Dependentes, Avaliar Fórmula, verificação de erros. Compatibilidade: funções de diferentes versões (PROCX disponível em versões recentes; PROCV em todas). Simulador Excel documentado (assets/js/simulators.js)…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Proteção, desempenho, depuração e compatibilidade; simulador Excel",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário afirma que o simulador Excel executa tabelas estruturadas.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: o simulador suporta apenas referências A1 e intervalos; tabelas estruturadas estão fora do escopo documentado (limitação declarada em assets/js/simulators.js)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Depurar uma fórmula que retorna #REF!.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Fórmulas > Rastrear Erro > Rastrear Precedentes; identificar célula com referência inválida; corrigir.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Proteger planilha permitindo edição apenas de B2:B10.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Selecionar B2:B10 > Formatar Células > Proteção > desmarcar 'Bloqueada' > Revisar > Proteger Planilha (senha opcional).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário afirma que o simulador Excel executa tabelas estruturadas.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: o simulador suporta apenas referências A1 e intervalos; tabelas estruturadas estão fora do escopo documentado (limitação declarada em assets/js/simulators.js).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

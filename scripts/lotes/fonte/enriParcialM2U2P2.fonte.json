@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 2,
+    "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U2P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U2P2.js",
+    "idsCompletos": [
+      "m2-u2-t1-s3",
+      "m2-u2-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u2-t1-s3",
+      "titulo": "Comunicação entre camadas e entre dispositivos",
+      "topicoTitulo": "Modelo OSI: camadas, funções, PDU e encapsulamento",
+      "topicoId": "modulo-2-unidade-2-topico-1",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno distinguirá comunicação vertical (entre camadas do mesmo host) e horizontal (entre camadas equivalentes de hosts diferentes), e identificará quais dispositivos operam em quais camadas.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) comunicação vertical (entre camadas); (b) comunicação horizontal (entre hosts); (c) quais dispositivos atuam em quais camadas. POR QUE O CONHECIMENTO É IMPORTANTE: a distinção entre comunicação vertical e horizontal esclarece como as camadas \"conversam\"; a prova cobra a camada de atuação dos equipamentos. PRÉ-REQUISITOS: camadas OSI e encapsulamento. OBJETIVOS OBSERVÁVEIS: (1) definir comunicação vertical; (2) definir comunicação horizontal; (3) associar dispositivos a camadas; (4) explicar a comunicação lógica entre camadas iguais. COMPETÊNCIAS DESENVOLVIDAS: leitura de arquitetura em camadas; identificação de dispositivos. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.1 (OSI e encapsulamento); unidade 1.1 (nós). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a comunicação vertical ocorre DENTRO de um mesmo host, entre camadas adjacentes, por meio de interfaces de serviço: a camada superior solicita um serviço à inferior, que o executa (por exemplo, a aplicação pede ao transporte que entregue dados de forma confiável). A comunicação horizontal é a conversa LÓGICA entre camadas equivalentes de hosts diferentes: a camada de transporte do host A \"fala\" com a de B por meio dos cabeçalhos TCP, embora fisicamente os dados tenham de descer por toda a pilha de A e subir por toda a de B. Ou seja, a comunicação horizontal é conceitual (peer-to-peer lógico), implementada sobre a vertical. Quanto aos dispositivos: repetidor e hub atuam na camada 1 (física); switch atua na camada 2 (enlace); roteador atua na camada 3 (rede); firewalls podem atuar em várias camadas (inspeção de estado nas camadas 3/4, filtragem de aplicação na 7); gateways de aplicação atuam na camada 7. Essa atribuição é didática: equipamentos reais frequentemente combinam funções — um switch de camada 3 roteia, um roteador doméstico faz NAT e firewall, e um firewall pode inspecionar a aplicação.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que camadas do mesmo host trocam serviços.\n- Nível intermediário: distinguir vertical de horizontal e associar dispositivos a camadas.\n- Nível avançado: reconciliar a comunicação horizontal lógica com o percurso físico vertical.\n- Nível especialista: justificar por qual camada um equipamento deve atuar conforme o requisito de filtragem.\nCOMPARAÇÕES CRÍTICAS:\n- vertical x horizontal: vertical é dentro do host; horizontal é entre hosts (lógica) — confundir gera erro.\n- switch x roteador: o switch decide por MAC (camada 2); o roteador por IP (camada 3) — muda o domínio de atuação.\n- hub x switch: o hub repete sem inteligência (camada 1); o switch aprende MACs (camada 2).\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"A comunicação horizontal é física direta entre camadas iguais.\" — Motivo: os dados percorrem a pilha — Versão tecnicamente correta: a comunicação horizontal é lógica.\n- Afirmação errada: \"Roteador opera na camada 2.\" — Motivo: decide por IP — Versão tecnicamente correta: opera na camada 3.\n- Afirmação errada: \"Todo firewall atua só na camada 3.\" — Motivo: há firewalls de aplicação — Versão tecnicamente correta: pode atuar em várias camadas.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: comunicação vertical, horizontal, interface de serviço, hub, switch, roteador, firewall, gateway.\n- Regras e fórmulas: hub[1], switch[2], roteador[3], firewall[3/4/7], gateway[7].\n- Exceções: equipamentos reais combinam funções de várias camadas.\n- Palavras-chave: serviço, par lógico, camada, dispositivo, encapsulamento.\n- Checklist de domínio: (1) Defino vertical? (2) Defino horizontal? (3) Associo dispositivos? (4) Explico a comunicação lógica?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que é comunicação vertical? (2) E horizontal? (3) Em que camada atua o switch? (4) E o roteador? (5) Um firewall pode atuar na camada 7?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Um pacote IP viaja de um PC a outro passando por um switch e um roteador. Quais dispositivos leem quais cabeçalhos?",
+          "resposta": "Switch lê cabeçalho Ethernet (MAC) para encaminhar; roteador lê cabeçalho IP (IP) para rotear; o host destino lê tudo até a aplicação. Cada dispositivo processa apenas até sua camada."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um firewall stateful inspeciona conexões TCP. Em quais camadas ele atua?",
+          "resposta": "Camadas 3 e 4 no mínimo (IP e TCP: endereços, portas, flags, estado da conexão); firewalls de aplicação (WAF) também na camada 7 (conteúdo HTTP)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Um switch convencional examina o endereço IP para encaminhar quadros.'",
+          "correcao": "Errado. Switch de camada 2 encaminha com base no MAC. Switch L3 (roteador disfarçado) examina IP, mas não é o switch convencional."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A comunicação horizontal entre camadas equivalentes de hosts diferentes ocorre fisicamente pelos cabeçalhos adicionados no encapsulamento.",
+          "resposta": "Certo — a 'conversa' lógica é materializada pelos cabeçalhos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual dispositivo atua primariamente na camada de rede (3)? A) Hub; B) Switch L2; C) Roteador; D) Repetidor.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de distinguir comunicação vertical (entre camadas do mesmo host) e horizontal (entre camadas equivalentes de hosts diferentes), e identificará quais dispositivos operam em quais camadas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "distinguirá comunicação vertical (entre camadas do mesmo host) e horizontal (entre camadas equivalentes de hosts diferentes), e identificará quais dispositivos operam em quais camadas"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Comunicação vertical (inter-camadas): ocorre dentro de um mesmo host, entre camadas adjacentes, via interfaces de serviço (ex.: a camada de transporte pede à camada de rede que envie um pacote). Comunicação horizontal (peer-to-peer lógica): ocorre entre camadas equivalentes de hosts diferentes, como se conversassem diretamente, embora fisicamente os dados desçam e subam pela pilha. Exemplo: a camada de transporte do host A 'conversa' logicamente com a camada de transporte do host B via cabeçalho…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Comunicação entre camadas e entre dispositivos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Um switch convencional examina o endereço IP para encaminhar quadros.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Switch de camada 2 encaminha com base no MAC. Switch L3 (roteador disfarçado) examina IP, mas não é o switch convencional."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Um pacote IP viaja de um PC a outro passando por um switch e um roteador. Quais dispositivos leem quais cabeçalhos?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Switch lê cabeçalho Ethernet (MAC) para encaminhar; roteador lê cabeçalho IP (IP) para rotear; o host destino lê tudo até a aplicação. Cada dispositivo processa apenas até sua camada.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um firewall stateful inspeciona conexões TCP. Em quais camadas ele atua?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Camadas 3 e 4 no mínimo (IP e TCP: endereços, portas, flags, estado da conexão); firewalls de aplicação (WAF) também na camada 7 (conteúdo HTTP).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Um switch convencional examina o endereço IP para encaminhar quadros.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Switch de camada 2 encaminha com base no MAC. Switch L3 (roteador disfarçado) examina IP, mas não é o switch convencional.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u2-t2-s1",
+      "titulo": "As quatro camadas do modelo TCP/IP",
+      "topicoTitulo": "Modelo TCP/IP: camadas e protocolos associados",
+      "topicoId": "modulo-2-unidade-2-topico-2",
+      "unidadeTitulo": "2.2 Modelos OSI e TCP/IP",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno enumerará as quatro camadas do modelo TCP/IP e associará a cada uma protocolos típicos.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) as quatro camadas do modelo TCP/IP; (b) protocolos típicos de cada uma; (c) a correspondência aproximada com o OSI; (d) por que o TCP/IP é o modelo prático. POR QUE O CONHECIMENTO É IMPORTANTE: a Internet real usa o modelo TCP/IP; a prova cobra a associação entre camadas e protocolos. PRÉ-REQUISITOS: modelo OSI. OBJETIVOS OBSERVÁVEIS: (1) enumerar as quatro camadas; (2) associar protocolos; (3) comparar com o OSI; (4) explicar a ausência de sessão/apresentação. COMPETÊNCIAS DESENVOLVIDAS: organização do conhecimento de protocolos. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 2.1 (OSI); unidade 2.2 (comparação); unidade 3 (protocolos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o modelo TCP/IP (também chamado DoD) tem quatro camadas. Acesso à rede (enlace): cuida do meio e do enlace, reunindo funções das camadas 1 e 2 do OSI, com protocolos como Ethernet, Wi-Fi e PPP. Internet: trata o endereçamento lógico e o roteamento entre redes, equivalente à camada 3 do OSI, com IP (v4 e v6) e ICMP. Transporte: entrega processo a processo, equivalente à camada 4 do OSI, com TCP e UDP. Aplicação: reúne as camadas 5, 6 e 7 do OSI, abrigando HTTP, HTTPS, DNS, SMTP, FTP, SSH, DHCP e TLS. A diferença estrutural mais cobrada é que o TCP/IP NÃO separa sessão e apresentação: essas funções são incorporadas pela aplicação ou por bibliotecas. Outra característica é a robustez: o modelo foi projetado para funcionar sobre redes heterogêneas, delegando a confiabilidade ao TCP nas pontas, e não à rede. O OSI permanece como referência didática e de projeto; o TCP/IP é o que efetivamente opera na Internet.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: memorizar as quatro camadas.\n- Nível intermediário: associar protocolos a cada camada.\n- Nível avançado: comparar com o OSI e explicar as fusões (5/6/7 → Aplicação).\n- Nível especialista: situar protocolos transversais (TLS, ICMP) no modelo.\nCOMPARAÇÕES CRÍTICAS:\n- OSI x TCP/IP: 7 camadas x 4; sessão e apresentação colapsam em Aplicação — a contagem muda o gabarito.\n- Internet x Transporte: IP endereça hosts; TCP/UDP endereçam processos.\n- Acesso à rede x Internet: o primeiro cobre enlace/físico; o segundo cobre roteamento.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O TCP/IP tem camada de sessão.\" — Motivo: o modelo não a separa — Versão tecnicamente correta: sessão/apresentação são absorvidas pela Aplicação.\n- Afirmação errada: \"ARP pertence à camada de transporte.\" — Motivo: atua no enlace/Internet — Versão tecnicamente correta: resolve IP em MAC no acesso à rede.\n- Afirmação errada: \"O TCP/IP exige rede confiável.\" — Motivo: a confiabilidade fica nas pontas — Versão tecnicamente correta: a rede pode ser simples; o TCP garante a entrega.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: TCP/IP, acesso à rede, Internet, transporte, aplicação, protocolos.\n- Regras e fórmulas: Acesso=1/2; Internet=3; Transporte=4; Aplicação=5/6/7 (OSI).\n- Exceções: protocolos como TLS situam-se entre transporte e aplicação.\n- Palavras-chave: DoD, IP, TCP, UDP, HTTP, fusão de camadas.\n- Checklist de domínio: (1) Enumero as camadas? (2) Associo protocolos? (3) Comparo com OSI? (4) Explico a fusão?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Quais as quatro camadas? (2) Cite protocolos da camada de aplicação. (3) Quais camadas do OSI a Aplicação reúne? (4) Onde atua o IP? (5) Por que não há camada de sessão?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Em qual camada do TCP/IP opera o protocolo DNS?",
+          "resposta": "Camada de Aplicação — DNS é um protocolo de aplicação que usa UDP (e TCP em transferências de zona) na camada de transporte."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Um administrador configura uma VLAN e um trunk 802.1Q. Em qual camada isso ocorre?",
+          "resposta": "Camada de Acesso à rede (Link) — VLANs são uma função de enlace (camada 2), embora o roteamento entre VLANs seja camada 3."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O modelo TCP/IP tem sete camadas, como o OSI.'",
+          "correcao": "Errado. O TCP/IP tem quatro camadas. A confusão surge porque alguns materiais didáticos 'esticam' o TCP/IP para cinco camadas separando física e enlace — mas o modelo clássico DoD tem quatro."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) ICMP pertence à camada de Transporte do TCP/IP.",
+          "resposta": "Errado. ICMP pertence à camada Internet (rede), usada para diagnóstico e mensagens de erro de IP."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual camada do TCP/IP corresponde às camadas 5, 6 e 7 do OSI? A) Transporte; B) Internet; C) Aplicação; D) Acesso à rede.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de enumerar as quatro camadas do modelo TCP/IP e associará a cada uma protocolos típicos, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "bH29oltn8Cw",
+          "titulo": "Curso de redes - Vídeo 04 - Introdução ao TCP/IP",
+          "canal": "Bóson Treinamentos",
+          "urlOriginal": "https://www.youtube.com/watch?v=bH29oltn8Cw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/bH29oltn8Cw",
+          "descricao": "Videoaula introdutória sobre o modelo TCP/IP, explicando as quatro camadas (Acesso à Rede, Internet, Transporte, Aplicação) e seus protocolos associados (Ethernet, IP, ICMP, ARP, TCP, UDP, HTTP, DNS, DHCP). Compara com o modelo OSI, aborda encapsulamento no TCP/IP e a correspondência aproximada entre as camadas dos dois modelos.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "enumerará as quatro camadas do modelo TCP/IP e associará a cada uma protocolos típicos"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "O modelo TCP/IP (DoD) tem quatro camadas: (1) Acesso à rede (Network Access/Link): Ethernet, Wi-Fi, ARP, PPP — equivale às camadas 1 e 2 do OSI. (2) Internet: IP (v4/v6), ICMP, ARP (às vezes), roteamento — equivale à camada 3 do OSI. (3) Transporte: TCP, UDP — equivale à camada 4 do OSI. (4) Aplicação: HTTP, HTTPS, DNS, SMTP, FTP, SSH, DHCP, TLS — equivale às camadas 5, 6 e 7 do OSI. Diferente do OSI, o TCP/IP não separa sessão e apresentação; essas funções são absorvidas pela aplicação ou por b…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a As quatro camadas do modelo TCP/IP",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'O modelo TCP/IP tem sete camadas, como o OSI.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. O TCP/IP tem quatro camadas. A confusão surge porque alguns materiais didáticos 'esticam' o TCP/IP para cinco camadas separando física e enlace — mas o modelo clássico DoD tem quatro."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Em qual camada do TCP/IP opera o protocolo DNS?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Camada de Aplicação — DNS é um protocolo de aplicação que usa UDP (e TCP em transferências de zona) na camada de transporte.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Um administrador configura uma VLAN e um trunk 802.1Q. Em qual camada isso ocorre?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Camada de Acesso à rede (Link) — VLANs são uma função de enlace (camada 2), embora o roteamento entre VLANs seja camada 3.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O modelo TCP/IP tem sete camadas, como o OSI.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. O TCP/IP tem quatro camadas. A confusão surge porque alguns materiais didáticos 'esticam' o TCP/IP para cinco camadas separando física e enlace — mas o modelo clássico DoD tem quatro.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

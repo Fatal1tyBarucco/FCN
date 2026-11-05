@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 5,
+    "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+    "parte": 2,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U5P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U5P2.js",
+    "idsCompletos": [
+      "m3-u5-t1-s3",
+      "m3-u5-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u5-t1-s3",
+      "titulo": "Gravação não autorizada e vazamento",
+      "topicoTitulo": "Reuniões inseguras: casos e vetores de risco",
+      "topicoId": "modulo-3-unidade-5-topico-1",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno analisará riscos de gravação não autorizada.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o risco da gravação não autorizada; (b) os cenários de vazamento; (c) as mitigações; (d) a resposta ao incidente. POR QUE O CONHECIMENTO É IMPORTANTE: gravar ou distribuir reunião sem consentimento expõe dados e gera responsabilização. PRÉ-REQUISITOS: unidade 4.3 (gravação e consentimento). OBJETIVOS OBSERVÁVEIS: (1) reconhecer cenários de gravação não autorizada; (2) explicar os riscos; (3) aplicar mitigações; (4) responder ao vazamento. COMPETÊNCIAS DESENVOLVIDAS: proteção de informação; resposta a incidentes. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.3 (retenção); unidade 5.3 (resposta); Módulo 4 (LGPD). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a gravação não autorizada ocorre quando alguém registra a reunião — pela própria plataforma ou por captura de tela/áudio externa — sem o conhecimento ou a concordância dos participantes, e depois distribui o conteúdo. Os cenários incluem: participante grava e compartilha; anfitrião grava sem informar; e gravação legítima armazenada em local inseguro e posteriormente vazada. Os riscos são a exposição de dados pessoais, a quebra de confidencialidade e a responsabilização. As mitigações: informar e obter consentimento quando aplicável; restringir a gravação ao anfitrião; usar marca d'água de identificação (quando disponível); monitorar; e manter política clara de gravação e retenção. A captura externa (por software de terceiros na máquina do participante) é difícil de impedir tecnicamente, o que reforça a importância do consentimento e do comportamento — por isso reuniões com informação muito sensível devem evitar a exposição do conteúdo ou usar controles adicionais. Caso ilustrativo hipotético: gravação de reunião com dados de clientes foi distribuída em grupo de mensagens; a causa foi a ausência de política e de controle de acesso ao arquivo.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que gravar sem avisar é problema.\n- Nível intermediário: distinguir gravação pela plataforma de captura externa.\n- Nível avançado: reduzir a exposição mesmo quando a captura não pode ser impedida.\n- Nível especialista: responder a um vazamento de gravação com contenção, avaliação e comunicação.\nCOMPARAÇÕES CRÍTICAS:\n- gravação autorizada x não autorizada: a primeira tem base e aviso; a segunda viola confiança e, possivelmente, a lei.\n- gravação pela plataforma x captura externa: a primeira pode ser restringida e registrada; a segunda é quase indetectável.\n- conter x divulgar: a contenção limita o dano; a comunicação segue a política e a lei.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Só o anfitrião pode gravar, então não há risco.\" — Motivo: há captura externa — Versão tecnicamente correta: combinar controles e consentimento.\n- Afirmação errada: \"Gravar sem avisar é aceitável se a reunião for interna.\" — Motivo: dados pessoais exigem base legal — Versão tecnicamente correta: informar e observar a política.\n- Afirmação errada: \"Arquivo em pasta compartilhada é seguro.\" — Motivo: pode vazar — Versão tecnicamente correta: restringir acesso e proteger.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: gravação não autorizada, captura externa, consentimento, marca d'água, vazamento.\n- Regras e fórmulas: restringir gravação + informar + proteger o arquivo = mitigação.\n- Exceções: a captura externa é difícil de impedir tecnicamente.\n- Palavras-chave: gravação, consentimento, vazamento, acesso, política.\n- Checklist de domínio: (1) Reconheço cenários? (2) Explico riscos? (3) Aplico mitigações? (4) Respondo ao vazamento?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite dois cenários de gravação não autorizada. (2) Por que a captura externa preocupa? (3) Cite três mitigações. (4) Como proteger o arquivo? (5) O que fazer diante de um vazamento?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Quem pode gravar uma reunião?",
+          "resposta": "Depende da plataforma/plano; geralmente anfitrião e coanfitriões autorizados. Participantes podem gravar localmente sem consentimento, o que é risco."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como reduzir gravação não autorizada?",
+          "resposta": "Informar política, obter consentimento, restringir gravação, usar marca d'água e monitorar compartilhamento."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Participantes não podem gravar reuniões.'",
+          "correcao": "Errado. Participantes podem gravar localmente (tela/áudio) sem que a plataforma impeça; por isso política e consentimento são essenciais."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Política clara de gravação reduz risco de vazamento.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática NÃO reduz risco de gravação não autorizada? A) Informar participantes; B) Obter consentimento; C) Permitir gravação livre; D) Restringir gravação ao anfitrião.",
+          "resposta": "C"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar riscos de gravação não autorizada, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará riscos de gravação não autorizada"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Riscos: participante grava reunião sem consentimento (gravação de tela/áudio) e distribui; anfitrião grava sem informar; gravação armazenada em local inseguro. Mitigações: informar sobre gravação; obter consentimento; restringir gravação ao anfitrião; usar marca d'água (quando disponível); monitorar; política clara. Caso ilustrativo (hipotético): gravação de reunião com dados de clientes distribuída em grupo de mensagens; causa: ausência de política e controle de acesso.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Gravação não autorizada e vazamento",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Participantes não podem gravar reuniões.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Participantes podem gravar localmente (tela/áudio) sem que a plataforma impeça; por isso política e consentimento são essenciais."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Quem pode gravar uma reunião?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Depende da plataforma/plano; geralmente anfitrião e coanfitriões autorizados. Participantes podem gravar localmente sem consentimento, o que é risco.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como reduzir gravação não autorizada?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Informar política, obter consentimento, restringir gravação, usar marca d'água e monitorar compartilhamento.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Participantes não podem gravar reuniões.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Participantes podem gravar localmente (tela/áudio) sem que a plataforma impeça; por isso política e consentimento são essenciais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u5-t2-s1",
+      "titulo": "Exposição por e-mail (CC/BCC, anexos, encaminhamento)",
+      "topicoTitulo": "Exposição acidental de dados em comunicação",
+      "topicoId": "modulo-3-unidade-5-topico-2",
+      "unidadeTitulo": "3.5 Estudos de caso: reuniões inseguras e exposição acidental de dados",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno analisará casos de exposição acidental por e-mail.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) como o e-mail expõe dados; (b) os casos típicos; (c) as mitigações; (d) o papel de DLP. POR QUE O CONHECIMENTO É IMPORTANTE: o e-mail é o canal mais usado e um dos mais sujeitos a erro humano; a prova cobra causas e prevenção de exposição. PRÉ-REQUISITOS: unidade 1.1 (cabeçalhos, Cc/Bcc). OBJETIVOS OBSERVÁVEIS: (1) citar formas de exposição; (2) explicar o risco de Cc x Bcc; (3) aplicar mitigações; (4) situar o DLP. COMPETÊNCIAS DESENVOLVIDAS: manuseio seguro de e-mail; prevenção de vazamento. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 1.1 (campos); unidade 1.2 (phishing); Módulo 4 (DLP). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: o e-mail expõe dados quando a lista de destinatários, o histórico ou o anexo revelam informação. Casos típicos: colocar uma lista de clientes em Cc em vez de Bcc, expondo todos os endereços; encaminhar uma mensagem sem remover o histórico com dados sensíveis; anexar o arquivo errado (uma versão com dados pessoais); e usar \"responder a todos\", expondo a informação a quem não deveria recebê-la. As mitigações: revisar os destinatários antes de enviar; usar Bcc para listas; conferir o anexo correto; limpar o histórico ao encaminhar; e, quando disponível, empregar recursos de prevenção de perda de dados (DLP), que detectam e bloqueiam o envio de conteúdo sensível. Em contexto institucional, dado pessoal enviado a destinatário indevido configura incidente e deve ser tratado conforme a política e a LGPD. Caso ilustrativo hipotético: uma planilha com dados pessoais foi enviada a uma lista em Cc por engano, expondo os endereços e o conteúdo a todos os destinatários.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender que o campo errado expõe a lista.\n- Nível intermediário: aplicar Bcc e revisar anexos.\n- Nível avançado: usar DLP e limpar histórico ao encaminhar.\n- Nível especialista: responder a um incidente de envio indevido com contenção e comunicação.\nCOMPARAÇÕES CRÍTICAS:\n- Cc x Bcc: o Cc revela os endereços; o Bcc os oculta — a escolha expõe ou protege.\n- encaminhar x responder: o encaminhamento leva o histórico; a resposta mantém a thread — ambos exigem revisão.\n- aviso manual x DLP: o primeiro depende da atenção; o segundo automatiza a detecção.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Usar Cc é aceitável para listas internas.\" — Motivo: expõe endereços — Versão tecnicamente correta: usar Bcc.\n- Afirmação errada: \"O anexo certo está sempre selecionado.\" — Motivo: erros de arquivo são frequentes — Versão tecnicamente correta: conferir antes de enviar.\n- Afirmação errada: \"Encaminhar não expõe histórico.\" — Motivo: leva o conteúdo anterior — Versão tecnicamente correta: limpar o histórico quando necessário.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: Cc, Bcc, anexo, histórico, responder a todos, DLP.\n- Regras e fórmulas: revisar destinatários + Bcc + anexo conferido = envio seguro.\n- Exceções: o DLP depende de configuração e disponibilidade.\n- Palavras-chave: exposição, lista, anexo, histórico, DLP.\n- Checklist de domínio: (1) Cito formas de exposição? (2) Explico Cc x Bcc? (3) Aplico mitigações? (4) Situo o DLP?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite três formas de exposição por e-mail. (2) Por que Cc expõe? (3) O que revisar antes de enviar? (4) Para que serve o DLP? (5) Encaminhar exige cuidado?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Qual o risco de usar Cc em lista grande?",
+          "resposta": "Expõe todos os endereços de e-mail aos demais, violando privacidade e podendo facilitar spam/phishing."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como evitar anexo errado?",
+          "resposta": "Verificar nome e conteúdo do anexo antes de enviar; usar nomenclatura clara; revisar; considerar DLP."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Encaminhar e-mail mantém apenas o necessário.'",
+          "correcao": "Errado. Encaminhamento pode incluir histórico e anexos sensíveis; revisar e limpar antes."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Bcc protege a privacidade de destinatários em listas grandes.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática reduz exposição por e-mail? A) Usar Cc em listas grandes; B) Revisar destinatários e anexos; C) Encaminhar histórico completo; D) Não verificar anexo.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de analisar casos de exposição acidental por e-mail, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "analisará casos de exposição acidental por e-mail"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Casos: enviar lista de clientes em Cc em vez de Bcc (exposição de e-mails); encaminhar e-mail com histórico sensível; anexar arquivo errado (versão com dados pessoais); responder a todos expondo informação. Mitigações: revisar destinatários, usar Bcc para listas, verificar anexos, limpar histórico ao encaminhar, usar DLP (Data Loss Prevention) quando disponível. Caso ilustrativo (hipotético): envio de planilha com CPFs de servidores para lista em Cc.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Exposição por e-mail (CC/BCC, anexos, encaminhamento)",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Encaminhar e-mail mantém apenas o necessário.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Encaminhamento pode incluir histórico e anexos sensíveis; revisar e limpar antes."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Qual o risco de usar Cc em lista grande?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Expõe todos os endereços de e-mail aos demais, violando privacidade e podendo facilitar spam/phishing.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como evitar anexo errado?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Verificar nome e conteúdo do anexo antes de enviar; usar nomenclatura clara; revisar; considerar DLP.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Encaminhar e-mail mantém apenas o necessário.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Encaminhamento pode incluir histórico e anexos sensíveis; revisar e limpar antes.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

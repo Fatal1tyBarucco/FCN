@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 8,
+    "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+    "unidade": 3,
+    "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+    "parte": 1,
+    "totalPartesUnidade": 3,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM8U3P1",
+    "arquivoSaida": "scripts/lotes/enriParcialM8U3P1.js",
+    "idsCompletos": [
+      "m8-u3-t1-s1",
+      "m8-u3-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m8-u3-t1-s1",
+      "titulo": "Média, mediana e moda — quando usar cada uma",
+      "topicoTitulo": "Medidas de tendência central",
+      "topicoId": "modulo-8-unidade-3-topico-1",
+      "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno calculará média, mediana e moda e decidirá qual delas descreve melhor um conjunto.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) média, mediana e moda; (b) quando usar cada uma; (c) sensibilidade a outliers; (d) assimetria. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a escolha da medida de tendência central conforme a distribuição; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de estatística. OBJETIVOS OBSERVÁVEIS: (1) calcular média, mediana e moda; (2) escolher a medida adequada; (3) interpretar assimetria. COMPETÊNCIAS DESENVOLVIDAS: análise descritiva; leitura de distribuição. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.2 (gráficos); unidade 8.3 (dispersão). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: média como soma dividida por n, sensível a outliers; mediana como valor central da série ordenada, robusta a outliers; moda como valor mais frequente; escolha: distribuição simétrica → média; assimétrica ou com outliers → mediana; categórica → moda; assimetria: positiva (cauda à direita, média > mediana), negativa (cauda à esquerda, média < mediana). Exemplo numérico: dados 10,12,14,16,100. Média = 152/5 = 30,4 (inflada pelo outlier); mediana = 14; moda não existe. A mediana representa melhor o centro. PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: calcular média, mediana e moda.\n- Nível intermediário: escolher a medida conforme a distribuição.\n- Nível avançado: interpretar assimetria e efeito de outliers.\n- Nível especialista: auditar um relatório quanto à medida usada.\nCOMPARAÇÕES CRÍTICAS:\n- média x mediana: média sensível a outliers; mediana robusta.\n- mediana x moda: mediana para numérico; moda para categórico.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"média é sempre a melhor medida\" — Motivo: sensível a outliers — Versão tecnicamente correta: usar mediana em distribuições assimétricas.\n- Afirmação errada: \"moda só existe para números\" — Motivo: é a mais útil para categorias — Versão tecnicamente correta: moda para categórico.\n- Afirmação errada: \"assimetria não afeta a escolha\" — Motivo: define qual medida é adequada — Versão tecnicamente correta: avaliar a distribuição.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: média, mediana, moda, assimetria, outlier, robustez.\n- Regras e fórmulas: média = Σx/n; mediana = valor central; moda = mais frequente.\n- Exceções: distribuição bimodal tem duas modas.\n- Palavras-chave: média, mediana, moda, assimetria, outlier, robustez.\n- Checklist de domínio: (1) Calculo as três medidas? (2) Escolho a adequada? (3) Interpreto assimetria? (4) Identifico efeito de outliers?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como se calcula a média? (2) Como se calcula a mediana? (3) Quando usar moda? (4) Como a assimetria afeta a escolha? (5) Por que a média é sensível a outliers?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Nos dados 2, 4, 6, 8, 10, 12, 50, qual medida representa melhor o caso típico?",
+          "resposta": "A mediana (8). A média (≈13,14) está distante do valor central porque o 50, isolado na cauda, a arrasta. Para descrever o 'valor usual', a mediana é a medida correta."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Notas 7 (peso 2), 5 (peso 3), 9 (peso 1). Calcular a média ponderada.",
+          "resposta": "Σ(valor × peso) = 7×2 + 5×3 + 9×1 = 14 + 15 + 9 = 38; Σpesos = 6; média = 38 ÷ 6 ≈ 6,33. A média simples (7+5+9)/3 = 7,0 ignoraria os pesos e superestimaria o resultado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A média é sempre a melhor medida porque usa todos os dados.'",
+          "correcao": "Errado. Usar todos os dados também significa dar peso total aos extremos; em distribuições assimétricas ou com erros de digitação, a média mente sobre o caso típico. A escolha depende da forma da distribuição e do que se quer descrever."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A mediana é mais robusta que a média diante de valores extremos.",
+          "resposta": "Certo. A mediana depende apenas da ordem; mover o maior valor de 50 para 5.000 não a altera."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Conjunto 2, 4, 4, 4, 5, 5, 7, 9: média, mediana e moda são, respectivamente: A) 5, 4,5 e 4; B) 5, 5 e 5; C) 4,5, 4 e 5; D) 5, 4 e 4,5.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular média, mediana e moda e decidirá qual delas descreve melhor um conjunto, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "calculará média, mediana e moda e decidirá qual delas descreve melhor um conjunto"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) média, mediana e moda; (b) quando usar cada uma; (c) sensibilidade a outliers; (d) assimetria. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra a escolha da medida de tendência central conforme a distribuição; confundi-las muda o gabarito. PRÉ-REQUISITOS: conceitos básicos de estatística. OBJETIVOS OBSERVÁVEIS: (1) calcular média, mediana e moda; (2) escolher a medida adequada; (3) interpretar assimetria. COMPETÊNCIAS DESENVOLVIDAS: análise de…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Média, mediana e moda — quando usar cada uma",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A média é sempre a melhor medida porque usa todos os dados.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Usar todos os dados também significa dar peso total aos extremos; em distribuições assimétricas ou com erros de digitação, a média mente sobre o caso típico. A escolha depende da forma da distribuição e do que se quer descrever."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Nos dados 2, 4, 6, 8, 10, 12, 50, qual medida representa melhor o caso típico?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "A mediana (8). A média (≈13,14) está distante do valor central porque o 50, isolado na cauda, a arrasta. Para descrever o 'valor usual', a mediana é a medida correta.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Notas 7 (peso 2), 5 (peso 3), 9 (peso 1). Calcular a média ponderada.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Σ(valor × peso) = 7×2 + 5×3 + 9×1 = 14 + 15 + 9 = 38; Σpesos = 6; média = 38 ÷ 6 ≈ 6,33. A média simples (7+5+9)/3 = 7,0 ignoraria os pesos e superestimaria o resultado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A média é sempre a melhor medida porque usa todos os dados.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Usar todos os dados também significa dar peso total aos extremos; em distribuições assimétricas ou com erros de digitação, a média mente sobre o caso típico. A escolha depende da forma da distribuição e do que se quer descrever.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m8-u3-t2-s1",
+      "titulo": "Amplitude, variância, desvio padrão e coeficiente de variação",
+      "topicoTitulo": "Medidas de dispersão: amplitude, variância e desvio padrão",
+      "topicoId": "modulo-8-unidade-3-topico-2",
+      "unidadeTitulo": "8.3 Estatística Aplicada à Leitura de Gráficos",
+      "moduloTitulo": "VISUALIZAÇÃO, ANÁLISE E STORYTELLING COM DADOS",
+      "objetivoAprendizagem": "Aluno calculará variância e desvio padrão (populacional e amostral) e interpretará o resultado em unidade original.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) amplitude, variância, desvio padrão e coeficiente de variação; (b) cálculo e interpretação; (c) comparação de dispersão. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra cálculo de variância, desvio padrão e coeficiente de variação; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de média. OBJETIVOS OBSERVÁVEIS: (1) calcular amplitude, variância, desvio padrão e CV; (2) interpretar dispersão; (3) comparar dispersão entre séries. COMPETÊNCIAS DESENVOLVIDAS: análise de dispersão; comparação de séries. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 8.3 (média); unidade 8.2 (box plot). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta. FUNDAMENTAÇÃO CONCEITUAL: amplitude = máximo - mínimo, sensível a outliers; variância = média dos quadrados dos desvios em relação à média; desvio padrão = raiz quadrada da variância, nas unidades originais; coeficiente de variação = desvio padrão/média, adimensional, útil para comparar dispersão entre séries com médias diferentes; interpretação: desvio padrão alto = dados mais dispersos. Exemplo numérico: dados 10,12,14,16,18. Média = 14. Desvios: -4,-2,0,2,4. Quadrados: 16,4,0,4,16. Soma = 40. Variância (populacional) = 40/5 = 8. Desvio padrão = √8 ≈ 2,83. Amplitude = 8. CV = 2,83/14 ≈ 0,20 (20%). PROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: entender dispersão como \"quão espalhados estão os dados\".\n- Nível intermediário: calcular variância e desvio padrão.\n- Nível avançado: calcular CV e comparar séries.\n- Nível especialista: auditar um relatório quanto à medida de dispersão.\nCOMPARAÇÕES CRÍTICAS:\n- variância x desvio padrão: variância em unidades quadradas; desvio padrão nas unidades originais.\n- desvio padrão x CV: desvio padrão absoluto; CV relativo, permite comparar séries com médias diferentes.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"variância e desvio padrão são equivalentes em interpretação\" — Motivo: unidades diferem — Versão tecnicamente correta: desvio padrão nas unidades originais.\n- Afirmação errada: \"amplitude é robusta a outliers\" — Motivo: depende do mínimo e máximo — Versão tecnicamente correta: usar desvio padrão ou IQR.\n- Afirmação errada: \"CV pode ser usado com média zero\" — Motivo: divisão por zero — Versão tecnicamente correta: CV exige média não nula.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: amplitude, variância, desvio padrão, CV, dispersão.\n- Regras e fórmulas: amplitude = max-min; variância = Σ(x-x̄)²/n; desvio padrão = √variância; CV = σ/x̄.\n- Exceções: variância amostral divide por n-1.\n- Palavras-chave: amplitude, variância, desvio padrão, CV, dispersão.\n- Checklist de domínio: (1) Calculo amplitude, variância, desvio padrão, CV? (2) Interpreto dispersão? (3) Comparo séries? (4) Distingo populacional de amostral?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como se calcula a variância? (2) Qual a relação entre variância e desvio padrão? (3) Para que serve o CV? (4) Por que a amplitude é sensível a outliers? (5) Quando usar n e quando n-1?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular desvio padrão populacional de 2, 4, 4, 4, 5, 5, 7, 9.",
+          "resposta": "Média = 5. Σ(x − x̄)² = 32. σ² = 32 ÷ 8 = 4 → σ = √4 = 2,0. Em unidade original, os valores ficam tipicamente a 2 unidades da média."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Agora o mesmo conjunto tratado como amostra: variância e desvio padrão amostrais.",
+          "resposta": "s² = 32 ÷ (8 − 1) = 32 ÷ 7 ≈ 4,5714; s = √4,5714 ≈ 2,1381. O divisor n−1 produz valor maior que o populacional — correção esperada quando a média usada é a amostral."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Dois conjuntos com média 50 e desvio-padrão 5 têm a mesma variabilidade, independentemente da unidade.'",
+          "correcao": "Errado se as unidades diferem: desvio-padrão herda a unidade do dado (5 minutos ≠ 5 kg). Para comparar dispersão entre variáveis com unidades ou médias muito distintas, use o coeficiente de variação (desvio ÷ média)."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Para variância amostral, o divisor correto é n − 1, e não n.",
+          "resposta": "Certo. É a correção que torna a estimativa amostral não-enviesada da variância populacional."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Com Σ(x − x̄)² = 32 e n = 8 (dados como população), σ é: A) 2,0; B) 2,14; C) 4,0; D) 4,57.",
+          "resposta": "A"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular variância e desvio padrão (populacional e amostral) e interpretará o resultado em unidade original, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "calculará variância e desvio padrão (populacional e amostral) e interpretará o resultado em unidade original"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) amplitude, variância, desvio padrão e coeficiente de variação; (b) cálculo e interpretação; (c) comparação de dispersão. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra cálculo de variância, desvio padrão e coeficiente de variação; confundi-los muda o gabarito. PRÉ-REQUISITOS: conceitos de média. OBJETIVOS OBSERVÁVEIS: (1) calcular amplitude, variância, desvio padrão e CV; (2) interpretar dispersão; (3) comparar dispersão entre séries. COMPET…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Amplitude, variância, desvio padrão e coeficiente de variação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Dois conjuntos com média 50 e desvio-padrão 5 têm a mesma variabilidade, independentemente da unidade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado se as unidades diferem: desvio-padrão herda a unidade do dado (5 minutos ≠ 5 kg). Para comparar dispersão entre variáveis com unidades ou médias muito distintas, use o coeficiente de variação (desvio ÷ média)."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Calcular desvio padrão populacional de 2, 4, 4, 4, 5, 5, 7, 9.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Média = 5. Σ(x − x̄)² = 32. σ² = 32 ÷ 8 = 4 → σ = √4 = 2,0. Em unidade original, os valores ficam tipicamente a 2 unidades da média.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Agora o mesmo conjunto tratado como amostra: variância e desvio padrão amostrais.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "s² = 32 ÷ (8 − 1) = 32 ÷ 7 ≈ 4,5714; s = √4,5714 ≈ 2,1381. O divisor n−1 produz valor maior que o populacional — correção esperada quando a média usada é a amostral.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Dois conjuntos com média 50 e desvio-padrão 5 têm a mesma variabilidade, independentemente da unidade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado se as unidades diferem: desvio-padrão herda a unidade do dado (5 minutos ≠ 5 kg). Para comparar dispersão entre variáveis com unidades ou médias muito distintas, use o coeficiente de variação (desvio ÷ média).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

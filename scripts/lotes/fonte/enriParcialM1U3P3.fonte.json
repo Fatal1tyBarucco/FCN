@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "modulo": 1,
+    "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+    "unidade": 3,
+    "unidadeTitulo": "1.3 Microsoft Excel",
+    "parte": 3,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM1U3P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM1U3P3.js",
+    "idsCompletos": [
+      "modulo-1-unidade-3-topico-3-sub-1",
+      "modulo-1-unidade-3-topico-3-sub-2"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "modulo-1-unidade-3-topico-3-sub-1",
+      "titulo": "Tipos de dados, datas, horários e formatos numéricos",
+      "topicoTitulo": "Tipos de dados, datas e funções essenciais",
+      "topicoId": "modulo-1-unidade-3-topico-3",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno compreenderá tipos de dados do Excel e o tratamento de datas/horários.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) os tipos de dado do Excel: número, texto, lógico (VERDADEIRO/FALSO), data/hora e erro; (b) o mecanismo serial de datas (data como número) e a aritmética que ele permite; (c) formatos numéricos: o que mudam (exibição) e o que não mudam (valor armazenado); (d) os principais códigos de erro e suas causas; (e) o suporte e as limitações do simulador deste projeto. POR QUE O CONHECIMENTO É IMPORTANTE: a prova cobra que a data é armazenada como número serial, que formato altera apenas a exibição e a causa de erros como #DIV/0! e #VAL!; trocar valor por formato, ou atribuir causa errada a um erro, muda o gabarito. PRÉ-REQUISITOS: células e intervalos (tópico 1). OBJETIVOS OBSERVÁVEIS: (1) classificar o tipo de dado de uma célula; (2) calcular diferença entre datas explicando o mecanismo serial; (3) distinguir formato de valor; (4) associar cada código de erro à sua causa típica. COMPETÊNCIAS DESENVOLVIDAS: diagnóstico de dados inconsistentes; leitura de mensagens de erro. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: funções (tópico 3, sub-2); tratamento de erros (tópico 4, sub-2); formatação (tópico 5). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta; estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas.\n\nFUNDAMENTAÇÃO CONCEITUAL: tipos de dado determinam o que o Excel pode fazer com o conteúdo da célula. Número (inteiro ou decimal) participa de aritmética; texto é sequência de caracteres — operação aritmética sobre texto não numérico gera erro; lógico é VERDADEIRO/FALSO, produzido por comparações e funções lógicas; data/hora é internamente um número serial: no sistema Windows, a data 01/01/1900 corresponde ao serial 1, e cada dia avança 1 — horários são frações de dia (0,5 = meio-dia); por isso subtrair duas datas retorna dias, e a aritmética de datas é natural. Erro é o tipo produzido quando o cálculo falha: #DIV/0! (divisão por zero ou por célula vazia), #VAL! (tipo incompatível, ex.: texto em operação numérica), #REF! (referência inválida, ex.: célula excluída), #N/A (valor não encontrado em pesquisa), #NUM! (número inválido para a operação). Formato numérico é a máscara de exibição: moeda, percentual, data, casas decimais — altera como o valor aparece, nunca o valor armazenado; por isso 10,5 com formato de zero decimais exibe 11, mas continua sendo 10,5 nos cálculos. O simulador Excel deste projeto armazena datas como seriais e oferece a função HOJE() (data real do sistema, exibida no formato AAAA/MM/DD); ele não implementa formatação de células (limitação declarada) — o conteúdo sobre formatos é teórico para provas.\n\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: distinguir número de texto na planilha (alinhamento e comportamento em soma) e reconhecer o erro #DIV/0!.\n- Nível intermediário: calcular diferença entre duas datas (=B2-A2) explicando o serial; aplicar percentual sabendo que o formato não muda o valor.\n- Nível avançado: diagnosticar soma que ignora valores (números gravados como texto) e converter tipos com as funções adequadas do Excel (fora do escopo do simulador).\n- Nível especialista: explicar por que o formato percentual exibe arredondado mas calcula com o valor completo, e associar cada código de erro à sua causa em uma fórmula composta.\n\nCOMPARAÇÕES CRÍTICAS:\n- Formato x valor: formato muda a exibição; valor armazenado permanece — em questão sobre soma após aplicar formato percentual, o cálculo usa o valor completo, não o exibido.\n- Data x texto de data: data real é serial (permite =B2-A2); data digitada como texto não participa de aritmética — a alternativa que soma \"datas em texto\" está errada.\n- #DIV/0! x #VAL!: divisão por zero/célula vazia versus tipo incompatível — atribuir a causa trocada muda a resposta sobre o diagnóstico do erro.\n\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"alterar o formato de número muda o valor armazenado\" — Motivo: confunde exibição com conteúdo — Versão tecnicamente correta: o formato altera apenas a exibição; o valor completo é usado nos cálculos.\n- Afirmação errada: \"datas são textos especiais no Excel\" — Motivo: descreve a intuição, não o mecanismo — Versão tecnicamente correta: datas são números seriais (01/01/1900 = 1 no sistema Windows); por isso se somam e subtraem como números.\n- Afirmação errada: \"#REF! significa que a fórmula dividiu por zero\" — Motivo: troca entre códigos de erro — Versão tecnicamente correta: #REF! indica referência inválida (ex.: célula excluída); #DIV/0! indica divisão por zero ou por célula vazia.\n\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: tipos (número, texto, lógico, data/hora, erro), serial de data, formato de exibição, códigos de erro.\n- Regras e fórmulas: diferença de datas = subtração de seriais; 0,5 = meio-dia; percentual exibido ≠ valor calculado.\n- Exceções: número gravado como texto não soma; simulador não formata células e não executa conversão de texto (limitação declarada).\n- Palavras-chave: serial, data, hora, formato, #DIV/0!, #VAL!, #REF!, #N/A, #NUM!, tipo de dado.\n- Checklist de domínio: classifico tipos; calculo com datas pelo serial; distingo formato de valor; associo erros às causas; conheço os limites do simulador.\n\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como o Excel armazena internamente uma data e qual número corresponde a 01/01/1900 no sistema Windows? (2) Que resultado dá =B2-A2 quando A2 e B2 são datas e por quê? (3) Uma célula exibe 11% mas a fórmula multiplica por 0,105: explique. (4) Qual erro indica divisão por célula vazia e qual indica texto em operação numérica? (5) O simulador deste projeto aplica formatos de célula? Justifique.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular quantos dias se passaram entre 01/05/2024 (A2) e 10/05/2024 (B2).",
+          "resposta": "=B2-A2 retorna 9 (dias), porque datas são números seriais: subtrair dois seriais retorna a diferença em dias. Se as datas estivessem gravadas como texto, a subtração falharia (#VAL!)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Planilha de vencimentos: obter a data atual automaticamente e calcular os dias até o vencimento em B2.",
+          "resposta": "Data atual: =HOJE() (o simulador deste projeto retorna a data real do sistema, exibida no formato AAAA/MM/DD). Dias restantes: =B2-HOJE(), negativo quando vencido. Como HOJE() recalcula a cada abertura/recálculo, o indicador permanece atualizado — e, por ser função volátil, merece cuidado em planilhas grandes (ver tópico 6)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Auditoria: a soma de uma coluna de valores ficou menor que o esperado; alguns valores foram digitados com apóstrofo inicial (texto). Diagnóstico.",
+          "resposta": "Diagnóstico: números gravados como texto não participam de aritmética — SOMA os ignora (e operações diretas gerariam #VAL!). Correção no Excel real: converter o texto em número (funções de conversão ou reentrada do valor, conforme a versão); no simulador deste projeto, garantir o tipo numérico na entrada, pois conversão de texto não está no escopo documentado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário soma \"10\" (texto) com 5 e espera 15.",
+          "correcao": "Incorreto: texto não numérico em operação aritmética gera #VAL! (no simulador deste projeto e, conforme o contexto, no Excel real). É preciso garantir o tipo numérico — converter com a função VALOR() no Excel real (não suportada no simulador) ou redigitar o valor como número."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Como o Excel armazena internamente uma data? A) Texto formatado; B) Número serial; C) Objeto de calendário.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Alterar o formato de número muda o valor armazenado na célula.",
+          "resposta": "Errado. O formato altera apenas a exibição; o valor armazenado completo é usado nos cálculos."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "A fórmula =A1/B1 retornou #DIV/0!. Causa mais provável? A) A1 contém texto; B) B1 está vazia (ou zero); C) A referência A1 foi excluída.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de classificar tipos de dado, calcular com datas explicando o mecanismo serial, distinguir formato de valor armazenado e associar códigos de erro às suas causas, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "compreenderá tipos de dados do Excel e o tratamento de datas/horários"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Tipos: número (inteiros/decimais), texto, lógico (VERDADEIRO/FALSO), data/hora (armazenada como número serial: dias desde 01/01/1900 no sistema Windows), erro (#N/A, #REF!, #VAL!, #DIV/0!, #NUM!). Formatos numéricos alteram a exibição sem alterar o valor. Datas são números: 01/01/1900 = 1. Aritmética de datas é possível (subtrair datas dá dias). O simulador oferece HOJE() (data real do sistema, formato AAAA/MM/DD) e não formata células (limitação declarada).",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Tipos de dados, datas, horários e formatos numéricos",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário soma '10' (texto) com 5 e espera 15.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto: texto não numérico em operação aritmética gera #VAL! no simulador (e no Excel, dependendo do contexto). Converter com a função VALOR() do Excel (não suportada no simulador) ou garantir tipo numérico."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Diferença entre 10/05/2024 e 01/05/2024.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=B2-A2 (onde A2 e B2 são datas) retorna 9 (dias), porque datas são seriais.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Obter a data atual.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=HOJE() retorna a data do sistema no formato AAAA/MM/DD (ex.: 2026/10/23).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário soma '10' (texto) com 5 e espera 15.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto: texto não numérico em operação aritmética gera #VAL! no simulador (e no Excel, dependendo do contexto). Converter com a função VALOR() do Excel (não suportada no simulador) ou garantir tipo numérico.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "modulo-1-unidade-3-topico-3-sub-2",
+      "titulo": "Funções matemáticas, estatísticas, lógicas, condicionais, textuais e de data",
+      "topicoTitulo": "Tipos de dados, datas e funções essenciais",
+      "topicoId": "modulo-1-unidade-3-topico-3",
+      "unidadeTitulo": "1.3 Microsoft Excel",
+      "moduloTitulo": "MICROSOFT 365 E APLICAÇÕES DE ESCRITÓRIO",
+      "objetivoAprendizagem": "Aluno utilizará as funções essenciais do Excel: SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIA, MÉDIASE, MÁXIMO, MÍNIMO, CONT.VALORES, entre outras, incluindo funções textuais (CONCATENAR/CONCATENAR, TEXTOJUNTAR/TEXTJOIN, ESQUERDA/LEFT, DIREITA/RIGHT, EXT.TEXTO/EXT.TEXTO, PESQUISAR, LOCALIZAR, ARRUMAR, NUM.CARACT) e de data/hora (HOJE, AGORA, DATA, ANO, MÊS, DIA, DIAS, DIATRABALHOTOTAL, DATADIF).",
+      "conteudo": "Funções matemáticas/estatísticas: SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES. Lógicas/condicionais: SE, SES (nesta implementação SES é alias de E — atenção: no Excel real SES é SE com múltiplas condições; aqui SES=E por decisão documentada do simulador), E, OU, NÃO, SEERRO (avalia preguiçosamente apenas o ramo usado). Condicionais com critério: CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE (critérios aceitam operadores >=, <=, <>, >, <, = ou igualdade). O simulador suporta essas funções com busca/cálculo reais; SES é alias de E (limitação declarada). Aliases em inglês: SUM, AVERAGE, MAX, MIN, COUNTA, IF, AND, OR, NOT, IFERROR, COUNTIF, COUNTIFS, SUMIF, SUMIFS, AVERAGEIF. Funções textuais: CONCATENAR (CONCAT) justapõe cadeias/intervalos SEM delimitador; TEXTOJUNTAR (TEXTJOIN) insere delimitador (e pode ignorar vazios); ESQUERDA (LEFT) extrai n caracteres a partir do início; DIREITA (RIGHT) extrai a partir do final; EXT.TEXTO (EXT.TEXTO) extrai substring por posição/comprimento; funções auxiliares de comparação e manipulação de caracteres (PESQUISAR, LOCALIZAR, ARRUMAR, NUM.CARACT). Funções de data/hora: HOJE (TODAY), AGORA (NOW), DATA, ANO, MÊS, DIA, DIAS (DAYS), DIATRABALHOTOTAL e DATADIF operam sobre datas/horas; DATADIF calcula a diferença entre duas datas. O simulador NÃO executa as funções textuais nem as funções de data/hora (com exceção de HOJE, que retorna a data real do sistema) — o escopo do simulador documentado (assets/js/simulators.js) é separado do conteúdo didático exigido para provas; demais funções devem ser estudadas como conteúdo teórico, e o simulador deve documentar as funções suportadas e rejeitar entradas inválidas com mensagens úteis.",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Média de A1:A5.",
+          "resposta": "=MÉDIA(A1:A5) — soma dos valores numéricos dividida pela quantidade (ignora texto/vazio em intervalos)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Contar valores maiores que 7 em A1:A10.",
+          "resposta": "=CONT.SE(A1:A10; \">7\") — critério com operador relacional."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Um usuário espera que SES(cond1; val1; cond2; val2) funcione como SE encadeado.",
+          "correcao": "Incorreto no simulador: SES é alias de E (retorna VERDADEIRO/FALSO). Para SE encadeado use SE aninhado: =SE(cond1; val1; SE(cond2; val2; val3))."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual função retorna a maior valor de um intervalo? A) MÉDIA; B) MÁXIMO; C) SOMA.",
+          "resposta": "B"
+        },
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) CONT.VALORES conta células vazias.",
+          "resposta": "Errado. CONT.VALORES conta células não vazias (texto, número, lógico, erro); células vazias são ignoradas. Observação documentada: o simulador trata texto vazio como vazio (diferença pontual em relação ao Excel real, que conta texto vazio)."
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de utilizar as funções essenciais do Excel: SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIA, MÉDIASE, MÁXIMO, MÍNIMO, CONT.VALORES, entre outras, incluindo funções textuais (CONCATENAR/CONCATENAR, TEXTOJUNTAR/TEXTJOIN, ESQUERDA/LEFT, DIREITA/RIGHT, EXT.TEXTO/EXT.TEXTO, PESQUISAR, LOCALIZAR, ARRUMAR, NUM.CARACT) e de data/hora (HOJE, AGORA, DATA, ANO, MÊS, DIA, DIAS, DIATRABALHOTOTAL, DATADIF), evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [
+        {
+          "id": "boUzkJJNOPI",
+          "titulo": "Curso Excel #10 - Funções do Excel (Parte 1)",
+          "canal": "Curso em Vídeo",
+          "urlOriginal": "https://www.youtube.com/watch?v=boUzkJJNOPI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/boUzkJJNOPI",
+          "descricao": "Vídeo didático sobre as principais funções do Excel, cobrindo funções matemáticas (SOMA, MÉDIA, MÁXIMO, MÍNIMO), estatísticas, lógicas (SE, E, OU), de contagem (CONT.SE, CONT.VALORES) e funções de texto. Explica a sintaxe, argumentos e exemplos práticos de uso de cada função, essenciais para provas de concursos e uso profissional.",
+          "dataValidacao": "2026-10-24"
+        }
+      ],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "utilizará as funções essenciais do Excel: SE, SES, E, OU, NÃO, SEERRO, CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIA, MÉDIASE, MÁXIMO, MÍNIMO, CONT.VALORES, entre outras, incluindo funções textuais (CONCATENAR/CONCATENAR, TEXTOJUNTAR/TEXTJOIN, ESQUERDA/LEFT, DIREITA/RIGHT, EXT.TEXTO/EXT.TEXTO, PESQUISAR, LOCALIZAR, ARRUMAR, NUM.CARACT) e de data/hora (HOJE, AGORA, DATA, ANO, MÊS, DIA, DIAS, DIATRABALHOTOTAL, DATADIF)"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Funções matemáticas/estatísticas: SOMA, MÉDIA, MEDIANA, MÁXIMO, MÍNIMO, CONT.VALORES. Lógicas/condicionais: SE, SES (nesta implementação SES é alias de E — atenção: no Excel real SES é SE com múltiplas condições; aqui SES=E por decisão documentada do simulador), E, OU, NÃO, SEERRO (avalia preguiçosamente apenas o ramo usado). Condicionais com critério: CONT.SE, CONT.SES, SOMASE, SOMASES, MÉDIASE (critérios aceitam operadores >=, <=, <>, >, <, = ou igualdade). O simulador suporta essas funções co…",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Funções matemáticas, estatísticas, lógicas, condicionais, textuais e de data",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Um usuário espera que SES(cond1; val1; cond2; val2) funcione como SE encadeado.",
+            "porqueErrada": "",
+            "versaoCorreta": "Incorreto no simulador: SES é alias de E (retorna VERDADEIRO/FALSO). Para SE encadeado use SE aninhado: =SE(cond1; val1; SE(cond2; val2; val3))."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Média de A1:A5.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=MÉDIA(A1:A5) — soma dos valores numéricos dividida pela quantidade (ignora texto/vazio em intervalos).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Contar valores maiores que 7 em A1:A10.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "=CONT.SE(A1:A10; \">7\") — critério com operador relacional.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Um usuário espera que SES(cond1; val1; cond2; val2) funcione como SE encadeado.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Incorreto no simulador: SES é alias de E (retorna VERDADEIRO/FALSO). Para SE encadeado use SE aninhado: =SE(cond1; val1; SE(cond2; val2; val3)).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "modulo": 3,
+    "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+    "unidade": 3,
+    "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+    "parte": 3,
+    "totalPartesUnidade": 5,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM3U3P3",
+    "arquivoSaida": "scripts/lotes/enriParcialM3U3P3.js",
+    "idsCompletos": [
+      "m3-u3-t2-s2",
+      "m3-u3-t2-s3"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m3-u3-t2-s2",
+      "titulo": "Recursos de acessibilidade em plataformas de comunicação",
+      "topicoTitulo": "Acessibilidade digital na comunicação",
+      "topicoId": "modulo-3-unidade-3-topico-2",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno identificará recursos de acessibilidade em plataformas de comunicação.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) recursos de acessibilidade em plataformas; (b) capacidades condicionais; (c) cuidados ao afirmar disponibilidade; (d) como verificar. POR QUE O CONHECIMENTO É IMPORTANTE: a disponibilidade varia por plataforma e plano; generalizar gera erro e prejudica o usuário. PRÉ-REQUISITOS: princípios de acessibilidade. OBJETIVOS OBSERVÁVEIS: (1) citar recursos comuns; (2) indicar que são condicionais; (3) orientar a verificação na documentação; (4) relacionar recurso e necessidade. COMPETÊNCIAS DESENVOLVIDAS: seleção de recurso acessível; avaliação condicional de funcionalidade. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (boas práticas); unidade 2.2 (plataformas); Módulo 6 (inclusão). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: plataformas de comunicação oferecem, tipicamente, compatibilidade com leitores de tela, legendas automáticas em reuniões, transcrição de áudio, atalhos de teclado, temas de alto contraste, ajuste de tamanho de fonte e, quando disponível, janela de intérprete de Libras e descrição de conteúdo compartilhado. Esses recursos NÃO são uniformes: a presença, a qualidade e a configuração dependem da plataforma, do plano e da versão. Por isso, ao afirmar uma capacidade, deve-se ressalvar que varia e remeter à documentação oficial do produto. A postura correta é verificar o recurso no contexto concreto (qual plataforma, qual plano, qual versão) antes de depender dele, e prever alternativa quando faltar — por exemplo, oferecer material textual complementar à legenda automática. Em contexto institucional, a escolha da plataforma deve considerar a acessibilidade como requisito, não como detalhe.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer que existem recursos e que variam.\n- Nível intermediário: relacionar recurso e necessidade (surdo, cego, mobilidade reduzida).\n- Nível avançado: avaliar se uma plataforma atende a um requisito de acessibilidade específico.\n- Nível especialista: planejar contornar a ausência de um recurso com alternativa equivalente.\nCOMPARAÇÕES CRÍTICAS:\n- legenda automática x legenda revisada: a automática é imediata e sujeita a erro; a revisada é confiável — a escolha muda a qualidade.\n- recurso padrão x recurso condicional: o primeiro existe independentemente do plano; o segundo depende dele — afirmar o segundo como universal gera erro.\n- acessibilidade nativa x extensão: alguns recursos vêm do produto, outros de ferramentas auxiliares.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Toda plataforma tem legendas ao vivo gratuitas.\" — Motivo: depende do plano — Versão tecnicamente correta: conferir a documentação oficial.\n- Afirmação errada: \"A legenda automática dispensa acessibilidade.\" — Motivo: ela erra e não cobre tudo — Versão tecnicamente correta: revisar e complementar.\n- Afirmação errada: \"Acessibilidade é igual entre planos.\" — Motivo: recursos variam — Versão tecnicamente correta: verificar caso a caso.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: leitor de tela, legenda, transcrição, atalhos, contraste, Libras.\n- Regras e fórmulas: recurso acessível deve ser verificado por plataforma/plano/versão.\n- Exceções: recursos automáticos exigem revisão.\n- Palavras-chave: tecnologia assistiva, legenda, transcrição, plano, documentação.\n- Checklist de domínio: (1) Cito recursos comuns? (2) Ressalvo o condicional? (3) Oriento a verificação? (4) Prevejo alternativa?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Cite três recursos comuns. (2) Por que não generalizar? (3) Onde verificar a disponibilidade? (4) O que fazer se o recurso faltar? (5) Legenda automática é suficiente?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "O que são live captions?",
+          "resposta": "Legendas geradas em tempo real durante uma reunião, úteis para pessoas com deficiência auditiva e para participantes em ambientes ruidosos."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como planejar uma reunião acessível?",
+          "resposta": "Enviar pauta e materiais com antecedência, ativar legendas, disponibilizar gravação com transcrição, usar linguagem clara e oferecer canal de perguntas acessível."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'Todas as plataformas oferecem os mesmos recursos de acessibilidade.'",
+          "correcao": "Errado. Recursos variam por plataforma, plano e versão; consultar documentação oficial antes de assumir disponibilidade."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A disponibilidade de recursos de acessibilidade varia por plataforma e plano.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual recurso auxilia pessoas com deficiência visual em documentos? A) Legendas; B) Texto alternativo (alt text); C) Alto contraste apenas; D) Transcrição de áudio.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de identificar recursos de acessibilidade em plataformas de comunicação, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "identificará recursos de acessibilidade em plataformas de comunicação"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Recursos comuns: leitores de tela compatíveis; legendas automáticas (live captions) em reuniões; transcrição de áudio; atalhos de teclado; alto contraste; tamanho de fonte ajustável; intérprete de libras (quando disponível); descrição de slides. A disponibilidade e qualidade desses recursos variam por plataforma e plano; verificar documentação oficial da plataforma e versão utilizada. Não generalizar entre plataformas ou planos.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Recursos de acessibilidade em plataformas de comunicação",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'Todas as plataformas oferecem os mesmos recursos de acessibilidade.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. Recursos variam por plataforma, plano e versão; consultar documentação oficial antes de assumir disponibilidade."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "O que são live captions?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Legendas geradas em tempo real durante uma reunião, úteis para pessoas com deficiência auditiva e para participantes em ambientes ruidosos.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como planejar uma reunião acessível?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Enviar pauta e materiais com antecedência, ativar legendas, disponibilizar gravação com transcrição, usar linguagem clara e oferecer canal de perguntas acessível.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'Todas as plataformas oferecem os mesmos recursos de acessibilidade.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. Recursos variam por plataforma, plano e versão; consultar documentação oficial antes de assumir disponibilidade.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m3-u3-t2-s3",
+      "titulo": "Boas práticas de acessibilidade em documentos e mensagens",
+      "topicoTitulo": "Acessibilidade digital na comunicação",
+      "topicoId": "modulo-3-unidade-3-topico-2",
+      "unidadeTitulo": "3.3 Etiqueta digital, acessibilidade e comunicação profissional",
+      "moduloTitulo": "COMUNICAÇÃO E COLABORAÇÃO",
+      "objetivoAprendizagem": "Aluno aplicará boas práticas de acessibilidade em documentos e mensagens.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) boas práticas de acessibilidade em documentos; (b) boas práticas em mensagens; (c) o papel de estilos, listas e tabelas; (d) verificação com tecnologia assistiva. POR QUE O CONHECIMENTO É IMPORTANTE: documentos e mensagens são a entrega final da comunicação; acessibilidade neles torna o conteúdo utilizável. PRÉ-REQUISITOS: princípios de acessibilidade; uso de editor de texto. OBJETIVOS OBSERVÁVEIS: (1) usar estilos de título; (2) construir listas e tabelas acessíveis; (3) nomear links de forma descritiva; (4) garantir contraste e fontes legíveis. COMPETÊNCIAS DESENVOLVIDAS: produção de documentos acessíveis; revisão de acessibilidade. GRAU DE DIFICULDADE: básico a intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 3.2 (princípios); Módulo 1 (Word e documentos). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa média, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: em documentos, a acessibilidade começa pela estrutura semântica: usar estilos de título (Heading) em vez de apenas negrito, o que permite a navegação por leitores de tela e a geração de sumários; empregar listas reais em vez de hífens manuais; construir tabelas com linha de cabeçalho identificada; evitar imagens com texto embutido sem alternativa; e nomear links de forma descritiva (evitar \"clique aqui\"). O contraste mínimo entre texto e fundo e o uso de fontes legíveis completam o conjunto. Em mensagens de correio, prefira texto simples quando possível, evite excesso de imagens que carreguem informação essencial e teste a leitura com leitor de tela quando relevante. PDFs devem ser gerados a partir de documentos estruturados e, quando escaneados, receber camada de texto acessível. A verificação com tecnologia assistiva revela barreiras que a inspeção visual não detecta.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: trocar negrito manual por estilos de título.\n- Nível intermediário: construir uma tabela acessível e nomear links.\n- Nível avançado: revisar um PDF acessível e corrigir ordem de leitura.\n- Nível especialista: auditar um conjunto de documentos e padronizar a acessibilidade.\nCOMPARAÇÕES CRÍTICAS:\n- estilo de título x negrito: o estilo cria estrutura navegável; o negrito só destaca visualmente — muda a acessibilidade.\n- lista real x hífen manual: a lista real é anunciada como lista pelo leitor de tela; o hífen não.\n- link descritivo x \"clique aqui\": o descritivo informa o destino; o genérico não faz sentido fora de contexto.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"Negrito no lugar do título é equivalente.\" — Motivo: não cria estrutura — Versão tecnicamente correta: usar estilos de título.\n- Afirmação errada: \"PDF escaneado já é acessível.\" — Motivo: imagem sem camada de texto não é lida — Versão tecnicamente correta: aplicar reconhecimento de texto e ordem de leitura.\n- Afirmação errada: \"Contraste é questão de estética.\" — Motivo: afeta a leitura por baixa visão — Versão tecnicamente correta: garantir contraste mínimo.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: estilo de título, lista real, tabela com cabeçalho, alt text, link descritivo, contraste.\n- Regras e fórmulas: estrutura semântica + contraste + alternativa textual = documento acessível.\n- Exceções: PDFs escaneados exigem camada de texto.\n- Palavras-chave: semântica, leitor de tela, contraste, link, PDF.\n- Checklist de domínio: (1) Uso estilos? (2) Construo listas/tabelas acessíveis? (3) Nomeio links? (4) Garanto contraste?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Por que usar estilos de título? (2) Como tornar uma tabela acessível? (3) O que reescrever em \"clique aqui\"? (4) O que falta em um PDF escaneado? (5) Como testar a acessibilidade?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Por que evitar 'clique aqui' em links?",
+          "resposta": "Leitores de tela leem o texto do link fora de contexto; 'clique aqui' não informa o destino. Use descrição do destino, ex.: 'Acesse o relatório de março'."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Como estruturar um documento acessível?",
+          "resposta": "Usar estilos de título hierárquicos (H1, H2...), listas reais, tabelas com cabeçalho, alt text em imagens e contraste adequado."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'PDF sempre é acessível.'",
+          "correcao": "Errado. PDFs podem ser inacessíveis se forem imagens escaneadas ou sem estrutura; prefira PDF com texto selecionável e tags, ou forneça versão acessível."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Usar estilos de título (Heading) melhora a navegação por leitores de tela.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual prática melhora acessibilidade de links? A) Usar 'clique aqui'; B) Descrever o destino do link; C) Links sem texto; D) Links em imagens sem alt text.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de aplicar boas práticas de acessibilidade em documentos e mensagens, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "aplicará boas práticas de acessibilidade em documentos e mensagens"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "Boas práticas: usar estilos de título (Heading) em vez de negrito; listas reais (não hífens manuais); tabelas com cabeçalho; evitar imagens com texto embutido sem alt text; nomear links descritivamente (evitar 'clique aqui'); garantir contraste mínimo; fornecer versão acessível de PDFs; usar fontes legíveis. Em e-mails: texto simples quando possível; evitar excesso de imagens; testar com leitor de tela.",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Boas práticas de acessibilidade em documentos e mensagens",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'PDF sempre é acessível.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. PDFs podem ser inacessíveis se forem imagens escaneadas ou sem estrutura; prefira PDF com texto selecionável e tags, ou forneça versão acessível."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Por que evitar 'clique aqui' em links?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Leitores de tela leem o texto do link fora de contexto; 'clique aqui' não informa o destino. Use descrição do destino, ex.: 'Acesse o relatório de março'.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Como estruturar um documento acessível?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Usar estilos de título hierárquicos (H1, H2...), listas reais, tabelas com cabeçalho, alt text em imagens e contraste adequado.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'PDF sempre é acessível.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. PDFs podem ser inacessíveis se forem imagens escaneadas ou sem estrutura; prefira PDF com texto selecionável e tags, ou forneça versão acessível.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    }
+  ]
+}

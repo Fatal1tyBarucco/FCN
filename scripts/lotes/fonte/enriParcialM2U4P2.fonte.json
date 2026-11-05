@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "modulo": 2,
+    "moduloTitulo": "REDES DE COMPUTADORES",
+    "unidade": 4,
+    "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+    "parte": 2,
+    "totalPartesUnidade": 6,
+    "totalSubtopicosLote": 2,
+    "constNome": "enriParcialM2U4P2",
+    "arquivoSaida": "scripts/lotes/enriParcialM2U4P2.js",
+    "idsCompletos": [
+      "m2-u4-t1-s3",
+      "m2-u4-t2-s1"
+    ]
+  },
+  "subtopicos": [
+    {
+      "id": "m2-u4-t1-s3",
+      "titulo": "Máscaras de sub-rede",
+      "topicoTitulo": "Estrutura IPv4 e tipos de endereço",
+      "topicoId": "modulo-2-unidade-4-topico-1",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno explicará o papel da máscara e converterá entre notação decimal e prefixo CIDR.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) o papel da máscara; (b) a conversão entre notação decimal e CIDR; (c) máscaras inválidas; (d) o tamanho da sub-rede. POR QUE O CONHECIMENTO É IMPORTANTE: a máscara define rede e host e é base de todo cálculo de sub-rede; a prova cobra a equivalência decimal ↔ prefixo. PRÉ-REQUISITOS: estrutura IPv4. OBJETIVOS OBSERVÁVEIS: (1) explicar a máscara; (2) converter decimal ↔ /n; (3) reconhecer máscara inválida; (4) calcular o tamanho. COMPETÊNCIAS DESENVOLVIDAS: conversão de máscaras; cálculo de tamanho. GRAU DE DIFICULDADE: intermediário. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.2 (CIDR); unidade 4.2 (sub-redes/hosts). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a máscara de sub-rede é um número de 32 bits com 1s CONTÍGUOS na parte de rede e 0s na parte de host (por exemplo, 255.255.255.0, equivalente a /24). Onde a máscara tem 1, o bit pertence à rede; onde tem 0, pertence ao host. Máscaras com 1s descontínuos (como 255.0.255.0) são INVÁLIDAS no IPv4 clássico, pois a máscara precisa ser contígua. A notação decimal pontuada (255.255.255.0) e a notação CIDR (/24) são equivalentes, apenas formas diferentes de escrever o mesmo prefixo. A máscara determina o tamanho da sub-rede: o número de bits de host é 32 − prefixo, e o total de endereços é 2^(bits de host). Assim, /24 → 2^8 = 256 endereços (254 hosts); /16 → 2^16 = 65536 endereços (65534 hosts); /30 → 2^2 = 4 endereços (2 hosts), ideal para links ponto a ponto. Conversão: /26 = 255.255.255.192 (os dois primeiros bits do último octeto em 1: 128+64 = 192). Cálculo ilustrativo: para a máscara 255.255.255.224, o último octeto é 224 = 128+64+32, ou seja, 3 bits em 1, logo o prefixo é 24+3 = /27, com 2^5 = 32 endereços e 30 hosts. Variação: a máscara 255.255.255.192 é /26, com 62 hosts.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: reconhecer 255.255.255.0 como /24.\n- Nível intermediário: converter octetos de máscara em bits e prefixo.\n- Nível avançado: calcular o número de hosts a partir da máscara.\n- Nível especialista: detectar máscaras inválidas e inconsistências em uma configuração.\nCOMPARAÇÕES CRÍTICAS:\n- decimal x CIDR: formas equivalentes de representar o mesmo prefixo.\n- máscara válida x inválida: a válida tem 1s contíguos; a inválida, não — muda a aceitação em prova.\n- /n x número de hosts: /n não é o número de hosts; é o prefixo — confundir erra a conta.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"255.0.255.0 é uma máscara válida.\" — Motivo: os 1s não são contíguos — Versão tecnicamente correta: máscaras exigem 1s contíguos.\n- Afirmação errada: \"/24 tem 24 hosts.\" — Motivo: /24 é o prefixo — Versão tecnicamente correta: tem 254 hosts utilizáveis.\n- Afirmação errada: \"A máscara não afeta o número de hosts.\" — Motivo: é ela que define os bits de host — Versão tecnicamente correta: quanto maior o prefixo, menos hosts.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: máscara, 1s contíguos, notação decimal, CIDR, bits de host.\n- Regras e fórmulas: hosts = 2^(32 − prefixo) − 2; /26 = 255.255.255.192.\n- Exceções: /31 e /32 têm uso especial.\n- Palavras-chave: prefixo, contiguidade, tamanho, conversão, host.\n- Checklist de domínio: (1) Explico a máscara? (2) Converto notações? (3) Reconheço inválidas? (4) Calculo o tamanho?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) O que a máscara separa? (2) 255.255.255.192 equivale a qual prefixo? (3) Quantos hosts tem uma /30? (4) Por que 255.0.255.0 é inválida? (5) Quantos hosts tem uma /27?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Converter 255.255.255.0 para CIDR.",
+          "resposta": "/24 (24 bits em 1 = 255.255.255.0)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Dado /27, qual a máscara decimal?",
+          "resposta": "255.255.255.224 (27 bits = 255.255.255.11100000 = 224)."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'A máscara 255.255.255.128 (/25) permite 128 hosts.'",
+          "correcao": "Errado. /25 tem 7 bits de host = 128 endereços, dos quais 2 são reservados (rede e broadcast), restando 126 hosts."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) A máscara deve ter 1s contíguos à esquerda.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Qual máscara corresponde a /30? A) 255.255.255.240; B) 255.255.255.252; C) 255.255.255.248; D) 255.255.255.224.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de explicar o papel da máscara e converterá entre notação decimal e prefixo CIDR, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "",
+          "preRequisitos": [],
+          "objetivosObservaveis": [
+            "explicará o papel da máscara e converterá entre notação decimal e prefixo CIDR"
+          ],
+          "competencias": [],
+          "dificuldade": "intermediario",
+          "relacoes": [],
+          "relevanciaConcurso": {
+            "classificacao": "media",
+            "justificativa": "",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "A máscara de sub-rede é um número de 32 bits com 1s contínuos na parte de rede e 0s na parte de host (ex.: 255.255.255.0 = /24). Ela define onde termina a rede e começa o host. Máscaras não contíguas (ex.: 255.0.255.0) são inválidas em IPv4 clássico. Notação decimal pontuada (255.255.255.0) e CIDR (/24) são equivalentes. A máscara determina o tamanho da sub-rede: /24 = 256 endereços (254 hosts), /16 = 65536, /30 = 4 (2 hosts).",
+          "intermediario": "",
+          "avancado": "",
+          "especialista": ""
+        },
+        "comparacoes": [
+          {
+            "tema": "Comparação relacionada a Máscaras de sub-rede",
+            "a": {
+              "rotulo": "Conceito A",
+              "texto": ""
+            },
+            "b": {
+              "rotulo": "Conceito B",
+              "texto": ""
+            },
+            "diferencaGabarito": ""
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "Afirmação: 'A máscara 255.255.255.128 (/25) permite 128 hosts.'",
+            "porqueErrada": "",
+            "versaoCorreta": "Errado. /25 tem 7 bits de host = 128 endereços, dos quais 2 são reservados (rede e broadcast), restando 126 hosts."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [],
+          "regras": [],
+          "comparacoes": [],
+          "fluxos": [],
+          "excecoes": [],
+          "palavrasChave": [],
+          "checklist": []
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Converter 255.255.255.0 para CIDR.",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "/24 (24 bits em 1 = 255.255.255.0).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Dado /27, qual a máscara decimal?",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "255.255.255.224 (27 bits = 255.255.255.11100000 = 224).",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'A máscara 255.255.255.128 (/25) permite 128 hosts.'",
+            "dados": "",
+            "conceitos": [],
+            "estrategia": "",
+            "execucao": [],
+            "resultado": "Errado. /25 tem 7 bits de host = 128 endereços, dos quais 2 são reservados (rede e broadcast), restando 126 hosts.",
+            "justificativa": "",
+            "errosFrequentes": [],
+            "variacao": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2-u4-t2-s1",
+      "titulo": "Notação CIDR e cálculo de endereço de rede/broadcast",
+      "topicoTitulo": "CIDR, endereço de rede e broadcast, cálculos",
+      "topicoId": "modulo-2-unidade-4-topico-2",
+      "unidadeTitulo": "2.4 Endereçamento e sub-redes",
+      "moduloTitulo": "REDES DE COMPUTADORES",
+      "objetivoAprendizagem": "Aluno calculará endereço de rede e broadcast a partir de IP e prefixo, usando operação AND.",
+      "conteudo": "ORIENTAÇÃO ESTRATÉGICA — O QUE SERÁ APRENDIDO: (a) a notação CIDR; (b) o cálculo do endereço de rede por AND; (c) o cálculo do broadcast; (d) o intervalo de hosts. POR QUE O CONHECIMENTO É IMPORTANTE: calcular rede e broadcast é a operação mais cobrada de endereçamento; erro de bit altera toda a resposta. PRÉ-REQUISITOS: estrutura IPv4; máscaras. OBJETIVOS OBSERVÁVEIS: (1) escrever IP/prefixo; (2) calcular a rede por AND; (3) calcular o broadcast; (4) determinar o intervalo de hosts. COMPETÊNCIAS DESENVOLVIDAS: cálculo binário de sub-redes. GRAU DE DIFICULDADE: intermediário a avançado. RELAÇÃO COM OUTROS TÓPICOS: unidade 4.1 (máscaras); unidade 4.2 (sub-redes/hosts). RELEVÂNCIA PARA CONCURSOS: classificação qualitativa alta, como estimativa pedagógica de adequação ao conteúdo programático, não frequência estatística de incidência em provas. FUNDAMENTAÇÃO CONCEITUAL: a notação CIDR (Classless Inter-Domain Routing) escreve um endereço e seu prefixo como IP/prefixo (por exemplo, 192.168.1.0/24), dispensando as classes. Para achar o ENDEREÇO DE REDE, aplica-se o E lógico (AND) bit a bit entre o IP e a máscara. Para achar o BROADCAST, tomam-se os bits de host do endereço de rede e colocam-se todos em 1. Os hosts válidos vão do endereço de rede +1 até o broadcast −1. Exemplo completo: IP 192.168.1.130/25. A máscara /25 é 255.255.255.128. O último octeto em binário: 130 = 10000010; a máscara 128 = 10000000. AND = 10000000 = 128, logo a rede é 192.168.1.128. O broadcast é 192.168.1.255 (bits de host em 1). Os hosts válidos são 192.168.1.129 a 192.168.1.254, ou seja, 2^(32−25) − 2 = 2^7 − 2 = 128 − 2 = 126 hosts. Variação: o IP 192.168.1.100/25 pertence à rede 192.168.1.0/25 (pois 100 = 01100100 e AND com 128 = 0), e não à rede .128 — pegadinha clássica.\nPROGRESSÃO DE DIFICULDADE:\n- Nível iniciante: aplicar AND no último octeto quando a máscara é /24.\n- Nível intermediário: calcular rede e broadcast para prefixos diversos.\n- Nível avançado: localizar o intervalo de hosts e o número de hosts.\n- Nível especialista: decidir a qual sub-rede um IP pertence quando há várias.\nCOMPARAÇÕES CRÍTICAS:\n- endereço de rede x broadcast: o primeiro tem bits de host em 0; o segundo, em 1 — ambos não são atribuíveis a hosts.\n- AND com máscara /25 x /24: a mesma faixa pode gerar redes diferentes conforme o prefixo.\n- 192.168.1.130/25 x 192.168.1.100/25: pertencem a redes distintas — a máscara muda o resultado.\nERROS, EXCEÇÕES E PEGADINHAS:\n- Afirmação errada: \"O IP 192.168.1.130/25 está na rede 192.168.1.0.\" — Motivo: o AND com /25 dá .128 — Versão tecnicamente correta: pertence a 192.168.1.128/25.\n- Afirmação errada: \"O broadcast é sempre x.x.x.255.\" — Motivo: depende da máscara — Versão tecnicamente correta: é o endereço com bits de host em 1.\n- Afirmação errada: \"O endereço de rede pode ser atribuído a um host.\" — Motivo: identifica a rede — Versão tecnicamente correta: rede e broadcast não são atribuíveis.\nRESUMO ESTRUTURADO:\n- Conceitos essenciais: CIDR, AND, endereço de rede, broadcast, intervalo de hosts.\n- Regras e fórmulas: rede = IP AND máscara; broadcast = rede com bits de host em 1; hosts = 2^(32−prefixo) − 2.\n- Exceções: /31 e /32 tratam rede/broadcast de forma especial.\n- Palavras-chave: prefixo, AND, intervalo, hosts utilizáveis.\n- Checklist de domínio: (1) Escrevo IP/prefixo? (2) Calculo a rede? (3) Calculo o broadcast? (4) Determino o intervalo?\nVERIFICAÇÃO DE APRENDIZAGEM: (1) Como se calcula a rede? (2) Qual a rede de 192.168.1.130/25? (3) Qual o broadcast? (4) Quantos hosts tem essa sub-rede? (5) 192.168.1.100/25 pertence a qual rede?",
+      "exemplos": [
+        {
+          "tipo": "introducao",
+          "enunciado": "Calcular rede e broadcast de 10.0.5.200/26.",
+          "resposta": "Máscara /26 = 255.255.255.192. Rede = 10.0.5.192 (200 AND 192 = 192). Broadcast = 10.0.5.255. Hosts: 10.0.5.193 a 10.0.5.254 (62 hosts)."
+        },
+        {
+          "tipo": "aplicacao",
+          "enunciado": "Dado 172.16.30.5/20, determinar a sub-rede e o broadcast.",
+          "resposta": "Máscara /20 = 255.255.240.0. Rede = 172.16.16.0 (30 AND 240 = 16 no terceiro octeto). Broadcast = 172.16.31.255. Hosts: 172.16.16.1 a 172.16.31.254."
+        },
+        {
+          "tipo": "erro",
+          "enunciado": "Afirmação: 'O endereço de rede pode ser atribuído a um host.'",
+          "correcao": "Errado. O endereço de rede (todos os bits de host em 0) identifica a sub-rede e não pode ser usado por host. O broadcast (todos em 1) também não."
+        }
+      ],
+      "exercicios": [
+        {
+          "tipo": "certos_erro",
+          "enunciado": "(C/E) Em /24, o broadcast é o último endereço da sub-rede.",
+          "resposta": "Certo."
+        },
+        {
+          "tipo": "multipla",
+          "enunciado": "Quantos hosts utilizáveis em /26? A) 64; B) 62; C) 30; D) 32.",
+          "resposta": "B"
+        }
+      ],
+      "criterioDominio": "PoC (A): o aluno é capaz de calcular endereço de rede e broadcast a partir de IP e prefixo, usando operação AND, evidenciado por resposta correta a item de verificação associado ao subtópico.",
+      "videos": [],
+      "registroAtual": {
+        "orientacaoEstrategica": {
+          "porqueImporta": "O cálculo de endereço de rede e broadcast via CIDR é a habilidade técnica mais cobrada em concursos de redes (CESPE, FCC, FGV, VUNESP). Aparece em questões de dimensionamento de sub-redes, validação de endereçamento, troubleshooting de conectividade e planejamento de VLSM. Dominar a operação AND bit a bit e a identificação de bits de host permite resolver qualquer variação: dado IP/máscara achar rede/broadcast/hosts; dado rede original e nova máscara achar quantidade de sub-redes; verificar se dois IPs estão na mesma sub-rede. Erros aqui derivam de confusão entre máscara decimal e prefixo, esquecimento de subtrair rede/broadcast, e assunção incorreta de que .0/.255 são sempre rede/broadcast.",
+          "preRequisitos": [
+            "Representação binária de números (8 bits = 0-255)",
+            "Operação lógica AND bit a bit",
+            "Estrutura do endereço IPv4 (32 bits, 4 octetos)",
+            "Noção de máscara de sub-rede (1s contíguos = rede, 0s = host)"
+          ],
+          "objetivosObservaveis": [
+            "Converter máscara decimal pontuada para prefixo CIDR e vice-versa (ex.: 255.255.255.192 = /26)",
+            "Calcular endereço de rede: IP AND máscara (bit a bit) em cada octeto",
+            "Calcular endereço de broadcast: endereço de rede com todos os bits de host = 1",
+            "Determinar intervalo de hosts válidos: rede+1 até broadcast-1",
+            "Calcular quantidade de hosts: 2^(32-prefixo) - 2 (exceto /31 e /32 per RFC 3021)",
+            "Validar se um IP pertence a uma sub-rede: comparar rede calculada do IP com rede da sub-rede"
+          ],
+          "competencias": [
+            "Raciocínio binário: operar em base 2 para decisões de rede",
+            "Atenção a detalhes: um bit errado muda toda a sub-rede",
+            "Resolução de problemas sob pressão de tempo (simulado)",
+            "Verificação de plausibilidade: conferir se resultado faz sentido (ex.: broadcast > rede)"
+          ],
+          "dificuldade": "intermediario",
+          "relacoes": [
+            "m2-u4-t1-s1 (Máscaras de sub-rede) — base para conversão decimal↔CIDR",
+            "m2-u4-t2-s2 (Quantidade de sub-redes e hosts) — extensão natural: bits emprestados",
+            "m2-u4-t2-s3 (Intervalos de hosts e validação) — aplicação direta do cálculo de rede",
+            "m2-u4-t3-s1 (VLSM) — alocação sequencial usa cálculo de rede/broadcast",
+            "m2-u4-t3-s2 (Sumarização) — agregação inversa: achar prefixo comum"
+          ],
+          "relevanciaConcurso": {
+            "classificacao": "alta",
+            "justificativa": "Cálculo CIDR é tópico 'core' de redes em 100% dos editais de TI. CESPE cobra itens C/E sobre 'o broadcast de X/Y é Z' e 'IP A pertence à sub-rede B'. FGV e FCC apresentam cenários de dimensionamento (ex.: 'empresa precisa de 300 hosts, qual menor prefixo?'). Vunesp testa conversão máscara↔prefixo e identificação de rede/broadcast. Questões numéricas sem calculadora exigem agilidade mental com potências de 2 e máscaras comuns (/24 a /30).",
+            "ressalva": "Esta classificação é uma estimativa pedagógica qualitativa baseada na frequência histórica do tema em editais e na centralidade conceitual do assunto; não representa frequência estatística comprovada em provas recentes."
+          }
+        },
+        "niveis": {
+          "iniciante": "CIDR (Classless Inter-Domain Routing): notação IP/prefixo (ex.: 192.168.1.0/24). Endereço de rede = IP AND máscara (bit a bit). Broadcast = endereço de rede com todos os bits de host em 1. Hosts válidos = rede+1 até broadcast-1. Exemplo: IP 192.168.1.130/25. Máscara /25 = 255.255.255.128. Rede = 192.168.1.128 (130 AND 128 = 128). Broadcast = 192.168.1.255. Hosts: 192.168.1.129 a 192.168.1.254 (126 hosts). Máscaras comuns: /24=255.255.255.0 (254 hosts), /25=255.255.255.128 (126), /26=255.255.255.192 (62), /27=255.255.255.224 (30), /28=255.255.255.240 (14), /29=255.255.255.248 (6), /30=255.255.255.252 (2). Potências de 2: 2^1=2, 2^2=4, 2^3=8, 2^4=16, 2^5=32, 2^6=64, 2^7=128, 2^8=256. Regra prática: hosts = 2^(bits de host) - 2. Bits de host = 32 - prefixo.",
+          "intermediario": "No nível intermediário, o cálculo torna-se mental e bidirecional. Dado IP 172.16.30.5/20: máscara /20 = 255.255.240.0. Terceiro octeto: 30 (00011110) AND 240 (11110000) = 16 (00010000). Rede = 172.16.16.0. Broadcast = 172.16.31.255 (próxima rede .32.0 menos 1). Hosts: 172.16.16.1 a 172.16.31.254 (4094 hosts). Pegadinha clássica: IP 192.168.1.100/25 — rede não é .0, é .128 (100 AND 128 = 128). Sempre recalcular a rede do IP com a máscara; nunca assumir pelo 'último octeto'. Validação de pertinência: dois IPs estão na mesma sub-rede se (IP1 AND máscara) == (IP2 AND máscara). Ex.: 10.0.5.193/26 e 10.0.5.200/26 — ambos dão rede 10.0.5.192 → mesma sub-rede. /31 (RFC 3021): 2 hosts sem rede/broadcast (links ponto-a-ponto). /32: host único (loopback).",
+          "avancado": "Nível avançado aborda cenários compostos e exceções. (1) VLSM: alocação sequencial exige calcular rede/broadcast de cada sub-rede e garantir não-sobreposição. Ex.: 192.168.10.0/24 → LAN A /26 (0-63), LAN B /27 (64-95), WAN /30 (96-99). Erro comum: alocar menor primeiro fragmenta o espaço. (2) Sumarização: dado blocos 192.168.0.0/24 a 192.168.7.0/24, achar prefixo comum: 8 redes = 2^3 → prefixo 24-3 = /21. Rede agregada = 192.168.0.0/21. Validação: todos os blocos devem estar contidos no agregado. (3) IPv6: prefixo /64 por sub-rede (SLAAC). Cálculo análogo mas em 128 bits; ferramentas (ipcalc, sipcalc) recomendadas. (4) Troubleshooting: sintoma 'ping funciona mas aplicação falha' → verificar MTU, fragmentação, não endereçamento. Sintoma 'dois hosts não se veem' → conferir máscara de cada um (asymmetric mask). (5) RFC 3021 (/31) e RFC 4632 (CIDR) são referências normativas; em prova, /31 = 2 hosts válidos para P2P.",
+          "especialista": "No nível especialista, o cálculo CIDR integra arquitetura de rede e automação. (a) IPAM (IP Address Management): alocação hierárquica com validação de sobreposição, sumarização automática em borda, auditoria de utilização (%), recuperação de blocos órfãos. (b) Automação: Ansible/Terraform geram sub-redes a partir de prefixo base + requisitos (ex.: '3 AZs × 2 tiers × /24'). Validação de plano antes de apply. (c) BGP: agregação de anúncios (aggregate-address) com attribute suppression; risco de black hole se agregado anunciar blocos não alocados. (d) Segurança: IP spoofing prevention (uRPF strict mode exige que IP fonte pertença à sub-rede da interface). (e) Troubleshooting avançado: asymmetric routing mascara problemas de máscara; ICMP redirect revela gateway mal configurado. (f) Referências: RFC 4632 (CIDR), RFC 3021 (/31), RFC 1918 (privados), RFC 791 (IPv4). Em concursos de nível superior (analista de redes sênior, auditor de TI), a cobrança incide sobre desenho de plano de endereçamento corporativo, não cálculo isolado."
+        },
+        "comparacoes": [
+          {
+            "tema": "Máscara decimal pontuada vs. Prefixo CIDR vs. Classes históricas (A/B/C)",
+            "a": {
+              "rotulo": "Classes históricas (Classful)",
+              "texto": "Classe A: 0.0.0.0 a 127.255.255.255, máscara /8 (255.0.0.0), ~16M hosts. Classe B: 128.0.0.0 a 191.255.255.255, máscara /16 (255.255.0.0), ~65k hosts. Classe C: 192.0.0.0 a 223.255.255.255, máscara /24 (255.255.255.0), 254 hosts. Rígido, desperdiça endereços (ex.: org com 500 hosts precisa Classe B = 65k). Obsoleto desde 1993 (RFC 1518/1519 → CIDR)."
+            },
+            "b": {
+              "rotulo": "CIDR (Classless Inter-Domain Routing)",
+              "texto": "Prefixo variável /0 a /32. Máscara = 1s contíguos à esquerda. Permite alocação exata: 500 hosts → /23 (510 hosts). Notação: IP/prefixo (192.168.1.0/24). Roteamento classless carrega máscara no pacote de roteamento (RIPv2, OSPF, BGP). Sumarização e VLSM só funcionam com CIDR."
+            },
+            "diferencaGabarito": "Em prova: 'A classe do endereço 172.16.0.0 é B, logo sua máscara é 255.255.0.0' — FALSO se a rede usa CIDR (pode ser /20, /24, etc.). A classe histórica define apenas o range do primeiro octeto; a máscara real vem do prefixo CIDR. Confundir classe com máscara atual é erro conceitual grave. CESPE adora esse item C/E."
+          },
+          {
+            "tema": "Endereço de rede vs. Primeiro host vs. Broadcast vs. Último host",
+            "a": {
+              "rotulo": "Endereço de rede (Network ID)",
+              "texto": "Todos os bits de host = 0. Identifica a sub-rede. NÃO pode ser atribuído a interface. Ex.: 192.168.1.0/24 → rede = 192.168.1.0."
+            },
+            "b": {
+              "rotulo": "Primeiro host utilizável",
+              "texto": "Rede + 1. Primeiro endereço atribuível. Ex.: 192.168.1.1/24."
+            },
+            "diferencaGabarito": "A pegadinha clássica: 'Quantos hosts em /24?' Resposta certa: 254 (256 - 2). Erro: 256 (esquece rede e broadcast) ou 255 (subtrai só um). Outra: 'O endereço 10.0.0.0/8 pode ser usado como IP de servidor?' — NÃO, é endereço de rede. Em /30 (P2P): rede .0, hosts .1 e .2, broadcast .3. Em /31: sem rede/broadcast, hosts .0 e .1 (RFC 3021)."
+          }
+        ],
+        "pegadinhas": [
+          {
+            "afirmacaoEquivocada": "O endereço de rede pode ser atribuído a um host (interface de servidor, roteador, etc.).",
+            "porqueErrada": "O endereço de rede (todos os bits de host = 0) identifica a sub-rede como um todo no roteamento. Atribuí-lo a uma interface quebraria a entrega de pacotes: o roteador não saberia distinguir 'pacote para a sub-rede' de 'pacote para este host'. O mesmo vale para o broadcast (todos bits de host = 1): é endereço de destinatário 'todos na sub-rede', não de um host específico.",
+            "versaoCorreta": "Endereço de rede (host bits = 0) e broadcast (host bits = 1) são reservados pela especificação IPv4 (RFC 791, RFC 1812, RFC 4632) e não podem ser atribuídos a interfaces. Hosts válidos = rede+1 até broadcast-1. Exceção: /31 (RFC 3021) para links P2P não tem rede/broadcast reservados; /32 é host único (loopback)."
+          },
+          {
+            "afirmacaoEquivocada": "Em qualquer sub-rede /24, o endereço .0 é sempre a rede e .255 sempre o broadcast.",
+            "porqueErrada": "Isso só vale se a sub-rede for /24 alinhada em fronteira de octeto (ex.: 192.168.1.0/24). Em /23 (ex.: 192.168.0.0/23), a rede é 192.168.0.0, broadcast é 192.168.1.255, e 192.168.1.0 é um host válido! Em /25 (ex.: 192.168.1.128/25), a rede é .128, broadcast .255, e .0 é host de outra sub-rede. A regra é: calcule SEMPRE com a máscara do prefixo em questão.",
+            "versaoCorreta": "Rede e broadcast dependem do prefixo, não do valor do último octeto. Para qualquer IP/prefixo: rede = IP AND máscara; broadcast = rede com host bits = 1. Nunca assuma pelo 'último octeto'; recalcule."
+          },
+          {
+            "afirmacaoEquivocada": "Quantidade de hosts = 2^(32-prefixo). Ex.: /24 = 256 hosts.",
+            "porqueErrada": "Esquece de subtrair os dois endereços reservados: rede (host bits = 0) e broadcast (host bits = 1). A fórmula correta é 2^(32-prefixo) - 2. Para /24: 2^8 - 2 = 254 hosts. Exceções: /31 = 2 hosts (sem rede/broadcast, RFC 3021), /32 = 1 host (loopback). Em prova, se não especificar 'endereços totais' vs 'hosts utilizáveis', a convenção é hosts utilizáveis.",
+            "versaoCorreta": "Hosts utilizáveis = 2^(bits de host) - 2, onde bits de host = 32 - prefixo. /24 → 254, /25 → 126, /26 → 62, /27 → 30, /28 → 14, /29 → 6, /30 → 2. /31 → 2 (P2P, sem reserva), /32 → 1. Decore a tabela de /24 a /30 para agilidade em prova."
+          },
+          {
+            "afirmacaoEquivocada": "Dois IPs com mesmo último octeto (ex.: 192.168.1.50 e 192.168.2.50) estão na mesma sub-rede se a máscara for /24.",
+            "porqueErrada": "Com máscara /24 (255.255.255.0), a parte de rede são os 3 primeiros octetos. 192.168.1.50/24 → rede 192.168.1.0. 192.168.2.50/24 → rede 192.168.2.0. Redes diferentes! Precisam de roteador para comunicar. O último octeto igual é coincidência; o que define sub-rede é o prefixo aplicado a TODOS os 32 bits.",
+            "versaoCorreta": "Para verificar se dois IPs estão na mesma sub-rede: calcule (IP1 AND máscara) e (IP2 AND máscara). Se iguais → mesma sub-rede. Máscara /24 compara os 3 primeiros octetos; /16 compara 2 primeiros; /8 compara só o primeiro. O último octeto sozinho não define nada."
+          }
+        ],
+        "resumoEstruturado": {
+          "conceitos": [
+            "CIDR: notação IP/prefixo, máscara = 1s contíguos à esquerda",
+            "Endereço de rede = IP AND máscara (bit a bit) — identifica a sub-rede",
+            "Broadcast = rede com todos bits de host = 1 — destino 'todos na sub-rede'",
+            "Hosts válidos = rede+1 até broadcast-1 — total = 2^(32-prefixo) - 2",
+            "Validação de pertinência: (IP AND máscara) == rede da sub-rede",
+            "Máscara decimal ↔ prefixo: /24=255.255.255.0, /25=255.255.255.128, /26=255.255.255.192, /27=255.255.255.224, /28=255.255.255.240, /29=255.255.255.248, /30=255.255.255.252"
+          ],
+          "regras": [
+            "Regra do AND: rede = IP & máscara (faça por octeto: 130 & 128 = 128)",
+            "Regra do -2: hosts utilizáveis = 2^(bits de host) - 2 (exceto /31, /32)",
+            "Regra da não-assunção: nunca assuma rede/broadcast pelo último octeto; recalcule",
+            "Regra da pertinência: mesmo prefixo + mesma rede calculada = mesma sub-rede"
+          ],
+          "comparacoes": [
+            "Classe histórica (A/B/C) vs. CIDR: classe define range do 1º octeto; CIDR define máscara real",
+            "Endereço de rede (reservado) vs. Primeiro host (utilizável) vs. Broadcast (reservado) vs. Último host (utilizável)",
+            "Máscara decimal (255.255.255.192) ↔ Prefixo (/26) ↔ Tamanho de bloco (64 endereços) ↔ Hosts (62)"
+          ],
+          "fluxos": [
+            "Dado IP/prefixo → converter prefixo em máscara decimal → AND bit a bit por octeto → rede → broadcast → intervalo hosts",
+            "Dado rede original + nova máscara → bits emprestados = novo_prefixo - original_prefixo → sub-redes = 2^bits_emprestados → hosts/sub-rede = 2^(32-novo_prefixo) - 2"
+          ],
+          "excecoes": [
+            "/31 (RFC 3021): 2 hosts válidos em link P2P, sem endereços de rede/broadcast reservados",
+            "/32: host único (loopback, rota de host), máscara 255.255.255.255",
+            "IPv6: /64 por sub-rede (SLAAC), cálculo análogo em 128 bits"
+          ],
+          "palavrasChave": [
+            "CIDR",
+            "prefixo",
+            "máscara de sub-rede",
+            "endereço de rede",
+            "broadcast",
+            "hosts válidos",
+            "operação AND",
+            "bit a bit",
+            "RFC 4632",
+            "RFC 3021",
+            "RFC 1918",
+            "VLSM",
+            "sumarização"
+          ],
+          "checklist": [
+            "Converto máscara decimal ↔ prefixo CIDR mentalmente (/24 a /30)",
+            "Calculo rede, broadcast e hosts de qualquer IP/prefixo em < 60 segundos",
+            "Identifico a pegadinha '.0/.255 são sempre rede/broadcast' e sei contrapor com /23 ou /25",
+            "Aplico a regra do -2 para hosts utilizáveis e conheço as exceções /31 e /32",
+            "Valido se dois IPs estão na mesma sub-rede comparando (IP & máscara)",
+            "Resolvo questões de dimensionamento: 'N hosts → menor prefixo' (ex.: 300 hosts → /23)"
+          ]
+        },
+        "exemplosDetalhados": [
+          {
+            "tipo": "introducao",
+            "problema": "Calcular rede, broadcast e hosts válidos de 10.0.5.200/26.",
+            "dados": "IP: 10.0.5.200. Prefixo: /26. Máscara: /26 = 26 bits de 1 = 255.255.255.192 (11111111.11111111.11111111.11000000). Bloco no último octeto = 2^(32-26) = 64 endereços.",
+            "conceitos": [
+              "Conversão prefixo → máscara decimal",
+              "Operação AND bit a bit por octeto",
+              "Identificação de bits de host (últimos 6 bits no /26)",
+              "Cálculo de broadcast: rede + tamanho_bloco - 1"
+            ],
+            "estrategia": "Converter /26 em máscara decimal (255.255.255.192). Aplicar AND bit a bit entre IP e máscara em cada octeto. Os 3 primeiros octetos: 10 & 255 = 10, 0 & 255 = 0, 5 & 255 = 5. Último octeto: 200 (11001000) & 192 (11000000) = 192 (11000000). Rede = 10.0.5.192. Broadcast = rede + 64 - 1 = 10.0.5.255. Hosts = 10.0.5.193 a 10.0.5.254 (62 hosts).",
+            "execucao": [
+              "Passo 1: Máscara /26 = 255.255.255.192. (Decore: /24=0, /25=128, /26=192, /27=224, /28=240, /29=248, /30=252 no último octeto não-zero).",
+              "Passo 2: AND por octeto. Octeto 1: 10 & 255 = 10. Octeto 2: 0 & 255 = 0. Octeto 3: 5 & 255 = 5. Octeto 4: 200 & 192. Binário: 200=11001000, 192=11000000 → resultado=11000000=192.",
+              "Passo 3: Rede = 10.0.5.192. Tamanho do bloco = 2^(32-26) = 2^6 = 64 endereços.",
+              "Passo 4: Broadcast = 10.0.5.192 + 64 - 1 = 10.0.5.255. (Ou: rede com bits de host=1 → 192 | 63 = 255).",
+              "Passo 5: Hosts válidos = 10.0.5.193 a 10.0.5.254. Total = 64 - 2 = 62 hosts."
+            ],
+            "resultado": "Rede: 10.0.5.192/26. Broadcast: 10.0.5.255. Hosts válidos: 10.0.5.193 a 10.0.5.254 (62 hosts).",
+            "justificativa": "A operação AND bit a bit é a definição formal de endereço de rede (RFC 4632). O prefixo /26 indica 26 bits de rede, 6 bits de host. O último octeto da máscara (192 = 11000000) preserva os 2 bits mais significativos (parte de rede) e zera os 6 bits menos significativos (parte de host). 200 (11001000) & 192 (11000000) = 192 (11000000) mantém os 2 bits de rede do IP e zera os 6 bits de host. O bloco de 64 endereços no último octeto (múltiplo de 64: 0, 64, 128, 192) confirma alinhamento correto. Broadcast é o último endereço do bloco. A subtração de 2 (rede e broadcast) é regra geral IPv4 (RFC 791, RFC 1812).",
+            "errosFrequentes": [
+              "Esquecer de converter /26 para máscara decimal e tentar fazer AND com '26'",
+              "Calcular broadcast como 10.0.5.191 (rede - 1) em vez de rede + bloco - 1",
+              "Responder 64 hosts (esquecer -2) ou 63 hosts (subtrair só rede)",
+              "Assumir que rede é 10.0.5.0 por ser '/26' (confunde com /24)"
+            ],
+            "variacao": "Dado 172.16.100.50/27, calcule rede, broadcast, hosts. Máscara /27 = 255.255.255.224 (bloco 32). 50 & 224: 50=00110010, 224=11100000 → 00100000=32. Rede = 172.16.100.32. Broadcast = 32+32-1 = 63 → 172.16.100.63. Hosts: 33 a 62 (30 hosts). Testa: bloco 32, alinhamento em múltiplos de 32."
+          },
+          {
+            "tipo": "aplicacao",
+            "problema": "Dado 172.16.30.5/20, determinar a sub-rede, broadcast e intervalo de hosts.",
+            "dados": "IP: 172.16.30.5. Prefixo: /20. Máscara: /20 = 255.255.240.0 (20 bits de 1: 11111111.11111111.11110000.00000000). O terceiro octeto é onde a máscara muda (240 = 11110000). Bloco no 3º octeto = 16 (256-240).",
+            "conceitos": [
+              "Máscara com octeto não-255 nem 0 (240 no 3º octeto)",
+              "Bloco de tamanho 16 no terceiro octeto",
+              "Cálculo de broadcast atravessando octetos (31.255)",
+              "Grande quantidade de hosts (4094)"
+            ],
+            "estrategia": "Focar no octeto 'interessante' (3º octeto, onde máscara ≠ 255 e ≠ 0). Máscara 240 = bloco 16. IP 3º octeto = 30. 30 & 240: 30=00011110, 240=11110000 → 00010000 = 16. Rede = 172.16.16.0. Próxima rede = 172.16.32.0. Broadcast = 172.16.31.255. Hosts: 172.16.16.1 a 172.16.31.254. Total = 2^(32-20) - 2 = 4094 hosts.",
+            "execucao": [
+              "Passo 1: Máscara /20 = 255.255.240.0. Octetos 1-2: 255 (rede fixa). Octeto 3: 240 (bloco 16). Octeto 4: 0 (host).",
+              "Passo 2: Octetos 1-2: 172 & 255 = 172, 16 & 255 = 16. Octeto 3: 30 & 240. 30=00011110, 240=11110000 → 00010000=16. Octeto 4: 5 & 0 = 0.",
+              "Passo 3: Rede = 172.16.16.0. Bloco no 3º octeto = 16 (múltiplos: 0, 16, 32, 48...). 30 está no bloco 16-31.",
+              "Passo 4: Próxima rede = 172.16.32.0. Broadcast = 172.16.32.0 - 1 = 172.16.31.255. (O -1 'estoura' do 3º para o 4º octeto: 32.0 - 1 = 31.255).",
+              "Passo 5: Hosts = 172.16.16.1 a 172.16.31.254. Total = 2^(32-20) - 2 = 4096 - 2 = 4094."
+            ],
+            "resultado": "Rede: 172.16.16.0/20. Broadcast: 172.16.31.255. Hosts: 172.16.16.1 a 172.16.31.254 (4094 hosts).",
+            "justificativa": "O /20 coloca a fronteira de rede no 3º octeto (bits 17-20). A máscara 240 (11110000) cria blocos de 16 no 3º octeto. A operação AND isola os 4 bits de rede do 3º octeto (30 → 16). O broadcast calculado como 'próxima rede - 1' funciona para qualquer prefixo e evita erro de 'setar bits de host = 1' manualmente em múltiplos octetos. O resultado 31.255 confirma: 3º octeto 31 (último do bloco 16-31), 4º octeto 255 (todos bits de host = 1). Quantidade 4094 = 2^12 - 2 (12 bits de host) valida a contagem.",
+            "errosFrequentes": [
+              "Calcular broadcast como 172.16.16.255 (só muda último octeto, ignora 3º octeto)",
+              "Achar que 30 & 240 = 30 (esquece que 240 zera os 4 bits baixos)",
+              "Responder hosts = 4096 (esquece -2)",
+              "Assumir rede 172.16.0.0 por ser 'Classe B' (ignora CIDR)"
+            ],
+            "variacao": "IP 192.168.100.200/21. Máscara /21 = 255.255.248.0 (bloco 8 no 3º octeto). 200 & 248: 200=11001000, 248=11111000 → 11001000=200. Rede = 192.168.200.0. Broadcast = 192.168.207.255. Hosts: 200.1 a 207.254 (2046 hosts). Testa: bloco 8, alinhamento em múltiplos de 8, broadcast atravessa 3º octeto."
+          },
+          {
+            "tipo": "erro",
+            "problema": "Afirmação: 'O endereço de rede pode ser atribuído a um host.'",
+            "dados": "Cenário: administrador configura interface de servidor com IP 192.168.1.0/24 alegando que 'é o primeiro endereço da rede'.",
+            "conceitos": [
+              "Endereço de rede (network ID) = identificador da sub-rede no roteamento",
+              "Bits de host todos zerados = endereço reservado",
+              "Quebra de entrega de pacotes se atribuído a host",
+              "RFC 791, RFC 1812, RFC 4632 proíbem atribuição"
+            ],
+            "estrategia": "Explicar por que o endereço de rede é reservado: (1) função no roteamento (identifica a sub-rede como destino agregado), (2) ambiguidade se atribuído a host (roteador não distingue 'para a rede' de 'para o host'), (3) broadcast análogo (todos 1s) também reservado. Demonstrar com exemplo de tabela de roteamento: rota 192.168.1.0/24 via interface X. Se host tem .0, pacote para 192.168.1.0 — vai para o host ou é 'para a rede'?",
+            "execucao": [
+              "Passo 1: Definir endereço de rede: resultado de IP & máscara, bits de host = 0. Em 192.168.1.0/24, identifica a sub-rede 192.168.1.0/24 nas tabelas de roteamento.",
+              "Passo 2: Mostrar conflito: rota agregada '192.168.1.0/24' existe na tabela de roteamento. Se host usa .0, pacote destinado a 192.168.1.0 tem dois destinos possíveis: a rota agregada (encaminha para gateway) ou o host local. Ambiguidade inaceitável.",
+              "Passo 3: Analogia com broadcast (192.168.1.255): bits de host = 1. Significa 'todos os hosts desta sub-rede'. Atribuí-lo a um host quebraria a semântica de 'entrega a todos'.",
+              "Passo 4: Citar RFC 791 (IPv4), RFC 1812 (roteadores), RFC 4632 (CIDR): 'The network address (host bits all zero) and the broadcast address (host bits all one) are reserved'. Exceções documentadas: /31 (RFC 3021) e /32."
+            ],
+            "resultado": "Configurar 192.168.1.0/24 em interface quebra roteamento. O correto: usar 192.168.1.1 a 192.168.1.254. Em /30 P2P: .1 e .2 (rede .0, broadcast .3 reservados). Em /31: .0 e .1 (sem reserva).",
+            "justificativa": "A reserva de endereço de rede e broadcast não é arbitrariedade; é requisito arquitetural do IPv4 para roteamento sem ambiguidade. A tabela de roteamento usa o endereço de rede como chave de agregação (prefixo). Se um host 'rouba' esse endereço, a agregação falha e pacotes para a sub-rede podem ser mal entregues. O mesmo princípio vale para o broadcast: é endereço de destino especial (entrega a todos), não endereço de host. Em provas, itens C/E como 'O endereço de rede pode ser usado como IP de servidor' são SEMPRE falsos. A exceção /31 (RFC 3021) é específica para links ponto-a-ponto onde não há broadcast nem necessidade de identificação de rede distinta dos dois hosts.",
+            "errosFrequentes": [
+              "Confundir 'primeiro endereço utilizável' (rede+1) com 'endereço de rede' (rede+0)",
+              "Achar que em /24 o .0 é utilizável porque 'sobra espaço'",
+              "Não conhecer a exceção /31 e marcar item sobre /31 como falso",
+              "Aplicar a regra a IPv6 da mesma forma (IPv6 tem ::/128 loopback, mas ::1 é válido; sub-redes /64 não reservam primeiro/último da mesma forma)"
+            ],
+            "variacao": "Item C/E: 'Em uma sub-rede 10.0.0.0/30, os endereços utilizáveis para hosts são 10.0.0.1 e 10.0.0.2.' — CERTO. Rede = 10.0.0.0, broadcast = 10.0.0.3, hosts = .1 e .2. Variação testa: em /30 (P2P clássico), ainda há rede e broadcast reservados; só /31 remove a reserva. Em /32: só 1 host (loopback), sem rede/broadcast separados."
+          }
+        ]
+      }
+    }
+  ]
+}
