@@ -229,6 +229,27 @@ if (typeof App === 'undefined') {
         case 'cards': this.loadFlashcards(moduleId); break;
         case 'quiz': this.loadQuiz(moduleId); break;
       }
+      /* Garante que toda <table> esteja dentro de .tabela-scroll
+       * (rolagem horizontal contida + foco por teclado), independentemente
+       * de qual motor gerou a tabela (template, quiz, progresso, simuladores,
+       * gráficos). */
+      this.garantirTabelasEnvolvidas();
+    },
+
+    /* Envolve toda <table> que ainda não esteja dentro de .tabela-scroll.
+     * Chamado após cada renderização de aba para garantir responsividade
+     * sem depender de cada gerador de tabela chamar window.wrapTabela. */
+    garantirTabelasEnvolvidas() {
+      document.querySelectorAll('table').forEach((table) => {
+        if (table.closest('.tabela-scroll')) return;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'tabela-scroll';
+        wrapper.setAttribute('role', 'region');
+        wrapper.setAttribute('aria-label', 'Tabela — role para leitura por teclado');
+        wrapper.tabIndex = 0;
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+      });
     },
 
     /* Teoria: DB.modules[].theory já é montado via FCNTemplate.renderizarUnidade
