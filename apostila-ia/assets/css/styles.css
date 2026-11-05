@@ -673,6 +673,7 @@ body.modo-foco .sidebar-toggle { display: none; }
   border-right: 1px solid var(--border);
   padding: var(--sp-4) 0;
   overflow-y: auto;
+  overflow-x: hidden; /* impede scroll lateral da árvore curricular em mobile */
 }
 @media (min-width: 901px) {
   .app-sidebar {
